@@ -31,7 +31,7 @@ final class el extends dk {
           if (!param3) {
             field_J = (Sprite) null;
           }
-          qf.field_g = param2;
+          TextFieldValidator.field_g = param2;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "el.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -61,7 +61,7 @@ final class el extends dk {
           }
           var8 = param1.requestDisplayModes(-125);
           while (var8.status == 0) {
-            uc.sleepMillis(-108, 10L);
+            DebouncedFieldValidator.sleepMillis(-108, 10L);
           }
           if (var8.status == 2) {
             stackIn_9_0 = new jk[]{};

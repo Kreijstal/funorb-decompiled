@@ -224,7 +224,7 @@ final class gg {
                   var25Lifetime1Lifetime1 = param4.field_a[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_c[var23Lifetime2];
                   db.field_e[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1) >> 16);
-                  me.field_i[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 - (-(var16 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var19) >> 16);
+                  TextFieldValidator.field_i[var23Lifetime2] = var10 + (var13 * var24Lifetime1Lifetime1 - (-(var16 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var19) >> 16);
                   SocketConnector.field_c[var23Lifetime2] = (var14 * var24Lifetime1Lifetime1 + (var17 * var25Lifetime1Lifetime1 + var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param4.field_Q[var23Lifetime2];

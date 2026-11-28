@@ -201,7 +201,7 @@ final class lj implements cl {
                   break;
                 }
                 var5_array[var7] = hj.a((byte) 113, 12582912, var3_int, je.field_d[var7]);
-                var6[var7] = hj.a((byte) 127, 65793, var3_int, rg.field_P[var7]);
+                var6[var7] = hj.a((byte) 127, 65793, var3_int, AccountRegistrationPanel.field_P[var7]);
                 var7++;
               } while (var11 == 0);
               while (true) {
@@ -251,7 +251,7 @@ final class lj implements cl {
                   while (var4 < var3.length) {
                     var5 = var3[var4];
                     var5.field_e = je.field_d[this.field_a[var2_int]];
-                    var5.field_h = rg.field_P[this.field_a[var2_int]];
+                    var5.field_h = AccountRegistrationPanel.field_P[this.field_a[var2_int]];
                     var4++;
                   }
                 }
@@ -1098,7 +1098,7 @@ final class lj implements cl {
         }
     }
 
-    lj(go param0, int param1, int param2) {
+    lj(DungeonRaidScreen param0, int param1, int param2) {
         this(param1, param2);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -1151,11 +1151,11 @@ final class lj implements cl {
         int var7 = 0;
         try {
           this.field_w[param1][param0] = param4;
-          var6_int = 1 + this.field_q + (32 * (param1 / 7 + param1 % 7) - 224 + ud.field_w[param4]);
+          var6_int = 1 + this.field_q + (32 * (param1 / 7 + param1 % 7) - 224 + IntroSequenceScreen.field_w[param4]);
           int var8 = -118 / ((param2 - 32) / 44);
           var7 = -21 + r.field_b[param4] + (168 + 24 * (-(param1 % 7) + param1 / 7)) + this.field_l;
           this.field_a[param1] = param3;
-          this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], rg.field_P[param3], 256);
+          this.field_v[param1][param0] = new rh(var6_int, var7, 20, 40, je.field_d[param3], AccountRegistrationPanel.field_P[param3], 256);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "lj.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -1624,7 +1624,7 @@ final class lj implements cl {
         }
     }
 
-    lj(go param0, lj param1) {
+    lj(DungeonRaidScreen param0, lj param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

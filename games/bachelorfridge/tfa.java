@@ -275,7 +275,7 @@ final class tfa extends EventEffect {
               }
               stackIn_69_0[stackIn_69_1] = stackIn_70_2;
             }
-            ph.field_P = f.correctedCurrentTimeMillis((byte) 73);
+            LoginPanel.field_P = f.correctedCurrentTimeMillis((byte) 73);
           }
           dp.field_o.field_e = mu.field_l.length;
           var3_intLifetime1 = 0;

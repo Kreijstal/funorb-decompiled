@@ -108,7 +108,7 @@ final class fg {
         this.field_k = ib.field_o;
         this.field_i = MusicPatchPcmStream.field_m;
         this.field_f = td.field_f;
-        this.field_a = kl.field_J;
+        this.field_a = EditableTextField.field_J;
         this.field_b = tf.field_kb;
         this.field_c = fm.field_j;
         this.field_g = dj.field_K;

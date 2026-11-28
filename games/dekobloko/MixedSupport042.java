@@ -109,9 +109,9 @@ final class MixedSupport042 {
         if (integerArgument4 != 0) {
           return;
         }
-        UiComponentPart032.integerState0835 = integerArgument2;
-        SceneWidgetPart004.integerState0267 = integerArgument1;
-        UiComponentPart022.integerState0576 = integerArgument5;
+        BirthDateInput.integerState0835 = integerArgument2;
+        PlayerNamePrompt.integerState0267 = integerArgument1;
+        AccountFieldStatusIndicator.integerState0576 = integerArgument5;
         ComponentDecorator.integerState0497 = integerArgument3;
     }
 

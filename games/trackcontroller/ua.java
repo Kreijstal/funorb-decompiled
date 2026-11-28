@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ua extends ButtonWidget {
-    private eh field_I;
+    private FieldValidator field_I;
     static ActiveLevel field_L;
     static String field_K;
     private int field_J;
 
     final String e(int param0) {
         if (this.field_q) {
-          return this.field_I.c(15914);
+          return this.field_I.getValidationMessage(15914);
         }
         if (param0 != 0) {
           this.e(-5);
@@ -83,7 +83,7 @@ final class ua extends ButtonWidget {
         }
         var5 = param1 + this.field_p + (this.field_x >> 1);
         var6 = (this.field_u >> 1) + this.field_m + param2;
-        var8 = this.field_I.a((byte) -58);
+        var8 = this.field_I.getValidationStatus((byte) -58);
         if (DiskArchiveRequest.field_x == var8) {
           var16 = TrackController.field_D[0];
           var9 = var16.field_s << 1;
@@ -148,7 +148,7 @@ final class ua extends ButtonWidget {
         bl.field_a.drawAdditiveWithIntensity(-var15.field_s + var5, -var15.field_v + var6, 256);
     }
 
-    ua(eh param0) {
+    ua(FieldValidator param0) {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {

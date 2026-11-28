@@ -77,8 +77,8 @@ final class fh {
           var6.field_p = 0;
           var7 = new lh(var4, true);
           var7.field_p = 0;
-          var7.a(jg.a(8947848, 4), (byte) -112);
-          var7.a(false, 1).a((byte) -119, jg.a(11184810, 4)).a(2236962, (byte) -86);
+          var7.a(ConfirmedEmailAvailabilityValidator.a(8947848, 4), (byte) -112);
+          var7.a(false, 1).a((byte) -119, ConfirmedEmailAvailabilityValidator.a(11184810, 4)).a(2236962, (byte) -86);
           this.field_b = (rd) ((Object) new fb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ib(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new og(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

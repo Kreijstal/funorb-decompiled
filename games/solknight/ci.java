@@ -355,7 +355,7 @@ class ci extends gf implements ka {
           stackIn_7_2 = !(param1);
           ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
           uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
-          var18 = new Sprite(param2.getFileByName(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
+          var18 = new Sprite(param2.getFileByName(4, "button.gif", ""), (java.awt.Component) ((Object) EmailFormatValidator.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           DiskArchiveRequest.field_s = new od[4];
@@ -470,7 +470,7 @@ class ci extends gf implements ka {
           }
           var4 = (ob) (he.field_d.beginBackward((byte) 51));
           while (var4 != null) {
-            vg.a(param1, var4, 118);
+            EditableTextField.a(param1, var4, 118);
             var4 = (ob) (he.field_d.nextBackward(-84));
           }
           var2 = bc.field_J.beginBackward((byte) 51);
@@ -548,7 +548,7 @@ class ci extends gf implements ka {
           id.field_c.writeInt(al.field_n, false);
           id.field_c.writeLong(DelegatingCanvas.field_b, (byte) 63);
           var6 = 0;
-          if (cl.field_m) {
+          if (AgeValidator.field_m) {
             var6 = var6 | 1;
           }
           if (b.field_b) {
@@ -572,7 +572,7 @@ class ci extends gf implements ka {
           if (null != ri.field_a) {
             id.field_c.writePrefixedString(param0 ^ 1955918408, ri.field_a);
           }
-          al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
+          al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, ConfirmedEmailAvailabilityValidator.field_p);
           id.field_c.backpatchShortLength(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;
@@ -618,7 +618,7 @@ class ci extends gf implements ka {
           var6 = new lj(this, this.field_nb, param0);
           var4 = var6;
           if (param1 == 5) {
-            var6.a(11, cl.field_k, 1);
+            var6.a(11, AgeValidator.field_k, 1);
             var6.a(17, ph.field_e, 1);
           } else {
             if (param1 == 256) {

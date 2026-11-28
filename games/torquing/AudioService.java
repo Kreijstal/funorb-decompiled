@@ -59,7 +59,7 @@ final class AudioService implements Runnable {
     final static dq a(byte param0) {
         if (null == lk.field_v) {
           lk.field_v = new dq();
-          lk.field_v.a(dg.field_e, (byte) -124);
+          lk.field_v.a(TranslucentSpriteLayer.field_e, (byte) -124);
           lk.field_v.field_p = 5;
           lk.field_v.field_h = 0;
           lk.field_v.field_e = 7697781;

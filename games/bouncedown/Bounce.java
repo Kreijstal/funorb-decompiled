@@ -156,10 +156,10 @@ public final class Bounce extends GameClient {
           db.n(260);
           ec.resetDeclaredStaticState(101);
           sh.clearDeclaredStaticReferences(5);
-          gh.clearStaticReferences(true);
+          AccountRegistrationPanel.clearStaticReferences(true);
           k.clearStaticReferences((byte) -81);
-          ci.a(false);
-          q.clearStaticReferences((byte) -117);
+          LoginPanel.a(false);
+          DisplayNameSelectionPanel.clearStaticReferences((byte) -117);
           ve.clearStaticReferences((byte) 85);
           fk.resetStaticState((byte) 118);
           g.a(6623);
@@ -247,14 +247,14 @@ public final class Bounce extends GameClient {
           ch.clearStaticReferences(false);
           pa.clearStaticReferences(37);
           hb.clearStaticReferences((byte) 123);
-          ba.clearStaticReferences((byte) 94);
+          EditableTextField.clearStaticReferences((byte) 94);
           mh.resetStaticState(-16167);
           ll.clearStaticReferences((byte) -83);
           nd.a(true);
           vc.clearStaticReferences((byte) -6);
           la.clearStaticReferences((byte) -59);
           ff.a(-22756);
-          al.clearDeclaredStaticReferences(24562);
+          TextFieldValidator.clearDeclaredStaticReferences(24562);
           nb.clearStaticReferences(120);
           eb.clearStaticReferences(true);
           fh.a(false);
@@ -306,15 +306,15 @@ public final class Bounce extends GameClient {
           kg.clearStaticReferences((byte) -64);
           bh.clearStaticReferences((byte) 120);
           AccountNameAvailabilityValidator.clearStaticReferences(0);
-          bf.clearStaticReferences(0);
-          nj.clearStaticReferences(22382);
-          cl.clearStaticReferences(false);
-          hg.d(-1);
-          bd.clearStaticReferences((byte) -110);
+          PasswordValidator.clearStaticReferences(0);
+          EmailFormatValidator.clearStaticReferences(22382);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences(false);
+          AgeValidator.d(-1);
+          MatchingFieldValidator.clearStaticReferences((byte) -110);
           qc.clearStaticReferences(-96);
           ui.a(true);
           vf.a(0);
-          ck.f((byte) -126);
+          DebouncedFieldValidator.f((byte) -126);
           lj.clearStaticReferences(0);
           this.field_r = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -432,12 +432,12 @@ public final class Bounce extends GameClient {
             }
             fb.field_nb = false;
           }
-          if (ci.field_F.beginForward((byte) -75) != null) {
+          if (LoginPanel.field_F.beginForward((byte) -75) != null) {
             fieldTemp$0 = this.field_H + 1;
             this.field_H = this.field_H + 1;
             if (fieldTemp$0 == 335) {
               this.field_H = 0;
-              ci.field_F.removeFirst((byte) -52);
+              LoginPanel.field_F.removeFirst((byte) -52);
             }
           }
           ae.field_f = ae.field_f + 1;
@@ -495,8 +495,8 @@ public final class Bounce extends GameClient {
                   vg.field_j = vg.field_j + 1;
                 }
                 if (he.field_n[0].field_o > 97.0 &&
-                  1000 > hg.field_l) {
-                  hg.field_l = hg.field_l + 1;
+                  1000 > AgeValidator.field_l) {
+                  AgeValidator.field_l = AgeValidator.field_l + 1;
                   nb.field_a = nb.field_a + 1;
                 }
                 if (he.field_n[0].field_d > 0.0 &&
@@ -508,8 +508,8 @@ public final class Bounce extends GameClient {
                   kg.field_f = 1001;
                   dk.a(false, 6, 249);
                 }
-                if (hg.field_l == 1000) {
-                  hg.field_l = 1001;
+                if (AgeValidator.field_l == 1000) {
+                  AgeValidator.field_l = 1001;
                   dk.a(false, 5, 250);
                 }
                 if (qe.field_f == 1000) {
@@ -517,7 +517,7 @@ public final class Bounce extends GameClient {
                   dk.a(false, 7, 248);
                 }
                 if (kg.field_f == 1001 &&
-                  hg.field_l == 1001 &&
+                  AgeValidator.field_l == 1001 &&
                   qe.field_f == 1001) {
                   kg.field_f = 1002;
                   dk.a(false, 8, 247);
@@ -585,7 +585,7 @@ public final class Bounce extends GameClient {
             }
           }
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!q.g((byte) -15)))) {
+          while (!(decompiledNaturalLoopExit0 = (!DisplayNameSelectionPanel.g((byte) -15)))) {
             if (lh.field_f == 49) {
               stackIn_225_0 = !(wd.field_x);
               wd.field_x = stackIn_225_0;
@@ -720,7 +720,7 @@ public final class Bounce extends GameClient {
           if (PcmResampler.field_g) {
             if (vk.field_b == 1) {
               if (ng.field_a[96] ||
-                ng.field_a[nj.field_m]) {
+                ng.field_a[EmailFormatValidator.field_m]) {
                 dupTemp$1 = he.field_n[0];
                 dupTemp$1.field_c = dupTemp$1.field_c - 0.35;
               }
@@ -731,7 +731,7 @@ public final class Bounce extends GameClient {
               }
             }
             if (vk.field_b == 2) {
-              if (ng.field_a[nj.field_m]) {
+              if (ng.field_a[EmailFormatValidator.field_m]) {
                 dupTemp$3 = he.field_n[0];
                 dupTemp$3.field_c = dupTemp$3.field_c - 0.35;
               }
@@ -749,7 +749,7 @@ public final class Bounce extends GameClient {
               }
             }
             if (3 <= vk.field_b) {
-              if (ng.field_a[nj.field_m]) {
+              if (ng.field_a[EmailFormatValidator.field_m]) {
                 dupTemp$7 = he.field_n[0];
                 dupTemp$7.field_c = dupTemp$7.field_c - 0.35;
               }
@@ -805,7 +805,7 @@ public final class Bounce extends GameClient {
                 } else {
                   if (null == MusicPatchPcmStream.field_o ||
                     !PcmResampler.field_g) {
-                    he.field_n[var2_int].a(ua.field_c, nj.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
+                    he.field_n[var2_int].a(ua.field_c, EmailFormatValidator.field_l, ua.field_b, il.field_a, ta.field_c, (byte) 90);
                   }
                   if (!PcmResampler.field_g) {
                     if (he.field_n[var2_int].field_h != 0) {
@@ -894,11 +894,11 @@ public final class Bounce extends GameClient {
             sj.field_f.focusLost) {
             v.d((byte) 121);
             mh.a(sj.field_f, (byte) 80);
-            sj.field_f.exitFullscreen((byte) -121, ck.field_e);
+            sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
           }
-          if (ci.k(-31077)) {
+          if (LoginPanel.k(-31077)) {
             this.g(0);
             if (!hi.a((byte) -118)) {
               return;
@@ -941,7 +941,7 @@ public final class Bounce extends GameClient {
                 if (var2_int == 2 &&
                   sj.field_f != null) {
                   mh.a(sj.field_f, (byte) 111);
-                  sj.field_f.exitFullscreen((byte) -121, ck.field_e);
+                  sj.field_f.exitFullscreen((byte) -121, DebouncedFieldValidator.field_e);
                   sj.field_f = null;
                   ch.field_h.requestFocus();
                 }
@@ -966,7 +966,7 @@ public final class Bounce extends GameClient {
                   if (2 == var2_intLifetime2) {
                     if (null != sj.field_f) {
                       mh.a(sj.field_f, (byte) 103);
-                      sj.field_f.exitFullscreen((byte) -115, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -115, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -974,7 +974,7 @@ public final class Bounce extends GameClient {
                     if ((var3 != 0) &&
                       (null != sj.field_f)) {
                       mh.a(sj.field_f, (byte) 121);
-                      sj.field_f.exitFullscreen((byte) -127, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -982,7 +982,7 @@ public final class Bounce extends GameClient {
                 } else {
                   if (null != sj.field_f) {
                     mh.a(sj.field_f, (byte) 121);
-                    sj.field_f.exitFullscreen((byte) -127, ck.field_e);
+                    sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                     sj.field_f = null;
                     ch.field_h.requestFocus();
                   }
@@ -1014,7 +1014,7 @@ public final class Bounce extends GameClient {
           if (var2_intLifetime1 != 2) {
             return;
           }
-          vk.a(240, (RgbSprite[]) null, 320, ResourceArchive.field_e.field_s, cl.field_p[0].field_o, od.field_f.field_s, ResourceArchive.field_e.field_s, 3, 2, ResourceArchive.field_e, od.field_f, (RgbSprite[]) null, cl.field_p[0].field_t, od.field_f.field_s);
+          vk.a(240, (RgbSprite[]) null, 320, ResourceArchive.field_e.field_s, ConfirmedEmailAvailabilityValidator.field_p[0].field_o, od.field_f.field_s, ResourceArchive.field_e.field_s, 3, 2, ResourceArchive.field_e, od.field_f, (RgbSprite[]) null, ConfirmedEmailAvailabilityValidator.field_p[0].field_t, od.field_f.field_s);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1158,7 +1158,7 @@ public final class Bounce extends GameClient {
           }
           if (sj.field_f != null) {
             mh.a(sj.field_f, (byte) 101);
-            sj.field_f.exitFullscreen((byte) -122, ck.field_e);
+            sj.field_f.exitFullscreen((byte) -122, DebouncedFieldValidator.field_e);
             sj.field_f = null;
             ch.field_h.requestFocus();
           }
@@ -1196,44 +1196,44 @@ public final class Bounce extends GameClient {
           if (ca.field_e != null) {
             if (null != pa.field_c && (!pa.field_c.ensureIndexLoaded(-79) ||
               !pa.field_c.tryLoadAllGroups((byte) -41))) {
-              hg.a(hg.a(nl.field_a, pa.field_c, 130, AppletShell.field_k), -99, 10.0f);
+              AgeValidator.a(AgeValidator.a(nl.field_a, pa.field_c, 130, AppletShell.field_k), -99, 10.0f);
               return;
             }
             if (IntrusiveNode.field_e != null && (!IntrusiveNode.field_e.ensureIndexLoaded(51) ||
               !IntrusiveNode.field_e.tryLoadAllGroups((byte) -109))) {
-              hg.a(hg.a(nl.field_a, IntrusiveNode.field_e, 130, AppletShell.field_k), -114, 20.0f);
+              AgeValidator.a(AgeValidator.a(nl.field_a, IntrusiveNode.field_e, 130, AppletShell.field_k), -114, 20.0f);
               return;
             }
             if (null != MidiPcmStream.field_D && (!MidiPcmStream.field_D.ensureIndexLoaded(67) ||
               !MidiPcmStream.field_D.tryLoadAllGroups((byte) -43))) {
-              hg.a(hg.a(ke.field_n, MidiPcmStream.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
+              AgeValidator.a(AgeValidator.a(ke.field_n, MidiPcmStream.field_D, param1 ^ 3260, vk.field_e), -120, 30.0f);
               return;
             }
             if (ca.field_e != null && (!ca.field_e.ensureIndexLoaded(param1 - 3027) ||
               !ca.field_e.tryLoadAllGroups((byte) -113))) {
-              hg.a(hg.a(ke.field_n, ca.field_e, 130, vk.field_e), param1 - 3156, 40.0f);
+              AgeValidator.a(AgeValidator.a(ke.field_n, ca.field_e, 130, vk.field_e), param1 - 3156, 40.0f);
               return;
             }
             if (null != ub.field_a && (!ub.field_a.ensureIndexLoaded(94) ||
               !ub.field_a.tryLoadAllGroups((byte) -101))) {
-              hg.a(hg.a(dk.field_b, ub.field_a, 130, fi.field_a), -86, 50.0f);
+              AgeValidator.a(AgeValidator.a(dk.field_b, ub.field_a, 130, fi.field_a), -86, 50.0f);
               return;
             }
             if (j.field_j != null && (!j.field_j.ensureIndexLoaded(param1 - 3219) ||
               !j.field_j.tryLoadGroupByName("basic", false))) {
-              hg.a(fb.a((byte) -67, dk.field_b, fi.field_a, j.field_j, "basic"), -39, 60.0f);
+              AgeValidator.a(fb.a((byte) -67, dk.field_b, fi.field_a, j.field_j, "basic"), -39, 60.0f);
               return;
             }
             if (va.field_c != null && (!va.field_c.ensureIndexLoaded(param1 - 3244) ||
               !va.field_c.tryLoadAllGroups((byte) -46))) {
-              hg.a(fb.a((byte) -92, AccountNameAvailabilityValidator.field_k, vc.field_B, va.field_c, ""), param1 ^ -3159, 80.0f);
+              AgeValidator.a(fb.a((byte) -92, AccountNameAvailabilityValidator.field_k, vc.field_B, va.field_c, ""), param1 ^ -3159, 80.0f);
               return;
             }
             if (!param0) {
               return;
             }
             ed.a((byte) -127);
-            hg.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
+            AgeValidator.a(SecondaryNodeDequeIterator.field_a, param1 - 3248, 85.0f);
             this.e(4);
             var3 = new PcmResampler(22050, AudioOutput.field_r);
             il.field_a[0] = ei.a(pa.field_c, "", "dissolve1").b().resample(var3);
@@ -1244,14 +1244,14 @@ public final class Bounce extends GameClient {
             il.field_a[7] = ei.a(pa.field_c, "", "slime_land").b().resample(var3);
             il.field_a[8] = ei.a(pa.field_c, "", "slime_reduces").b().resample(var3);
             il.field_a[9] = ei.a(pa.field_c, "", "squish").b().resample(var3);
-            hg.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
+            AgeValidator.a(SecondaryNodeDequeIterator.field_a, -21, 90.0f);
             this.e(4);
             il.field_a[11] = te.a(IntrusiveNode.field_e, "", "slime_eek").a().resample(var3);
             il.field_a[12] = te.a(IntrusiveNode.field_e, "", "slime_falls").a().resample(var3);
             il.field_a[13] = te.a(IntrusiveNode.field_e, "", "slime_laughs").a().resample(var3);
             il.field_a[14] = te.a(IntrusiveNode.field_e, "", "slime_ooh").a().resample(var3);
             il.field_a[15] = te.a(IntrusiveNode.field_e, "", "slime_ow").a().resample(var3);
-            hg.a(va.field_g, -125, 95.0f);
+            AgeValidator.a(va.field_g, -125, 95.0f);
             var3_ref = null;
             this.e(4);
             AccountCreationResultPanel.field_mb = be.a(ca.field_e, "", "bounce down title screen");
@@ -1325,16 +1325,16 @@ public final class Bounce extends GameClient {
             vc.e((byte) -44);
             return;
           }
-          hg.a(he.field_i, -75, 99.0f);
+          AgeValidator.a(he.field_i, -75, 99.0f);
           this.e(4);
-          ResourceArchive.field_e = q.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
-          jh.field_s = q.a(-1, va.field_c, "comic20", ub.field_a, "");
-          od.field_f = q.a(-1, va.field_c, "newfont", ub.field_a, "");
+          ResourceArchive.field_e = DisplayNameSelectionPanel.a(param1 ^ -3135, va.field_c, "b12", ub.field_a, "");
+          jh.field_s = DisplayNameSelectionPanel.a(-1, va.field_c, "comic20", ub.field_a, "");
+          od.field_f = DisplayNameSelectionPanel.a(-1, va.field_c, "newfont", ub.field_a, "");
           l.field_e = nc.a("title", ub.field_a, "", 0);
           ej.field_a = nc.a("title_achievements", ub.field_a, "", param1 - 3134);
           AccountRequestState.field_b = nc.a("title_highscores", ub.field_a, "", 0);
           mi.field_k = nc.a("title_instructions", ub.field_a, "", 0);
-          cl.field_p = SectorCacheStore.a(ub.field_a, "", (byte) -13, "frame");
+          ConfirmedEmailAvailabilityValidator.field_p = SectorCacheStore.a(ub.field_a, "", (byte) -13, "frame");
           ig.field_d = SectorCacheStore.a(ub.field_a, "", (byte) 117, "frame_50");
           jc.field_n = nc.a("welldone", ub.field_a, "", param1 ^ 3134);
           ph.field_b = nc.a("betterluck", ub.field_a, "", 0);
@@ -1353,12 +1353,12 @@ public final class Bounce extends GameClient {
           se.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
           nc.a("scorebox", ub.field_a, "", 0);
           hd.field_a = SectorCacheStore.a(ub.field_a, "", (byte) -115, "pupils");
-          ci.field_G = SectorCacheStore.a(ub.field_a, "", (byte) 111, "pops");
+          LoginPanel.field_G = SectorCacheStore.a(ub.field_a, "", (byte) 111, "pops");
           Platform.field_a = SectorCacheStore.a(ub.field_a, "", (byte) 119, "players");
           va.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -38, "newhighscore");
           re.field_a = nc.a("plat1", ub.field_a, "", 0);
           a.field_f = nc.a("plat1b", ub.field_a, "", 0);
-          q.field_F = nc.a("plat2", ub.field_a, "", 0);
+          DisplayNameSelectionPanel.field_F = nc.a("plat2", ub.field_a, "", 0);
           ge.field_b = nc.a("eye", ub.field_a, "", 0);
           wj.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -63, "mouths");
           ld.field_h = SectorCacheStore.a(ub.field_a, "", (byte) -116, "fire");
@@ -1366,7 +1366,7 @@ public final class Bounce extends GameClient {
           kc.field_c = nc.a("plat0", ub.field_a, "", 0);
           fd.field_n = SectorCacheStore.a(ub.field_a, "", (byte) 125, "plat3");
           nk.field_h = SectorCacheStore.a(ub.field_a, "", (byte) 117, "plat4");
-          bd.field_j = SectorCacheStore.a(ub.field_a, "", (byte) 120, "plat4grw");
+          MatchingFieldValidator.field_j = SectorCacheStore.a(ub.field_a, "", (byte) 120, "plat4grw");
           wb.field_e = SectorCacheStore.a(ub.field_a, "", (byte) 10, "plat4shr");
           nl.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -15, "plat4spi");
           nc.a("clickme", ub.field_a, "", param1 - 3134);
@@ -1405,10 +1405,10 @@ public final class Bounce extends GameClient {
     final void c(byte param0) {
         this.a(9, 0, 10, 3, 7, 8764, false, 8);
         AudioOutput.configureAudio(22050, true, 10);
-        f.field_a = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
-        jl.field_d = AudioOutput.createOutput(ck.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
-        nj.field_l = new PcmStreamMixer();
-        f.field_a.setRootStream(nj.field_l);
+        f.field_a = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) ch.field_h), 0, 512);
+        jl.field_d = AudioOutput.createOutput(DebouncedFieldValidator.field_e, (java.awt.Component) ((Object) ch.field_h), 1, 22050);
+        EmailFormatValidator.field_l = new PcmStreamMixer();
+        f.field_a.setRootStream(EmailFormatValidator.field_l);
         bk.field_c = 1;
         ca.field_a = new int[1];
         eh.field_b = null;
@@ -1436,7 +1436,7 @@ public final class Bounce extends GameClient {
           }
           if (0 < param1 &&
             !jh.b(767564065)) {
-            ti.field_O = param1;
+            ValidatedTextField.field_O = param1;
             qc.field_a = pb.a(new int[]{param1}, l.field_c, jd.field_e, vd.field_a, ec.field_cb, 3, 13, 65522, (byte) 98);
             pe.field_f = pe.a(3, 10, 1, -16947, 13);
           }
@@ -1507,7 +1507,7 @@ public final class Bounce extends GameClient {
             stackIn_5_0 = ch.field_h;
           }
           var2 = stackIn_5_0;
-          if (ci.k(-31077)) {
+          if (LoginPanel.k(-31077)) {
             stackIn_11_0 = var2;
             if (null != sj.field_f) {
               stackIn_12_1 = true;
@@ -1801,7 +1801,7 @@ public final class Bounce extends GameClient {
               od.field_f.b(Integer.toString(fa.field_c), var7 + (320 - var6_int / 2), 473, 16777215, -1);
             }
           }
-          var5_ref = (ab) (ci.field_F.beginForward((byte) -48));
+          var5_ref = (ab) (LoginPanel.field_F.beginForward((byte) -48));
           if (var5_ref != null) {
             var7Lifetime1 = this.field_H;
             if (var7Lifetime1 < 80) {

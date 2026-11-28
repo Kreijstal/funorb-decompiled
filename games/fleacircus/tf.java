@@ -92,7 +92,7 @@ final class tf extends dk {
           return;
         }
         RgbSprite var6 = new RgbSprite(this.field_A.field_u, this.field_A.field_j);
-        r.a(var6, 45);
+        TextFieldValidator.a(var6, 45);
         this.field_A.b(0, 0, param2, param3);
         ia.a(-107);
         var6.c(this.field_y + param1, param0 + this.field_z, this.field_F);
@@ -133,18 +133,18 @@ final class tf extends dk {
           ProxyAuthenticationRequiredException.field_g.n(100);
           if (!param0) {
             field_H = (ob) null;
-            bc.s(-33);
+            ValidatedTextField.s(-33);
             return;
           }
-          bc.s(-33);
+          ValidatedTextField.s(-33);
           return;
         }
         if (param0) {
-          bc.s(-33);
+          ValidatedTextField.s(-33);
           return;
         }
         field_H = (ob) null;
-        bc.s(-33);
+        ValidatedTextField.s(-33);
     }
 
     final static int integerPower(int param0, int param1, int param2) {

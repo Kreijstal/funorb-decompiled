@@ -28,7 +28,7 @@ final class sb {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        mj.a((String) null, field_a, 107);
+        AccountRegistrationPanel.a((String) null, field_a, 107);
         int var1 = -82 % ((44 - param0) / 45);
     }
 

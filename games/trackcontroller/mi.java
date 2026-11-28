@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class mi extends el {
-    private eh field_S;
+    private FieldValidator field_S;
     private Sprite field_P;
     private int field_Q;
     private String field_R;
@@ -80,10 +80,10 @@ final class mi extends el {
         regionExit1: {
           regionExit2: {
             regionExit3: {
-              var6 = this.field_S.a((byte) -61);
+              var6 = this.field_S.getValidationStatus((byte) -61);
               if (DiskArchiveRequest.field_x != var6 &&
                 var6 != AsyncRequest.field_t) {
-                var5 = this.field_S.c(param3 ^ 19471);
+                var5 = this.field_S.getValidationMessage(param3 ^ 19471);
                 if (var5 == null) {
                   var5 = this.field_R;
                   break regionExit3;
@@ -103,7 +103,7 @@ final class mi extends el {
           this.b(true);
         }
         super.a(param0, param1, param2, param3 ^ 0);
-        var6Lifetime1 = this.field_S.a((byte) -5);
+        var6Lifetime1 = this.field_S.getValidationStatus((byte) -5);
         var8 = (dl) ((Object) this.field_y);
         var9 = param1 + this.field_p;
         var10 = var8.a((UiWidget) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (UiWidget) (this)).a(12323) >> 1);
@@ -179,7 +179,7 @@ final class mi extends el {
         return null;
     }
 
-    mi(eh param0, String param1, int param2, int param3, int param4, int param5) {
+    mi(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, jc.a((byte) 97));
         try {
           this.field_S = param0;

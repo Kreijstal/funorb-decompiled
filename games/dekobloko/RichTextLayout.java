@@ -310,7 +310,7 @@ final class RichTextLayout extends TextLayout {
           }
           return null;
         }
-        if (UiComponentPart013.integerState0274 + MixedSupport088.integerState0545 > EmailValidationError.integerState0341) {
+        if (LoginPanel.integerState0274 + MixedSupport088.integerState0545 > EmailValidationError.integerState0341) {
           return MixedSupport066.stringState0295;
         }
         if (!booleanArgument1) {
@@ -411,7 +411,7 @@ final class RichTextLayout extends TextLayout {
           if (SceneWidget.mixedSupport099State0001 != null) {
             return true;
           }
-          if (SceneWidgetPart009.computeBoolean1339(-6)) {
+          if (IconLabelWidget.computeBoolean1339(-6)) {
             return true;
           }
           if (MixedSupport097.sceneWidgetPart007State0001 != null) {
@@ -425,7 +425,7 @@ final class RichTextLayout extends TextLayout {
         if (SceneWidget.mixedSupport099State0001 != null) {
           return true;
         }
-        if (SceneWidgetPart009.computeBoolean1339(-6)) {
+        if (IconLabelWidget.computeBoolean1339(-6)) {
           return true;
         }
         if (MixedSupport097.sceneWidgetPart007State0001 != null) {

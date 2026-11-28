@@ -25,7 +25,7 @@ final class fa extends UiWidget {
         jk.field_c[DelayedPcmStream.field_p] = DelayedPcmStream.field_p;
         AwtRasterBuffer.field_f[DelayedPcmStream.field_p] = param2;
         if (param2 > lh.field_s) {
-          mh.field_j = param2;
+          EmailFormatValidator.field_j = param2;
         }
         if (param2 < og.field_b) {
           t.field_u = param2;
@@ -40,8 +40,8 @@ final class fa extends UiWidget {
         if (!(var8 >= t.field_u)) {
           t.field_u = var8;
         }
-        if (mh.field_j < var8) {
-          mh.field_j = var8;
+        if (EmailFormatValidator.field_j < var8) {
+          EmailFormatValidator.field_j = var8;
         }
         DelayedPcmStream.field_p = DelayedPcmStream.field_p + 1;
     }

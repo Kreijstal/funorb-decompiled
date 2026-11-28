@@ -22,9 +22,9 @@ final class wb {
           if (param1 != 2) {
             wb.a(123);
           }
-          dc.field_f = param0.getParameter("overxgames");
-          if (null == dc.field_f) {
-            dc.field_f = "0";
+          DebouncedFieldValidator.field_f = param0.getParameter("overxgames");
+          if (null == DebouncedFieldValidator.field_f) {
+            DebouncedFieldValidator.field_f = "0";
           }
           fl.field_d = param0.getParameter("overxachievements");
           if (null == fl.field_d) {

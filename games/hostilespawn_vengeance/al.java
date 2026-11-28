@@ -14,7 +14,7 @@ final class al extends cj {
     static String field_X;
     static int[] field_W;
     static int[] field_U;
-    private bg field_Y;
+    private FieldValidator field_Y;
     static vh field_N;
 
     final String e(int param0) {
@@ -65,7 +65,7 @@ final class al extends cj {
         }
     }
 
-    al(bg param0, String param1, int param2, int param3, int param4, int param5) {
+    al(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ni.a(101));
         try {
           this.field_R = param1;
@@ -166,7 +166,7 @@ final class al extends cj {
         var42 = null;
         var46 = null;
         var13 = HostileSpawn.field_I ? 1 : 0;
-        var6 = this.field_Y.b(-110);
+        var6 = this.field_Y.getValidationStatus(-110);
         if (wl.field_c == var6) {
           var17 = mg.field_d;
           if (!var17.equals(this.field_n)) {
@@ -174,7 +174,7 @@ final class al extends cj {
             this.j(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
-          var6 = this.field_Y.b(-100);
+          var6 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
             var50 = (mi) ((Object) this.field_h);
@@ -260,7 +260,7 @@ final class al extends cj {
             this.j(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
-          var6 = this.field_Y.b(-100);
+          var6 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
             var52 = (mi) ((Object) this.field_h);
@@ -339,7 +339,7 @@ final class al extends cj {
           this.field_P.c(-(var34.field_u >> 1) + var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - var34.field_r, 256);
           return;
         }
-        var5 = this.field_Y.a(-56);
+        var5 = this.field_Y.getValidationMessage(-56);
         if (var5 == null) {
           var35 = this.field_R;
           var5 = var35;
@@ -348,7 +348,7 @@ final class al extends cj {
             this.j(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
-          var6Lifetime1 = this.field_Y.b(-100);
+          var6Lifetime1 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
           }
@@ -400,7 +400,7 @@ final class al extends cj {
           this.j(-25638);
         }
         super.a(param0, param1, (byte) 107, param3);
-        var6Lifetime2 = this.field_Y.b(-100);
+        var6Lifetime2 = this.field_Y.getValidationStatus(-100);
         if (param2 > 42) {
           var56 = (mi) ((Object) this.field_h);
           var9Lifetime3 = this.field_v + param1;

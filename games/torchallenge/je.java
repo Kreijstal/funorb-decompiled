@@ -206,7 +206,7 @@ final class je {
         try {
           if (kj.field_G == -1 &&
             sd.field_b == -1) {
-            kj.field_G = LocalizedStrings.field_u;
+            kj.field_G = ConfirmedEmailAvailabilityValidator.field_u;
             sd.field_b = ph.field_d;
           }
           bk.field_p = bk.field_p + 1;

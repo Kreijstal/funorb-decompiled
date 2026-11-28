@@ -3,7 +3,7 @@
  */
 final class i {
     static String field_b;
-    static ak field_a;
+    static LoginPanel field_a;
 
     final static void a(int param0) {
         Object var1 = null;
@@ -38,7 +38,7 @@ final class i {
           if (param0 < -123) {
             return;
           }
-          field_a = (ak) null;
+          field_a = (LoginPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class i {
         if (param0 >= 40) {
           return;
         }
-        field_a = (ak) null;
+        field_a = (LoginPanel) null;
     }
 
     static {

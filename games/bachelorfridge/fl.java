@@ -44,7 +44,7 @@ final class fl extends AnimationNode {
 
     final boolean isFinished(byte param0) {
         if (this.field_k == 10) {
-          aba.a((byte) -67, 19);
+          TextFieldValidator.a((byte) -67, 19);
         }
         int fieldTemp$0 = this.field_k - 1;
         this.field_k = this.field_k - 1;

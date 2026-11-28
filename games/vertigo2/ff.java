@@ -26,7 +26,7 @@ final class ff {
     int field_o;
 
     final static void b(byte param0) {
-        vd.field_b = new mk();
+        vd.field_b = new AccountRegistrationPanel();
         n.field_b.a(false, vd.field_b);
         if (param0 != -104) {
           field_b = 45;
@@ -279,7 +279,7 @@ final class ff {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_a = de.a(0, (byte) -114, param0.length, param0);
+            this.field_a = DebouncedFieldValidator.a(0, (byte) -114, param0.length, param0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_a[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

@@ -73,7 +73,7 @@ final class cj {
     }
 
     static {
-        ef.a(50, (byte) 63);
+        ConfirmedEmailAvailabilityValidator.a(50, (byte) 63);
         field_b = new rd();
     }
 }

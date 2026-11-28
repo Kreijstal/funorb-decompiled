@@ -40,7 +40,7 @@ final class ri extends na {
             return null;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = il.a(var6, (byte) 21);
+          var2 = EmailFormatValidator.a(var6, (byte) 21);
           if (param0 != 0) {
             stackIn_10_0 = (qk) null;
             return stackIn_10_0;
@@ -54,7 +54,7 @@ final class ri extends na {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_F);
-            var4 = il.a(var7, (byte) 21);
+            var4 = EmailFormatValidator.a(var7, (byte) 21);
             if (!var4.equals(var2)) {
               var3 = (qk) (SocketConnector.field_e.a((byte) 125));
               continue;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fq extends jh {
-    static dg field_F;
+    static TranslucentSpriteLayer field_F;
     int field_D;
     static byte[][] field_G;
     static boolean field_E;
@@ -59,7 +59,7 @@ final class fq extends jh {
     final static void a(boolean param0, int param1, PcmSample param2, int param3) {
         try {
           if (param0) {
-            field_F = (dg) null;
+            field_F = (TranslucentSpriteLayer) null;
           }
           tb.field_l.a(param2, param1, on.field_c * param3 / 160);
         } catch (RuntimeException runtimeException) {
@@ -67,9 +67,9 @@ final class fq extends jh {
         }
     }
 
-    final static sm[] a(ResourceArchive param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        sm[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;

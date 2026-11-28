@@ -321,7 +321,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   return;
                 }
               }
-              rl.field_O = true;
+              EditableTextField.field_O = true;
             }
             return;
           }
@@ -429,7 +429,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           NanoFrameTimer.field_m = true;
           vi.field_j = true;
           SectorCacheStore.field_b = true;
-          rl.field_O = false;
+          EditableTextField.field_O = false;
           mk.field_j = rf.correctedCurrentTimeMillis(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -676,7 +676,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 na.b((byte) 114);
                 this.f(467);
-                v.field_B = pj.a(bk.field_d, (byte) 99, AccountCreationResultPanel.field_sb, (java.awt.Component) ((Object) ug.field_y));
+                v.field_B = AccountRegistrationPanel.a(bk.field_d, (byte) 99, AccountCreationResultPanel.field_sb, (java.awt.Component) ((Object) ug.field_y));
                 this.b(false);
                 SecondaryNodeDeque.field_a = v.c(65476);
                 do {
@@ -777,7 +777,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
-            tj.field_i = (32000 + (var6_int >> 1)) / var6_int;
+            TextFieldValidator.field_i = (32000 + (var6_int >> 1)) / var6_int;
           }
           fieldTemp$1 = wj.field_o;
           wj.field_o = wj.field_o + 1;

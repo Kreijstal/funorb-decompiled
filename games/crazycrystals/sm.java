@@ -147,9 +147,9 @@ final class sm extends ResultScenePhase {
     }
 
     final ResultScenePhase updatePhase(int param0) {
-        if (li.field_a != null &&
-          li.field_a.field_l != null &&
-          180 <= li.field_a.field_f) {
+        if (DebouncedFieldValidator.field_a != null &&
+          DebouncedFieldValidator.field_a.field_l != null &&
+          180 <= DebouncedFieldValidator.field_a.field_f) {
           return (ResultScenePhase) (this);
         }
         nj.field_k = FloatingScoreLabel.field_a[0].length;

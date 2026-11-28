@@ -163,17 +163,17 @@ final class MovingBlock extends IntrusiveNode {
             qi.field_c = null;
             LevelView.field_C.position = 0;
             if (param0 == null) {
-              ui.field_p.position = 0;
-              ui.field_p.writeInt(false, ta.field_c.nextInt());
-              ui.field_p.writeInt(false, ta.field_c.nextInt());
-              stackIn_17_0 = ui.field_p;
+              PasswordValidator.field_p.position = 0;
+              PasswordValidator.field_p.writeInt(false, ta.field_c.nextInt());
+              PasswordValidator.field_p.writeInt(false, ta.field_c.nextInt());
+              stackIn_17_0 = PasswordValidator.field_p;
               if (param3.a(-107)) {
                 stackIn_18_1 = var14;
               } else {
                 stackIn_18_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_17_0).writePrefixedString(stackIn_18_1, 115);
-              stackIn_20_0 = ui.field_p;
+              stackIn_20_0 = PasswordValidator.field_p;
               if (!param6.a(-46)) {
                 stackIn_21_1 = "";
               } else {
@@ -183,23 +183,23 @@ final class MovingBlock extends IntrusiveNode {
               LevelView.field_C.writeByte(16, (byte) -87);
               LevelView.field_C.position = LevelView.field_C.position + 1;
               var9 = LevelView.field_C.position;
-              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, PasswordValidator.field_p);
               LevelView.field_C.backpatchByteLength(true, -var9 + LevelView.field_C.position);
             } else {
               var9 = 0;
-              ui.field_p.position = 0;
+              PasswordValidator.field_p.position = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              ui.field_p.writeInt(false, ta.field_c.nextInt());
-              ui.field_p.writeInt(false, ta.field_c.nextInt());
-              ui.field_p.writePrefixedString(var14, 106);
-              ui.field_p.writePrefixedString(var8, 124);
+              PasswordValidator.field_p.writeInt(false, ta.field_c.nextInt());
+              PasswordValidator.field_p.writeInt(false, ta.field_c.nextInt());
+              PasswordValidator.field_p.writePrefixedString(var14, 106);
+              PasswordValidator.field_p.writePrefixedString(var8, 124);
               var15 = (CharSequence) ((Object) param0);
-              ui.field_p.writePrefixedString(qk.a(-128, var15), 119);
-              ui.field_p.writeShort(param4, (byte) -119);
-              ui.field_p.writeByte(param2, (byte) -98);
-              ui.field_p.writeByte(var9, (byte) -66);
+              PasswordValidator.field_p.writePrefixedString(qk.a(-128, var15), 119);
+              PasswordValidator.field_p.writeShort(param4, (byte) -119);
+              PasswordValidator.field_p.writeByte(param2, (byte) -98);
+              PasswordValidator.field_p.writeByte(var9, (byte) -66);
               LevelView.field_C.writeByte(18, (byte) -92);
               LevelView.field_C.position = LevelView.field_C.position + 2;
               var10 = LevelView.field_C.position;
@@ -208,13 +208,13 @@ final class MovingBlock extends IntrusiveNode {
                 var11_ref_StringLifetime4 = "";
               }
               LevelView.field_C.writeString((byte) -57, var11_ref_StringLifetime4);
-              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, ui.field_p);
+              NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, 0, PasswordValidator.field_p);
               LevelView.field_C.backpatchShortLength(-var10 + LevelView.field_C.position, (byte) -96);
             }
             MovingBlock.a(-1, -1);
-            jc.field_a = l.field_m;
+            jc.field_a = EmailFormatValidator.field_m;
           }
-          if (jc.field_a == l.field_m &&
+          if (jc.field_a == EmailFormatValidator.field_m &&
             DiskArchiveStore.a(1, false)) {
             var9Lifetime1 = ne.field_a.readUnsignedByte(16383);
             ne.field_a.position = 0;
@@ -238,7 +238,7 @@ final class MovingBlock extends IntrusiveNode {
               } else {
                 uk.field_c = var9Lifetime1;
                 jc.field_a = sf.field_D;
-                hd.field_o = -1;
+                ConfirmedEmailAvailabilityValidator.field_o = -1;
               }
             }
           }

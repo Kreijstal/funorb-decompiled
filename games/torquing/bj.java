@@ -3,9 +3,9 @@
  */
 final class bj extends rb {
     private int field_H;
-    private sk field_I;
+    private FieldValidator field_I;
     private Sprite field_G;
-    static sm[] field_L;
+    static IndexedSprite[] field_L;
     private String field_J;
     static String field_K;
 
@@ -64,10 +64,10 @@ final class bj extends rb {
           var14 = (UiWidget) null;
           this.a(-111, (UiWidget) null, -90, 97);
         }
-        var6 = this.field_I.a((byte) -88);
+        var6 = this.field_I.getValidationStatus((byte) -88);
         if (IntrusiveNode.field_a != var6 &&
           IsaacCipher.field_h != var6) {
-          var25 = this.field_I.a(126);
+          var25 = this.field_I.getValidationMessage(126);
           if (var25 == null) {
             var30 = this.field_J;
             if (!var30.equals(this.text)) {
@@ -75,7 +75,7 @@ final class bj extends rb {
               this.a((byte) -36);
             }
             super.a(param0, (byte) -63, param2, param3);
-            var6 = this.field_I.a((byte) -84);
+            var6 = this.field_I.getValidationStatus((byte) -84);
             var37 = (fe) ((Object) this.renderer);
             var9 = this.x + param3;
             var10 = var37.a((UiWidget) (this), param2, -101) + (var37.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
@@ -123,7 +123,7 @@ final class bj extends rb {
             this.a((byte) -36);
           }
           super.a(param0, (byte) -63, param2, param3);
-          var6 = this.field_I.a((byte) -84);
+          var6 = this.field_I.getValidationStatus((byte) -84);
           var36 = (fe) ((Object) this.renderer);
           var9Lifetime2 = this.x + param3;
           var10Lifetime2 = var36.a((UiWidget) (this), param2, -101) + (var36.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
@@ -173,7 +173,7 @@ final class bj extends rb {
           this.a((byte) -36);
         }
         super.a(param0, (byte) -63, param2, param3);
-        var6Lifetime1 = this.field_I.a((byte) -84);
+        var6Lifetime1 = this.field_I.getValidationStatus((byte) -84);
         var35 = (fe) ((Object) this.renderer);
         var9Lifetime1 = this.x + param3;
         var10Lifetime1 = var35.a((UiWidget) (this), param2, -101) + (var35.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
@@ -228,7 +228,7 @@ final class bj extends rb {
         field_K = null;
     }
 
-    bj(sk param0, String param1, int param2, int param3, int param4, int param5) {
+    bj(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, BufferedSocket.b(true));
         try {
           this.field_J = param1;

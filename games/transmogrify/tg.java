@@ -36,7 +36,7 @@ final class tg {
           }
           for (var5 = 0; var5 < param2.length(); var5++) {
             if (!bc.a(param2.charAt(var5), -161)) {
-              stackIn_11_0 = ff.field_C;
+              stackIn_11_0 = LoginPanel.field_C;
               return stackIn_11_0;
             }
           }

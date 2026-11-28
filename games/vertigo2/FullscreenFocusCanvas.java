@@ -61,7 +61,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           return;
         }
         try {
-          br.a(this.field_c, param0, 8);
+          ValidatedTextField.a(this.field_c, param0, 8);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "qi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

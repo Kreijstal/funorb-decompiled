@@ -65,7 +65,7 @@ final class pd extends rj {
         int var3;
         boolean stackIn_6_0 = false;
         var3 = -8 / ((param2 - 14) / 43);
-        stackIn_6_0 = (ArchiveRequest.field_w - 16 <= param1) && (16 + (ArchiveRequest.field_w + 200) > param1) && (param0 >= -32 + qc.field_w) && (32 + (wi.field_kb + qc.field_w) > param0);
+        stackIn_6_0 = (ArchiveRequest.field_w - 16 <= param1) && (16 + (ArchiveRequest.field_w + 200) > param1) && (param0 >= -32 + MenuScreen.field_w) && (32 + (wi.field_kb + MenuScreen.field_w) > param0);
         return stackIn_6_0;
     }
 
@@ -85,7 +85,7 @@ final class pd extends rj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ud.a((java.awt.Component) ((Object) param0), -1);
+          IntroSequenceScreen.detachKeyboardInput((java.awt.Component) ((Object) param0), -1);
           gn.a((byte) 127, (java.awt.Component) ((Object) param0));
           if (param1 != -32) {
             field_B = (String) null;
@@ -147,17 +147,17 @@ final class pd extends rj {
           te.b(var6 + (6 + var4), var5 + 11, this.field_F - 2, kc.field_M);
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 3; var6Lifetime1++) {
-          qe.b(-var6Lifetime1 + var4 + 5, 11 + var5, this.field_F - 2, 0, 192 - var6Lifetime1 * 64);
-          qe.b(var6Lifetime1 + (13 + var4), var5 + 11, -2 + this.field_F, 0, (3 - var6Lifetime1) * 64);
+          DungeonAssaultScreen.b(-var6Lifetime1 + var4 + 5, 11 + var5, this.field_F - 2, 0, 192 - var6Lifetime1 * 64);
+          DungeonAssaultScreen.b(var6Lifetime1 + (13 + var4), var5 + 11, -2 + this.field_F, 0, (3 - var6Lifetime1) * 64);
         }
         for (var6Lifetime2 = 1; -1 + this.field_F > var6Lifetime2; var6Lifetime2++) {
-          qe.a(var4 + 7, var5 + 10 + var6Lifetime2, 5, 0, -(var6Lifetime2 * 80 / this.field_F) + 144);
+          DungeonAssaultScreen.a(var4 + 7, var5 + 10 + var6Lifetime2, 5, 0, -(var6Lifetime2 * 80 / this.field_F) + 144);
         }
         bo.field_Kb.h(var4, var5);
         if (param1 != 8187) {
           return;
         }
-        ud.field_y.h(var4, this.field_F + var5 + 10);
+        IntroSequenceScreen.field_y.h(var4, this.field_F + var5 + 10);
         if (this.field_F < 2 * qh.field_q.field_v) {
           if (0 == this.field_C) {
             stackIn_19_0 = 0;

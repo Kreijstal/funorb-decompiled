@@ -7,7 +7,7 @@ final class l {
     static String field_a;
     static byte[][][] field_d;
 
-    final static void a(int param0, qp param1, int param2) {
+    final static void a(int param0, AchievementProgressUpdate param1, int param2) {
         IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {

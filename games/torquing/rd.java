@@ -226,7 +226,7 @@ final class rd extends am {
             var8 = stackIn_8_0;
             var8 = (4087 & var8) >> 4;
             var9 = va.a(ci.field_c, (byte) 123, var6);
-            var10 = va.a(um.field_o, (byte) 127, var6);
+            var10 = va.a(MatchingFieldValidator.field_o, (byte) 127, var6);
             var11 = (this.field_u * de.field_d[var8] >> 12) + var9;
             var12 = var10 + (this.field_u * jh.field_x[var8] >> 12);
             var13 = var12 - var10;

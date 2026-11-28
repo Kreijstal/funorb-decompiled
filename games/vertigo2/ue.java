@@ -56,9 +56,9 @@ final class ue extends WidgetContainer implements cm, ij {
           ue.b((byte) -108, -114);
         }
         tc.field_b = param1;
-        if (ld.field_b != da.field_i) {
+        if (ld.field_b != TextFieldValidator.field_i) {
           var2 = ld.field_b * ld.field_b;
-          var3 = var2 - da.field_i * da.field_i;
+          var3 = var2 - TextFieldValidator.field_i * TextFieldValidator.field_i;
           param1 = param1 + (-param1 + ce.field_b) * var3 / var2;
         }
         td.field_c.a(91, 640, 120, param1, ml.field_w);

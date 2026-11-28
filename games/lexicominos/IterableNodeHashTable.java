@@ -47,15 +47,15 @@ final class IterableNodeHashTable implements Iterable {
         Throwable decompiledCaughtException = null;
         var1_ref = AccountNameAvailabilityValidator.field_l;
         synchronized (var1_ref) {
-          if (tj.field_h == ResourceArchive.field_f) {
+          if (TextFieldValidator.field_h == ResourceArchive.field_f) {
             return false;
           }
           if (param0 != -72) {
             IterableNodeHashTable.a((byte) 25);
           }
-          da.field_b = gj.field_x[tj.field_h];
-          IsaacRandom.field_b = Bzip2State.field_q[tj.field_h];
-          tj.field_h = 127 & tj.field_h + 1;
+          da.field_b = gj.field_x[TextFieldValidator.field_h];
+          IsaacRandom.field_b = Bzip2State.field_q[TextFieldValidator.field_h];
+          TextFieldValidator.field_h = 127 & TextFieldValidator.field_h + 1;
           stackIn_7_0 = true;
         }
         return stackIn_7_0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wu extends InteractiveWidget {
-    private qu field_A;
+    private FieldValidator field_A;
     private int field_D;
 
     final void draw(byte param0, int param1, int param2, int param3) {
@@ -22,7 +22,7 @@ final class wu extends InteractiveWidget {
         int var5 = (this.width >> 1) + param3 + this.x;
         int var6 = this.y + (param1 + (this.height >> 1));
         int var9 = -121 % ((-20 - param0) / 54);
-        jg var8 = this.field_A.b(-19704);
+        jg var8 = this.field_A.getValidationStatus(-19704);
         if (var8 == cq.field_g) {
           var16 = fr.field_q[0];
           var10 = var16.field_n << 1;
@@ -105,7 +105,7 @@ final class wu extends InteractiveWidget {
         }
     }
 
-    wu(qu param0) {
+    wu(FieldValidator param0) {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {
@@ -124,7 +124,7 @@ final class wu extends InteractiveWidget {
 
     final String getTooltip(byte param0) {
         if (this.mouseOver) {
-          return this.field_A.a((byte) 71);
+          return this.field_A.getValidationMessage((byte) 71);
         }
         if (param0 != 16) {
           UiWidget var3 = (UiWidget) null;

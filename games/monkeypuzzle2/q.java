@@ -81,7 +81,7 @@ final class q {
           if (param1) {
             q.a(111, (byte) -112, -29);
           }
-          stackIn_3_0 = rj.a(false, param0, (byte) 20);
+          stackIn_3_0 = EditableTextField.a(false, param0, (byte) 20);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

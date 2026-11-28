@@ -187,7 +187,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               }
             }
             for (var8Lifetime2 = 0; var8Lifetime2 < 3; var8Lifetime2++) {
-              var5 = il.field_o[var8Lifetime2];
+              var5 = EmailFormatValidator.field_o[var8Lifetime2];
               if (var5 > var1_int) {
                 var5 = var5 - 1;
                 var2Lifetime2 = 0;
@@ -321,7 +321,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (param0 != 95) {
             field_b = (int[]) null;
           }
-          stackIn_3_0 = dj.field_cb.getFileByName(-2, param1, "");
+          stackIn_3_0 = EditableTextField.field_cb.getFileByName(-2, param1, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

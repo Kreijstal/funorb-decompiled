@@ -6,7 +6,7 @@ import java.io.*;
 abstract class nf extends rh {
     static int field_M;
     private int field_J;
-    static bg field_F;
+    static AccountRegistrationPanel field_F;
     static int field_N;
     static String field_E;
     private int field_G;

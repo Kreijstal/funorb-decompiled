@@ -171,7 +171,7 @@ class ButtonWidget extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = v.a('_', (byte) -31, "", param1);
+          param1 = DebouncedFieldValidator.a('_', (byte) -31, "", param1);
           if (param0 != 19438) {
             return true;
           }
@@ -330,7 +330,7 @@ class ButtonWidget extends UiWidget {
     }
 
     ButtonWidget(String param0, tg param1) {
-        this(param0, lb.field_O.field_h, param1);
+        this(param0, EditableTextField.field_O.field_h, param1);
     }
 
     final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -352,7 +352,7 @@ class ButtonWidget extends UiWidget {
         this.field_D = false;
         this.field_C = true;
         this.field_B = true;
-        this.field_y = lb.field_O.field_g;
+        this.field_y = EditableTextField.field_O.field_g;
     }
 
     static {

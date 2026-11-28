@@ -5,7 +5,7 @@ final class ne implements t {
     static IntrusiveDeque field_b;
     private BitmapFont field_e;
     private int field_c;
-    static bk field_d;
+    static DisplayNameSelectionPanel field_d;
     private int field_f;
     static BitPacketBuffer field_a;
 

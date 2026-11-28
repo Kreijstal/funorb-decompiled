@@ -7,7 +7,7 @@ final class bh extends wf implements sh {
     static volatile boolean field_cb;
     static ae field_bb;
     static String field_ab;
-    static lm field_Z;
+    static DisplayNameSelectionPanel field_Z;
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
         RuntimeException var6 = null;
@@ -245,7 +245,7 @@ final class bh extends wf implements sh {
           if (param1 == nn.field_r) {
             var3 = pn.field_d;
           } else {
-            if (od.field_k != param1) {
+            if (ConfirmedEmailAvailabilityValidator.field_k != param1) {
               if (param1 == ge.field_a) {
                 var3 = Bzip2State.field_F;
                 this.field_q = this.field_q + 30;

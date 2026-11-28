@@ -18,7 +18,7 @@ class si extends al implements n {
     final void l(int param0) {
         this.field_kb.a(4210752, -7062047, 2121792);
         oi var2 = new oi(this, this.field_rb, field_pb);
-        var2.a(15, ib.field_bb, (byte) 121);
+        var2.a(15, ValidatedTextField.field_bb, (byte) 121);
         int var3 = 93 % ((param0 + 44) / 51);
         this.a(var2, -42);
     }
@@ -76,7 +76,7 @@ class si extends al implements n {
                 }
               }
             } else {
-              var6.a(8, pl.field_V, (byte) 57);
+              var6.a(8, AccountRegistrationPanel.field_V, (byte) 57);
             }
           } else {
             var6.a(7, mi.field_i, (byte) -51);

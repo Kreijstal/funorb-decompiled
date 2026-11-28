@@ -46,8 +46,8 @@ final class wb {
         int var6 = 0;
         String var7 = null;
         try {
-          ha.field_c[0] = hj.field_h.nextInt();
-          ha.field_c[1] = hj.field_h.nextInt();
+          ha.field_c[0] = AgeValidator.field_h.nextInt();
+          ha.field_c[1] = AgeValidator.field_h.nextInt();
           ha.field_c[2] = (int)(uh.field_b >> 32);
           ByteStorage.field_c.position = 0;
           ha.field_c[3] = (int)uh.field_b;
@@ -1628,7 +1628,7 @@ final class wb {
                 }
                 var2 = ha.a("create_displayname_tooltip", (byte) 52);
                 if (null != var2) {
-                  ra.field_b = va.a(0, var2);
+                  DebouncedFieldValidator.field_b = va.a(0, var2);
                 }
                 var2 = ha.a("create_displayname_hint", (byte) 97);
                 if (null != var2) {
@@ -1732,7 +1732,7 @@ final class wb {
                 }
                 var2 = ha.a("create_alert_passcontainsname_partial", (byte) 106);
                 if (null != var2) {
-                  wh.field_eb = va.a(0, var2);
+                  ValidatedTextField.field_eb = va.a(0, var2);
                 }
                 var2 = ha.a("create_alert_checkname", (byte) 39);
                 if (null != var2) {
@@ -2040,7 +2040,7 @@ final class wb {
                 }
                 var2 = ha.a("quit", (byte) 67);
                 if (null != var2) {
-                  w.field_Q = va.a(0, var2);
+                  LoginPanel.field_Q = va.a(0, var2);
                 }
                 var2 = ha.a("login_createaccount", (byte) 58);
                 if (null != var2) {
@@ -2056,7 +2056,7 @@ final class wb {
                 }
                 var2 = ha.a("returntopausemenu", (byte) 79);
                 if (null != var2) {
-                  qc.field_i = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_i = va.a(0, var2);
                 }
                 var2 = ha.a("returntooptionsmenu_notpaused", (byte) 30);
                 if (null != var2) {
@@ -2957,31 +2957,31 @@ final class wb {
                 }
                 var2 = ha.a("mustlogin2,1", (byte) 93);
                 if (var2 != null) {
-                  qc.field_k[1] = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[1] = va.a(0, var2);
                 }
                 var2 = ha.a("mustlogin2,2", (byte) 27);
                 if (var2 != null) {
-                  qc.field_k[2] = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[2] = va.a(0, var2);
                 }
                 var2 = ha.a("mustlogin2,3", (byte) 24);
                 if (null != var2) {
-                  qc.field_k[3] = va.a(param0 - 6, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[3] = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("mustlogin2,4", (byte) 63);
                 if (var2 != null) {
-                  qc.field_k[4] = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[4] = va.a(0, var2);
                 }
                 var2 = ha.a("mustlogin2,5", (byte) 29);
                 if (var2 != null) {
-                  qc.field_k[5] = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[5] = va.a(0, var2);
                 }
                 var2 = ha.a("mustlogin2,6", (byte) 68);
                 if (null != var2) {
-                  qc.field_k[6] = va.a(param0 - 6, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[6] = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("mustlogin2,7", (byte) 82);
                 if (null != var2) {
-                  qc.field_k[7] = va.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k[7] = va.a(0, var2);
                 }
                 var2 = ha.a("mustlogin3,1", (byte) 95);
                 if (null != var2) {

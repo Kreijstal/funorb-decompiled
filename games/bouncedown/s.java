@@ -4,7 +4,7 @@
 final class s extends vc {
     private int field_L;
     private String field_I;
-    private uh field_H;
+    private FieldValidator field_H;
     private RgbSprite field_K;
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -24,10 +24,10 @@ final class s extends vc {
           regionExit2: {
             regionExit3: {
               var13 = Bounce.field_N;
-              var6 = this.field_H.a((byte) 122);
+              var6 = this.field_H.getValidationStatus((byte) 122);
               if (ui.field_o != var6 &&
                 mi.field_c != var6) {
-                var5 = this.field_H.c((byte) 66);
+                var5 = this.field_H.getValidationMessage((byte) 66);
                 if (var5 == null) {
                   var5 = this.field_I;
                   break regionExit3;
@@ -47,7 +47,7 @@ final class s extends vc {
           this.a(0);
         }
         super.a(param0, param1, 111, param3);
-        var6Lifetime1 = this.field_H.a((byte) 124);
+        var6Lifetime1 = this.field_H.getValidationStatus((byte) 124);
         var8 = (sf) ((Object) this.field_j);
         var9 = param3 + this.field_r;
         if (param2 <= 33) {
@@ -113,8 +113,8 @@ final class s extends vc {
                 jc.field_g.payload[var5_int] = var4_ref_j.field_i[var5_int];
               }
               ak.field_z = i.field_f;
-              i.field_f = ck.field_b;
-              ck.field_b = wa.field_d;
+              i.field_f = DebouncedFieldValidator.field_b;
+              DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = var4_ref_j.field_g;
               return true;
             }
@@ -137,8 +137,8 @@ final class s extends vc {
             }
             if (DiskCacheWorker.field_c == 0) {
               ak.field_z = i.field_f;
-              i.field_f = ck.field_b;
-              ck.field_b = wa.field_d;
+              i.field_f = DebouncedFieldValidator.field_b;
+              DebouncedFieldValidator.field_b = wa.field_d;
               wa.field_d = bh.field_c;
               bh.field_c = -1;
               return true;
@@ -199,7 +199,7 @@ final class s extends vc {
         }
     }
 
-    s(uh param0, String param1, int param2, int param3, int param4, int param5) {
+    s(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, vd.a(93));
         try {
           this.field_H = param0;
@@ -214,7 +214,7 @@ final class s extends vc {
         if (param0 == 0) {
           return null;
         }
-        this.field_H = (uh) null;
+        this.field_H = (FieldValidator) null;
         return null;
     }
 

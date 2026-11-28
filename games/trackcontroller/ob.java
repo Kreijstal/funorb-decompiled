@@ -263,7 +263,7 @@ final class ob extends DualLinkNode {
         }
         ka.field_a = true;
         rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
-        return rl.field_N == 11 ? true : false;
+        return LoginPanel.field_N == 11 ? true : false;
     }
 
     final static void publishKeyState(int param0) {
@@ -283,7 +283,7 @@ final class ob extends DualLinkNode {
             GameKeyHandler.field_d = IntrusiveNode.field_d;
             if (GameScreen.keyQueueWrite < 0) {
               for (var2 = 0; var2 < 112; var2++) {
-                ni.keyDown[var2] = false;
+                MatchingFieldValidator.keyDown[var2] = false;
               }
               GameScreen.keyQueueWrite = hb.keyQueueRead;
             } else {
@@ -291,10 +291,10 @@ final class ob extends DualLinkNode {
                 var2 = md.keyQueue[hb.keyQueueRead];
                 hb.keyQueueRead = hb.keyQueueRead + 1 & 127;
                 if (var2 < 0) {
-                  ni.keyDown[~var2] = false;
+                  MatchingFieldValidator.keyDown[~var2] = false;
                   continue;
                 }
-                ni.keyDown[var2] = true;
+                MatchingFieldValidator.keyDown[var2] = true;
               }
             }
             IntrusiveNode.field_d = ActiveLevel.field_V;

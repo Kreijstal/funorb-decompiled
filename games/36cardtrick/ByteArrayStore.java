@@ -108,7 +108,7 @@ abstract class ByteArrayStore {
         int var11Lifetime1;
         var12 = Main.field_T;
         try {
-          var14 = rd.field_j;
+          var14 = EmailFormatValidator.field_j;
           if (param0 != -28037) {
             ByteArrayStore.a(-72);
           }
@@ -136,9 +136,9 @@ abstract class ByteArrayStore {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               bc.a(false, var14);
               if (var6_intLifetime1 == 0) {
-                a.a(sa.field_a, nl.field_b, cg.field_h, -23576, var6_intLifetime1, Crc32Table.field_c);
+                a.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, -23576, var6_intLifetime1, Crc32Table.field_c);
               } else {
-                a.a(sa.field_a, nl.field_b, cg.field_h, param0 ^ 12691, var6_intLifetime1, Crc32Table.field_c);
+                a.a(sa.field_a, nl.field_b, TextFieldValidator.field_h, param0 ^ 12691, var6_intLifetime1, Crc32Table.field_c);
               }
             }
             rf.a(-23243, var5);
@@ -150,7 +150,7 @@ abstract class ByteArrayStore {
             while (var9 < var8) {
               var11 = re.field_c[var9];
               var6[0][var10] = ad.field_i[var11];
-              var18[0][4 * var10] = p.field_n[var11];
+              var18[0][4 * var10] = ConfirmedEmailAvailabilityValidator.field_n[var11];
               var18[0][1 + var10 * 4] = q.field_h[var11];
               var18[0][2 + 4 * var10] = mj.field_b[var11];
               var18[0][var10 * 4 + 3] = ij.field_c[var11];
@@ -168,7 +168,7 @@ abstract class ByteArrayStore {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = re.field_c[var5 + var9Lifetime1];
               var6[1][var13] = ad.field_i[var11Lifetime1];
-              var18[1][var13 * 4] = p.field_n[var11Lifetime1];
+              var18[1][var13 * 4] = ConfirmedEmailAvailabilityValidator.field_n[var11Lifetime1];
               var18[1][1 + 4 * var13] = q.field_h[var11Lifetime1];
               var18[1][2 + 4 * var13] = mj.field_b[var11Lifetime1];
               var18[1][4 * var13 + 3] = ij.field_c[var11Lifetime1];

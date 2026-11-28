@@ -34,7 +34,7 @@ final class wi {
 
     final static String c(int param0) {
         int var1 = -102 % ((-82 - param0) / 41);
-        if (oe.field_Q == wh.field_fb) {
+        if (oe.field_Q == ValidatedTextField.field_fb) {
           return kc.field_n;
         }
         return LightningArc.field_gb;
@@ -56,10 +56,10 @@ final class wi {
             nh.a(var4, 0, param0);
             var4 = (sf) (DiskArchiveRequest.field_y.nextForward(2123));
           }
-          var2 = ra.field_d.beginForward(107);
+          var2 = DebouncedFieldValidator.field_d.beginForward(107);
           while (var2 != null) {
             BoundedRandomAccessFile.a(-87, param0);
-            var2 = ra.field_d.nextForward(2123);
+            var2 = DebouncedFieldValidator.field_d.nextForward(2123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

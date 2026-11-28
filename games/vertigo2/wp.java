@@ -72,7 +72,7 @@ final class wp {
           DiskArchiveRequest.field_E = true;
           return;
         }
-        if (!ne.j(param0 - 10)) {
+        if (!DisplayNameSelectionPanel.j(param0 - 10)) {
           or.b(4);
           hn.field_w = 11;
           DiskArchiveRequest.field_E = true;

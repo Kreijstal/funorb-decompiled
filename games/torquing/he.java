@@ -44,13 +44,13 @@ final class he {
           var7 = var13;
           var8 = 0;
           if (var13 != null) {
-            for (var9 = 0; var9 < ia.field_i; var9++) {
+            for (var9 = 0; var9 < FramedPanelLayer.field_i; var9++) {
               var10 = var15[var9];
               if (var10 > 1e-7) {
                 var10 = var10 * param1;
-                param2[0] = param2[0] + var10 * bn.field_f[var9][6];
-                param2[1] = param2[1] + var10 * bn.field_f[var9][7];
-                param2[2] = param2[2] + var10 * bn.field_f[var9][8];
+                param2[0] = param2[0] + var10 * SpriteBase.field_f[var9][6];
+                param2[1] = param2[1] + var10 * SpriteBase.field_f[var9][7];
+                param2[2] = param2[2] + var10 * SpriteBase.field_f[var9][8];
                 var8 = 1;
               }
             }

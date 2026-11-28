@@ -41,13 +41,13 @@ final class a {
 
     final static void a(int param0) {
         if (!tl.field_g) {
-          if (mf.field_f == null) {
-            mf.field_f = ij.a(param0 ^ -108, 4);
+          if (TextFieldValidator.field_f == null) {
+            TextFieldValidator.field_f = ij.a(param0 ^ -108, 4);
           }
-          if (mf.field_f.field_o) {
-            oj.field_B = oj.field_B & ~mf.field_f.field_s;
-            i.field_o = i.field_o | mf.field_f.field_s;
-            mf.field_f = null;
+          if (TextFieldValidator.field_f.field_o) {
+            oj.field_B = oj.field_B & ~TextFieldValidator.field_f.field_s;
+            i.field_o = i.field_o | TextFieldValidator.field_f.field_s;
+            TextFieldValidator.field_f = null;
             tl.field_g = true;
           }
         }

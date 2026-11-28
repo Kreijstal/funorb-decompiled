@@ -26,9 +26,9 @@ final class e {
           if (AccountServiceResult.field_c[param1] < AccountServiceResult.field_c[param2]) {
             return false;
           }
-          var4 = rb.field_fb[param2] + jc.field_a[param2] + hf.field_c[param2];
+          var4 = rb.field_fb[param2] + jc.field_a[param2] + DebouncedFieldValidator.field_c[param2];
           var6 = -70 / ((param3 - 51) / 41);
-          var5 = jc.field_a[param1] - (-hf.field_c[param1] - rb.field_fb[param1]);
+          var5 = jc.field_a[param1] - (-DebouncedFieldValidator.field_c[param1] - rb.field_fb[param1]);
           if (var4 < var5) {
             return true;
           }
@@ -49,9 +49,9 @@ final class e {
         if (gi.field_e[param2] > gi.field_e[param1]) {
           return false;
         }
-        var4Lifetime1 = rb.field_fb[param2] + jc.field_a[param2] + hf.field_c[param2];
+        var4Lifetime1 = rb.field_fb[param2] + jc.field_a[param2] + DebouncedFieldValidator.field_c[param2];
         var6Lifetime1 = -70 / ((param3 - 51) / 41);
-        var5Lifetime1 = jc.field_a[param1] - (-hf.field_c[param1] - rb.field_fb[param1]);
+        var5Lifetime1 = jc.field_a[param1] - (-DebouncedFieldValidator.field_c[param1] - rb.field_fb[param1]);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }
@@ -83,7 +83,7 @@ final class e {
         if (var5 == 0) {
           bh.field_g = bh.field_g | 1 << var4;
           b.field_m = b.field_m - (1 << var4);
-          hf.field_f.field_P = hf.field_f.field_P + 1;
+          DebouncedFieldValidator.field_f.field_P = DebouncedFieldValidator.field_f.field_P + 1;
           FrameTimer.field_b = FrameTimer.field_b | var3;
           kg.field_c = kg.field_c | var3;
           if (param1 == 40) {
@@ -108,7 +108,7 @@ final class e {
           em.field_C.addFirst(-8212, new vl(param2, param0, bh.field_g, b.field_m, sd.field_e, jc.field_e));
           return;
         }
-        hf.field_f.field_P = hf.field_f.field_P + 1;
+        DebouncedFieldValidator.field_f.field_P = DebouncedFieldValidator.field_f.field_P + 1;
         FrameTimer.field_b = FrameTimer.field_b | var3;
         kg.field_c = kg.field_c | var3;
         if (param1 != 40) {
@@ -167,7 +167,7 @@ final class e {
           }
           var4 = -(wg.field_g.field_n >> 1) + (240 + var1_int);
           wg.field_g.c(var2 + (320 - (wg.field_g.field_m >> 1)), var4);
-          uk.field_n.c(500, var3 + (30 + var4));
+          EmailFormatValidator.field_n.c(500, var3 + (30 + var4));
           var5 = -330 + m.field_h;
           if (0 > var5) {
             var5 = 0;

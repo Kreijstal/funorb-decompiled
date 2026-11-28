@@ -35,7 +35,7 @@ final class nf extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = stellarshard.field_B;
         try {
-          var9 = ae.field_N;
+          var9 = EditableTextField.field_N;
           var2 = var9.readUnsignedByte(4);
           if (param0 <= 61) {
             return;

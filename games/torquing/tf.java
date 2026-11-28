@@ -50,7 +50,7 @@ final class tf {
           ti.field_g = var17.readUnsignedShort(7088);
           fq.field_G = new byte[ti.field_g][];
           PacketBuffer.field_o = new int[ti.field_g];
-          ij.field_o = new int[ti.field_g];
+          PasswordValidator.field_o = new int[ti.field_g];
           pn.field_b = new byte[ti.field_g][];
           na.field_G = new int[ti.field_g];
           lp.field_e = new boolean[ti.field_g];
@@ -72,7 +72,7 @@ final class tf {
             vo.field_b[var4Lifetime2] = var17.readUnsignedShort(7088);
           }
           for (var4Lifetime3 = 0; ti.field_g > var4Lifetime3; var4Lifetime3++) {
-            ij.field_o[var4Lifetime3] = var17.readUnsignedShort(7088);
+            PasswordValidator.field_o[var4Lifetime3] = var17.readUnsignedShort(7088);
           }
           var17.position = param1.length - (7 + ti.field_g * 8 + 3 * (-1 + var3));
           cq.field_y = new int[var3];
@@ -85,7 +85,7 @@ final class tf {
           var17.position = 0;
           for (var4Lifetime5 = 0; ti.field_g > var4Lifetime5; var4Lifetime5++) {
             var5 = vo.field_b[var4Lifetime5];
-            var6 = ij.field_o[var4Lifetime5];
+            var6 = PasswordValidator.field_o[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
@@ -180,7 +180,7 @@ final class tf {
             return;
           }
           og.a((java.awt.Component) ((Object) param1), -1);
-          qk.a(-90, (java.awt.Component) ((Object) param1));
+          LevelCompletionUpdate.detachMouseInput(-90, (java.awt.Component) ((Object) param1));
           if (null != wb.field_u) {
             wb.field_u.detach(0, (java.awt.Component) ((Object) param1));
           }

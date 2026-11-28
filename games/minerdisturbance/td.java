@@ -31,7 +31,7 @@ final class td {
           if (a.a((byte) -33, param2, param0)) {
             return false;
           }
-          if (lm.a(param0, param2, 14965)) {
+          if (DisplayNameSelectionPanel.a(param0, param2, 14965)) {
             return false;
           }
           if (param1 <= -3) {

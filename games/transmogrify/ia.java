@@ -163,7 +163,7 @@ final class ia extends IntrusiveNode {
           gh.field_l = gh.field_l + 1;
           SecondaryNodeDeque.field_g = eh.totalScore;
           nc.field_t = nc.field_t + jk.field_B;
-          vh.field_n = vh.field_n + 1;
+          EmailFormatValidator.field_n = EmailFormatValidator.field_n + 1;
           hg.a(95);
           if (CrossfadingMidiPcmStream.field_u.beginForward((byte) -95) != null) {
             fieldTemp$0 = da.field_C + 1;
@@ -262,7 +262,7 @@ final class ia extends IntrusiveNode {
                     }
                     if (var24.destinationY == 247) {
                       var4 = 0;
-                      var24.destinationY = var24.destinationY + wl.field_K.field_m;
+                      var24.destinationY = var24.destinationY + AccountRegistrationPanel.field_K.field_m;
                       break scanLoop1;
                     }
                   }
@@ -290,7 +290,7 @@ final class ia extends IntrusiveNode {
                       break scanLoop2;
                     }
                     if (var15.destinationY == 190) {
-                      var15.destinationY = var15.destinationY + wl.field_K.field_m;
+                      var15.destinationY = var15.destinationY + AccountRegistrationPanel.field_K.field_m;
                       var4Lifetime2 = 0;
                       break scanLoop2;
                     }
@@ -474,8 +474,8 @@ final class ia extends IntrusiveNode {
                     stackIn_158_1 = (var5Lifetime2 == 1);
                     stackIn_157_0.doublesWordScore = stackIn_158_1;
                     dupTemp$1 = si.newRack.tiles[var5Lifetime2];
-                    dupTemp$1.destinationY = 247 - wl.field_K.field_m;
-                    si.newRack.tiles[var5Lifetime2].y = 247 - wl.field_K.field_m;
+                    dupTemp$1.destinationY = 247 - AccountRegistrationPanel.field_K.field_m;
+                    si.newRack.tiles[var5Lifetime2].y = 247 - AccountRegistrationPanel.field_K.field_m;
                   }
                 } else {
                   MouseInputHandler.field_c.a((byte) 92, var31);
@@ -486,8 +486,8 @@ final class ia extends IntrusiveNode {
                     stackIn_152_1 = (var5Lifetime2 == var6Lifetime4);
                     stackIn_151_0.doublesWordScore = stackIn_152_1;
                     dupTemp$2 = si.newRack.tiles[var6Lifetime4];
-                    dupTemp$2.destinationY = 247 - wl.field_K.field_m;
-                    si.newRack.tiles[var6Lifetime4].y = 247 - wl.field_K.field_m;
+                    dupTemp$2.destinationY = 247 - AccountRegistrationPanel.field_K.field_m;
+                    si.newRack.tiles[var6Lifetime4].y = 247 - AccountRegistrationPanel.field_K.field_m;
                   }
                 }
                 wk.carryoverRack.originY = 114;
@@ -504,7 +504,7 @@ final class ia extends IntrusiveNode {
             SessionGameApplet.field_l = -1;
           }
           if (ve.field_B[1] &&
-            va.field_j >= 2) {
+            ConfirmedEmailAvailabilityValidator.field_j >= 2) {
             stackIn_205_0 = !(ll.field_S);
             ll.field_S = stackIn_205_0;
           }
@@ -528,7 +528,7 @@ final class ia extends IntrusiveNode {
                 !WordDictionary.field_e) {
                 qf.field_e = qf.field_e ^ 5 << bc.field_b;
                 DirectByteStorage.field_j = DirectByteStorage.field_j + ol.field_b;
-                vh.field_n = vh.field_n + ol.field_b;
+                EmailFormatValidator.field_n = EmailFormatValidator.field_n + ol.field_b;
                 nc.field_t = nc.field_t + nk.field_c;
                 bc.field_b = bc.field_b ^ 5 << bc.field_b;
                 ud.field_b = ud.field_b - nk.field_c;
@@ -549,36 +549,36 @@ final class ia extends IntrusiveNode {
                   return;
                 }
                 if (bk.field_a >= 114 &&
-                  bk.field_a < 114 + wl.field_K.field_m &&
+                  bk.field_a < 114 + AccountRegistrationPanel.field_K.field_m &&
                   PacketBuffer.field_j >= 34) {
-                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
+                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
                   if (!(var4Lifetime1 >= od.submissionRack.tiles.length)) {
-                    rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) - 34 + PacketBuffer.field_j);
+                    rk.field_p = -(-(var4Lifetime1 * AccountRegistrationPanel.field_K.field_n) - 34 + PacketBuffer.field_j);
                     sg.field_d = od.submissionRack.tiles[var4Lifetime1];
                     ek.field_e = 114 - bk.field_a;
                   }
                 } else if (bk.field_a >= 190 &&
-                  bk.field_a < 190 + wl.field_K.field_m &&
+                  bk.field_a < 190 + AccountRegistrationPanel.field_K.field_m &&
                   PacketBuffer.field_j >= 34) {
-                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
+                  var4Lifetime1 = (-34 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
                   if (!(var4Lifetime1 >= wk.carryoverRack.tiles.length)) {
-                    rk.field_p = -(PacketBuffer.field_j - (34 + wl.field_K.field_n * var4Lifetime1));
+                    rk.field_p = -(PacketBuffer.field_j - (34 + AccountRegistrationPanel.field_K.field_n * var4Lifetime1));
                     sg.field_d = wk.carryoverRack.tiles[var4Lifetime1];
                     ek.field_e = -bk.field_a + 190;
                   }
                 } else {
                   if (bk.field_a >= 247 &&
-                    247 + wl.field_K.field_m > bk.field_a &&
+                    247 + AccountRegistrationPanel.field_K.field_m > bk.field_a &&
                     161 <= PacketBuffer.field_j) {
-                    var4Lifetime1 = (-161 + PacketBuffer.field_j) / wl.field_K.field_n;
+                    var4Lifetime1 = (-161 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
                     if (var4Lifetime1 < si.newRack.tiles.length) {
-                      rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) + (PacketBuffer.field_j - 161));
+                      rk.field_p = -(-(var4Lifetime1 * AccountRegistrationPanel.field_K.field_n) + (PacketBuffer.field_j - 161));
                       sg.field_d = si.newRack.tiles[var4Lifetime1];
                       ek.field_e = 247 - bk.field_a;
                     }
                   }
                 }
-                if (va.field_j >= 2 &&
+                if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
                   0 < SessionGameApplet.field_l &&
                   sg.field_d != null) {
                   sg.field_d.letter = (char)SessionGameApplet.field_l;
@@ -673,7 +673,7 @@ final class ia extends IntrusiveNode {
               dc.submitWord(-22991, false);
               continue;
             }
-            if (va.field_j >= 2 &&
+            if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
               ch.field_d == 35 &&
               ve.field_B[82]) {
               ue.dumpRackState(31370);

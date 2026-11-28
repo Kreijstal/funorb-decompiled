@@ -25,13 +25,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
         if (param0 < -22) {
           BufferedSocket.field_d = true;
           wg.a(-100, false);
-          rl.field_N = 0;
+          LoginPanel.field_N = 0;
           return;
         }
         field_b = (mk) null;
         BufferedSocket.field_d = true;
         wg.a(-100, false);
-        rl.field_N = 0;
+        LoginPanel.field_N = 0;
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {

@@ -67,9 +67,9 @@ final class en extends d {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ke.a(225225318, var14);
               if (var6_intLifetime1 == 0) {
-                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, um.field_p, var6_intLifetime1);
+                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
               } else {
-                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, um.field_p, var6_intLifetime1);
+                hb.a(eg.field_w, qc.field_bb, false, bf.field_c, MatchingFieldValidator.field_p, var6_intLifetime1);
               }
             }
             SocketConnector.a(8191, var5);
@@ -85,7 +85,7 @@ final class en extends d {
               var18[0][var10 * 4 + 1] = wh.field_y[var11];
               var18[0][4 * var10 + 2] = vo.field_d[var11];
               var18[0][var10 * 4 + 3] = vp.field_F[var11];
-              if (bn.a(IterableNodeHashTable.field_d[var11], -17310) &&
+              if (SpriteBase.a(IterableNodeHashTable.field_d[var11], -17310) &&
                 wh.field_y[var11] + (vo.field_d[var11] + vp.field_F[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -103,7 +103,7 @@ final class en extends d {
               var18[1][4 * var13 + 1] = wh.field_y[var11Lifetime1];
               var18[1][2 + var13 * 4] = vo.field_d[var11Lifetime1];
               var18[1][4 * var13 + 3] = vp.field_F[var11Lifetime1];
-              if (bn.a(IterableNodeHashTable.field_d[var11Lifetime1], -17310) &&
+              if (SpriteBase.a(IterableNodeHashTable.field_d[var11Lifetime1], -17310) &&
                 vp.field_F[var11Lifetime1] + wh.field_y[var11Lifetime1] + vo.field_d[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;

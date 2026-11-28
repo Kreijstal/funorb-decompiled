@@ -65,7 +65,7 @@ final class sd {
           }
           var4_int = -1;
           for (var5 = param0; var5 < param2; var5++) {
-            var4_int = var4_int >>> 8 ^ vi.field_O[255 & (var4_int ^ param1[var5])];
+            var4_int = var4_int >>> 8 ^ EditableTextField.field_O[255 & (var4_int ^ param1[var5])];
           }
           var4_int = ~var4_int;
           stackIn_8_0 = var4_int;

@@ -105,7 +105,7 @@ final class ff extends DualLinkNode {
               this.field_r = new int[var5];
               for (var6 = 0; var6 < var5; var6++) {
                 var7 = param0.readUnsignedShort(-1174051992);
-                var8 = qf.a(var7, 0);
+                var8 = TextFieldValidator.a(var7, 0);
                 if (var8 != null) {
                   this.field_r[var6] = var7;
                   array$0 = new int[var8.field_a];

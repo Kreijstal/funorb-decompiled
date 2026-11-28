@@ -137,7 +137,7 @@ final class oj {
               var4 = -122 / ((param1 - 40) / 53);
               var3 = var10 + "settings";
               var5 = (String) (JavaScriptBridge.callWithoutArguments((byte) -21, param0, "getcookies"));
-              var6 = ih.a(115, ';', var5);
+              var6 = RaiderRecruitmentScreen.splitOnCharacter(115, ';', var5);
               for (var7 = 0; var7 < var6.length; var7++) {
                 var8 = var6[var7].indexOf('=');
                 if (var8 >= 0 &&

@@ -93,7 +93,7 @@ final class eg extends fg {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = oc.field_M;
+            stackIn_4_0 = ValidatedTextField.field_M;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
@@ -109,7 +109,7 @@ final class eg extends fg {
                 return stackIn_17_0;
               }
             } else {
-              if (-1 == vi.field_H.indexOf(var4)) {
+              if (-1 == EditableTextField.field_H.indexOf(var4)) {
                 stackIn_20_0 = ba.field_a;
                 return stackIn_20_0;
               }

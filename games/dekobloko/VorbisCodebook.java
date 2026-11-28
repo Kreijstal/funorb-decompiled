@@ -11,7 +11,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
-        for (integerLocal1 = (int)Math.pow((double)integerArgument1, 1.0 / (double)integerArgument2) + 1; UiComponentPart032.integerPower(integerLocal1, integerArgument2, false) > integerArgument1; integerLocal1--) {
+        for (integerLocal1 = (int)Math.pow((double)integerArgument1, 1.0 / (double)integerArgument2) + 1; BirthDateInput.integerPower(integerLocal1, integerArgument2, false) > integerArgument1; integerLocal1--) {
         }
         return integerLocal1;
     }

@@ -8,7 +8,7 @@ abstract class GameClock {
     final int waitAndCountTicks(byte param0, long param1) {
         long var4 = this.getDelayMillis((byte) 63);
         if (var4 > 0L) {
-          gda.sleepMillis(false, var4);
+          DisplayNameSelectionPanel.sleepMillis(false, var4);
           if (param0 != 109) {
             this.advanceTicks(-82L, 55);
             return this.advanceTicks(param1, 0);

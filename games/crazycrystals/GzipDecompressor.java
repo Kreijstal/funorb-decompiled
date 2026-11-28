@@ -45,7 +45,7 @@ final class GzipDecompressor {
     }
 
     final static void a(byte param0) {
-        uo.field_i = new dc();
+        uo.field_i = new AccountRegistrationPanel();
         MouseWheelInput.field_d.a((qm) (uo.field_i), (byte) -50);
         if (param0 != 63) {
           field_d = (String) null;

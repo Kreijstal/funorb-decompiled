@@ -19,7 +19,7 @@ final class ed {
           if (oj.field_q != null) {
             oj.field_q.q(param1 + 4210752);
           }
-          AccountCreationResultPanel.field_ib = new pk(param2, param0, false, true, true);
+          AccountCreationResultPanel.field_ib = new LoginPanel(param2, param0, false, true, true);
           kg.field_j.a(false, AccountCreationResultPanel.field_ib);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ed.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -12,9 +12,9 @@ abstract class MouseWheelInput {
     abstract int pollRotation(byte param0);
 
     final static void a(int param0, int param1, byte param2) {
-        if (gb.field_A == null ||
-          !(param1 <= gb.field_A.length)) {
-          gb.field_A = new int[2 * param1];
+        if (NetworkGameClient.field_A == null ||
+          !(param1 <= NetworkGameClient.field_A.length)) {
+          NetworkGameClient.field_A = new int[2 * param1];
         }
         if (null == hg.field_d) {
           hg.field_d = new int[param1 * 2];
@@ -29,9 +29,9 @@ abstract class MouseWheelInput {
             !(in.field_j.length >= param1)) {
             in.field_j = new int[param1 * 2];
           }
-          if (oc.field_n == null ||
-            !(oc.field_n.length >= param1)) {
-            oc.field_n = new int[2 * param1];
+          if (MatchingFieldValidator.field_n == null ||
+            !(MatchingFieldValidator.field_n.length >= param1)) {
+            MatchingFieldValidator.field_n = new int[2 * param1];
           }
           if (null == gh.field_a) {
             gh.field_a = new int[param1 * 2];
@@ -79,9 +79,9 @@ abstract class MouseWheelInput {
               !(in.field_j.length >= param1)) {
               in.field_j = new int[param1 * 2];
             }
-            if (oc.field_n == null ||
-              !(oc.field_n.length >= param1)) {
-              oc.field_n = new int[2 * param1];
+            if (MatchingFieldValidator.field_n == null ||
+              !(MatchingFieldValidator.field_n.length >= param1)) {
+              MatchingFieldValidator.field_n = new int[2 * param1];
             }
             if (null == gh.field_a ||
               !(param1 <= gh.field_a.length)) {
@@ -108,9 +108,9 @@ abstract class MouseWheelInput {
                 !(in.field_j.length >= param1)) {
                 in.field_j = new int[param1 * 2];
               }
-              if (oc.field_n == null ||
-                !(oc.field_n.length >= param1)) {
-                oc.field_n = new int[2 * param1];
+              if (MatchingFieldValidator.field_n == null ||
+                !(MatchingFieldValidator.field_n.length >= param1)) {
+                MatchingFieldValidator.field_n = new int[2 * param1];
               }
               if (null == gh.field_a) {
                 gh.field_a = new int[param1 * 2];
@@ -150,9 +150,9 @@ abstract class MouseWheelInput {
                   !(in.field_j.length >= param1)) {
                   in.field_j = new int[param1 * 2];
                 }
-                if (oc.field_n == null ||
-                  !(oc.field_n.length >= param1)) {
-                  oc.field_n = new int[2 * param1];
+                if (MatchingFieldValidator.field_n == null ||
+                  !(MatchingFieldValidator.field_n.length >= param1)) {
+                  MatchingFieldValidator.field_n = new int[2 * param1];
                 }
                 if (null == gh.field_a) {
                   gh.field_a = new int[param1 * 2];
@@ -192,9 +192,9 @@ abstract class MouseWheelInput {
                   !(in.field_j.length >= param1)) {
                   in.field_j = new int[param1 * 2];
                 }
-                if (oc.field_n == null ||
-                  !(oc.field_n.length >= param1)) {
-                  oc.field_n = new int[2 * param1];
+                if (MatchingFieldValidator.field_n == null ||
+                  !(MatchingFieldValidator.field_n.length >= param1)) {
+                  MatchingFieldValidator.field_n = new int[2 * param1];
                 }
                 if (null == gh.field_a) {
                   gh.field_a = new int[param1 * 2];

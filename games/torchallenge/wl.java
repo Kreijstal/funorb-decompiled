@@ -45,10 +45,10 @@ final class wl {
           if (ub.field_i) {
             SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
           }
-          ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           NodeHashTableIterator.field_j = null;
-          ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
-          ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           if (ub.field_i) {
             SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
@@ -90,7 +90,7 @@ final class wl {
             stackIn_34_4 = rj.field_d;
             stackIn_34_5 = pi.field_c;
             stackIn_34_6 = 127;
-            stackIn_36_7 = (ui.field_b) || (ij.field_z);
+            stackIn_36_7 = (DebouncedFieldValidator.field_b) || (ij.field_z);
             ic.$cfr$intArgs$a$ceabca3815d0(stackIn_34_0, stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_34_4, stackIn_34_5, stackIn_34_6, stackIn_36_7);
           }
           if (ol.field_a &&
@@ -107,7 +107,7 @@ final class wl {
 
     final void c(byte param0) {
         if (tf.field_o > 0 &&
-          !bh.field_p &&
+          !PasswordValidator.field_p &&
           null == kf.field_a) {
           kf.field_a = wi.a(GameScreen.field_c, pa.field_x, new int[]{tf.field_o}, (byte) 77, 31, ac.field_d, ae.field_z, 65504, 3);
         }
@@ -247,7 +247,7 @@ final class wl {
             ol.field_a = true;
             ac.field_d = ac.field_d + 64;
             pi.field_a = pi.field_a + 128;
-            bh.field_p = true;
+            PasswordValidator.field_p = true;
           }
           if (b.field_J == 13) {
             be.a(1, (byte) -110, false);
@@ -262,7 +262,7 @@ final class wl {
             } else {
               aj.field_h = true;
             }
-            bh.field_p = true;
+            PasswordValidator.field_p = true;
             ae.field_z = ae.field_z - 64;
           }
           if (this.field_f &&
@@ -272,7 +272,7 @@ final class wl {
             if (!rc.field_u) {
               rc.field_u = true;
             }
-            bh.field_p = true;
+            PasswordValidator.field_p = true;
           }
           if (!this.field_f) {
             continue;
@@ -285,7 +285,7 @@ final class wl {
           if (!nj.field_a) {
             nj.field_a = true;
           }
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
           rc.field_u = false;
         }
         if (this.field_f &&
@@ -297,11 +297,11 @@ final class wl {
             DualLinkNode.field_o = false;
           }
           ac.field_d = ac.field_d + 64;
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
         }
         if (this.field_f &&
           nj.field_c[20]) {
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
           DualLinkNode.field_o = true;
           pi.field_f = pi.field_f - 128;
           ae.field_z = ae.field_z + 256;
@@ -309,7 +309,7 @@ final class wl {
         if (this.field_f &&
           nj.field_c[21] &&
           null != BufferedSocket.field_p) {
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
           DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 256;
           if (MusicPatchPcmStream.field_s) {
             BufferedSocket.field_p.field_d = BufferedSocket.field_p.field_d + 1;
@@ -326,7 +326,7 @@ final class wl {
           MusicPatchPcmStream.field_s = true;
           GameScreen.field_c = GameScreen.field_c + 512;
           pi.field_f = pi.field_f - 32;
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
         }
         if (!nj.field_c[97] &&
           !nj.field_c[96] &&
@@ -353,7 +353,7 @@ final class wl {
           DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 256;
           ac.field_d = ac.field_d + 128;
           hk.field_b = true;
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
           eb.field_n = true;
           rc.field_u = false;
         }
@@ -367,7 +367,7 @@ final class wl {
         if (this.field_f &&
           nj.field_c[48]) {
           pi.field_a = pi.field_a + 1024;
-          bh.field_p = true;
+          PasswordValidator.field_p = true;
           GameScreen.field_c = GameScreen.field_c - 128;
           hf.a(255, 13, qb.field_d);
           qb.field_d = qb.field_d + 1;
@@ -448,7 +448,7 @@ final class wl {
         IsaacRandom.a((byte) 89, aa.field_g);
         BufferedSocket.field_p.b(true, false);
         stackIn_180_0 = -73;
-        stackIn_182_1 = (ui.field_b) || (ij.field_z);
+        stackIn_182_1 = (DebouncedFieldValidator.field_b) || (ij.field_z);
         hf.$cfr$intArgs$a$759f676cf37b(stackIn_180_0, stackIn_182_1, ng.field_I, pi.field_c, rj.field_d, true);
         this.a((byte) -71);
         rc.c((byte) -82);
@@ -617,7 +617,7 @@ final class wl {
         stackIn_3_1 = !(fa.field_g < 2);
         this.field_f = stackIn_3_1;
         ae.field_z = 16;
-        ui.field_b = param2;
+        DebouncedFieldValidator.field_b = param2;
         tf.field_o = 0;
         ac.field_d = 8;
         AccountServiceResult.field_k = 0;

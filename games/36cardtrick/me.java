@@ -102,7 +102,7 @@ final class me {
               if (var30 == 0) {
                 if (stackIn_67_0 <= stackIn_67_1) {
                   se.field_F[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  ai.field_j[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  AgeValidator.field_j[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }

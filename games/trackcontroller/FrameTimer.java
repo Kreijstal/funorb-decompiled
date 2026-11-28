@@ -77,7 +77,7 @@ abstract class FrameTimer {
           }
         } else {
           AccountCreationResultPanel.field_rb = AsyncRequest.field_u.c(0);
-          ni.a(-127, 2);
+          MatchingFieldValidator.a(-127, 2);
           if (AccountCreationResultPanel.field_rb == null) {
             var3Lifetime1 = 3;
           } else {

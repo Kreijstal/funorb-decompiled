@@ -19,18 +19,18 @@ final class ik {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param0.getFileByName("final_frame.jpg", "", -21653), (java.awt.Component) ((Object) ae.field_G));
+          var2 = new Sprite(param0.getFileByName("final_frame.jpg", "", -21653), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G));
           var3 = var2.field_r;
           var4 = var2.field_t;
           ja.c((byte) 88);
           hd.field_l = new Sprite(var3, var4 * 3 / 4);
           hd.field_l.a();
           var2.d(0, 0);
-          ib.field_Y = new Sprite(var3, var4 - hd.field_l.field_t);
-          ib.field_Y.a();
+          ValidatedTextField.field_Y = new Sprite(var3, var4 - hd.field_l.field_t);
+          ValidatedTextField.field_Y.a();
           int var5 = -112 % ((param1 + 32) / 48);
           var2.d(0, -hd.field_l.field_t);
-          ib.field_Y.field_v = hd.field_l.field_t;
+          ValidatedTextField.field_Y.field_v = hd.field_l.field_t;
           MessageKeys.a(false);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ik.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

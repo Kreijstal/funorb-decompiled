@@ -123,10 +123,10 @@ final class cp extends gd {
             if (var9 == 0) {
               la.field_b.b(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
             } else {
-              la.field_b.b(be.field_q, 52, var14, 16711680, -1);
+              la.field_b.b(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
             }
           } else {
-            la.field_b.b(dn.field_T, 52, var14, 16711680, -1);
+            la.field_b.b(LoginPanel.field_T, 52, var14, 16711680, -1);
           }
           var14 += 4;
           var12.e();

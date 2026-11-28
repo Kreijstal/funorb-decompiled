@@ -70,7 +70,7 @@ final class ga {
             if (hm.field_N == 2) {
               gi.field_l = new BufferedSocket((java.net.Socket) (bj.field_c.result), mc.field_b);
               var2 = new PacketBuffer(13);
-              ej.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
+              EditableTextField.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
               var2.writeByte(15, -121);
               var2.writeInt(ArchiveRequest.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
@@ -240,7 +240,7 @@ final class ga {
         if (ab.field_b != null) {
           ab.field_b.a(101);
         }
-        ae.field_G.requestFocus();
+        DisplayNameSelectionPanel.field_G.requestFocus();
     }
 
     final static void d(int param0) {
@@ -258,7 +258,7 @@ final class ga {
         int var3;
         int var4;
         this.field_y = true;
-        var2 = ph.field_r;
+        var2 = PasswordValidator.field_r;
         if (this.field_d == 1 ||
           this.field_d == 2 ||
           this.field_d == 9) {
@@ -269,17 +269,17 @@ final class ga {
         if (param0 != 85) {
           field_j = 12;
         }
-        this.field_f = (int)(Math.random() * (double)af.field_d.length);
+        this.field_f = (int)(Math.random() * (double)DebouncedFieldValidator.field_d.length);
         var3 = this.field_g & 127;
         if (var3 > var2.length) {
           var3 = var3 % var2.length;
         }
         var4 = this.field_f;
-        if (af.field_d.length < var4) {
-          var4 = var4 % af.field_d.length;
+        if (DebouncedFieldValidator.field_d.length < var4) {
+          var4 = var4 % DebouncedFieldValidator.field_d.length;
         }
         this.field_n = var2[var3];
-        this.field_z = af.field_d[var4];
+        this.field_z = DebouncedFieldValidator.field_d[var4];
         if (this.field_y) {
           this.field_g = this.field_g | 128;
         }
@@ -354,7 +354,7 @@ final class ga {
         if (param0 != 50) {
           this.field_g = 19;
         }
-        String[] var2 = ph.field_r;
+        String[] var2 = PasswordValidator.field_r;
         if (!this.field_y) {
           var2 = rl.field_b;
         }
@@ -363,11 +363,11 @@ final class ga {
           var3 = var3 % var2.length;
         }
         int var4 = this.field_f;
-        if (!(af.field_d.length >= var4)) {
-          var4 = var4 % af.field_d.length;
+        if (!(DebouncedFieldValidator.field_d.length >= var4)) {
+          var4 = var4 % DebouncedFieldValidator.field_d.length;
         }
         this.field_n = var2[var3];
-        this.field_z = af.field_d[var4];
+        this.field_z = DebouncedFieldValidator.field_d[var4];
     }
 
     final String a(int param0, int param1) {
@@ -498,13 +498,13 @@ final class ga {
         this.field_w = 40 + (int)(Math.random() * 20.0);
         this.field_v = (int)(Math.random() * 45.0) + 15;
         this.field_B = 25 + (int)(Math.random() * 35.0);
-        this.field_w = this.field_w + ha.field_q * 5;
+        this.field_w = this.field_w + ConfirmedEmailAvailabilityValidator.field_q * 5;
         this.field_e = 0;
-        this.field_t = this.field_t + ha.field_q * 10;
+        this.field_t = this.field_t + ConfirmedEmailAvailabilityValidator.field_q * 10;
         this.field_h = 0;
         this.field_q = 50;
-        this.field_v = this.field_v + 8 * ha.field_q;
-        this.field_B = this.field_B + ha.field_q * 5;
+        this.field_v = this.field_v + 8 * ConfirmedEmailAvailabilityValidator.field_q;
+        this.field_B = this.field_B + ConfirmedEmailAvailabilityValidator.field_q * 5;
         this.field_d = (int)(12.0 * Math.random());
         this.a((byte) 85);
         this.c((byte) 41);

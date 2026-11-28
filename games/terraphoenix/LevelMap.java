@@ -606,7 +606,7 @@ final class LevelMap {
                 this.state.field_y <= 1 + var2_int &&
                 this.state.field_j <= (1 + var3)) {
                 if (this.state.field_N == 1 &&
-                  le.field_q == null) {
+                  AgeValidator.field_q == null) {
                   sj.field_b = -(var5 * 32) + 32 * var4;
                   vf.field_a = -1;
                   IntrusiveNode.field_c = -1;

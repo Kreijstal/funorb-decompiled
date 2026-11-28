@@ -8,7 +8,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     static int field_o;
     private static int field_j;
     static int[] field_e;
-    static dg field_n;
+    static AccountRegistrationPanel field_n;
     static BitmapFont field_f;
     boolean field_g;
     public static int field_k;
@@ -994,7 +994,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = -5 / ((5 - param2) / 53);
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var5 = il.a(param0, (byte) 21);
+            var5 = EmailFormatValidator.a(param0, (byte) 21);
             if (var5 != null &&
               var5.length() >= 1) {
               if (!SecondaryNodeDeque.a(95, var5.charAt(0)) &&

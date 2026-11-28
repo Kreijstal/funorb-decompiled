@@ -299,7 +299,7 @@ final class wd extends DefaultWidgetRenderer {
         RuntimeException var2 = null;
         try {
           hl.a((byte) -67, (java.awt.Component) ((Object) param1));
-          gda.a(-99, (java.awt.Component) ((Object) param1));
+          DisplayNameSelectionPanel.a(-99, (java.awt.Component) ((Object) param1));
           if (param0 != 70) {
             field_w = (Sprite[]) null;
           }

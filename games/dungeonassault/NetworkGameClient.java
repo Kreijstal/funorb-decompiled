@@ -388,7 +388,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             var3 = d.a(stackIn_32_0, (byte) 118);
                             jm.a(var3, (byte) 116);
                           } else {
-                            ih.a((byte) 59);
+                            RaiderRecruitmentScreen.a((byte) 59);
                           }
                         } else {
                           Raider.queueReflectionCheck(-5, ra.field_c, i.field_A, nj.field_b);
@@ -398,7 +398,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                       }
                     }
                   } else {
-                    rm.q(-5705);
+                    EditableTextField.q(-5705);
                   }
                 } else {
                   BufferedRandomAccessFile.a(!param0);
@@ -425,7 +425,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = nj.field_b - 1;
         byte[] var5 = new byte[var4];
         ra.field_c.a(0, (byte) 95, var4, var5);
-        oe.a((byte) 121, var3 != 0, m.c(true), dj.a(var5, false));
+        oe.a((byte) 121, var3 != 0, DebouncedFieldValidator.c(true), dj.a(var5, false));
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {
@@ -472,7 +472,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = qm.a(this.field_q, rn.a(-87), tp.c((byte) -73), NetworkArchiveRequest.e(7142), vl.c(-29455), 57, DiskArchiveRequest.e((byte) 57));
+            var5_intLifetime1 = EmailFormatValidator.a(this.field_q, rn.a(-87), tp.c((byte) -73), NetworkArchiveRequest.e(7142), vl.c(-29455), 57, DiskArchiveRequest.e((byte) 57));
             if (-1 != var5_intLifetime1) {
               FrameTimer.a(var5_intLifetime1, 29120, mf.field_c, tp.field_v);
               tp.field_v = null;
@@ -507,35 +507,35 @@ abstract class NetworkGameClient extends GameAppletShell {
               tl.field_l = true;
               AccountNameAvailabilityValidator.field_n = 10;
             } else {
-              pd.a(5189, m.c(true));
+              pd.a(5189, DebouncedFieldValidator.c(true));
             }
           }
           if (var4 == 5) {
-            eg.a((byte) -37, m.c(true));
+            eg.a((byte) -37, DebouncedFieldValidator.c(true));
           }
           if (6 == var4 &&
             oj.field_b) {
             AccountNameAvailabilityValidator.field_n = 10;
           }
           if (var4 == 7) {
-            pa.a(123, m.c(true));
+            pa.a(123, DebouncedFieldValidator.c(true));
           }
           if (8 == var4) {
             stackIn_47_0 = 5189;
             stackIn_48_1 = (param0) ? false : true;
-            pd.a(stackIn_47_0, m.c(stackIn_48_1));
+            pd.a(stackIn_47_0, DebouncedFieldValidator.c(stackIn_48_1));
           }
           if (9 == var4) {
-            jl.a(m.c(true), false);
+            jl.a(DebouncedFieldValidator.c(true), false);
           }
           if (10 == var4) {
             ac.field_B.d((byte) -90, 17);
           }
           if (var4 == 11) {
-            fk.a(84, m.c(true));
+            fk.a(84, DebouncedFieldValidator.c(true));
           }
           if (var4 == 12) {
-            oe.a(ao.a(-21), m.c(true), (byte) 94);
+            oe.a(ao.a(-21), DebouncedFieldValidator.c(true), (byte) 94);
           }
           if (13 == var4) {
             try {
@@ -546,10 +546,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                 var12 = hl.field_i.c(3);
                 if (var12 == null) {
                   var9 = (String) null;
-                  rg.a(15, (String) null);
+                  AccountRegistrationPanel.a(15, (String) null);
                 } else {
                   var7 = mk.decodeCp1252String((byte) -24, var12.payload, var12.position, 0);
-                  rg.a(15, var7);
+                  AccountRegistrationPanel.a(15, var7);
                 }
                 hl.field_i = null;
               }
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               sm.a((Throwable) ((Object) var5), 1, "S1");
               var10 = (String) null;
-              rg.a(15, (String) null);
+              AccountRegistrationPanel.a(15, (String) null);
               hl.field_i = null;
             }
           }
@@ -584,7 +584,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           return;
         }
         String var2 = eg.a(-96);
-        sm.a(m.c(true), 31500, var2);
+        sm.a(DebouncedFieldValidator.c(true), 31500, var2);
     }
 
     final void a(int param0, String param1, int param2) {
@@ -732,12 +732,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (hc.field_d != 0) {
             ia.field_U = mk.a(MouseInput.field_a, (byte) 34);
           }
-          fi.field_u = qd.a(false, true, s.field_a, (byte) -31, 1);
+          InstructionsScreen.field_u = qd.a(false, true, s.field_a, (byte) -31, 1);
           GameAppletShell.field_b = qd.a(false, true, pm.field_m, (byte) -31, 1);
           ib.field_b = qd.a(false, true, sp.field_h, (byte) -31, 1);
           dk.field_c = 2;
           gh.field_c = GameAppletShell.field_b;
-          uc.field_I = fi.field_u;
+          uc.field_I = InstructionsScreen.field_u;
         }
         if (dk.field_c == 2) {
           if (null != ia.field_U &&
@@ -757,13 +757,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (dk.field_c == 3 &&
-          DelegatingCanvas.a(GameAppletShell.field_b, ib.field_b, (byte) 61, fi.field_u) &&
+          DelegatingCanvas.a(GameAppletShell.field_b, ib.field_b, (byte) 61, InstructionsScreen.field_u) &&
           fl.a(-43, ib.field_b)) {
           jm.a(false);
           am.b(112);
           lj.field_e = bg.field_t;
           oj.field_b = false;
-          RaiderDefinition.initializeGameUiAssets(param1 ^ -8099, fi.field_u, ib.field_b, ld.field_g, GameAppletShell.field_b);
+          RaiderDefinition.initializeGameUiAssets(param1 ^ -8099, InstructionsScreen.field_u, ib.field_b, ld.field_g, GameAppletShell.field_b);
           if (np.field_D ||
             null != mi.field_d) {
             stackIn_102_0 = 8192;
@@ -781,7 +781,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           ResourceArchive.initializeLogoAnimation((byte) -96, ib.field_b, je.field_c, tb.field_g);
           ib.field_b = null;
-          fi.field_u = null;
+          InstructionsScreen.field_u = null;
           GameAppletShell.field_b = null;
           qj.a((java.applet.Applet) (this), (byte) 89);
           nf.d(0);
@@ -811,10 +811,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 13) {
           var3Lifetime2 = 1;
-          if (be.field_s != null) {
-            stackIn_135_0 = (!be.field_s.a(false)) ? 0 : 1;
+          if (MatchingFieldValidator.field_s != null) {
+            stackIn_135_0 = (!MatchingFieldValidator.field_s.a(false)) ? 0 : 1;
             var3Lifetime2 = stackIn_135_0;
-            tp.a(10, be.field_s.field_j, be.field_s.field_b);
+            tp.a(10, MatchingFieldValidator.field_s.field_j, MatchingFieldValidator.field_s.field_b);
           }
           if (var3Lifetime2 != 0) {
             dk.field_c = 20;
@@ -851,7 +851,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (0 != var2 &&
           var2 != 1) {
-          if (!rm.field_P) {
+          if (!EditableTextField.field_P) {
             this.a((byte) -112, "reconnect");
           }
           l.a(-1);

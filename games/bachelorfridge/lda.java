@@ -86,7 +86,7 @@ final class lda {
             stackIn_8_0 = cea.field_a;
             return stackIn_8_0;
           }
-          if (gl.a(3, param2)) {
+          if (BirthDateValidator.a(3, param2)) {
             stackIn_12_0 = lga.a(true, new String[]{param2}, rt.field_c);
             return stackIn_12_0;
           }

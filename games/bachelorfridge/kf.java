@@ -65,22 +65,22 @@ final class kf {
             if (11 != gf.field_k) {
               return false;
             }
-            if (!wg.field_g) {
+            if (!PasswordValidator.field_g) {
               return false;
             }
-            if (el.field_h != 2) {
-              if (el.field_h == 2) {
+            if (EmailFormatValidator.field_h != 2) {
+              if (EmailFormatValidator.field_h == 2) {
                 if (!IntrusiveDequeCursor.b(7)) {
                   return true;
                 }
                 var5 = (String) null;
-                PetAttackSpecial.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
+                PetAttackSpecial.a(oa.field_vb, EmailFormatValidator.field_h, 52, (String) null, hda.field_l, param2);
                 return true;
               }
               if (var3 == 0) {
                 if (IntrusiveDequeCursor.b(7)) {
                   var5 = (String) null;
-                  PetAttackSpecial.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
+                  PetAttackSpecial.a(oa.field_vb, EmailFormatValidator.field_h, 52, (String) null, hda.field_l, param2);
                   return true;
                 }
                 return true;
@@ -88,13 +88,13 @@ final class kf {
               return false;
             }
             if (eea.a(hda.field_l, we.field_b, 83)) {
-              if (el.field_h != 2 &&
+              if (EmailFormatValidator.field_h != 2 &&
                 var3 != 0) {
                 return false;
               }
               if (IntrusiveDequeCursor.b(7)) {
                 var5Lifetime2 = (String) null;
-                PetAttackSpecial.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
+                PetAttackSpecial.a(oa.field_vb, EmailFormatValidator.field_h, 52, (String) null, hda.field_l, param2);
                 return true;
               }
               return true;
@@ -117,18 +117,18 @@ final class kf {
           return true;
         }
         if (11 == gf.field_k &&
-          wg.field_g) {
-          if (el.field_h == 2 &&
+          PasswordValidator.field_g) {
+          if (EmailFormatValidator.field_h == 2 &&
             !eea.a(hda.field_l, we.field_b, 83)) {
             return false;
           }
-          if (el.field_h != 2 &&
+          if (EmailFormatValidator.field_h != 2 &&
             var3 != 0) {
             return false;
           }
           if (IntrusiveDequeCursor.b(7)) {
             var5Lifetime1 = (String) null;
-            PetAttackSpecial.a(oa.field_vb, el.field_h, 52, (String) null, hda.field_l, param2);
+            PetAttackSpecial.a(oa.field_vb, EmailFormatValidator.field_h, 52, (String) null, hda.field_l, param2);
             return true;
           }
           return true;

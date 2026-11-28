@@ -45,8 +45,8 @@ final class tk {
         if (param0 > -64) {
           field_v = (String) null;
         }
-        he.field_s = true;
-        qc.field_t = true;
+        AgeValidator.field_s = true;
+        MenuScreen.field_t = true;
         lg.field_w.h(1);
         gh.a(23321, ha.field_o, false);
     }
@@ -191,7 +191,7 @@ final class tk {
     final static void a(int param0, int param1, int param2, int param3) {
         sm.field_c = param2;
         om.field_a = param0;
-        he.field_p = param3;
+        AgeValidator.field_p = param3;
         if (param1 > -35) {
           field_v = (String) null;
         }

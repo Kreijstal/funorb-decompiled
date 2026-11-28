@@ -1,0 +1,123 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidatedTextField extends TextInputWidget implements FieldValidatorProvider {
+    static int[] field_M;
+    private int field_P;
+    private FieldValidator field_N;
+
+    final String getTooltip(byte param0) {
+        if (!this.mouseOver) {
+          return null;
+        }
+        if (null == this.tooltip) {
+          return null;
+        }
+        if (param0 == 16) {
+          ha.a(gd.field_m, mk.field_p - (this.field_P - this.width), false);
+          return this.tooltip;
+        }
+        this.field_P = 104;
+        ha.a(gd.field_m, mk.field_p - (this.field_P - this.width), false);
+        return this.tooltip;
+    }
+
+    public final FieldValidator getFieldValidator(int param0) {
+        if (param0 != 16728128) {
+          return (FieldValidator) null;
+        }
+        return this.field_N;
+    }
+
+    final void notifyTextChanged(byte param0) {
+        if (param0 < -87) {
+          super.notifyTextChanged((byte) -111);
+          if (this.field_N != null) {
+            this.field_N.recordInputChange(574);
+          }
+          return;
+        }
+        this.field_N = (FieldValidator) null;
+        super.notifyTextChanged((byte) -111);
+        if (this.field_N != null) {
+          this.field_N.recordInputChange(574);
+        }
+    }
+
+    final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
+        try {
+          super.updateMouseOver(param0, param1, param2, param3);
+          this.field_P = mk.field_p - this.x - param0;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vn.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    public static void k(int param0) {
+        field_M = null;
+        if (param0 != -9063) {
+          CharSequence var2 = (CharSequence) null;
+          ValidatedTextField.a((byte) -1, (CharSequence) null);
+        }
+    }
+
+    final static boolean a(byte param0, CharSequence param1) {
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 < 106) {
+            ValidatedTextField.k(-80);
+          }
+          stackIn_3_0 = bf.a(10, -44, true, param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("vn.JA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void a(int param0, FieldValidator param1) {
+        try {
+          if (param0 != 7) {
+            this.getFieldValidator(-10);
+          }
+          this.field_N = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pe.wrapException((Throwable) ((Object) runtimeException), "vn.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static int a(int param0, int param1) {
+        int var2 = 0;
+        int var3 = 0;
+        if (param0 == -9938) {
+          var2 = 0;
+          if (0 != (param1 & 7)) {
+            var2 = 8 - (param1 & 7);
+          }
+          var3 = param1 + var2;
+          return var3;
+        }
+        return 66;
+    }
+
+    ValidatedTextField(String param0, WidgetListener param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    static {
+        field_M = new int[]{16777215, 16728128, 16744448, 16776960};
+    }
+}

@@ -20,8 +20,8 @@ abstract class MouseWheelInput {
           var1_int = 0;
           var2 = param0 ? 1 : 0;
           while (kj.e((byte) 118)) {
-            ui.field_c.b(15275);
-            if (ui.field_c.c((byte) 40)) {
+            DebouncedFieldValidator.field_c.b(15275);
+            if (DebouncedFieldValidator.field_c.c((byte) 40)) {
               var1_int = 1;
             }
             if (b.field_J != 13) {
@@ -29,14 +29,14 @@ abstract class MouseWheelInput {
             }
             var2 = 1;
           }
-          ui.field_c.a((byte) 124, ha.a(ph.field_d, LocalizedStrings.field_u, -37), ha.a(ci.field_m, ik.field_a, -39));
-          if (ui.field_c.c((byte) 92)) {
+          DebouncedFieldValidator.field_c.a((byte) 124, ha.a(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, -37), ha.a(AgeValidator.field_m, ik.field_a, -39));
+          if (DebouncedFieldValidator.field_c.c((byte) 92)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            0 <= ui.field_c.field_j) {
-            var3 = pe.field_db[ui.field_c.field_j];
+            0 <= DebouncedFieldValidator.field_c.field_j) {
+            var3 = pe.field_db[DebouncedFieldValidator.field_c.field_j];
             if (var3 == 2 ||
               var3 == 5) {
               CrossfadingMidiPcmStream.b((byte) -103);

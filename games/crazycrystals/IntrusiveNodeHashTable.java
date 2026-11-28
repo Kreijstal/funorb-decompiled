@@ -38,11 +38,11 @@ final class IntrusiveNodeHashTable implements Iterable {
             if (param0 != -127) {
               IntrusiveNodeHashTable.a((byte) 124);
             }
-            if (li.field_d != null) {
-              for (var1_int = 0; var1_int < li.field_d.length; var1_int++) {
-                if (li.field_d[var1_int] != null) {
+            if (DebouncedFieldValidator.field_d != null) {
+              for (var1_int = 0; var1_int < DebouncedFieldValidator.field_d.length; var1_int++) {
+                if (DebouncedFieldValidator.field_d[var1_int] != null) {
                   try {
-                    li.field_d[var1_int].close(-200000001);
+                    DebouncedFieldValidator.field_d[var1_int].close(-200000001);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -95,7 +95,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           var1 = var6 + ":";
           for (var2 = 0; rk.field_b > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = kd.field_n.payload[var2] & 255;
+            var3 = ConfirmedEmailAvailabilityValidator.field_n.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

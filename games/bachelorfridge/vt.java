@@ -355,7 +355,7 @@ final class vt extends tia {
                     } else {
                       if ((~var12.field_xb & var8) != 0) {
                         var25_int = ho.a(86, ~var12.field_xb & var8);
-                        var24Lifetime2 = gl.field_f;
+                        var24Lifetime2 = BirthDateValidator.field_f;
                         if (var25_int > 0 &&
                           ffa.field_j != null &&
                           ffa.field_j.length >= var25_int &&

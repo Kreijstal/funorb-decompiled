@@ -110,7 +110,7 @@ final class SceneWidgetPart010 extends SceneWidget {
           SceneWidgetPart010.bitLength((byte) 18, 119);
         }
         RenderingSupport007.integerState0362 = integerArgument5;
-        MixedSupport015.integerState0100 = integerArgument2;
+        NineSliceSprite.integerState0100 = integerArgument2;
     }
 
     final static void performAction1468(byte byteArgument1) {
@@ -225,7 +225,7 @@ final class SceneWidgetPart010 extends SceneWidget {
         try {
           MixedSupport048.mixedSupport072State0001 = null;
           RenderingSupport003.booleanState0056 = false;
-          UiComponentPart013.booleanState0066 = false;
+          LoginPanel.booleanState0066 = false;
           NetworkSupport004.booleanState0065 = false;
           NodeHashTable.nodeDequeState0031 = new NodeDeque();
           if (!booleanArgument1) {

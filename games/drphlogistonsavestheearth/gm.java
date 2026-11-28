@@ -7,7 +7,7 @@ final class gm extends hf {
     static he[] field_L;
     static String field_K;
     static int field_O;
-    private qi field_I;
+    private FieldValidator field_I;
     private int field_N;
     static int field_J;
     static boolean field_M;
@@ -121,7 +121,7 @@ final class gm extends hf {
         if (!this.field_n) {
           return null;
         }
-        return this.field_I.b(-16034);
+        return this.field_I.getValidationMessage(-16034);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -141,7 +141,7 @@ final class gm extends hf {
         }
         var5 = param0 + this.field_o + (this.field_w >> 1);
         var6 = param3 - (-this.field_m - (this.field_k >> 1));
-        var8 = this.field_I.a(param2 - 12296);
+        var8 = this.field_I.getValidationStatus(param2 - 12296);
         if (var8 != ai.field_A &&
           var8 != nd.field_P) {
           if (u.field_b == var8) {
@@ -170,7 +170,7 @@ final class gm extends hf {
         }
     }
 
-    gm(qi param0) {
+    gm(FieldValidator param0) {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {

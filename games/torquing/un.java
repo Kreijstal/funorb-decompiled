@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class un {
-    static pe field_k;
+    static LoginPanel field_k;
     static String field_a;
     static String field_c;
     boolean field_e;

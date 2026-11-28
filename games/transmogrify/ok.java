@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ok {
-    static ff field_a;
+    static LoginPanel field_a;
 
     final static void a(int param0, java.applet.Applet param1) {
         try {

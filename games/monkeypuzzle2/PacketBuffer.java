@@ -419,7 +419,7 @@ class PacketBuffer extends IntrusiveNode {
               oh.a(0, (byte) 76, 0, param0);
             } else {
               if (k.field_g != 0) {
-                qi.a(param0, (byte) -114);
+                LoginPanel.a(param0, (byte) -114);
               } else {
                 MouseWheelInput.a(192, false, param2);
                 oh.a(0, (byte) 15, 0, param0);

@@ -51,7 +51,7 @@ final class fm extends WidgetContainer implements ng {
         if (param1 > -7) {
           field_E = 119;
         }
-        dg.field_e.a(jl.field_U, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, dg.field_e.field_x);
+        TranslucentSpriteLayer.field_e.a(jl.field_U, 20 + var5, var6 + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, TranslucentSpriteLayer.field_e.field_x);
         super.a(param0, (byte) -112, param2, param3);
     }
 
@@ -197,7 +197,7 @@ final class fm extends WidgetContainer implements ng {
         this.field_D.listener = (ca) (this);
         this.field_C.listener = (ca) (this);
         this.field_B.listener = (ca) (this);
-        this.field_C.field_n = um.field_q;
+        this.field_C.field_n = MatchingFieldValidator.field_q;
         this.field_B.field_n = ll.field_m;
         this.a(this.field_D, -6938);
         this.a(this.field_C, -6938);

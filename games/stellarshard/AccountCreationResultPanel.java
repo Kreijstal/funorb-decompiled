@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends ck implements oi {
     private boolean field_lb;
-    private mj field_nb;
+    private AccountRegistrationPanel field_nb;
     static String field_ob;
     static int field_pb;
     private boolean field_mb;
@@ -11,11 +11,11 @@ final class AccountCreationResultPanel extends ck implements oi {
     final void p(int param0) {
         this.showAccountCreationResult(fb.createAccountErrorResult(248, true, ArchiveRequest.field_r), -8895, true);
         if (param0 < 77) {
-          this.field_nb = (mj) null;
+          this.field_nb = (AccountRegistrationPanel) null;
         }
     }
 
-    AccountCreationResultPanel(ei param0, mj param1) {
+    AccountCreationResultPanel(ei param0, AccountRegistrationPanel param1) {
         super(param0, DualLinkDequeIterator.field_c, vj.field_b, false, false);
         try {
           this.field_nb = param1;
@@ -144,7 +144,7 @@ final class AccountCreationResultPanel extends ck implements oi {
           AccountCreationResultPanel.i((byte) -113);
           return super.d(true);
         }
-        var2 = mj.pollAccountCreationResult(0);
+        var2 = AccountRegistrationPanel.pollAccountCreationResult(0);
         if (var2 != null) {
           this.showAccountCreationResult(var2, -8895, false);
         }

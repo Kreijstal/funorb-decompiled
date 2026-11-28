@@ -55,7 +55,7 @@ class eb extends UiWidget {
 
     final static void a(int param0, byte param1) {
         int var3 = 79 % ((param1 - 80) / 44);
-        BitPacketBuffer var2 = di.field_l;
+        BitPacketBuffer var2 = TextFieldValidator.field_l;
         var2.writeCipheredByte(-17410, param0);
         var2.writeByte(1, -106);
         var2.writeByte(2, 73);
@@ -194,7 +194,7 @@ class eb extends UiWidget {
     }
 
     final static void a(ja param0, int param1, int param2) {
-        BitPacketBuffer var3 = di.field_l;
+        BitPacketBuffer var3 = TextFieldValidator.field_l;
         if (param1 != 0) {
           return;
         }

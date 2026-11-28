@@ -22,8 +22,8 @@ final class rg {
         return stackIn_9_0;
     }
 
-    final static pg b(int param0) {
-        pg var1 = new pg(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], ja.field_e[param0], bf.field_d);
+    final static IndexedSprite b(int param0) {
+        IndexedSprite var1 = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], ja.field_e[param0], bf.field_d);
         uj.d(param0 ^ -43);
         return var1;
     }
@@ -100,14 +100,14 @@ final class rg {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = db.field_s[var9];
+              var11 = PasswordValidator.field_s[var9];
               var6[0][var10] = al.field_M[var11];
               var18[0][4 * var10] = qa.field_d[var11];
               var18[0][4 * var10 + 1] = ta.field_mb[var11];
               var18[0][4 * var10 + 2] = og.field_b[var11];
-              var18[0][3 + 4 * var10] = db.field_t[var11];
+              var18[0][3 + 4 * var10] = PasswordValidator.field_t[var11];
               if (pc.a(14088, al.field_M[var11]) &&
-                0 == db.field_t[var11] + (og.field_b[var11] + ta.field_mb[var11])) {
+                0 == PasswordValidator.field_t[var11] + (og.field_b[var11] + ta.field_mb[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -118,14 +118,14 @@ final class rg {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = db.field_s[var5 + var9Lifetime1];
+              var11Lifetime1 = PasswordValidator.field_s[var5 + var9Lifetime1];
               var6[1][var13] = al.field_M[var11Lifetime1];
               var18[1][var13 * 4] = qa.field_d[var11Lifetime1];
               var18[1][var13 * 4 + 1] = ta.field_mb[var11Lifetime1];
               var18[1][2 + var13 * 4] = og.field_b[var11Lifetime1];
-              var18[1][var13 * 4 + 3] = db.field_t[var11Lifetime1];
+              var18[1][var13 * 4 + 3] = PasswordValidator.field_t[var11Lifetime1];
               if (pc.a(14088, al.field_M[var11Lifetime1]) &&
-                ta.field_mb[var11Lifetime1] + og.field_b[var11Lifetime1] + db.field_t[var11Lifetime1] == 0) {
+                ta.field_mb[var11Lifetime1] + og.field_b[var11Lifetime1] + PasswordValidator.field_t[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

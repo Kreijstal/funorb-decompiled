@@ -57,7 +57,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int var1 = ma.o(-14933);
         int var2 = ei.n(param0 ^ param0);
         rb.field_e.a(var2 + (rf.field_b << 1), lj.field_p - rf.field_b, var1 + (ProxyAuthenticationRequiredException.field_c << 1), 26202, cg.field_o - ProxyAuthenticationRequiredException.field_c);
-        ik.n(-107);
+        AccountRegistrationPanel.n(-107);
     }
 
     final static void a(String param0, String[] param1, byte param2, int param3) {

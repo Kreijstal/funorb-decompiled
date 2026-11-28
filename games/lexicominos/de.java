@@ -39,7 +39,7 @@ final class de extends RuntimeException {
           var10 = var8;
           var3 = var10.readUnsignedByte(true);
           var10.beginBitAccess(10);
-          ResourceArchive.field_d = cl.a(var10, -121);
+          ResourceArchive.field_d = ValidatedTextField.a(var10, -121);
           uj.field_f = new int[var3][];
           ae.field_J = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {

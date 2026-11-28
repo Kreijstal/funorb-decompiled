@@ -83,7 +83,7 @@ class oj extends p {
           return pa.field_i[this.field_w][this.field_z % pa.field_i[this.field_w].length];
         }
         if (var2 == 28) {
-          return of.field_c[this.field_w][this.field_z % of.field_c[this.field_w].length];
+          return ClientLookupTables.field_c[this.field_w][this.field_z % ClientLookupTables.field_c[this.field_w].length];
         }
         if (var2 == 24) {
           return ArchiveIndex.field_f[this.field_w][this.field_z % ArchiveIndex.field_f[this.field_w].length];
@@ -105,7 +105,7 @@ class oj extends p {
         return stackIn_13_0;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, oc param5) {
+    final void a(boolean param0, int param1, int param2, int param3, int param4, GridPoint param5) {
         RgbSprite[] stackIn_106_0 = null;
         RuntimeException stackIn_531_0 = null;
         StringBuilder stackIn_531_1 = null;
@@ -123,7 +123,7 @@ class oj extends p {
         try {
           this.field_i = param3;
           this.field_C = l.a(-28, this.field_i);
-          this.field_j.a((byte) 46, param5);
+          this.field_j.copyCoordinatesFrom((byte) 46, param5);
           this.field_l.a(0.0, 0.0, 1);
           this.field_G = 0;
           this.field_e = 0;
@@ -1293,7 +1293,7 @@ class oj extends p {
           return stackIn_50_0;
         }
         if (param1 >= -92) {
-          oj.a((oj) null, (oc) null, -63, -0.6163141320328959, 93, -0.6993828263849149, false);
+          oj.a((oj) null, (GridPoint) null, -63, -0.6163141320328959, 93, -0.6993828263849149, false);
         }
         boolean decompiledFrameRemainder0 = true;
         if (13 != this.field_i &&
@@ -1353,7 +1353,7 @@ class oj extends p {
           return pa.field_i;
         }
         if (var2 == 28) {
-          return of.field_c;
+          return ClientLookupTables.field_c;
         }
         if (var2 != 24) {
           return (RgbSprite[][]) null;
@@ -1376,7 +1376,7 @@ class oj extends p {
         }
     }
 
-    final static void a(oj param0, oc param1, int param2, double param3, int param4, double param5, boolean param6) {
+    final static void a(oj param0, GridPoint param1, int param2, double param3, int param4, double param5, boolean param6) {
         int var9_int = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -1403,9 +1403,9 @@ class oj extends p {
               jh.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
             }
             for (var9_int = 0; 3 > var9_int; var9_int++) {
-              mm.field_m[el.field_j] = new oj(param1, 3, rl.field_c);
-              mm.field_m[el.field_j].field_l.a(0.9, 0.9, 1);
-              el.field_j = el.field_j + 1;
+              mm.field_m[ProxySocketFactory.field_j] = new oj(param1, 3, rl.field_c);
+              mm.field_m[ProxySocketFactory.field_j].field_l.a(0.9, 0.9, 1);
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             FullscreenFocusCanvas.a(25, false);
             if (ha.field_t != 2) {
@@ -1452,7 +1452,7 @@ class oj extends p {
         this.field_p = 0;
     }
 
-    oj(oc param0, int param1, int param2) {
+    oj(GridPoint param0, int param1, int param2) {
         this.field_I = 10;
         this.field_s = false;
         this.field_x = 50;

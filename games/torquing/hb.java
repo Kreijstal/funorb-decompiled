@@ -15,12 +15,12 @@ final class hb extends am {
         if (param0) {
           hb.clearStaticReferences(48);
         }
-        String var1 = ki.i(20);
+        String var1 = AccountRegistrationPanel.i(20);
         if (var1 != null &&
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
-        return new da(ki.i(20), dc.b(true));
+        return new da(AccountRegistrationPanel.i(20), dc.b(true));
     }
 
     final static void a(int param0, boolean param1, Sprite param2, int param3, int param4, int param5, int param6, int param7) {

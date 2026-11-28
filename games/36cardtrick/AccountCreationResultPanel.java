@@ -5,7 +5,7 @@ final class AccountCreationResultPanel extends af implements qh {
     private boolean field_sb;
     static int field_rb;
     static PcmStreamMixer field_tb;
-    private kl field_vb;
+    private AccountRegistrationPanel field_vb;
     private boolean field_ub;
 
     final void f(byte param0) {
@@ -135,7 +135,7 @@ final class AccountCreationResultPanel extends af implements qh {
         }
     }
 
-    AccountCreationResultPanel(j param0, kl param1) {
+    AccountCreationResultPanel(j param0, AccountRegistrationPanel param1) {
         super(param0, vd.field_p, jc.field_R, false, false);
         try {
           this.field_vb = param1;

@@ -261,7 +261,7 @@ final class de {
         }
         IntrusiveDeque.field_f = qk.field_h;
         if (BufferedRandomAccessFile.field_q) {
-          oc.field_p = null;
+          MatchingFieldValidator.field_p = null;
           BufferedRandomAccessFile.field_q = false;
         }
         nc.field_T = 0;

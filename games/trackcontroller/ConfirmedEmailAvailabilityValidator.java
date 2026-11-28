@@ -1,0 +1,151 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
+    static String field_m;
+    private boolean field_n;
+    static String field_r;
+    static volatile boolean inputPending;
+    static MouseInputHandler mouseHandler;
+    private MatchingFieldValidator field_t;
+    static int field_s;
+    private String field_u;
+    static int field_o;
+
+    ConfirmedEmailAvailabilityValidator(EditableTextField param0, EditableTextField param1) {
+        super(param0);
+        this.field_n = false;
+        this.field_u = "";
+        try {
+          this.field_t = new MatchingFieldValidator(param0, param1);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "hd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static boolean a(int param0, char param1) {
+        if (param0 >= -112) {
+          inputPending = true;
+          if (param1 < 48) {
+            return false;
+          }
+          if (param1 <= 57) {
+            return true;
+          }
+          return false;
+        }
+        if (param1 < 48) {
+          return false;
+        }
+        if (param1 <= 57) {
+          return true;
+        }
+        return false;
+    }
+
+    final String getValidationMessage(String param0, int param1) {
+        RuntimeException var3 = null;
+        String stackIn_2_0 = null;
+        String stackIn_5_0 = null;
+        String stackIn_9_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_t.getValidationStatus(-116, param0) == ef.field_b) {
+            stackIn_2_0 = this.field_t.getValidationMessage(param0, 426);
+            return stackIn_2_0;
+          }
+          if (this.getValidationStatus(-108, param0) == ef.field_b) {
+            stackIn_5_0 = wd.field_H;
+            return stackIn_5_0;
+          }
+          if (param1 != 426) {
+            this.field_u = (String) null;
+          }
+          stackIn_9_0 = DiskArchiveStore.field_a;
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("hd.B(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        if (param0 == 69) {
+          field_r = null;
+          field_m = null;
+          mouseHandler = null;
+          return;
+        }
+        ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences((byte) -97);
+        field_r = null;
+        field_m = null;
+        mouseHandler = null;
+    }
+
+    final ud getValidationStatus(int param0, String param1) {
+        j var3 = null;
+        RuntimeException var3_ref = null;
+        ud stackIn_2_0 = null;
+        ud stackIn_6_0 = null;
+        ud stackIn_12_0 = null;
+        ud stackIn_17_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 >= -106) {
+            stackIn_2_0 = (ud) null;
+            return stackIn_2_0;
+          }
+          if (this.field_t.getValidationStatus(-112, param1) == ef.field_b) {
+            stackIn_6_0 = ef.field_b;
+            return stackIn_6_0;
+          }
+          if (!param1.equals(this.field_u)) {
+            var3 = ca.a(param1, 647);
+            if (!var3.b((byte) 79)) {
+              stackIn_12_0 = AsyncRequest.field_t;
+              return stackIn_12_0;
+            }
+            this.field_u = param1;
+            this.field_n = var3.c((byte) -100);
+          }
+          if (this.field_n) {
+            stackIn_17_0 = TrackController.field_G;
+          } else {
+            stackIn_17_0 = ef.field_b;
+          }
+          return stackIn_17_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_20_0 = var3_ref;
+          stackIn_20_1 = new StringBuilder().append("hd.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+        }
+    }
+
+    static {
+        inputPending = false;
+        field_r = "Sound: ";
+        field_m = "Continue";
+        mouseHandler = new MouseInputHandler();
+    }
+}

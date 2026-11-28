@@ -330,16 +330,16 @@ final class bj extends ak {
         RuntimeException var2 = null;
         var3 = Bounce.field_N;
         try {
-          Bounce.a(va.field_b, q.field_M, 22668, 0, w.field_d, param1, true);
+          Bounce.a(va.field_b, DisplayNameSelectionPanel.field_M, 22668, 0, w.field_d, param1, true);
           if (param0 != -125) {
             field_E = (ng) null;
           }
-          for (var2_int = 0; var2_int < q.field_M; var2_int++) {
+          for (var2_int = 0; var2_int < DisplayNameSelectionPanel.field_M; var2_int++) {
             w.field_f[var2_int + param1] = var2_int;
           }
-          Bounce.a(AccountNameAvailabilityValidator.field_n, q.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
-          if (param1 < q.field_M) {
-            q.field_M = param1;
+          Bounce.a(AccountNameAvailabilityValidator.field_n, DisplayNameSelectionPanel.field_M + param1, 22668, param1, uc.field_A, param1 + param1, false);
+          if (param1 < DisplayNameSelectionPanel.field_M) {
+            DisplayNameSelectionPanel.field_M = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

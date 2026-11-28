@@ -69,7 +69,7 @@ final class hb extends lj {
         try {
           var4_int = -1;
           for (var5 = param0; var5 < param3; var5++) {
-            var4_int = var4_int >>> 8 ^ of.field_g[(param2[var5] ^ var4_int) & 255];
+            var4_int = var4_int >>> 8 ^ ClientLookupTables.field_g[(param2[var5] ^ var4_int) & 255];
           }
           if (param1 >= -106) {
             field_v = (ll) null;

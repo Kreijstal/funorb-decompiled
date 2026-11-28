@@ -119,25 +119,25 @@ final class u extends gd {
             if (var9 == 0) {
               la.field_b.b(jk.a(new String[]{Integer.toString(var5 / 10)}, n.field_a, 30496), 52, var14, 12632256, -1);
             } else {
-              la.field_b.b(be.field_q, 52, var14, 16711680, -1);
+              la.field_b.b(MatchingFieldValidator.field_q, 52, var14, 16711680, -1);
             }
           } else {
-            la.field_b.b(dn.field_T, 52, var14, 16711680, -1);
+            la.field_b.b(LoginPanel.field_T, 52, var14, 16711680, -1);
           }
           var14 += 4;
           var12.e();
           var15Lifetime1 = -45 + var7;
           SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 16744448);
-          gk.a(52, this.field_Q, 95, 16744448, var14);
+          DisplayNameSelectionPanel.a(52, this.field_Q, 95, 16744448, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           var13.e();
           SoftwareRasterizer.clearRaster();
           var11.e(0, 0, 12690143);
-          gk.a(52, this.field_Q, 118, 10449103, var14);
+          DisplayNameSelectionPanel.a(52, this.field_Q, 118, 10449103, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           var11.e();
-          gk.a(52, this.field_Q, 115, 12632256, var14);
+          DisplayNameSelectionPanel.a(52, this.field_Q, 115, 12632256, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           jh.b();
           var16 = rb.a(16, var12, 255, (byte) 99);
@@ -163,7 +163,7 @@ final class u extends gd {
         }
     }
 
-    final static void a(int param0, lb param1) {
+    final static void a(int param0, PlayerDungeonProfile param1) {
         int var2_int = 0;
         eh var3 = null;
         int var4 = 0;

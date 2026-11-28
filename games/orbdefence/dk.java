@@ -34,7 +34,7 @@ final class dk {
         vh.field_j = true;
         IntrusiveNode.field_b = true;
         bm.field_d.n(7920);
-        vd.a(false, -536866817, hi.field_f);
+        vd.a(false, -536866817, TextFieldValidator.field_f);
     }
 
     public static void resetStaticState(int param0) {

@@ -21,7 +21,7 @@ final class jea {
         te.c((byte) 94);
         if (lt.a((byte) 99)) {
           sja.field_fb.writeCipheredByte(1, (byte) 125);
-          hna.a(0, 68);
+          ConfirmedEmailAvailabilityValidator.a(0, 68);
         }
         vc.a((byte) -96);
     }

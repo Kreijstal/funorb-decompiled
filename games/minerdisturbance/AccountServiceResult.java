@@ -89,7 +89,7 @@ final class AccountServiceResult {
           if (sj.field_h != null) {
             sj.field_h.s(2121792);
           }
-          MidiPcmStream.field_D = new cl(param1, param0, false, true, true);
+          MidiPcmStream.field_D = new LoginPanel(param1, param0, false, true, true);
           de.field_a.a((byte) -126, (fe) (MidiPcmStream.field_D));
           if (param2 == -1) {
             return;

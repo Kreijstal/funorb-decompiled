@@ -1164,7 +1164,7 @@ abstract class eh {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  rg.field_E = DualLinkNode.a(param0 ^ 64, var2);
+                  LoginPanel.field_E = DualLinkNode.a(param0 ^ 64, var2);
                 }
                 var2 = rd.a("justplay_excl", param0 - 103);
                 if (null != var2) {
@@ -1248,7 +1248,7 @@ abstract class eh {
                 }
                 var2 = rd.a("connectionrestored", 71);
                 if (null != var2) {
-                  cf.field_p = DualLinkNode.a(121, var2);
+                  ConfirmedEmailAvailabilityValidator.field_p = DualLinkNode.a(121, var2);
                 }
                 var2 = rd.a("warning_ifyouquit", -71);
                 if (null != var2) {
@@ -1684,7 +1684,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_username_unavailable", param0 ^ 97);
                 if (var2 != null) {
-                  cf.field_s = DualLinkNode.a(112, var2);
+                  ConfirmedEmailAvailabilityValidator.field_s = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("create_username_available", -46);
                 if (null != var2) {
@@ -1712,7 +1712,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_alert_passrepeated", -77);
                 if (null != var2) {
-                  rg.field_K = DualLinkNode.a(param0 + 54, var2);
+                  LoginPanel.field_K = DualLinkNode.a(param0 + 54, var2);
                 }
                 var2 = rd.a("create_alert_passlength", -83);
                 if (var2 != null) {
@@ -2036,7 +2036,7 @@ abstract class eh {
                 }
                 var2 = rd.a("quit", 116);
                 if (var2 != null) {
-                  cf.field_j = DualLinkNode.a(123, var2);
+                  ConfirmedEmailAvailabilityValidator.field_j = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("login_createaccount", param0 + 63);
                 if (var2 != null) {
@@ -2146,7 +2146,7 @@ abstract class eh {
                 }
                 var2 = rd.a("prev", -127);
                 if (null != var2) {
-                  vb.field_j = DualLinkNode.a(122, var2);
+                  MatchingFieldValidator.field_j = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("next", 107);
                 if (null != var2) {
@@ -2802,7 +2802,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_focus_or_resolution", 116);
                 if (null != var2) {
-                  cf.field_m = DualLinkNode.a(123, var2);
+                  ConfirmedEmailAvailabilityValidator.field_m = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("fs_timeout", 73);
                 if (var2 != null) {

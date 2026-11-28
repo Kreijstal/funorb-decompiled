@@ -190,7 +190,7 @@ final class ml {
                                             }
                                           }
                                           if (this.field_o.a(-95)) {
-                                            cl.p(param0 - 403);
+                                            LoginPanel.p(param0 - 403);
                                           }
                                           if (this.field_o.e((byte) 126)) {
                                             ol.a((byte) -94);
@@ -289,7 +289,7 @@ final class ml {
                                                       if (0 == cm.field_n) {
                                                         sc.field_b = true;
                                                         if (sc.field_b) {
-                                                          stackIn_209_0 = !(wj.g(122));
+                                                          stackIn_209_0 = !(AgeValidator.g(122));
                                                           sc.field_b = stackIn_209_0;
                                                         }
                                                       }
@@ -406,7 +406,7 @@ final class ml {
                   if (null != kf.field_d) {
                     ng.a((byte) -122);
                   } else {
-                    cl.q(-64);
+                    LoginPanel.q(-64);
                   }
                 }
               }

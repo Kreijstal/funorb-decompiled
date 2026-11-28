@@ -256,7 +256,7 @@ final class kq extends UiPanel {
         if (this.field_Ib != -2) {
           return false;
         }
-        if (de.field_f == 13) {
+        if (DebouncedFieldValidator.field_f == 13) {
           this.field_Ib = -1;
         }
         if (param0 != 81) {

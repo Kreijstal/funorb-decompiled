@@ -102,9 +102,9 @@ final class ai extends IntrusiveNode {
           var49 = qd.field_a[param4];
           var48 = var49;
           var39 = var48;
-          di.a(param2 - param3, (byte) 60, param1, var39, -var11 + param2);
-          di.a(param2 - var11, (byte) 110, param0, var49, var11 + param2);
-          di.a(var11 + param2, (byte) -10, param1, var49, param3 + param2);
+          IndexedSpriteLayer.a(param2 - param3, (byte) 60, param1, var39, -var11 + param2);
+          IndexedSpriteLayer.a(param2 - var11, (byte) 110, param0, var49, var11 + param2);
+          IndexedSpriteLayer.a(var11 + param2, (byte) -10, param1, var49, param3 + param2);
           while (var9 > 0) {
             stackIn_8_0 = (var12 < var9) ? 0 : 1;
             var40 = stackIn_8_0;
@@ -156,18 +156,18 @@ final class ai extends IntrusiveNode {
             var43 = param2 + var8_int;
             var44 = -var8_int + param2;
             if (var40 == 0) {
-              di.a(var44, (byte) 87, param1, qd.field_a[var41], var43);
-              di.a(var44, (byte) -124, param1, qd.field_a[var42], var43);
+              IndexedSpriteLayer.a(var44, (byte) 87, param1, qd.field_a[var41], var43);
+              IndexedSpriteLayer.a(var44, (byte) -124, param1, qd.field_a[var42], var43);
               continue;
             }
             var45 = param2 + var10;
             var46 = param2 - var10;
-            di.a(var44, (byte) 88, param1, qd.field_a[var41], var46);
-            di.a(var46, (byte) -117, param0, qd.field_a[var41], var45);
-            di.a(var45, (byte) -106, param1, qd.field_a[var41], var43);
-            di.a(var44, (byte) 41, param1, qd.field_a[var42], var46);
-            di.a(var46, (byte) 19, param0, qd.field_a[var42], var45);
-            di.a(var45, (byte) -125, param1, qd.field_a[var42], var43);
+            IndexedSpriteLayer.a(var44, (byte) 88, param1, qd.field_a[var41], var46);
+            IndexedSpriteLayer.a(var46, (byte) -117, param0, qd.field_a[var41], var45);
+            IndexedSpriteLayer.a(var45, (byte) -106, param1, qd.field_a[var41], var43);
+            IndexedSpriteLayer.a(var44, (byte) 41, param1, qd.field_a[var42], var46);
+            IndexedSpriteLayer.a(var46, (byte) 19, param0, qd.field_a[var42], var45);
+            IndexedSpriteLayer.a(var45, (byte) -125, param1, qd.field_a[var42], var43);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -115,11 +115,11 @@ final class fm implements cg {
             }
             GzipDecompressor.a(var4, 83, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              qg.a(var14, (byte) 104);
+              ValidatedTextField.a(var14, (byte) 104);
               if (var6_intLifetime1 != 0) {
-                ai.a(ah.field_K, (byte) -62, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
+                ai.a(DisplayNameSelectionPanel.field_K, (byte) -62, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
               } else {
-                ai.a(ah.field_K, (byte) -128, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
+                ai.a(DisplayNameSelectionPanel.field_K, (byte) -128, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
               }
             }
             mk.a(-91, var5);

@@ -255,7 +255,7 @@ final class ui {
           if (null == var2 &&
             !nb.field_z &&
             null == gk.field_c) {
-            var2 = na.field_l;
+            var2 = AgeValidator.field_l;
           }
           if (param0 != -485) {
             field_b = (UiPanel) null;

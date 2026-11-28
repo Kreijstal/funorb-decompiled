@@ -16,10 +16,10 @@ final class oa {
         int var5Lifetime1;
         int var5Lifetime2;
         if (param2) {
-          if (p.field_n[param1] < p.field_n[param3]) {
+          if (ConfirmedEmailAvailabilityValidator.field_n[param1] < ConfirmedEmailAvailabilityValidator.field_n[param3]) {
             return true;
           }
-          if (p.field_n[param1] > p.field_n[param3]) {
+          if (ConfirmedEmailAvailabilityValidator.field_n[param1] > ConfirmedEmailAvailabilityValidator.field_n[param3]) {
             return false;
           }
           if (db.field_l[param1] < db.field_l[param3]) {
@@ -47,10 +47,10 @@ final class oa {
         if (db.field_l[param1] > db.field_l[param3]) {
           return false;
         }
-        if (p.field_n[param3] > p.field_n[param1]) {
+        if (ConfirmedEmailAvailabilityValidator.field_n[param3] > ConfirmedEmailAvailabilityValidator.field_n[param1]) {
           return true;
         }
-        if (p.field_n[param3] < p.field_n[param1]) {
+        if (ConfirmedEmailAvailabilityValidator.field_n[param3] < ConfirmedEmailAvailabilityValidator.field_n[param1]) {
           return false;
         }
         if (param0 == -29680) {

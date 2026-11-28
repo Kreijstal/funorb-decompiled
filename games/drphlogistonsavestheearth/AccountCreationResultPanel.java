@@ -8,7 +8,7 @@ final class AccountCreationResultPanel extends ma implements ke {
     static java.awt.Frame field_Gb;
     private boolean field_Hb;
     static he[] field_Cb;
-    private v field_Ib;
+    private AccountRegistrationPanel field_Ib;
     private boolean field_Eb;
 
     public static void releaseDeclaredStaticReferences(int param0) {
@@ -22,7 +22,7 @@ final class AccountCreationResultPanel extends ma implements ke {
         field_Jb = null;
     }
 
-    AccountCreationResultPanel(k param0, v param1) {
+    AccountCreationResultPanel(k param0, AccountRegistrationPanel param1) {
         super(param0, wi.field_e, mk.field_d, false, false);
         try {
           this.field_Ib = param1;
@@ -168,29 +168,29 @@ final class AccountCreationResultPanel extends ma implements ke {
           if (param0 == 2968) {
             return super.k(param0 + 0);
           }
-          this.field_Ib = (v) null;
+          this.field_Ib = (AccountRegistrationPanel) null;
           return super.k(param0 + 0);
         }
         if (this.field_Eb) {
           if (param0 == 2968) {
             return super.k(param0 + 0);
           }
-          this.field_Ib = (v) null;
+          this.field_Ib = (AccountRegistrationPanel) null;
           return super.k(param0 + 0);
         }
-        AccountServiceResult var2 = qg.pollAccountCreationResult(19860);
+        AccountServiceResult var2 = ValidatedTextField.pollAccountCreationResult(19860);
         if (var2 == null) {
           if (param0 == 2968) {
             return super.k(param0 + 0);
           }
-          this.field_Ib = (v) null;
+          this.field_Ib = (AccountRegistrationPanel) null;
           return super.k(param0 + 0);
         }
         this.showAccountCreationResult((byte) -92, var2, false);
         if (param0 == 2968) {
           return super.k(param0 + 0);
         }
-        this.field_Ib = (v) null;
+        this.field_Ib = (AccountRegistrationPanel) null;
         return super.k(param0 + 0);
     }
 

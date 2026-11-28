@@ -53,7 +53,7 @@ abstract class MixedSupport115 extends DualNode {
           }
           if (null == objectLocal5 &&
             !ProxySocketFactory.booleanState0169 &&
-            UiComponentPart031.sceneWidgetState0116 == null) {
+            AccountRegistrationPanel.sceneWidgetState0116 == null) {
             objectLocal5 = UiComponentPart003.stringState0059;
           }
           if (null != objectLocal5) {

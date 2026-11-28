@@ -70,21 +70,21 @@ final class rb extends ue {
 
     final void b(int param0) {
         RgbSprite var3;
-        if (null != ga.field_L) {
+        if (null != EditableTextField.field_L) {
           boolean decompiledFrameRemainder0 = true;
           if (!tf.field_c) {
-            if (!ga.field_L.tryLoadGroupByName(param0 ^ -20410, "benefits")) {
+            if (!EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "benefits")) {
               if (!ob.field_o &&
-                ga.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots")) {
-                IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
+                EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots")) {
+                IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
                 ob.field_o = true;
                 vp.a(127);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              IntrusiveDeque.a(0, ArchiveRequest.a("main", ga.field_L, param0 + 2, "benefits"), ei.field_G);
-              sj.a(ArchiveRequest.a("crystal", ga.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
+              IntrusiveDeque.a(0, ArchiveRequest.a("main", EditableTextField.field_L, param0 + 2, "benefits"), ei.field_G);
+              sj.a(ArchiveRequest.a("crystal", EditableTextField.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
               var3 = new RgbSprite(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
               var3.a();
               ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
@@ -96,14 +96,14 @@ final class rb extends ue {
             }
           }
           if ((decompiledFrameRemainder0) && (!ob.field_o &&
-            ga.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots"))) {
-            IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", ga.field_L));
+            EditableTextField.field_L.tryLoadGroupByName(param0 ^ -20410, "screenshots"))) {
+            IsaacRandom.a(6437, bf.a(-1, "screenshots", "screenshots", EditableTextField.field_L));
             ob.field_o = true;
             vp.a(127);
           }
           if (tf.field_c &&
             ob.field_o) {
-            ga.field_L = null;
+            EditableTextField.field_L = null;
           }
         }
         this.field_f.b(param0);

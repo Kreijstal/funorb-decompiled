@@ -114,10 +114,10 @@ public final class Confined extends i {
           jj.h((byte) -87);
           ef.discardDeclaredStaticReferences(111);
           dh.c(false);
-          ke.j(-14508);
+          AccountRegistrationPanel.j(-14508);
           tg.resetStaticState((byte) 126);
-          w.releaseDeclaredStaticReferences(param0 - 191);
-          bf.clearStaticReferences(false);
+          LoginPanel.releaseDeclaredStaticReferences(param0 - 191);
+          DisplayNameSelectionPanel.clearStaticReferences(false);
           bn.clearStaticReferences((byte) 127);
           kc.clearStaticReferences((byte) 110);
           hd.a(true);
@@ -229,8 +229,8 @@ public final class Confined extends i {
           lk.clearStaticReferences(false);
           fd.clearStaticReferences((byte) -122);
           la.clearDeclaredStaticReferences(param0 ^ 179);
-          wh.clearDeclaredStaticReferences(-9466);
-          ul.clearStaticReferences(false);
+          ValidatedTextField.clearDeclaredStaticReferences(-9466);
+          EditableTextField.clearStaticReferences(false);
           sj.releaseDeclaredStaticReferences((byte) 70);
           ib.clearStaticReferences((byte) -20);
           ak.releaseDeclaredStaticReferences(-125);
@@ -238,7 +238,7 @@ public final class Confined extends i {
           ba.clearDeclaredStaticReferences((byte) -94);
           rh.clearDeclaredStaticReferences(8692);
           fa.f(91);
-          mf.d(96);
+          TextFieldValidator.d(96);
           ol.clearStaticReferences(0);
           pi.clearStaticReferences((byte) -81);
           jh.clearStaticReferences(true);
@@ -292,15 +292,15 @@ public final class Confined extends i {
           pn.resetStaticState(param0 - 274);
           sd.clearStaticReferences(-15138);
           AccountNameAvailabilityValidator.clearStaticReferences(-119);
-          gl.clearStaticReferences((byte) -11);
-          bk.clearStaticReferences(62);
-          qc.clearStaticReferences(param0 - 193);
-          hj.clearStaticReferences(-109);
-          lf.e(127);
+          PasswordValidator.clearStaticReferences((byte) -11);
+          EmailFormatValidator.clearStaticReferences(62);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences(param0 - 193);
+          AgeValidator.clearStaticReferences(-109);
+          MatchingFieldValidator.e(127);
           rf.a((byte) 112);
           nn.clearStaticReferences(-11650);
           fi.resetStaticState((byte) -125);
-          ra.clearStaticReferences(true);
+          DebouncedFieldValidator.clearStaticReferences(true);
           va.clearStaticReferences(param0 - 312);
           this.field_y = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -384,7 +384,7 @@ public final class Confined extends i {
             }
             if (!tj.a(true)) {
               do {
-                var2 = (sf) (ra.field_c.removeFirst(param0 ^ -2));
+                var2 = (sf) (DebouncedFieldValidator.field_c.removeFirst(param0 ^ -2));
                 if (var2 == null) {
                   if (var3 == 0) {
                     break;
@@ -669,16 +669,16 @@ public final class Confined extends i {
               PrimaryNodeDeque.a(cf.field_db, 128, (byte) -30, 384, 17, qn.field_v.field_B.field_ab);
             }
             if (qn.field_v.field_B.field_cb) {
-              ul.a(8, ek.field_k, 10, param0 ^ -55445, 432);
+              EditableTextField.a(8, ek.field_k, 10, param0 ^ -55445, 432);
             }
             if (qn.field_v.field_B.field_eb) {
-              ul.a(48, kc.field_r, 11, -4245, 432);
+              EditableTextField.a(48, kc.field_r, 11, -4245, 432);
             }
             if (qn.field_v.field_B.field_Sb) {
-              ul.a(88, r.field_b, 12, param0 - 55445, 432);
+              EditableTextField.a(88, r.field_b, 12, param0 - 55445, 432);
             }
             if (qn.field_v.field_B.field_rb) {
-              ul.a(128, AwtRasterBuffer.field_g, 13, -4245, 432);
+              EditableTextField.a(128, AwtRasterBuffer.field_g, 13, -4245, 432);
             }
             if (qn.field_v.field_B.field_Bb.field_b > 8) {
               ol.a(272, 30613, qn.field_v.field_B.field_Bb.field_b - 8, 4, 384);
@@ -853,13 +853,13 @@ public final class Confined extends i {
             di.field_d = od.a(ka.field_N, "", "player/wingpod");
             var2_doubleLifetime2 = 0.1 / (double)di.field_d.b(51);
             jb.a((byte) -99, var2_doubleLifetime2, og.field_g);
-            bf.field_R[0][0] = od.a(ka.field_N, "", "rocks/0");
-            bf.field_R[0][1] = od.a(ka.field_N, "", "rocks/1");
-            bf.field_R[0][2] = od.a(ka.field_N, "", "rocks/2");
-            bf.field_R[0][3] = od.a(ka.field_N, "", "rocks/3");
+            DisplayNameSelectionPanel.field_R[0][0] = od.a(ka.field_N, "", "rocks/0");
+            DisplayNameSelectionPanel.field_R[0][1] = od.a(ka.field_N, "", "rocks/1");
+            DisplayNameSelectionPanel.field_R[0][2] = od.a(ka.field_N, "", "rocks/2");
+            DisplayNameSelectionPanel.field_R[0][3] = od.a(ka.field_N, "", "rocks/3");
             var4 = 0;
             while (var4 < 4) {
-              bf.field_R[0][var4].b(51);
+              DisplayNameSelectionPanel.field_R[0][var4].b(51);
               var4++;
               if (var7 != 0) {
                 return;
@@ -963,7 +963,7 @@ public final class Confined extends i {
           if (li.field_m == null) {
             jc.a(ch.field_b, 10265, 56.0f);
             this.h(51200);
-            ng.a(gl.field_j, -15518, GameCanvas.field_a);
+            ng.a(PasswordValidator.field_j, -15518, GameCanvas.field_a);
             li.field_m = new sg(0);
             return;
           }
@@ -1002,7 +1002,7 @@ public final class Confined extends i {
                 var2_int++;
                 continue scanLoop1;
               }
-              gl.field_j = null;
+              PasswordValidator.field_j = null;
               GameCanvas.field_a = null;
               i.field_u = null;
               stackIn_64_0 = -4258;
@@ -1022,8 +1022,8 @@ public final class Confined extends i {
             var2_ref.a(0, 0, 20, 20);
             pi.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;
-            pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16", (byte) 38);
-            TunnelCamera.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
+            pn.field_a = bj.a("", ih.field_d, EditableTextField.field_U, "fonts_bottomheavy16", (byte) 38);
+            TunnelCamera.field_I = bj.a("", ih.field_d, EditableTextField.field_U, "fonts_bottomheavy32", (byte) 38);
             ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
             IntrusiveNodeHashTable.field_h = f.a(8364, ei.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
@@ -1063,7 +1063,7 @@ public final class Confined extends i {
                 lh.field_c = va.a(param0 ^ -44, nm.a(ih.field_d, "menu_button_frame_raised", 1, ""));
                 ui.field_a = dh.a(false, "normal_key", "", ih.field_d);
                 qe.field_J = dh.a(false, "wide_key", "", ih.field_d);
-                lf.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
+                MatchingFieldValidator.field_j = dh.a(false, "arrow_keys", "", ih.field_d);
                 fa.field_U = dh.a(false, "mouse", "", ih.field_d);
                 jc.a(wl.field_a, 10265, 80.0f);
                 this.h(51200);
@@ -1159,10 +1159,10 @@ public final class Confined extends i {
             fg.field_mb = fk.a(jd.field_b, "", "disruption-fire").a();
             LightningArc.field_pb = fk.a(jd.field_b, "", "disruption-ambient").a();
             n.field_a = fk.a(jd.field_b, "", "concussion-missile-fire").a();
-            ul.field_P = fk.a(jd.field_b, "", "homing-missile-fire").a();
+            EditableTextField.field_P = fk.a(jd.field_b, "", "homing-missile-fire").a();
             pe.field_o = fk.a(jd.field_b, "", "cluster-missile-fire").a();
-            lf.field_i = fk.a(jd.field_b, "", "nuclear-missile-fire").a();
-            ke.field_cb = fk.a(jd.field_b, "", "concussion-missile-ambient").a();
+            MatchingFieldValidator.field_i = fk.a(jd.field_b, "", "nuclear-missile-fire").a();
+            AccountRegistrationPanel.field_cb = fk.a(jd.field_b, "", "concussion-missile-ambient").a();
             fj.field_G = fk.a(jd.field_b, "", "homing-missile-ambient").a();
             un.field_h = fk.a(jd.field_b, "", "cluster-missile-ambient").a();
             TunnelEntity.field_x = fk.a(jd.field_b, "", "nuclear-missile-ambient").a();
@@ -1194,9 +1194,9 @@ public final class Confined extends i {
             lk.field_e[3] = fk.a(jd.field_b, "", "boss-humanoid-explode").a();
             jc.a(jb.field_r, 10265, 93.0f);
             this.h(51200);
-            bk.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
-            bk.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
-            bk.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
+            EmailFormatValidator.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
+            EmailFormatValidator.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
+            EmailFormatValidator.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
             sc.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
             ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
             gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
@@ -1394,7 +1394,7 @@ public final class Confined extends i {
             if (decompiledFrameRemainder2) {
               if (fi.field_a != 2) {
                 if (fi.field_a == 3) {
-                  KeyboardInput.field_a = bk.a(320, false, false, i.field_o);
+                  KeyboardInput.field_a = EmailFormatValidator.a(320, false, false, i.field_o);
                   decompiledFrameRemainder2 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder2) {

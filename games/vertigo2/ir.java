@@ -79,13 +79,13 @@ final class ir {
         Archive var3 = null;
         Archive var3Lifetime1;
         rm.field_B = (param0 & 63) >> 4;
-        oa.field_p = param0 >> 2 & 3;
+        ConfirmedEmailAvailabilityValidator.field_p = param0 >> 2 & 3;
         if (!(rm.field_B <= 2)) {
           rm.field_B = 2;
         }
         mf.field_b = param0 & 3;
-        if (2 < oa.field_p) {
-          oa.field_p = 2;
+        if (2 < ConfirmedEmailAvailabilityValidator.field_p) {
+          ConfirmedEmailAvailabilityValidator.field_p = 2;
           if (param1 == -65) {
             if (mf.field_b <= 2) {
               return;

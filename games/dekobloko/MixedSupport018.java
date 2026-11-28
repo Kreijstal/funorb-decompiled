@@ -72,7 +72,7 @@ final class MixedSupport018 {
         }
     }
 
-    final static void performAction0253(MixedSupport015 mixedSupport015Argument1, int integerArgument2, int integerArgument3, byte byteArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
+    final static void performAction0253(NineSliceSprite mixedSupport015Argument1, int integerArgument2, int integerArgument3, byte byteArgument4, int integerArgument5, NineSliceSprite mixedSupport015Argument6) {
         try {
           if (byteArgument4 >= -62) {
             stringState0092 = (String) null;
@@ -81,7 +81,7 @@ final class MixedSupport018 {
           MixedSupport022.mixedSupport015State0001 = mixedSupport015Argument6;
           NetworkSupport006.integerState0499 = integerArgument2;
           BufferedSocket.integerState0665 = integerArgument5;
-          UiComponentPart022.integerState0575 = integerArgument3;
+          AccountFieldStatusIndicator.integerState0575 = integerArgument3;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ci.E(" + (mixedSupport015Argument1 != null ? "{...}" : "null") + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
         }

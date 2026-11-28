@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationPanel extends WidgetContainer implements pc, WidgetActionListener, uja {
-    private vn field_D;
-    private vn field_K;
+    private ValidatedTextField field_D;
+    private ValidatedTextField field_K;
     private InteractiveWidget field_M;
     dd field_J;
-    private vn field_C;
-    private vn field_I;
+    private ValidatedTextField field_C;
+    private ValidatedTextField field_I;
     static volatile int field_N;
-    private vn field_G;
+    private ValidatedTextField field_G;
     private InteractiveWidget field_L;
     private LinkTextWidget field_E;
     private dia field_H;
-    private vn field_F;
+    private ValidatedTextField field_F;
 
     private final String d(byte param0) {
         String discarded$0 = null;
@@ -40,7 +40,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
           var9 = new ge(20, param1, param2 + 120, 25, param4, false, 120, 3, jca.field_a, 16777215, param0);
           var7 = -49 % ((55 - param3) / 43);
           this.c(var9, 107);
-          var8 = new wu(((mca) ((Object) param4)).a(16728128));
+          var8 = new wu(((FieldValidatorProvider) ((Object) param4)).getFieldValidator(16728128));
           this.c(var8, 117);
           var8.a(var9.x + (var9.width + 3), 15, (byte) 59, 15, (var9.height - 15 >> 1) + var9.y);
           stackIn_1_0 = var9.height;
@@ -80,11 +80,11 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 != -14) {
-            this.field_F = (vn) null;
+            this.field_F = (ValidatedTextField) null;
           }
           var10 = new ge(20, param2, param4 + 120, 25, param0, false, 120, 3, jca.field_a, 16777215, param6);
           this.c(var10, 120);
-          var9 = new nf(((mca) ((Object) param0)).a(16728128), param1, 126, var10.height + param2, param4 + 50, param3);
+          var9 = new nf(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(16728128), param1, 126, var10.height + param2, param4 + 50, param3);
           var9.listener = (WidgetListener) (this);
           this.c(var9, -124);
           stackIn_3_0 = var9.height + var10.height;
@@ -117,10 +117,10 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
 
     public final void a(int param0) {
         boolean discarded$0 = false;
-        ((AccountNameAvailabilityValidator) (this.field_C.a(16728128))).d(-121);
+        ((AccountNameAvailabilityValidator) (this.field_C.getFieldValidator(16728128))).d(-121);
         if (param0 != 14322) {
-          mca var3 = (mca) null;
-          discarded$0 = this.a(50, (mca) null);
+          FieldValidatorProvider var3 = (FieldValidatorProvider) null;
+          discarded$0 = this.isFieldReadyForRegistration(50, (FieldValidatorProvider) null);
         }
     }
 
@@ -165,12 +165,12 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
 
     public AccountCreationPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_C = new vn("", (WidgetListener) null, 12);
-        this.field_I = new vn("", (WidgetListener) null, 100);
-        this.field_K = new vn("", (WidgetListener) null, 100);
-        this.field_G = new vn("", (WidgetListener) null, 20);
-        this.field_F = new vn("", (WidgetListener) null, 20);
-        this.field_D = new vn("", (WidgetListener) null, 3);
+        this.field_C = new ValidatedTextField("", (WidgetListener) null, 12);
+        this.field_I = new ValidatedTextField("", (WidgetListener) null, 100);
+        this.field_K = new ValidatedTextField("", (WidgetListener) null, 100);
+        this.field_G = new ValidatedTextField("", (WidgetListener) null, 20);
+        this.field_F = new ValidatedTextField("", (WidgetListener) null, 20);
+        this.field_D = new ValidatedTextField("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_H = new dia("", (WidgetListener) null, var1 != 0);
         this.field_L = new InteractiveWidget(dp.field_p, (WidgetListener) null);
@@ -183,11 +183,11 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         this.field_D.tooltip = wq.field_m;
         this.field_H.tooltip = ala.field_c;
         this.field_C.a(7, new AccountNameAvailabilityValidator(this.field_C));
-        this.field_I.a(7, new el(this.field_I));
-        this.field_K.a(7, new hna(this.field_K, this.field_I));
-        this.field_G.a(7, new wg(this.field_G, this.field_C, this.field_I));
-        this.field_F.a(7, new hb(this.field_F, this.field_G));
-        this.field_D.a(7, new hka(this.field_D));
+        this.field_I.a(7, new EmailFormatValidator(this.field_I));
+        this.field_K.a(7, new ConfirmedEmailAvailabilityValidator(this.field_K, this.field_I));
+        this.field_G.a(7, new PasswordValidator(this.field_G, this.field_C, this.field_I));
+        this.field_F.a(7, new MatchingFieldValidator(this.field_F, this.field_G));
+        this.field_D.a(7, new AgeValidator(this.field_D));
         this.field_L.field_z = false;
         this.field_L.renderer = (WidgetRenderer) ((Object) new ff());
         this.field_M.renderer = (WidgetRenderer) ((Object) new pka());
@@ -286,7 +286,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
     }
 
     public final void a(String param0, byte param1) {
-        vn var3 = null;
+        ValidatedTextField var3 = null;
         String var4 = null;
         try {
           var3 = this.field_C;
@@ -318,7 +318,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
           if (param1 != this.field_L) {
             return;
           }
-          discarded$1 = this.j(-11199);
+          discarded$1 = this.submitRegistration(-11199);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,7 +340,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
         try {
           super.updateMouseOver(param0, param1, param2, param3 ^ 0);
-          this.field_L.field_z = this.k(0);
+          this.field_L.field_z = this.canSubmitRegistration(0);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ue.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -416,9 +416,9 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    private final boolean j(int param0) {
+    private final boolean submitRegistration(int param0) {
         int discarded$0 = 0;
-        if (!this.k(0)) {
+        if (!this.canSubmitRegistration(0)) {
           return false;
         }
         if (param0 != -11199) {
@@ -433,8 +433,8 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         return SpiltMilkSpecial.a(var2, this.field_H.field_B, this, 114, this.field_G.text, this.field_I.text, this.field_C.text);
     }
 
-    private final boolean a(int param0, mca param1) {
-        qu var3 = null;
+    private final boolean isFieldReadyForRegistration(int param0, FieldValidatorProvider param1) {
+        FieldValidator var3 = null;
         RuntimeException var3_ref = null;
         jg var4 = null;
         RuntimeException stackIn_19_0 = null;
@@ -442,11 +442,11 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(16728128);
+          var3 = param1.getFieldValidator(16728128);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b(-19704);
+          var4 = var3.getValidationStatus(-19704);
           if (var4 == FoodShopPanel.field_f) {
             return false;
           }
@@ -474,23 +474,23 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    private final boolean k(int param0) {
-        if (!this.a(25323, (mca) (this.field_C))) {
+    private final boolean canSubmitRegistration(int param0) {
+        if (!this.isFieldReadyForRegistration(25323, (FieldValidatorProvider) (this.field_C))) {
           return false;
         }
-        if (!this.a(25323, (mca) (this.field_I))) {
+        if (!this.isFieldReadyForRegistration(25323, (FieldValidatorProvider) (this.field_I))) {
           return false;
         }
-        if (!this.a(param0 + 25323, (mca) (this.field_K))) {
+        if (!this.isFieldReadyForRegistration(param0 + 25323, (FieldValidatorProvider) (this.field_K))) {
           return false;
         }
-        if (!this.a(25323, (mca) (this.field_G))) {
+        if (!this.isFieldReadyForRegistration(25323, (FieldValidatorProvider) (this.field_G))) {
           return false;
         }
-        if (!this.a(25323, (mca) (this.field_F))) {
+        if (!this.isFieldReadyForRegistration(25323, (FieldValidatorProvider) (this.field_F))) {
           return false;
         }
-        if (!this.a(param0 + 25323, (mca) (this.field_D))) {
+        if (!this.isFieldReadyForRegistration(param0 + 25323, (FieldValidatorProvider) (this.field_D))) {
           return false;
         }
         if (param0 == 0) {

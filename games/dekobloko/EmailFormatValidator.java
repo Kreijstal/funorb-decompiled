@@ -34,7 +34,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             stringLocal2 = (String) null;
             this.getValidationStatus((String) null, (byte) -35);
           }
-          if (this.getValidationStatus(stringArgument1, (byte) -40) != MixedSupport142.validationStatusState0005) {
+          if (this.getValidationStatus(stringArgument1, (byte) -40) != ReturnedShapeUpdate.validationStatusState0005) {
             return MixedSupport077.stringState0331;
           }
           stackStringLocal3 = MixedSupport086.stringState0363;
@@ -68,7 +68,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           stackIntegerLocal3 = (null != DekoBlokoClient.getEmailValidationError(stringArgument1, -12828)) ? 0 : 1;
           integerLocal1 = stackIntegerLocal3;
           if (integerLocal1 == 0) {
-            stackValidationStatusLocal4 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal4 = ReturnedShapeUpdate.validationStatusState0005;
             return stackValidationStatusLocal4;
           }
           if (byteArgument2 == -40) {
@@ -91,7 +91,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         }
     }
 
-    EmailFormatValidator(UiComponentPart028 uiComponentPart028Argument1) {
+    EmailFormatValidator(EditableTextField uiComponentPart028Argument1) {
         super(uiComponentPart028Argument1);
     }
 

@@ -56,7 +56,7 @@ final class MouseInputListener implements java.awt.event.MouseListener, java.awt
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = oc.field_M;
+            stackIn_3_0 = ValidatedTextField.field_M;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

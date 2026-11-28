@@ -107,11 +107,11 @@ final class ac {
                   }
                   if (var12 != 0) {
                     if (VolumeRampingMidiPcmStream.field_U[0] == 0) {
-                      stackIn_68_0 = (!t.a(param3 ^ -5181, 0, var13)) ? 0 : 1;
+                      stackIn_68_0 = (!AchievementNotification.selectWeaponForSlot(param3 ^ -5181, 0, var13)) ? 0 : 1;
                       var12 = stackIn_68_0;
                     } else {
                       if (VolumeRampingMidiPcmStream.field_U[1] == 0) {
-                        stackIn_64_0 = (!t.a(67, 1, var13)) ? 0 : 1;
+                        stackIn_64_0 = (!AchievementNotification.selectWeaponForSlot(67, 1, var13)) ? 0 : 1;
                         var12 = stackIn_64_0;
                       } else {
                         var12 = 0;
@@ -120,15 +120,15 @@ final class ac {
                   }
                   if (uj.field_l == 1 &&
                     var12 == 0 &&
-                    sf.field_V[var13 + 15] != null) {
-                    eh.field_c.a(sf.field_V[15 + var13], 100, uh.field_i);
+                    TextInputField.field_V[var13 + 15] != null) {
+                    eh.field_c.a(TextInputField.field_V[15 + var13], 100, uh.field_i);
                   }
                 } else {
                   if (var17.field_i == 1) {
                     var17.field_i = -1;
                     VolumeRampingMidiPcmStream.field_ib[var15.field_h] = VolumeRampingMidiPcmStream.field_ib[var15.field_h] + te.field_F[var15.field_h];
                     if (uj.field_l == 1) {
-                      eh.field_c.a(sf.field_V[40], 100, uh.field_i);
+                      eh.field_c.a(TextInputField.field_V[40], 100, uh.field_i);
                     }
                   } else {
                     if (var17.field_i == 2) {
@@ -138,7 +138,7 @@ final class ac {
                           if (var12 != 2) {
                             if (var12 == 4) {
                               if (om.field_b) {
-                                bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 82, sf.field_Y);
+                                bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 82, TextInputField.field_Y);
                                 vg.field_e = new v[1];
                                 pm.field_h = true;
                                 vg.field_e[0] = new v(ch.field_k, 24 * var17.field_j.field_e, var17.field_j.field_g + 3);
@@ -221,7 +221,7 @@ final class ac {
               ll.field_a = ll.field_a - 1;
               var16.field_c = wh.field_b[ll.field_a].field_c;
               var16.field_l.a(wh.field_b[ll.field_a].field_l, -28860);
-              var16.field_j.a((byte) 46, wh.field_b[ll.field_a].field_j);
+              var16.field_j.copyCoordinatesFrom((byte) 46, wh.field_b[ll.field_a].field_j);
               var16.field_h = wh.field_b[ll.field_a].field_h;
               var16.field_e = wh.field_b[ll.field_a].field_e;
               var16.field_n = wh.field_b[ll.field_a].field_n;
@@ -244,7 +244,7 @@ final class ac {
         try {
           de.c(param2 ^ 0);
           im.field_e.f((byte) 32);
-          ib.field_e = new lk(rf.field_e, (String) null, li.field_o, param1, param0);
+          ib.field_e = new LoginPanel(rf.field_e, (String) null, MatchingFieldValidator.field_o, param1, param0);
           ke.field_s = new ta(im.field_e, ib.field_e);
           im.field_e.c(ke.field_s, param2 ^ -116);
         } catch (RuntimeException runtimeException) {

@@ -135,7 +135,7 @@ final class sd extends bi {
             var8 = (ResourceArchive) null;
             sd.a((ResourceArchive) null, true);
           }
-          rg.field_L = u.a(var11, (byte) 26);
+          EditableTextField.field_L = u.a(var11, (byte) 26);
           ae.field_a = new int[var3][];
           rf.field_eb = new e[var3];
           for (var4 = 0; var3 > var4; var4++) {

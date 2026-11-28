@@ -31,41 +31,41 @@ final class sf extends td implements ButtonListener {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = lf.a((byte) -68, param0) ? 1 : 0;
+          var3 = ValidatedTextField.a((byte) -68, param0) ? 1 : 0;
           if (param1) {
             field_H = (java.awt.Frame) null;
           }
-          var4 = lf.a((byte) -68, param0) ? 1 : 0;
+          var4 = ValidatedTextField.a((byte) -68, param0) ? 1 : 0;
           var5 = new Model();
           var5.field_q = (short)param0.readBits(0, 16);
-          var5.field_y = v.a(16, var5.field_y, param0, 115);
-          var5.field_o = v.a(16, var5.field_o, param0, 39);
-          var5.field_S = v.a(16, var5.field_S, param0, 97);
+          var5.field_y = DebouncedFieldValidator.a(16, var5.field_y, param0, 115);
+          var5.field_o = DebouncedFieldValidator.a(16, var5.field_o, param0, 39);
+          var5.field_S = DebouncedFieldValidator.a(16, var5.field_S, param0, 97);
           var5.field_E = (short)param0.readBits(0, 16);
-          var5.field_O = v.a(16, var5.field_O, param0, 114);
-          var5.field_g = v.a(16, var5.field_g, param0, 99);
-          var5.field_d = v.a(16, var5.field_d, param0, 95);
+          var5.field_O = DebouncedFieldValidator.a(16, var5.field_O, param0, 114);
+          var5.field_g = DebouncedFieldValidator.a(16, var5.field_g, param0, 99);
+          var5.field_d = DebouncedFieldValidator.a(16, var5.field_d, param0, 95);
           if (var3 != 0) {
             var5.field_l = (short)param0.readBits(0, 16);
-            var5.field_j = v.a(16, var5.field_j, param0, 30);
-            var5.field_R = v.a(16, var5.field_R, param0, 117);
-            var5.field_b = v.a(16, var5.field_b, param0, 126);
-            var5.field_G = v.a(16, var5.field_G, param0, 64);
-            var5.field_r = v.a(16, var5.field_r, param0, 67);
-            var5.field_J = v.a(16, var5.field_J, param0, 88);
+            var5.field_j = DebouncedFieldValidator.a(16, var5.field_j, param0, 30);
+            var5.field_R = DebouncedFieldValidator.a(16, var5.field_R, param0, 117);
+            var5.field_b = DebouncedFieldValidator.a(16, var5.field_b, param0, 126);
+            var5.field_G = DebouncedFieldValidator.a(16, var5.field_G, param0, 64);
+            var5.field_r = DebouncedFieldValidator.a(16, var5.field_r, param0, 67);
+            var5.field_J = DebouncedFieldValidator.a(16, var5.field_J, param0, 88);
           }
           if (var4 != 0) {
             param0.readBits(0, 16);
-            var5.field_m = v.a(16, var5.field_m, param0, 55);
-            var5.field_H = v.a(16, var5.field_H, param0, 51);
-            var5.field_Q = v.a(16, var5.field_Q, param0, 68);
-            var5.field_I = v.a(16, var5.field_I, param0, 103);
-            var5.field_A = v.a(16, var5.field_A, param0, 102);
+            var5.field_m = DebouncedFieldValidator.a(16, var5.field_m, param0, 55);
+            var5.field_H = DebouncedFieldValidator.a(16, var5.field_H, param0, 51);
+            var5.field_Q = DebouncedFieldValidator.a(16, var5.field_Q, param0, 68);
+            var5.field_I = DebouncedFieldValidator.a(16, var5.field_I, param0, 103);
+            var5.field_A = DebouncedFieldValidator.a(16, var5.field_A, param0, 102);
           }
-          if (lf.a((byte) -68, param0)) {
-            var5.field_e = v.a(16, var5.field_e, param0, 78);
+          if (ValidatedTextField.a((byte) -68, param0)) {
+            var5.field_e = DebouncedFieldValidator.a(16, var5.field_e, param0, 78);
           }
-          if (lf.a((byte) -68, param0)) {
+          if (ValidatedTextField.a((byte) -68, param0)) {
             var5.field_x = na.a(-26947, param0, var5.field_x, 16);
             var6 = 0;
             var7 = 0;
@@ -211,7 +211,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "error_js5crc");
                 if (null != var2) {
-                  bk.field_G = ta.a(32200, var2);
+                  DisplayNameSelectionPanel.field_G = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "error_js5io");
                 if (null != var2) {
@@ -1211,7 +1211,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "justplay");
                 if (null != var2) {
-                  v.field_d = ta.a(32200, var2);
+                  DebouncedFieldValidator.field_d = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "justplay_excl");
                 if (null != var2) {
@@ -1573,7 +1573,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "create_age");
                 if (null != var2) {
-                  di.field_j = ta.a(32200, var2);
+                  TextFieldValidator.field_j = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_u13_email");
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "waitingfor_levels");
                 if (var2 != null) {
-                  lf.field_W = ta.a(32200, var2);
+                  ValidatedTextField.field_W = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_extradata");
                 if (var2 != null) {
@@ -1965,7 +1965,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "loading_fonts");
                 if (var2 != null) {
-                  v.field_c = ta.a(32200, var2);
+                  DebouncedFieldValidator.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "loading_soundeffects");
                 if (null != var2) {
@@ -2045,7 +2045,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "sound_colon");
                 if (null != var2) {
-                  hd.field_r = ta.a(32200, var2);
+                  ConfirmedEmailAvailabilityValidator.field_r = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "music_colon");
                 if (var2 != null) {
@@ -2245,7 +2245,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "cont");
                 if (null != var2) {
-                  hd.field_m = ta.a(32200, var2);
+                  ConfirmedEmailAvailabilityValidator.field_m = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "continue_spectating");
                 if (null != var2) {
@@ -2427,7 +2427,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "orbcoins");
                 if (var2 != null) {
-                  di.field_l = ta.a(32200, var2);
+                  TextFieldValidator.field_l = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "orbpoints_colon");
                 if (var2 != null) {
@@ -2804,7 +2804,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "fs_button_accept");
                 if (var2 != null) {
-                  lf.field_U = ta.a(32200, var2);
+                  ValidatedTextField.field_U = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_accept_afteraccept");
                 if (null != var2) {
@@ -3217,7 +3217,7 @@ final class sf extends td implements ButtonListener {
         try {
           this.field_G = new ButtonWidget(md.field_f, (tg) null);
           this.field_E = new ButtonWidget(UiWidget.field_v, (tg) null);
-          this.field_C = new ButtonWidget(v.field_d, (tg) null);
+          this.field_C = new ButtonWidget(DebouncedFieldValidator.field_d, (tg) null);
           var1 = new dc();
           this.field_G.field_y = (t) ((Object) var1);
           this.field_E.field_y = (t) ((Object) var1);
@@ -3298,7 +3298,7 @@ final class sf extends td implements ButtonListener {
           if (param0 != -4409) {
             field_H = (java.awt.Frame) null;
           }
-          stackIn_4_0 = v.field_e;
+          stackIn_4_0 = DebouncedFieldValidator.field_e;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3349,7 +3349,7 @@ final class sf extends td implements ButtonListener {
           }
           if (param0 != this.field_E) {
             if (param0 == this.field_G) {
-              lb.o(-109);
+              EditableTextField.o(-109);
               if (var7 == 0) {
                 return;
               }

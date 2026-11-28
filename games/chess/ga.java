@@ -42,7 +42,7 @@ final class ga {
             rm.field_R = ch.field_gb.a((byte) 101);
             dn.a(2, (byte) -96);
           } else {
-            rm.field_R = fn.createFullscreenCanvas(0, 480, 0, 21, 640, oc.field_l);
+            rm.field_R = fn.createFullscreenCanvas(0, 480, 0, 21, 640, MatchingFieldValidator.field_l);
           }
           if (rm.field_R != null) {
             ca.a(13369344, rm.field_R);

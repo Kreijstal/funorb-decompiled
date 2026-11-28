@@ -100,7 +100,7 @@ final class rd extends wh {
     static {
         field_E = "This password contains your email address, and would be easy to guess";
         field_J = new int[]{100, 100, 100, 100, 100, 300, 300, 200, 200, 100, 100, 200, 300, 200, 1000};
-        ah.a((byte) 127, 50);
+        DisplayNameSelectionPanel.a((byte) 127, 50);
         field_y = new int[8192];
         field_C = new IntrusiveDeque();
     }

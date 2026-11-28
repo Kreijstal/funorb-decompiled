@@ -8,7 +8,7 @@ final class SceneWidgetPart005 extends SceneWidget {
     private int integerState0323;
     private int integerState0324;
     private int[] integerArrayState0101;
-    private SceneWidgetPart009[] sceneWidgetPart009ArrayState0002;
+    private IconLabelWidget[] sceneWidgetPart009ArrayState0002;
     private int integerState0325;
     private int integerState0326;
     private char[] characterArrayState0005;
@@ -37,7 +37,7 @@ final class SceneWidgetPart005 extends SceneWidget {
             this.performAction0714((byte) 67, 0);
             this.integerState0329 = integerArgument2;
             this.sceneWidgetPart005State0001 = this.sceneWidgetPart005ArrayState0001[this.integerState0329];
-            MixedSupport142.performAction1757(107, this.sceneWidgetPart005State0001);
+            ReturnedShapeUpdate.performAction1757(107, this.sceneWidgetPart005State0001);
             this.sceneWidgetPart005State0001.performAction0714((byte) 67, 12);
           } else {
             if (this.integerArrayState0101[integerArgument2] != -1) {
@@ -56,7 +56,7 @@ final class SceneWidgetPart005 extends SceneWidget {
               MixedSupport099.performAction1230(false);
               MixedSupport051.performAction0601((byte) 11);
             } else {
-              MixedSupport015.performAction0200(8);
+              NineSliceSprite.performAction0200(8);
               MixedSupport099.performAction1230(false);
             }
           }
@@ -133,9 +133,9 @@ final class SceneWidgetPart005 extends SceneWidget {
 
     final void performAction0710(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
-        SceneWidgetPart009 sceneWidgetPart009Local2;
+        IconLabelWidget sceneWidgetPart009Local2;
         int integerLocal3;
-        SceneWidgetPart009 stackSceneWidgetPart009Local4 = null;
+        IconLabelWidget stackSceneWidgetPart009Local4 = null;
         boolean stackBooleanLocal5 = false;
         SceneWidgetPart005 sceneWidgetPart005Local6;
         SceneWidgetPart005 sceneWidgetPart005Local7;
@@ -180,7 +180,7 @@ final class SceneWidgetPart005 extends SceneWidget {
           this.performAction0714((byte) 67, this.integerState0324);
         }
         for (integerLocal1 = 0; this.integerState0325 > integerLocal1; integerLocal1++) {
-          this.sceneWidgetPart009ArrayState0002[integerLocal1].performAction1336(this.integerState0322, integerArgument1, 0, this.sceneWidgetPart009ArrayState0002[integerLocal1].integerState0903, this.integerState0323, integerArgument4, 500);
+          this.sceneWidgetPart009ArrayState0002[integerLocal1].setBoundsAndLayoutChildren(this.integerState0322, integerArgument1, 0, this.sceneWidgetPart009ArrayState0002[integerLocal1].integerState0903, this.integerState0323, integerArgument4, 500);
         }
         if (this.integerState0329 != -1 &&
           null != this.sceneWidgetPart005ArrayState0001[this.integerState0329]) {
@@ -193,13 +193,13 @@ final class SceneWidgetPart005 extends SceneWidget {
 
     final boolean computeBoolean0718(int integerArgument1) {
         int integerLocal1 = 0;
-        SceneWidgetPart009 sceneWidgetPart009Local2 = null;
+        IconLabelWidget sceneWidgetPart009Local2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 != -1) {
           return false;
         }
         int integerLocal4 = 0;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal5 = this.sceneWidgetPart009ArrayState0002;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal5 = this.sceneWidgetPart009ArrayState0002;
         for (integerLocal1 = 0; sceneWidgetPart009ArrayLocal5.length > integerLocal1; integerLocal1++) {
           sceneWidgetPart009Local2 = sceneWidgetPart009ArrayLocal5[integerLocal1];
           integerLocal4 = integerLocal4 | (0 != sceneWidgetPart009Local2.integerState0891 ? 1 : 0);
@@ -213,10 +213,10 @@ final class SceneWidgetPart005 extends SceneWidget {
 
     final void performAction0717(int integerArgument1) {
         int integerLocal1 = 0;
-        SceneWidgetPart009 sceneWidgetPart009Local2 = null;
+        IconLabelWidget sceneWidgetPart009Local2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal4 = this.sceneWidgetPart009ArrayState0002;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal5 = sceneWidgetPart009ArrayLocal4;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal4 = this.sceneWidgetPart009ArrayState0002;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal5 = sceneWidgetPart009ArrayLocal4;
         for (integerLocal1 = integerArgument1; integerLocal1 < sceneWidgetPart009ArrayLocal4.length; integerLocal1++) {
           sceneWidgetPart009Local2 = sceneWidgetPart009ArrayLocal4[integerLocal1];
           sceneWidgetPart009Local2.booleanState0217 = false;
@@ -237,16 +237,16 @@ final class SceneWidgetPart005 extends SceneWidget {
         }
         if (SceneWidget.mixedSupport099State0001 != null &&
           SceneWidget.mixedSupport099State0001.computeBoolean1235(byteArgument4 - 72)) {
-          UiComponentPart031.performAction1598((byte) -125);
+          AccountRegistrationPanel.performAction1598((byte) -125);
           return true;
         }
         if (MixedSupport097.sceneWidgetPart007State0001 != null &&
           MixedSupport097.sceneWidgetPart007State0001.computeBoolean1054(false)) {
           MixedSupport097.sceneWidgetPart007State0001 = null;
-          UiComponentPart031.performAction1598((byte) -97);
+          AccountRegistrationPanel.performAction1598((byte) -97);
           return true;
         }
-        if (SceneWidgetPart013.computeBoolean1711((byte) 119)) {
+        if (LobbyRoomRow.dispatchPlayerNamePromptKey((byte) 119)) {
           return true;
         }
         if (!MixedSupport110.computeBoolean1458(integerArgument2, integerArgument1, (byte) 10, integerArgument3)) {
@@ -302,7 +302,7 @@ final class SceneWidgetPart005 extends SceneWidget {
           bitmapFontLocal24 = bitmapFontLocal23;
           this.integerState0322 = bitmapFontLocal24.integerState0523 + 2 + bitmapFontLocal24.integerState0518;
           this.integerState0321 = 0;
-          this.sceneWidgetPart009ArrayState0002 = new SceneWidgetPart009[this.integerState0325];
+          this.sceneWidgetPart009ArrayState0002 = new IconLabelWidget[this.integerState0325];
           this.integerState0326 = this.integerState0322 * this.integerState0325;
           stringLocal19 = "<col=999999>";
           stringLocal20 = "</col>";
@@ -315,7 +315,7 @@ final class SceneWidgetPart005 extends SceneWidget {
               this.integerArrayState0101[integerLocal1] == -1) {
               objectLocal21 = NetworkArchiveRequestManager.rgbSpriteState0044;
             }
-            this.sceneWidgetPart009ArrayState0002[integerLocal1] = new SceneWidgetPart009(0L, sceneWidgetArgument3, (SceneWidget) null, sceneWidgetArgument4, (RgbSprite) (objectLocal21), stringArrayArgument7[integerLocal1]);
+            this.sceneWidgetPart009ArrayState0002[integerLocal1] = new IconLabelWidget(0L, sceneWidgetArgument3, (SceneWidget) null, sceneWidgetArgument4, (RgbSprite) (objectLocal21), stringArrayArgument7[integerLocal1]);
             this.performAction1768(this.sceneWidgetPart009ArrayState0002[integerLocal1], -16834);
             integerLocal22 = bitmapFontLocal23.computeInteger1066(stringArrayArgument7[integerLocal1]);
             if (integerLocal22 > this.integerState0321) {

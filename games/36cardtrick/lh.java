@@ -63,7 +63,7 @@ final class lh {
           this.field_b = dl.field_h;
         }
         if (0 != this.field_j &&
-          k.field_c != 0) {
+          DebouncedFieldValidator.field_c != 0) {
           if (this.field_g <= 0) {
             this.field_g = ah.field_b;
             this.field_f = this.field_j;
@@ -71,7 +71,7 @@ final class lh {
           this.field_g = this.field_g - 1;
         }
         if (dl.field_h == 0 &&
-          0 == k.field_c) {
+          0 == DebouncedFieldValidator.field_c) {
           this.field_j = 0;
         }
         if (0 == this.field_j) {

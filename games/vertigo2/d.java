@@ -47,7 +47,7 @@ class d extends UiWidget {
           }
           if (BufferedRandomAccessFile.field_g) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_e, td.field_c.field_C);
-            wc.field_m.b(param1, 0);
+            PasswordValidator.field_m.b(param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

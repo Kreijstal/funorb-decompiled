@@ -48,7 +48,7 @@ final class li {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!tj.a(param3, param0, param2, (byte) 83)) {
+          if (!EmailFormatValidator.a(param3, param0, param2, (byte) 83)) {
             return null;
           }
           if (param1 == -2) {

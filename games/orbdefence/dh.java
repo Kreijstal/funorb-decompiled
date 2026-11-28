@@ -89,7 +89,7 @@ class dh extends hl implements ai {
           jk.a(121);
         } else {
           if (this.field_cb) {
-            rf.d(false);
+            AccountRegistrationPanel.d(false);
           }
         }
     }

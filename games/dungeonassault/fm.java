@@ -80,7 +80,7 @@ final class fm {
           return bj.field_F;
         }
         if (param1 == 20) {
-          return m.field_c;
+          return DebouncedFieldValidator.field_c;
         }
         if (param1 == 21) {
           return up.field_b;
@@ -120,7 +120,7 @@ final class fm {
 
     final static void a(int[][] param0, int param1, int param2, byte param3) {
         int var19 = 0;
-        qe discarded$0 = null;
+        DungeonAssaultScreen discarded$0 = null;
         int[] var4 = null;
         int var4_int = 0;
         int var5 = 0;
@@ -164,8 +164,8 @@ final class fm {
           var5Lifetime1 = -(param2 / 2) + 240;
           uc.field_E.b(var4_int, var5Lifetime1);
           SoftwareRasterizer.fillRectangle(var4_int, var5Lifetime1, param1, param2, 6637335);
-          qe.b(var4_int, var5Lifetime1, param1, param2, 8421504, 128, 128);
-          var6 = be.field_o.field_d / 2;
+          DungeonAssaultScreen.b(var4_int, var5Lifetime1, param1, param2, 8421504, 128, 128);
+          var6 = MatchingFieldValidator.field_o.field_d / 2;
           var7 = PcmOutputWorker.field_e.field_b / 2;
           ByteStorage.a(var4_int, (byte) 41, param1, var5Lifetime1 - var7, true);
           ByteStorage.a(var4_int, (byte) 81, param1, -var7 + var5Lifetime1 + param2, true);
@@ -213,7 +213,7 @@ final class fm {
             }
           }
           discarded$0 = bf.field_f[mn.field_b];
-          qe.e();
+          DungeonAssaultScreen.applyScreenLighting();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -289,7 +289,7 @@ final class fm {
             fm.b(-123, -68);
           }
           while (param0 > var5) {
-            var4_int = var4_int >>> 8 ^ ih.field_J[255 & (var4_int ^ param3[var5])];
+            var4_int = var4_int >>> 8 ^ RaiderRecruitmentScreen.field_J[255 & (var4_int ^ param3[var5])];
             var5++;
           }
           var4_int = ~var4_int;

@@ -80,7 +80,7 @@ final class re {
             jh.field_A = param2 - 1;
             ff.field_b = param2 * 32;
           }
-          if (param0 != um.field_o) {
+          if (param0 != MatchingFieldValidator.field_o) {
             if (ci.field_c != param0) {
               ByteStorage.field_a = new int[param0];
               var6 = 0;
@@ -92,7 +92,7 @@ final class re {
             } else {
               ByteStorage.field_a = IntrusiveNode.field_b;
             }
-            um.field_o = param0;
+            MatchingFieldValidator.field_o = param0;
             vp.field_I = param0 - 1;
           }
           if (param1 != 0) {
@@ -126,16 +126,16 @@ final class re {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        sm[] var5 = null;
-        sm[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var7 = null;
         int var8 = 0;
         int var9 = 0;
-        sm[] var10 = null;
+        IndexedSprite[] var10 = null;
         Sprite var11 = null;
         Sprite var12 = null;
         int var13 = 0;
-        sm[] var14 = null;
+        IndexedSprite[] var14 = null;
         Sprite var15 = null;
         int[][] var16 = null;
         Sprite var17 = null;
@@ -148,29 +148,29 @@ final class re {
           hh.field_b = SectorCacheStore.a("frame_top", -1, "commonui", param3);
           vf.field_i = SectorCacheStore.a("frame_bottom", -1, "commonui", param3);
           rp.field_h = mn.a(param3, "commonui", "jagex_logo_grey", 114);
-          dg.field_g = SectorCacheStore.a("button", -1, "commonui", param3);
+          TranslucentSpriteLayer.field_g = SectorCacheStore.a("button", -1, "commonui", param3);
           wj.field_h = jb.a(0, param3, "validation", "commonui");
           stackIn_3_0 = "commonui";
           stackIn_3_1 = (ResourceArchive) (param3);
           stackIn_3_2 = (ResourceArchive) (param0);
           stackIn_4_3 = !(param1);
           sp.field_R = (uc) ((Object) dc.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_4_3, "arezzo12"));
-          dg.field_e = (uc) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
+          TranslucentSpriteLayer.field_e = (uc) ((Object) dc.a("commonui", param3, param0, false, "arezzo14"));
           stackIn_6_0 = "commonui";
           stackIn_6_1 = (ResourceArchive) (param3);
           stackIn_6_2 = (ResourceArchive) (param0);
           stackIn_7_3 = !(param1);
-          pe.field_E = (uc) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
+          LoginPanel.field_E = (uc) ((Object) dc.a(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_7_3, "arezzo14bold"));
           if (!param1) {
             field_c = 47;
           }
           var17 = new Sprite(param2.getFileByName(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
           DelegatingCanvas.a("dropdown", 31094, param3, "commonui");
           var5 = ip.a(param3, -126, "commonui", "screen_options");
-          jn.field_c = new sm[4];
-          s.field_s = new sm[4];
-          ni.field_l = new sm[4];
-          var6 = new sm[][]{ni.field_l, s.field_s, jn.field_c};
+          jn.field_c = new IndexedSprite[4];
+          s.field_s = new IndexedSprite[4];
+          ni.field_l = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{ni.field_l, s.field_s, jn.field_c};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -204,7 +204,7 @@ final class re {
           var12.e();
           var17.b(-var9Lifetime1, 0);
           r.a(125);
-          dg.field_g = new Sprite[]{var15, var12, var11};
+          TranslucentSpriteLayer.field_g = new Sprite[]{var15, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

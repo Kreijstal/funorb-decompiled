@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends ip {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private boolean nameAvailable;
     private String checkedName;
     private static long[] field_q;
@@ -149,7 +149,7 @@ final class AccountNameAvailabilityValidator extends ip {
         return stackIn_9_0;
     }
 
-    final od a(String param0, int param1) {
+    final od getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -199,7 +199,7 @@ final class AccountNameAvailabilityValidator extends ip {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -254,7 +254,7 @@ final class AccountNameAvailabilityValidator extends ip {
         }
     }
 
-    AccountNameAvailabilityValidator(rm param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }

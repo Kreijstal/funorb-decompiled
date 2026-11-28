@@ -38,7 +38,7 @@ final class f extends TextureOperator {
             IntrusiveDeque.field_e = param4;
             ng.field_c = param1;
             bl.field_C = param9;
-            ne.field_P = param5;
+            DisplayNameSelectionPanel.field_P = param5;
             kj.field_B = param7;
             ff.field_d = param0;
             if (null != kr.field_g.field_k) {
@@ -115,7 +115,7 @@ final class f extends TextureOperator {
               if (0 != kk.field_a.field_tb) {
                 MouseWheelInput.field_a = false;
               }
-              if (oa.field_s.field_tb != 0) {
+              if (ConfirmedEmailAvailabilityValidator.field_s.field_tb != 0) {
                 SpriteState.h(0);
                 MouseWheelInput.field_a = false;
                 return;
@@ -166,7 +166,7 @@ final class f extends TextureOperator {
           }
           try {
             if (param0 == al.field_t) {
-              pq.field_f = or.field_f.requestSocket(param0 - 108, rf.field_l, lm.field_H);
+              pq.field_f = or.field_f.requestSocket(param0 - 108, MatchingFieldValidator.field_l, lm.field_H);
               al.field_t = al.field_t + 1;
             }
             if (1 == al.field_t) {
@@ -183,7 +183,7 @@ final class f extends TextureOperator {
               var2 = new PacketBuffer(13);
               jo.a(var2, od.field_Kb, FullscreenFocusCanvas.field_a, 124, MouseWheelInput.field_h);
               var2.writeByte(15, param0 - 85);
-              var2.writeInt(rf.field_q, 0);
+              var2.writeInt(MatchingFieldValidator.field_q, 0);
               fn.field_y.a(0, 13, 127, var2.payload);
               al.field_t = al.field_t + 1;
               pq.field_e = 30000L + gk.correctedCurrentTimeMillis(param0 + 60);
@@ -276,7 +276,7 @@ final class f extends TextureOperator {
           JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
           JaggrabClient.field_d.l(0);
           while (NodeHashTableIterator.a(false)) {
-            JaggrabClient.field_d.a(-122, de.field_f, TextureOperator.field_r);
+            JaggrabClient.field_d.a(-122, DebouncedFieldValidator.field_f, TextureOperator.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

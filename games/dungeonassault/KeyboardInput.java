@@ -72,7 +72,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             param2.a((byte) -117);
           }
           ce.field_p = param1;
-          gk.field_L = param2;
+          DisplayNameSelectionPanel.field_L = param2;
           bl.field_k = param0 ? true : false;
           hc.field_b = param2 != null ? param2.field_a : 0;
         } catch (RuntimeException runtimeException) {
@@ -162,7 +162,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (0 <= ia.field_M &&
               var2_int >= 0) {
-              ih.field_r[ia.field_M] = ~var2_int;
+              RaiderRecruitmentScreen.field_r[ia.field_M] = ~var2_int;
               ia.field_M = 127 & 1 + ia.field_M;
               if (dl.field_b == ia.field_M) {
                 ia.field_M = -1;
@@ -311,7 +311,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (0 <= ia.field_M &&
               var2_int >= 0) {
-              ih.field_r[ia.field_M] = var2_int;
+              RaiderRecruitmentScreen.field_r[ia.field_M] = var2_int;
               ia.field_M = 1 + ia.field_M & 127;
               if (dl.field_b == ia.field_M) {
                 ia.field_M = -1;

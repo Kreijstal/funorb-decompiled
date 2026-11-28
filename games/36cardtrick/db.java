@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class db implements ci {
-    static kl field_a;
+    static AccountRegistrationPanel field_a;
     private ee field_n;
     private int field_k;
     static byte field_p;
@@ -132,13 +132,13 @@ final class db implements ci {
           cf.field_c = var18.readUnsignedShort((byte) 72);
           hb.field_a = new int[cf.field_c];
           kb.field_c = new int[cf.field_c];
-          rd.field_k = new byte[cf.field_c][];
+          EmailFormatValidator.field_k = new byte[cf.field_c][];
           NetworkArchiveRequest.field_q = new int[cf.field_c];
           ml.field_b = new int[cf.field_c];
           hl.field_y = new boolean[cf.field_c];
           vd.field_r = new byte[cf.field_c][];
           var18.position = -(8 * cf.field_c) + param1.length - 7;
-          p.field_l = var18.readUnsignedShort((byte) 72);
+          ConfirmedEmailAvailabilityValidator.field_l = var18.readUnsignedShort((byte) 72);
           if (!param0) {
             var16 = (byte[]) null;
             db.a(false, (byte[]) null);
@@ -174,7 +174,7 @@ final class db implements ci {
               var21 = new byte[var7];
               var19 = var21;
               var8 = var19;
-              rd.field_k[var4Lifetime5] = var21;
+              EmailFormatValidator.field_k[var4Lifetime5] = var21;
               var22 = new byte[var7];
               var20 = var22;
               var9 = var20;

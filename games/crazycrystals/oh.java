@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class oh extends pb {
-    static qk field_d;
+    static DisplayNameSelectionPanel field_d;
     static int field_e;
 
     abstract PuzzleTile a(boolean param0, int param1, int param2, int param3, ta param4);
@@ -47,7 +47,7 @@ abstract class oh extends pb {
     public static void clearDeclaredStaticReferences(int param0) {
         field_d = null;
         if (param0 != 32) {
-          field_d = (qk) null;
+          field_d = (DisplayNameSelectionPanel) null;
         }
     }
 
@@ -128,7 +128,7 @@ abstract class oh extends pb {
         try {
           var4_int = m.field_l[param0] + param2.field_j;
           if (param1 != 23041505) {
-            field_d = (qk) null;
+            field_d = (DisplayNameSelectionPanel) null;
           }
           FloatingScoreLabel.field_a[param2.field_g][var4_int] = this.a(false, param0, param2.field_f, (18 + var4_int * 16384) / 37, param2);
         } catch (RuntimeException runtimeException) {

@@ -6,7 +6,7 @@ final class MixedSupport047 {
     static RgbSprite rgbSpriteState0018;
     static MixedSupport048 mixedSupport048State0001;
     static MixedSupport106 mixedSupport106State0002;
-    static MixedSupport015 mixedSupport015State0002;
+    static NineSliceSprite mixedSupport015State0002;
     static IndexedSprite[] indexedSpriteArrayState0003;
     static SceneWidget sceneWidgetState0038;
     static SceneWidgetPart008 sceneWidgetPart008State0003;
@@ -25,13 +25,13 @@ final class MixedSupport047 {
           if (integerArgument1 > -94) {
             MixedSupport047.performAction0575(-99);
           }
-          if (InputAdapter002.computeBoolean1351(stringArgument3, 0)) {
+          if (BirthDateValidator.computeBoolean1351(stringArgument3, 0)) {
             return false;
           }
           if (MixedSupport081.computeBoolean1029(stringArgument3, (byte) -111)) {
             return false;
           }
-          if (DekoBlokoClient.computeBoolean0302(92, stringArgument3)) {
+          if (DekoBlokoClient.isPasswordLengthInvalid(92, stringArgument3)) {
             return false;
           }
           if (stringArgument2.length() == 0) {
@@ -43,7 +43,7 @@ final class MixedSupport047 {
           if (MixedSupport061.computeBoolean0732(stringArgument3, stringArgument2, (byte) -117)) {
             return false;
           }
-          if (!UiComponentPart013.computeBoolean0627(stringArgument2, (byte) 126, stringArgument3)) {
+          if (!LoginPanel.computeBoolean0627(stringArgument2, (byte) 126, stringArgument3)) {
             return true;
           }
           return false;

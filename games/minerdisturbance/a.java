@@ -22,7 +22,7 @@ final class a {
           }
           return null;
         }
-        if (pe.field_pb < od.field_o + ch.field_f) {
+        if (pe.field_pb < ConfirmedEmailAvailabilityValidator.field_o + ch.field_f) {
           return fa.field_c;
         }
         if (!param0) {
@@ -44,7 +44,7 @@ final class a {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ke.a('_', (byte) 75, param2, "");
+          param2 = ValidatedTextField.a('_', (byte) 75, param2, "");
           var4 = 123 % ((param0 - 59) / 55);
           var3 = re.a(param1, 0);
           stackIn_5_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);

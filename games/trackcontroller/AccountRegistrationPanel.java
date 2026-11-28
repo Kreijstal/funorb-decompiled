@@ -1,0 +1,646 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.io.*;
+
+final class AccountRegistrationPanel extends td implements jg, ButtonListener, a {
+    private ValidatedTextField field_I;
+    private ButtonWidget field_H;
+    private ButtonWidget field_C;
+    static nk field_G;
+    private ValidatedTextField field_F;
+    private ed field_O;
+    nd field_N;
+    private ValidatedTextField field_E;
+    private ValidatedTextField field_L;
+    private ValidatedTextField field_M;
+    private el field_D;
+    private ValidatedTextField field_J;
+    static int field_K;
+
+    private final String c(boolean param0) {
+        int discarded$0 = 0;
+        if (!param0) {
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.a((String) null, -55, (String) null, (UiWidget) null, 12, 28, 112);
+        }
+        return "</col></u>";
+    }
+
+    private final boolean submitRegistration(int param0) {
+        int discarded$0 = 0;
+        if (!this.canSubmitRegistration(-21109)) {
+          return false;
+        }
+        int var2 = -1;
+        try {
+          var2 = Integer.parseInt(this.field_L.field_s);
+        } catch (NumberFormatException numberFormatException) {
+        }
+        if (param0 != -27163) {
+          String var4 = (String) null;
+          discarded$0 = this.a((byte) 51, 67, (UiWidget) null, -67, (String) null);
+        }
+        return wf.a((byte) 29, this.field_F.field_s, this.field_J.field_s, this.field_M.field_s, this, this.field_O.field_G, var2);
+    }
+
+    public AccountRegistrationPanel() {
+        super(0, 0, 496, 0, (t) null);
+        this.field_F = new ValidatedTextField("", (tg) null, 12);
+        this.field_M = new ValidatedTextField("", (tg) null, 100);
+        this.field_I = new ValidatedTextField("", (tg) null, 100);
+        this.field_J = new ValidatedTextField("", (tg) null, 20);
+        this.field_E = new ValidatedTextField("", (tg) null, 20);
+        this.field_L = new ValidatedTextField("", (tg) null, 3);
+        int var1 = 1;
+        this.field_O = new ed("", (tg) null, var1 != 0);
+        this.field_C = new ButtonWidget(dh.field_i, (tg) null);
+        this.field_H = new ButtonWidget(UiWidget.field_v, (tg) null);
+        this.field_F.field_n = ak.field_c;
+        this.field_M.field_n = AccountCreationResultPanel.field_nb;
+        this.field_I.field_n = qh.field_c;
+        this.field_J.field_n = jd.field_f;
+        this.field_E.field_n = hb.field_d;
+        this.field_L.field_n = ti.field_p;
+        this.field_O.field_n = pl.field_d;
+        this.field_F.a(1, new AccountNameAvailabilityValidator(this.field_F));
+        this.field_M.a(1, new EmailFormatValidator(this.field_M));
+        this.field_I.a(1, new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_M));
+        this.field_J.a(1, new PasswordValidator(this.field_J, this.field_F, this.field_M));
+        this.field_E.a(1, new MatchingFieldValidator(this.field_E, this.field_J));
+        this.field_L.a(1, new AgeValidator(this.field_L));
+        this.field_C.field_B = false;
+        this.field_C.field_y = (t) ((Object) new dc());
+        this.field_H.field_y = (t) ((Object) new ne());
+        this.field_F.field_y = (t) ((Object) new dd(10000536));
+        dd dupTemp$0 = new dd(10000536);
+        this.field_I.field_y = (t) ((Object) dupTemp$0);
+        this.field_M.field_y = (t) ((Object) dupTemp$0);
+        this.field_L.field_y = (t) ((Object) new dd(10000536));
+        this.field_O.field_y = (t) ((Object) new ma());
+        ql dupTemp$1 = new ql(10000536);
+        this.field_E.field_y = (t) ((Object) dupTemp$1);
+        this.field_J.field_y = (t) ((Object) dupTemp$1);
+        String var2 = dh.a((byte) -56, new String[]{this.m(-9700), this.c(true)}, oi.field_d);
+        int var3 = 20;
+        var3 = var3 + this.a(170, we.field_b, 5, var3, this.field_M);
+        var3 = var3 + (this.a("", 20, kl.field_b, this.field_I, 170, -1, var3) + 5);
+        var3 = var3 + this.a(170, rf.field_d, 5, var3, this.field_J);
+        var3 = var3 + (this.a(var3, ti.field_r, 127, 170, bj.field_c, this.field_E) + 5);
+        var3 = var3 + (this.a(var3, pb.field_b, 127, 170, rg.field_a, this.field_F) + 5);
+        var3 = var3 + this.a((byte) -128, 170, this.field_L, var3, TextFieldValidator.field_j);
+        sa var4 = new sa(46, var3, -90 + this.field_x, 25, this.field_O, true, -120 + this.field_x, 5, fk.field_a, 11579568, GameKeyHandler.field_c);
+        this.a(false, var4);
+        var3 = var3 + var4.field_u;
+        ic var5 = new ic(gk.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, gk.field_c.field_G, -1, 2147483647, true);
+        this.field_D = new el(var2, var5);
+        this.field_D.field_n = "";
+        this.field_D.a((byte) -85, bb.field_a, 0);
+        this.field_D.a((byte) 58, bb.field_a, 1);
+        this.field_D.field_l = (tg) (this);
+        this.field_D.a(var3, (byte) -44, this.field_x - 90, 46);
+        var3 = var3 + (15 + this.field_D.field_u);
+        this.a(false, this.field_D);
+        int var6 = 4;
+        int var7 = 200;
+        this.field_C.a(40, -3050, var3, var7, -var7 + 496 >> 1);
+        this.field_H.a(40, -3050, 15 + var3, 60, 3 + var6);
+        this.field_H.field_l = (tg) (this);
+        this.field_C.field_l = (tg) (this);
+        this.a(false, this.field_C);
+        this.a(false, this.field_H);
+        this.field_N = new nd((a) (this));
+        this.field_N.a(150, -3050, 20 + this.field_F.field_m, -60 + (-this.field_F.field_p + this.field_x - this.field_F.field_x), this.field_F.field_x + (this.field_F.field_p + 60));
+        this.a(false, this.field_N);
+        this.a(var6 + (var3 + 55), -3050, 0, 496, 0);
+    }
+
+    final static void b(int param0, int param1, int param2) {
+        if (uh.field_b[param1] == null) {
+          uh.field_b[param1] = PcmSampleStream.a(va.field_d[param1], 100, nd.field_G[param1]);
+        }
+        if (!uh.field_b[param1].isLinked(10000536)) {
+          uh.field_b[param1].e(0);
+          uh.field_b[param1].f(param0);
+          bd.a(-31085, uh.field_b[param1]);
+        }
+        if (param2 != 23636) {
+          AccountRegistrationPanel.b(-95, 71, -86);
+        }
+    }
+
+    public final void a(byte param0) {
+        int discarded$0 = 0;
+        ((AccountNameAvailabilityValidator) (this.field_F.getFieldValidator((byte) -123))).a(false);
+        if (param0 < 117) {
+          UiWidget var3 = (UiWidget) null;
+          discarded$0 = this.a(-92, (String) null, -91, 17, (String) null, (UiWidget) null);
+        }
+    }
+
+    private final int a(String param0, int param1, String param2, UiWidget param3, int param4, int param5, int param6) {
+        boolean discarded$1 = false;
+        RuntimeException var8 = null;
+        mi var9 = null;
+        sa var10 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var10 = new sa(20, param6, param4 + 120, 25, param3, false, 120, 3, gk.field_c, 16777215, param2);
+          this.a(false, var10);
+          var9 = new mi(((FieldValidatorProvider) ((Object) param3)).getFieldValidator((byte) -124), param0, 126, var10.field_u + param6, param4 + 50, param1);
+          var9.field_l = (tg) (this);
+          if (param5 != -1) {
+            discarded$1 = this.submitRegistration(-5);
+          }
+          this.a(false, var9);
+          stackIn_3_0 = var10.field_u + var9.field_u;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          stackIn_6_0 = var8;
+          stackIn_6_1 = new StringBuilder().append("vd.I(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param3 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+        }
+    }
+
+    private final boolean isFieldReadyForRegistration(FieldValidatorProvider param0, byte param1) {
+        boolean discarded$1 = false;
+        FieldValidator var3 = null;
+        RuntimeException var3_ref = null;
+        ud var4 = null;
+        FieldValidatorProvider var5 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 73) {
+            var5 = (FieldValidatorProvider) null;
+            discarded$1 = this.isFieldReadyForRegistration((FieldValidatorProvider) null, (byte) 109);
+          }
+          var3 = param0.getFieldValidator((byte) -84);
+          if (var3 == null) {
+            return true;
+          }
+          var4 = var3.getValidationStatus((byte) 106);
+          if (var4 == ef.field_b) {
+            return false;
+          }
+          if (DiskArchiveRequest.field_x == var4) {
+            return false;
+          }
+          if (var4 != c.field_a) {
+            return true;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_18_0 = var3_ref;
+          stackIn_18_1 = new StringBuilder().append("vd.K(");
+          if (param0 == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final int a(int param0, String param1, int param2, int param3, UiWidget param4) {
+        int discarded$1 = 0;
+        sa var6 = null;
+        RuntimeException var6_ref = null;
+        UiWidget var7 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 5) {
+            var7 = (UiWidget) null;
+            discarded$1 = this.a((String) null, -19, (String) null, (UiWidget) null, 97, 110, -67);
+          }
+          var6 = new sa(20, param3, param0 + 120, 25, param4, false, 120, 3, gk.field_c, 16777215, param1);
+          this.a(false, var6);
+          stackIn_3_0 = var6.field_u;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_6_0 = var6_ref;
+          stackIn_6_1 = new StringBuilder().append("vd.O(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+        }
+    }
+
+    private final String m(int param0) {
+        if (param0 != -9700) {
+          ButtonWidget var3 = (ButtonWidget) null;
+          this.a((ButtonWidget) null, -78, 87, -1, -54);
+        }
+        return "<u=2164A2><col=2164A2>";
+    }
+
+    public static void resetStaticState(boolean param0) {
+        if (param0) {
+          field_K = -56;
+        }
+        field_G = null;
+    }
+
+    final static void k(int param0) {
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var1 = null;
+        var2 = TrackController.field_F ? 1 : 0;
+        try {
+          if (!pb.a((byte) -88)) {
+            if (null != AccountCreationResultPanel.field_rb &&
+              AccountCreationResultPanel.field_rb.field_b) {
+              oj.a(-93);
+              GameScreen.field_b.d((byte) -84, new w(GameScreen.field_b, DelegatingCanvas.field_b));
+            }
+            return;
+          }
+          GameScreen.field_b.a(w.field_T, true, false, bl.field_b);
+          GameScreen.field_b.b(true);
+          while (mh.e(127)) {
+            GameScreen.field_b.a(md.field_d, 3931, kg.field_d);
+          }
+          if (param0 < 87) {
+            field_K = -76;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw LevelGrid.toClientException((Throwable) ((Object) var1), "vd.P(" + param0 + ')');
+        }
+    }
+
+    private final boolean canSubmitRegistration(int param0) {
+        if (param0 != -21109) {
+          return true;
+        }
+        if (this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_F), (byte) 73) &&
+          this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_M), (byte) 73) &&
+          this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_I), (byte) 73) &&
+          this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_J), (byte) 73) &&
+          this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_E), (byte) 73) &&
+          this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_L), (byte) 73)) {
+          return true;
+        }
+        return false;
+    }
+
+    final boolean a(byte param0, char param1, UiWidget param2, int param3) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_9_0 = false;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (super.a((byte) -99, param1, param2, param3)) {
+            return true;
+          }
+          if (param3 == 98) {
+            stackIn_6_0 = this.a(param2, -49);
+            return stackIn_6_0;
+          }
+          var5_int = -1 % ((17 - param0) / 51);
+          if (param3 != 99) {
+            return false;
+          }
+          stackIn_9_0 = this.a(param2, true);
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_14_0 = var5;
+          stackIn_14_1 = new StringBuilder().append("vd.GA(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final int a(byte param0, int param1, UiWidget param2, int param3, String param4) {
+        RuntimeException var6 = null;
+        ua var7 = null;
+        int var8 = 0;
+        sa var9 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var9 = new sa(20, param3, param1 + 120, 25, param2, false, 120, 3, gk.field_c, 16777215, param4);
+          this.a(false, var9);
+          var8 = 121 % ((param0 + 14) / 57);
+          var7 = new ua(((FieldValidatorProvider) ((Object) param2)).getFieldValidator((byte) -70));
+          this.a(false, var7);
+          var7.a(15, -3050, (var9.field_u - 15 >> 1) + var9.field_m, 15, var9.field_x + var9.field_p + 3);
+          stackIn_1_0 = var9.field_u;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_4_0 = var6;
+          stackIn_4_1 = new StringBuilder().append("vd.G(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    public final void a(el param0, int param1, int param2, int param3) {
+        int var6 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var6 = TrackController.field_F ? 1 : 0;
+        try {
+          if (param3 != 1) {
+            this.field_O = (ed) null;
+          }
+          if (param1 == 0) {
+            IntrusiveDequeCursor.a("terms.ws", false);
+          } else {
+            if (param1 != 1) {
+              if (2 == param1) {
+                IntrusiveDequeCursor.a("conduct.ws", false);
+              }
+            } else {
+              IntrusiveDequeCursor.a("privacy.ws", false);
+            }
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_13_0 = var5;
+          stackIn_13_1 = new StringBuilder().append("vd.B(");
+          if (param0 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void a(int param0, int param1, byte param2, UiWidget param3) {
+        try {
+          super.a(param0, param1, param2, param3);
+          this.field_C.field_B = this.canSubmitRegistration(-21109);
+        } catch (RuntimeException runtimeException) {
+          throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "vd.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final int a(int param0, String param1, int param2, int param3, String param4, UiWidget param5) {
+        RuntimeException var7 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 >= 122) {
+            stackIn_4_0 = this.a(param4, 35, param1, param5, param3, -1, param0);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = 14;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("vd.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',');
+          if (param4 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          if (param5 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    final static void a(PacketBuffer param0, byte param1) {
+        try {
+          int var4 = 0;
+          RuntimeException runtimeException = null;
+          byte[] var2 = null;
+          int var3_int = 0;
+          Exception var3 = null;
+          int var5 = 0;
+          byte[] var6 = null;
+          byte[] var7 = null;
+          byte[] var8 = null;
+          byte[] var9 = null;
+          byte[] var10 = null;
+          RuntimeException stackIn_21_0 = null;
+          StringBuilder stackIn_21_1 = null;
+          String stackIn_22_2 = null;
+          Throwable decompiledCaughtException = null;
+          var5 = TrackController.field_F ? 1 : 0;
+          try {
+            var9 = new byte[24];
+            var7 = var9;
+            var6 = var7;
+            var10 = var6;
+            var8 = var10;
+            var2 = var8;
+            if (null != pl.field_b) {
+              try {
+                pl.field_b.seek(0L, true);
+                pl.field_b.readFully(-116, var9);
+                for (var3_int = 0; 24 > var3_int; var3_int++) {
+                  if (0 == var10[var3_int]) {
+                    continue;
+                  }
+                  break;
+                }
+                if (var3_int >= 24) {
+                  throw new IOException();
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var3 = (Exception) (Object) decompiledCaughtException;
+                for (var4 = 0; var4 < 24; var4++) {
+                  var2[var4] = (byte)-1;
+                }
+              }
+            }
+            if (param1 != -69) {
+              field_K = -119;
+            }
+            param0.writeBytes(24, 109, 0, var10);
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            runtimeException = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_21_0 = runtimeException;
+            stackIn_21_1 = new StringBuilder().append("vd.D(");
+            if (param0 == null) {
+              stackIn_22_2 = "null";
+            } else {
+              stackIn_22_2 = "{...}";
+            }
+            throw LevelGrid.toClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public final void a(boolean param0, String param1) {
+        int discarded$1 = 0;
+        ValidatedTextField var3 = null;
+        String var4 = null;
+        UiWidget var5 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3_ref = null;
+        try {
+          var3 = this.field_F;
+          var4 = param1;
+          ((EditableTextField) ((Object) var3)).a(false, var4, 126);
+          if (!param0) {
+            var5 = (UiWidget) null;
+            discarded$1 = this.a(33, (String) null, 34, -109, (UiWidget) null);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_5_0 = var3_ref;
+          stackIn_5_1 = new StringBuilder().append("vd.FA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_6_2 = "null";
+          } else {
+            stackIn_6_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+        }
+    }
+
+    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+        boolean discarded$1 = false;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        try {
+          if (param0 != this.field_H) {
+            if (param0 == this.field_C) {
+              discarded$1 = this.submitRegistration(-27163);
+            }
+          } else {
+            hl.m(-1217366687);
+          }
+          if (param4 != -27322) {
+            this.field_E = (ValidatedTextField) null;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_9_0 = var6;
+          stackIn_9_1 = new StringBuilder().append("vd.A(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    static {
+        field_K = -1;
+    }
+}

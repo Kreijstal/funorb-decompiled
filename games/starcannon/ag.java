@@ -43,7 +43,7 @@ abstract class ag extends GameApplet {
             AccountNameAvailabilityValidator.b(6, (byte) -66);
           }
           if (el.field_D[6]) {
-            kh.a(param0 ^ -1101, 7);
+            AccountRegistrationPanel.a(param0 ^ -1101, 7);
           }
           if (el.field_D[8]) {
             sd.a((byte) 38);
@@ -441,7 +441,7 @@ abstract class ag extends GameApplet {
             stackIn_108_3 = !(vj.field_X);
             ae.a(stackIn_104_0, stackIn_105_1, stackIn_107_2, stackIn_108_3);
           }
-          if (cc.field_l) {
+          if (PasswordValidator.field_l) {
             pk.a((byte) -64);
           }
           if (DualLinkNode.field_l == null) {
@@ -532,7 +532,7 @@ abstract class ag extends GameApplet {
         r.field_a = param2;
         SecondaryNodeDequeIterator.field_j = param5;
         this.g(-102);
-        ng.k(126);
+        ValidatedTextField.k(126);
     }
 
     private final void j(int param0) {
@@ -633,7 +633,7 @@ abstract class ag extends GameApplet {
             wj.a(ll.b(86), 0);
           }
           if (12 == var4) {
-            DiskCacheWorker.a(uc.c((byte) 114), ll.b(115), param0 + 91);
+            DiskCacheWorker.a(DebouncedFieldValidator.c((byte) 114), ll.b(115), param0 + 91);
           }
           if (var4 == 13) {
             try {
@@ -711,7 +711,7 @@ abstract class ag extends GameApplet {
         } else {
           if (IntrusiveDeque.field_d >= 10) {
             if (!m.a(-35)) {
-              uc.d(1);
+              DebouncedFieldValidator.d(1);
             } else {
               if (bl.field_a != 0) {
                 ne.b(lh.field_I, 150);
@@ -858,7 +858,7 @@ abstract class ag extends GameApplet {
             if (var9 != null) {
               this.field_x = Integer.parseInt(var9);
             }
-            cc.field_l = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            PasswordValidator.field_l = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a((byte) 126, param1, this.field_w, 32, param2, param3, param0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

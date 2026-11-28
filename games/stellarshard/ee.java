@@ -155,7 +155,7 @@ final class ee {
         int var4;
         li[] var5;
         var4 = stellarshard.field_B;
-        var5 = lc.e((byte) 33);
+        var5 = PasswordValidator.e((byte) 33);
         var2 = var5;
         if (param1 != 8) {
           field_a = -93;

@@ -26,7 +26,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
           if (ad.field_b == null) {
             return;
           }
-          wg.field_p = -1;
+          EmailFormatValidator.field_p = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,12 +59,12 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             } else {
               var2_int = -1;
             }
-            if (wg.field_p >= 0 &&
+            if (EmailFormatValidator.field_p >= 0 &&
               var2_int >= 0) {
-              BoundedRandomAccessFile.field_i[wg.field_p] = ~var2_int;
-              wg.field_p = 1 + wg.field_p & 127;
-              if (DelegatingCanvas.field_b == wg.field_p) {
-                wg.field_p = -1;
+              BoundedRandomAccessFile.field_i[EmailFormatValidator.field_p] = ~var2_int;
+              EmailFormatValidator.field_p = 1 + EmailFormatValidator.field_p & 127;
+              if (DelegatingCanvas.field_b == EmailFormatValidator.field_p) {
+                EmailFormatValidator.field_p = -1;
               }
             }
           }
@@ -106,12 +106,12 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             } else {
               var2_int = -1;
             }
-            if (wg.field_p >= 0 &&
+            if (EmailFormatValidator.field_p >= 0 &&
               var2_int >= 0) {
-              BoundedRandomAccessFile.field_i[wg.field_p] = var2_int;
-              wg.field_p = wg.field_p + 1 & 127;
-              if (DelegatingCanvas.field_b == wg.field_p) {
-                wg.field_p = -1;
+              BoundedRandomAccessFile.field_i[EmailFormatValidator.field_p] = var2_int;
+              EmailFormatValidator.field_p = EmailFormatValidator.field_p + 1 & 127;
+              if (DelegatingCanvas.field_b == EmailFormatValidator.field_p) {
+                EmailFormatValidator.field_p = -1;
               }
             }
             if (var2_int >= 0) {
@@ -167,7 +167,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              oc.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
+              ValidatedTextField.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
               var3 = 127 & 1 + uf.field_a;
               if (var3 != md.field_g) {
                 NanoFrameTimer.field_g[uf.field_a] = -1;

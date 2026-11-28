@@ -86,7 +86,7 @@ final class PcmOutputWorker implements Runnable {
                 var11_ref_String = "";
               }
               sn.field_c.writeString(23446, var11_ref_String);
-              jg.a(kc.field_b, -121, rf.field_c, ph.field_g, sn.field_c);
+              MatchingFieldValidator.a(kc.field_b, -121, rf.field_c, ph.field_g, sn.field_c);
               sn.field_c.backpatchShortLength(-var10 + sn.field_c.position, -506270856);
             } else {
               rf.field_c.position = 0;
@@ -111,7 +111,7 @@ final class PcmOutputWorker implements Runnable {
               sn.field_c.writeByte(16, 25564);
               sn.field_c.position = sn.field_c.position + 1;
               var9 = sn.field_c.position;
-              jg.a(kc.field_b, -127, rf.field_c, ph.field_g, sn.field_c);
+              MatchingFieldValidator.a(kc.field_b, -127, rf.field_c, ph.field_g, sn.field_c);
               sn.field_c.backpatchByteLength(-1, sn.field_c.position - var9);
             }
             bk.a((byte) -114, -1);
@@ -123,7 +123,7 @@ final class PcmOutputWorker implements Runnable {
             kj.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              qd.field_Q = lm.field_M;
+              qd.field_Q = DisplayNameSelectionPanel.field_M;
               vh.field_i = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
@@ -145,7 +145,7 @@ final class PcmOutputWorker implements Runnable {
               }
             }
           }
-          if (lm.field_M == qd.field_Q) {
+          if (DisplayNameSelectionPanel.field_M == qd.field_Q) {
             var9Lifetime2 = 2;
             if (IntrusiveDeque.a(0, var9Lifetime2)) {
               var10Lifetime1 = kj.field_a.readUnsignedShort(-25);

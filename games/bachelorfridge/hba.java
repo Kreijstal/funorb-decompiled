@@ -124,7 +124,7 @@ final class hba extends AttackEvent {
           Object var2 = null;
           var11 = RageSpecial.a(29611, "basic", "special_tiles_twos", param1);
           kka.field_f = var11[0];
-          hna.field_h = var11[1];
+          ConfirmedEmailAvailabilityValidator.field_h = var11[1];
           de.field_F = var11[2];
           de.field_F.flipVertically();
           DelegatingCanvas.field_c = var11[3];
@@ -169,9 +169,9 @@ final class hba extends AttackEvent {
           for (var6_intLifetime1 = 0; var6_intLifetime1 < 7; var6_intLifetime1++) {
             ld.field_l[var6_intLifetime1] = var12[var6_intLifetime1];
           }
-          pk.field_b = new IndexedSprite[7];
+          DebouncedFieldValidator.field_b = new IndexedSprite[7];
           for (var6_intLifetime2 = 0; var6_intLifetime2 < 7; var6_intLifetime2++) {
-            pk.field_b[var6_intLifetime2] = var5[7 + var6_intLifetime2];
+            DebouncedFieldValidator.field_b[var6_intLifetime2] = var5[7 + var6_intLifetime2];
           }
           ls.field_a = gw.a("basic", "box_shadows", param1, -42);
           var5Lifetime1 = null;
@@ -182,9 +182,9 @@ final class hba extends AttackEvent {
           sj.field_k = RageSpecial.a(29611, "basic", "win_takenhold", param1);
           ela.field_j = RageSpecial.a(29611, "basic", "win_ctf", param1);
           IncomingAnimation.field_v = RageSpecial.a(29611, "basic", "fly_small", param1);
-          hb.field_k = new IndexedSprite[2];
+          MatchingFieldValidator.field_k = new IndexedSprite[2];
           for (var6_intLifetime4 = 0; var6_intLifetime4 < IncomingAnimation.field_v.length; var6_intLifetime4++) {
-            hb.field_k[var6_intLifetime4] = IncomingAnimation.field_v[var6_intLifetime4].copyFlippedHorizontal();
+            MatchingFieldValidator.field_k[var6_intLifetime4] = IncomingAnimation.field_v[var6_intLifetime4].copyFlippedHorizontal();
           }
           SleepAnimation.field_y = RageSpecial.a(29611, "basic", "maggot_small", param1);
           ik.field_h = new IndexedSprite[SleepAnimation.field_y.length];
@@ -209,7 +209,7 @@ final class hba extends AttackEvent {
           dt.field_a = FullHealEvent.a("fisticuffs", param1, "basic", (byte) 67);
           DualLinkDeque.field_b = FullHealEvent.a("flingstuff", param1, "basic", (byte) 69);
           OneAnimation.field_E = FullHealEvent.a("action_bg", param1, "basic", (byte) 117);
-          ph.field_C = hca.a("basic", param1, 76, "move_phase");
+          LoginPanel.field_C = hca.a("basic", param1, 76, "move_phase");
           PetAttackAnimation.field_y = hca.a("basic", param1, 103, "action_phase");
           InvincibleEvent.field_r = hca.a("basic", param1, -85, "suddendeath");
           nca.field_a = RageSpecial.a(29611, "basic", "tiles_shadows", param1);

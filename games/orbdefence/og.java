@@ -68,7 +68,7 @@ final class og {
         this.field_l = ja.field_e;
         this.field_k = vj.field_a;
         this.field_e = bh.field_c;
-        this.field_d = wb.field_d;
+        this.field_d = DebouncedFieldValidator.field_d;
         this.field_c = pc.field_X;
         this.field_h = vk.field_v;
         this.field_m = GameAppletShell.field_l;

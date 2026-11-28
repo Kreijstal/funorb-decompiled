@@ -466,7 +466,7 @@ class cn implements nn, mi {
               stackIn_7_3 = var8.field_f;
             }
             var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
-            sf.a(param1.field_v + (param4 + param1.field_s), param1.field_m + param0, param1.field_x + (param0 + param1.field_m), param1.field_v + param4, true);
+            TextInputField.pushAndIntersectClip(param1.field_v + (param4 + param1.field_s), param1.field_m + param0, param1.field_x + (param0 + param1.field_m), param1.field_v + param4, true);
             gf.field_e.a(1077952576, var10, var12, var10, this.field_o, var11);
             eh.b(false);
           }
@@ -500,7 +500,7 @@ class cn implements nn, mi {
         int var12Lifetime1;
         var13 = HostileSpawn.field_I ? 1 : 0;
         try {
-          sf.a(param6 + param0.field_v + param0.field_s, param0.field_m + param3, param0.field_m + (param3 + param0.field_x), param6 + param0.field_v, true);
+          TextInputField.pushAndIntersectClip(param6 + param0.field_v + param0.field_s, param0.field_m + param3, param0.field_m + (param3 + param0.field_x), param6 + param0.field_v, true);
           if (param7 < 85) {
             var14 = (ag) null;
             this.c((ag) null, 36);
@@ -695,7 +695,7 @@ class cn implements nn, mi {
             }
             var10 = var18.a(var8, 0);
             var11 = var18.a(var9, param1 - 41);
-            sf.a(param3.field_s + (param0 + param3.field_v), param4 + param3.field_m, param3.field_x + (param3.field_m + param4), param0 + param3.field_v, true);
+            TextInputField.pushAndIntersectClip(param3.field_s + (param0 + param3.field_v), param4 + param3.field_m, param3.field_x + (param3.field_m + param4), param0 + param3.field_v, true);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_d[var12];
               if (var10 == var12) {

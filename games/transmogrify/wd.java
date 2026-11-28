@@ -35,7 +35,7 @@ final class wd extends IntrusiveNode {
         Bzip2State.field_a = null;
         Bzip2State.field_K = (byte[][]) null;
         int var1 = -77 % ((param0 - 71) / 46);
-        rg.field_D = null;
+        EditableTextField.field_D = null;
         wk.field_b = null;
     }
 

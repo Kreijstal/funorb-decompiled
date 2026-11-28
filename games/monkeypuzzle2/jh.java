@@ -44,7 +44,7 @@ final class jh extends UiWidget {
         int var6 = this.field_e + param2;
         this.a(-82, this.field_z[0], var5, var6);
         if (this.field_D < 65536) {
-          qi.a(var5 + this.field_l, true, this.field_p + var6, var5 + (this.field_D * this.field_l >> 16), var6);
+          LoginPanel.a(var5 + this.field_l, true, this.field_p + var6, var5 + (this.field_D * this.field_l >> 16), var6);
           this.a(-52, this.field_z[1], var5, var6);
           tj.b(653);
         }
@@ -134,7 +134,7 @@ final class jh extends UiWidget {
             var9 = (Sprite) null;
             this.a(118, (Sprite) null, -87, 86);
           }
-          qi.a(var5_int - this.field_w.field_k, true, this.field_p + param3, param2 + this.field_w.field_k, param3);
+          LoginPanel.a(var5_int - this.field_w.field_k, true, this.field_p + param3, param2 + this.field_w.field_k, param3);
           for (var6 = param2 - this.field_u; var5_int > var6; var6 = var6 + param1.field_k) {
             param1.c(var6, param3);
           }

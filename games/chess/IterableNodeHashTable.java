@@ -142,7 +142,7 @@ final class IterableNodeHashTable implements Iterable {
             return;
           }
           vn.l(param2 - 25);
-          tj.b((byte) -108);
+          EmailFormatValidator.b((byte) -108);
           th.c(106);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

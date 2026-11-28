@@ -7,7 +7,7 @@ final class tn extends bh {
     private String field_Z;
     private RgbSprite field_V;
     static RgbSprite field_W;
-    private dp field_T;
+    private FieldValidator field_T;
     static RgbSprite field_I;
     private int field_X;
 
@@ -68,7 +68,7 @@ final class tn extends bh {
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param1.charAt(var4);
             if (var4 == 0) {
-              var5 = lb.a((char) var5, 80);
+              var5 = PlayerDungeonProfile.toDisplayTitleCase((char) var5, 80);
             } else {
               var5 = Character.toLowerCase((char) var5);
             }
@@ -101,7 +101,7 @@ final class tn extends bh {
 
     final static void a(int param0) {
         cd.field_b = false;
-        qc.field_t = false;
+        MenuScreen.field_t = false;
         sn.a(49, param0);
         SpriteAnimationPlayer.field_d = sp.field_e;
         ol.field_i = sp.field_e;
@@ -198,7 +198,7 @@ final class tn extends bh {
         }
     }
 
-    tn(dp param0, String param1, int param2, int param3, int param4, int param5) {
+    tn(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ri.a((byte) 56));
         try {
           this.field_Z = param1;
@@ -237,10 +237,10 @@ final class tn extends bh {
           regionExit2: {
             regionExit3: {
               var13 = DungeonAssault.field_K;
-              var6 = this.field_T.a((byte) -116);
+              var6 = this.field_T.getValidationStatus((byte) -116);
               if (ub.field_s != var6 &&
                 var6 != oc.field_A) {
-                var5 = this.field_T.a(true);
+                var5 = this.field_T.getValidationMessage(true);
                 if (var5 == null) {
                   var5 = this.field_Z;
                   break regionExit3;
@@ -260,7 +260,7 @@ final class tn extends bh {
           this.g((byte) 112);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_T.a((byte) -110);
+        var6Lifetime1 = this.field_T.getValidationStatus((byte) -110);
         var8 = (th) ((Object) this.field_o);
         var9 = this.field_q + param1;
         var10 = var8.a((byte) 64, param3, (lm) (this)) + (var8.b(-2, (lm) (this)).b(263) >> 1);
@@ -336,7 +336,7 @@ final class tn extends bh {
           dk.field_d = var17.readUnsignedShort(0);
           jn.field_k = new int[dk.field_d];
           ub.field_q = new byte[dk.field_d][];
-          gk.field_Q = new boolean[dk.field_d];
+          DisplayNameSelectionPanel.field_Q = new boolean[dk.field_d];
           MusicPatchPcmStream.field_t = new int[dk.field_d];
           if (param0 <= 59) {
             return;
@@ -424,7 +424,7 @@ final class tn extends bh {
                 }
               }
             }
-            gk.field_Q[var4Lifetime5] = var10 != 0;
+            DisplayNameSelectionPanel.field_Q[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

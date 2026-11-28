@@ -271,11 +271,11 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
           stringLocal2 = MixedSupport042.stringState0184;
           mixedSupport099Local1.sceneWidgetPart002State0002.performAction0560(stringLocal2, 5, 68);
           mixedSupport099Local6 = SceneWidget.mixedSupport099State0001;
-          integerLocal3 = UiComponentPart013.integerState0276;
+          integerLocal3 = LoginPanel.integerState0276;
           integerLocal4 = TextLineMetrics.integerState0535;
           mixedSupport099Local6.sceneWidgetPart002State0002.performAction0561(integerLocal4, integerLocal3, 63, 0, 0);
         }
-        UiComponentPart013.performAction0630(booleanArgument3, booleanArgument2, integerArgument1);
+        LoginPanel.performAction0630(booleanArgument3, booleanArgument2, integerArgument1);
     }
 
     final static void performAction0016(String stringArgument1, boolean booleanArgument2, java.applet.Applet appletArgument3) {

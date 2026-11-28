@@ -98,13 +98,13 @@ final class sj {
         int var5_int = 0;
         int var6 = Main.field_T;
         int var1 = hb.field_a[0] * NetworkArchiveRequest.field_q[0];
-        byte[] var2 = rd.field_k[0];
+        byte[] var2 = EmailFormatValidator.field_k[0];
         int[] var3 = new int[var1];
         int var4 = -87 % ((-29 - param0) / 59);
         for (var5_int = 0; var5_int < var1; var5_int++) {
           var3[var5_int] = ImageProducerRasterBuffer.field_i[bc.a(255, (int) var2[var5_int])];
         }
-        RgbSprite var5 = new RgbSprite(p.field_l, FrameTimer.field_a, kb.field_c[0], ml.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
+        RgbSprite var5 = new RgbSprite(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[0], ml.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
         rh.d(-128);
         return var5;
     }
@@ -139,7 +139,7 @@ final class sj {
           }
           var1_int = qe.field_E;
           var2 = 0;
-          if (v.field_R == 2) {
+          if (ValidatedTextField.field_R == 2) {
             var3_long = -jl.field_c + id.correctedCurrentTimeMillis(87);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -151,14 +151,14 @@ final class sj {
             if (var4 < 0) {
               var5 = af.field_jb;
             } else {
-              if (var4 == cg.field_e.field_k) {
+              if (var4 == TextFieldValidator.field_e.field_k) {
                 var5 = ca.field_b;
               } else {
                 var5 = wg.field_a;
               }
             }
             var6 = me.field_a[var3];
-            if (v.field_R == 2 &&
+            if (ValidatedTextField.field_R == 2 &&
               var2 == 1) {
               if (tf.field_p.length <= ia.field_d.length) {
                 stackIn_19_0 = ia.field_d.length;
@@ -200,7 +200,7 @@ final class sj {
             var8Lifetime1 = dl.field_g - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + e.field_i;
-              if (cg.field_e.field_k == var4) {
+              if (TextFieldValidator.field_e.field_k == var4) {
                 stackIn_46_0 = SpriteGeometry.field_m;
               } else {
                 stackIn_46_0 = wd.field_b;

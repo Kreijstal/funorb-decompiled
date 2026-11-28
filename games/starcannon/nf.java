@@ -30,11 +30,11 @@ final class nf {
     final static void a(int param0, byte param1) {
         try {
           IOException iOException = null;
-          kh var3 = null;
+          AccountRegistrationPanel var3 = null;
           Throwable decompiledCaughtException = null;
           if (param1 != 95) {
-            var3 = (kh) null;
-            nf.a(true, (String) null, (String) null, 96, (String) null, 67, (kh) null);
+            var3 = (AccountRegistrationPanel) null;
+            nf.a(true, (String) null, (String) null, 96, (String) null, 67, (AccountRegistrationPanel) null);
           }
           if (null != m.field_b && (0 > param0 ||
             pb.field_a == r.field_c)) {
@@ -212,7 +212,7 @@ final class nf {
         }
     }
 
-    final static boolean a(boolean param0, String param1, String param2, int param3, String param4, int param5, kh param6) {
+    final static boolean a(boolean param0, String param1, String param2, int param3, String param4, int param5, AccountRegistrationPanel param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_14_0 = null;

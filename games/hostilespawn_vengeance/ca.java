@@ -76,7 +76,7 @@ abstract class ca {
         if (param3) {
           dn.field_b = 0;
           bc.field_i = param2;
-          of.field_d = dn.field_i;
+          ClientLookupTables.field_d = dn.field_i;
           PacketBuffer.field_h = param0;
           qi.field_N = param4;
           eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
@@ -86,7 +86,7 @@ abstract class ca {
         ca.a(-0.43438423387122027, 123, -0.7999001328488745, true, -39);
         dn.field_b = 0;
         bc.field_i = param2;
-        of.field_d = dn.field_i;
+        ClientLookupTables.field_d = dn.field_i;
         PacketBuffer.field_h = param0;
         qi.field_N = param4;
         eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);

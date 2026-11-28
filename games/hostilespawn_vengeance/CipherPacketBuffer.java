@@ -16,7 +16,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final static RgbSprite[] h(int param0, int param1) {
         RgbSprite[] var3 = new RgbSprite[9];
         RgbSprite[] var2 = var3;
-        var3[4] = el.a(-106, 64, param1);
+        var3[4] = ProxySocketFactory.a(-106, 64, param1);
         if (param0 < -7) {
           return var2;
         }

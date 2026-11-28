@@ -52,8 +52,8 @@ final class hf implements j {
           }
           if (!param5) {
             cd.field_c = param2;
-            ci.field_q = param3;
-            gf.field_v = param4;
+            AgeValidator.field_q = param3;
+            MatchingFieldValidator.field_v = param4;
           } else {
             pi.field_c = param3;
             ng.field_I = param2;
@@ -93,7 +93,7 @@ final class hf implements j {
         jj.field_c = jj.field_c | var3;
         eh.field_l = eh.field_l | var3;
         NetworkArchiveRequest.field_D.addLast(new ul(param2), -83);
-        if (!bh.field_p) {
+        if (!PasswordValidator.field_p) {
           wc.field_g.addLast(new rd(param2, param0, DiskArchiveRequest.field_z, pi.field_a, pi.field_f, ub.field_j), -53);
         }
     }
@@ -255,8 +255,8 @@ final class hf implements j {
           }
           if (!param5) {
             cd.field_c = param2;
-            ci.field_q = param3;
-            gf.field_v = param4;
+            AgeValidator.field_q = param3;
+            MatchingFieldValidator.field_v = param4;
           } else {
             pi.field_c = param3;
             ng.field_I = param2;

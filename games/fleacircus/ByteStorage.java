@@ -34,7 +34,7 @@ abstract class ByteStorage {
         if (200 < vg.field_z) {
           var5 = (250 - vg.field_z << 8) / 50;
         }
-        r.a(nj.field_b, 45);
+        TextFieldValidator.a(nj.field_b, 45);
         bl.b();
         SoftwareRasterizer.clearRaster();
         mj.a(-515966495);
@@ -96,7 +96,7 @@ abstract class ByteStorage {
         RuntimeException decompiledCaughtException = null;
         var6 = fleas.field_A ? 1 : 0;
         try {
-          var2 = ck.a(-5174, "jagex-last-login-method", param1);
+          var2 = ConfirmedEmailAvailabilityValidator.a(-5174, "jagex-last-login-method", param1);
           if (!param0) {
             var7 = (java.awt.Component) null;
             ByteStorage.a(98, (MidiPcmStream) null, -46, 17, -94, (PlatformTaskDispatcher) null, (java.awt.Component) null, true);
@@ -193,9 +193,9 @@ abstract class ByteStorage {
           qg.field_f = new PcmStreamMixer();
           ng.field_c = param0 * 1000 / param4;
           tg.field_i.setRootStream(qg.field_f);
-          gg.field_h = param1;
-          gg.field_h.b(17, CrossfadingMidiPcmStream.field_D);
-          db.field_J.setRootStream(gg.field_h);
+          DebouncedFieldValidator.field_h = param1;
+          DebouncedFieldValidator.field_h.b(17, CrossfadingMidiPcmStream.field_D);
+          db.field_J.setRootStream(DebouncedFieldValidator.field_h);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "hd.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

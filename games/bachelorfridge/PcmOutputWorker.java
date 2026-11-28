@@ -22,7 +22,7 @@ final class PcmOutputWorker implements Runnable {
                 var2.serviceOutput();
               }
             }
-            gda.sleepMillis(false, 10L);
+            DisplayNameSelectionPanel.sleepMillis(false, 10L);
             Object var5 = (Object) null;
             he.a(this.field_c, false, (Object) null);
           }

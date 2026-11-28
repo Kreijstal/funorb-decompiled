@@ -54,7 +54,7 @@ final class pl {
         if (null != kb.field_a) {
           kb.field_a.t(20252);
         }
-        ne.field_d = new bk();
+        ne.field_d = new DisplayNameSelectionPanel();
         if (param0 != 0) {
           field_d = (String) null;
         }

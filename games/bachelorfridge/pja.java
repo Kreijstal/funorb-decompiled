@@ -36,10 +36,10 @@ final class pja {
     }
 
     final static void a(boolean param0, int param1) {
-        ph.field_E = param1 * 100 / 150;
-        ph.field_G = 400 * param1 / 150;
+        LoginPanel.field_E = param1 * 100 / 150;
+        LoginPanel.field_G = 400 * param1 / 150;
         if (!param0) {
-          ph.field_D = (param1 << 16) / 150;
+          LoginPanel.field_D = (param1 << 16) / 150;
           return;
         }
     }

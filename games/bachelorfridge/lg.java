@@ -65,7 +65,7 @@ class lg {
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
-        hb.a(2, param1, kaa.field_m, param2);
+        MatchingFieldValidator.a(2, param1, kaa.field_m, param2);
         if (!param0) {
           return;
         }

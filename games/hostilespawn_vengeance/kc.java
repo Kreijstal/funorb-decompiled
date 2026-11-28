@@ -46,7 +46,7 @@ final class kc extends RuntimeException {
         return true;
     }
 
-    final static boolean a(byte param0, oc param1) {
+    final static boolean a(byte param0, GridPoint param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -57,7 +57,7 @@ final class kc extends RuntimeException {
           if (param0 > -123) {
             field_f = (String) null;
           }
-          stackIn_3_0 = gj.a(param1.b(-4), param1.field_g, -115, param1.field_e);
+          stackIn_3_0 = gj.a(param1.getClampedTileIndex(-4), param1.field_g, -115, param1.field_e);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

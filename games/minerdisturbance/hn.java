@@ -14,7 +14,7 @@ abstract class hn {
         }
         if (param0 > 74) {
           if (var1.length() == 0) {
-            var1 = cb.a((byte) -98);
+            var1 = TextFieldValidator.a((byte) -98);
           }
           if (var1.length() == 0) {
             var1 = bm.field_r;
@@ -23,7 +23,7 @@ abstract class hn {
         }
         hn.createAccountSuccessResult(true, (byte) 38);
         if (var1.length() == 0) {
-          var1 = cb.a((byte) -98);
+          var1 = TextFieldValidator.a((byte) -98);
         }
         if (var1.length() == 0) {
           var1 = bm.field_r;
@@ -56,7 +56,7 @@ abstract class hn {
     final static void a(byte param0) {
         ti.field_J = kj.field_a.readString(false);
         CharSequence var2 = (CharSequence) ((Object) ti.field_J);
-        in.field_b = cl.a(-95, var2);
+        in.field_b = LoginPanel.a(-95, var2);
         if (param0 > -22) {
           hn.createAccountSuccessResult(true, (byte) 100);
         }

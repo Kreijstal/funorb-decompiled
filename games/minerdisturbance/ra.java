@@ -98,13 +98,13 @@ final class ra {
         int var3;
         var3 = MinerDisturbance.field_ab;
         if (1 == param0) {
-          ke.field_X[21] = true;
+          ValidatedTextField.field_X[21] = true;
         } else {
           if (param0 == 6) {
-            ke.field_X[14] = true;
+            ValidatedTextField.field_X[14] = true;
           } else {
             if (16 == param0) {
-              ke.field_X[0] = true;
+              ValidatedTextField.field_X[0] = true;
             }
           }
         }

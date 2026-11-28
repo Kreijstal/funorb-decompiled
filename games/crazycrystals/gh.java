@@ -285,7 +285,7 @@ final class gh extends ea implements Cloneable {
             break;
           }
           if (var6 != 0) {
-            ga.field_B.a(64, param3 * 12, 12 * param1, 60, (byte) -111);
+            EditableTextField.field_B.a(64, param3 * 12, 12 * param1, 60, (byte) -111);
           }
           mb.field_g = mb.field_g + ob.field_l;
           wd.field_j = wd.field_j + 1;
@@ -327,9 +327,9 @@ final class gh extends ea implements Cloneable {
           if (param0 != -10935) {
             return;
           }
-          if (li.field_a != null &&
-            li.field_a.field_l != null) {
-            var9 = li.field_a;
+          if (DebouncedFieldValidator.field_a != null &&
+            DebouncedFieldValidator.field_a.field_l != null) {
+            var9 = DebouncedFieldValidator.field_a;
             var2 = var9;
             var1_int++;
             if (300 > var9.field_f) {
@@ -349,7 +349,7 @@ final class gh extends ea implements Cloneable {
             if ((ge.field_c & 1 << var3) != 0) {
               var4 = KeyboardInputHandler.field_b[var3];
               var5 = MouseWheelInput.field_e[var3];
-              var6 = ci.a(new String[]{an.field_o[var3]}, wn.field_a, 3);
+              var6 = AgeValidator.a(new String[]{an.field_o[var3]}, wn.field_a, 3);
               var7 = new nj(var4, var5, var6);
               if (var2 != null) {
                 if (((nj) (var2)).field_i) {
@@ -357,7 +357,7 @@ final class gh extends ea implements Cloneable {
                 }
                 ((nj) (var2)).field_n = var7;
               } else {
-                li.field_a = var7;
+                DebouncedFieldValidator.field_a = var7;
               }
               var2 = var7;
             }
@@ -824,8 +824,8 @@ final class gh extends ea implements Cloneable {
         sc.field_i[0] = null;
         sc.field_i[1].a((byte) -65);
         sc.field_i[1] = null;
-        ga.field_B.a((byte) -127);
-        ga.field_B = null;
+        EditableTextField.field_B.a((byte) -127);
+        EditableTextField.field_B = null;
         ua.field_a.a((byte) -113);
         ua.field_a = null;
         cb.field_n.a((byte) -84);
@@ -877,7 +877,7 @@ final class gh extends ea implements Cloneable {
           LaserHubTile.field_q.a((byte) -68);
           LaserHubTile.field_q = null;
           ck.field_db.a((byte) -86);
-          vk.field_N.a((byte) -16);
+          LoginPanel.field_N.a((byte) -16);
           fp.field_c.a((byte) -84);
           aa.field_a.a((byte) -94);
           mn.b(false);
@@ -890,7 +890,7 @@ final class gh extends ea implements Cloneable {
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.i((byte) -45);
         }
-        oh.field_d = new qk();
+        oh.field_d = new DisplayNameSelectionPanel();
         MouseWheelInput.field_d.a((qm) (oh.field_d), (byte) -50);
         if (param0 != -10) {
           field_F = (vc) null;

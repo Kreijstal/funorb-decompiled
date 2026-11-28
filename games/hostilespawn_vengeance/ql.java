@@ -112,7 +112,7 @@ class ql {
             bm.field_d[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            el.field_e[var1_intLifetime1] = 0L;
+            ProxySocketFactory.field_e[var1_intLifetime1] = 0L;
           }
           if (param0 != 8036) {
             field_c = 24;
@@ -134,7 +134,7 @@ class ql {
         int var2 = 19 / ((-48 - param0) / 38);
     }
 
-    final static void a(og param0, int param1, oc param2, oj param3, boolean param4) {
+    final static void a(og param0, int param1, GridPoint param2, oj param3, boolean param4) {
         int stackIn_4_0 = 0;
         int stackIn_11_0 = 0;
         oj stackIn_63_0 = null;
@@ -159,7 +159,7 @@ class ql {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        oc var11_ref_oc = null;
+        GridPoint var11_ref_oc = null;
         oj var12_ref_oj = null;
         int var12 = 0;
         int var13 = 0;
@@ -194,7 +194,7 @@ class ql {
           }
           if (param3.field_I != 0) {
             if (var7 == 0) {
-              for (var11 = 0; var11 < el.field_j; var11++) {
+              for (var11 = 0; var11 < ProxySocketFactory.field_j; var11++) {
                 boolean decompiledFrameRemainder0 = true;
                 var12_ref_oj = mm.field_m[var11];
                 if (var12_ref_oj.d((byte) 81)) {
@@ -299,7 +299,7 @@ class ql {
               }
             }
           }
-          var11Lifetime2 = param3.field_j.b(-4);
+          var11Lifetime2 = param3.field_j.getClampedTileIndex(-4);
           if (param3.field_h != 0) {
             if (param3.field_e > 0) {
               param3.field_e = param3.field_e - 1;
@@ -354,7 +354,7 @@ class ql {
         }
     }
 
-    boolean a(oc param0, boolean param1, byte param2) {
+    boolean a(GridPoint param0, boolean param1, byte param2) {
         boolean stackIn_23_0 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -365,7 +365,7 @@ class ql {
         int var5 = 0;
         try {
           var4_int = 0;
-          var5 = param0.b(param2 - 113);
+          var5 = param0.getClampedTileIndex(param2 - 113);
           if (param0.field_g <= 0) {
             return false;
           }
@@ -414,7 +414,7 @@ class ql {
         }
     }
 
-    final boolean a(oc param0, int param1) {
+    final boolean a(GridPoint param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_31_0 = null;
@@ -440,7 +440,7 @@ class ql {
             return false;
           }
           for (var3_int = 0; var3_int < ll.field_a; var3_int++) {
-            if (wh.field_b[var3_int].field_j.a(param0, param1 + 52)) {
+            if (wh.field_b[var3_int].field_j.hasSameCoordinates(param0, param1 + 52)) {
               return false;
             }
           }
@@ -452,7 +452,7 @@ class ql {
             return false;
           }
           var6.field_c = 0.0;
-          var6.field_j.a((byte) 46, param0);
+          var6.field_j.copyCoordinatesFrom((byte) 46, param0);
           ll.field_a = ll.field_a + 1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -194,7 +194,7 @@ final class kba extends k {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = de.d(hka.field_i, -257, BananarangSpecial.field_r);
+          var2_int = de.d(AgeValidator.field_i, -257, BananarangSpecial.field_r);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

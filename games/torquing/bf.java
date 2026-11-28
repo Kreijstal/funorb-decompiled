@@ -7,7 +7,7 @@ final class bf {
     static int field_d;
     static double[] field_b;
 
-    final static sm a(int param0, int param1, ResourceArchive param2, byte param3) {
+    final static IndexedSprite a(int param0, int param1, ResourceArchive param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;

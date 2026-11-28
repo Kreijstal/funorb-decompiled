@@ -5,7 +5,7 @@ final class AccountCreationResultPanel extends uc implements jk {
     private boolean field_qb;
     private boolean field_ub;
     static boolean field_tb;
-    private pj field_rb;
+    private AccountRegistrationPanel field_rb;
     static DiskCacheWorker field_pb;
     static int field_sb;
 
@@ -153,7 +153,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           }
           return super.f((byte) -45);
         }
-        AccountServiceResult var2 = jg.pollAccountCreationResult(false);
+        AccountServiceResult var2 = ConfirmedEmailAvailabilityValidator.pollAccountCreationResult(false);
         if (var2 != null) {
           this.showAccountCreationResult(false, (byte) 33, var2);
           if (param0 <= -21) {
@@ -266,7 +266,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           jj.field_a.g(!param0 ? true : false);
         }
         String var1 = ni.a(param0);
-        eb.field_b = new ti(var1, (String) null, true, false, false);
+        eb.field_b = new LoginPanel(var1, (String) null, true, false, false);
         ug.field_A.a(-14579, di.field_x);
         di.field_x.b(126, eb.field_b);
         di.field_x.f(!param0 ? true : false);
@@ -347,7 +347,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         this.showAccountCreationResult(true, (byte) -120, wi.createAccountErrorResult(248, (byte) -113, he.field_b));
     }
 
-    AccountCreationResultPanel(eg param0, pj param1) {
+    AccountCreationResultPanel(eg param0, AccountRegistrationPanel param1) {
         super(param0, FullscreenFocusCanvas.field_c, m.field_b, false, false);
         try {
           this.field_rb = param1;
@@ -368,7 +368,7 @@ final class AccountCreationResultPanel extends uc implements jk {
           var1 = AccountNameAvailabilityValidator.field_l;
           synchronized (var1) {
             FrameTimer.field_b = FrameTimer.field_b + 1;
-            tj.field_h = ResourceArchive.field_f;
+            TextFieldValidator.field_h = ResourceArchive.field_f;
             if (vg.field_b < 0) {
               var5 = 0;
               var2 = var5;

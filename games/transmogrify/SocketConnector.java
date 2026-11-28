@@ -118,7 +118,7 @@ abstract class SocketConnector {
           if (null != SecondaryNodeDequeIterator.field_d) {
             SecondaryNodeDequeIterator.field_d.r(77);
           }
-          ok.field_a = new ff(param0, param2, false, true, true);
+          ok.field_a = new LoginPanel(param0, param2, false, true, true);
           int var3_int = -114 / ((57 - param1) / 56);
           l.field_d.b(-88, ok.field_a);
         } catch (RuntimeException runtimeException) {

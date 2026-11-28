@@ -62,7 +62,7 @@ public final class TorChallenge extends GameClientBase {
         var12 = field_F ? 1 : 0;
         try {
           tk.a(param0 + 101);
-          SecondaryNodeDequeIterator.field_e = FullscreenFocusCanvas.a(ic.field_C, bh.field_q, "", "small_font", false);
+          SecondaryNodeDequeIterator.field_e = FullscreenFocusCanvas.a(ic.field_C, PasswordValidator.field_q, "", "small_font", false);
           ph.field_o = new Sprite[7];
           ph.field_o[0] = qk.a("", "overlay_title", ic.field_C, TorChallenge.a(param0, 1));
           ph.field_o[1] = qk.a("", "overlay_pause", ic.field_C, 0);
@@ -72,7 +72,7 @@ public final class TorChallenge extends GameClientBase {
           ph.field_o[5] = qk.a("", "overlay_characters", ic.field_C, 0);
           ph.field_o[6] = qk.a("", "overlay_levels", ic.field_C, 0);
           ri.field_j = qk.a("", "overlay_title_tile", ic.field_C, param0 ^ 1);
-          ui.field_i = v.a("frame", 26, "", ic.field_C);
+          DebouncedFieldValidator.field_i = v.a("frame", 26, "", ic.field_C);
           dh.field_cb = new Sprite[2][];
           GzipDecoder.field_a = v.a("main_menu_frame", param0 + 123, "", ic.field_C);
           dh.field_cb[0] = GzipDecoder.field_a;
@@ -81,11 +81,11 @@ public final class TorChallenge extends GameClientBase {
           aa.field_k = SpriteLoader.a(-127, "nav_frame", "", ic.field_C);
           ph.field_m = SpriteLoader.a(param0 - 129, "text_frame", "", ic.field_C);
           qf.field_c = SpriteLoader.a(-127, "seal_list", "", ic.field_C);
-          ib.field_M = SpriteLoader.a(-127, "go_button", "", ic.field_C);
-          dg.field_J = v.a("instructions_frame", 35, "", ic.field_C);
+          DisplayNameSelectionPanel.field_M = SpriteLoader.a(-127, "go_button", "", ic.field_C);
+          AccountRegistrationPanel.field_J = v.a("instructions_frame", 35, "", ic.field_C);
           SpriteLoader.a(-127, "char_select_arrows", "", ic.field_C);
           ua.field_d = mh.a(param0 + 52, ic.field_C, "keys", "");
-          dj.field_V = mh.a(113, ic.field_C, "keys2", "");
+          EditableTextField.field_V = mh.a(113, ic.field_C, "keys2", "");
           tf.field_j = SpriteLoader.a(-128, "achievements_large", "", ic.field_C);
           var2 = tf.field_j;
           var3_int = 0;
@@ -114,7 +114,7 @@ public final class TorChallenge extends GameClientBase {
               ie.field_f[2][1] = ba.field_d[1];
               dh.field_Y = qk.a("", "menu_slider", ic.field_C, 0);
               wa.field_xb = DiskCacheWorker.a(ic.field_C, "", (byte) -127, "intro4_bg");
-              hl.a(wa.field_xb, false, gf.field_m[3][0]);
+              hl.a(wa.field_xb, false, MatchingFieldValidator.field_m[3][0]);
               break;
             }
             var4_ref_ka = var2[var3_int];
@@ -277,7 +277,7 @@ public final class TorChallenge extends GameClientBase {
                 continue;
               }
             } else {
-              dj.field_O = qk.a("", "spear", ic.field_C, 0);
+              EditableTextField.field_O = qk.a("", "spear", ic.field_C, 0);
             }
             var3 = null;
             this.b(true);
@@ -541,7 +541,7 @@ public final class TorChallenge extends GameClientBase {
                       stackIn_235_0 = 12476;
                       break;
                     }
-                    oj.a(gi.b(stackIn_235_0), 0, 80, false, il.field_p, 255);
+                    oj.a(gi.b(stackIn_235_0), 0, 80, false, EmailFormatValidator.field_p, 255);
                     var10 = qk.a("", "mb_frames", ic.field_C, param0 ^ 1);
                     pl.a(13267, dl.field_E, var10);
                     nj.a(qk.a("", "mb_logo", ic.field_C, 0), 2);
@@ -607,16 +607,16 @@ public final class TorChallenge extends GameClientBase {
         try {
           var2 = ab.a(102);
           if (hc.c((byte) 57)) {
-            ib.a(var2, param0 - 7783, ph.a((byte) -40));
+            DisplayNameSelectionPanel.a(var2, param0 - 7783, ph.a((byte) -40));
             return;
           }
           if (!eb.field_o) {
-            il.a(-20895, var2);
+            EmailFormatValidator.a(-20895, var2);
             return;
           }
           if (!jh.a((byte) 103)) {
             mh.a(wa.field_qb, (byte) -125, 100.0f);
-            il.a(-20895, var2);
+            EmailFormatValidator.a(-20895, var2);
             return;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -700,7 +700,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (vc.a(0)) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-            si.a(true, ui.field_i, ui.field_i[0].storedHeight + 16, 16 + ui.field_i[0].storedWidth);
+            si.a(true, DebouncedFieldValidator.field_i, DebouncedFieldValidator.field_i[0].storedHeight + 16, 16 + DebouncedFieldValidator.field_i[0].storedWidth);
           }
           if (DiskCacheWorker.field_b != 0) {
             var3 = 256 * hk.field_e / 32;
@@ -889,15 +889,15 @@ public final class TorChallenge extends GameClientBase {
               break;
             }
             if (decompiledFrameCompleted0) {
-              re.field_x[dg.field_T[1]] = var9;
+              re.field_x[AccountRegistrationPanel.field_T[1]] = var9;
             }
           }
           if (decompiledFrameCompleted0) {
             if (!param1 ||
               var15 != 0) {
-              re.field_x[dg.field_T[1]] = SpriteLoader.a(-128, "runner", "", ic.field_C);
+              re.field_x[AccountRegistrationPanel.field_T[1]] = SpriteLoader.a(-128, "runner", "", ic.field_C);
             }
-            qb.a((byte) 94, re.field_x[dg.field_T[1]]);
+            qb.a((byte) 94, re.field_x[AccountRegistrationPanel.field_T[1]]);
             stackIn_22_0 = param0;
           }
           if (stackIn_22_0 < 80) {
@@ -913,7 +913,7 @@ public final class TorChallenge extends GameClientBase {
 
     private final void s(int param0) {
         if (ClientException.field_e != null) {
-          LocalizedStrings.a(ClientException.field_e, 0);
+          ConfirmedEmailAvailabilityValidator.a(ClientException.field_e, 0);
           ClientException.field_e = null;
           id.a(87);
         }
@@ -922,7 +922,7 @@ public final class TorChallenge extends GameClientBase {
         }
         try {
           ic.field_C = pe.b(4, -1);
-          bh.field_q = pe.b(5, -1);
+          PasswordValidator.field_q = pe.b(5, -1);
           DelegatingCanvas.field_d = pe.b(6, -1);
           SpriteLoader.field_f = pe.b(7, -1);
           cl.field_y = pe.b(8, -1);
@@ -1018,7 +1018,7 @@ public final class TorChallenge extends GameClientBase {
                         break;
                       }
                     case 3:
-                      il.a(true, 0);
+                      EmailFormatValidator.a(true, 0);
                       if (var4 == 0) {
                         break;
                       }
@@ -1107,7 +1107,7 @@ public final class TorChallenge extends GameClientBase {
           if (nb.a(-26375)) {
             var3 = this.e((byte) 110);
             if (var3 == 2) {
-              LocalizedStrings.f(10);
+              ConfirmedEmailAvailabilityValidator.f(10);
             }
           }
           return;
@@ -1190,8 +1190,8 @@ public final class TorChallenge extends GameClientBase {
                       fh.field_f.tryLoadAllGroups((byte) 79)) {
                       if (ic.field_C.ensureIndexLoaded(-7957) &&
                         ic.field_C.tryLoadAllGroups((byte) 79)) {
-                        if (bh.field_q.ensureIndexLoaded(-7957) &&
-                          bh.field_q.tryLoadAllGroups((byte) 79)) {
+                        if (PasswordValidator.field_q.ensureIndexLoaded(-7957) &&
+                          PasswordValidator.field_q.tryLoadAllGroups((byte) 79)) {
                           if (qh.field_M.ensureIndexLoaded(-7957) &&
                             qh.field_M.tryLoadAllGroups((byte) 79)) {
                             mh.a(DelegatingCanvas.field_a, (byte) -125, 65.0f);
@@ -1222,65 +1222,65 @@ public final class TorChallenge extends GameClientBase {
                             wl.field_c[5][0] = q.a(DelegatingCanvas.field_d, "", "H_Weapon_Death_Impact").b();
                             wl.field_c[5][1] = q.a(DelegatingCanvas.field_d, "", "Z_Weapon_Death_Impact").b();
                             wl.field_c[5][2] = q.a(DelegatingCanvas.field_d, "", "D_Weapon_Death_Impact").b();
-                            ia.field_i[0][dg.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Death").b();
-                            ia.field_i[0][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Death").b();
-                            ia.field_i[0][dg.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Death").b();
-                            ia.field_i[2][dg.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Step").b();
-                            ia.field_i[2][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Step").b();
-                            ia.field_i[2][dg.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Step").b();
-                            ia.field_i[3][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_Jump").b();
-                            ia.field_i[3][dg.field_T[1]][2] = ia.field_i[3][dg.field_T[1]][1];
-                            ia.field_i[4][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_land").b();
-                            ia.field_i[4][dg.field_T[1]][2] = ia.field_i[4][dg.field_T[1]][2];
-                            ia.field_i[0][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Death").b();
-                            ia.field_i[0][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Death").b();
-                            ia.field_i[0][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Death").b();
-                            ia.field_i[2][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Step").b();
-                            ia.field_i[2][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Step").b();
-                            ia.field_i[2][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Step").b();
-                            ia.field_i[4][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_Land").b();
-                            ia.field_i[4][dg.field_T[2]][1] = ia.field_i[4][dg.field_T[2]][0];
-                            ia.field_i[4][dg.field_T[2]][2] = ia.field_i[4][dg.field_T[2]][0];
-                            ia.field_i[6][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit").b();
-                            ia.field_i[6][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit").b();
-                            ia.field_i[6][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit").b();
-                            ia.field_i[4][dg.field_T[7]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit_Impact").b();
-                            ia.field_i[4][dg.field_T[7]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit_Impact").b();
-                            ia.field_i[4][dg.field_T[7]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit_Impact").b();
-                            ia.field_i[0][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_1_Death").b();
-                            ia.field_i[0][dg.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_2_Death").b();
-                            ia.field_i[0][dg.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Death").b();
-                            ia.field_i[7][dg.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Charge_Step").b();
-                            ia.field_i[4][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Land").b();
-                            ia.field_i[4][dg.field_T[3]][1] = ia.field_i[4][dg.field_T[3]][0];
-                            ia.field_i[4][dg.field_T[3]][2] = ia.field_i[4][dg.field_T[3]][0];
-                            ia.field_i[6][dg.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Throw").b();
-                            ia.field_i[6][dg.field_T[3]][2] = ia.field_i[4][dg.field_T[3]][1];
-                            ia.field_i[2][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Step").b();
-                            ia.field_i[2][dg.field_T[3]][1] = ia.field_i[2][dg.field_T[3]][0];
-                            ia.field_i[2][dg.field_T[3]][2] = ia.field_i[2][dg.field_T[3]][0];
-                            ia.field_i[4][dg.field_T[22]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Impact").b();
-                            ia.field_i[4][dg.field_T[22]][2] = ia.field_i[4][dg.field_T[22]][1];
-                            ia.field_i[0][dg.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_1_Death").b();
-                            ia.field_i[0][dg.field_T[4]][1] = q.a(DelegatingCanvas.field_d, "", "Rocket_2_Death").b();
-                            ia.field_i[0][dg.field_T[4]][2] = q.a(DelegatingCanvas.field_d, "", "Rocket_3_Death").b();
-                            ia.field_i[1][dg.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_Roar_Loop").b();
-                            ia.field_i[1][dg.field_T[4]][1] = ia.field_i[1][dg.field_T[4]][0];
-                            ia.field_i[1][dg.field_T[4]][2] = ia.field_i[1][dg.field_T[4]][1];
-                            ia.field_i[0][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_1_Death").b();
-                            ia.field_i[0][dg.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Death").b();
-                            ia.field_i[0][dg.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Death").b();
-                            ia.field_i[2][dg.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Move").b();
-                            ia.field_i[2][dg.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Move").b();
-                            ia.field_i[5][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Fall").b();
-                            ia.field_i[5][dg.field_T[5]][1] = ia.field_i[5][dg.field_T[5]][0];
-                            ia.field_i[5][dg.field_T[5]][2] = ia.field_i[5][dg.field_T[5]][0];
-                            ia.field_i[4][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Impact").b();
-                            ia.field_i[4][dg.field_T[5]][1] = ia.field_i[4][dg.field_T[5]][0];
-                            ia.field_i[4][dg.field_T[5]][2] = ia.field_i[4][dg.field_T[5]][0];
-                            ia.field_i[0][dg.field_T[6]][0] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Death").b();
-                            ia.field_i[4][dg.field_T[6]][1] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Wall_Impact").b();
-                            ia.field_i[4][dg.field_T[6]][2] = q.a(DelegatingCanvas.field_d, "", "Grinder_3_Wall_Impact").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Death").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Step").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Step").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Step").b();
+                            ia.field_i[3][AccountRegistrationPanel.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_Jump").b();
+                            ia.field_i[3][AccountRegistrationPanel.field_T[1]][2] = ia.field_i[3][AccountRegistrationPanel.field_T[1]][1];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_land").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[1]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[1]][2];
+                            ia.field_i[0][AccountRegistrationPanel.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Death").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Step").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Step").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Step").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_Land").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[2]][1] = ia.field_i[4][AccountRegistrationPanel.field_T[2]][0];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[2]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[2]][0];
+                            ia.field_i[6][AccountRegistrationPanel.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit").b();
+                            ia.field_i[6][AccountRegistrationPanel.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit").b();
+                            ia.field_i[6][AccountRegistrationPanel.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[7]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit_Impact").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[7]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit_Impact").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[7]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit_Impact").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_1_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_2_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Death").b();
+                            ia.field_i[7][AccountRegistrationPanel.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Charge_Step").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Land").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[3]][1] = ia.field_i[4][AccountRegistrationPanel.field_T[3]][0];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[3]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[3]][0];
+                            ia.field_i[6][AccountRegistrationPanel.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Throw").b();
+                            ia.field_i[6][AccountRegistrationPanel.field_T[3]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[3]][1];
+                            ia.field_i[2][AccountRegistrationPanel.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Step").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[3]][1] = ia.field_i[2][AccountRegistrationPanel.field_T[3]][0];
+                            ia.field_i[2][AccountRegistrationPanel.field_T[3]][2] = ia.field_i[2][AccountRegistrationPanel.field_T[3]][0];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[22]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Impact").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[22]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[22]][1];
+                            ia.field_i[0][AccountRegistrationPanel.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_1_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[4]][1] = q.a(DelegatingCanvas.field_d, "", "Rocket_2_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[4]][2] = q.a(DelegatingCanvas.field_d, "", "Rocket_3_Death").b();
+                            ia.field_i[1][AccountRegistrationPanel.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_Roar_Loop").b();
+                            ia.field_i[1][AccountRegistrationPanel.field_T[4]][1] = ia.field_i[1][AccountRegistrationPanel.field_T[4]][0];
+                            ia.field_i[1][AccountRegistrationPanel.field_T[4]][2] = ia.field_i[1][AccountRegistrationPanel.field_T[4]][1];
+                            ia.field_i[0][AccountRegistrationPanel.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_1_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Death").b();
+                            ia.field_i[0][AccountRegistrationPanel.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Death").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Move").b();
+                            ia.field_i[2][AccountRegistrationPanel.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Move").b();
+                            ia.field_i[5][AccountRegistrationPanel.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Fall").b();
+                            ia.field_i[5][AccountRegistrationPanel.field_T[5]][1] = ia.field_i[5][AccountRegistrationPanel.field_T[5]][0];
+                            ia.field_i[5][AccountRegistrationPanel.field_T[5]][2] = ia.field_i[5][AccountRegistrationPanel.field_T[5]][0];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Impact").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[5]][1] = ia.field_i[4][AccountRegistrationPanel.field_T[5]][0];
+                            ia.field_i[4][AccountRegistrationPanel.field_T[5]][2] = ia.field_i[4][AccountRegistrationPanel.field_T[5]][0];
+                            ia.field_i[0][AccountRegistrationPanel.field_T[6]][0] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Death").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[6]][1] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Wall_Impact").b();
+                            ia.field_i[4][AccountRegistrationPanel.field_T[6]][2] = q.a(DelegatingCanvas.field_d, "", "Grinder_3_Wall_Impact").b();
                             bf.field_c[0][0] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Jump").b();
                             bf.field_c[0][1] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Land").b();
                             bf.field_c[0][2] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Miss_Combo").b();
@@ -1318,16 +1318,16 @@ public final class TorChallenge extends GameClientBase {
                           mh.a(DelegatingCanvas.a(256, "Loading Levels", "", qh.field_M, "Waiting for Levels"), (byte) -125, 60.0f);
                           return false;
                         }
-                        mh.a(DelegatingCanvas.a(256, ij.field_x, "", bh.field_q, wf.field_a), (byte) -125, 60.0f);
+                        mh.a(DelegatingCanvas.a(256, ij.field_x, "", PasswordValidator.field_q, wf.field_a), (byte) -125, 60.0f);
                         return false;
                       }
                       mh.a(DelegatingCanvas.a(256, ra.field_m, "", ic.field_C, uk.field_K), (byte) -125, 50.0f);
                       return false;
                     }
-                    mh.a(DelegatingCanvas.a(256, ui.field_e, "", fh.field_f, qh.field_L), (byte) -125, 40.0f);
+                    mh.a(DelegatingCanvas.a(256, DebouncedFieldValidator.field_e, "", fh.field_f, qh.field_L), (byte) -125, 40.0f);
                     return false;
                   }
-                  mh.a(ProxySocketConnector.a(qh.field_L, cl.field_y, 0, 89, ui.field_e), (byte) -125, 30.0f);
+                  mh.a(ProxySocketConnector.a(qh.field_L, cl.field_y, 0, 89, DebouncedFieldValidator.field_e), (byte) -125, 30.0f);
                   return false;
                 }
                 mh.a(DelegatingCanvas.a(256, ie.field_c, "", SpriteLoader.field_f, cb.field_a), (byte) -125, 20.0f);
@@ -1469,7 +1469,7 @@ public final class TorChallenge extends GameClientBase {
             this.drawFrame(7808);
             this.t(1);
             ic.field_C = null;
-            bh.field_q = null;
+            PasswordValidator.field_q = null;
             id.a(67);
             return false;
           }
@@ -1563,7 +1563,7 @@ public final class TorChallenge extends GameClientBase {
                 bc.field_o = ResourceArchive.field_e;
                 if (bc.field_o == -2) {
                   bc.field_o = 0;
-                  il.a(false, 0);
+                  EmailFormatValidator.a(false, 0);
                 }
               }
               DiskCacheWorker.field_b = 3;
@@ -1580,10 +1580,10 @@ public final class TorChallenge extends GameClientBase {
             if (vc.a(0)) {
               vl.a((byte) -88);
               if (var3 != 0) {
-                dj.f((byte) -83);
+                EditableTextField.f((byte) -83);
               }
             } else {
-              dj.f((byte) -83);
+              EditableTextField.f((byte) -83);
             }
             DiskCacheWorker.field_b = 2;
             if (var3 == 0) {
@@ -1596,9 +1596,9 @@ public final class TorChallenge extends GameClientBase {
               bc.field_o == 3 &&
               PcmOutputWorker.activeScreenId == 1 &&
               DirectByteStorage.field_g) {
-              if (dj.field_Q >= 0 &&
-                ~n.field_jb != ~dj.field_Q) {
-                n.field_jb = dj.field_Q;
+              if (EditableTextField.field_Q >= 0 &&
+                ~n.field_jb != ~EditableTextField.field_Q) {
+                n.field_jb = EditableTextField.field_Q;
                 if (var3 != 0) {
                   n.field_jb = 0;
                 }
@@ -1720,23 +1720,23 @@ public final class TorChallenge extends GameClientBase {
         try {
           var2_int = g.a(124, 0) ? 1 : 0;
           this.d(83, var2_int != 0);
-          re.field_x[dg.field_T[2]] = SpriteLoader.a(-128, "spitter", "", ic.field_C);
-          qb.a((byte) 69, re.field_x[dg.field_T[2]]);
-          re.field_x[dg.field_T[7]] = SpriteLoader.a(-127, "spittle", "", ic.field_C);
-          qb.a((byte) 85, re.field_x[dg.field_T[7]]);
+          re.field_x[AccountRegistrationPanel.field_T[2]] = SpriteLoader.a(-128, "spitter", "", ic.field_C);
+          qb.a((byte) 69, re.field_x[AccountRegistrationPanel.field_T[2]]);
+          re.field_x[AccountRegistrationPanel.field_T[7]] = SpriteLoader.a(-127, "spittle", "", ic.field_C);
+          qb.a((byte) 85, re.field_x[AccountRegistrationPanel.field_T[7]]);
           if (!param0) {
             this.tickGame((byte) 102);
           }
-          re.field_x[dg.field_T[3]] = SpriteLoader.a(-127, "thudder", "", ic.field_C);
-          qb.a((byte) 46, re.field_x[dg.field_T[3]]);
-          re.field_x[dg.field_T[4]] = SpriteLoader.a(-127, "rocketeer", "", ic.field_C);
-          qb.a((byte) 114, re.field_x[dg.field_T[4]]);
-          re.field_x[dg.field_T[5]] = SpriteLoader.a(-127, "slimer", "", ic.field_C);
-          qb.a((byte) 65, re.field_x[dg.field_T[5]]);
-          re.field_x[dg.field_T[6]] = SpriteLoader.a(-127, "grinder", "", ic.field_C);
-          qb.a((byte) 21, re.field_x[dg.field_T[6]]);
-          re.field_x[dg.field_T[22]] = SpriteLoader.a(-128, "rock", "", ic.field_C);
-          qb.a((byte) 56, re.field_x[dg.field_T[22]]);
+          re.field_x[AccountRegistrationPanel.field_T[3]] = SpriteLoader.a(-127, "thudder", "", ic.field_C);
+          qb.a((byte) 46, re.field_x[AccountRegistrationPanel.field_T[3]]);
+          re.field_x[AccountRegistrationPanel.field_T[4]] = SpriteLoader.a(-127, "rocketeer", "", ic.field_C);
+          qb.a((byte) 114, re.field_x[AccountRegistrationPanel.field_T[4]]);
+          re.field_x[AccountRegistrationPanel.field_T[5]] = SpriteLoader.a(-127, "slimer", "", ic.field_C);
+          qb.a((byte) 65, re.field_x[AccountRegistrationPanel.field_T[5]]);
+          re.field_x[AccountRegistrationPanel.field_T[6]] = SpriteLoader.a(-127, "grinder", "", ic.field_C);
+          qb.a((byte) 21, re.field_x[AccountRegistrationPanel.field_T[6]]);
+          re.field_x[AccountRegistrationPanel.field_T[22]] = SpriteLoader.a(-128, "rock", "", ic.field_C);
+          qb.a((byte) 56, re.field_x[AccountRegistrationPanel.field_T[22]]);
           var3 = new int[8];
           var4 = new int[8];
           var5 = 0;
@@ -1918,10 +1918,10 @@ public final class TorChallenge extends GameClientBase {
           pe.releaseDeclaredStaticReferences(4210752);
           jf.discardDeclaredStaticReferences(-118);
           wa.discardDeclaredStaticReferences(104);
-          dg.clearDeclaredStaticReferences(-110);
+          AccountRegistrationPanel.clearDeclaredStaticReferences(-110);
           ih.resetDeclaredStaticState(99);
-          fg.clearDeclaredStaticReferences((byte) -86);
-          ib.clearStaticReferences(false);
+          LoginPanel.clearDeclaredStaticReferences((byte) -86);
+          DisplayNameSelectionPanel.clearStaticReferences(false);
           qa.a(-1);
           dk.a(23592);
           tj.clearStaticReferences(120);
@@ -2017,8 +2017,8 @@ public final class TorChallenge extends GameClientBase {
           fb.clearStaticReferences(1012);
           ab.a(true);
           bg.releaseDeclaredStaticReferences(0);
-          rf.resetStaticState((byte) 96);
-          dj.clearDeclaredStaticReferences(65);
+          ValidatedTextField.resetStaticState((byte) 96);
+          EditableTextField.clearDeclaredStaticReferences(65);
           n.releaseDeclaredStaticReferences(5);
           ek.clearDeclaredStaticReferences((byte) 123);
           li.c(true);
@@ -2080,15 +2080,15 @@ public final class TorChallenge extends GameClientBase {
           gj.clearStaticReferences(-909082559);
           qi.clearStaticReferences((byte) -81);
           AccountNameAvailabilityValidator.clearStaticReferences(-14298);
-          bh.resetStaticState(1);
-          il.clearStaticReferences(8);
-          LocalizedStrings.d((byte) 102);
-          ci.clearStaticReferences(68);
-          gf.clearDeclaredStaticReferences((byte) -113);
+          PasswordValidator.resetStaticState(1);
+          EmailFormatValidator.clearStaticReferences(8);
+          ConfirmedEmailAvailabilityValidator.d((byte) 102);
+          AgeValidator.clearStaticReferences(68);
+          MatchingFieldValidator.clearDeclaredStaticReferences((byte) -113);
           p.a(true);
           ia.clearDeclaredStaticReferences((byte) 79);
           rj.a(10);
-          ui.clearStaticReferences((byte) -125);
+          DebouncedFieldValidator.clearStaticReferences((byte) -125);
           vi.a(-57);
           this.field_w = null;
           return;

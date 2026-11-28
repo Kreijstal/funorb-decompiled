@@ -3,7 +3,7 @@
  */
 final class eb {
     static int[] field_g;
-    static ob field_d;
+    static LoginPanel field_d;
     static String field_a;
     static int field_e;
     static int[] field_f;
@@ -40,7 +40,7 @@ final class eb {
         try {
           var1_int = be.field_t;
           var2 = 0;
-          if (da.field_j == 2) {
+          if (TextFieldValidator.field_j == 2) {
             var3_long = gk.correctedCurrentTimeMillis(95) - qe.field_cb;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -63,7 +63,7 @@ final class eb {
               var5 = oi.field_b;
             }
             var6 = mn.field_q[var3];
-            if (da.field_j == 2 &&
+            if (TextFieldValidator.field_j == 2 &&
               var2 == 1) {
               if (rp.field_e.length > jo.field_g.length) {
                 stackIn_19_0 = rp.field_e.length;
@@ -202,7 +202,7 @@ final class eb {
 
     final static String a(int param0) {
         if (un.field_Hb == bf.field_b) {
-          return mk.field_S;
+          return AccountRegistrationPanel.field_S;
         }
         if (!cl.field_c.a((byte) -108)) {
           return cl.field_c.d((byte) 121);

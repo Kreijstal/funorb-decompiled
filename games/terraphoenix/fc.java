@@ -342,10 +342,10 @@ final class fc {
     }
 
     final static int a(int param0) {
-        if (uh.field_H < 2) {
+        if (LoginPanel.field_H < 2) {
           return 0;
         }
-        if (~ph.field_o != param0) {
+        if (~PasswordValidator.field_o != param0) {
           if (bl.field_a != null) {
             if (!bl.field_a.ensureIndexLoaded(0)) {
               return 14;
@@ -363,10 +363,10 @@ final class fc {
           if (!bi.field_d.tryLoadGroupByName(-3, "commonui")) {
             return 57;
           }
-          if (!ph.field_q.ensureIndexLoaded(0)) {
+          if (!PasswordValidator.field_q.ensureIndexLoaded(0)) {
             return 71;
           }
-          if (!ph.field_q.tryLoadGroupByName(param0 - 2, "commonui")) {
+          if (!PasswordValidator.field_q.tryLoadGroupByName(param0 - 2, "commonui")) {
             return 80;
           }
           if (!ch.field_g.ensureIndexLoaded(0)) {
@@ -382,10 +382,10 @@ final class fc {
           if (!bi.field_d.tryLoadGroupByName(param0 ^ 2, "commonui")) {
             return 40;
           }
-          if (!ph.field_q.ensureIndexLoaded(0)) {
+          if (!PasswordValidator.field_q.ensureIndexLoaded(0)) {
             return 50;
           }
-          if (!ph.field_q.tryLoadGroupByName(param0 ^ 2, "commonui")) {
+          if (!PasswordValidator.field_q.tryLoadGroupByName(param0 ^ 2, "commonui")) {
             return 60;
           }
           if (!ch.field_g.ensureIndexLoaded(0)) {

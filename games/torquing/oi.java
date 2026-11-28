@@ -14,13 +14,13 @@ final class oi {
         field_a = null;
     }
 
-    final static sm a(byte param0) {
-        sm var1 = new sm(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], pn.field_b[0], cq.field_y);
+    final static IndexedSprite a(byte param0) {
+        IndexedSprite var1 = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], pn.field_b[0], cq.field_y);
         go.b(0);
         if (param0 < -59) {
           return var1;
         }
-        return (sm) null;
+        return (IndexedSprite) null;
     }
 
     final static void a(int param0, byte param1) {

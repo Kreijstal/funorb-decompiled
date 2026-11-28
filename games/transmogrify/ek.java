@@ -84,10 +84,10 @@ final class ek implements WidgetRenderer {
     }
 
     final static void a(int param0) {
-        ck.field_z = IntrusiveNode.field_d.a(de.field_c[12]);
+        DisplayNameSelectionPanel.field_z = IntrusiveNode.field_d.a(de.field_c[12]);
         int var1 = IntrusiveNode.field_d.a(de.field_c[13]);
-        if (ck.field_z < var1) {
-          ck.field_z = var1;
+        if (DisplayNameSelectionPanel.field_z < var1) {
+          DisplayNameSelectionPanel.field_z = var1;
         }
         int var2 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_D + 4;
         if (param0 < 88) {

@@ -53,7 +53,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               nd.isSupportedCp1252KeyCharacter((char) var2_int, (byte) -18)) {
               var3 = oe.field_W + 1 & 127;
               if (ic.field_b != var3) {
-                ke.field_P[oe.field_W] = -1;
+                AccountRegistrationPanel.field_P[oe.field_W] = -1;
                 mk.field_n[oe.field_W] = (char)var2_int;
                 oe.field_W = var3;
               }
@@ -105,7 +105,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             if (var2_int >= 0) {
               var3 = 127 & 1 + oe.field_W;
               if (ic.field_b != var3) {
-                ke.field_P[oe.field_W] = var2_int;
+                AccountRegistrationPanel.field_P[oe.field_W] = var2_int;
                 mk.field_n[oe.field_W] = (char)0;
                 oe.field_W = var3;
               }

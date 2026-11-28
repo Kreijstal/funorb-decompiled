@@ -22,7 +22,7 @@ abstract class ByteStorage {
           for (var2_int = 0; var2_int < DelayedPcmStream.field_p; var2_int++) {
             jk.field_c[param0 + var2_int] = var2_int;
           }
-          ji.a(mh.field_j, param0, param0 + DelayedPcmStream.field_p, (byte) 121, false, param0 + param0, t.field_u);
+          ji.a(EmailFormatValidator.field_j, param0, param0 + DelayedPcmStream.field_p, (byte) 121, false, param0 + param0, t.field_u);
           if (param0 < DelayedPcmStream.field_p) {
             DelayedPcmStream.field_p = param0;
           }

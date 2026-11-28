@@ -70,7 +70,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           ResourceArchive var3 = (ResourceArchive) null;
           DelegatingCanvas.a(-22, (String) null, (String) null, (ResourceArchive) null);
           if (var1 != null) {
-            var2 = rd.field_j;
+            var2 = EmailFormatValidator.field_j;
             var2.readInt((byte) 127);
             var2.readInt((byte) 124);
             var2.readInt((byte) 124);
@@ -82,7 +82,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           return;
         }
         if (var1 != null) {
-          var2Lifetime1 = rd.field_j;
+          var2Lifetime1 = EmailFormatValidator.field_j;
           var2Lifetime1.readInt((byte) 127);
           var2Lifetime1.readInt((byte) 124);
           var2Lifetime1.readInt((byte) 124);

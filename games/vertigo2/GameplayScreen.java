@@ -182,7 +182,7 @@ final class GameplayScreen {
             }
             if (!ln.field_d.field_c ||
               var12 != 0) {
-              var5 = (de.field_f ^ ln.field_d.field_s) % 8;
+              var5 = (DebouncedFieldValidator.field_f ^ ln.field_d.field_s) % 8;
               switch (var5) {
                 case 0:
                   c.field_h = c.field_h - 1;
@@ -224,7 +224,7 @@ final class GameplayScreen {
                   c.field_h = c.field_h + 1;
                   break;
               }
-              var5 = (ln.field_d.field_s ^ de.field_f + var4) % 5;
+              var5 = (ln.field_d.field_s ^ DebouncedFieldValidator.field_f + var4) % 5;
               switch (var5) {
                 default:
                   break;
@@ -256,47 +256,47 @@ final class GameplayScreen {
                   qr.field_j = qr.field_j | ki.field_c + sk.field_b << 17;
                   break;
               }
-              var5 = (gi.field_u + de.field_f * ProxySocketConnector.field_e) % 8;
+              var5 = (gi.field_u + DebouncedFieldValidator.field_f * ProxySocketConnector.field_e) % 8;
               switch (var5) {
                 case 2:
                   f.field_B = f.field_B + ca.field_g;
-                  df.field_k = df.field_k + 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                   break;
                 case 3:
                   ca.field_g = ca.field_g + 1;
-                  f.field_B = f.field_B + df.field_k;
+                  f.field_B = f.field_B + BirthDateValidator.field_k;
                   break;
                 case 4:
-                  df.field_k = df.field_k + 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                   hj.field_c = hj.field_c + ca.field_g;
                 default:
                   break;
                 case 7:
                   ca.field_g = ca.field_g - 1;
-                  hj.field_c = hj.field_c - df.field_k;
+                  hj.field_c = hj.field_c - BirthDateValidator.field_k;
                   if (var12 == 0) {
                     break;
                   }
                 case 6:
-                  df.field_k = df.field_k - 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                   hj.field_c = hj.field_c - ca.field_g;
                   if (var12 == 0) {
                     break;
                   }
                 case 5:
-                  hj.field_c = hj.field_c + df.field_k;
+                  hj.field_c = hj.field_c + BirthDateValidator.field_k;
                   ca.field_g = ca.field_g + 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 1:
-                  f.field_B = f.field_B - df.field_k;
+                  f.field_B = f.field_B - BirthDateValidator.field_k;
                   ca.field_g = ca.field_g - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 0:
-                  df.field_k = df.field_k - 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                   f.field_B = f.field_B - ca.field_g;
                   break;
               }
@@ -357,7 +357,7 @@ final class GameplayScreen {
           }
           if (this.field_D.field_r.getSimulationPhase(9979) == 0 &&
             this.field_D.field_r.field_n < 100) {
-            bm.a(rf.field_o, false, 4);
+            bm.a(MatchingFieldValidator.field_o, false, 4);
           }
           var3_int = this.field_D.getLevelIndex(-6133);
           if (null == fo.field_e &&
@@ -454,7 +454,7 @@ final class GameplayScreen {
                 var6 = 0;
               }
               if (!ln.field_d.field_c) {
-                var7 = (ln.field_d.field_s ^ de.field_f) % 8;
+                var7 = (ln.field_d.field_s ^ DebouncedFieldValidator.field_f) % 8;
                 switch (var7) {
                   case 3:
                     gi.field_u = gi.field_u - c.field_h;
@@ -498,7 +498,7 @@ final class GameplayScreen {
                     gi.field_u = gi.field_u + ProxySocketConnector.field_e;
                     break;
                 }
-                var7 = (ln.field_d.field_s ^ var6 + de.field_f) % 5;
+                var7 = (ln.field_d.field_s ^ var6 + DebouncedFieldValidator.field_f) % 5;
                 switch (var7) {
                   case 0:
                     qr.field_j = qr.field_j | sk.field_b + ki.field_c << 17;
@@ -523,46 +523,46 @@ final class GameplayScreen {
                     sk.field_b = sk.field_b + re.field_j;
                     break;
                 }
-                var7 = (gi.field_u + de.field_f * ProxySocketConnector.field_e) % 8;
+                var7 = (gi.field_u + DebouncedFieldValidator.field_f * ProxySocketConnector.field_e) % 8;
                 switch (var7) {
                   case 2:
-                    df.field_k = df.field_k + 1;
+                    BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                     f.field_B = f.field_B + ca.field_g;
                     break;
                   case 3:
                     ca.field_g = ca.field_g + 1;
-                    f.field_B = f.field_B + df.field_k;
+                    f.field_B = f.field_B + BirthDateValidator.field_k;
                     break;
                   case 5:
                     ca.field_g = ca.field_g + 1;
-                    hj.field_c = hj.field_c + df.field_k;
+                    hj.field_c = hj.field_c + BirthDateValidator.field_k;
                     break;
                   case 6:
-                    df.field_k = df.field_k - 1;
+                    BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                     hj.field_c = hj.field_c - ca.field_g;
                   default:
                     break;
                   case 7:
                     ca.field_g = ca.field_g - 1;
-                    hj.field_c = hj.field_c - df.field_k;
+                    hj.field_c = hj.field_c - BirthDateValidator.field_k;
                     if (var12 == 0) {
                       break;
                     }
                   case 4:
-                    df.field_k = df.field_k + 1;
+                    BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                     hj.field_c = hj.field_c + ca.field_g;
                     if (var12 == 0) {
                       break;
                     }
                   case 1:
                     ca.field_g = ca.field_g - 1;
-                    f.field_B = f.field_B - df.field_k;
+                    f.field_B = f.field_B - BirthDateValidator.field_k;
                     if (var12 == 0) {
                       break;
                     }
                   case 0:
                     f.field_B = f.field_B - ca.field_g;
-                    df.field_k = df.field_k - 1;
+                    BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                     break;
                 }
                 switch (var7) {
@@ -1139,7 +1139,7 @@ final class GameplayScreen {
               var3 = 0;
             }
             if (!ln.field_d.field_c) {
-              var4 = (ln.field_d.field_s ^ de.field_f) % 8;
+              var4 = (ln.field_d.field_s ^ DebouncedFieldValidator.field_f) % 8;
               switch (var4) {
                 case 2:
                   gi.field_u = gi.field_u - ProxySocketConnector.field_e;
@@ -1187,7 +1187,7 @@ final class GameplayScreen {
                   gi.field_u = gi.field_u + ProxySocketConnector.field_e;
                   break;
               }
-              var4 = (ln.field_d.field_s ^ de.field_f + var3) % 5;
+              var4 = (ln.field_d.field_s ^ DebouncedFieldValidator.field_f + var3) % 5;
               switch (var4) {
                 case 1:
                   sk.field_b = sk.field_b + re.field_j;
@@ -1212,49 +1212,49 @@ final class GameplayScreen {
                   qr.field_j = qr.field_j | ki.field_c + sk.field_b << 17;
                   break;
               }
-              var4 = (gi.field_u + ProxySocketConnector.field_e * de.field_f) % 8;
+              var4 = (gi.field_u + ProxySocketConnector.field_e * DebouncedFieldValidator.field_f) % 8;
               switch (var4) {
                 case 2:
-                  df.field_k = df.field_k + 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                   f.field_B = f.field_B + ca.field_g;
                   break;
                 case 6:
-                  df.field_k = df.field_k - 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                   hj.field_c = hj.field_c - ca.field_g;
                 default:
                   break;
                 case 7:
                   ca.field_g = ca.field_g - 1;
-                  hj.field_c = hj.field_c - df.field_k;
+                  hj.field_c = hj.field_c - BirthDateValidator.field_k;
                   if (var8 == 0) {
                     break;
                   }
                 case 5:
                   ca.field_g = ca.field_g + 1;
-                  hj.field_c = hj.field_c + df.field_k;
+                  hj.field_c = hj.field_c + BirthDateValidator.field_k;
                   if (var8 == 0) {
                     break;
                   }
                 case 4:
-                  df.field_k = df.field_k + 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k + 1;
                   hj.field_c = hj.field_c + ca.field_g;
                   if (var8 == 0) {
                     break;
                   }
                 case 3:
-                  f.field_B = f.field_B + df.field_k;
+                  f.field_B = f.field_B + BirthDateValidator.field_k;
                   ca.field_g = ca.field_g + 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 1:
-                  f.field_B = f.field_B - df.field_k;
+                  f.field_B = f.field_B - BirthDateValidator.field_k;
                   ca.field_g = ca.field_g - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 0:
-                  df.field_k = df.field_k - 1;
+                  BirthDateValidator.field_k = BirthDateValidator.field_k - 1;
                   f.field_B = f.field_B - ca.field_g;
                   break;
               }
@@ -1314,7 +1314,7 @@ final class GameplayScreen {
               }
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             var2_int = 1;
             if (this.field_D.field_r.field_w == 0 && (this.field_D.field_r.getSimulationPhase(9979) == 3 ||
               4 == this.field_D.field_r.getSimulationPhase(param0 ^ 9864))) {
@@ -1419,9 +1419,9 @@ final class GameplayScreen {
           }
           if (this.field_B < 0 &&
             1 == this.field_D.field_r.getSimulationPhase(9979)) {
-            if (s.field_y == de.field_f &&
+            if (s.field_y == DebouncedFieldValidator.field_f &&
               !eo.field_o ||
-              LevelRenderer.field_t == de.field_f) {
+              LevelRenderer.field_t == DebouncedFieldValidator.field_f) {
               if (!this.field_G.isFocusTransitionActive(true)) {
                 var2_int = this.field_n;
                 this.field_n = this.field_n - 1;
@@ -1429,9 +1429,9 @@ final class GameplayScreen {
                   this.field_n = -1 + this.field_D.field_l.length;
                 }
                 this.field_G.startFocusTransition((byte) -17, var2_int, this.field_n);
-                if ((var8 != 0) && ((ga.field_gb == de.field_f &&
+                if ((var8 != 0) && ((ga.field_gb == DebouncedFieldValidator.field_f &&
                   !eo.field_o ||
-                  de.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true))) {
+                  DebouncedFieldValidator.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true))) {
                   var2_int = this.field_n;
                   this.field_n = this.field_n + 1;
                   if (this.field_n >= this.field_D.field_l.length) {
@@ -1441,9 +1441,9 @@ final class GameplayScreen {
                 }
               }
             } else {
-              if ((ga.field_gb == de.field_f &&
+              if ((ga.field_gb == DebouncedFieldValidator.field_f &&
                 !eo.field_o ||
-                de.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true)) {
+                DebouncedFieldValidator.field_f == od.field_Mb) && !this.field_G.isFocusTransitionActive(true)) {
                 var2_int = this.field_n;
                 this.field_n = this.field_n + 1;
                 if (this.field_n >= this.field_D.field_l.length) {
@@ -1458,22 +1458,22 @@ final class GameplayScreen {
             if ((!(0 > this.field_B)) &&
               (!MouseWheelInput.field_a) &&
               (!tf.a((byte) 123))) {
-              if (~tn.field_c == ~de.field_f ||
-                bc.field_b == de.field_f) {
+              if (~tn.field_c == ~DebouncedFieldValidator.field_f ||
+                bc.field_b == DebouncedFieldValidator.field_f) {
                 this.field_G.rotateCameraLeft(15481);
               }
-              if (ve.field_a == de.field_f ||
-                ~jb.field_y == ~de.field_f) {
+              if (ve.field_a == DebouncedFieldValidator.field_f ||
+                ~jb.field_y == ~DebouncedFieldValidator.field_f) {
                 this.field_G.rotateCameraRight((byte) 119);
               }
             }
           } else {
-            if (~tn.field_c == ~de.field_f ||
-              bc.field_b == de.field_f) {
+            if (~tn.field_c == ~DebouncedFieldValidator.field_f ||
+              bc.field_b == DebouncedFieldValidator.field_f) {
               this.field_G.rotateCameraLeft(15481);
             }
-            if (ve.field_a == de.field_f ||
-              ~jb.field_y == ~de.field_f) {
+            if (ve.field_a == DebouncedFieldValidator.field_f ||
+              ~jb.field_y == ~DebouncedFieldValidator.field_f) {
               this.field_G.rotateCameraRight((byte) 119);
             }
           }
@@ -1484,19 +1484,19 @@ final class GameplayScreen {
           if (param0 != 115) {
             return;
           }
-          if (AccountServiceResult.field_k == de.field_f ||
-            ~na.field_n == ~de.field_f) {
+          if (AccountServiceResult.field_k == DebouncedFieldValidator.field_f ||
+            ~AgeValidator.field_n == ~DebouncedFieldValidator.field_f) {
             this.field_C = this.field_C | 2;
           }
-          if (de.field_f == ro.field_i ||
-            ~om.field_B == ~de.field_f) {
+          if (DebouncedFieldValidator.field_f == ro.field_i ||
+            ~om.field_B == ~DebouncedFieldValidator.field_f) {
             this.field_C = this.field_C | 1;
           }
-          if (~de.field_f == ~ga.field_fb) {
+          if (~DebouncedFieldValidator.field_f == ~ga.field_fb) {
             this.field_D.requestLevelRestore(-4);
           }
           if (this.field_A &&
-            de.field_f == 59 &&
+            DebouncedFieldValidator.field_f == 59 &&
             this.field_D.field_j == 3) {
             ci.field_b = 0;
             mc.field_e = 0;
@@ -2071,7 +2071,7 @@ final class GameplayScreen {
           pn.field_R = 617;
           c.field_h = 9170;
           gi.field_u = 8768;
-          df.field_k = 2127;
+          BirthDateValidator.field_k = 2127;
           ca.field_g = 1220;
           var9_int = DiskCacheWorker.field_l;
           DiskCacheWorker.field_l = 0;

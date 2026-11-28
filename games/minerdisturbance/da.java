@@ -56,7 +56,7 @@ final class da {
                 param1 = oa.a((byte) -93, fe.field_r, new String[]{param1});
               }
               if (oh.field_F) {
-                param1 = jg.field_j;
+                param1 = MatchingFieldValidator.field_j;
               }
               sj.field_h.a(param1, param2, (byte) -115);
             }

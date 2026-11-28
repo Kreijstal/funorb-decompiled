@@ -43,12 +43,12 @@ final class SecondaryNodeDeque implements Iterable {
         }
         var1 = ResourceArchive.field_f;
         synchronized (var1) {
-          if (tl.field_o == tc.field_h) {
+          if (MatchingFieldValidator.field_o == tc.field_h) {
             return false;
           }
-          ji.field_a = hj.field_b[tl.field_o];
-          id.field_b = pf.field_d[tl.field_o];
-          tl.field_o = 1 + tl.field_o & 127;
+          ji.field_a = hj.field_b[MatchingFieldValidator.field_o];
+          id.field_b = pf.field_d[MatchingFieldValidator.field_o];
+          MatchingFieldValidator.field_o = 1 + MatchingFieldValidator.field_o & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

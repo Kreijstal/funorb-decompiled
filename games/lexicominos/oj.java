@@ -195,7 +195,7 @@ final class oj {
             this.a(var16, false, param0[var5_int]);
             for (var6 = 0; var16.length > var6; var6++) {
               if (var16[var6] != 0) {
-                var11.addLast(121, pc.a(var5_int, var16[var6], (byte) 14, var6, 1));
+                var11.addLast(121, EmailFormatValidator.a(var5_int, var16[var6], (byte) 14, var6, 1));
               }
             }
           }
@@ -212,7 +212,7 @@ final class oj {
             var7Lifetime1 = var12;
             while (var12 < var18.length) {
               if (0 != var20[var12]) {
-                var3.addLast(param1 - 17053, pc.a(-var12 + param0.length - 1, 1, (byte) 14, var6Lifetime1, var20[var12]));
+                var3.addLast(param1 - 17053, EmailFormatValidator.a(-var12 + param0.length - 1, 1, (byte) 14, var6Lifetime1, var20[var12]));
               }
               var12++;
             }

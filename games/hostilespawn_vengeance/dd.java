@@ -3,18 +3,18 @@
  */
 final class dd extends ql {
     static RgbSprite field_j;
-    private oc[] field_h;
-    private oc field_k;
+    private GridPoint[] field_h;
+    private GridPoint field_k;
     private v field_d;
     static int[][] field_o;
     private oj[] field_e;
-    private oc field_l;
-    private oc field_m;
-    private oc field_f;
+    private GridPoint field_l;
+    private GridPoint field_m;
+    private GridPoint field_f;
     private boolean field_g;
     static ja field_i;
     private v field_p;
-    static pg[] field_n;
+    static IndexedSprite[] field_n;
 
     final String a(boolean param0) {
         if (param0) {
@@ -137,9 +137,9 @@ final class dd extends ql {
         v var8 = null;
         v[] var9 = null;
         v var10 = null;
-        oc var11 = null;
-        oc var12 = null;
-        oc var13 = null;
+        GridPoint var11 = null;
+        GridPoint var12 = null;
+        GridPoint var13 = null;
         v var10Lifetime1;
         v var10Lifetime2;
         int var1_intLifetime1;
@@ -167,7 +167,7 @@ final class dd extends ql {
           if (rl.field_c == 0 &&
             bm.field_c == 0 &&
             0 <= ul.field_L) {
-            if (dn.field_i != of.field_d) {
+            if (dn.field_i != ClientLookupTables.field_d) {
               var9 = vg.field_e;
               for (var2Lifetime1 = 0; var9.length > var2Lifetime1; var2Lifetime1++) {
                 var10Lifetime1 = var9[var2Lifetime1];
@@ -178,19 +178,19 @@ final class dd extends ql {
               mm.field_m[0].field_j.field_e <= 43 &&
               58 >= mm.field_m[0].field_j.field_g) {
               ul.field_L = 1;
-              var11 = new oc(42, 52);
-              mm.field_m[el.field_j] = new oj(var11, 6, rl.field_c);
-              ln.field_a.field_c[var11.b(-4)] = 3;
-              el.field_j = el.field_j + 1;
+              var11 = new GridPoint(42, 52);
+              mm.field_m[ProxySocketFactory.field_j] = new oj(var11, 6, rl.field_c);
+              ln.field_a.field_c[var11.getClampedTileIndex(-4)] = 3;
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             if (ul.field_L == 0 &&
               mm.field_m[0].field_j.field_e >= 48 &&
               mm.field_m[0].field_j.field_g <= 56) {
               ul.field_L = 2;
-              var12 = new oc(42, 52);
-              mm.field_m[el.field_j] = new oj(var12, 6, rl.field_c);
-              ln.field_a.field_c[var12.b(-4)] = 3;
-              el.field_j = el.field_j + 1;
+              var12 = new GridPoint(42, 52);
+              mm.field_m[ProxySocketFactory.field_j] = new oj(var12, 6, rl.field_c);
+              ln.field_a.field_c[var12.getClampedTileIndex(-4)] = 3;
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             if (ul.field_L == 0) {
               var1_int = -uj.field_p.field_e + 888;
@@ -365,8 +365,8 @@ final class dd extends ql {
             }
             if (ul.field_L == 1 ||
               ul.field_L == 2) {
-              var13 = new oc(42, 52);
-              if (ln.field_a.field_c[var13.b(-4)] != 3) {
+              var13 = new GridPoint(42, 52);
+              if (ln.field_a.field_c[var13.getClampedTileIndex(-4)] != 3) {
                 ul.field_L = 3;
               }
             }
@@ -442,8 +442,8 @@ final class dd extends ql {
               mm.field_m[0].field_j.field_g >= 30) {
               ul.field_L = 13;
             }
-            if (bj.field_a &&
-              of.field_d != dn.field_i) {
+            if (DebouncedFieldValidator.field_a &&
+              ClientLookupTables.field_d != dn.field_i) {
               ul.field_L = 14;
             }
             if (ul.field_L == 13 &&
@@ -457,7 +457,7 @@ final class dd extends ql {
               vg.field_e[0].a((byte) -74);
             }
             if (tg.field_a &&
-              of.field_d != dn.field_i) {
+              ClientLookupTables.field_d != dn.field_i) {
               vg.field_e[1].a((byte) -50);
             }
           } else {
@@ -543,18 +543,18 @@ final class dd extends ql {
         var7 = var8;
         var6 = var7;
         var2 = var6;
-        this.field_l = new oc(var8[0], var8[1]);
-        this.field_f = new oc(var8[2], var8[3]);
-        this.field_m = new oc(var8[4], var8[5]);
+        this.field_l = new GridPoint(var8[0], var8[1]);
+        this.field_f = new GridPoint(var8[2], var8[3]);
+        this.field_m = new GridPoint(var8[4], var8[5]);
         for (var3 = 0; this.field_h.length > var3; var3++) {
-          this.field_h[var3] = new oc(var6[10 + 2 * var3], var6[1 + (10 + 2 * var3)]);
+          this.field_h[var3] = new GridPoint(var6[10 + 2 * var3], var6[1 + (10 + 2 * var3)]);
         }
         this.field_d = new v(ta.field_kb, 0, 24 * this.field_m.field_g - 168, 200);
         this.field_d.field_l = 0;
         this.field_p = new v(PacketBuffer.field_o, 0, 0, 200);
         this.field_p.field_l = 0;
         var3Lifetime1 = param0;
-        for (var4 = 0; el.field_j > var4; var4++) {
+        for (var4 = 0; ProxySocketFactory.field_j > var4; var4++) {
           if (mm.field_m[var4].field_i == 22 ||
             mm.field_m[var4].field_i == 5) {
             incrementValue$0 = var3Lifetime1;
@@ -562,17 +562,17 @@ final class dd extends ql {
             this.field_e[incrementValue$0] = mm.field_m[var4];
           }
         }
-        this.field_k = new oc();
+        this.field_k = new GridPoint();
         for (var4Lifetime1 = 0; var4Lifetime1 < ll.field_a; var4Lifetime1++) {
           if (wh.field_b[var4Lifetime1].field_i == 0 &&
             wh.field_b[var4Lifetime1].field_h == 4) {
-            this.field_k.a((byte) 46, wh.field_b[var4Lifetime1].field_j);
+            this.field_k.copyCoordinatesFrom((byte) 46, wh.field_b[var4Lifetime1].field_j);
           }
         }
         CrossfadingMidiPcmStream.a(9, param0 ^ 1);
-        nh.field_E.a((byte) 46, this.field_l);
+        nh.field_E.copyCoordinatesFrom((byte) 46, this.field_l);
         if (om.field_b) {
-          mm.field_m[0].field_j.a((byte) 46, this.field_l);
+          mm.field_m[0].field_j.copyCoordinatesFrom((byte) 46, this.field_l);
           VolumeRampingMidiPcmStream.field_Q[1] = true;
           VolumeRampingMidiPcmStream.field_U[0] = 1;
           VolumeRampingMidiPcmStream.field_ib[0] = 420;
@@ -586,7 +586,7 @@ final class dd extends ql {
         oj[] var4;
         oj var6;
         int var7;
-        oc var8;
+        GridPoint var8;
         int var3Lifetime1;
         int var3Lifetime2;
         var7 = HostileSpawn.field_I ? 1 : 0;
@@ -624,10 +624,10 @@ final class dd extends ql {
         } else {
           if (ha.field_t == 9 &&
             this.field_g &&
-            of.field_d != dn.field_i) {
+            ClientLookupTables.field_d != dn.field_i) {
             ti.a(236, (byte) 103, 19);
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.a((byte) 46, this.field_f);
+            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_f);
             this.field_d.field_l = -1;
             this.field_p.field_l = -1;
             var4 = this.field_e;
@@ -681,7 +681,7 @@ final class dd extends ql {
     }
 
     public dd() {
-        this.field_h = new oc[6];
+        this.field_h = new GridPoint[6];
         this.field_e = new oj[10];
     }
 

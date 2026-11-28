@@ -26,7 +26,7 @@ abstract class ByteStorage {
           var3 = ug.field_b * ug.field_b;
           var4 = -(param0 * param0) + var3;
           fm.field_T.a(var2 - 199 * var4 / var3, 199, -2147483648, -4 + SoftwareRasterizer.field_c - 210, 90);
-          ri.field_k.a(var2 + (202 + var4 * 438 / var3), 438, -2147483648, -120 + (SoftwareRasterizer.field_c - 4), 0);
+          BirthDateValidator.field_k.a(var2 + (202 + var4 * 438 / var3), 438, -2147483648, -120 + (SoftwareRasterizer.field_c - 4), 0);
           return;
         }
     }

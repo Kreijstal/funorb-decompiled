@@ -11,7 +11,7 @@ final class kja {
     int field_d;
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
-        wg.a(param3, -90);
+        PasswordValidator.a(param3, -90);
         if (param2 <= -9) {
           vla.a(5, param1, param0, param3);
           return;

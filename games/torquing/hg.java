@@ -154,7 +154,7 @@ final class hg {
           }
           var2Lifetime8 = da.a((byte) -43, "unknown_quantity");
           if (null != var2Lifetime8) {
-            af.field_b = SecondaryNodeDeque.a(var2Lifetime8, false);
+            MenuLayer.field_b = SecondaryNodeDeque.a(var2Lifetime8, false);
           }
           var2Lifetime9 = da.a((byte) -51, "space_x_unknown");
           if (null != var2Lifetime9) {
@@ -387,7 +387,7 @@ final class hg {
           }
           var2Lifetime66 = da.a((byte) -108, "lookoutfor");
           if (var2Lifetime66 != null) {
-            eq.field_c = SecondaryNodeDeque.a(var2Lifetime66, false);
+            DebouncedFieldValidator.field_c = SecondaryNodeDeque.a(var2Lifetime66, false);
           }
           var2Lifetime67 = da.a((byte) -70, "surfaces_colon");
           if (var2Lifetime67 != null) {

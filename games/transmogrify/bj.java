@@ -207,11 +207,11 @@ class bj extends kb {
         if (null != SecondaryNodeDequeIterator.field_d) {
           SecondaryNodeDequeIterator.field_d.r(77);
         }
-        ca.field_g = new ck();
+        DebouncedFieldValidator.field_g = new DisplayNameSelectionPanel();
         if (param0 != -2147483648) {
           field_P = (String) null;
         }
-        l.field_d.b(104, ca.field_g);
+        l.field_d.b(104, DebouncedFieldValidator.field_g);
     }
 
     private bj(long param0, bj param1, int param2, int param3, int param4, int param5, String param6) {

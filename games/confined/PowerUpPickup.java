@@ -23,11 +23,11 @@ final class PowerUpPickup extends MovingTunnelEntity {
           var4 = 0;
           var5 = 0;
           for (var6 = 0; var6 < 18; var6++) {
-            if (bk.field_h[var6] >= var5 &&
+            if (EmailFormatValidator.field_h[var6] >= var5 &&
               param0.field_J.canSpawnPowerUp(-5, var6)) {
-              if (bk.field_h[var6] > var5) {
+              if (EmailFormatValidator.field_h[var6] > var5) {
                 var4 = 0;
-                var5 = bk.field_h[var6];
+                var5 = EmailFormatValidator.field_h[var6];
               }
               var4++;
               if ((double)var4 * Math.random() < 1.0) {
@@ -101,7 +101,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             if (2 == we.field_k) {
               gk.field_u = new BufferedSocket((java.net.Socket) (ol.field_a.result), ek.field_p);
               var2 = new PacketBuffer(13);
-              StageDirector.writeConnectionHandshakeHeader(hj.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
+              StageDirector.writeConnectionHandshakeHeader(AgeValidator.field_k, var2, hc.field_n, (byte) 40, wi.field_c);
               var2.writeByte(93, 15);
               var2.writeInt(-103, pi.field_L);
               gk.field_u.queueWrite(13, false, var2.payload, 0);
@@ -237,7 +237,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
         if (cg.field_f > param3) {
           ResourceArchive.field_f = param3;
         }
-        if (param3 > hj.field_j) {
+        if (param3 > AgeValidator.field_j) {
           ka.field_P = param3;
         }
         am.field_I[mc.field_c] = param1;
@@ -533,7 +533,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                   }
                                 } else {
                                   if (param1.field_zb >= 10) {
-                                    this.a(ke.field_ab, -111);
+                                    this.a(AccountRegistrationPanel.field_ab, -111);
                                   } else {
                                     if (param1.field_zb < 0) {
                                       param1.field_zb = 4;
@@ -546,7 +546,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                       }
                                       param1.field_zb = param1.field_zb + var4;
                                       if (var4 == 1) {
-                                        stackIn_99_0 = wh.field_ab;
+                                        stackIn_99_0 = ValidatedTextField.field_ab;
                                       } else {
                                         stackIn_99_0 = b.a(new String[]{Integer.toString(var4)}, kn.field_b, 1177);
                                       }
@@ -593,7 +593,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
               param1.field_T = false;
               this.d(10797);
             } else {
-              this.a(hj.field_i, -76);
+              this.a(AgeValidator.field_i, -76);
             }
           }
           if (this.field_z) {

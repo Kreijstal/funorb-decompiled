@@ -24,7 +24,7 @@ final class tl {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           for (var2_int = 0; 5 > var2_int; var2_int++) {
-            fd.field_o[var2_int] = param1;
+            ConfirmedEmailAvailabilityValidator.field_o[var2_int] = param1;
           }
           if (!param1) {
             DequeCursor.field_b = -1;

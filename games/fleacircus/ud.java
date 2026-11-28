@@ -200,7 +200,7 @@ final class ud {
         int var3Lifetime1;
         var5 = fleas.field_A ? 1 : 0;
         try {
-          var7 = tl.field_p;
+          var7 = MatchingFieldValidator.field_p;
           var8 = var7;
           sd.field_f = var8.b(DualLinkNode.field_i[12]);
           var2 = var8.b(DualLinkNode.field_i[13]);
@@ -227,14 +227,14 @@ final class ud {
           gj.field_A.field_t = fl.field_f;
           gj.field_A.field_y = 1;
           gj.field_A.field_z = -1;
-          ca.field_L = new mf(3, 1560);
+          AccountRegistrationPanel.field_L = new mf(3, 1560);
           GzipDecompressor.field_b = new mf(6, 165);
           fb.field_a = new mf(3, 4715);
           cm.field_i = new mf(3, 1560);
           mf.field_e = new mf(6, 165);
           CrossfadingMidiPcmStream.field_z = new mf(3, 4715);
-          for (var3Lifetime1 = 0; ca.field_L.field_d.length > var3Lifetime1; var3Lifetime1++) {
-            ca.field_L.field_d[var3Lifetime1] = var3Lifetime1 * 65536;
+          for (var3Lifetime1 = 0; AccountRegistrationPanel.field_L.field_d.length > var3Lifetime1; var3Lifetime1++) {
+            AccountRegistrationPanel.field_L.field_d[var3Lifetime1] = var3Lifetime1 * 65536;
             cm.field_i.field_d[var3Lifetime1] = var3Lifetime1 * 65536;
             fb.field_a.field_d[var3Lifetime1] = 65792 * var3Lifetime1;
             CrossfadingMidiPcmStream.field_z.field_d[var3Lifetime1] = 65792 * var3Lifetime1;

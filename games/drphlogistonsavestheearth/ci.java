@@ -3,7 +3,7 @@
  */
 final class ci extends qa {
     private int field_X;
-    private qi field_V;
+    private FieldValidator field_V;
     static int field_W;
     private RgbSprite field_Z;
     static volatile boolean field_U;
@@ -25,7 +25,7 @@ final class ci extends qa {
         return null;
     }
 
-    ci(qi param0, String param1, int param2, int param3, int param4, int param5) {
+    ci(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, pe.a(2147483647));
         try {
           this.field_V = param0;
@@ -99,7 +99,7 @@ final class ci extends qa {
         var28 = null;
         var33 = null;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var6 = this.field_V.a(-12317);
+        var6 = this.field_V.getValidationStatus(-12317);
         if (var6 == ai.field_A) {
           var17 = MidiPcmStream.field_T;
           if (!var17.equals(this.field_p)) {
@@ -107,7 +107,7 @@ final class ci extends qa {
             this.h(126);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_V.a(-12317);
+          var6 = this.field_V.getValidationStatus(-12317);
           var38 = (va) ((Object) this.field_l);
           var9 = param0 + this.field_o;
           var10 = var38.a((vg) (this), param3, (byte) -121) + (var38.a((vg) (this), true).b(20111) >> 1);
@@ -157,7 +157,7 @@ final class ci extends qa {
             this.h(126);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_V.a(-12317);
+          var6 = this.field_V.getValidationStatus(-12317);
           var39 = (va) ((Object) this.field_l);
           var9Lifetime1 = param0 + this.field_o;
           var10Lifetime1 = var39.a((vg) (this), param3, (byte) -121) + (var39.a((vg) (this), true).b(20111) >> 1);
@@ -200,7 +200,7 @@ final class ci extends qa {
           this.field_Z.a(-(var26.field_z >> 1) + var9Lifetime1, -var26.field_C + var10Lifetime1, 256);
           return;
         }
-        var27 = this.field_V.b(-16034);
+        var27 = this.field_V.getValidationMessage(-16034);
         if (var27 == null) {
           var32 = this.field_Y;
           if (!var32.equals(this.field_p)) {
@@ -208,7 +208,7 @@ final class ci extends qa {
             this.h(126);
           }
           super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_V.a(-12317);
+          var6Lifetime1 = this.field_V.getValidationStatus(-12317);
           var41 = (va) ((Object) this.field_l);
           var9Lifetime2 = param0 + this.field_o;
           var10Lifetime2 = var41.a((vg) (this), param3, (byte) -121) + (var41.a((vg) (this), true).b(20111) >> 1);
@@ -253,7 +253,7 @@ final class ci extends qa {
           this.h(126);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_V.a(-12317);
+        var6Lifetime2 = this.field_V.getValidationStatus(-12317);
         var40 = (va) ((Object) this.field_l);
         var9Lifetime3 = param0 + this.field_o;
         var10Lifetime3 = var40.a((vg) (this), param3, (byte) -121) + (var40.a((vg) (this), true).b(20111) >> 1);

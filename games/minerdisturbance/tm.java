@@ -679,13 +679,13 @@ final class tm extends IntrusiveNode {
         int var10 = 0;
         var10 = MinerDisturbance.field_ab;
         try {
-          if (e.field_i[param0].length == 1) {
-            this.field_t = e.field_i[param0][0];
+          if (PasswordValidator.field_i[param0].length == 1) {
+            this.field_t = PasswordValidator.field_i[param0][0];
             if (var10 != 0) {
-              this.field_t = e.field_i[param0][cm.field_o];
+              this.field_t = PasswordValidator.field_i[param0][cm.field_o];
             }
           } else {
-            this.field_t = e.field_i[param0][cm.field_o];
+            this.field_t = PasswordValidator.field_i[param0][cm.field_o];
           }
           if (null == this.field_t) {
             return;

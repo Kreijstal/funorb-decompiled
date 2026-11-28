@@ -4,7 +4,7 @@
 final class AccountCreationResultPanel extends nk implements vg {
     static int[] field_Tb;
     static DungeonTileState field_Pb;
-    private rg field_Ob;
+    private AccountRegistrationPanel field_Ob;
     static ResourceArchive field_Qb;
     static String field_Nb;
     private boolean field_Rb;
@@ -13,7 +13,7 @@ final class AccountCreationResultPanel extends nk implements vg {
     private boolean field_Wb;
     static String field_Ub;
 
-    AccountCreationResultPanel(ji param0, rg param1) {
+    AccountCreationResultPanel(ji param0, AccountRegistrationPanel param1) {
         super(param0, hc.field_f, qd.field_a, false, false);
         try {
           this.field_Ob = param1;
@@ -110,7 +110,7 @@ final class AccountCreationResultPanel extends nk implements vg {
               var5Lifetime4 = var8;
               var5Lifetime5 = var8;
               if (0 != param1.length()) {
-                var5Lifetime6 = var8 + "; Expires=" + go.a(94608000000L + kd.correctedCurrentTimeMillis(-2456), 42) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var8 + "; Expires=" + DungeonRaidScreen.formatTimestamp(94608000000L + kd.correctedCurrentTimeMillis(-2456), 42) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
@@ -205,7 +205,7 @@ final class AccountCreationResultPanel extends nk implements vg {
               var5.a(gl.field_Jb, (pg) (this), (byte) -83);
             } else {
               if (param0.statusCode != 5) {
-                var5.a(-1, 6824, gk.field_O);
+                var5.a(-1, 6824, DisplayNameSelectionPanel.field_O);
               } else {
                 var5.a(11, 6824, oh.field_b);
                 var5.a(17, 6824, db.field_u);
@@ -213,7 +213,7 @@ final class AccountCreationResultPanel extends nk implements vg {
             }
             if (param0.statusCode != 3) {
               if (param0.statusCode == 6) {
-                var5.a(9, 6824, ip.field_i);
+                var5.a(9, 6824, TextFieldValidator.field_i);
               }
             } else {
               var5.a(7, 6824, mo.field_d);
@@ -243,7 +243,7 @@ final class AccountCreationResultPanel extends nk implements vg {
 
     final void r(int param0) {
         int var2 = -20 / ((param0 + 37) / 34);
-        this.showAccountCreationResult(p.createAccountErrorResult(248, im.field_l, -28323), true, true);
+        this.showAccountCreationResult(DungeonBuilderScreen.createAccountErrorResult(248, im.field_l, -28323), true, true);
     }
 
     final static void k(byte param0) {
@@ -339,7 +339,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           return ck.field_G;
         }
         if (param1 == 24) {
-          return qm.field_m;
+          return EmailFormatValidator.field_m;
         }
         if (param1 == 25) {
           return fl.field_j;
@@ -366,7 +366,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           return bn.field_h;
         }
         if (param1 == 34) {
-          return lb.field_v;
+          return PlayerDungeonProfile.field_v;
         }
         if (param1 == 35) {
           return null;

@@ -79,7 +79,7 @@ final class ie extends kf {
           }
           if (param3 == 255) {
             stackIn_6_0 = !(qb.field_a >= 13);
-            mf.field_a = cf.createAccountSuccessResult(stackIn_6_0, false);
+            mf.field_a = ConfirmedEmailAvailabilityValidator.createAccountSuccessResult(stackIn_6_0, false);
             var5 = (String[]) null;
             dl.a((byte) -12, (String[]) null);
             return;

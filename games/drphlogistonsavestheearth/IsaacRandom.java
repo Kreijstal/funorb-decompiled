@@ -329,7 +329,7 @@ final class IsaacRandom {
     }
 
     final static void b(boolean param0) {
-        MidiPcmStream.field_I = new v();
+        MidiPcmStream.field_I = new AccountRegistrationPanel();
         PcmOutputWorker.field_e.a(33, MidiPcmStream.field_I);
         if (param0) {
           field_d = (he[]) null;

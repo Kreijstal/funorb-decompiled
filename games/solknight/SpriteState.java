@@ -63,7 +63,7 @@ abstract class SpriteState extends DualLinkNode {
           var22 = null;
           var12 = SolKnight.field_L ? 1 : 0;
           try {
-            var13 = (di) (ga.field_E.beginBackward((byte) 51));
+            var13 = (di) (DisplayNameSelectionPanel.field_E.beginBackward((byte) 51));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -253,7 +253,7 @@ abstract class SpriteState extends DualLinkNode {
           var11 = te.field_N;
           var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
-            var10 = uk.i(-1);
+            var10 = PasswordValidator.i(-1);
             var16 = var10;
             var14 = var16;
             var3 = var14;
@@ -288,7 +288,7 @@ abstract class SpriteState extends DualLinkNode {
                   je.a(false);
                   return;
                 }
-                var12.field_n = uk.i(-1);
+                var12.field_n = PasswordValidator.i(-1);
                 var12.field_k = true;
                 var12.field_m = var12.field_n[0];
                 var12.unlink(10);
@@ -334,7 +334,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           var4 = (dj) (sa.field_n.beginBackward((byte) 51));
           while (var4 != null) {
-            dc.a(var4, param1, (byte) 46);
+            EmailFormatValidator.a(var4, param1, (byte) 46);
             var4 = (dj) (sa.field_n.nextBackward(-46));
           }
           return;

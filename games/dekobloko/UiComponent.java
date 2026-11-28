@@ -301,12 +301,12 @@ class UiComponent extends HashNode {
         MixedSupport050.integerState0265 = integerArgument1;
         GameDomainSupport003.integerState0278 = integerArgument9;
         MixedSupport098.stringState0416 = stringArgument6;
-        UiComponentPart005.integerState0122 = integerArgument4;
+        DisplayNameSelectionPanel.integerState0122 = integerArgument4;
         if (integerArgument8 != 0) {
           return;
         }
         try {
-          MixedSupport142.integerState0880 = integerArgument2;
+          ReturnedShapeUpdate.integerState0880 = integerArgument2;
           MixedSupport119.networkSupport003State0003 = (NetworkSupport003) ((Object) new NetworkArchiveRequestManager());
           NetworkArchiveRequestManager.cacheWorkQueueState0003 = new CacheWorkQueue(platformServiceArgument7);
           ProxySocketFactory.js5ArchiveManagerState0001 = new Js5ArchiveManager(MixedSupport119.networkSupport003State0003, NetworkArchiveRequestManager.cacheWorkQueueState0003);
@@ -428,7 +428,7 @@ class UiComponent extends HashNode {
           }
           stringLocal4 = RichTextLayout.computeString0397(true);
           if (stringLocal4 != null) {
-            RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal4, byteArgument3 + 71, ClientException.integerState0142, UiComponentPart022.integerState0573);
+            RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal4, byteArgument3 + 71, ClientException.integerState0142, AccountFieldStatusIndicator.integerState0573);
           }
           return;
         }
@@ -443,7 +443,7 @@ class UiComponent extends HashNode {
         }
         stringLocal5 = RichTextLayout.computeString0397(true);
         if (stringLocal5 != null) {
-          RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal5, byteArgument3 + 71, ClientException.integerState0142, UiComponentPart022.integerState0573);
+          RenderingSupport001.networkSupport002State0001.performAction0180(stringLocal5, byteArgument3 + 71, ClientException.integerState0142, AccountFieldStatusIndicator.integerState0573);
         }
     }
 
@@ -481,7 +481,7 @@ class UiComponent extends HashNode {
         }
         if (HuffmanCodec.integerState0353 == 0) {
           if (SceneWidgetPart005.integerState0328 != 0) {
-            if (this.computeBoolean0056(TextLineMetrics.integerState0535, UiComponentPart013.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+            if (this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
               booleanArgument2 = false;
               if ((integerLocal2 != 0) &&
                 (integerLocal1 != 0)) {
@@ -531,7 +531,7 @@ class UiComponent extends HashNode {
         }
         if (integerLocal1 == 0) {
           if (SceneWidgetPart005.integerState0328 != 0 &&
-            this.computeBoolean0056(TextLineMetrics.integerState0535, UiComponentPart013.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+            this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
             booleanArgument2 = false;
             if (integerLocal2 == 0) {
             }
@@ -574,7 +574,7 @@ class UiComponent extends HashNode {
         }
         this.computeBoolean0214(MixedSupport101.integerState0590, integerArgument1, HashNode.integerState0069, this, HuffmanCodec.integerState0353, integerArgument3, false);
         if (SceneWidgetPart005.integerState0328 != 0) {
-          if (this.computeBoolean0056(TextLineMetrics.integerState0535, UiComponentPart013.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
+          if (this.computeBoolean0056(TextLineMetrics.integerState0535, LoginPanel.integerState0276, this, SceneWidgetPart005.integerState0328, integerArgument1, integerArgument3, (byte) -55)) {
             booleanArgument2 = false;
             if (integerLocal2 != 0) {
               this.performAction0225((byte) -95);

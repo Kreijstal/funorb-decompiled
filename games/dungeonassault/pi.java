@@ -353,7 +353,7 @@ final class pi {
           oi.field_J.writeByte(6, 255);
           oi.field_J.writeByte(6, 224);
           oi.field_J.writeShort(16, -121);
-          var22 = he.field_o;
+          var22 = AgeValidator.field_o;
           var16 = var22;
           var14 = var16;
           var8 = var14;

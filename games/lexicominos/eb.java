@@ -8,7 +8,7 @@ final class eb {
     private byte[][] field_i;
     private byte[][] field_e;
     static String field_a;
-    static ti field_b;
+    static LoginPanel field_b;
     private byte[][] field_h;
     static IntrusiveDeque field_f;
     int field_g;

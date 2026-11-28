@@ -107,7 +107,7 @@ final class InputAdapter001 implements CallbackContract004 {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         MixedSupport021.asyncTaskState0001 = null;
         MixedSupport053.integerState0273 = integerArgument1;
-        UiComponentPart028.bufferedSocketState0003 = null;
+        EditableTextField.bufferedSocketState0003 = null;
         int integerLocal2 = MixedSupport014.integerState0099;
         MixedSupport014.integerState0099 = MixedSupport050.integerState0265;
         if (51 == integerArgument2) {

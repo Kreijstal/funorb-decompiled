@@ -42,7 +42,7 @@ class mc extends hh {
             mc.clearDeclaredStaticReferences(21);
           }
           tg.field_f[param1] = param2;
-          bf.field_f[param1] = (qe) ((Object) new qc(param1));
+          bf.field_f[param1] = (DungeonAssaultScreen) ((Object) new MenuScreen(param1));
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -111,12 +111,12 @@ abstract class NetworkSupport003 {
             integerLocal1 = 1;
             if (integerArgument3 == 8) {
               integerArgument3 = 2;
-              if (UiComponentPart032.booleanState0198) {
+              if (BirthDateInput.booleanState0198) {
                 stringArgument1 = MixedSupport143.stringState0600;
               } else {
                 stringArgument1 = MixedSupport024.stringState0115;
               }
-              MixedSupport025.uiComponentPart013State0001.performAction0628(SceneWidgetPart004.stringState0217, 30534);
+              MixedSupport025.uiComponentPart013State0001.performAction0628(PlayerNamePrompt.stringState0217, 30534);
             }
             if (integerArgument3 == 10) {
               integerLocal1 = 0;
@@ -133,7 +133,7 @@ abstract class NetworkSupport003 {
             }
             if (integerArgument3 != 256 &&
               integerArgument3 != 10 &&
-              !UiComponentPart032.booleanState0198) {
+              !BirthDateInput.booleanState0198) {
               MixedSupport025.uiComponentPart013State0001.performAction0624(51);
             }
           }

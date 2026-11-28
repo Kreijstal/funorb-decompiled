@@ -22,7 +22,7 @@ final class fh extends ScoreModifier {
           if (!param0) {
             return;
           }
-          li.field_c = 11;
+          DebouncedFieldValidator.field_c = 11;
           NanoFrameTimer.field_h = new int[260];
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;

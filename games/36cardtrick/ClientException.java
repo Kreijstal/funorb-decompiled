@@ -29,7 +29,7 @@ final class ClientException extends RuntimeException {
               var2 = Runtime.getRuntime();
               var5 = (Object[]) null;
               var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-              v.field_Q = (int)(var3.longValue() / 1048576L) + 1;
+              ValidatedTextField.field_Q = (int)(var3.longValue() / 1048576L) + 1;
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

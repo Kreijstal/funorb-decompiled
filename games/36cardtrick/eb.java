@@ -217,7 +217,7 @@ final class eb {
           eh.field_l = param2;
           bi.field_b = param0;
           oj.field_d = param1;
-          ak.field_O = param8;
+          LoginPanel.field_O = param8;
           pf.field_h = param6;
           ej.field_kb = param7;
           if (param5 > -52) {

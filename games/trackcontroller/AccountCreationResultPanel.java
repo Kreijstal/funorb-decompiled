@@ -5,12 +5,12 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
     static int field_pb;
     static FullscreenFocusCanvas field_rb;
     static String field_qb;
-    private vd field_mb;
+    private AccountRegistrationPanel field_mb;
     private boolean field_lb;
     static String field_nb;
     private boolean field_ob;
 
-    AccountCreationResultPanel(vl param0, vd param1) {
+    AccountCreationResultPanel(vl param0, AccountRegistrationPanel param1) {
         super(param0, p.field_a, sa.field_J, false, false);
         try {
           this.field_mb = param1;
@@ -87,10 +87,10 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
               this.b(new ge(this), param2 ^ -118);
               return;
             }
-            var5.a(param2 - 21, (tg) (this), hd.field_m);
+            var5.a(param2 - 21, (tg) (this), ConfirmedEmailAvailabilityValidator.field_m);
           } else {
             if (this.field_lb) {
-              var5.a(-14, (tg) (this), hd.field_m);
+              var5.a(-14, (tg) (this), ConfirmedEmailAvailabilityValidator.field_m);
             } else {
               if (param1.statusCode == 5) {
                 var5.a(-17040, dh.field_r, 11);

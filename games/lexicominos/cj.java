@@ -22,7 +22,7 @@ final class cj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
-          if (null == cl.field_P) {
+          if (null == ValidatedTextField.field_P) {
             return null;
           }
           var6 = (CharSequence) ((Object) param1);
@@ -30,7 +30,7 @@ final class cj extends IntrusiveNode {
           if (var2 == null) {
             var2 = param1;
           }
-          var3 = (hc) (cl.field_P.a((long)var2.hashCode(), true));
+          var3 = (hc) (ValidatedTextField.field_P.a((long)var2.hashCode(), true));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_R);
             var4_ref_String = ProxyAuthenticationRequiredException.a(var7, (byte) -48);
@@ -41,7 +41,7 @@ final class cj extends IntrusiveNode {
               stackIn_15_0 = var3;
               return stackIn_15_0;
             }
-            var3 = (hc) (cl.field_P.b(-99));
+            var3 = (hc) (ValidatedTextField.field_P.b(-99));
           }
           var4 = -88 % ((-51 - param0) / 52);
           stackIn_18_0 = null;

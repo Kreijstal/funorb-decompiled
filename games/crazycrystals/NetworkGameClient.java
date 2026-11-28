@@ -67,7 +67,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                         this.j(-8);
                       } else {
                         if (var2 == 8) {
-                          ah.a(kd.field_n, rk.field_b, -126, ResultScene.field_a);
+                          ah.a(ConfirmedEmailAvailabilityValidator.field_n, rk.field_b, -126, ResultScene.field_a);
                         } else {
                           if (var2 == 16) {
                             NetworkArchiveRequest.g(-1266);
@@ -295,11 +295,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 7808) {
           this.field_n = -14L;
         }
-        int var2 = kd.field_n.readUnsignedByte(255);
+        int var2 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         int var4 = -1 + rk.field_b;
         byte[] var5 = new byte[var4];
-        kd.field_n.b(var4, 0, 29712, var5);
+        ConfirmedEmailAvailabilityValidator.field_n.b(var4, 0, 29712, var5);
         ec.a(var3 != 0, fa.a((byte) -70, var5), le.b((byte) -20), (byte) -17);
     }
 
@@ -480,7 +480,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         lm.a((byte) 64);
         if (!aj.e((byte) -14) &&
           hp.field_s != 11) {
-          kd.d(3);
+          ConfirmedEmailAvailabilityValidator.d(3);
         }
         if (ok.field_g != null) {
           of.field_H = ok.field_g.pollRotation(false);
@@ -546,7 +546,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (ei.field_E == 5) {
                       rg.a(fm.field_o, 5, param1 - 15257);
                     } else {
-                      rg.a(ci.field_j, 256, -257);
+                      rg.a(AgeValidator.field_j, 256, -257);
                     }
                   } else {
                     rg.a(ao.field_a, 256, -257);
@@ -745,7 +745,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void j(int param0) {
-        String var2 = hn.b(false);
+        String var2 = EmailFormatValidator.b(false);
         if (param0 != -8) {
           field_m = (String) null;
         }

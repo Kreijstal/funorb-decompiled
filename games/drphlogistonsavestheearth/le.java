@@ -69,7 +69,7 @@ final class le {
           }
           nj.field_p.position = nj.field_p.position + 2;
           var5_int = nj.field_p.position;
-          nj.field_p.writeInt(nf.field_t, (byte) 113);
+          nj.field_p.writeInt(MatchingFieldValidator.field_t, (byte) 113);
           nj.field_p.writeLong(DiskCacheWorker.field_i, (byte) -25);
           var6 = 0;
           if (bd.field_N) {

@@ -126,7 +126,7 @@ final class kd implements WidgetRenderer {
           }
           var3Lifetime1 = hk.field_a.a(MusicPatchPcmStream.field_p);
           hk.field_a.b(10325023, -1);
-          hk.field_a.a(MusicPatchPcmStream.field_p, 34 + (12 * wl.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + wl.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
+          hk.field_a.a(MusicPatchPcmStream.field_p, 34 + (12 * AccountRegistrationPanel.field_K.field_n - var3Lifetime1 >> 1), param1 + ((-hk.field_a.field_y + AccountRegistrationPanel.field_K.field_m - hk.field_a.field_t >> 1) + 114 + hk.field_a.field_y), (int[]) null, qk.field_e);
           if (0 <= jl.field_j &&
             3 > jl.field_j) {
             var4_int = 10;
@@ -328,7 +328,7 @@ final class kd implements WidgetRenderer {
             IntrusiveNode.field_d.b(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }
           var9Lifetime3 = SoftwareRasterizer.field_h[(2147483647 & nc.field_t) % SoftwareRasterizer.field_h.length];
-          vh.field_n = vh.field_n - var9Lifetime3;
+          EmailFormatValidator.field_n = EmailFormatValidator.field_n - var9Lifetime3;
           DirectByteStorage.field_j = DirectByteStorage.field_j - var9Lifetime3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

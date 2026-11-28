@@ -31,18 +31,18 @@ final class MixedSupport097 {
         RuntimeException caughtExceptionLocal4 = null;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          MixedSupport063.performAction0750((byte) -33, true, UiComponentPart021.integerState0556, MixedSupport010.integerState0066, integerArgument1, RenderingSupport003.integerState0252, 0);
-          for (integerLocal1 = 0; UiComponentPart021.integerState0556 > integerLocal1; integerLocal1++) {
+          MixedSupport063.performAction0750((byte) -33, true, ValidatedTextField.integerState0556, MixedSupport010.integerState0066, integerArgument1, RenderingSupport003.integerState0252, 0);
+          for (integerLocal1 = 0; ValidatedTextField.integerState0556 > integerLocal1; integerLocal1++) {
             MixedSupport017.integerArrayState0022[integerLocal1 + integerArgument1] = integerLocal1;
           }
           if (byteArgument2 != 6) {
             byteArrayArrayState0007 = (byte[][]) null;
           }
-          MixedSupport063.performAction0750((byte) -33, false, integerArgument1 + UiComponentPart021.integerState0556, ReturnedShape.integerState0695, integerArgument1 + integerArgument1, UiComponentPart019.integerState0504, integerArgument1);
-          if (UiComponentPart021.integerState0556 <= integerArgument1) {
+          MixedSupport063.performAction0750((byte) -33, false, integerArgument1 + ValidatedTextField.integerState0556, ReturnedShape.integerState0695, integerArgument1 + integerArgument1, UiComponentPart019.integerState0504, integerArgument1);
+          if (ValidatedTextField.integerState0556 <= integerArgument1) {
             return;
           }
-          UiComponentPart021.integerState0556 = integerArgument1;
+          ValidatedTextField.integerState0556 = integerArgument1;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {
           caughtExceptionLocal4 = caughtParameterLocal5;

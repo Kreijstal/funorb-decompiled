@@ -9,7 +9,7 @@ final class th extends AcceleratingProjectile {
     static volatile boolean field_cb;
 
     th(GameSession param0, PlayerShip param1) {
-        super(param0, param1, 0.4, 0.02, 64.0, ke.field_cb);
+        super(param0, param1, 0.4, 0.02, 64.0, AccountRegistrationPanel.field_cb);
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(n.field_a, 96, param1);
@@ -19,7 +19,7 @@ final class th extends AcceleratingProjectile {
     }
 
     th(GameSession param0, MovingTunnelEntity param1, double[] param2, double param3, double param4, double param5) {
-        super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, ke.field_cb);
+        super(param0, param1, 0.4, 0.02, 8.0, param2, param3, param4, param5, AccountRegistrationPanel.field_cb);
         this.field_db = new DynamicLight((TunnelEntity) (this));
         try {
           kj.a(n.field_a, 96, param1);

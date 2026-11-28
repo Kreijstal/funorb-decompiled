@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientException extends RuntimeException {
-    static bb field_a;
+    static LoginPanel field_a;
     String field_d;
     static int field_b;
     Throwable field_c;

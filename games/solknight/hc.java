@@ -176,7 +176,7 @@ final class hc {
               fl.field_b[1] = 5;
             }
           } else {
-            var3_int = bk.a((byte) 3, bb.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
+            var3_int = bk.a((byte) 3, LoginPanel.a(AccountRequestState.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(w.field_c[var5])) {
@@ -192,7 +192,7 @@ final class hc {
             fk.a(w.field_c, 0, ak.field_b, 0, var4);
             qc.field_h = new String[-1 + (var3_int - var4)];
             fk.a(w.field_c, var4 + 1, qc.field_h, 0, -var4 + (var3_int - 1));
-            var3_int = bk.a((byte) 3, bb.a(ff.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
+            var3_int = bk.a((byte) 3, LoginPanel.a(ff.field_f, new String[]{"<br><%0><br>"}, -63), ke.field_H, si.field_A, w.field_c);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(w.field_c[var5])) {
@@ -206,16 +206,16 @@ final class hc {
             }
             i.field_I = new String[var4];
             fk.a(w.field_c, 0, i.field_I, 0, var4);
-            qa.field_o = new String[-1 - var4 + var3_int];
-            fk.a(w.field_c, var4 + 1, qa.field_o, 0, var3_int - var4 - 1);
+            ConfirmedEmailAvailabilityValidator.field_o = new String[-1 - var4 + var3_int];
+            fk.a(w.field_c, var4 + 1, ConfirmedEmailAvailabilityValidator.field_o, 0, var3_int - var4 - 1);
             if (i.field_I.length <= ak.field_b.length) {
               stackIn_64_0 = ak.field_b.length;
             } else {
               stackIn_64_0 = i.field_I.length;
             }
             var5 = stackIn_64_0;
-            if (qa.field_o.length > qc.field_h.length) {
-              stackIn_67_0 = qa.field_o.length;
+            if (ConfirmedEmailAvailabilityValidator.field_o.length > qc.field_h.length) {
+              stackIn_67_0 = ConfirmedEmailAvailabilityValidator.field_o.length;
             } else {
               stackIn_67_0 = qc.field_h.length;
             }
@@ -252,8 +252,8 @@ final class hc {
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_80_0 = vc.field_d;
               stackIn_80_1 = 7 - (-var5 - var8Lifetime3);
-              if (qa.field_o.length > var8Lifetime3) {
-                stackIn_81_2 = qa.field_o[var8Lifetime3];
+              if (ConfirmedEmailAvailabilityValidator.field_o.length > var8Lifetime3) {
+                stackIn_81_2 = ConfirmedEmailAvailabilityValidator.field_o[var8Lifetime3];
               } else {
                 stackIn_81_2 = "";
               }
@@ -292,7 +292,7 @@ final class hc {
           }
           pk.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
           GameApplet.field_h = PcmOutputWorker.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          v.field_d = (g.field_l + vg.field_N << 1) * bc.field_K.field_g;
+          v.field_d = (g.field_l + EditableTextField.field_N << 1) * bc.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = v.field_d;
             if (ImageProducerRasterBuffer.field_l[var4Lifetime2] < 0) {
@@ -315,14 +315,14 @@ final class hc {
               var5Lifetime3 = var5Lifetime3 + uc.field_i;
             } else {
               var7Lifetime2 = fa.a(vc.field_d[var4Lifetime3], true, (byte) 99);
-              var5Lifetime3 = var5Lifetime3 + vg.field_N;
+              var5Lifetime3 = var5Lifetime3 + EditableTextField.field_N;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PcmOutputWorker.field_d;
               og.field_j[var4Lifetime3] = new int[4];
               og.field_j[var4Lifetime3][0] = var8Lifetime1 - bl.field_i;
               og.field_j[var4Lifetime3][1] = var5Lifetime3;
               og.field_j[var4Lifetime3][2] = (bl.field_i << 1) + var7Lifetime2;
               og.field_j[var4Lifetime3][3] = (g.field_l << 1) + we.field_c;
-              var5Lifetime3 = var5Lifetime3 + (we.field_c + vg.field_N + (g.field_l << 1));
+              var5Lifetime3 = var5Lifetime3 + (we.field_c + EditableTextField.field_N + (g.field_l << 1));
             }
             var4Lifetime3++;
           }

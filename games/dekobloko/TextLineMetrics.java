@@ -5,7 +5,7 @@ final class TextLineMetrics {
     static RenderingSupport009 renderingSupport009State0004;
     static int[] integerArrayState0167;
     int topY;
-    static MixedSupport015 mixedSupport015State0003;
+    static NineSliceSprite mixedSupport015State0003;
     int bottomY;
     static int integerState0534;
     static boolean booleanState0119;

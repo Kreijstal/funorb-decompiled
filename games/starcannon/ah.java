@@ -30,9 +30,9 @@ final class ah {
     }
 
     final static int[] a(int param0, byte param1, int param2) {
-        int var3 = qf.a(param2, (byte) -57);
+        int var3 = TextFieldValidator.a(param2, (byte) -57);
         int var4 = ResourceArchive.cosineFixed16(param2, 123);
-        int var5 = qf.a(param0, (byte) -78);
+        int var5 = TextFieldValidator.a(param0, (byte) -78);
         int var6 = ResourceArchive.cosineFixed16(param0, 127);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);

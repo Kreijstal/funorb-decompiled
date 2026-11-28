@@ -47,7 +47,7 @@ final class ag {
                 return stackIn_17_0;
               }
             } else {
-              if (lc.field_m.indexOf(var4) == -1) {
+              if (PasswordValidator.field_m.indexOf(var4) == -1) {
                 stackIn_21_0 = h.field_a;
                 return stackIn_21_0;
               }

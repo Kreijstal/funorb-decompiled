@@ -33,7 +33,7 @@ final class wb extends lw {
     }
 
     wb() {
-        super(false, new String[]{wg.field_h, sk.field_n, sk.field_m, WidgetTheme.field_g, paa.field_h, TeleportSpecial.field_p}, BoardChange.field_h);
+        super(false, new String[]{PasswordValidator.field_h, sk.field_n, sk.field_m, WidgetTheme.field_g, paa.field_h, TeleportSpecial.field_p}, BoardChange.field_h);
         this.field_c = new int[][]{new int[]{180, 20}, new int[]{110, 190}, new int[]{70, 30}, new int[]{190, 310}, new int[]{30, 90}, new int[]{160, 350}, new int[]{200, 190}};
     }
 

@@ -39,10 +39,10 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           wk.field_g = wk.a(param0, 1, "display_name_changed", "basic");
-          ea.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, ef.field_m);
+          ea.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, AchievementNotification.field_m);
           fg.field_d = new ok(0L, SecondaryNodeDeque.field_b, d.field_Lb, vc.field_b);
           hb.field_a = new ci(0L, (ci) null);
-          oj.field_c = new ci(0L, qn.field_P);
+          oj.field_c = new ci(0L, EditableTextField.field_P);
           oj.field_c.field_fb = param1;
           le.field_e = new ci(0L, bo.field_e, ei.field_s);
           kf.field_t = new ci(0L, DualLinkNode.field_j, hm.field_b);
@@ -52,11 +52,11 @@ final class DirectByteStorage extends ByteStorage {
           hb.field_a.a((byte) 123, kf.field_t);
           hb.field_a.a((byte) 125, ea.field_bb);
           hb.field_a.a((byte) 127, SecondaryNodeHashTable.field_h);
-          ea.field_bb.field_Kb.field_Jb.a(qn.field_P, param1 + 2147483647);
+          ea.field_bb.field_Kb.field_Jb.a(EditableTextField.field_P, param1 + 2147483647);
           var2 = ea.field_bb.field_Kb.field_Jb;
           ea.field_bb.field_Kb.field_Jb.field_cb = 1;
           var2.field_fb = 1;
-          fg.field_d.field_Kb.field_Jb.a(qn.field_P, -2147483648);
+          fg.field_d.field_Kb.field_Jb.a(EditableTextField.field_P, -2147483648);
           var3 = fg.field_d.field_Kb.field_Jb;
           fg.field_d.field_Kb.field_Jb.field_cb = 1;
           var3.field_fb = 1;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea extends se {
-    private vb field_fb;
+    private FieldValidator field_fb;
     static String field_P;
     static bn field_cb;
     static ok field_bb;
@@ -89,7 +89,7 @@ final class ea extends se {
         if (param2 >= -80) {
           return;
         }
-        var6 = this.field_fb.a(21314);
+        var6 = this.field_fb.getValidationStatus(21314);
         if (in.field_g == var6) {
           var17 = NetworkArchiveRequest.field_v;
           if (!var17.equals(this.field_v)) {
@@ -97,7 +97,7 @@ final class ea extends se {
             this.f((byte) 105);
           }
           super.a(param0, param1, -109, param3);
-          var6 = this.field_fb.a(21314);
+          var6 = this.field_fb.getValidationStatus(21314);
           var43 = (mg) ((Object) this.field_n);
           var9 = param3 + this.field_u;
           var10 = var43.a(0, param0, (mf) (this)) + (var43.a((mf) (this), -23159).a((byte) 34) >> 1);
@@ -147,7 +147,7 @@ final class ea extends se {
             this.f((byte) 105);
           }
           super.a(param0, param1, -109, param3);
-          var6 = this.field_fb.a(21314);
+          var6 = this.field_fb.getValidationStatus(21314);
           var44 = (mg) ((Object) this.field_n);
           var9Lifetime1 = param3 + this.field_u;
           var10Lifetime1 = var44.a(0, param0, (mf) (this)) + (var44.a((mf) (this), -23159).a((byte) 34) >> 1);
@@ -190,14 +190,14 @@ final class ea extends se {
           this.field_T.d(-(var26.field_v >> 1) + var9Lifetime1, -var26.field_u + var10Lifetime1, 256);
           return;
         }
-        var5 = this.field_fb.a(false);
+        var5 = this.field_fb.getValidationMessage(false);
         if (var5 != null) {
           if (!var5.equals(this.field_v)) {
             this.field_v = var5;
             this.f((byte) 105);
           }
           super.a(param0, param1, -109, param3);
-          var6Lifetime1 = this.field_fb.a(21314);
+          var6Lifetime1 = this.field_fb.getValidationStatus(21314);
           var46 = (mg) ((Object) this.field_n);
           var9Lifetime2 = param3 + this.field_u;
           var10Lifetime2 = var46.a(0, param0, (mf) (this)) + (var46.a((mf) (this), -23159).a((byte) 34) >> 1);
@@ -243,7 +243,7 @@ final class ea extends se {
           this.f((byte) 105);
         }
         super.a(param0, param1, -109, param3);
-        var6Lifetime2 = this.field_fb.a(21314);
+        var6Lifetime2 = this.field_fb.getValidationStatus(21314);
         var45 = (mg) ((Object) this.field_n);
         var9Lifetime3 = param3 + this.field_u;
         var10Lifetime3 = var45.a(0, param0, (mf) (this)) + (var45.a((mf) (this), -23159).a((byte) 34) >> 1);
@@ -354,8 +354,8 @@ final class ea extends se {
         return ImageProducerRasterBuffer.field_o;
     }
 
-    ea(vb param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, je.d(false));
+    ea(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, PasswordValidator.d(false));
         try {
           this.field_fb = param0;
           this.field_eb = param1;

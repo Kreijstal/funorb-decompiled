@@ -16,7 +16,7 @@ final class jd {
 
     final void a(int param0, java.applet.Applet param1) {
         try {
-          vm.a(this.field_f, 11440, param1, 31536000L, "jagex-last-login-method");
+          TextFieldValidator.a(this.field_f, 11440, param1, 31536000L, "jagex-last-login-method");
           if (param0 != 25799) {
             field_e = (String) null;
           }
@@ -110,10 +110,10 @@ final class jd {
           if (qa.field_c.ensureIndexLoaded((byte) 122)) {
             return e.field_T;
           }
-          return uk.field_a;
+          return ChessBoardState.field_a;
         }
         if (!fl.field_m.ensureIndexLoaded((byte) 121)) {
-          return gb.field_o;
+          return NetworkGameClient.field_o;
         }
         if (!fl.field_m.tryLoadGroupByName("commonui", 100)) {
           return k.field_V + " - " + fl.field_m.getGroupLoadPercentByName("commonui", 0) + "%";

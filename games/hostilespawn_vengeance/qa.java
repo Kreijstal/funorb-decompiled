@@ -30,7 +30,7 @@ final class qa {
         var8 = HostileSpawn.field_I ? 1 : 0;
         var1 = new RgbSprite[sc.field_c];
         for (var2 = 0; var2 < sc.field_c; var2++) {
-          var3 = hd.field_r[var2] * sf.field_X[var2];
+          var3 = ConfirmedEmailAvailabilityValidator.field_r[var2] * TextInputField.field_X[var2];
           var21 = ja.field_e[var2];
           if (!qj.field_k[var2]) {
             var10 = new int[var3];
@@ -38,7 +38,7 @@ final class qa {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = bf.field_d[PcmOutputWorker.a((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var22);
+            var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var22);
           } else {
             var15 = vh.field_a[var2];
             var11 = var15;
@@ -50,7 +50,7 @@ final class qa {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ll.a(PcmOutputWorker.a(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var17));
           }
         }
         if (param0 != 26627) {
@@ -345,7 +345,7 @@ final class qa {
           if (param1 > -19) {
             field_b = -46;
           }
-          AccountServiceResult.field_d = new dg(im.field_e, pe.field_eb, param2, li.field_o, DirectByteStorage.field_i);
+          AccountServiceResult.field_d = new dg(im.field_e, pe.field_eb, param2, MatchingFieldValidator.field_o, DirectByteStorage.field_i);
           im.field_e.c(AccountServiceResult.field_d, 101);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "qa.G(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

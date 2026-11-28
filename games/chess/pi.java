@@ -62,13 +62,13 @@ final class pi {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               nj.a((byte) 20, var15);
               if (var6_intLifetime1 != 0) {
-                lf.a(jb.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, FrameTimer.field_c, sl.field_e);
+                lf.a(DebouncedFieldValidator.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, FrameTimer.field_c, sl.field_e);
               } else {
                 var3.field_r = DualLinkNode.field_o;
                 var3.field_k = sl.field_e;
                 var3.field_p = FrameTimer.field_c;
-                var3.field_m = jb.field_b;
-                lf.a(jb.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, FrameTimer.field_c, sl.field_e);
+                var3.field_m = DebouncedFieldValidator.field_b;
+                lf.a(DebouncedFieldValidator.field_b, (byte) 117, DualLinkNode.field_o, var6_intLifetime1, FrameTimer.field_c, sl.field_e);
               }
             }
             pd.b(var5, -109);
@@ -87,9 +87,9 @@ final class pi {
               var7[0][var10 * 4] = hg.field_d[var11];
               var7[0][1 + 4 * var10] = BufferedSocket.field_e[var11];
               var7[0][2 + 4 * var10] = in.field_j[var11];
-              var7[0][3 + 4 * var10] = oc.field_n[var11];
+              var7[0][3 + 4 * var10] = MatchingFieldValidator.field_n[var11];
               if (qd.a((byte) 13, ag.field_d[var11]) &&
-                in.field_j[var11] + (BufferedSocket.field_e[var11] + oc.field_n[var11]) == 0) {
+                in.field_j[var11] + (BufferedSocket.field_e[var11] + MatchingFieldValidator.field_n[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -105,9 +105,9 @@ final class pi {
               var7[1][4 * var14] = hg.field_d[var11Lifetime1];
               var7[1][1 + 4 * var14] = BufferedSocket.field_e[var11Lifetime1];
               var7[1][2 + var14 * 4] = in.field_j[var11Lifetime1];
-              var7[1][3 + var14 * 4] = oc.field_n[var11Lifetime1];
+              var7[1][3 + var14 * 4] = MatchingFieldValidator.field_n[var11Lifetime1];
               if (qd.a((byte) 13, ag.field_d[var11Lifetime1]) &&
-                0 == BufferedSocket.field_e[var11Lifetime1] - (-in.field_j[var11Lifetime1] - oc.field_n[var11Lifetime1])) {
+                0 == BufferedSocket.field_e[var11Lifetime1] - (-in.field_j[var11Lifetime1] - MatchingFieldValidator.field_n[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
               }

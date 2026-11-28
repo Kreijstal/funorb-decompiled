@@ -10,11 +10,11 @@ final class nh {
         if (ImageProducerRasterBuffer.field_i[param2] == null) {
           return;
         }
-        uf.field_n = param2;
+        AgeValidator.field_n = param2;
         if (param0 != 0) {
           return;
         }
-        CrossfadingMidiPcmStream.field_n.a((byte) 76, param1, ImageProducerRasterBuffer.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
+        CrossfadingMidiPcmStream.field_n.a((byte) 76, param1, ImageProducerRasterBuffer.field_i[AgeValidator.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
     }
 
     public static void clearStaticReferences(int param0) {

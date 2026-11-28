@@ -68,14 +68,14 @@ final class ha {
           jq.field_c = param4;
           oq.field_G = param12;
           md.field_C = param6;
-          rf.field_m = param3;
+          MatchingFieldValidator.field_m = param3;
           kh.field_d = param1;
           an.field_f = param8;
           rc.field_a = param10;
           SecondaryNodeHashTable.field_c = param13;
           sp.field_O = param0;
           eg.field_r = gk.a(param14, "lobby", "gameprivacy", true);
-          ne.field_I = gk.a(param14, "lobby", "ratedgame", true);
+          DisplayNameSelectionPanel.field_I = gk.a(param14, "lobby", "ratedgame", true);
           mj.field_c = gk.a(param14, "lobby", "opentome", true);
           sf.field_a = gk.a(param14, "lobby", "allowspectators", true);
           gm.field_c = new String[5];
@@ -154,19 +154,19 @@ final class ha {
           var16 = oi.field_a;
           oi.field_a.field_ab = 1;
           var16.field_O = 1;
-          de.field_g = new UiPanel(0L, (UiPanel) null);
+          DebouncedFieldValidator.field_g = new UiPanel(0L, (UiPanel) null);
           nb.field_D = new UiPanel(0L, AccountRequestState.field_b);
           nb.field_D.field_O = 1;
           uc.field_a = new UiPanel(0L, MidiPcmStream.field_t, kc.field_c);
           eq.field_z = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
           vd.field_d = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
-          de.field_g.b(nb.field_D, 118);
-          de.field_g.b(uc.field_a, param9 + 125);
+          DebouncedFieldValidator.field_g.b(nb.field_D, 118);
+          DebouncedFieldValidator.field_g.b(uc.field_a, param9 + 125);
           if (MidiPcmStream.field_S) {
-            de.field_g.b(eq.field_z, 119);
+            DebouncedFieldValidator.field_g.b(eq.field_z, 119);
           }
-          de.field_g.b(vd.field_d, 124);
-          ne.field_G = new UiPanel(0L, vc.field_b, pb.field_a.toUpperCase());
+          DebouncedFieldValidator.field_g.b(vd.field_d, 124);
+          DisplayNameSelectionPanel.field_G = new UiPanel(0L, vc.field_b, pb.field_a.toUpperCase());
           ud.field_x = new UiPanel(0L, j.field_q);
           fd.field_s = new UiPanel(0L, dj.field_b);
           pc.field_b = new UiPanel(0L, gn.field_f, me.field_c.toUpperCase());
@@ -212,11 +212,11 @@ final class ha {
               } else {
                 var19_ref = null;
               }
-              if (null != rf.field_m) {
-                if (rf.field_m[var17_intLifetime3] == null) {
+              if (null != MatchingFieldValidator.field_m) {
+                if (MatchingFieldValidator.field_m[var17_intLifetime3] == null) {
                   var20 = null;
                 } else {
-                  var20 = rf.field_m[var17_intLifetime3][var18];
+                  var20 = MatchingFieldValidator.field_m[var17_intLifetime3][var18];
                 }
               } else {
                 var20 = null;

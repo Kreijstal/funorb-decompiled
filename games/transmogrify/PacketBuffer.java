@@ -118,7 +118,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final static boolean f(byte param0) {
         int var1 = -82 % ((param0 + 57) / 51);
-        return vh.a(ha.b(81), 0);
+        return EmailFormatValidator.a(ha.b(81), 0);
     }
 
     final void writeSignedSmart(int param0, int param1) {

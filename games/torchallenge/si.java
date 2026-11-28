@@ -223,7 +223,7 @@ final class si extends ic {
           }
           AccountNameAvailabilityValidator.field_m = param3;
           mg.field_d = param2;
-          rf.m(62);
+          ValidatedTextField.m(62);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "si.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

@@ -210,11 +210,11 @@ final class tq {
               return;
             }
             if (var2 == 7) {
-              var33 = (bs) (mk.field_J.beginBackward((byte) 100));
+              var33 = (bs) (AccountRegistrationPanel.field_J.beginBackward((byte) 100));
               while (var33 != null) {
                 var33.unlink(2);
                 var33.unlinkSecondary(param0 - 59);
-                var33 = (bs) (mk.field_J.nextBackward(88));
+                var33 = (bs) (AccountRegistrationPanel.field_J.nextBackward(88));
               }
               kk.field_j = 0;
               return;
@@ -488,7 +488,7 @@ final class tq {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = ne.field_F.getGraphics();
+            var9 = DisplayNameSelectionPanel.field_F.getGraphics();
             if (null == fh.field_t) {
               fh.field_t = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -501,7 +501,7 @@ final class tq {
             }
             try {
               if (null == FrameTimer.field_c) {
-                FrameTimer.field_c = ne.field_F.createImage(304, 34);
+                FrameTimer.field_c = DisplayNameSelectionPanel.field_F.createImage(304, 34);
               }
               var10 = FrameTimer.field_c.getGraphics();
               var10.setColor(param0);
@@ -540,7 +540,7 @@ final class tq {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            ne.field_F.repaint();
+            DisplayNameSelectionPanel.field_F.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

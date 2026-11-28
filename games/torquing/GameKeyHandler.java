@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static sm[] field_a;
+    static IndexedSprite[] field_a;
     static String field_b;
     static int[] field_d;
     static String field_c;
@@ -18,7 +18,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var3 = 127 & 1 + IsaacCipher.field_d;
               if (IntrusiveNode.field_g != var3) {
                 ol.field_c[IsaacCipher.field_d] = -1;
-                pe.field_H[IsaacCipher.field_d] = (char)var2_int;
+                LoginPanel.field_H[IsaacCipher.field_d] = (char)var2_int;
                 IsaacCipher.field_d = var3;
               }
             }
@@ -101,7 +101,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var3 = IsaacCipher.field_d + 1 & 127;
             if (IntrusiveNode.field_g != var3) {
               ol.field_c[IsaacCipher.field_d] = var2_int;
-              pe.field_H[IsaacCipher.field_d] = (char)0;
+              LoginPanel.field_H[IsaacCipher.field_d] = (char)0;
               IsaacCipher.field_d = var3;
             }
           }

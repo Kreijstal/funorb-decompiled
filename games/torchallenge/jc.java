@@ -160,7 +160,7 @@ abstract class jc {
         }
         if (0 <= param2 &&
           param2 < 9) {
-          var3 = rf.field_hb[param2];
+          var3 = ValidatedTextField.field_hb[param2];
           if (0 <= var3 &&
             var3 < 5) {
             var4 = cl.field_u[var3];
@@ -190,7 +190,7 @@ abstract class jc {
             field_h = -48;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = td.field_i.equals(il.a(var3, (byte) 21));
+          stackIn_3_0 = td.field_i.equals(EmailFormatValidator.a(var3, (byte) 21));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

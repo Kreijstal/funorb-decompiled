@@ -34,7 +34,7 @@ final class wp {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = oo.a((byte) -117, param0);
+              var3 = MatchingFieldValidator.a((byte) -117, param0);
             }
             if (param1 != null) {
               if (param0 != null) {
@@ -131,7 +131,7 @@ final class wp {
               var5 = ao.field_e;
             } else {
               if (var4 == lb.field_l.field_c) {
-                var5 = jn.field_i;
+                var5 = PasswordValidator.field_i;
               } else {
                 var5 = SpriteGeometry.field_s;
               }

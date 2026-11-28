@@ -91,7 +91,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = nb.field_e.requestThreadStart(1, 105, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  uc.sleepMillis(-125, 10L);
+                  DebouncedFieldValidator.sleepMillis(-125, 10L);
                   if (var9 == 0) {
                     continue;
                   }
@@ -324,7 +324,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 mi.e((byte) -6);
                 this.e(-121);
-                hg.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) kj.field_E), DiskCacheWorker.field_d, -21880);
+                DisplayNameSelectionPanel.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) kj.field_E), DiskCacheWorker.field_d, -21880);
                 this.f(-108);
                 p.field_d = qb.a(true);
                 do {
@@ -775,7 +775,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
         try {
           ci.field_b = dd.correctedCurrentTimeMillis(100);
-          uc.sleepMillis(-118, 5000L);
+          DebouncedFieldValidator.sleepMillis(-118, 5000L);
           kg.field_d = null;
           this.a(22865, false);
         } catch (RuntimeException runtimeException) {

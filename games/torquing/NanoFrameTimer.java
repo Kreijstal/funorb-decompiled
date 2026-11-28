@@ -108,7 +108,7 @@ final class NanoFrameTimer extends FrameTimer {
             return false;
           }
           e.field_f = ol.field_c[IntrusiveNode.field_g];
-          m.field_t = pe.field_H[IntrusiveNode.field_g];
+          m.field_t = LoginPanel.field_H[IntrusiveNode.field_g];
           IntrusiveNode.field_g = 127 & 1 + IntrusiveNode.field_g;
           stackIn_8_0 = true;
         }
@@ -173,7 +173,7 @@ final class NanoFrameTimer extends FrameTimer {
           }
         } else {
           if (ig.field_r[param0] == null) {
-            ig.field_r[param0] = PcmSampleStream.a(th.field_F[param0], 100, param2);
+            ig.field_r[param0] = PcmSampleStream.a(DisplayNameSelectionPanel.field_F[param0], 100, param2);
             ig.field_r[param0].d(-1);
           }
           if (Bzip2State.field_a != ig.field_r[param0]) {

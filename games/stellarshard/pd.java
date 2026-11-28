@@ -6,7 +6,7 @@ final class pd extends vk {
     static Sprite field_s;
     private int field_o;
     static String[] field_g;
-    static lj field_e;
+    static DisplayNameSelectionPanel field_e;
     static int[] field_u;
     private int field_n;
     private String field_m;

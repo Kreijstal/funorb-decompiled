@@ -404,7 +404,7 @@ final class lk extends gd {
     final static void f(int param0) {
         ia.field_K = null;
         sg.field_b = null;
-        ga.field_o = null;
+        ConfirmedEmailAvailabilityValidator.field_o = null;
         ro.field_B = false;
         if (param0 != 16) {
           field_S = 2;

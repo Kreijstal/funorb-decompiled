@@ -41,7 +41,7 @@ final class lk {
             var1 = mb.field_s.d(false);
           }
           if (var1.length() == 0) {
-            var1 = ej.g((byte) 123);
+            var1 = EditableTextField.g((byte) 123);
           }
           if (var1.length() == 0) {
             var1 = hd.field_k;
@@ -54,7 +54,7 @@ final class lk {
           var1Lifetime1 = mb.field_s.d(false);
         }
         if (var1Lifetime1.length() == 0) {
-          var1Lifetime1 = ej.g((byte) 123);
+          var1Lifetime1 = EditableTextField.g((byte) 123);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = hd.field_k;

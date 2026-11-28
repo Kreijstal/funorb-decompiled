@@ -173,7 +173,7 @@ final class ec extends ta implements ai {
             eg.field_v = param6;
             jl.field_e = param0;
             dk.field_a = param10;
-            el.field_G = param9;
+            DisplayNameSelectionPanel.field_G = param9;
             ti.field_eb = param5;
             sj.field_x = param8;
             if (param13 <= 23) {
@@ -271,7 +271,7 @@ final class ec extends ta implements ai {
         if (param0 == 783) {
           pc.field_Y = true;
           lm.field_c = ji.correctedCurrentTimeMillis(114) + 15000L;
-          return hi.field_k == 11 ? true : false;
+          return TextFieldValidator.field_k == 11 ? true : false;
         }
         return false;
     }

@@ -16,7 +16,7 @@ final class MixedSupport053 extends HashNode {
         throw new Error();
     }
 
-    final static void performAction0622(int integerArgument1, boolean booleanArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, String stringArgument4) {
+    final static void performAction0622(int integerArgument1, boolean booleanArgument2, LobbyRoomRow sceneWidgetPart013Argument3, String stringArgument4) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -34,7 +34,7 @@ final class MixedSupport053 extends HashNode {
         String stringLocal15 = null;
         MixedSupport099 mixedSupport099Local16 = null;
         try {
-          MixedSupport117.performAction1526((String) null, (int[]) null, 105, MixedSupport047.sceneWidgetPart008State0003, sceneWidgetPart013Argument3, (String) null, 0L, -1, sceneWidgetPart013Argument3.computeInteger1710(-88));
+          MixedSupport117.performAction1526((String) null, (int[]) null, 105, MixedSupport047.sceneWidgetPart008State0003, sceneWidgetPart013Argument3, (String) null, 0L, -1, sceneWidgetPart013Argument3.getRoomId(-88));
           if (sceneWidgetPart013Argument3.booleanState0204 && (2 == sceneWidgetPart013Argument3.integerState0845 ||
             !(PasswordValidator.integerState0776 < 2))) {
             mixedSupport099Local10 = SceneWidget.mixedSupport099State0001;
@@ -54,7 +54,7 @@ final class MixedSupport053 extends HashNode {
             }
           }
           mixedSupport099Local16 = SceneWidget.mixedSupport099State0001;
-          integerLocal8 = UiComponentPart013.integerState0276;
+          integerLocal8 = LoginPanel.integerState0276;
           integerLocal9 = TextLineMetrics.integerState0535;
           mixedSupport099Local16.sceneWidgetPart002State0002.performAction0561(integerLocal9, integerLocal8, 123, integerArgument1, 0);
           return;

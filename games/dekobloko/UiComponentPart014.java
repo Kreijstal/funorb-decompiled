@@ -297,7 +297,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements CallbackCon
         RenderingSupport007 renderingSupport007Local7 = new RenderingSupport007(5);
         RenderingSupport007 renderingSupport007Local8 = renderingSupport007Local7;
         int integerLocal9 = 372;
-        if (UiComponentPart013.booleanState0066) {
+        if (LoginPanel.booleanState0066) {
           integerLocal9 -= 12;
         }
         if (UiComponentPart023.computeBoolean1242(-30146)) {
@@ -325,7 +325,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements CallbackCon
           renderingSupport007Local7.gameDomainSupport002ArrayState0001[0].integerState0178 = integerLocal9;
         }
         integerLocal9 += 43;
-        if (UiComponentPart013.booleanState0066) {
+        if (LoginPanel.booleanState0066) {
           gameDomainSupport002Local5 = new GameDomainSupport002(3, MixedSupport089.stringState0373, MixedSupport001.renderingSupport009State0001);
           gameDomainSupport002Local5.integerState0178 = integerLocal9;
           gameDomainSupport002Local5.integerState0174 = -(gameDomainSupport002Local5.integerState0176 / 2) + 320;
@@ -405,7 +405,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements CallbackCon
           uiComponentLocal2.integerState0104 = 50;
           uiComponentLocal2.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport001(MixedSupport011.bitmapFontState0006, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.performAction0895(uiComponentLocal2, (byte) -55);
-          this.interactiveComponentState0006 = this.computeInteractiveComponent0699((CallbackContract006) (this), UiComponentPart021.stringState0383, (byte) -90);
+          this.interactiveComponentState0006 = this.computeInteractiveComponent0699((CallbackContract006) (this), ValidatedTextField.stringState0383, (byte) -90);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

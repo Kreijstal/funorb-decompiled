@@ -4,7 +4,7 @@
 final class vd {
     static String field_c;
     static int field_a;
-    static mk field_b;
+    static AccountRegistrationPanel field_b;
     static od field_d;
 
     final static void a(int param0, mp param1, int param2, int param3, int param4, mp param5) {
@@ -27,23 +27,23 @@ final class vd {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          br.field_U = param0.readUnsignedShort((byte) -11) << 5;
+          ValidatedTextField.field_U = param0.readUnsignedShort((byte) -11) << 5;
           if (param1 != 11591) {
             mp var3 = (mp) null;
             vd.a(-51, (mp) null, 54, -38, -24, (mp) null);
           }
           var2_int = param0.readUnsignedByte(-11);
           af.field_E = (var2_int & 7) << 18;
-          br.field_U = br.field_U + (var2_int >> 3);
+          ValidatedTextField.field_U = ValidatedTextField.field_U + (var2_int >> 3);
           af.field_E = af.field_E + (param0.readUnsignedShort((byte) -11) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(-11);
           af.field_E = af.field_E + (var2_intLifetime1 >> 6);
           bp.field_z = (var2_intLifetime1 & 63) << 15;
           bp.field_z = bp.field_z + (param0.readUnsignedByte(-11) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(-11);
-          kp.field_P = var2_intLifetime2 << 16 & 65536;
+          EditableTextField.field_P = var2_intLifetime2 << 16 & 65536;
           bp.field_z = bp.field_z + (var2_intLifetime2 >> 1);
-          kp.field_P = kp.field_P + param0.readUnsignedShort((byte) -11);
+          EditableTextField.field_P = EditableTextField.field_P + param0.readUnsignedShort((byte) -11);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "vd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

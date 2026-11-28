@@ -4,7 +4,7 @@
 final class mc extends ok {
     static int[] field_K;
     static String field_J;
-    static vd field_H;
+    static AccountRegistrationPanel field_H;
     static Sprite field_E;
     static int field_L;
 

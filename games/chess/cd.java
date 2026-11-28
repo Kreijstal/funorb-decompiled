@@ -255,7 +255,7 @@ final class cd extends pk {
         int var7 = 0;
         int var9 = 0;
         try {
-          var6 = qn.field_U;
+          var6 = EditableTextField.field_U;
           var6.writeCipheredByte(param3, -82);
           var6.position = var6.position + 1;
           var7 = var6.position;

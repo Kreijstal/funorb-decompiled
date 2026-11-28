@@ -50,11 +50,11 @@ final class nj {
           t.field_b.g((byte) -37);
         }
         if (oa.field_k == null) {
-          rf.n(19630);
+          ValidatedTextField.n(19630);
           return;
         }
         oa.field_k.l(100);
-        rf.n(19630);
+        ValidatedTextField.n(19630);
     }
 
     final IntrusiveNode a(IntrusiveNode param0, int param1) {
@@ -185,10 +185,10 @@ final class nj {
 
     final static k[] a(byte param0) {
         if (param0 >= 86) {
-          return new k[]{ij.field_w, dg.field_O, il.field_n, lh.field_w, oh.field_d, hc.field_P, ek.field_C, bf.field_g, le.field_f, SpriteLoader.field_d, SpriteLoader.field_a, kf.field_e, di.field_F, field_h};
+          return new k[]{ij.field_w, AccountRegistrationPanel.field_O, EmailFormatValidator.field_n, lh.field_w, oh.field_d, hc.field_P, ek.field_C, bf.field_g, le.field_f, SpriteLoader.field_d, SpriteLoader.field_a, kf.field_e, di.field_F, field_h};
         }
         nj.a((byte) 105);
-        return new k[]{ij.field_w, dg.field_O, il.field_n, lh.field_w, oh.field_d, hc.field_P, ek.field_C, bf.field_g, le.field_f, SpriteLoader.field_d, SpriteLoader.field_a, kf.field_e, di.field_F, field_h};
+        return new k[]{ij.field_w, AccountRegistrationPanel.field_O, EmailFormatValidator.field_n, lh.field_w, oh.field_d, hc.field_P, ek.field_C, bf.field_g, le.field_f, SpriteLoader.field_d, SpriteLoader.field_a, kf.field_e, di.field_F, field_h};
     }
 
     nj(IntrusiveDeque param0) {

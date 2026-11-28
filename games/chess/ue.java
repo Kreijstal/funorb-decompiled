@@ -16,7 +16,7 @@ final class ue {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = qn.field_U;
+          var3 = EditableTextField.field_U;
           var3.writeCipheredByte(param0, -94);
           var3.writeByte(param1.field_l, (byte) -88);
           var3.writeShort(param1.field_n, 109);
@@ -40,7 +40,7 @@ final class ue {
     }
 
     final static void a(long param0, int param1, int param2) {
-        BitPacketBuffer var4 = qn.field_U;
+        BitPacketBuffer var4 = EditableTextField.field_U;
         var4.writeCipheredByte(param2, -75);
         var4.position = var4.position + 1;
         int var5 = var4.position;

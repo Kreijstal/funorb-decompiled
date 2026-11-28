@@ -27,7 +27,7 @@ final class tf {
           if (ia.field_W != null) {
             ck.h(-116);
             tp.a(10, 75.0f, i.field_s);
-            g.a(fi.d(false), param1 - 1041774190);
+            g.a(InstructionsScreen.getActiveCanvas(false), param1 - 1041774190);
             ra.b(9);
             ia.field_W = null;
             nf.d(0);
@@ -35,14 +35,14 @@ final class tf {
           }
           if (null != DualLinkNode.field_r) {
             tp.a(param1 - 1041792311, 75.0f, i.field_s);
-            g.a(fi.d(false), param1 ^ 1041775506);
+            g.a(InstructionsScreen.getActiveCanvas(false), param1 ^ 1041775506);
             DualLinkNode.field_r = null;
             nf.d(0);
             return false;
           }
           if (null != bl.field_t) {
             tp.a(10, 80.0f, ik.field_a);
-            g.a(fi.d(false), 18131);
+            g.a(InstructionsScreen.getActiveCanvas(false), 18131);
             mi.a(-114);
             tl.field_k = null;
             bl.field_t = null;
@@ -51,7 +51,7 @@ final class tf {
           }
           if (null != np.field_A) {
             tp.a(param1 ^ 1041792331, 84.0f, ib.field_i);
-            g.a(fi.d(false), 18131);
+            g.a(InstructionsScreen.getActiveCanvas(false), 18131);
             sl.a((byte) -97, param0);
             bl.c((byte) -101);
             gh.field_c = null;
@@ -60,8 +60,8 @@ final class tf {
             return false;
           }
           if (ImageProducerRasterBuffer.field_p != null) {
-            tp.a(param1 ^ 1041792331, 92.0f, he.field_n);
-            g.a(fi.d(false), param1 ^ 1041775506);
+            tp.a(param1 ^ 1041792331, 92.0f, AgeValidator.field_n);
+            g.a(InstructionsScreen.getActiveCanvas(false), param1 ^ 1041775506);
             ArchiveRequest.c((byte) 117);
             ImageProducerRasterBuffer.field_p = null;
             nf.d(0);

@@ -42,7 +42,7 @@ class ab extends dk {
         if (param1 != -25343) {
           return (Sprite[]) null;
         }
-        return cc.a(1, param4, 1, param3, 3, param0, 3, 1, param2);
+        return PasswordValidator.a(1, param4, 1, param3, 3, param0, 3, 1, param2);
     }
 
     final static void clearStaticReferences(byte param0) {
@@ -92,7 +92,7 @@ class ab extends dk {
             if (var8Lifetime2 != null) {
               var3_int = (var8Lifetime2.field_x + 60) * IntrusiveDeque.field_a / ByteStorage.field_a;
               var4 = var3_int - 30;
-              if (cc.field_j) {
+              if (PasswordValidator.field_j) {
                 n.a(var4 * -256 / 30, 199, 245, 256 * (var8Lifetime2.field_x - var4) / 30, var8Lifetime2, (byte) -2);
               } else {
                 n.a(256 * (var8Lifetime2.field_x - var4) / 30, 199, 245, -256 * var4 / 30, var8Lifetime2, (byte) -2);

@@ -183,7 +183,7 @@ class fd implements WidgetActionListener, w {
           }
           var10 = var18.b(var8, 0);
           var11 = var18.b(var9, 0);
-          di.a(param2 + param3.x + param3.width, param3.y + param1, 16105, param3.y + param1 + param3.height, param2 + param3.x);
+          TextFieldValidator.a(param2 + param3.x + param3.width, param3.y + param1, 16105, param3.y + param1 + param3.height, param2 + param3.x);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_f[var12];
             if (var10 != var12) {
@@ -292,7 +292,7 @@ class fd implements WidgetActionListener, w {
               stackIn_5_3 = var13.field_f[1 + var7].field_e;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            di.a(param2.x + (param3 + param2.width), param1 + param2.y, param4 ^ -17264, param2.height + (param2.y + param1), param3 + param2.x);
+            TextFieldValidator.a(param2.x + (param3 + param2.width), param1 + param2.y, param4 ^ -17264, param2.height + (param2.y + param1), param3 + param2.x);
             FrameTimer.field_c.a(this.field_g, var10, var10, var12, var11, true);
             MessageKeys.a(false);
           }
@@ -363,7 +363,7 @@ class fd implements WidgetActionListener, w {
         int var12Lifetime1;
         var13 = Terraphoenix.field_V;
         try {
-          di.a(param5.width + (param3 + param5.x), param4 + param5.y, param6 + 16035, param5.y + (param4 + param5.height), param5.x + param3);
+          TextFieldValidator.a(param5.width + (param3 + param5.x), param4 + param5.y, param6 + 16035, param5.y + (param4 + param5.height), param5.x + param3);
           if (param6 != 70) {
             return;
           }

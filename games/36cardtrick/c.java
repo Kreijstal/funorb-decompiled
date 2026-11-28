@@ -1657,7 +1657,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_alert_nameleadingspace", (byte) -127);
                 if (var2 != null) {
-                  kl.field_P = GzipInflater.a(var2, (byte) 81);
+                  AccountRegistrationPanel.field_P = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = SectorCacheStore.a("create_alert_doublespace", (byte) -127);
                 if (null != var2) {
@@ -1830,7 +1830,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("waitingfor_fonts", (byte) -127);
                 if (var2 != null) {
-                  ak.field_L = GzipInflater.a(var2, (byte) 99);
+                  LoginPanel.field_L = GzipInflater.a(var2, (byte) 99);
                 }
                 var2 = SectorCacheStore.a("waitingfor_soundeffects", (byte) -127);
                 if (null != var2) {
@@ -2716,7 +2716,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("fs_accept_afteraccept", (byte) -127);
                 if (null != var2) {
-                  ai.field_l = GzipInflater.a(var2, (byte) 84);
+                  AgeValidator.field_l = GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = SectorCacheStore.a("fs_button_cancel", (byte) -127);
                 if (var2 != null) {
@@ -2768,7 +2768,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("fs_button_tryagain", (byte) -127);
                 if (null != var2) {
-                  fh.field_D = GzipInflater.a(var2, (byte) 124);
+                  DisplayNameSelectionPanel.field_D = GzipInflater.a(var2, (byte) 124);
                 }
                 var2 = SectorCacheStore.a("graphics_ui_fs_countdown", (byte) -127);
                 if (var2 != null) {
@@ -2834,11 +2834,11 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("rating_mode_name,0", (byte) -127);
                 if (null != var2) {
-                  fg.field_m[0] = GzipInflater.a(var2, (byte) 122);
+                  MatchingFieldValidator.field_m[0] = GzipInflater.a(var2, (byte) 122);
                 }
                 var2 = SectorCacheStore.a("rating_mode_name,1", (byte) -127);
                 if (var2 != null) {
-                  fg.field_m[1] = GzipInflater.a(var2, (byte) 102);
+                  MatchingFieldValidator.field_m[1] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = SectorCacheStore.a("rating_mode_long_name,0", (byte) -127);
                 if (var2 != null) {
@@ -3002,31 +3002,31 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,1", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[1] = GzipInflater.a(var2, (byte) 109);
+                  LoginPanel.field_N[1] = GzipInflater.a(var2, (byte) 109);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,2", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[2] = GzipInflater.a(var2, (byte) 105);
+                  LoginPanel.field_N[2] = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,3", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[3] = GzipInflater.a(var2, (byte) 80);
+                  LoginPanel.field_N[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,4", (byte) -127);
                 if (null != var2) {
-                  ak.field_N[4] = GzipInflater.a(var2, (byte) 96);
+                  LoginPanel.field_N[4] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,5", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[5] = GzipInflater.a(var2, (byte) 79);
+                  LoginPanel.field_N[5] = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,6", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[6] = GzipInflater.a(var2, (byte) 117);
+                  LoginPanel.field_N[6] = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = SectorCacheStore.a("mustlogin_alternate,7", (byte) -127);
                 if (var2 != null) {
-                  ak.field_N[7] = GzipInflater.a(var2, (byte) 98);
+                  LoginPanel.field_N[7] = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = SectorCacheStore.a("subscription_cost_monthly,0", (byte) -127);
                 if (var2 != null) {
@@ -3189,7 +3189,7 @@ abstract class c extends GameApplet {
                           }
                         }
                         if (var2_int == 8) {
-                          td.a(rd.field_j, (byte) -121, al.field_a, jk.field_a);
+                          td.a(EmailFormatValidator.field_j, (byte) -121, al.field_a, jk.field_a);
                           if (var4 == 0) {
                             return;
                           }
@@ -3215,7 +3215,7 @@ abstract class c extends GameApplet {
                                 return;
                               }
                             }
-                            k.a((Throwable) null, (byte) -85, "MGS1: " + aj.a((byte) 92));
+                            DebouncedFieldValidator.a((Throwable) null, (byte) -85, "MGS1: " + aj.a((byte) 92));
                             mc.a((byte) -125);
                             if (var4 == 0) {
                               return;
@@ -3259,7 +3259,7 @@ abstract class c extends GameApplet {
             }
             return;
           }
-          k.a((Throwable) null, (byte) -79, "MGS2: " + aj.a((byte) 92));
+          DebouncedFieldValidator.a((Throwable) null, (byte) -79, "MGS2: " + aj.a((byte) 92));
           mc.a((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3409,7 +3409,7 @@ abstract class c extends GameApplet {
           if (g.j(7)) {
             var3_int = 1200 * SecondaryNodeDeque.a(22018);
             if (this.field_v ||
-              !(var3_int >= mk.h(-1)) &&
+              !(var3_int >= PasswordValidator.h(-1)) &&
               !(dj.c(0) <= var3_int)) {
               this.field_v = false;
               mc.a((byte) -128);
@@ -3526,14 +3526,14 @@ abstract class c extends GameApplet {
             g.field_A = 1;
           }
           if (g.field_A == 1) {
-            if (hf.field_I != 0) {
+            if (EditableTextField.field_I != 0) {
               lb.field_a = aj.a(1, jj.field_b);
             }
             jk.field_c = qi.a(true, eb.field_f, 1, false, 2147483647);
             aa.field_db = qi.a(true, jh.field_b, 1, false, 2147483647);
             sg.field_a = qi.a(true, ia.field_e, 1, false, 2147483647);
             g.field_A = 2;
-            hf.field_H = jk.field_c;
+            EditableTextField.field_H = jk.field_c;
           }
           if (g.field_A == 2) {
             if (null != lb.field_a &&
@@ -3587,7 +3587,7 @@ abstract class c extends GameApplet {
             g.field_A = 10;
           }
           if (10 == g.field_A) {
-            if (0 != hf.field_I) {
+            if (0 != EditableTextField.field_I) {
               ue.field_a = aj.a(1, bf.field_a);
             }
             g.field_A = 11;
@@ -3602,7 +3602,7 @@ abstract class c extends GameApplet {
               decompiledSharedTail0 = (var5 != 0);
             }
             if (decompiledSharedTail0) {
-              ug.a(0.0f, 106, pf.a(ue.field_a, FullscreenFocusCanvas.field_d, fg.field_j, true));
+              ug.a(0.0f, 106, pf.a(ue.field_a, FullscreenFocusCanvas.field_d, MatchingFieldValidator.field_j, true));
             }
           }
           if (12 == g.field_A &&
@@ -3752,7 +3752,7 @@ abstract class c extends GameApplet {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
-            k.a((Throwable) ((Object) var6_ref), (byte) -72, (String) null);
+            DebouncedFieldValidator.a((Throwable) ((Object) var6_ref), (byte) -72, (String) null);
             this.a((byte) -77, "crash");
           }
           return;
@@ -3779,7 +3779,7 @@ abstract class c extends GameApplet {
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = rd.field_j.readUnsignedByte(50);
+          var2_int = EmailFormatValidator.field_j.readUnsignedByte(50);
           stackIn_4_0 = ((1 & var2_int) == 0) ? 0 : 1;
           var3 = stackIn_4_0;
           var4 = al.field_a - 1;
@@ -3787,8 +3787,8 @@ abstract class c extends GameApplet {
           if (param0 != -47) {
             this.c(false);
           }
-          rd.field_j.readCipheredBytes(0, var5, 28040, var4);
-          IntrusiveDeque.a(mk.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
+          EmailFormatValidator.field_j.readCipheredBytes(0, var5, 28040, var4);
+          IntrusiveDeque.a(PasswordValidator.g(-117), -25573, GzipInflater.a(var5, (byte) 89), var3 != 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3829,7 +3829,7 @@ abstract class c extends GameApplet {
             this.field_l = -59;
           }
           var2 = sb.a(-3871);
-          h.a(mk.g(-121), (byte) 68, var2);
+          h.a(PasswordValidator.g(-121), (byte) 68, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3868,12 +3868,12 @@ abstract class c extends GameApplet {
             field_u = (ee) null;
           }
           this.setBackground(java.awt.Color.black);
-          hf.field_I = this.field_m;
-          KeyboardInputHandler.a(-115, hf.field_I);
-          vd.a(this.field_l, hf.field_I, param6, this.field_x, this.field_q, 124, this.field_t, 5000, this.field_s, param2, this.field_o, 5000, jk.field_a, this.field_n);
-          eb.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, hf.field_I, this.field_s, this.field_o);
+          EditableTextField.field_I = this.field_m;
+          KeyboardInputHandler.a(-115, EditableTextField.field_I);
+          vd.a(this.field_l, EditableTextField.field_I, param6, this.field_x, this.field_q, 124, this.field_t, 5000, this.field_s, param2, this.field_o, 5000, jk.field_a, this.field_n);
+          eb.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, EditableTextField.field_I, this.field_s, this.field_o);
           wh.a(192);
-          Main.field_V = mk.c((byte) 100);
+          Main.field_V = PasswordValidator.c((byte) 100);
           BufferedRandomAccessFile.a(tb.field_c, -1);
           jh.field_b = param0;
           bf.field_a = param7;
@@ -3925,7 +3925,7 @@ abstract class c extends GameApplet {
           int var8 = 0;
           var8 = Main.field_T;
           try {
-            var4_int = mj.a(hf.field_I, eg.field_f, param0, true);
+            var4_int = mj.a(EditableTextField.field_I, eg.field_f, param0, true);
             if (var4_int == 0) {
               throw new IllegalStateException();
             }
@@ -3981,36 +3981,36 @@ abstract class c extends GameApplet {
                 cd.field_e = 10;
                 vg.field_d = true;
                 if (var8 != 0) {
-                  PacketBuffer.a(mk.g(-119), (byte) 104);
+                  PacketBuffer.a(PasswordValidator.g(-119), (byte) 104);
                 }
               } else {
-                PacketBuffer.a(mk.g(-119), (byte) 104);
+                PacketBuffer.a(PasswordValidator.g(-119), (byte) 104);
               }
             }
             if (var4_int == 5) {
-              PacketBuffer.a((byte) -124, mk.g(-126));
+              PacketBuffer.a((byte) -124, PasswordValidator.g(-126));
             }
             if (var4_int == 6 &&
               tj.field_K) {
               cd.field_e = 10;
             }
             if (7 == var4_int) {
-              gg.a(mk.g(-119), 7380);
+              gg.a(PasswordValidator.g(-119), 7380);
             }
             if (8 == var4_int) {
-              PacketBuffer.a(mk.g(-125), (byte) 76);
+              PacketBuffer.a(PasswordValidator.g(-125), (byte) 76);
             }
             if (9 == var4_int) {
-              rk.a(mk.g(-127), (byte) -85);
+              rk.a(PasswordValidator.g(-127), (byte) -85);
             }
             if (param2 == var4_int) {
               NetworkArchiveRequest.field_r.writeCipheredByte(17, 0);
             }
             if (var4_int == 11) {
-              wh.a(mk.g(-125), 63);
+              wh.a(PasswordValidator.g(-125), 63);
             }
             if (12 == var4_int) {
-              pa.a(mk.g(param2 - 130), wd.b(-108), -31);
+              pa.a(PasswordValidator.g(param2 - 130), wd.b(-108), -31);
             }
             if (13 == var4_int) {
               try {
@@ -4034,7 +4034,7 @@ abstract class c extends GameApplet {
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5 = (Exception) (Object) decompiledCaughtException;
-                k.a((Throwable) ((Object) var5), (byte) -104, "S1");
+                DebouncedFieldValidator.a((Throwable) ((Object) var5), (byte) -104, "S1");
                 ok.a(param2 + 554, (String) null);
                 di.field_d = null;
               }

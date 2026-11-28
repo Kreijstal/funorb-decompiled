@@ -82,7 +82,7 @@ abstract class MovingTunnelEntity extends TunnelEntity {
         TunnelEntity var16_ref;
         var16 = null;
         var11 = Confined.field_J ? 1 : 0;
-        gl.field_m = param1;
+        PasswordValidator.field_m = param1;
         sf.field_t = 1.7976931348623157e+308;
         ll.field_b = param2;
         ExpandingPulseProjectile.field_gb = null;
@@ -175,7 +175,7 @@ abstract class MovingTunnelEntity extends TunnelEntity {
             if (!(var9 < sf.field_t)) {
               return;
             }
-            var11 = var5 * gl.field_m + om.field_q * var3_double + var7 * ll.field_b;
+            var11 = var5 * PasswordValidator.field_m + om.field_q * var3_double + var7 * ll.field_b;
             if (var11 >= 0.0 &&
               var9 * 0.9698463103929542 <= var11 * var11) {
               ExpandingPulseProjectile.field_gb = param0;

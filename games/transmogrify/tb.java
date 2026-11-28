@@ -31,16 +31,16 @@ final class tb {
           gb.a(d.field_d, true);
           d.field_d.writeShort(param1, -159688920);
           param0.a((byte) -115, d.field_d);
-          ff.field_D.position = 0;
+          LoginPanel.field_D.position = 0;
           if (param3) {
-            ff.field_D.writeByte(6389, 18);
+            LoginPanel.field_D.writeByte(6389, 18);
           } else {
-            ff.field_D.writeByte(6389, 16);
+            LoginPanel.field_D.writeByte(6389, 16);
           }
-          ff.field_D.position = ff.field_D.position + 2;
-          var5_int = ff.field_D.position;
-          ff.field_D.writeInt(-102, DiskArchiveRequest.field_w);
-          ff.field_D.writeLong(1908720528, qb.field_k);
+          LoginPanel.field_D.position = LoginPanel.field_D.position + 2;
+          var5_int = LoginPanel.field_D.position;
+          LoginPanel.field_D.writeInt(-102, DiskArchiveRequest.field_w);
+          LoginPanel.field_D.writeLong(1908720528, qb.field_k);
           var6 = 0;
           if (wd.field_g) {
             var6 = var6 | 1;
@@ -58,17 +58,17 @@ final class tb {
             var8 = (kk) null;
             tb.a((kk) null, -124, true, true, 31);
           }
-          ff.field_D.writeByte(6389, var6);
+          LoginPanel.field_D.writeByte(6389, var6);
           var7 = wk.a(ha.b(99), (byte) -45);
           if (var7 == null) {
             var7 = "";
           }
-          ff.field_D.writeString(-116, var7);
+          LoginPanel.field_D.writeString(-116, var7);
           if (e.field_I != null) {
-            ff.field_D.writePrefixedString(e.field_I, 127);
+            LoginPanel.field_D.writePrefixedString(e.field_I, 127);
           }
-          bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -116, d.field_d);
-          ff.field_D.backpatchShortLength(-120, ff.field_D.position - var5_int);
+          bj.a(kb.field_p, q.field_f, LoginPanel.field_D, (byte) -116, d.field_d);
+          LoginPanel.field_D.backpatchShortLength(-120, LoginPanel.field_D.position - var5_int);
           rb.a(-1, -377);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -137,7 +137,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (oa.field_j != 4) {
                   if (oa.field_j != 2) {
                     if (oa.field_j == 5) {
-                      BoundedRandomAccessFile.a(r.field_j, 5, 91);
+                      BoundedRandomAccessFile.a(TextFieldValidator.field_j, 5, 91);
                     } else {
                       BoundedRandomAccessFile.a(ri.field_r, 256, 102);
                     }

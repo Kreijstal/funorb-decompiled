@@ -73,12 +73,12 @@ final class fm {
           gg.field_n[4] = 16711935;
           np.field_Ib = param9;
           GameKeyHandler.field_f = param5;
-          wc.field_q[3] = 16736511;
-          wc.field_q[1] = 6356832;
-          wc.field_q[0] = 16764000;
+          PasswordValidator.field_q[3] = 16736511;
+          PasswordValidator.field_q[1] = 6356832;
+          PasswordValidator.field_q[0] = 16764000;
           gg.field_n[4] = 16711935;
           MatchSession.field_p = 8421504;
-          wc.field_q[2] = 16736352;
+          PasswordValidator.field_q[2] = 16736352;
           var12 = new Sprite(4, 4);
           var13 = var12.field_F;
           var14 = var12.field_F;

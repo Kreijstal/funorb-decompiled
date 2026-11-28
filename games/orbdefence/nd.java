@@ -46,12 +46,12 @@ final class nd {
             }
             hc.a((byte) -96, var3_int != 0, tj.a(-112), IntrusiveNode.a(false), sk.field_H);
           } else {
-            if (rf.l(-28)) {
-              if (hi.field_k == 0) {
+            if (AccountRegistrationPanel.l(-28)) {
+              if (TextFieldValidator.field_k == 0) {
                 CrossfadingMidiPcmStream.a(param2, true, false);
                 kg.a(0, (byte) -83, 0, param1);
               } else {
-                em.a(0, param1);
+                PasswordValidator.a(0, param1);
               }
             } else {
               SoftwareRasterizer.clearRaster();

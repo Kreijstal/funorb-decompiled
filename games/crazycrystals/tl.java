@@ -354,7 +354,7 @@ abstract class tl {
           }
           var2Lifetime9 = LevelProgressUpdate.loadRootArchiveFile("keycode_p2up", 1);
           if (var2Lifetime9 != null) {
-            oo.field_i = var2Lifetime9[0] & 255;
+            MatchingFieldValidator.field_i = var2Lifetime9[0] & 255;
           }
           var2Lifetime10 = LevelProgressUpdate.loadRootArchiveFile("keycode_p2down", 1);
           if (null != var2Lifetime10) {
@@ -877,7 +877,7 @@ abstract class tl {
           }
           var2Lifetime139 = LevelProgressUpdate.loadRootArchiveFile("twoplayerpuzzles", 1);
           if (null != var2Lifetime139) {
-            li.field_e = fa.a((byte) -100, var2Lifetime139);
+            DebouncedFieldValidator.field_e = fa.a((byte) -100, var2Lifetime139);
           }
           var2Lifetime140 = LevelProgressUpdate.loadRootArchiveFile("threeplayerpuzzles", 1);
           if (null != var2Lifetime140) {
@@ -921,7 +921,7 @@ abstract class tl {
           }
           var2Lifetime150 = LevelProgressUpdate.loadRootArchiveFile("bonuslevelscomplete", 1);
           if (var2Lifetime150 != null) {
-            jn.field_n = fa.a((byte) -87, var2Lifetime150);
+            PasswordValidator.field_n = fa.a((byte) -87, var2Lifetime150);
           }
           var2Lifetime151 = LevelProgressUpdate.loadRootArchiveFile("achievementnames,0", 1);
           if (null != var2Lifetime151) {
@@ -1069,7 +1069,7 @@ abstract class tl {
           }
           var2Lifetime187 = LevelProgressUpdate.loadRootArchiveFile("bomb_name", 1);
           if (null != var2Lifetime187) {
-            kd.field_i = fa.a((byte) -109, var2Lifetime187);
+            ConfirmedEmailAvailabilityValidator.field_i = fa.a((byte) -109, var2Lifetime187);
           }
           var2Lifetime188 = LevelProgressUpdate.loadRootArchiveFile("bomb_information", 1);
           if (var2Lifetime188 != null) {
@@ -1117,7 +1117,7 @@ abstract class tl {
           }
           var2Lifetime199 = LevelProgressUpdate.loadRootArchiveFile("laserhub_information", 1);
           if (var2Lifetime199 != null) {
-            kd.field_m = fa.a((byte) -87, var2Lifetime199);
+            ConfirmedEmailAvailabilityValidator.field_m = fa.a((byte) -87, var2Lifetime199);
           }
           var2Lifetime200 = LevelProgressUpdate.loadRootArchiveFile("laserbeam_name", 1);
           if (null != var2Lifetime200) {
@@ -1141,7 +1141,7 @@ abstract class tl {
           }
           var2Lifetime205 = LevelProgressUpdate.loadRootArchiveFile("mirror_information", 1);
           if (null != var2Lifetime205) {
-            qk.field_z = fa.a((byte) -93, var2Lifetime205);
+            DisplayNameSelectionPanel.field_z = fa.a((byte) -93, var2Lifetime205);
           }
           var2Lifetime206 = LevelProgressUpdate.loadRootArchiveFile("bouncyball_name", 1);
           if (var2Lifetime206 != null) {
@@ -1245,7 +1245,7 @@ abstract class tl {
           }
           var2Lifetime231 = LevelProgressUpdate.loadRootArchiveFile("gametileinfo_done", 1);
           if (null != var2Lifetime231) {
-            se.field_g = fa.a((byte) -89, var2Lifetime231);
+            TextFieldValidator.field_g = fa.a((byte) -89, var2Lifetime231);
           }
           var2Lifetime232 = LevelProgressUpdate.loadRootArchiveFile("bonus_stillalive", 1);
           if (var2Lifetime232 != null) {
@@ -1285,7 +1285,7 @@ abstract class tl {
           }
           var2Lifetime241 = LevelProgressUpdate.loadRootArchiveFile("bonus_rightfirsttime", 1);
           if (null != var2Lifetime241) {
-            jn.field_l = fa.a((byte) -66, var2Lifetime241);
+            PasswordValidator.field_l = fa.a((byte) -66, var2Lifetime241);
           }
           var2Lifetime242 = LevelProgressUpdate.loadRootArchiveFile("penalty_killedafriend", 1);
           if (var2Lifetime242 != null) {

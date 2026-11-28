@@ -4,10 +4,10 @@
 final class AccountCreationResultPanel extends mn implements ng {
     private boolean field_gb;
     private boolean field_hb;
-    private ki field_ib;
+    private AccountRegistrationPanel field_ib;
 
-    AccountCreationResultPanel(ln param0, ki param1) {
-        super(param0, pe.field_E, po.field_y, false, false);
+    AccountCreationResultPanel(ln param0, AccountRegistrationPanel param1) {
+        super(param0, LoginPanel.field_E, po.field_y, false, false);
         try {
           this.field_ib = param1;
         } catch (RuntimeException runtimeException) {
@@ -105,16 +105,16 @@ final class AccountCreationResultPanel extends mn implements ng {
                   this.field_gb = true;
                   var4 = a.field_a;
                 } else {
-                  id.a((byte) 57);
+                  LoginRequestBuilder.a((byte) 57);
                   this.field_gb = true;
                   var4 = a.field_a;
                 }
               }
             }
           }
-          var5 = new fo((mn) (this), pe.field_E, var4);
+          var5 = new fo((mn) (this), LoginPanel.field_E, var4);
           if (param2 >= -102) {
-            this.field_ib = (ki) null;
+            this.field_ib = (AccountRegistrationPanel) null;
           }
           if (param1.success) {
             if (param1.field_g) {

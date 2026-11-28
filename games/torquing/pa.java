@@ -6,7 +6,7 @@ abstract class pa {
     static int field_b;
     static String field_a;
     static int field_c;
-    static sm[] field_e;
+    static IndexedSprite[] field_e;
 
     final static hi a(int param0, boolean param1) {
         boolean stackIn_3_0 = false;
@@ -39,9 +39,9 @@ abstract class pa {
         var4 = stackIn_9_0;
         un.field_c = var8.readString((byte) 125);
         if (var4 == 0) {
-          dg.field_m = un.field_c;
+          TranslucentSpriteLayer.field_m = un.field_c;
         } else {
-          dg.field_m = var8.readString((byte) 119);
+          TranslucentSpriteLayer.field_m = var8.readString((byte) 119);
         }
         if (n.field_u == 1) {
           var8.readUnsignedShort(7088);
@@ -56,7 +56,7 @@ abstract class pa {
           field_c = -78;
         }
         if (!param1) {
-          NanoFrameTimer.field_m = Torquing.a(26657, 80, var8);
+          NanoFrameTimer.field_m = Torquing.readCompressedChatText(26657, 80, var8);
           DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
@@ -64,7 +64,7 @@ abstract class pa {
         try {
           var9 = qg.field_C.a(var5, 32767);
           NanoFrameTimer.field_m = var9.c((byte) -127);
-          if (!dg.field_m.equals(re.field_e)) {
+          if (!TranslucentSpriteLayer.field_m.equals(re.field_e)) {
             stackIn_25_0 = var9.field_v;
           } else {
             stackIn_25_0 = null;
@@ -85,7 +85,7 @@ abstract class pa {
         field_e = null;
         field_d = null;
         if (param0 >= -48) {
-          field_e = (sm[]) null;
+          field_e = (IndexedSprite[]) null;
           field_a = null;
           return;
         }

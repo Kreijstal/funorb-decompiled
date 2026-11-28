@@ -7,7 +7,7 @@ final class dh extends df {
     private String field_W;
     static Sprite field_Y;
     static am field_V;
-    private wd field_bb;
+    private FieldValidator field_bb;
     private int field_X;
     static Sprite field_ab;
 
@@ -47,7 +47,7 @@ final class dh extends df {
         }
     }
 
-    dh(wd param0, String param1, int param2, int param3, int param4, int param5) {
+    dh(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, kk.c(false));
         try {
           this.field_W = param1;
@@ -139,7 +139,7 @@ final class dh extends df {
         var24 = null;
         var37 = null;
         var13 = TorChallenge.field_F ? 1 : 0;
-        var6 = this.field_bb.b(105);
+        var6 = this.field_bb.getValidationStatus(105);
         if (bl.field_S == var6) {
           var17 = hb.field_h;
           if (!var17.equals(this.field_v)) {
@@ -147,7 +147,7 @@ final class dh extends df {
             this.d(false);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_bb.b(-74);
+          var6 = this.field_bb.getValidationStatus(-74);
           var41 = (gd) ((Object) this.field_q);
           var9 = this.field_m + param1;
           var10 = var41.a((UiComponent) (this), 3, param0) + (var41.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
@@ -184,7 +184,7 @@ final class dh extends df {
           return;
         }
         if (var6 != jh.field_c) {
-          var5 = this.field_bb.a((byte) -10);
+          var5 = this.field_bb.getValidationMessage((byte) -10);
           if (var5 == null) {
             var5 = this.field_W;
           }
@@ -193,7 +193,7 @@ final class dh extends df {
             this.d(false);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_bb.b(-74);
+          var6 = this.field_bb.getValidationStatus(-74);
           var43 = (gd) ((Object) this.field_q);
           var9Lifetime1 = this.field_m + param1;
           var10Lifetime1 = var43.a((UiComponent) (this), 3, param0) + (var43.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
@@ -242,7 +242,7 @@ final class dh extends df {
           this.d(false);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_bb.b(-74);
+        var6Lifetime1 = this.field_bb.getValidationStatus(-74);
         var42 = (gd) ((Object) this.field_q);
         var9Lifetime2 = this.field_m + param1;
         var10Lifetime2 = var42.a((UiComponent) (this), 3, param0) + (var42.a(102, (UiComponent) (this)).a((byte) -63) >> 1);

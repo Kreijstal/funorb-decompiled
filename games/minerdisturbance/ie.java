@@ -67,7 +67,7 @@ final class ie {
           for (var6 = 0; var6 < 5; var6++) {
             fieldTemp$0 = this.field_b;
             this.field_b = this.field_b + 1;
-            this.field_c.addLast((byte) -126, new dn(fieldTemp$0, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
+            this.field_c.addLast((byte) -126, new dn(fieldTemp$0, ValidatedTextField.a(32, -21937, this.field_d) + param4, param3 + ValidatedTextField.a(32, -21937, this.field_d), param1 + ValidatedTextField.a(32, -21937, this.field_d), param0 + ValidatedTextField.a(32, -21937, this.field_d)));
           }
           return;
         }
@@ -75,7 +75,7 @@ final class ie {
         for (var6Lifetime1 = 0; var6Lifetime1 < 5; var6Lifetime1++) {
           fieldTemp$1 = this.field_b;
           this.field_b = this.field_b + 1;
-          this.field_c.addLast((byte) -126, new dn(fieldTemp$1, ke.a(32, -21937, this.field_d) + param4, param3 + ke.a(32, -21937, this.field_d), param1 + ke.a(32, -21937, this.field_d), param0 + ke.a(32, -21937, this.field_d)));
+          this.field_c.addLast((byte) -126, new dn(fieldTemp$1, ValidatedTextField.a(32, -21937, this.field_d) + param4, param3 + ValidatedTextField.a(32, -21937, this.field_d), param1 + ValidatedTextField.a(32, -21937, this.field_d), param0 + ValidatedTextField.a(32, -21937, this.field_d)));
         }
     }
 

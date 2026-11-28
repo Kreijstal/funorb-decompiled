@@ -148,8 +148,8 @@ final class AccountServiceResult {
             rk.field_T[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < rk.field_ab; var2_intLifetime1++) {
-            if (~rl.field_C[var2_intLifetime1].field_e == ~param0.field_e) {
-              dupTemp$3 = rl.field_C[var2_intLifetime1].a((byte) -111);
+            if (~LoginPanel.field_C[var2_intLifetime1].field_e == ~param0.field_e) {
+              dupTemp$3 = LoginPanel.field_C[var2_intLifetime1].a((byte) -111);
               rk.field_T[dupTemp$3] = rk.field_T[dupTemp$3] + 1;
             }
           }
@@ -161,8 +161,8 @@ final class AccountServiceResult {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < rk.field_ab; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_e == rl.field_C[var3].field_e) {
-              var4 = rl.field_C[var3].a((byte) -123);
+            if (param0.field_e == LoginPanel.field_C[var3].field_e) {
+              var4 = LoginPanel.field_C[var3].a((byte) -123);
               if (NetworkArchiveRequest.field_y < rk.field_T[var4]) {
                 rk.field_T[var4] = rk.field_T[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -171,13 +171,13 @@ final class AccountServiceResult {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              rl.field_C[incrementValue$2] = rl.field_C[var3];
+              LoginPanel.field_C[incrementValue$2] = LoginPanel.field_C[var3];
             }
           }
           rk.field_ab = var2_intLifetime2;
           fieldTemp$1 = rk.field_ab;
           rk.field_ab = rk.field_ab + 1;
-          rl.field_C[fieldTemp$1] = param0;
+          LoginPanel.field_C[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

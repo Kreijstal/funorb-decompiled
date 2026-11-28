@@ -4,7 +4,7 @@
 final class wo {
     static q[] field_a;
     static boolean field_c;
-    static dn field_e;
+    static LoginPanel field_e;
     static int field_g;
     static String field_f;
     static String field_h;
@@ -37,7 +37,7 @@ final class wo {
     public static void clearStaticReferences(byte param0) {
         field_h = null;
         if (param0 < 95) {
-          field_e = (dn) null;
+          field_e = (LoginPanel) null;
         }
         field_f = null;
         field_d = null;

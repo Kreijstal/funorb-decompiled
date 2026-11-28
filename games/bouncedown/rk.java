@@ -36,13 +36,13 @@ final class rk {
     final static void a(int param0, String param1, boolean param2, boolean param3) {
         try {
           ig.a(-92);
-          q.field_N.k(-20281);
+          DisplayNameSelectionPanel.field_N.k(-20281);
           if (param0 != 4) {
             field_a = 22;
           }
-          vk.field_c = new ci(gi.field_b, (String) null, fe.field_g, param3, param2);
-          ed.field_c = new ec(q.field_N, vk.field_c);
-          q.field_N.b(ed.field_c, false);
+          vk.field_c = new LoginPanel(gi.field_b, (String) null, fe.field_g, param3, param2);
+          ed.field_c = new ec(DisplayNameSelectionPanel.field_N, vk.field_c);
+          DisplayNameSelectionPanel.field_N.b(ed.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -133,7 +133,7 @@ final class rk {
     }
 
     final static void a(int param0, int param1, String param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, int param8) {
-        bd.field_l = param2;
+        MatchingFieldValidator.field_l = param2;
         a.field_a = param4;
         if (param3 != 0) {
           return;

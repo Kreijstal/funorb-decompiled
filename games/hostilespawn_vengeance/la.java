@@ -23,7 +23,7 @@ final class la extends ca {
             }
             var3_int = 1;
             if (8 == param0) {
-              if (!li.field_o) {
+              if (!MatchingFieldValidator.field_o) {
                 param1 = de.field_m;
               } else {
                 param1 = ti.field_i;
@@ -33,7 +33,7 @@ final class la extends ca {
             }
             if (10 == param0) {
               var3_int = 0;
-              fe.a(true);
+              SocketFactory.a(true);
             }
             if (var3_int != 0) {
               if (rj.field_K) {
@@ -46,7 +46,7 @@ final class la extends ca {
             }
             if (param0 != 256 &&
               param0 != 10 &&
-              !li.field_o) {
+              !MatchingFieldValidator.field_o) {
               ib.field_e.a(false);
               return;
             }
@@ -157,7 +157,7 @@ final class la extends ca {
         ad.field_b = gm.field_k[param1];
     }
 
-    final static void a(int param0, int param1, pg param2, int param3, int param4, int param5) {
+    final static void a(int param0, int param1, IndexedSprite param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;

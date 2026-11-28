@@ -6,7 +6,7 @@ final class vg {
     static String field_f;
     static String field_g;
     static ji field_h;
-    static pg field_c;
+    static IndexedSprite field_c;
     static int[] field_a;
     static String field_b;
     static v[] field_e;
@@ -103,7 +103,7 @@ final class vg {
                 break;
               }
               var7_ref_String = param2.substring(2 + var6_int, var5);
-              if (!sf.a((byte) 95, (CharSequence) ((Object) var7_ref_String))) {
+              if (!TextInputField.isDecimalInteger((byte) 95, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -113,7 +113,7 @@ final class vg {
                 continue;
               }
               var5++;
-              var8 = hi.a(-110, (CharSequence) ((Object) var7_ref_String));
+              var8 = TextFieldValidator.a(-110, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (var6_int - var5 + args[var8].length());
               continue;
             }
@@ -136,7 +136,7 @@ final class vg {
               break;
             }
             var9 = param2.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!sf.a((byte) 80, (CharSequence) ((Object) var9))) {
+            if (!TextInputField.isDecimalInteger((byte) 80, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {
@@ -146,7 +146,7 @@ final class vg {
               continue;
             }
             var5Lifetime1++;
-            var10 = hi.a(-29, (CharSequence) ((Object) var9));
+            var10 = TextFieldValidator.a(-29, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param2.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(args[var10]);

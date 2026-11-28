@@ -47,10 +47,10 @@ final class so extends TextureOperator {
           if (null == param6.field_M) {
             param6.field_M = new IntrusiveDeque();
           }
-          mk.field_J = param6.field_M;
-          mk.field_J.clear(0);
+          AccountRegistrationPanel.field_J = param6.field_M;
+          AccountRegistrationPanel.field_J.clear(0);
           GameShell.field_l = new SecondaryNodeHashTable(param7);
-          br.field_Q = 0;
+          ValidatedTextField.field_Q = 0;
           rp.field_a = -1;
           kk.field_j = 0;
           qn.field_w = -1;

@@ -22,7 +22,7 @@ final class am {
     }
 
     final static void a(int param0, int param1, int param2) {
-        ea.field_p = param1;
+        MatchingFieldValidator.field_p = param1;
         fg.field_O = param0;
         int var3 = 21 % ((-58 - param2) / 59);
         n.field_L = 255;

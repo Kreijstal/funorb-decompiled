@@ -13,7 +13,7 @@ final class de extends IntrusiveNode {
 
     final static void c(int param0) {
         eh.field_e = false;
-        li.field_o = false;
+        MatchingFieldValidator.field_o = false;
         g.a((byte) 104, param0);
         od.field_I = e.field_q;
         ki.field_f = e.field_q;

@@ -6,7 +6,7 @@ final class rd extends ld {
     static boolean field_o;
     private String field_j;
     private int field_i;
-    static ae field_s;
+    static DisplayNameSelectionPanel field_s;
     static IntrusiveDeque field_k;
     private int field_l;
     static int field_t;

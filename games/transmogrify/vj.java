@@ -12,7 +12,7 @@ final class vj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= ca.field_f) {
+            param1.length() >= DebouncedFieldValidator.field_f) {
             if (param1.length() > a.field_Q) {
               return true;
             }

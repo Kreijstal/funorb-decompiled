@@ -183,7 +183,7 @@ final class ra {
         om.field_b = BufferedRandomAccessFile.a(false, 140, "da_ambience_burning_torches_loop_4000ms");
         k.field_f = BufferedRandomAccessFile.a(false, 256, "da_ambience_running_water_loop_1000ms");
         MouseInput.field_f = BufferedRandomAccessFile.a(false, 51, "da_menu_fire");
-        qm.field_n = BufferedRandomAccessFile.a(false, 256, "da_gold_stealing");
+        EmailFormatValidator.field_n = BufferedRandomAccessFile.a(false, 256, "da_gold_stealing");
         eb.field_O = sh.a(-62, "da_gold_bar", new int[]{125, 125, 125, 125});
         bc.field_b = BufferedRandomAccessFile.a(false, 256, "da_dice_roll_dry");
         ef.field_d = BufferedRandomAccessFile.a(false, 171, "da_hoardroom_angry_dragon");
@@ -250,9 +250,9 @@ final class ra {
         ki.a(114, 32, 114, "vampire_lord", -1);
         ki.a(103, 33, 116, "hell_beast", -1);
         ki.a(97, 34, 100, "demon_lord", -1);
-        fi.a(160, -51, "tripwire_bell", 35);
-        fi.a(60, 124, "hallofglass", 36);
-        fi.a(58, 110, "magical_guardian", 37);
+        InstructionsScreen.a(160, -51, "tripwire_bell", 35);
+        InstructionsScreen.a(60, 124, "hallofglass", 36);
+        InstructionsScreen.a(58, 110, "magical_guardian", 37);
         lg.a(63, 200, "hidden_pit", 4);
         lg.a(63, 125, "snakes", 5);
         lg.a(63, 178, "hidden_nails", 6);

@@ -32,7 +32,7 @@ final class kf {
           return;
         }
         try {
-          ib.a(true, param1);
+          DisplayNameSelectionPanel.a(true, param1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "kf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

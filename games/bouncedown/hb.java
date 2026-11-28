@@ -225,7 +225,7 @@ final class hb extends ak {
             return;
           }
           if (var2 != 2) {
-            ti.a((Throwable) null, (byte) 100, "A1: " + la.a(-106));
+            ValidatedTextField.a((Throwable) null, (byte) 100, "A1: " + la.a(-106));
             kc.a((byte) 18);
             return;
           }

@@ -89,7 +89,7 @@ final class rg extends ef {
           }
           for (var1_int = 0; var1_int < 40; var1_int++) {
             qg.field_a[var1_int] = rk.field_s;
-            dh.field_b[var1_int] = ck.field_o;
+            dh.field_b[var1_int] = ConfirmedEmailAvailabilityValidator.field_o;
             ge.field_a[var1_int] = -4;
             cl.field_d[var1_int] = 0;
             jd.field_o[var1_int] = 0;

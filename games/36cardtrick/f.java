@@ -31,7 +31,7 @@ final class f {
         int[] var11 = null;
         var8 = Main.field_T;
         try {
-          var9 = rd.field_j;
+          var9 = EmailFormatValidator.field_j;
           var2 = var9.readUnsignedByte(-98);
           var3 = var9.readUnsignedByte(92);
           if (param0 == ~var2) {
@@ -54,7 +54,7 @@ final class f {
             return;
           }
           if (1 != var2) {
-            k.a((Throwable) null, (byte) 79, "LR1: " + aj.a((byte) 92));
+            DebouncedFieldValidator.a((Throwable) null, (byte) 79, "LR1: " + aj.a((byte) 92));
             mc.a((byte) -127);
             return;
           }

@@ -108,14 +108,14 @@ final class dd {
             }
             var4 = 1;
             if (10 == param2) {
-              dc.d((byte) 127);
+              EmailFormatValidator.d((byte) 127);
               var4 = 0;
             }
             if (var4 != 0) {
               if (ta.field_b) {
-                param1 = bb.a(jc.field_a, new String[]{param1}, -63);
+                param1 = LoginPanel.a(jc.field_a, new String[]{param1}, -63);
               }
-              if (ga.field_G) {
+              if (DisplayNameSelectionPanel.field_G) {
                 param1 = kc.field_L;
               }
               ah.field_e.a(param1, param2, (byte) -77);

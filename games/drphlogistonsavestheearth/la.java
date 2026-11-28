@@ -81,7 +81,7 @@ final class la {
           SecondaryNodeDeque.field_d = param5;
           ue.field_a = param2;
           wd.field_c = param4;
-          wa.field_N = param3;
+          LoginPanel.field_N = param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,14 +216,14 @@ final class la {
             if (var3_int != 0) {
               var1.readString((byte) -128);
             }
-            var5 = ad.a(var4_ref_String, -122);
+            var5 = PasswordValidator.a(var4_ref_String, -122);
             var6 = var1.readString((byte) -79);
             var7 = rh.a(-77, (CharSequence) ((Object) var4_ref_String));
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (null == var5) {
-              var5 = ad.a(var6, param0 - 115);
+              var5 = PasswordValidator.a(var6, param0 - 115);
               if (var5 != null) {
                 vg.field_j.a((long)var7.hashCode(), param0 ^ -13, var5);
               }

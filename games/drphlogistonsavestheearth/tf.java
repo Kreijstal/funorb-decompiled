@@ -152,13 +152,13 @@ final class tf extends ca {
               var9 = stackIn_47_0;
               var1_int = var1_int + ig.field_h;
               if (var9 != null) {
-                var9.a(ni.field_p + (wa.field_N << 1), var8Lifetime1 - SecondaryNodeDeque.field_d, var7Lifetime1 + (SecondaryNodeDeque.field_d << 1), var1_int, 7453);
+                var9.a(EmailFormatValidator.field_p + (LoginPanel.field_N << 1), var8Lifetime1 - SecondaryNodeDeque.field_d, var7Lifetime1 + (SecondaryNodeDeque.field_d << 1), var1_int, 7453);
               }
-              var1_int = var1_int + wa.field_N;
+              var1_int = var1_int + LoginPanel.field_N;
             }
             if (var4 >= 0) {
               cj.field_a.c(var6, var8Lifetime1, var1_int + hi.field_g, var5, -1);
-              var1_int = var1_int + (wa.field_N + ig.field_h + ni.field_p);
+              var1_int = var1_int + (LoginPanel.field_N + ig.field_h + EmailFormatValidator.field_p);
             } else {
               uj.field_i.c(var6, var8Lifetime1, ha.field_a + var1_int, var5, -1);
               var1_int = var1_int + s.field_g;

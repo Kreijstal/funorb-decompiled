@@ -13,7 +13,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         BitPacketBuffer var2 = null;
         int var3 = 0;
         if (param0 == 81) {
-          var2 = qn.field_U;
+          var2 = EditableTextField.field_U;
           var2.writeCipheredByte(param1, -118);
           var2.position = var2.position + 1;
           var3 = var2.position;

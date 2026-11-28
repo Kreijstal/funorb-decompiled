@@ -23,7 +23,7 @@ final class ld {
     final int b(int param0) {
         if (!this.field_d && (2 != this.field_k ||
           this.field_h <= 0)) {
-          if (~gb.field_t == ~this.field_m) {
+          if (~NetworkGameClient.field_t == ~this.field_m) {
             return 1;
           }
           if (param0 == field_g &&
@@ -40,7 +40,7 @@ final class ld {
           if (null != ArchiveProvider.field_d) {
             ArchiveProvider.field_d.k((byte) 95);
           }
-          ResourceArchive.field_b = new wf(param0, param1, false, true, true);
+          ResourceArchive.field_b = new LoginPanel(param0, param1, false, true, true);
           if (param2 != 0) {
             ld.clearStaticReferences(-20);
           }
@@ -65,7 +65,7 @@ final class ld {
         this.field_e = va.field_a;
         this.field_o = an.field_a;
         this.field_m = sa.field_e;
-        this.field_c = qn.field_M;
+        this.field_c = EditableTextField.field_M;
         this.field_k = tk.field_b;
         this.field_n = HuffmanCodec.field_g;
         this.field_q = ud.field_a;

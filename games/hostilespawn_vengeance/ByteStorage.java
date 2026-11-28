@@ -6,14 +6,14 @@ abstract class ByteStorage {
     static KeyboardInput field_c;
     static String field_b;
     static int field_a;
-    static pg[][] field_d;
+    static IndexedSprite[][] field_d;
 
     public static void clearStaticReferences(byte param0) {
         if (param0 != -93) {
           field_c = (KeyboardInput) null;
         }
         field_c = null;
-        field_d = (pg[][]) null;
+        field_d = (IndexedSprite[][]) null;
         field_b = null;
         field_e = null;
     }
@@ -23,7 +23,7 @@ abstract class ByteStorage {
           return;
         }
         try {
-          ld.a(param1 << 5, (byte) -84, param5 << 8, param0, param4, param2);
+          AgeValidator.a(param1 << 5, (byte) -84, param5 << 8, param0, param4, param2);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "nj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -60,7 +60,7 @@ abstract class ByteStorage {
           for (var1_int = 0; ib.field_c > var1_int; var1_int++) {
             regionExit1: {
               var8_ref_p = jn.field_F[var1_int];
-              var9 = var8_ref_p.field_j.b(-4);
+              var9 = var8_ref_p.field_j.getClampedTileIndex(-4);
               var3 = (int)(24.0 * (var8_ref_p.field_l.field_a + (double)var8_ref_p.field_j.field_g)) - var5;
               var2 = -var4 + (int)(24.0 * (var8_ref_p.field_l.field_f + (double)var8_ref_p.field_j.field_e));
               if (!(var2 < -96) &&
@@ -190,7 +190,7 @@ abstract class ByteStorage {
                                         ln.field_m[var11].a((double)var3, (double)var2, false, var8_ref_p.field_c, 256);
                                         break regionExit1;
                                       case 13:
-                                        ka.a(var2, var8_ref_p, var3, 128);
+                                        EmailFormatValidator.a(var2, var8_ref_p, var3, 128);
                                         break regionExit1;
                                       case 14:
                                         mg.a(var8_ref_p, var2, var3, 2);
@@ -204,11 +204,11 @@ abstract class ByteStorage {
                                         break regionExit1;
                                     }
                                   }
-                                  el.a(var2, var8_ref_p, param0 - 11295, var3);
+                                  ProxySocketFactory.a(var2, var8_ref_p, param0 - 11295, var3);
                                   break regionExit1;
                               }
                             }
-                            hd.a(var2, -110, var3, var8_ref_p);
+                            ConfirmedEmailAvailabilityValidator.a(var2, -110, var3, var8_ref_p);
                             break regionExit1;
                           }
                         }
@@ -265,7 +265,7 @@ abstract class ByteStorage {
             var4 = vh.field_c;
           }
           if (param1) {
-            stackIn_11_0 = ig.a(true, param2, (String) (var3), -1, (String) (var4));
+            stackIn_11_0 = EditableTextField.a(true, param2, (String) (var3), -1, (String) (var4));
             return stackIn_11_0;
           }
           stackIn_9_0 = (java.net.URL) null;
@@ -297,7 +297,7 @@ abstract class ByteStorage {
         return bf.a(false, param2, param1, param4, param3, -31);
     }
 
-    final static int a(oc param0, oc param1, int param2) {
+    final static int a(GridPoint param0, GridPoint param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

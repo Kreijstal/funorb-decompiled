@@ -7,7 +7,7 @@ final class wf {
     static int[] field_c;
     static volatile int pendingClick;
 
-    final static boolean a(byte param0, String param1, String param2, String param3, vd param4, boolean param5, int param6) {
+    final static boolean a(byte param0, String param1, String param2, String param3, AccountRegistrationPanel param4, boolean param5, int param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -37,7 +37,7 @@ final class wf {
           fi.field_l = param3;
           th.field_n = param1;
           MouseWheelInput.field_c = null;
-          v.field_e = param5;
+          DebouncedFieldValidator.field_e = param5;
           IndexedSpriteState.field_h = oe.field_b;
           SocketArchiveRequestConnection.field_o = param6;
           return true;

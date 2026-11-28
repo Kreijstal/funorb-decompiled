@@ -256,7 +256,7 @@ final class PlatformTaskDispatcher implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = qj.a(27, (String) (var8.objectArgument), var8.intArgument).a(31067);
+                      var8.result = qj.a(27, (String) (var8.objectArgument), var8.intArgument).openSocket(31067);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
                       var3_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

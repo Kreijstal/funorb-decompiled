@@ -78,7 +78,7 @@ final class ff {
 
     final static void a(byte param0) {
         int var1 = 107 / ((param0 - 10) / 41);
-        ga.field_E = new IntrusiveDeque();
+        DisplayNameSelectionPanel.field_E = new IntrusiveDeque();
     }
 
     public final String toString() {
@@ -103,25 +103,25 @@ final class ff {
           try {
             te.field_N = new BitPacketBuffer(param11);
             id.field_c = new BitPacketBuffer(param7);
-            cl.field_m = param9;
+            AgeValidator.field_m = param9;
             b.field_b = param2;
             lc.field_l = param8;
             if (param3 <= 87) {
               return;
             }
             ia.field_kb = param6;
-            qa.field_n = param1;
+            ConfirmedEmailAvailabilityValidator.field_n = param1;
             ci.field_jb = param10;
             al.field_n = param4;
             jj.field_s = param0;
             WidgetContainer.field_C = param5;
             jh.field_f = param12;
             DelegatingCanvas.field_b = param13;
-            if (qa.field_n.field_b == null) {
+            if (ConfirmedEmailAvailabilityValidator.field_n.field_b == null) {
               return;
             }
             try {
-              pj.field_D = new BufferedCacheFile(qa.field_n.field_b, 64, 0);
+              pj.field_D = new BufferedCacheFile(ConfirmedEmailAvailabilityValidator.field_n.field_b, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

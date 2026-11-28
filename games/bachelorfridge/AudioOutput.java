@@ -50,7 +50,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_u.field_e = true;
             while (field_u.field_d) {
-              gda.sleepMillis(false, 50L);
+              DisplayNameSelectionPanel.sleepMillis(false, 50L);
             }
             field_u = null;
           }

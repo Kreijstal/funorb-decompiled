@@ -205,7 +205,7 @@ final class SectorCacheStore {
           } else {
             try {
               ArchiveIndex.field_a = new BufferedSocket((java.net.Socket) (tl.field_Gb.result), re.field_n);
-              qn.field_U.position = 0;
+              EditableTextField.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;
               lf.field_T = param1 ? -2 : -1;
@@ -213,7 +213,7 @@ final class SectorCacheStore {
               hh.field_o = param1 ? -2 : -1;
               var5.position = 0;
               tb.field_f = ca.field_h;
-              dh.a(fn.field_b, 11, cm.field_u, ub.field_e, qn.field_U);
+              dh.a(fn.field_b, 11, cm.field_u, ub.field_e, EditableTextField.field_U);
               vh.a(-1, (byte) -35);
             } catch (IOException iOException) {
               tb.field_f = gh.field_c;

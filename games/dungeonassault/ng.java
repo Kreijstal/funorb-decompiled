@@ -7,7 +7,7 @@ final class ng extends ck {
     private int field_O;
     static String field_N;
     static int field_I;
-    private dp field_M;
+    private FieldValidator field_M;
     static String field_J;
 
     public static void f(byte param0) {
@@ -61,7 +61,7 @@ final class ng extends ck {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u) {
-            stackIn_4_0 = this.field_M.a(true);
+            stackIn_4_0 = this.field_M.getValidationMessage(true);
             return stackIn_4_0;
           }
           if (param0 >= 3) {
@@ -140,7 +140,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_unable", 70);
                 if (var2 != null) {
-                  m.field_f = dj.a(var2, false);
+                  DebouncedFieldValidator.field_f = dj.a(var2, false);
                 }
                 var2 = rp.a("create_ineligible", 70);
                 if (null != var2) {
@@ -1111,7 +1111,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("tocustomersupport", param0 ^ -27135);
                 if (null != var2) {
-                  ip.field_i = dj.a(var2, false);
+                  TextFieldValidator.field_i = dj.a(var2, false);
                 }
                 var2 = rp.a("changedisplayname", param0 ^ -27126);
                 if (null != var2) {
@@ -1197,7 +1197,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("back", 102);
                 if (null != var2) {
-                  gk.field_O = dj.a(var2, false);
+                  DisplayNameSelectionPanel.field_O = dj.a(var2, false);
                 }
                 var2 = rp.a("exitfullscreenmode", param0 ^ -27025);
                 if (null != var2) {
@@ -1449,7 +1449,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_welcome", param0 ^ -27058);
                 if (var2 != null) {
-                  he.field_q = dj.a(var2, false);
+                  AgeValidator.field_q = dj.a(var2, false);
                 }
                 var2 = rp.a("create_u13_welcome", 41);
                 if (null != var2) {
@@ -1573,7 +1573,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("login_no_displayname", 125);
                 if (null != var2) {
-                  vo.field_q = dj.a(var2, false);
+                  PasswordValidator.field_q = dj.a(var2, false);
                 }
                 var2 = rp.a("create_username_tooltip", 113);
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("unpacking_animations", 71);
                 if (null != var2) {
-                  he.field_n = dj.a(var2, false);
+                  AgeValidator.field_n = dj.a(var2, false);
                 }
                 var2 = rp.a("unpacking_toolkit", 62);
                 if (var2 != null) {
@@ -2089,7 +2089,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("ok", 81);
                 if (var2 != null) {
-                  m.field_g = dj.a(var2, false);
+                  DebouncedFieldValidator.field_g = dj.a(var2, false);
                 }
                 var2 = rp.a("on", 86);
             }
@@ -2103,7 +2103,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("previous", 82);
                 if (null != var2) {
-                  lb.field_E = dj.a(var2, false);
+                  PlayerDungeonProfile.field_E = dj.a(var2, false);
                 }
                 var2 = rp.a("prev", param0 ^ -27136);
                 if (var2 != null) {
@@ -2327,7 +2327,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("notyetachieved", 118);
                 if (var2 != null) {
-                  fi.field_x = dj.a(var2, false);
+                  InstructionsScreen.field_x = dj.a(var2, false);
                 }
                 var2 = rp.a("achieved", 49);
                 if (null != var2) {
@@ -2883,7 +2883,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("pleasewait_dotdotdot", 49);
                 if (null != var2) {
-                  p.field_K = dj.a(var2, false);
+                  DungeonBuilderScreen.field_K = dj.a(var2, false);
                 }
                 var2 = rp.a("serviceunavailable", 63);
                 if (null != var2) {
@@ -3122,7 +3122,7 @@ final class ng extends ck {
         decompiledBody.run();
     }
 
-    ng(dp param0) {
+    ng(FieldValidator param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3331,7 +3331,7 @@ final class ng extends ck {
           }
           var5_int = (this.field_x >> 1) + (param1 + this.field_q);
           var6 = (this.field_s >> 1) + (this.field_v + param3);
-          var8 = this.field_M.a((byte) -127);
+          var8 = this.field_M.getValidationStatus((byte) -127);
           if (ub.field_s == var8 ||
             oc.field_A == var8) {
             var7 = sl.field_c[0];

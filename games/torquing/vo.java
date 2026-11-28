@@ -6,20 +6,20 @@ final class vo {
     static String field_g;
     static int[] field_a;
     static int[] field_b;
-    static mh[] field_f;
+    static MenuScreen[] field_f;
     static int[] field_d;
     static String field_c;
 
-    final static sm a(int param0, int param1, sm param2, int param3) {
-        sm var4 = null;
+    final static IndexedSprite a(int param0, int param1, IndexedSprite param2, int param3) {
+        IndexedSprite var4 = null;
         RuntimeException var4_ref = null;
-        sm stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new sm(0, 0, 0);
+          var4 = new IndexedSprite(0, 0, 0);
           var4.field_c = param2.field_c;
           var4.field_j = param2.field_j + param0;
           if (param1 != -1) {

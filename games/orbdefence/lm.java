@@ -1139,7 +1139,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "connectionlost_reconnecting");
                 if (var2 != null) {
-                  hi.field_f = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  TextFieldValidator.field_f = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "connectionlost_withreason");
                 if (null != var2) {
@@ -1315,7 +1315,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "openinpopupwindow");
                 if (var2 != null) {
-                  b.field_p = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ConfirmedEmailAvailabilityValidator.field_p = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create");
                 if (var2 != null) {
@@ -1434,7 +1434,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_password");
                 if (var2 != null) {
-                  hi.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  TextFieldValidator.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "create_password_confirm");
                 if (var2 != null) {
@@ -1494,7 +1494,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "create_agreeterms");
                 if (var2 != null) {
-                  nb.field_n = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  AgeValidator.field_n = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "create_u13terms");
                 if (var2 != null) {
@@ -1538,7 +1538,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login_no_displayname");
                 if (var2 != null) {
-                  rf.field_A = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  AccountRegistrationPanel.field_A = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_username_tooltip");
                 if (null != var2) {
@@ -1666,7 +1666,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_email_unavailable");
                 if (var2 != null) {
-                  pk.field_G = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LoginPanel.field_G = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_invaliddate");
                 if (var2 != null) {
@@ -1690,7 +1690,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "create_emailvalid");
                 if (null != var2) {
-                  wb.field_c = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DebouncedFieldValidator.field_c = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_account_success");
                 if (null != var2) {
@@ -1842,7 +1842,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "loading_fonts");
                 if (null != var2) {
-                  hi.field_e = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  TextFieldValidator.field_e = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "loading_soundeffects");
                 if (null != var2) {
@@ -2504,27 +2504,27 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  pk.field_B[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LoginPanel.field_B[0] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  pk.field_B[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LoginPanel.field_B[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "quickchat_shortcut_help,2");
                 if (var2 != null) {
-                  pk.field_B[2] = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
+                  LoginPanel.field_B[2] = ProxyAuthenticationRequiredException.a(var2, param0 - 12581);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_help,3");
                 if (null != var2) {
-                  pk.field_B[3] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LoginPanel.field_B[3] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  pk.field_B[4] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  LoginPanel.field_B[4] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  pk.field_B[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  LoginPanel.field_B[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
@@ -2748,7 +2748,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mb_including_gamename");
                 if (null != var2) {
-                  oc.field_U = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  ValidatedTextField.field_U = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mb_full_access_1");
                 if (var2 != null) {
@@ -3117,7 +3117,7 @@ final class lm {
               }
               var6 = stackIn_15_0;
               while (var3 > var6) {
-                var5[var6] = vc.field_g[vi.a(255, (int) var4[var6])];
+                var5[var6] = vc.field_g[EditableTextField.a(255, (int) var4[var6])];
                 var6++;
               }
               var1[var2] = new RgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var5);
@@ -3145,7 +3145,7 @@ final class lm {
           if (param0 != 32018) {
             field_e = (tl) null;
           }
-          stackIn_4_0 = new ee(KeyboardListener.a(-60), hi.h(2));
+          stackIn_4_0 = new ee(KeyboardListener.a(-60), TextFieldValidator.h(2));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

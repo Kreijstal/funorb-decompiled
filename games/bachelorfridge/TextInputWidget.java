@@ -13,7 +13,7 @@ class TextInputWidget extends InteractiveWidget {
     static int[] field_G;
     private int field_K;
 
-    private final void h(int param0) {
+    private final void pasteClipboardText(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
@@ -22,8 +22,8 @@ class TextInputWidget extends InteractiveWidget {
           try {
             var3 = 123 % ((param0 - 55) / 48);
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.i(-12);
-            this.a(var2, (byte) -51);
+            this.deleteSelection(-12);
+            this.insertTextAtCaret(var2, (byte) -51);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -66,7 +66,7 @@ class TextInputWidget extends InteractiveWidget {
         this.field_K = 0;
         this.text = "";
         this.field_H = 0;
-        this.i((byte) -118);
+        this.notifyTextChanged((byte) -118);
     }
 
     private final int e(byte param0) {
@@ -89,19 +89,19 @@ class TextInputWidget extends InteractiveWidget {
         return var3;
     }
 
-    void i(byte param0) {
+    void notifyTextChanged(byte param0) {
         if (param0 >= -87) {
           field_G = (int[]) null;
-          if (this.listener instanceof fca) {
-            ((fca) (this.listener)).a(this, (byte) 63);
+          if (this.listener instanceof TextFieldListener) {
+            ((TextFieldListener) (this.listener)).onTextChanged(this, (byte) 63);
             return;
           }
           return;
         }
-        if (!(this.listener instanceof fca)) {
+        if (!(this.listener instanceof TextFieldListener)) {
           return;
         }
-        ((fca) (this.listener)).a(this, (byte) 63);
+        ((TextFieldListener) (this.listener)).onTextChanged(this, (byte) 63);
     }
 
     final static Sprite a(byte param0, Sprite param1) {
@@ -133,7 +133,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void insertTextAtCaret(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -149,7 +149,7 @@ class TextInputWidget extends InteractiveWidget {
             param0 = param0.substring(0, var3_int);
           }
           if (param1 != -51) {
-            this.i(122);
+            this.deleteSelection(122);
           }
           if (this.field_H != this.text.length()) {
             this.text = this.text.substring(0, this.field_H) + param0 + this.text.substring(this.field_H, this.text.length());
@@ -158,7 +158,7 @@ class TextInputWidget extends InteractiveWidget {
           }
           this.field_H = this.field_H + param0.length();
           this.field_K = this.field_H;
-          this.i((byte) -104);
+          this.notifyTextChanged((byte) -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -174,15 +174,15 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void g(int param0) {
+    private final void cutSelection(int param0) {
         if (param0 == 81) {
-          this.b(false);
-          this.i(115);
+          this.copySelection(false);
+          this.deleteSelection(115);
           return;
         }
         field_G = (int[]) null;
-        this.b(false);
-        this.i(115);
+        this.copySelection(false);
+        this.deleteSelection(115);
     }
 
     final boolean b(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
@@ -249,9 +249,9 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void h(byte param0) {
-        if (this.listener instanceof fca) {
-          ((fca) (this.listener)).a(this, 0);
+    private final void submitText(byte param0) {
+        if (this.listener instanceof TextFieldListener) {
+          ((TextFieldListener) (this.listener)).onTextSubmitted(this, 0);
         }
         if (param0 > 18) {
           return;
@@ -275,7 +275,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final String f(byte param0) {
+    private final String getSelectedText(byte param0) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_11_0 = 0;
@@ -453,7 +453,7 @@ class TextInputWidget extends InteractiveWidget {
           if (param2) {
             return;
           }
-          this.i((byte) -90);
+          this.notifyTextChanged((byte) -90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -469,12 +469,12 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void copySelection(boolean param0) {
         try {
-          String var2 = this.f((byte) -53);
+          String var2 = this.getSelectedText((byte) -53);
           if (!param0) {
             if (!(var2.length() <= 0)) {
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.f((byte) -53))), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -53))), (java.awt.datatransfer.ClipboardOwner) null);
             }
             return;
           }
@@ -504,7 +504,7 @@ class TextInputWidget extends InteractiveWidget {
             if (32 <= param2 &&
               param2 <= 126) {
               if (this.field_H != this.field_K) {
-                this.i(param0 ^ -49);
+                this.deleteSelection(param0 ^ -49);
               }
               if (-1 == this.field_I ||
                 !(this.text.length() >= this.field_I)) {
@@ -518,29 +518,29 @@ class TextInputWidget extends InteractiveWidget {
                   this.field_H = dupTemp$0;
                   this.field_K = dupTemp$0;
                 }
-                this.i((byte) -123);
+                this.notifyTextChanged((byte) -123);
               }
               return true;
             }
             if (param1 == 85) {
               if (this.field_H != this.field_K) {
-                this.i(120);
+                this.deleteSelection(120);
                 return true;
               }
               if (this.field_H > 0) {
                 this.field_K = this.field_H - 1;
-                this.i(111);
+                this.deleteSelection(111);
                 return true;
               }
             } else {
               if (param1 == 101) {
                 if (this.field_H != this.field_K) {
-                  this.i(param0 + 109);
+                  this.deleteSelection(param0 + 109);
                   return true;
                 }
                 if (this.field_H < this.text.length()) {
                   this.field_K = 1 + this.field_H;
-                  this.i(106);
+                  this.deleteSelection(106);
                   return true;
                 }
               } else {
@@ -559,22 +559,22 @@ class TextInputWidget extends InteractiveWidget {
                       return true;
                     }
                     if (84 == param1) {
-                      this.h((byte) 52);
+                      this.submitText((byte) 52);
                       return true;
                     }
                     if (InvincibleEvent.field_q[82] &&
                       param1 == 65) {
-                      this.g(81);
+                      this.cutSelection(81);
                       return true;
                     }
                     if (InvincibleEvent.field_q[82] &&
                       param1 == 66) {
-                      this.b(false);
+                      this.copySelection(false);
                       return true;
                     }
                     if (InvincibleEvent.field_q[82] &&
                       param1 == 67) {
-                      this.h(104);
+                      this.pasteClipboardText(104);
                       return true;
                     }
                   } else {
@@ -625,7 +625,7 @@ class TextInputWidget extends InteractiveWidget {
         }
     }
 
-    private final void i(int param0) {
+    private final void deleteSelection(int param0) {
         int var3 = 0;
         int var4 = 0;
         int var2 = -97 / ((43 - param0) / 38);
@@ -635,7 +635,7 @@ class TextInputWidget extends InteractiveWidget {
           this.field_H = var3;
           this.field_K = var3;
           this.text = this.text.substring(0, var3) + this.text.substring(var4, this.text.length());
-          this.i((byte) -106);
+          this.notifyTextChanged((byte) -106);
         }
     }
 

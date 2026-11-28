@@ -88,7 +88,7 @@ final class qe extends WidgetContainer implements re, ka {
           this.field_D = param0;
           this.field_H = new pj(dd.field_a, (dg) null);
           this.field_H.field_w = (j) ((Object) new gh());
-          var7 = bb.a(rf.field_F, new String[]{this.e(true), this.h(-18655)}, -63);
+          var7 = LoginPanel.a(AccountRegistrationPanel.field_F, new String[]{this.e(true), this.h(-18655)}, -63);
           var3 = 20;
           var4 = new af(ua.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
           this.field_E = new kj(var7, var4);

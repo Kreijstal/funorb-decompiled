@@ -3,7 +3,7 @@
  */
 final class gl extends hl {
     private int field_E;
-    private ba field_F;
+    private FieldValidator field_F;
     static String[] field_G;
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -15,7 +15,7 @@ final class gl extends hl {
 
     final String b(byte param0) {
         if (this.field_j) {
-          return this.field_F.b(26766);
+          return this.field_F.getValidationMessage(26766);
         }
         if (param0 == -79) {
           return null;
@@ -189,7 +189,7 @@ final class gl extends hl {
         }
         int var5 = this.field_o + param0 + (this.field_h >> 1);
         int var6 = (this.field_q >> 1) + this.field_i + param1;
-        sg var8 = this.field_F.a(true);
+        sg var8 = this.field_F.getValidationStatus(true);
         if (tb.field_b == var8) {
           var15 = gh.field_n[0];
           var9 = var15.field_l << 1;
@@ -302,15 +302,15 @@ final class gl extends hl {
           if (!r.a(1, (byte) 123)) {
             return false;
           }
-          al.field_a = rd.field_j.readUnsignedByte(-97);
-          rd.field_j.position = 0;
+          al.field_a = EmailFormatValidator.field_j.readUnsignedByte(-97);
+          EmailFormatValidator.field_j.position = 0;
         }
         if (al.field_a == -2) {
           if (!r.a(2, (byte) 127)) {
             return false;
           }
-          al.field_a = rd.field_j.readUnsignedShort((byte) 72);
-          rd.field_j.position = 0;
+          al.field_a = EmailFormatValidator.field_j.readUnsignedShort((byte) 72);
+          EmailFormatValidator.field_j.position = 0;
         }
         if (!param0) {
           return r.a(al.field_a, (byte) 123);
@@ -336,7 +336,7 @@ final class gl extends hl {
         }
     }
 
-    gl(ba param0) {
+    gl(FieldValidator param0) {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {

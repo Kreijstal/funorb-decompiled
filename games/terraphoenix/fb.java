@@ -108,8 +108,8 @@ final class fb extends IntrusiveNode {
         int fieldTemp$0 = 0;
         try {
           this.field_o = param5;
-          fieldTemp$0 = pl.field_L;
-          pl.field_L = pl.field_L + 1;
+          fieldTemp$0 = AccountRegistrationPanel.field_L;
+          AccountRegistrationPanel.field_L = AccountRegistrationPanel.field_L + 1;
           this.field_s = fieldTemp$0 & 65535;
           this.field_r = param6;
           this.field_q = param1;

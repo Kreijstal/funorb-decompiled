@@ -431,7 +431,7 @@ final class og extends n {
           if (!param0) {
             var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
             var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-            var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+            var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
           } else {
             var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
           }
@@ -470,7 +470,7 @@ final class og extends n {
               if (!param0) {
                 var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                 var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
               } else {
                 var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
               }
@@ -480,7 +480,7 @@ final class og extends n {
               } else {
                 var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                 var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
               }
             }
           } else {
@@ -514,7 +514,7 @@ final class og extends n {
                 if (!param0) {
                   var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                  var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                  var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
                 } else {
                   var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                 }
@@ -524,7 +524,7 @@ final class og extends n {
                 } else {
                   var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                  var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                  var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
                 }
               }
             } else {
@@ -572,7 +572,7 @@ final class og extends n {
                 } else {
                   var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                   var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                  var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                  var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
                 }
               } else {
                 var23 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
@@ -604,7 +604,7 @@ final class og extends n {
                   if (!param0) {
                     var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                     var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                    var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                    var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
                   } else {
                     var12.a((byte) -59, new bd(15, GameSession.field_e, pn.field_a));
                   }
@@ -614,7 +614,7 @@ final class og extends n {
                   } else {
                     var12.a((byte) -119, new bd(11, li.field_n, pn.field_a));
                     var12.a((byte) -114, new bd(12, hh.field_b, pn.field_a));
-                    var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
+                    var12.a((byte) -78, new bd(13, LoginPanel.field_Q, pn.field_a));
                   }
                 }
               }

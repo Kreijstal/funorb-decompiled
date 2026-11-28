@@ -194,7 +194,7 @@ final class c {
               1 < var3Lifetime2) {
               kj.field_I[var3Lifetime2] = true;
             }
-            if (bh.field_p &&
+            if (PasswordValidator.field_p &&
               aj.field_h) {
               ac.field_d = ac.field_d + 64;
               pi.field_a = pi.field_a + 128;

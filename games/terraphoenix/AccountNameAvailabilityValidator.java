@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends di {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static String field_p;
     private String checkedName;
     static String field_n;
@@ -9,12 +9,12 @@ final class AccountNameAvailabilityValidator extends di {
     static String[] field_r;
     static String field_q;
 
-    AccountNameAvailabilityValidator(ej param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final im b(String param0, int param1) {
+    final im getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -65,7 +65,7 @@ final class AccountNameAvailabilityValidator extends di {
         }
     }
 
-    final String a(String param0, int param1) {
+    final String getValidationMessage(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String var4 = null;
@@ -101,7 +101,7 @@ final class AccountNameAvailabilityValidator extends di {
             stackIn_15_0 = lk.field_e;
             return stackIn_15_0;
           }
-          stackIn_13_0 = mg.field_m;
+          stackIn_13_0 = MatchingFieldValidator.field_m;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class AccountNameAvailabilityValidator extends di {
         this.checkedName = null;
         if (param0 != -4328) {
           String var3 = (String) null;
-          this.a((String) null, 24);
+          this.getValidationMessage((String) null, 24);
         }
     }
 
@@ -306,7 +306,7 @@ final class AccountNameAvailabilityValidator extends di {
 
     final static void a(int param0, cc param1, int param2) {
         int var4 = 0;
-        BitPacketBuffer var5 = di.field_l;
+        BitPacketBuffer var5 = TextFieldValidator.field_l;
         BitPacketBuffer var3 = var5;
         var5.writeCipheredByte(-17410, param0);
         var5.position = var5.position + 1;

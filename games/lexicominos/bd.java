@@ -84,7 +84,7 @@ final class bd extends IntrusiveNode {
           if (DelegatingCanvas.field_b == null) {
             return false;
           }
-          if (gg.field_b == uf.field_m) {
+          if (gg.field_b == AgeValidator.field_m) {
             return true;
           }
           return false;
@@ -92,7 +92,7 @@ final class bd extends IntrusiveNode {
         if (DelegatingCanvas.field_b == null) {
           return false;
         }
-        if (gg.field_b == uf.field_m) {
+        if (gg.field_b == AgeValidator.field_m) {
           return true;
         }
         return false;

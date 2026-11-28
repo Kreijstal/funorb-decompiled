@@ -109,7 +109,7 @@ final class hi {
             var4 = ni.field_a[var3];
             if (var4 >= 0) {
               if (bc.field_H.field_d == var4) {
-                var5 = g.field_n;
+                var5 = MatchingFieldValidator.field_n;
               } else {
                 var5 = SecondaryNodeDequeIterator.field_c;
               }

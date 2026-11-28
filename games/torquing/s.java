@@ -3,7 +3,7 @@
  */
 final class s extends am {
     static Sprite[] field_t;
-    static sm[] field_s;
+    static IndexedSprite[] field_s;
     private kj[] field_v;
     static String field_u;
 
@@ -68,7 +68,7 @@ final class s extends am {
           if (param1 != -1) {
             return;
           }
-          var4 = um.field_o;
+          var4 = MatchingFieldValidator.field_o;
           nn.a(param0, (byte) -114);
           om.a(0, 0, jh.field_A, 0, vp.field_I);
           if (null != this.field_v) {
@@ -134,7 +134,7 @@ final class s extends am {
                     this.field_v[var4_int] = (kj) ((Object) c.a(i.c(param1, 40), param0));
                   } else {
                     if (var6 == 3) {
-                      this.field_v[var4_int] = (kj) ((Object) bi.a(param0, (byte) 13));
+                      this.field_v[var4_int] = (kj) ((Object) LevelRun.a(param0, (byte) 13));
                     }
                   }
                 } else {
@@ -184,11 +184,11 @@ final class s extends am {
         int[][] var3 = this.field_r.a(15142, param1);
         if (this.field_r.field_b) {
           var4 = ci.field_c;
-          var5 = um.field_o;
+          var5 = MatchingFieldValidator.field_o;
           var29 = new int[var5][var4];
           var30 = this.field_r.a(false);
           this.a(var29, param0 ^ 29115);
-          for (var8 = 0; var8 < um.field_o; var8++) {
+          for (var8 = 0; var8 < MatchingFieldValidator.field_o; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];
             var11 = var31[0];

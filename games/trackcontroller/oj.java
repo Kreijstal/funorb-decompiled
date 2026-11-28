@@ -101,7 +101,7 @@ final class oj {
                   od.field_c[var23Lifetime2] = -2147483648;
                 } else {
                   qa.field_b[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  ui.field_r[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  PasswordValidator.field_r[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }
@@ -141,7 +141,7 @@ final class oj {
                   var26Lifetime1 = param3.field_B[var23Lifetime2];
                   u.field_l[var23Lifetime2] = (var26Lifetime1 * var18 + (var25Lifetime1 * var15 + var24Lifetime1 * var12) >> 16) + var9;
                   rd.field_s[var23Lifetime2] = (var26Lifetime1 * var19 + (var16 * var25Lifetime1 + var13 * var24Lifetime1) >> 16) + var10;
-                  lf.field_X[var23Lifetime2] = (var25Lifetime1 * var17 + (var14 * var24Lifetime1 + var26Lifetime1 * var20) >> 16) + var11;
+                  ValidatedTextField.field_X[var23Lifetime2] = (var25Lifetime1 * var17 + (var14 * var24Lifetime1 + var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param3.field_v[var23Lifetime2];
                   var25Lifetime1 = param3.field_z[var23Lifetime2];
                   var26Lifetime1 = param3.field_s[var23Lifetime2];

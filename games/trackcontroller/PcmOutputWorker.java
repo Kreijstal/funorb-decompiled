@@ -20,12 +20,12 @@ final class PcmOutputWorker implements Runnable {
     }
 
     final static void a(byte param0, int param1) {
-        hd.field_s = 3 & param1 >> 4;
+        ConfirmedEmailAvailabilityValidator.field_s = 3 & param1 >> 4;
         he.field_d = param1 >> 2 & 3;
         if (param0 != 100) {
           field_c = (String[]) null;
-          if (hd.field_s > 2) {
-            hd.field_s = 2;
+          if (ConfirmedEmailAvailabilityValidator.field_s > 2) {
+            ConfirmedEmailAvailabilityValidator.field_s = 2;
           }
           fj.field_S = 3 & param1;
           if (he.field_d <= 2) {
@@ -36,8 +36,8 @@ final class PcmOutputWorker implements Runnable {
           }
           he.field_d = 2;
         } else {
-          if (hd.field_s > 2) {
-            hd.field_s = 2;
+          if (ConfirmedEmailAvailabilityValidator.field_s > 2) {
+            ConfirmedEmailAvailabilityValidator.field_s = 2;
           }
           fj.field_S = 3 & param1;
           if (he.field_d > 2) {

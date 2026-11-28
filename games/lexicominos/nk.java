@@ -22,10 +22,10 @@ abstract class nk extends GameAppletShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        ri.field_e = this.field_u;
-        jh.a(14221, ri.field_e);
-        sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, ri.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
-        uk.a(this.field_D, this.field_s, ri.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
+        DebouncedFieldValidator.field_e = this.field_u;
+        jh.a(14221, DebouncedFieldValidator.field_e);
+        sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, DebouncedFieldValidator.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
+        uk.a(this.field_D, this.field_s, DebouncedFieldValidator.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
         li.g(false);
         NanoFrameTimer.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
@@ -161,7 +161,7 @@ abstract class nk extends GameAppletShell {
           gd.field_l = NanoFrameTimer.field_c.pollRotation(82);
         }
         if (bd.c(false)) {
-          var3 = cl.p(param1 - 127) * 1200;
+          var3 = ValidatedTextField.p(param1 - 127) * 1200;
           if (this.field_w ||
             !(SecondaryNodeDequeIterator.a(-28617) <= var3) &&
             !(var3 >= rf.a(30448))) {
@@ -223,7 +223,7 @@ abstract class nk extends GameAppletShell {
                     if (nc.field_r != 5) {
                       sc.a(256, (byte) 111, e.field_g);
                     } else {
-                      sc.a(5, (byte) 96, ri.field_f);
+                      sc.a(5, (byte) 96, DebouncedFieldValidator.field_f);
                     }
                   }
                 } else {
@@ -254,12 +254,12 @@ abstract class nk extends GameAppletShell {
           PacketBuffer.field_i = 1;
         }
         if (1 == PacketBuffer.field_i) {
-          if (ri.field_e != 0) {
+          if (DebouncedFieldValidator.field_e != 0) {
             eh.field_d = oj.a(false, BitPacketBuffer.field_m);
           }
-          we.field_h = cl.a(true, (byte) -98, false, gf.field_e, 1);
-          GzipDecompressor.field_a = cl.a(true, (byte) -15, false, ij.field_l, 1);
-          ej.field_d = cl.a(true, (byte) -37, false, ll.field_f, 1);
+          we.field_h = ValidatedTextField.a(true, (byte) -98, false, gf.field_e, 1);
+          GzipDecompressor.field_a = ValidatedTextField.a(true, (byte) -15, false, ij.field_l, 1);
+          ej.field_d = ValidatedTextField.a(true, (byte) -37, false, ll.field_f, 1);
           PacketBuffer.field_i = 2;
           gg.field_d = GzipDecompressor.field_a;
           BitPacketBuffer.field_p = we.field_h;
@@ -282,7 +282,7 @@ abstract class nk extends GameAppletShell {
           }
         }
         if (PacketBuffer.field_i == 3 &&
-          cl.a(ej.field_d, we.field_h, GzipDecompressor.field_a, (byte) 127) &&
+          ValidatedTextField.a(ej.field_d, we.field_h, GzipDecompressor.field_a, (byte) 127) &&
           oh.a(ej.field_d, -109)) {
           qa.b(0);
           mg.e(0);
@@ -312,7 +312,7 @@ abstract class nk extends GameAppletShell {
           PacketBuffer.field_i = 10;
         }
         if (PacketBuffer.field_i == 10) {
-          if (ri.field_e != 0) {
+          if (DebouncedFieldValidator.field_e != 0) {
             eg.field_C = oj.a(false, BoundedRandomAccessFile.field_d);
           }
           PacketBuffer.field_i = 11;
@@ -345,7 +345,7 @@ abstract class nk extends GameAppletShell {
           }
         }
         if (!param0 &&
-          rl.field_O) {
+          EditableTextField.field_O) {
           jd.a(ug.field_y, 160);
           this.f(param1 ^ -468);
           ha.a(ug.field_y, (byte) 105);
@@ -367,7 +367,7 @@ abstract class nk extends GameAppletShell {
             DirectByteStorage.a((byte) 77, 2);
           }
           if (ij.field_o[2]) {
-            g.a(3, (byte) -39);
+            MatchingFieldValidator.a(3, (byte) -39);
           }
           if (ij.field_o[3]) {
             vh.a(false, 4);
@@ -539,7 +539,7 @@ abstract class nk extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Lexicominos.field_L ? 1 : 0;
-          var4 = qk.a(ri.field_e, param2, param1 + param1, gd.field_l);
+          var4 = qk.a(DebouncedFieldValidator.field_e, param2, param1 + param1, gd.field_l);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -621,11 +621,11 @@ abstract class nk extends GameAppletShell {
           }
           if (13 == var4) {
             try {
-              if (g.field_m == null) {
-                g.field_m = new wg(jh.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (MatchingFieldValidator.field_m == null) {
+                MatchingFieldValidator.field_m = new wg(jh.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (g.field_m.a(74)) {
-                var12 = g.field_m.a((byte) -65);
+              if (MatchingFieldValidator.field_m.a(74)) {
+                var12 = MatchingFieldValidator.field_m.a((byte) -65);
                 if (var12 != null) {
                   var7 = NetworkArchiveRequest.decodeCp1252String(var12.position, var12.payload, (byte) 16, 0);
                   hf.a(var7, (byte) 110);
@@ -633,7 +633,7 @@ abstract class nk extends GameAppletShell {
                   var9 = (String) null;
                   hf.a((String) null, (byte) 122);
                 }
-                g.field_m = null;
+                MatchingFieldValidator.field_m = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -641,7 +641,7 @@ abstract class nk extends GameAppletShell {
               uj.a("S1", (Throwable) ((Object) var5), 1);
               var10 = (String) null;
               hf.a((String) null, (byte) 118);
-              g.field_m = null;
+              MatchingFieldValidator.field_m = null;
             }
           }
           if (15 == var4) {

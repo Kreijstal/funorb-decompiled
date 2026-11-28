@@ -68,16 +68,16 @@ final class da extends ArchiveProvider {
         var20 = Chess.field_G;
         try {
           eh.field_M = param10;
-          vm.field_i[3] = 16736511;
+          TextFieldValidator.field_i[3] = 16736511;
           dn.field_b = param8;
-          vm.field_i[2] = 9474303;
-          vm.field_i[4] = 16711935;
-          vm.field_i[0] = 16764000;
-          vm.field_i[1] = 6356832;
+          TextFieldValidator.field_i[2] = 9474303;
+          TextFieldValidator.field_i[4] = 16711935;
+          TextFieldValidator.field_i[0] = 16764000;
+          TextFieldValidator.field_i[1] = 6356832;
           sc.field_a = param11;
           kg.field_P[2] = 16736352;
           kg.field_P[1] = 6356832;
-          vm.field_i[4] = 16711935;
+          TextFieldValidator.field_i[4] = 16711935;
           kg.field_P[3] = 16736511;
           kg.field_P[0] = 16764000;
           AccountNameAvailabilityValidator.field_l = 8421504;
@@ -167,7 +167,7 @@ final class da extends ArchiveProvider {
             !qf.field_b) {
             return;
           }
-          ol.field_O = new jg(0, 0, 0, 0);
+          AccountRegistrationPanel.field_O = new jg(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,7 +286,7 @@ final class da extends ArchiveProvider {
           }
           if (tb.field_f == ca.field_h) {
             boolean decompiledFrameRemainder0 = true;
-            qn.field_U.position = 0;
+            EditableTextField.field_U.position = 0;
             uc.field_b = null;
             if (param2 != null) {
               var9 = 0;
@@ -302,16 +302,16 @@ final class da extends ArchiveProvider {
               mn.field_h.writeShort(param0, 86);
               mn.field_h.writeByte(param4, (byte) 92);
               mn.field_h.writeByte(var9, (byte) -107);
-              qn.field_U.writeByte(18, (byte) 96);
-              qn.field_U.position = qn.field_U.position + 2;
-              var10 = qn.field_U.position;
+              EditableTextField.field_U.writeByte(18, (byte) 96);
+              EditableTextField.field_U.position = EditableTextField.field_U.position + 2;
+              var10 = EditableTextField.field_U.position;
               var11_ref_String = m.a(bh.i(81), (byte) 87);
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
-              qn.field_U.writeString(-104, var11_ref_String);
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, qn.field_U, 86, se.field_M);
-              qn.field_U.backpatchShortLength(qn.field_U.position - var10, 70);
+              EditableTextField.field_U.writeString(-104, var11_ref_String);
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 86, se.field_M);
+              EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -334,11 +334,11 @@ final class da extends ArchiveProvider {
                 stackIn_33_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_32_0).writePrefixedString(stackIn_32_1, stackIn_33_2);
-              qn.field_U.writeByte(16, (byte) 63);
-              qn.field_U.position = qn.field_U.position + 1;
-              var9 = qn.field_U.position;
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, qn.field_U, 55, se.field_M);
-              qn.field_U.backpatchByteLength(qn.field_U.position - var9, -1);
+              EditableTextField.field_U.writeByte(16, (byte) 63);
+              EditableTextField.field_U.position = EditableTextField.field_U.position + 1;
+              var9 = EditableTextField.field_U.position;
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 55, se.field_M);
+              EditableTextField.field_U.backpatchByteLength(EditableTextField.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);
             tb.field_f = SecondaryNodeHashTable.field_f;

@@ -13,7 +13,7 @@ final class gm extends AcceleratingProjectile {
         try {
           this.field_eb = (TunnelEntity) ((Object) param0.field_B);
           this.field_eb.h(17086);
-          kj.a(ul.field_P, 96, param1);
+          kj.a(EditableTextField.field_P, 96, param1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -119,7 +119,7 @@ final class gm extends AcceleratingProjectile {
           if (null != this.field_eb) {
             this.field_eb.h(17086);
           }
-          kj.a(ul.field_P, 96, param1);
+          kj.a(EditableTextField.field_P, 96, param1);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

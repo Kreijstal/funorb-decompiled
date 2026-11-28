@@ -572,7 +572,7 @@ final class LevelScreen extends ib {
                   if ((param1 == 0 && (null == a.entities[0] ||
                     a.entities[0].kind != -1)) &&
                     (decompiledFrameRemainder0 = !(of.field_A <= 1))) {
-                    ea.e((byte) 97);
+                    MatchingFieldValidator.e((byte) 97);
                     vc.field_h.m((byte) 127);
                     IsaacRandom.field_j = null;
                     stellarshard.field_K = false;
@@ -655,7 +655,7 @@ final class LevelScreen extends ib {
                                 }
                                 if (decompiledFrameRemainder0) {
                                   nd.a(-26621, DualLinkDequeIterator.field_e);
-                                  DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -105);
+                                  DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -105);
                                   DualLinkDequeIterator.field_e = null;
                                   qd.field_j.requestFocus();
                                   decompiledFrameRemainder0 = (var4 != 0);
@@ -689,7 +689,7 @@ final class LevelScreen extends ib {
                       if (a.entities[0] == null ||
                         a.entities[0].kind != -1) {
                         if (!(of.field_A > 1)) {
-                          ea.e((byte) 93);
+                          MatchingFieldValidator.e((byte) 93);
                           vc.field_h.m((byte) 127);
                           DualLinkDequeIterator.field_i = true;
                           GameEntity.field_e = 0;
@@ -708,7 +708,7 @@ final class LevelScreen extends ib {
                             IsaacRandom.field_j = null;
                             if (DualLinkDequeIterator.field_e != null) {
                               nd.a(-26621, DualLinkDequeIterator.field_e);
-                              DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
+                              DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -104);
                               DualLinkDequeIterator.field_e = null;
                               qd.field_j.requestFocus();
                             }
@@ -722,7 +722,7 @@ final class LevelScreen extends ib {
                         if (var4 != 0) {
                           if (DualLinkDequeIterator.field_e != null) {
                             nd.a(-26621, DualLinkDequeIterator.field_e);
-                            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
+                            DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -104);
                             DualLinkDequeIterator.field_e = null;
                             qd.field_j.requestFocus();
                           }
@@ -735,7 +735,7 @@ final class LevelScreen extends ib {
               } else {
                 if (DualLinkDequeIterator.field_e != null) {
                   nd.a(-26621, DualLinkDequeIterator.field_e);
-                  DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
+                  DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -104);
                   DualLinkDequeIterator.field_e = null;
                   qd.field_j.requestFocus();
                 }
@@ -865,7 +865,7 @@ final class LevelScreen extends ib {
             if (param2 == 0) {
               if (a.entities[0] != null &&
                 a.entities[0].kind == -1) {
-                ic.a(dj.field_c, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(dj.field_c, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
@@ -873,7 +873,7 @@ final class LevelScreen extends ib {
               if (1 >= of.field_A) {
                 return;
               }
-              ic.a(kf.field_c + qi.level, param2, -1, false, 320, var5_int, param3);
+              DebouncedFieldValidator.a(kf.field_c + qi.level, param2, -1, false, 320, var5_int, param3);
               if (var6 == 0) {
                 return;
               }
@@ -881,13 +881,13 @@ final class LevelScreen extends ib {
             if (1 == param2) {
               if (null != a.entities[0] &&
                 -1 == a.entities[0].kind) {
-                ic.a(kk.field_n, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(AgeValidator.field_n, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
               }
               if (of.field_A > 1) {
-                ic.a(PcmOutputWorker.field_f, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(PcmOutputWorker.field_f, param2, -1, false, 320, var5_int, param3);
                 BufferedSocket.field_k[0].e(316, param3 + 3);
                 BufferedSocket.field_k[2].e(418, 3 + param3);
                 BufferedSocket.field_k[1].e(-3 + ((100 * qi.level - 100) / (-1 + of.field_A) + 320), 3 + param3);
@@ -895,19 +895,19 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              ic.a(DiskCacheWorker.field_b, param2, -1, false, 320, var5_int, param3);
+              DebouncedFieldValidator.a(DiskCacheWorker.field_b, param2, -1, false, 320, var5_int, param3);
               if (var6 == 0) {
                 return;
               }
             }
             if (3 == param2) {
               if (!MouseWheelInput.field_e) {
-                ic.a(ch.field_d, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(ch.field_d, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
               }
-              ic.a(eh.field_b, param2, -1, false, 320, var5_int, param3);
+              DebouncedFieldValidator.a(eh.field_b, param2, -1, false, 320, var5_int, param3);
               BufferedSocket.field_k[0].e(316, 2 + param3);
               BufferedSocket.field_k[2].e(418, 2 + param3);
               BufferedSocket.field_k[1].e(320 + pk.field_h - 3, 2 + param3);
@@ -918,7 +918,7 @@ final class LevelScreen extends ib {
             if (param2 != 4) {
               if (param2 != 5) {
                 if (param2 == 2) {
-                  ic.a(ig.field_C, param2, -1, false, 320, var5_int, param3);
+                  DebouncedFieldValidator.a(ig.field_C, param2, -1, false, 320, var5_int, param3);
                   if (var6 == 0) {
                     return;
                   }
@@ -931,7 +931,7 @@ final class LevelScreen extends ib {
                     if (DualLinkDequeIterator.field_i) {
                       return;
                     }
-                    ic.a(il.field_x, param2, -1, false, 320, var5_int, param3);
+                    DebouncedFieldValidator.a(il.field_x, param2, -1, false, 320, var5_int, param3);
                     if (var6 == 0) {
                       return;
                     }
@@ -939,7 +939,7 @@ final class LevelScreen extends ib {
                   if (DualLinkDequeIterator.field_i) {
                     return;
                   }
-                  ic.a(SocketConnector.field_b, param2, -1, false, 320, var5_int, param3);
+                  DebouncedFieldValidator.a(SocketConnector.field_b, param2, -1, false, 320, var5_int, param3);
                   if (var6 == 0) {
                     return;
                   }
@@ -947,7 +947,7 @@ final class LevelScreen extends ib {
                 if (DualLinkDequeIterator.field_i) {
                   return;
                 }
-                ic.a(ta.field_r, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(ta.field_r, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
@@ -957,22 +957,22 @@ final class LevelScreen extends ib {
                 return;
               }
               if (DualLinkDequeIterator.field_e == null) {
-                if (!lh.a(ic.field_d, (byte) -119)) {
+                if (!lh.a(DebouncedFieldValidator.field_d, (byte) -119)) {
                   stackIn_120_0 = (param0) ? 16777215 : 8421504;
                   var5_int = stackIn_120_0;
                 }
-                ic.a(ch.field_a, param2, -1, false, 320, var5_int, param3);
+                DebouncedFieldValidator.a(ch.field_a, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
                 }
               }
-              ic.a(ch.field_a, param2, -1, false, 320, var5_int, param3);
+              DebouncedFieldValidator.a(ch.field_a, param2, -1, false, 320, var5_int, param3);
               if (var6 == 0) {
                 return;
               }
             }
             if (vf.field_L != null) {
-              ic.a(MouseWheelInput.field_f, param2, -1, false, 320, var5_int, param3);
+              DebouncedFieldValidator.a(MouseWheelInput.field_f, param2, -1, false, 320, var5_int, param3);
               BufferedSocket.field_k[0].e(316, 2 + param3);
               BufferedSocket.field_k[2].e(418, param3 + 2);
               BufferedSocket.field_k[1].e(IterableNodeHashTable.field_c + 317, 2 + param3);
@@ -980,7 +980,7 @@ final class LevelScreen extends ib {
                 return;
               }
             }
-            ic.a(NanoFrameTimer.field_f, param2, -1, false, 320, var5_int, param3);
+            DebouncedFieldValidator.a(NanoFrameTimer.field_f, param2, -1, false, 320, var5_int, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1302,7 +1302,7 @@ final class LevelScreen extends ib {
             }
             if (decompiledFrameRemainder3) {
               MouseHandler.field_g = ab.a(-5094, 4);
-              ProxyAuthenticationRequiredException.field_c = ea.field_p;
+              ProxyAuthenticationRequiredException.field_c = MatchingFieldValidator.field_p;
               if (ProxyAuthenticationRequiredException.field_c == 4) {
                 PcmOutputWorker.a((byte) -125);
                 wh.a(-94);
@@ -1397,12 +1397,12 @@ final class LevelScreen extends ib {
             if (decompiledFrameCompleted1) {
               var2_int = 5883647;
               if (0 >= ProxyAuthenticationRequiredException.field_a) {
-                ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
+                DebouncedFieldValidator.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
                 if (var14 != 0) {
-                  ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
+                  DebouncedFieldValidator.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
                 }
               } else {
-                ic.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
+                DebouncedFieldValidator.a(dj.field_c, 8, -1, false, 320, var2_int, 415);
               }
               var3_ref_String = sg.field_d + qi.level + wc.field_l + ue.field_a;
               l.field_f.a(var3_ref_String, -1, 260, 640, 180, 0, -1, 1, 1, l.field_f.field_N);
@@ -1474,14 +1474,14 @@ final class LevelScreen extends ib {
             hk.field_l[1].e(0, 0);
             SoftwareRasterizer.fillRectangleAlpha(12, 96, 616, 336, 0, 192);
             ed.a(-6313, 3, 89, fg.field_P, 634, 343);
-            ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
+            DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             var2_intLifetime1 = 84;
             var3Lifetime1 = 104;
             qj.field_a.c(MouseHandler.field_a, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 14;
             qj.field_a.c(hj.field_c, 320, var3Lifetime1 + 12, 10742263, -1);
             var3Lifetime1 += 22;
-            qj.field_a.a(pl.field_V, 160, var3Lifetime1 - 6, 416, 32, 10742263, -1, 0, 0, 13);
+            qj.field_a.a(ValidatedTextField.field_V, 160, var3Lifetime1 - 6, 416, 32, 10742263, -1, 0, 0, 13);
             e.field_g[8].e(var2_intLifetime1, -36 + (var3Lifetime1 + 4));
             var3Lifetime1 += 12;
             var2_intLifetime1 -= 64;
@@ -1560,7 +1560,7 @@ final class LevelScreen extends ib {
             hk.field_l[0].e(0, 0);
             SoftwareRasterizer.fillRectangleAlpha(128, 105, 384, 295, 0, 192);
             ed.a(-6313, 119, 98, fg.field_P, 402, 302);
-            ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
+            DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             if (DualLinkNode.a(-1)) {
               qj.field_a.c(pd.field_p, 320, 159, 0, -1);
               qj.field_a.c(pd.field_p, 320, 161, 0, -1);
@@ -1570,7 +1570,7 @@ final class LevelScreen extends ib {
               if (DualLinkNode.a(param0 ^ -86)) {
                 qj.field_a.a(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
               }
-              ic.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
               decompiledFrameRemainder1 = (var14 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -1690,7 +1690,7 @@ final class LevelScreen extends ib {
                   SoftwareRasterizer.resetClip();
                 }
               }
-              ic.a("                                                ", 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a("                                                ", 8, -1, false, 320, 5883647, 411);
               var3Lifetime2 = -1;
               while (var3Lifetime2 <= 1) {
                 l.field_f.c(od.field_w[1 + var3Lifetime2], 192 * var3Lifetime2 + 319, 435, 0, 0);
@@ -1737,12 +1737,12 @@ final class LevelScreen extends ib {
             } else {
               hk.field_l[2].e(0, 0);
             }
-            ic.a(li.field_b, 9, -1, false, 320, 5883647, 439);
+            DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             if (oc.field_d) {
-              ic.a(ta.field_r, 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a(ta.field_r, 8, -1, false, 320, 5883647, 411);
             }
             if (DualLinkNode.a(param0 - 86)) {
-              ic.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
+              DebouncedFieldValidator.a(wl.field_T, 8, -1, false, 320, 5883647, 411);
             }
             var2_intLifetime3 = 180;
             var3Lifetime3 = 134;

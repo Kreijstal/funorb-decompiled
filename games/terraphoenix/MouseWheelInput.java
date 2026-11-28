@@ -48,7 +48,7 @@ abstract class MouseWheelInput {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ph.a(param5, param1, param3, param0, 10, param2);
+          var8 = PasswordValidator.a(param5, param1, param3, param0, 10, param2);
           var6 = var8;
           if (var8 == null) {
             return null;

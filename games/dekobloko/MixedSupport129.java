@@ -127,7 +127,7 @@ final class MixedSupport129 extends HashNode {
             integerArrayLocal65[integerLocal29] = integerLocal70;
           }
           for (integerLocal66 = 0; integerLocal66 < MixedSupport119.integerState0771; integerLocal66++) {
-            integerLocal67 = SceneWidgetPart004.integerArrayState0053[integerLocal66];
+            integerLocal67 = PlayerNamePrompt.integerArrayState0053[integerLocal66];
             integerLocal68 = mixedSupport138Argument1.shortArrayState0002[integerLocal67];
             integerLocal32 = mixedSupport138Argument1.shortArrayState0015[integerLocal67];
             integerLocal33 = mixedSupport138Argument1.shortArrayState0008[integerLocal67];

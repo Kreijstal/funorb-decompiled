@@ -6,7 +6,7 @@ final class vf {
     static o field_c;
     static int field_a;
 
-    final static boolean a(pl param0, String param1, boolean param2, int param3, boolean param4, String param5, String param6) {
+    final static boolean a(AccountRegistrationPanel param0, String param1, boolean param2, int param3, boolean param4, String param5, String param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         AccountCreationResultPanel var8 = null;

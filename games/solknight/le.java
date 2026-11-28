@@ -22,7 +22,7 @@ final class le {
           if (null != ah.field_e) {
             ah.field_e.f(true);
           }
-          ClientException.field_a = new bb(param1, param2, false, true, true);
+          ClientException.field_a = new LoginPanel(param1, param2, false, true, true);
           gf.field_cb.c(-3399, ClientException.field_a);
           if (param0 <= -11) {
             return;

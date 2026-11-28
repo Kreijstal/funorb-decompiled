@@ -53,7 +53,7 @@ final class MixedSupport051 {
         RenderingSupport002.performAction0243(0, 2, 1, integerArgument1 + 248, integerLocal1 + 36, 2, -2);
         integerLocal1 = integerLocal1 + (54 + (AgeValidator.integerState0360 == 1 ? 8 : 16));
         MixedSupport035.rgbSpriteArrayArrayState0006[3][1].performAction0280(82 + integerArgument1, integerLocal1, 18, 18);
-        integerLocal1 = integerLocal1 + MixedSupport045.computeInteger0552(140, 0, integerLocal1, UiComponentPart028.stringState0480, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, 110 + integerArgument1) * 16;
+        integerLocal1 = integerLocal1 + MixedSupport045.computeInteger0552(140, 0, integerLocal1, EditableTextField.stringState0480, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, 110 + integerArgument1) * 16;
         MixedSupport143.performAction1778(MixedSupport049.integerState0264, TextLineMetrics.integerState0534, integerLocal1 - (90 + (AgeValidator.integerState0360 != 1 ? 0 : 16)), integerArgument1 + 242, -1, 0, MixedSupport070.integerState0396);
         SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
         SoftwareRaster.drawVerticalLine(integerArgument1 + 310, 117, 242, 6316128);
@@ -156,7 +156,7 @@ final class MixedSupport051 {
             renderingSupport007Argument1.integerState0363 = renderingSupport007Argument1.integerState0363 + 1;
           }
           if (null != MixedSupport097.renderingSupport007State0007 &&
-            !ResourceSupport002.booleanState0006 &&
+            !DebouncedFieldValidator.booleanState0006 &&
             MixedSupport097.renderingSupport007State0007.integerState0363 == 0) {
             MixedSupport097.renderingSupport007State0007 = null;
           }
@@ -176,7 +176,7 @@ final class MixedSupport051 {
             renderingSupport007State0005 = null;
           }
           if (null != UiComponentPart004.renderingSupport007State0002 &&
-            !SceneWidgetPart013.booleanState0203 &&
+            !LobbyRoomRow.booleanState0203 &&
             UiComponentPart004.renderingSupport007State0002.integerState0363 == 0) {
             UiComponentPart004.renderingSupport007State0002 = null;
           }

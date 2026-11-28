@@ -32,7 +32,7 @@ final class cj {
           u.field_b.a(-1, th.field_K, true, ee.field_l);
           u.field_b.c(false);
           while (DelegatingCanvas.a((byte) -56)) {
-            u.field_b.a(el.field_n, ta.field_d, (byte) -48);
+            u.field_b.a(MatchingFieldValidator.field_n, ta.field_d, (byte) -48);
           }
           if (he.field_b != -1) {
             var2 = he.field_b;

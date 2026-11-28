@@ -263,7 +263,7 @@ final class jb extends IntrusiveNode {
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
-              cb.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
+              TextFieldValidator.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
             ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
@@ -550,7 +550,7 @@ final class jb extends IntrusiveNode {
               }
             }
             for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
-              cb.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
+              TextFieldValidator.field_e.drawQuarterSize(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
             ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);

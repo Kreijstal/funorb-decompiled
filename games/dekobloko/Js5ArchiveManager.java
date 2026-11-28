@@ -149,7 +149,7 @@ final class Js5ArchiveManager {
         if (integerArgument1 != -5) {
           byteArrayState0017 = (byte[]) null;
         }
-        UiComponentPart032.booleanState0198 = true;
+        BirthDateInput.booleanState0198 = true;
         SceneWidgetPart012.booleanState0188 = true;
         MixedSupport005.uiComponentPart016State0001.performAction0834(true);
         MixedSupport147.performAction1811(false, integerArgument1 ^ 49, MixedSupport006.stringState0027);

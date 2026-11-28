@@ -68,7 +68,7 @@ final class BufferedSocket implements Runnable {
             }
             oa.a(9, true, 37);
           } else {
-            bc.field_V = -1;
+            ValidatedTextField.field_V = -1;
             if (ProxyAuthenticationRequiredException.field_b > 0) {
               wi.field_p.a(-119, ProxyAuthenticationRequiredException.field_b);
               wi.field_p.a(false);
@@ -76,7 +76,7 @@ final class BufferedSocket implements Runnable {
             }
             if (tj.field_a == 12 &&
               fleas.field_E == 0 &&
-              !c.field_U) {
+              !EditableTextField.field_U) {
               hg.a(-25389, 10, 245, tj.field_a);
             }
             if (tj.field_a >= ia.field_m[fleas.field_E].length) {

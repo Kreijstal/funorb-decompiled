@@ -54,7 +54,7 @@ final class pe extends IntrusiveNode {
         int var11Lifetime1;
         var12 = CrazyCrystals.field_B;
         try {
-          var14 = kd.field_n;
+          var14 = ConfirmedEmailAvailabilityValidator.field_n;
           var2 = var14.readUnsignedByte(255);
           var3 = (hb) (vm.field_g.beginForward(32073));
           while (var3 != null) {
@@ -82,9 +82,9 @@ final class pe extends IntrusiveNode {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               tb.a(-31416, var14);
               if (var6_intLifetime1 != 0) {
-                ca.a(SpriteGeometry.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
+                ca.a(SpriteGeometry.field_q, PasswordValidator.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
               } else {
-                ca.a(SpriteGeometry.field_q, jn.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
+                ca.a(SpriteGeometry.field_q, PasswordValidator.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
               }
             }
             go.a(var5, 240);

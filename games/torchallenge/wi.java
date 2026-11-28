@@ -71,12 +71,12 @@ final class wi {
           if (hf.field_b == eh.field_p &&
             param0.equals(AccountCreationResultPanel.field_zb)) {
             eh.field_p = mg.field_c;
-            stackIn_11_0 = gf.field_w;
+            stackIn_11_0 = MatchingFieldValidator.field_w;
             return stackIn_11_0;
           }
           AccountCreationResultPanel.field_zb = param0;
           eh.field_p = qc.field_i;
-          gf.field_w = null;
+          MatchingFieldValidator.field_w = null;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class wi {
         if (param0 != 0) {
           return true;
         }
-        return ib.a(88, gi.b(param0 ^ 12476));
+        return DisplayNameSelectionPanel.a(88, gi.b(param0 ^ 12476));
     }
 
     wi(int[] param0) {

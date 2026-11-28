@@ -109,7 +109,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         if (!ProxyAuthenticationRequiredException.booleanState0024) {
           rgbSpriteLocal5 = MixedSupport128.rgbSpriteState0060;
           integerLocal9 = 320 * (MixedSupport137.integerState0848 * MixedSupport137.integerState0848) / 900;
-          stackIntegerLocal3 = (!SceneWidgetPart009.booleanState0151) ? 0 : 1;
+          stackIntegerLocal3 = (!IconLabelWidget.booleanState0151) ? 0 : 1;
           integerLocal8 = stackIntegerLocal3;
           stackIntegerLocal4 = (!MouseInput.booleanState0223) ? 0 : 1;
           integerLocal7 = stackIntegerLocal4;
@@ -119,7 +119,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           stackIntegerLocal1 = (!MouseInput.booleanState0223) ? 0 : 1;
           integerLocal8 = stackIntegerLocal1;
           rgbSpriteLocal6 = MixedSupport128.rgbSpriteState0060;
-          stackIntegerLocal2 = (!SceneWidgetPart009.booleanState0151) ? 0 : 1;
+          stackIntegerLocal2 = (!IconLabelWidget.booleanState0151) ? 0 : 1;
           integerLocal7 = stackIntegerLocal2;
           integerLocal9 = 320 - MixedSupport137.integerState0848 * MixedSupport137.integerState0848 * 320 / 900;
         }
@@ -147,7 +147,7 @@ final class UiComponentPart001 extends InteractiveComponent {
           SoftwareRaster.setClip(0, integerLocal9 + 320, 640, 480);
           UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
           SoftwareRaster.resetClip();
-          if (!SceneWidgetPart009.booleanState0151) {
+          if (!IconLabelWidget.booleanState0151) {
             return;
           }
           if (!MouseInput.booleanState0223) {
@@ -165,7 +165,7 @@ final class UiComponentPart001 extends InteractiveComponent {
         SoftwareRaster.setClip(0, integerLocal9 + 320, 640, 480);
         UiComponentPart009.performAction0375((byte) 121, integerLocal8 != 0, rgbSpriteLocal6, integerLocal9, 256);
         SoftwareRaster.resetClip();
-        if (!SceneWidgetPart009.booleanState0151) {
+        if (!IconLabelWidget.booleanState0151) {
           return;
         }
         if (!MouseInput.booleanState0223) {
@@ -183,7 +183,7 @@ final class UiComponentPart001 extends InteractiveComponent {
 
     final static void performAction0060(int integerArgument1) {
         String stringLocal1 = (String) null;
-        InputAdapter002.performAction1352(PasswordValidator.stringState0527, -128, (String) null);
+        BirthDateValidator.performAction1352(PasswordValidator.stringState0527, -128, (String) null);
         if (integerArgument1 >= -6) {
           RawSound rawSoundLocal2 = (RawSound) null;
           UiComponentPart001.performAction0057(-10, 44, (RawSound) null, 29, -93);

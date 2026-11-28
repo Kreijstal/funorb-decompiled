@@ -155,7 +155,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           }
           if (lj.field_z == jk.field_y) {
             ch.field_f = null;
-            ff.field_D.position = 0;
+            LoginPanel.field_D.position = 0;
             if (param3 != null) {
               var9 = 0;
               if (param5) {
@@ -171,16 +171,16 @@ final class ProxyAuthenticationRequiredException extends IOException {
               d.field_d.writeShort(param4, -159688920);
               d.field_d.writeByte(6389, param0);
               d.field_d.writeByte(6389, var9);
-              ff.field_D.writeByte(6389, 18);
-              ff.field_D.position = ff.field_D.position + 2;
-              var10 = ff.field_D.position;
+              LoginPanel.field_D.writeByte(6389, 18);
+              LoginPanel.field_D.position = LoginPanel.field_D.position + 2;
+              var10 = LoginPanel.field_D.position;
               var11_ref_String = wk.a(ha.b(116), (byte) -45);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              ff.field_D.writeString(92, var11_ref_String);
-              bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -123, d.field_d);
-              ff.field_D.backpatchShortLength(-109, ff.field_D.position - var10);
+              LoginPanel.field_D.writeString(92, var11_ref_String);
+              bj.a(kb.field_p, q.field_f, LoginPanel.field_D, (byte) -123, d.field_d);
+              LoginPanel.field_D.backpatchShortLength(-109, LoginPanel.field_D.position - var10);
             } else {
               d.field_d.position = 0;
               d.field_d.writeInt(param2 - 96, d.field_c.nextInt());
@@ -199,11 +199,11 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 stackIn_17_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_16_0).writePrefixedString(stackIn_17_1, param2 ^ -117);
-              ff.field_D.writeByte(6389, 16);
-              ff.field_D.position = ff.field_D.position + 1;
-              var9 = ff.field_D.position;
-              bj.a(kb.field_p, q.field_f, ff.field_D, (byte) -108, d.field_d);
-              ff.field_D.backpatchByteLength((byte) -42, -var9 + ff.field_D.position);
+              LoginPanel.field_D.writeByte(6389, 16);
+              LoginPanel.field_D.position = LoginPanel.field_D.position + 1;
+              var9 = LoginPanel.field_D.position;
+              bj.a(kb.field_p, q.field_f, LoginPanel.field_D, (byte) -108, d.field_d);
+              LoginPanel.field_D.backpatchByteLength((byte) -42, -var9 + LoginPanel.field_D.position);
             }
             rb.a(-1, -377);
             lj.field_z = vf.field_b;
@@ -228,7 +228,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               if (99 != var9Lifetime1) {
                 lj.field_z = gg.field_f;
                 tg.field_a = -1;
-                ca.field_e = var9Lifetime1;
+                DebouncedFieldValidator.field_e = var9Lifetime1;
               } else {
                 ue.a(jk.a((byte) -114), 0);
                 ch.field_f = new Boolean(oh.a((byte) -87, WordLanguage.field_l));
@@ -255,7 +255,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           }
           if (gg.field_f == lj.field_z &&
             GameKeyHandler.a(0)) {
-            if (ca.field_e == 255) {
+            if (DebouncedFieldValidator.field_e == 255) {
               var9_ref_String = WordLanguage.field_l.readNullableString(-1640531527);
               if (var9_ref_String != null) {
                 v.a(0, var9_ref_String, ha.b(114));
@@ -265,7 +265,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             }
             pc.a(1);
             MusicPatchPcmStream.field_k = false;
-            stackIn_55_0 = ca.field_e;
+            stackIn_55_0 = DebouncedFieldValidator.field_e;
             return stackIn_55_0;
           }
           if (null == nk.field_b) {

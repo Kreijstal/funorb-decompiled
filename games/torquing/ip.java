@@ -20,7 +20,7 @@ final class ip {
             var3 = (PcmSampleStream) null;
             ip.a(false, (PcmSampleStream) null);
           }
-          stackIn_3_0 = ij.a(true, 10, param1, -98);
+          stackIn_3_0 = PasswordValidator.a(true, 10, param1, -98);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -106,11 +106,11 @@ final class ip {
         }
     }
 
-    final static sm[] a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static IndexedSprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        sm[] stackIn_3_0 = null;
+        IndexedSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

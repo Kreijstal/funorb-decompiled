@@ -128,11 +128,11 @@ class ph extends ag {
         try {
           super.a(param0, param1, param2 + param2, param3);
           if (this.field_r != 0) {
-            if (this.field_r == ig.field_L) {
+            if (this.field_r == EditableTextField.field_L) {
               return;
             }
             if (this.b(rb.field_m, j.field_c, 255, param1, param3) &&
-              ig.field_L == 0) {
+              EditableTextField.field_L == 0) {
               this.a(rb.field_m - param1, true, j.field_c - param3, this.field_r);
             }
             this.a(j.field_c, param1, param3, rb.field_m, param0, 0);

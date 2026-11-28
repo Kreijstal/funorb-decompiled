@@ -88,7 +88,7 @@ final class re extends lb {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = dj.field_W;
+            stackIn_4_0 = EditableTextField.field_W;
             return stackIn_4_0;
           }
           if (var2_int > 64) {

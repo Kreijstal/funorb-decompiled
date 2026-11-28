@@ -32,7 +32,7 @@ final class DiagnosticSupport002 extends RuntimeException {
           UiComponentPart033.sceneWidgetState0150.performAction1764(MouseWheelInput.sceneWidgetState0050.integerState0896 - sceneWidgetState0057.integerState0896, 0, 0, integerArgument7, 0);
           integerLocal2 = integerLocal2 + (integerArgument7 + integerArgument9);
           sceneWidgetState0057.performAction1764(sceneWidgetState0057.integerState0896, 0, 0, integerArgument7, UiComponentPart033.sceneWidgetState0150.integerState0896);
-          SceneWidgetPart013.sceneWidgetState0139.performAction1764(SceneWidgetPart013.sceneWidgetState0139.computeInteger1770(true), 0, integerLocal2, integerArgument6, 5);
+          LobbyRoomRow.sceneWidgetState0139.performAction1764(LobbyRoomRow.sceneWidgetState0139.computeInteger1770(true), 0, integerLocal2, integerArgument6, 5);
           integerLocal3 = RenderingSupport001.sceneWidgetState0004.computeInteger1770(true);
           RenderingSupport001.sceneWidgetState0004.performAction1764(integerLocal3, 0, integerLocal2, integerArgument6, -5 + (integerLocal1 - integerLocal3));
           MixedSupport066.sceneWidgetState0068.performAction1764(integerLocal1, 0, 0, integerArgument1, 0);
@@ -40,7 +40,7 @@ final class DiagnosticSupport002 extends RuntimeException {
           UiComponentPart014.sceneWidgetState0052.performAction1764(integerLocal1, 0, integerArgument1, integerLocal4, 0);
           UiComponentPart014.sceneWidgetState0052.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0390(2105376, -20982, 3, UiComponentPart014.sceneWidgetState0052.integerState0915, 8421504, 11579568);
           integerLocal4 = integerLocal4 + integerArgument1;
-          UiComponentPart031.sceneWidgetState0116.performAction1764(integerLocal1, 0, -(integerLocal4 / 2) + integerArgument2, integerLocal4, -(integerLocal1 / 2) + integerArgument5);
+          AccountRegistrationPanel.sceneWidgetState0116.performAction1764(integerLocal1, 0, -(integerLocal4 / 2) + integerArgument2, integerLocal4, -(integerLocal1 / 2) + integerArgument5);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "jb.B(" + integerArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + integerArgument4 + ',' + integerArgument5 + ',' + integerArgument6 + ',' + integerArgument7 + ',' + (stringArgument8 != null ? "{...}" : "null") + ',' + integerArgument9 + ')');
         }
@@ -62,7 +62,7 @@ final class DiagnosticSupport002 extends RuntimeException {
         int integerLocal3 = 0;
         int integerLocal4 = 0;
         try {
-          SceneWidgetPart013.booleanState0202 = true;
+          LobbyRoomRow.booleanState0202 = true;
           MixedSupport033.sceneWidgetState0024.stringState0598 = stringArgument2;
           integerLocal1 = MixedSupport076.framebufferState0001.integerState0190;
           int integerLocal5 = 66 / ((byteArgument1 - 29) / 46);
@@ -193,7 +193,7 @@ final class DiagnosticSupport002 extends RuntimeException {
           ComponentContainer.sceneWidgetState0069 = UiComponentPart033.sceneWidgetState0150;
           UiComponentPart033.sceneWidgetState0150.integerState0889 = MixedSupport061.integerState0332 - (((MixedSupport061.integerState0332 & 16711423) >> 1) - (8355711 & MixedSupport040.sceneWidgetState0032.integerState0889 >> 1));
           MixedSupport065.sceneWidgetState0067 = sceneWidgetState0057;
-          UiComponentPart031.sceneWidgetState0116 = new SceneWidget(0L, sceneWidgetArgument5);
+          AccountRegistrationPanel.sceneWidgetState0116 = new SceneWidget(0L, sceneWidgetArgument5);
           MixedSupport066.sceneWidgetState0068 = new SceneWidget(0L, sceneWidgetArgument1);
           UiComponentPart014.sceneWidgetState0052 = new SceneWidget(0L, (SceneWidget) null);
           MouseWheelInput.sceneWidgetState0050 = new SceneWidget(0L, sceneWidgetArgument3);
@@ -202,15 +202,15 @@ final class DiagnosticSupport002 extends RuntimeException {
           MouseWheelInput.sceneWidgetState0050.performAction1768(UiComponentPart033.sceneWidgetState0150, -16834);
           sceneWidgetState0057 = new SceneWidget(0L, MixedSupport065.sceneWidgetState0067);
           MouseWheelInput.sceneWidgetState0050.performAction1768(sceneWidgetState0057, -16834);
-          SceneWidgetPart013.sceneWidgetState0139 = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032, MixedSupport100.stringState0420);
+          LobbyRoomRow.sceneWidgetState0139 = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032, MixedSupport100.stringState0420);
           RenderingSupport001.sceneWidgetState0004 = new SceneWidget(0L, MixedSupport040.sceneWidgetState0032);
-          UiComponentPart031.sceneWidgetState0116.performAction1768(MixedSupport066.sceneWidgetState0068, -16834);
+          AccountRegistrationPanel.sceneWidgetState0116.performAction1768(MixedSupport066.sceneWidgetState0068, -16834);
           if (integerArgument4 >= -32) {
             validationStatusState0002 = (ValidationStatus) null;
           }
-          UiComponentPart031.sceneWidgetState0116.performAction1768(UiComponentPart014.sceneWidgetState0052, -16834);
+          AccountRegistrationPanel.sceneWidgetState0116.performAction1768(UiComponentPart014.sceneWidgetState0052, -16834);
           UiComponentPart014.sceneWidgetState0052.performAction1768(MouseWheelInput.sceneWidgetState0050, -16834);
-          UiComponentPart014.sceneWidgetState0052.performAction1768(SceneWidgetPart013.sceneWidgetState0139, -16834);
+          UiComponentPart014.sceneWidgetState0052.performAction1768(LobbyRoomRow.sceneWidgetState0139, -16834);
           UiComponentPart014.sceneWidgetState0052.performAction1768(RenderingSupport001.sceneWidgetState0004, -16834);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal15) {

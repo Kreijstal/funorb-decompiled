@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vg extends jj {
-    private kf field_H;
+    private FieldValidator field_H;
     static int field_J;
     private String field_N;
     private int field_L;
@@ -68,7 +68,7 @@ final class vg extends jj {
         }
     }
 
-    vg(kf param0, String param1, int param2, int param3, int param4, int param5) {
+    vg(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, bk.a(true));
         try {
           this.field_N = param1;
@@ -120,16 +120,16 @@ final class vg extends jj {
         var22 = null;
         var28 = null;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var6 = this.field_H.b(false);
+        var6 = this.field_H.getValidationStatus(false);
         if (ke.field_d != var6 &&
           var6 != f.field_g) {
-          var5 = this.field_H.b((byte) -123);
+          var5 = this.field_H.getValidationMessage((byte) -123);
           if (var5 == null) {
             var5 = this.field_N;
           }
           if (var5.equals(this.field_s)) {
             super.a(param0, param1, param2, param3);
-            var6 = this.field_H.b(false);
+            var6 = this.field_H.getValidationStatus(false);
             var34 = (ui) ((Object) this.field_h);
             var9 = this.field_r + param3;
             var10 = var34.a((UiWidget) (this), -73, param2) + (var34.a(-1, (UiWidget) (this)).b(62) >> 1);
@@ -140,7 +140,7 @@ final class vg extends jj {
                 var30.c(var9, var10 - (var30.field_j >> 1), 256);
                 return;
               }
-              if (var6 != wj.field_i) {
+              if (var6 != TextFieldValidator.field_i) {
                 return;
               }
               var29 = hk.field_i[1];
@@ -175,7 +175,7 @@ final class vg extends jj {
           this.field_s = var5;
           this.a(true);
           super.a(param0, param1, param2, param3);
-          var6 = this.field_H.b(false);
+          var6 = this.field_H.getValidationStatus(false);
           var33 = (ui) ((Object) this.field_h);
           var9Lifetime2 = this.field_r + param3;
           var10Lifetime2 = var33.a((UiWidget) (this), -73, param2) + (var33.a(-1, (UiWidget) (this)).b(62) >> 1);
@@ -203,7 +203,7 @@ final class vg extends jj {
               var25.c(var9Lifetime2, var10Lifetime2 - (var25.field_j >> 1), 256);
               return;
             }
-            if (var6 != wj.field_i) {
+            if (var6 != TextFieldValidator.field_i) {
               return;
             }
             var24 = hk.field_i[1];
@@ -242,7 +242,7 @@ final class vg extends jj {
           this.a(true);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_H.b(false);
+        var6Lifetime1 = this.field_H.getValidationStatus(false);
         var32 = (ui) ((Object) this.field_h);
         var9Lifetime1 = this.field_r + param3;
         var10Lifetime1 = var32.a((UiWidget) (this), -73, param2) + (var32.a(-1, (UiWidget) (this)).b(62) >> 1);
@@ -266,7 +266,7 @@ final class vg extends jj {
               var20.c(var9Lifetime1, var10Lifetime1 - (var20.field_j >> 1), 256);
               return;
             }
-            if (var6Lifetime1 != wj.field_i) {
+            if (var6Lifetime1 != TextFieldValidator.field_i) {
               return;
             }
             var19 = hk.field_i[1];

@@ -132,7 +132,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           return;
         }
         pk.field_c = param4;
-        rg.field_D = param3;
+        LoginPanel.field_D = param3;
         sg.field_e = param1;
         kf.field_v = param2;
     }
@@ -150,7 +150,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             return null;
           }
           var4_int = 20 / ((-39 - param2) / 36);
-          stackIn_4_0 = rg.i(104);
+          stackIn_4_0 = LoginPanel.i(104);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

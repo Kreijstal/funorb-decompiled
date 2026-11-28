@@ -190,7 +190,7 @@ final class nf extends DualLinkNode {
         var9 = DungeonAssault.field_K;
         try {
           if (param2 == 1) {
-            this.field_z = ih.a(97, '<', param0.readString(-117));
+            this.field_z = RaiderRecruitmentScreen.splitOnCharacter(97, '<', param0.readString(-117));
           } else {
             if (param2 == 2) {
               var4_int = param0.readUnsignedByte(true);
@@ -247,13 +247,13 @@ final class nf extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          he.field_s = false;
+          AgeValidator.field_s = false;
           cd.field_b = false;
           if (a.field_n != null &&
             a.field_n.field_T) {
             if (param0 == 8) {
               param0 = 2;
-              if (!qc.field_t) {
+              if (!MenuScreen.field_t) {
                 param2 = fk.field_s;
               } else {
                 param2 = d.field_b;
@@ -266,7 +266,7 @@ final class nf extends DualLinkNode {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (he.field_s) {
+              if (AgeValidator.field_s) {
                 param2 = jk.a(new String[]{param2}, oi.field_G, 30496);
               }
               if (jd.field_l) {
@@ -276,7 +276,7 @@ final class nf extends DualLinkNode {
             }
             if (param0 != 256 &&
               param0 != 10 &&
-              !qc.field_t) {
+              !MenuScreen.field_t) {
               wo.field_e.i(22377);
             }
           }

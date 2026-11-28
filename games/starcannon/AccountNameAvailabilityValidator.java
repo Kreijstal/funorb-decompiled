@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends qf {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static Sprite[] field_j;
     static String field_l;
     static ResourceArchive field_p;
@@ -20,12 +20,12 @@ final class AccountNameAvailabilityValidator extends qf {
         field_m = 113;
     }
 
-    AccountNameAvailabilityValidator(fe param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final p a(String param0, int param1) {
+    final p getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -117,7 +117,7 @@ final class AccountNameAvailabilityValidator extends qf {
         this.checkedName = null;
     }
 
-    final String a(String param0, boolean param1) {
+    final String getValidationMessage(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -133,7 +133,7 @@ final class AccountNameAvailabilityValidator extends qf {
         try {
           if (param1) {
             var5 = (String) null;
-            this.a((String) null, false);
+            this.getValidationMessage((String) null, false);
           }
           var6 = (CharSequence) ((Object) param0);
           var3 = lj.a((byte) -5, var6);
@@ -156,7 +156,7 @@ final class AccountNameAvailabilityValidator extends qf {
             stackIn_17_0 = ll.field_a;
             return stackIn_17_0;
           }
-          stackIn_15_0 = cf.field_s;
+          stackIn_15_0 = ConfirmedEmailAvailabilityValidator.field_s;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

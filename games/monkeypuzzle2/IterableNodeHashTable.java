@@ -73,7 +73,7 @@ final class IterableNodeHashTable implements Iterable {
     }
 
     final static void a(int param0) {
-        nf.field_F = new bg();
+        nf.field_F = new AccountRegistrationPanel();
         if (param0 == 0) {
           jh.field_C.c((byte) 121, nf.field_F);
           return;

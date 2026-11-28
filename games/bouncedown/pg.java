@@ -25,13 +25,13 @@ final class pg {
         int var1 = hj.a(24777);
         if (param0 == 0) {
           var2 = nd.a(-21065);
-          cf.field_g.a(jl.field_a - td.field_a, -gh.field_H + bb.field_b, var1 + (gh.field_H << 1), -21907, var2 + (td.field_a << 1));
-          ti.l(6);
+          cf.field_g.a(jl.field_a - td.field_a, -AccountRegistrationPanel.field_H + bb.field_b, var1 + (AccountRegistrationPanel.field_H << 1), -21907, var2 + (td.field_a << 1));
+          ValidatedTextField.l(6);
           return;
         }
     }
 
-    final static boolean a(int param0, gh param1, String param2, int param3, String param4, String param5, boolean param6) {
+    final static boolean a(int param0, AccountRegistrationPanel param1, String param2, int param3, String param4, String param5, boolean param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -48,8 +48,8 @@ final class pg {
           if (wj.field_a != fh.field_B) {
             return false;
           }
-          var8 = new AccountCreationResultPanel(q.field_N, param1);
-          q.field_N.b(var8, false);
+          var8 = new AccountCreationResultPanel(DisplayNameSelectionPanel.field_N, param1);
+          DisplayNameSelectionPanel.field_N.b(var8, false);
           if (param0 != 2) {
             pg.a(103);
           }
@@ -59,7 +59,7 @@ final class pg {
           }
           je.field_a = param2;
           cg.field_a = param3;
-          ci.field_L = null;
+          LoginPanel.field_L = null;
           fh.field_B = qg.field_g;
           ej.field_b = param5;
           ij.field_a = param6;

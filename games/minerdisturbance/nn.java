@@ -406,7 +406,7 @@ final class nn {
                 return;
               }
               if (!this.field_d &&
-                !k.field_i) {
+                !EmailFormatValidator.field_i) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -433,7 +433,7 @@ final class nn {
               this.field_d = true;
               return;
             }
-            if (!k.field_i) {
+            if (!EmailFormatValidator.field_i) {
               return;
             }
           }
@@ -447,7 +447,7 @@ final class nn {
               return;
             }
             if (!this.field_d &&
-              !k.field_i) {
+              !EmailFormatValidator.field_i) {
               return;
             }
             if (0 > param0) {
@@ -475,7 +475,7 @@ final class nn {
               return;
             }
             if (!this.field_d &&
-              !k.field_i) {
+              !EmailFormatValidator.field_i) {
               return;
             }
             if (0 > param0) {
@@ -500,7 +500,7 @@ final class nn {
             return;
           }
           if (!this.field_d &&
-            !k.field_i) {
+            !EmailFormatValidator.field_i) {
             return;
           }
         }

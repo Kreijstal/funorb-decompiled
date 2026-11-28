@@ -15,11 +15,11 @@ final class IsaacRandom {
     static String field_e;
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (ma.field_o == el.field_p) {
+        if (ma.field_o == MatchingFieldValidator.field_p) {
           throw new IllegalStateException();
         }
         if (ma.field_o == Archive.field_d) {
-          ma.field_o = el.field_p;
+          ma.field_o = MatchingFieldValidator.field_p;
           return vb.field_j;
         }
         if (param0 >= 14) {
@@ -243,13 +243,13 @@ final class IsaacRandom {
 
     final static void a(Archive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
-          a.field_i = param1 * l.a((byte) 96) / 1000;
+          TextFieldValidator.field_i = param1 * l.a((byte) 96) / 1000;
           DiskCacheWorker.a(26197, param0);
           pb.a(param0, param2 ^ -89);
           pj.a(param2 + 2, param0);
           ProxySocketConnector.e(param2 ^ param2);
           gl.a((byte) 28);
-          BufferedSocket.field_h = 0 - a.field_i;
+          BufferedSocket.field_h = 0 - TextFieldValidator.field_i;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

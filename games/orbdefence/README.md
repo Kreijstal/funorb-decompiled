@@ -2,6 +2,6 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the reverse dictionary is ../../decompilation/orbdefence-naming.json.
 
-This pass names 65 reviewed classes and 592 members in 311 source files. Unresolved roles keep their original names.
+This pass names 80 reviewed classes and 642 members in 311 source files. Unresolved roles keep their original names.
 
 Reproduce with `node readable/build-orbdefence-rules.mjs --check`, `node readable/reproduce-orbdefence.mjs --update`, and `node readable/reproduce-orbdefence.mjs --check` from dekobloko-work.

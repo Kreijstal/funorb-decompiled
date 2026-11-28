@@ -42,7 +42,7 @@ final class qc extends IntrusiveNode {
             return false;
           }
           if (!MusicPatchPcmStream.field_l) {
-            return !wf.c((byte) -79) ? true : false;
+            return !DebouncedFieldValidator.c((byte) -79) ? true : false;
           }
           return false;
         }
@@ -50,7 +50,7 @@ final class qc extends IntrusiveNode {
           return false;
         }
         if (!MusicPatchPcmStream.field_l) {
-          return !wf.c((byte) -79) ? true : false;
+          return !DebouncedFieldValidator.c((byte) -79) ? true : false;
         }
         return false;
     }

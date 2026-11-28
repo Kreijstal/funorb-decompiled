@@ -137,8 +137,8 @@ final class jh extends wb implements qk {
           vh.field_a = new byte[sc.field_c][];
           ja.field_e = new byte[sc.field_c][];
           th.field_Jb = new int[sc.field_c];
-          hd.field_r = new int[sc.field_c];
-          sf.field_X = new int[sc.field_c];
+          ConfirmedEmailAvailabilityValidator.field_r = new int[sc.field_c];
+          TextInputField.field_X = new int[sc.field_c];
           if (param0 != -26869) {
             var16 = (ResourceArchive) null;
             jh.a(-126, (ResourceArchive) null);
@@ -156,10 +156,10 @@ final class jh extends wb implements qk {
             nh.field_O[var4Lifetime1] = var18.readUnsignedShort(8);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < sc.field_c; var4Lifetime2++) {
-            sf.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.a(param0, -26877));
+            TextInputField.field_X[var4Lifetime2] = var18.readUnsignedShort(bm.a(param0, -26877));
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < sc.field_c; var4Lifetime3++) {
-            hd.field_r[var4Lifetime3] = var18.readUnsignedShort(8);
+            ConfirmedEmailAvailabilityValidator.field_r[var4Lifetime3] = var18.readUnsignedShort(8);
           }
           var18.field_i = 3 - var3 * 3 + param1.length - (7 + 8 * sc.field_c);
           bf.field_d = new int[var3];
@@ -171,8 +171,8 @@ final class jh extends wb implements qk {
           }
           var18.field_i = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < sc.field_c; var4Lifetime5++) {
-            var5 = sf.field_X[var4Lifetime5];
-            var6 = hd.field_r[var4Lifetime5];
+            var5 = TextInputField.field_X[var4Lifetime5];
+            var6 = ConfirmedEmailAvailabilityValidator.field_r[var4Lifetime5];
             var7 = var5 * var6;
             var21 = new byte[var7];
             var19 = var21;

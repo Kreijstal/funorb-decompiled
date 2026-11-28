@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends vm {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int[] field_w;
     static ci field_m;
     private boolean nameAvailable;
@@ -15,7 +15,7 @@ final class AccountNameAvailabilityValidator extends vm {
     static String field_o;
     static String field_v;
 
-    final String a(String param0, int param1) {
+    final String getValidationMessage(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -70,17 +70,17 @@ final class AccountNameAvailabilityValidator extends vm {
         }
     }
 
-    AccountNameAvailabilityValidator(qn param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final static un i(int param0) {
+    final static ChessMatchSession i(int param0) {
         if (param0 != 23156) {
-          return (un) null;
+          return (ChessMatchSession) null;
         }
         if (!hl.field_h) {
-          return oc.field_p;
+          return MatchingFieldValidator.field_p;
         }
         return pd.field_Lb;
     }
@@ -133,7 +133,7 @@ final class AccountNameAvailabilityValidator extends vm {
         }
     }
 
-    final mk a(byte param0, String param1) {
+    final mk getValidationStatus(byte param0, String param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         AccountServiceResult var4 = null;

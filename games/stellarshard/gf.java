@@ -68,7 +68,7 @@ final class gf {
                 return;
               }
               var3 = new java.net.URL(param0.getCodeBase(), param1);
-              var3 = lk.a(param0, var3, 78);
+              var3 = TextFieldValidator.a(param0, var3, 78);
               fk.a(param0, true, var3.toString(), (byte) 86);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

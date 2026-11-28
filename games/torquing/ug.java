@@ -13,14 +13,14 @@ final class ug {
     }
 
     final static void a(int param0) {
-        if (dg.field_i == null) {
+        if (TranslucentSpriteLayer.field_i == null) {
           return;
         }
-        tf.a(-120, dg.field_i);
-        dg.field_i.exitFullscreen(ArchiveRequest.field_u, 159);
-        dg.field_i = null;
-        if (ki.field_D != null) {
-          ki.field_D.b(false);
+        tf.a(-120, TranslucentSpriteLayer.field_i);
+        TranslucentSpriteLayer.field_i.exitFullscreen(ArchiveRequest.field_u, 159);
+        TranslucentSpriteLayer.field_i = null;
+        if (AccountRegistrationPanel.field_D != null) {
+          AccountRegistrationPanel.field_D.b(false);
         }
         if (param0 < -93) {
           k.field_d.requestFocus();

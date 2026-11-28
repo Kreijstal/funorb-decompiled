@@ -16,10 +16,10 @@ final class ka {
           if (param1 >= bl.field_n.field_o + ce.field_a) {
             return -1;
           }
-          if (param2 < ug.field_q) {
+          if (param2 < MatchingFieldValidator.field_q) {
             return -1;
           }
-          if (param2 >= ug.field_q + bl.field_n.field_k) {
+          if (param2 >= MatchingFieldValidator.field_q + bl.field_n.field_k) {
             return -1;
           }
           return 1;
@@ -31,10 +31,10 @@ final class ka {
           if (param1 >= bl.field_n.field_o + ce.field_a) {
             return -1;
           }
-          if (param2 < ug.field_q) {
+          if (param2 < MatchingFieldValidator.field_q) {
             return -1;
           }
-          if (param2 >= ug.field_q + bl.field_n.field_k) {
+          if (param2 >= MatchingFieldValidator.field_q + bl.field_n.field_k) {
             return -1;
           }
           return 1;
@@ -49,10 +49,10 @@ final class ka {
         if (param1 >= bl.field_n.field_o + ce.field_a) {
           return -1;
         }
-        if (param2 < ug.field_q) {
+        if (param2 < MatchingFieldValidator.field_q) {
           return -1;
         }
-        if (param2 < ug.field_q + bl.field_n.field_k) {
+        if (param2 < MatchingFieldValidator.field_q + bl.field_n.field_k) {
           return 1;
         }
         return -1;

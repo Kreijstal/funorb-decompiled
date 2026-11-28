@@ -15,7 +15,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     }
 
     final static void a(byte param0) {
-        uf.a(Lexicominos.field_H, 113, wa.field_k, true);
+        AgeValidator.a(Lexicominos.field_H, 113, wa.field_k, true);
         lh.field_w = true;
         int var1 = -24 / ((param0 - 43) / 46);
     }

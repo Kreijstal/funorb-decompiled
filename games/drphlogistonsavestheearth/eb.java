@@ -27,7 +27,7 @@ final class eb {
     final static void a(String param0, boolean param1, boolean param2, int param3) {
         cf.a((byte) -107);
         PcmResampler.field_c.j(300);
-        pi.field_O = new wa(qf.field_c, (String) null, sg.field_a, param1, param2);
+        pi.field_O = new LoginPanel(qf.field_c, (String) null, sg.field_a, param1, param2);
         PcmOutputWorker.field_e = new el(PcmResampler.field_c, pi.field_O);
         if (param3 != 10) {
           return;

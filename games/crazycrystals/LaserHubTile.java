@@ -16,7 +16,7 @@ final class LaserHubTile extends bo implements Cloneable {
           if (param0 != 23525) {
             field_p = 'ﾡ';
           }
-          stackIn_3_0 = PacketBuffer.a(NetworkGameClient.field_m, param1, new LaserHubTile(new kp(-1)), (byte) -83, kd.field_m);
+          stackIn_3_0 = PacketBuffer.a(NetworkGameClient.field_m, param1, new LaserHubTile(new kp(-1)), (byte) -83, ConfirmedEmailAvailabilityValidator.field_m);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

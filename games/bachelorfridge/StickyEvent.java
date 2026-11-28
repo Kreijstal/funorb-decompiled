@@ -455,7 +455,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "rm_x_from_friends");
                 if (null != var2) {
-                  gl.field_g = qq.a(var2, false);
+                  BirthDateValidator.field_g = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "rm_x_from_ignore");
                 if (null != var2) {
@@ -887,7 +887,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "gameopt_membersonly");
                 if (null != var2) {
-                  ph.field_N = qq.a(var2, false);
+                  LoginPanel.field_N = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_1moreratedgame");
                 if (var2 != null) {
@@ -955,7 +955,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "gameopt_youhaventunlocked");
                 if (null != var2) {
-                  gl.field_f = qq.a(var2, false);
+                  BirthDateValidator.field_f = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_trychanging1");
                 if (var2 != null) {
@@ -2850,7 +2850,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mb_exclusive_1");
                 if (var2 != null) {
-                  hb.field_g = qq.a(var2, false);
+                  MatchingFieldValidator.field_g = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_exclusive_2");
                 if (var2 != null) {
@@ -2870,15 +2870,15 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "hs_mode_name,0");
                 if (null != var2) {
-                  pk.field_a[0] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[0] = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_mode_name,1");
                 if (var2 != null) {
-                  pk.field_a[1] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[1] = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_mode_name,2");
                 if (var2 != null) {
-                  pk.field_a[2] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[2] = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_mode_name,0");
                 if (var2 != null) {

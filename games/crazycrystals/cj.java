@@ -1103,7 +1103,7 @@ final class cj extends qf implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 23525) {
-            stackIn_4_0 = PacketBuffer.a(kd.field_i, param1, new cj(new kp(-1), this.field_D, 0, 0), (byte) -83, bd.field_l);
+            stackIn_4_0 = PacketBuffer.a(ConfirmedEmailAvailabilityValidator.field_i, param1, new cj(new kp(-1), this.field_D, 0, 0), (byte) -83, bd.field_l);
             return stackIn_4_0;
           }
           stackIn_2_0 = (nj) null;

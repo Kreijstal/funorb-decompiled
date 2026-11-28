@@ -178,12 +178,12 @@ class fe extends IntrusiveNode {
 
     final static void e(int param0) {
         if (param0 == 26313) {
-          kb.field_b = new ik();
+          kb.field_b = new AccountRegistrationPanel();
           de.field_a.a((byte) -65, (fe) (kb.field_b));
           return;
         }
         fe.a((byte) 55, 'ﾗ', (CharSequence) null);
-        kb.field_b = new ik();
+        kb.field_b = new AccountRegistrationPanel();
         de.field_a.a((byte) -65, (fe) (kb.field_b));
     }
 

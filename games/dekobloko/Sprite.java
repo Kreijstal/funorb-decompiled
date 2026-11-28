@@ -20,9 +20,9 @@ abstract class Sprite {
         returnedShapeLocal1.packedCells = new byte[2];
         returnedShapeLocal1.width = 2;
         returnedShapeLocal1.height = 1;
-        returnedShapeLocal1.packedCells[integerArgument2] = (byte)((MixedSupport075.computeInteger0930(8, integerArgument3) != 0 ? 24 : 16) + MixedSupport075.computeInteger0930(integerArgument3, 7));
+        returnedShapeLocal1.packedCells[integerArgument2] = (byte)((PlayerBoardUpdateQueue.bitwiseAnd(8, integerArgument3) != 0 ? 24 : 16) + PlayerBoardUpdateQueue.bitwiseAnd(integerArgument3, 7));
         integerArgument3 = integerArgument3 >> 4;
-        returnedShapeLocal1.packedCells[1] = (byte)(MixedSupport075.computeInteger0930(7, integerArgument3) + (MixedSupport075.computeInteger0930(8, integerArgument3) == 0 ? 16 : 24));
+        returnedShapeLocal1.packedCells[1] = (byte)(PlayerBoardUpdateQueue.bitwiseAnd(7, integerArgument3) + (PlayerBoardUpdateQueue.bitwiseAnd(8, integerArgument3) == 0 ? 16 : 24));
         return returnedShapeLocal1;
     }
 

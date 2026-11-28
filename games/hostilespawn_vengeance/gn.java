@@ -229,7 +229,7 @@ final class gn {
               param4 >= -96 &&
               736 >= param1 &&
               576 >= param4) {
-              var11 = var10.field_j.b(-4);
+              var11 = var10.field_j.getClampedTileIndex(-4);
               if (param6[var11]) {
                 var10.field_n = true;
               }
@@ -259,7 +259,7 @@ final class gn {
                   } else {
                     pf.field_I = rf.field_s[0];
                   }
-                  aj.field_d = 8 + param4;
+                  SpriteBase.field_d = 8 + param4;
                   lh.field_a = param1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -286,7 +286,7 @@ final class gn {
                     (!(rb.field_m > 24 + param4))) {
                     pf.field_I = NanoFrameTimer.field_n[var10.field_h];
                     lh.field_a = param1;
-                    aj.field_d = param4 + 8;
+                    SpriteBase.field_d = param4 + 8;
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -312,7 +312,7 @@ final class gn {
                       !(rb.field_m > 24 + param4)) {
                       pf.field_I = bm.field_e[var10.field_h];
                       lh.field_a = param1;
-                      aj.field_d = 8 + param4;
+                      SpriteBase.field_d = 8 + param4;
                     }
                   }
                 }

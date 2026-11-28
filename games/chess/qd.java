@@ -11,7 +11,7 @@ final class qd extends IntrusiveNode {
     static String field_I;
     int field_t;
     int field_n;
-    static qe field_w;
+    static ChessBoardRenderer field_w;
     int field_F;
     int field_k;
     static tk field_m;

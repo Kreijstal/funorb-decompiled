@@ -195,10 +195,10 @@ final class ob extends ok {
           dm.field_g = new RgbSprite(var3, 3 * var4 / 4);
           dm.field_g.e();
           var2.c(0, 0);
-          lb.field_C = new RgbSprite(var3, -dm.field_g.field_v + var4);
-          lb.field_C.e();
+          PlayerDungeonProfile.field_C = new RgbSprite(var3, -dm.field_g.field_v + var4);
+          PlayerDungeonProfile.field_C.e();
           var2.c(0, -dm.field_g.field_v);
-          lb.field_C.field_A = dm.field_g.field_v;
+          PlayerDungeonProfile.field_C.field_A = dm.field_g.field_v;
           ti.c(true);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ob.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

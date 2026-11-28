@@ -33,7 +33,7 @@ final class om {
     }
 
     final static void a(int param0) {
-        ik.field_N = null;
+        AccountRegistrationPanel.field_N = null;
         cg.field_C = false;
         ce.field_c = null;
         if (param0 == -22126) {
@@ -79,7 +79,7 @@ final class om {
         tm var2Lifetime2;
         tm var2Lifetime3;
         if (param0 <= -89) {
-          var2 = (tm) (ok.field_b.beginForward(94));
+          var2 = (tm) (DebouncedFieldValidator.field_b.beginForward(94));
           if (var2 != null) {
             var2.b((byte) 94);
           }
@@ -90,7 +90,7 @@ final class om {
           return;
         }
         field_d = (String) null;
-        var2Lifetime1 = (tm) (ok.field_b.beginForward(94));
+        var2Lifetime1 = (tm) (DebouncedFieldValidator.field_b.beginForward(94));
         if (var2Lifetime1 != null) {
           var2Lifetime1.b((byte) 94);
         }

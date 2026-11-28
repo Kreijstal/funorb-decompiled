@@ -867,9 +867,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0) {
             this.windowActivated((java.awt.event.WindowEvent) null);
           }
-          var4 = ub.field_c[r.field_l];
-          ub.field_c[r.field_l] = var2_long;
-          r.field_l = 31 & 1 + r.field_l;
+          var4 = ub.field_c[TextFieldValidator.field_l];
+          ub.field_c[TextFieldValidator.field_l] = var2_long;
+          TextFieldValidator.field_l = 31 & 1 + TextFieldValidator.field_l;
           if (var4 != 0L &&
             var2_long > var4) {
           }

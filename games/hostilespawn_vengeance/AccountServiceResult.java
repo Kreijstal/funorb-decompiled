@@ -93,7 +93,7 @@ final class AccountServiceResult {
             eh.field_c.a(NetworkArchiveRequest.field_A[17], 100, uh.field_i / 2);
           }
           jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-          jn.field_F[ib.field_c].field_j.a((byte) 46, param1.field_j);
+          jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
           jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
           jn.field_F[ib.field_c].field_e = 0;
           jn.field_F[ib.field_c].field_h = 1;

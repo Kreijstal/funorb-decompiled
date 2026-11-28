@@ -24,7 +24,7 @@ final class om extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!tj.a(param1, param3, param0, (byte) 83)) {
+          if (!EmailFormatValidator.a(param1, param3, param0, (byte) 83)) {
             stackIn_2_0 = null;
             return (rk[]) (stackIn_2_0);
           }

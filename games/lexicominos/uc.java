@@ -131,7 +131,7 @@ class uc extends re implements jk {
           if (!this.field_db) {
             return;
           }
-          tj.c(0);
+          TextFieldValidator.c(0);
           return;
         }
         if (this.field_ib) {
@@ -141,7 +141,7 @@ class uc extends re implements jk {
         if (!this.field_db) {
           return;
         }
-        tj.c(0);
+        TextFieldValidator.c(0);
     }
 
     public void a(int param0, int param1, int param2, int param3, kf param4) {

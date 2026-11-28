@@ -593,7 +593,7 @@ class UiWidget extends IntrusiveNode {
               stackIn_32_0 = compareLongs(param3.field_r, param1.field_w[param0][var6]);
               if (var8 == 0) {
                 if (stackIn_32_0 == 0 &&
-                  wc.a(param1.field_x[param0][var6], true)) {
+                  PasswordValidator.a(param1.field_x[param0][var6], true)) {
                   var7 = 0;
                   while (true) {
                     if (var7 < var4_int) {

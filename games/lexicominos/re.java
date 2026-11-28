@@ -42,7 +42,7 @@ abstract class re extends ql {
           }
           return super.f((byte) -102);
         }
-        if (this.field_R != rl.field_H) {
+        if (this.field_R != EditableTextField.field_H) {
           if (param0 >= -21) {
             return false;
           }
@@ -146,7 +146,7 @@ abstract class re extends ql {
           return;
         }
         if (param0 == 38) {
-          this.field_R = rl.field_H;
+          this.field_R = EditableTextField.field_H;
           this.field_V = 0;
           this.a(this.field_W, (byte) 125);
           this.field_U.field_E = 0;
@@ -154,7 +154,7 @@ abstract class re extends ql {
           return;
         }
         this.field_Y = 51;
-        this.field_R = rl.field_H;
+        this.field_R = EditableTextField.field_H;
         this.field_V = 0;
         this.a(this.field_W, (byte) 125);
         this.field_U.field_E = 0;
@@ -172,7 +172,7 @@ abstract class re extends ql {
     final void f(boolean param0) {
         if (param0) {
           if (this.field_R != null) {
-            if (rl.field_H != this.field_R) {
+            if (EditableTextField.field_H != this.field_R) {
               this.b(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
               this.a(this.field_W, (byte) 125);
             }
@@ -184,7 +184,7 @@ abstract class re extends ql {
         }
         this.field_R = (rb) null;
         if (this.field_R != null) {
-          if (rl.field_H != this.field_R) {
+          if (EditableTextField.field_H != this.field_R) {
             this.b(this.field_W.field_j + 12, -119, this.field_W.field_v + (12 + this.field_ab));
             this.a(this.field_W, (byte) 125);
           }

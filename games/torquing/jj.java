@@ -81,10 +81,10 @@ final class jj {
         }
     }
 
-    final static sm a(sm param0, int[] param1, int param2) {
-        sm var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, int[] param1, int param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        sm stackIn_1_0 = null;
+        IndexedSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -92,7 +92,7 @@ final class jj {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new sm(param2, 0, 0);
+          var3 = new IndexedSprite(param2, 0, 0);
           var3.field_d = param0.field_d;
           var3.field_a = param0.field_a;
           var3.field_l = param0.field_l;

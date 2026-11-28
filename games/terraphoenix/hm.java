@@ -56,7 +56,7 @@ final class hm extends UiWidget {
         }
         this.a(this.field_D[0], var6, var5, -1);
         if (65536 > this.field_M) {
-          di.a(var5 + this.width, var6, 16105, var6 + this.height, (this.field_M * this.width >> 16) + var5);
+          TextFieldValidator.a(var5 + this.width, var6, 16105, var6 + this.height, (this.field_M * this.width >> 16) + var5);
           this.a(this.field_D[1], var6, var5, -1);
           MessageKeys.a(false);
         }
@@ -125,7 +125,7 @@ final class hm extends UiWidget {
             this.a((UiWidget) null, 26, 3, -111);
           }
           var5_int = this.width + param2;
-          di.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.height, this.field_C.field_r + param2);
+          TextFieldValidator.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.height, this.field_C.field_r + param2);
           for (var6 = -this.field_A + param2; var6 < var5_int; var6 = var6 + param0.field_r) {
             param0.b(var6, param1);
           }

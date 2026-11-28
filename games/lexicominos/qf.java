@@ -406,7 +406,7 @@ final class qf extends wb {
         if (null != jj.field_a) {
           jj.field_a.g(true);
         }
-        hd.field_a = new r();
+        hd.field_a = new DisplayNameSelectionPanel();
         di.field_x.b(122, hd.field_a);
         if (param0 >= -15) {
           field_q = (int[]) null;

@@ -163,7 +163,7 @@ final class mr {
     }
 
     final static void a(boolean param0) {
-        CrossfadingMidiPcmStream.a(ob.e((byte) 99), 11514);
+        CrossfadingMidiPcmStream.a(LoginPanel.e((byte) 99), 11514);
         if (param0) {
           field_a = (Boolean) null;
         }

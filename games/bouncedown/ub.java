@@ -39,10 +39,10 @@ final class ub {
           jl.field_c = new RgbSprite(var3, 3 * var4 / 4);
           jl.field_c.d();
           var2.b(0, 0);
-          bf.field_o = new RgbSprite(var3, var4 - jl.field_c.field_q);
-          bf.field_o.d();
+          PasswordValidator.field_o = new RgbSprite(var3, var4 - jl.field_c.field_q);
+          PasswordValidator.field_o.d();
           var2.b(0, -jl.field_c.field_q);
-          bf.field_o.field_p = jl.field_c.field_q;
+          PasswordValidator.field_o.field_p = jl.field_c.field_q;
           ve.a(param0 ^ 100);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ub.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

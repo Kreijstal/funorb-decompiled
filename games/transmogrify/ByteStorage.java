@@ -243,10 +243,10 @@ abstract class ByteStorage {
           if (ta.field_f != null) {
             ta.field_f.field_D.a(param1, 17036);
           }
-          if (null == ca.field_g) {
+          if (null == DebouncedFieldValidator.field_g) {
             return;
           }
-          ca.field_g.field_B.a(param1, 17036);
+          DebouncedFieldValidator.field_g.field_B.a(param1, 17036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

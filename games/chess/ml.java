@@ -272,18 +272,18 @@ final class ml {
           if (param1.field_Vb && (param1.field_Mb == 2 ||
             !(2 > sk.field_t))) {
             var9 = pi.field_d;
-            var10 = oc.a(sl.field_h, new String[]{param0}, (byte) -43);
+            var10 = MatchingFieldValidator.a(sl.field_h, new String[]{param0}, (byte) -43);
             var9.field_b.a((byte) -12, var10, 10);
           }
           pi.field_d.b((byte) -97);
           if (param3) {
             if (SecondaryNodeDeque.field_g == pi.field_d.field_d) {
               var13 = pi.field_d;
-              var14 = oc.a(qc.field_c, new String[]{param0}, (byte) -54);
+              var14 = MatchingFieldValidator.a(qc.field_c, new String[]{param0}, (byte) -54);
               var13.field_b.a((byte) -12, var14, 16);
             } else {
               var11 = pi.field_d;
-              var12 = oc.a(tm.field_b, new String[]{param0}, (byte) -71);
+              var12 = MatchingFieldValidator.a(tm.field_b, new String[]{param0}, (byte) -71);
               var11.field_b.a((byte) -12, var12, 15);
             }
           }

@@ -6,7 +6,7 @@ final class rh extends na {
     private RgbSprite field_eb;
     static ej field_ab;
     private String field_cb;
-    private dm field_bb;
+    private FieldValidator field_bb;
     static int field_X;
     static String field_db;
     static RgbSprite field_Z;
@@ -42,10 +42,10 @@ final class rh extends na {
         var17 = null;
         var23 = null;
         var13 = Confined.field_J ? 1 : 0;
-        var6 = this.field_bb.a(-3621);
+        var6 = this.field_bb.getValidationStatus(-3621);
         if (ab.field_b != var6 &&
           qh.field_x != var6) {
-          var5 = this.field_bb.a((byte) 75);
+          var5 = this.field_bb.getValidationMessage((byte) 75);
           if (var5 == null) {
             var5 = this.field_cb;
           }
@@ -58,7 +58,7 @@ final class rh extends na {
         }
         if (param2 >= 36) {
           super.a(param0, param1, (byte) 94, param3);
-          var6Lifetime1 = this.field_bb.a(-3621);
+          var6Lifetime1 = this.field_bb.getValidationStatus(-3621);
           var28 = (pj) ((Object) this.field_n);
           var9 = this.field_q + param3;
           var10 = var28.a(param0, 2, (fj) (this)) + (var28.a((fj) (this), (byte) -88).b(23791) >> 1);
@@ -103,7 +103,7 @@ final class rh extends na {
         }
         this.a(-64, 111, (byte) -111, 110);
         super.a(param0, param1, (byte) 94, param3);
-        var6Lifetime2 = this.field_bb.a(-3621);
+        var6Lifetime2 = this.field_bb.getValidationStatus(-3621);
         var27 = (pj) ((Object) this.field_n);
         var9Lifetime1 = this.field_q + param3;
         var10Lifetime1 = var27.a(param0, 2, (fj) (this)) + (var27.a((fj) (this), (byte) -88).b(23791) >> 1);
@@ -193,7 +193,7 @@ final class rh extends na {
         }
     }
 
-    rh(dm param0, String param1, int param2, int param3, int param4, int param5) {
+    rh(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, kc.a((byte) 93));
         try {
           this.field_cb = param1;

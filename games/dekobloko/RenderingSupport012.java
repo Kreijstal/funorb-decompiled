@@ -76,7 +76,7 @@ final class RenderingSupport012 {
             integerLocal5 = 0;
             integerLocal6 = 56;
             while (integerLocal5 < 8) {
-              this.longArrayState0008[integerLocal12] = ResourceSupport004.computeLong1248(this.longArrayState0008[integerLocal12], AnimatedTileRegion.longArrayArrayState0002[integerLocal5][MixedSupport075.computeInteger0930((int)(this.longArrayState0005[MixedSupport075.computeInteger0930(7, -integerLocal5 + integerLocal12)] >>> integerLocal6), 255)]);
+              this.longArrayState0008[integerLocal12] = ResourceSupport004.computeLong1248(this.longArrayState0008[integerLocal12], AnimatedTileRegion.longArrayArrayState0002[integerLocal5][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0005[PlayerBoardUpdateQueue.bitwiseAnd(7, -integerLocal5 + integerLocal12)] >>> integerLocal6), 255)]);
               integerLocal5++;
               integerLocal6 -= 8;
             }
@@ -91,7 +91,7 @@ final class RenderingSupport012 {
             integerLocal13 = integerLocal8;
             integerLocal14 = 56;
             while (8 > integerLocal8) {
-              this.longArrayState0008[integerLocal16] = ResourceSupport004.computeLong1248(this.longArrayState0008[integerLocal16], AnimatedTileRegion.longArrayArrayState0002[integerLocal8][MixedSupport075.computeInteger0930((int)(this.longArrayState0007[MixedSupport075.computeInteger0930(7, integerLocal16 - integerLocal8)] >>> integerLocal14), 255)]);
+              this.longArrayState0008[integerLocal16] = ResourceSupport004.computeLong1248(this.longArrayState0008[integerLocal16], AnimatedTileRegion.longArrayArrayState0002[integerLocal8][PlayerBoardUpdateQueue.bitwiseAnd((int)(this.longArrayState0007[PlayerBoardUpdateQueue.bitwiseAnd(7, integerLocal16 - integerLocal8)] >>> integerLocal14), 255)]);
               integerLocal8++;
               integerLocal14 -= 8;
             }
@@ -155,7 +155,7 @@ final class RenderingSupport012 {
                 this.integerState0649 = 0;
                 this.integerState0650 = 0;
               }
-              this.byteArrayState0023[this.integerState0650] = (byte)MixedSupport075.computeInteger0930(255, integerLocal11 << 8 - integerLocal10);
+              this.byteArrayState0023[this.integerState0650] = (byte)PlayerBoardUpdateQueue.bitwiseAnd(255, integerLocal11 << 8 - integerLocal10);
               longArgument3 = longArgument3 - 8L;
               integerLocal7++;
               this.integerState0649 = this.integerState0649 + integerLocal10;
@@ -180,7 +180,7 @@ final class RenderingSupport012 {
               this.integerState0650 = 0;
               this.integerState0649 = 0;
             }
-            this.byteArrayState0023[this.integerState0650] = (byte)MixedSupport075.computeInteger0930(255, integerLocal16 << 8 - integerLocal10);
+            this.byteArrayState0023[this.integerState0650] = (byte)PlayerBoardUpdateQueue.bitwiseAnd(255, integerLocal16 << 8 - integerLocal10);
             this.integerState0649 = this.integerState0649 + (int)longArgument3;
           } else {
             this.integerState0649 = (int)((long)this.integerState0649 + longArgument3);
@@ -241,7 +241,7 @@ final class RenderingSupport012 {
         int integerLocal11 = 0;
         integerLocal11 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          this.byteArrayState0023[this.integerState0650] = (byte)UiComponentPart006.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], 128 >>> MixedSupport075.computeInteger0930(this.integerState0649, 7));
+          this.byteArrayState0023[this.integerState0650] = (byte)UiComponentPart006.bitwiseOr((int) this.byteArrayState0023[this.integerState0650], 128 >>> PlayerBoardUpdateQueue.bitwiseAnd(this.integerState0649, 7));
           this.integerState0650 = this.integerState0650 + 1;
           if (this.integerState0650 > 32) {
             while (this.integerState0650 < 64) {

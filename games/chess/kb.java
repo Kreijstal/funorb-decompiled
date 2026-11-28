@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class kb extends kn {
-    static ol field_O;
+    static AccountRegistrationPanel field_O;
     private boolean field_T;
     private int field_W;
     private boolean field_U;
@@ -35,7 +35,7 @@ final class kb extends kn {
     public static void clearDeclaredStaticReferences(int param0) {
         field_P = null;
         if (param0 != -15237) {
-          field_O = (ol) null;
+          field_O = (AccountRegistrationPanel) null;
           field_R = null;
           field_O = null;
           return;

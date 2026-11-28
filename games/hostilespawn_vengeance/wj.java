@@ -3,7 +3,7 @@
  */
 final class wj extends ph {
     static String field_K;
-    private bg field_I;
+    private FieldValidator field_I;
     private int field_M;
     static int field_O;
     static String field_G;
@@ -14,7 +14,7 @@ final class wj extends ph {
 
     final String e(int param0) {
         if (this.field_u) {
-          return this.field_I.a(-41);
+          return this.field_I.getValidationMessage(-41);
         }
         if (param0 == 34) {
           return null;
@@ -53,7 +53,7 @@ final class wj extends ph {
           field_K = (String) null;
         }
         var6 = (this.field_x >> 1) + (this.field_m + param0);
-        var8 = this.field_I.b(-95);
+        var8 = this.field_I.getValidationStatus(-95);
         if (var8 != wl.field_c &&
           m.field_n != var8) {
           if (var8 == bi.field_d) {
@@ -155,8 +155,8 @@ final class wj extends ph {
     }
 
     final static void a(byte param0) {
-        oc dupTemp$0 = null;
-        oc dupTemp$1 = null;
+        GridPoint dupTemp$0 = null;
+        GridPoint dupTemp$1 = null;
         ql stackIn_63_0 = null;
         CrossfadingMidiPcmStream stackIn_69_0 = null;
         int stackIn_70_1 = 0;
@@ -200,7 +200,7 @@ final class wj extends ph {
         int var3 = 0;
         int var4 = 0;
         oj var5 = null;
-        oc var6 = null;
+        GridPoint var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -211,7 +211,7 @@ final class wj extends ph {
         int var12_int = 0;
         int[] var12 = null;
         int var13_int = 0;
-        oc var13_ref_oc = null;
+        GridPoint var13_ref_oc = null;
         double var13 = 0.0;
         int var14 = 0;
         int var15_int = 0;
@@ -261,8 +261,8 @@ final class wj extends ph {
           if (e.field_z > 0) {
             e.field_z = e.field_z - 1;
           }
-          if (0 < of.field_a) {
-            of.field_a = of.field_a - 1;
+          if (0 < ClientLookupTables.field_a) {
+            ClientLookupTables.field_a = ClientLookupTables.field_a - 1;
           }
           if (0 < al.field_Q) {
             al.field_Q = al.field_Q - 1;
@@ -344,7 +344,7 @@ final class wj extends ph {
           var6 = var5.field_j;
           var7 = var6.field_e;
           var8 = var6.field_g;
-          var9 = var6.b(-4);
+          var9 = var6.getClampedTileIndex(-4);
           if ((15 & ng.field_u) == 0) {
             if (null != q.field_g) {
               stackIn_63_0 = q.field_g;
@@ -488,12 +488,12 @@ final class wj extends ph {
               j.field_c != -1) {
               le.field_D = le.field_D - 1;
               if (512.0 * Math.random() > (double)le.field_D) {
-                var13_ref_oc = new oc(var6);
+                var13_ref_oc = new GridPoint(var6);
                 var13_ref_oc.field_e = var13_ref_oc.field_e + (int)(-25.0 + 50.0 * Math.random());
                 var13_ref_oc.field_g = var13_ref_oc.field_g + (int)(-25.0 + Math.random() * 50.0);
                 for (var14Lifetime1 = 0; 10 > var14Lifetime1; var14Lifetime1++) {
                   jn.field_F[ib.field_c].field_c = Math.random() * 255.0;
-                  jn.field_F[ib.field_c].field_j.a((byte) 46, var13_ref_oc);
+                  jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var13_ref_oc);
                   jn.field_F[ib.field_c].field_l.a(var10, -28860);
                   jn.field_F[ib.field_c].field_e = 0;
                   jn.field_F[ib.field_c].field_h = 0;
@@ -522,7 +522,7 @@ final class wj extends ph {
                 stackIn_162_0 = compareDoublesNaNResultNegative(Math.random() * 512.0, (double)le.field_D);
                 if (stackIn_162_0 > 0) {
                   jn.field_F[ib.field_c].field_c = Math.random() * 255.0;
-                  jn.field_F[ib.field_c].field_j.a((byte) 46, var6);
+                  jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, var6);
                   dupTemp$0 = jn.field_F[ib.field_c].field_j;
                   dupTemp$0.field_e = dupTemp$0.field_e + (int)(50.0 * Math.random() - 25.0);
                   dupTemp$1 = jn.field_F[ib.field_c].field_j;
@@ -563,18 +563,18 @@ final class wj extends ph {
               } else {
                 stackIn_186_1 = 0;
               }
-              t.a(stackIn_185_0, stackIn_186_1, var17Lifetime1);
+              AchievementNotification.selectWeaponForSlot(stackIn_185_0, stackIn_186_1, var17Lifetime1);
             } else {
               var17Lifetime1 = -1 + pj.field_e;
               if (var17Lifetime1 >= 0 &&
                 var17Lifetime1 < 8) {
-                t.a(38, 1, var17Lifetime1);
+                AchievementNotification.selectWeaponForSlot(38, 1, var17Lifetime1);
               }
             }
             if (pj.field_e == 13 &&
               hg.field_e == 1 &&
               0 == jf.field_c) {
-              of.field_h = new re(true);
+              ClientLookupTables.field_h = new re(true);
               return;
             }
             if (pj.field_e == 84 &&
@@ -656,7 +656,7 @@ final class wj extends ph {
                       stackIn_255_1Lifetime1 = null;
                       stackIn_251_2 = true;
                     }
-                    if (ei.field_q.isEmpty(-20049)) {
+                    if (DelayedPacket.field_q.isEmpty(-20049)) {
                       stackIn_255_0Lifetime1Lifetime1 = null;
                       stackIn_255_1Lifetime1Lifetime1 = null;
                       stackIn_254_3 = false;
@@ -677,14 +677,14 @@ final class wj extends ph {
                     stackIn_257_1Lifetime1 = null;
                     stackIn_257_2 = 10;
                   }
-                  of.field_h = new re(stackIn_257_2);
+                  ClientLookupTables.field_h = new re(stackIn_257_2);
                   u.field_f[26] = jh.field_bb;
                   return;
                 }
                 if (hg.field_e == 1) {
                   le.field_D = 0;
                   ta.a((byte) -95, rl.field_c);
-                  of.field_h = new re(8);
+                  ClientLookupTables.field_h = new re(8);
                   return;
                 }
               }
@@ -693,7 +693,7 @@ final class wj extends ph {
                 le.field_D = 0;
                 ta.a((byte) 127, rl.field_c + 1);
                 AccountNameAvailabilityValidator.b(false, (byte) -97);
-                of.field_h = new re(11);
+                ClientLookupTables.field_h = new re(11);
                 return;
               }
               if (mc.field_I == 3) {
@@ -705,7 +705,7 @@ final class wj extends ph {
                   jf.field_d = 50;
                   le.field_D = 0;
                   AccountNameAvailabilityValidator.b(true, (byte) -89);
-                  of.field_h = new re(13);
+                  ClientLookupTables.field_h = new re(13);
                   ArchiveProvider.field_e = 0;
                   return;
                 }
@@ -714,7 +714,7 @@ final class wj extends ph {
                   jf.field_d = 50;
                   le.field_D = 0;
                   ta.a((byte) -100, 3);
-                  of.field_h = new re(12);
+                  ClientLookupTables.field_h = new re(12);
                   ArchiveProvider.field_e = 0;
                   AccountNameAvailabilityValidator.b(false, (byte) -114);
                   return;
@@ -724,7 +724,7 @@ final class wj extends ph {
                 rl.field_c = 0;
                 AccountNameAvailabilityValidator.b(true, (byte) -93);
                 ArchiveProvider.field_e = 0;
-                of.field_h = new re(13);
+                ClientLookupTables.field_h = new re(13);
                 return;
               }
               if (mc.field_I >= 4) {
@@ -754,7 +754,7 @@ final class wj extends ph {
                     stackIn_295_1Lifetime1 = null;
                     stackIn_290_2 = true;
                   }
-                  if (ei.field_q.isEmpty(-20049)) {
+                  if (DelayedPacket.field_q.isEmpty(-20049)) {
                     stackIn_295_0Lifetime1Lifetime1 = null;
                     stackIn_295_1Lifetime1Lifetime1 = null;
                     stackIn_293_3 = false;
@@ -777,7 +777,7 @@ final class wj extends ph {
                   stackIn_296_1Lifetime1 = null;
                   stackIn_296_2 = 10;
                 }
-                of.field_h = new re(stackIn_296_2);
+                ClientLookupTables.field_h = new re(stackIn_296_2);
                 return;
               }
             }
@@ -794,7 +794,7 @@ final class wj extends ph {
         }
     }
 
-    wj(bg param0) {
+    wj(FieldValidator param0) {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {

@@ -31,7 +31,7 @@ final class vf extends ph {
           nb.field_F.a(im.field_f, param0 + 8800, true, ul.field_H);
           nb.field_F.e((byte) 114);
           while (jn.e((byte) 125)) {
-            nb.field_F.a(pj.field_e, aj.field_e, 80);
+            nb.field_F.a(pj.field_e, SpriteBase.field_e, 80);
           }
           if (param0 != -1) {
             field_H = (RgbSprite) null;
@@ -159,7 +159,7 @@ final class vf extends ph {
                     }
                   }
                 }
-                ak.field_b[var16].a(var8, var9);
+                ak.field_b[var16].drawOpaque(var8, var9);
               }
             }
           }
@@ -271,13 +271,13 @@ final class vf extends ph {
         RuntimeException var1 = null;
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var4 = (ne) (ei.field_q.beginForward(param0 + 8183));
+          var4 = (ne) (DelayedPacket.field_q.beginForward(param0 + 8183));
           while (var4 != null) {
             om.a(var4, 5, param0 + 8140);
-            var4 = (ne) (ei.field_q.nextForward(12684));
+            var4 = (ne) (DelayedPacket.field_q.nextForward(12684));
           }
-          el.field_h[0] = cm.a(128, 5, 0, 1);
-          el.field_h[1] = cm.a(128, 5, 1, 1);
+          ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
+          ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
           nh.field_L = cj.a(6, 5);
           if (param0 != -8255) {
             var3 = (String[]) null;

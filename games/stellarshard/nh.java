@@ -34,7 +34,7 @@ class nh extends sk {
         if (param0 != 160) {
           nh.c(-105);
         }
-        return ea.field_o;
+        return MatchingFieldValidator.field_o;
     }
 
     final void a(int param0, PacketBuffer param1) {

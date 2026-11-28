@@ -10,7 +10,7 @@ final class ki extends vj {
     static String field_Z;
     static String field_Y;
     static Sprite field_T;
-    private rc field_X;
+    private FieldValidator field_X;
 
     final static void i(int param0) {
         Sprite var1 = null;
@@ -98,8 +98,8 @@ final class ki extends vj {
             var12.a();
             Archive.field_i.c(MessageKeys.a(new String[]{df.field_L}, param0 - 28419, d.field_J), var6, 40, 16777215, -1);
             ja.field_m.c(MessageKeys.a(new String[]{df.field_L}, -1, ga.field_a), var6, 60, 16777215, -1);
-            Archive.field_i.c(MessageKeys.a(new String[]{fi.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
-            ja.field_m.c(MessageKeys.a(new String[]{fi.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
+            Archive.field_i.c(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, -1, uj.field_b), var6, 110, 16777215, -1);
+            ja.field_m.c(MessageKeys.a(new String[]{EmailFormatValidator.field_o}, param0 - 28419, bd.field_j), var6, 130, 16777215, -1);
             Archive.field_i.c(sl.field_c, var6, 180, 16777215, -1);
             ja.field_m.c(DirectByteStorage.field_k, var6, 200, 16777215, -1);
             wa.a(var12, 0, var12.field_t, param0 - 28307, 1, 0, 3, var12.field_r);
@@ -131,7 +131,7 @@ final class ki extends vj {
             var2Lifetime1 = SoftwareRasterizer.field_k;
             var3Lifetime1 = SoftwareRasterizer.field_j;
             SoftwareRasterizer.saveClip(rb.field_a);
-            var14 = MessageKeys.a(new String[]{oe.field_b[ej.field_S]}, -1, bj.field_b);
+            var14 = MessageKeys.a(new String[]{oe.field_b[EditableTextField.field_S]}, -1, bj.field_b);
             var5 = Archive.field_i.a(var14, nl.field_a);
             var6Lifetime1 = Archive.field_i.a(var14, nl.field_a, Archive.field_i.field_s + Archive.field_i.field_p);
             var7Lifetime1 = lm.field_b + (nl.field_a - var5) / 2;
@@ -141,7 +141,7 @@ final class ki extends vj {
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
               lm.field_b = lm.field_b + var9_int;
-              fi.field_q = fi.field_q - var9_int;
+              EmailFormatValidator.field_q = EmailFormatValidator.field_q - var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               p.field_e.field_p = p.field_e.field_p + var9_int;
               var5 = var5 + var9_int * 2;
@@ -152,7 +152,7 @@ final class ki extends vj {
             if (var5 + var7Lifetime1 > p.field_e.field_q) {
               var9_intLifetime1 = var5 + var7Lifetime1 - p.field_e.field_q;
               var5 = var5 + 2 * var9_intLifetime1;
-              fi.field_q = fi.field_q - var9_intLifetime1;
+              EmailFormatValidator.field_q = EmailFormatValidator.field_q - var9_intLifetime1;
               lm.field_b = lm.field_b + var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               p.field_e.field_p = p.field_e.field_p + var9_intLifetime1;
@@ -185,7 +185,7 @@ final class ki extends vj {
             var9.b(0, 0);
             GameApplet.field_b = new Sprite(640, 480);
             GameApplet.field_b.a();
-            p.field_e.b(fi.field_q + (p.field_e.field_q >> 1), TutorialController.field_h + (p.field_e.field_u >> 1), ha.field_p, 4096);
+            p.field_e.b(EmailFormatValidator.field_q + (p.field_e.field_q >> 1), TutorialController.field_h + (p.field_e.field_u >> 1), ConfirmedEmailAvailabilityValidator.field_p, 4096);
             p.field_e = null;
             GameApplet.field_b.c();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
@@ -324,7 +324,7 @@ final class ki extends vj {
         }
     }
 
-    ki(rc param0, String param1, int param2, int param3, int param4, int param5) {
+    ki(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, k.a(60));
         try {
           this.field_X = param0;
@@ -395,10 +395,10 @@ final class ki extends vj {
         Sprite var16;
         im var6Lifetime1;
         var13 = Terraphoenix.field_V;
-        var6 = this.field_X.a(-16323);
+        var6 = this.field_X.getValidationStatus(-16323);
         if (var6 != kj.field_d &&
           var6 != oh.field_b) {
-          var5 = this.field_X.b((byte) 124);
+          var5 = this.field_X.getValidationMessage((byte) 124);
           if (var5 == null) {
             var5 = this.field_V;
           }
@@ -413,7 +413,7 @@ final class ki extends vj {
         if (param1 >= -106) {
           field_S = (String) null;
         }
-        var6Lifetime1 = this.field_X.a(-16323);
+        var6Lifetime1 = this.field_X.getValidationStatus(-16323);
         var8 = (w) ((Object) this.listener);
         var9 = param0 + this.x;
         var10 = var8.a((UiWidget) (this), param3, (byte) -72) + (var8.a((UiWidget) (this), -19302).c(5859) >> 1);

@@ -120,11 +120,11 @@ final class NodeHashTableIterator implements Iterator {
           if (param3 != -608757616) {
             field_a = (BufferedSocket) null;
           }
-          if (q.field_A == null) {
-            q.field_A = new db(q.field_N, ej.field_c);
-            q.field_N.b(q.field_A, false);
+          if (DisplayNameSelectionPanel.field_A == null) {
+            DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
+            DisplayNameSelectionPanel.field_N.b(DisplayNameSelectionPanel.field_A, false);
           }
-          q.field_A.a(param0, param2, param1, 65536);
+          DisplayNameSelectionPanel.field_A.a(param0, param2, param1, 65536);
           SoftwareRasterizer.clearRaster();
           pj.a(true, 1);
         } catch (RuntimeException runtimeException) {

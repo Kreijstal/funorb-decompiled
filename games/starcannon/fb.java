@@ -314,7 +314,7 @@ final class fb {
           if (bd.field_f != 2) {
             return 0;
           }
-          if (di.a((byte) 107, this.field_p)) {
+          if (AgeValidator.a((byte) 107, this.field_p)) {
             return 1;
           }
           return 0;
@@ -324,7 +324,7 @@ final class fb {
 
     fb(boolean param0) {
         this.field_o = lj.field_i;
-        this.field_k = cf.field_r;
+        this.field_k = ConfirmedEmailAvailabilityValidator.field_r;
         this.field_p = field_e;
         this.field_q = AccountRequestState.field_e;
         if (param0) {

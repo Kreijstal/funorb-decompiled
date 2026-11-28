@@ -25,7 +25,7 @@ final class SceneWidgetPart003 extends SceneWidget {
     }
 
     final static void performAction0612(int integerArgument1) {
-        MixedSupport022.uiComponentPart031State0001 = new UiComponentPart031();
+        MixedSupport022.uiComponentPart031State0001 = new AccountRegistrationPanel();
         if (integerArgument1 != 0) {
           return;
         }

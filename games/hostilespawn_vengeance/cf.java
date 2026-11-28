@@ -34,8 +34,8 @@ class cf extends DualLinkNode {
         field_t = null;
         field_u = null;
         if (param0) {
-          oc var2 = (oc) null;
-          cf.a((oc) null, (byte) 67, -84, (oc) null);
+          GridPoint var2 = (GridPoint) null;
+          cf.a((GridPoint) null, (byte) 67, -84, (GridPoint) null);
         }
     }
 
@@ -101,7 +101,7 @@ class cf extends DualLinkNode {
         tf.field_d = param0;
     }
 
-    final static void a(oc param0, byte param1, int param2, oc param3) {
+    final static void a(GridPoint param0, byte param1, int param2, GridPoint param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

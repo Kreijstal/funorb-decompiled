@@ -72,7 +72,7 @@ final class gs {
           return 1;
         }
         if (um.field_c == 2 &&
-          gl.a(3, this.field_g)) {
+          BirthDateValidator.a(3, this.field_g)) {
           return 1;
         }
         if (param0 >= 117) {

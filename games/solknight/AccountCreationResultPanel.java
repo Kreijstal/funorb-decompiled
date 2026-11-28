@@ -3,11 +3,11 @@
  */
 final class AccountCreationResultPanel extends ci implements ka {
     private boolean field_tb;
-    private rf field_vb;
+    private AccountRegistrationPanel field_vb;
     private boolean field_wb;
     static Archive field_ub;
 
-    AccountCreationResultPanel(i param0, rf param1) {
+    AccountCreationResultPanel(i param0, AccountRegistrationPanel param1) {
         super(param0, uc.field_g, UiWidget.field_p, false, false);
         try {
           this.field_vb = param1;
@@ -73,7 +73,7 @@ final class AccountCreationResultPanel extends ci implements ka {
               var5.a(0, dd.field_a, (dg) (this));
             } else {
               if (param2.statusCode == 5) {
-                var5.a(11, cl.field_k, 1);
+                var5.a(11, AgeValidator.field_k, 1);
                 var5.a(17, ph.field_e, 1);
               } else {
                 var5.a(-1, u.field_e, 1);
@@ -124,7 +124,7 @@ final class AccountCreationResultPanel extends ci implements ka {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0 != 1784) {
-          this.field_vb = (rf) null;
+          this.field_vb = (AccountRegistrationPanel) null;
           if (!this.field_J) {
             return super.h(1784);
           }

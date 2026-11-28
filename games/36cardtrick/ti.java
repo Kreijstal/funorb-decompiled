@@ -6,7 +6,7 @@ final class ti {
     static String field_b;
     static int field_a;
     static String field_c;
-    static fh field_e;
+    static DisplayNameSelectionPanel field_e;
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         int var5_int = 0;

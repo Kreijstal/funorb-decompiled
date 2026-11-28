@@ -1,0 +1,163 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class TextFieldValidator extends DebouncedFieldValidator implements TextFieldListener {
+    static String field_j;
+    static int field_l;
+    static String field_k;
+    private EditableTextField field_m;
+
+    public final void onTextSubmitted(int param0, EditableTextField param1) {
+        try {
+          if (param0 != -31825) {
+            this.evaluateValidationMessage((byte) 39);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(RgbSprite param0, int param1) {
+        try {
+          we.a(-68);
+          if (param1 != 45) {
+            field_l = 45;
+          }
+          SoftwareRasterizer.setRasterBuffer(param0.field_B, param0.field_x, param0.field_r);
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void d(int param0) {
+        field_k = null;
+        field_j = null;
+        if (param0 != 0) {
+          RgbSprite var2 = (RgbSprite) null;
+          TextFieldValidator.a((RgbSprite) null, -96);
+        }
+    }
+
+    public final void onTextChanged(int param0, EditableTextField param1) {
+        try {
+          if (param0 != 40) {
+            EditableTextField var4 = (EditableTextField) null;
+            this.onTextChanged(-35, (EditableTextField) null);
+          }
+          this.recordInputChange(param0 ^ -1323);
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final wd evaluateValidationStatus(byte param0) {
+        if (param0 == -8) {
+          return this.getValidationStatus(160, this.field_m.field_i);
+        }
+        field_k = (String) null;
+        return this.getValidationStatus(160, this.field_m.field_i);
+    }
+
+    final String evaluateValidationMessage(byte param0) {
+        if (param0 > 62) {
+          return this.getValidationMessage((byte) 109, this.field_m.field_i);
+        }
+        field_l = -35;
+        return this.getValidationMessage((byte) 109, this.field_m.field_i);
+    }
+
+    final static kc a(boolean param0, long param1, byte param2, String param3, String param4) {
+        RuntimeException var6 = null;
+        RgbSprite var7 = null;
+        rg stackIn_5_0 = null;
+        rj stackIn_7_0 = null;
+        ef stackIn_11_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 0L &&
+            param3 != null) {
+            stackIn_7_0 = new rj(param3, param4);
+            return (kc) ((Object) stackIn_7_0);
+          }
+          if (param0) {
+            stackIn_5_0 = new rg(param1, param4);
+            return (kc) ((Object) stackIn_5_0);
+          }
+          if (param2 != 84) {
+            var7 = (RgbSprite) null;
+            TextFieldValidator.a((RgbSprite) null, -52);
+          }
+          stackIn_11_0 = new ef(param1, param4);
+          return (kc) ((Object) stackIn_11_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_14_0 = var6;
+          stackIn_14_1 = new StringBuilder().append("r.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param4 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    abstract wd getValidationStatus(int param0, String param1);
+
+    public final boolean hasMissingInput(boolean param0) {
+        if (!param0) {
+          return true;
+        }
+        if (null == this.field_m.field_i) {
+          return true;
+        }
+        if (this.field_m.field_i.length() != 0) {
+          return false;
+        }
+        return true;
+    }
+
+    abstract String getValidationMessage(byte param0, String param1);
+
+    TextFieldValidator(EditableTextField param0) {
+        try {
+          this.field_m = param0;
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static boolean a(char param0, int param1) {
+        int var2 = 45 / ((7 - param1) / 50);
+        if (param0 == 160) {
+          return true;
+        }
+        if (param0 == 32) {
+          return true;
+        }
+        if (param0 == 95) {
+          return true;
+        }
+        if (param0 != 45) {
+          return false;
+        }
+        return true;
+    }
+
+    static {
+        field_j = "This game has been updated! Please reload this page.";
+        field_k = "Continue";
+    }
+}

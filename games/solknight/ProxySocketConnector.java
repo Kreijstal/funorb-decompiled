@@ -168,7 +168,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (fc.field_l != null) {
           fc.field_l.a(false);
         }
-        dc.field_q.requestFocus();
+        EmailFormatValidator.field_q.requestFocus();
     }
 
     final static boolean a(CharSequence param0, boolean param1, int param2) {

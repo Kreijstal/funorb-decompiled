@@ -412,7 +412,7 @@ class td extends UiWidget implements je {
           if (var7 != 80) {
             return false;
           }
-          if (!ni.keyDown[81]) {
+          if (!MatchingFieldValidator.keyDown[81]) {
             stackIn_14_0 = this.a(param2, true);
           } else {
             stackIn_14_0 = this.a(param2, -27);

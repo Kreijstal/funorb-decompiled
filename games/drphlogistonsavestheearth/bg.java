@@ -101,8 +101,8 @@ final class bg extends IntrusiveNode {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.c();
-            md.field_a.b(a.a(5044, ja.field_g, new String[]{dc.field_f}), var6, 40, 16777215, -1);
-            sc.field_f.b(a.a(5044, ek.field_p, new String[]{dc.field_f}), var6, 60, 16777215, -1);
+            md.field_a.b(a.a(5044, ja.field_g, new String[]{DebouncedFieldValidator.field_f}), var6, 40, 16777215, -1);
+            sc.field_f.b(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
             md.field_a.b(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
             sc.field_f.b(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
             md.field_a.b(lc.field_k, var6, 180, 16777215, -1);
@@ -124,7 +124,7 @@ final class bg extends IntrusiveNode {
             ch.field_A = (r.field_b.field_y - DualLinkNode.field_r.field_y) / 2 + 434;
             ka.field_o = 231 + (-DualLinkNode.field_r.field_y + r.field_b.field_y) / 2;
             ce.field_a = null;
-            v.field_N = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
+            AccountRegistrationPanel.field_N = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
             tb.field_c = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
           }
           if (null == hf.field_D) {
@@ -286,7 +286,7 @@ final class bg extends IntrusiveNode {
               fk.a(7 * r.field_b.field_w / 12, -4 + r.field_b.field_y, 392, 64, (byte) -73, 436);
             }
             stackIn_67_0 = (1 == ArchiveRequest.field_w.field_f);
-            qj.a(stackIn_67_0, v.field_N, ch.field_A, true);
+            qj.a(stackIn_67_0, AccountRegistrationPanel.field_N, ch.field_A, true);
           }
           if (sc.field_c != null) {
             var1_int = -(sc.field_c.field_C / 2) + 357;

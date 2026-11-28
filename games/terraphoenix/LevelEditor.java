@@ -345,9 +345,9 @@ final class LevelEditor {
           this.a(true, (byte[]) null);
         }
         if (this.field_c < 0) {
-          this.field_c = ph.field_n.length - 1;
+          this.field_c = PasswordValidator.field_n.length - 1;
         }
-        if (!(this.field_c < ph.field_n.length)) {
+        if (!(this.field_c < PasswordValidator.field_n.length)) {
           this.field_c = 0;
         }
         this.a((byte) -118);
@@ -361,7 +361,7 @@ final class LevelEditor {
         }
         fg.field_c = "MAP SAVING";
         j.field_R = 256;
-        String var2 = ph.field_n[this.field_c] + ".lev";
+        String var2 = PasswordValidator.field_n[this.field_c] + ".lev";
         byte[] var3 = this.map.a(true);
         ImageProducerRasterBuffer.field_k[wf.a(var2, true)] = var3;
         fg.field_c = "MAP SAVED";
@@ -444,7 +444,7 @@ final class LevelEditor {
             var4 = this.map.field_e + param0;
             this.c(-13859);
             var5 = null;
-            var6 = ph.field_n[this.field_c] + ".lev";
+            var6 = PasswordValidator.field_n[this.field_c] + ".lev";
             try {
               var5_array = vl.a(75, new File(var6));
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -489,7 +489,7 @@ final class LevelEditor {
         int var3Lifetime1;
         int var3Lifetime2;
         var7 = Terraphoenix.field_V;
-        FrameTimer.field_f.b(ph.field_n[this.field_c], 24, 24, 0, -1);
+        FrameTimer.field_f.b(PasswordValidator.field_n[this.field_c], 24, 24, 0, -1);
         if (this.map != null) {
           FrameTimer.field_f.b("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
           FrameTimer.field_f.b("Level:" + tg.field_l, 24, 72, 16711935, -1);

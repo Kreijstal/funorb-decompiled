@@ -234,7 +234,7 @@ final class vm extends HomingProjectile {
           try {
             var9 = wc.field_Ub.b(1, var5);
             NanoFrameTimer.field_j = var9.e((byte) -114);
-            if (!ej.field_d.equals(qc.field_m)) {
+            if (!ej.field_d.equals(ConfirmedEmailAvailabilityValidator.field_m)) {
               stackIn_22_0 = var9.field_s;
             } else {
               stackIn_22_0 = null;

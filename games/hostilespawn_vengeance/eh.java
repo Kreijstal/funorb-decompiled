@@ -90,7 +90,7 @@ final class eh {
         SoftwareRasterizer.setRasterBuffer(var1.field_i, var1.field_j, var1.field_p);
         SoftwareRasterizer.setClip(var1.field_m, var1.field_o, var1.field_r, var1.field_n);
         var1.field_i = null;
-        ij.field_J.addLast(var1, 114);
+        DisplayNameSelectionPanel.field_J.addLast(var1, 114);
     }
 
     final static int a(byte param0) {

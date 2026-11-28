@@ -194,7 +194,7 @@ class vk extends UiWidget implements ch {
           if (param1 <= 9) {
             field_x = (String) null;
           }
-          stackIn_4_0 = di.a(130, var5, param3, var4_int);
+          stackIn_4_0 = AgeValidator.a(130, var5, param3, var4_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1178,9 +1178,9 @@ class vk extends UiWidget implements ch {
           }
           var5_ref_StringLifetime1 = var1.readString(-39);
           var6_ref = var1.readString(-107);
-          var7_ref = hg.a(120, var5_ref_StringLifetime1);
+          var7_ref = DisplayNameSelectionPanel.a(120, var5_ref_StringLifetime1);
           if (var7_ref == null) {
-            var7_ref = hg.a(120, var6_ref);
+            var7_ref = DisplayNameSelectionPanel.a(120, var6_ref);
             if (null != var7_ref) {
               m.field_d.a(2, (long)ni.a(107, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), var7_ref);
             }
@@ -1215,7 +1215,7 @@ class vk extends UiWidget implements ch {
               return;
             }
           }
-          fe.a(var8_ref, var7_ref, false);
+          EditableTextField.a(var8_ref, var7_ref, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

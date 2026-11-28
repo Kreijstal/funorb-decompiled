@@ -7,7 +7,7 @@ final class ld {
 
     final static void a(String param0, byte param1) {
         try {
-          df.field_o = param0;
+          PasswordValidator.field_o = param0;
           if (param1 != -13) {
             String var3 = (String) null;
             ld.a((String) null, (byte) -41);

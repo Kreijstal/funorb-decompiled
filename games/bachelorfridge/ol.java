@@ -41,7 +41,7 @@ final class ol extends pu {
                 return stackIn_18_0;
               }
             } else {
-              if (hb.field_i.indexOf(var4) == -1) {
+              if (MatchingFieldValidator.field_i.indexOf(var4) == -1) {
                 stackIn_22_0 = cha.field_m;
                 return stackIn_22_0;
               }

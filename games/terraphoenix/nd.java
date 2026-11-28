@@ -129,7 +129,7 @@ final class nd extends IntrusiveNode {
               stackIn_62_1 = ~var29Lifetime1;
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
-                  stackIn_71_0 = ~ph.field_m.length;
+                  stackIn_71_0 = ~PasswordValidator.field_m.length;
                   stackIn_71_1 = ~var18;
                   break scanLoop1;
                 }
@@ -216,7 +216,7 @@ final class nd extends IntrusiveNode {
                   if (stackIn_62_0Lifetime1 >= stackIn_62_1Lifetime1) {
                     break;
                   }
-                  stackIn_71_0 = ~ph.field_m.length;
+                  stackIn_71_0 = ~PasswordValidator.field_m.length;
                   stackIn_71_1 = ~var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -227,9 +227,9 @@ final class nd extends IntrusiveNode {
                   var19 = param0.field_j[var18];
                   var20 = param0.field_P[var18];
                   var21Lifetime2 = param0.field_u[var18];
-                  ph.field_m[var18] = var15 * var21Lifetime2 + (var20 * var12 + var9 * var19) >> 16;
+                  PasswordValidator.field_m[var18] = var15 * var21Lifetime2 + (var20 * var12 + var9 * var19) >> 16;
                   k.field_e[var18] = var16 * var21Lifetime2 + var20 * var13 + var19 * var10 >> 16;
-                  mg.field_p[var18] = var21Lifetime2 * var17 + var14 * var20 + var11 * var19 >> 16;
+                  MatchingFieldValidator.field_p[var18] = var21Lifetime2 * var17 + var14 * var20 + var11 * var19 >> 16;
                   var18++;
                 }
               }
@@ -312,7 +312,7 @@ final class nd extends IntrusiveNode {
             nb.field_b.h((byte) -126);
           }
           var1 = lk.c(-62);
-          mb.field_s = new uh(var1, (String) null, true, false, false);
+          mb.field_s = new LoginPanel(var1, (String) null, true, false, false);
           var2 = -47 % ((-58 - param0) / 40);
           jl.field_I.a((UiWidget) (bj.field_f), (byte) -1);
           bj.field_f.a(mb.field_s, -67);

@@ -7,15 +7,15 @@ final class jg extends dk {
     static String field_I;
     static int field_H;
     static ResourceArchive field_F;
-    private he field_D;
+    private FieldValidator field_D;
     static Sprite[] field_C;
 
     final String d(int param0) {
         if (this.field_h) {
-          return this.field_D.a(26162);
+          return this.field_D.getValidationMessage(26162);
         }
         if (param0 != 12606) {
-          this.field_D = (he) null;
+          this.field_D = (FieldValidator) null;
           return null;
         }
         return null;
@@ -54,31 +54,31 @@ final class jg extends dk {
         }
         var5 = (this.field_i >> 1) + this.field_s + param1;
         var6 = this.field_j + (param3 + (this.field_f >> 1));
-        var8 = this.field_D.b((byte) -126);
+        var8 = this.field_D.getValidationStatus((byte) -126);
         if (cg.field_g == var8) {
           var16 = FrameTimer.field_g[0];
           var9 = var16.field_x << 1;
           var10 = var16.field_q << 1;
-          if (fe.field_H == null) {
-            fe.field_H = new Sprite(var9, var10);
-            bc.a(fe.field_H, 26095);
+          if (EditableTextField.field_H == null) {
+            EditableTextField.field_H = new Sprite(var9, var10);
+            bc.a(EditableTextField.field_H, 26095);
           } else {
-            if (fe.field_H.field_u < var9) {
-              fe.field_H = new Sprite(var9, var10);
-              bc.a(fe.field_H, 26095);
+            if (EditableTextField.field_H.field_u < var9) {
+              EditableTextField.field_H = new Sprite(var9, var10);
+              bc.a(EditableTextField.field_H, 26095);
             } else {
-              if (fe.field_H.field_v >= var10) {
-                bc.a(fe.field_H, 26095);
+              if (EditableTextField.field_H.field_v >= var10) {
+                bc.a(EditableTextField.field_H, 26095);
                 SoftwareRasterizer.clearRaster();
               } else {
-                fe.field_H = new Sprite(var9, var10);
-                bc.a(fe.field_H, 26095);
+                EditableTextField.field_H = new Sprite(var9, var10);
+                bc.a(EditableTextField.field_H, 26095);
               }
             }
           }
           var16.b(112, 144, var16.field_x << 4, var16.field_q << 4, -this.field_G << 10, 4096);
           wf.a(-120);
-          fe.field_H.f(var5 - var16.field_x, -var16.field_q + var6, 256);
+          EditableTextField.field_H.f(var5 - var16.field_x, -var16.field_q + var6, 256);
           return;
         }
         if (var8 != cd.field_a) {
@@ -97,26 +97,26 @@ final class jg extends dk {
         var15 = FrameTimer.field_g[0];
         var9Lifetime1 = var15.field_x << 1;
         var10Lifetime1 = var15.field_q << 1;
-        if (fe.field_H == null) {
-          fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
-          bc.a(fe.field_H, 26095);
+        if (EditableTextField.field_H == null) {
+          EditableTextField.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
+          bc.a(EditableTextField.field_H, 26095);
         } else {
-          if (fe.field_H.field_u < var9Lifetime1) {
-            fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
-            bc.a(fe.field_H, 26095);
+          if (EditableTextField.field_H.field_u < var9Lifetime1) {
+            EditableTextField.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
+            bc.a(EditableTextField.field_H, 26095);
           } else {
-            if (fe.field_H.field_v >= var10Lifetime1) {
-              bc.a(fe.field_H, 26095);
+            if (EditableTextField.field_H.field_v >= var10Lifetime1) {
+              bc.a(EditableTextField.field_H, 26095);
               SoftwareRasterizer.clearRaster();
             } else {
-              fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
-              bc.a(fe.field_H, 26095);
+              EditableTextField.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
+              bc.a(EditableTextField.field_H, 26095);
             }
           }
         }
         var15.b(112, 144, var15.field_x << 4, var15.field_q << 4, -this.field_G << 10, 4096);
         wf.a(-120);
-        fe.field_H.f(var5 - var15.field_x, -var15.field_q + var6, 256);
+        EditableTextField.field_H.f(var5 - var15.field_x, -var15.field_q + var6, 256);
     }
 
     final boolean a(int param0, UiWidget param1) {
@@ -162,7 +162,7 @@ final class jg extends dk {
         }
     }
 
-    jg(he param0) {
+    jg(FieldValidator param0) {
         try {
           this.field_D = param0;
         } catch (RuntimeException runtimeException) {

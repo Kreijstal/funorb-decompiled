@@ -21,7 +21,7 @@ class ik extends a implements df {
         String var7;
         String var8;
         var5 = Transmogrify.field_A ? 1 : 0;
-        var6 = "(" + bd.field_t + " " + WordLanguage.field_k + " " + FullscreenFocusCanvas.field_a + ") " + ca.field_e;
+        var6 = "(" + bd.field_t + " " + WordLanguage.field_k + " " + FullscreenFocusCanvas.field_a + ") " + DebouncedFieldValidator.field_e;
         var1 = var6;
         if (param0 != 48) {
           field_cb = (tf) null;
@@ -189,7 +189,7 @@ class ik extends a implements df {
           ai.b(param0 - 202);
         } else {
           if (this.field_jb) {
-            ff.a((byte) -124);
+            LoginPanel.a((byte) -124);
           }
         }
     }

@@ -233,7 +233,7 @@ final class gf {
                   }
                 } else {
                   if (this.field_h == 8) {
-                    wj.field_k[this.field_g].f(-16 + var2_int, var3 - 48);
+                    AgeValidator.field_k[this.field_g].f(-16 + var2_int, var3 - 48);
                     return;
                   }
                   if (9 == this.field_h) {
@@ -1089,10 +1089,10 @@ final class gf {
             }
             if (this.field_n == NanoFrameTimer.field_k &&
               hf.field_t == this.field_p) {
-              cl.field_I = 0;
+              LoginPanel.field_I = 0;
               if (!this.a((byte) 125)) {
                 qf.field_p = qf.field_p + 1;
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   qf.field_p == 5) {
                   fn.a(9, 246, 3);
                 }
@@ -1147,7 +1147,7 @@ final class gf {
                 ne.a(61, -69);
                 var4Lifetime1Lifetime1 = var3Lifetime1 * 1000;
               }
-              if (ke.field_V) {
+              if (ValidatedTextField.field_V) {
                 if (tc.field_s > 0) {
                   eb.field_b = eb.field_b + var4Lifetime1Lifetime1;
                   if (eb.field_b > 100000 &&
@@ -1184,42 +1184,42 @@ final class gf {
               }
               if (this.field_h >= 0 &&
                 5 >= this.field_h) {
-                if (ke.field_V) {
+                if (ValidatedTextField.field_V) {
                   DiskCacheWorker.field_g[this.field_h] = DiskCacheWorker.field_g[this.field_h] + 1;
                 }
                 if (je.c(this.field_n, this.field_p, 1, 1)) {
                   vi.field_q = vi.field_q + 1;
                   if (vi.field_q == 25 &&
-                    ke.field_V) {
+                    ValidatedTextField.field_V) {
                     fn.a(11, 244, 3);
                   }
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   25 == DiskCacheWorker.field_g[this.field_h] &&
                   0 == this.field_h) {
                   fn.a(4, 251, 3);
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 1) {
                   fn.a(5, 250, 3);
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 2) {
                   fn.a(6, 249, 3);
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   DiskCacheWorker.field_g[this.field_h] == 25 &&
                   3 == this.field_h) {
                   fn.a(7, 248, 3);
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 5) {
                   fn.a(18, 237, 3);
                 }
-                if (ke.field_V &&
+                if (ValidatedTextField.field_V &&
                   10 == DiskCacheWorker.field_g[this.field_h] &&
                   this.field_h == 4) {
                   fn.a(8, 247, 3);

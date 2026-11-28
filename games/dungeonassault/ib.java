@@ -171,7 +171,7 @@ final class ib {
         for (var2 = 0; var2 < dk.field_d; var2++) {
           var3 = jn.field_k[var2] * jc.field_f[var2];
           var21 = ub.field_q[var2];
-          if (!gk.field_Q[var2]) {
+          if (!DisplayNameSelectionPanel.field_Q[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {

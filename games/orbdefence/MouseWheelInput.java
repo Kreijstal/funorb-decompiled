@@ -41,7 +41,7 @@ abstract class MouseWheelInput {
             }
             var3 = "";
             if (param1 != null) {
-              var3 = vi.a(41, param1);
+              var3 = EditableTextField.a(41, param1);
             }
             if (param2 != null) {
               if (param1 != null) {
@@ -69,7 +69,7 @@ abstract class MouseWheelInput {
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_5 = "" + el.field_F;
+              stackIn_18_5 = "" + DisplayNameSelectionPanel.field_F;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_17_0).requestUrlStream(new java.net.URL(stackIn_17_3, ((StringBuilder) (Object) stackIn_17_4).append(stackIn_18_5).append("&v1=").append(PlatformTaskDispatcher.field_s).append("&v2=").append(PlatformTaskDispatcher.field_j).append("&e=").append(var10).toString()), (byte) -49);
             while (var4.status == 0) {

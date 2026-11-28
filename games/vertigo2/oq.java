@@ -128,8 +128,8 @@ final class oq extends qc {
           }
           un.field_Ib = false;
           PacketBuffer.field_t = false;
-          if (null != df.field_l) {
-            if (!df.field_l.field_I) {
+          if (null != BirthDateValidator.field_l) {
+            if (!BirthDateValidator.field_l.field_I) {
               return;
             }
             if (param2 != 8) {
@@ -154,7 +154,7 @@ final class oq extends qc {
               if (bf.field_a) {
                 param1 = LevelRenderer.field_m;
               }
-              df.field_l.a(param2, true, param1);
+              BirthDateValidator.field_l.a(param2, true, param1);
             }
             if (param2 != 256 &&
               param2 != 10 &&

@@ -331,7 +331,7 @@ final class q {
           }
           var2Lifetime57 = vh.a((byte) 112, "MENU_TEXT_BISHOP");
           if (null != var2Lifetime57) {
-            wf.field_P = ad.a(-29410, var2Lifetime57);
+            LoginPanel.field_P = ad.a(-29410, var2Lifetime57);
           }
           var2Lifetime58 = vh.a((byte) 119, "MENU_TEXT_QUEEN");
           if (var2Lifetime58 != null) {
@@ -394,7 +394,7 @@ final class q {
           }
           var2Lifetime72 = vh.a((byte) 126, "PLAYED");
           if (var2Lifetime72 != null) {
-            qe.field_y = ad.a(-29410, var2Lifetime72);
+            ChessBoardRenderer.field_y = ad.a(-29410, var2Lifetime72);
           }
           var2Lifetime73 = vh.a((byte) 79, "RATING_PER_WON");
           if (null != var2Lifetime73) {
@@ -410,7 +410,7 @@ final class q {
           }
           var2Lifetime76 = vh.a((byte) 84, "PERCENT");
           if (null != var2Lifetime76) {
-            wf.field_S = ad.a(-29410, var2Lifetime76);
+            LoginPanel.field_S = ad.a(-29410, var2Lifetime76);
           }
           var2Lifetime77 = vh.a((byte) 83, "NA");
           if (null != var2Lifetime77) {
@@ -635,16 +635,16 @@ final class q {
           if (da.field_F <= 0) {
             return;
           }
-          jb.a((byte) -89);
+          DebouncedFieldValidator.a((byte) -89);
           AccountNameAvailabilityValidator.field_m.a(param2, (byte) 88);
-          if (ol.field_O != null) {
+          if (AccountRegistrationPanel.field_O != null) {
             boolean decompiledSharedTail0 = !(!qf.field_b);
             if (!decompiledSharedTail0) {
-              ol.field_O = null;
+              AccountRegistrationPanel.field_O = null;
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              ol.field_O.a(param0 + 6725, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U, param2);
+              AccountRegistrationPanel.field_O.a(param0 + 6725, AccountNameAvailabilityValidator.field_m.field_wb, AccountNameAvailabilityValidator.field_m.field_U, param2);
             }
           }
           if (param0 != -6844) {
@@ -673,9 +673,9 @@ final class q {
             stackIn_36_0 = bj.field_jb;
           }
           if (stackIn_36_0.field_L != 0) {
-            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
-          var4 = fj.a(ri.field_g, param1, fe.field_g, param0 ^ -6836);
+          var4 = fj.a(BirthDateValidator.field_g, param1, fe.field_g, param0 ^ -6836);
           if (var4 != null) {
             ce.a(var4, -90);
           }

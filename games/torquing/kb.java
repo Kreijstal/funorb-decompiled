@@ -41,7 +41,7 @@ final class kb implements WidgetRenderer {
           if (param0 < 89) {
             kb.a((byte) -45);
           }
-          tk.a(var7, var6_int, param4.height, param4.width, false);
+          EditableTextField.a(var7, var6_int, param4.height, param4.width, false);
           var8 = wj.field_h[1];
           if (param4 instanceof lg &&
             ((lg) (param4)).field_A) {

@@ -302,7 +302,7 @@ final class pf {
             }
             ProxyAuthenticationRequiredException.field_e = new int[2];
             m.field_c[1] = 0;
-            fb.field_d[1] = ck.field_p;
+            fb.field_d[1] = ConfirmedEmailAvailabilityValidator.field_p;
             fb.field_d[0] = ki.field_e;
             fb.field_d[5] = "";
             m.field_c[3] = 1;

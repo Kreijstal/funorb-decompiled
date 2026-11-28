@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends wa implements sg {
     static am field_Db;
-    private dg field_Bb;
+    private AccountRegistrationPanel field_Bb;
     private boolean field_Cb;
     private boolean field_Eb;
     static String field_Ab;
@@ -16,7 +16,7 @@ final class AccountCreationResultPanel extends wa implements sg {
         }
         try {
           if (param4) {
-            this.field_Bb = (dg) null;
+            this.field_Bb = (AccountRegistrationPanel) null;
           }
           ProxyAuthenticationRequiredException.a(30);
           this.o(77);
@@ -76,7 +76,7 @@ final class AccountCreationResultPanel extends wa implements sg {
         return true;
     }
 
-    AccountCreationResultPanel(si param0, dg param1) {
+    AccountCreationResultPanel(si param0, AccountRegistrationPanel param1) {
         super(param0, dl.field_H, cd.field_a, false, false);
         try {
           this.field_Bb = param1;

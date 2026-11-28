@@ -25,13 +25,13 @@ final class hm {
         pi.field_j = rl.c(-9918);
         if (param0 == -3121) {
           qe.field_g = new ol();
-          vk.a(param0 ^ 3095, true, true);
+          LoginPanel.a(param0 ^ 3095, true, true);
           return;
         }
         PacketBuffer var2 = (PacketBuffer) null;
         hm.a((PacketBuffer) null, -93);
         qe.field_g = new ol();
-        vk.a(param0 ^ 3095, true, true);
+        LoginPanel.a(param0 ^ 3095, true, true);
     }
 
     final static int a(int param0, int param1, int param2) {

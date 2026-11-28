@@ -177,7 +177,7 @@ final class hi {
             decompiledFrameRemainder0 = (t.field_e == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!k.field_b) {
+            if (!DebouncedFieldValidator.field_b) {
               if (Main.field_G >= ek.field_e) {
                 stackIn_16_0 = (ek.field_e + ra.field_e > Main.field_G) ? 1 : 0;
               } else {
@@ -188,7 +188,7 @@ final class hi {
             }
             boolean decompiledFrameRemainder1 = true;
             var2_int = stackIn_16_0;
-            if (param0 != null && (k.field_b ||
+            if (param0 != null && (DebouncedFieldValidator.field_b ||
               var2_int != 0)) {
               Main.field_G = ek.field_e;
               decompiledFrameRemainder1 = false;
@@ -197,29 +197,29 @@ final class hi {
               Main.field_G = 0;
             }
             ti.field_a = ug.field_h;
-            p.field_k = ca.field_a;
+            ConfirmedEmailAvailabilityValidator.field_k = ca.field_a;
             if (param0 == null) {
               if (var2_int != 0) {
-                k.field_b = true;
+                DebouncedFieldValidator.field_b = true;
               }
             } else {
-              k.field_b = false;
+              DebouncedFieldValidator.field_b = false;
             }
           }
           t.field_e = param0;
-          if (!k.field_b &&
+          if (!DebouncedFieldValidator.field_b &&
             ek.field_e > Main.field_G &&
             d.field_s) {
             ti.field_a = ug.field_h;
             Main.field_G = 0;
-            p.field_k = ca.field_a;
+            ConfirmedEmailAvailabilityValidator.field_k = ca.field_a;
           }
           ca.field_a = -1;
           ug.field_h = -1;
-          if (k.field_b &&
+          if (DebouncedFieldValidator.field_b &&
             id.field_b == Main.field_G) {
             Main.field_G = 0;
-            k.field_b = false;
+            DebouncedFieldValidator.field_b = false;
           }
           if (param1 >= -32) {
             field_a = true;

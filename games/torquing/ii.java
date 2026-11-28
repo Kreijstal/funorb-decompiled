@@ -11,7 +11,7 @@ final class ii extends IntrusiveNode {
     long[] field_l;
     static int field_k;
 
-    final static void a(int param0, int param1, qk param2) {
+    final static void a(int param0, int param1, LevelCompletionUpdate param2) {
         int var4 = 0;
         IsaacPacketBuffer var5 = wa.field_d;
         var5.f(95, param1);
@@ -89,8 +89,8 @@ final class ii extends IntrusiveNode {
         field_m = null;
         field_j = null;
         if (param0 != -28455) {
-          qk var2 = (qk) null;
-          ii.a(-84, 11, (qk) null);
+          LevelCompletionUpdate var2 = (LevelCompletionUpdate) null;
+          ii.a(-84, 11, (LevelCompletionUpdate) null);
         }
     }
 
@@ -214,7 +214,7 @@ final class ii extends IntrusiveNode {
             ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
             return;
           }
-          if (param2 <= qk.field_p) {
+          if (param2 <= LevelCompletionUpdate.field_p) {
             qm.a(param2, (byte) 54, param0, param7, param1, param3, param4, param6);
             return;
           }
@@ -233,7 +233,7 @@ final class ii extends IntrusiveNode {
           ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
           return;
         }
-        if (param2 <= qk.field_p) {
+        if (param2 <= LevelCompletionUpdate.field_p) {
           qm.a(param2, (byte) 54, param0, param7, param1, param3, param4, param6);
           return;
         }

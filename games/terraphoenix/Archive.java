@@ -96,7 +96,7 @@ final class Archive {
 
     private final synchronized void loadPackedGroup(int param0, int param1) {
         if (!this.field_j) {
-          this.field_k[param0] = pl.storeBytes(this.field_b.a(param0, param1 - 3979), false, false);
+          this.field_k[param0] = AccountRegistrationPanel.storeBytes(this.field_b.a(param0, param1 - 3979), false, false);
         } else {
           this.field_k[param0] = this.field_b.a(param0, -126);
         }
@@ -399,7 +399,7 @@ final class Archive {
                 if (0 != this.field_h) {
                   var7[var18] = var39[var17];
                 } else {
-                  var7[var18] = pl.storeBytes(var39[var17], false, param1);
+                  var7[var18] = AccountRegistrationPanel.storeBytes(var39[var17], false, param1);
                 }
               }
             }
@@ -410,7 +410,7 @@ final class Archive {
               var11 = var34[0];
             }
             if (this.field_h == 0) {
-              var7[var11] = pl.storeBytes(var36, false, false);
+              var7[var11] = AccountRegistrationPanel.storeBytes(var36, false, false);
               return true;
             }
             var7[var11] = var43;

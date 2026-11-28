@@ -33,7 +33,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             java.awt.Component componentLocal1 = (java.awt.Component) null;
             ProxyAuthenticationRequiredException.performAction0333((java.awt.Component) null, true);
           }
-          SceneWidgetPart004.stringState0217 = stringArgument2;
+          PlayerNamePrompt.stringState0217 = stringArgument2;
           MixedSupport147.performAction1811(booleanArgument4, -83, EmailValidationError.stringState0273);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "db.A(" + integerArgument1 + ',' + (stringArgument2 != null ? "{...}" : "null") + ',' + (stringArgument3 != null ? "{...}" : "null") + ',' + booleanArgument4 + ')');

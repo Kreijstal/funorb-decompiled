@@ -13,7 +13,7 @@ final class ck implements td {
     static long field_e;
     private int field_b;
     private int field_o;
-    static rf field_j;
+    static AccountRegistrationPanel field_j;
     private int field_d;
     static RgbSprite[] field_c;
     private kc field_m;
@@ -45,7 +45,7 @@ final class ck implements td {
           var7 = -(var12.field_I * 2) + param2.field_m;
           var8 = param2.field_s + param1 + var12.field_I;
           if (param3 != -4394) {
-            field_j = (rf) null;
+            field_j = (AccountRegistrationPanel) null;
           }
           var9 = param2.field_n + (param0 + var12.field_L);
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_d);
@@ -81,7 +81,7 @@ final class ck implements td {
           field_c = null;
           return;
         }
-        field_j = (rf) null;
+        field_j = (AccountRegistrationPanel) null;
         field_k = null;
         field_h = null;
         field_c = null;

@@ -103,8 +103,8 @@ final class BufferedRandomAccessFile {
           param1 < lf.field_Z + KeyboardInput.field_c.field_v) {
           return 0;
         }
-        if (param0 >= qf.field_e &&
-          qf.field_e + KeyboardInput.field_c.field_u > param0 &&
+        if (param0 >= TextFieldValidator.field_e &&
+          TextFieldValidator.field_e + KeyboardInput.field_c.field_u > param0 &&
           mf.field_d <= param1 &&
           mf.field_d + KeyboardInput.field_c.field_v > param1) {
           return 1;

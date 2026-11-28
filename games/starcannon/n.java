@@ -3,7 +3,7 @@
  */
 final class n {
     private int field_j;
-    static hg field_l;
+    static DisplayNameSelectionPanel field_l;
     int field_k;
     private int field_d;
     static String field_g;
@@ -81,7 +81,7 @@ final class n {
           if (var11 > 0 &&
             var10 > 0) {
             if (param5 != -2) {
-              field_l = (hg) null;
+              field_l = (DisplayNameSelectionPanel) null;
             }
             for (param1 = -var10; 0 > param1; param1++) {
               var14Lifetime3 = var7;

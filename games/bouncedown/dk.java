@@ -167,8 +167,8 @@ final class dk {
         }
         kb.field_a = kb.field_a | var3;
         ui.field_g = ui.field_g | var3;
-        ci.field_F.addLast(1, new ab(param1));
-        if (!bf.field_k) {
+        LoginPanel.field_F.addLast(1, new ab(param1));
+        if (!PasswordValidator.field_k) {
           if (jh.b(767564065)) {
             IterableNodeHashTable.field_c.addLast(1, new ke(param1, param2, qf.field_c, vg.field_j, nb.field_a, ve.field_a));
           } else {

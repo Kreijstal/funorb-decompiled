@@ -1461,7 +1461,7 @@ final class oj {
                 }
                 var2 = dl.a("create_suggestions", false);
                 if (var2 != null) {
-                  dg.field_Y = re.a(18990, var2);
+                  AccountRegistrationPanel.field_Y = re.a(18990, var2);
                 }
                 var2 = dl.a("create_more_suggestions", false);
                 if (null != var2) {
@@ -1489,7 +1489,7 @@ final class oj {
                 }
                 var2 = dl.a("login_username", false);
                 if (var2 != null) {
-                  ib.field_N = re.a(param0 + 22788, var2);
+                  DisplayNameSelectionPanel.field_N = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("login_email", false);
                 if (null != var2) {
@@ -1533,7 +1533,7 @@ final class oj {
                 }
                 var2 = dl.a("create_displayname_tooltip", false);
                 if (var2 != null) {
-                  ci.field_o = re.a(param0 ^ -17660, var2);
+                  AgeValidator.field_o = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("create_displayname_hint", false);
                 if (null != var2) {
@@ -1833,7 +1833,7 @@ final class oj {
                 }
                 var2 = dl.a("loading_music", false);
                 if (var2 != null) {
-                  ui.field_e = re.a(param0 ^ -17660, var2);
+                  DebouncedFieldValidator.field_e = re.a(param0 ^ -17660, var2);
                 }
                 var2 = dl.a("loading_instruments", false);
                 if (var2 != null) {
@@ -1893,7 +1893,7 @@ final class oj {
                 }
                 var2 = dl.a("instructions", false);
                 if (var2 != null) {
-                  ui.field_g = re.a(param0 + 22788, var2);
+                  DebouncedFieldValidator.field_g = re.a(param0 + 22788, var2);
                 }
                 var2 = dl.a("tutorial", false);
                 if (null != var2) {
@@ -2011,7 +2011,7 @@ final class oj {
                 }
                 var2 = dl.a("skip", false);
                 if (var2 != null) {
-                  ui.field_d = re.a(18990, var2);
+                  DebouncedFieldValidator.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("skiptutorial", false);
                 if (var2 != null) {
@@ -2743,7 +2743,7 @@ final class oj {
                 }
                 var2 = dl.a("mb_achievement_count_1", false);
                 if (var2 != null) {
-                  LocalizedStrings.field_t = re.a(18990, var2);
+                  ConfirmedEmailAvailabilityValidator.field_t = re.a(18990, var2);
                 }
                 var2 = dl.a("mb_achievement_count_2", false);
                 if (null != var2) {
@@ -3105,7 +3105,7 @@ final class oj {
           } else {
             di.field_A = 2;
           }
-          gf.field_u = param1;
+          MatchingFieldValidator.field_u = param1;
           ea.field_c = param2;
           vh.field_h = param5;
           SecondaryNodeDeque.field_i = new Sprite[param4.length];

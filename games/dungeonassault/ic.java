@@ -45,7 +45,7 @@ final class ic extends mc {
           }
         } else {
           cm.field_R = il.field_c.d(92);
-          gk.a(2, (byte) 4);
+          DisplayNameSelectionPanel.a(2, (byte) 4);
           if (cm.field_R == null) {
             var2Lifetime1 = 3;
           } else {

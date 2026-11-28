@@ -22,11 +22,11 @@ final class nj {
           field_a = 96;
         }
         if (param1 == 100 &&
-          fd.field_r > 0) {
-          fieldTemp$3 = fd.field_r - 1;
-          fd.field_r = fd.field_r - 1;
+          ConfirmedEmailAvailabilityValidator.field_r > 0) {
+          fieldTemp$3 = ConfirmedEmailAvailabilityValidator.field_r - 1;
+          ConfirmedEmailAvailabilityValidator.field_r = ConfirmedEmailAvailabilityValidator.field_r - 1;
           var2_ref_byte__ = wa.field_a[fieldTemp$3];
-          wa.field_a[fd.field_r] = null;
+          wa.field_a[ConfirmedEmailAvailabilityValidator.field_r] = null;
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
@@ -140,7 +140,7 @@ final class nj {
         if (DiskCacheWorker.field_i > 200) {
           var5 = (-DiskCacheWorker.field_i + 250 << 8) / 50;
         }
-        mc.a(-8497, rj.field_H);
+        mc.a(-8497, EditableTextField.field_H);
         ig.b();
         SoftwareRasterizer.clearRaster();
         ec.b(-128);
@@ -151,7 +151,7 @@ final class nj {
         if (DiskCacheWorker.field_i >= 150) {
           ki.field_H.b(15 + var3, var4 + 10, var5);
         } else {
-          rj.field_H.e(var3, var4);
+          EditableTextField.field_H.e(var3, var4);
         }
         var6 = DiskCacheWorker.field_i - 125;
         if (var6 > 0 &&

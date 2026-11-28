@@ -6,7 +6,7 @@ final class wj extends e {
     static java.applet.Applet field_g;
     static String field_j;
     static Sprite[] field_h;
-    static sm field_k;
+    static IndexedSprite field_k;
 
     final static void a(int param0) {
         if (param0 < 26) {

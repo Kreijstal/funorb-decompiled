@@ -40,7 +40,7 @@ final class cj {
     }
 
     final static void a(int param0) {
-        hi.field_g[0].d();
+        TextFieldValidator.field_g[0].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(1280, 960, 960, 255, ResourceArchive.field_f);
         hg.field_ab.c(40, 20);
@@ -48,7 +48,7 @@ final class cj {
         ab.field_g[1].d(100, 50);
         ab.field_g[2].d(55, 70);
         BufferedSocket.field_a.a(-40);
-        hi.field_g[1].d();
+        TextFieldValidator.field_g[1].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[24].d(80, 0);
         ab.field_g[24].d(110, 10);
@@ -60,7 +60,7 @@ final class cj {
         ab.field_g[12].d(40, 60);
         ab.field_g[12].d(20, 70);
         BufferedSocket.field_a.a(-40);
-        hi.field_g[2].d();
+        TextFieldValidator.field_g[2].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[60].c(30, 10);
         SoftwareRasterizer.addRadialGlow(480, 1040, 480, 255, ResourceArchive.field_f);
@@ -68,7 +68,7 @@ final class cj {
         SoftwareRasterizer.addRadialGlow(2080, 1040, 480, 255, ResourceArchive.field_f);
         hg.field_ab.d(110, 45);
         BufferedSocket.field_a.a(-40);
-        hi.field_g[3].d();
+        TextFieldValidator.field_g[3].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         ab.field_g[86].c(30, 0);
         SoftwareRasterizer.addRadialGlow(480, 1040, 240, 255, ResourceArchive.field_f);
@@ -82,7 +82,7 @@ final class cj {
         SoftwareRasterizer.addRadialGlow(1280, 1440, 240, 255, ResourceArchive.field_f);
         hg.field_ab.a(70, 80);
         BufferedSocket.field_a.a(-40);
-        hi.field_g[4].d();
+        TextFieldValidator.field_g[4].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 1520, 240, 255, ResourceArchive.field_f);
         hg.field_ab.a(30, 85);
@@ -95,7 +95,7 @@ final class cj {
         hf.field_g[2].b(2093920872, 3000, 50, 85, 62);
         hf.field_g[1].d(75, 55);
         BufferedSocket.field_a.a(-40);
-        hi.field_g[5].d();
+        TextFieldValidator.field_g[5].d();
         SoftwareRasterizer.fillRectangle(0, 0, 160, 120, 0);
         SoftwareRasterizer.addRadialGlow(640, 640, 640, 255, ResourceArchive.field_f);
         hg.field_ab.d(20, 20);

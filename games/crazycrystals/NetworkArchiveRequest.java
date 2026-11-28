@@ -65,7 +65,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
 
     final static void g(int param0) {
         CharSequence var3 = null;
-        je.field_g = kd.field_n.readString(111);
+        je.field_g = ConfirmedEmailAvailabilityValidator.field_n.readString(111);
         if (param0 == -1266) {
           var3 = (CharSequence) ((Object) je.field_g);
           lk.field_b = fe.a(60136, var3);

@@ -77,16 +77,16 @@ final class bh extends IntrusiveNode {
             var4 = uk.a(12, param2);
             if (var4 != null &&
               1 <= var4.length()) {
-              if (r.a(var4.charAt(0), -108)) {
+              if (TextFieldValidator.a(var4.charAt(0), -108)) {
                 return false;
               }
-              if (r.a(var4.charAt(var4.length() - 1), -77)) {
+              if (TextFieldValidator.a(var4.charAt(var4.length() - 1), -77)) {
                 return false;
               }
               var5 = 0;
               for (var6 = 0; var6 < param2.length(); var6++) {
                 var7 = param2.charAt(var6);
-                if (!r.a((char) var7, -55)) {
+                if (!TextFieldValidator.a((char) var7, -55)) {
                   var5 = 0;
                 } else {
                   var5++;

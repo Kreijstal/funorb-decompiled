@@ -246,7 +246,7 @@ abstract class vk {
         try {
           var4 = (nf) (wb.field_f.beginForward(-77));
           while (var4 != null) {
-            ea.a(param1, var4, (byte) 80);
+            MatchingFieldValidator.a(param1, var4, (byte) 80);
             var4 = (nf) (wb.field_f.nextForward((byte) 120));
           }
           if (param0 >= -104) {

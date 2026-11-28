@@ -18,7 +18,7 @@ final class Level {
     private int field_f;
     static String[] field_d;
     private IntrusiveDeque field_a;
-    private sg field_g;
+    private SceneMeshBatch field_g;
     TooltipPanel field_e;
     private int field_r;
     private int[][] field_x;
@@ -361,7 +361,7 @@ final class Level {
           return true;
         }
         if (null == this.field_g) {
-          this.field_g = new sg(1);
+          this.field_g = new SceneMeshBatch(1);
           this.field_g.a(0, this.getTerrainModel(-100, true));
           return false;
         }
@@ -381,7 +381,7 @@ final class Level {
         }
         var2Lifetime1 = km.correctedCurrentTimeMillis(-1);
         if (this.field_k == null) {
-          this.field_k = this.field_g.a(0);
+          this.field_k = this.field_g.copyTriangleOverrides(0);
         }
         if (this.field_k != null) {
           var4_int = 0;
@@ -600,7 +600,7 @@ final class Level {
             var16 != 0 &&
             var16 != 3 && (var16 < 25 ||
             var16 > 31)) {
-            mh.field_k[this.id] = mh.field_k[this.id] + 1;
+            MenuScreen.field_k[this.id] = MenuScreen.field_k[this.id] + 1;
           }
         }
         incrementValue$9 = var2;
@@ -1040,7 +1040,7 @@ final class Level {
     }
 
     final void applyTerrainRenderMode(int param0) {
-        sg.field_s = this.field_b;
+        SceneMeshBatch.field_s = this.field_b;
         if (param0 != -18916) {
           this.field_m = (Level) null;
         }

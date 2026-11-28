@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh extends IntrusiveNode {
-    static sm field_l;
+    static IndexedSprite field_l;
     static String field_q;
     static String field_p;
     boolean field_n;
@@ -174,9 +174,9 @@ final class nh extends IntrusiveNode {
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 > -90) {
-          field_l = (sm) null;
+          field_l = (IndexedSprite) null;
         }
-        stackIn_6_0 = (null != ki.field_D) && (ki.field_D.c((byte) -19));
+        stackIn_6_0 = (null != AccountRegistrationPanel.field_D) && (AccountRegistrationPanel.field_D.c((byte) -19));
         return stackIn_6_0;
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ti extends sf {
-    static el field_bb;
+    static DisplayNameSelectionPanel field_bb;
     String field_db;
     static int field_eb;
     int field_ab;

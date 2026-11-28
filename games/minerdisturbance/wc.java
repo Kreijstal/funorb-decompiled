@@ -60,12 +60,12 @@ final class wc implements uj {
                 IsaacRandom.a(-752960408, param1);
               } else {
                 ArchiveIndex.a(false, -47, param2);
-                cl.a(param1, 0, 0, 310);
+                LoginPanel.a(param1, 0, 0, 310);
               }
             } else {
               SoftwareRasterizer.clearRaster();
               GzipDecompressor.a(10853, 320, 240);
-              cl.a(param1, 0, 0, 310);
+              LoginPanel.a(param1, 0, 0, 310);
             }
           } else {
             var3_int = 0;
@@ -73,7 +73,7 @@ final class wc implements uj {
               bh.field_cb = false;
               var3_int = 1;
             }
-            MinerDisturbance.a(qm.field_j, (byte) 36, k.g(-22962), var3_int != 0, te.a(-105));
+            MinerDisturbance.a(qm.field_j, (byte) 36, EmailFormatValidator.g(-22962), var3_int != 0, te.a(-105));
           }
           if (param0 != 240) {
             field_d = (String) null;

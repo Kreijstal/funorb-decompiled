@@ -22,7 +22,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     final static void a(int param0, int param1, int param2, oh param3) {
         cf.field_g = param3;
-        gh.field_H = param0;
+        AccountRegistrationPanel.field_H = param0;
         if (param1 != 0) {
           return;
         }

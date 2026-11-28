@@ -212,7 +212,7 @@ final class WordLanguage {
                               stackIn_39_0 = (!var14.equals("true")) ? 0 : 1;
                               var4_int = stackIn_39_0;
                             } else {
-                              if (va.field_j >= 2) {
+                              if (ConfirmedEmailAvailabilityValidator.field_j >= 2) {
                                 System.out.println("Unrecognised config option: " + var13);
                               }
                             }
@@ -240,13 +240,13 @@ final class WordLanguage {
                   var24 = var14.toCharArray();
                   for (var18 = 0; var24.length > var18; var18++) {
                     var19 = var24[var18];
-                    if (2 <= va.field_j &&
+                    if (2 <= ConfirmedEmailAvailabilityValidator.field_j &&
                       0 != this.field_p[var19]) {
                       System.out.println("Multiple letter values found for" + (char) var19);
                     }
                     this.field_p[var19] = var15;
                     var20 = this.toUpperCase(0, (char) var19);
-                    if (va.field_j >= 2 &&
+                    if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
                       var20 != var19 &&
                       this.field_p[var20] != 0) {
                       System.out.println("Multiple letter values found for " + (char) var20);
@@ -261,7 +261,7 @@ final class WordLanguage {
                 var17 = (NumberFormatException) (Object) decompiledCaughtException;
                 var16 = 1;
               }
-              if (va.field_j >= 2 &&
+              if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
                 var16 != 0) {
                 System.out.println("Unrecognised config option: " + var13);
               }
@@ -273,7 +273,7 @@ final class WordLanguage {
             this.field_d = ((String) (var8)).toUpperCase();
           } else {
             this.field_d = "AEIOU";
-            if (2 <= va.field_j) {
+            if (2 <= ConfirmedEmailAvailabilityValidator.field_j) {
               System.out.println("Forced to use default vowels for " + (String) (var5));
             }
           }

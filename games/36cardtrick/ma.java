@@ -156,8 +156,8 @@ final class ma {
         d.field_a = null;
         IterableNodeHashTable.field_c = 0;
         tf.field_r = null;
-        var2 = ak.field_O;
-        ak.field_O = ej.field_kb;
+        var2 = LoginPanel.field_O;
+        LoginPanel.field_O = ej.field_kb;
         if (51 == param1) {
           dg.field_H.field_l = 2;
         } else {

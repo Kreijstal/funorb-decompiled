@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk {
-    static vk field_b;
+    static LoginPanel field_b;
     static mg field_c;
     static RgbSprite field_a;
 

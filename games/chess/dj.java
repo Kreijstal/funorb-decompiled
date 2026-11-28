@@ -97,8 +97,8 @@ final class dj extends DualLinkNode {
           var3 = 92 % ((61 - param1) / 50);
           var4 = var10.readUnsignedByte(-92);
           var5 = var10.readInt((byte) -124);
-          if (var5 >= 0 && (0 == je.field_l ||
-            !(var5 > je.field_l))) {
+          if (var5 >= 0 && (0 == PasswordValidator.field_l ||
+            !(var5 > PasswordValidator.field_l))) {
             if (var4 == 0) {
               var13 = new byte[var5];
               var11 = var13;
@@ -108,8 +108,8 @@ final class dj extends DualLinkNode {
               return stackIn_7_0;
             }
             var6 = var10.readInt((byte) -93);
-            if (var6 >= 0 && (je.field_l == 0 ||
-              !(je.field_l < var6))) {
+            if (var6 >= 0 && (PasswordValidator.field_l == 0 ||
+              !(PasswordValidator.field_l < var6))) {
               var14 = new byte[var6];
               var12 = var14;
               var7 = var12;
@@ -143,7 +143,7 @@ final class dj extends DualLinkNode {
 
     final static void g(int param0) {
         hd.field_c.a(0, -(bo.field_c ? 44 + sc.field_e : 0) + bh.field_G.field_M, -2147483648, 18, 0);
-        uk.field_c.a(-40 + (bh.field_G.field_M + (-sc.field_e - 2)), 42 + sc.field_e, -2147483648, 18, 0);
+        ChessBoardState.field_c.a(-40 + (bh.field_G.field_M + (-sc.field_e - 2)), 42 + sc.field_e, -2147483648, 18, 0);
         ib.field_c.a(param0, bh.field_G.field_pb - 20, 20, -3, sc.field_e, 0, bh.field_G.field_M);
     }
 
@@ -291,7 +291,7 @@ final class dj extends DualLinkNode {
         }
         if (null != this.field_u) {
           for (var2 = 0; this.field_u.length > var2; var2++) {
-            this.field_u[var2] = s.a(this.field_u[var2], 32768);
+            this.field_u[var2] = DisplayNameSelectionPanel.a(this.field_u[var2], 32768);
           }
         }
     }

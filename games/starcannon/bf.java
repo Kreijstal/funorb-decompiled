@@ -80,11 +80,11 @@ final class bf extends IntrusiveNode {
                     }
                   }
                   if (this.field_q == 12) {
-                    qf.field_h = qf.field_h + 1;
-                    if (qf.field_h == 10) {
+                    TextFieldValidator.field_h = TextFieldValidator.field_h + 1;
+                    if (TextFieldValidator.field_h == 10) {
                       ph.a(248, false, 7);
                     }
-                    if (qf.field_h != 30) {
+                    if (TextFieldValidator.field_h != 30) {
                       return true;
                     }
                     ph.a(247, false, 8);
@@ -331,7 +331,7 @@ final class bf extends IntrusiveNode {
                   ha.field_c = 0;
                   mj.a(255, 12, 0, 32, 100);
                   jl.field_j = 5;
-                  vb.field_m = 2;
+                  MatchingFieldValidator.field_m = 2;
                   this.field_r = 256;
                   if (!MouseInput.a(119)) {
                     pg.a(true, (byte) -98);
@@ -1429,12 +1429,12 @@ final class bf extends IntrusiveNode {
                 var9 = var9 | 1;
               }
               PcmOutputWorker.field_g.position = 0;
-              PcmOutputWorker.field_g.writeInt((byte) -113, di.field_l.nextInt());
-              PcmOutputWorker.field_g.writeInt((byte) -125, di.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -113, AgeValidator.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -125, AgeValidator.field_l.nextInt());
               PcmOutputWorker.field_g.writePrefixedString(false, var13);
               PcmOutputWorker.field_g.writePrefixedString(false, var8);
               var14 = (CharSequence) ((Object) param2);
-              PcmOutputWorker.field_g.writePrefixedString(false, cc.a(20755, var14));
+              PcmOutputWorker.field_g.writePrefixedString(false, PasswordValidator.a(20755, var14));
               PcmOutputWorker.field_g.writeShort(param6, -306);
               PcmOutputWorker.field_g.writeByte(param0, param3 - 133);
               PcmOutputWorker.field_g.writeByte(var9, -107);
@@ -1450,8 +1450,8 @@ final class bf extends IntrusiveNode {
               d.field_b.backpatchShortLength((byte) 88, -var10 + d.field_b.position);
             } else {
               PcmOutputWorker.field_g.position = 0;
-              PcmOutputWorker.field_g.writeInt((byte) -86, di.field_l.nextInt());
-              PcmOutputWorker.field_g.writeInt((byte) -95, di.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -86, AgeValidator.field_l.nextInt());
+              PcmOutputWorker.field_g.writeInt((byte) -95, AgeValidator.field_l.nextInt());
               stackIn_9_0 = PcmOutputWorker.field_g;
               stackIn_9_1 = false;
               if (param5.c(param3 ^ 6)) {

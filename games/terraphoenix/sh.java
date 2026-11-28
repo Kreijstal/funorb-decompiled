@@ -86,12 +86,12 @@ final class sh extends IntrusiveNode {
           for (var3 = 0; var3 < rb.field_d.length; var3++) {
             var4 = f.field_a[var3];
             if (var4 < 0) {
-              var5 = pl.field_P;
+              var5 = AccountRegistrationPanel.field_P;
             } else {
               if (ai.field_i.field_h != var4) {
                 var5 = eb.field_I;
               } else {
-                var5 = ib.field_cb;
+                var5 = ValidatedTextField.field_cb;
               }
             }
             var6 = rb.field_d[var3];
@@ -149,7 +149,7 @@ final class sh extends IntrusiveNode {
               var1_int = var1_int + dc.field_b;
             }
             if (0 > var4) {
-              da.field_h.b(var6, var8Lifetime1, af.field_a + var1_int, var5, -1);
+              da.field_h.b(var6, var8Lifetime1, DebouncedFieldValidator.field_a + var1_int, var5, -1);
               var1_int = var1_int + DelegatingCanvas.field_b;
             } else {
               qk.field_a.b(var6, var8Lifetime1, var1_int + fh.field_a, var5, -1);

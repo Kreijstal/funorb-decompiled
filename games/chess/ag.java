@@ -28,7 +28,7 @@ final class ag {
           }
           mk.field_e.a(param3, param2, param1, param0 - 11945);
           SoftwareRasterizer.clearRaster();
-          qe.a((byte) -31, true);
+          ChessBoardRenderer.a((byte) -31, true);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ag.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

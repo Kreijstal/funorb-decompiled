@@ -44,13 +44,13 @@ final class dg extends pj {
             param3.c(var6, param1);
             var6 = var6 + param3.field_o;
           }
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           if (this.field_L.field_o + param2 >= SoftwareRasterizer.field_i) {
             de.a(-128, this.field_G);
             param3.c(-this.field_A, 0);
             param3.c(-this.field_A + 2 * this.field_D, 0);
             this.field_F.e(0, 0);
-            oc.g((byte) -105);
+            ValidatedTextField.g((byte) -105);
             this.field_G.c(param2, param1);
           }
           if (SoftwareRasterizer.field_e >= -this.field_L.field_o + var5_int) {
@@ -60,7 +60,7 @@ final class dg extends pj {
             param3.c(-var7, 0);
             param3.c(-var7 + 2 * this.field_D, 0);
             this.field_L.e(0, 0);
-            oc.g((byte) -105);
+            ValidatedTextField.g((byte) -105);
             this.field_G.c(var5_int - this.field_L.field_o, param1);
             return;
           }
@@ -110,7 +110,7 @@ final class dg extends pj {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
-        oc.g((byte) -105);
+        ValidatedTextField.g((byte) -105);
         return var3;
     }
 
@@ -147,7 +147,7 @@ final class dg extends pj {
           SoftwareRasterizer.drawHorizontalLine(this.field_D + var7, var6, this.field_D, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(var7 - this.field_D, var6, this.field_D, var12Lifetime1);
         }
-        oc.g((byte) -105);
+        ValidatedTextField.g((byte) -105);
         return var14;
     }
 
@@ -187,7 +187,7 @@ final class dg extends pj {
         if (this.field_J < 65536) {
           id.a(var5 + this.field_m, (this.field_m * this.field_J >> 16) + var5, var6 + this.field_r, var6, 734);
           this.a(111, var6, var5, this.field_E[1]);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
         }
     }
 

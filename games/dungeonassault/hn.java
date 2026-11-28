@@ -109,7 +109,7 @@ final class hn extends kl {
         IntrusiveNode.field_c.c(this.field_p, var2, var3 + IntrusiveNode.field_c.field_H, 16777215, -1);
         var3 = var3 + (10 + IntrusiveNode.field_c.field_H);
         int var4 = 50 + this.field_j;
-        qe.b(this.field_k + 32, var4, -64 + this.field_a, 4, 0, 128, 128);
+        DungeonAssaultScreen.b(this.field_k + 32, var4, -64 + this.field_a, 4, 0, 128, 128);
         int var5 = 119 / ((param0 - 41) / 63);
         for (var6 = 0; this.field_n - 1 > var6; var6++) {
           var7 = var6 * (this.field_a - 64) / (this.field_n - 2) + (32 + this.field_k);
@@ -143,9 +143,9 @@ final class hn extends kl {
             SoftwareRasterizer.drawHorizontalLine(var8Lifetime1 + var6Lifetime3, -var8Lifetime1 + (var4 + 9), 2, 16776960);
           }
         }
-        qe.field_i[0].h(-50 + var2, var4 + 20);
+        DungeonAssaultScreen.field_i[0].h(-50 + var2, var4 + 20);
         IntrusiveNode.field_c.b(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
-        qe.field_i[1].h(var2, var4 + 20);
+        DungeonAssaultScreen.field_i[1].h(var2, var4 + 20);
         IntrusiveNode.field_c.b(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
         ue.field_i[1].h(this.field_k + 20, 24 + this.field_j);
         ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j + 24);

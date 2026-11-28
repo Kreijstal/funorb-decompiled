@@ -477,21 +477,21 @@ final class vl {
                     AccountRequestState.field_f.a(DiskCacheWorker.field_g + var8 + "%", 319 + this.field_f, var4 + 16 + 28, var7, -1);
                     if (0 < od.field_c[var6].field_b[2] &&
                       5 >= od.field_c[var6].field_b[2]) {
-                      AccountRequestState.field_f.a(di.field_h[0], 319 + this.field_f, 16 + var4 + 42, var7, -1);
+                      AccountRequestState.field_f.a(TextFieldValidator.field_h[0], 319 + this.field_f, 16 + var4 + 42, var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 5 &&
                       10 >= od.field_c[var6].field_b[2]) {
-                      AccountRequestState.field_f.a(di.field_h[1], this.field_f + 319, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(TextFieldValidator.field_h[1], this.field_f + 319, 16 + (var4 + 42), var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 10 &&
                       od.field_c[var6].field_b[2] <= 20) {
-                      AccountRequestState.field_f.a(di.field_h[2], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(TextFieldValidator.field_h[2], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
                     }
                     if (od.field_c[var6].field_b[2] > 20) {
-                      AccountRequestState.field_f.a(di.field_h[3], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
+                      AccountRequestState.field_f.a(TextFieldValidator.field_h[3], 319 + this.field_f, 16 + (var4 + 42), var7, -1);
                     }
                     if (0 == od.field_c[var6].field_b[2]) {
-                      AccountRequestState.field_f.a(di.field_h[4], 319 + this.field_f, var4 + 58, var7, -1);
+                      AccountRequestState.field_f.a(TextFieldValidator.field_h[4], 319 + this.field_f, var4 + 58, var7, -1);
                     }
                   }
                 } else {
@@ -746,7 +746,7 @@ final class vl {
             }
             var9 = 171;
             var10 = 171;
-            if (ph.field_o == 1) {
+            if (PasswordValidator.field_o == 1) {
               var10 += 6;
               var9 += 23;
             }

@@ -13,7 +13,7 @@ final class tk {
             ei.field_G.o(3);
           }
           var1 = kl.a((byte) 124);
-          af.field_r = new la(var1, (String) null, true, false, false);
+          af.field_r = new LoginPanel(var1, (String) null, true, false, false);
           IsaacRandom.field_d.a((byte) 107, (UiWidget) (sf.field_f));
           sf.field_f.b(af.field_r, 23143);
           sf.field_f.i(3642);

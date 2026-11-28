@@ -55,10 +55,10 @@ final class ua {
         try {
           var1_int = 12;
           if (PacketBuffer.field_j >= 34 &&
-            34 + 12 * wl.field_K.field_n > PacketBuffer.field_j &&
+            34 + 12 * AccountRegistrationPanel.field_K.field_n > PacketBuffer.field_j &&
             114 <= bk.field_a &&
-            wl.field_K.field_m + 114 > bk.field_a) {
-            var1_int = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
+            AccountRegistrationPanel.field_K.field_m + 114 > bk.field_a) {
+            var1_int = (-34 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
           }
           if (od.submissionRack.tiles[11] != null) {
             var1_int = 12;

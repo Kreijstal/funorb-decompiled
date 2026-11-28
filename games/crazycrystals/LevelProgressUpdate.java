@@ -100,7 +100,7 @@ final class LevelProgressUpdate extends IntrusiveNode {
         if (param1 > -38) {
           return (ResourceArchive) null;
         }
-        return qk.a(param4, 112, param0, param3, false, !param2 ? 0 : 1);
+        return DisplayNameSelectionPanel.a(param4, 112, param0, param3, false, !param2 ? 0 : 1);
     }
 
     LevelProgressUpdate(int param0, int param1, int param2, int param3, int param4, int param5) {

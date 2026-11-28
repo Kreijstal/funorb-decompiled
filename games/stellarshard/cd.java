@@ -7,9 +7,9 @@ final class cd extends rg {
     static String field_P;
     private Sprite field_O;
     static qd field_L;
-    private w field_R;
+    private FieldValidator field_R;
 
-    cd(w param0, String param1, int param2, int param3, int param4, int param5) {
+    cd(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, vf.a(0));
         try {
           this.field_R = param0;
@@ -25,8 +25,8 @@ final class cd extends rg {
           if (!GameEntity.b(64, 1)) {
             return false;
           }
-          ue.field_b = ae.field_N.readUnsignedByte(4);
-          ae.field_N.position = 0;
+          ue.field_b = EditableTextField.field_N.readUnsignedByte(4);
+          EditableTextField.field_N.position = 0;
         }
         if (param0 <= 111) {
           cd.e((byte) -125);
@@ -36,8 +36,8 @@ final class cd extends rg {
           if (!GameEntity.b(64, 2)) {
             return false;
           }
-          ue.field_b = ae.field_N.readUnsignedShort((byte) 37);
-          ae.field_N.position = 0;
+          ue.field_b = EditableTextField.field_N.readUnsignedShort((byte) 37);
+          EditableTextField.field_N.position = 0;
           return GameEntity.b(64, ue.field_b);
         }
         if (ue.field_b != -2) {
@@ -46,8 +46,8 @@ final class cd extends rg {
         if (!GameEntity.b(64, 2)) {
           return false;
         }
-        ue.field_b = ae.field_N.readUnsignedShort((byte) 37);
-        ae.field_N.position = 0;
+        ue.field_b = EditableTextField.field_N.readUnsignedShort((byte) 37);
+        EditableTextField.field_N.position = 0;
         return GameEntity.b(64, ue.field_b);
     }
 
@@ -85,8 +85,8 @@ final class cd extends rg {
         int var7 = 0;
         String var8 = null;
         try {
-          dj.field_b[0] = pl.field_P.nextInt();
-          dj.field_b[1] = pl.field_P.nextInt();
+          dj.field_b[0] = ValidatedTextField.field_P.nextInt();
+          dj.field_b[1] = ValidatedTextField.field_P.nextInt();
           dj.field_b[3] = (int)ob.field_a;
           AccountRequestState.field_c.position = 0;
           dj.field_b[2] = (int)(ob.field_a >> 32);
@@ -212,7 +212,7 @@ final class cd extends rg {
         var32 = null;
         var36 = null;
         var13 = stellarshard.field_B;
-        var6 = this.field_R.b(-28036);
+        var6 = this.field_R.getValidationStatus(-28036);
         if (var6 == eh.field_c) {
           var17 = ui.field_D;
           if (!var17.equals(this.field_m)) {
@@ -220,7 +220,7 @@ final class cd extends rg {
             this.a((byte) -92);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_R.b(param1 ^ 28091);
+          var6 = this.field_R.getValidationStatus(param1 ^ 28091);
           var41 = (pj) ((Object) this.field_u);
           var9 = this.field_w + param3;
           var10 = var41.a((byte) 117, (UiWidget) (this), param2) + (var41.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
@@ -270,7 +270,7 @@ final class cd extends rg {
             this.a((byte) -92);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_R.b(param1 ^ 28091);
+          var6 = this.field_R.getValidationStatus(param1 ^ 28091);
           var42 = (pj) ((Object) this.field_u);
           var9Lifetime1 = this.field_w + param3;
           var10Lifetime1 = var42.a((byte) 117, (UiWidget) (this), param2) + (var42.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
@@ -313,7 +313,7 @@ final class cd extends rg {
           this.field_O.d(var9Lifetime1 - (var24.field_w >> 1), -var24.field_x + var10Lifetime1, 256);
           return;
         }
-        var5 = this.field_R.c(-22773);
+        var5 = this.field_R.getValidationMessage(-22773);
         if (var5 == null) {
           var27 = this.field_Q;
           var5 = var27;
@@ -322,7 +322,7 @@ final class cd extends rg {
             this.a((byte) -92);
           }
           super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_R.b(param1 ^ 28091);
+          var6Lifetime1 = this.field_R.getValidationStatus(param1 ^ 28091);
           var43 = (pj) ((Object) this.field_u);
           var9Lifetime2 = this.field_w + param3;
           var10Lifetime2 = var43.a((byte) 117, (UiWidget) (this), param2) + (var43.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
@@ -369,7 +369,7 @@ final class cd extends rg {
           this.field_m = var5;
           this.a((byte) -92);
           super.a(param0, param1, param2, param3);
-          var6Lifetime2 = this.field_R.b(param1 ^ 28091);
+          var6Lifetime2 = this.field_R.getValidationStatus(param1 ^ 28091);
           var44 = (pj) ((Object) this.field_u);
           var9Lifetime3 = this.field_w + param3;
           var10Lifetime3 = var44.a((byte) 117, (UiWidget) (this), param2) + (var44.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
@@ -413,7 +413,7 @@ final class cd extends rg {
           return;
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime3 = this.field_R.b(param1 ^ 28091);
+        var6Lifetime3 = this.field_R.getValidationStatus(param1 ^ 28091);
         var45 = (pj) ((Object) this.field_u);
         var9Lifetime4 = this.field_w + param3;
         var10Lifetime4 = var45.a((byte) 117, (UiWidget) (this), param2) + (var45.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
@@ -487,11 +487,11 @@ final class cd extends rg {
           }
           return kf.field_d;
         }
-        if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
+        if (!TextFieldValidator.field_i.ensureIndexLoaded((byte) -36)) {
           return lg.field_e;
         }
-        if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
-          return am.field_e + " - " + lk.field_i.getGroupLoadPercentByName(0, "commonui") + "%";
+        if (!TextFieldValidator.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
+          return am.field_e + " - " + TextFieldValidator.field_i.getGroupLoadPercentByName(0, "commonui") + "%";
         }
         if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
           return mb.field_c;
@@ -506,7 +506,7 @@ final class cd extends rg {
           return ve.field_b;
         }
         if (!am.field_g.tryLoadAllGroups((byte) -111)) {
-          return lj.field_B + " - " + am.field_g.getArchiveLoadPercent((byte) 1) + "%";
+          return DisplayNameSelectionPanel.field_B + " - " + am.field_g.getArchiveLoadPercent((byte) 1) + "%";
         }
         return wl.field_W;
     }

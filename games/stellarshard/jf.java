@@ -29,7 +29,7 @@ final class jf extends IntrusiveNode {
           if (param0 <= 79) {
             return;
           }
-          var14 = ae.field_N;
+          var14 = EditableTextField.field_N;
           var2 = var14.readUnsignedByte(4);
           if (var2 == 0) {
             var11 = GameApplet.d((byte) 127);
@@ -41,7 +41,7 @@ final class jf extends IntrusiveNode {
             for (var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(false);
             }
-            var13 = (he) (pl.field_W.beginForward(-78));
+            var13 = (he) (ValidatedTextField.field_W.beginForward(-78));
             if (var13 == null) {
               IntrusiveDeque.c(-2290);
               return;
@@ -56,7 +56,7 @@ final class jf extends IntrusiveNode {
               GameEntity.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
               IntrusiveDeque.c(-2290);
             } else {
-              var15 = (he) (pl.field_W.beginForward(-98));
+              var15 = (he) (ValidatedTextField.field_W.beginForward(-98));
               if (var15 == null) {
                 IntrusiveDeque.c(-2290);
                 return;

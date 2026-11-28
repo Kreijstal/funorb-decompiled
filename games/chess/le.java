@@ -94,11 +94,11 @@ final class le {
             !jd.b((byte) 75)) {
             boolean decompiledSharedTail0 = !(ah.a(ec.field_f, 75));
             if (!decompiledSharedTail0) {
-              var2 = oc.a(el.field_x, new String[]{ij.field_c}, (byte) -57);
+              var2 = MatchingFieldValidator.a(el.field_x, new String[]{ij.field_c}, (byte) -57);
               decompiledSharedTail0 = (var10 != 0);
             }
             if (decompiledSharedTail0) {
-              var2 = oc.a(r.field_Fb, new String[]{ij.field_c}, (byte) -69);
+              var2 = MatchingFieldValidator.a(r.field_Fb, new String[]{ij.field_c}, (byte) -69);
             }
             if (an.field_c) {
               BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, (String) (var2), false);
@@ -120,8 +120,8 @@ final class le {
             var6 = vk.field_g;
             var7 = 0;
             if (var6 == 2) {
-              var4 = oc.a(vf.field_d, new String[]{ij.field_c}, (byte) -97);
-              var8 = oc.a(sa.field_d, new String[]{var3}, (byte) -110);
+              var4 = MatchingFieldValidator.a(vf.field_d, new String[]{ij.field_c}, (byte) -97);
+              var8 = MatchingFieldValidator.a(sa.field_d, new String[]{var3}, (byte) -110);
               var7 = BoundedRandomAccessFile.field_f.field_M - (-uc.field_c.field_M + 485) - (-sc.field_a.b(var8) + sc.field_a.b(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -137,7 +137,7 @@ final class le {
                 if (pd.field_Rb != null) {
                   if (!qj.field_d ||
                     kb.field_P == null) {
-                    var4 = "[" + oc.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -112) + "] ";
+                    var4 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -112) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + kb.field_P + "] ";
                     }
@@ -184,12 +184,12 @@ final class le {
                 }
               }
             }
-            fj.a(var4 + lh.a(sg.field_c.toString()), var7, -1, var5, vm.field_i[var6]);
+            fj.a(var4 + lh.a(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
             if (!kn.field_L) {
               uc.field_c.field_F = false;
             }
             if (uc.field_c.field_F) {
-              var1 = oc.a(vk.field_h, new String[]{var3, ij.field_c}, (byte) -50);
+              var1 = MatchingFieldValidator.a(vk.field_h, new String[]{var3, ij.field_c}, (byte) -50);
             }
           }
           stackIn_103_0 = var1;
@@ -304,7 +304,7 @@ final class le {
                 MidiPcmStream.field_M.a(var6, var8, var2 + th.field_a, var5, -1);
                 var2 = var2 + (ug.field_a + (mf.field_z + fh.field_e));
               } else {
-                sj.field_d.a(var6, var8, var2 + jb.field_f, var5, -1);
+                sj.field_d.a(var6, var8, var2 + DebouncedFieldValidator.field_f, var5, -1);
                 var2 = var2 + qd.field_r;
               }
               var3++;

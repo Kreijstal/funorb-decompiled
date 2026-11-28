@@ -110,10 +110,10 @@ final class de extends PuzzleTile implements Cloneable {
 
     final static ResourceArchive a(boolean param0, boolean param1, int param2, int param3, int param4) {
         if (param4 == 12) {
-          return qk.a(param2, param4 + 86, param0, param1, false, param3);
+          return DisplayNameSelectionPanel.a(param2, param4 + 86, param0, param1, false, param3);
         }
         field_l = (PcmSample) null;
-        return qk.a(param2, param4 + 86, param0, param1, false, param3);
+        return DisplayNameSelectionPanel.a(param2, param4 + 86, param0, param1, false, param3);
     }
 
     final boolean a(byte param0, PuzzleTile[][] param1, int param2, int param3, int param4, fq param5, int param6) {

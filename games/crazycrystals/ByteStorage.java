@@ -84,7 +84,7 @@ abstract class ByteStorage {
           if (!uh.field_n &&
             uh.field_p == null &&
             !gn.d(false)) {
-            if (li.field_a == null) {
+            if (DebouncedFieldValidator.field_a == null) {
               if (ab.field_D instanceof LevelCompleteScene) {
                 var1_int -= 20;
                 if (var11 != 0) {
@@ -102,14 +102,14 @@ abstract class ByteStorage {
             }
           }
           if (!vh.field_a ||
-            li.field_a != null) {
+            DebouncedFieldValidator.field_a != null) {
             SoftwareRasterizer.setClip(480, 54, 640, 168);
             qc.a(160, 54, 116, mg.field_b, 480, 160, 2);
             SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder1 = true;
-          if (null == li.field_a) {
+          if (null == DebouncedFieldValidator.field_a) {
             if (!vh.field_a) {
               SoftwareRasterizer.setClip(480, 168, 640, 270);
               qc.a(160, 166, 106, mg.field_b, 480, 160, 2);
@@ -189,7 +189,7 @@ abstract class ByteStorage {
                   SoftwareRasterizer.setClip(480, 168, 640, var1_int);
                   qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160, param0 - 478);
                   SoftwareRasterizer.resetClip();
-                  li.field_a.b(-51);
+                  DebouncedFieldValidator.field_a.b(-51);
                 }
               }
             }
@@ -197,7 +197,7 @@ abstract class ByteStorage {
             SoftwareRasterizer.setClip(480, 168, 640, var1_int);
             qc.a(160, 166, -166 + var1_int, mg.field_b, 480, 160, param0 - 478);
             SoftwareRasterizer.resetClip();
-            li.field_a.b(-51);
+            DebouncedFieldValidator.field_a.b(-51);
           }
           if (decompiledFrameCompleted0) {
             boolean decompiledFrameRemainder0 = true;
@@ -205,7 +205,7 @@ abstract class ByteStorage {
               uh.field_p == null &&
               !gn.d(false)) {
               var2 = 476;
-              if (null != li.field_a) {
+              if (null != DebouncedFieldValidator.field_a) {
                 if (qh.field_i >= 480 &&
                   640 > qh.field_i &&
                   (var2 - 16) <= IsaacRandom.field_h &&
@@ -231,7 +231,7 @@ abstract class ByteStorage {
                 }
                 tb.a(stackIn_145_0, stackIn_145_1, stackIn_146_2, 488, sh.field_l);
                 var4 = uh.field_o;
-                var5 = li.field_a;
+                var5 = DebouncedFieldValidator.field_a;
                 scanLoop1: while (true) {
                   if (null != ((nj) (var5)).field_n) {
                     var5 = ((nj) (var5)).field_n;
@@ -239,12 +239,12 @@ abstract class ByteStorage {
                       continue;
                     }
                   } else {
-                    if (!li.field_a.field_i &&
-                      0 != li.field_a.field_g) {
+                    if (!DebouncedFieldValidator.field_a.field_i &&
+                      0 != DebouncedFieldValidator.field_a.field_g) {
                       break scanLoop1;
                     }
                   }
-                  var4 = se.field_g;
+                  var4 = TextFieldValidator.field_g;
                   break;
                 }
                 stackIn_160_0 = var4;
@@ -375,7 +375,7 @@ abstract class ByteStorage {
               var2 = 60;
             }
           }
-          var3 = ci.a(new String[]{Integer.toString(uo.field_o + 1), Integer.toString(var2)}, lg.field_e, 3);
+          var3 = AgeValidator.a(new String[]{Integer.toString(uo.field_o + 1), Integer.toString(var2)}, lg.field_e, 3);
           go.field_l.c(var3, 559, 22, 0, -1);
           go.field_l.c(var3, 561, 22, 0, -1);
           go.field_l.c(var3, 560, 21, 0, -1);
@@ -457,16 +457,16 @@ abstract class ByteStorage {
             if (CrystalTile.field_o == 1) {
               var5Lifetime1 = null;
               if (uo.field_o == 19) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[0], CipherPacketBuffer.field_t[1]}, fb.field_e, 3);
+                var5Lifetime1 = AgeValidator.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[0], CipherPacketBuffer.field_t[1]}, fb.field_e, 3);
               }
               if (39 == uo.field_o) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[1], CipherPacketBuffer.field_t[2]}, fb.field_e, 3);
+                var5Lifetime1 = AgeValidator.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[1], CipherPacketBuffer.field_t[2]}, fb.field_e, 3);
               }
               if (uo.field_o == 59) {
-                var5Lifetime1 = ci.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[2]}, of.field_G, 3);
+                var5Lifetime1 = AgeValidator.a(new String[]{"80C0FF", CipherPacketBuffer.field_t[2]}, of.field_G, 3);
               }
               if (69 == uo.field_o) {
-                var5Lifetime1 = jn.field_n;
+                var5Lifetime1 = PasswordValidator.field_n;
               }
               if (var5Lifetime1 != null) {
                 go.field_l.a((String) (var5Lifetime1), 486, 54, 148, 114, 16760896, -1, 1, 1, 20);
@@ -520,7 +520,7 @@ abstract class ByteStorage {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                ci.field_i = param0;
+                AgeValidator.field_i = param0;
                 var2 = ah.a("loginm3", 5236);
                 if (var2 != null) {
                   MouseWheelInput.field_f = fa.a((byte) -72, var2);
@@ -551,7 +551,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("error_js5connect", 5236);
                 if (var2 != null) {
-                  ci.field_j = fa.a((byte) -101, var2);
+                  AgeValidator.field_j = fa.a((byte) -101, var2);
                 }
                 var2 = ah.a("login_gameupdated", 5236);
                 if (var2 != null) {
@@ -2101,7 +2101,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_alert_passcontainsemail", 5236);
                 if (null != var2) {
-                  kd.field_k = fa.a((byte) -71, var2);
+                  ConfirmedEmailAvailabilityValidator.field_k = fa.a((byte) -71, var2);
                 }
                 var2 = ah.a("create_alert_passcontainsname_partial", 5236);
                 if (var2 != null) {
@@ -2293,7 +2293,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("loading_fonts", 5236);
                 if (null != var2) {
-                  jn.field_k = fa.a((byte) -90, var2);
+                  PasswordValidator.field_k = fa.a((byte) -90, var2);
                 }
                 var2 = ah.a("loading_soundeffects", 5236);
                 if (null != var2) {
@@ -2413,7 +2413,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("quit", 5236);
                 if (var2 != null) {
-                  dc.field_C = fa.a((byte) -118, var2);
+                  AccountRegistrationPanel.field_C = fa.a((byte) -118, var2);
                 }
                 var2 = ah.a("login_createaccount", 5236);
                 if (var2 != null) {
@@ -2515,7 +2515,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("off", 5236);
                 if (null != var2) {
-                  vk.field_D = fa.a((byte) -71, var2);
+                  LoginPanel.field_D = fa.a((byte) -71, var2);
                 }
                 var2 = ah.a("previous", 5236);
                 if (var2 != null) {
@@ -3242,15 +3242,15 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("hs_mode_name,0", 5236);
                 if (null != var2) {
-                  ga.field_Q[0] = fa.a((byte) -64, var2);
+                  EditableTextField.field_Q[0] = fa.a((byte) -64, var2);
                 }
                 var2 = ah.a("hs_mode_name,1", 5236);
                 if (null != var2) {
-                  ga.field_Q[1] = fa.a((byte) -96, var2);
+                  EditableTextField.field_Q[1] = fa.a((byte) -96, var2);
                 }
                 var2 = ah.a("hs_mode_name,2", 5236);
                 if (null != var2) {
-                  ga.field_Q[2] = fa.a((byte) -100, var2);
+                  EditableTextField.field_Q[2] = fa.a((byte) -100, var2);
                 }
                 var2 = ah.a("rating_mode_name,0", 5236);
                 if (null != var2) {
@@ -3506,7 +3506,7 @@ abstract class ByteStorage {
                 if (null != var2) {
                   fa.a((byte) -87, var2);
                 }
-                ci.field_i = null;
+                AgeValidator.field_i = null;
             }
             void run() {
                 var3 = CrazyCrystals.field_B;

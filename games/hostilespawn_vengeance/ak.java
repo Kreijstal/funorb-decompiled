@@ -8,18 +8,18 @@ final class ak {
     int field_k;
     int field_j;
     static RgbSprite field_a;
-    static pg[] field_b;
+    static IndexedSprite[] field_b;
     static int field_f;
     static int[] field_c;
     static String field_g;
-    static pg[] field_h;
+    static IndexedSprite[] field_h;
 
     final static void a(boolean param0, String param1, String param2) {
         try {
           if (null != AccountServiceResult.field_d) {
             AccountServiceResult.field_d.g((byte) -122);
           }
-          ib.field_e = new lk(param2, param1, param0, true, true);
+          ib.field_e = new LoginPanel(param2, param1, param0, true, true);
           ke.field_s.b(ib.field_e, (byte) 110);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ak.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

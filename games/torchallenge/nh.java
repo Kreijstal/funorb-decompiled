@@ -188,7 +188,7 @@ final class nh extends v implements sg {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (dj.field_P != param1) {
+          if (EditableTextField.field_P != param1) {
             if (de.field_b == param1) {
               this.field_l = this.field_l + 10;
               var3 = uc.field_T;

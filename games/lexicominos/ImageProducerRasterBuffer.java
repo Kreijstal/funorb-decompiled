@@ -191,7 +191,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
         if (PacketBuffer.field_i < 2) {
           return 0;
         }
-        if (ri.field_e != 0) {
+        if (DebouncedFieldValidator.field_e != 0) {
           if (eh.field_d != null) {
             if (!eh.field_d.ensureIndexLoaded(-43)) {
               return 14;

@@ -238,12 +238,12 @@ final class rk extends wd {
             }
           } else {
             if (var2 != 0 &&
-              2 != di.field_h) {
+              2 != TextFieldValidator.field_h) {
               vh.h(-2532);
             }
           }
           if (var3 == 0 &&
-            di.field_h == 2) {
+            TextFieldValidator.field_h == 2) {
             var4 = qg.correctedCurrentTimeMillis(false) - fe.field_N;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {

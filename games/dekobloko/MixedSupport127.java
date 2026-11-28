@@ -39,8 +39,8 @@ final class MixedSupport127 {
         NodeHashTable.performAction1500(ComponentContainer.integerState0377, booleanArgument3, SecondaryNodeHashTable.integerState0540, GameApplet.integerState0292, integerArgument1, (byte) -41, integerArgument4);
     }
 
-    final static void performAction1629(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, SceneWidgetPart013 sceneWidgetPart013Argument7, boolean booleanArgument8) {
-        SceneWidgetPart009[][] stackSceneWidgetPart009ArrayArrayLocal1 = null;
+    final static void performAction1629(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, LobbyRoomRow sceneWidgetPart013Argument7, boolean booleanArgument8) {
+        IconLabelWidget[][] stackSceneWidgetPart009ArrayArrayLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
         int stackIntegerLocal4 = 0;
@@ -51,7 +51,7 @@ final class MixedSupport127 {
         String stackStringLocal9 = null;
         RuntimeException caughtExceptionLocal10 = null;
         int integerLocal11 = 0;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal12 = null;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal12 = null;
         RuntimeException runtimeExceptionLocal13 = null;
         int integerLocal14 = 0;
         int[] integerArrayLocal15 = null;
@@ -59,11 +59,11 @@ final class MixedSupport127 {
         int integerLocal17 = 0;
         int integerLocal18 = 0;
         int integerLocal19 = 0;
-        SceneWidgetPart009 sceneWidgetPart009Local20 = null;
+        IconLabelWidget sceneWidgetPart009Local20 = null;
         int integerLocal21 = 0;
         int integerLocal22 = 0;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal23 = null;
-        SceneWidgetPart009[] sceneWidgetPart009ArrayLocal24 = null;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal23 = null;
+        IconLabelWidget[] sceneWidgetPart009ArrayLocal24 = null;
         int[] integerArrayLocal25 = null;
         int[] integerArrayLocal26 = null;
         int integerLocal27;
@@ -81,7 +81,7 @@ final class MixedSupport127 {
                   frameCompletedLocal29 = false;
                   break;
                 }
-                SceneWidgetPart013.booleanState0207 = true;
+                LobbyRoomRow.booleanState0207 = true;
                 frameCompletedLocal30 = false;
                 break;
               }
@@ -189,7 +189,7 @@ final class MixedSupport127 {
                     SceneWidgetNode.byteArrayState0012[integerArgument3] = (byte)integerLocal17;
                   }
                   MixedSupport127.performAction1629(integerArgument1, booleanArgument2, 1 + integerArgument3, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
-                  if (SceneWidgetPart013.booleanState0207) {
+                  if (LobbyRoomRow.booleanState0207) {
                     return;
                   }
                 }
@@ -229,7 +229,7 @@ final class MixedSupport127 {
                 MixedSupport127.performAction1629(integerArgument1, booleanArgument2, integerArgument3 + 1, integerArgument4, integerArgument5, integerArgument6, sceneWidgetPart013Argument7, false);
                 integerLocal27 = 1;
               }
-              if (SceneWidgetPart013.booleanState0207) {
+              if (LobbyRoomRow.booleanState0207) {
                 return;
               }
               integerLocal17++;

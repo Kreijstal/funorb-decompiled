@@ -47,7 +47,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               bk.field_f = 0;
               gh.field_a = param4;
               AccountNameAvailabilityValidator.field_m = param4;
-              nh.field_h = ob.e((byte) -106);
+              nh.field_h = LoginPanel.e((byte) -106);
               if (param1 < 8) {
                 return;
               }
@@ -200,7 +200,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_f = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.callWithoutArguments(ob.e((byte) -121), false, "loggedout");
+              JavaScriptBridge.callWithoutArguments(LoginPanel.e((byte) -121), false, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -358,10 +358,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (null != ne.field_F) {
-            ne.field_F.removeFocusListener((java.awt.event.FocusListener) (this));
-            ne.field_F.getParent().setBackground(java.awt.Color.black);
-            ne.field_F.getParent().remove((java.awt.Component) ((Object) ne.field_F));
+          if (null != DisplayNameSelectionPanel.field_F) {
+            DisplayNameSelectionPanel.field_F.removeFocusListener((java.awt.event.FocusListener) (this));
+            DisplayNameSelectionPanel.field_F.getParent().setBackground(java.awt.Color.black);
+            DisplayNameSelectionPanel.field_F.getParent().remove((java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
           }
           boolean decompiledFrameRemainder0 = true;
           if (lo.field_j == null) {
@@ -390,21 +390,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ne.field_F = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ne.field_F));
-          ne.field_F.setSize(op.field_c, gh.field_a);
-          ne.field_F.setVisible(true);
+          DisplayNameSelectionPanel.field_F = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
+          DisplayNameSelectionPanel.field_F.setSize(op.field_c, gh.field_a);
+          DisplayNameSelectionPanel.field_F.setVisible(true);
           if (var2 == eo.field_k) {
             var3 = eo.field_k.getInsets();
-            ne.field_F.setLocation(bk.field_f + var3.left, var3.top + to.field_e);
+            DisplayNameSelectionPanel.field_F.setLocation(bk.field_f + var3.left, var3.top + to.field_e);
             if (var4 != 0) {
-              ne.field_F.setLocation(bk.field_f, to.field_e);
+              DisplayNameSelectionPanel.field_F.setLocation(bk.field_f, to.field_e);
             }
           } else {
-            ne.field_F.setLocation(bk.field_f, to.field_e);
+            DisplayNameSelectionPanel.field_F.setLocation(bk.field_f, to.field_e);
           }
-          ne.field_F.addFocusListener((java.awt.event.FocusListener) (this));
-          ne.field_F.requestFocus();
+          DisplayNameSelectionPanel.field_F.addFocusListener((java.awt.event.FocusListener) (this));
+          DisplayNameSelectionPanel.field_F.requestFocus();
           sj.field_b = true;
           MenuSelectionCursor.field_g = true;
           uh.field_sc = true;
@@ -772,10 +772,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != ne.field_F) {
+          if (null != DisplayNameSelectionPanel.field_F) {
             try {
-              ne.field_F.removeFocusListener((java.awt.event.FocusListener) (this));
-              ne.field_F.getParent().remove((java.awt.Component) ((Object) ne.field_F));
+              DisplayNameSelectionPanel.field_F.removeFocusListener((java.awt.event.FocusListener) (this));
+              DisplayNameSelectionPanel.field_F.getParent().remove((java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -877,17 +877,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             km.field_x = km.field_x - 50;
             uh.field_sc = true;
-            ne.field_F.setSize(op.field_c, gh.field_a);
-            ne.field_F.setVisible(true);
+            DisplayNameSelectionPanel.field_F.setSize(op.field_c, gh.field_a);
+            DisplayNameSelectionPanel.field_F.setVisible(true);
             if (eo.field_k != null &&
               null == lo.field_j) {
               var6 = eo.field_k.getInsets();
-              ne.field_F.setLocation(bk.field_f + var6.left, var6.top + to.field_e);
+              DisplayNameSelectionPanel.field_F.setLocation(bk.field_f + var6.left, var6.top + to.field_e);
               if (Vertigo2.field_L) {
-                ne.field_F.setLocation(bk.field_f, to.field_e);
+                DisplayNameSelectionPanel.field_F.setLocation(bk.field_f, to.field_e);
               }
             } else {
-              ne.field_F.setLocation(bk.field_f, to.field_e);
+              DisplayNameSelectionPanel.field_F.setLocation(bk.field_f, to.field_e);
             }
           }
           this.d(param0 - 48);
@@ -1016,7 +1016,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 nf.a(true);
                 this.a((byte) -57);
-                ro.field_g = nn.a(gh.field_a, (java.awt.Component) ((Object) ne.field_F), true, op.field_c);
+                ro.field_g = nn.a(gh.field_a, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F), true, op.field_c);
                 this.b(255);
                 IsaacCipher.field_i = bl.c(true);
                 do {
@@ -1037,7 +1037,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < tf.field_n)) {
                       this.a(31);
-                      e.a(gi.field_s, ne.field_F, -29785);
+                      e.a(gi.field_s, DisplayNameSelectionPanel.field_F, -29785);
                       break;
                     }
                     this.e(11);

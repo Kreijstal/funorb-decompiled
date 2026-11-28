@@ -39,7 +39,7 @@ final class PcmOutputWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               var5 = (String) null;
-              ti.a((Throwable) ((Object) var1), (byte) 100, (String) null);
+              ValidatedTextField.a((Throwable) ((Object) var1), (byte) 100, (String) null);
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {

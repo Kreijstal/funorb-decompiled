@@ -369,8 +369,8 @@ final class lb {
     }
 
     final static String a(int param0) {
-        if (!eg.field_h && di.field_m >= ProxyAuthenticationRequiredException.field_a &&
-          !(NanoFrameTimer.field_l + ProxyAuthenticationRequiredException.field_a <= di.field_m)) {
+        if (!eg.field_h && AgeValidator.field_m >= ProxyAuthenticationRequiredException.field_a &&
+          !(NanoFrameTimer.field_l + ProxyAuthenticationRequiredException.field_a <= AgeValidator.field_m)) {
           return sc.field_c;
         }
         int var1 = 68 % ((-45 - param0) / 62);

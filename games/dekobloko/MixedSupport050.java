@@ -41,7 +41,7 @@ final class MixedSupport050 extends MixedSupport024 {
         RuntimeException caughtExceptionLocal7 = null;
         try {
           integerLocal1 = 61 / ((byteArgument2 - 59) / 53);
-          stackStringLocal3 = UiComponentPart032.computeString1698('*', uiComponentArgument1.stringState0078.length(), -12681);
+          stackStringLocal3 = BirthDateInput.computeString1698('*', uiComponentArgument1.stringState0078.length(), -12681);
           return stackStringLocal3;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;

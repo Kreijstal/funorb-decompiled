@@ -182,7 +182,7 @@ class IntrusiveNode {
           if (ha.field_t == 1) {
             FullscreenFocusCanvas.a(250, false);
             var3Lifetime1 = 1;
-            for (var4_int = 0; var4_int < el.field_j; var4_int++) {
+            for (var4_int = 0; var4_int < ProxySocketFactory.field_j; var4_int++) {
               if (125 != mm.field_m[var4_int].field_i) {
                 continue;
               }
@@ -196,11 +196,11 @@ class IntrusiveNode {
               if (bm.field_c == 0 &&
                 rl.field_c == 2) {
                 CrossfadingMidiPcmStream.a(14, 1);
-                for (var4_intLifetime2 = 1; var4_intLifetime2 < el.field_j; var4_intLifetime2++) {
+                for (var4_intLifetime2 = 1; var4_intLifetime2 < ProxySocketFactory.field_j; var4_intLifetime2++) {
                   var8 = mm.field_m[var4_intLifetime2];
                   if (15 == var8.field_i) {
                     var8.field_i = -1;
-                    var6 = var8.field_j.b(-4);
+                    var6 = var8.field_j.getClampedTileIndex(-4);
                     ln.field_a.field_c[var6] = 0;
                     ln.field_a.field_f[var6] = 2;
                   }
@@ -220,7 +220,7 @@ class IntrusiveNode {
             for (var4_intLifetime1 = 0; var4_intLifetime1 <= 256; var4_intLifetime1 += 16) {
               var9 = jn.field_F[ib.field_c];
               var9.field_c = (double)var4_intLifetime1;
-              var9.field_j.a((int)(-4.0 + 6.0 * Math.random()) + param0 % var2_int, 8360, (int)(-4.0 + 6.0 * Math.random()) + param0 / var2_int);
+              var9.field_j.setCoordinates((int)(-4.0 + 6.0 * Math.random()) + param0 % var2_int, 8360, (int)(-4.0 + 6.0 * Math.random()) + param0 / var2_int);
               var9.field_l.a(0.0, 0.0, 1);
               var9.field_i = 8;
               var9.field_e = 0;
@@ -234,7 +234,7 @@ class IntrusiveNode {
             rl.field_c == 3) {
             return;
           }
-          for (var3Lifetime3 = 0; var3Lifetime3 < el.field_j; var3Lifetime3++) {
+          for (var3Lifetime3 = 0; var3Lifetime3 < ProxySocketFactory.field_j; var3Lifetime3++) {
             var4 = mm.field_m[var3Lifetime3];
             if (5 == var4.field_i) {
               var4.field_I = 0;

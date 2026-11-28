@@ -19,7 +19,7 @@ final class fe extends ResultScenePhase {
     }
 
     final static void a(boolean param0, int param1) {
-        dc.a(param0, (byte) 114, true);
+        AccountRegistrationPanel.a(param0, (byte) 114, true);
         if (param1 != 7923) {
           CharSequence var3 = (CharSequence) null;
           fe.a(91, (CharSequence) null);
@@ -146,7 +146,7 @@ final class fe extends ResultScenePhase {
         int var2 = CrazyCrystals.field_B;
         sc.field_i[0] = new am(RawPcmStream.a(fk.field_x[0], 100, 0));
         sc.field_i[1] = new am(RawPcmStream.a(fk.field_x[1], 100, 0));
-        ga.field_B = new am(RawPcmStream.a(nk.field_j, 100, 0));
+        EditableTextField.field_B = new am(RawPcmStream.a(nk.field_j, 100, 0));
         ua.field_a = new am(RawPcmStream.a(uk.field_i, 100, 0));
         cb.field_n = new am(RawPcmStream.a(aq.field_t, 100, 0));
         tm.field_f = new am(RawPcmStream.a(qf.field_w, 100, 0));
@@ -174,7 +174,7 @@ final class fe extends ResultScenePhase {
           rb.field_g = new am(RawPcmStream.a(AccountCreationResultPanel.field_nb, 100, 0));
           ScoreModifier.field_f = new am(RawPcmStream.a(tg.field_c, 100, 0));
           oj.field_E = new am(RawPcmStream.a(ProxyAuthenticationRequiredException.field_b, 100, 0));
-          LaserHubTile.field_q = new am(RawPcmStream.a(ga.field_H, 100, 0));
+          LaserHubTile.field_q = new am(RawPcmStream.a(EditableTextField.field_H, 100, 0));
           e.b((byte) -122);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "fe.G(" + param0 + ')');

@@ -85,8 +85,8 @@ final class lc extends ro {
         if (-param5 + param1 >= RasterBuffer.field_e &&
           qg.field_z >= param1 + param5 &&
           Bzip2State.field_q <= param3 - param5 &&
-          param3 + param5 <= qk.field_p) {
-          mh.a(param0, param1, param5, param6, param3, 15783, param4);
+          param3 + param5 <= LevelCompletionUpdate.field_p) {
+          MenuScreen.a(param0, param1, param5, param6, param3, 15783, param4);
         } else {
           RandomAccessCacheFile.a(-15788, param1, param3, param6, param5, param0, param4);
         }
@@ -158,7 +158,7 @@ final class lc extends ro {
             lc.g(6);
           }
           if (op.field_j > mf.field_t) {
-            var7 = nc.field_d[gf.field_h];
+            var7 = nc.field_d[TextFieldValidator.field_h];
             if (var7 != null) {
               var2_int = (60 + var7.field_w) * mf.field_t / op.field_j;
               var3 = var2_int - 30;
@@ -236,12 +236,12 @@ final class lc extends ro {
         int[] var45 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        sg var11 = null;
+        SceneMeshBatch var11 = null;
         int var13 = 0;
         Sprite var15 = null;
         Sprite var16_ref_t = null;
         Model var17_ref_kh = null;
-        sg var18 = null;
+        SceneMeshBatch var18 = null;
         int[] var19 = null;
         int[] var20 = null;
         int[] var21_ref_int__ = null;
@@ -268,7 +268,7 @@ final class lc extends ro {
         int var15_intLifetime1Lifetime1;
         var27 = Torquing.field_u;
         try {
-          var28 = new TooltipPanel[]{new TooltipPanel(qh.field_c, 0, 517, 298, (sm) null, 0, 0)};
+          var28 = new TooltipPanel[]{new TooltipPanel(qh.field_c, 0, 517, 298, (IndexedSprite) null, 0, 0)};
           var2 = new int[]{0, 1, 2, 4, 6, 5, 9, 18, 7, 8};
           var3 = new short[]{(short)0, (short)2, (short)4, (short)3, (short)1, (short) 5};
           var4 = new Sprite(8, 1);
@@ -282,15 +282,15 @@ final class lc extends ro {
             field_B = (String) null;
           }
           var30 = rh.a((byte) 114, var1, DelayedPcmStream.field_p, "");
-          var30[0].a((byte) -15, 2);
+          var30[0].addFlexibleVerticalSpace((byte) -15, 2);
           var31 = rh.a((byte) 116, var30, var4, hl.field_c);
-          var31[0].a((byte) 101, 1);
+          var31[0].addFlexibleVerticalSpace((byte) 101, 1);
           var32 = rh.a((byte) 125, var31, var4, IntrusiveNode.field_i);
           var1Lifetime1 = var32;
           ln.a(1, 0, var32, (byte) -58);
-          var1Lifetime1[-1 + var32.length].c(0);
-          var1Lifetime1[var32.length - 1].d(102);
-          var33 = rh.a((byte) -122, var32, var4, eq.field_c);
+          var1Lifetime1[-1 + var32.length].justifyPanelContents(0);
+          var1Lifetime1[var32.length - 1].finishPanelLayout(102);
+          var33 = rh.a((byte) -122, var32, var4, DebouncedFieldValidator.field_c);
           var1Lifetime2 = var33;
           ln.a(0, dd.field_c.field_x, var33, (byte) -58);
           hh.field_e = new Sprite[m.field_n.length];
@@ -323,7 +323,7 @@ final class lc extends ro {
               var35.e();
               be.a();
               var17_ref_kh = MouseWheelInput.field_c[var10];
-              var18 = new sg(1);
+              var18 = new SceneMeshBatch(1);
               var18.a(0, var17_ref_kh);
               var19 = new int[]{0, 0, 0, 65535, 0, 0, 0, var12, var11_int, 0, -var11_int, var12};
               if (var10 == 1) {
@@ -341,7 +341,7 @@ final class lc extends ro {
                 var19 = var21_ref_int__;
               }
               var18.a(var17_ref_kh, var19);
-              sg.a(var17_ref_kh, 80, 1365, -1, -12, 12);
+              SceneMeshBatch.a(var17_ref_kh, 80, 1365, -1, -12, 12);
               be.field_b = -var14;
               var18.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
               if (var10 == 0) {
@@ -361,7 +361,7 @@ final class lc extends ro {
               ln.a(0, dd.field_c.field_x, var38, (byte) -58);
             }
           }
-          var1Lifetime2[-1 + var1Lifetime2.length].d(param0 ^ -1339942758);
+          var1Lifetime2[-1 + var1Lifetime2.length].finishPanelLayout(param0 ^ -1339942758);
           var39 = rh.a((byte) -110, var1Lifetime2, var4, vp.field_G);
           var1Lifetime3 = var39;
           ln.a(0, dd.field_c.field_x, var39, (byte) -58);
@@ -376,7 +376,7 @@ final class lc extends ro {
           var9 = be.field_l[1664];
           var10 = be.field_o[1664];
           be.field_g = 40;
-          var11 = new sg(1);
+          var11 = new SceneMeshBatch(1);
           var11.a(0, var40);
           var11.a(var40, new int[]{0, 0, 0, 65535, 0, 0, 0, var10, var9, 0, -var9, var10});
           var12 = 99999;
@@ -409,7 +409,7 @@ final class lc extends ro {
             var1Lifetime3 = var41;
             ln.a(0, dd.field_c.field_x, var41, (byte) -58);
           }
-          var1Lifetime3[var1Lifetime3.length - 1].c(0);
+          var1Lifetime3[var1Lifetime3.length - 1].justifyPanelContents(0);
           hg.field_b = var1Lifetime3;
           SoftwareRasterizer.setRasterBuffer(var45, var6, var7);
           be.a();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends cb {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private boolean nameAvailable;
     static int field_j;
     private String checkedName;
@@ -9,7 +9,7 @@ final class AccountNameAvailabilityValidator extends cb {
     final static boolean f(int param0) {
         if (param0 != -9202) {
           String var2 = (String) null;
-          AccountNameAvailabilityValidator.a((String) null, -46, (ik) null, true, -5, (String) null, (String) null);
+          AccountNameAvailabilityValidator.a((String) null, -46, (AccountRegistrationPanel) null, true, -5, (String) null, (String) null);
           if (kj.a(false)) {
             return false;
           }
@@ -27,7 +27,7 @@ final class AccountNameAvailabilityValidator extends cb {
         return false;
     }
 
-    final static boolean a(String param0, int param1, ik param2, boolean param3, int param4, String param5, String param6) {
+    final static boolean a(String param0, int param1, AccountRegistrationPanel param2, boolean param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_17_0 = null;
@@ -93,12 +93,12 @@ final class AccountNameAvailabilityValidator extends cb {
         }
     }
 
-    AccountNameAvailabilityValidator(ui param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final ag a(String param0, int param1) {
+    final ag getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -160,7 +160,7 @@ final class AccountNameAvailabilityValidator extends cb {
         this.checkedName = null;
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

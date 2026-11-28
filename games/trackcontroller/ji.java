@@ -46,11 +46,11 @@ final class ji {
               NetworkArchiveRequest.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
-              if (rl.field_N == 0) {
+              if (LoginPanel.field_N == 0) {
                 ki.a(false, 0, param1);
                 qd.a(param2, 0, 0, 2901);
               } else {
-                l.a((byte) 85, param2);
+                EmailFormatValidator.a((byte) 85, param2);
               }
             }
           }
@@ -101,11 +101,11 @@ final class ji {
               NetworkArchiveRequest.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
-              if (rl.field_N == 0) {
+              if (LoginPanel.field_N == 0) {
                 ki.a(false, 0, param1);
                 qd.a(param2, 0, 0, 2901);
               } else {
-                l.a((byte) 85, param2);
+                EmailFormatValidator.a((byte) 85, param2);
               }
             }
           }

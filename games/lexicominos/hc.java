@@ -57,7 +57,7 @@ final class hc extends ui {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (uf.field_m == ae.field_E) {
+          if (AgeValidator.field_m == ae.field_E) {
             SpriteGeometry.field_q.position = 0;
             wh.field_d = null;
             if (param5 != null) {
@@ -112,19 +112,19 @@ final class hc extends ui {
               SpriteGeometry.field_q.backpatchByteLength(SpriteGeometry.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);
-            uf.field_m = ve.field_e;
+            AgeValidator.field_m = ve.field_e;
           }
           if (param3 != -30762) {
             hc.releaseDeclaredStaticReferences(-12);
           }
-          if (uf.field_m == ve.field_e &&
+          if (AgeValidator.field_m == ve.field_e &&
             a.b(1, 10343)) {
             var9Lifetime1 = ig.field_a.readUnsignedByte(true);
             ig.field_a.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               fc.field_S = new String[var9Lifetime1 - 100];
-              uf.field_m = sg.field_l;
+              AgeValidator.field_m = sg.field_l;
             } else {
               if (var9Lifetime1 == 248) {
                 sa.a((byte) 108, kk.c(-14047));
@@ -137,7 +137,7 @@ final class hc extends ui {
               if (var9Lifetime1 != 99) {
                 a.field_c = -1;
                 pg.field_d = var9Lifetime1;
-                uf.field_m = bc.field_F;
+                AgeValidator.field_m = bc.field_F;
               } else {
                 a.b(wg.b(param3 ^ -19296), 10343);
                 wh.field_d = new Boolean(f.a(ig.field_a, 25444));
@@ -145,7 +145,7 @@ final class hc extends ui {
               }
             }
           }
-          if (uf.field_m == sg.field_l) {
+          if (AgeValidator.field_m == sg.field_l) {
             var9Lifetime2 = 2;
             if (a.b(var9Lifetime2, 10343)) {
               var10Lifetime1 = ig.field_a.readUnsignedShort(-1698573656);
@@ -162,7 +162,7 @@ final class hc extends ui {
               }
             }
           }
-          if (bc.field_F == uf.field_m &&
+          if (bc.field_F == AgeValidator.field_m &&
             NetworkArchiveRequest.d(2)) {
             if (pg.field_d == 255) {
               var9_ref_String = ig.field_a.readNullableString((byte) -49);

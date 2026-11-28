@@ -170,7 +170,7 @@ final class la extends IntrusiveNode {
         java.awt.Graphics var11 = null;
         try {
           try {
-            var10 = dc.field_q.getGraphics();
+            var10 = EmailFormatValidator.field_q.getGraphics();
             if (ce.field_f == null) {
               ce.field_f = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -183,7 +183,7 @@ final class la extends IntrusiveNode {
             }
             try {
               if (UiWidget.field_r == null) {
-                UiWidget.field_r = dc.field_q.createImage(304, 34);
+                UiWidget.field_r = EmailFormatValidator.field_q.createImage(304, 34);
               }
               var11 = UiWidget.field_r.getGraphics();
               var11.setColor(param1);
@@ -225,7 +225,7 @@ final class la extends IntrusiveNode {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            dc.field_q.repaint();
+            EmailFormatValidator.field_q.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -311,7 +311,7 @@ final class la extends IntrusiveNode {
             return;
           }
           lc.a(5292, param13, param7, param16);
-          ga.b(param15, param9, false, param2);
+          DisplayNameSelectionPanel.b(param15, param9, false, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

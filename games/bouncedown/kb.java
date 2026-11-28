@@ -16,19 +16,19 @@ final class kb {
 
     final static void b(int param0) {
         if (param0 == 808) {
-          q.field_N.k(-20281);
-          if (q.field_A == null) {
-            q.field_A = new db(q.field_N, ej.field_c);
+          DisplayNameSelectionPanel.field_N.k(-20281);
+          if (DisplayNameSelectionPanel.field_A == null) {
+            DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
           }
-          q.field_N.b(q.field_A, false);
+          DisplayNameSelectionPanel.field_N.b(DisplayNameSelectionPanel.field_A, false);
           return;
         }
         kb.a(-78);
-        q.field_N.k(-20281);
-        if (q.field_A == null) {
-          q.field_A = new db(q.field_N, ej.field_c);
+        DisplayNameSelectionPanel.field_N.k(-20281);
+        if (DisplayNameSelectionPanel.field_A == null) {
+          DisplayNameSelectionPanel.field_A = new db(DisplayNameSelectionPanel.field_N, ej.field_c);
         }
-        q.field_N.b(q.field_A, false);
+        DisplayNameSelectionPanel.field_N.b(DisplayNameSelectionPanel.field_A, false);
     }
 
     static {

@@ -294,7 +294,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             jd.field_D.setSize(ap.field_r, rh.field_f);
             jd.field_D.setVisible(true);
             if (MenuOverlay.field_d != null &&
-              null == vk.field_F) {
+              null == LoginPanel.field_F) {
               var6 = MenuOverlay.field_d.getInsets();
               jd.field_D.setLocation(ui.field_a + var6.left, wm.field_e + var6.top);
               if (CrazyCrystals.field_B != 0) {
@@ -459,8 +459,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             jd.field_D.getParent().remove((java.awt.Component) ((Object) jd.field_D));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != vk.field_F) {
-            var2 = vk.field_F;
+          if (null != LoginPanel.field_F) {
+            var2 = LoginPanel.field_F;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {

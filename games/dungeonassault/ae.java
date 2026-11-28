@@ -195,36 +195,36 @@ final class ae {
           if (AccountNameAvailabilityValidator.field_t == 0) {
             var3_int = KeyboardInput.a(n.field_c, (byte) 96, qj.field_e, wa.field_l, DelegatingCanvas.field_k);
             var4 = var3_int + 3;
-            go.field_A = new String[var4];
+            DungeonRaidScreen.field_A = new String[var4];
             to.field_c = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               to.field_c[var5] = -1;
             }
             n.field_g = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
-              go.field_A[var5] = qj.field_e[var5];
+              DungeonRaidScreen.field_A[var5] = qj.field_e[var5];
             }
-            go.field_A[var4 - 3] = "";
-            go.field_A[var4 - 2] = mn.field_a;
+            DungeonRaidScreen.field_A[var4 - 3] = "";
+            DungeonRaidScreen.field_A[var4 - 2] = mn.field_a;
             to.field_c[var4 - 2] = 0;
             n.field_g[0] = 4;
-            go.field_A[-1 + var4] = sp.field_b;
+            DungeonRaidScreen.field_A[-1 + var4] = sp.field_b;
             to.field_c[var4 - 1] = 1;
             n.field_g[1] = 5;
           } else if (AccountNameAvailabilityValidator.field_t == 1) {
             var3_int = KeyboardInput.a(n.field_c, (byte) -114, qj.field_e, wa.field_l, DelegatingCanvas.field_k);
             var4 = var3_int + 2;
             to.field_c = new int[var4];
-            go.field_A = new String[var4];
+            DungeonRaidScreen.field_A = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               to.field_c[var5] = -1;
             }
             n.field_g = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              go.field_A[var5] = qj.field_e[var5];
+              DungeonRaidScreen.field_A[var5] = qj.field_e[var5];
             }
-            go.field_A[-2 + var4] = "";
-            go.field_A[var4 - 1] = sp.field_b;
+            DungeonRaidScreen.field_A[-2 + var4] = "";
+            DungeonRaidScreen.field_A[var4 - 1] = sp.field_b;
             to.field_c[var4 - 1] = 0;
             n.field_g[0] = 5;
           } else if (AccountNameAvailabilityValidator.field_t != 2) {
@@ -235,33 +235,33 @@ final class ae {
                 var3_int = KeyboardInput.a(n.field_c, (byte) -46, qj.field_e, wa.field_l, oh.field_a);
               }
               var4 = 2 + var3_int;
-              go.field_A = new String[var4];
+              DungeonRaidScreen.field_A = new String[var4];
               to.field_c = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 to.field_c[var5] = -1;
               }
               n.field_g = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                go.field_A[var5] = qj.field_e[var5];
+                DungeonRaidScreen.field_A[var5] = qj.field_e[var5];
               }
-              go.field_A[var4 - 2] = "";
-              go.field_A[-1 + var4] = sp.field_b;
+              DungeonRaidScreen.field_A[var4 - 2] = "";
+              DungeonRaidScreen.field_A[-1 + var4] = sp.field_b;
               to.field_c[-1 + var4] = 0;
               n.field_g[0] = 5;
             } else if (AccountNameAvailabilityValidator.field_t == 4) {
               var3_int = KeyboardInput.a(n.field_c, (byte) 101, qj.field_e, wa.field_l, jg.field_b);
               var4 = var3_int + 2;
               to.field_c = new int[var4];
-              go.field_A = new String[var4];
+              DungeonRaidScreen.field_A = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 to.field_c[var5] = -1;
               }
               n.field_g = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                go.field_A[var5] = qj.field_e[var5];
+                DungeonRaidScreen.field_A[var5] = qj.field_e[var5];
               }
-              go.field_A[var4 - 2] = "";
-              go.field_A[var4 - 1] = sp.field_b;
+              DungeonRaidScreen.field_A[var4 - 2] = "";
+              DungeonRaidScreen.field_A[var4 - 1] = sp.field_b;
               to.field_c[var4 - 1] = 0;
               n.field_g[0] = 5;
             } else {
@@ -271,19 +271,19 @@ final class ae {
               var3_int = KeyboardInput.a(n.field_c, (byte) -68, qj.field_e, wa.field_l, SecondaryNodeDequeIterator.field_g);
               var4 = 3 + var3_int;
               to.field_c = new int[var4];
-              go.field_A = new String[var4];
+              DungeonRaidScreen.field_A = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 to.field_c[var5] = -1;
               }
               n.field_g = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                go.field_A[var5] = qj.field_e[var5];
+                DungeonRaidScreen.field_A[var5] = qj.field_e[var5];
               }
-              go.field_A[var4 - 3] = "";
-              go.field_A[-2 + var4] = fc.field_j;
+              DungeonRaidScreen.field_A[var4 - 3] = "";
+              DungeonRaidScreen.field_A[-2 + var4] = fc.field_j;
               to.field_c[var4 - 2] = 0;
               n.field_g[0] = 3;
-              go.field_A[-1 + var4] = sp.field_b;
+              DungeonRaidScreen.field_A[-1 + var4] = sp.field_b;
               to.field_c[-1 + var4] = 1;
               n.field_g[1] = 5;
             }
@@ -333,24 +333,24 @@ final class ae {
             }
             var6 = stackIn_35_0;
             var7 = var6 + (7 + var5);
-            go.field_A = new String[var7];
+            DungeonRaidScreen.field_A = new String[var7];
             to.field_c = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
               to.field_c[var8] = -1;
             }
             to.field_c[1] = 0;
-            go.field_A[0] = mj.field_b;
+            DungeonRaidScreen.field_A[0] = mj.field_b;
             n.field_g = new int[2];
-            go.field_A[1] = lg.field_l;
-            go.field_A[5] = "";
+            DungeonRaidScreen.field_A[1] = lg.field_l;
+            DungeonRaidScreen.field_A[5] = "";
             n.field_g[0] = 5;
-            go.field_A[2] = ef.field_c;
+            DungeonRaidScreen.field_A[2] = ef.field_c;
             to.field_c[3] = 1;
-            go.field_A[3] = jg.field_d;
+            DungeonRaidScreen.field_A[3] = jg.field_d;
             n.field_g[1] = 2;
-            go.field_A[4] = BoundedRandomAccessFile.field_e;
+            DungeonRaidScreen.field_A[4] = BoundedRandomAccessFile.field_e;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_42_0 = go.field_A;
+              stackIn_42_0 = DungeonRaidScreen.field_A;
               stackIn_42_1 = var8Lifetime2 + 6;
               if (mo.field_g.length + (var8Lifetime2 - var5) >= 0) {
                 stackIn_43_2 = mo.field_g[mo.field_g.length + var8Lifetime2 - var5];
@@ -359,10 +359,10 @@ final class ae {
               }
               stackIn_42_0[stackIn_42_1] = stackIn_43_2;
             }
-            go.field_A[6 + var5] = null;
+            DungeonRaidScreen.field_A[6 + var5] = null;
             to.field_c[6 + var5] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_47_0 = go.field_A;
+              stackIn_47_0 = DungeonRaidScreen.field_A;
               stackIn_47_1 = 7 - (-var5 - var8Lifetime3);
               stackIn_47_2 = fd.field_b.length;
               stackIn_47_3 = var8Lifetime3;
@@ -381,9 +381,9 @@ final class ae {
           if (param2 != -1) {
             field_e = (String) null;
           }
-          while (var4Lifetime1 < go.field_A.length) {
+          while (var4Lifetime1 < DungeonRaidScreen.field_A.length) {
             stackIn_93_0 = !(to.field_c[var4Lifetime1] < 0);
-            var5Lifetime1 = KeyboardInput.a(stackIn_93_0, go.field_A[var4Lifetime1], param2 ^ 30632);
+            var5Lifetime1 = KeyboardInput.a(stackIn_93_0, DungeonRaidScreen.field_A[var4Lifetime1], param2 ^ 30632);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -408,10 +408,10 @@ final class ae {
               }
             }
           }
-          d.field_e = vo.field_r - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
+          d.field_e = PasswordValidator.field_r - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
           jn.field_d = (ci.field_j + RaiderDefinition.field_q << 1) * d.field_g.field_i;
-          bf.field_b = -(var3_intLifetime1 >> 1) + vo.field_r;
-          for (var4Lifetime2 = 0; go.field_A.length > var4Lifetime2; var4Lifetime2++) {
+          bf.field_b = -(var3_intLifetime1 >> 1) + PasswordValidator.field_r;
+          for (var4Lifetime2 = 0; DungeonRaidScreen.field_A.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_114_0 = jn.field_d;
             if (to.field_c[var4Lifetime2] < 0) {
               stackIn_115_1 = ag.field_a;
@@ -421,14 +421,14 @@ final class ae {
             jn.field_d = stackIn_114_0 + stackIn_115_1;
           }
           jm.field_c = -(jn.field_d >> 1) + bl.field_p;
-          dg.field_L = new int[go.field_A.length][];
+          dg.field_L = new int[DungeonRaidScreen.field_A.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = jm.field_c;
-          while (go.field_A.length > var4Lifetime3) {
+          while (DungeonRaidScreen.field_A.length > var4Lifetime3) {
             var6Lifetime1 = to.field_c[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = KeyboardInput.a(true, go.field_A[var4Lifetime3], param2 ^ 30632);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + vo.field_r;
+              var7Lifetime2 = KeyboardInput.a(true, DungeonRaidScreen.field_A[var4Lifetime3], param2 ^ 30632);
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + PasswordValidator.field_r;
               var5Lifetime3 = var5Lifetime3 + ci.field_j;
               dg.field_L[var4Lifetime3] = new int[4];
               dg.field_L[var4Lifetime3][0] = -oh.field_t + var8Lifetime1;

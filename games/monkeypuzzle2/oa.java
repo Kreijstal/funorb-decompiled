@@ -237,9 +237,9 @@ final class oa extends jk {
           var2_refLifetime2 = (ki) (ok.field_a.beginBackward((byte) -117));
           while (var2_refLifetime2 != null) {
             var2_refLifetime2.f(-7);
-            if (var2_refLifetime2.field_q - (float)var2_refLifetime2.field_y > (float)(hf.field_f.field_k - 90)) {
+            if (var2_refLifetime2.field_q - (float)var2_refLifetime2.field_y > (float)(DebouncedFieldValidator.field_f.field_k - 90)) {
               if (vl.field_j) {
-                hf.field_f.d(-115);
+                DebouncedFieldValidator.field_f.d(-115);
                 vl.field_j = false;
               }
               var1_int = 1;

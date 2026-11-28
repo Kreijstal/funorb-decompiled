@@ -633,7 +633,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
           scanLoop1: while (true) {
             boolean frameRemainderLocal25 = true;
             if (sceneWidgetPart014Local17 != null) {
-              stackOut_56_0 = UiComponentPart024.computeBoolean1276(sceneWidgetPart014Local17, sceneWidgetPart014Local24, false);
+              stackOut_56_0 = BirthDateTextFields.computeBoolean1276(sceneWidgetPart014Local17, sceneWidgetPart014Local24, false);
               stackIntegerLocal5 = stackOut_56_0 ? 1 : 0;
               stackBooleanLocal4 = stackOut_56_0;
               frameRemainderLocal25 = (integerLocal20 == 0);

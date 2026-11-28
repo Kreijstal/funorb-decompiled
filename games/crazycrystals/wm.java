@@ -32,7 +32,7 @@ final class wm {
           SectorCacheStore.field_a.i((byte) -99);
         }
         String var1 = vg.c((byte) 104);
-        mk.field_b = new vk(var1, (String) null, true, false, false);
+        mk.field_b = new LoginPanel(var1, (String) null, true, false, false);
         qe.field_g.b(-3264, MouseWheelInput.field_d);
         if (param0 != -12) {
           field_d = -98L;

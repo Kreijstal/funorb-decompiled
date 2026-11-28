@@ -242,7 +242,7 @@ final class cc {
               var32 = var30 & 65280;
               var33 = -369164033 & var28 * var31 >>> 8 | (var28 * var32 & 16711854) >>> 8;
               var33 = var33 + 65793 * var29;
-              el.a(29322, var24, var25, (16711422 & var33) >> 1, var23, var22, var26, var27);
+              EmailFormatValidator.a(29322, var24, var25, (16711422 & var33) >> 1, var23, var22, var26, var27);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

@@ -359,7 +359,7 @@ final class fi {
             stackIn_2_0 = null;
             return (vn) (stackIn_2_0);
           }
-          var2 = new vn(param1, PacketBuffer.field_o, na.field_G, vo.field_b, ij.field_o, pn.field_b);
+          var2 = new vn(param1, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, pn.field_b);
           if (param0 != -9) {
             var3 = (byte[]) null;
             fi.a((byte) 17, (byte[]) null);

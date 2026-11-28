@@ -116,9 +116,9 @@ final class di {
           this.field_g = param0.readPrefixedString(-21030);
           this.field_c = param0.readPrefixedString(-21030);
           param0.readPrefixedString(param1 ^ 21029);
-          this.field_j = rm.a(param0, 6065);
-          rm.a(param0, 6065);
-          rm.a(param0, param1 + 6066);
+          this.field_j = EditableTextField.a(param0, 6065);
+          EditableTextField.a(param0, 6065);
+          EditableTextField.a(param0, param1 + 6066);
           this.field_a = param0.readUnsignedMedium(param1 - 101);
           this.field_f = param0.readUnsignedMedium(param1 ^ 125);
           this.field_h = param0.readUnsignedMedium(-117);

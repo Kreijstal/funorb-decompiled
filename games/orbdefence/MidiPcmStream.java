@@ -113,7 +113,7 @@ final class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.field_H[var5] = vi.a(-128, this.field_J[var5]);
+          this.field_H[var5] = EditableTextField.a(-128, this.field_J[var5]);
           var5++;
         }
     }
@@ -487,44 +487,44 @@ final class MidiPcmStream extends PcmStream {
         var5Lifetime4 = param0 >> 8 & 127;
         var6Lifetime3 = (8354193 & param0) >> 16;
         if (var5Lifetime4 == 0) {
-          this.field_H[var4Lifetime4] = vi.a(-2080769, this.field_H[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.field_H[var4Lifetime4] = EditableTextField.a(-2080769, this.field_H[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.field_H[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(this.field_H[var4Lifetime4], -16257);
+          this.field_H[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(this.field_H[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 1) {
-          this.field_n[var4Lifetime4] = vi.a(this.field_n[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_n[var4Lifetime4] = EditableTextField.a(this.field_n[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (33 == var5Lifetime4) {
-          this.field_n[var4Lifetime4] = var6Lifetime3 + vi.a(this.field_n[var4Lifetime4], -128);
+          this.field_n[var4Lifetime4] = var6Lifetime3 + EditableTextField.a(this.field_n[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 5) {
-          this.field_G[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(this.field_G[var4Lifetime4], -16257);
+          this.field_G[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(this.field_G[var4Lifetime4], -16257);
         }
         if (37 == var5Lifetime4) {
-          this.field_G[var4Lifetime4] = vi.a(-128, this.field_G[var4Lifetime4]) + var6Lifetime3;
+          this.field_G[var4Lifetime4] = EditableTextField.a(-128, this.field_G[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 7) {
-          this.field_w[var4Lifetime4] = vi.a(this.field_w[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_w[var4Lifetime4] = EditableTextField.a(this.field_w[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 39) {
-          this.field_w[var4Lifetime4] = vi.a(-128, this.field_w[var4Lifetime4]) + var6Lifetime3;
+          this.field_w[var4Lifetime4] = EditableTextField.a(-128, this.field_w[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 10) {
-          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(-16257, this.field_y[var4Lifetime4]);
+          this.field_y[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(-16257, this.field_y[var4Lifetime4]);
         }
         if (var5Lifetime4 == 42) {
-          this.field_y[var4Lifetime4] = vi.a(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
+          this.field_y[var4Lifetime4] = EditableTextField.a(-128, this.field_y[var4Lifetime4]) + var6Lifetime3;
         }
         if (11 == var5Lifetime4) {
-          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(this.field_x[var4Lifetime4], -16257);
+          this.field_x[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(this.field_x[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 43) {
-          this.field_x[var4Lifetime4] = var6Lifetime3 + vi.a(this.field_x[var4Lifetime4], -128);
+          this.field_x[var4Lifetime4] = var6Lifetime3 + EditableTextField.a(this.field_x[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 64) {
           if (64 > var6Lifetime3) {
-            this.field_o[var4Lifetime4] = vi.a(this.field_o[var4Lifetime4], -2);
+            this.field_o[var4Lifetime4] = EditableTextField.a(this.field_o[var4Lifetime4], -2);
           } else {
             this.field_o[var4Lifetime4] = ge.a(this.field_o[var4Lifetime4], 1);
           }
@@ -532,22 +532,22 @@ final class MidiPcmStream extends PcmStream {
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.a((byte) -66, var4Lifetime4);
-            this.field_o[var4Lifetime4] = vi.a(this.field_o[var4Lifetime4], -3);
+            this.field_o[var4Lifetime4] = EditableTextField.a(this.field_o[var4Lifetime4], -3);
           } else {
             this.field_o[var4Lifetime4] = ge.a(this.field_o[var4Lifetime4], 2);
           }
         }
         if (var5Lifetime4 == 99) {
-          this.field_p[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(this.field_p[var4Lifetime4], 127);
+          this.field_p[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(this.field_p[var4Lifetime4], 127);
         }
         if (98 == var5Lifetime4) {
-          this.field_p[var4Lifetime4] = var6Lifetime3 + vi.a(16256, this.field_p[var4Lifetime4]);
+          this.field_p[var4Lifetime4] = var6Lifetime3 + EditableTextField.a(16256, this.field_p[var4Lifetime4]);
         }
         if (var5Lifetime4 == 101) {
-          this.field_p[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + vi.a(127, this.field_p[var4Lifetime4]);
+          this.field_p[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + EditableTextField.a(127, this.field_p[var4Lifetime4]);
         }
         if (var5Lifetime4 == 100) {
-          this.field_p[var4Lifetime4] = vi.a(16256, this.field_p[var4Lifetime4]) + (16384 + var6Lifetime3);
+          this.field_p[var4Lifetime4] = EditableTextField.a(16256, this.field_p[var4Lifetime4]) + (16384 + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.a(var4Lifetime4, (byte) -82);
@@ -561,27 +561,27 @@ final class MidiPcmStream extends PcmStream {
         if (6 == var5Lifetime4) {
           var7 = this.field_p[var4Lifetime4];
           if (var7 == 16384) {
-            this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + vi.a(-16257, this.field_v[var4Lifetime4]);
+            this.field_v[var4Lifetime4] = (var6Lifetime3 << 7) + EditableTextField.a(-16257, this.field_v[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.field_p[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.field_v[var4Lifetime4] = vi.a(-128, this.field_v[var4Lifetime4]) + var6Lifetime3;
+            this.field_v[var4Lifetime4] = EditableTextField.a(-128, this.field_v[var4Lifetime4]) + var6Lifetime3;
           }
         }
         if (var5Lifetime4 == 16) {
-          this.field_D[var4Lifetime4] = vi.a(this.field_D[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.field_D[var4Lifetime4] = EditableTextField.a(this.field_D[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.field_D[var4Lifetime4] = var6Lifetime3 + vi.a(-128, this.field_D[var4Lifetime4]);
+          this.field_D[var4Lifetime4] = var6Lifetime3 + EditableTextField.a(-128, this.field_D[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (64 <= var6Lifetime3) {
             this.field_o[var4Lifetime4] = ge.a(this.field_o[var4Lifetime4], 4);
           } else {
             this.a(120, var4Lifetime4);
-            this.field_o[var4Lifetime4] = vi.a(this.field_o[var4Lifetime4], -5);
+            this.field_o[var4Lifetime4] = EditableTextField.a(this.field_o[var4Lifetime4], -5);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -1151,7 +1151,7 @@ final class MidiPcmStream extends PcmStream {
         if (param2 >= -79) {
           this.field_s = 6;
         }
-        this.field_H[param0] = vi.a(param1, -128);
+        this.field_H[param0] = EditableTextField.a(param1, -128);
         this.c(param1, -129, param0);
     }
 

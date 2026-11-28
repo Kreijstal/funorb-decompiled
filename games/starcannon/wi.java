@@ -4,7 +4,7 @@
 final class wi {
     static int field_b;
     static String field_a;
-    static rg field_c;
+    static LoginPanel field_c;
 
     public static void clearStaticReferences(int param0) {
         int var1 = -63 / ((param0 + 15) / 33);
@@ -25,7 +25,7 @@ final class wi {
 
     final static boolean a(int param0) {
         if (param0 != -10214) {
-          field_c = (rg) null;
+          field_c = (LoginPanel) null;
           if (kd.field_B == null) {
             return false;
           }

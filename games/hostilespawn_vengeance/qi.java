@@ -13,10 +13,10 @@ final class qi extends vd implements qk {
     private vm field_L;
     static int field_J;
 
-    final static pg[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static IndexedSprite[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        pg[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -24,7 +24,7 @@ final class qi extends vd implements qk {
         try {
           if (!rl.a(2884, param3, param0, param2)) {
             stackIn_2_0 = null;
-            return (pg[]) (stackIn_2_0);
+            return (IndexedSprite[]) (stackIn_2_0);
           }
           if (param1 <= 112) {
             qi.createAccountSuccessResult(true, true);

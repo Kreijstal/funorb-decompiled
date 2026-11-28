@@ -92,7 +92,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 var10 = (String) null;
                 AccountNameAvailabilityValidator.field_o = ie.a(ClientException.field_e, param3, false, (String) null, (byte) -119);
               } else {
-                AccountNameAvailabilityValidator.field_o = rl.a(20, false, param3, param2);
+                AccountNameAvailabilityValidator.field_o = LoginPanel.a(20, false, param3, param2);
               }
               LevelView.field_C.position = 0;
               LevelView.field_C.writeByte(14, (byte) -72);
@@ -106,7 +106,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (var6_int == 0) {
                 jc.field_a = md.field_e;
               } else {
-                hd.field_o = -1;
+                ConfirmedEmailAvailabilityValidator.field_o = -1;
                 uk.field_c = var6_int;
                 jc.field_a = ij.field_j;
               }
@@ -130,7 +130,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   jc.field_a = ij.field_j;
-                  hd.field_o = -1;
+                  ConfirmedEmailAvailabilityValidator.field_o = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -141,7 +141,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 }
               }
               if (decompiledFrameRemainder0) {
-                hd.field_o = -1;
+                ConfirmedEmailAvailabilityValidator.field_o = -1;
                 jc.field_a = CrossfadingMidiPcmStream.field_C;
               }
             }

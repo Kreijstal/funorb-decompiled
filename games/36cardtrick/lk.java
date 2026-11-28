@@ -49,7 +49,7 @@ class lk extends IntrusiveNode {
               }
             }
           }
-          if (k.field_c == 0 &&
+          if (DebouncedFieldValidator.field_c == 0 &&
             sa.field_c != 0) {
             this.a(false, this, eg.field_b, param1, param2, ij.field_e);
             var6 = sh.field_i;
@@ -61,7 +61,7 @@ class lk extends IntrusiveNode {
             }
           }
         }
-        sa.field_c = k.field_c;
+        sa.field_c = DebouncedFieldValidator.field_c;
         hi.a(this.b((byte) -79), (byte) -111);
         if (param0 == -116) {
           return param3;
@@ -637,7 +637,7 @@ class lk extends IntrusiveNode {
         }
         String var6 = wh.a((byte) -108);
         if (var6 != null) {
-          pj.field_a.a(p.field_k, (byte) -53, var6, ti.field_a);
+          pj.field_a.a(ConfirmedEmailAvailabilityValidator.field_k, (byte) -53, var6, ti.field_a);
         }
     }
 

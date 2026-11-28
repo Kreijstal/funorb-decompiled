@@ -42,7 +42,7 @@ final class ClientException extends RuntimeException {
         try {
           var1_int = MovingBlock.field_q;
           var2 = 0;
-          if (di.field_h == 2) {
+          if (TextFieldValidator.field_h == 2) {
             var3_long = -fe.field_N + qg.correctedCurrentTimeMillis(false);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -65,7 +65,7 @@ final class ClientException extends RuntimeException {
               var5 = db.field_db;
             }
             var6 = sa.field_I[var3];
-            if (di.field_h == 2 &&
+            if (TextFieldValidator.field_h == 2 &&
               1 == var2) {
               if (jf.field_i.length <= el.field_O.length) {
                 stackIn_19_0 = el.field_O.length;
@@ -73,8 +73,8 @@ final class ClientException extends RuntimeException {
                 stackIn_19_0 = jf.field_i.length;
               }
               var7 = stackIn_19_0;
-              if (bk.field_J.length >= IntrusiveDequeCursor.field_c.length) {
-                stackIn_22_0 = bk.field_J.length;
+              if (DisplayNameSelectionPanel.field_J.length >= IntrusiveDequeCursor.field_c.length) {
+                stackIn_22_0 = DisplayNameSelectionPanel.field_J.length;
               } else {
                 stackIn_22_0 = IntrusiveDequeCursor.field_c.length;
               }
@@ -90,10 +90,10 @@ final class ClientException extends RuntimeException {
               }
               if (var3 >= 7 + var7 &&
                 var3 < 7 - (-var7 - var8)) {
-                if (bk.field_J.length <= -var7 + var3 - 7) {
+                if (DisplayNameSelectionPanel.field_J.length <= -var7 + var3 - 7) {
                   stackIn_33_0 = "";
                 } else {
-                  stackIn_33_0 = bk.field_J[-var7 + (-7 + var3)];
+                  stackIn_33_0 = DisplayNameSelectionPanel.field_J[-var7 + (-7 + var3)];
                 }
                 var6 = stackIn_33_0;
               }

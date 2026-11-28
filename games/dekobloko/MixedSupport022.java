@@ -4,9 +4,9 @@
 final class MixedSupport022 {
     static byte[] byteArrayState0005;
     static MixedSupport057 mixedSupport057State0002;
-    static MixedSupport015 mixedSupport015State0001;
+    static NineSliceSprite mixedSupport015State0001;
     static boolean[] booleanArrayState0004;
-    static UiComponentPart031 uiComponentPart031State0001;
+    static AccountRegistrationPanel uiComponentPart031State0001;
 
     final static EmailValidationError computeEmailValidationError0328(String stringArgument1, int integerArgument2) {
         int integerLocal1 = 0;
@@ -86,7 +86,7 @@ final class MixedSupport022 {
         MixedSupport042.performAction0537(130, 256, 16694016, MixedSupport068.stringState0302, 82 + integerArgument1, SceneWidget.renderingSupport009State0007);
         int integerLocal2 = 145;
         MixedSupport035.rgbSpriteArrayArrayState0006[0][0].performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + (MixedSupport045.computeInteger0552(188, 0, integerLocal2, MixedSupport015.stringState0072, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -124, 0, 110 + integerArgument1) * 16 + 16);
+        integerLocal2 = integerLocal2 + (MixedSupport045.computeInteger0552(188, 0, integerLocal2, NineSliceSprite.stringState0072, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -124, 0, 110 + integerArgument1) * 16 + 16);
         MixedSupport035.rgbSpriteArrayArrayState0006[1][3].performAction0280(integerArgument1 + 82, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, NanoFrameTimer.stringState0129, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1) * 16);
         DisplayModeController.performAction1439(integerLocal2, MixedSupport070.integerState0396, MixedSupport049.integerState0264, -115, 190 + integerArgument1, TextLineMetrics.integerState0534, 0);
@@ -273,12 +273,12 @@ final class MixedSupport022 {
     }
 
     final static void performAction0329(boolean booleanArgument1, boolean booleanArgument2) {
-        UiComponentPart013.performAction0629(booleanArgument2, -95);
+        LoginPanel.performAction0629(booleanArgument2, -95);
         if (booleanArgument1) {
           return;
         }
         if (null != MixedSupport117.stringState0515) {
-          SceneWidgetPart009.performAction1337(MixedSupport117.stringState0515, -2);
+          IconLabelWidget.drawMouseTooltip(MixedSupport117.stringState0515, -2);
         }
     }
 

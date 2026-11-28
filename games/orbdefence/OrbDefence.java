@@ -41,13 +41,13 @@ public final class OrbDefence extends NetworkGameClient {
           }
         }
         if (!f.field_j) {
-          vi.a(false, of.field_K);
+          EditableTextField.a(false, of.field_K);
           if (this.a(true, (byte) 97)) {
             f.field_j = true;
           }
         } else {
           if (!ad.a((byte) -72)) {
-            em.b((byte) 118);
+            PasswordValidator.b((byte) 118);
             if (ad.a((byte) -72)) {
               bg.a(-2027485778);
               ImageProducerRasterBuffer.b(0);
@@ -81,7 +81,7 @@ public final class OrbDefence extends NetworkGameClient {
               if (lc.field_r != 0) {
                 this.e(false);
               } else {
-                var2 = hi.i(0);
+                var2 = TextFieldValidator.i(0);
                 if (var2 == 2) {
                   lb.a(true);
                 } else {
@@ -441,9 +441,9 @@ public final class OrbDefence extends NetworkGameClient {
         ve.clearStaticReferences(false);
         pc.resetStaticState(-1);
         dh.resetStaticState((byte) -94);
-        rf.clearStaticReferences(!param0 ? true : false);
-        pk.l(-100);
-        el.resetStaticState(!param0 ? true : false);
+        AccountRegistrationPanel.clearStaticReferences(!param0 ? true : false);
+        LoginPanel.l(-100);
+        DisplayNameSelectionPanel.resetStaticState(!param0 ? true : false);
         ee.clearStaticReferences((byte) 107);
         bl.clearStaticReferences(13756);
         ne.clearStaticReferences(-1459);
@@ -540,15 +540,15 @@ public final class OrbDefence extends NetworkGameClient {
         vc.a((byte) 116);
         rc.a(-127);
         h.releaseDeclaredStaticReferences(-115);
-        oc.q(119);
-        vi.n(1);
+        ValidatedTextField.q(119);
+        EditableTextField.n(1);
         hl.discardDeclaredStaticReferences(0);
         dg.clearStaticReferences((byte) 120);
         we.releaseDeclaredStaticReferences(29858);
         te.releaseDeclaredStaticReferences(-3213);
         kk.discardDeclaredStaticReferences(79);
         of.clearStaticReferences((byte) -83);
-        hi.g(-104);
+        TextFieldValidator.g(-104);
         qb.clearStaticReferences((byte) -83);
         ob.resetStaticState((byte) -19);
         ue.clearStaticReferences((byte) -13);
@@ -605,15 +605,15 @@ public final class OrbDefence extends NetworkGameClient {
         sa.a((byte) -105);
         ed.a(-1);
         AccountNameAvailabilityValidator.clearStaticReferences((byte) -97);
-        em.resetStaticState((byte) -15);
-        wg.resetStaticState(-24392);
-        b.j(-1);
-        nb.clearDeclaredStaticReferences(-1);
-        ug.clearStaticReferences((byte) -41);
+        PasswordValidator.resetStaticState((byte) -15);
+        EmailFormatValidator.resetStaticState(-24392);
+        ConfirmedEmailAvailabilityValidator.j(-1);
+        AgeValidator.clearDeclaredStaticReferences(-1);
+        MatchingFieldValidator.clearStaticReferences((byte) -41);
         li.clearStaticReferences(false);
         cc.clearStaticReferences((byte) 83);
         qd.clearStaticReferences(-96);
-        wb.clearStaticReferences(7312);
+        DebouncedFieldValidator.clearStaticReferences(7312);
         e.clearStaticReferences((byte) -14);
         this.field_n = null;
     }
@@ -634,12 +634,12 @@ public final class OrbDefence extends NetworkGameClient {
           return;
         }
         if (!f.field_j) {
-          em.a(0, var7);
+          PasswordValidator.a(0, var7);
           return;
         }
         if (!ad.a((byte) -72)) {
           j.a(100.0f, ge.field_i, (byte) 113);
-          em.a(0, var7);
+          PasswordValidator.a(0, var7);
           return;
         }
         SoftwareRasterizer.clearRaster();
@@ -692,7 +692,7 @@ public final class OrbDefence extends NetworkGameClient {
           !rl.a((byte) 101)) {
           stackIn_39_0 = 82;
           if (null == PacketBuffer.field_k) {
-            stackIn_40_1 = wg.field_o;
+            stackIn_40_1 = EmailFormatValidator.field_o;
           } else {
             stackIn_40_1 = true;
           }
@@ -767,13 +767,13 @@ public final class OrbDefence extends NetworkGameClient {
           if (j.field_b.ensureIndexLoaded(-1) &&
             j.field_b.tryLoadGroupByName((byte) 102, "basic")) {
             if (!j.field_b.tryLoadGroupByName((byte) 99, "arialbold14")) {
-              j.a(4.0f, ed.a(hi.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
+              j.a(4.0f, ed.a(TextFieldValidator.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
               return false;
             }
             if (GameAppletShell.field_d.ensureIndexLoaded(-1) &&
               GameAppletShell.field_d.tryLoadGroupByName((byte) 121, "arialbold14")) {
               if (!j.field_b.tryLoadGroupByName((byte) 81, "arial13")) {
-                j.a(4.0f, ed.a(hi.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
+                j.a(4.0f, ed.a(TextFieldValidator.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
                 return false;
               }
               if (GameAppletShell.field_d.ensureIndexLoaded(param1 - 98) &&
@@ -845,7 +845,7 @@ public final class OrbDefence extends NetworkGameClient {
                             vd.a(39);
                             return false;
                           }
-                          j.a(55.0f, ed.a(hi.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
+                          j.a(55.0f, ed.a(TextFieldValidator.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
                           return false;
                         }
                         j.a(45.0f, ed.a(kj.field_z, bh.field_d, param1 - 14513, jj.field_B, ""), (byte) 120);
@@ -863,10 +863,10 @@ public final class OrbDefence extends NetworkGameClient {
                 j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
                 return false;
               }
-              j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 122);
+              j.a(5.0f, ed.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 122);
               return false;
             }
-            j.a(5.0f, ed.a(hi.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
+            j.a(5.0f, ed.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
             return false;
           }
           j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
@@ -937,8 +937,8 @@ public final class OrbDefence extends NetworkGameClient {
           sl.a(2408, DelegatingCanvas.field_d);
           sl.a(param1 ^ 2313, me.field_n);
           sl.a(param1 ^ 2313, jm.field_b);
-          ob.field_I = b.a("", "arialbold14", param1 - 202, GameAppletShell.field_d, j.field_b);
-          jd.field_c = b.a("", "arial13", 90, GameAppletShell.field_d, j.field_b);
+          ob.field_I = ConfirmedEmailAvailabilityValidator.a("", "arialbold14", param1 - 202, GameAppletShell.field_d, j.field_b);
+          jd.field_c = ConfirmedEmailAvailabilityValidator.a("", "arial13", 90, GameAppletShell.field_d, j.field_b);
           GameAppletShell.field_d = null;
           j.field_b = null;
           vd.a(param1 ^ 59);
@@ -952,7 +952,7 @@ public final class OrbDefence extends NetworkGameClient {
             kf.field_c = 0;
             cc.a(false, 50);
             km.a((byte) -62, 50);
-            hi.a(ee.field_b[12], param1 ^ 99, false, 1, true, 2);
+            TextFieldValidator.a(ee.field_b[12], param1 ^ 99, false, 1, true, 2);
             bl.field_p = 0;
           }
           if (param1 == 97) {
@@ -972,7 +972,7 @@ public final class OrbDefence extends NetworkGameClient {
         array$1 = new int[var14.length];
         cc.field_t.field_J[1] = array$1;
         for (var4_int = 0; var14.length > var4_int; var4_int++) {
-          cc.field_t.field_J[1][var4_int] = vi.a(var14[var4_int], 16711935);
+          cc.field_t.field_J[1][var4_int] = EditableTextField.a(var14[var4_int], 16711935);
         }
         var4 = fl.a(-9945, bh.field_d, "", "keys");
         var5 = new int[]{14, 14, 14, 15, 15};
@@ -990,9 +990,9 @@ public final class OrbDefence extends NetworkGameClient {
         am.field_d[3] = fk.a(bh.field_d, "baseimage4", gi.a((int) param1, -95), "");
         am.field_d[4] = fk.a(bh.field_d, "baseimage5", -72, "");
         am.field_d[5] = fk.a(bh.field_d, "baseimage6", -58, "");
-        hi.field_g = new RgbSprite[6];
-        for (var6Lifetime1 = 0; hi.field_g.length > var6Lifetime1; var6Lifetime1++) {
-          hi.field_g[var6Lifetime1] = new RgbSprite(160, 120);
+        TextFieldValidator.field_g = new RgbSprite[6];
+        for (var6Lifetime1 = 0; TextFieldValidator.field_g.length > var6Lifetime1; var6Lifetime1++) {
+          TextFieldValidator.field_g[var6Lifetime1] = new RgbSprite(160, 120);
         }
         hg.field_ab = fk.a(bh.field_d, "anorb", param1 ^ -64, "");
         ab.field_g = p.a(13863, "", bh.field_d, "walk_norb");

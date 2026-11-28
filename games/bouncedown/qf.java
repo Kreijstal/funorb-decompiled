@@ -67,7 +67,7 @@ final class qf {
     final static void a(int param0) {
         if (nk.field_a != null) {
           nk.field_a.a(true);
-          il.field_b = new q();
+          il.field_b = new DisplayNameSelectionPanel();
           ed.field_c.a(10768, il.field_b);
           if (param0 != 0) {
             field_b = 53;
@@ -75,7 +75,7 @@ final class qf {
           }
           return;
         }
-        il.field_b = new q();
+        il.field_b = new DisplayNameSelectionPanel();
         ed.field_c.a(10768, il.field_b);
         if (param0 == 0) {
           return;

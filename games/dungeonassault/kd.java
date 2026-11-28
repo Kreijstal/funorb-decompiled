@@ -70,16 +70,16 @@ final class kd {
           var3 = var10.readUnsignedByte(true);
           var10.e(false);
           ch.field_n = lo.a(var10, (byte) -128);
-          ih.field_w = new qh[var3];
+          RaiderRecruitmentScreen.field_w = new qh[var3];
           lk.field_R = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ih.field_w[var4] = df.a(false, var8);
+            RaiderRecruitmentScreen.field_w[var4] = df.a(false, var8);
           }
           var10.f((byte) 32);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var9 < var3) {
-            var5 = ih.field_w[var9];
+            var5 = RaiderRecruitmentScreen.field_w[var9];
             var5.a(1, false, 6, 6, 6);
             var5.a((byte) -127);
             var6 = new int[]{var5.field_H + var5.field_i >> 1, var5.field_p + var5.field_M >> 1, var5.field_a + var5.field_b >> 1};

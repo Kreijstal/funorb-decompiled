@@ -147,7 +147,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         bj.j(97);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, 256 - var5);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           if (150 <= ji.field_b) {
             CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
           } else {
@@ -172,7 +172,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             }
           }
         } else {
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           if (150 <= ji.field_b) {
             CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
             var6 = ji.field_b - 125;

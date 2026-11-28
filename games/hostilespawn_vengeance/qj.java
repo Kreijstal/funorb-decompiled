@@ -238,7 +238,7 @@ final class qj extends IntrusiveNode {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, oc param2, oc param3) {
+    final static void a(int param0, int param1, GridPoint param2, GridPoint param3) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         RuntimeException stackIn_36_0 = null;
@@ -250,9 +250,9 @@ final class qj extends IntrusiveNode {
         int var4_int = 0;
         RuntimeException var4 = null;
         oj var5 = null;
-        oc var6 = null;
+        GridPoint var6 = null;
         oj var7 = null;
-        oc var8 = null;
+        GridPoint var8 = null;
         og var9 = null;
         int var10 = 0;
         int var11 = 0;
@@ -272,7 +272,7 @@ final class qj extends IntrusiveNode {
           if (param0 > -87) {
             field_m = (String) null;
           }
-          var10 = var8.b(-4);
+          var10 = var8.getClampedTileIndex(-4);
           stackIn_5_0 = (wb.field_R > 0) ? 0 : 1;
           var11 = stackIn_5_0;
           if (var11 != 0) {
@@ -318,7 +318,7 @@ final class qj extends IntrusiveNode {
             -1 == rl.field_c) {
             return;
           }
-          ei.a(var17, var16, var8, var11 != 0, var9, param3, var15, 6, var12 != 0, var7, var4_int, var13, var10, 81, 8, var14, var6);
+          DelayedPacket.a(var17, var16, var8, var11 != 0, var9, param3, var15, 6, var12 != 0, var7, var4_int, var13, var10, 81, 8, var14, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,10 +340,10 @@ final class qj extends IntrusiveNode {
         }
     }
 
-    final static fe a(int param0, String param1, int param2) {
-        el var3 = null;
+    final static SocketFactory a(int param0, String param1, int param2) {
+        ProxySocketFactory var3 = null;
         RuntimeException var3_ref = null;
-        el stackIn_3_0 = null;
+        ProxySocketFactory stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -352,11 +352,11 @@ final class qj extends IntrusiveNode {
           if (param0 != 27) {
             field_m = (String) null;
           }
-          var3 = new el();
-          ((fe) ((Object) var3)).field_b = param2;
-          ((fe) ((Object) var3)).field_a = param1;
+          var3 = new ProxySocketFactory();
+          ((SocketFactory) ((Object) var3)).field_b = param2;
+          ((SocketFactory) ((Object) var3)).field_a = param1;
           stackIn_3_0 = var3;
-          return (fe) ((Object) stackIn_3_0);
+          return (SocketFactory) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

@@ -26,9 +26,9 @@ final class jd extends IntrusiveNode {
         int var9 = 0;
         int var10 = 0;
         int var3 = ni.a(param1, param2 ^ -8114);
-        int var4 = of.a((byte) 75, param1);
+        int var4 = ClientLookupTables.cosineFixedPoint((byte) 75, param1);
         int var5 = ni.a(param0, 8191);
-        int var6 = of.a((byte) -81, param0);
+        int var6 = ClientLookupTables.cosineFixedPoint((byte) -81, param0);
         if (param2 == -79) {
           var7 = (int)((long)var5 * (long)var3 >> 16);
           var8 = (int)((long)var6 * (long)var3 >> 16);

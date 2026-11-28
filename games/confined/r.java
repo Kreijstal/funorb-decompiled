@@ -18,12 +18,12 @@ final class r {
     }
 
     final static void a(bj param0, int param1, int param2) {
-        lf.field_k.addLast((IntrusiveNode) (param0), (byte) 67);
+        MatchingFieldValidator.field_k.addLast((IntrusiveNode) (param0), (byte) 67);
         if (param1 != -1) {
           return;
         }
         try {
-          lf.a(param2, 102, param0);
+          MatchingFieldValidator.a(param2, 102, param0);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "r.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

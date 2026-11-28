@@ -187,12 +187,12 @@ abstract class rb extends GameApplet {
           if (var4 == 13) {
             try {
               if (q.field_d == null) {
-                q.field_d = new v(ic.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                q.field_d = new v(DebouncedFieldValidator.field_d, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (q.field_d.a(14709)) {
                 var12 = q.field_d.b(-4);
                 if (var12 != null) {
-                  var7 = kk.decodeCp1252String(var12.position, (byte) 97, 0, var12.payload);
+                  var7 = AgeValidator.decodeCp1252String(var12.position, (byte) 97, 0, var12.payload);
                   il.a(7110, var7);
                 } else {
                   var9 = (String) null;
@@ -246,8 +246,8 @@ abstract class rb extends GameApplet {
         this.setBackground(java.awt.Color.black);
         bb.field_d = this.field_q;
         ke.a(41, bb.field_d);
-        sg.a(5000, this.field_D, this.field_C, bb.field_d, ic.field_d, param5, 96, param4, this.field_y, 5000, this.field_A, this.field_z, this.field_r, this.field_o);
-        DualLinkDeque.a(69, this.field_r, bb.field_d, this.field_A, ic.field_d, param5, this.field_C, this.field_z, this.field_D);
+        sg.a(5000, this.field_D, this.field_C, bb.field_d, DebouncedFieldValidator.field_d, param5, 96, param4, this.field_y, 5000, this.field_A, this.field_z, this.field_r, this.field_o);
+        DualLinkDeque.a(69, this.field_r, bb.field_d, this.field_A, DebouncedFieldValidator.field_d, param5, this.field_C, this.field_z, this.field_D);
         bl.a((byte) -62);
         og.field_c = ck.createMouseWheelInput(2113632);
         nc.a(qd.field_j, (byte) 123);
@@ -278,12 +278,12 @@ abstract class rb extends GameApplet {
     private final void j(byte param0) {
         int var4 = 0;
         byte[] var5 = null;
-        int var2 = ae.field_N.readUnsignedByte(4);
+        int var2 = EditableTextField.field_N.readUnsignedByte(4);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 == 108) {
           var4 = -1 + ue.field_b;
           var5 = new byte[var4];
-          ae.field_N.a(var5, true, 0, var4);
+          EditableTextField.field_N.a(var5, true, 0, var4);
           fk.a(hf.a((byte) -113), var3 != 0, se.a(param0 - 108, var5), (byte) 103);
           return;
         }
@@ -343,7 +343,7 @@ abstract class rb extends GameApplet {
           ke.field_b = og.field_c.pollRotation(-115);
         }
         if (ih.b(12871)) {
-          var3 = ea.f((byte) -21) * 1200;
+          var3 = MatchingFieldValidator.f((byte) -21) * 1200;
           if (this.field_p ||
             !(kf.a(65280) <= var3) &&
             !(var3 >= gh.a(true))) {
@@ -411,7 +411,7 @@ abstract class rb extends GameApplet {
                       wl.a(5, -8440, DualLinkNode.field_n);
                     }
                   } else {
-                    wl.a(256, -8440, ea.field_n);
+                    wl.a(256, -8440, MatchingFieldValidator.field_n);
                   }
                 }
               }
@@ -442,11 +442,11 @@ abstract class rb extends GameApplet {
           if (bb.field_d != 0) {
             pg.field_db = wl.a(1, ArchiveRequest.field_A);
           }
-          lk.field_i = o.a(1, 2, nk.field_b, false, true);
+          TextFieldValidator.field_i = o.a(1, 2, nk.field_b, false, true);
           wf.field_e = o.a(1, 2, ck.field_hb, false, true);
           am.field_g = o.a(1, 2, vd.field_b, false, true);
           DiskCacheWorker.field_f = 2;
-          fc.field_a = lk.field_i;
+          fc.field_a = TextFieldValidator.field_i;
           SpriteState.field_u = wf.field_e;
         }
         if (DiskCacheWorker.field_f == 2) {
@@ -467,13 +467,13 @@ abstract class rb extends GameApplet {
           }
         }
         if (DiskCacheWorker.field_f == 3 &&
-          ni.a(wf.field_e, am.field_g, lk.field_i, (byte) -104) &&
+          ni.a(wf.field_e, am.field_g, TextFieldValidator.field_i, (byte) -104) &&
           dj.a(am.field_g, (byte) -126)) {
           ol.b(-114);
           gk.a(false);
           am.field_i = fl.field_c;
           PcmResampler.field_d = false;
-          hc.a(am.field_g, lk.field_i, wf.field_e, uj.field_f, (byte) -88);
+          hc.a(am.field_g, TextFieldValidator.field_i, wf.field_e, uj.field_f, (byte) -88);
           if (v.field_b ||
             null != IterableNodeHashTable.field_g) {
             stackIn_100_0 = !(v.field_b);
@@ -487,10 +487,10 @@ abstract class rb extends GameApplet {
           }
           if (pg.field_cb == null) {
             pg.field_cb = fk.d(75);
-            mj.field_L = qc.a(1);
+            AccountRegistrationPanel.field_L = qc.a(1);
           }
-          ab.a(am.field_g, true, mj.field_L, pg.field_cb);
-          lk.field_i = null;
+          ab.a(am.field_g, true, AccountRegistrationPanel.field_L, pg.field_cb);
+          TextFieldValidator.field_i = null;
           wf.field_e = null;
           am.field_g = null;
           aa.a((java.applet.Applet) (this), -106);
@@ -552,7 +552,7 @@ abstract class rb extends GameApplet {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = la.a(param2, (byte) 110);
+          var3 = LoginPanel.a(param2, (byte) 110);
           if (-1 != param0.indexOf(param2)) {
             return true;
           }
@@ -735,7 +735,7 @@ abstract class rb extends GameApplet {
                             ok.a((byte) -54, var3);
                           }
                         } else {
-                          fb.a(ae.field_N, ue.field_b, ic.field_d, 20);
+                          fb.a(EditableTextField.field_N, ue.field_b, DebouncedFieldValidator.field_d, 20);
                         }
                       } else {
                         this.b(false);
@@ -796,7 +796,7 @@ abstract class rb extends GameApplet {
             se.a(4, -91);
           }
           if (wc.field_x[4]) {
-            ic.a(5, 55);
+            DebouncedFieldValidator.a(5, 55);
           }
           if (wc.field_x[5]) {
             h.a(-96, 6);

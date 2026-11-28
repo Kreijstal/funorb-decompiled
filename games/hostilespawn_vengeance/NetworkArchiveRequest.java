@@ -119,7 +119,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         var11 = HostileSpawn.field_I ? 1 : 0;
         try {
           oa.field_d.field_i = 13;
-          oa.field_d.field_j.a((byte) 46, param1.field_j);
+          oa.field_d.field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
           oa.field_d.field_l.a(param1.field_l.field_a - 0.5, param1.field_l.field_f - 0.5, 1);
           if (0.0 > oa.field_d.field_l.field_a) {
             oa.field_d.field_l.field_a = oa.field_d.field_l.field_a + 1.0;
@@ -134,7 +134,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var5 = param0.field_l.field_a + (double)param0.field_j.field_g;
           oa.field_d.field_l.a(20, (byte) 94, oa.field_d.field_c);
           var7 = 0;
-          var8 = param0.field_j.b(-4);
+          var8 = param0.field_j.getClampedTileIndex(-4);
           var9 = ln.field_a.field_c[var8];
           ln.field_a.field_c[var8] = 0;
           if (param2 > -40) {
@@ -142,7 +142,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           }
           for (var10 = 0; var10 < 100; var10++) {
             oa.field_d.a(8573);
-            var7 = ln.field_a.field_c[oa.field_d.field_j.b(-4)];
+            var7 = ln.field_a.field_c[oa.field_d.field_j.getClampedTileIndex(-4)];
             if (var7 != 2 &&
               !oa.field_d.a(var3_double, var5, 29821)) {
               oa.field_d.field_l.a(2, (byte) 94, oa.field_d.field_c);

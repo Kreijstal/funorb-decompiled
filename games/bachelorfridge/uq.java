@@ -298,7 +298,7 @@ final class uq extends UiComponent {
             this.field_yb.field_gb = 16764006;
             this.field_Ab.a(-1, this.field_yb);
             this.field_yb.name = "|";
-            if (!(hka.field_i < 5) ||
+            if (!(AgeValidator.field_i < 5) ||
               !(BananarangSpecial.field_r < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
@@ -306,7 +306,7 @@ final class uq extends UiComponent {
                 stackIn_6_2 = null;
                 stackIn_6_3 = 0L;
                 stackIn_6_4 = (daa) (param9);
-                if (7 > hka.field_i) {
+                if (7 > AgeValidator.field_i) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
                   if (BananarangSpecial.field_r < 2) {

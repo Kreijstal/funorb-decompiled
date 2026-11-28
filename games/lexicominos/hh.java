@@ -330,7 +330,7 @@ final class hh extends mg {
             SecondaryNodeDeque.field_d.field_l = 14;
             SecondaryNodeDeque.field_d.field_e = 5;
             SecondaryNodeDeque.field_d.field_c = 7697781;
-            SecondaryNodeDeque.field_d.field_p = cl.field_T;
+            SecondaryNodeDeque.field_d.field_p = ValidatedTextField.field_T;
             SecondaryNodeDeque.field_d.field_k = 0;
             SecondaryNodeDeque.field_d.field_n = 4;
           }
@@ -345,7 +345,7 @@ final class hh extends mg {
           SecondaryNodeDeque.field_d.field_l = 14;
           SecondaryNodeDeque.field_d.field_e = 5;
           SecondaryNodeDeque.field_d.field_c = 7697781;
-          SecondaryNodeDeque.field_d.field_p = cl.field_T;
+          SecondaryNodeDeque.field_d.field_p = ValidatedTextField.field_T;
           SecondaryNodeDeque.field_d.field_k = 0;
           SecondaryNodeDeque.field_d.field_n = 4;
         }

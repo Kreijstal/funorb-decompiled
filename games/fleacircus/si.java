@@ -247,26 +247,26 @@ final class si {
             return stackIn_59_0;
           }
           if (param1) {
-            ul.field_G.b(109, ProxyAuthenticationRequiredException.a(ob.field_e, false, pb.field_d), ProxyAuthenticationRequiredException.a(kc.field_b, false, ag.field_f));
-            if (ul.field_G.b(-78)) {
-              if (ul.field_G.field_k == 0) {
+            LoginPanel.field_G.b(109, ProxyAuthenticationRequiredException.a(ob.field_e, false, pb.field_d), ProxyAuthenticationRequiredException.a(kc.field_b, false, ag.field_f));
+            if (LoginPanel.field_G.b(-78)) {
+              if (LoginPanel.field_G.field_k == 0) {
                 stackIn_64_0 = 3;
                 return stackIn_64_0;
               }
-              if (1 == ul.field_G.field_k) {
+              if (1 == LoginPanel.field_G.field_k) {
                 stackIn_67_0 = 2;
                 return stackIn_67_0;
               }
             }
             stackIn_70_0 = -97;
             while (SecondaryNodeDeque.b(stackIn_70_0)) {
-              ul.field_G.a(0, true);
-              if (ul.field_G.b(107)) {
-                if (ul.field_G.field_k == 0) {
+              LoginPanel.field_G.a(0, true);
+              if (LoginPanel.field_G.b(107)) {
+                if (LoginPanel.field_G.field_k == 0) {
                   stackIn_74_0 = 3;
                   return stackIn_74_0;
                 }
-                if (ul.field_G.field_k == 1) {
+                if (LoginPanel.field_G.field_k == 1) {
                   stackIn_77_0 = 1;
                   return stackIn_77_0;
                 }

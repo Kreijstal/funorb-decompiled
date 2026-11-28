@@ -10,7 +10,7 @@ final class bc {
         if (param0 != -464379825) {
           field_a = 5;
         }
-        rd.field_j.readUnsignedByte(96);
+        EmailFormatValidator.field_j.readUnsignedByte(96);
     }
 
     static int a(int param0, int param1) {
@@ -25,9 +25,9 @@ final class bc {
     }
 
     final static void a(boolean param0, PacketBuffer param1) {
-        cg.field_h = param1.readUnsignedShort((byte) 72) << 5;
+        TextFieldValidator.field_h = param1.readUnsignedShort((byte) 72) << 5;
         int var2_int = param1.readUnsignedByte(-128);
-        cg.field_h = cg.field_h + (var2_int >> 3);
+        TextFieldValidator.field_h = TextFieldValidator.field_h + (var2_int >> 3);
         sa.field_a = (7 & var2_int) << 18;
         sa.field_a = sa.field_a + (param1.readUnsignedShort((byte) 72) << 2);
         var2_int = param1.readUnsignedByte(123);

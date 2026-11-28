@@ -434,8 +434,8 @@ class pj extends vg implements ba {
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
-            var9Lifetime3 = ei.field_o;
-            ei.field_o = ia.field_c;
+            var9Lifetime3 = TextFieldValidator.field_o;
+            TextFieldValidator.field_o = ia.field_c;
             dk.field_b = true;
             ia.field_c = var9Lifetime3;
           }

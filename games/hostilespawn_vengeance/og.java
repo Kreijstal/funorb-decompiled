@@ -16,13 +16,13 @@ final class og {
           this.field_a = this.field_a + Math.cos(param2) * (double)(-param0) / 20.0;
           return;
         }
-        oc var6 = (oc) null;
-        og.a((byte) 120, (oc) null);
+        GridPoint var6 = (GridPoint) null;
+        og.a((byte) 120, (GridPoint) null);
         this.field_f = this.field_f + (double)(-param0) * Math.sin(param2) / 20.0;
         this.field_a = this.field_a + Math.cos(param2) * (double)(-param0) / 20.0;
     }
 
-    final boolean[] a(int param0, double param1, oc param2, boolean param3, id param4) {
+    final boolean[] a(int param0, double param1, GridPoint param2, boolean param3, id param4) {
         RuntimeException var7 = null;
         boolean[] stackIn_2_0 = null;
         boolean[] stackIn_4_0 = null;
@@ -59,7 +59,7 @@ final class og {
         }
     }
 
-    final boolean[] a(double param0, oc param1, int param2, id param3, byte param4) {
+    final boolean[] a(double param0, GridPoint param1, int param2, id param3, byte param4) {
         RuntimeException var7 = null;
         boolean[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -135,7 +135,7 @@ final class og {
         }
     }
 
-    final boolean[] a(oc param0, double param1, int param2, int param3, id param4) {
+    final boolean[] a(GridPoint param0, double param1, int param2, int param3, id param4) {
         RuntimeException var7 = null;
         boolean[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -180,7 +180,7 @@ final class og {
         this.field_f = param1;
     }
 
-    final static void a(byte param0, oc param1) {
+    final static void a(byte param0, GridPoint param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -203,8 +203,8 @@ final class og {
             var2_int++;
           }
           for (var2_intLifetime1 = -1 + PacketBuffer.field_p.length; var2_intLifetime1 >= 0; var2_intLifetime1--) {
-            mm.field_m[el.field_j] = PacketBuffer.field_p[var2_intLifetime1];
-            el.field_j = el.field_j + 1;
+            mm.field_m[ProxySocketFactory.field_j] = PacketBuffer.field_p[var2_intLifetime1];
+            ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -221,7 +221,7 @@ final class og {
         }
     }
 
-    final boolean[] a(int param0, boolean param1, double param2, int param3, id param4, int param5, oc param6) {
+    final boolean[] a(int param0, boolean param1, double param2, int param3, id param4, int param5, GridPoint param6) {
         int stackIn_25_0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_33_0 = 0;
@@ -262,7 +262,7 @@ final class og {
           var9_double = 3.141592653589793 * param2 / 128.0;
           if (param0 != 25302) {
             var33 = (id) null;
-            this.a(-112, 0.23920950584503275, (oc) null, true, (id) null);
+            this.a(-112, 0.23920950584503275, (GridPoint) null, true, (id) null);
           }
           var11 = Math.sin(var9_double) * (double)(-param3) / 40.0;
           if (var11 > -0.01 &&
@@ -276,7 +276,7 @@ final class og {
           }
           var15 = var11;
           var17 = var13;
-          var19 = param6.b(-4);
+          var19 = param6.getClampedTileIndex(-4);
           var20 = var11;
           if (var11 * (this.field_f - 0.5) <= 0.0) {
             var20 = 0.0;
@@ -387,7 +387,7 @@ final class og {
     }
 
     public final String toString() {
-        return "(" + oc.a(-1, this.field_f) + "," + oc.a(-1, this.field_a) + ")";
+        return "(" + GridPoint.formatTwoDecimals(-1, this.field_f) + "," + GridPoint.formatTwoDecimals(-1, this.field_a) + ")";
     }
 
     final void b(double param0, double param1, int param2) {

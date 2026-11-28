@@ -14,7 +14,7 @@ final class eb extends IntrusiveNode {
     static eb field_l;
     static boolean field_m;
 
-    final static boolean a(String param0, boolean param1, String param2, int param3, dg param4, int param5, String param6) {
+    final static boolean a(String param0, boolean param1, String param2, int param3, AccountRegistrationPanel param4, int param5, String param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         String var8 = null;
@@ -35,7 +35,7 @@ final class eb extends IntrusiveNode {
           }
           if (param3 != 193) {
             var8 = (String) null;
-            eb.a((String) null, false, (String) null, -40, (dg) null, -123, (String) null);
+            eb.a((String) null, false, (String) null, -40, (AccountRegistrationPanel) null, -123, (String) null);
           }
           var9 = new AccountCreationResultPanel(t.field_b, param4);
           var7 = var9;

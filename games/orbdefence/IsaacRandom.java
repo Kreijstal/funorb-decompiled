@@ -190,10 +190,10 @@ final class IsaacRandom {
             }
           }
           this.field_d = this.field_d + this.field_a[128 + var2 & 255];
-          dupTemp$1 = this.field_a[vi.a(var3 >> 2, 255)] + (this.field_d + this.field_e);
+          dupTemp$1 = this.field_a[EditableTextField.a(var3 >> 2, 255)] + (this.field_d + this.field_e);
           var4 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_a[vi.a(var4 >> 8 >> 2, 255)];
+          dupTemp$2 = var3 + this.field_a[EditableTextField.a(var4 >> 8 >> 2, 255)];
           this.field_e = dupTemp$2;
           this.field_b[var2] = dupTemp$2;
         }

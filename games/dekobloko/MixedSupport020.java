@@ -229,7 +229,7 @@ final class MixedSupport020 extends HashNode {
                 }
               } else {
                 if (sceneWidgetPart012Local26.booleanState0189) {
-                  sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(116, MixedSupport075.stringState0325, new String[]{stringLocal34});
+                  sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(116, PlayerBoardUpdateQueue.stringState0325, new String[]{stringLocal34});
                   sceneWidgetPart012Local26.sceneWidgetState0120.stringState0598 = MixedSupport036.stringState0167;
                 } else {
                   if (!sceneWidgetPart012Local26.booleanState0187) {
@@ -308,7 +308,7 @@ final class MixedSupport020 extends HashNode {
                 if (0 != sceneWidgetPart012Local26.sceneWidgetState0120.integerState0891) {
                   MixedSupport083.performAction1089(true, sceneWidgetPart012Local26.longState0048, integerArgument3);
                 } else {
-                  MixedSupport042.performAction0538(0, sceneWidgetPart012Local26, sceneWidgetPart008Argument4, UiComponentPart013.integerState0276, 0, integerArgument2 ^ 17358, TextLineMetrics.integerState0535);
+                  MixedSupport042.performAction0538(0, sceneWidgetPart012Local26, sceneWidgetPart008Argument4, LoginPanel.integerState0276, 0, integerArgument2 ^ 17358, TextLineMetrics.integerState0535);
                 }
               } else {
                 MixedSupport013.performAction0172(sceneWidgetPart012Local26.longState0048, integerArgument3, (byte) -84);
@@ -343,7 +343,7 @@ final class MixedSupport020 extends HashNode {
                     if (integerLocal41 == 1) {
                       objectLocal55 = MixedSupport089.stringState0374;
                     }
-                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(118, MixedSupport075.stringState0323, new String[]{null, Integer.toString(integerLocal41)});
+                    objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(118, PlayerBoardUpdateQueue.stringState0323, new String[]{null, Integer.toString(integerLocal41)});
                   }
                 }
               } else {
@@ -369,7 +369,7 @@ final class MixedSupport020 extends HashNode {
                   } else {
                     integerLocal41 = -sceneWidgetPart012Local26.integerState0784 + integerLocal19;
                     if (integerLocal41 == 1) {
-                      objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(93, InputAdapter002.stringState0448, new String[]{stringLocal34});
+                      objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(93, BirthDateValidator.stringState0448, new String[]{stringLocal34});
                     }
                     objectLocal55 = NodeHashTableIterator.substituteIndexedPlaceholders(99, MixedSupport072.stringState0320, new String[]{stringLocal34, Integer.toString(integerLocal41)});
                   }
@@ -423,7 +423,7 @@ final class MixedSupport020 extends HashNode {
                     integerLocal46 = 1;
                   }
                   if (integerLocal46 != 0) {
-                    stringLocal57 = "<col=A00000>" + UiComponentPart022.stringArrayState0026[integerLocal1] + "</col>";
+                    stringLocal57 = "<col=A00000>" + AccountFieldStatusIndicator.stringArrayState0026[integerLocal1] + "</col>";
                     objectLocal42 = stringLocal57;
                     objectLocal55 = objectLocal42;
                     objectLocal42 = stringLocal57;
@@ -515,7 +515,7 @@ final class MixedSupport020 extends HashNode {
         boolean stackBooleanLocal5 = false;
         String stackStringLocal6 = null;
         boolean stackBooleanLocal7 = false;
-        MixedSupport015 stackMixedSupport015Local8 = null;
+        NineSliceSprite stackMixedSupport015Local8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         int integerLocal10 = 0;
         RuntimeException runtimeExceptionLocal11 = null;
@@ -527,7 +527,7 @@ final class MixedSupport020 extends HashNode {
         String stringLocal17 = null;
         int integerLocal18 = 0;
         int integerLocal19 = 0;
-        MixedSupport015 mixedSupport015Local20 = null;
+        NineSliceSprite mixedSupport015Local20 = null;
         int integerLocal21 = 0;
         int integerLocal22;
         int integerLocal23;
@@ -546,7 +546,7 @@ final class MixedSupport020 extends HashNode {
           if (!booleanArgument1) {
             renderingSupport007State0003 = (RenderingSupport007) null;
           }
-          while (integerLocal14 < UiComponentPart028.stringArrayState0039.length) {
+          while (integerLocal14 < EditableTextField.stringArrayState0039.length) {
             integerLocal15 = MixedSupport066.integerArrayState0119[integerLocal14];
             if (0 > integerLocal15) {
               integerLocal16 = TextFieldValidator.integerState0937;
@@ -557,13 +557,13 @@ final class MixedSupport020 extends HashNode {
                 integerLocal16 = NetworkSupport004.integerState0266;
               }
             }
-            stringLocal17 = UiComponentPart028.stringArrayState0039[integerLocal14];
+            stringLocal17 = EditableTextField.stringArrayState0039[integerLocal14];
             if (MixedSupport009.integerState0054 == 2 &&
               integerLocal12 == 1) {
-              if (UiComponentPart032.stringArrayState0051.length <= MixedSupport121.stringArrayState0047.length) {
+              if (BirthDateInput.stringArrayState0051.length <= MixedSupport121.stringArrayState0047.length) {
                 stackIntegerLocal1 = MixedSupport121.stringArrayState0047.length;
               } else {
-                stackIntegerLocal1 = UiComponentPart032.stringArrayState0051.length;
+                stackIntegerLocal1 = BirthDateInput.stringArrayState0051.length;
               }
               integerLocal18 = stackIntegerLocal1;
               if (integerLocal14 >= 6 &&
@@ -608,15 +608,15 @@ final class MixedSupport020 extends HashNode {
               }
               mixedSupport015Local20 = stackMixedSupport015Local8;
               if (mixedSupport015Local20 != null) {
-                mixedSupport015Local20.performAction0202(integerLocal22 + (NetworkSupport006.integerState0499 << 1), 102, integerLocal23 - NetworkSupport006.integerState0499, integerLocal10, (UiComponentPart022.integerState0575 << 1) + MixedSupport015.integerState0100);
+                mixedSupport015Local20.drawNineSlice(integerLocal22 + (NetworkSupport006.integerState0499 << 1), 102, integerLocal23 - NetworkSupport006.integerState0499, integerLocal10, (AccountFieldStatusIndicator.integerState0575 << 1) + NineSliceSprite.integerState0100);
               }
-              integerLocal10 = integerLocal10 + UiComponentPart022.integerState0575;
+              integerLocal10 = integerLocal10 + AccountFieldStatusIndicator.integerState0575;
             }
             if (0 <= integerLocal15) {
               MixedSupport010.bitmapFontState0005.performAction1069(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
-              integerLocal10 = integerLocal10 + (UiComponentPart022.integerState0575 - (-BufferedSocket.integerState0665 - MixedSupport015.integerState0100));
+              integerLocal10 = integerLocal10 + (AccountFieldStatusIndicator.integerState0575 - (-BufferedSocket.integerState0665 - NineSliceSprite.integerState0100));
             } else {
-              UiComponentPart028.bitmapFontState0019.performAction1069(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);
+              EditableTextField.bitmapFontState0019.performAction1069(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);
               integerLocal10 = integerLocal10 + RenderingSupport007.integerState0362;
             }
             integerLocal14++;
@@ -659,7 +659,7 @@ final class MixedSupport020 extends HashNode {
           }
           if (mixedSupport056Argument1.integerArrayState0065 != null) {
             SoftwareFramebuffer.integerArrayState0259 = mixedSupport056Argument1.integerArrayState0065;
-            UiComponentPart013.stringState0226 = mixedSupport056Argument1.stringState0238;
+            LoginPanel.stringState0226 = mixedSupport056Argument1.stringState0238;
             IterableNodeCollection.integerState0802 = mixedSupport056Argument1.integerState0290;
             MixedSupport086.longState0032 = mixedSupport056Argument1.longState0021;
           }

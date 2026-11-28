@@ -1060,7 +1060,7 @@ final class gi {
                 param0.field_i = 0;
                 this.field_u.a(122, param0.field_n, param0.field_r, -1 + param0.field_A).field_i = 0;
               }
-              param0.field_g = le.field_s[param0.field_g];
+              param0.field_g = AgeValidator.field_s[param0.field_g];
               if (param0.field_g >= 0) {
                 if (1 == NetworkArchiveRequest.field_E[param0.field_g]) {
                   param0.a(1, true, -82);
@@ -1129,7 +1129,7 @@ final class gi {
                 param2.field_i = 0;
                 this.field_u.a(82, -1 + param2.field_n, param2.field_r, param2.field_A).field_i = 0;
               }
-              param2.field_k = le.field_s[param2.field_k];
+              param2.field_k = AgeValidator.field_s[param2.field_k];
               if (param2.field_k >= 0) {
                 if (1 == NetworkArchiveRequest.field_E[param2.field_k]) {
                   param2.a(2, true, param0 ^ 54);
@@ -1195,7 +1195,7 @@ final class gi {
           ra.field_l = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo12"));
           qk.field_e = (BitmapFont) ((Object) ec.a("commonui", 8192, param1, param0, "arezzo14"));
           be.field_x = (BitmapFont) ((Object) ec.a("commonui", param3 + 10232, param1, param0, "arezzo14bold"));
-          var18 = new Sprite(param2.getFileByName("button.gif", "", -21653), (java.awt.Component) ((Object) ae.field_G));
+          var18 = new Sprite(param2.getFileByName("button.gif", "", -21653), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G));
           qb.a("dropdown", (byte) -36, "commonui", param0);
           var5 = lf.a(true, "commonui", "screen_options", param0);
           hk.field_d = new IndexedSprite[4];

@@ -129,7 +129,7 @@ final class fg {
           }
           var2 = new IntrusiveDeque();
           while (param1.payload.length > param1.position) {
-            var2.addLast((byte) -124, new fn(lm.a(param1, (byte) -101)));
+            var2.addLast((byte) -124, new fn(DisplayNameSelectionPanel.a(param1, (byte) -101)));
           }
           var3 = new String[var2.size((byte) -119)][];
           for (var4 = 0; var3.length > var4; var4++) {

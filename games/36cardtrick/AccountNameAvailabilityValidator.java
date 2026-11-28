@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends cg {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private boolean nameAvailable;
     static int field_l;
     static long[] field_o;
@@ -83,7 +83,7 @@ final class AccountNameAvailabilityValidator extends cg {
         try {
           MouseInputHandler.field_b.resetTiming(-127);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            ak.field_P[var1_int] = 0L;
+            LoginPanel.field_P[var1_int] = 0L;
           }
           var1_intLifetime1 = 0;
           if (param0 >= -5) {
@@ -131,7 +131,7 @@ final class AccountNameAvailabilityValidator extends cg {
         }
     }
 
-    AccountNameAvailabilityValidator(hf param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -143,7 +143,7 @@ final class AccountNameAvailabilityValidator extends cg {
         }
     }
 
-    final sg a(String param0, int param1) {
+    final sg getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -194,7 +194,7 @@ final class AccountNameAvailabilityValidator extends cg {
         }
     }
 
-    final String a(String param0, boolean param1) {
+    final String getValidationMessage(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -211,7 +211,7 @@ final class AccountNameAvailabilityValidator extends cg {
             this.nameAvailable = false;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = hf.a(var5, (byte) 36);
+          var3 = EditableTextField.a(var5, (byte) 36);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;
@@ -286,9 +286,9 @@ final class AccountNameAvailabilityValidator extends cg {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_k[0][var0] = v.a(v.a(var4 << 8, v.a(v.a(v.a(var2 << 32, v.a(v.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)), var12);
+            field_k[0][var0] = ValidatedTextField.a(ValidatedTextField.a(var4 << 8, ValidatedTextField.a(ValidatedTextField.a(ValidatedTextField.a(var2 << 32, ValidatedTextField.a(ValidatedTextField.a(var2 << 48, var2 << 56), var6 << 40)), var10 << 24), var8 << 16)), var12);
             for (var14 = 1; var14 < 8; var14++) {
-                field_k[var14][var0] = v.a(field_k[var14 - 1][var0] << 56, field_k[-1 + var14][var0] >>> 8);
+                field_k[var14][var0] = ValidatedTextField.a(field_k[var14 - 1][var0] << 56, field_k[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

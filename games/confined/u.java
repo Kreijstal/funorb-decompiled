@@ -151,7 +151,7 @@ final class u extends MovingTunnelEntity {
           if (param2 > -5) {
             this.field_Q = (da) null;
           }
-          this.a(bf.field_R[this.field_V][this.field_R], this.field_W, param4, (byte) 64, param1, param0, param3, 128);
+          this.a(DisplayNameSelectionPanel.field_R[this.field_V][this.field_R], this.field_W, param4, (byte) 64, param1, param0, param3, 128);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "u.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

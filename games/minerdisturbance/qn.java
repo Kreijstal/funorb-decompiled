@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qn extends hc {
-    private jm field_I;
+    private FieldValidator field_I;
     private int field_L;
     static int field_K;
     static Sprite field_J;
@@ -54,12 +54,12 @@ final class qn extends hc {
         if (param0 != -27867) {
           qn.clearStaticReferences((byte) -1);
           if (this.field_x) {
-            return this.field_I.a(7320);
+            return this.field_I.getValidationMessage(7320);
           }
           return null;
         }
         if (this.field_x) {
-          return this.field_I.a(7320);
+          return this.field_I.getValidationMessage(7320);
         }
         return null;
     }
@@ -91,7 +91,7 @@ final class qn extends hc {
         }
         int var5 = (this.field_v >> 1) + this.field_u + param1;
         int var6 = (this.field_q >> 1) + (this.field_t + param2);
-        ag var8 = this.field_I.b(24595);
+        ag var8 = this.field_I.getValidationStatus(24595);
         if (nn.field_f == var8) {
           var15 = AccountServiceResult.field_g[0];
           var9 = var15.field_x << 1;
@@ -174,7 +174,7 @@ final class qn extends hc {
         var12.drawAdditive(-(var12.field_y >> 1) + var5, var6 - (var12.field_C >> 1), 256);
     }
 
-    qn(jm param0) {
+    qn(FieldValidator param0) {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {

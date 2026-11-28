@@ -33,7 +33,7 @@ final class ul {
             nn.field_j[var2_int] = 0;
             var2_int++;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < ud.field_x; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; var2_intLifetime1 < IntroSequenceScreen.field_x; var2_intLifetime1++) {
             if (param0.field_n == nb.field_a[var2_intLifetime1].field_n) {
               dupTemp$3 = nb.field_a[var2_intLifetime1].b((byte) 115);
               nn.field_j[dupTemp$3] = nn.field_j[dupTemp$3] + 1;
@@ -42,7 +42,7 @@ final class ul {
           dupTemp$0 = param0.b((byte) 107);
           nn.field_j[dupTemp$0] = nn.field_j[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < ud.field_x; var3++) {
+          for (var3 = 0; var3 < IntroSequenceScreen.field_x; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (nb.field_a[var3].field_n == param0.field_n) {
               var4 = nb.field_a[var3].b((byte) 104);
@@ -57,9 +57,9 @@ final class ul {
               nb.field_a[incrementValue$2] = nb.field_a[var3];
             }
           }
-          ud.field_x = var2_intLifetime2;
-          fieldTemp$1 = ud.field_x;
-          ud.field_x = ud.field_x + 1;
+          IntroSequenceScreen.field_x = var2_intLifetime2;
+          fieldTemp$1 = IntroSequenceScreen.field_x;
+          IntroSequenceScreen.field_x = IntroSequenceScreen.field_x + 1;
           nb.field_a[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

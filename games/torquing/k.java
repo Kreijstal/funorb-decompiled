@@ -26,7 +26,7 @@ final class k {
         if (param1 != 1) {
           return;
         }
-        if (ia.a(-22426, 0)) {
+        if (FramedPanelLayer.a(-22426, 0)) {
           param0 = 6;
         }
         if (param0 == 7) {

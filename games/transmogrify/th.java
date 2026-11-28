@@ -11,7 +11,7 @@ final class th {
     final static void a(int param0, int param1, ng param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = ff.field_D;
+          var3 = LoginPanel.field_D;
           if (param0 != 65536) {
             field_a = -12;
           }

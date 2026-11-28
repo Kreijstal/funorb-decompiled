@@ -2065,7 +2065,7 @@ final class je {
         }
         if (rg.field_sb > 0 &&
           field_u == field_N[cm.field_o] &&
-          ke.field_V) {
+          ValidatedTextField.field_V) {
           fn.a(10, 245, 3);
           if (a.field_c == 0) {
             fn.a(30, 225, 3);
@@ -2078,7 +2078,7 @@ final class je {
         q.field_b = field_I;
         if (field_u != field_N[cm.field_o] &&
           d.field_b &&
-          ke.field_V) {
+          ValidatedTextField.field_V) {
           if (field_u > 1) {
             je.c(var1);
             je.a(var1);
@@ -2407,7 +2407,7 @@ final class je {
         int var1;
         int var4;
         int var5;
-        if (wj.field_j < 2) {
+        if (AgeValidator.field_j < 2) {
           return;
         }
         var0 = ne.a(false);
@@ -2791,7 +2791,7 @@ final class je {
           cm.field_o == 0 &&
           a.field_c >= (field_F ^ 238298623) &&
           !field_J &&
-          ke.field_V &&
+          ValidatedTextField.field_V &&
           hf.field_t > 120 &&
           field_u < 20) {
           field_D = (hf.field_t + 24) * 32;

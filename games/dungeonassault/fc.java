@@ -112,7 +112,7 @@ final class fc extends en {
         for (var14 = 0; this.field_k.field_A.length > var14; var14++) {
           var15_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", param0 ^ 16746719);
           var25 = this.field_k.field_D[var14];
-          var17_ref_StringLifetime1 = jk.a(new String[]{var25[0]}, rm.field_J, 30496);
+          var17_ref_StringLifetime1 = jk.a(new String[]{var25[0]}, EditableTextField.field_J, 30496);
           var18_ref_String = ck.field_H.a(jk.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
           var6[var14] = jn.a(var17_ref_StringLifetime1, new int[]{param1}, -80, la.field_b);
           var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.b(param0, -16777100), la.field_b);
@@ -298,7 +298,7 @@ final class fc extends en {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          lb.a(param16, param19, param20, 2);
+          PlayerDungeonProfile.a(param16, param19, param20, 2);
           mi.a(param12, 25570, param9, param5, param15);
           PackedBitSet.setLayoutCenter((byte) -66, param3, param13);
           PcmOutputWorker.a(param11, (byte) -40, param18, param1, param6, param0);

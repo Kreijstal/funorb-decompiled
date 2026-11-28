@@ -88,11 +88,11 @@ final class ok implements wo {
             if (var20 == 0) {
               if (stackIn_11_0) {
                 var13 = dn.field_a[var10];
-                var14 = qk.field_E[var10];
+                var14 = DisplayNameSelectionPanel.field_E[var10];
                 var15 = dn.field_a[var11] - var13;
                 var16 = dn.field_a[var12] - var13;
-                var17 = -var14 + qk.field_E[var11];
-                var18 = qk.field_E[var12] - var14;
+                var17 = -var14 + DisplayNameSelectionPanel.field_E[var11];
+                var18 = DisplayNameSelectionPanel.field_E[var12] - var14;
               }
               if (!stackIn_11_0 ||
                 var15 * var18 - var16 * var17 < 0) {
@@ -108,8 +108,8 @@ final class ok implements wo {
                       } else {
                         stackIn_25_0 = var16 << -var8;
                       }
-                      var17 = -stackIn_25_0 + (-1 + ga.field_J.length);
-                      var18 = ga.field_J[var17];
+                      var17 = -stackIn_25_0 + (-1 + EditableTextField.field_J.length);
+                      var18 = EditableTextField.field_J[var17];
                       while (true) {
                         if (var18 >> 4 != 0) {
                           var17--;
@@ -119,14 +119,14 @@ final class ok implements wo {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var18 = ga.field_J[var17];
+                          var18 = EditableTextField.field_J[var17];
                           continue;
                         }
                         stackIn_36_0Lifetime1 = var17 << 4;
                         stackIn_36_1Lifetime1 = var18;
                         var19 = stackIn_36_0Lifetime1 + stackIn_36_1Lifetime1;
                         gh.field_E[var19] = var9;
-                        ga.field_J[var17] = 1 + var18;
+                        EditableTextField.field_J[var17] = 1 + var18;
                         if (param0.field_s > 0 &&
                           null != param0.field_o) {
                           dupTemp$0 = param0.field_o[var9];
@@ -278,7 +278,7 @@ final class ok implements wo {
             } else {
               var10 = var10 + (param3.field_f - var8);
             }
-            ci.a(var9 - 2, var10 + 2, param1, var8, 4 + var7);
+            AgeValidator.a(var9 - 2, var10 + 2, param1, var8, 4 + var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

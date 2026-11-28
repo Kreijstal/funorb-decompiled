@@ -81,7 +81,7 @@ final class qj {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(lk.a(param1, var2, -109), "_top");
+              param1.getAppletContext().showDocument(TextFieldValidator.a(param1, var2, -109), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

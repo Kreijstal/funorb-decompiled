@@ -178,7 +178,7 @@ final class ak extends IntrusiveNode {
             ak.c((byte) -125);
           }
           var18 = (String[]) null;
-          Chess.a(param8, (String[]) null, param1, param6, param14, param7, param2, param4, param12, param15, param9, param13, 1, param3, param10, param0, param16, 1, param5);
+          Chess.configureSharedInterfaceResources(param8, (String[]) null, param1, param6, param14, param7, param2, param4, param12, param15, param9, param13, 1, param3, param10, param0, param16, 1, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -279,7 +279,7 @@ final class ak extends IntrusiveNode {
         if (!param0) {
           Object var2 = (Object) null;
           ak.a((PlatformTaskDispatcher) null, (byte) 23, (Object) null);
-          if (!tj.h(105)) {
+          if (!EmailFormatValidator.h(105)) {
             return false;
           }
           if ((8 & r.field_Eb) == 0) {
@@ -287,7 +287,7 @@ final class ak extends IntrusiveNode {
           }
           return false;
         }
-        if (!tj.h(105)) {
+        if (!EmailFormatValidator.h(105)) {
           return false;
         }
         if ((8 & r.field_Eb) == 0) {

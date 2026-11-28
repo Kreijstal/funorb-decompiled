@@ -45,7 +45,7 @@ abstract class kc {
         int var5 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1 = wj.field_k;
+          var1 = TextFieldValidator.field_k;
           synchronized (var1) {
             PcmResampler.field_b = bh.field_e;
             WeightedObjectCache.field_c = WeightedObjectCache.field_c + 1;

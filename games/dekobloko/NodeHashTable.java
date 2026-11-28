@@ -76,7 +76,7 @@ final class NodeHashTable implements Iterable {
             stackIntegerLocal3 = MixedSupport010.bitmapFontState0005.computeInteger1066(stringArgument2);
             return stackIntegerLocal3;
           }
-          stackIntegerLocal2 = UiComponentPart028.bitmapFontState0019.computeInteger1066(stringArgument2);
+          stackIntegerLocal2 = EditableTextField.bitmapFontState0019.computeInteger1066(stringArgument2);
           return stackIntegerLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal7 = caughtParameterLocal8;
@@ -97,7 +97,7 @@ final class NodeHashTable implements Iterable {
         String stringLocal2;
         if (MixedSupport020.uiComponentPart012State0001 != null) {
           MixedSupport020.uiComponentPart012State0001.performAction0593(22);
-          MixedSupport118.uiComponentPart005State0001 = new UiComponentPart005();
+          MixedSupport118.uiComponentPart005State0001 = new DisplayNameSelectionPanel();
           if (integerArgument1 != -31842) {
             stringLocal1 = (String) null;
             NodeHashTable.computeInteger1504(true, (String) null, true);
@@ -107,7 +107,7 @@ final class NodeHashTable implements Iterable {
           UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
         }
-        MixedSupport118.uiComponentPart005State0001 = new UiComponentPart005();
+        MixedSupport118.uiComponentPart005State0001 = new DisplayNameSelectionPanel();
         if (integerArgument1 == -31842) {
           UiComponentPart006.uiComponentPart023State0001.performAction0185(MixedSupport118.uiComponentPart005State0001, (byte) 87);
           return;
@@ -272,7 +272,7 @@ final class NodeHashTable implements Iterable {
           } else {
             stringLocal1 = MixedSupport090.stringState0376;
           }
-          UiComponentPart024.performAction1271(integerArgument4, integerArgument3, booleanArgument2, integerArgument5, stringLocal1, byteArgument6 + 168, integerArgument1, integerArgument7);
+          BirthDateTextFields.performAction1271(integerArgument4, integerArgument3, booleanArgument2, integerArgument5, stringLocal1, byteArgument6 + 168, integerArgument1, integerArgument7);
           return;
         }
     }

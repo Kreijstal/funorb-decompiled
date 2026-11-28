@@ -108,8 +108,8 @@ final class EmailValidationError {
     final static void performAction0768(byte byteArgument1) {
         MouseWheelInput.sceneWidgetState0050 = null;
         RenderingSupport001.sceneWidgetState0004 = null;
-        SceneWidgetPart013.sceneWidgetState0139 = null;
-        UiComponentPart031.sceneWidgetState0116 = null;
+        LobbyRoomRow.sceneWidgetState0139 = null;
+        AccountRegistrationPanel.sceneWidgetState0116 = null;
         LoginCredentials.booleanState0085 = true;
         if (byteArgument1 < 97) {
           return;

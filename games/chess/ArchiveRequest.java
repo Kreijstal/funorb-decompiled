@@ -101,7 +101,7 @@ abstract class ArchiveRequest extends DualLinkNode {
             ArchiveRequest.h(3);
           }
           if (var8 == null) {
-            stackIn_11_0 = oc.a(kj.field_f, new String[]{param2}, (byte) -114);
+            stackIn_11_0 = MatchingFieldValidator.a(kj.field_f, new String[]{param2}, (byte) -114);
             return stackIn_11_0;
           }
           me.field_e.beginBackwardFrom(var8, (byte) 123);
@@ -116,7 +116,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var8.unlink(-2193);
           var8.unlinkSecondary(-1);
           wg.field_w = wg.field_w - 1;
-          var9 = qn.field_U;
+          var9 = EditableTextField.field_U;
           var9.writeCipheredByte(param0, -104);
           var9.position = var9.position + 1;
           var5 = var9.position;
@@ -191,16 +191,16 @@ abstract class ArchiveRequest extends DualLinkNode {
         fm.field_R[21] = ec.field_g;
         fm.field_R[30] = ma.field_H;
         fm.field_R[32] = hj.field_k;
-        fm.field_R[3] = vm.field_g;
+        fm.field_R[3] = TextFieldValidator.field_g;
         fm.field_R[18] = dh.field_h;
-        fm.field_R[29] = wf.field_P;
+        fm.field_R[29] = LoginPanel.field_P;
         fm.field_R[22] = se.field_Z;
         fm.field_R[8] = hm.field_f;
         fm.field_R[24] = ma.field_H;
         fm.field_R[14] = ao.field_c;
         fm.field_R[0] = jf.field_e;
         fm.field_R[11] = kl.field_f;
-        fm.field_R[23] = wf.field_P;
+        fm.field_R[23] = LoginPanel.field_P;
         fm.field_R[31] = ue.field_b;
         fm.field_R[19] = ti.field_a;
         fm.field_R[26] = fc.field_c;
@@ -213,7 +213,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         fm.field_R[25] = ac.field_p;
         fm.field_R[1] = qa.field_a;
         ec.field_d = new eb(0, 0, 120, 24, fm.field_R[9]);
-        qh.field_b = new eb(0, 0, 120, 24, ef.field_l);
+        qh.field_b = new eb(0, 0, 120, 24, AchievementNotification.field_l);
     }
 
     ArchiveRequest() {

@@ -17,7 +17,7 @@ final class pf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pk.a(80, param0, param3, param4)) {
+          if (!LoginPanel.a(80, param0, param3, param4)) {
             return null;
           }
           if (param1 != -6) {

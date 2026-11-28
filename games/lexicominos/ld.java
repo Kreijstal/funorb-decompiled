@@ -3,7 +3,7 @@
  */
 final class ld extends kf {
     private int field_F;
-    private ma field_E;
+    private FieldValidator field_E;
     static String field_G;
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -42,12 +42,12 @@ final class ld extends kf {
         if (param0 <= 121) {
           ld.i(55);
           if (this.field_m) {
-            return this.field_E.a((byte) 102);
+            return this.field_E.getValidationMessage((byte) 102);
           }
           return null;
         }
         if (this.field_m) {
-          return this.field_E.a((byte) 102);
+          return this.field_E.getValidationMessage((byte) 102);
         }
         return null;
     }
@@ -102,7 +102,7 @@ final class ld extends kf {
         }
     }
 
-    ld(ma param0) {
+    ld(FieldValidator param0) {
         try {
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
@@ -126,7 +126,7 @@ final class ld extends kf {
         }
         int var5 = (this.field_j >> 1) + this.field_t + param2;
         int var6 = this.field_o + (param1 + (this.field_v >> 1));
-        sc var8 = this.field_E.b((byte) 116);
+        sc var8 = this.field_E.getValidationStatus((byte) 116);
         if (jj.field_e == var8) {
           var15 = BufferedRandomAccessFile.field_b[0];
           var9 = var15.field_r << 1;

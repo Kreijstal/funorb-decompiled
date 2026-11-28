@@ -16,11 +16,11 @@ final class h {
 
     final static void a(int param0, boolean param1) {
         if (!qb.field_b ||
-          fd.field_o[param0] ||
+          ConfirmedEmailAvailabilityValidator.field_o[param0] ||
           DequeCursor.field_b >= 0) {
           return;
         }
-        fd.field_o[param0] = param1;
+        ConfirmedEmailAvailabilityValidator.field_o[param0] = param1;
         DiskCacheWorker.field_h = 1;
         DequeCursor.field_b = param0;
         jk.field_u = 0;

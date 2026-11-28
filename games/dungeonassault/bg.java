@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends qe {
+final class bg extends DungeonAssaultScreen {
     private rh field_w;
     private RgbSprite field_u;
     static IntrusiveDeque field_s;
@@ -10,7 +10,7 @@ final class bg extends qe {
     private RgbSprite field_v;
     static String field_t;
 
-    final void a(boolean param0) {
+    final void renderScreen(boolean param0) {
         int var2 = 0;
         int var3;
         int var4;
@@ -20,7 +20,7 @@ final class bg extends qe {
         rj var8;
         int var3Lifetime1;
         var5 = DungeonAssault.field_K;
-        super.a(param0);
+        super.renderScreen(param0);
         this.field_e.b(0, 0);
         SoftwareRasterizer.setClip(41, 48, 599, 416);
         for (var2 = 41; var2 < 599; var2 = var2 + df.field_c.field_E) {
@@ -39,7 +39,7 @@ final class bg extends qe {
         if (null != this.field_b) {
           this.field_b.a((byte) -126);
         }
-        bg.e();
+        bg.applyScreenLighting();
         this.field_r.d();
         this.field_w.d();
         var7 = (rj) (this.field_p.beginBackward(-24172));
@@ -57,7 +57,7 @@ final class bg extends qe {
           }
         }
         this.c(1);
-        ih.field_x.a(320, 25, 1699);
+        RaiderRecruitmentScreen.field_x.a(320, 25, 1699);
         if (null != this.field_b) {
           var6 = 0;
           var3Lifetime1 = var6;
@@ -73,14 +73,14 @@ final class bg extends qe {
         oh.a((byte) 125);
     }
 
-    final void c(boolean param0) {
+    final void updateScreen(boolean param0) {
         int var4;
         int stackIn_24_0 = 0;
         int var2;
         ce var5;
         pk var6;
         var4 = DungeonAssault.field_K;
-        super.c(param0);
+        super.updateScreen(param0);
         if (AccountNameAvailabilityValidator.field_s) {
           return;
         }
@@ -92,7 +92,7 @@ final class bg extends qe {
             gd.a(g.field_Hb, 0, g.field_Hb, false);
             continue;
           }
-          super.f();
+          super.handleScreenKeyPress();
         }
         if (kn.field_g) {
           bl.a(0);
@@ -124,9 +124,9 @@ final class bg extends qe {
         this.a(5458);
     }
 
-    final void b(boolean param0) {
+    final void initializeScreen(boolean param0) {
         int var3 = DungeonAssault.field_K;
-        super.b(param0);
+        super.initializeScreen(param0);
         jh.a(this.field_e);
         AwtRasterBuffer.a(0, 640, 0, (byte) 64);
         AwtRasterBuffer.a(0, 640, 40, (byte) 75);
@@ -246,7 +246,7 @@ final class bg extends qe {
     }
 
     private final void a(byte param0) {
-        this.b();
+        this.resetScreenWidgets();
         le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, l.field_d);
         wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, ia.field_Y);
         ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
@@ -351,18 +351,18 @@ final class bg extends qe {
           var4 = stackIn_8_0;
           for (var5 = 0; var4 > var5; var5++) {
             var6 = vd.field_a + var5;
-            if (var6 != qc.field_y) {
+            if (var6 != MenuScreen.field_y) {
               this.a(var6, (byte) -79, fb.field_d[var5], var3Lifetime1);
             }
             var3Lifetime1 += 24;
           }
-          if (!(qc.field_y < 0) &&
-            !(qc.field_y >= ao.field_o)) {
-            var5Lifetime1 = qc.field_y - vd.field_a;
+          if (!(MenuScreen.field_y < 0) &&
+            !(MenuScreen.field_y >= ao.field_o)) {
+            var5Lifetime1 = MenuScreen.field_y - vd.field_a;
             if (var5Lifetime1 >= 0 &&
               var5Lifetime1 < 10) {
               var6Lifetime1 = 4 + (param0 + var5Lifetime1 * 24);
-              this.a(var6Lifetime1, 48, fb.field_d[var5Lifetime1], qc.field_y);
+              this.a(var6Lifetime1, 48, fb.field_d[var5Lifetime1], MenuScreen.field_y);
             }
           }
         } else {
@@ -547,9 +547,9 @@ final class bg extends qe {
         int var3Lifetime1;
         var10 = DungeonAssault.field_K;
         var2 = null;
-        if (0 <= qc.field_y &&
-          ao.field_o > qc.field_y) {
-          var3 = -vd.field_a + qc.field_y;
+        if (0 <= MenuScreen.field_y &&
+          ao.field_o > MenuScreen.field_y) {
+          var3 = -vd.field_a + MenuScreen.field_y;
           if (var3 >= 0 &&
             10 > var3 &&
             fb.field_d[var3] != null &&
@@ -605,7 +605,7 @@ final class bg extends qe {
             this.field_v = null;
             return;
           }
-          if (param0.field_b != qc.field_y) {
+          if (param0.field_b != MenuScreen.field_y) {
           }
           var11 = la.field_b;
           var3 = var11;
@@ -795,7 +795,7 @@ final class bg extends qe {
           od.a((byte) -116)) {
           return;
         }
-        if (super.d()) {
+        if (super.dispatchModalOrPointerInput()) {
           return;
         }
         if (vd.field_a != hi.field_c.field_z) {
@@ -841,8 +841,8 @@ final class bg extends qe {
           rb.field_N = var2;
         }
         if (var3 != -1) {
-          qc.field_y = var3;
-          if (rb.field_N == qc.field_y) {
+          MenuScreen.field_y = var3;
+          if (rb.field_N == MenuScreen.field_y) {
             this.a(fb.field_d[-vd.field_a + rb.field_N], 125);
           }
           gg.a((byte) -96);

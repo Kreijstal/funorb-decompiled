@@ -3,36 +3,36 @@
  */
 final class ob extends ql {
     private v field_k;
-    private oc[] field_r;
+    private GridPoint[] field_r;
     private v field_i;
     private v field_v;
     private v field_H;
-    private oc field_l;
+    private GridPoint field_l;
     private v field_t;
-    private oc field_h;
-    private oc field_g;
-    private oc field_o;
+    private GridPoint field_h;
+    private GridPoint field_g;
+    private GridPoint field_o;
     private v field_d;
-    private oc field_A;
+    private GridPoint field_A;
     private v field_D;
     private v field_q;
     private v field_y;
     private oj field_x;
-    private oc field_u;
-    private oc field_z;
+    private GridPoint field_u;
+    private GridPoint field_z;
     private v field_p;
     private int field_f;
     private v field_w;
-    private oc field_j;
+    private GridPoint field_j;
     static PacketBuffer field_s;
     static RgbSprite field_C;
-    private oc field_G;
+    private GridPoint field_G;
     static boolean field_n;
     private v field_m;
-    private oc field_F;
+    private GridPoint field_F;
     static int[] field_e;
     static String field_E;
-    static pg[] field_B;
+    static IndexedSprite[] field_B;
 
     final void c(int param0) {
         int var2;
@@ -41,7 +41,7 @@ final class ob extends ql {
         var4 = HostileSpawn.field_I ? 1 : 0;
         var2 = 0;
         var3 = param0;
-        while (var3 < el.field_j) {
+        while (var3 < ProxySocketFactory.field_j) {
           if (mm.field_m[var3] != null &&
             mm.field_m[var3].field_i == 27) {
             var2 = 1;
@@ -59,7 +59,7 @@ final class ob extends ql {
 
     final void d(int param0) {
         int var3;
-        oc var4;
+        GridPoint var4;
         var3 = HostileSpawn.field_I ? 1 : 0;
         var4 = mm.field_m[0].field_j;
         if (0 == this.field_D.field_a) {
@@ -146,7 +146,7 @@ final class ob extends ql {
 
     final void a(int param0, oj param1) {
         int var4 = 0;
-        oc var5 = null;
+        GridPoint var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -212,23 +212,23 @@ final class ob extends ql {
         var7 = var8;
         var5 = var7;
         var2 = var5;
-        this.field_o = new oc(var8[2], var8[3]);
-        this.field_l = new oc(var8[4], var8[5]);
-        this.field_F = new oc(var8[10], var8[11]);
-        this.field_j = new oc(var8[16], var8[17]);
-        this.field_z = new oc(var8[12], var8[13]);
-        this.field_g = new oc(var8[18], var8[19]);
-        this.field_G = new oc(var8[14], var8[15]);
-        this.field_h = new oc(var8[22], var8[23]);
-        this.field_u = new oc(var8[24], var8[25]);
-        this.field_r[0] = new oc(var8[28], var8[29]);
-        this.field_r[1] = new oc(var8[30], var8[31]);
+        this.field_o = new GridPoint(var8[2], var8[3]);
+        this.field_l = new GridPoint(var8[4], var8[5]);
+        this.field_F = new GridPoint(var8[10], var8[11]);
+        this.field_j = new GridPoint(var8[16], var8[17]);
+        this.field_z = new GridPoint(var8[12], var8[13]);
+        this.field_g = new GridPoint(var8[18], var8[19]);
+        this.field_G = new GridPoint(var8[14], var8[15]);
+        this.field_h = new GridPoint(var8[22], var8[23]);
+        this.field_u = new GridPoint(var8[24], var8[25]);
+        this.field_r[0] = new GridPoint(var8[28], var8[29]);
+        this.field_r[1] = new GridPoint(var8[30], var8[31]);
         this.field_D = new v(BufferedSocket.field_p, 48 + 24 * this.field_l.field_e, -20 + 24 * (this.field_l.field_g - 3));
         this.field_H = new v(sa.field_e, 24 * var8[6], -30 + (-96 + var8[7] * 24), 150);
         this.field_q = new v(sa.field_b, 0, 48 + 24 * this.field_F.field_g);
         this.field_q.field_l = -this.field_q.field_m + (this.field_F.field_e - 3) * 24;
         this.field_v = new v(u.field_b, 24 * this.field_j.field_e - 24, 48 + this.field_j.field_g * 24);
-        this.field_m = new v(bj.field_h, this.field_z.field_e * 24, -96 + this.field_z.field_g * 24 - 30);
+        this.field_m = new v(DebouncedFieldValidator.field_h, this.field_z.field_e * 24, -96 + this.field_z.field_g * 24 - 30);
         this.field_t = new v(DualLinkDeque.field_f, 0, this.field_u.field_g * 24);
         this.field_t.field_l = 48 + 24 * this.field_u.field_e;
         this.field_p = new v(m.field_p, 0, this.field_u.field_g * 24);
@@ -243,13 +243,13 @@ final class ob extends ql {
           this.field_D.field_a = 2;
           this.field_H.field_a = 2;
         }
-        this.field_A = new oc();
+        this.field_A = new GridPoint();
         var3 = 0;
         while (ll.field_a > var3) {
           if (wh.field_b[var3] != null &&
             wh.field_b[var3].field_i == 0 &&
             wh.field_b[var3].field_h == 4) {
-            this.field_A.a((byte) 46, wh.field_b[var3].field_j);
+            this.field_A.copyCoordinatesFrom((byte) 46, wh.field_b[var3].field_j);
           } else {
             var3++;
             continue;
@@ -258,7 +258,7 @@ final class ob extends ql {
         }
         var6 = 0;
         var3Lifetime1 = var6;
-        while (el.field_j > var6) {
+        while (ProxySocketFactory.field_j > var6) {
           if (null != mm.field_m[var6] &&
             mm.field_m[var6].field_i == 20 &&
             ih.a(mm.field_m[var6].field_j, (byte) -87, this.field_l) < 8) {
@@ -271,13 +271,13 @@ final class ob extends ql {
         }
         this.field_d = new v(e.field_k, 0, 0);
         CrossfadingMidiPcmStream.a(param0, param0 ^ 1);
-        nh.field_E.a((byte) 46, this.field_o);
+        nh.field_E.copyCoordinatesFrom((byte) 46, this.field_o);
         return;
     }
 
     final void b(byte param0) {
         int var3;
-        oc var4;
+        GridPoint var4;
         var3 = -77 % ((param0 + 48) / 38);
         var4 = mm.field_m[0].field_j;
         this.field_D.e(-115);
@@ -307,7 +307,7 @@ final class ob extends ql {
         field_C = null;
         field_e = null;
         if (param0 > -80) {
-          field_B = (pg[]) null;
+          field_B = (IndexedSprite[]) null;
         }
         field_B = null;
         field_E = null;
@@ -317,11 +317,11 @@ final class ob extends ql {
         if (param0) {
           field_e = (int[]) null;
         }
-        return bj.field_i;
+        return DebouncedFieldValidator.field_i;
     }
 
     public ob() {
-        this.field_r = new oc[2];
+        this.field_r = new GridPoint[2];
     }
 
     static {

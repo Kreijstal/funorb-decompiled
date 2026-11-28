@@ -152,7 +152,7 @@ final class mg {
         try {
           cj.field_l = new int[]{105, 151, 380, 418, 411, 373, 368, 368, 368, 368, 368};
           AccountServiceResult.field_a = new int[]{217, 216, 34, 263, 347, 148, 149, 149, 149, 104, 62};
-          fh.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
+          DisplayNameSelectionPanel.field_G = new int[][]{new int[]{0, 5, 1, 3, 4, 8, 6, 9, 12}, new int[]{7, 3, 4, 5, 10}, new int[]{11}, new int[]{17}, new int[]{16, 17}, new int[]{16, 17}, new int[]{15}, new int[]{15}, new int[]{15}, new int[]{13, 14}, new int[]{21, 17}};
           kb.field_b = new int[]{36, 36, 64, 64, 36, 36, 36, 36, 36, 36, 36};
           ia.field_c = new RgbSprite[22];
           var1_int = qa.field_b.a(IntrusiveDeque.field_c[3]);
@@ -238,7 +238,7 @@ final class mg {
         int var25Lifetime2;
         var26 = Main.field_T;
         try {
-          var27 = rd.field_j;
+          var27 = EmailFormatValidator.field_j;
           if (param0 >= -119) {
             field_K = (String) null;
           }
@@ -360,7 +360,7 @@ final class mg {
             var6.unlink(83);
             return;
           }
-          k.a((Throwable) null, (byte) -101, "HS1: " + aj.a((byte) 92));
+          DebouncedFieldValidator.a((Throwable) null, (byte) -101, "HS1: " + aj.a((byte) 92));
           mc.a((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

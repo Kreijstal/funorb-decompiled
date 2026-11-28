@@ -81,7 +81,7 @@ final class BufferedRandomAccessFile {
     }
 
     final static String d(byte param0) {
-        if (!uk.field_e && be.field_f <= ei.field_u &&
+        if (!ChessBoardState.field_e && be.field_f <= ei.field_u &&
           !(ei.field_u >= be.field_f + sj.field_n)) {
           return BoundedRandomAccessFile.field_j;
         }
@@ -93,7 +93,7 @@ final class BufferedRandomAccessFile {
     }
 
     final static void a(int param0) {
-        cd.field_x = new w(ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k);
+        cd.field_x = new w(ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k);
         int var1 = -28 % ((param0 - 15) / 59);
     }
 

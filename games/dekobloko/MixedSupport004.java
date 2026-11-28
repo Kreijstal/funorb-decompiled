@@ -41,7 +41,7 @@ final class MixedSupport004 {
     }
 
     final static void performAction0051(int integerArgument1, int integerArgument2) {
-        SceneWidgetPart009.integerState0647 = integerArgument2 * integerArgument1 / 50;
+        IconLabelWidget.integerState0647 = integerArgument2 * integerArgument1 / 50;
         UiComponentPart014.integerState0316 = integerArgument2 * 20 / 50;
     }
 

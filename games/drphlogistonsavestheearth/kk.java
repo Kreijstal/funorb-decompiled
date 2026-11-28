@@ -92,9 +92,9 @@ final class kk {
           ck.field_l = ProxyAuthenticationRequiredException.a("commonui", param1, "jagex_logo_grey", true);
           rk.field_d = cl.a("commonui", param1, -120, "button");
           ja.field_n = ea.a("validation", "commonui", 0, param1);
-          u.field_d = (rf) ((Object) qg.a(param2, "arezzo12", "commonui", param1, 126));
-          DualLinkNode.field_i = (rf) ((Object) qg.a(param2, "arezzo14", "commonui", param1, -100));
-          wi.field_e = (rf) ((Object) qg.a(param2, "arezzo14bold", "commonui", param1, 106));
+          u.field_d = (rf) ((Object) ValidatedTextField.a(param2, "arezzo12", "commonui", param1, 126));
+          DualLinkNode.field_i = (rf) ((Object) ValidatedTextField.a(param2, "arezzo14", "commonui", param1, -100));
+          wi.field_e = (rf) ((Object) ValidatedTextField.a(param2, "arezzo14bold", "commonui", param1, 106));
           var18 = new RgbSprite(param3.getFileByName("button.gif", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
           eh.a("commonui", (byte) -45, param1, "dropdown");
           var5 = ij.a("screen_options", (byte) 113, param1, "commonui");

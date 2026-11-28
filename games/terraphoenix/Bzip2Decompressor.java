@@ -72,8 +72,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_e = 1;
-        if (ph.field_t == null) {
-          ph.field_t = new int[param0.field_e * 100000];
+        if (PasswordValidator.field_t == null) {
+          PasswordValidator.field_t = new int[param0.field_e * 100000];
         }
         var26 = 1;
         while (true) {
@@ -244,14 +244,14 @@ final class Bzip2Decompressor {
                 param0.field_G[var4] = param0.field_G[var4] + param0.field_G[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(ph.field_t[var4] & 255);
+                var1 = (byte)(PasswordValidator.field_t[var4] & 255);
                 dupTemp$1 = param0.field_G[var1 & 255];
-                ph.field_t[dupTemp$1] = ph.field_t[dupTemp$1] | var4 << 8;
+                PasswordValidator.field_t[dupTemp$1] = PasswordValidator.field_t[dupTemp$1] | var4 << 8;
                 param0.field_G[var1 & 255] = param0.field_G[var1 & 255] + 1;
               }
-              param0.field_m = ph.field_t[param0.field_p] >> 8;
+              param0.field_m = PasswordValidator.field_t[param0.field_p] >> 8;
               param0.field_b = 0;
-              param0.field_m = ph.field_t[param0.field_m];
+              param0.field_m = PasswordValidator.field_t[param0.field_m];
               param0.field_o = (byte)(param0.field_m & 255);
               param0.field_m = param0.field_m >> 8;
               param0.field_b = param0.field_b + 1;
@@ -315,7 +315,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_f[var1 & 255] & 255;
               param0.field_u[dupTemp$0] = param0.field_u[dupTemp$0] + 1;
-              ph.field_t[var14] = param0.field_f[var1 & 255] & 255;
+              PasswordValidator.field_t[var14] = param0.field_f[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -372,7 +372,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_f[param0.field_y[param0.field_k[0]] & 255];
             param0.field_u[var1 & 255] = param0.field_u[var1 & 255] + var15;
             while (var15 > 0) {
-              ph.field_t[var14] = var1 & 255;
+              PasswordValidator.field_t[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -490,7 +490,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_x;
         var4 = param0.field_b;
         var5 = param0.field_o;
-        var15 = ph.field_t;
+        var15 = PasswordValidator.field_t;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_m;
@@ -592,7 +592,7 @@ final class Bzip2Decompressor {
         param0.field_x = var3;
         param0.field_b = var4;
         param0.field_o = var5;
-        ph.field_t = var6;
+        PasswordValidator.field_t = var6;
         param0.field_m = var7;
         param0.field_D = var8;
         param0.field_z = var9;

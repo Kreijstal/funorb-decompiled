@@ -161,10 +161,10 @@ final class sd extends am {
 
     final static boolean b(int param0) {
         if (param0 == 2) {
-          return !qk.field_q.c(484) ? true : false;
+          return !LevelCompletionUpdate.field_q.c(484) ? true : false;
         }
         sd.b(107);
-        return !qk.field_q.c(484) ? true : false;
+        return !LevelCompletionUpdate.field_q.c(484) ? true : false;
     }
 
     final void a(PacketBuffer param0, int param1, int param2) {

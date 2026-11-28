@@ -474,7 +474,7 @@ class UiWidget extends IntrusiveNode {
             this.a(param3, param2, lh.field_I, la.field_c, this, pe.field_d, -81);
           }
           if (kg.field_a != 0) {
-            if (!this.a(this, kc.field_Q, param2, param3, (byte) -11, rg.field_B, kg.field_a)) {
+            if (!this.a(this, kc.field_Q, param2, param3, (byte) -11, LoginPanel.field_B, kg.field_a)) {
               if (var5 != 0) {
                 this.b((byte) -93);
               }

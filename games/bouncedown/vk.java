@@ -4,7 +4,7 @@
 final class vk {
     static boolean field_a;
     static String[] field_d;
-    static ci field_c;
+    static LoginPanel field_c;
     static String field_e;
     static int field_b;
 

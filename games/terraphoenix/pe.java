@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pe {
-    static pl field_b;
+    static AccountRegistrationPanel field_b;
     static String[] field_c;
     private static long[] field_d;
     static int[] field_f;

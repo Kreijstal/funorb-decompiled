@@ -1120,7 +1120,7 @@ final class BoardView {
           var7 = (int)(Math.sin(0.5 * ((double)(this.field_i.field_L + (var4 * var3 << 2)) / 40.0)) * 30.0);
           var8 = (int)(Math.cos(0.5 * ((double)(this.field_i.field_L + (var3 * var4 << 2)) / 40.0)) * 15.0);
           if (var8 >= 0) {
-            hb.field_k[(this.field_i.field_L >> 2) % 2].b(var6.field_c + 56 + var7, var8 + (var6.field_a - 16), this.field_i.c(param0, 2271));
+            MatchingFieldValidator.field_k[(this.field_i.field_L >> 2) % 2].b(var6.field_c + 56 + var7, var8 + (var6.field_a - 16), this.field_i.c(param0, 2271));
           } else {
             IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].b(64 + var6.field_c - (8 - var7), var6.field_a + (-16 + var8), this.field_i.c(param0, 2271));
           }

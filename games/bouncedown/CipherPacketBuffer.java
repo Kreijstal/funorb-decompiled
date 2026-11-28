@@ -34,7 +34,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static void n(int param0) {
-        lg.field_b = new gh();
+        lg.field_b = new AccountRegistrationPanel();
         if (param0 != 8) {
           String var2 = (String) null;
           CipherPacketBuffer.wrapClientException((Throwable) null, (String) null);

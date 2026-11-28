@@ -100,7 +100,7 @@ final class LevelLostEntrancePhase extends ResultScenePhase {
         CipherPacketBuffer var9 = null;
         mp var10 = null;
         var7 = CrazyCrystals.field_B;
-        var9 = kd.field_n;
+        var9 = ConfirmedEmailAvailabilityValidator.field_n;
         var2 = var9;
         var3 = var9.readUnsignedByte(255);
         lj.field_b = var3 & 127;

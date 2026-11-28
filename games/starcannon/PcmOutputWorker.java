@@ -26,7 +26,7 @@ final class PcmOutputWorker implements Runnable {
                 var2.serviceOutput();
               }
             }
-            uc.sleepMillis(-94, 10L);
+            DebouncedFieldValidator.sleepMillis(-94, 10L);
             ea.a((Object) null, 105, this.field_d);
           }
         } catch (Exception exception) {

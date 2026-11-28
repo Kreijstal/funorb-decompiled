@@ -53,7 +53,7 @@ final class ol {
         double[] var12 = null;
         var7 = Torquing.field_u;
         try {
-          if (ia.field_i == 8) {
+          if (FramedPanelLayer.field_i == 8) {
             return;
           }
           if (!(0.0 > param0[3]) &&
@@ -68,8 +68,8 @@ final class ol {
               stackIn_16_0 = 1;
             }
             var2_int = stackIn_16_0;
-            for (var3 = 0; var3 < ia.field_i; var3++) {
-              var12 = bn.field_f[var3];
+            for (var3 = 0; var3 < FramedPanelLayer.field_i; var3++) {
+              var12 = SpriteBase.field_f[var3];
               if (param0[9] == var12[9] &&
                 var12[10] == param0[10] &&
                 param0[11] == var12[11]) {
@@ -93,7 +93,7 @@ final class ol {
                   }
                 }
                 if (var5 != 0) {
-                  bn.field_f[var3] = param0;
+                  SpriteBase.field_f[var3] = param0;
                   nl.field_y[var3] = var2_int != 0;
                   return;
                 }
@@ -102,13 +102,13 @@ final class ol {
                 }
               }
             }
-            bn.field_f[ia.field_i] = param0;
-            nl.field_y[ia.field_i] = var2_int != 0;
+            SpriteBase.field_f[FramedPanelLayer.field_i] = param0;
+            nl.field_y[FramedPanelLayer.field_i] = var2_int != 0;
             if (param1 < 25) {
               var8 = (double[]) null;
               ol.a((double[]) null, (byte) 52);
             }
-            ia.field_i = ia.field_i + 1;
+            FramedPanelLayer.field_i = FramedPanelLayer.field_i + 1;
             return;
           }
           return;

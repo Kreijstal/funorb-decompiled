@@ -33,10 +33,10 @@ abstract class ScoreModifier {
           }
           var5_int = 0;
           while (true) {
-            if (ga.field_J.length <= var5_int) {
+            if (EditableTextField.field_J.length <= var5_int) {
               return;
             }
-            param1 = ga.field_J[var5_int];
+            param1 = EditableTextField.field_J[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;

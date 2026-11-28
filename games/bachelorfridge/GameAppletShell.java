@@ -134,7 +134,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (vn.a((byte) 114, (CharSequence) ((Object) var4)) &&
+                      if (ValidatedTextField.a((byte) 114, (CharSequence) ((Object) var4)) &&
                         !(pd.a((byte) 47, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a("wrongjava", (byte) -48);
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -282,7 +282,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var9 = DiveBomberEvent.field_r.requestThreadStart((Runnable) (this), 2, 1);
               while (true) {
                 if (var9.status == 0) {
-                  gda.sleepMillis(false, 10L);
+                  DisplayNameSelectionPanel.sleepMillis(false, 10L);
                   if (var10 == 0) {
                     continue;
                   }
@@ -704,7 +704,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
         try {
           am.field_K = f.correctedCurrentTimeMillis((byte) 73);
-          gda.sleepMillis(false, 5000L);
+          DisplayNameSelectionPanel.sleepMillis(false, 5000L);
           BufferedCacheFile.field_d = null;
           this.shutdown(0, false);
         } catch (RuntimeException runtimeException) {

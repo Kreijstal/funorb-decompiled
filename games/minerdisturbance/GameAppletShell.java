@@ -361,7 +361,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 this.c(-10);
                 ResourceArchive.field_e = ab.a((byte) -98, nk.field_x, (java.awt.Component) ((Object) ef.field_c), ml.field_a);
                 this.a(47);
-                eb.field_d = ik.f((byte) -2);
+                eb.field_d = AccountRegistrationPanel.f((byte) -2);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (IsaacRandom.field_k != 0L) {

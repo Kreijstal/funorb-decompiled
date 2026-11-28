@@ -209,7 +209,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static boolean computeBoolean1118(String stringArgument1, byte byteArgument2, UiComponentPart031 uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
+    final static boolean computeBoolean1118(String stringArgument1, byte byteArgument2, AccountRegistrationPanel uiComponentPart031Argument3, boolean booleanArgument4, int integerArgument5, String stringArgument6, String stringArgument7) {
         RuntimeException runtimeExceptionLocal1 = null;
         UiComponentPart033 uiComponentPart033Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -229,10 +229,10 @@ final class SecondaryNodeHashTable {
           uiComponentPart033Local2 = new UiComponentPart033(MixedSupport005.uiComponentPart016State0001, uiComponentPart031Argument3);
           MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -123, uiComponentPart033Local2);
           if (!SecondaryNodeDequeIterator.computeBoolean0363(-40)) {
-            SceneWidgetPart013.stringState0586 = stringArgument1;
+            LobbyRoomRow.stringState0586 = stringArgument1;
             RichTextLayout.mixedSupport016State0001 = null;
             PasswordValidator.stringState0527 = stringArgument7;
-            GameAssets.mixedSupport004State0004 = UiComponentPart022.mixedSupport004State0003;
+            GameAssets.mixedSupport004State0004 = AccountFieldStatusIndicator.mixedSupport004State0003;
             NetworkArchiveRequestManager.stringState0438 = stringArgument6;
             HuffmanCodec.integerState0352 = integerArgument5;
             TextLayout.booleanState0019 = booleanArgument4;
@@ -307,7 +307,7 @@ final class SecondaryNodeHashTable {
         }
         if (integerArgument1 != 24710) {
           String stringLocal4 = (String) null;
-          SecondaryNodeHashTable.computeBoolean1118((String) null, (byte) 91, (UiComponentPart031) null, false, 64, (String) null, (String) null);
+          SecondaryNodeHashTable.computeBoolean1118((String) null, (byte) 91, (AccountRegistrationPanel) null, false, 64, (String) null, (String) null);
         }
         this.dualNodeState0008 = null;
         return null;

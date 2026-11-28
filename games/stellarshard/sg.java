@@ -86,7 +86,7 @@ final class sg {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            ae.field_N = new ha(param9);
+            EditableTextField.field_N = new ha(param9);
             pg.field_fb = new ha(param0);
             il.field_v = param4;
             ProxyAuthenticationRequiredException.field_b = param7;

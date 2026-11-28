@@ -132,7 +132,7 @@ final class jl {
           if (fp.field_e != null) {
             try {
               fp.field_e.seek(0L, -1);
-              fp.field_e.write(126, kd.field_n.payload, kd.field_n.position, 24);
+              fp.field_e.write(126, ConfirmedEmailAvailabilityValidator.field_n.payload, ConfirmedEmailAvailabilityValidator.field_n.position, 24);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -140,14 +140,14 @@ final class jl {
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {
-              kd.field_n.position = kd.field_n.position + 24;
+              ConfirmedEmailAvailabilityValidator.field_n.position = ConfirmedEmailAvailabilityValidator.field_n.position + 24;
               if (param0 <= 26) {
                 field_b = (RgbSprite) null;
               }
               return;
             }
           }
-          kd.field_n.position = kd.field_n.position + 24;
+          ConfirmedEmailAvailabilityValidator.field_n.position = ConfirmedEmailAvailabilityValidator.field_n.position + 24;
           if (param0 > 26) {
             return;
           }

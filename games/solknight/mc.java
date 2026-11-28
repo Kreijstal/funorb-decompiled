@@ -27,7 +27,7 @@ final class mc {
           return ri.field_d;
         }
         if (!DelegatingCanvas.field_c.tryLoadGroupByName(2, "commonui")) {
-          return qb.field_bb + " - " + DelegatingCanvas.field_c.getGroupLoadPercentByName(-1, "commonui") + "%";
+          return ValidatedTextField.field_bb + " - " + DelegatingCanvas.field_c.getGroupLoadPercentByName(-1, "commonui") + "%";
         }
         if (!AccountCreationResultPanel.field_ub.ensureIndexLoaded((byte) -121)) {
           return bg.field_t;

@@ -23,7 +23,7 @@ final class ei {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pk.a(101, param2, param3, param1)) {
+          if (!LoginPanel.a(101, param2, param3, param1)) {
             stackIn_2_0 = null;
             return (qg[]) (stackIn_2_0);
           }

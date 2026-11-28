@@ -93,9 +93,9 @@ class hl extends lk {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_x != 0 &&
-            k.field_c != this.field_x) {
+            DebouncedFieldValidator.field_c != this.field_x) {
             if (this.a(-47, param1, ij.field_e, eg.field_b, param0) &&
-              k.field_c == 0) {
+              DebouncedFieldValidator.field_c == 0) {
               this.a(-param0 + ij.field_e, true, this.field_x, -param1 + eg.field_b);
             }
             this.a(false, param2, eg.field_b, param1, param0, ij.field_e);

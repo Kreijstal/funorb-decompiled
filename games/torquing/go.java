@@ -38,12 +38,12 @@ final class go extends am {
         var3 = var17;
         if (this.field_r.field_b) {
           var5 = ci.field_c / this.field_u;
-          var6 = um.field_o / this.field_t;
+          var6 = MatchingFieldValidator.field_o / this.field_t;
           if (0 >= var6) {
             var4 = this.c(24066, 0, 0);
           } else {
             var7_int = param1 % var6;
-            var4 = this.c(param0 + 53182, var7_int * um.field_o / var6, 0);
+            var4 = this.c(param0 + 53182, var7_int * MatchingFieldValidator.field_o / var6, 0);
           }
           var7 = var4[0];
           var8 = var4[1];
@@ -84,7 +84,7 @@ final class go extends am {
         cq.field_y = null;
         pn.field_b = (byte[][]) null;
         PacketBuffer.field_o = null;
-        ij.field_o = null;
+        PasswordValidator.field_o = null;
     }
 
     final void a(PacketBuffer param0, int param1, int param2) {
@@ -146,12 +146,12 @@ final class go extends am {
         var3 = this.field_l.a(param1, 25657);
         if (this.field_l.field_b) {
           var5 = ci.field_c / this.field_u;
-          var6 = um.field_o / this.field_t;
+          var6 = MatchingFieldValidator.field_o / this.field_t;
           if (var6 <= 0) {
             var4 = this.b(0, 0, 0);
           } else {
             var7 = param1 % var6;
-            var4 = this.b(0, 0, var7 * um.field_o / var6);
+            var4 = this.b(0, 0, var7 * MatchingFieldValidator.field_o / var6);
           }
           var10 = 0;
           var7Lifetime1 = var10;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf extends s {
-    private ga field_I;
+    private FieldValidator field_I;
     static int field_H;
     private int field_G;
 
@@ -32,7 +32,7 @@ final class jf extends s {
         }
         var5 = param3 - (-this.field_s - (this.field_m >> 1));
         var6 = (this.field_r >> 1) + (this.field_n + param0);
-        var8 = this.field_I.d(param2 ^ -1040730);
+        var8 = this.field_I.getValidationStatus(param2 ^ -1040730);
         if (ml.field_a != var8 &&
           var8 != uj.field_b) {
           if (vh.field_h == var8) {
@@ -56,7 +56,7 @@ final class jf extends s {
             de.a(param2 ^ -1048454, MidiPcmStream.field_N);
           }
           var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -this.field_G << 10, 4096);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           MidiPcmStream.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
         }
     }
@@ -86,7 +86,7 @@ final class jf extends s {
         }
     }
 
-    jf(ga param0) {
+    jf(FieldValidator param0) {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
@@ -107,7 +107,7 @@ final class jf extends s {
           return (String) null;
         }
         if (this.field_t) {
-          return this.field_I.a(126);
+          return this.field_I.getValidationMessage(126);
         }
         return null;
     }
@@ -191,7 +191,7 @@ final class jf extends s {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.field_b[var8];
                       var19 = 16711935 & var15 * (var17 & 16711935) + var16 * (16711935 & var18) >> 8;
-                      SoftwareRasterizer.field_b[var8] = var19 + (vi.a(16711715, vi.a(var17, 65280) * var15 + vi.a(var18, 65280) * var16) >> 8);
+                      SoftwareRasterizer.field_b[var8] = var19 + (EditableTextField.a(16711715, EditableTextField.a(var17, 65280) * var15 + EditableTextField.a(var18, 65280) * var16) >> 8);
                     } else {
                       SoftwareRasterizer.field_b[var8] = var17;
                     }

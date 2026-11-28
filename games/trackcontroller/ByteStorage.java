@@ -87,37 +87,37 @@ abstract class ByteStorage {
     final static boolean a(int param0) {
         if (param0 != 520) {
           field_e = (oi) null;
-          if (-1 == hd.field_o) {
+          if (-1 == ConfirmedEmailAvailabilityValidator.field_o) {
             if (!DiskArchiveStore.a(1, false)) {
               return false;
             }
-            hd.field_o = ne.field_a.readUnsignedByte(16383);
+            ConfirmedEmailAvailabilityValidator.field_o = ne.field_a.readUnsignedByte(16383);
             ne.field_a.position = 0;
           }
-          if (hd.field_o == -2) {
+          if (ConfirmedEmailAvailabilityValidator.field_o == -2) {
             if (!DiskArchiveStore.a(2, false)) {
               return false;
             }
-            hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
+            ConfirmedEmailAvailabilityValidator.field_o = ne.field_a.readUnsignedShort((byte) -76);
             ne.field_a.position = 0;
           }
-          return DiskArchiveStore.a(hd.field_o, false);
+          return DiskArchiveStore.a(ConfirmedEmailAvailabilityValidator.field_o, false);
         }
-        if (-1 == hd.field_o) {
+        if (-1 == ConfirmedEmailAvailabilityValidator.field_o) {
           if (!DiskArchiveStore.a(1, false)) {
             return false;
           }
-          hd.field_o = ne.field_a.readUnsignedByte(16383);
+          ConfirmedEmailAvailabilityValidator.field_o = ne.field_a.readUnsignedByte(16383);
           ne.field_a.position = 0;
         }
-        if (hd.field_o == -2) {
+        if (ConfirmedEmailAvailabilityValidator.field_o == -2) {
           if (!DiskArchiveStore.a(2, false)) {
             return false;
           }
-          hd.field_o = ne.field_a.readUnsignedShort((byte) -76);
+          ConfirmedEmailAvailabilityValidator.field_o = ne.field_a.readUnsignedShort((byte) -76);
           ne.field_a.position = 0;
         }
-        return DiskArchiveStore.a(hd.field_o, false);
+        return DiskArchiveStore.a(ConfirmedEmailAvailabilityValidator.field_o, false);
     }
 
     static {

@@ -58,7 +58,7 @@ final class re {
         var5 = 325;
         var6 = 8421376;
         if (!this.field_K &&
-          ka.a(var5, 0, 21, 11, var4)) {
+          EmailFormatValidator.a(var5, 0, 21, 11, var4)) {
           if (param0 != 18) {
             decompiledFrameRemainder0 = !(!this.c(24834));
           } else {
@@ -192,7 +192,7 @@ final class re {
                 stackIn_14_0 = (!hb.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) ? 0 : 1;
                 var6 = stackIn_14_0;
                 if (var6 == 0) {
-                  SpriteGeometry.field_v.c(3, 3);
+                  SpriteGeometry.field_v.drawQuarterSizeAveraged(3, 3);
                   if (var4 != this.field_J) {
                     var7_int = 0;
                     while (var5_ref_bd.field_D.length > var7_int) {
@@ -251,11 +251,11 @@ final class re {
                 !qa.a(e.field_w, var4Lifetime1, param1)) {
                 de.field_i.e(74, 108);
                 if (var9 != 0) {
-                  SpriteGeometry.field_v.a(74, 108);
+                  SpriteGeometry.field_v.drawOpaque(74, 108);
                   fj.field_Kb[var4Lifetime1].e(74, 108);
                 }
               } else {
-                SpriteGeometry.field_v.a(74, 108);
+                SpriteGeometry.field_v.drawOpaque(74, 108);
                 if (var9 != 0) {
                   fj.field_Kb[var4Lifetime1].e(74, 108);
                 }
@@ -284,11 +284,11 @@ final class re {
             al.field_Z.a(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
             if (var6Lifetime1 == 0) {
               al.field_Z.c(ml.field_b.toUpperCase() + j.field_d[var4Lifetime1] * 100, 260, 233, 16776960, -1);
-              al.field_Z.c(li.field_v.toUpperCase(), 420, 233, 16776960, -1);
+              al.field_Z.c(MatchingFieldValidator.field_v.toUpperCase(), 420, 233, 16776960, -1);
               if (10 != j.field_d[var4Lifetime1]) {
                 var8 = 0;
                 while (j.field_d[var4Lifetime1] > var8) {
-                  ob.field_B[0].a(var8 * 8 + 500, 209);
+                  ob.field_B[0].drawOpaque(var8 * 8 + 500, 209);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -297,10 +297,10 @@ final class re {
                 }
                 if ((decompiledFrameCompleted0) &&
                   (var9 != 0)) {
-                  ob.field_B[1].a(500, 209);
+                  ob.field_B[1].drawOpaque(500, 209);
                 }
               } else {
-                ob.field_B[1].a(500, 209);
+                ob.field_B[1].drawOpaque(500, 209);
               }
             }
             if (var9 != 0) {
@@ -539,7 +539,7 @@ final class re {
             ec.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_11_5, stackIn_12_6);
           }
           al.field_Z.c(param3, ce.field_b[0], param1, 16776960, -1);
-          al.field_Z.c(t.field_k[var7_int].toUpperCase(), ce.field_b[1], param1, 16776960, -1);
+          al.field_Z.c(AchievementNotification.field_k[var7_int].toUpperCase(), ce.field_b[1], param1, 16776960, -1);
           al.field_Z.c(var12, ce.field_b[2], param1, 16776960, -1);
           ec.a(9, param1, false, al.field_Z, ce.field_b[3], 16776960, Integer.toString(var9));
           return;
@@ -799,7 +799,7 @@ final class re {
             ul.field_O = false;
             if (var6 != 0) {
               this.a(138, (byte) -55, 74, 324, 235);
-              ByteStorage.field_d[bm.field_c][rl.field_c].b(327, 77);
+              ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(327, 77);
               this.a(146, (byte) -55, 216, 324, 235);
               this.a(146, (byte) -55, 216, 567, 20);
               if (null != this.field_G) {
@@ -810,7 +810,7 @@ final class re {
           }
         } else {
           this.a(138, (byte) -55, 74, 324, 235);
-          ByteStorage.field_d[bm.field_c][rl.field_c].b(327, 77);
+          ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(327, 77);
           this.a(146, (byte) -55, 216, 324, 235);
           this.a(146, (byte) -55, 216, 567, 20);
           if (null != this.field_G) {
@@ -1196,7 +1196,7 @@ final class re {
           al.field_Z.a(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
         }
         this.a(138, (byte) -55, 86, 353, 235);
-        ByteStorage.field_d[bm.field_c][rl.field_c].b(356, 89);
+        ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(356, 89);
         this.a(131, (byte) -55, 230, 353, 235);
         this.a(235, 230, (byte) 56, 353, 131);
     }
@@ -1246,7 +1246,7 @@ final class re {
         }
         var4_ref = null;
         if (null == p.field_m[bm.field_c]) {
-          p.field_m[bm.field_c] = pi.a(10, 6413, 3, ka.field_p[bm.field_c], 1);
+          p.field_m[bm.field_c] = pi.a(10, 6413, 3, EmailFormatValidator.field_p[bm.field_c], 1);
         }
         regionExit1: {
           regionExit2: {
@@ -1532,7 +1532,7 @@ final class re {
                   this.field_s = 0;
                   if (((1 == jh.field_ab)) &&
                     ((this.field_d == 2))) {
-                    db.a(true, 256, vg.field_h);
+                    PasswordValidator.a(true, 256, vg.field_h);
                   }
                   break regionExit1;
                 }
@@ -1553,7 +1553,7 @@ final class re {
                   (decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
                   mc.field_I = 1;
-                  of.field_h = null;
+                  ClientLookupTables.field_h = null;
                   hg.field_e = 1;
                   jf.field_c = 128;
                   if (var7 == 0) {
@@ -1588,7 +1588,7 @@ final class re {
                   stackIn_151_0[stackIn_151_1] = stackIn_152_2;
                   if (ta.p(3)) {
                     stackIn_156_0 = (MidiPcmStream.field_r != 0);
-                    stackIn_159_1 = !(ei.field_q.isEmpty(-20049));
+                    stackIn_159_1 = !(DelayedPacket.field_q.isEmpty(-20049));
                     if (wb.a(stackIn_156_0, stackIn_159_1, false, rg.a((byte) -51)) != null) {
                       this.field_s = 9;
                     }
@@ -1606,7 +1606,7 @@ final class re {
                   if (this.field_s != 10) {
                     break regionExit1;
                   }
-                  db.a(false, 256, pe.field_ab);
+                  PasswordValidator.a(false, 256, pe.field_ab);
                   if (var7 == 0) {
                     break regionExit1;
                   }
@@ -1870,7 +1870,7 @@ final class re {
                 if ((decompiledFrameRemainder23) &&
                   (decompiledFrameRemainder21)) {
                   if (jh.field_ab == 1) {
-                    db.a(true, 256, vg.field_h);
+                    PasswordValidator.a(true, 256, vg.field_h);
                   }
                   qb.field_k = qb.field_k + MidiPcmStream.field_r;
                   MidiPcmStream.field_r = 0;
@@ -2025,17 +2025,17 @@ final class re {
                 this.field_t = 0;
               }
               var3_ref_ic__[0] = null;
-              of.field_h = null;
+              ClientLookupTables.field_h = null;
               if (1 == bm.field_c &&
                 rl.field_c == 0) {
-                ei.field_o = new eg();
-                ei.field_o.a(tf.field_e, (byte) 118);
+                DelayedPacket.field_o = new eg();
+                DelayedPacket.field_o.a(tf.field_e, (byte) 118);
               }
               if (((0 == bm.field_c)) &&
                 ((0 == rl.field_c))) {
-                ei.field_o = new eg();
-                ei.field_o.a(il.field_a, (byte) -13);
-                ei.field_o.field_g = false;
+                DelayedPacket.field_o = new eg();
+                DelayedPacket.field_o.a(il.field_a, (byte) -13);
+                DelayedPacket.field_o.field_g = false;
               }
               break regionExit1;
             }
@@ -2058,7 +2058,7 @@ final class re {
             vj.field_s = 0;
             AccountNameAvailabilityValidator.field_s = 0;
             VolumeRampingMidiPcmStream.field_ab.a(0);
-            u.field_e = u.field_e - ei.field_l;
+            u.field_e = u.field_e - DelayedPacket.field_l;
             ja.field_d = ja.field_d + 1;
             cf.field_s = 0;
             qb.field_k = qb.field_k + MidiPcmStream.field_r;
@@ -2103,7 +2103,7 @@ final class re {
               if (jh.field_ab != 1) {
                 break;
               }
-              db.a(true, 256, rb.field_s);
+              PasswordValidator.a(true, 256, rb.field_s);
               break;
             }
           }
@@ -2307,8 +2307,8 @@ final class re {
           if (pf.field_o != 1 ||
             !this.field_E.field_S ||
             !(j.field_c < -30 + this.field_E.field_qb + this.field_E.field_K)) {
-            var3 = li.field_s;
-            li.field_s = -1;
+            var3 = MatchingFieldValidator.field_s;
+            MatchingFieldValidator.field_s = -1;
             stackIn_7_0 = (!ib.a((byte) -72)) ? 1 : 2;
             var4 = stackIn_7_0;
             var5 = 0;
@@ -2332,7 +2332,7 @@ final class re {
                     stackIn_18_0 = stackOut_17_0;
                     if (stackIn_18_0 &&
                       this.field_w[var5][var7].field_v != -1) {
-                      li.field_s = var7;
+                      MatchingFieldValidator.field_s = var7;
                     }
                     var7++;
                   }
@@ -2341,10 +2341,10 @@ final class re {
                 }
               } else {
                 stackIn_25_0 = -1;
-                stackIn_25_1 = ~li.field_s;
+                stackIn_25_1 = ~MatchingFieldValidator.field_s;
               }
               if (stackIn_25_0 >= stackIn_25_1 &&
-                var3 != li.field_s) {
+                var3 != MatchingFieldValidator.field_s) {
                 eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
               }
               if (var9 == 0) {
@@ -2484,7 +2484,7 @@ final class re {
                   var10 = var10 / 50;
                 }
                 al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
-                if (ka.a(var7, 0, 40, 40, var6)) {
+                if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
                   var11 = NanoFrameTimer.field_n[var9].toUpperCase();
                   var12 = al.field_Z.a(var11);
                   var13 = 16 + var6;
@@ -2548,9 +2548,9 @@ final class re {
                 }
                 al.field_Z.b(Integer.toString(var10), var6 + 16, var7 + 38, 16776960, -1);
               } else {
-                of.field_e.a(pc.field_b.charAt(0), var6 + 10, var7 + 27, 16776960);
+                ClientLookupTables.field_e.a(pc.field_b.charAt(0), var6 + 10, var7 + 27, 16776960);
               }
-              if (ka.a(var7, 0, 40, 40, var6)) {
+              if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
                 if (0 == var9) {
                   stackIn_35_0 = IsaacGenerator.field_m;
                 } else {
@@ -2606,7 +2606,7 @@ final class re {
               }
             }
             al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
-            if (ka.a(var7, 0, 40, 40, var6)) {
+            if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
               var11 = NanoFrameTimer.field_n[var9].toUpperCase();
               var12 = al.field_Z.a(var11);
               var13 = 16 + var6;
@@ -2668,7 +2668,7 @@ final class re {
         String var12Lifetime1;
         String var12Lifetime2;
         u.field_f[26] = jf.field_e;
-        mk.field_L.b(tc.field_d, 320, 95, 16777215, -1);
+        AccountRegistrationPanel.field_L.b(tc.field_d, 320, 95, 16777215, -1);
         var3 = 0;
         var4 = wl.b(25685);
         var11 = vg.a(new String[]{Integer.toString(var4)}, 88, bi.field_f);
@@ -2969,7 +2969,7 @@ final class re {
           SoftwareRasterizer.intersectClip(32, 83, 605, 393);
         }
         var3 += 81;
-        var3 = this.a(bj.field_g, 82, var3);
+        var3 = this.a(DebouncedFieldValidator.field_g, 82, var3);
         if (!hk.field_q) {
           var3 = this.a(il.field_c[1], df.field_b, var3, df.field_e, (byte) 80, il.field_c[0]);
           if (HostileSpawn.field_I) {
@@ -2983,7 +2983,7 @@ final class re {
           this.field_o = 34;
         }
         var3 = this.a(il.field_c[4], field_I, var3, tk.field_f, (byte) 80, il.field_c[3]);
-        var3 = this.a(il.field_c[6], u.field_c, var3, of.field_b, (byte) 80, il.field_c[5]);
+        var3 = this.a(il.field_c[6], u.field_c, var3, ClientLookupTables.field_b, (byte) 80, il.field_c[5]);
         var3 = this.a(jf.field_f, param0 + 8, var3);
         var3 = this.a((RgbSprite) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
         var3 = this.a(il.field_c[10], g.field_K, var3, ln.field_p, (byte) 80, il.field_c[8]);
@@ -3053,8 +3053,8 @@ final class re {
         int var18 = 0;
         int var19 = 0;
         var19 = HostileSpawn.field_I ? 1 : 0;
-        if (0 == li.field_p) {
-          li.field_p = Math.max(wh.field_d.a(na.field_q.toUpperCase()), mk.field_L.a(ArchiveIndex.field_s.toUpperCase()));
+        if (0 == MatchingFieldValidator.field_p) {
+          MatchingFieldValidator.field_p = Math.max(wh.field_d.a(na.field_q.toUpperCase()), AccountRegistrationPanel.field_L.a(ArchiveIndex.field_s.toUpperCase()));
         }
         boolean decompiledFrameRemainder12 = true;
         if (param0 == this.field_d) {
@@ -3327,7 +3327,7 @@ final class re {
                 if (param0 == 17) {
                   var5 += 30;
                 }
-                stackIn_160_0 = (!ka.a(140, 0, 200, 300, 280)) ? 0 : 1;
+                stackIn_160_0 = (!EmailFormatValidator.a(140, 0, 200, 300, 280)) ? 0 : 1;
                 var10 = stackIn_160_0;
                 if (var19 == 0) {
                   break;
@@ -3367,7 +3367,7 @@ final class re {
                 if (ta.p(3)) {
                   var9 = 400;
                 }
-                if (ig.field_L != 2 &&
+                if (EditableTextField.field_L != 2 &&
                   270 <= ArchiveProvider.field_e) {
                   break;
                 }
@@ -3386,7 +3386,7 @@ final class re {
                   var8 = 166 / this.field_C.field_b;
                 }
                 var5 = 5 + var8 + 228;
-                stackIn_181_0 = (!ka.a(228, 0, 176, 288, 60)) ? 0 : 1;
+                stackIn_181_0 = (!EmailFormatValidator.a(228, 0, 176, 288, 60)) ? 0 : 1;
                 var10 = stackIn_181_0;
                 var9 = 84;
                 if (var19 == 0) {
@@ -3415,7 +3415,7 @@ final class re {
             var12 = wh.field_d;
             if (param0 == 0 ||
               17 == param0) {
-              var12 = mk.field_L;
+              var12 = AccountRegistrationPanel.field_L;
             }
             var13 = 0;
             while (!(var13 >= dd.field_o[param0].length)) {
@@ -3462,8 +3462,8 @@ final class re {
                           ((var10 != 0)) &&
                           (!((320 - var6 / 2) >= j.field_c)) &&
                           (!(var6 / 2 + 320 <= j.field_c)) &&
-                          (!(rb.field_m <= (7 + (-mk.field_L.field_y + var5)))) &&
-                          (!(rb.field_m >= (-6 + mk.field_L.field_F + var5)))) {
+                          (!(rb.field_m <= (7 + (-AccountRegistrationPanel.field_L.field_y + var5)))) &&
+                          (!(rb.field_m >= (-6 + AccountRegistrationPanel.field_L.field_F + var5)))) {
                           this.field_t = var13;
                           this.field_u = true;
                         }
@@ -3471,8 +3471,8 @@ final class re {
                         if (!this.field_K &&
                           var10 != 0 &&
                           dd.field_o[param0] == ja.field_h) {
-                          if ((!(7 + (-mk.field_L.field_y + var5) > rb.field_m)) &&
-                            (!(rb.field_m >= (30 + (var5 - mk.field_L.field_y) + 7)))) {
+                          if ((!(7 + (-AccountRegistrationPanel.field_L.field_y + var5) > rb.field_m)) &&
+                            (!(rb.field_m >= (30 + (var5 - AccountRegistrationPanel.field_L.field_y) + 7)))) {
                             if (var13 == 0) {
                               if (var9 - 32 > j.field_c) {
                                 break regionExit1;
@@ -3494,7 +3494,7 @@ final class re {
                         } else {
                           if ((!(this.field_K)) &&
                             ((var10 != 0)) &&
-                            (!(!ka.a(-mk.field_L.field_y + (var5 + 7), 0, 30, var8, -32 + var9)))) {
+                            (!(!EmailFormatValidator.a(-AccountRegistrationPanel.field_L.field_y + (var5 + 7), 0, 30, var8, -32 + var9)))) {
                             this.field_t = var13;
                             this.field_u = true;
                           }
@@ -3507,8 +3507,8 @@ final class re {
                       var10 != 0 &&
                       j.field_c > -(var6 / 2) + 320 &&
                       j.field_c < 320 + var6 / 2 &&
-                      rb.field_m > 7 + (var5 - mk.field_L.field_y) &&
-                      rb.field_m < (-6 + (var5 + mk.field_L.field_F)))) {
+                      rb.field_m > 7 + (var5 - AccountRegistrationPanel.field_L.field_y) &&
+                      rb.field_m < (-6 + (var5 + AccountRegistrationPanel.field_L.field_F)))) {
                       if (0 != var13 && (!(j.field_c < 320) ||
                         var13 != 1)) {
                         if ((!(j.field_c <= 320)) &&
@@ -3563,20 +3563,20 @@ final class re {
                     if ((ca.field_c & 128) == 0) {
                       var15 = 16777215;
                     }
-                    var18 = -8 + (320 - mk.field_L.a(var16.toUpperCase()) / 2);
-                    mk.field_L.a(var16.toUpperCase(), 328, var5 - 5, var15, -1, this.field_e);
+                    var18 = -8 + (320 - AccountRegistrationPanel.field_L.a(var16.toUpperCase()) / 2);
+                    AccountRegistrationPanel.field_L.a(var16.toUpperCase(), 328, var5 - 5, var15, -1, this.field_e);
                     SoftwareRasterizer.fillRectangle(var18, var5 - 17, 8, 8, var15);
                   }
                 }
                 if (var14 == 12) {
                   var17 = -17 + var5;
                   var18 = wj.field_O << 1;
-                  this.b(-18902, var18, var9 + li.field_p, var17);
+                  this.b(-18902, var18, var9 + MatchingFieldValidator.field_p, var17);
                 }
                 if (var14 == 13) {
                   var17 = var5 - 17;
                   var18 = ga.field_b >> 1;
-                  this.b(-18902, var18, li.field_p + var9, var17);
+                  this.b(-18902, var18, MatchingFieldValidator.field_p + var9, var17);
                 }
                 if (var11 == 0) {
                   var5 = var5 + var8;
@@ -3624,7 +3624,7 @@ final class re {
           }
           this.field_e = 256 - var2;
         }
-        this.d(this.field_d, ij.field_F, 67);
+        this.d(this.field_d, DisplayNameSelectionPanel.field_F, 67);
         if (this.field_d == 3) {
           return;
         }
@@ -3633,7 +3633,7 @@ final class re {
           this.field_d != 14 &&
           this.field_d != 15) {
           fb.a(32, 398, 11992, 32, 576);
-          jn.a(100, Math.min(lk.field_H, 30), 0, 0);
+          jn.a(100, Math.min(LoginPanel.field_H, 30), 0, 0);
         }
     }
 
@@ -3663,7 +3663,7 @@ final class re {
         String var5Lifetime1;
         String var5Lifetime2;
         u.field_f[26] = jh.field_bb;
-        mk.field_L.b(i.field_e.toUpperCase(), 320, 95, 16724736, -1);
+        AccountRegistrationPanel.field_L.b(i.field_e.toUpperCase(), 320, 95, 16724736, -1);
         var4 = wl.b(25685);
         var12 = vg.a(new String[]{Integer.toString(var4)}, 74, bi.field_f);
         var5 = var12;
@@ -3696,16 +3696,16 @@ final class re {
         }
         if (param1 == 9) {
           stackIn_15_0 = (MidiPcmStream.field_r != 0);
-          stackIn_18_1 = (ei.field_q.isEmpty(-20049)) ? false : true;
+          stackIn_18_1 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
           if (wb.a(stackIn_15_0, stackIn_18_1, false, rg.a((byte) -117)) != null) {
             stackIn_21_0 = new String[]{ch.field_d.toLowerCase()};
             stackIn_21_1 = 74;
             stackIn_21_2 = new StringBuilder();
             stackIn_22_3 = (MidiPcmStream.field_r == 0) ? false : true;
-            stackIn_25_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
+            stackIn_25_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
             stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(cj.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
             stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
-            stackIn_31_4 = (ei.field_q.isEmpty(-20049)) ? false : true;
+            stackIn_31_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
             var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(cj.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
             al.field_Z.a(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }
@@ -3891,7 +3891,7 @@ final class re {
         if (null == this.field_H) {
           this.field_H = new RgbSprite(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
           this.field_H.a();
-          IntrusiveNode.field_d.a(4, var3);
+          IntrusiveNode.field_d.drawMissionMap(4, var3);
           o.field_n.setAsRasterTarget((byte) 113);
         }
         this.a(150, (byte) -55, 70, 52, 304);
@@ -3952,7 +3952,7 @@ final class re {
             }
           }
           if (rl.field_c == 6) {
-            var4 = ld.field_q;
+            var4 = AgeValidator.field_q;
           }
           if (rl.field_c == 7) {
             var4 = rg.field_c;
@@ -4081,12 +4081,12 @@ final class re {
           stackIn_5_0 = 0;
         }
         var3 = stackIn_5_0;
-        uf.field_g[var3].b(0, 0);
+        uf.field_g[var3].drawTransparent(0, 0);
         if (param0 <= 112) {
           return;
         }
         if (ArchiveProvider.field_e > 150 &&
-          2 != ig.field_L) {
+          2 != EditableTextField.field_L) {
           var4 = Math.min(480, 4 * (ArchiveProvider.field_e - 150));
           var5 = 355;
           var6 = 274;
@@ -4097,7 +4097,7 @@ final class re {
           SoftwareRasterizer.fillRectangleAlpha(var5, var7, var6, var8, 0, 160 * var4 / 480);
           SoftwareRasterizer.setClip(0, 0, 640, var4);
           this.a(1 + var7 + var8, var7 - 2, var5 - 2, -18, 1 + var5 + var6);
-          mk.field_L.b(MusicPatchPcmStream.field_p, var9, var10, 16777215, -1);
+          AccountRegistrationPanel.field_L.b(MusicPatchPcmStream.field_p, var9, var10, 16777215, -1);
           var10 += 38;
           var12 = wh.field_d;
           var13 = 16776960;
@@ -4127,19 +4127,19 @@ final class re {
               ((vm) ((Object) var12)).b(var22, var9, var10, var13, -1);
               var23 = vg.a(new String[]{"<col=ffffff>" + MidiPcmStream.field_r + "</col>"}, 67, o.field_j.toUpperCase());
               var10 += 36;
-              mk.field_L.b(var23, var9, var10, var13, -1);
+              AccountRegistrationPanel.field_L.b(var23, var9, var10, var13, -1);
               var11 = sg.d(24);
               var10 += 36;
             }
             if (var11 != null) {
               var24 = vg.a(new String[]{var11}, 65, ag.field_j).toUpperCase();
-              if ((-4 + var6) < mk.field_L.a(var24)) {
+              if ((-4 + var6) < AccountRegistrationPanel.field_L.a(var24)) {
                 wh.field_d.a(var24, var5 + 4, var10 - 35, var6 - 8, 100, var13, -1, 1, 0, 18);
                 if (var16 != 0) {
-                  mk.field_L.b(var24, var9, var10 + 8, var13, -1);
+                  AccountRegistrationPanel.field_L.b(var24, var9, var10 + 8, var13, -1);
                 }
               } else {
-                mk.field_L.b(var24, var9, var10 + 8, var13, -1);
+                AccountRegistrationPanel.field_L.b(var24, var9, var10 + 8, var13, -1);
               }
               var10 += 36;
             }
@@ -4197,7 +4197,7 @@ final class re {
           }
         }
         boolean decompiledFrameCompleted0 = true;
-        if (ka.a(286, 0, 100, 496, 72)) {
+        if (EmailFormatValidator.a(286, 0, 100, 496, 72)) {
           var4 = 0;
           while (42 > var4) {
             stackOut_14_0 = hb.a(var4, mc.field_E, false);
@@ -4572,15 +4572,15 @@ final class re {
           } else {
             kc.field_c = 0;
           }
-          if (kc.field_c <= lk.field_H) {
-            if (!(lk.field_H <= kc.field_c)) {
-              lk.field_H = lk.field_H - 1;
+          if (kc.field_c <= LoginPanel.field_H) {
+            if (!(LoginPanel.field_H <= kc.field_c)) {
+              LoginPanel.field_H = LoginPanel.field_H - 1;
               if (var9 != 0) {
-                lk.field_H = lk.field_H + 1;
+                LoginPanel.field_H = LoginPanel.field_H + 1;
               }
             }
           } else {
-            lk.field_H = lk.field_H + 1;
+            LoginPanel.field_H = LoginPanel.field_H + 1;
           }
           f.a((byte) 119);
           if (null != ec.field_b) {
@@ -4649,7 +4649,7 @@ final class re {
           this.field_a = param2;
           this.field_y = param0;
         }
-        this.a(this.field_d, (byte) -86, ij.field_F);
+        this.a(this.field_d, (byte) -86, DisplayNameSelectionPanel.field_F);
         if (this.field_d == 0 &&
           dd.field_o[this.field_d].length == 9) {
           stackIn_50_0 = 26;
@@ -4661,7 +4661,7 @@ final class re {
         if (this.field_d == 3) {
           var7 = 448;
         }
-        ij.field_F = var7;
+        DisplayNameSelectionPanel.field_F = var7;
         if (!this.field_c) {
           if (0 < this.field_p) {
             this.field_p = this.field_p - 16;
@@ -4669,7 +4669,7 @@ final class re {
         } else {
           this.field_p = this.field_p + 16;
           if (256 < this.field_p) {
-            of.field_h = null;
+            ClientLookupTables.field_h = null;
             mc.field_I = 1;
             hg.field_e = 1;
             jf.field_c = 128;
@@ -4768,7 +4768,7 @@ final class re {
             return;
           }
         }
-        if (ig.field_L == 1 &&
+        if (EditableTextField.field_L == 1 &&
           this.field_f > -1 &&
           this.field_u && (this.field_f == 12 ||
           this.field_f == 13)) {
@@ -4883,16 +4883,16 @@ final class re {
         }
         if (ib.a((byte) -72) &&
           null != IsaacGenerator.field_h) {
-          oc.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
-          oc.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", 0);
-          oc.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", 0);
-          oc.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", 0);
-          oc.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", 0);
-          oc.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", 0);
-          oc.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
-          oc.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
-          oc.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
-          oc.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
+          GridPoint.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
+          GridPoint.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", 0);
+          GridPoint.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", 0);
+          GridPoint.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", 0);
+          GridPoint.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", 0);
+          GridPoint.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", 0);
+          GridPoint.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
+          GridPoint.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
+          GridPoint.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
+          GridPoint.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
           IsaacGenerator.field_h = null;
         }
         dd.field_o[4] = bh.field_j;
@@ -4991,7 +4991,7 @@ final class re {
         ic var2 = null;
         if (!ta.p(param0)) {
           if (null == p.field_m[bm.field_c]) {
-            p.field_m[bm.field_c] = pi.a(10, 6413, 3, ka.field_p[bm.field_c], 1);
+            p.field_m[bm.field_c] = pi.a(10, 6413, 3, EmailFormatValidator.field_p[bm.field_c], 1);
           }
           var2 = p.field_m[bm.field_c];
           if (var2.field_m &&
@@ -5069,7 +5069,7 @@ final class re {
               var6 = 5 - var6;
             }
             var6 = (int)((double)var6 * 0.8);
-            var7 = mk.field_L.field_u;
+            var7 = AccountRegistrationPanel.field_L.field_u;
             var8 = 0;
             while (true) {
               if (var8 < var7) {
@@ -5079,7 +5079,7 @@ final class re {
                   if (0.5 > Math.random()) {
                     var9 = -var9;
                   }
-                  mk.field_L.c(param1, 54 + var9, 60, 16776960, -1);
+                  AccountRegistrationPanel.field_L.c(param1, 54 + var9, 60, 16776960, -1);
                   var8++;
                   continue;
                 }
@@ -5092,7 +5092,7 @@ final class re {
               return;
             }
           }
-          mk.field_L.c(param1, 54, 60, 16776960, -1);
+          AccountRegistrationPanel.field_L.c(param1, 54, 60, 16776960, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5145,7 +5145,7 @@ final class re {
           }
         }
         this.field_C.field_b = dd.field_o[this.field_d].length;
-        ij.field_F = 448;
+        DisplayNameSelectionPanel.field_F = 448;
     }
 
     re(int param0) {
@@ -5164,7 +5164,7 @@ final class re {
           this.field_H = null;
         }
         this.field_C.field_b = dd.field_o[this.field_d].length;
-        ij.field_F = 448;
+        DisplayNameSelectionPanel.field_F = 448;
     }
 
     static {

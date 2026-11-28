@@ -355,7 +355,7 @@ final class SceneWidgetPart007 extends SceneWidget {
         MixedSupport083.sceneWidgetState0087.performAction1768(MixedSupport020.sceneWidgetState0013, -16834);
         MixedSupport020.sceneWidgetState0013.performAction1768(RenderingSupport004.sceneWidgetState0039, -16834);
         MixedSupport020.sceneWidgetState0013.performAction1768(GameSession.sceneWidgetState0099, -16834);
-        UiComponentPart032.performAction1700(booleanArgument2, -2);
+        BirthDateInput.performAction1700(booleanArgument2, -2);
     }
 
     SceneWidgetPart007(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, SceneWidget sceneWidgetArgument6, SceneWidget sceneWidgetArgument7, SceneWidget sceneWidgetArgument8, SceneWidget sceneWidgetArgument9, SceneWidgetPart003 sceneWidgetPart003Argument10, SceneWidget sceneWidgetArgument11, String stringArgument12, long longArgument13) {
@@ -465,7 +465,7 @@ final class SceneWidgetPart007 extends SceneWidget {
                     stackObjectLocal21 = this;
                     stackSceneWidgetPart003Local22 = null;
                     stackSceneWidgetPart003Local23 = null;
-                    stackStringLocal24 = UiComponentPart028.stringState0481;
+                    stackStringLocal24 = EditableTextField.stringState0481;
                     break regionExit1;
                   }
                 }
@@ -487,8 +487,8 @@ final class SceneWidgetPart007 extends SceneWidget {
             this.sceneWidgetState0084.performAction1768(sceneWidgetArrayLocal15[2], -16834);
             this.sceneWidgetArrayState0003 = new SceneWidget[NetworkArchiveRequestManager.integerState0598];
             for (integerLocal4 = 0; integerLocal4 < NetworkArchiveRequestManager.integerState0598; integerLocal4++) {
-              if (UiComponentPart024.stringArrayState0032[integerLocal4] != null) {
-                this.sceneWidgetArrayState0003[integerLocal4] = new SceneWidget(0L, sceneWidgetArgument11, UiComponentPart024.stringArrayState0032[integerLocal4]);
+              if (BirthDateTextFields.stringArrayState0032[integerLocal4] != null) {
+                this.sceneWidgetArrayState0003[integerLocal4] = new SceneWidget(0L, sceneWidgetArgument11, BirthDateTextFields.stringArrayState0032[integerLocal4]);
                 this.sceneWidgetArrayState0003[integerLocal4].integerState0916 = 0;
                 stackSceneWidgetLocal25 = this.sceneWidgetArrayState0003[integerLocal4];
                 stackBooleanLocal26 = (stringArgument12 != null);

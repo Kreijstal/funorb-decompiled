@@ -23,15 +23,15 @@ final class he extends ch {
         field_s = null;
     }
 
-    final static pg[] c(int param0) {
+    final static IndexedSprite[] c(int param0) {
         int var2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         if (param0 > -120) {
-          return (pg[]) null;
+          return (IndexedSprite[]) null;
         }
-        pg[] var1 = new pg[sc.field_c];
+        IndexedSprite[] var1 = new IndexedSprite[sc.field_c];
         for (var2 = 0; sc.field_c > var2; var2++) {
-          var1[var2] = new pg(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], ja.field_e[var2], bf.field_d);
+          var1[var2] = new IndexedSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], ja.field_e[var2], bf.field_d);
         }
         uj.d(113);
         return var1;
@@ -43,7 +43,7 @@ final class he extends ch {
         this.field_v = 0;
     }
 
-    final static void a(double param0, oc param1, int param2, double param3, oj param4, int param5, int param6) {
+    final static void a(double param0, GridPoint param1, int param2, double param3, oj param4, int param5, int param6) {
         og dupTemp$0 = null;
         og dupTemp$1 = null;
         RuntimeException stackIn_24_0 = null;
@@ -76,7 +76,7 @@ final class he extends ch {
             var12 < 24) {
             param4.field_F = param4.field_F - 1;
             jn.field_F[ib.field_c].field_c = 256.0 * Math.random();
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param1);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
             jn.field_F[ib.field_c].field_l.a(param4.field_l, -28860);
             jn.field_F[ib.field_c].field_e = 1;
             jn.field_F[ib.field_c].field_h = 0;

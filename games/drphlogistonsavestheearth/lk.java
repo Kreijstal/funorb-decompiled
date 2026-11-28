@@ -33,7 +33,7 @@ class lk extends u {
     }
 
     final static void b(int param0) {
-        qg.a(true, bg.field_q, ol.field_j, (byte) -11);
+        ValidatedTextField.a(true, bg.field_q, ol.field_j, (byte) -11);
         hl.field_b = true;
         if (param0 != 1) {
           lk.c((byte) -37);

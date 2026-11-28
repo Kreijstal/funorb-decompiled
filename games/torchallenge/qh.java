@@ -105,8 +105,8 @@ final class qh extends kj implements tl, sg {
             sf.a(uk.field_N, ng.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
           }
         } else {
-          var3Lifetime3 = rf.field_eb[vj.field_c][1];
-          var2Lifetime3 = rf.field_eb[vj.field_c][0];
+          var3Lifetime3 = ValidatedTextField.field_eb[vj.field_c][1];
+          var2Lifetime3 = ValidatedTextField.field_eb[vj.field_c][0];
           uk.field_N.d();
           ie.field_f[vj.field_c][0].drawTransparent(var2Lifetime3, var3Lifetime3);
           IterableNodeHashTable.field_h = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);

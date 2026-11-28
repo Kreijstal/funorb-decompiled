@@ -4,7 +4,7 @@
 final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame frameState0003;
     static String stringState0454;
-    static MixedSupport015 mixedSupport015State0004;
+    static NineSliceSprite mixedSupport015State0004;
     volatile boolean booleanState0156;
     static int integerState0670;
     static String stringState0455;
@@ -154,7 +154,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
         objectLocal2 = MixedSupport062.mouseInputState0001;
         synchronized (objectLocal2) {
           MixedSupport099.integerState0579 = MixedSupport099.integerState0579 + 1;
-          DualNode.integerState0062 = UiComponentPart022.integerState0572;
+          DualNode.integerState0062 = AccountFieldStatusIndicator.integerState0572;
           HashNode.integerState0069 = Sprite.integerState0424;
           if (integerArgument1 != -2) {
             FullscreenCanvas.snapshotMouseInput(-55);
@@ -163,7 +163,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           MixedSupport101.booleanState0135 = TranslatedUiText.booleanState0115;
           TranslatedUiText.booleanState0115 = false;
           SceneWidgetPart005.integerState0328 = SecondaryNodeHashTable.integerState0544;
-          UiComponentPart013.integerState0276 = RenderingSupport003.integerState0253;
+          LoginPanel.integerState0276 = RenderingSupport003.integerState0253;
           TextLineMetrics.integerState0535 = MixedSupport103.integerState0597;
           SecondaryNodeHashTable.integerState0544 = 0;
         }

@@ -86,7 +86,7 @@ final class TileEffectAnimation extends AnimationNode {
           }
           wd.a(SlowAllEvent.field_q, (byte) -126, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
           sja.field_fb.writeLengthShort((byte) -88, sja.field_fb.position - var5_int);
-          hna.a(-1, 85);
+          ConfirmedEmailAvailabilityValidator.a(-1, 85);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

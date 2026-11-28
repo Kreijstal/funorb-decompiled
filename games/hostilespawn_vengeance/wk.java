@@ -102,7 +102,7 @@ final class wk {
 
     final static ri a(int param0, int param1) {
         ri var2 = new ri();
-        ei.field_h.addLast(var2, 88);
+        DelayedPacket.field_h.addLast(var2, 88);
         if (param1 == -2178) {
           AccountCreationResultPanel.d(param1 ^ 11338, param0);
           return var2;
@@ -126,7 +126,7 @@ final class wk {
             var5 = jn.field_F[ib.field_c];
             var5.field_i = 16;
             var5.field_c = var2.field_c + (double)var3;
-            var5.field_j.a((byte) 46, var2.field_j);
+            var5.field_j.copyCoordinatesFrom((byte) 46, var2.field_j);
             var5.field_l.a(var2.field_l, -28860);
             var5.field_e = 0;
             var5.field_l.field_f = var5.field_l.field_f - 0.5;

@@ -32,7 +32,7 @@ final class jf {
               stackIn_9_0 = var3;
               return stackIn_9_0;
             }
-            stackIn_7_0 = tj.copyBytes(-117, var3);
+            stackIn_7_0 = EmailFormatValidator.copyBytes(-117, var3);
             return stackIn_7_0;
           }
           if (param1) {

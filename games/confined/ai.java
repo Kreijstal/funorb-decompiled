@@ -90,8 +90,8 @@ class ai extends em {
             ca.field_o = null;
             if (param1 == null) {
               ByteStorage.field_c.position = 0;
-              ByteStorage.field_c.writeInt(-106, hj.field_h.nextInt());
-              ByteStorage.field_c.writeInt(-103, hj.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-106, AgeValidator.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-103, AgeValidator.field_h.nextInt());
               stackIn_16_0 = ByteStorage.field_c;
               if (!param6.b(0)) {
                 stackIn_17_1 = "";
@@ -117,8 +117,8 @@ class ai extends em {
                 var9 = var9 | 1;
               }
               ByteStorage.field_c.position = 0;
-              ByteStorage.field_c.writeInt(-98, hj.field_h.nextInt());
-              ByteStorage.field_c.writeInt(-114, hj.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-98, AgeValidator.field_h.nextInt());
+              ByteStorage.field_c.writeInt(-114, AgeValidator.field_h.nextInt());
               ByteStorage.field_c.writePrefixedString(var14, (byte) 45);
               ByteStorage.field_c.writePrefixedString(var8, (byte) 105);
               var15 = (CharSequence) ((Object) param1);
@@ -151,7 +151,7 @@ class ai extends em {
             } else {
               if (248 == var9Lifetime1) {
                 gb.a((byte) -94, ii.b(false));
-                gl.field_k = oj.field_y;
+                PasswordValidator.field_k = oj.field_y;
                 dc.d(115);
                 sg.field_y = false;
                 stackIn_29_0 = var9Lifetime1;
@@ -190,10 +190,10 @@ class ai extends em {
             if (Confined.field_F == 255) {
               var9_ref_String = e.field_c.readNullableString((byte) 102);
               if (var9_ref_String != null) {
-                qc.a(var9_ref_String, ii.b(false), -1);
+                ConfirmedEmailAvailabilityValidator.a(var9_ref_String, ii.b(false), -1);
               }
             } else {
-              gl.field_k = e.field_c.readString(true);
+              PasswordValidator.field_k = e.field_c.readString(true);
             }
             dc.d(106);
             sg.field_y = false;
@@ -207,9 +207,9 @@ class ai extends em {
           if (kl.field_G == null) {
             if (sg.field_y) {
               if (la.h(112) <= 30000L) {
-                gl.field_k = ka.field_G;
+                PasswordValidator.field_k = ka.field_G;
               } else {
-                gl.field_k = HomingProjectile.field_S;
+                PasswordValidator.field_k = HomingProjectile.field_S;
               }
               sg.field_y = false;
               stackIn_63_0 = 249;

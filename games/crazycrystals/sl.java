@@ -70,7 +70,7 @@ final class sl extends pn {
 
     final static void a(vc param0, vc param1, int param2, int param3) {
         try {
-          vk.field_L = param3;
+          LoginPanel.field_L = param3;
           ec.field_m = param0;
           int var4_int = 37 / ((param2 - 58) / 47);
           gh.field_F = param1;

@@ -115,7 +115,7 @@ final class IterableNodeHashTable implements Iterable {
         var1 = 102 / ((param0 - 31) / 59);
         var2 = hi.field_e;
         synchronized (var2) {
-          b.field_k = cg.field_k;
+          b.field_k = MatchingFieldValidator.field_k;
           BufferedSocket.field_l = BufferedSocket.field_l + 1;
           PacketBuffer.field_j = fc.field_g;
           bk.field_a = AccountServiceResult.field_i;

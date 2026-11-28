@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends qe {
+final class db extends DungeonAssaultScreen {
     private rh field_r;
     static String field_u;
     private ae field_w;
@@ -84,7 +84,7 @@ final class db extends qe {
                       var8_intLifetime1 = Bzip2State.field_p[var7];
                       var9 = ib.a((byte) -125, 16760960, Integer.toString(var8_intLifetime1));
                       if (var8_intLifetime1 == 1) {
-                        var5 = jk.a(new String[]{var9, var4}, be.field_m, 30496);
+                        var5 = jk.a(new String[]{var9, var4}, MatchingFieldValidator.field_m, 30496);
                         if (var10 != 0) {
                           var5 = jk.a(new String[]{var9, var4}, vj.field_i, 30496);
                         }
@@ -151,7 +151,7 @@ final class db extends qe {
         if (param1 != -121) {
           db.clearStaticReferences((byte) 98);
         }
-        ga.field_r = rb.a(8, var7, 16760960, (byte) 109);
+        ConfirmedEmailAvailabilityValidator.field_r = rb.a(8, var7, 16760960, (byte) 109);
         DiskArchiveRequest.field_F = rb.a(16, var7, 6307840, (byte) -111);
         nf.field_y = param0;
     }
@@ -222,7 +222,7 @@ final class db extends qe {
           if (param1 != nf.field_y) {
             this.a(param1, (byte) -121);
           }
-          ga.field_r.b(var10, var9, 64);
+          ConfirmedEmailAvailabilityValidator.field_r.b(var10, var9, 64);
           var13 = (int)((1.0 + te.a(mo.field_a)) * 128.0);
           if (var13 < 0) {
             var13 = 0;
@@ -234,12 +234,12 @@ final class db extends qe {
         }
     }
 
-    final void c() {
-        super.c();
+    final void releaseScreenResources() {
+        super.releaseScreenResources();
         this.field_s = null;
     }
 
-    final void c(boolean param0) {
+    final void updateScreen(boolean param0) {
         int stackIn_35_0 = 0;
         pp stackIn_39_0 = null;
         boolean stackIn_40_1 = false;
@@ -257,7 +257,7 @@ final class db extends qe {
         int var2_intLifetime1;
         int var3Lifetime1;
         var6 = DungeonAssault.field_K;
-        super.c(param0);
+        super.updateScreen(param0);
         var8 = SpriteAnimationPlayer.field_l;
         var2 = var8;
         var3 = 0;
@@ -292,7 +292,7 @@ final class db extends qe {
               }
             }
             while (ha.b((byte) 47)) {
-              this.f();
+              this.handleScreenKeyPress();
               if (var6 != 0) {
                 break scanLoop1;
               }
@@ -444,7 +444,7 @@ final class db extends qe {
         int var7Lifetime5;
         var10 = DungeonAssault.field_K;
         var2 = 241;
-        this.b();
+        this.resetScreenWidgets();
         var3 = 0;
         fo.field_d = new nn(true);
         eh.field_o = new ed(90, var2 + 7, 250, -var2 + 328);
@@ -619,7 +619,7 @@ final class db extends qe {
 
     private final void b(byte param0) {
         int var2;
-        if (super.d()) {
+        if (super.dispatchModalOrPointerInput()) {
           return;
         }
         this.field_w.a(-7734, this.a(AchievementIconEntry.field_k, lc.field_c, (byte) -117), this.a(eh.field_h, hj.field_S, (byte) -117));
@@ -672,8 +672,8 @@ final class db extends qe {
         int var11 = 0;
         int var12 = 0;
         int var18 = 0;
-        lb var19 = null;
-        lb var20 = null;
+        PlayerDungeonProfile var19 = null;
+        PlayerDungeonProfile var20 = null;
         int stackIn_21_0 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -713,17 +713,17 @@ final class db extends qe {
           decompiledSharedTail0 = (var18 != 0);
         }
         if (decompiledSharedTail0) {
-          var9 = jk.a(new String[]{Integer.toString(var19.field_B), Integer.toString(var19.field_h), Integer.toString(var19.field_D)}, ip.field_k, 30496);
+          var9 = jk.a(new String[]{Integer.toString(var19.field_B), Integer.toString(var19.field_h), Integer.toString(var19.field_D)}, TextFieldValidator.field_k, 30496);
           var10 = var9;
           var10 = var9;
         }
         if (var20.field_y <= 0) {
-          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, uh.field_V, param0 ^ 226336);
+          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, ValidatedTextField.field_V, param0 ^ 226336);
           if (var18 != 0) {
-            var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, ip.field_k, param0 ^ 226336);
+            var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
           }
         } else {
-          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, ip.field_k, param0 ^ 226336);
+          var10Lifetime1 = jk.a(new String[]{Integer.toString(var19.field_y), Integer.toString(var19.field_r), Integer.toString(var19.field_I)}, TextFieldValidator.field_k, param0 ^ 226336);
         }
         boolean decompiledFrameCompleted3 = true;
         boolean decompiledFrameCompleted2 = true;
@@ -732,7 +732,7 @@ final class db extends qe {
         var11 = -55 + bl.field_s.field_y;
         var12 = 2 + kk.field_l.c(var9, var11) + kk.field_l.c(var10Lifetime1, var11);
         SoftwareRasterizer.fillRectangleAlpha(-3 + var3, -16 + var4, 186, 6 + var12 * 16, 16777215, var6);
-        field_v.b(p.field_r, var3, var4, 0, -1);
+        field_v.b(DungeonBuilderScreen.field_r, var3, var4, 0, -1);
         var4 += 16;
         var12Lifetime1 = kk.field_l.a(var9, 10 + var3, -var5 + var4, var11, 100, 0, -1, 0, 0, var5);
         var4 = var4 + 16 * var12Lifetime1;
@@ -806,7 +806,7 @@ final class db extends qe {
 
     }
 
-    final void b(boolean param0) {
+    final void initializeScreen(boolean param0) {
         int[] var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -814,7 +814,7 @@ final class db extends qe {
         int[] var6 = null;
         int[] var7 = null;
         var4 = DungeonAssault.field_K;
-        super.b(param0);
+        super.initializeScreen(param0);
         tg.field_f[3] = nb.field_e;
         this.field_w = new ae(tg.field_f[3].length);
         fk.a((byte) 121, lf.field_w);
@@ -898,7 +898,7 @@ final class db extends qe {
         return var17;
     }
 
-    final void a(boolean param0) {
+    final void renderScreen(boolean param0) {
         boolean stackIn_3_0 = false;
         int stackIn_8_0 = 0;
         boolean stackIn_24_1 = false;
@@ -960,7 +960,7 @@ final class db extends qe {
         }
         oe.field_m.h(24, 383);
         oe.field_m.j(560, 383);
-        db.e();
+        db.applyScreenLighting();
         this.field_r.d();
         this.field_t.d();
         var6 = 0;
@@ -1082,7 +1082,7 @@ final class db extends qe {
         }
     }
 
-    final void f() {
+    final void handleScreenKeyPress() {
         if (mm.field_t == 13) {
           gd.a(PacketBuffer.field_p, 0, PacketBuffer.field_p, false);
           return;
@@ -1113,7 +1113,7 @@ final class db extends qe {
         boolean stackIn_7_0 = false;
         var6 = DungeonAssault.field_K;
         if (param2 != -117) {
-          this.c(true);
+          this.updateScreen(true);
         }
         var4 = 0;
         while (true) {

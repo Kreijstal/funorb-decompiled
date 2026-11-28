@@ -172,7 +172,7 @@ abstract class RasterBuffer {
             var5 = (ResourceArchive) null;
             RasterBuffer.a((ResourceArchive) null, -76, (byte) -18, -119);
           }
-          if (pk.a(-128, param3, param0, param1)) {
+          if (LoginPanel.a(-128, param3, param0, param1)) {
             stackIn_6_0 = lm.a(-127);
             return stackIn_6_0;
           }

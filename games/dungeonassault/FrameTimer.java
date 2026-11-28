@@ -48,12 +48,12 @@ abstract class FrameTimer {
           ol.field_i = SecondaryNodeDeque.field_b;
           if (param0 != 255) {
             if (100 > param0) {
-              MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
+              MouseInput.field_b = DungeonBuilderScreen.createAccountErrorResult(param0, param3, -28323);
             } else {
               if (105 >= param0) {
                 MouseInput.field_b = NetworkArchiveRequest.createAccountSuggestionsResult(param2, 8082);
               } else {
-                MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
+                MouseInput.field_b = DungeonBuilderScreen.createAccountErrorResult(param0, param3, -28323);
               }
             }
           } else {

@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class nn {
-    static af[][] field_a;
+    static MenuLayer[][] field_a;
     static int field_e;
     static byte field_b;
     static Js5Transport field_c;
@@ -36,22 +36,22 @@ final class nn {
           hb.field_u[9] = null;
           hb.field_u[8] = null;
           hb.field_u[14] = r.field_a.toUpperCase();
-          hb.field_u[15] = pe.field_M.toUpperCase();
+          hb.field_u[15] = LoginPanel.field_M.toUpperCase();
           hb.field_u[16] = eg.field_y.toUpperCase();
           hb.field_u[17] = bm.field_l.toUpperCase();
           hb.field_u[21] = rk.field_e.toUpperCase();
           hb.field_u[22] = te.field_t.toUpperCase();
-          hb.field_u[23] = gp.field_M.toUpperCase();
+          hb.field_u[23] = ValidatedTextField.field_M.toUpperCase();
           po.field_t[2] = SpriteState.field_q;
           po.field_t[1] = hh.field_c;
           po.field_t[0] = ro.field_t;
           oh.field_a = oh.field_a.toUpperCase();
           ip.field_d = ip.field_d.toUpperCase();
           jn.field_b = jn.field_b.toUpperCase();
-          gp.field_P = gp.field_P.toUpperCase();
+          ValidatedTextField.field_P = ValidatedTextField.field_P.toUpperCase();
           al.field_c = al.field_c.toUpperCase();
           kj.field_f = kj.field_f.toUpperCase();
-          tn.field_m = tn.field_m.toUpperCase();
+          EmailFormatValidator.field_m = EmailFormatValidator.field_m.toUpperCase();
           fo.field_E = fo.field_E.toUpperCase();
           qd.field_i = qd.field_i.toUpperCase();
           ud.field_l = ud.field_l.toUpperCase();
@@ -78,22 +78,22 @@ final class nn {
         hb.field_u[9] = null;
         hb.field_u[8] = null;
         hb.field_u[14] = r.field_a.toUpperCase();
-        hb.field_u[15] = pe.field_M.toUpperCase();
+        hb.field_u[15] = LoginPanel.field_M.toUpperCase();
         hb.field_u[16] = eg.field_y.toUpperCase();
         hb.field_u[17] = bm.field_l.toUpperCase();
         hb.field_u[21] = rk.field_e.toUpperCase();
         hb.field_u[22] = te.field_t.toUpperCase();
-        hb.field_u[23] = gp.field_M.toUpperCase();
+        hb.field_u[23] = ValidatedTextField.field_M.toUpperCase();
         po.field_t[2] = SpriteState.field_q;
         po.field_t[1] = hh.field_c;
         po.field_t[0] = ro.field_t;
         oh.field_a = oh.field_a.toUpperCase();
         ip.field_d = ip.field_d.toUpperCase();
         jn.field_b = jn.field_b.toUpperCase();
-        gp.field_P = gp.field_P.toUpperCase();
+        ValidatedTextField.field_P = ValidatedTextField.field_P.toUpperCase();
         al.field_c = al.field_c.toUpperCase();
         kj.field_f = kj.field_f.toUpperCase();
-        tn.field_m = tn.field_m.toUpperCase();
+        EmailFormatValidator.field_m = EmailFormatValidator.field_m.toUpperCase();
         fo.field_E = fo.field_E.toUpperCase();
         qd.field_i = qd.field_i.toUpperCase();
         ud.field_l = ud.field_l.toUpperCase();
@@ -183,7 +183,7 @@ final class nn {
             if (null == vd.field_b) {
               stackIn_14_2 = null;
               stackIn_14_3 = null;
-              stackIn_14_6 = "" + gf.field_f;
+              stackIn_14_6 = "" + TextFieldValidator.field_f;
             } else {
               stackIn_14_2 = null;
               stackIn_14_3 = null;
@@ -231,13 +231,13 @@ final class nn {
         field_c = null;
         if (param0 < -88) {
           field_d = null;
-          field_a = (af[][]) null;
+          field_a = (MenuLayer[][]) null;
           return;
         }
         Throwable var2 = (Throwable) null;
         nn.a((String) null, (Throwable) null, 60);
         field_d = null;
-        field_a = (af[][]) null;
+        field_a = (MenuLayer[][]) null;
     }
 
     static {

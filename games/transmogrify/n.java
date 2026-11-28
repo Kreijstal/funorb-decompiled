@@ -65,7 +65,7 @@ final class n {
     }
 
     final static void a(boolean param0, boolean param1) {
-        wl.a(param1, param0, 170);
+        AccountRegistrationPanel.a(param1, param0, 170);
     }
 
     static {

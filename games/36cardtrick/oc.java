@@ -202,7 +202,7 @@ final class oc {
         }
     }
 
-    final static boolean a(String param0, kl param1, String param2, String param3, boolean param4, int param5, int param6) {
+    final static boolean a(String param0, AccountRegistrationPanel param1, String param2, String param3, boolean param4, int param5, int param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;

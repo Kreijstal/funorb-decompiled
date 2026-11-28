@@ -195,7 +195,7 @@ final class MixedSupport032 {
                         stackIntegerLocal28 = integerLocal25;
                         stackIntegerLocal29 = integerLocal24 << 4;
                         integerLocal26 = stackIntegerLocal28 + stackIntegerLocal29;
-                        SceneWidgetPart004.integerArrayState0053[integerLocal26] = integerLocal16;
+                        PlayerNamePrompt.integerArrayState0053[integerLocal26] = integerLocal16;
                         MixedSupport001.integerArrayState0001[integerLocal24] = integerLocal25 + 1;
                         if (mixedSupport138Argument1.byteState0004 > 0 &&
                           mixedSupport138Argument1.byteArrayState0033 != null) {

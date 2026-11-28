@@ -44,7 +44,7 @@ final class n {
         }
         pa.field_b = true;
         qd.a(88, false);
-        hi.field_k = 0;
+        TextFieldValidator.field_k = 0;
         if (param0 == -110) {
           return;
         }

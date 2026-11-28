@@ -142,7 +142,7 @@ class eg implements ad, cf {
               }
               var7 = new SectorCacheStore(param1, fe.field_z, aa.field_h[param1], 2097152);
             }
-            var9 = ke.field_U.a(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
+            var9 = ValidatedTextField.field_U.a(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
             if (param3) {
               var9.b(-37);
             }
@@ -684,7 +684,7 @@ class eg implements ad, cf {
               var7Lifetime2 = var10;
               var7Lifetime3 = var10;
               if (param3 >= 0L) {
-                var7Lifetime4 = var10 + "; Expires=" + e.a(sf.correctedCurrentTimeMillis((byte) 99) + 1000L * param3, -128) + "; Max-Age=" + param3;
+                var7Lifetime4 = var10 + "; Expires=" + PasswordValidator.a(sf.correctedCurrentTimeMillis((byte) 99) + 1000L * param3, -128) + "; Max-Age=" + param3;
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }

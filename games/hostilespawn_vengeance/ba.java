@@ -109,13 +109,13 @@ final class ba extends ag {
         if (param0 >= -49) {
           ba.a((byte) 13);
         }
-        if (li.field_o) {
+        if (MatchingFieldValidator.field_o) {
           AccountServiceResult.field_d.p(-108);
         } else {
           var1 = ca.field_a;
           if (0 < var1) {
             if (1 != var1) {
-              GameAppletShell.field_g = vg.a(new String[]{Integer.toString(var1)}, 52, mk.field_Q);
+              GameAppletShell.field_g = vg.a(new String[]{Integer.toString(var1)}, 52, AccountRegistrationPanel.field_Q);
             } else {
               GameAppletShell.field_g = vj.field_u;
             }
@@ -139,7 +139,7 @@ final class ba extends ag {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           var5_int = this.field_s + param2;
-          sf.a(-this.field_D.field_z + var5_int, param0, this.field_x + param0, this.field_D.field_z + param2, true);
+          TextInputField.pushAndIntersectClip(-this.field_D.field_z + var5_int, param0, this.field_x + param0, this.field_D.field_z + param2, true);
           for (var6 = -this.field_z + param2; var6 < var5_int; var6 = var6 + param1.field_z) {
             param1.e(var6, param0);
           }
@@ -197,7 +197,7 @@ final class ba extends ag {
         }
         this.a(var6, this.field_C[0], var5, -119);
         if (this.field_G < 65536) {
-          sf.a(this.field_s + var5, var6, this.field_x + var6, var5 + (this.field_G * this.field_s >> 16), true);
+          TextInputField.pushAndIntersectClip(this.field_s + var5, var6, this.field_x + var6, var5 + (this.field_G * this.field_s >> 16), true);
           this.a(var6, this.field_C[1], var5, -122);
           eh.b(false);
         }

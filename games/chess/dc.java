@@ -26,7 +26,7 @@ final class dc extends IntrusiveNode {
         if (param0 < 124) {
           dc.a(-70);
         }
-        kb.field_O = new ol();
+        kb.field_O = new AccountRegistrationPanel();
         nj.field_w.c(kb.field_O, 79);
     }
 

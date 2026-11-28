@@ -208,7 +208,7 @@ final class RenderingSupport001 extends HashNode {
     final static void performAction0137(boolean booleanArgument1) {
         ClientException.stringArrayState0006 = null;
         MixedSupport040.booleanState0046 = booleanArgument1 ? true : false;
-        UiComponentPart032.stringArrayState0051 = null;
+        BirthDateInput.stringArrayState0051 = null;
         SceneWidgetPart014.stringArrayState0057 = null;
         MixedSupport121.stringArrayState0047 = null;
     }

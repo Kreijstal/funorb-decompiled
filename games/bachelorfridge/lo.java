@@ -114,7 +114,7 @@ final class lo {
               mg.field_m.field_i = var3_ref_rk__;
               FlirtAnimation.e((byte) -66);
             }
-            hb.field_j = false;
+            MatchingFieldValidator.field_j = false;
             return true;
           }
           if (ri.field_a == 79) {

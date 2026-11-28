@@ -72,8 +72,8 @@ final class fm {
             hd.field_e = fk.a(me.field_g, "menu_text", -109, "benefits");
             bl.field_n = fk.a(me.field_g, "button_frame", -76, "benefits");
             field_b = fk.a(me.field_g, "arrow", param0 - 201, "benefits");
-            MidiPcmStream.field_m = (kc) ((Object) b.a("large_font", "benefits", -121, sf.field_q, me.field_g));
-            rc.field_a = (kc) ((Object) b.a("small_font", "benefits", -114, sf.field_q, me.field_g));
+            MidiPcmStream.field_m = (kc) ((Object) ConfirmedEmailAvailabilityValidator.a("large_font", "benefits", -121, sf.field_q, me.field_g));
+            rc.field_a = (kc) ((Object) ConfirmedEmailAvailabilityValidator.a("small_font", "benefits", -114, sf.field_q, me.field_g));
             var28 = SoftwareRasterizer.field_b;
             var2 = SoftwareRasterizer.field_f;
             var3 = SoftwareRasterizer.field_l;
@@ -111,7 +111,7 @@ final class fm {
             ua.field_c = (rl.field_a.field_k - bl.field_n.field_k) / 2 + 390;
             ce.field_a = (rl.field_a.field_o - bl.field_n.field_o) / 2 + 434;
             me.field_g = null;
-            ug.field_q = 390 + (-bl.field_n.field_k + rl.field_a.field_k) / 2;
+            MatchingFieldValidator.field_q = 390 + (-bl.field_n.field_k + rl.field_a.field_k) / 2;
           }
           if (null == hc.field_l) {
             return;
@@ -189,7 +189,7 @@ final class fm {
             var3Lifetime2 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
             var16 = new RgbSprite(412, 43);
-            var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, oc.field_U);
+            var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, ValidatedTextField.field_U);
             pj.field_k = null;
             var16.d();
             rc.field_a.a(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
@@ -273,7 +273,7 @@ final class fm {
               ld.a(-4 + rl.field_a.field_o, param0 - 155, 64, 392, 436, 7 * rl.field_a.field_k / 12);
             }
             stackIn_64_0 = 8;
-            stackIn_64_1 = ug.field_q;
+            stackIn_64_1 = MatchingFieldValidator.field_q;
             stackIn_65_2 = (ArchiveRequest.field_k.field_h == 1);
             RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
           }

@@ -343,7 +343,7 @@ final class ha extends cn {
             stackIn_3_0 = (ag) (param3);
           }
           var11 = (ph) (stackIn_3_0);
-          sf.a(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 + param3.field_m, param1 + param3.field_v, true);
+          TextInputField.pushAndIntersectClip(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 + param3.field_m, param1 + param3.field_v, true);
           if (var11 != null) {
             param4 = param4 & var11.field_D;
           }

@@ -429,7 +429,7 @@ final class gf {
         this.field_d = param5;
         this.field_F = param6;
         if (ej.field_g[this.field_I] != -1) {
-          var15 = e.a(127, (int)param1);
+          var15 = ConfirmedEmailAvailabilityValidator.a(127, (int)param1);
           th.a(-27610, DualLinkNode.field_s[this.field_I], var15, nl.field_r[ej.field_g[this.field_I]]);
         }
         var15Lifetime1 = this.field_I;

@@ -98,7 +98,7 @@ final class ni {
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + fl.field_b.a(param2.payload, param2.position, 0, var4, var3_int, true);
-            var5 = kk.decodeCp1252String(var3_int, (byte) 122, 0, var4);
+            var5 = AgeValidator.decodeCp1252String(var3_int, (byte) 122, 0, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

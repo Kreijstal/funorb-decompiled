@@ -22,7 +22,7 @@ final class hk {
           AchievementNotice.field_m = param2;
           tb.field_c = param3;
           GameKeyHandler.field_b = param0;
-          me.a(false, SoftwareRasterizer.field_c / param1, SoftwareRasterizer.field_g / 2);
+          TextFieldValidator.a(false, SoftwareRasterizer.field_c / param1, SoftwareRasterizer.field_g / 2);
           dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "hk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -73,7 +73,7 @@ class PacketBuffer extends IntrusiveNode {
                 return;
               }
             }
-            he.a(SoftwareRasterizer.field_b, 0, false, var8, var9, param4, 0, var10, var6_int, var7, var11, 0, 0, 0, param3.field_B);
+            AgeValidator.a(SoftwareRasterizer.field_b, 0, false, var8, var9, param4, 0, var10, var6_int, var7, var11, 0, 0, 0, param3.field_B);
             return;
           }
           return;
@@ -1319,7 +1319,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_raiders1,1", false);
                 if (var2 != null) {
-                  p.field_J[1] = dj.a(var2, param1);
+                  DungeonBuilderScreen.field_J[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_raiders2,1", param1);
                 if (null != var2) {
@@ -1379,7 +1379,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_monster2,1", false);
                 if (var2 != null) {
-                  lb.field_d[1] = dj.a(var2, false);
+                  PlayerDungeonProfile.field_d[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_monster3,1", false);
                 if (var2 != null) {
@@ -1447,11 +1447,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_defeat_repeated,0", param1);
                 if (null != var2) {
-                  rm.field_S[0] = dj.a(var2, param1);
+                  EditableTextField.field_S[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_defeat_repeated,1", param1);
                 if (null != var2) {
-                  rm.field_S[1] = dj.a(var2, false);
+                  EditableTextField.field_S[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_death,0", false);
                 if (null != var2) {
@@ -1611,7 +1611,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("goblin_scout", false);
                 if (null != var2) {
-                  dn.field_W = dj.a(var2, false);
+                  LoginPanel.field_W = dj.a(var2, false);
                 }
                 var2 = gm.a("necromancer", false);
                 if (null != var2) {
@@ -1693,7 +1693,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("chaos_champion", false);
                 if (var2 != null) {
-                  ih.field_v = dj.a(var2, param1);
+                  RaiderRecruitmentScreen.field_v = dj.a(var2, param1);
                 }
                 var2 = gm.a("centaur", false);
                 if (var2 != null) {
@@ -1725,7 +1725,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("pit", false);
                 if (var2 != null) {
-                  go.field_F = dj.a(var2, false);
+                  DungeonRaidScreen.field_F = dj.a(var2, false);
                 }
                 var2 = gm.a("snakes", param1);
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("spectre", false);
                 if (null != var2) {
-                  ih.field_s = dj.a(var2, false);
+                  RaiderRecruitmentScreen.field_s = dj.a(var2, false);
                 }
                 var2 = gm.a("banshee", false);
                 if (var2 != null) {
@@ -1945,7 +1945,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_dark_elf_assassin", false);
                 if (var2 != null) {
-                  he.field_r = dj.a(var2, false);
+                  AgeValidator.field_r = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_berserker", param1);
                 if (var2 != null) {
@@ -2173,7 +2173,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_skeleton_sentinels", param1);
                 if (var2 != null) {
-                  lb.field_x = dj.a(var2, false);
+                  PlayerDungeonProfile.field_x = dj.a(var2, false);
                 }
                 var2 = gm.a("tip_corrosive_slime", false);
                 if (var2 != null) {
@@ -2197,7 +2197,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tip_spectre", param1);
                 if (null != var2) {
-                  qm.field_p = dj.a(var2, false);
+                  EmailFormatValidator.field_p = dj.a(var2, false);
                 }
                 var2 = gm.a("tip_banshee", param1);
                 if (var2 != null) {
@@ -2553,13 +2553,13 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_fireimmunity_brief,0", false);
                 if (null != var2) {
-                  dn.field_N[0] = dj.a(var2, false);
+                  LoginPanel.field_N[0] = dj.a(var2, false);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
                 var2 = gm.a("ability_fireimmunity_brief,1", false);
                 if (null != var2) {
-                  dn.field_N[1] = dj.a(var2, false);
+                  LoginPanel.field_N[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_immortal_brief,0", false);
                 if (var2 != null) {
@@ -3143,7 +3143,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_profile", param1);
                 if (var2 != null) {
-                  gk.field_K = dj.a(var2, false);
+                  DisplayNameSelectionPanel.field_K = dj.a(var2, false);
                 }
                 var2 = gm.a("text_dungeon_builder", param1);
                 if (var2 != null) {
@@ -3171,15 +3171,15 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_cancel", false);
                 if (var2 != null) {
-                  be.field_r = dj.a(var2, param1);
+                  MatchingFieldValidator.field_r = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_members_only", false);
                 if (var2 != null) {
-                  dn.field_T = dj.a(var2, false);
+                  LoginPanel.field_T = dj.a(var2, false);
                 }
                 var2 = gm.a("text_orbmode", false);
                 if (var2 != null) {
-                  be.field_q = dj.a(var2, false);
+                  MatchingFieldValidator.field_q = dj.a(var2, false);
                 }
                 var2 = gm.a("text_x_renown", false);
                 if (null != var2) {
@@ -3347,7 +3347,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_topdown", false);
                 if (var2 != null) {
-                  go.field_V = dj.a(var2, false);
+                  DungeonRaidScreen.field_V = dj.a(var2, false);
                 }
                 var2 = gm.a("text_buy", false);
                 if (null != var2) {
@@ -3453,7 +3453,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_advance_coloured", false);
                 if (var2 != null) {
-                  dn.field_L = dj.a(var2, false);
+                  LoginPanel.field_L = dj.a(var2, false);
                 }
                 var2 = gm.a("text_charge_coloured", param1);
                 if (null != var2) {
@@ -3485,7 +3485,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_disarm_trap_minitip", param1);
                 if (null != var2) {
-                  vo.field_o = dj.a(var2, false);
+                  PasswordValidator.field_o = dj.a(var2, false);
                 }
                 var2 = gm.a("text_disarm_guardian_minitip", param1);
                 if (var2 != null) {
@@ -3661,7 +3661,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_disarmed", false);
                 if (var2 != null) {
-                  fi.field_t = dj.a(var2, false);
+                  InstructionsScreen.field_t = dj.a(var2, false);
                 }
                 var2 = gm.a("text_defeated", param1);
                 if (var2 != null) {
@@ -3673,7 +3673,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_passive_ability", param1);
                 if (null != var2) {
-                  rm.field_J = dj.a(var2, false);
+                  EditableTextField.field_J = dj.a(var2, false);
                 }
                 var2 = gm.a("text_ability_ready", param1);
                 if (null != var2) {
@@ -3689,7 +3689,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_useskill", false);
                 if (var2 != null) {
-                  vo.field_m = dj.a(var2, false);
+                  PasswordValidator.field_m = dj.a(var2, false);
                 }
                 var2 = gm.a("text_raider", param1);
                 if (null != var2) {
@@ -3725,7 +3725,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_no_defences", false);
                 if (var2 != null) {
-                  uh.field_V = dj.a(var2, param1);
+                  ValidatedTextField.field_V = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_defences", false);
                 if (null != var2) {
@@ -3737,11 +3737,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_outcome", false);
                 if (null != var2) {
-                  ip.field_k = dj.a(var2, param1);
+                  TextFieldValidator.field_k = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_raids", false);
                 if (null != var2) {
-                  p.field_r = dj.a(var2, false);
+                  DungeonBuilderScreen.field_r = dj.a(var2, false);
                 }
                 var2 = gm.a("text_income_rate", false);
                 if (var2 != null) {
@@ -3773,7 +3773,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_save_and_exit", param1);
                 if (null != var2) {
-                  ud.field_u = dj.a(var2, param1);
+                  IntroSequenceScreen.field_u = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_exit_without_saving", false);
                 if (var2 != null) {
@@ -3833,7 +3833,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_title_requirements_age_one", param1);
                 if (var2 != null) {
-                  be.field_m = dj.a(var2, false);
+                  MatchingFieldValidator.field_m = dj.a(var2, false);
                 }
                 var2 = gm.a("text_title_requirements_mastery_x", false);
                 if (null != var2) {

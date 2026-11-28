@@ -27,7 +27,7 @@ final class ei {
         BitPacketBuffer var8 = null;
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
-          var7 = ff.field_D;
+          var7 = LoginPanel.field_D;
           var8 = var7;
           stackIn_3_0 = var8;
           stackIn_4_1 = !(param0);

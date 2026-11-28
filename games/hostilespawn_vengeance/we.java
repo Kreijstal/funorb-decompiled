@@ -4,7 +4,7 @@
 final class we {
     private int field_f;
     private int field_c;
-    oc field_d;
+    GridPoint field_d;
     private int field_e;
     static String field_h;
     private int field_a;
@@ -22,10 +22,10 @@ final class we {
         int var22 = 0;
         int var2;
         int var3;
-        oc var4;
+        GridPoint var4;
         int var5;
         int var6;
-        oc var7;
+        GridPoint var7;
         double var8;
         int var10;
         int var11;
@@ -45,14 +45,14 @@ final class we {
         if (this.field_d.field_e < 0) {
           return;
         }
-        if (of.field_d == dn.field_i) {
+        if (ClientLookupTables.field_d == dn.field_i) {
           return;
         }
         var2 = uj.field_p.field_e;
         var3 = uj.field_p.field_g;
         var4 = mm.field_m[0].field_j;
-        var7 = new oc(this.field_d.field_e - var4.field_e, -var4.field_g + this.field_d.field_g);
-        var8 = var7.a(param0 ^ -25098);
+        var7 = new GridPoint(this.field_d.field_e - var4.field_e, -var4.field_g + this.field_d.field_g);
+        var8 = var7.directionInAngleUnits(param0 ^ -25098);
         var6 = this.field_c;
         if (var8 < 0.0) {
           var8 = var8 + 256.0;
@@ -95,14 +95,14 @@ final class we {
         if (var6 < this.field_f) {
           this.field_f = this.field_f - 1;
         }
-        li.field_t.e(this.field_a - li.field_t.field_z / 2, -(li.field_t.field_A / 2) + this.field_f);
+        MatchingFieldValidator.field_t.e(this.field_a - MatchingFieldValidator.field_t.field_z / 2, -(MatchingFieldValidator.field_t.field_A / 2) + this.field_f);
         var10 = this.field_a - (int)(8.0 * Math.sin(3.141592653589793 * var8 / 128.0));
         var11 = this.field_f - (int)(Math.cos(3.141592653589793 * var8 / 128.0) * 8.0);
         var12 = this.field_a - (int)(Math.sin((96.0 + var8) * 3.141592653589793 / 128.0) * 10.0);
         var13 = this.field_f - (int)(Math.cos((96.0 + var8) * 3.141592653589793 / 128.0) * 10.0);
         var14 = this.field_a - (int)(10.0 * Math.sin(3.141592653589793 * (-96.0 + var8) / 128.0));
         var15 = this.field_f - (int)(Math.cos((-96.0 + var8) * 3.141592653589793 / 128.0) * 10.0);
-        li.a(var13, -1, var11, var15, var10, var14, 13684736, var12);
+        MatchingFieldValidator.a(var13, -1, var11, var15, var10, var14, 13684736, var12);
         SoftwareRasterizer.fillCircle(this.field_a, this.field_f, 1, 0);
         SoftwareRasterizer.drawCircleOutline(this.field_a, this.field_f, 2, 7368704);
         var16 = Math.max(this.field_f - 10, 1);
@@ -143,7 +143,7 @@ final class we {
         field_h = null;
     }
 
-    we(oc param0) {
+    we(GridPoint param0) {
         this.field_c = 232;
         this.field_e = 312;
         try {

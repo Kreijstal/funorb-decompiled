@@ -91,14 +91,14 @@ abstract class wm {
           mc.field_a = param9;
           ln.field_qc = param7;
           in.field_f = param10;
-          un.field_q = param11;
+          ChessMatchSession.field_q = param11;
           ba.field_Q = param3;
           bj.field_pb = param4;
           td.field_n = args;
           wn.field_d = param13;
           GzipInflater.field_e = param14;
           ae.field_b = param12;
-          db.field_m = param8;
+          ConfirmedEmailAvailabilityValidator.field_m = param8;
           mk.field_c = param1;
           sh.field_b = ao.a(param5, "gameprivacy", param2 + 2993, "lobby");
           ad.field_c = ao.a(param5, "ratedgame", 2993, "lobby");
@@ -112,19 +112,19 @@ abstract class wm {
           gf.field_a[0] = pd.field_Jb;
           bh.field_G = new ci(0L, (ci) null);
           hd.field_c = new ci(0L, bo.field_e, ei.field_s);
-          uk.field_c = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
+          ChessBoardState.field_c = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
           ib.field_c = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           bh.field_G.a((byte) 123, hd.field_c);
           if (bo.field_c) {
-            bh.field_G.a((byte) 127, uk.field_c);
+            bh.field_G.a((byte) 127, ChessBoardState.field_c);
           }
           bh.field_G.a((byte) 123, ib.field_c);
-          ib.field_c.field_Jb.a(qn.field_P, -2147483648);
+          ib.field_c.field_Jb.a(EditableTextField.field_P, -2147483648);
           ib.field_c.field_Jb.field_cb = 1;
           var23 = ib.field_c.field_Jb;
           var24 = var23;
           var24.field_fb = 1;
-          fe.field_h = new ci(0L, qn.field_P);
+          fe.field_h = new ci(0L, EditableTextField.field_P);
           fe.field_h.field_fb = 1;
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
           he.field_Hb = new ci((long)param2, ma.field_G, em.field_M.toUpperCase());
@@ -168,20 +168,20 @@ abstract class wm {
             rb.field_c.a((byte) 125, ImageProducerRasterBuffer.field_l);
           }
           rb.field_c.a((byte) 124, wj.field_g);
-          qi.field_o = new ci(0L, qn.field_P);
-          qi.field_o.field_cb = 0;
-          qi.field_o.field_fb = 1;
+          AgeValidator.field_o = new ci(0L, EditableTextField.field_P);
+          AgeValidator.field_o.field_cb = 0;
+          AgeValidator.field_o.field_fb = 1;
           of.field_i = new ci(0L, PacketBuffer.field_k, hg.field_a.toUpperCase());
           la.field_c = new ci(0L, ki.field_P);
-          la.field_c.a((byte) 127, qi.field_o);
+          la.field_c.a((byte) 127, AgeValidator.field_o);
           la.field_c.a((byte) 123, of.field_i);
           ao.field_b = new ci(0L, FrameTimer.field_b);
-          ao.field_b.a(qn.field_P, -2147483648);
+          ao.field_b.a(EditableTextField.field_P, -2147483648);
           var16 = ao.field_b;
           ao.field_b.field_cb = 1;
           var16.field_fb = 1;
           de.field_d = new ci(0L, (ci) null);
-          ec.field_j = new ci(0L, qn.field_P);
+          ec.field_j = new ci(0L, EditableTextField.field_P);
           ec.field_j.field_fb = 1;
           ln.field_vc = new ci(0L, bo.field_e, ei.field_s);
           nb.field_Ib = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
@@ -195,7 +195,7 @@ abstract class wm {
           sc.field_d = new ci(0L, sc.field_h, kl.field_f.toUpperCase());
           sc.field_f = new ci(0L, ma.field_G);
           ce.field_d = new ci(0L, hl.field_d);
-          s.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
+          DisplayNameSelectionPanel.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
           ba.field_P = new tl[param6 + 4][];
           hm.field_c = new ci[4 + param6];
           hm.field_c[0] = new ci(0L, r.field_Tb, Bzip2State.field_w);
@@ -212,14 +212,14 @@ abstract class wm {
               ba.field_P[1][var17_intLifetime1 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, Integer.toString(wn.field_d[var17_intLifetime1]));
             }
           }
-          hm.field_c[2] = new ci(0L, r.field_Tb, jb.field_d);
+          hm.field_c[2] = new ci(0L, r.field_Tb, DebouncedFieldValidator.field_d);
           ba.field_P[2] = new tl[]{new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[0], fd.field_l), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[1], pe.field_c)};
-          if (un.field_q > 1) {
+          if (ChessMatchSession.field_q > 1) {
             hm.field_c[3] = new ci(0L, r.field_Tb, cl.field_a);
-            array$1 = new tl[un.field_q + 1];
+            array$1 = new tl[ChessMatchSession.field_q + 1];
             ba.field_P[3] = array$1;
             ba.field_P[3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
-            for (var17_intLifetime2 = 0; un.field_q > var17_intLifetime2; var17_intLifetime2++) {
+            for (var17_intLifetime2 = 0; ChessMatchSession.field_q > var17_intLifetime2; var17_intLifetime2++) {
               ba.field_P[3][var17_intLifetime2 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, bj.field_pb[var17_intLifetime2]);
             }
           }
@@ -266,18 +266,18 @@ abstract class wm {
           uj.field_j = new ci(0L, nj.field_x);
           aa.field_g = new ci(0L, nj.field_x);
           tn.field_j = new ci(0L, ic.field_c);
-          tn.field_j.a(qn.field_P, -2147483648);
+          tn.field_j.a(EditableTextField.field_P, -2147483648);
           var17 = tn.field_j;
           tn.field_j.field_cb = 1;
           var17.field_fb = 1;
-          ri.field_k = new ci(0L, (ci) null);
-          ri.field_k.a((byte) 126, sc.field_f);
-          ri.field_k.a((byte) 126, ce.field_d);
-          ce.field_d.a((byte) 125, s.field_M);
+          BirthDateValidator.field_k = new ci(0L, (ci) null);
+          BirthDateValidator.field_k.a((byte) 126, sc.field_f);
+          BirthDateValidator.field_k.a((byte) 126, ce.field_d);
+          ce.field_d.a((byte) 125, DisplayNameSelectionPanel.field_M);
           for (var18Lifetime2 = 0; var18Lifetime2 < param6 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(wn.field_d.length < 2)) && (var18Lifetime2 != 3 ||
-              !(1 >= un.field_q))) {
+              !(1 >= ChessMatchSession.field_q))) {
               ce.field_d.a((byte) 123, hm.field_c[var18Lifetime2]);
               for (var19 = 0; var19 < ba.field_P[var18Lifetime2].length; var19++) {
                 if (ba.field_P[var18Lifetime2][var19] != null) {
@@ -286,9 +286,9 @@ abstract class wm {
               }
             }
           }
-          ri.field_k.a((byte) 123, uj.field_j);
-          ri.field_k.a((byte) 123, aa.field_g);
-          ri.field_k.a((byte) 126, tn.field_j);
+          BirthDateValidator.field_k.a((byte) 123, uj.field_j);
+          BirthDateValidator.field_k.a((byte) 123, aa.field_g);
+          BirthDateValidator.field_k.a((byte) 126, tn.field_j);
           qf.field_f = new ci(0L, dc.field_s, AccountNameAvailabilityValidator.field_v.toUpperCase());
           BufferedSocket.field_d = new ci(0L, PacketBuffer.field_k, vk.field_f.toUpperCase());
           return;

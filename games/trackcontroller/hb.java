@@ -116,7 +116,7 @@ final class hb {
           var3 = param1.readBits(0, param0);
           var4 = new cg[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (lf.a((byte) -68, param1)) {
+            if (ValidatedTextField.a((byte) -68, param1)) {
               var6 = new cg();
               param1.readBits(0, 24);
               param1.readBits(0, 24);

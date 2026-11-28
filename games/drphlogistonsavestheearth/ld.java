@@ -21,7 +21,7 @@ final class ld {
         int var8;
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = (int)(Math.exp((double)(-lf.field_b) / 25.0) * -400.0);
-        v.field_O.a(0, var2 / 2 + 200);
+        AccountRegistrationPanel.field_O.a(0, var2 / 2 + 200);
         this.c(200 + var2 / 2, param0 ^ -66);
         MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(jk.field_L, 220, var2, -50);
@@ -59,10 +59,10 @@ final class ld {
         if (param0 < 22) {
           field_f = (he[]) null;
         }
-        var9 = new int[v.field_W.length];
+        var9 = new int[AccountRegistrationPanel.field_W.length];
         var8 = var9;
         var2 = var8;
-        for (var3 = -1 + v.field_W.length; var3 >= 0; var3--) {
+        for (var3 = -1 + AccountRegistrationPanel.field_W.length; var3 >= 0; var3--) {
           var4 = l.field_n[sd.field_a.levelNumber][var3];
           var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (ul.field_d > var4) {
@@ -80,7 +80,7 @@ final class ld {
           }
           var6 = (int)(2.55 * (double)var9[var3]);
           if (0 < var6) {
-            v.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
+            AccountRegistrationPanel.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
             cb.field_b.a(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
@@ -392,7 +392,7 @@ final class ld {
         var3 = this.field_c;
         switch (var3) {
           case 0:
-            v.field_O.a(0, 0);
+            AccountRegistrationPanel.field_O.a(0, 0);
             this.c(0, param0 + 8367);
             ph.field_h.a(0, 0);
             uk.field_h.d(-43, 35);
@@ -432,7 +432,7 @@ final class ld {
               if (11 != var3) {
                 break;
               }
-              v.field_O.a(0, 0);
+              AccountRegistrationPanel.field_O.a(0, 0);
               this.c(0, -93);
               uk.field_h.d(-120, 35);
               bg.d(param0 ^ 2947);
@@ -497,8 +497,8 @@ final class ld {
         int var7;
         String var4Lifetime1;
         var2 = (int)(Math.exp((double)(-lf.field_b) / 25.0) * -400.0);
-        var3 = ni.field_q;
-        v.field_O.a(0, var2 / 2 + 200);
+        var3 = EmailFormatValidator.field_q;
+        AccountRegistrationPanel.field_O.a(0, var2 / 2 + 200);
         this.c(200 + var2 / 2, -96);
         MouseWheelInput.field_f.d(0, 200 + var2 / 2);
         this.a(oj.field_d, 170, var2, -50);
@@ -860,7 +860,7 @@ final class ld {
         int var12;
         int var11Lifetime1;
         var13 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        v.field_O.a(0, 0);
+        AccountRegistrationPanel.field_O.a(0, 0);
         MouseWheelInput.field_f.d(0, 90);
         if (lf.field_b >= 100) {
           stackIn_3_0 = 100;
@@ -929,8 +929,8 @@ final class ld {
           var9 += 34;
           c.field_a[var11].a(var9, var10);
         }
-        var11Lifetime1 = (int)((double)ni.field_q.field_x * 14.5);
-        ni.field_q.a(var7, 50, var8, 540, var11Lifetime1, 0, 16777215, 0, 0, ni.field_q.field_x);
+        var11Lifetime1 = (int)((double)EmailFormatValidator.field_q.field_x * 14.5);
+        EmailFormatValidator.field_q.a(var7, 50, var8, 540, var11Lifetime1, 0, 16777215, 0, 0, EmailFormatValidator.field_q.field_x);
         SoftwareRasterizer.drawRectangleOutline(40, var8, 560, var11Lifetime1, 1);
         if (0 == gf.field_b) {
           stackIn_16_0 = lf.field_b;
@@ -1222,7 +1222,7 @@ final class ld {
         if (11 == this.field_c) {
           stackIn_6_0 = 21;
           stackIn_7_1 = (eh.a(-875)) ? false : true;
-          var2 = wa.updateMembershipSlidesWithIntGuard(stackIn_6_0, stackIn_7_1);
+          var2 = LoginPanel.updateMembershipSlidesWithIntGuard(stackIn_6_0, stackIn_7_1);
           if (var2 == 3) {
             if (null != df.field_l) {
               ProxyAuthenticationRequiredException.a(true);
@@ -1409,7 +1409,7 @@ final class ld {
                           ej.field_h = 0;
                           gf.field_D = 0;
                           hi.field_j = 0;
-                          nf.field_x.clear(255);
+                          MatchingFieldValidator.field_x.clear(255);
                         }
                       } else {
                         if (var7 == 6) {
@@ -1869,7 +1869,7 @@ final class ld {
           return;
         }
         var4 = (int)(-400.0 * Math.exp((double)(-lf.field_b) / 25.0));
-        v.field_O.a(0, var4 / 2 + 200);
+        AccountRegistrationPanel.field_O.a(0, var4 / 2 + 200);
         this.c(200 + var4 / 2, 62);
         MouseWheelInput.field_f.d(0, var4 / 2 + 200);
         stackIn_5_0 = (!oh.a(0)) ? 0 : 20;
@@ -1956,7 +1956,7 @@ final class ld {
         var14Lifetime1 = stackIn_51_0;
         if (var14Lifetime1 != -1) {
           if (oh.a(0)) {
-            ni.field_q.b(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
+            EmailFormatValidator.field_q.b(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
           }
           SoftwareRasterizer.drawRectangleOutline(166, 163 + (var25.field_E + var4), 128, 128, 0);
           var25.c("<u>" + sc.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
@@ -1994,7 +1994,7 @@ final class ld {
         } else {
           var25.a(NodeHashTableIterator.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
           if (oh.a(0)) {
-            ni.field_q.a(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
+            EmailFormatValidator.field_q.a(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, EmailFormatValidator.field_q.field_x);
           }
         }
         if (5 == this.field_c) {
@@ -2059,7 +2059,7 @@ final class ld {
           var8 = l.field_f[var6][var7Lifetime1];
         } else {
           var8 = al.field_c;
-          var9 = dc.field_a;
+          var9 = DebouncedFieldValidator.field_a;
         }
         boolean decompiledFrameRemainder0 = true;
         var8.e(0, 0);
@@ -2122,7 +2122,7 @@ final class ld {
           }
         }
         var11 = var4.field_x + var10 + (140 + var5 * 9 / 2);
-        ni.field_q.b(var3, 430, var11, 4210752, -1);
+        EmailFormatValidator.field_q.b(var3, 430, var11, 4210752, -1);
         if (!oh.a(0)) {
           stackIn_38_0 = mi.field_h;
         } else {
@@ -2130,7 +2130,7 @@ final class ld {
         }
         var3Lifetime1 = stackIn_38_0;
         var11Lifetime1 = var4.field_x + (140 + var10) + var5 * 10;
-        var4.a(var3Lifetime1, 85, var5 / 2 + var11Lifetime1, 465, 100, 4210752, -1, 1, 0, ni.field_q.field_x);
+        var4.a(var3Lifetime1, 85, var5 / 2 + var11Lifetime1, 465, 100, 4210752, -1, 1, 0, EmailFormatValidator.field_q.field_x);
     }
 
     private final void c(int param0, int param1) {

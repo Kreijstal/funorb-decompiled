@@ -72,8 +72,8 @@ final class jj {
             }
             if (gj.field_k == of.field_F &&
               fq.a(1, (byte) 50)) {
-              var6_int = kd.field_n.readUnsignedByte(255);
-              kd.field_n.position = 0;
+              var6_int = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               if (var6_int == 0) {
                 gj.field_k = ul.field_j;
               } else {
@@ -84,20 +84,20 @@ final class jj {
             }
             if (gj.field_k == ul.field_j &&
               fq.a(8, (byte) 90)) {
-              stackIn_24_0 = kd.field_n;
+              stackIn_24_0 = ConfirmedEmailAvailabilityValidator.field_n;
               stackIn_25_1 = !(param1);
               CipherPacketBuffer.field_m = ((CipherPacketBuffer) (Object) stackIn_24_0).readLong(stackIn_25_1);
-              kd.field_n.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               tf.a(param4, (byte) 75, mk.field_c, param3, param5);
               gj.field_k = ImageProducerRasterBuffer.field_k;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ImageProducerRasterBuffer.field_k == gj.field_k &&
               fq.a(1, (byte) -70)) {
-              var6_intLifetime1 = kd.field_n.readUnsignedByte(255);
+              var6_intLifetime1 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
               bf.field_b = var6_intLifetime1;
               NetworkArchiveRequest.field_r = null;
-              kd.field_n.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -119,12 +119,12 @@ final class jj {
             }
             if (fm.field_y == gj.field_k &&
               ol.f((byte) 60)) {
-              go.field_h = kd.field_n.readLong(true);
-              rb.field_h = kd.field_n.readUnsignedByte(255);
-              kd.field_n.readUnsignedByte(255);
-              mo.field_l = kd.field_n.readUnsignedShort((byte) -7);
-              var6 = kd.field_n.readNullableString(0);
-              var7 = kd.field_n.readUnsignedByte(255);
+              go.field_h = ConfirmedEmailAvailabilityValidator.field_n.readLong(true);
+              rb.field_h = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+              ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+              mo.field_l = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedShort((byte) -7);
+              var6 = ConfirmedEmailAvailabilityValidator.field_n.readNullableString(0);
+              var7 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 jl.b(65);
               }
@@ -137,19 +137,19 @@ final class jj {
                 }
               }
               if (ag.field_b) {
-                kd.field_n.readUnsignedByte(255);
-                kd.field_n.readUnsignedByte(255);
-                kd.field_n.readInt((byte) -29);
-                um.field_f = kd.field_n.readUnsignedShort((byte) -7);
+                ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+                ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+                ConfirmedEmailAvailabilityValidator.field_n.readInt((byte) -29);
+                um.field_f = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedShort((byte) -7);
                 SecondaryIntrusiveDeque.field_f = new byte[um.field_f];
                 for (var8 = 0; var8 < um.field_f; var8++) {
-                  SecondaryIntrusiveDeque.field_f[var8] = kd.field_n.readByte((byte) 113);
+                  SecondaryIntrusiveDeque.field_f[var8] = ConfirmedEmailAvailabilityValidator.field_n.readByte((byte) 113);
                 }
               }
-              je.field_g = kd.field_n.readString(119);
+              je.field_g = ConfirmedEmailAvailabilityValidator.field_n.readString(119);
               var11 = (CharSequence) ((Object) je.field_g);
               lk.field_b = fe.a(60136, var11);
-              kl.field_V = kd.field_n.readUnsignedByte(255);
+              kl.field_V = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
               gj.field_k = LevelCompleteEntrancePhase.field_h;
               if (mk.field_c.a(0) == of.field_C) {
                 gg.field_d.a(1, le.b((byte) -20));
@@ -185,7 +185,7 @@ final class jj {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 WallTile.field_r[var8Lifetime1] = WallTile.field_r[var8Lifetime1] + 50;
               }
-              kd.field_n.a(WallTile.field_r, true);
+              ConfirmedEmailAvailabilityValidator.field_n.a(WallTile.field_r, true);
               stackIn_74_0 = bf.field_b;
               return stackIn_74_0;
             }
@@ -201,7 +201,7 @@ final class jj {
               if (bf.field_b == 7) {
                 bf.field_b = 3;
               }
-              re.field_j = kd.field_n.readString(123);
+              re.field_j = ConfirmedEmailAvailabilityValidator.field_n.readString(123);
               ec.field_g = false;
               stackIn_85_0 = bf.field_b;
               return stackIn_85_0;

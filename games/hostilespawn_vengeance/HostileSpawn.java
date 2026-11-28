@@ -13,30 +13,30 @@ public final class HostileSpawn extends NetworkGameClient {
     private static RgbSprite field_C;
     public static boolean field_I;
 
-    private final void i(byte param0) {
+    private final void loadGameplaySprites(byte param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RgbSprite[] var2 = null;
-        pg[] var2_array = null;
+        IndexedSprite[] var2_array = null;
         int var3_int = 0;
-        pg var3 = null;
+        IndexedSprite var3 = null;
         RgbSprite var4 = null;
         int var4_int = 0;
-        pg[] var4_array = null;
+        IndexedSprite[] var4_array = null;
         int var5_int = 0;
-        pg[] var5 = null;
+        IndexedSprite[] var5 = null;
         int var6 = 0;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
-        pg[] var2_arrayLifetime1;
-        pg[] var2_arrayLifetime2;
-        pg[] var2_arrayLifetime3;
-        pg[] var2_arrayLifetime4;
+        IndexedSprite[] var2_arrayLifetime1;
+        IndexedSprite[] var2_arrayLifetime2;
+        IndexedSprite[] var2_arrayLifetime3;
+        IndexedSprite[] var2_arrayLifetime4;
         var7 = field_I ? 1 : 0;
         try {
-          gj.a(20, ig.field_H, 77.0f);
-          this.a((byte) -76);
-          this.t(13119);
+          gj.a(20, EditableTextField.field_H, 77.0f);
+          this.renderFrame((byte) -76);
+          this.loadScenerySprites(13119);
           wk.field_b[0] = ia.field_e;
           wk.field_b[3] = qm.field_P;
           wk.field_b[2] = sc.field_a;
@@ -70,7 +70,7 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             break;
           }
-          var3 = new pg(24, 24, 2);
+          var3 = new IndexedSprite(24, 24, 2);
           var3.field_k[1] = 65280;
           var4_int = 0;
           while (var3.field_j.length > var4_int) {
@@ -81,11 +81,11 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             break;
           }
-          var4_array = new pg[256];
+          var4_array = new IndexedSprite[256];
           var5_int = 0;
           do {
             if (var5_int >= var4_array.length) {
-              ak.field_b = new pg[2048];
+              ak.field_b = new IndexedSprite[2048];
               break;
             }
             var4_array[var5_int] = var3;
@@ -107,10 +107,10 @@ public final class HostileSpawn extends NetworkGameClient {
           var4_array = null;
           al.field_Z = th.a(vd.field_C, -124, "digitalserial_10", te.field_J, "");
           wh.field_d = th.a(vd.field_C, param0 + 201, "digitalserial_16", te.field_J, "");
-          mk.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
+          AccountRegistrationPanel.field_L = th.a(vd.field_C, 49, "digitalserial_20", te.field_J, "");
           id.field_A = th.a(vd.field_C, -127, "digitalserial_12", te.field_J, "");
           ArchiveIndex.a("basicfont12", ResourceArchive.field_a, 83, wd.field_a, "");
-          of.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
+          ClientLookupTables.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
           NetworkArchiveRequest.field_y = fg.a("", "splat_guard", vd.field_C, false);
           NetworkGameClient.field_s = fg.a("", "splat_dormant", vd.field_C, false);
           BoundedRandomAccessFile.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
@@ -119,11 +119,11 @@ public final class HostileSpawn extends NetworkGameClient {
           tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
           ta.field_jb = fg.a("", "splat_egg", vd.field_C, false);
           pe.field_fb = jd.a((byte) 33, "", vd.field_C, "muzzle");
-          ln.field_m = ei.a(vd.field_C, 105, "", "newexplosion");
+          ln.field_m = DelayedPacket.loadNamedRgbSprites(vd.field_C, 105, "", "newexplosion");
           me.field_ib = ln.field_m;
           if (!ib.a((byte) -72)) {
             var5 = sg.a(true, "", vd.field_C, "member_benefits");
-            DiskCacheWorker.field_a = new e(ni.field_g, aj.field_g, var5, MouseInput.field_i);
+            DiskCacheWorker.field_a = new e(ni.field_g, SpriteBase.field_g, var5, MouseInput.field_i);
           }
           var5 = sg.a(true, "", vd.field_C, "keys");
           var6 = 0;
@@ -163,23 +163,23 @@ public final class HostileSpawn extends NetworkGameClient {
               ul.field_J = jd.a((byte) 33, "", vd.field_C, "menu_frame");
               ul.field_J[4] = null;
               o.field_n.setAsRasterTarget((byte) -36);
-              cf.field_q = ei.a(vd.field_C, param0 + 218, "", "marine_run");
+              cf.field_q = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 218, "", "marine_run");
               ng.field_p = new RgbSprite[5][];
-              ng.field_p[2] = ei.a(vd.field_C, param0 + 228, "", "marine_legs_left");
-              ng.field_p[3] = ei.a(vd.field_C, 97, "", "marine_legs_right");
-              ng.field_p[1] = ei.a(vd.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
-              ng.field_p[4] = ei.a(vd.field_C, 116, "", "marine_legs_back");
+              ng.field_p[2] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 228, "", "marine_legs_left");
+              ng.field_p[3] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "marine_legs_right");
+              ng.field_p[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a((int) param0, -10), "", "marine_legs_forward");
+              ng.field_p[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 116, "", "marine_legs_back");
               ng.field_p[4] = jh.a(ng.field_p[4], 150, 27);
               ng.field_p[0] = null;
-              km.field_A = ei.a(vd.field_C, 96, "", "marine_idle");
+              km.field_A = DelayedPacket.loadNamedRgbSprites(vd.field_C, 96, "", "marine_idle");
               vj.field_e = km.field_A;
-              dn.field_i = ei.a(vd.field_C, 104, "", "marine_interact");
-              od.field_G = ei.a(vd.field_C, 100, "", "marine_firing");
+              dn.field_i = DelayedPacket.loadNamedRgbSprites(vd.field_C, 104, "", "marine_interact");
+              od.field_G = DelayedPacket.loadNamedRgbSprites(vd.field_C, 100, "", "marine_firing");
               od.field_G = jh.a(od.field_G, 150, 25);
-              aa.field_d = ei.a(vd.field_C, param0 ^ -7, "", "marine_death");
-              gj.a(param0 ^ -101, ig.field_H, 84.0f);
-              this.a((byte) -106);
-              oc.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
+              aa.field_d = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 ^ -7, "", "marine_death");
+              gj.a(param0 ^ -101, EditableTextField.field_H, 84.0f);
+              this.renderFrame((byte) -106);
+              GridPoint.field_c = fg.a("", "hud_gun_big", vd.field_C, false);
               KeyboardInput.field_d = fg.a("", "hud_bottom", vd.field_C, false);
               gj.field_d = fg.a("", "hud_progress_bar", vd.field_C, false);
               ti.field_j = fg.a("", "hud_gun_box", vd.field_C, false);
@@ -188,7 +188,7 @@ public final class HostileSpawn extends NetworkGameClient {
               field_J[1] = fg.a("", "hud_health_slice", vd.field_C, false);
               field_J[2] = fg.a("", "hud_health_top", vd.field_C, false);
               vg.field_c = qm.a("", 0, "marine_face", vd.field_C);
-              ByteStorage.field_d = new pg[2][10];
+              ByteStorage.field_d = new IndexedSprite[2][10];
               ByteStorage.field_d[0][0] = qm.a("", 0, "kerrus_1_preview", vd.field_C);
               ByteStorage.field_d[0][1] = qm.a("", 0, "kerrus_2_preview", vd.field_C);
               ByteStorage.field_d[0][2] = qm.a("", 0, "kerrus_3_preview", vd.field_C);
@@ -209,7 +209,7 @@ public final class HostileSpawn extends NetworkGameClient {
               ByteStorage.field_d[1][7] = qm.a("", 0, "vengeance_8_preview", vd.field_C);
               ByteStorage.field_d[1][8] = qm.a("", 0, "vengeance_9_preview", vd.field_C);
               ByteStorage.field_d[1][9] = qm.a("", 0, "vengeance_10_preview", vd.field_C);
-              this.s(param0 + 152);
+              this.loadEnemyAnimationSprites(param0 + 152);
               ia.field_l[10] = fg.a("", "spawn20", vd.field_C, false);
               ia.field_l[12] = fg.a("", "gunturret", vd.field_C, false);
               MouseInput.field_b = fg.a("", "cragturret", vd.field_C, false);
@@ -217,15 +217,15 @@ public final class HostileSpawn extends NetworkGameClient {
               jd.a((byte) 33, "", vd.field_C, "spawneyes0");
               ia.field_l[23] = MouseInput.a("", -32, "doorgfx", vd.field_C);
               AccountCreationResultPanel.field_zb = fg.a("", "hatching", vd.field_C, false);
-              gj.a(param0 + 133, ig.field_H, 91.0f);
-              this.a((byte) -51);
-              qa.field_g = ei.a(vd.field_C, 101, "", "guns");
+              gj.a(param0 + 133, EditableTextField.field_H, 91.0f);
+              this.renderFrame((byte) -51);
+              qa.field_g = DelayedPacket.loadNamedRgbSprites(vd.field_C, 101, "", "guns");
               di.field_b = jd.a((byte) 33, "", vd.field_C, "gun_silhouettes");
-              AccountServiceResult.field_j = ei.a(vd.field_C, 125, "", "bullet_acid");
+              AccountServiceResult.field_j = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "bullet_acid");
               sj.field_e = fg.a("", "bullet_plasma", vd.field_C, false);
               FullscreenFocusCanvas.field_c = MouseInput.a("", -36, "bullet_rocket", vd.field_C);
-              df.field_g = ei.a(vd.field_C, 125, "", "muzzleflash");
-              id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
+              df.field_g = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "muzzleflash");
+              id.field_p = DelayedPacket.loadNamedRgbSprites(vd.field_C, 89, "", "impact_gun");
               fg.a("", "impact_rail", vd.field_C, false);
               MouseInput.a("", 116, "scorchmark_alpha", vd.field_C);
               NanoFrameTimer.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
@@ -238,24 +238,24 @@ public final class HostileSpawn extends NetworkGameClient {
             return;
           }
           om.field_d = fg.a("", "bullet_pistol", vd.field_C, false);
-          te.field_G = ei.a(vd.field_C, 109, "", "grenade_roll");
+          te.field_G = DelayedPacket.loadNamedRgbSprites(vd.field_C, 109, "", "grenade_roll");
           sc.field_l = fg.a("", "acid_drop", vd.field_C, false);
           v.field_j = fg.a("", "battle_damaged_cragturret", vd.field_C, false);
           rl.field_d = fg.a("", "battle_damaged_gunturret", vd.field_C, false);
-          this.l((byte) 114);
+          this.populateScenerySpriteTable((byte) 114);
           fa.field_d = jd.a((byte) 33, "", vd.field_C, "lights");
-          gj.a(20, ig.field_H, 99.0f);
-          this.a((byte) -69);
+          gj.a(20, EditableTextField.field_H, 99.0f);
+          this.renderFrame((byte) -69);
           pi.field_a[0] = MouseInput.a("", 116, "shadow0", vd.field_C);
           pi.field_a[1] = MouseInput.a("", 110, "shadow1", vd.field_C);
           pi.field_a[2] = MouseInput.a("", param0 + 232, "shadow2", vd.field_C);
-          hh.field_a = ei.a(vd.field_C, 97, "", "ammo");
+          hh.field_a = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "ammo");
           fg.a("", "pointer", vd.field_C, false);
-          li.field_t = fg.a("", "compass", vd.field_C, false);
+          MatchingFieldValidator.field_t = fg.a("", "compass", vd.field_C, false);
           pi.field_b = MouseInput.a("", param0 + 225, "health", vd.field_C);
           eg.field_v = fg.a("", "dragged_egg", vd.field_C, false);
           qg.field_q = fg.a("", "dragged_slime", vd.field_C, false);
-          uf.field_g = new pg[3];
+          uf.field_g = new IndexedSprite[3];
           uf.field_g[0] = qm.a("", 0, "win_kerrus", vd.field_C);
           uf.field_g[1] = qm.a("", bm.a((int) param0, -113), "win_vengeance", vd.field_C);
           uf.field_g[2] = qm.a("", 0, "win_vengeance_alt", vd.field_C);
@@ -279,7 +279,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void l(byte param0) {
+    private final void populateScenerySpriteTable(byte param0) {
         RuntimeException runtimeException = null;
         RgbSprite var2 = null;
         RuntimeException decompiledCaughtException = null;
@@ -297,7 +297,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[140] = IsaacGenerator.field_j;
           ia.field_l[207] = ArchiveIndex.field_e;
           ia.field_l[74] = ki.field_b;
-          ia.field_l[177] = el.field_d;
+          ia.field_l[177] = ProxySocketFactory.field_d;
           ia.field_l[201] = vb.field_Lb;
           ia.field_l[41] = og.field_d;
           ia.field_l[120] = ub.field_c;
@@ -306,7 +306,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[130] = PacketBuffer.field_k;
           ia.field_l[62] = rb.field_y;
           ia.field_l[89] = tc.field_b;
-          ia.field_l[105] = ig.field_R;
+          ia.field_l[105] = EditableTextField.field_R;
           ia.field_l[189] = oa.field_i;
           ia.field_l[128] = bm.field_f;
           ia.field_l[54] = cl.field_j;
@@ -327,7 +327,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[217] = IntrusiveNodeHashTable.field_a;
           ia.field_l[114] = rj.field_N;
           ia.field_l[208] = DualLinkDeque.field_c;
-          ia.field_l[176] = sf.field_T;
+          ia.field_l[176] = TextInputField.field_T;
           ia.field_l[79] = oa.field_e;
           ia.field_l[136] = le.field_xb;
           ia.field_l[171] = ul.field_G;
@@ -335,7 +335,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[75] = nh.field_C;
           ia.field_l[159] = MouseInput.field_j;
           ia.field_l[170] = bh.field_h;
-          ia.field_l[219] = t.field_l;
+          ia.field_l[219] = AchievementNotification.field_l;
           ia.field_l[40] = f.field_b;
           ia.field_l[168] = id.field_w;
           ia.field_l[58] = an.field_l;
@@ -376,7 +376,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[152] = ni.field_b;
           ia.field_l[158] = jn.field_B;
           ia.field_l[63] = FullscreenFocusCanvas.field_h;
-          ia.field_l[113] = ld.field_p;
+          ia.field_l[113] = AgeValidator.field_p;
           ia.field_l[48] = hf.field_b;
           ia.field_l[94] = jc.field_a;
           ia.field_l[187] = bb.field_a;
@@ -385,10 +385,10 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[144] = sj.field_b;
           ia.field_l[139] = FrameTimer.field_d;
           if (param0 <= 113) {
-            this.o(-63);
+            this.loadVengeanceCampaignLevels(-63);
           }
           ia.field_l[42] = r.field_e;
-          ia.field_l[78] = el.field_f;
+          ia.field_l[78] = ProxySocketFactory.field_f;
           ia.field_l[218] = nb.field_J;
           ia.field_l[183] = sd.field_w;
           ia.field_l[81] = FullscreenFocusCanvas.field_f;
@@ -402,14 +402,14 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[116] = dd.field_j;
           ia.field_l[73] = GameCanvas.field_h;
           ia.field_l[178] = df.field_j;
-          ia.field_l[38] = oc.field_d;
+          ia.field_l[38] = GridPoint.field_d;
           ia.field_l[64] = KeyboardInput.field_j;
           ia.field_l[88] = ea.field_e;
           ia.field_l[147] = p.field_d;
           ia.field_l[192] = ne.field_n;
           ia.field_l[155] = o.field_g;
           ia.field_l[59] = PacketBuffer.field_j;
-          ia.field_l[169] = ld.field_o;
+          ia.field_l[169] = AgeValidator.field_o;
           ia.field_l[117] = Bzip2State.field_C;
           ia.field_l[80] = qa.field_g[7];
           ia.field_l[85] = bl.field_c;
@@ -437,11 +437,11 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[188] = qg.field_i;
           ia.field_l[109] = jh.field_cb;
           ia.field_l[107] = eb.field_b;
-          ia.field_l[191] = ei.field_n;
+          ia.field_l[191] = DelayedPacket.field_n;
           ia.field_l[154] = pl.field_p;
           ia.field_l[148] = wk.field_a;
-          ia.field_l[185] = t.field_j;
-          ia.field_l[110] = fe.field_c;
+          ia.field_l[185] = AchievementNotification.field_j;
+          ia.field_l[110] = SocketFactory.field_c;
           ia.field_l[82] = ia.field_e;
           ia.field_l[215] = la.field_h;
           ia.field_l[167] = MusicPatchPcmStream.field_r;
@@ -453,15 +453,15 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[52] = lc.field_a;
           ia.field_l[119] = wd.field_b;
           ia.field_l[83] = SecondaryNodeDequeIterator.field_f;
-          ia.field_l[172] = ei.field_p;
+          ia.field_l[172] = DelayedPacket.field_p;
           ia.field_l[124] = ng.field_i;
           ia.field_l[95] = hm.field_l;
           ia.field_l[37] = wj.field_L;
-          ia.field_l[50] = bj.field_j;
-          ia.field_l[71] = ig.field_S;
+          ia.field_l[50] = DebouncedFieldValidator.field_j;
+          ia.field_l[71] = EditableTextField.field_S;
           ia.field_l[46] = ng.field_v;
           ia.field_l[45] = rd.field_a;
-          ia.field_l[101] = el.field_l;
+          ia.field_l[101] = ProxySocketFactory.field_l;
           ia.field_l[151] = wh.field_e;
           ia.field_l[179] = DualLinkNode.field_n;
           ia.field_l[43] = r.field_b;
@@ -473,8 +473,8 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[33] = c.field_f[0];
           ia.field_l[76] = wb.field_W;
           ia.field_l[106] = ic.field_k;
-          ia.field_l[142] = li.field_y;
-          ia.field_l[204] = ei.field_m;
+          ia.field_l[142] = MatchingFieldValidator.field_y;
+          ia.field_l[204] = DelayedPacket.field_m;
           ia.field_l[214] = rg.field_a;
           ia.field_l[157] = fg.field_d;
           ia.field_l[47] = re.field_q;
@@ -486,7 +486,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawMissionMap(int param0, int param1) {
         boolean stackIn_37_0 = false;
         int stackIn_43_0 = 0;
         int stackIn_111_0 = 0;
@@ -502,7 +502,7 @@ public final class HostileSpawn extends NetworkGameClient {
         int var6 = 0;
         int var7 = 0;
         int var8_int = 0;
-        oc var8 = null;
+        GridPoint var8 = null;
         int var9_int = 0;
         p var9 = null;
         oj var9_ref = null;
@@ -539,7 +539,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   }
                   var10 = ln.field_a.field_o[var5];
                   if (0 <= var10) {
-                    ak.field_b[var10].a(var3_int, var4, param1, param1);
+                    ak.field_b[var10].drawScaled(var3_int, var4, param1, param1);
                     if (r.field_a == 0) {
                       SoftwareRasterizer.fillRectangleAlpha(var3_int, var4, param1, param1, 0, 128);
                     }
@@ -570,12 +570,12 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             break;
           }
-          var8 = new oc(0, 0);
+          var8 = new GridPoint(0, 0);
           var5Lifetime1 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(ll.field_a > var5Lifetime1)))) {
             var9 = wh.field_b[var5Lifetime1];
-            stackOut_36_0 = ln.field_a.field_B[var9.field_j.b(-4)];
+            stackOut_36_0 = ln.field_a.field_B[var9.field_j.getClampedTileIndex(-4)];
             stackIn_43_0 = stackOut_36_0 ? 1 : 0;
             stackIn_37_0 = stackOut_36_0;
             if (var12 == 0) {
@@ -597,7 +597,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var5Lifetime2 = stackIn_43_0;
           scanLoop2: while (true) {
             boolean decompiledFrameCompleted0 = true;
-            if (el.field_j > var5Lifetime2) {
+            if (ProxySocketFactory.field_j > var5Lifetime2) {
               var9_ref = mm.field_m[var5Lifetime2];
               stackIn_155_0 = var9_ref.field_i;
               stackIn_155_1 = 1;
@@ -612,7 +612,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   (var9_ref.field_i == 25 ||
                   var9_ref.field_i == 27 ||
                   var9_ref.field_i == 28)) && (var9_ref.field_n &&
-                  ln.field_a.field_i[var9_ref.field_j.b(-4)] > 0)) {
+                  ln.field_a.field_i[var9_ref.field_j.getClampedTileIndex(-4)] > 0)) {
                   var3_intLifetime2 = param1 * var9_ref.field_j.field_e + 1;
                   var4Lifetime2 = 1 + var9_ref.field_j.field_g * param1;
                   SoftwareRasterizer.fillCircle(param1 / 2 + var3_intLifetime2, param1 / 2 + var4Lifetime2, param1 / 2, 16711680);
@@ -634,7 +634,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   }
                   if (var9_intLifetime1 == 3 &&
                     var12 == 0) {
-                    for (var5Lifetime2 = 0; var5Lifetime2 < el.field_j; var5Lifetime2++) {
+                    for (var5Lifetime2 = 0; var5Lifetime2 < ProxySocketFactory.field_j; var5Lifetime2++) {
                       var9_ref = mm.field_m[var5Lifetime2];
                       stackIn_155_0 = ~var9_ref.field_i;
                       stackIn_155_1 = -9;
@@ -692,7 +692,7 @@ public final class HostileSpawn extends NetworkGameClient {
                     }
                     var8.field_g = 0;
                     while (var7 > var8.field_g) {
-                      stackIn_111_0Lifetime1 = ~ln.field_a.field_y[var8.b(-4)];
+                      stackIn_111_0Lifetime1 = ~ln.field_a.field_y[var8.getClampedTileIndex(-4)];
                       stackIn_111_1Lifetime1 = -149;
                       if (stackIn_111_0Lifetime1 == stackIn_111_1Lifetime1) {
                         var4Lifetime2 = 1 + (var8.field_g - 1) * param1;
@@ -709,7 +709,7 @@ public final class HostileSpawn extends NetworkGameClient {
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted1)) {
-                for (var5Lifetime2 = 0; var5Lifetime2 < el.field_j; var5Lifetime2++) {
+                for (var5Lifetime2 = 0; var5Lifetime2 < ProxySocketFactory.field_j; var5Lifetime2++) {
                   var9_ref = mm.field_m[var5Lifetime2];
                   stackIn_155_0 = -5;
                   stackIn_155_1 = ~var9_ref.field_i;
@@ -732,7 +732,7 @@ public final class HostileSpawn extends NetworkGameClient {
               }
             }
             if (stackIn_155_0 != stackIn_155_1) {
-              this.a((java.awt.Canvas) null, -115);
+              this.drawFrameOverlaysAndPresent((java.awt.Canvas) null, -115);
             }
             break;
           }
@@ -747,7 +747,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void e(int param0) {
+    final void prepareGameShutdown(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -767,7 +767,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final PcmResampler q(int param0) {
+    private final PcmResampler loadBaseSoundEffects(int param0) {
         PcmResampler var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -777,7 +777,7 @@ public final class HostileSpawn extends NetworkGameClient {
         var4 = field_I ? 1 : 0;
         try {
           gj.a(20, ac.field_e, 56.0f);
-          this.a((byte) -80);
+          this.renderFrame((byte) -80);
           nd.field_e = new rd(ul.field_P, ph.field_F);
           var2 = new PcmResampler(22050, AudioOutput.field_g);
           em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().resample(var2);
@@ -809,8 +809,8 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            sf.field_V[var3 + 5] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().resample(var2);
-            sf.field_V[0 + var3] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().resample(var2);
+            TextInputField.field_V[var3 + 5] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_tail").a().resample(var2);
+            TextInputField.field_V[0 + var3] = va.a(ul.field_P, "", "HS_machine_gun_0" + (var3 + 1) + "_no_tail").a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -818,22 +818,22 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            sf.field_V[var3 + 10] = va.a(ul.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 10] = va.a(ul.field_P, "", "HS_machine_gun_cartridge_drop_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (var3 >= 3) {
-              sf.field_V[15] = va.a(ul.field_P, "", "HS_pistol_equip_01").a().resample(var2);
-              sf.field_V[16] = va.a(ul.field_P, "", "HS_machine_gun_equip_01").a().resample(var2);
-              sf.field_V[17] = va.a(ul.field_P, "", "HS_shotgun_equip_01").a().resample(var2);
-              sf.field_V[18] = va.a(ul.field_P, "", "HS_flamethrower_equip").a().resample(var2);
-              sf.field_V[19] = va.a(ul.field_P, "", "HS_railgun_equip").a().resample(var2);
-              sf.field_V[20] = va.a(ul.field_P, "", "HS_rocket_equip").a().resample(var2);
-              sf.field_V[21] = va.a(ul.field_P, "", "HS_plasma_equip_01").a().resample(var2);
-              sf.field_V[22] = va.a(ul.field_P, "", "HS_grenade_equip").a().resample(var2);
+              TextInputField.field_V[15] = va.a(ul.field_P, "", "HS_pistol_equip_01").a().resample(var2);
+              TextInputField.field_V[16] = va.a(ul.field_P, "", "HS_machine_gun_equip_01").a().resample(var2);
+              TextInputField.field_V[17] = va.a(ul.field_P, "", "HS_shotgun_equip_01").a().resample(var2);
+              TextInputField.field_V[18] = va.a(ul.field_P, "", "HS_flamethrower_equip").a().resample(var2);
+              TextInputField.field_V[19] = va.a(ul.field_P, "", "HS_railgun_equip").a().resample(var2);
+              TextInputField.field_V[20] = va.a(ul.field_P, "", "HS_rocket_equip").a().resample(var2);
+              TextInputField.field_V[21] = va.a(ul.field_P, "", "HS_plasma_equip_01").a().resample(var2);
+              TextInputField.field_V[22] = va.a(ul.field_P, "", "HS_grenade_equip").a().resample(var2);
               break;
             }
-            sf.field_V[var3 + 12] = va.a(ul.field_P, "", "HS_pistol_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 12] = va.a(ul.field_P, "", "HS_pistol_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
@@ -842,7 +842,7 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            sf.field_V[23 + var3] = va.a(ul.field_P, "", "HS_shotgun_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[23 + var3] = va.a(ul.field_P, "", "HS_shotgun_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
@@ -850,34 +850,34 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = 0;
               break;
             }
-            sf.field_V[var3 + 28] = va.a(ul.field_P, "", "HS_plasma_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 28] = va.a(ul.field_P, "", "HS_plasma_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           do {
             if (4 <= var3) {
-              sf.field_V[35] = va.a(ul.field_P, "", "HS_flamethrower_all").a().resample(var2);
-              sf.field_V[36] = va.a(ul.field_P, "", "HS_flamethrower_end").a().resample(var2);
-              sf.field_V[37] = va.a(ul.field_P, "", "HS_rocket_fire_02").a().resample(var2);
-              sf.field_V[38] = va.a(ul.field_P, "", "HS_plasma_impact_01").a().resample(var2);
-              sf.field_V[39] = va.a(ul.field_P, "", "HS_grenade_fire_01").a().resample(var2);
+              TextInputField.field_V[35] = va.a(ul.field_P, "", "HS_flamethrower_all").a().resample(var2);
+              TextInputField.field_V[36] = va.a(ul.field_P, "", "HS_flamethrower_end").a().resample(var2);
+              TextInputField.field_V[37] = va.a(ul.field_P, "", "HS_rocket_fire_02").a().resample(var2);
+              TextInputField.field_V[38] = va.a(ul.field_P, "", "HS_plasma_impact_01").a().resample(var2);
+              TextInputField.field_V[39] = va.a(ul.field_P, "", "HS_grenade_fire_01").a().resample(var2);
               fg.field_b[23] = va.a(ul.field_P, "", "HS_collect_charge_01").a().resample(var2);
               fg.field_b[25] = va.a(ul.field_P, "", "HS_force_field_01").a().resample(var2);
               fg.field_b[26] = va.a(ul.field_P, "", "HS_rumble_bgsound").a().resample(var2);
               break;
             }
-            sf.field_V[var3 + 31] = va.a(ul.field_P, "", "HS_railgun_0" + (var3 + 1)).a().resample(var2);
+            TextInputField.field_V[var3 + 31] = va.a(ul.field_P, "", "HS_railgun_0" + (var3 + 1)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           var3 = 0;
           do {
             if (var3 >= 5) {
               if (param0 > -94) {
-                this.b((byte) 51);
+                this.updateGameTick((byte) 51);
               }
               break;
             }
-            sf.field_V[var3 + 41] = va.a(ul.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().resample(var2);
-            sf.field_V[46 + var3] = va.a(ul.field_P, "", "HS_turret_0" + (1 + var3)).a().resample(var2);
+            TextInputField.field_V[var3 + 41] = va.a(ul.field_P, "", "HS_crag_turret_0" + (var3 + 1)).a().resample(var2);
+            TextInputField.field_V[46 + var3] = va.a(ul.field_P, "", "HS_turret_0" + (1 + var3)).a().resample(var2);
             var3++;
           } while (var4 == 0);
           stackIn_57_0 = var2;
@@ -889,16 +889,16 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void m(int param0) {
+    private final void configureInterfaceThemeAndCursor(int param0) {
         try {
-          lk.a(4, 16776960, 4, mk.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
-          this.j((byte) -91);
+          LoginPanel.a(4, 16776960, 4, AccountRegistrationPanel.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ul.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
+          this.initializeCustomCursorSupport((byte) -91);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, PcmResampler param1) {
+    private final void loadAdditionalSoundEffects(int param0, PcmResampler param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -906,14 +906,14 @@ public final class HostileSpawn extends NetworkGameClient {
         RuntimeException var3 = null;
         try {
           gj.a(20, ac.field_e, 63.0f);
-          this.a((byte) -43);
+          this.renderFrame((byte) -43);
           em.field_a[0] = qf.a(ph.field_F, "", "bang1").c().resample(param1);
           em.field_a[1] = qf.a(ph.field_F, "", "bang4").c().resample(param1);
           em.field_a[6] = qf.a(ph.field_F, "", "spawnhurt").c().resample(param1);
           em.field_a[7] = qf.a(ph.field_F, "", "spawnhurt2").c().resample(param1);
           em.field_a[8] = qf.a(ph.field_F, "", "spawnkill").c().resample(param1);
           em.field_a[24] = qf.a(ph.field_F, "", "bigspawnkill").c().resample(param1);
-          sf.field_V[40] = qf.a(ph.field_F, "", "reload").c().resample(param1);
+          TextInputField.field_V[40] = qf.a(ph.field_F, "", "reload").c().resample(param1);
           fg.field_b[0] = qf.a(ph.field_F, "", "acid_hit_01").c().resample(param1);
           fg.field_b[1] = qf.a(ph.field_F, "", "human_pain_01").c().resample(param1);
           fg.field_b[2] = qf.a(ph.field_F, "", "human_pain_02").c().resample(param1);
@@ -1017,7 +1017,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    public static void k(byte param0) {
+    public static void clearHostileSpawnGlobals(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -1037,10 +1037,10 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void u(int param0) {
+    private final void loadAndPreloadMusic(int param0) {
         try {
           gj.a(20, wh.field_a, 70.0f);
-          this.a((byte) -124);
+          this.renderFrame((byte) -124);
           vg.field_h = ji.a(tk.field_a, "", "hostilespawntitle");
           rb.field_s = ji.a(tk.field_a, "", "hostilespawninstructions");
           dg.field_tb = ji.a(tk.field_a, "", "hostilespawnmissioncomplete");
@@ -1080,10 +1080,10 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void c(int param0) {
+    final void releaseGameResources(int param0) {
         try {
-          HostileSpawn.k((byte) 127);
-          t.clearStaticReferences(-15154);
+          HostileSpawn.clearHostileSpawnGlobals((byte) 127);
+          AchievementNotification.clearStaticReferences(-15154);
           IntrusiveDeque.clearStaticReferences(param0 + 51);
           cm.a((byte) -105);
           CrossfadingMidiPcmStream.clearDeclaredStaticReferences((byte) -13);
@@ -1128,7 +1128,7 @@ public final class HostileSpawn extends NetworkGameClient {
           re.clearStaticReferences(83);
           cg.clearStaticReferences(false);
           mg.clearStaticReferences(-12586);
-          oc.c(-9575);
+          GridPoint.clearMissionMapGlobals(-9575);
           eg.clearStaticReferences(-1);
           qh.a((byte) -66);
           bi.clearStaticReferences(true);
@@ -1182,10 +1182,10 @@ public final class HostileSpawn extends NetworkGameClient {
           pe.releaseDeclaredStaticReferences(8421504);
           ta.g((byte) 24);
           dg.releaseDeclaredStaticReferences(param0 ^ -285);
-          mk.l(param0 ^ 28);
+          AccountRegistrationPanel.l(param0 ^ 28);
           nb.clearStaticReferences(82);
-          lk.j(param0 + 27191);
-          ij.clearDeclaredStaticReferences((byte) 75);
+          LoginPanel.j(param0 + 27191);
+          DisplayNameSelectionPanel.clearDeclaredStaticReferences((byte) 75);
           na.clearStaticReferences(param0 + 61);
           oh.clearStaticReferences(-32278);
           ArchiveIndex.clearStaticReferences(-17514);
@@ -1198,7 +1198,7 @@ public final class HostileSpawn extends NetworkGameClient {
           le.resetStaticState(-3354);
           wk.clearStaticReferences(2);
           DualLinkNode.clearDeclaredStaticReferences((byte) 71);
-          aj.a(-46);
+          SpriteBase.clearExpansionTitle(-46);
           vh.clearStaticReferences(false);
           ni.clearStaticReferences(param0 ^ 107);
           SpriteGeometry.a(true);
@@ -1273,7 +1273,7 @@ public final class HostileSpawn extends NetworkGameClient {
           rc.clearStaticReferences(param0 + 8253);
           q.a(50);
           mj.clearStaticReferences((byte) 122);
-          fe.clearStaticReferences((byte) -112);
+          SocketFactory.clearStaticReferences((byte) -112);
           ProxyAuthenticationRequiredException.clearStaticReferences(-128);
           NanoFrameTimer.resetStaticState((byte) -121);
           ImageProducerRasterBuffer.resetStaticState((byte) 107);
@@ -1286,16 +1286,16 @@ public final class HostileSpawn extends NetworkGameClient {
           pl.clearStaticReferences(true);
           j.clearStaticReferences((byte) -120);
           nh.clearStaticReferences(0);
-          sf.p(10);
-          ig.resetStaticState(25);
+          TextInputField.clearTextInputFieldGlobals(10);
+          EditableTextField.resetStaticState(25);
           me.clearDeclaredStaticReferences((byte) -56);
           mc.clearStaticReferences(-125);
           cj.clearStaticReferences(true);
           wj.j(11460);
           al.clearDeclaredStaticReferences((byte) 78);
           vf.clearDeclaredStaticReferences((byte) -72);
-          hi.e(param0 - 4);
-          of.clearStaticReferences(true);
+          TextFieldValidator.e(param0 - 4);
+          ClientLookupTables.clearStaticReferences(true);
           te.j(0);
           g.clearDeclaredStaticReferences(-123);
           tb.clearDeclaredStaticReferences((byte) 83);
@@ -1311,7 +1311,7 @@ public final class HostileSpawn extends NetworkGameClient {
           DualLinkDeque.a(-1667734544);
           lj.f(param0 - 13);
           hb.clearStaticReferences(false);
-          el.b(true);
+          ProxySocketFactory.b(true);
           di.a(89);
           NodeHashTableIterator.clearStaticReferences(65);
           SecondaryNodeDequeIterator.clearStaticReferences((byte) -13);
@@ -1338,7 +1338,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ne.clearDeclaredStaticReferences((byte) 86);
           ii.clearStaticReferences(-111);
           ub.clearStaticReferences(90);
-          ei.c(3);
+          DelayedPacket.clearDelayedPacketGlobals(3);
           fa.resetStaticState(false);
           uh.resetStaticState(64);
           vk.clearStaticReferences(126);
@@ -1351,15 +1351,15 @@ public final class HostileSpawn extends NetworkGameClient {
           gm.a(0);
           pm.clearStaticReferences((byte) -12);
           AccountNameAvailabilityValidator.clearStaticReferences((byte) -69);
-          db.clearStaticReferences((byte) -87);
-          ka.clearDeclaredStaticReferences(117);
-          hd.f(-1);
-          ld.f(83);
-          li.clearStaticReferences((byte) -109);
+          PasswordValidator.clearStaticReferences((byte) -87);
+          EmailFormatValidator.clearDeclaredStaticReferences(117);
+          ConfirmedEmailAvailabilityValidator.f(-1);
+          AgeValidator.f(83);
+          MatchingFieldValidator.clearStaticReferences((byte) -109);
           je.a(34);
           mm.clearDeclaredStaticReferences((byte) 10);
           bm.clearStaticReferences(-88);
-          bj.clearStaticReferences(125);
+          DebouncedFieldValidator.clearStaticReferences(125);
           ll.clearStaticReferences(-125);
           this.field_G = null;
           this.field_o = null;
@@ -1368,7 +1368,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void j(byte param0) {
+    private final void initializeCustomCursorSupport(byte param0) {
         try {
           Class var3 = null;
           Class var2 = java.awt.Toolkit.class;
@@ -1405,7 +1405,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void s(int param0) {
+    private final void loadEnemyAnimationSprites(int param0) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[][] stackIn_10_0 = null;
         int stackIn_10_1 = 0;
@@ -1421,7 +1421,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           vd.field_y = new RgbSprite[7][];
           re.field_D = new RgbSprite[7][];
-          of.field_c = new RgbSprite[7][];
+          ClientLookupTables.field_c = new RgbSprite[7][];
           cb.field_g = new RgbSprite[7][];
           ArchiveIndex.field_f = new RgbSprite[7][];
           Bzip2State.field_y = new RgbSprite[7][];
@@ -1430,35 +1430,35 @@ public final class HostileSpawn extends NetworkGameClient {
           bf.field_f = new RgbSprite[7][];
           kl.field_b = new RgbSprite[7][];
           jh.field_eb = new RgbSprite[7][];
-          pa.field_i[4] = ei.a(vd.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
-          pa.field_i[5] = ei.a(vd.field_C, 92, "", "spawn_guard_death");
-          pa.field_i[0] = ei.a(vd.field_C, 122, "", "spawn_guard_idle");
+          pa.field_i[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 76), "", "spawn_guard_attack");
+          pa.field_i[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 92, "", "spawn_guard_death");
+          pa.field_i[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 122, "", "spawn_guard_idle");
           if (param0 != 39) {
             return;
           }
-          pa.field_i[1] = ei.a(vd.field_C, param0 + 86, "", "spawn_guard_walk");
-          bf.field_f[5] = ei.a(vd.field_C, 115, "", "spawn_dormant_death");
-          bf.field_f[1] = ei.a(vd.field_C, 124, "", "spawn_dormant_walk");
+          pa.field_i[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 86, "", "spawn_guard_walk");
+          bf.field_f[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 115, "", "spawn_dormant_death");
+          bf.field_f[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 124, "", "spawn_dormant_walk");
           bf.field_f[5] = bf.field_f[1];
           bf.field_f[0] = bf.field_f[1];
           bf.field_f[4] = bf.field_f[1];
-          re.field_D[4] = ei.a(vd.field_C, 102, "", "spawn_queen_attack");
-          re.field_D[5] = ei.a(vd.field_C, bm.a(param0, 87), "", "spawn_queen_death");
-          re.field_D[0] = ei.a(vd.field_C, 91, "", "spawn_queen_idle");
-          re.field_D[1] = ei.a(vd.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
-          kl.field_b[4] = ei.a(vd.field_C, 102, "", "spawn_runner_attack");
-          kl.field_b[5] = ei.a(vd.field_C, 102, "", "spawn_runner_death");
-          kl.field_b[0] = ei.a(vd.field_C, param0 + 69, "", "spawn_runner_idle");
-          kl.field_b[1] = ei.a(vd.field_C, 125, "", "spawn_runner_walk");
-          lb.field_a[4] = ei.a(vd.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
-          lb.field_a[5] = ei.a(vd.field_C, 93, "", "spawn_spitter_death");
-          lb.field_a[0] = ei.a(vd.field_C, 117, "", "spawn_spitter_idle");
-          lb.field_a[1] = ei.a(vd.field_C, 126, "", "spawn_spitter_walk");
-          ArchiveIndex.field_f[4] = ei.a(vd.field_C, 119, "", "spawn_praetorian_attack");
-          ArchiveIndex.field_f[5] = ei.a(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
-          ArchiveIndex.field_f[0] = ei.a(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
-          ArchiveIndex.field_f[1] = ei.a(vd.field_C, 93, "", "spawn_praetorian_walk");
-          var2 = new RgbSprite[][][]{of.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, ArchiveIndex.field_f};
+          re.field_D[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_queen_attack");
+          re.field_D[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 87), "", "spawn_queen_death");
+          re.field_D[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 91, "", "spawn_queen_idle");
+          re.field_D[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 67), "", "spawn_queen_walk");
+          kl.field_b[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_runner_attack");
+          kl.field_b[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 102, "", "spawn_runner_death");
+          kl.field_b[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 69, "", "spawn_runner_idle");
+          kl.field_b[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 125, "", "spawn_runner_walk");
+          lb.field_a[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 74), "", "spawn_spitter_attack");
+          lb.field_a[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 93, "", "spawn_spitter_death");
+          lb.field_a[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 117, "", "spawn_spitter_idle");
+          lb.field_a[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 126, "", "spawn_spitter_walk");
+          ArchiveIndex.field_f[4] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 119, "", "spawn_praetorian_attack");
+          ArchiveIndex.field_f[5] = DelayedPacket.loadNamedRgbSprites(vd.field_C, param0 + 74, "", "spawn_praetorian_death");
+          ArchiveIndex.field_f[0] = DelayedPacket.loadNamedRgbSprites(vd.field_C, bm.a(param0, 70), "", "spawn_praetorian_idle");
+          ArchiveIndex.field_f[1] = DelayedPacket.loadNamedRgbSprites(vd.field_C, 93, "", "spawn_praetorian_walk");
+          var2 = new RgbSprite[][][]{ClientLookupTables.field_c, pa.field_i, bf.field_f, re.field_D, kl.field_b, lb.field_a, cb.field_g, vd.field_y, ArchiveIndex.field_f};
           var3 = var2;
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -1491,7 +1491,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void n(int param0) {
+    private final void loadOriginalCampaignLevels(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -1499,22 +1499,22 @@ public final class HostileSpawn extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         var3 = field_I ? 1 : 0;
         try {
-          oc.field_h[0][3] = bi.field_h.getFileByName("level01-new.dat", "", 0);
-          oc.field_h[0][4] = bi.field_h.getFileByName("level02-new.dat", "", 0);
-          oc.field_h[0][5] = bi.field_h.getFileByName("level03-new.dat", "", param0 + 0);
-          oc.field_h[0][6] = bi.field_h.getFileByName("level04-new.dat", "", 0);
-          oc.field_h[0][7] = bi.field_h.getFileByName("level05-new.dat", "", 0);
-          oc.field_h[0][8] = bi.field_h.getFileByName("level06-new.dat", "", 0);
-          oc.field_h[0][9] = bi.field_h.getFileByName("level07-new.dat", "", 0);
-          oc.field_h[0][0] = bi.field_h.getFileByName("levelf1-new.dat", "", param0);
-          oc.field_h[0][1] = bi.field_h.getFileByName("levelf2-new.dat", "", 0);
-          oc.field_h[0][2] = bi.field_h.getFileByName("levelf3-new.dat", "", bm.a(param0, 0));
+          GridPoint.field_h[0][3] = bi.field_h.getFileByName("level01-new.dat", "", 0);
+          GridPoint.field_h[0][4] = bi.field_h.getFileByName("level02-new.dat", "", 0);
+          GridPoint.field_h[0][5] = bi.field_h.getFileByName("level03-new.dat", "", param0 + 0);
+          GridPoint.field_h[0][6] = bi.field_h.getFileByName("level04-new.dat", "", 0);
+          GridPoint.field_h[0][7] = bi.field_h.getFileByName("level05-new.dat", "", 0);
+          GridPoint.field_h[0][8] = bi.field_h.getFileByName("level06-new.dat", "", 0);
+          GridPoint.field_h[0][9] = bi.field_h.getFileByName("level07-new.dat", "", 0);
+          GridPoint.field_h[0][0] = bi.field_h.getFileByName("levelf1-new.dat", "", param0);
+          GridPoint.field_h[0][1] = bi.field_h.getFileByName("levelf2-new.dat", "", 0);
+          GridPoint.field_h[0][2] = bi.field_h.getFileByName("levelf3-new.dat", "", bm.a(param0, 0));
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 10))) {
             stackIn_12_0 = null;
             if (var3 == 0) {
-              if (stackIn_12_0 == oc.field_h[0][var2_int]) {
+              if (stackIn_12_0 == GridPoint.field_h[0][var2_int]) {
                 System.err.println("Error loading leveldata for kerrus[" + var2_int + "]");
               }
               var2_int++;
@@ -1534,7 +1534,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void b(byte param0) {
+    final void updateGameTick(byte param0) {
         boolean discarded$0 = false;
         boolean stackIn_18_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -1553,7 +1553,7 @@ public final class HostileSpawn extends NetworkGameClient {
             mb.field_s.b(param0 ^ 53);
           }
           if (param0 != -35) {
-            this.e(-72);
+            this.prepareGameShutdown(-72);
           }
           if (wh.field_f &&
             !ha.field_w.a(dg.field_tb, 105)) {
@@ -1578,7 +1578,7 @@ public final class HostileSpawn extends NetworkGameClient {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted2 = true;
             if (!ul.field_N) {
-              discarded$0 = this.p(4);
+              discarded$0 = this.advanceGameAssetLoading(4);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1599,7 +1599,7 @@ public final class HostileSpawn extends NetworkGameClient {
                       break scanLoop1;
                     }
                   }
-                  bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, sf.field_Y);
+                  bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 91, TextInputField.field_Y);
                   break;
                 }
                 sg.field_j = null;
@@ -1619,28 +1619,28 @@ public final class HostileSpawn extends NetworkGameClient {
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted2)) {
-                if (el.field_h[0] != null) {
-                  this.a((byte) 113, 0);
+                if (ProxySocketFactory.field_h[0] != null) {
+                  this.consumeScoreLookupResult((byte) 113, 0);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if (el.field_h[1] == null) {
+                  if (ProxySocketFactory.field_h[1] == null) {
                     if (nh.field_L != null) {
                       if (nh.field_L.field_j) {
                         nh.field_L = null;
                         if (var4 != 0) {
-                          this.m((byte) 76);
-                          this.a((byte) 113, 1);
+                          this.updateGameOverlays((byte) 76);
+                          this.consumeScoreLookupResult((byte) 113, 1);
                         }
                       }
                     } else {
-                      this.m((byte) 76);
+                      this.updateGameOverlays((byte) 76);
                       if (var4 != 0) {
-                        this.a((byte) 113, 1);
+                        this.consumeScoreLookupResult((byte) 113, 1);
                       }
                     }
                   } else {
-                    this.a((byte) 113, 1);
+                    this.consumeScoreLookupResult((byte) 113, 1);
                   }
                 }
               }
@@ -1672,7 +1672,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 mb.d(0, -22370);
               }
             }
-            if (!ig.c(false)) {
+            if (!EditableTextField.c(false)) {
               return;
             }
             var2_intLifetime1 = this.d((byte) -75);
@@ -1740,7 +1740,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final boolean p(int param0) {
+    private final boolean advanceGameAssetLoading(int param0) {
         Throwable decompiledCaughtException = null;
         NullPointerException var2 = null;
         int var2_int = 0;
@@ -1833,30 +1833,30 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (null == ul.field_P) {
             if (vd.field_C != null) {
-              this.i((byte) -113);
+              this.loadGameplaySprites((byte) -113);
               return false;
             }
             if (null != he.field_t) {
-              this.l(-4);
+              this.loadFloorAndBackgroundTextures(-4);
               return false;
             }
             if (null != bi.field_h) {
-              this.n(param0 - 4);
+              this.loadOriginalCampaignLevels(param0 - 4);
               return false;
             }
             if (wb.field_S > 0 &&
               null != IsaacGenerator.field_h) {
-              this.o(28974);
+              this.loadVengeanceCampaignLevels(28974);
               return false;
             }
-            li.a(50, param0 ^ 3);
-            ij.a((byte) -17, vg.field_h);
+            MatchingFieldValidator.a(50, param0 ^ 3);
+            DisplayNameSelectionPanel.a((byte) -17, vg.field_h);
             IntrusiveNode.field_d = this;
-            this.m(300);
-            of.field_h = new re(true);
+            this.configureInterfaceThemeAndCursor(300);
+            ClientLookupTables.field_h = new re(true);
             if (!ta.p(3)) {
               sg.field_j = wk.a(4, -2178);
-              of.field_h.f(-121);
+              ClientLookupTables.field_h.f(-121);
             }
             ul.field_N = true;
             ql.f(8036);
@@ -1900,9 +1900,9 @@ public final class HostileSpawn extends NetworkGameClient {
                                   u.field_e = u.field_e - MidiPcmStream.field_r;
                                   MidiPcmStream.field_r = 0;
                                   hg.field_e = 0;
-                                  var2_ref = this.q(-96);
-                                  this.a(22, var2_ref);
-                                  this.u(111);
+                                  var2_ref = this.loadBaseSoundEffects(-96);
+                                  this.loadAdditionalSoundEffects(22, var2_ref);
+                                  this.loadAndPreloadMusic(111);
                                   return false;
                                 }
                                 gj.a(param0 + 16, s.a(ResourceArchive.field_a, "kartika13", 84, cf.field_r, FrameTimer.field_a), 17.0f);
@@ -1947,17 +1947,17 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void consumeScoreLookupResult(byte param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (el.field_h[param1].field_j) {
-            if (el.field_h[param1].field_h[0] > gn.field_k[param1]) {
-              gn.field_k[param1] = el.field_h[param1].field_h[0];
+          if (ProxySocketFactory.field_h[param1].field_j) {
+            if (ProxySocketFactory.field_h[param1].field_h[0] > gn.field_k[param1]) {
+              gn.field_k[param1] = ProxySocketFactory.field_h[param1].field_h[0];
             }
-            el.field_h[param1] = null;
+            ProxySocketFactory.field_h[param1] = null;
           }
-          of.field_h.field_E = null;
+          ClientLookupTables.field_h.field_E = null;
           if (param0 != 113) {
             field_C = (RgbSprite) null;
           }
@@ -1969,9 +1969,9 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void r(int param0) {
+    private final void drawAchievementNotification(int param0) {
         PcmResampler discarded$1 = null;
-        t var2 = null;
+        AchievementNotification var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -1980,9 +1980,9 @@ public final class HostileSpawn extends NetworkGameClient {
         var5 = field_I ? 1 : 0;
         try {
           if (param0 >= -113) {
-            discarded$1 = this.q(-36);
+            discarded$1 = this.loadBaseSoundEffects(-36);
           }
-          var2 = (t) (ac.field_i.beginForward(-54));
+          var2 = (AchievementNotification) (ac.field_i.beginForward(-54));
           if (null != var2) {
             var4 = this.field_D;
             if (80 <= var4) {
@@ -2012,7 +2012,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void a(byte param0) {
+    final void renderFrame(byte param0) {
         Object stackIn_5_0 = null;
         boolean stackIn_12_0 = false;
         Object stackIn_12_1 = null;
@@ -2042,15 +2042,15 @@ public final class HostileSpawn extends NetworkGameClient {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != ei.field_o) {
+          if (null != DelayedPacket.field_o) {
             SoftwareRasterizer.clearRaster();
-            ei.field_o.a(104);
+            DelayedPacket.field_o.a(104);
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (null != of.field_h) {
+            if (null != ClientLookupTables.field_h) {
               me.b(108, 0);
-              of.field_h.h(26);
+              ClientLookupTables.field_h.h(26);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -2077,9 +2077,9 @@ public final class HostileSpawn extends NetworkGameClient {
               }
             }
           }
-          this.a((java.awt.Canvas) (var2), 67);
+          this.drawFrameOverlaysAndPresent((java.awt.Canvas) (var2), 67);
           if (param0 > -34) {
-            this.l(112);
+            this.loadFloorAndBackgroundTextures(112);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2089,7 +2089,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void l(int param0) {
+    private final void loadFloorAndBackgroundTextures(int param0) {
         RgbSprite[][] stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
         RgbSprite[][] var2 = null;
@@ -2148,25 +2148,25 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void o(int param0) {
+    private final void loadVengeanceCampaignLevels(int param0) {
         try {
-          oc.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
-          oc.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", bm.a(param0, 28974));
-          oc.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", bm.a(param0, param0));
-          oc.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", param0 - 28974);
-          oc.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", param0 - 28974);
-          oc.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
-          oc.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
-          oc.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
-          oc.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
+          GridPoint.field_h[1][0] = IsaacGenerator.field_h.getFileByName("level_01.dat", "", 0);
+          GridPoint.field_h[1][1] = IsaacGenerator.field_h.getFileByName("level_02.dat", "", bm.a(param0, 28974));
+          GridPoint.field_h[1][2] = IsaacGenerator.field_h.getFileByName("level_03.dat", "", bm.a(param0, 28974));
+          GridPoint.field_h[1][3] = IsaacGenerator.field_h.getFileByName("level_04.dat", "", bm.a(param0, param0));
+          GridPoint.field_h[1][4] = IsaacGenerator.field_h.getFileByName("level_05.dat", "", param0 - 28974);
+          GridPoint.field_h[1][5] = IsaacGenerator.field_h.getFileByName("level_06.dat", "", param0 - 28974);
+          GridPoint.field_h[1][6] = IsaacGenerator.field_h.getFileByName("level_07.dat", "", 0);
+          GridPoint.field_h[1][7] = IsaacGenerator.field_h.getFileByName("level_08.dat", "", 0);
+          GridPoint.field_h[1][8] = IsaacGenerator.field_h.getFileByName("level_09.dat", "", 0);
+          GridPoint.field_h[1][9] = IsaacGenerator.field_h.getFileByName("level_10.dat", "", 0);
           IsaacGenerator.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.JA(" + param0 + ')');
         }
     }
 
-    private final void m(byte param0) {
+    private final void updateGameOverlays(byte param0) {
         int fieldTemp$0 = 0;
         boolean stackIn_27_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -2176,14 +2176,14 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           q.field_n = q.field_n + j.field_c;
           FrameTimer.field_b = FrameTimer.field_b - j.field_c;
-          if (ig.field_L != 0) {
+          if (EditableTextField.field_L != 0) {
             NanoFrameTimer.field_m = NanoFrameTimer.field_m + 1;
             q.field_n = q.field_n + fa.field_a;
             FrameTimer.field_b = FrameTimer.field_b - pf.field_o * NanoFrameTimer.field_m;
             fa.field_a = fa.field_a - pf.field_o;
           }
           if (m.field_l) {
-            of.field_h.f(param0 ^ -35);
+            ClientLookupTables.field_h.f(param0 ^ -35);
             cn.a(false, (byte) 99);
             m.field_l = false;
           }
@@ -2231,13 +2231,13 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             return;
           }
-          if (null != ei.field_o) {
-            ei.field_o.a((byte) -114);
+          if (null != DelayedPacket.field_o) {
+            DelayedPacket.field_o.a((byte) -114);
             if (0 != pf.field_o) {
-              ei.field_o.d(param0 ^ -816);
+              DelayedPacket.field_o.d(param0 ^ -816);
             }
-            if (ei.field_o.b((byte) -66)) {
-              ei.field_o = null;
+            if (DelayedPacket.field_o.b((byte) -66)) {
+              DelayedPacket.field_o = null;
             }
             return;
           }
@@ -2267,7 +2267,7 @@ public final class HostileSpawn extends NetworkGameClient {
             ImageProducerRasterBuffer.field_q = null;
             GameAppletShell.field_h.requestFocus();
           }
-          if (of.field_h != null) {
+          if (ClientLookupTables.field_h != null) {
             cg.a(-27587);
             mb.field_s.b(0, (byte) 95);
             return;
@@ -2285,7 +2285,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    final void a(int param0) {
+    final void initializeGame(int param0) {
         RuntimeException runtimeException = null;
         MidiPcmStream var2 = null;
         VolumeRampingMidiPcmStream var3 = null;
@@ -2303,9 +2303,9 @@ public final class HostileSpawn extends NetworkGameClient {
           var5 = new VolumeRampingMidiPcmStream(var3);
           var6 = new CrossfadingMidiPcmStream(var3, var4, var5);
           mb.field_s = new he(var5);
-          aj.a(var6, -25127, 22050, (java.awt.Component) ((Object) GameAppletShell.field_h), true, gf.field_b);
+          SpriteBase.initializeAudioOutput(var6, -25127, 22050, (java.awt.Component) ((Object) GameAppletShell.field_h), true, gf.field_b);
           if (param0 != -4323) {
-            this.m(-15);
+            this.configureInterfaceThemeAndCursor(-15);
           }
           CrossfadingMidiPcmStream.field_v = new ReverbPcmStream(eh.field_c);
           CrossfadingMidiPcmStream.field_v.f(0.5f);
@@ -2316,7 +2316,7 @@ public final class HostileSpawn extends NetworkGameClient {
           CrossfadingMidiPcmStream.field_v.setStereoWidth(0.30000001192092896f);
           eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
           wj.field_O = wj.field_O / 4;
-          uj.field_p = new oc();
+          uj.field_p = new GridPoint();
           this.a(true, (byte) 44, true, true, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2345,7 +2345,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void a(java.awt.Canvas param0, int param1) {
+    private final void drawFrameOverlaysAndPresent(java.awt.Canvas param0, int param1) {
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -2357,11 +2357,11 @@ public final class HostileSpawn extends NetworkGameClient {
         int var5 = 0;
         int var6 = 0;
         try {
-          this.r(param1 ^ -59);
+          this.drawAchievementNotification(param1 ^ -59);
           if (!jk.a(param1 - 23389)) {
             if (pf.a(param1 - 178)) {
               stackIn_10_0 = (ImageProducerRasterBuffer.field_q != null);
-              hi.a(stackIn_10_0, (byte) 127);
+              TextFieldValidator.a(stackIn_10_0, (byte) 127);
               if (field_I) {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
                 var3_int = -8 + (320 - NetworkArchiveRequest.e(0) / 2 - 8);
@@ -2400,7 +2400,7 @@ public final class HostileSpawn extends NetworkGameClient {
         }
     }
 
-    private final void t(int param0) {
+    private final void loadScenerySprites(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
@@ -2408,12 +2408,12 @@ public final class HostileSpawn extends NetworkGameClient {
         var3 = field_I ? 1 : 0;
         try {
           CrossfadingMidiPcmStream.field_y = MouseInput.a("", 127, "Scenery_1", vd.field_C);
-          c.field_f = ei.a(vd.field_C, 97, "", "Scenery_2");
+          c.field_f = DelayedPacket.loadNamedRgbSprites(vd.field_C, 97, "", "Scenery_2");
           jd.field_h = fg.a("", "Scenery_3", vd.field_C, false);
           om.field_c = fg.a("", "Scenery_4", vd.field_C, false);
           ih.field_v = fg.a("", "Scenery_5", vd.field_C, false);
           wj.field_L = fg.a("", "Scenery_6", vd.field_C, false);
-          oc.field_d = fg.a("", "Scenery_7", vd.field_C, false);
+          GridPoint.field_d = fg.a("", "Scenery_7", vd.field_C, false);
           hg.field_a = fg.a("", "Scenery_8", vd.field_C, false);
           f.field_b = MouseInput.a("", -76, "Scenery_9", vd.field_C);
           og.field_d = fg.a("", "Scenery_10", vd.field_C, false);
@@ -2425,7 +2425,7 @@ public final class HostileSpawn extends NetworkGameClient {
           re.field_q = fg.a("", "Scenery_16", vd.field_C, false);
           hf.field_b = fg.a("", "Scenery_17", vd.field_C, false);
           qj.field_l = fg.a("", "Scenery_18", vd.field_C, false);
-          bj.field_j = fg.a("", "Scenery_19", vd.field_C, false);
+          DebouncedFieldValidator.field_j = fg.a("", "Scenery_19", vd.field_C, false);
           eh.field_b = fg.a("", "Scenery_20", vd.field_C, false);
           lc.field_a = fg.a("", "computer_console1_e_tga", vd.field_C, false);
           bi.field_b = fg.a("", "computer_console1_n_tga", vd.field_C, false);
@@ -2446,14 +2446,14 @@ public final class HostileSpawn extends NetworkGameClient {
           pe.field_hb = fg.a("", "Scenery_29", vd.field_C, false);
           CipherPacketBuffer.field_w = fg.a("", "Scenery_30", vd.field_C, false);
           e.field_d = fg.a("", "Scenery_31", vd.field_C, false);
-          ig.field_S = fg.a("", "Scenery_32", vd.field_C, false);
+          EditableTextField.field_S = fg.a("", "Scenery_32", vd.field_C, false);
           f.field_d = fg.a("", "Scenery_33", vd.field_C, false);
           GameCanvas.field_h = fg.a("", "Scenery_34", vd.field_C, false);
           ki.field_b = fg.a("", "Scenery_35", vd.field_C, false);
           nh.field_C = fg.a("", "Scenery_36", vd.field_C, false);
           wb.field_W = fg.a("", "explosive_crate_e_tga", vd.field_C, false);
           IsaacGenerator.field_c = fg.a("", "explosive_crate_n_tga", vd.field_C, false);
-          el.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
+          ProxySocketFactory.field_f = fg.a("", "explosive_crate_s_tga", vd.field_C, false);
           oa.field_e = fg.a("", "explosive_crate_w_tga", vd.field_C, false);
           FullscreenFocusCanvas.field_f = fg.a("", "health_big_tga", vd.field_C, false);
           ia.field_e = fg.a("", "health_sm_tga", vd.field_C, false);
@@ -2475,19 +2475,19 @@ public final class HostileSpawn extends NetworkGameClient {
           sj.field_g = fg.a("", "Scenery_52", vd.field_C, false);
           vf.field_H = fg.a("", "Scenery_53", vd.field_C, false);
           nd.field_a = fg.a("", "Scenery_54", vd.field_C, false);
-          el.field_l = fg.a("", "Scenery_55", vd.field_C, false);
+          ProxySocketFactory.field_l = fg.a("", "Scenery_55", vd.field_C, false);
           lh.field_e = fg.a("", "Scenery_56", vd.field_C, false);
           vg.field_d = fg.a("", "Scenery_57", vd.field_C, false);
           DualLinkDeque.field_b = fg.a("", "Scenery_58", vd.field_C, false);
-          ig.field_R = fg.a("", "Scenery_59", vd.field_C, false);
+          EditableTextField.field_R = fg.a("", "Scenery_59", vd.field_C, false);
           ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
           eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
           cn.field_h = fg.a("", "Scenery_62", vd.field_C, false);
           jh.field_cb = fg.a("", "Scenery_63", vd.field_C, false);
-          fe.field_c = fg.a("", "Scenery_64", vd.field_C, false);
+          SocketFactory.field_c = fg.a("", "Scenery_64", vd.field_C, false);
           qg.field_m = fg.a("", "Scenery_65", vd.field_C, false);
           SpriteGeometry.field_B = fg.a("", "Scenery_66", vd.field_C, false);
-          ld.field_p = fg.a("", "Scenery_67", vd.field_C, false);
+          AgeValidator.field_p = fg.a("", "Scenery_67", vd.field_C, false);
           rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
           BufferedSocket.field_f = fg.a("", "Scenery_69", vd.field_C, false);
           dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
@@ -2538,7 +2538,7 @@ public final class HostileSpawn extends NetworkGameClient {
           FrameTimer.field_d = fg.a("", "Scenery_90", vd.field_C, false);
           IsaacGenerator.field_j = MouseInput.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
           ln.field_g = MouseInput.a("", -91, "Scenery_92", vd.field_C);
-          li.field_y = fg.a("", "Scenery_93", vd.field_C, false);
+          MatchingFieldValidator.field_y = fg.a("", "Scenery_93", vd.field_C, false);
           kc.field_d = fg.a("", "Scenery_94", vd.field_C, false);
           sj.field_b = fg.a("", "Scenery_95", vd.field_C, false);
           AccountNameAvailabilityValidator.field_q = fg.a("", "Scenery_96", vd.field_C, false);
@@ -2551,7 +2551,7 @@ public final class HostileSpawn extends NetworkGameClient {
           wi.field_e = MouseInput.a("", param0 ^ 13138, "bend_b_2", vd.field_C);
           MusicPatchPcmStream.field_r = MouseInput.a("", 123, "corner_c_1", vd.field_C);
           id.field_w = MouseInput.a("", param0 ^ 13121, "corner_c_2", vd.field_C);
-          ld.field_o = MouseInput.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
+          AgeValidator.field_o = MouseInput.a("", param0 ^ -13139, "corner_c_3", vd.field_C);
           la.field_e = MouseInput.a("", 24, "corner_d_4", vd.field_C);
           bb.field_a = MouseInput.a("", param0 - 13007, "diagonal_d_1", vd.field_C);
           qg.field_i = MouseInput.a("", param0 - 13121, "diagonal_d_2", vd.field_C);
@@ -2561,7 +2561,7 @@ public final class HostileSpawn extends NetworkGameClient {
           vb.field_Lb = fg.a("", "Scenery_108", vd.field_C, false);
           uh.field_f = fg.a("", "Scenery_109", vd.field_C, false);
           qh.field_g = fg.a("", "Scenery_110", vd.field_C, false);
-          ei.field_m = fg.a("", "Scenery_111", vd.field_C, false);
+          DelayedPacket.field_m = fg.a("", "Scenery_111", vd.field_C, false);
           j.field_a = fg.a("", "Scenery_112", vd.field_C, false);
           vk.field_p = fg.a("", "Scenery_113", vd.field_C, false);
           ArchiveIndex.field_e = fg.a("", "Scenery_114", vd.field_C, false);
@@ -2576,7 +2576,7 @@ public final class HostileSpawn extends NetworkGameClient {
           gf.field_d = fg.a("", "Scenery_123", vd.field_C, false);
           IntrusiveNodeHashTable.field_a = fg.a("", "Scenery_124", vd.field_C, false);
           nb.field_J = fg.a("", "Scenery_125", vd.field_C, false);
-          t.field_l = fg.a("", "Scenery_126", vd.field_C, false);
+          AchievementNotification.field_l = fg.a("", "Scenery_126", vd.field_C, false);
           uc.field_a = fg.a("", "Scenery_127", vd.field_C, false);
           s.field_d = fg.a("", "Scenery_128", vd.field_C, false);
           qg.field_g = new RgbSprite[106];

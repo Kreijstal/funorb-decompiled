@@ -198,7 +198,7 @@ final class ea {
             stackIn_2_0 = null;
             return (ie) (stackIn_2_0);
           }
-          var2 = new ie(param0, cl.field_n, ae.field_c, ih.field_V, qh.field_i, ph.field_c);
+          var2 = new ie(param0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, ih.field_V, qh.field_i, ph.field_c);
           vb.a((byte) 122);
           if (param1 < 47) {
             field_b = 93;

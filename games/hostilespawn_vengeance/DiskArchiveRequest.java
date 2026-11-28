@@ -100,16 +100,16 @@ final class DiskArchiveRequest extends ArchiveRequest {
             var7 = hf.field_d[var4];
             if (2 == be.field_e &&
               var2 == 1) {
-              if (gg.field_D.length <= ka.field_o.length) {
-                stackIn_17_0 = ka.field_o.length;
+              if (gg.field_D.length <= EmailFormatValidator.field_o.length) {
+                stackIn_17_0 = EmailFormatValidator.field_o.length;
               } else {
                 stackIn_17_0 = gg.field_D.length;
               }
               var8 = stackIn_17_0;
               if (var4 >= 6 &&
                 6 + var8 > var4) {
-                if (0 <= -var8 + (var4 - 6 + ka.field_o.length)) {
-                  stackIn_23_0 = ka.field_o[ka.field_o.length + (var4 - (6 + var8))];
+                if (0 <= -var8 + (var4 - 6 + EmailFormatValidator.field_o.length)) {
+                  stackIn_23_0 = EmailFormatValidator.field_o[EmailFormatValidator.field_o.length + (var4 - (6 + var8))];
                 } else {
                   stackIn_23_0 = "";
                 }
@@ -152,7 +152,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
               var1_int = var1_int + ProxyAuthenticationRequiredException.field_b;
             }
             if (var5 < 0) {
-              lj.field_u.c(var7, var9Lifetime1, ka.field_q + var1_int, var6, -1);
+              lj.field_u.c(var7, var9Lifetime1, EmailFormatValidator.field_q + var1_int, var6, -1);
               var1_int = var1_int + MouseWheelInput.field_d;
             } else {
               na.field_c.c(var7, var9Lifetime1, sd.field_s + var1_int, var6, -1);

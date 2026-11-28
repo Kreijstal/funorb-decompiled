@@ -51,7 +51,7 @@ final class jm {
           }
           if (0 != param0.field_o ||
             0 != param0.field_m) {
-            for (var2_int = 0; var2_int < ud.field_x; var2_int++) {
+            for (var2_int = 0; var2_int < IntroSequenceScreen.field_x; var2_int++) {
               var3 = nb.field_a[var2_int];
               if (var3.field_n == 2 &&
                 var3.field_o == param0.field_o &&
@@ -154,7 +154,7 @@ final class jm {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         SoftwareRasterizer.drawRectangleOutline(param1, param4, param2, param0, 0);
         SoftwareRasterizer.drawRectangleOutline(param1 - 1, param4 - 1, param2 + 2, 2 + param0, 12632256);
-        qe.b(param1 - 1, -1 + param4, 2 + param2, param0 + 2, 192, 64, 3, 192);
+        DungeonAssaultScreen.b(param1 - 1, -1 + param4, 2 + param2, param0 + 2, 192, 64, 3, 192);
         if (param3 >= -73) {
           la var6 = (la) null;
           jm.a((la) null, (byte) 25);
@@ -252,7 +252,7 @@ final class jm {
           ac.field_B.d((byte) -113, 71);
           ac.field_B.position = ac.field_B.position + 1;
           var1 = ac.field_B.position;
-          ac.field_B.writePrefixedString(2, ip.field_j);
+          ac.field_B.writePrefixedString(2, TextFieldValidator.field_j);
           ac.field_B.writeByte(6, oh.field_s);
           ac.field_B.backpatchByteLength(ac.field_B.position - var1, -1);
         }

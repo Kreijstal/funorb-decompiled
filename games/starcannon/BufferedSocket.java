@@ -19,7 +19,7 @@ final class BufferedSocket implements Runnable {
     private java.net.Socket field_j;
     static int field_m;
     private int field_h;
-    static kh field_g;
+    static AccountRegistrationPanel field_g;
     static int field_c;
     private byte[] field_e;
 
@@ -34,7 +34,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_b != null) {
             while (this.field_b.status == 0) {
-              uc.sleepMillis(-113, 1L);
+              DebouncedFieldValidator.sleepMillis(-113, 1L);
             }
             if (this.field_b.status == 1) {
               try {
@@ -425,7 +425,7 @@ final class BufferedSocket implements Runnable {
 
     final static ResourceArchive a(int param0, boolean param1, boolean param2, int param3, byte param4) {
         if (param4 < 100) {
-          field_g = (kh) null;
+          field_g = (AccountRegistrationPanel) null;
         }
         return ri.a(true, param2, param0, param3, false, param1);
     }

@@ -47,7 +47,7 @@ final class he extends DualLinkNode {
         int var15Lifetime1;
         var24 = Vertigo2.field_L ? 1 : 0;
         try {
-          mk.field_P = param7;
+          AccountRegistrationPanel.field_P = param7;
           nk.field_Hb = param0;
           for (var10_int = 0; var10_int < this.field_v.length; var10_int++) {
             this.field_v[var10_int].b(param4, param6, 255);

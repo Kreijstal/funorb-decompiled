@@ -50,7 +50,7 @@ abstract class LevelGrid {
                   ii.tileSprites[50].drawTransparent(var6, var4);
                 }
                 var9 = this.field_b / 3 % 4;
-                if (ui.a(0, param2) &&
+                if (PasswordValidator.a(0, param2) &&
                   this.field_b != 0) {
                   SocketArchiveRequestConnection.avatarSprites[32 + this.field_l][var9].drawTransparent(var6, var4);
                 } else {

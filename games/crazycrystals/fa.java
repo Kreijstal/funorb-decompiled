@@ -22,7 +22,7 @@ class fa extends mg {
         RuntimeException var17 = null;
         RgbSprite[] var18 = null;
         try {
-          MouseInputHandler.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, jn.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, SpriteGeometry.field_s, param6);
+          MouseInputHandler.a(param8, param9, 0, param16, param7, param1, vh.field_f, param14, param0, aj.field_t, PasswordValidator.field_i, ao.field_e, la.field_a, new hj(param11), param12, new hj(param10), param15, param5, param4, SpriteGeometry.field_s, param6);
           MouseInputHandler.a(126, param13, param3);
           if (!param2) {
             var18 = (RgbSprite[]) null;
@@ -124,7 +124,7 @@ class fa extends mg {
           }
           pl.e(-125);
           qe.field_g.g((byte) -100);
-          mk.field_b = new vk(jd.field_G, (String) null, ne.field_d, param1, param0);
+          mk.field_b = new LoginPanel(jd.field_G, (String) null, ne.field_d, param1, param0);
           MouseWheelInput.field_d = new ck(qe.field_g, mk.field_b);
           qe.field_g.b(-3264, MouseWheelInput.field_d);
         } catch (RuntimeException runtimeException) {

@@ -80,11 +80,11 @@ final class vf {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (fe.field_J != null) {
-              for (var1_int = 0; var1_int < fe.field_J.length; var1_int++) {
-                if (fe.field_J[var1_int] != null) {
+            if (EditableTextField.field_J != null) {
+              for (var1_int = 0; var1_int < EditableTextField.field_J.length; var1_int++) {
+                if (EditableTextField.field_J[var1_int] != null) {
                   try {
-                    fe.field_J[var1_int].close(49);
+                    EditableTextField.field_J[var1_int].close(49);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

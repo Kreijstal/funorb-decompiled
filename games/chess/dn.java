@@ -145,7 +145,7 @@ final class dn {
           if (param2 <= 118) {
             field_f = (jd) null;
           }
-          if (!tj.a(param1, param0, param3, (byte) 83)) {
+          if (!EmailFormatValidator.a(param1, param0, param3, (byte) 83)) {
             return null;
           }
           stackIn_6_0 = DelegatingCanvas.a(param4.getFile(param1, param0, 5847), 127);
@@ -171,7 +171,7 @@ final class dn {
     }
 
     final static void a(byte param0, int param1) {
-        BitPacketBuffer var2 = qn.field_U;
+        BitPacketBuffer var2 = EditableTextField.field_U;
         var2.writeCipheredByte(param1, -85);
         var2.writeByte(1, (byte) -73);
         var2.writeByte(3, (byte) 124);

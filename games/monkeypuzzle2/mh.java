@@ -129,8 +129,8 @@ final class mh extends jk {
             java.awt.Component var3 = (java.awt.Component) null;
             mh.a(48, (java.awt.Component) null);
           }
-          param1.addKeyListener(wj.field_k);
-          param1.addFocusListener(wj.field_k);
+          param1.addKeyListener(TextFieldValidator.field_k);
+          param1.addFocusListener(TextFieldValidator.field_k);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "mh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

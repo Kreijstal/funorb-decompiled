@@ -78,7 +78,7 @@ final class ge {
     final boolean a(byte param0) {
         if (param0 != 11) {
           this.a((byte) -70);
-          if (uc.field_a == this) {
+          if (DebouncedFieldValidator.field_a == this) {
             return true;
           }
           if (dd.field_b != this) {
@@ -86,7 +86,7 @@ final class ge {
           }
           return true;
         }
-        if (uc.field_a == this) {
+        if (DebouncedFieldValidator.field_a == this) {
           return true;
         }
         if (dd.field_b == this) {

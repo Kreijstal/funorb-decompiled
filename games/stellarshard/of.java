@@ -22,7 +22,7 @@ final class of extends dg {
                 field_F = false;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(lk.a(param1, var2, -110), "_top");
+              param1.getAppletContext().showDocument(TextFieldValidator.a(param1, var2, -110), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -253,7 +253,7 @@ final class of extends dg {
         try {
           super.a(param0, -111, param2, param3, param4, param5);
           var8 = 58 % ((param1 + 50) / 57);
-          var9 = lk.field_e;
+          var9 = TextFieldValidator.field_e;
           if (var9 != null &&
             this.a((byte) 127, param4, param0, param5, param3)) {
             if (!(this.field_v instanceof jh)) {
@@ -261,13 +261,13 @@ final class of extends dg {
                 return;
               }
               ((jh) (var9.field_v)).a(this, (byte) 107, var9);
-              lk.field_e = null;
+              TextFieldValidator.field_e = null;
               if (stellarshard.field_B == 0) {
                 return;
               }
             }
             ((jh) (this.field_v)).a(this, (byte) 30, var9);
-            lk.field_e = null;
+            TextFieldValidator.field_e = null;
             return;
           }
           return;

@@ -14,7 +14,7 @@ final class vg {
           fa.field_G.n(-125);
         }
         String var1 = SecondaryNodeDequeIterator.c(param0 ^ 32013);
-        wi.field_c = new rg(var1, (String) null, true, false, false);
+        wi.field_c = new LoginPanel(var1, (String) null, true, false, false);
         ti.field_b.a((byte) 86, (UiWidget) (t.field_h));
         t.field_h.c(param0 ^ 12814, wi.field_c);
         if (param0 == 32083) {

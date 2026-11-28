@@ -551,8 +551,8 @@ final class StageDirector {
               if (this.field_a[var25] > 0) {
                 var24_int = var24_int + this.field_a[var25];
                 if ((double)var24_int > var22_double) {
-                  var26 = (int)(Math.random() * (double)bf.field_L[var25].length);
-                  var27_ref_rd = this.createStageEnemy(0.0, 0, 0.0, 0.0, false, bf.field_L[var25][var26], var21_ref_u, this.field_o, 583, var25, (rd) null, false, new boolean[]{true});
+                  var26 = (int)(Math.random() * (double)DisplayNameSelectionPanel.field_L[var25].length);
+                  var27_ref_rd = this.createStageEnemy(0.0, 0, 0.0, 0.0, false, DisplayNameSelectionPanel.field_L[var25][var26], var21_ref_u, this.field_o, 583, var25, (rd) null, false, new boolean[]{true});
                   this.field_i.field_g.addLast((IntrusiveNode) (var27_ref_rd), (byte) -93);
                   this.field_a[var25] = this.field_a[var25] - 1;
                   break;
@@ -596,10 +596,10 @@ final class StageDirector {
                 var24 = var14 + Math.random() * var16;
               }
               var27 = (int)(0.6 / this.field_b);
-              var28 = (int)(Math.random() * (double)bf.field_L[var22].length);
+              var28 = (int)(Math.random() * (double)DisplayNameSelectionPanel.field_L[var22].length);
               var29 = new boolean[]{true};
               for (var30 = 0; var30 < var19; var30++) {
-                var31 = this.createStageEnemy(var24, var27, 0.0, 0.0, false, bf.field_L[var22][var28], (u) null, this.field_o, 583, var22, (rd) (var23), false, var29);
+                var31 = this.createStageEnemy(var24, var27, 0.0, 0.0, false, DisplayNameSelectionPanel.field_L[var22][var28], (u) null, this.field_o, 583, var22, (rd) (var23), false, var29);
                 if (var23 == null) {
                   var31.a(Math.random(), Math.random(), var26Lifetime1, this.field_f, Math.random(), Math.random(), 76, Math.random(), Math.random(), this.field_b);
                 } else {

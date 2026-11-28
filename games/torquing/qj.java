@@ -22,7 +22,7 @@ final class qj {
             var2 = 0;
             if (param1 != -1) {
               if (wa.field_f) {
-                IntrusiveNode.field_d = dg.field_h;
+                IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
                 RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -37,7 +37,7 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  IntrusiveNode.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   RandomAccessCacheFile.field_h = k.field_e;
@@ -51,7 +51,7 @@ final class qj {
                 return;
               }
               if (var2 != 0) {
-                IntrusiveNode.field_d = dg.field_h;
+                IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
                 RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -64,7 +64,7 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  IntrusiveNode.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   RandomAccessCacheFile.field_h = k.field_e;
@@ -88,7 +88,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -107,7 +107,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -126,7 +126,7 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              IntrusiveNode.field_d < dg.field_h &&
+              IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               RandomAccessCacheFile.field_h = k.field_e;
@@ -148,11 +148,11 @@ final class qj {
             IntrusiveNode.field_d = 0;
             return;
           }
-          if (IntrusiveNode.field_d < dg.field_h) {
+          if (IntrusiveNode.field_d < TranslucentSpriteLayer.field_h) {
             var2Lifetime1 = 0;
             if (param1 != -1) {
               if (wa.field_f) {
-                IntrusiveNode.field_d = dg.field_h;
+                IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
                 RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -167,7 +167,7 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  IntrusiveNode.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   RandomAccessCacheFile.field_h = k.field_e;
@@ -181,7 +181,7 @@ final class qj {
                 return;
               }
               if (var2Lifetime1 != 0) {
-                IntrusiveNode.field_d = dg.field_h;
+                IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
                 RandomAccessCacheFile.field_h = k.field_e;
                 ro.field_w = n.field_t;
                 if (-1 == param1) {
@@ -194,7 +194,7 @@ final class qj {
                   return;
                 }
                 if (!wa.field_f &&
-                  IntrusiveNode.field_d < dg.field_h &&
+                  IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                   he.field_a) {
                   ro.field_w = n.field_t;
                   RandomAccessCacheFile.field_h = k.field_e;
@@ -218,7 +218,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -237,7 +237,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -256,7 +256,7 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              IntrusiveNode.field_d < dg.field_h &&
+              IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               RandomAccessCacheFile.field_h = k.field_e;
@@ -276,11 +276,11 @@ final class qj {
             }
             return;
           }
-          stackIn_175_0 = (cf.field_e + dg.field_h <= IntrusiveNode.field_d) ? 0 : 1;
+          stackIn_175_0 = (cf.field_e + TranslucentSpriteLayer.field_h <= IntrusiveNode.field_d) ? 0 : 1;
           var2Lifetime2 = stackIn_175_0;
           if (param1 != -1) {
             if (wa.field_f) {
-              IntrusiveNode.field_d = dg.field_h;
+              IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
               RandomAccessCacheFile.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
@@ -295,7 +295,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -309,7 +309,7 @@ final class qj {
               return;
             }
             if (var2Lifetime2 != 0) {
-              IntrusiveNode.field_d = dg.field_h;
+              IntrusiveNode.field_d = TranslucentSpriteLayer.field_h;
               RandomAccessCacheFile.field_h = k.field_e;
               ro.field_w = n.field_t;
               if (-1 == param1) {
@@ -322,7 +322,7 @@ final class qj {
                 return;
               }
               if (!wa.field_f &&
-                IntrusiveNode.field_d < dg.field_h &&
+                IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
                 he.field_a) {
                 ro.field_w = n.field_t;
                 RandomAccessCacheFile.field_h = k.field_e;
@@ -349,7 +349,7 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              IntrusiveNode.field_d < dg.field_h &&
+              IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               RandomAccessCacheFile.field_h = k.field_e;
@@ -375,7 +375,7 @@ final class qj {
               return;
             }
             if (!wa.field_f &&
-              IntrusiveNode.field_d < dg.field_h &&
+              IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
               he.field_a) {
               ro.field_w = n.field_t;
               RandomAccessCacheFile.field_h = k.field_e;
@@ -396,7 +396,7 @@ final class qj {
           return;
         }
         if (!wa.field_f &&
-          IntrusiveNode.field_d < dg.field_h &&
+          IntrusiveNode.field_d < TranslucentSpriteLayer.field_h &&
           he.field_a) {
           ro.field_w = n.field_t;
           RandomAccessCacheFile.field_h = k.field_e;

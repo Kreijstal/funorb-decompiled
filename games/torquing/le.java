@@ -8,7 +8,7 @@ final class le {
         VertexMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        qk var8 = null;
+        LevelCompletionUpdate var8 = null;
         IsaacPacketBuffer var9 = null;
         int var10 = 0;
         IsaacPacketBuffer var11 = null;
@@ -24,16 +24,16 @@ final class le {
           var11 = var9;
           var3 = var11.readUnsignedByte((byte) -101);
           var11.j((byte) -100);
-          FrameTimer.field_d = pe.a((byte) -59, var11);
+          FrameTimer.field_d = LoginPanel.a((byte) -59, var11);
           db.field_a = new VertexMesh[var3];
           eo.field_d = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            db.field_a[var4] = mh.a(255, var9);
+            db.field_a[var4] = MenuScreen.a(255, var9);
           }
           var11.j(-128);
           if (param0 != 6) {
-            var8 = (qk) null;
-            le.a((byte) -43, -40, (qk) null);
+            var8 = (LevelCompletionUpdate) null;
+            le.a((byte) -43, -40, (LevelCompletionUpdate) null);
           }
           var10 = 0;
           var4Lifetime1 = var10;
@@ -61,7 +61,7 @@ final class le {
         }
     }
 
-    final static void a(byte param0, int param1, qk param2) {
+    final static void a(byte param0, int param1, LevelCompletionUpdate param2) {
         if (param0 < 82) {
           return;
         }

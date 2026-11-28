@@ -134,7 +134,7 @@ abstract class EventAnimation extends AnimationNode {
           this.field_n = param1.creature.resolveCreatureView(-27449, this.screen);
           this.field_m = new ActorAnimation(this.screen, this.field_n);
           this.addChild(27799, this.field_m);
-          this.field_n.a(16776960, 119, pk.a(param1, true));
+          this.field_n.a(16776960, 119, DebouncedFieldValidator.a(param1, true));
           this.field_l = 100;
           if (param1.field_p) {
             this.field_n.a(16761024, 111, dc.field_o);

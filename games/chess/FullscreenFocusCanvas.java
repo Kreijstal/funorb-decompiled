@@ -16,7 +16,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
-          wf.exitFullscreenFrame(this.fullscreenFrame, param0, param1 ^ -103);
+          LoginPanel.exitFullscreenFrame(this.fullscreenFrame, param0, param1 ^ -103);
           if (param1 != -3) {
             FullscreenFocusCanvas.a((byte) 81, 'O', -12);
           }
@@ -60,7 +60,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_9_0;
           }
           if (va.a(param1, -19554)) {
-            stackIn_13_0 = oc.a(dh.field_g, new String[]{param1}, (byte) -94);
+            stackIn_13_0 = MatchingFieldValidator.a(dh.field_g, new String[]{param1}, (byte) -94);
             return stackIn_13_0;
           }
           if (wc.field_v >= 100) {
@@ -68,14 +68,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_16_0;
           }
           if (ah.a(param1, -52)) {
-            stackIn_19_0 = oc.a(mf.field_B, new String[]{param1}, (byte) -85);
+            stackIn_19_0 = MatchingFieldValidator.a(mf.field_B, new String[]{param1}, (byte) -85);
             return stackIn_19_0;
           }
           if (param2 != 64) {
             stackIn_22_0 = (String) null;
             return stackIn_22_0;
           }
-          var5 = qn.field_U;
+          var5 = EditableTextField.field_U;
           var5.writeCipheredByte(param0, param2 - 165);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -198,7 +198,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             return stackIn_25_0;
           }
           if (param0 == 14) {
-            stackIn_28_0 = oc.a(BufferedSocket.field_b, new String[]{param1}, (byte) -119);
+            stackIn_28_0 = MatchingFieldValidator.a(BufferedSocket.field_b, new String[]{param1}, (byte) -119);
             return stackIn_28_0;
           }
           if (param2 == -3) {

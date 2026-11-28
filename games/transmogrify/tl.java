@@ -89,7 +89,7 @@ final class tl {
               var6 = uc.a(qb.field_f[var3_int], false, true);
               var7 = -(var6 >> 1) + wd.field_j;
               var4 = var4 + ee.field_D;
-              if (q.a(param2, (byte) 12, var4, (jl.field_o << 1) + hi.field_c, param1, var7 - vh.field_m, var6 + (vh.field_m << 1))) {
+              if (q.a(param2, (byte) 12, var4, (jl.field_o << 1) + hi.field_c, param1, var7 - EmailFormatValidator.field_m, var6 + (EmailFormatValidator.field_m << 1))) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }

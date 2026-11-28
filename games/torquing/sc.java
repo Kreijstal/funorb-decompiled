@@ -28,7 +28,7 @@ final class sc extends WidgetContainer implements fp, ng {
           this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
           var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
-          var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
+          var4 = new pc(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
           this.field_D = new rb(var7, var4);
           this.field_D.field_n = "";
           this.field_D.a(0, (byte) -115, Js5Transport.field_e);

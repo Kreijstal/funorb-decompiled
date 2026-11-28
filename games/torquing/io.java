@@ -80,10 +80,10 @@ final class io extends ig {
     }
 
     io(int param0) {
-        this(dg.field_e, param0);
+        this(TranslucentSpriteLayer.field_e, param0);
     }
 
-    final static vn a(sm[] param0, int param1, byte[] param2) {
+    final static vn a(IndexedSprite[] param0, int param1, byte[] param2) {
         int var8_int = 0;
         byte[] array$0 = null;
         int incrementValue$2 = 0;

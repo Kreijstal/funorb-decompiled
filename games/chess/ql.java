@@ -154,7 +154,7 @@ final class ql {
         th.field_a = param3;
         ug.field_a = param2;
         qd.field_r = param1;
-        jb.field_f = param0;
+        DebouncedFieldValidator.field_f = param0;
         if (param4 != 66) {
           ql.clearStaticReferences((byte) 119);
         }

@@ -59,7 +59,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == hi.field_e) {
             return;
           }
-          cg.field_k = 0;
+          MatchingFieldValidator.field_k = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,10 +90,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             lk.correctedCurrentTimeMillis(0);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               WordDictionary.field_b = 2;
-              cg.field_k = 2;
+              MatchingFieldValidator.field_k = 2;
             } else {
               WordDictionary.field_b = 1;
-              cg.field_k = 1;
+              MatchingFieldValidator.field_k = 1;
             }
             var2_int = param0.getModifiers();
             if (0 == (var2_int & 8)) {
@@ -188,7 +188,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != hi.field_e) {
             BufferedSocket.field_l = 0;
-            cg.field_k = 0;
+            MatchingFieldValidator.field_k = 0;
             AccountNameAvailabilityValidator.field_j = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 8) == 0) {
@@ -233,26 +233,26 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var1 = null;
           if (null == od.submissionRack.tiles[11] &&
             PacketBuffer.field_j >= 34 &&
-            PacketBuffer.field_j < 34 + wl.field_K.field_n * 12 &&
+            PacketBuffer.field_j < 34 + AccountRegistrationPanel.field_K.field_n * 12 &&
             bk.field_a >= 114 &&
-            wl.field_K.field_m + 114 > bk.field_a) {
+            AccountRegistrationPanel.field_K.field_m + 114 > bk.field_a) {
             var1 = od.submissionRack;
-            var2 = (-34 + PacketBuffer.field_j) / wl.field_K.field_n;
+            var2 = (-34 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
           } else {
-            var2 = (PacketBuffer.field_j - 34) / wl.field_K.field_n;
+            var2 = (PacketBuffer.field_j - 34) / AccountRegistrationPanel.field_K.field_n;
             if (var2 >= 0 &&
               var2 < 12 &&
               wk.carryoverRack.tiles[var2] == null &&
               bk.field_a >= 190 &&
-              bk.field_a < 190 + wl.field_K.field_m) {
+              bk.field_a < 190 + AccountRegistrationPanel.field_K.field_m) {
               var1 = wk.carryoverRack;
             } else {
-              var2 = (-161 + PacketBuffer.field_j) / wl.field_K.field_n;
+              var2 = (-161 + PacketBuffer.field_j) / AccountRegistrationPanel.field_K.field_n;
               if (var2 >= 0 &&
                 var2 < 8 &&
                 null == si.newRack.tiles[var2] &&
                 bk.field_a >= 247 &&
-                wl.field_K.field_m + 247 > bk.field_a) {
+                AccountRegistrationPanel.field_K.field_m + 247 > bk.field_a) {
                 var1 = si.newRack;
               } else {
                 var2 = -1;

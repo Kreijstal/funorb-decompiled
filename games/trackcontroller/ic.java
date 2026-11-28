@@ -94,7 +94,7 @@ class ic implements t, dl {
         if (param0 != 1) {
           return false;
         }
-        stackIn_6_0 = (rl.field_N >= 10) && (13 <= gl.field_I);
+        stackIn_6_0 = (LoginPanel.field_N >= 10) && (13 <= gl.field_I);
         return stackIn_6_0;
     }
 
@@ -452,7 +452,7 @@ class ic implements t, dl {
                 stackIn_20_0 = var18.a((byte) 111, var9);
               }
               var15 = stackIn_20_0;
-              lb.field_O.a(var13.field_c + this.field_h + param1 - (-param5.field_m - param5.field_A), 10066329, -var14 + var15, this.field_j >>> 24, this.field_j, var13.field_f, this.a(var14, param0, param5, (byte) -33));
+              EditableTextField.field_O.a(var13.field_c + this.field_h + param1 - (-param5.field_m - param5.field_A), 10066329, -var14 + var15, this.field_j >>> 24, this.field_j, var13.field_f, this.a(var14, param0, param5, (byte) -33));
             }
             GameShell.m(-85);
             return;
@@ -637,7 +637,7 @@ class ic implements t, dl {
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
             mb.a(param1.field_p + param4, param3 + param1.field_m, param3 + (param1.field_m + param1.field_u), (byte) -69, param4 + param1.field_p + param1.field_x);
-            lb.field_O.a(94, var10, var12, this.field_c, var11, var10);
+            EditableTextField.field_O.a(94, var10, var12, this.field_c, var11, var10);
             GameShell.m(88);
           }
           if (param2 >= -73) {

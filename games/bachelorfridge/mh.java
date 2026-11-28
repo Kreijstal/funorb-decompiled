@@ -463,7 +463,7 @@ final class mh extends EventEffect {
               w.field_e = true;
             }
             if (PlaceCreatureEffect.field_j.field_R != 0) {
-              aba.field_f = true;
+              TextFieldValidator.field_f = true;
             }
             if (0 != vca.field_h.field_R) {
               w.field_e = false;

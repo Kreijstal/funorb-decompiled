@@ -120,7 +120,7 @@ final class vb implements fc {
               lb.field_g.writePrefixedString(var15, (byte) -67);
               lb.field_g.writePrefixedString(var8, (byte) -67);
               var17 = (CharSequence) ((Object) param1);
-              lb.field_g.writePrefixedString(ck.a(-109, var17), (byte) -67);
+              lb.field_g.writePrefixedString(DebouncedFieldValidator.a(-109, var17), (byte) -67);
               lb.field_g.writeShort(-750655096, param3);
               lb.field_g.writeByte(param5, (byte) 106);
               lb.field_g.writeByte(var9, (byte) 100);
@@ -302,7 +302,7 @@ final class vb implements fc {
     final static void a(byte param0) {
         ih.field_V = null;
         ph.field_c = (byte[][]) null;
-        cl.field_n = null;
+        ConfirmedEmailAvailabilityValidator.field_n = null;
         if (param0 != 122) {
           vb.clearStaticReferences(75);
         }

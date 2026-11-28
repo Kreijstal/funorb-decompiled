@@ -11,7 +11,7 @@ final class TooltipPanel {
     static int field_c;
     static int field_p;
     static ResourceArchive field_l;
-    sm field_e;
+    IndexedSprite field_e;
     static String field_t;
     uc field_b;
     static int[] field_r;
@@ -24,7 +24,7 @@ final class TooltipPanel {
     static byte[] field_n;
     int field_j;
 
-    final boolean a(boolean param0, String param1) {
+    final boolean appendCenteredText(boolean param0, String param1) {
         int var10 = 0;
         int fieldTemp$0 = 0;
         int stackIn_8_0 = 0;
@@ -54,10 +54,10 @@ final class TooltipPanel {
         try {
           var3_int = this.field_u[this.field_f];
           var4 = 0;
-          var5 = this.a(0, var3_int, param1, 0);
+          var5 = this.wrapTextAroundArtwork(0, var3_int, param1, 0);
           var6 = var5.length;
           if (param0) {
-            this.c(96);
+            this.justifyPanelContents(96);
           }
           var7 = var6 * this.field_s;
           if (var7 > var4) {
@@ -70,7 +70,7 @@ final class TooltipPanel {
             var9 = var5;
             for (var10 = 0; var9.length > var10; var10++) {
               var11 = var9[var10];
-              var12 = (this.a(this.field_u[this.field_f], this.field_b.field_x + 4) - this.field_b.a(var11)) / 2;
+              var12 = (this.availableTextWidth(this.field_u[this.field_f], this.field_b.field_x + 4) - this.field_b.a(var11)) / 2;
               this.field_a[this.field_f] = new Sprite(var12, 0);
               if (this.field_h[this.field_f] != param1) {
                 this.field_h[this.field_f] = null;
@@ -114,7 +114,7 @@ final class TooltipPanel {
         }
     }
 
-    final void c(int param0) {
+    final void justifyPanelContents(int param0) {
         int var2;
         int var3;
         int var4;
@@ -178,7 +178,7 @@ final class TooltipPanel {
                   if (var18 != null) {
                     var11 = var18.field_s;
                   }
-                  var16 = this.a(param0 + 0, var2, this.field_h[var8], var11);
+                  var16 = this.wrapTextAroundArtwork(param0 + 0, var2, this.field_h[var8], var11);
                   var12 = var16;
                   var13 = var16.length;
                   var14 = this.field_s * var13;
@@ -211,15 +211,15 @@ final class TooltipPanel {
                 0 == var10[var11Lifetime1].length()) {
                 var20.field_u = var20.field_u + var20.field_s * var3 / var4;
                 var20.field_w = 0;
-                this.a(var20, var10[var11Lifetime1], param0 ^ 250);
+                this.appendImageAndText(var20, var10[var11Lifetime1], param0 ^ 250);
               } else {
                 if (var10[var11Lifetime1] != null) {
                   if (var20 != null &&
                     var20.field_u == 0) {
-                    this.a(false, var10[var11Lifetime1]);
+                    this.appendCenteredText(false, var10[var11Lifetime1]);
                   } else {
                     var17Lifetime1 = var20;
-                    this.a(var17Lifetime1, var10[var11Lifetime1], 250);
+                    this.appendImageAndText(var17Lifetime1, var10[var11Lifetime1], 250);
                   }
                 }
               }
@@ -227,11 +227,11 @@ final class TooltipPanel {
             break;
           }
         }
-        this.d(111);
+        this.finishPanelLayout(111);
         return;
     }
 
-    private final String[] a(int param0, int param1, String param2, int param3) {
+    private final String[] wrapTextAroundArtwork(int param0, int param1, String param2, int param3) {
         int var6_int = 0;
         int var9 = 0;
         int[] var5 = null;
@@ -251,7 +251,7 @@ final class TooltipPanel {
           var11 = new int[16];
           var5 = var11;
           for (var6_int = param0; var6_int < var11.length; var6_int++) {
-            var11[var6_int] = -param3 + this.a(param1, this.field_b.field_x + 4);
+            var11[var6_int] = -param3 + this.availableTextWidth(param1, this.field_b.field_x + 4);
             param1 = param1 + this.field_s;
           }
           var6 = new String[16];
@@ -276,8 +276,8 @@ final class TooltipPanel {
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.a(new Sprite(param1, 0), "", 250);
+    final void addFlexibleVerticalSpace(byte param0, int param1) {
+        this.appendImageAndText(new Sprite(param1, 0), "", 250);
         int var3 = 65 / ((37 - param0) / 44);
     }
 
@@ -295,7 +295,7 @@ final class TooltipPanel {
         var1.unlink(0);
     }
 
-    private final int a(int param0, int param1) {
+    private final int availableTextWidth(int param0, int param1) {
         int var7 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
@@ -337,14 +337,14 @@ final class TooltipPanel {
         return var3 - 4;
     }
 
-    final int a(boolean param0) {
+    final int getContentHeight(boolean param0) {
         if (param0) {
           field_g = -107;
         }
         return this.field_u[this.field_f];
     }
 
-    final boolean a(Sprite param0, String param1, int param2) {
+    final boolean appendImageAndText(Sprite param0, String param1, int param2) {
         int fieldTemp$0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
@@ -381,7 +381,7 @@ final class TooltipPanel {
           if (param0 != null) {
             var6 = param0.field_w;
           }
-          var7 = this.a(0, var4_int, param1, var6);
+          var7 = this.wrapTextAroundArtwork(0, var4_int, param1, var6);
           var8 = var7.length;
           var9 = var8 * this.field_s;
           if (var5 < var9) {
@@ -435,14 +435,14 @@ final class TooltipPanel {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void addVerticalSpace(int param0, int param1, int param2) {
         int var5 = -56 % ((param2 - 32) / 52);
         Sprite var4 = new Sprite(param0, 0);
         var4.field_u = param1;
-        this.a(var4, "", 250);
+        this.appendImageAndText(var4, "", 250);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawPanel(int param0, int param1, int param2) {
         int var4 = 0;
         int var9 = 0;
         Sprite var5;
@@ -476,11 +476,11 @@ final class TooltipPanel {
         }
     }
 
-    final void d(int param0) {
+    final void finishPanelLayout(int param0) {
         this.field_u[this.field_f] = this.field_k;
         this.field_h = null;
         if (param0 < 27) {
-          this.b(-110, 27, 74);
+          this.drawPanel(-110, 27, 74);
         }
     }
 
@@ -495,7 +495,7 @@ final class TooltipPanel {
         field_q = null;
     }
 
-    TooltipPanel(uc param0, int param1, int param2, int param3, sm param4, int param5, int param6) {
+    TooltipPanel(uc param0, int param1, int param2, int param3, IndexedSprite param4, int param5, int param6) {
         try {
           this.field_b = param0;
           this.field_k = param3;

@@ -54,13 +54,13 @@ class jla {
             if ((decompiledFrameCompleted0) &&
               (var11 != 0)) {
               AttackUpAllAnimation.field_y = SleepAnimation.field_y;
-              vla.field_r = hb.field_k;
+              vla.field_r = MatchingFieldValidator.field_k;
               vu.field_k = ik.field_h;
               SuperSpeedAllAnimation.field_z = IncomingAnimation.field_v;
             }
           } else {
             AttackUpAllAnimation.field_y = SleepAnimation.field_y;
-            vla.field_r = hb.field_k;
+            vla.field_r = MatchingFieldValidator.field_k;
             vu.field_k = ik.field_h;
             SuperSpeedAllAnimation.field_z = IncomingAnimation.field_v;
           }
@@ -526,7 +526,7 @@ class jla {
         if (!this.d(param1, 26891)) {
           return;
         }
-        if (hb.field_j) {
+        if (MatchingFieldValidator.field_j) {
           return;
         }
         if (param0 != -38) {
@@ -1725,7 +1725,7 @@ class jla {
                   if (OhNoEvent.field_s == 0) {
                     continue;
                   }
-                  hb.a(2, ut.field_o, ut.field_o, false);
+                  MatchingFieldValidator.a(2, ut.field_o, ut.field_o, false);
                   if (var3 == 0) {
                     continue;
                   }
@@ -1739,7 +1739,7 @@ class jla {
                       continue;
                     }
                   }
-                  hb.a(2, ut.field_o, ut.field_o, false);
+                  MatchingFieldValidator.a(2, ut.field_o, ut.field_o, false);
                   if (var3 == 0) {
                     continue;
                   }

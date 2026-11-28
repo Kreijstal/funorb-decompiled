@@ -99,12 +99,12 @@ final class jb {
             }
             return;
           }
-          if (this.field_m <= lk.field_j) {
+          if (this.field_m <= TextFieldValidator.field_j) {
             if (this.field_m > 0) {
               fb.field_f = 0;
             }
           } else {
-            fb.field_f = (this.field_m - lk.field_j) / 2;
+            fb.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
           }
         } else {
           if (mk.field_k <= 0) {
@@ -124,15 +124,15 @@ final class jb {
             }
             return;
           }
-          if (this.field_m > lk.field_j) {
-            fb.field_f = (this.field_m - lk.field_j) / 2;
+          if (this.field_m > TextFieldValidator.field_j) {
+            fb.field_f = (this.field_m - TextFieldValidator.field_j) / 2;
           } else {
             if (this.field_m > 0) {
               fb.field_f = 0;
             }
           }
         }
-        if (this.field_j == lk.field_j &&
+        if (this.field_j == TextFieldValidator.field_j &&
           this.field_r == td.field_d) {
           return;
         }
@@ -166,7 +166,7 @@ final class jb {
           var2 = this.field_e;
         }
         if (!(this.field_n > 0.0f)) {
-          if (lk.field_j != var2 ||
+          if (TextFieldValidator.field_j != var2 ||
             var3 != td.field_d) {
             this.field_q.a((byte) 71, var3, var2);
           }
@@ -174,7 +174,7 @@ final class jb {
             this.field_e = -87;
           }
           if (this.field_m > 0) {
-            fb.field_f = (-lk.field_j + this.field_m) / 2;
+            fb.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
           }
           return;
         }
@@ -186,7 +186,7 @@ final class jb {
             var2 = var4;
           }
         }
-        if (lk.field_j != var2) {
+        if (TextFieldValidator.field_j != var2) {
           this.field_q.a((byte) 71, var3, var2);
         } else {
           if (var3 != td.field_d) {
@@ -197,7 +197,7 @@ final class jb {
           this.field_e = -87;
         }
         if (this.field_m > 0) {
-          fb.field_f = (-lk.field_j + this.field_m) / 2;
+          fb.field_f = (-TextFieldValidator.field_j + this.field_m) / 2;
         }
         return;
     }

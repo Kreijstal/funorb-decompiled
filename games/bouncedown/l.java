@@ -114,8 +114,8 @@ final class l {
         try {
           eb.a((java.awt.Component) ((Object) param1), (byte) -105);
           fb.a((java.awt.Component) ((Object) param1), (byte) -42);
-          if (null != hg.field_k) {
-            hg.field_k.attach((java.awt.Component) ((Object) param1), false);
+          if (null != AgeValidator.field_k) {
+            AgeValidator.field_k.attach((java.awt.Component) ((Object) param1), false);
           }
           if (param0 != 0) {
             var3 = (java.awt.Canvas) null;

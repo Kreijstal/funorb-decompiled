@@ -291,7 +291,7 @@ class lm extends IntrusiveNode {
               }
               var7Lifetime2 = param1 + "=" + param4 + "; version=1; path=/; domain=" + var8;
               if (param2 >= 0L) {
-                var7Lifetime2 = var7Lifetime2 + "; Expires=" + go.a(kd.correctedCurrentTimeMillis(-2456) + param2 * 1000L, -124) + "; Max-Age=" + param2;
+                var7Lifetime2 = var7Lifetime2 + "; Expires=" + DungeonRaidScreen.formatTimestamp(kd.correctedCurrentTimeMillis(-2456) + param2 * 1000L, -124) + "; Max-Age=" + param2;
               }
               if (param2 < 0L ||
                 DungeonAssault.field_K != 0) {

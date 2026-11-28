@@ -57,7 +57,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, lk.field_j, td.field_d);
+              var9.fillRect(0, 0, TextFieldValidator.field_j, td.field_d);
             }
             if (param2 == null) {
               param2 = new java.awt.Color(140, 17, 17);
@@ -76,11 +76,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               var10.setFont(sj.field_F);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
-              var9.drawImage(wc.field_C, lk.field_j / 2 - 152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(wc.field_C, TextFieldValidator.field_j / 2 - 152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               exception = (Exception) (Object) decompiledCaughtException;
-              var7 = lk.field_j / 2 - 152;
+              var7 = TextFieldValidator.field_j / 2 - 152;
               var8 = -18 + td.field_d / 2;
               var9.setColor(param2);
               var9.drawRect(var7, var8, 303, 33);
@@ -97,7 +97,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             }
             var9.setFont(sj.field_F);
             var9.setColor(java.awt.Color.white);
-            var9.drawString(hf.field_j, lk.field_j / 2 - hf.field_j.length() * 6 / 2, -26 + td.field_d / 2);
+            var9.drawString(hf.field_j, TextFieldValidator.field_j / 2 - hf.field_j.length() * 6 / 2, -26 + td.field_d / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

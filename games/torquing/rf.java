@@ -12,15 +12,15 @@ final class rf extends pc {
     static IntrusiveDeque field_t;
     static int[] field_r;
 
-    final static sm[] a(byte param0) {
+    final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = Torquing.field_u;
         if (param0 != 66) {
-          return (sm[]) null;
+          return (IndexedSprite[]) null;
         }
-        sm[] var1 = new sm[ti.field_g];
+        IndexedSprite[] var1 = new IndexedSprite[ti.field_g];
         for (var2 = 0; ti.field_g > var2; var2++) {
-          var1[var2] = new sm(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], pn.field_b[var2], cq.field_y);
+          var1[var2] = new IndexedSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], pn.field_b[var2], cq.field_y);
         }
         go.b(0);
         return var1;
@@ -197,9 +197,9 @@ final class rf extends pc {
         if (param1 <= 35) {
           field_r = (int[]) null;
         }
-        qp.field_j = (param0 & 63) >> 4;
-        if (qp.field_j > 2) {
-          qp.field_j = 2;
+        AchievementProgressUpdate.field_j = (param0 & 63) >> 4;
+        if (AchievementProgressUpdate.field_j > 2) {
+          AchievementProgressUpdate.field_j = 2;
         }
         PacketBuffer.field_k = param0 >> 2 & 3;
         if (PacketBuffer.field_k > 2) {
@@ -212,11 +212,11 @@ final class rf extends pc {
     }
 
     private rf(int param0, int param1, int param2) {
-        this.field_s = dg.field_g;
+        this.field_s = TranslucentSpriteLayer.field_g;
         this.field_y = param2;
         this.field_v = param1;
         this.field_w = param0;
-        this.field_m = pe.field_E;
+        this.field_m = LoginPanel.field_E;
     }
 
     static {

@@ -94,9 +94,9 @@ final class lm {
           var41 = var50;
           var8 = var41;
           var65 = new int[param0.field_o];
-          var63 = ph.field_m;
+          var63 = PasswordValidator.field_m;
           var62 = k.field_e;
-          var64 = mg.field_p;
+          var64 = MatchingFieldValidator.field_p;
           for (var13 = 0; param0.field_o > var13; var13++) {
             var14 = param6 * var62[var13] + (var63[var13] * param2 + var64[var13] * param4) >> 8;
             if (var14 < 0) {
@@ -126,24 +126,24 @@ final class lm {
           }
           var44 = param5;
           var13Lifetime1 = var44;
-          while (ae.field_I > var44) {
+          while (DisplayNameSelectionPanel.field_I > var44) {
             var14Lifetime1 = qh.field_c[var44];
             var15Lifetime1 = param0.field_E[var14Lifetime1];
             var16 = param0.field_n[var14Lifetime1];
             var17 = param0.field_p[var14Lifetime1];
-            if (ph.field_m.length > param0.field_C[var14Lifetime1]) {
+            if (PasswordValidator.field_m.length > param0.field_C[var14Lifetime1]) {
               stackIn_25_0 = param0.field_C[var14Lifetime1];
             } else {
               stackIn_25_0 = -1;
             }
             var18 = stackIn_25_0;
-            if (ph.field_m.length > param0.field_k[var14Lifetime1]) {
+            if (PasswordValidator.field_m.length > param0.field_k[var14Lifetime1]) {
               stackIn_28_0 = param0.field_k[var14Lifetime1];
             } else {
               stackIn_28_0 = -1;
             }
             var19 = stackIn_28_0;
-            if (ph.field_m.length <= param0.field_g[var14Lifetime1]) {
+            if (PasswordValidator.field_m.length <= param0.field_g[var14Lifetime1]) {
               stackIn_31_0 = -1;
             } else {
               stackIn_31_0 = param0.field_g[var14Lifetime1];

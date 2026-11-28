@@ -19,7 +19,7 @@ final class oh {
           if (param2 != 18097) {
             field_e = (int[][]) null;
           }
-          stackIn_3_0 = cc.a(param1, param0, true, param2 - 18162);
+          stackIn_3_0 = PasswordValidator.a(param1, param0, true, param2 - 18162);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,7 +97,7 @@ final class oh {
           }
           var10 = param1.requestFullscreenEnter(param4, param0, param2, param3, 2024561328);
           while (0 == var10.status) {
-            uc.sleepMillis(-119, 10L);
+            DebouncedFieldValidator.sleepMillis(-119, 10L);
           }
           var7 = (java.awt.Frame) (var10.result);
           if (var7 == null) {

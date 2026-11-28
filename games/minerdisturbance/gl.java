@@ -16,7 +16,7 @@ final class gl extends IntrusiveNode {
     static String[] field_x;
 
     final static void a(int param0, int param1) {
-        if (!ke.field_V) {
+        if (!ValidatedTextField.field_V) {
           if (param1 == 25) {
             return;
           }
@@ -30,7 +30,7 @@ final class gl extends IntrusiveNode {
           gl.a(-79);
           return;
         }
-        ke.field_X[param0] = true;
+        ValidatedTextField.field_X[param0] = true;
         if (param1 == 25) {
           return;
         }

@@ -55,13 +55,13 @@ class ck extends wl implements oi {
           var4 = var6;
           if (5 != param1) {
             if (param1 == 256) {
-              var6.a((lf) (this), qb.field_l, (byte) -69);
+              var6.a((lf) (this), EmailFormatValidator.field_l, (byte) -69);
             } else {
               stackIn_11_0 = var6;
               stackIn_11_1 = -31805;
               stackIn_11_2 = -1;
               if (this.field_eb) {
-                stackIn_12_3 = qb.field_l;
+                stackIn_12_3 = EmailFormatValidator.field_l;
               } else {
                 stackIn_12_3 = bk.field_e;
               }

@@ -7,7 +7,7 @@ final class nf extends LinkTextWidget {
     private int field_Q;
     private Sprite field_N;
     static boolean field_M;
-    private qu field_L;
+    private FieldValidator field_L;
     private String field_O;
 
     public static void clearStaticReferences(byte param0) {
@@ -78,10 +78,10 @@ final class nf extends LinkTextWidget {
           regionExit2: {
             regionExit3: {
               var14 = BachelorFridge.field_y;
-              var6 = this.field_L.b(-19704);
+              var6 = this.field_L.getValidationStatus(-19704);
               if (cq.field_g != var6 &&
                 var6 != ji.field_f) {
-                var5 = this.field_L.a((byte) 110);
+                var5 = this.field_L.getValidationMessage((byte) 110);
                 if (var5 == null) {
                   var5 = this.field_O;
                   break regionExit3;
@@ -102,7 +102,7 @@ final class nf extends LinkTextWidget {
         }
         var7 = -39 / ((param0 + 20) / 54);
         super.draw((byte) 86, param1, param2, param3);
-        var6Lifetime1 = this.field_L.b(-19704);
+        var6Lifetime1 = this.field_L.getValidationStatus(-19704);
         var9 = (WidgetMetrics) ((Object) this.renderer);
         var10 = param3 + this.x;
         var11 = var9.a((UiWidget) (this), param1, (byte) -54) + (var9.b((UiWidget) (this), false).a(false) >> 1);
@@ -177,7 +177,7 @@ final class nf extends LinkTextWidget {
         return (String) null;
     }
 
-    nf(qu param0, String param1, int param2, int param3, int param4, int param5) {
+    nf(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ShuffleAnimation.b(false));
         try {
           this.field_L = param0;

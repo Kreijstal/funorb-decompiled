@@ -149,10 +149,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             hn.correctedCurrentTimeMillis((byte) 80);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               dc.field_d = 1;
-              mk.field_I = 1;
+              AccountRegistrationPanel.field_I = 1;
             } else {
               dc.field_d = 2;
-              mk.field_I = 2;
+              AccountRegistrationPanel.field_I = 2;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
@@ -248,7 +248,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2 = null;
         try {
           if (jc.field_b != null) {
-            mk.field_I = 0;
+            AccountRegistrationPanel.field_I = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -393,7 +393,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != jc.field_b) {
             sg.field_o = 0;
-            mk.field_I = 0;
+            AccountRegistrationPanel.field_I = 0;
             rg.field_e = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {

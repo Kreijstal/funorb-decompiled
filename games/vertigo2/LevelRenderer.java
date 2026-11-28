@@ -1065,7 +1065,7 @@ final class LevelRenderer {
               var27[0] = bq.field_H;
               var27[1] = Vertigo2.a(new String[]{Integer.toString(param2), Integer.toString(param1)}, SectorCacheStore.field_c, -118);
               var27[2] = lh.field_d;
-              var27[3] = de.field_c;
+              var27[3] = DebouncedFieldValidator.field_c;
               var28 = 1;
               for (var29 = 0; var38.length > var29; var29++) {
                 var28 = Math.max(var28, va.field_s.a(1, var38[var29]));
@@ -1092,7 +1092,7 @@ final class LevelRenderer {
               var27 = var39;
               var27[0] = AccountNameAvailabilityValidator.field_r;
               var27[1] = Vertigo2.a(new String[]{Integer.toString(param2), Integer.toString(param1)}, SectorCacheStore.field_c, -126);
-              var27[3] = de.field_c;
+              var27[3] = DebouncedFieldValidator.field_c;
               var27[2] = lh.field_d;
               var28 = 1;
               for (var29 = 0; var39.length > var29; var29++) {
@@ -1112,7 +1112,7 @@ final class LevelRenderer {
                 va.field_s.a(lh.field_d, 16131600, -1, var29, 130, 2);
                 return;
               }
-              va.field_s.a(de.field_c, 2479095, -1, var29, 130, 2);
+              va.field_s.a(DebouncedFieldValidator.field_c, 2479095, -1, var29, 130, 2);
               return;
             }
           } else {
@@ -1251,7 +1251,7 @@ final class LevelRenderer {
               }
               var41 = new String[2];
               var27 = var41;
-              var27[0] = Vertigo2.a(new String[]{this.field_h[0]}, dk.field_m, -125);
+              var27[0] = Vertigo2.a(new String[]{this.field_h[0]}, EmailFormatValidator.field_m, -125);
               var27[1] = Vertigo2.a(new String[]{this.field_h[1]}, RasterBuffer.field_h, -125);
               var28 = 1;
               for (var29 = 0; var29 < var41.length; var29++) {

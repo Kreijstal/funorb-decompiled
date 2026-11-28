@@ -177,7 +177,7 @@ final class pa {
           }
           MouseWheelInput.field_b.a(aj.field_f, true, true, kl.field_t);
           MouseWheelInput.field_b.d((byte) 120);
-          while (q.g((byte) -15)) {
+          while (DisplayNameSelectionPanel.g((byte) -15)) {
             MouseWheelInput.field_b.a((byte) -90, lh.field_f, ResourceArchive.field_d);
           }
           return;
@@ -285,7 +285,7 @@ final class pa {
             fi.field_b = param9;
             wa.field_b = param8;
             cf.field_a = param10;
-            ba.field_B = param5;
+            EditableTextField.field_B = param5;
             ResourceArchive.field_h = param0;
             if (pj.field_c.field_v != null) {
               try {

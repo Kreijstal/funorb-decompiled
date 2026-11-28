@@ -421,7 +421,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
           stackIn_24_5 = mn.field_m;
         }
         stackIn_17_0[stackIn_23_2] = (ScoreModifier) ((Object) new fh(stackIn_24_5, 50, var2, var3));
-        stackIn_17_0[6] = (ScoreModifier) ((Object) new le(jn.field_l, 0, var2, var3));
+        stackIn_17_0[6] = (ScoreModifier) ((Object) new le(PasswordValidator.field_l, 0, var2, var3));
         stackIn_17_0[7] = (ScoreModifier) ((Object) new go(kp.field_l, -100, var2, var3));
         var4 = stackIn_17_0;
         vm.field_j = new Vector[ma.field_n.length];

@@ -48,7 +48,7 @@ final class hg {
         try {
           qh.field_g = param0;
           wk.field_e = param9;
-          gb.field_t = -1L;
+          NetworkGameClient.field_t = -1L;
           qa.field_e = param9.length;
           DelegatingCanvas.field_f = new byte[(qh.field_g + 7) / 8];
           ud.field_b = false;

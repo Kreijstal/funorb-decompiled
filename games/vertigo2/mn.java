@@ -82,7 +82,7 @@ final class mn extends IntrusiveNode {
                 if (0 >= mp.field_b) {
                   if (ArchiveRequest.field_y < ld.field_b) {
                     if (ArchiveRequest.field_y == 0) {
-                      ne.c(false);
+                      DisplayNameSelectionPanel.c(false);
                     }
                     ArchiveRequest.field_y = ArchiveRequest.field_y + 1;
                   }

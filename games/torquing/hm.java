@@ -317,9 +317,9 @@ final class hm extends am {
             if (pd.field_c == 2) {
               up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.result), hq.field_a);
               var2 = new PacketBuffer(13);
-              IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
+              IntrusiveNode.a(MatchingFieldValidator.field_r, 123, qg.field_A, var2, eg.field_x);
               var2.writeByte(90, 15);
-              var2.writeInt((byte) 60, gf.field_g);
+              var2.writeInt((byte) 60, TextFieldValidator.field_g);
               up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
               ro.field_v = 30000L + km.correctedCurrentTimeMillis(-1);

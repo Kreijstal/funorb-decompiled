@@ -34,7 +34,7 @@ final class gk {
           } else {
             try {
               nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.result), l.field_b);
-              ff.field_D.position = 0;
+              LoginPanel.field_D.position = 0;
               var2_ref_hj = WordLanguage.field_l;
               var2_ref_hj.position = 0;
               stackIn_10_0 = (param0) ? -2 : -1;
@@ -42,7 +42,7 @@ final class gk {
               WordLanguage.field_k = stackIn_10_0;
               FullscreenFocusCanvas.field_a = stackIn_10_0;
               lj.field_z = jk.field_y;
-              qb.a(124, AchievementUnlockEvent.field_h, ff.field_D, dh.field_x, ua.field_c);
+              qb.a(124, AchievementUnlockEvent.field_h, LoginPanel.field_D, dh.field_x, ua.field_c);
               rb.a(-1, -377);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

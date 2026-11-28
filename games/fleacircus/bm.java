@@ -188,7 +188,7 @@ final class bm extends gj implements da {
             oa.field_m[var1_int] = var5;
             uh.field_n[var1_int] = var6;
             lc.field_v[var1_int] = var7;
-            ca.field_G[var1_int] = var8;
+            AccountRegistrationPanel.field_G[var1_int] = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

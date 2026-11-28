@@ -67,9 +67,9 @@ final class pc {
     final static void a(byte param0) {
         Object var2 = null;
         Object var2Lifetime1;
-        if (df.field_l != null) {
-          df.field_l.h((byte) 125);
-          MatchSession.field_m = new ne();
+        if (BirthDateValidator.field_l != null) {
+          BirthDateValidator.field_l.h((byte) 125);
+          MatchSession.field_m = new DisplayNameSelectionPanel();
           if (param0 < 50) {
             var2 = (Object) null;
             pc.extractBytes((byte) 93, true, (Object) null);
@@ -79,7 +79,7 @@ final class pc {
           n.field_b.a(false, MatchSession.field_m);
           return;
         }
-        MatchSession.field_m = new ne();
+        MatchSession.field_m = new DisplayNameSelectionPanel();
         if (param0 >= 50) {
           n.field_b.a(false, MatchSession.field_m);
           return;

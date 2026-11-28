@@ -93,7 +93,7 @@ final class vb extends il {
                 var11_ref_StringLifetime2 = "";
               }
               id.field_c.writeString(var11_ref_StringLifetime2, 0);
-              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, qa.field_p);
+              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, ConfirmedEmailAvailabilityValidator.field_p);
               id.field_c.backpatchShortLength(id.field_c.position - var10, true);
             } else {
               NetworkArchiveRequest.field_z.position = 0;
@@ -118,7 +118,7 @@ final class vb extends il {
               id.field_c.writeByte(-110, 16);
               id.field_c.position = id.field_c.position + 1;
               var9 = id.field_c.position;
-              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, qa.field_p);
+              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, ConfirmedEmailAvailabilityValidator.field_p);
               id.field_c.backpatchByteLength(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);
@@ -189,7 +189,7 @@ final class vb extends il {
               if (30000L < GameApplet.b(-1)) {
                 DiskArchiveRequest.field_v = il.field_d;
               } else {
-                DiskArchiveRequest.field_v = cl.field_j;
+                DiskArchiveRequest.field_v = AgeValidator.field_j;
               }
               je.field_c = false;
               stackIn_58_0 = 249;

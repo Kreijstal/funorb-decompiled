@@ -31,8 +31,8 @@ final class af {
         try {
           mh.a(-104, (java.awt.Component) ((Object) param1));
           PcmResampler.a((java.awt.Component) ((Object) param1), true);
-          if (eb.field_A != null) {
-            eb.field_A.attach((java.awt.Component) ((Object) param1), -8206);
+          if (DisplayNameSelectionPanel.field_A != null) {
+            DisplayNameSelectionPanel.field_A.attach((java.awt.Component) ((Object) param1), -8206);
           }
           if (param0 == 20) {
             return;

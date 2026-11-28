@@ -8,7 +8,7 @@ final class AccountCreationResultPanel extends fj implements ij {
     static AccountRequestState field_qb;
     static String field_sb;
     static GameplayScreen field_pb;
-    private mk field_tb;
+    private AccountRegistrationPanel field_tb;
     static int[][] field_ob;
     static String field_vb;
 
@@ -193,7 +193,7 @@ final class AccountCreationResultPanel extends fj implements ij {
         }
     }
 
-    AccountCreationResultPanel(sd param0, mk param1) {
+    AccountCreationResultPanel(sd param0, AccountRegistrationPanel param1) {
         super(param0, sg.field_a, ac.field_L, false, false);
         try {
           this.field_tb = param1;

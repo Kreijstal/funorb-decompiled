@@ -175,7 +175,7 @@ final class mo {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (lb.field_O.indexOf(var5Lifetime1) == -1) {
+              if (PlayerDungeonProfile.field_O.indexOf(var5Lifetime1) == -1) {
                 stackIn_45_0 = np.field_E;
                 return stackIn_45_0;
               }

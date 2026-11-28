@@ -121,7 +121,7 @@ final class mb extends ce {
               } else {
                 stackIn_38_0 = this.a(param4.a(var13), param2, 41, var13);
               }
-              ld.a(stackIn_38_0, (byte) 98, param4, var13, var14);
+              AgeValidator.a(stackIn_38_0, (byte) 98, param4, var13, var14);
             }
             this.field_d[var12Lifetime1] = var14;
             var11 = var11 + param7;
@@ -287,7 +287,7 @@ final class mb extends ce {
           }
           var8.field_b[0] = param1;
           var9.field_b[param2.length()] = param3.a(param2) + param1;
-          ld.a(0, (byte) -69, param3, param2, var9);
+          AgeValidator.a(0, (byte) -69, param3, param2, var9);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "mb.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -319,7 +319,7 @@ final class mb extends ce {
           var9 = var8;
           var9.field_b[0] = -param0.a(param4) + param3;
           var9.field_b[param4.length()] = param3;
-          ld.a(0, (byte) 65, param0, param4, var9);
+          AgeValidator.a(0, (byte) 65, param0, param4, var9);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "mb.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -416,7 +416,7 @@ final class mb extends ce {
           var7 = param4.a(param1);
           var8.field_b[0] = -(var7 >> 1) + param2;
           var8.field_b[param1.length()] = param2 + (var7 >> 1);
-          ld.a(0, (byte) -54, param4, param1, var8);
+          AgeValidator.a(0, (byte) -54, param4, param1, var8);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "mb.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -46,29 +46,29 @@ final class ClientException extends RuntimeException {
         int var8Lifetime1Lifetime1;
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
-          var1_int = rf.field_ib;
+          var1_int = ValidatedTextField.field_ib;
           var4 = 0;
           var5 = 0;
           var6 = 50;
-          if (rf.field_ib == 0 &&
+          if (ValidatedTextField.field_ib == 0 &&
             RandomAccessCacheFile.field_e < 100) {
             var6 = 100;
           }
           if (RandomAccessCacheFile.field_e >= var6) {
-            if (RandomAccessCacheFile.field_e > gh.field_n[rf.field_ib] - var6) {
+            if (RandomAccessCacheFile.field_e > gh.field_n[ValidatedTextField.field_ib] - var6) {
               var4 = 1;
-              var5 = (-RandomAccessCacheFile.field_e + gh.field_n[rf.field_ib]) * 256 / var6;
+              var5 = (-RandomAccessCacheFile.field_e + gh.field_n[ValidatedTextField.field_ib]) * 256 / var6;
             }
           } else {
             var4 = 1;
             var5 = 256 * RandomAccessCacheFile.field_e / var6;
           }
-          if (5 == rf.field_ib) {
+          if (5 == ValidatedTextField.field_ib) {
             var4 = 1;
             var5 = 0;
           }
-          if (5 > rf.field_ib) {
-            bh.d((byte) -128);
+          if (5 > ValidatedTextField.field_ib) {
+            PasswordValidator.d((byte) -128);
           } else {
             var1_int = 4;
           }
@@ -86,21 +86,21 @@ final class ClientException extends RuntimeException {
           }
           SoftwareRasterizer.restoreClip(pf.field_g);
           if (var4 != 0) {
-            dg.a(var5, true);
+            AccountRegistrationPanel.a(var5, true);
           }
-          if (rf.field_ib < 5) {
+          if (ValidatedTextField.field_ib < 5) {
             var8Lifetime1 = -1;
             var9 = -1;
-            for (var10 = 0; var10 < dg.field_bb[rf.field_ib].length; var10++) {
-              var8Lifetime1Lifetime1 = v.field_X[0][rf.field_ib][var10][0];
-              var9Lifetime1 = v.field_X[1][rf.field_ib][var10][1];
+            for (var10 = 0; var10 < AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib].length; var10++) {
+              var8Lifetime1Lifetime1 = v.field_X[0][ValidatedTextField.field_ib][var10][0];
+              var9Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][var10][1];
               if (RandomAccessCacheFile.field_e >= var8Lifetime1Lifetime1 &&
                 var9Lifetime1 >= RandomAccessCacheFile.field_e) {
                 var7 = lc.a(var10, 1);
                 if (0 > var7) {
-                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
+                  tf.field_x.a(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, 1, 1, 0);
                 } else {
-                  tf.field_x.a(dg.field_bb[rf.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
+                  tf.field_x.a(AccountRegistrationPanel.field_bb[ValidatedTextField.field_ib][var10], 0, 420, 640, 60, 0, -1, var7, 1, 1, 0);
                 }
                 return;
               }

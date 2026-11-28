@@ -44,7 +44,7 @@ final class e extends ma implements mj {
 
     final static void h(byte param0) {
         cf.field_Jb = ud.correctedCurrentTimeMillis(2);
-        s.field_K = 0;
+        DisplayNameSelectionPanel.field_K = 0;
         if (param0 != -120) {
           field_T = (String) null;
         }
@@ -115,7 +115,7 @@ final class e extends ma implements mj {
         PcmOutputWorker.field_d = SoftwareRasterizer.field_h;
         fn.field_c = SoftwareRasterizer.field_c;
         tf.a(90);
-        wf.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
+        LoginPanel.field_W.a(ql.field_d.field_M, 0, 0, -2 + (ql.field_d.field_pb - 40), true);
         fe.field_h.a(0, dc.field_q.field_M, -2147483648, fe.field_g, 0);
         if (param0 <= -124) {
           var1 = fe.field_g + 2;
@@ -207,7 +207,7 @@ final class e extends ma implements mj {
             }
             return;
           }
-          ji.field_V.a(-126, BufferedSocket.field_m, tj.field_o, true);
+          ji.field_V.a(-126, BufferedSocket.field_m, EmailFormatValidator.field_o, true);
           if (param0 < 109) {
             return;
           }
@@ -242,7 +242,7 @@ final class e extends ma implements mj {
             if (var7 == -1) {
               this.field_N.k((byte) -114);
             } else {
-              uk.a(false, this.field_K[var6_int]);
+              ChessBoardState.a(false, this.field_K[var6_int]);
             }
             break;
           }

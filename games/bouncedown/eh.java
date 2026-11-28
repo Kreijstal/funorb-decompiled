@@ -234,7 +234,7 @@ final class eh {
           return;
         }
         mh.a(sj.field_f, (byte) 112);
-        sj.field_f.exitFullscreen((byte) -113, ck.field_e);
+        sj.field_f.exitFullscreen((byte) -113, DebouncedFieldValidator.field_e);
         sj.field_f = null;
         if (vd.field_b != null) {
           vd.field_b.a((byte) -84);

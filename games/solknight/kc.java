@@ -4,7 +4,7 @@
 final class kc extends pj {
     static Archive field_Q;
     static int field_O;
-    private oe field_J;
+    private FieldValidator field_J;
     static wh field_I;
     private int field_N;
     static String field_L;
@@ -71,14 +71,14 @@ final class kc extends pj {
         }
         int var5 = this.field_m + param2 + (this.field_t >> 1);
         int var6 = (this.field_x >> 1) + param0 + this.field_j;
-        qf var8 = this.field_J.b(param3 ^ -9362);
+        qf var8 = this.field_J.getValidationStatus(param3 ^ -9362);
         if (hg.field_E == var8) {
           var15 = PacketBuffer.field_k[0];
           var9 = var15.field_q << 1;
           var10 = var15.field_r << 1;
           if (null == pk.field_Y) {
             pk.field_Y = new Sprite(var9, var10);
-            cl.a(-116, pk.field_Y);
+            AgeValidator.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
@@ -86,14 +86,14 @@ final class kc extends pj {
           }
           if (var9 > pk.field_Y.field_p) {
             pk.field_Y = new Sprite(var9, var10);
-            cl.a(-116, pk.field_Y);
+            AgeValidator.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           if (pk.field_Y.field_t >= var10) {
-            cl.a(-97, pk.field_Y);
+            AgeValidator.a(-97, pk.field_Y);
             SoftwareRasterizer.clearRaster();
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
@@ -101,7 +101,7 @@ final class kc extends pj {
             return;
           }
           pk.field_Y = new Sprite(var9, var10);
-          cl.a(-116, pk.field_Y);
+          AgeValidator.a(-116, pk.field_Y);
           var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
           pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
@@ -113,7 +113,7 @@ final class kc extends pj {
           var10Lifetime1 = var16.field_r << 1;
           if (null == pk.field_Y) {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
-            cl.a(-116, pk.field_Y);
+            AgeValidator.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
@@ -121,14 +121,14 @@ final class kc extends pj {
           }
           if (var9Lifetime1 > pk.field_Y.field_p) {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
-            cl.a(-116, pk.field_Y);
+            AgeValidator.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           if (pk.field_Y.field_t >= var10Lifetime1) {
-            cl.a(-97, pk.field_Y);
+            AgeValidator.a(-97, pk.field_Y);
             SoftwareRasterizer.clearRaster();
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
@@ -136,7 +136,7 @@ final class kc extends pj {
             return;
           }
           pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
-          cl.a(-116, pk.field_Y);
+          AgeValidator.a(-116, pk.field_Y);
           var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
           pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
@@ -156,7 +156,7 @@ final class kc extends pj {
 
     final String c(byte param0) {
         if (this.field_v) {
-          return this.field_J.c(-96);
+          return this.field_J.getValidationMessage(-96);
         }
         if (param0 > 14) {
           return null;
@@ -165,7 +165,7 @@ final class kc extends pj {
         return null;
     }
 
-    kc(oe param0) {
+    kc(FieldValidator param0) {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {

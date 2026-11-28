@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class p {
-    oc field_j;
+    GridPoint field_j;
     static String[] field_g;
     static java.applet.Applet field_a;
     static RgbSprite field_d;
@@ -344,7 +344,7 @@ class p {
     }
 
     p() {
-        this.field_j = new oc();
+        this.field_j = new GridPoint();
         this.field_l = new og();
         this.field_h = 0;
         this.field_i = 0;

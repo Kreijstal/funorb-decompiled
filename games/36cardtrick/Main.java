@@ -150,7 +150,7 @@ public final class Main extends c {
           this.field_cb = null;
           this.field_P = null;
           AccountRequestState.a((byte) 81, lc.field_a[1]);
-          ai.field_m = 0;
+          AgeValidator.field_m = 0;
           nb.field_e = 0;
           rj.field_p = af.field_ob - ByteArrayStore.field_b;
           ue.field_d = param0;
@@ -300,9 +300,9 @@ public final class Main extends c {
                     }
                     if (!dl.d(0)) {
                       ra.field_d = sk.a(4, (byte) 125);
-                      if (0 < ai.field_m &&
+                      if (0 < AgeValidator.field_m &&
                         !ImageProducerRasterBuffer.field_n) {
-                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
+                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
                       }
                       dj.field_a = (byte)(rk.field_X >> 8);
                       if (var3 != 0) {
@@ -611,7 +611,7 @@ public final class Main extends c {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (fg.field_k) {
+            if (MatchingFieldValidator.field_k) {
               if ((null != ra.field_d) &&
                 (decompiledFrameRemainder0 = !(!ra.field_d.field_j))) {
                 SecondaryNodeDequeIterator.field_e = ra.field_d.field_h;
@@ -686,7 +686,7 @@ public final class Main extends c {
                         PcmOutputWorker.a(true);
                       }
                       if (2 == var2_int) {
-                        PacketBuffer.a((byte) -124, mk.g(-124));
+                        PacketBuffer.a((byte) -124, PasswordValidator.g(-124));
                       }
                     }
                     decompiledFrameRemainder0 = (var3 != 0);
@@ -723,7 +723,7 @@ public final class Main extends c {
                         ol.field_W = -2073859829;
                         ok.b(63);
                         this.v(256);
-                        fg.field_k = true;
+                        MatchingFieldValidator.field_k = true;
                       }
                       if (var2_int == 2 ||
                         var2_int == 1) {
@@ -741,7 +741,7 @@ public final class Main extends c {
                 ol.field_W = -2073859829;
                 ok.b(63);
                 this.v(256);
-                fg.field_k = true;
+                MatchingFieldValidator.field_k = true;
               }
               if (var2_int == 2 ||
                 var2_int == 1) {
@@ -1091,10 +1091,10 @@ public final class Main extends c {
               return;
             }
           }
-          if (ai.field_m > 0 &&
+          if (AgeValidator.field_m > 0 &&
             !ImageProducerRasterBuffer.field_n &&
             !dl.d(0)) {
-            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
+            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
           }
           AccountRequestState.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
@@ -1567,8 +1567,8 @@ public final class Main extends c {
         try {
           SectorCacheStore.a(true);
           if (null == BufferedSocket.field_c[0]) {
-            if (hf.field_H.ensureIndexLoaded(4) &&
-              hf.field_H.tryLoadGroupByName(4, "basic")) {
+            if (EditableTextField.field_H.ensureIndexLoaded(4) &&
+              EditableTextField.field_H.tryLoadGroupByName(4, "basic")) {
               if (sh.field_g.ensureIndexLoaded(4) &&
                 sh.field_g.tryLoadAllGroups((byte) 46)) {
                 if (id.field_a.ensureIndexLoaded(4) &&
@@ -1656,7 +1656,7 @@ public final class Main extends c {
               stackIn_15_0 = 0;
               return stackIn_15_0;
             }
-            ug.a(3.0f, 73, tg.a((byte) 87, "basic", kf.field_j, hf.field_H, IntrusiveDeque.field_f));
+            ug.a(3.0f, 73, tg.a((byte) 87, "basic", kf.field_j, EditableTextField.field_H, IntrusiveDeque.field_f));
             stackIn_9_0 = 0;
             return stackIn_9_0;
           }
@@ -1682,10 +1682,10 @@ public final class Main extends c {
             stackIn_71_0 = 1;
             return stackIn_71_0;
           }
-          if (hf.field_H != null) {
-            vb.field_k = DelegatingCanvas.a(-126, "unachieved", "basic", hf.field_H);
-            qi.field_D = DelegatingCanvas.a(-128, "orbcoin", "basic", hf.field_H);
-            hf.field_H = null;
+          if (EditableTextField.field_H != null) {
+            vb.field_k = DelegatingCanvas.a(-126, "unachieved", "basic", EditableTextField.field_H);
+            qi.field_D = DelegatingCanvas.a(-128, "orbcoin", "basic", EditableTextField.field_H);
+            EditableTextField.field_H = null;
             stackIn_74_0 = 1;
             return stackIn_74_0;
           }
@@ -1852,7 +1852,7 @@ public final class Main extends c {
           var21 = DelegatingCanvas.a(-127, "cloud7mask", "", mh.field_c);
           var22 = DelegatingCanvas.a(-128, "menucactus", "", mh.field_c);
           var23 = DelegatingCanvas.a(-127, "logocactus", "", mh.field_c);
-          cg.field_i = DelegatingCanvas.a(-128, "screw", "", mh.field_c);
+          TextFieldValidator.field_i = DelegatingCanvas.a(-128, "screw", "", mh.field_c);
           d.field_u[0] = var12.b();
           d.field_u[0].c();
           re.a(16777215, 0, 0, (byte) 111, var16);
@@ -1882,10 +1882,10 @@ public final class Main extends c {
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(169, 121, 308, 261, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 103, 8475405, 296, 151, 342);
-          cg.field_i.d(174, 128);
-          cg.field_i.d(461, 128);
-          cg.field_i.d(176, 363);
-          cg.field_i.d(461, 363);
+          TextFieldValidator.field_i.d(174, 128);
+          TextFieldValidator.field_i.d(461, 128);
+          TextFieldValidator.field_i.d(176, 363);
+          TextFieldValidator.field_i.d(461, 363);
           var23.d(4, -38);
           DelegatingCanvas.a(-127, "insttitle", "", mh.field_c).d(0, 0);
           DelegatingCanvas.a(-126, "instextra1", "", mh.field_c).d(0, 0);
@@ -1897,12 +1897,12 @@ public final class Main extends c {
           mg.field_j[4].b(0, 0);
           SoftwareRasterizer.fillRectangle(18, 18, 604, 444, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 0, 8475405, 480, 0, 640);
-          cg.field_i.d(23, 25);
-          cg.field_i.d(-cg.field_i.field_p + 617, 25);
-          cg.field_i.d(23, 455 - cg.field_i.field_o);
-          cg.field_i.d(-cg.field_i.field_p + 617, -2 + (457 - cg.field_i.field_o));
-          var25 = 1 + (23 + cg.field_i.field_p);
-          var26 = 1 + (25 + cg.field_i.field_o);
+          TextFieldValidator.field_i.d(23, 25);
+          TextFieldValidator.field_i.d(-TextFieldValidator.field_i.field_p + 617, 25);
+          TextFieldValidator.field_i.d(23, 455 - TextFieldValidator.field_i.field_o);
+          TextFieldValidator.field_i.d(-TextFieldValidator.field_i.field_p + 617, -2 + (457 - TextFieldValidator.field_i.field_o));
+          var25 = 1 + (23 + TextFieldValidator.field_i.field_p);
+          var26 = 1 + (25 + TextFieldValidator.field_i.field_o);
           Crc32Table.field_d[0] = new RgbSprite(var25, var26);
           Crc32Table.field_d[2] = new RgbSprite(var25, var26);
           Crc32Table.field_d[6] = new RgbSprite(var25, var26);
@@ -1939,10 +1939,10 @@ public final class Main extends c {
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(236, 103, 343, 291, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 91, 8475405, 318, 223, 368);
-          cg.field_i.d(242, 109);
-          cg.field_i.d(562, 109);
-          cg.field_i.d(243, 374);
-          cg.field_i.d(562, 374);
+          TextFieldValidator.field_i.d(242, 109);
+          TextFieldValidator.field_i.d(562, 109);
+          TextFieldValidator.field_i.d(243, 374);
+          TextFieldValidator.field_i.d(562, 374);
           bd.field_H = var12.b();
           bd.field_H.c();
           var23.d(0, 0);
@@ -2123,10 +2123,10 @@ public final class Main extends c {
           j.releaseDeclaredStaticReferences(param0 + 46);
           AccountCreationResultPanel.resetStaticState(-2113);
           rk.clearStaticReferences((byte) -30);
-          kl.clearDeclaredStaticReferences(-23573);
+          AccountRegistrationPanel.clearDeclaredStaticReferences(-23573);
           tj.clearDeclaredStaticReferences(0);
-          ak.clearDeclaredStaticReferences(false);
-          fh.clearDeclaredStaticReferences(200);
+          LoginPanel.clearDeclaredStaticReferences(false);
+          DisplayNameSelectionPanel.clearDeclaredStaticReferences(200);
           jk.clearStaticReferences((byte) -63);
           aj.clearStaticReferences(83);
           th.resetStaticState(true);
@@ -2209,7 +2209,7 @@ public final class Main extends c {
           PcmOutputWorker.b(true);
           dd.clearStaticReferences(false);
           ck.clearStaticReferences((byte) 41);
-          hf.o(-31141);
+          EditableTextField.o(-31141);
           ta.clearStaticReferences((byte) 116);
           ng.resetStaticState(2);
           bd.resetStaticState(-10790);
@@ -2217,7 +2217,7 @@ public final class Main extends c {
           gl.clearDeclaredStaticReferences(1);
           pa.clearStaticReferences((byte) -78);
           ua.clearDeclaredStaticReferences(72);
-          cg.clearStaticReferences(1);
+          TextFieldValidator.clearStaticReferences(1);
           s.clearStaticReferences(30235);
           qe.clearStaticReferences((byte) 73);
           se.clearDeclaredStaticReferences(param0 ^ 87);
@@ -2269,11 +2269,11 @@ public final class Main extends c {
           oc.clearStaticReferences(-41);
           di.a(-1);
           AccountNameAvailabilityValidator.resetStaticState(param0 ^ 0);
-          mk.clearStaticReferences((byte) 110);
-          rd.c(true);
-          p.clearDeclaredStaticReferences(param0 ^ 0);
-          ai.clearDeclaredStaticReferences(50);
-          fg.clearStaticReferences(true);
+          PasswordValidator.clearStaticReferences((byte) 110);
+          EmailFormatValidator.c(true);
+          ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences(param0 ^ 0);
+          AgeValidator.clearDeclaredStaticReferences(50);
+          MatchingFieldValidator.clearStaticReferences(true);
           td.clearStaticReferences((byte) 53);
           fk.clearStaticReferences(-30530);
           sg.clearStaticReferences(511);
@@ -2332,7 +2332,7 @@ public final class Main extends c {
             ImageProducerRasterBuffer.a((java.awt.Canvas) (stackIn_13_0), stackIn_13_1, stackIn_14_2);
             return;
           }
-          if (!fg.field_k) {
+          if (!MatchingFieldValidator.field_k) {
             nl.a((java.awt.Canvas) (var2), param0 - 164);
             return;
           }
@@ -2372,11 +2372,11 @@ public final class Main extends c {
               bf.a(stackIn_48_0, (byte) -8);
               if (var6 != 0) {
                 SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
-                tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
+                tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + TextFieldValidator.field_i.field_o, 1 + (23 + TextFieldValidator.field_i.field_p));
                 if (ff.field_b == 9) {
                   var3 = hb.field_d << 3;
                   var4 = qf.m(-32749);
-                  var5 = v.g((byte) -111);
+                  var5 = ValidatedTextField.g((byte) -111);
                   if (0 < var3) {
                     SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
                   }
@@ -2385,11 +2385,11 @@ public final class Main extends c {
             }
           } else {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
-            tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + cg.field_i.field_o, 1 + (23 + cg.field_i.field_p));
+            tc.a(param0 ^ -17180, Crc32Table.field_d, 26 + TextFieldValidator.field_i.field_o, 1 + (23 + TextFieldValidator.field_i.field_p));
             if (ff.field_b == 9) {
               var3 = hb.field_d << 3;
               var4 = qf.m(-32749);
-              var5 = v.g((byte) -111);
+              var5 = ValidatedTextField.g((byte) -111);
               if (0 < var3) {
                 SoftwareRasterizer.fillRectangleAlpha((-var4 + 640 >> 1) - 10, (480 - var5 >> 1) - 10, 20 + var4, 20 + var5, 0, var3);
               }
@@ -2663,7 +2663,7 @@ public final class Main extends c {
               var3 > var5_ref_kf.field_g) {
               var5_ref_kf.unlink(119);
               al.field_a = var5_ref_kf.field_i.length;
-              rd.field_j.position = 0;
+              EmailFormatValidator.field_j.position = 0;
               var6_int = 0;
               do {
                 if (!(var6_int < al.field_a)) {
@@ -2673,7 +2673,7 @@ public final class Main extends c {
                   pd.field_l = var5_ref_kf.field_h;
                   break;
                 }
-                rd.field_j.payload[var6_int] = var5_ref_kf.field_i[var6_int];
+                EmailFormatValidator.field_j.payload[var6_int] = var5_ref_kf.field_i[var6_int];
                 var6_int++;
               } while (var8 == 0);
               return true;
@@ -2682,15 +2682,15 @@ public final class Main extends c {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (0 > vd.field_u) {
-              rd.field_j.position = 0;
+              EmailFormatValidator.field_j.position = 0;
               stackIn_36_0 = r.a(1, (byte) 126);
               decompiledFrameRemainder0 = (var8 == 0);
               if (decompiledFrameRemainder0) {
                 if (!stackIn_36_0) {
                   return false;
                 }
-                vd.field_u = rd.field_j.readCipheredByte((byte) -35);
-                rd.field_j.position = 0;
+                vd.field_u = EmailFormatValidator.field_j.readCipheredByte((byte) -35);
+                EmailFormatValidator.field_j.position = 0;
                 al.field_a = param1[vd.field_u];
               }
             }
@@ -2702,8 +2702,8 @@ public final class Main extends c {
             }
             if (qf.field_G != 0) {
               var5 = qf.field_G;
-              if (k.field_a != 0.0) {
-                var5 = (int)((double)var5 + pg.field_a.nextGaussian() * k.field_a);
+              if (DebouncedFieldValidator.field_a != 0.0) {
+                var5 = (int)((double)var5 + pg.field_a.nextGaussian() * DebouncedFieldValidator.field_a);
                 if (var5 < 0) {
                   var5 = 0;
                 }
@@ -2712,7 +2712,7 @@ public final class Main extends c {
               var7 = 0;
               while (true) {
                 if (al.field_a > var7) {
-                  var6.field_i[var7] = rd.field_j.payload[var7];
+                  var6.field_i[var7] = EmailFormatValidator.field_j.payload[var7];
                   var7++;
                   if (var8 == 0) {
                     continue;
@@ -2833,7 +2833,7 @@ public final class Main extends c {
                 if (0 < this.field_K) {
                   this.field_K = this.field_K - 1;
                   af.field_ob = af.field_ob - 512;
-                  ai.field_m = ai.field_m + 2;
+                  AgeValidator.field_m = AgeValidator.field_m + 2;
                   ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c << 9);
                   rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c << 9);
                 } else {
@@ -2843,7 +2843,7 @@ public final class Main extends c {
               } else {
                 ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * dg.field_J << 7);
                 this.field_J = this.field_J - 1;
-                ai.field_m = ai.field_m + dg.field_J;
+                AgeValidator.field_m = AgeValidator.field_m + dg.field_J;
                 rj.field_p = rj.field_p + ((BufferedRandomAccessFile.field_c + 1) * dg.field_J << 7);
                 af.field_ob = af.field_ob - (dg.field_J << 7);
               }
@@ -2966,7 +2966,7 @@ public final class Main extends c {
               this.field_H[this.field_A] = (byte) -1;
               var2[var3Lifetime1] = (byte) -1;
               var4 = 4 + dg.field_J;
-              ai.field_m = ai.field_m + var4;
+              AgeValidator.field_m = AgeValidator.field_m + var4;
               af.field_ob = af.field_ob - (var4 << 7);
               rj.field_p = rj.field_p + (var4 << 7);
               var4 = var4 * BufferedRandomAccessFile.field_c << 7;
@@ -2979,7 +2979,7 @@ public final class Main extends c {
               if (fieldTemp$1 == 0) {
                 ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * 50 << 7);
                 af.field_ob = af.field_ob - 6400;
-                ai.field_m = ai.field_m + 50;
+                AgeValidator.field_m = AgeValidator.field_m + 50;
                 rj.field_p = rj.field_p + 6400;
                 rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c * 50 << 7);
                 this.c(-117, 4);

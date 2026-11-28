@@ -10,7 +10,7 @@ final class PcmOutputWorker implements Runnable {
     static String field_a;
     volatile AudioOutput[] field_f;
 
-    final static boolean a(String param0, int param1, int param2, String param3, pj param4, String param5, boolean param6) {
+    final static boolean a(String param0, int param1, int param2, String param3, AccountRegistrationPanel param4, String param5, boolean param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
@@ -32,7 +32,7 @@ final class PcmOutputWorker implements Runnable {
             field_a = (String) null;
           }
           ug.field_A.a(param1 - 14579, var8);
-          if (g.f(256)) {
+          if (MatchingFieldValidator.f(256)) {
             var8.k((byte) -92);
             return true;
           }

@@ -33,7 +33,7 @@ final class PcmOutputWorker implements Runnable {
         if (no.field_a < lp.field_z) {
           return null;
         }
-        if (!(lp.field_z + ga.field_p <= no.field_a)) {
+        if (!(lp.field_z + ConfirmedEmailAvailabilityValidator.field_p <= no.field_a)) {
           return vj.field_c;
         }
         return null;
@@ -76,7 +76,7 @@ final class PcmOutputWorker implements Runnable {
             if (ba.field_f == 2) {
               pe.field_l = new BufferedSocket((java.net.Socket) (IterableNodeHashTable.field_e.result), kn.field_f);
               var2 = new PacketBuffer(13);
-              rg.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
+              AccountRegistrationPanel.a(ri.field_b, var2, CombatState.field_a, param0 + 127, j.field_J);
               var2.writeByte(6, 15);
               var2.writeInt((byte) 63, ng.field_I);
               pe.field_l.queueWrite(var2.payload, false, 0, 13);

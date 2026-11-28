@@ -14,7 +14,7 @@ final class lr extends d {
     static UiPanel field_P;
     static String field_M;
     static String field_T;
-    private of field_R;
+    private FieldValidator field_R;
 
     final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
@@ -30,7 +30,7 @@ final class lr extends d {
 
     final String a(boolean param0) {
         if (this.field_p) {
-          return this.field_R.d(-27183);
+          return this.field_R.getValidationMessage(-27183);
         }
         if (param0) {
           this.a(true);
@@ -111,7 +111,7 @@ final class lr extends d {
         }
         int var5 = this.x + param2 + (this.width >> 1);
         int var6 = this.y + (param3 + (this.height >> 1));
-        ba var8 = this.field_R.a(-23996);
+        ba var8 = this.field_R.getValidationStatus(-23996);
         if (tk.field_n == var8) {
           var15 = jn.field_b[0];
           var9 = var15.field_x << 1;
@@ -371,7 +371,7 @@ final class lr extends d {
             if (ve.field_d.a(84)) {
               var1_int = 1;
             }
-            if (de.field_f != 13) {
+            if (DebouncedFieldValidator.field_f != 13) {
               continue;
             }
             var2 = 1;
@@ -391,7 +391,7 @@ final class lr extends d {
             }
           } else {
             if (var2 != 0 &&
-              da.field_j != 2) {
+              TextFieldValidator.field_j != 2) {
               hd.a((byte) 47);
             }
           }
@@ -400,7 +400,7 @@ final class lr extends d {
             return stackIn_23_0;
           }
           if (var3 == 0 &&
-            2 == da.field_j) {
+            2 == TextFieldValidator.field_j) {
             var4 = -qe.field_cb + gk.correctedCurrentTimeMillis(52);
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
@@ -417,7 +417,7 @@ final class lr extends d {
         }
     }
 
-    lr(of param0) {
+    lr(FieldValidator param0) {
         try {
           this.field_R = param0;
         } catch (RuntimeException runtimeException) {

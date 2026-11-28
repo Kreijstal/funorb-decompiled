@@ -105,14 +105,14 @@ final class je {
             field_c = false;
           }
           var3_int = param0.field_jb - param1.field_jb;
-          if (param0.field_gb != qa.field_r) {
+          if (param0.field_gb != ConfirmedEmailAvailabilityValidator.field_r) {
             if (param0.field_gb == null) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (qa.field_r != param1.field_gb) {
+          if (ConfirmedEmailAvailabilityValidator.field_r != param1.field_gb) {
             if (null == param1.field_gb) {
               var3_int -= 200;
             }

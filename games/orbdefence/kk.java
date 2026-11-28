@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kk extends te {
-    private ga field_T;
+    private FieldValidator field_T;
     static String field_Y;
     private String field_R;
     static IntrusiveDeque field_X;
@@ -13,7 +13,7 @@ final class kk extends te {
     static char[] field_V;
     static int field_S;
 
-    kk(ga param0, String param1, int param2, int param3, int param4, int param5) {
+    kk(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, kd.a(false));
         try {
           this.field_R = param1;
@@ -112,10 +112,10 @@ final class kk extends te {
         regionExit1: {
           regionExit2: {
             var13 = OrbDefence.field_D ? 1 : 0;
-            var6 = this.field_T.d(-7847);
+            var6 = this.field_T.getValidationStatus(-7847);
             if (ml.field_a != var6 &&
               var6 != uj.field_b) {
-              var5 = this.field_T.a(param2 ^ 1048451);
+              var5 = this.field_T.getValidationMessage(param2 ^ 1048451);
               if (var5 == null) {
                 var5 = this.field_R;
                 break regionExit2;
@@ -137,7 +137,7 @@ final class kk extends te {
         if (param2 != 1048575) {
           this.field_R = (String) null;
         }
-        var6Lifetime1 = this.field_T.d(-7847);
+        var6Lifetime1 = this.field_T.getValidationStatus(-7847);
         var8 = (rj) ((Object) this.field_j);
         var9 = param3 + this.field_s;
         var10 = var8.a((pj) (this), 9534, param0) + (var8.a((pj) (this), true).b(122) >> 1);
@@ -164,7 +164,7 @@ final class kk extends te {
             de.a(param2 - 1048697, this.field_W);
           }
           var16.b(112, 144, var16.field_s << 4, var16.field_t << 4, -this.field_Q << 10, 4096);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           this.field_W.e(-(var16.field_s >> 1) + var9, -var16.field_t + var10, 256);
         }
     }

@@ -6,7 +6,7 @@ final class jb {
     static PacketBuffer field_c;
     static String field_e;
     static int field_d;
-    static ia field_b;
+    static FramedPanelLayer field_b;
 
     final static boolean a(int param0) {
         RuntimeException var1 = null;
@@ -70,7 +70,7 @@ final class jb {
               var11_int = 0;
               var12_int = 0;
               while (true) {
-                if (var12_int < ia.field_i) {
+                if (var12_int < FramedPanelLayer.field_i) {
                   stackIn_16_0 = compareDoublesNaNResultNegative(((double[]) (var10))[var12_int], -(1.5 * vf.field_e[var12_int]) + 5.0 / param4);
                   if (var17 == 0) {
                     if (stackIn_16_0 > 0) {
@@ -113,7 +113,7 @@ final class jb {
             var12 = Double.NEGATIVE_INFINITY;
             var14 = 0;
             while (true) {
-              if (var14 < ia.field_i) {
+              if (var14 < FramedPanelLayer.field_i) {
                 stackIn_48_0 = compareDoublesNaNResultNegative(0.0, vf.field_e[var14]);
                 if (var17 == 0) {
                   if (stackIn_48_0 != 0 &&
@@ -148,15 +148,15 @@ final class jb {
           }
           var11_intLifetime1 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(ia.field_i > var11_intLifetime1)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(FramedPanelLayer.field_i > var11_intLifetime1)))) {
             var12Lifetime1 = ((double[]) (var10))[var11_intLifetime1];
             stackIn_66_0 = 1e-7;
             if (var17 == 0) {
               if (stackIn_66_0 < var12Lifetime1) {
-                param2[1] = param2[1] + bn.field_f[var11_intLifetime1][7] * var12Lifetime1;
+                param2[1] = param2[1] + SpriteBase.field_f[var11_intLifetime1][7] * var12Lifetime1;
                 if (!param1) {
-                  param2[0] = param2[0] + bn.field_f[var11_intLifetime1][6] * var12Lifetime1;
-                  param2[2] = param2[2] + bn.field_f[var11_intLifetime1][8] * var12Lifetime1;
+                  param2[0] = param2[0] + SpriteBase.field_f[var11_intLifetime1][6] * var12Lifetime1;
+                  param2[2] = param2[2] + SpriteBase.field_f[var11_intLifetime1][8] * var12Lifetime1;
                 }
               }
               var11_intLifetime1++;
@@ -170,7 +170,7 @@ final class jb {
           var11 = stackIn_66_0;
           if (var11 > 1e-7) {
             if (!param1) {
-              param2[2] = param2[2] + var11 * ia.field_d;
+              param2[2] = param2[2] + var11 * FramedPanelLayer.field_d;
               param2[0] = param2[0] + var11 * tf.field_c;
             }
             param2[1] = param2[1] + mc.field_m * var11;

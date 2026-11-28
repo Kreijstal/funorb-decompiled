@@ -33,10 +33,10 @@ final class MixedSupport122 {
         if (byteArgument12 <= 42) {
           stringState0530 = (String) null;
         } else {
-          UiComponentPart031.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
+          AccountRegistrationPanel.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
           return;
         }
-        UiComponentPart031.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
+        AccountRegistrationPanel.performAction1593(integerArgument9, booleanArgument14, 0, integerArgument13);
     }
 
     final static void performAction1603(int integerArgument1, boolean booleanArgument2) {

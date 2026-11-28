@@ -45,9 +45,9 @@ final class fd extends IntrusiveNode {
     final static int a(int param0) {
         if (param0 != -28506) {
           field_g = (int[]) null;
-          return kl.field_E;
+          return AccountRegistrationPanel.field_E;
         }
-        return kl.field_E;
+        return AccountRegistrationPanel.field_E;
     }
 
     public static void b(byte param0) {

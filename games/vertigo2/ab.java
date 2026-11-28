@@ -30,7 +30,7 @@ abstract class ab {
           var2 = rm.field_B;
         }
         if (param1 == 1) {
-          var2 = oa.field_p;
+          var2 = ConfirmedEmailAvailabilityValidator.field_p;
         }
         if (param1 == 2) {
           var2 = mf.field_b;

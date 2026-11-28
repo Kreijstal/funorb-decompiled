@@ -17,9 +17,9 @@ abstract class SocketConnector {
           SocketConnector.clearStaticReferences((byte) 75);
         }
         int var3 = hd.a(param1, 49);
-        int var4 = lc.a(param1, false);
+        int var4 = PasswordValidator.a(param1, false);
         int var5 = hd.a(param2, 116);
-        int var6 = lc.a(param2, false);
+        int var6 = PasswordValidator.a(param2, false);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var5 * (long)var4 >> 16);

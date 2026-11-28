@@ -81,7 +81,7 @@ final class uc {
           var7Lifetime1 = tk.field_e << 4;
           var8Lifetime1 = 0;
           var9Lifetime1 = ni.a(var7Lifetime1, 8191) >> 8;
-          var10Lifetime1 = of.a((byte) -121, var7Lifetime1) >> 8;
+          var10Lifetime1 = ClientLookupTables.cosineFixedPoint((byte) -121, var7Lifetime1) >> 8;
           if (-1 != j.field_c &&
             rb.field_m != -1) {
             var9Lifetime1 = -rb.field_m + 240;
@@ -110,9 +110,9 @@ final class uc {
             var18 = wj.field_J[var17];
             AccountCreationResultPanel.c(var17, -5878);
             for (var19 = 0; 3 > var19; var19++) {
-              vg.field_a[var19] = vg.field_a[var19] + of.field_f[var16][var19];
+              vg.field_a[var19] = vg.field_a[var19] + ClientLookupTables.field_f[var16][var19];
             }
-            el.a(vg.field_a, cb.field_d, -12705, true, var18, false, false);
+            ProxySocketFactory.a(vg.field_a, cb.field_d, -12705, true, var18, false, false);
             di.a(var10Lifetime1, var9Lifetime1, var18, var13Lifetime1, -536936193, var8Lifetime1, var14Lifetime1, var15);
           }
           return;

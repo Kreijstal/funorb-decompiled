@@ -440,7 +440,7 @@ abstract class ld {
             param2.field_f != null) {
             QuickChatMenu.a((byte) 87);
           }
-          ae.field_I = 0;
+          DisplayNameSelectionPanel.field_I = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param2.field_l > var8)))) {
@@ -498,7 +498,7 @@ abstract class ld {
                           dupTemp$0 = param2.field_f[var8];
                           LevelMap.field_c[dupTemp$0] = LevelMap.field_c[dupTemp$0] + 1;
                         }
-                        ae.field_I = ae.field_I + 1;
+                        DisplayNameSelectionPanel.field_I = DisplayNameSelectionPanel.field_I + 1;
                         break;
                       }
                     }

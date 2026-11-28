@@ -38,7 +38,7 @@ final class ff {
             !tk.field_a) {
             stackIn_19_3 = 0;
           } else {
-            stackIn_19_3 = ui.field_L;
+            stackIn_19_3 = EditableTextField.field_L;
           }
           ((ml) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_18_2, stackIn_19_3);
         }

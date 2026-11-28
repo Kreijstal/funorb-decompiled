@@ -15,7 +15,7 @@ final class pd extends ci {
     private int field_Pb;
     static int field_Fb;
     static long[] field_Nb;
-    static un field_Lb;
+    static ChessMatchSession field_Lb;
     private ci field_Mb;
     private ci field_Gb;
 
@@ -146,7 +146,7 @@ final class pd extends ci {
         this.field_pb = param0;
         this.a(true, param3, param2, param1);
         if (param6 > -32) {
-          field_Lb = (un) null;
+          field_Lb = (ChessMatchSession) null;
         }
     }
 
@@ -170,7 +170,7 @@ final class pd extends ci {
         if (vg.field_a == 11 &&
           dc.field_m) {
           if (vg.field_f == 2 &&
-            !kn.a(hd.field_e, tj.field_m, 29712)) {
+            !kn.a(hd.field_e, EmailFormatValidator.field_m, 29712)) {
             return false;
           }
           if (vg.field_f != 2 &&

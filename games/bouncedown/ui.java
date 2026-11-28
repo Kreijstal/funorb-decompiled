@@ -132,7 +132,7 @@ final class ui extends IntrusiveNode {
                 if (param2) {
                   ld.field_j[var23Lifetime2] = var27Lifetime1 >> GameClient.field_s;
                   wb.field_c[var23Lifetime2] = var28Lifetime1 >> GameClient.field_s;
-                  bd.field_n[var23Lifetime2] = var29Lifetime1;
+                  MatchingFieldValidator.field_n[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -159,7 +159,7 @@ final class ui extends IntrusiveNode {
                   var25Lifetime1 = param6.field_o[var23Lifetime2];
                   var26Lifetime1 = param6.field_r[var23Lifetime2];
                   ml.field_f[var23Lifetime2] = var9 + (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16);
-                  gh.field_I[var23Lifetime2] = (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var24Lifetime1 * var13 >> 16) + var10;
+                  AccountRegistrationPanel.field_I[var23Lifetime2] = (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var24Lifetime1 * var13 >> 16) + var10;
                   fl.field_b[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1 = param6.field_z[var23Lifetime2];
                   var25Lifetime1 = param6.field_h[var23Lifetime2];

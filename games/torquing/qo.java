@@ -180,7 +180,7 @@ final class qo extends am {
             if (-param1 + param2 < Bzip2State.field_q) {
               v.a(param2, param4, param0, (byte) 77, param1);
             } else {
-              if (param2 + param1 > qk.field_p) {
+              if (param2 + param1 > LevelCompletionUpdate.field_p) {
                 v.a(param2, param4, param0, (byte) 77, param1);
               } else {
                 r.a(param4, param1, -121, param0, param2);

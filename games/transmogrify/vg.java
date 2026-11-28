@@ -151,7 +151,7 @@ final class vg {
         var8 = -1;
         for (var9 = 0; IntrusiveDeque.field_a.length > var9; var9++) {
           regionExit1: {
-            if (wl.a(false, 0) ||
+            if (AccountRegistrationPanel.a(false, 0) ||
               var9 != 15 ||
               (32768 & var6) != 0) {
               if ((1 << var9 & var6) != 0) {
@@ -160,7 +160,7 @@ final class vg {
                 if (param0) {
                   break regionExit1;
                 }
-                ff.field_z.e(var4, var5 + param2);
+                LoginPanel.field_z.e(var4, var5 + param2);
               }
               if (var4 <= PacketBuffer.field_j &&
                 32 + var4 >= PacketBuffer.field_j &&
@@ -208,10 +208,10 @@ final class vg {
           if (var10 != 0) {
             IntrusiveNode.field_d.c(rl.field_i, 438, 206 + (var9Lifetime1 + param2), 0, -1);
           } else {
-            IntrusiveNode.field_d.c(ff.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
+            IntrusiveNode.field_d.c(LoginPanel.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
           }
           if (var10 == 0) {
-            ff.field_z.c(263, 206 + var9Lifetime1 + param2);
+            LoginPanel.field_z.c(263, 206 + var9Lifetime1 + param2);
           } else {
             fc.field_h[var8].c(263, param2 + (206 + var9Lifetime1));
           }
@@ -226,11 +226,11 @@ final class vg {
           if (var13 < 3) {
             var11 = var11 + var9Lifetime1;
           }
-          IntrusiveNode.field_d.b(BufferedSocket.field_f + rg.field_B[var8], 394, var11, 0, -1);
+          IntrusiveNode.field_d.b(BufferedSocket.field_f + EditableTextField.field_B[var8], 394, var11, 0, -1);
           var4Lifetime1 = 394;
           var11 = var11 + var9Lifetime1;
-          IntrusiveNode.field_d.b(ck.field_F, var4Lifetime1, var11, 0, -1);
-          var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.a(ck.field_F);
+          IntrusiveNode.field_d.b(DisplayNameSelectionPanel.field_F, var4Lifetime1, var11, 0, -1);
+          var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.a(DisplayNameSelectionPanel.field_F);
           for (var14Lifetime1 = 0; wd.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
             og.field_b.c(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
             var4Lifetime1 = var4Lifetime1 + og.field_b.field_n / 3;
@@ -497,21 +497,21 @@ final class vg {
                   if (8 == var9) {
                     if (!(!this.field_j.f(-9112))) {
                       vk.a((byte) 92, FullscreenFocusCanvas.field_d[0]);
-                      ck.field_y = 0;
+                      DisplayNameSelectionPanel.field_y = 0;
                     }
                     break regionExit1;
                   }
                   if (var9 == 9) {
                     if (!(!this.field_j.f(-9112))) {
                       vk.a((byte) 88, FullscreenFocusCanvas.field_d[0]);
-                      ck.field_y = 1;
+                      DisplayNameSelectionPanel.field_y = 1;
                     }
                     break regionExit1;
                   }
                   if (var9 == 10) {
                     if (!(!this.field_j.f(-9112))) {
                       vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
-                      ck.field_y = 2;
+                      DisplayNameSelectionPanel.field_y = 2;
                     }
                     break regionExit1;
                   }
@@ -816,7 +816,7 @@ final class vg {
             }
             var5_ref_mi = IntrusiveNode.field_d;
             var6 = sh.field_c;
-            var7 = ck.field_y;
+            var7 = DisplayNameSelectionPanel.field_y;
             if (var6.field_k) {
               if (var6.field_m != null) {
                 var3 = th.field_e;
@@ -991,7 +991,7 @@ final class vg {
                 this.field_j.field_d <= 2) {
                 this.field_j.field_d = 3;
               } else {
-                this.field_j.field_d = ck.field_y;
+                this.field_j.field_d = DisplayNameSelectionPanel.field_y;
               }
             }
             if (98 == ch.field_d) {
@@ -999,7 +999,7 @@ final class vg {
               if (this.field_j.field_d != 3) {
                 this.field_j.field_d = 3;
               } else {
-                this.field_j.field_d = ck.field_y;
+                this.field_j.field_d = DisplayNameSelectionPanel.field_y;
               }
             }
           }
@@ -1164,7 +1164,7 @@ final class vg {
             var9 = Bzip2State.field_m;
           }
           if (var8 == 7) {
-            var9 = ca.field_a;
+            var9 = DebouncedFieldValidator.field_a;
           }
         }
         if (var9 == null) {
@@ -1199,7 +1199,7 @@ final class vg {
             var12 = 16710412;
             if (var8 >= 8 &&
               var8 <= 10 &&
-              param3 == ck.field_y) {
+              param3 == DisplayNameSelectionPanel.field_y) {
               var12 = 9240408;
             }
             if (param0) {

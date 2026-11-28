@@ -74,7 +74,7 @@ class id extends ik {
           ResourceArchive.field_a = param0;
           sc.field_e = true;
           if (ResourceArchive.field_a == 0) {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, nb.field_x);
             var4 = 3 + var3_int;
             ni.field_a = new int[var4];
             MouseWheelInput.field_g = new String[var4];
@@ -93,7 +93,7 @@ class id extends ik {
             ni.field_a[-1 + var4] = 1;
             ik.field_g[1] = 5;
           } else if (ResourceArchive.field_a == 1) {
-            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pc.field_m, nb.field_x);
+            var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, nb.field_x);
             var4 = var3_int + 2;
             ni.field_a = new int[var4];
             MouseWheelInput.field_g = new String[var4];
@@ -130,7 +130,7 @@ class id extends ik {
               ni.field_a[var4 - 1] = 0;
               ik.field_g[0] = 5;
             } else if (ResourceArchive.field_a == 4) {
-              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, pj.field_B, nb.field_x);
+              var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, AccountRegistrationPanel.field_B, nb.field_x);
               var4 = var3_int + 2;
               ni.field_a = new int[var4];
               MouseWheelInput.field_g = new String[var4];

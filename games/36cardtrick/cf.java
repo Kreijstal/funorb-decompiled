@@ -61,18 +61,18 @@ final class cf implements b {
         Main var3 = null;
         try {
           cj.field_l[5] = 373 - kb.field_b[5];
-          fh.field_G[5] = new int[]{18, 19, 20, 17};
+          DisplayNameSelectionPanel.field_G[5] = new int[]{18, 19, 20, 17};
           param0.field_E[5] = new re(param0, 5);
           if (param1 < 34) {
             var3 = (Main) null;
             cf.a((Main) null, (byte) 68);
           }
           cj.field_l[4] = 428;
-          fh.field_G[4] = new int[]{17};
+          DisplayNameSelectionPanel.field_G[4] = new int[]{17};
           param0.field_E[4] = new re(param0, 4);
           if (d.field_c > 0 &&
             hl.a(jk.field_a, -1)) {
-            fh.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
+            DisplayNameSelectionPanel.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
             param0.field_E[1] = new re(param0, 1);
             return;
           }

@@ -97,8 +97,8 @@ final class rg extends am {
           var13 = 0;
           var14 = ci.field_c * this.field_y >> 12;
           var15 = this.field_t * ci.field_c >> 12;
-          var16 = um.field_o * this.field_A >> 12;
-          var17 = um.field_o * this.field_D >> 12;
+          var16 = MatchingFieldValidator.field_o * this.field_A >> 12;
+          var17 = MatchingFieldValidator.field_o * this.field_D >> 12;
           if (var17 <= 1) {
             return var47[param1];
           }
@@ -183,8 +183,8 @@ final class rg extends am {
               }
               var22 = 0;
             }
-            if (um.field_o < var24 + var22) {
-              var24 = um.field_o - var22;
+            if (MatchingFieldValidator.field_o < var24 + var22) {
+              var24 = MatchingFieldValidator.field_o - var22;
             } else {
               var10 = 0;
             }
@@ -534,7 +534,7 @@ final class rg extends am {
         if (!param0) {
           return (PcmStreamMixer) null;
         }
-        return tn.field_l;
+        return EmailFormatValidator.field_l;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -638,7 +638,7 @@ final class rg extends am {
             }
             var14Lifetime2 = stackIn_15_0;
             var15 = param1 * var64[var13] + param5 * var62[var13] + var63[var13] * param6 >> 8;
-            stackIn_17_0 = id.field_c;
+            stackIn_17_0 = LoginRequestBuilder.field_c;
             if (var15 >= 0) {
               stackIn_18_1 = var15;
             } else {
@@ -729,7 +729,7 @@ final class rg extends am {
               var37 = var37 + var31 * 65793;
               var38 = var38 + var32 * 65793;
               var39 = var39 + 65793 * var33;
-              th.a(var22, var39 >> 16, (65465 & var38) >> 8, 255 & var37, var38 >> 16, var37 >> 16, var39 & 255, var23, 255 & var38, (var37 & 65328) >> 8, -25, var24, var39 >> 8 & 255, var25, var26, var27);
+              DisplayNameSelectionPanel.a(var22, var39 >> 16, (65465 & var38) >> 8, 255 & var37, var38 >> 16, var37 >> 16, var39 & 255, var23, 255 & var38, (var37 & 65328) >> 8, -25, var24, var39 >> 8 & 255, var25, var26, var27);
             }
             var44++;
           }

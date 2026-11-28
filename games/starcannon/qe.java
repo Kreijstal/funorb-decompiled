@@ -64,7 +64,7 @@ abstract class qe extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        mh.a(0, ' ', field_w, 31917);
+        EmailFormatValidator.a(0, ' ', field_w, 31917);
         var4 = 0;
         var5 = 0;
         var6 = -1;

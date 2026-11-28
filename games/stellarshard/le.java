@@ -399,7 +399,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime65 = ImageProducerRasterBuffer.a(false, "instruct2");
           if (null != var2Lifetime65) {
-            pl.field_V = se.a(0, var2Lifetime65);
+            ValidatedTextField.field_V = se.a(0, var2Lifetime65);
           }
           var2Lifetime66 = ImageProducerRasterBuffer.a(false, "instruct1");
           if (var2Lifetime66 != null) {
@@ -431,11 +431,11 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime73 = ImageProducerRasterBuffer.a(false, "congrats");
           if (var2Lifetime73 != null) {
-            lk.field_g = se.a(0, var2Lifetime73);
+            TextFieldValidator.field_g = se.a(0, var2Lifetime73);
           }
           var2Lifetime74 = ImageProducerRasterBuffer.a(false, "secs");
           if (null != var2Lifetime74) {
-            ef.field_o = se.a(0, var2Lifetime74);
+            ConfirmedEmailAvailabilityValidator.field_o = se.a(0, var2Lifetime74);
           }
           var2Lifetime75 = ImageProducerRasterBuffer.a(false, "freegameend");
           if (var2Lifetime75 != null) {

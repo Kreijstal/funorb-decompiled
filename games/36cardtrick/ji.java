@@ -12,12 +12,12 @@ final class ji {
         }
         if (param0) {
           var1.a(SoftwareRasterizer.field_l, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 107, SoftwareRasterizer.field_a, SoftwareRasterizer.field_b, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f);
-          ai.field_k.addLast(var1, 27362);
+          AgeValidator.field_k.addLast(var1, 27362);
           return;
         }
         ji.a(false);
         var1.a(SoftwareRasterizer.field_l, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 107, SoftwareRasterizer.field_a, SoftwareRasterizer.field_b, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f);
-        ai.field_k.addLast(var1, 27362);
+        AgeValidator.field_k.addLast(var1, 27362);
     }
 
     static long a(long param0, long param1) {

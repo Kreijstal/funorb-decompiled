@@ -92,7 +92,7 @@ final class te {
         try {
           var1 = hl.field_d;
           synchronized (var1) {
-            ja.field_f = LocalizedStrings.field_n;
+            ja.field_f = ConfirmedEmailAvailabilityValidator.field_n;
             if (param0 != -11) {
               te.a(-52);
             }
@@ -113,7 +113,7 @@ final class te {
                 nj.field_c[~var2] = false;
               }
             }
-            LocalizedStrings.field_n = b.field_M;
+            ConfirmedEmailAvailabilityValidator.field_n = b.field_M;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

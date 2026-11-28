@@ -169,7 +169,7 @@ final class qm {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_l[var3Lifetime1] = te.a(this.field_l[var3Lifetime1], cb.field_h[var4][c.a((int)(this.field_m[c.a(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = te.a(this.field_l[var3Lifetime1], TextFieldValidator.field_h[var4][c.a((int)(this.field_m[c.a(-var4 + var3Lifetime1, 7)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -177,14 +177,14 @@ final class qm {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_m[var3Lifetime1Lifetime1] = this.field_l[var3Lifetime1Lifetime1];
           }
-          this.field_m[0] = te.a(this.field_m[0], cb.field_f[var2Lifetime2]);
+          this.field_m[0] = te.a(this.field_m[0], TextFieldValidator.field_f[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_l[var3Lifetime1Lifetime2] = this.field_m[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_l[var3Lifetime1Lifetime2] = te.a(this.field_l[var3Lifetime1Lifetime2], cb.field_h[var7][c.a((int)(this.field_c[c.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
+              this.field_l[var3Lifetime1Lifetime2] = te.a(this.field_l[var3Lifetime1Lifetime2], TextFieldValidator.field_h[var7][c.a((int)(this.field_c[c.a(-var7 + var3Lifetime1Lifetime2, 7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }

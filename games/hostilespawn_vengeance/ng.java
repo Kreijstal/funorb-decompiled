@@ -18,7 +18,7 @@ final class ng extends IntrusiveNode {
     int field_t;
     int field_h;
 
-    final static boolean a(mk param0, int param1, boolean param2, String param3, String param4, int param5, String param6) {
+    final static boolean a(AccountRegistrationPanel param0, int param1, boolean param2, String param3, String param4, int param5, String param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
@@ -159,7 +159,7 @@ final class ng extends IntrusiveNode {
               param1.field_l.a(2, (byte) 94, param1.field_c);
               param1.a(8573);
               param4[param2] = 0;
-              if (param4[param1.field_j.b(-4)] == 2) {
+              if (param4[param1.field_j.getClampedTileIndex(-4)] == 2) {
                 param1.field_e = 1;
                 param1.field_i = -1;
                 param1.field_c = 255.0 * Math.random();
@@ -285,7 +285,7 @@ final class ng extends IntrusiveNode {
           }
           if (param0 != 78) {
             var49 = (String) null;
-            ng.a((mk) null, -5, true, (String) null, (String) null, 31, (String) null);
+            ng.a((AccountRegistrationPanel) null, -5, true, (String) null, (String) null, 31, (String) null);
           }
           param1.field_e = param1.field_e + 1;
           stackIn_85_0 = (param1.field_i != 28) ? 32 : 64;

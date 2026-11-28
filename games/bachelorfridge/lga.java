@@ -66,7 +66,7 @@ final class lga {
                 break;
               }
               var7_ref_String = param2.substring(2 + var6_int, var5);
-              if (!vn.a((byte) 107, (CharSequence) ((Object) var7_ref_String))) {
+              if (!ValidatedTextField.a((byte) 107, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var3_int <= var5) {
@@ -99,7 +99,7 @@ final class lga {
               break;
             }
             var9 = param2.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!vn.a((byte) 113, (CharSequence) ((Object) var9))) {
+            if (!ValidatedTextField.a((byte) 113, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

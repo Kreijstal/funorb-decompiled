@@ -820,8 +820,8 @@ final class Asteroid {
     }
 
     final static void c(int param0) {
-        if (BufferedSocket.field_h != -a.field_i + 0 &&
-          BufferedSocket.field_h != 250 - a.field_i) {
+        if (BufferedSocket.field_h != -TextFieldValidator.field_i + 0 &&
+          BufferedSocket.field_h != 250 - TextFieldValidator.field_i) {
         }
         BufferedSocket.field_h = BufferedSocket.field_h + 1;
         if (param0 != -27347) {

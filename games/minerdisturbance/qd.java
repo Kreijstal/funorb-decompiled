@@ -306,18 +306,18 @@ final class qd extends kn implements sh {
             }
             ce.field_c = new String[var4];
             ai.a(fd.field_J, 0, ce.field_c, 0, var4);
-            ik.field_N = new String[-1 + (var3_int - var4)];
-            ai.a(fd.field_J, 1 + var4, ik.field_N, 0, -1 - var4 + var3_int);
+            AccountRegistrationPanel.field_N = new String[-1 + (var3_int - var4)];
+            ai.a(fd.field_J, 1 + var4, AccountRegistrationPanel.field_N, 0, -1 - var4 + var3_int);
             if (ce.field_c.length <= MouseWheelInput.field_g.length) {
               stackIn_23_0 = MouseWheelInput.field_g.length;
             } else {
               stackIn_23_0 = ce.field_c.length;
             }
             var5 = stackIn_23_0;
-            if (om.field_f.length >= ik.field_N.length) {
+            if (om.field_f.length >= AccountRegistrationPanel.field_N.length) {
               stackIn_26_0 = om.field_f.length;
             } else {
-              stackIn_26_0 = ik.field_N.length;
+              stackIn_26_0 = AccountRegistrationPanel.field_N.length;
             }
             var6 = stackIn_26_0;
             var7 = var6 + (var5 + 7);
@@ -353,11 +353,11 @@ final class qd extends kn implements sh {
               stackIn_38_0 = ne.field_K;
               stackIn_38_1 = 7 + (var5 + var8Lifetime3);
               stackIn_38_2 = var8Lifetime3;
-              stackIn_38_3 = ik.field_N.length;
+              stackIn_38_3 = AccountRegistrationPanel.field_N.length;
               if (stackIn_38_2 >= stackIn_38_3) {
                 stackIn_41_2 = "";
               } else {
-                stackIn_41_2 = ik.field_N[var8Lifetime3];
+                stackIn_41_2 = AccountRegistrationPanel.field_N[var8Lifetime3];
               }
               stackIn_38_0[stackIn_38_1] = stackIn_41_2;
             }
@@ -512,47 +512,47 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[15] = NetworkArchiveRequest.field_E;
         GameAppletShell.field_g[22] = jc.field_D;
         GameAppletShell.field_g[24] = IterableNodeHashTable.field_e;
-        e.field_i = new String[35][][];
+        PasswordValidator.field_i = new String[35][][];
         GameAppletShell.field_g[7] = ck.field_c[0];
         GameAppletShell.field_g[9] = ck.field_c[2];
         GameAppletShell.field_g[11] = jf.field_e;
         GameAppletShell.field_g[12] = tl.field_p + ":";
-        e.field_i[11] = AwtRasterBuffer.field_h;
-        e.field_i[10] = pb.field_R;
-        e.field_i[0] = nk.field_v;
-        e.field_i[14] = ec.field_g;
-        e.field_i[15] = dh.field_b;
-        e.field_i[28] = pf.field_g;
-        e.field_i[27] = wf.field_Y;
-        e.field_i[23] = nd.field_c;
-        e.field_i[6] = kd.field_b;
-        e.field_i[22] = wf.field_Q;
-        e.field_i[16] = FrameTimer.field_a;
-        e.field_i[9] = wi.field_x;
-        e.field_i[13] = oj.field_M;
-        e.field_i[12] = qm.field_g;
-        e.field_i[20] = jh.field_c;
-        e.field_i[25] = pc.field_e;
-        e.field_i[29] = ok.field_d;
-        e.field_i[4] = pf.field_d;
-        e.field_i[2] = wi.field_u;
-        e.field_i[8] = kn.field_D;
-        e.field_i[17] = tl.field_n;
-        e.field_i[5] = lf.field_i;
-        e.field_i[1] = AccountServiceResult.field_b;
-        e.field_i[3] = vi.field_c;
-        e.field_i[param0] = cg.field_K;
-        e.field_i[19] = af.field_n;
-        e.field_i[18] = lj.field_u;
-        e.field_i[7] = il.field_t;
-        e.field_i[26] = jh.field_d;
-        e.field_i[24] = jn.field_t;
-        e.field_i[34] = nj.field_b;
-        e.field_i[28] = pf.field_g;
-        e.field_i[33] = i.field_b;
-        e.field_i[32] = ob.field_n;
-        e.field_i[30] = vh.field_b;
-        e.field_i[31] = PacketBuffer.field_s;
+        PasswordValidator.field_i[11] = AwtRasterBuffer.field_h;
+        PasswordValidator.field_i[10] = pb.field_R;
+        PasswordValidator.field_i[0] = nk.field_v;
+        PasswordValidator.field_i[14] = ec.field_g;
+        PasswordValidator.field_i[15] = dh.field_b;
+        PasswordValidator.field_i[28] = pf.field_g;
+        PasswordValidator.field_i[27] = wf.field_Y;
+        PasswordValidator.field_i[23] = nd.field_c;
+        PasswordValidator.field_i[6] = kd.field_b;
+        PasswordValidator.field_i[22] = wf.field_Q;
+        PasswordValidator.field_i[16] = FrameTimer.field_a;
+        PasswordValidator.field_i[9] = wi.field_x;
+        PasswordValidator.field_i[13] = oj.field_M;
+        PasswordValidator.field_i[12] = qm.field_g;
+        PasswordValidator.field_i[20] = jh.field_c;
+        PasswordValidator.field_i[25] = pc.field_e;
+        PasswordValidator.field_i[29] = DebouncedFieldValidator.field_d;
+        PasswordValidator.field_i[4] = pf.field_d;
+        PasswordValidator.field_i[2] = wi.field_u;
+        PasswordValidator.field_i[8] = kn.field_D;
+        PasswordValidator.field_i[17] = tl.field_n;
+        PasswordValidator.field_i[5] = lf.field_i;
+        PasswordValidator.field_i[1] = AccountServiceResult.field_b;
+        PasswordValidator.field_i[3] = vi.field_c;
+        PasswordValidator.field_i[param0] = cg.field_K;
+        PasswordValidator.field_i[19] = af.field_n;
+        PasswordValidator.field_i[18] = lj.field_u;
+        PasswordValidator.field_i[7] = il.field_t;
+        PasswordValidator.field_i[26] = jh.field_d;
+        PasswordValidator.field_i[24] = jn.field_t;
+        PasswordValidator.field_i[34] = nj.field_b;
+        PasswordValidator.field_i[28] = pf.field_g;
+        PasswordValidator.field_i[33] = i.field_b;
+        PasswordValidator.field_i[32] = ob.field_n;
+        PasswordValidator.field_i[30] = vh.field_b;
+        PasswordValidator.field_i[31] = PacketBuffer.field_s;
     }
 
     static {

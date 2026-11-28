@@ -123,7 +123,7 @@ final class kl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ol.a((java.awt.Component) ((Object) param0), param1 ^ -102);
+          AccountRegistrationPanel.a((java.awt.Component) ((Object) param0), param1 ^ -102);
           if (param1 != -114) {
             return;
           }

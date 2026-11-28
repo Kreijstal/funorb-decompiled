@@ -102,15 +102,15 @@ class wk implements si {
           var37 = var30;
           var38 = var29 * (-1 + var12);
           if (param3 >= Bzip2State.field_q &&
-            qk.field_p >= param3) {
+            LevelCompletionUpdate.field_p >= param3) {
             var57 = qd.field_a[param3];
             var40 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - param5, 87);
             var41 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + param5, 105);
             var42 = ln.a(qg.field_z, RasterBuffer.field_e, param4 - var11, param6 + 88);
             var43 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var11, 85);
-            di.a(var40, (byte) 92, param1, var57, var42);
-            di.a(var42, (byte) 30, param2, var57, var43);
-            di.a(var43, (byte) -125, param1, var57, var41);
+            IndexedSpriteLayer.a(var40, (byte) 92, param1, var57, var42);
+            IndexedSpriteLayer.a(var42, (byte) 30, param2, var57, var43);
+            IndexedSpriteLayer.a(var43, (byte) -125, param1, var57, var41);
           }
           while (true) {
             if (var9 <= 0) {
@@ -166,36 +166,36 @@ class wk implements si {
             if (Bzip2State.field_q > var41Lifetime1) {
               continue;
             }
-            if (qk.field_p < var40Lifetime1) {
+            if (LevelCompletionUpdate.field_p < var40Lifetime1) {
               continue;
             }
             var42Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param4 + var8_int, 111);
             var43Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, -var8_int + param4, 118);
             if (var39 == 0) {
               if (var40Lifetime1 >= Bzip2State.field_q) {
-                di.a(var43Lifetime1, (byte) 66, param1, qd.field_a[var40Lifetime1], var42Lifetime1);
+                IndexedSpriteLayer.a(var43Lifetime1, (byte) 66, param1, qd.field_a[var40Lifetime1], var42Lifetime1);
               }
-              if (qk.field_p < var41Lifetime1) {
+              if (LevelCompletionUpdate.field_p < var41Lifetime1) {
                 continue;
               }
-              di.a(var43Lifetime1, (byte) 23, param1, qd.field_a[var41Lifetime1], var42Lifetime1);
+              IndexedSpriteLayer.a(var43Lifetime1, (byte) 23, param1, qd.field_a[var41Lifetime1], var42Lifetime1);
               continue;
             }
             var44 = ln.a(qg.field_z, RasterBuffer.field_e, var10 + param4, 104);
             var45 = ln.a(qg.field_z, RasterBuffer.field_e, -var10 + param4, 70);
             if (Bzip2State.field_q <= var40Lifetime1) {
               var58 = qd.field_a[var40Lifetime1];
-              di.a(var43Lifetime1, (byte) -100, param1, var58, var45);
-              di.a(var45, (byte) 59, param2, var58, var44);
-              di.a(var44, (byte) -115, param1, var58, var42Lifetime1);
+              IndexedSpriteLayer.a(var43Lifetime1, (byte) -100, param1, var58, var45);
+              IndexedSpriteLayer.a(var45, (byte) 59, param2, var58, var44);
+              IndexedSpriteLayer.a(var44, (byte) -115, param1, var58, var42Lifetime1);
             }
-            if (qk.field_p < var41Lifetime1) {
+            if (LevelCompletionUpdate.field_p < var41Lifetime1) {
               continue;
             }
             var59 = qd.field_a[var41Lifetime1];
-            di.a(var43Lifetime1, (byte) -111, param1, var59, var45);
-            di.a(var45, (byte) -96, param2, var59, var44);
-            di.a(var44, (byte) -116, param1, var59, var42Lifetime1);
+            IndexedSpriteLayer.a(var43Lifetime1, (byte) -111, param1, var59, var45);
+            IndexedSpriteLayer.a(var45, (byte) -96, param2, var59, var44);
+            IndexedSpriteLayer.a(var44, (byte) -116, param1, var59, var42Lifetime1);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -211,7 +211,7 @@ class wk implements si {
           return;
         }
         try {
-          Torquing.a(-49, param7);
+          Torquing.applyPreferredDisplayMode(-49, param7);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wk.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
         }

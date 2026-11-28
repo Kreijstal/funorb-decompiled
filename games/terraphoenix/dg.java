@@ -13,8 +13,8 @@ final class dg {
     }
 
     final static java.applet.Applet a(boolean param0) {
-        if (le.field_r != null) {
-          return le.field_r;
+        if (AgeValidator.field_r != null) {
+          return AgeValidator.field_r;
         }
         if (param0) {
           dg.b(false);
@@ -77,7 +77,7 @@ final class dg {
         int var3 = 0;
         var3 = Terraphoenix.field_V;
         try {
-          var1 = di.field_l;
+          var1 = TextFieldValidator.field_l;
           if (param0 < 37) {
             field_c = (im) null;
           }
@@ -87,7 +87,7 @@ final class dg {
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ProxySocketConnector.a(-124, var1);
-            di.field_l.backpatchByteLength(var1.position - var2, -119);
+            TextFieldValidator.field_l.backpatchByteLength(var1.position - var2, -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

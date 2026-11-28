@@ -23,14 +23,14 @@ final class SpriteAnimationPlayer {
         if (param0 != 109) {
           return;
         }
-        if (this.field_k == ga.field_n) {
+        if (this.field_k == ConfirmedEmailAvailabilityValidator.field_n) {
           return;
         }
         if (this.field_k == li.field_h) {
           this.field_e = this.field_e - (param1 >> 2);
           if (0 >= this.field_e) {
             this.field_e = 0;
-            this.field_k = ga.field_n;
+            this.field_k = ConfirmedEmailAvailabilityValidator.field_n;
           }
           return;
         }
@@ -154,7 +154,7 @@ final class SpriteAnimationPlayer {
             this.field_k = rl.field_f;
             this.prepareNextFrame((byte) 28);
           } else {
-            this.field_k = ga.field_n;
+            this.field_k = ConfirmedEmailAvailabilityValidator.field_n;
           }
           if (param2 == -10872) {
             return;

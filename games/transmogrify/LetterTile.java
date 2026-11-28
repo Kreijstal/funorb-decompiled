@@ -53,7 +53,7 @@ final class LetterTile extends IntrusiveNode {
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
-        wl.field_K.b(param3 + this.x, param1 + this.y, ff.field_H[this.carryoverFlag]);
+        AccountRegistrationPanel.field_K.b(param3 + this.x, param1 + this.y, LoginPanel.field_H[this.carryoverFlag]);
         if (!this.doublesWordScore) {
           var14 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
           var6 = this.field_n.field_c.a(this.letter);
@@ -74,7 +74,7 @@ final class LetterTile extends IntrusiveNode {
         }
         param0 = param0 >> 3;
         if ((param0 & 31) == 31) {
-          wl.field_K.b(this.x + param3, this.y + param1, 10539762);
+          AccountRegistrationPanel.field_K.b(this.x + param3, this.y + param1, 10539762);
         } else {
           MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
           var12 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
@@ -276,7 +276,7 @@ final class LetterTile extends IntrusiveNode {
           return;
         }
         try {
-          var5 = ff.field_D;
+          var5 = LoginPanel.field_D;
           var5.writeCipheredByte(false, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;

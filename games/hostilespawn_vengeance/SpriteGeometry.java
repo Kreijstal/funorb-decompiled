@@ -12,7 +12,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     static String field_t;
     int field_r;
     int field_y;
-    static pg field_v;
+    static IndexedSprite field_v;
     static RgbSprite field_B;
     static RgbSprite field_q;
 
@@ -92,7 +92,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         this.a(param3, param2 << 8, param4, false, param1 << 5);
         if (!param0) {
-          field_v = (pg) null;
+          field_v = (IndexedSprite) null;
         }
     }
 

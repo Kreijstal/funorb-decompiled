@@ -81,7 +81,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           if (param0 < 111) {
             field_t = (hh) null;
           }
-          stackIn_3_0 = ti.a(10, param1, 113, true);
+          stackIn_3_0 = LoginPanel.a(10, param1, 113, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

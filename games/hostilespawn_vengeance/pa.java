@@ -100,7 +100,7 @@ final class pa extends ql {
               var14++;
               param0.field_l.a(2, (byte) 94, param0.field_c);
               param0.a(8573);
-              if (param2[param0.field_j.b(-4)] == 2) {
+              if (param2[param0.field_j.getClampedTileIndex(-4)] == 2) {
                 var13 = 1;
                 param0.field_e = 1;
                 if (param0.field_i == 32) {
@@ -253,7 +253,7 @@ final class pa extends ql {
                   var57 = jn.field_F[fieldTemp$0];
                   var36 = var57;
                   var36.field_i = 36;
-                  var57.field_j.a((byte) 46, ((oj) (var20)).field_j);
+                  var57.field_j.copyCoordinatesFrom((byte) 46, ((oj) (var20)).field_j);
                   var57.field_l.a(((oj) (var20)).field_l, -28860);
                   var57.field_l.field_a = var57.field_l.field_a - 0.5;
                   var57.field_l.field_f = var57.field_l.field_f - 0.5;
@@ -390,13 +390,13 @@ final class pa extends ql {
         int var7 = HostileSpawn.field_I ? 1 : 0;
         RgbSprite[] var1 = new RgbSprite[sc.field_c];
         for (var2 = 0; var2 < sc.field_c; var2++) {
-          var3 = sf.field_X[var2] * hd.field_r[var2];
+          var3 = TextInputField.field_X[var2] * ConfirmedEmailAvailabilityValidator.field_r[var2];
           var4 = ja.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = bf.field_d[PcmOutputWorker.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var5);
+          var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var5);
         }
         if (param0 != 14) {
           field_d = true;
@@ -406,28 +406,28 @@ final class pa extends ql {
     }
 
     final void e(int param0) {
-        oc[] var2;
+        GridPoint[] var2;
         int var3;
         int var4;
         int var8;
-        oc[] var9;
-        oc[] var5;
+        GridPoint[] var9;
+        GridPoint[] var5;
         int var6;
-        oc var7;
+        GridPoint var7;
         int var10;
         int var4Lifetime1;
         var8 = HostileSpawn.field_I ? 1 : 0;
-        var9 = new oc[5];
+        var9 = new GridPoint[5];
         var2 = var9;
-        var9[0] = new oc(ln.field_a.field_v[2], ln.field_a.field_v[3]);
-        var9[1] = new oc(ln.field_a.field_v[6], ln.field_a.field_v[7]);
-        var9[2] = new oc(ln.field_a.field_v[8], ln.field_a.field_v[9]);
-        var9[3] = new oc(ln.field_a.field_v[16], ln.field_a.field_v[17]);
-        var9[4] = new oc(ln.field_a.field_v[18], ln.field_a.field_v[19]);
+        var9[0] = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
+        var9[1] = new GridPoint(ln.field_a.field_v[6], ln.field_a.field_v[7]);
+        var9[2] = new GridPoint(ln.field_a.field_v[8], ln.field_a.field_v[9]);
+        var9[3] = new GridPoint(ln.field_a.field_v[16], ln.field_a.field_v[17]);
+        var9[4] = new GridPoint(ln.field_a.field_v[18], ln.field_a.field_v[19]);
         this.field_m = new oj[5];
         var3 = 0;
         this.field_g = new v[this.field_m.length];
-        for (var4 = 0; el.field_j > var4; var4++) {
+        for (var4 = 0; ProxySocketFactory.field_j > var4; var4++) {
           if (od.a(mm.field_m[var4].field_i, 1)) {
             var5 = var9;
             var6 = 0;
@@ -445,13 +445,13 @@ final class pa extends ql {
             }
           }
         }
-        ih.field_y = new oc[6];
-        ih.field_y[0] = new oc(ln.field_a.field_v[0], ln.field_a.field_v[1]);
-        ih.field_y[1] = new oc(ln.field_a.field_v[4], ln.field_a.field_v[5]);
-        ih.field_y[2] = new oc(ln.field_a.field_v[10], ln.field_a.field_v[11]);
-        ih.field_y[3] = new oc(ln.field_a.field_v[12], ln.field_a.field_v[13]);
-        ih.field_y[4] = new oc(ln.field_a.field_v[14], ln.field_a.field_v[15]);
-        ih.field_y[5] = new oc(ln.field_a.field_v[20], ln.field_a.field_v[21]);
+        ih.field_y = new GridPoint[6];
+        ih.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
+        ih.field_y[1] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
+        ih.field_y[2] = new GridPoint(ln.field_a.field_v[10], ln.field_a.field_v[11]);
+        ih.field_y[3] = new GridPoint(ln.field_a.field_v[12], ln.field_a.field_v[13]);
+        ih.field_y[4] = new GridPoint(ln.field_a.field_v[14], ln.field_a.field_v[15]);
+        ih.field_y[5] = new GridPoint(ln.field_a.field_v[20], ln.field_a.field_v[21]);
         var10 = param0;
         var4Lifetime1 = var10;
         while (var10 < 5) {
@@ -459,7 +459,7 @@ final class pa extends ql {
           var10++;
         }
         CrossfadingMidiPcmStream.a(10, param0 ^ 1);
-        nh.field_E.a(-1, 8360, -1);
+        nh.field_E.setCoordinates(-1, 8360, -1);
         this.field_j = new v(re.field_B, 0, 0, 200, false);
         this.field_j.field_l = 0;
         this.field_k = new v(AccountServiceResult.field_h, 0, 0, 200, false);
@@ -481,7 +481,7 @@ final class pa extends ql {
         var6 = HostileSpawn.field_I ? 1 : 0;
         var2 = -86 / ((param0 - 38) / 53);
         if (10 != ha.field_t) {
-          stackIn_14_0 = (of.field_d != dn.field_i);
+          stackIn_14_0 = (ClientLookupTables.field_d != dn.field_i);
           return stackIn_14_0;
         }
         if (100 >= ng.field_u) {
@@ -503,7 +503,7 @@ final class pa extends ql {
         int stackIn_10_1 = 0;
         double stackIn_24_0 = 0.0;
         int stackIn_25_1 = 0;
-        oc var3;
+        GridPoint var3;
         int var4;
         int var5;
         int var6;
@@ -523,7 +523,7 @@ final class pa extends ql {
           var13 = mm.field_m[0];
           var3 = var13.field_j;
           if (ha.field_t == 10) {
-            nh.field_E.a(-1, 8360, -1);
+            nh.field_E.setCoordinates(-1, 8360, -1);
             var5 = 0;
             var6 = -1;
             for (var7_int = 1; var7_int <= 5; var7_int++) {
@@ -594,9 +594,9 @@ final class pa extends ql {
               }
               break regionExit1;
             }
-            if (of.field_d != dn.field_i) {
+            if (ClientLookupTables.field_d != dn.field_i) {
               CrossfadingMidiPcmStream.a(0, 1);
-              nh.field_E.a((byte) 46, ih.field_y[0]);
+              nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
               this.field_k.field_d = -this.field_k.field_h + var3.field_g * 24 - 60;
               this.field_k.field_l = 24 * var3.field_e - 100;
             } else {

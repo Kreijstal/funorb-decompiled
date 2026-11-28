@@ -323,7 +323,7 @@ abstract class lg {
             stackIn_3_0 = ki.field_b;
             return stackIn_3_0;
           }
-          var3 = dg.j(1);
+          var3 = AccountRegistrationPanel.j(1);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.a(var2, 0)) {

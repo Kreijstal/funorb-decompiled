@@ -283,7 +283,7 @@ final class ib extends fj {
         if (param0) {
           return;
         }
-        CipherPacketBuffer.field_u = new bf();
+        CipherPacketBuffer.field_u = new DisplayNameSelectionPanel();
         dn.field_b.a((fj) (CipherPacketBuffer.field_u), (byte) -72);
     }
 

@@ -52,7 +52,7 @@ final class dj {
             kn.field_b = param0;
             fa.field_j = param11;
             an.field_E = param3;
-            dn.field_Q = param2;
+            LoginPanel.field_Q = param2;
             if (param12 != -27) {
               var16 = (PacketBuffer) null;
               dj.a((PacketBuffer) null, (byte) 79);
@@ -115,7 +115,7 @@ final class dj {
           for (var2_int = 0; param1.length() > var2_int; var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!uc.a(param0 - 854863799, (char) var3) &&
-              !qm.a(57, (char) var3)) {
+              !EmailFormatValidator.a(57, (char) var3)) {
               return true;
             }
           }

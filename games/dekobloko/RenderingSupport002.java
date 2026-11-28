@@ -145,7 +145,7 @@ final class RenderingSupport002 {
 
     final static void performAction0249(boolean booleanArgument1, int integerArgument2) {
         if (UiComponentPart017.integerState0437 > 0 &&
-          SceneWidgetPart013.booleanState0202) {
+          LobbyRoomRow.booleanState0202) {
           SoftwareRaster.darkenRectangleHalf(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
           SceneWidgetPart011.sceneWidgetState0115.performAction1767(integerArgument2 ^ 1141039779, booleanArgument1);
         }

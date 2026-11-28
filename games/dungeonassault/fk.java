@@ -14,7 +14,7 @@ final class fk extends kl {
     static String field_r;
     private String field_w;
 
-    final void a(lb param0, int param1) {
+    final void a(PlayerDungeonProfile param0, int param1) {
         int var3_int = 0;
         RuntimeException runtimeException = null;
         Raider var4 = null;
@@ -151,7 +151,7 @@ final class fk extends kl {
         if (-1 != this.field_q) {
           var5 = gm.field_d.field_a[this.field_q];
         }
-        qe.a(50 + this.field_k, this.field_j + 136, (Raider) (var5), 0);
+        DungeonAssaultScreen.drawRaiderStatBars(50 + this.field_k, this.field_j + 136, (Raider) (var5), 0);
         if (var5 != null) {
           db.field_v.a(((Raider) (var5)).field_n.field_F.toUpperCase(), 45 + this.field_k, this.field_j + 62, 139, 58, 16777215, -1, 1, 1, db.field_v.field_H);
         }
@@ -371,7 +371,7 @@ final class fk extends kl {
             var6 = 86 * var3 + (this.field_j + 57);
             if (gm.field_d.field_a[var2] != null) {
               gm.field_d.field_a[var2].field_b.drawAnimation(60, var6 + 6, (byte) 102, var5 + 6, 60);
-              qe.a(72 + (var5 - 4), -4 + (var6 + 72), 3, gm.field_d.field_a[var2], 0);
+              DungeonAssaultScreen.drawRaiderStatusIndicators(72 + (var5 - 4), -4 + (var6 + 72), 3, gm.field_d.field_a[var2], 0);
               var7 = (int)(64.0 * (te.c(mo.field_a, 10273 * var2, 0.015625) + 2.0));
               if (var7 < 0) {
                 var7 = 0;
@@ -395,7 +395,7 @@ final class fk extends kl {
             null != gm.field_d.field_a[var5Lifetime1]) {
             stackIn_30_0 = gm.field_d.field_a[var5Lifetime1];
             ((SpriteAnimationPlayer) (Object) stackIn_30_0.field_b).drawAnimation(84, 6 + var4Lifetime1, (byte) 102, 6 + var3Lifetime1, 84);
-            qe.a(var3Lifetime1 + 96 - 4, var4Lifetime1 + 96 - 4, 3, gm.field_d.field_a[var5Lifetime1], 0);
+            DungeonAssaultScreen.drawRaiderStatusIndicators(var3Lifetime1 + 96 - 4, var4Lifetime1 + 96 - 4, 3, gm.field_d.field_a[var5Lifetime1], 0);
             var3Lifetime1 += 130;
           }
         }
@@ -455,11 +455,11 @@ final class fk extends kl {
         try {
           this.field_t = param1;
           this.field_w = param0;
-          this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, be.field_r.toUpperCase());
+          this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, MatchingFieldValidator.field_r.toUpperCase());
           this.field_o = tn.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), IntrusiveNode.field_c, jm.field_i, -73, lk.field_P);
           this.field_f.addFirst(this.field_p, false);
           this.field_f.addFirst(this.field_o, false);
-          this.a((lb) null, 83);
+          this.a((PlayerDungeonProfile) null, 83);
           this.field_m = mf.a(10449103, 72, 6, 72, (byte) -102);
           this.field_n = mf.a(255, 72, 12, 72, (byte) 71);
           this.field_u = mf.a(16711680, 72, 12, 72, (byte) -83);

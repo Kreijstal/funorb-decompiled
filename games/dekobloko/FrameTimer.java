@@ -32,7 +32,7 @@ abstract class FrameTimer {
           if (integerArgument17 != 10406) {
             return;
           }
-          ClientException.performAction0366(bitmapFontArgument2, integerArgument8, integerArgument7, new MixedSupport015(rgbSpriteArrayArgument1), new MixedSupport015(rgbSpriteArrayArgument3), new MixedSupport015(rgbSpriteArrayArgument14), integerArgument15, integerArgument4, bitmapFontArgument13, integerArgument11, integerArgument19, integerArgument12, integerArgument6, false, integerArgument16, integerArgument10, integerArgument18, integerArgument5, integerArgument9, integerArgument20);
+          ClientException.performAction0366(bitmapFontArgument2, integerArgument8, integerArgument7, new NineSliceSprite(rgbSpriteArrayArgument1), new NineSliceSprite(rgbSpriteArrayArgument3), new NineSliceSprite(rgbSpriteArrayArgument14), integerArgument15, integerArgument4, bitmapFontArgument13, integerArgument11, integerArgument19, integerArgument12, integerArgument6, false, integerArgument16, integerArgument10, integerArgument18, integerArgument5, integerArgument9, integerArgument20);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal14) {
           caughtExceptionLocal12 = caughtParameterLocal14;

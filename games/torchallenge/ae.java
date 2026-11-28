@@ -58,8 +58,8 @@ final class ae extends IntrusiveNode {
         if (param0 != 4) {
           String[] var2 = (String[]) null;
           ae.a((byte) 91, (String[]) null);
-          if (bh.field_o != null) {
-            bh.field_o.dispose();
+          if (PasswordValidator.field_o != null) {
+            PasswordValidator.field_o.dispose();
             if (null != re.field_B) {
               re.field_B.dispose();
             }
@@ -70,13 +70,13 @@ final class ae extends IntrusiveNode {
           }
           return;
         }
-        if (bh.field_o == null) {
+        if (PasswordValidator.field_o == null) {
           if (null != re.field_B) {
             re.field_B.dispose();
           }
           return;
         }
-        bh.field_o.dispose();
+        PasswordValidator.field_o.dispose();
         if (null != re.field_B) {
           re.field_B.dispose();
         }

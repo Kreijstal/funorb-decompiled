@@ -39,7 +39,7 @@ class aa extends e {
         }
         try {
           var1 = new RgbSprite(540, 140);
-          r.a(var1, 45);
+          TextFieldValidator.a(var1, 45);
           bl.b();
           SoftwareRasterizer.clearRaster();
           vg.field_z = 0;

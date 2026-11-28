@@ -49,10 +49,10 @@ abstract class aa extends im {
             this.field_P = 0;
             return;
           }
-          if (this.field_S == gf.field_j) {
+          if (this.field_S == TextFieldValidator.field_j) {
             return;
           }
-          this.field_S = gf.field_j;
+          this.field_S = TextFieldValidator.field_j;
           this.field_P = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ abstract class aa extends im {
         int fieldTemp$1 = 0;
         int var3 = Torquing.field_u;
         if (this.field_S != null) {
-          if (this.field_S == gf.field_j) {
+          if (this.field_S == TextFieldValidator.field_j) {
             fieldTemp$0 = this.field_P + 1;
             this.field_P = this.field_P + 1;
             if (this.field_W != fieldTemp$0) {
@@ -204,7 +204,7 @@ abstract class aa extends im {
     }
 
     final void g(byte param0) {
-        if (gf.field_j == this.field_S) {
+        if (TextFieldValidator.field_j == this.field_S) {
           return;
         }
         this.field_S = ql.field_s;

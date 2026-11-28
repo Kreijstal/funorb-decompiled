@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends a {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private String checkedName;
     private boolean nameAvailable;
 
@@ -14,7 +14,7 @@ final class AccountNameAvailabilityValidator extends a {
         GameKeyHandler.field_b.a(param1, -1, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, param0), param0 + 121);
     }
 
-    final String a(String param0, boolean param1) {
+    final String getValidationMessage(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -31,7 +31,7 @@ final class AccountNameAvailabilityValidator extends a {
         try {
           if (param1) {
             var5 = (String) null;
-            this.a((String) null, true);
+            this.getValidationMessage((String) null, true);
           }
           var6 = (CharSequence) ((Object) param0);
           var3 = sj.a(var6, 0);
@@ -75,7 +75,7 @@ final class AccountNameAvailabilityValidator extends a {
         this.checkedName = null;
         if (!param0) {
           String var3 = (String) null;
-          this.a((String) null, true);
+          this.getValidationMessage((String) null, true);
         }
     }
 
@@ -87,7 +87,7 @@ final class AccountNameAvailabilityValidator extends a {
         ab.field_u = false;
     }
 
-    final qf a(String param0, byte param1) {
+    final qf getValidationStatus(String param0, byte param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -118,7 +118,7 @@ final class AccountNameAvailabilityValidator extends a {
           }
           if (param1 > -109) {
             var4 = (String) null;
-            this.a((String) null, true);
+            this.getValidationMessage((String) null, true);
           }
           if (!this.nameAvailable) {
             stackIn_15_0 = rg.field_f;
@@ -140,7 +140,7 @@ final class AccountNameAvailabilityValidator extends a {
         }
     }
 
-    AccountNameAvailabilityValidator(vg param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }

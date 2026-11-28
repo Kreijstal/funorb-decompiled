@@ -1,0 +1,195 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class MatchingFieldValidator extends TextFieldValidator {
+    private EditableTextField field_l;
+    static int field_n;
+    static wg field_m;
+    static int field_o;
+
+    final sc getValidationStatus(int param0, String param1) {
+        FieldValidator var3 = null;
+        RuntimeException var3_ref = null;
+        sc stackIn_2_0 = null;
+        sc stackIn_8_0 = null;
+        sc stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 0) {
+            stackIn_2_0 = (sc) null;
+            return stackIn_2_0;
+          }
+          if (this.field_l instanceof FieldValidatorProvider) {
+            var3 = ((FieldValidatorProvider) ((Object) this.field_l)).getFieldValidator((byte) -106);
+            if (var3 != null &&
+              var3.getValidationStatus((byte) 124) != rh.field_p) {
+              stackIn_8_0 = ni.field_b;
+              return stackIn_8_0;
+            }
+          }
+          if (!param1.equals(this.field_l.field_u)) {
+            stackIn_12_0 = ni.field_b;
+          } else {
+            stackIn_12_0 = rh.field_p;
+          }
+          return stackIn_12_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_15_0 = var3_ref;
+          stackIn_15_1 = new StringBuilder().append("g.H(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    public static void e(int param0) {
+        field_m = null;
+        if (param0 != -17779) {
+          MatchingFieldValidator.f(98);
+        }
+    }
+
+    final static boolean f(int param0) {
+        if (param0 != 256) {
+          field_m = (wg) null;
+        }
+        return gf.a(0, kk.c(param0 ^ -14303));
+    }
+
+    final String getValidationMessage(byte param0, String param1) {
+        FieldValidator var3 = null;
+        RuntimeException var3_ref = null;
+        String var4 = null;
+        String stackIn_6_0 = null;
+        String stackIn_8_0 = null;
+        String stackIn_14_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_l instanceof FieldValidatorProvider) {
+            var3 = ((FieldValidatorProvider) ((Object) this.field_l)).getFieldValidator((byte) 125);
+            if (var3 != null) {
+              if (var3.getValidationStatus((byte) 122) == rh.field_p &&
+                !param1.equals(this.field_l.field_u)) {
+                stackIn_6_0 = re.field_cb;
+                return stackIn_6_0;
+              }
+              stackIn_8_0 = var3.getValidationMessage((byte) 82);
+              return stackIn_8_0;
+            }
+          }
+          if (param0 != -126) {
+            var4 = (String) null;
+            this.getValidationStatus(-64, (String) null);
+          }
+          if (param1.equals(this.field_l.field_u)) {
+            return null;
+          }
+          stackIn_14_0 = re.field_cb;
+          return stackIn_14_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_17_0 = var3_ref;
+          stackIn_17_1 = new StringBuilder().append("g.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, int param1) {
+        int var3 = 0;
+        PcmSampleStream[] var2 = null;
+        PcmSampleStream var2_ref = null;
+        PcmSampleStream var4 = null;
+        int var5 = 0;
+        PcmSampleStream[] var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2_ref2 = null;
+        PcmSampleStream var2_refLifetime1;
+        PcmSampleStream var2_refLifetime2;
+        var5 = Lexicominos.field_L ? 1 : 0;
+        try {
+          oc.field_e = param0;
+          var6 = BitPacketBuffer.field_o;
+          var2 = var6;
+          for (var3 = 0; var3 < var6.length; var3++) {
+            var4 = var6[var3];
+            var2_ref = var4;
+            var2_refLifetime2 = var4;
+            if (var4 != null) {
+              var4.f(param0 * 128 / 256);
+            }
+          }
+          if (param1 <= 49) {
+            field_m = (wg) null;
+          }
+          var2_refLifetime1 = BitPacketBuffer.field_o[9];
+          if (!var2_refLifetime1.isLinked(false)) {
+            var2_refLifetime1.c(0);
+            wj.field_j.a(var2_refLifetime1);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref2 = decompiledCaughtException;
+          throw ld.wrapClientException((Throwable) ((Object) var2_ref2), "g.A(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static void a(int param0, byte param1) {
+        int var3 = 0;
+        sj var4 = null;
+        nc var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var3 = Lexicominos.field_L ? 1 : 0;
+        try {
+          var5 = (nc) (Bzip2State.field_b.beginForward(true));
+          if (param1 >= -38) {
+            field_m = (wg) null;
+          }
+          while (var5 != null) {
+            ga.a(var5, param0, 74);
+            var5 = (nc) (Bzip2State.field_b.nextForward(2));
+          }
+          var4 = (sj) (il.field_b.beginForward(true));
+          while (var4 != null) {
+            CrossfadingMidiPcmStream.a(var4, (byte) -123, param0);
+            var4 = (sj) (il.field_b.nextForward(2));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ld.wrapClientException((Throwable) ((Object) var2), "g.K(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    MatchingFieldValidator(EditableTextField param0, EditableTextField param1) {
+        super(param0);
+        try {
+          this.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_o = 5;
+    }
+}

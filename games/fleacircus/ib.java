@@ -206,9 +206,9 @@ final class ib implements ComponentLayout {
             }
             nb.field_i = 1;
             var3 = var1.readString(0);
-            ul.field_F = ((String) (var3)).intern();
+            LoginPanel.field_F = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(false);
-            ul.a(18398, var4);
+            LoginPanel.a(18398, var4);
             return;
           }
           if (null == di.field_b) {

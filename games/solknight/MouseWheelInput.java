@@ -155,7 +155,7 @@ abstract class MouseWheelInput {
             stackIn_4_0 = SolKnight.field_D;
             return stackIn_4_0;
           }
-          var4 = cl.d((byte) -30);
+          var4 = AgeValidator.d((byte) -30);
           var5 = 0;
           while (true) {
             if (var5 >= var4.length) {

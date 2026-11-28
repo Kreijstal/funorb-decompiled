@@ -21,11 +21,11 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (param0 != 31077) {
           return true;
         }
-        if (de.field_f == 13) {
+        if (DebouncedFieldValidator.field_f == 13) {
           on.a(9110);
           return true;
         }
-        if (de.field_f == 102) {
+        if (DebouncedFieldValidator.field_f == 102) {
           TextureOperator.field_n.a((byte) 34);
           return true;
         }
@@ -49,8 +49,8 @@ final class SecondaryNodeDequeIterator implements Iterator {
           jm.d(1, param2);
         }
         if (param0 == 1 &&
-          param1 != oa.field_p) {
-          oa.field_p = param1;
+          param1 != ConfirmedEmailAvailabilityValidator.field_p) {
+          ConfirmedEmailAvailabilityValidator.field_p = param1;
           dc.field_B = true;
           jm.d(1, param2);
         }

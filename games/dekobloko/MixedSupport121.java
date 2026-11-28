@@ -66,7 +66,7 @@ final class MixedSupport121 implements CallbackContract004 {
     }
 
     final static void performAction1600(byte byteArgument1) {
-        UiComponentPart018.performAction1032(9, 11, MixedSupport016.sceneWidgetPart013State0001.computeInteger1710(102));
+        UiComponentPart018.performAction1032(9, 11, MixedSupport016.sceneWidgetPart013State0001.getRoomId(102));
         GameDomainSupport006.booleanState0227 = true;
         if (byteArgument1 >= -2) {
           sceneWidgetState0117 = (SceneWidget) null;

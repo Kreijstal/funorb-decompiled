@@ -39,7 +39,7 @@ abstract class RasterBuffer {
             return stackIn_3_0;
           }
           if (ba.field_d != 2) {
-            stackIn_7_0 = oa.field_o;
+            stackIn_7_0 = ConfirmedEmailAvailabilityValidator.field_o;
             return stackIn_7_0;
           }
           var8 = vo.a(param2, 0);

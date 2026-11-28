@@ -23,7 +23,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           return;
         }
         String var2 = (String) null;
-        cl.a((byte) 41, (String) null, "");
+        ValidatedTextField.a((byte) 41, (String) null, "");
     }
 
     final static boolean d(int param0) {

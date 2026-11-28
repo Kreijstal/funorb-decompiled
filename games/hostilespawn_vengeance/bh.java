@@ -100,7 +100,7 @@ final class bh {
               var23 = var21 * var11_int + var18 >> 2;
               if ((param0 != 0 ||
                 !(gj.field_h * var21 + var16 * CipherPacketBuffer.field_s < 0)) && (param2 != 0 ||
-                !(0 <= var17 * bj.field_d + ic.field_n * var22))) {
+                !(0 <= var17 * DebouncedFieldValidator.field_d + ic.field_n * var22))) {
                 if (param0 != 2 &&
                   var23 < 0) {
                   var24 = (int)Math.sqrt((double)(var16 * var16 + var21 * var21));

@@ -16,7 +16,7 @@ class mg extends a {
     public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         try {
           if (param0) {
-            eb.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 + param1.field_e);
+            DisplayNameSelectionPanel.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 + param1.field_e);
           }
           if (param4 < 19) {
             mg.clearStaticReferences(88);

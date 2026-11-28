@@ -62,7 +62,7 @@ class sh extends mh implements rc {
                 var6.a(AppletShell.field_d, (sk) (this), -4);
               }
             } else {
-              var6.a(ck.field_f, 8, (byte) 97);
+              var6.a(DebouncedFieldValidator.field_f, 8, (byte) 97);
             }
           } else {
             var6.a(oc.field_c, 7, (byte) 60);

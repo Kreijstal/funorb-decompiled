@@ -187,9 +187,9 @@ class qb extends k {
           for (var8Lifetime1 = 0; var8Lifetime1 < pt.field_a.length; var8Lifetime1++) {
             stackIn_25_0 = true;
             stackIn_26_1 = !(gn.field_l[var8Lifetime1] < 0);
-            var9Lifetime1 = hka.a(stackIn_25_0, stackIn_26_1, pt.field_a[var8Lifetime1]);
+            var9Lifetime1 = AgeValidator.a(stackIn_25_0, stackIn_26_1, pt.field_a[var8Lifetime1]);
             if (gn.field_l[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + 2 * hna.field_k;
+              var9Lifetime1 = var9Lifetime1 + 2 * ConfirmedEmailAvailabilityValidator.field_k;
             }
             if (var9Lifetime1 > var7Lifetime1) {
               var7Lifetime1 = var9Lifetime1;

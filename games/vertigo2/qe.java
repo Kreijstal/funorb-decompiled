@@ -5,7 +5,7 @@ final class qe extends pn {
     static int field_Z;
     static String[] field_U;
     private int field_Y;
-    private of field_J;
+    private FieldValidator field_J;
     static String field_X;
     static String field_V;
     private Sprite field_bb;
@@ -77,7 +77,7 @@ final class qe extends pn {
         var24 = null;
         var29 = null;
         var13 = Vertigo2.field_L ? 1 : 0;
-        var6 = this.field_J.a(-23996);
+        var6 = this.field_J.getValidationStatus(-23996);
         if (var6 == tk.field_n) {
           var17 = lr.field_L;
           if (!var17.equals(this.text)) {
@@ -85,7 +85,7 @@ final class qe extends pn {
             this.e((byte) -118);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_J.a(-23996);
+          var6 = this.field_J.getValidationStatus(-23996);
           var34 = (qa) ((Object) this.listener);
           var9 = this.x + param2;
           var10 = var34.a((UiWidget) (this), 1, param3) + (var34.b((UiWidget) (this), 110).b((byte) 91) >> 1);
@@ -152,7 +152,7 @@ final class qe extends pn {
             this.e((byte) -118);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_J.a(-23996);
+          var6 = this.field_J.getValidationStatus(-23996);
           var35 = (qa) ((Object) this.listener);
           var9Lifetime1 = this.x + param2;
           var10Lifetime1 = var35.a((UiWidget) (this), 1, param3) + (var35.b((UiWidget) (this), 110).b((byte) 91) >> 1);
@@ -212,7 +212,7 @@ final class qe extends pn {
           this.field_bb.d(-(var25.field_x >> 1) + var9Lifetime1, -var25.field_B + var10Lifetime1, 256);
           return;
         }
-        var5 = this.field_J.d(-27183);
+        var5 = this.field_J.getValidationMessage(-27183);
         if (var5 == null) {
           var5 = this.field_ab;
         }
@@ -221,7 +221,7 @@ final class qe extends pn {
           this.e((byte) -118);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_J.a(-23996);
+        var6Lifetime1 = this.field_J.getValidationStatus(-23996);
         var36 = (qa) ((Object) this.listener);
         var9Lifetime2 = this.x + param2;
         var10Lifetime2 = var36.a((UiWidget) (this), 1, param3) + (var36.b((UiWidget) (this), 110).b((byte) 91) >> 1);
@@ -293,7 +293,7 @@ final class qe extends pn {
         }
     }
 
-    qe(of param0, String param1, int param2, int param3, int param4, int param5) {
+    qe(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ni.a(false));
         try {
           this.field_ab = param1;
@@ -350,11 +350,11 @@ final class qe extends pn {
           if (AccountCreationResultPanel.field_qb == um.field_F &&
             param0.equals(uk.field_u)) {
             um.field_F = l.field_a;
-            stackIn_11_0 = rf.field_p;
+            stackIn_11_0 = MatchingFieldValidator.field_p;
             return stackIn_11_0;
           }
           uk.field_u = param0;
-          rf.field_p = null;
+          MatchingFieldValidator.field_p = null;
           um.field_F = bf.field_b;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);

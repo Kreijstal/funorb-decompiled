@@ -23,7 +23,7 @@ final class GzipDecompressor {
     }
 
     final static void a(int param0) {
-        nf.field_M = mi.c((byte) 105);
+        DisplayNameSelectionPanel.field_M = mi.c((byte) 105);
         nb.field_a = new f();
         wa.a(true, true, 30);
         if (param0 >= -53) {

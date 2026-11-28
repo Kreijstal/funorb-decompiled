@@ -68,7 +68,7 @@ final class qh {
           kb.field_S = true;
           FrameTimer.field_f = param2;
           if (FrameTimer.field_f == 0) {
-            var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+            var3_int = TextFieldValidator.a(AgeValidator.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = 3 + var3_int;
             cb.field_k = new int[var4];
             ka.field_g = new String[var4];
@@ -87,7 +87,7 @@ final class qh {
             cb.field_k[var4 - 1] = 1;
             fi.field_c[1] = 5;
           } else if (FrameTimer.field_f == 1) {
-            var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+            var3_int = TextFieldValidator.a(AgeValidator.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = var3_int + 2;
             cb.field_k = new int[var4];
             ka.field_g = new String[var4];
@@ -104,10 +104,10 @@ final class qh {
             fi.field_c[0] = 5;
           } else if (FrameTimer.field_f != 2) {
             if (3 == FrameTimer.field_f) {
-              if (oc.field_l.privilegedTasksEnabled) {
-                var3_int = vm.a(hl.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+              if (MatchingFieldValidator.field_l.privilegedTasksEnabled) {
+                var3_int = TextFieldValidator.a(hl.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               } else {
-                var3_int = vm.a(Chess.field_D, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+                var3_int = TextFieldValidator.a(Chess.field_D, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               }
               var4 = 2 + var3_int;
               cb.field_k = new int[var4];
@@ -124,7 +124,7 @@ final class qh {
               cb.field_k[-1 + var4] = 0;
               fi.field_c[0] = 5;
             } else if (FrameTimer.field_f == 4) {
-              var3_int = vm.a(le.field_c, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+              var3_int = TextFieldValidator.a(le.field_c, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               var4 = var3_int + 2;
               cb.field_k = new int[var4];
               ka.field_g = new String[var4];
@@ -143,7 +143,7 @@ final class qh {
               if (FrameTimer.field_f != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = vm.a(AccountCreationResultPanel.field_Gb, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+              var3_int = TextFieldValidator.a(AccountCreationResultPanel.field_Gb, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               var4 = 3 + var3_int;
               cb.field_k = new int[var4];
               ka.field_g = new String[var4];
@@ -163,7 +163,7 @@ final class qh {
               fi.field_c[1] = 5;
             }
           } else {
-            var3_int = vm.a(oc.a(i.field_a, new String[]{"<br><%0><br>"}, (byte) -110), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+            var3_int = TextFieldValidator.a(MatchingFieldValidator.a(i.field_a, new String[]{"<br><%0><br>"}, (byte) -110), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(n.field_d[var5])) {
@@ -177,10 +177,10 @@ final class qh {
             }
             NodeHashTableIterator.field_a = new String[var4];
             ne.a(n.field_d, 0, NodeHashTableIterator.field_a, 0, var4);
-            tj.field_p = new String[-var4 + (var3_int - 1)];
-            ne.a(n.field_d, 1 + var4, tj.field_p, 0, var3_int - var4 - 1);
+            EmailFormatValidator.field_p = new String[-var4 + (var3_int - 1)];
+            ne.a(n.field_d, 1 + var4, EmailFormatValidator.field_p, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = vm.a(oc.a(tb.field_e, new String[]{"<br><%0><br>"}, (byte) -105), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+            var3_int = TextFieldValidator.a(MatchingFieldValidator.a(tb.field_e, new String[]{"<br><%0><br>"}, (byte) -105), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(n.field_d[var5])) {
                 continue;
@@ -201,10 +201,10 @@ final class qh {
               stackIn_66_0 = NodeHashTableIterator.field_a.length;
             }
             var5 = stackIn_66_0;
-            if (em.field_m.length > tj.field_p.length) {
+            if (em.field_m.length > EmailFormatValidator.field_p.length) {
               stackIn_69_0 = em.field_m.length;
             } else {
-              stackIn_69_0 = tj.field_p.length;
+              stackIn_69_0 = EmailFormatValidator.field_p.length;
             }
             var6 = stackIn_69_0;
             var7 = var5 + 7 + var6;
@@ -250,7 +250,7 @@ final class qh {
             }
             jg.field_M = ud.correctedCurrentTimeMillis(2);
           }
-          ol.field_R.field_f = fi.field_c.length;
+          AccountRegistrationPanel.field_R.field_f = fi.field_c.length;
           if (param0) {
             return;
           }
@@ -272,7 +272,7 @@ final class qh {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = tj.field_p;
+            var4_ref_String__Lifetime1 = EmailFormatValidator.field_p;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = kn.a(false, param0, var12);
@@ -283,7 +283,7 @@ final class qh {
           }
           ca.field_j = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ob.field_C);
           ai.field_j = ob.field_C - (var3_intLifetime1 >> 1);
-          in.field_i = (kl.field_i + MouseWheelInput.field_b << 1) * ol.field_R.field_f;
+          in.field_i = (kl.field_i + MouseWheelInput.field_b << 1) * AccountRegistrationPanel.field_R.field_f;
           for (var4Lifetime2 = 0; ka.field_g.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = in.field_i;
             if (cb.field_k[var4Lifetime2] < 0) {
@@ -315,9 +315,9 @@ final class qh {
             var4Lifetime3++;
           }
           if (FrameTimer.field_f == 2) {
-            ol.field_R.a(-1, -1, param1, 0);
+            AccountRegistrationPanel.field_R.a(-1, -1, param1, 0);
           } else {
-            ol.field_R.a(0, fe.a(BufferedSocket.field_k, 1, rf.field_b), param1, 0);
+            AccountRegistrationPanel.field_R.a(0, fe.a(BufferedSocket.field_k, 1, rf.field_b), param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

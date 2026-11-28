@@ -11,7 +11,7 @@ final class ih extends ej {
     static volatile boolean field_s;
     private BufferedSocket field_t;
     static int field_w;
-    static oc[] field_y;
+    static GridPoint[] field_y;
 
     final boolean e(int param0) {
         try {
@@ -514,7 +514,7 @@ final class ih extends ej {
     public ih() {
     }
 
-    final static int a(oc param0, byte param1, oc param2) {
+    final static int a(GridPoint param0, byte param1, GridPoint param2) {
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;

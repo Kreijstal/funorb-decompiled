@@ -11,7 +11,7 @@ final class ll implements uk {
 
     final static void c(int param0) {
         String var2 = (String) null;
-        mj.a((String) null, "", 99);
+        AccountRegistrationPanel.a((String) null, "", 99);
         if (param0 != 32270) {
           field_b = 127;
         }

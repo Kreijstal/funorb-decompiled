@@ -488,11 +488,11 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         try {
           va.field_f = param0;
           ng.field_b = true;
-          nk.field_a = new sh(q.field_N, ne.field_v, param1, fe.field_g, va.field_f);
+          nk.field_a = new sh(DisplayNameSelectionPanel.field_N, ne.field_v, param1, fe.field_g, va.field_f);
           if (param2 != -1) {
             return;
           }
-          q.field_N.b(nk.field_a, false);
+          DisplayNameSelectionPanel.field_N.b(nk.field_a, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -548,9 +548,9 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               og.field_c = this;
               ResourceArchive.field_j = DiskCacheWorker.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);
-              ck.field_e = dupTemp$0;
+              DebouncedFieldValidator.field_e = dupTemp$0;
               jj.field_a = dupTemp$0;
-              var8 = ck.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
+              var8 = DebouncedFieldValidator.field_e.requestThreadStart(1, (byte) -102, (Runnable) (this));
               while (true) {
                 if (0 == var8.status) {
                   SecondaryNodeDeque.sleepMillis(10L, 19406);
@@ -563,7 +563,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              ti.a(var8_ref, (byte) 100, (String) null);
+              ValidatedTextField.a(var8_ref, (byte) 100, (String) null);
               this.a((byte) -124, "crash");
             }
             return;
@@ -724,7 +724,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                   do {
                     if (!(var3 < nl.field_c)) {
                       this.b(1);
-                      pg.a((byte) -109, ch.field_h, ck.field_e);
+                      pg.a((byte) -109, ch.field_h, DebouncedFieldValidator.field_e);
                       break;
                     }
                     this.c(-111);
@@ -735,7 +735,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              ti.a((Throwable) (var1), (byte) 100, (String) null);
+              ValidatedTextField.a((Throwable) (var1), (byte) 100, (String) null);
               this.a((byte) -85, "crash");
             }
             this.a(true, (byte) -83);
@@ -787,9 +787,9 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               var3_ref = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (ck.field_e != null) {
+          if (DebouncedFieldValidator.field_e != null) {
             try {
-              ck.field_e.shutdown((byte) 94);
+              DebouncedFieldValidator.field_e.shutdown((byte) 94);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -834,9 +834,9 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = fa.correctedCurrentTimeMillis(param0 + 102);
-          var4 = l.field_d[cl.field_q];
-          l.field_d[cl.field_q] = var2_long;
-          cl.field_q = param0 + cl.field_q & 31;
+          var4 = l.field_d[ConfirmedEmailAvailabilityValidator.field_q];
+          l.field_d[ConfirmedEmailAvailabilityValidator.field_q] = var2_long;
+          ConfirmedEmailAvailabilityValidator.field_q = param0 + ConfirmedEmailAvailabilityValidator.field_q & 31;
           if (var4 != 0L &&
             var2_long > var4) {
           }

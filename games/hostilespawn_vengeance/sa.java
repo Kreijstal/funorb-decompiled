@@ -9,8 +9,8 @@ final class sa {
     static String field_e;
 
     final static void a(int param0) {
-        el.field_h[0] = cm.a(128, 5, 0, 1);
-        el.field_h[1] = cm.a(128, 5, 1, 1);
+        ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
+        ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
         nh.field_L = cj.a(6, param0);
     }
 

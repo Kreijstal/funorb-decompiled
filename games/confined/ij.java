@@ -81,7 +81,7 @@ final class ij extends IntrusiveNode {
           return (gd) null;
         }
         gd var2 = new gd();
-        ra.field_d.addLast((IntrusiveNode) (var2), (byte) 109);
+        DebouncedFieldValidator.field_d.addLast((IntrusiveNode) (var2), (byte) 109);
         BoundedRandomAccessFile.a(115, param1);
         return var2;
     }

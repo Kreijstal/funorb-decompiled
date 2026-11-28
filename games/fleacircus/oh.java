@@ -197,12 +197,12 @@ abstract class oh extends jj {
 
     final static void d(boolean param0) {
         if (!param0) {
-          ol.field_d = new ca();
+          ol.field_d = new AccountRegistrationPanel();
           ak.field_a.d(ol.field_d, 26034);
           return;
         }
         field_jb = (String) null;
-        ol.field_d = new ca();
+        ol.field_d = new AccountRegistrationPanel();
         ak.field_a.d(ol.field_d, 26034);
     }
 

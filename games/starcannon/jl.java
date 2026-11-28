@@ -387,7 +387,7 @@ final class jl {
             var3 = var3 + (14 + 14 * af.field_y.a(ac.field_c, var4, var3, var5, var6, 49407, -1, 0, 0, 14));
             var3 = var3 + (af.field_y.a(qd.field_y, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14 + 14);
             var3 += 14;
-            af.field_y.b(cc.field_k, 320, var3, 16777215, -1);
+            af.field_y.b(PasswordValidator.field_k, 320, var3, 16777215, -1);
             var3 += 14;
             af.field_y.b(p.field_b, 320, var3, 16777215, -1);
             var3 += 14;
@@ -407,7 +407,7 @@ final class jl {
               af.field_y.a(la.field_a, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
             } else {
               if (3 == var7) {
-                af.field_y.a(di.field_k, -param1 + 320, var3, 16777215, -1);
+                af.field_y.a(AgeValidator.field_k, -param1 + 320, var3, 16777215, -1);
                 var3 += 30;
                 af.field_w[pd.field_a * 8 + 4].c(var4, -6 + var3);
                 var3 = var3 + (14 + 14 * af.field_y.a(hb.field_g, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
@@ -549,7 +549,7 @@ final class jl {
         var8 = mj.field_c[var7];
         if (19 == var7) {
           if (nf.field_l == 0) {
-            var8 = cf.field_k;
+            var8 = ConfirmedEmailAvailabilityValidator.field_k;
           }
           if (nf.field_l == 1) {
             if (!param1) {
@@ -561,7 +561,7 @@ final class jl {
             if (!param1) {
               var6 = 16711808;
             }
-            var8 = hg.field_D;
+            var8 = DisplayNameSelectionPanel.field_D;
           }
         }
         if (var7 == 20) {
@@ -940,7 +940,7 @@ final class jl {
               }
               cg.field_e = 0;
               na.field_a = 0;
-              qf.field_h = 0;
+              TextFieldValidator.field_h = 0;
               wg.field_e = 0;
               AccountRequestState.field_d = nf.field_l + 1;
               if (a.field_a) {
@@ -956,7 +956,7 @@ final class jl {
                 jk.field_j = 1;
               }
               fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
-              vb.field_m = 1;
+              MatchingFieldValidator.field_m = 1;
               sd.field_c = 0;
               MouseWheelSource.field_c = 2;
               qb.field_e = 0;
@@ -980,12 +980,12 @@ final class jl {
               ie.field_C = 0;
               FrameTimer.field_e.field_u = 580;
               ha.field_d = 0;
-              var5_ref_bf = (bf) (kh.field_y.beginForward(-3905));
+              var5_ref_bf = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
               while (var5_ref_bf != null) {
                 if (var5_ref_bf != FrameTimer.field_e) {
                   var5_ref_bf.unlink(4);
                 }
-                var5_ref_bf = (bf) (kh.field_y.nextForward(-16913));
+                var5_ref_bf = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
               }
               for (var5 = 0; var5 < FullscreenFocusCanvas.field_c.length; var5++) {
                 FullscreenFocusCanvas.field_c[var5] = null;
@@ -1065,7 +1065,7 @@ final class jl {
           return;
         }
         var7 = 0;
-        while (di.field_j.length > var7) {
+        while (AgeValidator.field_j.length > var7) {
           stackIn_40_0 = var7;
           stackIn_40_1 = 6;
           if (stackIn_40_0 != stackIn_40_1) {
@@ -1122,7 +1122,7 @@ final class jl {
         ba.a(128 + ((af.field_y.field_r + af.field_y.field_q << 1) + af.field_y.field_p), jk.field_f, (byte) 14, 118, 408, 241 - af.field_y.field_p);
         if (var6 != -1) {
           var7Lifetime1 = af.field_y.field_q + af.field_y.field_r;
-          af.field_y.b(di.field_j[var6], 320, 247, 16777215, -1);
+          af.field_y.b(AgeValidator.field_j[var6], 320, 247, 16777215, -1);
           var8 = 2 + var7Lifetime1;
           stackIn_49_0 = ((var5 & 1 << var6) == 0) ? 0 : 1;
           var9 = stackIn_49_0;
@@ -1368,7 +1368,7 @@ final class jl {
         regionExit1: {
           if (!MouseInput.a(73)) {
             if (j.field_a == null) {
-              j.field_a = hg.b(3, 1, 1, -84, 10);
+              j.field_a = DisplayNameSelectionPanel.b(3, 1, 1, -84, 10);
             }
             var4_ref_vc = j.field_a;
             if (!var4_ref_vc.field_j) {
@@ -1494,14 +1494,14 @@ final class jl {
           }
           od.a(param0 - 128, lf.field_cb, false);
         }
-        this.field_e.a(this.a(rg.field_B, kc.field_Q, -24332), this.a(pe.field_d, la.field_c, -24332), 126);
+        this.field_e.a(this.a(LoginPanel.field_B, kc.field_Q, -24332), this.a(pe.field_d, la.field_c, -24332), 126);
         stackIn_25_0Lifetime1 = 0;
         stackIn_25_1Lifetime1 = ~this.field_e.field_k;
         if (stackIn_25_0Lifetime1 != stackIn_25_1Lifetime1) {
           this.a(this.field_e.field_k, true, true);
         }
         if (kg.field_a != param0) {
-          this.field_i = rg.field_B;
+          this.field_i = LoginPanel.field_B;
           this.field_l = kc.field_Q;
         }
         return;

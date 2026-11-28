@@ -123,7 +123,7 @@ final class ba extends ma implements nn, mj {
               } else {
                 var14 = (String) null;
                 var13 = (String) null;
-                BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, af.field_b, false);
+                BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, ChessMatchState.field_b, false);
                 var16 = (String) null;
                 var15 = (String) null;
                 BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, kd.field_Eb, false);
@@ -157,8 +157,8 @@ final class ba extends ma implements nn, mj {
         var19 = var17;
         if (2 == vk.field_g) {
           var33 = (CharSequence) ((Object) ij.field_c);
-          var21 = oc.a(vf.field_d, new String[]{rl.a(var33, (byte) -70)}, (byte) -80);
-          var9 = oc.a(sa.field_d, new String[]{var17}, (byte) -74);
+          var21 = MatchingFieldValidator.a(vf.field_d, new String[]{rl.a(var33, (byte) -70)}, (byte) -80);
+          var9 = MatchingFieldValidator.a(sa.field_d, new String[]{var17}, (byte) -74);
           var10 = sc.field_a.b(var21);
           var11 = sc.field_a.b(var9);
           if (var10 <= var11) {
@@ -184,10 +184,10 @@ final class ba extends ma implements nn, mj {
                   return true;
                 }
                 if (!qj.field_d) {
-                  var8 = "[" + oc.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                  var8 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 } else {
                   if (null == kb.field_P) {
-                    var24 = "[" + oc.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                    var24 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                     var25 = var24 + var19 + ": ";
                     var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var25);
                     if (var6Lifetime1 < sc.field_a.b(sg.field_c.toString())) {
@@ -209,7 +209,7 @@ final class ba extends ma implements nn, mj {
             }
             if (null != pd.field_Rb) {
               if (!qj.field_d) {
-                var29 = "[" + oc.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                var29 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var30 = var29 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var30);
                 if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
@@ -219,7 +219,7 @@ final class ba extends ma implements nn, mj {
                 return true;
               }
               if (null == kb.field_P) {
-                var27 = "[" + oc.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                var27 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var28 = var27 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.b(var28);
                 if (var6Lifetime1 >= sc.field_a.b(sg.field_c.toString())) {
@@ -259,7 +259,7 @@ final class ba extends ma implements nn, mj {
           this.field_K = param0;
           this.field_T = new fb(sg.field_e, (rg) null);
           this.field_T.field_n = (jm) ((Object) new sf());
-          var7 = oc.a(kl.field_g, new String[]{this.a(29917), this.g((byte) -11)}, (byte) -114);
+          var7 = MatchingFieldValidator.a(kl.field_g, new String[]{this.a(29917), this.g((byte) -11)}, (byte) -114);
           var3 = 20;
           var4 = new hl(rb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
           this.field_S = new se(var7, var4);

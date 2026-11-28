@@ -507,19 +507,19 @@ final class BattleUnit {
           if (null != this.field_Z.field_b &&
             this.field_Z.field_b.field_g == 17) {
             if (var8 == 4) {
-              stackIn_164_0 = di.field_f;
+              stackIn_164_0 = TextFieldValidator.field_f;
               stackIn_164_1 = 3;
               stackIn_165_2 = (var7 != 0) ? 5 : 0;
               ((IndexedSprite) (Object) stackIn_164_0[stackIn_164_1 + stackIn_165_2]).a(0, 0);
             }
             if (5 == var8) {
-              stackIn_169_0 = di.field_f;
+              stackIn_169_0 = TextFieldValidator.field_f;
               stackIn_169_1 = 4;
               stackIn_170_2 = (var7 == 0) ? 0 : 5;
               ((IndexedSprite) (Object) stackIn_169_0[stackIn_169_1 + stackIn_170_2]).a(0, 0);
             }
             if (var8 == 6) {
-              stackIn_175_0 = di.field_f;
+              stackIn_175_0 = TextFieldValidator.field_f;
               stackIn_175_1 = 3;
               stackIn_176_2 = (var7 != 0) ? 5 : 0;
               ((IndexedSprite) (Object) stackIn_175_0[stackIn_175_1 + stackIn_176_2]).copyFlippedHorizontal().a(0, 0);
@@ -687,29 +687,29 @@ final class BattleUnit {
           if (this.field_Z.field_b != null &&
             this.field_Z.field_b.field_g == 17) {
             if (var8 == 0) {
-              stackIn_332_0 = di.field_f;
+              stackIn_332_0 = TextFieldValidator.field_f;
               stackIn_333_1 = (var7 == 0) ? 0 : 5;
               ((IndexedSprite) (Object) stackIn_332_0[stackIn_333_1 + 1]).copyFlippedHorizontal().a(0, 0);
             }
             if (1 == var8) {
-              stackIn_337_0 = di.field_f;
+              stackIn_337_0 = TextFieldValidator.field_f;
               stackIn_337_1 = 0;
               stackIn_338_2 = (var7 != 0) ? 5 : 0;
               ((IndexedSprite) (Object) stackIn_337_0[stackIn_337_1 + stackIn_338_2]).a(0, 0);
             }
             if (2 == var8) {
-              stackIn_343_0 = di.field_f;
+              stackIn_343_0 = TextFieldValidator.field_f;
               stackIn_344_1 = (var7 == 0) ? 0 : 5;
               ((IndexedSprite) (Object) stackIn_343_0[stackIn_344_1 + 1]).a(0, 0);
             }
             if (var8 == 3) {
-              stackIn_348_0 = di.field_f;
+              stackIn_348_0 = TextFieldValidator.field_f;
               stackIn_348_1 = 2;
               stackIn_349_2 = (var7 == 0) ? 0 : 5;
               ((IndexedSprite) (Object) stackIn_348_0[stackIn_348_1 + stackIn_349_2]).a(0, 0);
             }
             if (7 == var8) {
-              stackIn_353_0 = di.field_f;
+              stackIn_353_0 = TextFieldValidator.field_f;
               stackIn_353_1 = 2;
               stackIn_354_2 = (var7 == 0) ? 0 : 5;
               ((IndexedSprite) (Object) stackIn_353_0[stackIn_353_1 + stackIn_354_2]).copyFlippedHorizontal().a(0, 0);
@@ -3845,13 +3845,13 @@ final class BattleUnit {
         this.field_db = false;
         this.field_P = ArchiveIndex.field_q[this.field_t].field_c[var3];
         if (param1 == 0 &&
-          null != le.field_q) {
+          null != AgeValidator.field_q) {
           this.field_P = ArchiveIndex.field_q[this.field_t].field_c[0];
         }
         this.field_T = 0;
         this.field_u = ArchiveIndex.field_q[this.field_t].field_g[var3];
         if (param1 == 0 &&
-          null != le.field_q) {
+          null != AgeValidator.field_q) {
           this.field_u = 0;
         }
         regionExit1: {

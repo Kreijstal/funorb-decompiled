@@ -44,7 +44,7 @@ class DualLinkNode extends IntrusiveNode {
         te.field_O = 0;
         kk.field_S = param3;
         ProxyAuthenticationRequiredException.field_e = param0;
-        if (!b.a((byte) 112, kk.field_S)) {
+        if (!ConfirmedEmailAvailabilityValidator.a((byte) 112, kk.field_S)) {
           if (param1 != 2) {
             field_j = -61;
             return;

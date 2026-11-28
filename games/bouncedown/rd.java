@@ -43,11 +43,11 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (nj.field_o != null) {
+          if (EmailFormatValidator.field_o != null) {
             SecondaryNodeDeque.field_d = 0;
             DelegatingCanvas.field_a = param0.getX();
-            q.field_H = param0.getY();
-            cl.field_o = true;
+            DisplayNameSelectionPanel.field_H = param0.getY();
+            ConfirmedEmailAvailabilityValidator.field_o = true;
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rd.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -87,13 +87,13 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nj.field_o == null) {
+          if (EmailFormatValidator.field_o == null) {
             return;
           }
           SecondaryNodeDeque.field_d = 0;
           DelegatingCanvas.field_a = param0.getX();
-          q.field_H = param0.getY();
-          cl.field_o = true;
+          DisplayNameSelectionPanel.field_H = param0.getY();
+          ConfirmedEmailAvailabilityValidator.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nj.field_o != null) {
+          if (EmailFormatValidator.field_o != null) {
             SecondaryNodeDeque.field_d = 0;
             hb.field_B = param0.getX();
             nc.field_b = param0.getY();
@@ -136,7 +136,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             if ((var2_int & 16) == 0) {
             }
-            cl.field_o = true;
+            ConfirmedEmailAvailabilityValidator.field_o = true;
           }
           if (!param0.isPopupTrigger()) {
             return;
@@ -165,10 +165,10 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != nj.field_o) {
+          if (null != EmailFormatValidator.field_o) {
             SecondaryNodeDeque.field_d = 0;
             c.field_c = 0;
-            cl.field_o = true;
+            ConfirmedEmailAvailabilityValidator.field_o = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
             }
@@ -203,7 +203,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == nj.field_o) {
+          if (null == EmailFormatValidator.field_o) {
             return;
           }
           c.field_c = 0;
@@ -229,13 +229,13 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == nj.field_o) {
+          if (null == EmailFormatValidator.field_o) {
             return;
           }
           SecondaryNodeDeque.field_d = 0;
           DelegatingCanvas.field_a = param0.getX();
-          q.field_H = param0.getY();
-          cl.field_o = true;
+          DisplayNameSelectionPanel.field_H = param0.getY();
+          ConfirmedEmailAvailabilityValidator.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -253,11 +253,11 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (nj.field_o != null) {
+          if (EmailFormatValidator.field_o != null) {
             SecondaryNodeDeque.field_d = 0;
             DelegatingCanvas.field_a = -1;
-            q.field_H = -1;
-            cl.field_o = true;
+            DisplayNameSelectionPanel.field_H = -1;
+            ConfirmedEmailAvailabilityValidator.field_o = true;
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rd.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');

@@ -49,14 +49,14 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (param1 > var4) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.payload[incrementValue$0] & kd.field_j[var4]) << param1 - var4);
+            var5 = var5 + ((this.payload[incrementValue$0] & ConfirmedEmailAvailabilityValidator.field_j[var4]) << param1 - var4);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (param1 == var4) {
-            var5 = var5 + (this.payload[var3] & kd.field_j[var4]);
+            var5 = var5 + (this.payload[var3] & ConfirmedEmailAvailabilityValidator.field_j[var4]);
           } else {
-            var5 = var5 + (this.payload[var3] >> -param1 + var4 & kd.field_j[param1]);
+            var5 = var5 + (this.payload[var3] >> -param1 + var4 & ConfirmedEmailAvailabilityValidator.field_j[param1]);
           }
           return var5;
         }
@@ -66,14 +66,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (param1 > var4Lifetime1) {
           incrementValue$1 = var3;
           var3++;
-          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & kd.field_j[var4Lifetime1]) << param1 - var4Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & ConfirmedEmailAvailabilityValidator.field_j[var4Lifetime1]) << param1 - var4Lifetime1);
           param1 = param1 - var4Lifetime1;
           var4Lifetime1 = 8;
         }
         if (param1 == var4Lifetime1) {
-          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] & kd.field_j[var4Lifetime1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] & ConfirmedEmailAvailabilityValidator.field_j[var4Lifetime1]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> -param1 + var4Lifetime1 & kd.field_j[param1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> -param1 + var4Lifetime1 & ConfirmedEmailAvailabilityValidator.field_j[param1]);
         }
         return var5Lifetime1;
     }

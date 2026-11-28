@@ -193,13 +193,13 @@ final class di {
     }
 
     final static String a(boolean param0) {
-        if (null == qc.field_m) {
+        if (null == ConfirmedEmailAvailabilityValidator.field_m) {
           return "";
         }
         if (!param0) {
           di.a(88);
         }
-        return qc.field_m;
+        return ConfirmedEmailAvailabilityValidator.field_m;
     }
 
     final static void a(int param0, int param1, int param2) {
@@ -212,7 +212,7 @@ final class di {
         }
         oj.field_B = oj.field_B | 1 << param2;
         qn.field_v.field_u.addLast((IntrusiveNode) (new an(param2)), (byte) -110);
-        ra.field_c.addLast((IntrusiveNode) (new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a - qn.field_v.field_h, rc.field_i)), (byte) 73);
+        DebouncedFieldValidator.field_c.addLast((IntrusiveNode) (new sf(param2, param1, qn.field_v.field_B.field_yb + bd.field_h, we.field_g + qn.field_v.field_J.field_o, d.field_a - qn.field_v.field_h, rc.field_i)), (byte) 73);
     }
 
     static {

@@ -273,7 +273,7 @@ final class m extends ue {
         var2 = gh.field_B * (580 * gh.field_B) / 400 + 30;
         stackIn_6_0 = (!this.field_q) ? 110 : 80;
         var3 = stackIn_6_0;
-        wi.a(30, jn.field_o, var3, -var3 + 407, (byte) -71, -30 + var2);
+        wi.a(30, PasswordValidator.field_o, var3, -var3 + 407, (byte) -71, -30 + var2);
         SoftwareRasterizer.fillRectangleAlpha(38, param0 + var3, var2 - 46, -var3 + 407 - 16, 0, 192);
         if (this.field_g.field_f != 0) {
           return;
@@ -292,7 +292,7 @@ final class m extends ue {
           go.field_l.c(this.field_j, 320, 106, 16777215, -1);
         }
         var4 = CrazyCrystals.field_C;
-        var5 = qk.a(al.field_c, param0 ^ 119, this.field_k, lo.field_b);
+        var5 = DisplayNameSelectionPanel.a(al.field_c, param0 ^ 119, this.field_k, lo.field_b);
         go.field_l.a(ae.field_G, 100, 136, 16760896, -1);
         go.field_l.b(vn.field_m, 340, 136, 16760896, -1);
         go.field_l.b(tg.field_a, 440, 136, 16760896, -1);
@@ -399,16 +399,16 @@ final class m extends ue {
         }
         if (!rc.a(param0 ^ -163)) {
           this.field_r = nl.field_g;
-          var2 = go.field_l.a(ga.field_Q[0]);
-          var3 = go.field_l.a(ga.field_Q[1]);
-          var4 = go.field_l.a(ga.field_Q[2]);
+          var2 = go.field_l.a(EditableTextField.field_Q[0]);
+          var3 = go.field_l.a(EditableTextField.field_Q[1]);
+          var4 = go.field_l.a(EditableTextField.field_Q[2]);
           var5 = 60 + (var2 + 60 + var3 + var4);
           var6 = (640 - var5) / 2;
-          this.field_d[0] = (ik) ((Object) new mh(var6, 417, ga.field_Q[0], 0));
+          this.field_d[0] = (ik) ((Object) new mh(var6, 417, EditableTextField.field_Q[0], 0));
           var6 = var6 + (var2 + 60);
-          this.field_d[1] = (ik) ((Object) new mh(var6, 417, ga.field_Q[1], 0));
+          this.field_d[1] = (ik) ((Object) new mh(var6, 417, EditableTextField.field_Q[1], 0));
           var6 = var6 + (var3 + 60);
-          this.field_d[2] = (ik) ((Object) new mh(var6, 417, ga.field_Q[2], 0));
+          this.field_d[2] = (ik) ((Object) new mh(var6, 417, EditableTextField.field_Q[2], 0));
         } else {
           this.field_r = el.field_f;
           this.field_d[3] = (ik) ((Object) new mh(200, 417, 240, AccountServiceResult.field_a, 2));

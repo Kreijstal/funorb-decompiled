@@ -76,7 +76,7 @@ final class GzipDecompressor {
           var5Lifetime1 = fb.field_l[11] >> 8;
           var6Lifetime1 = qb.field_h << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = qf.a(var6Lifetime1, (byte) -112) >> 8;
+          var8Lifetime1 = TextFieldValidator.a(var6Lifetime1, (byte) -112) >> 8;
           var9Lifetime1 = ResourceArchive.cosineFixed16(var6Lifetime1, param0 ^ -1196777089) >> 8;
           if (pe.field_d != -1 &&
             la.field_c != -1) {
@@ -272,7 +272,7 @@ final class GzipDecompressor {
             if (IntrusiveDeque.field_a >= ByteStorage.field_c) {
               od.field_i = ag.field_o;
               IntrusiveDeque.field_a = IntrusiveDeque.field_a - ByteStorage.field_c;
-              if (cc.field_j) {
+              if (PasswordValidator.field_j) {
                 ag.field_o = ag.field_o + 1;
                 if (var2_int <= ag.field_o) {
                   ag.field_o = ag.field_o - var2_int;
@@ -285,7 +285,7 @@ final class GzipDecompressor {
               }
             }
             if (IntrusiveDeque.field_a > ByteStorage.field_a) {
-              cc.field_j = true;
+              PasswordValidator.field_j = true;
             }
           }
           if (ge.field_b != null) {
@@ -294,15 +294,15 @@ final class GzipDecompressor {
             if (kg.field_a != 0 &&
               var3 < kc.field_Q &&
               ge.field_b.field_v + var3 > kc.field_Q) {
-              if (269 - ge.field_b.field_u < rg.field_B &&
-                rg.field_B < 269) {
-                cc.field_j = false;
+              if (269 - ge.field_b.field_u < LoginPanel.field_B &&
+                LoginPanel.field_B < 269) {
+                PasswordValidator.field_j = false;
                 var4 = 1;
                 IntrusiveDeque.field_a = ByteStorage.field_c;
               }
-              if (rg.field_B > 586 &&
-                rg.field_B < 586 + ge.field_b.field_u) {
-                cc.field_j = true;
+              if (LoginPanel.field_B > 586 &&
+                LoginPanel.field_B < 586 + ge.field_b.field_u) {
+                PasswordValidator.field_j = true;
                 IntrusiveDeque.field_a = ByteStorage.field_c;
                 var4 = 1;
               }
@@ -322,7 +322,7 @@ final class GzipDecompressor {
             }
           }
           if (param0) {
-            ea.field_a.a(BufferedRandomAccessFile.a(rg.field_B, kc.field_Q, true), BufferedRandomAccessFile.a(pe.field_d, la.field_c, true), -104);
+            ea.field_a.a(BufferedRandomAccessFile.a(LoginPanel.field_B, kc.field_Q, true), BufferedRandomAccessFile.a(pe.field_d, la.field_c, true), -104);
             if (ea.field_a.g(0)) {
               if (ea.field_a.field_k == 0) {
                 stackIn_62_0 = 3;
@@ -409,7 +409,7 @@ final class GzipDecompressor {
         }
         int var1 = ClientException.a(6940);
         int var2 = wc.d(20);
-        u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, AccountNameAvailabilityValidator.field_m - FullscreenFocusCanvas.field_g, var2 + (FullscreenFocusCanvas.field_g << 1));
+        u.field_c.a(-TextFieldValidator.field_g + p.field_g, (TextFieldValidator.field_g << 1) + var1, 122, AccountNameAvailabilityValidator.field_m - FullscreenFocusCanvas.field_g, var2 + (FullscreenFocusCanvas.field_g << 1));
         KeyboardInput.b(1000);
     }
 

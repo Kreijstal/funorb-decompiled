@@ -74,7 +74,7 @@ abstract class cc extends kn {
 
     final void a(int param0, int param1, byte param2) {
         if (param2 == 55) {
-          this.a(param0, -101, -param1 + od.field_n >> 1, param1, ae.field_c - param0 >> 1);
+          this.a(param0, -101, -param1 + ConfirmedEmailAvailabilityValidator.field_n >> 1, param1, ae.field_c - param0 >> 1);
           return;
         }
     }
@@ -207,7 +207,7 @@ abstract class cc extends kn {
     }
 
     cc(hm param0, int param1, int param2) {
-        super(-param1 + od.field_n >> 1, ae.field_c - param2 >> 1, param1, param2, (ad) null);
+        super(-param1 + ConfirmedEmailAvailabilityValidator.field_n >> 1, ae.field_c - param2 >> 1, param1, param2, (ad) null);
         try {
           this.field_K = false;
           this.field_J = 0;

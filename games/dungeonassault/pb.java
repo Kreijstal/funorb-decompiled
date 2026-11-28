@@ -142,7 +142,7 @@ final class pb extends wf {
                 if (param5) {
                   ie.field_k[var23Lifetime2] = var27Lifetime1 >> lh.field_t;
                   la.field_l[var23Lifetime2] = var28Lifetime1 >> lh.field_t;
-                  ip.field_l[var23Lifetime2] = var29Lifetime1;
+                  TextFieldValidator.field_l[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -207,7 +207,7 @@ final class pb extends wf {
                   var20 = param4.field_P[var18];
                   var21Lifetime2 = param4.field_v[var18];
                   hk.field_c[var18] = var21Lifetime2 * var15 + (var19 * var9 + var20 * var12) >> 16;
-                  p.field_x[var18] = var10 * var19 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
+                  DungeonBuilderScreen.field_x[var18] = var10 * var19 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
                   BufferedRandomAccessFile.field_j[var18] = var11 * var19 + var20 * var14 + var17 * var21Lifetime2 >> 16;
                   var18++;
                 }

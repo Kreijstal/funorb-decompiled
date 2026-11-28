@@ -38,7 +38,7 @@ final class fg extends IntrusiveNode {
           qi.field_f = 0;
           kb.field_i = 0;
           DualLinkNode.field_o = 0;
-          gh.field_q = 0;
+          PasswordValidator.field_q = 0;
           jc.field_f = 0;
           md.field_L = 1;
           pl.field_g = 0;
@@ -54,7 +54,7 @@ final class fg extends IntrusiveNode {
               }
               if (1 == var4) {
                 rk.field_s = 8 + 16 * var2;
-                ck.field_o = 16 + var3 * 16;
+                ConfirmedEmailAvailabilityValidator.field_o = 16 + var3 * 16;
               }
               if (8 == var4) {
                 Bzip2State.a(var3, 125, 9, var2, 8);

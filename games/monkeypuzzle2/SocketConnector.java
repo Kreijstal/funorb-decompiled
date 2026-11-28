@@ -119,9 +119,9 @@ abstract class SocketConnector {
     final static int a(byte param0) {
         if (param0 != 113) {
           SocketConnector.a(-92, (byte) 8);
-          return fd.field_s;
+          return ConfirmedEmailAvailabilityValidator.field_s;
         }
-        return fd.field_s;
+        return ConfirmedEmailAvailabilityValidator.field_s;
     }
 
     final static void c(byte param0) {

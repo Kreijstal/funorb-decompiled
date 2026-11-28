@@ -11,12 +11,12 @@ final class wc {
 
     final static void a(int param0, int param1) {
         gk.field_f = (param1 & 57) >> 4;
-        vc.field_O = param1 >> 2 & 3;
+        ValidatedTextField.field_O = param1 >> 2 & 3;
         if (!(gk.field_f <= 2)) {
           gk.field_f = 2;
         }
-        if (!(param0 >= vc.field_O)) {
-          vc.field_O = 2;
+        if (!(param0 >= ValidatedTextField.field_O)) {
+          ValidatedTextField.field_O = 2;
         }
         ba.field_n = 3 & param1;
         if (ba.field_n > 2) {
@@ -68,9 +68,9 @@ final class wc {
               } else {
                 ll.field_V = bf.a(param5, (byte) 41, false, param2);
               }
-              ff.field_D.position = 0;
-              ff.field_D.writeByte(6389, 14);
-              ff.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
+              LoginPanel.field_D.position = 0;
+              LoginPanel.field_D.writeByte(6389, 14);
+              LoginPanel.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
               rb.a(-1, -377);
               lj.field_z = g.field_y;
             }
@@ -80,7 +80,7 @@ final class wc {
               if (var6_int == 0) {
                 lj.field_z = lb.field_e;
               } else {
-                ca.field_e = var6_int;
+                DebouncedFieldValidator.field_e = var6_int;
                 tg.field_a = -1;
                 lj.field_z = aa.field_e;
               }
@@ -91,14 +91,14 @@ final class wc {
               fd.field_g = WordLanguage.field_l.readLong((byte) -115);
               WordLanguage.field_l.position = 0;
               tb.a(ll.field_V, param0, param3, param4, 122);
-              lj.field_z = ck.field_I;
+              lj.field_z = DisplayNameSelectionPanel.field_I;
             }
             boolean decompiledFrameRemainder0 = true;
             var6_intLifetime1 = -17 / ((-59 - param1) / 55);
-            if (lj.field_z == ck.field_I &&
+            if (lj.field_z == DisplayNameSelectionPanel.field_I &&
               ue.a(1, 0)) {
               var7 = WordLanguage.field_l.readUnsignedByte((byte) 110);
-              ca.field_e = var7;
+              DebouncedFieldValidator.field_e = var7;
               e.field_I = null;
               WordLanguage.field_l.position = 0;
               if (var7 != 0 &&
@@ -123,7 +123,7 @@ final class wc {
             if (lj.field_z == NetworkArchiveRequest.field_w &&
               GameKeyHandler.a(0)) {
               ac.field_j = WordLanguage.field_l.readLong((byte) 117);
-              va.field_j = WordLanguage.field_l.readUnsignedByte((byte) 58);
+              ConfirmedEmailAvailabilityValidator.field_j = WordLanguage.field_l.readUnsignedByte((byte) 58);
               WordLanguage.field_l.readUnsignedByte((byte) 93);
               wj.field_o = WordLanguage.field_l.readUnsignedShort((byte) -118);
               var7_ref_String = WordLanguage.field_l.readNullableString(-1640531527);
@@ -155,7 +155,7 @@ final class wc {
               db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
               lj.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
-                if (ll.field_V.a(-184) == vc.field_G) {
+                if (ll.field_V.a(-184) == ValidatedTextField.field_G) {
                   of.field_f.a(ha.b(101), 0);
                 }
               } else {
@@ -184,29 +184,29 @@ final class wc {
               if (wj.field_o > 0) {
                 wd.field_g = true;
               }
-              ff.field_D.setCipherSeed((byte) -68, mf.field_c);
+              LoginPanel.field_D.setCipherSeed((byte) -68, mf.field_c);
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
                 mf.field_c[var9Lifetime1] = mf.field_c[var9Lifetime1] + 50;
               }
               WordLanguage.field_l.setCipherSeed((byte) -74, mf.field_c);
-              stackIn_73_0 = ca.field_e;
+              stackIn_73_0 = DebouncedFieldValidator.field_e;
               return stackIn_73_0;
             }
             if (aa.field_e == lj.field_z &&
               GameKeyHandler.a(0)) {
               pc.a(1);
-              if (ca.field_e == 7 &&
+              if (DebouncedFieldValidator.field_e == 7 &&
                 !MusicPatchPcmStream.field_k) {
                 MusicPatchPcmStream.field_k = true;
                 stackIn_79_0 = -1;
                 return stackIn_79_0;
               }
-              if (7 == ca.field_e) {
-                ca.field_e = 3;
+              if (7 == DebouncedFieldValidator.field_e) {
+                DebouncedFieldValidator.field_e = 3;
               }
               Transmogrify.field_B = WordLanguage.field_l.readString(12248);
               MusicPatchPcmStream.field_k = false;
-              stackIn_84_0 = ca.field_e;
+              stackIn_84_0 = DebouncedFieldValidator.field_e;
               return stackIn_84_0;
             }
             if (null == nk.field_b) {
@@ -393,15 +393,15 @@ final class wc {
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var4; var7_intLifetime1++) {
               th.a(101, var16);
               if (0 != var7_intLifetime1) {
-                vh.a(BoundedRandomAccessFile.field_e, IsaacRandom.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
+                EmailFormatValidator.a(BoundedRandomAccessFile.field_e, IsaacRandom.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               } else {
-                vh.a(BoundedRandomAccessFile.field_e, IsaacRandom.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
+                EmailFormatValidator.a(BoundedRandomAccessFile.field_e, IsaacRandom.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               }
             }
             jj.a((byte) -93, var6);
             var7 = new String[2][var6];
             var20 = new int[2][var6 * 4];
-            var9 = cg.field_l;
+            var9 = MatchingFieldValidator.field_l;
             var10 = 0;
             var11 = 0;
             while (var9 > var10) {
@@ -410,9 +410,9 @@ final class wc {
               var20[0][var11 * 4] = dk.field_k[var12];
               var20[0][1 + var11 * 4] = bh.field_a[var12];
               var20[0][2 + 4 * var11] = AccountRequestState.field_a[var12];
-              var20[0][var11 * 4 + 3] = bg.field_j[var12];
+              var20[0][var11 * 4 + 3] = PasswordValidator.field_j[var12];
               if (UiWidget.a(NanoFrameTimer.field_k[var12], (byte) -128) &&
-                AccountRequestState.field_a[var12] + bh.field_a[var12] + bg.field_j[var12] == 0) {
+                AccountRequestState.field_a[var12] + bh.field_a[var12] + PasswordValidator.field_j[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
               }
@@ -428,9 +428,9 @@ final class wc {
               var20[1][var15 * 4] = dk.field_k[var12Lifetime1];
               var20[1][var15 * 4 + 1] = bh.field_a[var12Lifetime1];
               var20[1][2 + var15 * 4] = AccountRequestState.field_a[var12Lifetime1];
-              var20[1][3 + var15 * 4] = bg.field_j[var12Lifetime1];
+              var20[1][3 + var15 * 4] = PasswordValidator.field_j[var12Lifetime1];
               if (UiWidget.a(NanoFrameTimer.field_k[var12Lifetime1], (byte) -111) &&
-                bg.field_j[var12Lifetime1] + (bh.field_a[var12Lifetime1] + AccountRequestState.field_a[var12Lifetime1]) == 0) {
+                PasswordValidator.field_j[var12Lifetime1] + (bh.field_a[var12Lifetime1] + AccountRequestState.field_a[var12Lifetime1]) == 0) {
                 var7[1][var15] = null;
                 var15--;
               }

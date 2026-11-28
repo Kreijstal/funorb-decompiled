@@ -202,10 +202,10 @@ final class ml {
 
     final static boolean b(int param0) {
         int var1 = 64 % ((-35 - param0) / 46);
-        if (null == b.field_n) {
+        if (null == ConfirmedEmailAvailabilityValidator.field_n) {
           return false;
         }
-        if (b.field_n.k(3469) != null) {
+        if (ConfirmedEmailAvailabilityValidator.field_n.k(3469) != null) {
           return true;
         }
         return false;

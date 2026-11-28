@@ -39,9 +39,9 @@ final class sb {
     final static String a(int param0) {
         if (param0 != -3871) {
           field_a = 86;
-          return rd.field_j.readString(false);
+          return EmailFormatValidator.field_j.readString(false);
         }
-        return rd.field_j.readString(false);
+        return EmailFormatValidator.field_j.readString(false);
     }
 
     static {

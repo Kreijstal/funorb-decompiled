@@ -314,7 +314,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              k.a((Throwable) (var1), (byte) -126, (String) null);
+              DebouncedFieldValidator.a((Throwable) (var1), (byte) -126, (String) null);
               this.a((byte) -56, "crash");
             }
             this.a(true, false);
@@ -403,7 +403,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.callWithoutArguments("loggedout", -12151, mk.g(-125));
+              JavaScriptBridge.callWithoutArguments("loggedout", -12151, PasswordValidator.g(-125));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -449,7 +449,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             tb.field_c.getParent().remove((java.awt.Component) ((Object) tb.field_c));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (fg.field_n == null) {
+          if (MatchingFieldValidator.field_n == null) {
             if (q.field_g != null) {
               var2 = q.field_g;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -459,17 +459,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2 = uh.field_i;
                 if (var4 != 0) {
                   var2 = jj.field_a;
-                  var2 = fg.field_n;
+                  var2 = MatchingFieldValidator.field_n;
                 }
               } else {
                 var2 = jj.field_a;
                 if (var4 != 0) {
-                  var2 = fg.field_n;
+                  var2 = MatchingFieldValidator.field_n;
                 }
               }
             }
           } else {
-            var2 = fg.field_n;
+            var2 = MatchingFieldValidator.field_n;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           tb.field_c = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
@@ -518,8 +518,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Insets var6 = null;
         try {
           var2_long = id.correctedCurrentTimeMillis(24);
-          var4 = ak.field_P[ud.field_b];
-          ak.field_P[ud.field_b] = var2_long;
+          var4 = LoginPanel.field_P[ud.field_b];
+          LoginPanel.field_P[ud.field_b] = var2_long;
           if (param0 != 5) {
             this.windowClosed((java.awt.event.WindowEvent) null);
           }
@@ -537,7 +537,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             tb.field_c.setSize(gg.field_d, AccountNameAvailabilityValidator.field_j);
             tb.field_c.setVisible(true);
             if (q.field_g != null &&
-              fg.field_n == null) {
+              MatchingFieldValidator.field_n == null) {
               var6 = q.field_g.getInsets();
               tb.field_c.setLocation(var6.left + sk.field_d, rh.field_k + var6.top);
               if (Main.field_T != 0) {
@@ -949,11 +949,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             var21 = stackIn_64_0;
             var22 = se.field_F[var15Lifetime1];
-            var23 = ai.field_j[var15Lifetime1];
+            var23 = AgeValidator.field_j[var15Lifetime1];
             var24 = se.field_F[var16];
-            var25 = ai.field_j[var16];
+            var25 = AgeValidator.field_j[var16];
             var26 = se.field_F[var17];
-            var27 = ai.field_j[var17];
+            var27 = AgeValidator.field_j[var17];
             if (var19 == var18 &&
               var20 == var19) {
               var28 = var8_array[var18];
@@ -1043,7 +1043,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               jj.field_a = this;
               sk.field_d = 0;
               rh.field_k = 0;
-              BufferedRandomAccessFile.field_o = mk.g(-118);
+              BufferedRandomAccessFile.field_o = PasswordValidator.g(-118);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param1, param2, true);
               jk.field_a = dupTemp$0;
               Main.field_W = dupTemp$0;
@@ -1063,7 +1063,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              k.a(var8_ref, (byte) -106, (String) null);
+              DebouncedFieldValidator.a(var8_ref, (byte) -106, (String) null);
               this.a((byte) -118, "crash");
             }
             return;

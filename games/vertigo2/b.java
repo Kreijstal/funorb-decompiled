@@ -234,7 +234,7 @@ final class b {
             this.field_n.a(on.field_d, 13, 0);
           }
           if (param1.field_s == 1) {
-            if (oa.field_p == 0) {
+            if (ConfirmedEmailAvailabilityValidator.field_p == 0) {
               this.field_n.a(ng.field_b, 12, 0);
             }
             this.field_n.a(sp.field_P, 13, 0);
@@ -431,7 +431,7 @@ final class b {
           return true;
         }
         if (param1 == 6) {
-          var13 = br.a(this.field_k, param0, 100);
+          var13 = ValidatedTextField.a(this.field_k, param0, 100);
           if (var13 == null) {
             if (param2 == 0) {
               return true;

@@ -89,14 +89,14 @@ final class o {
         mj.field_c[1] = rd.field_n;
         mj.field_c[4] = GzipDecompressor.field_e;
         mj.field_c[15] = oi.field_n;
-        mj.field_c[11] = cf.field_j;
+        mj.field_c[11] = ConfirmedEmailAvailabilityValidator.field_j;
         mj.field_c[13] = ta.field_g;
         mj.field_c[7] = mf.field_b;
         mj.field_c[0] = fl.field_i;
         mj.field_c[3] = vg.field_c;
         if (!param0) {
           mj.field_c[16] = qb.field_l;
-          mj.field_c[17] = vb.field_j;
+          mj.field_c[17] = MatchingFieldValidator.field_j;
           mj.field_c[8] = hj.field_b[0];
           mj.field_c[10] = hj.field_b[2];
           mj.field_c[18] = PcmOutputWorker.field_b;
@@ -105,7 +105,7 @@ final class o {
         }
         field_b = (String) null;
         mj.field_c[16] = qb.field_l;
-        mj.field_c[17] = vb.field_j;
+        mj.field_c[17] = MatchingFieldValidator.field_j;
         mj.field_c[8] = hj.field_b[0];
         mj.field_c[10] = hj.field_b[2];
         mj.field_c[18] = PcmOutputWorker.field_b;

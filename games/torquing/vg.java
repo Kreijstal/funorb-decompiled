@@ -148,11 +148,11 @@ final class vg extends eh {
         }
     }
 
-    final static sm a(sm[] param0, int param1) {
+    final static IndexedSprite a(IndexedSprite[] param0, int param1) {
         int var7_int = 0;
         int var8 = 0;
-        sm stackIn_3_0 = null;
-        sm stackIn_52_0 = null;
+        IndexedSprite stackIn_3_0 = null;
+        IndexedSprite stackIn_52_0 = null;
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -162,10 +162,10 @@ final class vg extends eh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        sm[] var6 = null;
-        sm[] var7 = null;
-        sm var8_ref_sm = null;
-        sm var9 = null;
+        IndexedSprite[] var6 = null;
+        IndexedSprite[] var7 = null;
+        IndexedSprite var8_ref_sm = null;
+        IndexedSprite var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -173,9 +173,9 @@ final class vg extends eh {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        sm[] var17 = null;
-        sm var18 = null;
-        sm var19 = null;
+        IndexedSprite[] var17 = null;
+        IndexedSprite var18 = null;
+        IndexedSprite var19 = null;
         var16 = Torquing.field_u;
         try {
           var2_int = 2147483647;
@@ -183,7 +183,7 @@ final class vg extends eh {
           var4 = 2147483647;
           var5 = -2147483648;
           if (param1 < 11) {
-            stackIn_3_0 = (sm) null;
+            stackIn_3_0 = (IndexedSprite) null;
             return stackIn_3_0;
           }
           var17 = param0;
@@ -203,7 +203,7 @@ final class vg extends eh {
               var2_int = var8_ref_sm.field_a;
             }
           }
-          var18 = new sm(var3 - var2_int, -var4 + var5, 0);
+          var18 = new IndexedSprite(var3 - var2_int, -var4 + var5, 0);
           var19 = var18;
           var18.field_k = param0[0].field_k;
           var19.field_g = var4;
@@ -284,11 +284,11 @@ final class vg extends eh {
         this.field_n[2] = this.field_n[2] + var14 * var12;
     }
 
-    final sg a(int param0, Level param1) {
+    final SceneMeshBatch a(int param0, Level param1) {
         int var4_int = 0;
         int var6 = 0;
         int stackIn_17_0 = 0;
-        sg stackIn_24_0 = null;
+        SceneMeshBatch stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -309,7 +309,7 @@ final class vg extends eh {
             var8[var4_int].d(-2).field_q.field_r = 0;
           }
           var4 = param1.getTerrainModel(-100, true);
-          this.field_h = new sg(3 + var9.length);
+          this.field_h = new SceneMeshBatch(3 + var9.length);
           this.field_h.a(0, var4);
           this.field_h.a(1, tp.field_a);
           if (param0 >= -52) {
@@ -322,7 +322,7 @@ final class vg extends eh {
             var9[var5].field_c = var5 + 2;
           }
           if (param1.field_k != null) {
-            this.field_h.a(0, param1.field_k);
+            this.field_h.setTriangleOverrides(0, param1.field_k);
           }
           if (0 < var9.length) {
             stackIn_17_0 = (null == var9[0].field_d) ? 1 : 0;
@@ -339,7 +339,7 @@ final class vg extends eh {
           this.a(param1.getStartPose(50), 18910);
           this.b(1);
           if (var5Lifetime1 != 0) {
-            param1.field_k = this.field_h.a(0);
+            param1.field_k = this.field_h.copyTriangleOverrides(0);
           }
           stackIn_24_0 = this.field_h;
           return stackIn_24_0;

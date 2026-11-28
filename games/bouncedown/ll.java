@@ -21,7 +21,7 @@ final class ll extends lk {
     private RgbSprite field_B;
 
     final static void a(int param0, boolean param1, int param2) {
-        ck.field_c = param0;
+        DebouncedFieldValidator.field_c = param0;
         sj.field_d = param2;
         if (!param1) {
           ll.integerPower(62, 103, 114);

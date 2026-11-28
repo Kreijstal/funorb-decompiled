@@ -50,7 +50,7 @@ final class MixedSupport052 {
             if (rgbSpriteLocal13 != null) {
               integerLocal4 = (rgbSpriteLocal13.integerState0254 + 60) * MixedSupport003.integerState0019 / DelegatingCanvas.integerState0147;
               integerLocal6 = -30 + integerLocal4;
-              if (MixedSupport075.booleanState0098) {
+              if (PlayerBoardUpdateQueue.booleanState0098) {
                 MixedSupport013.performAction0171((byte) -112, integerLocal6 * -256 / 30, (rgbSpriteLocal13.integerState0254 - integerLocal6) * 256 / 30, 199, rgbSpriteLocal13, 245);
               } else {
                 MixedSupport013.performAction0171((byte) -115, (rgbSpriteLocal13.integerState0254 - integerLocal6) * 256 / 30, -256 * integerLocal6 / 30, 199, rgbSpriteLocal13, 245);

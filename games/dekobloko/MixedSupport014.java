@@ -214,7 +214,7 @@ final class MixedSupport014 {
           if (mixedSupport056Argument1.integerState0290 == 1 &&
             !Js5ArchiveManager.computeBoolean1100(-18163) &&
             null != MixedSupport016.sceneWidgetPart013State0001 &&
-            mixedSupport056Argument1.integerState0287 == MixedSupport016.sceneWidgetPart013State0001.computeInteger1710(125)) {
+            mixedSupport056Argument1.integerState0287 == MixedSupport016.sceneWidgetPart013State0001.getRoomId(125)) {
             if (!PacketBuffer.booleanState0228) {
               mixedSupport099Local21 = SceneWidget.mixedSupport099State0001;
               stringLocal22 = MixedSupport090.stringState0376;
@@ -230,7 +230,7 @@ final class MixedSupport014 {
           SceneWidget.mixedSupport099State0001.performAction1224(17);
           SceneWidget.mixedSupport099State0001.performAction1221((byte) -51, mixedSupport056Argument1);
           mixedSupport099Local25 = SceneWidget.mixedSupport099State0001;
-          integerLocal15 = UiComponentPart013.integerState0276;
+          integerLocal15 = LoginPanel.integerState0276;
           integerLocal16 = TextLineMetrics.integerState0535;
           mixedSupport099Local25.sceneWidgetPart002State0002.performAction0561(integerLocal16, integerLocal15, 121, 0, 0);
           return;

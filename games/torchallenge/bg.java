@@ -118,7 +118,7 @@ final class bg extends ic {
     final static void a(MidiPcmStream param0, int param1, int param2, int param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, boolean param7) {
         try {
           AudioOutput.configureAudio(param1, param7, 10);
-          bh.field_o = AudioOutput.createOutput(param5, param4, 0, param3);
+          PasswordValidator.field_o = AudioOutput.createOutput(param5, param4, 0, param3);
           re.field_B = AudioOutput.createOutput(param5, param4, 1, param2);
           GameKeyHandler.field_a = new PcmStreamMixer();
           ea.field_f = param2 * 1000 / param1;
@@ -126,7 +126,7 @@ final class bg extends ic {
           SectorCacheStore.field_a = param0;
           SectorCacheStore.field_a.c(nk.field_h, false);
           int var8_int = -123 % ((param6 - 59) / 51);
-          bh.field_o.setRootStream(SectorCacheStore.field_a);
+          PasswordValidator.field_o.setRootStream(SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "bg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
@@ -212,10 +212,10 @@ final class bg extends ic {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = gf.a(0, var10[var17]);
+                      var12[var17] = MatchingFieldValidator.a(0, var10[var17]);
                       var17++;
                     }
-                    var18.field_q[var5] = param2.requestMethod(var8, (byte) 113, var12, gf.a(0, var20));
+                    var18.field_q[var5] = param2.requestMethod(var8, (byte) 113, var12, MatchingFieldValidator.a(0, var20));
                     var18.field_s[var5] = var21;
                   }
                 } else {
@@ -229,7 +229,7 @@ final class bg extends ic {
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_u[var5] = var9;
-                  var18.field_j[var5] = param2.requestField((byte) -125, var15, gf.a(0, var16));
+                  var18.field_j[var5] = param2.requestField((byte) -125, var15, MatchingFieldValidator.a(0, var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

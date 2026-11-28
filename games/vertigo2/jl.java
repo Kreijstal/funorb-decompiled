@@ -52,7 +52,7 @@ final class jl {
           var10 = var8;
           var3 = var10.readUnsignedByte(-11);
           var10.beginBitAccess(0);
-          wc.field_o = ng.a((byte) -108, var10);
+          PasswordValidator.field_o = ng.a((byte) -108, var10);
           LevelTile.field_j = new int[var3][];
           GameKeyHandler.field_b = new jp[var3];
           for (var4 = 0; var3 > var4; var4++) {

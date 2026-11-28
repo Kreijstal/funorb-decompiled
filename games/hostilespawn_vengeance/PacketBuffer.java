@@ -715,7 +715,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return db.decodeCp1252String(this.field_n, var3, (byte) -114, var4);
+        return PasswordValidator.decodeCp1252String(this.field_n, var3, (byte) -114, var4);
     }
 
     final void a(int param0, long param1) {
@@ -896,7 +896,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.field_n[fieldTemp$0] != 0);
         var3 = this.field_i - var2 - 1;
         if (0 != var3) {
-          return db.decodeCp1252String(this.field_n, var2, (byte) -128, var3);
+          return PasswordValidator.decodeCp1252String(this.field_n, var2, (byte) -128, var3);
         }
         return "";
     }

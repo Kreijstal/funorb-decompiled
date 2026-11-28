@@ -20,7 +20,7 @@ final class ej extends ta {
         if (g.field_A < 2) {
           return 0;
         }
-        if (0 != hf.field_I) {
+        if (0 != EditableTextField.field_I) {
           if (null != lb.field_a) {
             if (!lb.field_a.ensureIndexLoaded(4)) {
               return 14;

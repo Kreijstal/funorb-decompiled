@@ -234,7 +234,7 @@ final class bp {
               ia.field_M = dl.field_b;
             } else {
               while (dl.field_b != ia.field_M) {
-                var2 = ih.field_r[dl.field_b];
+                var2 = RaiderRecruitmentScreen.field_r[dl.field_b];
                 dl.field_b = 127 & dl.field_b + 1;
                 if (0 <= var2) {
                   qk.field_e[var2] = true;

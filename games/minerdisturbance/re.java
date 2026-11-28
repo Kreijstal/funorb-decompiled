@@ -208,7 +208,7 @@ final class re implements uj {
             if (qd.field_Q == wi.field_s &&
               kj.b(-9319)) {
               ne.field_Q = kj.field_a.readLong(71);
-              wj.field_j = kj.field_a.readUnsignedByte((byte) -54);
+              AgeValidator.field_j = kj.field_a.readUnsignedByte((byte) -54);
               kj.field_a.readUnsignedByte((byte) -54);
               pj.field_a = kj.field_a.readUnsignedShort(-96);
               var11 = kj.field_a.readNullableString(103);
@@ -236,7 +236,7 @@ final class re implements uj {
               }
               ti.field_J = kj.field_a.readString(false);
               var12 = (CharSequence) ((Object) ti.field_J);
-              in.field_b = cl.a(-95, var12);
+              in.field_b = LoginPanel.a(-95, var12);
               a.field_d = kj.field_a.readUnsignedByte((byte) -54);
               qd.field_Q = pb.field_c;
               if (tb.field_d.b(0) == hk.field_i) {

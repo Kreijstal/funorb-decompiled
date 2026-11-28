@@ -13,7 +13,7 @@ final class MixedSupport062 {
 
     final static void performAction0735(int integerArgument1, RgbSprite rgbSpriteArgument2, String stringArgument3) {
         try {
-          MixedSupport075.rgbSpriteState0030 = rgbSpriteArgument2;
+          PlayerBoardUpdateQueue.rgbSpriteState0030 = rgbSpriteArgument2;
           KeyboardInputHandler.stringState0358 = stringArgument3;
           if (integerArgument1 != 200) {
             mouseInputState0001 = (MouseInput) null;

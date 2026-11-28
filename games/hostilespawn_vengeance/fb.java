@@ -6,17 +6,17 @@ final class fb extends ql {
     private int field_h;
     static int field_l;
     private v field_u;
-    private oc field_k;
-    private oc field_p;
-    private oc field_r;
-    private oc field_j;
-    private oc field_q;
+    private GridPoint field_k;
+    private GridPoint field_p;
+    private GridPoint field_r;
+    private GridPoint field_j;
+    private GridPoint field_q;
     static int field_f;
     private boolean field_s;
     private qm field_n;
-    private oc field_t;
+    private GridPoint field_t;
     private int field_e;
-    private oc[] field_d;
+    private GridPoint[] field_d;
     private qm field_o;
     private int field_g;
     private v field_m;
@@ -36,11 +36,11 @@ final class fb extends ql {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        oc stackIn_36_0 = null;
+        GridPoint stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         int stackIn_36_2 = 0;
         int stackIn_37_3;
-        oc var3;
+        GridPoint var3;
         int var4;
         int var5;
         oj var5_ref_oj;
@@ -51,7 +51,7 @@ final class fb extends ql {
         oj var10;
         oj var11;
         p var12;
-        oc var13;
+        GridPoint var13;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
@@ -67,7 +67,7 @@ final class fb extends ql {
         var11 = mm.field_m[0];
         var3 = var11.field_j;
         if (this.field_o != null) {
-          this.field_o.field_j.a((byte) 46, var3);
+          this.field_o.field_j.copyCoordinatesFrom((byte) 46, var3);
           this.field_o.field_l.a(var11.field_l.field_a - 0.5, var11.field_l.field_f - 0.5, param0 + 2);
           this.field_o.field_c = var11.field_c;
           if (!(32.0 > var11.field_c) &&
@@ -95,9 +95,9 @@ final class fb extends ql {
             var5 < 0) {
             this.field_s = true;
             this.field_i.field_n = true;
-            nh.field_E.a(-1, 8360, -1);
+            nh.field_E.setCoordinates(-1, 8360, -1);
             this.field_k.field_g = this.field_k.field_g + 1;
-            var6 = this.field_k.b(-4);
+            var6 = this.field_k.getClampedTileIndex(-4);
             ln.field_a.field_c[var6] = 4;
             ln.field_a.field_c[var6 - 1] = 4;
             ln.field_a.field_c[var6 + 1] = 4;
@@ -107,7 +107,7 @@ final class fb extends ql {
             tb.field_N = 150;
             tk.a(1, jc.field_c, 31, true);
           } else {
-            nh.field_E.a((byte) 46, this.field_i.field_j);
+            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_i.field_j);
           }
         }
         if (this.field_s) {
@@ -118,24 +118,24 @@ final class fb extends ql {
               var9 = new oj(this.field_d[var4Lifetime1], 18, rl.field_c);
               var5_ref_oj = var9;
               var5_ref_oj.field_M = 0;
-              fieldTemp$1 = el.field_j;
-              el.field_j = el.field_j + 1;
+              fieldTemp$1 = ProxySocketFactory.field_j;
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
               mm.field_m[fieldTemp$1] = var9;
             }
           }
           if (!(this.field_i.field_I > 0) ||
             this.field_i.field_i != 8) {
             cm.a(this.field_k, false);
-            var4Lifetime1Lifetime1 = this.field_k.b(-4);
+            var4Lifetime1Lifetime1 = this.field_k.getClampedTileIndex(-4);
             ln.field_a.field_c[var4Lifetime1Lifetime1] = 0;
             ln.field_a.field_c[var4Lifetime1Lifetime1 - 1] = 0;
             ln.field_a.field_c[1 + var4Lifetime1Lifetime1] = 0;
             if (0 < ImageProducerRasterBuffer.field_p) {
               CrossfadingMidiPcmStream.a(16, 1);
-              nh.field_E.a((byte) 46, this.field_p);
+              nh.field_E.copyCoordinatesFrom((byte) 46, this.field_p);
             } else {
               CrossfadingMidiPcmStream.a(17, param0 + 2);
-              nh.field_E.a((byte) 46, this.field_r);
+              nh.field_E.copyCoordinatesFrom((byte) 46, this.field_r);
             }
             le.field_D = 9000;
             this.field_h = 500;
@@ -145,7 +145,7 @@ final class fb extends ql {
             if (pm.field_h &&
               this.field_j != null &&
               this.field_j.field_e > 18) {
-              var5Lifetime1 = this.field_j.b(-4);
+              var5Lifetime1 = this.field_j.getClampedTileIndex(-4);
               ln.field_a.field_c[var5Lifetime1] = 0;
               ln.field_a.field_c[var5Lifetime1 + 1] = 0;
               stackIn_36_0 = this.field_j;
@@ -156,7 +156,7 @@ final class fb extends ql {
               } else {
                 stackIn_37_3 = -1;
               }
-              ((oc) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_36_2, stackIn_37_3);
+              ((GridPoint) (Object) stackIn_36_0).setCoordinates(stackIn_36_1, stackIn_36_2, stackIn_37_3);
             }
           }
         }
@@ -174,12 +174,12 @@ final class fb extends ql {
           }
         }
         if (null != this.field_o &&
-          dn.field_i != of.field_d) {
+          dn.field_i != ClientLookupTables.field_d) {
           this.field_n = this.field_o;
           this.field_g = 1000;
           this.field_o = null;
           CrossfadingMidiPcmStream.a(17, param0 + 2);
-          nh.field_E.a(-1, 8360, -1);
+          nh.field_E.setCoordinates(-1, 8360, -1);
         }
         if (0 <= this.field_g) {
           this.field_g = this.field_g - 1;
@@ -188,8 +188,8 @@ final class fb extends ql {
             this.field_n.field_u = null;
             this.field_n.field_i = -1;
             CrossfadingMidiPcmStream.a(14, 1);
-            nh.field_E.a((byte) 46, this.field_q);
-            var4Lifetime3 = this.field_p.b(-4);
+            nh.field_E.copyCoordinatesFrom((byte) 46, this.field_q);
+            var4Lifetime3 = this.field_p.getClampedTileIndex(-4);
             ln.field_a.field_c[var4Lifetime3] = 0;
             ln.field_a.field_c[var4Lifetime3 + 1] = 0;
             ln.field_a.field_c[var4Lifetime3 - ln.field_a.field_d] = 0;
@@ -202,7 +202,7 @@ final class fb extends ql {
               for (var6Lifetime1 = 0; 256 >= var6Lifetime1; var6Lifetime1 += 16) {
                 var12 = jn.field_F[ib.field_c];
                 var12.field_c = (double)var6Lifetime1;
-                var12.field_j.a((byte) 46, this.field_n.field_j);
+                var12.field_j.copyCoordinatesFrom((byte) 46, this.field_n.field_j);
                 var12.field_l.a(0.0, 0.0, 1);
                 var12.field_i = 8;
                 var12.field_h = var5Lifetime2;
@@ -227,7 +227,7 @@ final class fb extends ql {
           if (!MusicPatchPcmStream.field_l &&
             var3.field_g <= 5 + this.field_r.field_g) {
             MusicPatchPcmStream.field_l = true;
-            nh.field_E.a(-1, param0 ^ -8361, -1);
+            nh.field_E.setCoordinates(-1, param0 ^ -8361, -1);
             this.field_e = 300;
           }
           if (-10 + this.field_r.field_g > var3.field_g) {
@@ -251,7 +251,7 @@ final class fb extends ql {
           }
           if (MusicPatchPcmStream.field_l &&
             (7 & 300 - this.field_e) == 0) {
-            var13 = new oc(this.field_t);
+            var13 = new GridPoint(this.field_t);
             var13.field_e = var13.field_e + ((int)(4.0 * Math.random()) - 1);
             var13.field_g = var13.field_g + (-2 + (int)(4.0 * Math.random()));
             var6Lifetime2 = 18;
@@ -260,7 +260,7 @@ final class fb extends ql {
                 var6Lifetime2 = 1;
               }
             } else {
-              var13.a((byte) 46, this.field_t);
+              var13.copyCoordinatesFrom((byte) 46, this.field_t);
               var6Lifetime2 = 27;
               var13.field_g = var13.field_g - 4;
             }
@@ -269,8 +269,8 @@ final class fb extends ql {
             if (var6Lifetime2 == 1) {
               var7.field_B = 100;
             }
-            fieldTemp$3 = el.field_j;
-            el.field_j = el.field_j + 1;
+            fieldTemp$3 = ProxySocketFactory.field_j;
+            ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             mm.field_m[fieldTemp$3] = var10;
           }
         }
@@ -295,7 +295,7 @@ final class fb extends ql {
         if (pm.field_h &&
           om.field_b &&
           this.field_j != null &&
-          ln.field_a.field_g[var3.b(-4)] == 2) {
+          ln.field_a.field_g[var3.getClampedTileIndex(-4)] == 2) {
           ti.a(this.field_j.field_g, (byte) -111, this.field_j.field_e);
           this.field_j = null;
           this.field_u.field_a = 1;
@@ -335,21 +335,21 @@ final class fb extends ql {
         var2 = var8;
         this.field_i = PacketBuffer.field_p[param0];
         if (var9.length < 12) {
-          this.field_k = new oc();
-          this.field_p = new oc();
-          this.field_r = new oc();
-          this.field_q = new oc();
-          this.field_t = new oc();
+          this.field_k = new GridPoint();
+          this.field_p = new GridPoint();
+          this.field_r = new GridPoint();
+          this.field_q = new GridPoint();
+          this.field_t = new GridPoint();
         } else {
-          this.field_k = new oc(var9[2], var9[3]);
-          this.field_p = new oc(var9[4], var9[5]);
-          this.field_r = new oc(var9[6], var9[7]);
-          this.field_q = new oc(var9[8], var9[9]);
-          this.field_t = new oc(var9[10], var9[11]);
+          this.field_k = new GridPoint(var9[2], var9[3]);
+          this.field_p = new GridPoint(var9[4], var9[5]);
+          this.field_r = new GridPoint(var9[6], var9[7]);
+          this.field_q = new GridPoint(var9[8], var9[9]);
+          this.field_t = new GridPoint(var9[10], var9[11]);
         }
         if (var10.length >= 20) {
           for (var3 = 0; 4 > var3; var3++) {
-            this.field_d[var3] = new oc(var2[2 * var3 + 12], var2[1 + 2 * var3 + 12]);
+            this.field_d[var3] = new GridPoint(var2[2 * var3 + 12], var2[1 + 2 * var3 + 12]);
           }
         } else {
           this.field_d = null;
@@ -360,7 +360,7 @@ final class fb extends ql {
         this.field_s = false;
         if (pm.field_h &&
           var10.length > 20) {
-          this.field_j = new oc(var10[20], var10[21]);
+          this.field_j = new GridPoint(var10[20], var10[21]);
         }
         if (22 < var10.length) {
           this.field_u = new v(qh.field_c, 24 * var10[22], 24 * var10[23]);
@@ -430,7 +430,7 @@ final class fb extends ql {
         return o.field_l;
     }
 
-    final boolean a(oc param0, boolean param1, byte param2) {
+    final boolean a(GridPoint param0, boolean param1, byte param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -481,7 +481,7 @@ final class fb extends ql {
     }
 
     public fb() {
-        this.field_d = new oc[4];
+        this.field_d = new GridPoint[4];
     }
 
     static {

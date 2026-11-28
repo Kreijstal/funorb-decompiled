@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Torquing extends tg {
+public final class Torquing extends NetworkGameClient {
     private TooltipPanel field_t;
     static VolumeScaledPcmStream field_v;
     static String field_w;
     static int field_x;
     public static int field_u;
 
-    final static String a(int param0, int param1, PacketBuffer param2) {
+    final static String readCompressedChatText(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -27,7 +27,7 @@ public final class Torquing extends tg {
               var3_int = param1;
             }
             if (param0 != 26657) {
-              Torquing.a(9, false);
+              Torquing.applyPreferredDisplayMode(9, false);
             }
             var4 = new byte[var3_int];
             param2.position = param2.position + lh.field_u.a(var4, true, param2.position, param2.payload, 0, var3_int);
@@ -54,7 +54,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void applyPreferredDisplayMode(int param0, boolean param1) {
         int var2_int = 0;
         int var3 = 0;
         PacketBuffer var4 = null;
@@ -64,17 +64,17 @@ public final class Torquing extends tg {
         try {
           if (param0 >= -33) {
             var4 = (PacketBuffer) null;
-            Torquing.a(-55, 127, (PacketBuffer) null);
+            Torquing.readCompressedChatText(-55, 127, (PacketBuffer) null);
           }
           if (wp.field_w > 0) {
-            if (ki.field_D == null) {
-              dg.field_i = je.createFullscreenCanvas(640, 480, ArchiveRequest.field_u, 0, 0, -62);
+            if (AccountRegistrationPanel.field_D == null) {
+              TranslucentSpriteLayer.field_i = je.createFullscreenCanvas(640, 480, ArchiveRequest.field_u, 0, 0, -62);
             } else {
-              dg.field_i = ki.field_D.b((byte) -73);
+              TranslucentSpriteLayer.field_i = AccountRegistrationPanel.field_D.b((byte) -73);
               vp.b(2, -111);
             }
-            if (dg.field_i != null) {
-              Bzip2State.a(dg.field_i, (byte) 63);
+            if (TranslucentSpriteLayer.field_i != null) {
+              Bzip2State.a(TranslucentSpriteLayer.field_i, (byte) 63);
               var2_int = 2;
             } else {
               var2_int = 3;
@@ -82,7 +82,7 @@ public final class Torquing extends tg {
           } else {
             var2_int = (!je.a((byte) 70)) ? 1 : 0;
           }
-          if (null == ki.field_D) {
+          if (null == AccountRegistrationPanel.field_D) {
             if (!GzipDecompressor.field_a) {
               return;
             }
@@ -96,9 +96,9 @@ public final class Torquing extends tg {
         }
     }
 
-    final void a(int param0) {
+    final void releaseGameResources(int param0) {
         try {
-          Torquing.p(29165);
+          Torquing.clearTorquingGlobals(29165);
           be.clearStaticReferences();
           tj.clearStaticReferences(-36);
           IntrusiveDeque.clearStaticReferences(79);
@@ -138,10 +138,10 @@ public final class Torquing extends tg {
           wl.clearStaticReferences();
           fi.a(108);
           Level.clearLevelGlobals((byte) -113);
-          mh.clearStaticReferences(32);
-          ia.clearStaticReferences(88);
+          MenuScreen.clearStaticReferences(32);
+          FramedPanelLayer.clearStaticReferences(88);
           TooltipPanel.clearStaticReferences(3);
-          bi.c(-3);
+          LevelRun.clearLevelRunGlobals(-3);
           nc.clearStaticReferences(param0 ^ 56);
           hj.clearStaticReferences((byte) 114);
           Js5Transport.clearStaticReferences((byte) -77);
@@ -160,7 +160,7 @@ public final class Torquing extends tg {
           to.a(param0 ^ 29826);
           fn.a(false);
           ag.clearStaticReferences(18945);
-          sg.clearStaticReferences();
+          SceneMeshBatch.clearStaticReferences();
           dd.clearStaticReferences((byte) -127);
           g.clearStaticReferences();
           Model.a(param0 ^ 24993);
@@ -187,10 +187,10 @@ public final class Torquing extends tg {
           sp.clearDeclaredStaticReferences(-7361);
           qc.resetStaticState(1269);
           mn.clearStaticReferences((byte) 77);
-          ki.clearStaticReferences(0);
+          AccountRegistrationPanel.clearStaticReferences(0);
           fm.h(-59);
-          pe.g((byte) -122);
-          th.clearStaticReferences(2147483647);
+          LoginPanel.g((byte) -122);
+          DisplayNameSelectionPanel.clearStaticReferences(2147483647);
           a.clearStaticReferences(param0 ^ 4);
           tl.resetStaticState((byte) -110);
           eb.clearStaticReferences((byte) -31);
@@ -199,10 +199,10 @@ public final class Torquing extends tg {
           pa.clearStaticReferences((byte) -126);
           bl.clearStaticReferences(-92);
           rl.clearStaticReferences((byte) 120);
-          bn.resetStaticState(param0 ^ -64);
-          af.clearDeclaredStaticReferences(23394);
+          SpriteBase.resetStaticState(param0 ^ -64);
+          MenuLayer.clearDeclaredStaticReferences(23394);
           de.clearStaticReferences((byte) 113);
-          dg.clearStaticReferences(12949);
+          TranslucentSpriteLayer.clearStaticReferences(12949);
           kg.b((byte) -64);
           ik.clearStaticReferences((byte) 59);
           ji.clearStaticReferences(param0 - 101);
@@ -239,7 +239,7 @@ public final class Torquing extends tg {
           gi.a((byte) 78);
           qe.clearStaticReferences((byte) 102);
           mb.clearStaticReferences((byte) -83);
-          id.clearStaticReferences(-72);
+          LoginRequestBuilder.clearStaticReferences(-72);
           w.clearStaticReferences(param0 + 2147483644);
           uk.clearStaticReferences(0);
           DelegatingCanvas.a(-137);
@@ -283,14 +283,14 @@ public final class Torquing extends tg {
           ej.clearStaticReferences();
           ug.clearStaticReferences(false);
           na.clearStaticReferences(0);
-          gp.resetStaticState((byte) 121);
+          ValidatedTextField.resetStaticState((byte) 121);
           aa.clearDeclaredStaticReferences(0);
           kf.a(false);
           vp.clearStaticReferences(-1);
           ub.clearStaticReferences((byte) -19);
           bj.clearStaticReferences((byte) -37);
           ok.clearDeclaredStaticReferences(param0 + 9);
-          gf.clearStaticReferences(param0 - 4);
+          TextFieldValidator.clearStaticReferences(param0 - 4);
           bf.clearStaticReferences(3);
           va.clearStaticReferences(true);
           om.a(param0 - 4);
@@ -368,9 +368,9 @@ public final class Torquing extends tg {
           og.a((byte) 125);
           rp.clearStaticReferences(-28607);
           nh.a(false);
-          qp.clearStaticReferences(-39);
+          AchievementProgressUpdate.clearStaticReferences(-39);
           h.a(13809);
-          qk.clearStaticReferences((byte) 109);
+          LevelCompletionUpdate.clearStaticReferences((byte) 109);
           ud.clearStaticReferences((byte) -128);
           ii.a(param0 ^ -28451);
           up.clearStaticReferences(-108);
@@ -383,7 +383,7 @@ public final class Torquing extends tg {
           AccountRequestState.releaseStatics((byte) -119);
           AccountServiceResult.clearStaticReferences((byte) 10);
           fo.h(-2);
-          di.c(param0 ^ -3);
+          IndexedSpriteLayer.c(param0 ^ -3);
           hh.clearStaticReferences((byte) 84);
           qa.a(126);
           ni.clearStaticReferences(-37);
@@ -391,15 +391,15 @@ public final class Torquing extends tg {
           pf.clearStaticReferences(106);
           mc.clearStaticReferences(5);
           AccountNameAvailabilityValidator.c((byte) -124);
-          ij.f(-99);
-          tn.clearDeclaredStaticReferences(0);
-          ad.clearStaticReferences((byte) 17);
-          ab.clearDeclaredStaticReferences(64);
-          um.clearStaticReferences((byte) -121);
+          PasswordValidator.f(-99);
+          EmailFormatValidator.clearDeclaredStaticReferences(0);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences((byte) 17);
+          AgeValidator.clearDeclaredStaticReferences(64);
+          MatchingFieldValidator.clearStaticReferences((byte) -121);
           qd.clearStaticReferences(15);
           tb.clearStaticReferences((byte) 103);
           cd.clearStaticReferences((byte) -11);
-          eq.clearDeclaredStaticReferences((byte) 62);
+          DebouncedFieldValidator.clearDeclaredStaticReferences((byte) 62);
           ka.clearStaticReferences(101);
           ui.a(-22677);
           n.clearStaticReferences(0);
@@ -418,10 +418,10 @@ public final class Torquing extends tg {
     public Torquing() {
     }
 
-    private final void c(boolean param0) {
+    private final void flushQueuedProgressUpdates(boolean param0) {
         int var3 = 0;
-        qp var4 = null;
-        qk var5 = null;
+        AchievementProgressUpdate var4 = null;
+        LevelCompletionUpdate var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = field_u;
@@ -429,15 +429,15 @@ public final class Torquing extends tg {
           if (!param0) {
             return;
           }
-          var4 = (qp) (jh.field_y.beginBackward(0));
+          var4 = (AchievementProgressUpdate) (jh.field_y.beginBackward(0));
           while (var4 != null) {
             wc.a(var4, (byte) 99, 4);
-            var4 = (qp) (jh.field_y.nextBackward(-24059));
+            var4 = (AchievementProgressUpdate) (jh.field_y.nextBackward(-24059));
           }
-          var5 = (qk) (bo.field_l.beginBackward(0));
+          var5 = (LevelCompletionUpdate) (bo.field_l.beginBackward(0));
           while (var5 != null) {
             le.a((byte) 126, 5, var5);
-            var5 = (qk) (bo.field_l.nextBackward(-24059));
+            var5 = (LevelCompletionUpdate) (bo.field_l.nextBackward(-24059));
           }
           kg.field_c = ip.a(4, -127);
           kb.field_f = tl.a(5, 0, 1, 0);
@@ -453,11 +453,11 @@ public final class Torquing extends tg {
         }
     }
 
-    final void c(int param0) {
+    final void initializeGame(int param0) {
         PcmStreamMixer var2 = null;
         PcmStreamMixer var3 = null;
         try {
-          this.a(11, 11, false, param0 + 477, 9, 15, 10, 0);
+          this.initializeClientServices(11, 11, false, param0 + 477, 9, 15, 10, 0);
           AudioOutput.configureAudio(22050, true, 10);
           qd.field_b = AudioOutput.createOutput(ArchiveRequest.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
           ResourceArchive.field_c = AudioOutput.createOutput(ArchiveRequest.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
@@ -471,37 +471,37 @@ public final class Torquing extends tg {
           cc.field_c = 1;
           TooltipPanel.field_c = 0;
           if (param0 != -593) {
-            this.c(true, -107);
+            this.drawWorldPreview(true, -107);
           }
           qa.field_l = 9;
-          sg.c();
+          SceneMeshBatch.initializeEmptyMesh();
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DA(" + param0 + ')');
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void drawWorldProgressScreen(int param0, int param1) {
         try {
           k.a(param1, 1);
           nc.a(param1, true);
-          qc.field_cb.a((byte) -51, 0, 0);
-          wh.field_t[param1].a(0, 0, 76);
-          pm.field_m[param1].a(0, 0);
-          mh.field_d[param1].a(0, 0, 76);
-          GameKeyHandler.field_a[param1].a(0, 0);
+          qc.field_cb.drawFramedPanel((byte) -51, 0, 0);
+          wh.field_t[param1].drawWithAlpha(0, 0, 76);
+          pm.field_m[param1].drawOpaque(0, 0);
+          MenuScreen.field_d[param1].drawWithAlpha(0, 0, 76);
+          GameKeyHandler.field_a[param1].drawOpaque(0, 0);
           if (null == this.field_t) {
             this.field_t = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
-            this.field_t.a((byte) -19, 30);
-            this.field_t.a(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, pc.field_n));
-            this.field_t.a((byte) 120, 40);
-            this.field_t.a(false, ff.a(new String[]{Integer.toString(ie.field_b.field_b[param1]), Integer.toString(mh.field_k[param1])}, 0, ka.field_l));
-            this.field_t.a((byte) 97, 30);
-            this.field_t.c(0);
+            this.field_t.addFlexibleVerticalSpace((byte) -19, 30);
+            this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, pc.field_n));
+            this.field_t.addFlexibleVerticalSpace((byte) 120, 40);
+            this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(ie.field_b.field_b[param1]), Integer.toString(MenuScreen.field_k[param1])}, 0, ka.field_l));
+            this.field_t.addFlexibleVerticalSpace((byte) 97, 30);
+            this.field_t.justifyPanelContents(0);
           }
-          this.field_t.b(34, -120, 159);
+          this.field_t.drawPanel(34, -120, 159);
           qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, 3 * (1 + dd.field_c.field_x) / 2);
           if (param0 < 30) {
-            this.b(61);
+            this.prepareGameShutdown(61);
           }
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
@@ -509,7 +509,7 @@ public final class Torquing extends tg {
         }
     }
 
-    private final boolean b(boolean param0, byte param1) {
+    private final boolean advanceGameAssetLoading(boolean param0, byte param1) {
         Sprite dupTemp$0 = null;
         int var19_int = 0;
         int var20 = 0;
@@ -530,27 +530,27 @@ public final class Torquing extends tg {
         int var5 = 0;
         byte[] var5_ref_byte__ = null;
         int var6 = 0;
-        sm var7_ref_sm = null;
+        IndexedSprite var7_ref_sm = null;
         int var7 = 0;
-        ia var8_ref_ia = null;
+        FramedPanelLayer var8_ref_ia = null;
         int var8 = 0;
         int[] var9_ref_int__ = null;
         int var9 = 0;
         int var10 = 0;
         Object var10_ref = null;
         int var11_int = 0;
-        dg var11 = null;
+        TranslucentSpriteLayer var11 = null;
         int[] var11_array = null;
         int var12_int = 0;
         int[] var12 = null;
-        af var13 = null;
+        MenuLayer var13 = null;
         int var13_int = 0;
         StringBuilder var13_ref = null;
         int var14_int = 0;
         Level var14 = null;
-        sm var15_ref_sm = null;
+        IndexedSprite var15_ref_sm = null;
         int var15 = 0;
-        ia var16_ref_ia = null;
+        FramedPanelLayer var16_ref_ia = null;
         Sprite var16_ref_t = null;
         int var16 = 0;
         int var17 = 0;
@@ -568,16 +568,16 @@ public final class Torquing extends tg {
         short[] var32 = null;
         Sprite var33 = null;
         Sprite var34 = null;
-        sm[] var35 = null;
-        sm var36 = null;
+        IndexedSprite[] var35 = null;
+        IndexedSprite var36 = null;
         Sprite var37 = null;
         Sprite var38 = null;
         Sprite[] var40 = null;
         Sprite var41 = null;
-        sm[] var42 = null;
-        sm var43 = null;
-        sm var44 = null;
-        sm var45 = null;
+        IndexedSprite[] var42 = null;
+        IndexedSprite var43 = null;
+        IndexedSprite var44 = null;
+        IndexedSprite var45 = null;
         Sprite var46 = null;
         int[] var47 = null;
         Sprite[] var48 = null;
@@ -653,8 +653,8 @@ public final class Torquing extends tg {
                               bp.field_c.tryLoadAllGroups(param1 ^ 19403)) {
                               if (vd.field_e.ensureIndexLoaded(-12749) &&
                                 vd.field_e.tryLoadAllGroups(param1 - 19273)) {
-                                if (th.field_C.ensureIndexLoaded(-12749) &&
-                                  th.field_C.tryLoadAllGroups(param1 ^ 19403)) {
+                                if (DisplayNameSelectionPanel.field_C.ensureIndexLoaded(-12749) &&
+                                  DisplayNameSelectionPanel.field_C.tryLoadAllGroups(param1 ^ 19403)) {
                                   if (he.field_b.ensureIndexLoaded(-12749) &&
                                     he.field_b.tryLoadAllGroups(-19375)) {
                                     if (wp.field_w > 0 && (!eg.field_t.ensureIndexLoaded(-12749) ||
@@ -664,7 +664,7 @@ public final class Torquing extends tg {
                                     }
                                     pm.a((byte) 80);
                                     IsaacPacketBuffer.a(30.0f, param1 + 116, jn.field_d);
-                                    this.b((byte) 73);
+                                    this.renderFrame((byte) 73);
                                     if (!param0) {
                                       return false;
                                     }
@@ -675,7 +675,7 @@ public final class Torquing extends tg {
                                   IsaacPacketBuffer.a(28.0f, 101, c.a(17, pa.field_a, "", pd.field_a, he.field_b));
                                   return false;
                                 }
-                                IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", NetworkArchiveRequest.field_A, th.field_C));
+                                IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", NetworkArchiveRequest.field_A, DisplayNameSelectionPanel.field_C));
                                 return false;
                               }
                               IsaacPacketBuffer.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", WidgetContainer.field_A, vd.field_e));
@@ -756,7 +756,7 @@ public final class Torquing extends tg {
               cf.a(6639);
               return false;
             }
-            if (ia.a(-22426, 0)) {
+            if (FramedPanelLayer.a(-22426, 0)) {
               var31 = MeshGeometry.a(rl.field_a, "", "sphere_halloween");
               gi.a(var31, (byte) 13, 31);
               MouseWheelInput.field_c[17] = new Model(var31);
@@ -822,12 +822,12 @@ public final class Torquing extends tg {
           }
           if (rp.field_d != null) {
             IsaacPacketBuffer.a(32.0f, -66, k.field_h);
-            this.b((byte) 73);
+            this.renderFrame((byte) 73);
             VolumeScaledPcmStream.field_o = mn.a(rp.field_d, "basic", "unachieved", 112);
-            pe.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
+            LoginPanel.field_J = mn.a(rp.field_d, "basic", "locked", param1 + 207);
             mo.a(VolumeScaledPcmStream.field_o, 4);
             dd.field_i = mn.a(rp.field_d, "basic", "orbcoin", 124);
-            this.q(8);
+            this.loadInterfaceFonts(8);
             if (0 >= wp.field_w) {
               m.a(16750848, (java.applet.Applet) (this), 0, NodeHashTableIterator.field_a, 0, 16777215);
               var33 = new Sprite(640, 480);
@@ -854,18 +854,18 @@ public final class Torquing extends tg {
             var42 = ip.a(rg.field_v, -109, "", "intro_components_shadows");
             var43 = var35[1];
             var7_ref_sm = var35[3];
-            var8_ref_ia = new ia(18, 142, 404, 320);
+            var8_ref_ia = new FramedPanelLayer(18, 142, 404, 320);
             qc.field_cb = var8_ref_ia;
             pa.field_e = ip.a(rg.field_v, -115, "", "world_text");
             GameKeyHandler.field_a = ip.a(rg.field_v, -109, "", "world_img");
-            mh.field_d = ip.a(rg.field_v, param1 - 17, "", "world_img_shadow");
+            MenuScreen.field_d = ip.a(rg.field_v, param1 - 17, "", "world_img_shadow");
             rp.field_b = new Sprite[32];
             var9_ref_int__ = new int[]{16777215, 14211288, 15000804, 10526880};
             for (var10 = 0; var10 < 8; var10++) {
               var36 = GameKeyHandler.field_a[var10];
               var37 = new Sprite(var36.field_c, var36.field_d);
               var37.e();
-              var36.a(-var36.field_a, -var36.field_g);
+              var36.drawOpaque(-var36.field_a, -var36.field_g);
               if (var36.field_d < var36.field_c) {
                 var14_int = 48 * var36.field_d / var36.field_c;
                 var13_int = 48;
@@ -900,27 +900,27 @@ public final class Torquing extends tg {
             pm.field_m = ip.a(rg.field_v, -114, "", "world_title");
             wh.field_t = ip.a(rg.field_v, param1 ^ 23, "", "world_title_shadows");
             wj.field_k = DelegatingCanvas.a("getready", 31094, rg.field_v, "");
-            sg.field_e = SectorCacheStore.a("sprite_textures", param1 ^ 101, "", rg.field_v);
-            sg.field_a = SectorCacheStore.a("auras", -1, "", rg.field_v);
-            var40 = sg.field_a;
+            SceneMeshBatch.field_e = SectorCacheStore.a("sprite_textures", param1 ^ 101, "", rg.field_v);
+            SceneMeshBatch.field_a = SectorCacheStore.a("auras", -1, "", rg.field_v);
+            var40 = SceneMeshBatch.field_a;
             for (var11_int = 0; var40.length > var11_int; var11_int++) {
               var41 = var40[var11_int];
               var41.a();
             }
             hj.field_c = var43;
-            VertexMesh.field_l = var35[2].a();
-            fq.field_F = new dg(var42[2], 0, 0, 76);
-            cq.field_w = var35[4].a();
-            ResourceArchive.field_j = var35[0].a();
-            jh.field_B = new dg(var42[0], 0, 0, 76);
+            VertexMesh.field_l = var35[2].toRgbSprite();
+            fq.field_F = new TranslucentSpriteLayer(var42[2], 0, 0, 76);
+            cq.field_w = var35[4].toRgbSprite();
+            ResourceArchive.field_j = var35[0].toRgbSprite();
+            jh.field_B = new TranslucentSpriteLayer(var42[0], 0, 0, 76);
             jb.field_b = var8_ref_ia;
             nh.field_l = var7_ref_sm;
             bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
             VolumeScaledPcmStream.field_n = mn.a(rg.field_v, "", "shieldIcon", 105);
-            ia.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
+            FramedPanelLayer.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
             hq.field_h = SectorCacheStore.a("countdown", -1, "", rg.field_v);
-            hi.field_h = new sm[8];
-            UiWidget.field_r = new sm[8];
+            hi.field_h = new IndexedSprite[8];
+            UiWidget.field_r = new IndexedSprite[8];
             for (var10Lifetime2 = 0; 8 > var10Lifetime2; var10Lifetime2++) {
               UiWidget.field_r[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2, 31094, rg.field_v, "");
               if (var10Lifetime2 == 1) {
@@ -933,29 +933,29 @@ public final class Torquing extends tg {
             for (var10Lifetime3 = 0; var10Lifetime3 < 8; var10Lifetime3++) {
               ln.a((byte) 120, var10Lifetime3 * 640 >> 3);
             }
-            nn.field_a = new af[12][];
-            var10_ref = bi.a(var43, 81);
-            var11 = new dg(vg.a(new sm[]{var42[3], var42[2], var42[4]}, 52), 0, 0, 76);
-            var44 = vg.a(new sm[]{var7_ref_sm, var35[2], var35[4]}, 122);
-            var13 = bi.a(var44, param1 - 7);
-            nn.field_a[0] = new af[]{(af) (var10_ref), (af) ((Object) var8_ref_ia), (af) ((Object) var11), var13, (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], -115)};
+            nn.field_a = new MenuLayer[12][];
+            var10_ref = LevelRun.createIndexedSpriteLayer(var43, 81);
+            var11 = new TranslucentSpriteLayer(vg.a(new IndexedSprite[]{var42[3], var42[2], var42[4]}, 52), 0, 0, 76);
+            var44 = vg.a(new IndexedSprite[]{var7_ref_sm, var35[2], var35[4]}, 122);
+            var13 = LevelRun.createIndexedSpriteLayer(var44, param1 - 7);
+            nn.field_a[0] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) var8_ref_ia), (MenuLayer) ((Object) var11), var13, (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], -115)};
             var45 = DelegatingCanvas.a("pause_title", param1 ^ -30996, rg.field_v, "");
-            nn.field_a[1] = new af[]{(af) (var10_ref), (af) ((Object) var8_ref_ia), (af) ((Object) var11), var13, (af) ((Object) new dg(var45, 5, 5, 76)), bi.a(var45, i.c((int) param1, 55))};
-            nn.field_a[3] = new af[]{(af) ((Object) new ia(102, 14, 436, 452)), ByteStorage.a("continue", "", rg.field_v, (byte) 4)};
-            nn.field_a[4] = new af[]{(af) (var10_ref), ByteStorage.a("help_bg_delta", "", rg.field_v, (byte) 4), (af) ((Object) new ia(27, 98, 574, 365))};
+            nn.field_a[1] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) var8_ref_ia), (MenuLayer) ((Object) var11), var13, (MenuLayer) ((Object) new TranslucentSpriteLayer(var45, 5, 5, 76)), LevelRun.createIndexedSpriteLayer(var45, i.c((int) param1, 55))};
+            nn.field_a[3] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(102, 14, 436, 452)), ByteStorage.a("continue", "", rg.field_v, (byte) 4)};
+            nn.field_a[4] = new MenuLayer[]{(MenuLayer) (var10_ref), ByteStorage.a("help_bg_delta", "", rg.field_v, (byte) 4), (MenuLayer) ((Object) new FramedPanelLayer(27, 98, 574, 365))};
             var15_ref_sm = DelegatingCanvas.a("highscore_top", 31094, rg.field_v, "");
-            nn.field_a[2] = new af[]{(af) (var10_ref), (af) ((Object) new ia(102, 108, 436, 362)), ByteStorage.a("highscore_bottom", "", rg.field_v, (byte) 4), (af) ((Object) new dg(var15_ref_sm, 4, 4, 76)), bi.a(var15_ref_sm, 103)};
-            nn.field_a[5] = new af[]{(af) ((Object) new ia(72, 82, 496, 366))};
-            nn.field_a[9] = new af[]{(af) ((Object) new ia(27, 51, 574, 430)), ByteStorage.a("levelsel", "", rg.field_v, (byte) 4)};
-            var16_ref_ia = new ia(23, 62, 593, 402);
-            nn.field_a[6] = new af[]{(af) ((Object) var16_ref_ia), ByteStorage.a("achievetitle", "", rg.field_v, (byte) 4)};
-            nn.field_a[8] = new af[]{(af) ((Object) var16_ref_ia), ByteStorage.a("gameachtitle", "", rg.field_v, (byte) 4)};
-            nn.field_a[7] = new af[]{(af) ((Object) new ia(35, 144, 573, 223)), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], 115)};
-            nn.field_a[10] = new af[]{(af) ((Object) qc.field_cb), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], param1 + 41), (af) ((Object) new dg(mh.field_d[1], 0, 0, 76)), bi.a(GameKeyHandler.field_a[1], 108)};
-            nn.field_a[11] = new af[]{(af) ((Object) new ia(11, 11, 618, 122)), (af) ((Object) new ia(11, 139, 209, 330)), (af) ((Object) new ia(226, 139, 403, 242))};
+            nn.field_a[2] = new MenuLayer[]{(MenuLayer) (var10_ref), (MenuLayer) ((Object) new FramedPanelLayer(102, 108, 436, 362)), ByteStorage.a("highscore_bottom", "", rg.field_v, (byte) 4), (MenuLayer) ((Object) new TranslucentSpriteLayer(var15_ref_sm, 4, 4, 76)), LevelRun.createIndexedSpriteLayer(var15_ref_sm, 103)};
+            nn.field_a[5] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(72, 82, 496, 366))};
+            nn.field_a[9] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(27, 51, 574, 430)), ByteStorage.a("levelsel", "", rg.field_v, (byte) 4)};
+            var16_ref_ia = new FramedPanelLayer(23, 62, 593, 402);
+            nn.field_a[6] = new MenuLayer[]{(MenuLayer) ((Object) var16_ref_ia), ByteStorage.a("achievetitle", "", rg.field_v, (byte) 4)};
+            nn.field_a[8] = new MenuLayer[]{(MenuLayer) ((Object) var16_ref_ia), ByteStorage.a("gameachtitle", "", rg.field_v, (byte) 4)};
+            nn.field_a[7] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(35, 144, 573, 223)), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], 115)};
+            nn.field_a[10] = new MenuLayer[]{(MenuLayer) ((Object) qc.field_cb), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], param1 + 41), (MenuLayer) ((Object) new TranslucentSpriteLayer(MenuScreen.field_d[1], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(GameKeyHandler.field_a[1], 108)};
+            nn.field_a[11] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(11, 11, 618, 122)), (MenuLayer) ((Object) new FramedPanelLayer(11, 139, 209, 330)), (MenuLayer) ((Object) new FramedPanelLayer(226, 139, 403, 242))};
             dj.field_a = SectorCacheStore.a("menu_items_recol", -1, "", rg.field_v);
             bj.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
-            qd.field_c = new sm[3];
+            qd.field_c = new IndexedSprite[3];
             qd.field_c[1] = DelegatingCanvas.a("death_time", 31094, rg.field_v, "");
             qd.field_c[0] = vo.a(-173, i.c((int) param1, 101), GameKeyHandler.field_a[2], 43);
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
@@ -995,73 +995,73 @@ public final class Torquing extends tg {
           }
           if (null != bp.field_c) {
             IsaacPacketBuffer.a(35.0f, param1 ^ -29, jo.field_a);
-            this.b((byte) 73);
-            id.field_a = new fi(bp.field_c, vd.field_e);
-            th.field_F[26] = cg.a(bp.field_c, "", "torq_bounce").b();
-            th.field_F[19] = cg.a(bp.field_c, "", "torq_collect").b();
-            th.field_F[12] = cg.a(bp.field_c, "", "torq_equip_shield").b();
-            th.field_F[9] = cg.a(bp.field_c, "", "torq_equip_spikes").b();
-            th.field_F[13] = cg.a(bp.field_c, "", "torq_explode").b();
-            th.field_F[10] = cg.a(bp.field_c, "", "torq_gyroscope").b();
-            th.field_F[25] = cg.a(bp.field_c, "", "torq_land_hard").b();
-            th.field_F[27] = cg.a(bp.field_c, "", "torq_playfield_tilts").b();
-            th.field_F[6] = cg.a(bp.field_c, "", "torq_powerup").b();
-            th.field_F[0] = cg.a(bp.field_c, "", "torq_roll_normal_1").b();
-            th.field_F[1] = cg.a(bp.field_c, "", "torq_roll_spiky_1").b();
-            th.field_F[23] = cg.a(bp.field_c, "", "torq_select").b();
-            th.field_F[16] = cg.a(bp.field_c, "", "torq_shieldhit").b();
-            th.field_F[11] = cg.a(bp.field_c, "", "torq_skid_alt").b();
-            th.field_F[15] = cg.a(bp.field_c, "", "torq_squash").b();
-            th.field_F[20] = cg.a(bp.field_c, "", "torq_tick").b();
-            th.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
+            this.renderFrame((byte) 73);
+            LoginRequestBuilder.field_a = new fi(bp.field_c, vd.field_e);
+            DisplayNameSelectionPanel.field_F[26] = cg.a(bp.field_c, "", "torq_bounce").b();
+            DisplayNameSelectionPanel.field_F[19] = cg.a(bp.field_c, "", "torq_collect").b();
+            DisplayNameSelectionPanel.field_F[12] = cg.a(bp.field_c, "", "torq_equip_shield").b();
+            DisplayNameSelectionPanel.field_F[9] = cg.a(bp.field_c, "", "torq_equip_spikes").b();
+            DisplayNameSelectionPanel.field_F[13] = cg.a(bp.field_c, "", "torq_explode").b();
+            DisplayNameSelectionPanel.field_F[10] = cg.a(bp.field_c, "", "torq_gyroscope").b();
+            DisplayNameSelectionPanel.field_F[25] = cg.a(bp.field_c, "", "torq_land_hard").b();
+            DisplayNameSelectionPanel.field_F[27] = cg.a(bp.field_c, "", "torq_playfield_tilts").b();
+            DisplayNameSelectionPanel.field_F[6] = cg.a(bp.field_c, "", "torq_powerup").b();
+            DisplayNameSelectionPanel.field_F[0] = cg.a(bp.field_c, "", "torq_roll_normal_1").b();
+            DisplayNameSelectionPanel.field_F[1] = cg.a(bp.field_c, "", "torq_roll_spiky_1").b();
+            DisplayNameSelectionPanel.field_F[23] = cg.a(bp.field_c, "", "torq_select").b();
+            DisplayNameSelectionPanel.field_F[16] = cg.a(bp.field_c, "", "torq_shieldhit").b();
+            DisplayNameSelectionPanel.field_F[11] = cg.a(bp.field_c, "", "torq_skid_alt").b();
+            DisplayNameSelectionPanel.field_F[15] = cg.a(bp.field_c, "", "torq_squash").b();
+            DisplayNameSelectionPanel.field_F[20] = cg.a(bp.field_c, "", "torq_tick").b();
+            DisplayNameSelectionPanel.field_F[28] = cg.a(bp.field_c, "", "torq_jump2").b();
             var3_intLifetime1 = bp.field_c.getGroupIdByName(-1, "");
-            var50 = id.field_a.a(bp.field_c.getFileIdByName("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
+            var50 = LoginRequestBuilder.field_a.a(bp.field_c.getFileIdByName("torq_whistle", -107, var3_intLifetime1), var3_intLifetime1, (byte) -84);
             var63 = new byte[var50.data.length];
             var51 = var63;
             var5_ref_byte__ = var51;
             dk.copyByteRange(var50.data, 0, var5_ref_byte__, 0, var63.length);
-            th.field_F[5] = new PcmSample(var50.sampleRate, var63, var50.loopStart, var50.loopEnd, var50.field_l);
+            DisplayNameSelectionPanel.field_F[5] = new PcmSample(var50.sampleRate, var63, var50.loopStart, var50.loopEnd, var50.field_l);
             bp.field_c = null;
             cf.a(6639);
             return false;
           }
           if (vd.field_e != null) {
             IsaacPacketBuffer.a(37.0f, -88, jo.field_a);
-            this.b((byte) 73);
-            th.field_F[7] = ho.a(vd.field_e, "", "torq_cuckoo_clock").c();
-            th.field_F[8] = ho.a(vd.field_e, "", "laura_uhoh").c();
-            th.field_F[21] = ho.a(vd.field_e, "", "bigben").c();
-            th.field_F[24] = ho.a(vd.field_e, "", "collide_1").c();
-            th.field_F[22] = ho.a(vd.field_e, "", "laura_aaahhh").c();
-            th.field_F[14] = ho.a(vd.field_e, "", "laura_ow").c();
-            th.field_F[18] = ho.a(vd.field_e, "", "laura_woohoo").c();
-            th.field_F[17] = id.field_a.a("laura_yeah", -114, "");
-            th.field_F[4] = ho.a(vd.field_e, "", "laura_1").c();
-            th.field_F[3] = ho.a(vd.field_e, "", "laura_2").c();
-            th.field_F[2] = ho.a(vd.field_e, "", "laura_3").c();
+            this.renderFrame((byte) 73);
+            DisplayNameSelectionPanel.field_F[7] = ho.a(vd.field_e, "", "torq_cuckoo_clock").c();
+            DisplayNameSelectionPanel.field_F[8] = ho.a(vd.field_e, "", "laura_uhoh").c();
+            DisplayNameSelectionPanel.field_F[21] = ho.a(vd.field_e, "", "bigben").c();
+            DisplayNameSelectionPanel.field_F[24] = ho.a(vd.field_e, "", "collide_1").c();
+            DisplayNameSelectionPanel.field_F[22] = ho.a(vd.field_e, "", "laura_aaahhh").c();
+            DisplayNameSelectionPanel.field_F[14] = ho.a(vd.field_e, "", "laura_ow").c();
+            DisplayNameSelectionPanel.field_F[18] = ho.a(vd.field_e, "", "laura_woohoo").c();
+            DisplayNameSelectionPanel.field_F[17] = LoginRequestBuilder.field_a.a("laura_yeah", -114, "");
+            DisplayNameSelectionPanel.field_F[4] = ho.a(vd.field_e, "", "laura_1").c();
+            DisplayNameSelectionPanel.field_F[3] = ho.a(vd.field_e, "", "laura_2").c();
+            DisplayNameSelectionPanel.field_F[2] = ho.a(vd.field_e, "", "laura_3").c();
             vd.field_e = null;
             cf.a(6639);
             return false;
           }
-          if (th.field_C != null) {
+          if (DisplayNameSelectionPanel.field_C != null) {
             IsaacPacketBuffer.a(39.0f, -87, SectorCacheStore.field_c);
-            this.b((byte) 73);
-            ResourceArchive.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
-            ResourceArchive.field_k[1] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_nursery_slopes"));
-            ResourceArchive.field_k[2] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_squared_away"));
-            ResourceArchive.field_k[3] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_next_steps"));
-            ResourceArchive.field_k[4] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_straight_and_narrow"));
-            ResourceArchive.field_k[5] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_bombing_along"));
-            ResourceArchive.field_k[6] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_amazing"));
-            ResourceArchive.field_k[7] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_circuitous_route"));
-            ResourceArchive.field_k[8] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_leap_of_faith"));
-            ResourceArchive.field_k[9] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gamecomplete"));
-            ResourceArchive.field_k[10] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing Football Jingle"));
+            this.renderFrame((byte) 73);
+            ResourceArchive.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Titlescreen"));
+            ResourceArchive.field_k[1] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_nursery_slopes"));
+            ResourceArchive.field_k[2] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_squared_away"));
+            ResourceArchive.field_k[3] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_next_steps"));
+            ResourceArchive.field_k[4] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_straight_and_narrow"));
+            ResourceArchive.field_k[5] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_bombing_along"));
+            ResourceArchive.field_k[6] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_amazing"));
+            ResourceArchive.field_k[7] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_circuitous_route"));
+            ResourceArchive.field_k[8] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/torquing_leap_of_faith"));
+            ResourceArchive.field_k[9] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Gamecomplete"));
+            ResourceArchive.field_k[10] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing Football Jingle"));
             ResourceArchive.field_k[10].a(false);
-            ResourceArchive.field_k[11] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Levelcomplete"));
-            ResourceArchive.field_k[12] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/Torquing_Gameover"));
-            th.field_C = null;
-            id.field_a = null;
+            ResourceArchive.field_k[11] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Levelcomplete"));
+            ResourceArchive.field_k[12] = new wl(ih.a(7828, "", LoginRequestBuilder.field_a, DisplayNameSelectionPanel.field_C, "music/Torquing_Gameover"));
+            DisplayNameSelectionPanel.field_C = null;
+            LoginRequestBuilder.field_a = null;
             cf.a(6639);
             return false;
           }
@@ -1083,7 +1083,7 @@ public final class Torquing extends tg {
               }
             }
             qc.field_ab = new int[var6];
-            mh.field_k = new int[var6];
+            MenuScreen.field_k = new int[var6];
             var54 = new StringBuilder(8192);
             var8Lifetime2 = 0;
             var9 = 0;
@@ -1164,8 +1164,8 @@ public final class Torquing extends tg {
             dk.a(qc.field_ab, 0, var11_array, 0, qc.field_ab.length);
             qc.field_ab = var11_array;
             var12 = new int[var8Lifetime1];
-            dk.a(mh.field_k, 0, var12, 0, mh.field_k.length);
-            mh.field_k = var12;
+            dk.a(MenuScreen.field_k, 0, var12, 0, MenuScreen.field_k.length);
+            MenuScreen.field_k = var12;
             var13_ref = new StringBuilder(8192);
             var14 = DirectByteStorage.field_d;
             while (var14.field_m != null) {
@@ -1258,15 +1258,15 @@ public final class Torquing extends tg {
               return true;
             }
             var28 = (PacketBuffer) null;
-            Torquing.a(-38, -61, (PacketBuffer) null);
+            Torquing.readCompressedChatText(-38, -61, (PacketBuffer) null);
             return true;
           }
-          vo.field_f = new mh[12];
+          vo.field_f = new MenuScreen[12];
           fn.field_c = 0;
           for (var3_intLifetime3 = 0; var3_intLifetime3 < 12; var3_intLifetime3++) {
-            vo.field_f[var3_intLifetime3] = new mh(this, var3_intLifetime3);
+            vo.field_f[var3_intLifetime3] = new MenuScreen(this, var3_intLifetime3);
           }
-          bn.field_h = 0;
+          SpriteBase.field_h = 0;
           cf.a(6639);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1276,7 +1276,7 @@ public final class Torquing extends tg {
         }
     }
 
-    private final void f(byte param0) {
+    private final void updateScreenTransition(byte param0) {
         int stackIn_13_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_176_0 = 0;
@@ -1315,7 +1315,7 @@ public final class Torquing extends tg {
             stackIn_19_0 = (!vo.field_f[fn.field_c].field_a.field_k) ? 0 : 1;
             var6 = stackIn_19_0;
           }
-          var11 = bn.field_h;
+          var11 = SpriteBase.field_h;
           if (var11 != 0) {
             if (var11 == 2) {
               if (1 == oo.field_b) {
@@ -1328,7 +1328,7 @@ public final class Torquing extends tg {
               }
               if (oo.field_b >> 1 == GzipDecompressor.field_b) {
                 ie.field_b.field_e.clear(param0 + 108);
-                bn.field_h = -1;
+                SpriteBase.field_h = -1;
                 fn.field_c = GzipDecompressor.field_c;
                 vo.field_f[fn.field_c].field_i = 0;
               }
@@ -1338,15 +1338,15 @@ public final class Torquing extends tg {
                   if (3 != var11) {
                     if (var11 == 7) {
                       if (250 <= oo.field_b) {
-                        this.a(true, ie.field_b.field_L, 5, var6 != 0);
+                        this.transitionGameScreen(true, ie.field_b.field_L, 5, var6 != 0);
                       } else {
                         if (oo.field_b > 2 * GzipDecompressor.field_b &&
                           var5 != 0) {
-                          this.a(true, ie.field_b.field_L, 5, true);
+                          this.transitionGameScreen(true, ie.field_b.field_L, 5, true);
                         } else {
                           if (2 * GzipDecompressor.field_b < oo.field_b &&
                             var4 != 0) {
-                            this.a(true, ie.field_b.field_L, 5, false);
+                            this.transitionGameScreen(true, ie.field_b.field_L, 5, false);
                           }
                         }
                       }
@@ -1359,19 +1359,19 @@ public final class Torquing extends tg {
                           var12 = ie.field_b.field_d;
                         }
                         if (var12.field_e != null) {
-                          var11 = 2 * var12.field_e.a(false);
+                          var11 = 2 * var12.field_e.getContentHeight(false);
                         }
                         if (2 * GzipDecompressor.field_b < oo.field_b) {
                           if (var11 > oo.field_b) {
                             if (var5 != 0) {
-                              this.a(true, ie.field_b.field_L, 5, true);
+                              this.transitionGameScreen(true, ie.field_b.field_L, 5, true);
                             } else {
                               if (var4 != 0) {
-                                this.a(true, ie.field_b.field_L, 5, false);
+                                this.transitionGameScreen(true, ie.field_b.field_L, 5, false);
                               }
                             }
                           } else {
-                            this.a(true, ie.field_b.field_L, 5, var6 != 0);
+                            this.transitionGameScreen(true, ie.field_b.field_L, 5, var6 != 0);
                           }
                         }
                       } else {
@@ -1380,7 +1380,7 @@ public final class Torquing extends tg {
                             if (var11 != 12) {
                               if (var11 == 5) {
                                 if (GzipDecompressor.field_b <= oo.field_b / 2) {
-                                  bn.field_h = -1;
+                                  SpriteBase.field_h = -1;
                                   jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                                 }
                               } else {
@@ -1414,38 +1414,38 @@ public final class Torquing extends tg {
                                   if (var10 == 0) {
                                     if (var7 != 0 &&
                                       GzipDecompressor.field_b * 2 == oo.field_b) {
-                                      ie.field_b.d(1);
+                                      ie.field_b.advanceToNextLevel(1);
                                     }
                                   } else {
                                     if (var8 != 0) {
                                       ie.field_b.b(9);
-                                      this.a(true, 10, 12, var9 != 0);
+                                      this.transitionGameScreen(true, 10, 12, var9 != 0);
                                     } else {
                                       if (var7 != 0) {
-                                        this.a(true, GzipDecompressor.field_c, 11, var9 != 0);
+                                        this.transitionGameScreen(true, GzipDecompressor.field_c, 11, var9 != 0);
                                       } else {
-                                        this.a(true, 1 + GzipDecompressor.field_c, 9, var9 != 0);
+                                        this.transitionGameScreen(true, 1 + GzipDecompressor.field_c, 9, var9 != 0);
                                       }
                                     }
                                   }
                                 } else {
                                   if (9 == var11) {
                                     if (oo.field_b == 2 * GzipDecompressor.field_b) {
-                                      ie.field_b.d(param0 + 109);
+                                      ie.field_b.advanceToNextLevel(param0 + 109);
                                       cf.a(6639);
                                     } else {
                                       if (250 > oo.field_b) {
                                         if (GzipDecompressor.field_b * 2 < oo.field_b &&
                                           var5 != 0) {
-                                          this.a(true, ie.field_b.field_L, 4, true);
+                                          this.transitionGameScreen(true, ie.field_b.field_L, 4, true);
                                         } else {
                                           if (2 * GzipDecompressor.field_b < oo.field_b &&
                                             var4 != 0) {
-                                            this.a(true, ie.field_b.field_L, 4, false);
+                                            this.transitionGameScreen(true, ie.field_b.field_L, 4, false);
                                           }
                                         }
                                       } else {
-                                        this.a(true, ie.field_b.field_L, 4, var6 != 0);
+                                        this.transitionGameScreen(true, ie.field_b.field_L, 4, var6 != 0);
                                       }
                                     }
                                   }
@@ -1462,13 +1462,13 @@ public final class Torquing extends tg {
                               }
                               if (oo.field_b >> 1 == GzipDecompressor.field_b) {
                                 fn.field_c = GzipDecompressor.field_c;
-                                bn.field_h = -1;
+                                SpriteBase.field_h = -1;
                                 vo.field_f[fn.field_c].field_i = 0;
                               }
                             }
                           } else {
                             if (GzipDecompressor.field_b <= oo.field_b / 2) {
-                              bn.field_h = -1;
+                              SpriteBase.field_h = -1;
                               jh.a(ResourceArchive.field_k[ie.field_b.field_q], 0);
                             }
                           }
@@ -1480,25 +1480,25 @@ public final class Torquing extends tg {
                             var12 = ie.field_b.field_d.field_m;
                           }
                           if (var12.field_e != null) {
-                            var11 = 2 * var12.field_e.a(false);
+                            var11 = 2 * var12.field_e.getContentHeight(false);
                           }
                           if (GzipDecompressor.field_b * 2 != oo.field_b) {
                             if (2 * GzipDecompressor.field_b < oo.field_b) {
                               if (!ResourceArchive.field_k[11].isLinked(17) &&
                                 var11 <= oo.field_b) {
-                                this.a(true, GzipDecompressor.field_c, 5, var6 != 0);
+                                this.transitionGameScreen(true, GzipDecompressor.field_c, 5, var6 != 0);
                               } else {
                                 if (var5 != 0) {
-                                  this.a(true, GzipDecompressor.field_c, 5, true);
+                                  this.transitionGameScreen(true, GzipDecompressor.field_c, 5, true);
                                 } else {
                                   if (var4 != 0) {
-                                    this.a(true, GzipDecompressor.field_c, 5, false);
+                                    this.transitionGameScreen(true, GzipDecompressor.field_c, 5, false);
                                   }
                                 }
                               }
                             }
                           } else {
-                            ie.field_b.d(1);
+                            ie.field_b.advanceToNextLevel(1);
                             cf.a(6639);
                           }
                         }
@@ -1509,17 +1509,17 @@ public final class Torquing extends tg {
                       if (GzipDecompressor.field_b * 2 < oo.field_b &&
                         var5 != 0) {
                         fn.field_c = -1;
-                        this.a(true, ie.field_b.field_L, 4, true);
+                        this.transitionGameScreen(true, ie.field_b.field_L, 4, true);
                       } else {
                         if (2 * GzipDecompressor.field_b < oo.field_b &&
                           var4 != 0) {
                           fn.field_c = -1;
-                          this.a(true, ie.field_b.field_L, 4, false);
+                          this.transitionGameScreen(true, ie.field_b.field_L, 4, false);
                         }
                       }
                     } else {
                       fn.field_c = -1;
-                      this.a(true, ie.field_b.field_L, 4, var6 != 0);
+                      this.transitionGameScreen(true, ie.field_b.field_L, 4, var6 != 0);
                     }
                   }
                 } else {
@@ -1527,7 +1527,7 @@ public final class Torquing extends tg {
                     if (fn.field_c == 3) {
                       IsaacCipher.field_l = null;
                     }
-                    bn.field_h = -1;
+                    SpriteBase.field_h = -1;
                     fn.field_c = -1;
                   }
                 }
@@ -1553,7 +1553,7 @@ public final class Torquing extends tg {
                     SocketConnector.field_f = 0;
                     bo.field_l.clear(param0 ^ -108);
                   }
-                  bn.field_h = -1;
+                  SpriteBase.field_h = -1;
                   fn.field_c = GzipDecompressor.field_c;
                   vo.field_f[fn.field_c].field_i = 0;
                 }
@@ -1562,13 +1562,13 @@ public final class Torquing extends tg {
           } else {
             am.a(75);
             if (hj.field_b) {
-              bn.field_h = -1;
+              SpriteBase.field_h = -1;
             }
           }
           if (param0 != -108) {
-            this.b(-99, 74);
+            this.drawWorldProgressScreen(-99, 74);
           }
-          if (bn.field_h != 0) {
+          if (SpriteBase.field_h != 0) {
             if (-var2_long + km.correctedCurrentTimeMillis(param0 ^ 107) >= 2L) {
               return;
             }
@@ -1582,7 +1582,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, boolean param3) {
+    final void transitionGameScreen(boolean param0, int param1, int param2, boolean param3) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1596,17 +1596,17 @@ public final class Torquing extends tg {
               2 == param1) {
               jh.a(ResourceArchive.field_k[0], 0);
             }
-            vo.field_f[param1].a((byte) 94, param3);
+            vo.field_f[param1].initializeMenuScreen((byte) 94, param3);
           }
           if (!param0) {
             return;
           }
           NanoFrameTimer.a(-1, -32596, 0);
           oo.field_b = 0;
-          bn.field_h = param2;
+          SpriteBase.field_h = param2;
           this.field_t = null;
           GzipDecompressor.field_c = param1;
-          this.f((byte) -108);
+          this.updateScreenTransition((byte) -108);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1615,7 +1615,7 @@ public final class Torquing extends tg {
         }
     }
 
-    private final void o(int param0) {
+    private final void initializeTitleScreen(int param0) {
         int var3 = 0;
         int var2_int = 0;
         int var4 = 0;
@@ -1645,7 +1645,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final void b(byte param0) {
+    final void renderFrame(byte param0) {
         Object stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         Object stackIn_11_0 = null;
@@ -1662,8 +1662,8 @@ public final class Torquing extends tg {
         int var6 = 0;
         var6 = field_u;
         try {
-          if (null != dg.field_i) {
-            stackIn_5_0 = dg.field_i;
+          if (null != TranslucentSpriteLayer.field_i) {
+            stackIn_5_0 = TranslucentSpriteLayer.field_i;
           } else {
             stackIn_5_0 = k.field_d;
           }
@@ -1671,7 +1671,7 @@ public final class Torquing extends tg {
           if (sf.a(-1)) {
             boolean decompiledFrameRemainder0 = true;
             stackIn_9_0 = var2;
-            if (dg.field_i == null) {
+            if (TranslucentSpriteLayer.field_i == null) {
               stackIn_11_0 = stackIn_9_0;
               if (!ae.field_ib) {
                 stackIn_12_0 = stackIn_11_0;
@@ -1692,14 +1692,14 @@ public final class Torquing extends tg {
           }
           if (null == kg.field_c &&
             null == kb.field_f) {
-            if (bn.field_h == -1) {
+            if (SpriteBase.field_h == -1) {
               if (fn.field_c != -1) {
-                vo.field_f[fn.field_c].c(93);
+                vo.field_f[fn.field_c].renderMenuScreen(93);
               } else {
-                ie.field_b.a(false);
+                ie.field_b.renderLevelRun(false);
               }
             } else {
-              this.r(3);
+              this.drawScreenTransition(3);
             }
             if (ie.field_b != null) {
               var3_ref_tj = (tj) (ie.field_b.field_B.beginBackward(0));
@@ -1715,8 +1715,8 @@ public final class Torquing extends tg {
                   var4 = var5 / 2 - 32;
                 }
                 tj.field_n[var3_ref_tj.field_k].drawQuarterSize(8, var4);
-                um.field_m.b(k.field_b[var3_ref_tj.field_k], 48, var4 + um.field_m.field_x, 0, -1);
-                i.field_N.b(k.field_b[var3_ref_tj.field_k], 48, var4 + um.field_m.field_x, 16777215, -1);
+                MatchingFieldValidator.field_m.b(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 0, -1);
+                i.field_N.b(k.field_b[var3_ref_tj.field_k], 48, var4 + MatchingFieldValidator.field_m.field_x, 16777215, -1);
               }
             }
             if (param0 != 73) {
@@ -1724,7 +1724,7 @@ public final class Torquing extends tg {
             }
             if (on.b(160)) {
               SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
-              qk.a(14, 14, s.field_t, (byte) -4);
+              LevelCompletionUpdate.a(14, 14, s.field_t, (byte) -4);
             }
             if (SectorCacheStore.field_e != -1) {
               var3 = oo.field_b << 3;
@@ -1734,7 +1734,7 @@ public final class Torquing extends tg {
             }
             if (hh.a(64) &&
               !on.b(160)) {
-              stackIn_57_0 = (dg.field_i != null) || (ae.field_ib);
+              stackIn_57_0 = (TranslucentSpriteLayer.field_i != null) || (ae.field_ib);
               oo.a(stackIn_57_0, -25564);
             }
             ni.a((java.awt.Canvas) (var2), 0, 0, -122);
@@ -1750,7 +1750,7 @@ public final class Torquing extends tg {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void drawLevelDescriptionScreen(int param0, int param1) {
         int var3_int = 0;
         TooltipPanel dupTemp$0 = null;
         TooltipPanel var5 = null;
@@ -1759,14 +1759,14 @@ public final class Torquing extends tg {
           var3_int = wi.field_a[param0];
           k.a(var3_int, 1);
           nc.a(var3_int, true);
-          qc.field_cb.a((byte) 90, 0, 0);
-          wh.field_t[var3_int].a(0, 0, 76);
-          pm.field_m[var3_int].a(0, 0);
-          mh.field_d[var3_int].a(0, 0, 76);
+          qc.field_cb.drawFramedPanel((byte) 90, 0, 0);
+          wh.field_t[var3_int].drawWithAlpha(0, 0, 76);
+          pm.field_m[var3_int].drawOpaque(0, 0);
+          MenuScreen.field_d[var3_int].drawWithAlpha(0, 0, 76);
           if (param1 != 22517) {
-            this.q(-66);
+            this.loadInterfaceFonts(-66);
           }
-          GameKeyHandler.field_a[var3_int].a(0, 0);
+          GameKeyHandler.field_a[var3_int].drawOpaque(0, 0);
           if (ie.field_b.field_L == param0) {
             var4 = ie.field_b.field_d;
           } else {
@@ -1776,15 +1776,15 @@ public final class Torquing extends tg {
             dupTemp$0 = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[var3_int], -34, -159);
             var4.field_e = dupTemp$0;
             var5 = dupTemp$0;
-            var5.a((byte) -59, 30);
-            var5.a(false, ff.a(new String[]{Integer.toString(1 + var3_int), Integer.toString(hg.field_d[param0] + 1)}, 0, qj.field_b));
-            var5.a((byte) -50, 40);
-            this.a(0, var4, var5);
-            var5.a(30, wj.field_k.field_d, 111);
-            var5.c(param1 ^ 22517);
+            var5.addFlexibleVerticalSpace((byte) -59, 30);
+            var5.appendCenteredText(false, ff.a(new String[]{Integer.toString(1 + var3_int), Integer.toString(hg.field_d[param0] + 1)}, 0, qj.field_b));
+            var5.addFlexibleVerticalSpace((byte) -50, 40);
+            this.populateLevelDescription(0, var4, var5);
+            var5.addVerticalSpace(30, wj.field_k.field_d, 111);
+            var5.justifyPanelContents(param1 ^ 22517);
           }
-          var4.field_e.b(34, -127, 159);
-          wj.field_k.a(-(wj.field_k.field_c / 2) + 219, 414);
+          var4.field_e.drawPanel(34, -127, 159);
+          wj.field_k.drawOpaque(-(wj.field_k.field_c / 2) + 219, 414);
           qh.field_c.a(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
@@ -1792,16 +1792,16 @@ public final class Torquing extends tg {
         }
     }
 
-    final void a(byte param0) {
+    final void updateGameTick(byte param0) {
         boolean discarded$0 = false;
-        mh dupTemp$1 = null;
+        MenuScreen dupTemp$1 = null;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
         boolean stackIn_57_1 = false;
-        mh stackIn_127_0 = null;
+        MenuScreen stackIn_127_0 = null;
         boolean stackIn_128_1 = false;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -1814,24 +1814,24 @@ public final class Torquing extends tg {
         try {
           ResourceArchive.field_c.serviceOutput();
           qd.field_b.serviceOutput();
-          if (dg.field_i != null &&
-            dg.field_i.focusLost) {
+          if (TranslucentSpriteLayer.field_i != null &&
+            TranslucentSpriteLayer.field_i.focusLost) {
             ug.a(-95);
             s.b(-23658);
           }
           stackIn_9_1 = 23;
-          stackIn_10_2 = (null != dg.field_i);
-          this.a((byte) stackIn_9_1, stackIn_10_2);
+          stackIn_10_2 = (null != TranslucentSpriteLayer.field_i);
+          this.updateClientServices((byte) stackIn_9_1, stackIn_10_2);
           if (w.field_F) {
-            this.s(26418);
+            this.initializeAssetArchives(26418);
             w.field_F = false;
           }
           var2_int = 0;
           if (!sf.a(-1)) {
             if (!ee.field_s) {
               RandomAccessCacheFile.a(-16513, da.field_g);
-              if (this.b(true, (byte) -102)) {
-                this.o(122);
+              if (this.advanceGameAssetLoading(true, (byte) -102)) {
+                this.initializeTitleScreen(122);
                 ee.field_s = true;
               }
             } else {
@@ -1850,10 +1850,10 @@ public final class Torquing extends tg {
                           ug.a(-114);
                         }
                       } else {
-                        hm.a(true, um.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, um.field_m.field_x * 3 / 2, 240);
+                        hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, MatchingFieldValidator.field_m.field_x * 3 / 2, 240);
                       }
                       if (!on.b(160)) {
-                        vo.field_f[fn.field_c].a((byte) 82, true);
+                        vo.field_f[fn.field_c].initializeMenuScreen((byte) 82, true);
                       }
                     } else {
                       var2_int = 1;
@@ -1862,11 +1862,11 @@ public final class Torquing extends tg {
                     if (!hh.a(64)) {
                       var2_int = 1;
                     } else {
-                      stackIn_57_1 = (dg.field_i != null);
+                      stackIn_57_1 = (TranslucentSpriteLayer.field_i != null);
                       var3 = this.b(stackIn_57_1, -92);
                       if (var3 == 1 ||
                         var3 == 2) {
-                        if (dg.field_i != null) {
+                        if (TranslucentSpriteLayer.field_i != null) {
                           ug.a(-113);
                         }
                         if (var3 == 2) {
@@ -1911,12 +1911,12 @@ public final class Torquing extends tg {
             if (sf.a(-1)) {
               if (ResourceArchive.isClientStartupReady(true) &&
                 !ee.field_s) {
-                discarded$0 = this.b(false, (byte) -102);
+                discarded$0 = this.advanceGameAssetLoading(false, (byte) -102);
               }
               return;
             }
             if (!je.a((byte) 69)) {
-              this.c(true);
+              this.flushQueuedProgressUpdates(true);
             }
           }
           if (param0 != -30) {
@@ -1924,20 +1924,20 @@ public final class Torquing extends tg {
           }
           if (var2_int != 0) {
             if (SectorCacheStore.field_e == -1) {
-              sg.field_o = sg.field_o + 1;
-              if (-1 == bn.field_h) {
+              SceneMeshBatch.field_o = SceneMeshBatch.field_o + 1;
+              if (-1 == SpriteBase.field_h) {
                 if (fn.field_c == -1) {
-                  ie.field_b.i(40);
+                  ie.field_b.updateLevelRun(40);
                 } else {
                   dupTemp$1 = vo.field_f[fn.field_c];
                   dupTemp$1.field_i = dupTemp$1.field_i + 1;
                   stackIn_127_0 = vo.field_f[fn.field_c];
-                  stackIn_128_1 = (bn.field_h == -1);
-                  ((mh) (Object) stackIn_127_0).a(stackIn_128_1, -22807);
+                  stackIn_128_1 = (SpriteBase.field_h == -1);
+                  ((MenuScreen) (Object) stackIn_127_0).updateMenuScreen(stackIn_128_1, -22807);
                   NanoFrameTimer.a(-1, -32596, 0);
                 }
               } else {
-                this.f((byte) -108);
+                this.updateScreenTransition((byte) -108);
               }
             } else {
               if (0 == (1073741824 & SectorCacheStore.field_e)) {
@@ -1981,9 +1981,9 @@ public final class Torquing extends tg {
                     }
                   }
                   if (var3Lifetime1 == 4) {
-                    hm.a(true, um.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
+                    hm.a(true, MatchingFieldValidator.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * MatchingFieldValidator.field_m.field_x / 2, 240);
                   }
-                  bn.field_h = -1;
+                  SpriteBase.field_h = -1;
                 }
               }
             }
@@ -2003,7 +2003,7 @@ public final class Torquing extends tg {
           jd.a((byte) -115, 0);
           if (mk.a((byte) 38)) {
             var3Lifetime2 = this.g(118);
-            if (var3Lifetime2 == 2 && (bn.field_h != -1 ||
+            if (var3Lifetime2 == 2 && (SpriteBase.field_h != -1 ||
               fn.field_c != -1)) {
               lg.h(-122);
               return;
@@ -2017,26 +2017,26 @@ public final class Torquing extends tg {
         }
     }
 
-    private final void c(boolean param0, int param1) {
+    private final void drawWorldPreview(boolean param0, int param1) {
         if (param0) {
           return;
         }
         try {
           k.a(param1, 1);
           nc.a(param1, true);
-          qc.field_cb.a((byte) -40, 0, 0);
-          wh.field_t[param1].a(0, 0, 76);
-          pm.field_m[param1].a(0, 0);
-          mh.field_d[param1].a(0, 0, 76);
-          GameKeyHandler.field_a[param1].a(0, 0);
-          pa.field_e[param1].a(0, 0);
+          qc.field_cb.drawFramedPanel((byte) -40, 0, 0);
+          wh.field_t[param1].drawWithAlpha(0, 0, 76);
+          pm.field_m[param1].drawOpaque(0, 0);
+          MenuScreen.field_d[param1].drawWithAlpha(0, 0, 76);
+          GameKeyHandler.field_a[param1].drawOpaque(0, 0);
+          pa.field_e[param1].drawOpaque(0, 0);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
-    private final void r(int param0) {
+    private final void drawScreenTransition(int param0) {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -2048,7 +2048,7 @@ public final class Torquing extends tg {
           if (param0 != 3) {
             field_x = 119;
           }
-          if (0 == bn.field_h) {
+          if (0 == SpriteBase.field_h) {
             k.a(0, 1);
             nc.a(0, true);
             jk.a((byte) -118);
@@ -2056,31 +2056,31 @@ public final class Torquing extends tg {
           }
           var2_int = oo.field_b >> 1;
           if (GzipDecompressor.field_b > var2_int) {
-            var3 = bn.field_h;
+            var3 = SpriteBase.field_h;
             if (1 != var3 &&
               var3 != 10 &&
               var3 != 3 &&
               var3 != 7) {
               if (var3 == 2) {
-                ie.field_b.a(false);
+                ie.field_b.renderLevelRun(false);
               } else if (6 != var3 &&
                 8 != var3) {
                 if (var3 == 4) {
-                  this.c(false, wi.field_a[GzipDecompressor.field_c]);
+                  this.drawWorldPreview(false, wi.field_a[GzipDecompressor.field_c]);
                 } else if (var3 == 5) {
-                  this.a(GzipDecompressor.field_c, param0 + 22514);
+                  this.drawLevelDescriptionScreen(GzipDecompressor.field_c, param0 + 22514);
                 } else if (var3 == 9) {
-                  this.b(90, GzipDecompressor.field_c - 1);
+                  this.drawWorldProgressScreen(90, GzipDecompressor.field_c - 1);
                 } else if (var3 == 11) {
-                  this.b(param0 + 98, GzipDecompressor.field_c);
+                  this.drawWorldProgressScreen(param0 + 98, GzipDecompressor.field_c);
                 } else if (var3 == 12) {
-                  this.b(96, 1);
+                  this.drawWorldProgressScreen(96, 1);
                 }
               } else {
-                ie.field_b.a(false);
+                ie.field_b.renderLevelRun(false);
               }
             } else {
-              vo.field_f[fn.field_c].c(93);
+              vo.field_f[fn.field_c].renderMenuScreen(93);
             }
             if (var2_int > 0) {
               AccountRequestState.field_b.e();
@@ -2088,7 +2088,7 @@ public final class Torquing extends tg {
             }
           }
           if (var2_int > 0) {
-            var3Lifetime1 = bn.field_h;
+            var3Lifetime1 = SpriteBase.field_h;
             if (var3Lifetime1 != 10 &&
               var3Lifetime1 != 5 &&
               var3Lifetime1 != 11) {
@@ -2101,19 +2101,19 @@ public final class Torquing extends tg {
                     var3Lifetime1 != 6 &&
                     4 != var3Lifetime1) {
                     if (var3Lifetime1 == 8) {
-                      this.b(42, GzipDecompressor.field_c);
+                      this.drawWorldProgressScreen(42, GzipDecompressor.field_c);
                     }
                   } else {
-                    this.a(GzipDecompressor.field_c, 22517);
+                    this.drawLevelDescriptionScreen(GzipDecompressor.field_c, 22517);
                   }
                 } else {
-                  this.c(false, GzipDecompressor.field_c);
+                  this.drawWorldPreview(false, GzipDecompressor.field_c);
                 }
               } else {
-                vo.field_f[GzipDecompressor.field_c].c(93);
+                vo.field_f[GzipDecompressor.field_c].renderMenuScreen(93);
               }
             } else {
-              ie.field_b.a(false);
+              ie.field_b.renderLevelRun(false);
             }
             if (GzipDecompressor.field_b > var2_int) {
               mk.field_b.a(-86);
@@ -2128,7 +2128,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final void b(int param0) {
+    final void prepareGameShutdown(int param0) {
         try {
           if (ResourceArchive.field_c != null) {
             ResourceArchive.field_c.dispose();
@@ -2136,7 +2136,7 @@ public final class Torquing extends tg {
           if (null != qd.field_b) {
             qd.field_b.dispose();
           }
-          if (dg.field_i != null) {
+          if (TranslucentSpriteLayer.field_i != null) {
             ug.a(-120);
           }
           int var2_int = -39 % ((param0 - 75) / 50);
@@ -2146,7 +2146,7 @@ public final class Torquing extends tg {
         }
     }
 
-    public static void p(int param0) {
+    public static void clearTorquingGlobals(int param0) {
         try {
           field_w = null;
           field_v = null;
@@ -2158,7 +2158,7 @@ public final class Torquing extends tg {
         }
     }
 
-    final void a(int param0, Level param1, TooltipPanel param2) {
+    final void populateLevelDescription(int param0, Level param1, TooltipPanel param2) {
         int var6_int = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -2184,14 +2184,14 @@ public final class Torquing extends tg {
             var5_ref_String__ = kc.a('/', var9[0], 0);
             for (var6_int = 0; var6_int < var5_ref_String__.length; var6_int++) {
               var7 = var5_ref_String__[var6_int];
-              param2.a(false, var7);
+              param2.appendCenteredText(false, var7);
             }
           } else {
-            param2.a((Sprite) null, var9[0], param0 ^ 250);
+            param2.appendImageAndText((Sprite) null, var9[0], param0 ^ 250);
           }
           for (var5 = 1; var5 < var10.length; var5++) {
             var6 = var10[var5];
-            param2.a(hh.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
+            param2.appendImageAndText(hh.field_e[var6.charAt(0) - 48], var6.substring(1), param0 ^ 250);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2219,26 +2219,26 @@ public final class Torquing extends tg {
 
     public final void init() {
         try {
-          this.a(16, "torquing", -116);
+          this.startAppletClient(16, "torquing", -116);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.init()");
         }
     }
 
-    private final void q(int param0) {
+    private final void loadInterfaceFonts(int param0) {
         int var5_int = 0;
         int[] array$1 = null;
         int var7 = 0;
         int[] array$0 = null;
         int[] var4 = null;
         int var8 = 0;
-        sm[] var9 = null;
+        IndexedSprite[] var9 = null;
         int[] var11 = null;
         int[] var15 = null;
         byte[] var20 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        sm[] var5 = null;
+        IndexedSprite[] var5 = null;
         int[] var13 = null;
         int[] var17 = null;
         byte[] var21 = null;
@@ -2249,7 +2249,7 @@ public final class Torquing extends tg {
           var9 = ip.a(rg.field_v, -119, "", "smallfont");
           var20 = TooltipPanel.field_l.getFileByName(param0 - 116, "smallfont", "");
           i.field_N = ok.a(var9, 256, var20);
-          um.field_m = io.a(var9, -1, var20);
+          MatchingFieldValidator.field_m = io.a(var9, -1, var20);
           i.field_Q = ob.a(1579032, new int[]{4473924, 12632256, 13421772}, var20, true, var9);
           var15 = i.field_Q.field_O[0];
           var11 = var15;
@@ -2310,7 +2310,7 @@ public final class Torquing extends tg {
         }
     }
 
-    private final void s(int param0) {
+    private final void initializeAssetArchives(int param0) {
         if (param0 != 26418) {
           return;
         }
@@ -2323,7 +2323,7 @@ public final class Torquing extends tg {
           rl.field_a = vg.a(param0 ^ -3280, 1);
           rg.field_v = vg.a(-27646, 2);
           vp.field_D = vg.a(-27646, 3);
-          th.field_C = vg.a(-27646, 4);
+          DisplayNameSelectionPanel.field_C = vg.a(-27646, 4);
           vd.field_e = vg.a(-27646, 5);
           bp.field_c = vg.a(param0 - 54064, 6);
           TooltipPanel.field_l = vg.a(-27646, 8);

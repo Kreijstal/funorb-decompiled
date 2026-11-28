@@ -72,14 +72,14 @@ final class dk {
               var13 = var9 / var8;
               var12 = var8 + (var9 % var8 + (var13 - 1)) / var13 * 2;
             }
-            if (bh.field_m == null) {
-              bh.field_m = new String[16];
+            if (PasswordValidator.field_m == null) {
+              PasswordValidator.field_m = new String[16];
             }
-            var11Lifetime1 = this.field_t.a(param0, new int[]{var12}, bh.field_m);
+            var11Lifetime1 = this.field_t.a(param0, new int[]{var12}, PasswordValidator.field_m);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_t.a(bh.field_m[var13Lifetime2]);
+              var14 = this.field_t.a(PasswordValidator.field_m[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }

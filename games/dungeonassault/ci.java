@@ -89,18 +89,18 @@ final class ci extends IntrusiveNode {
               var2 = 0;
             }
           }
-          for (var3 = 0; var3 < go.field_A.length; var3++) {
+          for (var3 = 0; var3 < DungeonRaidScreen.field_A.length; var3++) {
             var4 = to.field_c[var3];
             if (var4 < 0) {
               var5 = om.field_a;
             } else {
               if (d.field_g.field_b == var4) {
-                var5 = he.field_p;
+                var5 = AgeValidator.field_p;
               } else {
                 var5 = sm.field_c;
               }
             }
-            var6 = go.field_A[var3];
+            var6 = DungeonRaidScreen.field_A[var3];
             if (2 == AccountNameAvailabilityValidator.field_t &&
               var2 == 1) {
               if (sn.field_a.length < mo.field_g.length) {
@@ -138,7 +138,7 @@ final class ci extends IntrusiveNode {
               var6 = Integer.toString(var2);
             }
             var7Lifetime1 = KeyboardInput.a(!(var4 < 0), var6, -30633);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + vo.field_r;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + PasswordValidator.field_r;
             if (var4 >= 0) {
               if (d.field_g.field_b == var4) {
                 stackIn_46_0 = om.field_d;

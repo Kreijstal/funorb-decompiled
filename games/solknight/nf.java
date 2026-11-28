@@ -68,13 +68,13 @@ final class nf extends ld implements ka {
     }
 
     final static void a(boolean param0, String param1, int param2) {
-        ga.field_G = param0;
+        DisplayNameSelectionPanel.field_G = param0;
         if (param2 >= -94) {
           return;
         }
         try {
           ce.field_b = true;
-          ah.field_e = new ci(u.field_b, uc.field_g, param1, k.field_b, ga.field_G);
+          ah.field_e = new ci(u.field_b, uc.field_g, param1, k.field_b, DisplayNameSelectionPanel.field_G);
           u.field_b.b(ah.field_e, -55);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "nf.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -111,7 +111,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    final static boolean a(int param0, boolean param1, String param2, String param3, rf param4, String param5, byte param6) {
+    final static boolean a(int param0, boolean param1, String param2, String param3, AccountRegistrationPanel param4, String param5, byte param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         AccountCreationResultPanel var8 = null;
@@ -126,7 +126,7 @@ final class nf extends ld implements ka {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ma.field_o != el.field_p) {
+          if (ma.field_o != MatchingFieldValidator.field_p) {
             return false;
           }
           if (param6 <= 110) {
@@ -189,7 +189,7 @@ final class nf extends ld implements ka {
         try {
           if (!param4) {
             var7 = (String) null;
-            nf.a(120, false, (String) null, (String) null, (rf) null, (String) null, (byte) -93);
+            nf.a(120, false, (String) null, (String) null, (AccountRegistrationPanel) null, (String) null, (byte) -93);
           }
           if (param3 != this.field_T) {
             return;

@@ -24,7 +24,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int param0);
 
-    final static boolean a(int param0, String param1, boolean param2, ke param3, String param4, String param5, int param6) {
+    final static boolean a(int param0, String param1, boolean param2, AccountRegistrationPanel param3, String param4, String param5, int param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_14_0 = null;
@@ -46,13 +46,13 @@ abstract class ByteStorage {
           }
           var8 = new AccountCreationResultPanel(TunnelCamera.field_Z, param3);
           TunnelCamera.field_Z.c(var8, 0);
-          if (mf.c(109)) {
+          if (TextFieldValidator.c(109)) {
             var8.o(param0 - 30583);
             return true;
           }
           hd.field_d = param2;
           ji.field_d = null;
-          oe.field_Q = wh.field_fb;
+          oe.field_Q = ValidatedTextField.field_fb;
           wc.field_Ob = param6;
           kc.field_n = param4;
           rd.field_Jb = param1;

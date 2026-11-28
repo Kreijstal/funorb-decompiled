@@ -4,13 +4,13 @@
 import java.util.*;
 
 final class AccountCreationResultPanel extends ha implements ql {
-    private bg field_jb;
+    private AccountRegistrationPanel field_jb;
     private boolean field_mb;
     private boolean field_nb;
     static String field_kb;
     static int field_lb;
 
-    AccountCreationResultPanel(kj param0, bg param1) {
+    AccountCreationResultPanel(kj param0, AccountRegistrationPanel param1) {
         super(param0, IntrusiveDeque.field_c, c.field_j, false, false);
         try {
           this.field_jb = param1;
@@ -163,12 +163,12 @@ final class AccountCreationResultPanel extends ha implements ql {
         MonkeyPuzzle2.field_E = d.field_h[param1];
         if (param0 == 3860) {
           IntrusiveNode.field_b = he.field_f[param1];
-          tk.field_a = uk.field_o[param1];
+          tk.field_a = EmailFormatValidator.field_o[param1];
           return;
         }
         AccountCreationResultPanel.a(103, 94);
         IntrusiveNode.field_b = he.field_f[param1];
-        tk.field_a = uk.field_o[param1];
+        tk.field_a = EmailFormatValidator.field_o[param1];
     }
 
     private final static void i(byte param0) {

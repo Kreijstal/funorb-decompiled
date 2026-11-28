@@ -786,7 +786,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime118 = tf.a(0, "FAN_TIP");
           if (var2Lifetime118 != null) {
-            ga.field_r = ab.a(0, var2Lifetime118);
+            AgeValidator.field_r = ab.a(0, var2Lifetime118);
           }
           var2Lifetime119 = tf.a(0, "SPIDER_TIP");
           if (var2Lifetime119 != null) {
@@ -798,7 +798,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime121 = tf.a(0, "BOMB_TIP");
           if (null != var2Lifetime121) {
-            ca.field_O = ab.a(0, var2Lifetime121);
+            AccountRegistrationPanel.field_O = ab.a(0, var2Lifetime121);
           }
           var2Lifetime122 = tf.a(0, "EXIT_TIP");
           if (var2Lifetime122 != null) {
@@ -826,7 +826,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime128 = tf.a(0, "BLUE_SWITCH_TIP");
           if (var2Lifetime128 != null) {
-            gg.field_d = ab.a(0, var2Lifetime128);
+            DebouncedFieldValidator.field_d = ab.a(0, var2Lifetime128);
           }
           var2Lifetime129 = tf.a(0, "GREEN_SWITCH_TIP");
           if (var2Lifetime129 != null) {
@@ -910,7 +910,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime149 = tf.a(0, "CONTINUE");
           if (null != var2Lifetime149) {
-            r.field_k = ab.a(0, var2Lifetime149);
+            TextFieldValidator.field_k = ab.a(0, var2Lifetime149);
           }
           var2Lifetime150 = tf.a(0, "SHOW_TIPS");
           if (var2Lifetime150 != null) {
@@ -1078,7 +1078,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime191 = tf.a(0, "INSTRUCTIONS_BODIES_7_1");
           if (null != var2Lifetime191) {
-            ga.field_q = ab.a(0, var2Lifetime191);
+            AgeValidator.field_q = ab.a(0, var2Lifetime191);
           }
           var2Lifetime192 = tf.a(0, "INSTRUCTIONS_BODIES_7_2");
           if (var2Lifetime192 != null) {
@@ -1090,7 +1090,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime194 = tf.a(0, "INSTRUCTIONS_BODIES_7_4");
           if (null != var2Lifetime194) {
-            ai.field_o = ab.a(0, var2Lifetime194);
+            EmailFormatValidator.field_o = ab.a(0, var2Lifetime194);
           }
           var2Lifetime195 = tf.a(0, "GAME_NAME_JSTRING");
           if (null != var2Lifetime195) {

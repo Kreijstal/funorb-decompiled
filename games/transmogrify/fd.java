@@ -51,7 +51,7 @@ final class fd {
             if (!param0) {
               field_f = 1;
             }
-            bg.field_l = bf.field_B;
+            PasswordValidator.field_l = bf.field_B;
             vd.field_a = vd.field_a + 1;
             if (0 > TileRack.field_b) {
               for (var2 = 0; 112 > var2; var2++) {

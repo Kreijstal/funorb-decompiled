@@ -24,7 +24,7 @@ final class qi {
             dg.field_n = la.field_c;
           }
           boolean decompiledFrameRemainder0 = true;
-          di.field_m = di.field_m + 1;
+          AgeValidator.field_m = AgeValidator.field_m + 1;
           if (param1 == null) {
             decompiledFrameRemainder0 = (sc.field_c == null);
           } else {
@@ -32,8 +32,8 @@ final class qi {
           }
           if (decompiledFrameRemainder0) {
             if (!eg.field_h) {
-              if (di.field_m >= ProxyAuthenticationRequiredException.field_a) {
-                stackIn_19_0 = (ProxyAuthenticationRequiredException.field_a + NanoFrameTimer.field_l > di.field_m) ? 1 : 0;
+              if (AgeValidator.field_m >= ProxyAuthenticationRequiredException.field_a) {
+                stackIn_19_0 = (ProxyAuthenticationRequiredException.field_a + NanoFrameTimer.field_l > AgeValidator.field_m) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }
@@ -44,18 +44,18 @@ final class qi {
             var2_int = stackIn_19_0;
             if (param1 != null) {
               if (eg.field_h) {
-                di.field_m = ProxyAuthenticationRequiredException.field_a;
+                AgeValidator.field_m = ProxyAuthenticationRequiredException.field_a;
                 decompiledFrameRemainder1 = false;
               }
               else {
                 if (var2_int != 0) {
-                  di.field_m = ProxyAuthenticationRequiredException.field_a;
+                  AgeValidator.field_m = ProxyAuthenticationRequiredException.field_a;
                   decompiledFrameRemainder1 = false;
                 }
               }
             }
             if (decompiledFrameRemainder1) {
-              di.field_m = 0;
+              AgeValidator.field_m = 0;
             }
             ti.field_c = a.field_e;
             ua.field_a = dg.field_n;
@@ -69,17 +69,17 @@ final class qi {
           }
           sc.field_c = param1;
           if (!eg.field_h &&
-            ProxyAuthenticationRequiredException.field_a > di.field_m &&
+            ProxyAuthenticationRequiredException.field_a > AgeValidator.field_m &&
             SectorCacheStore.field_d) {
             ua.field_a = dg.field_n;
             ti.field_c = a.field_e;
-            di.field_m = 0;
+            AgeValidator.field_m = 0;
           }
           a.field_e = -1;
           if (eg.field_h &&
-            BufferedSocket.field_c == di.field_m) {
+            BufferedSocket.field_c == AgeValidator.field_m) {
             eg.field_h = false;
-            di.field_m = 0;
+            AgeValidator.field_m = 0;
           }
           dg.field_n = -1;
           return;

@@ -94,7 +94,7 @@ abstract class jc extends qf {
             var7 = var7 | 16;
           }
           NetworkArchiveRequest.field_r.writeByte(-9469, var7);
-          var8 = bi.a((byte) 95, mk.g(-128));
+          var8 = bi.a((byte) 95, PasswordValidator.g(-128));
           if (var8 == null) {
             var8 = "";
           }

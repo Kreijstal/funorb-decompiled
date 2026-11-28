@@ -137,13 +137,13 @@ final class of {
           }
           var7 = hh.a(param3 - 15023, param0);
           if (var7 == null) {
-            stackIn_10_0 = oc.a(tl.field_Ib, new String[]{param0}, (byte) -90);
+            stackIn_10_0 = MatchingFieldValidator.a(tl.field_Ib, new String[]{param0}, (byte) -90);
             return stackIn_10_0;
           }
           var7.unlink(-2193);
           var7.unlinkSecondary(param3);
           wc.field_v = wc.field_v - 1;
-          var5 = qn.field_U;
+          var5 = EditableTextField.field_U;
           var5.writeCipheredByte(param1, -123);
           var5.position = var5.position + 1;
           var6 = var5.position;
@@ -288,7 +288,7 @@ final class of {
     }
 
     final static void d(int param0) {
-        uk.field_e = false;
+        ChessBoardState.field_e = false;
         ei.field_u = 0;
         BoundedRandomAccessFile.field_j = null;
         if (param0 != -103) {
@@ -356,15 +356,15 @@ final class of {
         java.applet.Applet var4 = null;
         try {
           if (1 == param0) {
-            stackIn_3_0 = oc.a(ch.field_eb, new String[]{param2}, (byte) -93);
+            stackIn_3_0 = MatchingFieldValidator.a(ch.field_eb, new String[]{param2}, (byte) -93);
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = oc.a(ii.field_S, new String[]{param2}, (byte) -83);
+            stackIn_6_0 = MatchingFieldValidator.a(ii.field_S, new String[]{param2}, (byte) -83);
             return stackIn_6_0;
           }
           if (param0 == 3) {
-            stackIn_9_0 = oc.a(ng.field_a, new String[]{param2}, (byte) -121);
+            stackIn_9_0 = MatchingFieldValidator.a(ng.field_a, new String[]{param2}, (byte) -121);
             return stackIn_9_0;
           }
           if (param1 != -26564) {
@@ -372,37 +372,37 @@ final class of {
             of.a((java.applet.Applet) null, (byte) 31);
           }
           if (param0 == 4) {
-            stackIn_14_0 = oc.a(IterableNodeHashTable.field_b, new String[]{param2}, (byte) -79);
+            stackIn_14_0 = MatchingFieldValidator.a(IterableNodeHashTable.field_b, new String[]{param2}, (byte) -79);
             return stackIn_14_0;
           }
           if (5 == param0) {
-            stackIn_18_0 = oc.a(dl.field_h, new String[]{param2}, (byte) -56);
+            stackIn_18_0 = MatchingFieldValidator.a(dl.field_h, new String[]{param2}, (byte) -56);
             return stackIn_18_0;
           }
           if (param0 == 6) {
-            stackIn_21_0 = oc.a(wc.field_y, new String[]{param2}, (byte) -93);
+            stackIn_21_0 = MatchingFieldValidator.a(wc.field_y, new String[]{param2}, (byte) -93);
             return stackIn_21_0;
           }
           if (7 == param0) {
-            stackIn_25_0 = oc.a(ih.field_V, new String[]{param2}, (byte) -64);
+            stackIn_25_0 = MatchingFieldValidator.a(ih.field_V, new String[]{param2}, (byte) -64);
             return stackIn_25_0;
           }
           if (param0 == 8) {
-            stackIn_28_0 = oc.a(n.field_a, new String[]{param2}, (byte) -47);
+            stackIn_28_0 = MatchingFieldValidator.a(n.field_a, new String[]{param2}, (byte) -47);
             return stackIn_28_0;
           }
           if (11 == param0) {
-            stackIn_32_0 = oc.a(sk.field_o, new String[]{param2}, (byte) -64);
+            stackIn_32_0 = MatchingFieldValidator.a(sk.field_o, new String[]{param2}, (byte) -64);
             return stackIn_32_0;
           }
           if (param0 == 12) {
-            stackIn_36_0 = oc.a(he.field_Lb, new String[]{param2}, (byte) -85);
+            stackIn_36_0 = MatchingFieldValidator.a(he.field_Lb, new String[]{param2}, (byte) -85);
             return stackIn_36_0;
           }
           if (param0 != 13) {
             return null;
           }
-          stackIn_40_0 = oc.a(gf.field_c, new String[]{param2}, (byte) -121);
+          stackIn_40_0 = MatchingFieldValidator.a(gf.field_c, new String[]{param2}, (byte) -121);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

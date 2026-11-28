@@ -69,8 +69,8 @@ abstract class nd extends DualLinkNode {
           }
           for (var1_int = 1; var1_int < 3; var1_int++) {
             for (var2 = 0; 4 > var2; var2++) {
-              dupTemp$0 = bf.field_R[var1_int];
-              dupTemp$1 = new od(bf.field_R[-1 + var1_int][var2], false, true, true, true);
+              dupTemp$0 = DisplayNameSelectionPanel.field_R[var1_int];
+              dupTemp$1 = new od(DisplayNameSelectionPanel.field_R[-1 + var1_int][var2], false, true, true, true);
               dupTemp$0[var2] = dupTemp$1;
               var3 = dupTemp$1;
               var3.a(80, 80, 80);

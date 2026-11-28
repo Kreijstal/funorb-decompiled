@@ -75,7 +75,7 @@ final class MixedSupport083 {
           if (integerArgument1 != 0) {
             MixedSupport083.clearStaticReferences(-82);
           }
-          InputAdapter002.performAction1350(MixedSupport121.integerState0778, integerArgument1 + 101);
+          BirthDateValidator.performAction1350(MixedSupport121.integerState0778, integerArgument1 + 101);
           if (MixedSupport016.sceneWidgetPart013State0001 != null) {
             ComponentDecorator.sceneWidgetState0078.booleanState0212 = true;
             sceneWidgetLocal51 = MixedSupport039.sceneWidgetState0030;
@@ -239,7 +239,7 @@ final class MixedSupport083 {
                       stackBooleanLocal10 = stackOut_80_0;
                       if (integerLocal49 == 0) {
                         if (stackBooleanLocal10) {
-                          stringLocal53 = "<col=A00000>" + UiComponentPart022.stringArrayState0026[integerLocal38] + "</col>";
+                          stringLocal53 = "<col=A00000>" + AccountFieldStatusIndicator.stringArrayState0026[integerLocal38] + "</col>";
                           if (objectLocal35 == null) {
                             objectLocal35 = stringLocal53;
                           } else {
@@ -423,7 +423,7 @@ final class MixedSupport083 {
               }
               sceneWidgetLocal29.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(119, TextLayout.stringState0082, new String[]{Integer.toString(integerLocal30)});
             }
-            UiComponentPart013.sceneWidgetState0048.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(101, MixedSupport113.stringState0491, new String[]{Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0843), Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0840)});
+            LoginPanel.sceneWidgetState0048.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(101, MixedSupport113.stringState0491, new String[]{Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0843), Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0840)});
           }
           stackSceneWidgetLocal14 = IsaacRandom.sceneWidgetState0023;
           stackBooleanLocal15 = false;
@@ -440,7 +440,7 @@ final class MixedSupport083 {
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1574(false);
           if (MixedSupport016.sceneWidgetPart013State0001 != null) {
             if (ComponentDecorator.sceneWidgetState0078.integerState0891 != 0) {
-              UiComponentPart018.performAction1032(integerArgument1 ^ 9, integerArgument5, MixedSupport016.sceneWidgetPart013State0001.computeInteger1710(-76));
+              UiComponentPart018.performAction1032(integerArgument1 ^ 9, integerArgument5, MixedSupport016.sceneWidgetPart013State0001.getRoomId(-76));
             }
             if (MixedSupport087.sceneWidgetState0091.integerState0891 != 0) {
               MixedSupport050.booleanState0064 = true;

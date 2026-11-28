@@ -35,7 +35,7 @@ final class MixedSupport011 {
         RuntimeException caughtExceptionLocal12 = null;
         RuntimeException runtimeExceptionLocal13 = null;
         try {
-          KeyboardInputHandler.performAction1091(integerArgument19, new MixedSupport015(rgbSpriteArrayArgument13), bitmapFontArgument5, integerArgument7, integerArgument21, new MixedSupport015(rgbSpriteArrayArgument2), integerArgument14, bitmapFontArgument3, integerArgument15, integerArgument20, new MixedSupport015(rgbSpriteArrayArgument17), integerArgument8, -6, integerArgument18, integerArgument16, integerArgument1, integerArgument11, integerArgument9, integerArgument6, integerArgument12, integerArgument10);
+          KeyboardInputHandler.performAction1091(integerArgument19, new NineSliceSprite(rgbSpriteArrayArgument13), bitmapFontArgument5, integerArgument7, integerArgument21, new NineSliceSprite(rgbSpriteArrayArgument2), integerArgument14, bitmapFontArgument3, integerArgument15, integerArgument20, new NineSliceSprite(rgbSpriteArrayArgument17), integerArgument8, -6, integerArgument18, integerArgument16, integerArgument1, integerArgument11, integerArgument9, integerArgument6, integerArgument12, integerArgument10);
           if (!booleanArgument4) {
             rawSoundState0004 = (RawSound) null;
           }

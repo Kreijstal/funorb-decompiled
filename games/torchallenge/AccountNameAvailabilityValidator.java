@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class AccountNameAvailabilityValidator extends ma {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private boolean nameAvailable;
     static String[] field_p;
     static int field_m;
@@ -18,7 +18,7 @@ final class AccountNameAvailabilityValidator extends ma {
         }
     }
 
-    final rj a(byte param0, String param1) {
+    final rj getValidationStatus(byte param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -86,7 +86,7 @@ final class AccountNameAvailabilityValidator extends ma {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -183,7 +183,7 @@ final class AccountNameAvailabilityValidator extends ma {
         }
     }
 
-    AccountNameAvailabilityValidator(dj param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }

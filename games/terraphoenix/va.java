@@ -52,8 +52,8 @@ final class va {
           return;
         }
         try {
-          ha.field_p = param10;
-          fi.field_q = param0;
+          ConfirmedEmailAvailabilityValidator.field_p = param10;
+          EmailFormatValidator.field_q = param0;
           ee.field_h = param1;
           fg.field_a = param5;
           TutorialController.field_h = param6;

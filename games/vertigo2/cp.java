@@ -17,7 +17,7 @@ final class cp {
         if (0 >= rc.field_b) {
           return false;
         }
-        if (!ne.j(0)) {
+        if (!DisplayNameSelectionPanel.j(0)) {
           return true;
         }
         return false;
@@ -91,18 +91,18 @@ final class cp {
           field_a = (String) null;
           if (null != DiskCacheWorker.field_m) {
             DiskCacheWorker.field_m.b((byte) 118);
-            ne.field_F.requestFocus();
+            DisplayNameSelectionPanel.field_F.requestFocus();
             return;
           }
-          ne.field_F.requestFocus();
+          DisplayNameSelectionPanel.field_F.requestFocus();
           return;
         }
         if (null == DiskCacheWorker.field_m) {
-          ne.field_F.requestFocus();
+          DisplayNameSelectionPanel.field_F.requestFocus();
           return;
         }
         DiskCacheWorker.field_m.b((byte) 118);
-        ne.field_F.requestFocus();
+        DisplayNameSelectionPanel.field_F.requestFocus();
     }
 
     static {

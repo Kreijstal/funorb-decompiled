@@ -225,7 +225,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             return;
           }
           var1 = uj.a(-119);
-          LevelView.field_y = new rl(var1, (String) null, true, false, false);
+          LevelView.field_y = new LoginPanel(var1, (String) null, true, false, false);
           gl.field_E.d((byte) -120, GameApplet.field_g);
           GameApplet.field_g.b(LevelView.field_y, -82);
           GameApplet.field_g.o(0);
@@ -267,10 +267,10 @@ final class SecondaryNodeDequeIterator implements Iterator {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (rl.field_N == 10 ||
+          if (LoginPanel.field_N == 10 ||
             !ij.b(1)) {
             AccountServiceResult.a(-27958);
-            rl.field_N = 11;
+            LoginPanel.field_N = 11;
           }
           qh.field_i = true;
           if (param0 != -28717) {

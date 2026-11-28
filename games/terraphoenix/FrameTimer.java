@@ -105,7 +105,7 @@ abstract class FrameTimer {
         }
         try {
           kf.field_f = 0;
-          af.d(-2766);
+          DebouncedFieldValidator.d(-2766);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);

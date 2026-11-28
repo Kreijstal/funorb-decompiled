@@ -21,7 +21,7 @@ final class s extends nf implements ql {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != hf.field_g) {
+          if (param1 != DebouncedFieldValidator.field_g) {
             if (param1 != cg.field_c) {
               if (ma.field_b == param1) {
                 this.field_p = this.field_p + 30;

@@ -207,7 +207,7 @@ final class IsaacRandom {
           ra.field_ab = new int[eg.field_c];
           j.field_d = new boolean[eg.field_c];
           cb.field_b = new byte[eg.field_c][];
-          qc.field_P = new int[eg.field_c];
+          ValidatedTextField.field_P = new int[eg.field_c];
           da.field_c = new int[eg.field_c];
           mb.field_b = new int[eg.field_c];
           jj.field_E = new byte[eg.field_c][];
@@ -216,7 +216,7 @@ final class IsaacRandom {
           qk.field_a = var17.readUnsignedShort(17277);
           var3 = (255 & var17.readUnsignedByte((byte) 114)) + 1;
           for (var4 = 0; var4 < eg.field_c; var4++) {
-            qc.field_P[var4] = var16.readUnsignedShort(17277);
+            ValidatedTextField.field_P[var4] = var16.readUnsignedShort(17277);
           }
           if (param1 > -53) {
             field_e = 83;

@@ -110,7 +110,7 @@ final class fn {
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (qf.field_b) {
-          return ol.field_O.a(d.field_Ib, 73, vg.field_a);
+          return AccountRegistrationPanel.field_O.a(d.field_Ib, 73, vg.field_a);
         }
         if (an.field_c) {
           return vh.a(83, param3, param2);

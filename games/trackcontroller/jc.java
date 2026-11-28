@@ -232,9 +232,9 @@ final class jc {
         }
         var6 = "(" + o.field_a + " " + u.field_o + " " + mc.field_L + ") " + uk.field_c;
         var1 = var6;
-        if (hd.field_o > 0) {
+        if (ConfirmedEmailAvailabilityValidator.field_o > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < hd.field_o; var2++) {
+          for (var2 = 0; var2 < ConfirmedEmailAvailabilityValidator.field_o; var2++) {
             var7 = var1 + ' ';
             var3 = ne.field_a.payload[var2] & 255;
             var4 = var3 >> 4;

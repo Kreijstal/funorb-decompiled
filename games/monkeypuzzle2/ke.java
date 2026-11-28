@@ -33,7 +33,7 @@ final class ke {
         if (var3 == null) {
           return;
         }
-        qc.field_N = 0;
+        ValidatedTextField.field_N = 0;
         em.field_B = 480;
         BoundedRandomAccessFile.field_j = BoundedRandomAccessFile.field_e.b(rb.field_hb[var3.field_h], 100) + 72;
         ii.field_B = 30 + BoundedRandomAccessFile.field_e.a(rb.field_hb[var3.field_h], 100) * (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C);

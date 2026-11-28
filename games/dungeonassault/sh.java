@@ -44,7 +44,7 @@ final class sh {
         }
     }
 
-    final static void a(int param0, lb param1) {
+    final static void a(int param0, PlayerDungeonProfile param1) {
         kl var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -80,7 +80,7 @@ final class sh {
         RuntimeException var3 = null;
         cf[] var4 = null;
         int var6 = 0;
-        lb var7 = null;
+        PlayerDungeonProfile var7 = null;
         cf[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -96,8 +96,8 @@ final class sh {
             var4[var5] = mp.a(Integer.toString(var5 + 1), param1, 0, param2[var5]);
           }
           if (param0 >= -55) {
-            var7 = (lb) null;
-            sh.a(-87, (lb) null);
+            var7 = (PlayerDungeonProfile) null;
+            sh.a(-87, (PlayerDungeonProfile) null);
           }
           stackIn_7_0 = var4;
           return stackIn_7_0;

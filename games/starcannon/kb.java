@@ -145,7 +145,7 @@ final class kb {
             var61 = var45.field_u;
             fd.a(0, 0, var61, IsaacRandom.field_h, param1 ^ -65912);
           } else {
-            ng.j(1);
+            ValidatedTextField.j(1);
           }
           var55 = new int[param3.field_s];
           var50 = var55;
@@ -210,12 +210,12 @@ final class kb {
               stackIn_32_0 = param3.field_m[var14Lifetime1];
             }
             var20 = stackIn_32_0;
-            if (uc.field_d != null &&
+            if (DebouncedFieldValidator.field_d != null &&
               null != param3.field_K &&
               param3.field_K.length > var14Lifetime1 &&
               param3.field_K[var14Lifetime1] != -1 &&
-              param3.field_K[var14Lifetime1] < uc.field_d.length) {
-              stackIn_40_0 = uc.field_d[param3.field_K[var14Lifetime1]];
+              param3.field_K[var14Lifetime1] < DebouncedFieldValidator.field_d.length) {
+              stackIn_40_0 = DebouncedFieldValidator.field_d[param3.field_K[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }

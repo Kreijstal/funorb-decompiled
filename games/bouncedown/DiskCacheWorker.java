@@ -32,7 +32,7 @@ final class DiskCacheWorker implements Runnable {
           var1_int = 0;
           var3 = 115 % ((param0 - 53) / 58);
           var2 = 0;
-          while (q.g((byte) -15)) {
+          while (DisplayNameSelectionPanel.g((byte) -15)) {
             cf.field_f.a((byte) 110);
             if (cf.field_f.a(-1)) {
               var1_int = 1;
@@ -65,7 +65,7 @@ final class DiskCacheWorker implements Runnable {
             var5 = fa.correctedCurrentTimeMillis(84) - gd.field_a;
             var7 = (int)((-var5 + 10999L) / 1000L);
             if (0 >= var7) {
-              nj.a(true, -25698, 5);
+              EmailFormatValidator.a(true, -25698, 5);
               var4 = 2;
             }
           }
@@ -242,7 +242,7 @@ final class DiskCacheWorker implements Runnable {
             var6.unlink(2);
             return;
           }
-          ti.a((Throwable) null, (byte) 100, "HS1: " + la.a(-105));
+          ValidatedTextField.a((Throwable) null, (byte) 100, "HS1: " + la.a(-105));
           kc.a((byte) 18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -489,7 +489,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ti.a((Throwable) ((Object) var2_ref), (byte) 100, (String) null);
+              ValidatedTextField.a((Throwable) ((Object) var2_ref), (byte) 100, (String) null);
               var7.field_n = false;
             }
           }

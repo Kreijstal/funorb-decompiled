@@ -137,11 +137,11 @@ final class NanoFrameTimer extends FrameTimer {
             wk.field_b[var4Lifetime3] = var17.readUnsignedShort((byte) -112);
           }
           var17.position = -(3 * (-1 + var3)) + param0.length - 7 - ih.field_b * 8;
-          rg.field_D = new int[var3];
+          EditableTextField.field_D = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            rg.field_D[var4Lifetime4] = var17.readUnsignedMedium((byte) 124);
-            if (0 == rg.field_D[var4Lifetime4]) {
-              rg.field_D[var4Lifetime4] = 1;
+            EditableTextField.field_D[var4Lifetime4] = var17.readUnsignedMedium((byte) 124);
+            if (0 == EditableTextField.field_D[var4Lifetime4]) {
+              EditableTextField.field_D[var4Lifetime4] = 1;
             }
           }
           var17.position = 0;

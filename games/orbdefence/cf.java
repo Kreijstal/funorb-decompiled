@@ -34,15 +34,15 @@ final class cf {
             if (PacketBuffer.field_k != null &&
               PacketBuffer.field_k.field_e) {
               lb.a(true);
-              b.field_n.b((byte) 74, (pj) (new gg(b.field_n, hh.field_d)));
+              ConfirmedEmailAvailabilityValidator.field_n.b((byte) 74, (pj) (new gg(ConfirmedEmailAvailabilityValidator.field_n, hh.field_d)));
             }
             return;
           }
-          b.field_n.a(em.field_q, false, true, lc.field_t);
-          b.field_n.o(117);
+          ConfirmedEmailAvailabilityValidator.field_n.a(PasswordValidator.field_q, false, true, lc.field_t);
+          ConfirmedEmailAvailabilityValidator.field_n.o(117);
           var1_int = 17 % ((param0 - 53) / 47);
           while (nf.e(32722)) {
-            b.field_n.a(od.field_k, true, ob.field_K);
+            ConfirmedEmailAvailabilityValidator.field_n.a(od.field_k, true, ob.field_K);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

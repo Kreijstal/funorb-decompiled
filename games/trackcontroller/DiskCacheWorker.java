@@ -308,7 +308,7 @@ final class DiskCacheWorker implements Runnable {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
             if (!SecondaryNodeDeque.a((char) var3, 122) &&
-              !hd.a(-124, (char) var3)) {
+              !ConfirmedEmailAvailabilityValidator.a(-124, (char) var3)) {
               return true;
             }
           }

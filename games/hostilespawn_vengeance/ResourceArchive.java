@@ -241,7 +241,7 @@ final class ResourceArchive {
         if (param0 <= 14) {
           return;
         }
-        ik.field_d = new mk();
+        ik.field_d = new AccountRegistrationPanel();
         ke.field_s.b(ik.field_d, (byte) 110);
     }
 

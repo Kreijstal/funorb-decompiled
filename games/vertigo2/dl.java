@@ -80,7 +80,7 @@ final class dl {
           if (param1 > -100) {
             return;
           }
-          if (ob.field_F == param0) {
+          if (LoginPanel.field_F == param0) {
             return;
           }
           for (var3_int = 0; 256 > var3_int; var3_int++) {
@@ -94,7 +94,7 @@ final class dl {
             }
             stackIn_9_0[stackIn_9_1] = stackIn_10_2;
           }
-          ob.field_F = param0;
+          LoginPanel.field_F = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,10 +113,10 @@ final class dl {
           if (param0 != -5996) {
             dl.clearStaticReferences((byte) -91);
           }
-          var4 = (ri) (ob.field_M.beginBackward((byte) 100));
+          var4 = (ri) (LoginPanel.field_M.beginBackward((byte) 100));
           while (var4 != null) {
             DelegatingCanvas.a(param1, var4, param0 + 5996);
-            var4 = (ri) (ob.field_M.nextBackward(42));
+            var4 = (ri) (LoginPanel.field_M.nextBackward(42));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

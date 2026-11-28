@@ -36,7 +36,7 @@ final class cl extends bc {
         e var2Lifetime1;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          bh.field_o.serviceOutput();
+          PasswordValidator.field_o.serviceOutput();
           re.field_B.serviceOutput();
           qb.field_b = qb.field_b - 1;
           var1_int = 120 % ((param0 + 61) / 54);

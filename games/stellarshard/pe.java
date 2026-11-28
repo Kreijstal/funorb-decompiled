@@ -18,7 +18,7 @@ final class pe {
           IntrusiveDeque.c(-2290);
           return;
         }
-        ha var2 = ae.field_N;
+        ha var2 = EditableTextField.field_N;
         var2.readInt(false);
         var2.readInt(false);
         var2.readInt(false);

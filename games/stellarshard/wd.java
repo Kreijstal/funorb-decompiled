@@ -8,7 +8,7 @@ final class wd {
     static int field_b;
     static int field_d;
 
-    final static boolean a(int param0, boolean param1, int param2, String param3, String param4, String param5, mj param6) {
+    final static boolean a(int param0, boolean param1, int param2, String param3, String param4, String param5, AccountRegistrationPanel param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;
@@ -37,7 +37,7 @@ final class wd {
           sb.field_a = param3;
           o.field_l = dj.field_a;
           u.field_k = param0;
-          lc.field_p = param5;
+          PasswordValidator.field_p = param5;
           DelegatingCanvas.field_d = null;
           GameEntity.field_o = param1;
           kc.field_c = param4;
@@ -79,8 +79,8 @@ final class wd {
           field_e = null;
           return;
         }
-        mj var2 = (mj) null;
-        wd.a(70, true, -68, (String) null, (String) null, (String) null, (mj) null);
+        AccountRegistrationPanel var2 = (AccountRegistrationPanel) null;
+        wd.a(70, true, -68, (String) null, (String) null, (String) null, (AccountRegistrationPanel) null);
         field_e = null;
     }
 

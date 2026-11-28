@@ -207,7 +207,7 @@ final class BoundedRandomAccessFile {
         RuntimeException var1_ref = null;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5 = ca.field_c;
+          var5 = DebouncedFieldValidator.field_c;
           var1 = var5;
           var2 = 0;
           if (param0 != -11517) {

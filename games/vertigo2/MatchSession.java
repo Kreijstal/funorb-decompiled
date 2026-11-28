@@ -20,7 +20,7 @@ final class MatchSession {
     int field_u;
     static int field_k;
     private LevelSimulation field_n;
-    static ne field_m;
+    static DisplayNameSelectionPanel field_m;
     String[] field_w;
     int field_i;
     boolean field_a;
@@ -73,7 +73,7 @@ final class MatchSession {
           this.field_j != 2 &&
           0 == this.field_j &&
           var3 >= DiskCacheWorker.field_l) {
-          var4Lifetime1 = df.field_k;
+          var4Lifetime1 = BirthDateValidator.field_k;
           var8 = var3;
           var9 = ProxyAuthenticationRequiredException.field_f % 4;
           var10 = 4 * (var8 - DiskCacheWorker.field_l);

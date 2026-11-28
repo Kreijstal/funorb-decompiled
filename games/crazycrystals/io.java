@@ -5,7 +5,7 @@ final class io extends rf {
     static AccountRequestState field_P;
     private int field_E;
     private RgbSprite field_K;
-    private n field_L;
+    private FieldValidator field_L;
     private String field_N;
     static PcmSample field_H;
     static am field_M;
@@ -71,7 +71,7 @@ final class io extends rf {
         field_I = null;
     }
 
-    io(n param0, String param1, int param2, int param3, int param4, int param5) {
+    io(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, LaserHubTile.b(false));
         try {
           this.field_N = param1;
@@ -173,7 +173,7 @@ final class io extends rf {
         var43 = null;
         var47 = null;
         var13 = CrazyCrystals.field_B;
-        var6 = this.field_L.c((byte) 45);
+        var6 = this.field_L.getValidationStatus((byte) 45);
         if (ta.field_h == var6) {
           var17 = vo.field_b;
           if (!var17.equals(this.field_o)) {
@@ -183,7 +183,7 @@ final class io extends rf {
           if (param1 > -12) {
             this.field_N = (String) null;
             super.a(param0, (byte) -110, param2, param3);
-            var6 = this.field_L.c((byte) 45);
+            var6 = this.field_L.getValidationStatus((byte) 45);
             var51 = (fi) ((Object) this.field_i);
             var9 = param2 + this.field_r;
             var10 = var51.a(param0, (byte) 50, (qm) (this)) + (var51.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -219,7 +219,7 @@ final class io extends rf {
             return;
           }
           super.a(param0, (byte) -110, param2, param3);
-          var6 = this.field_L.c((byte) 45);
+          var6 = this.field_L.getValidationStatus((byte) 45);
           var52 = (fi) ((Object) this.field_i);
           var9Lifetime5 = param2 + this.field_r;
           var10Lifetime5 = var52.a(param0, (byte) 50, (qm) (this)) + (var52.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -271,7 +271,7 @@ final class io extends rf {
           if (param1 > -12) {
             this.field_N = (String) null;
             super.a(param0, (byte) -110, param2, param3);
-            var6 = this.field_L.c((byte) 45);
+            var6 = this.field_L.getValidationStatus((byte) 45);
             var53 = (fi) ((Object) this.field_i);
             var9Lifetime1 = param2 + this.field_r;
             var10Lifetime1 = var53.a(param0, (byte) 50, (qm) (this)) + (var53.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -307,7 +307,7 @@ final class io extends rf {
             return;
           }
           super.a(param0, (byte) -110, param2, param3);
-          var6 = this.field_L.c((byte) 45);
+          var6 = this.field_L.getValidationStatus((byte) 45);
           var54 = (fi) ((Object) this.field_i);
           var9Lifetime1Lifetime1 = param2 + this.field_r;
           var10Lifetime1Lifetime1 = var54.a(param0, (byte) 50, (qm) (this)) + (var54.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -350,14 +350,14 @@ final class io extends rf {
           this.field_K.d(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_o, 256);
           return;
         }
-        var5 = this.field_L.a(-16774);
+        var5 = this.field_L.getValidationMessage(-16774);
         if (var5 == null) {
           var5 = this.field_N;
         }
         if (var5.equals(this.field_o)) {
           if (param1 <= -12) {
             super.a(param0, (byte) -110, param2, param3);
-            var6Lifetime1 = this.field_L.c((byte) 45);
+            var6Lifetime1 = this.field_L.getValidationStatus((byte) 45);
             var58 = (fi) ((Object) this.field_i);
             var9Lifetime2 = param2 + this.field_r;
             var10Lifetime2 = var58.a(param0, (byte) 50, (qm) (this)) + (var58.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -394,7 +394,7 @@ final class io extends rf {
           }
           this.field_N = (String) null;
           super.a(param0, (byte) -110, param2, param3);
-          var6Lifetime1Lifetime1 = this.field_L.c((byte) 45);
+          var6Lifetime1Lifetime1 = this.field_L.getValidationStatus((byte) 45);
           var57 = (fi) ((Object) this.field_i);
           var9Lifetime2Lifetime1 = param2 + this.field_r;
           var10Lifetime2Lifetime1 = var57.a(param0, (byte) 50, (qm) (this)) + (var57.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -434,7 +434,7 @@ final class io extends rf {
         if (param1 > -12) {
           this.field_N = (String) null;
           super.a(param0, (byte) -110, param2, param3);
-          var6Lifetime2 = this.field_L.c((byte) 45);
+          var6Lifetime2 = this.field_L.getValidationStatus((byte) 45);
           var55 = (fi) ((Object) this.field_i);
           var9Lifetime3 = param2 + this.field_r;
           var10Lifetime3 = var55.a(param0, (byte) 50, (qm) (this)) + (var55.a((qm) (this), 1).a((byte) -90) >> 1);
@@ -470,7 +470,7 @@ final class io extends rf {
           return;
         }
         super.a(param0, (byte) -110, param2, param3);
-        var6Lifetime3 = this.field_L.c((byte) 45);
+        var6Lifetime3 = this.field_L.getValidationStatus((byte) 45);
         var56 = (fi) ((Object) this.field_i);
         var9Lifetime4 = param2 + this.field_r;
         var10Lifetime4 = var56.a(param0, (byte) 50, (qm) (this)) + (var56.a((qm) (this), 1).a((byte) -90) >> 1);

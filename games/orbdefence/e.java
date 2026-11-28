@@ -89,7 +89,7 @@ final class e {
           if (param3 != 26052) {
             field_b = (IntrusiveDeque) null;
           }
-          if (pk.a(param3 - 26108, param0, param2, param1)) {
+          if (LoginPanel.a(param3 - 26108, param0, param2, param1)) {
             return bd.b(true);
           }
           return null;

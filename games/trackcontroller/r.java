@@ -89,7 +89,7 @@ final class r extends IntrusiveNode {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param0.charAt(var6);
-            if (ui.a(-19050, (char) var7)) {
+            if (PasswordValidator.a(-19050, (char) var7)) {
               var8 = vh.a(true, (char) var7);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

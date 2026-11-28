@@ -676,7 +676,7 @@ final class ResourceArchive {
               MixedSupport118.performAction1544(MixedSupport097.sceneWidgetPart007State0001.longState0031, integerArgument1, MixedSupport097.sceneWidgetPart007State0001.computeString1058((byte) -96), 97, integerLocal2 != 0, integerLocal1);
             }
             MixedSupport097.sceneWidgetPart007State0001 = null;
-            UiComponentPart031.performAction1598((byte) -76);
+            AccountRegistrationPanel.performAction1598((byte) -76);
           }
         }
         if (integerArgument2 != 0) {

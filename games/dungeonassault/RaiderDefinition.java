@@ -95,10 +95,10 @@ final class RaiderDefinition {
               return 29;
             }
           }
-          if (!fi.field_u.ensureIndexLoaded(-14354)) {
+          if (!InstructionsScreen.field_u.ensureIndexLoaded(-14354)) {
             return 43;
           }
-          if (!fi.field_u.tryLoadGroupByName(false, "commonui")) {
+          if (!InstructionsScreen.field_u.tryLoadGroupByName(false, "commonui")) {
             return 57;
           }
           if (!GameAppletShell.field_b.ensureIndexLoaded(-14354)) {
@@ -114,10 +114,10 @@ final class RaiderDefinition {
             return 86;
           }
         } else {
-          if (!fi.field_u.ensureIndexLoaded(-14354)) {
+          if (!InstructionsScreen.field_u.ensureIndexLoaded(-14354)) {
             return 20;
           }
-          if (!fi.field_u.tryLoadGroupByName(false, "commonui")) {
+          if (!InstructionsScreen.field_u.tryLoadGroupByName(false, "commonui")) {
             return 40;
           }
           if (!GameAppletShell.field_b.ensureIndexLoaded(-14354)) {
@@ -152,7 +152,7 @@ final class RaiderDefinition {
         try {
           im.field_b = oh.a("", -8);
           im.field_b.a(false, false);
-          p.a(param2, 37, param4, param1);
+          DungeonBuilderScreen.a(param2, 37, param4, param1);
           if (param0 != 8171) {
             RaiderDefinition.clearRaiderDefinitionGlobals((byte) 32);
           }

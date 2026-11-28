@@ -5,7 +5,7 @@ import java.io.*;
 
 final class sb extends pc {
     private int field_D;
-    private n field_H;
+    private FieldValidator field_H;
     static sj field_E;
     static String field_C;
     static RgbSprite[] field_B;
@@ -14,7 +14,7 @@ final class sb extends pc {
 
     final String a(byte param0) {
         if (this.field_m) {
-          return this.field_H.a(-16774);
+          return this.field_H.getValidationMessage(-16774);
         }
         if (param0 < -23) {
           return null;
@@ -124,7 +124,7 @@ final class sb extends pc {
         field_E = null;
     }
 
-    sb(n param0) {
+    sb(FieldValidator param0) {
         try {
           this.field_H = param0;
         } catch (RuntimeException runtimeException) {
@@ -160,7 +160,7 @@ final class sb extends pc {
         var5 = (this.field_g >> 1) + (this.field_r + param2);
         var6 = (this.field_f >> 1) + (param0 + this.field_j);
         if (param1 < -12) {
-          var8 = this.field_H.c((byte) 45);
+          var8 = this.field_H.getValidationStatus((byte) 45);
           if (var8 != ta.field_h &&
             var8 != ec.field_h) {
             if (var8 == rk.field_c) {
@@ -201,7 +201,7 @@ final class sb extends pc {
           return;
         }
         field_C = (String) null;
-        var8Lifetime1 = this.field_H.c((byte) 45);
+        var8Lifetime1 = this.field_H.getValidationStatus((byte) 45);
         if (var8Lifetime1 == ta.field_h) {
           var15 = ao.field_b[0];
           var9Lifetime1 = var15.field_n << 1;

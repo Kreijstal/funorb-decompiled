@@ -38,7 +38,7 @@ final class cb {
               hk.field_l = stackIn_10_0;
               dk.field_h = ii.field_r;
               var2_ref_hb.position = 0;
-              qi.a(j.field_a, SectorCacheStore.field_c, kc.field_c, false, rl.field_a);
+              LoginPanel.a(j.field_a, SectorCacheStore.field_c, kc.field_c, false, rl.field_a);
               SocketConnector.a((byte) -71, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,12 +66,12 @@ final class cb {
         if (!param0) {
           field_c = (int[]) null;
         }
-        if (null == wj.field_k) {
+        if (null == TextFieldValidator.field_k) {
           return;
         }
-        var1 = wj.field_k;
+        var1 = TextFieldValidator.field_k;
         synchronized (var1) {
-          wj.field_k = null;
+          TextFieldValidator.field_k = null;
         }
     }
 

@@ -92,7 +92,7 @@ final class IntrusiveNodeHashTable implements Iterable {
     }
 
     final static void b(int param0) {
-        if (!li.field_o) {
+        if (!MatchingFieldValidator.field_o) {
           throw new IllegalStateException();
         }
         if (param0 != 0) {
@@ -103,7 +103,7 @@ final class IntrusiveNodeHashTable implements Iterable {
           AccountServiceResult.field_d.g((byte) -19);
         }
         String var1 = BufferedRandomAccessFile.b(-104);
-        ib.field_e = new lk(var1, (String) null, true, false, false);
+        ib.field_e = new LoginPanel(var1, (String) null, true, false, false);
         im.field_e.c(ke.field_s, 86);
         ke.field_s.b(ib.field_e, (byte) 110);
         ke.field_s.m(param0 ^ -108);

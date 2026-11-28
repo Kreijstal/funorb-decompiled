@@ -15,7 +15,7 @@ final class tm {
     final static void a(boolean param0, pg param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = qn.field_U;
+          var3 = EditableTextField.field_U;
           var3.writeCipheredByte(param2, -114);
           if (param0) {
             field_d = -61;

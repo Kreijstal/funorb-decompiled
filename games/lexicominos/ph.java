@@ -13,7 +13,7 @@ final class ph {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != null &&
-            param1.length() >= g.field_o &&
+            param1.length() >= MatchingFieldValidator.field_o &&
             param1.length() <= oc.field_c) {
             if (param0 == 107) {
               return false;

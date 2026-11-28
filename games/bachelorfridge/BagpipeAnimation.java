@@ -235,7 +235,7 @@ final class BagpipeAnimation extends EventAnimation {
           if (var6 == null) {
             SuperSpeedAllEvent.field_q = 2;
           } else {
-            if (!vn.a((byte) 127, (CharSequence) ((Object) var6))) {
+            if (!ValidatedTextField.a((byte) 127, (CharSequence) ((Object) var6))) {
               SuperSpeedAllEvent.field_q = 2;
             } else {
               SuperSpeedAllEvent.field_q = pd.a((byte) 47, (CharSequence) ((Object) var6));

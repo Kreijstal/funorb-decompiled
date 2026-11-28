@@ -213,14 +213,14 @@ final class NetworkSupport009 {
                         integerLocal28 = -1 + (MixedSupport104.integerState0653 - integerLocal27);
                       }
                       if (integerLocal27 >= 0) {
-                        SceneWidgetPart013.performAction1707(integerLocal9, integerLocal27 + integerLocal38, integerLocal30, integerLocal29, integerLocal5, integerLocal28, 9, integerArrayArgument13, integerLocal13, integerLocal31);
+                        LobbyRoomRow.performAction1707(integerLocal9, integerLocal27 + integerLocal38, integerLocal30, integerLocal29, integerLocal5, integerLocal28, 9, integerArrayArgument13, integerLocal13, integerLocal31);
                       } else {
-                        SceneWidgetPart013.performAction1707(integerLocal9 - integerLocal27 * integerLocal30, integerLocal38, integerLocal30, integerLocal29, integerLocal5 - integerLocal27 * integerLocal29, integerLocal28 + integerLocal27, 9, integerArrayArgument13, integerLocal13 - integerLocal27 * integerLocal31, integerLocal31);
+                        LobbyRoomRow.performAction1707(integerLocal9 - integerLocal27 * integerLocal30, integerLocal38, integerLocal30, integerLocal29, integerLocal5 - integerLocal27 * integerLocal29, integerLocal28 + integerLocal27, 9, integerArrayArgument13, integerLocal13 - integerLocal27 * integerLocal31, integerLocal31);
                       }
                     } else {
                       if (integerLocal27 >= 0 &&
                         integerLocal27 < MixedSupport104.integerState0653) {
-                        SceneWidgetPart013.performAction1707(integerLocal9, integerLocal27 + integerLocal38, 0, 0, integerLocal5, integerLocal28, 9, integerArrayArgument13, integerLocal13, 0);
+                        LobbyRoomRow.performAction1707(integerLocal9, integerLocal27 + integerLocal38, 0, 0, integerLocal5, integerLocal28, 9, integerArrayArgument13, integerLocal13, 0);
                       }
                     }
                   }
@@ -295,7 +295,7 @@ final class NetworkSupport009 {
                 if (integerLocal34 == 0) {
                   if (integerLocal33 >= 0 &&
                     MixedSupport104.integerState0653 > integerLocal33) {
-                    SceneWidgetPart013.performAction1707(integerLocal9, integerLocal33 + integerLocal32, 0, 0, integerLocal5, integerLocal34, 9, integerArrayArgument13, integerLocal13, 0);
+                    LobbyRoomRow.performAction1707(integerLocal9, integerLocal33 + integerLocal32, 0, 0, integerLocal5, integerLocal34, 9, integerArrayArgument13, integerLocal13, 0);
                   }
                 } else {
                   integerLocal35 = (-integerLocal5 + integerLocal6) / integerLocal34;
@@ -305,9 +305,9 @@ final class NetworkSupport009 {
                     integerLocal34 = -integerLocal33 + MixedSupport104.integerState0653 - 1;
                   }
                   if (integerLocal33 >= 0) {
-                    SceneWidgetPart013.performAction1707(integerLocal9, integerLocal32 + integerLocal33, integerLocal36, integerLocal35, integerLocal5, integerLocal34, 9, integerArrayArgument13, integerLocal13, integerLocal37);
+                    LobbyRoomRow.performAction1707(integerLocal9, integerLocal32 + integerLocal33, integerLocal36, integerLocal35, integerLocal5, integerLocal34, 9, integerArrayArgument13, integerLocal13, integerLocal37);
                   } else {
-                    SceneWidgetPart013.performAction1707(integerLocal9 - integerLocal36 * integerLocal33, integerLocal32, integerLocal36, integerLocal35, -(integerLocal33 * integerLocal35) + integerLocal5, integerLocal34 + integerLocal33, 9, integerArrayArgument13, integerLocal13 - integerLocal37 * integerLocal33, integerLocal37);
+                    LobbyRoomRow.performAction1707(integerLocal9 - integerLocal36 * integerLocal33, integerLocal32, integerLocal36, integerLocal35, -(integerLocal33 * integerLocal35) + integerLocal5, integerLocal34 + integerLocal33, 9, integerArrayArgument13, integerLocal13 - integerLocal37 * integerLocal33, integerLocal37);
                   }
                 }
               }
@@ -377,18 +377,18 @@ final class NetworkSupport009 {
               }
             }
             if (MixedSupport053.integerState0273 == 2) {
-              UiComponentPart028.bufferedSocketState0003 = new BufferedSocket((java.net.Socket) (MixedSupport021.asyncTaskState0001.objectState0004), UiComponentPart003.platformServiceState0001);
+              EditableTextField.bufferedSocketState0003 = new BufferedSocket((java.net.Socket) (MixedSupport021.asyncTaskState0001.objectState0004), UiComponentPart003.platformServiceState0001);
               packetBufferLocal9 = new PacketBuffer(13);
-              MixedSupport049.performAction0587(GameDomainSupport003.integerState0278, MixedSupport039.integerState0233, 17, packetBufferLocal9, UiComponentPart005.integerState0122);
+              MixedSupport049.performAction0587(GameDomainSupport003.integerState0278, MixedSupport039.integerState0233, 17, packetBufferLocal9, DisplayNameSelectionPanel.integerState0122);
               packetBufferLocal9.writeByte(true, 15);
-              packetBufferLocal9.writeInt(MixedSupport142.integerState0880, false);
-              UiComponentPart028.bufferedSocketState0003.performAction1374(0, 13, integerArgument1 + 1, packetBufferLocal9.payload);
+              packetBufferLocal9.writeInt(ReturnedShapeUpdate.integerState0880, false);
+              EditableTextField.bufferedSocketState0003.performAction1374(0, 13, integerArgument1 + 1, packetBufferLocal9.payload);
               MixedSupport053.integerState0273 = MixedSupport053.integerState0273 + 1;
               NetworkSupport007.longState0030 = 30000L + MixedSupport062.correctedCurrentTimeMillis(integerArgument1 ^ 4);
             }
             if (MixedSupport053.integerState0273 == 3) {
-              if (UiComponentPart028.bufferedSocketState0003.computeInteger1377(0) > 0) {
-                integerLocal7 = UiComponentPart028.bufferedSocketState0003.computeInteger1378((byte) 8);
+              if (EditableTextField.bufferedSocketState0003.computeInteger1377(0) > 0) {
+                integerLocal7 = EditableTextField.bufferedSocketState0003.computeInteger1378((byte) 8);
                 if (integerLocal7 != 0) {
                   stackIntegerLocal3 = InputAdapter001.computeInteger0068(0, integerLocal7);
                   return stackIntegerLocal3;
@@ -405,8 +405,8 @@ final class NetworkSupport009 {
               stackIntegerLocal5 = -1;
               return stackIntegerLocal5;
             }
-            MixedSupport119.networkSupport003State0003.performAction0344(UiComponentPart028.bufferedSocketState0003, (byte) -128, MixedSupport119.booleanState0182);
-            UiComponentPart028.bufferedSocketState0003 = null;
+            MixedSupport119.networkSupport003State0003.performAction0344(EditableTextField.bufferedSocketState0003, (byte) -128, MixedSupport119.booleanState0182);
+            EditableTextField.bufferedSocketState0003 = null;
             MixedSupport021.asyncTaskState0001 = null;
             MixedSupport053.integerState0273 = 0;
             stackIntegerLocal4 = 0;

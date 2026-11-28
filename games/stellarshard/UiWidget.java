@@ -229,13 +229,13 @@ class UiWidget extends IntrusiveNode {
                         return param0;
                       }
                       this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-                      var15 = lk.field_e;
+                      var15 = TextFieldValidator.field_e;
                       var6 = var15;
                       if (var15 != null) {
                         if (var15.field_v instanceof jh) {
                           ((jh) (var15.field_v)).a((of) null, (byte) 106, var15);
                         }
-                        lk.field_e = null;
+                        TextFieldValidator.field_e = null;
                       }
                       if (var5 != 0 &&
                         gh.field_c != 0) {
@@ -258,13 +258,13 @@ class UiWidget extends IntrusiveNode {
                   return param0;
                 }
                 this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-                var17 = lk.field_e;
+                var17 = TextFieldValidator.field_e;
                 var6 = var17;
                 if (var17 != null) {
                   if (var17.field_v instanceof jh) {
                     ((jh) (var17.field_v)).a((of) null, (byte) 106, var17);
                   }
-                  lk.field_e = null;
+                  TextFieldValidator.field_e = null;
                 }
                 if (var7 == 0) {
                   nb.field_H = fb.field_n;
@@ -301,13 +301,13 @@ class UiWidget extends IntrusiveNode {
                           return param0;
                         }
                         this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-                        var19 = lk.field_e;
+                        var19 = TextFieldValidator.field_e;
                         var6 = var19;
                         if (var19 != null) {
                           if (var19.field_v instanceof jh) {
                             ((jh) (var19.field_v)).a((of) null, (byte) 106, var19);
                           }
-                          lk.field_e = null;
+                          TextFieldValidator.field_e = null;
                         }
                         if (var5 != 0 &&
                           gh.field_c != 0) {
@@ -333,12 +333,12 @@ class UiWidget extends IntrusiveNode {
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-              var20 = lk.field_e;
+              var20 = TextFieldValidator.field_e;
               if (var20 != null) {
                 if (var20.field_v instanceof jh) {
                   ((jh) (var20.field_v)).a((of) null, (byte) 106, var20);
                 }
-                lk.field_e = null;
+                TextFieldValidator.field_e = null;
               }
               if (var7 == 0) {
                 break regionExit1;
@@ -381,13 +381,13 @@ class UiWidget extends IntrusiveNode {
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-              var8 = lk.field_e;
+              var8 = TextFieldValidator.field_e;
               var6 = var8;
               if (var8 != null) {
                 if (var8.field_v instanceof jh) {
                   ((jh) (var8.field_v)).a((of) null, (byte) 106, var8);
                 }
-                lk.field_e = null;
+                TextFieldValidator.field_e = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -414,13 +414,13 @@ class UiWidget extends IntrusiveNode {
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-              var9 = lk.field_e;
+              var9 = TextFieldValidator.field_e;
               var6 = var9;
               if (var9 != null) {
                 if (var9.field_v instanceof jh) {
                   ((jh) (var9.field_v)).a((of) null, (byte) 106, var9);
                 }
-                lk.field_e = null;
+                TextFieldValidator.field_e = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -450,13 +450,13 @@ class UiWidget extends IntrusiveNode {
                     return param0;
                   }
                   this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-                  var11 = lk.field_e;
+                  var11 = TextFieldValidator.field_e;
                   var6 = var11;
                   if (var11 != null) {
                     if (var11.field_v instanceof jh) {
                       ((jh) (var11.field_v)).a((of) null, (byte) 106, var11);
                     }
-                    lk.field_e = null;
+                    TextFieldValidator.field_e = null;
                   }
                   if (var5 != 0 &&
                     gh.field_c != 0) {
@@ -479,13 +479,13 @@ class UiWidget extends IntrusiveNode {
               return param0;
             }
             this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
-            var13 = lk.field_e;
+            var13 = TextFieldValidator.field_e;
             var6 = var13;
             if (var13 != null) {
               if (var13.field_v instanceof jh) {
                 ((jh) (var13.field_v)).a((of) null, (byte) 106, var13);
               }
-              lk.field_e = null;
+              TextFieldValidator.field_e = null;
             }
             if (var7 == 0) {
               nb.field_H = fb.field_n;

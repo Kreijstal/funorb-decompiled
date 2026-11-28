@@ -126,7 +126,7 @@ abstract class ql extends al {
           var7Lifetime1++;
         }
         Lexicominos.field_I.d(-90 + (this.field_j + param2), param0 + 10);
-        ac.a(true, param0 + 35, ti.field_I, param2 + 5, this.field_j - 10);
+        ac.a(true, param0 + 35, LoginPanel.field_I, param2 + 5, this.field_j - 10);
         ac.a(true, -22 + param0 + this.field_v, we.field_i, param2, this.field_j);
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

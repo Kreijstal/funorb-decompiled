@@ -286,7 +286,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (ma.field_sb == 0) {
@@ -308,7 +308,7 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           regionExit1: {
@@ -336,18 +336,18 @@ class vg extends IntrusiveNode {
                 }
               }
               i.field_a = db.field_a;
-              g.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
               return param2;
             }
           }
           if (db.field_a != 0) {
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (i.field_a == 0) {
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -364,7 +364,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (var5 != 0) {
@@ -387,7 +387,7 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           regionExit2: {
@@ -415,17 +415,17 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (db.field_a != 0) {
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (i.field_a == 0) {
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -442,7 +442,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (0 == mh.field_f) {
@@ -463,7 +463,7 @@ class vg extends IntrusiveNode {
             }
           }
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (this.a(ih.field_R, this, mh.field_f, (byte) 115, ae.field_gb, param0, param1)) {
@@ -471,12 +471,12 @@ class vg extends IntrusiveNode {
           if (var7 == 0) {
             if (db.field_a != 0) {
               i.field_a = db.field_a;
-              g.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
               return param2;
             }
             if (i.field_a == 0) {
               i.field_a = db.field_a;
-              g.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
               return param2;
             }
             this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -493,18 +493,18 @@ class vg extends IntrusiveNode {
               this.c((byte) 61);
             }
             i.field_a = db.field_a;
-            g.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
             return param2;
           }
         }
         if (db.field_a != 0) {
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (i.field_a == 0) {
           i.field_a = db.field_a;
-          g.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -521,7 +521,7 @@ class vg extends IntrusiveNode {
           this.c((byte) 61);
         }
         i.field_a = db.field_a;
-        g.a(this.e(param3 ^ -125), param3 ^ param3);
+        AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
         return param2;
     }
 

@@ -952,7 +952,7 @@ final class ResourceArchive {
           }
           try {
             if (hf.field_C == 0) {
-              IterableNodeHashTable.field_e = MouseWheelInput.field_e.requestDirectSocket(g.field_r, LevelSession.field_ib, 35);
+              IterableNodeHashTable.field_e = MouseWheelInput.field_e.requestDirectSocket(AgeValidator.field_r, LevelSession.field_ib, 35);
               hf.field_C = hf.field_C + 1;
             }
             if (hf.field_C == 1) {

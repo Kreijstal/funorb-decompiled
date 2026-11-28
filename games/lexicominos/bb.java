@@ -49,7 +49,7 @@ final class bb extends nb implements jk {
             var3_int = param0.length;
             this.field_D = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_D[var4_int] = pj.a((CharSequence) ((Object) param0[var4_int]), (byte) -126).replace(' ', ' ');
+              this.field_D[var4_int] = AccountRegistrationPanel.a((CharSequence) ((Object) param0[var4_int]), (byte) -126).replace(' ', ' ');
             }
             if (param1) {
               field_J = (m) null;

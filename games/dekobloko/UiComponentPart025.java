@@ -47,9 +47,9 @@ class UiComponentPart025 extends InteractiveComponent {
           MixedSupport007.renderingSupport007State0001 = UiComponentPart014.computeRenderingSupport0070696((byte) -108, booleanArgument1);
           return;
         }
-        if (UiComponentPart013.booleanState0066) {
+        if (LoginPanel.booleanState0066) {
           PlayerNameAvailabilityValidator.performAction0825(0, booleanArgument1);
-          UiComponentPart013.booleanState0066 = false;
+          LoginPanel.booleanState0066 = false;
           return;
         }
         if (MixedSupport090.booleanState0124) {
@@ -173,7 +173,7 @@ class UiComponentPart025 extends InteractiveComponent {
     final static void performAction1359(float floatArgument1, int integerArgument2, String stringArgument3) {
         try {
           RenderingSupport002.floatState0002 = floatArgument1;
-          UiComponentPart013.stringState0227 = stringArgument3;
+          LoginPanel.stringState0227 = stringArgument3;
           int integerLocal1 = 79 / ((-18 - integerArgument2) / 58);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "qi.O(" + floatArgument1 + ',' + integerArgument2 + ',' + (stringArgument3 != null ? "{...}" : "null") + ')');

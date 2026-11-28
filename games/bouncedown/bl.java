@@ -62,7 +62,7 @@ final class bl {
         } else {
           this.field_f = uf.field_c;
         }
-        this.field_d = ba.field_I;
+        this.field_d = EditableTextField.field_I;
     }
 
     static {

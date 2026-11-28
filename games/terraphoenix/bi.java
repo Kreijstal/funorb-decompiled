@@ -86,7 +86,7 @@ final class bi {
               MidiPcmStream.field_Q = aj.createAccountErrorResult(param0, (byte) 113, param1);
               return;
             }
-            MidiPcmStream.field_Q = ib.createAccountSuggestionsResult(true, param2);
+            MidiPcmStream.field_Q = ValidatedTextField.createAccountSuggestionsResult(true, param2);
             return;
           }
           stackIn_6_0 = param3 ^ -10;

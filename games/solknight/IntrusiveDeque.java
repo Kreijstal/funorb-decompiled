@@ -270,9 +270,9 @@ final class IntrusiveDeque {
             la.a(ak.a(true), DiskCacheWorker.field_e, 82, var3_int != 0, mc.a(-100));
             return;
           }
-          if (!uk.h(250)) {
+          if (!PasswordValidator.h(250)) {
             SoftwareRasterizer.clearRaster();
-            vg.b(240, 320, 18);
+            EditableTextField.b(240, 320, 18);
             uf.a((byte) 99, 0, 0, param0);
             return;
           }

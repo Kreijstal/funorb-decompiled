@@ -337,7 +337,7 @@ final class pc extends hl {
 
     final static void a(String param0, boolean param1) {
         try {
-          ug.field_r = param0;
+          MatchingFieldValidator.field_r = param0;
           if (!param1) {
             field_bb = (kc) null;
           }

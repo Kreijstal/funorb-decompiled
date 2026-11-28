@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc extends aa {
-    static ia field_cb;
+    static FramedPanelLayer field_cb;
     static int[] field_ab;
     static IntrusiveDeque field_Y;
     static Sprite field_db;

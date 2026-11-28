@@ -104,7 +104,7 @@ final class ih extends kj implements sg {
         gh.field_m = false;
         fa.field_t = -1;
         sd.field_d = 0;
-        LocalizedStrings.field_w = (int[][]) null;
+        ConfirmedEmailAvailabilityValidator.field_w = (int[][]) null;
         fh.field_d = 0;
         vi.field_a = 0;
         n.field_jb = 0;

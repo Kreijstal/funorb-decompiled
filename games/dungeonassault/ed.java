@@ -46,7 +46,7 @@ final class ed extends np {
             stackIn_8_0 = ta.field_d;
             return stackIn_8_0;
           }
-          var3 = ih.a(86, '.', param1);
+          var3 = RaiderRecruitmentScreen.splitOnCharacter(86, '.', param1);
           if (var3.length < 2) {
             stackIn_11_0 = ri.field_e;
             return stackIn_11_0;
@@ -63,7 +63,7 @@ final class ed extends np {
               return stackIn_22_0;
             }
             var6 = var4[var5];
-            var7 = ip.a(0, var6);
+            var7 = TextFieldValidator.a(0, var6);
             if (var7 == null) {
               var5++;
               continue;

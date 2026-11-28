@@ -51,7 +51,7 @@ abstract class GameShell extends GameApplet {
                       } else {
                         if (8 != var2) {
                           if (var2 == 16) {
-                            bk.j(0);
+                            DisplayNameSelectionPanel.j(0);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -76,7 +76,7 @@ abstract class GameShell extends GameApplet {
                             qg.a(var4, true);
                           }
                         } else {
-                          bl.a(0, hd.field_o, rg.field_c, ne.field_a);
+                          bl.a(0, ConfirmedEmailAvailabilityValidator.field_o, rg.field_c, ne.field_a);
                         }
                       }
                     }
@@ -145,7 +145,7 @@ abstract class GameShell extends GameApplet {
             rf.a(3, 0);
           }
           if (kb.field_f[3]) {
-            l.a(-30422, 4);
+            EmailFormatValidator.a(-30422, 4);
           }
           if (kb.field_f[4]) {
             pa.a(5, (byte) 40);
@@ -169,7 +169,7 @@ abstract class GameShell extends GameApplet {
         if (param0 != -6) {
           this.b(true, 26);
         }
-        int var4 = hd.field_o - 1;
+        int var4 = ConfirmedEmailAvailabilityValidator.field_o - 1;
         byte[] var5 = new byte[var4];
         ne.field_a.readCipheredBytes(var4, false, 0, var5);
         ib.a(var3 != 0, ta.a(32200, var5), CachedArchiveSource.b((byte) 77), (byte) -25);
@@ -252,7 +252,7 @@ abstract class GameShell extends GameApplet {
             if (!ic.a(false)) {
               kj.d(250);
             } else {
-              if (0 == rl.field_N) {
+              if (0 == LoginPanel.field_N) {
                 discarded$1 = this.a(true, false, false);
               } else {
                 od.a((byte) -105, NodeHashTableIterator.field_c);
@@ -355,7 +355,7 @@ abstract class GameShell extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = TrackController.field_F ? 1 : 0;
-          var4 = lf.a(hl.field_F, NodeHashTableIterator.field_c, (byte) 95, param2);
+          var4 = ValidatedTextField.a(hl.field_F, NodeHashTableIterator.field_c, (byte) 95, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -376,7 +376,7 @@ abstract class GameShell extends GameApplet {
             stackIn_16_0 = this.field_B;
             stackIn_16_1 = sf.j(-4409);
             stackIn_17_2 = (param0) ? false : true;
-            var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), GameApplet.c(6), l.h(0), gj.a((byte) -119), 0);
+            var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), GameApplet.c(6), EmailFormatValidator.h(0), gj.a((byte) -119), 0);
             if (var5_intLifetime1 != -1) {
               gl.a(fi.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
               fi.field_t = null;
@@ -390,7 +390,7 @@ abstract class GameShell extends GameApplet {
               jb.a(true);
             }
             if (!param1) {
-              var5_intLifetime2 = SocketArchiveRequestConnection.a(this.field_v, false, l.h(0), qk.b(false), 113, this.field_B);
+              var5_intLifetime2 = SocketArchiveRequestConnection.a(this.field_v, false, EmailFormatValidator.h(0), qk.b(false), 113, this.field_B);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   AccountNameAvailabilityValidator.a(-114, var5_intLifetime2, fi.field_t);
@@ -398,7 +398,7 @@ abstract class GameShell extends GameApplet {
                 } else {
                   fi.field_p = ClientException.field_e;
                   ActiveLevel.e(-45);
-                  rl.field_N = 10;
+                  LoginPanel.field_N = 10;
                   ge.field_D = false;
                 }
               }
@@ -411,7 +411,7 @@ abstract class GameShell extends GameApplet {
               we.a(0, CachedArchiveSource.b((byte) 77));
             } else {
               ge.field_D = true;
-              rl.field_N = 10;
+              LoginPanel.field_N = 10;
             }
           }
           if (5 == var4) {
@@ -419,7 +419,7 @@ abstract class GameShell extends GameApplet {
           }
           if (var4 == 6 &&
             BufferedSocket.field_d) {
-            rl.field_N = 10;
+            LoginPanel.field_N = 10;
           }
           if (var4 == 7) {
             qh.a(!param0, CachedArchiveSource.b((byte) 77));
@@ -468,7 +468,7 @@ abstract class GameShell extends GameApplet {
             this.e((byte) -20);
           }
           if (var4 == 15) {
-            rl.field_N = 10;
+            LoginPanel.field_N = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -496,7 +496,7 @@ abstract class GameShell extends GameApplet {
         if (li.field_i) {
           return -1;
         }
-        var2 = SocketArchiveRequestConnection.a(this.field_v, true, l.h(0), qk.b(false), 78, this.field_B);
+        var2 = SocketArchiveRequestConnection.a(this.field_v, true, EmailFormatValidator.h(0), qk.b(false), 78, this.field_B);
         if (var2 == -1) {
           return -1;
         }
@@ -512,7 +512,7 @@ abstract class GameShell extends GameApplet {
           rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
           return var2;
         }
-        if (rl.field_N != 11) {
+        if (LoginPanel.field_N != 11) {
           return var2;
         }
         if (gj.field_c != 0) {
@@ -561,8 +561,8 @@ abstract class GameShell extends GameApplet {
         ob.publishKeyState(16473);
         of.publishInputState((byte) 66);
         if (!IterableNodeHashTable.a(-107) &&
-          rl.field_N != 11) {
-          vd.k(123);
+          LoginPanel.field_N != 11) {
+          AccountRegistrationPanel.k(123);
         }
         if (null != rd.field_l) {
           NodeHashTableIterator.field_c = rd.field_l.pollRotation(86);
@@ -588,7 +588,7 @@ abstract class GameShell extends GameApplet {
           gj.field_c = ClientException.b((byte) 104);
           if (var4Lifetime1 != 0 &&
             gj.field_c == 0 &&
-            rl.field_N == 11 &&
+            LoginPanel.field_N == 11 &&
             !IntrusiveNode.c(76)) {
             ActiveLevel.e(-96);
           }
@@ -600,7 +600,7 @@ abstract class GameShell extends GameApplet {
         if (gj.field_c != -1 &&
           gj.field_c != 0) {
           if (gl.field_I >= 10) {
-            if (rl.field_N >= 10) {
+            if (LoginPanel.field_N >= 10) {
               SecondaryNodeDequeIterator.a(-28717);
               if (gj.field_c != 3) {
                 if (gj.field_c != 4) {
@@ -617,7 +617,7 @@ abstract class GameShell extends GameApplet {
                   AccountNameAvailabilityValidator.a(-76, 256, ProxySocketConnector.field_f);
                 }
               } else {
-                AccountNameAvailabilityValidator.a(-80, 256, bk.field_G);
+                AccountNameAvailabilityValidator.a(-80, 256, DisplayNameSelectionPanel.field_G);
               }
               li.field_i = true;
             }
@@ -689,7 +689,7 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (gl.field_I == 3 &&
-          l.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
+          EmailFormatValidator.a(ei.field_i, ha.field_x, (byte) -112, ok.field_G) &&
           RasterBuffer.a(-25, ok.field_G)) {
           AccountServiceResult.b((byte) -98);
           LevelGrid.b((byte) -51);
@@ -706,11 +706,11 @@ abstract class GameShell extends GameApplet {
           if (jb.field_a) {
             kf.a(4);
           }
-          if (null == ni.field_n) {
-            ni.field_n = wd.q(11782);
+          if (null == MatchingFieldValidator.field_n) {
+            MatchingFieldValidator.field_n = wd.q(11782);
             uh.field_e = r.e(-12364);
           }
-          ok.a(ni.field_n, uh.field_e, (byte) 52, ok.field_G);
+          ok.a(MatchingFieldValidator.field_n, uh.field_e, (byte) 52, ok.field_G);
           ok.field_G = null;
           ha.field_x = null;
           ei.field_i = null;

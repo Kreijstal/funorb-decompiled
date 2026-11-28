@@ -504,7 +504,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime78 = NodeHashTableIterator.a("BEST", 125);
           if (null != var2Lifetime78) {
-            v.field_U = mj.a((byte) 26, var2Lifetime78);
+            AccountRegistrationPanel.field_U = mj.a((byte) 26, var2Lifetime78);
           }
           var2Lifetime79 = NodeHashTableIterator.a("DIFF_EASY", 127);
           if (null != var2Lifetime79) {

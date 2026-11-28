@@ -69,7 +69,7 @@ final class mh extends nb implements jk {
 
     public mh() {
         super(0, 0, 476, 225, (rd) null);
-        this.field_E = new kf(ri.field_d, (vd) null);
+        this.field_E = new kf(DebouncedFieldValidator.field_d, (vd) null);
         this.field_G = new kf(ch.field_g, (vd) null);
         this.field_C = new kf(a.field_f, (vd) null);
         v var1 = new v();

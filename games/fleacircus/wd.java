@@ -74,7 +74,7 @@ final class wd {
           ud.field_b.position = ud.field_b.position + 2;
           var6 = ud.field_b.position;
           ud.field_b.writeInt(IsaacRandom.field_j, (byte) -125);
-          ud.field_b.writeLong(-108, c.field_P);
+          ud.field_b.writeLong(-108, EditableTextField.field_P);
           var7 = 0;
           if (va.field_m) {
             var7 = var7 | 1;

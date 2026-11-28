@@ -84,7 +84,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "login_gameupdated");
                 if (null != var2) {
-                  ri.field_f = ni.a((byte) -55, var2);
+                  DebouncedFieldValidator.field_f = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_unable");
                 if (null != var2) {
@@ -1403,7 +1403,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_createanaccount");
                 if (var2 != null) {
-                  ri.field_d = ni.a((byte) -55, var2);
+                  DebouncedFieldValidator.field_d = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_username");
                 if (var2 != null) {
@@ -1427,11 +1427,11 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_email_confirm");
                 if (null != var2) {
-                  ti.field_C = ni.a((byte) -55, var2);
+                  LoginPanel.field_C = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_age");
                 if (var2 != null) {
-                  uf.field_o = ni.a((byte) -55, var2);
+                  AgeValidator.field_o = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_u13_email");
                 if (var2 != null) {
@@ -1531,7 +1531,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_displayname_tooltip");
                 if (var2 != null) {
-                  cl.field_Q = ni.a((byte) -55, var2);
+                  ValidatedTextField.field_Q = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_displayname_hint");
                 if (var2 != null) {
@@ -1547,11 +1547,11 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  r.field_C = ni.a((byte) -55, var2);
+                  DisplayNameSelectionPanel.field_C = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_email_tooltip");
                 if (null != var2) {
-                  pj.field_L = ni.a((byte) -55, var2);
+                  AccountRegistrationPanel.field_L = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_email_confirm_tooltip");
                 if (var2 != null) {
@@ -1627,7 +1627,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_alert_passcontainsname");
                 if (null != var2) {
-                  uf.field_l = ni.a((byte) -55, var2);
+                  AgeValidator.field_l = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_alert_passcontainsemail");
                 if (var2 != null) {
@@ -2037,7 +2037,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "ok");
                 if (var2 != null) {
-                  va.field_l = ni.a((byte) -55, var2);
+                  PasswordValidator.field_l = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "on");
                 if (null != var2) {
@@ -2269,7 +2269,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "mouseoveranicon");
                 if (null != var2) {
-                  tj.field_k = ni.a((byte) -55, var2);
+                  TextFieldValidator.field_k = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "notyetachieved");
                 if (null != var2) {
@@ -2685,7 +2685,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_nonmember");
                 if (var2 != null) {
-                  pc.field_m = ni.a((byte) -55, var2);
+                  EmailFormatValidator.field_m = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_button_close");
                 if (null != var2) {
@@ -2705,7 +2705,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_focus");
                 if (var2 != null) {
-                  pj.field_B = ni.a((byte) -55, var2);
+                  AccountRegistrationPanel.field_B = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_focus_or_resolution");
                 if (var2 != null) {
@@ -2833,7 +2833,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "serviceunavailable");
                 if (var2 != null) {
-                  pc.field_l = ni.a((byte) -55, var2);
+                  EmailFormatValidator.field_l = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "createtouse");
                 if (var2 != null) {

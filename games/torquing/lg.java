@@ -172,7 +172,7 @@ class lg extends UiWidget {
             op.field_i = 11;
           }
         }
-        mh.field_g = true;
+        MenuScreen.field_g = true;
         if (param0 < -98) {
           return;
         }

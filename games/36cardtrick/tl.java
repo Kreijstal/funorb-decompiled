@@ -46,7 +46,7 @@ abstract class tl {
         if (param0 != 24881) {
           return (vk) null;
         }
-        var8 = rd.field_j;
+        var8 = EmailFormatValidator.field_j;
         var2 = var8;
         var3 = var8.readUnsignedByte(-112);
         stackIn_5_0 = (0 != (var3 & 128));
@@ -55,11 +55,11 @@ abstract class tl {
         KeyboardInputHandler.field_a = var8.readUnsignedByte(102);
         ff.field_a = var8.readLong(true);
         if (IsaacRandom.field_b == 2) {
-          fg.field_l = var8.readUnsignedShort((byte) 72);
+          MatchingFieldValidator.field_l = var8.readUnsignedShort((byte) 72);
           bi.field_a = var8.readUnsignedMedium(true);
         } else {
           bi.field_a = 0;
-          fg.field_l = 0;
+          MatchingFieldValidator.field_l = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(76) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
@@ -96,7 +96,7 @@ abstract class tl {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          k.a((Throwable) ((Object) var6), (byte) 111, "CC1");
+          DebouncedFieldValidator.a((Throwable) ((Object) var6), (byte) 111, "CC1");
           bl.field_c = null;
           hi.field_b = null;
           return new vk(param1);

@@ -1,0 +1,105 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AgeValidator extends TextFieldValidator {
+    static String field_o;
+    static String field_p;
+    static String field_n;
+
+    public static void clearDeclaredStaticReferences(int param0) {
+        field_n = null;
+        if (param0 != -1) {
+          return;
+        }
+        field_p = null;
+        field_o = null;
+    }
+
+    final String getValidationMessage(int param0, String param1) {
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        String stackIn_7_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.getValidationStatus(param1, (byte) -99) == vh.field_h) {
+            stackIn_3_0 = te.field_L;
+            return stackIn_3_0;
+          }
+          if (param0 == -11300) {
+            return null;
+          }
+          stackIn_7_0 = (String) null;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("nb.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    final qd getValidationStatus(String param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        CharSequence var4 = null;
+        CharSequence var5 = null;
+        qd stackIn_2_0 = null;
+        qd stackIn_5_0 = null;
+        qd stackIn_10_0 = null;
+        qd stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = (CharSequence) ((Object) param0);
+          if (!SpriteGeometry.a(param1 + 109, var4)) {
+            stackIn_2_0 = vh.field_h;
+            return stackIn_2_0;
+          }
+          if (param1 != -99) {
+            stackIn_5_0 = (qd) null;
+            return stackIn_5_0;
+          }
+          var5 = (CharSequence) ((Object) param0);
+          var3_int = th.a(103, var5);
+          if (var3_int > 0 &&
+            var3_int <= 130) {
+            stackIn_12_0 = nc.field_bb;
+            return stackIn_12_0;
+          }
+          stackIn_10_0 = vh.field_h;
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("nb.C(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    AgeValidator(EditableTextField param0) {
+        super(param0);
+    }
+
+    static {
+        field_o = "Chompolicious";
+        field_p = "Next wave in <%0> seconds";
+        field_n = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+    }
+}

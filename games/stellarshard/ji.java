@@ -14,7 +14,7 @@ final class ji {
         RuntimeException var3_ref = null;
         try {
           param2 = FrameTimer.a(param2, (char)param1, "", param1 + 2524);
-          var3 = la.a(param0, (byte) -36);
+          var3 = LoginPanel.a(param0, (byte) -36);
           stackIn_5_0 = (param2.indexOf(param0) != -1) || (-1 != param2.indexOf(var3));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

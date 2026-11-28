@@ -9,7 +9,7 @@ final class cd {
     private boolean field_c;
     static String field_h;
     static int field_e;
-    static rg field_f;
+    static AccountRegistrationPanel field_f;
 
     final boolean a(byte param0) {
         int var2 = -99 % ((param0 - 83) / 38);

@@ -40,7 +40,7 @@ final class tb extends IntrusiveNode {
           tb.a(-48, -115);
         }
         while (ti.field_g > var2) {
-          var3 = ij.field_o[var2] * vo.field_b[var2];
+          var3 = PasswordValidator.field_o[var2] * vo.field_b[var2];
           var20 = pn.field_b[var2];
           if (!lp.field_e[var2]) {
             var9 = new int[var3];
@@ -48,7 +48,7 @@ final class tb extends IntrusiveNode {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
+            var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var21);
           } else {
             var22 = fq.field_G[var2];
             var16 = new int[var3];
@@ -57,7 +57,7 @@ final class tb extends IntrusiveNode {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = UiWidget.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], PasswordValidator.field_o[var2], var16));
           }
           var2++;
         }

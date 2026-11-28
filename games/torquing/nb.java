@@ -17,17 +17,17 @@ final class nb extends am {
         var5 = Torquing.field_u;
         try {
           be.a();
-          id.field_c = new int[260];
+          LoginRequestBuilder.field_c = new int[260];
           oe.field_b = 11;
           var2 = 90 % ((param0 + 4) / 60);
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var3 = 15.0;
-            id.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var3));
+            LoginRequestBuilder.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var3));
           }
           var6 = 256;
           var1_intLifetime1 = var6;
-          while (id.field_c.length > var6) {
-            id.field_c[var6] = 255;
+          while (LoginRequestBuilder.field_c.length > var6) {
+            LoginRequestBuilder.field_c[var6] = 255;
             var6++;
           }
           return;
@@ -139,7 +139,7 @@ final class nb extends am {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        bi.field_p = param0;
+        LevelRun.field_p = param0;
         if (param1 >= -87) {
           return;
         }

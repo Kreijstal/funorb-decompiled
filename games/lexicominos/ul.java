@@ -450,12 +450,12 @@ final class ul extends IntrusiveNode {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ti.field_I = td.a("commonui", "frame_top", param0, 22306);
+          LoginPanel.field_I = td.a("commonui", "frame_top", param0, 22306);
           we.field_i = td.a("commonui", "frame_bottom", param0, 22306);
           Lexicominos.field_I = df.a("commonui", "jagex_logo_grey", param0, (byte) -123);
           uc.field_hb = td.a("commonui", "button", param0, 22306);
           BufferedRandomAccessFile.field_b = uk.a("validation", "commonui", -909811167, param0);
-          cl.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
+          ValidatedTextField.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
           ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
           FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));
           var18 = new RgbSprite(param2.getFileByName((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));

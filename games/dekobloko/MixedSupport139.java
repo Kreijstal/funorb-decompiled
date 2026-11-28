@@ -3,7 +3,7 @@
  */
 final class MixedSupport139 {
     static String stringState0593;
-    static SceneWidgetPart004 sceneWidgetPart004State0001;
+    static PlayerNamePrompt sceneWidgetPart004State0001;
     static int integerState0855;
     static String[] stringArrayState0054;
     static int integerState0856;

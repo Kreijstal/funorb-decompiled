@@ -94,7 +94,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         RuntimeException var6 = null;
         int var7 = 0;
         try {
-          LocalizedStrings.field_s[PcmOutputWorker.field_c] = param1;
+          ConfirmedEmailAvailabilityValidator.field_s[PcmOutputWorker.field_c] = param1;
           hi.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
           bg.field_Q[PcmOutputWorker.field_c] = param3;
           if (param3 > ia.field_q) {

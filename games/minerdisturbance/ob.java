@@ -132,7 +132,7 @@ abstract class ob extends GameAppletShell {
           ij.field_o.c(565);
         }
         mh.b(114);
-        k.f(10525);
+        EmailFormatValidator.f(10525);
         if (!hl.b((byte) 120) &&
           fh.field_b != 11) {
           hm.d((byte) 22);
@@ -544,7 +544,7 @@ abstract class ob extends GameAppletShell {
         }
         this.setBackground(java.awt.Color.black);
         kb.field_c = this.field_r;
-        od.a(122, kb.field_c);
+        ConfirmedEmailAvailabilityValidator.a(122, kb.field_c);
         qg.a(qa.field_a, this.field_t, this.field_B, param1, this.field_y, this.field_u, this.field_o, this.field_s, this.field_x, 5000, true, param0, 5000, kb.field_c);
         q.a(this.field_t, qa.field_a, kb.field_c, this.field_s, this.field_o, param1, 20, this.field_B, this.field_y);
         km.b((byte) 109);
@@ -594,7 +594,7 @@ abstract class ob extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = dn.a(lm.n(-124), fa.a(true), mb.b((byte) -95), fc.b((byte) 123), ii.b((byte) 63), this.field_A, -14543);
+            var5_intLifetime1 = dn.a(DisplayNameSelectionPanel.n(-124), fa.a(true), mb.b((byte) -95), fc.b((byte) 123), ii.b((byte) 63), this.field_A, -14543);
             if (-1 != var5_intLifetime1) {
               NetworkArchiveRequest.a(nf.field_g, vh.field_i, (byte) -98, var5_intLifetime1);
               nf.field_g = null;
@@ -742,7 +742,7 @@ abstract class ob extends GameAppletShell {
                             if (var2 != 11 &&
                               12 != var2) {
                               if (var2 == 13) {
-                                cb.c(false);
+                                TextFieldValidator.c(false);
                                 return;
                               }
                               if (17 == var2) {

@@ -21,7 +21,7 @@ final class MidiPcmStream extends PcmStream {
     static boolean field_x;
     private int field_S;
     static String field_T;
-    static v field_I;
+    static AccountRegistrationPanel field_I;
     private int[] field_Q;
     int[] field_B;
     private int[] field_t;
@@ -1404,7 +1404,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if ((decompiledFrameCompleted0) &&
           (param1 != 0)) {
-          field_I = (v) null;
+          field_I = (AccountRegistrationPanel) null;
         }
 
     }
@@ -1528,7 +1528,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != -23) {
           field_m = (Random) null;
         }
-        return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, NetworkArchiveRequest.field_P, ArchiveRequest.field_z, bc.field_a, ResourceArchive.field_d};
+        return new sa[]{oh.field_c, TextFieldValidator.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, NetworkArchiveRequest.field_P, ArchiveRequest.field_z, bc.field_a, ResourceArchive.field_d};
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

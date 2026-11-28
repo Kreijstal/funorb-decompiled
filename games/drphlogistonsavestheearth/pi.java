@@ -18,7 +18,7 @@ final class pi extends si {
     static wg field_V;
     static int field_Q;
     static he[] field_S;
-    static wa field_O;
+    static LoginPanel field_O;
     static String field_R;
 
     final static void a(boolean param0, String[] param1) {

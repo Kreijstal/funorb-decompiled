@@ -131,8 +131,8 @@ final class qj {
           if (param2 != 108) {
             field_e = (ci) null;
           }
-          if (tj.a(param1, param0, param3, (byte) 83)) {
-            return af.a((byte) -109);
+          if (EmailFormatValidator.a(param1, param0, param3, (byte) 83)) {
+            return ChessMatchState.decodeRgbSpriteArray((byte) -109);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

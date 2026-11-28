@@ -8,14 +8,14 @@ final class kh {
         field_a = null;
         if (param0 < 85) {
           String var2 = (String) null;
-          kh.a((String) null, 30, true, (String) null, 125, (bg) null, (String) null);
+          kh.a((String) null, 30, true, (String) null, 125, (AccountRegistrationPanel) null, (String) null);
         }
     }
 
     final static int a(byte param0) {
         if (param0 > -39) {
           String var2 = (String) null;
-          kh.a((String) null, -3, false, (String) null, 109, (bg) null, (String) null);
+          kh.a((String) null, -3, false, (String) null, 109, (AccountRegistrationPanel) null, (String) null);
           c.field_h.b(true);
           if (lg.field_n.a((byte) -122)) {
             return 0;
@@ -29,7 +29,7 @@ final class kh {
         return lf.a(3);
     }
 
-    final static boolean a(String param0, int param1, boolean param2, String param3, int param4, bg param5, String param6) {
+    final static boolean a(String param0, int param1, boolean param2, String param3, int param4, AccountRegistrationPanel param5, String param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;

@@ -127,20 +127,20 @@ abstract class FrameTimer {
         RuntimeException var8 = null;
         og var9 = null;
         int var10 = 0;
-        oc var11 = null;
+        GridPoint var11 = null;
         var10 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param2 != 29) {
             return;
           }
-          var11 = new oc(param1.field_j);
+          var11 = new GridPoint(param1.field_j);
           var9 = new og(param1.field_l);
           param1.field_e = 0;
           param3[param4] = 0;
           while (param1.field_e == 0) {
             param1.field_l.a(2, (byte) 94, param1.field_c);
             param1.a(8573);
-            if (2 == param3[param1.field_j.b(-4)]) {
+            if (2 == param3[param1.field_j.getClampedTileIndex(-4)]) {
               param1.field_e = 1;
             }
             if (!param1.a(param0, param5, 29821)) {
@@ -148,7 +148,7 @@ abstract class FrameTimer {
             }
             param1.field_i = 13;
             param1.field_e = 0;
-            param1.field_j.a((byte) 46, var11);
+            param1.field_j.copyCoordinatesFrom((byte) 46, var11);
             param1.field_l.a(var9, -28860);
             break;
           }
@@ -259,10 +259,10 @@ abstract class FrameTimer {
                 var6 = 16728128;
               }
               if (var1_int == 0) {
-                oc.field_c.e(0, 0);
+                GridPoint.field_c.e(0, 0);
                 dn.a(var2, -112, var5, var3 - 16, var6);
               } else {
-                oc.field_c.d(640 - oc.field_c.field_z, 0);
+                GridPoint.field_c.d(640 - GridPoint.field_c.field_z, 0);
                 pf.a(var2, -16 + var3, 0, var5, var6);
               }
               if (var1_int != 0) {
@@ -293,14 +293,14 @@ abstract class FrameTimer {
                   if (var1_int == 1) {
                     var2 -= 24;
                     if (var5 == 0) {
-                      of.field_e.c(var8_ref_String, 572, 32 + var3, 16772608, 0);
+                      ClientLookupTables.field_e.c(var8_ref_String, 572, 32 + var3, 16772608, 0);
                     } else {
                       MouseWheelInput.a(7, 42 + var3, var6, 0, var8_ref_String, al.field_Z, 572);
                     }
                   }
                 } else {
                   if (var5 == 0) {
-                    of.field_e.a(var8_ref_String, 68, var3 + 32, 16772608, 0);
+                    ClientLookupTables.field_e.a(var8_ref_String, 68, var3 + 32, 16772608, 0);
                   } else {
                     ec.a(7, var3 + 42, false, al.field_Z, 68, var6, var8_ref_String);
                   }
@@ -321,7 +321,7 @@ abstract class FrameTimer {
           }
           for (var1_intLifetime2 = 0; var1_intLifetime2 < 8; var1_intLifetime2++) {
             if (VolumeRampingMidiPcmStream.field_Q[var1_intLifetime2]) {
-              if ((5 & el.field_m) == 0 &&
+              if ((5 & ProxySocketFactory.field_m) == 0 &&
                 j.field_c >= -7 + var5Lifetime1 &&
                 j.field_c < ti.field_j.field_z + var5Lifetime1 + 9 &&
                 rb.field_m < ti.field_j.field_A + var6Lifetime1) {
@@ -329,7 +329,7 @@ abstract class FrameTimer {
               }
               var7Lifetime1 = 0;
               if (var1_intLifetime2 == ri.field_h) {
-                stackIn_63_0 = (0 == (el.field_m & 5)) ? 0 : 1;
+                stackIn_63_0 = (0 == (ProxySocketFactory.field_m & 5)) ? 0 : 1;
                 var7Lifetime1 = stackIn_63_0;
                 stackIn_65_0 = var5Lifetime1 + 2;
                 stackIn_65_1 = var6Lifetime1 + 2;
@@ -361,11 +361,11 @@ abstract class FrameTimer {
               if (VolumeRampingMidiPcmStream.field_cb[var1_intLifetime2]) {
                 var8Lifetime1 = 12 + var5Lifetime1;
                 var9Lifetime1 = var6Lifetime1 + 3;
-                of.field_e.a('2', var8Lifetime1 - 1, var9Lifetime1, 65793);
-                of.field_e.a('2', var8Lifetime1 + 1, var9Lifetime1, 65793);
-                of.field_e.a('2', var8Lifetime1, -1 + var9Lifetime1, 65793);
-                of.field_e.a('2', var8Lifetime1, 1 + var9Lifetime1, 65793);
-                of.field_e.a('2', var8Lifetime1, var9Lifetime1, 16772608);
+                ClientLookupTables.field_e.a('2', var8Lifetime1 - 1, var9Lifetime1, 65793);
+                ClientLookupTables.field_e.a('2', var8Lifetime1 + 1, var9Lifetime1, 65793);
+                ClientLookupTables.field_e.a('2', var8Lifetime1, -1 + var9Lifetime1, 65793);
+                ClientLookupTables.field_e.a('2', var8Lifetime1, 1 + var9Lifetime1, 65793);
+                ClientLookupTables.field_e.a('2', var8Lifetime1, var9Lifetime1, 16772608);
               }
               if (hf.field_i == var1_intLifetime2) {
                 var7Lifetime1 = 1;

@@ -260,10 +260,10 @@ final class md extends rg {
 
     final static void b(byte param0) {
         int var1;
-        if (hi.field_k == 10 ||
+        if (TextFieldValidator.field_k == 10 ||
           !ld.a((byte) 85)) {
           dk.a(-108);
-          hi.field_k = 11;
+          TextFieldValidator.field_k = 11;
         }
         mf.field_d = true;
         var1 = -81 / ((param0 + 21) / 46);

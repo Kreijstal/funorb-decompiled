@@ -14,7 +14,7 @@ final class hl {
           if (nb.field_b != null) {
             nb.field_b.h((byte) -126);
           }
-          mb.field_s = new uh(param2, param1, false, true, true);
+          mb.field_s = new LoginPanel(param2, param1, false, true, true);
           if (param0 != -93) {
             field_e = (String) null;
           }

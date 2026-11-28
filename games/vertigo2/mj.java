@@ -53,7 +53,7 @@ final class mj {
           ha.a(param0, param6, param5, param12, param8, param7, param15, param18, param3, param17 + 23161, param10, param13, param4, param11, param9);
           ti.a(param14, param9, 4, param2);
           sq.a((byte) 13);
-          ne.c(false);
+          DisplayNameSelectionPanel.c(false);
           gl.a(26780);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

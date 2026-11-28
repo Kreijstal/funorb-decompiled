@@ -92,10 +92,10 @@ final class wk {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
             }
-            if (md.field_j == null) {
+            if (AgeValidator.field_j == null) {
               return param0.getParameter("settings");
             }
-            stackIn_15_0 = md.field_j;
+            stackIn_15_0 = AgeValidator.field_j;
             return stackIn_15_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

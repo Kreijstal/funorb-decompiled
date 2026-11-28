@@ -78,12 +78,12 @@ abstract class tb {
             field_d = (PcmStreamMixer) null;
           }
           var2_int = param1.readUnsignedByte(255);
-          jn.field_q = (7 & var2_int) << 18;
+          PasswordValidator.field_q = (7 & var2_int) << 18;
           SpriteGeometry.field_q = SpriteGeometry.field_q + (var2_int >> 3);
-          jn.field_q = jn.field_q + (param1.readUnsignedShort((byte) -7) << 2);
+          PasswordValidator.field_q = PasswordValidator.field_q + (param1.readUnsignedShort((byte) -7) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(255);
           of.field_D = 2064384 & var2_intLifetime1 << 15;
-          jn.field_q = jn.field_q + (var2_intLifetime1 >> 6);
+          PasswordValidator.field_q = PasswordValidator.field_q + (var2_intLifetime1 >> 6);
           of.field_D = of.field_D + (param1.readUnsignedByte(255) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(param0 ^ -31305);
           jd.field_I = var2_intLifetime2 << 16 & 65536;

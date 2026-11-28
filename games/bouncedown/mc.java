@@ -29,12 +29,12 @@ final class mc {
         if (param0 != -660) {
           return;
         }
-        if (null == nj.field_o) {
+        if (null == EmailFormatValidator.field_o) {
           return;
         }
-        var1 = nj.field_o;
+        var1 = EmailFormatValidator.field_o;
         synchronized (var1) {
-          nj.field_o = null;
+          EmailFormatValidator.field_o = null;
         }
     }
 

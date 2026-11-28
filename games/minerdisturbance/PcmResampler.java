@@ -116,8 +116,8 @@ final class PcmResampler {
         RuntimeException var1 = null;
         var2 = MinerDisturbance.field_ab;
         try {
-          for (var1_int = -1 + ke.field_X.length; var1_int >= 0; var1_int--) {
-            ke.field_X[var1_int] = false;
+          for (var1_int = -1 + ValidatedTextField.field_X.length; var1_int >= 0; var1_int--) {
+            ValidatedTextField.field_X[var1_int] = false;
           }
           if (param0) {
             PcmResampler.a(false);

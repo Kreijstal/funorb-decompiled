@@ -31,18 +31,18 @@ final class wja extends pu {
             if (param1 >= ug.field_o.field_q + SnowEvent.field_u) {
               return -1;
             }
-            if (param0 < hka.field_h) {
+            if (param0 < AgeValidator.field_h) {
               return -1;
             }
-            if (hka.field_h + ug.field_o.field_p <= param0) {
+            if (AgeValidator.field_h + ug.field_o.field_p <= param0) {
               return -1;
             }
             return 1;
           }
           if (SnowEvent.field_u <= param1 &&
             param1 < ug.field_o.field_q + SnowEvent.field_u &&
-            param0 >= hka.field_h &&
-            hka.field_h + ug.field_o.field_p > param0) {
+            param0 >= AgeValidator.field_h &&
+            AgeValidator.field_h + ug.field_o.field_p > param0) {
             return 1;
           }
           return -1;
@@ -52,16 +52,16 @@ final class wja extends pu {
             field_n = (String) null;
             if (SnowEvent.field_u <= param1 &&
               param1 < ug.field_o.field_q + SnowEvent.field_u &&
-              param0 >= hka.field_h &&
-              hka.field_h + ug.field_o.field_p > param0) {
+              param0 >= AgeValidator.field_h &&
+              AgeValidator.field_h + ug.field_o.field_p > param0) {
               return 1;
             }
             return -1;
           }
           if (SnowEvent.field_u <= param1 &&
             param1 < ug.field_o.field_q + SnowEvent.field_u &&
-            param0 >= hka.field_h &&
-            hka.field_h + ug.field_o.field_p > param0) {
+            param0 >= AgeValidator.field_h &&
+            AgeValidator.field_h + ug.field_o.field_p > param0) {
             return 1;
           }
           return -1;
@@ -74,16 +74,16 @@ final class wja extends pu {
           field_n = (String) null;
           if (SnowEvent.field_u <= param1 &&
             param1 < ug.field_o.field_q + SnowEvent.field_u &&
-            param0 >= hka.field_h &&
-            hka.field_h + ug.field_o.field_p > param0) {
+            param0 >= AgeValidator.field_h &&
+            AgeValidator.field_h + ug.field_o.field_p > param0) {
             return 1;
           }
           return -1;
         }
         if (SnowEvent.field_u <= param1 &&
           param1 < ug.field_o.field_q + SnowEvent.field_u &&
-          param0 >= hka.field_h &&
-          hka.field_h + ug.field_o.field_p > param0) {
+          param0 >= AgeValidator.field_h &&
+          AgeValidator.field_h + ug.field_o.field_p > param0) {
           return 1;
         }
         return -1;

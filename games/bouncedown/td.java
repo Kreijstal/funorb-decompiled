@@ -37,7 +37,7 @@ abstract class td {
         if (ch.field_h != null) {
           mh.a(ch.field_h, (byte) 86);
         }
-        q.l(8927);
+        DisplayNameSelectionPanel.l(8927);
         mc.a(-660);
         hh.b((byte) 48);
         if (!wg.b(true)) {

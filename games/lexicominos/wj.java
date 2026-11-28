@@ -520,7 +520,7 @@ final class wj extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = (-var27Lifetime6Lifetime1 + var30) * var28 + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = rl.b(-var27Lifetime6Lifetime1 + var30, var32, 25668);
+                var34 = EditableTextField.b(-var27Lifetime6Lifetime1 + var30, var32, 25668);
                 this.field_n[var33] = (byte)(var34 * this.field_n[var33] + 32 >> 6);
                 var32 = var32 + (-var28 + var31);
               }
@@ -562,7 +562,7 @@ final class wj extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = rl.b(var30Lifetime1Lifetime1 - var27Lifetime7, var32Lifetime1, 25668);
+                var34Lifetime1 = EditableTextField.b(var30Lifetime1Lifetime1 - var27Lifetime7, var32Lifetime1, 25668);
                 var35 = (255 & this.field_q[var37]) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;

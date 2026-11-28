@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class TextFieldValidator extends ResourceSupport002 implements CallbackContract013 {
-    private UiComponentPart028 uiComponentPart028State0009;
+abstract class TextFieldValidator extends DebouncedFieldValidator implements TextFieldListener {
+    private EditableTextField uiComponentPart028State0009;
     static int integerState0937;
     static RgbSprite rgbSpriteState0076;
     static String stringState0633;
@@ -14,7 +14,7 @@ abstract class TextFieldValidator extends ResourceSupport002 implements Callback
 
     abstract ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2);
 
-    final String computeString0091(byte byteArgument1) {
+    final String evaluateValidationMessage(byte byteArgument1) {
         if (byteArgument1 > 2) {
           return this.getValidationMessage(this.uiComponentPart028State0009.stringState0078, (byte) -11);
         }
@@ -31,22 +31,22 @@ abstract class TextFieldValidator extends ResourceSupport002 implements Callback
         }
     }
 
-    final ValidationStatus computeValidationStatus0089(int integerArgument1) {
+    final ValidationStatus evaluateValidationStatus(int integerArgument1) {
         if (integerArgument1 == -5520) {
           return this.getValidationStatus(this.uiComponentPart028State0009.stringState0078, (byte) -40);
         }
-        this.uiComponentPart028State0009 = (UiComponentPart028) null;
+        this.uiComponentPart028State0009 = (EditableTextField) null;
         return this.getValidationStatus(this.uiComponentPart028State0009.stringState0078, (byte) -40);
     }
 
     abstract String getValidationMessage(String stringArgument1, byte byteArgument2);
 
-    public final void performAction0626(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
+    public final void onTextChanged(int integerArgument1, EditableTextField uiComponentPart028Argument2) {
         if (integerArgument1 != 16737894) {
           return;
         }
         try {
-          this.performAction0090((byte) -51);
+          this.recordInputChange((byte) -51);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "wm.N(" + integerArgument1 + ',' + (uiComponentPart028Argument2 != null ? "{...}" : "null") + ')');
         }
@@ -63,7 +63,7 @@ abstract class TextFieldValidator extends ResourceSupport002 implements Callback
         return (java.awt.Container) ((Object) UiComponentPart029.computeApplet1485(25144));
     }
 
-    public final void performAction0631(int integerArgument1, UiComponentPart028 uiComponentPart028Argument2) {
+    public final void onTextSubmitted(int integerArgument1, EditableTextField uiComponentPart028Argument2) {
         try {
           if (integerArgument1 != -2569) {
             rgbSpriteState0076 = (RgbSprite) null;
@@ -73,7 +73,7 @@ abstract class TextFieldValidator extends ResourceSupport002 implements Callback
         }
     }
 
-    public final boolean computeBoolean1093(byte byteArgument1) {
+    public final boolean hasMissingInput(byte byteArgument1) {
         int integerLocal1 = 112 / ((byteArgument1 - 72) / 40);
         if (null == this.uiComponentPart028State0009.stringState0078) {
           return true;
@@ -84,7 +84,7 @@ abstract class TextFieldValidator extends ResourceSupport002 implements Callback
         return true;
     }
 
-    TextFieldValidator(UiComponentPart028 uiComponentPart028Argument1) {
+    TextFieldValidator(EditableTextField uiComponentPart028Argument1) {
         try {
           this.uiComponentPart028State0009 = uiComponentPart028Argument1;
         } catch (RuntimeException runtimeException) {

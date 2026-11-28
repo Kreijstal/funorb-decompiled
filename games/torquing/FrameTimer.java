@@ -96,15 +96,15 @@ abstract class FrameTimer {
         RuntimeException var6 = null;
         var11 = Torquing.field_u;
         try {
-          var6_int = ln.a(qk.field_p, Bzip2State.field_q, param4, 91);
-          var7 = ln.a(qk.field_p, Bzip2State.field_q, param5, 97);
+          var6_int = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, 91);
+          var7 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param5, 97);
           var8 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 81);
           var9 = ln.a(qg.field_z, RasterBuffer.field_e, param3, 81);
           if (param2 > -45) {
             field_c = (String) null;
           }
           for (var10 = var6_int; var10 <= var7; var10++) {
-            di.a(var8, (byte) -113, param1, qd.field_a[var10], var9);
+            IndexedSpriteLayer.a(var8, (byte) -113, param1, qd.field_a[var10], var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

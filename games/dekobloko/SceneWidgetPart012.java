@@ -134,7 +134,7 @@ final class SceneWidgetPart012 extends SceneWidget {
           return;
         }
         try {
-          InputAdapter002.performAction1349((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
+          BirthDateValidator.performAction1349((byte) -35, (java.awt.Component) ((Object) canvasArgument2));
           if (MixedSupport127.mouseWheelInputState0001 != null) {
             MixedSupport127.mouseWheelInputState0001.detachFromComponent(68, (java.awt.Component) ((Object) canvasArgument2));
           }

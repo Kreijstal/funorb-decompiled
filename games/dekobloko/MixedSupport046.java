@@ -14,7 +14,7 @@ final class MixedSupport046 {
 
     final static boolean computeBoolean0566(int integerArgument1, int integerArgument2, int integerArgument3, byte byteArgument4) {
         int integerLocal1 = -42 / ((-5 - byteArgument4) / 35);
-        return MixedSupport142.computeBoolean1756(-89, integerArgument3, integerArgument2, integerArgument1);
+        return ReturnedShapeUpdate.computeBoolean1756(-89, integerArgument3, integerArgument2, integerArgument1);
     }
 
     final static String computeString0567(boolean booleanArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {

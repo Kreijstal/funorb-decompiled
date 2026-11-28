@@ -29,7 +29,7 @@ final class f extends dk {
     }
 
     public f() {
-        super(0, 0, ll.field_m, ca.field_Q, (ComponentLayout) null, (kd) null);
+        super(0, 0, ll.field_m, AccountRegistrationPanel.field_Q, (ComponentLayout) null, (kd) null);
         this.field_I = new IntrusiveDeque();
     }
 

@@ -23,7 +23,7 @@ final class cg extends IntrusiveNode {
         if (param0 <= 39) {
           return true;
         }
-        stackIn_6_0 = (ti.field_L != null) && (ti.field_L.e(false) != null);
+        stackIn_6_0 = (LoginPanel.field_L != null) && (LoginPanel.field_L.e(false) != null);
         return stackIn_6_0;
     }
 

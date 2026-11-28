@@ -702,9 +702,9 @@ final class DiskArchiveRequest extends ArchiveRequest {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            wc.field_n = jd.field_d;
+            PasswordValidator.field_n = jd.field_d;
             qn.field_u = param11;
-            br.field_T = param11;
+            ValidatedTextField.field_T = param11;
             vo.field_x = no.field_b;
             stackIn_259_0 = -1;
           }
@@ -850,7 +850,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             if (qp.field_g == null ||
               !(param11 <= qp.field_g.length)) {
               pd.field_a = new int[param11];
-              da.field_k = new int[param11];
+              TextFieldValidator.field_k = new int[param11];
               qp.field_g = new int[param11];
             }
             if (null == ga.field_jb ||
@@ -921,7 +921,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
                 AccountNameAvailabilityValidator.field_q[var35Lifetime1Lifetime1] = param1[var34];
                 MouseInputHandler.field_c[var35Lifetime1Lifetime1] = param6[var34];
               }
-              da.field_k[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
+              TextFieldValidator.field_k[var39Lifetime1Lifetime1] = var35Lifetime1Lifetime1;
               var35Lifetime1Lifetime1 = var25[var34];
               if (var35Lifetime1Lifetime1 < 0) {
                 fieldTemp$47 = no.field_b;

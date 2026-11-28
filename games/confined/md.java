@@ -82,7 +82,7 @@ final class md {
             if (var5 != 0) {
               var6 = var4.field_o;
               AccountServiceResult.field_e[0].field_a = false;
-              AccountServiceResult.field_e[0].field_g = qc.field_m;
+              AccountServiceResult.field_e[0].field_g = ConfirmedEmailAvailabilityValidator.field_m;
               var7 = var4.field_s;
               AccountServiceResult.field_e[0].field_b = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
@@ -130,7 +130,7 @@ final class md {
                   }
                   if (var21 != null &&
                     im.a(var21, 61)) {
-                    var8[1][var13] = qc.field_m;
+                    var8[1][var13] = ConfirmedEmailAvailabilityValidator.field_m;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var28.position = var24;
@@ -165,10 +165,10 @@ final class md {
           if (1 == var2) {
             var3Lifetime1 = var28.readUnsignedShort((byte) 25);
             var4_long = var28.readLong((byte) -68);
-            var6_ref_bj = (bj) (lf.field_k.beginForward(82));
+            var6_ref_bj = (bj) (MatchingFieldValidator.field_k.beginForward(82));
             while (var6_ref_bj != null) {
               if (var6_ref_bj.field_p != var3Lifetime1) {
-                var6_ref_bj = (bj) (lf.field_k.nextForward(2123));
+                var6_ref_bj = (bj) (MatchingFieldValidator.field_k.nextForward(2123));
                 continue;
               }
               break;
@@ -457,7 +457,7 @@ final class md {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 61);
             }
-            var16_ref = (gd) (ra.field_d.beginForward(-120));
+            var16_ref = (gd) (DebouncedFieldValidator.field_d.beginForward(-120));
             if (var16_ref == null) {
               dc.d(105);
               return;
@@ -480,7 +480,7 @@ final class md {
               ShockwaveBlast.a("A1: " + ui.a(10), true, (Throwable) null);
               dc.d(122);
             } else {
-              var14 = (gd) (ra.field_d.beginForward(121));
+              var14 = (gd) (DebouncedFieldValidator.field_d.beginForward(121));
               if (var14 == null) {
                 dc.d(126);
                 return;
@@ -504,7 +504,7 @@ final class md {
         if (param0 >= -73) {
           md.d(-115);
         }
-        stackIn_7_0 = (qc.field_n) && (!qn.field_v.field_B.field_z) && (qn.field_v.field_K == null);
+        stackIn_7_0 = (ConfirmedEmailAvailabilityValidator.field_n) && (!qn.field_v.field_B.field_z) && (qn.field_v.field_K == null);
         return stackIn_7_0;
     }
 

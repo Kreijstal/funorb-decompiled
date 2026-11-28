@@ -22,9 +22,9 @@ final class wd {
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        ei var4_ref_ei = null;
+        DelayedPacket var4_ref_ei = null;
         int var4 = 0;
-        ei var5 = null;
+        DelayedPacket var5 = null;
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
@@ -34,7 +34,7 @@ final class wd {
           var2_long = hn.correctedCurrentTimeMillis((byte) 80);
           if (bl.field_b != 0 &&
             tc.field_a < 0) {
-            var4_ref_ei = (ei) (Bzip2State.field_u.beginForward(-69));
+            var4_ref_ei = (DelayedPacket) (Bzip2State.field_u.beginForward(-69));
             if (var4_ref_ei != null &&
               var4_ref_ei.field_j < var2_long) {
               var4_ref_ei.unlink(-115);
@@ -43,7 +43,7 @@ final class wd {
               for (var5_int = 0; var5_int < jd.field_q; var5_int++) {
                 sc.field_g.field_n[var5_int] = var4_ref_ei.field_r[var5_int];
               }
-              bj.field_f = ArchiveRequest.field_u;
+              DebouncedFieldValidator.field_f = ArchiveRequest.field_u;
               ArchiveRequest.field_u = ne.field_o;
               ne.field_o = ImageProducerRasterBuffer.field_k;
               ImageProducerRasterBuffer.field_k = var4_ref_ei.field_s;
@@ -67,7 +67,7 @@ final class wd {
               return false;
             }
             if (bl.field_b == 0) {
-              bj.field_f = ArchiveRequest.field_u;
+              DebouncedFieldValidator.field_f = ArchiveRequest.field_u;
               ArchiveRequest.field_u = ne.field_o;
               ne.field_o = ImageProducerRasterBuffer.field_k;
               ImageProducerRasterBuffer.field_k = tc.field_a;
@@ -81,7 +81,7 @@ final class wd {
                 var4 = 0;
               }
             }
-            var5 = new ei(var2_long + (long)var4, tc.field_a, new byte[jd.field_q]);
+            var5 = new DelayedPacket(var2_long + (long)var4, tc.field_a, new byte[jd.field_q]);
             for (var6 = 0; jd.field_q > var6; var6++) {
               var5.field_r[var6] = sc.field_g.field_n[var6];
             }

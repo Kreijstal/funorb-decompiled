@@ -42,7 +42,7 @@ final class gr {
           }
           if (gk.field_d == 2 &&
             !hv.a(-19229)) {
-            if (!gl.a(3, MoveEvent.field_s)) {
+            if (!BirthDateValidator.a(3, MoveEvent.field_s)) {
               var2 = lga.a(true, new String[]{bd.field_k}, ResetSpecial.field_r);
               if (var10 != 0) {
                 var2 = lga.a(true, new String[]{bd.field_k}, uma.field_O);

@@ -439,7 +439,7 @@ final class uk extends ab {
               if (null != this.field_x.field_s &&
                 this.field_x.field_s[param2] != null) {
                 var28 = this.field_x.field_s[param2];
-                var29 = de.a(0, (byte) -91, -2 + var19.length, var19);
+                var29 = DebouncedFieldValidator.a(0, (byte) -91, -2 + var19.length, var19);
                 for (var10 = 0; var10 < 64; var10++) {
                   if (var28[var10] != var29[var10]) {
                     throw new RuntimeException();
@@ -487,7 +487,7 @@ final class uk extends ab {
             if (null != this.field_x.field_s &&
               this.field_x.field_s[param2] != null) {
               var31 = this.field_x.field_s[param2];
-              var30 = de.a(0, (byte) -126, var19.length - 2, var19);
+              var30 = DebouncedFieldValidator.a(0, (byte) -126, var19.length - 2, var19);
               var12 = 0;
               var10 = var12;
               while (var12 < 64) {

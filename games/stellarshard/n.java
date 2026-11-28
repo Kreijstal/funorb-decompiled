@@ -419,7 +419,7 @@ final class n {
         String var4_ref_StringLifetime1;
         var8 = stellarshard.field_B;
         try {
-          var1 = ae.field_N;
+          var1 = EditableTextField.field_N;
           var2 = var1.readUnsignedByte(4);
           if (var2 == 0) {
             if (GameApplet.field_n == null) {
@@ -450,7 +450,7 @@ final class n {
               fieldTemp$1 = stellarshard.field_T;
               stellarshard.field_T = stellarshard.field_T + 1;
               var5_ref.field_ob = fieldTemp$1;
-              la.field_I.addLast(-51, var5_ref);
+              LoginPanel.field_I.addLast(-51, var5_ref);
             }
             var5_ref.field_rb = var4_ref_String;
             return;
@@ -480,7 +480,7 @@ final class n {
             var3 = var1.readString((byte) 117);
             uf.field_f = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(4);
-            pl.b((byte) 105, var4);
+            ValidatedTextField.b((byte) 105, var4);
             return;
           }
           if (GameApplet.field_k == null) {
@@ -534,7 +534,7 @@ final class n {
               }
               stackIn_61_0 = param0 + 108;
             }
-            kk.a(stackIn_61_0, var6, var7);
+            AgeValidator.a(stackIn_61_0, var6, var7);
             if (var8 == 0) {
               return;
             }

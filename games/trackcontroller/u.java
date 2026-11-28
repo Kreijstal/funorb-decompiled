@@ -24,8 +24,8 @@ final class u extends IntrusiveNode {
         if (param0 != 18132) {
           field_l = (int[]) null;
         }
-        while (var3 < v.field_g.length) {
-          var2 = var2 - v.field_g[var3];
+        while (var3 < DebouncedFieldValidator.field_g.length) {
+          var2 = var2 - DebouncedFieldValidator.field_g[var3];
           if (0 <= var2) {
             var3++;
             continue;
@@ -34,8 +34,8 @@ final class u extends IntrusiveNode {
           for (var5 = 3; var5 >= 0; var5--) {
             var6 = SocketConnector.field_a[var5 + 4 * var3];
             var7 = Math.min(255, (1 + var5) * var4);
-            if (v.field_g.length - 1 == var3) {
-              var7 = var7 + (1 + var2) * var4 / v.field_g[var3];
+            if (DebouncedFieldValidator.field_g.length - 1 == var3) {
+              var7 = var7 + (1 + var2) * var4 / DebouncedFieldValidator.field_g[var3];
             }
             var6.drawTransparentWithOpacity(-(var6.field_s / 2) + this.field_j, -(var6.field_v / 2) + this.field_m, var7);
           }
@@ -113,8 +113,8 @@ final class u extends IntrusiveNode {
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
         int var2 = fieldTemp$0;
-        for (var3 = param0; var3 < v.field_g.length; var3++) {
-          var2 = var2 - v.field_g[var3];
+        for (var3 = param0; var3 < DebouncedFieldValidator.field_g.length; var3++) {
+          var2 = var2 - DebouncedFieldValidator.field_g[var3];
           if (var2 < 0) {
             return true;
           }

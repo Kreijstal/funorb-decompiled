@@ -89,7 +89,7 @@ final class hf {
           }
           try {
             if (ih.field_X == 0) {
-              DiskArchiveRequest.field_q = vc.field_G.requestDirectSocket(bd.field_l, a.field_a, 0);
+              DiskArchiveRequest.field_q = vc.field_G.requestDirectSocket(MatchingFieldValidator.field_l, a.field_a, 0);
               ih.field_X = ih.field_X + 1;
             }
             if (ih.field_X == 1) {
@@ -167,13 +167,13 @@ final class hf {
         RuntimeException decompiledCaughtException = null;
         var2 = Bounce.field_N;
         try {
-          stackIn_3_0 = q.field_N;
+          stackIn_3_0 = DisplayNameSelectionPanel.field_N;
           stackIn_3_1 = dk.field_c;
           stackIn_4_2 = !(param0);
           ((pf) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2, true, ee.field_b);
-          q.field_N.d((byte) 111);
-          while (q.g((byte) -15)) {
-            q.field_N.a((byte) -109, lh.field_f, ResourceArchive.field_d);
+          DisplayNameSelectionPanel.field_N.d((byte) 111);
+          while (DisplayNameSelectionPanel.g((byte) -15)) {
+            DisplayNameSelectionPanel.field_N.a((byte) -109, lh.field_f, ResourceArchive.field_d);
           }
           if (IterableNodeHashTable.field_g != -1) {
             var1_int = IterableNodeHashTable.field_g;

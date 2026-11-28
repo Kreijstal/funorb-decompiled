@@ -6,7 +6,7 @@ final class gm {
     static String field_e;
     static int field_c;
     static String field_b;
-    static lb field_d;
+    static PlayerDungeonProfile field_d;
 
     final static byte[] a(String param0, boolean param1) {
         RuntimeException var2 = null;

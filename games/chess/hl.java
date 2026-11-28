@@ -357,7 +357,7 @@ class hl implements jm, mg {
           stackIn_36_1 = false;
           stackIn_37_2 = (param1) && (!jh.field_a);
           ((ci) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
-          stackIn_40_0 = ri.field_k;
+          stackIn_40_0 = BirthDateValidator.field_k;
           stackIn_40_1 = false;
           stackIn_41_2 = (param1) && (!jh.field_a);
           ((ci) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2);
@@ -370,7 +370,7 @@ class hl implements jm, mg {
             stackIn_23_1 = false;
             stackIn_24_2 = (param1) && (!jh.field_a);
             ((ci) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
-            stackIn_27_0 = ri.field_k;
+            stackIn_27_0 = BirthDateValidator.field_k;
             stackIn_27_1 = false;
             stackIn_28_2 = (param1) && (!jh.field_a);
             ((ci) (Object) stackIn_27_0).a(stackIn_27_1, stackIn_28_2);

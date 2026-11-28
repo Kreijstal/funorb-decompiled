@@ -190,7 +190,7 @@ public final class MinerDisturbance extends ob {
             IsaacRandom.a(-752960408, (java.awt.Canvas) (var2));
             return;
           }
-          if (!od.e(param0) &&
+          if (!ConfirmedEmailAvailabilityValidator.e(param0) &&
             !AccountNameAvailabilityValidator.f(-9202)) {
             if (cm.field_o == 0 &&
               qd.field_S ||
@@ -203,14 +203,14 @@ public final class MinerDisturbance extends ob {
             } else {
               SoftwareRasterizer.clearRaster();
             }
-            stackIn_46_0 = !(ke.field_V);
+            stackIn_46_0 = !(ValidatedTextField.field_V);
             ij.field_p = stackIn_46_0;
-            if (!ke.field_V &&
+            if (!ValidatedTextField.field_V &&
               il.e(-31391) &&
               SectorCacheStore.field_e) {
               this.d(false);
             }
-            if (ke.field_V) {
+            if (ValidatedTextField.field_V) {
               this.g((byte) -110);
             }
             if (this.field_Q != null) {
@@ -272,11 +272,11 @@ public final class MinerDisturbance extends ob {
               var3 += 30;
               ce.field_d.c("GAMEMULTI: " + ne.a(false), 630, var3, 65535, -1);
             }
-            if (wj.field_j >= 2) {
+            if (AgeValidator.field_j >= 2) {
               ug.field_a.b(-91);
               pn.b((byte) -17);
             }
-            cl.a((java.awt.Canvas) (var2), 0, 0, 310);
+            LoginPanel.a((java.awt.Canvas) (var2), 0, 0, 310);
             return;
           }
           pa.a(true, ec.field_f, 100.0f);
@@ -493,7 +493,7 @@ public final class MinerDisturbance extends ob {
             this.field_O = false;
           }
           pa.field_d = pa.field_d + 1;
-          if (ke.field_V &&
+          if (ValidatedTextField.field_V &&
             cm.field_o != 0 &&
             pj.field_a <= 0) {
             cm.field_o = 0;
@@ -716,7 +716,7 @@ public final class MinerDisturbance extends ob {
                 var2_intLifetime1 < cm.field_r) {
                 MidiPcmStream.field_Z = MidiPcmStream.field_Z + 1;
               }
-              if (!ke.field_V &&
+              if (!ValidatedTextField.field_V &&
                 pk.field_i != pl.field_h &&
                 ij.field_p &&
                 MidiPcmStream.field_Z > 512) {
@@ -728,7 +728,7 @@ public final class MinerDisturbance extends ob {
               var2_intLifetime1 < cm.field_r) {
               MidiPcmStream.field_Z = MidiPcmStream.field_Z + 1;
             }
-            if (!ke.field_V &&
+            if (!ValidatedTextField.field_V &&
               pk.field_i != pl.field_h &&
               ij.field_p &&
               MidiPcmStream.field_Z > 512) {
@@ -1025,21 +1025,21 @@ public final class MinerDisturbance extends ob {
               if (var8 != 0) {
                 cm.field_r = cm.field_r + 1;
                 if (cm.field_r <= 60) {
-                  wj.field_l.a(260, 0, 16 + (var5 - 196), 16 + var4Lifetime2, -1271909436);
-                  wj.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
+                  AgeValidator.field_l.a(260, 0, 16 + (var5 - 196), 16 + var4Lifetime2, -1271909436);
+                  AgeValidator.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
                 } else {
-                  wj.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
+                  AgeValidator.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
                 }
               }
             } else {
               cm.field_r = cm.field_r + 1;
               if (cm.field_r <= 60) {
-                wj.field_l.a(260, 0, 16 + (var5 - 196), 16 + var4Lifetime2, -1271909436);
+                AgeValidator.field_l.a(260, 0, 16 + (var5 - 196), 16 + var4Lifetime2, -1271909436);
                 if (var8 != 0) {
-                  wj.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
+                  AgeValidator.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
                 }
               } else {
-                wj.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
+                AgeValidator.field_l.a(264, 0, var5 - 180 + cm.field_r - 60, var4Lifetime2 + 16, -1271909436);
               }
             }
           }
@@ -1053,7 +1053,7 @@ public final class MinerDisturbance extends ob {
               }
               if (!(cm.field_r <= 60)) {
                 cm.field_r = 50;
-                ke.field_V = false;
+                ValidatedTextField.field_V = false;
                 if (var8 != 0) {
                   cm.field_r = cm.field_r + 1;
                 }
@@ -1184,7 +1184,7 @@ public final class MinerDisturbance extends ob {
           qe.field_b[2] = true;
           this.h((byte) 104);
           je.field_J = false;
-          ke.field_V = false;
+          ValidatedTextField.field_V = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1328,14 +1328,14 @@ public final class MinerDisturbance extends ob {
           if ((Bzip2State.field_C <= -300 &&
             1 == cm.field_o ||
             !(kn.field_E > 0)) &&
-            (!ke.field_V &&
+            (!ValidatedTextField.field_V &&
             pl.field_h == 15)) {
             this.h((byte) 113);
           }
           boolean decompiledFrameRemainder11 = true;
           var2_int = bl.g(param0 ^ param0) ? 1 : 0;
           if (!il.e(param0 ^ 15079) ||
-            !ke.field_V) {
+            !ValidatedTextField.field_V) {
             if (sc.field_b) {
               if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a &&
                 !mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_v) {
@@ -1403,7 +1403,7 @@ public final class MinerDisturbance extends ob {
               }
             } else {
               if (!gm.field_a) {
-                if (ke.field_V) {
+                if (ValidatedTextField.field_V) {
                   break scanLoop1;
                 }
                 if (pl.field_h != 15) {
@@ -1420,12 +1420,12 @@ public final class MinerDisturbance extends ob {
                 }
               }
               this.h((byte) -128);
-              ke.field_V = false;
+              ValidatedTextField.field_V = false;
             }
             gm.field_a = false;
             break;
           }
-          boolean decompiledSharedTail7 = (ke.field_V ||
+          boolean decompiledSharedTail7 = (ValidatedTextField.field_V ||
             15 == pl.field_h);
           if (!decompiledSharedTail7) {
             je.field_l = je.field_l + 0.1;
@@ -1465,7 +1465,7 @@ public final class MinerDisturbance extends ob {
             !(hf.field_t >= 2)) && (NanoFrameTimer.field_k == 16 &&
             hf.field_t <= 3 &&
             15 == pl.field_h &&
-            ke.field_V)) {
+            ValidatedTextField.field_V)) {
             pl.field_h = 0;
             var3Lifetime1 = this.v(-1);
             var4Lifetime2 = MidiPcmStream.a(true);
@@ -1481,14 +1481,14 @@ public final class MinerDisturbance extends ob {
             }
             MidiPcmStream.field_Z = 0;
             if (10 <= DiskCacheWorker.field_g[4] &&
-              ke.field_V) {
+              ValidatedTextField.field_V) {
               fn.a(13, 242, param0 + 16509);
             }
             if (25 <= jc.field_H &&
-              ke.field_V) {
+              ValidatedTextField.field_V) {
               fn.a(12, 243, param0 + 16509);
             }
-            ke.field_V = false;
+            ValidatedTextField.field_V = false;
             this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
             cm.field_r = 0;
             if (wf.q(88)) {
@@ -1527,7 +1527,7 @@ public final class MinerDisturbance extends ob {
           if (16 > ClientException.field_d) {
             ClientException.field_d = 16;
           }
-          if (!ke.field_V &&
+          if (!ValidatedTextField.field_V &&
             il.e(-31391)) {
             rg.field_wb = 0;
             AccountRequestState.field_k = 0;
@@ -1570,12 +1570,12 @@ public final class MinerDisturbance extends ob {
             100 > qd.field_K)) {
             qd.field_K = qd.field_K + 1;
           }
-          stackIn_290_0 = (ke.field_V) && (pl.field_h == 15);
+          stackIn_290_0 = (ValidatedTextField.field_V) && (pl.field_h == 15);
           d.field_b = stackIn_290_0;
           if (tc.field_t > 0) {
             tc.field_t = tc.field_t - 1;
           }
-          if (!ke.field_V &&
+          if (!ValidatedTextField.field_V &&
             pl.field_h == 15) {
             stackIn_300_0 = 1;
           } else {
@@ -3537,7 +3537,7 @@ public final class MinerDisturbance extends ob {
                   }
                   if (-300 > Bzip2State.field_C &&
                     15 == pl.field_h) {
-                    if (ke.field_V) {
+                    if (ValidatedTextField.field_V) {
                       Bzip2State.field_C = -300;
                     }
                     rj.a((byte) -38, 8);
@@ -3557,7 +3557,7 @@ public final class MinerDisturbance extends ob {
             }
             if (-300 > Bzip2State.field_C &&
               15 == pl.field_h) {
-              if (ke.field_V) {
+              if (ValidatedTextField.field_V) {
                 Bzip2State.field_C = -300;
               }
               rj.a((byte) -38, 8);
@@ -3597,37 +3597,37 @@ public final class MinerDisturbance extends ob {
           }
           if (ch.field_h != -1) {
             tb.field_c = ch.field_h;
-            cl.field_I = cl.field_I + 1;
+            LoginPanel.field_I = LoginPanel.field_I + 1;
             if (ch.field_h < 5 &&
               ch.field_h >= 0) {
               tb.field_c = 4 * ch.field_h + 64;
-              if (cl.field_I > 5) {
+              if (LoginPanel.field_I > 5) {
                 tb.field_c = tb.field_c + 1;
               }
-              if (cl.field_I > 10) {
+              if (LoginPanel.field_I > 10) {
                 tb.field_c = tb.field_c + 1;
               }
             }
             if (ch.field_h == 5) {
               tb.field_c = 0;
-              if (5 < cl.field_I) {
+              if (5 < LoginPanel.field_I) {
                 tb.field_c = tb.field_c + 1;
               }
-              if (10 < cl.field_I) {
+              if (10 < LoginPanel.field_I) {
                 tb.field_c = tb.field_c + 1;
               }
             }
             if (-1 > ch.field_h) {
               tb.field_c = 3 + ch.field_h;
-              if (5 < cl.field_I) {
+              if (5 < LoginPanel.field_I) {
                 tb.field_c = tb.field_c - 1;
               }
-              if (cl.field_I > 10) {
+              if (LoginPanel.field_I > 10) {
                 tb.field_c = tb.field_c - 1;
               }
             }
-            if (50 < cl.field_I) {
-              cl.field_I = 0;
+            if (50 < LoginPanel.field_I) {
+              LoginPanel.field_I = 0;
               ch.field_h = -1;
             }
           }
@@ -3924,7 +3924,7 @@ public final class MinerDisturbance extends ob {
         int var3 = 0;
         var4 = field_ab;
         try {
-          if (wj.field_j >= 2) {
+          if (AgeValidator.field_j >= 2) {
             lf.a(-673, ce.field_d);
             ug.field_a = new bf();
             var2 = ug.field_a.e(-27555);
@@ -4006,9 +4006,9 @@ public final class MinerDisturbance extends ob {
           re.field_b = PacketBuffer.field_n.f(16711680);
           nj.field_c = td.a("achievements", fl.field_f, "", (byte) 110);
           te.field_d = td.a("dinamite", fl.field_f, "", (byte) 127);
-          wj.field_k = td.a("smoke", fl.field_f, "", (byte) 126);
+          AgeValidator.field_k = td.a("smoke", fl.field_f, "", (byte) 126);
           ne.field_O = td.a("charge", fl.field_f, "", (byte) 111);
-          wj.field_l = jn.a("minersplat", -29553, "", fl.field_f);
+          AgeValidator.field_l = jn.a("minersplat", -29553, "", fl.field_f);
           hj.field_h = jn.a("rope", -29553, "", fl.field_f);
           GameAppletShell.field_m = jn.a("title1", -29553, "", fl.field_f);
           FullscreenFocusCanvas.field_c = jn.a("title_dwarf", -29553, "", fl.field_f);
@@ -4069,7 +4069,7 @@ public final class MinerDisturbance extends ob {
               ef.field_b[3].addOutline(1);
               ResourceArchive.field_e.setAsRasterTarget((byte) -45);
               ha.field_c = jn.a("unachieved", -29553, "basic", ob.field_q);
-              cb.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
+              TextFieldValidator.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
               a.field_a = td.a("miner2", fl.field_f, "", (byte) 118);
               ag.field_a = td.a("miner_stash", fl.field_f, "", (byte) 121);
               pk.field_h = new Sprite[a.field_a.length];
@@ -4772,10 +4772,10 @@ public final class MinerDisturbance extends ob {
           AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -42);
           jl.releaseDeclaredStaticReferences((byte) 126);
           rg.resetStaticState(param0 ^ 28777);
-          ik.resetStaticState(120);
+          AccountRegistrationPanel.resetStaticState(120);
           qd.clearStaticReferences(true);
-          cl.resetStaticState(20);
-          lm.clearDeclaredStaticReferences((byte) -106);
+          LoginPanel.resetStaticState(20);
+          DisplayNameSelectionPanel.clearDeclaredStaticReferences((byte) -106);
           pf.clearStaticReferences(-1);
           vi.clearStaticReferences(-1);
           dl.clearStaticReferences((byte) -118);
@@ -4836,8 +4836,8 @@ public final class MinerDisturbance extends ob {
           cc.clearDeclaredStaticReferences((byte) 15);
           nf.clearStaticReferences(false);
           am.clearDeclaredStaticReferences(43);
-          ke.resetStaticState(-125);
-          ui.clearDeclaredStaticReferences(param0 ^ -2);
+          ValidatedTextField.resetStaticState(-125);
+          EditableTextField.clearDeclaredStaticReferences(param0 ^ -2);
           kn.clearStaticReferences((byte) -15);
           jk.releaseDeclaredStaticReferences((byte) -36);
           wf.g((byte) 87);
@@ -4847,7 +4847,7 @@ public final class MinerDisturbance extends ob {
           qn.clearStaticReferences((byte) 84);
           w.clearDeclaredStaticReferences(256);
           ti.clearStaticReferences((byte) -53);
-          cb.d(false);
+          TextFieldValidator.d(false);
           ol.clearStaticReferences(1);
           ba.resetStaticState((byte) 54);
           gm.clearStaticReferences(-20);
@@ -4959,14 +4959,14 @@ public final class MinerDisturbance extends ob {
           tc.clearStaticReferences((byte) -91);
           nb.a(19);
           mg.clearStaticReferences(125);
-          e.clearDeclaredStaticReferences(param0 - 2);
-          od.f(4);
-          wj.f(-27836);
-          jg.clearStaticReferences((byte) 23);
+          PasswordValidator.clearDeclaredStaticReferences(param0 - 2);
+          ConfirmedEmailAvailabilityValidator.f(4);
+          AgeValidator.f(-27836);
+          MatchingFieldValidator.clearStaticReferences((byte) 23);
           gh.clearStaticReferences(68);
           lb.clearDeclaredStaticReferences(param0 ^ 1);
           ag.a(false);
-          ok.clearStaticReferences(param0 + 1626);
+          DebouncedFieldValidator.clearStaticReferences(param0 + 1626);
           r.clearStaticReferences((byte) 125);
           jb.clearDeclaredStaticReferences(110);
           il.clearDeclaredStaticReferences(-128);
@@ -5252,7 +5252,7 @@ public final class MinerDisturbance extends ob {
                       (decompiledFrameRemainder3) &&
                       (decompiledFrameRemainder2) &&
                       (decompiledFrameRemainder1)) {
-                      var9_ref_String = jg.field_k;
+                      var9_ref_String = MatchingFieldValidator.field_k;
                       decompiledFrameRemainder11 = (var15 != 0);
                     }
                     if ((decompiledFrameRemainder11) &&
@@ -5328,7 +5328,7 @@ public final class MinerDisturbance extends ob {
                     if ((decompiledFrameRemainder11) &&
                       (decompiledFrameRemainder10) &&
                       (decompiledFrameRemainder9)) {
-                      var9_ref_String = ok.field_a;
+                      var9_ref_String = DebouncedFieldValidator.field_a;
                       decompiledFrameRemainder11 = (var15 != 0);
                     }
                     if ((decompiledFrameRemainder11) &&
@@ -5451,7 +5451,7 @@ public final class MinerDisturbance extends ob {
             var11 = stackIn_134_0;
             PacketBuffer.field_n.b(var10, 195, 112 + var11, 0, -1);
             ce.field_d.a(var9_ref_String, var2_int, var11 + 137, -var2_int + var3, 50, 12584192, 6710886, 1, 1, var5);
-            var12_ref_String = ok.field_a;
+            var12_ref_String = DebouncedFieldValidator.field_a;
             var6 = 100;
             ce.field_d.a(var12_ref_String, 40, var11 - ce.field_d.field_E + (var4 - ce.field_d.field_I + 70), 310, 20, 0, 16777215, 1, 0, -1);
             var7 = var11 + 175;
@@ -5740,7 +5740,7 @@ public final class MinerDisturbance extends ob {
             this.a(-122, -50);
           }
           hf.field_r = 50;
-          ke.field_V = false;
+          ValidatedTextField.field_V = false;
           lj.field_r = 0;
           kj.a(1, -22156);
           var2 = new MidiPcmStream();
@@ -6195,7 +6195,7 @@ public final class MinerDisturbance extends ob {
                             this.b(false);
                             am.a(ei.field_Q, 27);
                             wf.p(4462);
-                            pa.a(true, ik.field_S, 60.0f);
+                            pa.a(true, AccountRegistrationPanel.field_S, 60.0f);
                             this.b(false);
                             ba.a(ei.field_Q, pk.field_g, ge.field_e, true, ig.field_c);
                             ig.field_c = null;
@@ -6218,7 +6218,7 @@ public final class MinerDisturbance extends ob {
                             ml.a(var4, (byte) 0, var3);
                             this.h((byte) 65);
                             BoundedRandomAccessFile.setTickRate(-122, 50);
-                            ke.field_V = false;
+                            ValidatedTextField.field_V = false;
                             ResourceArchive.playMusicTrack(-6358, ph.field_a);
                             oi.a(mm.field_a, ce.field_d, 97, 300);
                             ud.a(new ac(hd.field_d), 30, 30, 88);
@@ -6301,7 +6301,7 @@ public final class MinerDisturbance extends ob {
           this.a(0, (byte) 116);
           this.a((byte) -70, 0);
           nd.field_d.c(-29727);
-          if (!ke.field_V) {
+          if (!ValidatedTextField.field_V) {
             var2_int = 0;
             while (true) {
               if (var2_int < 21) {
@@ -6346,7 +6346,7 @@ public final class MinerDisturbance extends ob {
           }
           jc.field_H = 0;
           ch.field_h = -1;
-          cl.field_I = 0;
+          LoginPanel.field_I = 0;
           IntrusiveNode.field_a = 0;
           eb.field_e = 0;
           BufferedRandomAccessFile.field_h = 0;
@@ -6456,7 +6456,7 @@ public final class MinerDisturbance extends ob {
               }
               c.a((byte) -98);
               PacketBuffer.a(6);
-              if (!od.e(false) &&
+              if (!ConfirmedEmailAvailabilityValidator.e(false) &&
                 !AccountNameAvailabilityValidator.f(-9202)) {
                 if (!u.a(27443) ||
                   oc.d(75)) {
@@ -6506,7 +6506,7 @@ public final class MinerDisturbance extends ob {
                               break;
                             }
                           case 3:
-                            cl.q(-94);
+                            LoginPanel.q(-94);
                             if (var4 == 0) {
                               break;
                             }
@@ -6538,7 +6538,7 @@ public final class MinerDisturbance extends ob {
                           }
                         }
                         if (oc.d(119)) {
-                          cl.q(-85);
+                          LoginPanel.q(-85);
                         }
                         if (tm.field_v == 5 &&
                           ig.a(-20144)) {
@@ -6712,9 +6712,9 @@ public final class MinerDisturbance extends ob {
             break;
           }
           boolean decompiledFrameRemainder0 = true;
-          lm.a(var2_int, 98);
+          DisplayNameSelectionPanel.a(var2_int, 98);
           ag.field_c = qd.field_O[83];
-          if (!ke.field_V &&
+          if (!ValidatedTextField.field_V &&
             il.e(-31391)) {
             if (this.field_C != nk.field_w ||
               ~this.field_bb != ~NodeHashTableIterator.field_e) {
@@ -6819,57 +6819,57 @@ public final class MinerDisturbance extends ob {
               aa.field_b = aa.field_b + 1;
               pn.field_b = pn.field_b + hl.field_b;
             }
-            if (wj.field_j >= 2 &&
+            if (AgeValidator.field_j >= 2 &&
               NetworkArchiveRequest.e((byte) 75) &&
               var10 == 0) {
               continue;
             }
             boolean decompiledFrameRemainder3 = true;
-            if (wj.field_j >= 2 &&
+            if (AgeValidator.field_j >= 2 &&
               ud.field_c > 0) {
-              od.field_i = od.field_i.substring(1) + ud.field_c;
-              if (od.field_i.equalsIgnoreCase("megaslg")) {
+              ConfirmedEmailAvailabilityValidator.field_i = ConfirmedEmailAvailabilityValidator.field_i.substring(1) + ud.field_c;
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("megaslg")) {
                 stackIn_205_0 = !(BoundedRandomAccessFile.field_d);
                 BoundedRandomAccessFile.field_d = stackIn_205_0;
                 qm.field_f = true;
               }
-              if (od.field_i.equalsIgnoreCase("watrbmb")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("watrbmb")) {
                 stackIn_213_0 = !(dg.field_b);
                 dg.field_b = stackIn_213_0;
                 qm.field_f = true;
               }
-              if (od.field_i.equalsIgnoreCase("fartbmb")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("fartbmb")) {
                 stackIn_221_0 = !(rj.field_b);
                 rj.field_b = stackIn_221_0;
                 qm.field_f = true;
               }
-              if (od.field_i.equalsIgnoreCase("oilybmb")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("oilybmb")) {
                 stackIn_229_0 = !(nk.field_p);
                 nk.field_p = stackIn_229_0;
                 qm.field_f = true;
               }
-              if (od.field_i.equalsIgnoreCase("lavafld")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("lavafld")) {
                 qm.field_f = true;
                 je.field_u = je.field_N[cm.field_o];
                 je.k();
               }
-              if (od.field_i.equalsIgnoreCase("prtyhrd")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("prtyhrd")) {
                 stackIn_240_0 = !(ba.field_M);
                 ba.field_M = stackIn_240_0;
               }
-              if (od.field_i.equalsIgnoreCase("hamyths")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("hamyths")) {
                 qm.field_f = true;
                 uf.field_p[jf.b((byte) 123)] = new gf(16, 4, 9);
               }
-              if (od.field_i.equalsIgnoreCase("owalrus")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("owalrus")) {
                 qm.field_f = true;
                 uf.field_p[jf.b((byte) 92)] = new gf(16, 4, 19);
               }
-              if (od.field_i.equalsIgnoreCase("bigloot")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("bigloot")) {
                 qm.field_f = true;
                 uf.field_p[jf.b((byte) 66)] = new gf(16, 4, 12);
               }
-              if (od.field_i.equalsIgnoreCase("imgreat")) {
+              if (ConfirmedEmailAvailabilityValidator.field_i.equalsIgnoreCase("imgreat")) {
                 qm.field_f = true;
                 var6Lifetime1Lifetime2 = a.field_c;
                 if (0 == a.field_c) {
@@ -6917,7 +6917,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (lj.field_t == 13 &&
-              ke.field_V &&
+              ValidatedTextField.field_V &&
               15 == pl.field_h && (!this.field_K ||
               ak.a(-120))) {
               fm.f((byte) 81);
@@ -6927,7 +6927,7 @@ public final class MinerDisturbance extends ob {
               this.field_K = true;
             }
             boolean decompiledFrameRemainder2 = true;
-            if (!ke.field_V &&
+            if (!ValidatedTextField.field_V &&
               il.e(-31391)) {
               if (lj.field_t == 98 ||
                 99 == lj.field_t) {
@@ -6954,7 +6954,7 @@ public final class MinerDisturbance extends ob {
             if (d.field_b &&
               lj.field_t == 82 &&
               0 >= gi.field_c && (qe.field_b[1] ||
-              qe.field_b[0]) && ke.field_V) {
+              qe.field_b[0]) && ValidatedTextField.field_V) {
               gi.field_c = 25;
               if (sc.field_b) {
                 ag.a(true, 10, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
@@ -6973,7 +6973,7 @@ public final class MinerDisturbance extends ob {
               lj.field_t == 86 &&
               gi.field_c <= 0 &&
               qe.field_b[17] &&
-              ke.field_V) {
+              ValidatedTextField.field_V) {
               gi.field_c = 25;
               if (sc.field_b) {
                 ag.a(true, 26, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
@@ -6988,7 +6988,7 @@ public final class MinerDisturbance extends ob {
               lj.field_t == 81 &&
               var6Lifetime1Lifetime5 != 0 &&
               qe.field_b[8] &&
-              ke.field_V) {
+              ValidatedTextField.field_V) {
               if (!je.c(NanoFrameTimer.field_k, hf.field_t, 3, 3)) {
                 rj.field_f = 9;
               } else {
@@ -6996,11 +6996,11 @@ public final class MinerDisturbance extends ob {
               }
               kj.field_d = 0;
             }
-            if (2 <= wj.field_j) {
+            if (2 <= AgeValidator.field_j) {
               if (d.field_b &&
                 86 == lj.field_t &&
                 gi.field_c <= 0 &&
-                ke.field_V) {
+                ValidatedTextField.field_V) {
                 gi.field_c = 25;
                 if (dg.field_b) {
                   ne.a(17, -126);
@@ -7010,7 +7010,7 @@ public final class MinerDisturbance extends ob {
               if (d.field_b &&
                 lj.field_t == 80 &&
                 gi.field_c <= 0 &&
-                ke.field_V) {
+                ValidatedTextField.field_V) {
                 gi.field_c = 25;
                 if (rj.field_b) {
                   ne.a(17, 115);
@@ -7020,7 +7020,7 @@ public final class MinerDisturbance extends ob {
               if (d.field_b &&
                 1 == lj.field_t &&
                 gi.field_c <= 0 &&
-                ke.field_V) {
+                ValidatedTextField.field_V) {
                 gi.field_c = 25;
                 if (nk.field_p) {
                   ne.a(17, 93);
@@ -7058,7 +7058,7 @@ public final class MinerDisturbance extends ob {
             }
             if (lj.field_t == 84) {
               this.field_K = hk.a(27);
-              if (!ke.field_V &&
+              if (!ValidatedTextField.field_V &&
                 fl.field_d &&
                 il.e(-31391)) {
                 this.field_O = false;
@@ -7490,7 +7490,7 @@ public final class MinerDisturbance extends ob {
           return;
         }
         try {
-          ke.field_V = false;
+          ValidatedTextField.field_V = false;
           mg.a((byte) -113);
           this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
         } catch (RuntimeException runtimeException) {

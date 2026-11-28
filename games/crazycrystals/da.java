@@ -274,7 +274,7 @@ final class da extends ue {
           }
         }
         var2 = co.field_x * (336 * co.field_x) / 400 - 16;
-        wi.a(23, jn.field_o, 122, 336, (byte) -71, 16 + var2);
+        wi.a(23, PasswordValidator.field_o, 122, 336, (byte) -71, 16 + var2);
         if (var2 < 0) {
           var2 = 0;
         }
@@ -290,7 +290,7 @@ final class da extends ue {
           var4 = this.field_h;
           oj.a(false, var3, 320, 320, var4 * (double)var11.length, 31, var4, 130, (byte) -32, (double)var11[0].length * var4);
           if (this.field_e > this.field_i) {
-            var6 = ci.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, io.field_J, 3);
+            var6 = AgeValidator.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, io.field_J, 3);
             var7 = cj.field_E;
             var8 = 20 * go.field_l.a(var6, 304);
             var9 = go.field_l.a(var7, 304) * 20;
@@ -626,20 +626,20 @@ final class da extends ue {
               ve.field_t = true;
             }
           }
-          if (qk.field_H != null) {
-            var3 = 357 - qk.field_H.field_o / 2;
+          if (DisplayNameSelectionPanel.field_H != null) {
+            var3 = 357 - DisplayNameSelectionPanel.field_H.field_o / 2;
             var4 = 0;
             if (WallTile.field_v != 0 &&
               var3 < ProfileDataRequest.field_h &&
-              var3 + qk.field_H.field_u > ProfileDataRequest.field_h) {
-              if (to.field_a > 269 - qk.field_H.field_l &&
+              var3 + DisplayNameSelectionPanel.field_H.field_u > ProfileDataRequest.field_h) {
+              if (to.field_a > 269 - DisplayNameSelectionPanel.field_H.field_l &&
                 269 > to.field_a) {
                 var4 = 1;
                 ve.field_t = false;
                 mb.field_f = h.field_c;
               }
               if (to.field_a > 586 &&
-                qk.field_H.field_l + 586 > to.field_a) {
+                DisplayNameSelectionPanel.field_H.field_l + 586 > to.field_a) {
                 var4 = 1;
                 ve.field_t = true;
                 mb.field_f = h.field_c;
@@ -648,13 +648,13 @@ final class da extends ue {
             if (var4 == 0 &&
               h.field_b < mb.field_f &&
               var3 < IsaacRandom.field_h &&
-              IsaacRandom.field_h < qk.field_H.field_u + var3) {
-              if (-qk.field_H.field_l + 269 < qh.field_i &&
+              IsaacRandom.field_h < DisplayNameSelectionPanel.field_H.field_u + var3) {
+              if (-DisplayNameSelectionPanel.field_H.field_l + 269 < qh.field_i &&
                 qh.field_i < 269) {
                 mb.field_f = h.field_b;
               }
               if (qh.field_i > 586 &&
-                qh.field_i < 586 + qk.field_H.field_l) {
+                qh.field_i < 586 + DisplayNameSelectionPanel.field_H.field_l) {
                 mb.field_f = h.field_b;
               }
             }
@@ -1045,7 +1045,7 @@ final class da extends ue {
         if (SectorCacheStore.field_a != null) {
           SectorCacheStore.field_a.i((byte) -18);
         }
-        mk.field_b = new vk(param0, param2, false, true, true);
+        mk.field_b = new LoginPanel(param0, param2, false, true, true);
         if (param1 <= 57) {
           return;
         }

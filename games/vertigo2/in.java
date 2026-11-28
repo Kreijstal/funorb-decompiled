@@ -93,10 +93,10 @@ final class in {
         RuntimeException var2 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
-          var5 = (ub) (ob.field_Q.beginBackward((byte) 100));
+          var5 = (ub) (LoginPanel.field_Q.beginBackward((byte) 100));
           while (var5 != null) {
             he.a(param1, var5, -27011);
-            var5 = (ub) (ob.field_Q.nextBackward(113));
+            var5 = (ub) (LoginPanel.field_Q.nextBackward(113));
           }
           var3 = 52 % ((-5 - param0) / 37);
           var6 = (be) (mb.field_v.beginBackward((byte) 100));

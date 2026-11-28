@@ -72,9 +72,9 @@ abstract class ArchiveRequest extends DualLinkNode {
           var21 = -param0[0] + param5[0];
           var22 = param5[1] - param0[1];
           var23 = param5[2] - param0[2];
-          var9 = var23 * param0[5] + (var21 * param0[3] + var22 * param0[4]) >> 16 - li.field_c;
+          var9 = var23 * param0[5] + (var21 * param0[3] + var22 * param0[4]) >> 16 - DebouncedFieldValidator.field_c;
           var11 = param0[9] * var21 + (param0[10] * var22 + var23 * param0[11]) >> 16;
-          var10 = var23 * param0[8] + param0[6] * var21 + var22 * param0[7] >> 16 - li.field_c;
+          var10 = var23 * param0[8] + param0[6] * var21 + var22 * param0[7] >> 16 - DebouncedFieldValidator.field_c;
           var21 = nb.field_h;
           var22 = nb.field_f;
           var23 = 0;
@@ -83,8 +83,8 @@ abstract class ArchiveRequest extends DualLinkNode {
               var24 = param1.field_L[var23];
               var25 = param1.field_G[var23];
               var26 = param1.field_b[var23];
-              var27 = (var15 * var25 + var12 * var24 + var26 * var18 >> 16 - li.field_c) + var9;
-              var28 = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16 - li.field_c);
+              var27 = (var15 * var25 + var12 * var24 + var26 * var18 >> 16 - DebouncedFieldValidator.field_c) + var9;
+              var28 = var10 + (var19 * var26 + var25 * var16 + var13 * var24 >> 16 - DebouncedFieldValidator.field_c);
               var29 = var11 + (var26 * var20 + var14 * var24 + var25 * var17 >> 16);
               stackIn_62_0 = ~var29;
               stackIn_62_1 = -51;
@@ -108,7 +108,7 @@ abstract class ArchiveRequest extends DualLinkNode {
                 cf.field_g[var23] = -2147483648;
               } else {
                 dn.field_a[var23] = var21 + var27 / var29;
-                qk.field_E[var23] = var28 / var29 + var22;
+                DisplayNameSelectionPanel.field_E[var23] = var28 / var29 + var22;
                 cf.field_g[var23] = var29;
                 if (var29 > var8) {
                   var8 = var29;
@@ -118,8 +118,8 @@ abstract class ArchiveRequest extends DualLinkNode {
                 }
               }
               if (param3) {
-                BoundedRandomAccessFile.field_d[var23] = var27 >> li.field_c;
-                qm.field_q[var23] = var28 >> li.field_c;
+                BoundedRandomAccessFile.field_d[var23] = var27 >> DebouncedFieldValidator.field_c;
+                qm.field_q[var23] = var28 >> DebouncedFieldValidator.field_c;
                 AnimatedResultScene.field_b[var23] = var29;
               }
               var23++;

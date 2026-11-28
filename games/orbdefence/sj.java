@@ -345,7 +345,7 @@ final class sj extends jc {
             }
           }
           this.field_w.a(this, param0, param1, param2, param3 + 28577);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

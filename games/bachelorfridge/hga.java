@@ -180,7 +180,7 @@ final class hga extends am {
               var18 = vc.a(var2_int, 12, -16306);
               var19 = mq.a(13, 207, var2_int);
               var20 = oaa.a(-74, var2_int);
-              var21 = wg.a(var2_int, (byte) 83);
+              var21 = PasswordValidator.a(var2_int, (byte) 83);
               ag.a(var7, var4, var16, var15, var5, var19, var10, var13, var20, var21, var14, var12, var6, var8, var11, var9, var17, var3, var18, -4313);
             }
             var2_int++;

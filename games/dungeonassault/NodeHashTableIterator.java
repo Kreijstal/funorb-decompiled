@@ -69,7 +69,7 @@ final class NodeHashTableIterator implements Iterator {
           stackIn_16_0 = sn.field_b;
           stackIn_17_1 = !(gm.field_d.field_s < ac.field_s);
           stackIn_16_0.field_w = stackIn_17_1;
-          lb.a(true);
+          PlayerDungeonProfile.refreshRaiderStatusIndicators(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

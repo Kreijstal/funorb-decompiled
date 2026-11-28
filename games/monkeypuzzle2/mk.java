@@ -22,11 +22,11 @@ final class mk extends IntrusiveNode {
           mk.clearDeclaredStaticReferences(99);
           return;
         }
-        var1 = qc.field_N;
+        var1 = ValidatedTextField.field_N;
         if (var1 == 0) {
           em.field_B = em.field_B - 1;
           if (-ii.field_B - 10 + 480 >= em.field_B) {
-            qc.field_N = 1;
+            ValidatedTextField.field_N = 1;
             s.field_O = 0;
           }
           if (param0 > 125) {
@@ -39,7 +39,7 @@ final class mk extends IntrusiveNode {
           fieldTemp$0 = s.field_O;
           s.field_O = s.field_O + 1;
           if (fieldTemp$0 > 150) {
-            qc.field_N = 2;
+            ValidatedTextField.field_N = 2;
           }
           if (param0 > 125) {
             return;

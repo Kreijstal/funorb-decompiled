@@ -222,9 +222,9 @@ final class BufferedSocket implements Runnable {
     final static int a(byte param0, int param1) {
         if (param0 != -73) {
           BufferedSocket.a((byte) -58, -86);
-          return ke.a(param1, -21937, PacketBuffer.field_t);
+          return ValidatedTextField.a(param1, -21937, PacketBuffer.field_t);
         }
-        return ke.a(param1, -21937, PacketBuffer.field_t);
+        return ValidatedTextField.a(param1, -21937, PacketBuffer.field_t);
     }
 
     final static void a(int param0) {

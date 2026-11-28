@@ -29,11 +29,11 @@ final class ta {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           var2_int = -28 % ((57 - param0) / 48);
-          ri.a(be.field_I, param1, true, GzipDecompressor.field_c, (byte) -81, bb.field_G, 0);
+          ri.a(be.field_I, param1, true, GzipDecompressor.field_c, (byte) -81, LoginPanel.field_G, 0);
           for (var3 = 0; GzipDecompressor.field_c > var3; var3++) {
             RasterBuffer.field_e[param1 + var3] = var3;
           }
-          ri.a(dc.field_o, param1 + param1, false, param1 + GzipDecompressor.field_c, (byte) -81, SectorCacheStore.field_e, param1);
+          ri.a(EmailFormatValidator.field_o, param1 + param1, false, param1 + GzipDecompressor.field_c, (byte) -81, SectorCacheStore.field_e, param1);
           if (param1 >= GzipDecompressor.field_c) {
             return;
           }

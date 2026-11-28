@@ -111,7 +111,7 @@ final class ik {
             }
             if (ll.field_d >= eh.field_m) {
               p.field_b = DirectByteStorage.field_j;
-              if (bh.field_r) {
+              if (PasswordValidator.field_r) {
                 DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
                 if (var2_int <= DirectByteStorage.field_j) {
                   DirectByteStorage.field_j = DirectByteStorage.field_j - var2_int;
@@ -125,25 +125,25 @@ final class ik {
               ll.field_d = ll.field_d - eh.field_m;
             }
             if (ll.field_d > eh.field_k) {
-              bh.field_r = true;
+              PasswordValidator.field_r = true;
             }
           }
           if (le.field_e != null) {
             var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
             if (vb.field_n != 0 &&
-              var3 < ci.field_m &&
-              le.field_e.storedHeight + var3 > ci.field_m) {
+              var3 < AgeValidator.field_m &&
+              le.field_e.storedHeight + var3 > AgeValidator.field_m) {
               if (field_a > 269 - le.field_e.storedWidth &&
                 field_a < 269) {
-                bh.field_r = false;
+                PasswordValidator.field_r = false;
                 var4 = 1;
                 ll.field_d = eh.field_m;
               }
               if (586 < field_a &&
                 586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
-                bh.field_r = true;
+                PasswordValidator.field_r = true;
                 ll.field_d = eh.field_m;
               }
             }
@@ -151,18 +151,18 @@ final class ik {
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.storedHeight) {
-              if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
-                269 > LocalizedStrings.field_u) {
+              if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
+                269 > ConfirmedEmailAvailabilityValidator.field_u) {
                 ll.field_d = eh.field_k;
               }
-              if (LocalizedStrings.field_u > 586 &&
-                586 + le.field_e.storedWidth > LocalizedStrings.field_u) {
+              if (ConfirmedEmailAvailabilityValidator.field_u > 586 &&
+                586 + le.field_e.storedWidth > ConfirmedEmailAvailabilityValidator.field_u) {
                 ll.field_d = eh.field_k;
               }
             }
           }
           if (param1) {
-            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
+            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, ConfirmedEmailAvailabilityValidator.field_u), pf.a(AgeValidator.field_m, -19503, field_a));
             if (ByteStorage.field_c.c((byte) 49)) {
               if (ByteStorage.field_c.field_j == 0) {
                 stackIn_58_0 = 3;
@@ -258,7 +258,7 @@ final class ik {
             }
             if (ll.field_d >= eh.field_m) {
               p.field_b = DirectByteStorage.field_j;
-              if (bh.field_r) {
+              if (PasswordValidator.field_r) {
                 DirectByteStorage.field_j = DirectByteStorage.field_j + 1;
                 if (var2_int <= DirectByteStorage.field_j) {
                   DirectByteStorage.field_j = DirectByteStorage.field_j - var2_int;
@@ -272,25 +272,25 @@ final class ik {
               ll.field_d = ll.field_d - eh.field_m;
             }
             if (ll.field_d > eh.field_k) {
-              bh.field_r = true;
+              PasswordValidator.field_r = true;
             }
           }
           if (le.field_e != null) {
             var3 = -(le.field_e.fullHeight / 2) + 357;
             var4 = 0;
             if (vb.field_n != 0 &&
-              var3 < ci.field_m &&
-              le.field_e.storedHeight + var3 > ci.field_m) {
+              var3 < AgeValidator.field_m &&
+              le.field_e.storedHeight + var3 > AgeValidator.field_m) {
               if (field_a > 269 - le.field_e.storedWidth &&
                 field_a < 269) {
-                bh.field_r = false;
+                PasswordValidator.field_r = false;
                 var4 = 1;
                 ll.field_d = eh.field_m;
               }
               if (586 < field_a &&
                 586 + le.field_e.storedWidth > field_a) {
                 var4 = 1;
-                bh.field_r = true;
+                PasswordValidator.field_r = true;
                 ll.field_d = eh.field_m;
               }
             }
@@ -298,18 +298,18 @@ final class ik {
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.storedHeight) {
-              if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
-                269 > LocalizedStrings.field_u) {
+              if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
+                269 > ConfirmedEmailAvailabilityValidator.field_u) {
                 ll.field_d = eh.field_k;
               }
-              if (LocalizedStrings.field_u > 586 &&
-                586 + le.field_e.storedWidth > LocalizedStrings.field_u) {
+              if (ConfirmedEmailAvailabilityValidator.field_u > 586 &&
+                586 + le.field_e.storedWidth > ConfirmedEmailAvailabilityValidator.field_u) {
                 ll.field_d = eh.field_k;
               }
             }
           }
           if (param1) {
-            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
+            ByteStorage.field_c.a((byte) 34, pf.a(ph.field_d, -19503, ConfirmedEmailAvailabilityValidator.field_u), pf.a(AgeValidator.field_m, -19503, field_a));
             if (ByteStorage.field_c.c((byte) 49)) {
               if (ByteStorage.field_c.field_j == 0) {
                 stackIn_58_0 = 3;

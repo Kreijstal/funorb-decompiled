@@ -36,7 +36,7 @@ final class NetworkSupport006 {
               GameSession.bufferedSocketState0002 = new BufferedSocket((java.net.Socket) (MixedSupport066.asyncTaskState0004.objectState0004), GzipDecompressor.platformServiceState0002);
               cipherPacketBufferLocal3 = UiComponentPart006.cipherPacketBufferState0001;
               SocketFactory.cipherPacketBufferState0002.position = 0;
-              UiComponentPart023.mixedSupport132State0009 = ResourceSupport002.mixedSupport132State0001;
+              UiComponentPart023.mixedSupport132State0009 = DebouncedFieldValidator.mixedSupport132State0001;
               stackIntegerLocal5 = (!booleanArgument1) ? -1 : -2;
               UiComponentPart017.integerState0438 = stackIntegerLocal5;
               GameDomainSupport001.integerState0051 = stackIntegerLocal5;

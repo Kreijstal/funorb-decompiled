@@ -129,7 +129,7 @@ final class gf {
         this.field_b = bk.field_d;
         this.field_k = AccountCreationResultPanel.field_sb;
         this.field_g.a(-26278, this.field_i, this.field_a);
-        rl.field_O = false;
+        EditableTextField.field_O = false;
         FullscreenFocusCanvas var2 = sg.createFullscreenCanvas(0, this.field_i, this.field_a, 0, 0, jh.field_a);
         if (var2 == null) {
           this.a((byte) -110);

@@ -26,7 +26,7 @@ class vn extends bj implements mj {
         MusicPatchPcmStream.field_t[6] = kn.field_E;
         MusicPatchPcmStream.field_t[20] = mn.field_j;
         MusicPatchPcmStream.field_t[9] = sj.field_f;
-        MusicPatchPcmStream.field_t[4] = ri.field_h;
+        MusicPatchPcmStream.field_t[4] = BirthDateValidator.field_h;
         MusicPatchPcmStream.field_t[19] = kn.field_K;
         MusicPatchPcmStream.field_t[15] = va.field_e;
         if (param0 == 6) {
@@ -212,14 +212,14 @@ class vn extends bj implements mj {
           if (null != ArchiveProvider.field_d) {
             ArchiveProvider.field_d.k((byte) -113);
             var3 = ec.e((byte) -64);
-            ResourceArchive.field_b = new wf(var3, (String) null, true, false, false);
+            ResourceArchive.field_b = new LoginPanel(var3, (String) null, true, false, false);
             jh.field_e.b(nj.field_w, (byte) -46);
             nj.field_w.c(ResourceArchive.field_b, 88);
             nj.field_w.i((byte) -126);
             return;
           }
           var2 = ec.e((byte) -64);
-          ResourceArchive.field_b = new wf(var2, (String) null, true, false, false);
+          ResourceArchive.field_b = new LoginPanel(var2, (String) null, true, false, false);
           jh.field_e.b(nj.field_w, (byte) -46);
           nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
@@ -227,7 +227,7 @@ class vn extends bj implements mj {
         }
         if (null == ArchiveProvider.field_d) {
           var5 = ec.e((byte) -64);
-          ResourceArchive.field_b = new wf(var5, (String) null, true, false, false);
+          ResourceArchive.field_b = new LoginPanel(var5, (String) null, true, false, false);
           jh.field_e.b(nj.field_w, (byte) -46);
           nj.field_w.c(ResourceArchive.field_b, 88);
           nj.field_w.i((byte) -126);
@@ -235,7 +235,7 @@ class vn extends bj implements mj {
         }
         ArchiveProvider.field_d.k((byte) -113);
         String var4 = ec.e((byte) -64);
-        ResourceArchive.field_b = new wf(var4, (String) null, true, false, false);
+        ResourceArchive.field_b = new LoginPanel(var4, (String) null, true, false, false);
         jh.field_e.b(nj.field_w, (byte) -46);
         nj.field_w.c(ResourceArchive.field_b, 88);
         nj.field_w.i((byte) -126);
@@ -249,7 +249,7 @@ class vn extends bj implements mj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_tb) {
-            uk.a(false, 3);
+            ChessBoardState.a(false, 3);
             this.k((byte) -121);
           } else {
             sg.a(bh.i(param4 ^ -24270), (byte) 120, "tochangedisplayname.ws");

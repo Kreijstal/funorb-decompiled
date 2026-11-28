@@ -122,11 +122,11 @@ final class sg {
         gm.field_ob = var8.readUnsignedByte(false);
         ki.field_b = var8.readLong(-83);
         if (d.field_N == 2) {
-          ga.field_o = var8.readUnsignedShort((byte) -60);
+          AgeValidator.field_o = var8.readUnsignedShort((byte) -60);
           jd.field_t = var8.readUnsignedMedium(true);
         } else {
           jd.field_t = 0;
-          ga.field_o = 0;
+          AgeValidator.field_o = 0;
         }
         stackIn_9_0 = (var8.readUnsignedByte(false) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
@@ -147,7 +147,7 @@ final class sg {
         if (param0) {
           var5 = var8.readUnsignedShort((byte) 59);
           try {
-            var9 = nf.field_F.a(32768, var5);
+            var9 = DisplayNameSelectionPanel.field_F.a(32768, var5);
             SecondaryNodeDeque.field_d = var9.c((byte) 103);
             if (qi.field_d.equals(b.field_e)) {
               stackIn_24_0 = null;
@@ -208,7 +208,7 @@ final class sg {
         this.field_e = jd.field_t;
         this.field_l = SecondaryNodeDeque.field_d;
         this.field_g = ki.field_b;
-        this.field_b = ga.field_o;
+        this.field_b = AgeValidator.field_o;
         this.field_k = ll.field_j;
         this.field_m = qi.field_d;
         this.field_d = gm.field_ob;

@@ -14,7 +14,7 @@ final class GzipInflater {
     static dd[] field_c;
 
     final static void b(int param0, int param1) {
-        BitPacketBuffer var2 = qn.field_U;
+        BitPacketBuffer var2 = EditableTextField.field_U;
         var2.writeCipheredByte(param1, param0 + 6324);
         var2.writeByte(2, (byte) 107);
         if (param0 == -6446) {
@@ -48,28 +48,28 @@ final class GzipInflater {
         int var6 = 0;
         String var7 = null;
         try {
-          ol.field_S[0] = ph.field_d.nextInt();
-          ol.field_S[1] = ph.field_d.nextInt();
+          AccountRegistrationPanel.field_S[0] = ph.field_d.nextInt();
+          AccountRegistrationPanel.field_S[1] = ph.field_d.nextInt();
           mn.field_h.position = 0;
-          ol.field_S[2] = (int)(sj.field_h >> 32);
-          ol.field_S[3] = (int)sj.field_h;
-          mn.field_h.writeInt(ol.field_S[0], (byte) -81);
-          mn.field_h.writeInt(ol.field_S[1], (byte) -81);
-          mn.field_h.writeInt(ol.field_S[2], (byte) -81);
-          mn.field_h.writeInt(ol.field_S[3], (byte) -81);
+          AccountRegistrationPanel.field_S[2] = (int)(sj.field_h >> 32);
+          AccountRegistrationPanel.field_S[3] = (int)sj.field_h;
+          mn.field_h.writeInt(AccountRegistrationPanel.field_S[0], (byte) -81);
+          mn.field_h.writeInt(AccountRegistrationPanel.field_S[1], (byte) -81);
+          mn.field_h.writeInt(AccountRegistrationPanel.field_S[2], (byte) -81);
+          mn.field_h.writeInt(AccountRegistrationPanel.field_S[3], (byte) -81);
           sa.a(mn.field_h, 109);
           mn.field_h.writeShort(param3, param1 + 27463);
           param4.a(mn.field_h, (byte) 123);
-          qn.field_U.position = 0;
+          EditableTextField.field_U.position = 0;
           if (param2) {
-            qn.field_U.writeByte(18, (byte) -81);
+            EditableTextField.field_U.writeByte(18, (byte) -81);
           } else {
-            qn.field_U.writeByte(16, (byte) 110);
+            EditableTextField.field_U.writeByte(16, (byte) 110);
           }
-          qn.field_U.position = qn.field_U.position + 2;
-          var5_int = qn.field_U.position;
-          qn.field_U.writeInt(gb.field_s, (byte) -81);
-          qn.field_U.writeLong(-97, qc.field_a);
+          EditableTextField.field_U.position = EditableTextField.field_U.position + 2;
+          var5_int = EditableTextField.field_U.position;
+          EditableTextField.field_U.writeInt(NetworkGameClient.field_s, (byte) -81);
+          EditableTextField.field_U.writeLong(-97, qc.field_a);
           var6 = 0;
           if (param1 != -27359) {
             return;
@@ -86,17 +86,17 @@ final class GzipInflater {
           if (lf.field_N != null) {
             var6 = var6 | 16;
           }
-          qn.field_U.writeByte(var6, (byte) 52);
+          EditableTextField.field_U.writeByte(var6, (byte) 52);
           var7 = m.a(bh.i(81), (byte) 87);
           if (var7 == null) {
             var7 = "";
           }
-          qn.field_U.writeString(param1 ^ 27325, var7);
+          EditableTextField.field_U.writeString(param1 ^ 27325, var7);
           if (null != lf.field_N) {
-            qn.field_U.writePrefixedString(true, lf.field_N);
+            EditableTextField.field_U.writePrefixedString(true, lf.field_N);
           }
-          lk.a(SecondaryNodeHashTable.field_k, mn.field_h, qn.field_U, 91, se.field_M);
-          qn.field_U.backpatchShortLength(qn.field_U.position - var5_int, 111);
+          lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 91, se.field_M);
+          EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var5_int, 111);
           vh.a(-1, (byte) -42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -24,7 +24,7 @@ final class bj {
         try {
           ij.a((byte) 120, fj.field_U, param1, GzipDecompressor.field_d, oe.field_c, true, 0);
           for (var2_int = param0; var2_int < oe.field_c; var2_int++) {
-            lf.field_Y[param1 + var2_int] = var2_int;
+            ValidatedTextField.field_Y[param1 + var2_int] = var2_int;
           }
           ij.a((byte) 119, mj.field_d, param1 + param1, DiskCacheWorker.field_b, param1 + oe.field_c, false, param1);
           if (oe.field_c > param1) {

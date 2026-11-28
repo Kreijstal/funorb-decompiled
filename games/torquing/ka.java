@@ -63,17 +63,17 @@ final class ka extends IntrusiveNode {
             for (var5 = 0; var4 > var5; var5++) {
               mn.field_Z[var5] = -1;
             }
-            di.field_e = new int[2];
+            IndexedSpriteLayer.field_e = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               wh.field_z[var5] = dd.field_e[var5];
             }
             wh.field_z[-3 + var4] = "";
             wh.field_z[-2 + var4] = ol.field_b;
             mn.field_Z[var4 - 2] = 0;
-            di.field_e[0] = 4;
+            IndexedSpriteLayer.field_e[0] = 4;
             wh.field_z[var4 - 1] = qd.field_i;
             mn.field_Z[-1 + var4] = 1;
-            di.field_e[1] = 5;
+            IndexedSpriteLayer.field_e[1] = 5;
           } else if (go.field_x == 1) {
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, pc.field_i);
             var4 = var3_int + 2;
@@ -82,14 +82,14 @@ final class ka extends IntrusiveNode {
             for (var5 = 0; var4 > var5; var5++) {
               mn.field_Z[var5] = -1;
             }
-            di.field_e = new int[1];
+            IndexedSpriteLayer.field_e = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               wh.field_z[var5] = dd.field_e[var5];
             }
             wh.field_z[-2 + var4] = "";
             wh.field_z[var4 - 1] = qd.field_i;
             mn.field_Z[var4 - 1] = 0;
-            di.field_e[0] = 5;
+            IndexedSpriteLayer.field_e[0] = 5;
           } else if (go.field_x != 2) {
             if (go.field_x == 3) {
               if (!ArchiveRequest.field_u.privilegedTasksEnabled) {
@@ -103,14 +103,14 @@ final class ka extends IntrusiveNode {
               for (var5 = 0; var4 > var5; var5++) {
                 mn.field_Z[var5] = -1;
               }
-              di.field_e = new int[1];
+              IndexedSpriteLayer.field_e = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 wh.field_z[var5] = dd.field_e[var5];
               }
               wh.field_z[var4 - 2] = "";
               wh.field_z[-1 + var4] = qd.field_i;
               mn.field_Z[-1 + var4] = 0;
-              di.field_e[0] = 5;
+              IndexedSpriteLayer.field_e[0] = 5;
             } else if (go.field_x == 4) {
               var3_int = rf.a(dd.field_e, bo.field_e, field_j, 75, wj.field_j);
               var4 = 2 + var3_int;
@@ -119,14 +119,14 @@ final class ka extends IntrusiveNode {
               for (var5 = 0; var5 < var4; var5++) {
                 mn.field_Z[var5] = -1;
               }
-              di.field_e = new int[1];
+              IndexedSpriteLayer.field_e = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 wh.field_z[var5] = dd.field_e[var5];
               }
               wh.field_z[var4 - 2] = "";
               wh.field_z[-1 + var4] = qd.field_i;
               mn.field_Z[var4 - 1] = 0;
-              di.field_e[0] = 5;
+              IndexedSpriteLayer.field_e[0] = 5;
             } else {
               if (go.field_x != 5) {
                 throw new IllegalArgumentException();
@@ -138,17 +138,17 @@ final class ka extends IntrusiveNode {
               for (var5 = 0; var4 > var5; var5++) {
                 mn.field_Z[var5] = -1;
               }
-              di.field_e = new int[2];
+              IndexedSpriteLayer.field_e = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 wh.field_z[var5] = dd.field_e[var5];
               }
               wh.field_z[var4 - 3] = "";
               wh.field_z[-2 + var4] = ud.field_l;
               mn.field_Z[-2 + var4] = 0;
-              di.field_e[0] = 3;
+              IndexedSpriteLayer.field_e[0] = 3;
               wh.field_z[var4 - 1] = qd.field_i;
               mn.field_Z[-1 + var4] = 1;
-              di.field_e[1] = 5;
+              IndexedSpriteLayer.field_e[1] = 5;
             }
           } else {
             var3_int = rf.a(dd.field_e, bo.field_e, field_j, 99, ff.a(new String[]{"<br><%0><br>"}, 0, fi.field_c));
@@ -201,17 +201,17 @@ final class ka extends IntrusiveNode {
             for (var8 = 0; var8 < var7; var8++) {
               mn.field_Z[var8] = -1;
             }
-            di.field_e = new int[2];
-            wh.field_z[1] = tn.field_m;
+            IndexedSpriteLayer.field_e = new int[2];
+            wh.field_z[1] = EmailFormatValidator.field_m;
             wh.field_z[0] = vb.field_b;
             mn.field_Z[1] = 0;
-            di.field_e[1] = 2;
-            di.field_e[0] = 5;
+            IndexedSpriteLayer.field_e[1] = 2;
+            IndexedSpriteLayer.field_e[0] = 5;
             wh.field_z[5] = "";
             wh.field_z[2] = IsaacCipher.field_f;
             mn.field_Z[3] = 1;
             wh.field_z[3] = fo.field_E;
-            wh.field_z[4] = gp.field_Q;
+            wh.field_z[4] = ValidatedTextField.field_Q;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_40_0 = wh.field_z;
               stackIn_40_1 = 6 + var8Lifetime2;
@@ -236,11 +236,11 @@ final class ka extends IntrusiveNode {
             }
             dc.field_c = km.correctedCurrentTimeMillis(-1);
           }
-          kb.field_g.field_i = di.field_e.length;
+          kb.field_g.field_i = IndexedSpriteLayer.field_e.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; wh.field_z.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_89_0 = !(0 > mn.field_Z[var4Lifetime1]);
-            var5Lifetime1 = mh.a(stackIn_89_0, -125, wh.field_z[var4Lifetime1]);
+            var5Lifetime1 = MenuScreen.measureMenuText(stackIn_89_0, -125, wh.field_z[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -253,7 +253,7 @@ final class ka extends IntrusiveNode {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = mh.a(false, -122, var11);
+              var7Lifetime1 = MenuScreen.measureMenuText(false, -122, var11);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -261,7 +261,7 @@ final class ka extends IntrusiveNode {
             var4_ref_String__Lifetime1 = ib.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = mh.a(false, -86, var12);
+              var7Lifetime1Lifetime1 = MenuScreen.measureMenuText(false, -86, var12);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -288,7 +288,7 @@ final class ka extends IntrusiveNode {
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + bp.field_e;
             } else {
-              var7Lifetime2 = mh.a(true, -119, wh.field_z[var4Lifetime3]);
+              var7Lifetime2 = MenuScreen.measureMenuText(true, -119, wh.field_z[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_z;
               var8Lifetime1 = vk.field_A - (var7Lifetime2 >> 1);
               kb.field_e[var4Lifetime3] = new int[4];

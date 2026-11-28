@@ -6,7 +6,7 @@ final class ok extends lg {
     static int field_E;
     static int[] field_C;
 
-    final static vn a(sm[] param0, int param1, byte[] param2) {
+    final static vn a(IndexedSprite[] param0, int param1, byte[] param2) {
         int var8 = 0;
         vn stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;

@@ -27,21 +27,21 @@ final class fb {
           PacketBuffer.field_i = Archive.field_d;
           if (param2 != 255) {
             if (param2 < 100) {
-              a.field_h = mh.createAccountErrorResult(param2, true, param3);
+              TextFieldValidator.field_h = mh.createAccountErrorResult(param2, true, param3);
               return;
             }
             if (param2 > 105) {
-              a.field_h = mh.createAccountErrorResult(param2, true, param3);
+              TextFieldValidator.field_h = mh.createAccountErrorResult(param2, true, param3);
               return;
             }
             var4 = param1;
             kf.a(1, var4);
-            a.field_h = DelegatingCanvas.createAccountSuggestionsResult((byte) 17, param1);
+            TextFieldValidator.field_h = DelegatingCanvas.createAccountSuggestionsResult((byte) 17, param1);
             return;
           }
           stackIn_12_0 = false;
           stackIn_13_1 = !(13 <= uh.field_d);
-          a.field_h = di.createAccountSuccessResult(stackIn_12_0, stackIn_13_1);
+          TextFieldValidator.field_h = di.createAccountSuccessResult(stackIn_12_0, stackIn_13_1);
           var6 = (String[]) null;
           kf.a(1, (String[]) null);
           return;

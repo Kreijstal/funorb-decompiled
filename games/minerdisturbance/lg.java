@@ -1297,7 +1297,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "deathCauseDrowned");
                 if (var2 != null) {
-                  jg.field_k = bh.a(var2, 15);
+                  MatchingFieldValidator.field_k = bh.a(var2, 15);
                 }
                 var2 = lh.b(-1, "deathCauseDrownedInOil");
                 if (null != var2) {
@@ -1325,7 +1325,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "deathCauseSurvived");
                 if (null != var2) {
-                  ok.field_a = bh.a(var2, -127);
+                  DebouncedFieldValidator.field_a = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "deathCauseFrozen");
                 if (var2 != null) {
@@ -1581,7 +1581,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialFreezing,1,0");
                 if (var2 != null) {
-                  ok.field_d[1][0] = bh.a(var2, 2);
+                  DebouncedFieldValidator.field_d[1][0] = bh.a(var2, 2);
                 }
                 var2 = lh.b(-1, "tutorialOil,1,0");
                 if (null != var2) {
@@ -1765,7 +1765,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "shopHooks");
                 if (null != var2) {
-                  cl.field_M = bh.a(var2, -126);
+                  LoginPanel.field_M = bh.a(var2, -126);
                 }
                 var2 = lh.b(-1, "shopShaft");
                 if (null != var2) {
@@ -1801,7 +1801,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "shopCrampons");
                 if (var2 != null) {
-                  lm.field_I = bh.a(var2, -2);
+                  DisplayNameSelectionPanel.field_I = bh.a(var2, -2);
                 }
                 var2 = lh.b(-1, "shopExtendedAqualung");
                 if (null != var2) {

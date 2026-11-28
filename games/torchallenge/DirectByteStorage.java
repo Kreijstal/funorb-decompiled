@@ -172,8 +172,8 @@ final class DirectByteStorage extends ByteStorage {
               var12 = var12 >> -gb.field_c[var13];
             }
             var10 = (GameScreen.field_f[var13] == 0) ? var6 : var7;
-            var12 = var12 & rf.field_jb[var13];
-            var10 = var10 & rf.field_jb[var13];
+            var12 = var12 & ValidatedTextField.field_jb[var13];
+            var10 = var10 & ValidatedTextField.field_jb[var13];
             if (0 != (var12 ^ var10)) {
               var11 = 1;
             }
@@ -212,7 +212,7 @@ final class DirectByteStorage extends ByteStorage {
             var11 = 0;
           }
           if (param2 &&
-            !bh.field_p &&
+            !PasswordValidator.field_p &&
             !GameClientBase.p(-113)) {
             wj.field_b.addLast(new eh(hf.field_d), -50);
           }

@@ -22,7 +22,7 @@ final class bk {
           var2_int = param1.length();
           var3 = 0;
           for (var4 = param0; var2_int > var4; var4++) {
-            var3 = el.encodeCp1252Character((byte) 91, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = MatchingFieldValidator.encodeCp1252Character((byte) 91, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
           stackIn_5_0 = var3;
           return stackIn_5_0;

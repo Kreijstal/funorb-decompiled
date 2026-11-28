@@ -6,7 +6,7 @@ final class bf {
     static int field_k;
     private int[] field_j;
     private int[] field_a;
-    static qe[] field_f;
+    static DungeonAssaultScreen[] field_f;
     private int[] field_l;
     static ReverbPcmStream field_h;
     private int field_g;
@@ -412,6 +412,6 @@ final class bf {
     }
 
     static {
-        field_f = new qe[14];
+        field_f = new DungeonAssaultScreen[14];
     }
 }

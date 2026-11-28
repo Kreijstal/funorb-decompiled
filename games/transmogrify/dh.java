@@ -65,7 +65,7 @@ final class dh extends aj implements df {
             var3_int = param0.length;
             this.field_y = new String[var3_int];
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
-              this.field_y[var4_int] = ca.a((CharSequence) ((Object) param0[var4_int]), true).replace(' ', ' ');
+              this.field_y[var4_int] = DebouncedFieldValidator.a((CharSequence) ((Object) param0[var4_int]), true).replace(' ', ' ');
             }
             var4 = new ek(vd.field_h, 0, 1);
             this.field_C = new lj[var3_int + 1];
@@ -213,9 +213,9 @@ final class dh extends aj implements df {
         try {
           var3 = null;
           var4 = null;
-          if (md.field_j != null &&
-            !md.field_j.equals(param0.getParameter("settings"))) {
-            var3 = md.field_j;
+          if (AgeValidator.field_j != null &&
+            !AgeValidator.field_j.equals(param0.getParameter("settings"))) {
+            var3 = AgeValidator.field_j;
             var4 = var3;
             var4 = var3;
           }

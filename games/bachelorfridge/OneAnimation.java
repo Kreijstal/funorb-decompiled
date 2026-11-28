@@ -130,7 +130,7 @@ final class OneAnimation extends EventAnimation {
           return true;
         }
         this.field_v = true;
-        aba.a((byte) 89, 34);
+        TextFieldValidator.a((byte) 89, 34);
         int fieldTemp$2 = this.field_B - 1;
         this.field_B = this.field_B - 1;
         if (fieldTemp$2 > 0) {

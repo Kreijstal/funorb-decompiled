@@ -69,10 +69,10 @@ final class s extends IntrusiveNode {
           pa var5 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (null == gf.field_o) {
-            gf.field_o = vl.field_a.requestSocket(ae.field_x, ll.field_f, 431890200);
+          if (null == MatchingFieldValidator.field_o) {
+            MatchingFieldValidator.field_o = vl.field_a.requestSocket(ae.field_x, ll.field_f, 431890200);
           }
-          if (gf.field_o.status == 0) {
+          if (MatchingFieldValidator.field_o.status == 0) {
             return false;
           }
           if (param0) {
@@ -81,11 +81,11 @@ final class s extends IntrusiveNode {
           dupTemp$1 = ol.correctedCurrentTimeMillis(256);
           AccountNameAvailabilityValidator.field_q = dupTemp$1;
           ac.field_e = dupTemp$1;
-          if (gf.field_o.status != 1) {
+          if (MatchingFieldValidator.field_o.status != 1) {
             aj.field_c = pf.field_b;
           } else {
             try {
-              qf.field_a = new BufferedSocket((java.net.Socket) (gf.field_o.result), vl.field_a);
+              qf.field_a = new BufferedSocket((java.net.Socket) (MatchingFieldValidator.field_o.result), vl.field_a);
               dk.field_s.position = 0;
               var4 = id.field_b;
               var5 = var4;
@@ -101,11 +101,11 @@ final class s extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               aj.field_c = pf.field_b;
-              gf.field_o = null;
+              MatchingFieldValidator.field_o = null;
               return true;
             }
           }
-          gf.field_o = null;
+          MatchingFieldValidator.field_o = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

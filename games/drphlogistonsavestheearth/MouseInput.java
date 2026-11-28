@@ -137,7 +137,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != pj.field_G) {
             th.field_e = 0;
-            e.field_q = param0.getX();
+            ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
             lk.field_j = true;
           }
@@ -165,7 +165,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (pj.field_G != null) {
             th.field_e = 0;
-            e.field_q = param0.getX();
+            ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
             lk.field_j = true;
           }
@@ -188,7 +188,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (pj.field_G != null) {
             th.field_e = 0;
-            e.field_q = param0.getX();
+            ConfirmedEmailAvailabilityValidator.field_q = param0.getX();
             mj.field_u = param0.getY();
             lk.field_j = true;
           }
@@ -256,7 +256,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != pj.field_G) {
             th.field_e = 0;
-            e.field_q = -1;
+            ConfirmedEmailAvailabilityValidator.field_q = -1;
             mj.field_u = -1;
             lk.field_j = true;
           }

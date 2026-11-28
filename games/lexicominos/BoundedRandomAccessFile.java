@@ -83,7 +83,7 @@ final class BoundedRandomAccessFile {
         if (kb.field_b.a((byte) 80)) {
           return 0;
         }
-        return pc.e(0);
+        return EmailFormatValidator.e(0);
     }
 
     final void close(boolean param0) throws IOException {

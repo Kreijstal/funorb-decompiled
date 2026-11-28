@@ -117,7 +117,7 @@ final class GzipDecompressor {
                 var10 != 21 &&
                 var10 != 59 &&
                 var10 != 66 &&
-                10 <= qc.a(var10, 122, var16)) {
+                10 <= MenuScreen.a(var10, 122, var16)) {
                 var11 = sh.a(param0 + 123, var10, var16);
                 if (-1 == var9 ||
                   var8 < var11) {
@@ -138,7 +138,7 @@ final class GzipDecompressor {
                 var7 != 21 &&
                 var7 != 59 &&
                 var7 != 66 &&
-                8 <= qc.a(var7, -127, var4)) {
+                8 <= MenuScreen.a(var7, -127, var4)) {
                 var8Lifetime1 = sh.a(120, var7, var4);
                 if (var5Lifetime1 < var8Lifetime1) {
                   var6Lifetime1 = var7;

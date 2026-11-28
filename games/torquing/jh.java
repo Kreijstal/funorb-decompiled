@@ -6,7 +6,7 @@ import java.util.*;
 abstract class jh extends UiWidget implements cj {
     UiWidget field_C;
     static int field_z;
-    static dg field_B;
+    static TranslucentSpriteLayer field_B;
     static IntrusiveDeque field_y;
     static int field_A;
     static int[] field_x;
@@ -134,7 +134,7 @@ abstract class jh extends UiWidget implements cj {
 
     UiWidget a(boolean param0) {
         if (!param0) {
-          field_B = (dg) null;
+          field_B = (TranslucentSpriteLayer) null;
         }
         UiWidget var2 = this.field_C;
         if (var2 == null) {

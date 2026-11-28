@@ -50,7 +50,7 @@ final class eg {
           }
           return;
         }
-        vg.field_c.a(0, 0, this.field_y / 2);
+        vg.field_c.drawWithAlpha(0, 0, this.field_y / 2);
         if (0 > this.field_z) {
           this.b(-7068);
           return;

@@ -53,7 +53,7 @@ final class cj {
               var1_int = var2;
             }
           }
-          if (bh.field_p &&
+          if (PasswordValidator.field_p &&
             aj.field_h) {
             pi.field_f = pi.field_f + 128;
             var1_int = 5;

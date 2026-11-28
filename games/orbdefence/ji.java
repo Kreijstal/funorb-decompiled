@@ -36,7 +36,7 @@ final class ji {
         if (param0 > 7) {
           pa.field_b = true;
           qd.a(67, true);
-          hi.field_k = 0;
+          TextFieldValidator.field_k = 0;
           return;
         }
     }

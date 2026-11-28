@@ -124,19 +124,19 @@ final class bl {
           }
           bf.field_d = oh.a(hj.field_Z, "", 11091, "smoke");
           bo.field_Kb = oh.a(hj.field_Z, "", 11091, "scrollbar_top");
-          ud.field_y = oh.a(hj.field_Z, "", 11091, "scrollbar_bottom");
+          IntroSequenceScreen.field_y = oh.a(hj.field_Z, "", 11091, "scrollbar_bottom");
           qh.field_q = oh.a(hj.field_Z, "", 11091, "scrollbar_slider");
           tn.field_W = bo.field_Kb.d();
           tn.field_W.f();
-          Bzip2State.field_x = ud.field_y.d();
+          Bzip2State.field_x = IntroSequenceScreen.field_y.d();
           Bzip2State.field_x.f();
           ml.field_a = qh.field_q.d();
           ml.field_a.f();
           AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
-          qf.field_f = dd.a((byte) -112, 4, ud.field_y);
+          qf.field_f = dd.a((byte) -112, 4, IntroSequenceScreen.field_y);
           ji.field_G = dd.a((byte) -112, 4, qh.field_q);
           field_o = dd.a((byte) -112, 4, tn.field_W);
-          go.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
+          DungeonRaidScreen.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
           im.field_m = dd.a((byte) -112, 4, ml.field_a);
           var19 = oh.a(hj.field_Z, "", 11091, "cracked_bar");
           var2 = var19.d();
@@ -172,7 +172,7 @@ final class bl {
           SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime1, 4194336);
           SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime1 - 4, var6Lifetime1, 96);
           SoftwareRasterizer.fillRectangle(-2 + var5Lifetime1, 0, 2, var6Lifetime1, 12582944);
-          be.field_o = new ph(var2, var8);
+          MatchingFieldValidator.field_o = new ph(var2, var8);
           var6Lifetime2 = var3.field_v;
           var5Lifetime2 = var3.field_y;
           for (var9_int = 0; var6Lifetime2 * var5Lifetime2 > var9_int; var9_int++) {
@@ -209,12 +209,12 @@ final class bl {
           ac.field_w = new ph(var4, var10);
           PacketBuffer.field_j = qa.a(15322, "achievements_large", "", hj.field_Z);
           IntrusiveDeque.a(97, f.field_a);
-          IntrusiveDeque.a(98, lb.field_o);
+          IntrusiveDeque.a(98, PlayerDungeonProfile.field_o);
           cf.field_f = new RgbSprite(32, 32);
           cf.field_f.e();
-          lb.field_o.a(0, 0, 32, 32);
+          PlayerDungeonProfile.field_o.a(0, 0, 32, 32);
           jh.b();
-          lb.field_o = null;
+          PlayerDungeonProfile.field_o = null;
           nb.field_d = oh.a(hj.field_Z, "", 11091, "base");
           var11 = kn.a(hj.field_Z, "", "room_icons", -66);
           HuffmanDecoder.field_b = kn.a(hj.field_Z, "", "room_icons_2d", -105);
@@ -250,7 +250,7 @@ final class bl {
           i.field_r[14] = oh.a(hj.field_Z, "", 11091, "room_gas");
           i.field_r[36] = oh.a(hj.field_Z, "", 11091, "room_hallofglass");
           sn.field_c = kn.a(hj.field_Z, "", "torches", -86);
-          rg.i(112);
+          AccountRegistrationPanel.i(112);
           mf.field_b = kn.a(hj.field_Z, "", "doormasks", -49);
           jh.c();
           ua.field_b = new ph[6];
@@ -272,12 +272,12 @@ final class bl {
             bl.a(false, -71, -26);
           }
           f.field_f = oh.a(hj.field_Z, "pieces", 11091, "piece_banshee");
-          qm.field_m = oh.a(hj.field_Z, "pieces", 11091, "piece_bat");
+          EmailFormatValidator.field_m = oh.a(hj.field_Z, "pieces", 11091, "piece_bat");
           ia.field_R = oh.a(hj.field_Z, "pieces", 11091, "piece_beastman");
           ld.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_blackknight");
           ck.field_G = oh.a(hj.field_Z, "pieces", 11091, "piece_blade_construct");
           DualLinkNode.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
-          lb.field_v = oh.a(hj.field_Z, "pieces", 11091, "piece_demon");
+          PlayerDungeonProfile.field_v = oh.a(hj.field_Z, "pieces", 11091, "piece_demon");
           fp.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_dryhad");
           bj.field_F = oh.a(hj.field_Z, "pieces", 11091, "piece_dwarf");
           ie.field_i = oh.a(hj.field_Z, "pieces", 11091, "piece_enchantress");
@@ -306,7 +306,7 @@ final class bl {
           hh.field_o = oh.a(hj.field_Z, "pieces", 11091, "piece_spectre");
           jf.field_f = oh.a(hj.field_Z, "pieces", 11091, "piece_spider");
           DungeonAssault.field_I = oh.a(hj.field_Z, "pieces", 11091, "piece_spy");
-          m.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_thief");
+          DebouncedFieldValidator.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_thief");
           sp.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_troglodyte");
           gd.field_A = oh.a(hj.field_Z, "pieces", 11091, "piece_troll");
           RaiderDefinition.field_E = oh.a(hj.field_Z, "pieces", 11091, "piece_vampire");
@@ -365,7 +365,7 @@ final class bl {
           i.field_v.g();
           IterableNodeHashTable.field_i = i.field_v.d();
           IterableNodeHashTable.field_i.g();
-          qe.a(gd.field_E, jj.field_b, ProxyAuthenticationRequiredException.field_d, pk.field_o, tb.field_c, kd.field_f);
+          DungeonAssaultScreen.setStatBarIcons(gd.field_E, jj.field_b, ProxyAuthenticationRequiredException.field_d, pk.field_o, tb.field_c, kd.field_f);
           ao.field_n = oh.a(hj.field_Z, "", 11091, "scroll_top");
           rn.field_c = oh.a(hj.field_Z, "", 11091, "scroll_bottom");
           field_s = oh.a(hj.field_Z, "", 11091, "scroll_tile");
@@ -398,8 +398,8 @@ final class bl {
           fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, cm.field_M);
           na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, cm.field_M);
           cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, cm.field_M);
-          ih.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), cm.field_M);
-          bf.field_m = new tf(IntrusiveNode.field_c, gk.field_K, cm.field_M);
+          RaiderRecruitmentScreen.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), cm.field_M);
+          bf.field_m = new tf(IntrusiveNode.field_c, DisplayNameSelectionPanel.field_K, cm.field_M);
           kd.field_e = new tf[ie.field_j.length];
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {
             kd.field_e[var14Lifetime3] = new tf(db.field_v, ie.field_j[var14Lifetime3], cm.field_M);
@@ -419,7 +419,7 @@ final class bl {
         if (param0 != -97) {
           field_p = -78;
         }
-        if (!qc.field_t) {
+        if (!MenuScreen.field_t) {
           var1 = hf.field_sb;
           if (0 < var1) {
             if (var1 != 1) {
@@ -457,24 +457,24 @@ final class bl {
           fieldTemp$0 = ce.field_p + 1;
           ce.field_p = ce.field_p + 1;
           if (fieldTemp$0 >= 50) {
-            jn.field_l = gk.field_L;
+            jn.field_l = DisplayNameSelectionPanel.field_L;
             ce.field_p = -1;
             ui.field_a = hc.field_b;
           }
         }
         wi.field_kb = fa.a((byte) -127, ui.field_a, hc.field_b);
-        if (gk.field_L == null) {
+        if (DisplayNameSelectionPanel.field_L == null) {
           stackIn_8_0 = 620;
         } else {
           stackIn_8_0 = hh.field_p - 100;
         }
         ArchiveRequest.field_w = stackIn_8_0;
-        if (null != gk.field_L) {
+        if (null != DisplayNameSelectionPanel.field_L) {
           stackIn_11_0 = ed.field_P - (wi.field_kb >> 1);
         } else {
           stackIn_11_0 = 480 - wi.field_kb >> 1;
         }
-        qc.field_w = stackIn_11_0;
+        MenuScreen.field_w = stackIn_11_0;
         if (-1 != ce.field_p) {
           if (jn.field_l == null) {
             stackIn_16_0 = 620;
@@ -489,13 +489,13 @@ final class bl {
           }
           var2 = stackIn_19_0;
           ArchiveRequest.field_w = fa.a((byte) -127, var1, ArchiveRequest.field_w);
-          qc.field_w = fa.a((byte) -128, var2, qc.field_w);
+          MenuScreen.field_w = fa.a((byte) -128, var2, MenuScreen.field_w);
         }
-        ti.field_A.b(204 + ArchiveRequest.field_w, qc.field_w - 28, (byte) 4);
-        tk.field_k.b(ArchiveRequest.field_w - 7, 20 + qc.field_w + wi.field_kb, (byte) 4);
-        PacketBuffer.field_n.b(7 + (ArchiveRequest.field_w + 200), qc.field_w + (wi.field_kb + 22), (byte) 4);
+        ti.field_A.b(204 + ArchiveRequest.field_w, MenuScreen.field_w - 28, (byte) 4);
+        tk.field_k.b(ArchiveRequest.field_w - 7, 20 + MenuScreen.field_w + wi.field_kb, (byte) 4);
+        PacketBuffer.field_n.b(7 + (ArchiveRequest.field_w + 200), MenuScreen.field_w + (wi.field_kb + 22), (byte) 4);
         stackIn_22_0 = ti.field_A;
-        stackIn_23_1 = (null == gk.field_L) ? false : true;
+        stackIn_23_1 = (null == DisplayNameSelectionPanel.field_L) ? false : true;
         stackIn_22_0.field_w = stackIn_23_1;
         stackIn_25_0 = tk.field_k;
         stackIn_26_1 = (param0 >= fc.field_d) ? false : true;

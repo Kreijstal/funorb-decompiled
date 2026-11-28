@@ -103,7 +103,7 @@ final class TextLinkRegion extends IntrusiveNode {
             g.field_f.a(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
             ShuffleEvent.field_q.a(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
             g.field_f.a(lga.a(true, new String[]{SpecialOrder.field_l}, vca.field_i), var6, 130, 16777215, -1);
-            ShuffleEvent.field_q.a(hb.field_g, var6, 180, 16777215, -1);
+            ShuffleEvent.field_q.a(MatchingFieldValidator.field_g, var6, 180, 16777215, -1);
             g.field_f.a(ema.field_Lb, var6, 200, 16777215, -1);
             sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
             uea.field_j.b();
@@ -122,7 +122,7 @@ final class TextLinkRegion extends IntrusiveNode {
             et.field_l = 390 + (HomingMissileAnimation.field_E.field_p - ug.field_o.field_p) / 2;
             SnowEvent.field_u = 434 + (-ug.field_o.field_q + HomingMissileAnimation.field_E.field_q) / 2;
             sha.field_l = null;
-            hka.field_h = (HomingMissileAnimation.field_E.field_p - ug.field_o.field_p) / 2 + 390;
+            AgeValidator.field_h = (HomingMissileAnimation.field_E.field_p - ug.field_o.field_p) / 2 + 390;
             qs.field_o = (-ug.field_o.field_q + HomingMissileAnimation.field_E.field_q) / 2 + 231;
           }
           if (null == BagpipeAnimation.field_x) {
@@ -286,7 +286,7 @@ final class TextLinkRegion extends IntrusiveNode {
               AirstrikeSpecial.a(-4 + HomingMissileAnimation.field_E.field_q, 7 * HomingMissileAnimation.field_E.field_p / 12, 16711680, 64, 392, 436);
             }
             stackIn_66_0 = SnowEvent.field_u;
-            stackIn_66_1 = hka.field_h;
+            stackIn_66_1 = AgeValidator.field_h;
             stackIn_66_2 = -112;
             stackIn_67_3 = (ic.field_i.field_g == 1);
             rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);

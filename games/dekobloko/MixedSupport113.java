@@ -25,7 +25,7 @@ final class MixedSupport113 extends HashNode {
     final static void performAction1473(byte byteArgument1) {
         RuntimeException caughtExceptionLocal1 = null;
         SceneWidgetPart012 sceneWidgetPart012Local2 = null;
-        SceneWidgetPart013 sceneWidgetPart013Local3 = null;
+        LobbyRoomRow sceneWidgetPart013Local3 = null;
         RuntimeException runtimeExceptionLocal4 = null;
         int integerLocal5 = 0;
         String stringLocal6 = null;
@@ -45,7 +45,7 @@ final class MixedSupport113 extends HashNode {
             }
             sceneWidgetPart012Local2 = (SceneWidgetPart012) (MixedSupport057.nodeDequeState0010.nextBackward(true));
           }
-          sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.beginBackward((byte) 26));
+          sceneWidgetPart013Local3 = (LobbyRoomRow) (MixedSupport051.nodeDequeState0009.beginBackward((byte) 26));
           while (sceneWidgetPart013Local3 != null) {
             if (sceneWidgetPart013Local3.integerState0846 > 0) {
               sceneWidgetPart013Local3.integerState0846 = sceneWidgetPart013Local3.integerState0846 - 1;
@@ -56,7 +56,7 @@ final class MixedSupport113 extends HashNode {
                 }
               }
             }
-            sceneWidgetPart013Local3 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.nextBackward(true));
+            sceneWidgetPart013Local3 = (LobbyRoomRow) (MixedSupport051.nodeDequeState0009.nextBackward(true));
           }
           sceneWidgetPart012Local7 = (SceneWidgetPart012) (MixedSupport091.nodeDequeState0021.beginBackward((byte) 50));
           while (sceneWidgetPart012Local7 != null) {

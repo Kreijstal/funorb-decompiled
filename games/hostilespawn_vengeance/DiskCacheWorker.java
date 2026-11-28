@@ -66,12 +66,12 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(byte param0) {
         if (param0 == -6) {
-          ei.field_t = false;
+          DelayedPacket.field_t = false;
           sc.field_g.readUnsignedByte(32270);
           return;
         }
         field_c = -21L;
-        ei.field_t = false;
+        DelayedPacket.field_t = false;
         sc.field_g.readUnsignedByte(32270);
     }
 

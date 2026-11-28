@@ -85,7 +85,7 @@ abstract class bh extends mf implements ra {
           if (param1 != 46) {
             bh.f((byte) -11);
           }
-          var5 = qn.field_U;
+          var5 = EditableTextField.field_U;
           var5.writeCipheredByte(param2, param1 ^ -90);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -699,8 +699,8 @@ abstract class bh extends mf implements ra {
         if (param0 != 81) {
           return (java.applet.Applet) null;
         }
-        if (qe.field_B != null) {
-          return qe.field_B;
+        if (ChessBoardRenderer.field_B != null) {
+          return ChessBoardRenderer.field_B;
         }
         return (java.applet.Applet) ((Object) BitPacketBuffer.field_w);
     }

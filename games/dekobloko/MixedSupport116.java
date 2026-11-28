@@ -284,7 +284,7 @@ final class MixedSupport116 {
         if (this.integerState0755 != 0 &&
           DualNode.integerState0062 != 0) {
           if (this.integerState0750 <= 0) {
-            this.integerState0750 = SceneWidgetPart009.integerState0647;
+            this.integerState0750 = IconLabelWidget.integerState0647;
           }
           this.integerState0750 = this.integerState0750 - 1;
         }

@@ -175,8 +175,8 @@ final class bg {
                 }
                 if (param5) {
                   gi.field_c[var23Lifetime2] = var27Lifetime1 >> sf.field_O;
-                  el.field_A[var23Lifetime2] = var28Lifetime1 >> sf.field_O;
-                  hi.field_i[var23Lifetime2] = var29Lifetime1;
+                  DisplayNameSelectionPanel.field_A[var23Lifetime2] = var28Lifetime1 >> sf.field_O;
+                  TextFieldValidator.field_i[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

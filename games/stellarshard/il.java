@@ -32,7 +32,7 @@ final class il extends vg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = la.a(124, '*', param0.field_m.length());
+            stackIn_4_0 = LoginPanel.a(124, '*', param0.field_m.length());
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

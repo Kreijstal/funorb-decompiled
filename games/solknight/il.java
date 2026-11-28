@@ -39,9 +39,9 @@ class il extends aa {
         if (param0 <= 30) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.a(-115, (PacketBuffer) null);
-          return qb.field_L;
+          return ValidatedTextField.field_L;
         }
-        return qb.field_L;
+        return ValidatedTextField.field_L;
     }
 
     final static boolean b(int param0) {

@@ -15,7 +15,7 @@ final class bm extends IntrusiveNode {
 
     final static void a(int param0, byte param1, int param2) {
         nd.field_a = param2;
-        ad.field_n = param0;
+        ConfirmedEmailAvailabilityValidator.field_n = param0;
         if (param1 <= 53) {
           field_r = (String) null;
         }

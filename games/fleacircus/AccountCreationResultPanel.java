@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends bd implements da {
     static String field_xb;
     static long field_sb;
     private boolean field_wb;
-    private ca field_ub;
+    private AccountRegistrationPanel field_ub;
     private boolean field_vb;
 
     public static void releaseDeclaredStaticReferences(byte param0) {
@@ -138,7 +138,7 @@ final class AccountCreationResultPanel extends bd implements da {
         }
     }
 
-    AccountCreationResultPanel(f param0, ca param1) {
+    AccountCreationResultPanel(f param0, AccountRegistrationPanel param1) {
         super(param0, rg.field_o, pb.field_b, false, false);
         try {
           this.field_ub = param1;

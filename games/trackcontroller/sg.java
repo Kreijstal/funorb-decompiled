@@ -62,7 +62,7 @@ final class sg {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ti.field_j[oe.field_c] = param1;
-        lf.field_Y[oe.field_c] = oe.field_c;
+        ValidatedTextField.field_Y[oe.field_c] = oe.field_c;
         if (param5 != -733) {
           return;
         }

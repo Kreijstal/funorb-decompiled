@@ -1,0 +1,96 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class DebouncedFieldValidator implements FieldValidator {
+    static IndexedSprite[] field_b;
+    private long field_d;
+    static long field_c;
+    static String[] field_a;
+
+    public final void recordInputChange(int param0) {
+        if (param0 != 574) {
+          return;
+        }
+        this.field_d = f.correctedCurrentTimeMillis((byte) 73);
+    }
+
+    abstract String evaluateValidationMessage(byte param0);
+
+    public static void releaseStatics(int param0) {
+        if (param0 >= -41) {
+          return;
+        }
+        field_a = null;
+        field_b = null;
+    }
+
+    abstract jg evaluateValidationStatus(byte param0);
+
+    public final String getValidationMessage(byte param0) {
+        if (param0 < 27) {
+          this.evaluateValidationMessage((byte) -26);
+          if (this.hasMissingInput((byte) 5)) {
+            return null;
+          }
+          if (f.correctedCurrentTimeMillis((byte) 73) >= (this.field_d + 350L)) {
+            return this.evaluateValidationMessage((byte) 115);
+          }
+          return null;
+        }
+        if (this.hasMissingInput((byte) 5)) {
+          return null;
+        }
+        if (f.correctedCurrentTimeMillis((byte) 73) >= (this.field_d + 350L)) {
+          return this.evaluateValidationMessage((byte) 115);
+        }
+        return null;
+    }
+
+    final static String a(SpecialEvent param0, boolean param1) {
+        SpecialMoveDefinition var2 = null;
+        RuntimeException var2_ref = null;
+        String stackIn_2_0 = null;
+        String stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2 = (SpecialMoveDefinition) (al.a(-56, param0.moveId));
+          if (param1) {
+            stackIn_4_0 = var2.name;
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_7_0 = var2_ref;
+          stackIn_7_1 = new StringBuilder().append("pk.M(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw pe.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final jg getValidationStatus(int param0) {
+        if (this.hasMissingInput((byte) 5)) {
+          return md.field_o;
+        }
+        if (param0 != -19704) {
+          return (jg) null;
+        }
+        if (f.correctedCurrentTimeMillis((byte) 73) >= (350L + this.field_d)) {
+          return this.evaluateValidationStatus((byte) 35);
+        }
+        return cq.field_g;
+    }
+
+    static {
+        field_a = new String[]{"All scores", "My scores", "Best each"};
+    }
+}

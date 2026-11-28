@@ -42,10 +42,10 @@ final class f {
             if (fo.field_b + MouseWheelInput.field_g.field_v > param1) {
               return 0;
             }
-            if (param0 < rm.field_T) {
+            if (param0 < EditableTextField.field_T) {
               return -1;
             }
-            if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
+            if (param0 >= MouseWheelInput.field_g.field_y + EditableTextField.field_T) {
               return -1;
             }
             if (param1 < mi.field_f) {
@@ -56,8 +56,8 @@ final class f {
             }
             return 1;
           }
-          if (param0 >= rm.field_T &&
-            param0 < MouseWheelInput.field_g.field_y + rm.field_T &&
+          if (param0 >= EditableTextField.field_T &&
+            param0 < MouseWheelInput.field_g.field_y + EditableTextField.field_T &&
             param1 >= mi.field_f &&
             MouseWheelInput.field_g.field_v + mi.field_f > param1) {
             return 1;
@@ -67,10 +67,10 @@ final class f {
         field_f = (RgbSprite) null;
         if (wk.field_h <= param0) {
           if (param0 >= wk.field_h + MouseWheelInput.field_g.field_y) {
-            if (param0 < rm.field_T) {
+            if (param0 < EditableTextField.field_T) {
               return -1;
             }
-            if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
+            if (param0 >= MouseWheelInput.field_g.field_y + EditableTextField.field_T) {
               return -1;
             }
             if (param1 < mi.field_f) {
@@ -86,10 +86,10 @@ final class f {
             return 0;
           }
         }
-        if (param0 < rm.field_T) {
+        if (param0 < EditableTextField.field_T) {
           return -1;
         }
-        if (param0 >= MouseWheelInput.field_g.field_y + rm.field_T) {
+        if (param0 >= MouseWheelInput.field_g.field_y + EditableTextField.field_T) {
           return -1;
         }
         if (param1 < mi.field_f) {

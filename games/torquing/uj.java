@@ -18,7 +18,7 @@ abstract class uj {
           if (IsaacCipher.field_m != null) {
             IsaacCipher.field_m.b(true);
           }
-          un.field_k = new pe(param2, param0, false, true, true);
+          un.field_k = new LoginPanel(param2, param0, false, true, true);
           hb.field_x.c(un.field_k, param1 + 32115);
           if (param1 != -32082) {
             uj.clearStaticReferences((byte) 16);

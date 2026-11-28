@@ -106,16 +106,16 @@ final class dd extends rj {
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
         bp.a(var5, bl.field_o, var4, (byte) 99);
-        bp.a(this.field_D + var5 + 10, go.field_S, var4, (byte) 99);
+        bp.a(this.field_D + var5 + 10, DungeonRaidScreen.field_S, var4, (byte) 99);
         for (var6 = 0; var6 < 7; var6++) {
           te.a(var4 + 11, var6 + var5 + 6, -2 + this.field_D, kc.field_M);
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 3; var6Lifetime1++) {
-          qe.a(11 + var4, var5 + 5 - var6Lifetime1, -2 + this.field_D, 0, 64 * (-var6Lifetime1 + 3));
-          qe.a(11 + var4, var5 + 13 + var6Lifetime1, -2 + this.field_D, 0, (3 - var6Lifetime1) * 64);
+          DungeonAssaultScreen.a(11 + var4, var5 + 5 - var6Lifetime1, -2 + this.field_D, 0, 64 * (-var6Lifetime1 + 3));
+          DungeonAssaultScreen.a(11 + var4, var5 + 13 + var6Lifetime1, -2 + this.field_D, 0, (3 - var6Lifetime1) * 64);
         }
         for (var6Lifetime2 = 1; this.field_D - 1 > var6Lifetime2; var6Lifetime2++) {
-          qe.b(var6Lifetime2 + (10 + var4), var5 + 7, 5, 0, -(var6Lifetime2 * 80 / this.field_D) + 144);
+          DungeonAssaultScreen.b(var6Lifetime2 + (10 + var4), var5 + 7, 5, 0, -(var6Lifetime2 * 80 / this.field_D) + 144);
         }
         if (this.field_G != 0) {
           stackIn_12_0 = (this.field_D - 46) * this.field_F / this.field_G;

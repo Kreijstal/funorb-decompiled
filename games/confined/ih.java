@@ -78,7 +78,7 @@ final class ih {
         if (var6 < var7Lifetime2) {
           var6 = var7Lifetime2;
         }
-        var7Lifetime3 = pn.field_a.c(qc.a(param3, param0, 2, param2));
+        var7Lifetime3 = pn.field_a.c(ConfirmedEmailAvailabilityValidator.a(param3, param0, 2, param2));
         if (var7Lifetime3 > var6) {
           var6 = var7Lifetime3;
         }

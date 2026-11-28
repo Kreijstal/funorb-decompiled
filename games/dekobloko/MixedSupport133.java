@@ -253,7 +253,7 @@ final class MixedSupport133 {
             mixedSupport138Local11.shortArrayState0012 = MixedSupport134.computeShortArray1684(cipherPacketBufferArgument2, true, mixedSupport138Local11.shortArrayState0012, 16);
           }
           if (MouseInput.computeBoolean1804(cipherPacketBufferArgument2, (byte) -115)) {
-            mixedSupport138Local11.byteArrayState0033 = UiComponentPart013.computeByteArray0623((byte) 5, mixedSupport138Local11.byteArrayState0033, 16, cipherPacketBufferArgument2);
+            mixedSupport138Local11.byteArrayState0033 = LoginPanel.computeByteArray0623((byte) 5, mixedSupport138Local11.byteArrayState0033, 16, cipherPacketBufferArgument2);
             integerLocal12 = 0;
             for (integerLocal1 = 0; mixedSupport138Local11.byteArrayState0033.length > integerLocal1; integerLocal1++) {
               if (integerLocal12 < (mixedSupport138Local11.byteArrayState0033[integerLocal1] & 255)) {

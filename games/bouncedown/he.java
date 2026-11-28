@@ -95,7 +95,7 @@ final class he extends IntrusiveNode {
             bj.a((byte) -125, var5);
             var6 = new String[2][var5];
             var18 = new int[2][4 * var5];
-            var8 = q.field_M;
+            var8 = DisplayNameSelectionPanel.field_M;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {

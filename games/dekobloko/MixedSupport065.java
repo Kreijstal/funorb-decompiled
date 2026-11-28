@@ -27,7 +27,7 @@ final class MixedSupport065 {
               UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
             } else {
               if (MixedSupport052.integerState0269 != 0) {
-                UiComponentPart005.performAction0319(true, canvasArgument1);
+                DisplayNameSelectionPanel.performAction0319(true, canvasArgument1);
               } else {
                 MixedSupport127.performAction1631(false, booleanArgument2, 78);
                 UiComponentPart019.performAction1045(1, 0, 0, canvasArgument1);
@@ -39,7 +39,7 @@ final class MixedSupport065 {
               integerLocal1 = 1;
               MixedSupport016.booleanState0016 = false;
             }
-            RenderingSupport001.performAction0136(UiComponentPart005.computeInteger0320(true), integerLocal1 != 0, 6, TextLayout.computeString0231(-11777), MixedSupport035.colorState0001);
+            RenderingSupport001.performAction0136(DisplayNameSelectionPanel.computeInteger0320(true), integerLocal1 != 0, 6, TextLayout.computeString0231(-11777), MixedSupport035.colorState0001);
           }
           if (integerArgument3 == -6351) {
             return;

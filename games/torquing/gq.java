@@ -13,7 +13,7 @@ final class gq {
         ff.field_a = true;
         cf.field_f = true;
         dc.field_a.h(21);
-        jk.a(af.field_a, (byte) -79, false);
+        jk.a(MenuLayer.field_a, (byte) -79, false);
     }
 
     final static void a(int param0, java.applet.Applet param1) {

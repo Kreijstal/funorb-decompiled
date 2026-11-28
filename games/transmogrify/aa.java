@@ -21,7 +21,7 @@ final class aa {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -6 % ((-31 - param0) / 63);
-          stackIn_1_0 = bg.a(10, true, param1, (byte) 126);
+          stackIn_1_0 = PasswordValidator.a(10, true, param1, (byte) 126);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -119,7 +119,7 @@ class lc extends DualLinkNode {
             return (jh) (stackIn_2_0);
           }
           var2 = new jh(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, of.field_d);
-          c.o(-28210);
+          EditableTextField.o(-28210);
           if (param1) {
             lc.f(105);
           }

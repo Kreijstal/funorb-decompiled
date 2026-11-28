@@ -89,7 +89,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (var2_int != 0 && 65535 != var2_int &&
               el.isSupportedCp1252KeyCharacter(-9904, (char) var2_int)) {
               var3 = 127 & dk.field_i + 1;
-              if (bg.field_l != var3) {
+              if (PasswordValidator.field_l != var3) {
                 te.field_c[dk.field_i] = -1;
                 DirectByteStorage.field_h[dk.field_i] = (char)var2_int;
                 dk.field_i = var3;
@@ -137,7 +137,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (var2_int >= 0) {
               var3 = 1 + dk.field_i & 127;
-              if (bg.field_l != var3) {
+              if (PasswordValidator.field_l != var3) {
                 te.field_c[dk.field_i] = var2_int;
                 DirectByteStorage.field_h[dk.field_i] = (char)0;
                 dk.field_i = var3;

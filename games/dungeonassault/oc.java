@@ -3,7 +3,7 @@
  */
 final class oc extends kl {
     static int field_E;
-    go field_w;
+    DungeonRaidScreen field_w;
     private DungeonTileState field_F;
     static od field_A;
     private boolean field_s;
@@ -100,7 +100,7 @@ final class oc extends kl {
     }
 
     private final void d(int param0) {
-        this.field_p.startAnimation(ga.field_n, this.field_x ? this.field_n.field_n.field_t : this.field_n.field_n.field_v, -10872);
+        this.field_p.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, this.field_x ? this.field_n.field_n.field_t : this.field_n.field_n.field_v, -10872);
         if (param0 <= 124) {
           return;
         }
@@ -139,7 +139,7 @@ final class oc extends kl {
         if (param0 != 37) {
           this.c((byte) -26);
         }
-        qe.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
+        DungeonAssaultScreen.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
         jc.a(this.field_i - 26, 16, 14, 1, 2, 1);
         jc.a(-26 + this.field_i, -24 + this.field_a, 14, 1, param0 - 35, 1);
         vd.a(-16 + this.field_a, 2, -14561, 2, 8, 0);

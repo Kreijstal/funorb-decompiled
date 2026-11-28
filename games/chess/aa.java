@@ -280,7 +280,7 @@ final class aa {
           nc.field_T == 0)) {
           b.field_a.b(0, 0, var4 << 1);
         }
-        if (oc.field_p != null) {
+        if (MatchingFieldValidator.field_p != null) {
           sf.b(16777215);
         }
         return;
@@ -334,16 +334,16 @@ final class aa {
             var2 = stackIn_16_0;
             stackIn_19_0 = (var2 == 0) ? -1 : -5;
             var3 = stackIn_19_0;
-            uk.a(qk.field_h, false, 28333, var3);
+            ChessBoardState.a(qk.field_h, false, 28333, var3);
             if ((var4 != 0) &&
               (7 != IntrusiveDeque.field_f)) {
               var2 = pg.field_s;
-              uk.a(qk.field_h, false, 28333, var2);
+              ChessBoardState.a(qk.field_h, false, 28333, var2);
             }
           } else {
             if (7 != IntrusiveDeque.field_f) {
               var2 = pg.field_s;
-              uk.a(qk.field_h, false, 28333, var2);
+              ChessBoardState.a(qk.field_h, false, 28333, var2);
             }
           }
         }
@@ -592,7 +592,7 @@ final class aa {
           }
           var11Lifetime2 = ak.field_m[this.field_c];
           var12Lifetime1 = var6 + 160;
-          stackIn_52_0 = (0 != oc.field_p.field_C) ? 0 : 1;
+          stackIn_52_0 = (0 != MatchingFieldValidator.field_p.field_C) ? 0 : 1;
           var13Lifetime1 = stackIn_52_0;
           if (var7 == 29) {
             rl.field_d[var13Lifetime1][3].c(var12Lifetime1, var11Lifetime2);
@@ -815,7 +815,7 @@ final class aa {
         int var3 = 0;
         if (hj.field_i) {
           var3 = param1 ? 1 : 0;
-          uk.a(qk.field_h, var3 != 0, 28333, -5);
+          ChessBoardState.a(qk.field_h, var3 != 0, 28333, -5);
         }
         if (hl.field_h) {
           la.a(11, (byte) -60, 0);
@@ -876,7 +876,7 @@ final class aa {
           var4 != 14 &&
           var4 != 15 &&
           var4 != 32) {
-          wf.a(ResourceArchive.field_l[0], 59);
+          LoginPanel.a(ResourceArchive.field_l[0], 59);
         }
         regionExit1: {
           regionExit2: {
@@ -1060,7 +1060,7 @@ final class aa {
                           }
                           if (!PcmOutputWorker.a(-3)) {
                             var9 = param0 ? 1 : 0;
-                            uk.a(qk.field_h, var9 != 0, 28333, -4);
+                            ChessBoardState.a(qk.field_h, var9 != 0, 28333, -4);
                             if (var11 == 0) {
                               break regionExit2;
                             }
@@ -1094,7 +1094,7 @@ final class aa {
                           break regionExit2;
                         }
                         var9 = param0 ? 1 : 0;
-                        uk.a(qk.field_h, var9 != 0, 28333, -1);
+                        ChessBoardState.a(qk.field_h, var9 != 0, 28333, -1);
                         if (var11 == 0) {
                           break regionExit2;
                         }
@@ -1123,7 +1123,7 @@ final class aa {
                         break regionExit2;
                       }
                       var9 = param0 ? 1 : 0;
-                      uk.a(qk.field_h, var9 != 0, 28333, 0);
+                      ChessBoardState.a(qk.field_h, var9 != 0, 28333, 0);
                       ma.field_D = false;
                       if (var11 == 0) {
                         break regionExit2;
@@ -1153,7 +1153,7 @@ final class aa {
                       break regionExit1;
                     }
                     var9 = param0 ? 1 : 0;
-                    uk.a(qk.field_h, var9 != 0, 28333, 0);
+                    ChessBoardState.a(qk.field_h, var9 != 0, 28333, 0);
                     mf.field_o = true;
                     if (var11 == 0) {
                       break regionExit2;
@@ -1183,7 +1183,7 @@ final class aa {
                     break regionExit1;
                   }
                   var9 = param0 ? 1 : 0;
-                  uk.a(qk.field_h, var9 != 0, param1 + 28331, 6);
+                  ChessBoardState.a(qk.field_h, var9 != 0, param1 + 28331, 6);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1210,7 +1210,7 @@ final class aa {
                     break regionExit1;
                   }
                   var9Lifetime3 = param0 ? 1 : 0;
-                  uk.a(qk.field_h, var9Lifetime3 != 0, param1 ^ 28335, 5);
+                  ChessBoardState.a(qk.field_h, var9Lifetime3 != 0, param1 ^ 28335, 5);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1237,7 +1237,7 @@ final class aa {
                   }
                   var9Lifetime2 = pg.field_s;
                   var10 = param0 ? 1 : 0;
-                  uk.a(qk.field_h, var10 != 0, 28333, var9Lifetime2);
+                  ChessBoardState.a(qk.field_h, var10 != 0, 28333, var9Lifetime2);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1262,7 +1262,7 @@ final class aa {
                     break regionExit2;
                   }
                   var9Lifetime1 = param0 ? 1 : 0;
-                  uk.a(qk.field_h, var9Lifetime1 != 0, 28333, 4);
+                  ChessBoardState.a(qk.field_h, var9Lifetime1 != 0, 28333, 4);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1312,13 +1312,13 @@ final class aa {
                     dm.a(false);
                   }
                   if (this.field_e.b(97)) {
-                    vm.g(1);
+                    TextFieldValidator.g(1);
                   }
                   if (lf.field_S == var5) {
                     break regionExit2;
                   }
                   MusicPatchPcmStream.field_q.field_x = lf.field_S;
-                  wf.a(ResourceArchive.field_l[0], 18);
+                  LoginPanel.a(ResourceArchive.field_l[0], 18);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1375,7 +1375,7 @@ final class aa {
                   }
                   if (var5Lifetime1 != bc.field_b) {
                     hg.field_b.field_x = bc.field_b;
-                    wf.a(ResourceArchive.field_l[0], -77);
+                    LoginPanel.a(ResourceArchive.field_l[0], -77);
                   }
                   ib.field_a = bc.field_b;
                   if (var11 == 0) {
@@ -1476,7 +1476,7 @@ final class aa {
                   if (!this.field_e.d((byte) 63)) {
                     break regionExit1;
                   }
-                  oc.field_p.h(28);
+                  MatchingFieldValidator.field_p.h(28);
                   qk.field_h = -1;
                   if (var11 == 0) {
                     break regionExit2;
@@ -1494,7 +1494,7 @@ final class aa {
                   if (!this.field_e.d((byte) 92)) {
                     break regionExit2;
                   }
-                  oc.field_p.b(true);
+                  MatchingFieldValidator.field_p.b(true);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -1627,7 +1627,7 @@ final class aa {
                 if (!this.field_e.d((byte) 43)) {
                   break regionExit2;
                 }
-                oc.field_p.field_t.a(-1, false, -1);
+                MatchingFieldValidator.field_p.field_t.a(-1, false, -1);
                 qk.field_h = -1;
                 if (var11 == 0) {
                   break regionExit2;
@@ -1675,7 +1675,7 @@ final class aa {
               }
               if (var8 != 0) {
                 AccountNameAvailabilityValidator.i(23156).field_t.field_o = nb.field_Fb.field_x;
-                wf.a(ResourceArchive.field_l[0], param1 + 122);
+                LoginPanel.a(ResourceArchive.field_l[0], param1 + 122);
               }
             }
           }
@@ -1758,7 +1758,7 @@ final class aa {
             break;
           }
         }
-        qd.field_w.a(-0.1, (double)r.field_Eb / 300.0, true);
+        qd.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
     }
 
     final void a(byte param0, boolean param1, int param2) {
@@ -2143,7 +2143,7 @@ final class aa {
                 var15 = 1;
                 var31.a(ao.field_j, var8, var14, var15, -1);
                 var31.c(tk.field_f, -220 + var9Lifetime1, var14, var15, -1);
-                var31.c(qe.field_y, var9Lifetime1 - 150, var14, var15, -1);
+                var31.c(ChessBoardRenderer.field_y, var9Lifetime1 - 150, var14, var15, -1);
                 var31.b(fm.field_O, -115 + var9Lifetime1, var14, var15, -1);
                 var31.b(mh.field_g, var9Lifetime1 - 65, var14, var15, -1);
                 var31.b(kl.field_a, var9Lifetime1 - 15, var14, var15, -1);
@@ -2181,9 +2181,9 @@ final class aa {
                     var25 = var33;
                     var31.c(var33, var9Lifetime1 - 150, var14, var18, -1);
                     if (var23_int != 0) {
-                      var26 = oc.a(wf.field_S, new String[]{Integer.toString(100 * var19 / var23_int)}, (byte) -95);
-                      var27 = oc.a(wf.field_S, new String[]{Integer.toString(var21 * 100 / var23_int)}, (byte) -59);
-                      var28 = oc.a(wf.field_S, new String[]{Integer.toString(100 * var20 / var23_int)}, (byte) -96);
+                      var26 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(100 * var19 / var23_int)}, (byte) -95);
+                      var27 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(var21 * 100 / var23_int)}, (byte) -59);
+                      var28 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(100 * var20 / var23_int)}, (byte) -96);
                     } else {
                       var28 = Chess.field_C;
                       var27 = Chess.field_C;
@@ -2222,9 +2222,9 @@ final class aa {
                   var25Lifetime1 = var34;
                   var31.c(var34, -150 + var9Lifetime1, var14, var17Lifetime1, -1);
                   if (0 != var21) {
-                    var22 = oc.a(wf.field_S, new String[]{Integer.toString(100 * var18 / var21)}, (byte) -102);
-                    var23 = oc.a(wf.field_S, new String[]{Integer.toString(var19 * 100 / var21)}, (byte) -88);
-                    var24 = oc.a(wf.field_S, new String[]{Integer.toString(var20 * 100 / var21)}, (byte) -98);
+                    var22 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(100 * var18 / var21)}, (byte) -102);
+                    var23 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(var19 * 100 / var21)}, (byte) -88);
+                    var24 = MatchingFieldValidator.a(LoginPanel.field_S, new String[]{Integer.toString(var20 * 100 / var21)}, (byte) -98);
                   }
                   if (0 == var21 ||
                     var29 != 0) {
@@ -2282,7 +2282,7 @@ final class aa {
         boolean stackIn_59_1 = false;
         Object var2 = null;
         RgbSprite var2_ref = null;
-        qe var3 = null;
+        ChessBoardRenderer var3 = null;
         int var4 = 0;
         int var5_int = 0;
         wg var5 = null;
@@ -2313,8 +2313,8 @@ final class aa {
             decompiledFrameRemainder0 = (var15 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (!((uk) ((Object) var3)).a((byte) 61, 4096)) {
-              if (((uk) ((Object) var3)).a((byte) 61, 0)) {
+            if (!((ChessBoardState) ((Object) var3)).a((byte) 61, 4096)) {
+              if (((ChessBoardState) ((Object) var3)).a((byte) 61, 0)) {
                 var4 = 1;
                 decompiledFrameRemainder0 = (var15 != 0);
               }
@@ -2454,7 +2454,7 @@ final class aa {
     }
 
     private final void b(int param0) {
-        qe stackIn_10_0 = null;
+        ChessBoardRenderer stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
         if (AccountNameAvailabilityValidator.i(param0 ^ 23286) == null) {
@@ -2473,7 +2473,7 @@ final class aa {
           stackIn_10_0 = AccountNameAvailabilityValidator.i(23156).field_t;
           stackIn_10_1 = AccountNameAvailabilityValidator.i(23156).b(0);
           stackIn_11_2 = (IntrusiveDeque.field_f == -1);
-          ((qe) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2, qb.field_a, 0, (byte) -104, true);
+          ((ChessBoardRenderer) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_11_2, qb.field_a, 0, (byte) -104, true);
         }
     }
 

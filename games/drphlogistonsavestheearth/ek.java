@@ -29,10 +29,10 @@ final class ek extends IntrusiveNode {
           th.field_a[r.field_d].a(param1, (byte) 89);
         }
         if (0 == r.field_d) {
-          sc.a(-1, true, ad.field_q);
+          sc.a(-1, true, PasswordValidator.field_q);
         } else {
           if (r.field_d == -2) {
-            sc.a(-1, true, ad.field_q);
+            sc.a(-1, true, PasswordValidator.field_q);
           }
         }
         if (r.field_d != 11) {
@@ -50,7 +50,7 @@ final class ek extends IntrusiveNode {
           BitPacketBuffer var4 = null;
           BitPacketBuffer var5 = null;
           if (null == de.field_q) {
-            de.field_q = pi.field_I.requestDirectSocket(ml.field_n, ei.field_o, 105);
+            de.field_q = pi.field_I.requestDirectSocket(ml.field_n, TextFieldValidator.field_o, 105);
           }
           if (de.field_q.status == 0) {
             return false;
@@ -72,7 +72,7 @@ final class ek extends IntrusiveNode {
               field_h = stackIn_10_0;
               var5.position = 0;
               tl.field_O = hh.field_b;
-              FullscreenFocusCanvas.a(ci.field_W, ArchiveRequest.field_v, 26800, dc.field_e, nj.field_p);
+              FullscreenFocusCanvas.a(ci.field_W, ArchiveRequest.field_v, 26800, DebouncedFieldValidator.field_e, nj.field_p);
               qj.a(-1, 14656);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

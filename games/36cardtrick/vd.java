@@ -48,7 +48,7 @@ final class vd extends DualLinkNode {
               this.field_t = new int[var5];
               for (var6 = 0; var5 > var6; var6++) {
                 var7 = param1.readUnsignedShort((byte) 72);
-                var8 = p.a(-1, var7);
+                var8 = ConfirmedEmailAvailabilityValidator.a(-1, var7);
                 if (var8 != null) {
                   this.field_t[var6] = var7;
                   array$0 = new int[var8.field_d];
@@ -84,7 +84,7 @@ final class vd extends DualLinkNode {
     final static void a(int param0, int param1) {
         try {
           try {
-            JavaScriptBridge.callWithArguments(new Object[]{new Integer(param0)}, "resizing", (byte) 115, mk.g(-123));
+            JavaScriptBridge.callWithArguments(new Object[]{new Integer(param0)}, "resizing", (byte) 115, PasswordValidator.g(-123));
           } catch (Throwable throwable) {
           }
           if (param1 != -1) {
@@ -108,14 +108,14 @@ final class vd extends DualLinkNode {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            rd.field_j = new BitPacketBuffer(param11);
+            EmailFormatValidator.field_j = new BitPacketBuffer(param11);
             NetworkArchiveRequest.field_r = new BitPacketBuffer(param7);
             AccountNameAvailabilityValidator.field_l = param8;
             MouseInputHandler.field_e = param10;
             MouseInputHandler.field_d = param4;
             nf.field_c = param0;
             td.field_b = param12;
-            mk.field_k = param6;
+            PasswordValidator.field_k = param6;
             BoundedRandomAccessFile.field_d = param3;
             AwtRasterBuffer.field_g = param9;
             bj.field_m = param2;

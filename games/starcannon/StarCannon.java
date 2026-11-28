@@ -12,7 +12,7 @@ public final class StarCannon extends ag {
 
     private final void t(int param0) {
         if (null != fb.field_g) {
-          vb.a(fb.field_g, 30962);
+          MatchingFieldValidator.a(fb.field_g, 30962);
           fb.field_g = null;
           tc.j(param0 ^ -23491);
         }
@@ -188,7 +188,7 @@ public final class StarCannon extends ag {
                     if (param1 == 7306) {
                         /* Inlined CFG state: 21. */
                         {
-                            var15 = (bf) (kh.field_y.beginForward(-3905));
+                            var15 = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
                             statePc = 22;
                             continue scanLoop1;
                         }
@@ -211,7 +211,7 @@ public final class StarCannon extends ag {
                         /* Inlined CFG state: 23. */
                         {
                             var15.a(65535, 320 - FrameTimer.field_e.field_f);
-                            var15 = (bf) (kh.field_y.nextForward(-16913));
+                            var15 = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
                             statePc = 22;
                             continue scanLoop1;
                         }
@@ -397,7 +397,7 @@ public final class StarCannon extends ag {
                             af.field_y.c(vk.field_w, 596, 472 + param0, 16777215, -1);
                             ba.a(24, ma.field_a, (byte) 21, 604, 35, 455 + param0);
                             nb.a(455 + param0, (byte) 122, 35, ha.field_a, 604, 128, 24);
-                            vb.field_l.e(609, param0 + 460);
+                            MatchingFieldValidator.field_l.e(609, param0 + 460);
                             af.field_y.a(Integer.toString(MouseWheelSource.field_c), 626, 472 + param0, 16777215, -1);
                             var4_ref_String = be.field_b;
                             var5 = 65535;
@@ -1204,7 +1204,7 @@ public final class StarCannon extends ag {
             var7 != 3) {
             if (4 == var7) {
               nf.field_e = var2 * 25 + 75;
-              kh.field_y.addLast(122, new bf(var3, -64, var4, 4));
+              AccountRegistrationPanel.field_y.addLast(122, new bf(var3, -64, var4, 4));
             } else {
               if (var7 == 5) {
                 nf.field_e = 0;
@@ -1218,14 +1218,14 @@ public final class StarCannon extends ag {
                   if (var7 == 0) {
                     var5 = var8;
                   }
-                  kh.field_y.addLast(param0 ^ -138, var8);
+                  AccountRegistrationPanel.field_y.addLast(param0 ^ -138, var8);
                 }
               } else if (9 != var7 &&
                 11 != var7) {
                 if (var7 == 6) {
                   nf.field_e = nf.field_e + 250;
                   var7_ref_bf = new bf(320, -256, var4, 11);
-                  kh.field_y.addLast(param0 ^ -170, var7_ref_bf);
+                  AccountRegistrationPanel.field_y.addLast(param0 ^ -170, var7_ref_bf);
                   dg.field_l = 0;
                   ua.field_c = 2;
                   mj.a(255, 12, 0, 41, 100);
@@ -1239,7 +1239,7 @@ public final class StarCannon extends ag {
                 if (var7 == 10) {
                   nf.field_e = nf.field_e + 250;
                   var7_ref_bfLifetime1 = new bf(320, -256, var4, 15);
-                  kh.field_y.addLast(69, var7_ref_bfLifetime1);
+                  AccountRegistrationPanel.field_y.addLast(69, var7_ref_bfLifetime1);
                   dg.field_l = 0;
                   ua.field_c = 6;
                   mj.a(255, 12, 0, 41, 100);
@@ -1257,7 +1257,7 @@ public final class StarCannon extends ag {
                     stackIn_63_0 = var8;
                     stackIn_64_1 = (var7 != 1) && (var7 != 4);
                     stackIn_63_0.field_p = stackIn_64_1;
-                    kh.field_y.addLast(101, var8);
+                    AccountRegistrationPanel.field_y.addLast(101, var8);
                   }
                   break regionExit1;
                 }
@@ -1267,7 +1267,7 @@ public final class StarCannon extends ag {
                     14 != var7) {
                     if ((var7 == 15)) {
                       var6 = new bf(320, -256, var4, 16);
-                      kh.field_y.addLast(97, var6);
+                      AccountRegistrationPanel.field_y.addLast(97, var6);
                       tj.field_C = var6.field_k;
                       ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                       dg.field_l = 0;
@@ -1281,7 +1281,7 @@ public final class StarCannon extends ag {
                     }
                   } else {
                     nf.field_e = 175;
-                    kh.field_y.addLast(82, new bf(var3, -64, var4, 4));
+                    AccountRegistrationPanel.field_y.addLast(82, new bf(var3, -64, var4, 4));
                   }
                   break regionExit1;
                 }
@@ -1296,7 +1296,7 @@ public final class StarCannon extends ag {
                   if (var7 == 0) {
                     var5 = var8;
                   }
-                  kh.field_y.addLast(param0 ^ -145, var8);
+                  AccountRegistrationPanel.field_y.addLast(param0 ^ -145, var8);
                 }
               } else {
                 nf.field_e = 0;
@@ -1305,7 +1305,7 @@ public final class StarCannon extends ag {
                   stackIn_53_0 = var8;
                   stackIn_54_1 = (1 != var7) && (var7 != 4);
                   stackIn_53_0.field_p = stackIn_54_1;
-                  kh.field_y.addLast(123, var8);
+                  AccountRegistrationPanel.field_y.addLast(123, var8);
                 }
                 break regionExit1;
               }
@@ -1313,7 +1313,7 @@ public final class StarCannon extends ag {
             break regionExit1;
           }
           nf.field_e = var2 * 25 + 75;
-          kh.field_y.addLast(122, new bf(var3, -64, var4, 4));
+          AccountRegistrationPanel.field_y.addLast(122, new bf(var3, -64, var4, 4));
         }
         if (param0 != -256) {
           field_y = (int[]) null;
@@ -1392,7 +1392,7 @@ public final class StarCannon extends ag {
                       var9 = new bf(var3, -var8_int * 64 - 64, sh.b(param0 + 76, 128) - 64, 5);
                       var9.field_h = (bf) (var7_ref);
                       var9.field_p = true;
-                      kh.field_y.addLast(125, var9);
+                      AccountRegistrationPanel.field_y.addLast(125, var9);
                       var7_ref = var9;
                       var8_int++;
                     }
@@ -1401,7 +1401,7 @@ public final class StarCannon extends ag {
                     if (var7 == 7) {
                       nf.field_e = 0;
                       for (var7 = 0; var7 < 5; var7++) {
-                        kh.field_y.addLast(126, new bf(var3, -64 + 64 * -var7, var4, 1));
+                        AccountRegistrationPanel.field_y.addLast(126, new bf(var3, -64 + 64 * -var7, var4, 1));
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -1412,7 +1412,7 @@ public final class StarCannon extends ag {
                           var7 != 14) {
                           if ((var7 == 15)) {
                             var6 = new bf(320, -256, var4, 11);
-                            kh.field_y.addLast(101, var6);
+                            AccountRegistrationPanel.field_y.addLast(101, var6);
                             tj.field_C = var6.field_k;
                             ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                             AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -1426,7 +1426,7 @@ public final class StarCannon extends ag {
                           }
                         } else {
                           nf.field_e = 175;
-                          kh.field_y.addLast(77, new bf(var3, -64, var4, 4));
+                          AccountRegistrationPanel.field_y.addLast(77, new bf(var3, -64, var4, 4));
                         }
                         decompiledFrameRemainder0 = false;
                       }
@@ -1451,7 +1451,7 @@ public final class StarCannon extends ag {
                           if (var7 == 0) {
                             var5 = var8;
                           }
-                          kh.field_y.addLast(param0 + 69, var8);
+                          AccountRegistrationPanel.field_y.addLast(param0 + 69, var8);
                           var7++;
                         }
                       }
@@ -1463,7 +1463,7 @@ public final class StarCannon extends ag {
                   (decompiledFrameCompleted0)) {
                   nf.field_e = 0;
                   for (var7 = 0; var7 < 5; var7++) {
-                    kh.field_y.addLast(param0 ^ 74, new bf(var3, -var7 * 64 - 64, var3, 1));
+                    AccountRegistrationPanel.field_y.addLast(param0 ^ 74, new bf(var3, -var7 * 64 - 64, var3, 1));
                   }
                 }
               } else {
@@ -1471,7 +1471,7 @@ public final class StarCannon extends ag {
                 for (var7 = -8; var7 < 8; var7++) {
                   var8Lifetime2 = new bf(var7 * 24 + 320, -Math.abs(-64 + var7 * 64), 320 + var7 * 24, 1);
                   var8Lifetime2.field_p = true;
-                  kh.field_y.addLast(107, var8Lifetime2);
+                  AccountRegistrationPanel.field_y.addLast(107, var8Lifetime2);
                 }
               }
               if ((decompiledFrameRemainder0) &&
@@ -1498,7 +1498,7 @@ public final class StarCannon extends ag {
                 var9Lifetime1 = new bf(var3, -var8_intLifetime1 * 64 - 64, var4, 2);
                 var9Lifetime1.field_h = (bf) (var7_refLifetime1);
                 var9Lifetime1.field_p = true;
-                kh.field_y.addLast(param0 ^ 102, var9Lifetime1);
+                AccountRegistrationPanel.field_y.addLast(param0 ^ 102, var9Lifetime1);
                 if (var8_intLifetime1 == 0) {
                   var7_refLifetime1 = var9Lifetime1;
                 }
@@ -1516,7 +1516,7 @@ public final class StarCannon extends ag {
           for (var7Lifetime1 = 0; var7Lifetime1 < 5; var7Lifetime1++) {
             var8Lifetime1 = new bf(var3, -64 + 64 * -var7Lifetime1, var4, 1);
             var8Lifetime1.field_p = true;
-            kh.field_y.addLast(65, var8Lifetime1);
+            AccountRegistrationPanel.field_y.addLast(65, var8Lifetime1);
           }
         }
 
@@ -1568,7 +1568,7 @@ public final class StarCannon extends ag {
               jg.field_H = jg.field_H & ~oh.field_a.field_k;
               oh.field_a = null;
               jj.i(122);
-              cf.e((byte) -117);
+              ConfirmedEmailAvailabilityValidator.e((byte) -117);
               if (field_z == 5 &&
                 jg.field_H == 0) {
                 field_z = 2;
@@ -1784,7 +1784,7 @@ public final class StarCannon extends ag {
           this.d((byte) 22);
           var3_ref = new ja(lj.field_h, AccountNameAvailabilityValidator.field_p);
           fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", se.field_l);
-          qf.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", se.field_l);
+          TextFieldValidator.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", se.field_l);
           r.field_b = dl.a(var3_ref, (byte) -82, "music/star cannon boss final", "", se.field_l);
           AccountNameAvailabilityValidator.field_p = null;
           se.field_l = null;
@@ -1827,7 +1827,7 @@ public final class StarCannon extends ag {
             gg.field_f[-var4_intLifetime2 + 24].b(0, 0);
             var17.d();
           }
-          hg.field_y.setAsRasterTarget(param1 + 1333);
+          DisplayNameSelectionPanel.field_y.setAsRasterTarget(param1 + 1333);
           fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", jg.field_F);
           var4 = new Sprite[40];
           for (var5_int = 0; var5_int < 4; var5_int++) {
@@ -1858,7 +1858,7 @@ public final class StarCannon extends ag {
           var8_ref_hl = ha.field_a[7];
           var8_ref_hl.field_q = 4;
           var7_ref_hl.field_q = 4;
-          vb.field_l = vk.a("", param1 ^ -1534, "life_icon", jg.field_F);
+          MatchingFieldValidator.field_l = vk.a("", param1 ^ -1534, "life_icon", jg.field_F);
           pk.field_e = vk.a("", 41, "main_border", jg.field_F);
           NanoFrameTimer.field_i = vk.a("", 45, "main_inner", jg.field_F);
           rd.field_p = SecondaryNodeDequeIterator.a("menu_border", param1 ^ -1532, "", jg.field_F);
@@ -1956,7 +1956,7 @@ public final class StarCannon extends ag {
           var23 = var22[var8];
           li.a(var23, (byte) -100);
         }
-        hg.field_y.setAsRasterTarget(-83);
+        DisplayNameSelectionPanel.field_y.setAsRasterTarget(-83);
         jl.field_j = 5;
         FrameTimer.field_f = null;
         BitPacketBuffer.field_k = 0;
@@ -1971,21 +1971,21 @@ public final class StarCannon extends ag {
         eg.field_l = 128;
         ua.field_c = -2;
         ha.field_d = 0;
-        vb.field_m = 1;
+        MatchingFieldValidator.field_m = 1;
         cg.field_e = 0;
         SpriteState.field_p = 0;
         kd.field_C = -1;
         FrameTimer.field_e = new bf(256, 256, 256, 0);
         FrameTimer.field_e.field_r = 256;
         FrameTimer.field_e.field_k = 0;
-        kh.field_y.addFirst(-71, FrameTimer.field_e);
+        AccountRegistrationPanel.field_y.addFirst(-71, FrameTimer.field_e);
         u.field_b = 0;
         DelayedPcmStream.field_n = 0;
         AccountServiceResult.field_h = 0;
         hc.field_c = 0;
         nf.field_e = 0;
         eg.field_f = new wd(fb.field_t);
-        gd.field_a = new wd(qf.field_i);
+        gd.field_a = new wd(TextFieldValidator.field_i);
         fl.field_h = new wd(r.field_b);
         kc.field_P = eg.field_f;
         kc.field_P.a(mc.field_b);
@@ -2143,14 +2143,14 @@ public final class StarCannon extends ag {
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 4000; var2_intLifetime1++) {
               FullscreenFocusCanvas.field_c[var2_intLifetime1] = null;
             }
-            var2_ref = (bf) (kh.field_y.beginForward(-3905));
+            var2_ref = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
             while (var2_ref != null) {
               stackIn_106_0 = FrameTimer.field_e;
               stackIn_106_1 = var2_ref;
               if (stackIn_106_0 != stackIn_106_1) {
                 var2_ref.unlink(4);
               }
-              var2_ref = (bf) (kh.field_y.nextForward(-16913));
+              var2_ref = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
             }
           }
         } else {
@@ -2180,7 +2180,7 @@ public final class StarCannon extends ag {
                 }
               }
             }
-            var2_ref = (bf) (kh.field_y.beginForward(-3905));
+            var2_ref = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
             while (var2_ref != null) {
               stackIn_106_0 = FrameTimer.field_e;
               stackIn_106_1 = var2_ref;
@@ -2210,25 +2210,25 @@ public final class StarCannon extends ag {
                   }
                 }
               }
-              var2_ref = (bf) (kh.field_y.nextForward(-16913));
+              var2_ref = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
             }
           } else {
             if (ha.field_d > 0) {
-              var2_intLifetime1 = vb.field_m + 1;
-              if (4 == vb.field_m) {
+              var2_intLifetime1 = MatchingFieldValidator.field_m + 1;
+              if (4 == MatchingFieldValidator.field_m) {
                 var2_intLifetime1++;
               }
-              if (vb.field_m == 5) {
+              if (MatchingFieldValidator.field_m == 5) {
                 var2_intLifetime1 += 2;
               }
               ha.field_d = ha.field_d - var2_intLifetime1;
               if (null == ah.field_a &&
-                vb.field_m < 4) {
+                MatchingFieldValidator.field_m < 4) {
                 var3 = 0;
-                if (vb.field_m == 2) {
+                if (MatchingFieldValidator.field_m == 2) {
                   var3 = 28665;
                 }
-                if (3 == vb.field_m) {
+                if (3 == MatchingFieldValidator.field_m) {
                   var3 = 42997;
                 }
                 var11 = gf.field_c[39];
@@ -2308,7 +2308,7 @@ public final class StarCannon extends ag {
             if (ua.field_c == 9) {
               var3_ref_bf = new bf(FrameTimer.field_e.field_f, -32, FrameTimer.field_e.field_f, 10);
               var3_ref_bf.field_l = 5;
-              kh.field_y.addLast(97, var3_ref_bf);
+              AccountRegistrationPanel.field_y.addLast(97, var3_ref_bf);
             }
             if (rj.field_h == 0) {
               nf.field_e = -50;
@@ -2319,7 +2319,7 @@ public final class StarCannon extends ag {
                 for (var5_intLifetime1 = 0; var5_intLifetime1 < 5; var5_intLifetime1++) {
                   var6 = new bf(var3Lifetime1, -var5_intLifetime1 * 64 - 64, var4Lifetime1, 17);
                   var6.field_o = sh.b(-127, 32);
-                  kh.field_y.addLast(114, var6);
+                  AccountRegistrationPanel.field_y.addLast(114, var6);
                 }
               }
             }
@@ -2345,7 +2345,7 @@ public final class StarCannon extends ag {
                 ua.field_c == 15) {
                 nf.field_e = -250;
                 for (var3Lifetime1Lifetime1Lifetime1 = 0; 25 > var3Lifetime1Lifetime1Lifetime1; var3Lifetime1Lifetime1Lifetime1++) {
-                  kh.field_y.addLast(99, new bf(sh.b(-128, 640), -var3Lifetime1Lifetime1Lifetime1 * 25 - 128, sh.b(60, 128) + FrameTimer.field_e.field_f - 64, 18));
+                  AccountRegistrationPanel.field_y.addLast(99, new bf(sh.b(-128, 640), -var3Lifetime1Lifetime1Lifetime1 * 25 - 128, sh.b(60, 128) + FrameTimer.field_e.field_f - 64, 18));
                 }
               }
               if (4 == ua.field_c ||
@@ -2358,7 +2358,7 @@ public final class StarCannon extends ag {
                 for (var4Lifetime1Lifetime1Lifetime1 = 0; var4Lifetime1Lifetime1Lifetime1 < 5; var4Lifetime1Lifetime1Lifetime1++) {
                   var5 = new bf(var3Lifetime1Lifetime1Lifetime2, 64 * -var4Lifetime1Lifetime1Lifetime1 - 64, var3Lifetime1Lifetime1Lifetime2, 17);
                   var5.field_o = sh.b(-127, 32);
-                  kh.field_y.addLast(121, var5);
+                  AccountRegistrationPanel.field_y.addLast(121, var5);
                 }
               }
             }
@@ -2368,14 +2368,14 @@ public final class StarCannon extends ag {
                 ua.field_c == 15) {
                 nf.field_e = -150;
                 for (var3Lifetime1Lifetime2 = 0; 25 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
-                  kh.field_y.addLast(119, new bf(sh.b(76, 640), -128 + -var3Lifetime1Lifetime2 * 25, -64 + sh.b(-30, 128) + FrameTimer.field_e.field_f, 18));
+                  AccountRegistrationPanel.field_y.addLast(119, new bf(sh.b(76, 640), -128 + -var3Lifetime1Lifetime2 * 25, -64 + sh.b(-30, 128) + FrameTimer.field_e.field_f, 18));
                 }
               }
               if (ua.field_c == 16) {
                 for (var3Lifetime1Lifetime2Lifetime1 = 48; var3Lifetime1Lifetime2Lifetime1 < 640; var3Lifetime1Lifetime2Lifetime1 += 96) {
                   var4_ref_bf = new bf(var3Lifetime1Lifetime2Lifetime1, -64 - Math.abs(-320 + var3Lifetime1Lifetime2Lifetime1), var3Lifetime1Lifetime2Lifetime1, 21);
                   var4_ref_bf.field_o = sh.b(-127, 32);
-                  kh.field_y.addLast(57, var4_ref_bf);
+                  AccountRegistrationPanel.field_y.addLast(57, var4_ref_bf);
                 }
               }
               if (ua.field_c >= 4 &&
@@ -2385,14 +2385,14 @@ public final class StarCannon extends ag {
                 for (var4Lifetime1Lifetime2 = 0; var4Lifetime1Lifetime2 < 5; var4Lifetime1Lifetime2++) {
                   var5Lifetime1 = new bf(var3Lifetime1Lifetime2Lifetime2, -var4Lifetime1Lifetime2 * 64 - 64, var3Lifetime1Lifetime2Lifetime2, 17);
                   var5Lifetime1.field_o = sh.b(-126, 32);
-                  kh.field_y.addLast(89, var5Lifetime1);
+                  AccountRegistrationPanel.field_y.addLast(89, var5Lifetime1);
                 }
               }
             }
             if (3 == rj.field_h && (ua.field_c == 5 ||
               ua.field_c == 10)) {
               for (var3Lifetime1Lifetime3 = 0; var3Lifetime1Lifetime3 < 25; var3Lifetime1Lifetime3++) {
-                kh.field_y.addLast(115, new bf(sh.b(-126, 640), -128 + 25 * -var3Lifetime1Lifetime3, sh.b(8, 128) - (-FrameTimer.field_e.field_f + 64), 18));
+                AccountRegistrationPanel.field_y.addLast(115, new bf(sh.b(-126, 640), -128 + 25 * -var3Lifetime1Lifetime3, sh.b(8, 128) - (-FrameTimer.field_e.field_f + 64), 18));
               }
             }
             if (ua.field_c == -2 &&
@@ -2568,7 +2568,7 @@ public final class StarCannon extends ag {
             if (gf.field_b == 1) {
               var3_ref_bfLifetime1.field_l = 0;
             }
-            kh.field_y.addLast(69, var3_ref_bfLifetime1);
+            AccountRegistrationPanel.field_y.addLast(69, var3_ref_bfLifetime1);
           }
         }
         if (BitPacketBuffer.field_k >= DiskArchiveRequest.field_y) {
@@ -2583,7 +2583,7 @@ public final class StarCannon extends ag {
           }
           var4Lifetime2 = sh.b(-128, 640);
           DiskArchiveRequest.field_y = var3Lifetime2;
-          kh.field_y.addLast(60, new bf(var4Lifetime2, -32, var4Lifetime2, 10));
+          AccountRegistrationPanel.field_y.addLast(60, new bf(var4Lifetime2, -32, var4Lifetime2, 10));
         }
         if ((rj.field_h == 2 ||
           rj.field_h == 3) &&
@@ -2619,7 +2619,7 @@ public final class StarCannon extends ag {
         }
         dl.field_a = 0;
         var3Lifetime3 = -64 / ((38 - param0) / 48);
-        var9 = (bf) (kh.field_y.beginForward(-3905));
+        var9 = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
         while (var9 != null) {
           stackOut_347_0 = var9.a(FullscreenFocusCanvas.field_c, this, 114);
           stackIn_353_0 = stackOut_347_0 ? 1 : 0;
@@ -2627,7 +2627,7 @@ public final class StarCannon extends ag {
           if (!stackIn_348_0) {
             var9.unlink(4);
           }
-          var9 = (bf) (kh.field_y.nextForward(-16913));
+          var9 = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
         }
         stackIn_353_0Lifetime1 = -1;
         if (stackIn_353_0Lifetime1 > ~tj.field_G) {
@@ -2642,7 +2642,7 @@ public final class StarCannon extends ag {
             }
           }
         }
-        if (vb.field_m > 0) {
+        if (MatchingFieldValidator.field_m > 0) {
           var35 = FrameTimer.field_e;
           if (rj.field_h < 4) {
             if (FrameTimer.field_e.field_k > 0) {
@@ -2724,12 +2724,12 @@ public final class StarCannon extends ag {
                 for (var3Lifetime5 = 0; var3Lifetime5 < 4000; var3Lifetime5++) {
                   FullscreenFocusCanvas.field_c[var3Lifetime5] = null;
                 }
-                var10 = (bf) (kh.field_y.beginForward(-3905));
+                var10 = (bf) (AccountRegistrationPanel.field_y.beginForward(-3905));
                 while (var10 != null) {
                   if (FrameTimer.field_e != var10) {
                     var10.unlink(4);
                   }
-                  var10 = (bf) (kh.field_y.nextForward(-16913));
+                  var10 = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
                 }
                 if (kd.field_C == 0 &&
                   jg.field_H == 0) {
@@ -2738,7 +2738,7 @@ public final class StarCannon extends ag {
                 bf.field_w = 0;
                 ha.field_c = 0;
                 jl.field_j = 5;
-                vb.field_m = 2;
+                MatchingFieldValidator.field_m = 2;
                 var3Lifetime5Lifetime1 = 0;
                 if (MouseInput.a(108)) {
                   if (!(kd.field_C <= 0) ||
@@ -2804,7 +2804,7 @@ public final class StarCannon extends ag {
               }
               if (hc.field_e.equalsIgnoreCase("xebeams")) {
                 hh.field_c = 1;
-                kh.field_y.addLast(70, new bf(0, -128, 0, 13));
+                AccountRegistrationPanel.field_y.addLast(70, new bf(0, -128, 0, 13));
                 a.field_a = true;
               }
               if (hc.field_e.equalsIgnoreCase("levskip")) {
@@ -2879,7 +2879,7 @@ public final class StarCannon extends ag {
           jl.field_j = 20;
           il.field_i = il.field_i + 1;
           fc.field_e = fc.field_e + 1;
-          vb.field_m = 20;
+          MatchingFieldValidator.field_m = 20;
           a.field_a = true;
         }
         if (hc.field_c > 240) {
@@ -2952,7 +2952,7 @@ public final class StarCannon extends ag {
     }
 
     final void u(int param0) {
-        vb.field_m = vb.field_m + 1;
+        MatchingFieldValidator.field_m = MatchingFieldValidator.field_m + 1;
         dg.field_l = 0;
         mj.a(96, param0 - 88, 0, 30, 100);
         mj.a(255, param0 ^ 104, 1200, 35, param0);
@@ -3004,7 +3004,7 @@ public final class StarCannon extends ag {
             if (var10 == 5) {
               nf.field_e = 0;
               for (var10 = 0; var10 < 5; var10++) {
-                kh.field_y.addLast(108, new bf(var3, 64 * -var10 - 64, var4, 1));
+                AccountRegistrationPanel.field_y.addLast(108, new bf(var3, 64 * -var10 - 64, var4, 1));
               }
             } else {
               boolean decompiledFrameCompleted0 = true;
@@ -3017,7 +3017,7 @@ public final class StarCannon extends ag {
                   if (var10 == 8) {
                     nf.field_e = 0;
                     for (var10 = -8; var10 <= 8; var10++) {
-                      kh.field_y.addLast(86, new bf(320 + var10 * 24, -Math.abs(-64 + 64 * var10), 320 + 24 * var10, 1));
+                      AccountRegistrationPanel.field_y.addLast(86, new bf(320 + var10 * 24, -Math.abs(-64 + 64 * var10), 320 + 24 * var10, 1));
                     }
                   } else {
                     if (var10 == 18) {
@@ -3035,7 +3035,7 @@ public final class StarCannon extends ag {
                         var11.field_p = true;
                         var7 = var7 + var8;
                         var6 -= 16;
-                        kh.field_y.addLast(param0 ^ 29, var11);
+                        AccountRegistrationPanel.field_y.addLast(param0 ^ 29, var11);
                       }
                     } else {
                       if (7 != var10 &&
@@ -3056,25 +3056,25 @@ public final class StarCannon extends ag {
                               if (stackIn_106_0 >= stackIn_107_1) {
                                 break regionExit1;
                               }
-                              kh.field_y.addLast(70, new bf(var3, -64 + -var10 * 64, var4, 4));
+                              AccountRegistrationPanel.field_y.addLast(70, new bf(var3, -64 + -var10 * 64, var4, 4));
                               var10++;
                             }
                           }
                           switch (var10) {
                             case 12:
                               nf.field_e = -50;
-                              kh.field_y.addLast(78, new bf(var3, -64, var3, 12));
+                              AccountRegistrationPanel.field_y.addLast(78, new bf(var3, -64, var3, 12));
                               break regionExit1;
                             case 17:
                               nf.field_e = -50;
-                              kh.field_y.addLast(61, new bf(32, -64, 32, 12));
-                              kh.field_y.addLast(84, new bf(608, -64, 608, 12));
+                              AccountRegistrationPanel.field_y.addLast(61, new bf(32, -64, 32, 12));
+                              AccountRegistrationPanel.field_y.addLast(84, new bf(608, -64, 608, 12));
                               break regionExit1;
                             default:
                               break regionExit1;
                             case 20:
                               var9 = new bf(320, -256, var4, 15);
-                              kh.field_y.addLast(param0 - 7, var9);
+                              AccountRegistrationPanel.field_y.addLast(param0 - 7, var9);
                               tj.field_C = var9.field_k;
                               ua.field_c = ResourceArchive.field_c[rj.field_h] + 1;
                               AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -3090,12 +3090,12 @@ public final class StarCannon extends ag {
                         }
                         nf.field_e = 0;
                         for (var10 = 0; var10 < 5; var10++) {
-                          kh.field_y.addLast(95, new bf(var3, -64 + -var10 * 64, var4, 1));
-                          kh.field_y.addLast(94, new bf(-var3 + 640, 64 * -var10 - 64, -var4 + 640, 1));
+                          AccountRegistrationPanel.field_y.addLast(95, new bf(var3, -64 + -var10 * 64, var4, 1));
+                          AccountRegistrationPanel.field_y.addLast(94, new bf(-var3 + 640, 64 * -var10 - 64, -var4 + 640, 1));
                         }
                       } else {
                         nf.field_e = 150;
-                        kh.field_y.addLast(81, new bf(var3, -64, var4, 3));
+                        AccountRegistrationPanel.field_y.addLast(81, new bf(var3, -64, var4, 3));
                       }
                     }
                   }
@@ -3122,7 +3122,7 @@ public final class StarCannon extends ag {
                     stackIn_82_0.field_p = stackIn_83_1;
                   }
                   var5 = var11;
-                  kh.field_y.addLast(59, var11);
+                  AccountRegistrationPanel.field_y.addLast(59, var11);
                   var10++;
                 }
               }
@@ -3147,7 +3147,7 @@ public final class StarCannon extends ag {
                   if (!var15.field_p) {
                     var15.field_i = -64 + (var3 + sh.b(-127, 128));
                   }
-                  kh.field_y.addLast(param0 ^ 22, var15);
+                  AccountRegistrationPanel.field_y.addLast(param0 ^ 22, var15);
                   var10++;
                 }
               }
@@ -3157,7 +3157,7 @@ public final class StarCannon extends ag {
           if (ua.field_c >= 4) {
             nf.field_e = 0;
             for (var10 = -3; var10 < 4; var10++) {
-              kh.field_y.addLast(param0 ^ 5, new bf(24 * var10 + 320, -Math.abs(var10 * 64 - 64), var10 * 7680, 1));
+              AccountRegistrationPanel.field_y.addLast(param0 ^ 5, new bf(24 * var10 + 320, -Math.abs(var10 * 64 - 64), var10 * 7680, 1));
             }
           } else {
             var13 = new bf(var3, -64, var4, 22);
@@ -3177,7 +3177,7 @@ public final class StarCannon extends ag {
             var14.field_z = sh.b(-126, 64) + 32;
             var14.field_l = sh.b(-126, 36);
             nf.field_e = var2 * 30 - (-25 - 50 * nf.field_l);
-            kh.field_y.addLast(param0 + 3, new bf(128 + sh.b(11, 384), -128, FrameTimer.field_e.field_f, 1));
+            AccountRegistrationPanel.field_y.addLast(param0 + 3, new bf(128 + sh.b(11, 384), -128, FrameTimer.field_e.field_f, 1));
           }
         }
     }
@@ -3253,10 +3253,10 @@ public final class StarCannon extends ag {
         lf.clearStaticReferences(false);
         lc.m(-11147);
         ph.clearDeclaredStaticReferences(-1);
-        kh.clearStaticReferences((byte) 126);
+        AccountRegistrationPanel.clearStaticReferences((byte) 126);
         db.clearStaticReferences(-117);
-        rg.clearStaticReferences(-128);
-        hg.clearStaticReferences(false);
+        LoginPanel.clearStaticReferences(-128);
+        DisplayNameSelectionPanel.clearStaticReferences(false);
         ma.clearStaticReferences((byte) 67);
         sg.clearStaticReferences(false);
         g.clearStaticReferences(-12837);
@@ -3343,7 +3343,7 @@ public final class StarCannon extends ag {
         jk.clearStaticReferences(-124);
         nf.clearStaticReferences(-109);
         ad.clearStaticReferences((byte) -95);
-        fe.clearStaticReferences((byte) 73);
+        EditableTextField.clearStaticReferences((byte) 73);
         qj.clearStaticReferences(-102);
         fa.clearStaticReferences(1851621384);
         kd.clearStaticReferences(-16);
@@ -3351,7 +3351,7 @@ public final class StarCannon extends ag {
         jg.e(934716193);
         pa.f(-200);
         gh.resetStaticState(13329);
-        qf.d((byte) 100);
+        TextFieldValidator.d((byte) 100);
         vg.clearStaticReferences(-117);
         jj.clearStaticReferences(0);
         el.clearStaticReferences((byte) 115);
@@ -3404,14 +3404,14 @@ public final class StarCannon extends ag {
         il.clearStaticReferences(2147483647);
         nh.resetStaticState(false);
         AccountNameAvailabilityValidator.resetStaticState(0);
-        cc.clearStaticReferences((byte) -98);
-        cf.clearDeclaredStaticReferences(1);
-        di.clearDeclaredStaticReferences(24979);
-        vb.e((byte) 114);
+        PasswordValidator.clearStaticReferences((byte) -98);
+        ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences(1);
+        AgeValidator.clearDeclaredStaticReferences(24979);
+        MatchingFieldValidator.e((byte) 114);
         og.clearStaticReferences((byte) 92);
         oi.a(false);
         p.a(11);
-        uc.clearStaticReferences(1);
+        DebouncedFieldValidator.clearStaticReferences(1);
         sk.a(false);
         this.field_u = null;
     }
@@ -3562,7 +3562,7 @@ public final class StarCannon extends ag {
             var4 = var5 / 2 - 32;
           }
           j.field_c[var3.field_g].c(8, var4);
-          af.field_y.a(di.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
+          af.field_y.a(AgeValidator.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
         }
         if (nh.field_e != 0) {
           var4Lifetime1 = 256 * IsaacRandom.field_e / 50;
@@ -3825,7 +3825,7 @@ public final class StarCannon extends ag {
               var7 -= 16;
               var11.field_p = true;
               var8 = var8 + var9;
-              kh.field_y.addLast(107, var11);
+              AccountRegistrationPanel.field_y.addLast(107, var11);
             }
             decompiledFrameRemainder0 = false;
           }
@@ -3841,8 +3841,8 @@ public final class StarCannon extends ag {
                     19 != var7) {
                     if (7 == var7) {
                       nf.field_e = 0;
-                      kh.field_y.addLast(73, new bf(var3, -64, var4, 3));
-                      kh.field_y.addLast(64, new bf(640 - var3, -64, 640 - var3, 21));
+                      AccountRegistrationPanel.field_y.addLast(73, new bf(var3, -64, var4, 3));
+                      AccountRegistrationPanel.field_y.addLast(64, new bf(640 - var3, -64, 640 - var3, 21));
                     } else {
                       if (var7 != 8 &&
                         var7 != 14) {
@@ -3851,41 +3851,41 @@ public final class StarCannon extends ag {
                           if (13 == var7) {
                             nf.field_e = -50;
                             var7 = sh.b(-126, 180) + 32;
-                            kh.field_y.addLast(74, new bf(var7, -64, var7, 12));
+                            AccountRegistrationPanel.field_y.addLast(74, new bf(var7, -64, var7, 12));
                             var7 = 608 - sh.b(-128, 180);
-                            kh.field_y.addLast(56, new bf(var7, -64, var7, 12));
+                            AccountRegistrationPanel.field_y.addLast(56, new bf(var7, -64, var7, 12));
                           } else {
                             if (var7 == 17) {
                               nf.field_e = -50;
-                              kh.field_y.addLast(82, new bf(32, -64, 32, 21));
+                              AccountRegistrationPanel.field_y.addLast(82, new bf(32, -64, 32, 21));
                               if (sh.b(34, 2) == 0) {
-                                kh.field_y.addLast(91, new bf(320, -32, 320, 18));
-                                kh.field_y.addLast(67, new bf(320, -96, 320, 18));
-                                kh.field_y.addLast(79, new bf(320, -160, 320, 18));
+                                AccountRegistrationPanel.field_y.addLast(91, new bf(320, -32, 320, 18));
+                                AccountRegistrationPanel.field_y.addLast(67, new bf(320, -96, 320, 18));
+                                AccountRegistrationPanel.field_y.addLast(79, new bf(320, -160, 320, 18));
                               } else {
-                                kh.field_y.addLast(69, new bf(320, -96, 320, 21));
+                                AccountRegistrationPanel.field_y.addLast(69, new bf(320, -96, 320, 21));
                               }
-                              kh.field_y.addLast(106, new bf(608, -64, 608, 21));
+                              AccountRegistrationPanel.field_y.addLast(106, new bf(608, -64, 608, 21));
                             } else {
                               if (18 == var7) {
                                 nf.field_e = 150;
-                                kh.field_y.addLast(76, new bf(var3, -64, var4, 3));
+                                AccountRegistrationPanel.field_y.addLast(76, new bf(var3, -64, var4, 3));
                                 var7 = 0;
                                 while (true) {
                                   stackIn_104_0 = (2 == nf.field_l) ? 2 : 1;
                                   if (stackIn_104_0 <= var7) {
-                                    kh.field_y.addLast(107, new bf(-var3 + 640, -64, 640 - var4, 3));
+                                    AccountRegistrationPanel.field_y.addLast(107, new bf(-var3 + 640, -64, 640 - var4, 3));
                                     decompiledFrameCompleted2 = false;
                                     break;
                                   }
-                                  kh.field_y.addLast(112, new bf(320, 64 * -var7 - 128, 320, 3));
+                                  AccountRegistrationPanel.field_y.addLast(112, new bf(320, 64 * -var7 - 128, 320, 3));
                                   var7++;
                                 }
                               }
                               if ((decompiledFrameCompleted2) &&
                                 ((20 == var7))) {
                                 var6 = new bf(320, -256, var4, 16);
-                                kh.field_y.addLast(88, var6);
+                                AccountRegistrationPanel.field_y.addLast(88, var6);
                                 tj.field_C = var6.field_k;
                                 ua.field_c = 1 + ResourceArchive.field_c[rj.field_h];
                                 AccountRequestState.field_d = AccountRequestState.field_d + 1;
@@ -3901,7 +3901,7 @@ public final class StarCannon extends ag {
                           }
                         } else {
                           nf.field_e = 100;
-                          kh.field_y.addLast(75, new bf(var3, -64, -64 + sh.b(-1, 128), 5));
+                          AccountRegistrationPanel.field_y.addLast(75, new bf(var3, -64, -64 + sh.b(-1, 128), 5));
                         }
                       } else {
                         nf.field_e = 0;
@@ -3918,25 +3918,25 @@ public final class StarCannon extends ag {
                           var7 -= 16;
                           var11Lifetime1.field_p = true;
                           var8Lifetime1 = var8Lifetime1 + var9Lifetime1;
-                          kh.field_y.addLast(100, var11Lifetime1);
+                          AccountRegistrationPanel.field_y.addLast(100, var11Lifetime1);
                         }
                         var8Lifetime1Lifetime1 = 64 + sh.b(100, 512);
-                        kh.field_y.addLast(95, new bf(var8Lifetime1Lifetime1, -96, var8Lifetime1Lifetime1, 21));
+                        AccountRegistrationPanel.field_y.addLast(95, new bf(var8Lifetime1Lifetime1, -96, var8Lifetime1Lifetime1, 21));
                       }
                     }
                   } else {
                     nf.field_e = 0;
                     for (var7 = 0; 5 > var7; var7++) {
-                      kh.field_y.addLast(117, new bf(var3, -64 + -var7 * 64, var4, 1));
+                      AccountRegistrationPanel.field_y.addLast(117, new bf(var3, -64 + -var7 * 64, var4, 1));
                     }
-                    kh.field_y.addLast(122, new bf(-var3 + 640, -64, -var3 + 640, 21));
+                    AccountRegistrationPanel.field_y.addLast(122, new bf(-var3 + 640, -64, -var3 + 640, 21));
                   }
                 } else {
                   nf.field_e = 0;
                   for (var7 = 0; 5 > var7; var7++) {
-                    kh.field_y.addLast(81, new bf(var3, -64 + -var7 * 64, var4, 1));
+                    AccountRegistrationPanel.field_y.addLast(81, new bf(var3, -64 + -var7 * 64, var4, 1));
                   }
-                  kh.field_y.addLast(57, new bf(640 - var3, -64, -var4 + 640, 3));
+                  AccountRegistrationPanel.field_y.addLast(57, new bf(640 - var3, -64, -var4 + 640, 3));
                 }
                 decompiledFrameRemainder0 = !(decompiledFrameCompleted2);
               }
@@ -3955,7 +3955,7 @@ public final class StarCannon extends ag {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
-                  kh.field_y.addLast(63, new bf(var3, -64 + 64 * -var7, var4, 4));
+                  AccountRegistrationPanel.field_y.addLast(63, new bf(var3, -64 + 64 * -var7, var4, 4));
                   var7++;
                 }
               }
@@ -3979,7 +3979,7 @@ public final class StarCannon extends ag {
                 }
                 var8_ref_bf = new bf(var3, -64 + 64 * -var7, var4, 2);
                 var8_ref_bf.field_h = (bf) (var5);
-                kh.field_y.addLast(115, var8_ref_bf);
+                AccountRegistrationPanel.field_y.addLast(115, var8_ref_bf);
                 if (var7 == 0) {
                   var5 = var8_ref_bf;
                 }
@@ -3994,7 +3994,7 @@ public final class StarCannon extends ag {
           (decompiledFrameCompleted0)) {
           nf.field_e = 0;
           for (var7Lifetime1 = -8; var7Lifetime1 < 8; var7Lifetime1++) {
-            kh.field_y.addLast(88, new bf(320 + var7Lifetime1 * 24, -Math.abs(-64 + var7Lifetime1 * 64), 24 * var7Lifetime1 + 320, 1));
+            AccountRegistrationPanel.field_y.addLast(88, new bf(320 + var7Lifetime1 * 24, -Math.abs(-64 + var7Lifetime1 * 64), 24 * var7Lifetime1 + 320, 1));
           }
         }
         if (param0 < 79) {

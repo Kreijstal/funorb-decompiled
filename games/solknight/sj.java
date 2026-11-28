@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sj implements j {
-    static ga field_d;
+    static DisplayNameSelectionPanel field_d;
     private int field_a;
     private int field_c;
     private int field_b;
@@ -66,7 +66,7 @@ final class sj implements j {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 1) {
-          field_d = (ga) null;
+          field_d = (DisplayNameSelectionPanel) null;
           field_d = null;
           return;
         }
@@ -79,7 +79,7 @@ final class sj implements j {
           param0.removeMouseMotionListener(ee.field_j);
           param0.removeFocusListener(ee.field_j);
           if (param1 > -24) {
-            field_d = (ga) null;
+            field_d = (DisplayNameSelectionPanel) null;
           }
           u.field_d = 0;
         } catch (RuntimeException runtimeException) {
@@ -108,7 +108,7 @@ final class sj implements j {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_d = (ga) null;
+            field_d = (DisplayNameSelectionPanel) null;
           }
           stackIn_3_0 = tg.a(false, -126, param0);
           return stackIn_3_0;

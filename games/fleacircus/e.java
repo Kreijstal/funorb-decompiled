@@ -244,7 +244,7 @@ class e implements ComponentLayout, eg {
             var11 = this.a(param0, param2, (byte) 60) + Math.max(0, var8.field_a);
             var12 = this.a(param0, param2, (byte) -82) + Math.min(this.a(param2, -21), Math.min(var8.field_c, 1 + var7 >= var15.field_c.length ? var8.field_c : var14.field_c[1 + var7].field_a));
             mi.a((byte) -52, param2.field_u + (param4 + param2.field_y), param4 + param2.field_y, param0 - (-param2.field_z - param2.field_j), param0 + param2.field_z);
-            nf.field_M.a(param1 ^ 4, var10, var11, var12, this.field_c, var10);
+            DisplayNameSelectionPanel.field_M.a(param1 ^ 4, var10, var11, var12, this.field_c, var10);
             ia.a(-69);
           }
         } catch (RuntimeException runtimeException) {
@@ -321,7 +321,7 @@ class e implements ComponentLayout, eg {
               }
             }
             var15 = stackIn_20_0;
-            nf.field_M.a(this.field_p >>> 24, var15 - var14, false, this.field_p, var13.field_c, this.field_m + param2 + param0.field_z + (param0.field_n + var13.field_a), this.a(param0, var14, true, param5));
+            DisplayNameSelectionPanel.field_M.a(this.field_p >>> 24, var15 - var14, false, this.field_p, var13.field_c, this.field_m + param2 + param0.field_z + (param0.field_n + var13.field_a), this.a(param0, var14, true, param5));
           }
           ia.a(-69);
           return;

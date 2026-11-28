@@ -194,7 +194,7 @@ final class ad extends kf {
                 }
               }
             } else {
-              var9 = var4.a(cf.field_k);
+              var9 = var4.a(ConfirmedEmailAvailabilityValidator.field_k);
               if (var9 > var3_int) {
                 var3_int = var9;
               }
@@ -202,7 +202,7 @@ final class ad extends kf {
               if (var3_int < var9) {
                 var3_int = var9;
               }
-              var9 = var4.a(hg.field_D);
+              var9 = var4.a(DisplayNameSelectionPanel.field_D);
               if (var9 > var3_int) {
                 var3_int = var9;
               }

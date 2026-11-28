@@ -89,10 +89,10 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static pg a(pg param0, int[] param1, byte param2) {
-        pg var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, int[] param1, byte param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        pg stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -100,7 +100,7 @@ abstract class MouseWheelInput {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new pg(0, 0, 0);
+          var3 = new IndexedSprite(0, 0, 0);
           var3.field_h = param0.field_h;
           var3.field_j = param0.field_j;
           var3.field_i = param0.field_i;

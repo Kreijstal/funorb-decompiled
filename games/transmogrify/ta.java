@@ -8,7 +8,7 @@ final class ta {
     String field_a;
     boolean field_c;
     static String field_g;
-    static wl field_f;
+    static AccountRegistrationPanel field_f;
     static String field_h;
 
     final static int a(int param0, int param1) {

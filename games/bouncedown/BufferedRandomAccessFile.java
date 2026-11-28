@@ -328,14 +328,14 @@ final class BufferedRandomAccessFile {
           if (param2 == 255) {
             stackIn_11_0 = 5579;
             stackIn_12_1 = !(13 <= cg.field_a);
-            ci.field_L = r.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
+            LoginPanel.field_L = r.createAccountSuccessResult(stackIn_11_0, stackIn_12_1);
           } else {
             if (param2 >= 100 &&
               param2 <= 105) {
-              ci.field_L = GzipDecompressor.createAccountSuggestionsResult(false, param1);
+              LoginPanel.field_L = GzipDecompressor.createAccountSuggestionsResult(false, param1);
               return;
             }
-            ci.field_L = wb.createAccountErrorResult(param2, 1, param3);
+            LoginPanel.field_L = wb.createAccountErrorResult(param2, 1, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -518,7 +518,7 @@ final class BufferedRandomAccessFile {
           return null;
         }
         fh.field_B = wj.field_a;
-        return ci.field_L;
+        return LoginPanel.field_L;
     }
 
     final void seek(byte param0, long param1) throws IOException {
@@ -640,12 +640,12 @@ final class BufferedRandomAccessFile {
         var19 = Bounce.field_N;
         try {
           qh.field_g = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, param0, 0, 65536};
-          var1_int = q.field_G.length;
+          var1_int = DisplayNameSelectionPanel.field_G.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_jk = q.field_G[var3];
+            var4_ref_jk = DisplayNameSelectionPanel.field_G[var3];
             var4_ref_jk.a(true);
             ResourceArchive.updateLogoPartRotation(var3, -1);
             var5 = var4_ref_jk.field_e + var4_ref_jk.field_n >> 1;
@@ -683,15 +683,15 @@ final class BufferedRandomAccessFile {
           var14 = (int)((double)var14 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; var15 < q.field_G.length; var15++) {
+          for (var15 = 0; var15 < DisplayNameSelectionPanel.field_G.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; q.field_G.length > var17_int; var17_int++) {
+            for (var17_int = 1; DisplayNameSelectionPanel.field_G.length > var17_int; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var2[var16] = -2147483648;
-            var17 = q.field_G[var16];
+            var17 = DisplayNameSelectionPanel.field_G[var16];
             ResourceArchive.updateLogoPartRotation(var16, -1);
             for (var18 = 0; var18 < 3; var18++) {
               il.field_e[var18] = il.field_e[var18] + li.field_e[var15][var18];

@@ -189,7 +189,7 @@ final class re {
         this.field_i = "";
         this.field_s = 0;
         this.field_j = "";
-        this.field_j = uh.field_L[param0];
+        this.field_j = LoginPanel.field_L[param0];
         this.field_k = ImageProducerRasterBuffer.field_h[param0];
         this.field_e = i.field_b[param0];
         this.field_i = da.field_i[param0];

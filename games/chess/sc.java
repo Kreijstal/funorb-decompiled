@@ -125,7 +125,7 @@ final class sc {
 
     final static void a(int param0, boolean param1) {
         ob.field_z = wm.field_n[param0];
-        uk.field_a = bi.field_c[param0];
+        ChessBoardState.field_a = bi.field_c[param0];
         if (param1) {
           return;
         }

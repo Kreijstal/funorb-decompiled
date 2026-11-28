@@ -396,7 +396,7 @@ final class SectorCacheStore {
             var3 = (byte[]) null;
             SectorCacheStore.a((byte[]) null, 124);
           }
-          var2 = new hh(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, rg.field_D, Bzip2State.field_K);
+          var2 = new hh(param0, BufferedSocket.field_j, Bzip2State.field_a, ql.field_b, wk.field_b, EditableTextField.field_D, Bzip2State.field_K);
           wd.d(120);
           stackIn_6_0 = var2;
           return stackIn_6_0;

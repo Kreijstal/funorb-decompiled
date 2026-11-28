@@ -59,7 +59,7 @@ class DualLinkNode extends IntrusiveNode {
             DualLinkNode.clearDeclaredStaticReferences(-46);
           }
           while (param1 >= var6_int) {
-            di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
+            IndexedSpriteLayer.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
             var6_int++;
           }
           return;

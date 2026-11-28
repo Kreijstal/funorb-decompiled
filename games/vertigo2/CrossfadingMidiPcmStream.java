@@ -68,7 +68,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         if (param0 <= 83) {
           CrossfadingMidiPcmStream.a((byte) -30);
         }
-        return (java.awt.Container) ((Object) ob.e((byte) 116));
+        return (java.awt.Container) ((Object) LoginPanel.e((byte) 116));
     }
 
     public static void e(int param0) {

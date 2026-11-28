@@ -150,7 +150,7 @@ final class IntrusiveDeque {
             var12.d();
             tk.field_R.a(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
             ek.field_G.a(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
-            tk.field_R.a(ni.a(new String[]{LevelEntity.field_J}, 0, LocalizedStrings.field_t), var6, 110, 16777215, -1);
+            tk.field_R.a(ni.a(new String[]{LevelEntity.field_J}, 0, ConfirmedEmailAvailabilityValidator.field_t), var6, 110, 16777215, -1);
             ek.field_G.a(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
             tk.field_R.a(ub.field_m, var6, 180, 16777215, -1);
             ek.field_G.a(wi.field_b, var6, 200, 16777215, -1);
@@ -163,8 +163,8 @@ final class IntrusiveDeque {
               ih.a(SecondaryNodeDeque.field_i[var7].storedWidth, 0, 4, SecondaryNodeDeque.field_i[var7].storedHeight, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
             }
             hb.field_g = null;
-            dg.field_R = GzipDecoder.field_b.c();
-            dg.field_R.d();
+            AccountRegistrationPanel.field_R = GzipDecoder.field_b.c();
+            AccountRegistrationPanel.field_R.d();
             ii.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 4, 0, 0);
             SoftwareRasterizer.setTarget(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ck.field_c);
@@ -217,14 +217,14 @@ final class IntrusiveDeque {
               vk.field_d.fullHeight = vk.field_d.fullHeight + var9_intLifetime2 * 2;
               vk.field_k = vk.field_k + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
-              bh.field_t = bh.field_t - var9_intLifetime2;
+              PasswordValidator.field_t = PasswordValidator.field_t - var9_intLifetime2;
             }
             if (vk.field_d.fullHeight < var6Lifetime1 + var8) {
               var9_intLifetime3 = var8 + (var6Lifetime1 - vk.field_d.fullHeight);
               vk.field_d.offsetY = vk.field_d.offsetY + var9_intLifetime3;
               vk.field_d.fullHeight = vk.field_d.fullHeight + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
-              bh.field_t = bh.field_t - var9_intLifetime3;
+              PasswordValidator.field_t = PasswordValidator.field_t - var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               vk.field_k = vk.field_k + var9_intLifetime3;
             }
@@ -237,7 +237,7 @@ final class IntrusiveDeque {
             var9.drawTransparent(0, 0);
             cf.field_c = new Sprite(640, 480);
             cf.field_c.d();
-            vk.field_d.b(rl.field_f + (vk.field_d.fullWidth >> 1), (vk.field_d.fullHeight >> 1) + bh.field_t, ImageProducerRasterBuffer.field_u, 4096);
+            vk.field_d.b(rl.field_f + (vk.field_d.fullWidth >> 1), (vk.field_d.fullHeight >> 1) + PasswordValidator.field_t, ImageProducerRasterBuffer.field_u, 4096);
             vk.field_d = null;
             cf.field_c.h();
             SoftwareRasterizer.setTarget(var29, var2Lifetime1, var3Lifetime1);
@@ -280,8 +280,8 @@ final class IntrusiveDeque {
             ProxySocketConnector.field_m = null;
           }
           SoftwareRasterizer.saveClip(ck.field_c);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, MatchingFieldValidator.field_u, ea.field_c);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, MatchingFieldValidator.field_u, ea.field_c);
           if (IntrusiveNode.field_b != null) {
             IntrusiveNode.field_b.drawTransparent(0, 0);
           }
@@ -297,7 +297,7 @@ final class IntrusiveDeque {
             NodeHashTableIterator.field_b.drawTransparent(231, 390);
             var1 = GzipDecoder.field_b;
             if (0 == ByteStorage.field_c.field_j) {
-              var1 = dg.field_R;
+              var1 = AccountRegistrationPanel.field_R;
             }
             var1.drawTransparent(0, 0);
             stackIn_52_0 = 40;
@@ -340,15 +340,15 @@ final class IntrusiveDeque {
               ph.field_d < le.field_e.storedHeight + var1_int) {
               var2Lifetime5 = (ga.$cfr$intArgs$a$f0c91481eb80(5, ub.field_h << 4) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (-le.field_e.storedWidth + 269 < LocalizedStrings.field_u &&
-                  LocalizedStrings.field_u < 269) {
+                if (-le.field_e.storedWidth + 269 < ConfirmedEmailAvailabilityValidator.field_u &&
+                  ConfirmedEmailAvailabilityValidator.field_u < 269) {
                   le.field_e.drawAdditiveWithIntensity(269 + (-le.field_e.fullWidth - 1), -1 + var1_int, var2Lifetime5);
                   le.field_e.drawAdditiveWithIntensity(1 - le.field_e.fullWidth + 269, -1 + var1_int, var2Lifetime5);
                   le.field_e.drawAdditiveWithIntensity(268 - le.field_e.fullWidth, 1 + var1_int, var2Lifetime5);
                   le.field_e.drawAdditiveWithIntensity(1 + (-le.field_e.fullWidth + 269), var1_int + 1, var2Lifetime5);
                 } else {
-                  if (586 < LocalizedStrings.field_u &&
-                    LocalizedStrings.field_u < le.field_e.storedWidth + 586) {
+                  if (586 < ConfirmedEmailAvailabilityValidator.field_u &&
+                    ConfirmedEmailAvailabilityValidator.field_u < le.field_e.storedWidth + 586) {
                     dh.field_ab.drawAdditiveWithIntensity(585, var1_int - 1, var2Lifetime5);
                     dh.field_ab.drawAdditiveWithIntensity(587, var1_int - 1, var2Lifetime5);
                     dh.field_ab.drawAdditiveWithIntensity(585, 1 + var1_int, var2Lifetime5);

@@ -76,7 +76,7 @@ final class in {
           if (var11.status != 2) {
             return var7;
           }
-          wf.exitFullscreenFrame(var7, param2, param4 - 3057);
+          LoginPanel.exitFullscreenFrame(var7, param2, param4 - 3057);
           stackIn_40_0 = null;
           return (java.awt.Frame) (stackIn_40_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -71,7 +71,7 @@ final class ki extends DualLinkNode {
               fieldTemp$2 = this.field_C + 1;
               this.field_C = this.field_C + 1;
               if (!(fieldTemp$2 >= 4)) {
-                this.field_I = qi.field_K[this.field_C];
+                this.field_I = LoginPanel.field_K[this.field_C];
               }
             }
             decompiledFrameRemainder0 = false;
@@ -211,7 +211,7 @@ final class ki extends DualLinkNode {
           uc.field_a.writeInt(-803539344, e.field_b[1]);
           uc.field_a.writeInt(-803539344, e.field_b[2]);
           uc.field_a.writeInt(-803539344, e.field_b[3]);
-          df.a(uc.field_a, false);
+          PasswordValidator.a(uc.field_a, false);
           uc.field_a.writeShort(param0, 80);
           if (!param2) {
             return;
@@ -237,7 +237,7 @@ final class ki extends DualLinkNode {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (null != df.field_o) {
+          if (null != PasswordValidator.field_o) {
             var6 = var6 | 16;
           }
           SectorCacheStore.field_c.writeByte(var6, -49152);
@@ -246,8 +246,8 @@ final class ki extends DualLinkNode {
             var7 = "";
           }
           SectorCacheStore.field_c.writeString(-119, var7);
-          if (df.field_o != null) {
-            SectorCacheStore.field_c.writePrefixedString(df.field_o, -57);
+          if (PasswordValidator.field_o != null) {
+            SectorCacheStore.field_c.writePrefixedString(PasswordValidator.field_o, -57);
           }
           e.a(sd.field_a, fj.field_F, (byte) 92, SectorCacheStore.field_c, uc.field_a);
           SectorCacheStore.field_c.backpatchShortLength(6903, SectorCacheStore.field_c.position - var5_int);
@@ -483,7 +483,7 @@ final class ki extends DualLinkNode {
             this.field_I = ak.field_t[this.field_i];
           } else {
             if (this.field_w == 2) {
-              this.field_I = qi.field_K[0];
+              this.field_I = LoginPanel.field_K[0];
             } else {
               if (this.field_w != 3) {
                 if (this.field_w != 4) {
@@ -499,7 +499,7 @@ final class ki extends DualLinkNode {
                   this.field_I = NodeHashTableIterator.field_h;
                 }
               } else {
-                this.field_I = qi.field_K[1];
+                this.field_I = LoginPanel.field_K[1];
               }
             }
           }

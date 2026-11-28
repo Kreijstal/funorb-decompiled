@@ -17,13 +17,13 @@ final class kj {
         int var3 = MinerDisturbance.field_ab;
         tm var1Lifetime1;
         while (true) {
-          dupTemp$0 = (tm) (ok.field_b.removeFirst(63854));
+          dupTemp$0 = (tm) (DebouncedFieldValidator.field_b.removeFirst(63854));
           var4 = dupTemp$0;
           var1 = var4;
           if (null == dupTemp$0) {
             break;
           }
-          ke.field_X[var4.field_s] = false;
+          ValidatedTextField.field_X[var4.field_s] = false;
         }
         while (true) {
           dupTemp$1 = (tm) (ec.field_c.removeFirst(63854));
@@ -32,14 +32,14 @@ final class kj {
           if (null == dupTemp$1) {
             break;
           }
-          ke.field_X[var5.field_s] = false;
+          ValidatedTextField.field_X[var5.field_s] = false;
         }
         if (param0 > -16) {
           return;
         }
         try {
           for (var2 = 0; var2 < 35; var2++) {
-            ke.field_X[var2] = false;
+            ValidatedTextField.field_X[var2] = false;
           }
           jn.a(0);
           ja.field_u = 150;

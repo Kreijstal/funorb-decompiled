@@ -20,8 +20,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
         if (param2 >= ch.field_A &&
           param2 < ch.field_A + DualLinkNode.field_r.field_y &&
-          param0 >= v.field_N &&
-          v.field_N + DualLinkNode.field_r.field_w > param0) {
+          param0 >= AccountRegistrationPanel.field_N &&
+          AccountRegistrationPanel.field_N + DualLinkNode.field_r.field_w > param0) {
           return 1;
         }
         if (param1 != -13412) {
@@ -79,7 +79,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             dh.field_N = new BitPacketBuffer(param7);
             nj.field_p = new BitPacketBuffer(param4);
             ci.field_W = param13;
-            ei.field_o = param3;
+            TextFieldValidator.field_o = param3;
             ArchiveRequest.field_v = param1;
             ia.field_c = param10;
             var15_int = 42 % ((param2 + 70) / 44);
@@ -87,8 +87,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
             wg.field_d = param11;
             ml.field_n = param8;
             DiskCacheWorker.field_i = param12;
-            nf.field_t = param9;
-            dc.field_e = param6;
+            MatchingFieldValidator.field_t = param9;
+            DebouncedFieldValidator.field_e = param6;
             pi.field_I = param5;
             if (null == pi.field_I.field_m) {
               return;

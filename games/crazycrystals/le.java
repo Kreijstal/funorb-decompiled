@@ -24,7 +24,7 @@ final class le extends ScoreModifier {
         int[] var16 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          var12 = kd.field_n;
+          var12 = ConfirmedEmailAvailabilityValidator.field_n;
           if (param0 != 15295) {
             le.clearStaticReferences(115);
           }

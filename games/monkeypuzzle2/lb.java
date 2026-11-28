@@ -203,7 +203,7 @@ final class lb extends WidgetContainer implements ql {
           if (param0) {
             lb.clearStaticReferences((byte) -92);
           }
-          stackIn_3_0 = wj.a((byte) 83, var5, param2, var4_int);
+          stackIn_3_0 = TextFieldValidator.a((byte) 83, var5, param2, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

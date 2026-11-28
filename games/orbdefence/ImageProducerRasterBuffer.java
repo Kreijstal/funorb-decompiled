@@ -81,7 +81,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           return;
         }
-        if (!ug.a((byte) 94, wc.field_c)) {
+        if (!MatchingFieldValidator.a((byte) 94, wc.field_c)) {
           vh.field_q[8] = new int[]{19, 20, 21, 22, 23, 24, 5};
           nc.field_cb[8] = new ja(8);
           if (tc.field_b <= 0) {

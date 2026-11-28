@@ -366,11 +366,11 @@ final class ja extends WidgetContainer implements u, ql {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = bg.field_L[var15Lifetime1];
+            var22 = AccountRegistrationPanel.field_L[var15Lifetime1];
             var23 = sb.field_l[var15Lifetime1];
-            var24 = bg.field_L[var16];
+            var24 = AccountRegistrationPanel.field_L[var16];
             var25 = sb.field_l[var16];
-            var26 = bg.field_L[var17];
+            var26 = AccountRegistrationPanel.field_L[var17];
             var27 = sb.field_l[var17];
             if (var18 == var19 &&
               var19 == var20) {

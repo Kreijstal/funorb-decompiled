@@ -16,7 +16,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_S;
     private int[] field_H;
     private tg field_F;
-    static cl field_D;
+    static LoginPanel field_D;
     static Sprite field_ab;
     private int[] field_I;
     private int[] field_R;
@@ -632,7 +632,7 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (!param1) {
-          field_D = (cl) null;
+          field_D = (LoginPanel) null;
         }
     }
 

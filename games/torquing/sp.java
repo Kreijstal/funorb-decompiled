@@ -25,7 +25,7 @@ final class sp extends im {
         try {
           this.field_N = param1;
           if (this.field_N != null) {
-            var3_int = pe.field_E.a(this.field_N, 260, pe.field_E.field_x);
+            var3_int = LoginPanel.field_E.a(this.field_N, 260, LoginPanel.field_E.field_x);
             this.a(300, (byte) -25, 150 + var3_int);
           }
           this.field_T = new kf(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -102,10 +102,10 @@ final class sp extends im {
     final void b(int param0, int param1, byte param2) {
         if (param2 <= -16) {
           super.b(param0, param1, (byte) -75);
-          pe.field_E.c(this.field_S, param1 + (this.width >> 1), param0 + 103, 16777215, -1);
+          LoginPanel.field_E.c(this.field_S, param1 + (this.width >> 1), param0 + 103, 16777215, -1);
           if (null != this.field_N) {
             SoftwareRasterizer.drawHorizontalLine(20 + param1, -7 + (param0 + 120), 260, 8421504);
-            pe.field_E.a(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
+            LoginPanel.field_E.a(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, LoginPanel.field_E.field_x);
           }
           return;
         }

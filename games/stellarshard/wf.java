@@ -98,7 +98,7 @@ abstract class wf {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param1.getCodeBase(), var4);
-              param1.getAppletContext().showDocument(lk.a(param1, var5, -102), "_self");
+              param1.getAppletContext().showDocument(TextFieldValidator.a(param1, var5, -102), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

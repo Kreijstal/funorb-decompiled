@@ -178,7 +178,7 @@ final class BufferedRandomAccessFile {
     final static void a(int param0, boolean param1, String param2, boolean param3) {
         tn.a(-1);
         lg.field_w.h(1);
-        wo.field_e = new dn(DiskArchiveRequest.field_C, (String) null, qc.field_t, param3, param1);
+        wo.field_e = new LoginPanel(DiskArchiveRequest.field_C, (String) null, MenuScreen.field_t, param3, param1);
         if (param0 != 8192) {
           return;
         }
@@ -234,11 +234,11 @@ final class BufferedRandomAccessFile {
           }
           if (1 == var2) {
             var4 = var9.readSignedSmart(0);
-            var5 = (mm) (m.field_a.beginBackward(-24172));
+            var5 = (mm) (DebouncedFieldValidator.field_a.beginBackward(-24172));
             while (var5 != null) {
               if (var3 != var5.field_p ||
                 var5.field_r != var4) {
-                var5 = (mm) (m.field_a.nextBackward(4));
+                var5 = (mm) (DebouncedFieldValidator.field_a.nextBackward(4));
                 continue;
               }
               break;

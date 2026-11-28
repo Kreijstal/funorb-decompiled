@@ -50,7 +50,7 @@ final class JavaSoundAudioOutput extends AudioOutput {
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (NetworkGameClient.countSetBits(param0, 8) != 1) {
-            this.openDevice(gk.roundUpPowerOfTwo(-912121912, param0));
+            this.openDevice(DisplayNameSelectionPanel.roundUpPowerOfTwo(-912121912, param0));
             return;
           }
           this.field_w = null;

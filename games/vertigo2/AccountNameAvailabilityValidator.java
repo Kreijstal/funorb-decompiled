@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends da {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int field_m;
     private String checkedName;
     static int[] field_q;
@@ -10,7 +10,7 @@ final class AccountNameAvailabilityValidator extends da {
     static String field_r;
     static int field_n;
 
-    final ba a(int param0, String param1) {
+    final ba getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -30,7 +30,7 @@ final class AccountNameAvailabilityValidator extends da {
           }
           if (param0 != -1) {
             var4 = (String) null;
-            this.a(86, (String) null);
+            this.getValidationStatus(86, (String) null);
           }
           if (!param1.equals(this.checkedName)) {
             var3 = qe.pollAccountNameCheck(param1, (byte) 54);
@@ -78,7 +78,7 @@ final class AccountNameAvailabilityValidator extends da {
         var3.writeShort(param2, param1 ^ -1739);
     }
 
-    final String b(int param0, String param1) {
+    final String getValidationMessage(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -141,7 +141,7 @@ final class AccountNameAvailabilityValidator extends da {
         }
     }
 
-    AccountNameAvailabilityValidator(kp param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }

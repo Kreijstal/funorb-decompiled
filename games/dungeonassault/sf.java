@@ -363,12 +363,12 @@ final class sf implements cl {
                     HuffmanDecoder.field_b[1].h(var2_int + var7, var2_int + var8);
                   } else if (0 == var12Lifetime2) {
                     HuffmanDecoder.field_b[0].h(var7 + var2_int, var8 + var2_int);
-                    p.field_G[var15].d(var7 + var2_int, var2_int + var8, 128);
-                    qe.b(var7 + var2_int, var8 + var2_int, 32, 32, 0, 0, 0);
+                    DungeonBuilderScreen.field_G[var15].d(var7 + var2_int, var2_int + var8, 128);
+                    DungeonAssaultScreen.b(var7 + var2_int, var8 + var2_int, 32, 32, 0, 0, 0);
                   } else {
                     HuffmanDecoder.field_b[var12Lifetime2].h(var7 + var2_int, var2_int + var8);
                     if (var6 != 24) {
-                      p.field_G[var15].d(var2_int + var7, var8 + var2_int, 64);
+                      DungeonBuilderScreen.field_G[var15].d(var2_int + var7, var8 + var2_int, 64);
                     }
                     if (var14 != 0) {
                       sm.field_g.d((-sm.field_g.field_y + 32 >> 1) + (var2_int + var7), (32 - sm.field_g.field_v >> 1) + (var8 + var2_int), 128);
@@ -666,7 +666,7 @@ final class sf implements cl {
         }
     }
 
-    sf(go param0, int param1, int param2) {
+    sf(DungeonRaidScreen param0, int param1, int param2) {
         int stackIn_9_0 = 0;
         int stackIn_9_1 = 0;
         RuntimeException stackIn_35_0 = null;
@@ -708,7 +708,7 @@ final class sf implements cl {
           this.a(15122, 48);
           this.b(-20827);
           jh.c();
-          p.field_G = new RgbSprite[16];
+          DungeonBuilderScreen.field_G = new RgbSprite[16];
           var7 = 0;
           scanLoop1: while (true) {
             stackIn_9_0 = 16;
@@ -745,7 +745,7 @@ final class sf implements cl {
                 var10++;
                 var12++;
               }
-              p.field_G[var7] = var8;
+              DungeonBuilderScreen.field_G[var7] = var8;
               var7++;
               continue scanLoop1;
             }
@@ -779,7 +779,7 @@ final class sf implements cl {
         var4 = DungeonAssault.field_K;
         try {
           oo.field_d = param1;
-          var2 = (fa) (ud.field_v.beginBackward(-24172));
+          var2 = (fa) (IntroSequenceScreen.field_v.beginBackward(-24172));
           var3 = -72 / ((param0 + 32) / 61);
           while (var2 != null) {
             stackIn_19_0 = var2.field_o.isLinked(-71);
@@ -800,7 +800,7 @@ final class sf implements cl {
               var4 != 0) {
               var2.field_n.h(oo.field_d * var2.field_l + 128 >> 8);
             }
-            var2 = (fa) (ud.field_v.nextBackward(4));
+            var2 = (fa) (IntroSequenceScreen.field_v.nextBackward(4));
             if (var4 == 0) {
               continue;
             }

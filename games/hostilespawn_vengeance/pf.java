@@ -61,7 +61,7 @@ final class pf {
     }
 
     final static void b(int param0) {
-        hk var1 = (hk) (ij.field_J.removeLast(-27493));
+        hk var1 = (hk) (DisplayNameSelectionPanel.field_J.removeLast(-27493));
         if (var1 == null) {
           var1 = new hk();
         }
@@ -158,7 +158,7 @@ final class pf {
     final static void b(byte param0) {
         de.c(-1);
         rj.field_K = true;
-        li.field_o = true;
+        MatchingFieldValidator.field_o = true;
         if (param0 != -64) {
           return;
         }

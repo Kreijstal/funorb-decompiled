@@ -19,9 +19,9 @@ final class GzipDecompressor {
           sj.field_d = null;
           gd.field_j = null;
           qn.field_q = param0;
-          if (mk.field_J != null) {
-            mk.field_J.clear(0);
-            mk.field_J = null;
+          if (AccountRegistrationPanel.field_J != null) {
+            AccountRegistrationPanel.field_J.clear(0);
+            AccountRegistrationPanel.field_J = null;
           }
           GameShell.field_l = null;
           if (null != nr.field_p) {
@@ -71,7 +71,7 @@ final class GzipDecompressor {
         if (param0 != -15922) {
           return (ve[]) null;
         }
-        return new ve[]{g.field_f, dk.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, br.field_Y, bd.field_e, RandomAccessCacheFile.field_g, DelegatingCanvas.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
+        return new ve[]{g.field_f, EmailFormatValidator.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, ValidatedTextField.field_Y, bd.field_e, RandomAccessCacheFile.field_g, DelegatingCanvas.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
     }
 
     final void decompress(PacketBuffer param0, byte param1, byte[] param2) {

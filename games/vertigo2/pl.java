@@ -42,10 +42,10 @@ final class pl extends jq {
         al.field_t = 0;
         pq.field_f = null;
         fn.field_y = null;
-        int var2 = rf.field_l;
+        int var2 = MatchingFieldValidator.field_l;
         if (param0 != 11) {
           field_j = (String) null;
-          rf.field_l = md.field_D;
+          MatchingFieldValidator.field_l = md.field_D;
           kb.field_e.field_m = kb.field_e.field_m + 1;
           md.field_D = var2;
           if (param1 != 51) {
@@ -124,7 +124,7 @@ final class pl extends jq {
           }
           return -1;
         }
-        rf.field_l = md.field_D;
+        MatchingFieldValidator.field_l = md.field_D;
         kb.field_e.field_m = kb.field_e.field_m + 1;
         md.field_D = var2;
         if (param1 != 51) {

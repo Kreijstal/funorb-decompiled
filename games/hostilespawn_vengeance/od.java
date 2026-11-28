@@ -166,7 +166,7 @@ final class od extends fc {
         if (!DirectByteStorage.field_k) {
           throw new IllegalStateException();
         }
-        ka.field_r = true;
+        EmailFormatValidator.field_r = true;
         MidiPcmStream.b(false, -23960);
         fa.field_c = param0;
     }

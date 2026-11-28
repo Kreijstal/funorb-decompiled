@@ -60,7 +60,7 @@ final class mf {
               GameKeyHandler.a((byte) 113);
               return;
             }
-            var6_int = hd.field_o - var10.position;
+            var6_int = ConfirmedEmailAvailabilityValidator.field_o - var10.position;
             var12 = var5_ref_nk.field_m;
             var11 = var12;
             var7 = var11;

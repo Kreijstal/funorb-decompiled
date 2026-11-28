@@ -282,7 +282,7 @@ final class IntrusiveDeque {
             stackIn_5_0 = (vk) null;
             return stackIn_5_0;
           }
-          var2 = new vk(param1, qc.field_P, mb.field_b, da.field_c, ra.field_ab, cb.field_b);
+          var2 = new vk(param1, ValidatedTextField.field_P, mb.field_b, da.field_c, ra.field_ab, cb.field_b);
           gb.a(-63);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -456,9 +456,9 @@ final class IntrusiveDeque {
     final static String b(boolean param0) {
         if (!param0) {
           field_d = (String) null;
-          return hf.field_b;
+          return DebouncedFieldValidator.field_b;
         }
-        return hf.field_b;
+        return DebouncedFieldValidator.field_b;
     }
 
     final static String a(byte param0, CharSequence param1) {
@@ -564,14 +564,14 @@ final class IntrusiveDeque {
               break;
             }
           }
-          if (uk.field_r < 0 &&
+          if (EmailFormatValidator.field_r < 0 &&
             fj.field_E != null &&
             fj.field_E.field_j) {
-            uk.field_r = fj.field_E.field_e;
-            FrameTimer.field_b = FrameTimer.field_b & ~uk.field_r;
+            EmailFormatValidator.field_r = fj.field_E.field_e;
+            FrameTimer.field_b = FrameTimer.field_b & ~EmailFormatValidator.field_r;
             fj.field_E = null;
             k.field_i = true;
-            kg.field_c = kg.field_c | uk.field_r;
+            kg.field_c = kg.field_c | EmailFormatValidator.field_r;
           }
           if (ok.a(false)) {
             return;

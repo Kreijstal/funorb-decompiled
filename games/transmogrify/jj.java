@@ -53,14 +53,14 @@ final class jj {
         int var2_intLifetime1;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          vg.a(param1, cg.field_l, true, true, ua.field_d, 0, rc.field_c);
-          for (var2_int = 0; var2_int < cg.field_l; var2_int++) {
+          vg.a(param1, MatchingFieldValidator.field_l, true, true, ua.field_d, 0, rc.field_c);
+          for (var2_int = 0; var2_int < MatchingFieldValidator.field_l; var2_int++) {
             lk.field_d[var2_int + param1] = var2_int;
           }
-          vg.a(param1 + param1, param1 + cg.field_l, true, false, ue.field_a, param1, vb.field_a);
+          vg.a(param1 + param1, param1 + MatchingFieldValidator.field_l, true, false, ue.field_a, param1, vb.field_a);
           var2_intLifetime1 = 60 / ((param0 - 80) / 34);
-          if (cg.field_l > param1) {
-            cg.field_l = param1;
+          if (MatchingFieldValidator.field_l > param1) {
+            MatchingFieldValidator.field_l = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

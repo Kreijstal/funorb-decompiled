@@ -89,7 +89,7 @@ final class jj extends kj {
           var5 = new RgbSprite(this.field_y.field_m, this.field_y.field_r);
           de.a(-128, var5);
           this.field_y.a(0, param1, param2, 0);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           var5.a(this.field_s + param3, param0 + this.field_n, this.field_A);
           return;
         }

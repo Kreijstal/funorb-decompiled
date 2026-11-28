@@ -40,7 +40,7 @@ final class bc extends IntrusiveNode {
         int var15 = 0;
         oj var15_ref_oj = null;
         int var16 = 0;
-        oc var16_ref_oc = null;
+        GridPoint var16_ref_oc = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -54,7 +54,7 @@ final class bc extends IntrusiveNode {
           rc.field_e = 0;
           ng.field_u = ng.field_u + 1;
           sg.field_i = sg.field_i + 1;
-          for (var14_int = 0; el.field_j > var14_int; var14_int++) {
+          for (var14_int = 0; ProxySocketFactory.field_j > var14_int; var14_int++) {
             var15_ref_oj = mm.field_m[var14_int];
             var16_ref_oc = var15_ref_oj.field_j;
             var17 = var16_ref_oc.field_e - param3;
@@ -87,7 +87,7 @@ final class bc extends IntrusiveNode {
             uj.field_p.field_g = uj.field_p.field_g + (int)(8.0 * (Math.random() - 0.5));
           }
           if (jf.field_c == 0) {
-            ii.field_d.a((j.field_c + uj.field_p.field_e) / 24, 8360, (uj.field_p.field_g + rb.field_m) / 24);
+            ii.field_d.setCoordinates((j.field_c + uj.field_p.field_e) / 24, 8360, (uj.field_p.field_g + rb.field_m) / 24);
           }
           var16 = param6 - 25;
           var17Lifetime1 = 25 + param6;
@@ -122,8 +122,8 @@ final class bc extends IntrusiveNode {
           }
           sg.a(true);
           ac.a(param3, param8, param6, param4 - 5176, param9, param5);
-          hd.a((byte) 61, ii.field_d);
-          hd.a(param3, param6, param0, param5, 0);
+          ConfirmedEmailAvailabilityValidator.a((byte) 61, ii.field_d);
+          ConfirmedEmailAvailabilityValidator.a(param3, param6, param0, param5, 0);
           if (null != q.field_g) {
             q.field_g.d(-1);
           }
@@ -235,7 +235,7 @@ final class bc extends IntrusiveNode {
             return;
           }
           vg.field_e = new v[1];
-          vg.field_e[0] = new v(hi.field_m, 1800, 2050, 200, false);
+          vg.field_e[0] = new v(TextFieldValidator.field_m, 1800, 2050, 200, false);
         } else {
           if (0 < vg.field_e.length) {
             vg.field_e = new v[]{};

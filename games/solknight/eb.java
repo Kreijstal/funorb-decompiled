@@ -56,7 +56,7 @@ final class eb {
               var5++;
               incrementValue$5 = var4;
               var4++;
-              var7[incrementValue$4] = var7[incrementValue$4] + rf.b(20, var6[incrementValue$5], param0, 2);
+              var7[incrementValue$4] = var7[incrementValue$4] + AccountRegistrationPanel.b(20, var6[incrementValue$5], param0, 2);
             }
             var5 = var5 - var11.field_p;
             for (var9Lifetime1 = 0; var11.field_p > var9Lifetime1; var9Lifetime1++) {
@@ -64,7 +64,7 @@ final class eb {
               var5++;
               incrementValue$3 = var4;
               var4++;
-              var7[incrementValue$2] = var7[incrementValue$2] + rf.b(20, var6[incrementValue$3], param0, 1);
+              var7[incrementValue$2] = var7[incrementValue$2] + AccountRegistrationPanel.b(20, var6[incrementValue$3], param0, 1);
             }
             var5 = var5 - var11.field_p;
             for (var9Lifetime2 = 0; var11.field_p > var9Lifetime2; var9Lifetime2++) {
@@ -72,7 +72,7 @@ final class eb {
               var5++;
               incrementValue$1 = var4;
               var4++;
-              var7[incrementValue$0] = var7[incrementValue$0] + rf.b(20, var6[incrementValue$1], param0, 0);
+              var7[incrementValue$0] = var7[incrementValue$0] + AccountRegistrationPanel.b(20, var6[incrementValue$1], param0, 0);
             }
           }
           var8Lifetime1 = -54 % ((param2 + 21) / 57);

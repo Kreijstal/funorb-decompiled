@@ -219,13 +219,13 @@ final class mg {
 
     final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         tl.field_u = param7;
-        um.field_r = param1;
+        MatchingFieldValidator.field_r = param1;
         if (param0 != -1) {
           return;
         }
         try {
           gi.field_c = param3;
-          gf.field_g = param2;
+          TextFieldValidator.field_g = param2;
           hq.field_a = param4;
           eg.field_x = param5;
           qg.field_A = param8;

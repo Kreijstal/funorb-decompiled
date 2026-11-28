@@ -18,7 +18,7 @@ final class wi implements ml {
         try {
           var4 = (me) (af.field_a.beginBackward((byte) -117));
           while (var4 != null) {
-            qc.a(var4, (byte) 117, param0);
+            ValidatedTextField.a(var4, (byte) 117, param0);
             var4 = (me) (af.field_a.nextBackward((byte) 63));
           }
           if (param1 == 1197) {
@@ -62,7 +62,7 @@ final class wi implements ml {
           }
           var6_int = param3 + param1.field_r;
           var7 = param1.field_e + param2;
-          eb.b(var6_int, 0, param1.field_p, param1.field_l, var7);
+          DisplayNameSelectionPanel.b(var6_int, 0, param1.field_p, param1.field_l, var7);
           var8 = hk.field_i[1];
           if (param1 instanceof ButtonWidget &&
             ((ButtonWidget) (param1)).field_u) {

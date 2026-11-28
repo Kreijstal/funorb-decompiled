@@ -171,7 +171,7 @@ final class qe extends ScoreModifier {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            kd.field_n = new CipherPacketBuffer(param6);
+            ConfirmedEmailAvailabilityValidator.field_n = new CipherPacketBuffer(param6);
             tp.field_f = new CipherPacketBuffer(param4);
             gj.field_l = param13;
             gf.field_b = param3;

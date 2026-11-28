@@ -42,7 +42,7 @@ final class f implements nn {
           }
           var6_int = param3.field_v + param1;
           var7 = param0 + param3.field_m;
-          ij.a(param3.field_x, param3.field_s, var7, var6_int, false);
+          DisplayNameSelectionPanel.a(param3.field_x, param3.field_s, var7, var6_int, false);
           var8 = cf.field_u[1];
           if (param3 instanceof ph &&
             ((ph) (param3)).field_A) {

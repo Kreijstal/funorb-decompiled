@@ -26,7 +26,7 @@ abstract class pk {
     final static void a(int param0, int param1, fd param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = qn.field_U;
+          var3 = EditableTextField.field_U;
           var3.writeCipheredByte(param0, -126);
           var3.writeByte(5, (byte) -108);
           var3.writeByte(0, (byte) -120);
@@ -69,7 +69,7 @@ abstract class pk {
           param0 = param0 + var4 * (Chess.field_E - param0) / var3;
         }
         AccountNameAvailabilityValidator.field_m.a(fl.field_x, 640, -2147483648, 120, param0);
-        ga.a(5, 640, 0, 22478, ri.field_g, Chess.field_E - 24, qc.field_e);
+        ga.a(5, 640, 0, 22478, BirthDateValidator.field_g, Chess.field_E - 24, qc.field_e);
     }
 
     pk() {

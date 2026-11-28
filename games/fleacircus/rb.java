@@ -96,7 +96,7 @@ final class rb extends gj implements da {
                 cf.field_c = lk.a(param1, false, (byte) -35, param3);
               } else {
                 var10 = (String) null;
-                cf.field_c = r.a(false, aj.field_w, (byte) 84, (String) null, param1);
+                cf.field_c = TextFieldValidator.a(false, aj.field_w, (byte) 84, (String) null, param1);
               }
               ud.field_b.position = 0;
               ud.field_b.writeByte(-11, 14);
@@ -354,7 +354,7 @@ final class rb extends gj implements da {
         this.field_J.field_s = (kd) (this);
         this.field_J.field_m = se.field_f;
         this.field_I.field_s = (kd) (this);
-        this.field_I.field_m = ga.field_n;
+        this.field_I.field_m = AgeValidator.field_n;
         this.a((UiComponent) (this.field_F), (byte) -39);
         this.a((UiComponent) (this.field_J), (byte) -59);
         this.a((UiComponent) (this.field_I), (byte) -53);

@@ -11,7 +11,7 @@ final class vh extends ButtonWidget {
     static Sprite[] field_E;
     static String field_L;
     static String field_K;
-    private kf field_J;
+    private FieldValidator field_J;
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5;
@@ -31,14 +31,14 @@ final class vh extends ButtonWidget {
         regionExit1: {
           var5 = param3 + this.field_r + (this.field_l >> 1);
           var6 = (this.field_p >> 1) + this.field_e + param2;
-          var8 = this.field_J.b(false);
+          var8 = this.field_J.getValidationStatus(false);
           if (var8 != ke.field_d &&
             f.field_g != var8) {
             if (IsaacRandom.field_h == var8) {
               var14 = hk.field_i[2];
               var14.c(-(var14.field_k >> 1) + var5, var6 - (var14.field_j >> 1), 256);
             } else {
-              if (var8 == wj.field_i) {
+              if (var8 == TextFieldValidator.field_i) {
                 var13 = hk.field_i[1];
                 var13.c(var5 - (var13.field_k >> 1), -(var13.field_j >> 1) + var6, 256);
                 break regionExit1;
@@ -66,7 +66,7 @@ final class vh extends ButtonWidget {
 
     final String a(byte param0) {
         if (this.field_g) {
-          return this.field_J.b((byte) 82);
+          return this.field_J.getValidationMessage((byte) 82);
         }
         if (param0 == 54) {
           return null;
@@ -175,8 +175,8 @@ final class vh extends ButtonWidget {
           var2_int = -111 / ((-67 - param1) / 48);
           SecondaryNodeDeque.a((java.awt.Component) ((Object) param0), (byte) -124);
           ac.a(-117, (java.awt.Component) ((Object) param0));
-          if (null != eb.field_A) {
-            eb.field_A.detach(0, (java.awt.Component) ((Object) param0));
+          if (null != DisplayNameSelectionPanel.field_A) {
+            DisplayNameSelectionPanel.field_A.detach(0, (java.awt.Component) ((Object) param0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,7 +199,7 @@ final class vh extends ButtonWidget {
           if (me.field_f != null) {
             me.field_f.g((byte) -75);
           }
-          j.field_e = new qi(param0, param1, false, true, true);
+          j.field_e = new LoginPanel(param0, param1, false, true, true);
           jh.field_C.c((byte) 67, j.field_e);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vh.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -267,7 +267,7 @@ final class vh extends ButtonWidget {
         field_L = null;
     }
 
-    vh(kf param0) {
+    vh(FieldValidator param0) {
         try {
           this.field_J = param0;
         } catch (RuntimeException runtimeException) {

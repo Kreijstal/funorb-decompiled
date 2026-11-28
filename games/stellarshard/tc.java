@@ -14,7 +14,7 @@ final class tc extends id {
 
     final static String c(int param0) {
         if (dj.field_a == o.field_l) {
-          return lc.field_p;
+          return PasswordValidator.field_p;
         }
         if (dj.field_a == DiskArchiveRequest.field_E) {
           return gk.field_c;

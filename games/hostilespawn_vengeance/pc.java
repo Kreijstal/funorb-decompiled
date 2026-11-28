@@ -9,8 +9,8 @@ final class pc {
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;
-        oc stackIn_13_0 = null;
-        oc stackIn_24_0 = null;
+        GridPoint stackIn_13_0 = null;
+        GridPoint stackIn_24_0 = null;
         int stackIn_43_0 = 0;
         int stackIn_52_0 = 0;
         int stackIn_70_0 = 0;
@@ -48,7 +48,7 @@ final class pc {
         boolean[] var6 = null;
         int[] var7 = null;
         int var8_int = 0;
-        oc var8 = null;
+        GridPoint var8 = null;
         oj var9_ref_oj = null;
         int var9 = 0;
         int var10 = 0;
@@ -188,7 +188,7 @@ final class pc {
                 }
                 case 13: {
                     try {
-                        var10 = ((oc) (Object) stackIn_13_0).b(param0 - 6);
+                        var10 = ((GridPoint) (Object) stackIn_13_0).getClampedTileIndex(param0 - 6);
                         if (var10 < 0) {
                             statePc = 22;
                         } else {
@@ -279,7 +279,7 @@ final class pc {
                 case 24: {
                     try {
                         var8 = stackIn_24_0;
-                        var9 = var8.b(-4);
+                        var9 = var8.getClampedTileIndex(-4);
                         var10 = ln.field_a.field_g[var9];
                         if (var10 != 0) {
                             statePc = 26;
@@ -913,7 +913,7 @@ final class pc {
                             /* Inlined CFG state: 86. */
                             {
                                 var22_ref_oj = re.field_n[var21];
-                                var23 = var22_ref_oj.field_j.b(param0 ^ -2);
+                                var23 = var22_ref_oj.field_j.getClampedTileIndex(param0 ^ -2);
                                 if (var26 != 0) {
                                     statePc = 158;
                                 } else {
@@ -1792,7 +1792,7 @@ final class pc {
                 case 217: {
                     try {
                         var21_ref_ArrayIndexOutOfBoundsException = (ArrayIndexOutOfBoundsException) ((Object) caughtException);
-                        if (li.field_q < 2) {
+                        if (MatchingFieldValidator.field_q < 2) {
                             statePc = 220;
                         } else {
                             statePc = 218;
@@ -1916,7 +1916,7 @@ final class pc {
                         {
                         }
                         {
-                            var23 = var22_ref_oj.field_j.b(-4);
+                            var23 = var22_ref_oj.field_j.getClampedTileIndex(-4);
                             if (DiskArchiveRequest.a(var22_ref_oj.field_i, true)) {
                                 /* Inlined CFG state: 237. */
                                 {
@@ -2727,7 +2727,7 @@ final class pc {
           }
           var5_int = vf.bitLength(123, (param0 - param1) * 3);
           var6 = 3 * param1;
-          lk.l(74);
+          LoginPanel.l(74);
           var7 = var5_int - 10;
           if (param3.field_f > 0 &&
             null != param3.field_x) {

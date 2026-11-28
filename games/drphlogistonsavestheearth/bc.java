@@ -54,7 +54,7 @@ final class bc {
             }
             var3 = param0.substring(0, var2_int);
             var4 = param0.substring(var2_int + 1);
-            var5 = qg.b((byte) 71, var3);
+            var5 = ValidatedTextField.b((byte) 71, var3);
             if (var5 == null) {
               stackIn_15_0 = pd.a(var4, param1 ^ 3302);
               return stackIn_15_0;

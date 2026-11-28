@@ -290,7 +290,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime44 = GzipDecompressor.a(10, "end_tutorial");
           if (null != var2Lifetime44) {
-            ca.field_a = eg.a(104, var2Lifetime44);
+            DebouncedFieldValidator.field_a = eg.a(104, var2Lifetime44);
           }
           var2Lifetime45 = GzipDecompressor.a(10, "loadingHalloween");
           if (var2Lifetime45 != null) {
@@ -330,7 +330,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime54 = GzipDecompressor.a(10, "languagecolon");
           if (null != var2Lifetime54) {
-            ck.field_H = eg.a(111, var2Lifetime54);
+            DisplayNameSelectionPanel.field_H = eg.a(111, var2Lifetime54);
           }
           var2Lifetime55 = GzipDecompressor.a(10, "instructions_pages,0");
           if (var2Lifetime55 != null) {

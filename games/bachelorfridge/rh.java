@@ -27,10 +27,10 @@ final class rh {
             if (var5 < 0) {
               var4 = var4 + un.field_i;
             } else {
-              var6 = hka.a(true, true, pt.field_a[var3_int]);
+              var6 = AgeValidator.a(true, true, pt.field_a[var3_int]);
               var4 = var4 + raa.field_J;
               var7 = sd.field_a - (var6 >> 1);
-              if (SleepAnimation.a(BoardView.field_t + (ShieldEvent.field_r << 1), param2, var6 + (hna.field_k << 1), 1, var7 - hna.field_k, var4, param0)) {
+              if (SleepAnimation.a(BoardView.field_t + (ShieldEvent.field_r << 1), param2, var6 + (ConfirmedEmailAvailabilityValidator.field_k << 1), 1, var7 - ConfirmedEmailAvailabilityValidator.field_k, var4, param0)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
@@ -130,7 +130,7 @@ final class rh {
                 qca.a(var4_int, var5, (byte) 124);
               }
               var6 = AccountRequestState.a(var4_int, 26291);
-              wg.field_i[var4_int].field_v = ClientException.field_b[var6];
+              PasswordValidator.field_i[var4_int].field_v = ClientException.field_b[var6];
               bda.field_m[var4_int].field_Z = qo.field_a[var6];
             }
           }

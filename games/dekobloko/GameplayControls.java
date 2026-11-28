@@ -207,7 +207,7 @@ final class GameplayControls {
             if (integerArgument5 >= 93) {
               SoftwareRaster.fillRoundedRectangleAlpha(-48 + integerArgument2, -2 + integerArgument6 + 54, 96, 40, 4, 65280, 100);
             } else {
-              integerLocal2 = Bzip2State.computeInteger1754(23841, 80, 40 + 18 * SceneWidgetPart013.integerArrayState0239[-79 + integerArgument5]);
+              integerLocal2 = Bzip2State.computeInteger1754(23841, 80, 40 + 18 * LobbyRoomRow.integerArrayState0239[-79 + integerArgument5]);
             }
           }
         }
@@ -346,7 +346,7 @@ final class GameplayControls {
             byteArrayArrayState0011 = (byte[][]) null;
           }
           if (integerArgument2 == 3) {
-            stackStringLocal2 = UiComponentPart028.stringState0482;
+            stackStringLocal2 = EditableTextField.stringState0482;
             return stackStringLocal2;
           }
           if (6 == integerArgument2) {
@@ -406,7 +406,7 @@ final class GameplayControls {
           frameRemainderLocal4 = false;
         }
         else {
-          UiComponentPart024.performAction1277(false, true, true);
+          BirthDateTextFields.performAction1277(false, true, true);
         }
         if (byteArgument2 > -29) {
           GameplayControls.performAction1748(-124);

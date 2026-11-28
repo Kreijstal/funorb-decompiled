@@ -58,7 +58,7 @@ final class sc {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        g.field_n = param1;
+        MatchingFieldValidator.field_n = param1;
         if (param0 >= -32) {
           return;
         }

@@ -64,7 +64,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void c(boolean param0) {
-        mk.field_O[2] = param0;
+        AccountRegistrationPanel.field_O[2] = param0;
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -108,7 +108,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_i) {
           return -1;
         }
-        if (!ig.c(false)) {
+        if (!EditableTextField.c(false)) {
           return -1;
         }
         if (i.field_d) {
@@ -141,13 +141,13 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void a(boolean param0, byte param1) {
         if (param1 == 30) {
-          mk.field_O[18] = true;
-          mk.field_O[0] = true;
-          mk.field_O[17] = true;
-          mk.field_O[16] = true;
-          mk.field_O[8] = param0;
-          mk.field_O[7] = true;
-          mk.field_O[3] = true;
+          AccountRegistrationPanel.field_O[18] = true;
+          AccountRegistrationPanel.field_O[0] = true;
+          AccountRegistrationPanel.field_O[17] = true;
+          AccountRegistrationPanel.field_O[16] = true;
+          AccountRegistrationPanel.field_O[8] = param0;
+          AccountRegistrationPanel.field_O[7] = true;
+          AccountRegistrationPanel.field_O[3] = true;
           return;
         }
     }
@@ -163,7 +163,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 24293) {
           field_s = (RgbSprite) null;
         }
-        mk.field_O[1] = true;
+        AccountRegistrationPanel.field_O[1] = true;
     }
 
     private final void j(int param0) {
@@ -262,7 +262,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void f(byte param0) {
-        mk.field_O[5] = true;
+        AccountRegistrationPanel.field_O[5] = true;
         if (param0 != 97) {
           NetworkGameClient.clearStaticReferences((byte) -39);
         }
@@ -341,7 +341,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             dc.a(param1 ^ -64, BufferedRandomAccessFile.c(-1));
           }
           if (6 == var4 &&
-            ka.field_r) {
+            EmailFormatValidator.field_r) {
             fa.field_c = 10;
           }
           if (var4 == 7) {
@@ -372,7 +372,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (var11 == null) {
                   wj.b((String) null, param1 ^ 10602);
                 } else {
-                  var7 = db.decodeCp1252String(var11.field_n, 0, (byte) -120, var11.field_i);
+                  var7 = PasswordValidator.decodeCp1252String(var11.field_n, 0, (byte) -120, var11.field_i);
                   wj.b(var7, -10603);
                 }
                 eb.field_c = null;
@@ -439,7 +439,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         var2 = 102 % ((45 - param0) / 58);
         var3 = ImageProducerRasterBuffer.field_k;
         if (var3 < 64 &&
-          mk.field_O[var3]) {
+          AccountRegistrationPanel.field_O[var3]) {
           if (0 == var3) {
             return;
           }
@@ -462,12 +462,12 @@ abstract class NetworkGameClient extends GameAppletShell {
                       } else {
                         if (var3 != 8) {
                           if (var3 == 16) {
-                            t.a((byte) 118);
+                            AchievementNotification.readPlayerDisplayName((byte) 118);
                           } else {
                             if (var3 != 11 &&
                               var3 != 12) {
                               if (var3 == 13) {
-                                oc.a((byte) 102);
+                                GridPoint.readSocialListUpdate((byte) 102);
                                 return;
                               }
                               if (17 == var3) {
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (kl.b(50)) {
           var3 = 1200 * eh.a((byte) -63);
           if (this.field_w ||
-            !(el.c(9) <= var3) &&
+            !(ProxySocketFactory.c(9) <= var3) &&
             !(mf.a(36) <= var3)) {
             this.field_w = false;
             le.c((byte) 68);
@@ -577,7 +577,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 != 0 &&
             rj.field_H == 0 &&
             fa.field_c == 11 &&
-            !ig.c(false)) {
+            !EditableTextField.c(false)) {
             ba.e((byte) -104);
           }
           if (-1 != rj.field_H &&
@@ -594,7 +594,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 if (4 != rj.field_H) {
                   if (2 != rj.field_H) {
                     if (rj.field_H == 5) {
-                      la.a(5, hd.field_q, (byte) 83);
+                      la.a(5, ConfirmedEmailAvailabilityValidator.field_q, (byte) 83);
                     } else {
                       la.a(256, qb.field_m, (byte) 48);
                     }
@@ -634,7 +634,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((rj.field_H != -1 &&
           rj.field_H != 0 ||
-          ig.c(false)) &&
+          EditableTextField.c(false)) &&
           hn.correctedCurrentTimeMillis((byte) 80) >= DiskCacheWorker.field_c) {
           i.field_d = false;
           if (rj.field_H != -1 &&
@@ -644,7 +644,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (rj.field_H == 0 &&
-          !ig.c(false)) {
+          !EditableTextField.c(false)) {
           tf.field_d = false;
         }
         if (pb.field_Kb == 0 &&
@@ -685,7 +685,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           GzipDecompressor.a(1);
           ni.clearDeclaredStaticReferences(-30074);
           wi.field_c = l.field_e;
-          ka.field_r = false;
+          EmailFormatValidator.field_r = false;
           lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, mb.field_m);
           if (rd.field_d ||
             ti.field_d != null) {
@@ -747,14 +747,14 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.b(-67);
           ea.a(GameAppletShell.field_h, 0);
         }
-        if (mk.field_O[8]) {
+        if (AccountRegistrationPanel.field_O[8]) {
           vk.c(8);
         }
     }
 
     private final void e(byte param0) {
         int var2 = -70 % ((param0 - 45) / 41);
-        mk.field_O[4] = true;
+        AccountRegistrationPanel.field_O[4] = true;
     }
 
     final void a(String param0, int param1, int param2) {

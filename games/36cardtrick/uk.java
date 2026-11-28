@@ -199,7 +199,7 @@ abstract class uk {
           if (Crc32Table.field_a != null) {
             Crc32Table.field_a.s(-101);
           }
-          i.field_a = new ak(param0, param2, false, true, true);
+          i.field_a = new LoginPanel(param0, param2, false, true, true);
           vb.field_h.c(i.field_a, (byte) 106);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "uk.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

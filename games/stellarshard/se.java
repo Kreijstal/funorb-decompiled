@@ -21,7 +21,7 @@ final class se extends WidgetContainer implements oi {
           if (param0 != 0) {
             field_B = (int[]) null;
           }
-          stackIn_3_0 = kk.decodeCp1252String(param1.length, (byte) -75, 0, param1);
+          stackIn_3_0 = AgeValidator.decodeCp1252String(param1.length, (byte) -75, 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,10 +90,10 @@ final class se extends WidgetContainer implements oi {
             ca.a(param0, var4, (byte) 93);
             var4 = (kl) (SocketConnector.field_e.nextForward((byte) 117));
           }
-          var2 = pl.field_W.beginForward(-79);
+          var2 = ValidatedTextField.field_W.beginForward(-79);
           while (var2 != null) {
             bf.a(param0, (byte) -106);
-            var2 = pl.field_W.nextForward((byte) -124);
+            var2 = ValidatedTextField.field_W.nextForward((byte) -124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

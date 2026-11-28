@@ -15,8 +15,8 @@ final class pd {
         }
         if (param0 == 11173) {
           var1 = fd.c((byte) 61);
-          vk.field_c = new ci(var1, (String) null, true, false, false);
-          q.field_N.b(ed.field_c, false);
+          vk.field_c = new LoginPanel(var1, (String) null, true, false, false);
+          DisplayNameSelectionPanel.field_N.b(ed.field_c, false);
           ed.field_c.a(param0 ^ 437, vk.field_c);
           ed.field_c.i((byte) -85);
           return;

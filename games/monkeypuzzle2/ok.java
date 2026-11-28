@@ -72,25 +72,25 @@ final class ok {
         if (param0 == -29387) {
           ma.field_a[3] = qj.field_E;
           ma.field_a[1] = nc.field_a;
-          ma.field_a[8] = bg.field_B[1];
+          ma.field_a[8] = AccountRegistrationPanel.field_B[1];
           ma.field_a[17] = wa.field_c;
           ma.field_a[19] = ph.field_a;
-          ma.field_a[7] = bg.field_B[0];
+          ma.field_a[7] = AccountRegistrationPanel.field_B[0];
           ma.field_a[18] = ej.field_a;
           ma.field_a[16] = pe.field_c;
-          ma.field_a[9] = bg.field_B[2];
+          ma.field_a[9] = AccountRegistrationPanel.field_B[2];
           return;
         }
         field_e = true;
         ma.field_a[3] = qj.field_E;
         ma.field_a[1] = nc.field_a;
-        ma.field_a[8] = bg.field_B[1];
+        ma.field_a[8] = AccountRegistrationPanel.field_B[1];
         ma.field_a[17] = wa.field_c;
         ma.field_a[19] = ph.field_a;
-        ma.field_a[7] = bg.field_B[0];
+        ma.field_a[7] = AccountRegistrationPanel.field_B[0];
         ma.field_a[18] = ej.field_a;
         ma.field_a[16] = pe.field_c;
-        ma.field_a[9] = bg.field_B[2];
+        ma.field_a[9] = AccountRegistrationPanel.field_B[2];
     }
 
     final static void a(int param0) {

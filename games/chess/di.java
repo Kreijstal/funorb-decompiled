@@ -78,7 +78,7 @@ final class di extends ci {
           for (var3 = 0; var3 < ka.field_g.length; var3++) {
             var4 = cb.field_k[var3];
             if (var4 >= 0) {
-              if (ol.field_R.field_h == var4) {
+              if (AccountRegistrationPanel.field_R.field_h == var4) {
                 var5 = kj.field_h;
               } else {
                 var5 = kg.field_V;
@@ -104,16 +104,16 @@ final class di extends ci {
                 }
                 var6 = stackIn_23_0;
               }
-              if (tj.field_p.length >= em.field_m.length) {
-                stackIn_27_0 = tj.field_p.length;
+              if (EmailFormatValidator.field_p.length >= em.field_m.length) {
+                stackIn_27_0 = EmailFormatValidator.field_p.length;
               } else {
                 stackIn_27_0 = em.field_m.length;
               }
               var8 = stackIn_27_0;
               if (var3 >= 7 + var7 &&
                 var3 < var7 + 7 + var8) {
-                if (tj.field_p.length > var3 - 7 - var7) {
-                  stackIn_33_0 = tj.field_p[var3 - 7 - var7];
+                if (EmailFormatValidator.field_p.length > var3 - 7 - var7) {
+                  stackIn_33_0 = EmailFormatValidator.field_p[var3 - 7 - var7];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -126,7 +126,7 @@ final class di extends ci {
             var7Lifetime1 = kn.a(!(0 > var4), false, var6);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ob.field_C;
             if (0 <= var4) {
-              if (var4 != ol.field_R.field_h) {
+              if (var4 != AccountRegistrationPanel.field_R.field_h) {
                 stackIn_45_0 = ie.field_b;
               } else {
                 stackIn_45_0 = in.field_d;

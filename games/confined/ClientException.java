@@ -25,7 +25,7 @@ final class ClientException extends RuntimeException {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (ra.a(var4, 119) != 0L) {
+            if (DebouncedFieldValidator.a(var4, 119) != 0L) {
               return;
             }
           }

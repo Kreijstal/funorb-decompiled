@@ -25,8 +25,8 @@ final class wh {
           var2_int = AccountNameAvailabilityValidator.field_l;
           if (param1.field_k != 2) {
             if (4 != param1.field_k) {
-              if (~gb.field_t == ~param1.field_m) {
-                var2_intLifetime1 = vm.field_i[param1.field_k];
+              if (~NetworkGameClient.field_t == ~param1.field_m) {
+                var2_intLifetime1 = TextFieldValidator.field_i[param1.field_k];
               } else {
                 var2_intLifetime1 = kg.field_P[param1.field_k];
               }
@@ -37,7 +37,7 @@ final class wh {
             if (!param1.field_d) {
               if (param1.field_e == 0 &&
                 param1.field_q == 0) {
-                var2_intLifetime1 = vm.field_i[param1.field_k];
+                var2_intLifetime1 = TextFieldValidator.field_i[param1.field_k];
               } else {
                 var2_intLifetime1 = kg.field_P[param1.field_k];
               }

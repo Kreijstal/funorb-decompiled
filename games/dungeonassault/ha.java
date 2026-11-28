@@ -14,10 +14,10 @@ final class ha extends um {
 
     final static void d(int param0) {
         ArchiveRequest.field_w = 620;
-        qc.field_w = 240;
+        MenuScreen.field_w = 240;
         kn.field_g = true;
         SecondaryNodeDequeIterator.field_l = null;
-        gk.field_L = null;
+        DisplayNameSelectionPanel.field_L = null;
         wi.field_kb = 0;
         jn.field_l = null;
         hc.field_b = 0;

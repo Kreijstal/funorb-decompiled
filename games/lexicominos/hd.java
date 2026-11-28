@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd {
-    static r field_a;
+    static DisplayNameSelectionPanel field_a;
 
     public static void a(int param0) {
         if (param0 > -100) {
@@ -25,7 +25,7 @@ final class hd {
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param4 != 0) {
-            field_a = (r) null;
+            field_a = (DisplayNameSelectionPanel) null;
           }
           for (var10_int = -param3; 0 > var10_int; var10_int++) {
             param6[param1] = param0[(param2 >> 20) * param8 + param7];
@@ -93,7 +93,7 @@ final class hd {
               var10.fillRect(2 + 3 * param0, 2, 300 - param0 * 3, 30);
               var10.setFont(af.field_a);
               if (param1 != -90) {
-                field_a = (r) null;
+                field_a = (DisplayNameSelectionPanel) null;
               }
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);

@@ -100,7 +100,7 @@ final class ph extends og implements im, vd {
           this.field_z = param0;
           this.field_C = new pc(go.field_j, (bi) null);
           this.field_C.field_i = (wo) ((Object) new ve());
-          var7 = ci.a(new String[]{this.a(106), this.i(64)}, cc.field_d, 3);
+          var7 = AgeValidator.a(new String[]{this.a(106), this.i(64)}, cc.field_d, 3);
           var3 = 20;
           var4 = new lb(ai.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
           this.field_B = new rf(var7, var4);

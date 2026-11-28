@@ -80,9 +80,9 @@ final class ba {
           SoftwareRasterizer.setClip(0, 120, 640, 480);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, -358, 640, 480, 11184810, 4605510);
           SoftwareRasterizer.resetClip();
-          ug.a(param0 + 90, 39, 172, 72, 295);
-          ug.a(42, 0, 2, 120, 175);
-          ug.a(42, 0, 462, 120, 176);
+          MatchingFieldValidator.a(param0 + 90, 39, 172, 72, 295);
+          MatchingFieldValidator.a(42, 0, 2, 120, 175);
+          MatchingFieldValidator.a(42, 0, 462, 120, 176);
           SoftwareRasterizer.fillRectangleVerticalGradient(468, 6, 164, 24, 5132630, 1644825);
           SoftwareRasterizer.drawRectangleOutline(468, 6, 164, 24, 8947848);
           BufferedSocket.field_a.a(-40);

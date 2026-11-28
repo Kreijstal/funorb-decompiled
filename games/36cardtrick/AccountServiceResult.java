@@ -78,7 +78,7 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         try {
           r.field_p = false;
-          cg.field_f = false;
+          TextFieldValidator.field_f = false;
           if (Crc32Table.field_a != null &&
             Crc32Table.field_a.field_E) {
             if (param0 == 8) {
@@ -96,7 +96,7 @@ final class AccountServiceResult {
               di.b(param1 ^ -10);
             }
             if (var3_int != 0) {
-              if (cg.field_f) {
+              if (TextFieldValidator.field_f) {
                 param2 = re.a(lk.field_p, new String[]{param2}, (byte) -50);
               }
               if (ij.field_g) {

@@ -147,7 +147,7 @@ final class me implements ComponentLayout {
           }
           var2[var3] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
         }
-        c.o(-28210);
+        EditableTextField.o(-28210);
         return var2;
     }
 

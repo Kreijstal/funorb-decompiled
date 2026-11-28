@@ -233,7 +233,7 @@ final class NodeHashTableIterator implements Iterator {
           field_d = (String) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (20 <= uh.field_H &&
+        if (20 <= LoginPanel.field_H &&
           wf.a(31996) && (!(0 < MouseInputHandler.field_b) ||
           mi.a((byte) -95))) {
           stackIn_9_0 = false;

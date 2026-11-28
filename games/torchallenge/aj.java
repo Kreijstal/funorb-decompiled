@@ -80,7 +80,7 @@ final class aj {
             0 != param0.length()) {
             var2_int = param0.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_8_0 = dj.field_W;
+              stackIn_8_0 = EditableTextField.field_W;
               return stackIn_8_0;
             }
             if (!param1) {
@@ -265,7 +265,7 @@ final class aj {
                 if (null != hf.field_d) {
                   FrameTimer.a((byte) 121);
                 }
-                if (!bh.field_p &&
+                if (!PasswordValidator.field_p &&
                   !GameClientBase.p(param0 ^ -99)) {
                   wj.field_b.addLast(new eh(hf.field_d), -55);
                 }
@@ -276,7 +276,7 @@ final class aj {
                 null == eb.field_l.field_q &&
                 hf.field_d != null) {
                 FrameTimer.a((byte) 123);
-                if (!bh.field_p &&
+                if (!PasswordValidator.field_p &&
                   !GameClientBase.p(-86)) {
                   wj.field_b.addLast(new eh(hf.field_d), -82);
                 }

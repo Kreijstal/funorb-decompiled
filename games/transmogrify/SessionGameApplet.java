@@ -26,7 +26,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (param0 > -70) {
           return;
         }
-        var2 = ca.field_e;
+        var2 = DebouncedFieldValidator.field_e;
         if (var2 < 64 &&
           c.field_e[var2]) {
           if (var2 == 0) {
@@ -60,7 +60,7 @@ abstract class SessionGameApplet extends GameApplet {
                                 return;
                               }
                               if (var2 == 18) {
-                                rg.n(82);
+                                EditableTextField.n(82);
                                 return;
                               }
                               d.a((Throwable) null, -110, "MGS1: " + ik.q(48));
@@ -101,7 +101,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (this.field_j) {
           return -1;
         }
-        if (!vc.e(false)) {
+        if (!ValidatedTextField.e(false)) {
           return -1;
         }
         if (wi.field_p) {
@@ -169,7 +169,7 @@ abstract class SessionGameApplet extends GameApplet {
         NodeHashTableIterator.field_f = this.field_o;
         cf.a(1856642, NodeHashTableIterator.field_f);
         ol.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
-        me.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
+        TextFieldValidator.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
         ga.field_a = nh.createMouseWheelInput(1);
         RasterBuffer.a(AchievementNotice.field_k, 13861);
@@ -455,7 +455,7 @@ abstract class SessionGameApplet extends GameApplet {
           if (var3Lifetime1 != 0 &&
             tb.field_a == 0 &&
             gl.field_y == 11 &&
-            !vc.e(false)) {
+            !ValidatedTextField.e(false)) {
             BoundedRandomAccessFile.d(-4690);
           }
           if (tb.field_a != -1 &&
@@ -509,7 +509,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if ((tb.field_a != -1 &&
           0 != tb.field_a ||
-          vc.e(false)) &&
+          ValidatedTextField.e(false)) &&
           lk.correctedCurrentTimeMillis(0) >= qf.field_b) {
           wi.field_p = false;
           if (-1 != tb.field_a &&
@@ -519,7 +519,7 @@ abstract class SessionGameApplet extends GameApplet {
           }
         }
         if (tb.field_a == 0 &&
-          !vc.e(false)) {
+          !ValidatedTextField.e(false)) {
           g.field_A = false;
         }
         if (0 == bi.field_L &&
@@ -528,7 +528,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (bi.field_L == 1) {
           if (NodeHashTableIterator.field_f != 0) {
-            hg.field_a = cg.a((byte) -82, uh.field_q);
+            hg.field_a = MatchingFieldValidator.a((byte) -82, uh.field_q);
           }
           RasterBuffer.field_c = SocketConnector.a(true, (byte) 77, 1, ic.field_a, false);
           wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
@@ -558,8 +558,8 @@ abstract class SessionGameApplet extends GameApplet {
           ud.a(DelayedPcmStream.field_n, true, RasterBuffer.field_c, wi.field_e) &&
           GzipDecompressor.a(DelayedPcmStream.field_n, (byte) -109)) {
           BufferedSocket.e(0);
-          wl.clearStaticReferences(121);
-          bg.field_n = false;
+          AccountRegistrationPanel.clearStaticReferences(121);
+          PasswordValidator.field_n = false;
           ea.field_n = TileRack.field_a;
           cf.a(DelayedPcmStream.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
           if (BoundedRandomAccessFile.field_b ||
@@ -587,7 +587,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (10 == bi.field_L) {
           if (NodeHashTableIterator.field_f != 0) {
-            nk.field_d = cg.a((byte) -82, BoundedRandomAccessFile.field_d);
+            nk.field_d = MatchingFieldValidator.a((byte) -82, BoundedRandomAccessFile.field_d);
           }
           bi.field_L = 11;
         }
@@ -669,7 +669,7 @@ abstract class SessionGameApplet extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = va.a(be.c(70), ba.e(-45), (byte) -113);
+            var5_int = ConfirmedEmailAvailabilityValidator.a(be.c(70), ba.e(-45), (byte) -113);
             if (var5_int != -1) {
               he.a(wh.field_F, (byte) 89, Transmogrify.field_B, var5_int);
               Transmogrify.field_B = null;
@@ -726,7 +726,7 @@ abstract class SessionGameApplet extends GameApplet {
             vl.a((byte) -98, ha.b(74));
           }
           if (var4 == 6 &&
-            bg.field_n) {
+            PasswordValidator.field_n) {
             gl.field_y = 10;
           }
           if (7 == var4) {
@@ -739,7 +739,7 @@ abstract class SessionGameApplet extends GameApplet {
             v.a((byte) -67, ha.b(87));
           }
           if (var4 == 10) {
-            ff.field_D.writeCipheredByte(false, 17);
+            LoginPanel.field_D.writeCipheredByte(false, 17);
           }
           if (var4 == 11) {
             ol.a(ha.b(param0 ^ 2581), param0 + 27569);
@@ -756,10 +756,10 @@ abstract class SessionGameApplet extends GameApplet {
                 var12 = field_m.b(113);
                 if (var12 != null) {
                   var7 = cc.decodeCp1252String(0, param0 + 13298, var12.position, var12.payload);
-                  bg.a((byte) -120, var7);
+                  PasswordValidator.a((byte) -120, var7);
                 } else {
                   var9 = (String) null;
-                  bg.a((byte) -118, (String) null);
+                  PasswordValidator.a((byte) -118, (String) null);
                 }
                 field_m = null;
               }
@@ -768,7 +768,7 @@ abstract class SessionGameApplet extends GameApplet {
               var5 = (Exception) (Object) decompiledCaughtException;
               d.a((Throwable) ((Object) var5), -117, "S1");
               var10 = (String) null;
-              bg.a((byte) -123, (String) null);
+              PasswordValidator.a((byte) -123, (String) null);
               field_m = null;
             }
           }

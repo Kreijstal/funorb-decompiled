@@ -50,7 +50,7 @@ final class mma {
               sja.field_fb.position = 0;
               sja.field_fb.writeByte(14, 0);
               sja.field_fb.writeByte(uaa.field_f.a((byte) -106).field_b, 0);
-              hna.a(-1, 71);
+              ConfirmedEmailAvailabilityValidator.a(-1, 71);
               eia.field_a = kb.field_e;
             }
             if (kb.field_e == eia.field_a &&
@@ -103,7 +103,7 @@ final class mma {
               DefaultWidgetRenderer.field_a = ig.field_m.readLong(-108);
               kda.field_b = param1;
               BananarangSpecial.field_r = ig.field_m.readUnsignedByte(16711935);
-              hka.field_i = ig.field_m.readUnsignedByte(16711935);
+              AgeValidator.field_i = ig.field_m.readUnsignedByte(16711935);
               ProxySocketConnector.field_f = ig.field_m.readUnsignedShort((byte) 115);
               var11 = ig.field_m.readNullableString((byte) 65);
               var7 = ig.field_m.readUnsignedByte(16711935);

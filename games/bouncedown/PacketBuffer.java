@@ -368,7 +368,7 @@ class PacketBuffer extends IntrusiveNode {
           if (param3 != -126) {
             field_j = (RgbSprite) null;
           }
-          gh.field_H = param2;
+          AccountRegistrationPanel.field_H = param2;
           pg.a(param3 + 126);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "wi.PA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

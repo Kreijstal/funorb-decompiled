@@ -4,7 +4,7 @@
 final class ub extends lg {
     static UrlRequest field_G;
     private int field_H;
-    private sk field_F;
+    private FieldValidator field_F;
     static int field_E;
     static int field_C;
     static int[] field_D;
@@ -32,7 +32,7 @@ final class ub extends lg {
         }
         var5 = (this.width >> 1) + this.x + param3;
         var6 = this.y + param2 + (this.height >> 1);
-        var8 = this.field_F.a((byte) -87);
+        var8 = this.field_F.getValidationStatus((byte) -87);
         if (var8 == IntrusiveNode.field_a) {
           var16 = wj.field_h[0];
           var9 = var16.field_w << 1;
@@ -167,7 +167,7 @@ final class ub extends lg {
 
     final String b(int param0) {
         if (this.field_s) {
-          return this.field_F.a(param0 ^ 124);
+          return this.field_F.getValidationMessage(param0 ^ 124);
         }
         if (param0 == 0) {
           return null;
@@ -176,7 +176,7 @@ final class ub extends lg {
         return null;
     }
 
-    ub(sk param0) {
+    ub(FieldValidator param0) {
         try {
           this.field_F = param0;
         } catch (RuntimeException runtimeException) {

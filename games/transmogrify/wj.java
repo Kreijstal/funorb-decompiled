@@ -51,9 +51,9 @@ class wj extends kk {
     nk a(int param0) {
         if (param0 != -184) {
           this.a(52);
-          return vc.field_G;
+          return ValidatedTextField.field_G;
         }
-        return vc.field_G;
+        return ValidatedTextField.field_G;
     }
 
     wj(long param0, String param1) {

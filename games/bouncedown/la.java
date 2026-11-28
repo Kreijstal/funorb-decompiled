@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class la extends wd {
-    private uh field_B;
+    private FieldValidator field_B;
     static ResourceArchive field_D;
     private int field_F;
     static Random field_C;
@@ -30,7 +30,7 @@ final class la extends wd {
 
     final String d(int param0) {
         if (this.field_g) {
-          return this.field_B.c((byte) 66);
+          return this.field_B.getValidationMessage((byte) 66);
         }
         if (param0 == 0) {
           return null;
@@ -64,7 +64,7 @@ final class la extends wd {
         }
         var5 = (this.field_k >> 1) + (this.field_r + param3);
         var6 = (this.field_m >> 1) + param1 + this.field_i;
-        var8 = this.field_B.a((byte) 125);
+        var8 = this.field_B.getValidationStatus((byte) 125);
         if (param2 >= 33) {
           if (ui.field_o != var8 &&
             var8 != mi.field_c) {
@@ -172,7 +172,7 @@ final class la extends wd {
         int var4Lifetime1;
         String var1Lifetime1;
         var5 = Bounce.field_N;
-        var7 = "(" + ak.field_z + " " + i.field_f + " " + ck.field_b + ") " + wa.field_d;
+        var7 = "(" + ak.field_z + " " + i.field_f + " " + DebouncedFieldValidator.field_b + ") " + wa.field_d;
         var1 = var7;
         if (param0 <= -104) {
           if (pe.field_d <= 0) {
@@ -309,13 +309,13 @@ final class la extends wd {
             if (!kg.field_i) {
               return;
             }
-            nj.a(param1, -25698, var2);
+            EmailFormatValidator.a(param1, -25698, var2);
             return;
           }
           var2 = 1;
         } else {
           if (null == vd.field_b) {
-            sj.field_f = qd.createFullscreenCanvas(0, 640, ck.field_e, 127, 0, 480);
+            sj.field_f = qd.createFullscreenCanvas(0, 640, DebouncedFieldValidator.field_e, 127, 0, 480);
           } else {
             sj.field_f = vd.field_b.c((byte) 105);
             bi.a(0, 2);
@@ -333,7 +333,7 @@ final class la extends wd {
         if (!kg.field_i) {
           return;
         }
-        nj.a(param1, -25698, var2);
+        EmailFormatValidator.a(param1, -25698, var2);
     }
 
     final static we[] a(int param0, int param1, ResourceArchive param2, byte param3) {
@@ -365,7 +365,7 @@ final class la extends wd {
         }
     }
 
-    la(uh param0) {
+    la(FieldValidator param0) {
         try {
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {

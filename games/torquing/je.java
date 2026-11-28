@@ -7,7 +7,7 @@ final class je implements WidgetRenderer {
     static ResourceArchive field_f;
     static String field_i;
     static int field_a;
-    static th field_g;
+    static DisplayNameSelectionPanel field_g;
     static Sprite field_e;
     private uc field_h;
     static boolean field_c;
@@ -225,7 +225,7 @@ final class je implements WidgetRenderer {
     public je() {
         this.field_b = 1;
         this.field_d = 1;
-        this.field_h = dg.field_e;
+        this.field_h = TranslucentSpriteLayer.field_e;
     }
 
     je(uc param0, int param1, int param2) {

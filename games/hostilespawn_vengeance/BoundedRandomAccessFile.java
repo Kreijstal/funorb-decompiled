@@ -153,14 +153,14 @@ final class BoundedRandomAccessFile {
             }
             if (rc.field_a == sa.field_c) {
               if (!param0) {
-                t.field_i = mk.a(false, param5, 113, param4);
+                AchievementNotification.field_i = AccountRegistrationPanel.a(false, param5, 113, param4);
               } else {
                 var11 = (String) null;
-                t.field_i = ul.a(false, (String) null, ib.field_d, param5, 112);
+                AchievementNotification.field_i = ul.a(false, (String) null, ib.field_d, param5, 112);
               }
               s.field_b.field_i = 0;
               s.field_b.d(94, 14);
-              s.field_b.d(89, t.field_i.a(false).field_a);
+              s.field_b.d(89, AchievementNotification.field_i.a(false).field_a);
               mb.d(-1, -22370);
               rc.field_a = MouseInput.field_h;
             }
@@ -180,7 +180,7 @@ final class BoundedRandomAccessFile {
               re.c((byte) 33, 8)) {
               NetworkGameClient.field_y = sc.field_g.c(10818);
               sc.field_g.field_i = 0;
-              ln.a(t.field_i, (byte) -73, param1, param0, param2);
+              ln.a(AchievementNotification.field_i, (byte) -73, param1, param0, param2);
               rc.field_a = ej.field_q;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -212,7 +212,7 @@ final class BoundedRandomAccessFile {
             if (rc.field_a == wj.field_N &&
               eb.a(13372)) {
               ib.field_d = sc.field_g.c(10818);
-              li.field_q = sc.field_g.readUnsignedByte(32270);
+              MatchingFieldValidator.field_q = sc.field_g.readUnsignedByte(32270);
               sc.field_g.readUnsignedByte(32270);
               wb.field_S = sc.field_g.readUnsignedShort(8);
               var12 = sc.field_g.a((byte) 28);
@@ -224,8 +224,8 @@ final class BoundedRandomAccessFile {
                 stackIn_47_0 = ((4 & var7) != 0);
                 AccountCreationResultPanel.field_ub = stackIn_47_0;
                 stackIn_50_0 = ((8 & var7) != 0);
-                ei.field_t = stackIn_50_0;
-                if (!ei.field_t) {
+                DelayedPacket.field_t = stackIn_50_0;
+                if (!DelayedPacket.field_t) {
                 }
               }
               if (sd.field_u) {
@@ -243,10 +243,10 @@ final class BoundedRandomAccessFile {
               GameAppletShell.field_c = mf.a(false, var13);
               ca.field_a = sc.field_g.readUnsignedByte(32270);
               rc.field_a = MouseInput.field_d;
-              if (t.field_i.a(false) == ArchiveProvider.field_a) {
+              if (AchievementNotification.field_i.a(false) == ArchiveProvider.field_a) {
                 ub.field_b.a((byte) -126, BufferedRandomAccessFile.c(-1));
               } else {
-                if (t.field_i.a(false) == ln.field_l) {
+                if (AchievementNotification.field_i.a(false) == ln.field_l) {
                   wh.field_c.a((byte) -109, BufferedRandomAccessFile.c(-1));
                 }
               }

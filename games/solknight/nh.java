@@ -79,13 +79,13 @@ final class nh {
         }
         if (param0 == 3) {
           kk.field_c = true;
-          qa.a(true, -98);
+          ConfirmedEmailAvailabilityValidator.a(true, -98);
           fj.field_i = 0;
           return;
         }
         nh.a((byte) 37, false, true);
         kk.field_c = true;
-        qa.a(true, -98);
+        ConfirmedEmailAvailabilityValidator.a(true, -98);
         fj.field_i = 0;
     }
 

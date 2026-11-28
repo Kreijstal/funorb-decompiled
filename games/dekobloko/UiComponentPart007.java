@@ -169,7 +169,7 @@ final class UiComponentPart007 extends ComponentContainer implements CallbackCon
               this.interactiveComponentArrayState0001[integerLocal2].performAction0222(15, 80, 0, integerLocal2 * 16 + 20, -16555);
               this.performAction0895(this.interactiveComponentArrayState0001[integerLocal2], (byte) -55);
             }
-            this.interactiveComponentArrayState0001[integerLocal7] = new InteractiveComponent(MixedSupport015.stringState0074, (CallbackContract006) (this));
+            this.interactiveComponentArrayState0001[integerLocal7] = new InteractiveComponent(NineSliceSprite.stringState0074, (CallbackContract006) (this));
             this.interactiveComponentArrayState0001[integerLocal7].callbackContract004State0006 = (CallbackContract004) ((Object) mixedSupport094Local9);
             this.interactiveComponentArrayState0001[integerLocal7].performAction0222(15, 100, 0, 20 + 16 * (1 + integerLocal7), -16555);
             this.performAction0895(this.interactiveComponentArrayState0001[integerLocal7], (byte) -55);

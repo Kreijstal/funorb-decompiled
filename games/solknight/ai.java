@@ -15,7 +15,7 @@ final class ai {
           gf.field_T = param2;
           ja.field_a = param8;
           aj.field_p = param10;
-          cl.field_o = param7;
+          AgeValidator.field_o = param7;
           IterableNodeHashTable.field_h = param3;
           if (param6 >= -115) {
             field_d = (String) null;
@@ -39,7 +39,7 @@ final class ai {
             ai.a(false, (byte) 48);
           }
           if (null == bk.field_a) {
-            bk.field_a = qa.field_n.requestDirectSocket(lc.field_l, ia.field_kb, param1 ^ 28119);
+            bk.field_a = ConfirmedEmailAvailabilityValidator.field_n.requestDirectSocket(lc.field_l, ia.field_kb, param1 ^ 28119);
           }
           if (0 == bk.field_a.status) {
             return false;
@@ -51,7 +51,7 @@ final class ai {
             AccountRequestState.field_e = wc.field_f;
           } else {
             try {
-              MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.result), qa.field_n);
+              MouseWheelInput.field_d = new BufferedSocket((java.net.Socket) (bk.field_a.result), ConfirmedEmailAvailabilityValidator.field_n);
               id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;

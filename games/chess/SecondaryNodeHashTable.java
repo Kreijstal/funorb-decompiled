@@ -180,17 +180,17 @@ final class SecondaryNodeHashTable {
         var3 = -cf.field_Jb + var1;
         if (var3 > 30000L) {
           cf.field_Jb = var1;
-          s.field_K = 0;
+          DisplayNameSelectionPanel.field_K = 0;
           return true;
         }
         var5 = 3000;
-        if (7 <= s.field_K) {
+        if (7 <= DisplayNameSelectionPanel.field_K) {
           var5 = 12000;
         } else {
-          if (s.field_K >= 5) {
+          if (DisplayNameSelectionPanel.field_K >= 5) {
             var5 = 9000;
           } else {
-            if (s.field_K >= 3) {
+            if (DisplayNameSelectionPanel.field_K >= 3) {
               var5 = 6000;
             }
           }
@@ -199,7 +199,7 @@ final class SecondaryNodeHashTable {
           return false;
         }
         cf.field_Jb = var1;
-        s.field_K = s.field_K + 1;
+        DisplayNameSelectionPanel.field_K = DisplayNameSelectionPanel.field_K + 1;
         return true;
     }
 

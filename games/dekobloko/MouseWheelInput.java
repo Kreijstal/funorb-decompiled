@@ -141,7 +141,7 @@ abstract class MouseWheelInput {
 
     final static void performAction0671(int integerArgument1, boolean booleanArgument2) {
         if (null != MixedSupport117.stringState0515) {
-          SceneWidgetPart009.performAction1337(MixedSupport117.stringState0515, -2);
+          IconLabelWidget.drawMouseTooltip(MixedSupport117.stringState0515, -2);
         }
         if (SceneWidget.mixedSupport099State0001 != null) {
           SceneWidget.mixedSupport099State0001.performAction1222((byte) 39, booleanArgument2);

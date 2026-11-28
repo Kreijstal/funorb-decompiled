@@ -294,7 +294,7 @@ final class el {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             ik.field_ib[var1_intLifetime1] = 0L;
           }
-          ca.field_b = 0;
+          DebouncedFieldValidator.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "el.E(" + param0 + ')');
         }

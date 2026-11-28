@@ -106,7 +106,7 @@ abstract class ue {
         int var3_intLifetime1;
         var4 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (2 > va.field_j) {
+          if (2 > ConfirmedEmailAvailabilityValidator.field_j) {
             throw new RuntimeException();
           }
           for (var1_int = 0; var1_int < 12; var1_int++) {

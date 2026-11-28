@@ -147,7 +147,7 @@ final class NodeDeque {
           for (integerLocal6 = 0; integerLocal6 < 32; integerLocal6++) {
             SceneWidgetPart006.longArrayState0003[integerLocal6] = 0L;
           }
-          MixedSupport142.integerState0883 = 0;
+          ReturnedShapeUpdate.integerState0883 = 0;
           if (!booleanArgument1) {
             rgbSpriteLocal3 = (RgbSprite) null;
             NodeDeque.computeRgbSpriteArray1736((RgbSprite) null, -91);

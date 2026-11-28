@@ -34,7 +34,7 @@ abstract class GameClientShell extends GameAppletShell {
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (null != pi.field_V) {
           if (null == df.field_l) {
-            var6 = nf.b(false);
+            var6 = MatchingFieldValidator.b(false);
             var4 = var6.getSize();
             pi.field_V.a(var4.height, var4.width, 2);
           }
@@ -55,12 +55,12 @@ abstract class GameClientShell extends GameAppletShell {
         if (DiskCacheWorker.a(64)) {
           var3 = 1200 * AccountNameAvailabilityValidator.d((byte) 9);
           if (this.field_r ||
-            !(nf.c(false) <= var3) &&
-            !(var3 >= qg.m(12484))) {
+            !(MatchingFieldValidator.c(false) <= var3) &&
+            !(var3 >= ValidatedTextField.m(12484))) {
             this.field_r = false;
             eg.a((byte) 126);
             MusicPatchPcmStream.e(11);
-            dl.a(ni.field_u, 2, 120);
+            dl.a(EmailFormatValidator.field_u, 2, 120);
             fj.e(115);
             dd.field_j = true;
             ab.field_a = la.correctedCurrentTimeMillis(false) + 15000L;
@@ -139,7 +139,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
         if (mh.field_d == 0 &&
           !sb.b(-11)) {
-          kl.field_S = false;
+          EditableTextField.field_S = false;
         }
         if (0 == hj.field_f &&
           jj.b(-98)) {
@@ -174,7 +174,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
         }
         if (hj.field_f == 3 &&
-          ad.a(ig.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
+          PasswordValidator.a(ig.field_t, (byte) -91, sb.field_i, AccountCreationResultPanel.field_Jb) &&
           pa.a((byte) 64, ig.field_t)) {
           dm.c((byte) 94);
           ue.a(false);
@@ -213,7 +213,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (hj.field_f == 11) {
           if (df.field_m != null && (!df.field_m.ensureIndexLoaded(0) ||
             !df.field_m.tryLoadAllGroups((byte) 126))) {
-            we.a(kl.a(mi.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
+            we.a(EditableTextField.a(mi.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -242,7 +242,7 @@ abstract class GameClientShell extends GameAppletShell {
           this.f(118);
           ej.a(DiskCacheWorker.field_g, (byte) 95);
         }
-        if (g.field_p[8]) {
+        if (AgeValidator.field_p[8]) {
           vg.b((byte) 75);
         }
     }
@@ -283,7 +283,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (param0 != -5721) {
           this.c(false);
         }
-        g.field_p[4] = true;
+        AgeValidator.field_p[4] = true;
     }
 
     final int b(boolean param0) {
@@ -326,7 +326,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (param0 >= -71) {
           return;
         }
-        g.field_p[1] = true;
+        AgeValidator.field_p[1] = true;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -403,7 +403,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
         var2 = t.field_b;
         if (var2 < 64 &&
-          g.field_p[var2]) {
+          AgeValidator.field_p[var2]) {
           if (0 == var2) {
             return;
           }
@@ -547,13 +547,13 @@ abstract class GameClientShell extends GameAppletShell {
 
     private final void a(byte param0, boolean param1) {
         int var3 = 111 / ((22 - param0) / 38);
-        g.field_p[7] = true;
-        g.field_p[3] = true;
-        g.field_p[17] = true;
-        g.field_p[16] = true;
-        g.field_p[18] = true;
-        g.field_p[0] = true;
-        g.field_p[8] = param1;
+        AgeValidator.field_p[7] = true;
+        AgeValidator.field_p[3] = true;
+        AgeValidator.field_p[17] = true;
+        AgeValidator.field_p[16] = true;
+        AgeValidator.field_p[18] = true;
+        AgeValidator.field_p[0] = true;
+        AgeValidator.field_p[8] = param1;
     }
 
     final void m(int param0) {
@@ -595,7 +595,7 @@ abstract class GameClientShell extends GameAppletShell {
     }
 
     private final void g(byte param0) {
-        g.field_p[5] = true;
+        AgeValidator.field_p[5] = true;
         int var2 = -91 / ((param0 - 58) / 49);
     }
 
@@ -603,7 +603,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (param0 != 72) {
           return;
         }
-        g.field_p[2] = true;
+        AgeValidator.field_p[2] = true;
     }
 
     private final void k(int param0) {
@@ -616,7 +616,7 @@ abstract class GameClientShell extends GameAppletShell {
         int var4 = gf.field_C - 1;
         byte[] var5 = new byte[var4];
         dh.field_N.readCipheredBytes(var4, 0, var5, (byte) -118);
-        wa.a(mj.a((byte) 127, var5), var3 != 0, nb.a(89), (byte) 9);
+        LoginPanel.a(mj.a((byte) 127, var5), var3 != 0, nb.a(89), (byte) 9);
     }
 
     final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4) {
@@ -666,11 +666,11 @@ abstract class GameClientShell extends GameAppletShell {
             }
             var11 = qj.a(-11);
             if (var11 != null) {
-              e.a(-1, var11.booleanValue());
+              ConfirmedEmailAvailabilityValidator.a(-1, var11.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), ImageProducerRasterBuffer.a(true));
+            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, MatchingFieldValidator.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), ImageProducerRasterBuffer.a(true));
             if (var5_intLifetime1 != -1) {
               wh.a(var5_intLifetime1, cc.field_p, (byte) 117, td.field_m);
               cc.field_p = null;
@@ -716,7 +716,7 @@ abstract class GameClientShell extends GameAppletShell {
             af.field_b = 10;
           }
           if (var4 == 7) {
-            ei.a(false, nb.a(param2 ^ 101));
+            TextFieldValidator.a(false, nb.a(param2 ^ 101));
           }
           if (var4 == 8) {
             sg.a(-6988, nb.a(param2 ^ 99));

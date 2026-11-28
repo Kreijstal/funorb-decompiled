@@ -50,7 +50,7 @@ final class kg extends TextureOperator {
 
     final static void c(byte param0) {
         int var1 = ld.field_b * ld.field_b;
-        int var2 = -(da.field_i * da.field_i) + var1;
+        int var2 = -(TextFieldValidator.field_i * TextFieldValidator.field_i) + var1;
         int var3 = var2 * (-tc.field_b + ce.field_b) / var1 + tc.field_b;
         td.field_c.a(82, 640, 120, var3, ml.field_w);
         int var4 = 65 % ((param0 + 14) / 47);

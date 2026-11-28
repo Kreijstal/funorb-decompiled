@@ -17,36 +17,36 @@ final class dq extends pc {
           dq.a(-128, true);
           if (mo.field_l <= 0) {
             if (!rc.a(param0 ^ 32034)) {
-              se.a((byte) -64, param1, 1);
+              TextFieldValidator.a((byte) -64, param1, 1);
               return;
             }
-            se.a((byte) -63, param1, 0);
+            TextFieldValidator.a((byte) -63, param1, 0);
             return;
           }
           ph.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
           if (null != ph.field_E) {
             mm.a(ph.field_E, true);
-            se.a((byte) -80, param1, 2);
+            TextFieldValidator.a((byte) -80, param1, 2);
             return;
           }
-          se.a((byte) -108, param1, 3);
+          TextFieldValidator.a((byte) -108, param1, 3);
           return;
         }
         if (mo.field_l <= 0) {
           if (!rc.a(param0 ^ 32034)) {
-            se.a((byte) -64, param1, 1);
+            TextFieldValidator.a((byte) -64, param1, 1);
             return;
           }
-          se.a((byte) -63, param1, 0);
+          TextFieldValidator.a((byte) -63, param1, 0);
           return;
         }
         ph.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
         if (null != ph.field_E) {
           mm.a(ph.field_E, true);
-          se.a((byte) -80, param1, 2);
+          TextFieldValidator.a((byte) -80, param1, 2);
           return;
         }
-        se.a((byte) -108, param1, 3);
+        TextFieldValidator.a((byte) -108, param1, 3);
     }
 
     public static void clearStaticReferences(byte param0) {

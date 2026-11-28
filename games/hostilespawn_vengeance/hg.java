@@ -32,14 +32,14 @@ final class hg {
         var10 = HostileSpawn.field_I ? 1 : 0;
         try {
           var7_int = ja.a(7, param2);
-          if (hi.field_k == null) {
-            hi.field_k = new java.security.SecureRandom();
+          if (TextFieldValidator.field_k == null) {
+            TextFieldValidator.field_k = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; 4 > var9; var9++) {
-            var8[var9] = hi.field_k.nextInt();
+            var8[var9] = TextFieldValidator.field_k.nextInt();
           }
           if (bb.field_f == null ||
             !(bb.field_f.field_n.length >= var7_int)) {

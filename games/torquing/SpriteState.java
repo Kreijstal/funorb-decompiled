@@ -33,7 +33,7 @@ abstract class SpriteState extends DualLinkNode {
             vf.field_e[var1_int] = 0.0;
             var3[var4] = 0.0;
           }
-          ia.field_i = 0;
+          FramedPanelLayer.field_i = 0;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wf.DB(" + param0 + ')');
         }

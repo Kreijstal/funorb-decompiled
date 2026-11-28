@@ -16,7 +16,7 @@ final class fl {
         }
         try {
           nb.field_a.i(param3 ^ 22250);
-          lg.field_b = new ul(aa.field_s, (String) null, MouseWheelInput.field_d, param1, param0);
+          lg.field_b = new LoginPanel(aa.field_s, (String) null, MouseWheelInput.field_d, param1, param0);
           ak.field_a = new ui(nb.field_a, lg.field_b);
           nb.field_a.b(ak.field_a, (byte) -35);
         } catch (RuntimeException runtimeException) {

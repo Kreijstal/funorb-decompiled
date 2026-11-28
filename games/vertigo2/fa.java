@@ -32,13 +32,13 @@ final class fa extends IntrusiveNode {
         uh var6 = null;
         uh var7 = null;
         BitPacketBuffer var4 = null;
-        if (param1 != br.field_Q) {
-          var6 = (uh) (lh.field_b.get(3661, (long)br.field_Q));
+        if (param1 != ValidatedTextField.field_Q) {
+          var6 = (uh) (lh.field_b.get(3661, (long)ValidatedTextField.field_Q));
           var7 = var6;
           if (var7 != null) {
             var7.field_Hb = null;
           }
-          br.field_Q = param1;
+          ValidatedTextField.field_Q = param1;
           var4 = uh.field_Wb;
           var4.writeCipheredByte(param0, 125);
           var4.writeByte(3, -86);

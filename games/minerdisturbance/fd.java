@@ -191,7 +191,7 @@ class fd extends ja {
             sj.field_h.s(2121792);
           }
           var1 = hn.c(105);
-          MidiPcmStream.field_D = new cl(var1, (String) null, param0, false, false);
+          MidiPcmStream.field_D = new LoginPanel(var1, (String) null, param0, false, false);
           mb.field_b.b(1, de.field_a);
           de.field_a.a((byte) -127, (fe) (MidiPcmStream.field_D));
           de.field_a.o(24619);

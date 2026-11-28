@@ -15,7 +15,7 @@ final class df implements uk {
     static String field_j;
 
     final static void a(int param0) {
-        pl.field_U = 0;
+        ValidatedTextField.field_U = 0;
         if (param0 != -3) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           df.a(true, (java.applet.Applet) null);
@@ -92,7 +92,7 @@ final class df implements uk {
           }
           try {
             var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-            param1.getAppletContext().showDocument(lk.a(param1, var2, 66), "_top");
+            param1.getAppletContext().showDocument(TextFieldValidator.a(param1, var2, 66), "_top");
           } catch (Exception exception) {
             exception.printStackTrace();
           }
@@ -143,7 +143,7 @@ final class df implements uk {
             var13 = (String) null;
             df.a(31, (String) null);
           }
-          var14 = ae.field_N;
+          var14 = EditableTextField.field_N;
           var16 = var14;
           var2 = var16.readUnsignedByte(4);
           var3 = (ta) (eg.field_b.beginForward(-97));

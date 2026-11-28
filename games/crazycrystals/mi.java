@@ -82,7 +82,7 @@ final class mi extends ea implements Cloneable {
         if (param1 > -94) {
           return (ResourceArchive) null;
         }
-        return qk.a(param0, -114, false, true, false, 1);
+        return DisplayNameSelectionPanel.a(param0, -114, false, true, false, 1);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

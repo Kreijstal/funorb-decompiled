@@ -821,7 +821,7 @@ final class ResourceArchive {
         if (sj.field_h != null) {
           sj.field_h.s(2121792);
         }
-        bh.field_Z = new lm();
+        bh.field_Z = new DisplayNameSelectionPanel();
         if (param0 != 0) {
           return;
         }

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PasswordValidator extends TextFieldValidator {
-    private UiComponentPart028 uiComponentPart028State0007;
-    private UiComponentPart028 uiComponentPart028State0008;
+    private EditableTextField uiComponentPart028State0007;
+    private EditableTextField uiComponentPart028State0008;
     static String stringState0526;
     static int integerState0774;
     static volatile int integerState0775;
@@ -39,11 +39,11 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackObjectLocal6);
           }
           stringLocal3 = stringLocal2;
-          if (DekoBlokoClient.computeBoolean0302(byteArgument2 + 111, stringLocal3)) {
+          if (DekoBlokoClient.isPasswordLengthInvalid(byteArgument2 + 111, stringLocal3)) {
             stackStringLocal7 = MixedSupport098.stringState0415;
             return stackStringLocal7;
           }
-          if (InputAdapter002.computeBoolean1351(stringLocal3, 0)) {
+          if (BirthDateValidator.computeBoolean1351(stringLocal3, 0)) {
             stackStringLocal8 = AnimatedTileRegion.stringState0566;
             return stackStringLocal8;
           }
@@ -71,7 +71,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackStringLocal12 = MixedSupport086.stringState0364;
             return stackStringLocal12;
           }
-          if (!UiComponentPart013.computeBoolean0627(stringLocal5, (byte) -11, stringLocal3)) {
+          if (!LoginPanel.computeBoolean0627(stringLocal5, (byte) -11, stringLocal3)) {
             stackStringLocal14 = MixedSupport098.stringState0415;
             return stackStringLocal14;
           }
@@ -91,7 +91,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    PasswordValidator(UiComponentPart028 uiComponentPart028Argument1, UiComponentPart028 uiComponentPart028Argument2, UiComponentPart028 uiComponentPart028Argument3) {
+    PasswordValidator(EditableTextField uiComponentPart028Argument1, EditableTextField uiComponentPart028Argument2, EditableTextField uiComponentPart028Argument3) {
         super(uiComponentPart028Argument1);
         try {
           this.uiComponentPart028State0008 = uiComponentPart028Argument3;
@@ -270,11 +270,11 @@ final class PasswordValidator extends TextFieldValidator {
           stringLocal1 = this.uiComponentPart028State0007.stringState0078.toLowerCase();
           stringLocal3 = stringArgument1.toLowerCase();
           if (0 == stringLocal3.length()) {
-            stackValidationStatusLocal4 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal4 = ReturnedShapeUpdate.validationStatusState0005;
             return stackValidationStatusLocal4;
           }
           if (!MixedSupport047.computeBoolean0576(-118, stringLocal1, stringLocal3)) {
-            stackValidationStatusLocal5 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal5 = ReturnedShapeUpdate.validationStatusState0005;
             return stackValidationStatusLocal5;
           }
           if (byteArgument2 != -40) {
@@ -284,7 +284,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackValidationStatusLocal7 = MixedSupport023.validationStatusState0001;
             return stackValidationStatusLocal7;
           }
-          stackValidationStatusLocal6 = MixedSupport142.validationStatusState0005;
+          stackValidationStatusLocal6 = ReturnedShapeUpdate.validationStatusState0005;
           return stackValidationStatusLocal6;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {
           caughtExceptionLocal11 = caughtParameterLocal12;

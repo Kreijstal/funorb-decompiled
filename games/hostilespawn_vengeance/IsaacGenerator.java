@@ -149,7 +149,7 @@ final class IsaacGenerator {
 
     final static boolean b(byte param0) {
         int var1 = -87 % ((13 - param0) / 38);
-        return li.field_o;
+        return MatchingFieldValidator.field_o;
     }
 
     final int nextInt(boolean param0) {

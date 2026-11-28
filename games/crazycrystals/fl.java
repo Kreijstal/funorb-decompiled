@@ -81,11 +81,11 @@ final class fl implements wo {
 
     final static void a(boolean param0, int param1) {
         if (param1 == 1) {
-          vk.a(param1 ^ -39, false, param0);
+          LoginPanel.a(param1 ^ -39, false, param0);
           return;
         }
         field_f = (String) null;
-        vk.a(param1 ^ -39, false, param0);
+        LoginPanel.a(param1 ^ -39, false, param0);
     }
 
     final static String a(int param0, String param1, ResourceArchive param2, String param3) {

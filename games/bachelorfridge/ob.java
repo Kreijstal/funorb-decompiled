@@ -22,8 +22,8 @@ final class ob extends TileEffect {
     final static void a(long param0, byte param1, int param2, int param3, String param4) {
         try {
           oa.field_vb = param3;
-          el.field_h = param2;
-          wg.field_g = true;
+          EmailFormatValidator.field_h = param2;
+          PasswordValidator.field_g = true;
           we.field_b = param0;
           hda.field_l = param4;
           if (param1 != -47) {

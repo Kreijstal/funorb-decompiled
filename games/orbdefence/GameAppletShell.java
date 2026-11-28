@@ -541,7 +541,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           mc.field_i = mc.field_i + 1 & 31;
           var6 = this;
           synchronized (var6) {
-            wg.field_o = ti.field_cb;
+            EmailFormatValidator.field_o = ti.field_cb;
           }
           this.a((byte) 97);
           return;
@@ -583,7 +583,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               lm.field_d = param1;
-              em.field_r = 0;
+              PasswordValidator.field_r = 0;
               th.field_e = param4;
               NetworkGameClient.field_u = param4;
               cg.field_f = uj.b((byte) -120);
@@ -672,12 +672,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledSharedTail0 = (null != h.field_J &&
               mh.field_b == null);
             if (!decompiledSharedTail0) {
-              field_f.setLocation(em.field_r, ih.field_a);
+              field_f.setLocation(PasswordValidator.field_r, ih.field_a);
               decompiledSharedTail0 = (OrbDefence.field_D);
             }
             if (decompiledSharedTail0) {
               var6 = h.field_J.getInsets();
-              field_f.setLocation(em.field_r + var6.left, var6.top + ih.field_a);
+              field_f.setLocation(PasswordValidator.field_r + var6.left, var6.top + ih.field_a);
             }
           }
           this.d((byte) -114);
@@ -826,17 +826,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           field_f.setVisible(true);
           if (var2 == h.field_J) {
             var3 = h.field_J.getInsets();
-            field_f.setLocation(em.field_r + var3.left, ih.field_a + var3.top);
+            field_f.setLocation(PasswordValidator.field_r + var3.left, ih.field_a + var3.top);
             if (var4 != 0) {
-              field_f.setLocation(em.field_r, ih.field_a);
+              field_f.setLocation(PasswordValidator.field_r, ih.field_a);
             }
           } else {
-            field_f.setLocation(em.field_r, ih.field_a);
+            field_f.setLocation(PasswordValidator.field_r, ih.field_a);
           }
           field_f.addFocusListener((java.awt.event.FocusListener) (this));
           field_f.requestFocus();
           ti.field_cb = true;
-          wg.field_o = true;
+          EmailFormatValidator.field_o = true;
           hh.field_c = true;
           vc.field_a = false;
           dc.field_j = ji.correctedCurrentTimeMillis(107);

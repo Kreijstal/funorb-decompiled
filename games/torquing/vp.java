@@ -31,9 +31,9 @@ final class vp extends WidgetContainer implements ng {
             var3_int = param0.length;
             this.field_J = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_J[var4_int] = ab.a((byte) -114, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
+              this.field_J[var4_int] = AgeValidator.a((byte) -114, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new je(dg.field_e, 0, 1);
+            var4 = new je(TranslucentSpriteLayer.field_e, 0, 1);
             this.field_H = new lg[1 + var3_int];
             if (param1 >= -41) {
               field_D = (ResourceArchive) null;
@@ -120,9 +120,9 @@ final class vp extends WidgetContainer implements ng {
         if (param1 >= -7) {
           return;
         }
-        uc var5 = dg.field_e;
+        uc var5 = TranslucentSpriteLayer.field_e;
         if (null != this.field_J) {
-          var5.a(bi.field_I, param3 + this.x, param2 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
+          var5.a(LevelRun.field_I, param3 + this.x, param2 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.field_t + var5.field_x);
         }
     }
 

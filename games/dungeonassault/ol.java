@@ -275,10 +275,10 @@ final class ol {
         RuntimeException var2_ref = null;
         var3 = DungeonAssault.field_K;
         try {
-          var4 = (ue) (qm.field_q.beginBackward(-24172));
+          var4 = (ue) (EmailFormatValidator.field_q.beginBackward(-24172));
           while (var4 != null) {
             SpriteAnimationPlayer.writeQueuedClientPayload((byte) -69, param1, var4);
-            var4 = (ue) (qm.field_q.nextBackward(param0 ^ 12));
+            var4 = (ue) (EmailFormatValidator.field_q.nextBackward(param0 ^ 12));
           }
           if (param0 != 8) {
             ol.clearStaticReferences((byte) -74);

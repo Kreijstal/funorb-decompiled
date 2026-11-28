@@ -37,7 +37,7 @@ final class lg {
           uk.field_b.position = uk.field_b.position + 2;
           var5_int = uk.field_b.position;
           uk.field_b.writeInt(j.field_e, -1);
-          uk.field_b.writeLong(el.field_G, -16943);
+          uk.field_b.writeLong(DisplayNameSelectionPanel.field_G, -16943);
           var6 = 0;
           if (jc.field_b) {
             var6 = var6 | 1;
@@ -48,7 +48,7 @@ final class lg {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (ug.field_r != null) {
+          if (MatchingFieldValidator.field_r != null) {
             var6 = var6 | 16;
           }
           uk.field_b.writeByte(var6, -37);
@@ -57,8 +57,8 @@ final class lg {
             var7 = "";
           }
           uk.field_b.writeString(var7, -6528);
-          if (null != ug.field_r) {
-            uk.field_b.writePrefixedString(false, ug.field_r);
+          if (null != MatchingFieldValidator.field_r) {
+            uk.field_b.writePrefixedString(false, MatchingFieldValidator.field_r);
           }
           cg.a(uk.field_b, pc.field_W, 0, nc.field_ab, pg.field_c);
           uk.field_b.backpatchShortLength(uk.field_b.position - var5_int, -2);

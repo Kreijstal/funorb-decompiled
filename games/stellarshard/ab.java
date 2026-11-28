@@ -8,7 +8,7 @@ final class ab {
         he var2 = null;
         if (param0 == -5094) {
           var2 = new he();
-          pl.field_W.addLast(-112, var2);
+          ValidatedTextField.field_W.addLast(-112, var2);
           bf.a(param1, (byte) -59);
           return var2;
         }
@@ -17,14 +17,14 @@ final class ab {
 
     final static void a(ResourceArchive param0, boolean param1, int param2, PcmStreamMixer param3) {
         try {
-          tc.field_p = param2 * ea.f((byte) -106) / 1000;
+          tc.field_p = param2 * MatchingFieldValidator.f((byte) -106) / 1000;
           hj.a(param0, 23987);
-          ae.a(36, param0);
+          EditableTextField.a(36, param0);
           k.a(param0, 3);
           if (!param1) {
             field_a = 106;
           }
-          lk.e(25536);
+          TextFieldValidator.e(25536);
           th.a((byte) -84);
           ni.field_d = 0 - tc.field_p;
         } catch (RuntimeException runtimeException) {

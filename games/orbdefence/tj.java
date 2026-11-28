@@ -29,14 +29,14 @@ final class tj {
           return ProxyAuthenticationRequiredException.field_a;
         }
         if (!am.field_b.tryLoadGroupByName((byte) -103, "commonui")) {
-          return hi.field_e + " - " + am.field_b.getGroupLoadPercentByName((byte) -97, "commonui") + "%";
+          return TextFieldValidator.field_e + " - " + am.field_b.getGroupLoadPercentByName((byte) -97, "commonui") + "%";
         }
         int var1 = 87 % ((param0 + 3) / 57);
-        if (!wb.field_b.ensureIndexLoaded(-1)) {
+        if (!DebouncedFieldValidator.field_b.ensureIndexLoaded(-1)) {
           return ge.field_i;
         }
-        if (!wb.field_b.tryLoadAllGroups(7715)) {
-          return fa.field_c + " - " + wb.field_b.getArchiveLoadPercent(20147) + "%";
+        if (!DebouncedFieldValidator.field_b.tryLoadAllGroups(7715)) {
+          return fa.field_c + " - " + DebouncedFieldValidator.field_b.getArchiveLoadPercent(20147) + "%";
         }
         return ql.field_f;
     }
@@ -276,7 +276,7 @@ final class tj {
           field_a = (String) null;
         }
         for (var4_int = 0; var4_int < var1; var4_int++) {
-          var3[var4_int] = vc.field_g[vi.a(255, (int) var2[var4_int])];
+          var3[var4_int] = vc.field_g[EditableTextField.a(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(sg.field_B, he.field_r, jd.field_g[0], wc.field_a[0], wh.field_b[0], m.field_a[0], var3);
         md.$cfr$intArgs$a$6121ff5511c4(-125);

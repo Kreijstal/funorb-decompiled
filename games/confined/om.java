@@ -6,7 +6,7 @@ final class om extends IntrusiveNode {
     int field_v;
     int field_t;
     int field_r;
-    static w field_p;
+    static LoginPanel field_p;
     static double field_q;
     int field_u;
     static String field_o;
@@ -17,7 +17,7 @@ final class om extends IntrusiveNode {
         field_p = null;
         field_s = null;
         if (param0 != -50) {
-          field_p = (w) null;
+          field_p = (LoginPanel) null;
           field_o = null;
           return;
         }

@@ -961,7 +961,7 @@ final class f {
           fd.field_a.d();
           var2.b(0, -CrossfadingMidiPcmStream.field_j.field_k);
           fd.field_a.field_u = CrossfadingMidiPcmStream.field_j.field_k;
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

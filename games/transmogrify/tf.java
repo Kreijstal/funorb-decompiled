@@ -327,9 +327,9 @@ final class tf {
               var5Lifetime3 = var5Lifetime3 + ee.field_D;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + wd.field_j;
               jj.field_c[var4Lifetime3] = new int[4];
-              jj.field_c[var4Lifetime3][0] = var8Lifetime1 - vh.field_m;
+              jj.field_c[var4Lifetime3][0] = var8Lifetime1 - EmailFormatValidator.field_m;
               jj.field_c[var4Lifetime3][1] = var5Lifetime3;
-              jj.field_c[var4Lifetime3][2] = (vh.field_m << 1) + var7Lifetime2;
+              jj.field_c[var4Lifetime3][2] = (EmailFormatValidator.field_m << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + (ee.field_D + (jl.field_o << 1) + hi.field_c);
               jj.field_c[var4Lifetime3][3] = hi.field_c + (jl.field_o << 1);
             } else {

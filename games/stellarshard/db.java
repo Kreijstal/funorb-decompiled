@@ -156,7 +156,7 @@ final class db {
           var2 = ag.field_c;
           if (0 < var2) {
             if (var2 == 1) {
-              ii.field_F = lj.field_C;
+              ii.field_F = DisplayNameSelectionPanel.field_C;
             } else {
               ii.field_F = h.a(MouseHandler.field_e, 0, new String[]{Integer.toString(var2)});
             }

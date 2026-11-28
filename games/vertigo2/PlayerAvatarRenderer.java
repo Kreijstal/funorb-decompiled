@@ -181,7 +181,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
           this.prepareAnimatedAvatarMesh(true);
         }
         if (this.field_l >= 0) {
-          stackIn_8_0 = (na.field_o[this.field_l] <= this.field_g) ? 1 : 0;
+          stackIn_8_0 = (AgeValidator.field_o[this.field_l] <= this.field_g) ? 1 : 0;
         } else {
           stackIn_8_0 = 1;
         }
@@ -612,7 +612,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     }
                     if (this.field_l < 0 ||
                       this.field_l == 0 ||
-                      !(na.field_o[this.field_l] > this.field_g)) {
+                      !(AgeValidator.field_o[this.field_l] > this.field_g)) {
                       gm.a(9, (byte) -55);
                     }
                     this.requestAvatarAnimation(1, (byte) -36);

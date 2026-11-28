@@ -134,7 +134,7 @@ final class hf {
             return stackIn_11_0;
           }
           if (ah.a(param2, 54)) {
-            stackIn_14_0 = oc.a(i.field_b, new String[]{param2}, (byte) -108);
+            stackIn_14_0 = MatchingFieldValidator.a(i.field_b, new String[]{param2}, (byte) -108);
             return stackIn_14_0;
           }
           if (100 <= wg.field_w &&
@@ -147,10 +147,10 @@ final class hf {
             return stackIn_22_0;
           }
           if (va.a(param2, -19554)) {
-            stackIn_26_0 = oc.a(AccountNameAvailabilityValidator.field_n, new String[]{param2}, (byte) -42);
+            stackIn_26_0 = MatchingFieldValidator.a(AccountNameAvailabilityValidator.field_n, new String[]{param2}, (byte) -42);
             return stackIn_26_0;
           }
-          var5 = qn.field_U;
+          var5 = EditableTextField.field_U;
           var5.writeCipheredByte(param0, -88);
           var5.position = var5.position + 1;
           var4 = var5.position;

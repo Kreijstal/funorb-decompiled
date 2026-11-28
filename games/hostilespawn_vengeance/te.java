@@ -6,7 +6,7 @@ final class te extends vd implements nk, qk {
     static RgbSprite[] field_G;
     private AccountCreationResultPanel field_H;
     private cj field_L;
-    static ij field_M;
+    static DisplayNameSelectionPanel field_M;
     static ResourceArchive field_J;
     static int field_K;
     private ph field_I;
@@ -18,7 +18,7 @@ final class te extends vd implements nk, qk {
           param0.removeMouseMotionListener(jc.field_b);
           int var2_int = -15 / ((31 - param1) / 48);
           param0.removeFocusListener(jc.field_b);
-          mk.field_I = 0;
+          AccountRegistrationPanel.field_I = 0;
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "te.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

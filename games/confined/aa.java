@@ -14,9 +14,9 @@ final class aa {
         ka.field_N = cc.a(1, -14245);
         GameCanvas.field_a = cc.a(2, -14245);
         i.field_u = cc.a(3, -14245);
-        gl.field_j = cc.a(4, -14245);
+        PasswordValidator.field_j = cc.a(4, -14245);
         ih.field_d = cc.a(5, -14245);
-        ul.field_U = cc.a(12, -14245);
+        EditableTextField.field_U = cc.a(12, -14245);
         oj.field_C = cc.a(6, -14245);
         jd.field_b = cc.a(7, -14245);
         AccountCreationResultPanel.field_Bb = cc.a(8, -14245);
@@ -26,9 +26,9 @@ final class aa {
         dg.field_n.a((byte) -6, ka.field_N, un.field_b, ak.field_P);
         dg.field_n.a((byte) -6, GameCanvas.field_a, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, i.field_u, d.field_f, DualLinkNode.field_n);
-        dg.field_n.a((byte) -6, gl.field_j, d.field_f, DualLinkNode.field_n);
+        dg.field_n.a((byte) -6, PasswordValidator.field_j, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, ih.field_d, fi.field_b, dl.field_a);
-        dg.field_n.a((byte) -6, ul.field_U, pb.field_a, ByteStorage.field_d);
+        dg.field_n.a((byte) -6, EditableTextField.field_U, pb.field_a, ByteStorage.field_d);
         dg.field_n.a((byte) -6, oj.field_C, PrimaryNodeDeque.field_g, vk.field_x);
         dg.field_n.a((byte) -6, jd.field_b, sd.field_g, af.field_U);
         dg.field_n.a((byte) -6, AccountCreationResultPanel.field_Bb, sd.field_g, af.field_U);

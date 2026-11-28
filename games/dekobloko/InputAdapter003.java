@@ -182,7 +182,7 @@ final class InputAdapter003 {
             InputAdapter003.computeBoolean1490((String) null, 4, -122L);
           }
           stringArrayLocal32 = (String[]) null;
-          SceneWidgetPart004.performAction0615(byteArrayArgument10, 1, indexedSpriteArrayArgument11, resourceArchiveArgument4, stringArrayArgument8, 3, integerArgument13, resourceArchiveArgument14, stringArrayArrayArgument7, rgbSpriteArrayArrayArgument18, booleanArgument2, integerArrayArgument5, rgbSpriteArrayArrayArgument17, byteArrayArgument3, stringArrayArrayArgument1, resourceArchiveArgument16, integerArgument19, stringArrayArgument15, integerArrayArgument12, (String[]) null);
+          PlayerNamePrompt.performAction0615(byteArrayArgument10, 1, indexedSpriteArrayArgument11, resourceArchiveArgument4, stringArrayArgument8, 3, integerArgument13, resourceArchiveArgument14, stringArrayArrayArgument7, rgbSpriteArrayArrayArgument18, booleanArgument2, integerArrayArgument5, rgbSpriteArrayArrayArgument17, byteArrayArgument3, stringArrayArrayArgument1, resourceArchiveArgument16, integerArgument19, stringArrayArgument15, integerArrayArgument12, (String[]) null);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal33) {
           caughtExceptionLocal30 = caughtParameterLocal33;

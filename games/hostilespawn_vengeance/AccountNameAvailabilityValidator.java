@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends hi {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static IntrusiveDeque field_v;
     static boolean field_o;
     private boolean nameAvailable;
@@ -11,7 +11,7 @@ final class AccountNameAvailabilityValidator extends hi {
     static RgbSprite field_q;
     static String[] field_p;
 
-    final bm a(String param0, byte param1) {
+    final bm getValidationStatus(String param0, byte param1) {
         AccountServiceResult var3 = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
@@ -25,7 +25,7 @@ final class AccountNameAvailabilityValidator extends hi {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!oc.a(var4, 1)) {
+          if (!GridPoint.validateAccountName(var4, 1)) {
             stackIn_3_0 = bi.field_d;
             return stackIn_3_0;
           }
@@ -73,12 +73,12 @@ final class AccountNameAvailabilityValidator extends hi {
         field_v = null;
     }
 
-    AccountNameAvailabilityValidator(ig param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -142,12 +142,12 @@ final class AccountNameAvailabilityValidator extends hi {
         }
         jn.l(0);
         if (param0) {
-          db.a(true, 256, vg.field_h);
+          PasswordValidator.a(true, 256, vg.field_h);
         } else {
-          db.a(false, 256, dg.field_tb);
+          PasswordValidator.a(false, 256, dg.field_tb);
           return;
         }
-        db.a(false, 256, dg.field_tb);
+        PasswordValidator.a(false, 256, dg.field_tb);
     }
 
     final void f(int param0) {

@@ -18,7 +18,7 @@ final class hm extends jc {
             field_J = (String[]) null;
           }
           if (tk.b(127)) {
-            BufferedSocket.field_a.a(true, ql.field_c, cl.field_T, 0);
+            BufferedSocket.field_a.a(true, ql.field_c, LoginPanel.field_T, 0);
             BufferedSocket.field_a.o(-256);
             while (mm.b((byte) 118)) {
               BufferedSocket.field_a.a((byte) -65, lj.field_t, ud.field_c);
@@ -28,7 +28,7 @@ final class hm extends jc {
           if (null != kf.field_d &&
             kf.field_d.field_b) {
             ng.a((byte) 81);
-            BufferedSocket.field_a.b(param0 ^ 23, new bh(BufferedSocket.field_a, od.field_k));
+            BufferedSocket.field_a.b(param0 ^ 23, new bh(BufferedSocket.field_a, ConfirmedEmailAvailabilityValidator.field_k));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -73,7 +73,7 @@ final class hm extends jc {
     }
 
     public hm() {
-        super(0, 0, od.field_n, ae.field_c, (ad) null, (rm) null);
+        super(0, 0, ConfirmedEmailAvailabilityValidator.field_n, ae.field_c, (ad) null, (rm) null);
         this.field_K = new IntrusiveDeque();
     }
 

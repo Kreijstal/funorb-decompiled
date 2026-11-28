@@ -59,7 +59,7 @@ final class o {
     final boolean a(boolean param0) {
         if (!param0) {
           field_b = 60;
-          if (this == af.field_b) {
+          if (this == DebouncedFieldValidator.field_b) {
             return true;
           }
           if (WidgetContainer.field_B != this) {
@@ -67,7 +67,7 @@ final class o {
           }
           return true;
         }
-        if (this == af.field_b) {
+        if (this == DebouncedFieldValidator.field_b) {
           return true;
         }
         if (WidgetContainer.field_B == this) {

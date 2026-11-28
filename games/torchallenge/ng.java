@@ -110,11 +110,11 @@ class ng extends UiComponent {
         try {
           if (this.field_z != 0 &&
             this.field_z != wh.field_e) {
-            if (this.a(ph.field_d, LocalizedStrings.field_u, param3, -29991, param1) &&
+            if (this.a(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, param3, -29991, param1) &&
               wh.field_e == 0) {
-              this.a(-param3 + ph.field_d, -13461, LocalizedStrings.field_u - param1, this.field_z);
+              this.a(-param3 + ph.field_d, -13461, ConfirmedEmailAvailabilityValidator.field_u - param1, this.field_z);
             }
-            this.a(param3, (byte) 119, param0, param1, LocalizedStrings.field_u, ph.field_d);
+            this.a(param3, (byte) 119, param0, param1, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ng.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

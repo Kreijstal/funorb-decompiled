@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends aba {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private String checkedName;
     static String field_h;
     private boolean nameAvailable;
@@ -41,7 +41,7 @@ final class AccountNameAvailabilityValidator extends aba {
         return IncomingSpecial.field_p;
     }
 
-    final jg a(String param0, boolean param1) {
+    final jg getValidationStatus(String param0, boolean param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -92,7 +92,7 @@ final class AccountNameAvailabilityValidator extends aba {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4_ref_eq = null;

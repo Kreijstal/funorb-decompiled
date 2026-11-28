@@ -79,7 +79,7 @@ final class ve extends ci {
           }
           if (rn.field_a != -1) {
             var1_int = rn.field_a;
-            uk.a(false, -1);
+            ChessBoardState.a(false, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }

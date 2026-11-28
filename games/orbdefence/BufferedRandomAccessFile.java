@@ -153,7 +153,7 @@ final class BufferedRandomAccessFile {
           var12 = new RgbSprite(-(2 * var9Lifetime1) + var18.field_o, var9Lifetime1);
           var12.d();
           var18.b(-var9Lifetime1, 0);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           FullscreenFocusCanvas.field_b = new RgbSprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -151,7 +151,7 @@ final class t extends ma implements mj {
               if (ci.f(-48)) {
                 pc.field_Mb = th.field_f;
               } else {
-                pc.field_Mb = oc.a(jd.field_e, new String[]{pd.field_Rb.field_Gb}, (byte) -54);
+                pc.field_Mb = MatchingFieldValidator.a(jd.field_e, new String[]{pd.field_Rb.field_Gb}, (byte) -54);
               }
             }
           }
@@ -167,7 +167,7 @@ final class t extends ma implements mj {
               for (var8_int = 0; DelegatingCanvas.field_f.length > var8_int; var8_int++) {
                 DelegatingCanvas.field_f[var8_int] = (byte) 0;
               }
-              DelegatingCanvas.field_f[var7 / 8] = (byte)s.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
+              DelegatingCanvas.field_f[var7 / 8] = (byte)DisplayNameSelectionPanel.a((int) DelegatingCanvas.field_f[var7 / 8], 1 << var7 % 8);
             }
             stackIn_51_0 = (!param1) ? 0 : -1;
             for (var7 = stackIn_51_0; wn.field_d.length > var7; var7++) {
@@ -267,8 +267,8 @@ final class t extends ma implements mj {
             t.clearDeclaredStaticReferences(107);
           }
           if (param1 &&
-            1 < un.field_q) {
-            for (var6Lifetime3 = 0; 1 + un.field_q > var6Lifetime3; var6Lifetime3++) {
+            1 < ChessMatchSession.field_q) {
+            for (var6Lifetime3 = 0; 1 + ChessMatchSession.field_q > var6Lifetime3; var6Lifetime3++) {
               var29 = ba.field_P[3][var6Lifetime3];
               if (var4_int != 0 &&
                 var29.field_L != 0) {
@@ -276,10 +276,10 @@ final class t extends ma implements mj {
               }
               if (var29.field_Db &&
                 var6Lifetime3 > 0) {
-                if (db.field_m == null) {
+                if (ConfirmedEmailAvailabilityValidator.field_m == null) {
                   stackIn_141_0 = null;
                 } else {
-                  stackIn_141_0 = db.field_m[var6Lifetime3 - 1];
+                  stackIn_141_0 = ConfirmedEmailAvailabilityValidator.field_m[var6Lifetime3 - 1];
                 }
                 var8 = stackIn_141_0;
                 if (var8 != null) {
@@ -468,11 +468,11 @@ final class t extends ma implements mj {
                       if (var22_int == 1) {
                         var21 = hm.field_a;
                       } else {
-                        var21 = oc.a(ej.field_b, new String[]{Integer.toString(var22_int)}, (byte) -119);
+                        var21 = MatchingFieldValidator.a(ej.field_b, new String[]{Integer.toString(var22_int)}, (byte) -119);
                       }
                     }
                     if (var12 != 0) {
-                      var31 = oc.a(da.field_B, new String[]{Integer.toString(fm.field_W), Integer.toString(uj.field_k[var7][var9])}, (byte) -74);
+                      var31 = MatchingFieldValidator.a(da.field_B, new String[]{Integer.toString(fm.field_W), Integer.toString(uj.field_k[var7][var9])}, (byte) -74);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -533,7 +533,7 @@ final class t extends ma implements mj {
                   if (var23 != 0) {
                     var21 = eb.field_G + (String) (var22);
                   } else {
-                    var21 = oc.a(fj.field_b, new String[]{(String) (var22)}, (byte) -100);
+                    var21 = MatchingFieldValidator.a(fj.field_b, new String[]{(String) (var22)}, (byte) -100);
                   }
                 }
                 if (var21 != null) {

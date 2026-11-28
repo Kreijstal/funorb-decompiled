@@ -61,7 +61,7 @@ final class ll {
                 }
                 var2 = te.a("error_js5crc", -91);
                 if (var2 != null) {
-                  qi.field_A = be.a(var2, (byte) -127);
+                  LoginPanel.field_A = be.a(var2, (byte) -127);
                 }
                 var2 = te.a("error_js5io", -100);
                 if (var2 != null) {
@@ -1470,7 +1470,7 @@ final class ll {
                 }
                 var2 = te.a("create_agreeterms", param0 - 115);
                 if (null != var2) {
-                  uk.field_p = be.a(var2, (byte) -44);
+                  EmailFormatValidator.field_p = be.a(var2, (byte) -44);
                 }
                 var2 = te.a("create_u13terms", param0 ^ -104);
                 if (var2 != null) {
@@ -1530,7 +1530,7 @@ final class ll {
                 }
                 var2 = te.a("create_displayname_hint", param0 - 61);
                 if (var2 != null) {
-                  wj.field_l = be.a(var2, (byte) -118);
+                  TextFieldValidator.field_l = be.a(var2, (byte) -118);
                 }
                 var2 = te.a("create_password_tooltip", -123);
                 if (null != var2) {
@@ -1610,11 +1610,11 @@ final class ll {
                 }
                 var2 = te.a("create_alert_passchars", param0 - 36);
                 if (null != var2) {
-                  qi.field_E = be.a(var2, (byte) -52);
+                  LoginPanel.field_E = be.a(var2, (byte) -52);
                 }
                 var2 = te.a("create_alert_passrepeated", -83);
                 if (var2 != null) {
-                  eb.field_E = be.a(var2, (byte) 109);
+                  DisplayNameSelectionPanel.field_E = be.a(var2, (byte) 109);
                 }
                 var2 = te.a("create_alert_passlength", param0 - 120);
                 if (null != var2) {
@@ -1642,7 +1642,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_email_unavailable", -36);
                 if (null != var2) {
-                  qi.field_J = be.a(var2, (byte) 119);
+                  LoginPanel.field_J = be.a(var2, (byte) 119);
                 }
                 var2 = te.a("create_alert_invaliddate", -86);
                 if (null != var2) {
@@ -2300,7 +2300,7 @@ final class ll {
                 }
                 var2 = te.a("no_highscores", -126);
                 if (var2 != null) {
-                  qc.field_O = be.a(var2, (byte) 97);
+                  ValidatedTextField.field_O = be.a(var2, (byte) 97);
                 }
                 var2 = te.a("hs_name", -15);
                 if (null != var2) {
@@ -2504,27 +2504,27 @@ final class ll {
                 }
                 var2 = te.a("quickchat_shortcut_keys,0", -77);
                 if (var2 != null) {
-                  qc.field_R[0] = be.a(var2, (byte) 91);
+                  ValidatedTextField.field_R[0] = be.a(var2, (byte) 91);
                 }
                 var2 = te.a("quickchat_shortcut_keys,1", -73);
                 if (var2 != null) {
-                  qc.field_R[1] = be.a(var2, (byte) 106);
+                  ValidatedTextField.field_R[1] = be.a(var2, (byte) 106);
                 }
                 var2 = te.a("quickchat_shortcut_keys,2", -117);
                 if (var2 != null) {
-                  qc.field_R[2] = be.a(var2, (byte) 117);
+                  ValidatedTextField.field_R[2] = be.a(var2, (byte) 117);
                 }
                 var2 = te.a("quickchat_shortcut_keys,3", param0 - 45);
                 if (null != var2) {
-                  qc.field_R[3] = be.a(var2, (byte) 70);
+                  ValidatedTextField.field_R[3] = be.a(var2, (byte) 70);
                 }
                 var2 = te.a("quickchat_shortcut_keys,4", -117);
                 if (null != var2) {
-                  qc.field_R[4] = be.a(var2, (byte) -35);
+                  ValidatedTextField.field_R[4] = be.a(var2, (byte) -35);
                 }
                 var2 = te.a("quickchat_shortcut_keys,5", -85);
                 if (var2 != null) {
-                  qc.field_R[5] = be.a(var2, (byte) -100);
+                  ValidatedTextField.field_R[5] = be.a(var2, (byte) -100);
                 }
                 var2 = te.a("keychar_the_character_under_questionmark", -104);
                 if (null != var2) {
@@ -2764,15 +2764,15 @@ final class ll {
                 }
                 var2 = te.a("hs_mode_name,0", -102);
                 if (var2 != null) {
-                  bg.field_B[0] = be.a(var2, (byte) -29);
+                  AccountRegistrationPanel.field_B[0] = be.a(var2, (byte) -29);
                 }
                 var2 = te.a("hs_mode_name,1", param0 ^ -25);
                 if (null != var2) {
-                  bg.field_B[1] = be.a(var2, (byte) -52);
+                  AccountRegistrationPanel.field_B[1] = be.a(var2, (byte) -52);
                 }
                 var2 = te.a("hs_mode_name,2", -77);
                 if (null != var2) {
-                  bg.field_B[2] = be.a(var2, (byte) -95);
+                  AccountRegistrationPanel.field_B[2] = be.a(var2, (byte) -95);
                 }
                 var2 = te.a("rating_mode_name,0", -78);
                 if (null != var2) {

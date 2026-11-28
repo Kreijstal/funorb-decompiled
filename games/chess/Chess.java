@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class Chess extends gb {
+public final class Chess extends NetworkGameClient {
     private int[] field_H;
     static String field_D;
     static int field_E;
@@ -12,7 +12,7 @@ public final class Chess extends gb {
     private int field_F;
     public static int field_G;
 
-    final static void a(String[] args, String[] param1, byte[] param2, rk[] param3, ResourceArchive param4, int param5, int[] param6, byte[] param7, RgbSprite[][] param8, boolean param9, String[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, int[] param14, RgbSprite[][] param15, String[][] param16, int param17, int param18) {
+    final static void configureSharedInterfaceResources(String[] args, String[] param1, byte[] param2, rk[] param3, ResourceArchive param4, int param5, int[] param6, byte[] param7, RgbSprite[][] param8, boolean param9, String[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, int[] param14, RgbSprite[][] param15, String[][] param16, int param17, int param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -141,7 +141,7 @@ public final class Chess extends gb {
         }
     }
 
-    private final void p(int param0) {
+    private final void buildBoardOverlayGeometry(int param0) {
         b.field_e = new bn(4, 2, 1);
         b.field_e.a(-66, 0, -66);
         b.field_e.a(66, 0, -66);
@@ -183,14 +183,14 @@ public final class Chess extends gb {
         mh.field_f = (dd) (tk.field_i.a(16, 131072, 0, -10, 0));
     }
 
-    final static int t(int param0) {
+    final static int getRegistrationAge(int param0) {
         if (param0 != 0) {
           field_D = (String) null;
         }
         return SecondaryNodeDeque.field_f;
     }
 
-    final void b(byte param0) {
+    final void updateGameTick(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         boolean discarded$2 = false;
@@ -207,7 +207,7 @@ public final class Chess extends gb {
         int var5;
         int var6;
         int var7;
-        un var8;
+        ChessMatchSession var8;
         int var9;
         int var10;
         int var11;
@@ -226,7 +226,7 @@ public final class Chess extends gb {
         int var3Lifetime2Lifetime2;
         var11 = field_G;
         if (param0 <= 50) {
-          this.q(61);
+          this.loadReplayControls(61);
         }
         ea.h((byte) -16);
         fl.field_n = ib.a(true);
@@ -255,7 +255,7 @@ public final class Chess extends gb {
         stackIn_19_1 = (null != rm.field_R);
         this.b(stackIn_19_1, (byte) 31);
         if (ic.field_b) {
-          this.o(111);
+          this.initializeAssetArchives(111);
           ic.field_b = false;
         }
         r.field_Eb = r.field_Eb + 1;
@@ -266,21 +266,21 @@ public final class Chess extends gb {
         }
         nh.a();
         nh.c(370, ec.c((byte) -63) + 240);
-        if (je.h(30065)) {
+        if (PasswordValidator.h(30065)) {
           this.m(-122);
-          if (je.h(30065)) {
+          if (PasswordValidator.h(30065)) {
             if (AccountCreationResultPanel.p(-77)) {
-              discarded$2 = this.b(19763, false);
+              discarded$2 = this.advanceChessAssetLoading(19763, false);
             }
             return;
           }
         }
-        if (qi.field_l) {
+        if (AgeValidator.field_l) {
           if (bh.e((byte) 55)) {
             if (!ga.a(true)) {
               if (!d.a(true)) {
                 if (!ug.a(true)) {
-                  this.a(false, 83);
+                  this.updateScreensAndMatchInput(false, 83);
                 } else {
                   if (n.field_e == n.field_f) {
                     var2 = kg.b(true);
@@ -288,9 +288,9 @@ public final class Chess extends gb {
                       Bzip2State.field_l = true;
                       hj.a(0, -2, false);
                     }
-                    this.a(true, 12);
+                    this.updateScreensAndMatchInput(true, 12);
                   } else {
-                    this.a(false, 22);
+                    this.updateScreensAndMatchInput(false, 22);
                   }
                 }
               } else {
@@ -306,11 +306,11 @@ public final class Chess extends gb {
                     dh.a(bh.i(81), true);
                   }
                 }
-                this.a(true, -114);
+                this.updateScreensAndMatchInput(true, -114);
               }
             } else {
               if (0 == n.field_e) {
-                var2 = wf.c(true);
+                var2 = LoginPanel.c(true);
                 if (var2 == 2) {
                   b.a(true);
                 } else {
@@ -324,7 +324,7 @@ public final class Chess extends gb {
                   }
                 }
               } else {
-                this.a(true, 101);
+                this.updateScreensAndMatchInput(true, 101);
               }
               if (!ga.a(true)) {
                 ae.field_e[IntrusiveDeque.field_f].a((byte) 114, true, -1);
@@ -335,8 +335,8 @@ public final class Chess extends gb {
           }
         } else {
           cf.a(fl.field_p, (byte) -120);
-          if (this.b(19763, true)) {
-            qi.field_l = true;
+          if (this.advanceChessAssetLoading(19763, true)) {
+            AgeValidator.field_l = true;
           }
         }
         if (!PcmOutputWorker.a(-3)) {
@@ -349,10 +349,10 @@ public final class Chess extends gb {
           }
         }
         while (true) {
-          if (!tj.a((byte) 103, sk.field_r)) {
+          if (!EmailFormatValidator.a((byte) 103, sk.field_r)) {
             vh.a(0, (byte) 93);
             if (wn.field_f) {
-              s.field_O = 0;
+              DisplayNameSelectionPanel.field_O = 0;
             }
             if (nc.j(124)) {
               var2Lifetime1 = this.l(0);
@@ -371,9 +371,9 @@ public final class Chess extends gb {
                     ji.field_P = true;
                     if (hj.field_i) {
                       ad.field_d = id.field_b;
-                      uk.a(qk.field_h, false, 28333, 8);
+                      ChessBoardState.a(qk.field_h, false, 28333, 8);
                     } else {
-                      uk.a(qk.field_h, false, 28333, 0);
+                      ChessBoardState.a(qk.field_h, false, 28333, 0);
                     }
                     de.a(-31645);
                     ae.field_e[IntrusiveDeque.field_f].a((byte) 122, false, 0);
@@ -416,7 +416,7 @@ public final class Chess extends gb {
             il.a(hj.b(63910), sj.a((byte) -57), (byte) 15);
             wn.field_f = true;
             qk.field_h = -2;
-            s.field_O = 0;
+            DisplayNameSelectionPanel.field_O = 0;
             ma.field_D = false;
             pk.field_j = true;
             r.field_bc = false;
@@ -449,7 +449,7 @@ public final class Chess extends gb {
             var3Lifetime1 = 1 << var2Lifetime1Lifetime1;
             wc.field_w = wc.field_w | var3Lifetime1;
             vk.field_b = vk.field_b | var3Lifetime1;
-            hd.field_l.addFirst((IntrusiveNode) (new ef(var2Lifetime1Lifetime1)), (byte) -108);
+            hd.field_l.addFirst((IntrusiveNode) (new AchievementNotification(var2Lifetime1Lifetime1)), (byte) -108);
             continue;
           }
           if (wg.field_B != 57 &&
@@ -459,11 +459,11 @@ public final class Chess extends gb {
                 hl.field_h) {
                 de.a(-31645);
                 if (hj.field_i) {
-                  oc.field_p.a(71, false);
+                  MatchingFieldValidator.field_p.a(71, false);
                 }
                 ma.field_D = false;
                 BufferedRandomAccessFile.field_q = true;
-                s.field_O = 0;
+                DisplayNameSelectionPanel.field_O = 0;
                 qk.field_h = -2;
                 hl.field_h = false;
                 wn.field_f = true;
@@ -474,7 +474,7 @@ public final class Chess extends gb {
             }
             var2_ref = null;
             if (hj.field_i) {
-              var2_ref = oc.field_p;
+              var2_ref = MatchingFieldValidator.field_p;
             } else {
               if (hl.field_h) {
                 var2_ref = pd.field_Lb;
@@ -485,69 +485,69 @@ public final class Chess extends gb {
                 var3Lifetime2 = tk.field_h.readUnsignedShort(674914976);
                 var4 = tk.field_h.readUnsignedByte(-101);
                 var5 = tk.field_h.readInt((byte) -120);
-                ((un) (var2_ref)).field_B.a(var4, 255, var3Lifetime2);
-                if (((un) (var2_ref)).field_B.field_k == var3Lifetime2) {
-                  ((un) (var2_ref)).field_e = var5;
+                ((ChessMatchSession) (var2_ref)).field_B.setActiveTurn(var4, 255, var3Lifetime2);
+                if (((ChessMatchSession) (var2_ref)).field_B.field_k == var3Lifetime2) {
+                  ((ChessMatchSession) (var2_ref)).field_e = var5;
                 } else {
-                  ((un) (var2_ref)).field_v = var5;
+                  ((ChessMatchSession) (var2_ref)).field_v = var5;
                 }
-                if (((un) (var2_ref)).field_e == -1000) {
-                  ((un) (var2_ref)).field_e = var5;
+                if (((ChessMatchSession) (var2_ref)).field_e == -1000) {
+                  ((ChessMatchSession) (var2_ref)).field_e = var5;
                 }
-                if (((un) (var2_ref)).field_v == -1000) {
-                  ((un) (var2_ref)).field_v = var5;
+                if (((ChessMatchSession) (var2_ref)).field_v == -1000) {
+                  ((ChessMatchSession) (var2_ref)).field_v = var5;
                 }
-                if (!((un) (var2_ref)).field_c) {
-                  ((un) (var2_ref)).field_e = ((un) (var2_ref)).field_e - 400;
-                  ((un) (var2_ref)).field_c = true;
+                if (!((ChessMatchSession) (var2_ref)).field_c) {
+                  ((ChessMatchSession) (var2_ref)).field_e = ((ChessMatchSession) (var2_ref)).field_e - 400;
+                  ((ChessMatchSession) (var2_ref)).field_c = true;
                 }
-                if (((un) (var2_ref)).field_k) {
+                if (((ChessMatchSession) (var2_ref)).field_k) {
                   continue;
                 }
-                ((un) (var2_ref)).field_v = ((un) (var2_ref)).field_v - 400;
-                ((un) (var2_ref)).field_k = true;
+                ((ChessMatchSession) (var2_ref)).field_v = ((ChessMatchSession) (var2_ref)).field_v - 400;
+                ((ChessMatchSession) (var2_ref)).field_k = true;
                 continue;
               }
               if (wg.field_B == 61) {
                 var3Lifetime2Lifetime1 = tk.field_h.readShort(true);
                 var4Lifetime1 = tk.field_h.readShort(true);
                 var5Lifetime2 = tk.field_h.readByte(0);
-                ((un) (var2_ref)).field_B.a(var3Lifetime2Lifetime1, var5Lifetime2, ((un) (var2_ref)).field_t, -65, var4Lifetime1);
-                eb.a(var5Lifetime2, ((un) (var2_ref)).field_t.field_f[var4Lifetime1] & -16773121, ((un) (var2_ref)).field_t.field_f[var3Lifetime2Lifetime1] & -16773121, 3);
-                ((un) (var2_ref)).b((byte) 26);
+                ((ChessMatchSession) (var2_ref)).field_B.applyMatchMove(var3Lifetime2Lifetime1, var5Lifetime2, ((ChessMatchSession) (var2_ref)).field_t, -65, var4Lifetime1);
+                eb.a(var5Lifetime2, ((ChessMatchSession) (var2_ref)).field_t.field_f[var4Lifetime1] & -16773121, ((ChessMatchSession) (var2_ref)).field_t.field_f[var3Lifetime2Lifetime1] & -16773121, 3);
+                ((ChessMatchSession) (var2_ref)).b((byte) 26);
                 continue;
               }
               if (wg.field_B == 62) {
                 var3Lifetime2Lifetime2 = tk.field_h.readByte(0);
-                ((un) (var2_ref)).field_B.a((byte) 93, var3Lifetime2Lifetime2);
-                if (null != oc.field_p) {
-                  oc.field_p.field_B.field_f = var3Lifetime2Lifetime2;
+                ((ChessMatchSession) (var2_ref)).field_B.markMatchFinished((byte) 93, var3Lifetime2Lifetime2);
+                if (null != MatchingFieldValidator.field_p) {
+                  MatchingFieldValidator.field_p.field_B.field_f = var3Lifetime2Lifetime2;
                 }
-                ((un) (var2_ref)).i(-100);
+                ((ChessMatchSession) (var2_ref)).i(-100);
                 continue;
               }
               if (wg.field_B == 63) {
-                ((un) (var2_ref)).field_B.field_m = tk.field_h.readUnsignedByte(-118);
-                if (oc.field_p == null) {
+                ((ChessMatchSession) (var2_ref)).field_B.field_m = tk.field_h.readUnsignedByte(-118);
+                if (MatchingFieldValidator.field_p == null) {
                   continue;
                 }
                 rf.b(-116);
                 continue;
               }
               if (wg.field_B == 64) {
-                ((un) (var2_ref)).field_B.field_e = tk.field_h.readUnsignedByte(-82);
+                ((ChessMatchSession) (var2_ref)).field_B.field_e = tk.field_h.readUnsignedByte(-82);
                 continue;
               }
               if (wg.field_B == 65) {
-                ((un) (var2_ref)).field_B.field_c = tk.field_h.readUnsignedByte(-100);
-                if (null == oc.field_p) {
+                ((ChessMatchSession) (var2_ref)).field_B.field_c = tk.field_h.readUnsignedByte(-100);
+                if (null == MatchingFieldValidator.field_p) {
                   continue;
                 }
-                db.i(-37);
+                ConfirmedEmailAvailabilityValidator.i(-37);
                 continue;
               }
               if (66 == wg.field_B) {
-                ((un) (var2_ref)).field_A = tk.field_h.readUnsignedByte(-88);
+                ((ChessMatchSession) (var2_ref)).field_A = tk.field_h.readUnsignedByte(-88);
                 continue;
               }
             }
@@ -573,24 +573,24 @@ public final class Chess extends gb {
             var7 = stackIn_109_0;
           }
           cb.field_e = null;
-          var8 = new un(true, var2Lifetime1Lifetime2, var4_ref_String__, var5Lifetime1, var7, var3Lifetime3 != 0);
+          var8 = new ChessMatchSession(true, var2Lifetime1Lifetime2, var4_ref_String__, var5Lifetime1, var7, var3Lifetime3 != 0);
           var8.field_B.field_k = var6Lifetime1;
           var9 = tk.field_h.readUnsignedByte(-109);
           if (1 == var9) {
-            var8.field_B.a(0, tk.field_h, var8.field_t, var8);
+            var8.field_B.readInitialBoardState(0, tk.field_h, var8.field_t, var8);
           }
           if (wg.field_B == 57) {
-            oc.field_p = var8;
+            MatchingFieldValidator.field_p = var8;
             hj.field_i = true;
             pd.field_Lb = null;
             rf.b(-111);
-            db.i(-39);
+            ConfirmedEmailAvailabilityValidator.i(-39);
             ph.a(-7125);
             qk.field_h = -1;
             ma.field_D = true;
           } else {
             pd.field_Lb = var8;
-            oc.field_p = null;
+            MatchingFieldValidator.field_p = null;
             hl.field_h = true;
             nh.a();
             nh.c(370, 240 + ec.c((byte) -63));
@@ -607,7 +607,7 @@ public final class Chess extends gb {
         }
     }
 
-    final void e(byte param0) {
+    final void prepareGameShutdown(byte param0) {
         tk.a(-2919);
         int var2 = -63 / ((-31 - param0) / 42);
         if (rm.field_R != null) {
@@ -616,9 +616,9 @@ public final class Chess extends gb {
         ao.b(-25220);
     }
 
-    private final void j(byte param0) {
+    private final void loadMenuArtwork(byte param0) {
         nj.a(-20, mm.field_e, 92.0f);
-        this.a(true);
+        this.renderFrame(true);
         cm.field_s = jn.a("logo", 8221, "", mm.field_d);
         IntrusiveNode.field_g = jn.a("achievements", 8221, "", mm.field_d);
         ml.field_g = jn.a("instructions", 8221, "", mm.field_d);
@@ -647,7 +647,7 @@ public final class Chess extends gb {
         dc.field_n[11] = cm.field_s;
         dc.field_n[10] = null;
         dc.field_n[0] = cm.field_s;
-        this.k((byte) 117);
+        this.buildInstructionsPanelBackground((byte) 117);
         jd.field_c = qm.a(1, "", "help", mm.field_d);
         ph.field_l = jn.a("clock", 8221, "", mm.field_d);
         DirectByteStorage.field_g = jn.a("clock_button", 8221, "", mm.field_d);
@@ -655,7 +655,7 @@ public final class Chess extends gb {
         da.field_y = jn.a("clock_display_separator", 8221, "", mm.field_d);
     }
 
-    final void a(boolean param0) {
+    final void renderFrame(boolean param0) {
         Object stackIn_3_0 = null;
         boolean stackIn_26_0 = false;
         Object var2;
@@ -672,11 +672,11 @@ public final class Chess extends gb {
         }
         var6 = stackIn_3_0;
         var2 = var6;
-        if (je.h(30065)) {
-          ph.a((java.awt.Canvas) (var6), param0, tj.h(103));
+        if (PasswordValidator.h(30065)) {
+          ph.a((java.awt.Canvas) (var6), param0, EmailFormatValidator.h(103));
           return;
         }
-        if (!qi.field_l) {
+        if (!AgeValidator.field_l) {
           cg.a(-12, (java.awt.Canvas) (var6));
           return;
         }
@@ -688,7 +688,7 @@ public final class Chess extends gb {
         if (qk.field_h == IntrusiveDeque.field_f) {
           DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, true);
         } else {
-          qd.field_w.a(-0.1, (double)r.field_Eb / 300.0, true);
+          qd.field_w.setCameraOrbit(-0.1, (double)r.field_Eb / 300.0, true);
           if (nc.field_T < 16) {
             DualLinkNode.a(wn.field_e, IntrusiveDeque.field_f, (byte) -86, false);
           } else {
@@ -697,7 +697,7 @@ public final class Chess extends gb {
         }
         if (!wn.field_e ||
           !ma.field_D) {
-          jb.a(-7093, ak.a(true));
+          DebouncedFieldValidator.a(-7093, ak.a(true));
         }
         if (ga.a(param0)) {
           SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
@@ -733,7 +733,7 @@ public final class Chess extends gb {
         kf.a(0, (byte) 98, (java.awt.Canvas) (var6), 0);
     }
 
-    private final void u(int param0) {
+    private final void loadChessBoardAndPieceModels(int param0) {
         short[] dupTemp$0 = null;
         int stackIn_7_0 = 0;
         int var2;
@@ -758,7 +758,7 @@ public final class Chess extends gb {
         m.field_a = bn.a(lg.field_b, "", "chess_board2");
         sl.field_g = (dd) (m.field_a.a(96, 1365, 5, -10, 5));
         j.field_v = bn.a(lg.field_b, "", "coin");
-        jb.field_e = (dd) (j.field_v.a(96, 1365, 5, -10, 5));
+        DebouncedFieldValidator.field_e = (dd) (j.field_v.a(96, 1365, 5, -10, 5));
         var2 = qm.field_g;
         if (var2 != 1 &&
           var2 != 0) {
@@ -768,15 +768,15 @@ public final class Chess extends gb {
         am.field_c = new dd[var2Lifetime1];
         da.field_w = new bn[var2Lifetime1];
         tf.field_l = new bn[var2Lifetime1];
-        qe.field_u = new dd[var2Lifetime1];
+        ChessBoardRenderer.field_u = new dd[var2Lifetime1];
         var3 = qm.field_g;
         if (var3 == 1) {
           for (var3 = 1; var3 < var2Lifetime1; var3++) {
             if (null != AccountNameAvailabilityValidator.field_u[var3]) {
-              this.a(2, "halloween_backgrounds", AccountNameAvailabilityValidator.field_u[var3], true, var3, AccountNameAvailabilityValidator.field_w[var3]);
+              this.loadPieceModelVariant(2, "halloween_backgrounds", AccountNameAvailabilityValidator.field_u[var3], true, var3, AccountNameAvailabilityValidator.field_w[var3]);
             }
             if (null != tf.field_l[var3]) {
-              qe.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
               am.field_c[var3] = (dd) (da.field_w[var3].a(96, 1365, 5, -10, 5));
             }
           }
@@ -791,7 +791,7 @@ public final class Chess extends gb {
               da.field_w[var3].c();
             }
             if (fc.field_e[var3] != null) {
-              this.a(2, "", fc.field_e[var3], true, var3, fc.field_d[var3]);
+              this.loadPieceModelVariant(2, "", fc.field_e[var3], true, var3, fc.field_d[var3]);
             }
             if (tf.field_l[var3] != null) {
               if (3 == var3 ||
@@ -806,12 +806,12 @@ public final class Chess extends gb {
                   var4_ref_short__[var5] = (short)(16296 - eh.a(28207, sk.field_n, 16));
                 }
               }
-              qe.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (dd) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
               am.field_c[var3] = (dd) (da.field_w[var3].a(96, 1365, 5, -10, 5));
             }
           }
         }
-        this.p(0);
+        this.buildBoardOverlayGeometry(0);
         kl.field_k[0] = null;
         var3 = qm.field_g;
         if (1 == var3) {
@@ -906,7 +906,7 @@ public final class Chess extends gb {
         nh.a(0.6000000238418579f);
         nh.a();
         nh.c(370, ec.c((byte) -63) + 240);
-        this.d(true);
+        this.generatePieceSprites(true);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -918,7 +918,7 @@ public final class Chess extends gb {
         field_B = null;
     }
 
-    private final void a(boolean param0, RgbSprite param1) {
+    private final void setSpriteBlueChannelLowBit(boolean param0, RgbSprite param1) {
         int[] var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -934,10 +934,10 @@ public final class Chess extends gb {
           var3 = var6;
           var4 = -1 + var6.length;
           if (param0) {
-            this.a(true);
+            this.renderFrame(true);
           }
           while (var4 >= 0) {
-            var3[var4] = s.a(var3[var4], 1);
+            var3[var4] = DisplayNameSelectionPanel.a(var3[var4], 1);
             var4--;
           }
           return;
@@ -955,9 +955,9 @@ public final class Chess extends gb {
         }
     }
 
-    private final void q(int param0) {
+    private final void loadReplayControls(int param0) {
         nj.a(-20, mm.field_e, 88.0f);
-        this.a(true);
+        this.renderFrame(true);
         RgbSprite var6 = new RgbSprite(25, 25);
         RgbSprite var3 = new RgbSprite(25, 25);
         int[] var4 = new int[]{12, 3, 19, 10, 15, 10, 15, 18, 10, 18, 10, 10, 6, 10, 12, 4};
@@ -980,15 +980,15 @@ public final class Chess extends gb {
         kn.field_G = var6.c();
         int var5 = -41 / ((19 - param0) / 56);
         vn.field_xb = var3.c();
-        bg.field_Z = new RgbSprite(77, 20);
-        bg.field_Z.e();
+        ValidatedTextField.field_Z = new RgbSprite(77, 20);
+        ValidatedTextField.field_Z.e();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
         ph.field_j.setAsRasterTarget(48);
         MouseWheelInput.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
         IsaacCipher.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
     }
 
-    private final void o(int param0) {
+    private final void initializeAssetArchives(int param0) {
         if (td.field_o != null) {
           q.a(5, td.field_o);
           td.field_o = null;
@@ -997,22 +997,22 @@ public final class Chess extends gb {
         if (param0 < 43) {
           this.field_F = 37;
         }
-        mm.field_d = ri.a(1, (byte) 127);
-        BufferedRandomAccessFile.field_m = ri.a(2, (byte) 127);
-        tk.field_g = ri.a(3, (byte) 127);
-        pg.field_o = ri.a(4, (byte) 127);
-        li.field_g = ri.a(5, (byte) 127);
-        wg.field_q = ri.a(6, (byte) 127);
-        lg.field_b = ri.a(7, (byte) 127);
-        bo.field_d = ri.a(9, (byte) 127);
-        ca.field_b = ri.a(13, (byte) 127);
+        mm.field_d = BirthDateValidator.a(1, (byte) 127);
+        BufferedRandomAccessFile.field_m = BirthDateValidator.a(2, (byte) 127);
+        tk.field_g = BirthDateValidator.a(3, (byte) 127);
+        pg.field_o = BirthDateValidator.a(4, (byte) 127);
+        li.field_g = BirthDateValidator.a(5, (byte) 127);
+        wg.field_q = BirthDateValidator.a(6, (byte) 127);
+        lg.field_b = BirthDateValidator.a(7, (byte) 127);
+        bo.field_d = BirthDateValidator.a(9, (byte) 127);
+        ca.field_b = BirthDateValidator.a(13, (byte) 127);
     }
 
-    private final void s(int param0) {
+    private final void loadFontsAndAchievementArtwork(int param0) {
         int var2 = 0;
         int var3 = field_G;
         nj.a(-20, mm.field_e, 85.0f);
-        this.a(true);
+        this.renderFrame(true);
         v.field_j = dm.a(param0 - 16231, mm.field_d, "font", bo.field_d, "");
         jj.field_b = dm.a(param0 - 16231, hm.field_e, "", ByteStorage.field_b, "kartika13");
         jj.field_d = dm.a(0, hm.field_e, "", ByteStorage.field_b, "roman12");
@@ -1032,7 +1032,7 @@ public final class Chess extends gb {
         gh.field_b = ai.a(27176, "button_frame", "", mm.field_d);
     }
 
-    private final void d(boolean param0) {
+    private final void generatePieceSprites(boolean param0) {
         int var12 = 0;
         int var13 = 0;
         dd[] stackIn_5_0 = null;
@@ -1161,7 +1161,7 @@ public final class Chess extends gb {
         tg.field_r = null;
     }
 
-    private final void l(byte param0) {
+    private final void dispatchMatchAndMenuKeys(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -1215,7 +1215,7 @@ public final class Chess extends gb {
               continue;
             }
             if (hj.field_i &&
-              oc.field_p.f(-110)) {
+              MatchingFieldValidator.field_p.f(-110)) {
               continue;
             }
             ae.field_e[IntrusiveDeque.field_f].b((byte) 113);
@@ -1224,7 +1224,7 @@ public final class Chess extends gb {
         ae.field_e[IntrusiveDeque.field_f].a((byte) -115);
     }
 
-    private final void a(int param0, String param1, String param2, boolean param3, int param4, int param5) {
+    private final void loadPieceModelVariant(int param0, String param1, String param2, boolean param3, int param4, int param5) {
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -1279,7 +1279,7 @@ public final class Chess extends gb {
         }
     }
 
-    final void b(int param0) {
+    final void initializeGame(int param0) {
         this.a(14, 12, 0, 11, 14, false, -4, 10);
         aa.field_f = ug.field_b;
         nh.field_m = false;
@@ -1287,7 +1287,7 @@ public final class Chess extends gb {
         var4.b(128, 16383, 9);
         MidiPcmStream var3 = new MidiPcmStream();
         var3.b(128, 16383, 9);
-        d.a(var3, 22050, var4, oc.field_l, (java.awt.Component) ((Object) DirectByteStorage.field_h), true, (byte) -71);
+        d.a(var3, 22050, var4, MatchingFieldValidator.field_l, (java.awt.Component) ((Object) DirectByteStorage.field_h), true, (byte) -71);
         kj.field_h = 255;
         ni.field_d = 1;
         le.field_f = 16777215;
@@ -1312,7 +1312,7 @@ public final class Chess extends gb {
         sk.field_r[58] = -2;
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void updateScreensAndMatchInput(boolean param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -1338,14 +1338,14 @@ public final class Chess extends gb {
                   SpriteGeometry.a(false, 15);
                 }
                 if (Bzip2State.field_l) {
-                  uk.a(qk.field_h, false, 28333, -4);
+                  ChessBoardState.a(qk.field_h, false, 28333, -4);
                 }
                 if (da.a(qk.field_h, true)) {
                   de.a(-31645);
                 }
               }
               var3 = IntrusiveDeque.field_f;
-              uk.a(qk.field_h, false, 28333, var3);
+              ChessBoardState.a(qk.field_h, false, 28333, var3);
               n.field_e = GzipInflater.field_d;
               nc.field_T = 31;
             } else {
@@ -1360,7 +1360,7 @@ public final class Chess extends gb {
               if (ga.a(true)) {
                 AccountNameAvailabilityValidator.j(-3750);
               } else {
-                db.h(12082);
+                ConfirmedEmailAvailabilityValidator.h(12082);
               }
               n.field_e = DiskCacheWorker.field_d;
             }
@@ -1377,9 +1377,9 @@ public final class Chess extends gb {
             } else {
               if (IntrusiveDeque.field_f == -1) {
                 if (!pk.field_j) {
-                  oc.field_p.a((byte) -39, true);
+                  MatchingFieldValidator.field_p.a((byte) -39, true);
                   while (kf.d(18954)) {
-                    if (oc.field_p.f(-111)) {
+                    if (MatchingFieldValidator.field_p.f(-111)) {
                       continue;
                     }
                   }
@@ -1397,7 +1397,7 @@ public final class Chess extends gb {
                     if (!pk.field_j) {
                       ae.field_e[IntrusiveDeque.field_f].a((byte) -125);
                     } else {
-                      this.l((byte) 106);
+                      this.dispatchMatchAndMenuKeys((byte) 106);
                     }
                   }
                 } else {
@@ -1418,7 +1418,7 @@ public final class Chess extends gb {
               pd.field_Lb.a((byte) -37, var4 != 0);
             }
             if (hj.field_i) {
-              oc.field_p.a((byte) -65, var4 != 0);
+              MatchingFieldValidator.field_p.a((byte) -65, var4 != 0);
             }
             while (kf.d(18954)) {
               if (wn.field_f) {
@@ -1430,7 +1430,7 @@ public final class Chess extends gb {
               if (!hj.field_i) {
                 continue;
               }
-              oc.field_p.f(57);
+              MatchingFieldValidator.field_p.f(57);
             }
           }
           if (!pk.field_j) {
@@ -1468,19 +1468,19 @@ public final class Chess extends gb {
         if (-3 == qk.field_h) {
           cb.field_e = null;
           var9 = new String[]{vg.field_b, mm.field_c};
-          oc.field_p = new un(false, 0, var9, 0, 0, false);
+          MatchingFieldValidator.field_p = new ChessMatchSession(false, 0, var9, 0, 0, false);
           qk.field_h = -1;
           ma.field_D = true;
         }
         if (-4 == qk.field_h) {
-          qn.field_U.writeCipheredByte(9, -87);
+          EditableTextField.field_U.writeCipheredByte(9, -87);
           r.field_bc = true;
           qk.field_h = IntrusiveDeque.field_f;
         }
         var3Lifetime1 = 107 / ((param1 + 51) / 45);
         if (qk.field_h == -5) {
           if (null != pd.field_Rb) {
-            db.a(11, pd.field_Rb.g((byte) -121), 28113);
+            ConfirmedEmailAvailabilityValidator.a(11, pd.field_Rb.g((byte) -121), 28113);
           }
           fi.field_a = true;
           qk.field_h = IntrusiveDeque.field_f;
@@ -1491,7 +1491,7 @@ public final class Chess extends gb {
         this.a(16742, 15, "Chess");
     }
 
-    private final void r(int param0) {
+    private final void loadMatchArtwork(int param0) {
         RgbSprite var2;
         int var3;
         int var4;
@@ -1500,13 +1500,13 @@ public final class Chess extends gb {
         int var3Lifetime3;
         var4 = field_G;
         nj.a(-20, mm.field_e, 95.0f);
-        this.a(true);
-        vn.field_Bb = this.a(2, wk.a(mm.field_d, 1, "win_black", ""));
-        jh.field_b = this.a(2, wk.a(mm.field_d, 1, "win_white", ""));
-        GameAppletShell.field_e = this.a(2, wk.a(mm.field_d, 1, "win_none", ""));
-        this.a(false, vn.field_Bb);
-        this.a(false, jh.field_b);
-        this.a(false, GameAppletShell.field_e);
+        this.renderFrame(true);
+        vn.field_Bb = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_black", ""));
+        jh.field_b = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_white", ""));
+        GameAppletShell.field_e = this.doubleSpriteSize(2, wk.a(mm.field_d, 1, "win_none", ""));
+        this.setSpriteBlueChannelLowBit(false, vn.field_Bb);
+        this.setSpriteBlueChannelLowBit(false, jh.field_b);
+        this.setSpriteBlueChannelLowBit(false, GameAppletShell.field_e);
         var3 = qm.field_g;
         if (var3 != 1) {
           var2 = wk.a(mm.field_d, 1, "background_3d", "");
@@ -1538,13 +1538,13 @@ public final class Chess extends gb {
         for (var3Lifetime3 = 0; tg.field_r.length > var3Lifetime3; var3Lifetime3++) {
           tg.field_r[var3Lifetime3].f();
         }
-        wf.field_Q = wk.a(mm.field_d, 1, "logo_for_lobby", "");
+        LoginPanel.field_Q = wk.a(mm.field_d, 1, "logo_for_lobby", "");
     }
 
-    final void f(byte param0) {
+    final void releaseGameResources(byte param0) {
         int var3 = field_G;
         Chess.clearStaticReferences(2137);
-        ef.a(27706);
+        AchievementNotification.clearAchievementNotificationGlobals(27706);
         IntrusiveDeque.clearStaticReferences(-31);
         ic.clearStaticReferences(false);
         dn.clearStaticReferences(82);
@@ -1556,7 +1556,7 @@ public final class Chess extends gb {
         q.a(5);
         i.a(0);
         jl.a(-1699);
-        gb.f(-113);
+        NetworkGameClient.f(-113);
         ae.clearStaticReferences(122);
         GameAppletShell.a((byte) -53);
         qk.clearStaticReferences(true);
@@ -1587,7 +1587,7 @@ public final class Chess extends gb {
         gg.c(0);
         fe.a((byte) 106);
         aa.clearStaticReferences(0);
-        un.a((byte) 123);
+        ChessMatchSession.a((byte) 123);
         oh.clearStaticReferences(-16534);
         eb.clearStaticReferences(-29115);
         wm.clearStaticReferences((byte) -108);
@@ -1635,10 +1635,10 @@ public final class Chess extends gb {
         AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -106);
         ch.releaseDeclaredStaticReferences(30);
         vn.releaseDeclaredStaticReferences((byte) 5);
-        ol.clearDeclaredStaticReferences(106);
+        AccountRegistrationPanel.clearDeclaredStaticReferences(106);
         ii.clearDeclaredStaticReferences(82);
-        wf.clearDeclaredStaticReferences(35);
-        s.resetStaticState((byte) -93);
+        LoginPanel.clearDeclaredStaticReferences(35);
+        DisplayNameSelectionPanel.resetStaticState((byte) -93);
         vg.b(125);
         tg.clearStaticReferences((byte) 93);
         n.clearStaticReferences(-123);
@@ -1651,7 +1651,7 @@ public final class Chess extends gb {
         HuffmanCodec.clearStaticReferences((byte) -65);
         wg.resetStaticState(69);
         cd.resetStaticState(1570);
-        qe.clearStaticReferences(2);
+        ChessBoardRenderer.clearStaticReferences(2);
         BitPacketBuffer.clearStaticReferences(8);
         sc.a(-26862);
         hd.clearStaticReferences((byte) -2);
@@ -1662,7 +1662,7 @@ public final class Chess extends gb {
         gf.clearStaticReferences(540);
         cb.clearStaticReferences(-1);
         ga.clearStaticReferences(-124);
-        af.clearStaticReferences(-123);
+        ChessMatchState.clearStaticReferences(-123);
         pk.clearStaticReferences((byte) -100);
         lg.clearStaticReferences(85);
         jj.clearStaticReferences(7);
@@ -1673,7 +1673,7 @@ public final class Chess extends gb {
         gl.clearStaticReferences((byte) 67);
         ej.clearStaticReferences((byte) -30);
         jg.clearDeclaredStaticReferences(10000536);
-        uk.c(-1);
+        ChessBoardState.c(-1);
         bc.a(10);
         bi.clearStaticReferences((byte) 60);
         hm.clearStaticReferences((byte) 76);
@@ -1753,8 +1753,8 @@ public final class Chess extends gb {
         kd.clearDeclaredStaticReferences(-4403);
         qa.clearStaticReferences(-1);
         kg.c(false);
-        bg.discardDeclaredStaticReferences(2491);
-        qn.releaseDeclaredStaticReferences(-14);
+        ValidatedTextField.discardDeclaredStaticReferences(2491);
+        EditableTextField.releaseDeclaredStaticReferences(-14);
         bj.releaseDeclaredStaticReferences(45);
         rm.a(850101921);
         t.clearDeclaredStaticReferences(8);
@@ -1762,14 +1762,14 @@ public final class Chess extends gb {
         jn.clearStaticReferences((byte) -61);
         ea.clearStaticReferences((byte) -44);
         ki.b(true);
-        vm.c(true);
+        TextFieldValidator.c(true);
         ni.clearStaticReferences(0);
         ba.c(false);
         od.clearStaticReferences(false);
         nc.clearStaticReferences((byte) -116);
         cg.a(1);
         fc.clearStaticReferences(-29306);
-        ri.h(1);
+        BirthDateValidator.h(1);
         ih.clearDeclaredStaticReferences((byte) 48);
         bh.j(0);
         bf.clearStaticReferences(false);
@@ -1822,20 +1822,20 @@ public final class Chess extends gb {
         ai.clearStaticReferences(-125);
         fj.clearStaticReferences((byte) 126);
         AccountNameAvailabilityValidator.clearDeclaredStaticReferences(16);
-        tj.i(-19374);
-        db.clearStaticReferences(true);
-        qi.clearStaticReferences((byte) 79);
-        oc.h(0);
+        EmailFormatValidator.i(-19374);
+        ConfirmedEmailAvailabilityValidator.clearStaticReferences(true);
+        AgeValidator.clearStaticReferences((byte) 79);
+        MatchingFieldValidator.h(0);
         ag.clearStaticReferences(9604);
         re.clearStaticReferences(-7101);
         mk.clearStaticReferences((byte) -95);
-        jb.clearStaticReferences(350);
+        DebouncedFieldValidator.clearStaticReferences(350);
         sa.clearStaticReferences(-20127);
         this.field_H = null;
         this.field_w = null;
     }
 
-    private final boolean b(int param0, boolean param1) {
+    private final boolean advanceChessAssetLoading(int param0, boolean param1) {
         RgbSprite discarded$0 = null;
         int var3;
         int var4;
@@ -1847,33 +1847,33 @@ public final class Chess extends gb {
         if (null == BufferedRandomAccessFile.field_m) {
           if (null != tk.field_g) {
             nj.a(param0 ^ -19745, ae.field_a, 70.0f);
-            this.a(true);
-            this.n(33);
+            this.renderFrame(true);
+            this.loadInterfaceAndPieceSoundEffects(33);
             tk.field_g = null;
             ob.f(0);
             return false;
           }
           if (param0 != 19763) {
             var5 = (RgbSprite) null;
-            discarded$0 = this.a(16, (RgbSprite) null);
+            discarded$0 = this.doubleSpriteSize(16, (RgbSprite) null);
           }
           if (null != li.field_g) {
-            nj.a(param0 ^ -19745, qe.field_O, 75.0f);
-            this.a(true);
+            nj.a(param0 ^ -19745, ChessBoardRenderer.field_O, 75.0f);
+            this.renderFrame(true);
             for (var3 = 0; 7 > var3; var3++) {
               el.field_y[var3] = pf.a(li.field_g, "", "chess" + (1 + var3));
               if (null != el.field_y[var3]) {
-                SpriteGeometry.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], s.field_S);
+                SpriteGeometry.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], DisplayNameSelectionPanel.field_S);
               }
             }
             gl.field_b = pf.a(li.field_g, "", "fanfare");
             if (null != gl.field_b) {
-              ka.field_a.a(pg.field_o, param0 - 19887, 0, gl.field_b, s.field_S);
+              ka.field_a.a(pg.field_o, param0 - 19887, 0, gl.field_b, DisplayNameSelectionPanel.field_S);
             }
             SpriteGeometry.field_q.c((byte) -61);
             ka.field_a.c((byte) -61);
             ug.a(86);
-            s.field_S = null;
+            DisplayNameSelectionPanel.field_S = null;
             li.field_g = null;
             pg.field_o = null;
             ob.f(0);
@@ -1888,8 +1888,8 @@ public final class Chess extends gb {
             }
             if (null != lg.field_b) {
               nj.a(-20, q.field_c, 97.0f);
-              this.a(true);
-              this.u(-21);
+              this.renderFrame(true);
+              this.loadChessBoardAndPieceModels(-21);
               lg.field_b = null;
               ob.f(0);
               return false;
@@ -1908,22 +1908,22 @@ public final class Chess extends gb {
             return true;
           }
           if (this.field_F == 0) {
-            this.s(16231);
+            this.loadFontsAndAchievementArtwork(16231);
             this.field_F = 1;
             return false;
           }
           if (this.field_F == 1) {
-            this.q(param0 - 19818);
+            this.loadReplayControls(param0 - 19818);
             this.field_F = 2;
             return false;
           }
           if (this.field_F == 2) {
-            this.j((byte) 16);
+            this.loadMenuArtwork((byte) 16);
             this.field_F = 3;
             return false;
           }
           if (this.field_F == 3) {
-            this.r(-128);
+            this.loadMatchArtwork(-128);
             this.field_F = 4;
             return false;
           }
@@ -1932,7 +1932,7 @@ public final class Chess extends gb {
           }
           var6 = (RgbSprite[][]) null;
           BoundedRandomAccessFile.a(rl.field_a, MouseWheelInput.field_f, -109, true, ByteStorage.field_b, new RgbSprite[][]{IsaacCipher.field_g}, wh.field_g, hm.field_e, ai.field_h, 2, ca.field_b, wh.field_g, ih.field_S, 1, (RgbSprite[][]) null);
-          ig.field_h = wf.field_Q;
+          ig.field_h = LoginPanel.field_Q;
           tk.b(200, 93);
           hm.field_e = null;
           ob.f(0);
@@ -1977,8 +1977,8 @@ public final class Chess extends gb {
                                       }
                                       dn.a(true);
                                       nj.a(-20, ae.field_a, 70.0f);
-                                      this.a(true);
-                                      s.field_S = new fe(BufferedRandomAccessFile.field_m, tk.field_g);
+                                      this.renderFrame(true);
+                                      DisplayNameSelectionPanel.field_S = new fe(BufferedRandomAccessFile.field_m, tk.field_g);
                                       BufferedRandomAccessFile.field_m = null;
                                       ob.f(0);
                                       return false;
@@ -1989,22 +1989,22 @@ public final class Chess extends gb {
                                   nj.a(param0 ^ -19745, ji.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
                                   return false;
                                 }
-                                nj.a(-20, ji.a(gb.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
+                                nj.a(-20, ji.a(NetworkGameClient.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
                                 return false;
                               }
                               nj.a(-20, ji.a(HuffmanCodec.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
                               return false;
                             }
-                            nj.a(-20, ji.a(gb.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
+                            nj.a(-20, ji.a(NetworkGameClient.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
                             return false;
                           }
                           nj.a(-20, ji.a(HuffmanCodec.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
                           return false;
                         }
-                        nj.a(-20, ji.a(gb.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
+                        nj.a(-20, ji.a(NetworkGameClient.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
                         return false;
                       }
-                      nj.a(-20, ji.a(gb.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
+                      nj.a(-20, ji.a(NetworkGameClient.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
                       return false;
                     }
                     nj.a(param0 - 19783, ji.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
@@ -2013,7 +2013,7 @@ public final class Chess extends gb {
                   nj.a(-20, ji.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);
                   return false;
                 }
-                nj.a(-20, ji.a(gb.field_o, "", k.field_V, mm.field_d, (byte) 113), 35.0f);
+                nj.a(-20, ji.a(NetworkGameClient.field_o, "", k.field_V, mm.field_d, (byte) 113), 35.0f);
                 return false;
               }
               nj.a(-20, ji.a(vk.field_c, "", hh.field_k, li.field_g, (byte) 68), 30.0f);
@@ -2022,14 +2022,14 @@ public final class Chess extends gb {
             nj.a(-20, sc.a(ej.field_d, pg.field_o, 0, sk.field_u, (byte) -47), 20.0f);
             return false;
           }
-          nj.a(-20, ji.a(sc.field_g, "", ol.field_X, tk.field_g, (byte) 90), 10.0f);
+          nj.a(-20, ji.a(sc.field_g, "", AccountRegistrationPanel.field_X, tk.field_g, (byte) 90), 10.0f);
           return false;
         }
-        nj.a(-20, ji.a(sc.field_g, "", ol.field_X, BufferedRandomAccessFile.field_m, (byte) 116), 5.0f);
+        nj.a(-20, ji.a(sc.field_g, "", AccountRegistrationPanel.field_X, BufferedRandomAccessFile.field_m, (byte) 116), 5.0f);
         return false;
     }
 
-    private final RgbSprite a(int param0, RgbSprite param1) {
+    private final RgbSprite doubleSpriteSize(int param0, RgbSprite param1) {
         RgbSprite var3 = null;
         RuntimeException var3_ref = null;
         RgbSprite stackIn_1_0 = null;
@@ -2059,7 +2059,7 @@ public final class Chess extends gb {
         }
     }
 
-    private final void k(byte param0) {
+    private final void buildInstructionsPanelBackground(byte param0) {
         if (param0 != 117) {
           return;
         }
@@ -2074,16 +2074,16 @@ public final class Chess extends gb {
         tb.field_a.d();
     }
 
-    private final void n(int param0) {
+    private final void loadInterfaceAndPieceSoundEffects(int param0) {
         int var2 = 0;
         int var3;
         var3 = field_G;
         ResourceArchive.field_l[0] = DelegatingCanvas.a((byte) -34, param0);
         for (var2 = 1; var2 < 13; var2++) {
           if (ic.field_a[var2]) {
-            ResourceArchive.field_l[var2] = s.field_S.a(va.field_c[var2], "", -12983);
+            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.a(va.field_c[var2], "", -12983);
           } else {
-            ResourceArchive.field_l[var2] = s.field_S.a(va.field_c[var2], false, "");
+            ResourceArchive.field_l[var2] = DisplayNameSelectionPanel.field_S.a(va.field_c[var2], false, "");
           }
         }
     }

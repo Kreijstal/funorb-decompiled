@@ -255,7 +255,7 @@ final class dh extends IntrusiveNode {
             var6_int = param2.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (hd.a(-124, param2.charAt(var5))) {
+                if (ConfirmedEmailAvailabilityValidator.a(-124, param2.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -291,7 +291,7 @@ final class dh extends IntrusiveNode {
               return stackIn_25_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (hd.a(-114, param2.charAt(var5Lifetime1))) {
+              if (ConfirmedEmailAvailabilityValidator.a(-114, param2.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

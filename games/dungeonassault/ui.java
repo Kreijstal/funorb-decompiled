@@ -25,7 +25,7 @@ final class ui {
           if (!gl.field_Lb) {
             stackIn_16_0 = DelegatingCanvas.field_g;
           } else {
-            stackIn_16_0 = go.field_V;
+            stackIn_16_0 = DungeonRaidScreen.field_V;
           }
           var3 = stackIn_16_0;
           var2 = uf.field_b + var3;

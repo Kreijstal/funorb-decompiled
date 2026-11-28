@@ -104,11 +104,11 @@ final class VertexMesh {
         if (bh.field_a == mg.field_b) {
           return ol.field_a;
         }
-        if (!qk.field_q.c(484)) {
-          return qk.field_q.a((byte) -96);
+        if (!LevelCompletionUpdate.field_q.c(484)) {
+          return LevelCompletionUpdate.field_q.a((byte) -96);
         }
         if (mg.field_b == Model.field_o) {
-          return qk.field_q.a((byte) -97);
+          return LevelCompletionUpdate.field_q.a((byte) -97);
         }
         if (param0 >= -58) {
           return (String) null;

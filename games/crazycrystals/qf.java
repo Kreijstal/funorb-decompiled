@@ -277,12 +277,12 @@ abstract class qf extends ea {
         RuntimeException var1 = null;
         var4 = CrazyCrystals.field_B;
         try {
-          var1_int = ga.field_J[0];
+          var1_int = EditableTextField.field_J[0];
           if (param0 != -30693) {
             qf.clearDeclaredStaticReferences((byte) 69);
           }
-          for (var2 = 1; ga.field_J.length > var2; var2++) {
-            var3 = ga.field_J[var2];
+          for (var2 = 1; EditableTextField.field_J.length > var2; var2++) {
+            var3 = EditableTextField.field_J[var2];
             eg.a(gh.field_E, var2 << 4, gh.field_E, var1_int, var3);
             var1_int = var1_int + var3;
           }

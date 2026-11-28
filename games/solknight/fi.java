@@ -36,7 +36,7 @@ final class fi {
         uj.a(param4, param5, param2, h.field_d, param6, 2);
         uj.a(param3, param0, (param4 - param3 >> 1) + param2, of.field_b, param6 - (param0 - 18 >> 1), 2);
         th.field_H.d((param4 - param3 >> 1) + param2 - 20, -10 + param6);
-        uk.field_k.d(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
+        PasswordValidator.field_k.d(-18 + param3 + ((-param3 + param4 >> 1) + param2), param6 - 10);
         if (!param1) {
           fi.clearStaticReferences(-46);
         }

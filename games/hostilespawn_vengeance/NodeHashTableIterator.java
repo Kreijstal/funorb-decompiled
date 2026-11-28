@@ -92,22 +92,22 @@ final class NodeHashTableIterator implements Iterator {
         var9 = HostileSpawn.field_I ? 1 : 0;
         if (param2 >= param5) {
           if (param2 < param6) {
-            t.a(SoftwareRasterizer.field_i, false, param4, param6, param3, param5, param2, param0, param7);
+            AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param6, param3, param5, param2, param0, param7);
           } else {
             if (param6 <= param5) {
-              t.a(SoftwareRasterizer.field_i, false, param4, param2, param0, param6, param5, param7, param3);
+              AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param2, param0, param6, param5, param7, param3);
             } else {
-              t.a(SoftwareRasterizer.field_i, false, param4, param2, param0, param5, param6, param3, param7);
+              AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param2, param0, param5, param6, param3, param7);
             }
           }
         } else {
           if (param5 < param6) {
-            t.a(SoftwareRasterizer.field_i, false, param4, param6, param3, param2, param5, param7, param0);
+            AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param6, param3, param2, param5, param7, param0);
           } else {
             if (param2 >= param6) {
-              t.a(SoftwareRasterizer.field_i, false, param4, param5, param7, param6, param2, param0, param3);
+              AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param5, param7, param6, param2, param0, param3);
             } else {
-              t.a(SoftwareRasterizer.field_i, false, param4, param5, param7, param2, param6, param3, param0);
+              AchievementNotification.a(SoftwareRasterizer.field_i, false, param4, param5, param7, param2, param6, param3, param0);
             }
           }
         }

@@ -100,8 +100,8 @@ final class bl extends l {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           nm.field_J = true;
-          da.field_j = param1;
-          if (0 == da.field_j) {
+          TextFieldValidator.field_j = param1;
+          if (0 == TextFieldValidator.field_j) {
             var3_int = dc.a(bc.field_c, qr.field_o, (byte) 101, MovingLevelTile.field_w, mf.field_c);
             var4 = 3 + var3_int;
             gd.field_s = new int[var4];
@@ -120,7 +120,7 @@ final class bl extends l {
             mn.field_q[var4 - 1] = lr.field_N;
             gd.field_s[var4 - 1] = 1;
             gi.field_n[1] = 5;
-          } else if (da.field_j == 1) {
+          } else if (TextFieldValidator.field_j == 1) {
             var3_int = dc.a(bc.field_c, qr.field_o, (byte) 33, MovingLevelTile.field_w, mf.field_c);
             var4 = var3_int + 2;
             gd.field_s = new int[var4];
@@ -136,8 +136,8 @@ final class bl extends l {
             mn.field_q[-1 + var4] = lr.field_N;
             gd.field_s[var4 - 1] = 0;
             gi.field_n[0] = 5;
-          } else if (2 != da.field_j) {
-            if (da.field_j == 3) {
+          } else if (2 != TextFieldValidator.field_j) {
+            if (TextFieldValidator.field_j == 3) {
               if (!gi.field_s.privilegedTasksEnabled) {
                 var3_int = dc.a(bc.field_c, ko.field_U, (byte) 110, MovingLevelTile.field_w, mf.field_c);
               } else {
@@ -157,7 +157,7 @@ final class bl extends l {
               mn.field_q[var4 - 1] = lr.field_N;
               gd.field_s[-1 + var4] = 0;
               gi.field_n[0] = 5;
-            } else if (da.field_j == 4) {
+            } else if (TextFieldValidator.field_j == 4) {
               var3_int = dc.a(bc.field_c, lh.field_a, (byte) 50, MovingLevelTile.field_w, mf.field_c);
               var4 = 2 + var3_int;
               gd.field_s = new int[var4];
@@ -174,7 +174,7 @@ final class bl extends l {
               gd.field_s[-1 + var4] = 0;
               gi.field_n[0] = 5;
             } else {
-              if (da.field_j != 5) {
+              if (TextFieldValidator.field_j != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = dc.a(bc.field_c, w.field_D, (byte) 28, MovingLevelTile.field_w, mf.field_c);
@@ -297,7 +297,7 @@ final class bl extends l {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (da.field_j == 2) {
+          if (TextFieldValidator.field_j == 2) {
             var10 = jo.field_g;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -349,7 +349,7 @@ final class bl extends l {
             }
             var4Lifetime3++;
           }
-          if (da.field_j != 2) {
+          if (TextFieldValidator.field_j != 2) {
             ve.field_d.a(param0, CrossfadingMidiPcmStream.b(gb.field_d, 1282642017, PacketBuffer.field_n), 0, (byte) 80);
           } else {
             ve.field_d.a(param0, -1, -1, (byte) 80);

@@ -1458,7 +1458,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_email", (byte) 118);
                 if (var2 != null) {
-                  rg.field_I = eg.a(param0 ^ 121, var2);
+                  EditableTextField.field_I = eg.a(param0 ^ 121, var2);
                 }
                 var2 = kb.a("create_email_confirm", (byte) 110);
                 if (var2 != null) {
@@ -1638,7 +1638,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_namechars", (byte) 127);
                 if (null != var2) {
-                  ff.field_C = eg.a(105, var2);
+                  LoginPanel.field_C = eg.a(105, var2);
                 }
                 var2 = kb.a("create_alert_nameleadingspace", (byte) 127);
                 if (null != var2) {
@@ -1914,7 +1914,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("unpacking_languages", (byte) 123);
                 if (null != var2) {
-                  vh.field_k = eg.a(104, var2);
+                  EmailFormatValidator.field_k = eg.a(104, var2);
                 }
                 var2 = kb.a("unpacking_animations", (byte) 116);
                 if (var2 != null) {
@@ -2028,7 +2028,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("startgame", (byte) 117);
                 if (null != var2) {
-                  vh.field_j = eg.a(110, var2);
+                  EmailFormatValidator.field_j = eg.a(110, var2);
                 }
                 var2 = kb.a("newgame", (byte) 119);
                 if (null != var2) {
@@ -2308,7 +2308,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("notyetachieved", (byte) 120);
                 if (var2 != null) {
-                  ff.field_x = eg.a(106, var2);
+                  LoginPanel.field_x = eg.a(106, var2);
                 }
                 var2 = kb.a("achieved", (byte) 109);
                 if (var2 != null) {
@@ -2320,7 +2320,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("orbcoins", (byte) 124);
                 if (null != var2) {
-                  ck.field_F = eg.a(92, var2);
+                  DisplayNameSelectionPanel.field_F = eg.a(92, var2);
                 }
                 var2 = kb.a("orbpoints_colon", (byte) 105);
                 if (var2 != null) {

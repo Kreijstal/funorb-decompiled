@@ -46,14 +46,14 @@ abstract class hm {
             var5 = (String) null;
             hm.a((String) null, (ResourceArchive) null, (byte) -42, (String) null);
           }
-          if (param1.field_lb == ul.field_F) {
+          if (param1.field_lb == LoginPanel.field_F) {
             var3_int -= 200;
           } else {
             if (param1.field_lb == null) {
               var3_int += 200;
             }
           }
-          if (param0.field_lb != ul.field_F) {
+          if (param0.field_lb != LoginPanel.field_F) {
             if (param0.field_lb == null) {
               var3_int -= 200;
             }

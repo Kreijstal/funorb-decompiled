@@ -291,13 +291,13 @@ final class MusicPatchPcmStream extends PcmStream {
             stackIn_42_11 = (hj.field_i) || (hl.field_h);
             bh.a(stackIn_36_0, stackIn_36_1, stackIn_36_2, stackIn_36_3, stackIn_36_4, stackIn_36_5, stackIn_36_6, stackIn_36_7, stackIn_37_8, stackIn_40_9 != 0, stackIn_40_10, stackIn_42_11);
             if (ob.field_w) {
-              qn.field_U.writeCipheredByte(57, param0 ^ 28);
+              EditableTextField.field_U.writeCipheredByte(57, param0 ^ 28);
               ob.field_w = false;
             }
             if (!tg.field_p) {
               return;
             }
-            qn.field_U.writeCipheredByte(10, -68);
+            EditableTextField.field_U.writeCipheredByte(10, -68);
             tg.field_p = false;
             return;
           }
@@ -317,13 +317,13 @@ final class MusicPatchPcmStream extends PcmStream {
           bh.a(stackIn_21_0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_21_6, stackIn_21_7, stackIn_22_8, stackIn_25_9 != 0, stackIn_25_10, stackIn_27_11);
         }
         if (ob.field_w) {
-          qn.field_U.writeCipheredByte(57, param0 ^ 28);
+          EditableTextField.field_U.writeCipheredByte(57, param0 ^ 28);
           ob.field_w = false;
         }
         if (!tg.field_p) {
           return;
         }
-        qn.field_U.writeCipheredByte(10, -68);
+        EditableTextField.field_U.writeCipheredByte(10, -68);
         tg.field_p = false;
     }
 

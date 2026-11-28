@@ -207,7 +207,7 @@ public final class fleas extends NetworkGameClient {
             27 == fl.field_c[param3][param0]) &&
             3 != param4) {
             cl.field_d[param2] = 1;
-            c.field_U = true;
+            EditableTextField.field_U = true;
             fh.$cfr$intArgs$a$cb0bc10e6b69(-59, SectorCacheStore.field_a, 100, 63);
           }
           if (16 == fl.field_c[param3][param0] ||
@@ -295,10 +295,10 @@ public final class fleas extends NetworkGameClient {
           if (stackIn_165_0 == 22 &&
             2 == param4) {
             fl.field_c[param3][param0] = '\032';
-            rf.field_e[gh.field_q] = param3;
-            hf.field_d[gh.field_q] = param0;
-            wh.field_d[gh.field_q] = param2;
-            gh.field_q = gh.field_q + 1;
+            rf.field_e[PasswordValidator.field_q] = param3;
+            hf.field_d[PasswordValidator.field_q] = param0;
+            wh.field_d[PasswordValidator.field_q] = param2;
+            PasswordValidator.field_q = PasswordValidator.field_q + 1;
           }
           boolean decompiledFrameCompleted1 = true;
           if (fl.field_c[param3][param0] == 23) {
@@ -520,9 +520,9 @@ public final class fleas extends NetworkGameClient {
               }
             } else {
               ((dj) (IntrusiveNode.field_b)).field_P = var2;
-              tl.field_p = (fa) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
+              MatchingFieldValidator.field_p = (fa) ((Object) tc.a(de.field_h, "fleafont_filled", hm.field_g, (byte) 115, ""));
               var2 = new int[4][];
-              var2[0] = ((dj) (tl.field_p)).field_P[0];
+              var2[0] = ((dj) (MatchingFieldValidator.field_p)).field_P[0];
               array$1 = new int[var2[0].length];
               var2[1] = array$1;
               array$2 = new int[var2[0].length];
@@ -559,7 +559,7 @@ public final class fleas extends NetworkGameClient {
                 }
               } else {
                 se.field_a = new RgbSprite[3];
-                ((dj) (tl.field_p)).field_P = var2;
+                ((dj) (MatchingFieldValidator.field_p)).field_P = var2;
                 se.field_a[0] = kl.a(252, hm.field_g, "", "texture_1");
                 se.field_a[1] = kl.a(252, hm.field_g, "", "texture_3");
                 se.field_a[2] = kl.a(252, hm.field_g, "", "texture_5");
@@ -605,21 +605,21 @@ public final class fleas extends NetworkGameClient {
                   tb.field_f = kl.a(252, hm.field_g, "", "slider_tab");
                   MusicPatchPcmStream.field_m = hm.a("checkbox_value_0", hm.field_g, (byte) -88, "");
                   UiComponent.field_l = hm.a("checkbox_value_1", hm.field_g, (byte) -13, "");
-                  ai.field_n = of.a("countdown", "", hm.field_g, 103);
-                  ji.field_f = new RgbSprite[ai.field_n.length];
+                  EmailFormatValidator.field_n = of.a("countdown", "", hm.field_g, 103);
+                  ji.field_f = new RgbSprite[EmailFormatValidator.field_n.length];
                   break;
                 }
                 var4[var5] = aj.field_t[var5];
                 var5++;
               } while (var17 == 0);
-              var5 = ai.field_n.length - 1;
+              var5 = EmailFormatValidator.field_n.length - 1;
               do {
                 if (var5 < 0) {
                   gi.field_b.setAsRasterTarget((byte) 125);
                   var5 = SoftwareRasterizer.field_d;
                   break;
                 }
-                ji.field_f[var5] = ai.field_n[var5].c();
+                ji.field_f[var5] = EmailFormatValidator.field_n[var5].c();
                 ji.field_f[var5].a();
                 ji.field_f[var5].f();
                 SoftwareRasterizer.blurRectangle(5, 1, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
@@ -633,7 +633,7 @@ public final class fleas extends NetworkGameClient {
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               qi.field_c = var8;
               SoftwareRasterizer.setRasterBuffer(var7, var5, var6Lifetime1);
-              ca.field_P = kl.a(252, hm.field_g, "", "explosion");
+              AccountRegistrationPanel.field_P = kl.a(252, hm.field_g, "", "explosion");
               il.field_d = of.a("achievementicons", "", hm.field_g, 103);
               var9 = new RgbSprite[3];
               var10 = new RgbSprite[3];
@@ -717,7 +717,7 @@ public final class fleas extends NetworkGameClient {
                   SpriteGeometry.field_z = fc.a(hm.field_g, "button_frame", "", (byte) 61);
                   a.field_b = fc.a(hm.field_g, "button_raised", "", (byte) 61);
                   ud.b((byte) 47);
-                  var11 = tl.field_p.field_N;
+                  var11 = MatchingFieldValidator.field_p.field_N;
                   FullscreenFocusCanvas.field_a = new RgbSprite(var11, var11);
                   FullscreenFocusCanvas.field_a.f();
                   BufferedSocket.field_m.a(0, 0, var11, var11);
@@ -728,8 +728,8 @@ public final class fleas extends NetworkGameClient {
                 nl.field_c[0][var11] = var10[2];
                 var11++;
               } while (var17 == 0);
-              var12 = 10 * tl.field_p.field_N;
-              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, tl.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, rb.field_G);
+              var12 = 10 * MatchingFieldValidator.field_p.field_N;
+              ResourceArchive.field_c = new ik(45, -(var12 / 2) + 250, 340, var12, MatchingFieldValidator.field_p, be.field_c, tk.field_m, DualLinkNode.field_n, rb.field_G);
               ResourceArchive.field_c.field_Q = -16777216;
               ResourceArchive.field_c.field_r = -1862275584;
               ResourceArchive.field_c.field_F = -2241536;
@@ -738,9 +738,9 @@ public final class fleas extends NetworkGameClient {
               ResourceArchive.field_c.field_s = 0;
               ResourceArchive.field_c.field_w = 553648127;
               ResourceArchive.field_c.field_O = -1593901056;
-              dk.field_C = new vg("", 360, 20, tl.field_p);
-              wd.field_a = new vg("", 360, 178, tl.field_p);
-              de.field_b = new vg("", 360, 395, tl.field_p);
+              dk.field_C = new vg("", 360, 20, MatchingFieldValidator.field_p);
+              wd.field_a = new vg("", 360, 178, MatchingFieldValidator.field_p);
+              de.field_b = new vg("", 360, 395, MatchingFieldValidator.field_p);
               var13 = de.field_b;
               dk.field_C.field_d = 36;
               var14 = wd.field_a;
@@ -762,7 +762,7 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               do {
                 if (var15_int < 0) {
-                  lk.field_D = new vg(nj.field_d.toLowerCase(), 415, de.field_b.field_l, tl.field_p);
+                  lk.field_D = new vg(nj.field_d.toLowerCase(), 415, de.field_b.field_l, MatchingFieldValidator.field_p);
                   lk.field_D.field_w = 16711680;
                   lk.field_D.field_n = 220;
                   lk.field_D.field_k = false;
@@ -774,7 +774,7 @@ public final class fleas extends NetworkGameClient {
                   lk.field_D.field_d = 30;
                   lk.field_D.field_D = 2;
                   lk.field_D.field_F = 0;
-                  si.field_y = new vg(kf.field_l.toLowerCase(), lk.field_D.field_a, lk.field_D.field_l, tl.field_p);
+                  si.field_y = new vg(kf.field_l.toLowerCase(), lk.field_D.field_a, lk.field_D.field_l, MatchingFieldValidator.field_p);
                   si.field_y.field_C = lk.field_D.field_C;
                   si.field_y.field_B = lk.field_D.field_B;
                   si.field_y.field_A = lk.field_D.field_A;
@@ -853,21 +853,21 @@ public final class fleas extends NetworkGameClient {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (~bc.field_V != ~ab.field_b) {
+          if (~ValidatedTextField.field_V != ~ab.field_b) {
             if (DiskCacheWorker.field_g >= 16) {
               if (DiskCacheWorker.field_g == 16 &&
-                bc.field_V == 10) {
+                ValidatedTextField.field_V == 10) {
                 fh.$cfr$intArgs$a$cb0bc10e6b69(114, jd.field_q, 100, 63);
               }
               if (3 != ab.field_b) {
               }
-              if (-1 == bc.field_V) {
+              if (-1 == ValidatedTextField.field_V) {
                 fc.c(126);
                 if (var4 != 0) {
-                  pi.field_b[bc.field_V].f(2);
+                  pi.field_b[ValidatedTextField.field_V].f(2);
                 }
               } else {
-                pi.field_b[bc.field_V].f(2);
+                pi.field_b[ValidatedTextField.field_V].f(2);
               }
               var3 = -DiskCacheWorker.field_g + 32 + 1;
               var3 = var3 * 16;
@@ -937,7 +937,7 @@ public final class fleas extends NetworkGameClient {
           if (DirectByteStorage.field_k >= 2) {
             ve.field_d.b("FPS: " + ak.field_c, 640, 480, 255, 16776960);
           }
-          ul.c(param0);
+          LoginPanel.c(param0);
           be.a(0, (java.awt.Canvas) (var2), (byte) -127, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1025,10 +1025,10 @@ public final class fleas extends NetworkGameClient {
           AccountCreationResultPanel.releaseDeclaredStaticReferences((byte) 124);
           ui.e(false);
           bd.clearDeclaredStaticReferences((byte) 127);
-          ca.j(100);
+          AccountRegistrationPanel.j(100);
           rb.a(param0 ^ 107);
-          ul.releaseDeclaredStaticReferences(16777215);
-          nf.clearDeclaredStaticReferences((byte) -50);
+          LoginPanel.releaseDeclaredStaticReferences(16777215);
+          DisplayNameSelectionPanel.clearDeclaredStaticReferences((byte) -50);
           ad.clearStaticReferences((byte) 42);
           jd.a((byte) 72);
           ff.clearStaticReferences((byte) 92);
@@ -1128,7 +1128,7 @@ public final class fleas extends NetworkGameClient {
           je.i(93);
           v.resetDeclaredStaticReferences(-8011);
           vk.resetStaticState(false);
-          r.d(0);
+          TextFieldValidator.d(0);
           sc.clearStaticReferences((byte) -73);
           md.resetStaticState((byte) -101);
           d.discardDeclaredStaticReferences(-1);
@@ -1185,14 +1185,14 @@ public final class fleas extends NetworkGameClient {
           te.clearStaticReferences(false);
           pi.clearStaticReferences((byte) 11);
           AccountNameAvailabilityValidator.resetStaticState(false);
-          ai.clearStaticReferences((byte) -10);
-          ck.clearStaticReferences((byte) 2);
-          ga.resetStaticState((byte) 113);
-          tl.clearStaticReferences((byte) 115);
+          EmailFormatValidator.clearStaticReferences((byte) -10);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences((byte) 2);
+          AgeValidator.resetStaticState((byte) 113);
+          MatchingFieldValidator.clearStaticReferences((byte) 115);
           ak.clearStaticReferences(false);
           mi.a((byte) 27);
           wd.a(false);
-          gg.clearStaticReferences(param0 ^ -125);
+          DebouncedFieldValidator.clearStaticReferences(param0 ^ -125);
           ob.clearStaticReferences(param0 ^ 73);
           this.field_C = null;
           this.field_N = null;
@@ -1340,7 +1340,7 @@ public final class fleas extends NetworkGameClient {
             jj.a(65.0f, cb.field_q, true);
             this.d(true);
             BufferedSocket.field_j = wk.a(jc.field_e, "", "Flea Circus Titlescreen");
-            gg.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
+            DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
             hf.field_e[0] = wk.a(jc.field_e, "", "Flea Circus 1");
             hf.field_e[1] = wk.a(jc.field_e, "", "Flea Circus 2");
             hf.field_e[2] = wk.a(jc.field_e, "", "Flea Circus 3");
@@ -1353,7 +1353,7 @@ public final class fleas extends NetworkGameClient {
                 fleas.h((byte) -114);
                 break;
               }
-              gg.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
+              DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
               var3_int++;
             } while (var10 == 0);
             return false;
@@ -1505,7 +1505,7 @@ public final class fleas extends NetworkGameClient {
         var3 = field_A ? 1 : 0;
         try {
           PacketBuffer.field_j = PacketBuffer.field_j + 1;
-          ai.e(-20846);
+          EmailFormatValidator.e(-20846);
           if (ResourceArchive.field_p != null &&
             ResourceArchive.field_p.focusLost) {
             IntrusiveNode.a(false);
@@ -1623,7 +1623,7 @@ public final class fleas extends NetworkGameClient {
                   var2_int = lk.k(param0 ^ 31053);
                   switch (var2_int) {
                     case 3:
-                      c.a(320, (byte) 110, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, true, 8);
+                      EditableTextField.a(320, (byte) 110, MatchingFieldValidator.field_p.field_K + MatchingFieldValidator.field_p.field_y, a.field_b, 8, 2, MatchingFieldValidator.field_p, SpriteGeometry.field_z, 240, MatchingFieldValidator.field_p.field_y, true, 8);
                     default:
                       break;
                     case 4:
@@ -1727,7 +1727,7 @@ public final class fleas extends NetworkGameClient {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (0 == vk.field_L) {
-            if (bc.field_V == ab.field_b) {
+            if (ValidatedTextField.field_V == ab.field_b) {
               if (ab.field_b == -1) {
                 this.l(param0 + 212);
                 decompiledFrameRemainder0 = (var3 != 0);
@@ -1751,7 +1751,7 @@ public final class fleas extends NetworkGameClient {
                 if (ab.field_b == 2) {
                   m.field_b = null;
                 }
-                ab.field_b = bc.field_V;
+                ab.field_b = ValidatedTextField.field_V;
                 DiskCacheWorker.field_g = 0;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
@@ -1793,7 +1793,7 @@ public final class fleas extends NetworkGameClient {
                   ml.i(param0 + 14);
                   if (ab.field_b == -2) {
                     ab.field_b = 0;
-                    c.a(320, (byte) 111, tl.field_p.field_y + tl.field_p.field_K, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, false, 8);
+                    EditableTextField.a(320, (byte) 111, MatchingFieldValidator.field_p.field_y + MatchingFieldValidator.field_p.field_K, a.field_b, 8, 2, MatchingFieldValidator.field_p, SpriteGeometry.field_z, 240, MatchingFieldValidator.field_p.field_y, false, 8);
                     if (var3 != 0) {
                       ab.field_b = mf.field_c;
                     }
@@ -1802,7 +1802,7 @@ public final class fleas extends NetworkGameClient {
                   ab.field_b = mf.field_c;
                 }
                 vk.field_L = 3;
-                bc.field_V = ab.field_b;
+                ValidatedTextField.field_V = ab.field_b;
               }
             }
           }
@@ -1839,7 +1839,7 @@ public final class fleas extends NetworkGameClient {
           if (0 == cg.field_y) {
             MidiPcmStream.b(true);
           }
-          bc.a(pf.field_b, 1, a.field_a);
+          ValidatedTextField.a(pf.field_b, 1, a.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2595,7 +2595,7 @@ public final class fleas extends NetworkGameClient {
                     if (stackIn_376_0 >= stackIn_376_1 &&
                       var7Lifetime1 < lc.field_v[var4Lifetime1] &&
                       var8Lifetime1 >= uh.field_n[var4Lifetime1] &&
-                      ca.field_G[var4Lifetime1] > var8Lifetime1 &&
+                      AccountRegistrationPanel.field_G[var4Lifetime1] > var8Lifetime1 &&
                       me.field_i[var4Lifetime1] == 0) {
                       if ((var7Lifetime1 / 16) > rk.field_u[var4Lifetime1]) {
                         ge.field_a[var3Lifetime3] = 4;
@@ -2725,7 +2725,7 @@ public final class fleas extends NetworkGameClient {
           var3Lifetime4 = stackIn_465_0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
-            if (var3Lifetime4 < gh.field_q) {
+            if (var3Lifetime4 < PasswordValidator.field_q) {
               var5Lifetime1 = rf.field_e[var3Lifetime4];
               var6Lifetime1 = hf.field_d[var3Lifetime4];
               var4Lifetime2 = wh.field_d[var3Lifetime4];
@@ -2759,11 +2759,11 @@ public final class fleas extends NetworkGameClient {
                     }
                     var20Lifetime1++;
                   }
-                  stackIn_492_0Lifetime1 = gh.field_q - 1;
-                  gh.field_q = stackIn_492_0Lifetime1;
-                  rf.field_e[var3Lifetime4] = rf.field_e[gh.field_q];
-                  hf.field_d[var3Lifetime4] = hf.field_d[gh.field_q];
-                  wh.field_d[var3Lifetime4] = wh.field_d[gh.field_q];
+                  stackIn_492_0Lifetime1 = PasswordValidator.field_q - 1;
+                  PasswordValidator.field_q = stackIn_492_0Lifetime1;
+                  rf.field_e[var3Lifetime4] = rf.field_e[PasswordValidator.field_q];
+                  hf.field_d[var3Lifetime4] = hf.field_d[PasswordValidator.field_q];
+                  wh.field_d[var3Lifetime4] = wh.field_d[PasswordValidator.field_q];
                   var3Lifetime4--;
                 }
                 var3Lifetime4++;

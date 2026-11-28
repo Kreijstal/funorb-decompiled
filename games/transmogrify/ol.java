@@ -24,7 +24,7 @@ final class ol {
           RuntimeException var15_ref = null;
           try {
             WordLanguage.field_l = new BitPacketBuffer(param1);
-            ff.field_D = new BitPacketBuffer(param6);
+            LoginPanel.field_D = new BitPacketBuffer(param6);
             dh.field_x = param12;
             ua.field_c = param8;
             kc.field_D = param10;

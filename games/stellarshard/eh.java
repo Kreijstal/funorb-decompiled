@@ -107,7 +107,7 @@ final class eh {
         int var25Lifetime2;
         var26 = stellarshard.field_B;
         try {
-          var28 = ae.field_N;
+          var28 = EditableTextField.field_N;
           var2 = var28.readUnsignedByte(4);
           if (param0 == ~var2) {
             var3 = var28.readUnsignedShort((byte) 26);

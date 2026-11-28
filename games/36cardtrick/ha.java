@@ -108,7 +108,7 @@ final class ha {
             }
             if (ra.field_b == vd.field_q &&
               r.a(1, (byte) 122)) {
-              var6_int = rd.field_j.readUnsignedByte(94);
+              var6_int = EmailFormatValidator.field_j.readUnsignedByte(94);
               if (var6_int == 0) {
                 ra.field_b = DiskArchiveRequest.field_w;
               } else {
@@ -116,22 +116,22 @@ final class ha {
                 al.field_a = -1;
                 pd.field_l = var6_int;
               }
-              rd.field_j.position = 0;
+              EmailFormatValidator.field_j.position = 0;
             }
             if (DiskArchiveRequest.field_w == ra.field_b &&
               r.a(8, (byte) 127)) {
-              hb.field_b = rd.field_j.readLong(true);
-              rd.field_j.position = 0;
+              hb.field_b = EmailFormatValidator.field_j.readLong(true);
+              EmailFormatValidator.field_j.position = 0;
               jc.a(param4, (byte) -111, param3, sh.field_k, param0);
               ra.field_b = rk.field_eb;
             }
             boolean decompiledFrameRemainder0 = true;
             if (rk.field_eb == ra.field_b &&
               r.a(1, (byte) 121)) {
-              var6_intLifetime1 = rd.field_j.readUnsignedByte(34);
+              var6_intLifetime1 = EmailFormatValidator.field_j.readUnsignedByte(34);
               pd.field_l = var6_intLifetime1;
               ia.field_b = null;
-              rd.field_j.position = 0;
+              EmailFormatValidator.field_j.position = 0;
               if (0 != var6_intLifetime1 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
@@ -153,12 +153,12 @@ final class ha {
             }
             if (ra.field_b == vg.field_a &&
               gl.a(false)) {
-              cd.field_a = rd.field_j.readLong(true);
-              NanoFrameTimer.field_f = rd.field_j.readUnsignedByte(-109);
-              rd.field_j.readUnsignedByte(-103);
-              d.field_c = rd.field_j.readUnsignedShort((byte) 72);
-              var11 = rd.field_j.readNullableString((byte) 29);
-              var7 = rd.field_j.readUnsignedByte(113);
+              cd.field_a = EmailFormatValidator.field_j.readLong(true);
+              NanoFrameTimer.field_f = EmailFormatValidator.field_j.readUnsignedByte(-109);
+              EmailFormatValidator.field_j.readUnsignedByte(-103);
+              d.field_c = EmailFormatValidator.field_j.readUnsignedShort((byte) 72);
+              var11 = EmailFormatValidator.field_j.readNullableString((byte) 29);
+              var7 = EmailFormatValidator.field_j.readUnsignedByte(113);
               if (0 != (var7 & 1)) {
                 bd.d((byte) -86);
               }
@@ -171,42 +171,42 @@ final class ha {
                 }
               }
               if (bj.field_m) {
-                rd.field_j.readUnsignedByte(124);
-                rd.field_j.readUnsignedByte(101);
-                rd.field_j.readInt((byte) 125);
-                PacketBuffer.field_j = rd.field_j.readUnsignedShort((byte) 72);
+                EmailFormatValidator.field_j.readUnsignedByte(124);
+                EmailFormatValidator.field_j.readUnsignedByte(101);
+                EmailFormatValidator.field_j.readInt((byte) 125);
+                PacketBuffer.field_j = EmailFormatValidator.field_j.readUnsignedShort((byte) 72);
                 fb.field_d = new byte[PacketBuffer.field_j];
                 for (var8 = 0; var8 < PacketBuffer.field_j; var8++) {
-                  fb.field_d[var8] = rd.field_j.readByte(true);
+                  fb.field_d[var8] = EmailFormatValidator.field_j.readByte(true);
                 }
               }
-              ri.field_c = rd.field_j.readString(false);
+              ri.field_c = EmailFormatValidator.field_j.readString(false);
               var12 = (CharSequence) ((Object) ri.field_c);
               aa.field_fb = ff.a((byte) 116, var12);
-              IntrusiveNode.field_b = rd.field_j.readUnsignedByte(-117);
+              IntrusiveNode.field_b = EmailFormatValidator.field_j.readUnsignedByte(-117);
               ra.field_b = ad.field_q;
               if (sh.field_k.a((byte) -24) != tf.field_o) {
                 if (sh.field_k.a((byte) -24) == SectorCacheStore.field_h) {
-                  oj.field_e.a(mk.g(-120), 0);
+                  oj.field_e.a(PasswordValidator.g(-120), 0);
                 }
               } else {
-                ke.field_c.a(mk.g(-125), 0);
+                ke.field_c.a(PasswordValidator.g(-125), 0);
               }
               lk.field_w = false;
               if (var11 != null) {
-                lk.a(mk.g(-128), 0, var11);
+                lk.a(PasswordValidator.g(-128), 0, var11);
               }
               if (d.field_c <= 0 &&
                 !bi.field_c) {
                 try {
-                  JavaScriptBridge.callWithoutArguments("unzap", -12151, mk.g(-125));
+                  JavaScriptBridge.callWithoutArguments("unzap", -12151, PasswordValidator.g(-125));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(new Object[]{eh.a(0, cd.field_a)}, "zap", (byte) 111, mk.g(-125));
+                  JavaScriptBridge.callWithArguments(new Object[]{eh.a(0, cd.field_a)}, "zap", (byte) 111, PasswordValidator.g(-125));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -219,7 +219,7 @@ final class ha {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 kb.field_e[var8Lifetime1] = kb.field_e[var8Lifetime1] + 50;
               }
-              rd.field_j.setCipherSeed(kb.field_e, 8);
+              EmailFormatValidator.field_j.setCipherSeed(kb.field_e, 8);
               stackIn_73_0 = pd.field_l;
               return stackIn_73_0;
             }
@@ -235,7 +235,7 @@ final class ha {
               if (pd.field_l == 7) {
                 pd.field_l = 3;
               }
-              e.field_a = rd.field_j.readString(false);
+              e.field_a = EmailFormatValidator.field_j.readString(false);
               lk.field_w = false;
               stackIn_84_0 = pd.field_l;
               return stackIn_84_0;

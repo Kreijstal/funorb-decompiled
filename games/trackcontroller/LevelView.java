@@ -11,7 +11,7 @@ final class LevelView extends LevelGrid {
     static BitPacketBuffer field_C;
     private int field_s;
     private int field_F;
-    static rl field_y;
+    static LoginPanel field_y;
     private short[][] field_B;
     static String field_r;
     static String field_w;

@@ -22,18 +22,18 @@ final class li {
           if (null == df.field_L) {
             df.field_L = "0";
           }
-          fi.field_o = param5.getParameter("overxachievements");
-          if (fi.field_o == null) {
-            fi.field_o = "0";
+          EmailFormatValidator.field_o = param5.getParameter("overxachievements");
+          if (EmailFormatValidator.field_o == null) {
+            EmailFormatValidator.field_o = "0";
           }
           var6 = param5.getParameter("currency");
           if (var6 == null) {
-            ej.field_S = 2;
+            EditableTextField.field_S = 2;
           } else {
             if (RasterBuffer.a((CharSequence) ((Object) var6), true)) {
-              ej.field_S = ta.a((CharSequence) ((Object) var6), -121);
+              EditableTextField.field_S = ta.a((CharSequence) ((Object) var6), -121);
             } else {
-              ej.field_S = 2;
+              EditableTextField.field_S = 2;
             }
           }
           me.field_k = param4;

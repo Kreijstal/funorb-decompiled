@@ -51,7 +51,7 @@ final class vb {
             }
             if (ef.field_a == tb.field_o) {
               if (!param3) {
-                eh.field_i = ab.a(param1, param0, 130, false);
+                eh.field_i = AgeValidator.a(param1, param0, 130, false);
               }
               if (param3 ||
                 var9 != 0) {
@@ -79,9 +79,9 @@ final class vb {
             }
             if (aa.field_U == ef.field_a &&
               BufferedSocket.a(8, 0)) {
-              ij.field_l = kj.field_d.readLong(48);
+              PasswordValidator.field_l = kj.field_d.readLong(48);
               kj.field_d.position = 0;
-              id.a(eh.field_i, param5, param3, 19, param4);
+              LoginRequestBuilder.buildLoginRequest(eh.field_i, param5, param3, 19, param4);
               ef.field_a = qi.field_a;
             }
             if (ef.field_a == qi.field_a &&
@@ -710,7 +710,7 @@ final class vb {
         try {
           km.a(30);
           dc.field_a.h(63);
-          un.field_k = new pe(eo.field_a, (String) null, ff.field_a, param0, param2);
+          un.field_k = new LoginPanel(eo.field_a, (String) null, ff.field_a, param0, param2);
           if (param3 != 4805) {
             vb.a((VertexMesh) null, (byte) 25, false, (int[]) null, (int[]) null, false, true);
           }

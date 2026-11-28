@@ -36,7 +36,7 @@ final class mm extends kj {
             return false;
           }
           if (param0 != null &&
-            param0.length() >= wg.field_q &&
+            param0.length() >= EmailFormatValidator.field_q &&
             param0.length() <= na.field_b) {
             return false;
           }

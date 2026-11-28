@@ -80,14 +80,14 @@ final class BoundedRandomAccessFile {
           }
           var2_int = -65 / ((-21 - param0) / 63);
           var7 = (CharSequence) ((Object) param1);
-          var3 = cl.a(-95, var7);
+          var3 = LoginPanel.a(-95, var7);
           if (var3 == null) {
             var3 = param1;
           }
           var4 = (pe) (tc.field_o.a(-7895, (long)var3.hashCode()));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_ob);
-            var5 = cl.a(-95, var8);
+            var5 = LoginPanel.a(-95, var8);
             if (var5 == null) {
               var5 = var4.field_ob;
             }

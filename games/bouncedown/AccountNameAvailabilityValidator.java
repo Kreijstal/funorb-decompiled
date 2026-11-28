@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends al {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int[] field_j;
     private String checkedName;
     static String field_l;
@@ -14,7 +14,7 @@ final class AccountNameAvailabilityValidator extends al {
         return (int)(1000000000L / hb.field_H);
     }
 
-    final vf b(String param0, byte param1) {
+    final vf getValidationStatus(String param0, byte param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -126,7 +126,7 @@ final class AccountNameAvailabilityValidator extends al {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              ti.a((Throwable) null, (byte) 100, "MGR1: " + param2);
+              ValidatedTextField.a((Throwable) null, (byte) 100, "MGR1: " + param2);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -154,7 +154,7 @@ final class AccountNameAvailabilityValidator extends al {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -257,7 +257,7 @@ final class AccountNameAvailabilityValidator extends al {
         this.checkedName = null;
     }
 
-    AccountNameAvailabilityValidator(ba param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }

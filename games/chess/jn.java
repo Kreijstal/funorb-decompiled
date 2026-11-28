@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jn extends fb {
-    private vb field_O;
+    private FieldValidator field_O;
     static char[] field_M;
     private int field_N;
     static byte[] field_P;
@@ -123,7 +123,7 @@ final class jn extends fb {
           }
           var5 = (this.field_y >> 1) + param3 + this.field_u;
           var6 = param0 - (-this.field_r - (this.field_C >> 1));
-          var8 = this.field_O.a(21314);
+          var8 = this.field_O.getValidationStatus(21314);
           if (in.field_g == var8) {
             var16 = AccountNameAvailabilityValidator.field_p[0];
             var9 = var16.field_v << 1;
@@ -187,7 +187,7 @@ final class jn extends fb {
         }
         var5Lifetime1 = (this.field_y >> 1) + param3 + this.field_u;
         var6Lifetime1 = param0 - (-this.field_r - (this.field_C >> 1));
-        var8Lifetime1 = this.field_O.a(21314);
+        var8Lifetime1 = this.field_O.getValidationStatus(21314);
         if (in.field_g == var8Lifetime1) {
           var20 = AccountNameAvailabilityValidator.field_p[0];
           var9Lifetime1 = var20.field_v << 1;
@@ -260,14 +260,14 @@ final class jn extends fb {
           RuntimeException var15_ref = null;
           try {
             tk.field_h = new BitPacketBuffer(param5);
-            qn.field_U = new BitPacketBuffer(param9);
+            EditableTextField.field_U = new BitPacketBuffer(param9);
             qh.field_a = param4;
             if (param8 > -91) {
               field_M = (char[]) null;
             }
             cm.field_u = param6;
             ub.field_e = param3;
-            gb.field_s = param13;
+            NetworkGameClient.field_s = param13;
             fn.field_b = param12;
             am.field_d = param2;
             re.field_n = param1;
@@ -338,7 +338,7 @@ final class jn extends fb {
 
     final String g(int param0) {
         if (this.field_w) {
-          return this.field_O.a(false);
+          return this.field_O.getValidationMessage(false);
         }
         if (param0 == 0) {
           return null;
@@ -346,7 +346,7 @@ final class jn extends fb {
         return (String) null;
     }
 
-    jn(vb param0) {
+    jn(FieldValidator param0) {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {

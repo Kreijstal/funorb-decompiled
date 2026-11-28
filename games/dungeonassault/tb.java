@@ -90,7 +90,7 @@ final class tb {
 
     final static void a(boolean param0, int param1) {
         if (null != ik.field_e) {
-          ik.field_e.a(param0);
+          ik.field_e.renderScreen(param0);
         }
         if (param1 != 1) {
           tb.a((byte) 113);

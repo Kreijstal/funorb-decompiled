@@ -36,10 +36,10 @@ final class MenuSelectionCursor {
         this.field_i = 0;
         this.field_a = 0;
         if (this.field_l == 0) {
-          this.field_i = de.field_f;
+          this.field_i = DebouncedFieldValidator.field_f;
         }
         if (0 == this.field_l &&
-          de.field_f == 98) {
+          DebouncedFieldValidator.field_f == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -52,7 +52,7 @@ final class MenuSelectionCursor {
         if (0 != this.field_l) {
           return;
         }
-        if (99 != de.field_f) {
+        if (99 != DebouncedFieldValidator.field_f) {
           return;
         }
         this.selectedIndex = this.selectedIndex + 1;
@@ -394,12 +394,12 @@ final class MenuSelectionCursor {
         this.field_a = 0;
         if (this.field_l != 0) {
           if (0 == this.field_l &&
-            de.field_f == 96) {
+            DebouncedFieldValidator.field_f == 96) {
             if (this.selectedIndex > 0) {
               this.selectedIndex = this.selectedIndex - 1;
               this.field_f = false;
               if (this.field_l == 0 &&
-                de.field_f == 97) {
+                DebouncedFieldValidator.field_f == 97) {
                 this.selectedIndex = this.selectedIndex + 1;
                 if (this.selectedIndex >= this.itemCount) {
                   this.selectedIndex = 0;
@@ -410,8 +410,8 @@ final class MenuSelectionCursor {
                 this.field_f = true;
               }
               if (0 == this.field_l) {
-                if (de.field_f != 98 &&
-                  de.field_f != 99) {
+                if (DebouncedFieldValidator.field_f != 98 &&
+                  DebouncedFieldValidator.field_f != 99) {
                   return;
                 }
                 this.field_f = false;
@@ -425,7 +425,7 @@ final class MenuSelectionCursor {
             this.selectedIndex = this.selectedIndex - 1;
             this.field_f = false;
             if (this.field_l == 0 &&
-              de.field_f == 97) {
+              DebouncedFieldValidator.field_f == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               if (this.selectedIndex >= this.itemCount) {
                 this.selectedIndex = 0;
@@ -436,8 +436,8 @@ final class MenuSelectionCursor {
               this.field_f = true;
             }
             if (0 == this.field_l) {
-              if (de.field_f != 98 &&
-                de.field_f != 99) {
+              if (DebouncedFieldValidator.field_f != 98 &&
+                DebouncedFieldValidator.field_f != 99) {
                 return;
               }
               this.field_f = false;
@@ -448,13 +448,13 @@ final class MenuSelectionCursor {
             return;
           }
           if (this.field_l == 0) {
-            if (de.field_f != 97) {
+            if (DebouncedFieldValidator.field_f != 97) {
               if (!param1) {
                 this.field_f = true;
               }
               if (0 == this.field_l) {
-                if (de.field_f != 98 &&
-                  de.field_f != 99) {
+                if (DebouncedFieldValidator.field_f != 98 &&
+                  DebouncedFieldValidator.field_f != 99) {
                   return;
                 }
                 this.field_f = false;
@@ -473,8 +473,8 @@ final class MenuSelectionCursor {
           if (!param1) {
             this.field_f = true;
             if (0 == this.field_l) {
-              if (de.field_f != 98 &&
-                de.field_f != 99) {
+              if (DebouncedFieldValidator.field_f != 98 &&
+                DebouncedFieldValidator.field_f != 99) {
                 return;
               }
               this.field_f = false;
@@ -487,7 +487,7 @@ final class MenuSelectionCursor {
           if (0 != this.field_l) {
             return;
           }
-          if (de.field_f == 98) {
+          if (DebouncedFieldValidator.field_f == 98) {
             this.field_f = false;
             if (0 <= this.selectedIndex) {
               return;
@@ -495,7 +495,7 @@ final class MenuSelectionCursor {
             this.selectedIndex = param0;
             return;
           }
-          if (de.field_f != 99) {
+          if (DebouncedFieldValidator.field_f != 99) {
             return;
           }
           this.field_f = false;
@@ -504,16 +504,16 @@ final class MenuSelectionCursor {
           }
           return;
         }
-        this.field_i = de.field_f;
+        this.field_i = DebouncedFieldValidator.field_f;
         if (0 != this.field_l) {
           if (this.field_l == 0) {
-            if (de.field_f != 97) {
+            if (DebouncedFieldValidator.field_f != 97) {
               if (!param1) {
                 this.field_f = true;
               }
               if (0 == this.field_l) {
-                if (de.field_f != 98 &&
-                  de.field_f != 99) {
+                if (DebouncedFieldValidator.field_f != 98 &&
+                  DebouncedFieldValidator.field_f != 99) {
                   return;
                 }
                 this.field_f = false;
@@ -532,8 +532,8 @@ final class MenuSelectionCursor {
           if (!param1) {
             this.field_f = true;
             if (0 == this.field_l) {
-              if (de.field_f != 98 &&
-                de.field_f != 99) {
+              if (DebouncedFieldValidator.field_f != 98 &&
+                DebouncedFieldValidator.field_f != 99) {
                 return;
               }
               this.field_f = false;
@@ -546,7 +546,7 @@ final class MenuSelectionCursor {
           if (0 != this.field_l) {
             return;
           }
-          if (de.field_f == 98) {
+          if (DebouncedFieldValidator.field_f == 98) {
             this.field_f = false;
             if (0 <= this.selectedIndex) {
               return;
@@ -554,7 +554,7 @@ final class MenuSelectionCursor {
             this.selectedIndex = param0;
             return;
           }
-          if (de.field_f != 99) {
+          if (DebouncedFieldValidator.field_f != 99) {
             return;
           }
           this.field_f = false;
@@ -563,12 +563,12 @@ final class MenuSelectionCursor {
           }
           return;
         }
-        if (de.field_f == 96) {
+        if (DebouncedFieldValidator.field_f == 96) {
           if (this.selectedIndex > 0) {
             this.selectedIndex = this.selectedIndex - 1;
             this.field_f = false;
             if (this.field_l == 0 &&
-              de.field_f == 97) {
+              DebouncedFieldValidator.field_f == 97) {
               this.selectedIndex = this.selectedIndex + 1;
               if (this.selectedIndex >= this.itemCount) {
                 this.selectedIndex = 0;
@@ -579,8 +579,8 @@ final class MenuSelectionCursor {
               this.field_f = true;
             }
             if (0 == this.field_l) {
-              if (de.field_f != 98 &&
-                de.field_f != 99) {
+              if (DebouncedFieldValidator.field_f != 98 &&
+                DebouncedFieldValidator.field_f != 99) {
                 return;
               }
               this.field_f = false;
@@ -594,7 +594,7 @@ final class MenuSelectionCursor {
           this.selectedIndex = this.selectedIndex - 1;
           this.field_f = false;
           if (this.field_l == 0 &&
-            de.field_f == 97) {
+            DebouncedFieldValidator.field_f == 97) {
             this.selectedIndex = this.selectedIndex + 1;
             if (this.selectedIndex >= this.itemCount) {
               this.selectedIndex = 0;
@@ -607,13 +607,13 @@ final class MenuSelectionCursor {
           if (0 != this.field_l) {
             return;
           }
-          if (de.field_f == 98) {
+          if (DebouncedFieldValidator.field_f == 98) {
             this.field_f = false;
             if (0 > this.selectedIndex) {
               this.selectedIndex = param0;
             }
           } else {
-            if (de.field_f == 99) {
+            if (DebouncedFieldValidator.field_f == 99) {
               this.field_f = false;
               if (0 > this.selectedIndex) {
                 this.selectedIndex = param0;
@@ -624,12 +624,12 @@ final class MenuSelectionCursor {
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_l == 0) {
-          if (de.field_f != 97) {
+          if (DebouncedFieldValidator.field_f != 97) {
             if (!param1) {
               this.field_f = true;
               if (0 == this.field_l) {
-                if (de.field_f != 98 &&
-                  de.field_f != 99) {
+                if (DebouncedFieldValidator.field_f != 98 &&
+                  DebouncedFieldValidator.field_f != 99) {
                   return;
                 }
                 this.field_f = false;
@@ -642,9 +642,9 @@ final class MenuSelectionCursor {
             if (0 != this.field_l) {
               return;
             }
-            decompiledFrameRemainder0 = (de.field_f != 98);
+            decompiledFrameRemainder0 = (DebouncedFieldValidator.field_f != 98);
             if (decompiledFrameRemainder0) {
-              if (de.field_f != 99) {
+              if (DebouncedFieldValidator.field_f != 99) {
                 return;
               }
               this.field_f = false;
@@ -669,8 +669,8 @@ final class MenuSelectionCursor {
           if (0 != this.field_l) {
             return;
           }
-          if (de.field_f != 98 &&
-            de.field_f != 99) {
+          if (DebouncedFieldValidator.field_f != 98 &&
+            DebouncedFieldValidator.field_f != 99) {
             return;
           }
         }

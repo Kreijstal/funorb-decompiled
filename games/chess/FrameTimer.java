@@ -335,7 +335,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_lobby_friend_rm", -100);
                 if (null != var2) {
-                  ef.field_m = ad.a(-29410, var2);
+                  AchievementNotification.field_m = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_lobby_name_add", -126);
                 if (var2 != null) {
@@ -403,7 +403,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_options_allow_spectate", -128);
                 if (var2 != null) {
-                  jb.field_d = ad.a(-29410, var2);
+                  DebouncedFieldValidator.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_options_ratedgametype", -105);
                 if (null != var2) {
@@ -435,7 +435,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rm_x_from_friends", -128);
                 if (null != var2) {
-                  un.field_h = ad.a(-29410, var2);
+                  ChessMatchSession.field_h = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rm_x_from_ignore", -99);
                 if (var2 != null) {
@@ -499,7 +499,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("unable_to_send_message_password_a", -89);
                 if (null != var2) {
-                  af.field_b = ad.a(-29410, var2);
+                  ChessMatchState.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("unable_to_send_message_password_b", -82);
                 if (var2 != null) {
@@ -535,7 +535,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_game_hide", -122);
                 if (var2 != null) {
-                  un.field_i = ad.a(-29410, var2);
+                  ChessMatchSession.field_i = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_pm_show_all", -121);
                 if (null != var2) {
@@ -543,7 +543,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_chat_pm_friends_only", -109);
                 if (null != var2) {
-                  wf.field_X = ad.a(-29410, var2);
+                  LoginPanel.field_X = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_chat_pm_friends", -86);
                 if (null != var2) {
@@ -719,7 +719,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("who_can_join", -117);
                 if (var2 != null) {
-                  qe.field_R = ad.a(-29410, var2);
+                  ChessBoardRenderer.field_R = ad.a(-29410, var2);
                 }
                 var2 = cd.a("you_can_join", -104);
                 if (null != var2) {
@@ -979,7 +979,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_badnumplayers", -99);
                 if (var2 != null) {
-                  jb.field_c = ad.a(-29410, var2);
+                  DebouncedFieldValidator.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_inviteplayers_or_trychanging1", -84);
                 if (var2 != null) {
@@ -1011,7 +1011,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("ra_intro", -92);
                 if (var2 != null) {
-                  af.field_a = ad.a(-29410, var2);
+                  ChessMatchState.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("ra_intro_no_name", -75);
                 if (var2 != null) {
@@ -1049,7 +1049,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_0_5", -75);
                 if (var2 != null) {
-                  ri.field_h = ad.a(-29410, var2);
+                  BirthDateValidator.field_h = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_pillar_1", -102);
                 if (null != var2) {
@@ -1113,7 +1113,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("invaliduserorpass", -77);
                 if (var2 != null) {
-                  s.field_R = ad.a(-29410, var2);
+                  DisplayNameSelectionPanel.field_R = ad.a(-29410, var2);
                 }
                 var2 = cd.a("pleasetryagain", -78);
                 if (null != var2) {
@@ -1201,7 +1201,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("connectionlost_reconnecting", -98);
                 if (null != var2) {
-                  qi.field_n = ad.a(-29410, var2);
+                  AgeValidator.field_n = ad.a(-29410, var2);
                 }
                 var2 = cd.a("connectionlost_withreason", -108);
                 if (var2 != null) {
@@ -1425,51 +1425,51 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("monthnames,0", -83);
                 if (null != var2) {
-                  bg.field_cb[0] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[0] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,1", -83);
                 if (null != var2) {
-                  bg.field_cb[1] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[1] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,2", -85);
                 if (var2 != null) {
-                  bg.field_cb[2] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[2] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,3", -121);
                 if (null != var2) {
-                  bg.field_cb[3] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[3] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,4", -90);
                 if (null != var2) {
-                  bg.field_cb[4] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[4] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,5", -96);
                 if (var2 != null) {
-                  bg.field_cb[5] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[5] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,6", -104);
                 if (var2 != null) {
-                  bg.field_cb[6] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[6] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,7", -90);
                 if (null != var2) {
-                  bg.field_cb[7] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[7] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,8", -108);
                 if (var2 != null) {
-                  bg.field_cb[8] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[8] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,9", -78);
                 if (null != var2) {
-                  bg.field_cb[9] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[9] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,10", -94);
                 if (null != var2) {
-                  bg.field_cb[10] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[10] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("monthnames,11", -121);
                 if (null != var2) {
-                  bg.field_cb[11] = ad.a(-29410, var2);
+                  ValidatedTextField.field_cb[11] = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_welcome", -113);
                 if (null != var2) {
@@ -1813,7 +1813,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("enterfriend_add", -93);
                 if (null != var2) {
-                  oc.field_r = ad.a(-29410, var2);
+                  MatchingFieldValidator.field_r = ad.a(-29410, var2);
                 }
                 var2 = cd.a("enterfriend_del", -123);
                 if (null != var2) {
@@ -1849,7 +1849,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("waitingfor_graphics", -80);
                 if (var2 != null) {
-                  gb.field_o = ad.a(-29410, var2);
+                  NetworkGameClient.field_o = ad.a(-29410, var2);
                 }
                 var2 = cd.a("waitingfor_models", -76);
                 if (var2 != null) {
@@ -1908,7 +1908,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("loading_soundeffects", -84);
                 if (null != var2) {
-                  ol.field_X = ad.a(-29410, var2);
+                  AccountRegistrationPanel.field_X = ad.a(-29410, var2);
                 }
                 var2 = cd.a("loading_music", -96);
                 if (var2 != null) {
@@ -1952,7 +1952,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("unpacking_music", -108);
                 if (null != var2) {
-                  qe.field_O = ad.a(-29410, var2);
+                  ChessBoardRenderer.field_O = ad.a(-29410, var2);
                 }
                 var2 = cd.a("unpacking_levels", -126);
                 if (var2 != null) {
@@ -2006,7 +2006,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rankings", -93);
                 if (null != var2) {
-                  vm.field_g = ad.a(-29410, var2);
+                  TextFieldValidator.field_g = ad.a(-29410, var2);
                 }
                 var2 = cd.a("achievements", -120);
                 if (null != var2) {
@@ -2534,7 +2534,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mp_hidechat", -74);
                 if (var2 != null) {
-                  ef.field_l = ad.a(-29410, var2);
+                  AchievementNotification.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mp_showchat_nounread", -85);
                 if (var2 != null) {
@@ -2614,7 +2614,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("keychar_the_character_under_questionmark", -124);
                 if (var2 != null) {
-                  ql.field_f = vm.decodeCp1252Byte(103, var2[0]);
+                  ql.field_f = TextFieldValidator.decodeCp1252Byte(103, var2[0]);
                 }
                 var2 = cd.a("rating_noratings", -94);
                 if (null != var2) {
@@ -2766,7 +2766,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("fs_nonmember", -114);
                 if (var2 != null) {
-                  qi.field_m = ad.a(-29410, var2);
+                  AgeValidator.field_m = ad.a(-29410, var2);
                 }
                 var2 = cd.a("fs_button_close", -105);
                 if (var2 != null) {

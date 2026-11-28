@@ -5,7 +5,7 @@ final class v extends ja {
     private int field_T;
     static String[] field_R;
     private RgbSprite field_Q;
-    private jb field_S;
+    private FieldValidator field_S;
     private String field_V;
     static byte[][] field_U;
 
@@ -17,7 +17,7 @@ final class v extends ja {
         return null;
     }
 
-    v(jb param0, String param1, int param2, int param3, int param4, int param5) {
+    v(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, wi.a(17641));
         try {
           this.field_V = param1;
@@ -33,7 +33,7 @@ final class v extends ja {
           this.field_T = this.field_T + 1;
           super.a(param0, param1, param2, (byte) -112);
           if (param3 >= -85) {
-            this.field_S = (jb) null;
+            this.field_S = (FieldValidator) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "v.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -92,14 +92,14 @@ final class v extends ja {
         var26 = null;
         var36 = null;
         var13 = fleas.field_A ? 1 : 0;
-        var6 = this.field_S.a(false);
+        var6 = this.field_S.getValidationStatus(false);
         if (ea.field_b == var6) {
           var17 = bg.field_b;
           if (!var17.equals(this.field_i)) {
             this.field_i = var17;
             this.i(424);
             super.b(param0, param1, true, param3);
-            var6 = this.field_S.a(false);
+            var6 = this.field_S.getValidationStatus(false);
             var40 = (eg) ((Object) this.field_p);
             var9 = param1 + this.field_y;
             var10 = var40.a(param0, (UiComponent) (this), (byte) -59) + (var40.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
@@ -123,11 +123,11 @@ final class v extends ja {
             if (this.field_Q != null &&
               var11 <= this.field_Q.field_w &&
               this.field_Q.field_t >= var12) {
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
               SoftwareRasterizer.clearRaster();
             } else {
               this.field_Q = new RgbSprite(var11, var12);
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
             }
             var21.a(112, 144, var21.field_x << 4, var21.field_r << 4, -this.field_T << 10, 4096);
             ia.a(-66);
@@ -135,7 +135,7 @@ final class v extends ja {
             return;
           }
           super.b(param0, param1, true, param3);
-          var6 = this.field_S.a(false);
+          var6 = this.field_S.getValidationStatus(false);
           var41 = (eg) ((Object) this.field_p);
           var9Lifetime3 = param1 + this.field_y;
           var10Lifetime3 = var41.a(param0, (UiComponent) (this), (byte) -59) + (var41.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
@@ -158,18 +158,18 @@ final class v extends ja {
           var12Lifetime4 = var25.field_r << 1;
           if (this.field_Q == null) {
             this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
-            r.a(this.field_Q, 45);
+            TextFieldValidator.a(this.field_Q, 45);
           } else {
             if (var11Lifetime4 > this.field_Q.field_w) {
               this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
             } else {
               if (this.field_Q.field_t >= var12Lifetime4) {
-                r.a(this.field_Q, 45);
+                TextFieldValidator.a(this.field_Q, 45);
                 SoftwareRasterizer.clearRaster();
               } else {
                 this.field_Q = new RgbSprite(var11Lifetime4, var12Lifetime4);
-                r.a(this.field_Q, 45);
+                TextFieldValidator.a(this.field_Q, 45);
               }
             }
           }
@@ -179,7 +179,7 @@ final class v extends ja {
           return;
         }
         if (var6 != w.field_e) {
-          var5 = this.field_S.b(-19);
+          var5 = this.field_S.getValidationMessage(-19);
           if (var5 == null) {
             var5 = this.field_V;
           }
@@ -188,7 +188,7 @@ final class v extends ja {
         }
         if (var5.equals(this.field_i)) {
           super.b(param0, param1, true, param3);
-          var6Lifetime1 = this.field_S.a(false);
+          var6Lifetime1 = this.field_S.getValidationStatus(false);
           var43 = (eg) ((Object) this.field_p);
           var9Lifetime1 = param1 + this.field_y;
           var10Lifetime1 = var43.a(param0, (UiComponent) (this), (byte) -59) + (var43.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
@@ -211,17 +211,17 @@ final class v extends ja {
           var12Lifetime1 = var39.field_r << 1;
           if (this.field_Q == null) {
             this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
-            r.a(this.field_Q, 45);
+            TextFieldValidator.a(this.field_Q, 45);
           } else {
             if (var11Lifetime1 > this.field_Q.field_w) {
               this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
             } else {
               if (this.field_Q.field_t < var12Lifetime1) {
                 this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
-                r.a(this.field_Q, 45);
+                TextFieldValidator.a(this.field_Q, 45);
               } else {
-                r.a(this.field_Q, 45);
+                TextFieldValidator.a(this.field_Q, 45);
                 SoftwareRasterizer.clearRaster();
               }
             }
@@ -234,7 +234,7 @@ final class v extends ja {
         this.field_i = var5;
         this.i(424);
         super.b(param0, param1, true, param3);
-        var6Lifetime2 = this.field_S.a(false);
+        var6Lifetime2 = this.field_S.getValidationStatus(false);
         var42 = (eg) ((Object) this.field_p);
         var9Lifetime2 = param1 + this.field_y;
         var10Lifetime2 = var42.a(param0, (UiComponent) (this), (byte) -59) + (var42.a((UiComponent) (this), (byte) -35).a(param2) >> 1);
@@ -245,11 +245,11 @@ final class v extends ja {
           if (this.field_Q != null &&
             var11Lifetime2 <= this.field_Q.field_w &&
             this.field_Q.field_t >= var12Lifetime2) {
-            r.a(this.field_Q, 45);
+            TextFieldValidator.a(this.field_Q, 45);
             SoftwareRasterizer.clearRaster();
           } else {
             this.field_Q = new RgbSprite(var11Lifetime2, var12Lifetime2);
-            r.a(this.field_Q, 45);
+            TextFieldValidator.a(this.field_Q, 45);
           }
           var27.a(112, 144, var27.field_x << 4, var27.field_r << 4, -this.field_T << 10, 4096);
           ia.a(-66);
@@ -275,18 +275,18 @@ final class v extends ja {
         var12Lifetime3 = var30.field_r << 1;
         if (this.field_Q == null) {
           this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
-          r.a(this.field_Q, 45);
+          TextFieldValidator.a(this.field_Q, 45);
         } else {
           if (var11Lifetime3 > this.field_Q.field_w) {
             this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
-            r.a(this.field_Q, 45);
+            TextFieldValidator.a(this.field_Q, 45);
           } else {
             if (this.field_Q.field_t >= var12Lifetime3) {
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
               SoftwareRasterizer.clearRaster();
             } else {
               this.field_Q = new RgbSprite(var11Lifetime3, var12Lifetime3);
-              r.a(this.field_Q, 45);
+              TextFieldValidator.a(this.field_Q, 45);
             }
           }
         }

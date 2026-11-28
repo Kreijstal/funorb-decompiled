@@ -3,7 +3,7 @@
  */
 final class ie {
     static double[][] field_a;
-    static bi field_b;
+    static LevelRun field_b;
 
     public static void clearStaticReferences(int param0) {
         field_a = (double[][]) null;

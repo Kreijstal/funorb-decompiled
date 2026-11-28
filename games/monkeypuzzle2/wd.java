@@ -256,10 +256,10 @@ final class wd {
         RuntimeException var2_ref = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (mk) (eb.field_C.beginBackward((byte) -117));
+          var4 = (mk) (DisplayNameSelectionPanel.field_C.beginBackward((byte) -117));
           while (var4 != null) {
             GameApplet.a(var4, (byte) 108, param0);
-            var4 = (mk) (eb.field_C.nextBackward((byte) 63));
+            var4 = (mk) (DisplayNameSelectionPanel.field_C.nextBackward((byte) 63));
           }
           if (!param1) {
             field_i = (ud) null;

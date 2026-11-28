@@ -85,7 +85,7 @@ abstract class ok extends UiWidget implements je {
             var5_int = -53 % ((17 - param0) / 51);
             return false;
           }
-          if (ni.keyDown[81]) {
+          if (MatchingFieldValidator.keyDown[81]) {
             stackIn_10_0 = this.b((byte) 104, param2);
           } else {
             stackIn_10_0 = this.c((byte) 100, param2);

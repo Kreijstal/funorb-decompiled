@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class af extends WidgetContainer implements ik {
-    private df field_K;
+abstract class af extends WidgetContainer implements FieldValidatorProvider {
+    private BirthDateValidator field_K;
     static String field_L;
     static int field_E;
     static String field_G;
@@ -11,7 +11,7 @@ abstract class af extends WidgetContainer implements ik {
     static String field_I;
     static char[] field_F;
 
-    void a(int param0, df param1) {
+    void a(int param0, BirthDateValidator param1) {
         try {
           if (param0 != -11808) {
             this.a(10);
@@ -81,12 +81,12 @@ abstract class af extends WidgetContainer implements ik {
         field_I = null;
     }
 
-    public final of a(byte param0) {
+    public final FieldValidator getFieldValidator(byte param0) {
         if (param0 != -5) {
-          this.field_K = (df) null;
-          return (of) ((Object) this.field_K);
+          this.field_K = (BirthDateValidator) null;
+          return (FieldValidator) ((Object) this.field_K);
         }
-        return (of) ((Object) this.field_K);
+        return (FieldValidator) ((Object) this.field_K);
     }
 
     abstract int i(int param0);

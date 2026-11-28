@@ -75,7 +75,7 @@ class w implements q {
             var6 = pt.field_a[var3];
             stackIn_12_0 = true;
             stackIn_13_1 = !(var4 < 0);
-            var7 = hka.a(stackIn_12_0, stackIn_13_1, var6);
+            var7 = AgeValidator.a(stackIn_12_0, stackIn_13_1, var6);
             var8 = -(var7 >> 1) + sd.field_a;
             if (var4 >= 0) {
               if (fw.field_i.field_g == var4) {
@@ -86,7 +86,7 @@ class w implements q {
               var9 = stackIn_18_0;
               var2 = var2 + raa.field_J;
               if (var9 != null) {
-                var9.a(BoardView.field_t + (ShieldEvent.field_r << 1), 28, -hna.field_k + var8, var2, var7 + (hna.field_k << 1));
+                var9.a(BoardView.field_t + (ShieldEvent.field_r << 1), 28, -ConfirmedEmailAvailabilityValidator.field_k + var8, var2, var7 + (ConfirmedEmailAvailabilityValidator.field_k << 1));
               }
               var2 = var2 + ShieldEvent.field_r;
             }

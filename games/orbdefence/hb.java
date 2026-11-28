@@ -73,7 +73,7 @@ final class hb {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 90) << (vi.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) 90) << (EditableTextField.a(3, var7) << 8));
             }
             var4.unlink(57);
             return;

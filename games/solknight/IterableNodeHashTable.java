@@ -172,7 +172,7 @@ final class IterableNodeHashTable implements Iterable {
             return null;
           }
           if (param4 == 0) {
-            var10 = dc.a((byte) 124, param2);
+            var10 = EmailFormatValidator.a((byte) 124, param2);
             var6 = var10;
             if (var6 == null) {
               return null;

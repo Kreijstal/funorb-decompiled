@@ -873,7 +873,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("total_cost", (byte) 122);
                 if (var2 != null) {
-                  hka.field_g = qq.a(var2, false);
+                  AgeValidator.field_g = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("wallet", (byte) 122);
                 if (var2 != null) {
@@ -2068,7 +2068,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("TUT_SHOPPING_LIST", (byte) 71);
                 if (null != var2) {
-                  wg.field_h = qq.a(var2, false);
+                  PasswordValidator.field_h = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("TUT_SHOPPING_BAG", (byte) 88);
                 if (null != var2) {
@@ -2180,7 +2180,7 @@ class LinkTextWidget extends InteractiveWidget {
                 }
                 var2 = BuffVendorAnimation.a("TUT_TEAM_SELECT", (byte) 111);
                 if (null != var2) {
-                  el.field_g = qq.a(var2, false);
+                  EmailFormatValidator.field_g = qq.a(var2, false);
                 }
                 var2 = BuffVendorAnimation.a("TUT_ARENA_BASICS_HELP", (byte) 118);
                 if (var2 != null) {

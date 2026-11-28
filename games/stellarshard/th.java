@@ -10,7 +10,7 @@ final class th {
         if (param0 != 48) {
           field_b = (String) null;
         }
-        stackIn_8_0 = (this == lb.field_o) || (AccountNameAvailabilityValidator.field_m == this) || (this == la.field_O);
+        stackIn_8_0 = (this == lb.field_o) || (AccountNameAvailabilityValidator.field_m == this) || (this == LoginPanel.field_O);
         return stackIn_8_0;
     }
 
@@ -108,7 +108,7 @@ final class th {
     final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           pe.field_c = param1;
-          mj.field_E = param0;
+          AccountRegistrationPanel.field_E = param0;
           if (param3 >= -99) {
             CharSequence var5 = (CharSequence) null;
             th.a(-70, false, 43, (CharSequence) null);

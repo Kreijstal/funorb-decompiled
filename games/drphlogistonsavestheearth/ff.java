@@ -31,7 +31,7 @@ final class ff extends pj implements ke {
         this.field_L.field_u = (fd) (this);
         this.field_L.field_v = ai.field_w;
         this.field_J.field_u = (fd) (this);
-        this.field_J.field_v = v.field_X;
+        this.field_J.field_v = AccountRegistrationPanel.field_X;
         this.b(this.field_M, (byte) 101);
         this.b(this.field_L, (byte) 95);
         this.b(this.field_J, (byte) 82);
@@ -200,7 +200,7 @@ final class ff extends pj implements ke {
             try {
               var3 = new java.net.URL(param2.getCodeBase(), param1);
               var3 = kk.a(var3, param2, 4767999);
-              wa.a(var3.toString(), true, param2, (byte) 9);
+              LoginPanel.a(var3.toString(), true, param2, (byte) 9);
               var4 = 4 % ((param0 - 33) / 48);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

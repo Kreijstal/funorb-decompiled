@@ -36,7 +36,7 @@ final class vg implements fc {
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) -90);
         stackIn_5_0 = ((128 & var3) != 0);
-        ba.field_I = stackIn_5_0;
+        EditableTextField.field_I = stackIn_5_0;
         eg.field_o = 127 & var3;
         DirectByteStorage.field_c = var8.readUnsignedByte((byte) -65);
         ek.field_f = var8.readLong((byte) -121);
@@ -82,7 +82,7 @@ final class vg implements fc {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          ti.a((Throwable) ((Object) var6), (byte) 100, "CC1");
+          ValidatedTextField.a((Throwable) ((Object) var6), (byte) 100, "CC1");
           jg.field_D = null;
           uf.field_c = null;
           return new bl(param0);

@@ -596,7 +596,7 @@ final class BufferedCacheFile {
           }
           if (kd.currentScreenIndex == -1) {
             while (DelegatingCanvas.a((byte) -56)) {
-              if (13 != el.field_n) {
+              if (13 != MatchingFieldValidator.field_n) {
                 continue;
               }
               if (!pg.field_e) {
@@ -608,7 +608,7 @@ final class BufferedCacheFile {
             }
           }
           if (fh.field_d[82] &&
-            el.field_n == 80 &&
+            MatchingFieldValidator.field_n == 80 &&
             !pg.field_e &&
             -1 == kd.currentScreenIndex &&
             MusicPatchPcmStream.field_s >= 2) {

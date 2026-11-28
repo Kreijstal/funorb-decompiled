@@ -8,7 +8,7 @@ final class o {
     final static void a(byte param0) {
         IntrusiveDeque.field_c[15] = nh.field_d;
         IntrusiveDeque.field_c[17] = oe.field_d;
-        IntrusiveDeque.field_c[2] = hd.field_r;
+        IntrusiveDeque.field_c[2] = ConfirmedEmailAvailabilityValidator.field_r;
         IntrusiveDeque.field_c[25] = vl.field_J;
         IntrusiveDeque.field_c[9] = ButtonWidget.field_H;
         IntrusiveDeque.field_c[5] = q.field_j;

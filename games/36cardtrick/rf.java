@@ -64,7 +64,7 @@ final class rf implements Runnable {
         var1 = wc.field_B;
         synchronized (var1) {
           qd.field_a = qd.field_a + 1;
-          k.field_c = GzipInflater.field_a;
+          DebouncedFieldValidator.field_c = GzipInflater.field_a;
           eg.field_b = r.field_s;
           ij.field_e = vd.field_s;
           d.field_s = oa.field_d;
@@ -240,14 +240,14 @@ final class rf implements Runnable {
         RuntimeException var2 = null;
         var3 = Main.field_T;
         try {
-          ai.a(bd.field_F, param1, DirectByteArrayStore.field_f, 0, true, fk.field_h, 8192);
+          AgeValidator.a(bd.field_F, param1, DirectByteArrayStore.field_f, 0, true, fk.field_h, 8192);
           if (param0 != -23243) {
             rf.c(-100);
           }
           for (var2_int = 0; DirectByteArrayStore.field_f > var2_int; var2_int++) {
             re.field_c[param1 + var2_int] = var2_int;
           }
-          ai.a(ah.field_d, param1 + param1, DirectByteArrayStore.field_f + param1, param1, false, mf.field_g, 8192);
+          AgeValidator.a(ah.field_d, param1 + param1, DirectByteArrayStore.field_f + param1, param1, false, mf.field_g, 8192);
           if (param1 < DirectByteArrayStore.field_f) {
             DirectByteArrayStore.field_f = param1;
           }

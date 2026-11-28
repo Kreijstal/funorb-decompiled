@@ -112,7 +112,7 @@ final class MixedSupport063 {
             for (integerLocal1 = integerArgument7; integerArgument3 > integerLocal1; integerLocal1++) {
               integerLocal10 = MixedSupport017.integerArrayState0022[integerLocal1];
               if (!booleanArgument2) {
-                stackIntegerLocal3 = MixedSupport015.integerArrayState0020[integerLocal10];
+                stackIntegerLocal3 = NineSliceSprite.integerArrayState0020[integerLocal10];
               } else {
                 stackIntegerLocal3 = ResourceSupport001.integerArrayState0012[integerLocal10];
               }

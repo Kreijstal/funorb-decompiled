@@ -133,7 +133,7 @@ final class df {
     }
 
     df(boolean param0) {
-        this.field_c = rl.field_E;
+        this.field_c = EditableTextField.field_E;
         this.field_k = kc.field_c;
         this.field_g = kb.field_a;
         if (param0) {

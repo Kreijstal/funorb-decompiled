@@ -195,7 +195,7 @@ final class v implements Runnable {
         var8 = stellarshard.field_B;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var10 = ae.field_N;
+          var10 = EditableTextField.field_N;
           var2 = var10.readUnsignedByte(4);
           var3 = var10.readUnsignedByte(4);
           if (var2 == 0) {

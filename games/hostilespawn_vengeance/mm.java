@@ -26,7 +26,7 @@ final class mm extends IntrusiveNode {
     }
 
     final static void a(id param0, boolean param1) {
-        oc dupTemp$0 = null;
+        GridPoint dupTemp$0 = null;
         og dupTemp$1 = null;
         og dupTemp$2 = null;
         int stackIn_5_0 = 0;
@@ -38,7 +38,7 @@ final class mm extends IntrusiveNode {
         qm stackIn_15_2 = null;
         qm stackIn_15_3 = null;
         id stackIn_15_4 = null;
-        oc stackIn_15_5 = null;
+        GridPoint stackIn_15_5 = null;
         int stackIn_15_6 = 0;
         int stackIn_15_7 = 0;
         int stackIn_15_8 = 0;
@@ -47,7 +47,7 @@ final class mm extends IntrusiveNode {
         qm stackIn_16_2 = null;
         qm stackIn_16_3 = null;
         id stackIn_16_4 = null;
-        oc stackIn_16_5 = null;
+        GridPoint stackIn_16_5 = null;
         int stackIn_16_6 = 0;
         int stackIn_16_7 = 0;
         int stackIn_16_8 = 0;
@@ -56,7 +56,7 @@ final class mm extends IntrusiveNode {
         qm stackIn_17_2 = null;
         qm stackIn_17_3 = null;
         id stackIn_17_4 = null;
-        oc stackIn_17_5 = null;
+        GridPoint stackIn_17_5 = null;
         int stackIn_17_6 = 0;
         int stackIn_17_7 = 0;
         int stackIn_17_8 = 0;
@@ -83,7 +83,7 @@ final class mm extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        oc var6 = null;
+        GridPoint var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -104,7 +104,7 @@ final class mm extends IntrusiveNode {
                         ib.field_c = 0;
                         rc.field_e = 0;
                         DualLinkNode.field_o = 0;
-                        el.field_j = 1;
+                        ProxySocketFactory.field_j = 1;
                         var14 = new oj[32];
                         var2 = var14;
                         var3 = 0;
@@ -141,7 +141,7 @@ final class mm extends IntrusiveNode {
                 case 3: {
                     try {
                         var5 = param0.field_a;
-                        var6 = new oc();
+                        var6 = new GridPoint();
                         var6.field_e = 0;
                         statePc = 4;
                         continue scanLoop1;
@@ -207,7 +207,7 @@ final class mm extends IntrusiveNode {
                         } else {
                             /* Inlined CFG state: 8. */
                             {
-                                var7 = var6.b(-4);
+                                var7 = var6.getClampedTileIndex(-4);
                                 var8 = -1;
                                 var9 = -1;
                                 stackIn_5_0 = -75;
@@ -239,14 +239,14 @@ final class mm extends IntrusiveNode {
                         } else {
                             /* Inlined CFG state: 10. */
                             {
-                                field_m[el.field_j] = new oj(var6, 20, rl.field_c);
-                                dupTemp$0 = field_m[el.field_j].field_j;
+                                field_m[ProxySocketFactory.field_j] = new oj(var6, 20, rl.field_c);
+                                dupTemp$0 = field_m[ProxySocketFactory.field_j].field_j;
                                 dupTemp$0.field_g = dupTemp$0.field_g + 1;
-                                dupTemp$1 = field_m[el.field_j].field_l;
+                                dupTemp$1 = field_m[ProxySocketFactory.field_j].field_l;
                                 dupTemp$1.field_f = dupTemp$1.field_f + 0.5;
-                                dupTemp$2 = field_m[el.field_j].field_l;
+                                dupTemp$2 = field_m[ProxySocketFactory.field_j].field_l;
                                 dupTemp$2.field_a = dupTemp$2.field_a + 0.5;
-                                el.field_j = el.field_j + 1;
+                                ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                                 statePc = 11;
                                 continue scanLoop1;
                             }
@@ -536,7 +536,7 @@ final class mm extends IntrusiveNode {
                                         stackIn_15_3 = stackIn_16_3;
                                         stackIn_16_4 = (id) (param0);
                                         stackIn_15_4 = stackIn_16_4;
-                                        stackIn_16_5 = (oc) (var6);
+                                        stackIn_16_5 = (GridPoint) (var6);
                                         stackIn_15_5 = stackIn_16_5;
                                         stackIn_16_6 = -247 + (ln.field_a.field_k[var7] + 233);
                                         stackIn_15_6 = stackIn_16_6;
@@ -612,7 +612,7 @@ final class mm extends IntrusiveNode {
                             /* Inlined CFG state: 20. */
                             {
                                 wh.field_b[ll.field_a].field_c = (double)var10;
-                                wh.field_b[ll.field_a].field_j.a((byte) 46, var6);
+                                wh.field_b[ll.field_a].field_j.copyCoordinatesFrom((byte) 46, var6);
                                 wh.field_b[ll.field_a].field_l.a(0.0, 0.0, 1);
                                 wh.field_b[ll.field_a].field_e = 0;
                                 wh.field_b[ll.field_a].field_h = var9;
@@ -713,7 +713,7 @@ final class mm extends IntrusiveNode {
                         } else {
                             /* Inlined CFG state: 28. */
                             {
-                                var7 = var6.b(-4);
+                                var7 = var6.getClampedTileIndex(-4);
                                 var8 = -1;
                                 var9 = -1;
                                 var10 = param0.field_k[var7];
@@ -835,7 +835,7 @@ final class mm extends IntrusiveNode {
                 case 34: {
                     try {
                         wh.field_b[ll.field_a].field_c = 0.0;
-                        wh.field_b[ll.field_a].field_j.a((byte) 46, var6);
+                        wh.field_b[ll.field_a].field_j.copyCoordinatesFrom((byte) 46, var6);
                         wh.field_b[ll.field_a].field_l.a(0.0, 0.0, 1);
                         wh.field_b[ll.field_a].field_e = 0;
                         wh.field_b[ll.field_a].field_h = var9;

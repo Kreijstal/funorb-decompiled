@@ -70,7 +70,7 @@ abstract class RasterBuffer {
             param7 == param1 &&
             param6 == param8 &&
             param0 == param2) {
-            um.a(param4, param3, param7, param8, param2, false);
+            MatchingFieldValidator.a(param4, param3, param7, param8, param2, false);
             return;
           }
           var10_int = param4;
@@ -98,7 +98,7 @@ abstract class RasterBuffer {
             var32 = var24 * var23;
             var33 = (var29 + (var27 + var31) >> 12) + param4;
             var34 = param7 + (var32 + (var30 + var28) >> 12);
-            um.a(var10_int, param3, var11, var33, var34, false);
+            MatchingFieldValidator.a(var10_int, param3, var11, var33, var34, false);
             var10_int = var33;
             var11 = var34;
           }

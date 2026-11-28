@@ -129,7 +129,7 @@ final class qk extends kg {
         if (null != IntrusiveNode.field_c) {
           IntrusiveNode.field_c.o(77);
         }
-        m.field_j = new ib();
+        m.field_j = new DisplayNameSelectionPanel();
         if (param0 < -43) {
           bg.field_K.c(0, m.field_j);
           return;

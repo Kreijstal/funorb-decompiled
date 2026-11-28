@@ -9,7 +9,7 @@ final class uo extends el {
     static int field_o;
     static int field_m;
     private boolean field_p;
-    static dc field_i;
+    static AccountRegistrationPanel field_i;
 
     final void a(boolean param0, int param1, int param2, byte param3, boolean param4, int param5, int param6) {
         int var8;

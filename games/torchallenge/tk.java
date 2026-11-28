@@ -7,7 +7,7 @@ final class tk extends ng {
     static boolean field_P;
     static BitmapFont field_R;
     static int[] field_Q;
-    private wd field_O;
+    private FieldValidator field_O;
 
     public static void clearDeclaredStaticReferences(byte param0) {
         field_T = null;
@@ -137,7 +137,7 @@ final class tk extends ng {
         RuntimeException decompiledCaughtException = null;
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
-          var10 = bh.field_q.getFileByName(-2, "font", "");
+          var10 = PasswordValidator.field_q.getFileByName(-2, "font", "");
           var8 = var10;
           var7 = var8;
           var1 = var7;
@@ -193,7 +193,7 @@ final class tk extends ng {
         if (!this.field_w) {
           return null;
         }
-        return this.field_O.a((byte) -10);
+        return this.field_O.getValidationMessage((byte) -10);
     }
 
     final static String a(String param0, ResourceArchive param1, String param2, int param3) {
@@ -264,7 +264,7 @@ final class tk extends ng {
         }
         var5 = this.field_m + param1 + (this.field_p >> 1);
         var6 = (this.field_l >> 1) + this.field_i + param0;
-        var8 = this.field_O.b(-53);
+        var8 = this.field_O.getValidationStatus(-53);
         if (bl.field_S != var8 &&
           jh.field_c != var8) {
           if (SpriteLoader.field_c == var8) {
@@ -293,7 +293,7 @@ final class tk extends ng {
         }
     }
 
-    tk(wd param0) {
+    tk(FieldValidator param0) {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {

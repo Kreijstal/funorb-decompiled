@@ -135,13 +135,13 @@ final class wc extends IntrusiveNode {
         if (param0) {
           wc.a(false, -49);
         }
-        if (!ia.a(-22426, m.field_w[param1])) {
+        if (!FramedPanelLayer.a(-22426, m.field_w[param1])) {
           return false;
         }
         return true;
     }
 
-    final static void a(qp param0, byte param1, int param2) {
+    final static void a(AchievementProgressUpdate param0, byte param1, int param2) {
         try {
           tl.field_p.addFirst((byte) 54, param0);
           if (param1 != 99) {

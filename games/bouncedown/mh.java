@@ -145,7 +145,7 @@ abstract class mh extends wk {
           uk.a(param3, param18, param9, param19, param17, (byte) 82);
           var21_int = 16 % ((0 - param11) / 41);
           SecondaryNodeDequeIterator.a(param16, 0, param14, param20);
-          ti.a(param2, param8, param5, (byte) 102);
+          ValidatedTextField.a(param2, param8, param5, (byte) 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,8 +258,8 @@ abstract class mh extends wk {
         try {
           le.a(-1, (java.awt.Component) ((Object) param0));
           MusicPatchPcmStream.a((java.awt.Component) ((Object) param0), (byte) -80);
-          if (null != hg.field_k) {
-            hg.field_k.detach(55, (java.awt.Component) ((Object) param0));
+          if (null != AgeValidator.field_k) {
+            AgeValidator.field_k.detach(55, (java.awt.Component) ((Object) param0));
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "mh.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

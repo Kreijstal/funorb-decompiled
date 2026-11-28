@@ -149,7 +149,7 @@ final class qc {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = di.field_l;
+          var6 = TextFieldValidator.field_l;
           var6.writeCipheredByte(-17410, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;

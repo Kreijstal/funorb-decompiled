@@ -406,7 +406,7 @@ final class rb {
                 var12Lifetime1 = 255;
               }
             }
-            od.a(var12Lifetime1, 47, var9Lifetime2, 4);
+            ConfirmedEmailAvailabilityValidator.a(var12Lifetime1, 47, var9Lifetime2, 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1368,7 +1368,7 @@ final class rb {
               } else {
                 var15Lifetime1 = 0;
               }
-              od.a(var15Lifetime1, 46, var12Lifetime1Lifetime1, 4);
+              ConfirmedEmailAvailabilityValidator.a(var15Lifetime1, 46, var12Lifetime1Lifetime1, 4);
             }
             return;
           }

@@ -9,7 +9,7 @@ abstract class ByteStorage {
         if (param1 != 11764) {
           return false;
         }
-        if (ke.field_X[param0]) {
+        if (ValidatedTextField.field_X[param0]) {
           return true;
         }
         if (!d.a(param0, cm.field_o, (byte) 68)) {

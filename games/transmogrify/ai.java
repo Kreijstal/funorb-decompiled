@@ -73,7 +73,7 @@ final class ai {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            oh.field_h.a(ck.field_A, Bzip2State.field_y, param0 + 18);
+            oh.field_h.a(DisplayNameSelectionPanel.field_A, Bzip2State.field_y, param0 + 18);
             Bzip2State.field_y = null;
             DiskArchiveRequest.field_A = 0;
             wj.field_j = null;
@@ -112,7 +112,7 @@ final class ai {
         int var2 = 33 / ((-70 - param0) / 55);
         if (null == SecondaryNodeDequeIterator.field_d) {
           var1 = lb.a(true);
-          ok.field_a = new ff(var1, (String) null, true, false, false);
+          ok.field_a = new LoginPanel(var1, (String) null, true, false, false);
           ResourceArchive.field_f.b((UiWidget) (l.field_d), (byte) -71);
           l.field_d.b(-122, ok.field_a);
           l.field_d.p(27830);
@@ -120,7 +120,7 @@ final class ai {
         }
         SecondaryNodeDequeIterator.field_d.r(77);
         var1Lifetime1 = lb.a(true);
-        ok.field_a = new ff(var1Lifetime1, (String) null, true, false, false);
+        ok.field_a = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.b((UiWidget) (l.field_d), (byte) -71);
         l.field_d.b(-122, ok.field_a);
         l.field_d.p(27830);

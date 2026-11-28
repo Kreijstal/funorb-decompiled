@@ -172,7 +172,7 @@ abstract class kf extends WidgetContainer {
         }
         if (jj.field_x == null) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
-          cl.a(-100, jj.field_x);
+          AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
@@ -182,7 +182,7 @@ abstract class kf extends WidgetContainer {
         }
         if (jj.field_x.field_p < this.field_t) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
-          cl.a(-100, jj.field_x);
+          AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
@@ -192,7 +192,7 @@ abstract class kf extends WidgetContainer {
         }
         if (jj.field_x.field_t < this.field_x) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
-          cl.a(-100, jj.field_x);
+          AgeValidator.a(-100, jj.field_x);
           SoftwareRasterizer.clearRaster();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
@@ -200,7 +200,7 @@ abstract class kf extends WidgetContainer {
           jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
-        cl.a(-100, jj.field_x);
+        AgeValidator.a(-100, jj.field_x);
         SoftwareRasterizer.clearRaster();
         this.a(param3, (byte) 94, 0);
         super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);

@@ -10,7 +10,7 @@ final class ad {
 
     final static ad[] b(int param0) {
         if (param0 == 65280) {
-          return new ad[]{hl.field_c, am.field_b, tp.field_y, m.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
+          return new ad[]{hl.field_c, am.field_b, tp.field_y, DebouncedFieldValidator.field_d, kj.field_p, u.field_U, KeyboardInput.field_c, ib.field_h, cm.field_T, ve.field_e, pm.field_l, hf.field_wb, sj.field_hb, lg.field_n};
         }
         return (ad[]) null;
     }
@@ -157,7 +157,7 @@ final class ad {
           var8 = var41;
           var65 = new int[param7.field_c];
           var64 = hk.field_c;
-          var63 = p.field_x;
+          var63 = DungeonBuilderScreen.field_x;
           var62 = BufferedRandomAccessFile.field_j;
           for (var13 = 0; param7.field_c > var13; var13++) {
             var14 = param6 * var62[var13] + (param1 * var63[var13] + var64[var13] * param2) >> 8;

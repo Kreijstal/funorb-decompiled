@@ -77,7 +77,7 @@ class kj extends UiComponent implements gk {
         Throwable decompiledCaughtException = null;
         var1 = hl.field_d;
         synchronized (var1) {
-          if (LocalizedStrings.field_n == ja.field_f) {
+          if (ConfirmedEmailAvailabilityValidator.field_n == ja.field_f) {
             return false;
           }
           b.field_J = CrossfadingMidiPcmStream.field_C[ja.field_f];

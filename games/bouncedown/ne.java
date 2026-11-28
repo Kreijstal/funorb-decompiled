@@ -101,7 +101,7 @@ final class ne extends DualLinkNode {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = he.field_k[da.b(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(se.field_C, fk.field_e, cl.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
+        RgbSprite var4 = new RgbSprite(se.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[0], ae.field_c[0], ih.field_V[0], qh.field_i[0], var3);
         vb.a((byte) 122);
         if (!param0) {
           ne.f(-101);
@@ -224,7 +224,7 @@ final class ne extends DualLinkNode {
         if (param0 != 32768) {
           field_r = (IntrusiveDeque) null;
         }
-        return new ve(bb.a(param0 - 32880), ck.g((byte) 112));
+        return new ve(bb.a(param0 - 32880), DebouncedFieldValidator.g((byte) 112));
     }
 
     public static void c(byte param0) {

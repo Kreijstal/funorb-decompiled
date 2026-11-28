@@ -52,18 +52,18 @@ final class mm {
                 0 == param0.field_m) {
                 var2_intLifetime1 = gg.field_n[param0.field_s];
               } else {
-                var2_intLifetime1 = wc.field_q[param0.field_s];
+                var2_intLifetime1 = PasswordValidator.field_q[param0.field_s];
               }
             }
           } else {
             if (param0.field_s != 4) {
               if (~param0.field_b != ~ao.field_N) {
-                var2_intLifetime1 = wc.field_q[param0.field_s];
+                var2_intLifetime1 = PasswordValidator.field_q[param0.field_s];
               } else {
                 var2_intLifetime1 = gg.field_n[param0.field_s];
               }
             } else {
-              var2_intLifetime1 = wc.field_q[param0.field_s];
+              var2_intLifetime1 = PasswordValidator.field_q[param0.field_s];
             }
           }
           if (param1 == 0) {

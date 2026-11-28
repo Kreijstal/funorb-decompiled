@@ -479,7 +479,7 @@ final class wn {
               uh.field_Wb.writeByte(18, -93);
               uh.field_Wb.position = uh.field_Wb.position + 2;
               var10 = uh.field_Wb.position;
-              var11_ref_String = Bzip2State.a(ob.e((byte) 74), (byte) 114);
+              var11_ref_String = Bzip2State.a(LoginPanel.e((byte) 74), (byte) 114);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -497,10 +497,10 @@ final class wn {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ProxyAuthenticationRequiredException.field_d = RandomAccessCacheFile.field_f;
-              na.field_m = new String[-100 + var9Lifetime1];
+              AgeValidator.field_m = new String[-100 + var9Lifetime1];
             } else {
               if (248 == var9Lifetime1) {
-                CrossfadingMidiPcmStream.a(ob.e((byte) -77), 11514);
+                CrossfadingMidiPcmStream.a(LoginPanel.e((byte) -77), 11514);
                 nk.field_Kb = ql.field_K;
                 rm.b((byte) 117);
                 gn.field_d = false;
@@ -524,9 +524,9 @@ final class wn {
               var10Lifetime1 = id.field_f.readUnsignedShort((byte) -11);
               id.field_f.position = 0;
               if (c.a(var10Lifetime1, (byte) -104)) {
-                var11 = na.field_m.length;
+                var11 = AgeValidator.field_m.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  na.field_m[var12] = id.field_f.c(true);
+                  AgeValidator.field_m[var12] = id.field_f.c(true);
                 }
                 rm.b((byte) -106);
                 gn.field_d = false;
@@ -542,7 +542,7 @@ final class wn {
             } else {
               var9_ref_String = id.field_f.readNullableString(-116);
               if (var9_ref_String != null) {
-                be.a(var9_ref_String, -1, ob.e((byte) 106));
+                be.a(var9_ref_String, -1, LoginPanel.e((byte) 106));
               }
             }
             rm.b((byte) 95);
@@ -562,9 +562,9 @@ final class wn {
               return stackIn_63_0;
             }
             var9Lifetime3 = cl.field_d;
-            cl.field_d = ne.field_P;
+            cl.field_d = DisplayNameSelectionPanel.field_P;
             gn.field_d = true;
-            ne.field_P = var9Lifetime3;
+            DisplayNameSelectionPanel.field_P = var9Lifetime3;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;

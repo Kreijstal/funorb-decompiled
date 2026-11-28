@@ -82,8 +82,8 @@ final class se extends bd {
         int var6 = 0;
         String var7 = null;
         try {
-          jl.field_b[param2] = di.field_l.nextInt();
-          jl.field_b[1] = di.field_l.nextInt();
+          jl.field_b[param2] = AgeValidator.field_l.nextInt();
+          jl.field_b[1] = AgeValidator.field_l.nextInt();
           PcmOutputWorker.field_g.position = 0;
           jl.field_b[3] = (int)mi.field_o;
           jl.field_b[2] = (int)(mi.field_o >> 32);

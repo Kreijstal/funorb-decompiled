@@ -41,8 +41,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
         try {
-          if (this.matchingFieldValidatorState0001.getValidationStatus(stringArgument1, byteArgument2) == MixedSupport142.validationStatusState0005) {
-            stackValidationStatusLocal3 = MixedSupport142.validationStatusState0005;
+          if (this.matchingFieldValidatorState0001.getValidationStatus(stringArgument1, byteArgument2) == ReturnedShapeUpdate.validationStatusState0005) {
+            stackValidationStatusLocal3 = ReturnedShapeUpdate.validationStatusState0005;
             return stackValidationStatusLocal3;
           }
           if (!stringArgument1.equals(this.stringState0538)) {
@@ -57,7 +57,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (this.booleanState0190) {
             stackValidationStatusLocal5 = MixedSupport023.validationStatusState0001;
           } else {
-            stackValidationStatusLocal5 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal5 = ReturnedShapeUpdate.validationStatusState0005;
           }
           return stackValidationStatusLocal5;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
@@ -91,7 +91,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         rgbSpriteArrayState0028 = null;
     }
 
-    ConfirmedEmailAvailabilityValidator(UiComponentPart028 uiComponentPart028Argument1, UiComponentPart028 uiComponentPart028Argument2) {
+    ConfirmedEmailAvailabilityValidator(EditableTextField uiComponentPart028Argument1, EditableTextField uiComponentPart028Argument2) {
         super(uiComponentPart028Argument1);
         this.stringState0538 = "";
         this.booleanState0190 = false;
@@ -114,11 +114,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (byteArgument2 != -11) {
             stringState0536 = (String) null;
           }
-          if (this.matchingFieldValidatorState0001.getValidationStatus(stringArgument1, (byte) -40) == MixedSupport142.validationStatusState0005) {
+          if (this.matchingFieldValidatorState0001.getValidationStatus(stringArgument1, (byte) -40) == ReturnedShapeUpdate.validationStatusState0005) {
             stackStringLocal2 = this.matchingFieldValidatorState0001.getValidationMessage(stringArgument1, (byte) -11);
             return stackStringLocal2;
           }
-          if (this.getValidationStatus(stringArgument1, (byte) -40) != MixedSupport142.validationStatusState0005) {
+          if (this.getValidationStatus(stringArgument1, (byte) -40) != ReturnedShapeUpdate.validationStatusState0005) {
             return MixedSupport077.stringState0331;
           }
           stackStringLocal3 = NetworkSupport003.stringState0107;

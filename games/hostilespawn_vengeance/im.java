@@ -7,7 +7,7 @@ final class im {
     static gg field_e;
     static String field_d;
     static int field_f;
-    static pg field_g;
+    static IndexedSprite field_g;
     static ResourceArchive field_c;
     private static String field_z;
 

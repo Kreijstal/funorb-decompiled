@@ -112,7 +112,7 @@ abstract class rl extends oh {
         wd.field_j = 60;
         fn.field_j = 8;
         if (param0 == 26) {
-          je.field_j = qk.field_F;
+          je.field_j = DisplayNameSelectionPanel.field_F;
           LevelProgressUpdate.field_h = sm.field_f;
           b.field_a = MusicPatchPcmStream.field_n;
           fp.field_a = ei.field_F;

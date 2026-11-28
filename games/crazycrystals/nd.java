@@ -113,7 +113,7 @@ final class nd {
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.a((byte) -124, 4).a(false, true).a(46, var5);
-          var4.a((byte) 43, 5).a(31, ci.a(0, 0, (byte) -70, 65793, 0)).a(param1, true).b(-1, -98);
+          var4.a((byte) 43, 5).a(31, AgeValidator.a(0, 0, (byte) -70, 65793, 0)).a(param1, true).b(-1, -98);
           this.field_p = (wo) ((Object) var4);
           var6 = new fk(var4, true);
           var6.field_i = 0;

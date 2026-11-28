@@ -22,7 +22,7 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
         this.booleanState0011 = false;
         int integerLocal1 = 6 % ((-68 - integerArgument1) / 51);
         if (this.booleanState0061) {
-          InputAdapter002.performAction1355(true);
+          BirthDateValidator.performAction1355(true);
           return;
         }
         if (this.booleanState0062) {
@@ -138,7 +138,7 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
                   uiComponentPart008Local10.computeInteractiveComponent0370(127, MixedSupport096.stringState0410, (CallbackContract006) (this));
                 }
               } else {
-                uiComponentPart008Local10.performAction0371(UiComponentPart032.stringState0580, 9, 14);
+                uiComponentPart008Local10.performAction0371(BirthDateInput.stringState0580, 9, 14);
               }
             } else {
               uiComponentPart008Local10.performAction0371(UiComponentPart001.stringState0025, 8, 14);
@@ -162,7 +162,7 @@ class UiComponentPart012 extends UiComponentPart004 implements CallbackContract0
         }
     }
 
-    final static void performAction0590(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4) {
+    final static void performAction0590(int integerArgument1, int integerArgument2, byte byteArgument3, NineSliceSprite mixedSupport015Argument4) {
         try {
           int integerLocal1 = -111 % ((byteArgument3 - 41) / 38);
         } catch (RuntimeException runtimeException) {

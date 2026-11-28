@@ -34,7 +34,7 @@ final class lk extends UiComponent {
         int var9Lifetime1;
         int var12Lifetime1;
         int var6Lifetime1;
-        r.a(var14, 45);
+        TextFieldValidator.a(var14, 45);
         int var5 = this.field_j >> 1;
         for (var6 = 0; this.field_j > var6; var6++) {
           var7 = (this.field_N * 2 - 1) * (var6 >> 1) % (2 * this.field_N);
@@ -125,7 +125,7 @@ final class lk extends UiComponent {
             var8 = (CharSequence) ((Object) param3);
             var4_long = uj.a(var8, (byte) -126);
           }
-          stackIn_6_0 = r.a(param1, var4_long, (byte) 84, (String) (var6), param0);
+          stackIn_6_0 = TextFieldValidator.a(param1, var4_long, (byte) 84, (String) (var6), param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,7 +237,7 @@ final class lk extends UiComponent {
         int var9 = fleas.field_A ? 1 : 0;
         int var2 = this.field_j >> 1;
         RgbSprite var3 = new RgbSprite(var2, this.field_j);
-        r.a(var3, 45);
+        TextFieldValidator.a(var3, 45);
         if (param0 != -15) {
           field_D = (vg) null;
         }
@@ -289,7 +289,7 @@ final class lk extends UiComponent {
           }
           ia.a(param2 ^ -81);
           if (SoftwareRasterizer.field_l <= this.field_P.field_w + param3) {
-            r.a(this.field_M, 45);
+            TextFieldValidator.a(this.field_M, 45);
             param0.d(-this.field_B, 0);
             param0.d(this.field_N * 2 - this.field_B, 0);
             this.field_F.a(0, 0);
@@ -297,7 +297,7 @@ final class lk extends UiComponent {
             this.field_M.d(param3, param1);
           }
           if (var5_int - this.field_P.field_w <= SoftwareRasterizer.field_h) {
-            r.a(this.field_M, 45);
+            TextFieldValidator.a(this.field_M, 45);
             for (var7 = this.field_B + (-this.field_P.field_w + this.field_u); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
             }
             param0.d(-var7, 0);

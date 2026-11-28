@@ -21,7 +21,7 @@ final class qa {
           DualLinkNode.field_k = s.field_f;
           if (param0 == 255) {
             stackIn_9_0 = !(qb.field_a >= 13);
-            MouseWheelSource.field_a = cf.createAccountSuccessResult(stackIn_9_0, false);
+            MouseWheelSource.field_a = ConfirmedEmailAvailabilityValidator.createAccountSuccessResult(stackIn_9_0, false);
           } else {
             if (param0 < 100) {
               MouseWheelSource.field_a = fb.createAccountErrorResult(param2, param0, 0);

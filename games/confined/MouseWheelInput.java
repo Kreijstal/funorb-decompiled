@@ -196,7 +196,7 @@ abstract class MouseWheelInput {
                   var26Lifetime1Lifetime1 = param6.field_Q[var23Lifetime2];
                   lb.field_u[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var12 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 >> 16);
                   oh.field_a[var23Lifetime2] = var10 + (var26Lifetime1Lifetime1 * var19 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1) >> 16);
-                  mf.field_g[var23Lifetime2] = var11 + (var24Lifetime1Lifetime1 * var14 - (-(var17 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var20) >> 16);
+                  TextFieldValidator.field_g[var23Lifetime2] = var11 + (var24Lifetime1Lifetime1 * var14 - (-(var17 * var25Lifetime1Lifetime1) - var26Lifetime1Lifetime1 * var20) >> 16);
                   var24Lifetime1Lifetime1 = param6.field_c[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_q[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_n[var23Lifetime2];
@@ -243,7 +243,7 @@ abstract class MouseWheelInput {
                   var21Lifetime2 = param6.field_r[var18];
                   tf.field_m[var18] = var20 * var12 + var9 * var19 + var21Lifetime2 * var15 >> 16;
                   sd.field_c[var18] = var19 * var10 + (var20 * var13 + var16 * var21Lifetime2) >> 16;
-                  w.field_R[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
+                  LoginPanel.field_R[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
               }
@@ -419,7 +419,7 @@ abstract class MouseWheelInput {
           var2 = new CipherPacketBuffer(param1.getFileByName(param0 ^ -26592, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(param0 ^ 26581);
           var2.i(8);
-          im.field_a = ul.a(var2, 31662);
+          im.field_a = EditableTextField.a(var2, 31662);
           Confined.field_K = new rm[var3];
           AccountServiceResult.field_b = new int[var3][];
           var4 = 0;

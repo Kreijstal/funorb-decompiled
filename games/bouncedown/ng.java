@@ -12,15 +12,15 @@ abstract class ng {
         int[] var5 = null;
         int var6 = 0;
         int var7 = Bounce.field_N;
-        RgbSprite[] var1 = new RgbSprite[nj.field_p];
-        for (var2 = 0; var2 < nj.field_p; var2++) {
+        RgbSprite[] var1 = new RgbSprite[EmailFormatValidator.field_p];
+        for (var2 = 0; var2 < EmailFormatValidator.field_p; var2++) {
           var3 = qh.field_i[var2] * ih.field_V[var2];
           var4 = ph.field_c[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = he.field_k[da.b((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var5);
+          var1[var2] = new RgbSprite(se.field_C, fk.field_e, ConfirmedEmailAvailabilityValidator.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var5);
         }
         if (param0 > -47) {
           return (RgbSprite[]) null;
@@ -79,7 +79,7 @@ abstract class ng {
         AccountNameAvailabilityValidator.field_n = 2147483647;
         va.field_b = 2147483647;
         w.field_d = -2147483648;
-        q.field_M = 0;
+        DisplayNameSelectionPanel.field_M = 0;
         uc.field_A = -2147483648;
     }
 

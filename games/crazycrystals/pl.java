@@ -61,7 +61,7 @@ final class pl extends IntrusiveNode {
               var3_int = 1;
               al.field_f = false;
             }
-            ud.a(rn.d(-3), param2 + 60, oo.e((byte) -110), cf.field_e, var3_int != 0);
+            ud.a(rn.d(-3), param2 + 60, MatchingFieldValidator.e((byte) -110), cf.field_e, var3_int != 0);
             return;
           }
           if (!ji.f(250)) {
@@ -74,7 +74,7 @@ final class pl extends IntrusiveNode {
             to.a(0, param1);
             return;
           }
-          dc.a(param0, (byte) 107, false);
+          AccountRegistrationPanel.a(param0, (byte) 107, false);
           bq.a(param1, 0, 0, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

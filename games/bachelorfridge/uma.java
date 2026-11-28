@@ -20,7 +20,7 @@ final class uma extends sh {
         }
     }
 
-    final void a(gl param0, byte param1) {
+    final void a(BirthDateValidator param0, byte param1) {
         super.a(param0, (byte) 114);
         this.field_Q.listener = (WidgetListener) ((Object) param0);
         if (param1 < 111) {
@@ -196,9 +196,9 @@ final class uma extends sh {
     private uma(WidgetRenderer param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_Q = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 2));
-          this.field_N = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 2));
-          this.field_L = (TextInputWidget) ((Object) new vn("", (WidgetListener) null, 4));
+          this.field_Q = (TextInputWidget) ((Object) new ValidatedTextField("", (WidgetListener) null, 2));
+          this.field_N = (TextInputWidget) ((Object) new ValidatedTextField("", (WidgetListener) null, 2));
+          this.field_L = (TextInputWidget) ((Object) new ValidatedTextField("", (WidgetListener) null, 4));
           this.field_L.renderer = param0;
           this.field_N.renderer = param0;
           this.field_Q.renderer = param0;

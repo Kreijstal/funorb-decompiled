@@ -16,13 +16,13 @@ final class ta extends IntrusiveNode {
 
     final static void a(byte param0) {
         if (param0 == 91) {
-          la.field_B = new mj();
-          sf.field_f.b(la.field_B, 23143);
+          LoginPanel.field_B = new AccountRegistrationPanel();
+          sf.field_f.b(LoginPanel.field_B, 23143);
           return;
         }
         ta.a(true, -47);
-        la.field_B = new mj();
-        sf.field_f.b(la.field_B, 23143);
+        LoginPanel.field_B = new AccountRegistrationPanel();
+        sf.field_f.b(LoginPanel.field_B, 23143);
     }
 
     final static void a(boolean param0, int param1) {

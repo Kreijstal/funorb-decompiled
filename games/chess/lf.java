@@ -21,7 +21,7 @@ final class lf extends kn {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        gb.field_A[AccountRequestState.field_b] = param3;
+        NetworkGameClient.field_A[AccountRequestState.field_b] = param3;
         vn.field_Ab[AccountRequestState.field_b] = AccountRequestState.field_b;
         hg.field_d[AccountRequestState.field_b] = param5;
         if (!(nj.field_t <= param5)) {
@@ -32,7 +32,7 @@ final class lf extends kn {
         }
         BufferedSocket.field_e[AccountRequestState.field_b] = param0;
         in.field_j[AccountRequestState.field_b] = param2;
-        oc.field_n[AccountRequestState.field_b] = param4;
+        MatchingFieldValidator.field_n[AccountRequestState.field_b] = param4;
         int var6 = param4 + param2 + param0;
         int var7 = var6 == 0 ? 0 : 1000 * param0 / var6;
         gh.field_a[AccountRequestState.field_b] = var7;
@@ -229,7 +229,7 @@ final class lf extends kn {
               var38 = var38 + var32 * 65793;
               var39 = (16711928 & var36 * var30) >>> 8 | -1929445121 & var30 * var35 >>> 8;
               var39 = var39 + var33 * 65793;
-              qn.a(var26, var37 >> 8 & 255, 255 & var37, param4 ^ 29521, var27, var37 >> 16, var23, var25, var38 >> 16, 255 & var38 >> 8, var24, 255 & var38, 255 & var39, var22, var39 >> 16, (var39 & 65501) >> 8);
+              EditableTextField.a(var26, var37 >> 8 & 255, 255 & var37, param4 ^ 29521, var27, var37 >> 16, var23, var25, var38 >> 16, 255 & var38 >> 8, var24, 255 & var38, 255 & var39, var22, var39 >> 16, (var39 & 65501) >> 8);
             }
           }
           return;

@@ -51,7 +51,7 @@ final class eg {
     final static void a(int param0) {
         IterableNodeHashTable.field_e = wh.a((byte) -122);
         ResourceArchive.field_f = new da();
-        wl.a(true, true, 170);
+        AccountRegistrationPanel.a(true, true, 170);
         if (param0 >= 54) {
           return;
         }

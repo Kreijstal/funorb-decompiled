@@ -204,7 +204,7 @@ final class da {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = di.field_l;
+        BitPacketBuffer var2 = TextFieldValidator.field_l;
         var2.writeCipheredByte(-17410, param1);
         var2.writeByte(1, 24);
         var2.writeByte(param0, -123);

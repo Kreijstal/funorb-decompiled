@@ -45,7 +45,7 @@ final class ih {
         }
         nd.a(-26621, pd.field_f);
         int var1 = -104 / ((param0 - 71) / 35);
-        pd.field_f.exitFullscreen(ic.field_d, -79);
+        pd.field_f.exitFullscreen(DebouncedFieldValidator.field_d, -79);
         pd.field_f = null;
         if (ja.field_m != null) {
           ja.field_m.c(-1);
@@ -59,7 +59,7 @@ final class ih {
           if (null == ob.field_b) {
             return false;
           }
-          if (la.field_O == GzipDecompressor.field_d) {
+          if (LoginPanel.field_O == GzipDecompressor.field_d) {
             return true;
           }
           return false;
@@ -67,7 +67,7 @@ final class ih {
         if (null == ob.field_b) {
           return false;
         }
-        if (la.field_O == GzipDecompressor.field_d) {
+        if (LoginPanel.field_O == GzipDecompressor.field_d) {
           return true;
         }
         return false;

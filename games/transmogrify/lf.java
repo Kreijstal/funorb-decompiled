@@ -73,7 +73,7 @@ final class lf {
           lk.b(false);
           eh.b((byte) 99);
           if (ua.a((byte) 69)) {
-            ff.field_D.writeCipheredByte(!param0 ? true : false, 1);
+            LoginPanel.field_D.writeCipheredByte(!param0 ? true : false, 1);
             rb.a(0, -377);
           }
           pc.a(1);
@@ -87,7 +87,7 @@ final class lf {
         lk.b(false);
         eh.b((byte) 99);
         if (ua.a((byte) 69)) {
-          ff.field_D.writeCipheredByte(!param0 ? true : false, 1);
+          LoginPanel.field_D.writeCipheredByte(!param0 ? true : false, 1);
           rb.a(0, -377);
         }
         pc.a(1);

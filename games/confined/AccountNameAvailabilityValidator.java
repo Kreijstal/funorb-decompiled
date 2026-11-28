@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends mf {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     private boolean nameAvailable;
     private String checkedName;
     static TunnelEntity[] field_k;
     static int field_h;
 
-    final String a(String param0, boolean param1) {
+    final String getValidationMessage(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -60,7 +60,7 @@ final class AccountNameAvailabilityValidator extends mf {
         }
     }
 
-    AccountNameAvailabilityValidator(ul param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -96,7 +96,7 @@ final class AccountNameAvailabilityValidator extends mf {
         }
     }
 
-    final fi a(byte param0, String param1) {
+    final fi getValidationStatus(byte param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         PlayerShip var4 = null;

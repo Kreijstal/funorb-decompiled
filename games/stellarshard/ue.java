@@ -25,13 +25,13 @@ final class ue {
     final static void a(byte param0) {
         CharSequence var3 = null;
         if (param0 <= -119) {
-          wf.field_b = ae.field_N.readString((byte) 95);
+          wf.field_b = EditableTextField.field_N.readString((byte) 95);
           var3 = (CharSequence) ((Object) wf.field_b);
           wb.field_b = nh.a(var3, false);
           return;
         }
         field_c = (IntrusiveDeque) null;
-        wf.field_b = ae.field_N.readString((byte) 95);
+        wf.field_b = EditableTextField.field_N.readString((byte) 95);
         CharSequence var2 = (CharSequence) ((Object) wf.field_b);
         wb.field_b = nh.a(var2, false);
     }
@@ -42,7 +42,7 @@ final class ue {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           if (null != ob.field_b && (param1 < 0 ||
-            GzipDecompressor.field_d == la.field_O)) {
+            GzipDecompressor.field_d == LoginPanel.field_O)) {
             if (pg.field_fb.position == 0 &&
               ih.correctedCurrentTimeMillis((byte) -98) > 10000L + t.field_d) {
               pg.field_fb.f(param1, 950);

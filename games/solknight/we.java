@@ -213,7 +213,7 @@ final class we implements j {
             of.field_f = Asteroid.a("headline", "benefits", kc.field_Q, (byte) -120);
             pf.field_b = Asteroid.a("blurbpane", "benefits", kc.field_Q, (byte) -126);
             IsaacRandom.field_d = Asteroid.a("button", "benefits", kc.field_Q, (byte) -117);
-            a.field_e = Asteroid.a("signup_text", "benefits", kc.field_Q, (byte) -119);
+            TextFieldValidator.field_e = Asteroid.a("signup_text", "benefits", kc.field_Q, (byte) -119);
             jh.field_b = Asteroid.a("menu_text", "benefits", kc.field_Q, (byte) -114);
             GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
             kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
@@ -232,10 +232,10 @@ final class we implements j {
             var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
             var12.a();
-            GzipDecompressor.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
-            ArchiveRequest.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
-            GzipDecompressor.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
-            ArchiveRequest.field_n.a(bb.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
+            GzipDecompressor.field_a.a(LoginPanel.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
+            ArchiveRequest.field_n.a(LoginPanel.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
+            GzipDecompressor.field_a.a(LoginPanel.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
+            ArchiveRequest.field_n.a(LoginPanel.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
             GzipDecompressor.field_a.a(le.field_b, var6, 180, 16777215, -1);
             ArchiveRequest.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
@@ -247,7 +247,7 @@ final class we implements j {
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
-            ke.field_K = a.field_e.c();
+            ke.field_K = TextFieldValidator.field_e.c();
             ke.field_K.a();
             IterableNodeHashTable.a(SoftwareRasterizer.field_d * 2 / 3, 0, 0, 64, SoftwareRasterizer.field_a, true);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
@@ -270,11 +270,11 @@ final class we implements j {
             var2Lifetime1 = SoftwareRasterizer.field_a;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
-            var14 = bb.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
+            var14 = LoginPanel.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
             var5 = GzipDecompressor.field_a.c(var14, jj.field_db);
             var6Lifetime1 = GzipDecompressor.field_a.b(var14, jj.field_db, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             var7Lifetime1 = ji.field_a + (-var5 + jj.field_db) / 2;
-            var8 = cl.field_o + (IterableNodeHashTable.field_h - var6Lifetime1) / 2;
+            var8 = AgeValidator.field_o + (IterableNodeHashTable.field_h - var6Lifetime1) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
             if (var7Lifetime1 < 0) {
@@ -300,7 +300,7 @@ final class we implements j {
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
               ja.field_a.field_n = ja.field_a.field_n + var9_intLifetime2;
-              cl.field_o = cl.field_o + var9_intLifetime2;
+              AgeValidator.field_o = AgeValidator.field_o + var9_intLifetime2;
               ja.field_a.field_r = ja.field_a.field_r + var9_intLifetime2 * 2;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime2 * 2;
               var8 = var8 + var9_intLifetime2;
@@ -309,7 +309,7 @@ final class we implements j {
             if (ja.field_a.field_r < var6Lifetime1 + var8) {
               var9_intLifetime3 = var6Lifetime1 + var8 - ja.field_a.field_r;
               ke.field_N = ke.field_N - var9_intLifetime3;
-              cl.field_o = cl.field_o + var9_intLifetime3;
+              AgeValidator.field_o = AgeValidator.field_o + var9_intLifetime3;
               ja.field_a.field_n = ja.field_a.field_n + var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               ja.field_a.field_r = ja.field_a.field_r + 2 * var9_intLifetime3;
@@ -318,7 +318,7 @@ final class we implements j {
             ja.field_a.d();
             var9 = new Sprite(ja.field_a.field_q, ja.field_a.field_r);
             var9.a();
-            GzipDecompressor.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
+            GzipDecompressor.field_a.a(var14, ji.field_a, AgeValidator.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
             ja.field_a.a();
             var9.d(0, 0);
@@ -337,7 +337,7 @@ final class we implements j {
             var3Lifetime2 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
             var16 = new Sprite(412, 43);
-            var17 = bb.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
+            var17 = LoginPanel.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
             var16.a();
             ArchiveRequest.field_n.a(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
@@ -347,24 +347,24 @@ final class we implements j {
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(lj.field_D);
           }
-          if (dc.field_j != null &&
+          if (EmailFormatValidator.field_j != null &&
             null != ArchiveRequest.field_n) {
             var31 = SoftwareRasterizer.field_f;
             var2Lifetime3 = SoftwareRasterizer.field_a;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
-            var4 = ArchiveRequest.field_n.c(dc.field_p, 640) + 6;
-            var5Lifetime1 = dc.field_j.field_q + var4 + 20;
+            var4 = ArchiveRequest.field_n.c(EmailFormatValidator.field_p, 640) + 6;
+            var5Lifetime1 = EmailFormatValidator.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
-            var7Lifetime2 = 20 + (dc.field_j.field_q + var6Lifetime2);
+            var7Lifetime2 = 20 + (EmailFormatValidator.field_j.field_q + var6Lifetime2);
             va.field_g.a();
-            ArchiveRequest.field_n.c(dc.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
+            ArchiveRequest.field_n.c(EmailFormatValidator.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
             UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
-            var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + dc.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
-            dc.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
+            var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
+            EmailFormatValidator.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(lj.field_D);
-            dc.field_j = null;
+            EmailFormatValidator.field_j = null;
           }
           SoftwareRasterizer.saveClip(lj.field_D);
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
@@ -382,7 +382,7 @@ final class we implements j {
           if (null != IsaacRandom.field_d &&
             null != GameApplet.field_j) {
             IsaacRandom.field_d.d(231, 390);
-            var1 = a.field_e;
+            var1 = TextFieldValidator.field_e;
             if (GameKeyHandler.field_b.field_f == 0) {
               var1 = ke.field_K;
             }

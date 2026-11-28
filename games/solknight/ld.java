@@ -203,9 +203,9 @@ abstract class ld extends kf {
     }
 
     final static void c(int param0, int param1, int param2) {
-        if (null == vg.field_I ||
-          !(param1 <= vg.field_I.length)) {
-          vg.field_I = new int[2 * param1];
+        if (null == EditableTextField.field_I ||
+          !(param1 <= EditableTextField.field_I.length)) {
+          EditableTextField.field_I = new int[2 * param1];
         }
         if (qg.field_c == null ||
           !(param1 <= qg.field_c.length)) {
@@ -235,11 +235,11 @@ abstract class ld extends kf {
           !(param1 <= vc.field_a.length)) {
           vc.field_a = new boolean[2 * param1];
         }
-        bb.field_G = 2147483647;
+        LoginPanel.field_G = 2147483647;
         if (param2 != 42) {
           return;
         }
-        dc.field_o = -2147483648;
+        EmailFormatValidator.field_o = -2147483648;
         be.field_I = -2147483648;
         GzipDecompressor.field_c = 0;
         SectorCacheStore.field_e = 2147483647;

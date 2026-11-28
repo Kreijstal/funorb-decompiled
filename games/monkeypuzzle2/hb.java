@@ -34,21 +34,21 @@ final class hb extends PacketBuffer {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        nc.field_b[fd.field_n] = param1;
-        hl.field_f[fd.field_n] = fd.field_n;
-        gi.field_e[fd.field_n] = param3;
+        nc.field_b[ConfirmedEmailAvailabilityValidator.field_n] = param1;
+        hl.field_f[ConfirmedEmailAvailabilityValidator.field_n] = ConfirmedEmailAvailabilityValidator.field_n;
+        gi.field_e[ConfirmedEmailAvailabilityValidator.field_n] = param3;
         if (param3 > kj.field_G) {
           fe.field_g = param3;
         }
         if (ah.field_j > param3) {
           rh.field_C = param3;
         }
-        jc.field_a[fd.field_n] = param2;
-        hf.field_c[fd.field_n] = param0;
-        rb.field_fb[fd.field_n] = param5;
+        jc.field_a[ConfirmedEmailAvailabilityValidator.field_n] = param2;
+        DebouncedFieldValidator.field_c[ConfirmedEmailAvailabilityValidator.field_n] = param0;
+        rb.field_fb[ConfirmedEmailAvailabilityValidator.field_n] = param5;
         int var6 = param0 + (param2 + param5);
         int var7 = var6 == 0 ? 0 : param2 * 1000 / var6;
-        AccountServiceResult.field_c[fd.field_n] = var7;
+        AccountServiceResult.field_c[ConfirmedEmailAvailabilityValidator.field_n] = var7;
         if (param4 != 1000) {
           field_k = (int[]) null;
         }
@@ -58,7 +58,7 @@ final class hb extends PacketBuffer {
         if (fe.field_g < var7) {
           fe.field_g = var7;
         }
-        fd.field_n = fd.field_n + 1;
+        ConfirmedEmailAvailabilityValidator.field_n = ConfirmedEmailAvailabilityValidator.field_n + 1;
     }
 
     final int r(int param0) {
@@ -82,7 +82,7 @@ final class hb extends PacketBuffer {
             hb.d((byte) 17);
           }
           for (var2 = 0; var2 < 5; var2++) {
-            if (fd.field_o[var2]) {
+            if (ConfirmedEmailAvailabilityValidator.field_o[var2]) {
               var1_int++;
             }
           }
@@ -154,16 +154,16 @@ final class hb extends PacketBuffer {
         RuntimeException var2 = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          w.a((byte) -92, kj.field_G, fd.field_n, 0, true, ah.field_j, param1);
-          for (var2_int = 0; var2_int < fd.field_n; var2_int++) {
+          w.a((byte) -92, kj.field_G, ConfirmedEmailAvailabilityValidator.field_n, 0, true, ah.field_j, param1);
+          for (var2_int = 0; var2_int < ConfirmedEmailAvailabilityValidator.field_n; var2_int++) {
             hl.field_f[var2_int + param1] = var2_int;
           }
           if (param0 <= 90) {
             hb.a(-29, -107, -3, 17, 7, 5);
           }
-          w.a((byte) -78, fe.field_g, param1 + fd.field_n, param1, false, rh.field_C, param1 + param1);
-          if (fd.field_n > param1) {
-            fd.field_n = param1;
+          w.a((byte) -78, fe.field_g, param1 + ConfirmedEmailAvailabilityValidator.field_n, param1, false, rh.field_C, param1 + param1);
+          if (ConfirmedEmailAvailabilityValidator.field_n > param1) {
+            ConfirmedEmailAvailabilityValidator.field_n = param1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

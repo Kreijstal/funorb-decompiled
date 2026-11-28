@@ -33,7 +33,7 @@ final class ij extends IntrusiveNode {
           }
           if (param0.field_i != 0 ||
             param0.field_k != 0) {
-            for (var2_int = 0; pj.field_H > var2_int; var2_int++) {
+            for (var2_int = 0; AccountRegistrationPanel.field_H > var2_int; var2_int++) {
               var3 = tf.field_d[var2_int];
               if (var3.field_g == 2 &&
                 param0.field_i == var3.field_i &&
@@ -48,7 +48,7 @@ final class ij extends IntrusiveNode {
           }
           if (null == param0.field_b) {
           }
-          r.a(param0, 0);
+          DisplayNameSelectionPanel.a(param0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

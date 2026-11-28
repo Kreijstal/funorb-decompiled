@@ -35,49 +35,49 @@ final class ag {
         if (param4 == 29842) {
           if (param1 > param3) {
             if (param1 < param6) {
-              ph.a(param3, param1, param2, (byte) -123, param5, param6, SoftwareRasterizer.field_i, param0, param7);
+              PasswordValidator.a(param3, param1, param2, (byte) -123, param5, param6, SoftwareRasterizer.field_i, param0, param7);
               return;
             }
             if (param3 >= param6) {
-              ph.a(param6, param3, param7, (byte) -124, param5, param1, SoftwareRasterizer.field_i, param2, param0);
+              PasswordValidator.a(param6, param3, param7, (byte) -124, param5, param1, SoftwareRasterizer.field_i, param2, param0);
               return;
             }
-            ph.a(param3, param6, param2, (byte) -111, param5, param1, SoftwareRasterizer.field_i, param7, param0);
+            PasswordValidator.a(param3, param6, param2, (byte) -111, param5, param1, SoftwareRasterizer.field_i, param7, param0);
             return;
           }
           if (param6 > param3) {
-            ph.a(param1, param3, param0, (byte) -121, param5, param6, SoftwareRasterizer.field_i, param2, param7);
+            PasswordValidator.a(param1, param3, param0, (byte) -121, param5, param6, SoftwareRasterizer.field_i, param2, param7);
             return;
           }
           if (param6 > param1) {
-            ph.a(param1, param6, param0, (byte) -123, param5, param3, SoftwareRasterizer.field_i, param7, param2);
+            PasswordValidator.a(param1, param6, param0, (byte) -123, param5, param3, SoftwareRasterizer.field_i, param7, param2);
             return;
           }
-          ph.a(param6, param1, param7, (byte) -113, param5, param3, SoftwareRasterizer.field_i, param0, param2);
+          PasswordValidator.a(param6, param1, param7, (byte) -113, param5, param3, SoftwareRasterizer.field_i, param0, param2);
           return;
         }
         ag.clearStaticReferences((byte) -90);
         if (param1 > param3) {
           if (param1 < param6) {
-            ph.a(param3, param1, param2, (byte) -123, param5, param6, SoftwareRasterizer.field_i, param0, param7);
+            PasswordValidator.a(param3, param1, param2, (byte) -123, param5, param6, SoftwareRasterizer.field_i, param0, param7);
             return;
           }
           if (param3 >= param6) {
-            ph.a(param6, param3, param7, (byte) -124, param5, param1, SoftwareRasterizer.field_i, param2, param0);
+            PasswordValidator.a(param6, param3, param7, (byte) -124, param5, param1, SoftwareRasterizer.field_i, param2, param0);
             return;
           }
-          ph.a(param3, param6, param2, (byte) -111, param5, param1, SoftwareRasterizer.field_i, param7, param0);
+          PasswordValidator.a(param3, param6, param2, (byte) -111, param5, param1, SoftwareRasterizer.field_i, param7, param0);
           return;
         }
         if (param6 > param3) {
-          ph.a(param1, param3, param0, (byte) -121, param5, param6, SoftwareRasterizer.field_i, param2, param7);
+          PasswordValidator.a(param1, param3, param0, (byte) -121, param5, param6, SoftwareRasterizer.field_i, param2, param7);
           return;
         }
         if (param6 > param1) {
-          ph.a(param1, param6, param0, (byte) -123, param5, param3, SoftwareRasterizer.field_i, param7, param2);
+          PasswordValidator.a(param1, param6, param0, (byte) -123, param5, param3, SoftwareRasterizer.field_i, param7, param2);
           return;
         }
-        ph.a(param6, param1, param7, (byte) -113, param5, param3, SoftwareRasterizer.field_i, param0, param2);
+        PasswordValidator.a(param6, param1, param7, (byte) -113, param5, param3, SoftwareRasterizer.field_i, param0, param2);
     }
 
     static {

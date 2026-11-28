@@ -190,7 +190,7 @@ final class nk {
                     }
                     if (sj.field_f != null) {
                       mh.a(sj.field_f, (byte) 122);
-                      sj.field_f.exitFullscreen((byte) -124, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -124, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                       break regionExit2;
@@ -223,7 +223,7 @@ final class nk {
                     }
                     if (null != sj.field_f) {
                       mh.a(sj.field_f, (byte) 84);
-                      sj.field_f.exitFullscreen((byte) -127, ck.field_e);
+                      sj.field_f.exitFullscreen((byte) -127, DebouncedFieldValidator.field_e);
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
@@ -302,12 +302,12 @@ final class nk {
               nb.field_a = 0;
               kb.field_a = 0;
               pe.field_f = null;
-              hg.field_l = 0;
+              AgeValidator.field_l = 0;
               nb.field_e = 0;
               kg.field_f = 0;
               vg.field_j = 0;
               k.field_C = 0;
-              bf.field_k = false;
+              PasswordValidator.field_k = false;
               qe.field_f = 0;
               qf.field_c = 0;
               ve.field_a = 0;
@@ -556,7 +556,7 @@ final class nk {
             this.field_l = this.field_l - 6;
           }
           this.field_l = this.field_l + 22;
-          q.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
+          DisplayNameSelectionPanel.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
           this.field_l = this.field_l + 20 * this.a(var4 + 60 - ResourceArchive.field_e.b(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[8], 1, 80, this.field_l) * 12;
@@ -572,7 +572,7 @@ final class nk {
             this.field_l = this.field_l + 4;
           }
           this.field_l = this.field_l + 26;
-          bd.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
+          MatchingFieldValidator.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
           this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.b(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[12], 1, 80, this.field_l) * 12;
@@ -607,7 +607,7 @@ final class nk {
             var5Lifetime1 = 16777215;
           }
           if (this.field_i == 7 &&
-            !kh.a(ck.field_e, 30256)) {
+            !kh.a(DebouncedFieldValidator.field_e, 30256)) {
             var5Lifetime1 = 8930338;
           }
         }
@@ -914,7 +914,7 @@ final class nk {
                   }
                   var14Lifetime1 = var14Lifetime1 + 20 * this.a(240 - var15 + 30, 8840959, 480, 1, bb.field_a[var11], var14Lifetime1, 0, -300 + (560 + var15 * 2), 20066, 20);
                   var14Lifetime1 += 10;
-                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, BufferedRandomAccessFile.a(BufferedRandomAccessFile.field_g, new String[]{Integer.toString(bf.field_j[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
+                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, BufferedRandomAccessFile.a(BufferedRandomAccessFile.field_g, new String[]{Integer.toString(PasswordValidator.field_j[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
                   var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, BufferedRandomAccessFile.a(ha.field_m, new String[]{Integer.toString(jg.field_A[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
                 }
                 var7Lifetime3Lifetime1 += 40;

@@ -529,7 +529,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -67, "INTRO_MULTIPLAYER_PLAYER_RED");
                 if (null != var2) {
-                  dk.field_m = in.a(0, var2);
+                  EmailFormatValidator.field_m = in.a(0, var2);
                 }
                 var2 = en.a((byte) -11, "INTRO_MULTIPLAYER_PLAYER_BLUE");
                 if (null != var2) {
@@ -541,7 +541,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -111, "INTRO_MULTIPLAYER_PLAYERIS_BLUE");
                 if (var2 != null) {
-                  de.field_c = in.a(0, var2);
+                  DebouncedFieldValidator.field_c = in.a(0, var2);
                 }
                 var2 = en.a((byte) -51, "T_0");
                 if (var2 != null) {
@@ -1508,7 +1508,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -28, "keycode_dynamite_classic");
                 if (var2 != null) {
-                  na.field_n = var2[0] & 255;
+                  AgeValidator.field_n = var2[0] & 255;
                 }
                 var2 = en.a((byte) -42, "keycode_timetrial_restart");
                 if (var2 != null) {

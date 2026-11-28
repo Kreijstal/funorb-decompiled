@@ -90,7 +90,7 @@ final class nj {
         int var1;
         int var1Lifetime1;
         if (param0) {
-          var1 = 255 * (640 + ui.field_L) / 640;
+          var1 = 255 * (640 + EditableTextField.field_L) / 640;
           if (0 > var1) {
             var1 = 0;
           }
@@ -154,7 +154,7 @@ final class nj {
           return;
         }
         field_a = (String) null;
-        var1Lifetime1 = 255 * (640 + ui.field_L) / 640;
+        var1Lifetime1 = 255 * (640 + EditableTextField.field_L) / 640;
         if (0 > var1Lifetime1) {
           var1Lifetime1 = 0;
         }

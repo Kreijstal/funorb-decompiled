@@ -80,7 +80,7 @@ final class nb extends ci {
 
     final static void b(int param0, int param1) {
         Object var3;
-        qe var4;
+        ChessBoardRenderer var4;
         int var5;
         int var6;
         int var7;
@@ -104,8 +104,8 @@ final class nb extends ci {
         if (var4 == null) {
           var5 = -1;
         } else {
-          if (!((uk) ((Object) var4)).a((byte) 61, 4096)) {
-            if (((uk) ((Object) var4)).a((byte) 61, 0)) {
+          if (!((ChessBoardState) ((Object) var4)).a((byte) 61, 4096)) {
+            if (((ChessBoardState) ((Object) var4)).a((byte) 61, 0)) {
               var5 = 1;
             } else {
               if (!AccountNameAvailabilityValidator.i(param0 ^ 23156).field_B.field_d) {

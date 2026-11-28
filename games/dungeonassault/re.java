@@ -35,7 +35,7 @@ final class re {
         field_i = param3 - param1;
         re.a();
         if (field_e.length < field_i) {
-          field_e = new int[gk.roundUpPowerOfTwo(-912121912, field_i)];
+          field_e = new int[DisplayNameSelectionPanel.roundUpPowerOfTwo(-912121912, field_i)];
         }
         int var4 = param1 * SoftwareRasterizer.field_i + param0;
         for (var5 = 0; var5 < field_i; var5++) {

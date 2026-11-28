@@ -67,7 +67,7 @@ class bd extends DualLinkNode {
 
     final static void a(ResourceArchive param0, byte[] param1, wj[] param2, int param3) {
         try {
-          ga.field_L = param0;
+          EditableTextField.field_L = param0;
           io.field_I[16] = mh.field_j;
           if (param3 != 8) {
             bd.a((byte) -64, false);

@@ -179,7 +179,7 @@ final class pb {
         this.field_b.a(this.field_e, this.field_d, 18);
         AwtRasterBuffer.field_f = false;
         int var3 = 4 / ((35 - param0) / 54);
-        FullscreenFocusCanvas var2 = qd.createFullscreenCanvas(0, this.field_d, ck.field_e, 123, 0, this.field_e);
+        FullscreenFocusCanvas var2 = qd.createFullscreenCanvas(0, this.field_d, DebouncedFieldValidator.field_e, 123, 0, this.field_e);
         if (var2 != null) {
           return var2;
         }

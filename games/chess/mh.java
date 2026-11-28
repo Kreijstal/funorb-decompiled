@@ -13,7 +13,7 @@ final class mh {
 
     final static void b(int param0) {
         if (param0 == 13) {
-          tj.field_p = null;
+          EmailFormatValidator.field_p = null;
           em.field_m = null;
           NodeHashTableIterator.field_a = null;
           hj.field_l = null;
@@ -21,7 +21,7 @@ final class mh {
           return;
         }
         mh.b(22);
-        tj.field_p = null;
+        EmailFormatValidator.field_p = null;
         em.field_m = null;
         NodeHashTableIterator.field_a = null;
         hj.field_l = null;

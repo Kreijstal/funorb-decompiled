@@ -33,7 +33,7 @@ final class rg {
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_6_0 = el.field_o;
+            stackIn_6_0 = MatchingFieldValidator.field_o;
             return stackIn_6_0;
           }
           for (var3 = 0; var3 < var2_int; var3++) {

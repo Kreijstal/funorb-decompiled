@@ -59,7 +59,7 @@ final class ah {
           if (param1) {
             field_i = (int[]) null;
           }
-          dc.field_j = param0;
+          EmailFormatValidator.field_j = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ah.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -15,7 +15,7 @@ final class kf {
         int[] var11 = null;
         int[] var12 = null;
         nb.field_i = new ml[12];
-        ui.field_L = -640;
+        EditableTextField.field_L = -640;
         GzipDecompressor.field_b = param0;
         mc.field_w = 4;
         q.field_c = 4;

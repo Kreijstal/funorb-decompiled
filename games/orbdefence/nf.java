@@ -14,7 +14,7 @@ abstract class nf extends DualLinkNode {
         Throwable decompiledCaughtException = null;
         var1 = ad.field_b;
         synchronized (var1) {
-          if (md.field_g == pk.field_H) {
+          if (md.field_g == LoginPanel.field_H) {
             return false;
           }
           if (param0 != 32722) {

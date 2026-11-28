@@ -56,14 +56,14 @@ final class bl {
           if (qa.field_d[param3] < qa.field_d[param0]) {
             return false;
           }
-          if (hi.field_n[param3] > hi.field_n[param0]) {
+          if (TextFieldValidator.field_n[param3] > TextFieldValidator.field_n[param0]) {
             return true;
           }
-          if (hi.field_n[param3] < hi.field_n[param0]) {
+          if (TextFieldValidator.field_n[param3] < TextFieldValidator.field_n[param0]) {
             return false;
           }
-          var4 = db.field_t[param0] + og.field_b[param0] + ta.field_mb[param0];
-          var5 = db.field_t[param3] + (og.field_b[param3] + ta.field_mb[param3]);
+          var4 = PasswordValidator.field_t[param0] + og.field_b[param0] + ta.field_mb[param0];
+          var5 = PasswordValidator.field_t[param3] + (og.field_b[param3] + ta.field_mb[param3]);
           if (var4 < var5) {
             return true;
           }
@@ -76,10 +76,10 @@ final class bl {
           }
           return !(param0 >= param3);
         }
-        if (hi.field_n[param0] < hi.field_n[param3]) {
+        if (TextFieldValidator.field_n[param0] < TextFieldValidator.field_n[param3]) {
           return true;
         }
-        if (hi.field_n[param0] > hi.field_n[param3]) {
+        if (TextFieldValidator.field_n[param0] > TextFieldValidator.field_n[param3]) {
           return false;
         }
         if (qa.field_d[param3] > qa.field_d[param0]) {
@@ -88,8 +88,8 @@ final class bl {
         if (qa.field_d[param3] < qa.field_d[param0]) {
           return false;
         }
-        var4Lifetime1 = db.field_t[param0] + og.field_b[param0] + ta.field_mb[param0];
-        var5Lifetime1 = db.field_t[param3] + (og.field_b[param3] + ta.field_mb[param3]);
+        var4Lifetime1 = PasswordValidator.field_t[param0] + og.field_b[param0] + ta.field_mb[param0];
+        var5Lifetime1 = PasswordValidator.field_t[param3] + (og.field_b[param3] + ta.field_mb[param3]);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

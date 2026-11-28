@@ -66,7 +66,7 @@ final class cm extends IntrusiveNode {
           if (null != ag.field_d) {
             sn.field_c.writePrefixedString(8, ag.field_d);
           }
-          jg.a(kc.field_b, param0 - 108, rf.field_c, ph.field_g, sn.field_c);
+          MatchingFieldValidator.a(kc.field_b, param0 - 108, rf.field_c, ph.field_g, sn.field_c);
           sn.field_c.backpatchShortLength(sn.field_c.position - var5_int, param0 - 506270862);
           bk.a((byte) -64, -1);
           return;

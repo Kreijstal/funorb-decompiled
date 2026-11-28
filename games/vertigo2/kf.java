@@ -206,7 +206,7 @@ final class kf {
         try {
           var2 = kl.a((byte) 70, "jagex-last-login-method", param1);
           if (var2 == null) {
-            stackIn_4_0 = ne.field_N;
+            stackIn_4_0 = DisplayNameSelectionPanel.field_N;
             return stackIn_4_0;
           }
           var3 = gm.a(7554);
@@ -220,7 +220,7 @@ final class kf {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = ne.field_N;
+          stackIn_15_0 = DisplayNameSelectionPanel.field_N;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

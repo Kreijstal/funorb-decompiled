@@ -27,11 +27,11 @@ final class df {
           for (var1_int = 0; var1_int < 49; var1_int++) {
             var2 = qj.field_c[var1_int];
             if (var2 != null) {
-              var2.field_f = qe.a(var2, false, false, 0);
+              var2.field_f = DungeonAssaultScreen.a(var2, false, false, 0);
             }
             var2Lifetime1 = gm.field_d.field_L[var1_int];
             if (var2Lifetime1 != null) {
-              var2Lifetime1.field_f = qe.a(var2Lifetime1, false, false, 0);
+              var2Lifetime1.field_f = DungeonAssaultScreen.a(var2Lifetime1, false, false, 0);
             }
           }
           return;

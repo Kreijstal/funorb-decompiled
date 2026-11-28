@@ -346,7 +346,7 @@ class pj extends UiWidget {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new Sprite(param1.getFileByName(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
+          var2 = new Sprite(param1.getFileByName(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) EmailFormatValidator.field_q));
           var3 = var2.field_p;
           var4 = var2.field_t;
           fl.b((byte) 91);

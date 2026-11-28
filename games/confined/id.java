@@ -678,10 +678,10 @@ abstract class id extends MovingTunnelEntity {
         RuntimeException var2_ref = null;
         var3 = Confined.field_J ? 1 : 0;
         try {
-          var5 = (bj) (lf.field_k.beginForward(-124));
+          var5 = (bj) (MatchingFieldValidator.field_k.beginForward(-124));
           while (var5 != null) {
-            lf.a(param1, 74, var5);
-            var5 = (bj) (lf.field_k.nextForward(2123));
+            MatchingFieldValidator.a(param1, 74, var5);
+            var5 = (bj) (MatchingFieldValidator.field_k.nextForward(2123));
           }
           if (param0 != -1) {
             var4 = (PlatformTaskDispatcher) null;

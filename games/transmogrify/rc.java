@@ -46,9 +46,9 @@ final class rc {
           stackIn_7_0 = (param0) ? 0 : -1;
           jl.field_j = stackIn_7_0;
           if (DirectByteStorage.field_f == null) {
-            il.field_c = new int[][]{new int[]{34, 190, wk.carryoverRack.tiles.length * wl.field_K.field_n + 34, wl.field_K.field_m + 190}};
-            wc.field_a = new int[][]{new int[]{161, 247, 161 + si.newRack.tiles.length * wl.field_K.field_n, wl.field_K.field_m + 247}};
-            DirectByteStorage.field_f = new int[][]{new int[]{34, 114, wl.field_K.field_n * od.submissionRack.tiles.length + 34, wl.field_K.field_m + 114}, il.field_c[0], wc.field_a[0]};
+            il.field_c = new int[][]{new int[]{34, 190, wk.carryoverRack.tiles.length * AccountRegistrationPanel.field_K.field_n + 34, AccountRegistrationPanel.field_K.field_m + 190}};
+            wc.field_a = new int[][]{new int[]{161, 247, 161 + si.newRack.tiles.length * AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m + 247}};
+            DirectByteStorage.field_f = new int[][]{new int[]{34, 114, AccountRegistrationPanel.field_K.field_n * od.submissionRack.tiles.length + 34, AccountRegistrationPanel.field_K.field_m + 114}, il.field_c[0], wc.field_a[0]};
             hd.field_c = new int[][]{DirectByteStorage.field_f[0], il.field_c[0]};
           }
           wk.carryoverRack.clear(true);
@@ -75,7 +75,7 @@ final class rc {
           CrossfadingMidiPcmStream.field_u.clear(-1);
           hc.field_u = 0;
           da.field_C = 0;
-          vh.field_n = vh.field_n + (eh.totalScore << 6);
+          EmailFormatValidator.field_n = EmailFormatValidator.field_n + (eh.totalScore << 6);
           eh.totalScore = 0;
           if (null != MouseInputHandler.field_c) {
             DirectByteStorage.field_j = DirectByteStorage.field_j - MouseInputHandler.field_c.field_o;
@@ -119,7 +119,7 @@ final class rc {
           GameKeyHandler.field_c = 0;
           WordDictionary.field_e = false;
           wk.field_c = 0;
-          bg.field_m = 1500;
+          PasswordValidator.field_m = 1500;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

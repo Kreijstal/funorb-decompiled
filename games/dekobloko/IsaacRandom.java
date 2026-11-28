@@ -66,10 +66,10 @@ final class IsaacRandom {
             }
           }
           this.integerState0183 = this.integerState0183 + this.integerArrayState0036[128 + integerLocal1 & 255];
-          cachedIntegerLocal2 = this.integerState0184 + this.integerState0183 + this.integerArrayState0036[MixedSupport075.computeInteger0930(1020, integerLocal4) >> 2];
+          cachedIntegerLocal2 = this.integerState0184 + this.integerState0183 + this.integerArrayState0036[PlayerBoardUpdateQueue.bitwiseAnd(1020, integerLocal4) >> 2];
           integerLocal5 = cachedIntegerLocal2;
           this.integerArrayState0036[integerLocal1] = cachedIntegerLocal2;
-          cachedIntegerLocal3 = integerLocal4 + this.integerArrayState0036[MixedSupport075.computeInteger0930(255, integerLocal5 >> 8 >> 2)];
+          cachedIntegerLocal3 = integerLocal4 + this.integerArrayState0036[PlayerBoardUpdateQueue.bitwiseAnd(255, integerLocal5 >> 8 >> 2)];
           this.integerState0184 = cachedIntegerLocal3;
           this.integerArrayState0038[integerLocal1] = cachedIntegerLocal3;
         }
@@ -233,17 +233,17 @@ final class IsaacRandom {
           if (ResourceSupport001.integerArrayState0012[integerArgument3] < ResourceSupport001.integerArrayState0012[integerArgument4]) {
             return false;
           }
-          if (MixedSupport015.integerArrayState0020[integerArgument4] < MixedSupport015.integerArrayState0020[integerArgument3]) {
+          if (NineSliceSprite.integerArrayState0020[integerArgument4] < NineSliceSprite.integerArrayState0020[integerArgument3]) {
             return true;
           }
-          if (MixedSupport015.integerArrayState0020[integerArgument4] > MixedSupport015.integerArrayState0020[integerArgument3]) {
+          if (NineSliceSprite.integerArrayState0020[integerArgument4] > NineSliceSprite.integerArrayState0020[integerArgument3]) {
             return false;
           }
         } else {
-          if (MixedSupport015.integerArrayState0020[integerArgument4] < MixedSupport015.integerArrayState0020[integerArgument3]) {
+          if (NineSliceSprite.integerArrayState0020[integerArgument4] < NineSliceSprite.integerArrayState0020[integerArgument3]) {
             return true;
           }
-          if (MixedSupport015.integerArrayState0020[integerArgument4] > MixedSupport015.integerArrayState0020[integerArgument3]) {
+          if (NineSliceSprite.integerArrayState0020[integerArgument4] > NineSliceSprite.integerArrayState0020[integerArgument3]) {
             return false;
           }
           if (ResourceSupport001.integerArrayState0012[integerArgument4] < ResourceSupport001.integerArrayState0012[integerArgument3]) {

@@ -16,9 +16,9 @@ final class ei extends IntrusiveNode {
             Sprite var3 = (Sprite) null;
             ei.a((Sprite) null, -127);
           }
-          param1.addMouseListener(hd.mouseHandler);
-          param1.addMouseMotionListener(hd.mouseHandler);
-          param1.addFocusListener(hd.mouseHandler);
+          param1.addMouseListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
+          param1.addMouseMotionListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
+          param1.addFocusListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ei.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -94,7 +94,7 @@ final class ei extends IntrusiveNode {
           return IndexedSpriteState.field_f;
         }
         if (!ha.field_x.tryLoadGroupByName("commonui", (byte) -3)) {
-          return v.field_c + " - " + ha.field_x.getGroupLoadPercentByName("commonui", 0) + "%";
+          return DebouncedFieldValidator.field_c + " - " + ha.field_x.getGroupLoadPercentByName("commonui", 0) + "%";
         }
         if (!ok.field_G.ensureIndexLoaded(117)) {
           return LevelView.field_w;
@@ -160,7 +160,7 @@ final class ei extends IntrusiveNode {
         if (null != ki.field_f) {
           r.a(param0 - 14051, ki.field_f);
         }
-        ui.g(95);
+        PasswordValidator.g(95);
         ij.a(13809);
         mi.k(10228);
         if (wf.a(-28510)) {

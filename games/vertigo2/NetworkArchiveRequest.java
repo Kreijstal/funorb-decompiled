@@ -61,7 +61,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             stackIn_6_0 = ce.field_d;
             return stackIn_6_0;
           }
-          if (wc.a(param2, true)) {
+          if (PasswordValidator.a(param2, true)) {
             stackIn_10_0 = Vertigo2.field_K;
             return stackIn_10_0;
           }
@@ -123,16 +123,16 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             field_I = (String) null;
           }
           param1.unlink(param0 - 75);
-          var2 = (bs) (mk.field_J.beginBackward((byte) 100));
+          var2 = (bs) (AccountRegistrationPanel.field_J.beginBackward((byte) 100));
           while (var2 != null) {
             if (var2.a(param1, false)) {
-              var2 = (bs) (mk.field_J.nextBackward(param0 - 34));
+              var2 = (bs) (AccountRegistrationPanel.field_J.nextBackward(param0 - 34));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            mk.field_J.addFirst(param1, false);
+            AccountRegistrationPanel.field_J.addFirst(param1, false);
           } else {
             jn.a(param1, var2, 18724);
           }
@@ -180,7 +180,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         int var10_intLifetime4Lifetime1;
         var11 = Vertigo2.field_L ? 1 : 0;
         try {
-          da.field_k = param0.field_E;
+          TextFieldValidator.field_k = param0.field_E;
           hm.field_C = param0.field_u;
           or.field_e = param0.field_i;
           pd.field_a = param0.field_D;
@@ -207,13 +207,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           DiskArchiveRequest.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (Model) null, param5, param3, param2.field_a);
           param0.field_u = hm.field_C;
           param0.field_X = kc.field_e;
-          param0.field_E = da.field_k;
-          param0.field_L = br.field_T;
+          param0.field_E = TextFieldValidator.field_k;
+          param0.field_L = ValidatedTextField.field_T;
           param0.field_N = qp.field_g;
           param0.field_w = eb.field_b;
           param0.field_T = jd.field_d;
           param0.field_C = AccountNameAvailabilityValidator.field_q;
-          param0.field_W = wc.field_n;
+          param0.field_W = PasswordValidator.field_n;
           param0.field_i = or.field_e;
           param0.field_A = MouseInputHandler.field_c;
           param0.field_bb = IntrusiveDequeCursor.field_d;

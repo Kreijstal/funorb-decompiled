@@ -10,7 +10,7 @@ final class pj implements fc {
         try {
           fe.field_i = param1 * AccountNameAvailabilityValidator.f(66) / 1000;
           fd.a(param0, -1);
-          ci.a((byte) -116, param0);
+          LoginPanel.a((byte) -116, param0);
           ub.a((byte) -32, param0);
           if (param2) {
             field_a = (uf) null;
@@ -31,7 +31,7 @@ final class pj implements fc {
     }
 
     final static void a(boolean param0, int param1) {
-        q.field_N.a(0, 0, -56);
+        DisplayNameSelectionPanel.field_N.a(0, 0, -56);
         if (param1 != 1) {
           CharSequence var3 = (CharSequence) null;
           pj.a(true, 'ﾺ', (CharSequence) null);
@@ -66,7 +66,7 @@ final class pj implements fc {
             var8.a((-var8.field_t + param1.field_k >> 1) + (1 + var6_int), var7 + 1 + (param1.field_m - var8.field_o >> 1), 256);
           }
           if (param1.e(1)) {
-            ck.a(2 + var6_int, param1.field_m - 4, -4 + param1.field_k, 2 + var7, 14677);
+            DebouncedFieldValidator.a(2 + var6_int, param1.field_m - 4, -4 + param1.field_k, 2 + var7, 14677);
           }
           var9 = 51 % ((param2 + 60) / 56);
           return;

@@ -73,7 +73,7 @@ class cj extends ph {
           if (!rl.a(2884, param3, param4, param2)) {
             return null;
           }
-          stackIn_6_0 = li.a(param0.getFile(false, param2, param4), 5116);
+          stackIn_6_0 = MatchingFieldValidator.a(param0.getFile(false, param2, param4), 5116);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -217,7 +217,7 @@ final class nk {
           }
           var11 = var26.field_v[var10];
           var12 = 255 & var11 | (var11 & 65280) >> 8 | var11 >> 16 & 255;
-          var26.field_v[var10] = vi.a(16711680, var12 * vi.a(var6, 16711680) / 255) + (vi.a(var12 * vi.a(65280, var6) / 255, 65280) + vi.a(255, var12 * vi.a(255, var6) / 255));
+          var26.field_v[var10] = EditableTextField.a(16711680, var12 * EditableTextField.a(var6, 16711680) / 255) + (EditableTextField.a(var12 * EditableTextField.a(65280, var6) / 255, 65280) + EditableTextField.a(255, var12 * EditableTextField.a(255, var6) / 255));
           var10++;
         } while (var20 == 0);
         if (16777011 != var6) {
@@ -410,7 +410,7 @@ final class nk {
           break;
         }
         if (decompiledNaturalLoopExit2) {
-          em.c((byte) 67);
+          PasswordValidator.c((byte) 67);
           i.field_a.b(0, 0);
           hc.field_i.b(0, 358);
           SoftwareRasterizer.setClip(0, 0, param0, 480);
@@ -534,7 +534,7 @@ final class nk {
         if (decompiledSharedTail3) {
           ob.field_I.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
         }
-        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", ug.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", b.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
+        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", MatchingFieldValidator.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", ConfirmedEmailAvailabilityValidator.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c, BoundedRandomAccessFile.field_c + " II", BoundedRandomAccessFile.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
         var5 = this.field_f;
         var6 = 0;
         var7 = uh.field_b * wf.field_c.field_f.field_c + SectorCacheStore.field_a;
@@ -915,19 +915,19 @@ final class nk {
             if (var20 != 0) {
               jd.field_c.b(ed.field_e, 530, 440, 16777215, 0);
               jd.field_c.a(Integer.toString(var9), 625, 440, 16777215, 0);
-              jd.field_c.b(wg.field_n, 530, 420, 16777215, 0);
+              jd.field_c.b(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
               jd.field_c.b(ed.field_d, 530, 440, 16777215, 0);
             }
           } else {
             jd.field_c.b(ed.field_e, 530, 440, 16777215, 0);
             jd.field_c.a(Integer.toString(var9), 625, 440, 16777215, 0);
             if (var20 != 0) {
-              jd.field_c.b(wg.field_n, 530, 420, 16777215, 0);
+              jd.field_c.b(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
               jd.field_c.b(ed.field_d, 530, 440, 16777215, 0);
             }
           }
         } else {
-          jd.field_c.b(wg.field_n, 530, 420, 16777215, 0);
+          jd.field_c.b(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
           jd.field_c.b(ed.field_d, 530, 440, 16777215, 0);
         }
         if (var6 <= jk.field_j[var5]) {
@@ -951,59 +951,59 @@ final class nk {
           if (0 <= this.field_a &&
             this.field_a <= 11) {
             var15 = PacketBuffer.a(this.field_a, (byte) -114);
-            ab.field_g[var15 * 12 + Bzip2State.field_b / 10 % wh.field_a[var15]].c(hi.field_m + 43, 363);
+            ab.field_g[var15 * 12 + Bzip2State.field_b / 10 % wh.field_a[var15]].c(TextFieldValidator.field_m + 43, 363);
           }
           var15_ref = null;
           if (var3_int > 0) {
             var15_ref_String = CrossfadingMidiPcmStream.a(param0 - 415993729, new String[]{Integer.toString(var3_int)}, d.field_h);
             if (this.field_a != var14_int) {
-              if (hi.field_m == 0) {
+              if (TextFieldValidator.field_m == 0) {
                 MouseInputListener.a(mh.field_a[47], (byte) -11);
               }
-              if (hi.field_m >= 0) {
-                hi.field_m = hi.field_m + 10;
+              if (TextFieldValidator.field_m >= 0) {
+                TextFieldValidator.field_m = TextFieldValidator.field_m + 10;
               }
-              if (hi.field_m < 0 &&
-                hi.field_m > -150) {
-                hi.field_m = hi.field_m - 10;
+              if (TextFieldValidator.field_m < 0 &&
+                TextFieldValidator.field_m > -150) {
+                TextFieldValidator.field_m = TextFieldValidator.field_m - 10;
               }
-              if (hi.field_m > 150) {
-                hi.field_m = -150;
+              if (TextFieldValidator.field_m > 150) {
+                TextFieldValidator.field_m = -150;
               }
-              if (!(hi.field_m > -150)) {
+              if (!(TextFieldValidator.field_m > -150)) {
                 MouseInputListener.a(mh.field_a[46], (byte) -11);
                 this.field_a = var14_int;
                 if (var20 != 0) {
-                  if (hi.field_m < 0) {
-                    hi.field_m = hi.field_m + 10;
+                  if (TextFieldValidator.field_m < 0) {
+                    TextFieldValidator.field_m = TextFieldValidator.field_m + 10;
                   }
-                  if (0 < hi.field_m) {
-                    hi.field_m = hi.field_m - 10;
+                  if (0 < TextFieldValidator.field_m) {
+                    TextFieldValidator.field_m = TextFieldValidator.field_m - 10;
                   }
                 }
               }
             } else {
-              if (hi.field_m < 0) {
-                hi.field_m = hi.field_m + 10;
+              if (TextFieldValidator.field_m < 0) {
+                TextFieldValidator.field_m = TextFieldValidator.field_m + 10;
               }
-              if (0 < hi.field_m) {
-                hi.field_m = hi.field_m - 10;
+              if (0 < TextFieldValidator.field_m) {
+                TextFieldValidator.field_m = TextFieldValidator.field_m - 10;
               }
             }
           } else {
             var15_ref_String = nl.field_c;
-            if (hi.field_m == 0) {
+            if (TextFieldValidator.field_m == 0) {
               MouseInputListener.a(mh.field_a[47], (byte) -11);
             }
-            if (hi.field_m >= 0) {
-              hi.field_m = hi.field_m + 10;
+            if (TextFieldValidator.field_m >= 0) {
+              TextFieldValidator.field_m = TextFieldValidator.field_m + 10;
             }
-            if (hi.field_m < 0 &&
-              hi.field_m > -150) {
-              hi.field_m = hi.field_m - 10;
+            if (TextFieldValidator.field_m < 0 &&
+              TextFieldValidator.field_m > -150) {
+              TextFieldValidator.field_m = TextFieldValidator.field_m - 10;
             }
-            if (hi.field_m > 150) {
-              hi.field_m = -150;
+            if (TextFieldValidator.field_m > 150) {
+              TextFieldValidator.field_m = -150;
             }
           }
           ob.field_I.a(var15_ref_String, 14, 362, 158, 105, 0, 0, 1, 2, 18);
@@ -1013,16 +1013,16 @@ final class nk {
           if (var16 < 0) {
             var16 = 0;
           }
-          var15_ref_String = CrossfadingMidiPcmStream.a(param0 ^ -415993725, new String[]{Integer.toString(var16)}, nb.field_p);
-          if (hi.field_m == -150 && (wf.field_c.field_x % 11 != 0 &&
+          var15_ref_String = CrossfadingMidiPcmStream.a(param0 ^ -415993725, new String[]{Integer.toString(var16)}, AgeValidator.field_p);
+          if (TextFieldValidator.field_m == -150 && (wf.field_c.field_x % 11 != 0 &&
             0 < wf.field_c.field_x ||
             wf.field_c.field_x == 0 ||
             wf.field_c.field_r.isEmpty(param0 ^ -3086) &&
             !(wf.field_c.field_e[0].field_f <= 0))) {
             var15_ref_String = p.field_b;
-            ob.field_I.a(var15_ref_String, 14, Math.abs(hi.field_m) / 4 + 327, 158, 105, 0, 0, 1, 0, 16);
-            ob.field_I.a(var15_ref_String, 13, 328 + Math.abs(hi.field_m) / 4, 158, 105, 0, 0, 1, 0, 16);
-            ob.field_I.a(var15_ref_String, 14, Math.abs(hi.field_m) / 4 + 328, 158, 105, 16777215, -1, 1, 0, 16);
+            ob.field_I.a(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 327, 158, 105, 0, 0, 1, 0, 16);
+            ob.field_I.a(var15_ref_String, 13, 328 + Math.abs(TextFieldValidator.field_m) / 4, 158, 105, 0, 0, 1, 0, 16);
+            ob.field_I.a(var15_ref_String, 14, Math.abs(TextFieldValidator.field_m) / 4 + 328, 158, 105, 16777215, -1, 1, 0, 16);
           }
           SoftwareRasterizer.resetClip();
           decompiledFrameRemainder1 = (var20 != 0);
@@ -1038,7 +1038,7 @@ final class nk {
           if (0 > var15) {
             var15 = 0;
           }
-          var14 = CrossfadingMidiPcmStream.a(param0 - 415993729, new String[]{Integer.toString(var15)}, nb.field_p);
+          var14 = CrossfadingMidiPcmStream.a(param0 - 415993729, new String[]{Integer.toString(var15)}, AgeValidator.field_p);
         }
         var37 = (oj) (wf.field_c.field_b.beginForward((byte) 126));
         while (var37 != null) {
@@ -1055,9 +1055,9 @@ final class nk {
           if (var20 != 0) {
             if (wf.field_c.field_e[0].b(true) >= 9999) {
               var14 = ci.field_m;
-              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, AccountRegistrationPanel.field_H);
             } else {
-              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+              var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, AccountRegistrationPanel.field_H);
             }
           }
         } else {
@@ -1067,7 +1067,7 @@ final class nk {
             decompiledSharedTail2 = (var20 != 0);
           }
           if (decompiledSharedTail2) {
-            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, rf.field_H);
+            var14 = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].b(true) / 1000), Integer.toString(wf.field_c.field_e[0].b(true) / 100 % 10)}, AccountRegistrationPanel.field_H);
           }
         }
         ob.field_I.c(var14, 362, 30, 0, 0);
@@ -1100,7 +1100,7 @@ final class nk {
             var17 = -var15 + 640;
             var18 = -var16 + 480 - 120;
             var19 = 8;
-            ug.a(101, -(2 * var19) + var18, -(2 * var19) + var17, var16 + 2 * var19, var15 + var19 * 2);
+            MatchingFieldValidator.a(101, -(2 * var19) + var18, -(2 * var19) + var17, var16 + 2 * var19, var15 + var19 * 2);
             jd.field_c.a(sa.field_d[this.field_m], var17 - var19, -var19 + var18, var15, var16, 16777215, 0, 0, 1, 16);
             if (ua.field_a >= var17 - 2 * var19 &&
               DiskCacheWorker.field_d >= (-(var19 * 2) + var18) &&
@@ -1987,7 +1987,7 @@ final class nk {
         }
         if (wf.field_c.field_k) {
           if (this.field_o == 0) {
-            hi.a(ee.field_b[14], 2, false, 1, false, 2);
+            TextFieldValidator.a(ee.field_b[14], 2, false, 1, false, 2);
             if (wf.field_c.field_f.field_k > 0 &&
               wf.field_c.field_x > 44) {
               wf.field_c.field_x = wf.field_c.field_f.field_k / 25 + 99;
@@ -2367,7 +2367,7 @@ final class nk {
           if (0 == var3Lifetime2) {
             var4Lifetime2 = this.b((byte) -127);
             if (var4Lifetime2 != bl.field_p) {
-              hi.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
+              TextFieldValidator.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
             }
             bl.field_p = var4Lifetime2;
             if (var19 != 0) {
@@ -2376,7 +2376,7 @@ final class nk {
                 var4Lifetime2++;
               }
               if (~var4Lifetime2 != ~bl.field_p) {
-                hi.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
+                TextFieldValidator.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
               }
               bl.field_p = var4Lifetime2;
             }
@@ -2386,7 +2386,7 @@ final class nk {
               var4Lifetime2++;
             }
             if (~var4Lifetime2 != ~bl.field_p) {
-              hi.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
+              TextFieldValidator.a(ee.field_b[var4Lifetime2], 2, false, 1, true, 2);
             }
             bl.field_p = var4Lifetime2;
           }
@@ -3066,7 +3066,7 @@ final class nk {
         int discarded$1 = 0;
         int var2;
         var2 = this.b((byte) 111);
-        hi.a(ee.field_b[var2], 2, false, 1, true, 2);
+        TextFieldValidator.a(ee.field_b[var2], 2, false, 1, true, 2);
         if (param0 > -80) {
           discarded$1 = this.b((byte) -48);
         }
@@ -3100,7 +3100,7 @@ final class nk {
         RuntimeException decompiledCaughtException = null;
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          bm.field_d.a(em.field_o, false, true, ke.field_b);
+          bm.field_d.a(PasswordValidator.field_o, false, true, ke.field_b);
           bm.field_d.o(123);
           do {
             if (!nf.e(32722)) {

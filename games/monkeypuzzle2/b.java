@@ -126,7 +126,7 @@ abstract class b extends DualLinkNode {
               stackIn_55_1 = var29Lifetime1;
               if (var30 == 0) {
                 if (stackIn_55_0 <= stackIn_55_1) {
-                  bg.field_L[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  AccountRegistrationPanel.field_L[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   sb.field_l[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   ah.field_i[var23Lifetime2] = var29Lifetime1;
                   if (var7_int > var29Lifetime1) {

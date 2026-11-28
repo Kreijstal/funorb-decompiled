@@ -176,7 +176,7 @@ final class SleepAnimation extends EventAnimation {
         var0 = var15;
         while (var15 <= 10) {
             var1 = 8 * (var15 - 1);
-            field_z[var15] = gv.a(gv.a(gv.a(gda.a(field_v[5][var1 + 5], 16711680L), gv.a(gda.a(field_v[4][var1 + 4], 4278190080L), gv.a(gda.a(1095216660480L, field_v[3][var1 + 3]), gv.a(gv.a(gda.a(71776119061217280L, field_v[1][1 + var1]), gda.a(-72057594037927936L, field_v[0][var1])), gda.a(280375465082880L, field_v[2][2 + var1]))))), gda.a(65280L, field_v[6][var1 + 6])), gda.a(field_v[7][7 + var1], 255L));
+            field_z[var15] = gv.a(gv.a(gv.a(DisplayNameSelectionPanel.a(field_v[5][var1 + 5], 16711680L), gv.a(DisplayNameSelectionPanel.a(field_v[4][var1 + 4], 4278190080L), gv.a(DisplayNameSelectionPanel.a(1095216660480L, field_v[3][var1 + 3]), gv.a(gv.a(DisplayNameSelectionPanel.a(71776119061217280L, field_v[1][1 + var1]), DisplayNameSelectionPanel.a(-72057594037927936L, field_v[0][var1])), DisplayNameSelectionPanel.a(280375465082880L, field_v[2][2 + var1]))))), DisplayNameSelectionPanel.a(65280L, field_v[6][var1 + 6])), DisplayNameSelectionPanel.a(field_v[7][7 + var1], 255L));
             var15++;
         }
     }

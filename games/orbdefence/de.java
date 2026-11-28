@@ -20,7 +20,7 @@ final class de {
           if (!param2) {
             de.createMouseWheelInput((byte) -108);
           }
-          if (pk.a(107, param1, param0, param3)) {
+          if (LoginPanel.a(107, param1, param0, param3)) {
             stackIn_6_0 = ok.a(-3362, param4.getFile(param1, false, param3));
             return stackIn_6_0;
           }

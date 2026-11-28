@@ -12,7 +12,7 @@ final class gj {
     int field_f;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
-        oc var4;
+        GridPoint var4;
         int var5;
         int var6;
         boolean stackIn_10_0 = false;
@@ -60,7 +60,7 @@ final class gj {
         if (param0 != -17) {
           field_d = (RgbSprite) null;
         }
-        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, CrossfadingMidiPcmStream.field_G, BoundedRandomAccessFile.field_h, pl.field_q, NanoFrameTimer.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, BoundedRandomAccessFile.field_a};
+        return new nd[]{bh.field_c, ac.field_c, tf.field_b, MatchingFieldValidator.field_x, LoginPanel.field_N, CrossfadingMidiPcmStream.field_G, BoundedRandomAccessFile.field_h, pl.field_q, NanoFrameTimer.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, BoundedRandomAccessFile.field_a};
     }
 
     final static u[] a(boolean param0, CipherPacketBuffer param1) {

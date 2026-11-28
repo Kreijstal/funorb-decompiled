@@ -44,7 +44,7 @@ final class IterableNodeCollection implements Iterable {
             gameDomainSupport002Local10.integerState0174 = -(gameDomainSupport002Local10.integerState0176 / 2) + 320;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local10, 100);
           }
-          if (UiComponentPart013.booleanState0066) {
+          if (LoginPanel.booleanState0066) {
             gameDomainSupport002Local11 = new GameDomainSupport002(3, MixedSupport089.stringState0373, MixedSupport001.renderingSupport009State0001);
             gameDomainSupport002Local11.integerState0174 = -(gameDomainSupport002Local11.integerState0176 / 2) + 320;
             gameDomainSupport002Local11.integerState0178 = 387;
@@ -129,7 +129,7 @@ final class IterableNodeCollection implements Iterable {
         int stackIntegerLocal2 = 0;
         String stackStringLocal3 = null;
         boolean stackBooleanLocal4 = false;
-        MixedSupport015 stackMixedSupport015Local5 = null;
+        NineSliceSprite stackMixedSupport015Local5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         int integerLocal7 = 0;
         RuntimeException runtimeExceptionLocal8 = null;
@@ -139,7 +139,7 @@ final class IterableNodeCollection implements Iterable {
         String stringLocal12 = null;
         int integerLocal13 = 0;
         int integerLocal14 = 0;
-        MixedSupport015 mixedSupport015Local15 = null;
+        NineSliceSprite mixedSupport015Local15 = null;
         int integerLocal16 = 0;
         IndexedSprite[] indexedSpriteArrayLocal17 = null;
         integerLocal16 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -179,15 +179,15 @@ final class IterableNodeCollection implements Iterable {
               }
               mixedSupport015Local15 = stackMixedSupport015Local5;
               if (mixedSupport015Local15 != null) {
-                mixedSupport015Local15.performAction0202(integerLocal13 + (ResourceSupport002.integerState0050 << 1), 97, -ResourceSupport002.integerState0050 + integerLocal14, integerLocal9, (MixedSupport076.integerState0433 << 1) + UiComponentPart032.integerState0835);
+                mixedSupport015Local15.drawNineSlice(integerLocal13 + (DebouncedFieldValidator.integerState0050 << 1), 97, -DebouncedFieldValidator.integerState0050 + integerLocal14, integerLocal9, (MixedSupport076.integerState0433 << 1) + BirthDateInput.integerState0835);
               }
               integerLocal9 = integerLocal9 + MixedSupport076.integerState0433;
             }
             if (integerLocal10 >= 0) {
-              NetworkSupport001.bitmapFontState0003.performAction1069(stringLocal12, integerLocal14, UiComponentPart022.integerState0576 + integerLocal9, integerLocal11, -1);
-              integerLocal9 = integerLocal9 + (MixedSupport076.integerState0433 + PcmResampler.integerState0344 + UiComponentPart032.integerState0835);
+              NetworkSupport001.bitmapFontState0003.performAction1069(stringLocal12, integerLocal14, AccountFieldStatusIndicator.integerState0576 + integerLocal9, integerLocal11, -1);
+              integerLocal9 = integerLocal9 + (MixedSupport076.integerState0433 + PcmResampler.integerState0344 + BirthDateInput.integerState0835);
             } else {
-              SoftwareFramebuffer.bitmapFontState0021.performAction1069(stringLocal12, integerLocal14, SceneWidgetPart004.integerState0267 + integerLocal9, integerLocal11, -1);
+              SoftwareFramebuffer.bitmapFontState0021.performAction1069(stringLocal12, integerLocal14, PlayerNamePrompt.integerState0267 + integerLocal9, integerLocal11, -1);
               integerLocal9 = integerLocal9 + ComponentDecorator.integerState0497;
             }
           }

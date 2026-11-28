@@ -299,7 +299,7 @@ final class wc extends id {
           this.field_zb = param0.field_J.field_p;
           this.f(-1, 0);
           if (WingPod.field_R != null) {
-            WingPod.field_R.b(lf.field_m[param3], 32);
+            WingPod.field_R.b(MatchingFieldValidator.field_m[param3], 32);
           }
           this.field_cc = new gk((TunnelEntity) (this), ResourceArchive.field_b[param3]);
           this.field_cc.field_w = this.field_C;
@@ -475,7 +475,7 @@ final class wc extends id {
               }
             } else {
               if (this.field_Xb == 0) {
-                var17 = bk.field_j[this.field_Zb];
+                var17 = EmailFormatValidator.field_j[this.field_Zb];
                 var3_ref_bi = var17;
                 if (var3_ref_bi != null) {
                   new gk((TunnelEntity) (this), var17, 0).field_w = 4.0 * this.field_C;
@@ -531,8 +531,8 @@ final class wc extends id {
                   var4 = 3;
                 }
                 var5Lifetime1 = this.field_D - this.field_C;
-                var7_int = (int)(Math.random() * (double)bf.field_L[var4].length);
-                var8 = this.field_A.field_J.createStageEnemy(var5Lifetime1, 0, this.field_E, this.field_t, true, bf.field_L[var4][var7_int], (u) null, this.field_A.field_J.field_o, 583, var4, (rd) null, true, new boolean[]{true});
+                var7_int = (int)(Math.random() * (double)DisplayNameSelectionPanel.field_L[var4].length);
+                var8 = this.field_A.field_J.createStageEnemy(var5Lifetime1, 0, this.field_E, this.field_t, true, DisplayNameSelectionPanel.field_L[var4][var7_int], (u) null, this.field_A.field_J.field_o, 583, var4, (rd) null, true, new boolean[]{true});
                 for (var9_int = param1; var9_int > 0; var9_int--) {
                   if (this.field_A.field_x.field_r[var9_int] > var5Lifetime1) {
                     continue;

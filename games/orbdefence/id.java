@@ -49,7 +49,7 @@ final class id {
             } else {
               bm.field_a = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(var1)}, NetworkArchiveRequest.field_x);
             }
-            bm.field_a = wb.a(new CharSequence[]{(CharSequence) ((Object) bm.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ci.field_p)}, (byte) -123);
+            bm.field_a = DebouncedFieldValidator.a(new CharSequence[]{(CharSequence) ((Object) bm.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ci.field_p)}, (byte) -123);
           }
           oj.field_q.q(4210752);
           DualLinkNode.d(-1);

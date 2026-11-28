@@ -27,7 +27,7 @@ final class ec {
           wg.field_j.a(v.field_a, rc.field_g, true, true);
           wg.field_j.l(126);
           while (AwtRasterBuffer.a(param0 - 2)) {
-            wg.field_j.a(oa.field_H, 109, rd.field_p);
+            wg.field_j.a(oa.field_H, 109, MatchingFieldValidator.field_p);
           }
           if (-1 != gb.field_f) {
             var1_int = gb.field_f;
@@ -120,7 +120,7 @@ final class ec {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_sj = WidgetContainer.field_x[var3];
             var4_ref_sj.c(74);
-            bg.a(var3, 82);
+            AccountRegistrationPanel.a(var3, 82);
             var5 = var4_ref_sj.field_q + var4_ref_sj.field_G >> 1;
             var6 = var4_ref_sj.field_b + var4_ref_sj.field_j >> 1;
             var7 = var4_ref_sj.field_t + var4_ref_sj.field_x >> 1;
@@ -168,7 +168,7 @@ final class ec {
             }
             var21[var16] = -2147483648;
             var17 = WidgetContainer.field_x[var16];
-            bg.a(var16, param0 + 255);
+            AccountRegistrationPanel.a(var16, param0 + 255);
             for (var18 = 0; var18 < 3; var18++) {
               SpriteState.field_i[var18] = SpriteState.field_i[var18] + nl.field_a[var15][var18];
             }

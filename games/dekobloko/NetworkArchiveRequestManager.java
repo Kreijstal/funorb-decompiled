@@ -214,7 +214,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             stackIntegerLocal2 = -1;
             return stackIntegerLocal2;
           }
-          if (UiComponentPart023.mixedSupport132State0009 == ResourceSupport002.mixedSupport132State0001) {
+          if (UiComponentPart023.mixedSupport132State0009 == DebouncedFieldValidator.mixedSupport132State0001) {
             SceneWidgetPart014.booleanState0220 = null;
             SocketFactory.cipherPacketBufferState0002.position = 0;
             if (stringArgument7 == null) {
@@ -282,7 +282,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             } else {
               if (integerLocal39 == 248) {
                 LoginCredentials.performAction0790(UiComponentPart029.computeApplet1485(25144), 0);
-                UiComponentPart028.stringState0483 = SceneWidgetPart012.stringState0533;
+                EditableTextField.stringState0483 = SceneWidgetPart012.stringState0533;
                 NodeHashTable.performAction1498(89);
                 SceneWidgetPart006.booleanState0083 = false;
                 stackIntegerLocal9 = integerLocal39;
@@ -324,7 +324,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
                 MixedSupport001.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1485(25144));
               }
             } else {
-              UiComponentPart028.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
+              EditableTextField.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
             }
             NodeHashTable.performAction1498(105);
             SceneWidgetPart006.booleanState0083 = false;
@@ -334,9 +334,9 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
           if (null == GameSession.bufferedSocketState0002) {
             if (SceneWidgetPart006.booleanState0083) {
               if (30000L < MixedSupport117.computeLong1528(-1)) {
-                UiComponentPart028.stringState0483 = MixedSupport069.stringState0311;
+                EditableTextField.stringState0483 = MixedSupport069.stringState0311;
               } else {
-                UiComponentPart028.stringState0483 = MatchingFieldValidator.stringState0470;
+                EditableTextField.stringState0483 = MatchingFieldValidator.stringState0470;
               }
               SceneWidgetPart006.booleanState0083 = false;
               stackIntegerLocal12 = 249;

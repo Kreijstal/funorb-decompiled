@@ -12,9 +12,9 @@ final class md {
     final static boolean a(byte param0) {
         if (param0 > -6) {
           md.a(122, false);
-          return qe.a(mk.g(-122), (byte) -98);
+          return qe.a(PasswordValidator.g(-122), (byte) -98);
         }
-        return qe.a(mk.g(-122), (byte) -98);
+        return qe.a(PasswordValidator.g(-122), (byte) -98);
     }
 
     final static boolean a(int param0, boolean param1) {
@@ -26,7 +26,7 @@ final class md {
           int stackIn_13_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == fe.field_c) {
-            fe.field_c = td.field_b.requestDirectSocket(mk.field_k, (byte) -108, MouseInputHandler.field_e);
+            fe.field_c = td.field_b.requestDirectSocket(PasswordValidator.field_k, (byte) -108, MouseInputHandler.field_e);
           }
           if (param0 <= 47) {
             return true;
@@ -42,7 +42,7 @@ final class md {
           } else {
             try {
               cb.field_j = new BufferedSocket((java.net.Socket) (fe.field_c.result), td.field_b);
-              var4 = rd.field_j;
+              var4 = EmailFormatValidator.field_j;
               var5 = var4;
               NetworkArchiveRequest.field_r.position = 0;
               var5.position = 0;

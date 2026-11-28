@@ -3,7 +3,7 @@
  */
 final class ti implements nn {
     private int field_g;
-    static oc field_f;
+    static GridPoint field_f;
     static String field_d;
     private int field_e;
     private vm field_h;
@@ -63,7 +63,7 @@ final class ti implements nn {
         var4 = param2;
         var7[var4 >> 5] = ll.a(var7[var4 >> 5], 1 << PcmOutputWorker.a(var4, 31));
         int var5 = 20 / ((-70 - param1) / 40);
-        ac.field_i.addLast(new t(param2), 90);
+        ac.field_i.addLast(new AchievementNotification(param2), 90);
         if (!ta.p(3)) {
           ec.a(FrameTimer.field_b, fa.field_a, true, 4, NanoFrameTimer.field_m, param0, q.field_n, param2);
           sg.field_j = wk.a(4, -2178);
@@ -168,7 +168,7 @@ final class ti implements nn {
     }
 
     static {
-        field_f = new oc();
+        field_f = new GridPoint();
         field_c = new RgbSprite(270, 70);
         field_i = "Invalid password.";
         field_a = new String[]{null, "To store your progress, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score, you must log in or create a free account.#Alternatively, click <%0> to discard it and continue.", "To store your score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements and score, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue.", "To store your achievements, score and progress, you must log in or create a free account.#Alternatively, click <%0> to discard them and continue."};

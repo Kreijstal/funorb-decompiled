@@ -28,7 +28,7 @@ final class qa {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            qn.field_R = param1;
+            EditableTextField.field_R = param1;
             try {
               var3 = param2.getParameter("cookieprefix");
               var5 = var3;

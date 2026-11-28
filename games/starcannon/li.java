@@ -94,7 +94,7 @@ final class li {
               field_b = (ResourceArchive) null;
             }
             if (param1.field_q != 22) {
-              kh.field_y.addLast(63, param1);
+              AccountRegistrationPanel.field_y.addLast(63, param1);
               return;
             }
             var2 = FrameTimer.field_e;

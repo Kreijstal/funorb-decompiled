@@ -122,9 +122,9 @@ abstract class jl {
           while (var16 >= var14) {
             for (var19 = 0; param1 > var19; var19++) {
               param7 = param8[var15++];
-              var10[var19] = var10[var19] + (vi.a(16771310, param7) >> 16);
-              var11[var19] = var11[var19] + (vi.a(65293, param7) >> 8);
-              var12[var19] = var12[var19] + vi.a(255, param7);
+              var10[var19] = var10[var19] + (EditableTextField.a(16771310, param7) >> 16);
+              var11[var19] = var11[var19] + (EditableTextField.a(65293, param7) >> 8);
+              var12[var19] = var12[var19] + EditableTextField.a(255, param7);
             }
             var15 = var15 + param6;
             var14++;
@@ -149,9 +149,9 @@ abstract class jl {
             if (param0 + (var14Lifetime1 + param5 + param2) < SoftwareRasterizer.field_a) {
               for (var21 = 0; var21 < param1; var21++) {
                 param7 = param8[var15++];
-                var10[var21] = var10[var21] + (vi.a(16738842, param7) >> 16);
-                var11[var21] = var11[var21] + (vi.a(param7, 65525) >> 8);
-                var12[var21] = var12[var21] + vi.a(255, param7);
+                var10[var21] = var10[var21] + (EditableTextField.a(16738842, param7) >> 16);
+                var11[var21] = var11[var21] + (EditableTextField.a(param7, 65525) >> 8);
+                var12[var21] = var12[var21] + EditableTextField.a(255, param7);
               }
               var15 = var15 + param6;
               var18++;
@@ -206,9 +206,9 @@ abstract class jl {
             }
             for (var21Lifetime1Lifetime1 = 0; param1 > var21Lifetime1Lifetime1; var21Lifetime1Lifetime1++) {
               param7 = param8[var15++];
-              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + (vi.a(16758132, param7) >> 16);
-              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + vi.a(255, param7 >> 8);
-              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + vi.a(param7, 255);
+              var10[var21Lifetime1Lifetime1] = var10[var21Lifetime1Lifetime1] + (EditableTextField.a(16758132, param7) >> 16);
+              var11[var21Lifetime1Lifetime1] = var11[var21Lifetime1Lifetime1] + EditableTextField.a(255, param7 >> 8);
+              var12[var21Lifetime1Lifetime1] = var12[var21Lifetime1Lifetime1] + EditableTextField.a(param7, 255);
             }
             var20 = var20 + param6;
             for (var21Lifetime1Lifetime2 = 0; var21Lifetime1Lifetime2 < param1; var21Lifetime1Lifetime2++) {
@@ -235,9 +235,9 @@ abstract class jl {
           while (0 > var14Lifetime1) {
             for (var21Lifetime2 = 0; var21Lifetime2 < param1; var21Lifetime2++) {
               param7 = param8[var20++];
-              var10[var21Lifetime2] = var10[var21Lifetime2] - (vi.a(param7, 16757155) >> 16);
-              var11[var21Lifetime2] = var11[var21Lifetime2] - (vi.a(65471, param7) >> 8);
-              var12[var21Lifetime2] = var12[var21Lifetime2] - vi.a(param7, 255);
+              var10[var21Lifetime2] = var10[var21Lifetime2] - (EditableTextField.a(param7, 16757155) >> 16);
+              var11[var21Lifetime2] = var11[var21Lifetime2] - (EditableTextField.a(65471, param7) >> 8);
+              var12[var21Lifetime2] = var12[var21Lifetime2] - EditableTextField.a(param7, 255);
             }
             var20 = var20 + param6;
             var18--;

@@ -179,7 +179,7 @@ class bb extends UiComponent {
     }
 
     bb(String param0, kd param1) {
-        this(param0, nf.field_M.field_p, param1);
+        this(param0, DisplayNameSelectionPanel.field_M.field_p, param1);
     }
 
     boolean a(UiComponent param0, int param1) {
@@ -290,7 +290,7 @@ class bb extends UiComponent {
         this.field_D = true;
         this.field_B = true;
         this.field_F = false;
-        this.field_p = nf.field_M.field_h;
+        this.field_p = DisplayNameSelectionPanel.field_M.field_h;
     }
 
     static {

@@ -25,7 +25,7 @@ final class DiskCacheWorker implements Runnable {
           if (param0 > -122) {
             return;
           }
-          var9 = rd.field_j;
+          var9 = EmailFormatValidator.field_j;
           var2 = var9.readUnsignedByte(-128);
           if (var2 == 0) {
             var8 = (pf) (ua.field_G.beginForward((byte) 74));
@@ -49,7 +49,7 @@ final class DiskCacheWorker implements Runnable {
             return;
           }
           if (var2 != 1) {
-            k.a((Throwable) null, (byte) 41, "A1: " + aj.a((byte) 92));
+            DebouncedFieldValidator.a((Throwable) null, (byte) 41, "A1: " + aj.a((byte) 92));
             mc.a((byte) -126);
             return;
           }
@@ -192,7 +192,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              k.a((Throwable) ((Object) var2_ref), (byte) 119, (String) null);
+              DebouncedFieldValidator.a((Throwable) ((Object) var2_ref), (byte) 119, (String) null);
               decompiledRegionSelector1 = 1;
             }
             if (decompiledRegionSelector1 == 0) {

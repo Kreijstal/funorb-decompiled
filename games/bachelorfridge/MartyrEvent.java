@@ -3,7 +3,7 @@
  */
 final class MartyrEvent extends SpecialEvent {
     static String field_r;
-    static gda field_q;
+    static DisplayNameSelectionPanel field_q;
     static int field_s;
 
     MartyrEvent(int param0, CreatureRef param1) {

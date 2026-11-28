@@ -136,7 +136,7 @@ final class rf implements nn {
         int var4_int = 0;
         RgbSprite var4 = null;
         int var5 = HostileSpawn.field_I ? 1 : 0;
-        int var1 = hd.field_r[0] * sf.field_X[0];
+        int var1 = ConfirmedEmailAvailabilityValidator.field_r[0] * TextInputField.field_X[0];
         byte[] var7 = ja.field_e[0];
         int[] var3 = new int[var1];
         RgbSprite var4Lifetime1;
@@ -145,7 +145,7 @@ final class rf implements nn {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = bf.field_d[PcmOutputWorker.a((int) var7[var4_int], 255)];
           }
-          var4 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var3);
+          var4 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
           uj.d(92);
           return var4;
         }
@@ -153,7 +153,7 @@ final class rf implements nn {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = bf.field_d[PcmOutputWorker.a((int) var7[var4_intLifetime1], 255)];
         }
-        var4Lifetime1 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var3);
+        var4Lifetime1 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var3);
         uj.d(92);
         return var4Lifetime1;
     }

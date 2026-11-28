@@ -25,7 +25,7 @@ final class vd {
         var11 = Torquing.field_u;
         try {
           var6_int = 72 % ((param1 + 9) / 50);
-          if (qk.field_p >= param0 &&
+          if (LevelCompletionUpdate.field_p >= param0 &&
             Bzip2State.field_q <= param5) {
             if (param4 < RasterBuffer.field_e) {
               param4 = RasterBuffer.field_e;
@@ -54,14 +54,14 @@ final class vd {
             } else {
               incrementValue$0 = param0;
               param0++;
-              di.a(param4, (byte) -101, param3, qd.field_a[incrementValue$0], param2);
+              IndexedSpriteLayer.a(param4, (byte) -101, param3, qd.field_a[incrementValue$0], param2);
             }
-            if (qk.field_p < param5) {
-              param5 = qk.field_p;
+            if (LevelCompletionUpdate.field_p < param5) {
+              param5 = LevelCompletionUpdate.field_p;
             } else {
               incrementValue$1 = param5;
               param5--;
-              di.a(param4, (byte) 113, param3, qd.field_a[incrementValue$1], param2);
+              IndexedSpriteLayer.a(param4, (byte) 113, param3, qd.field_a[incrementValue$1], param2);
             }
             if (var7 != 0 &&
               var8 != 0) {
@@ -118,7 +118,7 @@ final class vd {
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        qp var11 = null;
+        AchievementProgressUpdate var11 = null;
         IsaacPacketBuffer var12 = null;
         int[] var13 = null;
         nh var14 = null;
@@ -170,7 +170,7 @@ final class vd {
               var15.unlink(0);
             }
           } else {
-            var11 = (qp) (tl.field_p.beginBackward(0));
+            var11 = (AchievementProgressUpdate) (tl.field_p.beginBackward(0));
             if (var11 == null) {
               ih.b(true);
               return;

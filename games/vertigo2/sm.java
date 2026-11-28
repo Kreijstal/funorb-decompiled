@@ -70,11 +70,11 @@ final class sm extends UiPanel {
         if (!tk.field_e) {
           throw new IllegalStateException();
         }
-        if (df.field_l != null) {
-          df.field_l.h((byte) 93);
+        if (BirthDateValidator.field_l != null) {
+          BirthDateValidator.field_l.h((byte) 93);
         }
         String var1 = mb.a(0);
-        eb.field_d = new ob(var1, (String) null, true, false, false);
+        eb.field_d = new LoginPanel(var1, (String) null, true, false, false);
         AccountServiceResult.field_e.b(n.field_b, 0);
         if (param0 == -14284) {
           n.field_b.a(false, eb.field_d);

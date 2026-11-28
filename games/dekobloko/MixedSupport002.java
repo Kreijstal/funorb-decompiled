@@ -25,26 +25,26 @@ final class MixedSupport002 {
     }
 
     final static String computeString0025(int integerArgument1) {
-        if (UiComponentPart022.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
+        if (AccountFieldStatusIndicator.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
           return NetworkArchiveRequestManager.stringState0438;
         }
         if (integerArgument1 >= -25) {
           indexedSpriteArrayState0001 = (IndexedSprite[]) null;
-          if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
-            return UiComponentPart024.stringState0435;
+          if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+            return BirthDateTextFields.stringState0435;
           }
           if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {
-            return UiComponentPart024.stringState0435;
+            return BirthDateTextFields.stringState0435;
           }
-          return SceneWidgetPart004.stringState0217;
+          return PlayerNamePrompt.stringState0217;
         }
-        if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
-          return UiComponentPart024.stringState0435;
+        if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+          return BirthDateTextFields.stringState0435;
         }
         if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(92)) {
-          return UiComponentPart024.stringState0435;
+          return BirthDateTextFields.stringState0435;
         }
-        return SceneWidgetPart004.stringState0217;
+        return PlayerNamePrompt.stringState0217;
     }
 
     static {

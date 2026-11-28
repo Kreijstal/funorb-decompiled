@@ -15,7 +15,7 @@ final class bga extends IntrusiveNode {
         if (null != oq.field_b) {
           oq.field_b.p(-79);
         }
-        MartyrEvent.field_q = new gda();
+        MartyrEvent.field_q = new DisplayNameSelectionPanel();
         if (param0 < -4) {
           kka.field_l.e(MartyrEvent.field_q, 33);
           return;

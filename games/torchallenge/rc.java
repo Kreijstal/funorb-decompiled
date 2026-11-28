@@ -233,7 +233,7 @@ class rc extends DualLinkNode {
             }
             var5_ref = wf.a((byte) -123, var4_ref_String);
             var6_ref = var1.readString(false);
-            var7_ref = il.a((CharSequence) ((Object) var4_ref_String), (byte) 21);
+            var7_ref = EmailFormatValidator.a((CharSequence) ((Object) var4_ref_String), (byte) 21);
             if (var7_ref == null) {
               var7_ref = var4_ref_String;
             }
@@ -293,12 +293,12 @@ class rc extends DualLinkNode {
           if (null == var6) {
             var6 = ri.a(0, var5);
             if (var6 != null) {
-              SocketConnector.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, -47);
+              SocketConnector.field_e.a((long)EmailFormatValidator.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, -47);
             }
           }
           if (var6 == null) {
             var6 = new qk();
-            SocketConnector.field_e.a((long)il.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, 121);
+            SocketConnector.field_e.a((long)EmailFormatValidator.a((CharSequence) ((Object) var4_ref_StringLifetime1), (byte) 21).hashCode(), var6, 121);
             fieldTemp$0 = kf.field_c;
             kf.field_c = kf.field_c + 1;
             var6.field_ob = fieldTemp$0;
@@ -389,10 +389,10 @@ class rc extends DualLinkNode {
           ae.field_z = ae.field_z ^ 32;
           ac.field_d = ac.field_d ^ 32;
           if (!t.a(0, var4, 121) &&
-            0 < fg.field_N &&
+            0 < LoginPanel.field_N &&
             0 < ByteStorage.field_f &&
             !gh.field_x &&
-            qk.field_lb >= ByteStorage.field_f + fg.field_N) {
+            qk.field_lb >= ByteStorage.field_f + LoginPanel.field_N) {
             hf.a(255, param0 + 110, 0);
           }
           if (!t.a(1, var4, 117) &&
@@ -403,11 +403,11 @@ class rc extends DualLinkNode {
             hf.a(254, 89, 1);
           }
           if (!t.a(2, var4, 126) &&
-            0 < gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78)) {
+            0 < MatchingFieldValidator.a(GzipDecoder.field_c[vj.field_c], (byte) 78)) {
             hf.a(253, 13, 2);
           }
           if (!t.a(3, var4, 121) &&
-            gf.a(GzipDecoder.field_c[vj.field_c], (byte) 78) >= 3) {
+            MatchingFieldValidator.a(GzipDecoder.field_c[vj.field_c], (byte) 78) >= 3) {
             hf.a(252, param0 ^ -62, 3);
           }
           if (!t.a(4, var4, 117)) {
@@ -415,7 +415,7 @@ class rc extends DualLinkNode {
             while (true) {
               if (3 > var5) {
                 stackIn_58_0 = 3;
-                stackIn_58_1 = gf.a(GzipDecoder.field_c[var5], (byte) 78);
+                stackIn_58_1 = MatchingFieldValidator.a(GzipDecoder.field_c[var5], (byte) 78);
                 if (var7 == 0) {
                   if (stackIn_58_0 <= stackIn_58_1) {
                     var1_int++;

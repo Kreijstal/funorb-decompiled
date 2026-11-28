@@ -45,7 +45,7 @@ final class ig extends WidgetContainer implements ka {
         this.field_E.field_n = (dg) (this);
         this.field_E.field_z = id.field_b;
         this.field_G.field_n = (dg) (this);
-        this.field_G.field_z = a.field_g;
+        this.field_G.field_z = TextFieldValidator.field_g;
         this.a(this.field_F, 5411);
         this.a(this.field_E, 5411);
         this.a(this.field_G, 5411);
@@ -149,7 +149,7 @@ final class ig extends WidgetContainer implements ka {
                 ProxySocketConnector.f(4);
               }
             } else {
-              wf.d(350);
+              DebouncedFieldValidator.d(350);
             }
           } else {
             ok.a((byte) 96);

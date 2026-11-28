@@ -106,7 +106,7 @@ final class li extends IntrusiveNode {
             }
             MusicPatchPcmStream.field_p = 1;
             var3 = var1.readString(37);
-            qa.field_r = ((String) (var3)).intern();
+            ConfirmedEmailAvailabilityValidator.field_r = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
             pk.a((byte) -48, var4);
             return;

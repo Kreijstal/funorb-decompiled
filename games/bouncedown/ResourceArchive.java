@@ -111,9 +111,9 @@ final class ResourceArchive {
         var3 = Bounce.field_N;
         try {
           ge.field_c = ge.field_c + 1;
-          if (ck.field_c == -1 &&
+          if (DebouncedFieldValidator.field_c == -1 &&
             sj.field_d == -1) {
-            ck.field_c = uc.field_C;
+            DebouncedFieldValidator.field_c = uc.field_C;
             sj.field_d = ll.field_y;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -142,7 +142,7 @@ final class ResourceArchive {
             else {
               ge.field_c = 0;
             }
-            mh.field_Z = ck.field_c;
+            mh.field_Z = DebouncedFieldValidator.field_c;
             if (param1 != null) {
               nh.field_P = false;
             } else {
@@ -157,10 +157,10 @@ final class ResourceArchive {
             ge.field_c < ea.field_b &&
             mi.field_j) {
             ge.field_c = 0;
-            mh.field_Z = ck.field_c;
+            mh.field_Z = DebouncedFieldValidator.field_c;
             ha.field_b = sj.field_d;
           }
-          ck.field_c = -1;
+          DebouncedFieldValidator.field_c = -1;
           if (param0 <= 20) {
             ResourceArchive.clearStaticReferences(false);
           }

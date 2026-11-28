@@ -19,7 +19,7 @@ final class ne {
         int var1Lifetime1Lifetime4;
         int var1Lifetime1Lifetime5;
         bi.field_J = bi.field_J + 1;
-        bg.field_m = bg.field_m - 1;
+        PasswordValidator.field_m = PasswordValidator.field_m - 1;
         if (bi.field_J != 10) {
           var1 = 60 % ((-44 - param0) / 35);
           return;
@@ -56,7 +56,7 @@ final class ne {
           var1Lifetime1Lifetime5 = 60 % ((-44 - param0) / 35);
           return;
         }
-        if (bg.field_m > 0) {
+        if (PasswordValidator.field_m > 0) {
           hi.field_a = 0;
           var1Lifetime2 = 60 % ((-44 - param0) / 35);
           return;
@@ -67,13 +67,13 @@ final class ne {
           return;
         }
         hi.field_a = 9;
-        bg.field_m = 2250;
+        PasswordValidator.field_m = 2250;
         var1Lifetime4 = 60 % ((-44 - param0) / 35);
     }
 
     final static void a(byte param0, AchievementNotice param1, int param2) {
         int var4 = 0;
-        BitPacketBuffer var5 = ff.field_D;
+        BitPacketBuffer var5 = LoginPanel.field_D;
         var5.writeCipheredByte(false, param2);
         if (param0 != 7) {
           return;

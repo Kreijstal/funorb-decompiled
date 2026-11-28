@@ -90,7 +90,7 @@ final class ao {
           uc.a((byte) -72);
           jd.a((byte) -91);
           if (m.a(param0 ^ 25329)) {
-            qn.field_U.writeCipheredByte(1, param0 ^ 25285);
+            EditableTextField.field_U.writeCipheredByte(1, param0 ^ 25285);
             vh.a(0, (byte) -58);
             ImageProducerRasterBuffer.d(65280);
             return;
@@ -104,7 +104,7 @@ final class ao {
           ImageProducerRasterBuffer.d(65280);
           return;
         }
-        qn.field_U.writeCipheredByte(1, param0 ^ 25285);
+        EditableTextField.field_U.writeCipheredByte(1, param0 ^ 25285);
         vh.a(0, (byte) -58);
         ImageProducerRasterBuffer.d(65280);
     }

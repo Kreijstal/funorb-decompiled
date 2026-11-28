@@ -147,9 +147,9 @@ final class nj extends hl {
           return;
         }
         try {
-          jb.field_b = param1.readUnsignedShort(param0 ^ 674914996) << 5;
+          DebouncedFieldValidator.field_b = param1.readUnsignedShort(param0 ^ 674914996) << 5;
           var2_int = param1.readUnsignedByte(-93);
-          jb.field_b = jb.field_b + (var2_int >> 3);
+          DebouncedFieldValidator.field_b = DebouncedFieldValidator.field_b + (var2_int >> 3);
           DualLinkNode.field_o = (7 & var2_int) << 18;
           DualLinkNode.field_o = DualLinkNode.field_o + (param1.readUnsignedShort(674914976) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(-96);
@@ -265,18 +265,18 @@ final class nj extends hl {
         int var4 = 0;
         int var5 = 0;
         try {
-          qi.field_o.field_db = param1;
+          AgeValidator.field_o.field_db = param1;
           fm.field_V = true;
           var2_int = ph.field_j.field_e;
           var3 = ph.field_j.field_i;
           if (param0 != -101) {
             nj.clearStaticReferences(-5);
           }
-          var4 = qi.field_o.field_xb.b(param1, 272, qi.field_o.field_K);
+          var4 = AgeValidator.field_o.field_xb.b(param1, 272, AgeValidator.field_o.field_K);
           var5 = -(var4 / 2) + 7 + (var3 / 2 - 110);
           la.field_c.a((-320 + var2_int) / 2, 320, -2147483648, -(var5 * 2) + var3 - 120, var5);
           la.field_c.field_Ab = wh.a(-82, la.field_c.field_pb, 3, 11579568, 8421504, 2105376);
-          qi.field_o.a(24, -24 + la.field_c.field_M - 24, -2147483648, -20 + la.field_c.field_pb - 24, 16);
+          AgeValidator.field_o.a(24, -24 + la.field_c.field_M - 24, -2147483648, -20 + la.field_c.field_pb - 24, 16);
           of.field_i.a(120, 80, -2147483648, 24, la.field_c.field_pb - 44);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -420,7 +420,7 @@ final class nj extends hl {
     final static void a(boolean param0, int param1, String param2, boolean param3) {
         bo.a((byte) 123);
         jh.field_e.i(0);
-        ResourceArchive.field_b = new wf(pi.field_a, (String) null, SecondaryNodeHashTable.field_g, param0, param3);
+        ResourceArchive.field_b = new LoginPanel(pi.field_a, (String) null, SecondaryNodeHashTable.field_g, param0, param3);
         if (param1 != 2) {
           return;
         }

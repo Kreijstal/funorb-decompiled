@@ -224,7 +224,7 @@ class gd extends rj {
     final static void a(int param0, int param1, int param2, boolean param3) {
         g.field_Hb = param0;
         if (fc.a(mn.field_b, (byte) -123)) {
-          bf.field_f[mn.field_b].c();
+          bf.field_f[mn.field_b].releaseScreenResources();
         }
         gd.a(64, MouseInput.field_f);
         te.b();
@@ -243,9 +243,9 @@ class gd extends rj {
           return;
         }
         System.gc();
-        bf.field_f[Bzip2State.field_z].b(param3);
+        bf.field_f[Bzip2State.field_z].initializeScreen(param3);
         if (Bzip2State.field_z == 12) {
-          m.a(param1 ^ 115, param3);
+          DebouncedFieldValidator.a(param1 ^ 115, param3);
           return;
         }
     }

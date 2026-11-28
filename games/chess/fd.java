@@ -72,7 +72,7 @@ final class fd extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, long param2) {
-        BitPacketBuffer var4 = qn.field_U;
+        BitPacketBuffer var4 = EditableTextField.field_U;
         var4.writeCipheredByte(param0, -87);
         var4.position = var4.position + 1;
         int var5 = var4.position;

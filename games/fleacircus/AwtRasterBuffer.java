@@ -9,7 +9,7 @@ abstract class AwtRasterBuffer {
     int field_h;
     static RgbSprite field_d;
     static ve field_c;
-    static nf field_e;
+    static DisplayNameSelectionPanel field_e;
 
     final void setAsRasterTarget(byte param0) {
         SoftwareRasterizer.setRasterBuffer(this.field_g, this.field_h, this.field_f);

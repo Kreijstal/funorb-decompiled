@@ -148,7 +148,7 @@ final class PcmResampler {
           }
           for (var2_int = 0; rc.field_e > var2_int; var2_int++) {
             var8 = re.field_n[var2_int];
-            var9 = var8.field_j.b(-4);
+            var9 = var8.field_j.getClampedTileIndex(-4);
             var3 = -var5 + (int)((var8.field_l.field_f + (double)var8.field_j.field_e) * 24.0);
             var4 = -var6 + (int)(24.0 * ((double)var8.field_j.field_g + var8.field_l.field_a));
             if (var3 >= -96 && (-96 <= var4 ||
@@ -170,16 +170,16 @@ final class PcmResampler {
                     }
                     var12_ref_bd__[cg.field_b].a((double)var11, (double)var10, false, fj.field_Pb, 128);
                   }
-                  if (null != of.field_d) {
+                  if (null != ClientLookupTables.field_d) {
                     var13_double = var8.field_c;
-                    if (of.field_d.length <= dn.field_b) {
+                    if (ClientLookupTables.field_d.length <= dn.field_b) {
                       dn.field_b = 0;
                     }
-                    if (of.field_d == od.field_G &&
+                    if (ClientLookupTables.field_d == od.field_G &&
                       nh.field_H == 0) {
                       dn.field_b = 0;
                     }
-                    of.field_d[dn.field_b].a(true, 128, (int)var13_double, var10, var11);
+                    ClientLookupTables.field_d[dn.field_b].a(true, 128, (int)var13_double, var10, var11);
                   }
                 } else {
                   var12 = jf.field_c / 25;
@@ -257,7 +257,7 @@ final class PcmResampler {
                                     } else {
                                       if (var11Lifetime1 != 27) {
                                         if (28 == var11Lifetime1) {
-                                          var28 = of.field_c[var8.field_w][var8.field_z % of.field_c[var8.field_w].length];
+                                          var28 = ClientLookupTables.field_c[var8.field_w][var8.field_z % ClientLookupTables.field_c[var8.field_w].length];
                                           var28.a(true, 128, (int)var8.field_c, var3 - 12, -12 + var4);
                                         } else {
                                           if (var11Lifetime1 != 24 &&
@@ -375,7 +375,7 @@ final class PcmResampler {
         try {
           tk.field_d = param0 * eh.a((byte) -126) / 1000;
           tk.a(true, param1);
-          hd.a(param1, false);
+          ConfirmedEmailAvailabilityValidator.a(param1, false);
           ResourceArchive.loadFinalFrameSprites(param1, -11310);
           ha.b(255);
           pl.a(-16183);
@@ -427,7 +427,7 @@ final class PcmResampler {
           if (param0 <= 121) {
             PcmResampler.resetStaticState((byte) -36);
           }
-          stackIn_3_0 = db.decodeCp1252String(param1, 0, (byte) -126, param1.length);
+          stackIn_3_0 = PasswordValidator.decodeCp1252String(param1, 0, (byte) -126, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

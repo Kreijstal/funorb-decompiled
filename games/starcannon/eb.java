@@ -68,7 +68,7 @@ final class eb {
             AccountRequestState.field_a.ensureIndexLoaded((byte) 110) &&
             AccountRequestState.field_a.tryLoadGroupByName("benefits", -9883)) {
             DelayedPcmStream.field_k = vk.a("benefits", 32, "headline", g.field_a);
-            cf.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
+            ConfirmedEmailAvailabilityValidator.field_q = vk.a("benefits", 86, "blurbpane", g.field_a);
             pc.field_a = vk.a("benefits", 106, "button", g.field_a);
             re.field_f = vk.a("benefits", 17, "signup_text", g.field_a);
             SpriteState.field_z = vk.a("benefits", 71, "menu_text", g.field_a);
@@ -96,8 +96,8 @@ final class eb {
             gi.field_b.b(be.field_a, var6, 180, 16777215, -1);
             ah.field_d.b(lj.field_a, var6, 200, 16777215, -1);
             hh.a(0, 0, 3, var12.field_v, false, 1, var12, var12.field_u);
-            cf.field_q.e();
-            var12.e(18 - cf.field_q.field_w, -cf.field_q.field_y + 241);
+            ConfirmedEmailAvailabilityValidator.field_q.e();
+            var12.e(18 - ConfirmedEmailAvailabilityValidator.field_q.field_w, -ConfirmedEmailAvailabilityValidator.field_q.field_y + 241);
             for (var7 = 0; var7 < va.field_t.length; var7++) {
               pa.field_I[var7].e();
               ah.field_d.a(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
@@ -112,7 +112,7 @@ final class eb {
             mf.field_d = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
             nh.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
             g.field_a = null;
-            qf.field_e = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 434;
+            TextFieldValidator.field_e = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 434;
             lf.field_Z = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
           }
           if (ba.field_c == null) {
@@ -227,8 +227,8 @@ final class eb {
           if (DelayedPcmStream.field_k != null) {
             DelayedPcmStream.field_k.e(0, 0);
           }
-          if (null != cf.field_q) {
-            cf.field_q.e(0, 0);
+          if (null != ConfirmedEmailAvailabilityValidator.field_q) {
+            ConfirmedEmailAvailabilityValidator.field_q.e(0, 0);
           }
           ba.field_c.e(0, 0);
           if (null != lh.field_N) {
@@ -273,7 +273,7 @@ final class eb {
             }
             stackIn_61_0 = 112;
             stackIn_62_1 = (ea.field_a.field_k == 1);
-            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_61_0, stackIn_62_1, qf.field_e, mf.field_d);
+            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_61_0, stackIn_62_1, TextFieldValidator.field_e, mf.field_d);
           }
           if (ge.field_b != null) {
             var2Lifetime4 = -(ge.field_b.field_q / 2) + 357;

@@ -227,7 +227,7 @@ final class rl extends r {
         if (param0) {
           field_u = -103;
         }
-        int var2 = v.g((byte) -111);
+        int var2 = ValidatedTextField.g((byte) -111);
         ij.field_f.a((byte) -115, qe.field_E - dh.field_k, var2 + (dh.field_k << 1), cb.field_i - eg.field_d, var1 + (eg.field_d << 1));
         sj.a((byte) -100);
     }

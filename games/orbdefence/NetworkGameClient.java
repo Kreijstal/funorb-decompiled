@@ -50,7 +50,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.a(114, (String) null, (byte) 126);
         }
         ArchiveRequest.field_m = this.field_A;
-        wg.a(ArchiveRequest.field_m, (byte) -108);
+        EmailFormatValidator.a(ArchiveRequest.field_m, (byte) -108);
         ec.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, ArchiveRequest.field_m, wc.field_c, this.field_y, 49);
         nc.a(ArchiveRequest.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
         k.a(0);
@@ -59,7 +59,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         pj.field_p = param3;
         BufferedSocket.field_e = param5;
         ve.field_Q = param6;
-        oc.field_V = param4;
+        ValidatedTextField.field_V = param4;
         nl.field_b = param2;
         this.f((byte) 56);
         tl.b(103);
@@ -142,10 +142,10 @@ abstract class NetworkGameClient extends GameAppletShell {
                   BitPacketBuffer.showLobbyDialog(kk.field_Y, (byte) -115, var5_intLifetime2);
                   kk.field_Y = null;
                 } else {
-                  el.field_F = p.field_c;
+                  DisplayNameSelectionPanel.field_F = p.field_c;
                   id.a(false);
                   d.field_k = false;
-                  hi.field_k = 10;
+                  TextFieldValidator.field_k = 10;
                 }
               }
             }
@@ -154,7 +154,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (jc.field_b) {
               ad.a(0, uj.b((byte) -120));
             } else {
-              hi.field_k = 10;
+              TextFieldValidator.field_k = 10;
               d.field_k = true;
             }
           }
@@ -163,7 +163,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (6 == var4 &&
             pa.field_b) {
-            hi.field_k = 10;
+            TextFieldValidator.field_k = 10;
           }
           if (var4 == 7) {
             GameAppletShell.a(uj.b((byte) -120), -6407);
@@ -208,7 +208,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 15) {
-            hi.field_k = 10;
+            TextFieldValidator.field_k = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -457,7 +457,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         ab.a(-128);
         PacketBuffer.d((byte) -107);
         if (!eg.c((byte) -126) &&
-          11 != hi.field_k) {
+          11 != TextFieldValidator.field_k) {
           cf.a((byte) 109);
         }
         if (null != mj.field_i) {
@@ -484,7 +484,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           DualLinkNode.field_j = bh.a((byte) 117);
           if (var3Lifetime1 != 0 &&
             DualLinkNode.field_j == 0 &&
-            hi.field_k == 11 &&
+            TextFieldValidator.field_k == 11 &&
             !sg.c(true)) {
             id.a(false);
           }
@@ -496,7 +496,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (-1 != DualLinkNode.field_j &&
           DualLinkNode.field_j != 0) {
           if (10 <= vh.field_n) {
-            if (hi.field_k >= 10) {
+            if (TextFieldValidator.field_k >= 10) {
               md.b((byte) -86);
               if (DualLinkNode.field_j != 3) {
                 if (DualLinkNode.field_j == 4) {
@@ -560,9 +560,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (ArchiveRequest.field_m != 0) {
             lf.field_a = qk.a(BufferedSocket.field_e, -32585);
           }
-          og.field_g = hm.a(48, true, false, oc.field_V, 1);
+          og.field_g = hm.a(48, true, false, ValidatedTextField.field_V, 1);
           am.field_b = hm.a(48, true, false, ve.field_Q, 1);
-          wb.field_b = hm.a(48, true, false, nl.field_b, 1);
+          DebouncedFieldValidator.field_b = hm.a(48, true, false, nl.field_b, 1);
           j.field_b = og.field_g;
           vh.field_n = 2;
           GameAppletShell.field_d = am.field_b;
@@ -585,13 +585,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (vh.field_n == 3 &&
-          dk.a(1, og.field_g, wb.field_b, am.field_b) &&
-          SpriteGeometry.a(wb.field_b, 26810)) {
+          dk.a(1, og.field_g, DebouncedFieldValidator.field_b, am.field_b) &&
+          SpriteGeometry.a(DebouncedFieldValidator.field_b, 26810)) {
           ak.b(22176);
           IterableNodeHashTable.a(-96);
           tl.field_e = cj.field_c;
           pa.field_b = false;
-          gj.a(am.field_b, (byte) 33, wb.field_b, jc.field_b, og.field_g);
+          gj.a(am.field_b, (byte) 33, DebouncedFieldValidator.field_b, jc.field_b, og.field_g);
           if (gj.field_k ||
             null != lg.field_b) {
             stackIn_103_0 = lg.field_b;
@@ -607,9 +607,9 @@ abstract class NetworkGameClient extends GameAppletShell {
             de.field_a = fb.c(false);
             cf.field_d = te.j(2);
           }
-          hf.a(de.field_a, wb.field_b, cf.field_d, 1000);
+          hf.a(de.field_a, DebouncedFieldValidator.field_b, cf.field_d, 1000);
           og.field_g = null;
-          wb.field_b = null;
+          DebouncedFieldValidator.field_b = null;
           am.field_b = null;
           pj.a(127, (java.applet.Applet) (this));
           vd.a(99);
@@ -738,9 +738,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           discarded$4 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
           if (10 <= vh.field_n) {
-            if (rf.l(-108)) {
-              if (hi.field_k != 0) {
-                vi.a(false, of.field_K);
+            if (AccountRegistrationPanel.l(-108)) {
+              if (TextFieldValidator.field_k != 0) {
+                EditableTextField.a(false, of.field_K);
               } else {
                 discarded$5 = this.a(false, -1, false);
               }
@@ -767,13 +767,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           return -1;
         }
         if (var2 == 0) {
-          if (hi.field_k == 11 &&
+          if (TextFieldValidator.field_k == 11 &&
             DualLinkNode.field_j == 0) {
             id.a(false);
           }
         } else {
           if (1 == var2) {
-            if (hi.field_k == 11 &&
+            if (TextFieldValidator.field_k == 11 &&
               DualLinkNode.field_j == 0) {
               id.a(false);
             }

@@ -30,7 +30,7 @@ abstract class SocketConnector {
             var4 = (PcmSample) null;
             SocketConnector.a((byte) -126, (PcmSample) null, -3);
           }
-          stackIn_3_0 = qb.a(true, RawPcmStream.a(param1, 100, param2));
+          stackIn_3_0 = ValidatedTextField.a(true, RawPcmStream.a(param1, 100, param2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -87,7 +87,7 @@ abstract class SocketConnector {
         try {
           ai.field_a = param5;
           kb.field_d = param0;
-          vg.field_N = param3;
+          EditableTextField.field_N = param3;
           int var6_int = 57 % ((param4 - 32) / 62);
           bl.field_i = param2;
           g.field_l = param1;

@@ -23,16 +23,16 @@ final class km {
     final static void a(byte param0, int param1) {
         int var3 = 0;
         int var4 = 0;
-        qk var5 = null;
+        LevelCompletionUpdate var5 = null;
         h var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var4 = Torquing.field_u;
         try {
-          var5 = (qk) (kc.field_z.beginBackward(0));
+          var5 = (LevelCompletionUpdate) (kc.field_z.beginBackward(0));
           while (var5 != null) {
             ii.a(32, param1, var5);
-            var5 = (qk) (kc.field_z.nextBackward(-24059));
+            var5 = (LevelCompletionUpdate) (kc.field_z.nextBackward(-24059));
           }
           var3 = -31 % ((-90 - param0) / 35);
           var6 = (h) (to.field_s.beginBackward(0));

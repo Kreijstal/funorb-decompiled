@@ -10,7 +10,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
     static RgbSprite rgbSpriteState0025;
     private boolean booleanState0089;
 
-    PlayerNameAvailabilityValidator(UiComponentPart028 uiComponentPart028Argument1) {
+    PlayerNameAvailabilityValidator(EditableTextField uiComponentPart028Argument1) {
         super(uiComponentPart028Argument1);
         this.booleanState0089 = false;
     }
@@ -34,7 +34,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           }
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument1);
           if (!MixedSupport108.computeBoolean1418(charSequenceLocal4, byteArgument2 ^ 27418)) {
-            stackValidationStatusLocal5 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal5 = ReturnedShapeUpdate.validationStatusState0005;
             return stackValidationStatusLocal5;
           }
           if (!stringArgument1.equals(this.stringState0290)) {
@@ -51,7 +51,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
           if (this.booleanState0089) {
             stackValidationStatusLocal7 = MixedSupport023.validationStatusState0001;
           } else {
-            stackValidationStatusLocal7 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal7 = ReturnedShapeUpdate.validationStatusState0005;
           }
           return stackValidationStatusLocal7;
         } catch (java.lang.RuntimeException caughtParameterLocal12) {

@@ -189,8 +189,8 @@ abstract class jj extends db {
           var8Lifetime1++;
         }
         ha.field_i.d(param1 + this.field_u - 90, param0 + 10);
-        bc.a(uh.field_m, param0 + 35, param1 + 5, (byte) 126, this.field_u - 10);
-        bc.a(ki.field_c, -22 + (param0 + this.field_j), param1, (byte) -126, this.field_u);
+        ValidatedTextField.a(uh.field_m, param0 + 35, param1 + 5, (byte) 126, this.field_u - 10);
+        ValidatedTextField.a(ki.field_c, -22 + (param0 + this.field_j), param1, (byte) -126, this.field_u);
         var6Lifetime2 = 127;
         var4Lifetime2 = this.field_j - 79;
         var5Lifetime2 = 169;

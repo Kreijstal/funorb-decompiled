@@ -94,8 +94,8 @@ final class ob extends ta implements ff, ai {
           var4 = new jc(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
           this.field_A = new te(var7, var4);
           this.field_A.field_i = "";
-          this.field_A.a(0, b.field_p, 2);
-          this.field_A.a(1, b.field_p, 2);
+          this.field_A.a(0, ConfirmedEmailAvailabilityValidator.field_p, 2);
+          this.field_A.a(1, ConfirmedEmailAvailabilityValidator.field_p, 2);
           this.field_A.field_h = (ag) (this);
           this.field_A.field_m = this.field_m - 40;
           this.field_A.a(var3, (byte) 53, -40 + this.field_m, 26);

@@ -64,7 +64,7 @@ final class mc {
               bn.field_b[var5] = qe.field_b[var5];
             }
             this.field_o = true;
-            ke.field_V = true;
+            ValidatedTextField.field_V = true;
             this.field_q.h((byte) 78);
             PcmResampler.a(false);
             return;
@@ -459,7 +459,7 @@ final class mc {
           this.field_v = this.field_v - 32;
           if (this.field_v < -640) {
             this.field_q.field_Q = null;
-            if (ke.field_V) {
+            if (ValidatedTextField.field_V) {
               el.a(ah.field_f, param1 - 5624);
               fa.b(param1 + 15262);
             } else {
@@ -1067,7 +1067,7 @@ final class mc {
                           if (8 != var12) {
                             if (4 == var12) {
                               tn.field_K[4].g(487, 326);
-                              var13_ref = cl.field_M;
+                              var13_ref = LoginPanel.field_M;
                             } else {
                               if (10 != var12) {
                                 if (var12 == 5) {
@@ -1094,7 +1094,7 @@ final class mc {
                                                 }
                                               } else {
                                                 tn.field_K[17].g(487, 326);
-                                                var13_ref = lm.field_I;
+                                                var13_ref = DisplayNameSelectionPanel.field_I;
                                               }
                                             } else {
                                               tn.field_K[16].g(487, 326);

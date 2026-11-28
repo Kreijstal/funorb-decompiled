@@ -44,16 +44,16 @@ final class mp {
           mp.a(-127, -8);
         }
         int var3 = null != sj.field_d ? 1 : 0;
-        if (de.field_f == 9) {
+        if (DebouncedFieldValidator.field_f == 9) {
           if (!RasterBuffer.a(1, DelegatingCanvas.field_a, uo.field_d, jo.field_b, fj.field_lb)) {
-            if (de.field_f == 10) {
+            if (DebouncedFieldValidator.field_f == 10) {
               if (var3 != 0) {
                 return false;
               }
               g.a((byte) -10);
               return true;
             }
-            if (de.field_f != 11) {
+            if (DebouncedFieldValidator.field_f != 11) {
               return false;
             }
             if (!ff.field_m) {
@@ -89,14 +89,14 @@ final class mp {
           }
           return qm.a(fj.field_lb, uo.field_d, (byte) 83, jo.field_b, DelegatingCanvas.field_a);
         }
-        if (de.field_f == 10) {
+        if (DebouncedFieldValidator.field_f == 10) {
           if (var3 != 0) {
             return false;
           }
           g.a((byte) -10);
           return true;
         }
-        if (de.field_f == 11 &&
+        if (DebouncedFieldValidator.field_f == 11 &&
           ff.field_m) {
           if (nm.field_E == 2 &&
             !rm.a((byte) -126, ba.field_a, FullscreenFocusCanvas.field_b)) {

@@ -18,7 +18,7 @@ final class MixedSupport079 {
         if (null == MixedSupport139.sceneWidgetPart004State0001) {
           return;
         }
-        integerLocal1 = MixedSupport139.sceneWidgetPart004State0001.computeInteger0614((byte) -63, booleanArgument1);
+        integerLocal1 = MixedSupport139.sceneWidgetPart004State0001.updatePromptAndReadResult((byte) -63, booleanArgument1);
         if (integerLocal1 == 0) {
           return;
         }

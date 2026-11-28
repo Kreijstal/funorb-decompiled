@@ -51,7 +51,7 @@ final class gi {
         }
         jj.field_A.e();
         sc.a(3, bi.field_a.field_B, 3, 30603);
-        hg.field_y.setAsRasterTarget(33);
+        DisplayNameSelectionPanel.field_y.setAsRasterTarget(33);
         if (param0 != 4) {
           return;
         }

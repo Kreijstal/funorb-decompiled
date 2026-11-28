@@ -103,7 +103,7 @@ final class ie {
           }
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_7_0 = ef.field_j;
+            stackIn_7_0 = AchievementNotification.field_j;
             return stackIn_7_0;
           }
           if (63 < var2_int) {
@@ -119,7 +119,7 @@ final class ie {
                 return stackIn_20_0;
               }
             } else {
-              if (-1 == oc.field_m.indexOf(var4)) {
+              if (-1 == MatchingFieldValidator.field_m.indexOf(var4)) {
                 stackIn_23_0 = wh.field_b;
                 return stackIn_23_0;
               }
@@ -150,7 +150,7 @@ final class ie {
         if (var3 != null) {
           pi.field_d.a(0, false);
           var4_ref_dh = pi.field_d;
-          var5_ref_String = ef.field_m;
+          var5_ref_String = AchievementNotification.field_m;
           var4_ref_dh.field_b.a((byte) -12, var5_ref_String, 5);
           var4_ref_dhLifetime1 = pi.field_d;
           var5 = re.field_m;

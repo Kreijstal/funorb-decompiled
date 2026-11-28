@@ -31,34 +31,34 @@ final class oa extends IntrusiveNode {
           0 < wc.field_q) {
           param0 = 0;
         }
-        if (bc.field_V == param0) {
+        if (ValidatedTextField.field_V == param0) {
           return;
         }
         pg.field_f = -60;
-        bc.field_V = param0;
+        ValidatedTextField.field_V = param0;
         DiskCacheWorker.field_g = 0;
-        if (bc.field_V == 0) {
-          ImageProducerRasterBuffer.field_m = bc.field_V;
+        if (ValidatedTextField.field_V == 0) {
+          ImageProducerRasterBuffer.field_m = ValidatedTextField.field_V;
           BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
-          if (bc.field_V >= 0) {
-            pi.field_b[bc.field_V].a(param1, true);
+          if (ValidatedTextField.field_V >= 0) {
+            pi.field_b[ValidatedTextField.field_V].a(param1, true);
           }
           var3 = -72 % ((param2 + 26) / 39);
-          if (bc.field_V != 8) {
+          if (ValidatedTextField.field_V != 8) {
             return;
           }
           AccountNameAvailabilityValidator.e(-6359);
           return;
         }
-        if (-2 == bc.field_V) {
-          ImageProducerRasterBuffer.field_m = bc.field_V;
+        if (-2 == ValidatedTextField.field_V) {
+          ImageProducerRasterBuffer.field_m = ValidatedTextField.field_V;
           BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
         }
-        if (bc.field_V >= 0) {
-          pi.field_b[bc.field_V].a(param1, true);
+        if (ValidatedTextField.field_V >= 0) {
+          pi.field_b[ValidatedTextField.field_V].a(param1, true);
         }
         var3Lifetime1 = -72 % ((param2 + 26) / 39);
-        if (bc.field_V != 8) {
+        if (ValidatedTextField.field_V != 8) {
           return;
         }
         AccountNameAvailabilityValidator.e(-6359);

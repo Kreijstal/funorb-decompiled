@@ -63,7 +63,7 @@ abstract class i extends GameAppletShell {
             this.a("reconnect", false);
           }
           vh.b(-4749);
-          fh.a(var2, (byte) -1, gl.field_k);
+          fh.a(var2, (byte) -1, PasswordValidator.field_k);
           eg.field_l = true;
           ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
           return var2;
@@ -134,7 +134,7 @@ abstract class i extends GameAppletShell {
           }
           gg.field_m.d((byte) -44);
         }
-        lf.c((byte) -84);
+        MatchingFieldValidator.c((byte) -84);
         nh.b(false);
         if (param0 != 110) {
           return;
@@ -753,8 +753,8 @@ abstract class i extends GameAppletShell {
           if (1 == var4) {
             var5_int = s.a(aa.a((byte) -115), md.c(97), (byte) -87);
             if (-1 != var5_int) {
-              GameCanvas.a(gl.field_k, true, sc.field_g, var5_int);
-              gl.field_k = null;
+              GameCanvas.a(PasswordValidator.field_k, true, sc.field_g, var5_int);
+              PasswordValidator.field_k = null;
               sc.field_g = null;
             }
             var11 = PlayerShip.consumeLoginResponseFlag((byte) 118);
@@ -765,8 +765,8 @@ abstract class i extends GameAppletShell {
           if (2 == var4) {
             var5_intLifetime1 = rd.a(mc.a(16), this.field_t, 28406, qj.a(1), va.b(8), wi.c(22), hk.a(-1));
             if (var5_intLifetime1 != -1) {
-              ud.a(false, var5_intLifetime1, gl.field_k, sc.field_g);
-              gl.field_k = null;
+              ud.a(false, var5_intLifetime1, PasswordValidator.field_k, sc.field_g);
+              PasswordValidator.field_k = null;
               sc.field_g = null;
             }
           }
@@ -780,8 +780,8 @@ abstract class i extends GameAppletShell {
               var5_intLifetime2 = DynamicLight.a(false, this.field_v, wi.c(-123), this.field_t, mc.a(16), (byte) -89);
               if (-1 != var5_intLifetime2) {
                 if (var5_intLifetime2 != 0) {
-                  fh.a(var5_intLifetime2, (byte) -1, gl.field_k);
-                  gl.field_k = null;
+                  fh.a(var5_intLifetime2, (byte) -1, PasswordValidator.field_k);
+                  PasswordValidator.field_k = null;
                 } else {
                   field_p = DequeCursor.field_d;
                   WingPod.m(-31574);

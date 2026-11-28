@@ -310,7 +310,7 @@ final class BattleState {
     }
 
     final static void a(byte param0) {
-        if (!ib.p(86)) {
+        if (!ValidatedTextField.p(86)) {
           return;
         }
         try {
@@ -552,11 +552,11 @@ final class BattleState {
         int var7Lifetime1Lifetime1;
         var9 = Terraphoenix.field_V;
         try {
-          if (le.field_q != null) {
-            le.field_q.field_g = this.field_y;
-            le.field_q.field_z = this.field_N;
-            le.field_q.field_c = this.field_j;
-            if (!le.field_q.b(0)) {
+          if (AgeValidator.field_q != null) {
+            AgeValidator.field_q.field_g = this.field_y;
+            AgeValidator.field_q.field_z = this.field_N;
+            AgeValidator.field_q.field_c = this.field_j;
+            if (!AgeValidator.field_q.b(0)) {
               return;
             }
           }
@@ -650,7 +650,7 @@ final class BattleState {
               }
               var3 = null;
               var4_ref = null;
-              if (!ha.field_o) {
+              if (!ConfirmedEmailAvailabilityValidator.field_o) {
                 var5 = this.map.a(94, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                 if (null != this.field_q &&
                   IntrusiveNode.field_c != -1) {
@@ -724,7 +724,7 @@ final class BattleState {
                   }
                 }
               }
-              if (2 == this.field_N && (!ha.field_o ||
+              if (2 == this.field_N && (!ConfirmedEmailAvailabilityValidator.field_o ||
                 5 <= this.field_B)) {
                 this.b((byte) -3);
                 qd.$cfr$intArgs$a$e9dea5688aa5(39, 34);
@@ -756,7 +756,7 @@ final class BattleState {
               regionExit1: {
                 if (IntrusiveNode.field_c != -1 && (oh.field_f == 1 &&
                   !this.field_m ||
-                  this.field_N == 1) && this.field_L > 0 && (!ha.field_o ||
+                  this.field_N == 1) && this.field_L > 0 && (!ConfirmedEmailAvailabilityValidator.field_o ||
                   4 <= this.field_B)) {
                   if (IntrusiveNode.field_c != this.field_q.field_F) {
                     break regionExit1;
@@ -774,7 +774,7 @@ final class BattleState {
                     var5Lifetime1 = this.map.a(117, vf.field_a, cm.field_d, IntrusiveNode.field_c);
                     this.field_m = false;
                     if (this.field_q != null) {
-                      if ((!ha.field_o ||
+                      if ((!ConfirmedEmailAvailabilityValidator.field_o ||
                         this.field_B >= 8 ||
                         this.field_B == 0 &&
                         IntrusiveNode.field_c >= 8 &&
@@ -801,7 +801,7 @@ final class BattleState {
                       }
                       if (var5Lifetime1.unit != null &&
                         var5Lifetime1.unit.field_C == 0 &&
-                        var5Lifetime1.unit.field_Z != null && (!ha.field_o ||
+                        var5Lifetime1.unit.field_Z != null && (!ConfirmedEmailAvailabilityValidator.field_o ||
                         7 <= this.field_B)) {
                         this.field_q.field_S = false;
                         if (7 <= this.field_B &&
@@ -815,7 +815,7 @@ final class BattleState {
                       }
                       if (var5Lifetime1.unit != null &&
                         var5Lifetime1.unit.field_C == 1 &&
-                        var5Lifetime1.unit.field_k && (!ha.field_o ||
+                        var5Lifetime1.unit.field_k && (!ConfirmedEmailAvailabilityValidator.field_o ||
                         5 <= this.field_B)) {
                         this.field_q.field_X = IntrusiveNode.field_c;
                         this.field_q.field_d = 2;
@@ -864,7 +864,7 @@ final class BattleState {
                             var5Lifetime1.field_v == 2 ||
                             var5Lifetime1.field_v == 3) {
                             ProxySocketConnector.field_i = IntrusiveNode.field_c;
-                            fi.field_m = null;
+                            EmailFormatValidator.field_m = null;
                             this.field_q.field_S = false;
                             ld.field_e = vf.field_a;
                             AccountRequestState.field_d = -1;
@@ -874,8 +874,8 @@ final class BattleState {
                           }
                           if (ProxySocketConnector.field_i == IntrusiveNode.field_c &&
                             ld.field_e == vf.field_a) {
-                            if (fi.field_m != null &&
-                              Math.random() * 100.0 < (double)fi.field_m.a(param1)) {
+                            if (EmailFormatValidator.field_m != null &&
+                              Math.random() * 100.0 < (double)EmailFormatValidator.field_m.a(param1)) {
                               var6_ref_int__ = new int[]{2, 10, 11};
                               var7_ref_int__ = new int[]{15, 20, 21};
                               if (this.field_q.field_Z.field_y) {
@@ -899,10 +899,10 @@ final class BattleState {
                           AccountRequestState.field_d = -1;
                           this.field_q.field_S = false;
                           this.field_q.tile.unit = null;
-                          fi.field_m = this.map.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
+                          EmailFormatValidator.field_m = this.map.a(false, this.field_q.field_n, this.field_q.field_H, -89, true, this.field_q.field_N, this.field_q.field_E, this.field_q.field_X, this.field_q.field_F);
                           this.field_q.tile.unit = this.field_q;
-                          if (fi.field_m != null) {
-                            AccountRequestState.field_d = fi.field_m.a(param1);
+                          if (EmailFormatValidator.field_m != null) {
+                            AccountRequestState.field_d = EmailFormatValidator.field_m.a(param1);
                             if (var9 != 0) {
                               this.b((byte) -3);
                               if (null != var5Lifetime1 &&
@@ -1017,7 +1017,7 @@ final class BattleState {
               if (var3_int >= 99 &&
                 var3_int < 125 &&
                 var4 >= 66 &&
-                var4 < 92 && (!ha.field_o ||
+                var4 < 92 && (!ConfirmedEmailAvailabilityValidator.field_o ||
                 this.field_B >= 11) && this.field_q.field_B == 0) {
                 param0.field_Eb = new String[1];
                 param0.field_Eb[0] = Archive.field_e;
@@ -1039,7 +1039,7 @@ final class BattleState {
                 (decompiledFrameRemainder2 = !(var4 < 66)) &&
                 (decompiledFrameRemainder2 = !(92 <= var4)) &&
                 (decompiledFrameRemainder2 = (1 == this.field_q.field_B)) &&
-                (decompiledFrameRemainder2 = (!(ha.field_o) ||
+                (decompiledFrameRemainder2 = (!(ConfirmedEmailAvailabilityValidator.field_o) ||
                 !(this.field_B < 11)))) {
                 if (this.field_q.field_B == 1) {
                   param0.field_Eb = new String[1];
@@ -1082,15 +1082,15 @@ final class BattleState {
               var3_int < 210 &&
               var4 >= 66 &&
               var4 < 92 &&
-              eg.field_p > 0 && (!ha.field_o ||
+              eg.field_p > 0 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 12)) {
               if (eg.field_p > 1) {
                 param0.field_Eb = new String[1];
-                param0.field_Eb[0] = di.field_g + (eg.field_p - 1);
+                param0.field_Eb[0] = TextFieldValidator.field_g + (eg.field_p - 1);
               }
               if (eg.field_p == 1) {
                 param0.field_Eb = new String[1];
-                param0.field_Eb[0] = ph.field_u;
+                param0.field_Eb[0] = PasswordValidator.field_u;
               }
               if (this.field_N == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(80, 25);
@@ -1104,10 +1104,10 @@ final class BattleState {
               238 > var3_int &&
               var4 >= 66 &&
               92 > var4 &&
-              eg.field_p < 5 && (!ha.field_o ||
+              eg.field_p < 5 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 12)) {
               param0.field_Eb = new String[1];
-              param0.field_Eb[0] = di.field_g + (eg.field_p + 1);
+              param0.field_Eb[0] = TextFieldValidator.field_g + (eg.field_p + 1);
               if (this.field_N == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(107, 24);
                 if (this.field_B == 12) {
@@ -1119,7 +1119,7 @@ final class BattleState {
             if (var3_int >= 241 &&
               267 > var3_int &&
               66 <= var4 &&
-              92 > var4 && (!ha.field_o ||
+              92 > var4 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 7)) {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = QuickChatMenu.field_f;
@@ -1206,7 +1206,7 @@ final class BattleState {
               var3_int < 295 &&
               66 <= var4 &&
               var4 < 92) &&
-              (!ha.field_o ||
+              (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 9)) {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = ab.field_f;
@@ -1221,7 +1221,7 @@ final class BattleState {
             if (var3_int >= 309 &&
               var3_int < 457 &&
               var4 >= 10 &&
-              var4 < 83 && (!ha.field_o ||
+              var4 < 83 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               5 <= this.field_B ||
               3 == this.field_B)) {
               var5_ref = this.field_q.field_nb;
@@ -1307,7 +1307,7 @@ final class BattleState {
             if (var3_int >= 467 &&
               var3_int < 540 &&
               var4 >= 10 &&
-              83 > var4 && (!ha.field_o ||
+              83 > var4 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 5 ||
               this.field_B == 3)) {
               var5_refLifetime1 = this.field_q.field_eb;
@@ -1410,7 +1410,7 @@ final class BattleState {
             if (547 <= var3_int &&
               595 > var3_int &&
               var4 >= 35 &&
-              var4 < 83 && (!ha.field_o ||
+              var4 < 83 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 14)) {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = wg.field_g;
@@ -1438,7 +1438,7 @@ final class BattleState {
             if (var3_int >= ge.field_b &&
               var3_int < vb.field_i + ge.field_b &&
               var4 >= 9 &&
-              var4 < 84 && (!ha.field_o ||
+              var4 < 84 && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 10)) {
               param0.field_Eb = new String[1];
               param0.field_Eb[0] = kd.field_e;
@@ -1500,17 +1500,17 @@ final class BattleState {
             this.field_I = stackIn_11_1;
           }
           if (param1 == 49 &&
-            !ha.field_o) {
+            !ConfirmedEmailAvailabilityValidator.field_o) {
             stackIn_22_0 = !(d.field_H);
             d.field_H = stackIn_22_0;
           }
           if (param1 == 40 &&
-            !ha.field_o) {
+            !ConfirmedEmailAvailabilityValidator.field_o) {
             stackIn_33_0 = !(IterableNodeHashTable.field_e);
             IterableNodeHashTable.field_e = stackIn_33_0;
           }
           if (ProxyAuthenticationRequiredException.field_e == param1 &&
-            !ha.field_o) {
+            !ConfirmedEmailAvailabilityValidator.field_o) {
             stackIn_44_1 = !(this.field_w);
             this.field_w = stackIn_44_1;
           }
@@ -1520,13 +1520,13 @@ final class BattleState {
             g.field_tb = stackIn_55_0;
           }
           if (param1 == 39 &&
-            !ha.field_o) {
+            !ConfirmedEmailAvailabilityValidator.field_o) {
             stackIn_66_0 = !(fd.field_o);
             fd.field_o = stackIn_66_0;
           }
           if (this.field_J &&
             ~rh.field_c == ~param1 &&
-            !this.field_q.field_S && (!ha.field_o ||
+            !this.field_q.field_S && (!ConfirmedEmailAvailabilityValidator.field_o ||
             11 <= this.field_B) && this.field_q.field_B == 0) {
             var3_int = this.field_q.g(12384);
             this.field_q.field_jb = this.field_q.field_jb - var3_int;
@@ -1539,7 +1539,7 @@ final class BattleState {
           }
           if (this.field_J &&
             param1 == 35 &&
-            !this.field_q.field_S && (!ha.field_o ||
+            !this.field_q.field_S && (!ConfirmedEmailAvailabilityValidator.field_o ||
             this.field_B >= 11) && 1 == this.field_q.field_B) {
             this.field_q.field_jb = this.field_q.field_jb + this.field_q.field_jb / 2;
             this.field_q.field_B = 0;
@@ -1568,7 +1568,7 @@ final class BattleState {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
           if (this.field_J &&
-            param1 == 69 && (!ha.field_o ||
+            param1 == 69 && (!ConfirmedEmailAvailabilityValidator.field_o ||
             this.field_B >= 7)) {
             this.b((byte) -3);
             var3_intLifetime2 = 0;
@@ -1634,7 +1634,7 @@ final class BattleState {
           }
           if (decompiledFrameCompleted1) {
             if (this.field_J &&
-              param1 == ef.field_h && (!ha.field_o ||
+              param1 == ef.field_h && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 9)) {
               lg.field_c = 16 * (this.field_q.field_F + this.field_q.field_H) - this.field_q.field_E * 48;
               sj.field_b = 32 * (this.field_q.field_F - this.field_q.field_H);
@@ -1679,7 +1679,7 @@ final class BattleState {
             }
             if (decompiledFrameCompleted0) {
               if (this.field_J &&
-                param1 == fl.field_b && (!ha.field_o ||
+                param1 == fl.field_b && (!ConfirmedEmailAvailabilityValidator.field_o ||
                 this.field_B == 3 ||
                 this.field_B >= 5)) {
                 this.b((byte) -3);
@@ -1699,7 +1699,7 @@ final class BattleState {
                 }
               }
               if (this.field_J &&
-                param1 == 52 && (!ha.field_o ||
+                param1 == 52 && (!ConfirmedEmailAvailabilityValidator.field_o ||
                 14 <= this.field_B)) {
                 this.b((byte) -3);
                 if (null != this.field_q.field_b) {
@@ -1719,7 +1719,7 @@ final class BattleState {
               decompiledFrameRemainder1 = (this.field_J);
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder1 = (param1 == 67)) &&
-                (decompiledFrameRemainder1 = !(ha.field_o)) &&
+                (decompiledFrameRemainder1 = !(ConfirmedEmailAvailabilityValidator.field_o)) &&
                 (decompiledFrameRemainder1 = !(this.field_q.field_jb <= 0))) {
                 this.b((byte) -3);
                 var3_intLifetime2Lifetime1 = this.field_q.field_U;
@@ -1745,7 +1745,7 @@ final class BattleState {
           if (decompiledFrameCompleted0) {
             if (this.field_J &&
               param1 == 42 &&
-              !g.field_tb && (!ha.field_o ||
+              !g.field_tb && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 12)) {
               this.b((byte) -3);
               eg.field_p = eg.field_p - 1;
@@ -1758,7 +1758,7 @@ final class BattleState {
             }
             if (this.field_J &&
               43 == param1 &&
-              !g.field_tb && (!ha.field_o ||
+              !g.field_tb && (!ConfirmedEmailAvailabilityValidator.field_o ||
               this.field_B >= 12)) {
               this.b((byte) -3);
               if (this.field_B == 12) {
@@ -4096,8 +4096,8 @@ final class BattleState {
                   continue;
                 }
               } else {
-                if (le.field_q != null) {
-                  le.field_q.d((byte) 124);
+                if (AgeValidator.field_q != null) {
+                  AgeValidator.field_q.d((byte) 124);
                 }
               }
               break;
@@ -4435,7 +4435,7 @@ final class BattleState {
                   AccountRequestState.field_f.c(var16_ref_String, 135, 35 + var8, 16719904, -1);
                   AccountRequestState.field_f.c(Integer.toString(this.field_q.field_u + this.field_q.field_m), 135, 52 + var8, 2162464, -1);
                 }
-                if (ha.field_o) {
+                if (ConfirmedEmailAvailabilityValidator.field_o) {
                   if (this.field_B < 2) {
                     SoftwareRasterizer.fillRectangle(306, 7 + var8, 234, 79, 0);
                   }
@@ -4517,7 +4517,7 @@ final class BattleState {
                     if (var4Lifetime1Lifetime1 + (-th.field_i.field_r + var14Lifetime1) <= ef.field_j &&
                       MouseWheelInput.field_b >= 365 &&
                       394 >= MouseWheelInput.field_b &&
-                      ef.field_j <= (var14Lifetime1 + var4Lifetime1Lifetime1) && (!ha.field_o ||
+                      ef.field_j <= (var14Lifetime1 + var4Lifetime1Lifetime1) && (!ConfirmedEmailAvailabilityValidator.field_o ||
                       this.field_B >= 7)) {
                       this.client.field_Eb = new String[1];
                       this.client.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.units[var11_intLifetime1Lifetime1].field_Z.b(1);
@@ -4919,10 +4919,10 @@ final class BattleState {
             }
           }
           if (this.field_b) {
-            le.field_q = null;
+            AgeValidator.field_q = null;
           }
-          if (le.field_q != null) {
-            le.field_q.a((byte) -100);
+          if (AgeValidator.field_q != null) {
+            AgeValidator.field_q.a((byte) -100);
           }
           if (var3_int != 0 &&
             !li.field_a) {
@@ -4958,7 +4958,7 @@ final class BattleState {
 
     private final void b(byte param0) {
         try {
-          fi.field_m = null;
+          EmailFormatValidator.field_m = null;
           ProxySocketConnector.field_i = -1;
           ld.field_e = -1;
           AccountRequestState.field_d = -1;
@@ -5661,10 +5661,10 @@ final class BattleState {
                 }
                 case 1: {
                     try {
-                        if (null != le.field_q) {
+                        if (null != AgeValidator.field_q) {
                             /* Inlined CFG state: 4. */
                             {
-                                le.field_q.a(false);
+                                AgeValidator.field_q.a(false);
                                 statePc = 5;
                                 continue scanLoop1;
                             }
@@ -7554,7 +7554,7 @@ final class BattleState {
                             {
                                 this.a(29518, 0);
                                 var5 = 12;
-                                this.a(1, pl.field_G, -84);
+                                this.a(1, AccountRegistrationPanel.field_G, -84);
                                 if (var12 == 0) {
                                     statePc = 267;
                                 } else {
@@ -9459,7 +9459,7 @@ final class BattleState {
                 }
                 case 552: {
                     try {
-                        if (le.field_q == null) {
+                        if (AgeValidator.field_q == null) {
                             statePc = 563;
                             continue scanLoop1;
                         } else {
@@ -10006,7 +10006,7 @@ final class BattleState {
                                 this.field_c = sj.field_b;
                                 this.field_E = eg.field_p;
                                 eg.field_p = this.units[var5].field_E;
-                                this.field_K = ib.field_X;
+                                this.field_K = ValidatedTextField.field_X;
                                 if (this.units[var5].field_t < 1) {
                                     statePc = 644;
                                     continue scanLoop1;
@@ -11316,7 +11316,7 @@ final class BattleState {
                         } else {
                             /* Inlined CFG state: 832. */
                             {
-                                if (le.field_q == null) {
+                                if (AgeValidator.field_q == null) {
                                     statePc = 841;
                                     continue scanLoop1;
                                 } else {
@@ -11326,7 +11326,7 @@ final class BattleState {
                                         {
                                         }
                                         {
-                                            if ("" == le.field_q.field_o) {
+                                            if ("" == AgeValidator.field_q.field_o) {
                                                 /* Inlined CFG state: 840. */
                                                 {
                                                     this.field_K = null;
@@ -11961,7 +11961,7 @@ final class BattleState {
                 }
                 case 924: {
                     try {
-                        ha.field_o = false;
+                        ConfirmedEmailAvailabilityValidator.field_o = false;
                         statePc = 931;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_924) {
@@ -12067,7 +12067,7 @@ final class BattleState {
         try {
           System.gc();
           this.field_i = 1;
-          le.field_q = null;
+          AgeValidator.field_q = null;
           this.b((byte) -3);
           this.field_f = 0;
           this.client = param0;
@@ -12178,8 +12178,8 @@ final class BattleState {
                                           case 0:
                                             this.field_B = 0;
                                             var2_int = 10;
-                                            le.field_q = new TutorialController(0);
-                                            le.field_q.field_A = this;
+                                            AgeValidator.field_q = new TutorialController(0);
+                                            AgeValidator.field_q.field_A = this;
                                             if (Archive.field_a >= 1) {
                                               this.a(1, TutorialText.field_d[76], -87);
                                               if (var24 != 0) {
@@ -13152,17 +13152,17 @@ final class BattleState {
             if (this.field_u) {
               this.c((byte) -116);
             }
-            if (le.field_q == null) {
+            if (AgeValidator.field_q == null) {
               return;
             }
             if (Archive.field_a <= 0) {
               return;
             }
-            le.field_q.c((byte) 51);
+            AgeValidator.field_q.c((byte) 51);
             this.field_B = -1;
             stackIn_767_0 = null;
           }
-          le.field_q = (TutorialController) (stackIn_767_0);
+          AgeValidator.field_q = (TutorialController) (stackIn_767_0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

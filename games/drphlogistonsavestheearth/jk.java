@@ -187,7 +187,7 @@ final class jk extends si {
             sg.field_f[var4 - 2] = qa.field_N;
             lg.field_a[var4 - 2] = 0;
             mi.field_g[0] = 4;
-            sg.field_f[-1 + var4] = ei.field_h;
+            sg.field_f[-1 + var4] = TextFieldValidator.field_h;
             lg.field_a[-1 + var4] = 1;
             mi.field_g[1] = 5;
           } else if (NodeHashTableIterator.field_g == 1) {
@@ -203,7 +203,7 @@ final class jk extends si {
               sg.field_f[var5] = pj.field_A[var5];
             }
             sg.field_f[var4 - 2] = "";
-            sg.field_f[var4 - 1] = ei.field_h;
+            sg.field_f[var4 - 1] = TextFieldValidator.field_h;
             lg.field_a[-1 + var4] = 0;
             mi.field_g[0] = 5;
           } else if (2 != NodeHashTableIterator.field_g) {
@@ -224,7 +224,7 @@ final class jk extends si {
                 sg.field_f[var5] = pj.field_A[var5];
               }
               sg.field_f[-2 + var4] = "";
-              sg.field_f[var4 - 1] = ei.field_h;
+              sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[-1 + var4] = 0;
               mi.field_g[0] = 5;
             } else if (4 == NodeHashTableIterator.field_g) {
@@ -240,7 +240,7 @@ final class jk extends si {
                 sg.field_f[var5] = pj.field_A[var5];
               }
               sg.field_f[-2 + var4] = "";
-              sg.field_f[var4 - 1] = ei.field_h;
+              sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[var4 - 1] = 0;
               mi.field_g[0] = 5;
             } else {
@@ -262,7 +262,7 @@ final class jk extends si {
               sg.field_f[var4 - 2] = hi.field_h;
               lg.field_a[-2 + var4] = 0;
               mi.field_g[0] = 3;
-              sg.field_f[var4 - 1] = ei.field_h;
+              sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[var4 - 1] = 1;
               mi.field_g[1] = 5;
             }
@@ -385,13 +385,13 @@ final class jk extends si {
           }
           GameAppletShell.field_k = -(var3_intLifetime1 >> 1) + var3_intLifetime1 + ji.field_f;
           si.field_B = ji.field_f - (var3_intLifetime1 >> 1);
-          vi.field_e = wg.field_k.field_e * (ig.field_h + wa.field_N << 1);
+          vi.field_e = wg.field_k.field_e * (ig.field_h + LoginPanel.field_N << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < sg.field_f.length; var4Lifetime2++) {
             stackIn_113_0 = vi.field_e;
             if (0 > lg.field_a[var4Lifetime2]) {
               stackIn_114_1 = s.field_g;
             } else {
-              stackIn_114_1 = ni.field_p;
+              stackIn_114_1 = EmailFormatValidator.field_p;
             }
             vi.field_e = stackIn_113_0 + stackIn_114_1;
           }
@@ -412,8 +412,8 @@ final class jk extends si {
               cj.field_f[var4Lifetime3][0] = -SecondaryNodeDeque.field_d + var8Lifetime1;
               cj.field_f[var4Lifetime3][1] = var5Lifetime3;
               cj.field_f[var4Lifetime3][2] = var7Lifetime2 + (SecondaryNodeDeque.field_d << 1);
-              var5Lifetime3 = var5Lifetime3 + (ni.field_p + (wa.field_N << 1) + ig.field_h);
-              cj.field_f[var4Lifetime3][3] = (wa.field_N << 1) + ni.field_p;
+              var5Lifetime3 = var5Lifetime3 + (EmailFormatValidator.field_p + (LoginPanel.field_N << 1) + ig.field_h);
+              cj.field_f[var4Lifetime3][3] = (LoginPanel.field_N << 1) + EmailFormatValidator.field_p;
             } else {
               var5Lifetime3 = var5Lifetime3 + s.field_g;
             }
@@ -422,7 +422,7 @@ final class jk extends si {
           if (NodeHashTableIterator.field_g == 2) {
             wg.field_k.a(-1, -1, param1, 49);
           } else {
-            wg.field_k.a(0, qg.a(ob.field_g, (byte) -112, ck.field_c), param1, 63);
+            wg.field_k.a(0, ValidatedTextField.a(ob.field_g, (byte) -112, ck.field_c), param1, 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

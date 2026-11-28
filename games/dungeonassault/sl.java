@@ -25,7 +25,7 @@ final class sl {
           la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
           f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
           int var2_int = -24 % ((param0 + 15) / 54);
-          lb.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
+          PlayerDungeonProfile.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
           nj.a(gh.field_c, uc.field_I, -6332);
           cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
         } catch (RuntimeException runtimeException) {
@@ -35,12 +35,12 @@ final class sl {
 
     final static boolean b(int param0) {
         if (param0 == 15000) {
-          rm.field_P = true;
+          EditableTextField.field_P = true;
           ab.field_a = kd.correctedCurrentTimeMillis(-2456) + 15000L;
           return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
         }
         sl.b(126);
-        rm.field_P = true;
+        EditableTextField.field_P = true;
         ab.field_a = kd.correctedCurrentTimeMillis(-2456) + 15000L;
         return 11 == AccountNameAvailabilityValidator.field_n ? true : false;
     }

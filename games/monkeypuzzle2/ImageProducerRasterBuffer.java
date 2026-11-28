@@ -44,7 +44,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (th.a(false, param1)) {
+          if (AgeValidator.a(false, param1)) {
             return true;
           }
           var6 = bi.field_s;
@@ -138,7 +138,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
                 var1.field_t = ri.field_b;
               } else {
                 if (var1.field_E &&
-                  var1.field_q - (float)var1.field_y >= (float)hf.field_f.field_O) {
+                  var1.field_q - (float)var1.field_y >= (float)DebouncedFieldValidator.field_f.field_O) {
                   lb.b(false);
                 }
                 if (!var1.field_E) {

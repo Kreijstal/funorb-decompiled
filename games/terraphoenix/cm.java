@@ -13,12 +13,12 @@ final class cm {
           return;
         }
         if (nb.field_b == null) {
-          rd.field_s = new ae();
+          rd.field_s = new DisplayNameSelectionPanel();
           bj.field_f.a(rd.field_s, -24);
           return;
         }
         nb.field_b.h((byte) -126);
-        rd.field_s = new ae();
+        rd.field_s = new DisplayNameSelectionPanel();
         bj.field_f.a(rd.field_s, -24);
     }
 

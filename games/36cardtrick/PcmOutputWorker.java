@@ -134,7 +134,7 @@ final class PcmOutputWorker implements Runnable {
           }
         } catch (Exception exception) {
           String var5 = (String) null;
-          k.a((Throwable) ((Object) exception), (byte) -96, (String) null);
+          DebouncedFieldValidator.a((Throwable) ((Object) exception), (byte) -96, (String) null);
         } finally {
           this.field_c = false;
         }

@@ -57,7 +57,7 @@ final class rf {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = s.a(ce.a((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = DisplayNameSelectionPanel.a(ce.a((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var7], 255)]);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
           }
@@ -72,10 +72,10 @@ final class rf {
     final static void b(int param0) {
         int var2 = Chess.field_G;
         ec.field_d.field_C = true;
-        if ((1 << oc.field_p.field_a & oc.field_p.field_B.field_m) != 0) {
+        if ((1 << MatchingFieldValidator.field_p.field_a & MatchingFieldValidator.field_p.field_B.field_m) != 0) {
           fm.field_R[9] = wc.field_A;
         } else {
-          if (oc.field_p.field_B.field_m == 0) {
+          if (MatchingFieldValidator.field_p.field_B.field_m == 0) {
             ec.field_d.field_C = false;
             fm.field_R[9] = gl.field_a;
           } else {

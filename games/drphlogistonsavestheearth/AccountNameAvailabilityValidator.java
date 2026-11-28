@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends ei {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int field_s;
     static int field_q;
     private String checkedName;
     private boolean nameAvailable;
 
-    AccountNameAvailabilityValidator(kl param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -21,7 +21,7 @@ final class AccountNameAvailabilityValidator extends ei {
         wk.a(80, 10 + SecondaryNodeDequeIterator.field_b);
     }
 
-    final vh a(int param0, String param1) {
+    final vh getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -79,7 +79,7 @@ final class AccountNameAvailabilityValidator extends ei {
         return (int)(1000000000L / ma.field_vb);
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;

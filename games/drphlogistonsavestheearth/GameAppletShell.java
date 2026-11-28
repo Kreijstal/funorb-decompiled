@@ -384,7 +384,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             !ai.field_B) {
             eh.field_a = true;
             if (MidiPcmStream.field_x &&
-              -dc.field_c + la.correctedCurrentTimeMillis(false) > 1000L) {
+              -DebouncedFieldValidator.field_c + la.correctedCurrentTimeMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
                 if (kj.field_a > var2.width) {
@@ -717,7 +717,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 <= 108) {
             return;
           }
-          dc.field_c = la.correctedCurrentTimeMillis(false);
+          DebouncedFieldValidator.field_c = la.correctedCurrentTimeMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

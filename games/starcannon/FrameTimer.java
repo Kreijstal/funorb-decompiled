@@ -105,7 +105,7 @@ abstract class FrameTimer {
         int var4 = 55 / ((param1 + 30) / 48);
         long var5 = this.getDelayMillis((byte) -51);
         if (0L < var5) {
-          uc.sleepMillis(-104, var5);
+          DebouncedFieldValidator.sleepMillis(-104, var5);
         }
         return this.advanceTicks((byte) 109, param0);
     }

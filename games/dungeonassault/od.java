@@ -45,7 +45,7 @@ final class od {
         gn var4Lifetime1Lifetime2;
         gn var4Lifetime2Lifetime1;
         var3 = DungeonAssault.field_K;
-        if (null != gk.field_L) {
+        if (null != DisplayNameSelectionPanel.field_L) {
           if (la.field_g == 0) {
             ii.field_G = -1;
             a.field_i = -1;

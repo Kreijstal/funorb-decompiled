@@ -1,0 +1,134 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidatedTextField extends EditableTextField implements FieldValidatorProvider {
+    private FieldValidator field_fb;
+    private int field_gb;
+    static int field_ib;
+    static IntrusiveDeque field_db;
+    static int[] field_hb;
+    static int[][] field_eb;
+    static int[] field_jb;
+
+    public static void resetStaticState(byte param0) {
+        field_eb = (int[][]) null;
+        field_jb = null;
+        if (param0 >= 6) {
+          field_hb = null;
+          field_db = null;
+          return;
+        }
+        field_ib = 113;
+        field_hb = null;
+        field_db = null;
+    }
+
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
+        try {
+          super.a(param0, param1, (byte) -114, param3);
+          if (param2 >= -97) {
+            field_jb = (int[]) null;
+          }
+          this.field_gb = ConfirmedEmailAvailabilityValidator.field_u - this.field_m - param1;
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rf.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final static void n(int param0) {
+        ie.field_g = null;
+        ul.field_n = -1;
+        bk.field_p = 0;
+        sj.field_R = false;
+        bi.field_h = -1;
+        if (param0 != 19630) {
+          ValidatedTextField.m(119);
+        }
+    }
+
+    final static void a(ResourceArchive param0, byte param1, boolean param2, ResourceArchive param3, ResourceArchive param4) {
+        try {
+          ji.field_k = MouseWheelInput.a("", true);
+          ji.field_k.a((byte) 56, false);
+          vj.a(param4, param3, param1 + 23104, param0);
+          ul.c(-1247);
+          if (param1 != -23) {
+            ResourceArchive var6 = (ResourceArchive) null;
+            ValidatedTextField.a((ResourceArchive) null, (byte) 35, false, (ResourceArchive) null, (ResourceArchive) null);
+          }
+          gj.field_a = mg.field_c;
+          eh.field_p = mg.field_c;
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rf.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final String b(boolean param0) {
+        if (!this.field_w) {
+          return null;
+        }
+        if (this.field_r == null) {
+          return null;
+        }
+        if (!param0) {
+          IntrusiveDeque.a(this.field_p - (this.field_gb - ConfirmedEmailAvailabilityValidator.field_u), ph.field_d, -6665);
+          return this.field_r;
+        }
+        field_jb = (int[]) null;
+        IntrusiveDeque.a(this.field_p - (this.field_gb - ConfirmedEmailAvailabilityValidator.field_u), ph.field_d, -6665);
+        return this.field_r;
+    }
+
+    final void notifyTextChanged(int param0) {
+        super.notifyTextChanged(-95);
+        if (this.field_fb != null) {
+          this.field_fb.recordInputChange(true);
+        }
+        if (param0 < -79) {
+          return;
+        }
+        field_db = (IntrusiveDeque) null;
+    }
+
+    final void a(int param0, FieldValidator param1) {
+        try {
+          this.field_fb = param1;
+          if (param0 != -27997) {
+            this.notifyTextChanged(-38);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rf.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final FieldValidator getFieldValidator(int param0) {
+        if (param0 > -101) {
+          return (FieldValidator) null;
+        }
+        return this.field_fb;
+    }
+
+    ValidatedTextField(String param0, gg param1, int param2) {
+        super(param0, param1, param2);
+    }
+
+    final static void m(int param0) {
+        int var1 = 0;
+        int var2 = 0;
+        if (param0 == 62) {
+          var1 = fl.f(param0 - 62);
+          var2 = o.a(18);
+          gb.field_f.a(var2 + (mg.field_d << 1), FrameTimer.field_e - mg.field_d, -1, -AccountNameAvailabilityValidator.field_m + LevelEntity.field_R, var1 + (AccountNameAvailabilityValidator.field_m << 1));
+          m.a((byte) 118);
+          return;
+        }
+    }
+
+    static {
+        field_ib = 0;
+        field_db = new IntrusiveDeque();
+        field_hb = new int[]{0, 0, 1, 0, 0, 1, 2, 3, 4};
+        field_eb = new int[][]{new int[]{384, 413, 244, 56}, new int[]{384, 413, 247, 62}, new int[]{411, 413, 184, 55}};
+        field_jb = new int[]{2048, 8388608, 8};
+    }
+}

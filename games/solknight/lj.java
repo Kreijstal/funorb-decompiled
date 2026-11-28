@@ -175,7 +175,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("loginm2", 4);
                 if (null != var2) {
-                  cl.field_j = Archive.decodeCp1252(true, var2);
+                  AgeValidator.field_j = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("loginm1", 4);
                 if (null != var2) {
@@ -183,7 +183,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("idlemessage20min", param0 ^ 26704);
                 if (var2 != null) {
-                  el.field_k = Archive.decodeCp1252(true, var2);
+                  MatchingFieldValidator.field_k = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("error_js5crc", 4);
                 if (var2 != null) {
@@ -191,7 +191,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("error_js5io", param0 - 26704);
                 if (null != var2) {
-                  el.field_m = Archive.decodeCp1252(true, var2);
+                  MatchingFieldValidator.field_m = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("error_js5connect_full", 4);
                 if (null != var2) {
@@ -1167,7 +1167,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("reloadgame", 4);
                 if (var2 != null) {
-                  cl.field_k = Archive.decodeCp1252(true, var2);
+                  AgeValidator.field_k = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("toserverlist", 4);
                 if (null != var2) {
@@ -1195,7 +1195,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("login", 4);
                 if (null != var2) {
-                  ga.field_H = Archive.decodeCp1252(true, var2);
+                  DisplayNameSelectionPanel.field_H = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("goback", 4);
                 if (null != var2) {
@@ -1541,7 +1541,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_email", 4);
                 if (var2 != null) {
-                  el.field_j = Archive.decodeCp1252(true, var2);
+                  MatchingFieldValidator.field_j = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_email_confirm", param0 ^ 26704);
                 if (var2 != null) {
@@ -1600,7 +1600,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_u13terms", 4);
                 if (var2 != null) {
-                  rf.field_F = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_F = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("login_username_email", 4);
                 if (null != var2) {
@@ -1632,7 +1632,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("login_justplay_tooltip", param0 - 26704);
                 if (var2 != null) {
-                  a.field_g = Archive.decodeCp1252(true, var2);
+                  TextFieldValidator.field_g = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("login_back_tooltip", 4);
                 if (var2 != null) {
@@ -1756,7 +1756,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_alert_passcontainsname_partial", 4);
                 if (null != var2) {
-                  wf.field_a = Archive.decodeCp1252(true, var2);
+                  DebouncedFieldValidator.field_a = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_alert_checkname", 4);
                 if (var2 != null) {
@@ -1792,7 +1792,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_emailvalid", 4);
                 if (null != var2) {
-                  dc.field_l = Archive.decodeCp1252(true, var2);
+                  EmailFormatValidator.field_l = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_account_success", param0 ^ 26704);
                 if (null != var2) {
@@ -1944,7 +1944,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("loading_fonts", 4);
                 if (null != var2) {
-                  qb.field_bb = Archive.decodeCp1252(true, var2);
+                  ValidatedTextField.field_bb = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("loading_soundeffects", 4);
                 if (null != var2) {
@@ -1992,7 +1992,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("unpacking_music", 4);
                 if (null != var2) {
-                  rf.field_E = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_E = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("unpacking_levels", param0 ^ 26704);
                 if (var2 != null) {
@@ -2714,19 +2714,19 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("reconnect_lost_seq,0", param0 - 26704);
                 if (var2 != null) {
-                  rf.field_H[0] = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_H[0] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("reconnect_lost_seq,1", 4);
                 if (null != var2) {
-                  rf.field_H[1] = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_H[1] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("reconnect_lost_seq,2", 4);
                 if (null != var2) {
-                  rf.field_H[2] = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_H[2] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("reconnect_lost_seq,3", param0 - 26704);
                 if (var2 != null) {
-                  rf.field_H[3] = Archive.decodeCp1252(true, var2);
+                  AccountRegistrationPanel.field_H[3] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("reconnect_lost", 4);
                 if (var2 != null) {
@@ -2846,7 +2846,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("mb_caption_title", 4);
                 if (null != var2) {
-                  dc.field_p = Archive.decodeCp1252(true, var2);
+                  EmailFormatValidator.field_p = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mb_including_gamename", 4);
                 if (var2 != null) {
@@ -3195,17 +3195,17 @@ final class lj extends WidgetContainer implements ka {
             if (null != dj.field_k &&
               dj.field_k.field_a) {
               ProxySocketConnector.d(14995);
-              vg.field_J.b(new nf(vg.field_J, ne.field_i), 100);
+              EditableTextField.field_J.b(new nf(EditableTextField.field_J, ne.field_i), 100);
             }
             return;
           }
           if (param0) {
             field_D = (int[]) null;
           }
-          vg.field_J.a(-1, g.field_a, true, ua.field_N);
-          vg.field_J.c(param0);
+          EditableTextField.field_J.a(-1, g.field_a, true, ua.field_N);
+          EditableTextField.field_J.c(param0);
           while (DelegatingCanvas.a((byte) -56)) {
-            vg.field_J.a(el.field_n, ta.field_d, (byte) -108);
+            EditableTextField.field_J.a(MatchingFieldValidator.field_n, ta.field_d, (byte) -108);
             if (var2 != 0) {
               return;
             }

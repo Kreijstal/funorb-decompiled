@@ -11,7 +11,7 @@ class UiWidget extends IntrusiveNode {
     String field_n;
     uj field_u;
     int y;
-    static sm[] field_r;
+    static IndexedSprite[] field_r;
     ca listener;
     boolean field_s;
     String text;
@@ -24,7 +24,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException var1 = null;
         try {
           if (param0 != 13509) {
-            field_r = (sm[]) null;
+            field_r = (IndexedSprite[]) null;
           }
           field_r = null;
           return;
@@ -190,7 +190,7 @@ class UiWidget extends IntrusiveNode {
           var14 = ll.a(jl.field_O, go.field_w, (byte) 119);
           if (var14 != null) {
             var15 = 0;
-            while (!(var15 >= ia.field_i)) {
+            while (!(var15 >= FramedPanelLayer.field_i)) {
               stackIn_20_0 = compareDoublesNaNResultPositive(5.0 + 1.5 * -go.field_w[var15], var14[var15] * param5);
               if (var19 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -220,7 +220,7 @@ class UiWidget extends IntrusiveNode {
               var14 = ll.a(jl.field_O, go.field_w, (byte) 121);
               if (var14 != null) {
                 var17_int = 0;
-                while (!(ia.field_i <= var17_int)) {
+                while (!(FramedPanelLayer.field_i <= var17_int)) {
                   stackIn_41_0 = compareDoublesNaNResultNegative(var14[var17_int] * param5, 2.0 * -go.field_w[var17_int] + 5.0);
                   if (var19 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -245,7 +245,7 @@ class UiWidget extends IntrusiveNode {
           var15Lifetime1 = stackIn_41_0;
           var16_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var16_int < ia.field_i)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var16_int < FramedPanelLayer.field_i)))) {
             var17 = var14[var16_int];
             stackIn_58_0 = compareDoublesNaNResultNegative(0.0, var17);
             if (var19 == 0) {
@@ -255,13 +255,13 @@ class UiWidget extends IntrusiveNode {
                   param8[3] = param8[3] + var17 * ie.field_a[var16_int][0];
                   param8[5] = param8[5] + var17 * ie.field_a[var16_int][2];
                 }
-                param8[10] = param8[10] + var17 * dg.field_f[var16_int][0];
-                param8[11] = param8[11] + dg.field_f[var16_int][1] * var17;
-                param8[12] = param8[12] + var17 * dg.field_f[var16_int][2];
+                param8[10] = param8[10] + var17 * TranslucentSpriteLayer.field_f[var16_int][0];
+                param8[11] = param8[11] + TranslucentSpriteLayer.field_f[var16_int][1] * var17;
+                param8[12] = param8[12] + var17 * TranslucentSpriteLayer.field_f[var16_int][2];
                 if (1 == ee.field_t[var16_int]) {
                   var15Lifetime1++;
                 }
-                qg.a(bn.field_f[var16_int][4], param7, ee.field_t[var16_int], var17, false);
+                qg.a(SpriteBase.field_f[var16_int][4], param7, ee.field_t[var16_int], var17, false);
               }
               var16_int++;
               continue;
@@ -595,7 +595,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -31866) {
-            field_r = (sm[]) null;
+            field_r = (IndexedSprite[]) null;
           }
           if (!param2.containsKey(this)) {
             param2.put(this, this);

@@ -14,7 +14,7 @@ final class bk extends IntrusiveNode {
           return null != ae.field_f ? (ln) (ae.field_f.get((long)param1, 3000)) : null;
         }
         String var3 = (String) null;
-        bk.a((byte) -107, true, (String) null, (ol) null, (String) null, 55, (String) null);
+        bk.a((byte) -107, true, (String) null, (AccountRegistrationPanel) null, (String) null, 55, (String) null);
         return null != ae.field_f ? (ln) (ae.field_f.get((long)param1, 3000)) : null;
     }
 
@@ -27,7 +27,7 @@ final class bk extends IntrusiveNode {
         me.field_a = null;
     }
 
-    final static boolean a(byte param0, boolean param1, String param2, ol param3, String param4, int param5, String param6) {
+    final static boolean a(byte param0, boolean param1, String param2, AccountRegistrationPanel param3, String param4, int param5, String param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         AccountCreationResultPanel var8 = null;
@@ -56,7 +56,7 @@ final class bk extends IntrusiveNode {
             DelegatingCanvas.field_a = ci.field_ub;
             SecondaryNodeDeque.field_f = param5;
             jd.field_d = param2;
-            oc.field_o = param4;
+            MatchingFieldValidator.field_o = param4;
             wc.field_E = param1;
           }
           if (param0 > 71) {

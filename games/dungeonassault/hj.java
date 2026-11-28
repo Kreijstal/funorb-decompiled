@@ -51,7 +51,7 @@ final class hj extends gd {
         }
         SoftwareRasterizer.restoreClip(var11);
         if (this.field_V.field_i != null) {
-          qe.a(var4 + 38, -2 + (40 + var5), 2, this.field_V.field_i, this.field_V.field_i.length);
+          DungeonAssaultScreen.drawStatusIndicatorGrid(var4 + 38, -2 + (40 + var5), 2, this.field_V.field_i, this.field_V.field_i.length);
         }
         return;
     }

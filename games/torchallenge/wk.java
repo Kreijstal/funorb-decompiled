@@ -18,7 +18,7 @@ final class wk extends ic {
           if (IntrusiveNode.field_c != null) {
             IntrusiveNode.field_c.o(77);
           }
-          MidiPcmStream.field_O = new fg(param2, param0, false, true, true);
+          MidiPcmStream.field_O = new LoginPanel(param2, param0, false, true, true);
           bg.field_K.c(0, MidiPcmStream.field_O);
           if (param1 < -27) {
             return;
@@ -177,9 +177,9 @@ final class wk extends ic {
           var15Lifetime1 = var13;
           var7Lifetime1 = var15Lifetime1;
           var7Lifetime2 = var13;
-          var5 = dg.field_M[var3Lifetime1][0][2];
-          var2 = dg.field_M[var3Lifetime1][0][1];
-          var1_int = dg.field_M[var3Lifetime1][0][0];
+          var5 = AccountRegistrationPanel.field_M[var3Lifetime1][0][2];
+          var2 = AccountRegistrationPanel.field_M[var3Lifetime1][0][1];
+          var1_int = AccountRegistrationPanel.field_M[var3Lifetime1][0][0];
           if (var5 < 0) {
             cg.field_g.d();
             SoftwareRasterizer.clearRaster();
@@ -196,11 +196,11 @@ final class wk extends ic {
             var14.drawFlippedHorizontal(var1_int, var2);
           }
           var4Lifetime1 = ql.field_l[1];
-          var2Lifetime1 = dg.field_M[var4Lifetime1][1][1];
-          var1_intLifetime1 = dg.field_M[var4Lifetime1][1][0];
+          var2Lifetime1 = AccountRegistrationPanel.field_M[var4Lifetime1][1][1];
+          var1_intLifetime1 = AccountRegistrationPanel.field_M[var4Lifetime1][1][0];
           var15Lifetime2 = vj.field_d[var4Lifetime1];
           var7Lifetime4 = var15Lifetime2;
-          var5Lifetime1 = dg.field_M[var4Lifetime1][1][2];
+          var5Lifetime1 = AccountRegistrationPanel.field_M[var4Lifetime1][1][2];
           if (var5Lifetime1 < 0) {
             cg.field_g.d();
             SoftwareRasterizer.clearRaster();

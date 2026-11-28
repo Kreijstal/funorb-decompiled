@@ -19,10 +19,10 @@ final class gv extends TileEffect {
           while (true) {
             var3 = param1.requestFullscreenExit(param2, false);
             while (var3.status == 0) {
-              gda.sleepMillis(false, 10L);
+              DisplayNameSelectionPanel.sleepMillis(false, 10L);
             }
             if (var3.status != 1) {
-              gda.sleepMillis(false, 100L);
+              DisplayNameSelectionPanel.sleepMillis(false, 100L);
               continue;
             }
             break;

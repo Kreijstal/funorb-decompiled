@@ -178,7 +178,7 @@ final class kk {
         }
         gg.field_o = null;
         PlayerAvatarRenderer.field_j = null;
-        oa.field_s = null;
+        ConfirmedEmailAvailabilityValidator.field_s = null;
     }
 
     kk(int param0, int param1, int param2) {

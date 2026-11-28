@@ -23,9 +23,9 @@ final class em extends am implements WidgetActionListener {
         var5 = BachelorFridge.field_y;
         try {
           ArenaTheme.field_f = ArenaTheme.field_f + 65536;
-          while (c.a(ph.field_D, ArenaTheme.field_f, false) >= 65536) {
+          while (c.a(LoginPanel.field_D, ArenaTheme.field_f, false) >= 65536) {
             InvincibleEvent.field_s = InvincibleEvent.field_s + 1;
-            ArenaTheme.field_f = ArenaTheme.field_f - ph.field_D;
+            ArenaTheme.field_f = ArenaTheme.field_f - LoginPanel.field_D;
           }
           var2_int = -1;
           if (null == oja.field_f) {
@@ -37,21 +37,21 @@ final class em extends am implements WidgetActionListener {
           }
           if (-1 != var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (ph.field_G > DreamsAnimation.field_A) {
+            if (LoginPanel.field_G > DreamsAnimation.field_A) {
               DreamsAnimation.field_A = DreamsAnimation.field_A + 1;
-              if (ph.field_E < DreamsAnimation.field_A && (oja.field_f == null ||
+              if (LoginPanel.field_E < DreamsAnimation.field_A && (oja.field_f == null ||
                 null == oja.field_f[ih.field_l])) {
                 DreamsAnimation.field_A = DreamsAnimation.field_A - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (DreamsAnimation.field_A >= ph.field_G &&
+                if (DreamsAnimation.field_A >= LoginPanel.field_G &&
                   oja.field_f[(ih.field_l + 1) % var2_int] == null) {
                   DreamsAnimation.field_A = DreamsAnimation.field_A - 1;
                 }
               }
             }
-            if (DreamsAnimation.field_A >= ph.field_G) {
+            if (DreamsAnimation.field_A >= LoginPanel.field_G) {
               vj.field_n = ih.field_l;
               if (!ResetSpecial.field_p) {
                 ih.field_l = ih.field_l - 1;
@@ -64,9 +64,9 @@ final class em extends am implements WidgetActionListener {
                   ih.field_l = ih.field_l - var2_int;
                 }
               }
-              DreamsAnimation.field_A = DreamsAnimation.field_A - ph.field_G;
+              DreamsAnimation.field_A = DreamsAnimation.field_A - LoginPanel.field_G;
             }
-            if (ph.field_E < DreamsAnimation.field_A) {
+            if (LoginPanel.field_E < DreamsAnimation.field_A) {
               ResetSpecial.field_p = true;
             }
           }
@@ -83,26 +83,26 @@ final class em extends am implements WidgetActionListener {
                 nfa.field_a < 269) {
                 var4 = 1;
                 ResetSpecial.field_p = false;
-                DreamsAnimation.field_A = ph.field_G;
+                DreamsAnimation.field_A = LoginPanel.field_G;
               }
               if (586 < nfa.field_a &&
                 nfa.field_a < 586 + PizzaArenaTheme.field_h.field_q) {
                 var4 = 1;
                 ResetSpecial.field_p = true;
-                DreamsAnimation.field_A = ph.field_G;
+                DreamsAnimation.field_A = LoginPanel.field_G;
               }
             }
             if (var4 == 0 &&
-              ph.field_E < DreamsAnimation.field_A &&
+              LoginPanel.field_E < DreamsAnimation.field_A &&
               gd.field_m > var3 &&
               PizzaArenaTheme.field_h.field_p + var3 > gd.field_m) {
               if (-PizzaArenaTheme.field_h.field_q + 269 < mk.field_p &&
                 mk.field_p < 269) {
-                DreamsAnimation.field_A = ph.field_E;
+                DreamsAnimation.field_A = LoginPanel.field_E;
               }
               if (586 < mk.field_p &&
                 mk.field_p < 586 + PizzaArenaTheme.field_h.field_q) {
-                DreamsAnimation.field_A = ph.field_E;
+                DreamsAnimation.field_A = LoginPanel.field_E;
               }
             }
           }

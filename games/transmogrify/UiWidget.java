@@ -123,7 +123,7 @@ class UiWidget extends IntrusiveNode {
         if (!ge.field_x) {
           throw new IllegalStateException();
         }
-        bg.field_n = true;
+        PasswordValidator.field_n = true;
         n.a(true, param0);
         gl.field_y = 0;
     }

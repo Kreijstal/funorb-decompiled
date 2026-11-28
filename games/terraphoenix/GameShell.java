@@ -123,7 +123,7 @@ abstract class GameShell extends GameApplet {
         if (q.field_Gb) {
           return -1;
         }
-        int var2 = wj.a(true, 29398, le.a(false), pb.a((byte) -47), this.field_o, this.field_r);
+        int var2 = wj.a(true, 29398, AgeValidator.a(false), pb.a((byte) -47), this.field_o, this.field_r);
         if (var2 == -1) {
           return -1;
         }
@@ -153,13 +153,13 @@ abstract class GameShell extends GameApplet {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        ph.field_o = this.field_z;
-        a.a(ph.field_o, param1 - 4993);
-        ji.a(this.field_A, this.field_s, this.field_v, param5, param1 - 4915, this.field_w, this.field_t, DirectByteStorage.field_l, 5000, param1, this.field_x, param6, ph.field_o, this.field_B);
-        pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, ph.field_o, 128, DirectByteStorage.field_l, this.field_x);
+        PasswordValidator.field_o = this.field_z;
+        a.a(PasswordValidator.field_o, param1 - 4993);
+        ji.a(this.field_A, this.field_s, this.field_v, param5, param1 - 4915, this.field_w, this.field_t, DirectByteStorage.field_l, 5000, param1, this.field_x, param6, PasswordValidator.field_o, this.field_B);
+        pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, PasswordValidator.field_o, 128, DirectByteStorage.field_l, this.field_x);
         wd.a(false);
         lk.field_d = TutorialController.c(-3109);
-        am.a((byte) 29, ae.field_G);
+        am.a((byte) 29, DisplayNameSelectionPanel.field_G);
         f.field_g = param7;
         fg.field_b = param4;
         wc.field_s = param2;
@@ -185,7 +185,7 @@ abstract class GameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = Terraphoenix.field_V;
-          var4 = a.a(param0, vj.field_P, ph.field_o, 81);
+          var4 = a.a(param0, vj.field_P, PasswordValidator.field_o, 81);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -198,11 +198,11 @@ abstract class GameShell extends GameApplet {
             }
             var12 = rd.b((byte) 92);
             if (var12 != null) {
-              af.a(true, var12.booleanValue());
+              DebouncedFieldValidator.a(true, var12.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = gi.a(this.field_o, le.a(false), cm.a(-125), 3, ab.b(-27737), vl.b(3), pb.a((byte) -47));
+            var5Lifetime1 = gi.a(this.field_o, AgeValidator.a(false), cm.a(-125), 3, ab.b(-27737), vl.b(3), pb.a((byte) -47));
             if (var5Lifetime1 != -1) {
               bi.a(var5Lifetime1, bh.field_d, RasterBuffer.field_a, -14);
               RasterBuffer.field_a = null;
@@ -218,7 +218,7 @@ abstract class GameShell extends GameApplet {
             if (param1) {
               q.field_Gb = false;
             } else {
-              var5Lifetime2 = wj.a(false, 29398, le.a(false), pb.a((byte) -47), this.field_o, this.field_r);
+              var5Lifetime2 = wj.a(false, 29398, AgeValidator.a(false), pb.a((byte) -47), this.field_o, this.field_r);
               if (var5Lifetime2 != -1) {
                 if (0 == var5Lifetime2) {
                   pf.field_c = SpriteState.field_y;
@@ -258,13 +258,13 @@ abstract class GameShell extends GameApplet {
             MapTile.a(23943, dg.a(false));
           }
           if (var4 == 10) {
-            di.field_l.writeCipheredByte(-17410, 17);
+            TextFieldValidator.field_l.writeCipheredByte(-17410, 17);
           }
           if (var4 == 11) {
             MapTile.a(dg.a(false), -6242);
           }
           if (var4 == 12) {
-            nl.a((byte) 122, ej.f((byte) -30), dg.a(false));
+            nl.a((byte) 122, EditableTextField.f((byte) -30), dg.a(false));
           }
           if (var4 == 13) {
             try {
@@ -347,7 +347,7 @@ abstract class GameShell extends GameApplet {
             this.field_q = false;
             WidgetContainer.g(-17464);
             UiWidget.c((byte) 127);
-            k.a(2, ae.field_F, false);
+            k.a(2, DisplayNameSelectionPanel.field_F, false);
             ByteStorage.a((byte) -107);
             q.field_Gb = true;
             ah.field_z = ll.correctedCurrentTimeMillis(1000) + 15000L;
@@ -371,7 +371,7 @@ abstract class GameShell extends GameApplet {
         }
         if (-1 != IntrusiveDeque.field_f &&
           IntrusiveDeque.field_f != 0) {
-          if (uh.field_H >= 10) {
+          if (LoginPanel.field_H >= 10) {
             if (10 <= q.field_Jb) {
               UiWidget.c((byte) 118);
               if (IntrusiveDeque.field_f != 3) {
@@ -428,22 +428,22 @@ abstract class GameShell extends GameApplet {
           !qf.a((byte) 106)) {
           da.field_f = false;
         }
-        if (0 == uh.field_H &&
+        if (0 == LoginPanel.field_H &&
           vb.a(-353)) {
-          uh.field_H = 1;
+          LoginPanel.field_H = 1;
         }
-        if (uh.field_H == 1) {
-          if (0 != ph.field_o) {
+        if (LoginPanel.field_H == 1) {
+          if (0 != PasswordValidator.field_o) {
             bl.field_a = va.a(wc.field_s, -120);
           }
           bi.field_d = vj.a(false, true, ld.field_d, (byte) 62, 1);
-          ph.field_q = vj.a(false, true, ik.field_b, (byte) 62, 1);
+          PasswordValidator.field_q = vj.a(false, true, ik.field_b, (byte) 62, 1);
           ch.field_g = vj.a(false, true, f.field_g, (byte) 62, 1);
-          uh.field_H = 2;
-          di.field_i = ph.field_q;
+          LoginPanel.field_H = 2;
+          TextFieldValidator.field_i = PasswordValidator.field_q;
           ByteStorage.field_d = bi.field_d;
         }
-        if (uh.field_H == 2) {
+        if (LoginPanel.field_H == 2) {
           if (null != bl.field_a &&
             bl.field_a.ensureIndexLoaded(0)) {
             if (!bl.field_a.hasGroupName(-1, "")) {
@@ -457,17 +457,17 @@ abstract class GameShell extends GameApplet {
             }
           }
           if (bl.field_a == null) {
-            uh.field_H = 3;
+            LoginPanel.field_H = 3;
           }
         }
-        if (uh.field_H == 3 &&
-          NetworkArchiveRequest.a(ph.field_q, ch.field_g, false, bi.field_d) &&
+        if (LoginPanel.field_H == 3 &&
+          NetworkArchiveRequest.a(PasswordValidator.field_q, ch.field_g, false, bi.field_d) &&
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
           hj.clearStaticReferences(-7958);
           TutorialController.field_e = hh.field_k;
           wd.field_b = false;
-          am.a(ch.field_g, DelegatingCanvas.field_c, ph.field_q, bi.field_d, (byte) -22);
+          am.a(ch.field_g, DelegatingCanvas.field_c, PasswordValidator.field_q, bi.field_d, (byte) -22);
           if (ea.field_j ||
             i.field_d != null) {
             stackIn_103_0 = !(ea.field_j);
@@ -479,25 +479,25 @@ abstract class GameShell extends GameApplet {
             bm.a(-128);
           }
           if (kj.field_b == null) {
-            kj.field_b = di.f(-25177);
+            kj.field_b = TextFieldValidator.f(-25177);
             sa.field_d = qa.a((byte) -110);
           }
           bb.a(ch.field_g, -94, sa.field_d, kj.field_b);
           ch.field_g = null;
           bi.field_d = null;
-          ph.field_q = null;
-          uh.a(-31312, (java.applet.Applet) (this));
+          PasswordValidator.field_q = null;
+          LoginPanel.a(-31312, (java.applet.Applet) (this));
           ea.a((byte) 47);
-          uh.field_H = 10;
+          LoginPanel.field_H = 10;
         }
-        if (10 == uh.field_H) {
-          if (ph.field_o != 0) {
+        if (10 == LoginPanel.field_H) {
+          if (PasswordValidator.field_o != 0) {
             bi.field_b = va.a(fg.field_b, -117);
           }
-          uh.field_H = 11;
+          LoginPanel.field_H = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (uh.field_H == 11) {
+        if (LoginPanel.field_H == 11) {
           if (bi.field_b != null && (!bi.field_b.ensureIndexLoaded(0) ||
             !bi.field_b.tryLoadAllGroups((byte) -128))) {
             DualLinkNode.a(qc.a(qb.field_e, bi.field_b, si.field_hb, (byte) 123), (byte) 66, 0.0f);
@@ -505,29 +505,29 @@ abstract class GameShell extends GameApplet {
           }
           else {
             rh.field_d = true;
-            uh.field_H = 12;
+            LoginPanel.field_H = 12;
           }
         }
-        if (uh.field_H == 12 &&
+        if (LoginPanel.field_H == 12 &&
           !rh.field_d) {
-          uh.field_H = 13;
+          LoginPanel.field_H = 13;
         }
-        if (13 == uh.field_H) {
+        if (13 == LoginPanel.field_H) {
           var3Lifetime2 = 1;
-          if (null != ph.field_v) {
-            stackIn_134_0 = (!ph.field_v.a(0)) ? 0 : 1;
+          if (null != PasswordValidator.field_v) {
+            stackIn_134_0 = (!PasswordValidator.field_v.a(0)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
-            DualLinkNode.a(ph.field_v.field_e, (byte) -128, ph.field_v.field_c);
+            DualLinkNode.a(PasswordValidator.field_v.field_e, (byte) -128, PasswordValidator.field_v.field_c);
           }
           if (var3Lifetime2 != 0) {
-            uh.field_H = 20;
+            LoginPanel.field_H = 20;
           }
         }
         if (!param1 &&
           ai.field_h) {
-          hk.a(ae.field_G, (byte) 112);
+          hk.a(DisplayNameSelectionPanel.field_G, (byte) 112);
           this.d(0);
-          am.a((byte) -128, ae.field_G);
+          am.a((byte) -128, DisplayNameSelectionPanel.field_G);
         }
         var3Lifetime3 = -108 / ((-17 - param0) / 32);
         if (tg.field_c[8]) {
@@ -785,7 +785,7 @@ abstract class GameShell extends GameApplet {
         if (wf.a(31996)) {
           discarded$1 = this.a(null != a.field_b ? true : false, false, -65);
         } else {
-          if (10 <= uh.field_H) {
+          if (10 <= LoginPanel.field_H) {
             if (!sl.a((byte) -126)) {
               PacketBuffer.g(97);
             } else {

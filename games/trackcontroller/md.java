@@ -23,14 +23,14 @@ final class md {
           pl.field_a[1] = ta.field_c.nextInt();
           pl.field_a[3] = (int)MouseWheelInput.field_d;
           pl.field_a[2] = (int)(MouseWheelInput.field_d >> 32);
-          ui.field_p.position = 0;
-          ui.field_p.writeInt(false, pl.field_a[0]);
-          ui.field_p.writeInt(false, pl.field_a[1]);
-          ui.field_p.writeInt(false, pl.field_a[2]);
-          ui.field_p.writeInt(false, pl.field_a[3]);
-          vd.a(ui.field_p, (byte) -69);
-          ui.field_p.writeShort(param1, (byte) -124);
-          param0.a((byte) -6, ui.field_p);
+          PasswordValidator.field_p.position = 0;
+          PasswordValidator.field_p.writeInt(false, pl.field_a[0]);
+          PasswordValidator.field_p.writeInt(false, pl.field_a[1]);
+          PasswordValidator.field_p.writeInt(false, pl.field_a[2]);
+          PasswordValidator.field_p.writeInt(false, pl.field_a[3]);
+          AccountRegistrationPanel.a(PasswordValidator.field_p, (byte) -69);
+          PasswordValidator.field_p.writeShort(param1, (byte) -124);
+          param0.a((byte) -6, PasswordValidator.field_p);
           LevelView.field_C.position = 0;
           if (!param2) {
             LevelView.field_C.writeByte(16, (byte) -96);
@@ -63,7 +63,7 @@ final class md {
           if (null != kg.field_a) {
             LevelView.field_C.writePrefixedString(kg.field_a, 126);
           }
-          NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, ~param3, ui.field_p);
+          NodeHashTableIterator.a(sc.field_d, LevelView.field_C, fj.field_N, ~param3, PasswordValidator.field_p);
           LevelView.field_C.backpatchShortLength(LevelView.field_C.position - var5_int, (byte) -96);
           MovingBlock.a(param3, -1);
           return;

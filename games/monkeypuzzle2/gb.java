@@ -31,7 +31,7 @@ final class gb extends IntrusiveNode {
         if (param0 >= -41) {
           return;
         }
-        qc.field_P = null;
+        ValidatedTextField.field_P = null;
         da.field_c = null;
         mb.field_b = null;
         ra.field_ab = null;
@@ -86,7 +86,7 @@ final class gb extends IntrusiveNode {
             var3 = wg.a(var8, (byte) 115);
             oa.a(this.field_l / (var3 + this.field_l) - 0.5f, var8, 107);
             mh.a(this.field_k.field_e, (byte) -126, var8);
-            wj.a(this.field_e.field_e, -74, var8);
+            TextFieldValidator.a(this.field_e.field_e, -74, var8);
           } else {
             var9 = ac.a(this.field_k.field_e, 114, this.field_g);
             var7 = var9;
@@ -107,7 +107,7 @@ final class gb extends IntrusiveNode {
           var3Lifetime1 = wg.a(var8Lifetime1, (byte) 115);
           oa.a(this.field_l / (var3Lifetime1 + this.field_l) - 0.5f, var8Lifetime1, 107);
           mh.a(this.field_k.field_e, (byte) -126, var8Lifetime1);
-          wj.a(this.field_e.field_e, -74, var8Lifetime1);
+          TextFieldValidator.a(this.field_e.field_e, -74, var8Lifetime1);
         } else {
           var9Lifetime1 = ac.a(this.field_k.field_e, 114, this.field_g);
           var7Lifetime1 = var9Lifetime1;

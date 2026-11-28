@@ -14,7 +14,7 @@ final class nk {
           return;
         }
         try {
-          var3 = ff.field_D;
+          var3 = LoginPanel.field_D;
           var3.writeCipheredByte(false, param0);
           var3.writeByte(6389, 5);
           var3.writeByte(6389, 0);

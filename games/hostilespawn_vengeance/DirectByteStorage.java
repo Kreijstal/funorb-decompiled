@@ -85,15 +85,15 @@ final class DirectByteStorage extends ByteStorage {
           int var3 = 0;
           var3 = HostileSpawn.field_I ? 1 : 0;
           try {
-            if (null != ig.field_N) {
-              ig.field_N.a((byte) -128);
+            if (null != EditableTextField.field_N) {
+              EditableTextField.field_N.a((byte) -128);
             }
             if (GameCanvas.field_c != null) {
               GameCanvas.field_c.shutdown(3);
             }
-            if (null != mk.field_K) {
+            if (null != AccountRegistrationPanel.field_K) {
               try {
-                mk.field_K.close(0);
+                AccountRegistrationPanel.field_K.close(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;

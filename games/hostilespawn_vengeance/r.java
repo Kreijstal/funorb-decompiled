@@ -36,9 +36,9 @@ final class r {
         int var8 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          ln.field_a.field_c[param4.field_j.b(-4)] = 0;
+          ln.field_a.field_c[param4.field_j.getClampedTileIndex(-4)] = 0;
           param2.field_c = param4.field_c;
-          param2.field_j.a((byte) 46, param4.field_j);
+          param2.field_j.copyCoordinatesFrom((byte) 46, param4.field_j);
           param2.field_l.a(param4.field_l, param3 - 28855);
           param2.field_h = 0;
           param2.field_l.field_a = param2.field_l.field_a - 0.5;

@@ -171,7 +171,7 @@ final class qm {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ef.field_j;
+            stackIn_3_0 = AchievementNotification.field_j;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
@@ -459,7 +459,7 @@ final class qm {
           if (6 == IntrusiveDeque.field_f &&
             vk.field_b == 0) {
             IntrusiveDeque.field_f = 0;
-            uk.a(qk.field_h, false, 28333, 0);
+            ChessBoardState.a(qk.field_h, false, 28333, 0);
           }
         }
     }

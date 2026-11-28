@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends r {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static String field_n;
     static volatile int field_p;
     private boolean nameAvailable;
     private String checkedName;
 
-    AccountNameAvailabilityValidator(c param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4_ref_mk = null;
@@ -146,7 +146,7 @@ final class AccountNameAvailabilityValidator extends r {
         this.checkedName = null;
     }
 
-    final wd a(int param0, String param1) {
+    final wd getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;

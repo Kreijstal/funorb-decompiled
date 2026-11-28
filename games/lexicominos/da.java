@@ -544,8 +544,8 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 }
                 if (param3) {
                   pd.field_l[var23Lifetime2] = var27Lifetime1 >> sb.field_d;
-                  cl.field_U[var23Lifetime2] = var28Lifetime1 >> sb.field_d;
-                  pc.field_n[var23Lifetime2] = var29Lifetime1;
+                  ValidatedTextField.field_U[var23Lifetime2] = var28Lifetime1 >> sb.field_d;
+                  EmailFormatValidator.field_n[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

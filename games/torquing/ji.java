@@ -228,7 +228,7 @@ final class ji {
           if (11 == op.field_i) {
             oc.a((byte) 105);
           }
-          SocketJs5Transport.a(aj.field_E, (byte) -98, mh.field_g, ob.field_b);
+          SocketJs5Transport.a(aj.field_E, (byte) -98, MenuScreen.field_g, ob.field_b);
           ni.a(param1, 0, 0, 122);
           if (param0 != -99) {
             field_a = (int[]) null;
@@ -267,26 +267,26 @@ final class ji {
         int var16Lifetime2;
         var19 = Torquing.field_u;
         try {
-          var12 = ln.a(qk.field_p, Bzip2State.field_q, param6, 103);
-          var13 = ln.a(qk.field_p, Bzip2State.field_q, param3, 81);
+          var12 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param6, 103);
+          var13 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param3, 81);
           var14 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 73);
           var15 = ln.a(qg.field_z, RasterBuffer.field_e, param2, 113);
-          var8_int = ln.a(qk.field_p, Bzip2State.field_q, param6 + param7, 103);
-          var9 = ln.a(qk.field_p, Bzip2State.field_q, param3 - param7, 111);
+          var8_int = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param6 + param7, 103);
+          var9 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param3 - param7, 111);
           for (var16 = var12; var8_int > var16; var16++) {
-            di.a(var14, (byte) -111, param1, qd.field_a[var16], var15);
+            IndexedSpriteLayer.a(var14, (byte) -111, param1, qd.field_a[var16], var15);
           }
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
-            di.a(var14, (byte) -108, param1, qd.field_a[var16Lifetime1], var15);
+            IndexedSpriteLayer.a(var14, (byte) -108, param1, qd.field_a[var16Lifetime1], var15);
           }
           var10 = ln.a(qg.field_z, RasterBuffer.field_e, param0 + param7, 126);
           var11 = ln.a(qg.field_z, RasterBuffer.field_e, -param7 + param2, 76);
           var16Lifetime2 = -88 / ((39 - param5) / 39);
           for (var17 = var8_int; var17 <= var9; var17++) {
             var23 = qd.field_a[var17];
-            di.a(var14, (byte) -98, param1, var23, var10);
-            di.a(var10, (byte) 56, param4, var23, var11);
-            di.a(var11, (byte) 66, param1, var23, var15);
+            IndexedSpriteLayer.a(var14, (byte) -98, param1, var23, var10);
+            IndexedSpriteLayer.a(var10, (byte) 56, param4, var23, var11);
+            IndexedSpriteLayer.a(var11, (byte) 66, param1, var23, var15);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

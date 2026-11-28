@@ -196,10 +196,10 @@ final class SectorCacheStore {
             tc.field_b = tc.field_b + (ro.field_g.field_d - ce.field_b);
             ce.field_b = ro.field_g.field_d;
           }
-          if (!(da.field_i <= 0)) {
-            da.field_i = da.field_i - 1;
+          if (!(TextFieldValidator.field_i <= 0)) {
+            TextFieldValidator.field_i = TextFieldValidator.field_i - 1;
           }
-          if (da.field_i > 0) {
+          if (TextFieldValidator.field_i > 0) {
             kg.c((byte) 82);
           }
           return;

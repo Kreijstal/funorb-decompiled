@@ -162,7 +162,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param0 != -1) {
             field_n = true;
           }
-          stackIn_4_0 = bg.a(param1, true, param2, (byte) 126);
+          stackIn_4_0 = PasswordValidator.a(param1, true, param2, (byte) 126);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -396,7 +396,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    final static boolean a(wl param0, String param1, String param2, boolean param3, boolean param4, String param5, int param6) {
+    final static boolean a(AccountRegistrationPanel param0, String param1, String param2, boolean param3, boolean param4, String param5, int param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         RuntimeException stackIn_19_0 = null;
@@ -411,7 +411,7 @@ final class MusicPatchPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4) {
-            MusicPatchPcmStream.a((wl) null, (String) null, (String) null, false, true, (String) null, 27);
+            MusicPatchPcmStream.a((AccountRegistrationPanel) null, (String) null, (String) null, false, true, (String) null, 27);
           }
           if (jh.field_n != ArchiveRequest.field_v) {
             return false;
@@ -570,7 +570,7 @@ final class MusicPatchPcmStream extends PcmStream {
                         if (param2.field_w > 0 &&
                           param2.field_y != null) {
                           dupTemp$0 = param2.field_y[var8];
-                          ca.field_c[dupTemp$0] = ca.field_c[dupTemp$0] + 1;
+                          DebouncedFieldValidator.field_c[dupTemp$0] = DebouncedFieldValidator.field_c[dupTemp$0] + 1;
                         }
                         IsaacRandom.field_h = IsaacRandom.field_h + 1;
                         break;
@@ -591,9 +591,9 @@ final class MusicPatchPcmStream extends PcmStream {
             null != param2.field_y) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= ca.field_c.length)) {
-              var10Lifetime1 = ca.field_c[var9Lifetime1];
-              ca.field_c[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= DebouncedFieldValidator.field_c.length)) {
+              var10Lifetime1 = DebouncedFieldValidator.field_c[var9Lifetime1];
+              DebouncedFieldValidator.field_c[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -656,7 +656,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param1 < 105) {
             MusicPatchPcmStream.a((byte) 62, (ResourceArchive) null, (String) null, (String) null);
           }
-          vh.field_m = param0;
+          EmailFormatValidator.field_m = param0;
           jl.field_o = param2;
           gl.field_B = param4;
           return;
@@ -817,7 +817,7 @@ final class MusicPatchPcmStream extends PcmStream {
                         if (param2.field_w > 0 &&
                           param2.field_y != null) {
                           dupTemp$0 = param2.field_y[var8];
-                          ca.field_c[dupTemp$0] = ca.field_c[dupTemp$0] + 1;
+                          DebouncedFieldValidator.field_c[dupTemp$0] = DebouncedFieldValidator.field_c[dupTemp$0] + 1;
                         }
                         IsaacRandom.field_h = IsaacRandom.field_h + 1;
                         break;
@@ -838,9 +838,9 @@ final class MusicPatchPcmStream extends PcmStream {
             null != param2.field_y) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= ca.field_c.length)) {
-              var10Lifetime1 = ca.field_c[var9Lifetime1];
-              ca.field_c[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= DebouncedFieldValidator.field_c.length)) {
+              var10Lifetime1 = DebouncedFieldValidator.field_c[var9Lifetime1];
+              DebouncedFieldValidator.field_c[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

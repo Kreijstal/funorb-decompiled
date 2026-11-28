@@ -28,7 +28,7 @@ final class ShuffleAnimation extends EventAnimation {
         if (this.field_y) {
           if (!this.field_w) {
             this.field_w = true;
-            aba.a((byte) 122, 60);
+            TextFieldValidator.a((byte) 122, 60);
           }
           var2 = 1;
           var9 = this.field_z;
@@ -49,7 +49,7 @@ final class ShuffleAnimation extends EventAnimation {
         }
         if (!this.field_w) {
           this.field_w = true;
-          aba.a((byte) -96, 60);
+          TextFieldValidator.a((byte) -96, 60);
         }
         var2Lifetime1 = 1;
         var7 = this.field_z;

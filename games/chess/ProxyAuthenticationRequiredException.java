@@ -21,7 +21,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (param0 != -16586) {
           return;
         }
-        uk.a(false, 17);
+        ChessBoardState.a(false, 17);
     }
 
     ProxyAuthenticationRequiredException(String param0) {

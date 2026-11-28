@@ -79,8 +79,8 @@ final class ArchiveIndex {
             CharSequence var6 = (CharSequence) null;
             ArchiveIndex.a(-33, (CharSequence) null);
           }
-          qk.field_q = ci.a(-121, "");
-          qk.field_q.a(84, false);
+          LevelCompletionUpdate.field_q = ci.a(-121, "");
+          LevelCompletionUpdate.field_q.a(84, false);
           re.a(param4, true, param3, param1);
           gh.b(1);
           bh.field_a = tp.field_h;

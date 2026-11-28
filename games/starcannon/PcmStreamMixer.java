@@ -184,7 +184,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, oa param1) {
         while (true) {
           if (param0 == this.field_j.sentinel) {
-            fe.a(param0, param1, false);
+            EditableTextField.a(param0, param1, false);
             this.field_l = ((oa) (this.field_j.sentinel.next)).field_f;
             return;
           }
@@ -194,7 +194,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        fe.a(param0, param1, false);
+        EditableTextField.a(param0, param1, false);
         this.field_l = ((oa) (this.field_j.sentinel.next)).field_f;
         return;
     }

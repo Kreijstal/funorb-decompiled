@@ -316,13 +316,13 @@ public final class Lexicominos extends nk {
           this.d(18380);
           cb.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
           pa.field_a = df.a("", "leftpage", SectorCacheStore.field_d, (byte) -83);
-          va.field_m = df.a("", "rightpage", SectorCacheStore.field_d, (byte) -64);
+          PasswordValidator.field_m = df.a("", "rightpage", SectorCacheStore.field_d, (byte) -64);
           var3_array = td.a("", "frame", SectorCacheStore.field_d, 22306);
           var4 = 150;
           var5_int = 100;
           var6_ref_db = new RgbSprite(var4, var5_int);
           var6_ref_db.b();
-          va.field_m.b(-104, -198);
+          PasswordValidator.field_m.b(-104, -198);
           var3_array[4] = new RgbSprite(var4 << 1, var5_int << 1);
           var3_array[4].b();
           var6_ref_db.b(0, 0);
@@ -448,8 +448,8 @@ public final class Lexicominos extends nk {
                 continue;
               }
             } else {
-              ri.field_b = this.a(param0 ^ -62, e.field_u);
-              fl.field_c = ri.field_b.c();
+              DebouncedFieldValidator.field_b = this.a(param0 ^ -62, e.field_u);
+              fl.field_c = DebouncedFieldValidator.field_b.c();
               stackIn_170_0 = fl.field_c.field_y;
             }
             var7_array = stackIn_170_0;
@@ -629,7 +629,7 @@ public final class Lexicominos extends nk {
           if (param0 != 22110) {
             field_G = -106;
           }
-          va.field_m.b(0, 0);
+          PasswordValidator.field_m.b(0, 0);
           if (0 > param3) {
             el.field_c.b((byte) 62);
           }
@@ -699,19 +699,19 @@ public final class Lexicominos extends nk {
         var17 = field_L ? 1 : 0;
         try {
           if (this.field_J == 2 &&
-            tj.field_i < 20) {
+            TextFieldValidator.field_i < 20) {
             this.field_J = 1;
           }
           if (this.field_J == 1) {
-            if (tj.field_i < 12) {
+            if (TextFieldValidator.field_i < 12) {
               this.field_J = 0;
             }
-            if (tj.field_i > 28) {
+            if (TextFieldValidator.field_i > 28) {
               this.field_J = 2;
             }
           }
           if (0 == this.field_J &&
-            16 < tj.field_i) {
+            16 < TextFieldValidator.field_i) {
             this.field_J = 1;
           }
           if (0 == this.field_J) {
@@ -986,10 +986,10 @@ public final class Lexicominos extends nk {
           uk.clearStaticReferences(78);
           qj.clearStaticReferences(true);
           uc.clearStaticReferences(param0 + 11252);
-          pj.clearStaticReferences((byte) 71);
+          AccountRegistrationPanel.clearStaticReferences((byte) 71);
           mh.clearStaticReferences((byte) 119);
-          ti.clearStaticReferences(false);
-          r.clearStaticReferences(param0 ^ -45);
+          LoginPanel.clearStaticReferences(false);
+          DisplayNameSelectionPanel.clearStaticReferences(param0 ^ -45);
           VorbisSample.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           SynthInstrument.clearStaticReferences();
@@ -1073,8 +1073,8 @@ public final class Lexicominos extends nk {
           wj.c(false);
           rc.clearStaticReferences(870040769);
           jf.h(-127);
-          cl.clearDeclaredStaticReferences(-60);
-          rl.clearStaticReferences((byte) 93);
+          ValidatedTextField.clearDeclaredStaticReferences(-60);
+          EditableTextField.clearStaticReferences((byte) 93);
           re.clearDeclaredStaticReferences((byte) -27);
           md.e(344066273);
           bb.clearStaticReferences((byte) -26);
@@ -1082,7 +1082,7 @@ public final class Lexicominos extends nk {
           ld.clearDeclaredStaticReferences(6977);
           li.a((byte) 81);
           te.clearStaticReferences((byte) -122);
-          tj.clearStaticReferences(0);
+          TextFieldValidator.clearStaticReferences(0);
           pl.clearStaticReferences(0);
           kg.clearStaticReferences(300);
           ae.clearDeclaredStaticReferences(-126);
@@ -1134,14 +1134,14 @@ public final class Lexicominos extends nk {
           ij.clearStaticReferences((byte) 66);
           mk.clearStaticReferences((byte) -101);
           AccountNameAvailabilityValidator.clearStaticReferences(false);
-          va.clearStaticReferences((byte) -113);
-          pc.clearStaticReferences((byte) -82);
-          jg.clearDeclaredStaticReferences(param0 - 25127);
-          uf.clearStaticReferences(false);
-          g.e(-17779);
+          PasswordValidator.clearStaticReferences((byte) -113);
+          EmailFormatValidator.clearStaticReferences((byte) -82);
+          ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences(param0 - 25127);
+          AgeValidator.clearStaticReferences(false);
+          MatchingFieldValidator.e(-17779);
           rb.clearStaticReferences((byte) 50);
           sc.clearStaticReferences(-70);
-          ri.clearDeclaredStaticReferences((byte) 117);
+          DebouncedFieldValidator.clearDeclaredStaticReferences((byte) 117);
           tf.resetStaticState(-3082);
           this.field_B = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1191,7 +1191,7 @@ public final class Lexicominos extends nk {
           ce.field_b.setRootStream(CrossfadingMidiPcmStream.field_n);
           this.a(false, param0, true, (byte) 18, false);
           BoundedRandomAccessFile.field_b = 0;
-          g.field_n = 10640990;
+          MatchingFieldValidator.field_n = 10640990;
           SecondaryNodeDequeIterator.field_c = 3941155;
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
@@ -1375,29 +1375,29 @@ public final class Lexicominos extends nk {
           if (ImageProducerRasterBuffer.field_j != -2 &&
             BitPacketBuffer.field_r != -2) {
             if (~ImageProducerRasterBuffer.field_j == ~BitPacketBuffer.field_r) {
-              this.a(param0 + 3730, cl.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
-              this.a(jf.field_O.field_y, cl.field_S.field_y, false);
+              this.a(param0 + 3730, ValidatedTextField.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
+              this.a(jf.field_O.field_y, ValidatedTextField.field_S.field_y, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
               boolean decompiledSharedTail0 = !(cg.field_j > 0);
               if (!decompiledSharedTail0) {
-                this.a(param0 ^ 4498, cl.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
+                this.a(param0 ^ 4498, ValidatedTextField.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
                 this.a(22110, v.field_z, bb.field_C, BitPacketBuffer.field_r);
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                this.a(22110, cl.field_S, jf.field_O, BitPacketBuffer.field_r);
+                this.a(22110, ValidatedTextField.field_S, jf.field_O, BitPacketBuffer.field_r);
                 this.a(22110, v.field_z, bb.field_C, ImageProducerRasterBuffer.field_j);
               }
               if (SpriteGeometry.field_v == 0) {
-                this.a(jf.field_O.field_y, cl.field_S.field_y, false);
+                this.a(jf.field_O.field_y, ValidatedTextField.field_S.field_y, false);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (SpriteGeometry.field_v != 40) {
                   this.a(jf.field_O.field_y, v.field_z.field_y, false);
-                  this.a(SpriteGeometry.field_v, bb.field_C, (byte) 34, cl.field_S);
+                  this.a(SpriteGeometry.field_v, bb.field_C, (byte) 34, ValidatedTextField.field_S);
                   if (var4 != 0) {
                     this.a(bb.field_C.field_y, v.field_z.field_y, false);
                     this.a(22110, v.field_z, jf.field_O, 0);
@@ -1438,7 +1438,7 @@ public final class Lexicominos extends nk {
             ib.field_a[var3].a(0, 0);
           }
           if (2 <= vb.field_i) {
-            bi.field_a.c(Integer.toString(tj.field_i), 630, 25, 16711680, -1);
+            bi.field_a.c(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
           }
           if (FullscreenFocusCanvas.a(-17977)) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
@@ -1786,7 +1786,7 @@ public final class Lexicominos extends nk {
                       stackIn_296_1 = new StringBuilder().append("keycode=").append(da.field_b).append("; keychar=");
                       stackIn_296_2 = IsaacRandom.field_b;
                       stackIn_297_3 = !(param0);
-                      ((PrintStream) (Object) stackIn_296_0).println(((StringBuilder) (Object) stackIn_296_1).append(va.a(stackIn_296_2, stackIn_297_3)).toString());
+                      ((PrintStream) (Object) stackIn_296_0).println(((StringBuilder) (Object) stackIn_296_1).append(PasswordValidator.a(stackIn_296_2, stackIn_297_3)).toString());
                       if (65 <= IsaacRandom.field_b &&
                         IsaacRandom.field_b <= 90) {
                         var3 = 0;

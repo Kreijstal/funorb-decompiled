@@ -17,7 +17,7 @@ final class bi extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          if (!ok.a(111, param2, param1)) {
+          if (!DebouncedFieldValidator.a(111, param2, param1)) {
             return false;
           }
           if (param0) {

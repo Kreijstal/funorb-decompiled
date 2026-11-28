@@ -11,7 +11,7 @@ final class nc extends sf {
         DiskCacheWorker.field_f = param1;
         fe.field_c = param3;
         int var5 = 79 % ((52 - param0) / 57);
-        el.field_D = param4;
+        DisplayNameSelectionPanel.field_D = param4;
         d.field_j = param2;
     }
 

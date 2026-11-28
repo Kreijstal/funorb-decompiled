@@ -35,7 +35,7 @@ final class pm {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         rg.field_d[fc.field_z] = param0;
-        db.field_s[fc.field_z] = fc.field_z;
+        PasswordValidator.field_s[fc.field_z] = fc.field_z;
         qa.field_d[fc.field_z] = param1;
         if (!(param1 <= rf.field_c)) {
           kl.field_a = param1;
@@ -45,13 +45,13 @@ final class pm {
         }
         ta.field_mb[fc.field_z] = param5;
         og.field_b[fc.field_z] = param3;
-        db.field_t[fc.field_z] = param4;
+        PasswordValidator.field_t[fc.field_z] = param4;
         int var6 = param3 + (param5 + param4);
         if (param2 <= 64) {
           field_h = false;
         }
         int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
-        hi.field_n[fc.field_z] = var7;
+        TextFieldValidator.field_n[fc.field_z] = var7;
         if (var7 < bh.field_e) {
           bh.field_e = var7;
         }
@@ -65,7 +65,7 @@ final class pm {
         if (param2 != -117) {
           pm.clearStaticReferences((byte) -84);
         }
-        return ei.a(param0, 1, param1, param3, 119);
+        return DelayedPacket.a(param0, 1, param1, param3, 119);
     }
 
     final static String a(long param0, byte param1) {

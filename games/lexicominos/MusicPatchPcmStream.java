@@ -264,17 +264,17 @@ final class MusicPatchPcmStream extends PcmStream {
             if (null != ff.field_b &&
               ff.field_b.focusLost) {
               af.a(-98);
-              ti.field_L.a(-14579, new ii(ti.field_L, qg.field_a));
+              LoginPanel.field_L.a(-14579, new ii(LoginPanel.field_L, qg.field_a));
             }
             return;
           }
           if (param0 != 22) {
             return;
           }
-          ti.field_L.a(ha.field_d, true, wc.field_a, (byte) 124);
-          ti.field_L.f(true);
+          LoginPanel.field_L.a(ha.field_d, true, wc.field_a, (byte) 124);
+          LoginPanel.field_L.f(true);
           while (IterableNodeHashTable.a((byte) -72)) {
-            ti.field_L.a((byte) 86, IsaacRandom.field_b, da.field_b);
+            LoginPanel.field_L.a((byte) 86, IsaacRandom.field_b, da.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

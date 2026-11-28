@@ -32,10 +32,10 @@ final class up {
         int var4Lifetime1;
         jn.field_n.a(100, false);
         if (hj.field_S != -1) {
-          qe.field_l = eh.field_h << 16;
-          qe.field_f = hj.field_S << 16;
-          var1 = -qe.field_n + qe.field_f;
-          var2 = qe.field_l - qe.field_c;
+          DungeonAssaultScreen.field_l = eh.field_h << 16;
+          DungeonAssaultScreen.field_f = hj.field_S << 16;
+          var1 = -DungeonAssaultScreen.field_n + DungeonAssaultScreen.field_f;
+          var2 = DungeonAssaultScreen.field_l - DungeonAssaultScreen.field_c;
           var3 = MidiPcmStream.a(true, (var2 >> 12) * (var2 >> 12) + (var1 >> 12) * (var1 >> 12)) >> 6;
           if (0 > var3) {
             throw new RuntimeException();
@@ -43,20 +43,20 @@ final class up {
           if (var3 != 0) {
             var2 = var2 / var3;
             var1 = var1 / var3;
-            qe.field_a = qe.field_a + var1;
-            qe.field_j = qe.field_j + var2;
-            qe.field_j = 14 * qe.field_j >> 4;
-            qe.field_a = qe.field_a * 14 >> 4;
+            DungeonAssaultScreen.field_a = DungeonAssaultScreen.field_a + var1;
+            DungeonAssaultScreen.field_j = DungeonAssaultScreen.field_j + var2;
+            DungeonAssaultScreen.field_j = 14 * DungeonAssaultScreen.field_j >> 4;
+            DungeonAssaultScreen.field_a = DungeonAssaultScreen.field_a * 14 >> 4;
           }
-          qe.field_n = qe.field_n + (int)(1048576.0 * te.a(mo.field_a));
+          DungeonAssaultScreen.field_n = DungeonAssaultScreen.field_n + (int)(1048576.0 * te.a(mo.field_a));
           var4 = 100 / ((param0 - 46) / 52);
-          qe.field_c = qe.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
-          qe.field_c = qe.field_c + qe.field_j;
-          qe.field_n = qe.field_n + qe.field_a;
+          DungeonAssaultScreen.field_c = DungeonAssaultScreen.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
+          DungeonAssaultScreen.field_c = DungeonAssaultScreen.field_c + DungeonAssaultScreen.field_j;
+          DungeonAssaultScreen.field_n = DungeonAssaultScreen.field_n + DungeonAssaultScreen.field_a;
           return;
         }
-        var1Lifetime1 = -qe.field_n + qe.field_f;
-        var2Lifetime1 = qe.field_l - qe.field_c;
+        var1Lifetime1 = -DungeonAssaultScreen.field_n + DungeonAssaultScreen.field_f;
+        var2Lifetime1 = DungeonAssaultScreen.field_l - DungeonAssaultScreen.field_c;
         var3Lifetime1 = MidiPcmStream.a(true, (var2Lifetime1 >> 12) * (var2Lifetime1 >> 12) + (var1Lifetime1 >> 12) * (var1Lifetime1 >> 12)) >> 6;
         if (0 > var3Lifetime1) {
           throw new RuntimeException();
@@ -64,16 +64,16 @@ final class up {
         if (var3Lifetime1 != 0) {
           var2Lifetime1 = var2Lifetime1 / var3Lifetime1;
           var1Lifetime1 = var1Lifetime1 / var3Lifetime1;
-          qe.field_a = qe.field_a + var1Lifetime1;
-          qe.field_j = qe.field_j + var2Lifetime1;
-          qe.field_j = 14 * qe.field_j >> 4;
-          qe.field_a = qe.field_a * 14 >> 4;
+          DungeonAssaultScreen.field_a = DungeonAssaultScreen.field_a + var1Lifetime1;
+          DungeonAssaultScreen.field_j = DungeonAssaultScreen.field_j + var2Lifetime1;
+          DungeonAssaultScreen.field_j = 14 * DungeonAssaultScreen.field_j >> 4;
+          DungeonAssaultScreen.field_a = DungeonAssaultScreen.field_a * 14 >> 4;
         }
-        qe.field_n = qe.field_n + (int)(1048576.0 * te.a(mo.field_a));
+        DungeonAssaultScreen.field_n = DungeonAssaultScreen.field_n + (int)(1048576.0 * te.a(mo.field_a));
         var4Lifetime1 = 100 / ((param0 - 46) / 52);
-        qe.field_c = qe.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
-        qe.field_c = qe.field_c + qe.field_j;
-        qe.field_n = qe.field_n + qe.field_a;
+        DungeonAssaultScreen.field_c = DungeonAssaultScreen.field_c + (int)(te.a(mo.field_a ^ 773223) * 1048576.0);
+        DungeonAssaultScreen.field_c = DungeonAssaultScreen.field_c + DungeonAssaultScreen.field_j;
+        DungeonAssaultScreen.field_n = DungeonAssaultScreen.field_n + DungeonAssaultScreen.field_a;
     }
 
     final DualLinkNode a(int param0) {
@@ -102,12 +102,12 @@ final class up {
 
     final static void b(int param0) {
         if (param0 < -78) {
-          lp.a(td.field_d, -40, true, he.field_m);
+          lp.a(td.field_d, -40, true, AgeValidator.field_m);
           jd.field_l = true;
           return;
         }
         up.a(true);
-        lp.a(td.field_d, -40, true, he.field_m);
+        lp.a(td.field_d, -40, true, AgeValidator.field_m);
         jd.field_l = true;
     }
 

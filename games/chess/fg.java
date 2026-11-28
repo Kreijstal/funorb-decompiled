@@ -54,7 +54,7 @@ final class fg {
               }
               var3 = var3 + param2;
             }
-            ol.a(var3, 26613);
+            AccountRegistrationPanel.a(var3, 26613);
             var7 = kb.a(var3, 0, "%3a", ":");
             var8 = kb.a(var7, param1 + 77, "%40", "@");
             var9 = kb.a(var8, 0, "%26", "&");

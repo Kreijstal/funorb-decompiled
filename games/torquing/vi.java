@@ -4,13 +4,13 @@
 final class vi {
     static int[] field_a;
 
-    final static void a(int param0, sm param1, int param2, int param3, int[] param4) {
+    final static void a(int param0, IndexedSprite param1, int param2, int param3, int[] param4) {
         int var12 = 0;
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
         if (param0 >= param4.length) {
-          param1.a(param2, param3);
+          param1.drawOpaque(param2, param3);
           return;
         }
         int var5 = param4[param0];

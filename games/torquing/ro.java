@@ -35,10 +35,10 @@ class ro extends am {
           var4 = var14[0];
           var5 = var14[1];
           var6 = var14[2];
-          if (this.field_u == um.field_o) {
+          if (this.field_u == MatchingFieldValidator.field_o) {
             stackIn_6_0 = param1;
           } else {
-            stackIn_6_0 = this.field_u * param1 / um.field_o;
+            stackIn_6_0 = this.field_u * param1 / MatchingFieldValidator.field_o;
           }
           var7 = stackIn_6_0 * this.field_x;
           if (this.field_x != ci.field_c) {

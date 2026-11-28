@@ -130,12 +130,12 @@ final class e {
           ui.field_b = new UiPanel(0L, gj.field_z);
           gg.field_o.b(ui.field_b, 125);
           kk.field_a = new UiPanel(0L, np.field_Ib, AccountCreationResultPanel.field_rb);
-          oa.field_s = new UiPanel(0L, np.field_Ib);
+          ConfirmedEmailAvailabilityValidator.field_s = new UiPanel(0L, np.field_Ib);
           gk.field_c.b(PlayerAvatarRenderer.field_j, 127);
           gk.field_c.b(lm.field_F, 123);
           lm.field_F.b(gg.field_o, param0 ^ 12824);
           lm.field_F.b(kk.field_a, param0 - 12774);
-          lm.field_F.b(oa.field_s, 127);
+          lm.field_F.b(ConfirmedEmailAvailabilityValidator.field_s, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

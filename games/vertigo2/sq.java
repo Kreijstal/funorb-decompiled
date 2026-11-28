@@ -34,7 +34,7 @@ final class sq {
         wj.field_c[18] = bo.field_p;
         wj.field_c[11] = ie.field_Sb;
         wj.field_c[5] = ro.field_a;
-        wj.field_c[7] = dk.field_l;
+        wj.field_c[7] = EmailFormatValidator.field_l;
         wj.field_c[param0] = jp.field_j;
         wj.field_c[15] = pp.field_x;
         wj.field_c[20] = hr.field_z;

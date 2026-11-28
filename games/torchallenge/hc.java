@@ -111,7 +111,7 @@ final class hc extends ng {
           si.field_J = param0;
           IterableNodeHashTable.field_f = param4;
           vk.field_k = param7;
-          bh.field_t = param2;
+          PasswordValidator.field_t = param2;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "hc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

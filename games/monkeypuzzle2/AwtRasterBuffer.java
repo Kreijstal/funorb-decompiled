@@ -17,13 +17,13 @@ abstract class AwtRasterBuffer {
         Throwable var2 = null;
         boolean stackIn_6_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = wj.field_k;
+        var1 = TextFieldValidator.field_k;
         synchronized (var1) {
           if (PcmResampler.field_b == bh.field_e) {
             return false;
           }
           oa.field_H = oi.field_e[PcmResampler.field_b];
-          rd.field_p = ProxySocketConnector.field_d[PcmResampler.field_b];
+          MatchingFieldValidator.field_p = ProxySocketConnector.field_d[PcmResampler.field_b];
           PcmResampler.field_b = PcmResampler.field_b - param0 & 127;
           stackIn_6_0 = true;
         }

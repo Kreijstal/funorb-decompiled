@@ -64,7 +64,7 @@ final class Platform {
                   }
                   if ((this.field_b == 1)) {
                     var3Lifetime3 = this.field_g * 3 / 256;
-                    bd.field_j[var3Lifetime3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
+                    MatchingFieldValidator.field_j[var3Lifetime3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
                   }
                 }
                 decompiledFrameRemainder0 = false;
@@ -79,7 +79,7 @@ final class Platform {
               }
             } else {
               if (this.field_b < 16) {
-                q.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
+                DisplayNameSelectionPanel.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
               }
               if (SectorCacheStore.a(0, (byte) 88)) {
                 for (var4 = 0; 2 > var4; var4++) {

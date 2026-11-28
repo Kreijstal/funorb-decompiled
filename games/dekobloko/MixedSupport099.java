@@ -144,7 +144,7 @@ final class MixedSupport099 {
                 MixedSupport016.sceneWidgetPart013State0001.booleanState0201 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0843 < MixedSupport016.sceneWidgetPart013State0001.integerState0840) {
                 if (sceneWidgetPart012Local4.booleanState0189) {
-                  this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, MixedSupport142.stringState0596, new String[]{stringLocal2}), 1, 64);
+                  this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, ReturnedShapeUpdate.stringState0596, new String[]{stringLocal2}), 1, 64);
                 } else {
                   if (!booleanArgument1) {
                     this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(92, MixedSupport078.stringState0334, new String[]{stringLocal2}), 0, -30);
@@ -196,7 +196,7 @@ final class MixedSupport099 {
           return;
         }
         if (sceneWidgetPart012Local6.booleanState0189) {
-          this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, MixedSupport142.stringState0596, new String[]{stringLocal2}), 1, 64);
+          this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(93, ReturnedShapeUpdate.stringState0596, new String[]{stringLocal2}), 1, 64);
         } else {
           if (!booleanArgument1) {
             this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(92, MixedSupport078.stringState0334, new String[]{stringLocal2}), 0, -30);
@@ -214,7 +214,7 @@ final class MixedSupport099 {
     final void performAction1233(int integerArgument1) {
         String stringLocal1;
         int integerLocal2;
-        SceneWidgetPart013 sceneWidgetPart013Local3;
+        LobbyRoomRow sceneWidgetPart013Local3;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (MixedSupport016.sceneWidgetPart013State0001 != null) {
           if (integerArgument1 <= -71) {
@@ -272,7 +272,7 @@ final class MixedSupport099 {
           return true;
         }
         if (integerArgument1 == 18) {
-          UiComponentPart024.performAction1272(38, this.longState0041, this.stringState0418);
+          BirthDateTextFields.performAction1272(38, this.longState0041, this.stringState0418);
           return true;
         }
         if (integerArgument1 == 11) {
@@ -298,7 +298,7 @@ final class MixedSupport099 {
         if (integerArgument1 != 19) {
           return false;
         }
-        MixedSupport142.computeBoolean1759(this.integerArrayState0181, this.longState0041, this.stringState0418, byteArgument3 - 28, this.integerState0580);
+        ReturnedShapeUpdate.computeBoolean1759(this.integerArrayState0181, this.longState0041, this.stringState0418, byteArgument3 - 28, this.integerState0580);
         return true;
     }
 
@@ -516,7 +516,7 @@ final class MixedSupport099 {
                   this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(99, MixedSupport119.stringState0523, new String[]{stringLocal10}), 19, byteArgument2 + 140);
                 }
               }
-              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(118, UiComponentPart005.stringState0100, new String[]{stringLocal10}), 5, byteArgument2 ^ 102);
+              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(118, DisplayNameSelectionPanel.stringState0100, new String[]{stringLocal10}), 5, byteArgument2 ^ 102);
             }
             if (integerLocal8 != 0) {
               this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(116, NetworkSupport009.stringState0387, new String[]{stringLocal10}), 7, -12);

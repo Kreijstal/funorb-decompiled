@@ -79,8 +79,8 @@ final class we extends UiWidget {
 
     final static void i(int param0) {
         cp.a((byte) 126);
-        if (null != ne.field_F) {
-          Vertigo2.a(ne.field_F, (byte) -35);
+        if (null != DisplayNameSelectionPanel.field_F) {
+          Vertigo2.a(DisplayNameSelectionPanel.field_F, (byte) -35);
         }
         wj.b(76);
         ea.b((byte) 111);
@@ -335,7 +335,7 @@ final class we extends UiWidget {
           bl.field_N = (BitmapFont) ((Object) rl.a(param1, 12, param0, "commonui", "arezzo12"));
           qc.field_x = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14"));
           sg.field_a = (BitmapFont) ((Object) rl.a(param1, param3 ^ -53, param0, "commonui", "arezzo14bold"));
-          var17 = new Sprite(param2.getFileByName("button.gif", "", 0), (java.awt.Component) ((Object) ne.field_F));
+          var17 = new Sprite(param2.getFileByName("button.gif", "", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
           vl.a(0, "commonui", param1, "dropdown");
           var5 = WidgetWrapper.a((byte) -39, "screen_options", "commonui", param1);
           ProxyAuthenticationRequiredException.field_e = new u[4];

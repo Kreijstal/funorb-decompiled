@@ -315,11 +315,11 @@ final class ce {
           }
           var2Lifetime37 = e.a("instructions_p1,0", true);
           if (var2Lifetime37 != null) {
-            tj.field_j[0] = ni.a((byte) -55, var2Lifetime37);
+            TextFieldValidator.field_j[0] = ni.a((byte) -55, var2Lifetime37);
           }
           var2Lifetime38 = e.a("instructions_p1,1", true);
           if (var2Lifetime38 != null) {
-            tj.field_j[1] = ni.a((byte) -55, var2Lifetime38);
+            TextFieldValidator.field_j[1] = ni.a((byte) -55, var2Lifetime38);
           }
           var2Lifetime39 = e.a("instructions_p3,0", true);
           if (null != var2Lifetime39) {

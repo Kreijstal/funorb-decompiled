@@ -202,7 +202,7 @@ final class oj extends IntrusiveNode {
             SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ResourceArchive.field_f);
           } else {
             if (this.field_p) {
-              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
+              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, PasswordValidator.field_s);
               return;
             }
             return;
@@ -214,7 +214,7 @@ final class oj extends IntrusiveNode {
             SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ResourceArchive.field_f);
           } else {
             if (this.field_p) {
-              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
+              SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, PasswordValidator.field_s);
               return;
             }
             return;
@@ -227,7 +227,7 @@ final class oj extends IntrusiveNode {
           SoftwareRasterizer.addRadialGlow(var4 << 4, var5 << 4, var7, var6, ResourceArchive.field_f);
         } else {
           if (this.field_p) {
-            SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, em.field_s);
+            SoftwareRasterizer.addRadialGlow(5808, 384, 320, 200, PasswordValidator.field_s);
             return;
           }
           return;

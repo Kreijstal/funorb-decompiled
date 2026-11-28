@@ -16,7 +16,7 @@ final class ei extends ug implements el {
           field_ob = (AudioOutput) null;
         }
         if (kc.field_o) {
-          KeyboardInput.field_a = bk.a(320, true, param1, oj.field_B);
+          KeyboardInput.field_a = EmailFormatValidator.a(320, true, param1, oj.field_B);
         } else {
           if (bj.field_m) {
             ji.field_e = qh.a(param1, (byte) 108);

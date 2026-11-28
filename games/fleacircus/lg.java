@@ -5,14 +5,14 @@ final class lg {
     static volatile int field_d;
     static String field_a;
     static bi[] field_c;
-    static ul field_b;
+    static LoginPanel field_b;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         field_c = null;
         field_b = null;
         if (param0 > -23) {
-          field_b = (ul) null;
+          field_b = (LoginPanel) null;
         }
     }
 
@@ -98,8 +98,8 @@ final class lg {
 
     final static void a(int param0, int param1) {
         CrossfadingMidiPcmStream.field_D = param1;
-        if (gg.field_h != null) {
-          gg.field_h.b(-114, param1);
+        if (DebouncedFieldValidator.field_h != null) {
+          DebouncedFieldValidator.field_h.b(-114, param1);
         }
         if (null != hh.field_b) {
           hh.field_b.a(param1, (byte) 63);

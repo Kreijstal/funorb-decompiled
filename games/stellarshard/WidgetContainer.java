@@ -586,7 +586,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(99, "error_js5connect_full");
                 if (null != var2) {
-                  ea.field_n = se.a(0, var2);
+                  MatchingFieldValidator.field_n = se.a(0, var2);
                 }
                 var2 = ca.a(103, "error_js5connect");
                 if (null != var2) {
@@ -629,7 +629,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 + 105, "ticketing_oneunread");
                 if (var2 != null) {
-                  lj.field_C = se.a(0, var2);
+                  DisplayNameSelectionPanel.field_C = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 123, "ticketing_xunread");
                 if (var2 != null) {
@@ -1651,7 +1651,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 ^ 127, "retry");
                 if (null != var2) {
-                  qb.field_l = se.a(param1 ^ 1, var2);
+                  EmailFormatValidator.field_l = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(119, "back");
                 if (null != var2) {
@@ -1971,7 +1971,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 ^ 127, "create_suggestions");
                 if (null != var2) {
-                  ic.field_b = se.a(param1 ^ 1, var2);
+                  DebouncedFieldValidator.field_b = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(115, "create_more_suggestions");
                 if (null != var2) {
@@ -2175,7 +2175,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(119, "create_alert_mismatch");
                 if (null != var2) {
-                  lc.field_o = se.a(0, var2);
+                  PasswordValidator.field_o = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 91, "create_passwordvalid");
                 if (null != var2) {
@@ -2355,7 +2355,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 ^ 113, "loading_extradata");
                 if (var2 != null) {
-                  lj.field_B = se.a(0, var2);
+                  DisplayNameSelectionPanel.field_B = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 107, "loading_languages");
                 if (null != var2) {
@@ -2375,7 +2375,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(125, "unpacking_models");
                 if (null != var2) {
-                  ea.field_k = se.a(0, var2);
+                  MatchingFieldValidator.field_k = se.a(0, var2);
                 }
                 var2 = ca.a(90, "unpacking_soundeffects");
                 if (var2 != null) {
@@ -2539,7 +2539,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 + 121, "endgame");
                 if (var2 != null) {
-                  kk.field_n = se.a(param1 ^ 1, var2);
+                  AgeValidator.field_n = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(param1 + 95, "endtutorial");
                 if (null != var2) {
@@ -3205,7 +3205,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(108, "fs_button_members");
                 if (null != var2) {
-                  kk.field_l = se.a(0, var2);
+                  AgeValidator.field_l = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 109, "fs_unavailable");
                 if (null != var2) {

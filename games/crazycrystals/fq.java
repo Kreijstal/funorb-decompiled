@@ -759,7 +759,7 @@ final class fq extends ea implements Cloneable {
           int var3_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var3 = null;
-          if (kd.field_n.position >= param0) {
+          if (ConfirmedEmailAvailabilityValidator.field_n.position >= param0) {
             return true;
           }
           if (oi.field_c == null) {
@@ -769,16 +769,16 @@ final class fq extends ea implements Cloneable {
           try {
             var3_int = oi.field_c.availableBytes(0);
             if (var3_int > 0) {
-              if (param0 - kd.field_n.position < var3_int) {
-                var3_int = -kd.field_n.position + param0;
+              if (param0 - ConfirmedEmailAvailabilityValidator.field_n.position < var3_int) {
+                var3_int = -ConfirmedEmailAvailabilityValidator.field_n.position + param0;
               }
-              oi.field_c.readFully(kd.field_n.payload, var3_int, 2034, kd.field_n.position);
+              oi.field_c.readFully(ConfirmedEmailAvailabilityValidator.field_n.payload, var3_int, 2034, ConfirmedEmailAvailabilityValidator.field_n.position);
               MidiPcmStream.field_y = lo.correctedCurrentTimeMillis((byte) -60);
-              kd.field_n.position = kd.field_n.position + var3_int;
-              if (param0 > kd.field_n.position) {
+              ConfirmedEmailAvailabilityValidator.field_n.position = ConfirmedEmailAvailabilityValidator.field_n.position + var3_int;
+              if (param0 > ConfirmedEmailAvailabilityValidator.field_n.position) {
                 return false;
               }
-              kd.field_n.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               return true;
             }
             if (0 <= var3_int &&

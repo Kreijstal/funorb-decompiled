@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class AccountNameAvailabilityValidator extends me {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static volatile boolean field_j;
     static String field_o;
     static int[] field_n;
@@ -24,7 +24,7 @@ final class AccountNameAvailabilityValidator extends me {
         field_k = null;
     }
 
-    final String b(int param0, String param1) {
+    final String getValidationMessage(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -112,12 +112,12 @@ final class AccountNameAvailabilityValidator extends me {
         }
     }
 
-    AccountNameAvailabilityValidator(rg param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final rc a(int param0, String param1) {
+    final rc getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -130,7 +130,7 @@ final class AccountNameAvailabilityValidator extends me {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!ck.a(var4, (byte) -114)) {
+          if (!DisplayNameSelectionPanel.a(var4, (byte) -114)) {
             stackIn_3_0 = SocketConnector.field_d;
             return stackIn_3_0;
           }

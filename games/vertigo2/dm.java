@@ -161,7 +161,7 @@ final class dm extends UiPanel {
                     var12++;
                   }
                   if (var21 != null &&
-                    wc.a(var21, true)) {
+                    PasswordValidator.a(var21, true)) {
                     var8[1][var13] = qe.field_V;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

@@ -236,32 +236,32 @@ final class RandomAccessCacheFile {
           var4 = fl.a(param0, (byte) 116) ? 1 : 0;
           var5 = new vg();
           var5.field_d = (short)param0.e(16, param1 + 144);
-          var5.field_g = ui.a(param0, -119, var5.field_g, 16);
-          var5.field_t = ui.a(param0, -103, var5.field_t, 16);
-          var5.field_q = ui.a(param0, -101, var5.field_q, 16);
+          var5.field_g = DebouncedFieldValidator.a(param0, -119, var5.field_g, 16);
+          var5.field_t = DebouncedFieldValidator.a(param0, -103, var5.field_t, 16);
+          var5.field_q = DebouncedFieldValidator.a(param0, -101, var5.field_q, 16);
           var5.field_x = (short)param0.e(16, -39);
-          var5.field_i = ui.a(param0, -95, var5.field_i, 16);
-          var5.field_w = ui.a(param0, param1 ^ 127, var5.field_w, 16);
-          var5.field_F = ui.a(param0, -126, var5.field_F, 16);
+          var5.field_i = DebouncedFieldValidator.a(param0, -95, var5.field_i, 16);
+          var5.field_w = DebouncedFieldValidator.a(param0, param1 ^ 127, var5.field_w, 16);
+          var5.field_F = DebouncedFieldValidator.a(param0, -126, var5.field_F, 16);
           if (var3 != 0) {
             var5.field_c = (short)param0.e(16, 117);
-            var5.field_L = ui.a(param0, -118, var5.field_L, 16);
-            var5.field_r = ui.a(param0, -122, var5.field_r, 16);
-            var5.field_D = ui.a(param0, -121, var5.field_D, 16);
-            var5.field_f = ui.a(param0, -97, var5.field_f, 16);
-            var5.field_k = ui.a(param0, -100, var5.field_k, 16);
-            var5.field_G = ui.a(param0, -104, var5.field_G, 16);
+            var5.field_L = DebouncedFieldValidator.a(param0, -118, var5.field_L, 16);
+            var5.field_r = DebouncedFieldValidator.a(param0, -122, var5.field_r, 16);
+            var5.field_D = DebouncedFieldValidator.a(param0, -121, var5.field_D, 16);
+            var5.field_f = DebouncedFieldValidator.a(param0, -97, var5.field_f, 16);
+            var5.field_k = DebouncedFieldValidator.a(param0, -100, var5.field_k, 16);
+            var5.field_G = DebouncedFieldValidator.a(param0, -104, var5.field_G, 16);
           }
           if (var4 != 0) {
             param0.e(16, -26);
-            var5.field_I = ui.a(param0, -102, var5.field_I, 16);
-            var5.field_H = ui.a(param0, param1 ^ 105, var5.field_H, 16);
-            var5.field_m = ui.a(param0, -111, var5.field_m, 16);
-            var5.field_n = ui.a(param0, -123, var5.field_n, 16);
-            var5.field_j = ui.a(param0, -95, var5.field_j, 16);
+            var5.field_I = DebouncedFieldValidator.a(param0, -102, var5.field_I, 16);
+            var5.field_H = DebouncedFieldValidator.a(param0, param1 ^ 105, var5.field_H, 16);
+            var5.field_m = DebouncedFieldValidator.a(param0, -111, var5.field_m, 16);
+            var5.field_n = DebouncedFieldValidator.a(param0, -123, var5.field_n, 16);
+            var5.field_j = DebouncedFieldValidator.a(param0, -95, var5.field_j, 16);
           }
           if (fl.a(param0, (byte) 121)) {
-            var5.field_M = ui.a(param0, -92, var5.field_M, 16);
+            var5.field_M = DebouncedFieldValidator.a(param0, -92, var5.field_M, 16);
           }
           if (fl.a(param0, (byte) 107)) {
             var5.field_z = hf.a(param1 + 24, var5.field_z, 16, param0);

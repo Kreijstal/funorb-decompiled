@@ -64,7 +64,7 @@ final class DisableSpecial extends SpecialOrder {
           }
           var11 = param1.requestFullscreenEnter(param5, param2, param4 ^ 124, param0, param3);
           while (var11.status == 0) {
-            gda.sleepMillis(false, 10L);
+            DisplayNameSelectionPanel.sleepMillis(false, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {

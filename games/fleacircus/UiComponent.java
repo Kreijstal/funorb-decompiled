@@ -456,7 +456,7 @@ class UiComponent extends IntrusiveNode {
           break;
         }
         var4 = new RgbSprite(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], ij.field_H[0], ob.field_a[0], var3);
-        c.o(-28210);
+        EditableTextField.o(-28210);
         if (param0 > 75) {
           return var4;
         }
@@ -479,7 +479,7 @@ class UiComponent extends IntrusiveNode {
     }
 
     UiComponent(String param0, kd param1) {
-        this(param0, nf.field_M.field_i, param1);
+        this(param0, DisplayNameSelectionPanel.field_M.field_i, param1);
     }
 
     final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
@@ -609,7 +609,7 @@ class UiComponent extends IntrusiveNode {
         }
         var5 = oe.a(param0 ^ 19007);
         if (var5 != null) {
-          nf.field_M.a(param0 + 13421772, aa.field_t, var5, gg.field_f);
+          DisplayNameSelectionPanel.field_M.a(param0 + 13421772, aa.field_t, var5, DebouncedFieldValidator.field_f);
         }
     }
 

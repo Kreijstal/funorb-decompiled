@@ -127,7 +127,7 @@ final class DynamicLight extends IntrusiveNode {
                 stackIn_45_0 = (0 != (var7 & 8));
                 da.field_i = stackIn_45_0;
                 stackIn_48_0 = (0 != (4 & var7));
-                ul.field_W = stackIn_48_0;
+                EditableTextField.field_W = stackIn_48_0;
                 if (!da.field_i) {
                 }
               }
@@ -141,8 +141,8 @@ final class DynamicLight extends IntrusiveNode {
                   ka.field_F[var8] = e.field_c.readByte(true);
                 }
               }
-              qc.field_m = e.field_c.readString(true);
-              var11 = (CharSequence) ((Object) qc.field_m);
+              ConfirmedEmailAvailabilityValidator.field_m = e.field_c.readString(true);
+              var11 = (CharSequence) ((Object) ConfirmedEmailAvailabilityValidator.field_m);
               dc.field_J = hh.a(0, var11);
               field_q = e.field_c.readUnsignedByte(32);
               lk.field_d = wd.field_f;
@@ -155,10 +155,10 @@ final class DynamicLight extends IntrusiveNode {
               }
               sg.field_y = false;
               if (var6 != null) {
-                qc.a(var6, ii.b(false), -1);
+                ConfirmedEmailAvailabilityValidator.a(var6, ii.b(false), -1);
               }
               if (sg.field_x <= 0 &&
-                !ul.field_W) {
+                !EditableTextField.field_W) {
                 try {
                   JavaScriptBridge.callWithoutArguments(93, "unzap", ii.b(false));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -196,7 +196,7 @@ final class DynamicLight extends IntrusiveNode {
               if (7 == Confined.field_F) {
                 Confined.field_F = 3;
               }
-              gl.field_k = e.field_c.readString(true);
+              PasswordValidator.field_k = e.field_c.readString(true);
               sg.field_y = false;
               stackIn_87_0 = Confined.field_F;
               return stackIn_87_0;
@@ -204,9 +204,9 @@ final class DynamicLight extends IntrusiveNode {
             if (kl.field_G == null) {
               if (sg.field_y) {
                 if (30000L < la.h(124)) {
-                  gl.field_k = HomingProjectile.field_S;
+                  PasswordValidator.field_k = HomingProjectile.field_S;
                 } else {
-                  gl.field_k = ka.field_G;
+                  PasswordValidator.field_k = ka.field_G;
                 }
                 sg.field_y = false;
                 stackIn_95_0 = 3;

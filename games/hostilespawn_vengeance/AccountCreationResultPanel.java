@@ -4,7 +4,7 @@
 final class AccountCreationResultPanel extends dg implements qk {
     private boolean field_wb;
     private boolean field_vb;
-    private mk field_xb;
+    private AccountRegistrationPanel field_xb;
     static RgbSprite field_zb;
     static boolean field_ub;
     static long field_yb;
@@ -122,7 +122,7 @@ final class AccountCreationResultPanel extends dg implements qk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -21) {
-            stackIn_4_0 = ig.a((byte) 28, param1, 0, param1.length);
+            stackIn_4_0 = EditableTextField.a((byte) 28, param1, 0, param1.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -199,7 +199,7 @@ final class AccountCreationResultPanel extends dg implements qk {
 
     private final void showAccountCreationResult(AccountServiceResult param0, boolean param1, boolean param2) {
         boolean stackIn_4_1 = false;
-        mk stackIn_10_0 = null;
+        AccountRegistrationPanel stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
@@ -230,7 +230,7 @@ final class AccountCreationResultPanel extends dg implements qk {
               if (null != this.field_xb) {
                 stackIn_10_0 = this.field_xb;
                 stackIn_11_1 = !(param1);
-                ((mk) (Object) stackIn_10_0).a(stackIn_11_1);
+                ((AccountRegistrationPanel) (Object) stackIn_10_0).a(stackIn_11_1);
               }
             }
           }
@@ -276,7 +276,7 @@ final class AccountCreationResultPanel extends dg implements qk {
         }
     }
 
-    AccountCreationResultPanel(gg param0, mk param1) {
+    AccountCreationResultPanel(gg param0, AccountRegistrationPanel param1) {
         super(param0, pe.field_eb, ud.field_a, false, false);
         try {
           this.field_xb = param1;

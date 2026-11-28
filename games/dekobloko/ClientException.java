@@ -9,7 +9,7 @@ final class ClientException {
     static String[] stringArrayState0006;
     static SceneWidget[] sceneWidgetArrayState0001;
 
-    final static void performAction0366(BitmapFont bitmapFontArgument1, int integerArgument2, int integerArgument3, MixedSupport015 mixedSupport015Argument4, MixedSupport015 mixedSupport015Argument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, int integerArgument8, BitmapFont bitmapFontArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, boolean booleanArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20) {
+    final static void performAction0366(BitmapFont bitmapFontArgument1, int integerArgument2, int integerArgument3, NineSliceSprite mixedSupport015Argument4, NineSliceSprite mixedSupport015Argument5, NineSliceSprite mixedSupport015Argument6, int integerArgument7, int integerArgument8, BitmapFont bitmapFontArgument9, int integerArgument10, int integerArgument11, int integerArgument12, int integerArgument13, boolean booleanArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -26,11 +26,11 @@ final class ClientException {
         try {
           SoftwareFramebuffer.bitmapFontState0021 = bitmapFontArgument1;
           if (booleanArgument14) {
-            ClientException.performAction0366((BitmapFont) null, 99, -109, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, 54, -67, (BitmapFont) null, 70, -37, -96, -83, true, 8, 108, -4, 38, -94, -69);
+            ClientException.performAction0366((BitmapFont) null, 99, -109, (NineSliceSprite) null, (NineSliceSprite) null, (NineSliceSprite) null, 54, -67, (BitmapFont) null, 70, -37, -96, -83, true, 8, 108, -4, 38, -94, -69);
           }
           NetworkSupport001.bitmapFontState0003 = bitmapFontArgument9;
           MixedSupport042.performAction0539(integerArgument15, integerArgument18, integerArgument20, 0, integerArgument11);
-          MixedSupport142.performAction1758(mixedSupport015Argument5, integerArgument12, integerArgument2, -11);
+          ReturnedShapeUpdate.performAction1758(mixedSupport015Argument5, integerArgument12, integerArgument2, -11);
           ByteStorage.performAction1061(integerArgument10, integerArgument16, (byte) -118, mixedSupport015Argument6, integerArgument3, mixedSupport015Argument4);
           ValidationStatus.performAction1568(integerArgument8, -25073, integerArgument19);
           MixedSupport106.performAction1385(integerArgument17, -115, integerArgument7, integerArgument13);
@@ -77,7 +77,7 @@ final class ClientException {
         sceneWidgetArrayState0001 = null;
         stringArrayState0006 = null;
         if (byteArgument1 != -68) {
-          ClientException.performAction0366((BitmapFont) null, -53, 78, (MixedSupport015) null, (MixedSupport015) null, (MixedSupport015) null, -74, -100, (BitmapFont) null, 108, -57, 96, -30, true, 2, 34, -16, -53, -123, 32);
+          ClientException.performAction0366((BitmapFont) null, -53, 78, (NineSliceSprite) null, (NineSliceSprite) null, (NineSliceSprite) null, -74, -100, (BitmapFont) null, 108, -57, 96, -30, true, 2, 34, -16, -53, -123, 32);
         }
     }
 

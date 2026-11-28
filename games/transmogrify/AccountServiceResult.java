@@ -26,7 +26,7 @@ final class AccountServiceResult {
           var4 = Bzip2State.field_K[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = rg.field_D[vg.c((int) var4[var6], 255)];
+            var5[var6] = EditableTextField.field_D[vg.c((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(NetworkArchiveRequest.field_y, ll.field_U, BufferedSocket.field_j[var2], Bzip2State.field_a[var2], ql.field_b[var2], wk.field_b[var2], var5);
         }

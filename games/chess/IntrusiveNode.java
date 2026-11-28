@@ -28,9 +28,9 @@ class IntrusiveNode {
     final static ci b(byte param0) {
         if (param0 != 19) {
           field_a = (int[]) null;
-          return db.j(param0 ^ -20);
+          return ConfirmedEmailAvailabilityValidator.j(param0 ^ -20);
         }
-        return db.j(param0 ^ -20);
+        return ConfirmedEmailAvailabilityValidator.j(param0 ^ -20);
     }
 
     final boolean isLinked(int obfuscationGuard) {

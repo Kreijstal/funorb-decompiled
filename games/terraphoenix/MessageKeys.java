@@ -217,7 +217,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("idlemessage20min", false);
                 if (null != var2) {
-                  ae.field_F = ll.a(0, var2);
+                  DisplayNameSelectionPanel.field_F = ll.a(0, var2);
                 }
                 var2 = bc.a("error_js5crc", false);
                 if (null != var2) {
@@ -245,7 +245,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_ineligible", false);
                 if (var2 != null) {
-                  ib.field_ab = ll.a(0, var2);
+                  ValidatedTextField.field_ab = ll.a(0, var2);
                 }
                 var2 = bc.a("usernameprompt", false);
                 if (null != var2) {
@@ -1197,7 +1197,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("playfreeversion", false);
                 if (var2 != null) {
-                  pl.field_V = ll.a(0, var2);
+                  AccountRegistrationPanel.field_V = ll.a(0, var2);
                 }
                 var2 = bc.a("reloadgame", false);
                 if (null != var2) {
@@ -1574,7 +1574,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_password_confirm", false);
                 if (null != var2) {
-                  ej.field_N = ll.a(0, var2);
+                  EditableTextField.field_N = ll.a(0, var2);
                 }
                 var2 = bc.a("create_email", false);
                 if (var2 != null) {
@@ -1746,7 +1746,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_username_unavailable", false);
                 if (var2 != null) {
-                  mg.field_m = ll.a(0, var2);
+                  MatchingFieldValidator.field_m = ll.a(0, var2);
                 }
                 var2 = bc.a("create_username_available", false);
                 if (null != var2) {
@@ -1810,7 +1810,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_alert_invalidage", false);
                 if (var2 != null) {
-                  le.field_m = ll.a(param0 - 3, var2);
+                  AgeValidator.field_m = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("create_alert_yearrange", false);
                 if (var2 != null) {
@@ -1950,7 +1950,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("waitingfor_levels", false);
                 if (var2 != null) {
-                  ej.field_R = ll.a(param0 ^ 3, var2);
+                  EditableTextField.field_R = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("waitingfor_extradata", false);
                 if (null != var2) {
@@ -2230,7 +2230,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("returntogame", false);
                 if (var2 != null) {
-                  ib.field_bb = ll.a(0, var2);
+                  ValidatedTextField.field_bb = ll.a(0, var2);
                 }
                 var2 = bc.a("endgameresign", false);
                 if (null != var2) {
@@ -2664,27 +2664,27 @@ final class MessageKeys {
                 }
                 var2 = bc.a("quickchat_shortcut_keys,0", false);
                 if (var2 != null) {
-                  uh.field_J[0] = ll.a(0, var2);
+                  LoginPanel.field_J[0] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,1", false);
                 if (var2 != null) {
-                  uh.field_J[1] = ll.a(0, var2);
+                  LoginPanel.field_J[1] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,2", false);
                 if (null != var2) {
-                  uh.field_J[2] = ll.a(0, var2);
+                  LoginPanel.field_J[2] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,3", false);
                 if (var2 != null) {
-                  uh.field_J[3] = ll.a(sl.a(param0, 3), var2);
+                  LoginPanel.field_J[3] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,4", false);
                 if (var2 != null) {
-                  uh.field_J[4] = ll.a(0, var2);
+                  LoginPanel.field_J[4] = ll.a(0, var2);
                 }
                 var2 = bc.a("quickchat_shortcut_keys,5", false);
                 if (var2 != null) {
-                  uh.field_J[5] = ll.a(0, var2);
+                  LoginPanel.field_J[5] = ll.a(0, var2);
                 }
                 var2 = bc.a("keychar_the_character_under_questionmark", false);
                 if (null != var2) {
@@ -2944,11 +2944,11 @@ final class MessageKeys {
                 }
                 var2 = bc.a("rating_mode_long_name,0", false);
                 if (var2 != null) {
-                  le.field_o[0] = ll.a(0, var2);
+                  AgeValidator.field_o[0] = ll.a(0, var2);
                 }
                 var2 = bc.a("rating_mode_long_name,1", false);
                 if (null != var2) {
-                  le.field_o[1] = ll.a(0, var2);
+                  AgeValidator.field_o[1] = ll.a(0, var2);
                 }
                 var2 = bc.a("graphics_config_fixed_size", false);
                 if (null != var2) {

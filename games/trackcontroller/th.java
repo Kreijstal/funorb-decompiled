@@ -19,13 +19,13 @@ final class th extends IntrusiveNode {
     }
 
     final static kh f(int param0) {
-        String var1 = l.h(0);
+        String var1 = EmailFormatValidator.h(0);
         if (var1 != null &&
           0 <= var1.indexOf('@')) {
           var1 = "";
         }
         if (param0 >= 36) {
-          return new kh(l.h(0), cf.a((byte) 41));
+          return new kh(EmailFormatValidator.h(0), cf.a((byte) 41));
         }
         return (kh) null;
     }

@@ -8,7 +8,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != wj.field_k) {
+          if (null != TextFieldValidator.field_k) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               ak.isSupportedCp1252KeyCharacter(-1, (char) var2_int)) {
@@ -39,7 +39,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         int var3Lifetime1;
         try {
-          if (wj.field_k == null) {
+          if (TextFieldValidator.field_k == null) {
             return;
           }
           WeightedObjectCache.field_c = 0;
@@ -99,7 +99,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != wj.field_k) {
+          if (null != TextFieldValidator.field_k) {
             WeightedObjectCache.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -202,7 +202,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (wj.field_k != null) {
+          if (TextFieldValidator.field_k != null) {
             vf.field_a = -1;
           }
         } catch (RuntimeException runtimeException) {

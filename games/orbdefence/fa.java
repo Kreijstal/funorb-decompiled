@@ -55,7 +55,7 @@ final class fa {
             return;
           }
           if (param1 <= 105) {
-            tl.field_g = hi.createAccountSuggestionsResult(2, param2);
+            tl.field_g = TextFieldValidator.createAccountSuggestionsResult(2, param2);
             return;
           }
           tl.field_g = oe.createAccountErrorResult(param1, param3, -3);

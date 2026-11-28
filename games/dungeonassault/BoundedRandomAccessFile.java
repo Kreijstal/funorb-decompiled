@@ -141,7 +141,7 @@ final class BoundedRandomAccessFile {
           field_c = (String) null;
         }
         if (param1 != -1) {
-          bf.field_f[param1].a(param2);
+          bf.field_f[param1].renderScreen(param2);
         } else {
           tb.a(param2, 1);
         }

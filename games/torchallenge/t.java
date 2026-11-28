@@ -59,14 +59,14 @@ abstract class t {
         we.field_c[6] = new String[]{ImageProducerRasterBuffer.field_o};
         we.field_c[0] = new String[]{si.field_M};
         we.field_c[12] = new String[]{kj.field_H};
-        we.field_c[3] = new String[]{ui.field_g};
+        we.field_c[3] = new String[]{DebouncedFieldValidator.field_g};
         we.field_c[1] = new String[]{eb.field_i};
         we.field_c[11] = new String[]{ResourceArchive.field_d};
         we.field_c[17] = new String[]{ik.field_e};
         we.field_c[20] = new String[]{wf.field_f, rc.field_q};
         we.field_c[31] = new String[]{gh.field_i, o.field_n};
         we.field_c[18] = new String[]{hl.field_a};
-        we.field_c[19] = new String[]{ui.field_d};
+        we.field_c[19] = new String[]{DebouncedFieldValidator.field_d};
         we.field_c[36] = new String[]{be.field_a};
         we.field_c[29] = new String[]{me.field_a[1]};
         we.field_c[30] = new String[]{me.field_a[2]};

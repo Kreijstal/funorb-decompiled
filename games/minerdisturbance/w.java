@@ -11,7 +11,7 @@ final class w extends tn {
     static String field_X;
     static String[] field_P;
     private String field_U;
-    private jm field_V;
+    private FieldValidator field_V;
     static int[] field_R;
     static int field_S;
 
@@ -173,7 +173,7 @@ final class w extends tn {
         var28 = null;
         var33 = null;
         var13 = MinerDisturbance.field_ab;
-        var6 = this.field_V.b(24595);
+        var6 = this.field_V.getValidationStatus(24595);
         if (nn.field_f == var6) {
           var17 = in.field_c;
           if (!var17.equals(this.field_s)) {
@@ -181,7 +181,7 @@ final class w extends tn {
             this.a((byte) -108);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_V.b(24595);
+          var6 = this.field_V.getValidationStatus(24595);
           var18_ref = (cf) ((Object) this.field_A);
           var9 = this.field_u + param1;
           var10 = var18_ref.b(100, (fe) (this), param2) + (var18_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
@@ -231,7 +231,7 @@ final class w extends tn {
             this.a((byte) -108);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_V.b(24595);
+          var6 = this.field_V.getValidationStatus(24595);
           var23_ref = (cf) ((Object) this.field_A);
           var9Lifetime1 = this.field_u + param1;
           var10Lifetime1 = var23_ref.b(100, (fe) (this), param2) + (var23_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
@@ -274,14 +274,14 @@ final class w extends tn {
           this.field_Q.drawAdditive(var9Lifetime1 - (var26.field_x >> 1), var10Lifetime1 - var26.field_A, 256);
           return;
         }
-        var27 = this.field_V.a(param0 + 7316);
+        var27 = this.field_V.getValidationMessage(param0 + 7316);
         if (var27 != null) {
           if (!var27.equals(this.field_s)) {
             this.field_s = var27;
             this.a((byte) -108);
           }
           super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_V.b(24595);
+          var6Lifetime1 = this.field_V.getValidationStatus(24595);
           var28_ref = (cf) ((Object) this.field_A);
           var9Lifetime2 = this.field_u + param1;
           var10Lifetime2 = var28_ref.b(100, (fe) (this), param2) + (var28_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
@@ -330,7 +330,7 @@ final class w extends tn {
           this.a((byte) -108);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_V.b(24595);
+        var6Lifetime2 = this.field_V.getValidationStatus(24595);
         var33_ref = (cf) ((Object) this.field_A);
         var9Lifetime3 = this.field_u + param1;
         var10Lifetime3 = var33_ref.b(100, (fe) (this), param2) + (var33_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
@@ -374,7 +374,7 @@ final class w extends tn {
         this.field_Q.drawAdditive(var9Lifetime3 - (var36.field_x >> 1), var10Lifetime3 - var36.field_A, 256);
     }
 
-    w(jm param0, String param1, int param2, int param3, int param4, int param5) {
+    w(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, oa.a(0));
         try {
           this.field_U = param1;

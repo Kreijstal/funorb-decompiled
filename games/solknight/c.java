@@ -38,7 +38,7 @@ final class c extends UiWidget {
         int var12Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
         var14 = new Sprite(2 * this.field_N, this.field_x);
-        cl.a(-112, var14);
+        AgeValidator.a(-112, var14);
         var5 = this.field_x >> 1;
         for (var6 = 0; this.field_x > var6; var6++) {
           var7 = (var6 >> 1) * (-1 + 2 * this.field_N) % (2 * this.field_N);
@@ -160,7 +160,7 @@ final class c extends UiWidget {
           }
           MidiPcmStream.e(4096);
           if (SoftwareRasterizer.field_b <= this.field_P.field_p + param3) {
-            cl.a(param0 ^ -100, this.field_G);
+            AgeValidator.a(param0 ^ -100, this.field_G);
             param2.d(-this.field_D, 0);
             param2.d(-this.field_D + 2 * this.field_N, 0);
             this.field_A.drawMultiply(0, 0);
@@ -168,7 +168,7 @@ final class c extends UiWidget {
             this.field_G.d(param3, param1);
           }
           if (SoftwareRasterizer.field_k >= -this.field_P.field_p + var5_int) {
-            cl.a(param0 - 119, this.field_G);
+            AgeValidator.a(param0 - 119, this.field_G);
             for (var7 = this.field_D + (-this.field_P.field_p + this.field_t); var7 > 2 * this.field_N; var7 = var7 - this.field_N * 2) {
             }
             param2.d(-var7, 0);
@@ -271,7 +271,7 @@ final class c extends UiWidget {
           return (Sprite) null;
         }
         Sprite var3 = new Sprite(var2, this.field_x);
-        cl.a(-98, var3);
+        AgeValidator.a(-98, var3);
         for (var4 = 0; this.field_x > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_x));

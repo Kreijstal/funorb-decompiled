@@ -34,7 +34,7 @@ final class MixedSupport028 {
         if (this.integerState0172 >= 4) {
           integerLocal1 = 6;
         }
-        return UiComponentPart016.computeInteger0830((byte) 81, integerLocal1, UiComponentPart031.randomState0003) + 24;
+        return UiComponentPart016.computeInteger0830((byte) 81, integerLocal1, AccountRegistrationPanel.randomState0003) + 24;
     }
 
     public static void clearStaticReferences(int integerArgument1) {

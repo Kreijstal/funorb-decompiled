@@ -76,20 +76,20 @@ final class mi extends IntrusiveNode {
           if (null != hh.field_b) {
             jd.a(param2, 1048576, (byte) 102, param3, param1);
           }
-          if (gg.field_h == null) {
+          if (DebouncedFieldValidator.field_h == null) {
             return;
           }
           var4 = db.field_J;
           synchronized (var4) {
-            gg.field_h.a(param1, true, -1);
+            DebouncedFieldValidator.field_h.a(param1, true, -1);
             if (param3 == AccountRequestState.field_b) {
               return;
             }
-            gg.field_h.stopPlayback(-398);
+            DebouncedFieldValidator.field_h.stopPlayback(-398);
             db.field_J.flushAndMarkDrainCheck();
             AccountRequestState.field_b = param3;
             if (AccountRequestState.field_b != null) {
-              gg.field_h.a(param2, 68, AccountRequestState.field_b);
+              DebouncedFieldValidator.field_h.a(param2, 68, AccountRequestState.field_b);
             }
           }
           return;

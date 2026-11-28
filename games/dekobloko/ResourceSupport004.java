@@ -55,8 +55,8 @@ final class ResourceSupport004 extends MixedSupport115 {
         return MixedSupport003.integerState0018;
     }
 
-    final static void performAction1249(SceneWidgetPart013 sceneWidgetPart013Argument1, byte byteArgument2) {
-        SceneWidgetPart013 sceneWidgetPart013Local1 = null;
+    final static void performAction1249(LobbyRoomRow sceneWidgetPart013Argument1, byte byteArgument2) {
+        LobbyRoomRow sceneWidgetPart013Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
         int stackIntegerLocal4 = 0;
@@ -70,10 +70,10 @@ final class ResourceSupport004 extends MixedSupport115 {
           if (byteArgument2 != -50) {
             return;
           }
-          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.beginBackward((byte) -99));
+          sceneWidgetPart013Local1 = (LobbyRoomRow) (MixedSupport051.nodeDequeState0009.beginBackward((byte) -99));
           while (sceneWidgetPart013Local1 != null) {
-            if (sceneWidgetPart013Local1.computeBoolean1708(sceneWidgetPart013Argument1, false)) {
-              sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport051.nodeDequeState0009.nextBackward(true));
+            if (sceneWidgetPart013Local1.sortsBeforeRoom(sceneWidgetPart013Argument1, false)) {
+              sceneWidgetPart013Local1 = (LobbyRoomRow) (MixedSupport051.nodeDequeState0009.nextBackward(true));
               continue;
             }
             break;

@@ -30,8 +30,8 @@ final class of {
         de.field_c[15] = BufferedRandomAccessFile.field_b;
         de.field_c[5] = ia.field_i;
         de.field_c[6] = ia.field_i;
-        de.field_c[0] = vh.field_j;
-        de.field_c[17] = ck.field_H;
+        de.field_c[0] = EmailFormatValidator.field_j;
+        de.field_c[17] = DisplayNameSelectionPanel.field_H;
         de.field_c[16] = nh.field_l;
         de.field_c[11] = cc.field_c;
         de.field_c[20] = ContextualRuntimeException.field_e;

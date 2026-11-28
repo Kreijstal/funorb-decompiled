@@ -17,12 +17,12 @@ final class qk extends ButtonWidget {
           if (oe.field_b == IndexedSpriteState.field_h) {
             return WhirlpoolDigest.field_f;
           }
-          return lf.field_T;
+          return ValidatedTextField.field_T;
         }
         if (oe.field_b == IndexedSpriteState.field_h) {
           return WhirlpoolDigest.field_f;
         }
-        return lf.field_T;
+        return ValidatedTextField.field_T;
     }
 
     final static String a(int param0, CharSequence param1) {

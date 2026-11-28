@@ -46,7 +46,7 @@ final class jk {
           }
           int var2 = -45 / ((26 - param0) / 52);
           var1 = fe.b((byte) -127);
-          AccountCreationResultPanel.field_ib = new pk(var1, (String) null, true, false, false);
+          AccountCreationResultPanel.field_ib = new LoginPanel(var1, (String) null, true, false, false);
           bm.field_d.b((byte) 74, (pj) (kg.field_j));
           kg.field_j.a(false, AccountCreationResultPanel.field_ib);
           kg.field_j.m(0);
@@ -121,10 +121,10 @@ final class jk {
         if (this.field_l) {
         } else {
           if (this.field_n > bd.field_k) {
-            em.field_r = (-bd.field_k + this.field_n) / 2;
+            PasswordValidator.field_r = (-bd.field_k + this.field_n) / 2;
           } else {
             if (this.field_n > 0) {
-              em.field_r = 0;
+              PasswordValidator.field_r = 0;
             }
           }
           if (bd.field_k != this.field_e ||
@@ -261,7 +261,7 @@ final class jk {
               pg.field_c.writePrefixedString(false, var14);
               pg.field_c.writePrefixedString(false, var8);
               var15 = (CharSequence) ((Object) param3);
-              pg.field_c.writePrefixedString(false, wb.a(var15, 122));
+              pg.field_c.writePrefixedString(false, DebouncedFieldValidator.a(var15, 122));
               pg.field_c.writeShort((byte) -60, param1);
               pg.field_c.writeByte(param0, -60);
               pg.field_c.writeByte(var9, param6 ^ 23799);
@@ -444,7 +444,7 @@ final class jk {
           this.field_q.a((byte) 53, var3, var2);
         }
         if (this.field_n > 0) {
-          em.field_r = (this.field_n - bd.field_k) / 2;
+          PasswordValidator.field_r = (this.field_n - bd.field_k) / 2;
         }
     }
 

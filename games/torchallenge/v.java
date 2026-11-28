@@ -18,7 +18,7 @@ abstract class v extends b {
         tc var4 = new tc();
         var4.field_n = new int[param0];
         var4.field_j = param3;
-        gf.field_q.addLast(var4, -104);
+        MatchingFieldValidator.field_q.addLast(var4, -104);
         ue.a(var4, param1 ^ 258, param2);
         if (param1 != 256) {
           v.b(-126, -115, -75, 79, 102);
@@ -232,13 +232,13 @@ abstract class v extends b {
     }
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
-        fg.i(126);
+        LoginPanel.i(126);
         t.field_b.i(param1 + 8389929);
         if (param1 != -24) {
           return;
         }
         try {
-          MidiPcmStream.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
+          MidiPcmStream.field_O = new LoginPanel(lg.field_b, (String) null, eb.field_m, param2, param0);
           bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {
@@ -287,7 +287,7 @@ abstract class v extends b {
         if (param1 < 66) {
           return (Sprite[]) null;
         }
-        return ma.a(param0, param3, 1, param2, true);
+        return TextFieldValidator.a(param0, param3, 1, param2, true);
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
@@ -421,7 +421,7 @@ abstract class v extends b {
           GameApplet.a(0, param3);
           wl.a(-2681, param3);
           u.a(true, param3);
-          dg.k(-50);
+          AccountRegistrationPanel.k(-50);
           td.b((byte) 112);
           if (param0 != 127) {
             v.a(30, -88, 66, -60);
@@ -541,13 +541,13 @@ abstract class v extends b {
 
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$b1efba5c64a3(boolean param0, int param1, boolean param2, String param3) {
-        fg.i(126);
+        LoginPanel.i(126);
         t.field_b.i(param1 + 8389929);
         if (param1 != -24) {
           return;
         }
         try {
-          MidiPcmStream.field_O = new fg(lg.field_b, (String) null, eb.field_m, param2, param0);
+          MidiPcmStream.field_O = new LoginPanel(lg.field_b, (String) null, eb.field_m, param2, param0);
           bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {

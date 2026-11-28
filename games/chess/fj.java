@@ -41,7 +41,7 @@ final class fj {
     }
 
     final static void a(int param0, int param1, int param2) {
-        BitPacketBuffer var3 = qn.field_U;
+        BitPacketBuffer var3 = EditableTextField.field_U;
         var3.writeCipheredByte(param0, -109);
         var3.writeByte(param1, (byte) -79);
         var3.writeByte(8, (byte) -113);
@@ -133,9 +133,9 @@ final class fj {
           if (var9 != 0) {
             var5++;
             if (null == var8_ref_ld.field_f ||
-              tj.field_l) {
+              EmailFormatValidator.field_l) {
               if (var8_ref_ld.field_f == null) {
-                s.field_O = s.field_O + 1;
+                DisplayNameSelectionPanel.field_O = DisplayNameSelectionPanel.field_O + 1;
               }
               var10 = mn.a((byte) -30, var8_ref_ld);
               var11 = var10 + lh.a(var8_ref_ld.field_n);
@@ -166,12 +166,12 @@ final class fj {
         var8Lifetime1 = ac.field_j.field_Kb.field_pb + ac.field_j.field_Kb.field_N - (-var6 + var7Lifetime1);
         ac.field_j.field_Kb.field_V = ac.field_j.field_Kb.field_V + var8Lifetime1;
         ac.field_j.field_Kb.field_pb = ac.field_j.field_Kb.field_pb - var8Lifetime1;
-        if (tj.field_l) {
+        if (EmailFormatValidator.field_l) {
           ac.field_j.field_Kb.field_pb = var7Lifetime1;
         }
         ac.field_j.field_Kb.field_N = var7Lifetime1 - ac.field_j.field_Kb.field_pb;
-        if (tj.field_l) {
-          tj.field_l = false;
+        if (EmailFormatValidator.field_l) {
+          EmailFormatValidator.field_l = false;
           ac.field_j.field_Kb.field_V = -ac.field_j.field_Kb.field_pb + ac.field_j.field_Jb.field_pb;
           fl.field_j = true;
           ac.field_j.field_Kb.field_vb = 0;

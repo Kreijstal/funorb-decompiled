@@ -144,7 +144,7 @@ final class mn extends wn {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = ef.field_j;
+              stackIn_8_0 = AchievementNotification.field_j;
               return stackIn_8_0;
             }
             if (param1 != 19525) {
@@ -214,7 +214,7 @@ final class mn extends wn {
               var3 = "[" + DirectByteStorage.field_c + "] ";
             }
             if (param1.field_k == 1) {
-              var3 = "[" + oc.a(fb.field_D, new String[]{param1.field_b}, (byte) -122) + "] ";
+              var3 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{param1.field_b}, (byte) -122) + "] ";
             }
             if (param1.field_k == 4 &&
               kb.field_P != null) {
@@ -230,9 +230,9 @@ final class mn extends wn {
             if (!param1.field_d) {
               if (0 == param1.field_e &&
                 param1.field_q == 0) {
-                var3 = oc.a(vf.field_d, new String[]{(String) (var2)}, (byte) -61);
+                var3 = MatchingFieldValidator.a(vf.field_d, new String[]{(String) (var2)}, (byte) -61);
               } else {
-                var3 = oc.a(sa.field_d, new String[]{(String) (var2)}, (byte) -54);
+                var3 = MatchingFieldValidator.a(sa.field_d, new String[]{(String) (var2)}, (byte) -54);
               }
             }
           }

@@ -46,7 +46,7 @@ class ph extends qj implements ga {
 
     final void o(int param0) {
         this.field_kb.b(2121792, 2, 4210752);
-        kj var2 = new kj(this, this.field_fb, cf.field_p);
+        kj var2 = new kj(this, this.field_fb, ConfirmedEmailAvailabilityValidator.field_p);
         if (param0 >= 121) {
           var2.a(fd.field_b, 13759, 15);
           this.c(20317, var2);
@@ -74,7 +74,7 @@ class ph extends qj implements ga {
           return;
         }
         if (this.field_lb) {
-          ng.h((byte) -58);
+          ValidatedTextField.h((byte) -58);
           return;
         }
     }

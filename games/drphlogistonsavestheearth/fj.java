@@ -123,10 +123,10 @@ final class fj extends IntrusiveNode {
 
     final static a f(int param0) {
         if (param0 == 36) {
-          return new a(nf.e((byte) 127), mj.b((byte) 114));
+          return new a(MatchingFieldValidator.e((byte) 127), mj.b((byte) 114));
         }
         field_i = (String[]) null;
-        return new a(nf.e((byte) 127), mj.b((byte) 114));
+        return new a(MatchingFieldValidator.e((byte) 127), mj.b((byte) 114));
     }
 
     static {

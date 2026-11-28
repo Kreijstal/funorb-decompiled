@@ -13,15 +13,15 @@ final class eh {
         nf.field_S = nf.field_S + (param1.readUnsignedShort(-105) << 2);
         var2_int = param1.readUnsignedByte(255);
         nf.field_S = nf.field_S + (var2_int >> 6);
-        vg.field_P = var2_int << 15 & 2064384;
-        vg.field_P = vg.field_P + (param1.readUnsignedByte(255) << 7);
+        EditableTextField.field_P = var2_int << 15 & 2064384;
+        EditableTextField.field_P = EditableTextField.field_P + (param1.readUnsignedByte(255) << 7);
         var2_int = param1.readUnsignedByte(255);
         if (param0 <= 51) {
           return;
         }
         try {
           fh.field_a = var2_int << 16 & 65536;
-          vg.field_P = vg.field_P + (var2_int >> 1);
+          EditableTextField.field_P = EditableTextField.field_P + (var2_int >> 1);
           fh.field_a = fh.field_a + param1.readUnsignedShort(40);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "eh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

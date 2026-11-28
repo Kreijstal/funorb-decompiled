@@ -9,7 +9,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static int field_b;
     static RgbSprite field_a;
 
-    final static void a(int param0, boolean param1, oc param2, oc param3, int param4, double param5, oc param6, oj param7, double param8, int param9, int param10) {
+    final static void a(int param0, boolean param1, GridPoint param2, GridPoint param3, int param4, double param5, GridPoint param6, oj param7, double param8, int param9, int param10) {
         og dupTemp$0 = null;
         og dupTemp$1 = null;
         og dupTemp$2 = null;
@@ -118,8 +118,8 @@ final class ProxyAuthenticationRequiredException extends IOException {
               20 > param7.field_I) {
               param7.field_I = param7.field_I + 1;
             }
-            param6.a((byte) 46, param2);
-            param6.b(param3, 24161);
+            param6.copyCoordinatesFrom((byte) 46, param2);
+            param6.subtractCoordinates(param3, 24161);
             if (param7.field_e > 0) {
               param7.field_e = param7.field_e - 1;
             }
@@ -154,7 +154,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                             var18 >= var25.field_j.field_e &&
                             var25.field_j.field_g >= var19 &&
                             var20 >= var25.field_j.field_g)) {
-                            param6.a((byte) 46, var25.field_j);
+                            param6.copyCoordinatesFrom((byte) 46, var25.field_j);
                             var16 = 1;
                             decompiledFrameCompleted0 = false;
                             break;
@@ -186,7 +186,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                       var18 >= var26.field_j.field_e &&
                       var26.field_j.field_g >= var19 &&
                       var20 >= var26.field_j.field_g)) {
-                      param6.a((byte) 46, var26.field_j);
+                      param6.copyCoordinatesFrom((byte) 46, var26.field_j);
                       var16 = 1;
                       break;
                     }
@@ -209,7 +209,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                   }
                   param7.a(225, (double)(var21Lifetime1 + (-32 + var15)), 2);
                 } else {
-                  var21_double = el.a((double)param3.field_e, (double)param6.field_e, 16, (double)param3.field_g, (double)param6.field_g);
+                  var21_double = ProxySocketFactory.a((double)param3.field_e, (double)param6.field_e, 16, (double)param3.field_g, (double)param6.field_g);
                   var23 = -var15 + (int)var21_double;
                   if (128 <= var23) {
                     var23 -= 256;
@@ -235,7 +235,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 param7.field_e = 32;
                 for (var21Lifetime2 = -10; var21Lifetime2 <= 10; var21Lifetime2 += 2) {
                   jn.field_F[ib.field_c].field_c = param7.field_c + 1.5 * (double)var21Lifetime2;
-                  jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                  jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                   jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                   jn.field_F[ib.field_c].field_e = 0;
                   jn.field_F[ib.field_c].field_h = 0;
@@ -244,7 +244,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                   ib.field_c = ib.field_c + 1;
                 }
                 jn.field_F[ib.field_c].field_c = param7.field_c;
-                jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                 jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                 jn.field_F[ib.field_c].field_e = 1;
                 jn.field_F[ib.field_c].field_h = 0;
@@ -253,7 +253,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 jn.field_F[ib.field_c].field_l.a(60, (byte) 94, jn.field_F[ib.field_c].field_c);
                 ib.field_c = ib.field_c + 1;
                 jn.field_F[ib.field_c].field_c = param7.field_c;
-                jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                 jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                 jn.field_F[ib.field_c].field_e = 1;
                 jn.field_F[ib.field_c].field_h = 0;
@@ -271,7 +271,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                   var21Lifetime3 = 128;
                 }
                 if (0 < var21Lifetime3) {
-                  jh.a(uh.field_i * var21Lifetime3 / 128, (byte) 120, 41, sf.field_V, 5);
+                  jh.a(uh.field_i * var21Lifetime3 / 128, (byte) 120, 41, TextInputField.field_V, 5);
                   return;
                 }
               }
@@ -286,14 +286,14 @@ final class ProxyAuthenticationRequiredException extends IOException {
                     var16 = 128;
                   }
                   if (var16 > 0) {
-                    jh.a(var16 * uh.field_i / 256, (byte) 51, 46, sf.field_V, 5);
+                    jh.a(var16 * uh.field_i / 256, (byte) 51, 46, TextInputField.field_V, 5);
                   }
                 }
                 var16_double = 1.25;
                 var18_double = 1.0;
                 jn.field_F[ib.field_c].field_c = param7.field_c;
                 var20 = 48;
-                jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                 jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                 dupTemp$0 = jn.field_F[ib.field_c].field_l;
                 dupTemp$0.field_f = dupTemp$0.field_f + var16_double;
@@ -306,7 +306,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 jn.field_F[ib.field_c].a(225, jn.field_F[ib.field_c].field_c + 5.0 * Math.random() - 2.5, 50);
                 ib.field_c = ib.field_c + 1;
                 jn.field_F[ib.field_c].field_c = param7.field_c;
-                jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                 jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                 dupTemp$2 = jn.field_F[ib.field_c].field_l;
                 dupTemp$2.field_f = dupTemp$2.field_f + var16_double;
@@ -319,7 +319,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 jn.field_F[ib.field_c].field_l.a(var20, (byte) 94, jn.field_F[ib.field_c].field_c);
                 ib.field_c = ib.field_c + 1;
                 jn.field_F[ib.field_c].field_c = param7.field_c;
-                jn.field_F[ib.field_c].field_j.a((byte) 46, param3);
+                jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3);
                 jn.field_F[ib.field_c].field_l.a(param7.field_l, -28860);
                 dupTemp$4 = jn.field_F[ib.field_c].field_l;
                 dupTemp$4.field_f = dupTemp$4.field_f + var16_double;
@@ -378,12 +378,12 @@ final class ProxyAuthenticationRequiredException extends IOException {
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         RgbSprite var17 = null;
-        pg[] var5 = null;
-        pg[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        pg[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         RgbSprite var15 = null;
         RgbSprite var18 = null;
@@ -397,19 +397,19 @@ final class ProxyAuthenticationRequiredException extends IOException {
         try {
           bh.field_a = jd.a((byte) 33, "commonui", param3, "frame_top");
           g.field_G = jd.a((byte) 33, "commonui", param3, "frame_bottom");
-          sf.field_ab = MouseInput.a("commonui", 116, "jagex_logo_grey", param3);
+          TextInputField.field_ab = MouseInput.a("commonui", 116, "jagex_logo_grey", param3);
           km.field_y = jd.a((byte) 33, "commonui", param3, "button");
-          cf.field_u = ei.a(param3, 113, "commonui", "validation");
+          cf.field_u = DelayedPacket.loadNamedRgbSprites(param3, 113, "commonui", "validation");
           jn.field_G = (vm) ((Object) th.a(param3, -107, "arezzo12", param1, "commonui"));
           jd.field_s = (vm) ((Object) th.a(param3, 25, "arezzo14", param1, "commonui"));
           pe.field_eb = (vm) ((Object) th.a(param3, 9, "arezzo14bold", param1, "commonui"));
           var17 = new RgbSprite(param2.getFileByName("", "button.gif", param0 ^ 0), (java.awt.Component) ((Object) GameAppletShell.field_h));
           qm.a("commonui", 0, "dropdown", param3);
           var5 = sg.a(true, "commonui", param3, "screen_options");
-          ak.field_h = new pg[4];
-          nl.field_e = new pg[4];
-          dd.field_n = new pg[4];
-          var6 = new pg[][]{nl.field_e, ak.field_h, dd.field_n};
+          ak.field_h = new IndexedSprite[4];
+          nl.field_e = new IndexedSprite[4];
+          dd.field_n = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{nl.field_e, ak.field_h, dd.field_n};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -423,7 +423,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            pg[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
               var14[var11_int] = MouseWheelInput.a(var5[var9], var19[var11_int], (byte) 115);
             }

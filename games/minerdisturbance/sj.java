@@ -122,7 +122,7 @@ final class sj {
           if (param1 != 19260) {
             field_g = (IntrusiveDeque) null;
           }
-          jg.a(param0, param2, param1 - 19380, false);
+          MatchingFieldValidator.a(param0, param2, param1 - 19380, false);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

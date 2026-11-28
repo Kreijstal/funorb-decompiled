@@ -171,7 +171,7 @@ final class di {
         if (null != Crc32Table.field_a) {
           Crc32Table.field_a.s(-94);
         }
-        ti.field_e = new fh();
+        ti.field_e = new DisplayNameSelectionPanel();
         vb.field_h.c(ti.field_e, (byte) 57);
         if (param0 != 1) {
           wb var2 = (wb) null;

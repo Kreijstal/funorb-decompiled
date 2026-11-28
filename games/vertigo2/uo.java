@@ -419,7 +419,7 @@ final class uo {
                 var34_int = var34_int + (var52_ref.field_x + Archive.field_j);
               }
               if ((var14Lifetime1 & 1 << ao.field_K) != 0) {
-                stackIn_87_0 = ne.field_I;
+                stackIn_87_0 = DisplayNameSelectionPanel.field_I;
                 if (!var12.field_Tb) {
                   stackIn_88_1 = 0;
                 } else {

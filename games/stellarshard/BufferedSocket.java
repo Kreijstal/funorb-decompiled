@@ -279,7 +279,7 @@ final class BufferedSocket implements Runnable {
         int var7 = 0;
         var7 = stellarshard.field_B;
         try {
-          if (GzipDecompressor.field_d != la.field_O) {
+          if (GzipDecompressor.field_d != LoginPanel.field_O) {
             return false;
           }
           var2_long = ih.correctedCurrentTimeMillis((byte) -98);
@@ -290,9 +290,9 @@ final class BufferedSocket implements Runnable {
               var2_long > var4_ref_fa.field_m) {
               var4_ref_fa.unlink(20);
               ue.field_b = var4_ref_fa.field_l.length;
-              ae.field_N.position = 0;
+              EditableTextField.field_N.position = 0;
               for (var5_int = 0; ue.field_b > var5_int; var5_int++) {
-                ae.field_N.payload[var5_int] = var4_ref_fa.field_l[var5_int];
+                EditableTextField.field_N.payload[var5_int] = var4_ref_fa.field_l[var5_int];
               }
               ld.field_E = t.field_e;
               t.field_e = ig.field_y;
@@ -306,12 +306,12 @@ final class BufferedSocket implements Runnable {
           }
           while (true) {
             if (hk.field_k < 0) {
-              ae.field_N.position = 0;
+              EditableTextField.field_N.position = 0;
               if (!GameEntity.b(64, 1)) {
                 return false;
               }
-              hk.field_k = ae.field_N.h((byte) -9);
-              ae.field_N.position = 0;
+              hk.field_k = EditableTextField.field_N.h((byte) -9);
+              EditableTextField.field_N.position = 0;
               ue.field_b = param1[hk.field_k];
             }
             if (!cd.e((byte) 118)) {
@@ -327,14 +327,14 @@ final class BufferedSocket implements Runnable {
             }
             var4 = hk.field_n;
             if (ed.field_c != 0.0) {
-              var4 = (int)((double)var4 + pl.field_P.nextGaussian() * ed.field_c);
+              var4 = (int)((double)var4 + ValidatedTextField.field_P.nextGaussian() * ed.field_c);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
             var5 = new fa(var2_long + (long)var4, hk.field_k, new byte[ue.field_b]);
             for (var6 = 0; ue.field_b > var6; var6++) {
-              var5.field_l[var6] = ae.field_N.payload[var6];
+              var5.field_l[var6] = EditableTextField.field_N.payload[var6];
             }
             uj.field_e.addLast(-41, var5);
             hk.field_k = -1;

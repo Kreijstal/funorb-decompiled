@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends gf {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int[][] field_m;
     private boolean nameAvailable;
     static int field_l;
@@ -21,7 +21,7 @@ final class AccountNameAvailabilityValidator extends gf {
         field_q = null;
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -91,7 +91,7 @@ final class AccountNameAvailabilityValidator extends gf {
         DelegatingCanvas.field_b = oc.field_a[param1];
     }
 
-    AccountNameAvailabilityValidator(tk param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -255,7 +255,7 @@ final class AccountNameAvailabilityValidator extends gf {
                     }
                   }
                   if (var21 != null &&
-                    bn.a(var21, -17310)) {
+                    SpriteBase.a(var21, -17310)) {
                     var8[1][var13] = re.field_e;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -317,7 +317,7 @@ final class AccountNameAvailabilityValidator extends gf {
         }
     }
 
-    final cd a(int param0, String param1) {
+    final cd getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;

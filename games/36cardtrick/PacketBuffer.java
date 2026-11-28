@@ -580,7 +580,7 @@ class PacketBuffer extends IntrusiveNode {
                 field_h = false;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(fh.a(param1, var2, -1), "_top");
+              param1.getAppletContext().showDocument(DisplayNameSelectionPanel.a(param1, var2, -1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

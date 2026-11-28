@@ -51,7 +51,7 @@ final class AccountRequestState {
             AccountRequestState.clearStaticReferences(37);
           }
           if (gh.field_f) {
-            ik.field_e.c();
+            ik.field_e.releaseScreenResources();
             gh.field_f = false;
             nf.field_A = false;
             ik.field_e = null;

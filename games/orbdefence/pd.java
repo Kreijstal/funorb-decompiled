@@ -141,7 +141,7 @@ final class pd extends IntrusiveNode {
           var28 = ab.field_g[var11].f();
           var29 = var28;
           for (var13 = 0; var13 < var29.field_v.length; var13++) {
-            var29.field_v[var13] = ((vi.a(65280, var28.field_v[var13]) >> 8) + (vi.a(16711680, var28.field_v[var13]) >> 16)) / 8 * 65793 + vi.a(255, var28.field_v[var13]) / 2 * 257;
+            var29.field_v[var13] = ((EditableTextField.a(65280, var28.field_v[var13]) >> 8) + (EditableTextField.a(16711680, var28.field_v[var13]) >> 16)) / 8 * 65793 + EditableTextField.a(255, var28.field_v[var13]) / 2 * 257;
           }
           var29.a(var4, var5, 0, var7);
         } else if (this.field_y == 9 &&

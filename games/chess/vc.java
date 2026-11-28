@@ -14,7 +14,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int = param0.getKeyChar();
             if (0 != var2_int &&
               var2_int != 65535 &&
-              s.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
+              DisplayNameSelectionPanel.isSupportedCp1252KeyCharacter((char) var2_int, 0)) {
               var3 = 127 & ce.field_e + 1;
               if (ph.field_h != var3) {
                 ag.field_a[ce.field_e] = -1;
@@ -271,13 +271,13 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var6 = (ve) (var4.nextBackward((byte) -106));
           }
           if (fg.field_d.field_Hb.field_L != 0) {
-            me.field_a = new kd(fg.field_d.field_Hb.field_U, fg.field_d.field_Hb.field_wb, fg.field_d.field_Hb.field_M, fg.field_d.field_Hb.field_pb, ki.field_N, od.field_V, qn.field_P, qn.field_P);
+            me.field_a = new kd(fg.field_d.field_Hb.field_U, fg.field_d.field_Hb.field_wb, fg.field_d.field_Hb.field_M, fg.field_d.field_Hb.field_pb, ki.field_N, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
             pk.field_b = 2;
           }
           if (fg.field_d.field_Mb.field_L == 0) {
             return;
           }
-          me.field_a = new kd(fg.field_d.field_Mb.field_U, fg.field_d.field_Mb.field_wb, fg.field_d.field_Mb.field_M, fg.field_d.field_Mb.field_pb, sc.field_b, od.field_V, qn.field_P, qn.field_P);
+          me.field_a = new kd(fg.field_d.field_Mb.field_U, fg.field_d.field_Mb.field_wb, fg.field_d.field_Mb.field_M, fg.field_d.field_Mb.field_pb, sc.field_b, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
           pk.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,7 +4,7 @@
 final class je extends bb {
     private int field_L;
     static ob field_M;
-    private jb field_K;
+    private FieldValidator field_K;
     static ed field_P;
     static RgbSprite[] field_O;
     static int[] field_N;
@@ -113,7 +113,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("login_gameupdated", 0);
                 if (var2 != null) {
-                  r.field_j = ab.a(0, var2);
+                  TextFieldValidator.field_j = ab.a(0, var2);
                 }
                 var2 = ad.a("create_unable", 0);
                 if (null != var2) {
@@ -1519,7 +1519,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("login_email", 0);
                 if (null != var2) {
-                  ck.field_q = ab.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_q = ab.a(0, var2);
                 }
                 var2 = ad.a("login_username_tooltip", 0);
                 if (null != var2) {
@@ -1539,7 +1539,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("login_justplay_tooltip", 0);
                 if (var2 != null) {
-                  ga.field_n = ab.a(0, var2);
+                  AgeValidator.field_n = ab.a(0, var2);
                 }
                 var2 = ad.a("login_back_tooltip", 0);
                 if (null != var2) {
@@ -2689,7 +2689,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("fs_button_accept", 0);
                 if (var2 != null) {
-                  ck.field_p = ab.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_p = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_accept_afteraccept", 0);
                 if (var2 != null) {
@@ -2878,7 +2878,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("DEFAULT_PLAYER_NAME", 0);
                 if (var2 != null) {
-                  gg.field_a = ab.a(0, var2);
+                  DebouncedFieldValidator.field_a = ab.a(0, var2);
                 }
                 var2 = ad.a("mustlogin1", 0);
                 if (null != var2) {
@@ -3101,7 +3101,7 @@ final class je extends bb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -26) {
-            this.field_K = (jb) null;
+            this.field_K = (FieldValidator) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3138,7 +3138,7 @@ final class je extends bb {
           }
           var5_int = (this.field_u >> 1) + (param1 + this.field_y);
           var6 = param0 + (this.field_z + (this.field_j >> 1));
-          var8 = this.field_K.a(false);
+          var8 = this.field_K.getValidationStatus(false);
           if (ea.field_b == var8 ||
             var8 == w.field_e) {
             var7 = t.field_h[0];
@@ -3148,13 +3148,13 @@ final class je extends bb {
               !(pb.field_c.field_w >= var9) ||
               !(var10 <= pb.field_c.field_t)) {
               pb.field_c = new RgbSprite(var9, var10);
-              r.a(pb.field_c, 45);
+              TextFieldValidator.a(pb.field_c, 45);
               if (var11 != 0) {
-                r.a(pb.field_c, 45);
+                TextFieldValidator.a(pb.field_c, 45);
                 SoftwareRasterizer.clearRaster();
               }
             } else {
-              r.a(pb.field_c, 45);
+              TextFieldValidator.a(pb.field_c, 45);
               SoftwareRasterizer.clearRaster();
             }
             var7.a(112, 144, var7.field_x << 4, var7.field_r << 4, -this.field_L << 10, 4096);
@@ -3194,7 +3194,7 @@ final class je extends bb {
             this.g(97);
           }
           if (this.field_x) {
-            stackIn_7_0 = this.field_K.b(90);
+            stackIn_7_0 = this.field_K.getValidationMessage(90);
             return stackIn_7_0;
           }
           stackIn_9_0 = null;
@@ -3206,7 +3206,7 @@ final class je extends bb {
         }
     }
 
-    je(jb param0) {
+    je(FieldValidator param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

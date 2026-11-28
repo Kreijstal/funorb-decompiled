@@ -117,7 +117,7 @@ final class TeleportAnimation extends EventAnimation {
           if (!this.field_z &&
             !(this.field_n.field_p <= -192)) {
             this.field_z = true;
-            aba.a((byte) 62, 60);
+            TextFieldValidator.a((byte) 62, 60);
           }
           this.field_n.field_p = this.field_n.field_p + 2;
           if (this.field_n.field_p < 0) {
@@ -132,7 +132,7 @@ final class TeleportAnimation extends EventAnimation {
         if (!this.field_w &&
           this.field_n.field_p > 48) {
           this.field_w = true;
-          aba.a((byte) 18, 60);
+          TextFieldValidator.a((byte) 18, 60);
         }
         this.field_n.field_p = this.field_n.field_p + 2;
         if (!(this.field_n.field_p >= 256)) {

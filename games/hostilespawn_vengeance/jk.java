@@ -69,9 +69,9 @@ final class jk {
     final static boolean a(int param0) {
         if (param0 != -23322) {
           jk.clearStaticReferences(-58);
-          return sf.field_U;
+          return TextInputField.field_U;
         }
-        return sf.field_U;
+        return TextInputField.field_U;
     }
 
     public static void clearStaticReferences(int param0) {

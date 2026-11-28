@@ -102,7 +102,7 @@ final class fl {
               if (param3 <= 105) {
                 var7 = param2;
                 GameApplet.a(-32202, var7);
-                h.field_c = ib.createAccountSuggestionsResult(true, param2);
+                h.field_c = ValidatedTextField.createAccountSuggestionsResult(true, param2);
               } else {
                 h.field_c = aj.createAccountErrorResult(param3, (byte) -21, param0);
               }

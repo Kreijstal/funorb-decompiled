@@ -10,8 +10,8 @@ final class MixedSupport096 {
     static String stringState0411;
 
     final static String computeString1212(int integerArgument1) {
-        if (GameAssets.mixedSupport004State0004 == UiComponentPart022.mixedSupport004State0003) {
-          return SceneWidgetPart013.stringState0586;
+        if (GameAssets.mixedSupport004State0004 == AccountFieldStatusIndicator.mixedSupport004State0003) {
+          return LobbyRoomRow.stringState0586;
         }
         if (integerArgument1 != 2) {
           return (String) null;

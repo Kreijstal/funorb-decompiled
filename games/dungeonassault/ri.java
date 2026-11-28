@@ -47,11 +47,11 @@ final class ri {
           SpriteAnimationPlayer.field_d = SecondaryNodeDeque.field_b;
           if (param2 != 255) {
             if (param2 < 100) {
-              DualLinkNode.field_p = p.createAccountErrorResult(param2, param0, -28323);
+              DualLinkNode.field_p = DungeonBuilderScreen.createAccountErrorResult(param2, param0, -28323);
               return;
             }
             if (param2 > 105) {
-              DualLinkNode.field_p = p.createAccountErrorResult(param2, param0, -28323);
+              DualLinkNode.field_p = DungeonBuilderScreen.createAccountErrorResult(param2, param0, -28323);
               return;
             }
             var4 = param1;
@@ -100,7 +100,7 @@ final class ri {
     final static void a(String param0, int param1) {
         try {
           jn.field_c = true;
-          ip.field_j = param0.trim();
+          TextFieldValidator.field_j = param0.trim();
           oh.field_s = 10;
           if (param1 >= -64) {
             CharSequence var3 = (CharSequence) null;

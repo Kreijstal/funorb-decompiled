@@ -4,7 +4,7 @@
 final class hi {
     String field_a;
     int field_b;
-    static sm[] field_h;
+    static IndexedSprite[] field_h;
     int[] field_c;
     private long field_g;
     private int field_d;
@@ -30,7 +30,7 @@ final class hi {
           if (cn.field_b != 2) {
             return 0;
           }
-          if (!bi.a((byte) 83, this.field_e)) {
+          if (!LevelRun.a((byte) 83, this.field_e)) {
             return 0;
           }
           return 1;
@@ -45,7 +45,7 @@ final class hi {
           if (cn.field_b != 2) {
             return 0;
           }
-          if (!bi.a((byte) 83, this.field_e)) {
+          if (!LevelRun.a((byte) 83, this.field_e)) {
             return 0;
           }
           return 1;
@@ -59,7 +59,7 @@ final class hi {
         if (cn.field_b != 2) {
           return 0;
         }
-        if (bi.a((byte) 83, this.field_e)) {
+        if (LevelRun.a((byte) 83, this.field_e)) {
           return 1;
         }
         return 0;
@@ -76,7 +76,7 @@ final class hi {
     hi(boolean param0) {
         this.field_b = bg.field_n;
         this.field_k = oh.field_b;
-        this.field_e = dg.field_m;
+        this.field_e = TranslucentSpriteLayer.field_m;
         this.field_f = n.field_u;
         this.field_d = hh.field_a;
         this.field_i = ArchiveIndex.field_a;

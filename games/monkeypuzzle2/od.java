@@ -18,7 +18,7 @@ final class od extends f {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = fk.field_d[BufferedRandomAccessFile.a(255, (int) var2[var4_int])];
           }
-          var4 = new Sprite(nj.field_d, qk.field_a, qc.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], var3);
+          var4 = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], var3);
           gb.a(-112);
           return var4;
         }

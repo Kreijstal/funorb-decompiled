@@ -8,7 +8,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
     static String stringState0470;
     static int integerState0686;
     static String stringState0471;
-    private UiComponentPart028 uiComponentPart028State0006;
+    private EditableTextField uiComponentPart028State0006;
     static RgbSprite rgbSpriteState0051;
     static SceneWidget sceneWidgetState0105;
 
@@ -22,20 +22,20 @@ final class MatchingFieldValidator extends TextFieldValidator {
         StringBuilder stackStringBuilderLocal7 = null;
         String stackStringLocal8 = null;
         RuntimeException caughtExceptionLocal9 = null;
-        CallbackContract011 callbackContract011Local10 = null;
+        FieldValidator callbackContract011Local10 = null;
         try {
           if (byteArgument2 != -11) {
             this.getValidationStatus((String) null, (byte) -68);
           }
-          if (this.uiComponentPart028State0006 instanceof CallbackContract005) {
-            callbackContract011Local10 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110824(byteArgument2 - 78);
+          if (this.uiComponentPart028State0006 instanceof FieldValidatorProvider) {
+            callbackContract011Local10 = ((FieldValidatorProvider) ((Object) this.uiComponentPart028State0006)).getFieldValidator(byteArgument2 - 78);
             if (callbackContract011Local10 != null) {
-              if (callbackContract011Local10.computeValidationStatus0084(20350) == MixedSupport023.validationStatusState0001 &&
+              if (callbackContract011Local10.getValidationStatus(20350) == MixedSupport023.validationStatusState0001 &&
                 !stringArgument1.equals(this.uiComponentPart028State0006.stringState0078)) {
                 stackStringLocal2 = MixedSupport006.stringState0030;
                 return stackStringLocal2;
               }
-              stackStringLocal3 = callbackContract011Local10.computeString0088((byte) 103);
+              stackStringLocal3 = callbackContract011Local10.getValidationMessage((byte) 103);
               return stackStringLocal3;
             }
           }
@@ -267,7 +267,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
     }
 
     final ValidationStatus getValidationStatus(String stringArgument1, byte byteArgument2) {
-        CallbackContract011 callbackContract011Local1 = null;
+        FieldValidator callbackContract011Local1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         ValidationStatus stackValidationStatusLocal3 = null;
         ValidationStatus stackValidationStatusLocal4 = null;
@@ -276,11 +276,11 @@ final class MatchingFieldValidator extends TextFieldValidator {
         String stackStringLocal7 = null;
         RuntimeException caughtExceptionLocal8 = null;
         try {
-          if (this.uiComponentPart028State0006 instanceof CallbackContract005) {
-            callbackContract011Local1 = ((CallbackContract005) ((Object) this.uiComponentPart028State0006)).computeCallbackContract0110824(-87);
+          if (this.uiComponentPart028State0006 instanceof FieldValidatorProvider) {
+            callbackContract011Local1 = ((FieldValidatorProvider) ((Object) this.uiComponentPart028State0006)).getFieldValidator(-87);
             if (callbackContract011Local1 != null &&
-              callbackContract011Local1.computeValidationStatus0084(20350) != MixedSupport023.validationStatusState0001) {
-              stackValidationStatusLocal3 = MixedSupport142.validationStatusState0005;
+              callbackContract011Local1.getValidationStatus(20350) != MixedSupport023.validationStatusState0001) {
+              stackValidationStatusLocal3 = ReturnedShapeUpdate.validationStatusState0005;
               return stackValidationStatusLocal3;
             }
           }
@@ -290,7 +290,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (stringArgument1.equals(this.uiComponentPart028State0006.stringState0078)) {
             stackValidationStatusLocal4 = MixedSupport023.validationStatusState0001;
           } else {
-            stackValidationStatusLocal4 = MixedSupport142.validationStatusState0005;
+            stackValidationStatusLocal4 = ReturnedShapeUpdate.validationStatusState0005;
           }
           return stackValidationStatusLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
@@ -307,7 +307,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         }
     }
 
-    MatchingFieldValidator(UiComponentPart028 uiComponentPart028Argument1, UiComponentPart028 uiComponentPart028Argument2) {
+    MatchingFieldValidator(EditableTextField uiComponentPart028Argument1, EditableTextField uiComponentPart028Argument2) {
         super(uiComponentPart028Argument1);
         RuntimeException runtimeException = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;

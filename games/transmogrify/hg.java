@@ -9,7 +9,7 @@ final class hg {
     private boolean field_c;
 
     final static void c(int param0) {
-        ta.field_f = new wl();
+        ta.field_f = new AccountRegistrationPanel();
         l.field_d.b(96, ta.field_f);
         if (param0 != 0) {
           hg.b(3);

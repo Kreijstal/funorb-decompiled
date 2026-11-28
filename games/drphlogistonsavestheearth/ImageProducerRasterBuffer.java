@@ -150,7 +150,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
           ImageProducerRasterBuffer.a(false);
         }
         ha.field_a = param4;
-        ni.field_p = param3;
+        EmailFormatValidator.field_p = param3;
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {

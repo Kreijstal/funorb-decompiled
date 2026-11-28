@@ -30,7 +30,7 @@ final class ae extends ca implements ke {
               this.field_k = this.field_k + 10;
               if (l.b(-1)) {
                 this.field_k = this.field_k + 20;
-                var3 = ei.field_j;
+                var3 = TextFieldValidator.field_j;
               }
             } else {
               if (param1 == NanoFrameTimer.field_e) {
@@ -48,7 +48,7 @@ final class ae extends ca implements ke {
           var4.field_o = 0;
           var4.field_l = (cg) ((Object) new l(u.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, (byte) 121);
-          this.field_fb = this.a((fd) (this), ei.field_h, 10);
+          this.field_fb = this.a((fd) (this), TextFieldValidator.field_h, 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

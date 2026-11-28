@@ -15,7 +15,7 @@ final class ln extends jh {
             field_G = 10;
           }
           var4 = param2[param2.length - 1];
-          var4.a(param0, param1, 86);
+          var4.addVerticalSpace(param0, param1, 86);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ln.NA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

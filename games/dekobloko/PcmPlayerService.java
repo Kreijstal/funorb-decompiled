@@ -39,7 +39,7 @@ final class PcmPlayerService implements Runnable {
             return stackIntegerArrayLocal6;
           }
           while (8 > integerLocal3) {
-            integerArrayLocal5[integerLocal3] = MixedSupport075.computeInteger0930(~integerArrayArgument3[integerLocal3], integerArrayArgument1[integerLocal3]);
+            integerArrayLocal5[integerLocal3] = PlayerBoardUpdateQueue.bitwiseAnd(~integerArrayArgument3[integerLocal3], integerArrayArgument1[integerLocal3]);
             integerLocal3++;
           }
           stackIntegerArrayLocal7 = integerArrayLocal1;

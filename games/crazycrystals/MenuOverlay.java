@@ -28,7 +28,7 @@ abstract class MenuOverlay {
         if (param1 < 36) {
           return 92;
         }
-        return ga.p(-1);
+        return EditableTextField.p(-1);
     }
 
     static {

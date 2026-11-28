@@ -14,19 +14,19 @@ final class oj {
         if (0 == param0 &&
           sg.field_d != param2) {
           sg.field_d = param2;
-          tj.field_l = true;
+          EmailFormatValidator.field_l = true;
           GzipInflater.b(-6446, param3);
         }
         if (1 == param0 &&
           ii.field_Q != param2) {
           ii.field_Q = param2;
-          tj.field_l = true;
+          EmailFormatValidator.field_l = true;
           GzipInflater.b(-6446, param3);
         }
         if (2 == param0 &&
           param2 != v.field_d) {
           v.field_d = param2;
-          tj.field_l = true;
+          EmailFormatValidator.field_l = true;
           GzipInflater.b(param1 - 6347, param3);
         }
         if (param1 != -99) {
@@ -67,7 +67,7 @@ final class oj {
             field_c = (ci) null;
           }
           if (var2_int == 0) {
-            stackIn_6_0 = ef.field_j;
+            stackIn_6_0 = AchievementNotification.field_j;
             return stackIn_6_0;
           }
           if (255 < var2_int) {
@@ -76,7 +76,7 @@ final class oj {
           }
           var3 = gl.a((byte) -118, '.', param0);
           if (var3.length < 2) {
-            stackIn_13_0 = ef.field_j;
+            stackIn_13_0 = AchievementNotification.field_j;
             return stackIn_13_0;
           }
           var4 = var3;
@@ -114,7 +114,7 @@ final class oj {
         if (ArchiveProvider.field_d != null) {
           ArchiveProvider.field_d.k((byte) -112);
         }
-        BufferedSocket.field_u = new s();
+        BufferedSocket.field_u = new DisplayNameSelectionPanel();
         nj.field_w.c(BufferedSocket.field_u, 78);
         if (param0 <= 120) {
           field_a = (String) null;

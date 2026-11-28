@@ -60,9 +60,9 @@ final class fb extends ih {
           if (param1 >= -26) {
             fb.d(35);
           }
-          param0.addMouseListener(nj.field_o);
-          param0.addMouseMotionListener(nj.field_o);
-          param0.addFocusListener(nj.field_o);
+          param0.addMouseListener(EmailFormatValidator.field_o);
+          param0.addMouseMotionListener(EmailFormatValidator.field_o);
+          param0.addFocusListener(EmailFormatValidator.field_o);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "fb.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

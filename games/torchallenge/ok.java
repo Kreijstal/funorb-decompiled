@@ -13,10 +13,10 @@ final class ok {
         ii.field_c = param1;
         if (param2 >= -124) {
           field_c = (int[][]) null;
-          dg.field_ab = param0;
+          AccountRegistrationPanel.field_ab = param0;
           return;
         }
-        dg.field_ab = param0;
+        AccountRegistrationPanel.field_ab = param0;
     }
 
     public static void a(int param0) {

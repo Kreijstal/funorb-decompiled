@@ -535,7 +535,7 @@ final class d {
             return stackIn_6_0;
           }
           if (param0) {
-            stackIn_11_0 = rg.copyBytes((byte) 10, param2);
+            stackIn_11_0 = LoginPanel.copyBytes((byte) 10, param2);
             return stackIn_11_0;
           }
           stackIn_9_0 = (byte[]) (param2);

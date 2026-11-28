@@ -94,9 +94,9 @@ final class ve {
         if (2 < wf.field_l) {
           wf.field_l = 2;
         }
-        di.field_e = 3 & param1 >> 2;
-        if (!(param0 >= di.field_e)) {
-          di.field_e = 2;
+        TextFieldValidator.field_e = 3 & param1 >> 2;
+        if (!(param0 >= TextFieldValidator.field_e)) {
+          TextFieldValidator.field_e = 2;
         }
         lb.field_f = param1 & 3;
         if (!(lb.field_f <= 2)) {

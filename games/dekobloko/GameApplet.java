@@ -45,7 +45,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowActivated(java.awt.event.WindowEvent windowEventArgument1) {
     }
 
-    abstract void performAction0305(int integerArgument1);
+    abstract void updateGameTick(int integerArgument1);
 
     final static IndexedSprite computeIndexedSprite0676(String stringArgument1, ResourceArchive resourceArchiveArgument2, String stringArgument3, byte byteArgument4) {
         int integerLocal1 = 0;
@@ -177,10 +177,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.performAction0679(true, "alreadyloaded");
                 return;
               }
-              UiComponentPart024.integerState0592 = 0;
+              BirthDateTextFields.integerState0592 = 0;
               UiComponentPart006.integerState0133 = integerArgument6;
               UiComponentPart020.integerState0551 = integerArgument6;
-              SceneWidgetPart009.integerState0648 = 0;
+              IconLabelWidget.integerState0648 = 0;
               MixedSupport090.integerState0548 = integerArgument5;
               GzipDecompressor.integerState0436 = integerArgument5;
               MixedSupport119.gameAppletState0001 = this;
@@ -306,15 +306,15 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean sharedTailLocal8 = (null != MixedSupport054.frameState0001 &&
               NetworkSupport009.frameState0002 == null);
             if (!sharedTailLocal8) {
-              GameDomainSupport004.canvasState0001.setLocation(SceneWidgetPart009.integerState0648, UiComponentPart024.integerState0592);
+              GameDomainSupport004.canvasState0001.setLocation(IconLabelWidget.integerState0648, BirthDateTextFields.integerState0592);
               sharedTailLocal8 = (DekoBlokoClient.obfuscationControl);
             }
             if (sharedTailLocal8) {
               insetsLocal4 = MixedSupport054.frameState0001.getInsets();
-              GameDomainSupport004.canvasState0001.setLocation(SceneWidgetPart009.integerState0648 + insetsLocal4.left, UiComponentPart024.integerState0592 + insetsLocal4.top);
+              GameDomainSupport004.canvasState0001.setLocation(IconLabelWidget.integerState0648 + insetsLocal4.left, BirthDateTextFields.integerState0592 + insetsLocal4.top);
             }
           }
-          this.performAction0306(320);
+          this.renderFrame(320);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal5 = caughtParameterLocal9;
@@ -368,12 +368,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           GameDomainSupport004.canvasState0001.setVisible(true);
           if (MixedSupport054.frameState0001 == objectLocal2) {
             insetsLocal3 = MixedSupport054.frameState0001.getInsets();
-            GameDomainSupport004.canvasState0001.setLocation(insetsLocal3.left + SceneWidgetPart009.integerState0648, UiComponentPart024.integerState0592 + insetsLocal3.top);
+            GameDomainSupport004.canvasState0001.setLocation(insetsLocal3.left + IconLabelWidget.integerState0648, BirthDateTextFields.integerState0592 + insetsLocal3.top);
             if (integerLocal4 != 0) {
-              GameDomainSupport004.canvasState0001.setLocation(SceneWidgetPart009.integerState0648, UiComponentPart024.integerState0592);
+              GameDomainSupport004.canvasState0001.setLocation(IconLabelWidget.integerState0648, BirthDateTextFields.integerState0592);
             }
           } else {
-            GameDomainSupport004.canvasState0001.setLocation(SceneWidgetPart009.integerState0648, UiComponentPart024.integerState0592);
+            GameDomainSupport004.canvasState0001.setLocation(IconLabelWidget.integerState0648, BirthDateTextFields.integerState0592);
           }
           GameDomainSupport004.canvasState0001.addFocusListener((java.awt.event.FocusListener) (this));
           GameDomainSupport004.canvasState0001.requestFocus();
@@ -409,7 +409,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             MixedSupport067.appletState0001.destroy();
           }
           try {
-            this.performAction0307(0);
+            this.prepareGameShutdown(0);
           } catch (java.lang.Exception caughtParameterLocal7) {
             caughtExceptionLocal6 = caughtParameterLocal7;
             exception = (Exception) (Object) caughtExceptionLocal6;
@@ -431,7 +431,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) caughtExceptionLocal6;
             }
           }
-          this.performAction0300(124);
+          this.releaseGameResources(124);
           if (null != MixedSupport054.frameState0001) {
             try {
               System.exit(0);
@@ -453,7 +453,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowDeactivated(java.awt.event.WindowEvent windowEventArgument1) {
     }
 
-    abstract void performAction0300(int integerArgument1);
+    abstract void releaseGameResources(int integerArgument1);
 
     public final void start() {
         if (this != MixedSupport119.gameAppletState0001 ||
@@ -560,7 +560,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           synchronized (objectLocal6) {
             GameSession.booleanState0141 = RenderingSupport003.booleanState0055;
           }
-          this.performAction0305(11978);
+          this.updateGameTick(11978);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal5 = caughtParameterLocal7;
@@ -687,7 +687,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 NodeHashTable.performAction1505(1);
                 this.performAction0680((byte) 125);
                 MixedSupport076.framebufferState0001 = ArchiveRequestManager.computeFramebuffer0466(MixedSupport090.integerState0548, (byte) 120, UiComponentPart006.integerState0133, (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
-                this.performAction0304(false);
+                this.initializeGame(false);
                 NodeHashTableIterator.mixedSupport059State0001 = MixedSupport031.computeMixedSupport0590417((byte) 63);
                 do {
                   boolean frameRemainderLocal20 = true;
@@ -700,12 +700,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (frameRemainderLocal20) {
-                    MixedSupport142.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.waitAndCountTicks(MixedSupport131.longState0051, 4);
+                    ReturnedShapeUpdate.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.waitAndCountTicks(MixedSupport131.longState0051, 4);
                     stackIntegerLocal4 = 0;
                   }
                   integerLocal11 = stackIntegerLocal4;
                   do {
-                    if (!(integerLocal11 < MixedSupport142.integerState0883)) {
+                    if (!(integerLocal11 < ReturnedShapeUpdate.integerState0883)) {
                       this.performAction0677(false);
                       ProxyAuthenticationRequiredException.performAction0331(-61, GameDomainSupport004.canvasState0001, GzipDecompressor.platformServiceState0003);
                       break;
@@ -826,7 +826,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void performAction0307(int integerArgument1);
+    abstract void prepareGameShutdown(int integerArgument1);
 
     public final void stop() {
         if (MixedSupport119.gameAppletState0001 != this ||
@@ -865,7 +865,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void performAction0306(int integerArgument1);
+    abstract void renderFrame(int integerArgument1);
 
     protected GameApplet() {
         this.booleanState0071 = false;
@@ -897,7 +897,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowDeiconified(java.awt.event.WindowEvent windowEventArgument1) {
     }
 
-    abstract void performAction0304(boolean booleanArgument1);
+    abstract void initializeGame(boolean booleanArgument1);
 
     static {
         mixedSupport061State0003 = new MixedSupport061("");

@@ -7,7 +7,7 @@ final class CombatState {
     PackedBitSet field_v;
     static int field_x;
     String field_f;
-    static gk field_c;
+    static DisplayNameSelectionPanel field_c;
     static String field_n;
     static int field_a;
     static int field_r;
@@ -1917,7 +1917,7 @@ final class CombatState {
         if (param3 != 2) {
           CombatState.sleepMillis(-70, 33L);
         }
-        return rm.a((byte) 96, var6, param4, FullscreenFocusCanvas.a(this.field_s, (byte) -127, param0, param1), param2);
+        return EditableTextField.a((byte) 96, var6, param4, FullscreenFocusCanvas.a(this.field_s, (byte) -127, param0, param1), param2);
     }
 
     final mo applyRaiderAbility(Raider param0, PacketBuffer param1, int param2) {

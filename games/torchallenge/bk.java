@@ -98,7 +98,7 @@ final class bk extends IntrusiveNode {
           if (var3_int > 12) {
             return false;
           }
-          var4 = il.a(param0, (byte) 21);
+          var4 = EmailFormatValidator.a(param0, (byte) 21);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!SecondaryNodeDeque.a(95, var4.charAt(0)) &&

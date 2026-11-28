@@ -78,7 +78,7 @@ final class PauseMenu extends MenuOverlay {
                     if (param2 == rk.field_g) {
                       var10 = gj.field_m.a(q.field_d);
                       var11 = gj.field_m.a(fk.field_t);
-                      var12 = gj.field_m.a(vk.field_D);
+                      var12 = gj.field_m.a(LoginPanel.field_D);
                       if (var12 > var11) {
                         var11 = var12;
                       }
@@ -88,7 +88,7 @@ final class PauseMenu extends MenuOverlay {
                       if (MouseWheelInput.field_j) {
                         stackIn_35_1 = fk.field_t;
                       } else {
-                        stackIn_35_1 = vk.field_D;
+                        stackIn_35_1 = LoginPanel.field_D;
                       }
                       ((uj) (Object) stackIn_34_0).a(stackIn_35_1, var13, param1 + 17, var9, -1);
                     } else {
@@ -277,22 +277,22 @@ final class PauseMenu extends MenuOverlay {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          jn.field_p = 4;
+          PasswordValidator.field_p = 4;
           if (0 < mo.field_l) {
-            fieldTemp$5 = jn.field_p;
-            jn.field_p = jn.field_p + 1;
+            fieldTemp$5 = PasswordValidator.field_p;
+            PasswordValidator.field_p = PasswordValidator.field_p + 1;
             qh.field_k = fieldTemp$5;
           } else {
             qh.field_k = -2;
           }
-          fieldTemp$6 = jn.field_p;
-          jn.field_p = jn.field_p + 1;
+          fieldTemp$6 = PasswordValidator.field_p;
+          PasswordValidator.field_p = PasswordValidator.field_p + 1;
           rk.field_g = fieldTemp$6;
-          fieldTemp$7 = jn.field_p;
-          jn.field_p = jn.field_p + 1;
+          fieldTemp$7 = PasswordValidator.field_p;
+          PasswordValidator.field_p = PasswordValidator.field_p + 1;
           sj.field_c = fieldTemp$7;
-          gj.field_n = -(jn.field_p * 26 / 2) + 241;
-          this.field_e = new jh(jn.field_p);
+          gj.field_n = -(PasswordValidator.field_p * 26 / 2) + 241;
+          this.field_e = new jh(PasswordValidator.field_p);
           this.field_e.a(-1, param0, this.field_e.a((byte) -24, 26, qh.field_i, 325, gj.field_n, 157, IsaacRandom.field_h));
           var2_int = go.field_l.a(fa.field_m);
           var3 = go.field_l.a(cc.field_b);
@@ -321,8 +321,8 @@ final class PauseMenu extends MenuOverlay {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          go.a(jn.field_p + 2, 8, false);
-          for (var2_int = 0; var2_int < jn.field_p; var2_int++) {
+          go.a(PasswordValidator.field_p + 2, 8, false);
+          for (var2_int = 0; var2_int < PasswordValidator.field_p; var2_int++) {
             stackIn_6_0 = this;
             stackIn_6_1 = -17;
             stackIn_6_2 = gj.field_n + 26 * var2_int;

@@ -54,7 +54,7 @@ final class GameCanvas extends java.awt.Canvas {
                 for (var5 = 0; 5 > var5; var5++) {
                   param3.field_l.a(1, (byte) 94, param3.field_c);
                   param3.a(param1 + 19685);
-                  if (2 != param2[param3.field_j.b(-4)]) {
+                  if (2 != param2[param3.field_j.getClampedTileIndex(-4)]) {
                     continue;
                   }
                   if (4 > param3.field_e) {
@@ -186,7 +186,7 @@ final class GameCanvas extends java.awt.Canvas {
               u.a(-1, param3.field_j, true, 16, param3.field_l, 28);
             }
             jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param3.field_j);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
             jn.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
             jn.field_F[ib.field_c].field_e = 0;
             jn.field_F[ib.field_c].field_h = 1;
@@ -198,7 +198,7 @@ final class GameCanvas extends java.awt.Canvas {
             u.a(-1, param3.field_j, true, 16, param3.field_l, 35);
           } else {
             jn.field_F[ib.field_c].field_c = param3.field_c;
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param3.field_j);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
             jn.field_F[ib.field_c].field_l.a(param3.field_l, -28860);
             jn.field_F[ib.field_c].field_e = 0;
             jn.field_F[ib.field_c].field_h = 5;

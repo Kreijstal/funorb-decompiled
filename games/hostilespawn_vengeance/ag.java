@@ -43,7 +43,7 @@ class ag extends IntrusiveNode {
         byte[] var16;
         byte[] var17;
         var7 = HostileSpawn.field_I ? 1 : 0;
-        var1 = hd.field_r[0] * sf.field_X[0];
+        var1 = ConfirmedEmailAvailabilityValidator.field_r[0] * TextInputField.field_X[0];
         if (param0 >= 36) {
           regionExit1: {
             var17 = ja.field_e[0];
@@ -59,7 +59,7 @@ class ag extends IntrusiveNode {
                 }
                 break;
               }
-              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var5_ref_int__);
               if (var7 == 0) {
                 break regionExit1;
               }
@@ -74,7 +74,7 @@ class ag extends IntrusiveNode {
               }
               break;
             }
-            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var9);
           }
         } else {
           regionExit2: {
@@ -92,7 +92,7 @@ class ag extends IntrusiveNode {
                 }
                 break;
               }
-              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var5_ref_int__);
               if (var7 == 0) {
                 break regionExit2;
               }
@@ -107,7 +107,7 @@ class ag extends IntrusiveNode {
               }
               break;
             }
-            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var9);
+            var3 = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], TextInputField.field_X[0], ConfirmedEmailAvailabilityValidator.field_r[0], var9);
           }
         }
         uj.d(121);
@@ -126,7 +126,7 @@ class ag extends IntrusiveNode {
         var5 = this.g(-9015) ? 1 : 0;
         if (!param2) {
           if (var5 == 0) {
-            mn.field_c = ig.field_L;
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -135,7 +135,7 @@ class ag extends IntrusiveNode {
             return param2;
           }
           if (pf.field_o == 0) {
-            mn.field_c = ig.field_L;
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -145,7 +145,7 @@ class ag extends IntrusiveNode {
           }
           this.c((byte) -82);
           if (var7 == 0) {
-            mn.field_c = ig.field_L;
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -159,8 +159,8 @@ class ag extends IntrusiveNode {
           this.a(rb.field_m, param0, param3, 0, this, j.field_c, ll.field_c);
         }
         if (pf.field_o == 0) {
-          if (ig.field_L != 0) {
-            mn.field_c = ig.field_L;
+          if (EditableTextField.field_L != 0) {
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -169,7 +169,7 @@ class ag extends IntrusiveNode {
             return param2;
           }
           if (mn.field_c == 0) {
-            mn.field_c = ig.field_L;
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -185,7 +185,7 @@ class ag extends IntrusiveNode {
             }
             DiskArchiveRequest.field_D = null;
           }
-          mn.field_c = ig.field_L;
+          mn.field_c = EditableTextField.field_L;
           IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
@@ -196,8 +196,8 @@ class ag extends IntrusiveNode {
         if (this.a(ec.field_a, param3, param0, rc.field_b, (byte) 110, this, pf.field_o)) {
           param2 = false;
           if (var7 == 0) {
-            if (ig.field_L != 0) {
-              mn.field_c = ig.field_L;
+            if (EditableTextField.field_L != 0) {
+              mn.field_c = EditableTextField.field_L;
               IntrusiveNode.a(this.e(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
@@ -206,7 +206,7 @@ class ag extends IntrusiveNode {
               return param2;
             }
             if (mn.field_c == 0) {
-              mn.field_c = ig.field_L;
+              mn.field_c = EditableTextField.field_L;
               IntrusiveNode.a(this.e(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
@@ -222,7 +222,7 @@ class ag extends IntrusiveNode {
               }
               DiskArchiveRequest.field_D = null;
             }
-            mn.field_c = ig.field_L;
+            mn.field_c = EditableTextField.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
@@ -233,7 +233,7 @@ class ag extends IntrusiveNode {
         }
         if (var5 != 0) {
           this.c((byte) 47);
-          if (ig.field_L == 0 &&
+          if (EditableTextField.field_L == 0 &&
             mn.field_c != 0) {
             this.a(j.field_c, param0, param3, rb.field_m, this, param1 - 8799);
             var10 = DiskArchiveRequest.field_D;
@@ -241,7 +241,7 @@ class ag extends IntrusiveNode {
               if (var10.field_p instanceof k) {
                 ((k) (var10.field_p)).a(var10, false, (od) null);
                 DiskArchiveRequest.field_D = null;
-                mn.field_c = ig.field_L;
+                mn.field_c = EditableTextField.field_L;
                 IntrusiveNode.a(this.e(34), (byte) -82);
                 if (param1 != 8799) {
                   ag.d((byte) 54);
@@ -251,7 +251,7 @@ class ag extends IntrusiveNode {
               DiskArchiveRequest.field_D = null;
             }
           }
-          mn.field_c = ig.field_L;
+          mn.field_c = EditableTextField.field_L;
           IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
@@ -259,8 +259,8 @@ class ag extends IntrusiveNode {
           ag.d((byte) 54);
           return param2;
         }
-        if (ig.field_L != 0) {
-          mn.field_c = ig.field_L;
+        if (EditableTextField.field_L != 0) {
+          mn.field_c = EditableTextField.field_L;
           IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
@@ -269,7 +269,7 @@ class ag extends IntrusiveNode {
           return param2;
         }
         if (mn.field_c == 0) {
-          mn.field_c = ig.field_L;
+          mn.field_c = EditableTextField.field_L;
           IntrusiveNode.a(this.e(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
@@ -285,7 +285,7 @@ class ag extends IntrusiveNode {
           }
           DiskArchiveRequest.field_D = null;
         }
-        mn.field_c = ig.field_L;
+        mn.field_c = EditableTextField.field_L;
         IntrusiveNode.a(this.e(34), (byte) -82);
         if (param1 == 8799) {
           return param2;

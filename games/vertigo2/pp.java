@@ -65,7 +65,7 @@ final class pp extends IntrusiveNode {
             dupTemp$0 = this.field_n[var5Lifetime1];
             this.field_n[var5Lifetime1] = dupTemp$0 + 1;
             var6 = dupTemp$0;
-            param1[var5Lifetime1] = br.b(this.field_u[var5Lifetime1][var6], (byte) 48);
+            param1[var5Lifetime1] = ValidatedTextField.b(this.field_u[var5Lifetime1][var6], (byte) 48);
             param0[var5Lifetime1] = this.field_p[var5Lifetime1][var6];
           }
           return false;

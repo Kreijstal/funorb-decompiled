@@ -77,7 +77,7 @@ final class pd {
             var3 = (String) null;
             pd.a((String) null, 75, (byte) -104);
           }
-          stackIn_3_0 = cc.a(param0, 10, true, param1 ^ -60);
+          stackIn_3_0 = PasswordValidator.a(param0, 10, true, param1 ^ -60);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

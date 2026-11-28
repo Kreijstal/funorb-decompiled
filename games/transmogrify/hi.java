@@ -35,7 +35,7 @@ final class hi {
         if (param0 >= -41) {
           hi.countSetBits(false, -36);
         }
-        stackIn_8_0 = (ck.field_I == this) || (this == NetworkArchiveRequest.field_w) || (ll.field_Q == this);
+        stackIn_8_0 = (DisplayNameSelectionPanel.field_I == this) || (this == NetworkArchiveRequest.field_w) || (ll.field_Q == this);
         return stackIn_8_0;
     }
 

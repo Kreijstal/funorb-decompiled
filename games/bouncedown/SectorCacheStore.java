@@ -203,7 +203,7 @@ final class SectorCacheStore {
             stackIn_6_0 = jc.field_h.b(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ba.field_E.b(param1);
+          stackIn_4_0 = EditableTextField.field_E.b(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -470,7 +470,7 @@ final class SectorCacheStore {
         if (param0 == -1) {
           return true;
         }
-        return (1 << param0 & ck.field_a) != 0 ? true : false;
+        return (1 << param0 & DebouncedFieldValidator.field_a) != 0 ? true : false;
     }
 
     SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {

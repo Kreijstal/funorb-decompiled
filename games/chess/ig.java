@@ -36,7 +36,7 @@ final class ig {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!tj.a(param3, param0, param4, (byte) 83)) {
+          if (!EmailFormatValidator.a(param3, param0, param4, (byte) 83)) {
             return null;
           }
           var5_int = 9 % ((param2 - 19) / 53);

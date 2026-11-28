@@ -292,7 +292,7 @@ class se extends fb {
         try {
           var9 = 3.141592653589793 + Math.atan2((double)(-param0 + param6), (double)(-param5 + param4));
           var11 = hg.a((byte) 26, (double)(-param5 + param4), (double)(param6 - param0)) / (double)param2;
-          var13 = var11 * qn.a(-17513, var9);
+          var13 = var11 * EditableTextField.a(-17513, var9);
           if (param3 <= 26) {
             field_M = (java.math.BigInteger) null;
           }

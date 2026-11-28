@@ -22,7 +22,7 @@ final class fm {
           }
           stackIn_5_0 = (param2 == 17) ? 3 : 6;
           var4_int = stackIn_5_0;
-          if (param3[param0.field_j.b(-4)] != 2) {
+          if (param3[param0.field_j.getClampedTileIndex(-4)] != 2) {
             param0.field_l.a(var4_int, (byte) 94, param0.field_c);
           }
           param0.a(8573);

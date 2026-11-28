@@ -21,7 +21,7 @@ final class oc {
             oc.clearStaticReferences(-29);
           }
           if (nb.a(param2, param1, (byte) 125, param0)) {
-            stackIn_6_0 = ti.a((byte) 108);
+            stackIn_6_0 = LoginPanel.a((byte) 108);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

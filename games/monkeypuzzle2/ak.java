@@ -266,7 +266,7 @@ final class ak extends a {
             stackIn_3_0 = null;
           }
           var11 = (ButtonWidget) (stackIn_3_0);
-          qi.a(param1.field_r + param3 + param1.field_l, true, param1.field_p + param1.field_e + param2, param1.field_r + param3, param2 + param1.field_e);
+          LoginPanel.a(param1.field_r + param3 + param1.field_l, true, param1.field_p + param1.field_e + param2, param1.field_r + param3, param2 + param1.field_e);
           if (var11 != null) {
             param0 = param0 & var11.field_w;
           }

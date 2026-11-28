@@ -189,7 +189,7 @@ final class rn extends rd {
           return NetworkArchiveRequest.field_w;
         }
         if (!ok.field_c.tryLoadGroupByName(param0 ^ 20403, "commonui")) {
-          return jn.field_k + " - " + ok.field_c.getGroupLoadPercentByName("commonui", -60) + "%";
+          return PasswordValidator.field_k + " - " + ok.field_c.getGroupLoadPercentByName("commonui", -60) + "%";
         }
         if (!FullscreenFocusCanvas.field_a.ensureIndexLoaded((byte) 102)) {
           return gf.field_d;

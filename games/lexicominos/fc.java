@@ -275,14 +275,14 @@ final class fc {
               this.field_w[0][7] = jf.field_G.charAt(4);
               this.field_w[1][3] = jf.field_G.charAt(0);
               this.field_w[1][4] = ch.field_d.charAt(0);
-              if (ri.field_e != 2) {
+              if (DebouncedFieldValidator.field_e != 2) {
                 this.field_w[1][6] = ch.field_d.charAt(2);
               }
               this.field_w[1][7] = ch.field_d.charAt(3);
               this.field_w[1][8] = ch.field_d.charAt(4);
               this.field_w[2][3] = (char)70;
               this.field_w[2][5] = ch.field_d.charAt(1);
-              if (2 == ri.field_e) {
+              if (2 == DebouncedFieldValidator.field_e) {
                 this.field_w[2][6] = ch.field_d.charAt(2);
               }
               this.field_w[3][3] = c.field_n.charAt(0);
@@ -1165,7 +1165,7 @@ final class fc {
         }
         SoftwareRasterizer.resetClip();
         if (this.field_D) {
-          bi.field_a.b("FPS: " + tj.field_i, 10, 3 * pa.field_d + 20, 0, -1);
+          bi.field_a.b("FPS: " + TextFieldValidator.field_i, 10, 3 * pa.field_d + 20, 0, -1);
           bi.field_a.b("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
         }
         return;
@@ -1292,7 +1292,7 @@ final class fc {
         SoftwareRasterizer.resetClip();
         this.c((byte) 72);
         SoftwareRasterizer.setClip(60, 266 + this.field_M + 120, 252, 450);
-        va.field_m.d(0, 0);
+        PasswordValidator.field_m.d(0, 0);
         if (param0 <= 54) {
           this.field_r = -50;
         }

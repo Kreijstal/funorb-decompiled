@@ -87,7 +87,7 @@ final class wl {
           var65 = new int[param5.field_g];
           var64 = tf.field_m;
           var63 = sd.field_c;
-          var62 = w.field_R;
+          var62 = LoginPanel.field_R;
           if (param1 <= 46) {
             field_a = (String) null;
           }

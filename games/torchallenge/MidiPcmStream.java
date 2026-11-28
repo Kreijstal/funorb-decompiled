@@ -16,7 +16,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_p;
     int[] field_y;
     private pc field_P;
-    static fg field_O;
+    static LoginPanel field_O;
     private int[] field_L;
     private int[] field_D;
     private ha field_A;
@@ -142,7 +142,7 @@ final class MidiPcmStream extends PcmStream {
           param1.removeMouseListener(te.field_b);
           param1.removeMouseMotionListener(te.field_b);
           if (param0 != -25) {
-            field_O = (fg) null;
+            field_O = (LoginPanel) null;
           }
           param1.removeFocusListener(te.field_b);
           jc.field_h = 0;

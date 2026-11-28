@@ -10,7 +10,7 @@ final class pm extends IntrusiveNode {
     static int[] field_s;
     static String field_p;
     static long field_r;
-    static sm[] field_m;
+    static IndexedSprite[] field_m;
     int[] field_k;
     int[] field_t;
     int field_j;

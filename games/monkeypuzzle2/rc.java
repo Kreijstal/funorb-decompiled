@@ -158,7 +158,7 @@ final class rc extends kc {
           var4 = var5;
           var3 = var4;
           oa.a(param0, var6, 122);
-          wj.a(var6, -92, pe.field_d[param1 - 1].field_e);
+          TextFieldValidator.a(var6, -92, pe.field_d[param1 - 1].field_e);
           bl.field_f = (int)var6[0];
           mh.field_D = (int)var6[1];
           return;
@@ -169,7 +169,7 @@ final class rc extends kc {
         var4Lifetime1 = var5Lifetime1;
         var3Lifetime1 = var4Lifetime1;
         oa.a(param0, var6Lifetime1, 122);
-        wj.a(var6Lifetime1, -92, pe.field_d[param1 - 1].field_e);
+        TextFieldValidator.a(var6Lifetime1, -92, pe.field_d[param1 - 1].field_e);
         bl.field_f = (int)var6Lifetime1[0];
         mh.field_D = (int)var6Lifetime1[1];
     }

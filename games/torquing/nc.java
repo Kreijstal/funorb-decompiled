@@ -12,7 +12,7 @@ final class nc {
         int var3 = 0;
         int var4 = Torquing.field_u;
         try {
-          if (ia.a(-22426, 0)) {
+          if (FramedPanelLayer.a(-22426, 0)) {
             param0 = 6;
           }
           var2 = (ik) (qc.field_Y.beginBackward(0));

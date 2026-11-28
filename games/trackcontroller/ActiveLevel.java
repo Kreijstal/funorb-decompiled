@@ -211,7 +211,7 @@ final class ActiveLevel extends LevelGrid {
           this.score = this.score + var5;
           this.field_y = dh.a((byte) -127, new String[]{Integer.toString(this.level.field_v), Integer.toString(var4), Integer.toString(var5)}, ob.field_o);
           this.field_Y = 156;
-          var6 = bk.font.stringWidth(this.field_y) + 4;
+          var6 = DisplayNameSelectionPanel.font.stringWidth(this.field_y) + 4;
           if (this.field_Y < var6) {
             this.field_Y = var6 + var6 % 26;
             this.field_Y = this.field_Y - this.field_Y % 26;
@@ -223,13 +223,13 @@ final class ActiveLevel extends LevelGrid {
             this.score = this.score + var5;
             this.field_R = this.field_R + var5;
             this.field_p = this.field_p + 1;
-            var6Lifetime1 = 4 + bk.font.stringWidth(this.field_L);
+            var6Lifetime1 = 4 + DisplayNameSelectionPanel.font.stringWidth(this.field_L);
             if (this.field_Y < var6Lifetime1) {
               this.field_Y = var6Lifetime1 % 26 + var6Lifetime1;
               this.field_Y = this.field_Y - this.field_Y % 26;
             }
           }
-          if (ui.a(0, true)) {
+          if (PasswordValidator.a(0, true)) {
             this.field_W = this.field_W + 1;
           }
           this.field_t = -this.field_Y;
@@ -237,7 +237,7 @@ final class ActiveLevel extends LevelGrid {
             this.g(63);
           }
           if (Math.abs(this.score) > this.field_T) {
-            vd.b(-1, 10, 23636);
+            AccountRegistrationPanel.b(-1, 10, 23636);
           }
           this.field_A.a(-1, this.field_A.field_a, (byte) 100);
           if (ArchiveIndex.field_i + 1 == this.level.levelIndex) {
@@ -294,7 +294,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             this.unlockAchievement(244, 11, -5383);
           }
-          if (ui.a(0, true) &&
+          if (PasswordValidator.a(0, true) &&
             20 == this.field_W) {
             this.unlockAchievement(243, 12, param0 - 5630);
           }
@@ -481,9 +481,9 @@ final class ActiveLevel extends LevelGrid {
             jj.field_fb[var8] = (int)(Math.sin((double)(-250 + var7) / 5.0) * 5.0);
             var7--;
           }
-          var8Lifetime2 = bk.font.stringWidth(DirectByteStorage.field_f);
-          bk.font.b(8, -1);
-          bk.font.a(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
+          var8Lifetime2 = DisplayNameSelectionPanel.font.stringWidth(DirectByteStorage.field_f);
+          DisplayNameSelectionPanel.font.b(8, -1);
+          DisplayNameSelectionPanel.font.a(DirectByteStorage.field_f, 466 + (-var8Lifetime2 + j.field_b[0].field_s >> 1), -20 + var6, (int[]) null, jj.field_fb);
         }
         if (0 != this.field_s) {
           j.field_b[1].drawTransparent(466, var6);
@@ -507,7 +507,7 @@ final class ActiveLevel extends LevelGrid {
               }
               if (var9 == 0) {
                 bb.field_b[var12].drawQuarterSize(467, 26 + var6 + 71 + 10);
-                bk.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
+                DisplayNameSelectionPanel.font.a(wa.field_k[var12], 499, var6 + 71 + 36, 124, 1000, 4, -1, 0, 0, 25);
               }
               var9--;
               var10--;
@@ -518,7 +518,7 @@ final class ActiveLevel extends LevelGrid {
             var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
             cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
             bb.field_b[var11].drawQuarterSize(467, 26 + (81 + var13));
-            bk.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
+            DisplayNameSelectionPanel.font.a(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
           j.field_b[2].drawTransparent(466, var6);
           return;
@@ -544,7 +544,7 @@ final class ActiveLevel extends LevelGrid {
         int var9Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
         if (LevelGrid.field_j >= 2 &&
-          ni.keyDown[12]) {
+          MatchingFieldValidator.keyDown[12]) {
           return true;
         }
         if (param0 < 79) {
@@ -787,17 +787,17 @@ final class ActiveLevel extends LevelGrid {
           this.field_K = false;
           this.field_r = -1;
           this.field_U = -1;
-          stackIn_50_0 = (!ni.keyDown[98]) ? 0 : -1;
-          stackIn_53_1 = (ni.keyDown[99]) ? 1 : 0;
+          stackIn_50_0 = (!MatchingFieldValidator.keyDown[98]) ? 0 : -1;
+          stackIn_53_1 = (MatchingFieldValidator.keyDown[99]) ? 1 : 0;
           var7_intLifetime1 = stackIn_50_0 + stackIn_53_1;
-          if (ni.keyDown[98] ||
-            ni.keyDown[99] ||
-            ni.keyDown[96] ||
-            ni.keyDown[97]) {
+          if (MatchingFieldValidator.keyDown[98] ||
+            MatchingFieldValidator.keyDown[99] ||
+            MatchingFieldValidator.keyDown[96] ||
+            MatchingFieldValidator.keyDown[97]) {
             this.field_A.field_a = false;
           }
-          stackIn_62_0 = (ni.keyDown[96]) ? -1 : 0;
-          stackIn_65_1 = (ni.keyDown[97]) ? 1 : 0;
+          stackIn_62_0 = (MatchingFieldValidator.keyDown[96]) ? -1 : 0;
+          stackIn_65_1 = (MatchingFieldValidator.keyDown[97]) ? 1 : 0;
           var8 = stackIn_62_0 + stackIn_65_1;
           if (SecondaryNodeDeque.mouseButton != 0) {
             var9 = (kf.mouseX - 16) / 26;
@@ -966,7 +966,7 @@ final class ActiveLevel extends LevelGrid {
                   }
                   stackIn_191_0Lifetime2 = 0;
                   stackIn_191_1Lifetime2 = 11;
-                  vd.b(stackIn_191_0Lifetime2, stackIn_191_1Lifetime2, 23636);
+                  AccountRegistrationPanel.b(stackIn_191_0Lifetime2, stackIn_191_1Lifetime2, 23636);
                   break;
                 }
               }
@@ -1044,7 +1044,7 @@ final class ActiveLevel extends LevelGrid {
               this.a(this.tileFlags, var7Lifetime1.column, 21278, 1 + var7Lifetime1.row) != 0 ||
               0 != this.a(this.tileFlags, var7Lifetime1.column - 1, 21278, var7Lifetime1.row) ||
               this.a(this.tileFlags, 1 + var7Lifetime1.column, 21278, var7Lifetime1.row) != 0)) {
-              vd.b(0, 7, 23636);
+              AccountRegistrationPanel.b(0, 7, 23636);
               break scanLoop1;
             }
             var7Lifetime1 = (MovingBlock) (var5.next(10));
@@ -1098,7 +1098,7 @@ final class ActiveLevel extends LevelGrid {
             }
           }
           cl.a(nd.field_L, 58, 98, 376, 332, 4);
-          bk.font.a(ki.field_a, 73, -bk.font.field_G + 386 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.a(ki.field_a, 73, -DisplayNameSelectionPanel.font.field_G + 386 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
           return;
         }
         var3Lifetime1 = null;
@@ -1152,7 +1152,7 @@ final class ActiveLevel extends LevelGrid {
         }
         if (var3Lifetime1 != null) {
           cl.a(nd.field_L, 110, 98, 376, 228, 4);
-          bk.font.a((String) (var3Lifetime1), 125, -bk.font.field_G + (bk.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.a((String) (var3Lifetime1), 125, -DisplayNameSelectionPanel.font.field_G + (DisplayNameSelectionPanel.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
         }
         if (this.level.levelIndex == 1 &&
           !param0) {
@@ -1160,7 +1160,7 @@ final class ActiveLevel extends LevelGrid {
             return;
           }
           cl.a(nd.field_L, 58, 72, 64, 332, 4);
-          bk.font.a(uk.field_d, 73, -bk.font.field_G + 74 + bk.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
+          DisplayNameSelectionPanel.font.a(uk.field_d, 73, -DisplayNameSelectionPanel.font.field_G + 74 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
         }
         return;
     }
@@ -1275,17 +1275,17 @@ final class ActiveLevel extends LevelGrid {
 
     final void a(boolean param0) {
         cl.a(nd.field_L, 457, 124, 10, 176, 4);
-        bk.font.c(AccountServiceResult.field_d, 471, 40, 5, -1);
-        bk.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
-        bk.font.c(ba.field_e, 471, 66, 5, -1);
-        bk.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
-        bk.font.c(hb.field_c, 471, 92, 5, -1);
-        bk.font.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
+        DisplayNameSelectionPanel.font.c(AccountServiceResult.field_d, 471, 40, 5, -1);
+        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_T), 622, 40, 5, -1);
+        DisplayNameSelectionPanel.font.c(ba.field_e, 471, 66, 5, -1);
+        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_q >> 1), 622, 66, 5, -1);
+        DisplayNameSelectionPanel.font.c(hb.field_c, 471, 92, 5, -1);
+        DisplayNameSelectionPanel.font.a(Integer.toString(this.field_X >> 1), 622, 92, 5, -1);
         if (param0) {
           return;
         }
-        bk.font.c(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
-        bk.font.a(this.level.name, 622, 118, 5, -1);
+        DisplayNameSelectionPanel.font.c(LevelView.field_r + this.level.levelIndex + u.field_k, 471, 118, 5, -1);
+        DisplayNameSelectionPanel.font.a(this.level.name, 622, 118, 5, -1);
     }
 
     private final IntrusiveDeque i(int param0) {
@@ -1361,7 +1361,7 @@ final class ActiveLevel extends LevelGrid {
           if (ButtonWidget.a(19438, param2, param1)) {
             return false;
           }
-          if (!ui.a(param1, param2, (byte) 100)) {
+          if (!PasswordValidator.a(param1, param2, (byte) 100)) {
             return true;
           }
           return false;
@@ -1470,7 +1470,7 @@ final class ActiveLevel extends LevelGrid {
             var5 = this.field_b / 3 % 4;
             stackIn_44_0 = this.field_l;
             if (!this.field_K &&
-              !ui.a(0, true)) {
+              !PasswordValidator.a(0, true)) {
               stackIn_46_1 = 0;
             } else {
               stackIn_46_1 = 32;
@@ -1503,14 +1503,14 @@ final class ActiveLevel extends LevelGrid {
         if (!this.field_F) {
           cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
-          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G, 5, -1);
-          bk.font.b(var2_ref, 78 + this.field_t, bk.font.field_G + this.field_C + 24, var3Lifetime2, -1);
+          DisplayNameSelectionPanel.font.b(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G, 5, -1);
+          DisplayNameSelectionPanel.font.b(var2_ref, 78 + this.field_t, DisplayNameSelectionPanel.font.field_G + this.field_C + 24, var3Lifetime2, -1);
         } else {
           cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
-          bk.font.b(this.field_y, 78 + this.field_t, this.field_C + bk.font.field_G - 26, 5, -1);
-          bk.font.b(this.field_L, this.field_t + 78, bk.font.field_G + this.field_C, 5, -1);
-          bk.font.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (bk.font.field_G - 2)), var3Lifetime2, -1);
+          DisplayNameSelectionPanel.font.b(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G - 26, 5, -1);
+          DisplayNameSelectionPanel.font.b(this.field_L, this.field_t + 78, DisplayNameSelectionPanel.font.field_G + this.field_C, 5, -1);
+          DisplayNameSelectionPanel.font.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (DisplayNameSelectionPanel.font.field_G - 2)), var3Lifetime2, -1);
         }
         this.b(false, -28786);
         if (ak.field_b != -1) {
@@ -1703,7 +1703,7 @@ final class ActiveLevel extends LevelGrid {
           if (this.tileFlags[var4][var5] != 0 &&
             var6 == 0 &&
             !this.a(param1, param2, 103, param1 + var5, param2 + var4)) {
-            vd.b(0, 12, 23636);
+            AccountRegistrationPanel.b(0, 12, 23636);
             return false;
           }
           return true;

@@ -109,19 +109,19 @@ final class SecondaryNodeDeque implements Iterable {
         if (param1 != 19406) {
           SecondaryNodeDeque.clearStaticReferences((byte) -4);
           if (param0 % 10L == 0L) {
-            ba.sleepIgnoringInterrupts((byte) -123, -1L + param0);
-            ba.sleepIgnoringInterrupts((byte) -126, 1L);
+            EditableTextField.sleepIgnoringInterrupts((byte) -123, -1L + param0);
+            EditableTextField.sleepIgnoringInterrupts((byte) -126, 1L);
             return;
           }
-          ba.sleepIgnoringInterrupts((byte) -102, param0);
+          EditableTextField.sleepIgnoringInterrupts((byte) -102, param0);
           return;
         }
         if (param0 % 10L == 0L) {
-          ba.sleepIgnoringInterrupts((byte) -123, -1L + param0);
-          ba.sleepIgnoringInterrupts((byte) -126, 1L);
+          EditableTextField.sleepIgnoringInterrupts((byte) -123, -1L + param0);
+          EditableTextField.sleepIgnoringInterrupts((byte) -126, 1L);
           return;
         }
-        ba.sleepIgnoringInterrupts((byte) -102, param0);
+        EditableTextField.sleepIgnoringInterrupts((byte) -102, param0);
     }
 
     static {

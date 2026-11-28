@@ -10,7 +10,7 @@ final class wd extends DualLinkNode {
 
     final static boolean a(int param0) {
         int var1 = -8 % ((-70 - param0) / 35);
-        return bn.field_i;
+        return SpriteBase.field_i;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -60,7 +60,7 @@ final class wd extends DualLinkNode {
           for (var10_int = 0; this.field_t.length > var10_int; var10_int++) {
             this.field_t[var10_int].a(param7, param5 + 17749, param2);
           }
-          pe.a((byte) -122, param3);
+          LoginPanel.a((byte) -122, param3);
           re.a(param2, 0, param7);
           var26 = new int[param7 * param2];
           var10 = var26;
@@ -171,7 +171,7 @@ final class wd extends DualLinkNode {
               if (Bzip2State.field_q > -param3 + param7) {
                 wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
               } else {
-                if (param3 + param7 > qk.field_p) {
+                if (param3 + param7 > LevelCompletionUpdate.field_p) {
                   wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
                 } else {
                   ai.a(param6, param0, param2, param5, param7, param1, -128, param3);

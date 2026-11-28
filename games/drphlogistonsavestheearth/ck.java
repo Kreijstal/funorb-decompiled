@@ -24,7 +24,7 @@ final class ck {
           ol.field_a.d(true);
         }
         String var1 = gk.a(0);
-        pi.field_O = new wa(var1, (String) null, true, false, false);
+        pi.field_O = new LoginPanel(var1, (String) null, true, false, false);
         if (param0 <= 71) {
           field_d = (he[]) null;
         }
@@ -42,7 +42,7 @@ final class ck {
         RuntimeException decompiledCaughtException = null;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var4 = (lc) (g.field_t.beginForward(-11151));
+          var4 = (lc) (AgeValidator.field_t.beginForward(-11151));
           var1 = var4;
           if (var1 == null) {
             return false;

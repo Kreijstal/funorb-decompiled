@@ -32,14 +32,14 @@ final class uk {
           var3 = 0;
           var4 = param1.length();
           while (var3 < var4) {
-            if (r.a(param1.charAt(var3), 83)) {
+            if (TextFieldValidator.a(param1.charAt(var3), 83)) {
               var3++;
               continue;
             }
             break;
           }
           while (var4 > var3) {
-            if (r.a(param1.charAt(-1 + var4), 109)) {
+            if (TextFieldValidator.a(param1.charAt(-1 + var4), 109)) {
               var4--;
               continue;
             }

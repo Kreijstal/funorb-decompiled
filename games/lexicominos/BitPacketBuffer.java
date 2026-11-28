@@ -137,7 +137,7 @@ final class BitPacketBuffer extends PacketBuffer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 8) {
-            stackIn_4_0 = ti.a(param2, param0, 18, true);
+            stackIn_4_0 = LoginPanel.a(param2, param0, 18, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = 116;

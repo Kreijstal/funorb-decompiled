@@ -57,7 +57,7 @@ final class MixedSupport112 extends HashNode {
           if (frameRemainderLocal9) {
             if (!MixedSupport145.booleanState0222) {
               if (EmailValidationError.integerState0341 >= MixedSupport088.integerState0545) {
-                stackIntegerLocal1 = (MixedSupport088.integerState0545 + UiComponentPart013.integerState0274 > EmailValidationError.integerState0341) ? 1 : 0;
+                stackIntegerLocal1 = (MixedSupport088.integerState0545 + LoginPanel.integerState0274 > EmailValidationError.integerState0341) ? 1 : 0;
               } else {
                 stackIntegerLocal1 = 0;
               }
@@ -86,20 +86,20 @@ final class MixedSupport112 extends HashNode {
               }
             }
             ClientException.integerState0142 = MixedSupport124.integerState0790;
-            UiComponentPart022.integerState0573 = integerState0726;
+            AccountFieldStatusIndicator.integerState0573 = integerState0726;
           }
           MixedSupport066.stringState0295 = stringArgument1;
           if (!MixedSupport145.booleanState0222 &&
             MixedSupport088.integerState0545 > EmailValidationError.integerState0341 &&
             MixedSupport101.booleanState0135) {
             ClientException.integerState0142 = MixedSupport124.integerState0790;
-            UiComponentPart022.integerState0573 = integerState0726;
+            AccountFieldStatusIndicator.integerState0573 = integerState0726;
             EmailValidationError.integerState0341 = 0;
           }
           integerState0726 = integerArgument2;
           MixedSupport124.integerState0790 = -1;
           if (MixedSupport145.booleanState0222) {
-            if (SceneWidgetPart013.integerState0839 != EmailValidationError.integerState0341) {
+            if (LobbyRoomRow.integerState0839 != EmailValidationError.integerState0341) {
               return;
             }
             EmailValidationError.integerState0341 = 0;

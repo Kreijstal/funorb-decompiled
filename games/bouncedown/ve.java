@@ -191,14 +191,14 @@ final class ve {
     final static void b(byte param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = nj.field_o;
+        var1 = EmailFormatValidator.field_o;
         synchronized (var1) {
           n.field_m = c.field_c;
           SecondaryNodeDeque.field_d = SecondaryNodeDeque.field_d + 1;
           uc.field_C = DelegatingCanvas.field_a;
-          ll.field_y = q.field_H;
-          mi.field_j = cl.field_o;
-          cl.field_o = false;
+          ll.field_y = DisplayNameSelectionPanel.field_H;
+          mi.field_j = ConfirmedEmailAvailabilityValidator.field_o;
+          ConfirmedEmailAvailabilityValidator.field_o = false;
           SectorCacheStore.field_e = ta.field_a;
           og.field_a = hb.field_B;
           rk.field_a = nc.field_b;

@@ -147,7 +147,7 @@ final class UiComponentPart006 extends ComponentDecorator {
             UiComponentPart010.stringArrayState0012[integerLocal14 - 2] = stringLocal12;
             MixedSupport129.integerArrayState0211[integerLocal14 - 2] = 0;
             UiComponentPart010.integerArrayState0039[0] = 1;
-            UiComponentPart010.stringArrayState0012[-1 + integerLocal14] = UiComponentPart021.stringState0383;
+            UiComponentPart010.stringArrayState0012[-1 + integerLocal14] = ValidatedTextField.stringState0383;
             MixedSupport129.integerArrayState0211[-1 + integerLocal14] = 1;
             UiComponentPart010.integerArrayState0039[1] = 2;
           } else {
@@ -166,7 +166,7 @@ final class UiComponentPart006 extends ComponentDecorator {
               UiComponentPart010.stringArrayState0012[integerLocal15] = ResourceSupport004.stringArrayState0031[integerLocal15];
             }
             UiComponentPart010.stringArrayState0012[integerLocal14 - 2] = "";
-            UiComponentPart010.stringArrayState0012[-1 + integerLocal14] = UiComponentPart021.stringState0383;
+            UiComponentPart010.stringArrayState0012[-1 + integerLocal14] = ValidatedTextField.stringState0383;
             MixedSupport129.integerArrayState0211[-1 + integerLocal14] = 0;
             UiComponentPart010.integerArrayState0039[0] = 2;
           }
@@ -182,7 +182,7 @@ final class UiComponentPart006 extends ComponentDecorator {
             stackBooleanLocal4 = !(0 > MixedSupport129.integerArrayState0211[integerLocal20]);
             integerLocal19 = NetworkArchiveRequestManager.computeInteger1288(stackIntegerLocal2, stackStringLocal3, stackBooleanLocal4);
             if (MixedSupport129.integerArrayState0211[integerLocal20] != -1) {
-              integerLocal19 = integerLocal19 + ResourceSupport002.integerState0050 * 2;
+              integerLocal19 = integerLocal19 + DebouncedFieldValidator.integerState0050 * 2;
             }
             if (integerLocal19 > integerLocal18) {
               integerLocal18 = integerLocal19;
@@ -197,7 +197,7 @@ final class UiComponentPart006 extends ComponentDecorator {
             if (MixedSupport129.integerArrayState0211[integerLocal21] < 0) {
               stackIntegerLocal6 = ComponentDecorator.integerState0497;
             } else {
-              stackIntegerLocal6 = UiComponentPart032.integerState0835;
+              stackIntegerLocal6 = BirthDateInput.integerState0835;
             }
             MixedSupport003.integerState0018 = stackIntegerLocal5 + stackIntegerLocal6;
           }
@@ -245,7 +245,7 @@ final class UiComponentPart006 extends ComponentDecorator {
           byteArrayLocal3 = SceneWidgetPart011.byteArrayArrayState0008[integerLocal1];
           integerArrayLocal4 = new int[integerLocal2];
           for (integerLocal5 = 0; integerLocal5 < integerLocal2; integerLocal5++) {
-            integerArrayLocal4[integerLocal5] = NetworkSupport006.integerArrayState0152[MixedSupport075.computeInteger0930((int) byteArrayLocal3[integerLocal5], 255)];
+            integerArrayLocal4[integerLocal5] = NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd((int) byteArrayLocal3[integerLocal5], 255)];
           }
           rgbSpriteArrayLocal7[integerLocal1] = new RgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal1], MixedSupport039.integerArrayState0047[integerLocal1], MixedSupport123.integerArrayState0208[integerLocal1], MixedSupport052.integerArrayState0054[integerLocal1], integerArrayLocal4);
         }

@@ -19,18 +19,18 @@ final class dc extends IntrusiveNode {
         if (param0 != 0) {
           return -44;
         }
-        return rf.field_C;
+        return AccountRegistrationPanel.field_C;
     }
 
     final static void a(byte param0) {
         int var1 = 114 % ((-46 - param0) / 61);
         if (null == oj.field_q) {
-          ti.field_bb = new el();
+          ti.field_bb = new DisplayNameSelectionPanel();
           kg.field_j.a(false, ti.field_bb);
           return;
         }
         oj.field_q.q(4210752);
-        ti.field_bb = new el();
+        ti.field_bb = new DisplayNameSelectionPanel();
         kg.field_j.a(false, ti.field_bb);
     }
 

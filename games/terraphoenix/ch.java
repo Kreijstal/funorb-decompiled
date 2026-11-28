@@ -91,22 +91,22 @@ final class ch {
                 }
                 AccountRequestState.field_f.a(DiskCacheWorker.field_g + var7_intLifetime1 + "%", 319 + this.field_i, 16 + param5 + 28, param1, -1);
                 if (0 == od.field_c[param0].field_b[2]) {
-                  AccountRequestState.field_f.a(di.field_h[4], this.field_i + 319, 42 + (16 + param5), param1, -1);
+                  AccountRequestState.field_f.a(TextFieldValidator.field_h[4], this.field_i + 319, 42 + (16 + param5), param1, -1);
                 }
                 if (od.field_c[param0].field_b[2] > 0 &&
                   od.field_c[param0].field_b[2] <= 5) {
-                  AccountRequestState.field_f.a(di.field_h[0], this.field_i + 319, 42 + (param5 + 16), param1, -1);
+                  AccountRequestState.field_f.a(TextFieldValidator.field_h[0], this.field_i + 319, 42 + (param5 + 16), param1, -1);
                 }
                 if (5 < od.field_c[param0].field_b[2] &&
                   od.field_c[param0].field_b[2] <= 10) {
-                  AccountRequestState.field_f.a(di.field_h[1], 319 + this.field_i, 42 + (16 + param5), param1, -1);
+                  AccountRequestState.field_f.a(TextFieldValidator.field_h[1], 319 + this.field_i, 42 + (16 + param5), param1, -1);
                 }
                 if (od.field_c[param0].field_b[2] > 10 &&
                   od.field_c[param0].field_b[2] <= 20) {
-                  AccountRequestState.field_f.a(di.field_h[2], 319 + this.field_i, 16 + param5 + 42, param1, -1);
+                  AccountRequestState.field_f.a(TextFieldValidator.field_h[2], 319 + this.field_i, 16 + param5 + 42, param1, -1);
                 }
                 if (od.field_c[param0].field_b[2] > 20) {
-                  AccountRequestState.field_f.a(di.field_h[3], this.field_i + 319, 42 + param5 + 16, param1, -1);
+                  AccountRequestState.field_f.a(TextFieldValidator.field_h[3], this.field_i + 319, 42 + param5 + 16, param1, -1);
                 }
               }
             }
@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, BitPacketBuffer.field_p, BitPacketBuffer.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
+        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, BitPacketBuffer.field_p, BitPacketBuffer.field_n, oe.field_d, GameApplet.field_f, EmailFormatValidator.field_p, ai.field_b, BattleState.field_l, AgeValidator.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {
@@ -617,7 +617,7 @@ final class ch {
             SoftwareRasterizer.fillRectangle(333 + this.field_i, 58, 19, 360, 0);
           }
           if (param1.field_D == 0) {
-            if (ha.field_q >= 1) {
+            if (ConfirmedEmailAvailabilityValidator.field_q >= 1) {
               var6 = jc.field_E;
             } else {
               var6 = BattleUnit.field_kb;
@@ -700,7 +700,7 @@ final class ch {
                     if (var6_int == 14) {
                       var8 = 2 * var8 / 3;
                     }
-                    AccountRequestState.field_f.b(ha.field_m + var8 + "%", -this.field_i + 362, 347, 0, -1);
+                    AccountRequestState.field_f.b(ConfirmedEmailAvailabilityValidator.field_m + var8 + "%", -this.field_i + 362, 347, 0, -1);
                     if (od.field_c[var6_int].field_b[2] > 0) {
                       if (var6_int != 8 &&
                         var6_int != 9) {
@@ -821,7 +821,7 @@ final class ch {
         il.a(1, jg.field_ib);
         ob.b();
         SoftwareRasterizer.clearRaster();
-        af.d(-2766);
+        DebouncedFieldValidator.d(-2766);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j, 0, 256 - var5);
         }
@@ -852,7 +852,7 @@ final class ch {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          ib.field_Y.a(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+          ValidatedTextField.field_Y.a(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

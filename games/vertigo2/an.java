@@ -259,7 +259,7 @@ final class an {
                 stackIn_40_2 = gh.field_c;
               }
               stackIn_39_0.field_S = Vertigo2.a(stackIn_39_1, stackIn_40_2, -122);
-              ne.field_G.field_lb = true;
+              DisplayNameSelectionPanel.field_G.field_lb = true;
               kk.field_f.field_S = MatchSession.field_A;
               gd.field_r = true;
               if (null != gr.field_W) {
@@ -309,7 +309,7 @@ final class an {
               }
             } else {
               oi.field_a.field_S = pp.field_y;
-              ne.field_G.field_lb = false;
+              DisplayNameSelectionPanel.field_G.field_lb = false;
               if (var8 == 0) {
                 stackIn_25_0 = lr.field_J;
               } else {
@@ -344,18 +344,18 @@ final class an {
           stackIn_78_1 = 0;
           stackIn_79_2 = (param2) && (!param0) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
-          stackIn_83_0 = wc.field_m;
+          stackIn_83_0 = PasswordValidator.field_m;
           stackIn_83_1 = 0;
           stackIn_84_2 = (param2) && (!param0) && (BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (null != sj.field_d) {
-            if (ne.field_G.field_tb != 0) {
+            if (DisplayNameSelectionPanel.field_G.field_tb != 0) {
               hc.a(-74, param3);
             }
             if (0 != hd.field_g.field_tb) {
               if (!qn.field_q) {
-                mk.b(-128, param3);
+                AccountRegistrationPanel.b(-128, param3);
               } else {
                 ea.a(param3, true);
               }
@@ -586,7 +586,7 @@ final class an {
             return stackIn_20_0;
           }
           if (param2 == 7) {
-            stackIn_24_0 = Vertigo2.a(new String[]{param1}, de.field_b, 49);
+            stackIn_24_0 = Vertigo2.a(new String[]{param1}, DebouncedFieldValidator.field_b, 49);
             return stackIn_24_0;
           }
           if (param2 == 8) {

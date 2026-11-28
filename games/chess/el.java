@@ -17,7 +17,7 @@ final class el extends cm {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = qn.field_U;
+        BitPacketBuffer var2 = EditableTextField.field_U;
         var2.writeCipheredByte(param1, -60);
         if (param0 == 4) {
           var2.writeByte(1, (byte) -95);
@@ -53,7 +53,7 @@ final class el extends cm {
     }
 
     final static void h(int param0) {
-        uk.a(false, 4);
+        ChessBoardState.a(false, 4);
         int var1 = 73 % ((-38 - param0) / 61);
     }
 

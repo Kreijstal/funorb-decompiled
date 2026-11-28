@@ -25,7 +25,7 @@ final class dg extends IntrusiveNode {
         if (param0 != 11199) {
           return;
         }
-        di.field_m = 0;
+        AgeValidator.field_m = 0;
         eg.field_h = false;
         ua.field_a = -1;
         sc.field_c = null;

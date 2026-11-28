@@ -257,7 +257,7 @@ class dk extends UiWidget {
           }
           var4 = (byte[]) (param1);
           if (param2) {
-            stackIn_8_0 = rg.copyBytes((byte) 10, var4);
+            stackIn_8_0 = LoginPanel.copyBytes((byte) 10, var4);
             return stackIn_8_0;
           }
           stackIn_6_0 = var4;

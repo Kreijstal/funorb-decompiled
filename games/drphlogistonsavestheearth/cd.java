@@ -27,7 +27,7 @@ final class cd {
           if (null != ol.field_a) {
             ol.field_a.d(true);
           }
-          pi.field_O = new wa(param0, param2, false, true, true);
+          pi.field_O = new LoginPanel(param0, param2, false, true, true);
           PcmOutputWorker.field_e.a(33, pi.field_O);
           if (param1 <= -2) {
             return;

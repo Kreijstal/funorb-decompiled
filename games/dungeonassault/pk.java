@@ -139,7 +139,7 @@ final class pk extends kl {
           this.field_l = new ph(var14, var15);
           jh.a(this.field_l);
           var16.b(16, 16);
-          qe.a(23, 13, -46 + this.field_a, this.field_i - 34, 256, 32, 8, 128);
+          DungeonAssaultScreen.a(23, 13, -46 + this.field_a, this.field_i - 34, 256, 32, 8, 128);
           jc.a(-26 + this.field_i, 16, 14, 1, 2, 1);
           jc.a(-26 + this.field_i, this.field_a - 24, 14, 1, 2, 1);
           vd.a(-16 + this.field_a, 2, -14561, 2, 8, 0);
@@ -167,7 +167,7 @@ final class pk extends kl {
         this.field_l = new ph(var11, var12);
         jh.a(this.field_l);
         var13.b(16, 16);
-        qe.a(23, 13, -46 + this.field_a, this.field_i - 34, 256, 32, 8, 128);
+        DungeonAssaultScreen.a(23, 13, -46 + this.field_a, this.field_i - 34, 256, 32, 8, 128);
         jc.a(-26 + this.field_i, 16, 14, 1, 2, 1);
         jc.a(-26 + this.field_i, this.field_a - 24, 14, 1, 2, 1);
         vd.a(-16 + this.field_a, 2, -14561, 2, 8, 0);

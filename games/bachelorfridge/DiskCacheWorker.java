@@ -314,7 +314,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThreadStart((Runnable) (this), 2, 5);
           while (var2.status == 0) {
-            gda.sleepMillis(false, 10L);
+            DisplayNameSelectionPanel.sleepMillis(false, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

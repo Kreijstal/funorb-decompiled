@@ -118,7 +118,7 @@ final class oe {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             ve.field_w[var1_intLifetime1] = 0L;
           }
-          bg.field_E = 0;
+          AccountRegistrationPanel.field_E = 0;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "oe.F(" + param0 + ')');
         }

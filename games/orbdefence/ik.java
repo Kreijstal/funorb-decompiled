@@ -70,7 +70,7 @@ final class ik extends IntrusiveNode {
             var13 = param2;
             var14 = param8;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = var15 + (vi.a(33423360, var12) >> 1) + ((vi.a(33423821, var13) >> 9) + (vi.a(33541693, var14) >> 17));
+            var10[var11] = var15 + (EditableTextField.a(33423360, var12) >> 1) + ((EditableTextField.a(33423821, var13) >> 9) + (EditableTextField.a(33541693, var14) >> 17));
             param1++;
             param2 = param2 + param3;
             param6 = param6 + param5;
@@ -500,7 +500,7 @@ final class ik extends IntrusiveNode {
               }
               var22 = var38.readVarInt(0);
             }
-            this.field_m[var23] = (short)(this.field_m[var23] + (vi.a(2, var22 - 1) << 14));
+            this.field_m[var23] = (short)(this.field_m[var23] + (EditableTextField.a(2, var22 - 1) << 14));
             var20Lifetime2--;
             this.field_i[var23] = var22;
           }

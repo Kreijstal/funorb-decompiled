@@ -118,7 +118,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           if (ma.a(param1, -123, param2)) {
             return false;
           }
-          if (!oc.a(param2, -122, param1)) {
+          if (!MatchingFieldValidator.a(param2, -122, param1)) {
             return true;
           }
           return false;

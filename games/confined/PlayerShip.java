@@ -539,7 +539,7 @@ final class PlayerShip extends MovingTunnelEntity {
               b.field_f != 0)) {
               var10_doubleLifetime1 = 320.0;
               var12_double = 188.0;
-              if (!qc.field_n) {
+              if (!ConfirmedEmailAvailabilityValidator.field_n) {
                 var14 = -this.field_A.field_m.field_T + this.field_E;
                 var16 = -this.field_A.field_m.field_L + this.field_t;
                 var18_doubleLifetime1 = this.field_D - this.field_A.field_m.field_O;

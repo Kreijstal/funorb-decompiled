@@ -157,7 +157,7 @@ abstract class lj extends DualLinkNode {
                 param3.field_l.a(2, (byte) 94, param3.field_c);
                 param3.a(param2 + 8573);
                 param0[param1] = 0;
-                if (param0[param3.field_j.b(param2 - 4)] == 2) {
+                if (param0[param3.field_j.getClampedTileIndex(param2 - 4)] == 2) {
                   param3.field_e = 1;
                   param3.field_c = 255.0 * Math.random();
                 }

@@ -23,9 +23,9 @@ final class hh {
 
     final static void a(int param0, int param1, int param2) {
         if (param0 == 2) {
-          if (LocalizedStrings.field_s == null ||
-            !(param2 <= LocalizedStrings.field_s.length)) {
-            LocalizedStrings.field_s = new int[2 * param2];
+          if (ConfirmedEmailAvailabilityValidator.field_s == null ||
+            !(param2 <= ConfirmedEmailAvailabilityValidator.field_s.length)) {
+            ConfirmedEmailAvailabilityValidator.field_s = new int[2 * param2];
           }
           if (null == bg.field_Q ||
             !(param2 <= bg.field_Q.length)) {
@@ -122,9 +122,9 @@ final class hh {
           }
         } else {
           field_b = (Sprite) null;
-          if (LocalizedStrings.field_s == null ||
-            !(param2 <= LocalizedStrings.field_s.length)) {
-            LocalizedStrings.field_s = new int[2 * param2];
+          if (ConfirmedEmailAvailabilityValidator.field_s == null ||
+            !(param2 <= ConfirmedEmailAvailabilityValidator.field_s.length)) {
+            ConfirmedEmailAvailabilityValidator.field_s = new int[2 * param2];
           }
           if (null == bg.field_Q) {
             bg.field_Q = new int[param2 * 2];

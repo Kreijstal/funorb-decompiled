@@ -309,7 +309,7 @@ abstract class ArenaTheme {
                 if (var23.field_h >= BuffVendorAnimation.field_w[var9].field_e) {
                   kka.field_f.a(param4, param5 - 64);
                 } else {
-                  hna.field_h.a(param4, param5 - 64);
+                  ConfirmedEmailAvailabilityValidator.field_h.a(param4, param5 - 64);
                 }
               } else {
                 if (27 == var9) {
@@ -325,7 +325,7 @@ abstract class ArenaTheme {
                   if (var9 != 36) {
                     if (30 != var9) {
                       if (var9 == 29) {
-                        pk.field_b[(param2 + param0) % 7].a(param4, param5);
+                        DebouncedFieldValidator.field_b[(param2 + param0) % 7].a(param4, param5);
                       } else {
                         if (var9 == 39) {
                           ip.field_f[0].draw(32 + param4, -32 + param5);
@@ -756,18 +756,18 @@ abstract class ArenaTheme {
           }
           if (param4.field_j[param0][param3].terrain == 29) {
             if (param4.field_j[param0][param3].field_k == 5) {
-              pk.field_b[4].a(param2, param5);
-              pk.field_b[1].a(param2, param5);
+              DebouncedFieldValidator.field_b[4].a(param2, param5);
+              DebouncedFieldValidator.field_b[1].a(param2, param5);
             } else {
               if (10 != param4.field_j[param0][param3].field_k) {
                 if (15 != param4.field_j[param0][param3].field_k) {
-                  pk.field_b[param4.field_j[param0][param3].field_k].a(param2, param5);
+                  DebouncedFieldValidator.field_b[param4.field_j[param0][param3].field_k].a(param2, param5);
                 } else {
-                  pk.field_b[5 * ((param3 + param0) % 4)].a(param2, param5);
+                  DebouncedFieldValidator.field_b[5 * ((param3 + param0) % 4)].a(param2, param5);
                 }
               } else {
-                pk.field_b[8].a(param2, param5);
-                pk.field_b[2].a(param2, param5);
+                DebouncedFieldValidator.field_b[8].a(param2, param5);
+                DebouncedFieldValidator.field_b[2].a(param2, param5);
               }
             }
           }

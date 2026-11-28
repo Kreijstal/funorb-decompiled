@@ -66,7 +66,7 @@ final class fh extends wd {
           var8_int = param3 - (this.field_H + param2 + this.field_r);
           var9 = -param6 - (this.field_i + (this.field_D - param5));
           if (this.field_I * this.field_I > var8_int * var8_int + var9 * var9) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - q.field_L;
+            var10 = Math.atan2((double)var9, (double)var8_int) - DisplayNameSelectionPanel.field_L;
             if (var10 < 0.0) {
               var10 = var10 - 3.141592653589793 / (double)this.field_K;
             } else {

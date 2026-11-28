@@ -13,7 +13,7 @@ final class fba {
 
     final static void a(boolean param0, byte param1) {
         ih.field_l = 0;
-        DreamsAnimation.field_A = ph.field_E;
+        DreamsAnimation.field_A = LoginPanel.field_E;
         ArenaTheme.field_f = 0;
         InvincibleEvent.field_s = 0;
         if (param1 < -41) {

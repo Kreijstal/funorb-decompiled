@@ -36,7 +36,7 @@ final class uk extends ic {
           if ((!(this.field_A instanceof ng) ||
             ((ng) (this.field_A)).field_F) &&
             this.field_z == 1) {
-            var5_int = -this.field_P + LocalizedStrings.field_u - param1;
+            var5_int = -this.field_P + ConfirmedEmailAvailabilityValidator.field_u - param1;
             var6 = -this.field_F + ph.field_d - param3;
             if (var5_int != this.field_m ||
               this.field_i != var6) {

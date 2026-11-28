@@ -73,7 +73,7 @@ final class gg {
     }
 
     final static void a(int param0) {
-        eh var1 = (eh) (ai.field_k.removeLast(-114));
+        eh var1 = (eh) (AgeValidator.field_k.removeLast(-114));
         if (var1 == null) {
           throw new IllegalStateException();
         }
@@ -102,7 +102,7 @@ final class gg {
               if (param1 != 7380) {
                 field_b = (AccountRequestState) null;
               }
-              param0.getAppletContext().showDocument(fh.a(param0, var2, param1 - 7381), "_top");
+              param0.getAppletContext().showDocument(DisplayNameSelectionPanel.a(param0, var2, param1 - 7381), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

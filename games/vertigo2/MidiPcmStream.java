@@ -486,7 +486,7 @@ final class MidiPcmStream extends PcmStream {
           return vj.field_a;
         }
         if (!kb.field_b.tryLoadAllGroups((byte) -112)) {
-          return dk.field_n + " - " + kb.field_b.getArchiveLoadPercent(-1) + "%";
+          return EmailFormatValidator.field_n + " - " + kb.field_b.getArchiveLoadPercent(-1) + "%";
         }
         return b.field_f;
     }

@@ -133,7 +133,7 @@ final class SceneWidgetPart008 extends SceneWidget {
         int[] integerArrayLocal5 = new int[integerLocal3];
         int integerLocal6;
         for (integerLocal1 = 0; integerLocal1 < integerLocal3; integerLocal1++) {
-          integerArrayLocal5[integerLocal1] = NetworkSupport006.integerArrayState0152[MixedSupport075.computeInteger0930(255, (int) byteArrayLocal4[integerLocal1])];
+          integerArrayLocal5[integerLocal1] = NetworkSupport006.integerArrayState0152[PlayerBoardUpdateQueue.bitwiseAnd(255, (int) byteArrayLocal4[integerLocal1])];
         }
         integerLocal6 = -8 % ((byteArgument1 + 40) / 42);
         RgbSprite rgbSpriteLocal7 = new RgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[0], MixedSupport039.integerArrayState0047[0], MixedSupport123.integerArrayState0208[0], MixedSupport052.integerArrayState0054[0], integerArrayLocal5);
@@ -179,7 +179,7 @@ final class SceneWidgetPart008 extends SceneWidget {
         }
         integerLocal2 = 1;
         if (!ProxySocketFactory.booleanState0169 &&
-          null == UiComponentPart031.sceneWidgetState0116) {
+          null == AccountRegistrationPanel.sceneWidgetState0116) {
           integerLocal2 = 0;
         }
         if (NetworkSupport010.integerState0585 == 0 &&

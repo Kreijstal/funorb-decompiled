@@ -58,7 +58,7 @@ final class fj extends IntrusiveNode {
           }
           var10 = var7_int + 20 >> 1;
           jb.field_a[param5] = 320 - var10;
-          bb.field_P[param5] = 320 + var10;
+          LoginPanel.field_P[param5] = 320 + var10;
           ah.field_i[param5] = param4;
           si.field_F[param5] = param0;
           if (param5 != 2) {
@@ -69,7 +69,7 @@ final class fj extends IntrusiveNode {
             return;
           }
           jb.field_a[param5] = 30;
-          bb.field_P[param5] = bb.field_P[param5] + 580;
+          LoginPanel.field_P[param5] = LoginPanel.field_P[param5] + 580;
           ah.field_i[param5] = 399;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ final class fj extends IntrusiveNode {
         }
         String var1 = s.o(-74);
         if (param0 >= 26) {
-          ClientException.field_a = new bb(var1, (String) null, true, false, false);
+          ClientException.field_a = new LoginPanel(var1, (String) null, true, false, false);
           u.field_b.b(gf.field_cb, 125);
           gf.field_cb.c(-3399, ClientException.field_a);
           gf.field_cb.e(true);

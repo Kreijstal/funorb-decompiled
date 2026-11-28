@@ -62,17 +62,17 @@ class w extends to {
           var7_int = param2 + param4;
           var8 = -param2 + param5;
           for (var11 = param4; var11 < var7_int; var11++) {
-            di.a(param1, (byte) 62, param6, qd.field_a[var11], param3);
+            IndexedSpriteLayer.a(param1, (byte) 62, param6, qd.field_a[var11], param3);
           }
           var9 = param2 + param1;
           var10 = -param2 + param3;
           for (var11Lifetime1 = param5; var11Lifetime1 > var8; var11Lifetime1--) {
-            di.a(param1, (byte) 6, param6, qd.field_a[var11Lifetime1], param3);
+            IndexedSpriteLayer.a(param1, (byte) 6, param6, qd.field_a[var11Lifetime1], param3);
           }
           for (var11Lifetime2 = var7_int; var11Lifetime2 <= var8; var11Lifetime2++) {
             var17 = qd.field_a[var11Lifetime2];
-            di.a(param1, (byte) -92, param6, var17, var9);
-            di.a(var10, (byte) -96, param6, var17, param3);
+            IndexedSpriteLayer.a(param1, (byte) -92, param6, var17, var9);
+            IndexedSpriteLayer.a(var10, (byte) -96, param6, var17, param3);
           }
           var12 = 36 / ((-33 - param0) / 63);
           return;

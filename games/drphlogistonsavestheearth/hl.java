@@ -79,7 +79,7 @@ final class hl {
               var2 = var2 + (pa.field_a + (SpriteGeometry.field_F + pd.field_b));
             } else {
               k.field_H.c(var6, var8, var2 + cd.field_b, var5, -1);
-              var2 = var2 + wa.field_R;
+              var2 = var2 + LoginPanel.field_R;
             }
           }
           return;

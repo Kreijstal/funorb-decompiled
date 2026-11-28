@@ -144,7 +144,7 @@ class DualLinkNode extends IntrusiveNode {
             if (var7Lifetime2 != null) {
               var2 = (60 + var7Lifetime2.fullWidth) * ll.field_d / eh.field_k;
               var3 = var2 - 30;
-              if (!bh.field_r) {
+              if (!PasswordValidator.field_r) {
                 c.a(-256 * var3 / 30, 199, 245, 256 * (var7Lifetime2.fullWidth - var3) / 30, var7Lifetime2, 107);
               } else {
                 c.a((var7Lifetime2.fullWidth - var3) * 256 / 30, 199, 245, var3 * -256 / 30, var7Lifetime2, 121);

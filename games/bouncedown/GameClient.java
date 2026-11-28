@@ -53,7 +53,7 @@ abstract class GameClient extends AppletShell {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            hg.h((byte) -93);
+                            AgeValidator.h((byte) -93);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -69,7 +69,7 @@ abstract class GameClient extends AppletShell {
                                 Platform.b(param0 + 20);
                                 return;
                               }
-                              ti.a((Throwable) null, (byte) 100, "MGS1: " + la.a(-112));
+                              ValidatedTextField.a((Throwable) null, (byte) 100, "MGS1: " + la.a(-112));
                               kc.a((byte) 18);
                               return;
                             }
@@ -78,7 +78,7 @@ abstract class GameClient extends AppletShell {
                             vc.a(param0 ^ 1, var3);
                           }
                         } else {
-                          bj.a(jc.field_g, (byte) -125, pe.field_d, ck.field_e);
+                          bj.a(jc.field_g, (byte) -125, pe.field_d, DebouncedFieldValidator.field_e);
                         }
                       } else {
                         this.h((byte) 101);
@@ -90,7 +90,7 @@ abstract class GameClient extends AppletShell {
                     ld.b((byte) 120);
                   }
                 } else {
-                  cl.b(false);
+                  ConfirmedEmailAvailabilityValidator.b(false);
                 }
               } else {
                 hb.j(1790);
@@ -101,7 +101,7 @@ abstract class GameClient extends AppletShell {
           }
           return;
         }
-        ti.a((Throwable) null, (byte) 100, "MGS2: " + la.a(param0 ^ 108));
+        ValidatedTextField.a((Throwable) null, (byte) 100, "MGS2: " + la.a(param0 ^ 108));
         kc.a((byte) 18);
     }
 
@@ -162,12 +162,12 @@ abstract class GameClient extends AppletShell {
         }
         ra.c(28282);
         ve.b((byte) -91);
-        if (!ci.k(-31077) &&
+        if (!LoginPanel.k(-31077) &&
           mh.field_U != 11) {
           pa.a((byte) -65);
         }
-        if (hg.field_k != null) {
-          va.field_a = hg.field_k.pollRotation(-83);
+        if (AgeValidator.field_k != null) {
+          va.field_a = AgeValidator.field_k.pollRotation(-83);
         }
         if (ej.b(-4)) {
           var3 = 1200 * AccountNameAvailabilityValidator.f(-118);
@@ -177,10 +177,10 @@ abstract class GameClient extends AppletShell {
             this.field_o = false;
             kc.a((byte) 18);
             va.a(2);
-            cl.a(PcmResampler.field_a, true, 2);
+            ConfirmedEmailAvailabilityValidator.a(PcmResampler.field_a, true, 2);
             Slime.b(-20);
             dl.field_b = true;
-            nj.field_n = fa.correctedCurrentTimeMillis(126) + 15000L;
+            EmailFormatValidator.field_n = fa.correctedCurrentTimeMillis(126) + 15000L;
           }
         }
         if (-1 == cf.field_e ||
@@ -196,7 +196,7 @@ abstract class GameClient extends AppletShell {
           }
           if (cf.field_e != -1 &&
             0 != cf.field_e) {
-            nj.field_n = 15000L + fa.correctedCurrentTimeMillis(-120);
+            EmailFormatValidator.field_n = 15000L + fa.correctedCurrentTimeMillis(-120);
           }
         }
         if (cf.field_e != -1 &&
@@ -223,20 +223,20 @@ abstract class GameClient extends AppletShell {
             if (10 <= mh.field_U) {
               va.a(2);
               if (cf.field_e == 3) {
-                cl.a(ub.field_c, true, 256);
+                ConfirmedEmailAvailabilityValidator.a(ub.field_c, true, 256);
               } else {
                 if (cf.field_e != 4) {
                   if (2 != cf.field_e) {
                     if (cf.field_e != 5) {
-                      cl.a(db.field_O, true, 256);
+                      ConfirmedEmailAvailabilityValidator.a(db.field_O, true, 256);
                     } else {
-                      cl.a(ui.field_k, true, 5);
+                      ConfirmedEmailAvailabilityValidator.a(ui.field_k, true, 5);
                     }
                   } else {
-                    cl.a(jl.field_e, true, 256);
+                    ConfirmedEmailAvailabilityValidator.a(jl.field_e, true, 256);
                   }
                 } else {
-                  cl.a(ub.field_d, true, 256);
+                  ConfirmedEmailAvailabilityValidator.a(ub.field_d, true, 256);
                 }
               }
               dl.field_b = true;
@@ -246,7 +246,7 @@ abstract class GameClient extends AppletShell {
         if ((cf.field_e != -1 &&
           0 != cf.field_e ||
           tb.e(-11)) &&
-          nj.field_n <= fa.correctedCurrentTimeMillis(116)) {
+          EmailFormatValidator.field_n <= fa.correctedCurrentTimeMillis(116)) {
           dl.field_b = false;
           if (cf.field_e != -1 &&
             0 != cf.field_e) {
@@ -296,7 +296,7 @@ abstract class GameClient extends AppletShell {
           pb.clearStaticReferences(16);
           pa.field_e = false;
           ea.field_c = NodeHashTableIterator.field_d;
-          td.a(1, ea.field_e, pa.field_i, kg.field_b, ba.field_B);
+          td.a(1, ea.field_e, pa.field_i, kg.field_b, EditableTextField.field_B);
           if (qd.field_a ||
             mj.field_k != null) {
             stackIn_98_0 = 4;
@@ -330,7 +330,7 @@ abstract class GameClient extends AppletShell {
         if (sa.field_k == 11) {
           if (null != AccountCreationResultPanel.field_pb && (!AccountCreationResultPanel.field_pb.ensureIndexLoaded(-121) ||
             !AccountCreationResultPanel.field_pb.tryLoadAllGroups((byte) -62))) {
-            hg.a(hg.a(BufferedSocket.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
+            AgeValidator.a(AgeValidator.a(BufferedSocket.field_p, AccountCreationResultPanel.field_pb, 130, CipherPacketBuffer.field_l), -66, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -347,7 +347,7 @@ abstract class GameClient extends AppletShell {
           if (null != fb.field_lb) {
             stackIn_132_0 = (!fb.field_lb.a(0)) ? 0 : 1;
             var3Lifetime2 = stackIn_132_0;
-            hg.a(fb.field_lb.field_d, -94, fb.field_lb.field_g);
+            AgeValidator.a(fb.field_lb.field_d, -94, fb.field_lb.field_g);
           }
           if (var3Lifetime2 != 0) {
             sa.field_k = 20;
@@ -397,9 +397,9 @@ abstract class GameClient extends AppletShell {
           this.a((byte) 93, "reconnect");
         }
         va.a(2);
-        cl.a(ImageProducerRasterBuffer.field_o, true, var2);
+        ConfirmedEmailAvailabilityValidator.a(ImageProducerRasterBuffer.field_o, true, var2);
         dl.field_b = true;
-        nj.field_n = 15000L + fa.correctedCurrentTimeMillis(-61);
+        EmailFormatValidator.field_n = 15000L + fa.correctedCurrentTimeMillis(-61);
         if (param0 != 1) {
           this.field_o = true;
         }
@@ -436,10 +436,10 @@ abstract class GameClient extends AppletShell {
         this.setBackground(java.awt.Color.black);
         Slime.field_a = this.field_y;
         pd.a(true, Slime.field_a);
-        pa.a(this.field_r, this.field_v, param6, this.field_D, this.field_u, this.field_m, 25342, 5000, this.field_x, this.field_q, param3, ck.field_e, 5000, Slime.field_a);
-        rk.a(param3, this.field_q, this.field_r, 0, this.field_v, Slime.field_a, ck.field_e, this.field_u, this.field_x);
+        pa.a(this.field_r, this.field_v, param6, this.field_D, this.field_u, this.field_m, 25342, 5000, this.field_x, this.field_q, param3, DebouncedFieldValidator.field_e, 5000, Slime.field_a);
+        rk.a(param3, this.field_q, this.field_r, 0, this.field_v, Slime.field_a, DebouncedFieldValidator.field_e, this.field_u, this.field_x);
         PacketBuffer.g(param5 - 8717);
-        hg.field_k = ek.createMouseWheelInput(0);
+        AgeValidator.field_k = ek.createMouseWheelInput(0);
         l.a(0, ch.field_h);
         lg.field_a = param0;
         ne.field_n = param1;
@@ -533,10 +533,10 @@ abstract class GameClient extends AppletShell {
                 if (var5_intLifetime2 != 0) {
                   stackIn_29_0 = ImageProducerRasterBuffer.field_o;
                   stackIn_30_1 = (param1) ? false : true;
-                  cl.a(stackIn_29_0, stackIn_30_1, var5_intLifetime2);
+                  ConfirmedEmailAvailabilityValidator.a(stackIn_29_0, stackIn_30_1, var5_intLifetime2);
                   ImageProducerRasterBuffer.field_o = null;
                 } else {
-                  al.field_h = l.field_b;
+                  TextFieldValidator.field_h = l.field_b;
                   ta.b(101);
                   mh.field_U = 10;
                   pg.field_c = false;
@@ -545,7 +545,7 @@ abstract class GameClient extends AppletShell {
             }
           }
           if (4 == var4) {
-            if (ba.field_B) {
+            if (EditableTextField.field_B) {
               fl.a(8192, DiskCacheWorker.b(0));
             } else {
               mh.field_U = 10;
@@ -580,7 +580,7 @@ abstract class GameClient extends AppletShell {
           if (var4 == 13) {
             try {
               if (Bzip2State.field_v == null) {
-                Bzip2State.field_v = new ha(ck.field_e, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                Bzip2State.field_v = new ha(DebouncedFieldValidator.field_e, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (Bzip2State.field_v.a((byte) -53)) {
                 var12 = Bzip2State.field_v.a(11951);
@@ -596,7 +596,7 @@ abstract class GameClient extends AppletShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              ti.a((Throwable) ((Object) var5), (byte) 100, "S1");
+              ValidatedTextField.a((Throwable) ((Object) var5), (byte) 100, "S1");
               var10 = (String) null;
               MidiPcmStream.a((byte) -128, (String) null);
               Bzip2State.field_v = null;
@@ -678,7 +678,7 @@ abstract class GameClient extends AppletShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            ti.a((Throwable) ((Object) var6_ref), (byte) 100, (String) null);
+            ValidatedTextField.a((Throwable) ((Object) var6_ref), (byte) 100, (String) null);
             this.a((byte) -124, "crash");
           }
           return;

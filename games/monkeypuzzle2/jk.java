@@ -663,20 +663,20 @@ abstract class jk extends UiWidget implements ga {
           }
           h.field_b = -(var3_intLifetime1 >> 1) + (jc.field_b + var3_intLifetime1);
           sc.field_g = jc.field_b - (var3_intLifetime1 >> 1);
-          fd.field_s = (ud.field_a + vf.field_b << 1) * sj.field_f.field_i;
+          ConfirmedEmailAvailabilityValidator.field_s = (ud.field_a + vf.field_b << 1) * sj.field_f.field_i;
           if (param0 >= -92) {
             return;
           }
           for (var4Lifetime2 = 0; BoundedRandomAccessFile.field_k.length > var4Lifetime2; var4Lifetime2++) {
-            stackIn_118_0 = fd.field_s;
+            stackIn_118_0 = ConfirmedEmailAvailabilityValidator.field_s;
             if (gh.field_a[var4Lifetime2] >= 0) {
               stackIn_119_1 = hb.field_n;
             } else {
               stackIn_119_1 = gi.field_a;
             }
-            fd.field_s = stackIn_118_0 + stackIn_119_1;
+            ConfirmedEmailAvailabilityValidator.field_s = stackIn_118_0 + stackIn_119_1;
           }
-          ArchiveRequest.field_k = -(fd.field_s >> 1) + fl.field_b;
+          ArchiveRequest.field_k = -(ConfirmedEmailAvailabilityValidator.field_s >> 1) + fl.field_b;
           ja.field_A = new int[BoundedRandomAccessFile.field_k.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = ArchiveRequest.field_k;

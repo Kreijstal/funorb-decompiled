@@ -18,10 +18,10 @@ final class pk {
           return true;
         }
         if (param0 == -12663) {
-          return (pl.field_U & 1 << param1) != 0 ? true : false;
+          return (ValidatedTextField.field_U & 1 << param1) != 0 ? true : false;
         }
         field_f = (String) null;
-        return (pl.field_U & 1 << param1) != 0 ? true : false;
+        return (ValidatedTextField.field_U & 1 << param1) != 0 ? true : false;
     }
 
     final static void a(String param0, String[] param1, int param2, byte param3) {

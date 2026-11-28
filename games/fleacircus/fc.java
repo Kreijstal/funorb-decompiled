@@ -26,7 +26,7 @@ final class fc {
         for (var2 = 0; ef.field_l > var2; var2++) {
           var3 = ij.field_H[var2] * ob.field_a[var2];
           var20 = of.field_d[var2];
-          if (!gg.field_i[var2]) {
+          if (!DebouncedFieldValidator.field_i[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var6_int < var3; var6_int++) {
@@ -47,7 +47,7 @@ final class fc {
         if (param0 >= -127) {
           field_a = (re[]) null;
         }
-        c.o(-28210);
+        EditableTextField.o(-28210);
         return var1;
     }
 
@@ -285,7 +285,7 @@ final class fc {
               var12_intLifetime1 = var12_intLifetime1 - var11Lifetime1 / 2;
               var13_intLifetime1 = 16 * fb.field_e[var9Lifetime5];
               var13_intLifetime1 = var13_intLifetime1 - var11Lifetime1 / 2;
-              ca.field_P.c(var12_intLifetime1, var13_intLifetime1, var11Lifetime1, var11Lifetime1, var10_intLifetime1);
+              AccountRegistrationPanel.field_P.c(var12_intLifetime1, var13_intLifetime1, var11Lifetime1, var11Lifetime1, var10_intLifetime1);
             }
           }
           var9Lifetime6 = aj.field_t[2].field_t + 365;
@@ -300,7 +300,7 @@ final class fc {
           og.a(stackIn_85_0, stackIn_86_1, 93, dk.field_C.field_l, dk.field_C.field_d, dk.field_C.field_n);
           aj.field_t[2].d(132, 367);
           oj.a(371, 0, 136, var2);
-          stackIn_88_0 = tl.field_p;
+          stackIn_88_0 = MatchingFieldValidator.field_p;
           stackIn_88_1 = ha.field_p.toLowerCase();
           stackIn_88_2 = 7 + (dk.field_C.field_l + 5);
           stackIn_88_3 = var9Lifetime6;
@@ -320,7 +320,7 @@ final class fc {
           }
           og.a(stackIn_94_0, stackIn_95_1, 112, wd.field_a.field_l, wd.field_a.field_d, wd.field_a.field_n);
           aj.field_t[3].d(352, 367);
-          stackIn_97_0 = tl.field_p;
+          stackIn_97_0 = MatchingFieldValidator.field_p;
           stackIn_97_1 = j.field_h.toLowerCase();
           stackIn_97_2 = 7 + (wd.field_a.field_l + 5);
           stackIn_97_3 = var9Lifetime6;
@@ -340,7 +340,7 @@ final class fc {
           }
           og.a(stackIn_103_0, stackIn_104_1, 86, de.field_b.field_l, de.field_b.field_d, de.field_b.field_n);
           aj.field_t[4].d(582, 367);
-          stackIn_106_0 = tl.field_p;
+          stackIn_106_0 = MatchingFieldValidator.field_p;
           stackIn_106_1 = tb.field_e.toLowerCase();
           stackIn_106_2 = 5 + (7 + de.field_b.field_l);
           stackIn_106_3 = var9Lifetime6;
@@ -409,9 +409,9 @@ final class fc {
                 var26 = var25 - 120;
                 var25 = var25 - 2 * var26;
               }
-              tl.field_p.b(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
+              MatchingFieldValidator.field_p.b(fi.field_l, 320, var25, 0, 0, PacketBuffer.field_j / 3);
               var26_ref_String = var14 + "   " + db.a(fleas.field_I, new String[]{var20}, true);
-              tl.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + tl.field_p.field_N, 0, 0);
+              MatchingFieldValidator.field_p.a(db.a(var26_ref_String, new String[]{"2"}, true), 320, var25 + MatchingFieldValidator.field_p.field_N, 0, 0);
               SoftwareRasterizer.restoreClip(si.field_R);
             }
           }
@@ -460,7 +460,7 @@ final class fc {
             if (var22Lifetime3 < 0) {
               var22Lifetime3 = 0;
             }
-            stackIn_165_0 = tl.field_p;
+            stackIn_165_0 = MatchingFieldValidator.field_p;
             stackIn_165_1 = uj.field_d;
             stackIn_165_2 = 220;
             stackIn_165_3 = -110;
@@ -469,7 +469,7 @@ final class fc {
             } else {
               stackIn_166_4 = GzipDecompressor.field_d;
             }
-            ((fa) (Object) stackIn_165_0).a(stackIn_165_1, stackIn_165_2, stackIn_165_3 + stackIn_166_4, 200, 150, 0, -1, var22Lifetime3, 1, 1, tl.field_p.field_H);
+            ((fa) (Object) stackIn_165_0).a(stackIn_165_1, stackIn_165_2, stackIn_165_3 + stackIn_166_4, 200, 150, 0, -1, var22Lifetime3, 1, 1, MatchingFieldValidator.field_p.field_H);
           }
           if (qg.field_c > 0 &&
             0 == nb.field_b) {
@@ -482,8 +482,8 @@ final class fc {
             var25Lifetime1 = var23Lifetime2 * var24.field_x / 50;
             var26Lifetime1 = var23Lifetime2 * var24.field_r / 50;
             var24.d(var5Lifetime1 - var25Lifetime1 / 2, var6Lifetime1 - var26Lifetime1 / 2, var25Lifetime1, var26Lifetime1, 128);
-            ai.field_n[var22Lifetime4].d(-(var25Lifetime1 / 2) + var5Lifetime1, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 16);
-            ai.field_n[var22Lifetime4].c(var5Lifetime1 - var25Lifetime1 / 2, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 128);
+            EmailFormatValidator.field_n[var22Lifetime4].d(-(var25Lifetime1 / 2) + var5Lifetime1, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 16);
+            EmailFormatValidator.field_n[var22Lifetime4].c(var5Lifetime1 - var25Lifetime1 / 2, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

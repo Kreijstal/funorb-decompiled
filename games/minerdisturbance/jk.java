@@ -109,7 +109,7 @@ abstract class jk extends wf {
           super.o(param0);
           return;
         }
-        if (lm.field_O != this.field_cb) {
+        if (DisplayNameSelectionPanel.field_O != this.field_cb) {
           this.a(this.field_hb.field_q + 12 + this.field_fb, this.field_hb.field_v + 12, (byte) 55);
           this.b(28199, this.field_hb);
         } else {
@@ -215,7 +215,7 @@ abstract class jk extends wf {
           return;
         }
         this.field_kb = 0;
-        this.field_cb = lm.field_O;
+        this.field_cb = DisplayNameSelectionPanel.field_O;
         this.b(28199, this.field_hb);
         this.field_bb.field_L = 0;
         if (param0) {
@@ -277,7 +277,7 @@ abstract class jk extends wf {
             return super.n(param0 + 0);
           }
           if (ah.field_a != this.field_cb) {
-            if (this.field_cb != lm.field_O) {
+            if (this.field_cb != DisplayNameSelectionPanel.field_O) {
               return super.n(param0 + 0);
             }
             fieldTemp$0 = this.field_kb + 1;
@@ -306,7 +306,7 @@ abstract class jk extends wf {
           return super.n(param0 + 0);
         }
         if (ah.field_a != this.field_cb) {
-          if (this.field_cb != lm.field_O) {
+          if (this.field_cb != DisplayNameSelectionPanel.field_O) {
             return super.n(param0 + 0);
           }
           fieldTemp$2 = this.field_kb + 1;

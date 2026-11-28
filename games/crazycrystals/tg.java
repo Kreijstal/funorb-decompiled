@@ -14,7 +14,7 @@ final class tg {
             field_a = (String) null;
           }
           if (td.field_b == null) {
-            td.field_b = new kl(qe.field_g, sd.field_T);
+            td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
             qe.field_g.b(param2 ^ 3223, td.field_b);
           }
           td.field_b.a(8405024, param3, param0, param1);
@@ -168,11 +168,11 @@ final class tg {
             }
             var21 = stackIn_40_0;
             var22 = dn.field_a[var15Lifetime1];
-            var23 = qk.field_E[var15Lifetime1];
+            var23 = DisplayNameSelectionPanel.field_E[var15Lifetime1];
             var24 = dn.field_a[var16];
-            var25 = qk.field_E[var16];
+            var25 = DisplayNameSelectionPanel.field_E[var16];
             var26 = dn.field_a[var17];
-            var27 = qk.field_E[var17];
+            var27 = DisplayNameSelectionPanel.field_E[var17];
             if (var18 == var19 &&
               var20 == var19) {
               var28 = var55[var18];

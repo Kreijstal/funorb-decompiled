@@ -37,7 +37,7 @@ final class ff extends nh {
         ha var9 = null;
         od var10 = null;
         var8 = stellarshard.field_B;
-        var9 = ae.field_N;
+        var9 = EditableTextField.field_N;
         var3 = var9.readUnsignedByte(4);
         ii.field_J = var3 & 127;
         stackIn_3_0 = ((var3 & 128) != 0);

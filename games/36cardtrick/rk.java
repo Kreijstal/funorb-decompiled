@@ -30,7 +30,7 @@ final class rk extends jc {
                 var3 = (java.applet.Applet) null;
                 rk.a((java.applet.Applet) null, (byte) 125);
               }
-              param0.getAppletContext().showDocument(fh.a(param0, var2, -1), "_top");
+              param0.getAppletContext().showDocument(DisplayNameSelectionPanel.a(param0, var2, -1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

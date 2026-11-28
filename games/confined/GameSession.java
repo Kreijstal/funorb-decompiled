@@ -211,7 +211,7 @@ final class GameSession {
         this.field_m.field_X.a((byte) 52, var17);
         PcmOutputWorker.field_g = -4.0 * var17[11];
         IntrusiveDeque.field_a = -4.0 * var17[9];
-        ke.field_Z = var17[10] * -4.0;
+        AccountRegistrationPanel.field_Z = var17[10] * -4.0;
         var3 = -91 / ((param0 - 45) / 32);
         if (this.field_x.field_a <= 1) {
           this.sortEntitiesByCameraDepth(938);

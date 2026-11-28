@@ -52,7 +52,7 @@ final class hh {
         int var7Lifetime1Lifetime1;
         var9 = HostileSpawn.field_I ? 1 : 0;
         try {
-          sf.field_U = true;
+          TextInputField.field_U = true;
           be.field_e = param1;
           if (be.field_e == 0) {
             var3_int = fa.a(gf.field_c, cg.field_a, 113, lj.field_u, ne.field_p);
@@ -162,8 +162,8 @@ final class hh {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ka.field_o = new String[var4];
-            kf.a(gf.field_c, 0, ka.field_o, 0, var4);
+            EmailFormatValidator.field_o = new String[var4];
+            kf.a(gf.field_c, 0, EmailFormatValidator.field_o, 0, var4);
             p.field_k = new String[-1 - var4 + var3_int];
             kf.a(gf.field_c, 1 + var4, p.field_k, 0, -var4 + (var3_int - 1));
             var3_int = fa.a(gf.field_c, cg.field_a, param0 ^ 102, lj.field_u, vg.a(new String[]{"<br><%0><br>"}, param0 ^ 70, jc.field_d));
@@ -182,8 +182,8 @@ final class hh {
             kf.a(gf.field_c, 0, gg.field_D, 0, var4);
             uh.field_j = new String[var3_int - var4 - 1];
             kf.a(gf.field_c, 1 + var4, uh.field_j, 0, -var4 + var3_int - 1);
-            if (ka.field_o.length >= gg.field_D.length) {
-              stackIn_65_0 = ka.field_o.length;
+            if (EmailFormatValidator.field_o.length >= gg.field_D.length) {
+              stackIn_65_0 = EmailFormatValidator.field_o.length;
             } else {
               stackIn_65_0 = gg.field_D.length;
             }
@@ -246,7 +246,7 @@ final class hh {
             }
           }
           if (be.field_e == 2) {
-            var10 = ka.field_o;
+            var10 = EmailFormatValidator.field_o;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -326,9 +326,9 @@ final class hh {
           ByteStorage.field_a = param0;
           ik.field_a = param3;
           mm.field_s = param5;
-          ig.field_N = (ej) ((Object) new ih());
+          EditableTextField.field_N = (ej) ((Object) new ih());
           GameCanvas.field_c = new DiskCacheWorker(param2);
-          sj.field_a = new sg(ig.field_N, GameCanvas.field_c);
+          sj.field_a = new sg(EditableTextField.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -373,12 +373,12 @@ final class hh {
           if (param0) {
             field_d = -42;
           }
-          var7 = mm.field_m[0].field_j.b(-4);
+          var7 = mm.field_m[0].field_j.getClampedTileIndex(-4);
           for (var8_int = 0; var8_int < 10; var8_int++) {
             regionExit1: {
               param1.field_l.b(var5, param1.field_c, 127);
               param1.a(8573);
-              var9 = param1.field_j.b(-4);
+              var9 = param1.field_j.getClampedTileIndex(-4);
               if (var7 != var9 && (2 == param2[var9] ||
                 param2[var9] == 4 ||
                 param2[var9] == 3)) {
@@ -435,13 +435,13 @@ final class hh {
               }
             }
             if (param1.field_e < 90) {
-              for (var10Lifetime1 = 0; el.field_j > var10Lifetime1; var10Lifetime1++) {
+              for (var10Lifetime1 = 0; ProxySocketFactory.field_j > var10Lifetime1; var10Lifetime1++) {
                 boolean decompiledFrameRemainder0 = true;
                 var11 = mm.field_m[var10Lifetime1];
                 var12Lifetime1 = 0;
                 if (var11 != null &&
                   var11.field_b) {
-                  var13 = var11.field_j.b(-4);
+                  var13 = var11.field_j.getClampedTileIndex(-4);
                   if (var9 != var13 &&
                     var13 - 1 != var9 &&
                     var9 != -ln.field_a.field_d + var13 &&
@@ -460,7 +460,7 @@ final class hh {
                   if (var11 != null &&
                     od.a(var11.field_i, 1) &&
                     0 != var11.field_h) {
-                    var13Lifetime1 = var11.field_j.b(-4);
+                    var13Lifetime1 = var11.field_j.getClampedTileIndex(-4);
                     if (var13Lifetime1 == var9) {
                       var12Lifetime1 = 1;
                     } else {
@@ -478,7 +478,7 @@ final class hh {
                   }
                   else {
                     if (20 == var11.field_i) {
-                      var13Lifetime2 = var11.field_j.b(-4);
+                      var13Lifetime2 = var11.field_j.getClampedTileIndex(-4);
                       if (var9 == var13Lifetime2 ||
                         -ln.field_a.field_d + var13Lifetime2 == var9 ||
                         var9 == ln.field_a.field_d + var13Lifetime2) {
@@ -522,7 +522,7 @@ final class hh {
               u.a(30, param1.field_j, true, 48, param1.field_l, 28);
             }
             jn.field_F[ib.field_c].field_c = (double)(int)(Math.random() * 256.0);
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param1.field_j);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
             jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
             jn.field_F[ib.field_c].field_e = 0;
             jn.field_F[ib.field_c].field_h = 1;

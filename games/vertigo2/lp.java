@@ -47,16 +47,16 @@ final class lp extends TextureOperator {
         int var5Lifetime1;
         var6 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (NetworkArchiveRequest.field_C == de.field_f) {
+          if (NetworkArchiveRequest.field_C == DebouncedFieldValidator.field_f) {
             stackIn_9_0 = !(wq.field_H);
             wq.field_H = stackIn_9_0;
           }
           for (var1_int = 0; var1_int < al.field_o.length; var1_int++) {
-            if (~al.field_o[var1_int] == ~de.field_f) {
+            if (~al.field_o[var1_int] == ~DebouncedFieldValidator.field_f) {
               var2 = 0;
               var3 = al.field_x[var1_int];
               if (var3 != 2) {
@@ -97,7 +97,7 @@ final class lp extends TextureOperator {
               if (var2 != 0) {
                 var3Lifetime1 = var1_int / 12;
                 var4 = -(var3Lifetime1 * 12) + var1_int;
-                if (-8 + de.field_f >= 0) {
+                if (-8 + DebouncedFieldValidator.field_f >= 0) {
                   var5 = var4 - 8 + 5 * var3Lifetime1;
                   SpriteState.field_w[1][var5] = true;
                   stackIn_54_0 = var5;

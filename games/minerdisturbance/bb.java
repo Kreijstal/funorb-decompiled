@@ -114,7 +114,7 @@ final class bb {
           if (param0 != 19931) {
             field_a = (IntrusiveDeque) null;
           }
-          MidiPcmStream.field_D = new cl(pl.field_a, (String) null, MusicPatchPcmStream.field_B, param1, param3);
+          MidiPcmStream.field_D = new LoginPanel(pl.field_a, (String) null, MusicPatchPcmStream.field_B, param1, param3);
           de.field_a = new rh(mb.field_b, MidiPcmStream.field_D);
           mb.field_b.b(1, de.field_a);
         } catch (RuntimeException runtimeException) {

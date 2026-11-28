@@ -83,7 +83,7 @@ final class NodeHashTableIterator implements Iterator {
 
     final static void a(ResourceArchive param0, int param1, PcmStreamMixer param2, int param3) {
         try {
-          tf.field_c = cl.p(-124) * param3 / 1000;
+          tf.field_c = ValidatedTextField.p(-124) * param3 / 1000;
           SpriteGeometry.a(param1 ^ param1, param0);
           de.a(0, param0);
           vf.a(false, param0);

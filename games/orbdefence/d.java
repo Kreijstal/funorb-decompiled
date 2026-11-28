@@ -116,7 +116,7 @@ final class d extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        ck.field_j = new rf();
+        ck.field_j = new AccountRegistrationPanel();
         kg.field_j.a(false, ck.field_j);
         if (param0 >= -65) {
           field_h = (String) null;

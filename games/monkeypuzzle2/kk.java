@@ -133,7 +133,7 @@ final class kk {
         var2_int = 0;
         do {
           if (480 <= var2_int) {
-            df.field_q[bc.field_a].c(-(df.field_q[0].field_m >> 1) + 80, ne.field_b);
+            PasswordValidator.field_q[bc.field_a].c(-(PasswordValidator.field_q[0].field_m >> 1) + 80, ne.field_b);
             break;
           }
           kj.field_F.c(-(kj.field_F.field_m >> 1) + 80, var2_int);
@@ -142,7 +142,7 @@ final class kk {
         var2_int = 0;
         do {
           if (var2_int >= 480) {
-            df.field_q[NetworkArchiveRequest.field_r].f(-(df.field_q[0].field_m >> 1) + 560, ClientException.field_e);
+            PasswordValidator.field_q[NetworkArchiveRequest.field_r].f(-(PasswordValidator.field_q[0].field_m >> 1) + 560, ClientException.field_e);
             break;
           }
           kj.field_F.c(560 - (kj.field_F.field_m >> 1), var2_int);
@@ -229,15 +229,15 @@ final class kk {
                     stackIn_61_1 = (FrameTimer.field_b != 0);
                     stackIn_63_2 = false;
                     stackIn_63_3 = 22890;
-                    stackIn_64_4 = (hf.field_f.field_A != 0);
+                    stackIn_64_4 = (DebouncedFieldValidator.field_f.field_A != 0);
                     ((vk) (Object) stackIn_60_0).a(wa.a(stackIn_61_1, stackIn_63_2, stackIn_63_3, stackIn_64_4), 320, var4Lifetime1 + var5Lifetime1, 1, -1);
                     stackIn_66_0 = var3_ref_vk;
                     stackIn_66_1 = -88;
                     stackIn_67_2 = (0 != FrameTimer.field_b);
-                    stackIn_70_3 = (hf.field_f.field_A != 0);
+                    stackIn_70_3 = (DebouncedFieldValidator.field_f.field_A != 0);
                     ((vk) (Object) stackIn_66_0).a(AccountRequestState.a(stackIn_66_1, stackIn_67_2, stackIn_70_3, false), 320, 20 + (var4Lifetime1 + var5Lifetime1 * 3), 1, -1);
                     stackIn_72_0 = var3_ref_vk;
-                    stackIn_73_1 = (hf.field_f.field_A != 0);
+                    stackIn_73_1 = (DebouncedFieldValidator.field_f.field_A != 0);
                     stackIn_75_2 = 122;
                     stackIn_76_3 = (FrameTimer.field_b != 0);
                     ((vk) (Object) stackIn_72_0).a(ma.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
@@ -447,7 +447,7 @@ final class kk {
           var3 = 275;
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
           lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
-          sb.field_r.a(bg.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
+          sb.field_r.a(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = BoundedRandomAccessFile.field_e;
           var5 = s.field_S;
           if (var5.field_l) {
@@ -457,7 +457,7 @@ final class kk {
                 break regionExit1;
               }
             }
-            var6 = qc.field_O;
+            var6 = ValidatedTextField.field_O;
             var7_ref_String__ = var5.field_g[ef.field_b];
             var19 = var5.field_i[ef.field_b];
             var9 = ti.a(0, var5, ef.field_b, ProxyAuthenticationRequiredException.field_b);
@@ -489,16 +489,16 @@ final class kk {
                   continue;
                 }
               } else {
-                if (hf.field_f == null) {
+                if (DebouncedFieldValidator.field_f == null) {
                   break scanLoop2;
                 }
                 stackIn_23_0 = var9;
                 stackIn_23_1 = -1;
               }
               if (stackIn_23_0 == stackIn_23_1 &&
-                0 != hf.field_f.field_A) {
+                0 != DebouncedFieldValidator.field_f.field_A) {
                 var4.b(cl.field_e, 30, var10, 5683782, -1);
-                var4.c(Integer.toString(hf.field_f.field_A), 360, var10, 5683782, -1);
+                var4.c(Integer.toString(DebouncedFieldValidator.field_f.field_A), 360, var10, 5683782, -1);
               }
               break;
             }
@@ -1021,7 +1021,7 @@ final class kk {
                   s.field_S = null;
                   lg.field_w = lg.field_w + 1;
                   ProxyAuthenticationRequiredException.field_b = null;
-                  hf.field_f = new hj();
+                  DebouncedFieldValidator.field_f = new hj();
                   this.field_e = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -1038,7 +1038,7 @@ final class kk {
               s.field_S = null;
               lg.field_w = lg.field_w + 1;
               ProxyAuthenticationRequiredException.field_b = null;
-              hf.field_f = new hj();
+              DebouncedFieldValidator.field_f = new hj();
               this.field_e = -1;
             }
           }
@@ -1232,9 +1232,9 @@ final class kk {
               if (!this.field_c.g(0)) {
                 break;
               }
-              if (hf.field_f.field_I > 0) {
-                hf.field_f.field_A = hf.field_f.field_A + (10000 + hf.field_f.field_I);
-                var5 = 10000 + hf.field_f.field_I;
+              if (DebouncedFieldValidator.field_f.field_I > 0) {
+                DebouncedFieldValidator.field_f.field_A = DebouncedFieldValidator.field_f.field_A + (10000 + DebouncedFieldValidator.field_f.field_I);
+                var5 = 10000 + DebouncedFieldValidator.field_f.field_I;
                 var6 = ej.field_b % 3;
                 if (var6 != 0) {
                   if (var6 != 1) {
@@ -1254,12 +1254,12 @@ final class kk {
                 } else {
                   cl.field_d = cl.field_d + var5;
                 }
-                hf.field_f.a(-19921);
-                hf.field_f.field_I = -1;
+                DebouncedFieldValidator.field_f.a(-19921);
+                DebouncedFieldValidator.field_f.field_I = -1;
               }
               regionExit1: {
                 if (ok.a(false)) {
-                  if (hf.field_f.field_A <= 0 &&
+                  if (DebouncedFieldValidator.field_f.field_A <= 0 &&
                     0 >= FrameTimer.field_b) {
                     this.field_e = 0;
                     if (var8 == 0) {
@@ -1271,10 +1271,10 @@ final class kk {
                     break regionExit1;
                   }
                 }
-                hf.field_f.c((byte) -108);
+                DebouncedFieldValidator.field_f.c((byte) -108);
                 s.field_S = null;
                 if (FrameTimer.field_b != 0) {
-                  if (0 >= hf.field_f.field_A) {
+                  if (0 >= DebouncedFieldValidator.field_f.field_A) {
                     this.field_e = 10;
                     if (var8 == 0) {
                       break regionExit1;
@@ -1282,7 +1282,7 @@ final class kk {
                   }
                   this.field_e = 6;
                   if (var8 != 0) {
-                    if (hf.field_f.field_A > 0) {
+                    if (DebouncedFieldValidator.field_f.field_A > 0) {
                       this.field_e = 2;
                       this.field_e = 0;
                     } else {
@@ -1290,7 +1290,7 @@ final class kk {
                     }
                   }
                 } else {
-                  if (hf.field_f.field_A > 0) {
+                  if (DebouncedFieldValidator.field_f.field_A > 0) {
                     this.field_e = 2;
                     if (var8 != 0) {
                       this.field_e = 0;
@@ -1356,7 +1356,7 @@ final class kk {
               }
               if (7 == this.field_g) {
                 if (FrameTimer.field_b > 0) {
-                  if (hf.field_f.field_A <= 0) {
+                  if (DebouncedFieldValidator.field_f.field_A <= 0) {
                     var5 = 10;
                     if (var8 != 0) {
                       var5 = 6;

@@ -42,7 +42,7 @@ final class m {
     final void a(byte param0) {
         int fieldTemp$1 = 0;
         String[] var3;
-        if (null != dg.field_i) {
+        if (null != TranslucentSpriteLayer.field_i) {
           return;
         }
         if (wp.field_w <= 0) {
@@ -187,7 +187,7 @@ final class m {
     }
 
     final static void a(int param0) {
-        ib.field_b = new ki();
+        ib.field_b = new AccountRegistrationPanel();
         if (param0 != 11) {
           return;
         }

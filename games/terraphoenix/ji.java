@@ -106,7 +106,7 @@ final class ji extends IntrusiveNode {
           IOException var16 = null;
           try {
             LevelEditor.field_j = new BitPacketBuffer(param9);
-            di.field_l = new BitPacketBuffer(param8);
+            TextFieldValidator.field_l = new BitPacketBuffer(param8);
             nd.field_i = param13;
             DelegatingCanvas.field_c = param1;
             sb.field_i = param2;

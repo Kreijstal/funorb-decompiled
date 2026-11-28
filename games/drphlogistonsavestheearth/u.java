@@ -35,7 +35,7 @@ abstract class u {
           if (MouseWheelInput.a(8975, param0)) {
             return false;
           }
-          if (g.b((byte) 99, param0)) {
+          if (AgeValidator.b((byte) 99, param0)) {
             return false;
           }
           if (kj.a(param0, (byte) 59)) {

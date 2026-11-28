@@ -27,14 +27,14 @@ public final class TrackController extends GameShell {
           fieldTemp$0 = na.field_b + 1;
           na.field_b = na.field_b + 1;
           if (fieldTemp$0 < 0 && (0 != SecondaryNodeDeque.mouseButton ||
-            ni.keyDown[84])) {
+            MatchingFieldValidator.keyDown[84])) {
             na.field_b = 0;
           }
           if (na.field_b >= 80) {
             boolean decompiledFrameRemainder1 = true;
             if (~ib.field_a == ~sc.field_g &&
               0 == NodeHashTable.field_g) {
-              if (ni.keyDown[85]) {
+              if (MatchingFieldValidator.keyDown[85]) {
                 SpriteState.field_p = SpriteState.field_p + 1;
               } else {
                 SpriteState.field_p = 0;
@@ -50,7 +50,7 @@ public final class TrackController extends GameShell {
               }
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
-                if (ni.keyDown[13]) {
+                if (MatchingFieldValidator.keyDown[13]) {
                   si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                   stackIn_50_0 = (SocketConnector.field_d <= 0) ? 13 : 12;
                   sc.field_g = stackIn_50_0;
@@ -111,7 +111,7 @@ public final class TrackController extends GameShell {
               if (ib.field_a == -4) {
                 stackIn_21_0 = (jj.s(96)) ? 0 : 1;
                 ib.field_a = stackIn_21_0;
-                oi.a(26, DualLinkNode.field_l, 26, bk.font, bk.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
+                oi.a(26, DualLinkNode.field_l, 26, DisplayNameSelectionPanel.font, DisplayNameSelectionPanel.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
               }
               if (ib.field_a == -3) {
                 if (jj.s(123)) {
@@ -150,7 +150,7 @@ public final class TrackController extends GameShell {
               if (ag.b(74)) {
                 DelegatingCanvas.a((byte) -89);
               } else {
-                v.e(6);
+                DebouncedFieldValidator.e(6);
               }
               dd.field_o = 2;
             }
@@ -196,7 +196,7 @@ public final class TrackController extends GameShell {
         if (IterableNodeHashTable.a(-122)) {
           stackIn_6_0 = -128;
           if (AccountCreationResultPanel.field_rb == null) {
-            stackIn_7_1 = lb.field_M;
+            stackIn_7_1 = EditableTextField.field_M;
           } else {
             stackIn_7_1 = true;
           }
@@ -207,11 +207,11 @@ public final class TrackController extends GameShell {
           return;
         }
         if (!Model.field_T) {
-          l.a((byte) 90, (java.awt.Canvas) (var7));
+          EmailFormatValidator.a((byte) 90, (java.awt.Canvas) (var7));
           return;
         }
         if (BufferedCacheFile.field_e == null &&
-          null == vd.field_G) {
+          null == AccountRegistrationPanel.field_G) {
           if (na.field_b < 80) {
             cd.field_c.drawOpaque(0, 0);
             var3 = 640 * na.field_b / 160;
@@ -252,7 +252,7 @@ public final class TrackController extends GameShell {
           if (!CachedArchiveSource.field_x) {
             kb.a(false, 4, 2);
           } else {
-            vd.b(-1, 2, 23636);
+            AccountRegistrationPanel.b(-1, 2, 23636);
           }
           SoftwareRasterizer.resetClip();
           if (ag.b(param0 - 142)) {
@@ -277,18 +277,18 @@ public final class TrackController extends GameShell {
             if (AccountCreationResultPanel.field_rb != null) {
               stackIn_54_0 = true;
             } else {
-              stackIn_54_0 = lb.field_M;
+              stackIn_54_0 = EditableTextField.field_M;
             }
-            nc.a(stackIn_54_0, -131);
+            AgeValidator.a(stackIn_54_0, -131);
           }
           if (IsaacRandom.field_f) {
-            bk.font.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
+            DisplayNameSelectionPanel.font.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
           }
           qd.a((java.awt.Canvas) (var7), 0, 0, param0 + 2741);
           return;
         }
         ud.a(128, 100.0f, LevelView.field_w);
-        l.a((byte) 105, (java.awt.Canvas) (var7));
+        EmailFormatValidator.a((byte) 105, (java.awt.Canvas) (var7));
     }
 
     final void clearStatics(int param0) {
@@ -365,10 +365,10 @@ public final class TrackController extends GameShell {
         AccountCreationResultPanel.discardDeclaredStaticReferences(-106);
         rk.discardDeclaredStaticReferences(4210752);
         jj.clearStaticReferences((byte) 105);
-        vd.resetStaticState(false);
+        AccountRegistrationPanel.resetStaticState(false);
         sf.b(false);
-        rl.clearStaticReferences(false);
-        bk.clearStaticReferences(-122);
+        LoginPanel.clearStaticReferences(false);
+        DisplayNameSelectionPanel.clearStaticReferences(-122);
         kh.clearStaticReferences(61);
         rd.b(3);
         mj.clearStaticReferences(-2069072125);
@@ -457,14 +457,14 @@ public final class TrackController extends GameShell {
         mh.resetStaticState(-24011);
         uh.clearStaticReferences((byte) 104);
         sa.clearStaticReferences(true);
-        lf.f((byte) -71);
-        lb.clearStaticReferences(-85);
+        ValidatedTextField.f((byte) -71);
+        EditableTextField.clearStaticReferences(-85);
         dg.clearStaticReferences((byte) 16);
         nd.b(false);
         el.c(false);
         ua.clearStaticReferences(param0 - 219);
         ed.j(param0 - 3726);
-        di.clearStaticReferences((byte) 73);
+        TextFieldValidator.clearStaticReferences((byte) 73);
         ka.clearStaticReferences(true);
         fe.j(-127);
         qk.clearStaticReferences((byte) 40);
@@ -516,14 +516,14 @@ public final class TrackController extends GameShell {
         qi.clearStaticReferences(param0 ^ param0);
         va.c(20300);
         AccountNameAvailabilityValidator.clearDeclaredStaticReferences((byte) -127);
-        ui.h(256);
-        l.clearDeclaredStaticReferences(param0 ^ 105);
-        hd.clearDeclaredStaticReferences((byte) 69);
-        ni.clearDeclaredStaticReferences(112);
+        PasswordValidator.h(256);
+        EmailFormatValidator.clearDeclaredStaticReferences(param0 ^ 105);
+        ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences((byte) 69);
+        MatchingFieldValidator.clearDeclaredStaticReferences(112);
         jb.clearStaticReferences(-111);
         fi.clearStaticReferences(param0 - 5759);
         ud.clearStaticReferences(true);
-        v.clearStaticReferences(0);
+        DebouncedFieldValidator.clearStaticReferences(0);
         oi.clearStaticReferences(-13);
         this.field_t = null;
     }
@@ -573,12 +573,12 @@ public final class TrackController extends GameShell {
           }
           if (!jj.s(109)) {
             BufferedCacheFile.field_e = LevelGrid.a(4, -124);
-            vd.field_G = dh.a(5, -1, 0, 1);
+            AccountRegistrationPanel.field_G = dh.a(5, -1, 0, 1);
           }
         }
         if (Model.field_T) {
           if (BufferedCacheFile.field_e == null) {
-            if (vd.field_G == null) {
+            if (AccountRegistrationPanel.field_G == null) {
               if (!ag.b(116)) {
                 if (!ob.g(-26998)) {
                   this.s(0);
@@ -604,7 +604,7 @@ public final class TrackController extends GameShell {
                 } else {
                   var2 = rk.s(-1);
                   if (var2 == 3) {
-                    oi.a(26, DualLinkNode.field_l, 26, bk.font, bk.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
+                    oi.a(26, DualLinkNode.field_l, 26, DisplayNameSelectionPanel.font, DisplayNameSelectionPanel.font, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
                   } else {
                     if (2 != var2) {
                       if (var2 == 4) {
@@ -620,11 +620,11 @@ public final class TrackController extends GameShell {
                 }
               }
             } else {
-              if (vd.field_G.field_k) {
-                if (vd.field_G.field_m[0] > ArchiveIndex.field_i) {
-                  ArchiveIndex.field_i = vd.field_G.field_m[0];
+              if (AccountRegistrationPanel.field_G.field_k) {
+                if (AccountRegistrationPanel.field_G.field_m[0] > ArchiveIndex.field_i) {
+                  ArchiveIndex.field_i = AccountRegistrationPanel.field_G.field_m[0];
                 }
-                vd.field_G = null;
+                AccountRegistrationPanel.field_G = null;
                 mf.c((byte) 123);
               }
             }
@@ -697,7 +697,7 @@ public final class TrackController extends GameShell {
         wl.field_l = mf.a(4, (byte) -36);
         DiskArchiveRequest.field_C = mf.a(5, (byte) 86);
         si.field_c = mf.a(6, (byte) -77);
-        rl.field_D = mf.a(8, (byte) -29);
+        LoginPanel.field_D = mf.a(8, (byte) -29);
         if (param0 >= -8) {
           return;
         }
@@ -783,24 +783,24 @@ public final class TrackController extends GameShell {
             if (el.field_L.ensureIndexLoaded(111) &&
               el.field_L.tryLoadGroupByName("basic", (byte) -3)) {
               if (!el.field_L.tryLoadGroupByName("comic12", (byte) -3)) {
-                ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, el.field_L, 43));
+                ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, el.field_L, 43));
                 return false;
               }
               if (!el.field_L.tryLoadGroupByName("kartika13", (byte) -3)) {
-                ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, el.field_L, param0 - 431));
+                ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, el.field_L, param0 - 431));
                 return false;
               }
               if (!fb.field_b.tryLoadGroupByName("comic12", (byte) -3)) {
-                ud.a(param0 ^ 339, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, v.field_c, fb.field_b, param0 ^ 399));
+                ud.a(param0 ^ 339, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, fb.field_b, param0 ^ 399));
                 return false;
               }
               if (!fb.field_b.tryLoadGroupByName("kartika13", (byte) -3)) {
-                ud.a(128, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, v.field_c, fb.field_b, 62));
+                ud.a(128, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, fb.field_b, 62));
                 return false;
               }
-              if (rl.field_D.ensureIndexLoaded(param0 - 374) &&
-                rl.field_D.tryLoadAllGroups((byte) 48)) {
-                if (ui.a(0, true) && (!sg.field_a.ensureIndexLoaded(-115) ||
+              if (LoginPanel.field_D.ensureIndexLoaded(param0 - 374) &&
+                LoginPanel.field_D.tryLoadAllGroups((byte) 48)) {
+                if (PasswordValidator.a(0, true) && (!sg.field_a.ensureIndexLoaded(-115) ||
                   !sg.field_a.tryLoadGroupByName("halloween", (byte) -3))) {
                   ud.a(param0 ^ 339, 11.0f, wf.a("halloween", sa.field_K, gj.field_e, sg.field_a, param0 ^ 479));
                   return false;
@@ -833,7 +833,7 @@ public final class TrackController extends GameShell {
                             var3_ref_byte__ = si.field_c.getFileByName("", param0 ^ -468, "tcfont");
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
                             var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
-                            bk.font = var5_ref_oh;
+                            DisplayNameSelectionPanel.font = var5_ref_oh;
                             var33 = ((de) (var5_ref_oh)).field_M[0];
                             var19 = var33;
                             var6_ref_int__ = var19;
@@ -872,7 +872,7 @@ public final class TrackController extends GameShell {
                       ud.a(128, 40.0f, wf.a("", IntrusiveNode.field_f, ql.field_q, j.field_h, 23));
                       return false;
                     }
-                    ud.a(param0 - 339, 31.0f, wf.a("", IndexedSpriteState.field_f, v.field_c, si.field_c, param0 - 394));
+                    ud.a(param0 - 339, 31.0f, wf.a("", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, si.field_c, param0 - 394));
                     return false;
                   }
                   ud.a(128, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 119));
@@ -881,7 +881,7 @@ public final class TrackController extends GameShell {
                 ud.a(param0 - 339, 30.0f, wf.a("", sa.field_K, gj.field_e, sg.field_a, 91));
                 return false;
               }
-              ud.a(128, 6.0f, wf.a("", lf.field_W, ei.field_k, rl.field_D, param0 - 413));
+              ud.a(128, 6.0f, wf.a("", ValidatedTextField.field_W, ei.field_k, LoginPanel.field_D, param0 - 413));
               return false;
             }
             ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, el.field_L, param0 ^ 413));
@@ -969,10 +969,10 @@ public final class TrackController extends GameShell {
             if (param0 != 467) {
               TrackController.clearStaticReferences(109);
             }
-            if (null != rl.field_D) {
+            if (null != LoginPanel.field_D) {
               mj.a(208);
               gj.levels = new LevelData[31];
-              var40 = rl.field_D.getFileByName("", param0 ^ -468, "levels.txt");
+              var40 = LoginPanel.field_D.getFileByName("", param0 ^ -468, "levels.txt");
               var32 = new BufferedReader((Reader) ((Object) new InputStreamReader((InputStream) ((Object) new ByteArrayInputStream(var40)))));
               try {
                 for (var5 = 0; 31 > var5; var5++) {
@@ -986,7 +986,7 @@ public final class TrackController extends GameShell {
               }
               AsyncRequest.field_p = new GameScreen[17];
               qh.field_b = gj.levels[0];
-              rl.field_D = null;
+              LoginPanel.field_D = null;
               for (var5 = 0; var5 < 17; var5++) {
                 AsyncRequest.field_p[var5] = new GameScreen(this, var5);
               }
@@ -1004,7 +1004,7 @@ public final class TrackController extends GameShell {
             qi.d(54);
             return true;
           }
-          var3 = bk.font.field_u + bk.font.field_G;
+          var3 = DisplayNameSelectionPanel.font.field_u + DisplayNameSelectionPanel.font.field_G;
           mc.field_E = new Sprite(var3, var3);
           mc.field_E.a();
           dc.field_p.a(0, 0, var3, var3);
@@ -1072,7 +1072,7 @@ public final class TrackController extends GameShell {
           }
           stackIn_90_0Lifetime1 = 0;
           stackIn_90_1Lifetime1 = 1;
-          if (ui.a(stackIn_90_0Lifetime1, stackIn_90_1Lifetime1 != 0)) {
+          if (PasswordValidator.a(stackIn_90_0Lifetime1, stackIn_90_1Lifetime1 != 0)) {
             stackIn_93_0 = "halloween";
           } else {
             stackIn_93_0 = "";
@@ -1135,20 +1135,20 @@ public final class TrackController extends GameShell {
           var17.field_o = 178;
           var27.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.font.b(na.field_d, 78, bk.font.field_G, 0, -1);
-          ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + bk.font.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.b(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
+          ba.field_b.b(bl.field_d, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
           var28.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.font.b(na.field_d, 78, bk.font.field_G, 1, -1);
-          ba.field_b.b(bl.field_d, 78, bk.font.field_G + ba.field_b.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.b(na.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
+          ba.field_b.b(bl.field_d, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
           var11.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.font.b(ca.field_d, 78, bk.font.field_G, 0, -1);
-          ba.field_b.b(th.field_i, 78, ba.field_b.field_G + bk.font.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.b(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 0, -1);
+          ba.field_b.b(th.field_i, 78, ba.field_b.field_G + DisplayNameSelectionPanel.font.field_G, 15252224, -1);
           var12.a();
           cl.a(aa.field_a, 0, var8Lifetime2, 0, 156, 4);
-          bk.font.b(ca.field_d, 78, bk.font.field_G, 1, -1);
-          ba.field_b.b(th.field_i, 78, bk.font.field_G + ba.field_b.field_G, 15252224, -1);
+          DisplayNameSelectionPanel.font.b(ca.field_d, 78, DisplayNameSelectionPanel.font.field_G, 1, -1);
+          ba.field_b.b(th.field_i, 78, DisplayNameSelectionPanel.font.field_G + ba.field_b.field_G, 15252224, -1);
           ia.field_b.a(-91);
           sg.field_a = null;
           qi.d(param0 - 407);

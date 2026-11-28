@@ -70,7 +70,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_m) {
             while (this.field_m.status == 0) {
-              gda.sleepMillis(false, 1L);
+              DisplayNameSelectionPanel.sleepMillis(false, 1L);
             }
             if (this.field_m.status == 1) {
               try {

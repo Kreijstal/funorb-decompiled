@@ -1,0 +1,144 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ChessMatchState {
+    int field_n;
+    int field_f;
+    int field_m;
+    String[] field_i;
+    boolean field_d;
+    byte field_h;
+    int field_c;
+    int field_l;
+    static ci field_o;
+    int field_k;
+    static int field_g;
+    int field_j;
+    static String field_a;
+    int field_e;
+    static String field_b;
+
+    final void setActiveTurn(int param0, int param1, int param2) {
+        this.field_n = param0;
+        this.field_l = param2;
+        if (param1 != 255) {
+          ChessBoardState var5 = (ChessBoardState) null;
+          this.applyMatchMove(82, 103, (ChessBoardState) null, 11, 35);
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_b = null;
+        field_a = null;
+        field_o = null;
+        if (param0 >= -103) {
+          field_a = (String) null;
+        }
+    }
+
+    final static RgbSprite[] decodeRgbSpriteArray(byte param0) {
+        int var2 = 0;
+        int var3 = 0;
+        byte[] var4 = null;
+        int[] var5 = null;
+        int var6 = 0;
+        int var7 = Chess.field_G;
+        if (param0 > -86) {
+          field_o = (ci) null;
+        }
+        RgbSprite[] var1 = new RgbSprite[h.field_n];
+        for (var2 = 0; h.field_n > var2; var2++) {
+          var3 = b.field_c[var2] * wm.field_b[var2];
+          var4 = vk.field_d[var2];
+          var5 = new int[var3];
+          for (var6 = 0; var6 < var3; var6++) {
+            var5[var6] = AccountNameAvailabilityValidator.field_r[ce.a(255, (int) var4[var6])];
+          }
+          var1[var2] = new RgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var5);
+        }
+        ch.k(4210752);
+        return var1;
+    }
+
+    final static boolean handleActiveTextPromptKey(byte param0) {
+        boolean stackIn_6_0 = false;
+        if (param0 <= 14) {
+          return false;
+        }
+        stackIn_6_0 = (me.field_a != null) && (me.field_a.k(-1));
+        return stackIn_6_0;
+    }
+
+    final void markMatchFinished(byte param0, int param1) {
+        this.field_l = param1;
+        this.field_d = true;
+        if (param0 != 93) {
+          ChessMatchState.decodeRgbSpriteArray((byte) 21);
+        }
+    }
+
+    final void readInitialBoardState(int param0, PacketBuffer param1, ChessBoardState param2, ChessMatchSession param3) {
+        try {
+          if (param0 != 0) {
+            ChessBoardState var6 = (ChessBoardState) null;
+            this.applyMatchMove(68, -28, (ChessBoardState) null, 40, 39);
+          }
+          param2.readBoardSnapshot(param3, param1, true);
+        } catch (RuntimeException runtimeException) {
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "af.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    ChessMatchState(int param0, String[] param1, int param2) {
+        this.field_f = -2;
+        try {
+          this.field_j = param0;
+          this.field_h = (byte)param1.length;
+          this.field_l = param2;
+          this.field_k = param2;
+          this.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "af.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    final void applyMatchMove(int param0, int param1, ChessBoardState param2, int param3, int param4) {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_d) {
+            throw new IllegalStateException();
+          }
+          if (0 <= param0 &&
+            64 > param0 &&
+            0 <= param4 &&
+            param4 < 64) {
+            if (param3 != -65) {
+              this.field_l = -106;
+            }
+            param2.applyMove((byte) 19, param1, param0, param4);
+            return;
+          }
+          throw new IllegalArgumentException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_15_0 = runtimeException;
+          stackIn_15_1 = new StringBuilder().append("af.E(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw SpriteGeometry.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
+        field_b = "You appear to be telling someone your password - please don't!";
+    }
+}

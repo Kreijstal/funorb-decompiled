@@ -11,7 +11,7 @@ final class MixedSupport118 {
     RgbSprite rgbSpriteState0057;
     private int integerState0763;
     static boolean booleanState0181;
-    static UiComponentPart005 uiComponentPart005State0001;
+    static DisplayNameSelectionPanel uiComponentPart005State0001;
     private int integerState0764;
 
     final MixedSupport118 computeMixedSupport1181552(int integerArgument1, int integerArgument2) {
@@ -230,7 +230,7 @@ final class MixedSupport118 {
               stackIntegerLocal1 = -1;
               return stackIntegerLocal1;
             }
-            if (ResourceSupport002.mixedSupport132State0001 == UiComponentPart023.mixedSupport132State0009) {
+            if (DebouncedFieldValidator.mixedSupport132State0001 == UiComponentPart023.mixedSupport132State0009) {
               if (booleanArgument6) {
                 stringLocal26 = (String) null;
                 SceneWidgetPart014.mixedSupport043State0001 = MixedSupport113.computeMixedSupport0431472(GameAssets.longState0046, stringArgument3, false, (String) null, 0);
@@ -382,7 +382,7 @@ final class MixedSupport118 {
               if (HashNode.integerState0070 == 7) {
                 HashNode.integerState0070 = 3;
               }
-              UiComponentPart028.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
+              EditableTextField.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);
               SceneWidgetPart006.booleanState0083 = false;
               stackIntegerLocal10 = HashNode.integerState0070;
               return stackIntegerLocal10;
@@ -390,9 +390,9 @@ final class MixedSupport118 {
             if (GameSession.bufferedSocketState0002 == null) {
               if (SceneWidgetPart006.booleanState0083) {
                 if (MixedSupport117.computeLong1528(-1) <= 30000L) {
-                  UiComponentPart028.stringState0483 = MatchingFieldValidator.stringState0470;
+                  EditableTextField.stringState0483 = MatchingFieldValidator.stringState0470;
                 } else {
-                  UiComponentPart028.stringState0483 = MixedSupport069.stringState0311;
+                  EditableTextField.stringState0483 = MixedSupport069.stringState0311;
                 }
                 SceneWidgetPart006.booleanState0083 = false;
                 stackIntegerLocal11 = 3;

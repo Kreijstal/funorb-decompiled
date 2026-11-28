@@ -156,12 +156,12 @@ final class pb {
               stackIn_32_0 = -1;
             }
             var20 = stackIn_32_0;
-            if (wc.field_o != null &&
+            if (PasswordValidator.field_o != null &&
               param3.field_J != null &&
               param3.field_J.length > var14Lifetime1 &&
               param3.field_J[var14Lifetime1] != -1 &&
-              wc.field_o.length > param3.field_J[var14Lifetime1]) {
-              stackIn_40_0 = wc.field_o[param3.field_J[var14Lifetime1]];
+              PasswordValidator.field_o.length > param3.field_J[var14Lifetime1]) {
+              stackIn_40_0 = PasswordValidator.field_o[param3.field_J[var14Lifetime1]];
             } else {
               stackIn_40_0 = null;
             }

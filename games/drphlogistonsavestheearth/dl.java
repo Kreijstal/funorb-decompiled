@@ -96,11 +96,11 @@ final class dl extends si {
         var3 = var9.readUnsignedByte(31760);
         stackIn_3_0 = ((128 & var3) != 0);
         td.field_f = stackIn_3_0;
-        kl.field_J = 127 & var3;
+        EditableTextField.field_J = 127 & var3;
         ib.field_o = var9.readUnsignedByte(31760);
         var4 = -87 % ((param1 + 47) / 45);
         fm.field_j = var9.readLong((byte) -53);
-        if (kl.field_J == 2) {
+        if (EditableTextField.field_J == 2) {
           dj.field_K = var9.readUnsignedShort(-788751192);
           ob.field_a = var9.readUnsignedMedium(-1);
         } else {
@@ -115,11 +115,11 @@ final class dl extends si {
         } else {
           tf.field_kb = rh.field_j;
         }
-        if (1 == kl.field_J) {
+        if (1 == EditableTextField.field_J) {
           var9.readUnsignedShort(-788751192);
           var9.readString((byte) -57);
         } else {
-          if (kl.field_J == 4) {
+          if (EditableTextField.field_J == 4) {
             var9.readUnsignedShort(-788751192);
             var9.readString((byte) -57);
           }

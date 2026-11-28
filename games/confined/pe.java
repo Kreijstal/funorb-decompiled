@@ -217,8 +217,8 @@ final class pe extends IntrusiveNode {
               return true;
             }
             var4 = tk.field_b;
-            if (0.0 != gl.field_i) {
-              var4 = (int)((double)var4 + hj.field_h.nextGaussian() * gl.field_i);
+            if (0.0 != PasswordValidator.field_i) {
+              var4 = (int)((double)var4 + AgeValidator.field_h.nextGaussian() * PasswordValidator.field_i);
               if (var4 < 0) {
                 var4 = 0;
               }

@@ -333,7 +333,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
           }
           if (frameRemainderLocal36) {
             ValidationStatus.sceneWidgetState0112.booleanState0212 = true;
-            EmailValidationError.sceneWidgetState0060.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(98, SceneWidgetPart013.stringState0587, new String[]{MixedSupport033.stringState0159});
+            EmailValidationError.sceneWidgetState0060.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(98, LobbyRoomRow.stringState0587, new String[]{MixedSupport033.stringState0159});
             MixedSupport066.sceneWidgetPart010State0003.sceneWidgetPart008State0005.sceneWidgetState0089.stringState0598 = null;
             objectLocal20 = null;
             sceneWidgetPart014Local21 = (SceneWidgetPart014) (nodeDequeLocal18.beginBackward((byte) -108));
@@ -447,13 +447,13 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                 stackObjectLocal12 = MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106;
               }
               if (((SceneWidget) (stackObjectLocal12)).integerState0891 != 0) {
-                MixedSupport139.sceneWidgetPart004State0001 = new SceneWidgetPart004(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0892, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0886, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0896, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0915, MixedSupport051.stringState0213, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
+                MixedSupport139.sceneWidgetPart004State0001 = new PlayerNamePrompt(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0892, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0886, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0896, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0106.integerState0915, MixedSupport051.stringState0213, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
                 ResourceSupport003.integerState0555 = 0;
               }
               if (MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0891 == 0) {
                 break;
               }
-              MixedSupport139.sceneWidgetPart004State0001 = new SceneWidgetPart004(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0892, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0886, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0896, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0915, MixedSupport040.stringState0180, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
+              MixedSupport139.sceneWidgetPart004State0001 = new PlayerNamePrompt(MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0892, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0886, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0896, MixedSupport066.sceneWidgetPart010State0003.sceneWidgetState0107.integerState0915, MixedSupport040.stringState0180, MixedSupport005.sceneWidgetState0002, MixedSupport125.sceneWidgetState0125, MixedSupport125.sceneWidgetState0125);
               ResourceSupport003.integerState0555 = 1;
               break;
             }

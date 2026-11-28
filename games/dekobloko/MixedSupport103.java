@@ -6,7 +6,7 @@ final class MixedSupport103 extends GameDomainSupport006 {
     static String stringState0437;
     static int integerState0595;
     static RawSound rawSoundState0018;
-    static SceneWidgetPart009[][] sceneWidgetPart009ArrayArrayState0001;
+    static IconLabelWidget[][] sceneWidgetPart009ArrayArrayState0001;
     static int integerState0596;
     static volatile int integerState0597;
     static float[] floatArrayState0002;
@@ -47,7 +47,7 @@ final class MixedSupport103 extends GameDomainSupport006 {
           rawSoundState0018 = null;
           floatArrayState0002 = null;
           stringState0436 = null;
-          sceneWidgetPart009ArrayArrayState0001 = (SceneWidgetPart009[][]) null;
+          sceneWidgetPart009ArrayArrayState0001 = (IconLabelWidget[][]) null;
           return;
         }
         MixedSupport103.performAction1283(99, -109);
@@ -55,7 +55,7 @@ final class MixedSupport103 extends GameDomainSupport006 {
         rawSoundState0018 = null;
         floatArrayState0002 = null;
         stringState0436 = null;
-        sceneWidgetPart009ArrayArrayState0001 = (SceneWidgetPart009[][]) null;
+        sceneWidgetPart009ArrayArrayState0001 = (IconLabelWidget[][]) null;
     }
 
     MixedSupport103(long longArgument1, String stringArgument2) {

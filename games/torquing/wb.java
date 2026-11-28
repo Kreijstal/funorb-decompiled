@@ -28,7 +28,7 @@ final class wb extends am {
               param0 <= 105) {
               var4 = param1;
               ci.a(123, var4);
-              qi.field_d = di.createAccountSuggestionsResult(0, param1);
+              qi.field_d = IndexedSpriteLayer.createAccountSuggestionsResult(0, param1);
             } else {
               qi.field_d = pg.createAccountErrorResult(param0, param3, -1);
             }
@@ -161,7 +161,7 @@ final class wb extends am {
             mk.field_a = mn.a(qm.field_a, "benefits", "blurbpane", param0 ^ -88);
             vk.field_s = mn.a(qm.field_a, "benefits", "button", 89);
             je.field_e = mn.a(qm.field_a, "benefits", "signup_text", 113);
-            ki.field_H = mn.a(qm.field_a, "benefits", "menu_text", 111);
+            AccountRegistrationPanel.field_H = mn.a(qm.field_a, "benefits", "menu_text", 111);
             jg.field_t = mn.a(qm.field_a, "benefits", "button_frame", 112);
             qc.field_db = mn.a(qm.field_a, "benefits", "arrow", 110);
             lh.field_O = (uc) ((Object) qg.a(ae.field_mb, qm.field_a, "benefits", "large_font", 255));
@@ -181,7 +181,7 @@ final class wb extends am {
             var12.e();
             lh.field_O.c(ff.a(new String[]{Level.field_u}, 0, eo.field_c), var6, 40, 16777215, -1);
             DelayedPcmStream.field_o.c(ff.a(new String[]{Level.field_u}, 0, wd.field_r), var6, 60, 16777215, -1);
-            lh.field_O.c(ff.a(new String[]{rj.field_y}, 0, di.field_c), var6, 110, 16777215, -1);
+            lh.field_O.c(ff.a(new String[]{rj.field_y}, 0, IndexedSpriteLayer.field_c), var6, 110, 16777215, -1);
             DelayedPcmStream.field_o.c(ff.a(new String[]{rj.field_y}, 0, lc.field_B), var6, 130, 16777215, -1);
             lh.field_O.c(rn.field_a, var6, 180, 16777215, -1);
             DelayedPcmStream.field_o.c(ii.field_o, var6, 200, 16777215, -1);
@@ -361,7 +361,7 @@ final class wb extends am {
           if (vk.field_s != null &&
             null != jg.field_t) {
             vk.field_s.d(434, 390);
-            ki.field_H.d(0, 0);
+            AccountRegistrationPanel.field_H.d(0, 0);
             if (sd.field_s.field_g == 1) {
               kp.a(-4 + vk.field_s.field_s, vk.field_s.field_t * 7 / 12, 436, (byte) 16, 64, 392);
             }

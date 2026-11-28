@@ -788,7 +788,7 @@ final class ResourceArchive {
         if (0 > param0 ||
           this.field_i.field_l.length <= param0 ||
           this.field_i.field_l[param0] == 0) {
-          if (!rf.field_N) {
+          if (!AccountRegistrationPanel.field_N) {
             return false;
           }
           throw new IllegalArgumentException(Integer.toString(param0));
@@ -892,7 +892,7 @@ final class ResourceArchive {
           this.field_i.field_l[param0] > param2) {
           return true;
         }
-        if (rf.field_N) {
+        if (AccountRegistrationPanel.field_N) {
           throw new IllegalArgumentException(param0 + " " + param2);
         }
         return false;

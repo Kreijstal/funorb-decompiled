@@ -21,7 +21,7 @@ final class FridgeScreen {
     IntrusiveDeque field_m;
     private int field_o;
     private int field_l;
-    static ph field_e;
+    static LoginPanel field_e;
     private String field_b;
 
     final void a(boolean param0) {

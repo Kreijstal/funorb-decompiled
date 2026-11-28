@@ -181,12 +181,12 @@ final class rj {
                   var25Lifetime1Lifetime1 = param3.field_y[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param3.field_J[var23Lifetime2];
                   ba.field_h[var23Lifetime2] = var9 + (var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 + var18 * var26Lifetime1Lifetime1 >> 16);
-                  ib.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var13 + (var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
+                  DisplayNameSelectionPanel.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var13 + (var25Lifetime1Lifetime1 * var16 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
                   ih.field_O[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 + var25Lifetime1Lifetime1 * var17 + var26Lifetime1Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param3.field_E[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param3.field_l[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param3.field_C[var23Lifetime2];
-                  il.field_r[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16) + var9;
+                  EmailFormatValidator.field_r[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1 >> 16) + var9;
                   tf.field_u[var23Lifetime2] = (var25Lifetime1Lifetime1 * var16 + (var24Lifetime1Lifetime1 * var13 + var19 * var26Lifetime1Lifetime1) >> 16) + var10;
                   AccountServiceResult.field_d[var23Lifetime2] = (var24Lifetime1Lifetime1 * var14 - (-(var25Lifetime1Lifetime1 * var17) - var20 * var26Lifetime1Lifetime1) >> 16) + var11;
                   var24Lifetime1Lifetime1 = param3.field_A[var23Lifetime2];
@@ -194,7 +194,7 @@ final class rj {
                   var26Lifetime1Lifetime1 = param3.field_a[var23Lifetime2];
                   fa.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 >> 16);
                   qi.field_h[var23Lifetime2] = var10 + (var19 * var26Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 >> 16);
-                  LocalizedStrings.field_m[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
+                  ConfirmedEmailAvailabilityValidator.field_m[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -286,7 +286,7 @@ final class rj {
             id.field_b = new pa(param5);
             dk.field_s = new pa(param1);
             vl.field_a = param13;
-            fg.field_S = param2;
+            LoginPanel.field_S = param2;
             wh.field_c = param10;
             ll.field_f = param8;
             IsaacRandom.field_e = param4;

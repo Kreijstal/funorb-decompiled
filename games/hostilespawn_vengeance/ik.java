@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ik {
-    static mk field_d;
+    static AccountRegistrationPanel field_d;
     static boolean field_b;
     static int field_a;
     static int field_c;

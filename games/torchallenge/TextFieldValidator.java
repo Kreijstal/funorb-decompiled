@@ -1,0 +1,194 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class TextFieldValidator extends DebouncedFieldValidator implements TextFieldListener {
+    private EditableTextField field_l;
+    static int field_j;
+    static int field_k;
+
+    final static void e(int param0) {
+        int fieldTemp$0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        pa var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        var3 = TorChallenge.field_F ? 1 : 0;
+        try {
+          if (param0 <= 23) {
+            field_j = -62;
+          }
+          var1 = dk.field_s;
+          while (de.a(-1)) {
+            var1.d(25, 8);
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
+            var2 = fieldTemp$0;
+            hb.a(var1, -95);
+            dk.field_s.patchByteLength(var1.position - var2, -111);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "ma.T(" + param0 + ')');
+        }
+    }
+
+    final static vi b(String param0, byte param1) {
+        int var4 = 0;
+        int var2_int = 0;
+        int var3 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        vi stackIn_3_0 = null;
+        vi stackIn_6_0 = null;
+        vi stackIn_16_0 = null;
+        vi stackIn_19_0 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var6 = TorChallenge.field_F ? 1 : 0;
+        try {
+          var3 = -46 % ((param1 - 62) / 41);
+          var2_int = param0.length();
+          if (var2_int == 0) {
+            stackIn_3_0 = EditableTextField.field_W;
+            return stackIn_3_0;
+          }
+          if (var2_int > 63) {
+            stackIn_6_0 = uk.field_I;
+            return stackIn_6_0;
+          }
+          for (var4 = 0; var4 < var2_int; var4++) {
+            var5 = param0.charAt(var4);
+            if (45 == var5) {
+              if (var4 == 0 ||
+                var4 == -1 + var2_int) {
+                stackIn_16_0 = di.field_g;
+                return stackIn_16_0;
+              }
+            } else {
+              if (bl.field_Q.indexOf(var5) == -1) {
+                stackIn_19_0 = di.field_g;
+                return stackIn_19_0;
+              }
+            }
+          }
+          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_24_0 = var2;
+          stackIn_24_1 = new StringBuilder().append("ma.V(");
+          if (param0 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final void onTextChanged(EditableTextField param0, int param1) {
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (param1 != 3) {
+            field_j = -97;
+            this.recordInputChange(true);
+          } else {
+            this.recordInputChange(true);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("ma.M(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
+        if (!param4) {
+          return (Sprite[]) null;
+        }
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = e.a(param1, param2, (byte) -113);
+        var6[6] = dupTemp$0;
+        var5[3] = dupTemp$0;
+        var5[2] = dupTemp$0;
+        var5[1] = dupTemp$0;
+        var5[0] = dupTemp$0;
+        Sprite dupTemp$1 = e.a(param0, param2, (byte) -100);
+        var6[8] = dupTemp$1;
+        var5[7] = dupTemp$1;
+        var5[5] = dupTemp$1;
+        if (0 != param3) {
+          var6[4] = e.a(param3, 64, (byte) -100);
+        }
+        return var5;
+    }
+
+    TextFieldValidator(EditableTextField param0) {
+        try {
+          this.field_l = param0;
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final boolean hasMissingInput(int param0) {
+        boolean stackIn_7_0 = false;
+        if (param0 != 6650) {
+          this.field_l = (EditableTextField) null;
+        }
+        stackIn_7_0 = (this.field_l.field_v == null) || (this.field_l.field_v.length() == 0);
+        return stackIn_7_0;
+    }
+
+    final rj evaluateValidationStatus(byte param0) {
+        if (param0 < 79) {
+          field_j = 104;
+        }
+        return this.getValidationStatus((byte) 24, this.field_l.field_v);
+    }
+
+    abstract String getValidationMessage(String param0, byte param1);
+
+    public final void onTextSubmitted(EditableTextField param0, int param1) {
+        try {
+          if (param1 != 5) {
+            this.field_l = (EditableTextField) null;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ma.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    abstract rj getValidationStatus(byte param0, String param1);
+
+    final String evaluateValidationMessage(int param0) {
+        if (param0 != 5) {
+          return (String) null;
+        }
+        return this.getValidationMessage(this.field_l.field_v, (byte) -24);
+    }
+
+    static {
+        field_j = 0;
+        field_k = 0;
+    }
+}

@@ -3,14 +3,14 @@
  */
 final class ih extends bf {
     static String field_T;
-    private qn field_R;
-    private qn field_P;
+    private EditableTextField field_R;
+    private EditableTextField field_P;
     static boolean field_U;
     static int field_O;
     static String field_Q;
     private boolean field_X;
     static byte[] field_S;
-    private qn field_W;
+    private EditableTextField field_W;
     static String field_Y;
     static String field_V;
 
@@ -87,9 +87,9 @@ final class ih extends bf {
     private ih(jm param0, boolean param1) {
         super(0, 0, 0, 0, (jm) null);
         try {
-          this.field_R = (qn) ((Object) new bg("", (rg) null, 2));
-          this.field_P = (qn) ((Object) new bg("", (rg) null, 2));
-          this.field_W = (qn) ((Object) new bg("", (rg) null, 4));
+          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 2));
+          this.field_P = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 2));
+          this.field_W = (EditableTextField) ((Object) new ValidatedTextField("", (rg) null, 4));
           this.field_W.field_n = param0;
           this.field_P.field_n = param0;
           this.field_R.field_n = param0;
@@ -126,7 +126,7 @@ final class ih extends bf {
         }
     }
 
-    final void a(boolean param0, ri param1) {
+    final void a(boolean param0, BirthDateValidator param1) {
         try {
           super.a(param0, param1);
           this.field_R.field_p = (rg) ((Object) param1);

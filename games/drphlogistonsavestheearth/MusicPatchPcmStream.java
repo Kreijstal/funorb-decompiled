@@ -455,7 +455,7 @@ final class MusicPatchPcmStream extends PcmStream {
           NodeHashTableIterator.a(true);
           af.field_b = 11;
         }
-        kl.field_S = true;
+        EditableTextField.field_S = true;
     }
 
     MusicPatchPcmStream(MidiPcmStream param0) {

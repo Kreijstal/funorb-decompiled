@@ -37,7 +37,7 @@ final class te extends si {
           return;
         }
         Sprite var6 = new Sprite(this.field_G.field_t, this.field_G.field_x);
-        cl.a(-119, var6);
+        AgeValidator.a(-119, var6);
         this.field_G.a(0, param1, 0, param3);
         MidiPcmStream.e(4096);
         var6.c(param2 + this.field_m, this.field_j + param0, this.field_H);

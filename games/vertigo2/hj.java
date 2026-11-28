@@ -69,7 +69,7 @@ final class hj {
           stackIn_3_2 = var2;
           stackIn_3_3 = 11;
           stackIn_3_4 = 0;
-          stackIn_4_5 = (50 >= mk.field_M) ? false : true;
+          stackIn_4_5 = (50 >= AccountRegistrationPanel.field_M) ? false : true;
           stackIn_7_6 = 15;
           stackIn_7_7 = true;
           stackIn_7_8 = param1;
@@ -85,7 +85,7 @@ final class hj {
             stackIn_44_2 = var2;
             stackIn_44_3 = 11;
             stackIn_44_4 = 0;
-            stackIn_45_5 = (50 >= mk.field_M) ? false : true;
+            stackIn_45_5 = (50 >= AccountRegistrationPanel.field_M) ? false : true;
             stackIn_48_6 = 15;
             stackIn_48_7 = true;
             stackIn_48_8 = param1;
@@ -93,9 +93,9 @@ final class hj {
             stackIn_48_10 = 14;
             stackIn_50_11 = (LevelRenderer.field_b) || (PacketBuffer.field_q);
             fn.$cfr$intArgs$a$946cf173619b(stackIn_44_0, stackIn_44_1, stackIn_44_2 != 0, stackIn_44_3, stackIn_44_4, stackIn_45_5, stackIn_48_6, stackIn_48_7, stackIn_48_8, stackIn_48_9, stackIn_48_10, stackIn_50_11);
-            if (na.field_p) {
+            if (AgeValidator.field_p) {
               uh.field_Wb.writeCipheredByte(57, 123);
-              na.field_p = false;
+              AgeValidator.field_p = false;
             }
             if (param0 != 1726) {
               field_e = (hq) null;
@@ -113,7 +113,7 @@ final class hj {
           stackIn_24_2 = var2;
           stackIn_24_3 = 11;
           stackIn_24_4 = 0;
-          stackIn_25_5 = (50 >= mk.field_M) ? false : true;
+          stackIn_25_5 = (50 >= AccountRegistrationPanel.field_M) ? false : true;
           stackIn_28_6 = 15;
           stackIn_28_7 = true;
           stackIn_28_8 = param1;
@@ -122,9 +122,9 @@ final class hj {
           stackIn_30_11 = (LevelRenderer.field_b) || (PacketBuffer.field_q);
           fn.$cfr$intArgs$a$946cf173619b(stackIn_24_0, stackIn_24_1, stackIn_24_2 != 0, stackIn_24_3, stackIn_24_4, stackIn_25_5, stackIn_28_6, stackIn_28_7, stackIn_28_8, stackIn_28_9, stackIn_28_10, stackIn_30_11);
         }
-        if (na.field_p) {
+        if (AgeValidator.field_p) {
           uh.field_Wb.writeCipheredByte(57, 123);
-          na.field_p = false;
+          AgeValidator.field_p = false;
         }
         if (param0 != 1726) {
           field_e = (hq) null;

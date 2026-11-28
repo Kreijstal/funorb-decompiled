@@ -16,10 +16,10 @@ class ko extends DualLinkNode {
           if (!param0) {
             ko.a(true, -24);
           }
-          var4 = (mm) (m.field_a.beginBackward(-24172));
+          var4 = (mm) (DebouncedFieldValidator.field_a.beginBackward(-24172));
           while (var4 != null) {
             oj.a(param1, var4, true);
-            var4 = (mm) (m.field_a.nextBackward(4));
+            var4 = (mm) (DebouncedFieldValidator.field_a.nextBackward(4));
           }
           var5 = (kj) (DiskCacheWorker.field_i.beginBackward(-24172));
           while (var5 != null) {

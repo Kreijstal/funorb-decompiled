@@ -133,7 +133,7 @@ final class ea {
           var4 = -109 % ((param1 - 3) / 59);
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (param2.field_w.peekEvent() != null) {
-              uc.sleepMillis(-117, 1L);
+              DebouncedFieldValidator.sleepMillis(-117, 1L);
               continue;
             }
             break;

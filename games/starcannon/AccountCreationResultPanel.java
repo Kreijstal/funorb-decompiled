@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends ph implements ga {
-    private kh field_pb;
+    private AccountRegistrationPanel field_pb;
     static BufferedSocket field_sb;
     static String field_qb;
     static hj[] field_rb;
@@ -109,7 +109,7 @@ final class AccountCreationResultPanel extends ph implements ga {
             var4 = qd.field_C;
           } else {
             if (null != param1.suggestions) {
-              var4 = cf.field_s;
+              var4 = ConfirmedEmailAvailabilityValidator.field_s;
               if (this.field_pb != null) {
                 this.field_pb.a(-12920);
               }
@@ -166,7 +166,7 @@ final class AccountCreationResultPanel extends ph implements ga {
         }
     }
 
-    AccountCreationResultPanel(tc param0, kh param1) {
+    AccountCreationResultPanel(tc param0, AccountRegistrationPanel param1) {
         super(param0, AwtRasterBuffer.field_a, ge.field_a, false, false);
         try {
           this.field_pb = param1;

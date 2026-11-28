@@ -59,7 +59,7 @@ class af extends ta implements qh {
             gh.a(3, 31888);
             this.s(13);
           } else {
-            pa.a(mk.g(-125), "tochangedisplayname.ws", -61);
+            pa.a(PasswordValidator.g(-125), "tochangedisplayname.ws", -61);
           }
           int var6_int = -72 % ((-62 - param1) / 32);
         } catch (RuntimeException runtimeException) {
@@ -140,7 +140,7 @@ class af extends ta implements qh {
         if (param0 != 3) {
           return (java.awt.Container) null;
         }
-        return (java.awt.Container) ((Object) mk.g(-120));
+        return (java.awt.Container) ((Object) PasswordValidator.g(-120));
     }
 
     af(j param0, ee param1, String param2, boolean param3, boolean param4) {

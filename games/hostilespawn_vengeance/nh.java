@@ -6,7 +6,7 @@ final class nh extends fc {
     static int[] field_O;
     private boolean field_K;
     static int field_M;
-    static oc field_E;
+    static GridPoint field_E;
     private String field_B;
     static uj field_L;
     static int field_H;
@@ -284,7 +284,7 @@ final class nh extends fc {
     static {
         field_M = 0;
         field_H = 0;
-        field_E = new oc(-1, -1);
+        field_E = new GridPoint(-1, -1);
         field_P = new we(field_E);
     }
 }

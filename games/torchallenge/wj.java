@@ -45,7 +45,7 @@ final class wj {
           var2 = var10.readUnsignedByte(-123);
           var3 = var10.readUnsignedByte(param0 ^ -361);
           if (0 == var2) {
-            var4_ref_tc = (tc) (gf.field_q.first((byte) -79));
+            var4_ref_tc = (tc) (MatchingFieldValidator.field_q.first((byte) -79));
             if (var4_ref_tc == null) {
               ob.b(-100);
               return;

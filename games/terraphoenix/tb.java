@@ -152,13 +152,13 @@ final class tb extends uj {
           var14 = param2.a(119);
           var8 = param1.a(param5 ^ 25);
           if (null == ig.field_e &&
-            !le.a(false, (byte) 109)) {
+            !AgeValidator.a(false, (byte) 109)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
           }
           if (va.field_e == mh.field_a) {
             ge.field_d = null;
-            di.field_l.position = 0;
+            TextFieldValidator.field_l.position = 0;
             if (param0 == null) {
               nc.field_c.position = 0;
               nc.field_c.writeInt(j.field_H.nextInt(), param5 + 8863);
@@ -177,11 +177,11 @@ final class tb extends uj {
                 stackIn_25_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_24_0).writePrefixedString(stackIn_25_1, -105);
-              di.field_l.writeByte(16, 59);
-              di.field_l.position = di.field_l.position + 1;
-              var9 = di.field_l.position;
-              ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-              di.field_l.backpatchByteLength(di.field_l.position - var9, param5 - 215);
+              TextFieldValidator.field_l.writeByte(16, 59);
+              TextFieldValidator.field_l.position = TextFieldValidator.field_l.position + 1;
+              var9 = TextFieldValidator.field_l.position;
+              ea.a(ga.field_o, nc.field_c, 0, dj.field_c, TextFieldValidator.field_l);
+              TextFieldValidator.field_l.backpatchByteLength(TextFieldValidator.field_l.position - var9, param5 - 215);
             } else {
               var9 = 0;
               if (param3) {
@@ -197,21 +197,21 @@ final class tb extends uj {
               nc.field_c.writeShort(-1564407352, param4);
               nc.field_c.writeByte(param6, -115);
               nc.field_c.writeByte(var9, -90);
-              di.field_l.writeByte(18, param5 ^ 21);
-              di.field_l.position = di.field_l.position + 2;
-              var10 = di.field_l.position;
+              TextFieldValidator.field_l.writeByte(18, param5 ^ 21);
+              TextFieldValidator.field_l.position = TextFieldValidator.field_l.position + 2;
+              var10 = TextFieldValidator.field_l.position;
               var11_ref_String = kf.a(param5 ^ -120, dg.a(false));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              di.field_l.writeString(var11_ref_String, 2295);
-              ea.a(ga.field_o, nc.field_c, param5 - 96, dj.field_c, di.field_l);
-              di.field_l.backpatchShortLength(-var10 + di.field_l.position, -20125);
+              TextFieldValidator.field_l.writeString(var11_ref_String, 2295);
+              ea.a(ga.field_o, nc.field_c, param5 - 96, dj.field_c, TextFieldValidator.field_l);
+              TextFieldValidator.field_l.backpatchShortLength(-var10 + TextFieldValidator.field_l.position, -20125);
             }
             bc.a(-1, param5 - 96);
-            mh.field_a = ha.field_n;
+            mh.field_a = ConfirmedEmailAvailabilityValidator.field_n;
           }
-          if (mh.field_a == ha.field_n &&
+          if (mh.field_a == ConfirmedEmailAvailabilityValidator.field_n &&
             FrameTimer.a(param5 - 213, 1)) {
             var9Lifetime1 = LevelEditor.field_j.readUnsignedByte(-16384);
             LevelEditor.field_j.position = 0;

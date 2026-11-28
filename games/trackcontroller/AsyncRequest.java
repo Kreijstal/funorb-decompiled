@@ -57,9 +57,9 @@ abstract class AsyncRequest extends DualLinkNode {
             !(va.field_e.length >= param0)) {
             va.field_e = new int[2 * param0];
           }
-          if (null == lf.field_Y ||
-            !(lf.field_Y.length >= param0 + param2)) {
-            lf.field_Y = new int[2 * (param2 + param0)];
+          if (null == ValidatedTextField.field_Y ||
+            !(ValidatedTextField.field_Y.length >= param0 + param2)) {
+            ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
           }
           if (param1 == -14032) {
             if (dc.field_r == null ||
@@ -92,8 +92,8 @@ abstract class AsyncRequest extends DualLinkNode {
               !(va.field_e.length >= param0)) {
               va.field_e = new int[2 * param0];
             }
-            if (null == lf.field_Y) {
-              lf.field_Y = new int[2 * (param2 + param0)];
+            if (null == ValidatedTextField.field_Y) {
+              ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
               if (param1 != -14032) {
                 field_p = (GameScreen[]) null;
               }
@@ -102,8 +102,8 @@ abstract class AsyncRequest extends DualLinkNode {
                 dc.field_r = new boolean[param0 * 2];
               }
             } else {
-              if (lf.field_Y.length < param0 + param2) {
-                lf.field_Y = new int[2 * (param2 + param0)];
+              if (ValidatedTextField.field_Y.length < param0 + param2) {
+                ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
                 if (param1 != -14032) {
                   field_p = (GameScreen[]) null;
                 }
@@ -141,9 +141,9 @@ abstract class AsyncRequest extends DualLinkNode {
                 !(va.field_e.length >= param0)) {
                 va.field_e = new int[2 * param0];
               }
-              if (null == lf.field_Y ||
-                !(lf.field_Y.length >= param0 + param2)) {
-                lf.field_Y = new int[2 * (param2 + param0)];
+              if (null == ValidatedTextField.field_Y ||
+                !(ValidatedTextField.field_Y.length >= param0 + param2)) {
+                ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
               }
               if (param1 != -14032) {
                 field_p = (GameScreen[]) null;
@@ -162,9 +162,9 @@ abstract class AsyncRequest extends DualLinkNode {
                   !(va.field_e.length >= param0)) {
                   va.field_e = new int[2 * param0];
                 }
-                if (null == lf.field_Y ||
-                  !(lf.field_Y.length >= param0 + param2)) {
-                  lf.field_Y = new int[2 * (param2 + param0)];
+                if (null == ValidatedTextField.field_Y ||
+                  !(ValidatedTextField.field_Y.length >= param0 + param2)) {
+                  ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
                 }
                 if (param1 != -14032) {
                   field_p = (GameScreen[]) null;
@@ -183,9 +183,9 @@ abstract class AsyncRequest extends DualLinkNode {
                   !(va.field_e.length >= param0)) {
                   va.field_e = new int[2 * param0];
                 }
-                if (null == lf.field_Y ||
-                  !(lf.field_Y.length >= param0 + param2)) {
-                  lf.field_Y = new int[2 * (param2 + param0)];
+                if (null == ValidatedTextField.field_Y ||
+                  !(ValidatedTextField.field_Y.length >= param0 + param2)) {
+                  ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
                 }
                 if (param1 != -14032) {
                   field_p = (GameScreen[]) null;

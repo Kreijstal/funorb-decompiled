@@ -86,7 +86,7 @@ public final class Vertigo2 extends GameShell {
         var14 = field_L ? 1 : 0;
         try {
           jq.a((byte) 29);
-          mk.field_M = PlayerAvatarRenderer.getMouseIdleTicks((byte) 119);
+          AccountRegistrationPanel.field_M = PlayerAvatarRenderer.getMouseIdleTicks((byte) 119);
           um.h(0);
           var2_int = -90 % ((-13 - param0) / 47);
           if (dc.field_L != null &&
@@ -160,7 +160,7 @@ public final class Vertigo2 extends GameShell {
                     } else {
                       if (var3 == 4) {
                         jo.field_d = true;
-                        ip.a((byte) -65, ob.field_I, 0);
+                        ip.a((byte) -65, LoginPanel.field_I, 0);
                       }
                     }
                   } else {
@@ -175,7 +175,7 @@ public final class Vertigo2 extends GameShell {
             while (true) {
               var16_ref = (nf) (fg.field_eb.removeLast((byte) -43));
               if (var16_ref != null) {
-                de.a(4, var16_ref, 4);
+                DebouncedFieldValidator.a(4, var16_ref, 4);
                 continue;
               }
               break;
@@ -447,12 +447,12 @@ public final class Vertigo2 extends GameShell {
 
     private final void loadBackgroundImages(byte param0) {
         AccountRequestState.a(11579, nn.field_y);
-        Sprite var7 = new Sprite(nn.field_y.getFileByName("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var7 = new Sprite(nn.field_y.getFileByName("", "nebula_2_v2.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         Sprite var8 = var7;
-        Sprite var3 = new Sprite(nn.field_y.getFileByName("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var4 = new Sprite(nn.field_y.getFileByName("", "planet_1.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var5 = new Sprite(nn.field_y.getFileByName("", "stars.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
-        Sprite var6 = new Sprite(nn.field_y.getFileByName("", "asteroids.jpg", 0), (java.awt.Component) ((Object) ne.field_F));
+        Sprite var3 = new Sprite(nn.field_y.getFileByName("", "nebula_1.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
+        Sprite var4 = new Sprite(nn.field_y.getFileByName("", "planet_1.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
+        Sprite var5 = new Sprite(nn.field_y.getFileByName("", "stars.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
+        Sprite var6 = new Sprite(nn.field_y.getFileByName("", "asteroids.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.c(), var6});
         ue.field_N = new Sprite(640, 480);
         ue.field_N.d();
@@ -554,7 +554,7 @@ public final class Vertigo2 extends GameShell {
           up.field_B[1] = si.a(le.field_f, "", "vertigo2_level_2");
           up.field_B[2] = si.a(le.field_f, "", "vertigo2_level_3");
           kc.field_b = si.a(le.field_f, "", "vertigo2_lvl_complete_jingle");
-          rf.field_o = si.a(le.field_f, "", "vertigo2_lvl_start_jingle");
+          MatchingFieldValidator.field_o = si.a(le.field_f, "", "vertigo2_lvl_start_jingle");
           DiskArchiveRequest.field_D = si.a(le.field_f, "", "vertigo2_game_over_jingle");
           si.a(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
           si.a(le.field_f, "", "vertigo2_time_running_out_jingle");
@@ -610,7 +610,7 @@ public final class Vertigo2 extends GameShell {
           this.a(4, 0, 19, 1, false, -16, 2, 64);
           var3 = new MidiPcmStream();
           var3.a(9, true, 128);
-          nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) ne.field_F));
+          nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
           DiskCacheWorker.field_c = 4473924;
           oi.field_b = 16777215;
           SecondaryNodeDeque.field_a = 16777215;
@@ -891,10 +891,10 @@ public final class Vertigo2 extends GameShell {
           fg.clearStaticReferences(-15691);
           ga.m(11840);
           fj.clearStaticReferences(-74);
-          mk.resetStaticState(4);
+          AccountRegistrationPanel.resetStaticState(4);
           qm.clearStaticReferences(-120);
-          ob.a((byte) -103);
-          ne.a((byte) -125);
+          LoginPanel.a((byte) -103);
+          DisplayNameSelectionPanel.a((byte) -125);
           qj.clearStaticReferences((byte) 56);
           mc.resetStaticState(-119);
           ok.clearStaticReferences(2);
@@ -987,7 +987,7 @@ public final class Vertigo2 extends GameShell {
           WidgetWrapper.e((byte) -122);
           ro.c((byte) 76);
           mg.h(2);
-          br.clearStaticReferences(-17131);
+          ValidatedTextField.clearStaticReferences(-17131);
           sp.resetStaticState(-6);
           we.clearStaticReferences(false);
           oj.clearStaticReferences((byte) -110);
@@ -995,7 +995,7 @@ public final class Vertigo2 extends GameShell {
           lr.clearStaticReferences((byte) -45);
           qe.clearStaticReferences(111);
           ck.clearStaticReferences(true);
-          da.clearDeclaredStaticReferences((byte) -124);
+          TextFieldValidator.clearDeclaredStaticReferences((byte) -124);
           ad.resetStaticState(true);
           ue.clearStaticReferences(1);
           jk.clearStaticReferences(2);
@@ -1012,7 +1012,7 @@ public final class Vertigo2 extends GameShell {
           uo.clearStaticReferences((byte) -122);
           jn.clearStaticReferences(54);
           ud.clearStaticReferences((byte) -37);
-          df.clearDeclaredStaticReferences(-3);
+          BirthDateValidator.clearDeclaredStaticReferences(-3);
           ko.clearDeclaredStaticReferences(false);
           um.clearStaticReferences(46);
           kl.clearDeclaredStaticReferences(true);
@@ -1145,15 +1145,15 @@ public final class Vertigo2 extends GameShell {
           e.clearStaticReferences(-120);
           lq.a(false);
           AccountNameAvailabilityValidator.c((byte) -114);
-          wc.g(3);
-          dk.clearStaticReferences((byte) -73);
-          oa.resetStaticState(-118);
-          na.clearDeclaredStaticReferences(-27799);
-          rf.clearDeclaredStaticReferences(29492);
+          PasswordValidator.g(3);
+          EmailFormatValidator.clearStaticReferences((byte) -73);
+          ConfirmedEmailAvailabilityValidator.resetStaticState(-118);
+          AgeValidator.clearDeclaredStaticReferences(-27799);
+          MatchingFieldValidator.clearDeclaredStaticReferences(29492);
           sq.a(26371);
           pk.clearStaticReferences(-8105);
           ba.clearStaticReferences(3);
-          de.clearStaticReferences(21283);
+          DebouncedFieldValidator.clearStaticReferences(21283);
           ll.clearStaticReferences(3);
           j.clearStaticReferences(0);
           hn.clearStaticReferences((byte) 72);
@@ -1205,7 +1205,7 @@ public final class Vertigo2 extends GameShell {
             return;
           }
           if (!SpriteState.i(param0 + 28)) {
-            ProxySocketConnector.a(false, 100.0f, dk.field_n);
+            ProxySocketConnector.a(false, 100.0f, EmailFormatValidator.field_n);
             an.a(-1243, var8);
             return;
           }
@@ -1276,7 +1276,7 @@ public final class Vertigo2 extends GameShell {
           }
           var4 = (fa) (LevelRenderable.field_b.beginBackward((byte) 100));
           if (var4 != null) {
-            var6 = oa.field_l;
+            var6 = ConfirmedEmailAvailabilityValidator.field_l;
             if (var6 < 80) {
               var5 = -32 + var6 / 2;
             } else {
@@ -1587,7 +1587,7 @@ public final class Vertigo2 extends GameShell {
                                                     di.b((byte) 109);
                                                     return false;
                                                   }
-                                                  ProxySocketConnector.a(false, 73.0f, fg.a(m.field_z, dk.field_n, vj.field_a, 274));
+                                                  ProxySocketConnector.a(false, 73.0f, fg.a(m.field_z, EmailFormatValidator.field_n, vj.field_a, 274));
                                                   return false;
                                                 }
                                                 ProxySocketConnector.a(false, 72.0f, gr.a(eq.field_E, (byte) 109, nn.field_y, bm.field_D, ""));
@@ -1611,7 +1611,7 @@ public final class Vertigo2 extends GameShell {
                                     ProxySocketConnector.a(false, 56.0f, gr.a(ga.field_ib, (byte) 52, pp.field_s, ec.field_D, ""));
                                     return false;
                                   }
-                                  ProxySocketConnector.a(false, 55.0f, gr.a(vj.field_a, (byte) 114, gi.field_p, dk.field_n, ""));
+                                  ProxySocketConnector.a(false, 55.0f, gr.a(vj.field_a, (byte) 114, gi.field_p, EmailFormatValidator.field_n, ""));
                                   return false;
                                 }
                                 ProxySocketConnector.a(false, 54.0f, gr.a(vc.field_a, (byte) 54, vi.field_n, vd.field_c, ""));
@@ -1626,10 +1626,10 @@ public final class Vertigo2 extends GameShell {
                           ProxySocketConnector.a(false, 35.0f, en.a(false, tm.field_c, re.field_d, 0, lo.field_b));
                           return false;
                         }
-                        ProxySocketConnector.a(false, 30.0f, gr.a(lc.field_c, (byte) 35, mj.field_b, de.field_a, ""));
+                        ProxySocketConnector.a(false, 30.0f, gr.a(lc.field_c, (byte) 35, mj.field_b, DebouncedFieldValidator.field_a, ""));
                         return false;
                       }
-                      ProxySocketConnector.a(false, 12.0f, gr.a(lc.field_c, (byte) 95, DualLinkNode.field_s, de.field_a, ""));
+                      ProxySocketConnector.a(false, 12.0f, gr.a(lc.field_c, (byte) 95, DualLinkNode.field_s, DebouncedFieldValidator.field_a, ""));
                       return false;
                     }
                     ProxySocketConnector.a(false, 11.0f, gr.a(vc.field_a, (byte) 119, ac.field_G, vd.field_c, "lobby"));
@@ -1812,13 +1812,13 @@ public final class Vertigo2 extends GameShell {
             }
             var6_int = ld.field_b * ld.field_b;
             var7 = -(sg.field_e * sg.field_e) + var6_int;
-            var8 = mk.field_E + 120 * var7 / var6_int;
+            var8 = AccountRegistrationPanel.field_E + 120 * var7 / var6_int;
             jf.c(var8, 91);
             if (LevelRenderable.field_b.beginBackward((byte) 100) != null) {
-              fieldTemp$0 = oa.field_l + 1;
-              oa.field_l = oa.field_l + 1;
+              fieldTemp$0 = ConfirmedEmailAvailabilityValidator.field_l + 1;
+              ConfirmedEmailAvailabilityValidator.field_l = ConfirmedEmailAvailabilityValidator.field_l + 1;
               if (335 == fieldTemp$0) {
-                oa.field_l = 0;
+                ConfirmedEmailAvailabilityValidator.field_l = 0;
                 LevelRenderable.field_b.removeLast((byte) -43);
               }
             }

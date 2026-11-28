@@ -331,7 +331,7 @@ final class NanoFrameTimer extends FrameTimer {
                     return;
                   }
                   if (var2 == 23) {
-                    gb.field_t = ((PacketBuffer) ((Object) var1)).readLong((byte) 116);
+                    NetworkGameClient.field_t = ((PacketBuffer) ((Object) var1)).readLong((byte) 116);
                     return;
                   }
                   fg.a((Throwable) null, (byte) -77, "L1: " + tm.b((byte) -123));

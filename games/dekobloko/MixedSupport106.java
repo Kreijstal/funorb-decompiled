@@ -31,20 +31,20 @@ final class MixedSupport106 {
         boolean stackBooleanLocal18 = false;
         int integerLocal19;
         integerLocal19 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        UiComponentPart022.performAction1206((byte) 104);
+        AccountFieldStatusIndicator.performAction1206((byte) 104);
         if (UiComponentPart006.integerState0137 < 0) {
           DirectByteStorage.sceneWidgetState0034.stringState0598 = null;
           stackSceneWidgetLocal10 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal11 = false;
-          stackBooleanLocal12 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
+          stackBooleanLocal12 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
           ((SceneWidget) (Object) stackSceneWidgetLocal10).performAction1772(stackBooleanLocal11, stackBooleanLocal12);
           stackSceneWidgetLocal13 = TextFieldValidator.sceneWidgetState0151;
           stackBooleanLocal14 = false;
-          stackBooleanLocal15 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
+          stackBooleanLocal15 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
           ((SceneWidget) (Object) stackSceneWidgetLocal13).performAction1772(stackBooleanLocal14, stackBooleanLocal15);
           stackSceneWidgetLocal16 = SceneWidgetPart011.sceneWidgetState0115;
           stackBooleanLocal17 = false;
-          stackBooleanLocal18 = (booleanArgument1) && (!booleanArgument3) && (SceneWidgetPart013.booleanState0202);
+          stackBooleanLocal18 = (booleanArgument1) && (!booleanArgument3) && (LobbyRoomRow.booleanState0202);
           ((SceneWidget) (Object) stackSceneWidgetLocal16).performAction1772(stackBooleanLocal17, stackBooleanLocal18);
           MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001.performAction1574(false);
           if (IterableNodeCollection.sceneWidgetState0126.integerState0891 != 0) {
@@ -73,15 +73,15 @@ final class MixedSupport106 {
           DirectByteStorage.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(UiComponentPart006.integerState0137)});
           stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
           stackBooleanLocal2 = false;
-          stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
+          stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
           ((SceneWidget) (Object) stackSceneWidgetLocal1).performAction1772(stackBooleanLocal2, stackBooleanLocal3);
           stackSceneWidgetLocal4 = TextFieldValidator.sceneWidgetState0151;
           stackBooleanLocal5 = false;
-          stackBooleanLocal6 = (booleanArgument1) && (!booleanArgument3) && (!SceneWidgetPart013.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
+          stackBooleanLocal6 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
           ((SceneWidget) (Object) stackSceneWidgetLocal4).performAction1772(stackBooleanLocal5, stackBooleanLocal6);
           stackSceneWidgetLocal7 = SceneWidgetPart011.sceneWidgetState0115;
           stackBooleanLocal8 = false;
-          stackBooleanLocal9 = (booleanArgument1) && (!booleanArgument3) && (SceneWidgetPart013.booleanState0202);
+          stackBooleanLocal9 = (booleanArgument1) && (!booleanArgument3) && (LobbyRoomRow.booleanState0202);
           ((SceneWidget) (Object) stackSceneWidgetLocal7).performAction1772(stackBooleanLocal8, stackBooleanLocal9);
           MixedSupport023.mixedSupport006State0001.sceneWidgetPart011State0001.performAction1574(false);
           if (IterableNodeCollection.sceneWidgetState0126.integerState0891 != 0) {
@@ -118,7 +118,7 @@ final class MixedSupport106 {
           ResourceSupport001.performAction0047(Js5ArchiveManager.byteArrayState0017, integerArgument2, true, MixedSupport053.integerState0272, 0, true);
         }
         if (UiComponent.sceneWidgetState0009.integerState0891 != 0) {
-          SceneWidgetPart013.booleanState0202 = false;
+          LobbyRoomRow.booleanState0202 = false;
         }
     }
 
@@ -160,7 +160,7 @@ final class MixedSupport106 {
             stackIntegerLocal5 = 3;
             return stackIntegerLocal5;
           }
-          if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
+          if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
             stackIntegerLocal6 = 1;
             return stackIntegerLocal6;
           }
@@ -171,7 +171,7 @@ final class MixedSupport106 {
           if (byteArgument1 != 57) {
             MixedSupport106.computeInteger1383((byte) -99);
           }
-          if (UiComponentPart022.mixedSupport004State0003 != GameAssets.mixedSupport004State0004) {
+          if (AccountFieldStatusIndicator.mixedSupport004State0003 != GameAssets.mixedSupport004State0004) {
             return -1;
           }
           stackIntegerLocal8 = 2;

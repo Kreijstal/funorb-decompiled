@@ -39,7 +39,7 @@ abstract class v {
         if (!vc.d((byte) -96)) {
           return;
         }
-        nj.a(false, -25698, 4);
+        EmailFormatValidator.a(false, -25698, 4);
     }
 
     public static void clearStaticReferences(int param0) {

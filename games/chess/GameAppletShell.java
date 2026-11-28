@@ -41,7 +41,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowActivated(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void b(int param0);
+    abstract void initializeGame(int param0);
 
     final static void a(ac param0, int param1, int param2) {
         RuntimeException runtimeException = null;
@@ -52,7 +52,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = qn.field_U;
+          var3 = EditableTextField.field_U;
           var3.writeCipheredByte(param2, -65);
           var3.position = var3.position + 1;
           var4 = var3.position;
@@ -92,7 +92,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          qe.field_B = param0;
+          ChessBoardRenderer.field_B = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void renderFrame(boolean param0);
 
     public final synchronized void paint(java.awt.Graphics param0) {
         java.awt.Rectangle var2 = null;
@@ -175,7 +175,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void e(byte param0);
+    abstract void prepareGameShutdown(byte param0);
 
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
@@ -293,9 +293,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         if (null != lk.field_a) {
           return null;
         }
-        if (null != qe.field_B &&
-          this != qe.field_B) {
-          return qe.field_B.getCodeBase();
+        if (null != ChessBoardRenderer.field_B &&
+          this != ChessBoardRenderer.field_B) {
+          return ChessBoardRenderer.field_B.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -346,14 +346,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (1 != tk.field_b &&
             tk.field_b != 4) {
-            qn.field_M = 0;
+            EditableTextField.field_M = 0;
             bh.field_H = null;
             if (var7 != 0) {
-              qn.field_M = var2.readUnsignedShort(674914976);
+              EditableTextField.field_M = var2.readUnsignedShort(674914976);
               bh.field_H = var2.readString(0);
             }
           } else {
-            qn.field_M = var2.readUnsignedShort(674914976);
+            EditableTextField.field_M = var2.readUnsignedShort(674914976);
             bh.field_H = var2.readString(0);
           }
           if (!param1) {
@@ -495,8 +495,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               if (decompiledFrameRemainder3) {
                 var1 = BitPacketBuffer.field_w;
-                if (null != qe.field_B) {
-                  var1 = qe.field_B;
+                if (null != ChessBoardRenderer.field_B) {
+                  var1 = ChessBoardRenderer.field_B;
                 }
                 var2_ref = PlatformTaskDispatcher.field_m;
                 if (null != var2_ref) {
@@ -510,7 +510,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 bb.a(75);
                 this.d((byte) 125);
                 ph.field_j = ad.a((java.awt.Component) ((Object) DirectByteStorage.field_h), (byte) -80, em.field_O, tm.field_c);
-                this.b(2);
+                this.initializeGame(2);
                 v.field_e = dj.h(-13154);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -530,7 +530,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(hk.field_M > var3)) {
                       this.c((byte) 119);
-                      ak.a(oc.field_l, (byte) 111, DirectByteStorage.field_h);
+                      ak.a(MatchingFieldValidator.field_l, (byte) 111, DirectByteStorage.field_h);
                       break;
                     }
                     this.c(-120);
@@ -558,7 +558,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void b(byte param0);
+    abstract void updateGameTick(byte param0);
 
     private final void c(int param0) {
         long var2_long = 0L;
@@ -581,7 +581,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           synchronized (var6) {
             wc.field_x = b.field_f;
           }
-          this.b((byte) 122);
+          this.updateGameTick((byte) 122);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -601,9 +601,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (null != qe.field_B &&
-            qe.field_B != this) {
-            stackIn_8_0 = qe.field_B.getAppletContext();
+          if (null != ChessBoardRenderer.field_B &&
+            ChessBoardRenderer.field_B != this) {
+            stackIn_8_0 = ChessBoardRenderer.field_B.getAppletContext();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getAppletContext();
@@ -626,9 +626,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (null != qe.field_B &&
-            this != qe.field_B) {
-            stackIn_10_0 = qe.field_B.getDocumentBase();
+          if (null != ChessBoardRenderer.field_B &&
+            this != ChessBoardRenderer.field_B) {
+            stackIn_10_0 = ChessBoardRenderer.field_B.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -654,11 +654,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             jf.field_a = true;
           }
-          if (qe.field_B != null) {
-            qe.field_B.destroy();
+          if (ChessBoardRenderer.field_B != null) {
+            ChessBoardRenderer.field_B.destroy();
           }
           try {
-            this.e((byte) 12);
+            this.prepareGameShutdown((byte) 12);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -672,15 +672,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (null != oc.field_l) {
+          if (null != MatchingFieldValidator.field_l) {
             try {
-              oc.field_l.shutdown(param0 - 33);
+              MatchingFieldValidator.field_l.shutdown(param0 - 33);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.f((byte) 53);
+          this.releaseGameResources((byte) 53);
           if (lk.field_a != null) {
             try {
               System.exit(0);
@@ -701,7 +701,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void f(byte param0);
+    abstract void releaseGameResources(byte param0);
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
@@ -731,15 +731,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               sl.field_c = param5;
               BitPacketBuffer.field_w = this;
               ka.field_c = 0;
-              db.field_p = 0;
+              ConfirmedEmailAvailabilityValidator.field_p = 0;
               cg.field_a = param3;
               em.field_O = param0;
               hk.field_H = param0;
               ba.field_L = bh.i(81);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param6, true);
-              oc.field_l = dupTemp$0;
+              MatchingFieldValidator.field_l = dupTemp$0;
               ResourceArchive.field_g = dupTemp$0;
-              var8 = oc.field_l.requestThreadStart(1, true, (Runnable) (this));
+              var8 = MatchingFieldValidator.field_l.requestThreadStart(1, true, (Runnable) (this));
               var9 = 75 % ((-48 - param1) / 46);
               while (true) {
                 if (var8.status == 0) {
@@ -846,15 +846,15 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledSharedTail0 = (null != lk.field_a &&
               null == ec.field_e);
             if (!decompiledSharedTail0) {
-              DirectByteStorage.field_h.setLocation(db.field_p, ka.field_c);
+              DirectByteStorage.field_h.setLocation(ConfirmedEmailAvailabilityValidator.field_p, ka.field_c);
               decompiledSharedTail0 = (Chess.field_G != 0);
             }
             if (decompiledSharedTail0) {
               var6 = lk.field_a.getInsets();
-              DirectByteStorage.field_h.setLocation(var6.left + db.field_p, var6.top + ka.field_c);
+              DirectByteStorage.field_h.setLocation(var6.left + ConfirmedEmailAvailabilityValidator.field_p, var6.top + ka.field_c);
             }
           }
-          this.a(true);
+          this.renderFrame(true);
           if (param0 < 116) {
             field_e = (RgbSprite) null;
           }
@@ -908,14 +908,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (null == qe.field_B) {
+              if (null == ChessBoardRenderer.field_B) {
                 var2 = BitPacketBuffer.field_w;
                 if (var4 != 0) {
-                  var2 = qe.field_B;
+                  var2 = ChessBoardRenderer.field_B;
                   var2 = ec.field_e;
                 }
               } else {
-                var2 = qe.field_B;
+                var2 = ChessBoardRenderer.field_B;
                 if (var4 != 0) {
                   var2 = ec.field_e;
                 }
@@ -931,12 +931,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           DirectByteStorage.field_h.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == lk.field_a);
           if (!decompiledSharedTail0) {
-            DirectByteStorage.field_h.setLocation(db.field_p, ka.field_c);
+            DirectByteStorage.field_h.setLocation(ConfirmedEmailAvailabilityValidator.field_p, ka.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = lk.field_a.getInsets();
-            DirectByteStorage.field_h.setLocation(var3.left + db.field_p, ka.field_c + var3.top);
+            DirectByteStorage.field_h.setLocation(var3.left + ConfirmedEmailAvailabilityValidator.field_p, ka.field_c + var3.top);
           }
           DirectByteStorage.field_h.addFocusListener((java.awt.event.FocusListener) (this));
           DirectByteStorage.field_h.requestFocus();
@@ -970,9 +970,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (null != qe.field_B &&
-            this != qe.field_B) {
-            stackIn_8_0 = qe.field_B.getParameter(param0);
+          if (null != ChessBoardRenderer.field_B &&
+            this != ChessBoardRenderer.field_B) {
+            stackIn_8_0 = ChessBoardRenderer.field_B.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);

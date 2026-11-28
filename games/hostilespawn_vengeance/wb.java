@@ -180,7 +180,7 @@ abstract class wb extends ul {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        sf.field_ab.e(-90 + (this.field_s + param2), 10 + param0);
+        TextInputField.field_ab.e(-90 + (this.field_s + param2), 10 + param0);
         tg.a(110, bh.field_a, -10 + this.field_s, 35 + param0, param2 + 5);
         tg.a(108, g.field_G, this.field_s, param0 + this.field_x - 22, param2);
         var6Lifetime2 = 127;

@@ -234,7 +234,7 @@ final class b {
           return;
         }
         kl.a(rm.field_R, (byte) -114);
-        rm.field_R.exitFullscreen(oc.field_l, -3);
+        rm.field_R.exitFullscreen(MatchingFieldValidator.field_l, -3);
         if (!param0) {
           field_f = false;
         }

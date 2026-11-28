@@ -87,7 +87,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_q.field_a = true;
             while (field_q.field_c) {
-              uc.sleepMillis(-91, 50L);
+              DebouncedFieldValidator.sleepMillis(-91, 50L);
             }
             field_q = null;
           }

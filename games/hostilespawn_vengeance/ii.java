@@ -9,7 +9,7 @@ final class ii {
     static Boolean field_h;
     private String field_e;
     static String[] field_f;
-    static oc field_d;
+    static GridPoint field_d;
 
     final String a(byte param0) {
         if (param0 != -34) {
@@ -34,7 +34,7 @@ final class ii {
           field_f = null;
           return;
         }
-        field_d = (oc) null;
+        field_d = (GridPoint) null;
         field_c = null;
         field_d = null;
         field_f = null;
@@ -54,7 +54,7 @@ final class ii {
           this.field_b = true;
           return;
         }
-        field_d = (oc) null;
+        field_d = (GridPoint) null;
         this.field_b = true;
     }
 
@@ -135,6 +135,6 @@ final class ii {
         field_c = new int[8192];
         field_g = false;
         field_f = new String[]{"Name", "Rank", "Level", "Score"};
-        field_d = new oc();
+        field_d = new GridPoint();
     }
 }

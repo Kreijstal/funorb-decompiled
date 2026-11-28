@@ -3,7 +3,7 @@
  */
 final class wh extends am {
     static int field_x;
-    static sm[] field_t;
+    static IndexedSprite[] field_t;
     static String[] field_z;
     static int field_s;
     static int field_w;
@@ -101,7 +101,7 @@ final class wh extends am {
         int var13 = 0;
         int var21 = Torquing.field_u;
         if (param0 != -29116) {
-          field_t = (sm[]) null;
+          field_t = (IndexedSprite[]) null;
         }
         int[][] var29 = this.field_r.a(15142, param1);
         int[][] var23 = var29;
@@ -153,7 +153,7 @@ final class wh extends am {
         int var3 = 0;
         int var4 = 0;
         h var4_ref_h = null;
-        qk var5 = null;
+        LevelCompletionUpdate var5 = null;
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
@@ -190,11 +190,11 @@ final class wh extends am {
           }
           if (var2 == 1) {
             var4 = var10.readSignedSmart((byte) -126);
-            var5 = (qk) (kc.field_z.beginBackward(0));
+            var5 = (LevelCompletionUpdate) (kc.field_z.beginBackward(0));
             while (var5 != null) {
               if (var5.field_k != var3 ||
                 var5.field_o != var4) {
-                var5 = (qk) (kc.field_z.nextBackward(-24059));
+                var5 = (LevelCompletionUpdate) (kc.field_z.nextBackward(-24059));
                 continue;
               }
               break;
@@ -258,7 +258,7 @@ final class wh extends am {
           if (param1 != -1817) {
             return;
           }
-          di.a(param3 - param2, (byte) 108, param0, qd.field_a[param5], param3 + param2);
+          IndexedSpriteLayer.a(param3 - param2, (byte) 108, param0, qd.field_a[param5], param3 + param2);
           var20 = (-1 + var7) * var15;
           while (0 < var7) {
             if (0 > var13) {
@@ -286,8 +286,8 @@ final class wh extends am {
             var22 = param5 + var7;
             var23 = param3 + var6_int;
             var24 = -var6_int + param3;
-            di.a(var24, (byte) 114, param0, qd.field_a[var21], var23);
-            di.a(var24, (byte) 37, param0, qd.field_a[var22], var23);
+            IndexedSpriteLayer.a(var24, (byte) 114, param0, qd.field_a[var21], var23);
+            IndexedSpriteLayer.a(var24, (byte) 37, param0, qd.field_a[var22], var23);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

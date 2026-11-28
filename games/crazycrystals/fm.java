@@ -305,7 +305,7 @@ final class fm extends pn {
               var13 = var11 - (var12 << 6);
               var14 = var13 << 23 >> 31;
               var13 = (var14 ^ var13) & 255;
-              var15 = var14 ^ dc.field_J[var6 & 3];
+              var15 = var14 ^ AccountRegistrationPanel.field_J[var6 & 3];
               var16 = 16711935 & (var15 & 16711935) * var13 >> 8;
               var17 = 65280 & var13 * (var15 & 65280) >> 8;
               var15Lifetime1 = var14 ^ (var16 | var17);

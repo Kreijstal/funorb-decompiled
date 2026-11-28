@@ -13,7 +13,7 @@ final class ob {
         field_a = null;
     }
 
-    final static pk a(int param0, int[] param1, byte[] param2, boolean param3, sm[] param4) {
+    final static pk a(int param0, int[] param1, byte[] param2, boolean param3, IndexedSprite[] param4) {
         int var12_int = 0;
         byte[] array$0 = null;
         int var24_int = 0;

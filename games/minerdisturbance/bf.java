@@ -93,7 +93,7 @@ final class bf {
         var6 = MinerDisturbance.field_ab;
         if (param0 == 32) {
           if (tb.field_a != 0 &&
-            wj.field_j >= 2) {
+            AgeValidator.field_j >= 2) {
             if (wi.field_w < 0) {
               return;
             }
@@ -183,7 +183,7 @@ final class bf {
         if (tb.field_a == 0) {
           return;
         }
-        if (wj.field_j < 2) {
+        if (AgeValidator.field_j < 2) {
           return;
         }
         if (wi.field_w < 0) {

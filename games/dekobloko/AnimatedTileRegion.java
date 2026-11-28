@@ -90,9 +90,9 @@ final class AnimatedTileRegion extends HashNode {
         animatedTileRegionLocal25.integerState0815 = this.integerState0815;
         animatedTileRegionLocal25.indexedSpriteArrayState0005 = new IndexedSprite[this.integerState0815 * this.integerState0817];
         if (this.integerState0817 > this.integerState0815) {
-          integerLocal5 = UiComponentPart016.computeInteger0830((byte) 53, this.integerState0816 * this.integerState0815, UiComponentPart031.randomState0003) + this.integerState0816 * (this.integerState0817 - this.integerState0815) / 2;
+          integerLocal5 = UiComponentPart016.computeInteger0830((byte) 53, this.integerState0816 * this.integerState0815, AccountRegistrationPanel.randomState0003) + this.integerState0816 * (this.integerState0817 - this.integerState0815) / 2;
           integerLocal6 = -1 + (this.integerState0817 * this.integerState0816 - integerLocal5);
-          integerLocal7 = UiComponentPart016.computeInteger0830((byte) 117, 1 + 2 * this.integerState0815 * this.integerState0816, UiComponentPart031.randomState0003) - this.integerState0815 * this.integerState0816;
+          integerLocal7 = UiComponentPart016.computeInteger0830((byte) 117, 1 + 2 * this.integerState0815 * this.integerState0816, AccountRegistrationPanel.randomState0003) - this.integerState0815 * this.integerState0816;
           animatedTileRegionLocal25.integerState0813 = (this.integerState0817 * this.integerState0816 / 2 - integerLocal7 / 6) * this.integerState0813 / (this.integerState0816 * this.integerState0817);
           this.integerState0813 = this.integerState0813 - animatedTileRegionLocal25.integerState0813;
           integerLocal8 = this.integerState0815 * this.integerState0811;
@@ -196,9 +196,9 @@ final class AnimatedTileRegion extends HashNode {
           frameRemainderLocal57 = false;
         }
         else {
-          integerLocal30 = UiComponentPart016.computeInteger0830((byte) 51, this.integerState0817 * this.integerState0811, UiComponentPart031.randomState0003) + this.integerState0811 * (this.integerState0815 - this.integerState0817) / 2;
+          integerLocal30 = UiComponentPart016.computeInteger0830((byte) 51, this.integerState0817 * this.integerState0811, AccountRegistrationPanel.randomState0003) + this.integerState0811 * (this.integerState0815 - this.integerState0817) / 2;
           integerLocal31 = this.integerState0811 * this.integerState0815 - 1 - integerLocal30;
-          integerLocal32 = UiComponentPart016.computeInteger0830((byte) 56, this.integerState0817 * (this.integerState0811 * 2) + 1, UiComponentPart031.randomState0003) - this.integerState0811 * this.integerState0817;
+          integerLocal32 = UiComponentPart016.computeInteger0830((byte) 56, this.integerState0817 * (this.integerState0811 * 2) + 1, AccountRegistrationPanel.randomState0003) - this.integerState0811 * this.integerState0817;
           animatedTileRegionLocal25.integerState0813 = (-(integerLocal32 / 6) + this.integerState0815 * this.integerState0811 / 2) * this.integerState0813 / (this.integerState0815 * this.integerState0811);
           this.integerState0813 = this.integerState0813 - animatedTileRegionLocal25.integerState0813;
           integerLocal33 = this.integerState0817 * this.integerState0816;
@@ -320,7 +320,7 @@ final class AnimatedTileRegion extends HashNode {
         if (byteArgument1 != -17) {
           AnimatedTileRegion.computeBoolean1668((byte) 22);
         }
-        return UiComponentPart022.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001 ? true : false;
+        return AccountFieldStatusIndicator.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001 ? true : false;
     }
 
     public static void clearStaticReferences(int integerArgument1) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    static qi field_e;
+    static LoginPanel field_e;
     static Sprite field_g;
     static boolean[] field_d;
     static int field_a;

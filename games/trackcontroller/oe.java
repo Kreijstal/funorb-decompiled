@@ -34,7 +34,7 @@ final class oe {
             var6 = (CharSequence) null;
             oe.a((CharSequence) null, (byte) 1, false);
           }
-          var3 = lb.a(param0, param2, 1236);
+          var3 = EditableTextField.a(param0, param2, 1236);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;

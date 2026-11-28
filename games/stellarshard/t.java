@@ -18,7 +18,7 @@ final class t {
         ra.a(126);
         if (!param0) {
           id.a(true);
-          if (qb.e((byte) 58)) {
+          if (EmailFormatValidator.e((byte) 58)) {
             pg.field_fb.f(1, 950);
             ue.a((byte) -96, 0);
           }
@@ -27,7 +27,7 @@ final class t {
         }
         field_d = -85L;
         id.a(!param0 ? true : false);
-        if (qb.e((byte) 58)) {
+        if (EmailFormatValidator.e((byte) 58)) {
           pg.field_fb.f(1, 950);
           ue.a((byte) -96, 0);
         }

@@ -54,15 +54,15 @@ final class Slime {
             var5 = 32 + param2 / 2;
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, -32 + (2 + var5), -4 + param2, 156, 0);
-            ve.a(160, var5 - 32, cl.field_p, (byte) -99, param2, 0);
+            ve.a(160, var5 - 32, ConfirmedEmailAvailabilityValidator.field_p, (byte) -99, param2, 0);
             ResourceArchive.field_e.a(PcmResampler.field_f, var4, var5 + 64, 16777215, -1);
-            jh.field_s.a(gd.field_b[nj.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
+            jh.field_s.a(gd.field_b[EmailFormatValidator.field_m] + "<lt> <gt>" + gd.field_b[ee.field_a], var4, 24 + var5 + 64, 11579647, -1);
           }
           if (param0 == 1) {
             var4 = -1 + (-(param2 / 2) + 640);
             var5 = param2 / 2 + 32;
             SoftwareRasterizer.fillRectangle(640 - param2 + 2, var5 - 30, param2 - 4, 156, 0);
-            ve.a(160, -32 + var5, cl.field_p, (byte) -116, param2, 640 - param2);
+            ve.a(160, -32 + var5, ConfirmedEmailAvailabilityValidator.field_p, (byte) -116, param2, 640 - param2);
             ResourceArchive.field_e.a(c.field_a, var4, var5 + 64, 16777215, -1);
             if (2 != field_a) {
               jh.field_s.a(wa.field_a, var4, var5 + 64 + 24, 16744576, -1);
@@ -76,7 +76,7 @@ final class Slime {
             var5 = 32 + (param2 / 2 + 240);
             var4 = param2 / 2;
             SoftwareRasterizer.fillRectangle(2, 2 + (var5 - 32), param2 - 4, 156, 0);
-            ve.a(160, -32 + var5, cl.field_p, (byte) -112, param2, 0);
+            ve.a(160, -32 + var5, ConfirmedEmailAvailabilityValidator.field_p, (byte) -112, param2, 0);
             ResourceArchive.field_e.a(bk.field_b, var4, var5 + 64, 16777215, -1);
             jh.field_s.a(gd.field_b[nb.field_g] + "<lt> <gt>" + gd.field_b[db.field_S], var4, var5 + 64 + 24, 8454016, -1);
           }
@@ -192,13 +192,13 @@ final class Slime {
             }
           }
           if (this.field_p == 3) {
-            ci.field_G[param0].b((int)((double)param2 + this.field_u), 0, -741572379, 100 + ((int)this.field_o - 4 * this.field_f), (int)(this.field_j - this.field_e / 2.0));
+            LoginPanel.field_G[param0].b((int)((double)param2 + this.field_u), 0, -741572379, 100 + ((int)this.field_o - 4 * this.field_f), (int)(this.field_j - this.field_e / 2.0));
             if (PcmResampler.field_g ||
               MusicPatchPcmStream.field_o != null &&
               MusicPatchPcmStream.field_o.field_d) {
               SoftwareRasterizer.resetClip();
               var5 += 18;
-              ci.field_G[param0].b(var4, 0, -741572379, (int)this.field_o, var5);
+              LoginPanel.field_G[param0].b(var4, 0, -741572379, (int)this.field_o, var5);
               SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
             }
           }

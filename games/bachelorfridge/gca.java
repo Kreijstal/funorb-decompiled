@@ -45,12 +45,12 @@ abstract class gca extends IntrusiveNode {
     final static void d(byte param0) {
         if (param0 == 124) {
           DamageEffect.b(false);
-          hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
+          MatchingFieldValidator.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
           return;
         }
         gca.clearStaticReferences((byte) -33);
         DamageEffect.b(false);
-        hb.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
+        MatchingFieldValidator.a(ClientException.field_b[0].field_n, gba.field_Bb, he.field_l, rg.field_h, -103, rj.field_j);
     }
 
     gca(int param0) {

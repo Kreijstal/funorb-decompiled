@@ -165,7 +165,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         if (param1 <= 113) {
           return;
         }
-        jn.field_i = param2;
+        PasswordValidator.field_i = param2;
         ao.field_e = param0;
     }
 

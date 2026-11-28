@@ -43,7 +43,7 @@ final class IntrusiveDeque {
         if (null != i.field_c) {
           var3 = i.field_c;
           String var1 = var3;
-          nj.a((byte) -101, oc.a(vh.field_a, new String[]{var3}, (byte) -121));
+          nj.a((byte) -101, MatchingFieldValidator.a(vh.field_a, new String[]{var3}, (byte) -121));
           i.field_c = null;
         }
         if (param0 != -26285) {
@@ -154,7 +154,7 @@ final class IntrusiveDeque {
               if (SecondaryNodeHashTable.field_g) {
                 param1 = td.field_r;
               } else {
-                param1 = s.field_R;
+                param1 = DisplayNameSelectionPanel.field_R;
               }
               ResourceArchive.field_b.a(pi.field_a, 20);
             }
@@ -164,7 +164,7 @@ final class IntrusiveDeque {
             }
             if (var4 != 0) {
               if (bc.field_d) {
-                param1 = oc.a(AccountServiceResult.field_b, new String[]{param1}, (byte) -92);
+                param1 = MatchingFieldValidator.a(AccountServiceResult.field_b, new String[]{param1}, (byte) -92);
               }
               if (ag.field_e) {
                 param1 = rd.field_a;

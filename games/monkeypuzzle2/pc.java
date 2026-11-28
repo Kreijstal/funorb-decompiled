@@ -426,7 +426,7 @@ abstract class pc extends nf {
             }
             var3_int = 1;
             if (param1 == 10) {
-              wj.d((byte) 35);
+              TextFieldValidator.d((byte) 35);
               var3_int = 0;
             }
             if (var3_int != 0) {

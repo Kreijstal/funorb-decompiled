@@ -38,7 +38,7 @@ abstract class mj {
           if (!lb.field_a.ensureIndexLoaded(4)) {
             return FullscreenFocusCanvas.field_d;
           }
-          return fg.field_j;
+          return MatchingFieldValidator.field_j;
         }
         if (!jk.field_c.ensureIndexLoaded(4)) {
           return kf.field_j;
@@ -47,7 +47,7 @@ abstract class mj {
           return IntrusiveDeque.field_f + " - " + jk.field_c.getGroupLoadPercentByName("commonui", 0) + "%";
         }
         if (!aa.field_db.ensureIndexLoaded(4)) {
-          return ak.field_L;
+          return LoginPanel.field_L;
         }
         if (!aa.field_db.tryLoadGroupByName(4, "commonui")) {
           return nc.field_b + " - " + aa.field_db.getGroupLoadPercentByName("commonui", 0) + "%";

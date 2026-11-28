@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends wj {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static int[] field_r;
     static String field_p;
     private String checkedName;
@@ -18,14 +18,14 @@ final class AccountNameAvailabilityValidator extends wj {
         oa.j(-118);
         oi.c(106);
         if (param0 == 8500) {
-          eb.m(param0 - 8377);
+          DisplayNameSelectionPanel.m(param0 - 8377);
           return;
         }
         AccountNameAvailabilityValidator.c(true);
-        eb.m(param0 - 8377);
+        DisplayNameSelectionPanel.m(param0 - 8377);
     }
 
-    final na a(String param0, int param1) {
+    final na getValidationStatus(String param0, int param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -57,7 +57,7 @@ final class AccountNameAvailabilityValidator extends wj {
             }
           }
           if (this.nameAvailable) {
-            stackIn_15_0 = wj.field_i;
+            stackIn_15_0 = TextFieldValidator.field_i;
           } else {
             stackIn_15_0 = IsaacRandom.field_h;
           }
@@ -76,7 +76,7 @@ final class AccountNameAvailabilityValidator extends wj {
         }
     }
 
-    AccountNameAvailabilityValidator(rj param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -130,7 +130,7 @@ final class AccountNameAvailabilityValidator extends wj {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String getValidationMessage(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;

@@ -3,7 +3,7 @@
  */
 final class k {
     static boolean field_b;
-    static rf field_d;
+    static AccountRegistrationPanel field_d;
     static String field_a;
     static int field_c;
 
@@ -12,16 +12,16 @@ final class k {
           ce.field_b = false;
           field_b = false;
           h.a(-1, true);
-          PacketBuffer.field_i = el.field_p;
-          ma.field_o = el.field_p;
+          PacketBuffer.field_i = MatchingFieldValidator.field_p;
+          ma.field_o = MatchingFieldValidator.field_p;
           return;
         }
         field_b = false;
         ce.field_b = false;
         field_b = false;
         h.a(-1, true);
-        PacketBuffer.field_i = el.field_p;
-        ma.field_o = el.field_p;
+        PacketBuffer.field_i = MatchingFieldValidator.field_p;
+        ma.field_o = MatchingFieldValidator.field_p;
     }
 
     final static StringBuilder a(StringBuilder param0, int param1, char param2, int param3) {

@@ -30,7 +30,7 @@ final class rt {
           if (oq.field_b != null) {
             oq.field_b.p(param2 - 85);
           }
-          FridgeScreen.field_e = new ph(param0, param1, false, true, true);
+          FridgeScreen.field_e = new LoginPanel(param0, param1, false, true, true);
           kka.field_l.e(FridgeScreen.field_e, param2 + 24);
           if (param2 == 9) {
             return;

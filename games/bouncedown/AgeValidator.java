@@ -1,0 +1,204 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AgeValidator extends TextFieldValidator {
+    static int field_l;
+    static MouseWheelInput field_k;
+    static eh field_j;
+
+    final static void a(String param0, int param1, float param2) {
+        try {
+          DisplayNameSelectionPanel.field_I = param2;
+          if (param1 >= -6) {
+            field_k = (MouseWheelInput) null;
+          }
+          ea.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "hg.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    final vf getValidationStatus(String param0, byte param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        CharSequence var4 = null;
+        CharSequence var5 = null;
+        vf stackIn_2_0 = null;
+        vf stackIn_5_0 = null;
+        vf stackIn_10_0 = null;
+        vf stackIn_12_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = (CharSequence) ((Object) param0);
+          if (!qi.a(var4, 10)) {
+            stackIn_2_0 = a.field_e;
+            return stackIn_2_0;
+          }
+          var5 = (CharSequence) ((Object) param0);
+          var3_int = gf.a(param1 - 44, var5);
+          if (param1 != 54) {
+            stackIn_5_0 = (vf) null;
+            return stackIn_5_0;
+          }
+          if (var3_int > 0 &&
+            130 >= var3_int) {
+            stackIn_12_0 = mc.field_a;
+            return stackIn_12_0;
+          }
+          stackIn_10_0 = a.field_e;
+          return stackIn_10_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_15_0 = var3;
+          stackIn_15_1 = new StringBuilder().append("hg.B(");
+          if (param0 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static void h(byte param0) {
+        ja.field_b = jc.field_g.readString(true);
+        int var1 = 89 % ((-14 - param0) / 56);
+        CharSequence var2 = (CharSequence) ((Object) ja.field_b);
+        qe.field_e = ce.a(var2, 0);
+    }
+
+    final static byte[] a(byte param0, String param1) {
+        RuntimeException var2 = null;
+        byte[] stackIn_2_0 = null;
+        byte[] stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 >= 84) {
+            stackIn_4_0 = la.field_D.getFileByName("", param1, -11);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (byte[]) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_7_0 = var2;
+          stackIn_7_1 = new StringBuilder().append("hg.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    public static void d(int param0) {
+        if (param0 == -1) {
+          field_j = null;
+          field_k = null;
+          return;
+        }
+        String var2 = (String) null;
+        AgeValidator.a((String) null, -125, 0.2765498757362366f);
+        field_j = null;
+        field_k = null;
+    }
+
+    final String getValidationMessage(String param0, byte param1) {
+        RuntimeException var3 = null;
+        String stackIn_2_0 = null;
+        Object stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.getValidationStatus(param0, (byte) 54) == a.field_e) {
+            stackIn_2_0 = kc.field_b;
+            return stackIn_2_0;
+          }
+          if (param1 == -114) {
+            return null;
+          }
+          field_l = -56;
+          stackIn_6_0 = null;
+          return (String) (stackIn_6_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_9_0 = var3;
+          stackIn_9_1 = new StringBuilder().append("hg.C(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static String a(String param0, ResourceArchive param1, int param2, String param3) {
+        RuntimeException var4 = null;
+        String stackIn_4_0 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 != 130) {
+            field_j = (eh) null;
+          }
+          if (param1.ensureIndexLoaded(77)) {
+            stackIn_6_0 = param3 + " - " + param1.getArchiveLoadPercent(100) + "%";
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = (String) (param0);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_9_0 = var4;
+          stackIn_9_1 = new StringBuilder().append("hg.I(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          if (param1 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_16_2 = "null";
+          } else {
+            stackIn_16_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+        }
+    }
+
+    AgeValidator(EditableTextField param0) {
+        super(param0);
+    }
+
+    static {
+        field_l = 0;
+        field_j = new eh(12, 0, 1, 0);
+    }
+}

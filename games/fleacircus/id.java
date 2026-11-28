@@ -26,20 +26,20 @@ final class id {
           if (param0) {
             return false;
           }
-          if (gg.field_e == null) {
-            gg.field_e = DiskCacheWorker.field_f.requestDirectSocket(be.field_b, (byte) 32, a.field_d);
+          if (DebouncedFieldValidator.field_e == null) {
+            DebouncedFieldValidator.field_e = DiskCacheWorker.field_f.requestDirectSocket(be.field_b, (byte) 32, a.field_d);
           }
-          if (0 == gg.field_e.status) {
+          if (0 == DebouncedFieldValidator.field_e.status) {
             return false;
           }
           dupTemp$1 = lj.correctedCurrentTimeMillis((byte) -47);
           jd.field_n = dupTemp$1;
           ug.field_d = dupTemp$1;
-          if (1 != gg.field_e.status) {
+          if (1 != DebouncedFieldValidator.field_e.status) {
             ResourceArchive.field_k = NetworkGameClient.field_q;
           } else {
             try {
-              sg.field_h = new BufferedSocket((java.net.Socket) (gg.field_e.result), DiskCacheWorker.field_f);
+              sg.field_h = new BufferedSocket((java.net.Socket) (DebouncedFieldValidator.field_e.result), DiskCacheWorker.field_f);
               ud.field_b.position = 0;
               var4 = AccountRequestState.field_a;
               var5 = var4;
@@ -55,11 +55,11 @@ final class id {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               ResourceArchive.field_k = NetworkGameClient.field_q;
-              gg.field_e = null;
+              DebouncedFieldValidator.field_e = null;
               return true;
             }
           }
-          gg.field_e = null;
+          DebouncedFieldValidator.field_e = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

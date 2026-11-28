@@ -83,7 +83,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                   if (null != ik.field_e) {
                                     AccountRequestState.a((byte) 37);
                                     if (ik.field_e != null) {
-                                      ik.field_e.a(17158, param2);
+                                      ik.field_e.leaveRaidScreen(17158, param2);
                                       gh.field_f = true;
                                     }
                                   }
@@ -96,7 +96,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                     } else {
                                       if (var4 != 19) {
                                         if (var4 == 12) {
-                                          eg.a((byte) -105, m.c(true));
+                                          eg.a((byte) -105, DebouncedFieldValidator.c(true));
                                         } else {
                                           if (var4 != 20) {
                                             if (var4 == 21) {
@@ -112,7 +112,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                                     stackIn_75_0 = !(gl.field_Lb);
                                                     gl.field_Lb = stackIn_75_0;
                                                     if (null != ik.field_e) {
-                                                      ik.field_e.a((byte) 113);
+                                                      ik.field_e.createRaidBoardView((byte) 113);
                                                     }
                                                   }
                                                 } else {
@@ -357,17 +357,17 @@ final class AchievementIconEntry extends IntrusiveNode {
             var2.field_n != null) {
             uj.a(var2.field_n, 95);
           }
-          if (m.field_e != null &&
+          if (DebouncedFieldValidator.field_e != null &&
             gn.field_h == 20 &&
             param0 != null) {
-            m.field_e.a(param1 + 21, param0);
+            DebouncedFieldValidator.field_e.a(param1 + 21, param0);
           }
-          if (null == m.field_e) {
+          if (null == DebouncedFieldValidator.field_e) {
             gn.field_h = 0;
-            m.field_e = rb.field_O;
+            DebouncedFieldValidator.field_e = rb.field_O;
           } else {
-            if (rb.field_O != m.field_e) {
-              m.field_e = null;
+            if (rb.field_O != DebouncedFieldValidator.field_e) {
+              DebouncedFieldValidator.field_e = null;
               ByteStorage.field_e = null;
             }
             gn.field_h = gn.field_h + 1;

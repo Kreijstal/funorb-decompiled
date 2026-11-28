@@ -94,7 +94,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             }
             if (DelegatingCanvas.integerState0146 <= MixedSupport003.integerState0019) {
               HashNode.integerState0068 = MixedSupport146.integerState0930;
-              if (MixedSupport075.booleanState0098) {
+              if (PlayerBoardUpdateQueue.booleanState0098) {
                 MixedSupport146.integerState0930 = MixedSupport146.integerState0930 + 1;
                 if (MixedSupport146.integerState0930 >= integerLocal10) {
                   MixedSupport146.integerState0930 = MixedSupport146.integerState0930 - integerLocal10;
@@ -108,7 +108,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
               MixedSupport003.integerState0019 = MixedSupport003.integerState0019 - DelegatingCanvas.integerState0146;
             }
             if (DelegatingCanvas.integerState0147 < MixedSupport003.integerState0019) {
-              MixedSupport075.booleanState0098 = true;
+              PlayerBoardUpdateQueue.booleanState0098 = true;
             }
           }
           if (RenderingSupport003.rgbSpriteState0017 != null) {
@@ -117,15 +117,15 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             if (SceneWidgetPart005.integerState0328 != 0 &&
               TextLineMetrics.integerState0535 > integerLocal12 &&
               TextLineMetrics.integerState0535 < RenderingSupport003.rgbSpriteState0017.integerState0255 + integerLocal12) {
-              if (UiComponentPart013.integerState0276 > 269 - RenderingSupport003.rgbSpriteState0017.integerState0258 &&
-                UiComponentPart013.integerState0276 < 269) {
-                MixedSupport075.booleanState0098 = false;
+              if (LoginPanel.integerState0276 > 269 - RenderingSupport003.rgbSpriteState0017.integerState0258 &&
+                LoginPanel.integerState0276 < 269) {
+                PlayerBoardUpdateQueue.booleanState0098 = false;
                 integerLocal13 = 1;
                 MixedSupport003.integerState0019 = DelegatingCanvas.integerState0146;
               }
-              if (UiComponentPart013.integerState0276 > 586 &&
-                UiComponentPart013.integerState0276 < RenderingSupport003.rgbSpriteState0017.integerState0258 + 586) {
-                MixedSupport075.booleanState0098 = true;
+              if (LoginPanel.integerState0276 > 586 &&
+                LoginPanel.integerState0276 < RenderingSupport003.rgbSpriteState0017.integerState0258 + 586) {
+                PlayerBoardUpdateQueue.booleanState0098 = true;
                 integerLocal13 = 1;
                 MixedSupport003.integerState0019 = DelegatingCanvas.integerState0146;
               }
@@ -149,7 +149,7 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
             return stackIntegerLocal1;
           }
           if (booleanArgument2) {
-            MixedSupport109.mixedSupport116State0003.performAction1515(MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport101.integerState0590, (byte) 7), -20563, MixedSupport006.computeInteger0065(UiComponentPart013.integerState0276, TextLineMetrics.integerState0535, (byte) 7));
+            MixedSupport109.mixedSupport116State0003.performAction1515(MixedSupport006.computeInteger0065(HashNode.integerState0069, MixedSupport101.integerState0590, (byte) 7), -20563, MixedSupport006.computeInteger0065(LoginPanel.integerState0276, TextLineMetrics.integerState0535, (byte) 7));
             if (MixedSupport109.mixedSupport116State0003.computeBoolean1520((byte) 114)) {
               if (MixedSupport109.mixedSupport116State0003.integerState0754 == 0) {
                 stackIntegerLocal2 = 3;
@@ -239,11 +239,11 @@ final class UiComponentPart017 extends ComponentContainer implements CallbackCon
         integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           if (this.interactiveComponentState0008 == interactiveComponentArgument3) {
-            UiComponentPart032.performAction1701((byte) 105);
+            BirthDateInput.performAction1701((byte) 105);
           } else {
             if (interactiveComponentArgument3 != this.interactiveComponentState0009) {
               if (this.interactiveComponentState0007 == interactiveComponentArgument3) {
-                UiComponentPart028.performAction1445(false);
+                EditableTextField.performAction1445(false);
               }
             } else {
               SceneWidgetPart003.performAction0612(0);

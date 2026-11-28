@@ -108,7 +108,7 @@ final class ua {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          if (pk.a(-52, param1, param0, param3)) {
+          if (LoginPanel.a(-52, param1, param0, param3)) {
             stackIn_7_0 = sl.d((byte) -85);
             return stackIn_7_0;
           }

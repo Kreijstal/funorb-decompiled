@@ -207,7 +207,7 @@ final class sc implements Runnable {
         u.field_f[5] = ej.field_o;
         u.field_f[18] = field_p;
         u.field_f[28] = ia.field_k;
-        u.field_f[29] = aj.field_g;
+        u.field_f[29] = SpriteBase.field_g;
         u.field_f[23] = bl.field_e;
         if (param0 != 118) {
           sc.clearStaticReferences(-47);
@@ -267,7 +267,7 @@ final class sc implements Runnable {
           while (0 == param1.field_e) {
             jn.field_F[ib.field_c].field_c = 256.0 * Math.random();
             var4_int++;
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param1.field_j);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1.field_j);
             jn.field_F[ib.field_c].field_l.a(param1.field_l, -28860);
             jn.field_F[ib.field_c].field_e = -var4_int;
             jn.field_F[ib.field_c].field_h = 0;
@@ -276,7 +276,7 @@ final class sc implements Runnable {
             param1.field_l.a(5, (byte) 94, param1.field_c);
             param1.a(8573);
             param2[param0] = 0;
-            if (2 == param2[param1.field_j.b(-4)]) {
+            if (2 == param2[param1.field_j.getClampedTileIndex(-4)]) {
               param1.field_e = 1;
               param1.field_l.a(15, (byte) 94, param1.field_c);
             }

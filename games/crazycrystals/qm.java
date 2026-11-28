@@ -363,7 +363,7 @@ class qm extends IntrusiveNode {
               if (var5 == 0) {
                 if (WallTile.field_v == 0) {
                   if (gg.field_c == 0 &&
-                    qk.field_D != 0) {
+                    DisplayNameSelectionPanel.field_D != 0) {
                     this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                     var8 = ok.field_e;
                     var6 = var8;
@@ -384,7 +384,7 @@ class qm extends IntrusiveNode {
                     param2 = false;
                     if (var7 == 0) {
                       if (gg.field_c == 0 &&
-                        qk.field_D != 0) {
+                        DisplayNameSelectionPanel.field_D != 0) {
                         this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                         var9 = ok.field_e;
                         var6Lifetime1 = var9;
@@ -404,7 +404,7 @@ class qm extends IntrusiveNode {
                     }
                   }
                   if (((gg.field_c == 0)) &&
-                    ((qk.field_D != 0))) {
+                    ((DisplayNameSelectionPanel.field_D != 0))) {
                     this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
                     var11 = ok.field_e;
                     var6Lifetime2 = var11;
@@ -431,7 +431,7 @@ class qm extends IntrusiveNode {
                 if (var5 != 0) {
                   this.b((byte) -118);
                   if (gg.field_c == 0) {
-                    if (qk.field_D == 0) {
+                    if (DisplayNameSelectionPanel.field_D == 0) {
                       break regionExit1;
                     }
                     this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
@@ -454,7 +454,7 @@ class qm extends IntrusiveNode {
               }
             }
             if ((gg.field_c == 0) &&
-              (qk.field_D != 0)) {
+              (DisplayNameSelectionPanel.field_D != 0)) {
               this.a(IsaacRandom.field_h, param0, param3, qh.field_i, this, 0);
               var13 = ok.field_e;
               if (var13 != null) {
@@ -476,7 +476,7 @@ class qm extends IntrusiveNode {
             }
           }
         }
-        qk.field_D = gg.field_c;
+        DisplayNameSelectionPanel.field_D = gg.field_c;
         if (param1) {
           return true;
         }

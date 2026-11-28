@@ -130,7 +130,7 @@ final class qg extends am {
               }
               if (var7_int > 16) {
                 stackIn_16_0 = true;
-                stackIn_16_1 = th.field_F;
+                stackIn_16_1 = DisplayNameSelectionPanel.field_F;
                 if (0.0 == param0) {
                   stackIn_17_2 = 25;
                 } else {
@@ -140,11 +140,11 @@ final class qg extends am {
               }
               if (0.0 == param0 &&
                 var8 > 150) {
-                fq.a(false, 100, th.field_F[14], var7_int);
+                fq.a(false, 100, DisplayNameSelectionPanel.field_F[14], var7_int);
               }
             }
           } else {
-            th.a(100, th.field_F[28]);
+            DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[28]);
           }
           if (0 != qd.field_d &&
             2 == param2) {
@@ -212,7 +212,7 @@ final class qg extends am {
           var6 = 1 + var5;
           for (var14 = 0; var14 < ci.field_c; var14++) {
             gq.field_b = 2147483647;
-            gp.field_K = 2147483647;
+            ValidatedTextField.field_K = 2147483647;
             ln.field_F = 2147483647;
             hl.field_a = 2147483647;
             var15 = IntrusiveNode.field_b[var14] * this.field_D + 2048;
@@ -303,22 +303,22 @@ final class qg extends am {
                   }
                 }
                 if (var11 < hl.field_a) {
-                  gp.field_K = gq.field_b;
+                  ValidatedTextField.field_K = gq.field_b;
                   gq.field_b = ln.field_F;
                   ln.field_F = hl.field_a;
                   hl.field_a = var11;
                 } else {
                   if (var11 < ln.field_F) {
-                    gp.field_K = gq.field_b;
+                    ValidatedTextField.field_K = gq.field_b;
                     gq.field_b = ln.field_F;
                     ln.field_F = var11;
                   } else {
                     if (var11 >= gq.field_b) {
-                      if (var11 < gp.field_K) {
-                        gp.field_K = var11;
+                      if (var11 < ValidatedTextField.field_K) {
+                        ValidatedTextField.field_K = var11;
                       }
                     } else {
-                      gp.field_K = gq.field_b;
+                      ValidatedTextField.field_K = gq.field_b;
                       gq.field_b = var11;
                     }
                   }
@@ -332,7 +332,7 @@ final class qg extends am {
               } else {
                 if (var18Lifetime1 != 3) {
                   if (var18Lifetime1 == 4) {
-                    var3[var14] = gp.field_K;
+                    var3[var14] = ValidatedTextField.field_K;
                   } else {
                     if (var18Lifetime1 == 2) {
                       var3[var14] = ln.field_F - hl.field_a;

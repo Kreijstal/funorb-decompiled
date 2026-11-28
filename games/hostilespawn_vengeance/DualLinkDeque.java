@@ -69,9 +69,9 @@ final class DualLinkDeque implements Iterable {
               param2.field_e = param2.field_e + 1;
             }
             var9_int++;
-            if (2 != param1[param2.field_j.b(-4)]) {
+            if (2 != param1[param2.field_j.getClampedTileIndex(-4)]) {
               param2.field_l.a(5, (byte) 94, param2.field_c);
-              ln.field_a.field_u[param2.field_j.b(-4)] = 48;
+              ln.field_a.field_u[param2.field_j.getClampedTileIndex(-4)] = 48;
               param2.a(8573);
               var11 = (double)param2.field_j.field_e + param2.field_l.field_f;
               var13 = (double)param2.field_j.field_g + param2.field_l.field_a;
@@ -150,7 +150,7 @@ final class DualLinkDeque implements Iterable {
                         var27 = 128;
                       }
                       if (var27 > 0) {
-                        eh.field_c.a(sf.field_V[38], 100, uh.field_i * var27 >> 9);
+                        eh.field_c.a(TextInputField.field_V[38], 100, uh.field_i * var27 >> 9);
                       }
                     }
                   }
@@ -176,7 +176,7 @@ final class DualLinkDeque implements Iterable {
               if (var17Lifetime1 <= 0) {
                 return;
               }
-              eh.field_c.a(sf.field_V[38], 100, uh.field_i * var17Lifetime1 >> 8);
+              eh.field_c.a(TextInputField.field_V[38], 100, uh.field_i * var17Lifetime1 >> 8);
               return;
             }
             break;

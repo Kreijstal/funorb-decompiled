@@ -106,7 +106,7 @@ final class sl extends sf {
             var11 = new int[var3];
             var23 = var11;
             for (var6 = 0; var6 < var3; var6++) {
-              var11[var6] = vc.field_g[vi.a(255, (int) var22[var6])];
+              var11[var6] = vc.field_g[EditableTextField.a(255, (int) var22[var6])];
             }
             var1[var2] = new RgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var23);
           } else {
@@ -118,7 +118,7 @@ final class sl extends sf {
             var14 = var18;
             var6_ref_int__ = var14;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var22[var7])], vi.a(-16777216, var17[var7] << 24));
+              var6_ref_int__[var7] = ge.a(vc.field_g[EditableTextField.a(255, (int) var22[var7])], EditableTextField.a(-16777216, var17[var7] << 24));
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var18));
           }

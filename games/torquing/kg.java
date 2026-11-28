@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kg {
-    private sg field_d;
+    private SceneMeshBatch field_d;
     private int field_b;
     static nh field_c;
     pj field_a;
@@ -126,7 +126,7 @@ final class kg {
           this.field_a.field_z[0] = dupTemp$0;
           if (dupTemp$0 % 16 == 0) {
             this.field_a = null;
-            this.field_d.d(this.field_b);
+            this.field_d.disableMeshSlot(this.field_b);
           }
         }
         if (!param0) {
@@ -134,7 +134,7 @@ final class kg {
         }
     }
 
-    kg(sg param0, int param1, int param2) {
+    kg(SceneMeshBatch param0, int param1, int param2) {
         MeshGeometry var4 = null;
         Model var5 = null;
         try {

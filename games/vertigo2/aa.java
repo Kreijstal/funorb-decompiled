@@ -22,7 +22,7 @@ final class aa extends UiPanel {
     final boolean a(int param0, boolean param1, int param2) {
         int var6 = 0;
         int var7 = Vertigo2.field_L ? 1 : 0;
-        int var4 = de.field_f == 85 ? 1 : 0;
+        int var4 = DebouncedFieldValidator.field_f == 85 ? 1 : 0;
         if (null != this.field_Ib) {
           if (var4 != 0 &&
             this.field_Ib.field_Ub == -1) {

@@ -115,7 +115,7 @@ final class LevelDecoder {
             LevelDecoder.clearStaticReferences(-120);
           }
           var4_int = 0;
-          fg.field_N = 0;
+          LoginPanel.field_N = 0;
           var6 = 5;
           if (param0) {
             var7 = param1[var4_int++];
@@ -186,7 +186,7 @@ final class LevelDecoder {
                 var10 == 9 ||
                 var10 == 10 ||
                 var10 == 11) {
-                fg.field_N = fg.field_N + 1;
+                LoginPanel.field_N = LoginPanel.field_N + 1;
               }
               if (vg.a(var10, param2 - 24234) && (6 != var10 ||
                 var13 != 0 &&
@@ -204,9 +204,9 @@ final class LevelDecoder {
                 ea.field_g[var5Lifetime2Lifetime1].variant = var15;
                 if (0 < (pi.field_d[vj.field_c][ea.field_e] & 1 << -(var6 * ea.field_e) + var15)) {
                   ea.field_g[var5Lifetime2Lifetime1].field_nb = true;
-                  if (var15 == ci.field_n) {
+                  if (var15 == AgeValidator.field_n) {
                     var16 = ea.field_g[var5Lifetime2Lifetime1];
-                    ci.field_n = -1;
+                    AgeValidator.field_n = -1;
                   }
                 }
                 ie.field_e[var15 - ea.field_e * 5] = ea.field_g[var5Lifetime2Lifetime1];

@@ -33,7 +33,7 @@ final class k {
     }
 
     final static void a(int param0) {
-        GameApplet.field_n = new dg();
+        GameApplet.field_n = new AccountRegistrationPanel();
         bg.field_K.c(0, GameApplet.field_n);
         if (param0 != -14956) {
           byte[] var2 = (byte[]) null;

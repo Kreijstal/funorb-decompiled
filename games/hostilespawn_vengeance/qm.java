@@ -7,12 +7,12 @@ final class qm extends oj {
     static int field_R;
     static float field_O;
 
-    final static pg a(String param0, int param1, String param2, ResourceArchive param3) {
+    final static IndexedSprite a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        pg stackIn_2_0 = null;
-        pg stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,7 +24,7 @@ final class qm extends oj {
         try {
           var4_int = param3.getGroupIdByName((byte) -2, param0);
           if (param1 != 0) {
-            stackIn_2_0 = (pg) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
           var5 = param3.getFileIdByName(var4_int, param2, -1);
@@ -77,7 +77,7 @@ final class qm extends oj {
     qm() {
     }
 
-    qm(id param0, oc param1, int param2, int param3, int param4, boolean param5) {
+    qm(id param0, GridPoint param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

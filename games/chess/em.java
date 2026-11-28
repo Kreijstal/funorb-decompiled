@@ -154,10 +154,10 @@ final class em {
         } else {
           ib.field_c.field_Jb.field_db = null;
           bh.field_G.field_tb = true;
-          s.a(21487, ib.field_c, param9, param7, param3);
+          DisplayNameSelectionPanel.a(21487, ib.field_c, param9, param7, param3);
         }
         mk.a(param7, param4, param9, (byte) -68, param0, param3, param8);
-        s.a(param1 + 21485, se.field_S, param9, param7, param3);
+        DisplayNameSelectionPanel.a(param1 + 21485, se.field_S, param9, param7, param3);
         DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
     }
 

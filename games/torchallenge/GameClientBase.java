@@ -96,10 +96,10 @@ abstract class GameClientBase extends GameApplet {
             !(ll.b(-10365) <= var3)) {
             this.field_t = false;
             ob.b(-126);
-            LocalizedStrings.f(10);
+            ConfirmedEmailAvailabilityValidator.f(10);
             te.a(-1, 2, wh.field_a);
             GameApplet.a(-13);
-            dj.field_Z = true;
+            EditableTextField.field_Z = true;
             ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
           }
         }
@@ -141,7 +141,7 @@ abstract class GameClientBase extends GameApplet {
             }
           } else {
             if (gj.field_c >= 10) {
-              LocalizedStrings.f(10);
+              ConfirmedEmailAvailabilityValidator.f(10);
               if (ah.field_b != 3) {
                 if (ah.field_b == 4) {
                   te.a(-1, 256, uc.field_R);
@@ -159,7 +159,7 @@ abstract class GameClientBase extends GameApplet {
               } else {
                 te.a(-1, 256, Bzip2State.field_y);
               }
-              dj.field_Z = true;
+              EditableTextField.field_Z = true;
             }
           }
         }
@@ -167,7 +167,7 @@ abstract class GameClientBase extends GameApplet {
           ah.field_b != 0 ||
           nb.a(-26375)) &&
           ji.field_y <= ol.correctedCurrentTimeMillis(256)) {
-          dj.field_Z = false;
+          EditableTextField.field_Z = false;
           if (ah.field_b != -1 &&
             ah.field_b != 0) {
             ah.field_b = -1;
@@ -187,10 +187,10 @@ abstract class GameClientBase extends GameApplet {
             rj.field_f = pe.b(rj.field_c, -1);
           }
           IntrusiveDeque.field_a = ProxySocketConnector.a(false, 1, 88, a.field_a, true);
-          gf.field_p = ProxySocketConnector.a(false, 1, -116, qh.field_P, true);
+          MatchingFieldValidator.field_p = ProxySocketConnector.a(false, 1, -116, qh.field_P, true);
           FrameTimer.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
           aj.field_f = IntrusiveDeque.field_a;
-          FullscreenFocusCanvas.field_g = gf.field_p;
+          FullscreenFocusCanvas.field_g = MatchingFieldValidator.field_p;
           li.field_K = 2;
         }
         if (li.field_K == 2) {
@@ -211,13 +211,13 @@ abstract class GameClientBase extends GameApplet {
           }
         }
         if (li.field_K == 3 &&
-          pl.a(gf.field_p, FrameTimer.field_b, (byte) -100, IntrusiveDeque.field_a) &&
+          pl.a(MatchingFieldValidator.field_p, FrameTimer.field_b, (byte) -100, IntrusiveDeque.field_a) &&
           de.a(30, FrameTimer.field_b)) {
           ch.a(76);
           sa.a(0);
           sa.field_b = BufferedSocket.field_m;
           fh.field_g = false;
-          rf.a(IntrusiveDeque.field_a, (byte) -23, fg.field_S, FrameTimer.field_b, gf.field_p);
+          ValidatedTextField.a(IntrusiveDeque.field_a, (byte) -23, LoginPanel.field_S, FrameTimer.field_b, MatchingFieldValidator.field_p);
           if (qc.field_j ||
             LevelEntity.field_bb != null) {
             stackIn_102_0 = !(qc.field_j);
@@ -234,7 +234,7 @@ abstract class GameClientBase extends GameApplet {
           }
           v.a((byte) 127, o.field_k, ja.field_a, FrameTimer.field_b);
           FrameTimer.field_b = null;
-          gf.field_p = null;
+          MatchingFieldValidator.field_p = null;
           IntrusiveDeque.field_a = null;
           ca.a((java.applet.Applet) (this), -109);
           id.a(127);
@@ -280,7 +280,7 @@ abstract class GameClientBase extends GameApplet {
           SpriteLoader.a(bg.field_P, false);
         }
         if (ki.field_a[8]) {
-          ma.e(102);
+          TextFieldValidator.e(102);
         }
         if (param0 >= -74) {
           this.field_v = -55;
@@ -422,7 +422,7 @@ abstract class GameClientBase extends GameApplet {
         rj.a(this.field_u, 5000, this.field_B, this.field_C, param4, 5000, this.field_D, this.field_x, this.field_w, kf.field_b, this.field_q, param0, param7, ArchiveRequest.field_u);
         GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, ArchiveRequest.field_u);
         kk.e(-79);
-        AccountServiceResult.field_l = dj.createMouseWheelInput((byte) 96);
+        AccountServiceResult.field_l = EditableTextField.createMouseWheelInput((byte) 96);
         SpriteLoader.a(bg.field_P, param0);
         kk.field_j = param3;
         gh.field_w = param1;
@@ -451,7 +451,7 @@ abstract class GameClientBase extends GameApplet {
         if (!nb.a(-26375)) {
           return -1;
         }
-        if (dj.field_Z) {
+        if (EditableTextField.field_Z) {
           return -1;
         }
         int var2 = PacketBuffer.a(this.field_A, true, this.field_s, a.a((byte) 127), si.h(param0 ^ -7321), false);
@@ -469,10 +469,10 @@ abstract class GameClientBase extends GameApplet {
         if (!ll.field_i) {
           this.redirectToErrorPage((byte) -108, "reconnect");
         }
-        LocalizedStrings.f(10);
+        ConfirmedEmailAvailabilityValidator.f(10);
         te.a(-1, var2, SecondaryNodeDequeIterator.field_c);
         if (param0 == -7407) {
-          dj.field_Z = true;
+          EditableTextField.field_Z = true;
           ji.field_y = 15000L + ol.correctedCurrentTimeMillis(256);
           return var2;
         }
@@ -510,7 +510,7 @@ abstract class GameClientBase extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ic.a(LocalizedStrings.g(2), be.a(true), (byte) -47);
+            var5_int = ic.a(ConfirmedEmailAvailabilityValidator.g(2), be.a(true), (byte) -47);
             if (-1 != var5_int) {
               m.a(var5_int, SecondaryNodeDequeIterator.field_c, false, ra.field_d);
               ra.field_d = null;
@@ -522,7 +522,7 @@ abstract class GameClientBase extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = TorChallenge.a(il.f(-24044), GzipDecoder.b((byte) 83), -20031, this.field_s, si.h(127), a.a((byte) 126), vd.c(0));
+            var5_intLifetime1 = TorChallenge.a(EmailFormatValidator.f(-24044), GzipDecoder.b((byte) 83), -20031, this.field_s, si.h(127), a.a((byte) 126), vd.c(0));
             if (var5_intLifetime1 != -1) {
               hl.a(0, var5_intLifetime1, ra.field_d, SecondaryNodeDequeIterator.field_c);
               SecondaryNodeDequeIterator.field_c = null;
@@ -549,11 +549,11 @@ abstract class GameClientBase extends GameApplet {
                 }
               }
             } else {
-              dj.field_Z = false;
+              EditableTextField.field_Z = false;
             }
           }
           if (var4 == 4) {
-            if (fg.field_S) {
+            if (LoginPanel.field_S) {
               pl.a((byte) 119, gi.b(12476));
             } else {
               ResourceArchive.field_q = true;
@@ -772,7 +772,7 @@ abstract class GameClientBase extends GameApplet {
             ni.a(3, 103);
           }
           if (ki.field_a[3]) {
-            fg.a(4, false);
+            LoginPanel.a(4, false);
           }
           if (ki.field_a[4]) {
             ah.a((byte) -86, 5);

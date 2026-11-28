@@ -58,7 +58,7 @@ abstract class SpriteState extends DualLinkNode {
           param1 = false;
         }
         d.a(69, param1);
-        kp.i(param0);
+        EditableTextField.i(param0);
     }
 
     SpriteState() {

@@ -19,7 +19,7 @@ final class sl {
         RuntimeException var3 = null;
         var4 = Terraphoenix.field_V;
         try {
-          if (uh.field_H < 10) {
+          if (LoginPanel.field_H < 10) {
             var3_int = 0;
             if (il.field_e) {
               var3_int = 1;
@@ -33,7 +33,7 @@ final class sl {
               AccountNameAvailabilityValidator.a(0, param0, 0, (byte) 113);
             } else {
               if (q.field_Jb != 0) {
-                ej.a(-12966, param0);
+                EditableTextField.a(-12966, param0);
               } else {
                 TutorialController.a(param1, 0, false);
                 AccountNameAvailabilityValidator.a(0, param0, 0, (byte) 126);

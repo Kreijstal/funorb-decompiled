@@ -51,12 +51,12 @@ final class vd {
           }
           if (param3 == 1) {
             for (var7Lifetime1 = 0; 8 > var7Lifetime1; var7Lifetime1++) {
-              qe.b(param4 + var7Lifetime1, param5, 8, 0, -(24 * var7Lifetime1) + 192);
+              DungeonAssaultScreen.b(param4 + var7Lifetime1, param5, 8, 0, -(24 * var7Lifetime1) + 192);
             }
           }
           if (param1 == 1) {
             for (var7Lifetime2 = 0; var7Lifetime2 < 8; var7Lifetime2++) {
-              qe.b(param0 + (param4 - (1 + var7Lifetime2)), param5, 8, 0, 192 - 24 * var7Lifetime2);
+              DungeonAssaultScreen.b(param0 + (param4 - (1 + var7Lifetime2)), param5, 8, 0, 192 - 24 * var7Lifetime2);
             }
             return;
           }

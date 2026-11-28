@@ -19,7 +19,7 @@ final class MixedSupport048 {
             MixedSupport052.integerState0269 = 11;
           }
         }
-        UiComponentPart031.booleanState0185 = true;
+        AccountRegistrationPanel.booleanState0185 = true;
         if (!booleanArgument1) {
           return;
         }

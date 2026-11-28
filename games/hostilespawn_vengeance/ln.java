@@ -333,7 +333,7 @@ final class ln {
           if (param0) {
             ln.clearStaticReferences(-93);
           }
-          if (bj.field_b == 2 &&
+          if (DebouncedFieldValidator.field_b == 2 &&
             DiskCacheWorker.a(this.field_r, (byte) 111)) {
             return 1;
           }

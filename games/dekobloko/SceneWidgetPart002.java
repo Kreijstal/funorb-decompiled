@@ -6,7 +6,7 @@ final class SceneWidgetPart002 extends SceneWidget {
     static String stringState0193;
     private RgbSprite[] rgbSpriteArrayState0014;
     static boolean booleanState0051;
-    private SceneWidgetPart009[] sceneWidgetPart009ArrayState0001;
+    private IconLabelWidget[] sceneWidgetPart009ArrayState0001;
     static int integerState0241;
     private int integerState0242;
     private int integerState0243;
@@ -65,7 +65,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         int integerLocal9;
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (0 == this.integerState0243) {
-          this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new SceneWidgetPart009(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0037, (RgbSprite) null, MixedSupport094.stringState0394);
+          this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new IconLabelWidget(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0037, (RgbSprite) null, MixedSupport094.stringState0394);
           this.sceneWidgetPart009ArrayState0001[this.integerState0243].integerState0885 = 1;
           this.performAction1768(this.sceneWidgetPart009ArrayState0001[this.integerState0243], -16834);
           this.integerArrayState0050[this.integerState0243] = -1;
@@ -73,7 +73,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         }
         integerLocal2 = 0;
         for (integerLocal3 = 0; this.integerState0243 > integerLocal3; integerLocal3++) {
-          integerLocal4 = this.sceneWidgetPart009ArrayState0001[integerLocal3].computeInteger1338(this.integerState0245, this.integerState0248, 1940);
+          integerLocal4 = this.sceneWidgetPart009ArrayState0001[integerLocal3].measureIconAndLabelWidth(this.integerState0245, this.integerState0248, 1940);
           if (integerLocal2 < integerLocal4) {
             integerLocal2 = integerLocal4;
           }
@@ -88,7 +88,7 @@ final class SceneWidgetPart002 extends SceneWidget {
           this.performAction0560((String) null, -17, -15);
         }
         for (integerLocal1 = 0; integerLocal1 < this.integerState0243; integerLocal1++) {
-          this.sceneWidgetPart009ArrayState0001[integerLocal1].performAction1336(this.integerState0247, this.integerState0245, this.integerState0244, this.integerState0242 + this.integerState0247 * integerLocal1, -(this.integerState0244 * 2) + integerLocal2, this.integerState0248, 500);
+          this.sceneWidgetPart009ArrayState0001[integerLocal1].setBoundsAndLayoutChildren(this.integerState0247, this.integerState0245, this.integerState0244, this.integerState0242 + this.integerState0247 * integerLocal1, -(this.integerState0244 * 2) + integerLocal2, this.integerState0248, 500);
         }
     }
 
@@ -167,7 +167,7 @@ final class SceneWidgetPart002 extends SceneWidget {
     }
 
     final void performAction0556(int integerArgument1, int integerArgument2, RgbSprite rgbSpriteArgument3, String stringArgument4) {
-        this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new SceneWidgetPart009(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0036, rgbSpriteArgument3, stringArgument4);
+        this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new IconLabelWidget(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0036, rgbSpriteArgument3, stringArgument4);
         this.sceneWidgetPart009ArrayState0001[this.integerState0243].rgbSpriteArrayState0035 = this.rgbSpriteArrayState0014;
         this.sceneWidgetPart009ArrayState0001[this.integerState0243].booleanState0214 = true;
         this.sceneWidgetPart009ArrayState0001[this.integerState0243].integerState0885 = 1;
@@ -189,7 +189,7 @@ final class SceneWidgetPart002 extends SceneWidget {
 
     SceneWidgetPart002(SceneWidget sceneWidgetArgument1, RgbSprite[] rgbSpriteArrayArgument2, SceneWidget sceneWidgetArgument3, SceneWidget sceneWidgetArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8, int integerArgument9) {
         super(0L, sceneWidgetArgument1);
-        this.sceneWidgetPart009ArrayState0001 = new SceneWidgetPart009[256];
+        this.sceneWidgetPart009ArrayState0001 = new IconLabelWidget[256];
         this.integerArrayState0050 = new int[256];
         this.integerState0246 = -2;
         try {
@@ -208,7 +208,7 @@ final class SceneWidgetPart002 extends SceneWidget {
 
     final void performAction0560(String stringArgument1, int integerArgument2, int integerArgument3) {
         try {
-          this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new SceneWidgetPart009(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0036, (RgbSprite) null, stringArgument1);
+          this.sceneWidgetPart009ArrayState0001[this.integerState0243] = new IconLabelWidget(0L, (SceneWidget) null, (SceneWidget) null, this.sceneWidgetState0036, (RgbSprite) null, stringArgument1);
           this.sceneWidgetPart009ArrayState0001[this.integerState0243].rgbSpriteArrayState0035 = this.rgbSpriteArrayState0014;
           this.sceneWidgetPart009ArrayState0001[this.integerState0243].booleanState0214 = true;
           this.sceneWidgetPart009ArrayState0001[this.integerState0243].integerState0885 = 1;

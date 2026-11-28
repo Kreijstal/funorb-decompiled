@@ -253,24 +253,24 @@ final class RenderingSupport003 {
     }
 
     final static void performAction0568(byte byteArgument1) {
-        UiComponentPart024.stringArrayState0032 = new String[NetworkArchiveRequestManager.integerState0598];
-        UiComponentPart024.stringArrayState0032[18] = RenderingSupport004.stringState0202;
-        UiComponentPart024.stringArrayState0032[17] = MixedSupport128.stringState0555;
-        UiComponentPart024.stringArrayState0032[5] = MixedSupport015.stringState0073;
-        UiComponentPart024.stringArrayState0032[4] = CacheWorkQueue.stringState0264;
-        UiComponentPart024.stringArrayState0032[9] = SceneWidgetPart002.stringState0194;
-        UiComponentPart024.stringArrayState0032[15] = TranslatedUiText.stringState0353;
-        UiComponentPart024.stringArrayState0032[21] = MixedSupport014.stringState0067;
-        UiComponentPart024.stringArrayState0032[11] = SceneWidgetNode.stringState0319;
-        UiComponentPart024.stringArrayState0032[7] = MixedSupport048.stringState0203;
-        UiComponentPart024.stringArrayState0032[20] = MixedSupport053.stringState0222;
-        UiComponentPart024.stringArrayState0032[19] = GameDomainSupport006.stringState0624;
-        UiComponentPart024.stringArrayState0032[6] = SceneWidgetPart006.stringState0277;
-        UiComponentPart024.stringArrayState0032[13] = MixedSupport139.stringState0593;
+        BirthDateTextFields.stringArrayState0032 = new String[NetworkArchiveRequestManager.integerState0598];
+        BirthDateTextFields.stringArrayState0032[18] = RenderingSupport004.stringState0202;
+        BirthDateTextFields.stringArrayState0032[17] = MixedSupport128.stringState0555;
+        BirthDateTextFields.stringArrayState0032[5] = NineSliceSprite.stringState0073;
+        BirthDateTextFields.stringArrayState0032[4] = CacheWorkQueue.stringState0264;
+        BirthDateTextFields.stringArrayState0032[9] = SceneWidgetPart002.stringState0194;
+        BirthDateTextFields.stringArrayState0032[15] = TranslatedUiText.stringState0353;
+        BirthDateTextFields.stringArrayState0032[21] = MixedSupport014.stringState0067;
+        BirthDateTextFields.stringArrayState0032[11] = SceneWidgetNode.stringState0319;
+        BirthDateTextFields.stringArrayState0032[7] = MixedSupport048.stringState0203;
+        BirthDateTextFields.stringArrayState0032[20] = MixedSupport053.stringState0222;
+        BirthDateTextFields.stringArrayState0032[19] = GameDomainSupport006.stringState0624;
+        BirthDateTextFields.stringArrayState0032[6] = SceneWidgetPart006.stringState0277;
+        BirthDateTextFields.stringArrayState0032[13] = MixedSupport139.stringState0593;
         if (byteArgument1 != 123) {
           integerState0251 = 114;
         }
-        UiComponentPart024.stringArrayState0032[16] = MixedSupport130.stringState0563;
+        BirthDateTextFields.stringArrayState0032[16] = MixedSupport130.stringState0563;
     }
 
     final static void performAction0570(byte byteArgument1, HuffmanCodec huffmanCodecArgument2) {

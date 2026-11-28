@@ -117,7 +117,7 @@ final class op {
               ac.field_B.writeByte(6, 18);
               ac.field_B.position = ac.field_B.position + 2;
               var10 = ac.field_B.position;
-              var11_ref_StringLifetime4 = oj.a(m.c(true), (byte) -21);
+              var11_ref_StringLifetime4 = oj.a(DebouncedFieldValidator.c(true), (byte) -21);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -163,8 +163,8 @@ final class op {
               mf.field_c = new String[-100 + var9Lifetime1];
             } else {
               if (248 == var9Lifetime1) {
-                np.a((byte) -126, m.c(true));
-                tp.field_v = m.field_f;
+                np.a((byte) -126, DebouncedFieldValidator.c(true));
+                tp.field_v = DebouncedFieldValidator.field_f;
                 tl.a(-84);
                 ResourceArchive.field_e = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -205,7 +205,7 @@ final class op {
             } else {
               var9_ref_String = ra.field_c.readNullableString(true);
               if (var9_ref_String != null) {
-                AccountCreationResultPanel.a(true, var9_ref_String, m.c(true));
+                AccountCreationResultPanel.a(true, var9_ref_String, DebouncedFieldValidator.c(true));
               }
             }
             tl.a(-59);

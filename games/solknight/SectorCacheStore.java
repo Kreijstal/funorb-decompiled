@@ -154,12 +154,12 @@ final class SectorCacheStore {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = qb.field_ab[var15Lifetime1];
-            var23 = a.field_d[var15Lifetime1];
-            var24 = qb.field_ab[var16];
-            var25 = a.field_d[var16];
-            var26 = qb.field_ab[var17];
-            var27 = a.field_d[var17];
+            var22 = ValidatedTextField.field_ab[var15Lifetime1];
+            var23 = TextFieldValidator.field_d[var15Lifetime1];
+            var24 = ValidatedTextField.field_ab[var16];
+            var25 = TextFieldValidator.field_d[var16];
+            var26 = ValidatedTextField.field_ab[var17];
+            var27 = TextFieldValidator.field_d[var17];
             if (var19 == var18 &&
               var20 == var19) {
               var28 = var54[var18];

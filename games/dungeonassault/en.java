@@ -156,7 +156,7 @@ abstract class en {
           try {
             try {
               var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -21, param2, "getcookies"));
-              var4 = ih.a(96, ';', var3);
+              var4 = RaiderRecruitmentScreen.splitOnCharacter(96, ';', var3);
               if (param1 < 53) {
                 en.a((byte) -57, 121, -52, 125, -83);
               }

@@ -54,10 +54,10 @@ class vb extends DualLinkNode {
               }
             }
             if (var2 != 0) {
-              ClientException.field_e = -df.field_q[0].field_n;
+              ClientException.field_e = -PasswordValidator.field_q[0].field_n;
             }
             if (var1_int != 0) {
-              ne.field_b = -df.field_q[0].field_n;
+              ne.field_b = -PasswordValidator.field_q[0].field_n;
             }
           }
           ah.field_d = ah.field_d + 2;
@@ -164,8 +164,8 @@ class vb extends DualLinkNode {
         }
         if (null != me.field_f) {
           me.field_f.g((byte) -75);
-          var1 = hf.b(0);
-          j.field_e = new qi(var1, (String) null, true, false, false);
+          var1 = DebouncedFieldValidator.b(0);
+          j.field_e = new LoginPanel(var1, (String) null, true, false, false);
           if (param0 == 28) {
             wg.field_j.b((byte) -54, jh.field_C);
             jh.field_C.c((byte) 119, j.field_e);
@@ -178,8 +178,8 @@ class vb extends DualLinkNode {
           jh.field_C.p(-21);
           return;
         }
-        var1Lifetime1 = hf.b(0);
-        j.field_e = new qi(var1Lifetime1, (String) null, true, false, false);
+        var1Lifetime1 = DebouncedFieldValidator.b(0);
+        j.field_e = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         if (param0 != 28) {
           field_i = (String) null;
           wg.field_j.b((byte) -54, jh.field_C);
@@ -196,7 +196,7 @@ class vb extends DualLinkNode {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (th.a(false, param1)) {
+        if (AgeValidator.a(false, param1)) {
           return true;
         }
         if (param1 == 45) {

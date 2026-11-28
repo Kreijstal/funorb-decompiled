@@ -407,7 +407,7 @@ final class BufferedCacheFile {
 
     final static void a(int param0, byte param1, int param2, lda param3, lda param4, int param5) {
         try {
-          hna.field_k = param2;
+          ConfirmedEmailAvailabilityValidator.field_k = param2;
           ShieldEvent.field_r = param5;
           HomingMissileAnimation.field_x = param3;
           raa.field_J = param0;

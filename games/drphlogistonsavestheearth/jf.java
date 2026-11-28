@@ -139,7 +139,7 @@ abstract class jf extends ca {
           fieldTemp$1 = this.field_pb + 1;
           this.field_pb = this.field_pb + 1;
           if (this.field_lb == fieldTemp$1) {
-            this.field_ob = ni.field_s;
+            this.field_ob = EmailFormatValidator.field_s;
             this.a(this.field_mb, this.field_hb.field_k + (12 + this.field_jb), this.field_hb.field_w + 12, (byte) 104);
             this.field_pb = 0;
             this.field_gb.field_K = 0;
@@ -214,7 +214,7 @@ abstract class jf extends ca {
         RuntimeException var3 = null;
         try {
           this.field_hb = param1;
-          if (this.field_ob == ni.field_s) {
+          if (this.field_ob == EmailFormatValidator.field_s) {
             this.a(this.field_mb, 12 + this.field_jb + this.field_hb.field_k, 12 + this.field_hb.field_w, (byte) 66);
             this.field_pb = 0;
           } else {

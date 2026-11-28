@@ -32,7 +32,7 @@ final class uk {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = oc.field_M;
+              stackIn_7_0 = ValidatedTextField.field_M;
               return stackIn_7_0;
             }
             var3 = param1.substring(0, var2_int);

@@ -193,7 +193,7 @@ final class vma extends pv {
           }
           InsanoSauceSpecial.c(false);
           gja.field_m.f((byte) -66);
-          FridgeScreen.field_e = new ph(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
+          FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
           kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
           gja.field_m.a((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {
@@ -220,7 +220,7 @@ final class vma extends pv {
           }
           InsanoSauceSpecial.c(false);
           gja.field_m.f((byte) -66);
-          FridgeScreen.field_e = new ph(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
+          FridgeScreen.field_e = new LoginPanel(IncomingSpecial.field_p, (String) null, gfa.field_i, param2, param1);
           kka.field_l = new sja(gja.field_m, FridgeScreen.field_e);
           gja.field_m.a((UiWidget) (kka.field_l), (byte) 63);
         } catch (RuntimeException runtimeException) {

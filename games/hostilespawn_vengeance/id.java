@@ -192,13 +192,13 @@ final class id implements Serializable {
         int var10;
         int var13;
         int var14;
-        oc var15;
+        GridPoint var15;
         var14 = HostileSpawn.field_I ? 1 : 0;
         if (param0 != -2) {
           field_b = (String) null;
         }
         var15 = mm.field_m[0].field_j;
-        var4 = var15.b(-4);
+        var4 = var15.getClampedTileIndex(-4);
         vf.a(param0 - 83, var4);
         var5 = var15.field_g - 20;
         var6 = 20 + var15.field_g;

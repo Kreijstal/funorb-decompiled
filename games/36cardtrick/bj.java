@@ -47,7 +47,7 @@ final class bj {
         if (!param0) {
           return false;
         }
-        stackIn_6_0 = (this.field_t <= v.field_Q) && (0 < d.field_c);
+        stackIn_6_0 = (this.field_t <= ValidatedTextField.field_Q) && (0 < d.field_c);
         return stackIn_6_0;
     }
 
@@ -77,7 +77,7 @@ final class bj {
             field_h = -103;
           }
           this.field_i = this.field_e;
-          if (this.field_t <= v.field_Q) {
+          if (this.field_t <= ValidatedTextField.field_Q) {
             this.a(false);
           } else {
             this.field_k = false;

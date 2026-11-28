@@ -35,7 +35,7 @@ final class uf {
               if (param0) {
                 field_a = -121;
               }
-              stackIn_12_0 = vc.field_N;
+              stackIn_12_0 = ValidatedTextField.field_N;
               return stackIn_12_0;
             }
             var4 = param1.charAt(var3);

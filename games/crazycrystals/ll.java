@@ -79,13 +79,13 @@ final class ll {
               return;
             }
             bh.field_c = fn.field_j;
-            vk.field_I = mb.field_g;
+            LoginPanel.field_I = mb.field_g;
             if (param2) {
-              li.field_a = null;
+              DebouncedFieldValidator.field_a = null;
             } else {
-              if (null != li.field_a &&
-                li.field_a.field_l == null) {
-                li.field_a = null;
+              if (null != DebouncedFieldValidator.field_a &&
+                DebouncedFieldValidator.field_a.field_l == null) {
+                DebouncedFieldValidator.field_a = null;
               }
             }
             var10 = (kb) (rc.field_a.elementAt(uo.field_o));
@@ -119,17 +119,17 @@ final class ll {
               um.a(FloatingScoreLabel.field_j[var10.field_d], hf.field_b[var10.field_d], (byte) 80);
             }
             en.field_O = 0;
-            kd.field_l = nj.a(45, var8, var7);
+            ConfirmedEmailAvailabilityValidator.field_l = nj.a(45, var8, var7);
             if (!param1) {
               cn.field_d = null;
               td.field_c = null;
               bq.field_i = ce.b((byte) -126);
               if (bq.field_i == null) {
-                bq.field_i = kd.field_l;
+                bq.field_i = ConfirmedEmailAvailabilityValidator.field_l;
               }
             } else {
-              cn.field_d = kd.field_l;
-              bq.field_i = kd.field_l;
+              cn.field_d = ConfirmedEmailAvailabilityValidator.field_l;
+              bq.field_i = ConfirmedEmailAvailabilityValidator.field_l;
               td.field_c = ce.b((byte) -125);
               if (null != td.field_c) {
                 ca.field_j = -60;

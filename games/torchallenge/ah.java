@@ -136,10 +136,10 @@ final class ah {
             ae.a(param1, var5, -15024);
             var5 = (bk) (na.field_d.next(-270));
           }
-          var4 = (tc) (gf.field_q.first((byte) -18));
+          var4 = (tc) (MatchingFieldValidator.field_q.first((byte) -18));
           while (var4 != null) {
             ue.a(var4, 2, param1);
-            var4 = (tc) (gf.field_q.next(param0 ^ 344));
+            var4 = (tc) (MatchingFieldValidator.field_q.next(param0 ^ 344));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

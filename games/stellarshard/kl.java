@@ -128,7 +128,7 @@ final class kl extends IntrusiveNode {
               pe.field_c.a(var6, var8Lifetime1, var1_int + mc.field_a, var5, -1);
               var1_int = var1_int + l.field_e;
             } else {
-              mj.field_E.a(var6, var8Lifetime1, var1_int + fg.field_M, var5, -1);
+              AccountRegistrationPanel.field_E.a(var6, var8Lifetime1, var1_int + fg.field_M, var5, -1);
               var1_int = var1_int + (IsaacRandom.field_a + (nh.field_f + nh.field_h));
             }
           }

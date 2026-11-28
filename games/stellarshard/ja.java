@@ -103,7 +103,7 @@ final class ja extends IntrusiveNode {
                     }
                     var28 = ma.a((byte) -124, var24 << 12);
                     var29 = var28 - (param1 << 6);
-                    var30 = -(param5 * (65536 - lc.a((var29 << 7) / param2, false)) >> 11) + var28;
+                    var30 = -(param5 * (65536 - PasswordValidator.a((var29 << 7) / param2, false)) >> 11) + var28;
                     var27 = param0 + var23 * var30 / var28;
                     var26 = param3 + var21 * var30 / var28;
                     if (var26 < SoftwareRasterizer.field_f) {
@@ -121,7 +121,7 @@ final class ja extends IntrusiveNode {
                   } else {
                     var28 = ma.a((byte) -118, var24 << 12);
                     var29 = -var28 + (param1 << 6);
-                    var30 = var28 - ((-lc.a((var29 << 7) / param1, param4) + 65536) * param5 >> 11);
+                    var30 = var28 - ((-PasswordValidator.a((var29 << 7) / param1, param4) + 65536) * param5 >> 11);
                     var26 = param3 + var30 * var21 / var28;
                     var27 = param0 + var30 * var23 / var28;
                     if (var26 < SoftwareRasterizer.field_f) {
@@ -231,7 +231,7 @@ final class ja extends IntrusiveNode {
           }
           var7Lifetime1 = 0;
           var8Lifetime1 = hd.a(var6Lifetime1, 99) >> 8;
-          var9Lifetime1 = lc.a(var6Lifetime1, false) >> 8;
+          var9Lifetime1 = PasswordValidator.a(var6Lifetime1, false) >> 8;
           if (-1 != ni.field_e &&
             -1 != KeyHandler.field_a) {
             var8Lifetime1 = -KeyHandler.field_a + 240;

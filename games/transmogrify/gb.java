@@ -164,7 +164,7 @@ final class gb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          wl.field_I = false;
+          AccountRegistrationPanel.field_I = false;
           aa.field_g = false;
           var3_int = -66 % ((-23 - param1) / 41);
           if (null != SecondaryNodeDequeIterator.field_d &&
@@ -184,7 +184,7 @@ final class gb {
               bj.d(-2147483648);
             }
             if (var4 != 0) {
-              if (wl.field_I) {
+              if (AccountRegistrationPanel.field_I) {
                 param2 = ij.a(ol.field_e, new String[]{param2}, (byte) -113);
               }
               if (hd.field_b) {

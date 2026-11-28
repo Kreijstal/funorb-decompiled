@@ -461,7 +461,7 @@ abstract class ByteStorage {
           if ((0 == param4 ||
             param4 == 2) &&
             param3) {
-            TorChallenge.field_E = be.a(GameKeyHandler.field_b, dk.field_a, vj.field_c, param1 + rf.field_eb[vj.field_c][1], rf.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
+            TorChallenge.field_E = be.a(GameKeyHandler.field_b, dk.field_a, vj.field_c, param1 + ValidatedTextField.field_eb[vj.field_c][1], ValidatedTextField.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
             return;
           }
           return;

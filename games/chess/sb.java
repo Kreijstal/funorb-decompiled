@@ -92,7 +92,7 @@ final class sb extends bj {
             decompiledFrameRemainder0 = (BoundedRandomAccessFile.field_j == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!uk.field_e) {
+            if (!ChessBoardState.field_e) {
               if (ei.field_u >= be.field_f) {
                 stackIn_19_0 = (ei.field_u < sj.field_n + be.field_f) ? 1 : 0;
               } else {
@@ -105,7 +105,7 @@ final class sb extends bj {
             if (param0 == null) {
               ei.field_u = 0;
             } else {
-              if (uk.field_e) {
+              if (ChessBoardState.field_e) {
                 ei.field_u = be.field_f;
               } else {
                 if (var2_int != 0) {
@@ -117,15 +117,15 @@ final class sb extends bj {
             }
             vn.field_Db = kj.field_c;
             if (param0 != null) {
-              uk.field_e = false;
+              ChessBoardState.field_e = false;
             } else {
               if (var2_int != 0) {
-                uk.field_e = true;
+                ChessBoardState.field_e = true;
               }
             }
             fm.field_S = ac.field_k;
           }
-          if (!uk.field_e &&
+          if (!ChessBoardState.field_e &&
             ei.field_u < be.field_f &&
             lf.field_O) {
             fm.field_S = ac.field_k;
@@ -133,9 +133,9 @@ final class sb extends bj {
             vn.field_Db = kj.field_c;
           }
           BoundedRandomAccessFile.field_j = param0;
-          if (uk.field_e &&
+          if (ChessBoardState.field_e &&
             ei.field_u == ae.field_k) {
-            uk.field_e = false;
+            ChessBoardState.field_e = false;
             ei.field_u = 0;
           }
           kj.field_c = -1;

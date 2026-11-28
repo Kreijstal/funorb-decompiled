@@ -332,7 +332,7 @@ final class c extends sc {
           if (param1 <= 71) {
             c.pollAccountNameCheck((String) null, 38);
           }
-          if (na.field_S == wh.field_fb) {
+          if (na.field_S == ValidatedTextField.field_fb) {
             stackIn_7_0 = null;
             return (AccountServiceResult) (stackIn_7_0);
           }
@@ -344,7 +344,7 @@ final class c extends sc {
           }
           IntrusiveDeque.field_e = null;
           MovingTunnelEntity.field_F = param0;
-          na.field_S = wh.field_fb;
+          na.field_S = ValidatedTextField.field_fb;
           stackIn_15_0 = null;
           return (AccountServiceResult) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -921,7 +921,7 @@ final class c extends sc {
           }
           var2Lifetime74 = wm.a("intro6_FlyYourShipInConfined", (byte) 32);
           if (var2Lifetime74 != null) {
-            ke.field_L = va.a(0, var2Lifetime74);
+            AccountRegistrationPanel.field_L = va.a(0, var2Lifetime74);
           }
           var2Lifetime75 = wm.a("intro7_ShieldDescription1", (byte) 66);
           if (null != var2Lifetime75) {
@@ -1009,7 +1009,7 @@ final class c extends sc {
           }
           var2Lifetime96 = wm.a("specialEnergyWeapons", (byte) 33);
           if (null != var2Lifetime96) {
-            lf.field_h = va.a(0, var2Lifetime96);
+            MatchingFieldValidator.field_h = va.a(0, var2Lifetime96);
           }
           var2Lifetime97 = wm.a("basicEnergyWeapon", (byte) 71);
           if (null != var2Lifetime97) {
@@ -1129,7 +1129,7 @@ final class c extends sc {
           }
           var2Lifetime126 = wm.a("instructions_Cloak", (byte) 104);
           if (var2Lifetime126 != null) {
-            bf.field_S = va.a(0, var2Lifetime126);
+            DisplayNameSelectionPanel.field_S = va.a(0, var2Lifetime126);
           }
           var2Lifetime127 = wm.a("instructions_ClusterMine", (byte) 124);
           if (var2Lifetime127 != null) {
@@ -1169,7 +1169,7 @@ final class c extends sc {
           }
           var2Lifetime136 = wm.a("dataSheet_OtherMissiles", (byte) 71);
           if (null != var2Lifetime136) {
-            bk.field_i = va.a(0, var2Lifetime136);
+            EmailFormatValidator.field_i = va.a(0, var2Lifetime136);
           }
           var2Lifetime137 = wm.a("dataSheet_Shield", (byte) 94);
           if (null != var2Lifetime137) {
@@ -1241,7 +1241,7 @@ final class c extends sc {
           }
           var2Lifetime154 = wm.a("youAlreadyHaveRapidFire", (byte) 93);
           if (null != var2Lifetime154) {
-            hj.field_i = va.a(0, var2Lifetime154);
+            AgeValidator.field_i = va.a(0, var2Lifetime154);
           }
           var2Lifetime155 = wm.a("spreadFire", (byte) 58);
           if (null != var2Lifetime155) {
@@ -1357,11 +1357,11 @@ final class c extends sc {
           }
           var2Lifetime183 = wm.a("oneClusterMissile", (byte) 62);
           if (var2Lifetime183 != null) {
-            wh.field_ab = va.a(0, var2Lifetime183);
+            ValidatedTextField.field_ab = va.a(0, var2Lifetime183);
           }
           var2Lifetime184 = wm.a("youAlreadyHave10ClusterMissiles", (byte) 126);
           if (var2Lifetime184 != null) {
-            ke.field_ab = va.a(0, var2Lifetime184);
+            AccountRegistrationPanel.field_ab = va.a(0, var2Lifetime184);
           }
           var2Lifetime185 = wm.a("oneNuclearMissile", (byte) 76);
           if (null != var2Lifetime185) {

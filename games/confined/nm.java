@@ -82,7 +82,7 @@ final class nm extends gk {
           if (ic.field_b == lh.field_b) {
             return false;
           }
-          gk.field_r = ke.field_P[ic.field_b];
+          gk.field_r = AccountRegistrationPanel.field_P[ic.field_b];
           if (param0 != -96) {
             field_z = -30;
           }

@@ -124,7 +124,7 @@ final class qh implements ad {
           }
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = cl.a(-95, param1);
+            var4 = LoginPanel.a(-95, param1);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!ra.a(118, var4.charAt(0)) &&

@@ -86,12 +86,12 @@ final class BitPacketBuffer extends PacketBuffer {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = qb.field_ab[var9];
-                var13 = a.field_d[var9];
-                var14 = -var12 + qb.field_ab[var10];
-                var15 = -var12 + qb.field_ab[var11];
-                var16 = a.field_d[var10] - var13;
-                var17 = a.field_d[var11] - var13;
+                var12 = ValidatedTextField.field_ab[var9];
+                var13 = TextFieldValidator.field_d[var9];
+                var14 = -var12 + ValidatedTextField.field_ab[var10];
+                var15 = -var12 + ValidatedTextField.field_ab[var11];
+                var16 = TextFieldValidator.field_d[var10] - var13;
+                var17 = TextFieldValidator.field_d[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 -(var15 * var16) + var17 * var14 < 0) {

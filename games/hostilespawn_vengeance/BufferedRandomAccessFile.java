@@ -33,7 +33,7 @@ final class BufferedRandomAccessFile {
           var2 = ib.field_e.k(80);
         }
         if (var2.length() == 0) {
-          var2 = aj.b(-30519);
+          var2 = SpriteBase.getPlayerDisplayName(-30519);
         }
         if (0 == var2.length()) {
           var2 = vg.field_g;

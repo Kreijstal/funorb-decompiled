@@ -27,14 +27,14 @@ final class uc extends ng {
             ac.a(false, param3, param0, param2, 1048576);
           }
           if (SectorCacheStore.field_a != null) {
-            var4 = bh.field_o;
+            var4 = PasswordValidator.field_o;
             synchronized (var4) {
               SectorCacheStore.field_a.a(param1 + 298, param3, -1);
               if (SpriteState.field_t == param0) {
                 return;
               }
               SectorCacheStore.field_a.stopPlayback((byte) 31);
-              bh.field_o.flushAndMarkDrainCheck();
+              PasswordValidator.field_o.flushAndMarkDrainCheck();
               SpriteState.field_t = param0;
               if (SpriteState.field_t != null) {
                 SectorCacheStore.field_a.a(-8126, SpriteState.field_t, param2);
@@ -193,7 +193,7 @@ final class uc extends ng {
         }
         if (!hc.field_Q) {
           hc.field_Q = true;
-          var12 = ia.field_i[param4][dg.field_T[4]][0];
+          var12 = ia.field_i[param4][AccountRegistrationPanel.field_T[4]][0];
           var12.field_l = var12.field_k.length;
           ki.field_d = RawPcmStream.a(var12, 100, var10, var11);
           ki.field_d.e(-1);

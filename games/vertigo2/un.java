@@ -41,7 +41,7 @@ final class un extends UiPanel {
         if (0 != this.field_Ob) {
           return false;
         }
-        if (de.field_f != 85) {
+        if (DebouncedFieldValidator.field_f != 85) {
           if (12 > this.field_Kb.length()) {
             var2 = Character.toLowerCase(TextureOperator.field_r);
             if (32 == var2) {
@@ -60,7 +60,7 @@ final class un extends UiPanel {
               if (param0 != 1) {
                 discarded$18 = this.l(-66);
               }
-              if (84 == de.field_f) {
+              if (84 == DebouncedFieldValidator.field_f) {
                 if (0 >= this.field_Kb.length()) {
                   this.field_Ob = 1;
                 } else {
@@ -68,7 +68,7 @@ final class un extends UiPanel {
                   this.field_Ob = 2;
                 }
               }
-              if (de.field_f != 13) {
+              if (DebouncedFieldValidator.field_f != 13) {
                 return true;
               }
               this.field_Ob = 1;
@@ -79,7 +79,7 @@ final class un extends UiPanel {
               if (param0 != 1) {
                 discarded$20 = this.l(-66);
               }
-              if (84 == de.field_f) {
+              if (84 == DebouncedFieldValidator.field_f) {
                 if (0 >= this.field_Kb.length()) {
                   this.field_Ob = 1;
                 } else {
@@ -87,7 +87,7 @@ final class un extends UiPanel {
                   this.field_Ob = 2;
                 }
               }
-              if (de.field_f == 13) {
+              if (DebouncedFieldValidator.field_f == 13) {
                 this.field_Ob = 1;
               }
               return true;
@@ -97,7 +97,7 @@ final class un extends UiPanel {
               if (param0 != 1) {
                 discarded$22 = this.l(-66);
               }
-              if (84 == de.field_f) {
+              if (84 == DebouncedFieldValidator.field_f) {
                 if (0 >= this.field_Kb.length()) {
                   this.field_Ob = 1;
                 } else {
@@ -105,7 +105,7 @@ final class un extends UiPanel {
                   this.field_Ob = 2;
                 }
               }
-              if (de.field_f == 13) {
+              if (DebouncedFieldValidator.field_f == 13) {
                 this.field_Ob = 1;
               }
               return true;
@@ -113,7 +113,7 @@ final class un extends UiPanel {
           }
           if (param0 != 1) {
             discarded$23 = this.l(-66);
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -121,12 +121,12 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
           }
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -134,7 +134,7 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
@@ -144,7 +144,7 @@ final class un extends UiPanel {
         }
         if (12 <= this.field_Kb.length()) {
           if (param0 == 1) {
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -152,13 +152,13 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
           }
           discarded$14 = this.l(-66);
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -166,7 +166,7 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
@@ -181,7 +181,7 @@ final class un extends UiPanel {
             if (param0 != 1) {
               discarded$10 = this.l(-66);
             }
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -189,7 +189,7 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
@@ -199,7 +199,7 @@ final class un extends UiPanel {
             if (param0 != 1) {
               discarded$13 = this.l(-66);
             }
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -207,14 +207,14 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
           }
           if (param0 != 1) {
             discarded$11 = this.l(-66);
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -222,12 +222,12 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
           }
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -235,7 +235,7 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
@@ -252,7 +252,7 @@ final class un extends UiPanel {
           if (param0 != 1) {
             discarded$8 = this.l(-66);
           }
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -260,7 +260,7 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
@@ -270,7 +270,7 @@ final class un extends UiPanel {
           if (param0 != 1) {
             discarded$1 = this.l(-66);
           }
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -278,7 +278,7 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
@@ -287,7 +287,7 @@ final class un extends UiPanel {
           discarded$2 = this.field_Kb.append((char) var2Lifetime1);
           if (param0 != 1) {
             discarded$3 = this.l(-66);
-            if (84 == de.field_f) {
+            if (84 == DebouncedFieldValidator.field_f) {
               if (0 >= this.field_Kb.length()) {
                 this.field_Ob = 1;
               } else {
@@ -295,12 +295,12 @@ final class un extends UiPanel {
                 this.field_Ob = 2;
               }
             }
-            if (de.field_f == 13) {
+            if (DebouncedFieldValidator.field_f == 13) {
               this.field_Ob = 1;
             }
             return true;
           }
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -308,13 +308,13 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
         }
         if (param0 == 1) {
-          if (84 == de.field_f) {
+          if (84 == DebouncedFieldValidator.field_f) {
             if (0 >= this.field_Kb.length()) {
               this.field_Ob = 1;
             } else {
@@ -322,13 +322,13 @@ final class un extends UiPanel {
               this.field_Ob = 2;
             }
           }
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             this.field_Ob = 1;
           }
           return true;
         }
         discarded$4 = this.l(-66);
-        if (84 == de.field_f) {
+        if (84 == DebouncedFieldValidator.field_f) {
           if (0 >= this.field_Kb.length()) {
             this.field_Ob = 1;
           } else {
@@ -336,7 +336,7 @@ final class un extends UiPanel {
             this.field_Ob = 2;
           }
         }
-        if (de.field_f == 13) {
+        if (DebouncedFieldValidator.field_f == 13) {
           this.field_Ob = 1;
         }
         return true;
@@ -385,7 +385,7 @@ final class un extends UiPanel {
             this.field_Ob = 1;
             return this.field_Ob;
           }
-          if (de.field_f == 85 &&
+          if (DebouncedFieldValidator.field_f == 85 &&
             this.field_Kb.length() > 0) {
             w.a(true, ' ', this.field_Kb.length() - 1, this.field_Kb);
           }
@@ -406,8 +406,8 @@ final class un extends UiPanel {
               }
             }
           }
-          if (de.field_f != 84) {
-            if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f != 84) {
+            if (DebouncedFieldValidator.field_f == 13) {
               return 1;
             }
             continue;

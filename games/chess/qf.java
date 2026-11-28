@@ -105,7 +105,7 @@ final class qf {
             var29 = el.field_z[2];
             var32Lifetime1Lifetime4 = var29;
             var32Lifetime1Lifetime5 = var29;
-            var28 = un.field_i;
+            var28 = ChessMatchSession.field_i;
             var27.field_b.a((byte) -110, var28, var29, 13);
           }
           if (param0 == 2) {

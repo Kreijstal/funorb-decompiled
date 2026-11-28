@@ -149,7 +149,7 @@ class af implements j, eg {
         if (param0 != -3) {
           return false;
         }
-        stackIn_6_0 = (vg.field_J != null) && (vg.field_J.d((byte) 125) != null);
+        stackIn_6_0 = (EditableTextField.field_J != null) && (EditableTextField.field_J.d((byte) 125) != null);
         return stackIn_6_0;
     }
 
@@ -782,7 +782,7 @@ class af implements j, eg {
             if (param2 >= -94) {
               field_h = (int[]) null;
             }
-            ga.field_E.addFirst(var18, -7044);
+            DisplayNameSelectionPanel.field_E.addFirst(var18, -7044);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

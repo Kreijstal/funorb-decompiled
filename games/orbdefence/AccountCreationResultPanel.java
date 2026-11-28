@@ -4,17 +4,17 @@
 final class AccountCreationResultPanel extends dh implements ai {
     private boolean field_lb;
     private boolean field_kb;
-    private rf field_jb;
+    private AccountRegistrationPanel field_jb;
     static int field_fb;
     static ResourceArchive field_hb;
     static String field_gb;
-    static pk field_ib;
+    static LoginPanel field_ib;
 
     final boolean d(boolean param0) {
         AccountServiceResult var2 = null;
         AccountServiceResult var2Lifetime1;
         if (param0) {
-          field_ib = (pk) null;
+          field_ib = (LoginPanel) null;
           if (!this.field_A) {
             return super.d(false);
           }
@@ -144,7 +144,7 @@ final class AccountCreationResultPanel extends dh implements ai {
         }
     }
 
-    AccountCreationResultPanel(sk param0, rf param1) {
+    AccountCreationResultPanel(sk param0, AccountRegistrationPanel param1) {
         super(param0, qc.field_b, bh.field_f, false, false);
         try {
           this.field_jb = param1;

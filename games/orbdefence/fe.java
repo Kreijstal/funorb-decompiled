@@ -10,7 +10,7 @@ final class fe {
         if (param0 > -115) {
           return false;
         }
-        if (hi.field_k < 10) {
+        if (TextFieldValidator.field_k < 10) {
           return false;
         }
         if (vh.field_n >= 13) {

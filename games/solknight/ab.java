@@ -39,15 +39,15 @@ abstract class ab extends GameApplet {
         int var3;
         boolean stackIn_4_1 = false;
         var3 = SolKnight.field_L ? 1 : 0;
-        if (!bb.h(42)) {
+        if (!LoginPanel.h(42)) {
           if (kj.field_R >= 10) {
-            if (!uk.h(250)) {
+            if (!PasswordValidator.h(250)) {
               Asteroid.c(-27347);
             } else {
               if (0 == fj.field_i) {
                 discarded$6 = this.a(false, false, 121);
               } else {
-                ta.a((byte) 119, cl.field_n);
+                ta.a((byte) 119, AgeValidator.field_n);
               }
             }
           }
@@ -357,7 +357,7 @@ abstract class ab extends GameApplet {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SolKnight.field_L ? 1 : 0;
-          var4 = ig.a(vd.field_b, cl.field_n, false, param0);
+          var4 = ig.a(vd.field_b, AgeValidator.field_n, false, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -405,7 +405,7 @@ abstract class ab extends GameApplet {
             }
           }
           if (var4 == 4) {
-            if (!cl.field_m) {
+            if (!AgeValidator.field_m) {
               fj.field_i = 10;
               MusicPatchPcmStream.field_l = true;
             } else {
@@ -503,7 +503,7 @@ abstract class ab extends GameApplet {
         ArchiveRequest.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
         Archive.initializePunctuationKeyMappings(0);
         ah.field_d = ld.createMouseWheelInput(0);
-        th.a((byte) -63, dc.field_q);
+        th.a((byte) -63, EmailFormatValidator.field_q);
         if (!param4) {
           this.field_m = -97;
         }
@@ -638,9 +638,9 @@ abstract class ab extends GameApplet {
           lj.e(false);
         }
         if (null != ah.field_d) {
-          cl.field_n = ah.field_d.pollRotation(9408);
+          AgeValidator.field_n = ah.field_d.pollRotation(9408);
         }
-        if (wf.c((byte) -63)) {
+        if (DebouncedFieldValidator.c((byte) -63)) {
           var3 = 1200 * l.a((byte) 99);
           if (this.field_B ||
             !(var3 >= DelegatingCanvas.b(param0 ^ -3)) &&
@@ -648,7 +648,7 @@ abstract class ab extends GameApplet {
             this.field_B = false;
             je.a(false);
             sf.b(false);
-            dd.a((byte) 27, el.field_k, 2);
+            dd.a((byte) 27, MatchingFieldValidator.field_k, 2);
             pk.d(true);
             ee.field_i = true;
             kj.field_I = 15000L + je.correctedCurrentTimeMillis(1);
@@ -705,7 +705,7 @@ abstract class ab extends GameApplet {
                     dd.a((byte) 51, eb.field_c, 256);
                   }
                 } else {
-                  dd.a((byte) 89, el.field_m, 256);
+                  dd.a((byte) 89, MatchingFieldValidator.field_m, 256);
                 }
               } else {
                 dd.a((byte) 115, bl.field_m, 256);
@@ -768,7 +768,7 @@ abstract class ab extends GameApplet {
           GzipDecompressor.a(-15617);
           pe.field_m = te.field_J;
           kk.field_c = false;
-          d.a(DelegatingCanvas.field_c, cl.field_m, (byte) -110, AccountCreationResultPanel.field_ub, MusicPatchPcmStream.field_o);
+          d.a(DelegatingCanvas.field_c, AgeValidator.field_m, (byte) -110, AccountCreationResultPanel.field_ub, MusicPatchPcmStream.field_o);
           if (bl.field_p ||
             null != s.field_hb) {
             stackIn_101_0 = !(bl.field_p);
@@ -804,7 +804,7 @@ abstract class ab extends GameApplet {
         if (kj.field_R == 11) {
           if (null != wc.field_b && (!wc.field_b.ensureIndexLoaded((byte) -121) ||
             !wc.field_b.tryLoadAllGroups(true))) {
-            a.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
+            TextFieldValidator.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -821,7 +821,7 @@ abstract class ab extends GameApplet {
           if (null != ng.field_a) {
             stackIn_138_0 = (!ng.field_a.a((byte) 125)) ? 0 : 1;
             var3Lifetime2 = stackIn_138_0;
-            a.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
+            TextFieldValidator.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
           }
           if (var3Lifetime2 != 0) {
             kj.field_R = 20;
@@ -829,9 +829,9 @@ abstract class ab extends GameApplet {
         }
         if (!param1 &&
           BitPacketBuffer.field_p) {
-          IntrusiveDeque.a((byte) 86, dc.field_q);
+          IntrusiveDeque.a((byte) 86, EmailFormatValidator.field_q);
           this.a(true);
-          th.a((byte) -69, dc.field_q);
+          th.a((byte) -69, EmailFormatValidator.field_q);
         }
         if (AccountRequestState.field_c[8]) {
           ArchiveSource.b(param0 + 11);

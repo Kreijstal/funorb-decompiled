@@ -19,11 +19,11 @@ final class jn extends fc {
         if (param0 != 0) {
           jn.k(83);
           var2 = (ji) null;
-          ij.a((byte) -17, (ji) null);
+          DisplayNameSelectionPanel.a((byte) -17, (ji) null);
           return;
         }
         var2Lifetime1 = (ji) null;
-        ij.a((byte) -17, (ji) null);
+        DisplayNameSelectionPanel.a((byte) -17, (ji) null);
     }
 
     public jn() {
@@ -156,7 +156,7 @@ final class jn extends fc {
             return false;
           }
           pj.field_e = cm.field_a[BoundedRandomAccessFile.field_e];
-          aj.field_e = pe.field_db[BoundedRandomAccessFile.field_e];
+          SpriteBase.field_e = pe.field_db[BoundedRandomAccessFile.field_e];
           var2 = 26 % ((-11 - param0) / 61);
           BoundedRandomAccessFile.field_e = 127 & BoundedRandomAccessFile.field_e + 1;
           stackIn_5_0 = true;
@@ -168,7 +168,7 @@ final class jn extends fc {
         if (param0 == 100) {
           if (param1 > 0) {
             SoftwareRasterizer.setClip(32, 32, 608, 440);
-            vg.field_c.a(param2, param3, param1);
+            vg.field_c.drawWithAlpha(param2, param3, param1);
             SoftwareRasterizer.resetClip();
           }
           return;
@@ -176,7 +176,7 @@ final class jn extends fc {
         field_I = (String[]) null;
         if (param1 > 0) {
           SoftwareRasterizer.setClip(32, 32, 608, 440);
-          vg.field_c.a(param2, param3, param1);
+          vg.field_c.drawWithAlpha(param2, param3, param1);
           SoftwareRasterizer.resetClip();
         }
     }

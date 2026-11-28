@@ -51,9 +51,9 @@ final class tb implements uj {
         }
         stackIn_9_0 = (var8.readUnsignedByte((byte) -54) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        lm.field_L = var8.readString(false);
+        DisplayNameSelectionPanel.field_L = var8.readString(false);
         if (var4 == 0) {
-          CrossfadingMidiPcmStream.field_x = lm.field_L;
+          CrossfadingMidiPcmStream.field_x = DisplayNameSelectionPanel.field_L;
         } else {
           CrossfadingMidiPcmStream.field_x = var8.readString(false);
         }

@@ -183,10 +183,10 @@ final class m extends IntrusiveNode {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, (304 - 6 * param0.length()) / 2 + var7, var8 + 22);
             }
-            if (null != rj.field_B) {
+            if (null != EditableTextField.field_B) {
               var9.setFont(de.field_o);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(rj.field_B, ub.field_b / 2 - 6 * rj.field_B.length() / 2, -26 + lb.field_z / 2);
+              var9.drawString(EditableTextField.field_B, ub.field_b / 2 - 6 * EditableTextField.field_B.length() / 2, -26 + lb.field_z / 2);
             }
             if (param4 != -3) {
               field_e = (int[]) null;
@@ -278,7 +278,7 @@ final class m extends IntrusiveNode {
             hb.b((byte) 115, var5);
             var6 = new String[2][var5];
             var19 = new int[2][4 * var5];
-            var8 = fd.field_n;
+            var8 = ConfirmedEmailAvailabilityValidator.field_n;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
@@ -286,10 +286,10 @@ final class m extends IntrusiveNode {
               var6[0][var10] = SecondaryNodeDeque.field_d[var11];
               var19[0][4 * var10] = gi.field_e[var11];
               var19[0][1 + var10 * 4] = jc.field_a[var11];
-              var19[0][2 + 4 * var10] = hf.field_c[var11];
+              var19[0][2 + 4 * var10] = DebouncedFieldValidator.field_c[var11];
               var19[0][3 + var10 * 4] = rb.field_fb[var11];
               if (f.a(-15189, SecondaryNodeDeque.field_d[var11]) &&
-                0 == jc.field_a[var11] - (-hf.field_c[var11] - rb.field_fb[var11])) {
+                0 == jc.field_a[var11] - (-DebouncedFieldValidator.field_c[var11] - rb.field_fb[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -304,10 +304,10 @@ final class m extends IntrusiveNode {
               var6[1][var14] = SecondaryNodeDeque.field_d[var11Lifetime1];
               var19[1][var14 * 4] = gi.field_e[var11Lifetime1];
               var19[1][1 + 4 * var14] = jc.field_a[var11Lifetime1];
-              var19[1][2 + var14 * 4] = hf.field_c[var11Lifetime1];
+              var19[1][2 + var14 * 4] = DebouncedFieldValidator.field_c[var11Lifetime1];
               var19[1][4 * var14 + 3] = rb.field_fb[var11Lifetime1];
               if (f.a(-15189, SecondaryNodeDeque.field_d[var11Lifetime1]) &&
-                hf.field_c[var11Lifetime1] + jc.field_a[var11Lifetime1] + rb.field_fb[var11Lifetime1] == 0) {
+                DebouncedFieldValidator.field_c[var11Lifetime1] + jc.field_a[var11Lifetime1] + rb.field_fb[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

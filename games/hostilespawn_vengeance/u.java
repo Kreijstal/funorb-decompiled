@@ -27,7 +27,7 @@ final class u {
         }
     }
 
-    final static void a(oc param0, oc param1, int param2, int param3) {
+    final static void a(GridPoint param0, GridPoint param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -38,7 +38,7 @@ final class u {
         try {
           if (!q.field_g.a((byte) -117)) {
             qj.a(-114, param2, param0, param1);
-            t.c(param3 - 19706);
+            AchievementNotification.c(param3 - 19706);
             if (null != PacketBuffer.field_p[0] &&
               8 == PacketBuffer.field_p[0].field_i &&
               PacketBuffer.field_p[0].field_I > 0) {
@@ -74,7 +74,7 @@ final class u {
         }
     }
 
-    final static void a(int param0, oc param1, boolean param2, int param3, og param4, int param5) {
+    final static void a(int param0, GridPoint param1, boolean param2, int param3, og param4, int param5) {
         int var8 = 0;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -92,7 +92,7 @@ final class u {
           var7 = (int)((double)var6_int * Math.random());
           for (var8 = 0; var8 < 256; var8 = var8 + var6_int) {
             jn.field_F[ib.field_c].field_c = (double)(var7 + var8);
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param1);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
             jn.field_F[ib.field_c].field_l.a(param4, -28860);
             jn.field_F[ib.field_c].field_l.b(12.0, (double)var8, 118);
             jn.field_F[ib.field_c].b((byte) 117);
@@ -101,7 +101,7 @@ final class u {
             jn.field_F[ib.field_c].field_i = param5;
             ib.field_c = ib.field_c + 1;
             jn.field_F[ib.field_c].field_c = (double)(var8 + var7);
-            jn.field_F[ib.field_c].field_j.a((byte) 46, param1);
+            jn.field_F[ib.field_c].field_j.copyCoordinatesFrom((byte) 46, param1);
             jn.field_F[ib.field_c].field_l.a(param4, -28860);
             jn.field_F[ib.field_c].field_l.b(12.0, (double)var8, 126);
             jn.field_F[ib.field_c].b((byte) 117);

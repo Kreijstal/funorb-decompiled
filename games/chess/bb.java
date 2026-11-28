@@ -52,15 +52,15 @@ final class bb {
           boolean decompiledFrameRemainder0 = true;
           var20 = qm.a(1, "lobby", "crowns", param0);
           var5 = var20;
-          af.field_g = var20.length;
+          ChessMatchState.field_g = var20.length;
           if (param1 != null) {
-            var6_array = new rk[af.field_g + param1.length];
-            for (var7_int = 0; var7_int < af.field_g; var7_int++) {
+            var6_array = new rk[ChessMatchState.field_g + param1.length];
+            for (var7_int = 0; var7_int < ChessMatchState.field_g; var7_int++) {
               var6_array[var7_int] = var20[var7_int];
             }
             var5 = var6_array;
             for (var7_int = 0; var7_int < param1.length; var7_int++) {
-              var6_array[var7_int + af.field_g] = param1[var7_int];
+              var6_array[var7_int + ChessMatchState.field_g] = param1[var7_int];
             }
             var23 = new int[var5.length];
             var21 = var23;
@@ -77,14 +77,14 @@ final class bb {
             var22 = var24;
             var6 = var22;
             var7_int = 0;
-            decompiledFrameRemainder0 = !(var7_int >= af.field_g);
+            decompiledFrameRemainder0 = !(var7_int >= ChessMatchState.field_g);
             if (decompiledFrameRemainder0) {
               var23[var7_int] = 10;
               var7_int++;
             }
           }
           if (decompiledFrameRemainder0) {
-            while (var7_int < af.field_g) {
+            while (var7_int < ChessMatchState.field_g) {
               var23[var7_int] = 10;
               var7_int++;
             }
@@ -92,16 +92,16 @@ final class bb {
           if (param1 != null) {
             if (param4 == null) {
               for (var7_intLifetime1 = 0; param1.length > var7_intLifetime1; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + af.field_g] = param1[var7_intLifetime1].field_i;
+                var6[var7_intLifetime1 + ChessMatchState.field_g] = param1[var7_intLifetime1].field_i;
               }
             } else {
               for (var7_intLifetime1 = 0; param1.length > var7_intLifetime1; var7_intLifetime1++) {
-                var6[var7_intLifetime1 + af.field_g] = param4[var7_intLifetime1];
+                var6[var7_intLifetime1 + ChessMatchState.field_g] = param4[var7_intLifetime1];
               }
             }
           }
           DiskCacheWorker.field_e = 2;
-          ri.field_g = 4;
+          BirthDateValidator.field_g = 4;
           jg.field_I = 11;
           fe.field_g = 15;
           qc.field_e = 2;
@@ -132,8 +132,8 @@ final class bb {
           ma.field_G.field_Ab = rh.a(ao.a(param0, "heading", 2993, "lobby"), param3 ^ 9527);
           bj.field_eb = new ci(0L, (ci) null);
           bj.field_eb.field_Ab = il.a(param3 + 105, 4210752, 120, false, false, 8421504);
-          af.field_o = new ci(0L, (ci) null);
-          af.field_o.field_Ab = wh.a(93, 114, 3, 6316128, 6316128, 1);
+          ChessMatchState.field_o = new ci(0L, (ci) null);
+          ChessMatchState.field_o.field_Ab = wh.a(93, 114, 3, 6316128, 6316128, 1);
           od.field_V = new ci(0L, (ci) null);
           od.field_V.field_Ab = rh.a(ao.a(param0, "popup", 2993, "lobby"), -9568);
           var12 = rh.a(ao.a(param0, "popup_mouseover", 2993, "lobby"), -9568);
@@ -155,12 +155,12 @@ final class bb {
           DualLinkNode.field_j = new ci(0L, var10);
           DualLinkNode.field_j.field_z = 2;
           DualLinkNode.field_j.field_Ab = il.a(0, 2039583, 30, false, true, 3815994);
-          qn.field_P = new ci(0L, (ci) null);
-          qn.field_P.field_cb = 1;
-          qn.field_P.field_xb = (lh) ((Object) v.field_k);
-          qn.field_P.field_ib = 13421772;
-          qn.field_P.field_K = fe.field_g;
-          sj.field_k = new ci(0L, qn.field_P);
+          EditableTextField.field_P = new ci(0L, (ci) null);
+          EditableTextField.field_P.field_cb = 1;
+          EditableTextField.field_P.field_xb = (lh) ((Object) v.field_k);
+          EditableTextField.field_P.field_ib = 13421772;
+          EditableTextField.field_P.field_K = fe.field_g;
+          sj.field_k = new ci(0L, EditableTextField.field_P);
           sj.field_k.field_P = 16777215;
           sj.field_k.field_T = 16777215;
           sj.field_k.field_A = 8421504;
@@ -170,10 +170,10 @@ final class bb {
           var15.field_K = fe.field_g;
           var15.field_ib = 16777215;
           var15.field_xb = (lh) ((Object) var7);
-          ic.field_c = new ci(0L, qn.field_P);
+          ic.field_c = new ci(0L, EditableTextField.field_P);
           ic.field_c.field_Ab = il.a(0, 2236962, 16, false, false, 2236962);
           ic.field_c.field_z = 2;
-          r.field_Tb = new ci(0L, qn.field_P);
+          r.field_Tb = new ci(0L, EditableTextField.field_P);
           r.field_Tb.field_Ab = il.a(0, 1513239, 16, false, false, 1513239);
           r.field_Tb.field_z = 2;
           sk.field_v = new ci(0L, ic.field_c);
@@ -181,7 +181,7 @@ final class bb {
           hg.field_f = new ci(0L, r.field_Tb);
           hg.field_f.a(sj.field_k, param3 ^ 2147483543);
           var16 = ao.a(param0, "button_mouseover", 2993, "lobby");
-          bd.field_a = new cf(od.field_V, var12, qn.field_P, sj.field_k, 3, 2, qc.field_e, 3, fe.field_g);
+          bd.field_a = new cf(od.field_V, var12, EditableTextField.field_P, sj.field_k, 3, 2, qc.field_e, 3, fe.field_g);
           ml.field_f = new ci(0L, sj.field_k);
           ml.field_f.field_G = 1;
           ml.field_f.field_Q = var16;

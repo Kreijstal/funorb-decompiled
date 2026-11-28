@@ -80,7 +80,7 @@ final class ResourceArchive {
         if (!param0) {
           field_a = (String) null;
         }
-        cd.field_f = new rg();
+        cd.field_f = new AccountRegistrationPanel();
         ta.field_a.b(1, cd.field_f);
     }
 
@@ -219,7 +219,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (null != this.field_c[param1][param3]) {
-            var8 = dn.extractBytes(this.field_c[param1][param3], false, (byte) 48);
+            var8 = LoginPanel.extractBytes(this.field_c[param1][param3], false, (byte) 48);
             var6 = var8;
             if (var8 == null) {
               throw new RuntimeException("");
@@ -623,7 +623,7 @@ final class ResourceArchive {
             param0[1] != 0 ||
             0 != param0[2] ||
             param0[3] != 0)) {
-            var35 = dn.extractBytes(this.field_j[param2], true, (byte) 48);
+            var35 = LoginPanel.extractBytes(this.field_j[param2], true, (byte) 48);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -631,7 +631,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = dn.extractBytes(this.field_j[param2], false, (byte) 48);
+            var9 = LoginPanel.extractBytes(this.field_j[param2], false, (byte) 48);
           }
           try {
             var36 = lc.a(var9, 50166);

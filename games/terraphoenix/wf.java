@@ -33,8 +33,8 @@ final class wf extends IntrusiveNode {
             stackIn_3_0 = -51;
             return stackIn_3_0;
           }
-          for (var2_int = 0; ph.field_n.length > var2_int; var2_int++) {
-            if (param0.equals(ph.field_n[var2_int])) {
+          for (var2_int = 0; PasswordValidator.field_n.length > var2_int; var2_int++) {
+            if (param0.equals(PasswordValidator.field_n[var2_int])) {
               stackIn_9_0 = var2_int;
               return stackIn_9_0;
             }
@@ -71,7 +71,7 @@ final class wf extends IntrusiveNode {
         if (param0 != 31996) {
           wf.a(-109);
         }
-        stackIn_6_0 = (q.field_Jb >= 10) && (uh.field_H >= 13);
+        stackIn_6_0 = (q.field_Jb >= 10) && (LoginPanel.field_H >= 13);
         return stackIn_6_0;
     }
 

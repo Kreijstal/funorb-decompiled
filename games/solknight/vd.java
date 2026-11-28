@@ -84,7 +84,7 @@ final class vd {
           }
         }
         if (!param1) {
-          ek.field_a = a.a(var8, 80, false);
+          ek.field_a = TextFieldValidator.a(var8, 80, false);
           qe.field_G = null;
         } else {
           var5 = var8.readUnsignedShort(12);

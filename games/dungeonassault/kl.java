@@ -22,7 +22,7 @@ class kl {
         if (param0) {
           this.field_a = 126;
         } else {
-          qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
+          DungeonAssaultScreen.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
           this.field_g.h(this.field_k, this.field_j);
           var4 = (rj) (this.field_f.beginBackward(-24172));
           while (var4 != null) {
@@ -31,7 +31,7 @@ class kl {
           }
           return;
         }
-        qe.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
+        DungeonAssaultScreen.a(this.field_g, this.field_k, this.field_j, this.field_a, this.field_i);
         this.field_g.h(this.field_k, this.field_j);
         var4Lifetime1 = (rj) (this.field_f.beginBackward(-24172));
         while (var4Lifetime1 != null) {
@@ -83,7 +83,7 @@ class kl {
           ke.a(21, this.field_a - 8, this.field_i, 0);
           ByteStorage.a(8, (byte) -127, this.field_a - 16, 0, true);
           ByteStorage.a(8, (byte) 50, this.field_a - 16, this.field_i - 8, true);
-          qe.a(8, 8, -16 + this.field_a, this.field_i - 16, 224, 32, 7, 128);
+          DungeonAssaultScreen.a(8, 8, -16 + this.field_a, this.field_i - 16, 224, 32, 7, 128);
           jh.b();
           return;
         }

@@ -13,7 +13,7 @@ final class fi {
           vh.a(ie.field_e, (byte) -118);
         }
         cb.b(true);
-        rd.c(false);
+        MatchingFieldValidator.c(false);
         sc.b(param0);
         if (!bd.a(param0 + 25951)) {
           PacketBuffer.a(-1);

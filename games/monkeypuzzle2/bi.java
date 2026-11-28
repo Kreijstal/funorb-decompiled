@@ -104,7 +104,7 @@ abstract class bi extends GameApplet {
             d.a(4, param0 + 2);
           }
           if (eg.field_k[4]) {
-            qi.a(false, 5);
+            LoginPanel.a(false, 5);
           }
           if (eg.field_k[5]) {
             wd.a(6, true);
@@ -113,7 +113,7 @@ abstract class bi extends GameApplet {
             ImageProducerRasterBuffer.a(7, (byte) 63);
           }
           if (eg.field_k[8]) {
-            df.f((byte) -98);
+            PasswordValidator.f((byte) -98);
           }
         }
         if (param0 != 3) {
@@ -365,12 +365,12 @@ abstract class bi extends GameApplet {
         }
         kc.a((byte) 93);
         db.a(param0 - 99);
-        if (!wj.d(-106) &&
+        if (!TextFieldValidator.d(-106) &&
           k.field_g != 11) {
           cd.b(110);
         }
-        if (eb.field_A != null) {
-          DirectByteStorage.field_d = eb.field_A.pollRotation(true);
+        if (DisplayNameSelectionPanel.field_A != null) {
+          DirectByteStorage.field_d = DisplayNameSelectionPanel.field_A.pollRotation(true);
         }
         if (param0 != 99) {
           this.field_v = -121;
@@ -429,7 +429,7 @@ abstract class bi extends GameApplet {
             if (10 <= k.field_g) {
               cf.a((byte) 92);
               if (bl.field_m == 3) {
-                pc.a((byte) -46, 256, qi.field_A);
+                pc.a((byte) -46, 256, LoginPanel.field_A);
               } else {
                 if (bl.field_m != 4) {
                   if (bl.field_m != 2) {
@@ -473,11 +473,11 @@ abstract class bi extends GameApplet {
             ec.field_a = IsaacRandom.a(-107, BoundedRandomAccessFile.field_g);
           }
           fj.field_B = b.a(false, 1, true, ph.field_c, (byte) 125);
-          hf.field_a = b.a(false, 1, true, SecondaryNodeDequeIterator.field_e, (byte) -118);
-          ii.field_m = b.a(false, 1, true, uk.field_q, (byte) -51);
+          DebouncedFieldValidator.field_a = b.a(false, 1, true, SecondaryNodeDequeIterator.field_e, (byte) -118);
+          ii.field_m = b.a(false, 1, true, EmailFormatValidator.field_q, (byte) -51);
           mc.field_a = 2;
-          wj.field_j = fj.field_B;
-          ri.field_a = hf.field_a;
+          TextFieldValidator.field_j = fj.field_B;
+          ri.field_a = DebouncedFieldValidator.field_a;
         }
         if (mc.field_a == 2) {
           if (ec.field_a != null &&
@@ -497,13 +497,13 @@ abstract class bi extends GameApplet {
           }
         }
         if (mc.field_a == 3 &&
-          di.a(fj.field_B, hf.field_a, ii.field_m, (byte) 104) &&
+          di.a(fj.field_B, DebouncedFieldValidator.field_a, ii.field_m, (byte) 104) &&
           SocketConnector.a(ii.field_m, (byte) 39)) {
           pb.a(false);
           dj.b(param0 ^ -25469);
           cf.field_c = false;
           be.field_d = j.field_h;
-          lc.a(fj.field_B, mb.field_c, hf.field_a, param0 + 3249773, ii.field_m);
+          lc.a(fj.field_B, mb.field_c, DebouncedFieldValidator.field_a, param0 + 3249773, ii.field_m);
           if (sd.field_d ||
             kg.field_d != null) {
             stackIn_110_0 = !(sd.field_d);
@@ -521,7 +521,7 @@ abstract class bi extends GameApplet {
           GameApplet.a(dk.field_e, (byte) 111, ii.field_m, fa.field_p);
           ii.field_m = null;
           fj.field_B = null;
-          hf.field_a = null;
+          DebouncedFieldValidator.field_a = null;
           uc.a((java.applet.Applet) (this), 0);
           oe.a((byte) 112);
           mc.field_a = 10;
@@ -633,12 +633,12 @@ abstract class bi extends GameApplet {
         kj.a(fe.field_h, this.field_x, this.field_t, 5000, param0, this.field_p, this.field_u, this.field_w, param5, 5000, this.field_v, (byte) -111, this.field_r, rc.field_k);
         ii.a(rc.field_k, this.field_u, this.field_x, fe.field_h, this.field_r, param0, this.field_p, this.field_v, -2045);
         sj.a(92);
-        eb.field_A = cf.createMouseWheelInput(param4 + 25427);
+        DisplayNameSelectionPanel.field_A = cf.createMouseWheelInput(param4 + 25427);
         af.a(20, ie.field_e);
         BoundedRandomAccessFile.field_g = param3;
         FullscreenFocusCanvas.field_e = param1;
         SecondaryNodeDequeIterator.field_e = param7;
-        uk.field_q = param6;
+        EmailFormatValidator.field_q = param6;
         ph.field_c = param2;
         this.g(param4 ^ 25184);
         re.b(75);

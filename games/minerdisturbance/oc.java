@@ -44,11 +44,11 @@ final class oc extends hn {
               stackIn_13_0 = (11 >= q.field_c) ? 0 : 1;
               var1_int = stackIn_13_0;
               if (var1_int == 0) {
-                ui.field_L = ui.field_L - 32;
+                EditableTextField.field_L = EditableTextField.field_L - 32;
               }
-              if (!(-640 <= ui.field_L) ||
+              if (!(-640 <= EditableTextField.field_L) ||
                 var1_int != 0) {
-                ui.field_L = -640;
+                EditableTextField.field_L = -640;
                 tk.field_a = false;
                 if (el.field_c) {
                   lb.field_q = false;
@@ -77,14 +77,14 @@ final class oc extends hn {
               }
             }
           } else {
-            ui.field_L = ui.field_L + 32;
-            if (ui.field_L > 0) {
+            EditableTextField.field_L = EditableTextField.field_L + 32;
+            if (EditableTextField.field_L > 0) {
               tb.field_e = false;
-              ui.field_L = 0;
+              EditableTextField.field_L = 0;
             }
           }
           var1_intLifetime1 = -2;
-          if (ui.field_L != 0) {
+          if (EditableTextField.field_L != 0) {
             if (oj.field_J >= 0) {
               stackIn_40_0 = (nb.field_i[oj.field_J].c(-39)) ? 1 : 0;
             } else {
@@ -129,7 +129,7 @@ final class oc extends hn {
               if (lj.field_t != 12) {
                 continue;
               }
-              if (wj.field_j < 2) {
+              if (AgeValidator.field_j < 2) {
                 continue;
               }
               stackIn_73_0 = !(MusicPatchPcmStream.field_w);
@@ -162,12 +162,12 @@ final class oc extends hn {
             if (3 != oj.field_J &&
               8 != oj.field_J) {
               if ((5 == oj.field_J)) {
-                ce.a(ui.field_L, false, false, true);
+                ce.a(EditableTextField.field_L, false, false, true);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              ce.a(ui.field_L, false, false, false);
+              ce.a(EditableTextField.field_L, false, false, false);
             }
           }
           fa.field_e = false;
@@ -176,7 +176,7 @@ final class oc extends hn {
             if (0 < qd.field_R) {
               qd.field_R = qd.field_R - 1;
             }
-            var3 = 20 + (-ak.field_c.field_x + 640) - ui.field_L;
+            var3 = 20 + (-ak.field_c.field_x + 640) - EditableTextField.field_L;
             var4 = 500 - ak.field_c.field_A;
             if (nk.field_w >= var3 &&
               640 > nk.field_w &&

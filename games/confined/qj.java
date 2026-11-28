@@ -48,7 +48,7 @@ final class qj {
             var8 = param0[1].field_t;
             param0[0].b(param4, param1, param5);
             param0[2].b(-var7 + param4 + param2, param1, param5);
-            SoftwareRasterizer.saveClip(hj.field_l);
+            SoftwareRasterizer.saveClip(AgeValidator.field_l);
             if (param3 <= 43) {
               var12 = (RgbSprite[]) null;
               qj.a((RgbSprite[]) null, 54, 102, 49, -15, -58);
@@ -59,7 +59,7 @@ final class qj {
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
               param0[1].b(param4, param1, param5);
             }
-            SoftwareRasterizer.restoreClip(hj.field_l);
+            SoftwareRasterizer.restoreClip(AgeValidator.field_l);
             return;
           }
           return;
@@ -78,7 +78,7 @@ final class qj {
     }
 
     final static String a(int param0) {
-        if (oe.field_Q == wh.field_fb) {
+        if (oe.field_Q == ValidatedTextField.field_fb) {
           return rd.field_Jb;
         }
         if (!fb.field_a.c(param0 + 17236)) {
@@ -86,12 +86,12 @@ final class qj {
         }
         if (param0 != 1) {
           qj.b(-6);
-          if (na.field_S == wh.field_fb) {
+          if (na.field_S == ValidatedTextField.field_fb) {
             return fb.field_a.a(81);
           }
           return kj.field_c;
         }
-        if (na.field_S == wh.field_fb) {
+        if (na.field_S == ValidatedTextField.field_fb) {
           return fb.field_a.a(81);
         }
         return kj.field_c;

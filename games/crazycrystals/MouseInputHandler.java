@@ -265,7 +265,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int var2;
         CharSequence var3;
         var2 = CrazyCrystals.field_B;
-        sd.field_T = null;
+        ValidatedTextField.field_T = null;
         dj.field_t = false;
         if (param0 != 63) {
           var3 = (CharSequence) null;
@@ -277,11 +277,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var1 = kl.field_V;
           if (var1 > 0) {
             if (var1 != 1) {
-              sd.field_T = ci.a(new String[]{Integer.toString(var1)}, gh.field_t, 3);
+              ValidatedTextField.field_T = AgeValidator.a(new String[]{Integer.toString(var1)}, gh.field_t, 3);
             } else {
-              sd.field_T = ProxyAuthenticationRequiredException.field_a;
+              ValidatedTextField.field_T = ProxyAuthenticationRequiredException.field_a;
             }
-            sd.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) sd.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
+            ValidatedTextField.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) ValidatedTextField.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }
           SectorCacheStore.field_a.i((byte) -78);
           rf.a(param0 - 60);
@@ -363,7 +363,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           rd.field_h = true;
           am.field_g = param1;
           if (am.field_g == 0) {
-            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, vk.field_L, NetworkGameClient.field_y);
+            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
             var4 = 3 + var3_int;
             ub.field_b = new int[var4];
             je.field_i = new String[var4];
@@ -382,7 +382,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ub.field_b[-1 + var4] = 1;
             sn.field_a[1] = 5;
           } else if (am.field_g == 1) {
-            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, vk.field_L, NetworkGameClient.field_y);
+            var3_int = v.a(ec.field_m, IntrusiveNodeHashTable.field_a, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
             var4 = var3_int + 2;
             ub.field_b = new int[var4];
             je.field_i = new String[var4];
@@ -400,9 +400,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           } else if (am.field_g != 2) {
             if (3 == am.field_g) {
               if (ResultScene.field_a.privilegedTasksEnabled) {
-                var3_int = v.a(ec.field_m, ib.field_m, -27815, vk.field_L, NetworkGameClient.field_y);
+                var3_int = v.a(ec.field_m, ib.field_m, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               } else {
-                var3_int = v.a(ec.field_m, gn.field_U, -27815, vk.field_L, NetworkGameClient.field_y);
+                var3_int = v.a(ec.field_m, gn.field_U, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               }
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
@@ -419,7 +419,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               ub.field_b[-1 + var4] = 0;
               sn.field_a[0] = 5;
             } else if (am.field_g == 4) {
-              var3_int = v.a(ec.field_m, nh.field_C, -27815, vk.field_L, NetworkGameClient.field_y);
+              var3_int = v.a(ec.field_m, nh.field_C, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
               je.field_i = new String[var4];
@@ -438,7 +438,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               if (am.field_g != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = v.a(ec.field_m, fn.field_i, -27815, vk.field_L, NetworkGameClient.field_y);
+              var3_int = v.a(ec.field_m, fn.field_i, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               var4 = var3_int + 3;
               je.field_i = new String[var4];
               ub.field_b = new int[var4];
@@ -458,7 +458,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               sn.field_a[1] = 5;
             }
           } else {
-            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, rg.field_b, 3), -27815, vk.field_L, NetworkGameClient.field_y);
+            var3_int = v.a(ec.field_m, AgeValidator.a(new String[]{"<br><%0><br>"}, rg.field_b, 3), -27815, LoginPanel.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(NetworkGameClient.field_y[var5])) {
@@ -474,7 +474,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             eg.a(NetworkGameClient.field_y, 0, jl.field_a, 0, var4);
             lo.field_c = new String[-1 + var3_int - var4];
             eg.a(NetworkGameClient.field_y, 1 + var4, lo.field_c, 0, -1 + (-var4 + var3_int));
-            var3_int = v.a(ec.field_m, ci.a(new String[]{"<br><%0><br>"}, ModelMesh.field_t, 3), -27815, vk.field_L, NetworkGameClient.field_y);
+            var3_int = v.a(ec.field_m, AgeValidator.a(new String[]{"<br><%0><br>"}, ModelMesh.field_t, 3), -27815, LoginPanel.field_L, NetworkGameClient.field_y);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(NetworkGameClient.field_y[var5])) {

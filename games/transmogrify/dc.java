@@ -43,7 +43,7 @@ final class dc {
             }
           }
           if (var2_int >= 0) {
-            if (wl.a(false, 0)) {
+            if (AccountRegistrationPanel.a(false, 0)) {
               for (var3_int = 0; var3_int < ua.bonusWords.length; var3_int++) {
                 if (ua.bonusWords[var3_int].equalsIgnoreCase(of.wordBuffer.toString())) {
                   fi.unlockAchievement(0, 240, 15);
@@ -107,7 +107,7 @@ final class dc {
                 }
                 var7 = var8 * var7 / 10;
                 wk.field_d = wk.field_d + var7;
-                vh.field_n = vh.field_n - (wk.field_d << 5);
+                EmailFormatValidator.field_n = EmailFormatValidator.field_n - (wk.field_d << 5);
                 eh.totalScore = eh.totalScore + wk.field_d;
                 DirectByteStorage.field_j = DirectByteStorage.field_j + (wk.field_d << 5);
                 IsaacRandom.b(true);
@@ -343,7 +343,7 @@ final class dc {
             } else {
               hi.field_a = 17;
             }
-            bg.field_m = 1500;
+            PasswordValidator.field_m = 1500;
             if (10 == n.submittedWordCount) {
               hi.field_a = 28;
             }

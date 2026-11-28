@@ -71,14 +71,14 @@ final class hk {
           fn.a(27, 228, 3);
           return ak.a(-92);
         }
-        if (!ok.field_b.isEmpty((byte) 123)) {
-          var4 = (tm) (ok.field_b.beginForward(120));
+        if (!DebouncedFieldValidator.field_b.isEmpty((byte) 123)) {
+          var4 = (tm) (DebouncedFieldValidator.field_b.beginForward(120));
           if (var4.a(param0 - 19)) {
-            ok.field_b.removeFirst(63854);
+            DebouncedFieldValidator.field_b.removeFirst(63854);
             var2 = 1;
             vc.a(109, cm.field_o, var4.field_s);
           }
-          var1 = (tm) (ok.field_b.beginForward(96));
+          var1 = (tm) (DebouncedFieldValidator.field_b.beginForward(96));
         }
         if (var1 != null &&
           var2 != 0) {

@@ -83,7 +83,7 @@ final class nc {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = di.field_l;
+          var3 = TextFieldValidator.field_l;
           var3.writeCipheredByte(-17410, param2);
           var3.writeByte(param0.field_i, 0);
           var3.writeShort(-1564407352, param0.field_h);

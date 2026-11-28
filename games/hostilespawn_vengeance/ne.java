@@ -75,7 +75,7 @@ final class ne extends IntrusiveNode {
             param2 = param2 - (-4 + var8 * var4 / 2);
             for (var9 = 0; 42 > var9; var9++) {
               if (hb.a(var9, bm.field_b, false)) {
-                if (ka.a(param1, 0, var8, var8, param2)) {
+                if (EmailFormatValidator.a(param1, 0, var8, var8, param2)) {
                   var6 = param2;
                   var7 = param1;
                   var5 = var9;

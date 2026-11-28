@@ -10,7 +10,7 @@ class IntrusiveNode {
     long key;
 
     final static void a(byte param0) {
-        wf.a((byte) -96, mk.g(param0 ^ -102));
+        wf.a((byte) -96, PasswordValidator.g(param0 ^ -102));
         if (param0 != 18) {
           field_f = 121L;
         }

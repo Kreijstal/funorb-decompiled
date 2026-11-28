@@ -872,7 +872,7 @@ final class ResourceArchive {
             if (qk.field_c == dk.field_h &&
               hj.a(1, true)) {
               var6_intLifetime1 = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
-              df.field_o = null;
+              PasswordValidator.field_o = null;
               wk.field_a = var6_intLifetime1;
               MonkeyPuzzle2.field_D.position = 0;
               if (var6_intLifetime1 != 0 &&

@@ -198,35 +198,35 @@ final class rb {
           if (nk.field_b != null) {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (ll.field_Q == lj.field_z);
-              if ((decompiledFrameRemainder0) && (ff.field_D.position == 0 &&
+              if ((decompiledFrameRemainder0) && (LoginPanel.field_D.position == 0 &&
                 (10000L + FrameTimer.field_b) < lk.correctedCurrentTimeMillis(0))) {
-                ff.field_D.writeCipheredByte(false, param0);
+                LoginPanel.field_D.writeCipheredByte(false, param0);
               }
             } else {
-              if (ff.field_D.position == 0 &&
+              if (LoginPanel.field_D.position == 0 &&
                 (10000L + FrameTimer.field_b) < lk.correctedCurrentTimeMillis(0)) {
-                ff.field_D.writeCipheredByte(false, param0);
+                LoginPanel.field_D.writeCipheredByte(false, param0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param1 != -377) {
                 rb.a(81, (byte) 3);
               }
-              if (ff.field_D.position > 0) {
+              if (LoginPanel.field_D.position > 0) {
                 try {
-                  nk.field_b.a((byte) 9, ff.field_D.payload, ff.field_D.position, 0);
+                  nk.field_b.a((byte) 9, LoginPanel.field_D.payload, LoginPanel.field_D.position, 0);
                   FrameTimer.field_b = lk.correctedCurrentTimeMillis(0);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   pc.a(1);
                 }
-                ff.field_D.position = 0;
+                LoginPanel.field_D.position = 0;
               }
               return;
             }
           }
-          ff.field_D.position = 0;
+          LoginPanel.field_D.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

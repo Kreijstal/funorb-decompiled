@@ -88,7 +88,7 @@ final class rp {
           String var2 = (String) null;
           rp.a((String) null, -9);
         }
-        CombatState.field_c = new gk();
+        CombatState.field_c = new DisplayNameSelectionPanel();
         ta.field_a.b(1, CombatState.field_c);
     }
 

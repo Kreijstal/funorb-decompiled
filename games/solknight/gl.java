@@ -222,7 +222,7 @@ final class gl {
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
           var1 = new Sprite(540, 140);
-          cl.a(-104, var1);
+          AgeValidator.a(-104, var1);
           hk.a();
           SoftwareRasterizer.clearRaster();
           BufferedSocket.field_h = 0;

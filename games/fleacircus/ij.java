@@ -152,7 +152,7 @@ final class ij extends gj implements da {
           if (ok.field_x != null) {
             ok.field_x.n(-22645);
           }
-          lg.field_b = new ul(param1, param2, false, true, true);
+          lg.field_b = new LoginPanel(param1, param2, false, true, true);
           ak.field_a.d(lg.field_b, 26034);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ij.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

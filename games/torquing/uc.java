@@ -11,7 +11,7 @@ abstract class uc extends DualLinkNode {
     private int[] field_v;
     private int[] field_K;
     private int[] field_I;
-    private bn[] field_B;
+    private SpriteBase[] field_B;
     private int[] field_N;
     int field_q;
     private static int field_D;
@@ -780,7 +780,7 @@ abstract class uc extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        bn var11_ref_bn = null;
+        SpriteBase var11_ref_bn = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -818,9 +818,9 @@ abstract class uc extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_y != 256) {
-                                    var11_ref_bn.a(param1, param2 + this.field_q - var12, field_y);
+                                    var11_ref_bn.drawWithAlpha(param1, param2 + this.field_q - var12, field_y);
                                   } else {
-                                    var11_ref_bn.a(param1, param2 + this.field_q - var12);
+                                    var11_ref_bn.drawOpaque(param1, param2 + this.field_q - var12);
                                   }
                                   param1 = param1 + var11_ref_bn.field_j;
                                   var5 = 0;

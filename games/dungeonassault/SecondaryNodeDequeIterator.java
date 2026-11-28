@@ -82,12 +82,12 @@ final class SecondaryNodeDequeIterator implements Iterator {
         var19 = DungeonAssault.field_K;
         try {
           sd.field_F = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ih.field_w.length;
+          var1_int = RaiderRecruitmentScreen.field_w.length;
           var22 = new int[var1_int];
           var21 = var22;
           var2 = var21;
           for (var3 = 0; var1_int > var3; var3++) {
-            var4_ref_qh = ih.field_w[var3];
+            var4_ref_qh = RaiderRecruitmentScreen.field_w[var3];
             var4_ref_qh.a((byte) -123);
             PcmOutputWorker.a(7, var3);
             var5 = var4_ref_qh.field_i + var4_ref_qh.field_H >> 1;
@@ -129,15 +129,15 @@ final class SecondaryNodeDequeIterator implements Iterator {
           var14 = (int)((double)var14 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; ih.field_w.length > var15; var15++) {
+          for (var15 = 0; RaiderRecruitmentScreen.field_w.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < ih.field_w.length; var17_int++) {
+            for (var17_int = 1; var17_int < RaiderRecruitmentScreen.field_w.length; var17_int++) {
               if (var22[var16] < var22[var17_int]) {
                 var16 = var17_int;
               }
             }
             var22[var16] = -2147483648;
-            var17 = ih.field_w[var16];
+            var17 = RaiderRecruitmentScreen.field_w[var16];
             PcmOutputWorker.a(7, var16);
             for (var18 = 0; var18 < 3; var18++) {
               CombatState.field_e[var18] = CombatState.field_e[var18] + lk.field_R[var15][var18];

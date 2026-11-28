@@ -182,8 +182,8 @@ final class ml {
             var9 = (CharSequence) null;
             ml.a((byte) -45, (CharSequence) null);
           }
-          if (var4 >= 0 && (mk.field_H == 0 ||
-            !(var4 > mk.field_H))) {
+          if (var4 >= 0 && (AccountRegistrationPanel.field_H == 0 ||
+            !(var4 > AccountRegistrationPanel.field_H))) {
             if (var3 == 0) {
               var14 = new byte[var4];
               var12 = var14;
@@ -193,8 +193,8 @@ final class ml {
               return stackIn_23_0;
             }
             var5_int = var10.d(8195);
-            if (var5_int >= 0 && (mk.field_H == 0 ||
-              !(var5_int > mk.field_H))) {
+            if (var5_int >= 0 && (AccountRegistrationPanel.field_H == 0 ||
+              !(var5_int > AccountRegistrationPanel.field_H))) {
               var13 = new byte[var5_int];
               var11 = var13;
               var6 = var11;
@@ -245,7 +245,7 @@ final class ml {
         int var10Lifetime1;
         var12 = HostileSpawn.field_I ? 1 : 0;
         try {
-          if (param4[param3.field_j.b(-4)] == 2) {
+          if (param4[param3.field_j.getClampedTileIndex(-4)] == 2) {
             param3.field_i = 14;
             param3.field_e = 1;
             var9_int = 16;
@@ -259,7 +259,7 @@ final class ml {
               } else {
                 var13.field_c = var13.field_c + 256.0;
               }
-              var13.field_j.a((byte) 46, param3.field_j);
+              var13.field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
               var13.field_l.a(param3.field_l, -28860);
               var13.field_h = 0;
               var13.field_i = 37;
@@ -287,7 +287,7 @@ final class ml {
                 } else {
                   var14.field_c = var14.field_c + 256.0;
                 }
-                var14.field_j.a((byte) 46, param3.field_j);
+                var14.field_j.copyCoordinatesFrom((byte) 46, param3.field_j);
                 var14.field_l.a(param3.field_l, -28860);
                 ib.field_c = ib.field_c + 1;
                 var14.field_i = 37;

@@ -144,7 +144,7 @@ final class df {
         int var8 = 0;
         var8 = Chess.field_G;
         try {
-          this.field_j[this.field_b] = (byte)s.a((int) this.field_j[this.field_b], 128 >>> ce.a(this.field_a, 7));
+          this.field_j[this.field_b] = (byte)DisplayNameSelectionPanel.a((int) this.field_j[this.field_b], 128 >>> ce.a(this.field_a, 7));
           this.field_b = this.field_b + 1;
           if (param0 >= -82) {
             this.field_l = (long[]) null;
@@ -249,7 +249,7 @@ final class df {
             var8 = param1[var5_int] << var6 & 255 | (param1[1 + var5_int] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_j[this.field_b] = (byte)s.a((int) this.field_j[this.field_b], var8 >>> var7);
+              this.field_j[this.field_b] = (byte)DisplayNameSelectionPanel.a((int) this.field_j[this.field_b], var8 >>> var7);
               this.field_b = this.field_b + 1;
               this.field_a = this.field_a + (8 - var7);
               if (this.field_a == 512) {
@@ -267,7 +267,7 @@ final class df {
           }
           if (param2 > 0L) {
             var8Lifetime1 = 255 & param1[var5_int] << var6;
-            this.field_j[this.field_b] = (byte)s.a((int) this.field_j[this.field_b], var8Lifetime1 >>> var7);
+            this.field_j[this.field_b] = (byte)DisplayNameSelectionPanel.a((int) this.field_j[this.field_b], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }

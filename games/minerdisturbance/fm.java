@@ -92,7 +92,7 @@ final class fm extends kn implements sh {
     }
 
     final static void f(byte param0) {
-        ui.field_L = -640;
+        EditableTextField.field_L = -640;
         if (param0 != 81) {
           return;
         }

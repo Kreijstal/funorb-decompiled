@@ -105,7 +105,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, tg param1) {
-        this(param0, lb.field_O.field_k, param1);
+        this(param0, EditableTextField.field_O.field_k, param1);
     }
 
     final void g(int param0) {
@@ -452,7 +452,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = qg.b(32);
         if (var5 != null) {
-          lb.field_O.a((byte) -86, r.field_j, aj.field_m, var5);
+          EditableTextField.field_O.a((byte) -86, r.field_j, aj.field_m, var5);
         }
     }
 

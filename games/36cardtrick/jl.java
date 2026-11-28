@@ -100,10 +100,10 @@ final class jl extends ff {
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_35_0 = kl.field_P;
+                stackIn_35_0 = AccountRegistrationPanel.field_P;
                 return stackIn_35_0;
               }
-              stackIn_18_0 = kl.field_P;
+              stackIn_18_0 = AccountRegistrationPanel.field_P;
               return stackIn_18_0;
             }
             stackIn_13_0 = ke.field_b;

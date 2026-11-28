@@ -641,8 +641,8 @@ final class hj {
           }
           var3 = 0;
           while (AwtRasterBuffer.a(-1)) {
-            if (!hf.field_f.field_o) {
-              var4 = (oa.field_H ^ hf.field_f.field_d) % 8;
+            if (!DebouncedFieldValidator.field_f.field_o) {
+              var4 = (oa.field_H ^ DebouncedFieldValidator.field_f.field_d) % 8;
               if (0 != var4) {
                 if (var4 == 1) {
                   rk.field_d = rk.field_d - 1;
@@ -682,7 +682,7 @@ final class hj {
                 cl.field_d = cl.field_d + rk.field_d;
                 h.field_a = h.field_a - 1;
               }
-              var4Lifetime4 = (hf.field_f.field_d ^ oa.field_H + hf.field_f.field_A) % 5;
+              var4Lifetime4 = (DebouncedFieldValidator.field_f.field_d ^ oa.field_H + DebouncedFieldValidator.field_f.field_A) % 5;
               if (0 == var4Lifetime4) {
                 bh.field_g = bh.field_g | jc.field_e + b.field_m << 17;
               } else {
@@ -819,7 +819,7 @@ final class hj {
           if (var7 == 0) {
             this.i(0);
             AccountNameAvailabilityValidator.f(8500);
-            eb.d((byte) -93);
+            DisplayNameSelectionPanel.d((byte) -93);
             PcmOutputWorker.a(this.field_O, -6961);
             if (ub.field_a) {
               this.field_J = jf.a(-2147483648);
@@ -1422,9 +1422,9 @@ final class hj {
               if (aa.field_a == 0) {
                 var2_int = -((-30 + this.field_ib) * 255 / 65) + 255;
                 fi.field_a[fi.field_a.length - 1].a(0, 0, var2_int, 15387868);
-                hf.field_d.e(-(hf.field_d.field_m >> 2) + 320, this.field_ib);
+                DebouncedFieldValidator.field_d.e(-(DebouncedFieldValidator.field_d.field_m >> 2) + 320, this.field_ib);
                 SoftwareRasterizer.setClip(0, 0, 640, 70);
-                SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 2) + this.field_ib << 4, hf.field_d.field_m << 3, 50, cf.field_a);
+                SoftwareRasterizer.addRadialGlow(5120, (DebouncedFieldValidator.field_d.field_m >> 2) + this.field_ib << 4, DebouncedFieldValidator.field_d.field_m << 3, 50, cf.field_a);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
               }
             } else {
@@ -1441,7 +1441,7 @@ final class hj {
                 }
                 SoftwareRasterizer.fillRectangle(77, var2_int + 145, 486, 145, 8374005);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
-                hf.field_d.c(320 - (hf.field_d.field_m >> 1), this.field_ib);
+                DebouncedFieldValidator.field_d.c(320 - (DebouncedFieldValidator.field_d.field_m >> 1), this.field_ib);
               }
             }
           }
@@ -1469,7 +1469,7 @@ final class hj {
             }
             SoftwareRasterizer.setClip(0, 0, 640, 145);
             if (this.field_ib < 250) {
-              SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 1) + this.field_ib << 4, hf.field_d.field_m << 4, -var6 + 50, cf.field_a);
+              SoftwareRasterizer.addRadialGlow(5120, (DebouncedFieldValidator.field_d.field_m >> 1) + this.field_ib << 4, DebouncedFieldValidator.field_d.field_m << 4, -var6 + 50, cf.field_a);
             }
             if (var2_intLifetime1 != 0) {
               SoftwareRasterizer.addRadialGlow(320 - qa.field_i.field_m << 4, var3Lifetime1 - (-(qa.field_i.field_n >> 1) + 8) << 4, qa.field_i.field_m << 4, 50, sk.field_D);
@@ -1479,7 +1479,7 @@ final class hj {
               var8 = 0;
               while (var7_int < 290) {
                 SoftwareRasterizer.setClip(0, var7_int, 640, 2 + var7_int);
-                SoftwareRasterizer.addRadialGlow(5120, -(4 * var8) + this.field_ib + (hf.field_d.field_m >> 1) << 4, hf.field_d.field_m << 4, 50 - var6, cf.field_a);
+                SoftwareRasterizer.addRadialGlow(5120, -(4 * var8) + this.field_ib + (DebouncedFieldValidator.field_d.field_m >> 1) << 4, DebouncedFieldValidator.field_d.field_m << 4, 50 - var6, cf.field_a);
                 var8 += 2;
                 var7_int += 2;
               }
@@ -1530,7 +1530,7 @@ final class hj {
               var4Lifetime1 = 0;
               while (var3Lifetime1 < 290) {
                 SoftwareRasterizer.setClip(0, var3Lifetime1, 640, var3Lifetime1 + 2);
-                SoftwareRasterizer.addRadialGlow(5120, (hf.field_d.field_m >> 2) + (this.field_ib - 2 * var4Lifetime1) << 4, hf.field_d.field_m << 3, 50, cf.field_a);
+                SoftwareRasterizer.addRadialGlow(5120, (DebouncedFieldValidator.field_d.field_m >> 2) + (this.field_ib - 2 * var4Lifetime1) << 4, DebouncedFieldValidator.field_d.field_m << 3, 50, cf.field_a);
                 var3Lifetime1 += 2;
                 var4Lifetime1 += 2;
               }
@@ -1588,7 +1588,7 @@ final class hj {
               }
             }
           }
-          df.f(18180);
+          PasswordValidator.f(18180);
           var2_intLifetime3 = (int)(ProxySocketConnector.a(true, (float)this.field_H * 0.00800000037997961f) * 50.0f);
           var3Lifetime4 = 727655;
           SoftwareRasterizer.fillRectangleAlpha(80, this.field_O, 480, 480, var3Lifetime4, 120);
@@ -1784,12 +1784,12 @@ final class hj {
                         }
                         var12 = stackIn_291_0;
                         kl.a(0, 0, 640, 480, 12163403, var12);
-                        sb.field_r.a(wj.field_h, 321, 170, 6776679, -1);
-                        sb.field_r.a(wj.field_h, 319, 170, 6776679, -1);
-                        sb.field_r.a(wj.field_h, 320, 171, 6776679, -1);
-                        sb.field_r.a(wj.field_h, 320, 169, 6776679, -1);
-                        sb.field_r.a(wj.field_h, 320, 170, 16724736, -1);
-                        sb.field_r.a(wj.field_h, 330, 180, 6776679, -1, 50);
+                        sb.field_r.a(TextFieldValidator.field_h, 321, 170, 6776679, -1);
+                        sb.field_r.a(TextFieldValidator.field_h, 319, 170, 6776679, -1);
+                        sb.field_r.a(TextFieldValidator.field_h, 320, 171, 6776679, -1);
+                        sb.field_r.a(TextFieldValidator.field_h, 320, 169, 6776679, -1);
+                        sb.field_r.a(TextFieldValidator.field_h, 320, 170, 16724736, -1);
+                        sb.field_r.a(TextFieldValidator.field_h, 330, 180, 6776679, -1, 50);
                         var13 = gg.a(new String[]{this.field_j.toString()}, cl.field_b, true);
                         sb.field_r.a(var13, 321, 320, 6776679, -1);
                         sb.field_r.a(var13, 319, 320, 6776679, -1);
@@ -1851,27 +1851,27 @@ final class hj {
                       for (var13_int = 0; var13_int <= aa.field_a + 1; var13_int++) {
                         SecondaryNodeDeque.field_c[var13_int].b(el.field_b[var13_int][0], el.field_b[var13_int][1]);
                       }
-                      var13_int = hc.field_h[1 + aa.field_a][0] + (cm.field_F[this.field_Y].field_m - qc.field_L[this.field_Y].field_m) / 2;
-                      var14 = (-qc.field_L[this.field_Y].field_n + cm.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
+                      var13_int = hc.field_h[1 + aa.field_a][0] + (cm.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                      var14 = (-ValidatedTextField.field_L[this.field_Y].field_n + cm.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
                       if (this.field_d >= 650) {
                         if (this.field_d < 700) {
                           if (aa.field_a != 2) {
-                            qc.field_L[this.field_Y].c(var13_int, var14);
+                            ValidatedTextField.field_L[this.field_Y].c(var13_int, var14);
                           } else {
-                            qc.field_L[this.field_Y].f(var13_int, var14);
+                            ValidatedTextField.field_L[this.field_Y].f(var13_int, var14);
                           }
                         }
                         cm.field_F[this.field_Y].c(hc.field_h[aa.field_a + 1][0], this.a(89, 650, aa.field_a + 1));
                       } else {
                         var15 = -400 + this.field_d - 50;
-                        var16 = hc.field_h[aa.field_a][0] + (cm.field_F[this.field_Y].field_m - qc.field_L[this.field_Y].field_m) / 2;
-                        var17 = (cm.field_F[this.field_Y].field_n - qc.field_L[this.field_Y].field_n) / 2 + hc.field_h[aa.field_a][1];
+                        var16 = hc.field_h[aa.field_a][0] + (cm.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                        var17 = (cm.field_F[this.field_Y].field_n - ValidatedTextField.field_L[this.field_Y].field_n) / 2 + hc.field_h[aa.field_a][1];
                         var18 = var16 + (-var16 + var13_int) * var15 / 200;
                         var19 = (var14 - var17) * var15 / 200 + var17;
                         if (aa.field_a == 2) {
-                          qc.field_L[this.field_Y].f(var18, var19);
+                          ValidatedTextField.field_L[this.field_Y].f(var18, var19);
                         } else {
-                          qc.field_L[this.field_Y].c(var18, var19);
+                          ValidatedTextField.field_L[this.field_Y].c(var18, var19);
                         }
                       }
                     } else {

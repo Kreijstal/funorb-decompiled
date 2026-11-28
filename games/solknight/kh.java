@@ -19,7 +19,7 @@ final class kh {
     }
 
     final static void a(int param0) {
-        qa.field_o = null;
+        ConfirmedEmailAvailabilityValidator.field_o = null;
         FullscreenFocusCanvas.field_d = false;
         qc.field_h = null;
         ak.field_b = null;

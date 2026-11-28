@@ -20,7 +20,7 @@ final class OhNoEvent extends SpecialEvent {
 
     final static void d(int param0) {
         ho.field_j = null;
-        hna.field_h = null;
+        ConfirmedEmailAvailabilityValidator.field_h = null;
         mla.field_b = null;
         SetFriendlyEffect.field_k = null;
         ls.field_a = null;
@@ -51,7 +51,7 @@ final class OhNoEvent extends SpecialEvent {
         }
         vj.field_m = null;
         lw.field_b = null;
-        hb.field_k = null;
+        MatchingFieldValidator.field_k = null;
         ShieldAnimation.field_v = null;
         fe.field_j = null;
         am.field_M = null;
@@ -70,7 +70,7 @@ final class OhNoEvent extends SpecialEvent {
         sia.field_g = null;
         nv.field_wb = null;
         ProxyAuthenticationRequiredException.field_a = null;
-        pk.field_b = null;
+        DebouncedFieldValidator.field_b = null;
         qna.field_l = null;
         pfa.field_g = null;
         cba.field_c = null;

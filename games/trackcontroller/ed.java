@@ -5,9 +5,9 @@ final class ed extends ButtonWidget {
     static Archive field_I;
 
     private ed(String param0, tg param1) {
-        this(param0, lb.field_O.field_h, param1);
+        this(param0, EditableTextField.field_O.field_h, param1);
         try {
-          this.field_y = lb.field_O.field_j;
+          this.field_y = EditableTextField.field_O.field_j;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -16,7 +16,7 @@ final class ed extends ButtonWidget {
     private ed(String param0, t param1, tg param2) {
         super(param0, param1, param2);
         try {
-          this.field_y = lb.field_O.field_j;
+          this.field_y = EditableTextField.field_O.field_j;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -17,32 +17,32 @@ final class th extends le {
         var3 = HostileSpawn.field_I ? 1 : 0;
         be.field_g = null;
         ce.field_e = 0;
-        db.field_o = null;
+        PasswordValidator.field_o = null;
         var2 = mb.field_p;
         if (param0 <= 120) {
           return -96;
         }
         mb.field_p = hn.field_a;
         if (param1 == 51) {
-          ig.field_N.field_e = 2;
+          EditableTextField.field_N.field_e = 2;
         } else {
           if (param1 != 50) {
-            ig.field_N.field_e = 1;
+            EditableTextField.field_N.field_e = 1;
           } else {
-            ig.field_N.field_e = 5;
+            EditableTextField.field_N.field_e = 5;
           }
         }
         hn.field_a = var2;
-        ig.field_N.field_k = ig.field_N.field_k + 1;
-        if (2 <= ig.field_N.field_k &&
+        EditableTextField.field_N.field_k = EditableTextField.field_N.field_k + 1;
+        if (2 <= EditableTextField.field_N.field_k &&
           param1 == 51) {
           return 2;
         }
-        if (2 <= ig.field_N.field_k &&
+        if (2 <= EditableTextField.field_N.field_k &&
           param1 == 50) {
           return 5;
         }
-        if (4 <= ig.field_N.field_k) {
+        if (4 <= EditableTextField.field_N.field_k) {
           return 1;
         }
         return -1;
@@ -70,7 +70,7 @@ final class th extends le {
             stackIn_2_0 = null;
             return (fn) (stackIn_2_0);
           }
-          var2 = new fn(param1, field_Jb, nh.field_O, sf.field_X, hd.field_r, ja.field_e);
+          var2 = new fn(param1, field_Jb, nh.field_O, TextInputField.field_X, ConfirmedEmailAvailabilityValidator.field_r, ja.field_e);
           uj.d(-63);
           if (param0 != -5427) {
             var3 = (String) null;

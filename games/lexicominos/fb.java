@@ -133,7 +133,7 @@ final class fb implements rd {
           !(f.field_h.length >= param2)) {
           f.field_h = new boolean[param2 * 2];
         }
-        r.field_D = 2147483647;
+        DisplayNameSelectionPanel.field_D = 2147483647;
         pf.field_o = 0;
         l.field_G = -2147483648;
         rb.field_a = -2147483648;

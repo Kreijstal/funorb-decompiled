@@ -83,7 +83,7 @@ final class ve {
           }
           un.field_Lb.a(param0 ^ 119);
           if (param3) {
-            if (br.field_Q == un.field_Lb.field_j) {
+            if (ValidatedTextField.field_Q == un.field_Lb.field_j) {
               var12 = un.field_Lb;
               var13 = Vertigo2.a(new String[]{param2}, be.field_s, param0 ^ 60);
               var12.field_n.a(var13, 16, 0);

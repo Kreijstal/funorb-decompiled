@@ -330,11 +330,11 @@ final class ai implements Runnable {
           }
           if (gj.field_k == kp.field_k &&
             fq.a(1, (byte) -125)) {
-            var9Lifetime1 = kd.field_n.readUnsignedByte(255);
-            kd.field_n.position = 0;
+            var9Lifetime1 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(255);
+            ConfirmedEmailAvailabilityValidator.field_n.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              gj.field_k = ga.field_F;
+              gj.field_k = EditableTextField.field_F;
               gj.field_o = new String[-100 + var9Lifetime1];
             } else {
               if (248 == var9Lifetime1) {
@@ -351,20 +351,20 @@ final class ai implements Runnable {
                 gj.field_k = kf.field_b;
               } else {
                 fq.a(ui.b((byte) -123), (byte) 75);
-                LevelCompleteScene.field_f = new Boolean(hm.a(kd.field_n, -2));
-                kd.field_n.position = 0;
+                LevelCompleteScene.field_f = new Boolean(hm.a(ConfirmedEmailAvailabilityValidator.field_n, -2));
+                ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               }
             }
           }
-          if (gj.field_k == ga.field_F) {
+          if (gj.field_k == EditableTextField.field_F) {
             var9Lifetime2 = 2;
             if (fq.a(var9Lifetime2, (byte) -50)) {
-              var10Lifetime1 = kd.field_n.readUnsignedShort((byte) -7);
-              kd.field_n.position = 0;
+              var10Lifetime1 = ConfirmedEmailAvailabilityValidator.field_n.readUnsignedShort((byte) -7);
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               if (fq.a(var10Lifetime1, (byte) -40)) {
                 var11 = gj.field_o.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  gj.field_o[var12] = kd.field_n.readPrefixedString(93);
+                  gj.field_o[var12] = ConfirmedEmailAvailabilityValidator.field_n.readPrefixedString(93);
                 }
                 jj.a(4);
                 ec.field_g = false;
@@ -376,9 +376,9 @@ final class ai implements Runnable {
           if (gj.field_k == kf.field_b &&
             ol.f((byte) 60)) {
             if (bf.field_b != 255) {
-              re.field_j = kd.field_n.readString(122);
+              re.field_j = ConfirmedEmailAvailabilityValidator.field_n.readString(122);
             } else {
-              var9_ref_String = kd.field_n.readNullableString(0);
+              var9_ref_String = ConfirmedEmailAvailabilityValidator.field_n.readNullableString(0);
               if (var9_ref_String != null) {
                 ah.a(-72, var9_ref_String, le.b((byte) -20));
               }

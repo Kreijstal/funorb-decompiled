@@ -198,7 +198,7 @@ final class eg {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    var21 = ij.a(0, '#', ke.field_L);
+                    var21 = ij.a(0, '#', AccountRegistrationPanel.field_L);
                     this.a(0, (String) null, 0, (String) null, (String) null, 0, -105);
                     this.a(0, 320, var21[2], (byte) -97, var21[1], 1, var21[0]);
                     this.a(0, 1000, (RgbSprite) null, 0, 0);

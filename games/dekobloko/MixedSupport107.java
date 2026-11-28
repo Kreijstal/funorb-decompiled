@@ -71,10 +71,10 @@ final class MixedSupport107 {
                 if (integerLocal16 <= 0) {
                   return null;
                 }
-                stackStringLocal8 = InputAdapter002.stringState0446;
+                stackStringLocal8 = BirthDateValidator.stringState0446;
                 return stackStringLocal8;
               }
-              stackStringLocal5 = InputAdapter002.stringState0446;
+              stackStringLocal5 = BirthDateValidator.stringState0446;
               return stackStringLocal5;
             }
             stackStringLocal4 = MixedSupport024.stringState0119;
@@ -142,7 +142,7 @@ final class MixedSupport107 {
         try {
           UiComponentPart033.performAction1819(-61);
           MixedSupport005.uiComponentPart016State0001.performAction0834(true);
-          MixedSupport025.uiComponentPart013State0001 = new UiComponentPart013(SceneWidgetPart004.stringState0217, (String) null, UiComponentPart032.booleanState0198, booleanArgument1, booleanArgument4);
+          MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (byteArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);
@@ -326,7 +326,7 @@ final class MixedSupport107 {
         try {
           UiComponentPart033.performAction1819(-61);
           MixedSupport005.uiComponentPart016State0001.performAction0834(true);
-          MixedSupport025.uiComponentPart013State0001 = new UiComponentPart013(SceneWidgetPart004.stringState0217, (String) null, UiComponentPart032.booleanState0198, booleanArgument1, booleanArgument4);
+          MixedSupport025.uiComponentPart013State0001 = new LoginPanel(PlayerNamePrompt.stringState0217, (String) null, BirthDateInput.booleanState0198, booleanArgument1, booleanArgument4);
           if (integerArgument2 > -13) {
             String stringLocal1 = (String) null;
             MixedSupport107.performAction1402(false, -65, (String) null, false);

@@ -38,7 +38,7 @@ final class IsaacRandom {
             pk.clearDeclaredStaticReferences(114);
           }
           mn.a((byte) -63, MouseWheelInput.field_d, ul.field_a, ResourceArchive.field_c);
-          cl.a(param1, 0, 0, 310);
+          LoginPanel.a(param1, 0, 0, 310);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "mf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -215,7 +215,7 @@ final class IsaacRandom {
 
     final static pf a(int param0) {
         int var1 = 78 / ((param0 - 80) / 44);
-        return new pf(lm.n(81), wc.b((byte) 117));
+        return new pf(DisplayNameSelectionPanel.n(81), wc.b((byte) 117));
     }
 
     final int nextInt(int param0) {

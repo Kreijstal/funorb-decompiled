@@ -9,7 +9,7 @@ final class pk extends kj {
     static String field_X;
     private int field_Z;
     static Sprite field_Y;
-    private oe field_U;
+    private FieldValidator field_U;
 
     final static void i(int param0) {
         wb.a(ia.g(-74), (byte) -83);
@@ -51,10 +51,10 @@ final class pk extends kj {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var3 = uk.a((byte) -64, param0);
+        int var3 = PasswordValidator.a((byte) -64, param0);
         int var4 = rd.a((byte) -30, param0);
         if (!param1) {
-          var5 = uk.a((byte) -64, param2);
+          var5 = PasswordValidator.a((byte) -64, param2);
           var6 = rd.a((byte) -30, param2);
           var7 = (int)((long)var3 * (long)var5 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -63,7 +63,7 @@ final class pk extends kj {
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
         field_Y = (Sprite) null;
-        var5 = uk.a((byte) -64, param2);
+        var5 = PasswordValidator.a((byte) -64, param2);
         var6 = rd.a((byte) -30, param2);
         var7 = (int)((long)var3 * (long)var5 >> 16);
         var8 = (int)((long)var3 * (long)var6 >> 16);
@@ -123,7 +123,7 @@ final class pk extends kj {
         var28 = null;
         var33 = null;
         var13 = SolKnight.field_L ? 1 : 0;
-        var6 = this.field_U.b(param3 ^ -9362);
+        var6 = this.field_U.getValidationStatus(param3 ^ -9362);
         if (hg.field_E == var6) {
           var17 = g.field_e;
           if (!var17.equals(this.field_i)) {
@@ -131,7 +131,7 @@ final class pk extends kj {
             this.a((byte) -21);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_U.b(-9362);
+          var6 = this.field_U.getValidationStatus(-9362);
           var37 = (eg) ((Object) this.field_w);
           var9 = param2 + this.field_m;
           var10 = var37.a((UiWidget) (this), false, param0) + (var37.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
@@ -154,18 +154,18 @@ final class pk extends kj {
           var12 = var21.field_r << 1;
           if (null == this.field_W) {
             this.field_W = new Sprite(var11, var12);
-            cl.a(-94, this.field_W);
+            AgeValidator.a(-94, this.field_W);
           } else {
             if (var11 > this.field_W.field_p) {
               this.field_W = new Sprite(var11, var12);
-              cl.a(-94, this.field_W);
+              AgeValidator.a(-94, this.field_W);
             } else {
               if (var12 <= this.field_W.field_t) {
-                cl.a(-125, this.field_W);
+                AgeValidator.a(-125, this.field_W);
                 SoftwareRasterizer.clearRaster();
               } else {
                 this.field_W = new Sprite(var11, var12);
-                cl.a(-94, this.field_W);
+                AgeValidator.a(-94, this.field_W);
               }
             }
           }
@@ -181,7 +181,7 @@ final class pk extends kj {
             this.a((byte) -21);
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_U.b(-9362);
+          var6 = this.field_U.getValidationStatus(-9362);
           var38 = (eg) ((Object) this.field_w);
           var9Lifetime1 = param2 + this.field_m;
           var10Lifetime1 = var38.a((UiWidget) (this), false, param0) + (var38.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
@@ -204,17 +204,17 @@ final class pk extends kj {
           var12Lifetime1 = var26.field_r << 1;
           if (null == this.field_W) {
             this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
-            cl.a(-94, this.field_W);
+            AgeValidator.a(-94, this.field_W);
           } else {
             if (var11Lifetime1 > this.field_W.field_p) {
               this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
-              cl.a(-94, this.field_W);
+              AgeValidator.a(-94, this.field_W);
             } else {
               if (var12Lifetime1 > this.field_W.field_t) {
                 this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
-                cl.a(-94, this.field_W);
+                AgeValidator.a(-94, this.field_W);
               } else {
-                cl.a(-125, this.field_W);
+                AgeValidator.a(-125, this.field_W);
                 SoftwareRasterizer.clearRaster();
               }
             }
@@ -224,14 +224,14 @@ final class pk extends kj {
           this.field_W.drawAdditive(-(var26.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_r, 256);
           return;
         }
-        var27 = this.field_U.c(-111);
+        var27 = this.field_U.getValidationMessage(-111);
         if (var27 != null) {
           if (!var27.equals(this.field_i)) {
             this.field_i = var27;
             this.a((byte) -21);
           }
           super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_U.b(-9362);
+          var6Lifetime1 = this.field_U.getValidationStatus(-9362);
           var39 = (eg) ((Object) this.field_w);
           var9Lifetime2 = param2 + this.field_m;
           var10Lifetime2 = var39.a((UiWidget) (this), false, param0) + (var39.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
@@ -255,18 +255,18 @@ final class pk extends kj {
           var12Lifetime2 = var31.field_r << 1;
           if (null == this.field_W) {
             this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
-            cl.a(-94, this.field_W);
+            AgeValidator.a(-94, this.field_W);
           } else {
             if (var11Lifetime2 > this.field_W.field_p) {
               this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
-              cl.a(-94, this.field_W);
+              AgeValidator.a(-94, this.field_W);
             } else {
               if (var12Lifetime2 <= this.field_W.field_t) {
-                cl.a(-125, this.field_W);
+                AgeValidator.a(-125, this.field_W);
                 SoftwareRasterizer.clearRaster();
               } else {
                 this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
-                cl.a(-94, this.field_W);
+                AgeValidator.a(-94, this.field_W);
               }
             }
           }
@@ -281,7 +281,7 @@ final class pk extends kj {
           this.a((byte) -21);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_U.b(-9362);
+        var6Lifetime2 = this.field_U.getValidationStatus(-9362);
         var40 = (eg) ((Object) this.field_w);
         var9Lifetime3 = param2 + this.field_m;
         var10Lifetime3 = var40.a((UiWidget) (this), false, param0) + (var40.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
@@ -304,18 +304,18 @@ final class pk extends kj {
         var12Lifetime3 = var36.field_r << 1;
         if (null == this.field_W) {
           this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
-          cl.a(-94, this.field_W);
+          AgeValidator.a(-94, this.field_W);
         } else {
           if (var11Lifetime3 > this.field_W.field_p) {
             this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
-            cl.a(-94, this.field_W);
+            AgeValidator.a(-94, this.field_W);
           } else {
             if (var12Lifetime3 <= this.field_W.field_t) {
-              cl.a(-125, this.field_W);
+              AgeValidator.a(-125, this.field_W);
               SoftwareRasterizer.clearRaster();
             } else {
               this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
-              cl.a(-94, this.field_W);
+              AgeValidator.a(-94, this.field_W);
             }
           }
         }
@@ -482,7 +482,7 @@ final class pk extends kj {
 
     final static void c(boolean param0) {
         ProxySocketConnector.d(14995);
-        if (null == dc.field_q) {
+        if (null == EmailFormatValidator.field_q) {
           ProxyAuthenticationRequiredException.a((byte) -15);
           nh.a(-117);
           m.b(param0);
@@ -493,7 +493,7 @@ final class pk extends kj {
           je.a(param0);
           return;
         }
-        IntrusiveDeque.a((byte) 86, dc.field_q);
+        IntrusiveDeque.a((byte) 86, EmailFormatValidator.field_q);
         ProxyAuthenticationRequiredException.a((byte) -15);
         nh.a(-117);
         m.b(param0);
@@ -516,7 +516,7 @@ final class pk extends kj {
         }
     }
 
-    pk(oe param0, String param1, int param2, int param3, int param4, int param5) {
+    pk(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, Bzip2State.a((byte) -65));
         try {
           this.field_V = param1;

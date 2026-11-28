@@ -224,12 +224,12 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-          param0.removeMouseListener(nj.field_o);
+          param0.removeMouseListener(EmailFormatValidator.field_o);
           if (param1 > -72) {
             field_k = (String) null;
           }
-          param0.removeMouseMotionListener(nj.field_o);
-          param0.removeFocusListener(nj.field_o);
+          param0.removeMouseMotionListener(EmailFormatValidator.field_o);
+          param0.removeFocusListener(EmailFormatValidator.field_o);
           c.field_c = 0;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ka.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -124,11 +124,11 @@ final class tf extends pd {
             if (var19 == 0) {
               if (stackIn_13_0) {
                 var12 = se.field_F[var9];
-                var13 = ai.field_j[var9];
+                var13 = AgeValidator.field_j[var9];
                 var14 = se.field_F[var10] - var12;
                 var15 = se.field_F[var11] - var12;
-                var16 = -var13 + ai.field_j[var10];
-                var17 = ai.field_j[var11] - var13;
+                var16 = -var13 + AgeValidator.field_j[var10];
+                var17 = AgeValidator.field_j[var11] - var13;
               }
               if (!stackIn_13_0 ||
                 !(0 <= -(var15 * var16) + var14 * var17)) {

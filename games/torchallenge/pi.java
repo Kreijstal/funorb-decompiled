@@ -25,7 +25,7 @@ final class pi {
     final static void a(byte param0) {
         LevelDecoder.field_a = id.field_b.readString(false);
         CharSequence var2 = (CharSequence) ((Object) LevelDecoder.field_a);
-        td.field_i = il.a(var2, (byte) 21);
+        td.field_i = EmailFormatValidator.a(var2, (byte) 21);
         if (param0 != 7) {
           field_b = -47;
         }

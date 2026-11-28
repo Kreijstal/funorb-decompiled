@@ -158,12 +158,12 @@ final class fl {
         if (rg.field_d != null) {
           for (var2 = 0; var2 < sf.field_i.length; var2++) {
             if (sf.field_i[var2] == param0 &&
-              cl.field_l[var2] > 0) {
-              dupTemp$3 = cl.field_l[var2] - 1;
+              AgeValidator.field_l[var2] > 0) {
+              dupTemp$3 = AgeValidator.field_l[var2] - 1;
               arrayValue$4 = rg.field_d[var2];
-              cl.field_l[var2] = dupTemp$3;
+              AgeValidator.field_l[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              rg.field_d[var2][cl.field_l[var2]] = null;
+              rg.field_d[var2][AgeValidator.field_l[var2]] = null;
               return var3;
             }
           }

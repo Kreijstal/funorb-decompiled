@@ -49,7 +49,7 @@ final class de {
               }
               var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var27);
             } else {
-              var28 = gf.field_t[var2];
+              var28 = MatchingFieldValidator.field_t[var2];
               var16 = new int[var3];
               var13 = var16;
               var6 = var13;
@@ -73,7 +73,7 @@ final class de {
               }
               var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var30);
             } else {
-              var31 = gf.field_t[var2];
+              var31 = MatchingFieldValidator.field_t[var2];
               var16 = new int[var3];
               var13 = var16;
               var6 = var13;
@@ -140,15 +140,15 @@ final class de {
         var9 = TorChallenge.field_F ? 1 : 0;
         try {
           var1_int = nh.field_hb.length;
-          if (ma.field_j >= var1_int) {
+          if (TextFieldValidator.field_j >= var1_int) {
             return;
           }
-          var2 = ra.field_k[ma.field_j];
+          var2 = ra.field_k[TextFieldValidator.field_j];
           if (!var2[a.field_c]) {
             return;
           }
-          var3 = nh.field_hb[ma.field_j];
-          var4 = we.field_l[ma.field_j];
+          var3 = nh.field_hb[TextFieldValidator.field_j];
+          var4 = we.field_l[TextFieldValidator.field_j];
           var5 = 200;
           var6 = var4 * var5;
           if (param0 != -131073) {

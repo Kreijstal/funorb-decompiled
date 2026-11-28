@@ -65,7 +65,7 @@ final class ah {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          lb.field_C.d(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          PlayerDungeonProfile.field_C.d(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

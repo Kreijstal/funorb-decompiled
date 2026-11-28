@@ -162,7 +162,7 @@ final class r implements fc {
                 var11 = var11 + (param1.field_m - var9 >> 1);
               }
             }
-            ck.a(-2 + var10, var9, var8 + 4, 2 + var11, 14677);
+            DebouncedFieldValidator.a(-2 + var10, var9, var8 + 4, 2 + var11, 14677);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

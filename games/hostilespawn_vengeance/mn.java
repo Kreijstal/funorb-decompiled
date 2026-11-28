@@ -21,7 +21,7 @@ final class mn {
         if (param0 != 67) {
           field_b = (RgbSprite) null;
           if (DirectByteStorage.field_k) {
-            ka.field_r = true;
+            EmailFormatValidator.field_r = true;
             MidiPcmStream.b(true, -23960);
             fa.field_c = 0;
             return;
@@ -29,7 +29,7 @@ final class mn {
           throw new IllegalStateException();
         }
         if (DirectByteStorage.field_k) {
-          ka.field_r = true;
+          EmailFormatValidator.field_r = true;
           MidiPcmStream.b(true, -23960);
           fa.field_c = 0;
           return;

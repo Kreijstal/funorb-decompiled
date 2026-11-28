@@ -28,18 +28,18 @@ final class fb {
           }
           if (param3) {
             var4++;
-            return qc.field_k[var4];
+            return ConfirmedEmailAvailabilityValidator.field_k[var4];
           }
-          return qc.field_k[var4];
+          return ConfirmedEmailAvailabilityValidator.field_k[var4];
         }
         if (param1) {
           var4 += 2;
         }
         if (!param3) {
-          return qc.field_k[var4];
+          return ConfirmedEmailAvailabilityValidator.field_k[var4];
         }
         var4++;
-        return qc.field_k[var4];
+        return ConfirmedEmailAvailabilityValidator.field_k[var4];
     }
 
     final static void a(int param0, int param1, int param2) {

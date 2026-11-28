@@ -31,7 +31,7 @@ final class nb {
           var10 = var8;
           var3 = var10.readUnsignedByte(7909);
           var10.beginBitAccess(true);
-          uc.field_d = BufferedSocket.a(var10, (byte) 107);
+          DebouncedFieldValidator.field_d = BufferedSocket.a(var10, (byte) 107);
           ci.field_g = new lb[var3];
           PcmOutputWorker.field_h = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {

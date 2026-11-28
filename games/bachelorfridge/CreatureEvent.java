@@ -81,7 +81,7 @@ abstract class CreatureEvent extends BattleUpdate {
               var2_int = -ig.field_m.position + param0;
             }
             dma.field_b.a(ig.field_m.position, (byte) 75, ig.field_m.payload, var2_int);
-            pk.field_c = f.correctedCurrentTimeMillis((byte) 73);
+            DebouncedFieldValidator.field_c = f.correctedCurrentTimeMillis((byte) 73);
             ig.field_m.position = ig.field_m.position + var2_int;
             if (param0 > ig.field_m.position) {
               return false;

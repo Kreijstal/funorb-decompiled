@@ -36,7 +36,7 @@ final class gf {
           if (!param0) {
             field_e = (String) null;
           }
-          rg.field_B = fb.field_j;
+          LoginPanel.field_B = fb.field_j;
           kc.field_Q = oi.field_f;
           na.field_c = 0;
         }

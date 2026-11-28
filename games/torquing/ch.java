@@ -26,19 +26,19 @@ final class ch extends am {
           tp.field_o = ci.field_c - param2;
         } else if (var6 <= 0.0f &&
           -0.7853981633974483 <= (double)var6) {
-          AccountRequestState.field_c = -param2 + um.field_o;
+          AccountRequestState.field_c = -param2 + MatchingFieldValidator.field_o;
           tp.field_o = param1;
         } else if (var6 >= 0.0f &&
           (double)var6 <= 0.7853981633974483) {
           tp.field_o = -param1 + ci.field_c;
-          AccountRequestState.field_c = -param2 + um.field_o;
+          AccountRequestState.field_c = -param2 + MatchingFieldValidator.field_o;
         } else if (0.7853981633974483 <= (double)var6 &&
           1.5707963267948966 >= (double)var6) {
           tp.field_o = ci.field_c - param2;
-          AccountRequestState.field_c = um.field_o - param1;
+          AccountRequestState.field_c = MatchingFieldValidator.field_o - param1;
         } else if ((double)var6 >= 1.5707963267948966 &&
           (double)var6 <= 2.356194490192345) {
-          AccountRequestState.field_c = -param1 + um.field_o;
+          AccountRequestState.field_c = -param1 + MatchingFieldValidator.field_o;
           tp.field_o = param2;
         } else {
           if (2.356194490192345 <= (double)var6) {

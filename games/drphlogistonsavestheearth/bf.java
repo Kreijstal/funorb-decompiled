@@ -153,7 +153,7 @@ final class bf {
                     break;
                   }
                 }
-                th.a(-27610, 32, e.a(param0 + 115, (int)this.field_o), nl.field_r[var2_int]);
+                th.a(-27610, 32, ConfirmedEmailAvailabilityValidator.a(param0 + 115, (int)this.field_o), nl.field_r[var2_int]);
                 break;
               }
             }
@@ -193,7 +193,7 @@ final class bf {
             }
           }
           if (var2_int != -1) {
-            th.a(-27610, 32, e.a(116, (int)this.field_o), nl.field_r[var2_int]);
+            th.a(-27610, 32, ConfirmedEmailAvailabilityValidator.a(116, (int)this.field_o), nl.field_r[var2_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -373,7 +373,7 @@ final class bf {
             }
           }
           if (this.field_q != null) {
-            this.field_q.l(e.a(124, (int)this.field_o));
+            this.field_q.l(ConfirmedEmailAvailabilityValidator.a(124, (int)this.field_o));
           }
           if (this.field_o < (double)(-(100 + this.field_m))) {
             return true;
@@ -444,9 +444,9 @@ final class bf {
           }
           if (this.field_f != null &&
             2 == sd.field_e &&
-            0 < g.field_s[this.field_Q]) {
+            0 < AgeValidator.field_s[this.field_Q]) {
             if (0 == (1 & this.field_e)) {
-              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], g.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
+              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
               this.field_f.a((int)this.field_o, (int)this.field_N, 382);
@@ -1910,7 +1910,7 @@ final class bf {
           this.field_s = stackIn_19_1;
           if (this.field_s) {
             if (ga.field_j[this.field_Q] != -1) {
-              var3_int = e.a(param1 + 104, this.field_I + (int)this.field_o);
+              var3_int = ConfirmedEmailAvailabilityValidator.a(param1 + 104, this.field_I + (int)this.field_o);
               if (ga.field_j[this.field_Q] != 69) {
                 th.a(-27610, 48, var3_int, nl.field_r[ga.field_j[this.field_Q]]);
               }
@@ -1994,7 +1994,7 @@ final class bf {
             bf.a(29, (java.applet.Applet) null);
           }
           var9 = ae.field_ib.get(13);
-          stackIn_4_0 = nf.field_q[var3_int - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ka.field_j[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          stackIn_4_0 = MatchingFieldValidator.field_q[var3_int - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ka.field_j[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2029,7 +2029,7 @@ final class bf {
               var2_int != 44) {
               if (this.field_s && (this.field_z > 25 ||
                 sd.field_e != 2 ||
-                !(1 <= g.field_s[this.field_Q]))) {
+                !(1 <= AgeValidator.field_s[this.field_Q]))) {
                 stackIn_54_0 = this.field_n[this.field_E % this.field_n.length];
                 return stackIn_54_0;
               }
@@ -2152,7 +2152,7 @@ final class bf {
             sd.field_a.a((int)((double)this.field_t + this.field_N), true, 4, (int)((double)this.field_I + this.field_o), 0, true);
           }
           if (var2_int != -1) {
-            th.a(-27610, 32, e.a(112, (int)this.field_o), nl.field_r[var2_int]);
+            th.a(-27610, 32, ConfirmedEmailAvailabilityValidator.a(112, (int)this.field_o), nl.field_r[var2_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2374,7 +2374,7 @@ final class bf {
             var11 == 0) {
             if (Math.random() <= 0.5) {
               this.field_n = ByteStorage.field_e;
-              this.field_F = ad.field_v;
+              this.field_F = PasswordValidator.field_v;
             } else {
               this.field_F = sh.field_c[this.field_Q];
               this.field_n = ResourceArchive.field_g[this.field_Q];

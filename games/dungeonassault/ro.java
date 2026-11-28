@@ -6,7 +6,7 @@ final class ro extends kl {
     private int field_A;
     private int field_t;
     private SpriteAnimationPlayer field_o;
-    private go field_p;
+    private DungeonRaidScreen field_p;
     static boolean field_B;
     private int field_z;
     private RgbSprite field_v;
@@ -334,7 +334,7 @@ final class ro extends kl {
         this.field_f.addFirst(this.field_s, false);
         this.field_y.a((byte) -19);
         System.gc();
-        this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
+        this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, bo.field_Lb, -10872);
         this.field_A = 0;
         if (param0 == 2) {
           this.a(true, 16711680, al.field_n);
@@ -407,7 +407,7 @@ final class ro extends kl {
         jh.a(this.field_l);
         if (param0 == 37) {
           var6.b(16, 16);
-          qe.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
+          DungeonAssaultScreen.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
           jc.a(-26 + this.field_i, 16, 14, 1, 2, 1);
           jc.a(this.field_i - 26, this.field_a - 24, 14, 1, param0 ^ 39, 1);
           vd.a(-16 + this.field_a, 2, -14561, 2, 8, 0);
@@ -427,7 +427,7 @@ final class ro extends kl {
         }
         this.a(-55, 119, -92, (byte) -82, -62);
         var6.b(16, 16);
-        qe.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
+        DungeonAssaultScreen.a(23, 13, this.field_a - 46, -34 + this.field_i, 256, 32, 8, 128);
         jc.a(-26 + this.field_i, 16, 14, 1, 2, 1);
         jc.a(this.field_i - 26, this.field_a - 24, 14, 1, param0 ^ 39, 1);
         vd.a(-16 + this.field_a, 2, -14561, 2, 8, 0);
@@ -449,7 +449,7 @@ final class ro extends kl {
         eh var4 = null;
         int var5 = DungeonAssault.field_K;
         super.c(-125);
-        eh[] var6 = rg.field_M;
+        eh[] var6 = AccountRegistrationPanel.field_M;
         eh[] var2 = var6;
         int var3 = 0;
         if (param0 >= -115) {
@@ -465,7 +465,7 @@ final class ro extends kl {
         ImageProducerRasterBuffer.field_j.a((byte) -19);
     }
 
-    ro(go param0) {
+    ro(DungeonRaidScreen param0) {
         super(300, 420);
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
@@ -481,7 +481,7 @@ final class ro extends kl {
           var2_int = this.field_p.field_Y.field_o;
           this.field_n = new dd(40 + this.field_k, this.field_i + this.field_j - 118, 0, this.field_a - 80, var2_int, this.field_D);
           t.a(64, gl.field_Ib, true, true);
-          this.field_y = rg.field_M[0];
+          this.field_y = AccountRegistrationPanel.field_M[0];
           this.field_o = new SpriteAnimationPlayer(this.field_y);
           if (this.field_p.field_Y.field_l <= 0) {
             this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
@@ -609,7 +609,7 @@ final class ro extends kl {
                     this.field_A >= this.field_x) {
                     this.field_y.a((byte) -19);
                     System.gc();
-                    this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
+                    this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, bo.field_Lb, -10872);
                     this.field_t = 2;
                     this.field_s.field_w = true;
                     return;
@@ -629,7 +629,7 @@ final class ro extends kl {
                 this.field_A >= this.field_x) {
                 this.field_y.a((byte) -19);
                 System.gc();
-                this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
+                this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, bo.field_Lb, -10872);
                 this.field_t = 2;
                 this.field_s.field_w = true;
                 return;
@@ -645,9 +645,9 @@ final class ro extends kl {
               return;
             }
             if (2 == this.field_t) {
-              if (ga.field_n == this.field_o.field_k) {
+              if (ConfirmedEmailAvailabilityValidator.field_n == this.field_o.field_k) {
                 regionExit1: {
-                  this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
+                  this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, ce.field_v, -10872);
                   var3 = this.field_p.a(1, this.field_C);
                   var4 = NetworkGameClient.countSetBits(var3, 8);
                   if (var3 != 0) {
@@ -687,8 +687,8 @@ final class ro extends kl {
               }
             } else {
               if (this.field_t == 4 &&
-                this.field_o.field_k == ga.field_n) {
-                this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
+                this.field_o.field_k == ConfirmedEmailAvailabilityValidator.field_n) {
+                this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, ce.field_v, -10872);
                 this.d((byte) -108);
               }
             }
@@ -716,7 +716,7 @@ final class ro extends kl {
               this.field_A >= this.field_x) {
               this.field_y.a((byte) -19);
               System.gc();
-              this.field_o.startAnimation(ga.field_n, bo.field_Lb, -10872);
+              this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, bo.field_Lb, -10872);
               this.field_t = 2;
               this.field_s.field_w = true;
               return;
@@ -732,10 +732,10 @@ final class ro extends kl {
             return;
           }
           if (2 == this.field_t) {
-            if (ga.field_n != this.field_o.field_k) {
+            if (ConfirmedEmailAvailabilityValidator.field_n != this.field_o.field_k) {
               return;
             }
-            this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
+            this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, ce.field_v, -10872);
             var3Lifetime1 = this.field_p.a(1, this.field_C);
             var4 = NetworkGameClient.countSetBits(var3Lifetime1, 8);
             if (var3Lifetime1 == 0) {
@@ -780,8 +780,8 @@ final class ro extends kl {
             return;
           }
           if (this.field_t == 4 &&
-            this.field_o.field_k == ga.field_n) {
-            this.field_o.startAnimation(ga.field_n, ce.field_v, -10872);
+            this.field_o.field_k == ConfirmedEmailAvailabilityValidator.field_n) {
+            this.field_o.startAnimation(ConfirmedEmailAvailabilityValidator.field_n, ce.field_v, -10872);
             this.d((byte) -108);
           }
         }
@@ -937,8 +937,8 @@ final class ro extends kl {
         if (var5 > 3) {
           var5 = 3;
         }
-        if (rg.field_M[var5] != this.field_y) {
-          this.field_y = rg.field_M[var5];
+        if (AccountRegistrationPanel.field_M[var5] != this.field_y) {
+          this.field_y = AccountRegistrationPanel.field_M[var5];
           this.field_o = new SpriteAnimationPlayer(this.field_y);
         }
         return;

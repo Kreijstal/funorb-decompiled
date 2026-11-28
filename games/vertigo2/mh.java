@@ -39,7 +39,7 @@ final class mh {
               var5 = RasterBuffer.a((byte) 96, param2, var4);
             }
             if (2 == AccountNameAvailabilityValidator.field_n) {
-              var5 = br.a(var4, param2, 100);
+              var5 = ValidatedTextField.a(var4, param2, 100);
             }
             if (AccountNameAvailabilityValidator.field_n == 3) {
               var5 = en.a(var4, (byte) -108, var4, param2);

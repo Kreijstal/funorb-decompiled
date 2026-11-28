@@ -4,7 +4,7 @@
 final class AccountCreationResultPanel extends dh implements el {
     static ResourceArchive field_Bb;
     private boolean field_Fb;
-    private ke field_Hb;
+    private AccountRegistrationPanel field_Hb;
     private boolean field_Gb;
     static String field_Cb;
     static int field_Eb;
@@ -145,7 +145,7 @@ final class AccountCreationResultPanel extends dh implements el {
         }
     }
 
-    AccountCreationResultPanel(sh param0, ke param1) {
+    AccountCreationResultPanel(sh param0, AccountRegistrationPanel param1) {
         super(param0, fd.field_k, un.field_d, false, false);
         try {
           this.field_Hb = param1;

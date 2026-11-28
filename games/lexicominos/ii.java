@@ -16,12 +16,12 @@ final class ii extends ql implements jk {
         w var4 = null;
         try {
           var3 = null;
-          if (ri.field_c == param1) {
+          if (DebouncedFieldValidator.field_c == param1) {
             var3 = lb.field_a;
           } else {
             if (qg.field_a == param1) {
               this.field_v = this.field_v + 10;
-              var3 = pj.field_B;
+              var3 = AccountRegistrationPanel.field_B;
               if (n.c(-2147483648)) {
                 var3 = BufferedSocket.field_e;
                 this.field_v = this.field_v + 20;
@@ -38,7 +38,7 @@ final class ii extends ql implements jk {
           var4.field_v = 80;
           var4.field_t = 0;
           var4.field_o = 50;
-          var4.field_i = (rd) ((Object) new ik(cl.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_i = (rd) ((Object) new ik(ValidatedTextField.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 104, var4);
           this.field_R = this.a((vd) (this), true, NodeHashTableIterator.field_d);
           return;

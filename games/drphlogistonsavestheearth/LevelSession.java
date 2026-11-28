@@ -164,11 +164,11 @@ final class LevelSession {
                   break;
                 }
                 var11 = wi.field_f[var2];
-                var12 = wa.field_Q[var2] - var9 / md.field_c[var2];
+                var12 = LoginPanel.field_Q[var2] - var9 / md.field_c[var2];
                 var13 = we.field_e[var2];
                 var14 = jf.field_ib[var2];
                 var15 = hh.field_a[var2];
-                kl.field_R[var11].a(5, var13, var15, var14, var12);
+                EditableTextField.field_R[var11].a(5, var13, var15, var14, var12);
                 var2++;
               } while (var16 == 0);
               if (var16 == 0) {
@@ -223,13 +223,13 @@ final class LevelSession {
             SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 430, 27648, 512);
             var3 = ha.field_b.field_d;
             ha.field_b.a((int)((double)((var3 - 640) * -var9) / var7), 0, 128);
-            var3 = 2 * nf.field_v.field_d;
-            nf.field_v.a((int)((double)((var3 - 640) * -var9) / var7), 0);
-            nf.field_v.c((int)((double)(var3 / 2) - (double)((-640 + var3) * var9) / var7), 0);
+            var3 = 2 * MatchingFieldValidator.field_v.field_d;
+            MatchingFieldValidator.field_v.a((int)((double)((var3 - 640) * -var9) / var7), 0);
+            MatchingFieldValidator.field_v.c((int)((double)(var3 / 2) - (double)((-640 + var3) * var9) / var7), 0);
             return;
           }
         } else {
-          v.field_O.a(0, 0);
+          AccountRegistrationPanel.field_O.a(0, 0);
           var3 = MouseWheelInput.field_f.field_d;
           if (sd.field_e == 2) {
             this.b((byte) -51);
@@ -331,15 +331,15 @@ final class LevelSession {
           this.field_j = this.field_j - this.field_j / 20.0;
           this.field_c = this.field_c - this.field_c / 20.0;
         }
-        this.field_M.l(e.a(125, (int)this.field_N));
-        this.field_z.l(e.a(119, (int)this.field_N));
+        this.field_M.l(ConfirmedEmailAvailabilityValidator.a(125, (int)this.field_N));
+        this.field_z.l(ConfirmedEmailAvailabilityValidator.a(119, (int)this.field_N));
         if (param0 != -8499) {
           this.k(-18);
         }
         if (this.field_z.m() &&
           this.field_z.f() == ((PcmSample) (this.field_z.field_i)).field_i.length) {
           this.field_z.i(-1);
-          th.a(-27610, 32, e.a(105, (int)this.field_N), nl.field_r[8]);
+          th.a(-27610, 32, ConfirmedEmailAvailabilityValidator.a(105, (int)this.field_N), nl.field_r[8]);
         }
     }
 
@@ -511,7 +511,7 @@ final class LevelSession {
         bc.field_f = 0;
         bg.field_k = 0;
         this.field_U = false;
-        nf.field_u = 0;
+        MatchingFieldValidator.field_u = 0;
         this.field_J = 0;
         SecondaryNodeDeque.field_c = 0;
         BitPacketBuffer.field_m = 0;
@@ -539,7 +539,7 @@ final class LevelSession {
               bc.field_f = bc.field_f | 1 << this.levelNumber;
               if (this.field_d[var2].a((byte) -127)) {
                 this.field_d[var2] = null;
-                nf.field_u = nf.field_u | 1 << this.levelNumber;
+                MatchingFieldValidator.field_u = MatchingFieldValidator.field_u | 1 << this.levelNumber;
               }
             }
             var2++;
@@ -715,7 +715,7 @@ final class LevelSession {
           this.k((byte) -99);
         }
         this.field_S = 0;
-        var2 = e.a(110, (int)this.field_N);
+        var2 = ConfirmedEmailAvailabilityValidator.a(110, (int)this.field_N);
         if (this.field_w <= 0) {
           IterableNodeHashTable.field_i = false;
           var3 = 0;
@@ -852,7 +852,7 @@ final class LevelSession {
         if (this.field_w >= 0) {
           pi.field_S[this.field_w].e(383, 438);
         }
-        dh.field_R[ah.field_J].a(408, 429);
+        dh.field_R[DisplayNameSelectionPanel.field_J].a(408, 429);
         SoftwareRasterizer.saveClip(this.field_t);
         SoftwareRasterizer.setClip(400, 425, 515, 475);
         if (this.field_J - pa.field_c <= 10) {
@@ -1137,7 +1137,7 @@ final class LevelSession {
               this.a(this.field_gb, 0);
               this.field_d[var2] = null;
               bg.field_k = bg.field_k | 1 << this.levelNumber;
-              ah.a(nl.field_r[70], e.a(118, (int)this.field_N), -1321705304);
+              DisplayNameSelectionPanel.a(nl.field_r[70], ConfirmedEmailAvailabilityValidator.a(118, (int)this.field_N), -1321705304);
             }
             var2++;
           }
@@ -1408,7 +1408,7 @@ final class LevelSession {
         }
         var2 = 125 / ((param0 - 82) / 34);
         if ((1 & bc.field_f >> this.levelNumber) != 0 &&
-          0 == (nf.field_u >> this.levelNumber & 1) &&
+          0 == (MatchingFieldValidator.field_u >> this.levelNumber & 1) &&
           this.field_w > 0) {
           this.a(7, 248, (byte) -125);
         }
@@ -1623,7 +1623,7 @@ final class LevelSession {
         if (ck.field_f[81] &&
           this.field_O) {
           pa.field_c = this.field_J;
-          ah.field_J = ib.field_t;
+          DisplayNameSelectionPanel.field_J = ib.field_t;
           scanLoop1: while (true) {
             ib.field_t = (ib.field_t + 1) % 4;
             stackIn_15_0 = nc.field_J[this.levelNumber][ib.field_t];
@@ -1649,12 +1649,12 @@ final class LevelSession {
             this.field_Z = 50;
             if (var3 != 0) {
               pa.field_c = this.field_J;
-              ah.field_J = ib.field_t;
+              DisplayNameSelectionPanel.field_J = ib.field_t;
               ib.field_t = 0;
             }
           } else {
             pa.field_c = this.field_J;
-            ah.field_J = ib.field_t;
+            DisplayNameSelectionPanel.field_J = ib.field_t;
             ib.field_t = 0;
           }
           s.field_e = true;
@@ -1669,7 +1669,7 @@ final class LevelSession {
               (decompiledFrameRemainder3 = (ib.field_t != 3))) {
               if (nc.field_J[this.levelNumber][3]) {
                 pa.field_c = this.field_J;
-                ah.field_J = ib.field_t;
+                DisplayNameSelectionPanel.field_J = ib.field_t;
                 ib.field_t = 3;
                 if (var3 != 0) {
                   this.field_Z = 50;
@@ -1685,19 +1685,19 @@ final class LevelSession {
                 this.field_Z = 50;
                 if (var3 != 0) {
                   pa.field_c = this.field_J;
-                  ah.field_J = ib.field_t;
+                  DisplayNameSelectionPanel.field_J = ib.field_t;
                   ib.field_t = 2;
                 }
               } else {
                 pa.field_c = this.field_J;
-                ah.field_J = ib.field_t;
+                DisplayNameSelectionPanel.field_J = ib.field_t;
                 ib.field_t = 2;
               }
               s.field_e = true;
               if (var3 != 0) {
                 if (nc.field_J[this.levelNumber][1]) {
                   pa.field_c = this.field_J;
-                  ah.field_J = ib.field_t;
+                  DisplayNameSelectionPanel.field_J = ib.field_t;
                   ib.field_t = 1;
                   this.field_Z = 50;
                 } else {
@@ -1709,7 +1709,7 @@ final class LevelSession {
           } else {
             if (nc.field_J[this.levelNumber][1]) {
               pa.field_c = this.field_J;
-              ah.field_J = ib.field_t;
+              DisplayNameSelectionPanel.field_J = ib.field_t;
               ib.field_t = 1;
               if (var3 != 0) {
                 this.field_Z = 50;
@@ -1761,7 +1761,7 @@ final class LevelSession {
             this.field_M.j(SecondaryNodeDeque.field_e * var2 / 80);
           }
           if (this.field_u > 50) {
-            ni.field_w = true;
+            EmailFormatValidator.field_w = true;
           }
         }
         if (0 == this.field_u) {
@@ -2262,7 +2262,7 @@ final class LevelSession {
               el.field_tb = el.field_tb + 1;
             }
             if (el.field_tb == 3 &&
-              ni.field_w) {
+              EmailFormatValidator.field_w) {
               el.field_tb = el.field_tb + 1;
             }
             if (el.field_tb == 4 &&
@@ -2314,11 +2314,11 @@ final class LevelSession {
           if (this.field_S <= 0) {
             boolean decompiledSharedTail1 = (ib.field_t == 2);
             if (!decompiledSharedTail1) {
-              var2 = ni.field_v[ib.field_t];
+              var2 = EmailFormatValidator.field_v[ib.field_t];
               decompiledSharedTail1 = (var5 != 0);
             }
             if (decompiledSharedTail1) {
-              var2 = (int)((double)ni.field_v[ib.field_t] / Math.pow(1.25, (double)this.field_A));
+              var2 = (int)((double)EmailFormatValidator.field_v[ib.field_t] / Math.pow(1.25, (double)this.field_A));
             }
             this.field_b = this.field_J + var2;
             if (var5 != 0) {
@@ -2523,7 +2523,7 @@ final class LevelSession {
             } else {
               lg.field_g = true;
               s.field_e = true;
-              ni.field_w = true;
+              EmailFormatValidator.field_w = true;
               nb.field_d = true;
               wb.a(34);
             }
@@ -4147,7 +4147,7 @@ final class LevelSession {
         ej.field_h = ej.field_h | var4;
         this.field_I.addLast(new fj(param0), 255);
         if (!this.field_W) {
-          nf.field_x.addLast(new je(param0, param1, this.field_Q, this.field_P, this.field_p, this.field_C), 255);
+          MatchingFieldValidator.field_x.addLast(new je(param0, param1, this.field_Q, this.field_P, this.field_p, this.field_C), 255);
         }
     }
 
@@ -4301,7 +4301,7 @@ final class LevelSession {
             this.field_z = PcmSampleStream.a(nl.field_r[7], 256, 48);
             break;
           }
-          wa.field_Q[var2] = hi.a(1280, 4, this.field_l);
+          LoginPanel.field_Q[var2] = hi.a(1280, 4, this.field_l);
           we.field_e[var2] = 107 + hi.a(215, 4, this.field_l);
           jf.field_ib[var2] = hi.a(65535, 4, this.field_l);
           hh.field_a[var2] = hi.a(4096, 4, this.field_l) * hi.a(2048, 4, this.field_l) >> 12;

@@ -70,7 +70,7 @@ final class np extends UiPanel {
         UiPanel var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new UiPanel(0L, param1, br.field_W.toUpperCase());
+          var17 = new UiPanel(0L, param1, ValidatedTextField.field_W.toUpperCase());
           var17.field_O = 1;
           this.field_Hb = new UiPanel(0L, param2);
           var8 = new UiPanel(0L, param3);

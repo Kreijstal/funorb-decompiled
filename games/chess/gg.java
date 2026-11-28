@@ -145,7 +145,7 @@ final class gg {
                   if (0 >= this.field_p) {
                     return;
                   }
-                  db.field_p = (-tm.field_c + this.field_p) / 2;
+                  ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
                   return;
                 }
                 this.field_f.a(var3, var2, (byte) 91);
@@ -153,7 +153,7 @@ final class gg {
             }
           }
           if (0 < this.field_p) {
-            db.field_p = (-tm.field_c + this.field_p) / 2;
+            ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
           }
           return;
         }
@@ -189,7 +189,7 @@ final class gg {
             }
           }
           if (0 < this.field_p) {
-            db.field_p = (-tm.field_c + this.field_p) / 2;
+            ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
           }
           return;
         }
@@ -222,7 +222,7 @@ final class gg {
                 if (tm.field_c != var2) {
                   this.field_f.a(var3, var2, (byte) 91);
                   if (0 < this.field_p) {
-                    db.field_p = (-tm.field_c + this.field_p) / 2;
+                    ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
                   }
                   return;
                 }
@@ -232,7 +232,7 @@ final class gg {
                 if (0 >= this.field_p) {
                   return;
                 }
-                db.field_p = (-tm.field_c + this.field_p) / 2;
+                ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
                 return;
               }
             }
@@ -248,7 +248,7 @@ final class gg {
         if (0 >= this.field_p) {
           return;
         }
-        db.field_p = (-tm.field_c + this.field_p) / 2;
+        ConfirmedEmailAvailabilityValidator.field_p = (-tm.field_c + this.field_p) / 2;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -280,10 +280,10 @@ final class gg {
           return;
         }
         if (tm.field_c < this.field_p) {
-          db.field_p = (this.field_p - tm.field_c) / 2;
+          ConfirmedEmailAvailabilityValidator.field_p = (this.field_p - tm.field_c) / 2;
         } else {
           if (0 < this.field_p) {
-            db.field_p = 0;
+            ConfirmedEmailAvailabilityValidator.field_p = 0;
           }
         }
         if (tm.field_c == this.field_r &&
@@ -305,7 +305,7 @@ final class gg {
         this.field_f.a(this.field_x, this.field_w, (byte) -101);
         if (param0 == 101) {
           hf.field_a = false;
-          var2 = fn.createFullscreenCanvas(0, this.field_x, 0, 66, this.field_w, oc.field_l);
+          var2 = fn.createFullscreenCanvas(0, this.field_x, 0, 66, this.field_w, MatchingFieldValidator.field_l);
           if (var2 == null) {
             this.c((byte) -104);
           }
@@ -334,7 +334,7 @@ final class gg {
           }
           var2 = var9.readUnsignedByte(param0 ^ -46);
           if (var2 == 0) {
-            var8 = (uj) (vm.field_h.beginBackward(param0 ^ -18154));
+            var8 = (uj) (TextFieldValidator.field_h.beginBackward(param0 ^ -18154));
             if (var8 == null) {
               ImageProducerRasterBuffer.d(65280);
               return;

@@ -128,10 +128,10 @@ final class sj {
           }
           tj.field_a = ma.a(param3, "aztec_background", param4 + 16711680, "");
           eg.field_d = new ai[4];
-          eg.field_d[0] = df.a("", param3, (byte) 118, "river_borders");
-          eg.field_d[1] = df.a("", param3, (byte) 118, "jungle_borders");
-          eg.field_d[2] = df.a("", param3, (byte) 118, "waterfall_borders");
-          eg.field_d[3] = df.a("", param3, (byte) 118, "aztec_borders");
+          eg.field_d[0] = PasswordValidator.a("", param3, (byte) 118, "river_borders");
+          eg.field_d[1] = PasswordValidator.a("", param3, (byte) 118, "jungle_borders");
+          eg.field_d[2] = PasswordValidator.a("", param3, (byte) 118, "waterfall_borders");
+          eg.field_d[3] = PasswordValidator.a("", param3, (byte) 118, "aztec_borders");
           for (var6_intLifetime1 = 0; var6_intLifetime1 < eg.field_d.length; var6_intLifetime1++) {
             eg.field_d[var6_intLifetime1].b();
           }
@@ -141,7 +141,7 @@ final class sj {
           lb.field_E = lb.a(false, "", param3, "totems");
           dj.field_a = lb.a(false, "", param3, "vines");
           j.field_f = lb.a(false, "", param3, "birds");
-          qi.field_K = lb.a(false, "", param3, "blocks");
+          LoginPanel.field_K = lb.a(false, "", param3, "blocks");
           for (var6_intLifetime2 = 0; dj.field_a.length > var6_intLifetime2; var6_intLifetime2++) {
             var14 = new Sprite(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
             var14.e();
@@ -175,7 +175,7 @@ final class sj {
           }
           ac.field_a.setAsRasterTarget((byte) 119);
           wl.field_f = lb.a(false, "", param3, "catapult");
-          hf.field_d = ma.a(param3, "sun", 16711680, "");
+          DebouncedFieldValidator.field_d = ma.a(param3, "sun", 16711680, "");
           qa.field_i = ma.a(param3, "moon", param4 ^ 16711680, "");
           Bzip2State.field_D = new Sprite[5];
           Bzip2State.field_D[0] = ma.a(param3, "world_one_complete", 16711680, "");
@@ -223,28 +223,28 @@ final class sj {
           pc.field_U = lb.a(false, "", param3, "eyes");
           ie.field_b = lb.a(false, "", param3, "achievements_large");
           NodeHashTableIterator.field_e = lb.a(false, "", param3, "menu_frame");
-          df.field_q = lb.a(false, "", param3, "menu_monkey");
+          PasswordValidator.field_q = lb.a(false, "", param3, "menu_monkey");
           kj.field_F = ma.a(param3, "menu_vine", 16711680, "");
           wg.field_g = ma.a(param3, "title_logo", 16711680, "");
           UiWidget.field_f = lb.a(false, "", param3, "title_monkey");
           w.field_b = lb.a(false, "", param3, "title_flashes");
           j.field_c = ma.a(param3, "intro_screen", 16711680, "");
-          uk.field_n = ma.a(param3, "title_2", 16711680, "");
+          EmailFormatValidator.field_n = ma.a(param3, "title_2", 16711680, "");
           fe.field_f = lb.a(false, "", param3, "river");
           de.field_f = ma.a(param3, "slider", param4 ^ 16711680, "");
           sd.field_f = ma.a(param3, "bar", 16711680, "");
           NodeHashTableIterator.field_h = ma.a(param3, "web", 16711680, "");
           tl.field_b = ma.a(param3, "heavy_nut", 16711680, "");
-          SecondaryNodeDeque.field_c[0] = df.a("", param3, (byte) 118, "x1");
-          SecondaryNodeDeque.field_c[1] = df.a("", param3, (byte) 118, "x2");
-          SecondaryNodeDeque.field_c[2] = df.a("", param3, (byte) 118, "x3");
-          SecondaryNodeDeque.field_c[3] = df.a("", param3, (byte) 118, "x4");
+          SecondaryNodeDeque.field_c[0] = PasswordValidator.a("", param3, (byte) 118, "x1");
+          SecondaryNodeDeque.field_c[1] = PasswordValidator.a("", param3, (byte) 118, "x2");
+          SecondaryNodeDeque.field_c[2] = PasswordValidator.a("", param3, (byte) 118, "x3");
+          SecondaryNodeDeque.field_c[3] = PasswordValidator.a("", param3, (byte) 118, "x4");
           SpriteState.field_o = lb.a(false, "", param3, "fs_frame");
           DelegatingCanvas.field_b = lb.a(false, "", param3, "fs_frame_inv");
           for (var8_intLifetime2 = 0; SecondaryNodeDeque.field_c.length > var8_intLifetime2; var8_intLifetime2++) {
             SecondaryNodeDeque.field_c[var8_intLifetime2].b();
           }
-          qc.field_L = lb.a(false, "", param3, "map_explorer");
+          ValidatedTextField.field_L = lb.a(false, "", param3, "map_explorer");
           var8 = lb.a(false, "", param3, "spider");
           for (var9_intLifetime2 = 4; var9_intLifetime2 >= 0; var9_intLifetime2--) {
             array$0 = new Sprite[var8.length];
@@ -267,12 +267,12 @@ final class sj {
           }
           var18 = new ai[6];
           var9 = var18;
-          var9[0] = df.a("", param3, (byte) 118, "keyboard_left");
-          var9[1] = df.a("", param3, (byte) 118, "keyboard_right");
-          var9[2] = df.a("", param3, (byte) 118, "keyboard_enter");
-          var9[3] = df.a("", param3, (byte) 118, "keyboard_space");
-          var9[4] = df.a("", param3, (byte) 118, "keyboard_esc");
-          var9[5] = df.a("", param3, (byte) 118, "keyboard_ctrl");
+          var9[0] = PasswordValidator.a("", param3, (byte) 118, "keyboard_left");
+          var9[1] = PasswordValidator.a("", param3, (byte) 118, "keyboard_right");
+          var9[2] = PasswordValidator.a("", param3, (byte) 118, "keyboard_enter");
+          var9[3] = PasswordValidator.a("", param3, (byte) 118, "keyboard_space");
+          var9[4] = PasswordValidator.a("", param3, (byte) 118, "keyboard_esc");
+          var9[5] = PasswordValidator.a("", param3, (byte) 118, "keyboard_ctrl");
           var20 = new int[var18.length];
           var19 = var20;
           var10 = var19;

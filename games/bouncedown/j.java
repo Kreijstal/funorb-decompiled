@@ -111,7 +111,7 @@ final class j extends IntrusiveNode {
         fe.field_g = true;
         int var1 = -119 % ((param0 + 35) / 46);
         ee.field_c = true;
-        q.field_N.k(-20281);
+        DisplayNameSelectionPanel.field_N.k(-20281);
         AppletShell.a(false, vb.field_o, -1);
     }
 

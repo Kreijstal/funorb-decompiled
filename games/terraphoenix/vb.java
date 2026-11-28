@@ -49,7 +49,7 @@ final class vb {
     }
 
     final static String b(byte param0) {
-        if (uh.field_H < 2) {
+        if (LoginPanel.field_H < 2) {
           return NodeHashTableIterator.field_i;
         }
         if (param0 != -27) {
@@ -67,11 +67,11 @@ final class vb {
         if (!bi.field_d.tryLoadGroupByName(-3, "commonui")) {
           return bl.field_d + " - " + bi.field_d.getGroupLoadPercentByName(-120, "commonui") + "%";
         }
-        if (!ph.field_q.ensureIndexLoaded(0)) {
+        if (!PasswordValidator.field_q.ensureIndexLoaded(0)) {
           return field_a;
         }
-        if (!ph.field_q.tryLoadGroupByName(-3, "commonui")) {
-          return ki.field_S + " - " + ph.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
+        if (!PasswordValidator.field_q.tryLoadGroupByName(-3, "commonui")) {
+          return ki.field_S + " - " + PasswordValidator.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
         }
         if (!ch.field_g.ensureIndexLoaded(param0 ^ -27)) {
           return IntrusiveDeque.field_d;

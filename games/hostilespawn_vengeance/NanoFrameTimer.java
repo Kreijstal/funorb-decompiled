@@ -29,8 +29,8 @@ final class NanoFrameTimer extends FrameTimer {
     }
 
     final static void c(boolean param0) {
-        ig.field_N.field_k = 0;
-        ig.field_N.field_e = 0;
+        EditableTextField.field_N.field_k = 0;
+        EditableTextField.field_N.field_e = 0;
         if (!param0) {
           NanoFrameTimer.c(true);
         }

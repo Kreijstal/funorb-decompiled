@@ -10,7 +10,7 @@ final class dd extends u {
     static int[] field_h;
     static String field_n;
     private String field_m;
-    static ah field_g;
+    static DisplayNameSelectionPanel field_g;
 
     final db b(byte param0) {
         if (param0 != -98) {
@@ -144,7 +144,7 @@ final class dd extends u {
           var64 = new int[param7.field_H];
           var62 = LoginMenuScreen.field_L;
           if (param6 != -81) {
-            field_g = (ah) null;
+            field_g = (DisplayNameSelectionPanel) null;
           }
           var61 = k.field_I;
           var63 = field_k;

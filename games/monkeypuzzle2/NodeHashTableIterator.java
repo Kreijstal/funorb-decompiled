@@ -38,15 +38,15 @@ final class NodeHashTableIterator implements Iterator {
           var1 = "";
         }
         if (param0 > 90) {
-          return new aj(lb.d((byte) -56), uk.f(20));
+          return new aj(lb.d((byte) -56), EmailFormatValidator.f(20));
         }
         field_g = (String) null;
-        return new aj(lb.d((byte) -56), uk.f(20));
+        return new aj(lb.d((byte) -56), EmailFormatValidator.f(20));
     }
 
     final static void a(String param0, boolean param1) {
         try {
-          hf.field_b = param0;
+          DebouncedFieldValidator.field_b = param0;
           qh.a(12, true);
           if (param1) {
             field_e = (Sprite[]) null;

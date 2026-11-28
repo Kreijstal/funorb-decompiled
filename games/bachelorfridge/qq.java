@@ -239,7 +239,7 @@ final class qq extends EventEffect {
           r.field_l = new UiComponent[5];
           bda.field_m = new UiComponent[5];
           cb.field_o = new UiComponent[5];
-          wg.field_i = new UiComponent[5];
+          PasswordValidator.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -267,12 +267,12 @@ final class qq extends EventEffect {
               if (decompiledFrameRemainder0) {
                 r.field_l[var18] = new UiComponent(0L, param0);
                 cb.field_o[var18] = new UiComponent(0L, uc.field_l, var19);
-                wg.field_i[var18] = new UiComponent(0L, (UiComponent) null);
-                wg.field_i[var18].field_Y = 1;
+                PasswordValidator.field_i[var18] = new UiComponent(0L, (UiComponent) null);
+                PasswordValidator.field_i[var18].field_Y = 1;
                 bda.field_m[var18] = new UiComponent(0L, uc.field_l);
                 bda.field_m[var18].field_Y = 1;
                 r.field_l[var18].a(param9 + 30802, cb.field_o[var18]);
-                r.field_l[var18].a(-1, wg.field_i[var18]);
+                r.field_l[var18].a(-1, PasswordValidator.field_i[var18]);
                 r.field_l[var18].a(-1, bda.field_m[var18]);
                 r.field_l[var18].d((byte) 126);
                 i.field_a.a(param9 ^ 30802, r.field_l[var18]);

@@ -68,7 +68,7 @@ final class vk {
         }
         this.field_k = IsaacRandom.field_b;
         this.field_g = GameApplet.field_c;
-        this.field_c = fg.field_l;
+        this.field_c = MatchingFieldValidator.field_l;
         this.field_i = hi.field_b;
         this.field_h = bi.field_a;
     }

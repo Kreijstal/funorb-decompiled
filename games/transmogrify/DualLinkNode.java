@@ -41,49 +41,49 @@ class DualLinkNode extends IntrusiveNode {
         if (param4 < -117) {
           if (param5 >= param6) {
             if (param3 > param5) {
-              ca.a(param2, param5, param0, param1, param7, true, param6, param3, SoftwareRasterizer.field_h);
+              DebouncedFieldValidator.a(param2, param5, param0, param1, param7, true, param6, param3, SoftwareRasterizer.field_h);
               return;
             }
             if (param6 >= param3) {
-              ca.a(param0, param6, param7, param1, param2, true, param3, param5, SoftwareRasterizer.field_h);
+              DebouncedFieldValidator.a(param0, param6, param7, param1, param2, true, param3, param5, SoftwareRasterizer.field_h);
               return;
             }
-            ca.a(param0, param3, param2, param1, param7, true, param6, param5, SoftwareRasterizer.field_h);
+            DebouncedFieldValidator.a(param0, param3, param2, param1, param7, true, param6, param5, SoftwareRasterizer.field_h);
             return;
           }
           if (param6 < param3) {
-            ca.a(param2, param6, param7, param1, param0, true, param5, param3, SoftwareRasterizer.field_h);
+            DebouncedFieldValidator.a(param2, param6, param7, param1, param0, true, param5, param3, SoftwareRasterizer.field_h);
             return;
           }
           if (param3 > param5) {
-            ca.a(param7, param3, param2, param1, param0, true, param5, param6, SoftwareRasterizer.field_h);
+            DebouncedFieldValidator.a(param7, param3, param2, param1, param0, true, param5, param6, SoftwareRasterizer.field_h);
             return;
           }
-          ca.a(param7, param5, param0, param1, param2, true, param3, param6, SoftwareRasterizer.field_h);
+          DebouncedFieldValidator.a(param7, param5, param0, param1, param2, true, param3, param6, SoftwareRasterizer.field_h);
           return;
         }
         DualLinkNode.a(-105, -75);
         if (param5 >= param6) {
           if (param3 > param5) {
-            ca.a(param2, param5, param0, param1, param7, true, param6, param3, SoftwareRasterizer.field_h);
+            DebouncedFieldValidator.a(param2, param5, param0, param1, param7, true, param6, param3, SoftwareRasterizer.field_h);
             return;
           }
           if (param6 >= param3) {
-            ca.a(param0, param6, param7, param1, param2, true, param3, param5, SoftwareRasterizer.field_h);
+            DebouncedFieldValidator.a(param0, param6, param7, param1, param2, true, param3, param5, SoftwareRasterizer.field_h);
             return;
           }
-          ca.a(param0, param3, param2, param1, param7, true, param6, param5, SoftwareRasterizer.field_h);
+          DebouncedFieldValidator.a(param0, param3, param2, param1, param7, true, param6, param5, SoftwareRasterizer.field_h);
           return;
         }
         if (param6 < param3) {
-          ca.a(param2, param6, param7, param1, param0, true, param5, param3, SoftwareRasterizer.field_h);
+          DebouncedFieldValidator.a(param2, param6, param7, param1, param0, true, param5, param3, SoftwareRasterizer.field_h);
           return;
         }
         if (param3 > param5) {
-          ca.a(param7, param3, param2, param1, param0, true, param5, param6, SoftwareRasterizer.field_h);
+          DebouncedFieldValidator.a(param7, param3, param2, param1, param0, true, param5, param6, SoftwareRasterizer.field_h);
           return;
         }
-        ca.a(param7, param5, param0, param1, param2, true, param3, param6, SoftwareRasterizer.field_h);
+        DebouncedFieldValidator.a(param7, param5, param0, param1, param2, true, param3, param6, SoftwareRasterizer.field_h);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {

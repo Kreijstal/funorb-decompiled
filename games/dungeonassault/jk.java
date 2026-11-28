@@ -82,7 +82,7 @@ final class jk extends hf {
             var6_int = param1.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = var6_int + 2; var3_int > var5; var5++) {
-                if (qm.a(57, param1.charAt(var5))) {
+                if (EmailFormatValidator.a(57, param1.charAt(var5))) {
                   continue;
                 }
                 break;
@@ -116,7 +116,7 @@ final class jk extends hf {
             }
             stackIn_18_0 = var8Lifetime1 + 2;
             for (var5Lifetime1 = stackIn_18_0; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (qm.a(57, param1.charAt(var5Lifetime1))) {
+              if (EmailFormatValidator.a(57, param1.charAt(var5Lifetime1))) {
                 continue;
               }
               break;

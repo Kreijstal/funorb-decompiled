@@ -136,7 +136,7 @@ final class tg implements ci {
         try {
           var6_int = param1.field_o + param0;
           var7 = param1.field_i + param3;
-          kl.b(param1.field_q, var7, var6_int, 48, param1.field_h);
+          AccountRegistrationPanel.b(param1.field_q, var7, var6_int, 48, param1.field_h);
           var8 = gh.field_n[1];
           if (param2 != 11447) {
             var9 = (PacketBuffer) null;

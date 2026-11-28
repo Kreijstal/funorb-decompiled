@@ -3,10 +3,10 @@
  */
 final class ko extends af {
     private boolean field_Q;
-    private kp field_R;
-    private kp field_T;
+    private EditableTextField field_R;
+    private EditableTextField field_T;
     static String field_S;
-    private kp field_N;
+    private EditableTextField field_N;
     static tj field_O;
     static String field_U;
     static int field_P;
@@ -75,7 +75,7 @@ final class ko extends af {
         return true;
     }
 
-    final void a(int param0, df param1) {
+    final void a(int param0, BirthDateValidator param1) {
         try {
           super.a(param0 + 0, param1);
           if (param0 != -11808) {
@@ -92,9 +92,9 @@ final class ko extends af {
     final static boolean e(byte param0) {
         if (param0 > -88) {
           field_M = (HuffmanCodec) null;
-          return pp.a(ob.e((byte) -124), 0);
+          return pp.a(LoginPanel.e((byte) -124), 0);
         }
-        return pp.a(ob.e((byte) -124), 0);
+        return pp.a(LoginPanel.e((byte) -124), 0);
     }
 
     final static boolean b(byte param0, int param1) {
@@ -149,10 +149,10 @@ final class ko extends af {
             tc.field_b = tc.field_b + (ro.field_g.field_d - ce.field_b);
             ce.field_b = ro.field_g.field_d;
           }
-          if (ld.field_b > da.field_i) {
-            da.field_i = da.field_i + 1;
+          if (ld.field_b > TextFieldValidator.field_i) {
+            TextFieldValidator.field_i = TextFieldValidator.field_i + 1;
           }
-          if (da.field_i <= 0) {
+          if (TextFieldValidator.field_i <= 0) {
             return;
           }
           kg.c((byte) 77);
@@ -210,9 +210,9 @@ final class ko extends af {
     private ko(WidgetListener param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetListener) null);
         try {
-          this.field_N = (kp) ((Object) new br("", (uf) null, 2));
-          this.field_T = (kp) ((Object) new br("", (uf) null, 2));
-          this.field_R = (kp) ((Object) new br("", (uf) null, 4));
+          this.field_N = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 2));
+          this.field_T = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 2));
+          this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (uf) null, 4));
           this.field_Q = param1 ? true : false;
           this.field_R.listener = param0;
           this.field_T.listener = param0;

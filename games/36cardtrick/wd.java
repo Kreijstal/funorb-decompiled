@@ -35,9 +35,9 @@ final class wd {
         if (param0 <= 3) {
           field_e = (AudioOutput) null;
         }
-        if (null == p.field_n ||
-          !(p.field_n.length >= param2)) {
-          p.field_n = new int[param2 * 2];
+        if (null == ConfirmedEmailAvailabilityValidator.field_n ||
+          !(ConfirmedEmailAvailabilityValidator.field_n.length >= param2)) {
+          ConfirmedEmailAvailabilityValidator.field_n = new int[param2 * 2];
         }
         if (q.field_h == null) {
           q.field_h = new int[2 * param2];
@@ -238,13 +238,13 @@ final class wd {
         if (param0 != 31668) {
           field_e = (AudioOutput) null;
           if (cd.field_e == 10) {
-            k.c(-128);
+            DebouncedFieldValidator.c(-128);
             cd.field_e = 11;
             sg.field_b = true;
             return;
           }
           if (!c.b(true)) {
-            k.c(-128);
+            DebouncedFieldValidator.c(-128);
             cd.field_e = 11;
             sg.field_b = true;
             return;
@@ -253,13 +253,13 @@ final class wd {
           return;
         }
         if (cd.field_e == 10) {
-          k.c(-128);
+          DebouncedFieldValidator.c(-128);
           cd.field_e = 11;
           sg.field_b = true;
           return;
         }
         if (!c.b(true)) {
-          k.c(-128);
+          DebouncedFieldValidator.c(-128);
           cd.field_e = 11;
           sg.field_b = true;
           return;

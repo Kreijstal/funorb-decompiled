@@ -107,14 +107,14 @@ final class MixedSupport138 {
     }
 
     final static void performAction1721(int integerArgument1, int integerArgument2, int integerArgument3) {
-        SceneWidgetPart013 sceneWidgetPart013Local1 = null;
-        SceneWidgetPart013 sceneWidgetPart013Local2 = null;
+        LobbyRoomRow sceneWidgetPart013Local1 = null;
+        LobbyRoomRow sceneWidgetPart013Local2 = null;
         CipherPacketBuffer cipherPacketBufferLocal3 = null;
         if (integerArgument1 != -20974) {
           return;
         }
         if (MixedSupport119.integerState0772 != integerArgument3) {
-          sceneWidgetPart013Local1 = (SceneWidgetPart013) (MixedSupport121.secondaryNodeHashTableState0005.get(24710, (long)MixedSupport119.integerState0772));
+          sceneWidgetPart013Local1 = (LobbyRoomRow) (MixedSupport121.secondaryNodeHashTableState0005.get(24710, (long)MixedSupport119.integerState0772));
           sceneWidgetPart013Local2 = sceneWidgetPart013Local1;
           if (sceneWidgetPart013Local2 != null) {
             sceneWidgetPart013Local2.stringArrayState0052 = null;
@@ -167,7 +167,7 @@ final class MixedSupport138 {
         int integerLocal36;
         integerLocal29 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          InputAdapter002.performAction1350(RenderingSupport001.integerState0064, 109);
+          BirthDateValidator.performAction1350(RenderingSupport001.integerState0064, 109);
           if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
             MixedSupport039.sceneWidgetState0030.integerState0915 = 0;
             sceneWidgetLocal31 = MixedSupport039.sceneWidgetState0030;
@@ -257,14 +257,14 @@ final class MixedSupport138 {
               stackSceneWidgetLocal4.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(stackIntegerLocal5, stackStringLocal6, new String[]{MixedSupport087.sceneWidgetState0091.stringState0598});
               ComponentDecorator.sceneWidgetState0078.booleanState0212 = true;
               MixedSupport121.sceneWidgetState0117.stringState0598 = MixedSupport069.stringState0310;
-              SceneWidgetPart013.booleanState0207 = true;
+              LobbyRoomRow.booleanState0207 = true;
               if (MixedSupport009.integerArrayArrayState0004 != null) {
                 MixedSupport046.booleanState0052 = false;
                 if (SceneWidgetNode.byteArrayState0012 == null) {
                   SceneWidgetNode.byteArrayState0012 = new byte[MixedSupport063.integerState0336];
                   MixedSupport108.booleanArrayState0009 = new boolean[MixedSupport063.integerState0336];
                 }
-                SceneWidgetPart013.booleanState0207 = false;
+                LobbyRoomRow.booleanState0207 = false;
                 integerLocal30 = 0;
                 integerLocal35 = integerLocal30;
                 while (integerLocal30 < MixedSupport063.integerState0336) {
@@ -274,15 +274,15 @@ final class MixedSupport138 {
                 MixedSupport127.performAction1629(-1, true, -1, 0, -1, MixedSupport063.integerState0336, UiComponentPart011.sceneWidgetPart013State0002, false);
                 if (!(2 > PasswordValidator.integerState0776) &&
                   MixedSupport011.booleanArrayState0002[12]) {
-                  SceneWidgetPart013.booleanState0207 = true;
+                  LobbyRoomRow.booleanState0207 = true;
                 }
               }
-              if (!SceneWidgetPart013.booleanState0207) {
+              if (!LobbyRoomRow.booleanState0207) {
                 MixedSupport087.sceneWidgetState0091.booleanState0212 = false;
                 if (MixedSupport087.sceneWidgetState0091.booleanState0211) {
                   objectLocal24 = null;
                   if (MixedSupport046.booleanState0052) {
-                    objectLocal24 = "<col=A00000>" + SceneWidgetPart004.stringState0215 + "</col>";
+                    objectLocal24 = "<col=A00000>" + PlayerNamePrompt.stringState0215 + "</col>";
                     objectLocal27 = objectLocal24;
                     objectLocal24 = objectLocal27;
                     objectLocal34 = objectLocal24;
@@ -290,7 +290,7 @@ final class MixedSupport138 {
                   }
                   for (integerLocal36 = 0; MixedSupport063.integerState0336 > integerLocal36; integerLocal36++) {
                     if (MixedSupport108.booleanArrayState0009[integerLocal36]) {
-                      stringLocal28 = "<col=A00000>" + UiComponentPart022.stringArrayState0026[integerLocal36] + "</col>";
+                      stringLocal28 = "<col=A00000>" + AccountFieldStatusIndicator.stringArrayState0026[integerLocal36] + "</col>";
                       objectLocal24 = stringLocal28;
                       objectLocal24 = stringLocal28;
                       if (objectLocal24 != null) {
@@ -300,7 +300,7 @@ final class MixedSupport138 {
                       }
                     }
                   }
-                  MixedSupport117.stringState0515 = "<col=A00000>" + BucketBoard.stringState0336 + "<br>" + SceneWidgetPart004.stringState0216 + (String) (objectLocal24);
+                  MixedSupport117.stringState0515 = "<col=A00000>" + BucketBoard.stringState0336 + "<br>" + PlayerNamePrompt.stringState0216 + (String) (objectLocal24);
                 }
               }
             }

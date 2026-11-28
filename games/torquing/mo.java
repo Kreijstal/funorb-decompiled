@@ -178,7 +178,7 @@ final class mo extends am {
               }
             }
             if (op.field_q <= mf.field_t) {
-              gf.field_h = da.field_a;
+              TextFieldValidator.field_h = da.field_a;
               mf.field_t = mf.field_t - op.field_q;
               if (!FullscreenFocusCanvas.field_c) {
                 da.field_a = da.field_a - 1;

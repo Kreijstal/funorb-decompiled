@@ -35,7 +35,7 @@ final class sh {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
-          if (!qk.field_q.c(484)) {
+          if (!LevelCompletionUpdate.field_q.c(484)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

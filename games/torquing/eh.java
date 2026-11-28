@@ -4,7 +4,7 @@
 abstract class eh {
     int field_c;
     lm field_d;
-    sg field_h;
+    SceneMeshBatch field_h;
     int[] field_f;
     static bc field_i;
     static IntrusiveDeque field_b;
@@ -19,11 +19,11 @@ abstract class eh {
     final static void c(byte param0) {
         if (param0 != 90) {
           field_b = (IntrusiveDeque) null;
-          gp.j((byte) -34);
+          ValidatedTextField.j((byte) -34);
           od.b(128, 4);
           return;
         }
-        gp.j((byte) -34);
+        ValidatedTextField.j((byte) -34);
         od.b(128, 4);
     }
 
@@ -73,7 +73,7 @@ abstract class eh {
               var4 = jg.field_t.field_s - 40;
             }
           }
-          eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
+          DebouncedFieldValidator.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
           return;
         }
         eh.clearDeclaredStaticReferences((byte) -115);
@@ -92,7 +92,7 @@ abstract class eh {
             var4Lifetime1 = jg.field_t.field_s - 40;
           }
         }
-        eq.a(jg.field_t, 0, 1, var4Lifetime1, param1, param0, 80, 0, 30);
+        DebouncedFieldValidator.a(jg.field_t, 0, 1, var4Lifetime1, param1, param0, 80, 0, 30);
     }
 
     eh(double param0, double param1, double param2) {
@@ -109,12 +109,12 @@ abstract class eh {
           return;
         }
         if (param0 == 80) {
-          this.field_h.d(this.field_c);
+          this.field_h.disableMeshSlot(this.field_c);
           this.field_h.b(this.field_d);
           return;
         }
         this.field_a = (Level) null;
-        this.field_h.d(this.field_c);
+        this.field_h.disableMeshSlot(this.field_c);
         this.field_h.b(this.field_d);
     }
 

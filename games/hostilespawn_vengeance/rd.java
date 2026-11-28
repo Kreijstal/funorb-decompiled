@@ -248,12 +248,12 @@ final class rd {
         int var3 = 0;
         int var4 = 0;
         oj var5 = null;
-        oc var6_ref_oc = null;
+        GridPoint var6_ref_oc = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        oc var10 = null;
+        GridPoint var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -289,7 +289,7 @@ final class rd {
             field_h = -14;
           }
           pf.field_I = null;
-          if ((5 & el.field_m) == 0) {
+          if ((5 & ProxySocketFactory.field_m) == 0) {
             ri.field_h = -1;
           }
           var1_int = ln.field_a.field_d;
@@ -318,7 +318,7 @@ final class rd {
           SoftwareRasterizer.setClip(stackIn_11_0, stackIn_12_1, stackIn_14_2, stackIn_15_3);
           var5 = mm.field_m[0];
           if (hg.field_e == 1) {
-            var6_ref_oc = new oc();
+            var6_ref_oc = new GridPoint();
             ln.field_a.a(-2, 1);
             var10 = var5.field_j;
             if (jf.field_c == 0) {
@@ -343,8 +343,8 @@ final class rd {
                     !(var11 > nh.field_E.field_e + 4) &&
                     !(var12 > 4 + nh.field_E.field_g)) && bm.field_c == 0) {
                     if (rl.field_c == 0 &&
-                      !bj.field_a) {
-                      bj.field_a = true;
+                      !DebouncedFieldValidator.field_a) {
+                      DebouncedFieldValidator.field_a = true;
                     } else {
                       if (rl.field_c == 1 &&
                         !tg.field_a) {
@@ -437,7 +437,7 @@ final class rd {
             while (var14Lifetime1 >= var6_ref_oc.field_g) {
               var6_ref_oc.field_e = var11Lifetime1;
               while (var13Lifetime1 >= var6_ref_oc.field_e) {
-                var7Lifetime2 = var6_ref_oc.b(-4);
+                var7Lifetime2 = var6_ref_oc.getClampedTileIndex(-4);
                 vf.a(-63, var7Lifetime2);
                 if (18 <= var40[var7Lifetime2] &&
                   21 >= var40[var7Lifetime2] &&
@@ -453,7 +453,7 @@ final class rd {
             gn.a(var4, var8Lifetime1, var3, 101, var9Lifetime1, var42, var34);
             if (14 == ul.field_L ||
               tg.field_a &&
-              of.field_d != dn.field_i) {
+              ClientLookupTables.field_d != dn.field_i) {
               var21Lifetime1 = 688 - var3;
               var22Lifetime1 = 560 - var4;
               stackIn_117_0 = var21Lifetime1;
@@ -504,11 +504,11 @@ final class rd {
             ih.a(-15587, var1_int);
             ByteStorage.a(11178);
             PcmResampler.a(var1_int, 3);
-            hi.b(false);
+            TextFieldValidator.b(false);
             qa.a(var11Lifetime1, 18, var12Lifetime1, var13Lifetime1, var14Lifetime1, var1_int, var2);
-            ei.d(-114);
+            DelayedPacket.d(-114);
             if (null != pf.field_I) {
-              id.field_A.b(pf.field_I, lh.field_a, -8 + aj.field_d, 16772608, 0);
+              id.field_A.b(pf.field_I, lh.field_a, -8 + SpriteBase.field_d, 16772608, 0);
             }
             dd.g(-125);
             decompiledFrameRemainder0 = (null == q.field_g ||
@@ -522,12 +522,12 @@ final class rd {
               var21Lifetime2 = stackIn_140_0;
               if (bm.field_c == 0 &&
                 rl.field_c == 0 &&
-                of.field_d == dn.field_i) {
+                ClientLookupTables.field_d == dn.field_i) {
                 var21Lifetime2 = 0;
               }
               if (0 == bm.field_c &&
                 1 == rl.field_c &&
-                dn.field_i == of.field_d) {
+                dn.field_i == ClientLookupTables.field_d) {
                 var21Lifetime2 = 0;
               }
               if (bm.field_c == 0 &&
@@ -587,7 +587,7 @@ final class rd {
               }
             }
           }
-          if (li.field_q < 2) {
+          if (MatchingFieldValidator.field_q < 2) {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

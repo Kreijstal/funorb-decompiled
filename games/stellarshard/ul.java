@@ -26,7 +26,7 @@ final class ul extends WidgetContainer implements oi {
         }
         BitmapFont var5 = si.field_V;
         if (null != this.field_E) {
-          var5.a(ic.field_b, param3 + this.field_w, this.field_k + param2, this.field_p, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_N);
+          var5.a(DebouncedFieldValidator.field_b, param3 + this.field_w, this.field_k + param2, this.field_p, 20, 16777215, -1, 0, 0, var5.field_r + var5.field_N);
         }
     }
 

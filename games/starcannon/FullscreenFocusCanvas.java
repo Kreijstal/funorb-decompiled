@@ -113,7 +113,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (param0) {
           return;
         }
-        n.field_l = new hg();
+        n.field_l = new DisplayNameSelectionPanel();
         t.field_h.c(20317, n.field_l);
     }
 
@@ -189,10 +189,10 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               mi.field_o = se.field_p.readLong((byte) 5);
               se.field_p.position = 0;
               se.a(param3, jh.field_h, 0, param2, param1);
-              r.field_c = uc.field_a;
+              r.field_c = DebouncedFieldValidator.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (uc.field_a == r.field_c &&
+            if (DebouncedFieldValidator.field_a == r.field_c &&
               ag.a(123, 1)) {
               var6_intLifetime1 = se.field_p.readUnsignedByte(7909);
               lj.field_c = null;

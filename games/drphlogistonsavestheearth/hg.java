@@ -12,7 +12,7 @@ final class hg extends hc {
     static String[] field_ob;
     static int field_rb;
 
-    final static boolean a(String param0, boolean param1, int param2, byte param3, String param4, String param5, v param6) {
+    final static boolean a(String param0, boolean param1, int param2, byte param3, String param4, String param5, AccountRegistrationPanel param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         AccountCreationResultPanel var8 = null;

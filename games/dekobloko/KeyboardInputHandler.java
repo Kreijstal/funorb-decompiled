@@ -20,7 +20,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         stringState0357 = null;
     }
 
-    final static void performAction1091(int integerArgument1, MixedSupport015 mixedSupport015Argument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6, int integerArgument7, BitmapFont bitmapFontArgument8, int integerArgument9, int integerArgument10, MixedSupport015 mixedSupport015Argument11, int integerArgument12, int integerArgument13, int integerArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20, int integerArgument21) {
+    final static void performAction1091(int integerArgument1, NineSliceSprite mixedSupport015Argument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, NineSliceSprite mixedSupport015Argument6, int integerArgument7, BitmapFont bitmapFontArgument8, int integerArgument9, int integerArgument10, NineSliceSprite mixedSupport015Argument11, int integerArgument12, int integerArgument13, int integerArgument14, int integerArgument15, int integerArgument16, int integerArgument17, int integerArgument18, int integerArgument19, int integerArgument20, int integerArgument21) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -170,7 +170,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           if (MixedSupport033.keyboardInputHandlerState0001 != null) {
             integerLocal1 = keyEventArgument1.getKeyChar();
             if (integerLocal1 != 0 && 65535 != integerLocal1 &&
-              UiComponentPart013.isSupportedCp1252KeyCharacter(-97, (char) integerLocal1)) {
+              LoginPanel.isSupportedCp1252KeyCharacter(-97, (char) integerLocal1)) {
               integerLocal2 = 1 + GameDomainSupport004.integerState0349 & 127;
               if (integerLocal2 != MixedSupport115.integerState0746) {
                 MixedSupport099.integerArrayState0182[GameDomainSupport004.integerState0349] = -1;
@@ -244,7 +244,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
           return;
         }
         SceneWidgetPart007.booleanState0113 = false;
-        if (UiComponentPart032.booleanState0198) {
+        if (BirthDateInput.booleanState0198) {
           MixedSupport020.uiComponentPart012State0001.performAction0594(4210752);
         } else {
           integerLocal1 = GameDomainSupport001.integerState0052;

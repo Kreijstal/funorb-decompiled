@@ -9,7 +9,7 @@ final class m {
     private boolean field_a;
     static boolean field_d;
     static int[][] field_c;
-    static ib field_j;
+    static DisplayNameSelectionPanel field_j;
     static int[] field_i;
     static int[] field_g;
 
@@ -80,18 +80,18 @@ final class m {
               var2 = 0;
             }
           }
-          for (var3 = 0; var3 < gf.field_s.length; var3++) {
+          for (var3 = 0; var3 < MatchingFieldValidator.field_s.length; var3++) {
             var4 = dl.field_s[var3];
             if (var4 < 0) {
               var5 = qa.field_f;
             } else {
-              if (ui.field_c.field_j != var4) {
+              if (DebouncedFieldValidator.field_c.field_j != var4) {
                 var5 = ai.field_d;
               } else {
                 var5 = lg.field_f;
               }
             }
-            var6 = gf.field_s[var3];
+            var6 = MatchingFieldValidator.field_s[var3];
             if (RandomAccessCacheFile.field_c == 2 &&
               var2 == 1) {
               if (qb.field_c.length > ji.field_n.length) {
@@ -131,10 +131,10 @@ final class m {
             stackIn_38_0 = -18;
             stackIn_39_1 = !(var4 < 0);
             var7Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(stackIn_38_0, stackIn_39_1, var6);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + dg.field_ab;
+            var8Lifetime1 = -(var7Lifetime1 >> 1) + AccountRegistrationPanel.field_ab;
             if (var4 >= 0) {
               var1_int = var1_int + uc.field_Y;
-              if (var4 != ui.field_c.field_j) {
+              if (var4 != DebouncedFieldValidator.field_c.field_j) {
                 stackIn_44_0 = tf.field_f;
               } else {
                 stackIn_44_0 = kk.field_e;
@@ -154,7 +154,7 @@ final class m {
             }
           }
           if (param0 < 12) {
-            field_j = (ib) null;
+            field_j = (DisplayNameSelectionPanel) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -199,14 +199,14 @@ final class m {
           }
           UiComponent.field_s = tf.field_x.a(we.field_c[12][0]);
           if (param0 != -98) {
-            field_j = (ib) null;
+            field_j = (DisplayNameSelectionPanel) null;
           }
           var3Lifetime1 = tf.field_x.a(we.field_c[13][0]);
           if (UiComponent.field_s < var3Lifetime1) {
             UiComponent.field_s = var3Lifetime1;
           }
           var4 = tf.field_x.field_t + tf.field_x.field_K + 4;
-          il.field_q[6] = var4 + tf.field_x.field_x + (200 + tf.field_x.field_K);
+          EmailFormatValidator.field_q[6] = var4 + tf.field_x.field_x + (200 + tf.field_x.field_K);
           ea.field_d[6] = 33 + 2 * var4;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -329,14 +329,14 @@ final class m {
               param0 <= 105) {
               var4 = param3;
               ae.a((byte) 61, var4);
-              gf.field_w = wk.createAccountSuggestionsResult(param3, -1);
+              MatchingFieldValidator.field_w = wk.createAccountSuggestionsResult(param3, -1);
               return;
             }
-            gf.field_w = mg.createAccountErrorResult((byte) 15, param1, param0);
+            MatchingFieldValidator.field_w = mg.createAccountErrorResult((byte) 15, param1, param0);
           } else {
             stackIn_6_0 = -115;
             stackIn_7_1 = !(cf.field_f >= 13);
-            gf.field_w = be.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
+            MatchingFieldValidator.field_w = be.createAccountSuccessResult(stackIn_6_0, stackIn_7_1);
             var7 = (String[]) null;
             ae.a((byte) 73, (String[]) null);
           }

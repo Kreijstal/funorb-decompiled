@@ -30,7 +30,7 @@ final class ee extends IntrusiveNode {
           if (var1 <= 0) {
           } else {
             if (1 != var1) {
-              v.field_a = bb.a(vc.field_b, new String[]{Integer.toString(var1)}, param0 ^ -63);
+              v.field_a = LoginPanel.a(vc.field_b, new String[]{Integer.toString(var1)}, param0 ^ -63);
             } else {
               v.field_a = bf.field_m;
             }
@@ -98,8 +98,8 @@ final class ee extends IntrusiveNode {
                 stackIn_21_0 = i.field_I.length;
               }
               var7 = stackIn_21_0;
-              if (qc.field_h.length < qa.field_o.length) {
-                stackIn_24_0 = qa.field_o.length;
+              if (qc.field_h.length < ConfirmedEmailAvailabilityValidator.field_o.length) {
+                stackIn_24_0 = ConfirmedEmailAvailabilityValidator.field_o.length;
               } else {
                 stackIn_24_0 = qc.field_h.length;
               }
@@ -131,7 +131,7 @@ final class ee extends IntrusiveNode {
             var7Lifetime1 = fa.a(stackIn_42_0, stackIn_43_1, (byte) 99);
             var8Lifetime1 = PcmOutputWorker.field_d - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              var1_int = var1_int + vg.field_N;
+              var1_int = var1_int + EditableTextField.field_N;
               if (bc.field_K.field_f != var4) {
                 stackIn_48_0 = kb.field_d;
               } else {
@@ -148,7 +148,7 @@ final class ee extends IntrusiveNode {
               var1_int = var1_int + uc.field_i;
             } else {
               kb.field_f.c(var6, var8Lifetime1, var1_int + ph.field_k, var5, -1);
-              var1_int = var1_int + (we.field_c + (vg.field_N + g.field_l));
+              var1_int = var1_int + (we.field_c + (EditableTextField.field_N + g.field_l));
             }
           }
           return;
@@ -237,7 +237,7 @@ final class ee extends IntrusiveNode {
           var5Lifetime1 = aj.field_m[11] >> 8;
           var6Lifetime1 = BufferedSocket.field_h << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = uk.a((byte) -64, var6Lifetime1) >> 8;
+          var8Lifetime1 = PasswordValidator.a((byte) -64, var6Lifetime1) >> 8;
           var9Lifetime1 = rd.a((byte) -30, var6Lifetime1) >> 8;
           if (PacketBuffer.field_j != -1 &&
             BufferedSocket.field_m != -1) {

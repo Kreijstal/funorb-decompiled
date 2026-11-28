@@ -21,7 +21,7 @@ abstract class d extends DualLinkNode {
         if (IsaacCipher.field_m != null) {
           IsaacCipher.field_m.b(true);
         }
-        je.field_g = new th();
+        je.field_g = new DisplayNameSelectionPanel();
         if (param0 <= -43) {
           hb.field_x.c(je.field_g, 33);
           return;

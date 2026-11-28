@@ -7,7 +7,7 @@ final class AccountCreationResultPanel extends si implements n {
     static String field_ub;
     private boolean field_vb;
     static int field_sb;
-    private pl field_tb;
+    private AccountRegistrationPanel field_tb;
 
     final static String a(CharSequence param0, int param1) {
         String var2 = null;
@@ -43,7 +43,7 @@ final class AccountCreationResultPanel extends si implements n {
         }
     }
 
-    AccountCreationResultPanel(d param0, pl param1) {
+    AccountCreationResultPanel(d param0, AccountRegistrationPanel param1) {
         super(param0, be.field_x, mm.field_d, false, false);
         try {
           this.field_tb = param1;
@@ -62,12 +62,12 @@ final class AccountCreationResultPanel extends si implements n {
 
     final void q(int param0) {
         if (param0 >= 66) {
-          this.showAccountCreationResult(aj.createAccountErrorResult(248, (byte) -47, ib.field_ab), (byte) -110, true);
+          this.showAccountCreationResult(aj.createAccountErrorResult(248, (byte) -47, ValidatedTextField.field_ab), (byte) -110, true);
           return;
         }
         CharSequence var3 = (CharSequence) null;
         AccountCreationResultPanel.a((CharSequence) null, -117);
-        this.showAccountCreationResult(aj.createAccountErrorResult(248, (byte) -47, ib.field_ab), (byte) -110, true);
+        this.showAccountCreationResult(aj.createAccountErrorResult(248, (byte) -47, ValidatedTextField.field_ab), (byte) -110, true);
     }
 
     private final void showAccountCreationResult(AccountServiceResult param0, byte param1, boolean param2) {
@@ -89,16 +89,16 @@ final class AccountCreationResultPanel extends si implements n {
               var4 = param0.message;
               if (248 == param0.statusCode) {
                 if (param2) {
-                  var4 = ib.field_ab;
+                  var4 = ValidatedTextField.field_ab;
                   this.field_xb = true;
                 } else {
                   dm.a((byte) -119);
-                  var4 = ib.field_ab;
+                  var4 = ValidatedTextField.field_ab;
                   this.field_xb = true;
                 }
               }
             } else {
-              var4 = mg.field_m;
+              var4 = MatchingFieldValidator.field_m;
               if (null != this.field_tb) {
                 this.field_tb.a(50);
               }

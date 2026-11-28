@@ -79,7 +79,7 @@ final class tb {
           stackIn_19_0 = la.field_c;
           stackIn_20_1 = (param2) && (!param1) && (fm.field_V);
           ((ci) (Object) stackIn_19_0).a(stackIn_20_1, (byte) 88);
-          wf.field_W.field_a.f((byte) 109);
+          LoginPanel.field_W.field_a.f((byte) 109);
           if (ln.field_cc.field_L != 0) {
             tg.field_p = true;
           }
@@ -101,7 +101,7 @@ final class tb {
           }
           return;
         }
-        fe.field_h.field_db = oc.a(hh.field_m, new String[]{Integer.toString(fm.field_W)}, (byte) -108);
+        fe.field_h.field_db = MatchingFieldValidator.a(hh.field_m, new String[]{Integer.toString(fm.field_W)}, (byte) -108);
         stackIn_46_0 = ql.field_d;
         stackIn_47_1 = (param2) && (!param1) && (!fm.field_V) && (pd.field_Rb == null) && (ib.field_d == null);
         ((ci) (Object) stackIn_46_0).a(stackIn_47_1, (byte) 88);
@@ -111,7 +111,7 @@ final class tb {
         stackIn_58_0 = la.field_c;
         stackIn_59_1 = (param2) && (!param1) && (fm.field_V);
         ((ci) (Object) stackIn_58_0).a(stackIn_59_1, (byte) 88);
-        wf.field_W.field_a.f((byte) 109);
+        LoginPanel.field_W.field_a.f((byte) 109);
         if (ln.field_cc.field_L != 0) {
           tg.field_p = true;
         }

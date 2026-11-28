@@ -13,8 +13,8 @@ final class mk extends IntrusiveNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != la.field_B) {
-            la.field_B.field_O.a(2178, args);
+          if (null != LoginPanel.field_B) {
+            LoginPanel.field_B.field_O.a(2178, args);
           }
           if (pd.field_e != null) {
             pd.field_e.field_F.a(2178, args);

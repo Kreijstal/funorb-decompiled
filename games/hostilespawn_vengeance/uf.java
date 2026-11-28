@@ -3,7 +3,7 @@
  */
 final class uf extends ql {
     static int[] field_d;
-    static pg[] field_g;
+    static IndexedSprite[] field_g;
     static RgbSprite[] field_i;
     static int[] field_e;
     static int[] field_f;
@@ -86,15 +86,15 @@ final class uf extends ql {
     }
 
     final void e(int param0) {
-        ih.field_y = new oc[3];
-        ih.field_y[0] = new oc(ln.field_a.field_v[0], ln.field_a.field_v[1]);
-        ih.field_y[1] = new oc(ln.field_a.field_v[2], ln.field_a.field_v[3]);
-        ih.field_y[2] = new oc(ln.field_a.field_v[4], ln.field_a.field_v[5]);
+        ih.field_y = new GridPoint[3];
+        ih.field_y[0] = new GridPoint(ln.field_a.field_v[0], ln.field_a.field_v[1]);
+        ih.field_y[1] = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
+        ih.field_y[2] = new GridPoint(ln.field_a.field_v[4], ln.field_a.field_v[5]);
         CrossfadingMidiPcmStream.a(6, 1);
-        nh.field_E.a((byte) 46, ih.field_y[0]);
+        nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
         vg.field_e = new v[4];
         vg.field_e[0] = new v(tm.field_s, -120 + (ti.field_f.field_e * 24 + 50), 24 * (-7 + ti.field_f.field_g) - 20, 200, false);
-        vg.field_e[1] = new v(el.field_g, 24 * ih.field_y[0].field_e - 140, ih.field_y[0].field_g * 24, 200, false);
+        vg.field_e[1] = new v(ProxySocketFactory.field_g, 24 * ih.field_y[0].field_e - 140, ih.field_y[0].field_g * 24, 200, false);
         vg.field_e[2] = new v(im.field_d, 24 + (24 * ih.field_y[1].field_e - 100), -90 + ih.field_y[1].field_g * 24, 200, false);
         vg.field_e[3] = new v(ih.field_z, ih.field_y[2].field_e * 24 + 24 + 40, 40 + 24 * ih.field_y[2].field_g, 200, false);
         vg.field_e[param0].field_a = 1;
@@ -108,7 +108,7 @@ final class uf extends ql {
         RuntimeException decompiledCaughtException = null;
         try {
           if (ha.field_t != 0 &&
-            param0.field_j.a(ih.field_y[2], 108)) {
+            param0.field_j.hasSameCoordinates(ih.field_y[2], 108)) {
             return true;
           }
           if (param1 != -5) {
@@ -210,21 +210,21 @@ final class uf extends ql {
             var9 = param0;
             var10 = param6;
             for (var11 = param5; param1 > var11; var11++) {
-              var12 = db.field_s[var11];
+              var12 = PasswordValidator.field_s[var11];
               if (param3) {
                 stackIn_24_0 = qa.field_d[var12];
               } else {
-                stackIn_24_0 = hi.field_n[var12];
+                stackIn_24_0 = TextFieldValidator.field_n[var12];
               }
               var13 = stackIn_24_0;
               if (var13 > var7_int) {
-                db.field_s[var11] = db.field_s[var8];
+                PasswordValidator.field_s[var11] = PasswordValidator.field_s[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                db.field_s[incrementValue$0] = var12;
+                PasswordValidator.field_s[incrementValue$0] = var12;
               } else {
                 if (var10 < var13) {
                   var10 = var13;
@@ -237,11 +237,11 @@ final class uf extends ql {
           }
           for (var7_intLifetime1 = param1 - 1; param5 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param5; var7_intLifetime1 > var8Lifetime1; var8Lifetime1++) {
-              var9Lifetime1 = db.field_s[var8Lifetime1];
-              var10Lifetime1 = db.field_s[var8Lifetime1 + 1];
+              var9Lifetime1 = PasswordValidator.field_s[var8Lifetime1];
+              var10Lifetime1 = PasswordValidator.field_s[var8Lifetime1 + 1];
               if (bl.a(var9Lifetime1, param3, (byte) -72, var10Lifetime1)) {
-                db.field_s[var8Lifetime1] = var10Lifetime1;
-                db.field_s[1 + var8Lifetime1] = var9Lifetime1;
+                PasswordValidator.field_s[var8Lifetime1] = var10Lifetime1;
+                PasswordValidator.field_s[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -264,10 +264,10 @@ final class uf extends ql {
 
     final void d(int param0) {
         int var3;
-        oc var4;
+        GridPoint var4;
         int var3Lifetime1;
         int var3Lifetime2;
-        var4 = new oc(mm.field_m[0].field_j);
+        var4 = new GridPoint(mm.field_m[0].field_j);
         if (param0 != -1) {
           return;
         }
@@ -280,7 +280,7 @@ final class uf extends ql {
           if (2 > var3) {
             ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
             CrossfadingMidiPcmStream.a(0, 1);
-            nh.field_E.a((byte) 46, ih.field_y[0]);
+            nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
             vg.field_e[2].field_a = 1;
           }
           if (0 != vg.field_e[3].field_a) {
@@ -299,13 +299,13 @@ final class uf extends ql {
         if (var3Lifetime1 < 2) {
           CrossfadingMidiPcmStream.a(9, 1);
           vg.field_e[1].field_a = 1;
-          nh.field_E.a((byte) 46, ih.field_y[1]);
+          nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[1]);
         }
         var3Lifetime2 = ih.a(var4, (byte) -105, ih.field_y[1]);
         if (2 > var3Lifetime2) {
           ca.a(0.5 + (double)ih.field_y[1].field_e, 1, 1.0 + (double)ih.field_y[1].field_g, true, 64);
           CrossfadingMidiPcmStream.a(0, 1);
-          nh.field_E.a((byte) 46, ih.field_y[0]);
+          nh.field_E.copyCoordinatesFrom((byte) 46, ih.field_y[0]);
           vg.field_e[2].field_a = 1;
         }
         if (0 != vg.field_e[3].field_a) {

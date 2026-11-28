@@ -44,7 +44,7 @@ final class cm {
           }
           om.a(var3, 5, -119);
         } else {
-          ei.field_q.addLast(var3, 87);
+          DelayedPacket.field_q.addLast(var3, 87);
         }
     }
 
@@ -52,16 +52,16 @@ final class cm {
         field_a = null;
         field_c = null;
         if (param0 > -68) {
-          oc var2 = (oc) null;
-          cm.a((oc) null, false);
+          GridPoint var2 = (GridPoint) null;
+          cm.a((GridPoint) null, false);
         }
     }
 
-    final static void a(oc param0, boolean param1) {
+    final static void a(GridPoint param0, boolean param1) {
         int var2_int = 0;
         qm var3 = null;
         int var4 = 0;
-        oc var5 = null;
+        GridPoint var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -70,8 +70,8 @@ final class cm {
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (param1) {
-            var5 = (oc) null;
-            cm.a((oc) null, true);
+            var5 = (GridPoint) null;
+            cm.a((GridPoint) null, true);
           }
           for (var2_int = 0; var2_int < DualLinkNode.field_o; var2_int++) {
             var3 = vj.field_w[var2_int];

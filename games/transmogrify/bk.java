@@ -25,7 +25,7 @@ final class bk {
     final static void c(int param0) {
         he.b((byte) 115);
         lb.field_d = true;
-        wl.field_I = true;
+        AccountRegistrationPanel.field_I = true;
         ResourceArchive.field_f.k(param0 ^ -12743);
         if (param0 == -19317) {
           jj.a(false, oc.field_E, param0 + 21019);

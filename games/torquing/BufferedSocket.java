@@ -424,10 +424,10 @@ final class BufferedSocket implements Runnable {
         if (!param0) {
           field_j = (int[]) null;
         }
-        if (bi.field_f == null) {
-          bi.field_f = new pc(sp.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, sp.field_R.field_x, -1, 2147483647, true);
+        if (LevelRun.field_f == null) {
+          LevelRun.field_f = new pc(sp.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, sp.field_R.field_x, -1, 2147483647, true);
         }
-        return bi.field_f;
+        return LevelRun.field_f;
     }
 
     public static void clearStaticReferences(int param0) {

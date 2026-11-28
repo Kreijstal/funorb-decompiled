@@ -174,7 +174,7 @@ final class or {
           }
           kh.a((byte) -32);
           AccountServiceResult.field_e.i(param2 - 65536);
-          eb.field_d = new ob(ff.field_u, (String) null, tk.field_e, param3, param1);
+          eb.field_d = new LoginPanel(ff.field_u, (String) null, tk.field_e, param3, param1);
           n.field_b = new ga(AccountServiceResult.field_e, eb.field_d);
           AccountServiceResult.field_e.b(n.field_b, 0);
         } catch (RuntimeException runtimeException) {

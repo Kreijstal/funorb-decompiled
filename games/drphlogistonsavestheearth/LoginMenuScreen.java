@@ -55,7 +55,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("idlemessage20min", param0 - 7);
                 if (null != var2) {
-                  ni.field_u = mj.a((byte) -13, var2);
+                  EmailFormatValidator.field_u = mj.a((byte) -13, var2);
                 }
                 var2 = wg.a("error_js5crc", param0 - 7);
                 if (var2 != null) {
@@ -1501,7 +1501,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("login_justplay_tooltip", 0);
                 if (var2 != null) {
-                  v.field_X = mj.a((byte) -109, var2);
+                  AccountRegistrationPanel.field_X = mj.a((byte) -109, var2);
                 }
                 var2 = wg.a("login_back_tooltip", param0 ^ 7);
                 if (null != var2) {
@@ -1545,7 +1545,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_email_confirm_tooltip", 0);
                 if (null != var2) {
-                  ad.field_r = mj.a((byte) 12, var2);
+                  PasswordValidator.field_r = mj.a((byte) 12, var2);
                 }
                 var2 = wg.a("create_age_tooltip", param0 ^ 7);
                 if (var2 != null) {
@@ -1553,7 +1553,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_optin_news_tooltip", param0 ^ 7);
                 if (null != var2) {
-                  dc.field_g = mj.a((byte) -123, var2);
+                  DebouncedFieldValidator.field_g = mj.a((byte) -123, var2);
                 }
                 var2 = wg.a("create_u13_email_tooltip", 0);
                 if (var2 != null) {
@@ -1605,7 +1605,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_alert_passchars", 0);
                 if (null != var2) {
-                  ad.field_p = mj.a((byte) -120, var2);
+                  PasswordValidator.field_p = mj.a((byte) -120, var2);
                 }
                 var2 = wg.a("create_alert_passrepeated", 0);
                 if (var2 != null) {
@@ -2027,7 +2027,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("ok", 0);
                 if (var2 != null) {
-                  dc.field_b = mj.a((byte) -116, var2);
+                  DebouncedFieldValidator.field_b = mj.a((byte) -116, var2);
                 }
                 var2 = wg.a("on", 0);
                 if (null != var2) {
@@ -2679,7 +2679,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("fs_button_close", 0);
                 if (var2 != null) {
-                  ei.field_h = mj.a((byte) 11, var2);
+                  TextFieldValidator.field_h = mj.a((byte) 11, var2);
                 }
                 var2 = wg.a("fs_button_members", 0);
                 if (var2 != null) {
@@ -2699,7 +2699,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("fs_focus_or_resolution", 0);
                 if (null != var2) {
-                  ei.field_j = mj.a((byte) 107, var2);
+                  TextFieldValidator.field_j = mj.a((byte) 107, var2);
                 }
                 var2 = wg.a("fs_timeout", 0);
                 if (null != var2) {
@@ -2759,15 +2759,15 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("hs_mode_name,0", 0);
                 if (null != var2) {
-                  ni.field_r[0] = mj.a((byte) -7, var2);
+                  EmailFormatValidator.field_r[0] = mj.a((byte) -7, var2);
                 }
                 var2 = wg.a("hs_mode_name,1", 0);
                 if (var2 != null) {
-                  ni.field_r[1] = mj.a((byte) -101, var2);
+                  EmailFormatValidator.field_r[1] = mj.a((byte) -101, var2);
                 }
                 var2 = wg.a("hs_mode_name,2", param0 - 7);
                 if (var2 != null) {
-                  ni.field_r[2] = mj.a((byte) 18, var2);
+                  EmailFormatValidator.field_r[2] = mj.a((byte) 18, var2);
                 }
                 var2 = wg.a("rating_mode_name,0", 0);
                 if (var2 != null) {

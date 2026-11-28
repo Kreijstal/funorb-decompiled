@@ -1365,10 +1365,10 @@ final class BattleScreen extends dfa {
                 var5_ref_jha = new jha(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
                 ((TileEffect) ((Object) var5_ref_jha)).a(0);
               } else {
-                aba.a((byte) -52, 15);
+                TextFieldValidator.a((byte) -52, 15);
               }
             } else {
-              aba.a((byte) -53, 16);
+              TextFieldValidator.a((byte) -53, 16);
               var5_ref_nj = new nj(this, param0.field_s.tileX, param0.field_s.tileY, BuffVendorAnimation.field_w[var13.terrain].field_f);
               ((TileEffect) ((Object) var5_ref_nj)).a(0);
             }
@@ -1399,9 +1399,9 @@ final class BattleScreen extends dfa {
               var10 = new jha(this, param0.field_s.tileX, param0.field_s.tileY, param0.field_s.ownerIndex);
               ((TileEffect) ((Object) var10)).a(0);
               if (param0.field_s.ownerIndex != this.field_n) {
-                aba.a((byte) -117, 18);
+                TextFieldValidator.a((byte) -117, 18);
               } else {
-                aba.a((byte) 43, 17);
+                TextFieldValidator.a((byte) 43, 17);
               }
             }
           }
@@ -1639,7 +1639,7 @@ final class BattleScreen extends dfa {
               this.a(3, PetAttackAnimation.field_y);
             }
           } else {
-            this.a(3, ph.field_C);
+            this.a(3, LoginPanel.field_C);
           }
         } else {
           this.a(3, InvincibleEvent.field_r);

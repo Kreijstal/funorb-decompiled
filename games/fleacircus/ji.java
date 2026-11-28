@@ -99,14 +99,14 @@ final class ji {
         if (param1 <= -37) {
           this.field_e[0] = this.field_e[0] + this.field_j;
           this.field_g[0] = this.field_g[0] + this.field_h;
-          this.field_h = this.field_h + bc.field_Y;
+          this.field_h = this.field_h + ValidatedTextField.field_Y;
           this.field_c = this.field_c - param0;
           return;
         }
         this.a(false);
         this.field_e[0] = this.field_e[0] + this.field_j;
         this.field_g[0] = this.field_g[0] + this.field_h;
-        this.field_h = this.field_h + bc.field_Y;
+        this.field_h = this.field_h + ValidatedTextField.field_Y;
         this.field_c = this.field_c - param0;
     }
 

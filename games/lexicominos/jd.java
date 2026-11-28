@@ -22,7 +22,7 @@ final class jd {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          r.a((java.awt.Component) ((Object) param0), 20);
+          DisplayNameSelectionPanel.a((java.awt.Component) ((Object) param0), 20);
           ph.a((java.awt.Component) ((Object) param0), 123);
           if (null != NanoFrameTimer.field_c) {
             NanoFrameTimer.field_c.detach(3, (java.awt.Component) ((Object) param0));

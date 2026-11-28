@@ -234,10 +234,10 @@ final class GzipDecompressor {
         wd.field_c = false;
         if (param0 != 51) {
           field_b = -49;
-          ae.field_N.readUnsignedByte(4);
+          EditableTextField.field_N.readUnsignedByte(4);
           return;
         }
-        ae.field_N.readUnsignedByte(4);
+        EditableTextField.field_N.readUnsignedByte(4);
     }
 
     final static void detachMouseInput(java.awt.Component param0, byte param1) {

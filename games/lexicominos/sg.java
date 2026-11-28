@@ -257,9 +257,9 @@ final class sg {
           var4 = -50 / ((param1 + 36) / 58);
           if (this.field_e <= -1) {
             if (!AccountRequestState.a((byte) -116)) {
-              bi.field_a.a(tj.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              bi.field_a.a(TextFieldValidator.field_k, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             } else {
-              bi.field_a.a(tj.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
+              bi.field_a.a(TextFieldValidator.field_k + "<br><br>" + al.field_G, 48, 50, 242, qc.field_c[this.field_d] - 100, 0, -1, 1, 1, bi.field_a.field_C);
             }
             return;
           }
@@ -460,29 +460,29 @@ final class sg {
                                         if (var4_int != 10) {
                                           if (var4_int == 4) {
                                             if (this.field_c.e((byte) -60)) {
-                                              g.a(0, 118);
+                                              MatchingFieldValidator.a(0, 118);
                                             }
                                             if (this.field_c.a(-104)) {
-                                              g.a(256, 92);
+                                              MatchingFieldValidator.a(256, 92);
                                             }
                                             if (this.field_c.c(-1)) {
                                               var4_int = this.a(bk.field_b, ResourceArchive.field_e, (byte) 95);
                                               if (0 <= var4_int) {
-                                                g.a(var4_int, 107);
+                                                MatchingFieldValidator.a(var4_int, 107);
                                               }
                                             }
                                             if (this.field_c.f(98)) {
                                               if (oc.field_e <= 32) {
-                                                g.a(0, 112);
+                                                MatchingFieldValidator.a(0, 112);
                                               } else {
-                                                g.a(-32 + oc.field_e, 80);
+                                                MatchingFieldValidator.a(-32 + oc.field_e, 80);
                                               }
                                             }
                                             if (this.field_c.d((byte) 85)) {
                                               if (oc.field_e >= 224) {
-                                                g.a(256, 115);
+                                                MatchingFieldValidator.a(256, 115);
                                               } else {
-                                                g.a(32 + oc.field_e, 89);
+                                                MatchingFieldValidator.a(32 + oc.field_e, 89);
                                               }
                                             }
                                           } else {
@@ -914,7 +914,7 @@ final class sg {
                 if (var12 != 0) {
                   fc.field_e[var11].c(var13, var14);
                 } else {
-                  ri.field_b.c(var13, var14);
+                  DebouncedFieldValidator.field_b.c(var13, var14);
                 }
               }
             }
@@ -1451,7 +1451,7 @@ final class sg {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var2 = pc.field_l;
+                  var2 = EmailFormatValidator.field_l;
                 }
               } else {
                 var2 = ta.field_b;
@@ -1699,7 +1699,7 @@ final class sg {
               } else {
                 var2_intLifetime2 = 18;
                 var3Lifetime1 = 240;
-                var9 = tj.field_j;
+                var9 = TextFieldValidator.field_j;
                 var10 = 0;
                 var5Lifetime1 = var10;
                 while (var9.length > var10) {

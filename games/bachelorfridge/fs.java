@@ -153,7 +153,7 @@ final class fs {
             var3.writeInt(this.field_b.field_g, -1615464796);
             this.field_b.field_h.write((PacketBuffer) (var3), (byte) 127);
             var3.writeLengthShort((byte) -88, var3.position - var4);
-            hna.a(0, param0 ^ -100);
+            ConfirmedEmailAvailabilityValidator.a(0, param0 ^ -100);
             vc.a((byte) -99);
           }
         } else {

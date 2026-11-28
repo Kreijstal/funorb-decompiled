@@ -34,9 +34,9 @@ final class rh {
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != qn.field_R &&
-            !qn.field_R.equals(param1.getParameter("session"))) {
-            var4Lifetime1 = qn.field_R;
+          if (null != EditableTextField.field_R &&
+            !EditableTextField.field_R.equals(param1.getParameter("session"))) {
+            var4Lifetime1 = EditableTextField.field_R;
           }
           if (param2 == -87) {
             stackIn_11_0 = va.a((String) (var3), -148, param0, -1, (String) (var4Lifetime1));
@@ -101,7 +101,7 @@ final class rh {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = qn.field_U;
+        BitPacketBuffer var2 = EditableTextField.field_U;
         var2.writeCipheredByte(param1, param0 ^ -117);
         var2.writeByte(1, (byte) 86);
         var2.writeByte(param0, (byte) 45);

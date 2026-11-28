@@ -61,7 +61,7 @@ final class oh {
     }
 
     final static void a(boolean param0) {
-        ck.field_a = 0;
+        DebouncedFieldValidator.field_a = 0;
         if (!param0) {
           field_e = false;
         }

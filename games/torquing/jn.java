@@ -4,7 +4,7 @@
 final class jn {
     static String field_a;
     static String field_b;
-    static sm[] field_c;
+    static IndexedSprite[] field_c;
     static String field_d;
 
     final static void a(int param0, int param1, int param2) {
@@ -185,11 +185,11 @@ final class jn {
             if (var4 == -2) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = mh.a(!(0 > var4), -112, var6);
+            var7Lifetime1 = MenuScreen.measureMenuText(!(0 > var4), -112, var6);
             var8Lifetime1 = vk.field_A - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (kb.field_g.field_g != var4) {
-                stackIn_43_0 = id.field_b;
+                stackIn_43_0 = LoginRequestBuilder.field_b;
               } else {
                 stackIn_43_0 = kc.field_x;
               }
@@ -201,7 +201,7 @@ final class jn {
               var1_int = var1_int + ln.field_D;
             }
             if (0 <= var4) {
-              sp.field_Q.b(var6, var8Lifetime1, var1_int + bi.field_p, var5, -1);
+              sp.field_Q.b(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
               var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + kp.field_d));
             } else {
               bo.field_e.b(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);

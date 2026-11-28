@@ -52,11 +52,11 @@ class IntrusiveNode {
           var4.a(param0, (byte) 41);
           return;
         }
-        var4 = (tm) (ok.field_b.beginForward(127));
+        var4 = (tm) (DebouncedFieldValidator.field_b.beginForward(127));
         if (var4 != null) {
           var4.a(param0, (byte) 37);
           if (var4.e(3)) {
-            ok.field_b.removeFirst(63854);
+            DebouncedFieldValidator.field_b.removeFirst(63854);
             return;
           }
           return;
@@ -65,7 +65,7 @@ class IntrusiveNode {
         if (ja.field_u <= 1500) {
           return;
         }
-        if (!ke.field_X[23]) {
+        if (!ValidatedTextField.field_X[23]) {
           ag.a(true, 23, -1, -1);
           return;
         }

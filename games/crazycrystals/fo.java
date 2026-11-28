@@ -209,7 +209,7 @@ final class fo extends IntrusiveNode {
         var4 = CrazyCrystals.field_B;
         try {
           if (null != om.field_x) {
-            var1 = dc.a(true, om.field_x, (byte) 51);
+            var1 = AccountRegistrationPanel.a(true, om.field_x, (byte) 51);
             if (var1 != null) {
               var2 = gf.field_c;
               synchronized (var2) {
@@ -219,11 +219,11 @@ final class fo extends IntrusiveNode {
               om.field_x = null;
             }
           }
-          if (null == dc.a(false, "menu", (byte) 19)) {
+          if (null == AccountRegistrationPanel.a(false, "menu", (byte) 19)) {
             return;
           }
           for (var1_int = param0; hf.field_b.length > var1_int; var1_int++) {
-            if (dc.a(false, hf.field_b[var1_int], (byte) -110) == null) {
+            if (AccountRegistrationPanel.a(false, hf.field_b[var1_int], (byte) -110) == null) {
               return;
             }
           }

@@ -164,8 +164,8 @@ final class od extends am {
         }
         if (this.field_r.field_b) {
           stackIn_5_0 = this.field_y;
-          if (this.field_v != um.field_o) {
-            stackIn_6_1 = this.field_v * param1 / um.field_o;
+          if (this.field_v != MatchingFieldValidator.field_o) {
+            stackIn_6_1 = this.field_v * param1 / MatchingFieldValidator.field_o;
           } else {
             stackIn_6_1 = param1;
           }

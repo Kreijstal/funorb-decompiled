@@ -81,7 +81,7 @@ final class fo {
         if (!ProxyAuthenticationRequiredException.field_b &&
           !kj.field_C) {
           while (NodeHashTableIterator.a(false)) {
-            if (de.field_f != 13) {
+            if (DebouncedFieldValidator.field_f != 13) {
               this.d((byte) 106);
               if (-1 == this.field_a.selectedIndex) {
                 continue;
@@ -281,7 +281,7 @@ final class fo {
     private final void a(boolean param0, byte param1) {
         int var4 = 0;
         int var3 = 54 % ((param1 + 46) / 59);
-        oa.field_q = this.a(param0, PacketBuffer.field_n, (byte) 121, gb.field_d);
+        ConfirmedEmailAvailabilityValidator.field_q = this.a(param0, PacketBuffer.field_n, (byte) 121, gb.field_d);
         if (kf.field_c == 1) {
           var4 = this.a(param0, sd.field_N, (byte) 119, no.field_e);
           if (qc.field_t == var4) {
@@ -446,7 +446,7 @@ final class fo {
             if (qc.field_t == var7) {
               var8_ref_er.d(var3 + 4, -4 + var4);
             } else {
-              if (var7 != oa.field_q) {
+              if (var7 != ConfirmedEmailAvailabilityValidator.field_q) {
                 var8_ref_er.d(var3, var4);
               } else {
                 var8_ref_er.d(var3 + 2, -2 + var4);
@@ -465,7 +465,7 @@ final class fo {
         if (qc.field_t != -1) {
           stackIn_32_0 = qc.field_t;
         } else {
-          stackIn_32_0 = oa.field_q;
+          stackIn_32_0 = ConfirmedEmailAvailabilityValidator.field_q;
         }
         var7Lifetime1 = stackIn_32_0;
         if (ag.b(49)) {
@@ -608,8 +608,8 @@ final class fo {
         boolean decompiledFrameRemainder0 = true;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (13 == this.field_b) {
-          if ((de.field_f != 96 &&
-            de.field_f != 97) &&
+          if ((DebouncedFieldValidator.field_f != 96 &&
+            DebouncedFieldValidator.field_f != 97) &&
             (decompiledFrameRemainder0 = !(!FullscreenFocusCanvas.field_d.field_e))) {
             return;
           }
@@ -1448,7 +1448,7 @@ final class fo {
                         if (this.field_a.b(-101) &&
                           0 < DelegatingCanvas.field_e) {
                           var7 = 1;
-                          dk.d((byte) -94);
+                          EmailFormatValidator.d((byte) -94);
                         }
                         if (this.field_a.d(-98) &&
                           DelegatingCanvas.field_e < 256) {
@@ -1640,7 +1640,7 @@ final class fo {
                                 }
                                 if (var8 == 19) {
                                   if (!(!this.field_a.a(84))) {
-                                    sf.a(ob.e((byte) -95), -115);
+                                    sf.a(LoginPanel.e((byte) -95), -115);
                                   }
                                   break regionExit1;
                                 }
@@ -1727,7 +1727,7 @@ final class fo {
         this.field_a.a(param1, this.a(110, PacketBuffer.field_n, gb.field_d), param2, (byte) 80);
         qc.field_t = -1;
         dc.field_O = ProxyAuthenticationRequiredException.field_f;
-        oa.field_q = -1;
+        ConfirmedEmailAvailabilityValidator.field_q = -1;
     }
 
     final void b(byte param0) {
@@ -1944,7 +1944,7 @@ final class fo {
               for (var8 = 0; var8 < 10; var8++) {
                 if (null != var5[var8]) {
                   var3Lifetime1 = 16777215;
-                  if (wc.a(var5[var8], param0)) {
+                  if (PasswordValidator.a(var5[var8], param0)) {
                     var7 = 1;
                     var3Lifetime1 = 15637810;
                   }

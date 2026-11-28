@@ -113,7 +113,7 @@ final class ScorePopup {
           if (0 >= this.value) {
             return null;
           }
-          qb.field_k = qb.field_k + this.value;
+          EmailFormatValidator.field_k = EmailFormatValidator.field_k + this.value;
           te.field_c = te.field_c + this.value;
           return null;
         }
@@ -131,7 +131,7 @@ final class ScorePopup {
           return null;
         }
         te.field_c = te.field_c + this.value;
-        qb.field_k = qb.field_k + this.value;
+        EmailFormatValidator.field_k = EmailFormatValidator.field_k + this.value;
         return null;
     }
 

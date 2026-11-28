@@ -9,18 +9,18 @@ final class c {
         try {
           rf.field_q[6] = new int[]{1};
           ok.field_C[6] = 404;
-          vo.field_f[6] = new mh(param0, 6);
+          vo.field_f[6] = new MenuScreen(param0, 6);
           rf.field_q[9] = new int[]{18, 19, 17, 12};
           de.field_c[9] = 40;
-          nn.field_a[9][0] = (af) ((Object) new ia(27, 52, 574, 402));
-          vo.field_f[9] = new mh(param0, 9);
+          nn.field_a[9][0] = (MenuLayer) ((Object) new FramedPanelLayer(27, 52, 574, 402));
+          vo.field_f[9] = new MenuScreen(param0, 9);
           rf.field_q[3] = new int[]{8, 9, 20};
-          vo.field_f[3] = new mh(param0, 3);
+          vo.field_f[3] = new MenuScreen(param0, 3);
           rf.field_q[2] = new int[]{20, 12};
-          vo.field_f[2] = new mh(param0, 2);
+          vo.field_f[2] = new MenuScreen(param0, 2);
           if (wp.field_w > 0) {
             rf.field_q[1] = new int[]{4, 2, 13, 10, 6, 11, 5};
-            vo.field_f[1] = new mh(param0, 1);
+            vo.field_f[1] = new MenuScreen(param0, 1);
           }
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "c.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

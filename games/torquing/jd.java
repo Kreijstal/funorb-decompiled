@@ -85,10 +85,10 @@ final class jd extends jh {
         if (wa.field_f) {
           return -1;
         }
-        if (dg.field_h > IntrusiveNode.field_d) {
+        if (TranslucentSpriteLayer.field_h > IntrusiveNode.field_d) {
           return -1;
         }
-        if (IntrusiveNode.field_d >= dg.field_h + cf.field_e) {
+        if (IntrusiveNode.field_d >= TranslucentSpriteLayer.field_h + cf.field_e) {
           return -1;
         }
         return AccountNameAvailabilityValidator.field_l;

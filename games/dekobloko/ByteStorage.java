@@ -20,7 +20,7 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int integerArgument1);
 
-    final static void performAction1061(int integerArgument1, int integerArgument2, byte byteArgument3, MixedSupport015 mixedSupport015Argument4, int integerArgument5, MixedSupport015 mixedSupport015Argument6) {
+    final static void performAction1061(int integerArgument1, int integerArgument2, byte byteArgument3, NineSliceSprite mixedSupport015Argument4, int integerArgument5, NineSliceSprite mixedSupport015Argument6) {
         try {
           if (byteArgument3 >= 0) {
             ByteStorage.performAction1060((byte) 1);
@@ -28,7 +28,7 @@ abstract class ByteStorage {
           MixedSupport076.integerState0433 = integerArgument1;
           PcmResampler.integerState0344 = integerArgument2;
           FullscreenCanvas.mixedSupport015State0004 = mixedSupport015Argument6;
-          ResourceSupport002.integerState0050 = integerArgument5;
+          DebouncedFieldValidator.integerState0050 = integerArgument5;
           MixedSupport047.mixedSupport015State0002 = mixedSupport015Argument4;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "mk.C(" + integerArgument1 + ',' + integerArgument2 + ',' + byteArgument3 + ',' + (mixedSupport015Argument4 != null ? "{...}" : "null") + ',' + integerArgument5 + ',' + (mixedSupport015Argument6 != null ? "{...}" : "null") + ')');
@@ -38,8 +38,8 @@ abstract class ByteStorage {
     final static void performAction1060(byte byteArgument1) {
         MixedSupport144 mixedSupport144Local1 = null;
         if (byteArgument1 != -5) {
-          MixedSupport015 mixedSupport015Local2 = (MixedSupport015) null;
-          ByteStorage.performAction1061(-94, -9, (byte) -115, (MixedSupport015) null, -10, (MixedSupport015) null);
+          NineSliceSprite mixedSupport015Local2 = (NineSliceSprite) null;
+          ByteStorage.performAction1061(-94, -9, (byte) -115, (NineSliceSprite) null, -10, (NineSliceSprite) null);
           mixedSupport144Local1 = (MixedSupport144) (MixedSupport018.nodeDequeState0005.removeFirst(byteArgument1 ^ 113));
           if (mixedSupport144Local1 == null) {
             throw new IllegalStateException();

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport025 {
-    static UiComponentPart013 uiComponentPart013State0001;
+    static LoginPanel uiComponentPart013State0001;
     static MixedSupport033 mixedSupport033State0001;
     static int integerState0151;
     static int integerState0152;

@@ -52,7 +52,7 @@ final class Bzip2State {
             if (var3 >= 6) {
               return;
             }
-            var4 = LocalizedStrings.field_p[var3];
+            var4 = ConfirmedEmailAvailabilityValidator.field_p[var3];
             if (var4 < wa.field_sb[var3]) {
               wa.field_sb[var3] = var4;
             }
@@ -70,7 +70,7 @@ final class Bzip2State {
           if (var3Lifetime1 >= 6) {
             return;
           }
-          var4Lifetime1 = LocalizedStrings.field_p[var3Lifetime1];
+          var4Lifetime1 = ConfirmedEmailAvailabilityValidator.field_p[var3Lifetime1];
           if (var4Lifetime1 < wa.field_sb[var3Lifetime1]) {
             wa.field_sb[var3Lifetime1] = var4Lifetime1;
           }
@@ -93,7 +93,7 @@ final class Bzip2State {
           if (param0 != -117) {
             Bzip2State.clearStaticReferences(68);
           }
-          stackIn_3_0 = ci.a(10, param1, -18, true);
+          stackIn_3_0 = AgeValidator.a(10, param1, -18, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

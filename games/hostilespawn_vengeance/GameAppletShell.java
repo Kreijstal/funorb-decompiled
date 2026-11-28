@@ -48,7 +48,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             field_h.getParent().remove((java.awt.Component) ((Object) field_h));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null == db.field_r) {
+          if (null == PasswordValidator.field_r) {
             if (DirectByteStorage.field_n != null) {
               var2 = DirectByteStorage.field_n;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -58,17 +58,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 var2 = te.field_E;
                 if (var4 != 0) {
                   var2 = p.field_a;
-                  var2 = db.field_r;
+                  var2 = PasswordValidator.field_r;
                 }
               } else {
                 var2 = p.field_a;
                 if (var4 != 0) {
-                  var2 = db.field_r;
+                  var2 = PasswordValidator.field_r;
                 }
               }
             }
           } else {
-            var2 = db.field_r;
+            var2 = PasswordValidator.field_r;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           field_h = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
@@ -177,7 +177,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             field_h.setSize(hf.field_h, SpriteGeometry.field_s);
             field_h.setVisible(true);
             boolean decompiledSharedTail0 = (DirectByteStorage.field_n != null &&
-              db.field_r == null);
+              PasswordValidator.field_r == null);
             if (!decompiledSharedTail0) {
               field_h.setLocation(sg.field_a, bb.field_d);
               decompiledSharedTail0 = (HostileSpawn.field_I);
@@ -187,7 +187,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               field_h.setLocation(sg.field_a + var6.left, bb.field_d + var6.top);
             }
           }
-          this.a((byte) -48);
+          this.renderFrame((byte) -48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           var1 = jc.field_b;
           synchronized (var1) {
             sg.field_o = sg.field_o + 1;
-            ig.field_L = mk.field_I;
+            EditableTextField.field_L = AccountRegistrationPanel.field_I;
             j.field_c = lc.field_d;
             rb.field_m = cm.field_b;
             SectorCacheStore.field_d = rg.field_e;
@@ -213,7 +213,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ec.field_a = rf.field_o;
             rc.field_b = pa.field_l;
             dc.field_d = 0;
-            el.field_m = cg.field_d;
+            ProxySocketFactory.field_m = cg.field_d;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -364,7 +364,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowDeiconified(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void a(byte param0);
+    abstract void renderFrame(byte param0);
 
     public final void windowClosing(java.awt.event.WindowEvent param0) {
         RuntimeException runtimeException = null;
@@ -408,7 +408,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             p.field_a.destroy();
           }
           try {
-            this.e(21085);
+            this.prepareGameShutdown(21085);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -433,7 +433,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.c(28);
+          this.releaseGameResources(28);
           if (DirectByteStorage.field_n != null) {
             try {
               System.exit(0);
@@ -500,7 +500,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void e(int param0);
+    abstract void prepareGameShutdown(int param0);
 
     public final void start() {
         if (this != te.field_E ||
@@ -577,7 +577,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void c(int param0);
+    abstract void releaseGameResources(int param0);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -612,8 +612,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = hn.correctedCurrentTimeMillis((byte) 80);
-          var4 = el.field_e[oa.field_f];
-          el.field_e[oa.field_f] = var2_long;
+          var4 = ProxySocketFactory.field_e[oa.field_f];
+          ProxySocketFactory.field_e[oa.field_f] = var2_long;
           if (0L != var4 &&
             var4 >= var2_long) {
           }
@@ -625,7 +625,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (!param0) {
             field_c = (String) null;
           }
-          this.b((byte) -35);
+          this.updateGameTick((byte) -35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -634,9 +634,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void a(int param0);
+    abstract void initializeGame(int param0);
 
-    abstract void b(byte param0);
+    abstract void updateGameTick(byte param0);
 
     public final java.applet.AppletContext getAppletContext() {
         RuntimeException var1 = null;
@@ -721,8 +721,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (sf.a((byte) 126, (CharSequence) ((Object) var4)) &&
-                        !(hi.a(109, (CharSequence) ((Object) var4)) >= 10)) {
+                      if (TextInputField.isDecimalInteger((byte) 126, (CharSequence) ((Object) var4)) &&
+                        !(TextFieldValidator.a(109, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a(3904, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -760,7 +760,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (stackIn_83_0 < stackIn_83_1) {
                     break;
                   }
-                  ei.field_i = true;
+                  DelayedPacket.field_i = true;
                   break;
                 }
               }
@@ -781,7 +781,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 ph.h(1048576);
                 this.b(-54);
                 o.field_n = rf.a(hf.field_h, (java.awt.Component) ((Object) field_h), SpriteGeometry.field_s, false);
-                this.a(-4323);
+                this.initializeGame(-4323);
                 vj.field_v = dd.c(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -921,7 +921,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (te.field_E == this &&
             !SecondaryNodeDequeIterator.field_c) {
             pc.field_a = true;
-            if (ei.field_i &&
+            if (DelayedPacket.field_i &&
               hn.correctedCurrentTimeMillis((byte) 80) - uc.field_c > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {

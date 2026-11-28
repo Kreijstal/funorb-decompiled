@@ -48,7 +48,7 @@ final class tj extends tk {
           if (null != ki.field_c) {
             ki.field_c.n(10);
           }
-          om.field_p = new w(param1, param2, false, true, true);
+          om.field_p = new LoginPanel(param1, param2, false, true, true);
           dn.field_b.a((fj) (om.field_p), (byte) -72);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "tj.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

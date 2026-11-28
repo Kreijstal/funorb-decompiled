@@ -185,11 +185,11 @@ final class wa implements de {
           } else {
             if (var2 == 1) {
               var4 = var9.readSignedSmart((byte) 43);
-              var5 = (dg) (vb.field_k.beginForward(param0 ^ 3876));
+              var5 = (dg) (MatchingFieldValidator.field_k.beginForward(param0 ^ 3876));
               while (var5 != null) {
                 if (var5.field_k != var3 ||
                   var5.field_f != var4) {
-                  var5 = (dg) (vb.field_k.nextForward(-16913));
+                  var5 = (dg) (MatchingFieldValidator.field_k.nextForward(-16913));
                   continue;
                 }
                 break;

@@ -6,7 +6,7 @@ final class pb {
 
     final static void b(int param0) {
         int var1 = -66 % ((param0 + 11) / 59);
-        BufferedSocket.field_g = new kh();
+        BufferedSocket.field_g = new AccountRegistrationPanel();
         t.field_h.c(20317, BufferedSocket.field_g);
     }
 
@@ -32,7 +32,7 @@ final class pb {
         }
         AccountRequestState.field_e = var3 & 127;
         stackIn_5_0 = ((var3 & 128) != 0);
-        cf.field_r = stackIn_5_0;
+        ConfirmedEmailAvailabilityValidator.field_r = stackIn_5_0;
         lj.field_i = var8.readUnsignedByte(7909);
         ne.field_d = var8.readLong((byte) 5);
         if (AccountRequestState.field_e == 2) {

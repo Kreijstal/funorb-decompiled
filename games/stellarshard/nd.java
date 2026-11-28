@@ -217,14 +217,14 @@ final class nd extends ig {
           if (null != e.field_a) {
             try {
               e.field_a.seek(0L, 0);
-              e.field_a.write(24, ae.field_N.position, -1, ae.field_N.payload);
+              e.field_a.write(24, EditableTextField.field_N.position, -1, EditableTextField.field_N.payload);
             } catch (Exception exception) {
             }
           }
           if (param0 != -26923) {
             return;
           }
-          ae.field_N.position = ae.field_N.position + 24;
+          EditableTextField.field_N.position = EditableTextField.field_N.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

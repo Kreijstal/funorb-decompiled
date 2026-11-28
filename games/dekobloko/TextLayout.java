@@ -338,7 +338,7 @@ abstract class TextLayout {
             integerArrayLocal7 = integerArrayLocal11;
             integerLocal9 = integerArgument1;
             integerLocal10 = integerArgument4;
-            integerArrayLocal11[integerLocal9] = integerLocal10 + (MixedSupport075.computeInteger0930(16711422, integerArrayLocal11[integerLocal9]) >> 1);
+            integerArrayLocal11[integerLocal9] = integerLocal10 + (PlayerBoardUpdateQueue.bitwiseAnd(16711422, integerArrayLocal11[integerLocal9]) >> 1);
             integerArgument1++;
             integerArgument5--;
           }

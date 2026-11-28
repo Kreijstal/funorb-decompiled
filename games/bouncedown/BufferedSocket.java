@@ -107,7 +107,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            ti.a((Throwable) ((Object) var1_ref), (byte) 100, (String) null);
+            ValidatedTextField.a((Throwable) ((Object) var1_ref), (byte) 100, (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -387,7 +387,7 @@ final class BufferedSocket implements Runnable {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          bf.field_o.d(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
+          PasswordValidator.field_o.d(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

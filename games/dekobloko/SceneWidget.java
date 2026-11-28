@@ -481,11 +481,11 @@ class SceneWidget extends SceneWidgetNode {
         if (!SceneWidgetPart002.booleanState0051 &&
           booleanArgument3 &&
           0 != SceneWidgetPart005.integerState0328 &&
-          UiComponentPart013.integerState0276 >= SoftwareRaster.integerState0282 &&
-          SoftwareRaster.integerState0281 > UiComponentPart013.integerState0276 &&
+          LoginPanel.integerState0276 >= SoftwareRaster.integerState0282 &&
+          SoftwareRaster.integerState0281 > LoginPanel.integerState0276 &&
           SoftwareRaster.integerState0280 <= TextLineMetrics.integerState0535 &&
           TextLineMetrics.integerState0535 < SoftwareRaster.integerState0283) {
-          this.integerState0897 = -this.integerState0892 + UiComponentPart013.integerState0276;
+          this.integerState0897 = -this.integerState0892 + LoginPanel.integerState0276;
           this.integerState0894 = -this.integerState0886 + TextLineMetrics.integerState0535;
           this.integerState0888 = SceneWidgetPart005.integerState0328;
           integerLocal8 = 1;

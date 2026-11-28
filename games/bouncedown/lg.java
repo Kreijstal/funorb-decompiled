@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lg {
-    static gh field_b;
+    static AccountRegistrationPanel field_b;
     static boolean[] field_c;
     static int field_a;
 

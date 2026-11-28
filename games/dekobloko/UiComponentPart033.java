@@ -8,7 +8,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
     static SceneWidget sceneWidgetState0150;
     static NetworkSupport012 networkSupport012State0001;
     private boolean booleanState0225;
-    private UiComponentPart031 uiComponentPart031State0002;
+    private AccountRegistrationPanel uiComponentPart031State0002;
     static String stringState0623;
     private boolean booleanState0226;
     static MixedSupport116 mixedSupport116State0004;
@@ -17,7 +17,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
     final boolean computeBoolean0169(byte byteArgument1) {
         MixedSupport016 mixedSupport016Local1 = null;
         if (byteArgument1 <= 15) {
-          this.uiComponentPart031State0002 = (UiComponentPart031) null;
+          this.uiComponentPart031State0002 = (AccountRegistrationPanel) null;
         }
         if (this.booleanState0011 &&
           !this.booleanState0225) {
@@ -32,7 +32,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
     final static void performAction1819(int integerArgument1) {
         SceneWidgetPart007.booleanState0113 = false;
         int integerLocal1 = -22 % ((-14 - integerArgument1) / 35);
-        UiComponentPart032.booleanState0198 = false;
+        BirthDateInput.booleanState0198 = false;
         MouseWheelInput.performAction0670(-1, (byte) -122);
         UiComponentPart016.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
         GameAssets.mixedSupport004State0004 = MixedSupport127.mixedSupport004State0005;
@@ -167,7 +167,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         }
     }
 
-    UiComponentPart033(UiComponentPart016 uiComponentPart016Argument1, UiComponentPart031 uiComponentPart031Argument2) {
+    UiComponentPart033(UiComponentPart016 uiComponentPart016Argument1, AccountRegistrationPanel uiComponentPart031Argument2) {
         super(uiComponentPart016Argument1, GameDomainSupport002.bitmapFontState0012, NodeHashTableIterator.stringState0098, false, false);
         try {
           this.uiComponentPart031State0002 = uiComponentPart031Argument2;
@@ -223,7 +223,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
               uiComponentPart008Local7.performAction0371(UiComponent.stringState0079, 7, 14);
             } else {
               if (mixedSupport016Argument2.integerState0101 == 6) {
-                uiComponentPart008Local7.performAction0371(UiComponentPart032.stringState0580, 9, 14);
+                uiComponentPart008Local7.performAction0371(BirthDateInput.stringState0580, 9, 14);
               }
             }
           } else {
@@ -363,7 +363,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         }
         NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 = integerLocal15 - NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915;
         if (LoginCredentials.booleanState0085 &&
-          UiComponentPart031.sceneWidgetState0116 != null) {
+          AccountRegistrationPanel.sceneWidgetState0116 != null) {
           ProxySocketFactory.booleanState0169 = true;
         }
         integerLocal17 = -NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 - (NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 - NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0089.integerState0915);

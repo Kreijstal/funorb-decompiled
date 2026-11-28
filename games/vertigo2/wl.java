@@ -51,7 +51,7 @@ final class wl {
             var6 = var6 | 16;
           }
           uh.field_Wb.writeByte(var6, -127);
-          var7 = Bzip2State.a(ob.e((byte) 66), (byte) 114);
+          var7 = Bzip2State.a(LoginPanel.e((byte) 66), (byte) 114);
           if (null == var7) {
             var7 = "";
           }

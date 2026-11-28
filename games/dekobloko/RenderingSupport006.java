@@ -392,9 +392,9 @@ final class RenderingSupport006 extends HashNode {
                   }
                   integerLocal36 = -integerLocal13 + (integerLocal20 + integerLocal21 + 1);
                   integerLocal37 = 1 + integerLocal23 + integerLocal22 - integerLocal15;
-                  integerLocal38 = 150 + UiComponentPart016.computeInteger0830((byte) 116, 51, UiComponentPart031.randomState0003);
+                  integerLocal38 = 150 + UiComponentPart016.computeInteger0830((byte) 116, 51, AccountRegistrationPanel.randomState0003);
                   integerLocal39 = integerLocal38;
-                  integerLocal30 = -8 + UiComponentPart016.computeInteger0830((byte) 50, 17, UiComponentPart031.randomState0003);
+                  integerLocal30 = -8 + UiComponentPart016.computeInteger0830((byte) 50, 17, AccountRegistrationPanel.randomState0003);
                   integerLocal31 = (integerLocal30 << 24) + (integerLocal39 << 16) + ((integerLocal37 << 8 & 65280) + (255 & integerLocal36));
                   for (integerLocal7 = 0; integerLocal7 < integerLocal25; integerLocal7++) {
                     integerLocal32 = integerArrayLocal34[integerLocal7];
@@ -492,7 +492,7 @@ final class RenderingSupport006 extends HashNode {
     }
 
     final static void performAction0749(byte byteArgument1) {
-        ProxyAuthenticationRequiredException.performAction0332(byteArgument1 - 76, PasswordValidator.stringState0527, SceneWidgetPart013.stringState0586, true);
+        ProxyAuthenticationRequiredException.performAction0332(byteArgument1 - 76, PasswordValidator.stringState0527, LobbyRoomRow.stringState0586, true);
         MixedSupport023.booleanState0025 = true;
         if (byteArgument1 != -51) {
           MixedSupport129 mixedSupport129Local1 = (MixedSupport129) null;

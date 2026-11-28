@@ -103,7 +103,7 @@ final class vc {
         bs var1Lifetime1;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          var1 = (bs) (mk.field_J.beginBackward((byte) 100));
+          var1 = (bs) (AccountRegistrationPanel.field_J.beginBackward((byte) 100));
           while (var1 != null) {
             if (var1.field_Ub > 0) {
               var1.field_Ub = var1.field_Ub - 1;
@@ -114,7 +114,7 @@ final class vc {
                 }
               }
             }
-            var1 = (bs) (mk.field_J.nextBackward(103));
+            var1 = (bs) (AccountRegistrationPanel.field_J.nextBackward(103));
           }
           if (param0 != -59) {
             field_a = (String) null;
@@ -193,15 +193,15 @@ final class vc {
           uo.field_f[ff.field_b] = null;
           return var2_ref_byte__Lifetime2;
         }
-        if (df.field_j != null) {
+        if (BirthDateValidator.field_j != null) {
           for (var2 = 0; ue.field_M.length > var2; var2++) {
             if (param0 == ue.field_M[var2] &&
               BitPacketBuffer.field_w[var2] > 0) {
               dupTemp$3 = BitPacketBuffer.field_w[var2] - 1;
-              arrayValue$4 = df.field_j[var2];
+              arrayValue$4 = BirthDateValidator.field_j[var2];
               BitPacketBuffer.field_w[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              df.field_j[var2][BitPacketBuffer.field_w[var2]] = null;
+              BirthDateValidator.field_j[var2][BitPacketBuffer.field_w[var2]] = null;
               return var3;
             }
           }

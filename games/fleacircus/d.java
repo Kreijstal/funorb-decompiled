@@ -317,7 +317,7 @@ final class d extends bb {
           if (param20 != 255) {
             field_Q = false;
           }
-          ai.a(param10, param1, param9, false);
+          EmailFormatValidator.a(param10, param1, param9, false);
           mh.a(param12, 1, param18, param13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -90,7 +90,7 @@ final class MixedSupport031 {
           integerArrayLocal6 = new int[8];
           integerArrayLocal2 = integerArrayLocal6;
           for (integerLocal1 = 0; integerLocal1 < 8; integerLocal1++) {
-            integerArrayLocal6[integerLocal1] = MixedSupport075.computeInteger0930(integerArrayArgument2[integerLocal1], integerArrayArgument1[integerLocal1]);
+            integerArrayLocal6[integerLocal1] = PlayerBoardUpdateQueue.bitwiseAnd(integerArrayArgument2[integerLocal1], integerArrayArgument1[integerLocal1]);
           }
           stackIntegerArrayLocal7 = integerArrayLocal2;
           return stackIntegerArrayLocal7;

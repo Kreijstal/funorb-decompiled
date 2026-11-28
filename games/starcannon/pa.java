@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa extends ab {
-    private he field_O;
+    private FieldValidator field_O;
     private String field_M;
     private Sprite field_K;
     private int field_N;
@@ -10,7 +10,7 @@ final class pa extends ab {
     static String field_J;
     static Sprite[] field_I;
 
-    pa(he param0, String param1, int param2, int param3, int param4, int param5) {
+    pa(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, lb.b((byte) -127));
         try {
           this.field_M = param1;
@@ -289,14 +289,14 @@ final class pa extends ab {
         var26 = null;
         var31 = null;
         var13 = StarCannon.field_A;
-        var6 = this.field_O.b((byte) -121);
+        var6 = this.field_O.getValidationStatus((byte) -121);
         if (var6 == cg.field_g) {
           var17 = dh.field_b;
           if (!var17.equals(this.field_k)) {
             this.field_k = var17;
             this.f((byte) 114);
             super.a(param0, param1, param2, param3);
-            var6 = this.field_O.b((byte) -127);
+            var6 = this.field_O.getValidationStatus((byte) -127);
             var35 = (lg) ((Object) this.field_o);
             var9 = this.field_s + param1;
             var10 = var35.a((byte) -95, (UiWidget) (this), param3) + (var35.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
@@ -332,7 +332,7 @@ final class pa extends ab {
             return;
           }
           super.a(param0, param1, param2, param3);
-          var6 = this.field_O.b((byte) -127);
+          var6 = this.field_O.getValidationStatus((byte) -127);
           var36 = (lg) ((Object) this.field_o);
           var9Lifetime3 = this.field_s + param1;
           var10Lifetime3 = var36.a((byte) -95, (UiWidget) (this), param3) + (var36.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
@@ -376,7 +376,7 @@ final class pa extends ab {
           return;
         }
         if (cd.field_a != var6) {
-          var5 = this.field_O.a(26162);
+          var5 = this.field_O.getValidationMessage(26162);
           if (var5 == null) {
             var5 = this.field_M;
           }
@@ -385,7 +385,7 @@ final class pa extends ab {
         }
         if (var5.equals(this.field_k)) {
           super.a(param0, param1, param2, param3);
-          var6Lifetime1 = this.field_O.b((byte) -127);
+          var6Lifetime1 = this.field_O.getValidationStatus((byte) -127);
           var38 = (lg) ((Object) this.field_o);
           var9Lifetime1 = this.field_s + param1;
           var10Lifetime1 = var38.a((byte) -95, (UiWidget) (this), param3) + (var38.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
@@ -431,7 +431,7 @@ final class pa extends ab {
         this.field_k = var5;
         this.f((byte) 114);
         super.a(param0, param1, param2, param3);
-        var6Lifetime2 = this.field_O.b((byte) -127);
+        var6Lifetime2 = this.field_O.getValidationStatus((byte) -127);
         var37 = (lg) ((Object) this.field_o);
         var9Lifetime2 = this.field_s + param1;
         var10Lifetime2 = var37.a((byte) -95, (UiWidget) (this), param3) + (var37.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);

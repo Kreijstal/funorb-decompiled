@@ -599,7 +599,7 @@ final class wp extends tga {
                       }
                     }
                   } else {
-                    var21 = ph.field_N;
+                    var21 = LoginPanel.field_N;
                   }
                 } else {
                   var21 = hk.field_a;

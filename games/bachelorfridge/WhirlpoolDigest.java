@@ -239,7 +239,7 @@ final class WhirlpoolDigest {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_o[var2] = gv.a(gv.a(gv.a(gv.a(gv.a(gv.a(gv.a((long)this.field_i[var3] << 56, gda.a(255L, (long)this.field_i[var3 + 1]) << 48), gda.a(280375465082880L, (long)this.field_i[var3 + 2] << 40)), gda.a((long)this.field_i[var3 + 3] << 32, 1095216660480L)), gda.a(4278190080L, (long)this.field_i[var3 + 4] << 24)), gda.a(255L, (long)this.field_i[5 + var3]) << 16), gda.a((long)this.field_i[6 + var3] << 8, 65280L)), gda.a(255L, (long)this.field_i[7 + var3]));
+          this.field_o[var2] = gv.a(gv.a(gv.a(gv.a(gv.a(gv.a(gv.a((long)this.field_i[var3] << 56, DisplayNameSelectionPanel.a(255L, (long)this.field_i[var3 + 1]) << 48), DisplayNameSelectionPanel.a(280375465082880L, (long)this.field_i[var3 + 2] << 40)), DisplayNameSelectionPanel.a((long)this.field_i[var3 + 3] << 32, 1095216660480L)), DisplayNameSelectionPanel.a(4278190080L, (long)this.field_i[var3 + 4] << 24)), DisplayNameSelectionPanel.a(255L, (long)this.field_i[5 + var3]) << 16), DisplayNameSelectionPanel.a((long)this.field_i[6 + var3] << 8, 65280L)), DisplayNameSelectionPanel.a(255L, (long)this.field_i[7 + var3]));
           var3 += 8;
           var2++;
         }

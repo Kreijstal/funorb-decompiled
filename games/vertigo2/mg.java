@@ -405,8 +405,8 @@ final class mg extends WidgetWrapper {
                 var9 >= 0) {
                 if (MouseWheelInput.field_b != null &&
                   null != MouseWheelInput.field_b[var7] &&
-                  (MouseWheelInput.field_b[var7][var9] & ~ob.field_L) > 0) {
-                  var15 = ib.a(~ob.field_L & MouseWheelInput.field_b[var7][var9], (byte) 79);
+                  (MouseWheelInput.field_b[var7][var9] & ~LoginPanel.field_L) > 0) {
+                  var15 = ib.a(~LoginPanel.field_L & MouseWheelInput.field_b[var7][var9], (byte) 79);
                   var14 = 1;
                 }
                 if (null != sf.field_f &&
@@ -525,9 +525,9 @@ final class mg extends WidgetWrapper {
               }
               if (var9 >= 0 &&
                 var17.field_G) {
-                if (null != rf.field_m) {
-                  if (rf.field_m[var7] != null) {
-                    var18_ref = rf.field_m[var7][var9];
+                if (null != MatchingFieldValidator.field_m) {
+                  if (MatchingFieldValidator.field_m[var7] != null) {
+                    var18_ref = MatchingFieldValidator.field_m[var7][var9];
                   } else {
                     var18_ref = null;
                   }

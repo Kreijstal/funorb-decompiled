@@ -51,7 +51,7 @@ final class wa {
         if (param0 != -1) {
           return (String) null;
         }
-        return ae.field_N.readString((byte) 91);
+        return EditableTextField.field_N.readString((byte) 91);
     }
 
     public static void b(int param0) {

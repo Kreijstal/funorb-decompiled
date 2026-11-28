@@ -109,7 +109,7 @@ final class SectorCacheStore {
         int var3 = Main.field_T;
         wb[] var1 = new wb[cf.field_c];
         for (var2 = 0; var2 < cf.field_c; var2++) {
-          var1[var2] = new wb(p.field_l, FrameTimer.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], rd.field_k[var2], ImageProducerRasterBuffer.field_i);
+          var1[var2] = new wb(ConfirmedEmailAvailabilityValidator.field_l, FrameTimer.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], EmailFormatValidator.field_k[var2], ImageProducerRasterBuffer.field_i);
         }
         rh.d(param0 ^ -3343315);
         if (param0 != 3343272) {

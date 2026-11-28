@@ -332,7 +332,7 @@ public final class stellarshard extends rb implements cf {
             DualLinkDequeIterator.field_e.focusLost) {
             ke.a(4);
             nd.a(-26621, DualLinkDequeIterator.field_e);
-            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -57);
+            DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -57);
             qd.field_j.requestFocus();
             DualLinkDequeIterator.field_e = null;
           }
@@ -400,7 +400,7 @@ public final class stellarshard extends rb implements cf {
                           break;
                         }
                         nd.a(-26621, DualLinkDequeIterator.field_e);
-                        DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -71);
+                        DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -71);
                         DualLinkDequeIterator.field_e = null;
                         qd.field_j.requestFocus();
                       default:
@@ -413,7 +413,7 @@ public final class stellarshard extends rb implements cf {
                       case 2:
                         if (null != DualLinkDequeIterator.field_e) {
                           nd.a(-26621, DualLinkDequeIterator.field_e);
-                          DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -15);
+                          DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -15);
                           DualLinkDequeIterator.field_e = null;
                           qd.field_j.requestFocus();
                         }
@@ -432,7 +432,7 @@ public final class stellarshard extends rb implements cf {
                   if (var2_int == 2 &&
                     DualLinkDequeIterator.field_e != null) {
                     nd.a(-26621, DualLinkDequeIterator.field_e);
-                    DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -15);
+                    DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -15);
                     DualLinkDequeIterator.field_e = null;
                     qd.field_j.requestFocus();
                   }
@@ -487,7 +487,7 @@ public final class stellarshard extends rb implements cf {
               !e.field_c &&
               !DualLinkNode.a(-1)) {
               ue.field_a = param1;
-              bi.field_u = bb.a(5, IntrusiveNode.field_i, cl.field_a, si.field_gb, 3, new int[]{param1}, 65530, 0, qb.field_k);
+              bi.field_u = bb.a(5, IntrusiveNode.field_i, cl.field_a, si.field_gb, 3, new int[]{param1}, 65530, 0, EmailFormatValidator.field_k);
               if (field_B == 0) {
                 return;
               }
@@ -544,8 +544,8 @@ public final class stellarshard extends rb implements cf {
               this.field_H.a(sg.field_a, 19);
               sg.field_a.setAxisAngle(0.0, 0.0, 1.0, (byte) -20, 0.5);
               this.field_H.a(sg.field_a, 103);
-              ea.field_m = new Sprite(80, 160);
-              ea.field_m.e();
+              MatchingFieldValidator.field_m = new Sprite(80, 160);
+              MatchingFieldValidator.field_m.e();
               var5 = 0;
               break;
             }
@@ -600,8 +600,8 @@ public final class stellarshard extends rb implements cf {
               var5++;
               continue scanLoop1;
             }
-            lc.field_k = new Sprite(640, 480);
-            lc.field_k.e();
+            PasswordValidator.field_k = new Sprite(640, 480);
+            PasswordValidator.field_k.e();
             stackIn_33_0 = 0;
             break;
           }
@@ -652,8 +652,8 @@ public final class stellarshard extends rb implements cf {
               stackIn_62_1 = 0;
             }
             AudioMixer.configureAudio(stackIn_62_0, stackIn_62_1 != 0, 10);
-            GameApplet.field_h = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
-            PacketBuffer.field_m = AudioMixer.createOutput(ic.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
+            GameApplet.field_h = AudioMixer.createOutput(DebouncedFieldValidator.field_d, (java.awt.Component) ((Object) qd.field_j), 0, 512);
+            PacketBuffer.field_m = AudioMixer.createOutput(DebouncedFieldValidator.field_d, (java.awt.Component) ((Object) qd.field_j), 1, 22050);
             ll.field_c = new PcmStreamMixer();
             nj.field_o = new PcmStreamMixer();
             GameApplet.field_h.setRootStream(ll.field_c);
@@ -683,7 +683,7 @@ public final class stellarshard extends rb implements cf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          a.entities[pl.e((byte) 63)] = new GameEntity(-1);
+          a.entities[ValidatedTextField.e((byte) 63)] = new GameEntity(-1);
           ue.field_a = 0;
           bi.field_u = null;
           cl.field_a = cl.field_a + te.field_c;
@@ -873,7 +873,7 @@ public final class stellarshard extends rb implements cf {
           if (si.field_jb[84]) {
             v.field_e = false;
           }
-          qb.field_k = qb.field_k + 1;
+          EmailFormatValidator.field_k = EmailFormatValidator.field_k + 1;
           lg.field_f = lg.field_f - 1;
           hk.field_p = hk.field_p + 1;
           if (10 < ArchiveRequest.field_s) {
@@ -885,7 +885,7 @@ public final class stellarshard extends rb implements cf {
           }
           cl.field_a = cl.field_a + 1;
           if (0 != gh.field_c) {
-            qb.field_k = qb.field_k - IntrusiveNode.field_i;
+            EmailFormatValidator.field_k = EmailFormatValidator.field_k - IntrusiveNode.field_i;
             si.field_gb = si.field_gb + 1;
             hk.field_p = hk.field_p + lh.field_d;
             ed.field_b = ed.field_b + 1;
@@ -1822,10 +1822,10 @@ public final class stellarshard extends rb implements cf {
                     boolean decompiledFrameCompleted9 = true;
                     boolean decompiledFrameCompleted8 = true;
                     if (var4 == 0) {
-                      fieldTemp$13 = mj.field_F + 1;
-                      mj.field_F = mj.field_F + 1;
+                      fieldTemp$13 = AccountRegistrationPanel.field_F + 1;
+                      AccountRegistrationPanel.field_F = AccountRegistrationPanel.field_F + 1;
                       if (fieldTemp$13 > 1) {
-                        mj.field_F = 0;
+                        AccountRegistrationPanel.field_F = 0;
                       }
                       a.entities[0].field_i = 10;
                       var4 = -4;
@@ -1847,9 +1847,9 @@ public final class stellarshard extends rb implements cf {
                           break;
                         }
                         if (stackIn_993_0 == stackIn_993_1 &&
-                          mj.field_F == 0 ||
+                          AccountRegistrationPanel.field_F == 0 ||
                           var4 != 0 &&
-                          1 == mj.field_F) {
+                          1 == AccountRegistrationPanel.field_F) {
                           var2_ref.field_q = 8421631;
                         }
                         wk.field_b[eg.a(-109)] = var2_ref;
@@ -1860,10 +1860,10 @@ public final class stellarshard extends rb implements cf {
                     if ((decompiledFrameRemainder20) &&
                       (decompiledFrameCompleted9)) {
                       if (var4 == 1) {
-                        fieldTemp$14 = mj.field_F + 1;
-                        mj.field_F = mj.field_F + 1;
+                        fieldTemp$14 = AccountRegistrationPanel.field_F + 1;
+                        AccountRegistrationPanel.field_F = AccountRegistrationPanel.field_F + 1;
                         if (fieldTemp$14 > 1) {
-                          mj.field_F = 0;
+                          AccountRegistrationPanel.field_F = 0;
                         }
                         a.entities[0].field_i = 5;
                         var4 = -3;
@@ -1886,9 +1886,9 @@ public final class stellarshard extends rb implements cf {
                             break;
                           }
                           if (stackIn_993_0 >= stackIn_993_1 &&
-                            mj.field_F == 0 ||
+                            AccountRegistrationPanel.field_F == 0 ||
                             !(Math.abs(var4) <= 1) &&
-                            mj.field_F == 1) {
+                            AccountRegistrationPanel.field_F == 1) {
                             var2_refLifetime2.field_q = 16760896;
                           }
                           var4 += 2;
@@ -1900,23 +1900,23 @@ public final class stellarshard extends rb implements cf {
                         if (var4 == 2 &&
                           var15 == 0) {
                           a.entities[0].field_i = 6;
-                          fieldTemp$15 = mj.field_F + 1;
-                          mj.field_F = mj.field_F + 1;
+                          fieldTemp$15 = AccountRegistrationPanel.field_F + 1;
+                          AccountRegistrationPanel.field_F = AccountRegistrationPanel.field_F + 1;
                           if (fieldTemp$15 > 3) {
-                            mj.field_F = 0;
+                            AccountRegistrationPanel.field_F = 0;
                           }
                           var4 = -1;
                           while (var4 <= 1) {
                             var2_refLifetime2 = new vl(0, a.entities[0]);
                             stackIn_981_0 = ~var4;
                             if (stackIn_981_0 == 0) {
-                              mj.field_F = 3 - mj.field_F;
+                              AccountRegistrationPanel.field_F = 3 - AccountRegistrationPanel.field_F;
                             }
-                            var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(a.entities[0].heading + 4 * (1 + mj.field_F) * var4) * 2.0 / 256.0) * 6.0;
-                            var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)(a.entities[0].heading + (mj.field_F + 1) * (var4 * 4)) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
+                            var2_refLifetime2.field_j = var2_refLifetime2.field_j - Math.sin(3.141592653589793 * (double)(a.entities[0].heading + 4 * (1 + AccountRegistrationPanel.field_F) * var4) * 2.0 / 256.0) * 6.0;
+                            var2_refLifetime2.field_a = var2_refLifetime2.field_a - Math.cos((double)(a.entities[0].heading + (AccountRegistrationPanel.field_F + 1) * (var4 * 4)) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
                             var2_refLifetime2.field_c = var2_refLifetime2.field_j * 3.0 + a.entities[0].x;
                             if (var4 == -1) {
-                              mj.field_F = -mj.field_F + 3;
+                              AccountRegistrationPanel.field_F = -AccountRegistrationPanel.field_F + 3;
                             }
                             var2_refLifetime2.field_k = a.entities[0].y + var2_refLifetime2.field_a * 3.0;
                             var2_refLifetime2.field_j = var2_refLifetime2.field_j + a.entities[0].velocityX;
@@ -1925,9 +1925,9 @@ public final class stellarshard extends rb implements cf {
                             var2_refLifetime2.field_p = 4;
                             var2_refLifetime2.field_n = e.field_e;
                             if (var4 == 0 &&
-                              0 == mj.field_F % 2 ||
+                              0 == AccountRegistrationPanel.field_F % 2 ||
                               var4 != 0 &&
-                              mj.field_F % 2 == 1) {
+                              AccountRegistrationPanel.field_F % 2 == 1) {
                               var2_refLifetime2.field_q = 8421631;
                             }
                             wk.field_b[eg.a(-51)] = var2_refLifetime2;
@@ -2283,13 +2283,13 @@ public final class stellarshard extends rb implements cf {
                     (decompiledFrameCompleted5) &&
                     (decompiledFrameCompleted4) &&
                     (decompiledFrameCompleted3)) {
-                    fieldTemp$17 = mj.field_F + 1;
-                    mj.field_F = mj.field_F + 1;
+                    fieldTemp$17 = AccountRegistrationPanel.field_F + 1;
+                    AccountRegistrationPanel.field_F = AccountRegistrationPanel.field_F + 1;
                     if (fieldTemp$17 > 4) {
-                      mj.field_F = 0;
+                      AccountRegistrationPanel.field_F = 0;
                     }
                     a.entities[0].field_i = 5;
-                    var4 = mj.field_F - 1;
+                    var4 = AccountRegistrationPanel.field_F - 1;
                     if (var4 == 2) {
                       var4 = 0;
                     }
@@ -2816,7 +2816,7 @@ public final class stellarshard extends rb implements cf {
         try {
           if (null != DualLinkDequeIterator.field_e) {
             nd.a(-26621, DualLinkDequeIterator.field_e);
-            DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -101);
+            DualLinkDequeIterator.field_e.exitFullscreen(DebouncedFieldValidator.field_d, -101);
             DualLinkDequeIterator.field_e = null;
             qd.field_j.requestFocus();
           }
@@ -2910,10 +2910,10 @@ public final class stellarshard extends rb implements cf {
           AccountCreationResultPanel.clearStaticReferences(true);
           pg.clearDeclaredStaticReferences(7694);
           ck.m(-121);
-          mj.l(120);
+          AccountRegistrationPanel.l(120);
           se.clearStaticReferences((byte) 9);
-          la.clearStaticReferences(param0 ^ -16);
-          lj.clearStaticReferences(120);
+          LoginPanel.clearStaticReferences(param0 ^ -16);
+          DisplayNameSelectionPanel.clearStaticReferences(120);
           am.clearStaticReferences(param0 ^ 36);
           hc.clearStaticReferences(param0 ^ -21153);
           lg.clearStaticReferences(param0 ^ 69);
@@ -3005,8 +3005,8 @@ public final class stellarshard extends rb implements cf {
           sc.clearStaticReferences();
           gh.clearStaticReferences((byte) 125);
           we.clearStaticReferences((byte) 116);
-          pl.clearStaticReferences(0);
-          ae.m(122);
+          ValidatedTextField.clearStaticReferences(0);
+          EditableTextField.m(122);
           wl.clearStaticReferences(115);
           nc.clearStaticReferences(true);
           ul.clearStaticReferences(160);
@@ -3014,7 +3014,7 @@ public final class stellarshard extends rb implements cf {
           ii.clearStaticReferences((byte) 25);
           cd.clearStaticReferences((byte) 122);
           nd.clearStaticReferences(-94);
-          lk.clearStaticReferences(67);
+          TextFieldValidator.clearStaticReferences(67);
           aj.clearStaticReferences((byte) 101);
           sj.clearStaticReferences((byte) 23);
           fg.clearStaticReferences(param0 ^ -128);
@@ -3066,15 +3066,15 @@ public final class stellarshard extends rb implements cf {
           le.a(param0 ^ 63);
           uj.clearStaticReferences(0);
           AccountNameAvailabilityValidator.clearStaticReferences(false);
-          lc.clearDeclaredStaticReferences(3988);
-          qb.g(21403);
-          ef.clearStaticReferences(false);
-          kk.clearStaticReferences((byte) -61);
-          ea.g((byte) 117);
+          PasswordValidator.clearDeclaredStaticReferences(3988);
+          EmailFormatValidator.g(21403);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences(false);
+          AgeValidator.clearStaticReferences((byte) -61);
+          MatchingFieldValidator.g((byte) 117);
           rd.a((byte) -83);
           ja.clearStaticReferences((byte) -121);
           cg.clearStaticReferences(param0 - 26686);
-          ic.d((byte) 37);
+          DebouncedFieldValidator.d((byte) 37);
           wb.clearStaticReferences(param0 ^ 61);
           this.field_G = null;
           this.field_H = null;
@@ -3242,7 +3242,7 @@ public final class stellarshard extends rb implements cf {
                           rg.g(-33);
                           return;
                         }
-                        rd.a((byte) -115, 60.0f, ak.a("", he.field_o, jf.field_m, (byte) 51, lj.field_B));
+                        rd.a((byte) -115, 60.0f, ak.a("", he.field_o, jf.field_m, (byte) 51, DisplayNameSelectionPanel.field_B));
                         return;
                       }
                       rd.a((byte) -105, 50.0f, ak.a("", mb.field_c, MouseHandler.field_d, (byte) 51, le.field_l));
@@ -3274,7 +3274,7 @@ public final class stellarshard extends rb implements cf {
             vf.field_L = MouseWheelInput.field_c;
             lg.field_b = 5883647;
             aj.a(50, 11236);
-            ef.a(50, (byte) 63);
+            ConfirmedEmailAvailabilityValidator.a(50, (byte) 63);
             MouseWheelInput.field_c = new d(oe.field_a);
             if (vf.field_L != null) {
               nj.field_o.b(vf.field_L);
@@ -3293,7 +3293,7 @@ public final class stellarshard extends rb implements cf {
             return;
           }
           if (null == cm.field_d[0]) {
-            rd.a((byte) -127, 75.0f, ea.field_k);
+            rd.a((byte) -127, 75.0f, MatchingFieldValidator.field_k);
             this.d(-20880);
             qd.a(bh.field_a, "space", "", (byte) 42);
             qd.a(bh.field_a, "nebula", "", (byte) 73);
@@ -3330,7 +3330,7 @@ public final class stellarshard extends rb implements cf {
             return;
           }
           if (cg.field_c < 16) {
-            rd.a((byte) -47, (float)(80 + cg.field_c), ea.field_k);
+            rd.a((byte) -47, (float)(80 + cg.field_c), MatchingFieldValidator.field_k);
             this.d(-20880);
             var3 = null;
             var4_int = 0;
@@ -3486,7 +3486,7 @@ public final class stellarshard extends rb implements cf {
             fg.field_P = AccountServiceResult.a("", (byte) 124, bh.field_a, "frame");
             fg.field_P[4] = null;
             wc.field_s = qd.a(bh.field_a, "stel", "", (byte) 107);
-            pl.field_R = qd.a(bh.field_a, "lar", "", (byte) 93);
+            ValidatedTextField.field_R = qd.a(bh.field_a, "lar", "", (byte) 93);
             aa.field_b = qd.a(bh.field_a, "central_iceblock", "", (byte) 81);
             AccountServiceResult.a("", (byte) -32, bh.field_a, "menu");
             rh.field_a = new Sprite[12];
@@ -3556,7 +3556,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (decompiledNaturalLoopExit0) {
               qd.a(bh.field_a, "title", "", (byte) 119);
-              qj.field_a = ae.a("", "b12", bh.field_a, -115, MouseHandler.field_d);
+              qj.field_a = EditableTextField.a("", "b12", bh.field_a, -115, MouseHandler.field_d);
               stackIn_226_0 = 7;
             }
             var4_array = new ek[stackIn_226_0];
@@ -3577,7 +3577,7 @@ public final class stellarshard extends rb implements cf {
             var4_array[5] = DiskArchiveRequest.a("keyboard_right", bh.field_a, (byte) -116, "");
             var4_array[6] = DiskArchiveRequest.a("keyboard_down", bh.field_a, (byte) 126, "");
             qj.field_a.a(var4_array, var5_ref_int__);
-            l.field_f = ae.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
+            l.field_f = EditableTextField.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
             rg.g(-33);
             return;
           }
@@ -3901,7 +3901,7 @@ public final class stellarshard extends rb implements cf {
             }
             var4 = 0;
             while (var4 < var2[var3]) {
-              a.entities[pl.e((byte) 63)] = new GameEntity(var3);
+              a.entities[ValidatedTextField.e((byte) 63)] = new GameEntity(var3);
               var4++;
             }
             var3++;
@@ -3926,8 +3926,8 @@ public final class stellarshard extends rb implements cf {
             this.field_H = (Quaternion) null;
           }
           if (mk.field_k > 0 &&
-            lh.a(ic.field_d, (byte) 115)) {
-            DualLinkDequeIterator.field_e = wb.createFullscreenCanvas(0, -107, 480, ic.field_d, 640, 0);
+            lh.a(DebouncedFieldValidator.field_d, (byte) 115)) {
+            DualLinkDequeIterator.field_e = wb.createFullscreenCanvas(0, -107, 480, DebouncedFieldValidator.field_d, 640, 0);
             if (null != DualLinkDequeIterator.field_e) {
               nc.a(DualLinkDequeIterator.field_e, (byte) 121);
             }
@@ -4411,7 +4411,7 @@ public final class stellarshard extends rb implements cf {
               ProxyAuthenticationRequiredException.field_c != 2)) {
               if (wh.field_c == 0 &&
                 rh.field_a == null) {
-                pl.field_R = null;
+                ValidatedTextField.field_R = null;
                 wh.field_c = 2;
                 AccountCreationResultPanel.field_pb = 0;
                 aa.field_b = null;
@@ -4420,7 +4420,7 @@ public final class stellarshard extends rb implements cf {
               if (0 == wh.field_c) {
                 aa.field_b.a(0, 128, 310, (byte) -120, 90);
                 wc.field_s.a(0, 128, -AccountCreationResultPanel.field_pb + 320 - 10, (byte) -124, 90);
-                pl.field_R.a(0, 128, 310 + AccountCreationResultPanel.field_pb, (byte) -119, 90);
+                ValidatedTextField.field_R.a(0, 128, 310 + AccountCreationResultPanel.field_pb, (byte) -119, 90);
               }
               if (wh.field_c == 1) {
                 rh.field_a[AccountCreationResultPanel.field_pb / 3].a(0, 128, 310, (byte) 82, 90);
@@ -4441,13 +4441,13 @@ public final class stellarshard extends rb implements cf {
               if (nj.field_f[0] > 63) {
                 nj.field_f[0] = 63;
               }
-              ic.a(var5, 0, -1, false, 480, 16777215, 0);
+              DebouncedFieldValidator.a(var5, 0, -1, false, 480, 16777215, 0);
               nj.field_f[0] = 64 * te.field_c / 250000;
               var5Lifetime2 = ce.field_f + te.field_c;
               if (nj.field_f[0] > 63) {
                 nj.field_f[0] = 63;
               }
-              ic.a(var5Lifetime2, 0, -1, false, 160, 16777215, 0);
+              DebouncedFieldValidator.a(var5Lifetime2, 0, -1, false, 160, 16777215, 0);
               var5Lifetime3 = bb.field_f;
               var7_ref = null;
               var8Lifetime3 = e.field_e;
@@ -4695,7 +4695,7 @@ public final class stellarshard extends rb implements cf {
             if (nc.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
               mk.field_k <= 0) {
-              var6Lifetime1 = dd.field_i + nc.field_A / 50 + ef.field_o;
+              var6Lifetime1 = dd.field_i + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
               l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime1, 32, 68 - l.field_f.field_N, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime1, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);
@@ -4703,7 +4703,7 @@ public final class stellarshard extends rb implements cf {
             if (nc.field_A > 0 &&
               DualLinkDequeIterator.field_i &&
               qi.level >= 50) {
-              var6Lifetime2 = lk.field_g + hf.field_g + nc.field_A / 50 + ef.field_o;
+              var6Lifetime2 = TextFieldValidator.field_g + hf.field_g + nc.field_A / 50 + ConfirmedEmailAvailabilityValidator.field_o;
               l.field_f.a(var6Lifetime2, 32, 68 - l.field_f.field_N, 575, 480, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 479, 0, 0, 1, 0, l.field_f.field_N);
               l.field_f.a(var6Lifetime2, 32, -l.field_f.field_N + 68, 576, 480, 16777215, -1, 1, 0, l.field_f.field_N);

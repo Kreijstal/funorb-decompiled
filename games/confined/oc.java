@@ -82,7 +82,7 @@ final class oc {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (wh.field_fb == na.field_S) {
+          if (ValidatedTextField.field_fb == na.field_S) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
@@ -90,7 +90,7 @@ final class oc {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
-          if (wh.field_fb != oe.field_Q) {
+          if (ValidatedTextField.field_fb != oe.field_Q) {
             stackIn_26_0 = -1;
             return stackIn_26_0;
           }

@@ -5,7 +5,7 @@ final class qd {
     static int field_g;
     static int field_d;
     static k field_f;
-    static sm[] field_c;
+    static IndexedSprite[] field_c;
     static double[] field_h;
     static int[][] field_a;
     static long field_e;
@@ -59,7 +59,7 @@ final class qd {
           while (var3_int < wh.field_z.length) {
             var5 = mn.field_Z[var3_int];
             if (var5 >= 0) {
-              var6 = mh.a(true, -90, wh.field_z[var3_int]);
+              var6 = MenuScreen.measureMenuText(true, -90, wh.field_z[var3_int]);
               var4 = var4 + WidgetContainer.field_z;
               var7 = -(var6 >> 1) + vk.field_A;
               if (l.a((ln.field_D << 1) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << 1) + var6, var7 - aq.field_b, var4)) {

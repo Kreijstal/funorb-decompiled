@@ -65,7 +65,7 @@ final class sf {
         this.field_e = 0;
         this.field_a = 0;
         if (this.field_l == 0 &&
-          el.field_n == 96) {
+          MatchingFieldValidator.field_n == 96) {
           if (0 >= this.field_f) {
             this.field_f = this.field_g;
           }
@@ -73,18 +73,18 @@ final class sf {
           this.field_k = false;
         }
         if (0 == this.field_l) {
-          this.field_a = el.field_n;
+          this.field_a = MatchingFieldValidator.field_n;
         }
         if (this.field_l == 0 &&
-          97 == el.field_n) {
+          97 == MatchingFieldValidator.field_n) {
           this.field_f = this.field_f + 1;
           this.field_k = false;
           if (this.field_g <= this.field_f) {
             this.field_f = 0;
           }
         }
-        if (this.field_l == 0 && (el.field_n == 98 ||
-          el.field_n == 99)) {
+        if (this.field_l == 0 && (MatchingFieldValidator.field_n == 98 ||
+          MatchingFieldValidator.field_n == 99)) {
           if (this.field_f < 0) {
             this.field_f = param0;
           }
@@ -112,7 +112,7 @@ final class sf {
         this.field_d = 0;
         this.field_a = 0;
         if (0 == this.field_l &&
-          el.field_n == 98) {
+          MatchingFieldValidator.field_n == 98) {
           if (0 >= this.field_f) {
             this.field_f = this.field_g;
           }
@@ -120,10 +120,10 @@ final class sf {
           this.field_f = this.field_f - 1;
         }
         if (this.field_l == 0) {
-          this.field_a = el.field_n;
+          this.field_a = MatchingFieldValidator.field_n;
         }
         if (0 == this.field_l &&
-          el.field_n == 99) {
+          MatchingFieldValidator.field_n == 99) {
           this.field_f = this.field_f + 1;
           this.field_k = false;
           if (this.field_f >= this.field_g) {
@@ -153,7 +153,7 @@ final class sf {
           this.field_d = hg.field_F;
           this.field_f = param2;
           this.field_k = true;
-          this.field_h = qa.field_k;
+          this.field_h = ConfirmedEmailAvailabilityValidator.field_k;
           this.field_l = hg.field_F;
         }
         if (this.field_l != 0 &&
@@ -206,7 +206,7 @@ final class sf {
         this.field_a = 0;
         this.field_d = 0;
         if (this.field_l == 0) {
-          this.field_a = el.field_n;
+          this.field_a = MatchingFieldValidator.field_n;
         }
     }
 
@@ -240,16 +240,16 @@ final class sf {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
-        vg.field_I[GzipDecompressor.field_c] = param2;
+        EditableTextField.field_I[GzipDecompressor.field_c] = param2;
         if (param1) {
           sf.b(32);
         }
         RasterBuffer.field_e[GzipDecompressor.field_c] = GzipDecompressor.field_c;
         qg.field_c[GzipDecompressor.field_c] = param0;
         if (param0 > be.field_I) {
-          dc.field_o = param0;
+          EmailFormatValidator.field_o = param0;
         }
-        if (bb.field_G > param0) {
+        if (LoginPanel.field_G > param0) {
           SectorCacheStore.field_e = param0;
         }
         eh.field_a[GzipDecompressor.field_c] = param5;
@@ -259,8 +259,8 @@ final class sf {
         int var7 = 0 != var6 ? param5 * 1000 / var6 : 0;
         l.field_a[GzipDecompressor.field_c] = var7;
         GzipDecompressor.field_c = GzipDecompressor.field_c + 1;
-        if (!(dc.field_o >= var7)) {
-          dc.field_o = var7;
+        if (!(EmailFormatValidator.field_o >= var7)) {
+          EmailFormatValidator.field_o = var7;
         }
         if (SectorCacheStore.field_e > var7) {
           SectorCacheStore.field_e = var7;

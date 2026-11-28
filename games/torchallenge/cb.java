@@ -17,7 +17,7 @@ final class cb {
         synchronized (var1) {
           sj.field_L = sj.field_L + 1;
           wh.field_e = jc.field_h;
-          LocalizedStrings.field_u = ProxyAuthenticationRequiredException.mouseX;
+          ConfirmedEmailAvailabilityValidator.field_u = ProxyAuthenticationRequiredException.mouseX;
           ph.field_d = qb.mouseY;
           ek.field_P = ua.field_c;
           ua.field_c = false;
@@ -26,7 +26,7 @@ final class cb {
           if (param0 != 30210) {
             cb.a(71, 118, (byte) -25, 29);
           }
-          ci.field_m = ll.pressY;
+          AgeValidator.field_m = ll.pressY;
           e.field_o = 0;
         }
     }
@@ -97,7 +97,7 @@ final class cb {
             var11 = var9;
             if (var11 != null &&
               var11.type == 4) {
-              uc.a(var11.field_y, var11.x, var11.y, param1, 1, var11.variant, param3, dg.field_T[var9.type], true, param0);
+              uc.a(var11.field_y, var11.x, var11.y, param1, 1, var11.variant, param3, AccountRegistrationPanel.field_T[var9.type], true, param0);
               return;
             }
             sd.a(122);
@@ -113,7 +113,7 @@ final class cb {
           var4 = ea.field_g[lh.field_s];
           if (var4 != null &&
             ((LevelEntity) (var4)).type == 4) {
-            dg.a(((LevelEntity) (var4)).x, dg.field_T[((LevelEntity) (var4)).type], ((LevelEntity) (var4)).variant, 1, param0, ((LevelEntity) (var4)).field_y, ((LevelEntity) (var4)).y, param1, (byte) -72, param3);
+            AccountRegistrationPanel.a(((LevelEntity) (var4)).x, AccountRegistrationPanel.field_T[((LevelEntity) (var4)).type], ((LevelEntity) (var4)).variant, 1, param0, ((LevelEntity) (var4)).field_y, ((LevelEntity) (var4)).y, param1, (byte) -72, param3);
             if (nj.field_g == 0) {
               sd.a(121);
             }

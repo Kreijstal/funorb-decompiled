@@ -83,15 +83,15 @@ final class ab implements td {
           var1_int = -43 % ((-78 - param0) / 46);
           var2 = ad.field_b;
           synchronized (var2) {
-            md.field_g = pk.field_H;
+            md.field_g = LoginPanel.field_H;
             ji.field_c = ji.field_c + 1;
-            if (wg.field_p < 0) {
+            if (EmailFormatValidator.field_p < 0) {
               for (var3 = 0; 112 > var3; var3++) {
                 IterableNodeHashTable.field_a[var3] = false;
               }
-              wg.field_p = DelegatingCanvas.field_b;
+              EmailFormatValidator.field_p = DelegatingCanvas.field_b;
             } else {
-              while (DelegatingCanvas.field_b != wg.field_p) {
+              while (DelegatingCanvas.field_b != EmailFormatValidator.field_p) {
                 var3 = BoundedRandomAccessFile.field_i[DelegatingCanvas.field_b];
                 DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1 & 127;
                 if (0 <= var3) {
@@ -101,7 +101,7 @@ final class ab implements td {
                 IterableNodeHashTable.field_a[~var3] = false;
               }
             }
-            pk.field_H = uf.field_a;
+            LoginPanel.field_H = uf.field_a;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

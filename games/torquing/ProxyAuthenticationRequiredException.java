@@ -58,7 +58,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (RasterBuffer.field_e <= param6 &&
           qg.field_z >= param3 &&
           Bzip2State.field_q <= param4 &&
-          param1 <= qk.field_p) {
+          param1 <= LevelCompletionUpdate.field_p) {
           if (1 == param2) {
             SecondaryNodeDequeIterator.a(param6, param0, param1, param3, true, param4);
           } else {

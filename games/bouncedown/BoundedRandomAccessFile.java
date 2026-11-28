@@ -195,7 +195,7 @@ final class BoundedRandomAccessFile {
               stackIn_13_0 = (!param0) ? -1 : -2;
               ak.field_z = stackIn_13_0;
               i.field_f = stackIn_13_0;
-              ck.field_b = stackIn_13_0;
+              DebouncedFieldValidator.field_b = stackIn_13_0;
               pj.field_a = ClientException.field_c;
               var5.position = 0;
               AppletShell.a(fi.field_b, 6, cf.field_a, hh.field_p, of.field_c);

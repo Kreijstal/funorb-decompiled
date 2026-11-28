@@ -71,7 +71,7 @@ final class vc {
                     this.field_e = 0;
                     this.field_d = 0;
                   }
-                  this.field_h[this.field_d] = (byte)vi.a(var8 << 8 - var7, 255);
+                  this.field_h[this.field_d] = (byte)EditableTextField.a(var8 << 8 - var7, 255);
                   param2 = param2 - 8L;
                   var5_int++;
                   this.field_e = this.field_e + var7;
@@ -100,7 +100,7 @@ final class vc {
               this.field_e = 0;
               this.field_d = 0;
             }
-            this.field_h[this.field_d] = (byte)vi.a(var8 << 8 - var7, 255);
+            this.field_h[this.field_d] = (byte)EditableTextField.a(var8 << 8 - var7, 255);
             this.field_e = this.field_e + (int)param2;
             if (var13 == 0) {
               return;
@@ -390,7 +390,7 @@ final class vc {
                 stackIn_33_0 = 56;
                 var5 = stackIn_33_0;
                 while (var4 < 8) {
-                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4][vi.a((int)(this.field_o[vi.a(-var4 + var3, 7)] >>> var5), 255)]);
+                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4][EditableTextField.a((int)(this.field_o[EditableTextField.a(-var4 + var3, 7)] >>> var5), 255)]);
                   var4++;
                   var5 -= 8;
                 }
@@ -410,7 +410,7 @@ final class vc {
                 stackIn_52_0 = 56;
                 var5Lifetime1 = stackIn_52_0;
                 while (var4Lifetime1 < 8) {
-                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4Lifetime1][vi.a((int)(this.field_c[vi.a(var3 - var4Lifetime1, 7)] >>> var5Lifetime1), 255)]);
+                  this.field_f[var3] = j.a(this.field_f[var3], nd.field_c[var4Lifetime1][EditableTextField.a((int)(this.field_c[EditableTextField.a(var3 - var4Lifetime1, 7)] >>> var5Lifetime1), 255)]);
                   var5Lifetime1 -= 8;
                   var4Lifetime1++;
                 }
@@ -521,7 +521,7 @@ final class vc {
               AccountRequestState.a(true, 1)) {
               var6_intLifetime2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               NetworkArchiveRequest.field_t.position = 0;
-              ug.field_r = null;
+              MatchingFieldValidator.field_r = null;
               ab.field_l = var6_intLifetime2;
               if (var6_intLifetime2 == 0 ||
                 var6_intLifetime2 == 1) {
@@ -720,7 +720,7 @@ final class vc {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          this.field_h[this.field_d] = (byte)ge.a((int) this.field_h[this.field_d], 128 >>> vi.a(7, this.field_e));
+          this.field_h[this.field_d] = (byte)ge.a((int) this.field_h[this.field_d], 128 >>> EditableTextField.a(7, this.field_e));
           this.field_d = this.field_d + 1;
           if (this.field_d > 32) {
             while (true) {

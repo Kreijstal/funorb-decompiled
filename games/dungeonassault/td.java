@@ -22,11 +22,11 @@ final class td {
         wk.c(false);
         if (param1 <= 120) {
           String var3 = (String) null;
-          td.a((String) null, true, false, (String) null, (rg) null, -5, (String) null);
+          td.a((String) null, true, false, (String) null, (AccountRegistrationPanel) null, -5, (String) null);
         }
     }
 
-    final static boolean a(String param0, boolean param1, boolean param2, String param3, rg param4, int param5, String param6) {
+    final static boolean a(String param0, boolean param1, boolean param2, String param3, AccountRegistrationPanel param4, int param5, String param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_16_0 = null;
@@ -48,7 +48,7 @@ final class td {
           }
           var8 = new AccountCreationResultPanel(lg.field_w, param4);
           lg.field_w.a(var8, -1);
-          if (rg.i((byte) -125)) {
+          if (AccountRegistrationPanel.i((byte) -125)) {
             var8.r(102);
             return true;
           }
@@ -56,7 +56,7 @@ final class td {
           MouseInput.field_b = null;
           NetworkGameClient.field_E = param1;
           wk.field_g = param5;
-          he.field_m = param6;
+          AgeValidator.field_m = param6;
           ol.field_i = DelegatingCanvas.field_f;
           NodeHashTableIterator.field_i = param3;
           return true;

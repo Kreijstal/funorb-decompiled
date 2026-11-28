@@ -38,7 +38,7 @@ final class GameDomainSupport001 {
         if (!booleanArgument1) {
           GameDomainSupport001.performAction0092((byte) -17);
         }
-        UiComponentPart031.performAction1598((byte) -121);
+        AccountRegistrationPanel.performAction1598((byte) -121);
         ProxyAuthenticationRequiredException.performAction0335(booleanArgument1);
         MixedSupport097.sceneWidgetPart007State0001 = null;
         MixedSupport099.performAction1230(false);
@@ -301,12 +301,12 @@ final class GameDomainSupport001 {
           MixedSupport098.sceneWidgetState0096.rgbSpriteState0067 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "upbutton_mouseover", "lobby", 8192);
           MixedSupport098.sceneWidgetState0096.rgbSpriteState0066 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "upbutton_mouseheld", "lobby", 8192);
           MixedSupport098.sceneWidgetState0096.rgbSpriteState0065 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "upbutton_disabled", "lobby", 8192);
-          UiComponentPart005.sceneWidgetState0014 = new SceneWidget(0L, (SceneWidget) null);
-          UiComponentPart005.sceneWidgetState0014.rgbSpriteState0070 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton", "lobby", 8192);
-          UiComponentPart005.sceneWidgetState0014.rgbSpriteState0067 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_mouseover", "lobby", 8192);
-          UiComponentPart005.sceneWidgetState0014.rgbSpriteState0066 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_mouseheld", "lobby", 8192);
-          UiComponentPart005.sceneWidgetState0014.rgbSpriteState0065 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_disabled", "lobby", 8192);
-          MixedSupport123.sceneWidgetPart006State0002 = new SceneWidgetPart006(0L, MixedSupport098.sceneWidgetState0096, UiComponentPart005.sceneWidgetState0014, TextLayout.sceneWidgetState0011, MixedSupport086.sceneWidgetState0088);
+          DisplayNameSelectionPanel.sceneWidgetState0014 = new SceneWidget(0L, (SceneWidget) null);
+          DisplayNameSelectionPanel.sceneWidgetState0014.rgbSpriteState0070 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton", "lobby", 8192);
+          DisplayNameSelectionPanel.sceneWidgetState0014.rgbSpriteState0067 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_mouseover", "lobby", 8192);
+          DisplayNameSelectionPanel.sceneWidgetState0014.rgbSpriteState0066 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_mouseheld", "lobby", 8192);
+          DisplayNameSelectionPanel.sceneWidgetState0014.rgbSpriteState0065 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "downbutton_disabled", "lobby", 8192);
+          MixedSupport123.sceneWidgetPart006State0002 = new SceneWidgetPart006(0L, MixedSupport098.sceneWidgetState0096, DisplayNameSelectionPanel.sceneWidgetState0014, TextLayout.sceneWidgetState0011, MixedSupport086.sceneWidgetState0088);
           UiComponentPart015.sceneWidgetPart010State0002 = new SceneWidgetPart010(0L, (SceneWidget) null, MixedSupport047.sceneWidgetState0038, MixedSupport123.sceneWidgetPart006State0002, ComponentDecorator.sceneWidgetState0077, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal41) {

@@ -26,7 +26,7 @@ final class ph {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (bg.a(4826, param2)) {
+          if (AccountRegistrationPanel.a(4826, param2)) {
             return false;
           }
           if (sg.a(param2, false)) {

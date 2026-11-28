@@ -71,7 +71,7 @@ final class gi extends AcceleratingProjectile {
         super(param0, param1, 0.5, 0.02, 64.0, TunnelEntity.field_x);
         this.field_cb = new DynamicLight((TunnelEntity) (this));
         try {
-          kj.a(lf.field_i, 96, param1);
+          kj.a(MatchingFieldValidator.field_i, 96, param1);
           this.field_gb = 64.0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

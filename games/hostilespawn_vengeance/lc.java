@@ -45,11 +45,11 @@ final class lc {
               eh.field_c.a(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
             }
             boolean decompiledFrameCompleted0 = true;
-            IntrusiveNode.a(param0.field_j.b(-4), (byte) 125);
-            var3 = ln.field_a.field_g[param0.field_j.b(-4)];
+            IntrusiveNode.a(param0.field_j.getClampedTileIndex(-4), (byte) 125);
+            var3 = ln.field_a.field_g[param0.field_j.getClampedTileIndex(-4)];
             if (var3 > 0) {
               var4 = 0;
-              while (!(el.field_j <= var4)) {
+              while (!(ProxySocketFactory.field_j <= var4)) {
                 stackOut_13_0 = mm.field_m[var4].field_b;
                 stackIn_45_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
@@ -59,7 +59,7 @@ final class lc {
                 }
                 if (stackIn_14_0 &&
                   mm.field_m[var4].field_i != 8 &&
-                  var3 == ln.field_a.field_g[mm.field_m[var4].field_j.b(-4)]) {
+                  var3 == ln.field_a.field_g[mm.field_m[var4].field_j.getClampedTileIndex(-4)]) {
                   if (mm.field_m[var4].field_i != 27) {
                     mm.field_m[var4].field_I = 0;
                   } else {

@@ -28,7 +28,7 @@ final class jb extends aa {
         if (param0 < 30) {
           return (wb) null;
         }
-        return dc.field_k;
+        return EmailFormatValidator.field_k;
     }
 
     public static void clearStaticReferences(int param0) {

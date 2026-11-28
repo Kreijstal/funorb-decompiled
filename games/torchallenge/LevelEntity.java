@@ -225,7 +225,7 @@ final class LevelEntity {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = ma.field_k;
+          var2_int = TextFieldValidator.field_k;
           if (param0 != -1) {
             this.field_j = true;
           }
@@ -594,7 +594,7 @@ final class LevelEntity {
           var2.field_m = true;
           var2.field_e = var2.x * 32 + 32 * var2.field_B / 256;
           this.field_S = true;
-          hc.a(54, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
+          hc.a(54, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, AccountRegistrationPanel.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -864,11 +864,11 @@ final class LevelEntity {
             }
             if (var5 >= var10) {
               var12 = 1;
-              ma.field_k = 1;
+              TextFieldValidator.field_k = 1;
             }
             if (var6 <= var9) {
               var12 = 1;
-              ma.field_k = -1;
+              TextFieldValidator.field_k = -1;
             }
             if (var11 == 0) {
               this.field_Q = 0;
@@ -882,7 +882,7 @@ final class LevelEntity {
             }
             if (var12 != 0 ||
               var21 != 0) {
-              this.field_h = ma.field_k * var13;
+              this.field_h = TextFieldValidator.field_k * var13;
             }
             if (var11 != 0) {
               var14 = 0;
@@ -946,13 +946,13 @@ final class LevelEntity {
             if ((decompiledFrameCompleted0) &&
               (var17 != 0)) {
               if (var14Lifetime1 >= var15Lifetime1) {
-                ma.field_k = -1;
+                TextFieldValidator.field_k = -1;
               }
               this.field_Q = 0;
               if (var15Lifetime1 > var14Lifetime1) {
-                ma.field_k = 1;
+                TextFieldValidator.field_k = 1;
               }
-              this.field_h = ma.field_k * var16;
+              this.field_h = TextFieldValidator.field_k * var16;
               var18Lifetime2 = 1;
               this.a(true, var18Lifetime2 != 0);
               return;
@@ -973,8 +973,8 @@ final class LevelEntity {
           }
           var19 = this.b((byte) 109, false);
           if (var19 < 0) {
-            ma.field_k = 1;
-            this.field_h = ma.field_k * var16;
+            TextFieldValidator.field_k = 1;
+            this.field_h = TextFieldValidator.field_k * var16;
             var20 = 1;
             this.a(true, var20 != 0);
             return;
@@ -1023,7 +1023,7 @@ final class LevelEntity {
                 }
                 if (decompiledFrameRemainder1) {
                   if ((this.type == 7 ||
-                    !(this.field_D > -ik.field_d[2][dg.field_T[this.type]][this.variant] + 200) ||
+                    !(this.field_D > -ik.field_d[2][AccountRegistrationPanel.field_T[this.type]][this.variant] + 200) ||
                     this.field_L != 0) &&
                     this.field_L != 1) {
                     if (this.field_L == 0) {
@@ -1068,7 +1068,7 @@ final class LevelEntity {
               this.field_g = var2_int;
               if (7 == this.field_g) {
                 var3 = 0;
-                while (!(h.field_b[7][dg.field_T[3]][0] <= var3)) {
+                while (!(h.field_b[7][AccountRegistrationPanel.field_T[3]][0] <= var3)) {
                   SecondaryNodeDeque.field_j[var3][0] = -1;
                   var3++;
                   if (var4 != 0) {
@@ -1079,13 +1079,13 @@ final class LevelEntity {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.field_P = (AccountServiceResult.field_k - this.field_p) / ik.field_d[this.field_g][dg.field_T[this.type]][this.variant];
+              this.field_P = (AccountServiceResult.field_k - this.field_p) / ik.field_d[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant];
             }
-            if (qh.field_O[this.field_g][dg.field_T[this.type]][this.variant]) {
-              this.field_P = this.field_P % h.field_b[this.field_g][dg.field_T[this.type]][this.variant];
+            if (qh.field_O[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
+              this.field_P = this.field_P % h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant];
             }
-            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.type]][this.variant]) {
-              this.field_P = -1 + h.field_b[this.field_g][dg.field_T[this.type]][this.variant];
+            if (this.field_P >= h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
+              this.field_P = -1 + h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant];
             }
             boolean decompiledFrameRemainder0 = true;
             if (2 != this.field_g ||
@@ -1102,7 +1102,7 @@ final class LevelEntity {
                       this.field_p = AccountServiceResult.field_k;
                       this.field_v = false;
                     }
-                    if ((AccountServiceResult.field_k - this.field_p) > ik.field_d[this.field_g][dg.field_T[this.type]][this.variant]) {
+                    if ((AccountServiceResult.field_k - this.field_p) > ik.field_d[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant]) {
                       this.field_eb = false;
                     }
                     this.field_P = 1;
@@ -1123,9 +1123,9 @@ final class LevelEntity {
             } else {
               this.field_P = 1;
             }
-            if (this.field_P >= h.field_b[this.field_g][dg.field_T[this.type]][this.variant] &&
-              h.field_b[this.field_g][dg.field_T[this.type]][this.variant] > 0) {
-              this.field_P = h.field_b[this.field_g][dg.field_T[this.type]][this.variant] - 1;
+            if (this.field_P >= h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant] &&
+              h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant] > 0) {
+              this.field_P = h.field_b[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant] - 1;
             }
             return;
           }
@@ -1224,8 +1224,8 @@ final class LevelEntity {
                   if (var10 == 0) {
                     BufferedSocket.field_p.field_G = BufferedSocket.field_p.field_G + 50;
                     if (GameKeyHandler.field_b) {
-                      if (LocalizedStrings.field_w != null) {
-                        LocalizedStrings.field_w[0][0] = 0;
+                      if (ConfirmedEmailAvailabilityValidator.field_w != null) {
+                        ConfirmedEmailAvailabilityValidator.field_w[0][0] = 0;
                       }
                       ResourceArchive.field_b = 0;
                       hf.field_c = 0;
@@ -1351,7 +1351,7 @@ final class LevelEntity {
                   } else {
                     if (28 != this.type) {
                       if (!(!vg.a(this.type, -1))) {
-                        qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
+                        qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -1617,7 +1617,7 @@ final class LevelEntity {
           var3 = ca.field_a[param0 + var2_int];
           var4 = var3[0] << 3;
           var5 = var3[1] << 3;
-          var6 = ki.field_e[dg.field_T[23]];
+          var6 = ki.field_e[AccountRegistrationPanel.field_T[23]];
           var7 = new LevelEntity(this.x, this.y, 23, 0);
           var7.field_e = this.field_e;
           var7.field_z = var5 + (-this.field_w + this.field_z);
@@ -1874,8 +1874,8 @@ final class LevelEntity {
               GameKeyHandler.field_b = false;
               ResourceArchive.field_b = 0;
               vd.field_b = true;
-              if (LocalizedStrings.field_w != null) {
-                LocalizedStrings.field_w[0][0] = 0;
+              if (ConfirmedEmailAvailabilityValidator.field_w != null) {
+                ConfirmedEmailAvailabilityValidator.field_w[0][0] = 0;
               }
               fh.field_d = 0;
               dk.field_a = 0;
@@ -2115,7 +2115,7 @@ final class LevelEntity {
                 22 != this.type) {
                 this.field_L = 2;
                 if (!(!vg.a(this.type, param0 ^ -30))) {
-                  qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 5, BufferedSocket.field_p.x, 25, this.variant);
+                  qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, -1, 5, BufferedSocket.field_p.x, 25, this.variant);
                 }
               } else {
                 boolean decompiledFrameRemainder9 = true;
@@ -2204,7 +2204,7 @@ final class LevelEntity {
                       if (this.type != 0) {
                         if (this.type != 28) {
                           if (vg.a(this.type, -1)) {
-                            qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, param0 ^ -30, 3, BufferedSocket.field_p.x, 25, this.variant);
+                            qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, param0 ^ -30, 3, BufferedSocket.field_p.x, 25, this.variant);
                           }
                         } else {
                           jc.b(fh.field_e, 1, 0);
@@ -2321,7 +2321,7 @@ final class LevelEntity {
               if (0 < this.field_h) {
                 this.field_L = 2;
                 if (vg.a(this.type, -1)) {
-                  qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, param0 - 30, 5, BufferedSocket.field_p.x, 20, this.variant);
+                  qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, param0 - 30, 5, BufferedSocket.field_p.x, 20, this.variant);
                 }
               }
               if (this.type != 0) {
@@ -2758,8 +2758,8 @@ final class LevelEntity {
             if (BufferedSocket.field_p == this) {
               if (GameKeyHandler.field_b) {
                 vd.field_b = true;
-                if (LocalizedStrings.field_w != null) {
-                  LocalizedStrings.field_w[0][0] = 0;
+                if (ConfirmedEmailAvailabilityValidator.field_w != null) {
+                  ConfirmedEmailAvailabilityValidator.field_w[0][0] = 0;
                 }
                 fh.field_d = 0;
                 GameKeyHandler.field_b = false;
@@ -3208,7 +3208,7 @@ final class LevelEntity {
               }
             }
             if ((decompiledFrameCompleted1) &&
-              (decompiledFrameRemainder0 = (LocalizedStrings.field_w != null))) {
+              (decompiledFrameRemainder0 = (ConfirmedEmailAvailabilityValidator.field_w != null))) {
               stackIn_261_0 = 0;
             }
             if (decompiledFrameRemainder0) {
@@ -3221,7 +3221,7 @@ final class LevelEntity {
                 }
                 var6Lifetime1 = stackIn_273_0;
                 while (var6Lifetime1 < 3) {
-                  LocalizedStrings.field_w[var5Lifetime1][var6Lifetime1] = 0;
+                  ConfirmedEmailAvailabilityValidator.field_w[var5Lifetime1][var6Lifetime1] = 0;
                   var6Lifetime1++;
                 }
                 var5Lifetime1++;
@@ -5405,7 +5405,7 @@ final class LevelEntity {
           var14 = param4 - param1 / 32;
           var15 = this.field_I;
           if (vg.a(param5, -1)) {
-            var15 = ki.field_e[dg.field_T[param5]];
+            var15 = ki.field_e[AccountRegistrationPanel.field_T[param5]];
           }
           var16 = 32 * var14 - var13 - (var15 - this.field_I >> 1);
           var17 = var16 + var15;
@@ -5455,7 +5455,7 @@ final class LevelEntity {
             !cl.field_z) {
             if (param5 != 28) {
               if (vg.a(param5, param6 ^ -2658)) {
-                var20 = ae.field_s[dg.field_T[param5]];
+                var20 = ae.field_s[AccountRegistrationPanel.field_T[param5]];
                 if (var21 != 0) {
                   var20 = lh.field_q[fh.field_e];
                   var20 = 96;
@@ -5516,9 +5516,9 @@ final class LevelEntity {
                 if (var21 != 0) {
                   var9_intLifetime1 = (-this.field_I + (var9_intLifetime1 + var10Lifetime1)) / 2;
                   var10Lifetime1 = this.field_I + var9_intLifetime1;
-                  if (ki.field_e[dg.field_T[param5]] > var10Lifetime1 - var9_intLifetime1) {
-                    var9_intLifetime1 = (-ki.field_e[dg.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
-                    var10Lifetime1 = ki.field_e[dg.field_T[param5]] + var9_intLifetime1;
+                  if (ki.field_e[AccountRegistrationPanel.field_T[param5]] > var10Lifetime1 - var9_intLifetime1) {
+                    var9_intLifetime1 = (-ki.field_e[AccountRegistrationPanel.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
+                    var10Lifetime1 = ki.field_e[AccountRegistrationPanel.field_T[param5]] + var9_intLifetime1;
                   }
                 }
               }
@@ -5526,15 +5526,15 @@ final class LevelEntity {
               var9_intLifetime1 = (-this.field_I + (var9_intLifetime1 + var10Lifetime1)) / 2;
               var10Lifetime1 = this.field_I + var9_intLifetime1;
               if ((var21 != 0) &&
-                (ki.field_e[dg.field_T[param5]] > var10Lifetime1 - var9_intLifetime1)) {
-                var9_intLifetime1 = (-ki.field_e[dg.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
-                var10Lifetime1 = ki.field_e[dg.field_T[param5]] + var9_intLifetime1;
+                (ki.field_e[AccountRegistrationPanel.field_T[param5]] > var10Lifetime1 - var9_intLifetime1)) {
+                var9_intLifetime1 = (-ki.field_e[AccountRegistrationPanel.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
+                var10Lifetime1 = ki.field_e[AccountRegistrationPanel.field_T[param5]] + var9_intLifetime1;
               }
             }
           } else {
-            if (ki.field_e[dg.field_T[param5]] > var10Lifetime1 - var9_intLifetime1) {
-              var9_intLifetime1 = (-ki.field_e[dg.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
-              var10Lifetime1 = ki.field_e[dg.field_T[param5]] + var9_intLifetime1;
+            if (ki.field_e[AccountRegistrationPanel.field_T[param5]] > var10Lifetime1 - var9_intLifetime1) {
+              var9_intLifetime1 = (-ki.field_e[AccountRegistrationPanel.field_T[param5]] + (var10Lifetime1 + var9_intLifetime1)) / 2;
+              var10Lifetime1 = ki.field_e[AccountRegistrationPanel.field_T[param5]] + var9_intLifetime1;
             }
           }
           dl.field_n[2] = var11Lifetime1;
@@ -5607,7 +5607,7 @@ final class LevelEntity {
           if (param0 >= -90) {
             this.field_B = 89;
           }
-          var3_int = dg.field_T[param1];
+          var3_int = AccountRegistrationPanel.field_T[param1];
           this.field_fb = lb.field_q[var3_int];
           this.field_mb = ja.field_j[var3_int][this.variant];
           this.field_gb = be.field_c[var3_int];
@@ -6166,7 +6166,7 @@ final class LevelEntity {
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = dg.field_T[param0];
+          var3_int = AccountRegistrationPanel.field_T[param0];
           this.field_I = pl.field_b[var3_int];
           this.field_w = ae.field_A[var3_int];
           if (this.variant > 2) {
@@ -6643,10 +6643,10 @@ final class LevelEntity {
           var8 = 0;
           stackIn_7_0 = (0 <= this.field_a) ? 0 : 1;
           var9 = stackIn_7_0;
-          var10 = ae.field_s[dg.field_T[this.type]];
+          var10 = ae.field_s[AccountRegistrationPanel.field_T[this.type]];
           stackIn_11_0 = (0 >= this.field_G) ? 0 : 1;
           var11 = stackIn_11_0;
-          var12 = bc.field_l[dg.field_T[this.type]] ? 1 : 0;
+          var12 = bc.field_l[AccountRegistrationPanel.field_T[this.type]] ? 1 : 0;
           if (this.type == 23) {
             RandomAccessCacheFile.a(-996593372, param2, param3);
             return;
@@ -6654,34 +6654,34 @@ final class LevelEntity {
           if (this.type == 24) {
             if (this.field_a < 0) {
               if (cb.field_f == null) {
-                cb.field_f = new Sprite(ki.field_e[dg.field_T[24]], ae.field_s[dg.field_T[24]]);
+                cb.field_f = new Sprite(ki.field_e[AccountRegistrationPanel.field_T[24]], ae.field_s[AccountRegistrationPanel.field_T[24]]);
               }
               cb.field_f.d();
               SoftwareRasterizer.clearRaster();
-              dj.field_O.drawFlippedHorizontal(0, 0);
+              EditableTextField.field_O.drawFlippedHorizontal(0, 0);
               SectorCacheStore.field_f.bindAsTarget(110);
-              cb.field_f.drawScaled(param2, param3, param5 - param2, ae.field_s[dg.field_T[24]]);
+              cb.field_f.drawScaled(param2, param3, param5 - param2, ae.field_s[AccountRegistrationPanel.field_T[24]]);
               if (var15 == 0) {
                 return;
               }
             }
-            dj.field_O.drawScaled(param2, param3, -param2 + param5, ae.field_s[dg.field_T[24]]);
+            EditableTextField.field_O.drawScaled(param2, param3, -param2 + param5, ae.field_s[AccountRegistrationPanel.field_T[24]]);
             return;
           }
-          if (0 <= dg.field_T[this.type] &&
-            dg.field_T[this.type] < ah.field_d.length) {
+          if (0 <= AccountRegistrationPanel.field_T[this.type] &&
+            AccountRegistrationPanel.field_T[this.type] < ah.field_d.length) {
             if (this.field_g >= 0 &&
-              this.field_g < ah.field_d[dg.field_T[this.type]].length) {
+              this.field_g < ah.field_d[AccountRegistrationPanel.field_T[this.type]].length) {
               if (this.variant >= 0 &&
-                ah.field_d[dg.field_T[this.type]][this.field_g].length > this.variant) {
+                ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g].length > this.variant) {
                 if (0 <= this.field_P &&
-                  this.field_P < ah.field_d[dg.field_T[this.type]][this.field_g][this.variant].length) {
+                  this.field_P < ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant].length) {
                   if (this.type == 5 &&
                     this.field_D == 0) {
                     SoftwareRasterizer.saveClip(bf.field_l);
                     mb.field_e.d();
                     SoftwareRasterizer.clearRaster();
-                    ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
+                    ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
                     jc.field_i.d();
                     SoftwareRasterizer.clearRaster();
                     mb.field_e.drawFlippedVertical(0, var10 - this.field_w >> 1);
@@ -6692,7 +6692,7 @@ final class LevelEntity {
                     SoftwareRasterizer.saveClip(bf.field_l);
                     mb.field_e.d();
                     SoftwareRasterizer.clearRaster();
-                    ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
+                    ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
                     jj.field_e.d();
                     SoftwareRasterizer.clearRaster();
                     if (5 != this.type ||
@@ -6715,28 +6715,28 @@ final class LevelEntity {
                       }
                       if (var9 != 0 ||
                         var15 != 0) {
-                        this.a(param1, param0, 256 * (16 + (this.field_I - pl.field_b[dg.field_T[22]])) / 32 + this.field_B, this.y, this.x, 22, 2657, -128 + this.field_u);
+                        this.a(param1, param0, 256 * (16 + (this.field_I - pl.field_b[AccountRegistrationPanel.field_T[22]])) / 32 + this.field_B, this.y, this.x, 22, 2657, -128 + this.field_u);
                       }
-                      ah.field_d[dg.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], ae.field_s[dg.field_T[22]]);
+                      ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], dl.field_n[1] - dl.field_n[0], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       if ((var15 != 0) && (this.field_P == 1 &&
                         !this.field_T)) {
                         if (var9 != 0) {
-                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
+                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[AccountRegistrationPanel.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
                         }
                         this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
-                        ah.field_d[dg.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
+                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       }
                     } else {
                       if (this.field_P == 1 &&
                         !this.field_T) {
                         if (var9 != 0) {
-                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[dg.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
+                          this.a(param1, param0, this.field_B + (-32 + (-pl.field_b[AccountRegistrationPanel.field_T[22]] + this.field_I)) * 256 / 32, this.y, this.x, 22, 2657, -256 + this.field_u);
                         }
                         if (var9 == 0 ||
                           var15 != 0) {
                           this.a(param1, param0, 256 + this.field_B, this.y, this.x, 22, 2657, this.field_u - 256);
                         }
-                        ah.field_d[dg.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[dg.field_T[22]]);
+                        ah.field_d[AccountRegistrationPanel.field_T[22]][1][this.variant][0].drawScaled(dl.field_n[0], dl.field_n[2], -dl.field_n[0] + dl.field_n[1], ae.field_s[AccountRegistrationPanel.field_T[22]]);
                       }
                     }
                   }
@@ -6751,9 +6751,9 @@ final class LevelEntity {
                             break regionExit1;
                           }
                         }
-                        var13 = (AccountServiceResult.field_k - this.field_p << 7) / ik.field_d[this.field_g][dg.field_T[this.type]][this.variant] + 128;
+                        var13 = (AccountServiceResult.field_k - this.field_p << 7) / ik.field_d[this.field_g][AccountRegistrationPanel.field_T[this.type]][this.variant] + 128;
                         if (var9 == 0) {
-                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaledAlpha(param2, param3, -param2 + param5, var10, var13);
+                          ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaledAlpha(param2, param3, -param2 + param5, var10, var13);
                         }
                         if (var9 != 0 ||
                           var15 != 0) {
@@ -6796,7 +6796,7 @@ final class LevelEntity {
                           }
                           if (this.field_g != 4 ||
                             var12 != 0) {
-                            ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(var7_intLifetime1, var8Lifetime1, -param2 + param5, var10);
+                            ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(var7_intLifetime1, var8Lifetime1, -param2 + param5, var10);
                             if (var15 == 0) {
                               break regionExit1;
                             }
@@ -6804,7 +6804,7 @@ final class LevelEntity {
                           SoftwareRasterizer.saveClip(bf.field_l);
                           mb.field_e.d();
                           SoftwareRasterizer.clearRaster();
-                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, -param2 + param5, var10);
+                          ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, -param2 + param5, var10);
                           SectorCacheStore.field_f.bindAsTarget(100);
                           SoftwareRasterizer.restoreClip(bf.field_l);
                           this.a(mb.field_e, var8Lifetime1, var7_intLifetime1, 34);
@@ -6887,7 +6887,7 @@ final class LevelEntity {
                           if (5 == this.type) {
                             var8Lifetime1Lifetime1 = -(var10 - this.field_w >> 1) + var8Lifetime1Lifetime1;
                           }
-                          ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P].a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                         }
                       }
                       if ((decompiledFrameRemainder0) &&
@@ -6913,10 +6913,10 @@ final class LevelEntity {
                         }
                       }
                       if (var15 != 0) {
-                        this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
+                        this.a(param3, param5, (byte) 87, param2, ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
                       }
                     } else {
-                      this.a(param3, param5, (byte) 87, param2, ah.field_d[dg.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
+                      this.a(param3, param5, (byte) 87, param2, ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P], this.field_P);
                     }
                   }
                   if (this.field_g == 7) {
@@ -6994,7 +6994,7 @@ final class LevelEntity {
             this.type != 7) {
             return;
           }
-          hc.a(35, BufferedSocket.field_p.y, this.variant, 4, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
+          hc.a(35, BufferedSocket.field_p.y, this.variant, 4, BufferedSocket.field_p.x, AccountRegistrationPanel.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7049,7 +7049,7 @@ final class LevelEntity {
         var19 = TorChallenge.field_F ? 1 : 0;
         try {
           if (19 == this.type &&
-            !ui.field_b) {
+            !DebouncedFieldValidator.field_b) {
             return;
           }
           var4_int = dl.field_n[0];
@@ -7585,7 +7585,7 @@ final class LevelEntity {
             var2_int = this.a(stackIn_11_1, (byte) stackIn_14_2, stackIn_15_3) ? 1 : 0;
             if (var2_int != 0) {
               if (this.type == 6) {
-                qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
+                qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, -1, 4, BufferedSocket.field_p.x, 25, this.variant);
               }
               if (this.field_cb) {
                 return true;
@@ -7700,7 +7700,7 @@ final class LevelEntity {
           boolean decompiledSharedTail0 = (this.type != 3 ||
             !(this.field_k));
           if (!decompiledSharedTail0) {
-            qa.a(this.x, BufferedSocket.field_p.y, dg.field_T[this.type], this, this.y, -1, 7, BufferedSocket.field_p.x, 25, this.variant);
+            qa.a(this.x, BufferedSocket.field_p.y, AccountRegistrationPanel.field_T[this.type], this, this.y, -1, 7, BufferedSocket.field_p.x, 25, this.variant);
             decompiledSharedTail0 = (var3 != 0);
           }
           if ((decompiledSharedTail0) && (this.type == 4 &&
@@ -7794,7 +7794,7 @@ final class LevelEntity {
             return;
           }
           var4 = this.c(false, var3);
-          ma.field_k = this.f(-16452, var3);
+          TextFieldValidator.field_k = this.f(-16452, var3);
           this.a(-1);
           var5 = 1;
           this.a(true, var5 != 0);
@@ -7884,13 +7884,13 @@ final class LevelEntity {
             SecondaryNodeDeque.field_j[param1][2] = this.y;
             SecondaryNodeDeque.field_j[param1][3] = this.field_u;
           }
-          if (SecondaryNodeDeque.field_j[h.field_b[7][dg.field_T[3]][0] - 1][0] >= 0) {
+          if (SecondaryNodeDeque.field_j[h.field_b[7][AccountRegistrationPanel.field_T[3]][0] - 1][0] >= 0) {
             return;
           }
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 > param1))) {
-            stackIn_13_0 = 256 - (param1 - var6) * 256 / (h.field_b[7][dg.field_T[3]][0] * 2 - 2);
+            stackIn_13_0 = 256 - (param1 - var6) * 256 / (h.field_b[7][AccountRegistrationPanel.field_T[3]][0] * 2 - 2);
             if (var8 == 0) {
               var5_int = stackIn_13_0;
               this.a(param2, param0, SecondaryNodeDeque.field_j[var6][1], SecondaryNodeDeque.field_j[var6][2], SecondaryNodeDeque.field_j[var6][0], this.type, 2657, SecondaryNodeDeque.field_j[var6][3]);
@@ -8141,7 +8141,7 @@ final class LevelEntity {
           var2.field_i = false;
           var2.field_e = 32 * var2.x + var2.field_B * 32 / 256;
           var2.field_z = 64 * var2.field_u / 256 + var2.y * 64;
-          hc.a(44, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, dg.field_T[this.type], this.y, this.x);
+          hc.a(44, BufferedSocket.field_p.y, this.variant, 6, BufferedSocket.field_p.x, AccountRegistrationPanel.field_T[this.type], this.y, this.x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8163,7 +8163,7 @@ final class LevelEntity {
         try {
           var2_int = tj.field_c[0] << 3;
           var3 = tj.field_c[1] << 3;
-          var4 = ki.field_e[dg.field_T[24]];
+          var4 = ki.field_e[AccountRegistrationPanel.field_T[24]];
           var5 = new LevelEntity(this.x, this.y, 24, 0);
           var5.field_e = this.field_e;
           boolean decompiledSharedTail0 = !(this.field_a >= 0);
@@ -8565,11 +8565,11 @@ final class LevelEntity {
           if (null == ea.field_h) {
             ea.field_h = new Sprite(var13, var14);
             id.field_d = new int[var16][4];
-            LocalizedStrings.field_w = new int[var16][3];
+            ConfirmedEmailAvailabilityValidator.field_w = new int[var16][3];
             var17 = 0;
             while (true) {
               if (var17 < var16) {
-                LocalizedStrings.field_w[var17][0] = 0;
+                ConfirmedEmailAvailabilityValidator.field_w[var17][0] = 0;
                 var17++;
                 if (var19 == 0) {
                   continue;
@@ -8585,7 +8585,7 @@ final class LevelEntity {
           var17 = 0;
           scanLoop1: while (true) {
             if (var16 > var17) {
-              stackIn_24_0 = ~LocalizedStrings.field_w[var17][0];
+              stackIn_24_0 = ~ConfirmedEmailAvailabilityValidator.field_w[var17][0];
               stackIn_24_1 = -1;
               if (var19 != 0) {
                 break scanLoop1;
@@ -8633,23 +8633,23 @@ final class LevelEntity {
                 }
                 var18Lifetime1 = 0;
                 while (var18Lifetime1 < 3) {
-                  LocalizedStrings.field_w[-1 + var17][var18Lifetime1] = LocalizedStrings.field_w[var17][var18Lifetime1];
+                  ConfirmedEmailAvailabilityValidator.field_w[-1 + var17][var18Lifetime1] = ConfirmedEmailAvailabilityValidator.field_w[var17][var18Lifetime1];
                   var18Lifetime1++;
                 }
                 var17++;
               }
               if (decompiledFrameCompleted0) {
-                LocalizedStrings.field_w[var16 - 1][0] = this.field_a;
-                LocalizedStrings.field_w[-1 + var16][1] = AccountNameAvailabilityValidator.field_r;
-                LocalizedStrings.field_w[var16 - 1][2] = n.field_jb;
+                ConfirmedEmailAvailabilityValidator.field_w[var16 - 1][0] = this.field_a;
+                ConfirmedEmailAvailabilityValidator.field_w[-1 + var16][1] = AccountNameAvailabilityValidator.field_r;
+                ConfirmedEmailAvailabilityValidator.field_w[var16 - 1][2] = n.field_jb;
                 id.field_d[var16 - 1][0] = this.x;
                 id.field_d[var16 - 1][1] = this.field_B;
                 id.field_d[var16 - 1][2] = this.y;
                 id.field_d[-1 + var16][3] = this.field_u;
                 if (var19 != 0) {
-                  LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
-                  LocalizedStrings.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
-                  LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
+                  ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][0] = this.field_a;
+                  ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
+                  ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = n.field_jb;
                   id.field_d[var15Lifetime1][0] = this.x;
                   id.field_d[var15Lifetime1][1] = this.field_B;
                   id.field_d[var15Lifetime1][2] = this.y;
@@ -8657,9 +8657,9 @@ final class LevelEntity {
                 }
               }
             } else {
-              LocalizedStrings.field_w[var15Lifetime1][0] = this.field_a;
-              LocalizedStrings.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
-              LocalizedStrings.field_w[var15Lifetime1][2] = n.field_jb;
+              ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][0] = this.field_a;
+              ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][1] = AccountNameAvailabilityValidator.field_r;
+              ConfirmedEmailAvailabilityValidator.field_w[var15Lifetime1][2] = n.field_jb;
               id.field_d[var15Lifetime1][0] = this.x;
               id.field_d[var15Lifetime1][1] = this.field_B;
               id.field_d[var15Lifetime1][2] = this.y;
@@ -8677,9 +8677,9 @@ final class LevelEntity {
             var8 = dl.field_n[1];
             dl.field_n[2] = -32 + var9;
             dl.field_n[0] = -(-this.field_I + var13 >> 1) + var7_int;
-            var11 = LocalizedStrings.field_w[var17][1];
-            var10 = LocalizedStrings.field_w[var17][0];
-            var12 = LocalizedStrings.field_w[var17][2];
+            var11 = ConfirmedEmailAvailabilityValidator.field_w[var17][1];
+            var10 = ConfirmedEmailAvailabilityValidator.field_w[var17][0];
+            var12 = ConfirmedEmailAvailabilityValidator.field_w[var17][2];
             if (var19 != 0) {
               return;
             }
@@ -8934,7 +8934,7 @@ final class LevelEntity {
                   break;
                 }
               case 19:
-                if (!ui.field_b) {
+                if (!DebouncedFieldValidator.field_b) {
                   break;
                 }
                 if (ng.field_I > 0) {
@@ -9667,11 +9667,11 @@ final class LevelEntity {
                 (param0.type == 28)) {
                 jc.b(fh.field_e, 1, 7);
                 if (var12 != 0) {
-                  hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, dg.field_T[param0.type], param0.y, param0.x);
+                  hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, AccountRegistrationPanel.field_T[param0.type], param0.y, param0.x);
                 }
               }
             } else {
-              hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, dg.field_T[param0.type], param0.y, param0.x);
+              hc.a(91, BufferedSocket.field_p.y, param0.variant, 0, BufferedSocket.field_p.x, AccountRegistrationPanel.field_T[param0.type], param0.y, param0.x);
             }
             param0.field_G = param0.field_G + 10;
             if (GameKeyHandler.field_b) {
@@ -9711,7 +9711,7 @@ final class LevelEntity {
           }
           if (param2 &&
             !param0.field_Y && (28 != param0.type &&
-            0 < h.field_b[3][dg.field_T[param0.type]][this.variant] ||
+            0 < h.field_b[3][AccountRegistrationPanel.field_T[param0.type]][this.variant] ||
             param0.type == 28)) {
             if (5 != param0.type) {
               param0.field_h = -8;
@@ -10206,7 +10206,7 @@ final class LevelEntity {
               var13 = tj.field_c[0] << 3;
               var14 = tj.field_c[1] << 3;
               var15 = param4 + param0;
-              var16 = ki.field_e[dg.field_T[24]];
+              var16 = ki.field_e[AccountRegistrationPanel.field_T[24]];
               if (var6_int == 0) {
                 var15 = var15 + var13;
               }
@@ -10217,17 +10217,17 @@ final class LevelEntity {
               boolean decompiledSharedTail0 = (var6_int == 0);
               if (!decompiledSharedTail0) {
                 if (cb.field_f == null) {
-                  cb.field_f = new Sprite(ki.field_e[dg.field_T[24]], ae.field_s[dg.field_T[24]]);
+                  cb.field_f = new Sprite(ki.field_e[AccountRegistrationPanel.field_T[24]], ae.field_s[AccountRegistrationPanel.field_T[24]]);
                 }
                 cb.field_f.d();
                 SoftwareRasterizer.clearRaster();
-                dj.field_O.drawFlippedHorizontal(0, 0);
+                EditableTextField.field_O.drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(126);
-                cb.field_f.drawScaled(var15, param1 + var14, var8 * var16 / this.field_I, ae.field_s[dg.field_T[24]]);
+                cb.field_f.drawScaled(var15, param1 + var14, var8 * var16 / this.field_I, ae.field_s[AccountRegistrationPanel.field_T[24]]);
                 decompiledSharedTail0 = (var17 != 0);
               }
               if (decompiledSharedTail0) {
-                dj.field_O.drawScaled(var15, param1 + var14, var16 * var8 / this.field_I, ae.field_s[dg.field_T[24]]);
+                EditableTextField.field_O.drawScaled(var15, param1 + var14, var16 * var8 / this.field_I, ae.field_s[AccountRegistrationPanel.field_T[24]]);
               }
             }
           }
@@ -10346,7 +10346,7 @@ final class LevelEntity {
             var13Lifetime3 = var12[0] << 3;
             var14Lifetime2 = var12[1] << 3;
             var15Lifetime2 = param4 + param0;
-            var16Lifetime2 = ki.field_e[dg.field_T[23]];
+            var16Lifetime2 = ki.field_e[AccountRegistrationPanel.field_T[23]];
             if (this.field_a < 0) {
               var15Lifetime2 = var15Lifetime2 + (-var16Lifetime2 + (-var13Lifetime3 + this.field_I));
               if (var17 != 0) {

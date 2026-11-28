@@ -30,18 +30,18 @@ abstract class qm {
           var11 = -126 / ((-11 - param1) / 36);
           var9 = param0 - param5;
           for (var13 = param2; var8_int > var13; var13++) {
-            di.a(param6, (byte) -115, param7, qd.field_a[var13], param4);
+            IndexedSpriteLayer.a(param6, (byte) -115, param7, qd.field_a[var13], param4);
           }
           for (var13Lifetime1 = param0; var9 < var13Lifetime1; var13Lifetime1--) {
-            di.a(param6, (byte) 75, param7, qd.field_a[var13Lifetime1], param4);
+            IndexedSpriteLayer.a(param6, (byte) 75, param7, qd.field_a[var13Lifetime1], param4);
           }
           var12 = -param5 + param4;
           var10 = param5 + param6;
           for (var13Lifetime2 = var8_int; var9 >= var13Lifetime2; var13Lifetime2++) {
             var19 = qd.field_a[var13Lifetime2];
-            di.a(param6, (byte) -110, param7, var19, var10);
-            di.a(var10, (byte) -120, param3, var19, var12);
-            di.a(var12, (byte) 57, param7, var19, param4);
+            IndexedSpriteLayer.a(param6, (byte) -110, param7, var19, var10);
+            IndexedSpriteLayer.a(var10, (byte) -120, param3, var19, var12);
+            IndexedSpriteLayer.a(var12, (byte) 57, param7, var19, param4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

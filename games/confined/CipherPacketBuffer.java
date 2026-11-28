@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CipherPacketBuffer extends PacketBuffer {
-    static bf field_u;
+    static DisplayNameSelectionPanel field_u;
     private int field_p;
     static String field_v;
     private IsaacRandom field_q;

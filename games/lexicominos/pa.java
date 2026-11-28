@@ -63,8 +63,8 @@ final class pa {
           var1 = ig.field_a;
           var2 = var1.readUnsignedByte(true);
           if (var2 == 0) {
-            if (null == cl.field_P) {
-              cl.field_P = new he(128);
+            if (null == ValidatedTextField.field_P) {
+              ValidatedTextField.field_P = new he(128);
               sc.field_b = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(true) != 1) ? 0 : 1;
@@ -82,12 +82,12 @@ final class pa {
             if (var5_ref == null) {
               var5_ref = cj.a((byte) -109, var6_ref);
               if (var5_ref != null) {
-                cl.field_P.a(var5_ref, (long)var7_ref.hashCode(), (byte) 64);
+                ValidatedTextField.field_P.a(var5_ref, (long)var7_ref.hashCode(), (byte) 64);
               }
             }
             if (null == var5_ref) {
               var5_ref = new hc();
-              cl.field_P.a(var5_ref, (long)var7_ref.hashCode(), (byte) 64);
+              ValidatedTextField.field_P.a(var5_ref, (long)var7_ref.hashCode(), (byte) 64);
               fieldTemp$1 = sc.field_b;
               sc.field_b = sc.field_b + 1;
               var5_ref.field_hb = fieldTemp$1;

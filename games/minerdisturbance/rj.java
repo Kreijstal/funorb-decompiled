@@ -44,7 +44,7 @@ final class rj implements uj {
         if (il.e(-31391)) {
           return;
         }
-        if (!ke.field_V) {
+        if (!ValidatedTextField.field_V) {
           gm.field_a = true;
           return;
         }
@@ -63,11 +63,11 @@ final class rj implements uj {
                 ne.a(6, param0 - 63);
               } else {
                 if (var2 == 7) {
-                  ke.field_V = false;
+                  ValidatedTextField.field_V = false;
                   ne.a(4, -90);
                 } else {
                   if (var2 == 10) {
-                    ke.field_V = false;
+                    ValidatedTextField.field_V = false;
                     ne.a(4, -90);
                   } else {
                     if (3 == var2) {

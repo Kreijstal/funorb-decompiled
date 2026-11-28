@@ -96,7 +96,7 @@ final class MixedSupport033 extends HashNode {
         }
         renderingSupport007Local19.performAction0852(new GameDomainSupport002(4, UiComponentPart006.stringState0109, MixedSupport001.renderingSupport009State0001), 117);
         if (booleanArgument4) {
-          renderingSupport007Local19.performAction0852(new GameDomainSupport002(5, UiComponentPart032.stringState0581, MixedSupport001.renderingSupport009State0001), 119);
+          renderingSupport007Local19.performAction0852(new GameDomainSupport002(5, BirthDateInput.stringState0581, MixedSupport001.renderingSupport009State0001), 119);
         }
         if (integerArgument6 != 32357) {
           MixedSupport033.computeRenderingSupport0070497(false, true, 98, true, false, 42, false, false);
@@ -130,7 +130,7 @@ final class MixedSupport033 extends HashNode {
             integerLocal14 += 2;
             integerLocal15 -= 2;
           }
-          renderingSupport007Local19.integerState0370 = UiComponentPart016.computeInteger0830((byte) 114, integerLocal15, UiComponentPart031.randomState0003) + integerLocal14;
+          renderingSupport007Local19.integerState0370 = UiComponentPart016.computeInteger0830((byte) 114, integerLocal15, AccountRegistrationPanel.randomState0003) + integerLocal14;
           if (booleanArgument1) {
             integerLocal13 = 96;
             if (booleanArgument2) {
@@ -263,19 +263,19 @@ final class MixedSupport033 extends HashNode {
           if (integerArgument1 != -11079) {
             MixedSupport033.computeRenderingSupport0070497(false, false, 6, true, true, -105, true, true);
           }
-          if (UiComponentPart022.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001) {
+          if (AccountFieldStatusIndicator.mixedSupport004State0003 == UiComponentPart016.mixedSupport004State0001) {
             stackObjectLocal2 = null;
             return (MixedSupport016) (stackObjectLocal2);
           }
           if (UiComponentPart016.mixedSupport004State0001 == MixedSupport071.mixedSupport004State0002 &&
-            stringArgument2.equals(UiComponentPart024.stringState0435)) {
+            stringArgument2.equals(BirthDateTextFields.stringState0435)) {
             UiComponentPart016.mixedSupport004State0001 = MixedSupport127.mixedSupport004State0005;
             stackMixedSupport016Local4 = PcmResampler.mixedSupport016State0002;
             return stackMixedSupport016Local4;
           }
           PcmResampler.mixedSupport016State0002 = null;
-          UiComponentPart016.mixedSupport004State0001 = UiComponentPart022.mixedSupport004State0003;
-          UiComponentPart024.stringState0435 = stringArgument2;
+          UiComponentPart016.mixedSupport004State0001 = AccountFieldStatusIndicator.mixedSupport004State0003;
+          BirthDateTextFields.stringState0435 = stringArgument2;
           stackObjectLocal3 = null;
           return (MixedSupport016) (stackObjectLocal3);
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
@@ -335,17 +335,17 @@ final class MixedSupport033 extends HashNode {
     }
 
     final static String computeString0493(int integerArgument1) {
-        if (UiComponentPart022.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
+        if (AccountFieldStatusIndicator.mixedSupport004State0003 == GameAssets.mixedSupport004State0004) {
           return PasswordValidator.stringState0527;
         }
         if (!ThemeTips.mixedSupport119State0001.computeBoolean1561(85)) {
           return ThemeTips.mixedSupport119State0001.computeString1566((byte) 62);
         }
-        if (UiComponentPart016.mixedSupport004State0001 == UiComponentPart022.mixedSupport004State0003) {
+        if (UiComponentPart016.mixedSupport004State0001 == AccountFieldStatusIndicator.mixedSupport004State0003) {
           return ThemeTips.mixedSupport119State0001.computeString1566((byte) 123);
         }
         if (integerArgument1 == 116) {
-          return SceneWidgetPart004.stringState0217;
+          return PlayerNamePrompt.stringState0217;
         }
         return (String) null;
     }

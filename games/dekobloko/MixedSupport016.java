@@ -9,7 +9,7 @@ final class MixedSupport016 {
     boolean booleanState0014;
     static int[] integerArrayState0021;
     static RgbSprite rgbSpriteState0010;
-    static SceneWidgetPart013 sceneWidgetPart013State0001;
+    static LobbyRoomRow sceneWidgetPart013State0001;
     String[] stringArrayState0003;
     static String stringState0076;
     static boolean booleanState0015;
@@ -90,7 +90,7 @@ final class MixedSupport016 {
         ComponentContainer.renderingSupport007State0006 = null;
         MixedSupport020.renderingSupport007State0003 = null;
         if (!booleanArgument1) {
-          sceneWidgetPart013State0001 = (SceneWidgetPart013) null;
+          sceneWidgetPart013State0001 = (LobbyRoomRow) null;
         }
     }
 

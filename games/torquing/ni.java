@@ -3,7 +3,7 @@
  */
 final class ni extends IntrusiveNode {
     int field_k;
-    static sm[] field_l;
+    static IndexedSprite[] field_l;
     byte[] field_j;
 
     final static void a(PcmSampleStream param0, boolean param1) {
@@ -18,7 +18,7 @@ final class ni extends IntrusiveNode {
           synchronized (var2) {
             Torquing.field_v.field_r.b(param0);
             if (!param1) {
-              field_l = (sm[]) null;
+              field_l = (IndexedSprite[]) null;
             }
           }
           return;
@@ -53,7 +53,7 @@ final class ni extends IntrusiveNode {
         try {
           var6_int = -param2 + param5;
           if (param3 != -12421) {
-            field_l = (sm[]) null;
+            field_l = (IndexedSprite[]) null;
           }
           for (var7 = 0; var7 < var6_int; var7++) {
             {
@@ -261,14 +261,14 @@ final class ni extends IntrusiveNode {
         if (param0 >= 74) {
           return null;
         }
-        field_l = (sm[]) null;
+        field_l = (IndexedSprite[]) null;
         return null;
     }
 
     public static void clearStaticReferences(int param0) {
         field_l = null;
         if (param0 >= -25) {
-          field_l = (sm[]) null;
+          field_l = (IndexedSprite[]) null;
         }
     }
 

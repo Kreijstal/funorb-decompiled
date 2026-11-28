@@ -13,7 +13,7 @@ final class oc extends IntrusiveNode {
           if (kb.field_a != null) {
             kb.field_a.t(20252);
           }
-          LevelView.field_y = new rl(param0, param2, false, true, true);
+          LevelView.field_y = new LoginPanel(param0, param2, false, true, true);
           int var3_int = -95 / ((param1 + 25) / 60);
           GameApplet.field_g.b(LevelView.field_y, -120);
         } catch (RuntimeException runtimeException) {

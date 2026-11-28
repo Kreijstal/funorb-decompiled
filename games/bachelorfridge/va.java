@@ -37,10 +37,10 @@ final class va {
               g.field_f.drawParagraph(ema.field_Ab, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           }
-          if (DreamsAnimation.field_A < ph.field_E) {
+          if (DreamsAnimation.field_A < LoginPanel.field_E) {
             var7 = oja.field_f[vj.field_n];
             if (var7 != null) {
-              var2_int = (60 + var7.field_n) * DreamsAnimation.field_A / ph.field_E;
+              var2_int = (60 + var7.field_n) * DreamsAnimation.field_A / LoginPanel.field_E;
               var3 = var2_int - 30;
               if (!ResetSpecial.field_p) {
                 iia.a((byte) 123, 199, -256 * var3 / 30, var7, (-var3 + var7.field_n) * 256 / 30, 245);

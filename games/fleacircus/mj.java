@@ -186,7 +186,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             break;
           }
-          ca.a(stackIn_68_0, stackIn_68_1, param1, false, param4);
+          AccountRegistrationPanel.a(stackIn_68_0, stackIn_68_1, param1, false, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -277,7 +277,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int != 65535 &&
               ol.isSupportedCp1252KeyCharacter((char) var2_int, -103)) {
               var3 = 127 & 1 + ak.field_e;
-              if (~var3 != ~tl.field_o) {
+              if (~var3 != ~MatchingFieldValidator.field_o) {
                 hj.field_b[ak.field_e] = -1;
                 pf.field_d[ak.field_e] = (char) var2_int;
                 ak.field_e = var3;
@@ -481,7 +481,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (var2_int >= 0) {
               var3 = 1 + ak.field_e & 127;
-              if (~var3 != ~tl.field_o) {
+              if (~var3 != ~MatchingFieldValidator.field_o) {
                 hj.field_b[ak.field_e] = var2_int;
                 pf.field_d[ak.field_e] = '\0';
                 ak.field_e = var3;

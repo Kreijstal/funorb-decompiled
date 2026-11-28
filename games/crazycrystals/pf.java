@@ -479,7 +479,7 @@ final class pf extends pn implements Cloneable {
         int[] var11 = null;
         var8 = CrazyCrystals.field_B;
         try {
-          var9 = kd.field_n;
+          var9 = ConfirmedEmailAvailabilityValidator.field_n;
           var2 = var9.readUnsignedByte(255);
           if (param0 < 19) {
             field_m = (String[]) null;

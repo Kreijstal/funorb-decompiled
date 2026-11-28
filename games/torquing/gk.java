@@ -28,7 +28,7 @@ final class gk {
               return;
             }
             if (param3 <= 105) {
-              ua.field_b = di.createAccountSuggestionsResult(0, param2);
+              ua.field_b = IndexedSpriteLayer.createAccountSuggestionsResult(0, param2);
               return;
             }
             ua.field_b = pg.createAccountErrorResult(param3, param1, -1);

@@ -27,7 +27,7 @@ final class bd {
           }
           cd.a(param1 ^ -99);
           wg.field_j.k(param1 ^ 25);
-          j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
+          j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
           jh.field_C = new ra(wg.field_j, j.field_e);
           wg.field_j.b((byte) -101, jh.field_C);
         } catch (RuntimeException runtimeException) {
@@ -62,7 +62,7 @@ final class bd {
           }
           cd.a(param1 ^ -99);
           wg.field_j.k(param1 ^ 25);
-          j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
+          j.field_e = new LoginPanel(bh.field_b, (String) null, fk.field_a, param0, param2);
           jh.field_C = new ra(wg.field_j, j.field_e);
           wg.field_j.b((byte) -101, jh.field_C);
         } catch (RuntimeException runtimeException) {

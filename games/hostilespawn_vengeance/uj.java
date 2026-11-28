@@ -5,7 +5,7 @@ final class uj extends IntrusiveNode {
     static PlatformTaskDispatcher field_k;
     boolean field_j;
     static int field_l;
-    static oc field_p;
+    static GridPoint field_p;
     static AudioOutput field_m;
     static String field_i;
     static RgbSprite field_r;
@@ -33,8 +33,8 @@ final class uj extends IntrusiveNode {
     final static void d(int param0) {
         int var1 = 31 % ((param0 - 46) / 46);
         bf.field_d = null;
-        sf.field_X = null;
-        hd.field_r = null;
+        TextInputField.field_X = null;
+        ConfirmedEmailAvailabilityValidator.field_r = null;
         ja.field_e = (byte[][]) null;
         nh.field_O = null;
         th.field_Jb = null;

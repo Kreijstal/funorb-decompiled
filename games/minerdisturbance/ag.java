@@ -16,8 +16,8 @@ final class ag {
         if (!param0) {
           return;
         }
-        if (!ke.field_X[param1] &&
-          ke.field_V &&
+        if (!ValidatedTextField.field_X[param1] &&
+          ValidatedTextField.field_V &&
           sc.field_b &&
           !d.a(param1, cm.field_o, (byte) 68)) {
           boolean decompiledFrameRemainder0 = true;
@@ -35,16 +35,16 @@ final class ag {
               return;
             }
           }
-          ke.field_X[param1] = true;
+          ValidatedTextField.field_X[param1] = true;
           if (!fi.field_a[param1]) {
-            if (ok.field_b.isEmpty((byte) 119) &&
+            if (DebouncedFieldValidator.field_b.isEmpty((byte) 119) &&
               bl.g(0) &&
               ja.field_u > 150) {
-              ok.field_b.addLast((byte) -93, new tm(param1, param3, param2, false));
+              DebouncedFieldValidator.field_b.addLast((byte) -93, new tm(param1, param3, param2, false));
               ra.a(param1, (byte) -59);
               ja.field_u = 0;
             } else {
-              ke.field_X[param1] = false;
+              ValidatedTextField.field_X[param1] = false;
             }
           } else {
             ec.field_c.addLast((byte) -93, new tm(param1, param3, param2, true));

@@ -85,7 +85,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (null != MixedSupport062.mouseInputState0001) {
             MixedSupport099.integerState0579 = 0;
-            UiComponentPart022.integerState0572 = 0;
+            AccountFieldStatusIndicator.integerState0572 = 0;
             TranslatedUiText.booleanState0115 = true;
             integerLocal1 = mouseEventArgument1.getModifiers();
             if ((8 & integerLocal1) == 0) {
@@ -143,19 +143,19 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         }
     }
 
-    final static void performAction1806(boolean booleanArgument1, PacketBuffer packetBufferArgument2, SceneWidgetPart013 sceneWidgetPart013Argument3, byte byteArgument4) {
+    final static void performAction1806(boolean booleanArgument1, PacketBuffer packetBufferArgument2, LobbyRoomRow sceneWidgetPart013Argument3, byte byteArgument4) {
         int integerLocal1 = 0;
-        SceneWidgetPart013 stackSceneWidgetPart013Local2 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local2 = null;
         boolean stackBooleanLocal3 = false;
-        SceneWidgetPart013 stackSceneWidgetPart013Local4 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local4 = null;
         boolean stackBooleanLocal5 = false;
-        SceneWidgetPart013 stackSceneWidgetPart013Local6 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local6 = null;
         boolean stackBooleanLocal7 = false;
-        SceneWidgetPart013 stackSceneWidgetPart013Local8 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local8 = null;
         boolean stackBooleanLocal9 = false;
-        SceneWidgetPart013 stackSceneWidgetPart013Local10 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local10 = null;
         boolean stackBooleanLocal11 = false;
-        SceneWidgetPart013 stackSceneWidgetPart013Local12 = null;
+        LobbyRoomRow stackSceneWidgetPart013Local12 = null;
         int stackIntegerLocal13 = 0;
         int stackIntegerLocal14 = 0;
         int stackIntegerLocal15 = 0;
@@ -179,22 +179,22 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           sceneWidgetPart013Argument3.integerState0840 = packetBufferArgument2.readUnsignedByte((byte) -75);
           sceneWidgetPart013Argument3.integerState0842 = packetBufferArgument2.readUnsignedByte((byte) -62);
           integerLocal22 = packetBufferArgument2.readUnsignedByte((byte) -95);
-          stackSceneWidgetPart013Local2 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local2 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           stackBooleanLocal3 = ((128 & integerLocal22) != 0);
           stackSceneWidgetPart013Local2.booleanState0199 = stackBooleanLocal3;
-          stackSceneWidgetPart013Local4 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local4 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           stackBooleanLocal5 = ((32 & integerLocal22) != 0);
           stackSceneWidgetPart013Local4.booleanState0208 = stackBooleanLocal5;
-          stackSceneWidgetPart013Local6 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local6 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           stackBooleanLocal7 = (sceneWidgetPart013Argument3.booleanState0199) && (sceneWidgetPart013Argument3.integerState0843 < sceneWidgetPart013Argument3.integerState0840);
           stackSceneWidgetPart013Local6.booleanState0205 = stackBooleanLocal7;
-          stackSceneWidgetPart013Local8 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local8 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           stackBooleanLocal9 = ((64 & integerLocal22) != 0);
           stackSceneWidgetPart013Local8.booleanState0204 = stackBooleanLocal9;
-          stackSceneWidgetPart013Local10 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local10 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           stackBooleanLocal11 = ((integerLocal22 & 8) != 0);
           stackSceneWidgetPart013Local10.booleanState0201 = stackBooleanLocal11;
-          stackSceneWidgetPart013Local12 = (SceneWidgetPart013) (sceneWidgetPart013Argument3);
+          stackSceneWidgetPart013Local12 = (LobbyRoomRow) (sceneWidgetPart013Argument3);
           if (0 != (16 & integerLocal22)) {
             stackIntegerLocal13 = 2;
           } else {
@@ -285,7 +285,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (MixedSupport062.mouseInputState0001 == null) {
             return;
           }
-          UiComponentPart022.integerState0572 = 0;
+          AccountFieldStatusIndicator.integerState0572 = 0;
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;
@@ -316,10 +316,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             MixedSupport062.correctedCurrentTimeMillis(4);
             if (javax.swing.SwingUtilities.isRightMouseButton(mouseEventArgument1)) {
               SecondaryNodeHashTable.integerState0544 = 2;
-              UiComponentPart022.integerState0572 = 2;
+              AccountFieldStatusIndicator.integerState0572 = 2;
             } else {
               SecondaryNodeHashTable.integerState0544 = 1;
-              UiComponentPart022.integerState0572 = 1;
+              AccountFieldStatusIndicator.integerState0572 = 1;
             }
             integerLocal1 = mouseEventArgument1.getModifiers();
             if (0 != (4 & integerLocal1)) {

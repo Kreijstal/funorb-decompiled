@@ -24,7 +24,7 @@ class lf {
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
           var4 = -61 / ((-66 - param0) / 51);
-          for (var5 = 0; var5 < el.field_j; var5++) {
+          for (var5 = 0; var5 < ProxySocketFactory.field_j; var5++) {
             var6 = mm.field_m[var5];
             if (!var6.field_b) {
               stackIn_6_0 = null;

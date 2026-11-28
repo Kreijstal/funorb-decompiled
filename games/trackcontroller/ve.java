@@ -135,11 +135,11 @@ final class ve extends ug {
             if (var20 == 0) {
               if (stackIn_11_0) {
                 var13 = qa.field_b[var10];
-                var14 = ui.field_r[var10];
+                var14 = PasswordValidator.field_r[var10];
                 var15 = -var13 + qa.field_b[var11];
                 var16 = -var13 + qa.field_b[var12];
-                var17 = -var14 + ui.field_r[var11];
-                var18 = ui.field_r[var12] - var14;
+                var17 = -var14 + PasswordValidator.field_r[var11];
+                var18 = PasswordValidator.field_r[var12] - var14;
               }
               if (!stackIn_11_0 ||
                 !(-(var16 * var17) + var15 * var18 >= 0)) {

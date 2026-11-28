@@ -52,7 +52,7 @@ final class ij implements t {
             var9 = param3;
             var10 = param1;
             for (var11 = param6; param4 > var11; var11++) {
-              var12 = lf.field_Y[var11];
+              var12 = ValidatedTextField.field_Y[var11];
               if (param5) {
                 stackIn_26_0 = SpriteState.field_u[var12];
               } else {
@@ -64,10 +64,10 @@ final class ij implements t {
                   var10 = var13;
                 }
               } else {
-                lf.field_Y[var11] = lf.field_Y[var8];
+                ValidatedTextField.field_Y[var11] = ValidatedTextField.field_Y[var8];
                 incrementValue$0 = var8;
                 var8++;
-                lf.field_Y[incrementValue$0] = var12;
+                ValidatedTextField.field_Y[incrementValue$0] = var12;
                 if (var13 < var9) {
                   var9 = var13;
                 }
@@ -79,11 +79,11 @@ final class ij implements t {
           }
           for (var7_intLifetime1 = param4 - 1; param6 < var7_intLifetime1; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = lf.field_Y[var8Lifetime1];
-              var10Lifetime1 = lf.field_Y[1 + var8Lifetime1];
+              var9Lifetime1 = ValidatedTextField.field_Y[var8Lifetime1];
+              var10Lifetime1 = ValidatedTextField.field_Y[1 + var8Lifetime1];
               if (rk.a(var9Lifetime1, (byte) 86, var10Lifetime1, param5)) {
-                lf.field_Y[var8Lifetime1] = var10Lifetime1;
-                lf.field_Y[1 + var8Lifetime1] = var9Lifetime1;
+                ValidatedTextField.field_Y[var8Lifetime1] = var10Lifetime1;
+                ValidatedTextField.field_Y[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }
@@ -101,10 +101,10 @@ final class ij implements t {
         if (param0 != 13809) {
           field_j = (ba) null;
         }
-        if (hd.mouseHandler != null) {
-          var1 = hd.mouseHandler;
+        if (ConfirmedEmailAvailabilityValidator.mouseHandler != null) {
+          var1 = ConfirmedEmailAvailabilityValidator.mouseHandler;
           synchronized (var1) {
-            hd.mouseHandler = null;
+            ConfirmedEmailAvailabilityValidator.mouseHandler = null;
           }
         }
     }
@@ -250,9 +250,9 @@ final class ij implements t {
         int var7Lifetime1Lifetime1;
         var9 = TrackController.field_F ? 1 : 0;
         try {
-          di.field_h = param1;
+          TextFieldValidator.field_h = param1;
           mh.field_i = true;
-          if (di.field_h == 0) {
+          if (TextFieldValidator.field_h == 0) {
             var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
             var4 = var3_int + 3;
             sa.field_I = new String[var4];
@@ -271,7 +271,7 @@ final class ij implements t {
             sa.field_I[-1 + var4] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 1;
             ac.field_c[1] = 5;
-          } else if (di.field_h == 1) {
+          } else if (TextFieldValidator.field_h == 1) {
             var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
             var4 = var3_int + 2;
             sa.field_I = new String[var4];
@@ -287,8 +287,8 @@ final class ij implements t {
             sa.field_I[var4 - 1] = MovingBlock.field_k;
             mj.field_b[-1 + var4] = 0;
             ac.field_c[0] = 5;
-          } else if (di.field_h != 2) {
-            if (di.field_h == 3) {
+          } else if (TextFieldValidator.field_h != 2) {
+            if (TextFieldValidator.field_h == 3) {
               if (!rg.field_c.privilegedTasksEnabled) {
                 var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, WhirlpoolDigest.field_c, ok.field_C);
               } else {
@@ -308,7 +308,7 @@ final class ij implements t {
               sa.field_I[-1 + var4] = MovingBlock.field_k;
               mj.field_b[var4 - 1] = 0;
               ac.field_c[0] = 5;
-            } else if (di.field_h == 4) {
+            } else if (TextFieldValidator.field_h == 4) {
               var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, fj.field_O, ok.field_C);
               var4 = 2 + var3_int;
               sa.field_I = new String[var4];
@@ -325,7 +325,7 @@ final class ij implements t {
               mj.field_b[-1 + var4] = 0;
               ac.field_c[0] = 5;
             } else {
-              if (di.field_h != 5) {
+              if (TextFieldValidator.field_h != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, cg.field_e, ok.field_C);
@@ -362,8 +362,8 @@ final class ij implements t {
             }
             el.field_O = new String[var4];
             pd.a(ok.field_C, 0, el.field_O, 0, var4);
-            bk.field_J = new String[-1 + var3_int - var4];
-            pd.a(ok.field_C, var4 + 1, bk.field_J, 0, var3_int - var4 - 1);
+            DisplayNameSelectionPanel.field_J = new String[-1 + var3_int - var4];
+            pd.a(ok.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
             var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, AccountRequestState.field_a), ok.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -386,8 +386,8 @@ final class ij implements t {
               stackIn_22_0 = el.field_O.length;
             }
             var5 = stackIn_22_0;
-            if (IntrusiveDequeCursor.field_c.length <= bk.field_J.length) {
-              stackIn_25_0 = bk.field_J.length;
+            if (IntrusiveDequeCursor.field_c.length <= DisplayNameSelectionPanel.field_J.length) {
+              stackIn_25_0 = DisplayNameSelectionPanel.field_J.length;
             } else {
               stackIn_25_0 = IntrusiveDequeCursor.field_c.length;
             }
@@ -398,7 +398,7 @@ final class ij implements t {
             for (var8 = 0; var8 < var7; var8++) {
               mj.field_b[var8] = -1;
             }
-            sa.field_I[1] = lf.field_U;
+            sa.field_I[1] = ValidatedTextField.field_U;
             ac.field_c = new int[2];
             sa.field_I[0] = lg.field_c;
             mj.field_b[1] = 0;
@@ -442,7 +442,7 @@ final class ij implements t {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (2 == di.field_h) {
+          if (2 == TextFieldValidator.field_h) {
             var10 = el.field_O;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -452,7 +452,7 @@ final class ij implements t {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = bk.field_J;
+            var4_ref_String__Lifetime1 = DisplayNameSelectionPanel.field_J;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = ib.a(false, 10, var12);
@@ -462,7 +462,7 @@ final class ij implements t {
             }
           }
           cd.field_b = var3_intLifetime1 + (sf.field_F - (var3_intLifetime1 >> 1));
-          bk.field_D = -(var3_intLifetime1 >> 1) + sf.field_F;
+          DisplayNameSelectionPanel.field_D = -(var3_intLifetime1 >> 1) + sf.field_F;
           oi.field_b = GzipDecompressor.field_f.field_i * (na.field_e + of.field_f << 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < sa.field_I.length; var4Lifetime2++) {
             stackIn_110_0 = oi.field_b;
@@ -497,7 +497,7 @@ final class ij implements t {
             }
             var4Lifetime3++;
           }
-          if (di.field_h == 2) {
+          if (TextFieldValidator.field_h == 2) {
             GzipDecompressor.field_f.a(-1, -1, param2, 113);
           } else {
             GzipDecompressor.field_f.a(0, GameScreen.b(fg.mouseY, 0, kf.mouseX), param2, 106);

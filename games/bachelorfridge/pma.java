@@ -103,9 +103,9 @@ final class pma extends k {
         stackIn_15_5 = vc.field_a;
         stackIn_16_6 = (md.field_l <= 50) ? false : true;
         gfa.a(stackIn_13_0, stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4 != 0, stackIn_15_5, stackIn_16_6, param1, 0, true, 109, 11);
-        if (aba.field_f) {
+        if (TextFieldValidator.field_f) {
           sja.field_fb.writeCipheredByte(57, (byte) 100);
-          aba.field_f = false;
+          TextFieldValidator.field_f = false;
         }
         if (StickySpecial.field_p) {
           sja.field_fb.writeCipheredByte(10, (byte) 97);

@@ -1993,7 +1993,7 @@ final class GameEntity {
                       var10.field_c = 16;
                       var10.y = this.y;
                       var10.x = this.x;
-                      a.entities[pl.e((byte) 63)] = var10;
+                      a.entities[ValidatedTextField.e((byte) 63)] = var10;
                     }
                   } else {
                     q.field_a = q.field_a + 1;
@@ -2002,7 +2002,7 @@ final class GameEntity {
                     var10.field_c = 16;
                     var10.y = this.y;
                     var10.x = this.x;
-                    a.entities[pl.e((byte) 63)] = var10;
+                    a.entities[ValidatedTextField.e((byte) 63)] = var10;
                   }
                 }
               }
@@ -2016,7 +2016,7 @@ final class GameEntity {
               b.a(var8_ref_qe.field_c, 6);
               var8_ref_qe.field_c = 8;
             }
-            a.entities[pl.e((byte) 63)] = var8_ref_qe;
+            a.entities[ValidatedTextField.e((byte) 63)] = var8_ref_qe;
           }
         }
         if (var3 > 0) {
@@ -2036,7 +2036,7 @@ final class GameEntity {
             }
             var12.velocityX = var12.velocityX + (double)this.mass * this.velocityX / (double)(var3 * var12.mass);
             var12.velocityY = var12.velocityY + this.velocityY * (double)this.mass / (double)(var3 * var12.mass);
-            a.entities[pl.e((byte) 63)] = var12;
+            a.entities[ValidatedTextField.e((byte) 63)] = var12;
           }
         }
     }
@@ -2118,7 +2118,7 @@ final class GameEntity {
             stackIn_7_0 = pe.field_c.b(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = mj.field_E.b(param1);
+          stackIn_5_0 = AccountRegistrationPanel.field_E.b(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2140,7 +2140,7 @@ final class GameEntity {
           String var3 = null;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= ae.field_N.position) {
+          if (param1 <= EditableTextField.field_N.position) {
             return true;
           }
           if (null == ob.field_b) {
@@ -2153,16 +2153,16 @@ final class GameEntity {
               GameEntity.$cfr$intArgs$a$590e95718a07(101, (String) null, false);
             }
             if (var2_int > 0) {
-              if (-ae.field_N.position + param1 < var2_int) {
-                var2_int = -ae.field_N.position + param1;
+              if (-EditableTextField.field_N.position + param1 < var2_int) {
+                var2_int = -EditableTextField.field_N.position + param1;
               }
-              ob.field_b.a(ae.field_N.position, (byte) -64, ae.field_N.payload, var2_int);
+              ob.field_b.a(EditableTextField.field_N.position, (byte) -64, EditableTextField.field_N.payload, var2_int);
               PacketBuffer.field_o = ih.correctedCurrentTimeMillis((byte) -98);
-              ae.field_N.position = ae.field_N.position + var2_int;
-              if (ae.field_N.position < param1) {
+              EditableTextField.field_N.position = EditableTextField.field_N.position + var2_int;
+              if (EditableTextField.field_N.position < param1) {
                 return false;
               }
-              ae.field_N.position = 0;
+              EditableTextField.field_N.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -2384,7 +2384,7 @@ final class GameEntity {
             stackIn_7_0 = pe.field_c.b(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = mj.field_E.b(param1);
+          stackIn_5_0 = AccountRegistrationPanel.field_E.b(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

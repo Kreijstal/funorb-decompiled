@@ -34,8 +34,8 @@ final class NodeHashTableIterator implements Iterator {
         var3 = Torquing.field_u;
         try {
           if (nd.field_a == -1 &&
-            ad.field_n == -1) {
-            ad.field_n = k.field_e;
+            ConfirmedEmailAvailabilityValidator.field_n == -1) {
+            ConfirmedEmailAvailabilityValidator.field_n = k.field_e;
             nd.field_a = n.field_t;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -47,8 +47,8 @@ final class NodeHashTableIterator implements Iterator {
           }
           if (decompiledFrameRemainder0) {
             if (!jd.field_E) {
-              if (lp.field_b >= um.field_l) {
-                stackIn_16_0 = (lp.field_b < TooltipPanel.field_g + um.field_l) ? 1 : 0;
+              if (lp.field_b >= MatchingFieldValidator.field_l) {
+                stackIn_16_0 = (lp.field_b < TooltipPanel.field_g + MatchingFieldValidator.field_l) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -60,17 +60,17 @@ final class NodeHashTableIterator implements Iterator {
               lp.field_b = 0;
             } else {
               if (jd.field_E) {
-                lp.field_b = um.field_l;
+                lp.field_b = MatchingFieldValidator.field_l;
               } else {
                 if (var2_int != 0) {
-                  lp.field_b = um.field_l;
+                  lp.field_b = MatchingFieldValidator.field_l;
                 } else {
                   lp.field_b = 0;
                 }
               }
             }
             FrameTimer.field_a = nd.field_a;
-            ll.field_i = ad.field_n;
+            ll.field_i = ConfirmedEmailAvailabilityValidator.field_n;
             if (param0 == null) {
               if (var2_int != 0) {
                 jd.field_E = true;
@@ -81,9 +81,9 @@ final class NodeHashTableIterator implements Iterator {
           }
           wb.field_t = param0;
           if (!jd.field_E &&
-            um.field_l > lp.field_b &&
+            MatchingFieldValidator.field_l > lp.field_b &&
             he.field_a) {
-            ll.field_i = ad.field_n;
+            ll.field_i = ConfirmedEmailAvailabilityValidator.field_n;
             lp.field_b = 0;
             FrameTimer.field_a = nd.field_a;
           }
@@ -93,7 +93,7 @@ final class NodeHashTableIterator implements Iterator {
             lp.field_b = 0;
           }
           nd.field_a = param1;
-          ad.field_n = -1;
+          ConfirmedEmailAvailabilityValidator.field_n = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

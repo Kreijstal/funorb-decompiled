@@ -137,14 +137,14 @@ final class pd {
         if (DequeCursor.field_b < 0) {
           return;
         }
-        int var1 = jk.field_u * th.field_o[DequeCursor.field_b] / 30;
-        if (var1 > th.field_o[DequeCursor.field_b]) {
-          var1 = th.field_o[DequeCursor.field_b];
+        int var1 = jk.field_u * AgeValidator.field_o[DequeCursor.field_b] / 30;
+        if (var1 > AgeValidator.field_o[DequeCursor.field_b]) {
+          var1 = AgeValidator.field_o[DequeCursor.field_b];
         }
         if (!param0) {
           return;
         }
-        vh.field_E[DequeCursor.field_b].b(ImageProducerRasterBuffer.field_k[DequeCursor.field_b], -((var1 - th.field_o[DequeCursor.field_b]) / 2) + DiskArchiveRequest.field_v[DequeCursor.field_b], m.field_e[DequeCursor.field_b], var1);
+        vh.field_E[DequeCursor.field_b].b(ImageProducerRasterBuffer.field_k[DequeCursor.field_b], -((var1 - AgeValidator.field_o[DequeCursor.field_b]) / 2) + DiskArchiveRequest.field_v[DequeCursor.field_b], m.field_e[DequeCursor.field_b], var1);
     }
 
     private final void a(int param0, int param1, rk param2) {

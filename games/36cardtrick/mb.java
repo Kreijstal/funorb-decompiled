@@ -13,7 +13,7 @@ final class mb {
             mb.clearStaticReferences(-72);
           }
           sd.field_c.k(126);
-          i.field_a = new ak(ng.field_y, (String) null, DirectByteArrayStore.field_e, param2, param3);
+          i.field_a = new LoginPanel(ng.field_y, (String) null, DirectByteArrayStore.field_e, param2, param3);
           vb.field_h = new ej(sd.field_c, i.field_a);
           sd.field_c.b(vb.field_h, (byte) -34);
         } catch (RuntimeException runtimeException) {

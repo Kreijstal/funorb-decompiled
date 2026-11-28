@@ -45,7 +45,7 @@ final class b {
             if (ClientException.field_c == pj.field_a) {
               if (param5) {
                 var10 = (String) null;
-                bj.field_E = ck.a(param3, (String) null, l.field_b, 107, false);
+                bj.field_E = DebouncedFieldValidator.a(param3, (String) null, l.field_b, 107, false);
               } else {
                 bj.field_E = jl.a(param3, false, param0 + 7154, param2);
               }
@@ -139,7 +139,7 @@ final class b {
                   w.field_g.a(1, DiskCacheWorker.b(0));
                 }
               } else {
-                nj.field_k.a(1, DiskCacheWorker.b(0));
+                EmailFormatValidator.field_k.a(1, DiskCacheWorker.b(0));
               }
               fa.field_a = false;
               if (var11 != null) {
@@ -162,7 +162,7 @@ final class b {
                 }
               }
               if (ui.field_m > 0) {
-                ba.field_B = true;
+                EditableTextField.field_B = true;
               }
               hh.field_p.b(tc.field_r, 126);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {

@@ -265,7 +265,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("login_gameupdated", 24);
                 if (null != var2) {
-                  hd.field_q = PcmResampler.a(124, var2);
+                  ConfirmedEmailAvailabilityValidator.field_q = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("create_unable", 24);
                 if (var2 != null) {
@@ -301,7 +301,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("ticketing_xunread", 24);
                 if (var2 != null) {
-                  mk.field_Q = PcmResampler.a(122, var2);
+                  AccountRegistrationPanel.field_Q = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("ticketing_gotowebsite", 24);
                 if (null != var2) {
@@ -1658,7 +1658,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_agreeterms", 24);
                 if (var2 != null) {
-                  bj.field_e = PcmResampler.a(122, var2);
+                  DebouncedFieldValidator.field_e = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("create_u13terms", 24);
                 if (null != var2) {
@@ -1738,7 +1738,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_email_confirm_tooltip", 24);
                 if (null != var2) {
-                  db.field_u = PcmResampler.a(127, var2);
+                  PasswordValidator.field_u = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("create_age_tooltip", 24);
                 if (null != var2) {
@@ -1806,7 +1806,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_alert_passlength", 24);
                 if (null != var2) {
-                  ei.field_k = PcmResampler.a(126, var2);
+                  DelayedPacket.field_k = PcmResampler.a(126, var2);
                 }
                 var2 = vj.a("create_alert_passcontainsname", 24);
                 if (null != var2) {
@@ -1830,7 +1830,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_alert_email_unavailable", 24);
                 if (var2 != null) {
-                  ld.field_r = PcmResampler.a(127, var2);
+                  AgeValidator.field_r = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("create_alert_invaliddate", 24);
                 if (var2 != null) {
@@ -2042,7 +2042,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("unpacking_graphics", 24);
                 if (var2 != null) {
-                  ig.field_H = PcmResampler.a(126, var2);
+                  EditableTextField.field_H = PcmResampler.a(126, var2);
                 }
                 var2 = vj.a("unpacking_models", 24);
                 if (var2 != null) {
@@ -2476,7 +2476,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("orbcoins_colon", 24);
                 if (var2 != null) {
-                  li.field_v = PcmResampler.a(126, var2);
+                  MatchingFieldValidator.field_v = PcmResampler.a(126, var2);
                 }
                 var2 = vj.a("achieved_colon_description", 24);
                 if (var2 != null) {
@@ -3160,55 +3160,55 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("subscription_cost_monthly,0", 24);
                 if (var2 != null) {
-                  lk.field_E[0] = PcmResampler.a(123, var2);
+                  LoginPanel.field_E[0] = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,1", 24);
                 if (var2 != null) {
-                  lk.field_E[1] = PcmResampler.a(125, var2);
+                  LoginPanel.field_E[1] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,2", 24);
                 if (null != var2) {
-                  lk.field_E[2] = PcmResampler.a(124, var2);
+                  LoginPanel.field_E[2] = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,3", 24);
                 if (var2 != null) {
-                  lk.field_E[3] = PcmResampler.a(125, var2);
+                  LoginPanel.field_E[3] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,4", 24);
                 if (var2 != null) {
-                  lk.field_E[4] = PcmResampler.a(127, var2);
+                  LoginPanel.field_E[4] = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,5", 24);
                 if (var2 != null) {
-                  lk.field_E[5] = PcmResampler.a(125, var2);
+                  LoginPanel.field_E[5] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,6", 24);
                 if (null != var2) {
-                  lk.field_E[6] = PcmResampler.a(126, var2);
+                  LoginPanel.field_E[6] = PcmResampler.a(126, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,7", 24);
                 if (var2 != null) {
-                  lk.field_E[7] = PcmResampler.a(122, var2);
+                  LoginPanel.field_E[7] = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,8", 24);
                 if (var2 != null) {
-                  lk.field_E[8] = PcmResampler.a(127, var2);
+                  LoginPanel.field_E[8] = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,9", 24);
                 if (null != var2) {
-                  lk.field_E[9] = PcmResampler.a(124, var2);
+                  LoginPanel.field_E[9] = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,10", 24);
                 if (var2 != null) {
-                  lk.field_E[10] = PcmResampler.a(127, var2);
+                  LoginPanel.field_E[10] = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,11", 24);
                 if (var2 != null) {
-                  lk.field_E[11] = PcmResampler.a(125, var2);
+                  LoginPanel.field_E[11] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("subscription_cost_monthly,12", 24);
                 if (null != var2) {
-                  lk.field_E[12] = PcmResampler.a(124, var2);
+                  LoginPanel.field_E[12] = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("sentence_separator", 24);
                 if (var2 != null) {

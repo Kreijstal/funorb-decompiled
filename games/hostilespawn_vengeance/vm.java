@@ -16,7 +16,7 @@ abstract class vm extends DualLinkNode {
     private int[] field_s;
     int field_y;
     private static int field_D;
-    private aj[] field_t;
+    private SpriteBase[] field_t;
     private static int field_z;
     int field_N;
     private int[] field_L;
@@ -101,7 +101,7 @@ abstract class vm extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = hi.a(-36, var18);
+                                    var16_int = TextFieldValidator.a(-36, var18);
                                     var4 = var4 + this.field_t[var16_int].field_i;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -358,7 +358,7 @@ abstract class vm extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_K = hi.a(-57, var4);
+                field_K = TextFieldValidator.a(-57, var4);
               }
             } else {
               field_B = field_I;
@@ -432,7 +432,7 @@ abstract class vm extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        aj var11_ref_aj = null;
+        SpriteBase var11_ref_aj = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -461,7 +461,7 @@ abstract class vm extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = hi.a(125, var13);
+                                  var10 = TextFieldValidator.a(125, var13);
                                   var11_ref_aj = this.field_t[var10];
                                   if (this.field_s == null) {
                                     stackIn_27_0 = var11_ref_aj.field_h;
@@ -470,9 +470,9 @@ abstract class vm extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_K != 256) {
-                                    var11_ref_aj.a(param1, param2 + this.field_u - var12, field_K);
+                                    var11_ref_aj.drawWithAlpha(param1, param2 + this.field_u - var12, field_K);
                                   } else {
-                                    var11_ref_aj.a(param1, param2 + this.field_u - var12);
+                                    var11_ref_aj.drawOpaque(param1, param2 + this.field_u - var12);
                                   }
                                   param1 = param1 + var11_ref_aj.field_i;
                                   var5 = 0;
@@ -678,7 +678,7 @@ abstract class vm extends DualLinkNode {
         field_r = null;
     }
 
-    final void a(aj[] param0, int[] param1) {
+    final void a(SpriteBase[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -742,7 +742,7 @@ abstract class vm extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = hi.a(118, var10);
+                                  var9_int = TextFieldValidator.a(118, var10);
                                   var4 = var4 + this.field_t[var9_int].field_i;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {

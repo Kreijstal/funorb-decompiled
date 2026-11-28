@@ -49,7 +49,7 @@ final class cc extends IntrusiveNode {
           var4 = var15.readUnsignedByte(32);
           if (param0 != var4) {
             var5 = var3.field_n;
-            em.field_f[0] = qc.field_m;
+            em.field_f[0] = ConfirmedEmailAvailabilityValidator.field_m;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               em.field_f[var6_int] = var13.readString(true);
             }

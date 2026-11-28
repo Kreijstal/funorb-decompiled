@@ -227,7 +227,7 @@ final class mk {
               var12.a((byte) 127, var12.field_mc);
               var12.field_Lb = new ci(0L, sj.field_k);
               var12.a((byte) 127, var12.field_Lb);
-              var12.field_Sb = new ci(0L, qn.field_P);
+              var12.field_Sb = new ci(0L, EditableTextField.field_P);
               var12.a((byte) 123, var12.field_Sb);
               var12.h(0);
               var12.field_Rb = new ci(0L, jd.field_b);
@@ -469,22 +469,22 @@ final class mk {
                 var31 = var31 + fe.field_g * var39Lifetime1;
               }
               if (var12.field_dc) {
-                var12.field_mc.field_db = oc.a(FullscreenFocusCanvas.field_j, new String[]{var32}, (byte) -53);
-                var12.field_mc.a(ri.field_g, -(2 * ri.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
+                var12.field_mc.field_db = MatchingFieldValidator.a(FullscreenFocusCanvas.field_j, new String[]{var32}, (byte) -53);
+                var12.field_mc.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
                 var31 = var31 + fe.field_g;
               }
               if (var12.field_Tb) {
-                var12.field_Lb.field_db = oc.a(w.field_Hb, new String[]{var32}, (byte) -105);
-                var12.field_Lb.a(ri.field_g, -(2 * ri.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
+                var12.field_Lb.field_db = MatchingFieldValidator.a(w.field_Hb, new String[]{var32}, (byte) -105);
+                var12.field_Lb.a(BirthDateValidator.field_g, -(2 * BirthDateValidator.field_g) + var12.field_M, -2147483648, fe.field_g, var31);
                 var31 = var31 + fe.field_g;
               }
             }
             var33 = FullscreenFocusCanvas.a(var12.field_jc, var32, -3);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Sb.field_xb.b(var33, var12.field_M - ri.field_g - ri.field_g);
+              var34_intLifetime1 = var12.field_Sb.field_xb.b(var33, var12.field_M - BirthDateValidator.field_g - BirthDateValidator.field_g);
               var12.field_Sb.field_db = var33;
               var12.field_Sb.field_eb = var12.field_Hb * 256 / ig.field_g;
-              var12.field_Sb.a(ri.field_g, -(ri.field_g * 2) + var12.field_M, -2147483648, var34_intLifetime1 * fe.field_g, var31);
+              var12.field_Sb.a(BirthDateValidator.field_g, -(BirthDateValidator.field_g * 2) + var12.field_M, -2147483648, var34_intLifetime1 * fe.field_g, var31);
               var31 = var31 + fe.field_g * var34_intLifetime1;
             }
             if (var7_int == 0) {
@@ -517,7 +517,7 @@ final class mk {
               } else {
                 var34 = gf.field_a[var12.field_ic];
               }
-              pc.field_Mb = qe.field_R + " - " + var34;
+              pc.field_Mb = ChessBoardRenderer.field_R + " - " + var34;
             }
             if (var12.field_Wb.field_F) {
               if (!var12.field_lc) {

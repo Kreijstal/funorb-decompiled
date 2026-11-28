@@ -7,7 +7,7 @@ final class AccountCreationResultPanel extends sh implements rc {
     static int field_lb;
     static be field_mb;
     static ResourceArchive field_pb;
-    private gh field_kb;
+    private AccountRegistrationPanel field_kb;
 
     public final void a(byte param0, int param1, int param2, int param3, wd param4) {
         AccountServiceResult var7 = null;
@@ -21,7 +21,7 @@ final class AccountCreationResultPanel extends sh implements rc {
             l.a(false, true, -100);
             return;
           }
-          ck.e((byte) 125);
+          DebouncedFieldValidator.e((byte) 125);
           if (param0 < 6) {
             var7 = (AccountServiceResult) null;
             this.showAccountCreationResult(-84, true, (AccountServiceResult) null);
@@ -52,7 +52,7 @@ final class AccountCreationResultPanel extends sh implements rc {
         }
     }
 
-    AccountCreationResultPanel(pf param0, gh param1) {
+    AccountCreationResultPanel(pf param0, AccountRegistrationPanel param1) {
         super(param0, ne.field_v, ce.field_t, false, false);
         try {
           this.field_kb = param1;

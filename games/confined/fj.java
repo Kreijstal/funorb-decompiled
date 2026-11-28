@@ -164,7 +164,7 @@ class fj extends IntrusiveNode {
             ta.a(116, 178, ui.field_a, 148, r.field_b);
             ta.a(114, 202, ui.field_a, 148, AwtRasterBuffer.field_g);
             ta.a(115, 400, qe.field_J, 172, si.field_a);
-            lf.field_j.d(448, 148);
+            MatchingFieldValidator.field_j.d(448, 148);
             var2_int = pn.field_a.c(fh.field_e);
             var3 = (-var2_int + 578) / 2;
             pn.field_a.c(fh.field_e, var3, 76, 16777215, -1);
@@ -176,7 +176,7 @@ class fj extends IntrusiveNode {
             tj.a(7370619, 104, (byte) 36, 180, 166, 104);
             pn.field_a.c(da.field_a, 188, 110, 9805732, -1);
             pn.field_a.c(ci.field_d, 220, 142, 9805732, -1);
-            pn.field_a.c(lf.field_h, 232, 166, 9805732, -1);
+            pn.field_a.c(MatchingFieldValidator.field_h, 232, 166, 9805732, -1);
             var4 = pn.field_a.c(pn.field_b);
             var5 = (512 - var4) / 2;
             pn.field_a.c(pn.field_b, var5, 220, 16777215, -1);
@@ -214,7 +214,7 @@ class fj extends IntrusiveNode {
             tj.a(7370619, 154, (byte) 49, 308, 294, 154);
             pn.field_a.c(ol.field_b, 316, 160, 9805732, -1);
             pn.field_a.c(ci.field_d, 348, 192, 9805732, -1);
-            pn.field_a.c(lf.field_h, 360, 216, 9805732, -1);
+            pn.field_a.c(MatchingFieldValidator.field_h, 360, 216, 9805732, -1);
             pn.field_a.a(eg.field_m, 92, 60, 472, 100, 4243584, -1, 0, 0, 20);
             tj.a(2652240, 70, (byte) 34, 76, 84, 70);
             tj.a(2652240, 70, (byte) 81, 76, 76, 234);
@@ -329,7 +329,7 @@ class fj extends IntrusiveNode {
             lb.a(259, 42, 128, 76, 0.2, DiskArchiveRequest.field_A);
             pn.field_a.a(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
-            pn.field_a.a(bf.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
+            pn.field_a.a(DisplayNameSelectionPanel.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
             pn.field_a.a(GameAppletShell.field_g, 132, 253, 412, 60, 4243584, -1, 3, 1, 20);
           }
           incrementValue$20 = param0;
@@ -372,7 +372,7 @@ class fj extends IntrusiveNode {
             var2_intLifetime3 += 18;
             var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(aj.field_b, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
             var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(af.field_bb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(bk.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(EmailFormatValidator.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(SectorCacheStore.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(qi.field_d, 76, var2_intLifetime3 - 4, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(LightningArc.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;

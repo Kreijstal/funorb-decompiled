@@ -34,14 +34,14 @@ final class ri {
             }
             var7 = null;
             if (null != ne.field_l) {
-              if (fe.field_J == null) {
-                fe.field_J = new BufferedRandomAccessFile[DirectByteStorage.field_f.field_q.length];
+              if (EditableTextField.field_J == null) {
+                EditableTextField.field_J = new BufferedRandomAccessFile[DirectByteStorage.field_f.field_q.length];
               }
-              if (fe.field_J[param3] == null) {
-                fe.field_J[param3] = new BufferedRandomAccessFile(DirectByteStorage.field_f.field_q[param3], 12000, 0);
+              if (EditableTextField.field_J[param3] == null) {
+                EditableTextField.field_J[param3] = new BufferedRandomAccessFile(DirectByteStorage.field_f.field_q[param3], 12000, 0);
                 DirectByteStorage.field_f.field_q[param3] = null;
               }
-              var7 = new SectorCacheStore(param3, ne.field_l, fe.field_J[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ne.field_l, EditableTextField.field_J[param3], 2097152);
             }
             if (!param0) {
               stackIn_11_0 = (ResourceArchive) null;

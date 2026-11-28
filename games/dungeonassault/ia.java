@@ -87,7 +87,7 @@ final class ia extends ii implements vg {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param1 + this.field_q;
         int var6 = param3 + this.field_v;
-        lp.field_C.a(he.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
+        lp.field_C.a(AgeValidator.field_q, var5 + 20, 20 + var6, this.field_x - 40, this.field_s - 50, 16777215, -1, 1, 0, lp.field_C.field_H);
         super.a(param0, param1, param2, param3);
     }
 
@@ -119,7 +119,7 @@ final class ia extends ii implements vg {
           if (var11 == null) {
             return null;
           }
-          var8 = new RgbSprite(var11, (java.awt.Component) ((Object) fi.d(false)));
+          var8 = new RgbSprite(var11, (java.awt.Component) ((Object) InstructionsScreen.getActiveCanvas(false)));
           for (var9 = 0; var8.field_B.length > var9; var9++) {
             var8.field_B[var9] = nb.a(var8.field_B[var9], 16777215);
           }

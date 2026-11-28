@@ -1005,10 +1005,10 @@ final class GasCloudAnimation extends EventAnimation {
           var17 = gw.a("lobby", "checkbox", param2, -76);
           RageAnimation.field_v = new daa(0L, var17[1], var17[0], 1, dla.field_k, (String) null);
           cd.field_n = new UiComponent(0L, (UiComponent) null);
-          cd.field_n.field_eb = aba.a(hca.a("lobby", param2, -56, "slideregion"), true);
-          cd.field_n.field_A = aba.a(hca.a("lobby", param2, 110, "slideregion_mouseover"), true);
-          cd.field_n.field_db = aba.a(hca.a("lobby", param2, 81, "slideregion_mouseheld"), true);
-          cd.field_n.field_X = aba.a(hca.a("lobby", param2, param0 - 30970, "slideregion_disabled"), true);
+          cd.field_n.field_eb = TextFieldValidator.a(hca.a("lobby", param2, -56, "slideregion"), true);
+          cd.field_n.field_A = TextFieldValidator.a(hca.a("lobby", param2, 110, "slideregion_mouseover"), true);
+          cd.field_n.field_db = TextFieldValidator.a(hca.a("lobby", param2, 81, "slideregion_mouseheld"), true);
+          cd.field_n.field_X = TextFieldValidator.a(hca.a("lobby", param2, param0 - 30970, "slideregion_disabled"), true);
           dj.field_d = new UiComponent(0L, (UiComponent) null);
           dj.field_d.field_eb = tj.a(gw.a("lobby", "dragbar", param2, param0 - 30977), (byte) -94);
           dj.field_d.field_A = tj.a(gw.a("lobby", "dragbar_mouseover", param2, -125), (byte) -82);

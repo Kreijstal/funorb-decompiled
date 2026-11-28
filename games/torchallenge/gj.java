@@ -142,35 +142,35 @@ final class gj {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
             var4 = 3 + var3_int;
             dl.field_s = new int[var4];
-            gf.field_s = new String[var4];
+            MatchingFieldValidator.field_s = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               dl.field_s[var5] = -1;
             }
             pe.field_db = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              gf.field_s[var5] = wf.field_e[var5];
+              MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
             }
-            gf.field_s[-3 + var4] = "";
-            gf.field_s[var4 - 2] = cb.field_d;
+            MatchingFieldValidator.field_s[-3 + var4] = "";
+            MatchingFieldValidator.field_s[var4 - 2] = cb.field_d;
             dl.field_s[-2 + var4] = 0;
             pe.field_db[0] = 4;
-            gf.field_s[-1 + var4] = ab.field_n;
+            MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
             dl.field_s[-1 + var4] = 1;
             pe.field_db[1] = 5;
           } else if (RandomAccessCacheFile.field_c == 1) {
             var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ll.field_c);
             var4 = 2 + var3_int;
-            gf.field_s = new String[var4];
+            MatchingFieldValidator.field_s = new String[var4];
             dl.field_s = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               dl.field_s[var5] = -1;
             }
             pe.field_db = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              gf.field_s[var5] = wf.field_e[var5];
+              MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
             }
-            gf.field_s[var4 - 2] = "";
-            gf.field_s[-1 + var4] = ab.field_n;
+            MatchingFieldValidator.field_s[var4 - 2] = "";
+            MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
             dl.field_s[var4 - 1] = 0;
             pe.field_db[0] = 5;
           } else if (RandomAccessCacheFile.field_c != 2) {
@@ -181,33 +181,33 @@ final class gj {
                 var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, cj.field_a);
               }
               var4 = var3_int + 2;
-              gf.field_s = new String[var4];
+              MatchingFieldValidator.field_s = new String[var4];
               dl.field_s = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 dl.field_s[var5] = -1;
               }
               pe.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                gf.field_s[var5] = wf.field_e[var5];
+                MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
-              gf.field_s[-2 + var4] = "";
-              gf.field_s[-1 + var4] = ab.field_n;
+              MatchingFieldValidator.field_s[-2 + var4] = "";
+              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[-1 + var4] = 0;
               pe.field_db[0] = 5;
             } else if (RandomAccessCacheFile.field_c == 4) {
               var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, uc.field_T);
               var4 = 2 + var3_int;
-              gf.field_s = new String[var4];
+              MatchingFieldValidator.field_s = new String[var4];
               dl.field_s = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 dl.field_s[var5] = -1;
               }
               pe.field_db = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                gf.field_s[var5] = wf.field_e[var5];
+                MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
-              gf.field_s[var4 - 2] = "";
-              gf.field_s[-1 + var4] = ab.field_n;
+              MatchingFieldValidator.field_s[var4 - 2] = "";
+              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[var4 - 1] = 0;
               pe.field_db[0] = 5;
             } else {
@@ -216,20 +216,20 @@ final class gj {
               }
               var3_int = ga.a(0, pf.field_c, wf.field_e, aj.field_b, ClientException.field_d);
               var4 = 3 + var3_int;
-              gf.field_s = new String[var4];
+              MatchingFieldValidator.field_s = new String[var4];
               dl.field_s = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 dl.field_s[var5] = -1;
               }
               pe.field_db = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                gf.field_s[var5] = wf.field_e[var5];
+                MatchingFieldValidator.field_s[var5] = wf.field_e[var5];
               }
-              gf.field_s[-3 + var4] = "";
-              gf.field_s[-2 + var4] = SecondaryNodeDeque.field_g;
+              MatchingFieldValidator.field_s[-3 + var4] = "";
+              MatchingFieldValidator.field_s[-2 + var4] = SecondaryNodeDeque.field_g;
               dl.field_s[-2 + var4] = 0;
               pe.field_db[0] = 3;
-              gf.field_s[-1 + var4] = ab.field_n;
+              MatchingFieldValidator.field_s[-1 + var4] = ab.field_n;
               dl.field_s[var4 - 1] = 1;
               pe.field_db[1] = 5;
             }
@@ -279,24 +279,24 @@ final class gj {
             }
             var6 = stackIn_32_0;
             var7 = 7 + (var5 + var6);
-            gf.field_s = new String[var7];
+            MatchingFieldValidator.field_s = new String[var7];
             dl.field_s = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
               dl.field_s[var8] = -1;
             }
             dl.field_s[1] = 0;
-            gf.field_s[0] = kl.field_c;
+            MatchingFieldValidator.field_s[0] = kl.field_c;
             pe.field_db = new int[2];
-            gf.field_s[1] = ua.field_a;
-            gf.field_s[2] = fb.field_i;
-            gf.field_s[3] = ti.field_c;
+            MatchingFieldValidator.field_s[1] = ua.field_a;
+            MatchingFieldValidator.field_s[2] = fb.field_i;
+            MatchingFieldValidator.field_s[3] = ti.field_c;
             pe.field_db[0] = 5;
-            gf.field_s[4] = tk.field_T;
+            MatchingFieldValidator.field_s[4] = tk.field_T;
             pe.field_db[1] = 2;
-            gf.field_s[5] = "";
+            MatchingFieldValidator.field_s[5] = "";
             dl.field_s[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_39_0 = gf.field_s;
+              stackIn_39_0 = MatchingFieldValidator.field_s;
               stackIn_39_1 = 6 + var8Lifetime2;
               if (0 > -var5 + (var8Lifetime2 + qb.field_c.length)) {
                 stackIn_40_2 = "";
@@ -305,10 +305,10 @@ final class gj {
               }
               stackIn_39_0[stackIn_39_1] = stackIn_40_2;
             }
-            gf.field_s[6 + var5] = null;
+            MatchingFieldValidator.field_s[6 + var5] = null;
             dl.field_s[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_44_0 = gf.field_s;
+              stackIn_44_0 = MatchingFieldValidator.field_s;
               stackIn_44_1 = var8Lifetime3 + 7 + var5;
               stackIn_44_2 = ~qi.field_b.length;
               stackIn_44_3 = ~var8Lifetime3;
@@ -321,12 +321,12 @@ final class gj {
             }
             IterableNodeHashTable.field_e = ol.correctedCurrentTimeMillis(256);
           }
-          ui.field_c.field_b = pe.field_db.length;
+          DebouncedFieldValidator.field_c.field_b = pe.field_db.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < gf.field_s.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < MatchingFieldValidator.field_s.length; var4Lifetime1++) {
             stackIn_88_0 = -18;
             stackIn_89_1 = !(dl.field_s[var4Lifetime1] < 0);
-            var5Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(stackIn_88_0, stackIn_89_1, gf.field_s[var4Lifetime1]);
+            var5Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(stackIn_88_0, stackIn_89_1, MatchingFieldValidator.field_s[var4Lifetime1]);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -350,10 +350,10 @@ final class gj {
               }
             }
           }
-          LevelEntity.field_R = dg.field_ab - (var3_intLifetime1 >> 1);
-          fh.field_c = ui.field_c.field_b * (ai.field_a + uc.field_Y << 1);
-          sd.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + dg.field_ab);
-          for (var4Lifetime2 = 0; gf.field_s.length > var4Lifetime2; var4Lifetime2++) {
+          LevelEntity.field_R = AccountRegistrationPanel.field_ab - (var3_intLifetime1 >> 1);
+          fh.field_c = DebouncedFieldValidator.field_c.field_b * (ai.field_a + uc.field_Y << 1);
+          sd.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + AccountRegistrationPanel.field_ab);
+          for (var4Lifetime2 = 0; MatchingFieldValidator.field_s.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_112_0 = fh.field_c;
             if (dl.field_s[var4Lifetime2] >= 0) {
               stackIn_113_1 = IntrusiveDeque.field_f;
@@ -363,17 +363,17 @@ final class gj {
             fh.field_c = stackIn_112_0 + stackIn_113_1;
           }
           FrameTimer.field_e = -(fh.field_c >> 1) + ii.field_c;
-          r.field_h = new int[gf.field_s.length][];
+          r.field_h = new int[MatchingFieldValidator.field_s.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = FrameTimer.field_e;
-          while (gf.field_s.length > var4Lifetime3) {
+          while (MatchingFieldValidator.field_s.length > var4Lifetime3) {
             var6Lifetime1 = dl.field_s[var4Lifetime3];
             if (0 > var6Lifetime1) {
               var5Lifetime3 = var5Lifetime3 + ok.field_e;
             } else {
-              var7Lifetime2 = ki.$cfr$intArgs$a$62abead39cee(-18, true, gf.field_s[var4Lifetime3]);
+              var7Lifetime2 = ki.$cfr$intArgs$a$62abead39cee(-18, true, MatchingFieldValidator.field_s[var4Lifetime3]);
               var5Lifetime3 = var5Lifetime3 + uc.field_Y;
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + dg.field_ab;
+              var8Lifetime1 = -(var7Lifetime2 >> 1) + AccountRegistrationPanel.field_ab;
               r.field_h[var4Lifetime3] = new int[4];
               r.field_h[var4Lifetime3][0] = var8Lifetime1 - ni.field_i;
               r.field_h[var4Lifetime3][1] = var5Lifetime3;
@@ -384,9 +384,9 @@ final class gj {
             var4Lifetime3++;
           }
           if (2 == RandomAccessCacheFile.field_c) {
-            ui.field_c.a((byte) -86, param2, -1, -1);
+            DebouncedFieldValidator.field_c.a((byte) -86, param2, -1, -1);
           } else {
-            ui.field_c.a((byte) 13, param2, 0, ha.a(ph.field_d, LocalizedStrings.field_u, -36));
+            DebouncedFieldValidator.field_c.a((byte) 13, param2, 0, ha.a(ph.field_d, ConfirmedEmailAvailabilityValidator.field_u, -36));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

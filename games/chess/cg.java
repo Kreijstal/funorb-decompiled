@@ -102,7 +102,7 @@ final class cg {
           }
           var6 = stackIn_4_0;
           if (fj.field_g == 0) {
-            var7 = vm.a(var11, -9224, sj.field_d, da.field_A, 480);
+            var7 = TextFieldValidator.a(var11, -9224, sj.field_d, da.field_A, 480);
             var8 = 3 + var7;
             bd.field_e = new String[var8];
             ec.field_l = new int[var8];
@@ -124,7 +124,7 @@ final class cg {
             if (fj.field_g != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = vm.a(var11, -9224, sj.field_d, da.field_A, 480);
+            var7 = TextFieldValidator.a(var11, -9224, sj.field_d, da.field_A, 480);
             var8 = var7 + 2;
             bd.field_e = new String[var8];
             ec.field_l = new int[var8];
@@ -170,7 +170,7 @@ final class cg {
             bd.field_d = stackIn_38_0 + stackIn_39_1;
           }
           id.field_c = pd.field_Fb - (bd.field_d >> 1);
-          nj.field_u.a(0, qn.a((byte) 107, BufferedSocket.field_k, rf.field_b), param4, 0);
+          nj.field_u.a(0, EditableTextField.a((byte) 107, BufferedSocket.field_k, rf.field_b), param4, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -193,10 +193,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (null != dc.field_q) {
+          if (null != EmailFormatValidator.field_q) {
             try {
-              dc.field_q.removeFocusListener((java.awt.event.FocusListener) (this));
-              dc.field_q.getParent().remove((java.awt.Component) ((Object) dc.field_q));
+              EmailFormatValidator.field_q.removeFocusListener((java.awt.event.FocusListener) (this));
+              EmailFormatValidator.field_q.getParent().remove((java.awt.Component) ((Object) EmailFormatValidator.field_q));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -457,7 +457,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 be.i(4);
                 this.a(true);
-                Bzip2State.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
+                Bzip2State.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) EmailFormatValidator.field_q));
                 this.d(-31680);
                 fh.field_e = ee.e(-1);
                 do {
@@ -478,7 +478,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < mj.field_b)) {
                       this.b((byte) -99);
-                      pb.a(wh.field_c, dc.field_q, (byte) -80);
+                      pb.a(wh.field_c, EmailFormatValidator.field_q, (byte) -80);
                       break;
                     }
                     this.a((byte) 123);
@@ -634,10 +634,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          if (dc.field_q != null) {
-            dc.field_q.removeFocusListener((java.awt.event.FocusListener) (this));
-            dc.field_q.getParent().setBackground(java.awt.Color.black);
-            dc.field_q.getParent().remove((java.awt.Component) ((Object) dc.field_q));
+          if (EmailFormatValidator.field_q != null) {
+            EmailFormatValidator.field_q.removeFocusListener((java.awt.event.FocusListener) (this));
+            EmailFormatValidator.field_q.getParent().setBackground(java.awt.Color.black);
+            EmailFormatValidator.field_q.getParent().remove((java.awt.Component) ((Object) EmailFormatValidator.field_q));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null == bg.field_w) {
@@ -663,21 +663,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = bg.field_w;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          dc.field_q = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) dc.field_q));
-          dc.field_q.setSize(DualLinkNode.field_h, cf.field_d);
-          dc.field_q.setVisible(true);
+          EmailFormatValidator.field_q = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) EmailFormatValidator.field_q));
+          EmailFormatValidator.field_q.setSize(DualLinkNode.field_h, cf.field_d);
+          EmailFormatValidator.field_q.setVisible(true);
           boolean decompiledSharedTail0 = (oc.field_a == var2);
           if (!decompiledSharedTail0) {
-            dc.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
+            EmailFormatValidator.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = oc.field_a.getInsets();
-            dc.field_q.setLocation(var3.left + ib.field_j, IntrusiveDeque.field_g + var3.top);
+            EmailFormatValidator.field_q.setLocation(var3.left + ib.field_j, IntrusiveDeque.field_g + var3.top);
           }
-          dc.field_q.addFocusListener((java.awt.event.FocusListener) (this));
-          dc.field_q.requestFocus();
+          EmailFormatValidator.field_q.addFocusListener((java.awt.event.FocusListener) (this));
+          EmailFormatValidator.field_q.requestFocus();
           wh.field_b = param0;
           kk.field_b = true;
           wa.field_b = true;
@@ -714,17 +714,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             wa.field_b = true;
             jb.field_e = jb.field_e - 50;
-            dc.field_q.setSize(DualLinkNode.field_h, cf.field_d);
-            dc.field_q.setVisible(true);
+            EmailFormatValidator.field_q.setSize(DualLinkNode.field_h, cf.field_d);
+            EmailFormatValidator.field_q.setVisible(true);
             boolean decompiledSharedTail0 = (null != oc.field_a &&
               null == bg.field_w);
             if (!decompiledSharedTail0) {
-              dc.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
+              EmailFormatValidator.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
               decompiledSharedTail0 = (SolKnight.field_L);
             }
             if (decompiledSharedTail0) {
               var6 = oc.field_a.getInsets();
-              dc.field_q.setLocation(var6.left + ib.field_j, IntrusiveDeque.field_g + var6.top);
+              EmailFormatValidator.field_q.setLocation(var6.left + ib.field_j, IntrusiveDeque.field_g + var6.top);
             }
           }
           this.a(param0 ^ 11538);

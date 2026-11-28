@@ -53,7 +53,7 @@ final class qd {
         stackIn_3_0 = ((128 & var3) != param0);
         tf.field_a = stackIn_3_0;
         kb.field_a = var3 & 127;
-        rl.field_E = var8.readUnsignedByte(true);
+        EditableTextField.field_E = var8.readUnsignedByte(true);
         jf.field_P = var8.readLong((byte) 8);
         if (2 != kb.field_a) {
           kc.field_c = 0;

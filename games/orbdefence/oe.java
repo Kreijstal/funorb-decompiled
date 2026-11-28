@@ -83,7 +83,7 @@ final class oe extends DualLinkNode {
               this.field_l = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param0.readUnsignedShort(98203176);
-                var7 = wg.a(var6, -128);
+                var7 = EmailFormatValidator.a(var6, -128);
                 if (var7 != null) {
                   this.field_k[var5] = var6;
                   array$0 = new int[var7.field_f];
@@ -162,10 +162,10 @@ final class oe extends DualLinkNode {
         var3 = var8.readUnsignedByte((byte) 90);
         stackIn_3_0 = ((128 & var3) != 0);
         ja.field_e = stackIn_3_0;
-        wb.field_d = var3 & 127;
+        DebouncedFieldValidator.field_d = var3 & 127;
         bh.field_c = var8.readUnsignedByte((byte) 90);
         GameAppletShell.field_l = var8.readLong((byte) -89);
-        if (wb.field_d == 2) {
+        if (DebouncedFieldValidator.field_d == 2) {
           pc.field_X = var8.readUnsignedShort(98203176);
           gb.field_b = var8.readUnsignedMedium((byte) -30);
         } else {
@@ -183,8 +183,8 @@ final class oe extends DualLinkNode {
         if (param1 > -52) {
           return (og) null;
         }
-        if (wb.field_d == 1 ||
-          4 == wb.field_d) {
+        if (DebouncedFieldValidator.field_d == 1 ||
+          4 == DebouncedFieldValidator.field_d) {
           var8.readUnsignedShort(98203176);
           var8.readString(2);
         }
@@ -207,7 +207,7 @@ final class oe extends DualLinkNode {
             vj.field_a = null;
           }
         } else {
-          vj.field_a = hi.a(80, -111, var8);
+          vj.field_a = TextFieldValidator.a(80, -111, var8);
           n.field_c = null;
         }
         return new og(param0);

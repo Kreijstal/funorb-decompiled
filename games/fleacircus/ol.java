@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ol {
-    static ca field_d;
+    static AccountRegistrationPanel field_d;
     static String[] field_a;
     static java.awt.Canvas field_e;
     static int[] field_c;

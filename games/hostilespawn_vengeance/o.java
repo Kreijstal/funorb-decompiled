@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class o extends ql {
-    private oc[] field_h;
-    private oc field_m;
+    private GridPoint[] field_h;
+    private GridPoint field_m;
     static String field_l;
     private v field_d;
     static String field_j;
-    private oc field_i;
+    private GridPoint field_i;
     static AwtRasterBuffer field_n;
     private we[] field_f;
     static RgbSprite field_g;
@@ -80,10 +80,10 @@ final class o extends ql {
         int[] var6 = var7;
         int[] var5 = var6;
         int[] var2 = var5;
-        this.field_i = new oc(var7[4], var7[5]);
-        this.field_m = new oc(var7[8], var7[9]);
-        this.field_h[0] = new oc(var7[10], var7[11]);
-        this.field_h[1] = new oc(var7[12], var7[13]);
+        this.field_i = new GridPoint(var7[4], var7[5]);
+        this.field_m = new GridPoint(var7[8], var7[9]);
+        this.field_h[0] = new GridPoint(var7[10], var7[11]);
+        this.field_h[1] = new GridPoint(var7[12], var7[13]);
         for (var3 = param0; var3 < this.field_f.length; var3++) {
           this.field_f[var3] = new we(this.field_h[var3]);
         }
@@ -92,7 +92,7 @@ final class o extends ql {
         this.field_d.field_d = (this.field_i.field_g - 1) * 24;
         this.field_k = new v(ch.field_f, this.field_m.field_e * 24, (this.field_m.field_g + 2) * 24);
         CrossfadingMidiPcmStream.a(14, param0 ^ 1);
-        nh.field_E.a(-1, param0 + 8360, -1);
+        nh.field_E.setCoordinates(-1, param0 + 8360, -1);
     }
 
     final void c(int param0) {
@@ -103,7 +103,7 @@ final class o extends ql {
         var2 = 0;
         var3 = param0;
         scanLoop1: while (true) {
-          if (el.field_j > var3) {
+          if (ProxySocketFactory.field_j > var3) {
             if (mm.field_m[var3] != null &&
               mm.field_m[var3].field_I > 0 && (mm.field_m[var3].field_i == 4 ||
               24 == mm.field_m[var3].field_i)) {
@@ -123,7 +123,7 @@ final class o extends ql {
 
     final void d(int param0) {
         int var2 = 0;
-        oc var3 = mm.field_m[0].field_j;
+        GridPoint var3 = mm.field_m[0].field_j;
         int var2Lifetime1;
         if (param0 == ~this.field_d.field_a) {
           var2 = ih.a(var3, (byte) -126, this.field_i);
@@ -149,7 +149,7 @@ final class o extends ql {
     final void b(byte param0) {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
-        oc var2 = mm.field_m[0].field_j;
+        GridPoint var2 = mm.field_m[0].field_j;
         if (this.field_d.field_a == 1) {
           if (4 + this.field_i.field_e <= var2.field_e) {
             this.field_d.field_a = 2;
@@ -177,7 +177,7 @@ final class o extends ql {
     }
 
     public o() {
-        this.field_h = new oc[2];
+        this.field_h = new GridPoint[2];
         this.field_f = new we[2];
     }
 

@@ -190,7 +190,7 @@ final class rj {
     final static void a(int param0, int param1, me param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = di.field_l;
+          var3 = TextFieldValidator.field_l;
           var3.writeCipheredByte(-17410, param0);
           var3.writeByte(2, -106);
           var3.writeByte(0, -119);

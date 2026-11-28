@@ -260,7 +260,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 123, "ifyoudontwanttosave");
                 if (var2 != null) {
-                  ae.field_L = ll.a(0, var2);
+                  DisplayNameSelectionPanel.field_L = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 83, "contin");
                 if (var2 != null) {
@@ -320,7 +320,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 113, "clearenemies");
                 if (var2 != null) {
-                  pl.field_G = ll.a(0, var2);
+                  AccountRegistrationPanel.field_G = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 78, "retrieveevacutate");
                 if (null != var2) {
@@ -356,7 +356,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 124, "hostileseen");
                 if (null != var2) {
-                  ib.field_X = ll.a(0, var2);
+                  ValidatedTextField.field_X = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 99, "alienseen");
                 if (null != var2) {
@@ -436,11 +436,11 @@ final class bl {
                 }
                 var2 = il.a((byte) 120, "movetolevel");
                 if (var2 != null) {
-                  di.field_g = ll.a(param0 ^ 96, var2);
+                  TextFieldValidator.field_g = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 113, "movetoground");
                 if (null != var2) {
-                  ph.field_u = ll.a(param0 - 96, var2);
+                  PasswordValidator.field_u = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 105, "selectnextfriend");
                 if (var2 != null) {
@@ -460,7 +460,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 77, "equip");
                 if (null != var2) {
-                  fi.field_n = ll.a(0, var2);
+                  EmailFormatValidator.field_n = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 97, "build");
                 if (null != var2) {
@@ -596,7 +596,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 90, "aimaccur");
                 if (null != var2) {
-                  ha.field_m = ll.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_m = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "snapaccur");
                 if (null != var2) {
@@ -604,23 +604,23 @@ final class bl {
                 }
                 var2 = il.a((byte) 112, "rateoffires,0");
                 if (var2 != null) {
-                  di.field_h[0] = ll.a(param0 - 96, var2);
+                  TextFieldValidator.field_h[0] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 125, "rateoffires,1");
                 if (var2 != null) {
-                  di.field_h[1] = ll.a(0, var2);
+                  TextFieldValidator.field_h[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "rateoffires,2");
                 if (var2 != null) {
-                  di.field_h[2] = ll.a(0, var2);
+                  TextFieldValidator.field_h[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 74, "rateoffires,3");
                 if (null != var2) {
-                  di.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
+                  TextFieldValidator.field_h[3] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 114, "rateoffires,4");
                 if (var2 != null) {
-                  di.field_h[4] = ll.a(0, var2);
+                  TextFieldValidator.field_h[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 96, "recruit");
                 if (null != var2) {
@@ -700,87 +700,87 @@ final class bl {
                 }
                 var2 = il.a((byte) 88, "weaponnames,0");
                 if (var2 != null) {
-                  uh.field_L[0] = ll.a(0, var2);
+                  LoginPanel.field_L[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 98, "weaponnames,1");
                 if (null != var2) {
-                  uh.field_L[1] = ll.a(0, var2);
+                  LoginPanel.field_L[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 126, "weaponnames,2");
                 if (var2 != null) {
-                  uh.field_L[2] = ll.a(0, var2);
+                  LoginPanel.field_L[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 81, "weaponnames,3");
                 if (var2 != null) {
-                  uh.field_L[3] = ll.a(0, var2);
+                  LoginPanel.field_L[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 88, "weaponnames,4");
                 if (null != var2) {
-                  uh.field_L[4] = ll.a(0, var2);
+                  LoginPanel.field_L[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 84, "weaponnames,5");
                 if (var2 != null) {
-                  uh.field_L[5] = ll.a(sl.a((int) param0, 96), var2);
+                  LoginPanel.field_L[5] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 95, "weaponnames,6");
                 if (var2 != null) {
-                  uh.field_L[6] = ll.a(0, var2);
+                  LoginPanel.field_L[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 79, "weaponnames,7");
                 if (var2 != null) {
-                  uh.field_L[7] = ll.a(0, var2);
+                  LoginPanel.field_L[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 108, "weaponnames,8");
                 if (var2 != null) {
-                  uh.field_L[8] = ll.a(0, var2);
+                  LoginPanel.field_L[8] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "weaponnames,9");
                 if (var2 != null) {
-                  uh.field_L[9] = ll.a(0, var2);
+                  LoginPanel.field_L[9] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 113, "weaponnames,10");
                 if (null != var2) {
-                  uh.field_L[10] = ll.a(0, var2);
+                  LoginPanel.field_L[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "weaponnames,11");
                 if (var2 != null) {
-                  uh.field_L[11] = ll.a(0, var2);
+                  LoginPanel.field_L[11] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 117, "weaponnames,12");
                 if (null != var2) {
-                  uh.field_L[12] = ll.a(0, var2);
+                  LoginPanel.field_L[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 117, "weaponnames,13");
                 if (null != var2) {
-                  uh.field_L[13] = ll.a(sl.a((int) param0, 96), var2);
+                  LoginPanel.field_L[13] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 100, "weaponnames,14");
                 if (var2 != null) {
-                  uh.field_L[14] = ll.a(0, var2);
+                  LoginPanel.field_L[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 102, "weaponnames,15");
                 if (var2 != null) {
-                  uh.field_L[15] = ll.a(0, var2);
+                  LoginPanel.field_L[15] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 120, "weaponnames,16");
                 if (null != var2) {
-                  uh.field_L[16] = ll.a(param0 - 96, var2);
+                  LoginPanel.field_L[16] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 94, "weaponnames,17");
                 if (null != var2) {
-                  uh.field_L[17] = ll.a(0, var2);
+                  LoginPanel.field_L[17] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 95, "weaponnames,18");
                 if (var2 != null) {
-                  uh.field_L[18] = ll.a(0, var2);
+                  LoginPanel.field_L[18] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "weaponnames,19");
                 if (var2 != null) {
-                  uh.field_L[19] = ll.a(0, var2);
+                  LoginPanel.field_L[19] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 110, "weaponnames,20");
                 if (null != var2) {
-                  uh.field_L[20] = ll.a(0, var2);
+                  LoginPanel.field_L[20] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 104, "weaponresearchnames,0");
                 if (var2 != null) {

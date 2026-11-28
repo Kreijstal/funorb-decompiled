@@ -167,12 +167,12 @@ class le extends cf {
             this.field_W = 0;
           }
         }
-        if (0 == ig.field_L) {
+        if (0 == EditableTextField.field_L) {
           this.field_W = 0;
         }
         stackIn_36_1 = (!ArchiveIndex.field_u) && (j.field_c >= SoftwareRasterizer.field_b) && (SoftwareRasterizer.field_l > j.field_c) && (SoftwareRasterizer.field_j <= rb.field_m) && (rb.field_m < SoftwareRasterizer.field_a);
         this.field_Eb = stackIn_36_1;
-        stackIn_41_1 = (this.field_Eb) && (ig.field_L == this.field_W) && (param3);
+        stackIn_41_1 = (this.field_Eb) && (EditableTextField.field_L == this.field_W) && (param3);
         this.field_S = stackIn_41_1;
         if (this.field_I != null) {
           var13 = (le) (this.field_I.beginBackward((byte) 117));

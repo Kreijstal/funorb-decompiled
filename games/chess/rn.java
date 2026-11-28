@@ -36,8 +36,8 @@ final class rn {
           uc.field_c.a(param3 + BoundedRandomAccessFile.field_f.field_M, uc.field_c.field_M, -2147483648, param5, 0);
           var7 = var7 - (param5 + 2);
           ac.field_j.a(2, -5 + var7, 5, -3, param0, 5, 2 + (param3 + 485) + param0);
-          if (ol.field_O != null) {
-            ol.field_O.a(ac.field_j.field_V, 34, ac.field_j.field_pb, ac.field_j.field_M, ac.field_j.field_mb);
+          if (AccountRegistrationPanel.field_O != null) {
+            AccountRegistrationPanel.field_O.a(ac.field_j.field_V, 34, ac.field_j.field_pb, ac.field_j.field_M, ac.field_j.field_mb);
           }
           var8 = -param3 + AccountNameAvailabilityValidator.field_m.field_M - var6_int;
           var9 = var8 / 2;

@@ -74,7 +74,7 @@ class jc implements td, rj {
           } else {
             this.field_g.a(this.a((byte) -95, param7), this.a(param2, 5, param7, param1), this.a(param6, param7, (byte) -125, param0), var9_int, var10, param5, param3, this.field_h, this.field_c, this.field_t);
           }
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
           if (param4 < 27) {
             var14 = (jc) null;
             this.a((byte) 21, (jc) null);
@@ -410,7 +410,7 @@ class jc implements td, rj {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             id.a(param1.field_m + param1.field_s + param2, param1.field_s + param2, param1.field_r + (param1.field_n + param0), param0 + param1.field_n, 734);
             mb.field_a.a(var10, false, var12, this.field_m, var10, var11);
-            oc.g((byte) -105);
+            ValidatedTextField.g((byte) -105);
           }
           if (param3 <= 93) {
             this.field_h = -63;
@@ -487,7 +487,7 @@ class jc implements td, rj {
               var16 = stackIn_18_0;
               mb.field_a.a(this.field_d, -var15 + var16, var14.field_c, this.field_r + (param5 - (-param2.field_n - param2.field_q) + var14.field_f), this.field_d >>> 24, this.a(param3, 5, param2, var15), 123);
             }
-            oc.g((byte) -105);
+            ValidatedTextField.g((byte) -105);
             return;
           }
           return;
@@ -630,11 +630,11 @@ class jc implements td, rj {
               var6 = hg.a(true, FullscreenFocusCanvas.field_d[var3_int], 0);
               var4 = var4 + gg.field_N;
               var7 = fd.field_c - (var6 >> 1);
-              if (fm.a(var4, param2, -mj.field_f + var7, (mj.field_f << 1) + var6, 102, param0, el.field_D + (DualLinkDequeIterator.field_b << 1))) {
+              if (fm.a(var4, param2, -mj.field_f + var7, (mj.field_f << 1) + var6, 102, param0, DisplayNameSelectionPanel.field_D + (DualLinkDequeIterator.field_b << 1))) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (gg.field_N + ((DualLinkDequeIterator.field_b << 1) + el.field_D));
+              var4 = var4 + (gg.field_N + ((DualLinkDequeIterator.field_b << 1) + DisplayNameSelectionPanel.field_D));
             }
             var3_int++;
           }

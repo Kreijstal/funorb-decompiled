@@ -42,8 +42,8 @@ final class fi extends IntrusiveNode {
             var4 = uk.a(53, param0);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!r.a(var4.charAt(0), param2 - 4) &&
-                !r.a(var4.charAt(-1 + var4.length()), -43)) {
+              if (!TextFieldValidator.a(var4.charAt(0), param2 - 4) &&
+                !TextFieldValidator.a(var4.charAt(-1 + var4.length()), -43)) {
                 if (param2 != 124) {
                   stackIn_21_0 = (String) null;
                   return stackIn_21_0;
@@ -51,7 +51,7 @@ final class fi extends IntrusiveNode {
                 var5 = 0;
                 for (var6 = 0; param0.length() > var6; var6++) {
                   var7 = param0.charAt(var6);
-                  if (!r.a((char) var7, -122)) {
+                  if (!TextFieldValidator.a((char) var7, -122)) {
                     var5 = 0;
                   } else {
                     var5++;

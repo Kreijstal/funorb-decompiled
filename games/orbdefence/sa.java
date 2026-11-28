@@ -142,14 +142,14 @@ final class sa {
           var7 = param1[1].field_s;
           param1[0].c(param2, param4);
           param1[2].c(param2 + param3 - var6, param4);
-          SoftwareRasterizer.saveClip(pk.field_F);
+          SoftwareRasterizer.saveClip(LoginPanel.field_F);
           SoftwareRasterizer.intersectClip(param2 + var5_int, param4, -var6 + (param3 + param2), param4 + param1[1].field_t);
           var8 = var5_int + param2;
           var9 = param2 + param3 - var6;
           for (param2 = var8; param2 < var9; param2 = param2 + var7) {
             param1[1].c(param2, param4);
           }
-          SoftwareRasterizer.restoreClip(pk.field_F);
+          SoftwareRasterizer.restoreClip(LoginPanel.field_F);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "sa.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

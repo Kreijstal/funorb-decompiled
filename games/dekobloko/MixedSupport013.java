@@ -116,7 +116,7 @@ final class MixedSupport013 {
                     if (integerLocal16 <= 255) {
                       integerLocal19 = SoftwareRaster.integerArrayState0063[integerLocal9];
                       integerLocal20 = integerLocal17 * (16711935 & integerLocal19) + integerLocal16 * (integerLocal18 & 16711935) >> 8 & 16711935;
-                      SoftwareRaster.integerArrayState0063[integerLocal9] = MixedSupport075.computeInteger0930(65280, MixedSupport075.computeInteger0930(65280, integerLocal18) * integerLocal16 + integerLocal17 * MixedSupport075.computeInteger0930(65280, integerLocal19) >> 8) + integerLocal20;
+                      SoftwareRaster.integerArrayState0063[integerLocal9] = PlayerBoardUpdateQueue.bitwiseAnd(65280, PlayerBoardUpdateQueue.bitwiseAnd(65280, integerLocal18) * integerLocal16 + integerLocal17 * PlayerBoardUpdateQueue.bitwiseAnd(65280, integerLocal19) >> 8) + integerLocal20;
                     } else {
                       SoftwareRaster.integerArrayState0063[integerLocal9] = integerLocal18;
                     }

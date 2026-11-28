@@ -438,14 +438,14 @@ final class mj {
                         var6 != null &&
                         s.a(var2[var8], param0 - 23409) &&
                         ~var3[var8] == ~var6.field_o &&
-                        var4[var8] == ti.field_O) {
+                        var4[var8] == ValidatedTextField.field_O) {
                         var5 = 1;
                         ProxyAuthenticationRequiredException.field_c = -(1 + var8);
                       }
                       if (var2[var8] != null ||
                         var5 == 0 &&
                         var8 == 9 &&
-                        !(ti.field_O <= 0)) {
+                        !(ValidatedTextField.field_O <= 0)) {
                         var9 = 0;
                         var10 = 0;
                         var11 = 0;
@@ -458,8 +458,8 @@ final class mj {
                         }
                         if (var5 == 0 &&
                           9 == var8 &&
-                          0 < ti.field_O) {
-                          var9Lifetime2 = ti.field_O;
+                          0 < ValidatedTextField.field_O) {
+                          var9Lifetime2 = ValidatedTextField.field_O;
                           var12 = ja.field_b;
                           var11 = var9Lifetime2;
                           ProxyAuthenticationRequiredException.field_c = -(var8 + 1);

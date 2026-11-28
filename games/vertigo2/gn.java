@@ -23,7 +23,7 @@ final class gn {
         if (param0 != -22798) {
           return (java.awt.Canvas) null;
         }
-        return dc.field_L != null ? (java.awt.Canvas) ((Object) dc.field_L) : ne.field_F;
+        return dc.field_L != null ? (java.awt.Canvas) ((Object) dc.field_L) : DisplayNameSelectionPanel.field_F;
     }
 
     static {

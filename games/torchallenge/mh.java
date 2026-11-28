@@ -155,7 +155,7 @@ final class mh {
           if (param0.length() == 0) {
             return true;
           }
-          if (LocalizedStrings.a(param0, (byte) -52, param2)) {
+          if (ConfirmedEmailAvailabilityValidator.a(param0, (byte) -52, param2)) {
             return false;
           }
           if (!param1) {

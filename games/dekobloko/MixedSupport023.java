@@ -20,12 +20,12 @@ final class MixedSupport023 {
         }
         int integerLocal1 = UiComponentPart011.sceneWidgetPart013State0002 != null ? 1 : 0;
         if (MixedSupport146.integerState0931 == 9 &&
-          MixedSupport096.computeBoolean1213(IterableNodeCollection.integerState0802, integerArgument3 - 6772, MixedSupport086.longState0032, UiComponentPart013.stringState0226, SoftwareFramebuffer.integerArrayState0259)) {
+          MixedSupport096.computeBoolean1213(IterableNodeCollection.integerState0802, integerArgument3 - 6772, MixedSupport086.longState0032, LoginPanel.stringState0226, SoftwareFramebuffer.integerArrayState0259)) {
           if (2 != IterableNodeCollection.integerState0802 &&
             integerLocal1 != 0) {
             return false;
           }
-          return MixedSupport142.computeBoolean1759(SoftwareFramebuffer.integerArrayState0259, MixedSupport086.longState0032, UiComponentPart013.stringState0226, -12, IterableNodeCollection.integerState0802);
+          return ReturnedShapeUpdate.computeBoolean1759(SoftwareFramebuffer.integerArrayState0259, MixedSupport086.longState0032, LoginPanel.stringState0226, -12, IterableNodeCollection.integerState0802);
         }
         if (MixedSupport146.integerState0931 == 10) {
           if (integerLocal1 != 0) {
@@ -59,19 +59,19 @@ final class MixedSupport023 {
         boolean stackBooleanLocal1 = false;
         boolean stackBooleanLocal2 = false;
         boolean stackBooleanLocal3 = false;
-        if (UiComponentPart023.computeBoolean1242(-30146) && (UiComponentPart031.computeBoolean1586((byte) 38, MixedSupport063.integerArrayState0111) ||
+        if (UiComponentPart023.computeBoolean1242(-30146) && (AccountRegistrationPanel.computeBoolean1586((byte) 38, MixedSupport063.integerArrayState0111) ||
           MixedSupport048.mixedSupport072State0001 != null ||
           !(UiComponentPart015.integerState0319 <= 0))) {
-          ResourceSupport002.booleanState0006 = true;
+          DebouncedFieldValidator.booleanState0006 = true;
           stackBooleanLocal1 = true;
           stackBooleanLocal2 = !(UiComponentPart015.integerState0319 <= 0);
           stackBooleanLocal3 = (null != MixedSupport048.mixedSupport072State0001);
           MixedSupport097.renderingSupport007State0007 = PcmPlayerService.computeRenderingSupport0071410(stackBooleanLocal1, stackBooleanLocal2, stackBooleanLocal3, (byte) -61, booleanArgument1);
           return;
         }
-        ResourceSupport002.booleanState0006 = false;
+        DebouncedFieldValidator.booleanState0006 = false;
         MixedSupport090.booleanState0124 = false;
-        if (UiComponentPart031.computeBoolean1586((byte) 64, MixedSupport063.integerArrayState0111)) {
+        if (AccountRegistrationPanel.computeBoolean1586((byte) 64, MixedSupport063.integerArrayState0111)) {
           BucketBoard.booleanState0109 = true;
         }
         if (RenderingSupport003.booleanState0056) {
@@ -147,7 +147,7 @@ final class MixedSupport023 {
         try {
           if (!SceneWidgetPart008.booleanState0123) {
             if (null == MixedSupport025.mixedSupport033State0001) {
-              MixedSupport025.mixedSupport033State0001 = MixedSupport015.computeMixedSupport0330201(4, (byte) -115);
+              MixedSupport025.mixedSupport033State0001 = NineSliceSprite.computeMixedSupport0330201(4, (byte) -115);
             }
             if (MixedSupport025.mixedSupport033State0001.booleanState0041) {
               integerArrayLocal12 = MixedSupport088.integerArrayState0172;
@@ -166,7 +166,7 @@ final class MixedSupport023 {
               integerLocal9 = 0;
               integerLocal17 = integerLocal9;
               while (integerLocal9 < 8) {
-                integerArrayLocal8[integerLocal9] = MixedSupport075.computeInteger0930(integerArrayLocal13[integerLocal9], ~integerArrayLocal15[integerLocal9]);
+                integerArrayLocal8[integerLocal9] = PlayerBoardUpdateQueue.bitwiseAnd(integerArrayLocal13[integerLocal9], ~integerArrayLocal15[integerLocal9]);
                 integerLocal9++;
               }
               SceneWidgetPart008.booleanState0123 = true;

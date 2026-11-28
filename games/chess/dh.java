@@ -16,7 +16,7 @@ final class dh {
 
     private final boolean b(int param0, int param1, int param2) {
         if (17 == param1) {
-          GzipInflater.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
+          GzipInflater.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
           return true;
         }
         if (param2 == 13563) {
@@ -90,7 +90,7 @@ final class dh {
           if (null == this.field_i) {
             return;
           }
-          if (this.field_j == gb.field_t) {
+          if (this.field_j == NetworkGameClient.field_t) {
             return;
           }
           if (pd.field_Rb == null) {
@@ -105,7 +105,7 @@ final class dh {
                 pd.field_Rb.field_pc < 0) {
                 return;
               }
-              this.field_b.a((byte) -12, oc.a(am.field_b, new String[]{var5}, (byte) -124), 1);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(am.field_b, new String[]{var5}, (byte) -124), 1);
               return;
             }
             if (var9 != null &&
@@ -114,16 +114,16 @@ final class dh {
                 return;
               }
               if (var9.field_ac) {
-                this.field_b.a((byte) -12, oc.a(sh.field_a, new String[]{var5}, (byte) -92), 1);
+                this.field_b.a((byte) -12, MatchingFieldValidator.a(sh.field_a, new String[]{var5}, (byte) -92), 1);
               } else {
                 if (!param1) {
-                  this.field_b.a((byte) -12, oc.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
+                  this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
                 } else {
                   if (!var9.field_Qb) {
-                    this.field_b.a((byte) -12, oc.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
+                    this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
                   } else {
-                    this.field_b.a((byte) -12, oc.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
-                    this.field_b.a((byte) -12, oc.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
+                    this.field_b.a((byte) -12, MatchingFieldValidator.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
+                    this.field_b.a((byte) -12, MatchingFieldValidator.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
                   }
                 }
               }
@@ -135,7 +135,7 @@ final class dh {
         if (null == this.field_i) {
           return;
         }
-        if (this.field_j == gb.field_t) {
+        if (this.field_j == NetworkGameClient.field_t) {
           return;
         }
         if (pd.field_Rb == null) {
@@ -153,7 +153,7 @@ final class dh {
             pd.field_Rb.field_pc < 0) {
             return;
           }
-          this.field_b.a((byte) -12, oc.a(am.field_b, new String[]{var5}, (byte) -124), 1);
+          this.field_b.a((byte) -12, MatchingFieldValidator.a(am.field_b, new String[]{var5}, (byte) -124), 1);
           return;
         }
         if (var8 == null) {
@@ -166,16 +166,16 @@ final class dh {
           return;
         }
         if (var8.field_ac) {
-          this.field_b.a((byte) -12, oc.a(sh.field_a, new String[]{var5}, (byte) -92), 1);
+          this.field_b.a((byte) -12, MatchingFieldValidator.a(sh.field_a, new String[]{var5}, (byte) -92), 1);
         } else {
           if (!param1) {
-            this.field_b.a((byte) -12, oc.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
+            this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
           } else {
             if (!var8.field_Qb) {
-              this.field_b.a((byte) -12, oc.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
             } else {
-              this.field_b.a((byte) -12, oc.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
-              this.field_b.a((byte) -12, oc.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
             }
           }
         }
@@ -249,11 +249,11 @@ final class dh {
             if (ii.field_Q == 0) {
               this.field_b.a((byte) -12, BitPacketBuffer.field_v, 12);
             }
-            this.field_b.a((byte) -12, un.field_i, 13);
+            this.field_b.a((byte) -12, ChessMatchSession.field_i, 13);
           }
           if (param1.field_k == 2) {
             if (v.field_d == 0) {
-              this.field_b.a((byte) -12, wf.field_X, 12);
+              this.field_b.a((byte) -12, LoginPanel.field_X, 12);
             }
             this.field_b.a((byte) -12, in.field_e, 13);
           }
@@ -301,7 +301,7 @@ final class dh {
         PacketBuffer var7 = null;
         String var8 = null;
         try {
-          if (this.field_i != null && (~this.field_j != ~gb.field_t ||
+          if (this.field_i != null && (~this.field_j != ~NetworkGameClient.field_t ||
             param2 == 2) && ld.field_g == 2) {
             var8 = this.a(param0 + 106);
             var4 = var8;
@@ -309,31 +309,31 @@ final class dh {
             var6 = va.a(this.field_i, -19554) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_b.a((byte) -12, oc.a(jl.field_a, new String[]{var8}, (byte) -71), 4);
-              this.field_b.a((byte) -12, oc.a(bb.field_c, new String[]{var8}, (byte) -62), 6);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(jl.field_a, new String[]{var8}, (byte) -71), 4);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(bb.field_c, new String[]{var8}, (byte) -62), 6);
               if (param1 != null &&
                 param2 != 2 &&
                 !qf.field_b) {
                 this.field_e = param1;
-                this.field_b.a((byte) -12, oc.a(ci.field_x, new String[]{var8}, (byte) -93), 19);
+                this.field_b.a((byte) -12, MatchingFieldValidator.a(ci.field_x, new String[]{var8}, (byte) -93), 19);
               }
             }
             if (var5 != null) {
               if (!am.a(false, this.field_i) &&
                 !qf.field_b) {
                 if (!NanoFrameTimer.field_o) {
-                  this.field_b.a((byte) -12, oc.a(bc.field_c, new String[]{var8}, (byte) -57), 8);
+                  this.field_b.a((byte) -12, MatchingFieldValidator.a(bc.field_c, new String[]{var8}, (byte) -57), 8);
                 }
-                this.field_b.a((byte) -12, oc.a(nd.field_b, new String[]{var8}, (byte) -89), 18);
+                this.field_b.a((byte) -12, MatchingFieldValidator.a(nd.field_b, new String[]{var8}, (byte) -89), 18);
                 if (param1 != null) {
                   this.field_e = param1;
-                  this.field_b.a((byte) -12, oc.a(ci.field_x, new String[]{var8}, (byte) -62), 19);
+                  this.field_b.a((byte) -12, MatchingFieldValidator.a(ci.field_x, new String[]{var8}, (byte) -62), 19);
                 }
               }
-              this.field_b.a((byte) -12, oc.a(un.field_h, new String[]{var8}, (byte) -100), 5);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(ChessMatchSession.field_h, new String[]{var8}, (byte) -100), 5);
             }
             if (var6 != 0) {
-              this.field_b.a((byte) -12, oc.a(tb.field_b, new String[]{var8}, (byte) -119), 7);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(tb.field_b, new String[]{var8}, (byte) -119), 7);
             }
           }
           if (param0 == 17) {
@@ -393,8 +393,8 @@ final class dh {
           }
           var3 = var5.field_Gb;
           if (var5.field_dc) {
-            this.field_b.a((byte) -12, oc.a(sj.field_p, new String[]{var3}, (byte) -76), 2);
-            this.field_b.a((byte) -12, oc.a(NanoFrameTimer.field_p, new String[]{var3}, (byte) -101), 3);
+            this.field_b.a((byte) -12, MatchingFieldValidator.a(sj.field_p, new String[]{var3}, (byte) -76), 2);
+            this.field_b.a((byte) -12, MatchingFieldValidator.a(NanoFrameTimer.field_p, new String[]{var3}, (byte) -101), 3);
             return;
           }
           if (!var5.field_Pb) {
@@ -402,43 +402,43 @@ final class dh {
               if (!var5.field_Tb) {
                 return;
               }
-              this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
               return;
             }
             if (!var5.field_ac) {
               if (!var5.field_Tb) {
                 return;
               }
-              this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
               return;
             }
             if (!var5.field_Vb) {
-              this.field_b.a((byte) -12, oc.a(ki.field_O, new String[]{var3}, (byte) -68), 2);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(ki.field_O, new String[]{var3}, (byte) -68), 2);
               if (!var5.field_Tb) {
                 return;
               }
-              this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
               return;
             }
             if (var5.field_Pb) {
-              this.field_b.a((byte) -12, oc.a(ki.field_O, new String[]{var3}, (byte) -68), 2);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(ki.field_O, new String[]{var3}, (byte) -68), 2);
               if (!var5.field_Tb) {
                 return;
               }
-              this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
               return;
             }
             if (!var5.field_Tb) {
               return;
             }
-            this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+            this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
             return;
           }
-          this.field_b.a((byte) -12, oc.a(ArchiveIndex.field_d, new String[]{var3}, (byte) -46), 2);
+          this.field_b.a((byte) -12, MatchingFieldValidator.a(ArchiveIndex.field_d, new String[]{var3}, (byte) -46), 2);
           if (!var5.field_Tb) {
             return;
           }
-          this.field_b.a((byte) -12, oc.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
+          this.field_b.a((byte) -12, MatchingFieldValidator.a(qa.field_g, new String[]{var3}, (byte) -96), 3);
           return;
         }
     }
@@ -500,20 +500,20 @@ final class dh {
         String var2Lifetime1;
         if (param0 < -6) {
           if (this.field_i != null &&
-            this.field_j != gb.field_t) {
+            this.field_j != NetworkGameClient.field_t) {
             var4 = this.a(72);
             var2 = var4;
-            this.field_b.a((byte) -12, oc.a(oh.field_c, new String[]{var4}, (byte) -127), 17);
+            this.field_b.a((byte) -12, MatchingFieldValidator.a(oh.field_c, new String[]{var4}, (byte) -127), 17);
           }
           return;
         }
         j var3 = (j) null;
         dh.a(57, (j) null);
         if (this.field_i != null &&
-          this.field_j != gb.field_t) {
+          this.field_j != NetworkGameClient.field_t) {
           var4 = this.a(72);
           var2Lifetime1 = var4;
-          this.field_b.a((byte) -12, oc.a(oh.field_c, new String[]{var4}, (byte) -127), 17);
+          this.field_b.a((byte) -12, MatchingFieldValidator.a(oh.field_c, new String[]{var4}, (byte) -127), 17);
         }
     }
 
@@ -529,7 +529,7 @@ final class dh {
           if (var7 != null) {
             var7.field_ec = null;
           } else {
-            var4 = qn.field_U;
+            var4 = EditableTextField.field_U;
             var4.writeCipheredByte(param1, -94);
             var4.writeByte(3, (byte) 82);
             var4.writeByte(11, (byte) 76);
@@ -540,7 +540,7 @@ final class dh {
             }
             return;
           }
-          var4Lifetime1 = qn.field_U;
+          var4Lifetime1 = EditableTextField.field_U;
           var4Lifetime1.writeCipheredByte(param1, -94);
           var4Lifetime1.writeByte(3, (byte) 82);
           var4Lifetime1.writeByte(11, (byte) 76);
@@ -574,7 +574,7 @@ final class dh {
             return true;
           }
           if (param1 == 3) {
-            db.a(param2, this.field_d, param0 ^ 32284);
+            ConfirmedEmailAvailabilityValidator.a(param2, this.field_d, param0 ^ 32284);
             return true;
           }
           if (10 == param1) {

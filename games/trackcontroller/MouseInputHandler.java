@@ -50,11 +50,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
-          if (null != hd.mouseHandler) {
+          if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             pa.idleTicks = 0;
             BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cb.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -68,7 +68,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != hd.mouseHandler) {
+          if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             db.liveMouseButton = 0;
           }
           return;
@@ -179,11 +179,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != hd.mouseHandler) {
+          if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             pa.idleTicks = 0;
             BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,11 +202,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (hd.mouseHandler != null) {
+          if (ConfirmedEmailAvailabilityValidator.mouseHandler != null) {
             pa.idleTicks = 0;
             BitPacketBuffer.liveMouseX = param0.getX();
             ArchiveSource.liveMouseY = param0.getY();
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "cb.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -221,7 +221,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != hd.mouseHandler) {
+          if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             pa.idleTicks = 0;
             sa.pressX = param0.getX();
             GameShell.pressY = param0.getY();
@@ -234,7 +234,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               db.liveMouseButton = 1;
             }
             var2_int = param0.getModifiers();
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
             if (0 == (8 & var2_int)) {
             }
             if (0 == (4 & var2_int)) {
@@ -267,11 +267,11 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != hd.mouseHandler) {
+          if (null != ConfirmedEmailAvailabilityValidator.mouseHandler) {
             pa.idleTicks = 0;
             BitPacketBuffer.liveMouseX = -1;
             ArchiveSource.liveMouseY = -1;
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -362,10 +362,10 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (hd.mouseHandler != null) {
+          if (ConfirmedEmailAvailabilityValidator.mouseHandler != null) {
             pa.idleTicks = 0;
             db.liveMouseButton = 0;
-            hd.inputPending = true;
+            ConfirmedEmailAvailabilityValidator.inputPending = true;
             var2_int = param0.getModifiers();
             if ((8 & var2_int) != 0) {
             }

@@ -139,7 +139,7 @@ final class tl extends ci {
           fi.a(-393711775);
           return true;
         }
-        if (af.b((byte) 125)) {
+        if (ChessMatchState.handleActiveTextPromptKey((byte) 125)) {
           return true;
         }
         if (fn.a(param0, 23012, param1, param3)) {

@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends na implements vd {
     static lb field_lb;
     private boolean field_ob;
     static am field_mb;
-    private dc field_pb;
+    private AccountRegistrationPanel field_pb;
     static String field_rb;
     static PcmSample field_nb;
     private boolean field_sb;
@@ -66,7 +66,7 @@ final class AccountCreationResultPanel extends na implements vd {
           ck.field_db = new am(var4);
           var5 = RawPcmStream.a(fb.field_c, 100, 0);
           var5.f(-1);
-          vk.field_N = new am(var5);
+          LoginPanel.field_N = new am(var5);
           var6 = RawPcmStream.a(pe.field_h, 100, 0);
           var6.f(-1);
           fp.field_c = new am(var6);
@@ -86,7 +86,7 @@ final class AccountCreationResultPanel extends na implements vd {
         }
     }
 
-    AccountCreationResultPanel(ol param0, dc param1) {
+    AccountCreationResultPanel(ol param0, AccountRegistrationPanel param1) {
         super(param0, mo.field_m, vn.field_i, false, false);
         try {
           this.field_pb = param1;
@@ -175,7 +175,7 @@ final class AccountCreationResultPanel extends na implements vd {
 
     public final void a(byte param0, int param1, int param2, int param3, pc param4) {
         if (this.field_ob) {
-          vk.a(-40, true, false);
+          LoginPanel.a(-40, true, false);
           return;
         }
         try {

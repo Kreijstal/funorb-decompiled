@@ -23,7 +23,7 @@ final class qa extends IntrusiveNode {
         int var2;
         var2 = Torquing.field_u;
         aq.field_c = false;
-        bi.field_u = null;
+        LevelRun.field_u = null;
         if (ff.field_a) {
           IsaacCipher.field_m.n(-20041);
           if (param0 <= -43) {
@@ -35,14 +35,14 @@ final class qa extends IntrusiveNode {
         var1 = pa.field_c;
         if (var1 > 0) {
           if (var1 != 1) {
-            bi.field_u = ff.a(new String[]{Integer.toString(var1)}, 0, up.field_h);
+            LevelRun.field_u = ff.a(new String[]{Integer.toString(var1)}, 0, up.field_h);
           } else {
-            bi.field_u = ArchiveRequest.field_q;
+            LevelRun.field_u = ArchiveRequest.field_q;
           }
-          bi.field_u = NetworkArchiveRequest.a(-115, new CharSequence[]{(CharSequence) ((Object) bi.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
+          LevelRun.field_u = NetworkArchiveRequest.a(-115, new CharSequence[]{(CharSequence) ((Object) LevelRun.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
         }
         IsaacCipher.field_m.b(true);
-        gp.j((byte) -34);
+        ValidatedTextField.j((byte) -34);
         if (param0 <= -43) {
           return;
         }

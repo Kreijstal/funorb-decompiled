@@ -419,7 +419,7 @@ final class tg {
           SpriteGeometry.c((byte) -118);
           lj.d((byte) 114);
           DirectByteStorage.b(51);
-          if (bj.c((byte) -29)) {
+          if (DebouncedFieldValidator.c((byte) -29)) {
             s.field_b.i(19319, 1);
             mb.d(0, -22370);
           }

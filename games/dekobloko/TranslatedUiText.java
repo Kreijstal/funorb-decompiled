@@ -214,7 +214,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_entered_other_game", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart028.stringState0482 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  EditableTextField.stringState0482 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_game_is_full", -15192);
                 if (null != byteArrayState0015) {
@@ -286,7 +286,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gamelist_players", -15192);
                 if (byteArrayState0015 != null) {
-                  ResourceSupport002.stringState0038 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DebouncedFieldValidator.stringState0038 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gamelist_avg_rating", -15192);
                 if (byteArrayState0015 != null) {
@@ -318,7 +318,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_options_players", -15192);
                 if (byteArrayState0015 != null) {
-                  SceneWidgetPart004.stringState0215 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  PlayerNamePrompt.stringState0215 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_options_dontmind", -15192);
                 if (byteArrayState0015 != null) {
@@ -358,7 +358,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rm_x_from_friends", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart005.stringState0100 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DisplayNameSelectionPanel.stringState0100 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rm_x_from_ignore", -15192);
                 if (byteArrayState0015 != null) {
@@ -402,7 +402,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gameopt_withdraw_invite_to_x", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport142.stringState0596 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ReturnedShapeUpdate.stringState0596 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gameopt_accept_x_into_game", -15192);
                 if (null != byteArrayState0015) {
@@ -486,7 +486,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("you_are_on_x_server", -15192);
                 if (null != byteArrayState0015) {
-                  SceneWidgetPart013.stringState0587 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  LobbyRoomRow.stringState0587 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rated_game", -15192);
                 if (null != byteArrayState0015) {
@@ -586,7 +586,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("inviting_x", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport075.stringState0325 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  PlayerBoardUpdateQueue.stringState0325 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("x_wants_to_join", -15192);
                 if (byteArrayState0015 != null) {
@@ -842,11 +842,11 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_youneedratedgames", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport075.stringState0323 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  PlayerBoardUpdateQueue.stringState0323 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_playerneeds1ratedgame", -15192);
                 if (null != byteArrayState0015) {
-                  InputAdapter002.stringState0448 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateValidator.stringState0448 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_youneed1ratedgame", -15192);
                 if (null != byteArrayState0015) {
@@ -918,7 +918,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("gameopt_pleasetrychanging", -15192);
                 if (null != byteArrayState0015) {
-                  SceneWidgetPart004.stringState0216 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  PlayerNamePrompt.stringState0216 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ra_title", -15192);
                 if (byteArrayState0015 != null) {
@@ -930,7 +930,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ra_suggestmute", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart028.stringState0481 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  EditableTextField.stringState0481 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("ra_intro", -15192);
                 if (byteArrayState0015 != null) {
@@ -958,7 +958,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rule_0_2", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport015.stringState0073 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NineSliceSprite.stringState0073 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("rule_0_3", -15192);
                 if (byteArrayState0015 != null) {
@@ -1060,7 +1060,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("tocustomersupport", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart032.stringState0580 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateInput.stringState0580 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("changedisplayname", -15192);
                 if (byteArrayState0015 != null) {
@@ -1464,7 +1464,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_more_suggestions", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport015.stringState0074 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NineSliceSprite.stringState0074 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_select_alternative", -15192);
                 if (null != byteArrayState0015) {
@@ -1520,7 +1520,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("login_no_displayname", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart005.stringState0102 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DisplayNameSelectionPanel.stringState0102 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_username_tooltip", -15192);
                 if (null != byteArrayState0015) {
@@ -1608,7 +1608,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_alert_nameleadingspace", -15192);
                 if (null != byteArrayState0015) {
-                  InputAdapter002.stringState0446 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateValidator.stringState0446 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_alert_doublespace", -15192);
                 if (byteArrayState0015 != null) {
@@ -1828,7 +1828,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("loading_soundeffects", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart013.stringState0224 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  LoginPanel.stringState0224 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("loading_music", -15192);
                 if (null != byteArrayState0015) {
@@ -1932,7 +1932,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("achievementsthisgame", -15192);
                 if (null != byteArrayState0015) {
-                  InputAdapter002.stringState0447 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateValidator.stringState0447 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("achievementsthissession", -15192);
                 if (null != byteArrayState0015) {
@@ -2061,7 +2061,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("next", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart021.stringState0384 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ValidatedTextField.stringState0384 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("graphics_colon", -15192);
                 if (byteArrayState0015 != null) {
@@ -2313,7 +2313,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("hs_name", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport142.stringState0597 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ReturnedShapeUpdate.stringState0597 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("hs_level", -15192);
                 if (byteArrayState0015 != null) {
@@ -2341,7 +2341,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("score_colon", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport015.stringState0071 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NineSliceSprite.stringState0071 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mp_leavegame", -15192);
                 if (null != byteArrayState0015) {
@@ -2465,11 +2465,11 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mp_showchat_unread1", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport075.stringState0324 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  PlayerBoardUpdateQueue.stringState0324 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mp_showchat_unread2", -15192);
                 if (byteArrayState0015 != null) {
-                  InputAdapter002.stringState0445 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  BirthDateValidator.stringState0445 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("click_to_quickchat", -15192);
                 if (byteArrayState0015 != null) {
@@ -2577,15 +2577,15 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("members_expansion_benefits,0", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart022.stringArrayState0027[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  AccountFieldStatusIndicator.stringArrayState0027[0] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("members_expansion_benefits,1", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart022.stringArrayState0027[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  AccountFieldStatusIndicator.stringArrayState0027[1] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("members_expansion_benefits,2", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart022.stringArrayState0027[2] = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  AccountFieldStatusIndicator.stringArrayState0027[2] = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("members_expansion_price_top", -15192);
                 if (byteArrayState0015 != null) {
@@ -2661,7 +2661,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_accept_beforeaccept", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart031.stringState0528 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  AccountRegistrationPanel.stringState0528 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_button_accept", -15192);
                 if (byteArrayState0015 != null) {
@@ -2693,7 +2693,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_button_close", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart021.stringState0383 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ValidatedTextField.stringState0383 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_button_members", -15192);
                 if (null != byteArrayState0015) {

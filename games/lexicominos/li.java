@@ -3,7 +3,7 @@
  */
 final class li extends bc {
     static aj field_R;
-    private ma field_N;
+    private FieldValidator field_N;
     static AccountServiceResult field_T;
     static int field_S;
     private int field_M;
@@ -76,7 +76,7 @@ final class li extends bc {
         }
     }
 
-    li(ma param0, String param1, int param2, int param3, int param4, int param5) {
+    li(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, t.b(-11));
         try {
           this.field_O = param1;
@@ -120,10 +120,10 @@ final class li extends bc {
         int var12Lifetime1;
         sc var6Lifetime1;
         var13 = Lexicominos.field_L ? 1 : 0;
-        var6 = this.field_N.b((byte) 125);
+        var6 = this.field_N.getValidationStatus((byte) 125);
         if (var6 != jj.field_e &&
           BufferedRandomAccessFile.field_q != var6) {
-          var5 = this.field_N.a((byte) 100);
+          var5 = this.field_N.getValidationMessage((byte) 100);
           if (var5 == null) {
             var5 = this.field_O;
           }
@@ -135,7 +135,7 @@ final class li extends bc {
           this.f(true);
         }
         super.a(param0, param1, param2, param3);
-        var6Lifetime1 = this.field_N.b((byte) 119);
+        var6Lifetime1 = this.field_N.getValidationStatus((byte) 119);
         var8 = (ub) ((Object) this.field_i);
         var9 = param2 + this.field_t;
         var10 = var8.a((w) (this), param0 ^ -20231, param1) + (var8.a((w) (this), (byte) 101).a(0) >> 1);

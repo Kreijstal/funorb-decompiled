@@ -64,7 +64,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                jg.field_m.b(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7 >> 8);
               }
               return;
             }
@@ -86,7 +86,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime4 < 20) {
               var7Lifetime8 = 256 * var6Lifetime4 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
           }
           return;
         }
@@ -114,7 +114,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
           }
           return;
         }
@@ -127,7 +127,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
@@ -138,7 +138,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = 256 * var6Lifetime2 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime3 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
@@ -151,7 +151,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime4Lifetime1 = 256 * var6Lifetime2 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
           }
           return;
         }
@@ -163,7 +163,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime5 = 256 * var6Lifetime2 / 20;
             }
-            jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime5 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime5 >> 8);
           }
           return;
         }
@@ -175,7 +175,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (var6Lifetime3 < 20) {
             var7Lifetime7 = 256 * var6Lifetime3 / 20;
           }
-          jg.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
+          ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
         }
         return;
     }
@@ -218,7 +218,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         ff.field_a[pf.field_o] = pf.field_o;
         we.field_g[pf.field_o] = param2;
         if (rb.field_a >= param2) {
-          if (param2 < r.field_D) {
+          if (param2 < DisplayNameSelectionPanel.field_D) {
             ve.field_d = param2;
           }
           l.field_D[pf.field_o] = param5;
@@ -242,7 +242,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           return;
         }
         l.field_G = param2;
-        if (param2 < r.field_D) {
+        if (param2 < DisplayNameSelectionPanel.field_D) {
           ve.field_d = param2;
         }
         l.field_D[pf.field_o] = param5;

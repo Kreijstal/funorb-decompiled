@@ -157,11 +157,11 @@ abstract class HomingProjectile extends MovingTunnelEntity {
 
     final static boolean l(int param0) {
         if (param0 == 50) {
-          return na.field_S == wh.field_fb ? true : false;
+          return na.field_S == ValidatedTextField.field_fb ? true : false;
         }
         ResourceArchive var2 = (ResourceArchive) null;
         HomingProjectile.a((ResourceArchive) null, -32, (byte) 16, -69);
-        return na.field_S == wh.field_fb ? true : false;
+        return na.field_S == ValidatedTextField.field_fb ? true : false;
     }
 
     final double applyDamage(int param0, boolean param1, double param2) {

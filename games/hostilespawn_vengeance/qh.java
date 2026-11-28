@@ -395,17 +395,17 @@ final class qh {
           !(param0 <= og.field_b.length)) {
           og.field_b = new int[param0 * 2];
         }
-        if (null == db.field_t ||
-          !(db.field_t.length >= param0)) {
-          db.field_t = new int[param0 * 2];
+        if (null == PasswordValidator.field_t ||
+          !(PasswordValidator.field_t.length >= param0)) {
+          PasswordValidator.field_t = new int[param0 * 2];
         }
-        if (hi.field_n == null ||
-          !(param0 <= hi.field_n.length)) {
-          hi.field_n = new int[param0 * 2];
+        if (TextFieldValidator.field_n == null ||
+          !(param0 <= TextFieldValidator.field_n.length)) {
+          TextFieldValidator.field_n = new int[param0 * 2];
         }
-        if (null == db.field_s ||
-          !(db.field_s.length >= param1 + param0)) {
-          db.field_s = new int[2 * (param0 + param1)];
+        if (null == PasswordValidator.field_s ||
+          !(PasswordValidator.field_s.length >= param1 + param0)) {
+          PasswordValidator.field_s = new int[2 * (param0 + param1)];
         }
         if (null == ve.field_c ||
           !(param0 <= ve.field_c.length)) {
@@ -832,7 +832,7 @@ final class qh {
             var13 = var15;
             var10 = var13;
             var6_array = var10;
-            oc.field_h[0][this.field_v] = var15;
+            GridPoint.field_h[0][this.field_v] = var15;
             try {
               fj.a(var6_array, 15445, var15.length, new File(ArchiveProvider.a(9394, this.field_v)));
             } catch (java.lang.Exception decompiledCaughtParameter1) {

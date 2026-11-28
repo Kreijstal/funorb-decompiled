@@ -125,10 +125,10 @@ final class jj {
           field_p = 50L;
         }
         if (param1 % 10L != 0L) {
-          ef.sleepIgnoringInterrupts(11, param1);
+          ConfirmedEmailAvailabilityValidator.sleepIgnoringInterrupts(11, param1);
         } else {
-          ef.sleepIgnoringInterrupts(11, -1L + param1);
-          ef.sleepIgnoringInterrupts(11, 1L);
+          ConfirmedEmailAvailabilityValidator.sleepIgnoringInterrupts(11, -1L + param1);
+          ConfirmedEmailAvailabilityValidator.sleepIgnoringInterrupts(11, 1L);
         }
     }
 
@@ -148,7 +148,7 @@ final class jj {
         if (param0 != -1) {
           return (bh[]) null;
         }
-        return new bh[]{kk.field_k, ak.field_d, ma.field_m};
+        return new bh[]{AgeValidator.field_k, ak.field_d, ma.field_m};
     }
 
     jj(PacketBuffer param0, gk param1) {

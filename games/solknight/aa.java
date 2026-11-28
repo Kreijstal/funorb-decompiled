@@ -10,7 +10,7 @@ abstract class aa {
           return;
         }
         wa.field_a = qj.field_a[param1];
-        uf.field_r = qb.field_W[param1];
+        uf.field_r = ValidatedTextField.field_W[param1];
     }
 
     abstract wb a(int param0);

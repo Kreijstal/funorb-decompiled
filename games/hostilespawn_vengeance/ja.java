@@ -31,7 +31,7 @@ final class ja {
           if (ha.field_w.field_u == param1) {
             ha.field_w.field_u = null;
           }
-          db.a(true, 256, param1);
+          PasswordValidator.a(true, 256, param1);
           int var3_int = -47 % ((param0 + 45) / 56);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "ja.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -145,7 +145,7 @@ final class ja {
         }
     }
 
-    final static void a(oj param0, byte param1, oc param2) {
+    final static void a(oj param0, byte param1, GridPoint param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -164,9 +164,9 @@ final class ja {
             if (1000 < param0.field_e) {
               param0.field_I = param0.field_I - 1;
               param0.field_e = 0;
-              mm.field_m[el.field_j] = new oj(param2, 1, rl.field_c);
-              mm.field_m[el.field_j].field_F = 1;
-              el.field_j = el.field_j + 1;
+              mm.field_m[ProxySocketFactory.field_j] = new oj(param2, 1, rl.field_c);
+              mm.field_m[ProxySocketFactory.field_j].field_F = 1;
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
           }
           if (param1 == 113) {

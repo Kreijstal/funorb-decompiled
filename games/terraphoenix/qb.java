@@ -137,7 +137,7 @@ final class qb {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               GameApplet.field_k[var6_int] = var13.readString(param0 - 1);
             }
-            le.a(var4, var5, false);
+            AgeValidator.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               fb.a(-20936, var15);
               if (0 != var6_intLifetime1) {

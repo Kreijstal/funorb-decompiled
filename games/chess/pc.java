@@ -139,7 +139,7 @@ final class pc extends ci {
           this.field_Eb = new ci(0L, (ci) null);
           this.a((byte) 125, this.field_Eb);
           if (param11 != null) {
-            this.field_Hb = new ci(0L, param8, af.field_a);
+            this.field_Hb = new ci(0L, param8, ChessMatchState.field_a);
             this.field_Hb.field_ib = 11184810;
             this.field_Hb.field_fb = 1;
             this.field_Eb.a((byte) 127, this.field_Hb);
@@ -595,8 +595,8 @@ final class pc extends ci {
             var7.field_M = 0;
             if (ci.f(-12)) {
               sc.field_f.field_db = ge.field_cb.toUpperCase();
-              var9 = (2 + ri.field_k.field_M) / 2;
-              uj.field_j.a(0, var9 - 2, -2147483648, 40, -40 + ri.field_k.field_pb);
+              var9 = (2 + BirthDateValidator.field_k.field_M) / 2;
+              uj.field_j.a(0, var9 - 2, -2147483648, 40, -40 + BirthDateValidator.field_k.field_pb);
               if (pd.field_Rb.field_Xb < pd.field_Rb.field_hc) {
                 uj.field_j.field_db = AccountNameAvailabilityValidator.field_v.toUpperCase();
                 uj.field_j.field_tb = true;
@@ -616,7 +616,7 @@ final class pc extends ci {
                   decompiledSharedTail2 = (var19 != 0);
                 }
                 if (decompiledSharedTail2) {
-                  var10_ref_String = oc.a(tg.field_b, new String[]{Integer.toString(cb.field_f)}, (byte) -119);
+                  var10_ref_String = MatchingFieldValidator.a(tg.field_b, new String[]{Integer.toString(cb.field_f)}, (byte) -119);
                 }
                 uj.field_j.field_db = uj.field_j.field_db + "<br>" + var10_ref_String;
                 if ((16 & DelegatingCanvas.field_c) == 0 &&
@@ -624,7 +624,7 @@ final class pc extends ci {
                   uj.field_j.field_Ab = nj.field_x.field_Q;
                 }
               }
-              aa.field_g.a(var9, ri.field_k.field_M - var9, -2147483648, 40, ri.field_k.field_pb - 40);
+              aa.field_g.a(var9, BirthDateValidator.field_k.field_M - var9, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
               aa.field_g.field_db = fl.field_k.toUpperCase();
               var8 = aa.field_g;
               stackIn_19_0 = aa.field_g;
@@ -868,7 +868,7 @@ final class pc extends ci {
                       decompiledSharedTail1 = (var19 != 0);
                     }
                     if (decompiledSharedTail1) {
-                      field_Mb = oc.a(wm.field_j, new String[]{sg.field_b}, (byte) -119);
+                      field_Mb = MatchingFieldValidator.a(wm.field_j, new String[]{sg.field_b}, (byte) -119);
                     }
                   }
                   decompiledFrameRemainder0 = (var19 != 0);
@@ -918,12 +918,12 @@ final class pc extends ci {
                     decompiledSharedTail0 = (var19 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var14 = oc.a(qb.field_d, new String[]{(String) (var11)}, (byte) -88);
+                    var14 = MatchingFieldValidator.a(qb.field_d, new String[]{(String) (var11)}, (byte) -88);
                   }
                 } else {
-                  var13_ref = jb.field_c;
+                  var13_ref = DebouncedFieldValidator.field_c;
                   if (var12 == 0) {
-                    var14 = oc.a(ld.field_j, new String[]{(String) (var11)}, (byte) -66);
+                    var14 = MatchingFieldValidator.a(ld.field_j, new String[]{(String) (var11)}, (byte) -66);
                     if (var19 != 0) {
                       var14 = field_Qb + (String) (var11);
                     }
@@ -935,16 +935,16 @@ final class pc extends ci {
               }
               if (var19 != 0) {
                 var9_ref_String = pd.field_Rb.field_Gb;
-                sc.field_f.field_db = oc.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
-                tn.field_j.a(0, ri.field_k.field_M, -2147483648, 40, ri.field_k.field_pb - 40);
-                tn.field_j.field_db = oc.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
+                sc.field_f.field_db = MatchingFieldValidator.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
+                tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
+                tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
                 var8 = tn.field_j;
               }
             } else {
               var9_ref_String = pd.field_Rb.field_Gb;
-              sc.field_f.field_db = oc.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
-              tn.field_j.a(0, ri.field_k.field_M, -2147483648, 40, ri.field_k.field_pb - 40);
-              tn.field_j.field_db = oc.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
+              sc.field_f.field_db = MatchingFieldValidator.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
+              tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
+              tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
               var8 = tn.field_j;
             }
             if (BoundedRandomAccessFile.field_e != 0L) {
@@ -953,14 +953,14 @@ final class pc extends ci {
               if (var9 < 1) {
                 var9 = 1;
               }
-              var8.field_db = oc.a(pa.field_n, new String[]{Integer.toString(var9)}, (byte) -119);
+              var8.field_db = MatchingFieldValidator.a(pa.field_n, new String[]{Integer.toString(var9)}, (byte) -119);
             }
-            ec.field_j.field_db = oc.a(SecondaryNodeHashTable.field_a, new String[]{Integer.toString(pd.field_Rb.field_Xb), Integer.toString(pd.field_Rb.field_hc)}, (byte) -44);
+            ec.field_j.field_db = MatchingFieldValidator.a(SecondaryNodeHashTable.field_a, new String[]{Integer.toString(pd.field_Rb.field_Xb), Integer.toString(pd.field_Rb.field_hc)}, (byte) -44);
           }
           stackIn_184_0 = fm.field_T;
           stackIn_185_1 = (param0) && (!param3) && (!jh.field_a);
           ((ci) (Object) stackIn_184_0).a(stackIn_185_1, (byte) 88);
-          stackIn_189_0 = ri.field_k;
+          stackIn_189_0 = BirthDateValidator.field_k;
           stackIn_190_1 = (param0) && (!param3) && (!jh.field_a);
           ((ci) (Object) stackIn_189_0).a(stackIn_190_1, (byte) 88);
           stackIn_194_0 = ah.field_i;
@@ -970,7 +970,7 @@ final class pc extends ci {
           var5_int = -71 % ((-3 - param1) / 54);
           if (null != pd.field_Rb) {
             if (sc.field_d.field_L != 0) {
-              db.a(param4, pd.field_Rb.g((byte) -80), 28113);
+              ConfirmedEmailAvailabilityValidator.a(param4, pd.field_Rb.g((byte) -80), 28113);
             }
             if (aa.field_g.field_L != 0) {
               ob.field_w = true;

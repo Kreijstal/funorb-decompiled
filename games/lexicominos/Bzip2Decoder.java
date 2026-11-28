@@ -72,8 +72,8 @@ final class Bzip2Decoder {
         var24 = null;
         var25 = null;
         param0.field_c = 1;
-        if (pj.field_N == null) {
-          pj.field_N = new int[param0.field_c * 100000];
+        if (AccountRegistrationPanel.field_N == null) {
+          AccountRegistrationPanel.field_N = new int[param0.field_c * 100000];
         }
         var26 = 1;
         while (true) {
@@ -244,14 +244,14 @@ final class Bzip2Decoder {
                 param0.field_x[var4] = param0.field_x[var4] + param0.field_x[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(pj.field_N[var4] & 255);
+                var1 = (byte)(AccountRegistrationPanel.field_N[var4] & 255);
                 dupTemp$1 = param0.field_x[var1 & 255];
-                pj.field_N[dupTemp$1] = pj.field_N[dupTemp$1] | var4 << 8;
+                AccountRegistrationPanel.field_N[dupTemp$1] = AccountRegistrationPanel.field_N[dupTemp$1] | var4 << 8;
                 param0.field_x[var1 & 255] = param0.field_x[var1 & 255] + 1;
               }
-              param0.field_p = pj.field_N[param0.field_s] >> 8;
+              param0.field_p = AccountRegistrationPanel.field_N[param0.field_s] >> 8;
               param0.field_E = 0;
-              param0.field_p = pj.field_N[param0.field_p];
+              param0.field_p = AccountRegistrationPanel.field_N[param0.field_p];
               param0.field_i = (byte)(param0.field_p & 255);
               param0.field_p = param0.field_p >> 8;
               param0.field_E = param0.field_E + 1;
@@ -315,7 +315,7 @@ final class Bzip2Decoder {
               }
               dupTemp$0 = param0.field_m[var1 & 255] & 255;
               param0.field_A[dupTemp$0] = param0.field_A[dupTemp$0] + 1;
-              pj.field_N[var14] = param0.field_m[var1 & 255] & 255;
+              AccountRegistrationPanel.field_N[var14] = param0.field_m[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -372,7 +372,7 @@ final class Bzip2Decoder {
             var1 = param0.field_m[param0.field_t[param0.field_z[0]] & 255];
             param0.field_A[var1 & 255] = param0.field_A[var1 & 255] + var15;
             while (var15 > 0) {
-              pj.field_N[var14] = var1 & 255;
+              AccountRegistrationPanel.field_N[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -505,7 +505,7 @@ final class Bzip2Decoder {
         var3 = param0.field_j;
         var4 = param0.field_E;
         var5 = param0.field_i;
-        var15 = pj.field_N;
+        var15 = AccountRegistrationPanel.field_N;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_p;
@@ -607,7 +607,7 @@ final class Bzip2Decoder {
         param0.field_j = var3;
         param0.field_E = var4;
         param0.field_i = var5;
-        pj.field_N = var6;
+        AccountRegistrationPanel.field_N = var6;
         param0.field_p = var7;
         param0.field_K = var8;
         param0.field_B = var9;

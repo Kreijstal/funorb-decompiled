@@ -63,10 +63,10 @@ final class a {
           var21 = -103 % ((82 - param3) / 34);
           var19 = var16 * (1 + var6_int);
           if (Bzip2State.field_q <= param4 &&
-            param4 <= qk.field_p) {
+            param4 <= LevelCompletionUpdate.field_p) {
             var22 = ln.a(qg.field_z, RasterBuffer.field_e, param2 + param1, 88);
             var23 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - param2, 89);
-            di.a(var23, (byte) -91, param0, qd.field_a[param4], var22);
+            IndexedSpriteLayer.a(var23, (byte) -91, param0, qd.field_a[param4], var22);
           }
           var20 = (var7 - 1) * var15;
           while (true) {
@@ -99,18 +99,18 @@ final class a {
             if (Bzip2State.field_q > var23Lifetime1) {
               continue;
             }
-            if (qk.field_p < var22Lifetime1) {
+            if (LevelCompletionUpdate.field_p < var22Lifetime1) {
               continue;
             }
             var24 = ln.a(qg.field_z, RasterBuffer.field_e, var6_int + param1, 112);
             var25 = ln.a(qg.field_z, RasterBuffer.field_e, -var6_int + param1, 94);
             if (Bzip2State.field_q <= var22Lifetime1) {
-              di.a(var25, (byte) -91, param0, qd.field_a[var22Lifetime1], var24);
+              IndexedSpriteLayer.a(var25, (byte) -91, param0, qd.field_a[var22Lifetime1], var24);
             }
-            if (qk.field_p < var23Lifetime1) {
+            if (LevelCompletionUpdate.field_p < var23Lifetime1) {
               continue;
             }
-            di.a(var25, (byte) 86, param0, qd.field_a[var23Lifetime1], var24);
+            IndexedSpriteLayer.a(var25, (byte) 86, param0, qd.field_a[var23Lifetime1], var24);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

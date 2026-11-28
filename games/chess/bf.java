@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bf extends ma implements ee {
+abstract class bf extends ma implements FieldValidatorProvider {
     static SecondaryNodeHashTable field_M;
-    private ri field_L;
+    private BirthDateValidator field_L;
     static ci field_K;
     static String field_N;
 
@@ -64,15 +64,15 @@ abstract class bf extends ma implements ee {
         field_K = null;
     }
 
-    public final vb a(int param0) {
+    public final FieldValidator getFieldValidator(int param0) {
         if (param0 > -80) {
           field_K = (ci) null;
-          return (vb) ((Object) this.field_L);
+          return (FieldValidator) ((Object) this.field_L);
         }
-        return (vb) ((Object) this.field_L);
+        return (FieldValidator) ((Object) this.field_L);
     }
 
-    void a(boolean param0, ri param1) {
+    void a(boolean param0, BirthDateValidator param1) {
         try {
           this.field_L = param1;
           this.field_L.field_j = this;

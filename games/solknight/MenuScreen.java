@@ -252,11 +252,11 @@ final class MenuScreen {
                                 mb.a(true, 14, 256);
                                 break;
                               }
-                              bb.a((byte) -14, 7, 8);
+                              LoginPanel.a((byte) -14, 7, 8);
                               mb.a(true, 14, 256);
                               break;
                             }
-                            bb.a((byte) -14, this.field_d, this.field_d);
+                            LoginPanel.a((byte) -14, this.field_d, this.field_d);
                             mb.a(true, 14, 256);
                             break;
                           default:
@@ -390,7 +390,7 @@ final class MenuScreen {
         var3 = SolKnight.field_L ? 1 : 0;
         if (this.field_d == 2 &&
           !il.b(507)) {
-          if (el.field_n == 96) {
+          if (MatchingFieldValidator.field_n == 96) {
             if (this.field_f.field_f > 0) {
               if (3 != this.field_f.field_f) {
                 this.field_f.a((byte) 111, this.field_f.field_f - 1);
@@ -399,7 +399,7 @@ final class MenuScreen {
               this.field_f.a((byte) 111, 2);
             }
           }
-          if (97 == el.field_n) {
+          if (97 == MatchingFieldValidator.field_n) {
             if (2 > this.field_f.field_f) {
               this.field_f.a((byte) 111, 1 + this.field_f.field_f);
             } else {
@@ -408,7 +408,7 @@ final class MenuScreen {
               }
             }
           }
-          if (el.field_n == 99) {
+          if (MatchingFieldValidator.field_n == 99) {
             if (this.field_f.field_f >= 0 &&
               this.field_f.field_f <= 2) {
               this.field_f.a((byte) 111, 3);
@@ -416,7 +416,7 @@ final class MenuScreen {
               this.field_f.a((byte) 111, rg.field_c);
             }
           }
-          if (el.field_n == 98) {
+          if (MatchingFieldValidator.field_n == 98) {
             if (this.field_f.field_f == 3) {
               this.field_f.a((byte) 111, rg.field_c);
             } else {
@@ -452,12 +452,12 @@ final class MenuScreen {
             return jb.field_a[this.field_d];
           }
           var5 = BufferedSocket.field_b.b(var4) + 20;
-          return bb.field_P[this.field_d] + (jb.field_a[this.field_d] + var5) >> 1;
+          return LoginPanel.field_P[this.field_d] + (jb.field_a[this.field_d] + var5) >> 1;
         }
         if (param1 != 55) {
           discarded$0 = this.a((byte) -96, -95);
         }
-        return bb.field_P[this.field_d];
+        return LoginPanel.field_P[this.field_d];
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -572,7 +572,7 @@ final class MenuScreen {
           }
         }
         while (DelegatingCanvas.a((byte) -56)) {
-          if (13 == el.field_n &&
+          if (13 == MatchingFieldValidator.field_n &&
             5 != this.field_d) {
             if (this.field_d == 1) {
               PacketBuffer.a(false, -1, param0 ^ -127);
@@ -640,7 +640,7 @@ final class MenuScreen {
             return jb.field_a[this.field_d];
           }
           var5 = 20 + BufferedSocket.field_b.b(var4);
-          return jb.field_a[this.field_d] + (bb.field_P[this.field_d] - var5) >> 1;
+          return jb.field_a[this.field_d] + (LoginPanel.field_P[this.field_d] - var5) >> 1;
         }
         return jb.field_a[this.field_d];
     }
@@ -836,7 +836,7 @@ final class MenuScreen {
         var6 = -var2Lifetime1 + var3Lifetime1 >> 1;
         var7 = -var4 + var5;
         if (IntrusiveNode.field_f[this.field_d]) {
-          var3Lifetime2 = bb.field_P[this.field_d];
+          var3Lifetime2 = LoginPanel.field_P[this.field_d];
           var2Lifetime2 = jb.field_a[this.field_d];
           var6Lifetime1 = -var2Lifetime2 + var3Lifetime2 >> 1;
           uj.a((var6Lifetime1 << 1) + 40, var7 + 50, -20 + var2Lifetime2, h.field_d, var4 - 20, 2);
@@ -869,14 +869,14 @@ final class MenuScreen {
                         var11Lifetime1 = -37 + (-var8 + 480) + var10Lifetime1 >> 1;
                         fi.a(var9Lifetime1, true, 1, 230, 638, var8, var11Lifetime1);
                         BufferedSocket.field_b.a(Integer.toString(100 * ImageProducerRasterBuffer.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
-                        SocketConnector.field_g.a(qb.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
+                        SocketConnector.field_g.a(ValidatedTextField.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         if (ob.field_l > 0) {
                           var15 = 5000;
                           var13_ref_String = w.field_d;
                           var12_ref_String = kh.field_e;
-                          var14_ref_String = bb.a(jj.field_I, new String[]{Integer.toString(lk.field_e)}, -63);
+                          var14_ref_String = LoginPanel.a(jj.field_I, new String[]{Integer.toString(lk.field_e)}, -63);
                         } else {
-                          var12_ref_String = bb.a(he.field_e, new String[]{Integer.toString(kb.field_b + 1)}, -63);
+                          var12_ref_String = LoginPanel.a(he.field_e, new String[]{Integer.toString(kb.field_b + 1)}, -63);
                           var15 = ImageProducerRasterBuffer.field_m * 100 + lk.field_e;
                           var13_ref_String = ud.field_j;
                           var14_ref_String = ai.field_d;
@@ -896,17 +896,17 @@ final class MenuScreen {
                         this.field_d != ri.field_f) {
                         var8--;
                       }
-                      var9Lifetime1Lifetime2 = BufferedSocket.field_b.b(rf.field_N[var8], 564);
+                      var9Lifetime1Lifetime2 = BufferedSocket.field_b.b(AccountRegistrationPanel.field_N[var8], 564);
                       var10Lifetime1Lifetime1 = 220 + var9Lifetime1Lifetime2 * 28;
                       var11Lifetime1Lifetime1 = 118;
                       var12 = -10 + var11Lifetime1Lifetime1 >> 1;
                       var13 = -37 + (480 + (-var10Lifetime1Lifetime1 + var12)) >> 1;
                       fi.a(var11Lifetime1Lifetime1, true, 1, 230, 638, var10Lifetime1Lifetime1, var13);
-                      BufferedSocket.field_b.a(bb.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
+                      BufferedSocket.field_b.a(LoginPanel.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
                       BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100), 112, var13 + 52, 16777215, -1);
-                      SocketConnector.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
+                      SocketConnector.field_g.a(ValidatedTextField.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
                       BufferedSocket.field_b.a(Integer.toString(ImageProducerRasterBuffer.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
-                      SocketConnector.field_g.a(dc.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
+                      SocketConnector.field_g.a(EmailFormatValidator.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
                       BufferedSocket.field_b.a(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
                       var14 = var8 + 1 << 3;
                       if (var8 == 0) {
@@ -918,7 +918,7 @@ final class MenuScreen {
                       td.field_e[var14 + hg.field_y].d(83, 248 + var13 - 103);
                       td.field_e[hg.field_y + var14].d(526, var13 + 145);
                       BufferedSocket.field_b.a(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
-                      BufferedSocket.field_b.a(rf.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
+                      BufferedSocket.field_b.a(AccountRegistrationPanel.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
                     }
                   }
@@ -1039,7 +1039,7 @@ final class MenuScreen {
                     }
                     var3.b(var9 + 1 + ". ", 73, var8, var10, -1);
                     var3.c(var12, 73, var8, var10, -1);
-                    var3.b(bb.a("<%0>%", new String[]{Integer.toString(var11 % 101)}, -63), 380, var8, var10, -1);
+                    var3.b(LoginPanel.a("<%0>%", new String[]{Integer.toString(var11 % 101)}, -63), 380, var8, var10, -1);
                     var2 = "";
                     var3.b(Integer.toString(var11 / 101), 582, var8, var10, -1);
                   }
@@ -1048,7 +1048,7 @@ final class MenuScreen {
                 if (SectorCacheStore.field_b != null &&
                   var7 == -1) {
                   var3.c(ne.field_g, 73, var8, 16776960, -1);
-                  var3.b(bb.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
+                  var3.b(LoginPanel.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
                   var3.b(Integer.toString(SectorCacheStore.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
                 }
                 if ((var2.length() == 0)) {

@@ -21,7 +21,7 @@ final class mp extends DualLinkNode {
         }
     }
 
-    final static boolean a(int param0, String param1, dc param2, String param3, String param4, boolean param5, int param6) {
+    final static boolean a(int param0, String param1, AccountRegistrationPanel param2, String param3, String param4, boolean param5, int param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_15_0 = null;

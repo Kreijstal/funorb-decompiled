@@ -166,9 +166,9 @@ final class ji extends kn {
                 var11 = (String) null;
                 eh.field_K = DualLinkNode.a(false, param2, (byte) 118, (String) null, sj.field_i);
               }
-              qn.field_U.position = 0;
-              qn.field_U.writeByte(14, (byte) 61);
-              qn.field_U.writeByte(eh.field_K.b((byte) 70).field_c, (byte) -73);
+              EditableTextField.field_U.position = 0;
+              EditableTextField.field_U.writeByte(14, (byte) 61);
+              EditableTextField.field_U.writeByte(eh.field_K.b((byte) 70).field_c, (byte) -73);
               vh.a(-1, (byte) 83);
               tb.field_f = rm.field_J;
             }
@@ -287,11 +287,11 @@ final class ji extends kn {
               if (cl.field_d > 0) {
                 ln.field_Kb = true;
               }
-              qn.field_U.setCipherSeed(ol.field_S, (byte) -92);
+              EditableTextField.field_U.setCipherSeed(AccountRegistrationPanel.field_S, (byte) -92);
               for (var9Lifetime1 = 0; var9Lifetime1 < 4; var9Lifetime1++) {
-                ol.field_S[var9Lifetime1] = ol.field_S[var9Lifetime1] + 50;
+                AccountRegistrationPanel.field_S[var9Lifetime1] = AccountRegistrationPanel.field_S[var9Lifetime1] + 50;
               }
-              tk.field_h.setCipherSeed(ol.field_S, (byte) -92);
+              tk.field_h.setCipherSeed(AccountRegistrationPanel.field_S, (byte) -92);
               stackIn_82_0 = wg.field_B;
               return stackIn_82_0;
             }

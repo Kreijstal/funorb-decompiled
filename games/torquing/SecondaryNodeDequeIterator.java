@@ -45,7 +45,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           a.a(param5, param1, param4, (byte) 123, param3, param2);
           return;
         }
-        if (qk.field_p < param3 + param2) {
+        if (LevelCompletionUpdate.field_p < param3 + param2) {
           a.a(param5, param1, param4, (byte) 123, param3, param2);
           return;
         }
@@ -79,7 +79,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           IsaacCipher.field_m.b(true);
         }
         String var1 = kf.a(17241);
-        un.field_k = new pe(var1, (String) null, true, false, false);
+        un.field_k = new LoginPanel(var1, (String) null, true, false, false);
         dc.field_a.a(hb.field_x, (byte) 82);
         hb.field_x.c(un.field_k, 33);
         if (param0 > 22) {
@@ -114,13 +114,13 @@ final class SecondaryNodeDequeIterator implements Iterator {
         try {
           incrementValue$0 = param5;
           param5++;
-          di.a(param0, (byte) -118, param1, qd.field_a[incrementValue$0], param3);
+          IndexedSpriteLayer.a(param0, (byte) -118, param1, qd.field_a[incrementValue$0], param3);
           if (!param4) {
             return;
           }
           incrementValue$1 = param2;
           param2--;
-          di.a(param0, (byte) -122, param1, qd.field_a[incrementValue$1], param3);
+          IndexedSpriteLayer.a(param0, (byte) -122, param1, qd.field_a[incrementValue$1], param3);
           for (var6_int = param5; param2 >= var6_int; var6_int++) {
             var7 = qd.field_a[var6_int];
             var7[param3] = param1;

@@ -90,7 +90,7 @@ final class PackedBitSet {
           if (param0.length() == 0) {
             return true;
           }
-          if (gk.a(param0, param1, 16777215)) {
+          if (DisplayNameSelectionPanel.a(param0, param1, 16777215)) {
             return false;
           }
           if (gl.a(param0, param2 ^ -83, param1)) {
@@ -124,7 +124,7 @@ final class PackedBitSet {
     }
 
     final static void setLayoutCenter(byte param0, int param1, int param2) {
-        vo.field_r = param1;
+        PasswordValidator.field_r = param1;
         if (param0 >= -41) {
           field_e = (String) null;
           bl.field_p = param2;

@@ -98,7 +98,7 @@ final class mk implements ad {
 
     final static void a(boolean param0, wh param1, int param2) {
         try {
-          ke.a(param1, param0, 256, false);
+          ValidatedTextField.a(param1, param0, 256, false);
           if (param2 != 0) {
             field_b = (boolean[]) null;
           }

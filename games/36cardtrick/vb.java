@@ -152,8 +152,8 @@ final class vb {
         Main.field_G = 0;
         ti.field_a = -1;
         t.field_e = null;
-        k.field_b = false;
-        p.field_k = -1;
+        DebouncedFieldValidator.field_b = false;
+        ConfirmedEmailAvailabilityValidator.field_k = -1;
     }
 
     final IntrusiveNode a(boolean param0, long param1) {

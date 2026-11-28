@@ -205,7 +205,7 @@ abstract class ByteStorage {
                 stackIn_46_0 = ((var7 & 8) != 0);
                 pe.field_r = stackIn_46_0;
                 stackIn_49_0 = ((var7 & 4) != 0);
-                df.field_m = stackIn_49_0;
+                BirthDateValidator.field_m = stackIn_49_0;
                 stackIn_52_0 = ((2 & var7) != 0);
                 hj.field_b = stackIn_52_0;
                 if (pe.field_r) {
@@ -228,27 +228,27 @@ abstract class ByteStorage {
               rc.field_b = id.field_f.readUnsignedByte(-11);
               ProxyAuthenticationRequiredException.field_d = bm.field_I;
               if (qn.field_y.a((byte) -83) == lb.field_e) {
-                IntrusiveNode.field_j.a(ob.e((byte) -93), (byte) -121);
+                IntrusiveNode.field_j.a(LoginPanel.e((byte) -93), (byte) -121);
               } else {
-                if (qn.field_y.a((byte) -83) == rf.field_n) {
-                  la.field_i.a(ob.e((byte) 116), (byte) -99);
+                if (qn.field_y.a((byte) -83) == MatchingFieldValidator.field_n) {
+                  la.field_i.a(LoginPanel.e((byte) 116), (byte) -99);
                 }
               }
               gn.field_d = false;
               if (var6 != null) {
-                be.a(var6, -1, ob.e((byte) -67));
+                be.a(var6, -1, LoginPanel.e((byte) -67));
               }
               if (q.field_y <= 0 &&
-                !df.field_m) {
+                !BirthDateValidator.field_m) {
                 try {
-                  JavaScriptBridge.callWithoutArguments(ob.e((byte) 127), false, "unzap");
+                  JavaScriptBridge.callWithoutArguments(LoginPanel.e((byte) 127), false, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments((byte) -63, "zap", ob.e((byte) -117), new Object[]{eq.a(0, tn.field_p)});
+                  JavaScriptBridge.callWithArguments((byte) -63, "zap", LoginPanel.e((byte) -117), new Object[]{eq.a(0, tn.field_p)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -298,8 +298,8 @@ abstract class ByteStorage {
                 return stackIn_104_0;
               }
               var6_intLifetime2 = cl.field_d;
-              cl.field_d = ne.field_P;
-              ne.field_P = var6_intLifetime2;
+              cl.field_d = DisplayNameSelectionPanel.field_P;
+              DisplayNameSelectionPanel.field_P = var6_intLifetime2;
               gn.field_d = true;
             }
             stackIn_106_0 = -1;

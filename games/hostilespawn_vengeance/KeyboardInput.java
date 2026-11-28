@@ -177,7 +177,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           im.field_e.a(ri.field_n, 8799, true, mf.field_b);
           im.field_e.e((byte) 114);
           while (jn.e((byte) -79)) {
-            im.field_e.a(pj.field_e, aj.field_e, 80);
+            im.field_e.a(pj.field_e, SpriteBase.field_e, 80);
           }
           if (dn.field_a != -1) {
             var1_int = dn.field_a;

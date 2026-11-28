@@ -7,9 +7,9 @@ abstract class ByteStorage {
 
     abstract byte[] getBytes(int param0);
 
-    final static af a(String param0, String param1, ResourceArchive param2, byte param3) {
+    final static MenuLayer a(String param0, String param1, ResourceArchive param2, byte param3) {
         RuntimeException var4 = null;
-        af stackIn_3_0 = null;
+        MenuLayer stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,7 +22,7 @@ abstract class ByteStorage {
           if (param3 != 4) {
             field_b = (Sprite) null;
           }
-          stackIn_3_0 = bi.a(DelegatingCanvas.a(param0, 31094, param2, param1), param3 ^ -108);
+          stackIn_3_0 = LevelRun.createIndexedSpriteLayer(DelegatingCanvas.a(param0, 31094, param2, param1), param3 ^ -108);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

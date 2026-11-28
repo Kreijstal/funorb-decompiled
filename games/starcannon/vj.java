@@ -163,7 +163,7 @@ final class vj extends kc implements ga {
               var3 = kd.field_D;
               this.field_f = this.field_f + 10;
               if (wi.a(-10214)) {
-                var3 = cf.field_m;
+                var3 = ConfirmedEmailAvailabilityValidator.field_m;
                 this.field_f = this.field_f + 20;
               }
             } else {

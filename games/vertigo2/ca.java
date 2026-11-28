@@ -22,9 +22,9 @@ final class ca {
         try {
           PlayerAvatarRenderer.field_j.field_S = param6;
           if (2 != ui.field_g) {
-            oa.field_s.field_S = ml.field_x;
+            ConfirmedEmailAvailabilityValidator.field_s.field_S = ml.field_x;
           } else {
-            oa.field_s.field_S = IntrusiveDeque.field_c;
+            ConfirmedEmailAvailabilityValidator.field_s.field_S = IntrusiveDeque.field_c;
           }
           var9_int = 495;
           var10 = 5;
@@ -33,8 +33,8 @@ final class ca {
           var10 = var10 + (param8 + param3);
           ui.field_b.a(83, ui.field_b.field_Fb, param3, 0, dj.field_d.field_Fb);
           kk.field_a.a(94, kk.field_a.j(-21391), param1, var10, 5);
-          var11 = oa.field_s.j(-21391);
-          oa.field_s.a(120, var11, param1, var10, -5 + var9_int - var11);
+          var11 = ConfirmedEmailAvailabilityValidator.field_s.j(-21391);
+          ConfirmedEmailAvailabilityValidator.field_s.a(120, var11, param1, var10, -5 + var9_int - var11);
           PlayerAvatarRenderer.field_j.a(121, var9_int, param4, 0, 0);
           var12 = 5 + var10 + param1;
           lm.field_F.a(120, var9_int, var12, param4, 0);

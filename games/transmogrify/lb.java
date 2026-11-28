@@ -140,7 +140,7 @@ final class lb {
           }
           if (param0.charAt(0) == 34) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_14_0 = vc.field_N;
+              stackIn_14_0 = ValidatedTextField.field_N;
               return stackIn_14_0;
             }
             var3 = 0;
@@ -152,7 +152,7 @@ final class lb {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_28_0 = vc.field_N;
+                  stackIn_28_0 = ValidatedTextField.field_N;
                   return stackIn_28_0;
                 }
                 var3 = 0;
@@ -172,13 +172,13 @@ final class lb {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_41_0 = vc.field_N;
+                stackIn_41_0 = ValidatedTextField.field_N;
                 return stackIn_41_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (-1 == nb.field_c.indexOf(var5Lifetime1)) {
-                stackIn_46_0 = vc.field_N;
+                stackIn_46_0 = ValidatedTextField.field_N;
                 return stackIn_46_0;
               }
               var3Lifetime1 = 0;

@@ -240,7 +240,7 @@ final class ne {
             return stackIn_3_0;
           }
           if (255 < var2_int) {
-            stackIn_7_0 = el.field_o;
+            stackIn_7_0 = MatchingFieldValidator.field_o;
             return stackIn_7_0;
           }
           var3 = 63 % ((param1 - 4) / 50);

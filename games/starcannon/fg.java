@@ -71,7 +71,7 @@ final class fg {
             field_b = (int[]) null;
           }
           u.field_c = new gi(param1);
-          qf.field_g = param2;
+          TextFieldValidator.field_g = param2;
           FullscreenFocusCanvas.field_g = param3;
           GzipDecompressor.a((byte) 83);
         } catch (RuntimeException runtimeException) {

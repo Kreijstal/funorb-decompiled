@@ -154,7 +154,7 @@ final class pk {
           if (param0 >= -97) {
             return;
           }
-          var9 = kd.field_n;
+          var9 = ConfirmedEmailAvailabilityValidator.field_n;
           var2 = var9.readUnsignedByte(255);
           if (var2 == 0) {
             var8 = (w) (je.field_a.beginForward(32073));

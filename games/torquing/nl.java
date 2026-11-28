@@ -115,7 +115,7 @@ final class nl extends am {
     }
 
     final static void a(int param0, boolean param1) {
-        qk.field_q.a(91, param1);
+        LevelCompletionUpdate.field_q.a(91, param1);
         if (param0 != -2) {
           field_y = (boolean[]) null;
         }
@@ -174,7 +174,7 @@ final class nl extends am {
         int var4_int = 0;
         Sprite var4 = null;
         int var5 = Torquing.field_u;
-        int var1 = ij.field_o[0] * vo.field_b[0];
+        int var1 = PasswordValidator.field_o[0] * vo.field_b[0];
         byte[] var2 = pn.field_b[0];
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
@@ -182,12 +182,12 @@ final class nl extends am {
           var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
-          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
           go.b(0);
           return var4;
         }
         field_y = (boolean[]) null;
-        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], PasswordValidator.field_o[0], var3);
         go.b(0);
         return var4Lifetime1;
     }

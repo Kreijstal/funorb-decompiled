@@ -47,13 +47,13 @@ final class uc {
             var5 = ImageProducerRasterBuffer.field_l[var3_int];
             if (var5 >= 0) {
               var6 = fa.a(vc.field_d[var3_int], true, (byte) 99);
-              var4 = var4 + vg.field_N;
+              var4 = var4 + EditableTextField.field_N;
               var7 = PcmOutputWorker.field_d - (var6 >> 1);
               if (gh.a(var4, we.field_c + (g.field_l << 1), param0, var6 + (bl.field_i << 1), 16777215, param2, -bl.field_i + var7)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (we.field_c + vg.field_N + (g.field_l << 1));
+              var4 = var4 + (we.field_c + EditableTextField.field_N + (g.field_l << 1));
             } else {
               var4 = var4 + field_i;
             }

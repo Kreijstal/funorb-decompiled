@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ie extends DualLinkNode {
-    final static boolean a(int param0, int param1, String param2, String param3, rf param4, boolean param5, String param6) {
+    final static boolean a(int param0, int param1, String param2, String param3, AccountRegistrationPanel param4, boolean param5, String param6) {
         RuntimeException var7 = null;
         AccountCreationResultPanel var8 = null;
         RuntimeException stackIn_17_0 = null;
@@ -106,7 +106,7 @@ class ie extends DualLinkNode {
           }
           if (param1 <= 16) {
             var3 = (String) null;
-            ie.a(-70, -101, (String) null, (String) null, (rf) null, true, (String) null);
+            ie.a(-70, -101, (String) null, (String) null, (AccountRegistrationPanel) null, true, (String) null);
           }
           if (param0.equals("Z")) {
             stackIn_18_0 = Boolean.TYPE;

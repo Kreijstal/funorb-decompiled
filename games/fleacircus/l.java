@@ -53,7 +53,7 @@ final class l {
           }
           vg.field_I = new int[ef.field_l];
           NetworkGameClient.field_t = new byte[ef.field_l][];
-          gg.field_i = new boolean[ef.field_l];
+          DebouncedFieldValidator.field_i = new boolean[ef.field_l];
           of.field_d = new byte[ef.field_l][];
           ij.field_H = new int[ef.field_l];
           ob.field_a = new int[ef.field_l];
@@ -138,7 +138,7 @@ final class l {
                 }
               }
             }
-            gg.field_i[var4Lifetime5] = var10 != 0;
+            DebouncedFieldValidator.field_i[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class l {
         if (param0 != 0) {
           field_a = (String) null;
         }
-        AwtRasterBuffer.field_e = new nf();
+        AwtRasterBuffer.field_e = new DisplayNameSelectionPanel();
         ak.field_a.d(AwtRasterBuffer.field_e, param0 ^ 26034);
     }
 

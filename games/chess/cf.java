@@ -93,8 +93,8 @@ final class cf extends ci {
           nb.field_Ib.a(-2 + (de.field_d.field_M - sc.field_e - 40), 42 + sc.field_e, -2147483648, 18, 2 + fe.field_g);
           se.field_S.a(2, -20 + (de.field_d.field_pb - fe.field_g) - 2, 20 + (fe.field_g + 2), -3, sc.field_e, 0, de.field_d.field_M);
           sc.field_d.a(0, fm.field_T.field_M, -2147483648, 40, fm.field_T.field_pb - 40);
-          sc.field_f.a(0, ri.field_k.field_M, -2147483648, 30, 0);
-          ce.field_d.a(0, ri.field_k.field_M, -2147483648, -2 + (-40 + ri.field_k.field_pb - 30), 30);
+          sc.field_f.a(0, BirthDateValidator.field_k.field_M, -2147483648, 30, 0);
+          ce.field_d.a(0, BirthDateValidator.field_k.field_M, -2147483648, -2 + (-40 + BirthDateValidator.field_k.field_pb - 30), 30);
           var2_int = 3 + qa.field_e;
           if (wn.field_d.length < 2) {
             var2_int--;
@@ -110,12 +110,12 @@ final class cf extends ci {
           if (var4 > 40) {
             var4 = 40;
           }
-          s.field_M.a(5, -5 + ce.field_d.field_M - 5, -2147483648, var4, 5);
+          DisplayNameSelectionPanel.field_M.a(5, -5 + ce.field_d.field_M - 5, -2147483648, var4, 5);
           var5 = 2 + (var4 + 5);
           for (var6 = 0; 4 + qa.field_e > var6; var6++) {
             if ((var6 != 1 ||
               !(2 > wn.field_d.length)) && (3 != var6 ||
-              !(1 >= un.field_q))) {
+              !(1 >= ChessMatchSession.field_q))) {
               if (!param1 &&
                 var6 == 3) {
                 var7 = hm.field_c[var6];
@@ -185,7 +185,7 @@ final class cf extends ci {
                       var9.field_M = 0;
                     }
                   }
-                  var9_int = 2 + (-var8 + ri.field_k.field_M) - 5;
+                  var9_int = 2 + (-var8 + BirthDateValidator.field_k.field_M) - 5;
                   var10_int = ba.field_P[var6].length - 1;
                   for (var11 = 0; var10_int > var11; var11++) {
                     var12 = var9_int * var11 / var10_int;
@@ -347,7 +347,7 @@ final class cf extends ci {
         } else {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 0, 192);
         }
-        qe.a((byte) -31, param1);
+        ChessBoardRenderer.a((byte) -31, param1);
     }
 
     final void a(byte param0, String param1, RgbSprite param2, int param3) {

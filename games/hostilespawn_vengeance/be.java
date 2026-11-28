@@ -31,7 +31,7 @@ final class be {
             this.field_c = true;
           }
           if (0 != this.field_h &&
-            ig.field_L != 0) {
+            EditableTextField.field_L != 0) {
             if (this.field_j <= 0) {
               this.field_j = pk.field_l;
             }
@@ -39,7 +39,7 @@ final class be {
           }
           boolean decompiledFrameRemainder0 = true;
           if (0 == pf.field_o) {
-            if (ig.field_L != 0) {
+            if (EditableTextField.field_L != 0) {
               if (this.field_h != 0) {
                 return;
               }
@@ -93,7 +93,7 @@ final class be {
         }
         if (0 == this.field_h) {
           if (0 == pf.field_o &&
-            ig.field_L == 0) {
+            EditableTextField.field_L == 0) {
             this.field_h = 0;
           }
           if (this.field_h == 0) {
@@ -117,9 +117,9 @@ final class be {
           }
           return;
         }
-        if (ig.field_L == 0) {
+        if (EditableTextField.field_L == 0) {
           if (0 == pf.field_o &&
-            ig.field_L == 0) {
+            EditableTextField.field_L == 0) {
             this.field_h = 0;
           }
           if (this.field_h == 0) {
@@ -148,7 +148,7 @@ final class be {
         }
         this.field_j = this.field_j - 1;
         if (0 == pf.field_o &&
-          ig.field_L == 0) {
+          EditableTextField.field_L == 0) {
           this.field_h = 0;
         }
         if (this.field_h != 0) {

@@ -106,7 +106,7 @@ abstract class ve {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (uf.field_m == ae.field_E) {
+            if (AgeValidator.field_m == ae.field_E) {
               if (param3) {
                 fa.field_b = ef.a(rc.field_f, param1 ^ 27988, (String) null, false, param0);
               } else {
@@ -116,33 +116,33 @@ abstract class ve {
               SpriteGeometry.field_q.writeByte(14, param1 + 24);
               SpriteGeometry.field_q.writeByte(fa.field_b.a((byte) 45).field_b, -1);
               kc.a(-1, -1);
-              uf.field_m = rb.field_d;
+              AgeValidator.field_m = rb.field_d;
             }
-            if (uf.field_m == rb.field_d &&
+            if (AgeValidator.field_m == rb.field_d &&
               a.b(1, 10343)) {
               var6_int = ig.field_a.readUnsignedByte(true);
               ig.field_a.position = 0;
               if (var6_int == 0) {
-                uf.field_m = kf.field_z;
+                AgeValidator.field_m = kf.field_z;
               } else {
                 pg.field_d = var6_int;
                 a.field_c = -1;
-                uf.field_m = CrossfadingMidiPcmStream.field_l;
+                AgeValidator.field_m = CrossfadingMidiPcmStream.field_l;
               }
             }
             if (param1 != -25) {
               stackIn_20_0 = 43;
               return stackIn_20_0;
             }
-            if (kf.field_z == uf.field_m &&
+            if (kf.field_z == AgeValidator.field_m &&
               a.b(8, 10343)) {
-              ti.field_M = ig.field_a.readLong((byte) 49);
+              LoginPanel.field_M = ig.field_a.readLong((byte) 49);
               ig.field_a.position = 0;
-              ri.a(param2, param3, fa.field_b, (byte) -82, param5);
-              uf.field_m = he.field_h;
+              DebouncedFieldValidator.a(param2, param3, fa.field_b, (byte) -82, param5);
+              AgeValidator.field_m = he.field_h;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (uf.field_m == he.field_h &&
+            if (AgeValidator.field_m == he.field_h &&
               a.b(1, 10343)) {
               var6_intLifetime1 = ig.field_a.readUnsignedByte(true);
               ig.field_a.position = 0;
@@ -152,7 +152,7 @@ abstract class ve {
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
                   a.field_c = -1;
-                  uf.field_m = CrossfadingMidiPcmStream.field_l;
+                  AgeValidator.field_m = CrossfadingMidiPcmStream.field_l;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -164,10 +164,10 @@ abstract class ve {
               }
               if (decompiledFrameRemainder0) {
                 a.field_c = -1;
-                uf.field_m = ug.field_q;
+                AgeValidator.field_m = ug.field_q;
               }
             }
-            if (uf.field_m == ug.field_q &&
+            if (AgeValidator.field_m == ug.field_q &&
               NetworkArchiveRequest.d(param1 ^ -27)) {
               rc.field_f = ig.field_a.readLong((byte) -110);
               vb.field_i = ig.field_a.readUnsignedByte(true);
@@ -200,7 +200,7 @@ abstract class ve {
               var11 = (CharSequence) ((Object) og.field_c);
               cb.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
               BufferedRandomAccessFile.field_l = ig.field_a.readUnsignedByte(true);
-              uf.field_m = gg.field_b;
+              AgeValidator.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == jf.field_M) {
                 bb.field_J.a(kk.c(-14047), 4096);
               } else {
@@ -239,7 +239,7 @@ abstract class ve {
               stackIn_73_0 = pg.field_d;
               return stackIn_73_0;
             }
-            if (uf.field_m == CrossfadingMidiPcmStream.field_l &&
+            if (AgeValidator.field_m == CrossfadingMidiPcmStream.field_l &&
               NetworkArchiveRequest.d(param1 + 27)) {
               ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-96);
               if (7 == pg.field_d &&

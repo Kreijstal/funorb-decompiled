@@ -80,7 +80,7 @@ class IntrusiveNode {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ca.a((java.awt.Component) ((Object) param1), (byte) 83);
+          AccountRegistrationPanel.a((java.awt.Component) ((Object) param1), (byte) 83);
           ui.a((java.awt.Component) ((Object) param1), 122);
           if (param0 >= -4) {
             field_f = 38;

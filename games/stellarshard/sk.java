@@ -33,7 +33,7 @@ abstract class sk {
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
-          if (!mj.a((byte) -27, param0, param2)) {
+          if (!AccountRegistrationPanel.a((byte) -27, param0, param2)) {
             return false;
           }
           for (var3_int = param1; var3_int < param2.length(); var3_int++) {

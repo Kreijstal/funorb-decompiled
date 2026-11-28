@@ -40,7 +40,7 @@ public final class SolKnight extends ab {
           AccountServiceResult.field_g = IsaacRandom.a(2, 74);
           ProxySocketConnector.field_h = IsaacRandom.a(3, 125);
           NetworkArchiveRequest.field_u = IsaacRandom.a(4, 109);
-          qb.field_cb = IsaacRandom.a(5, 90);
+          ValidatedTextField.field_cb = IsaacRandom.a(5, 90);
           field_I = IsaacRandom.a(7, 124);
           nf.a(ai.field_b, -111, pl.field_d);
           return;
@@ -70,7 +70,7 @@ public final class SolKnight extends ab {
           if (dj.field_k != null &&
             dj.field_k.field_a) {
             ProxySocketConnector.d(14995);
-            vg.a((byte) 80);
+            EditableTextField.a((byte) 80);
           }
           stackIn_7_1 = -3;
           stackIn_8_2 = (null != dj.field_k);
@@ -82,21 +82,21 @@ public final class SolKnight extends ab {
           if (bl.a((byte) -81)) {
             this.c(true);
             if (bl.a((byte) -81)) {
-              if (bb.h(119)) {
+              if (LoginPanel.h(119)) {
                 discarded$0 = this.b(0, false);
               }
               return;
             }
             if (!il.b(507)) {
-              qa.field_q = kb.a(4, (byte) 106);
+              ConfirmedEmailAvailabilityValidator.field_q = kb.a(4, (byte) 106);
             }
           }
           if (na.field_b) {
-            if (null != qa.field_q) {
-              if (qa.field_q.field_k) {
-                SecondaryNodeDequeIterator.field_d = SecondaryNodeDequeIterator.field_d & ~qa.field_q.field_m;
-                ah.field_f = ah.field_f | qa.field_q.field_m;
-                qa.field_q = null;
+            if (null != ConfirmedEmailAvailabilityValidator.field_q) {
+              if (ConfirmedEmailAvailabilityValidator.field_q.field_k) {
+                SecondaryNodeDequeIterator.field_d = SecondaryNodeDequeIterator.field_d & ~ConfirmedEmailAvailabilityValidator.field_q.field_m;
+                ah.field_f = ah.field_f | ConfirmedEmailAvailabilityValidator.field_q.field_m;
+                ConfirmedEmailAvailabilityValidator.field_q = null;
                 FullscreenFocusCanvas.a((byte) 81);
                 h.a((byte) 92);
                 if (7 == kd.currentScreenIndex &&
@@ -138,7 +138,7 @@ public final class SolKnight extends ab {
                       ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F, SocketConnector.field_g, 8, BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F, BufferedSocket.field_b.field_F, w.field_b, 8, 240, BufferedSocket.field_b, SocketConnector.field_g.field_F, true);
                     } else {
                       if (var2_int == 4) {
-                        bb.a((byte) -14, -2, 0);
+                        LoginPanel.a((byte) -14, -2, 0);
                       }
                     }
                   }
@@ -149,7 +149,7 @@ public final class SolKnight extends ab {
               }
             }
           } else {
-            ta.a((byte) 61, cl.field_n);
+            ta.a((byte) 61, AgeValidator.field_n);
             var2_int = this.b(0, true);
             if (pb.field_c != var2_int) {
               mh.a(8192);
@@ -264,10 +264,10 @@ public final class SolKnight extends ab {
           lb.discardDeclaredStaticReferences(121);
           s.discardDeclaredStaticReferences(-1);
           ci.clearDeclaredStaticReferences((byte) -107);
-          rf.clearStaticReferences(false);
+          AccountRegistrationPanel.clearStaticReferences(false);
           ig.e((byte) -102);
-          bb.clearStaticReferences((byte) 97);
-          ga.h(60);
+          LoginPanel.clearStaticReferences((byte) 97);
+          DisplayNameSelectionPanel.h(60);
           mb.b(-694484242);
           aj.clearStaticReferences((byte) -63);
           sl.clearStaticReferences();
@@ -352,8 +352,8 @@ public final class SolKnight extends ab {
           fc.a((byte) 124);
           g.a(-6960);
           ke.d((byte) -61);
-          qb.clearStaticReferences((byte) -80);
-          vg.releaseDeclaredStaticReferences(106);
+          ValidatedTextField.clearStaticReferences((byte) -80);
+          EditableTextField.releaseDeclaredStaticReferences(106);
           gf.clearStaticReferences((byte) 87);
           c.clearStaticReferences((byte) 113);
           ua.clearStaticReferences((byte) -88);
@@ -361,7 +361,7 @@ public final class SolKnight extends ab {
           kc.clearStaticReferences((byte) 110);
           pk.releaseDeclaredStaticReferences(-124);
           tg.releaseDeclaredStaticReferences(22722);
-          a.clearDeclaredStaticReferences(30514);
+          TextFieldValidator.clearDeclaredStaticReferences(30514);
           nb.clearStaticReferences(19161);
           qe.i(-28528);
           be.a(-3);
@@ -414,15 +414,15 @@ public final class SolKnight extends ab {
           ob.clearStaticReferences(false);
           bf.clearStaticReferences((byte) 119);
           le.clearStaticReferences(-3390);
-          uk.j(8191);
-          dc.clearStaticReferences((byte) 82);
-          qa.clearStaticReferences(true);
-          cl.e((byte) -123);
-          el.releaseDeclaredStaticReferences(732);
+          PasswordValidator.j(8191);
+          EmailFormatValidator.clearStaticReferences((byte) 82);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences(true);
+          AgeValidator.e((byte) -123);
+          MatchingFieldValidator.releaseDeclaredStaticReferences(732);
           wh.clearStaticReferences(25817);
           li.a(26333);
           qf.a(10351);
-          wf.clearStaticReferences(350);
+          DebouncedFieldValidator.clearStaticReferences(350);
           pc.clearStaticReferences((byte) -121);
           this.field_x = null;
         } catch (RuntimeException runtimeException) {
@@ -491,13 +491,13 @@ public final class SolKnight extends ab {
                   ProxySocketConnector.field_h.tryLoadAllGroups(true)) {
                   if (NetworkArchiveRequest.field_u.ensureIndexLoaded((byte) -121) &&
                     NetworkArchiveRequest.field_u.tryLoadAllGroups(true)) {
-                    if (qb.field_cb.ensureIndexLoaded((byte) -121) &&
-                      qb.field_cb.tryLoadAllGroups(true)) {
+                    if (ValidatedTextField.field_cb.ensureIndexLoaded((byte) -121) &&
+                      ValidatedTextField.field_cb.tryLoadAllGroups(true)) {
                       if (fh.field_c.ensureIndexLoaded((byte) -121) &&
                         fh.field_c.tryLoadAllGroups(true)) {
                         if (field_I.ensureIndexLoaded((byte) -121) &&
                           field_I.tryLoadAllGroups(true)) {
-                          a.a((byte) 102, SocketConnector.field_e, 65.0f);
+                          TextFieldValidator.a((byte) 102, SocketConnector.field_e, 65.0f);
                           this.a(-11633);
                           if (!param1) {
                             stackIn_44_0 = pb.field_c;
@@ -546,44 +546,44 @@ public final class SolKnight extends ab {
                           stackIn_46_0 = fc.field_o;
                           return stackIn_46_0;
                         }
-                        a.a((byte) 102, ab.a(field_I, qb.field_bb, ri.field_d, "", false), 60.0f);
+                        TextFieldValidator.a((byte) 102, ab.a(field_I, ValidatedTextField.field_bb, ri.field_d, "", false), 60.0f);
                         stackIn_39_0 = pb.field_c;
                         return stackIn_39_0;
                       }
-                      a.a((byte) 102, ab.a(fh.field_c, vb.field_i, IsaacRandom.field_e, "", false), 50.0f);
+                      TextFieldValidator.a((byte) 102, ab.a(fh.field_c, vb.field_i, IsaacRandom.field_e, "", false), 50.0f);
                       stackIn_34_0 = pb.field_c;
                       return stackIn_34_0;
                     }
-                    a.a((byte) 102, ab.a(qb.field_cb, th.field_L, je.field_b, "", false), 40.0f);
+                    TextFieldValidator.a((byte) 102, ab.a(ValidatedTextField.field_cb, th.field_L, je.field_b, "", false), 40.0f);
                     stackIn_29_0 = pb.field_c;
                     return stackIn_29_0;
                   }
-                  a.a((byte) 102, ok.a(0, -18884, je.field_b, NetworkArchiveRequest.field_u, th.field_L), 30.0f);
+                  TextFieldValidator.a((byte) 102, ok.a(0, -18884, je.field_b, NetworkArchiveRequest.field_u, th.field_L), 30.0f);
                   stackIn_24_0 = pb.field_c;
                   return stackIn_24_0;
                 }
-                a.a((byte) 102, ab.a(ProxySocketConnector.field_h, l.field_b, rd.field_a, "", false), 20.0f);
+                TextFieldValidator.a((byte) 102, ab.a(ProxySocketConnector.field_h, l.field_b, rd.field_a, "", false), 20.0f);
                 stackIn_19_0 = pb.field_c;
                 return stackIn_19_0;
               }
-              a.a((byte) 102, ab.a(AccountServiceResult.field_g, l.field_b, rd.field_a, "", false), 10.0f);
+              TextFieldValidator.a((byte) 102, ab.a(AccountServiceResult.field_g, l.field_b, rd.field_a, "", false), 10.0f);
               stackIn_13_0 = pb.field_c;
               return stackIn_13_0;
             }
-            a.a((byte) 102, ab.a(pl.field_d, vb.field_i, IsaacRandom.field_e, "basic", false), 3.0f);
+            TextFieldValidator.a((byte) 102, ab.a(pl.field_d, vb.field_i, IsaacRandom.field_e, "basic", false), 3.0f);
             stackIn_8_0 = pb.field_c;
             return stackIn_8_0;
           }
-          if (qb.field_cb != null) {
-            a.a((byte) 102, rf.field_E, 75.0f);
+          if (ValidatedTextField.field_cb != null) {
+            TextFieldValidator.a((byte) 102, AccountRegistrationPanel.field_E, 75.0f);
             this.a(param0 - 11633);
-            c.field_M[0] = rl.a(qb.field_cb, "", "sol knight title");
-            c.field_M[1] = rl.a(qb.field_cb, "", "sol_ingame_1");
-            c.field_M[2] = rl.a(qb.field_cb, "", "sol_ingame_2");
-            c.field_M[3] = rl.a(qb.field_cb, "", "sol_ingame_3");
-            c.field_M[4] = rl.a(qb.field_cb, "", "sol knight gameover jingle");
-            c.field_M[5] = rl.a(qb.field_cb, "", "sol knight victory jingle");
-            qb.field_cb = null;
+            c.field_M[0] = rl.a(ValidatedTextField.field_cb, "", "sol knight title");
+            c.field_M[1] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_1");
+            c.field_M[2] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_2");
+            c.field_M[3] = rl.a(ValidatedTextField.field_cb, "", "sol_ingame_3");
+            c.field_M[4] = rl.a(ValidatedTextField.field_cb, "", "sol knight gameover jingle");
+            c.field_M[5] = rl.a(ValidatedTextField.field_cb, "", "sol knight victory jingle");
+            ValidatedTextField.field_cb = null;
             stackIn_49_0 = fc.field_o;
             return stackIn_49_0;
           }
@@ -602,7 +602,7 @@ public final class SolKnight extends ab {
             return stackIn_59_0;
           }
           if (pl.field_d != null) {
-            a.a((byte) 102, kj.field_N, 90.0f);
+            TextFieldValidator.a((byte) 102, kj.field_N, 90.0f);
             this.a(-11633);
             jc.field_b = Asteroid.a("unachieved", "basic", pl.field_d, (byte) -127);
             nb.field_a = Asteroid.a("locked", "basic", pl.field_d, (byte) -117);
@@ -722,7 +722,7 @@ public final class SolKnight extends ab {
         this.a(0, false, 6, 9, true, 16, 10, 8);
         MidiPcmStream var2 = new MidiPcmStream();
         var2.d(-4474, 128, 9);
-        GameApplet.a(var2, (java.awt.Component) ((Object) dc.field_q), true, (byte) -40, 22050, wh.field_c);
+        GameApplet.a(var2, (java.awt.Component) ((Object) EmailFormatValidator.field_q), true, (byte) -40, 22050, wh.field_c);
         hc.field_d = 16777088;
         if (param0 != -31680) {
           return;
@@ -905,7 +905,7 @@ public final class SolKnight extends ab {
           if (dj.field_k != null) {
             stackIn_5_0 = dj.field_k;
           } else {
-            stackIn_5_0 = dc.field_q;
+            stackIn_5_0 = EmailFormatValidator.field_q;
           }
           var2 = stackIn_5_0;
           if (bl.a((byte) -81)) {
@@ -923,8 +923,8 @@ public final class SolKnight extends ab {
             ih.a(param0 ^ -31842, (java.awt.Canvas) (var2));
             return;
           }
-          if (qa.field_q != null) {
-            a.a((byte) 102, bg.field_t, 100.0f);
+          if (ConfirmedEmailAvailabilityValidator.field_q != null) {
+            TextFieldValidator.a((byte) 102, bg.field_t, 100.0f);
             ih.a(20753, (java.awt.Canvas) (var2));
             return;
           }
@@ -1115,8 +1115,8 @@ public final class SolKnight extends ab {
           var7 = wc.a(var6, 0);
           var8 = wc.a(var7, 0);
           var9 = wc.a(var8, 0);
-          uk.field_k = param0[3];
-          th.field_H = wc.a(wc.a(uk.field_k, 0), 0);
+          PasswordValidator.field_k = param0[3];
+          th.field_H = wc.a(wc.a(PasswordValidator.field_k, 0), 0);
           h.field_d = new Sprite[9];
           h.field_d[2] = var7;
           h.field_d[0] = var34;

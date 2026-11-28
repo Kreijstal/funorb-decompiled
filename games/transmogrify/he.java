@@ -88,8 +88,8 @@ final class he extends IntrusiveNode {
             !(AccountRequestState.field_a.length >= param1)) {
             AccountRequestState.field_a = new int[2 * param1];
           }
-          if (null != bg.field_j &&
-            bg.field_j.length >= param1) {
+          if (null != PasswordValidator.field_j &&
+            PasswordValidator.field_j.length >= param1) {
             if (param2 != 24070) {
               he.b((byte) -97);
               if (tb.field_d == null ||
@@ -153,11 +153,11 @@ final class he extends IntrusiveNode {
             rc.field_c = -2147483648;
             ue.field_a = 2147483647;
             ua.field_d = 2147483647;
-            cg.field_l = 0;
+            MatchingFieldValidator.field_l = 0;
             vb.field_a = -2147483648;
             return;
           }
-          bg.field_j = new int[param1 * 2];
+          PasswordValidator.field_j = new int[param1 * 2];
           if (param2 != 24070) {
             he.b((byte) -97);
           }
@@ -184,8 +184,8 @@ final class he extends IntrusiveNode {
               !(AccountRequestState.field_a.length >= param1)) {
               AccountRequestState.field_a = new int[2 * param1];
             }
-            if (null != bg.field_j &&
-              bg.field_j.length >= param1) {
+            if (null != PasswordValidator.field_j &&
+              PasswordValidator.field_j.length >= param1) {
               if (param2 != 24070) {
                 he.b((byte) -97);
                 if (tb.field_d == null ||
@@ -249,11 +249,11 @@ final class he extends IntrusiveNode {
               rc.field_c = -2147483648;
               ue.field_a = 2147483647;
               ua.field_d = 2147483647;
-              cg.field_l = 0;
+              MatchingFieldValidator.field_l = 0;
               vb.field_a = -2147483648;
               return;
             }
-            bg.field_j = new int[param1 * 2];
+            PasswordValidator.field_j = new int[param1 * 2];
             if (param2 != 24070) {
               he.b((byte) -97);
             }
@@ -278,8 +278,8 @@ final class he extends IntrusiveNode {
               !(AccountRequestState.field_a.length >= param1)) {
               AccountRequestState.field_a = new int[2 * param1];
             }
-            if (null != bg.field_j &&
-              bg.field_j.length >= param1) {
+            if (null != PasswordValidator.field_j &&
+              PasswordValidator.field_j.length >= param1) {
               if (param2 != 24070) {
                 he.b((byte) -97);
                 if (tb.field_d == null ||
@@ -379,11 +379,11 @@ final class he extends IntrusiveNode {
               rc.field_c = -2147483648;
               ue.field_a = 2147483647;
               ua.field_d = 2147483647;
-              cg.field_l = 0;
+              MatchingFieldValidator.field_l = 0;
               vb.field_a = -2147483648;
               return;
             }
-            bg.field_j = new int[param1 * 2];
+            PasswordValidator.field_j = new int[param1 * 2];
             if (param2 != 24070) {
               he.b((byte) -97);
             }
@@ -404,7 +404,7 @@ final class he extends IntrusiveNode {
         rc.field_c = -2147483648;
         ue.field_a = 2147483647;
         ua.field_d = 2147483647;
-        cg.field_l = 0;
+        MatchingFieldValidator.field_l = 0;
         vb.field_a = -2147483648;
     }
 

@@ -222,9 +222,9 @@ final class dh extends si {
             field_N = (BitPacketBuffer) null;
           }
           if (af.field_b == 11) {
-            wa.a((byte) -43);
+            LoginPanel.a((byte) -43);
           }
-          gm.a((byte) 32, oe.field_d, rh.field_d, kl.field_S);
+          gm.a((byte) 32, oe.field_d, rh.field_d, EditableTextField.field_S);
           DrPhlogistonSavesTheEarth.a(0, -118, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

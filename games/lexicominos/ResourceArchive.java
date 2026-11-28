@@ -278,7 +278,7 @@ final class ResourceArchive {
         if (this.field_i) {
           this.field_j[param0] = this.field_h.a(param0, param1);
         } else {
-          this.field_j[param0] = ri.storeBytes(136, this.field_h.a(param0, param1), false);
+          this.field_j[param0] = DebouncedFieldValidator.storeBytes(136, this.field_h.a(param0, param1), false);
         }
         if (!param1) {
           field_f = ((int[]) (((Object[]) (this.field_j[13]))[1]))[8];
@@ -786,7 +786,7 @@ final class ResourceArchive {
                   var19 = var18;
                 }
                 if (this.field_c == 0) {
-                  var7[var19] = ri.storeBytes(136, var40[var18], false);
+                  var7[var19] = DebouncedFieldValidator.storeBytes(136, var40[var18], false);
                 } else {
                   var7[var19] = var40[var18];
                 }
@@ -799,7 +799,7 @@ final class ResourceArchive {
               var12 = 0;
             }
             if (this.field_c == 0) {
-              var7[var12] = ri.storeBytes(136, var37, false);
+              var7[var12] = DebouncedFieldValidator.storeBytes(136, var37, false);
               return true;
             }
             var7[var12] = var44;

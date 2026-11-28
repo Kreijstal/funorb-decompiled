@@ -39,12 +39,12 @@ final class vi extends IntrusiveNode {
           return;
         }
         try {
-          rf.field_q = param7;
+          MatchingFieldValidator.field_q = param7;
           md.field_D = param1;
           FullscreenFocusCanvas.field_a = param0;
           lm.field_H = param3;
           or.field_f = param6;
-          rf.field_l = param2;
+          MatchingFieldValidator.field_l = param2;
           od.field_Kb = param4;
           kb.field_e = (tk) ((Object) new eg());
           ap.field_a = new DiskCacheWorker(param6);
@@ -90,8 +90,8 @@ final class vi extends IntrusiveNode {
         try {
           this.field_q = param4;
           this.field_y = param1;
-          fieldTemp$0 = br.field_X;
-          br.field_X = br.field_X + 1;
+          fieldTemp$0 = ValidatedTextField.field_X;
+          ValidatedTextField.field_X = ValidatedTextField.field_X + 1;
           this.field_u = 65535 & fieldTemp$0;
           this.field_A = param5;
           this.field_p = param3;

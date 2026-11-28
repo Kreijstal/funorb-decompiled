@@ -100,13 +100,13 @@ final class pc {
         Throwable decompiledCaughtException = null;
         var1 = el.field_n;
         synchronized (var1) {
-          if (bf.field_B == bg.field_l) {
+          if (bf.field_B == PasswordValidator.field_l) {
             return false;
           }
-          ch.field_d = te.field_c[bg.field_l];
+          ch.field_d = te.field_c[PasswordValidator.field_l];
           var2 = -67 % ((param0 + 82) / 39);
-          sg.field_n = DirectByteStorage.field_h[bg.field_l];
-          bg.field_l = 127 & 1 + bg.field_l;
+          sg.field_n = DirectByteStorage.field_h[PasswordValidator.field_l];
+          PasswordValidator.field_l = 127 & 1 + PasswordValidator.field_l;
           stackIn_6_0 = true;
         }
         return stackIn_6_0;

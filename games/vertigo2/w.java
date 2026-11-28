@@ -216,7 +216,7 @@ final class w extends TextureOperator {
             w.a(-39, (byte[]) null, -98);
           }
           while (var5 < 28) {
-            na.field_o[var5] = ap.field_b[var5].a((byte) -123, true);
+            AgeValidator.field_o[var5] = ap.field_b[var5].a((byte) -123, true);
             var5++;
           }
           return;

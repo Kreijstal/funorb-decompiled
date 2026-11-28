@@ -14,7 +14,7 @@ final class hc {
         fn.field_j = bh.field_c;
         wd.field_j = df.field_c;
         ob.field_l = AccountNameAvailabilityValidator.field_k;
-        mb.field_g = vk.field_I;
+        mb.field_g = LoginPanel.field_I;
         LevelProgressUpdate.field_h = sm.field_e;
         b.field_a = sb.field_F;
         fp.field_a = fl.field_g;

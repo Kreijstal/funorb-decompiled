@@ -124,7 +124,7 @@ class rf extends pc {
         }
         qe.field_g.g((byte) -119);
         if (null == td.field_b) {
-          td.field_b = new kl(qe.field_g, sd.field_T);
+          td.field_b = new kl(qe.field_g, ValidatedTextField.field_T);
         }
         qe.field_g.b(param0 ^ -3261, td.field_b);
     }
@@ -424,7 +424,7 @@ class rf extends pc {
           var7 = var10.a(-527227295, (qm) (this), param2);
           var8 = var10.a(param0, (byte) 50, (qm) (this));
           do {
-            ci.a(var6.field_f + var7 - 2, -2 + (var6.field_h + var8), false, 2 + var6.field_l, var6.field_j + 2);
+            AgeValidator.a(var6.field_f + var7 - 2, -2 + (var6.field_h + var8), false, 2 + var6.field_l, var6.field_j + 2);
             var6 = var6.field_k;
           } while (var6 != null);
         }

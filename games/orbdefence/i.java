@@ -41,7 +41,7 @@ final class i {
           }
           var8 = param2;
           gi.a(var8, (byte) -66);
-          DiskArchiveRequest.field_q = hi.createAccountSuggestionsResult(2, param2);
+          DiskArchiveRequest.field_q = TextFieldValidator.createAccountSuggestionsResult(2, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

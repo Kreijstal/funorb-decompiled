@@ -172,8 +172,8 @@ final class mb {
               }
               else {
                 if (stackIn_56_0 >= stackIn_56_1) {
-                  qb.field_ab[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
-                  a.field_d[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
+                  ValidatedTextField.field_ab[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  TextFieldValidator.field_d[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var8 < var29Lifetime1) {
                     var8 = var29Lifetime1;
                   }

@@ -39,7 +39,7 @@ final class s {
           uc.b();
           SoftwareRasterizer.clearRaster();
           vb.field_n = 0;
-          ah.g((byte) -119);
+          DisplayNameSelectionPanel.g((byte) -119);
           var2 = var1.a();
           var3 = 0;
           do {
@@ -100,7 +100,7 @@ final class s {
               var2_int = 1;
             }
           }
-          la.a(cb.field_b, cb.field_b.field_E, param0, 240, (byte) -38, ni.field_q.field_E, 18, ch.field_z, var2_int, ee.field_c, ni.field_q.field_E, 320, 2, 8, ni.field_q, 30);
+          la.a(cb.field_b, cb.field_b.field_E, param0, 240, (byte) -38, EmailFormatValidator.field_q.field_E, 18, ch.field_z, var2_int, ee.field_c, EmailFormatValidator.field_q.field_E, 320, 2, 8, EmailFormatValidator.field_q, 30);
           if (param1 >= -117) {
             s.a(false, (int[]) null, true, (int[]) null, true, (ja) null, -15);
           }
@@ -266,7 +266,7 @@ final class s {
                   var26Lifetime1Lifetime1 = param5.field_x[var23Lifetime2];
                   IsaacRandom.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 + var12 * var24Lifetime1Lifetime1 >> 16);
                   rd.field_y[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + (var13 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
-                  ei.field_m[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
+                  TextFieldValidator.field_m[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param5.field_p[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param5.field_c[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_i[var23Lifetime2];
@@ -392,25 +392,25 @@ final class s {
         try {
           hg.field_ob[15] = ja.field_f;
           hg.field_ob[33] = rk.field_f;
-          hg.field_ob[21] = ni.field_r[1];
-          hg.field_ob[22] = ni.field_r[2];
+          hg.field_ob[21] = EmailFormatValidator.field_r[1];
+          hg.field_ob[22] = EmailFormatValidator.field_r[2];
           hg.field_ob[29] = rk.field_f;
           hg.field_ob[30] = rk.field_f;
-          hg.field_ob[37] = ni.field_r[2];
+          hg.field_ob[37] = EmailFormatValidator.field_r[2];
           hg.field_ob[34] = rk.field_f;
           hg.field_ob[28] = rk.field_f;
-          hg.field_ob[20] = ni.field_r[0];
+          hg.field_ob[20] = EmailFormatValidator.field_r[0];
           hg.field_ob[26] = rk.field_f;
           hg.field_ob[23] = o.field_n;
           hg.field_ob[32] = rk.field_f;
-          hg.field_ob[35] = ni.field_r[0];
+          hg.field_ob[35] = EmailFormatValidator.field_r[0];
           hg.field_ob[31] = rk.field_f;
           kk.field_c = new String[3];
           hg.field_ob[24] = db.field_g;
-          hg.field_ob[36] = ni.field_r[1];
+          hg.field_ob[36] = EmailFormatValidator.field_r[1];
           hg.field_ob[27] = rk.field_f;
           kk.field_c[1] = SectorCacheStore.field_h;
-          kk.field_c[2] = v.field_U;
+          kk.field_c[2] = AccountRegistrationPanel.field_U;
           kk.field_c[0] = we.field_h;
           field_d = new String[3];
           field_d[0] = mj.field_t;

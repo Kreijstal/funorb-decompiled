@@ -58,17 +58,17 @@ final class MixedSupport131 {
             for (integerLocal9 = 1; integerLocal7 > integerLocal9; integerLocal9++) {
               UiComponentPart030.stringArrayState0046[integerLocal9] = cipherPacketBufferLocal18.readNullTerminatedString((byte) -38);
             }
-            ResourceSupport002.performAction0085(2147483647, integerLocal7, integerLocal8);
+            DebouncedFieldValidator.performAction0085(2147483647, integerLocal7, integerLocal8);
             for (integerLocal19 = 0; integerLocal19 < integerLocal7; integerLocal19++) {
-              UiComponentPart024.performAction1274(63, cipherPacketBufferLocal18);
+              BirthDateTextFields.performAction1274(63, cipherPacketBufferLocal18);
               if (integerLocal19 == 0) {
                 mixedSupport020Local6.integerState0119 = MixedSupport091.integerState0549;
                 mixedSupport020Local6.integerState0120 = UiComponentPart008.integerState0144;
                 mixedSupport020Local6.integerState0118 = SceneWidgetPart012.integerState0783;
-                mixedSupport020Local6.integerState0117 = MixedSupport142.integerState0877;
-                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, MixedSupport142.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
+                mixedSupport020Local6.integerState0117 = ReturnedShapeUpdate.integerState0877;
+                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
               } else {
-                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, MixedSupport142.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
+                DisplayModeController.performAction1438(integerLocal19, UiComponentPart008.integerState0144, -1, ReturnedShapeUpdate.integerState0877, SceneWidgetPart012.integerState0783, MixedSupport091.integerState0549);
               }
             }
             MixedSupport097.performAction1215(integerLocal8, (byte) 6);
@@ -78,7 +78,7 @@ final class MixedSupport131 {
             cachedIntegerArrayArrayLocal2 = new int[2][integerLocal8 * 4];
             mixedSupport020Local6.integerArrayArrayState0005 = cachedIntegerArrayArrayLocal2;
             integerArrayArrayLocal11 = cachedIntegerArrayArrayLocal2;
-            integerLocal12 = UiComponentPart021.integerState0556;
+            integerLocal12 = ValidatedTextField.integerState0556;
             integerLocal13 = 0;
             integerLocal14 = 0;
             while (integerLocal12 > integerLocal13) {

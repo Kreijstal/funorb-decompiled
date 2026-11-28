@@ -24,7 +24,7 @@ final class de {
     final static void a(oi param0, int param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = ff.field_D;
+          var3 = LoginPanel.field_D;
           var3.writeCipheredByte(false, param1);
           var3.writeByte(6389, param2);
           var3.writeByte(6389, 0);

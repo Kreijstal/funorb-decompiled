@@ -162,7 +162,7 @@ abstract class RasterBuffer {
                   var27Lifetime1Lifetime1 = param0.field_j[var24Lifetime2];
                   jf.field_k[var24Lifetime2] = (var27Lifetime1Lifetime1 * var19 + var26Lifetime1Lifetime1 * var16 + var25Lifetime1Lifetime1 * var13 >> 16) + var10;
                   se.field_C[var24Lifetime2] = var11 + (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16);
-                  pl.field_S[var24Lifetime2] = var12 + (var27Lifetime1Lifetime1 * var21 + (var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18) >> 16);
+                  ValidatedTextField.field_S[var24Lifetime2] = var12 + (var27Lifetime1Lifetime1 * var21 + (var25Lifetime1Lifetime1 * var15 + var26Lifetime1Lifetime1 * var18) >> 16);
                   var25Lifetime1Lifetime1 = param0.field_o[var24Lifetime2];
                   var26Lifetime1Lifetime1 = param0.field_J[var24Lifetime2];
                   var27Lifetime1Lifetime1 = param0.field_q[var24Lifetime2];

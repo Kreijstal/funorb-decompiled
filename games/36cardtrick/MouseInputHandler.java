@@ -100,7 +100,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           Crc32Table.field_a.s(2);
         }
         String var1 = hh.b((byte) 23);
-        i.field_a = new ak(var1, (String) null, true, false, false);
+        i.field_a = new LoginPanel(var1, (String) null, true, false, false);
         sd.field_c.b(vb.field_h, (byte) -71);
         if (param0 == -9145) {
           vb.field_h.c(i.field_a, (byte) 33);

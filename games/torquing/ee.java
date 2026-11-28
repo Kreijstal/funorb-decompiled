@@ -786,7 +786,7 @@ final class ee extends am {
           if (param0 == null) {
             return null;
           }
-          var2 = new li(param0, PacketBuffer.field_o, na.field_G, vo.field_b, ij.field_o, cq.field_y, pn.field_b);
+          var2 = new li(param0, PacketBuffer.field_o, na.field_G, vo.field_b, PasswordValidator.field_o, cq.field_y, pn.field_b);
           if (param1 != 7028) {
             ee.a(false);
           }
@@ -877,9 +877,9 @@ final class ee extends am {
         int var8_intLifetime3;
         var11 = Torquing.field_u;
         try {
-          for (var8_int = 0; var8_int < ia.field_i; var8_int++) {
-            dg.field_f[var8_int] = new double[3];
-            field_t[var8_int] = hj.a(param2, dg.field_f[var8_int], 0, ie.field_a[var8_int], param4, param3, bn.field_f[var8_int], param0, param1, var8_int);
+          for (var8_int = 0; var8_int < FramedPanelLayer.field_i; var8_int++) {
+            TranslucentSpriteLayer.field_f[var8_int] = new double[3];
+            field_t[var8_int] = hj.a(param2, TranslucentSpriteLayer.field_f[var8_int], 0, ie.field_a[var8_int], param4, param3, SpriteBase.field_f[var8_int], param0, param1, var8_int);
             var9_double = Math.sqrt(ap.a(ie.field_a[var8_int], 0, ie.field_a[var8_int], 0));
             if (0.0 != var9_double) {
               dupTemp$3 = ie.field_a[var8_int];
@@ -888,15 +888,15 @@ final class ee extends am {
               dupTemp$4[1] = dupTemp$4[1] / var9_double;
               dupTemp$5 = ie.field_a[var8_int];
               dupTemp$5[2] = dupTemp$5[2] / var9_double;
-              dupTemp$6 = dg.field_f[var8_int];
+              dupTemp$6 = TranslucentSpriteLayer.field_f[var8_int];
               dupTemp$6[0] = dupTemp$6[0] / var9_double;
-              dupTemp$7 = dg.field_f[var8_int];
+              dupTemp$7 = TranslucentSpriteLayer.field_f[var8_int];
               dupTemp$7[1] = dupTemp$7[1] / var9_double;
-              dupTemp$8 = dg.field_f[var8_int];
+              dupTemp$8 = TranslucentSpriteLayer.field_f[var8_int];
               dupTemp$8[2] = dupTemp$8[2] / var9_double;
             }
             go.field_w[var8_int] = -var9_double;
-            vf.field_e[var8_int] = (-param3 + bn.field_f[var8_int][3]) / param4;
+            vf.field_e[var8_int] = (-param3 + SpriteBase.field_f[var8_int][3]) / param4;
           }
           bd.field_y = Math.sqrt(ap.a(param2, 3, param2, 3));
           vf.field_e[8] = -bd.field_y;
@@ -904,32 +904,32 @@ final class ee extends am {
             field_s = true;
           }
           if (bd.field_y != 0.0) {
-            ia.field_d = param2[5] / bd.field_y;
+            FramedPanelLayer.field_d = param2[5] / bd.field_y;
             mc.field_m = param2[4] / bd.field_y;
             tf.field_c = param2[3] / bd.field_y;
           } else {
             tf.field_c = 0.0;
             mc.field_m = 0.0;
-            ia.field_d = 0.0;
+            FramedPanelLayer.field_d = 0.0;
           }
-          for (var8_intLifetime1 = 0; ia.field_i > var8_intLifetime1; var8_intLifetime1++) {
-            for (var9 = 0; ia.field_i > var9; var9++) {
+          for (var8_intLifetime1 = 0; FramedPanelLayer.field_i > var8_intLifetime1; var8_intLifetime1++) {
+            for (var9 = 0; FramedPanelLayer.field_i > var9; var9++) {
               jl.field_O[var8_intLifetime1][var9] = ap.a(ie.field_a[var8_intLifetime1], 0, ie.field_a[var9], 0);
-              mg.field_a[var8_intLifetime1][var9] = ap.a(bn.field_f[var8_intLifetime1], 6, bn.field_f[var9], 6);
+              mg.field_a[var8_intLifetime1][var9] = ap.a(SpriteBase.field_f[var8_intLifetime1], 6, SpriteBase.field_f[var9], 6);
             }
             var12 = jl.field_O[var8_intLifetime1];
             var10 = var8_intLifetime1;
             mg.field_a[var8_intLifetime1][var8_intLifetime1] = 1.0;
             var12[var10] = 1.0;
           }
-          for (var8_intLifetime2 = 0; var8_intLifetime2 < ia.field_i; var8_intLifetime2++) {
+          for (var8_intLifetime2 = 0; var8_intLifetime2 < FramedPanelLayer.field_i; var8_intLifetime2++) {
             dupTemp$0 = mg.field_a[8];
-            dupTemp$1 = mc.field_m * bn.field_f[var8_intLifetime2][7] + tf.field_c * bn.field_f[var8_intLifetime2][6] + bn.field_f[var8_intLifetime2][8] * ia.field_d;
+            dupTemp$1 = mc.field_m * SpriteBase.field_f[var8_intLifetime2][7] + tf.field_c * SpriteBase.field_f[var8_intLifetime2][6] + SpriteBase.field_f[var8_intLifetime2][8] * FramedPanelLayer.field_d;
             arrayValue$2 = mg.field_a[var8_intLifetime2];
             dupTemp$0[var8_intLifetime2] = dupTemp$1;
             arrayValue$2[8] = dupTemp$1;
           }
-          for (var8_intLifetime3 = ia.field_i; var8_intLifetime3 < 8; var8_intLifetime3++) {
+          for (var8_intLifetime3 = FramedPanelLayer.field_i; var8_intLifetime3 < 8; var8_intLifetime3++) {
             var13 = mg.field_a[var8_intLifetime3];
             mg.field_a[8][var8_intLifetime3] = 0.0;
             var13[8] = 0.0;

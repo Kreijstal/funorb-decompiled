@@ -163,7 +163,7 @@ final class ClientException extends RuntimeException {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 118) {
-            stackIn_4_0 = -qm.field_o + kd.correctedCurrentTimeMillis(-2456);
+            stackIn_4_0 = -EmailFormatValidator.field_o + kd.correctedCurrentTimeMillis(-2456);
             return stackIn_4_0;
           }
           stackIn_2_0 = 109L;
@@ -219,7 +219,7 @@ final class ClientException extends RuntimeException {
           ac.field_B.position = ac.field_B.position + 2;
           var5_int = ac.field_B.position;
           ac.field_B.writeInt((byte) 63, la.field_c);
-          ac.field_B.writeLong(58, dn.field_Q);
+          ac.field_B.writeLong(58, LoginPanel.field_Q);
           var6 = 0;
           if (ld.field_g) {
             var6 = var6 | 1;
@@ -234,7 +234,7 @@ final class ClientException extends RuntimeException {
             var6 = var6 | 16;
           }
           ac.field_B.writeByte(6, var6);
-          var7 = oj.a(m.c(true), (byte) 98);
+          var7 = oj.a(DebouncedFieldValidator.c(true), (byte) 98);
           if (null == var7) {
             var7 = "";
           }

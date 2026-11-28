@@ -4,7 +4,7 @@
 final class ba extends rg {
     static String field_Q;
     private int field_R;
-    private dm field_S;
+    private FieldValidator field_S;
     static int[] field_P;
     static String field_T;
 
@@ -21,7 +21,7 @@ final class ba extends rg {
 
     final String f(byte param0) {
         if (this.field_w) {
-          return this.field_S.a((byte) 95);
+          return this.field_S.getValidationMessage((byte) 95);
         }
         if (param0 > -82) {
           field_Q = (String) null;
@@ -119,7 +119,7 @@ final class ba extends rg {
           field_Q = (String) null;
           var5 = (this.field_F >> 1) + (this.field_q + param3);
           var6 = (this.field_z >> 1) + param0 + this.field_m;
-          var8 = this.field_S.a(-3621);
+          var8 = this.field_S.getValidationStatus(-3621);
           if (var8 == ab.field_b) {
             var15 = gg.field_q[0];
             var9 = var15.field_t << 1;
@@ -179,7 +179,7 @@ final class ba extends rg {
         }
         var5Lifetime1 = (this.field_F >> 1) + (this.field_q + param3);
         var6Lifetime1 = (this.field_z >> 1) + param0 + this.field_m;
-        var8Lifetime1 = this.field_S.a(-3621);
+        var8Lifetime1 = this.field_S.getValidationStatus(-3621);
         if (var8Lifetime1 != ab.field_b &&
           qh.field_x != var8Lifetime1) {
           if (var8Lifetime1 == fb.field_e) {
@@ -219,7 +219,7 @@ final class ba extends rg {
         FrameTimer.field_g.c(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
     }
 
-    ba(dm param0) {
+    ba(FieldValidator param0) {
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {

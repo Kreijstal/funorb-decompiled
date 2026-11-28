@@ -164,7 +164,7 @@ final class rl {
           try {
             try {
               var4 = param0.getCodeBase();
-              var3 = lk.a(param0, var4, 118).getFile();
+              var3 = TextFieldValidator.a(param0, var4, 118).getFile();
               JavaScriptBridge.callWithArguments(new Object[]{"home", var3 + "home.ws"}, false, "updatelinks", param0);
               JavaScriptBridge.callWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, false, "updatelinks", param0);
               JavaScriptBridge.callWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, false, "updatelinks", param0);

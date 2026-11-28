@@ -53,7 +53,7 @@ final class mb {
           ih.field_d = new int[sb.field_b];
           ih.field_b = new byte[sb.field_b][];
           vc.field_b = new int[sb.field_b];
-          lj.field_D = new byte[sb.field_b][];
+          DisplayNameSelectionPanel.field_D = new byte[sb.field_b][];
           ak.field_c = new int[sb.field_b];
           sk.field_c = new boolean[sb.field_b];
           RasterBuffer.field_c = new int[sb.field_b];
@@ -93,7 +93,7 @@ final class mb {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            lj.field_D[var4Lifetime5] = var21;
+            DisplayNameSelectionPanel.field_D[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(4);
             stackIn_22_0 = 0;
@@ -180,7 +180,7 @@ final class mb {
             field_a = (String) null;
           }
           param2 = FrameTimer.a(param2, '_', "", 2619);
-          var3 = la.a(param2, (byte) 79);
+          var3 = LoginPanel.a(param2, (byte) 79);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

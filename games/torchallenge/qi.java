@@ -87,7 +87,7 @@ final class qi {
             qi.a((ResourceArchive) null, (String) null, (ResourceArchive) null, (String) null, 9);
           }
           var6 = param2.getFileIdByName(var5_int, param3, (byte) 123);
-          stackIn_3_0 = dg.a(var5_int, param2, var6, param0, (byte) 69);
+          stackIn_3_0 = AccountRegistrationPanel.a(var5_int, param2, var6, param0, (byte) 69);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

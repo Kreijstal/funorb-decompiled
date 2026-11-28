@@ -77,7 +77,7 @@ final class so extends am {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_of = db.field_a[var3];
             var4_ref_of.computeBounds(32767);
-            tn.a(-105, var3);
+            EmailFormatValidator.a(-105, var3);
             var5 = var4_ref_of.field_A + var4_ref_of.field_g >> 1;
             var6 = var4_ref_of.field_H + var4_ref_of.field_x >> 1;
             var7 = var4_ref_of.field_p + var4_ref_of.field_e >> 1;
@@ -125,7 +125,7 @@ final class so extends am {
             }
             var21[var16] = -2147483648;
             var17 = db.field_a[var16];
-            tn.a(-127, var16);
+            EmailFormatValidator.a(-127, var16);
             for (var18 = 0; 3 > var18; var18++) {
               mo.field_B[var18] = mo.field_B[var18] + eo.field_d[var15][var18];
             }

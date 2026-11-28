@@ -5,10 +5,10 @@ final class UiComponentPart011 extends InteractiveComponent {
     static SceneWidget sceneWidgetState0035;
     static int integerState0238;
     static RgbSprite[] rgbSpriteArrayState0013;
-    private CallbackContract011 callbackContract011State0001;
+    private FieldValidator callbackContract011State0001;
     static String stringState0188;
     private int integerState0239;
-    static SceneWidgetPart013 sceneWidgetPart013State0002;
+    static LobbyRoomRow sceneWidgetPart013State0002;
     static int integerState0240;
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
@@ -40,7 +40,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         integerLocal2 = integerArgument4 - (-this.integerState0104 - (this.integerState0108 >> 1));
         if (integerArgument2 > -103) {
           this.computeString0223((byte) -60);
-          validationStatusLocal3 = this.callbackContract011State0001.computeValidationStatus0084(20350);
+          validationStatusLocal3 = this.callbackContract011State0001.getValidationStatus(20350);
           if (MixedSupport076.validationStatusState0004 == validationStatusLocal3) {
             rgbSpriteLocal8 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
             integerLocal4 = rgbSpriteLocal8.integerState0254 << 1;
@@ -60,7 +60,7 @@ final class UiComponentPart011 extends InteractiveComponent {
             return;
           }
           if (DiagnosticSupport002.validationStatusState0002 != validationStatusLocal3) {
-            if (validationStatusLocal3 == MixedSupport142.validationStatusState0005) {
+            if (validationStatusLocal3 == ReturnedShapeUpdate.validationStatusState0005) {
               rgbSpriteLocal10 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
               rgbSpriteLocal10.performAction0295(integerLocal1 - (rgbSpriteLocal10.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal10.integerState0255 >> 1), 256);
               return;
@@ -98,10 +98,10 @@ final class UiComponentPart011 extends InteractiveComponent {
           MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal9.integerState0254, -rgbSpriteLocal9.integerState0260 + integerLocal2, 256);
           return;
         }
-        validationStatusLocal19 = this.callbackContract011State0001.computeValidationStatus0084(20350);
+        validationStatusLocal19 = this.callbackContract011State0001.getValidationStatus(20350);
         if (MixedSupport076.validationStatusState0004 != validationStatusLocal19 &&
           DiagnosticSupport002.validationStatusState0002 != validationStatusLocal19) {
-          if (validationStatusLocal19 == MixedSupport142.validationStatusState0005) {
+          if (validationStatusLocal19 == ReturnedShapeUpdate.validationStatusState0005) {
             rgbSpriteLocal12 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
             rgbSpriteLocal12.performAction0295(integerLocal1 - (rgbSpriteLocal12.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal12.integerState0255 >> 1), 256);
             return;
@@ -206,7 +206,7 @@ final class UiComponentPart011 extends InteractiveComponent {
 
     final String computeString0223(byte byteArgument1) {
         if (this.booleanState0018) {
-          return this.callbackContract011State0001.computeString0088((byte) 69);
+          return this.callbackContract011State0001.getValidationMessage((byte) 69);
         }
         if (byteArgument1 == 113) {
           return null;
@@ -250,7 +250,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         }
     }
 
-    UiComponentPart011(CallbackContract011 callbackContract011Argument1) {
+    UiComponentPart011(FieldValidator callbackContract011Argument1) {
         try {
           this.callbackContract011State0001 = callbackContract011Argument1;
         } catch (RuntimeException runtimeException) {

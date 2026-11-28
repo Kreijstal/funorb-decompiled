@@ -75,7 +75,7 @@ final class dl extends dg {
             }
             var1[var2] = new Sprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var21);
           } else {
-            var22 = lj.field_D[var2];
+            var22 = DisplayNameSelectionPanel.field_D[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
@@ -249,7 +249,7 @@ final class dl extends dg {
           if (param2 != 1) {
             return true;
           }
-          lk.field_e = this;
+          TextFieldValidator.field_e = this;
           this.field_H = -param6 + param3 - this.field_k;
           this.field_J = -param4 - this.field_w + param1;
           return true;

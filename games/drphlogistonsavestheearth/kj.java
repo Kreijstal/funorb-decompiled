@@ -26,7 +26,7 @@ final class kj {
             field_g = (he[]) null;
           }
           if (param0 != null &&
-            param0.length() >= ni.field_t &&
+            param0.length() >= EmailFormatValidator.field_t &&
             param0.length() <= uk.field_g) {
             return false;
           }

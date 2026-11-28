@@ -274,11 +274,11 @@ final class qi {
             }
             var21 = stackIn_39_0;
             var22 = qa.field_b[var15Lifetime1];
-            var23 = ui.field_r[var15Lifetime1];
+            var23 = PasswordValidator.field_r[var15Lifetime1];
             var24 = qa.field_b[var16];
-            var25 = ui.field_r[var16];
+            var25 = PasswordValidator.field_r[var16];
             var26 = qa.field_b[var17];
-            var27 = ui.field_r[var17];
+            var27 = PasswordValidator.field_r[var17];
             if (var18 == var19 &&
               var20 == var19) {
               var28 = var55[var18];
@@ -436,7 +436,7 @@ final class qi {
           for (var2Lifetime1 = 0; var2Lifetime1 < 32; var2Lifetime1++) {
             ai.field_g[var2Lifetime1] = 0L;
           }
-          v.field_f = 0;
+          DebouncedFieldValidator.field_f = 0;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "qi.D(" + param0 + ')');
         }

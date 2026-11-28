@@ -544,7 +544,7 @@ final class o extends IntrusiveNode {
         if (!param1) {
           o.resetStaticState(false);
         }
-        rf.field_ib = 0;
+        ValidatedTextField.field_ib = 0;
         RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
         bc.field_o = 13;
         PcmOutputWorker.activeScreenId = 13;

@@ -30,7 +30,7 @@ final class e {
         tl.field_a = new am(RawPcmStream.a(mo.field_i, 100, 0));
         CrystalTile.field_p = new am(RawPcmStream.a(pl.field_h, 100, 0));
         AccountCreationResultPanel.field_mb = new am(RawPcmStream.a(sj.field_d, 100, 0));
-        io.field_M = new am(RawPcmStream.a(jn.field_m, 100, 0));
+        io.field_M = new am(RawPcmStream.a(PasswordValidator.field_m, 100, 0));
         ec.field_k = new am(RawPcmStream.a(RockTile.field_x, 100, 0));
     }
 
@@ -53,7 +53,7 @@ final class e {
           mo.field_i = bl.a(param2, "initialset", "got-by-spider").a();
           pl.field_h = bl.a(param2, "initialset", "blown-up").a();
           sj.field_d = bl.a(param2, "initialset", "electrocuted-buzz").a();
-          jn.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
+          PasswordValidator.field_m = ha.a(param1, "initialset", "electrocuted-end").b();
           RockTile.field_x = bl.a(param2, "initialset", "explode-into-sparks").a();
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

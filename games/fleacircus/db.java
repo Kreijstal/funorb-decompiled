@@ -13,7 +13,7 @@ abstract class db extends gj {
     private int field_K;
 
     final void a(int param0, byte param1, int param2) {
-        this.a(-param2 + ll.field_m >> 1, param2, -param0 + ca.field_Q >> 1, param0, 80);
+        this.a(-param2 + ll.field_m >> 1, param2, -param0 + AccountRegistrationPanel.field_Q >> 1, param0, 80);
         if (param1 > -126) {
           field_J = (AudioOutput) null;
         }
@@ -38,7 +38,7 @@ abstract class db extends gj {
     }
 
     db(f param0, int param1, int param2) {
-        super(-param1 + ll.field_m >> 1, -param2 + ca.field_Q >> 1, param1, param2, (ComponentLayout) null);
+        super(-param1 + ll.field_m >> 1, -param2 + AccountRegistrationPanel.field_Q >> 1, param1, param2, (ComponentLayout) null);
         try {
           this.field_L = param0;
           this.field_G = false;
@@ -65,7 +65,7 @@ abstract class db extends gj {
           !(ok.field_y.field_t >= this.field_j)) {
           ok.field_y = new RgbSprite(this.field_u, this.field_j);
         }
-        r.a(ok.field_y, 45);
+        TextFieldValidator.a(ok.field_y, 45);
         SoftwareRasterizer.clearRaster();
         this.b(0, 0, 17344);
         super.b(-param0 - this.field_z, -param1 - this.field_y, param2, param3);

@@ -84,9 +84,9 @@ final class h extends TextureOperator {
         int var4 = 0;
         super.b(param0, param1, param2);
         if (this.field_E >= 0 &&
-          null != mk.field_P) {
-          var4 = mk.field_P.e(this.field_E, param2 ^ -256).field_c ? 64 : 128;
-          this.field_z = mk.field_P.a(param2 - 9973, 1.0f, this.field_E, false, var4, var4);
+          null != AccountRegistrationPanel.field_P) {
+          var4 = AccountRegistrationPanel.field_P.e(this.field_E, param2 ^ -256).field_c ? 64 : 128;
+          this.field_z = AccountRegistrationPanel.field_P.a(param2 - 9973, 1.0f, this.field_E, false, var4, var4);
           this.field_B = var4;
           this.field_C = var4;
         }

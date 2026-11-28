@@ -5,7 +5,7 @@ final class pk extends ql {
     static String field_n;
     static int field_m;
     static char[] field_g;
-    private oc field_f;
+    private GridPoint field_f;
     static int[] field_i;
     private v field_h;
     static int field_l;
@@ -15,18 +15,18 @@ final class pk extends ql {
     static String field_j;
 
     final static void g(int param0) {
-        ka.field_o = null;
+        EmailFormatValidator.field_o = null;
         gg.field_D = null;
         if (param0 < -56) {
           uh.field_j = null;
           p.field_k = null;
-          sf.field_U = false;
+          TextInputField.field_U = false;
           return;
         }
         field_e = (int[]) null;
         uh.field_j = null;
         p.field_k = null;
-        sf.field_U = false;
+        TextInputField.field_U = false;
     }
 
     final String a(boolean param0) {
@@ -38,7 +38,7 @@ final class pk extends ql {
     }
 
     final void e(int param0) {
-        this.field_f = new oc(ln.field_a.field_v[2], ln.field_a.field_v[3]);
+        this.field_f = new GridPoint(ln.field_a.field_v[2], ln.field_a.field_v[3]);
         this.field_h = new v(ke.field_w, 0, param0);
         this.field_h.field_m = Math.min(this.field_h.field_m, this.field_h.field_i.a(this.field_h.field_k));
         this.field_h.field_l = -24 + 24 * this.field_f.field_e;
@@ -46,7 +46,7 @@ final class pk extends ql {
         this.field_h.field_d = 24 * this.field_f.field_g - 120;
         CrossfadingMidiPcmStream.a(0, 1);
         if (6 <= ln.field_a.field_v.length) {
-          nh.field_E.a(ln.field_a.field_v[4], 8360, ln.field_a.field_v[5]);
+          nh.field_E.setCoordinates(ln.field_a.field_v[4], 8360, ln.field_a.field_v[5]);
         }
     }
 
@@ -68,7 +68,7 @@ final class pk extends ql {
     }
 
     final void d(int param0) {
-        oc var2 = mm.field_m[0].field_j;
+        GridPoint var2 = mm.field_m[0].field_j;
         if (param0 == -1) {
           pm.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
           if (!(ih.a(var2, (byte) -109, nh.field_E) >= 2)) {
@@ -115,7 +115,7 @@ final class pk extends ql {
             var4 = new byte[var3_int];
             var5 = 85 % ((71 - param1) / 43);
             param2.field_i = param2.field_i + fj.field_Tb.a(0, param2.field_n, param2.field_i, 17112, var3_int, var4);
-            var6 = db.decodeCp1252String(var4, 0, (byte) -120, var3_int);
+            var6 = PasswordValidator.decodeCp1252String(var4, 0, (byte) -120, var3_int);
             stackIn_4_0 = var6;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class pk extends ql {
 
     final void b(byte param0) {
         int var3 = -118 % ((param0 + 48) / 38);
-        oc var2 = mm.field_m[0].field_j;
+        GridPoint var2 = mm.field_m[0].field_j;
         if (1 != this.field_h.field_a) {
           return;
         }

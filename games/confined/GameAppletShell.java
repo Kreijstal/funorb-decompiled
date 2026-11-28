@@ -182,23 +182,23 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             fb.field_b.getParent().remove((java.awt.Component) ((Object) fb.field_b));
           }
           if (null == sf.field_o) {
-            if (wh.field_cb == null) {
+            if (ValidatedTextField.field_cb == null) {
               if (kc.field_d != null) {
                 var2 = kc.field_d;
                 if (var4 != 0) {
                   var2 = rj.field_e;
-                  var2 = wh.field_cb;
+                  var2 = ValidatedTextField.field_cb;
                   var2 = sf.field_o;
                 }
               } else {
                 var2 = rj.field_e;
                 if (var4 != 0) {
-                  var2 = wh.field_cb;
+                  var2 = ValidatedTextField.field_cb;
                   var2 = sf.field_o;
                 }
               }
             } else {
-              var2 = wh.field_cb;
+              var2 = ValidatedTextField.field_cb;
               if (var4 != 0) {
                 var2 = sf.field_o;
               }
@@ -211,8 +211,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) fb.field_b));
           fb.field_b.setSize(wm.field_ab, im.field_b);
           fb.field_b.setVisible(true);
-          if (var2 == wh.field_cb) {
-            var3 = wh.field_cb.getInsets();
+          if (var2 == ValidatedTextField.field_cb) {
+            var3 = ValidatedTextField.field_cb.getInsets();
             fb.field_b.setLocation(var3.left + ei.field_kb, vf.field_c + var3.top);
             if (var4 != 0) {
               fb.field_b.setLocation(ei.field_kb, vf.field_c);
@@ -268,7 +268,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wh.field_cb) {
+          if (null != ValidatedTextField.field_cb) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
@@ -370,7 +370,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wh.field_cb != null) {
+          if (ValidatedTextField.field_cb != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -390,7 +390,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (wh.field_cb != null) {
+        if (ValidatedTextField.field_cb != null) {
           return null;
         }
         if (null != kc.field_d &&
@@ -576,7 +576,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_14_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != wh.field_cb) {
+          if (null != ValidatedTextField.field_cb) {
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
@@ -807,14 +807,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             md.field_a = md.field_a - 50;
             fb.field_b.setSize(wm.field_ab, im.field_b);
             fb.field_b.setVisible(true);
-            boolean decompiledSharedTail0 = (wh.field_cb != null &&
+            boolean decompiledSharedTail0 = (ValidatedTextField.field_cb != null &&
               null == sf.field_o);
             if (!decompiledSharedTail0) {
               fb.field_b.setLocation(ei.field_kb, vf.field_c);
               decompiledSharedTail0 = (Confined.field_J);
             }
             if (decompiledSharedTail0) {
-              var6 = wh.field_cb.getInsets();
+              var6 = ValidatedTextField.field_cb.getInsets();
               fb.field_b.setLocation(var6.left + ei.field_kb, vf.field_c + var6.top);
             }
           }
@@ -918,7 +918,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != 29121) {
             this.g(103);
           }
-          if (wh.field_cb != null) {
+          if (ValidatedTextField.field_cb != null) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {

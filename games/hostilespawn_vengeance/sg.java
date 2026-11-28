@@ -59,12 +59,12 @@ final class sg {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final static pg[] a(boolean param0, String param1, ResourceArchive param2, String param3) {
+    final static IndexedSprite[] a(boolean param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        pg[] stackIn_2_0 = null;
-        pg[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -76,7 +76,7 @@ final class sg {
         try {
           var4_int = param2.getGroupIdByName((byte) -2, param1);
           if (!param0) {
-            stackIn_2_0 = (pg[]) null;
+            stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           var5 = param2.getFileIdByName(var4_int, param3, -1);
@@ -111,7 +111,7 @@ final class sg {
     final static void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        oc var2 = null;
+        GridPoint var2 = null;
         int var3 = 0;
         int[] var4 = null;
         int[] var6 = null;
@@ -139,7 +139,7 @@ final class sg {
         try {
           var25 = mm.field_m[0];
           var2 = var25.field_j;
-          var3 = var2.b(-4);
+          var3 = var2.getClampedTileIndex(-4);
           var29 = ln.field_a.field_c;
           var26 = var29;
           var4 = var26;
@@ -236,7 +236,7 @@ final class sg {
                             var23 != 24) {
                             if (var23 == 6) {
                               var19.a(8573);
-                              if (2 != var4[var19.field_j.b(-4)]) {
+                              if (2 != var4[var19.field_j.getClampedTileIndex(-4)]) {
                                 var19.field_l.a(1, (byte) 94, var19.field_c);
                               }
                               var19.field_e = var19.field_e + 1;
@@ -248,7 +248,7 @@ final class sg {
                                 var19.field_l.field_f = var19.field_l.field_f - Math.sin(3.141592653589793 * var19.field_c / 128.0) * 0.05;
                                 var19.field_l.field_a = var19.field_l.field_a - 0.05 * Math.cos(3.141592653589793 * var19.field_c / 128.0);
                                 var19.a(8573);
-                                if (2 > var4[var19.field_j.b(-4)]) {
+                                if (2 > var4[var19.field_j.getClampedTileIndex(-4)]) {
                                   var19.field_l.a(1, (byte) 94, var19.field_c);
                                 }
                                 var19.field_e = var19.field_e + 1;
@@ -259,7 +259,7 @@ final class sg {
                                 if (var23 != 7 &&
                                   var23 != 26) {
                                   if (var23 == 8) {
-                                    if (var4[var19.field_j.b(-4)] != 2) {
+                                    if (var4[var19.field_j.getClampedTileIndex(-4)] != 2) {
                                       var19.field_l.a(var19.field_h, (byte) 94, var19.field_c);
                                     }
                                     var19.a(8573);
@@ -293,14 +293,14 @@ final class sg {
                                             FrameTimer.a(var14, var19, (byte) 29, var29, var3, var16);
                                             break regionExit1;
                                           case 16:
-                                            ei.a(var19, (byte) -116, var33, var3, var29, var31);
+                                            DelayedPacket.a(var19, (byte) -116, var33, var3, var29, var31);
                                             break regionExit1;
                                           case 17:
-                                            var6[var19.field_j.b(-4)] = 100;
+                                            var6[var19.field_j.getClampedTileIndex(-4)] = 100;
                                             fm.a(var19, true, var20, var29);
                                             break regionExit1;
                                           case 30:
-                                            var6[var19.field_j.b(-4)] = 100;
+                                            var6[var19.field_j.getClampedTileIndex(-4)] = 100;
                                             fm.a(var19, true, var20, var29);
                                             break regionExit1;
                                           case 36:
@@ -355,7 +355,7 @@ final class sg {
               ib.field_c = ib.field_c - 1;
               jn.field_F[var18].field_c = jn.field_F[ib.field_c].field_c;
               jn.field_F[var18].field_l.a(jn.field_F[ib.field_c].field_l, -28860);
-              jn.field_F[var18].field_j.a((byte) 46, jn.field_F[ib.field_c].field_j);
+              jn.field_F[var18].field_j.copyCoordinatesFrom((byte) 46, jn.field_F[ib.field_c].field_j);
               jn.field_F[var18].field_h = jn.field_F[ib.field_c].field_h;
               jn.field_F[var18].field_e = jn.field_F[ib.field_c].field_e;
               jn.field_F[var18].field_i = jn.field_F[ib.field_c].field_i;
@@ -420,7 +420,7 @@ final class sg {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = ld.a(var10.field_n, 5, 113, -5 + (var10.field_i - var13.length));
+        var15 = AgeValidator.a(var10.field_n, 5, 113, -5 + (var10.field_i - var13.length));
         for (var7 = 0; 64 > var7; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();

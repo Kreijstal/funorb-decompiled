@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends tj {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static bi field_l;
     private boolean nameAvailable;
     static String field_n;
     private String checkedName;
     static String field_p;
 
-    AccountNameAvailabilityValidator(rl param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
 
-    final sc a(int param0, String param1) {
+    final sc getValidationStatus(int param0, String param1) {
         AccountServiceResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
@@ -64,7 +64,7 @@ final class AccountNameAvailabilityValidator extends tj {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String getValidationMessage(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountServiceResult var4 = null;
@@ -103,7 +103,7 @@ final class AccountNameAvailabilityValidator extends tj {
           }
           if (param0 != -126) {
             var5 = (String) null;
-            this.a(9, (String) null);
+            this.getValidationStatus(9, (String) null);
           }
           stackIn_19_0 = mh.field_D;
           return stackIn_19_0;

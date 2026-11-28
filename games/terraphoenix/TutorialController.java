@@ -410,7 +410,7 @@ final class TutorialController {
         }
         if (0 == this.field_p &&
           this.field_l == 19) {
-          le.field_q = null;
+          AgeValidator.field_q = null;
           this.field_A.a(this.field_A.client, (byte) 122);
           this.field_A.units[9].field_jb = this.field_A.units[9].field_v;
           this.field_A.units[10].field_jb = 2 * this.field_A.units[10].field_v;

@@ -219,7 +219,7 @@ final class hd {
               var9 = stackIn_46_0;
               var1_int = var1_int + ee.field_D;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (vh.field_m << 1), var1_int, -vh.field_m + var8Lifetime1, (byte) -52, hi.field_c + (jl.field_o << 1));
+                var9.a(var7Lifetime1 + (EmailFormatValidator.field_m << 1), var1_int, -EmailFormatValidator.field_m + var8Lifetime1, (byte) -52, hi.field_c + (jl.field_o << 1));
               }
               var1_int = var1_int + jl.field_o;
             }

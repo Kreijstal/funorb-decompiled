@@ -12,7 +12,7 @@ final class n {
 
     final static boolean a(byte param0) {
         int var1 = 6 / ((param0 - 54) / 57);
-        return qc.field_t;
+        return MenuScreen.field_t;
     }
 
     public static void clearStaticReferences(int param0) {

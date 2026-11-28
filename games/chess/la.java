@@ -64,7 +64,7 @@ final class la {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        BitPacketBuffer var3 = qn.field_U;
+        BitPacketBuffer var3 = EditableTextField.field_U;
         var3.writeCipheredByte(param0, -103);
         var3.writeByte(3, (byte) 47);
         int var4 = 11 % ((75 - param1) / 50);

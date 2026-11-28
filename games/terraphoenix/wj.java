@@ -81,7 +81,7 @@ final class wj {
           var9 = Terraphoenix.field_V;
           try {
             if (ig.field_e == null &&
-              !le.a(param0, (byte) 117)) {
+              !AgeValidator.a(param0, (byte) 117)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
@@ -92,9 +92,9 @@ final class wj {
               } else {
                 am.field_K = ji.a(-1, param3, false, param2);
               }
-              di.field_l.position = 0;
-              di.field_l.writeByte(14, 28);
-              di.field_l.writeByte(am.field_K.c(0).field_c, -115);
+              TextFieldValidator.field_l.position = 0;
+              TextFieldValidator.field_l.writeByte(14, 28);
+              TextFieldValidator.field_l.writeByte(am.field_K.c(0).field_c, -115);
               bc.a(-1, 0);
               mh.field_a = s.field_c;
             }
@@ -118,10 +118,10 @@ final class wj {
               kd.field_c = LevelEditor.field_j.readLong((byte) 78);
               LevelEditor.field_j.position = 0;
               gj.a(param0, param4, 1, am.field_K, param5);
-              mh.field_a = af.field_b;
+              mh.field_a = DebouncedFieldValidator.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (mh.field_a == af.field_b &&
+            if (mh.field_a == DebouncedFieldValidator.field_b &&
               FrameTimer.a(-115, 1)) {
               var6_intLifetime1 = LevelEditor.field_j.readUnsignedByte(param1 - 45782);
               AccountRequestState.field_e = null;
@@ -210,7 +210,7 @@ final class wj {
               if (me.field_o > 0) {
                 DelegatingCanvas.field_c = true;
               }
-              di.field_l.setCipherSeed(ab.field_g, 16888);
+              TextFieldValidator.field_l.setCipherSeed(ab.field_g, 16888);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 ab.field_g[var8Lifetime1] = ab.field_g[var8Lifetime1] + 50;
               }

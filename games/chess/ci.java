@@ -579,18 +579,18 @@ class ci extends ei {
           try {
             var6 = null;
             var7 = null;
-            if (null != ol.field_N.field_a) {
-              kj.field_a = new BufferedRandomAccessFile(ol.field_N.field_a, 5200, 0);
-              ol.field_N.field_a = null;
-              var6 = new SectorCacheStore(255, kj.field_a, new BufferedRandomAccessFile(ol.field_N.field_n, 12000, 0), 2097152);
+            if (null != AccountRegistrationPanel.field_N.field_a) {
+              kj.field_a = new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_a, 5200, 0);
+              AccountRegistrationPanel.field_N.field_a = null;
+              var6 = new SectorCacheStore(255, kj.field_a, new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_n, 12000, 0), 2097152);
             }
             if (null != kj.field_a) {
               if (hj.field_n == null) {
-                hj.field_n = new BufferedRandomAccessFile[ol.field_N.field_r.length];
+                hj.field_n = new BufferedRandomAccessFile[AccountRegistrationPanel.field_N.field_r.length];
               }
               if (null == hj.field_n[param1]) {
-                hj.field_n[param1] = new BufferedRandomAccessFile(ol.field_N.field_r[param1], 12000, 0);
-                ol.field_N.field_r[param1] = null;
+                hj.field_n[param1] = new BufferedRandomAccessFile(AccountRegistrationPanel.field_N.field_r[param1], 12000, 0);
+                AccountRegistrationPanel.field_N.field_r[param1] = null;
               }
               var7 = new SectorCacheStore(param1, kj.field_a, hj.field_n[param1], 2097152);
             }
@@ -793,14 +793,14 @@ class ci extends ei {
           return;
         }
         String var2 = (String) null;
-        ld.a(oc.field_o, (String) null, 0);
+        ld.a(MatchingFieldValidator.field_o, (String) null, 0);
     }
 
     final static boolean f(int param0) {
         if (param0 > -10) {
           return false;
         }
-        return pd.field_Rb.field_Fb == gb.field_t ? true : false;
+        return pd.field_Rb.field_Fb == NetworkGameClient.field_t ? true : false;
     }
 
     final void a(boolean param0, byte param1) {

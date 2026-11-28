@@ -7,7 +7,7 @@ abstract class vh extends DualLinkNode {
     static volatile boolean field_q;
 
     final static void h(int param0) {
-        bk.field_J = null;
+        DisplayNameSelectionPanel.field_J = null;
         jf.field_i = null;
         IntrusiveDequeCursor.field_c = null;
         mh.field_i = false;

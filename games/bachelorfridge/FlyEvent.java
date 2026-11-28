@@ -136,7 +136,7 @@ final class FlyEvent extends SpecialEvent {
             if (param2 > -103) {
               return;
             }
-            el.a(var8, var6, var9, var5_int, 125, param0, SoftwareRasterizer.field_e, param1.field_v, var10, var7);
+            EmailFormatValidator.a(var8, var6, var9, var5_int, 125, param0, SoftwareRasterizer.field_e, param1.field_v, var10, var7);
             return;
           }
           return;

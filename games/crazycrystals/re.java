@@ -596,7 +596,7 @@ final class re extends ue {
           var2 += 26;
           incrementValue$12 = var1_int;
           var1_int++;
-          this.field_d[incrementValue$12] = (ik) ((Object) new mh(690, var2, 180, li.field_e, 2));
+          this.field_d[incrementValue$12] = (ik) ((Object) new mh(690, var2, 180, DebouncedFieldValidator.field_e, 2));
           var2 += 26;
           incrementValue$13 = var1_int;
           var1_int++;
@@ -644,7 +644,7 @@ final class re extends ue {
           var2 += 10;
           incrementValue$20 = var1_int;
           var1_int++;
-          this.field_d[incrementValue$20] = (ik) ((Object) new mh(690, var2, 180, dc.field_C, 2));
+          this.field_d[incrementValue$20] = (ik) ((Object) new mh(690, var2, 180, AccountRegistrationPanel.field_C, 2));
           var2 += 26;
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 12; var1_intLifetime1++) {
             this.field_s[var1_intLifetime1] = this.field_d[var1_intLifetime1].field_d;

@@ -67,7 +67,7 @@ final class go extends ScoreModifier {
           if (param0 != -21587) {
             return;
           }
-          var5 = ga.field_J;
+          var5 = EditableTextField.field_J;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -91,7 +91,7 @@ final class go extends ScoreModifier {
 
     final static void b(int param0) {
         ne.field_b = false;
-        kd.field_n.readUnsignedByte(param0 ^ 287);
+        ConfirmedEmailAvailabilityValidator.field_n.readUnsignedByte(param0 ^ 287);
         if (param0 != 480) {
           field_l = (ef) null;
         }

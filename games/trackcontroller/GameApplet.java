@@ -71,7 +71,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (f.field_c == this &&
             !jk.field_a) {
-            v.field_a = qg.correctedCurrentTimeMillis(false);
+            DebouncedFieldValidator.field_a = qg.correctedCurrentTimeMillis(false);
             wl.sleepMillis(5000L, false);
             field_f = null;
             this.a(-121, false);
@@ -220,7 +220,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           ki.field_f.addFocusListener((java.awt.event.FocusListener) (this));
           ki.field_f.requestFocus();
-          lb.field_M = true;
+          EditableTextField.field_M = true;
           vj.field_b = true;
           vh.field_q = true;
           mj.field_c = false;
@@ -385,7 +385,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != 48) {
             field_c = (BitmapFont) null;
           }
-          stackIn_4_0 = -bk.field_D + cd.field_b;
+          stackIn_4_0 = -DisplayNameSelectionPanel.field_D + cd.field_b;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -400,7 +400,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (this == f.field_c &&
             !jk.field_a) {
-            v.field_a = 4000L + qg.correctedCurrentTimeMillis(false);
+            DebouncedFieldValidator.field_a = 4000L + qg.correctedCurrentTimeMillis(false);
             return;
           }
           return;
@@ -419,7 +419,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           if (f.field_c == this &&
             !jk.field_a) {
-            v.field_a = 0L;
+            DebouncedFieldValidator.field_a = 0L;
             return;
           }
           return;
@@ -503,7 +503,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_64_0 = hd.a(-123, var2.charAt(var3));
+                      stackIn_64_0 = ConfirmedEmailAvailabilityValidator.a(-123, var2.charAt(var3));
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -580,8 +580,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 wl.field_i = qk.j(-17514);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != v.field_a) {
-                    stackIn_97_0 = compareLongs(v.field_a, qg.correctedCurrentTimeMillis(false));
+                  if (0L != DebouncedFieldValidator.field_a) {
+                    stackIn_97_0 = compareLongs(DebouncedFieldValidator.field_a, qg.correctedCurrentTimeMillis(false));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_97_0 <= 0)) {
@@ -589,12 +589,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    v.field_f = wl.field_i.waitAndCountTicks((byte) 120, ba.field_f);
+                    DebouncedFieldValidator.field_f = wl.field_i.waitAndCountTicks((byte) 120, ba.field_f);
                     stackIn_97_0 = 0;
                   }
                   var3 = stackIn_97_0;
                   do {
-                    if (!(v.field_f > var3)) {
+                    if (!(DebouncedFieldValidator.field_f > var3)) {
                       this.b(57);
                       f.a(ki.field_f, (byte) -127, rg.field_c);
                       break;
@@ -679,7 +679,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var6 = this;
           synchronized (var6) {
-            lb.field_M = vj.field_b;
+            EditableTextField.field_M = vj.field_b;
           }
           this.a(false);
           return;

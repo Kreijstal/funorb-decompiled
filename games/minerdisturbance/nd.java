@@ -55,7 +55,7 @@ final class nd {
             return (pe) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = cl.a(-95, var6);
+          var2 = LoginPanel.a(-95, var6);
           if (var2 == null) {
             return null;
           }
@@ -65,7 +65,7 @@ final class nd {
           var3 = (pe) (ae.field_a.a(-7895, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_ob);
-            var4 = cl.a(-95, var7);
+            var4 = LoginPanel.a(-95, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;

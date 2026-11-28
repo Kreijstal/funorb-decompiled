@@ -47,7 +47,7 @@ final class wf {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = il.a(var7, (byte) 21);
+          var2 = EmailFormatValidator.a(var7, (byte) 21);
           if (var2 == null) {
             var2 = param1;
           }
@@ -58,7 +58,7 @@ final class wf {
           }
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_F);
-            var4 = il.a(var8, (byte) 21);
+            var4 = EmailFormatValidator.a(var8, (byte) 21);
             if (var4 == null) {
               var4 = var3.field_F;
             }

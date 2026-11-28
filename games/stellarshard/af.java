@@ -6,7 +6,7 @@ final class af extends IntrusiveNode {
     static int field_q;
     static int field_k;
     int[] field_s;
-    static la field_r;
+    static LoginPanel field_r;
     boolean field_m;
     static int field_l;
     static int field_o;

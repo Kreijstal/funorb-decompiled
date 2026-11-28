@@ -28,11 +28,11 @@ final class MixedSupport090 extends MixedSupport043 {
         }
     }
 
-    final static SceneWidgetPart013 computeSceneWidgetPart0131142(int integerArgument1, int integerArgument2) {
+    final static LobbyRoomRow computeSceneWidgetPart0131142(int integerArgument1, int integerArgument2) {
         if (integerArgument2 != 8) {
           stringState0376 = (String) null;
         }
-        return MixedSupport121.secondaryNodeHashTableState0005 != null ? (SceneWidgetPart013) (MixedSupport121.secondaryNodeHashTableState0005.get(integerArgument2 ^ 24718, (long)integerArgument1)) : null;
+        return MixedSupport121.secondaryNodeHashTableState0005 != null ? (LobbyRoomRow) (MixedSupport121.secondaryNodeHashTableState0005.get(integerArgument2 ^ 24718, (long)integerArgument1)) : null;
     }
 
     final static RgbSprite[] computeRgbSpriteArray1143(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {

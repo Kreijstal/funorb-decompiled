@@ -8,17 +8,17 @@ final class ge {
 
     final static ph[] b(int param0) {
         if (param0 == 27579) {
-          return new ph[]{nj.field_k, w.field_g, DualLinkNode.field_k};
+          return new ph[]{EmailFormatValidator.field_k, w.field_g, DualLinkNode.field_k};
         }
         return (ph[]) null;
     }
 
     final static eh[] a(boolean param0) {
         if (param0) {
-          return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, hg.field_j, bf.field_p, SecondaryNodeDeque.field_b, fh.field_C};
+          return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, AgeValidator.field_j, PasswordValidator.field_p, SecondaryNodeDeque.field_b, fh.field_C};
         }
         ge.a(true);
-        return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, hg.field_j, bf.field_p, SecondaryNodeDeque.field_b, fh.field_C};
+        return new eh[]{ig.field_c, qh.field_c, fb.field_pb, mj.field_f, bh.field_e, jk.field_M, ji.field_d, il.field_c, va.field_e, ig.field_b, AgeValidator.field_j, PasswordValidator.field_p, SecondaryNodeDeque.field_b, fh.field_C};
     }
 
     public static void clearStaticReferences(int param0) {

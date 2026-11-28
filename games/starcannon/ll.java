@@ -67,7 +67,7 @@ final class ll {
             }
             var4 = jl.field_h;
             if (fc.field_b != 0.0) {
-              var4 = (int)((double)var4 + di.field_l.nextGaussian() * fc.field_b);
+              var4 = (int)((double)var4 + AgeValidator.field_l.nextGaussian() * fc.field_b);
               if (0 > var4) {
                 var4 = 0;
               }

@@ -52,12 +52,12 @@ class PacketBuffer extends IntrusiveNode {
           }
           if (field_i == Archive.field_d &&
             param0.equals(uh.field_r)) {
-            field_i = el.field_p;
-            stackIn_11_0 = a.field_h;
+            field_i = MatchingFieldValidator.field_p;
+            stackIn_11_0 = TextFieldValidator.field_h;
             return stackIn_11_0;
           }
           uh.field_r = param0;
-          a.field_h = null;
+          TextFieldValidator.field_h = null;
           field_i = gf.field_Z;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);

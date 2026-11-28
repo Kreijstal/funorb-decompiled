@@ -37,7 +37,7 @@ final class aj {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        af.field_a = param4;
+        DebouncedFieldValidator.field_a = param4;
         fh.field_a = param3;
         DelegatingCanvas.field_b = param2;
         if (param1 != -19605) {

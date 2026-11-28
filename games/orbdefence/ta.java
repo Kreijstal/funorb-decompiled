@@ -57,7 +57,7 @@ class ta extends pj implements c {
     }
 
     final static void a(int param0, kc param1, kc param2, int param3) {
-        vi.field_I = param3;
+        EditableTextField.field_I = param3;
         jd.field_a = param1;
         ck.field_g = param2;
         jk.b(SoftwareRasterizer.field_l / 2, SoftwareRasterizer.field_f / 2, param0 ^ 249);
@@ -274,7 +274,7 @@ class ta extends pj implements c {
           }
           jc.field_k.d();
           var1.d(0, 0);
-          oc.g((byte) -105);
+          ValidatedTextField.g((byte) -105);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ta.EA(" + param0 + ')');
         }

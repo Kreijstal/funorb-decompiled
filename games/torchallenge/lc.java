@@ -134,24 +134,24 @@ final class lc extends IntrusiveNode {
         int var5Lifetime2;
         var2 = -1;
         var5 = 0;
-        if (v.field_X[0][rf.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
-          RandomAccessCacheFile.field_e < v.field_X[0][rf.field_ib][param0][1]) {
-          var4 = v.field_X[0][rf.field_ib][param0][1];
-          var3 = v.field_X[0][rf.field_ib][param0][0];
+        if (v.field_X[0][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < v.field_X[0][ValidatedTextField.field_ib][param0][1]) {
+          var4 = v.field_X[0][ValidatedTextField.field_ib][param0][1];
+          var3 = v.field_X[0][ValidatedTextField.field_ib][param0][0];
           var5Lifetime1 = -var3 + RandomAccessCacheFile.field_e;
           var2 = var5Lifetime1 * 256 / (var4 - var3);
         }
-        if (v.field_X[1][rf.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
-          RandomAccessCacheFile.field_e < v.field_X[1][rf.field_ib][param0][1]) {
-          var3Lifetime1 = v.field_X[1][rf.field_ib][param0][0];
-          var4Lifetime1 = v.field_X[1][rf.field_ib][param0][1];
+        if (v.field_X[1][ValidatedTextField.field_ib][param0][0] <= RandomAccessCacheFile.field_e &&
+          RandomAccessCacheFile.field_e < v.field_X[1][ValidatedTextField.field_ib][param0][1]) {
+          var3Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][param0][0];
+          var4Lifetime1 = v.field_X[1][ValidatedTextField.field_ib][param0][1];
           var5Lifetime2 = -var3Lifetime1 + RandomAccessCacheFile.field_e;
           var2 = 256 - 256 * var5Lifetime2 / (-var3Lifetime1 + var4Lifetime1);
         }
-        if (v.field_X[0][rf.field_ib][param0][0] > RandomAccessCacheFile.field_e) {
+        if (v.field_X[0][ValidatedTextField.field_ib][param0][0] > RandomAccessCacheFile.field_e) {
           var2 = 0;
         }
-        if (RandomAccessCacheFile.field_e >= v.field_X[param1][rf.field_ib][param0][1]) {
+        if (RandomAccessCacheFile.field_e >= v.field_X[param1][ValidatedTextField.field_ib][param0][1]) {
           var2 = 0;
         }
         return var2;

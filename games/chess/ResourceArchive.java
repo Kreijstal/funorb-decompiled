@@ -11,7 +11,7 @@ final class ResourceArchive {
     private ArchiveIndex field_d;
     private Object[][] field_e;
     static String field_h;
-    static wf field_b;
+    static LoginPanel field_b;
     static PlatformTaskDispatcher field_g;
     static int field_a;
     static PcmSample[] field_l;
@@ -55,7 +55,7 @@ final class ResourceArchive {
 
     final int getGroupCapacity(boolean param0) {
         if (param0) {
-          field_b = (wf) null;
+          field_b = (LoginPanel) null;
         }
         if (!this.ensureIndexLoaded((byte) 126)) {
           return -1;
@@ -544,7 +544,7 @@ final class ResourceArchive {
                   var19 = var18;
                 }
                 if (this.field_f == 0) {
-                  var7[var19] = vm.storeBytes(25633, var40[var18], false);
+                  var7[var19] = TextFieldValidator.storeBytes(25633, var40[var18], false);
                 } else {
                   var7[var19] = var40[var18];
                 }
@@ -560,7 +560,7 @@ final class ResourceArchive {
               var7[var12] = var37;
               return true;
             }
-            var7[var12] = vm.storeBytes(25633, var44, false);
+            var7[var12] = TextFieldValidator.storeBytes(25633, var44, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -669,7 +669,7 @@ final class ResourceArchive {
         var2 = Chess.field_G;
         try {
           if (null == qd.field_w) {
-            qd.field_w = new qe();
+            qd.field_w = new ChessBoardRenderer();
           }
           MusicPatchPcmStream.field_q = new wg(100, 100, 150, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
           hg.field_b = new wg(100, 100, 150, bj.field_bb[0], wh.field_c, bj.field_bb[1], dj.field_t, (RgbSprite) null);
@@ -727,7 +727,7 @@ final class ResourceArchive {
           this.field_m = (Object[]) (this.field_m[5]);
         }
         if (!this.field_k) {
-          this.field_m[param0] = vm.storeBytes(dm.a(param1, 20325), this.field_i.c(param0, 1), false);
+          this.field_m[param0] = TextFieldValidator.storeBytes(dm.a(param1, 20325), this.field_i.c(param0, 1), false);
         } else {
           this.field_m[param0] = this.field_i.c(param0, 1);
         }

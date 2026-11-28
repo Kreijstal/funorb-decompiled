@@ -29,21 +29,21 @@ final class gg {
         int var1Lifetime1;
         int var1Lifetime2;
         k.field_b = null;
-        if (qc.field_y < 0) {
+        if (MenuScreen.field_y < 0) {
           var1 = 80 % ((-39 - param0) / 42);
           stackIn_3_0 = wf.field_w;
           stackIn_4_1 = (null == k.field_b) ? false : true;
           stackIn_3_0.field_w = stackIn_4_1;
           return;
         }
-        if (qc.field_y >= ao.field_o) {
+        if (MenuScreen.field_y >= ao.field_o) {
           var1Lifetime1 = 80 % ((-39 - param0) / 42);
           stackIn_8_0 = wf.field_w;
           stackIn_9_1 = (null == k.field_b) ? false : true;
           stackIn_8_0.field_w = stackIn_9_1;
           return;
         }
-        var1Lifetime2 = qc.field_y - vd.field_a;
+        var1Lifetime2 = MenuScreen.field_y - vd.field_a;
         if (var1Lifetime2 < 0) {
           var1Lifetime2 = 80 % ((-39 - param0) / 42);
           stackIn_13_0 = wf.field_w;
@@ -107,7 +107,7 @@ final class gg {
           if (null != a.field_n) {
             a.field_n.j((byte) 51);
           }
-          wo.field_e = new dn(param2, param1, false, true, true);
+          wo.field_e = new LoginPanel(param2, param1, false, true, true);
           ta.field_a.b(1, wo.field_e);
           if (param0 < -88) {
             return;
@@ -168,7 +168,7 @@ final class gg {
 
     final static void b(int param0) {
         String var1 = null;
-        if (!qc.field_t) {
+        if (!MenuScreen.field_t) {
           throw new IllegalStateException();
         }
         if (param0 == 0) {
@@ -176,7 +176,7 @@ final class gg {
             a.field_n.j((byte) 56);
           }
           var1 = dm.a(param0 + 121);
-          wo.field_e = new dn(var1, (String) null, true, false, false);
+          wo.field_e = new LoginPanel(var1, (String) null, true, false, false);
           lg.field_w.a(ta.field_a, -1);
           ta.field_a.b(1, wo.field_e);
           ta.field_a.h((byte) 59);

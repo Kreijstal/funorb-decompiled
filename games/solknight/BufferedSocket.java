@@ -381,7 +381,7 @@ final class BufferedSocket implements Runnable {
             return stackIn_4_0;
           }
           if (64 < var2_int) {
-            stackIn_7_0 = el.field_o;
+            stackIn_7_0 = MatchingFieldValidator.field_o;
             return stackIn_7_0;
           }
           if (param1.charAt(0) == 34) {
@@ -469,7 +469,7 @@ final class BufferedSocket implements Runnable {
             if (bc.field_K.d((byte) -38)) {
               var1_int = 1;
             }
-            if (13 != el.field_n) {
+            if (13 != MatchingFieldValidator.field_n) {
               continue;
             }
             var2 = 1;

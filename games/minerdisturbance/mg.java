@@ -59,11 +59,11 @@ final class mg {
             field_f = 8;
           }
           while (true) {
-            dupTemp$2 = (tm) (ok.field_b.removeFirst(63854));
+            dupTemp$2 = (tm) (DebouncedFieldValidator.field_b.removeFirst(63854));
             var3 = dupTemp$2;
             var1 = var3;
             if (null != dupTemp$2) {
-              ke.field_X[var3.field_s] = false;
+              ValidatedTextField.field_X[var3.field_s] = false;
               continue;
             }
             break;
@@ -75,7 +75,7 @@ final class mg {
             if (null == dupTemp$3) {
               return;
             }
-            ke.field_X[var4.field_s] = false;
+            ValidatedTextField.field_X[var4.field_s] = false;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

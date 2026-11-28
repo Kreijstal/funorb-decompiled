@@ -6,7 +6,7 @@ final class ob extends le {
     private String field_J;
     private int field_K;
     static String field_I;
-    private wa field_L;
+    private FieldValidator field_L;
     static String field_M;
     private Sprite field_H;
     static String field_F;
@@ -45,10 +45,10 @@ final class ob extends le {
           regionExit2: {
             regionExit3: {
               var14 = Transmogrify.field_A ? 1 : 0;
-              var6 = this.field_L.a(27835);
+              var6 = this.field_L.getValidationStatus(27835);
               if (var6 != ek.field_a &&
                 fi.field_u != var6) {
-                var5 = this.field_L.c(30523);
+                var5 = this.field_L.getValidationMessage(30523);
                 if (var5 == null) {
                   var5 = this.field_J;
                   break regionExit3;
@@ -69,7 +69,7 @@ final class ob extends le {
         }
         var7 = 97 % ((77 - param3) / 34);
         super.a(param0, param1, param2, (byte) 111);
-        var6Lifetime1 = this.field_L.a(27835);
+        var6Lifetime1 = this.field_L.getValidationStatus(27835);
         var9 = (m) ((Object) this.field_q);
         var10 = param0 + this.field_p;
         var11 = var9.a((UiWidget) (this), 68, param1) + (var9.a((UiWidget) (this), -2).a(126) >> 1);
@@ -101,7 +101,7 @@ final class ob extends le {
         }
     }
 
-    ob(wa param0, String param1, int param2, int param3, int param4, int param5) {
+    ob(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, MouseWheelInput.b(true));
         try {
           this.field_J = param1;
@@ -130,11 +130,11 @@ final class ob extends le {
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
           if (null == ue.field_c[param1]) {
-            ue.field_c[param1] = new IndexedSprite(wl.field_K.field_n, wl.field_K.field_m, 256);
+            ue.field_c[param1] = new IndexedSprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m, 256);
             ue.field_c[param1].field_h = hk.field_a.field_y;
           }
           if (null == tj.field_s) {
-            tj.field_s = new Sprite(wl.field_K.field_n, wl.field_K.field_m);
+            tj.field_s = new Sprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m);
           }
           tj.field_s.e();
           SoftwareRasterizer.clearRaster();
@@ -187,7 +187,7 @@ final class ob extends le {
           if (param1 < -11) {
             return false;
           }
-          this.field_L = (wa) null;
+          this.field_L = (FieldValidator) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

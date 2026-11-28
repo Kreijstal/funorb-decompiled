@@ -182,11 +182,11 @@ final class ja {
         var9 = 60;
         var8 = var8 + (-20 + var9 * 3 / 2);
         if (this.field_f.field_h == 0) {
-          hi.field_g[0].e(340, var8, 255);
+          TextFieldValidator.field_g[0].e(340, var8, 255);
         }
         var10 = qb.b((byte) 123) ? 1 : 0;
         if (this.field_f.field_h == 1) {
-          stackIn_15_0 = hi.field_g[1];
+          stackIn_15_0 = TextFieldValidator.field_g[1];
           stackIn_15_1 = 340;
           stackIn_15_2 = var8;
           if (var10 == 0) {
@@ -197,7 +197,7 @@ final class ja {
           ((RgbSprite) (Object) stackIn_15_0).e(stackIn_15_1, stackIn_15_2, stackIn_16_3);
         }
         if (this.field_f.field_h == 2) {
-          stackIn_21_0 = hi.field_g[2];
+          stackIn_21_0 = TextFieldValidator.field_g[2];
           stackIn_21_1 = 340;
           stackIn_21_2 = var8;
           if (var10 == 0) {
@@ -208,7 +208,7 @@ final class ja {
           ((RgbSprite) (Object) stackIn_21_0).e(stackIn_21_1, stackIn_21_2, stackIn_22_3);
         }
         if (this.field_f.field_h == 3) {
-          stackIn_27_0 = hi.field_g[3];
+          stackIn_27_0 = TextFieldValidator.field_g[3];
           stackIn_27_1 = 340;
           stackIn_27_2 = var8;
           if ((8 & lb.field_g) != 0 &&
@@ -220,7 +220,7 @@ final class ja {
           ((RgbSprite) (Object) stackIn_27_0).e(stackIn_27_1, stackIn_27_2, stackIn_29_3);
         }
         if (this.field_f.field_h == 4) {
-          stackIn_34_0 = hi.field_g[4];
+          stackIn_34_0 = TextFieldValidator.field_g[4];
           stackIn_34_1 = 340;
           stackIn_34_2 = var8;
           if (0 != (4194304 & lb.field_g) &&
@@ -232,7 +232,7 @@ final class ja {
           ((RgbSprite) (Object) stackIn_34_0).e(stackIn_34_1, stackIn_34_2, stackIn_35_3);
         }
         if (this.field_f.field_h == 5) {
-          stackIn_40_0 = hi.field_g[5];
+          stackIn_40_0 = TextFieldValidator.field_g[5];
           stackIn_40_1 = 340;
           stackIn_40_2 = var8;
           if (0 != (4194304 & lb.field_g) &&
@@ -787,7 +787,7 @@ final class ja {
             (decompiledFrameRemainder3)) {
             var5 = 12;
             if (~var5 != ~bl.field_p) {
-              hi.a(ee.field_b[var5], 2, false, 1, true, 2);
+              TextFieldValidator.a(ee.field_b[var5], 2, false, 1, true, 2);
             }
             bl.field_p = var5;
             if (!this.field_f.a((byte) -1)) {
@@ -1053,7 +1053,7 @@ final class ja {
             (decompiledFrameRemainder17) &&
             (decompiledFrameRemainder3)) {
             if (bl.field_p != 12) {
-              hi.a(ee.field_b[12], 2, false, 1, true, 2);
+              TextFieldValidator.a(ee.field_b[12], 2, false, 1, true, 2);
             }
             bl.field_p = 12;
             if (!this.field_f.a((byte) -1)) {
@@ -1366,7 +1366,7 @@ final class ja {
               me.field_n.d(var10 + 8, var11_int);
             }
             if (~n.field_a != ~var9_int) {
-              hi.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
+              TextFieldValidator.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
               if (!(var10 > ua.field_a) &&
                 !(DiskCacheWorker.field_d < var11_int) &&
                 !(ua.field_a >= (var10 + 80)) &&
@@ -1377,7 +1377,7 @@ final class ja {
               }
             } else {
               hg.field_ab.e(var10, var11_int - 5, 192);
-              hi.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
+              TextFieldValidator.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
             }
             ob.field_I.c(gb.field_g[var9_int], 40 + var10, var11_int + 70, 16777215, 0);
             var9_int++;
@@ -1410,7 +1410,7 @@ final class ja {
               var9 = PcmOutputWorker.field_a;
               var12 = var11.field_i[dm.field_e];
               var32 = var11.field_l[dm.field_e];
-              var14 = oc.a(dm.field_e, -1, mm.field_A, var11);
+              var14 = ValidatedTextField.a(dm.field_e, -1, mm.field_A, var11);
               var10_ref_sc.a("10. ");
               var15 = jd.field_c.field_H + 140;
               var16 = 310;
@@ -2057,7 +2057,7 @@ final class ja {
         var8 = var2 + var5;
         do {
           if (var8 >= (-var2 + var7 + var5)) {
-            this.a(-29253, hi.field_l);
+            this.a(-29253, TextFieldValidator.field_l);
             var8 = 18;
             break;
           }
@@ -2356,7 +2356,7 @@ final class ja {
           discarded$0 = this.d(-118, -13);
         }
         if (param0 == 103) {
-          return nb.field_o;
+          return AgeValidator.field_o;
         }
         if (param0 == 104) {
           return PacketBuffer.field_h;

@@ -46,7 +46,7 @@ abstract class ua {
           var3 = 0;
           if (var1_int != 0 &&
             0 <= kb.field_g.field_g) {
-            var3 = di.field_e[kb.field_g.field_g];
+            var3 = IndexedSpriteLayer.field_e[kb.field_g.field_g];
             if (var3 == 2) {
               qo.g((byte) -68);
             } else if (var3 == 5) {

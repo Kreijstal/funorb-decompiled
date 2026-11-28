@@ -245,14 +245,14 @@ final class eq extends TextureOperator {
               param2 <= 105) {
               var4 = args;
               vj.a((byte) -76, var4);
-              rf.field_p = oq.createAccountSuggestionsResult(param3 - 11, args);
+              MatchingFieldValidator.field_p = oq.createAccountSuggestionsResult(param3 - 11, args);
             } else {
-              rf.field_p = fn.createAccountErrorResult(param2, true, param1);
+              MatchingFieldValidator.field_p = fn.createAccountErrorResult(param2, true, param1);
             }
           } else {
             stackIn_4_0 = -2956;
             stackIn_5_1 = !(ea.field_e >= 13);
-            rf.field_p = gi.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
+            MatchingFieldValidator.field_p = gi.createAccountSuccessResult(stackIn_4_0, stackIn_5_1);
             var6 = (String[]) null;
             vj.a((byte) -107, (String[]) null);
           }

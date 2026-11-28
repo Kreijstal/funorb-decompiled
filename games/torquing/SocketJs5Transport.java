@@ -1505,7 +1505,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "cancel");
                 if (null != var2) {
-                  dg.field_j = SecondaryNodeDeque.a(var2, false);
+                  TranslucentSpriteLayer.field_j = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "pleaselogintoplay");
             }
@@ -1567,7 +1567,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "login");
                 if (var2 != null) {
-                  qp.field_r = SecondaryNodeDeque.a(var2, false);
+                  AchievementProgressUpdate.field_r = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "goback");
                 if (null != var2) {
@@ -1611,7 +1611,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "connectionlost_reconnecting");
                 if (var2 != null) {
-                  af.field_a = SecondaryNodeDeque.a(var2, false);
+                  MenuLayer.field_a = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "connectionlost_withreason");
                 if (null != var2) {
@@ -1902,7 +1902,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "create_displayname");
                 if (var2 != null) {
-                  ad.field_l = SecondaryNodeDeque.a(var2, false);
+                  ConfirmedEmailAvailabilityValidator.field_l = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_password");
                 if (var2 != null) {
@@ -1950,7 +1950,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "create_suggestions");
                 if (var2 != null) {
-                  bi.field_I = SecondaryNodeDeque.a(var2, false);
+                  LevelRun.field_I = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_more_suggestions");
                 if (null != var2) {
@@ -1998,7 +1998,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "login_create_tooltip");
                 if (null != var2) {
-                  um.field_q = SecondaryNodeDeque.a(var2, false);
+                  MatchingFieldValidator.field_q = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "login_justplay_tooltip");
                 if (null != var2) {
@@ -2548,7 +2548,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "next");
                 if (var2 != null) {
-                  gp.field_M = SecondaryNodeDeque.a(var2, false);
+                  ValidatedTextField.field_M = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "graphics_colon");
                 if (null != var2) {
@@ -2976,27 +2976,27 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,0");
                 if (null != var2) {
-                  qk.field_l[0] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[0] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,1");
                 if (var2 != null) {
-                  qk.field_l[1] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  qk.field_l[2] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  qk.field_l[3] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[3] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  qk.field_l[4] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[4] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  qk.field_l[5] = SecondaryNodeDeque.a(var2, false);
+                  LevelCompletionUpdate.field_l[5] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "quickchat_shortcut_keys,0");
                 if (null != var2) {
@@ -3128,7 +3128,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "reconnect_exitfs");
                 if (null != var2) {
-                  gp.field_P = SecondaryNodeDeque.a(var2, false);
+                  ValidatedTextField.field_P = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "reconnect_exitfs_quit");
                 if (var2 != null) {
@@ -3152,7 +3152,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_button_accept");
                 if (null != var2) {
-                  tn.field_m = SecondaryNodeDeque.a(var2, false);
+                  EmailFormatValidator.field_m = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_accept_afteraccept");
                 if (var2 != null) {
@@ -3164,7 +3164,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_accept_aftercancel");
                 if (null != var2) {
-                  gp.field_Q = SecondaryNodeDeque.a(var2, false);
+                  ValidatedTextField.field_Q = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_accept_countdown_sing");
                 if (null != var2) {
@@ -3232,7 +3232,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "mb_achievement_count_1");
                 if (null != var2) {
-                  di.field_c = SecondaryNodeDeque.a(var2, false);
+                  IndexedSpriteLayer.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mb_achievement_count_2");
                 if (null != var2) {
@@ -3324,7 +3324,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "serviceunavailable");
                 if (var2 != null) {
-                  qp.field_o = SecondaryNodeDeque.a(var2, false);
+                  AchievementProgressUpdate.field_o = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "createtouse");
                 if (null != var2) {
@@ -3406,7 +3406,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "discard");
                 if (var2 != null) {
-                  pe.field_M = SecondaryNodeDeque.a(var2, false);
+                  LoginPanel.field_M = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin4,1");
                 if (var2 != null) {
@@ -3442,31 +3442,31 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,1");
                 if (null != var2) {
-                  mh.field_f[1] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,2");
                 if (null != var2) {
-                  mh.field_f[2] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  mh.field_f[3] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[3] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  mh.field_f[4] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[4] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,5");
                 if (null != var2) {
-                  mh.field_f[5] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[5] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,6");
                 if (var2 != null) {
-                  mh.field_f[6] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[6] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mustlogin_alternate,7");
                 if (null != var2) {
-                  mh.field_f[7] = SecondaryNodeDeque.a(var2, false);
+                  MenuScreen.field_f[7] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "subscription_cost_monthly,0");
                 if (null != var2) {
@@ -3783,7 +3783,7 @@ final class SocketJs5Transport extends Js5Transport {
         RuntimeException var4 = null;
         try {
           if (d.field_r == null) {
-            d.field_r = new sp(dc.field_a, bi.field_u);
+            d.field_r = new sp(dc.field_a, LevelRun.field_u);
             dc.field_a.a(d.field_r, (byte) 97);
           }
           d.field_r.a(param2, 116, param3, param0);

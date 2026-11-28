@@ -11,7 +11,7 @@ final class bo {
     final static void a(byte param0) {
         SecondaryNodeHashTable.field_g = false;
         cf.field_Nb = false;
-        uk.a(false, -1);
+        ChessBoardState.a(false, -1);
         DelegatingCanvas.field_a = ji.field_T;
         MidiPcmStream.field_A = ji.field_T;
         if (param0 <= 30) {
@@ -41,7 +41,7 @@ final class bo {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          vm.a(var3, 11440, param0, var4, var2);
+          TextFieldValidator.a(var3, 11440, param0, var4, var2);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "bo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -89,8 +89,8 @@ final class gk {
                 var9 = var9 | 1;
               }
               AccountRequestState.field_c.position = 0;
-              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
-              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, ValidatedTextField.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, ValidatedTextField.field_P.nextInt());
               AccountRequestState.field_c.writePrefixedString(-104, var14);
               AccountRequestState.field_c.writePrefixedString(-106, var8);
               var15 = (CharSequence) ((Object) param3);
@@ -110,8 +110,8 @@ final class gk {
               pg.field_fb.backpatchShortLength(-1, -var10 + pg.field_fb.position);
             } else {
               AccountRequestState.field_c.position = 0;
-              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
-              AccountRequestState.field_c.writeInt(0, pl.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, ValidatedTextField.field_P.nextInt());
+              AccountRequestState.field_c.writeInt(0, ValidatedTextField.field_P.nextInt());
               stackIn_14_0 = AccountRequestState.field_c;
               stackIn_14_1 = 96;
               if (!param2.a(5)) {
@@ -139,8 +139,8 @@ final class gk {
           }
           if (GzipDecompressor.field_d == ByteStorage.field_d &&
             GameEntity.b(64, 1)) {
-            var9Lifetime1 = ae.field_N.readUnsignedByte(4);
-            ae.field_N.position = 0;
+            var9Lifetime1 = EditableTextField.field_N.readUnsignedByte(4);
+            EditableTextField.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               fc.field_b = new String[-100 + var9Lifetime1];
@@ -156,8 +156,8 @@ final class gk {
               }
               if (var9Lifetime1 == 99) {
                 GameEntity.b(64, IntrusiveDequeCursor.b(1));
-                nb.field_M = new Boolean(h.a(ae.field_N, 31184));
-                ae.field_N.position = 0;
+                nb.field_M = new Boolean(h.a(EditableTextField.field_N, 31184));
+                EditableTextField.field_N.position = 0;
               } else {
                 GzipDecompressor.field_d = DualLinkDeque.field_c;
                 ja.field_t = var9Lifetime1;
@@ -168,12 +168,12 @@ final class gk {
           if (GzipDecompressor.field_d == stellarshard.field_E) {
             var9Lifetime2 = 2;
             if (GameEntity.b(64, var9Lifetime2)) {
-              var10Lifetime1 = ae.field_N.readUnsignedShort((byte) 74);
-              ae.field_N.position = 0;
+              var10Lifetime1 = EditableTextField.field_N.readUnsignedShort((byte) 74);
+              EditableTextField.field_N.position = 0;
               if (GameEntity.b(64, var10Lifetime1)) {
                 var11 = fc.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  fc.field_b[var12] = ae.field_N.readPrefixedString((byte) 94);
+                  fc.field_b[var12] = EditableTextField.field_N.readPrefixedString((byte) 94);
                 }
                 IntrusiveDeque.c(-2290);
                 ta.field_u = false;
@@ -185,12 +185,12 @@ final class gk {
           if (GzipDecompressor.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
             if (ja.field_t == 255) {
-              var9_ref_String = ae.field_N.readNullableString(0);
+              var9_ref_String = EditableTextField.field_N.readNullableString(0);
               if (var9_ref_String != null) {
                 dj.a(false, hf.a((byte) -101), var9_ref_String);
               }
             } else {
-              NodeHashTableIterator.field_a = ae.field_N.readString((byte) 96);
+              NodeHashTableIterator.field_a = EditableTextField.field_N.readString((byte) 96);
             }
             IntrusiveDeque.c(-2290);
             ta.field_u = false;

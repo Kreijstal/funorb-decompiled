@@ -194,10 +194,10 @@ final class rh {
         try {
           var5 = -105 / ((52 - param0) / 57);
           var8 = param1[-1 + param1.length];
-          if (!var8.a(param2, param3, 250)) {
+          if (!var8.appendImageAndText(param2, param3, 250)) {
             var7 = new TooltipPanel(var8.field_b, var8.field_j, var8.field_m, var8.field_k, var8.field_e, var8.field_o, var8.field_d);
             var9 = var7;
-            var9.a(param2, param3, 250);
+            var9.appendImageAndText(param2, param3, 250);
             var6 = new TooltipPanel[1 + param1.length];
             dk.a(param1, 0, var6, 0, param1.length);
             var6[param1.length] = var7;
@@ -233,9 +233,9 @@ final class rh {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         if (param3 > param1) {
-          di.a(param1, (byte) 26, param4, qd.field_a[param2], param3);
+          IndexedSpriteLayer.a(param1, (byte) 26, param4, qd.field_a[param2], param3);
         } else {
-          di.a(param3, (byte) 56, param4, qd.field_a[param2], param1);
+          IndexedSpriteLayer.a(param3, (byte) 56, param4, qd.field_a[param2], param1);
         }
         if (param0 > -107) {
           Sprite[] var6 = (Sprite[]) null;

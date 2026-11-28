@@ -23,7 +23,7 @@ final class vh {
         double var5_double = 0.0;
         int var5 = 0;
         double var7 = 0.0;
-        oc var9 = null;
+        GridPoint var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -54,9 +54,9 @@ final class vh {
               Math.abs(var4) <= 512) {
               param2.field_e = param2.field_e - 1;
               if (param2.field_e < 0) {
-                mm.field_m[el.field_j] = new oj(param2.field_j, 3, rl.field_c);
-                mm.field_m[el.field_j].field_M = 0;
-                el.field_j = el.field_j + 1;
+                mm.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
+                mm.field_m[ProxySocketFactory.field_j].field_M = 0;
+                ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                 param2.field_e = 100;
               }
             }
@@ -77,8 +77,8 @@ final class vh {
               var3_double = param2.field_c * 3.141592653589793 / 128.0;
               var5_double = param2.field_l.field_f + ((double)param2.field_j.field_e - 0.5) - Math.sin(var3_double);
               var7 = param2.field_l.field_a + ((double)param2.field_j.field_g - 0.5) - Math.cos(var3_double);
-              var9 = new oc((int)var5_double, (int)var7);
-              var10 = var9.b(-4);
+              var9 = new GridPoint((int)var5_double, (int)var7);
+              var10 = var9.getClampedTileIndex(-4);
               wh.a(true, var10);
               wh.a(true, var10 - ln.field_a.field_d);
               wh.a(true, -1 + var10);
@@ -88,7 +88,7 @@ final class vh {
               wh.a(true, var10 - 1 + ln.field_a.field_d);
               wh.a(true, -ln.field_a.field_d + (var10 + 1));
               wh.a(true, ln.field_a.field_d + var10 + 1);
-              var10Lifetime1 = param2.field_j.b(-4);
+              var10Lifetime1 = param2.field_j.getClampedTileIndex(-4);
               stackIn_23_0 = (128.0 > param2.field_c) ? -1 : 1;
               var11 = stackIn_23_0;
               if (!(64.0 > param2.field_c) &&
@@ -111,14 +111,14 @@ final class vh {
           if (1 == param2.field_w) {
             var3_doubleLifetime1 = nh.a(-12149, param2, param0);
             param2.a(param1 ^ 228, var3_doubleLifetime1, 3);
-            li.field_r = param2.a(ln.field_a, 128, param2.field_o);
-            var5 = param2.field_j.b(param1 - 9);
+            MatchingFieldValidator.field_r = param2.a(ln.field_a, 128, param2.field_o);
+            var5 = param2.field_j.getClampedTileIndex(param1 - 9);
             wh.a(true, var5);
             wh.a(true, var5 - 1);
             wh.a(true, var5 - ln.field_a.field_d);
             wh.a(true, -1 + var5 - ln.field_a.field_d);
-            if (li.field_r[0] ||
-              li.field_r[1]) {
+            if (MatchingFieldValidator.field_r[0] ||
+              MatchingFieldValidator.field_r[1]) {
               param2.field_p = 0;
               param2.field_z = 0;
               param2.field_w = 4;
@@ -140,8 +140,8 @@ final class vh {
             }
             param2.c((byte) -86);
             for (var3_intLifetime1 = 0; 10 > var3_intLifetime1; var3_intLifetime1++) {
-              mm.field_m[el.field_j] = new oj(param2.field_j, 3, rl.field_c);
-              el.field_j = el.field_j + 1;
+              mm.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
+              ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             if (bm.field_c == 0) {
               CrossfadingMidiPcmStream.a(0, 1);
@@ -229,10 +229,10 @@ final class vh {
             var5 = (hm) (ih.field_x.nextForward(12684));
           }
           var2_int = 109 / ((param0 + 73) / 52);
-          var3 = ei.field_h.beginForward(-79);
+          var3 = DelayedPacket.field_h.beginForward(-79);
           while (var3 != null) {
             AccountCreationResultPanel.d(-9420, param1);
-            var3 = ei.field_h.nextForward(12684);
+            var3 = DelayedPacket.field_h.nextForward(12684);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

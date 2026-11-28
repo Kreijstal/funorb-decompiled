@@ -67,10 +67,10 @@ final class ia extends tb implements oi {
           return 0;
         }
         if (bb.field_d == 0) {
-          if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
+          if (!TextFieldValidator.field_i.ensureIndexLoaded((byte) -36)) {
             return 20;
           }
-          if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
+          if (!TextFieldValidator.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
             return 40;
           }
           if (!wf.field_e.ensureIndexLoaded((byte) -36)) {
@@ -97,10 +97,10 @@ final class ia extends tb implements oi {
               return 29;
             }
           }
-          if (!lk.field_i.ensureIndexLoaded((byte) -36)) {
+          if (!TextFieldValidator.field_i.ensureIndexLoaded((byte) -36)) {
             return 43;
           }
-          if (!lk.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
+          if (!TextFieldValidator.field_i.tryLoadGroupByName("commonui", (byte) -109)) {
             return 57;
           }
           if (!wf.field_e.ensureIndexLoaded((byte) -36)) {

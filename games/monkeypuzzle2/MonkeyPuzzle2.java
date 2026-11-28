@@ -130,10 +130,10 @@ public final class MonkeyPuzzle2 extends bi {
           ul.releaseDeclaredStaticReferences(-105);
           ra.clearStaticReferences((byte) -96);
           ha.resetStaticState((byte) -128);
-          bg.releaseDeclaredStaticReferences(20660);
+          AccountRegistrationPanel.releaseDeclaredStaticReferences(20660);
           lb.clearStaticReferences((byte) 86);
-          qi.d((byte) 98);
-          eb.releaseDeclaredStaticReferences(-109);
+          LoginPanel.d((byte) 98);
+          DisplayNameSelectionPanel.releaseDeclaredStaticReferences(-109);
           aj.clearStaticReferences(-14958);
           dk.clearStaticReferences(117);
           qd.clearStaticReferences(false);
@@ -231,8 +231,8 @@ public final class MonkeyPuzzle2 extends bi {
           il.clearStaticReferences(false);
           ci.clearStaticReferences((byte) -128);
           mh.clearDeclaredStaticReferences((byte) 99);
-          qc.releaseDeclaredStaticReferences(125);
-          rj.clearDeclaredStaticReferences(0);
+          ValidatedTextField.releaseDeclaredStaticReferences(125);
+          EditableTextField.clearDeclaredStaticReferences(0);
           pc.resetStaticState(true);
           jh.clearDeclaredStaticReferences(7434);
           cm.clearStaticReferences((byte) 111);
@@ -240,7 +240,7 @@ public final class MonkeyPuzzle2 extends bi {
           vh.clearDeclaredStaticReferences(-9473);
           vg.clearDeclaredStaticReferences(-3114);
           em.resetDeclaredStaticState(-27714);
-          wj.e((byte) -95);
+          TextFieldValidator.e((byte) -95);
           fl.clearStaticReferences((byte) -45);
           ja.clearStaticReferences(false);
           fj.c((byte) 62);
@@ -290,14 +290,14 @@ public final class MonkeyPuzzle2 extends bi {
           hc.clearStaticReferences((byte) -105);
           be.clearStaticReferences(true);
           AccountNameAvailabilityValidator.e(-17202);
-          df.clearDeclaredStaticReferences(0);
-          uk.clearDeclaredStaticReferences(98);
-          fd.clearDeclaredStaticReferences(-28970);
-          th.clearStaticReferences((byte) -107);
-          rd.resetStaticState(10396);
+          PasswordValidator.clearDeclaredStaticReferences(0);
+          EmailFormatValidator.clearDeclaredStaticReferences(98);
+          ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences(-28970);
+          AgeValidator.clearStaticReferences((byte) -107);
+          MatchingFieldValidator.resetStaticState(10396);
           sd.clearStaticReferences((byte) 122);
           bl.clearDeclaredStaticReferences(0);
-          hf.clearStaticReferences(-122);
+          DebouncedFieldValidator.clearStaticReferences(-122);
           this.field_u = null;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "MonkeyPuzzle2.JA(" + param0 + ')');
@@ -334,7 +334,7 @@ public final class MonkeyPuzzle2 extends bi {
               return;
             }
           } else {
-            if (wj.d(109)) {
+            if (TextFieldValidator.d(109)) {
               stackIn_14_0 = var5;
               stackIn_14_1 = 44;
               if (AwtRasterBuffer.field_f == null) {
@@ -346,12 +346,12 @@ public final class MonkeyPuzzle2 extends bi {
               return;
             }
             if (!WeightedObjectCache.field_h) {
-              qi.a((java.awt.Canvas) (var5), (byte) -128);
+              LoginPanel.a((java.awt.Canvas) (var5), (byte) -128);
               return;
             }
             if (!this.m(0)) {
               ResourceArchive.setLoadingStatus(h.field_f, -24119, 100.0f);
-              qi.a((java.awt.Canvas) (var5), (byte) -111);
+              LoginPanel.a((java.awt.Canvas) (var5), (byte) -111);
               return;
             }
           }
@@ -366,8 +366,8 @@ public final class MonkeyPuzzle2 extends bi {
               }
             }
             gl.a(SoftwareRasterizer.field_i, 0, lb.field_H.field_s, 0, 307200);
-            hf.field_f.b(-76);
-            uk.a(ej.field_b, (byte) 123, lb.field_H);
+            DebouncedFieldValidator.field_f.b(-76);
+            EmailFormatValidator.a(ej.field_b, (byte) 123, lb.field_H);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -377,7 +377,7 @@ public final class MonkeyPuzzle2 extends bi {
               if (qh.field_b != -1) {
                 ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 122);
               } else {
-                hf.field_f.b(-106);
+                DebouncedFieldValidator.field_f.b(-106);
               }
             }
           }
@@ -439,9 +439,9 @@ public final class MonkeyPuzzle2 extends bi {
             this.h((byte) -32);
             BoundedRandomAccessFile.field_d = false;
           }
-          if (wj.d(-26)) {
+          if (TextFieldValidator.d(-26)) {
             this.i(250);
-            if (wj.d(-76)) {
+            if (TextFieldValidator.d(-76)) {
               if (vg.c(false)) {
                 discarded$0 = this.b((byte) 36, false);
               }
@@ -521,7 +521,7 @@ public final class MonkeyPuzzle2 extends bi {
                         if (qh.field_b != -1) {
                           ProxyAuthenticationRequiredException.field_d[qh.field_b].a(-23);
                         } else {
-                          hf.field_f.e((byte) 85);
+                          DebouncedFieldValidator.field_f.e((byte) 85);
                         }
                       }
                     }
@@ -535,7 +535,7 @@ public final class MonkeyPuzzle2 extends bi {
                     ej.field_b = ej.field_b + 1;
                     if (ej.field_b == 25) {
                       if (ResourceArchive.isMessageDialogActive(false)) {
-                        df.e(param0 ^ -15328);
+                        PasswordValidator.e(param0 ^ -15328);
                       } else {
                         sk.b(false);
                       }
@@ -547,8 +547,8 @@ public final class MonkeyPuzzle2 extends bi {
                         qh.field_b = di.field_c;
                       } else {
                         cg.a(false);
-                        if (null != hf.field_f) {
-                          hf.field_f.c((byte) 4);
+                        if (null != DebouncedFieldValidator.field_f) {
+                          DebouncedFieldValidator.field_f.c((byte) 4);
                         }
                         stackIn_60_0 = 44;
                         stackIn_61_1 = !(af.field_c <= 0);
@@ -642,7 +642,7 @@ public final class MonkeyPuzzle2 extends bi {
             field_C = (ib) null;
           }
           fi.field_b = IsaacRandom.a(param0 - 92, 5);
-          df.field_p = be.a(false, true, param0 + 13303, 6, false);
+          PasswordValidator.field_p = be.a(false, true, param0 + 13303, 6, false);
           ha.field_fb = IsaacRandom.a(-117, 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -690,12 +690,12 @@ public final class MonkeyPuzzle2 extends bi {
                     hk.field_k.tryLoadAllGroups(param0 ^ 36)) {
                     if (ha.field_fb.ensureIndexLoaded(param0 - 126) &&
                       ha.field_fb.tryLoadAllGroups(0)) {
-                      if (df.field_p.ensureIndexLoaded(65) &&
-                        df.field_p.tryLoadAllGroups(0)) {
-                        if (wj.field_j.ensureIndexLoaded(123) &&
-                          wj.field_j.tryLoadGroupByName(0, "basic")) {
-                          if (wj.field_j.ensureIndexLoaded(param0 ^ -117) &&
-                            wj.field_j.tryLoadGroupByName(0, "kartika13")) {
+                      if (PasswordValidator.field_p.ensureIndexLoaded(65) &&
+                        PasswordValidator.field_p.tryLoadAllGroups(0)) {
+                        if (TextFieldValidator.field_j.ensureIndexLoaded(123) &&
+                          TextFieldValidator.field_j.tryLoadGroupByName(0, "basic")) {
+                          if (TextFieldValidator.field_j.ensureIndexLoaded(param0 ^ -117) &&
+                            TextFieldValidator.field_j.tryLoadGroupByName(0, "kartika13")) {
                             if ((ri.field_a.ensureIndexLoaded(param0 - 59) &&
                               ri.field_a.tryLoadGroupByName(0, "kartika13")) &&
                               (decompiledFrameRemainder0 = !(param1))) {
@@ -703,17 +703,17 @@ public final class MonkeyPuzzle2 extends bi {
                               return false;
                             }
                             if (decompiledFrameRemainder0) {
-                              ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
+                              ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 59.0f);
                               return false;
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
+                            ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, param0 - 35, vb.field_i), -24119, 58.0f);
                             return false;
                           }
                         }
                         if (decompiledFrameRemainder0) {
-                          ResourceArchive.setLoadingStatus(tk.a(wj.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
+                          ResourceArchive.setLoadingStatus(tk.a(TextFieldValidator.field_j, "basic", ed.field_a, 1, vb.field_i), -24119, 56.0f);
                           return false;
                         }
                       }
@@ -764,17 +764,17 @@ public final class MonkeyPuzzle2 extends bi {
             ha.field_fb != null) {
             ResourceArchive.setLoadingStatus(gd.field_a, -24119, 75.0f);
             this.d(param0 ^ -25940);
-            sj.a(ha.field_fb, wj.field_j, ri.field_a, hk.field_k, 0);
+            sj.a(ha.field_fb, TextFieldValidator.field_j, ri.field_a, hk.field_k, 0);
             ha.field_fb = null;
             hk.field_k = null;
             oe.a((byte) 101);
             return false;
           }
-          if (df.field_p != null) {
+          if (PasswordValidator.field_p != null) {
             ResourceArchive.setLoadingStatus(q.field_b, param0 - 24155, 90.0f);
             this.d(-25976);
-            v.a((byte) -121, df.field_p);
-            df.field_p = null;
+            v.a((byte) -121, PasswordValidator.field_p);
+            PasswordValidator.field_p = null;
             oe.a((byte) 109);
             return false;
           }

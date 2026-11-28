@@ -87,7 +87,7 @@ final class vd {
           if (var44.field_y != null &&
             var44.field_w > 1) {
             var60 = var44.field_y;
-            vj.a(ca.field_c, var60, (byte) -69, 0, 0);
+            vj.a(DebouncedFieldValidator.field_c, var60, (byte) -69, 0, 0);
           } else {
             qa.c(1702);
           }
@@ -149,12 +149,12 @@ final class vd {
               stackIn_31_0 = -1;
             }
             var20 = stackIn_31_0;
-            if (rg.field_L != null &&
+            if (EditableTextField.field_L != null &&
               param6.field_f != null &&
               var14Lifetime1 < param6.field_f.length &&
               -1 != param6.field_f[var14Lifetime1] &&
-              rg.field_L.length > param6.field_f[var14Lifetime1]) {
-              stackIn_39_0 = rg.field_L[param6.field_f[var14Lifetime1]];
+              EditableTextField.field_L.length > param6.field_f[var14Lifetime1]) {
+              stackIn_39_0 = EditableTextField.field_L[param6.field_f[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

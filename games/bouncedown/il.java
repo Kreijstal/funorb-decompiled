@@ -6,15 +6,15 @@ final class il {
     static int[] field_d;
     static eh field_c;
     static int[] field_e;
-    static q field_b;
+    static DisplayNameSelectionPanel field_b;
 
     final static void a(int param0) {
         String var2 = null;
         String var2Lifetime1;
-        if (null != q.field_N) {
-          q.field_N.l(-26623);
-          if (q.field_A != null) {
-            q.field_A.m(65536);
+        if (null != DisplayNameSelectionPanel.field_N) {
+          DisplayNameSelectionPanel.field_N.l(-26623);
+          if (DisplayNameSelectionPanel.field_A != null) {
+            DisplayNameSelectionPanel.field_A.m(65536);
           }
           ml.e(8192);
           if (param0 < 4) {
@@ -24,8 +24,8 @@ final class il {
           }
           return;
         }
-        if (q.field_A != null) {
-          q.field_A.m(65536);
+        if (DisplayNameSelectionPanel.field_A != null) {
+          DisplayNameSelectionPanel.field_A.m(65536);
         }
         ml.e(8192);
         if (param0 >= 4) {

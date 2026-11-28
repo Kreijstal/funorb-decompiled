@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj {
-    static sm field_c;
+    static IndexedSprite field_c;
     static String field_a;
     static boolean field_b;
 
@@ -18,7 +18,7 @@ final class hj {
         IsaacPacketBuffer var2 = wa.field_d;
         var2.f(-40, param1);
         if (param0) {
-          field_c = (sm) null;
+          field_c = (IndexedSprite) null;
         }
         var2.writeByte(90, 1);
         var2.writeByte(90, 2);

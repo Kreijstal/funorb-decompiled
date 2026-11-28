@@ -161,7 +161,7 @@ final class FishRainSpecial extends SpecialOrder {
             }
             SoftwareRasterizer.resetClip();
           }
-          jha.field_g.drawText(hka.field_g, 452, 306, 65793, -1);
+          jha.field_g.drawText(AgeValidator.field_g, 452, 306, 65793, -1);
           var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);
           jha.field_g.b(var4, 600, 306, 16699649, -1);
           WidgetWrapper.field_z.b(var4, 600, 306, 65793, -1);

@@ -104,7 +104,7 @@ class c extends v {
         if (param0 != -83) {
           return (tq) null;
         }
-        return rf.field_n;
+        return MatchingFieldValidator.field_n;
     }
 
     final static void a(int param0, int param1) {
@@ -285,10 +285,10 @@ class c extends v {
           if (param0 != 4) {
             return;
           }
-          var3 = (ri) (ob.field_M.beginBackward((byte) 100));
+          var3 = (ri) (LoginPanel.field_M.beginBackward((byte) 100));
           while (var3 != null) {
             if (var3.field_w != var2) {
-              var3 = (ri) (ob.field_M.nextBackward(94));
+              var3 = (ri) (LoginPanel.field_M.nextBackward(94));
               continue;
             }
             break;
@@ -308,13 +308,13 @@ class c extends v {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               vd.a(var15, 11591);
               if (0 == var6_intLifetime1) {
-                var3.field_s = br.field_U;
-                var3.field_y = kp.field_P;
+                var3.field_s = ValidatedTextField.field_U;
+                var3.field_y = EditableTextField.field_P;
                 var3.field_u = af.field_E;
                 var3.field_p = bp.field_z;
-                PlayerState.appendPlayerMatchStats(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, af.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
               } else {
-                PlayerState.appendPlayerMatchStats(kp.field_P, af.field_E, true, var6_intLifetime1, br.field_U, bp.field_z);
+                PlayerState.appendPlayerMatchStats(EditableTextField.field_P, af.field_E, true, var6_intLifetime1, ValidatedTextField.field_U, bp.field_z);
               }
             }
             JaggrabClient.a(var5, 2);
@@ -334,7 +334,7 @@ class c extends v {
               var7[0][4 * var10 + 1] = IntrusiveNode.field_g[var11];
               var7[0][2 + 4 * var10] = ub.field_p[var11];
               var7[0][4 * var10 + 3] = jf.field_N[var11];
-              if (wc.a(Vertigo2.field_I[var11], true) &&
+              if (PasswordValidator.a(Vertigo2.field_I[var11], true) &&
                 ub.field_p[var11] + IntrusiveNode.field_g[var11] + jf.field_N[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -352,7 +352,7 @@ class c extends v {
               var7[1][1 + var14 * 4] = IntrusiveNode.field_g[var11Lifetime1];
               var7[1][var14 * 4 + 2] = ub.field_p[var11Lifetime1];
               var7[1][3 + 4 * var14] = jf.field_N[var11Lifetime1];
-              if (wc.a(Vertigo2.field_I[var11Lifetime1], true) &&
+              if (PasswordValidator.a(Vertigo2.field_I[var11Lifetime1], true) &&
                 0 == jf.field_N[var11Lifetime1] + ub.field_p[var11Lifetime1] + IntrusiveNode.field_g[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;

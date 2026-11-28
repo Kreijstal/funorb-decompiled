@@ -22,26 +22,26 @@ final class wg extends IntrusiveNode {
         try {
           var1_int = sb.field_r.field_C + sb.field_r.field_D;
           for (var2 = 0; 5 > var2; var2++) {
-            fd.field_o[var2] = false;
+            ConfirmedEmailAvailabilityValidator.field_o[var2] = false;
             m.field_e[var2] = 272;
-            th.field_o[var2] = 30 + (var1_int + (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C) * BoundedRandomAccessFile.field_e.a(th.field_n[var2], -57 + m.field_e[var2]));
-            if (th.field_o[var2] < 137) {
-              th.field_o[var2] = 137;
+            AgeValidator.field_o[var2] = 30 + (var1_int + (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C) * BoundedRandomAccessFile.field_e.a(AgeValidator.field_n[var2], -57 + m.field_e[var2]));
+            if (AgeValidator.field_o[var2] < 137) {
+              AgeValidator.field_o[var2] = 137;
             }
             ImageProducerRasterBuffer.field_k[var2] = -(m.field_e[var2] / 2) + 320;
-            DiskArchiveRequest.field_v[var2] = 240 - th.field_o[var2] / 2;
-            vh.field_E[var2] = new Sprite(m.field_e[var2], th.field_o[var2]);
+            DiskArchiveRequest.field_v[var2] = 240 - AgeValidator.field_o[var2] / 2;
+            vh.field_E[var2] = new Sprite(m.field_e[var2], AgeValidator.field_o[var2]);
             vh.field_E[var2].e();
-            lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, th.field_o[var2]);
-            BoundedRandomAccessFile.field_e.a(th.field_n[var2], 57, 15, m.field_e[var2] - 72, th.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
-            sb.field_r.b(lb.field_A, 57, th.field_o[var2] - 15, 1, 6579300);
+            lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
+            BoundedRandomAccessFile.field_e.a(AgeValidator.field_n[var2], 57, 15, m.field_e[var2] - 72, AgeValidator.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
+            sb.field_r.b(lb.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
             var3 = var2;
             if (0 != var3) {
               if (3 != var3) {
                 if (var3 == 4) {
-                  qi.field_K[1].d(15, 15, 32, 32);
-                  qi.field_K[2].d(15, 47, 32, 32);
-                  qi.field_K[3].d(15, 79, 32, 32);
+                  LoginPanel.field_K[1].d(15, 15, 32, 32);
+                  LoginPanel.field_K[2].d(15, 47, 32, 32);
+                  LoginPanel.field_K[3].d(15, 79, 32, 32);
                 } else {
                   if (var3 == 1) {
                     ak.field_t[1].c(15, 15);
@@ -57,9 +57,9 @@ final class wg extends IntrusiveNode {
                   }
                 }
               } else {
-                qi.field_K[0].d(15, 15, 32, 32);
-                qi.field_K[0].d(15, 47, 32, 32);
-                qi.field_K[0].d(15, 79, 32, 32);
+                LoginPanel.field_K[0].d(15, 15, 32, 32);
+                LoginPanel.field_K[0].d(15, 47, 32, 32);
+                LoginPanel.field_K[0].d(15, 79, 32, 32);
               }
             } else {
               nh.field_f[0][0][0].c(15, 15);
@@ -228,7 +228,7 @@ final class wg extends IntrusiveNode {
     final void e(int param0) {
         float var2 = this.field_e[0];
         float var3 = this.field_e[1];
-        wj.a(this.field_e, -110, vj.a(uh.a(this.field_f, 0.00009999999747378752f, (byte) 40), (byte) -2, ac.a(this.field_i, 117, this.field_e)));
+        TextFieldValidator.a(this.field_e, -110, vj.a(uh.a(this.field_f, 0.00009999999747378752f, (byte) 40), (byte) -2, ac.a(this.field_i, 117, this.field_e)));
         this.field_i[0] = var2;
         this.field_i[1] = var3;
         if (param0 >= -81) {

@@ -60,7 +60,7 @@ final class ta extends me {
           cg.field_b = 0;
           AccountNameAvailabilityValidator.field_o = false;
           MusicPatchPcmStream.field_l = false;
-          of.field_d = km.field_A;
+          ClientLookupTables.field_d = km.field_A;
           pm.field_d = 26;
           nl.field_d = 0;
           qi.field_J = 0;
@@ -139,7 +139,7 @@ final class ta extends me {
             }
           }
           tg.field_a = false;
-          bj.field_a = false;
+          DebouncedFieldValidator.field_a = false;
           if (hh.field_d == rl.field_c) {
             ImageProducerRasterBuffer.field_p = 0;
             kf.clearInts(al.field_U, 0, 6);
@@ -149,7 +149,7 @@ final class ta extends me {
           ng.field_u = 0;
           o.field_n.setAsRasterTarget((byte) -20);
           r.field_a = 1;
-          el.field_j = 0;
+          ProxySocketFactory.field_j = 0;
           if (bm.field_c == 0 &&
             rl.field_c == 0) {
             ul.field_L = 0;
@@ -166,13 +166,13 @@ final class ta extends me {
           for (var3Lifetime1 = 0; var3Lifetime1 < 3000; var3Lifetime1++) {
             vj.field_w[var3Lifetime1] = null;
           }
-          ti.field_f.a(-1, 8360, -1);
+          ti.field_f.setCoordinates(-1, 8360, -1);
           ln.field_a = null;
-          ln.field_a = new id(oc.field_h[bm.field_c][rl.field_c]);
+          ln.field_a = new id(GridPoint.field_h[bm.field_c][rl.field_c]);
           mm.a(ln.field_a, true);
           if (0 > ti.field_f.field_e) {
             System.err.println("Map failed to set player position.");
-            ti.field_f.a(100, 8360, 100);
+            ti.field_f.setCoordinates(100, 8360, 100);
           }
           ti.field_f.field_g = ti.field_f.field_g + 1;
           ti.field_f.field_e = ti.field_f.field_e + 1;
@@ -210,7 +210,7 @@ final class ta extends me {
             0 == bm.field_c) {
             if (rl.field_c == 3) {
               wh.field_b[ll.field_a].field_c = 0.0;
-              wh.field_b[ll.field_a].field_j.a(55, 8360, 83);
+              wh.field_b[ll.field_a].field_j.setCoordinates(55, 8360, 83);
               wh.field_b[ll.field_a].field_l.a(0.0, 0.0, 1);
               wh.field_b[ll.field_a].field_e = 0;
               wh.field_b[ll.field_a].field_h = 1;
@@ -221,7 +221,7 @@ final class ta extends me {
               for (var6Lifetime1 = 0; var6Lifetime1 < 3; var6Lifetime1++) {
                 for (var7Lifetime1 = 0; var7Lifetime1 < 3; var7Lifetime1++) {
                   wh.field_b[ll.field_a].field_c = 0.0;
-                  wh.field_b[ll.field_a].field_j.a(var6Lifetime1 + 35, 8360, 36 + var7Lifetime1);
+                  wh.field_b[ll.field_a].field_j.setCoordinates(var6Lifetime1 + 35, 8360, 36 + var7Lifetime1);
                   wh.field_b[ll.field_a].field_l.a(0.0, 0.0, 1);
                   wh.field_b[ll.field_a].field_e = 0;
                   wh.field_b[ll.field_a].field_h = 3;

@@ -109,7 +109,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime2 = DualLinkNode.a("first_page", -523);
           if (var2Lifetime2 != null) {
-            l.field_n = ta.a(param0 + 32197, var2Lifetime2);
+            EmailFormatValidator.field_n = ta.a(param0 + 32197, var2Lifetime2);
           }
           var2Lifetime3 = DualLinkNode.a("next_page", -523);
           if (var2Lifetime3 != null) {
@@ -420,7 +420,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime79 = DualLinkNode.a("congrats_full", -523);
           if (null != var2Lifetime79) {
-            ui.field_n = ta.a(32200, var2Lifetime79);
+            PasswordValidator.field_n = ta.a(32200, var2Lifetime79);
           }
           var2Lifetime80 = DualLinkNode.a("benefits_25levels", -523);
           if (var2Lifetime80 != null) {

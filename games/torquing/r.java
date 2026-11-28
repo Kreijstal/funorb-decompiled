@@ -40,7 +40,7 @@ final class r {
           var6 = param1;
           var8 = -param1;
           var9 = -1;
-          di.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 + param1);
+          IndexedSpriteLayer.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 + param1);
           while (var5_int < var6) {
             var9 += 2;
             var5_int++;
@@ -52,15 +52,15 @@ final class r {
               var11_ref_int__ = qd.field_a[param4 - var6];
               var12_int = param0 + var5_int;
               var13_int = param0 - var5_int;
-              di.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
-              di.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
+              IndexedSpriteLayer.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
+              IndexedSpriteLayer.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
             }
             var10 = var6 + param0;
             var11 = param0 - var6;
             var12 = qd.field_a[var5_int + param4];
             var13 = qd.field_a[param4 - var5_int];
-            di.a(var11, (byte) 39, param3, var12, var10);
-            di.a(var11, (byte) -95, param3, var13, var10);
+            IndexedSpriteLayer.a(var11, (byte) 39, param3, var12, var10);
+            IndexedSpriteLayer.a(var11, (byte) -95, param3, var13, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

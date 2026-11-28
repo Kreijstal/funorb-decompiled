@@ -231,23 +231,23 @@ abstract class rh extends WidgetContainer {
           }
           var2Lifetime3 = PcmResampler.a((byte) 76, "tips,0");
           if (var2Lifetime3 != null) {
-            th.field_n[0] = be.a(var2Lifetime3, (byte) 68);
+            AgeValidator.field_n[0] = be.a(var2Lifetime3, (byte) 68);
           }
           var2Lifetime4 = PcmResampler.a((byte) 76, "tips,1");
           if (null != var2Lifetime4) {
-            th.field_n[1] = be.a(var2Lifetime4, (byte) 100);
+            AgeValidator.field_n[1] = be.a(var2Lifetime4, (byte) 100);
           }
           var2Lifetime5 = PcmResampler.a((byte) 76, "tips,2");
           if (null != var2Lifetime5) {
-            th.field_n[2] = be.a(var2Lifetime5, (byte) 66);
+            AgeValidator.field_n[2] = be.a(var2Lifetime5, (byte) 66);
           }
           var2Lifetime6 = PcmResampler.a((byte) 76, "tips,3");
           if (null != var2Lifetime6) {
-            th.field_n[3] = be.a(var2Lifetime6, (byte) -36);
+            AgeValidator.field_n[3] = be.a(var2Lifetime6, (byte) -36);
           }
           var2Lifetime7 = PcmResampler.a((byte) 76, "tips,4");
           if (null != var2Lifetime7) {
-            th.field_n[4] = be.a(var2Lifetime7, (byte) 100);
+            AgeValidator.field_n[4] = be.a(var2Lifetime7, (byte) 100);
           }
           var2Lifetime8 = PcmResampler.a((byte) 76, "notShowingTips");
           if (var2Lifetime8 != null) {
@@ -259,7 +259,7 @@ abstract class rh extends WidgetContainer {
           }
           var2Lifetime10 = PcmResampler.a((byte) 76, "wellDone");
           if (null != var2Lifetime10) {
-            wj.field_h = be.a(var2Lifetime10, (byte) -87);
+            TextFieldValidator.field_h = be.a(var2Lifetime10, (byte) -87);
           }
           var2Lifetime11 = PcmResampler.a((byte) 76, "youScored");
           if (var2Lifetime11 != null) {

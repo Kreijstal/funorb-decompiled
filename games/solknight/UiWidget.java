@@ -338,9 +338,9 @@ class UiWidget extends IntrusiveNode {
               return param2;
             }
           }
-          if (0 != cl.field_n &&
+          if (0 != AgeValidator.field_n &&
             var5 != 0) {
-            this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
+            this.a(param3, this, param1, PacketBuffer.field_j, AgeValidator.field_n, BufferedSocket.field_m, (byte) 96);
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
                 param2 = false;
@@ -452,7 +452,7 @@ class UiWidget extends IntrusiveNode {
             return param2;
           }
         }
-        if (0 == cl.field_n) {
+        if (0 == AgeValidator.field_n) {
           regionExit2: {
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
@@ -517,7 +517,7 @@ class UiWidget extends IntrusiveNode {
           return param2;
         }
         if (var5Lifetime1 != 0) {
-          this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
+          this.a(param3, this, param1, PacketBuffer.field_j, AgeValidator.field_n, BufferedSocket.field_m, (byte) 96);
           if (hg.field_F != 0) {
             if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
               param2 = false;

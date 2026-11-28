@@ -44,10 +44,10 @@ final class mc {
     }
 
     final static String a(int param0) {
-        if (oe.field_Q == wh.field_fb) {
+        if (oe.field_Q == ValidatedTextField.field_fb) {
           return jb.field_o;
         }
-        if (wh.field_fb == na.field_S) {
+        if (ValidatedTextField.field_fb == na.field_S) {
           return MovingTunnelEntity.field_F;
         }
         if (!fb.field_a.c(param0 ^ 17221)) {

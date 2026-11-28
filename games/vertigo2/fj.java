@@ -207,7 +207,7 @@ class fj extends rl implements ij {
             for (var14 = 0; param2.field_z.length > var14; var14++) {
               var15 = param2.field_z[var14];
               if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = br.field_W;
+                var8[var14 + var12Lifetime1] = ValidatedTextField.field_W;
                 var9[var12Lifetime1 + var14] = param2.field_u[var14];
                 var10[var12Lifetime1 + var14] = param2.field_z[var14];
               } else {
@@ -290,7 +290,7 @@ class fj extends rl implements ij {
         try {
           var6_int = 0 % ((param2 + 63) / 51);
           if (!this.field_kb) {
-            gg.a("tochangedisplayname.ws", true, ob.e((byte) 77));
+            gg.a("tochangedisplayname.ws", true, LoginPanel.e((byte) 77));
           } else {
             rh.b(-14, 3);
             this.h((byte) 93);
@@ -389,7 +389,7 @@ class fj extends rl implements ij {
     }
 
     final static void g(byte param0) {
-        km.a(af.field_H, true, true, mk.field_S);
+        km.a(af.field_H, true, true, AccountRegistrationPanel.field_S);
         int var1 = 68 % ((-79 - param0) / 44);
         bf.field_a = true;
     }

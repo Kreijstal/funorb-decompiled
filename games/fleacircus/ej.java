@@ -63,7 +63,7 @@ final class ej {
           if (fleas.field_E == 0 &&
             tj.field_a >= 15 && (DiskArchiveRequest.c((byte) 55) ||
             !(wc.field_q > 0))) {
-            ImageProducerRasterBuffer.field_m = bc.field_V;
+            ImageProducerRasterBuffer.field_m = ValidatedTextField.field_V;
             oa.a(7, false, -72);
             return;
           }
@@ -78,7 +78,7 @@ final class ej {
           BufferedRandomAccessFile.a(0, hf.field_e[var2]);
           lk.field_D.field_k = false;
           si.field_y.field_k = true;
-          c.field_U = false;
+          EditableTextField.field_U = false;
           AwtRasterBuffer.b((byte) 84);
           rg.b(4);
           ProxyAuthenticationRequiredException.field_b = 6000;

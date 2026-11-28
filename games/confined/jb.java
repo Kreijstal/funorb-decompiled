@@ -326,7 +326,7 @@ final class jb {
             if (var3 < 0 &&
               null != TunnelMesh.field_J &&
               var2.field_w == TunnelMesh.field_J.field_r) {
-              pn.field_a.c(ok.a(qc.field_m), 125, 259 + this.field_c, 16777215, -1);
+              pn.field_a.c(ok.a(ConfirmedEmailAvailabilityValidator.field_m), 125, 259 + this.field_c, 16777215, -1);
               var6 = TunnelMesh.field_J.field_s[0];
               var7 = var6 / 25;
               var8Lifetime1 = var6 % 25 + 1;
@@ -920,7 +920,7 @@ final class jb {
               pn.field_a.a(var4, 0 + var3.field_j, var5, var10, var6, var7, -1, 2, 1, 20);
               if (var3.field_d != 4) {
                 if (var3.field_d == 5) {
-                  if (qc.field_n) {
+                  if (ConfirmedEmailAvailabilityValidator.field_n) {
                     stackIn_48_0 = DiskCacheWorker.field_k;
                   } else {
                     stackIn_48_0 = DelegatingCanvas.field_c;
@@ -1065,7 +1065,7 @@ final class jb {
         }
         pn.field_a.b(p.field_b, 320, 120, 4243584, -1);
         pn.field_a.b(fb.a(this.field_t, this.field_n, 0, this.field_i), 320, 140, 4243584, -1);
-        pn.field_a.b(qc.a(this.field_n, this.field_i, 2, this.field_t), 320, 240, 4243584, -1);
+        pn.field_a.b(ConfirmedEmailAvailabilityValidator.a(this.field_n, this.field_i, 2, this.field_t), 320, 240, 4243584, -1);
         pn.field_a.b(AcceleratingProjectile.a(this.field_i, this.field_n, -125, this.field_t), 320, 300, param0, -1);
     }
 
@@ -1172,8 +1172,8 @@ final class jb {
         }
         if (var3 == 5 && (this.field_p.g((byte) 4) ||
           this.field_p.b((byte) 36))) {
-          stackIn_28_0 = !(qc.field_n);
-          qc.field_n = stackIn_28_0;
+          stackIn_28_0 = !(ConfirmedEmailAvailabilityValidator.field_n);
+          ConfirmedEmailAvailabilityValidator.field_n = stackIn_28_0;
           this.e((byte) -122);
         }
         if (6 == var3 && (this.field_p.g((byte) 14) ||
@@ -1381,7 +1381,7 @@ final class jb {
         if (var3 == 12 &&
           this.field_p.d((byte) 55)) {
           kc.field_o = true;
-          KeyboardInput.field_a = bk.a(320, false, param1, i.field_o);
+          KeyboardInput.field_a = EmailFormatValidator.a(320, false, param1, i.field_o);
           this.e((byte) -128);
           return true;
         }

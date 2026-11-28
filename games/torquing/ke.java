@@ -92,11 +92,11 @@ final class ke {
           return;
         }
         try {
-          um.field_p = 1835008 & var2_int << 18;
+          MatchingFieldValidator.field_p = 1835008 & var2_int << 18;
           qc.field_bb = qc.field_bb + (var2_int >> 3);
-          um.field_p = um.field_p + (param1.readUnsignedShort(param0 ^ 225227222) << 2);
+          MatchingFieldValidator.field_p = MatchingFieldValidator.field_p + (param1.readUnsignedShort(param0 ^ 225227222) << 2);
           var2_int = param1.readUnsignedByte((byte) -101);
-          um.field_p = um.field_p + (var2_int >> 6);
+          MatchingFieldValidator.field_p = MatchingFieldValidator.field_p + (var2_int >> 6);
           bf.field_c = (var2_int & 63) << 15;
           bf.field_c = bf.field_c + (param1.readUnsignedByte((byte) -101) << 7);
           var2_int = param1.readUnsignedByte((byte) -101);

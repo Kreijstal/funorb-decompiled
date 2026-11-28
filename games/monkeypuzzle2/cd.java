@@ -69,7 +69,7 @@ final class cd {
           DiskArchiveRequest.field_o.a(mb.field_a, mb.field_d, true, true);
           DiskArchiveRequest.field_o.l(-43);
           while (AwtRasterBuffer.a(-1)) {
-            DiskArchiveRequest.field_o.a(oa.field_H, 121, rd.field_p);
+            DiskArchiveRequest.field_o.a(oa.field_H, 121, MatchingFieldValidator.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

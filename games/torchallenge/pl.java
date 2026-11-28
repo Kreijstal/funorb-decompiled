@@ -34,7 +34,7 @@ final class pl {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_3_0 = dj.field_W;
+            stackIn_3_0 = EditableTextField.field_W;
             return stackIn_3_0;
           }
           if (var2_int > 255) {
@@ -43,7 +43,7 @@ final class pl {
           }
           var3 = dl.a(param0, '.', -60);
           if (var3.length < 2) {
-            stackIn_11_0 = dj.field_W;
+            stackIn_11_0 = EditableTextField.field_W;
             return stackIn_11_0;
           }
           var4 = var3;
@@ -58,7 +58,7 @@ final class pl {
               return stackIn_22_0;
             }
             var6 = var4[var5];
-            var7 = ma.b(var6, (byte) -25);
+            var7 = TextFieldValidator.b(var6, (byte) -25);
             if (var7 == null) {
               var5++;
               continue;

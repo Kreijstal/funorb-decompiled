@@ -346,7 +346,7 @@ final class ij {
           }
           var2Lifetime60 = AccountNameAvailabilityValidator.a((byte) 48, "keycode_player1left");
           if (null != var2Lifetime60) {
-            nj.field_m = 255 & var2Lifetime60[0];
+            EmailFormatValidator.field_m = 255 & var2Lifetime60[0];
           }
           var2Lifetime61 = AccountNameAvailabilityValidator.a((byte) 48, "keycode_player1right");
           if (var2Lifetime61 != null) {
@@ -414,18 +414,18 @@ final class ij {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          bl.field_e[q.field_M] = param1;
-          w.field_f[q.field_M] = q.field_M;
-          sj.field_j[q.field_M] = param2;
+          bl.field_e[DisplayNameSelectionPanel.field_M] = param1;
+          w.field_f[DisplayNameSelectionPanel.field_M] = DisplayNameSelectionPanel.field_M;
+          sj.field_j[DisplayNameSelectionPanel.field_M] = param2;
           if (param2 < va.field_b) {
             AccountNameAvailabilityValidator.field_n = param2;
           }
           if (w.field_d < param2) {
             uc.field_A = param2;
           }
-          nh.field_S[q.field_M] = param0;
-          ResourceArchive.field_i[q.field_M] = param5;
-          DelegatingCanvas.field_c[q.field_M] = param4;
+          nh.field_S[DisplayNameSelectionPanel.field_M] = param0;
+          ResourceArchive.field_i[DisplayNameSelectionPanel.field_M] = param5;
+          DelegatingCanvas.field_c[DisplayNameSelectionPanel.field_M] = param4;
           var6_int = param5 + (param0 + param4);
           if (param3 != var6_int) {
             stackIn_11_0 = 1000 * param0 / var6_int;
@@ -433,11 +433,11 @@ final class ij {
             stackIn_11_0 = 0;
           }
           var7 = stackIn_11_0;
-          field_b[q.field_M] = var7;
+          field_b[DisplayNameSelectionPanel.field_M] = var7;
           if (var7 < AccountNameAvailabilityValidator.field_n) {
             AccountNameAvailabilityValidator.field_n = var7;
           }
-          q.field_M = q.field_M + 1;
+          DisplayNameSelectionPanel.field_M = DisplayNameSelectionPanel.field_M + 1;
           if (uc.field_A < var7) {
             uc.field_A = var7;
           }

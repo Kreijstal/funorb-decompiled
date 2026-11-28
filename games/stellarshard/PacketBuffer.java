@@ -77,7 +77,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return kk.decodeCp1252String(var4, (byte) 121, var3, this.payload);
+        return AgeValidator.decodeCp1252String(var4, (byte) 121, var3, this.payload);
     }
 
     final void writeByte(boolean param0, int param1) {
@@ -103,7 +103,7 @@ class PacketBuffer extends IntrusiveNode {
           return "";
         }
         if (param0 >= 78) {
-          return kk.decodeCp1252String(var3, (byte) 93, var2, this.payload);
+          return AgeValidator.decodeCp1252String(var3, (byte) 93, var2, this.payload);
         }
         return (String) null;
     }

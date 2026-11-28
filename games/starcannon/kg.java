@@ -12,7 +12,7 @@ final class kg {
           if (null != fa.field_G) {
             fa.field_G.n(-104);
           }
-          wi.field_c = new rg(param1, param0, false, true, true);
+          wi.field_c = new LoginPanel(param1, param0, false, true, true);
           if (param2 != 92) {
             String var4 = (String) null;
             kg.a((String) null, (String) null, (byte) 89);
@@ -42,13 +42,13 @@ final class kg {
 
     final static void a(PcmStreamMixer param0, int param1, int param2, ResourceArchive param3) {
         try {
-          mh.field_k = wc.a(-43) * param2 / 1000;
+          EmailFormatValidator.field_k = wc.a(-43) * param2 / 1000;
           dh.a((byte) 115, param3);
           nb.a(param3, (byte) 124);
           lc.a(false, param3);
           p.a((byte) -68);
           FrameTimer.c((byte) -96);
-          qb.field_h = -mh.field_k + param1;
+          qb.field_h = -EmailFormatValidator.field_k + param1;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

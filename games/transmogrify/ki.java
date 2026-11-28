@@ -6,7 +6,7 @@ final class ki extends h {
     private ab[] field_o;
 
     final static void a(boolean param0, int param1) {
-        BitPacketBuffer var2 = ff.field_D;
+        BitPacketBuffer var2 = LoginPanel.field_D;
         var2.writeCipheredByte(param0, param1);
         var2.writeByte(6389, 1);
         var2.writeByte(6389, 0);

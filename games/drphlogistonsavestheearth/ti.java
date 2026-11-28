@@ -55,7 +55,7 @@ final class ti {
     }
 
     final static void a(boolean param0, int param1) {
-        nf.field_w = 0;
+        MatchingFieldValidator.field_w = 0;
         ig.field_k = param1;
         la.field_b = rd.field_F;
         k.field_L = 0;

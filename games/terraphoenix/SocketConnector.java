@@ -40,7 +40,7 @@ abstract class SocketConnector {
         hj.field_K = null;
         ProxyAuthenticationRequiredException.field_a = null;
         sb.field_m = null;
-        ha.field_s = null;
+        ConfirmedEmailAvailabilityValidator.field_s = null;
         qc.field_b = (byte[][]) null;
         if (param0 <= 68) {
           return;

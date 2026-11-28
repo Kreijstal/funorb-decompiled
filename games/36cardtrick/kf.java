@@ -30,7 +30,7 @@ final class kf extends IntrusiveNode {
           }
           try {
             if (IterableNodeHashTable.field_c == 0) {
-              d.field_a = bi.field_b.requestDirectSocket(al.field_c, (byte) -122, ak.field_O);
+              d.field_a = bi.field_b.requestDirectSocket(al.field_c, (byte) -122, LoginPanel.field_O);
               IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
             }
             if (param0 <= 58) {

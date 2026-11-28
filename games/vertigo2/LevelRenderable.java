@@ -57,7 +57,7 @@ abstract class LevelRenderable {
         }
     }
 
-    final static boolean startAccountCreation(String param0, int param1, String param2, boolean param3, String param4, byte param5, mk param6) {
+    final static boolean startAccountCreation(String param0, int param1, String param2, boolean param3, String param4, byte param5, AccountRegistrationPanel param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         int var8 = 0;
@@ -90,7 +90,7 @@ abstract class LevelRenderable {
           wn.field_d = param0;
           ab.field_b = param3;
           mp.field_f = null;
-          mk.field_S = param2;
+          AccountRegistrationPanel.field_S = param2;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

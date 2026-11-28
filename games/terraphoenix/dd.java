@@ -6,7 +6,7 @@ final class dd extends eb {
     static int field_M;
     private int field_P;
     static String[] field_O;
-    private rc field_K;
+    private FieldValidator field_K;
     static String field_N;
 
     final boolean a(byte param0, UiWidget param1) {
@@ -44,7 +44,7 @@ final class dd extends eb {
 
     final String f(int param0) {
         if (this.field_s) {
-          return this.field_K.b((byte) 126);
+          return this.field_K.getValidationMessage((byte) 126);
         }
         if (param0 <= 70) {
           field_L = (int[]) null;
@@ -132,7 +132,7 @@ final class dd extends eb {
         field_O = null;
     }
 
-    dd(rc param0) {
+    dd(FieldValidator param0) {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
@@ -171,7 +171,7 @@ final class dd extends eb {
         var5 = (this.width >> 1) + param0 + this.x;
         if (param1 <= -106) {
           var6 = (this.height >> 1) + (param3 + this.y);
-          var8 = this.field_K.a(-16323);
+          var8 = this.field_K.getValidationStatus(-16323);
           if (kj.field_d == var8) {
             var16 = AccountRequestState.field_c[0];
             var9 = var16.field_q << 1;
@@ -230,7 +230,7 @@ final class dd extends eb {
         }
         field_O = (String[]) null;
         var6Lifetime1 = (this.height >> 1) + (param3 + this.y);
-        var8Lifetime1 = this.field_K.a(-16323);
+        var8Lifetime1 = this.field_K.getValidationStatus(-16323);
         if (kj.field_d == var8Lifetime1) {
           var20 = AccountRequestState.field_c[0];
           var9Lifetime1 = var20.field_q << 1;

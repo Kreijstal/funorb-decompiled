@@ -21,7 +21,7 @@ final class BufferedSocket implements Runnable {
     private PlatformTaskDispatcher field_a;
     private java.net.Socket field_i;
     static int field_m;
-    static s field_u;
+    static DisplayNameSelectionPanel field_u;
     private OutputStream field_o;
     private InputStream field_j;
     private boolean field_c;
@@ -206,7 +206,7 @@ final class BufferedSocket implements Runnable {
             this.field_c = true;
             this.notifyAll();
             if (param0 != -1) {
-              field_u = (s) null;
+              field_u = (DisplayNameSelectionPanel) null;
             }
           }
           if (null != this.field_f) {
@@ -244,7 +244,7 @@ final class BufferedSocket implements Runnable {
         ej.field_e = ao.a(param3, "frame_bottom", 2993, "commonui");
         vk.field_a = wk.a(param3, 1, "jagex_logo_grey", "commonui");
         bj.field_db = ao.a(param3, "button", 2993, "commonui");
-        AccountNameAvailabilityValidator.field_p = ol.a(param3, "validation", "commonui", (byte) -117);
+        AccountNameAvailabilityValidator.field_p = AccountRegistrationPanel.a(param3, "validation", "commonui", (byte) -117);
         rc.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo12", param3, param1));
         rb.field_b = (lh) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
         tk.field_a = (lh) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
@@ -319,7 +319,7 @@ final class BufferedSocket implements Runnable {
           dc.field_m = true;
           DirectByteStorage.field_i = param3;
           vg.field_f = param1;
-          tj.field_m = param4;
+          EmailFormatValidator.field_m = param4;
           hd.field_e = param0;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "hn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
           da.field_F = da.field_F - 1;
         }
         if (da.field_F > 0) {
-          jb.a((byte) -89);
+          DebouncedFieldValidator.a((byte) -89);
         }
     }
 

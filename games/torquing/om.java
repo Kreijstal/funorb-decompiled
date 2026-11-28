@@ -149,7 +149,7 @@ final class om {
         qg.field_z = param2;
         Bzip2State.field_q = param0;
         RasterBuffer.field_e = param1;
-        qk.field_p = param4;
+        LevelCompletionUpdate.field_p = param4;
     }
 
     final void b(int param0) {

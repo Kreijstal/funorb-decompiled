@@ -72,7 +72,7 @@ final class sn {
         if (param0 < 81) {
           return false;
         }
-        return ke.field_U.a((byte) 16);
+        return ValidatedTextField.field_U.a((byte) 16);
     }
 
     public static void clearStaticReferences(byte param0) {

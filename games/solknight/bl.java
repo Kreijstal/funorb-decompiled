@@ -73,7 +73,7 @@ final class bl extends IntrusiveNode {
           if (kj.field_R < 20) {
             return true;
           }
-          if (!bb.h(param0 - 44)) {
+          if (!LoginPanel.h(param0 - 44)) {
             return true;
           }
           if (c.field_H <= 0) {
@@ -87,7 +87,7 @@ final class bl extends IntrusiveNode {
         if (kj.field_R < 20) {
           return true;
         }
-        if (!bb.h(param0 - 44)) {
+        if (!LoginPanel.h(param0 - 44)) {
           return true;
         }
         if (c.field_H <= 0) {

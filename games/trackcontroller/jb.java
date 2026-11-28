@@ -15,7 +15,7 @@ final class jb {
           }
           jf.e(640);
           gl.field_E.l(24910);
-          LevelView.field_y = new rl(qg.field_c, (String) null, vg.field_o, param2, param1);
+          LevelView.field_y = new LoginPanel(qg.field_c, (String) null, vg.field_o, param2, param1);
           GameApplet.field_g = new pj(gl.field_E, LevelView.field_y);
           gl.field_E.d((byte) -70, GameApplet.field_g);
         } catch (RuntimeException runtimeException) {

@@ -45,20 +45,20 @@ final class t {
         int var2 = 160;
         int var3 = 0;
         int var4 = 0;
-        tl.field_p.a(fi.field_l, 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.a(fi.field_l, 320, var2, var3, var4);
         var2 += 40;
         int var5 = tj.field_a;
         if (!(tj.field_a < nl.field_c[fleas.field_E].length)) {
           var5 = -1 + nl.field_c[fleas.field_E].length;
         }
-        tl.field_p.a(db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, tl.field_p.field_H);
+        MatchingFieldValidator.field_p.a(db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, MatchingFieldValidator.field_p.field_H);
         var2 += 90;
-        tl.field_p.a(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.a(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
         var2 += 40;
-        tl.field_p.a(db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
+        MatchingFieldValidator.field_p.a(db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true), 320, var2, var3, var4);
         int var7 = -113 % ((param0 - 12) / 34);
         String var6 = db.a(fleas.field_I, new String[]{wa.a(false)}, true);
-        tl.field_p.a(db.a(var6, new String[]{"0"}, true), 320, var2 + tl.field_p.field_N, var3, var4);
+        MatchingFieldValidator.field_p.a(db.a(var6, new String[]{"0"}, true), 320, var2 + MatchingFieldValidator.field_p.field_N, var3, var4);
     }
 
     final void a(boolean param0, boolean param1) {
@@ -225,17 +225,17 @@ final class t {
     private final void a(boolean param0) {
         int discarded$0 = 0;
         int var2 = 150;
-        tl.field_p.b(bh.field_u[0], 320, var2 + 2 * tl.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
-        tl.field_p.b(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)tl.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
-        jj.field_P.d((640 - jj.field_P.field_w) / 2, var2 + tl.field_p.field_N * 4);
-        tl.field_p.a(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
-        ca.field_L.a(50, 100, 0, -4575, 380);
+        MatchingFieldValidator.field_p.b(bh.field_u[0], 320, var2 + 2 * MatchingFieldValidator.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
+        MatchingFieldValidator.field_p.b(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)MatchingFieldValidator.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
+        jj.field_P.d((640 - jj.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
+        MatchingFieldValidator.field_p.a(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
+        AccountRegistrationPanel.field_L.a(50, 100, 0, -4575, 380);
         fb.field_a.a(50, 100, 0, -4575, 380);
         GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
         cm.field_i.a(50, 100, 540, -4575, 380);
         CrossfadingMidiPcmStream.field_z.a(50, 100, 540, -4575, 380);
         mf.field_e.a(50, 100, 540, -4575, 380);
-        ca.field_L.a(1);
+        AccountRegistrationPanel.field_L.a(1);
         fb.field_a.a(1);
         GzipDecompressor.field_b.a(1);
         cm.field_i.a(1);
@@ -258,7 +258,7 @@ final class t {
         String var8;
         String var9;
         fa var10;
-        var10 = tl.field_p;
+        var10 = MatchingFieldValidator.field_p;
         if (param0 != 2758) {
           this.field_e = -80;
         }
@@ -285,13 +285,13 @@ final class t {
           var10.a(ic.a(param0 - 2634, var6 != 0, var7 != 0, var5 != 0), 160, 90 + var4 * 4 + (var3 + 10), 320, 100, 0, -1, 1, 0, var10.field_N);
         } else {
           var10.a(nc.field_b, 320, 240, 0, -1);
-          ca.field_L.a(50, 100, 0, param0 - 7333, 380);
+          AccountRegistrationPanel.field_L.a(50, 100, 0, param0 - 7333, 380);
           fb.field_a.a(50, 100, 0, param0 ^ -6937, 380);
           GzipDecompressor.field_b.a(50, 100, 0, -4575, 380);
           cm.field_i.a(50, 100, 540, param0 - 7333, 380);
           CrossfadingMidiPcmStream.field_z.a(50, 100, 540, -4575, 380);
           mf.field_e.a(50, 100, 540, -4575, 380);
-          ca.field_L.a(1);
+          AccountRegistrationPanel.field_L.a(1);
           fb.field_a.a(1);
           GzipDecompressor.field_b.a(1);
           cm.field_i.a(1);
@@ -331,7 +331,7 @@ final class t {
         if (param1 <= 2) {
           discarded$0 = this.a(-16, 3, (byte) 34);
         }
-        var15 = tl.field_p;
+        var15 = MatchingFieldValidator.field_p;
         var4 = 164;
         var5 = 110;
         this.b(2, AccountRequestState.field_e);
@@ -643,8 +643,8 @@ final class t {
           var9_int = -(mf.field_g.field_t / 4) + var5 + 14 + var7 / 2;
           if (var2 == 0) {
             SoftwareRasterizer.fillRectangle(var4 + 13, var5 + 14, var6, var7, 1);
-            tl.field_p.a(fc.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
-            tl.field_p.a(fc.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
+            MatchingFieldValidator.field_p.a(fc.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
+            MatchingFieldValidator.field_p.a(fc.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
             cb.field_u.e(var8_int, var9_int);
           } else {
             fl.field_b.c(var4 + 13, var5 + 14);
@@ -722,7 +722,7 @@ final class t {
         fa var17;
         fa var18;
         var16 = fleas.field_A ? 1 : 0;
-        var17 = tl.field_p;
+        var17 = MatchingFieldValidator.field_p;
         var18 = var17;
         var5 = this.a(param1, (byte) 118);
         var6 = this.b((byte) -13, param1);
@@ -903,7 +903,7 @@ final class t {
                                   IntrusiveNode.a(false);
                                 } else {
                                   var6 = param0 ? 1 : 0;
-                                  c.a(320, (byte) 78, tl.field_p.field_K + tl.field_p.field_y, a.field_b, 8, 2, tl.field_p, SpriteGeometry.field_z, 240, tl.field_p.field_y, var6 != 0, 8);
+                                  EditableTextField.a(320, (byte) 78, MatchingFieldValidator.field_p.field_K + MatchingFieldValidator.field_p.field_y, a.field_b, 8, 2, MatchingFieldValidator.field_p, SpriteGeometry.field_z, 240, MatchingFieldValidator.field_p.field_y, var6 != 0, 8);
                                 }
                                 break regionExit1;
                               }
@@ -1365,10 +1365,10 @@ final class t {
         var10 = var9;
         this.b(2, g.field_s);
         var10.b(NanoFrameTimer.a((byte) 85, 1 + g.field_s, kb.field_k.length), 530, 110, 1, 16777215);
-        ga.field_s[6][3] = 310;
-        tl.field_p.c(v.field_R[g.field_s], 95, 145, 0, -1);
+        AgeValidator.field_s[6][3] = 310;
+        MatchingFieldValidator.field_p.c(v.field_R[g.field_s], 95, 145, 0, -1);
         for (var3 = 0; var3 < kb.field_k[g.field_s].length; var3++) {
-          var9.a(kb.field_k[g.field_s][var3], 95 + ib.field_a[g.field_s][var3], ga.field_s[g.field_s][var3], -ib.field_a[g.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
+          var9.a(kb.field_k[g.field_s][var3], 95 + ib.field_a[g.field_s][var3], AgeValidator.field_s[g.field_s][var3], -ib.field_a[g.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
         }
         stackIn_6_0 = ((19 & PacketBuffer.field_j) >>> 4 != 0) ? 0 : 1;
         var3Lifetime1 = stackIn_6_0;
@@ -1383,96 +1383,96 @@ final class t {
         } else {
           boolean decompiledFrameRemainder0 = true;
           if (g.field_s == 1) {
-            aj.field_t[2].d(105, ga.field_s[g.field_s][1] - 2);
-            oj.a(ga.field_s[g.field_s][1] + 2, 0, 109, var4);
-            aj.field_t[3].d(95, ga.field_s[g.field_s][2] + 1);
-            aj.field_t[4].d(116, 1 + ga.field_s[g.field_s][2]);
+            aj.field_t[2].d(105, AgeValidator.field_s[g.field_s][1] - 2);
+            oj.a(AgeValidator.field_s[g.field_s][1] + 2, 0, 109, var4);
+            aj.field_t[3].d(95, AgeValidator.field_s[g.field_s][2] + 1);
+            aj.field_t[4].d(116, 1 + AgeValidator.field_s[g.field_s][2]);
             for (var5 = 4; var5 <= 6; var5++) {
               var6 = 88 + ib.field_a[g.field_s][var5];
-              var7 = ga.field_s[g.field_s][var5] + 7;
+              var7 = AgeValidator.field_s[g.field_s][var5] + 7;
               SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
             }
           } else {
             if (2 == g.field_s) {
-              aj.field_t[1].d(95, ga.field_s[g.field_s][1] + 3);
-              aj.field_t[2].d(95, ga.field_s[g.field_s][2] + 3);
-              oj.a(ga.field_s[g.field_s][2] + 7, 0, 99, var4);
-              aj.field_t[3].d(95, ga.field_s[g.field_s][3] + 3);
-              aj.field_t[11].d(95, ga.field_s[g.field_s][4] + 12);
-              aj.field_t[5].d(95, 3 + ga.field_s[g.field_s][4]);
-              aj.field_t[6].d(95, ga.field_s[g.field_s][5] + 6);
+              aj.field_t[1].d(95, AgeValidator.field_s[g.field_s][1] + 3);
+              aj.field_t[2].d(95, AgeValidator.field_s[g.field_s][2] + 3);
+              oj.a(AgeValidator.field_s[g.field_s][2] + 7, 0, 99, var4);
+              aj.field_t[3].d(95, AgeValidator.field_s[g.field_s][3] + 3);
+              aj.field_t[11].d(95, AgeValidator.field_s[g.field_s][4] + 12);
+              aj.field_t[5].d(95, 3 + AgeValidator.field_s[g.field_s][4]);
+              aj.field_t[6].d(95, AgeValidator.field_s[g.field_s][5] + 6);
               stackIn_41_0 = aj.field_t;
               if (var3Lifetime1 != 0) {
                 stackIn_42_1 = 8;
               } else {
                 stackIn_42_1 = 9;
               }
-              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).d(95, 6 + ga.field_s[g.field_s][6]);
+              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).d(95, 6 + AgeValidator.field_s[g.field_s][6]);
             } else {
               if (g.field_s != 3) {
                 if (g.field_s != 4) {
                   if ((g.field_s == 5 ||
                     g.field_s == 6)) {
-                    for (var5 = 0; var5 < ga.field_s[g.field_s].length; var5++) {
+                    for (var5 = 0; var5 < AgeValidator.field_s[g.field_s].length; var5++) {
                       var6 = ib.field_a[g.field_s][var5] + 88;
-                      var7 = 7 + ga.field_s[g.field_s][var5];
+                      var7 = 7 + AgeValidator.field_s[g.field_s][var5];
                       SoftwareRasterizer.fillCircle(var6, var7, 3, 1);
                     }
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  aj.field_t[19].d(95, 3 + ga.field_s[g.field_s][1]);
-                  aj.field_t[20].d(111, 3 + ga.field_s[g.field_s][2]);
-                  aj.field_t[23].d(95, 3 + ga.field_s[g.field_s][2]);
-                  aj.field_t[21].d(95, ga.field_s[g.field_s][3] + 3);
+                  aj.field_t[19].d(95, 3 + AgeValidator.field_s[g.field_s][1]);
+                  aj.field_t[20].d(111, 3 + AgeValidator.field_s[g.field_s][2]);
+                  aj.field_t[23].d(95, 3 + AgeValidator.field_s[g.field_s][2]);
+                  aj.field_t[21].d(95, AgeValidator.field_s[g.field_s][3] + 3);
                   stackIn_31_0 = aj.field_t;
                   if (var3Lifetime1 == 0) {
                     stackIn_32_1 = 26;
                   } else {
                     stackIn_32_1 = 22;
                   }
-                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).d(95, 6 + ga.field_s[g.field_s][4]);
-                  aj.field_t[24].d(95, ga.field_s[g.field_s][5] + 3);
-                  aj.field_t[25].d(95, 3 + ga.field_s[g.field_s][6]);
+                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).d(95, 6 + AgeValidator.field_s[g.field_s][4]);
+                  aj.field_t[24].d(95, AgeValidator.field_s[g.field_s][5] + 3);
+                  aj.field_t[25].d(95, 3 + AgeValidator.field_s[g.field_s][6]);
                 }
               } else {
-                aj.field_t[10].d(95, ga.field_s[g.field_s][1] + 3);
+                aj.field_t[10].d(95, AgeValidator.field_s[g.field_s][1] + 3);
                 stackIn_14_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_15_1 = 13;
                 } else {
                   stackIn_15_1 = 27;
                 }
-                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).d(95, -5 + ga.field_s[g.field_s][2]);
+                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).d(95, -5 + AgeValidator.field_s[g.field_s][2]);
                 stackIn_17_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_18_1 = 14;
                 } else {
                   stackIn_18_1 = 28;
                 }
-                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).d(95, ga.field_s[g.field_s][3] + 3);
-                aj.field_t[30].d(95, ga.field_s[g.field_s][4] + 3);
+                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).d(95, AgeValidator.field_s[g.field_s][3] + 3);
+                aj.field_t[30].d(95, AgeValidator.field_s[g.field_s][4] + 3);
                 var5 = (int)((double)PacketBuffer.field_j / 2.0 % 16.0 * 2.0);
                 if (var5 > 16) {
                   var5 = -var5 + 32;
                 }
-                aj.field_t[15].d(95, ga.field_s[g.field_s][4] + (3 + var5));
+                aj.field_t[15].d(95, AgeValidator.field_s[g.field_s][4] + (3 + var5));
                 stackIn_23_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_24_1 = 16;
                 } else {
                   stackIn_24_1 = 29;
                 }
-                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).d(95, 3 + ga.field_s[g.field_s][5]);
+                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).d(95, 3 + AgeValidator.field_s[g.field_s][5]);
                 stackIn_26_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_27_1 = 17;
                 } else {
                   stackIn_27_1 = 31;
                 }
-                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).d(95, 3 + ga.field_s[g.field_s][6]);
-                ql.a(var4, -121, ga.field_s[g.field_s][7] + 3, 95);
+                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).d(95, 3 + AgeValidator.field_s[g.field_s][6]);
+                ql.a(var4, -121, AgeValidator.field_s[g.field_s][7] + 3, 95);
               }
             }
           }

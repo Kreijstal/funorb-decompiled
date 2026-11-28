@@ -15,12 +15,12 @@ final class ja {
         try {
           kj.field_P.serviceOutput();
           ql.field_r.serviceOutput();
-          vg.field_M = vg.field_M - 1;
+          EditableTextField.field_M = EditableTextField.field_M - 1;
           if (param0 != 200) {
             ja.a((byte) -48);
           }
-          if (vg.field_M == 0) {
-            vg.field_M = 200;
+          if (EditableTextField.field_M == 0) {
+            EditableTextField.field_M = 200;
             var1 = (ud) (uc.field_j.beginBackward((byte) 51));
             while (var1 != null) {
               if (!var1.field_m.isLinked(false)) {

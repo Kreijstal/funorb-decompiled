@@ -71,7 +71,7 @@ final class tg {
           if (decompiledFrameRemainder0) {
             if (!il.field_n) {
               if (pe.field_pb >= ch.field_f) {
-                stackIn_20_0 = (od.field_o + ch.field_f > pe.field_pb) ? 1 : 0;
+                stackIn_20_0 = (ConfirmedEmailAvailabilityValidator.field_o + ch.field_f > pe.field_pb) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -104,7 +104,7 @@ final class tg {
           }
           if (!il.field_n &&
             ch.field_f > pe.field_pb &&
-            k.field_i) {
+            EmailFormatValidator.field_i) {
             lj.field_q = CrossfadingMidiPcmStream.field_y;
             pe.field_pb = 0;
             ng.field_l = h.field_b;

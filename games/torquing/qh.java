@@ -36,23 +36,23 @@ final class qh {
             RasterBuffer.field_e <= param0 &&
             qg.field_z >= param0 &&
             Bzip2State.field_q <= param4 &&
-            qk.field_p >= param4) {
+            LevelCompletionUpdate.field_p >= param4) {
             if (param6 < Bzip2State.field_q) {
               RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
             } else {
-              if (qk.field_p < param6) {
+              if (LevelCompletionUpdate.field_p < param6) {
                 RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
               } else {
                 if (param7 < Bzip2State.field_q) {
                   RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                 } else {
-                  if (param7 > qk.field_p) {
+                  if (param7 > LevelCompletionUpdate.field_p) {
                     RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                   } else {
                     if (param3 < Bzip2State.field_q) {
                       RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                     } else {
-                      if (qk.field_p < param3) {
+                      if (LevelCompletionUpdate.field_p < param3) {
                         RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                       } else {
                         IsaacPacketBuffer.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);
@@ -95,25 +95,25 @@ final class qh {
                         if (Bzip2State.field_q > param4) {
                           RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                         } else {
-                          if (qk.field_p < param4) {
+                          if (LevelCompletionUpdate.field_p < param4) {
                             RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                           } else {
                             if (param6 < Bzip2State.field_q) {
                               RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                             } else {
-                              if (qk.field_p < param6) {
+                              if (LevelCompletionUpdate.field_p < param6) {
                                 RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                               } else {
                                 if (param7 < Bzip2State.field_q) {
                                   RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                 } else {
-                                  if (param7 > qk.field_p) {
+                                  if (param7 > LevelCompletionUpdate.field_p) {
                                     RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                   } else {
                                     if (param3 < Bzip2State.field_q) {
                                       RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                     } else {
-                                      if (qk.field_p < param3) {
+                                      if (LevelCompletionUpdate.field_p < param3) {
                                         RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                       } else {
                                         IsaacPacketBuffer.a(param7, param3, 26905, param2, param5, param4, param9, param8, param6, param0);

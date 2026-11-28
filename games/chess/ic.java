@@ -11,7 +11,7 @@ final class ic {
 
     final static int a(int param0, int param1) {
         int var4 = Chess.field_G;
-        vm.field_k = 0;
+        TextFieldValidator.field_k = 0;
         jj.field_a = null;
         dm.field_b = null;
         int var2 = of.field_g;

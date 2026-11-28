@@ -39,7 +39,7 @@ final class GameAssets {
         try {
           MixedSupport066.stringState0295 = null;
           MixedSupport145.booleanState0222 = false;
-          UiComponentPart022.integerState0573 = -1;
+          AccountFieldStatusIndicator.integerState0573 = -1;
           ClientException.integerState0142 = -1;
           EmailValidationError.integerState0341 = integerArgument1;
         } catch (RuntimeException runtimeException) {
@@ -80,11 +80,11 @@ final class GameAssets {
                 if (0 != previousIntegerLocal1) {
                   previousIntegerLocal2 = integerLocal14;
                   integerLocal14++;
-                  integerArgument5 = SceneWidgetPart004.integerArrayState0053[previousIntegerLocal2];
+                  integerArgument5 = PlayerNamePrompt.integerArrayState0053[previousIntegerLocal2];
                   cachedByteLocal3 = byteArrayArgument1[integerArgument5];
                   cachedIntegerLocal4 = integerArrayArgument4[cachedByteLocal3];
                   integerArrayArgument4[cachedByteLocal3] = cachedIntegerLocal4 + 1;
-                  SceneWidgetPart004.integerArrayState0053[cachedIntegerLocal4] = integerArgument5;
+                  PlayerNamePrompt.integerArrayState0053[cachedIntegerLocal4] = integerArgument5;
                   continue;
                 }
                 break;
@@ -140,21 +140,21 @@ final class GameAssets {
           SoftwareRaster.intersectClip(integerLocal2, 0, integerLocal3, integerLocal4 + integerArgument6);
           rgbSpriteArgument8.performAction0295(-1 + integerArgument4, integerArgument9 - 1, integerArgument2);
           rgbSpriteArgument8.performAction0295(integerArgument4 - 1, integerArgument9 + 1, integerArgument2);
-          SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+          SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           SoftwareRaster.intersectClip(integerLocal2 + 1, 0, integerLocal3 + 1, integerArgument6 + integerLocal4);
           rgbSpriteArgument8.performAction0295(integerArgument4 + 1, -1 + integerArgument9, integerArgument2);
           rgbSpriteArgument8.performAction0295(1 + integerArgument4, integerArgument9 + 1, integerArgument2);
-          SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+          SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           integerLocal10 = -integerArgument1 - integerArgument7 + integerArgument4 + rgbSpriteArgument8.integerState0259 + rgbSpriteArgument8.integerState0258;
           integerLocal9 = -integerArgument5 + (-integerArgument7 + rgbSpriteArgument8.integerState0258 + rgbSpriteArgument8.integerState0259) + integerArgument4;
           SoftwareRaster.intersectClip(integerLocal9, -integerArgument6 + integerLocal4, integerLocal10, 480);
           rgbSpriteArgument8.performAction0295(integerArgument4 - 1, -1 + integerArgument9, integerArgument2);
           rgbSpriteArgument8.performAction0295(integerArgument4 - 1, 1 + integerArgument9, integerArgument2);
-          SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+          SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           SoftwareRaster.intersectClip(1 + integerLocal9, integerLocal4 - integerArgument6, integerLocal10 + 1, 480);
           rgbSpriteArgument8.performAction0295(1 + integerArgument4, -1 + integerArgument9, integerArgument2);
           rgbSpriteArgument8.performAction0295(integerArgument4 + 1, integerArgument9 + 1, integerArgument2);
-          SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+          SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {
           caughtExceptionLocal8 = caughtParameterLocal11;
@@ -521,7 +521,7 @@ final class GameAssets {
           }
           byteArrayLocal26 = MixedSupport067.computeByteArray0840(-106, "status");
           if (null != byteArrayLocal26) {
-            UiComponentPart031.stringState0529 = MixedSupport105.computeString1370(byteArrayLocal26, 2);
+            AccountRegistrationPanel.stringState0529 = MixedSupport105.computeString1370(byteArrayLocal26, 2);
           }
           byteArrayLocal27 = MixedSupport067.computeByteArray0840(-46, "position");
           if (byteArrayLocal27 != null) {
@@ -664,7 +664,7 @@ final class GameAssets {
           }
           byteArrayLocal61 = MixedSupport067.computeByteArray0840(-47, "eightbit");
           if (byteArrayLocal61 != null) {
-            UiComponentPart022.stringState0401 = MixedSupport105.computeString1370(byteArrayLocal61, 2);
+            AccountFieldStatusIndicator.stringState0401 = MixedSupport105.computeString1370(byteArrayLocal61, 2);
           }
           byteArrayLocal62 = MixedSupport067.computeByteArray0840(-29, "hs_stage");
           if (null != byteArrayLocal62) {
@@ -1044,83 +1044,83 @@ final class GameAssets {
           }
           byteArrayLocal156 = MixedSupport067.computeByteArray0840(-121, "gameopt_tooltipnames,0,0");
           if (byteArrayLocal156 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[0][0] = MixedSupport105.computeString1370(byteArrayLocal156, 2);
+            IconLabelWidget.stringArrayArrayState0007[0][0] = MixedSupport105.computeString1370(byteArrayLocal156, 2);
           }
           byteArrayLocal157 = MixedSupport067.computeByteArray0840(-62, "gameopt_tooltipnames,0,1");
           if (null != byteArrayLocal157) {
-            SceneWidgetPart009.stringArrayArrayState0007[0][1] = MixedSupport105.computeString1370(byteArrayLocal157, 2);
+            IconLabelWidget.stringArrayArrayState0007[0][1] = MixedSupport105.computeString1370(byteArrayLocal157, 2);
           }
           byteArrayLocal158 = MixedSupport067.computeByteArray0840(-71, "gameopt_tooltipnames,1,0");
           if (byteArrayLocal158 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[1][0] = MixedSupport105.computeString1370(byteArrayLocal158, 2);
+            IconLabelWidget.stringArrayArrayState0007[1][0] = MixedSupport105.computeString1370(byteArrayLocal158, 2);
           }
           byteArrayLocal159 = MixedSupport067.computeByteArray0840(-103, "gameopt_tooltipnames,1,1");
           if (byteArrayLocal159 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[1][1] = MixedSupport105.computeString1370(byteArrayLocal159, 2);
+            IconLabelWidget.stringArrayArrayState0007[1][1] = MixedSupport105.computeString1370(byteArrayLocal159, 2);
           }
           byteArrayLocal160 = MixedSupport067.computeByteArray0840(-38, "gameopt_tooltipnames,1,2");
           if (null != byteArrayLocal160) {
-            SceneWidgetPart009.stringArrayArrayState0007[1][2] = MixedSupport105.computeString1370(byteArrayLocal160, 2);
+            IconLabelWidget.stringArrayArrayState0007[1][2] = MixedSupport105.computeString1370(byteArrayLocal160, 2);
           }
           byteArrayLocal161 = MixedSupport067.computeByteArray0840(-123, "gameopt_tooltipnames,1,3");
           if (byteArrayLocal161 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[1][3] = MixedSupport105.computeString1370(byteArrayLocal161, 2);
+            IconLabelWidget.stringArrayArrayState0007[1][3] = MixedSupport105.computeString1370(byteArrayLocal161, 2);
           }
           byteArrayLocal162 = MixedSupport067.computeByteArray0840(-128, "gameopt_tooltipnames,1,4");
           if (null != byteArrayLocal162) {
-            SceneWidgetPart009.stringArrayArrayState0007[1][4] = MixedSupport105.computeString1370(byteArrayLocal162, 2);
+            IconLabelWidget.stringArrayArrayState0007[1][4] = MixedSupport105.computeString1370(byteArrayLocal162, 2);
           }
           byteArrayLocal163 = MixedSupport067.computeByteArray0840(-86, "gameopt_tooltipnames,2,0");
           if (byteArrayLocal163 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[2][0] = MixedSupport105.computeString1370(byteArrayLocal163, 2);
+            IconLabelWidget.stringArrayArrayState0007[2][0] = MixedSupport105.computeString1370(byteArrayLocal163, 2);
           }
           byteArrayLocal164 = MixedSupport067.computeByteArray0840(-43, "gameopt_tooltipnames,2,1");
           if (byteArrayLocal164 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[2][1] = MixedSupport105.computeString1370(byteArrayLocal164, 2);
+            IconLabelWidget.stringArrayArrayState0007[2][1] = MixedSupport105.computeString1370(byteArrayLocal164, 2);
           }
           byteArrayLocal165 = MixedSupport067.computeByteArray0840(-107, "gameopt_tooltipnames,2,2");
           if (byteArrayLocal165 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[2][2] = MixedSupport105.computeString1370(byteArrayLocal165, 2);
+            IconLabelWidget.stringArrayArrayState0007[2][2] = MixedSupport105.computeString1370(byteArrayLocal165, 2);
           }
           byteArrayLocal166 = MixedSupport067.computeByteArray0840(-80, "gameopt_tooltipnames,2,3");
           if (byteArrayLocal166 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[2][3] = MixedSupport105.computeString1370(byteArrayLocal166, 2);
+            IconLabelWidget.stringArrayArrayState0007[2][3] = MixedSupport105.computeString1370(byteArrayLocal166, 2);
           }
           byteArrayLocal167 = MixedSupport067.computeByteArray0840(-46, "gameopt_tooltipnames,2,4");
           if (null != byteArrayLocal167) {
-            SceneWidgetPart009.stringArrayArrayState0007[2][4] = MixedSupport105.computeString1370(byteArrayLocal167, 2);
+            IconLabelWidget.stringArrayArrayState0007[2][4] = MixedSupport105.computeString1370(byteArrayLocal167, 2);
           }
           byteArrayLocal168 = MixedSupport067.computeByteArray0840(-45, "gameopt_tooltipnames,3,0");
           if (null != byteArrayLocal168) {
-            SceneWidgetPart009.stringArrayArrayState0007[3][0] = MixedSupport105.computeString1370(byteArrayLocal168, 2);
+            IconLabelWidget.stringArrayArrayState0007[3][0] = MixedSupport105.computeString1370(byteArrayLocal168, 2);
           }
           byteArrayLocal169 = MixedSupport067.computeByteArray0840(-17, "gameopt_tooltipnames,3,1");
           if (null != byteArrayLocal169) {
-            SceneWidgetPart009.stringArrayArrayState0007[3][1] = MixedSupport105.computeString1370(byteArrayLocal169, 2);
+            IconLabelWidget.stringArrayArrayState0007[3][1] = MixedSupport105.computeString1370(byteArrayLocal169, 2);
           }
           byteArrayLocal170 = MixedSupport067.computeByteArray0840(-51, "gameopt_tooltipnames,3,2");
           if (byteArrayLocal170 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[3][2] = MixedSupport105.computeString1370(byteArrayLocal170, 2);
+            IconLabelWidget.stringArrayArrayState0007[3][2] = MixedSupport105.computeString1370(byteArrayLocal170, 2);
           }
           byteArrayLocal171 = MixedSupport067.computeByteArray0840(-83, "gameopt_tooltipnames,3,3");
           if (null != byteArrayLocal171) {
-            SceneWidgetPart009.stringArrayArrayState0007[3][3] = MixedSupport105.computeString1370(byteArrayLocal171, 2);
+            IconLabelWidget.stringArrayArrayState0007[3][3] = MixedSupport105.computeString1370(byteArrayLocal171, 2);
           }
           byteArrayLocal172 = MixedSupport067.computeByteArray0840(-118, "gameopt_tooltipnames,3,4");
           if (null != byteArrayLocal172) {
-            SceneWidgetPart009.stringArrayArrayState0007[3][4] = MixedSupport105.computeString1370(byteArrayLocal172, 2);
+            IconLabelWidget.stringArrayArrayState0007[3][4] = MixedSupport105.computeString1370(byteArrayLocal172, 2);
           }
           byteArrayLocal173 = MixedSupport067.computeByteArray0840(-79, "gameopt_tooltipnames,4,0");
           if (byteArrayLocal173 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[4][0] = MixedSupport105.computeString1370(byteArrayLocal173, 2);
+            IconLabelWidget.stringArrayArrayState0007[4][0] = MixedSupport105.computeString1370(byteArrayLocal173, 2);
           }
           byteArrayLocal174 = MixedSupport067.computeByteArray0840(-116, "gameopt_tooltipnames,4,1");
           if (byteArrayLocal174 != null) {
-            SceneWidgetPart009.stringArrayArrayState0007[4][1] = MixedSupport105.computeString1370(byteArrayLocal174, 2);
+            IconLabelWidget.stringArrayArrayState0007[4][1] = MixedSupport105.computeString1370(byteArrayLocal174, 2);
           }
           byteArrayLocal175 = MixedSupport067.computeByteArray0840(-63, "gameopt_tooltipnames,4,2");
           if (null != byteArrayLocal175) {
-            SceneWidgetPart009.stringArrayArrayState0007[4][2] = MixedSupport105.computeString1370(byteArrayLocal175, 2);
+            IconLabelWidget.stringArrayArrayState0007[4][2] = MixedSupport105.computeString1370(byteArrayLocal175, 2);
           }
           byteArrayLocal176 = MixedSupport067.computeByteArray0840(-28, "instructions_titles_thebasics");
           if (byteArrayLocal176 != null) {
@@ -1152,7 +1152,7 @@ final class GameAssets {
           }
           byteArrayLocal183 = MixedSupport067.computeByteArray0840(-89, "instructions_piecesarefalling");
           if (null != byteArrayLocal183) {
-            MixedSupport015.stringState0072 = MixedSupport105.computeString1370(byteArrayLocal183, 2);
+            NineSliceSprite.stringState0072 = MixedSupport105.computeString1370(byteArrayLocal183, 2);
           }
           byteArrayLocal184 = MixedSupport067.computeByteArray0840(-42, "instructions_matchthepieces");
           if (null != byteArrayLocal184) {
@@ -1164,7 +1164,7 @@ final class GameAssets {
           }
           byteArrayLocal186 = MixedSupport067.computeByteArray0840(-62, "instructions_clearingsolids");
           if (null != byteArrayLocal186) {
-            UiComponentPart028.stringState0480 = MixedSupport105.computeString1370(byteArrayLocal186, 2);
+            EditableTextField.stringState0480 = MixedSupport105.computeString1370(byteArrayLocal186, 2);
           }
           byteArrayLocal187 = MixedSupport067.computeByteArray0840(-52, "instructions_multiplayer_solids");
           if (byteArrayLocal187 != null) {
@@ -1328,19 +1328,19 @@ final class GameAssets {
           }
           byteArrayLocal227 = MixedSupport067.computeByteArray0840(-104, "tutorial,0");
           if (byteArrayLocal227 != null) {
-            UiComponentPart028.stringArrayState0040[0] = MixedSupport105.computeString1370(byteArrayLocal227, 2);
+            EditableTextField.stringArrayState0040[0] = MixedSupport105.computeString1370(byteArrayLocal227, 2);
           }
           byteArrayLocal228 = MixedSupport067.computeByteArray0840(-90, "tutorial,1");
           if (null != byteArrayLocal228) {
-            UiComponentPart028.stringArrayState0040[1] = MixedSupport105.computeString1370(byteArrayLocal228, 2);
+            EditableTextField.stringArrayState0040[1] = MixedSupport105.computeString1370(byteArrayLocal228, 2);
           }
           byteArrayLocal229 = MixedSupport067.computeByteArray0840(-77, "tutorial,2");
           if (null != byteArrayLocal229) {
-            UiComponentPart028.stringArrayState0040[2] = MixedSupport105.computeString1370(byteArrayLocal229, 2);
+            EditableTextField.stringArrayState0040[2] = MixedSupport105.computeString1370(byteArrayLocal229, 2);
           }
           byteArrayLocal230 = MixedSupport067.computeByteArray0840(-76, "tutorial,3");
           if (byteArrayLocal230 != null) {
-            UiComponentPart028.stringArrayState0040[3] = MixedSupport105.computeString1370(byteArrayLocal230, 2);
+            EditableTextField.stringArrayState0040[3] = MixedSupport105.computeString1370(byteArrayLocal230, 2);
           }
           byteArrayLocal231 = MixedSupport067.computeByteArray0840(-97, "to_activate_specials");
           if (null != byteArrayLocal231) {
@@ -1364,7 +1364,7 @@ final class GameAssets {
           }
           byteArrayLocal236 = MixedSupport067.computeByteArray0840(-78, "showtutorialagain");
           if (byteArrayLocal236 != null) {
-            UiComponentPart032.stringState0581 = MixedSupport105.computeString1370(byteArrayLocal236, 2);
+            BirthDateInput.stringState0581 = MixedSupport105.computeString1370(byteArrayLocal236, 2);
           }
           byteArrayLocal237 = MixedSupport067.computeByteArray0840(-83, "challengestrategy,0");
           if (null != byteArrayLocal237) {
@@ -1440,7 +1440,7 @@ final class GameAssets {
           }
           byteArrayLocal255 = MixedSupport067.computeByteArray0840(-60, "you_win");
           if (byteArrayLocal255 != null) {
-            UiComponentPart005.stringState0101 = MixedSupport105.computeString1370(byteArrayLocal255, 2);
+            DisplayNameSelectionPanel.stringState0101 = MixedSupport105.computeString1370(byteArrayLocal255, 2);
           }
           byteArrayLocal256 = MixedSupport067.computeByteArray0840(-36, "name_wins");
           if (null != byteArrayLocal256) {

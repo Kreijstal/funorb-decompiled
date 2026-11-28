@@ -239,7 +239,7 @@ class PacketBuffer extends IntrusiveNode {
               pe.a((byte) 105, 8)) {
               lh.field_u = id.field_b.readLong(-125);
               id.field_b.position = 0;
-              ib.a(param2, false, param1, qi.field_c, param0);
+              DisplayNameSelectionPanel.a(param2, false, param1, qi.field_c, param0);
               aj.field_c = cd.field_s;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -299,7 +299,7 @@ class PacketBuffer extends IntrusiveNode {
               }
               LevelDecoder.field_a = id.field_b.readString(param5);
               var12 = (CharSequence) ((Object) LevelDecoder.field_a);
-              td.field_i = il.a(var12, (byte) 21);
+              td.field_i = EmailFormatValidator.a(var12, (byte) 21);
               uk.field_H = id.field_b.readUnsignedByte(-89);
               aj.field_c = qc.field_d;
               if (qi.field_c.a(true) == AccountCreationResultPanel.field_Db) {
@@ -330,7 +330,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
               }
               if (UiComponent.field_o > 0) {
-                fg.field_S = true;
+                LoginPanel.field_S = true;
               }
               dk.field_s.a((byte) 61, wa.field_rb);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {

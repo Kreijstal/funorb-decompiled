@@ -15,7 +15,7 @@ final class ok {
 
     final static void b(int param0) {
         int var1 = 106 % ((param0 + 19) / 61);
-        rd.b((byte) -88);
+        EmailFormatValidator.b((byte) -88);
     }
 
     final static void a(int param0, String param1) {

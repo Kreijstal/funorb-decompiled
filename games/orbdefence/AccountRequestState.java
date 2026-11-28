@@ -23,7 +23,7 @@ final class AccountRequestState {
             stackIn_2_0 = (RgbSprite) null;
             return stackIn_2_0;
           }
-          if (pk.a(-117, param0, param2, param1)) {
+          if (LoginPanel.a(-117, param0, param2, param1)) {
             stackIn_7_0 = tj.c(117);
             return stackIn_7_0;
           }
@@ -377,7 +377,7 @@ final class AccountRequestState {
           }
           var2Lifetime14 = jk.a(1, "barriertxt1");
           if (var2Lifetime14 != null) {
-            wg.field_n = ProxyAuthenticationRequiredException.a(var2Lifetime14, -12465);
+            EmailFormatValidator.field_n = ProxyAuthenticationRequiredException.a(var2Lifetime14, -12465);
           }
           var2Lifetime15 = jk.a(1, "barriertxt2");
           if (var2Lifetime15 != null) {
@@ -529,7 +529,7 @@ final class AccountRequestState {
           }
           var2Lifetime52 = jk.a(1, "thousand");
           if (var2Lifetime52 != null) {
-            rf.field_H = ProxyAuthenticationRequiredException.a(var2Lifetime52, -12465);
+            AccountRegistrationPanel.field_H = ProxyAuthenticationRequiredException.a(var2Lifetime52, -12465);
           }
           var2Lifetime53 = jk.a(1, "energyname");
           if (null != var2Lifetime53) {
@@ -541,7 +541,7 @@ final class AccountRequestState {
           }
           var2Lifetime55 = jk.a(1, "nextwavein");
           if (var2Lifetime55 != null) {
-            nb.field_p = ProxyAuthenticationRequiredException.a(var2Lifetime55, -12465);
+            AgeValidator.field_p = ProxyAuthenticationRequiredException.a(var2Lifetime55, -12465);
           }
           var2Lifetime56 = jk.a(1, "wavecomp");
           if (null != var2Lifetime56) {
@@ -657,7 +657,7 @@ final class AccountRequestState {
           }
           var2Lifetime84 = jk.a(1, "blambolicouswin");
           if (null != var2Lifetime84) {
-            nb.field_o = ProxyAuthenticationRequiredException.a(var2Lifetime84, -12465);
+            AgeValidator.field_o = ProxyAuthenticationRequiredException.a(var2Lifetime84, -12465);
           }
           var2Lifetime85 = jk.a(1, "norbsomewin");
           if (null != var2Lifetime85) {
@@ -673,7 +673,7 @@ final class AccountRequestState {
           }
           var2Lifetime88 = jk.a(1, "institle");
           if (var2Lifetime88 != null) {
-            hi.field_l = ProxyAuthenticationRequiredException.a(var2Lifetime88, -12465);
+            TextFieldValidator.field_l = ProxyAuthenticationRequiredException.a(var2Lifetime88, -12465);
           }
           var2Lifetime89 = jk.a(1, "scoretitle");
           if (var2Lifetime89 != null) {
@@ -741,7 +741,7 @@ final class AccountRequestState {
           }
           var2Lifetime105 = jk.a(1, "bs4");
           if (null != var2Lifetime105) {
-            ug.field_o = ProxyAuthenticationRequiredException.a(var2Lifetime105, -12465);
+            MatchingFieldValidator.field_o = ProxyAuthenticationRequiredException.a(var2Lifetime105, -12465);
           }
           var2Lifetime106 = jk.a(1, "ic5");
           if (var2Lifetime106 != null) {
@@ -749,7 +749,7 @@ final class AccountRequestState {
           }
           var2Lifetime107 = jk.a(1, "ic4");
           if (var2Lifetime107 != null) {
-            b.field_q = ProxyAuthenticationRequiredException.a(var2Lifetime107, -12465);
+            ConfirmedEmailAvailabilityValidator.field_q = ProxyAuthenticationRequiredException.a(var2Lifetime107, -12465);
           }
           var2Lifetime108 = jk.a(1, "bb5");
           if (null != var2Lifetime108) {

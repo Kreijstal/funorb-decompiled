@@ -78,7 +78,7 @@ final class ep extends PuzzleTile implements Cloneable {
             ep.c((byte) -89);
           }
           var5 = param0.getFileIdByName(-2862, param1, var4_int);
-          stackIn_3_0 = qk.a(false, var4_int, param0, var5);
+          stackIn_3_0 = DisplayNameSelectionPanel.a(false, var4_int, param0, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

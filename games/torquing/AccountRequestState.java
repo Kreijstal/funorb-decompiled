@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountRequestState {
-    static sm[] field_a;
+    static IndexedSprite[] field_a;
     static Sprite field_b;
     static int field_c;
 
@@ -89,7 +89,7 @@ final class AccountRequestState {
               param1.setCharAt(incrementValue$1, param2.charAt(var7));
             }
             if (param0 != -20980) {
-              field_a = (sm[]) null;
+              field_a = (IndexedSprite[]) null;
             }
             stackIn_16_0 = (StringBuilder) (param1);
             return stackIn_16_0;

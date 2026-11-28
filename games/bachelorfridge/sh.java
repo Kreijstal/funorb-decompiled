@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends WidgetContainer implements mca {
-    private gl field_F;
+abstract class sh extends WidgetContainer implements FieldValidatorProvider {
+    private BirthDateValidator field_F;
     static String field_D;
     static String[] field_E;
     static String field_H;
@@ -12,7 +12,7 @@ abstract class sh extends WidgetContainer implements mca {
 
     abstract int d(byte param0);
 
-    void a(gl param0, byte param1) {
+    void a(BirthDateValidator param0, byte param1) {
         if (param1 <= 111) {
           return;
         }
@@ -104,11 +104,11 @@ abstract class sh extends WidgetContainer implements mca {
 
     abstract int f(byte param0);
 
-    public final qu a(int param0) {
+    public final FieldValidator getFieldValidator(int param0) {
         if (param0 != 16728128) {
-          return (qu) null;
+          return (FieldValidator) null;
         }
-        return (qu) ((Object) this.field_F);
+        return (FieldValidator) ((Object) this.field_F);
     }
 
     public static void releaseStatics(byte param0) {

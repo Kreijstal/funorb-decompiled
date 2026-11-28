@@ -12,7 +12,7 @@ final class nb {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = ff.field_D;
+          var6 = LoginPanel.field_D;
           BitPacketBuffer var3 = var6;
           var6.writeCipheredByte(false, param0);
           var6.position = var6.position + 1;

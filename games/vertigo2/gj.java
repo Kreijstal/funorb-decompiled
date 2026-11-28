@@ -243,7 +243,7 @@ final class gj extends TextureOperator {
           hq.b(mp.field_b, -127);
           if (null != gd.field_j) {
             boolean decompiledFrameRemainder3 = true;
-            ne.field_G.field_lb = true;
+            DisplayNameSelectionPanel.field_G.field_lb = true;
             var22 = fo.field_f;
             var27 = var22;
             fo.field_f.field_db = 0;
@@ -621,17 +621,17 @@ final class gj extends TextureOperator {
           stackIn_183_1 = 0;
           stackIn_184_2 = (param4) && (!param2) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
-          stackIn_188_0 = wc.field_m;
+          stackIn_188_0 = PasswordValidator.field_m;
           stackIn_188_1 = param3;
           stackIn_189_2 = (param4) && (!param2) && (BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
-            if (ne.field_G.field_tb != 0) {
+            if (DisplayNameSelectionPanel.field_G.field_tb != 0) {
               qk.d(gd.field_j.a((byte) -38), param1, 18964);
             }
             if (hd.field_g.field_tb != 0) {
-              na.field_p = true;
+              AgeValidator.field_p = true;
             }
             if (fo.field_f.field_tb != 0) {
               BufferedRandomAccessFile.field_g = true;

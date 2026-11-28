@@ -72,10 +72,10 @@ final class vf extends IntrusiveNode {
         try {
           nc.field_n.b();
           var2.b(0, 0);
-          jg.field_m = new RgbSprite(var3, -nc.field_n.field_u + var4);
-          jg.field_m.b();
+          ConfirmedEmailAvailabilityValidator.field_m = new RgbSprite(var3, -nc.field_n.field_u + var4);
+          ConfirmedEmailAvailabilityValidator.field_m.b();
           var2.b(0, -nc.field_n.field_u);
-          jg.field_m.field_w = nc.field_n.field_u;
+          ConfirmedEmailAvailabilityValidator.field_m.field_w = nc.field_n.field_u;
           pd.a(-22949);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "vf.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

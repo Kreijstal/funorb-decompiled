@@ -46,11 +46,11 @@ final class sj {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ig.field_N.field_k >= 4) {
-            if (ig.field_N.field_e == -1) {
+          if (EditableTextField.field_N.field_k >= 4) {
+            if (EditableTextField.field_N.field_e == -1) {
               return 3;
             }
-            if (-2 != ig.field_N.field_e) {
+            if (-2 != EditableTextField.field_N.field_e) {
               return 1;
             }
             return 4;
@@ -60,20 +60,20 @@ final class sj {
           }
           try {
             if (ce.field_e == 0) {
-              db.field_o = AccountServiceResult.field_k.requestDirectSocket(AccountRequestState.field_a, 76, mb.field_p);
+              PasswordValidator.field_o = AccountServiceResult.field_k.requestDirectSocket(AccountRequestState.field_a, 76, mb.field_p);
               ce.field_e = ce.field_e + 1;
             }
             if (ce.field_e == 1) {
-              if (db.field_o.status == 2) {
+              if (PasswordValidator.field_o.status == 2) {
                 stackIn_17_0 = th.a((byte) 125, -1);
                 return stackIn_17_0;
               }
-              if (db.field_o.status == 1) {
+              if (PasswordValidator.field_o.status == 1) {
                 ce.field_e = ce.field_e + 1;
               }
             }
             if (ce.field_e == 2) {
-              be.field_g = new BufferedSocket((java.net.Socket) (db.field_o.result), AccountServiceResult.field_k);
+              be.field_g = new BufferedSocket((java.net.Socket) (PasswordValidator.field_o.result), AccountServiceResult.field_k);
               var2 = new PacketBuffer(13);
               hm.a(ProxyAuthenticationRequiredException.field_c, mm.field_s, var2, ByteStorage.field_a, 4122);
               var2.d(87, 15);
@@ -100,9 +100,9 @@ final class sj {
             if (ce.field_e != 4) {
               return -1;
             }
-            ig.field_N.a(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
+            EditableTextField.field_N.a(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
             ce.field_e = 0;
-            db.field_o = null;
+            PasswordValidator.field_o = null;
             be.field_g = null;
             stackIn_36_0 = 0;
             return stackIn_36_0;

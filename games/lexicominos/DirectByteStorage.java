@@ -54,7 +54,7 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException var2 = null;
         var3 = Lexicominos.field_L ? 1 : 0;
         try {
-          ByteStorage.a(param1, 0, true, -123, rb.field_a, r.field_D, pf.field_o);
+          ByteStorage.a(param1, 0, true, -123, rb.field_a, DisplayNameSelectionPanel.field_D, pf.field_o);
           if (param0 != 83) {
             return;
           }

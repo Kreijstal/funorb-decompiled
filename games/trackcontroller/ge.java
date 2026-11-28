@@ -65,7 +65,7 @@ final class ge extends td implements jg, ButtonListener {
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_E = new ButtonWidget(hd.field_m, (tg) null);
+          this.field_E = new ButtonWidget(ConfirmedEmailAvailabilityValidator.field_m, (tg) null);
           this.field_E.field_y = (t) ((Object) new dc());
           var7 = dh.a((byte) -81, new String[]{this.k(0), this.j(11844)}, qd.field_b);
           var3 = 20;
@@ -185,14 +185,14 @@ final class ge extends td implements jg, ButtonListener {
           }
           var2_long = qg.correctedCurrentTimeMillis(param1);
           if (s.field_b != 0 &&
-            vd.field_K < 0) {
+            AccountRegistrationPanel.field_K < 0) {
             var4_ref_wa = (wa) (cg.field_f.first(2));
             if (var4_ref_wa != null &&
               var4_ref_wa.field_l < var2_long) {
               var4_ref_wa.unlink(-60);
-              hd.field_o = var4_ref_wa.field_m.length;
+              ConfirmedEmailAvailabilityValidator.field_o = var4_ref_wa.field_m.length;
               ne.field_a.position = 0;
-              for (var5_int = 0; hd.field_o > var5_int; var5_int++) {
+              for (var5_int = 0; ConfirmedEmailAvailabilityValidator.field_o > var5_int; var5_int++) {
                 ne.field_a.payload[var5_int] = var4_ref_wa.field_m[var5_int];
               }
               o.field_a = u.field_o;
@@ -203,14 +203,14 @@ final class ge extends td implements jg, ButtonListener {
             }
           }
           while (true) {
-            if (vd.field_K < 0) {
+            if (AccountRegistrationPanel.field_K < 0) {
               ne.field_a.position = 0;
               if (!DiskArchiveStore.a(1, false)) {
                 return false;
               }
-              vd.field_K = ne.field_a.readCipheredByte(false);
+              AccountRegistrationPanel.field_K = ne.field_a.readCipheredByte(false);
               ne.field_a.position = 0;
-              hd.field_o = param0[vd.field_K];
+              ConfirmedEmailAvailabilityValidator.field_o = param0[AccountRegistrationPanel.field_K];
             }
             if (!ByteStorage.a(520)) {
               return false;
@@ -219,8 +219,8 @@ final class ge extends td implements jg, ButtonListener {
               o.field_a = u.field_o;
               u.field_o = mc.field_L;
               mc.field_L = uk.field_c;
-              uk.field_c = vd.field_K;
-              vd.field_K = -1;
+              uk.field_c = AccountRegistrationPanel.field_K;
+              AccountRegistrationPanel.field_K = -1;
               return true;
             }
             var4 = s.field_b;
@@ -230,12 +230,12 @@ final class ge extends td implements jg, ButtonListener {
                 var4 = 0;
               }
             }
-            var5 = new wa((long)var4 + var2_long, vd.field_K, new byte[hd.field_o]);
-            for (var6 = 0; var6 < hd.field_o; var6++) {
+            var5 = new wa((long)var4 + var2_long, AccountRegistrationPanel.field_K, new byte[ConfirmedEmailAvailabilityValidator.field_o]);
+            for (var6 = 0; var6 < ConfirmedEmailAvailabilityValidator.field_o; var6++) {
               var5.field_m[var6] = ne.field_a.payload[var6];
             }
             cg.field_f.addLast((byte) -110, var5);
-            vd.field_K = -1;
+            AccountRegistrationPanel.field_K = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

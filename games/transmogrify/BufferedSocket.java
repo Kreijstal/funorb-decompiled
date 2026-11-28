@@ -240,7 +240,7 @@ final class BufferedSocket implements Runnable {
     }
 
     final static void a(byte param0, cf param1, int param2) {
-        BitPacketBuffer var3 = ff.field_D;
+        BitPacketBuffer var3 = LoginPanel.field_D;
         var3.writeCipheredByte(false, param2);
         var3.writeByte(param0 + 6306, param1.field_g);
         if (param0 != 83) {
@@ -290,12 +290,12 @@ final class BufferedSocket implements Runnable {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var2_int - 1 == var3) {
-                stackIn_17_0 = vc.field_N;
+                stackIn_17_0 = ValidatedTextField.field_N;
                 return stackIn_17_0;
               }
             } else {
               if (AccountNameAvailabilityValidator.field_o.indexOf(var4) == -1) {
-                stackIn_20_0 = vc.field_N;
+                stackIn_20_0 = ValidatedTextField.field_N;
                 return stackIn_20_0;
               }
             }
@@ -470,7 +470,7 @@ final class BufferedSocket implements Runnable {
           }
           var2_long = lk.correctedCurrentTimeMillis(0);
           if (aa.field_a != 0 &&
-            md.field_k < 0) {
+            AgeValidator.field_k < 0) {
             var4_ref_b = (b) (le.field_C.beginForward((byte) -95));
             if (var4_ref_b != null &&
               var4_ref_b.field_g < var2_long) {
@@ -482,8 +482,8 @@ final class BufferedSocket implements Runnable {
               }
               bd.field_t = WordLanguage.field_k;
               WordLanguage.field_k = FullscreenFocusCanvas.field_a;
-              FullscreenFocusCanvas.field_a = ca.field_e;
-              ca.field_e = var4_ref_b.field_j;
+              FullscreenFocusCanvas.field_a = DebouncedFieldValidator.field_e;
+              DebouncedFieldValidator.field_e = var4_ref_b.field_j;
               return true;
             }
           }
@@ -491,14 +491,14 @@ final class BufferedSocket implements Runnable {
             field_f = (String) null;
           }
           while (true) {
-            if (0 > md.field_k) {
+            if (0 > AgeValidator.field_k) {
               WordLanguage.field_l.position = 0;
               if (!ue.a(1, 0)) {
                 return false;
               }
-              md.field_k = WordLanguage.field_l.readCipheredByte(-12135);
+              AgeValidator.field_k = WordLanguage.field_l.readCipheredByte(-12135);
               WordLanguage.field_l.position = 0;
-              tg.field_a = param0[md.field_k];
+              tg.field_a = param0[AgeValidator.field_k];
             }
             if (!GameKeyHandler.a(0)) {
               return false;
@@ -506,9 +506,9 @@ final class BufferedSocket implements Runnable {
             if (aa.field_a == 0) {
               bd.field_t = WordLanguage.field_k;
               WordLanguage.field_k = FullscreenFocusCanvas.field_a;
-              FullscreenFocusCanvas.field_a = ca.field_e;
-              ca.field_e = md.field_k;
-              md.field_k = -1;
+              FullscreenFocusCanvas.field_a = DebouncedFieldValidator.field_e;
+              DebouncedFieldValidator.field_e = AgeValidator.field_k;
+              AgeValidator.field_k = -1;
               return true;
             }
             var4 = aa.field_a;
@@ -518,12 +518,12 @@ final class BufferedSocket implements Runnable {
                 var4 = 0;
               }
             }
-            var5 = new b((long)var4 + var2_long, md.field_k, new byte[tg.field_a]);
+            var5 = new b((long)var4 + var2_long, AgeValidator.field_k, new byte[tg.field_a]);
             for (var6 = 0; tg.field_a > var6; var6++) {
               var5.field_h[var6] = WordLanguage.field_l.payload[var6];
             }
             le.field_C.addLast(var5, -100);
-            md.field_k = -1;
+            AgeValidator.field_k = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,7 +18,7 @@ final class gi {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!tj.a(param2, param0, param3, (byte) 83)) {
+          if (!EmailFormatValidator.a(param2, param0, param3, (byte) 83)) {
             return null;
           }
           if (param1 != 3807) {

@@ -93,7 +93,7 @@ final class SectorCacheStore {
         MouseInput.a(bb.field_f, (byte) 91);
         uc.b();
         SoftwareRasterizer.clearRaster();
-        ah.g((byte) -104);
+        DisplayNameSelectionPanel.g((byte) -104);
         if (256 > var5) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c, 0, -var5 + 256);
         }

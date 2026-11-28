@@ -100,9 +100,9 @@ final class fb {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(hd.mouseHandler);
-          param1.removeMouseMotionListener(hd.mouseHandler);
-          param1.removeFocusListener(hd.mouseHandler);
+          param1.removeMouseListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
+          param1.removeMouseMotionListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
+          param1.removeFocusListener(ConfirmedEmailAvailabilityValidator.mouseHandler);
           if (param0 >= -99) {
             fb.resetStaticState(-114);
           }

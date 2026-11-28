@@ -386,7 +386,7 @@ final class HuffmanDecoder {
             return;
           }
           var5_intLifetime1 = 0;
-          if (null == ip.field_j) {
+          if (null == TextFieldValidator.field_j) {
             return;
           }
           KeyboardInput.field_f = param1;
@@ -395,13 +395,13 @@ final class HuffmanDecoder {
           for (var6Lifetime1 = 0; param4.length > var6Lifetime1; var6Lifetime1++) {
             param4[var6Lifetime1].field_b = param1 + var6Lifetime1;
             fb.field_d[var6Lifetime1] = param4[var6Lifetime1];
-            if (le.a(ip.field_j, fb.field_d[var6Lifetime1].field_i, param2 ^ -127)) {
-              qc.field_y = var6Lifetime1 + vd.field_a;
+            if (le.a(TextFieldValidator.field_j, fb.field_d[var6Lifetime1].field_i, param2 ^ -127)) {
+              MenuScreen.field_y = var6Lifetime1 + vd.field_a;
               var5_intLifetime1 = 1;
             }
           }
           if (var5_intLifetime1 == 0) {
-            qc.field_y = -1;
+            MenuScreen.field_y = -1;
           }
           gg.a((byte) -84);
           return;
@@ -470,7 +470,7 @@ final class HuffmanDecoder {
             return;
           }
           var5_intLifetime1 = 0;
-          if (null == ip.field_j) {
+          if (null == TextFieldValidator.field_j) {
             return;
           }
           KeyboardInput.field_f = param1;
@@ -479,13 +479,13 @@ final class HuffmanDecoder {
           for (var6Lifetime1 = 0; param4.length > var6Lifetime1; var6Lifetime1++) {
             param4[var6Lifetime1].field_b = param1 + var6Lifetime1;
             fb.field_d[var6Lifetime1] = param4[var6Lifetime1];
-            if (le.a(ip.field_j, fb.field_d[var6Lifetime1].field_i, param2 ^ -127)) {
-              qc.field_y = var6Lifetime1 + vd.field_a;
+            if (le.a(TextFieldValidator.field_j, fb.field_d[var6Lifetime1].field_i, param2 ^ -127)) {
+              MenuScreen.field_y = var6Lifetime1 + vd.field_a;
               var5_intLifetime1 = 1;
             }
           }
           if (var5_intLifetime1 == 0) {
-            qc.field_y = -1;
+            MenuScreen.field_y = -1;
           }
           gg.a((byte) -84);
           return;

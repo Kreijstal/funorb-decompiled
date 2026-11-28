@@ -214,8 +214,8 @@ final class f extends IntrusiveNode {
                 stackIn_96_0 = 3;
                 return stackIn_96_0;
               }
-              var7Lifetime2 = ei.field_o;
-              ei.field_o = ia.field_c;
+              var7Lifetime2 = TextFieldValidator.field_o;
+              TextFieldValidator.field_o = ia.field_c;
               dk.field_b = true;
               ia.field_c = var7Lifetime2;
             }

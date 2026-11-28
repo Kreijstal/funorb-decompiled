@@ -9,8 +9,8 @@ final class wg {
     static int field_a;
 
     final static java.awt.Container b(byte param0) {
-        if (null != wh.field_cb) {
-          return (java.awt.Container) ((Object) wh.field_cb);
+        if (null != ValidatedTextField.field_cb) {
+          return (java.awt.Container) ((Object) ValidatedTextField.field_cb);
         }
         if (param0 != -62) {
           return (java.awt.Container) null;

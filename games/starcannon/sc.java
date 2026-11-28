@@ -80,7 +80,7 @@ final class sc {
 
     final static void a(int param0, int[] param1, int param2, int param3) {
         try {
-          kh.a(param1, 120, 0, SoftwareRasterizer.field_a, 0, 0, 0, param0, 160, 1920, -93, 0);
+          AccountRegistrationPanel.a(param1, 120, 0, SoftwareRasterizer.field_a, 0, 0, 0, param0, 160, 1920, -93, 0);
           nb.a(0, 0, 0, SoftwareRasterizer.field_a, 0, 16384, 0, param2, 120, 160);
           if (param3 != 30603) {
             String var5 = (String) null;

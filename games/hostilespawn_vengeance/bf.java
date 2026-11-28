@@ -192,11 +192,11 @@ final class bf {
             var7 = null;
             var8 = 5 / ((param5 - 28) / 39);
             if (AccountServiceResult.field_k.field_l != null) {
-              mk.field_K = new BufferedRandomAccessFile(AccountServiceResult.field_k.field_l, 5200, 0);
+              AccountRegistrationPanel.field_K = new BufferedRandomAccessFile(AccountServiceResult.field_k.field_l, 5200, 0);
               AccountServiceResult.field_k.field_l = null;
-              var6 = new SectorCacheStore(255, mk.field_K, new BufferedRandomAccessFile(AccountServiceResult.field_k.field_f, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, AccountRegistrationPanel.field_K, new BufferedRandomAccessFile(AccountServiceResult.field_k.field_f, 12000, 0), 2097152);
             }
-            if (null != mk.field_K) {
+            if (null != AccountRegistrationPanel.field_K) {
               if (NodeHashTableIterator.field_a == null) {
                 NodeHashTableIterator.field_a = new BufferedRandomAccessFile[AccountServiceResult.field_k.field_v.length];
               }
@@ -204,7 +204,7 @@ final class bf {
                 NodeHashTableIterator.field_a[param2] = new BufferedRandomAccessFile(AccountServiceResult.field_k.field_v[param2], 12000, 0);
                 AccountServiceResult.field_k.field_v[param2] = null;
               }
-              var7 = new SectorCacheStore(param2, mk.field_K, NodeHashTableIterator.field_a[param2], 2097152);
+              var7 = new SectorCacheStore(param2, AccountRegistrationPanel.field_K, NodeHashTableIterator.field_a[param2], 2097152);
             }
             var9 = sj.field_a.a(param0, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 0);
             if (param4) {

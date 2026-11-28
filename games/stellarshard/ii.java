@@ -6,7 +6,7 @@ final class ii extends ig {
     private int field_I;
     static String field_G;
     static String field_F;
-    private w field_H;
+    private FieldValidator field_H;
 
     final void a(int param0, byte param1, int param2, int param3) {
         Sprite var15 = null;
@@ -24,7 +24,7 @@ final class ii extends ig {
         }
         int var5 = param3 + this.field_w + (this.field_p >> 1);
         int var6 = (this.field_t >> 1) + (param2 + this.field_k);
-        cg var8 = this.field_H.b(-28036);
+        cg var8 = this.field_H.getValidationStatus(-28036);
         if (eh.field_c == var8) {
           var15 = DualLinkNode.field_p[0];
           var9 = var15.field_w << 1;
@@ -197,10 +197,10 @@ final class ii extends ig {
         if (!this.field_q) {
           return null;
         }
-        return this.field_H.c(-22773);
+        return this.field_H.getValidationMessage(-22773);
     }
 
-    ii(w param0) {
+    ii(FieldValidator param0) {
         try {
           this.field_H = param0;
         } catch (RuntimeException runtimeException) {

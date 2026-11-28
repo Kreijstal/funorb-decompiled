@@ -300,7 +300,7 @@ final class sa {
         int var8 = 0;
         try {
           try {
-            var9 = ae.field_G.getGraphics();
+            var9 = DisplayNameSelectionPanel.field_G.getGraphics();
             if (null == GzipDecompressor.field_e) {
               GzipDecompressor.field_e = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -313,7 +313,7 @@ final class sa {
             }
             try {
               if (ag.field_a == null) {
-                ag.field_a = ae.field_G.createImage(304, 34);
+                ag.field_a = DisplayNameSelectionPanel.field_G.createImage(304, 34);
               }
               var10 = ag.field_a.getGraphics();
               var10.setColor(param3);
@@ -354,7 +354,7 @@ final class sa {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            ae.field_G.repaint();
+            DisplayNameSelectionPanel.field_G.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

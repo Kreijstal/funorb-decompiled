@@ -157,7 +157,7 @@ final class wh {
                 var4Lifetime2 = var4Lifetime2 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4Lifetime2);
-              param0.getAppletContext().showDocument(fh.a(param0, var5, -1), "_self");
+              param0.getAppletContext().showDocument(DisplayNameSelectionPanel.a(param0, var5, -1), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -274,7 +274,7 @@ final class wh {
         if (param0 != -108) {
           wh.a((byte) -115);
         }
-        if (k.field_b) {
+        if (DebouncedFieldValidator.field_b) {
           return null;
         }
         if (Main.field_G < ek.field_e) {

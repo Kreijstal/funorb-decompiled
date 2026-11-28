@@ -96,7 +96,7 @@ final class BlastDebrisBatch {
           }
           hq.b(stackIn_4_0, -127);
           IterableNodeHashTable.field_e.a(0, 14017, AccountNameAvailabilityValidator.field_o.field_Fb, 0, -2 + (-40 + AccountNameAvailabilityValidator.field_o.field_db));
-          nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, Archive.field_f, 0, 0);
+          nb.field_D.a(param0 ^ 108, DebouncedFieldValidator.field_g.field_Fb, Archive.field_f, 0, 0);
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
           if (MidiPcmStream.field_S) {
@@ -104,10 +104,10 @@ final class BlastDebrisBatch {
           } else {
             stackIn_7_2 = 0;
           }
-          ((UiPanel) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + de.field_g.field_Fb, 18, 2 + Archive.field_f, 0);
-          eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + Archive.field_f, -40 + (-re.field_k + (de.field_g.field_Fb - 2)));
-          vd.field_d.a(2 + Archive.field_f + 20, 2, re.field_k, -22 + (de.field_g.field_db - Archive.field_f), 0, de.field_g.field_Fb, 3124);
-          ne.field_G.a(76, AccountNameAvailabilityValidator.field_o.field_Fb, 40, -40 + AccountNameAvailabilityValidator.field_o.field_db, param0);
+          ((UiPanel) (Object) stackIn_6_0).a(stackIn_6_1, -stackIn_7_2 + DebouncedFieldValidator.field_g.field_Fb, 18, 2 + Archive.field_f, 0);
+          eq.field_z.a(param0 + 95, re.field_k + 42, 18, 2 + Archive.field_f, -40 + (-re.field_k + (DebouncedFieldValidator.field_g.field_Fb - 2)));
+          vd.field_d.a(2 + Archive.field_f + 20, 2, re.field_k, -22 + (DebouncedFieldValidator.field_g.field_db - Archive.field_f), 0, DebouncedFieldValidator.field_g.field_Fb, 3124);
+          DisplayNameSelectionPanel.field_G.a(76, AccountNameAvailabilityValidator.field_o.field_Fb, 40, -40 + AccountNameAvailabilityValidator.field_o.field_db, param0);
           ud.field_x.a(76, lb.field_c.field_Fb, 30, 0, 0);
           fd.field_s.a(108, lb.field_c.field_Fb, -2 + (lb.field_c.field_db - 70), 30, 0);
           var2_int = 3 + ol.field_A;
@@ -207,9 +207,9 @@ final class BlastDebrisBatch {
               }
             }
           }
-          wc.field_m.a(param0 ^ 81, 360, -20 + (-124 + SoftwareRasterizer.field_j), 10, SoftwareRasterizer.field_e - 360 >> 1);
-          he.field_x.a(77, wc.field_m.field_Fb, 24, 0, 0);
-          lr.field_P.a(116, wc.field_m.field_Fb, -24 + wc.field_m.field_db, 24, 0);
+          PasswordValidator.field_m.a(param0 ^ 81, 360, -20 + (-124 + SoftwareRasterizer.field_j), 10, SoftwareRasterizer.field_e - 360 >> 1);
+          he.field_x.a(77, PasswordValidator.field_m.field_Fb, 24, 0, 0);
+          lr.field_P.a(116, PasswordValidator.field_m.field_Fb, -24 + PasswordValidator.field_m.field_db, 24, 0);
           lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);
           BufferedRandomAccessFile.field_j.a(99, lr.field_P.field_Fb - 10, -2 + (lr.field_P.field_db - 34), 5, 5);
           Vertigo2.field_M.a(74, 80, 24, -5 + (lr.field_P.field_db - 24), (-80 + lr.field_P.field_Fb) / 2);

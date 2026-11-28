@@ -159,7 +159,7 @@ final class gb {
           stackIn_4_0 = param0;
           pc.field_db = stackIn_4_0;
           if (kg.field_m == 0) {
-            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, vi.field_I, -60);
+            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, EditableTextField.field_I, -60);
             var4 = var3_int + 3;
             FullscreenFocusCanvas.field_d = new String[var4];
             dd.field_B = new int[var4];
@@ -178,7 +178,7 @@ final class gb {
             dd.field_B[var4 - 1] = 1;
             gg.field_O[1] = 5;
           } else if (kg.field_m == 1) {
-            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, vi.field_I, -77);
+            var3_int = th.a(jd.field_a, ta.field_y, li.field_c, EditableTextField.field_I, -77);
             var4 = var3_int + 2;
             FullscreenFocusCanvas.field_d = new String[var4];
             dd.field_B = new int[var4];
@@ -196,9 +196,9 @@ final class gb {
           } else if (kg.field_m != 2) {
             if (3 == kg.field_m) {
               if (wc.field_c.privilegedTasksEnabled) {
-                var3_int = th.a(jd.field_a, am.field_c, li.field_c, vi.field_I, -62);
+                var3_int = th.a(jd.field_a, am.field_c, li.field_c, EditableTextField.field_I, -62);
               } else {
-                var3_int = th.a(jd.field_a, dg.field_C, li.field_c, vi.field_I, -98);
+                var3_int = th.a(jd.field_a, dg.field_C, li.field_c, EditableTextField.field_I, -98);
               }
               var4 = 2 + var3_int;
               FullscreenFocusCanvas.field_d = new String[var4];
@@ -215,7 +215,7 @@ final class gb {
               dd.field_B[-1 + var4] = 0;
               gg.field_O[0] = 5;
             } else if (4 == kg.field_m) {
-              var3_int = th.a(jd.field_a, fi.field_a, li.field_c, vi.field_I, -89);
+              var3_int = th.a(jd.field_a, fi.field_a, li.field_c, EditableTextField.field_I, -89);
               var4 = var3_int + 2;
               FullscreenFocusCanvas.field_d = new String[var4];
               dd.field_B = new int[var4];
@@ -234,7 +234,7 @@ final class gb {
               if (kg.field_m != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = th.a(jd.field_a, lh.field_a, li.field_c, vi.field_I, -52);
+              var3_int = th.a(jd.field_a, lh.field_a, li.field_c, EditableTextField.field_I, -52);
               var4 = var3_int + 3;
               dd.field_B = new int[var4];
               FullscreenFocusCanvas.field_d = new String[var4];
@@ -254,7 +254,7 @@ final class gb {
               gg.field_O[1] = 5;
             }
           } else {
-            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, mc.field_f), li.field_c, vi.field_I, -105);
+            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, mc.field_f), li.field_c, EditableTextField.field_I, -105);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(li.field_c[var5])) {
@@ -271,7 +271,7 @@ final class gb {
             AccountNameAvailabilityValidator.field_t = new String[var3_int - var4 - 1];
             mk.a(li.field_c, 1 + var4, AccountNameAvailabilityValidator.field_t, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, vi.field_I, -108);
+            var3_int = th.a(jd.field_a, CrossfadingMidiPcmStream.a(-415993727, new String[]{"<br><%0><br>"}, qk.field_c), li.field_c, EditableTextField.field_I, -108);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(li.field_c[var5])) {
                 continue;
@@ -371,17 +371,17 @@ final class gb {
           }
           ha.field_o = -(var3_intLifetime1 >> 1) + fd.field_c;
           lc.field_q = -(var3_intLifetime1 >> 1) + (fd.field_c + var3_intLifetime1);
-          rf.field_C = (gg.field_N + DualLinkDequeIterator.field_b << 1) * ab.field_j.field_i;
+          AccountRegistrationPanel.field_C = (gg.field_N + DualLinkDequeIterator.field_b << 1) * ab.field_j.field_i;
           for (var4Lifetime2 = 0; var4Lifetime2 < FullscreenFocusCanvas.field_d.length; var4Lifetime2++) {
-            stackIn_116_0 = rf.field_C;
+            stackIn_116_0 = AccountRegistrationPanel.field_C;
             if (dd.field_B[var4Lifetime2] >= 0) {
-              stackIn_117_1 = el.field_D;
+              stackIn_117_1 = DisplayNameSelectionPanel.field_D;
             } else {
               stackIn_117_1 = d.field_j;
             }
-            rf.field_C = stackIn_116_0 + stackIn_117_1;
+            AccountRegistrationPanel.field_C = stackIn_116_0 + stackIn_117_1;
           }
-          sd.field_h = sf.field_T - (rf.field_C >> 1);
+          sd.field_h = sf.field_T - (AccountRegistrationPanel.field_C >> 1);
           qd.field_d = new int[FullscreenFocusCanvas.field_d.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = sd.field_h;
@@ -397,8 +397,8 @@ final class gb {
               qd.field_d[var4Lifetime3][0] = var8Lifetime1 - mj.field_f;
               qd.field_d[var4Lifetime3][1] = var5Lifetime3;
               qd.field_d[var4Lifetime3][2] = var7Lifetime2 + (mj.field_f << 1);
-              var5Lifetime3 = var5Lifetime3 + ((DualLinkDequeIterator.field_b << 1) + gg.field_N + el.field_D);
-              qd.field_d[var4Lifetime3][3] = el.field_D + (DualLinkDequeIterator.field_b << 1);
+              var5Lifetime3 = var5Lifetime3 + ((DualLinkDequeIterator.field_b << 1) + gg.field_N + DisplayNameSelectionPanel.field_D);
+              qd.field_d[var4Lifetime3][3] = DisplayNameSelectionPanel.field_D + (DualLinkDequeIterator.field_b << 1);
             }
             var4Lifetime3++;
           }

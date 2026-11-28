@@ -451,9 +451,9 @@ final class sb extends aa {
                 !(jc.field_a.length >= param2)) {
                 jc.field_a = new int[param2 * 2];
               }
-              if (null == hf.field_c ||
-                !(param2 <= hf.field_c.length)) {
-                hf.field_c = new int[2 * param2];
+              if (null == DebouncedFieldValidator.field_c ||
+                !(param2 <= DebouncedFieldValidator.field_c.length)) {
+                DebouncedFieldValidator.field_c = new int[2 * param2];
               }
               if (null == rb.field_fb ||
                 !(param2 <= rb.field_fb.length)) {
@@ -481,9 +481,9 @@ final class sb extends aa {
                   !(jc.field_a.length >= param2)) {
                   jc.field_a = new int[param2 * 2];
                 }
-                if (null == hf.field_c ||
-                  !(param2 <= hf.field_c.length)) {
-                  hf.field_c = new int[2 * param2];
+                if (null == DebouncedFieldValidator.field_c ||
+                  !(param2 <= DebouncedFieldValidator.field_c.length)) {
+                  DebouncedFieldValidator.field_c = new int[2 * param2];
                 }
                 if (null == rb.field_fb ||
                   !(param2 <= rb.field_fb.length)) {
@@ -511,9 +511,9 @@ final class sb extends aa {
                   !(jc.field_a.length >= param2)) {
                   jc.field_a = new int[param2 * 2];
                 }
-                if (null == hf.field_c ||
-                  !(param2 <= hf.field_c.length)) {
-                  hf.field_c = new int[2 * param2];
+                if (null == DebouncedFieldValidator.field_c ||
+                  !(param2 <= DebouncedFieldValidator.field_c.length)) {
+                  DebouncedFieldValidator.field_c = new int[2 * param2];
                 }
                 if (null == rb.field_fb ||
                   !(param2 <= rb.field_fb.length)) {
@@ -537,7 +537,7 @@ final class sb extends aa {
             kj.field_G = -2147483648;
             fe.field_g = -2147483648;
             ah.field_j = 2147483647;
-            fd.field_n = 0;
+            ConfirmedEmailAvailabilityValidator.field_n = 0;
             return;
           }
         }
@@ -552,9 +552,9 @@ final class sb extends aa {
             !(jc.field_a.length >= param2)) {
             jc.field_a = new int[param2 * 2];
           }
-          if (null == hf.field_c ||
-            !(param2 <= hf.field_c.length)) {
-            hf.field_c = new int[2 * param2];
+          if (null == DebouncedFieldValidator.field_c ||
+            !(param2 <= DebouncedFieldValidator.field_c.length)) {
+            DebouncedFieldValidator.field_c = new int[2 * param2];
           }
           if (null == rb.field_fb ||
             !(param2 <= rb.field_fb.length)) {
@@ -589,9 +589,9 @@ final class sb extends aa {
             !(jc.field_a.length >= param2)) {
             jc.field_a = new int[param2 * 2];
           }
-          if (null == hf.field_c ||
-            !(param2 <= hf.field_c.length)) {
-            hf.field_c = new int[2 * param2];
+          if (null == DebouncedFieldValidator.field_c ||
+            !(param2 <= DebouncedFieldValidator.field_c.length)) {
+            DebouncedFieldValidator.field_c = new int[2 * param2];
           }
           if (null == rb.field_fb ||
             !(param2 <= rb.field_fb.length)) {
@@ -670,7 +670,7 @@ final class sb extends aa {
         kj.field_G = -2147483648;
         fe.field_g = -2147483648;
         ah.field_j = 2147483647;
-        fd.field_n = 0;
+        ConfirmedEmailAvailabilityValidator.field_n = 0;
     }
 
     public sb() {

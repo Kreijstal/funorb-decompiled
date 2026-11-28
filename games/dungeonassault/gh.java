@@ -32,7 +32,7 @@ final class gh {
         try {
           cd.field_b = true;
           jd.field_l = param2 ? true : false;
-          a.field_n = new nk(lg.field_w, hc.field_f, param1, qc.field_t, jd.field_l);
+          a.field_n = new nk(lg.field_w, hc.field_f, param1, MenuScreen.field_t, jd.field_l);
           lg.field_w.a(a.field_n, -1);
           if (param0 != 23321) {
             field_i = (ac[]) null;
@@ -65,7 +65,7 @@ final class gh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ga.a(param4, param5, param0, param2, 122, param3);
+          var8 = ConfirmedEmailAvailabilityValidator.a(param4, param5, param0, param2, 122, param3);
           var6 = var8;
           if (var8 == null) {
             return null;

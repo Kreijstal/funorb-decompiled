@@ -126,7 +126,7 @@ class WidgetContainer extends UiWidget implements sf {
     final static void a(byte param0, nd param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = di.field_l;
+          var3 = TextFieldValidator.field_l;
           var3.writeCipheredByte(-17410, param2);
           var3.writeByte(5, 3);
           if (param0 != 15) {

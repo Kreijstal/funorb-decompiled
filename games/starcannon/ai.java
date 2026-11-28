@@ -472,7 +472,7 @@ final class ai {
         t.field_u = 2147483647;
         DelayedPcmStream.field_p = 0;
         og.field_b = 2147483647;
-        mh.field_j = -2147483648;
+        EmailFormatValidator.field_j = -2147483648;
     }
 
     public static void clearStaticReferences(int param0) {

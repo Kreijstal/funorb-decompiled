@@ -48,13 +48,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ProxySocketConnector.field_j = this;
               df.field_c = 0;
               fb.field_f = 0;
-              lk.field_j = param5;
+              TextFieldValidator.field_j = param5;
               kg.field_H = param5;
               tc.field_u = hf.a((byte) -96);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param1, true);
-              ic.field_d = dupTemp$0;
+              DebouncedFieldValidator.field_d = dupTemp$0;
               fb.field_d = dupTemp$0;
-              var9 = ic.field_d.requestThreadStart((Runnable) (this), 1, 0);
+              var9 = DebouncedFieldValidator.field_d.requestThreadStart((Runnable) (this), 1, 0);
               while (true) {
                 if (var9.status == 0) {
                   jj.sleepMillis((byte) -127, 10L);
@@ -492,9 +492,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 k.a(3);
                 this.c(31178);
-                pd.field_h = cg.a((java.awt.Component) ((Object) qd.field_j), false, lk.field_j, td.field_d);
+                pd.field_h = cg.a((java.awt.Component) ((Object) qd.field_j), false, TextFieldValidator.field_j, td.field_d);
                 this.a(true);
-                rb.field_u = qb.f(-17887);
+                rb.field_u = EmailFormatValidator.f(-17887);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (gk.field_h != 0L) {
@@ -513,7 +513,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(ol.field_c > var3)) {
                       this.e((byte) 56);
-                      ni.a(ic.field_d, qd.field_j, -127);
+                      ni.a(DebouncedFieldValidator.field_d, qd.field_j, -127);
                       break;
                     }
                     this.a((byte) -128);
@@ -571,8 +571,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             qd.field_j.getParent().remove((java.awt.Component) ((Object) qd.field_j));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (la.field_L != null) {
-            var2 = la.field_L;
+          if (LoginPanel.field_L != null) {
+            var2 = LoginPanel.field_L;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -596,7 +596,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           qd.field_j = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) qd.field_j));
-          qd.field_j.setSize(lk.field_j, td.field_d);
+          qd.field_j.setSize(TextFieldValidator.field_j, td.field_d);
           qd.field_j.setVisible(true);
           if (DualLinkNode.field_q == var2) {
             var3 = DualLinkNode.field_q.getInsets();
@@ -616,7 +616,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             return;
           }
           ProxyAuthenticationRequiredException.field_d = false;
-          kk.field_m = ih.correctedCurrentTimeMillis((byte) -98);
+          AgeValidator.field_m = ih.correctedCurrentTimeMillis((byte) -98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -664,9 +664,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (ic.field_d != null) {
+          if (DebouncedFieldValidator.field_d != null) {
             try {
-              ic.field_d.shutdown(~param0);
+              DebouncedFieldValidator.field_d.shutdown(~param0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -734,7 +734,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !qc.field_b) {
             of.field_F = true;
             if (wl.field_ab &&
-              ih.correctedCurrentTimeMillis((byte) -98) - kk.field_m > 1000L) {
+              ih.correctedCurrentTimeMillis((byte) -98) - AgeValidator.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < kg.field_H) {
@@ -838,10 +838,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ab.field_a = ab.field_a - 50;
             of.field_F = true;
-            qd.field_j.setSize(lk.field_j, td.field_d);
+            qd.field_j.setSize(TextFieldValidator.field_j, td.field_d);
             qd.field_j.setVisible(true);
             boolean decompiledSharedTail0 = (null != DualLinkNode.field_q &&
-              la.field_L == null);
+              LoginPanel.field_L == null);
             if (!decompiledSharedTail0) {
               qd.field_j.setLocation(fb.field_f, df.field_c);
               decompiledSharedTail0 = (stellarshard.field_B != 0);

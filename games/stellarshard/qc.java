@@ -75,20 +75,20 @@ final class qc {
               nj.field_g = true;
             }
           }
-          if (ea.field_l != null) {
-            var3 = -(ea.field_l.field_x / 2) + 357;
+          if (MatchingFieldValidator.field_l != null) {
+            var3 = -(MatchingFieldValidator.field_l.field_x / 2) + 357;
             var4 = 0;
             if (0 != gh.field_c &&
               var3 < oc.field_e &&
-              oc.field_e < ea.field_l.field_y + var3) {
-              if (-ea.field_l.field_v + 269 < di.field_b &&
+              oc.field_e < MatchingFieldValidator.field_l.field_y + var3) {
+              if (-MatchingFieldValidator.field_l.field_v + 269 < di.field_b &&
                 269 > di.field_b) {
                 nj.field_g = false;
                 var4 = 1;
                 ha.field_w = cj.field_a;
               }
               if (di.field_b > 586 &&
-                di.field_b < ea.field_l.field_v + 586) {
+                di.field_b < MatchingFieldValidator.field_l.field_v + 586) {
                 var4 = 1;
                 ha.field_w = cj.field_a;
                 nj.field_g = true;
@@ -97,13 +97,13 @@ final class qc {
             if (var4 == 0 &&
               ha.field_w > cj.field_c &&
               KeyHandler.field_a > var3 &&
-              ea.field_l.field_y + var3 > KeyHandler.field_a) {
-              if (ni.field_e > 269 - ea.field_l.field_v &&
+              MatchingFieldValidator.field_l.field_y + var3 > KeyHandler.field_a) {
+              if (ni.field_e > 269 - MatchingFieldValidator.field_l.field_v &&
                 ni.field_e < 269) {
                 ha.field_w = cj.field_c;
               }
               if (ni.field_e > 586 &&
-                586 + ea.field_l.field_v > ni.field_e) {
+                586 + MatchingFieldValidator.field_l.field_v > ni.field_e) {
                 ha.field_w = cj.field_c;
               }
             }
@@ -214,7 +214,7 @@ final class qc {
               stellarshard.field_L[var5] = hc.field_m[var5];
             }
             stellarshard.field_L[-3 + var4] = "";
-            stellarshard.field_L[-2 + var4] = kk.field_l;
+            stellarshard.field_L[-2 + var4] = AgeValidator.field_l;
             sj.field_J[-2 + var4] = 0;
             pk.field_j[0] = 4;
             stellarshard.field_L[-1 + var4] = td.field_a;
@@ -238,7 +238,7 @@ final class qc {
             pk.field_j[0] = 5;
           } else if (rb.field_s != 2) {
             if (rb.field_s == 3) {
-              if (ic.field_d.privilegedTasksEnabled) {
+              if (DebouncedFieldValidator.field_d.privilegedTasksEnabled) {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ei.field_E);
               } else {
                 var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ld.field_D);

@@ -141,13 +141,13 @@ abstract class ro {
         sl.field_q[20] = pn.field_H;
         sl.field_q[33] = gm.field_a;
         sl.field_q[32] = ek.field_C;
-        sl.field_q[17] = df.field_n[0];
+        sl.field_q[17] = BirthDateValidator.field_n[0];
         if (param0 != -52) {
           return;
         }
         sl.field_q[31] = vo.field_v;
         sl.field_q[19] = ld.field_a;
-        sl.field_q[24] = mk.field_K;
+        sl.field_q[24] = AccountRegistrationPanel.field_K;
         sl.field_q[26] = nn.field_p + ue.field_F[1];
         sl.field_q[34] = ByteStorage.field_b;
         sl.field_q[35] = in.field_a;
@@ -159,7 +159,7 @@ abstract class ro {
         sl.field_q[21] = FullscreenFocusCanvas.field_f;
         sl.field_q[27] = vi.field_x;
         sl.field_q[15] = bq.field_G[1];
-        sl.field_q[18] = df.field_n[1];
+        sl.field_q[18] = BirthDateValidator.field_n[1];
         sl.field_q[28] = gm.field_a;
         sl.field_q[36] = ja.a(ek.field_C, (byte) -44);
         mb.field_q = new String[23];

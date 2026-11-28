@@ -137,7 +137,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
                 MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, GameDomainSupport002.sceneWidgetPart008State0002, booleanArgument1);
               }
             }
-            DekoBlokoClient.performAction0301(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
+            DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
             MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
             UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
             return;
@@ -146,7 +146,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
             MixedSupport076.framebufferState0001.integerState0190 == SoftwareRaster.integerState0285) {
             if (MixedSupport016.sceneWidgetPart013State0001 == null) {
               if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
-                UiComponentPart032.performAction1700(true, -2);
+                BirthDateInput.performAction1700(true, -2);
                 if (booleanArgument6) {
                   MixedSupport139.integerState0857 = RichTextLayout.integerState0162;
                 } else {
@@ -174,14 +174,14 @@ final class UiComponentPart023 extends UiComponentPart004 {
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
                   MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, GameDomainSupport002.sceneWidgetPart008State0002, booleanArgument1);
                 }
-                DekoBlokoClient.performAction0301(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
+                DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
                 MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
                 UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
                 return;
               }
               UiComponentPart019.performAction1048(5);
             } else {
-              UiComponentPart032.performAction1700(false, -2);
+              BirthDateInput.performAction1700(false, -2);
             }
           }
           if (!booleanArgument6) {
@@ -258,7 +258,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
             }
           }
         }
-        DekoBlokoClient.performAction0301(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
+        DekoBlokoClient.updateLobbyRoomRows(integerArgument2, integerArgument3, booleanArgument1, integerArgument9, booleanArgument4, integerArgument10, (byte) -119);
         MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, ValidationStatus.sceneWidgetPart008State0006, booleanArgument1);
         UiComponentPart020.integerState0552 = UiComponentPart020.integerState0552 + 1;
     }

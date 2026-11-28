@@ -77,7 +77,7 @@ final class NodeHashTableIterator implements Iterator {
               integerLocal9 = integerArrayLocal14.length << 2;
             }
             for (integerLocal1 = 0; integerLocal1 < integerLocal9; integerLocal1++) {
-              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.readUnsignedByte((byte) -108) << (MixedSupport075.computeInteger0930(3, integerLocal1) << 8));
+              integerArrayLocal10[integerLocal1 >> 2] = integerArrayLocal10[integerLocal1 >> 2] + (cipherPacketBufferLocal12.readUnsignedByte((byte) -108) << (PlayerBoardUpdateQueue.bitwiseAnd(3, integerLocal1) << 8));
             }
             mixedSupport113Local7.booleanState0168 = true;
             mixedSupport113Local7.unlink((byte) 118);
@@ -297,12 +297,12 @@ final class NodeHashTableIterator implements Iterator {
         for (integerLocal1 = 0; integerLocal1 < 15; integerLocal1++) {
           integerArrayLocal2 = integerArrayState0025;
           integerLocal3 = integerLocal1;
-          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal2[integerLocal3 >> 5], 1 << MixedSupport075.computeInteger0930(integerLocal3, 31));
+          integerArrayLocal2[integerLocal3 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal2[integerLocal3 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(integerLocal3, 31));
         }
         for (integerLocal5 = 15; 31 > integerLocal5; integerLocal5++) {
           integerArrayLocal4 = integerArrayState0026;
           integerLocal6 = integerLocal5;
-          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal4[integerLocal6 >> 5], 1 << MixedSupport075.computeInteger0930(31, integerLocal6));
+          integerArrayLocal4[integerLocal6 >> 5] = UiComponentPart006.bitwiseOr(integerArrayLocal4[integerLocal6 >> 5], 1 << PlayerBoardUpdateQueue.bitwiseAnd(31, integerLocal6));
         }
         int[] integerArrayLocal7 = integerArrayState0027;
         integerArrayLocal7[0] = UiComponentPart006.bitwiseOr(integerArrayLocal7[0], 8);

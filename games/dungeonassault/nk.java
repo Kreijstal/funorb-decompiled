@@ -49,7 +49,7 @@ class nk extends hf implements vg {
               stackIn_13_1 = -1;
               stackIn_13_2 = 6824;
               if (!this.field_Mb) {
-                stackIn_14_3 = gk.field_O;
+                stackIn_14_3 = DisplayNameSelectionPanel.field_O;
               } else {
                 stackIn_14_3 = kn.field_a;
               }
@@ -70,7 +70,7 @@ class nk extends hf implements vg {
                 }
                 var6.a(df.field_a, (pg) (this), (byte) -97);
               } else {
-                var6.a(9, 6824, ip.field_i);
+                var6.a(9, 6824, TextFieldValidator.field_i);
               }
             }
           } else {
@@ -189,7 +189,7 @@ class nk extends hf implements vg {
             return;
           }
           if (!this.field_Db) {
-            oe.a("tochangedisplayname.ws", m.c(true), (byte) 96);
+            oe.a("tochangedisplayname.ws", DebouncedFieldValidator.c(true), (byte) 96);
             return;
           }
           sn.a(param1 ^ 60, 3);
@@ -243,7 +243,7 @@ class nk extends hf implements vg {
           if (decompiledFrameRemainder0) {
             if (!ti.field_f) {
               if (no.field_a >= lp.field_z) {
-                stackIn_18_0 = (no.field_a < ga.field_p + lp.field_z) ? 1 : 0;
+                stackIn_18_0 = (no.field_a < ConfirmedEmailAvailabilityValidator.field_p + lp.field_z) ? 1 : 0;
               } else {
                 stackIn_18_0 = 0;
               }

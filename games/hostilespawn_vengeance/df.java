@@ -88,7 +88,7 @@ final class df {
         return -78;
     }
 
-    final static void a(int param0, oj param1, oc param2, oc param3, int param4, int param5, double param6, oj param7, oc param8, double param9) {
+    final static void a(int param0, oj param1, GridPoint param2, GridPoint param3, int param4, int param5, double param6, oj param7, GridPoint param8, double param9) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         RuntimeException stackIn_64_0 = null;
@@ -157,9 +157,9 @@ final class df {
             param1.field_F = param1.field_F - 1;
           }
           if (param1.field_h == 0) {
-            param2.a((byte) 46, param3);
-            param2.b(param8, 24161);
-            param1.a(225, param2.a(param0 ^ 25127), 3);
+            param2.copyCoordinatesFrom((byte) 46, param3);
+            param2.subtractCoordinates(param8, 24161);
+            param1.a(225, param2.directionInAngleUnits(param0 ^ 25127), 3);
           }
           if (1 == param1.field_h) {
             param1.a(225, param1.field_c + 10.0, 4);
@@ -181,7 +181,7 @@ final class df {
               var16 = param8.field_g;
               var17 = 0;
               var18 = 1;
-              if (el.field_j > var18) {
+              if (ProxySocketFactory.field_j > var18) {
                 var19 = mm.field_m[var18];
                 if (4 == var19.field_i &&
                   var15 == var19.field_j.field_e &&
@@ -193,17 +193,17 @@ final class df {
                 fieldTemp$1 = param1.field_v - 1;
                 param1.field_v = param1.field_v - 1;
                 if (fieldTemp$1 >= 0) {
-                  mm.field_m[el.field_j] = new oj(param8, 4, rl.field_c);
-                  el.field_j = el.field_j + 1;
+                  mm.field_m[ProxySocketFactory.field_j] = new oj(param8, 4, rl.field_c);
+                  ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                 }
               }
             } else {
               param1.field_e = (int)(Math.random() * 25.0);
             }
           }
-          li.field_r = param1.a(var14, param0 ^ 0, ln.field_a);
-          if (li.field_r[0] &&
-            li.field_r[1] &&
+          MatchingFieldValidator.field_r = param1.a(var14, param0 ^ 0, ln.field_a);
+          if (MatchingFieldValidator.field_r[0] &&
+            MatchingFieldValidator.field_r[1] &&
             param1.field_h == 0) {
             param1.field_e = (int)(Math.random() * 10.0);
             param1.field_h = (int)(1.0 + 2.0 * Math.random());

@@ -182,7 +182,7 @@ final class tl extends eh {
         return var4;
     }
 
-    final void a(bi param0, int param1) {
+    final void a(LevelRun param0, int param1) {
         IntrusiveDeque stackIn_43_0;
         int stackIn_43_1;
         sb stackIn_43_2;
@@ -235,14 +235,14 @@ final class tl extends eh {
           var8 = (var5 << 9) / var6 + be.field_b;
           var9 = this.field_r;
           if (0 == var9) {
-            param0.g(param1 ^ 111);
-            th.a(100, th.field_F[18]);
+            param0.completeLevelRun(param1 ^ 111);
+            DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[18]);
             ResourceArchive.field_k[11].a(false);
             jh.a(ResourceArchive.field_k[11], 0);
           } else {
             if (var9 != 1) {
               if (var9 == 2) {
-                param0.b((byte) 122, 1000 * this.field_k);
+                param0.addLevelTime((byte) 122, 1000 * this.field_k);
                 stackIn_47_0 = param0.field_e;
                 stackIn_47_1 = 54;
                 stackIn_47_2 = null;
@@ -260,24 +260,24 @@ final class tl extends eh {
                   stackIn_48_7 = 3;
                 }
                 ((IntrusiveDeque) (Object) stackIn_47_0).addFirst((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
-                th.a(100, th.field_F[7]);
+                DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[7]);
               } else {
                 if (var9 == 4) {
                   param0.c((byte) 122);
                   param0.field_e.addFirst((byte) 54, new sb(gi.field_b, var7, var8, 3));
-                  th.a(100, th.field_F[9]);
+                  DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[9]);
                 } else {
                   if (var9 == 5) {
                     param0.a((byte) 121);
-                    th.a(100, th.field_F[8]);
-                    th.a(100, th.field_F[27]);
+                    DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[8]);
+                    DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[27]);
                   } else {
                     if (var9 != 7) {
                       if (var9 != 6) {
                         if (var9 == 8) {
                           param0.a(0);
                           param0.field_e.addFirst((byte) 54, new sb(je.field_i, var7, var8, 3));
-                          th.a(param1 + 81, th.field_F[18]);
+                          DisplayNameSelectionPanel.a(param1 + 81, DisplayNameSelectionPanel.field_F[18]);
                         } else {
                           if (9 != var9 &&
                             var9 != 10 &&
@@ -316,14 +316,14 @@ final class tl extends eh {
                           param0.a(-9 + this.field_r, -73);
                         }
                       } else {
-                        param0.e(-7045);
+                        param0.enableGyroBrake(-7045);
                         param0.field_e.addFirst((byte) 54, new sb(ea.field_u, var7, var8, 3));
-                        th.a(param1 ^ 119, th.field_F[19]);
-                        th.a(100, th.field_F[10]);
+                        DisplayNameSelectionPanel.a(param1 ^ 119, DisplayNameSelectionPanel.field_F[19]);
+                        DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[10]);
                       }
                     } else {
                       param0.a(this.field_c, this.field_g[1], this.field_g[0], this.field_h, this.field_g[2], 0);
-                      th.a(param1 + 81, th.field_F[13]);
+                      DisplayNameSelectionPanel.a(param1 + 81, DisplayNameSelectionPanel.field_F[13]);
                     }
                   }
                 }
@@ -347,8 +347,8 @@ final class tl extends eh {
                 stackIn_44_7 = 2;
               }
               ((IntrusiveDeque) (Object) stackIn_43_0).addFirst((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
-              th.a(param1 + 81, th.field_F[19]);
-              th.a(100, th.field_F[6]);
+              DisplayNameSelectionPanel.a(param1 + 81, DisplayNameSelectionPanel.field_F[19]);
+              DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[6]);
             }
           }
           return;

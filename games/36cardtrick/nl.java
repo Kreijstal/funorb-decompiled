@@ -45,8 +45,8 @@ final class nl {
           var1_int = 0;
           var2 = 0;
           while (GzipInflater.b((byte) -114)) {
-            cg.field_e.b((byte) 76);
-            if (cg.field_e.f(-85)) {
+            TextFieldValidator.field_e.b((byte) 76);
+            if (TextFieldValidator.field_e.f(-85)) {
               var1_int = 1;
             }
             if (tb.field_d != 13) {
@@ -54,14 +54,14 @@ final class nl {
             }
             var2 = 1;
           }
-          cg.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, MouseInputHandler.field_a));
-          if (cg.field_e.f(-85)) {
+          TextFieldValidator.field_e.a(af.a(ij.field_e, true, eg.field_b), (byte) 123, af.a(jc.field_N, param0, MouseInputHandler.field_a));
+          if (TextFieldValidator.field_e.f(-85)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            cg.field_e.field_k >= 0) {
-            var3 = dd.field_j[cg.field_e.field_k];
+            TextFieldValidator.field_e.field_k >= 0) {
+            var3 = dd.field_j[TextFieldValidator.field_e.field_k];
             if (var3 == 2) {
               re.c(3);
             } else if (var3 == 5) {
@@ -69,12 +69,12 @@ final class nl {
             }
           } else {
             if (var2 != 0 &&
-              v.field_R != 2) {
+              ValidatedTextField.field_R != 2) {
               re.c(3);
             }
           }
           if (var3 == 0 &&
-            v.field_R == 2) {
+            ValidatedTextField.field_R == 2) {
             var4 = -jl.field_c + id.correctedCurrentTimeMillis(54);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {

@@ -207,7 +207,7 @@ final class km extends sd {
               var23 = var18 + var11_int * var21 >> 2;
               if ((param0 != 0 ||
                 !(CipherPacketBuffer.field_s * var16 + var21 * gj.field_h < 0)) && (param6 != 0 ||
-                !(var17 * bj.field_d + var22 * ic.field_n >= 0))) {
+                !(var17 * DebouncedFieldValidator.field_d + var22 * ic.field_n >= 0))) {
                 if (param0 != 2 &&
                   var23 < 0) {
                   var24 = (int)Math.sqrt((double)(var21 * var21 + var16 * var16));

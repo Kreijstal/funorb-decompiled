@@ -213,10 +213,10 @@ public final class BachelorFridge extends NetworkGameClient {
                 if (ge.field_L) {
                   ft.c((byte) -41);
                   if (var8 != 0) {
-                    wg.a(false);
+                    PasswordValidator.a(false);
                   }
                 } else {
-                  wg.a(false);
+                  PasswordValidator.a(false);
                 }
                 ha.field_k = HailAnimation.field_x;
               }
@@ -671,7 +671,7 @@ public final class BachelorFridge extends NetworkGameClient {
         hga.releaseStatics(8405024);
         sja.releaseStatics(33);
         ReportAbusePanel.a(26727);
-        ph.releaseStatics(31826);
+        LoginPanel.releaseStatics(31826);
         hh.releaseStatics(-1);
         WidgetTheme.releaseStatics(23312);
         ed.releaseStatics(69);
@@ -842,7 +842,7 @@ public final class BachelorFridge extends NetworkGameClient {
         lba.clearStaticReferences((byte) -68);
         bi.d((byte) -97);
         ge.clearStaticReferences((byte) -111);
-        vn.k(-9063);
+        ValidatedTextField.k(-9063);
         TextInputWidget.releaseStatics((byte) -127);
         uda.releaseStatics(114);
         de.resetStaticState(1);
@@ -863,7 +863,7 @@ public final class BachelorFridge extends NetworkGameClient {
         qg.releaseStatics(4096);
         co.releaseStatics(true);
         faa.releaseStatics((byte) -113);
-        gl.releaseStatics(-44);
+        BirthDateValidator.releaseStatics(-44);
         uma.releaseStatics(-30829);
         lq.releaseStatics(71);
         sh.releaseStatics((byte) -92);
@@ -1139,14 +1139,14 @@ public final class BachelorFridge extends NetworkGameClient {
           bga.releaseStatics(false);
           mla.clearStaticReferences((byte) 93);
           AccountNameAvailabilityValidator.releaseStatics((byte) 84);
-          wg.releaseStatics(22753);
-          el.f((byte) -24);
-          hna.releaseStatics(99);
-          hka.d(-111);
-          hb.releaseStatics(-98);
+          PasswordValidator.releaseStatics(22753);
+          EmailFormatValidator.f((byte) -24);
+          ConfirmedEmailAvailabilityValidator.releaseStatics(99);
+          AgeValidator.d(-111);
+          MatchingFieldValidator.releaseStatics(-98);
           kf.releaseStatics((byte) 110);
           TextLinkRegion.releaseStatics((byte) -127);
-          pk.releaseStatics(-106);
+          DebouncedFieldValidator.releaseStatics(-106);
           fw.releaseStatics(-8668);
           uw.releaseStatics(6144);
           PetAttackEvent.clearStaticReferences((byte) -89);
@@ -1950,7 +1950,7 @@ public final class BachelorFridge extends NetworkGameClient {
                   stackIn_223_0 = 0;
                   stackIn_223_1 = 96;
                 }
-                hna.a(stackIn_223_0, stackIn_223_1);
+                ConfirmedEmailAvailabilityValidator.a(stackIn_223_0, stackIn_223_1);
                 break;
               }
             }
@@ -1978,11 +1978,11 @@ public final class BachelorFridge extends NetworkGameClient {
                       lg.a(true, 0, false);
                       if (var8 != 0) {
                         LevitateEvent.field_s = GameAppletShell.field_f;
-                        hb.a(2, 10, 0, false);
+                        MatchingFieldValidator.a(2, 10, 0, false);
                       }
                     } else {
                       LevitateEvent.field_s = GameAppletShell.field_f;
-                      hb.a(2, 10, 0, false);
+                      MatchingFieldValidator.a(2, 10, 0, false);
                     }
                     StatusEffectInfo.a(true);
                     LevitateSpecial.field_p[OhNoEvent.field_s].a(false, 32);

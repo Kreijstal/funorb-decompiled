@@ -164,7 +164,7 @@ final class uk {
           }
           hj.field_a = param2;
           le.field_a = param3;
-          cl.field_m = param1;
+          ConfirmedEmailAvailabilityValidator.field_m = param1;
           d.field_F = param0;
           GameClient.field_z = param4;
         } catch (RuntimeException runtimeException) {

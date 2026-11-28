@@ -12,7 +12,7 @@ abstract class ByteStorage {
         if (null != ol.field_a) {
           ol.field_a.d(true);
         }
-        dd.field_g = new ah();
+        dd.field_g = new DisplayNameSelectionPanel();
         PcmOutputWorker.field_e.a(33, dd.field_g);
         if (param0 < -11) {
           return;
@@ -34,7 +34,7 @@ abstract class ByteStorage {
 
     final static void b(int param0) {
         int var1 = -57 % ((param0 + 21) / 51);
-        e.e(-20480);
+        ConfirmedEmailAvailabilityValidator.e(-20480);
     }
 
     abstract void setBytes(byte[] param0, byte param1);

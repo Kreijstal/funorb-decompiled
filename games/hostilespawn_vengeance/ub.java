@@ -7,7 +7,7 @@ final class ub {
     static int[][] field_a;
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
-        ka.field_q = param3;
+        EmailFormatValidator.field_q = param3;
         if (param4 == -127) {
           sd.field_s = param2;
           eh.field_d = param1;

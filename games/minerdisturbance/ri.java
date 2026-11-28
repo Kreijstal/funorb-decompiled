@@ -150,7 +150,7 @@ final class ri {
             null != param3.field_x) {
             ef.a(-24322);
           }
-          ik.field_T = param4;
+          AccountRegistrationPanel.field_T = param4;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var8 < param3.field_I)))) {
@@ -207,7 +207,7 @@ final class ri {
                           dupTemp$0 = param3.field_x[var8];
                           MidiPcmStream.field_V[dupTemp$0] = MidiPcmStream.field_V[dupTemp$0] + 1;
                         }
-                        ik.field_T = ik.field_T + 1;
+                        AccountRegistrationPanel.field_T = AccountRegistrationPanel.field_T + 1;
                         break;
                       }
                     }

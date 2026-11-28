@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve extends lj {
-    private wa field_A;
+    private FieldValidator field_A;
     static String field_D;
     static boolean[] field_B;
     private int field_C;
@@ -44,12 +44,12 @@ final class ve extends lj {
           UiWidget var3 = (UiWidget) null;
           this.a((UiWidget) null, 58);
           if (this.field_g) {
-            return this.field_A.c(param0 + 30519);
+            return this.field_A.getValidationMessage(param0 + 30519);
           }
           return null;
         }
         if (this.field_g) {
-          return this.field_A.c(param0 + 30519);
+          return this.field_A.getValidationMessage(param0 + 30519);
         }
         return null;
     }
@@ -71,75 +71,75 @@ final class ve extends lj {
         int var5 = this.field_p + (param0 + (this.field_l >> 1));
         int var6 = param1 - (-this.field_n - (this.field_h >> 1));
         int var9 = -100 % ((param3 - 77) / 34);
-        rc var8 = this.field_A.a(27835);
+        rc var8 = this.field_A.getValidationStatus(27835);
         if (var8 == ek.field_a) {
           var16 = ai.field_b[0];
           var10 = var16.field_r << 1;
           var11 = var16.field_s << 1;
-          if (null == vh.field_l) {
-            vh.field_l = new Sprite(var10, var11);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (null == EmailFormatValidator.field_l) {
+            EmailFormatValidator.field_l = new Sprite(var10, var11);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
-          if (var10 > vh.field_l.field_n) {
-            vh.field_l = new Sprite(var10, var11);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (var10 > EmailFormatValidator.field_l.field_n) {
+            EmailFormatValidator.field_l = new Sprite(var10, var11);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
-          if (vh.field_l.field_m < var11) {
-            vh.field_l = new Sprite(var10, var11);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (EmailFormatValidator.field_l.field_m < var11) {
+            EmailFormatValidator.field_l = new Sprite(var10, var11);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
-          CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
           var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
-          vh.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+          EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
           return;
         }
         if (var8 == fi.field_u) {
           var17 = ai.field_b[0];
           var10Lifetime1 = var17.field_r << 1;
           var11Lifetime1 = var17.field_s << 1;
-          if (null == vh.field_l) {
-            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (null == EmailFormatValidator.field_l) {
+            EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
-          if (var10Lifetime1 > vh.field_l.field_n) {
-            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (var10Lifetime1 > EmailFormatValidator.field_l.field_n) {
+            EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
-          if (vh.field_l.field_m < var11Lifetime1) {
-            vh.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
-            CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          if (EmailFormatValidator.field_l.field_m < var11Lifetime1) {
+            EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
+            CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
             var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
-          CrossfadingMidiPcmStream.a(vh.field_l, 256);
+          CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
           var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
-          vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+          EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
           return;
         }
         if (var8 == SocketConnector.field_d) {
@@ -220,7 +220,7 @@ final class ve extends lj {
         }
     }
 
-    ve(wa param0) {
+    ve(FieldValidator param0) {
         try {
           this.field_A = param0;
         } catch (RuntimeException runtimeException) {

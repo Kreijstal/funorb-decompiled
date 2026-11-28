@@ -30,26 +30,26 @@ final class ab {
           if (param0 != 0) {
             return;
           }
-          SecondaryNodeDeque.a(32, ArchiveRequest.field_w, wi.field_kb, qc.field_w);
+          SecondaryNodeDeque.a(32, ArchiveRequest.field_w, wi.field_kb, MenuScreen.field_w);
           SoftwareRasterizer.saveClip(ib.field_a);
-          SoftwareRasterizer.setClip(ArchiveRequest.field_w, qc.field_w, ArchiveRequest.field_w + 200, wi.field_kb + qc.field_w + 3);
+          SoftwareRasterizer.setClip(ArchiveRequest.field_w, MenuScreen.field_w, ArchiveRequest.field_w + 200, wi.field_kb + MenuScreen.field_w + 3);
           if (-1 == ce.field_p) {
-            bo.a(param0 ^ 5, gk.field_L, qc.field_w, ArchiveRequest.field_w);
+            bo.a(param0 ^ 5, DisplayNameSelectionPanel.field_L, MenuScreen.field_w, ArchiveRequest.field_w);
           } else {
             if (!bl.field_k) {
               var1_intLifetime1 = fa.a((byte) 8, 0, -(20 + ui.field_a));
-              if (gk.field_L == null) {
+              if (DisplayNameSelectionPanel.field_L == null) {
                 var1_intLifetime1 = 0;
               }
-              bo.a(5, jn.field_l, var1_intLifetime1 + qc.field_w, ArchiveRequest.field_w);
-              bo.a(param0 ^ 5, gk.field_L, 20 + (qc.field_w + var1_intLifetime1 + ui.field_a), ArchiveRequest.field_w);
+              bo.a(5, jn.field_l, var1_intLifetime1 + MenuScreen.field_w, ArchiveRequest.field_w);
+              bo.a(param0 ^ 5, DisplayNameSelectionPanel.field_L, 20 + (MenuScreen.field_w + var1_intLifetime1 + ui.field_a), ArchiveRequest.field_w);
             } else {
               var1_intLifetime1 = fa.a((byte) -37, -(20 + hc.field_b), 0);
-              if (null == gk.field_L) {
+              if (null == DisplayNameSelectionPanel.field_L) {
                 var1_intLifetime1 = 0;
               }
-              bo.a(param0 ^ 5, gk.field_L, var1_intLifetime1 + qc.field_w, ArchiveRequest.field_w);
-              bo.a(5, jn.field_l, 20 + qc.field_w - (-var1_intLifetime1 - hc.field_b), ArchiveRequest.field_w);
+              bo.a(param0 ^ 5, DisplayNameSelectionPanel.field_L, var1_intLifetime1 + MenuScreen.field_w, ArchiveRequest.field_w);
+              bo.a(5, jn.field_l, 20 + MenuScreen.field_w - (-var1_intLifetime1 - hc.field_b), ArchiveRequest.field_w);
             }
           }
           SoftwareRasterizer.restoreClip(ib.field_a);
@@ -84,12 +84,12 @@ final class ab {
           }
           var3_int = 0;
           var4 = jm.field_c;
-          while (go.field_A.length > var3_int) {
+          while (DungeonRaidScreen.field_A.length > var3_int) {
             var5 = to.field_c[var3_int];
             if (var5 >= 0) {
-              var6 = KeyboardInput.a(true, go.field_A[var3_int], param0 ^ 776707894);
+              var6 = KeyboardInput.a(true, DungeonRaidScreen.field_A[var3_int], param0 ^ 776707894);
               var4 = var4 + ci.field_j;
-              var7 = vo.field_r - (var6 >> 1);
+              var7 = PasswordValidator.field_r - (var6 >> 1);
               if (PacketBuffer.a(var4, mj.field_g + (RaiderDefinition.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;

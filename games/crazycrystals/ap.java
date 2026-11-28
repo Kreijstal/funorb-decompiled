@@ -265,7 +265,7 @@ final class ap extends ob {
           if (param0) {
             ap.a(true);
           }
-          var1 = kd.field_n;
+          var1 = ConfirmedEmailAvailabilityValidator.field_n;
           var2 = var1.readUnsignedByte(255);
           if (0 == var2) {
             if (null == vl.field_d) {

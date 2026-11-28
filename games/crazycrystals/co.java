@@ -86,39 +86,39 @@ final class co extends qm {
           }
           try {
             if (jh.field_e == 0) {
-              ci.field_k = cc.field_a.requestDirectSocket(cb.field_m, false, em.field_g);
+              AgeValidator.field_k = cc.field_a.requestDirectSocket(cb.field_m, false, em.field_g);
               jh.field_e = jh.field_e + 1;
             }
             if (jh.field_e == 1) {
-              if (ci.field_k.status == 2) {
-                stackIn_16_0 = se.a(-1, (byte) -114);
+              if (AgeValidator.field_k.status == 2) {
+                stackIn_16_0 = TextFieldValidator.a(-1, (byte) -114);
                 return stackIn_16_0;
               }
-              if (ci.field_k.status == 1) {
+              if (AgeValidator.field_k.status == 1) {
                 jh.field_e = jh.field_e + 1;
               }
             }
             if (2 == jh.field_e) {
-              so.field_c = new BufferedSocket((java.net.Socket) (ci.field_k.result), cc.field_a);
+              so.field_c = new BufferedSocket((java.net.Socket) (AgeValidator.field_k.result), cc.field_a);
               var2 = new PacketBuffer(13);
-              hn.a(kn.field_q, WallTile.field_x, 12, var2, fk.field_v);
+              EmailFormatValidator.a(kn.field_q, WallTile.field_x, 12, var2, fk.field_v);
               var2.writeByte(true, 15);
               var2.writeInt(ah.field_e, -16384);
               so.field_c.queueWrite(0, 114, var2.payload, 13);
               jh.field_e = jh.field_e + 1;
-              se.field_f = lo.correctedCurrentTimeMillis((byte) 114) + 30000L;
+              TextFieldValidator.field_f = lo.correctedCurrentTimeMillis((byte) 114) + 30000L;
             }
             if (jh.field_e == 3) {
               if (so.field_c.availableBytes(0) > 0) {
                 var1_int = so.field_c.readSingleByte(param0 + 4);
                 if (var1_int != 0) {
-                  stackIn_30_0 = se.a(var1_int, (byte) -105);
+                  stackIn_30_0 = TextFieldValidator.a(var1_int, (byte) -105);
                   return stackIn_30_0;
                 }
                 jh.field_e = jh.field_e + 1;
               } else {
-                if (lo.correctedCurrentTimeMillis((byte) -49) > se.field_f) {
-                  stackIn_26_0 = se.a(-2, (byte) -103);
+                if (lo.correctedCurrentTimeMillis((byte) -49) > TextFieldValidator.field_f) {
+                  stackIn_26_0 = TextFieldValidator.a(-2, (byte) -103);
                   return stackIn_26_0;
                 }
               }
@@ -129,13 +129,13 @@ final class co extends qm {
             oi.field_d.a(dm.field_h, so.field_c, false);
             jh.field_e = 0;
             so.field_c = null;
-            ci.field_k = null;
+            AgeValidator.field_k = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return se.a(-3, (byte) -100);
+            return TextFieldValidator.a(-3, (byte) -100);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

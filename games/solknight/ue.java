@@ -322,34 +322,34 @@ final class ue {
           }
           var2Lifetime52 = Bzip2State.a((byte) -2, "nextweapondesc,0");
           if (null != var2Lifetime52) {
-            rf.field_N[0] = Archive.decodeCp1252(true, var2Lifetime52);
+            AccountRegistrationPanel.field_N[0] = Archive.decodeCp1252(true, var2Lifetime52);
           }
           var2Lifetime53 = Bzip2State.a((byte) -2, "nextweapondesc,1");
           if (null != var2Lifetime53) {
-            rf.field_N[1] = Archive.decodeCp1252(true, var2Lifetime53);
+            AccountRegistrationPanel.field_N[1] = Archive.decodeCp1252(true, var2Lifetime53);
           }
           var2Lifetime54 = Bzip2State.a((byte) -2, "nextweapondesc,2");
           if (var2Lifetime54 != null) {
-            rf.field_N[2] = Archive.decodeCp1252(true, var2Lifetime54);
+            AccountRegistrationPanel.field_N[2] = Archive.decodeCp1252(true, var2Lifetime54);
           }
           var2Lifetime55 = Bzip2State.a((byte) -2, "nextweapondesc,3");
           if (var2Lifetime55 != null) {
-            rf.field_N[3] = Archive.decodeCp1252(true, var2Lifetime55);
+            AccountRegistrationPanel.field_N[3] = Archive.decodeCp1252(true, var2Lifetime55);
           }
           var2Lifetime56 = Bzip2State.a((byte) -2, "nextweapondesc,4");
           if (null != var2Lifetime56) {
-            rf.field_N[4] = Archive.decodeCp1252(true, var2Lifetime56);
+            AccountRegistrationPanel.field_N[4] = Archive.decodeCp1252(true, var2Lifetime56);
           }
           var2Lifetime57 = Bzip2State.a((byte) -2, "nextweapondesc,5");
           if (null != var2Lifetime57) {
-            rf.field_N[5] = Archive.decodeCp1252(true, var2Lifetime57);
+            AccountRegistrationPanel.field_N[5] = Archive.decodeCp1252(true, var2Lifetime57);
           }
           var2Lifetime58 = Bzip2State.a((byte) -2, "nextweapondesc,6");
           if (param1 != 0) {
             field_a = -70;
           }
           if (var2Lifetime58 != null) {
-            rf.field_N[6] = Archive.decodeCp1252(true, var2Lifetime58);
+            AccountRegistrationPanel.field_N[6] = Archive.decodeCp1252(true, var2Lifetime58);
           }
           var2Lifetime59 = Bzip2State.a((byte) -2, "titles,0");
           if (var2Lifetime59 != null) {
@@ -389,7 +389,7 @@ final class ue {
           }
           var2Lifetime68 = Bzip2State.a((byte) -2, "levcomp");
           if (null != var2Lifetime68) {
-            wf.field_b = Archive.decodeCp1252(true, var2Lifetime68);
+            DebouncedFieldValidator.field_b = Archive.decodeCp1252(true, var2Lifetime68);
           }
           var2Lifetime69 = Bzip2State.a((byte) -2, "nextwep");
           if (null != var2Lifetime69) {
@@ -421,11 +421,11 @@ final class ue {
           }
           var2Lifetime76 = Bzip2State.a((byte) -2, "combobonus_twolines");
           if (var2Lifetime76 != null) {
-            qb.field_X = Archive.decodeCp1252(true, var2Lifetime76);
+            ValidatedTextField.field_X = Archive.decodeCp1252(true, var2Lifetime76);
           }
           var2Lifetime77 = Bzip2State.a((byte) -2, "currentscore_twolines");
           if (var2Lifetime77 != null) {
-            dc.field_m = Archive.decodeCp1252(true, var2Lifetime77);
+            EmailFormatValidator.field_m = Archive.decodeCp1252(true, var2Lifetime77);
           }
           var2Lifetime78 = Bzip2State.a((byte) -2, "earthsaved");
           if (var2Lifetime78 != null) {
@@ -489,15 +489,15 @@ final class ue {
           }
           var2Lifetime93 = Bzip2State.a((byte) -2, "instructions_pages,0");
           if (var2Lifetime93 != null) {
-            rf.field_Q[0] = Archive.decodeCp1252(true, var2Lifetime93);
+            AccountRegistrationPanel.field_Q[0] = Archive.decodeCp1252(true, var2Lifetime93);
           }
           var2Lifetime94 = Bzip2State.a((byte) -2, "instructions_pages,1");
           if (null != var2Lifetime94) {
-            rf.field_Q[1] = Archive.decodeCp1252(true, var2Lifetime94);
+            AccountRegistrationPanel.field_Q[1] = Archive.decodeCp1252(true, var2Lifetime94);
           }
           var2Lifetime95 = Bzip2State.a((byte) -2, "instructions_pages,2");
           if (var2Lifetime95 != null) {
-            rf.field_Q[2] = Archive.decodeCp1252(true, var2Lifetime95);
+            AccountRegistrationPanel.field_Q[2] = Archive.decodeCp1252(true, var2Lifetime95);
           }
           var2Lifetime96 = Bzip2State.a((byte) -2, "continu");
           if (var2Lifetime96 != null) {

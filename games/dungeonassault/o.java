@@ -99,7 +99,7 @@ final class o extends IntrusiveNode {
         return param2 * tg.field_d[param0] + tg.field_h[param0];
     }
 
-    final static boolean a(int[] param0, int[] param1, int param2, lb param3, boolean param4) {
+    final static boolean a(int[] param0, int[] param1, int param2, PlayerDungeonProfile param3, boolean param4) {
         int var6 = 0;
         boolean stackIn_17_0 = false;
         boolean stackIn_20_0 = false;

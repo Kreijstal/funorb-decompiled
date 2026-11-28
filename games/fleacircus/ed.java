@@ -238,7 +238,7 @@ final class ed {
             df.field_b != null) {
             vj.field_c.d(231, 390);
             var1 = sg.field_f;
-            if (ul.field_G.field_k == 0) {
+            if (LoginPanel.field_G.field_k == 0) {
               var1 = kf.field_i;
             }
             var1.d(0, 0);
@@ -246,7 +246,7 @@ final class ed {
             stackIn_46_1 = 40;
             stackIn_46_2 = false;
             stackIn_46_3 = bf.field_b;
-            if (ul.field_G.field_k != 0) {
+            if (LoginPanel.field_G.field_k != 0) {
               stackIn_47_4 = 3;
             } else {
               stackIn_47_4 = 4;
@@ -265,20 +265,20 @@ final class ed {
             stackIn_52_0 = -40;
             stackIn_52_1 = GzipDecompressor.field_e;
             stackIn_52_2 = ha.field_l;
-            stackIn_53_3 = (ul.field_G.field_k == 0);
+            stackIn_53_3 = (LoginPanel.field_G.field_k == 0);
             BufferedRandomAccessFile.a(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
           }
           if (null != vj.field_c &&
             null != df.field_b) {
             vj.field_c.d(434, 390);
             sd.field_c.d(0, 0);
-            if (ul.field_G.field_k == 1) {
+            if (LoginPanel.field_G.field_k == 1) {
               nj.a(392, 64, vj.field_c.field_w - 4, 436, 7 * vj.field_c.field_t / 12, 1067);
             }
             stackIn_61_0 = -40;
             stackIn_61_1 = rj.field_o;
             stackIn_61_2 = mh.field_w;
-            stackIn_62_3 = (ul.field_G.field_k == 1);
+            stackIn_62_3 = (LoginPanel.field_G.field_k == 1);
             BufferedRandomAccessFile.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_62_3);
           }
           if (MouseWheelInput.field_f != null) {

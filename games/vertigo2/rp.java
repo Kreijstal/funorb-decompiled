@@ -106,7 +106,7 @@ final class rp implements ef {
         try {
           var5 = new int[6];
           int[] var3 = var5;
-          this.field_h = dk.a(var5, true, param1);
+          this.field_h = EmailFormatValidator.a(var5, true, param1);
           var4 = oo.field_o;
           oo.a((ef) (this));
           this.field_g = (fc) (th.a(param0, var5, -27911));

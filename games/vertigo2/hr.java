@@ -73,7 +73,7 @@ final class hr extends TextureOperator {
         if (param0 <= 25) {
           hr.i(55);
         }
-        return mf.field_b + ((rm.field_B << 4) + (oa.field_p << 2));
+        return mf.field_b + ((rm.field_B << 4) + (ConfirmedEmailAvailabilityValidator.field_p << 2));
     }
 
     final int[] c(int param0, int param1) {

@@ -100,7 +100,7 @@ final class ua extends WidgetContainer implements ka {
           ua.a((byte) 57);
         }
         hc.a(MouseWheelInput.field_e, false, SocketConnector.field_d, true);
-        ga.field_G = true;
+        DisplayNameSelectionPanel.field_G = true;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

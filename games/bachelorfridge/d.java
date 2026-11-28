@@ -23,7 +23,7 @@ final class d extends lq implements WidgetActionListener {
     d(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetRenderer) null);
         this.field_G = new uma(new oka(10000536), hk.field_d, 0, 0, 140, 25);
-        this.field_G.a(new gl(), (byte) 112);
+        this.field_G.a(new BirthDateValidator(), (byte) 112);
         this.field_C = new InteractiveWidget(tj.field_a, (WidgetListener) (this));
         this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_C)};
         this.field_C.renderer = (WidgetRenderer) ((Object) new ff());
@@ -33,14 +33,14 @@ final class d extends lq implements WidgetActionListener {
     final void updateMouseOver(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.updateMouseOver(param0, param1, param2, param3);
-          this.field_C.field_z = this.field_G.a(16728128).b(-19704) == cm.field_u ? true : false;
+          this.field_C.field_z = this.field_G.getFieldValidator(16728128).getValidationStatus(-19704) == cm.field_u ? true : false;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "d.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
     public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
-        if (this.field_G.a(16728128).b(-19704) != cm.field_u) {
+        if (this.field_G.getFieldValidator(16728128).getValidationStatus(-19704) != cm.field_u) {
           return;
         }
         if (param3 <= 50) {

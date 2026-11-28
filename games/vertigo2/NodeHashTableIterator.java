@@ -35,7 +35,7 @@ final class NodeHashTableIterator implements Iterator {
           if (ah.field_l == MusicPatchPcmStream.field_B) {
             return false;
           }
-          de.field_f = wm.field_j[MusicPatchPcmStream.field_B];
+          DebouncedFieldValidator.field_f = wm.field_j[MusicPatchPcmStream.field_B];
           TextureOperator.field_r = af.field_F[MusicPatchPcmStream.field_B];
           MusicPatchPcmStream.field_B = 127 & MusicPatchPcmStream.field_B + 1;
           stackIn_8_0 = true;
@@ -184,7 +184,7 @@ final class NodeHashTableIterator implements Iterator {
           !ByteStorage.a((byte) 127)) {
           var3 = 0;
         }
-        if (de.field_f == 84) {
+        if (DebouncedFieldValidator.field_f == 84) {
           if (var3 != 0) {
             if (0 >= SpriteState.field_D.length()) {
               SpriteState.h(0);
@@ -218,7 +218,7 @@ final class NodeHashTableIterator implements Iterator {
           }
           return true;
         }
-        if (de.field_f == 85) {
+        if (DebouncedFieldValidator.field_f == 85) {
           if (var3 == 0) {
             return true;
           }

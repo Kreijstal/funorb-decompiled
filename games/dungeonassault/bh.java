@@ -160,14 +160,14 @@ class bh extends ck {
             }
             if (pd.field_A == no.field_c) {
               if (!param4) {
-                be.field_n = qf.a(96, false, param1, param5);
+                MatchingFieldValidator.field_n = qf.a(96, false, param1, param5);
               } else {
                 var10 = (String) null;
-                be.field_n = l.a(param1, false, MusicPatchPcmStream.field_s, false, (String) null);
+                MatchingFieldValidator.field_n = l.a(param1, false, MusicPatchPcmStream.field_s, false, (String) null);
               }
               ac.field_B.position = 0;
               ac.field_B.writeByte(6, 14);
-              ac.field_B.writeByte(6, be.field_n.b(-110).field_c);
+              ac.field_B.writeByte(6, MatchingFieldValidator.field_n.b(-110).field_c);
               op.a(0, -1);
               pd.field_A = ik.field_b;
             }
@@ -187,7 +187,7 @@ class bh extends ck {
               oi.a(-12929, 8)) {
               o.field_j = ra.field_c.readLong((byte) 105);
               ra.field_c.position = 0;
-              ClientException.a(be.field_n, param0, (byte) -27, param3, param4);
+              ClientException.a(MatchingFieldValidator.field_n, param0, (byte) -27, param3, param4);
               pd.field_A = rp.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -253,28 +253,28 @@ class bh extends ck {
               nn.field_k = jm.a((byte) 59, var11);
               hf.field_sb = ra.field_c.readUnsignedByte(true);
               pd.field_A = qa.field_c;
-              if (be.field_n.b(65) != pe.field_j) {
-                if (be.field_n.b(-104) == MidiPcmStream.field_w) {
-                  gg.field_c.a(64, m.c(true));
+              if (MatchingFieldValidator.field_n.b(65) != pe.field_j) {
+                if (MatchingFieldValidator.field_n.b(-104) == MidiPcmStream.field_w) {
+                  gg.field_c.a(64, DebouncedFieldValidator.c(true));
                 }
               } else {
-                ba.field_e.a(64, m.c(true));
+                ba.field_e.a(64, DebouncedFieldValidator.c(true));
               }
               ResourceArchive.field_e = false;
               if (var6 != null) {
-                AccountCreationResultPanel.a(true, var6, m.c(true));
+                AccountCreationResultPanel.a(true, var6, DebouncedFieldValidator.c(true));
               }
               if (pb.field_G <= 0 &&
                 !e.field_l) {
                 try {
-                  JavaScriptBridge.callWithoutArguments((byte) -21, m.c(true), "unzap");
+                  JavaScriptBridge.callWithoutArguments((byte) -21, DebouncedFieldValidator.c(true), "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments("zap", m.c(true), 15647, new Object[]{uj.a(MusicPatchPcmStream.field_s, -1)});
+                  JavaScriptBridge.callWithArguments("zap", DebouncedFieldValidator.c(true), 15647, new Object[]{uj.a(MusicPatchPcmStream.field_s, -1)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

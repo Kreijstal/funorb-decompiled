@@ -123,7 +123,7 @@ final class GameDomainSupport005 {
             integerArrayLocal28 = SoftwareRaster.integerArrayState0063;
             integerLocal13 = SoftwareRaster.integerState0285;
             integerLocal14 = SoftwareRaster.integerState0284;
-            SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
             rgbSpriteLocal23 = new RgbSprite(4 + RenderingSupport003.rgbSpriteState0017.integerState0258, RenderingSupport003.rgbSpriteState0017.integerState0255 + 4);
             rgbSpriteLocal23.performAction0256();
             RenderingSupport003.rgbSpriteState0017.performAction0270(2, 2, MixedSupport088.integerState0546);
@@ -152,14 +152,14 @@ final class GameDomainSupport005 {
             NetworkSupport008.rgbSpriteState0037.performAction0256();
             SceneWidgetPart014.performAction1781(31, 0, 2 * SoftwareRaster.integerState0284 / 3, 0, 64, SoftwareRaster.integerState0285);
             SoftwareRaster.setRasterBuffer(integerArrayLocal28, integerLocal13, integerLocal14);
-            SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
             MixedSupport076.resourceArchiveState0011 = null;
             MixedSupport116.integerState0753 = 434 + (-NetworkSupport002.rgbSpriteState0008.integerState0258 + RichTextLayout.rgbSpriteState0015.integerState0258) / 2;
             MixedSupport025.integerState0151 = (RichTextLayout.rgbSpriteState0015.integerState0258 - NetworkSupport002.rgbSpriteState0008.integerState0258) / 2 + 231;
             SecondaryNodeDequeIterator.integerState0138 = 390 + (-NetworkSupport002.rgbSpriteState0008.integerState0255 + RichTextLayout.rgbSpriteState0015.integerState0255) / 2;
             MixedSupport116.integerState0751 = 390 + (-NetworkSupport002.rgbSpriteState0008.integerState0255 + RichTextLayout.rgbSpriteState0015.integerState0255) / 2;
           }
-          if (MixedSupport075.rgbSpriteState0030 == null) {
+          if (PlayerBoardUpdateQueue.rgbSpriteState0030 == null) {
             return;
           }
           if (MouseInput.rgbSpriteState0073 != null &&
@@ -167,7 +167,7 @@ final class GameDomainSupport005 {
             integerArrayLocal29 = SoftwareRaster.integerArrayState0063;
             integerLocal32 = SoftwareRaster.integerState0285;
             integerLocal37 = SoftwareRaster.integerState0284;
-            SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
             stringLocal25 = NodeHashTableIterator.substituteIndexedPlaceholders(120, MixedSupport097.stringState0413, new String[]{ComponentDecorator.stringArrayState0020[MixedSupport107.integerState0683]});
             integerLocal16 = NetworkSupport001.bitmapFontState0002.computeInteger1080(stringLocal25, UiComponent.integerState0106);
             integerLocal41 = NetworkSupport001.bitmapFontState0002.computeInteger1081(stringLocal25, UiComponent.integerState0106, NetworkSupport001.bitmapFontState0002.integerState0518 + NetworkSupport001.bitmapFontState0002.integerState0523);
@@ -226,45 +226,45 @@ final class GameDomainSupport005 {
             MouseInput.rgbSpriteState0073 = null;
             SceneWidget.rgbSpriteState0068.performAction0293();
             SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal32, integerLocal37);
-            SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           }
           if (KeyboardInputHandler.stringState0358 != null &&
             null != MixedSupport013.bitmapFontState0007) {
             integerArrayLocal30 = SoftwareRaster.integerArrayState0063;
             integerLocal33 = SoftwareRaster.integerState0285;
             integerLocal38 = SoftwareRaster.integerState0284;
-            SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
             rgbSpriteLocal26 = new RgbSprite(412, 43);
             stringLocal27 = NodeHashTableIterator.substituteIndexedPlaceholders(122, UiComponentPart007.stringState0111, new String[]{KeyboardInputHandler.stringState0358});
             KeyboardInputHandler.stringState0358 = null;
             rgbSpriteLocal26.performAction0256();
             MixedSupport013.bitmapFontState0007.computeInteger1071(stringLocal27, 3, 3, rgbSpriteLocal26.integerState0258 - 6, rgbSpriteLocal26.integerState0255 - 6, 16777215, -1, 0, 1, MixedSupport013.bitmapFontState0007.integerState0518 + MixedSupport013.bitmapFontState0007.integerState0523);
             MatchingFieldValidator.performAction1425(3, 1, 0, 2, rgbSpriteLocal26, 0, rgbSpriteLocal26.integerState0258, rgbSpriteLocal26.integerState0255);
-            MixedSupport075.rgbSpriteState0030.performAction0256();
-            rgbSpriteLocal26.performAction0278(-MixedSupport075.rgbSpriteState0030.integerState0259 + 199, -MixedSupport075.rgbSpriteState0030.integerState0256 + 83);
+            PlayerBoardUpdateQueue.rgbSpriteState0030.performAction0256();
+            rgbSpriteLocal26.performAction0278(-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259 + 199, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 83);
             SoftwareRaster.setRasterBuffer(integerArrayLocal30, integerLocal33, integerLocal38);
-            SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           }
           if (MixedSupport098.rgbSpriteState0040 != null &&
             MixedSupport013.bitmapFontState0007 != null) {
             integerArrayLocal31 = SoftwareRaster.integerArrayState0063;
             integerLocal34 = SoftwareRaster.integerState0285;
             integerLocal39 = SoftwareRaster.integerState0284;
-            SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
             integerLocal15 = 6 + MixedSupport013.bitmapFontState0007.computeInteger1080(UiComponentPart016.stringState0297, 640);
             integerLocal40 = 20 + (integerLocal15 + MixedSupport098.rgbSpriteState0040.integerState0254);
             integerLocal42 = -(integerLocal40 / 2) + 427;
             integerLocal44 = 20 + (integerLocal42 + MixedSupport098.rgbSpriteState0040.integerState0254);
-            MixedSupport075.rgbSpriteState0030.performAction0256();
-            MixedSupport013.bitmapFontState0007.performAction1069(UiComponentPart016.stringState0297, integerLocal44 - MixedSupport075.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-MixedSupport075.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
-            MatchingFieldValidator.performAction1425(3, 1, -MixedSupport075.rgbSpriteState0030.integerState0259 + (integerLocal44 - 4), integerArgument1 ^ 388, MixedSupport075.rgbSpriteState0030, -MixedSupport075.rgbSpriteState0030.integerState0256 + 155, integerLocal15, 50);
-            integerLocal45 = -MixedSupport075.rgbSpriteState0030.integerState0256 + 155 - (-MixedSupport013.bitmapFontState0007.integerState0518 - 3 + MixedSupport098.rgbSpriteState0040.integerState0260 - MixedSupport013.bitmapFontState0007.integerState0523) / 2;
-            MixedSupport098.rgbSpriteState0040.performAction0278(integerLocal42 - MixedSupport075.rgbSpriteState0030.integerState0259, integerLocal45);
+            PlayerBoardUpdateQueue.rgbSpriteState0030.performAction0256();
+            MixedSupport013.bitmapFontState0007.performAction1069(UiComponentPart016.stringState0297, integerLocal44 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, MixedSupport013.bitmapFontState0007.integerState0523 + (MixedSupport013.bitmapFontState0007.integerState0518 + (-PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155)), 16777215, -1);
+            MatchingFieldValidator.performAction1425(3, 1, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259 + (integerLocal44 - 4), integerArgument1 ^ 388, PlayerBoardUpdateQueue.rgbSpriteState0030, -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155, integerLocal15, 50);
+            integerLocal45 = -PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0256 + 155 - (-MixedSupport013.bitmapFontState0007.integerState0518 - 3 + MixedSupport098.rgbSpriteState0040.integerState0260 - MixedSupport013.bitmapFontState0007.integerState0523) / 2;
+            MixedSupport098.rgbSpriteState0040.performAction0278(integerLocal42 - PlayerBoardUpdateQueue.rgbSpriteState0030.integerState0259, integerLocal45);
             SoftwareRaster.setRasterBuffer(integerArrayLocal31, integerLocal34, integerLocal39);
-            SoftwareRaster.restoreClip(UiComponentPart013.integerArrayState0055);
+            SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
             MixedSupport098.rgbSpriteState0040 = null;
           }
-          SoftwareRaster.saveClip(UiComponentPart013.integerArrayState0055);
+          SoftwareRaster.saveClip(LoginPanel.integerArrayState0055);
           if (integerArgument1 != 390) {
             GameDomainSupport005.clearStaticReferences((byte) 100);
           }
@@ -276,7 +276,7 @@ final class GameDomainSupport005 {
           if (null != MixedSupport054.rgbSpriteState0019) {
             MixedSupport054.rgbSpriteState0019.performAction0278(0, 0);
           }
-          MixedSupport075.rgbSpriteState0030.performAction0278(0, 0);
+          PlayerBoardUpdateQueue.rgbSpriteState0030.performAction0278(0, 0);
           if (null != SceneWidget.rgbSpriteState0068) {
             SceneWidget.rgbSpriteState0068.performAction0278(0, 0);
           }

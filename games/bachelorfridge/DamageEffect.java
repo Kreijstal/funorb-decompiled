@@ -237,7 +237,7 @@ final class DamageEffect extends EventEffect {
               wd.a(SlowAllEvent.field_q, (byte) -89, sja.field_fb, ProxySocketConnector.field_g, SuperSpeedSpecial.field_p);
               sja.field_fb.writeLengthByte((byte) -97, sja.field_fb.position - var9);
             }
-            hna.a(-1, 116);
+            ConfirmedEmailAvailabilityValidator.a(-1, 116);
             eia.field_a = dc.field_k;
           }
           if (eia.field_a == dc.field_k &&

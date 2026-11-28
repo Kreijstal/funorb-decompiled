@@ -28,7 +28,7 @@ final class ql extends um implements ij {
     }
 
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
-        if (this.field_I.a((byte) -5).a(-23996) != qm.field_G) {
+        if (this.field_I.getFieldValidator((byte) -5).getValidationStatus(-23996) != qm.field_G) {
           return;
         }
         try {
@@ -59,7 +59,7 @@ final class ql extends um implements ij {
     ql(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetListener) null);
         this.field_I = new ko(new ml(10000536), lo.field_i, 0, 0, 140, 25);
-        this.field_I.a(-11808, new df());
+        this.field_I.a(-11808, new BirthDateValidator());
         this.field_J = new d(vi.field_x, (uf) (this));
         this.field_G = new UiWidget[]{(UiWidget) ((Object) this.field_I), (UiWidget) ((Object) this.field_J)};
         this.field_J.listener = (WidgetListener) ((Object) new vo());
@@ -207,7 +207,7 @@ final class ql extends um implements ij {
         try {
           super.a((byte) 102, param1, param2, param3);
           stackIn_2_0 = this.field_J;
-          stackIn_3_1 = (this.field_I.a((byte) -5).a(-23996) == qm.field_G);
+          stackIn_3_1 = (this.field_I.getFieldValidator((byte) -5).getValidationStatus(-23996) == qm.field_G);
           stackIn_2_0.field_F = stackIn_3_1;
           if (param0 < 6) {
             field_L = (UiPanel) null;

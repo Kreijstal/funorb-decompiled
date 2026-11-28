@@ -301,7 +301,7 @@ class InteractiveComponent extends UiComponent {
         RenderingSupport007 renderingSupport007Local2 = renderingSupport007Local1;
         renderingSupport007Local2.performAction0852(new GameDomainSupport002(25, DiagnosticSupport002.stringState0271, MixedSupport001.renderingSupport009State0001), 110);
         renderingSupport007Local2.performAction0852(new GameDomainSupport002(13, booleanArgument2 ? MixedSupport094.stringState0396 : MixedSupport096.stringState0411, MixedSupport001.renderingSupport009State0001), 120);
-        renderingSupport007Local2.performAction0852(new GameDomainSupport002(26, UiComponentPart021.stringState0384, MixedSupport001.renderingSupport009State0001), 122);
+        renderingSupport007Local2.performAction0852(new GameDomainSupport002(26, ValidatedTextField.stringState0384, MixedSupport001.renderingSupport009State0001), 122);
         renderingSupport007Local1.gameDomainSupport002ArrayState0001[1].integerState0176 = 40 + MixedSupport001.renderingSupport009State0001.computeInteger1066(renderingSupport007Local1.gameDomainSupport002ArrayState0001[1].stringState0142);
         GameDomainSupport002 gameDomainSupport002Local3 = renderingSupport007Local1.gameDomainSupport002ArrayState0001[0];
         renderingSupport007Local1.gameDomainSupport002ArrayState0001[2].integerState0176 = 120;

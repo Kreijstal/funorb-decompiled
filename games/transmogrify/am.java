@@ -24,7 +24,7 @@ final class am extends IntrusiveNode {
         RuntimeException var4_ref = null;
         try {
           if (null != jj.field_a) {
-            ff.a(param2, param0, param1, 1048576, (byte) 40);
+            LoginPanel.a(param2, param0, param1, 1048576, (byte) 40);
           }
           if (null != jk.field_D) {
             var4 = Bzip2State.field_h;

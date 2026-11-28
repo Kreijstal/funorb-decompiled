@@ -83,7 +83,7 @@ final class eg {
         }
         try {
           je.field_b = param1;
-          qc.field_z = param5;
+          MenuScreen.field_z = param5;
           lj.field_m = param7;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "eg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');

@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends rg implements sh {
     private boolean field_yb;
-    private ik field_Ab;
+    private AccountRegistrationPanel field_Ab;
     static ResourceArchive field_xb;
     private boolean field_zb;
 
@@ -25,7 +25,7 @@ final class AccountCreationResultPanel extends rg implements sh {
         return super.n(-4);
     }
 
-    AccountCreationResultPanel(hm param0, ik param1) {
+    AccountCreationResultPanel(hm param0, AccountRegistrationPanel param1) {
         super(param0, Bzip2State.field_g, vh.field_e, false, false);
         try {
           this.field_Ab = param1;

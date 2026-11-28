@@ -304,12 +304,12 @@ abstract class fb {
           }
           var6 = param3.getParameter("currency");
           if (var6 == null) {
-            ic.field_a = 2;
+            DebouncedFieldValidator.field_a = 2;
           } else {
             if (!rg.a((byte) 19, (CharSequence) ((Object) var6))) {
-              ic.field_a = 2;
+              DebouncedFieldValidator.field_a = 2;
             } else {
-              ic.field_a = ResourceArchive.parseDecimalInt((CharSequence) ((Object) var6), (byte) 125);
+              DebouncedFieldValidator.field_a = ResourceArchive.parseDecimalInt((CharSequence) ((Object) var6), (byte) 125);
             }
           }
           ArchiveRequest.field_x = param5;

@@ -20,7 +20,7 @@ final class vl {
     }
 
     final static void b(byte param0) {
-        fg.i(126);
+        LoginPanel.i(126);
         eb.field_m = true;
         ga.field_y = true;
         int var1 = 45 / ((-48 - param0) / 48);

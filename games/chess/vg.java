@@ -76,9 +76,9 @@ final class vg {
             tn.field_j.field_pb = 0;
             var6.field_M = 0;
             sc.field_f.field_db = n.field_h.toUpperCase();
-            var7 = (2 + ri.field_k.field_M) / 2;
-            tn.field_j.a(0, -2 + var7, -2147483648, 40, ri.field_k.field_pb - 40);
-            aa.field_g.a(var7, ri.field_k.field_M - var7, -2147483648, 40, -40 + ri.field_k.field_pb);
+            var7 = (2 + BirthDateValidator.field_k.field_M) / 2;
+            tn.field_j.a(0, -2 + var7, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
+            aa.field_g.a(var7, BirthDateValidator.field_k.field_M - var7, -2147483648, 40, -40 + BirthDateValidator.field_k.field_pb);
             if (wn.field_d.length == 1 &&
               2 == wn.field_d[0]) {
               var8 = 0;
@@ -123,7 +123,7 @@ final class vg {
               } else {
                 stackIn_40_1 = he.field_Jb;
               }
-              stackIn_39_0.field_db = oc.a(stackIn_40_1, new String[]{aa.field_g.field_db}, (byte) -77);
+              stackIn_39_0.field_db = MatchingFieldValidator.a(stackIn_40_1, new String[]{aa.field_g.field_db}, (byte) -77);
               sc.field_d.field_tb = true;
               tn.field_j.field_db = jl.field_b;
               pk.field_g = true;
@@ -203,7 +203,7 @@ final class vg {
           stackIn_68_0 = fm.field_T;
           stackIn_69_1 = (param3) && (!param0) && (!jh.field_a);
           ((ci) (Object) stackIn_68_0).a(stackIn_69_1, (byte) 88);
-          stackIn_73_0 = ri.field_k;
+          stackIn_73_0 = BirthDateValidator.field_k;
           stackIn_74_1 = (param3) && (!param0) && (!jh.field_a);
           ((ci) (Object) stackIn_73_0).a(stackIn_74_1, (byte) 88);
           if (param2 >= -28) {

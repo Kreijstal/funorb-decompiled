@@ -228,7 +228,7 @@ final class wg {
         if ((long)param1 < 65536L) {
           if (256L > (long)param1) {
             if (param1 >= 0) {
-              return de.field_d[param1] >> 12;
+              return DebouncedFieldValidator.field_d[param1] >> 12;
             }
             if (param0 >= 89) {
               return -1;
@@ -238,37 +238,37 @@ final class wg {
           }
           if ((long)param1 < 4096L) {
             if ((long)param1 >= 1024L) {
-              return de.field_d[param1 >> 4] >> 10;
+              return DebouncedFieldValidator.field_d[param1 >> 4] >> 10;
             }
-            return de.field_d[param1 >> 2] >> 11;
+            return DebouncedFieldValidator.field_d[param1 >> 2] >> 11;
           }
           if ((long)param1 < 16384L) {
-            return de.field_d[param1 >> 6] >> 9;
+            return DebouncedFieldValidator.field_d[param1 >> 6] >> 9;
           }
-          return de.field_d[param1 >> 8] >> 8;
+          return DebouncedFieldValidator.field_d[param1 >> 8] >> 8;
         }
         if (16777216L <= (long)param1) {
           if ((long)param1 < 268435456L) {
             if ((long)param1 >= 67108864L) {
-              return de.field_d[param1 >> 20] >> 2;
+              return DebouncedFieldValidator.field_d[param1 >> 20] >> 2;
             }
-            return de.field_d[param1 >> 18] >> 3;
+            return DebouncedFieldValidator.field_d[param1 >> 18] >> 3;
           }
           if ((long)param1 >= 1073741824L) {
-            return de.field_d[param1 >> 24];
+            return DebouncedFieldValidator.field_d[param1 >> 24];
           }
-          return de.field_d[param1 >> 22] >> 1;
+          return DebouncedFieldValidator.field_d[param1 >> 22] >> 1;
         }
         if ((long)param1 < 1048576L) {
           if ((long)param1 < 262144L) {
-            return de.field_d[param1 >> 10] >> 7;
+            return DebouncedFieldValidator.field_d[param1 >> 10] >> 7;
           }
-          return de.field_d[param1 >> 12] >> 6;
+          return DebouncedFieldValidator.field_d[param1 >> 12] >> 6;
         }
         if ((long)param1 < 4194304L) {
-          return de.field_d[param1 >> 14] >> 5;
+          return DebouncedFieldValidator.field_d[param1 >> 14] >> 5;
         }
-        return de.field_d[param1 >> 16] >> 4;
+        return DebouncedFieldValidator.field_d[param1 >> 16] >> 4;
     }
 
     final void a(wg param0, byte param1) {

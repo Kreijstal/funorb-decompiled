@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountCreationResultPanel extends ik implements df {
-    private wl field_mb;
+    private AccountRegistrationPanel field_mb;
     private boolean field_nb;
     private boolean field_lb;
     static byte[] field_kb;
 
     public final void a(lj param0, int param1, int param2, int param3, int param4) {
         if (this.field_nb) {
-          wl.a(true, false, 170);
+          AccountRegistrationPanel.a(true, false, 170);
           return;
         }
         try {
@@ -201,7 +201,7 @@ final class AccountCreationResultPanel extends ik implements df {
         field_kb = null;
     }
 
-    AccountCreationResultPanel(da param0, wl param1) {
+    AccountCreationResultPanel(da param0, AccountRegistrationPanel param1) {
         super(param0, ArchiveRequest.field_q, IterableNodeHashTable.field_i, false, false);
         try {
           this.field_mb = param1;

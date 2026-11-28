@@ -83,11 +83,11 @@ final class le {
             return;
           }
           var4_int = var9.readSignedSmart(-3084);
-          var5_ref_ub = (ub) (ob.field_Q.beginBackward((byte) 100));
+          var5_ref_ub = (ub) (LoginPanel.field_Q.beginBackward((byte) 100));
           while (var5_ref_ub != null) {
             if (var5_ref_ub.field_u != var3 ||
               var4_int != var5_ref_ub.field_q) {
-              var5_ref_ub = (ub) (ob.field_Q.nextBackward(82));
+              var5_ref_ub = (ub) (LoginPanel.field_Q.nextBackward(82));
               continue;
             }
             break;

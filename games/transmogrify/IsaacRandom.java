@@ -37,7 +37,7 @@ final class IsaacRandom {
           sh.field_c = null;
           return;
         }
-        ArchiveRequest.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, DirectByteStorage.field_j);
+        ArchiveRequest.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, EmailFormatValidator.field_n, 65506, 29, DirectByteStorage.field_j);
         sh.field_c = null;
     }
 

@@ -23,7 +23,7 @@ final class kc {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (null != DelegatingCanvas.field_b && (0 > param0 ||
-            gg.field_b == uf.field_m)) {
+            gg.field_b == AgeValidator.field_m)) {
             if (SpriteGeometry.field_q.position == 0 &&
               rf.correctedCurrentTimeMillis(0) > p.field_c + 10000L) {
               SpriteGeometry.field_q.writeCipheredByte(param0, ~param1);

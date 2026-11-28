@@ -35,14 +35,14 @@ final class MixedSupport123 {
             }
             integerLocal5 = 1;
           }
-          MixedSupport066.mixedSupport116State0001.performAction1515(MixedSupport126.computeInteger1627(HashNode.integerState0069, (byte) -81, MixedSupport101.integerState0590), -20563, MixedSupport126.computeInteger1627(UiComponentPart013.integerState0276, (byte) -81, TextLineMetrics.integerState0535));
+          MixedSupport066.mixedSupport116State0001.performAction1515(MixedSupport126.computeInteger1627(HashNode.integerState0069, (byte) -81, MixedSupport101.integerState0590), -20563, MixedSupport126.computeInteger1627(LoginPanel.integerState0276, (byte) -81, TextLineMetrics.integerState0535));
           if (MixedSupport066.mixedSupport116State0001.computeBoolean1520((byte) 114)) {
             integerLocal3 = 1;
           }
           integerLocal6 = 0;
           if (integerLocal3 != 0 &&
             MixedSupport066.mixedSupport116State0001.integerState0754 >= 0) {
-            integerLocal6 = InputAdapter002.integerArrayState0192[MixedSupport066.mixedSupport116State0001.integerState0754];
+            integerLocal6 = BirthDateValidator.integerArrayState0192[MixedSupport066.mixedSupport116State0001.integerState0754];
             if (2 == integerLocal6 ||
               integerLocal6 == 5) {
               RenderingSupport001.performAction0137(false);
@@ -90,7 +90,7 @@ final class MixedSupport123 {
 
     final static void performAction1616(byte byteArgument1) {
         UiComponentPart018.stringArrayState0021[4] = NanoFrameTimer.stringState0128;
-        UiComponentPart018.stringArrayState0021[7] = UiComponentPart022.stringState0401;
+        UiComponentPart018.stringArrayState0021[7] = AccountFieldStatusIndicator.stringState0401;
         UiComponentPart018.stringArrayState0021[1] = UiComponentPart030.stringState0520;
         UiComponentPart018.stringArrayState0021[2] = MixedSupport124.stringState0545;
         UiComponentPart018.stringArrayState0021[3] = MixedSupport071.stringState0317;

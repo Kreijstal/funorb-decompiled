@@ -18,7 +18,7 @@ final class pc {
 
     final static void a(int param0, String param1, String param2) {
         try {
-          qg.a(false, param1, param2, (byte) -11);
+          ValidatedTextField.a(false, param1, param2, (byte) -11);
           if (param0 > -39) {
             field_b = (he[]) null;
           }

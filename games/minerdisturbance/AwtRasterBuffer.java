@@ -147,7 +147,7 @@ abstract class AwtRasterBuffer {
             return false;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = in.field_b.equals(cl.a(-95, var3));
+          stackIn_4_0 = in.field_b.equals(LoginPanel.a(-95, var3));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

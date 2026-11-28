@@ -21,14 +21,14 @@ final class jj {
           if (param0 != 8) {
             field_e = (ResourceArchive) null;
           }
-          var1 = qn.field_U;
+          var1 = EditableTextField.field_U;
           while (ci.g(param0 + 2147483639)) {
             var1.writeCipheredByte(8, -65);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             de.a(var1, (byte) 67);
-            qn.field_U.backpatchByteLength(var1.position - var2, -1);
+            EditableTextField.field_U.backpatchByteLength(var1.position - var2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

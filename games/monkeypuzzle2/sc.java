@@ -11,7 +11,7 @@ final class sc {
     static String field_b;
     static int field_c;
     static int field_g;
-    static eb field_f;
+    static DisplayNameSelectionPanel field_f;
 
     final static void b(int param0) {
         try {
@@ -88,10 +88,10 @@ final class sc {
           if (var2 != 0) {
             if (1 == var2) {
               var3 = var9.readInt(126);
-              var4 = (mk) (eb.field_C.beginBackward((byte) -117));
+              var4 = (mk) (DisplayNameSelectionPanel.field_C.beginBackward((byte) -117));
               while (var4 != null) {
                 if (var3 != var4.field_e) {
-                  var4 = (mk) (eb.field_C.nextBackward((byte) 63));
+                  var4 = (mk) (DisplayNameSelectionPanel.field_C.nextBackward((byte) 63));
                   continue;
                 }
                 break;

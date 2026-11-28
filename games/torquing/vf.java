@@ -24,14 +24,14 @@ final class vf {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (qk.field_q.c(param1 + 484) &&
-            !param0.equals(qk.field_q.a((byte) -127))) {
-            qk.field_q = ci.a(param1 ^ -120, param0);
+          if (LevelCompletionUpdate.field_q.c(param1 + 484) &&
+            !param0.equals(LevelCompletionUpdate.field_q.a((byte) -127))) {
+            LevelCompletionUpdate.field_q = ci.a(param1 ^ -120, param0);
           }
           if (param1 != 0) {
             vf.a(-21);
           }
-          stackIn_10_0 = qk.field_q;
+          stackIn_10_0 = LevelCompletionUpdate.field_q;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,7 +316,7 @@ final class vf {
         }
     }
 
-    final static boolean a(ki param0, String param1, int param2, boolean param3, int param4, String param5, String param6) {
+    final static boolean a(AccountRegistrationPanel param0, String param1, int param2, boolean param3, int param4, String param5, String param6) {
         AccountCreationResultPanel var7 = null;
         RuntimeException var7_ref = null;
         RuntimeException stackIn_17_0 = null;
@@ -345,7 +345,7 @@ final class vf {
           }
           if (decompiledSharedTail0) {
             bh.field_a = mg.field_b;
-            bn.field_i = param3;
+            SpriteBase.field_i = param3;
             rf.field_u = param6;
             ol.field_a = param5;
             oh.field_d = param2;

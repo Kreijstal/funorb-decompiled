@@ -20,7 +20,7 @@ final class mh {
         int var5 = 0;
         int var6 = Terraphoenix.field_V;
         try {
-          var7 = di.field_l;
+          var7 = TextFieldValidator.field_l;
           var8 = var7;
           var8.writeCipheredByte(-17410, param1);
           var8.position = var8.position + 1;

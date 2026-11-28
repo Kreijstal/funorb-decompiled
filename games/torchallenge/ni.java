@@ -231,14 +231,14 @@ final class ni {
                         var19 = oc.field_d + (-var18 - 1);
                       }
                       if (var18 < 0) {
-                        LocalizedStrings.a(param3, param6, (byte) -39, var17Lifetime2, var18 + var19);
+                        ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var17Lifetime2, var18 + var19);
                       } else {
-                        LocalizedStrings.a(param3, param6, (byte) -39, var18 + var17Lifetime2, var19);
+                        ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var18 + var17Lifetime2, var19);
                       }
                     } else {
                       if (0 <= var18 &&
                         var18 < oc.field_d) {
-                        LocalizedStrings.a(param3, param6, (byte) -39, var17Lifetime2 + var18, var19);
+                        ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var17Lifetime2 + var18, var19);
                       }
                     }
                   }
@@ -280,16 +280,16 @@ final class ni {
                 if (0 == var18Lifetime1) {
                   if (0 <= var17Lifetime1 &&
                     oc.field_d > var17Lifetime1) {
-                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
+                    ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
                   }
                 } else {
                   if (oc.field_d <= var18Lifetime1 + var17Lifetime1) {
                     var18Lifetime1 = -var17Lifetime1 + (oc.field_d - 1);
                   }
                   if (var17Lifetime1 >= 0) {
-                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
+                    ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
                   } else {
-                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1, var18Lifetime1 + var17Lifetime1);
+                    ConfirmedEmailAvailabilityValidator.a(param3, param6, (byte) -39, var16Lifetime1, var18Lifetime1 + var17Lifetime1);
                   }
                 }
               }

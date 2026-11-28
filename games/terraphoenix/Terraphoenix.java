@@ -509,7 +509,7 @@ public final class Terraphoenix extends GameShell {
                 oe.field_c = oe.field_c - ge.field_e;
                 TutorialText.field_a = 0;
                 ge.field_e = 0;
-                ae.field_H = 0;
+                DisplayNameSelectionPanel.field_H = 0;
                 ja.field_i = 13;
                 ll.a((byte) 49, true);
               }
@@ -558,7 +558,7 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4)) {
             ja.field_i = 8;
-            ha.field_q = 0;
+            ConfirmedEmailAvailabilityValidator.field_q = 0;
             if (var8 == 0) {
               return;
             }
@@ -649,16 +649,16 @@ public final class Terraphoenix extends GameShell {
                     bh.field_e[105]) {
                     gi.field_h = gi.field_h + var4Lifetime1;
                   }
-                  if (gi.field_h > bc.field_a - ej.field_V) {
-                    gi.field_h = -ej.field_V + bc.field_a;
+                  if (gi.field_h > bc.field_a - EditableTextField.field_V) {
+                    gi.field_h = -EditableTextField.field_V + bc.field_a;
                   }
                   if (gi.field_h < 0) {
                     gi.field_h = 0;
                   }
                   if (this.field_F.f(-1)) {
-                    gi.field_h = this.field_F.a(-123, bc.field_a, ej.field_V);
+                    gi.field_h = this.field_F.a(-123, bc.field_a, EditableTextField.field_V);
                   }
-                  this.field_F.a((byte) 88, ej.field_V, gi.field_h, bc.field_a);
+                  this.field_F.a((byte) 88, EditableTextField.field_V, gi.field_h, bc.field_a);
                 }
               }
               break;
@@ -813,7 +813,7 @@ public final class Terraphoenix extends GameShell {
               return;
             }
           }
-          if (0 == ha.field_q) {
+          if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
             if (gd.field_c == 0) {
               this.field_bb = jh.field_l[0];
             }
@@ -830,7 +830,7 @@ public final class Terraphoenix extends GameShell {
               this.field_bb = jh.field_l[4];
             }
           }
-          if (1 == ha.field_q) {
+          if (1 == ConfirmedEmailAvailabilityValidator.field_q) {
             boolean decompiledSharedTail2 = !(0 >= me.field_o);
             if (!decompiledSharedTail2) {
               this.field_bb = jh.field_l[9];
@@ -851,7 +851,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
           }
-          if (ha.field_q == 2) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
             if (gd.field_c == 0) {
               this.field_bb = jh.field_l[10];
             }
@@ -859,7 +859,7 @@ public final class Terraphoenix extends GameShell {
               this.field_bb = jh.field_l[11];
             }
           }
-          if (3 == ha.field_q) {
+          if (3 == ConfirmedEmailAvailabilityValidator.field_q) {
             if (gd.field_c == 0) {
               this.field_bb = jh.field_l[12];
             }
@@ -870,7 +870,7 @@ public final class Terraphoenix extends GameShell {
               this.field_bb = jh.field_l[14];
             }
           }
-          if (ha.field_q == 4) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
             if (0 == gd.field_c &&
               500 > this.field_mb) {
               this.field_mb = 500;
@@ -889,16 +889,16 @@ public final class Terraphoenix extends GameShell {
             if (gd.field_c == 2) {
             }
           }
-          if (ha.field_q == -1) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == -1) {
             this.field_bb = jh.field_l[16];
           }
-          if (-2 == ha.field_q) {
+          if (-2 == ConfirmedEmailAvailabilityValidator.field_q) {
             this.field_bb = jh.field_l[17];
           }
-          if (ha.field_q == -3) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == -3) {
             this.field_bb = jh.field_l[18];
           }
-          if (-4 == ha.field_q) {
+          if (-4 == ConfirmedEmailAvailabilityValidator.field_q) {
             this.field_bb = jh.field_l[19];
           }
           PcmPlayerPump.field_h = 8 + 16 * AccountRequestState.field_f.c(this.field_bb, 484);
@@ -1031,7 +1031,7 @@ public final class Terraphoenix extends GameShell {
             }
           }
           if (500 <= this.field_mb) {
-            boolean decompiledSharedTail0 = (ha.field_q == 4);
+            boolean decompiledSharedTail0 = (ConfirmedEmailAvailabilityValidator.field_q == 4);
             if (!decompiledSharedTail0) {
               qd.$cfr$intArgs$a$e9dea5688aa5(55, 24);
               decompiledSharedTail0 = (var8 != 0);
@@ -1057,14 +1057,14 @@ public final class Terraphoenix extends GameShell {
               k.field_f.a(0);
             }
             rk.field_c = 32;
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c >= 5) {
               ja.field_i = 0;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (1 == ha.field_q) {
+            if (1 == ConfirmedEmailAvailabilityValidator.field_q) {
               if (me.field_o <= 0) {
-                ha.field_q = 0;
+                ConfirmedEmailAvailabilityValidator.field_q = 0;
                 decompiledFrameRemainder0 = !(1 > gd.field_c);
                 if (decompiledFrameRemainder0) {
                   ja.field_i = 10;
@@ -1093,7 +1093,7 @@ public final class Terraphoenix extends GameShell {
                 }
               }
             }
-            if (ha.field_q == 2 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 2 &&
               gd.field_c >= 2) {
               ja.field_i = 1;
               if (this.field_jb > 0) {
@@ -1102,7 +1102,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_hb = 1;
               }
             }
-            if (ha.field_q == 3 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 3 &&
               gd.field_c >= 3) {
               ja.field_i = 1;
               if (this.field_jb > 0) {
@@ -1111,7 +1111,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_hb = 1;
               }
             }
-            if (ha.field_q == 4 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 4 &&
               gd.field_c >= 4) {
               ja.field_i = 10;
               ProxyAuthenticationRequiredException.field_g = 20;
@@ -1123,8 +1123,8 @@ public final class Terraphoenix extends GameShell {
               }
               this.b(false, ge.field_e);
             }
-            if (0 > ha.field_q) {
-              ha.field_q = -(ha.field_q + 1);
+            if (0 > ConfirmedEmailAvailabilityValidator.field_q) {
+              ConfirmedEmailAvailabilityValidator.field_q = -(ConfirmedEmailAvailabilityValidator.field_q + 1);
               ja.field_i = 10;
               if (ge.field_e == 0) {
                 ja.field_i = 0;
@@ -1175,22 +1175,22 @@ public final class Terraphoenix extends GameShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (0 == ha.field_q) {
+          if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
             jh.field_q[12].c(0, 0);
           }
-          if (ha.field_q == 1) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
             jh.field_q[14].c(0, 0);
           }
-          if (ha.field_q == 2) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
             jh.field_q[17].c(0, 0);
           }
-          if (ha.field_q == 3) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
             jh.field_q[19].c(0, 0);
           }
           if (!param0) {
             this.a(10, (byte[]) null, 90);
           }
-          if (ha.field_q == 4) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
             jh.field_q[4].c(0, 0);
           }
           return;
@@ -1219,7 +1219,7 @@ public final class Terraphoenix extends GameShell {
           h.field_j = va.a(5, -125);
           IntrusiveDeque.field_c = va.a(6, -119);
           aj.field_b = va.a(7, -128);
-          NanoFrameTimer.a(109, ByteStorage.field_d, di.field_i);
+          NanoFrameTimer.a(109, ByteStorage.field_d, TextFieldValidator.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1234,16 +1234,16 @@ public final class Terraphoenix extends GameShell {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = this.field_Bb;
-          if (ha.field_q == 0) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 0) {
             var3_int++;
           }
-          if (1 == ha.field_q) {
+          if (1 == ConfirmedEmailAvailabilityValidator.field_q) {
             var3_int -= 2;
           }
-          if (ha.field_q == 2) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
             var3_int -= 7;
           }
-          if (ha.field_q == 3) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
             var3_int -= 10;
           }
           this.field_Eb = new String[2];
@@ -1293,7 +1293,7 @@ public final class Terraphoenix extends GameShell {
           if (0 >= me.field_o) {
             this.field_kb = 1;
           }
-          di.field_k = null;
+          TextFieldValidator.field_k = null;
           if (param0 < 80) {
             this.a((String) null, 127, 65, -65, -32);
           }
@@ -1348,17 +1348,17 @@ public final class Terraphoenix extends GameShell {
               this.a(si.field_ib, false, true);
               stackIn_64_0 = !(me.field_o <= 0);
               se.field_h = stackIn_64_0;
-              ha.field_q = 0;
+              ConfirmedEmailAvailabilityValidator.field_q = 0;
               ja.field_i = 1;
               if (this.field_Bb >= 3) {
-                ha.field_q = 1;
+                ConfirmedEmailAvailabilityValidator.field_q = 1;
               }
               if (this.field_Bb >= 8) {
-                ha.field_q = 2;
+                ConfirmedEmailAvailabilityValidator.field_q = 2;
               }
               ProxyAuthenticationRequiredException.field_g = 20;
               if (this.field_Bb >= 11) {
-                ha.field_q = 3;
+                ConfirmedEmailAvailabilityValidator.field_q = 3;
               }
             }
             var5++;
@@ -1378,19 +1378,19 @@ public final class Terraphoenix extends GameShell {
                 var3 = stackIn_103_0;
               }
               if (var3 == 1 &&
-                ha.field_q == -1 + this.field_kb) {
+                ConfirmedEmailAvailabilityValidator.field_q == -1 + this.field_kb) {
                 var3 = 0;
               }
-              if (var3 == -1 && (ha.field_q == 0 ||
-                ha.field_q == 4)) {
+              if (var3 == -1 && (ConfirmedEmailAvailabilityValidator.field_q == 0 ||
+                ConfirmedEmailAvailabilityValidator.field_q == 4)) {
                 var3 = 0;
               }
               if (1 == var3) {
-                ha.field_q = (1 + (ha.field_q + this.field_kb)) % this.field_kb;
+                ConfirmedEmailAvailabilityValidator.field_q = (1 + (ConfirmedEmailAvailabilityValidator.field_q + this.field_kb)) % this.field_kb;
                 qd.$cfr$intArgs$a$e9dea5688aa5(51, 24);
               }
               if (var3 == -1) {
-                ha.field_q = (-1 + this.field_kb + ha.field_q) % this.field_kb;
+                ConfirmedEmailAvailabilityValidator.field_q = (-1 + this.field_kb + ConfirmedEmailAvailabilityValidator.field_q) % this.field_kb;
                 qd.$cfr$intArgs$a$e9dea5688aa5(24, 25);
               }
             }
@@ -1656,7 +1656,7 @@ public final class Terraphoenix extends GameShell {
                         DualLinkNode.a(vf.a("basic", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) -88, 35.0f);
                         return;
                       }
-                      DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, ej.field_R, 4650), (byte) -124, 30.0f);
+                      DualLinkNode.a(vf.a("", TutorialText.field_b, fc.field_a, EditableTextField.field_R, 4650), (byte) -124, 30.0f);
                       return;
                     }
                     DualLinkNode.a(vf.a("", q.field_Nb, ab.field_a, be.field_w, 4650), (byte) 110, 25.0f);
@@ -1680,10 +1680,10 @@ public final class Terraphoenix extends GameShell {
           if (fc.field_a != null) {
             DualLinkNode.a(u.field_f, (byte) -122, 60.0f);
             this.a((byte) -89);
-            ImageProducerRasterBuffer.field_k = new byte[ph.field_n.length][];
+            ImageProducerRasterBuffer.field_k = new byte[PasswordValidator.field_n.length][];
             var3_int = 0;
-            while (ph.field_n.length > var3_int) {
-              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.getFileByName("", ph.field_n[var3_int] + ".lev", -21653);
+            while (PasswordValidator.field_n.length > var3_int) {
+              ImageProducerRasterBuffer.field_k[var3_int] = fc.field_a.getFileByName("", PasswordValidator.field_n[var3_int] + ".lev", -21653);
               var3_int++;
               if (var6 != 0) {
                 return;
@@ -1738,7 +1738,7 @@ public final class Terraphoenix extends GameShell {
             } while (var6 == 0);
             if (!bk.c(-25704)) {
               cg.field_K = hf.a(4, (byte) -117);
-              ej.field_M = ok.a(false, 6);
+              EditableTextField.field_M = ok.a(false, 6);
             }
             ba.field_h = true;
             ea.a((byte) 47);
@@ -2164,7 +2164,7 @@ public final class Terraphoenix extends GameShell {
             var3++;
           }
           PcmPlayerService.configureAudio(22050, true, 10);
-          d.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) ae.field_G), 0, 4096);
+          d.field_I = PcmPlayerService.createOutput(DirectByteStorage.field_l, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_G), 0, 4096);
           WidgetContainer.field_E = new PcmStreamMixer();
           d.field_I.setRootStream(WidgetContainer.field_E);
           uk.field_b = new MidiPcmStream();
@@ -2340,26 +2340,26 @@ public final class Terraphoenix extends GameShell {
               if (var8Lifetime2 == var12) {
                 this.field_xb = var11;
               }
-              if (0 == ha.field_q) {
+              if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
                 this.a(sb.field_n, 320, var8Lifetime2, var9, 105);
               }
-              if (ha.field_q == 1) {
+              if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
                 this.a(ah.field_D, 320, var8Lifetime2, var9, 108);
               }
-              if (ha.field_q == 2) {
+              if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
                 this.a(lk.field_b, 320, var8Lifetime2, var9, 103);
               }
-              if (ha.field_q == 3) {
+              if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
                 this.a(va.field_h, 320, var8Lifetime2, var9, param0 ^ 115);
               }
-              if (ha.field_q == 4) {
+              if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
                 this.a(sb.field_n, 320, var8Lifetime2, var9, param0 ^ 116);
               }
-              if (ha.field_q > 0 &&
-                ha.field_q != 4) {
+              if (ConfirmedEmailAvailabilityValidator.field_q > 0 &&
+                ConfirmedEmailAvailabilityValidator.field_q != 4) {
                 this.a("<lt>", 170, var8Lifetime2, var9, param0 ^ 117);
               }
-              if (ha.field_q != this.field_kb - 1) {
+              if (ConfirmedEmailAvailabilityValidator.field_q != this.field_kb - 1) {
                 this.a(">", 470, var8Lifetime2, var9, 105);
               }
               var9 = var9 + var10;
@@ -2759,7 +2759,7 @@ public final class Terraphoenix extends GameShell {
             d.field_I.dispose();
           }
           var2_int = 117 / ((-52 - param0) / 56);
-          le.b(true);
+          AgeValidator.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3335,12 +3335,12 @@ public final class Terraphoenix extends GameShell {
           if (stackIn_121_0 > stackIn_121_1) {
             this.field_Eb = new String[1];
             var2_intLifetime1 = this.field_gb - 1;
-            this.field_Eb[0] = fi.field_n + od.field_c[var2_intLifetime1].field_j;
+            this.field_Eb[0] = EmailFormatValidator.field_n + od.field_c[var2_intLifetime1].field_j;
           }
           if (0 > this.field_gb) {
             this.field_Eb = new String[1];
             var2_intLifetime2 = -1 - this.field_gb;
-            this.field_Eb[0] = fi.field_n + sj.field_a[var2_intLifetime2].field_m;
+            this.field_Eb[0] = EmailFormatValidator.field_n + sj.field_a[var2_intLifetime2].field_m;
           }
           boolean decompiledFrameRemainder1 = true;
           if (this.field_gb > 0) {
@@ -3743,8 +3743,8 @@ public final class Terraphoenix extends GameShell {
         int var8Lifetime5;
         var13 = field_V;
         try {
-          if (di.field_k != null) {
-            di.field_k.d(0, 0);
+          if (TextFieldValidator.field_k != null) {
+            TextFieldValidator.field_k.d(0, 0);
             if (var13 != 0) {
               this.f(true);
             }
@@ -4338,10 +4338,10 @@ public final class Terraphoenix extends GameShell {
           na.resetDeclaredStaticState(true);
           jg.clearDeclaredStaticReferences(true);
           si.discardDeclaredStaticReferences(8);
-          pl.clearStaticReferences((byte) 123);
+          AccountRegistrationPanel.clearStaticReferences((byte) 123);
           cg.clearStaticReferences(4);
-          uh.a(8);
-          ae.clearStaticReferences(-13271);
+          LoginPanel.a(8);
+          DisplayNameSelectionPanel.clearStaticReferences(-13271);
           gd.clearStaticReferences(25284);
           fh.resetStaticState((byte) 81);
           ArchiveIndex.resetStaticState((byte) 13);
@@ -4431,8 +4431,8 @@ public final class Terraphoenix extends GameShell {
           ve.clearStaticReferences(0);
           ef.clearStaticReferences(31955);
           j.resetStaticState(-5981);
-          ib.b(false);
-          ej.m(14653);
+          ValidatedTextField.b(false);
+          EditableTextField.m(14653);
           al.releaseDeclaredStaticReferences(-22);
           hm.clearStaticReferences(true);
           am.clearStaticReferences((byte) 114);
@@ -4440,7 +4440,7 @@ public final class Terraphoenix extends GameShell {
           dd.clearDeclaredStaticReferences((byte) 121);
           ki.clearDeclaredStaticReferences((byte) -112);
           df.clearDeclaredStaticReferences((byte) -106);
-          di.clearStaticReferences((byte) 125);
+          TextFieldValidator.clearStaticReferences((byte) 125);
           fm.clearStaticReferences(-19266);
           cl.g((byte) 123);
           gh.a(-58);
@@ -4493,15 +4493,15 @@ public final class Terraphoenix extends GameShell {
           bd.clearStaticReferences(-103);
           em.clearStaticReferences(-119);
           AccountNameAvailabilityValidator.f((byte) -48);
-          ph.clearStaticReferences(104682000);
-          fi.clearStaticReferences(true);
-          ha.g(0);
-          le.clearDeclaredStaticReferences((byte) -76);
-          mg.e((byte) -27);
+          PasswordValidator.clearStaticReferences(104682000);
+          EmailFormatValidator.clearStaticReferences(true);
+          ConfirmedEmailAvailabilityValidator.g(0);
+          AgeValidator.clearDeclaredStaticReferences((byte) -76);
+          MatchingFieldValidator.e((byte) -27);
           rj.b(0);
           hh.clearStaticReferences(255);
           im.clearStaticReferences(false);
-          af.b(8191);
+          DebouncedFieldValidator.b(8191);
           oa.clearStaticReferences(7463);
           this.field_bb = null;
           this.field_nb = null;
@@ -4696,7 +4696,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_cb = 0;
                   this.field_ib = 0;
                   this.field_bb = null;
-                  ha.field_q = -(ha.field_q + 1);
+                  ConfirmedEmailAvailabilityValidator.field_q = -(ConfirmedEmailAvailabilityValidator.field_q + 1);
                   this.field_mb = 0;
                   decompiledFrameRemainder0 = (var7 != 0);
                 }
@@ -4823,7 +4823,7 @@ public final class Terraphoenix extends GameShell {
                   this.field_ib = 0;
                   this.field_cb = 0;
                   gd.field_c = 0;
-                  ha.field_q = ha.field_q + 1;
+                  ConfirmedEmailAvailabilityValidator.field_q = ConfirmedEmailAvailabilityValidator.field_q + 1;
                   this.field_mb = 0;
                   this.field_bb = null;
                 }
@@ -4842,8 +4842,8 @@ public final class Terraphoenix extends GameShell {
               this.field_hb = 4;
             }
             if (8 == ja.field_i &&
-              ha.field_q != 4 &&
-              ha.field_q >= 0) {
+              ConfirmedEmailAvailabilityValidator.field_q != 4 &&
+              ConfirmedEmailAvailabilityValidator.field_q >= 0) {
               cb.a(false, 0);
             }
             if ((8 != ja.field_i ||
@@ -5265,7 +5265,7 @@ public final class Terraphoenix extends GameShell {
             }
             TutorialText.field_c = ja.field_i;
             ProxyAuthenticationRequiredException.field_g = 20;
-            di.field_k = null;
+            TextFieldValidator.field_k = null;
             ja.field_i = 12;
             qd.$cfr$intArgs$a$e9dea5688aa5(59, 33);
             if (var7 == 0) {
@@ -5391,14 +5391,14 @@ public final class Terraphoenix extends GameShell {
                   }
                   if (stackIn_128_0 != stackIn_128_1 ||
                     var11 != 0 ||
-                    0 == ae.field_H) {
+                    0 == DisplayNameSelectionPanel.field_H) {
                     if (var8[var5] != null) {
                       var14 = 16777215;
                       if (var11 == 0 &&
                         var12_ref_fb != null &&
                         me.a(122, var8[var5]) &&
                         ~var9_ref_long__[var5] == ~var12_ref_fb.field_p &&
-                        ~ae.field_H == ~var10_ref_int__[var5]) {
+                        ~DisplayNameSelectionPanel.field_H == ~var10_ref_int__[var5]) {
                         var11 = 1;
                         var14 = -wa.field_s + 16776960;
                       }
@@ -5428,7 +5428,7 @@ public final class Terraphoenix extends GameShell {
                     var15 = kj.field_f;
                     var6Lifetime1.b(var15, 128, var13, var14, -1);
                     var7 = 1;
-                    var6Lifetime1.a(Integer.toString(ae.field_H), 512, var13, var14, 0);
+                    var6Lifetime1.a(Integer.toString(DisplayNameSelectionPanel.field_H), 512, var13, var14, 0);
                   }
                   var13 += 28;
                   var5++;
@@ -5551,12 +5551,12 @@ public final class Terraphoenix extends GameShell {
           kg.field_q = false;
           this.field_hb = 0;
           this.field_wb = null;
-          stackIn_5_1 = (ha.field_q == 0);
+          stackIn_5_1 = (ConfirmedEmailAvailabilityValidator.field_q == 0);
           this.field_ob = stackIn_5_1;
-          stackIn_9_1 = (ha.field_q == 0);
+          stackIn_9_1 = (ConfirmedEmailAvailabilityValidator.field_q == 0);
           this.field_fb = stackIn_9_1;
-          if (ha.field_q == 4) {
-            ha.field_q = 0;
+          if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
+            ConfirmedEmailAvailabilityValidator.field_q = 0;
           }
           vj.g(0);
           var2_int = 17 / ((param0 + 75) / 37);
@@ -5663,10 +5663,10 @@ public final class Terraphoenix extends GameShell {
             ArchiveRequest.field_B[8].field_d = false;
           }
           this.field_vb = 0;
-          if (ha.field_q == 0) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 0) {
             this.field_P = 0;
           }
-          if (1 <= ha.field_q) {
+          if (1 <= ConfirmedEmailAvailabilityValidator.field_q) {
             od.field_c[6].field_t = true;
             this.field_Bb = 3;
             this.field_P = -1;
@@ -5683,7 +5683,7 @@ public final class Terraphoenix extends GameShell {
             ArchiveRequest.field_B[7].field_d = true;
             ArchiveRequest.field_B[8].field_d = true;
           }
-          if (ha.field_q >= 2) {
+          if (ConfirmedEmailAvailabilityValidator.field_q >= 2) {
             this.field_I.field_a[6] = this.field_I.field_a[6] + 1;
             this.field_I.field_a[4] = this.field_I.field_a[4] + 1;
             this.field_I.field_a[1] = this.field_I.field_a[1] + 1;
@@ -5696,7 +5696,7 @@ public final class Terraphoenix extends GameShell {
             this.field_jb = 4;
             this.field_vb = 0;
           }
-          if (ha.field_q >= 3) {
+          if (ConfirmedEmailAvailabilityValidator.field_q >= 3) {
             this.field_nb[0].field_m.field_f = 1;
             ArchiveRequest.field_B[5].field_d = true;
             this.field_nb[1].field_m.field_f = 1;
@@ -5716,7 +5716,7 @@ public final class Terraphoenix extends GameShell {
           }
           gd.field_c = 0;
           ja.field_i = 8;
-          if (ha.field_q == 0) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 0) {
             ProxyAuthenticationRequiredException.field_g = 20;
             ja.field_i = 2;
             this.field_Db = true;
@@ -5759,10 +5759,10 @@ public final class Terraphoenix extends GameShell {
             var2_int = 32 * this.field_X.field_a - 32 * this.field_X.field_x;
             var3 = -(eg.field_p * 48) + (16 * this.field_X.field_x + 16 * this.field_X.field_a);
             sj.field_b = (var2_int + 9 * sj.field_b) / 10;
-            if (null != le.field_q) {
-              le.field_q.field_g = ef.field_j;
-              le.field_q.field_c = MouseWheelInput.field_b;
-              le.field_q.field_z = DiskArchiveRequest.field_I;
+            if (null != AgeValidator.field_q) {
+              AgeValidator.field_q.field_g = ef.field_j;
+              AgeValidator.field_q.field_c = MouseWheelInput.field_b;
+              AgeValidator.field_q.field_z = DiskArchiveRequest.field_I;
             }
             if (0 != DiskArchiveRequest.field_I) {
               this.field_X.field_M = true;
@@ -5803,7 +5803,7 @@ public final class Terraphoenix extends GameShell {
           }
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted1)) {
-            if ((!ha.field_o ||
+            if ((!ConfirmedEmailAvailabilityValidator.field_o ||
               !(this.field_X.field_B < 6)) &&
               this.field_X.field_J) {
               if (bh.field_e[96]) {
@@ -5878,10 +5878,10 @@ public final class Terraphoenix extends GameShell {
                 hh.field_m.a();
                 SoftwareRasterizer.clearRaster();
                 rk.field_c = 32;
-                di.field_k = new Sprite(640, 480);
+                TextFieldValidator.field_k = new Sprite(640, 480);
                 var2_intLifetime1Lifetime1 = 0;
-                while (var2_intLifetime1Lifetime1 < di.field_k.pixels.length) {
-                  di.field_k.pixels[var2_intLifetime1Lifetime1] = k.field_f.pixels[var2_intLifetime1Lifetime1];
+                while (var2_intLifetime1Lifetime1 < TextFieldValidator.field_k.pixels.length) {
+                  TextFieldValidator.field_k.pixels[var2_intLifetime1Lifetime1] = k.field_f.pixels[var2_intLifetime1Lifetime1];
                   var2_intLifetime1Lifetime1++;
                 }
                 k.field_f.a(0);
@@ -5937,11 +5937,11 @@ public final class Terraphoenix extends GameShell {
                   ja.field_i = 12;
                   hh.field_m.a();
                   SoftwareRasterizer.clearRaster();
-                  di.field_k = new Sprite(640, 480);
+                  TextFieldValidator.field_k = new Sprite(640, 480);
                   var2_intLifetime1Lifetime2 = 0;
                   while (true) {
-                    if (di.field_k.pixels.length > var2_intLifetime1Lifetime2) {
-                      di.field_k.pixels[var2_intLifetime1Lifetime2] = k.field_f.pixels[var2_intLifetime1Lifetime2];
+                    if (TextFieldValidator.field_k.pixels.length > var2_intLifetime1Lifetime2) {
+                      TextFieldValidator.field_k.pixels[var2_intLifetime1Lifetime2] = k.field_f.pixels[var2_intLifetime1Lifetime2];
                       var2_intLifetime1Lifetime2++;
                       if (var6 == 0) {
                         continue;
@@ -5986,7 +5986,7 @@ public final class Terraphoenix extends GameShell {
             }
             return;
           }
-          ae.field_H = param1;
+          DisplayNameSelectionPanel.field_H = param1;
           this.field_Gb = param0;
           if (param1 > 0 &&
             !bk.c(-25704) &&
@@ -6161,16 +6161,16 @@ public final class Terraphoenix extends GameShell {
             od.field_e.c(0, 0);
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.drawRectangleOutline(24, 88, 425, 325, 16776960 - wa.field_s);
-            if (0 == ha.field_q) {
+            if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
               FrameTimer.field_f.b(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
             }
-            if (1 == ha.field_q) {
+            if (1 == ConfirmedEmailAvailabilityValidator.field_q) {
               FrameTimer.field_f.b(bh.field_b + " " + var3 + " " + (this.field_Bb - 2), 32, 112, wa.field_s, 0);
             }
-            if (ha.field_q == 2) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
               FrameTimer.field_f.b(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
-            if (ha.field_q == 3) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
               FrameTimer.field_f.b(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (this.field_P != -1) {
@@ -6551,14 +6551,14 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b >= -10 + var7 &&
                 10 + var7 > MouseWheelInput.field_b) {
                 var10 = this.field_Bb;
-                if (ha.field_q == 1) {
+                if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
                   var10 -= 2;
                 }
-                if (ha.field_q == 2) {
+                if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
                   var10 -= 7;
                 }
                 this.field_Eb = new String[2];
-                if (3 == ha.field_q) {
+                if (3 == ConfirmedEmailAvailabilityValidator.field_q) {
                   var10 -= 10;
                 }
                 this.field_Eb[0] = eb.field_G;
@@ -7010,13 +7010,13 @@ public final class Terraphoenix extends GameShell {
             var7 = null;
             var8 = null;
             var9 = 1 + this.field_Bb;
-            if (ha.field_q == 1) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
               var9 -= 3;
             }
-            if (2 == ha.field_q) {
+            if (2 == ConfirmedEmailAvailabilityValidator.field_q) {
               var9 -= 8;
             }
-            if (ha.field_q == 3) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
               var9 -= 11;
             }
             if (this.field_X == null) {
@@ -7246,9 +7246,9 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameCompleted0 = true;
             if (null != var8) {
               var10 = 340 - (1 + java.lang.reflect.Array.getLength(var8)) * 13 - 22;
-              if (-22 + var10 - 96 != ej.field_V) {
+              if (-22 + var10 - 96 != EditableTextField.field_V) {
                 this.field_F = null;
-                ej.field_V = -22 + (var10 - 96);
+                EditableTextField.field_V = -22 + (var10 - 96);
                 gi.field_h = 0;
               }
               var10 = var10 + 13 * ji.a(45, 13, 16777215, var10, ic.field_x[3], (byte) 62, 420);
@@ -7267,7 +7267,7 @@ public final class Terraphoenix extends GameShell {
               (var7 != null)) {
               var6 = 114;
               bc.field_a = var6;
-              SoftwareRasterizer.setClip(0, 96, 640, ej.field_V + 96);
+              SoftwareRasterizer.setClip(0, 96, 640, EditableTextField.field_V + 96);
               var10 = 0;
               do {
                 if (!(var10 < java.lang.reflect.Array.getLength(var7))) {
@@ -7283,7 +7283,7 @@ public final class Terraphoenix extends GameShell {
               do {
                 if (!(var10 < java.lang.reflect.Array.getLength(var7))) {
                   var6 = bc.field_a;
-                  SoftwareRasterizer.setClip(0, ej.field_V + 96, 640, 96 + ej.field_V + 2);
+                  SoftwareRasterizer.setClip(0, EditableTextField.field_V + 96, 640, 96 + EditableTextField.field_V + 2);
                   break;
                 }
                 var6 = var6 + ji.a(45, 13, 8355648, -gi.field_h + var6, "   " + ic.field_x[((int[]) (var7))[var10]], (byte) 86, 420) * 13;
@@ -7304,8 +7304,8 @@ public final class Terraphoenix extends GameShell {
             }
             boolean decompiledFrameRemainder1 = true;
             if ((this.field_F != null ||
-              !(ej.field_V < bc.field_a)) &&
-              (decompiledFrameRemainder1 = !(bc.field_a > ej.field_V))) {
+              !(EditableTextField.field_V < bc.field_a)) &&
+              (decompiledFrameRemainder1 = !(bc.field_a > EditableTextField.field_V))) {
               this.field_F = null;
               decompiledFrameRemainder1 = (var15 != 0);
             }
@@ -7322,10 +7322,10 @@ public final class Terraphoenix extends GameShell {
               var13 = sl.field_b[4];
               var14 = sj.field_e[4];
               this.field_F = new ol(0L, var10_ref_g, var13, var14, var11, var12);
-              this.field_F.a(96, gi.field_h, 11, bc.field_a, -689, 420, ej.field_V, ej.field_V);
+              this.field_F.a(96, gi.field_h, 11, bc.field_a, -689, 420, EditableTextField.field_V, EditableTextField.field_V);
             }
             if (null != this.field_F) {
-              this.field_F.a((byte) -99, ej.field_V, gi.field_h, bc.field_a);
+              this.field_F.a((byte) -99, EditableTextField.field_V, gi.field_h, bc.field_a);
               this.field_F.a((byte) -36, false);
             }
             boolean decompiledFrameRemainder0 = true;
@@ -7458,13 +7458,13 @@ public final class Terraphoenix extends GameShell {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = this.field_Bb;
-          if (ha.field_q == 1) {
+          if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
             var4_int -= 2;
           }
-          if (2 == ha.field_q) {
+          if (2 == ConfirmedEmailAvailabilityValidator.field_q) {
             var4_int -= 7;
           }
-          if (3 == ha.field_q) {
+          if (3 == ConfirmedEmailAvailabilityValidator.field_q) {
             var4_int -= 10;
           }
           this.field_Eb = new String[2];
@@ -7940,15 +7940,15 @@ public final class Terraphoenix extends GameShell {
             return;
           }
           if (!ba.field_h) {
-            ej.a(param0 ^ 13053, var2);
+            EditableTextField.a(param0 ^ 13053, var2);
             return;
           }
           if (cg.field_K != null) {
-            ej.a(-12966, var2);
+            EditableTextField.a(-12966, var2);
             return;
           }
-          if (ej.field_M != null) {
-            ej.a(-12966, var2);
+          if (EditableTextField.field_M != null) {
+            EditableTextField.a(-12966, var2);
             return;
           }
           SoftwareRasterizer.clearRaster();
@@ -7992,13 +7992,13 @@ public final class Terraphoenix extends GameShell {
             if (stackIn_50_0 == stackIn_51_1) {
               var3_int = 610;
               this.a(true, var3_int);
-              if (null == di.field_k) {
+              if (null == TextFieldValidator.field_k) {
                 this.f(true);
                 if (var10 != 0) {
-                  di.field_k.d(0, 0);
+                  TextFieldValidator.field_k.d(0, 0);
                 }
               } else {
-                di.field_k.d(0, 0);
+                TextFieldValidator.field_k.d(0, 0);
               }
               bj.field_e.d(0, 439);
               ab.field_i = -1;
@@ -8255,100 +8255,100 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder11) &&
             (decompiledFrameRemainder2)) {
             var4Lifetime1 = gd.field_c;
-            if (0 == ha.field_q) {
+            if (0 == ConfirmedEmailAvailabilityValidator.field_q) {
               var4Lifetime1 += 8;
             }
-            if (ha.field_q == 1) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
               var4Lifetime1 += 13;
             }
-            if (ha.field_q == 2) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 2) {
               var4Lifetime1 += 17;
             }
-            if (3 == ha.field_q) {
+            if (3 == ConfirmedEmailAvailabilityValidator.field_q) {
               var4Lifetime1 += 19;
             }
-            if (ha.field_q == 4) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
               var4Lifetime1 += 4;
             }
-            if (ha.field_q == -1) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == -1) {
               var4Lifetime1 = 0;
             }
-            if (ha.field_q == -2) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == -2) {
               var4Lifetime1 = 1;
             }
-            if (ha.field_q == -3) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == -3) {
               var4Lifetime1 = 2;
             }
-            if (-4 == ha.field_q) {
+            if (-4 == ConfirmedEmailAvailabilityValidator.field_q) {
               var4Lifetime1 = 3;
             }
             jh.field_q[var4Lifetime1].c(0, 0);
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               1 == gd.field_c &&
               this.field_ib < 256) {
               jh.field_q[var4Lifetime1 - 1].a(0, 0, 256 - this.field_ib);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               1 == gd.field_c &&
               this.field_mb > 468) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, -3744 + this.field_mb * 8);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c == 2 &&
               this.field_ib < 32) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c == 2 &&
               468 < this.field_mb) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, (-468 + this.field_mb) * 8);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c == 3 &&
               32 > this.field_ib) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c == 3 &&
               372 < this.field_mb) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, -744 + 2 * this.field_mb);
             }
-            if (0 == ha.field_q &&
+            if (0 == ConfirmedEmailAvailabilityValidator.field_q &&
               gd.field_c == 4 &&
               32 > this.field_ib) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, 256 - this.field_ib * 8);
             }
-            if (ha.field_q == 0 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 0 &&
               gd.field_c == 4 &&
               this.field_mb > 468) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
             }
-            if (ha.field_q >= 1 &&
-              ha.field_q < 4 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q >= 1 &&
+              ConfirmedEmailAvailabilityValidator.field_q < 4 &&
               this.field_ib < 32) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, -(this.field_ib * 8) + 256);
             }
-            if (ha.field_q >= 1 &&
-              4 > ha.field_q &&
+            if (ConfirmedEmailAvailabilityValidator.field_q >= 1 &&
+              4 > ConfirmedEmailAvailabilityValidator.field_q &&
               this.field_mb > 468) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, this.field_mb * 8 - 3744);
             }
-            if (ha.field_q == 4 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 4 &&
               gd.field_c == 1 &&
               this.field_ib < 256) {
               jh.field_q[var4Lifetime1 - 1].a(0, 0, 256 - this.field_ib);
             }
-            if (ha.field_q == 4 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 4 &&
               gd.field_c == 2 &&
               this.field_ib < 256) {
               jh.field_q[var4Lifetime1 - 1].a(0, 0, -this.field_ib + 256);
             }
-            if (ha.field_q == 4 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 4 &&
               gd.field_c >= 3 &&
               this.field_ib < 32) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, -(8 * this.field_ib) + 256);
             }
-            if (4 == ha.field_q &&
+            if (4 == ConfirmedEmailAvailabilityValidator.field_q &&
               gd.field_c >= 2 &&
               468 < this.field_mb) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 8 * this.field_mb - 3744);
@@ -8377,7 +8377,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ha.field_q == 1 &&
+            if (ConfirmedEmailAvailabilityValidator.field_q == 1 &&
               me.field_o <= 0 &&
               this.field_cb > 20) {
               if ((!(this.field_cb < this.field_bb.length()) ||
@@ -8393,7 +8393,7 @@ public final class Terraphoenix extends GameShell {
                 decompiledFrameRemainder0 = (var10 != 0);
               }
             }
-            if ((decompiledFrameRemainder0) && (ha.field_q == 4 &&
+            if ((decompiledFrameRemainder0) && (ConfirmedEmailAvailabilityValidator.field_q == 4 &&
               3 <= gd.field_c &&
               this.field_cb > 20)) {
               if ((!(this.field_cb < this.field_bb.length()) ||
@@ -8530,7 +8530,7 @@ public final class Terraphoenix extends GameShell {
             this.field_wb.a((byte) -100);
           }
           this.c(false);
-          if (!ib.p(param0 ^ -44)) {
+          if (!ValidatedTextField.p(param0 ^ -44)) {
             if (rl.b(0)) {
               stackIn_571_0 = (null != a.field_b);
               PcmPlayerPump.a(stackIn_571_0, -1260);
@@ -8640,14 +8640,14 @@ public final class Terraphoenix extends GameShell {
           FrameTimer.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
-            NanoFrameTimer.a(112, ByteStorage.field_d, di.field_i);
+            NanoFrameTimer.a(112, ByteStorage.field_d, TextFieldValidator.field_i);
             wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, RandomAccessCacheFile.field_c);
             pc.a(TutorialText.field_e, 40);
             va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), FrameTimer.field_f, 135, 0, 0, false, 135, 1500);
             QuickChatMenu.a(true, var2);
             li.a(22957, dc.field_e, 0, -1, 16777215, (java.applet.Applet) (this));
           }
-          di.field_i = null;
+          TextFieldValidator.field_i = null;
           kk.a(50, 100);
           var3 = new IndexedSprite[1];
           var3[0] = qb.a("sightingpic", (byte) -36, "", ab.field_a);
@@ -8753,7 +8753,7 @@ public final class Terraphoenix extends GameShell {
           qb.field_c = qb.a("title_achievements", (byte) -36, "menu_graphics", ab.field_a);
           pc.field_e = qb.a("title_missionbrief", (byte) -36, "menu_graphics", ab.field_a);
           ki.field_ab = qb.a("title_missionselect", (byte) -36, "menu_graphics", ab.field_a);
-          le.field_p = qb.a("title_debriefing", (byte) -36, "menu_graphics", ab.field_a);
+          AgeValidator.field_p = qb.a("title_debriefing", (byte) -36, "menu_graphics", ab.field_a);
           PcmResampler.field_g = il.a("introbase", "menu_graphics", ab.field_a, -1);
           u.field_e = ig.a(ab.field_a, param0 ^ -2020, "zmasks", "");
           nb.field_d = ig.a(ab.field_a, 0, "combatbuttons", "");
@@ -8776,7 +8776,7 @@ public final class Terraphoenix extends GameShell {
           d.field_N = lf.a(true, "", "menaimdir", ab.field_a);
           me.field_l = lf.a(true, "", "weaponsdir", ab.field_a);
           fc.field_i = lf.a(true, "", "weaponsdiralien", ab.field_a);
-          di.field_f = lf.a(true, "", "aimshield", ab.field_a);
+          TextFieldValidator.field_f = lf.a(true, "", "aimshield", ab.field_a);
           hi.field_W = lf.a(true, "", "alienwalk_aliens", ab.field_a);
           ba.field_e = lf.a(true, "", "alienwalk_brutes", ab.field_a);
           ByteStorage.field_a = lf.a(true, "", "manwalk", ab.field_a);
@@ -8813,7 +8813,7 @@ public final class Terraphoenix extends GameShell {
           ic.field_t = il.a("combatview", "", ab.field_a, -1);
           ab.field_a = null;
           aj.field_b = null;
-          mg.a(12, 12, jc.field_G, 12, 240, 88, 16777215, 12, 16711680, jc.field_G, 16744576, 6, FrameTimer.field_f, 320, jc.field_G);
+          MatchingFieldValidator.a(12, 12, jc.field_G, 12, 240, 88, 16777215, 12, 16711680, jc.field_G, 16744576, 6, FrameTimer.field_f, 320, jc.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8849,7 +8849,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (!NodeHashTableIterator.b(-84)) {
             if (fh.field_f) {
-              if (ib.p(101)) {
+              if (ValidatedTextField.p(101)) {
                 wj.a(2, false);
               }
               fh.field_f = false;
@@ -8867,7 +8867,7 @@ public final class Terraphoenix extends GameShell {
                   lk.b(9407);
                   var2 = (eg) (u.field_c.beginBackward(9272));
                   while (var2 != null) {
-                    ha.a(var2, 4, (byte) 80);
+                    ConfirmedEmailAvailabilityValidator.a(var2, 4, (byte) 80);
                     var2 = (eg) (u.field_c.nextBackward((byte) -119));
                     if (var3 != 0) {
                       decompiledFrameCompleted0 = false;
@@ -8881,11 +8881,11 @@ public final class Terraphoenix extends GameShell {
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
-                if (ej.field_M != null) {
+                if (EditableTextField.field_M != null) {
                   DualLinkNode.a(li.field_b, (byte) 102, 100.0f);
-                  decompiledFrameRemainder0 = !(!ej.field_M.field_i);
+                  decompiledFrameRemainder0 = !(!EditableTextField.field_M.field_i);
                   if (decompiledFrameRemainder0) {
-                    si.field_ib = ej.field_M.field_j;
+                    si.field_ib = EditableTextField.field_M.field_j;
                     this.field_I = new rk(Archive.field_a);
                     try {
                       if (null != si.field_ib) {
@@ -8898,13 +8898,13 @@ public final class Terraphoenix extends GameShell {
                       si.field_ib = null;
                     }
                     this.field_zb = null;
-                    ej.field_M = null;
+                    EditableTextField.field_M = null;
                     lk.b(9407);
                     decompiledFrameRemainder0 = (var3 != 0);
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (!ib.p(126)) {
+                  if (!ValidatedTextField.p(126)) {
                     if (!rl.b(0)) {
                       this.m((byte) 120);
                       decompiledFrameRemainder0 = (var3 != 0);
@@ -9068,13 +9068,13 @@ public final class Terraphoenix extends GameShell {
             var8 = 300;
             var9 = AccountRequestState.field_f.b("%") + var8;
             var10 = 1 + this.field_Bb;
-            if (ha.field_q == 1) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 1) {
               var10 -= 3;
             }
-            if (2 == ha.field_q) {
+            if (2 == ConfirmedEmailAvailabilityValidator.field_q) {
               var10 -= 8;
             }
-            if (ha.field_q == 3) {
+            if (ConfirmedEmailAvailabilityValidator.field_q == 3) {
               var10 -= 11;
             }
             if (this.field_P != -1) {
@@ -9371,7 +9371,7 @@ public final class Terraphoenix extends GameShell {
               this.field_X.field_e.field_e != this.field_X.field_e.field_f + this.field_X.field_e.field_k + this.field_X.field_e.field_h) {
               if (bk.c(-25704)) {
                 AccountRequestState.field_f.a(BitPacketBuffer.field_q, 16, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
-                AccountRequestState.field_f.a(ae.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
+                AccountRequestState.field_f.a(DisplayNameSelectionPanel.field_L, 336, 290, 288, 60, 16777215, 0, 1, 2, AccountRequestState.field_f.field_s);
                 stackIn_222_0 = (this.a(false, 384, (byte) -44, 370, ba.field_c)) ? 0 : 1;
                 var14Lifetime3 = stackIn_222_0;
                 discarded$0 = this.a(var14Lifetime3 != 0, 64, (byte) -44, 370, FullscreenFocusCanvas.field_c);
@@ -9437,7 +9437,7 @@ public final class Terraphoenix extends GameShell {
           this.v(param0 + 0);
           bj.field_e.d(0, 439);
           this.i((byte) 86);
-          le.field_p.c(0, 0);
+          AgeValidator.field_p.c(0, 0);
           SoftwareRasterizer.setClip(0, param0, 158, 480);
           FrameTimer.field_e.d(0, 439);
           SoftwareRasterizer.setClip(158, 0, 482, 480);
@@ -9646,10 +9646,10 @@ public final class Terraphoenix extends GameShell {
             ja.field_i = 12;
             ProxyAuthenticationRequiredException.field_g = 20;
             if (TutorialText.field_c != 1) {
-              di.field_k = new Sprite(640, 480);
+              TextFieldValidator.field_k = new Sprite(640, 480);
               var2_int = 0;
-              while (var2_int < di.field_k.pixels.length) {
-                di.field_k.pixels[var2_int] = k.field_f.pixels[var2_int];
+              while (var2_int < TextFieldValidator.field_k.pixels.length) {
+                TextFieldValidator.field_k.pixels[var2_int] = k.field_f.pixels[var2_int];
                 var2_int++;
                 if (var3 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -9658,10 +9658,10 @@ public final class Terraphoenix extends GameShell {
               }
               if ((decompiledFrameCompleted0) &&
                 (var3 != 0)) {
-                di.field_k = null;
+                TextFieldValidator.field_k = null;
               }
             } else {
-              di.field_k = null;
+              TextFieldValidator.field_k = null;
             }
             if (decompiledFrameCompleted0) {
               k.field_f.a(0);

@@ -583,9 +583,9 @@ final class ee extends lk {
               var4_ref_mo.field_k < var2_long) {
               var4_ref_mo.unlink(false);
               rk.field_b = var4_ref_mo.field_g.length;
-              kd.field_n.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               for (var5_int = 0; rk.field_b > var5_int; var5_int++) {
-                kd.field_n.payload[var5_int] = var4_ref_mo.field_g[var5_int];
+                ConfirmedEmailAvailabilityValidator.field_n.payload[var5_int] = var4_ref_mo.field_g[var5_int];
               }
               fl.field_m = ea.field_n;
               ea.field_n = Bzip2State.field_u;
@@ -610,12 +610,12 @@ final class ee extends lk {
         try {
           while (true) {
             if (stackIn_21_0 < 0) {
-              kd.field_n.position = 0;
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               if (!fq.a(1, (byte) 104)) {
                 return false;
               }
-              sm.field_i = kd.field_n.e(true);
-              kd.field_n.position = 0;
+              sm.field_i = ConfirmedEmailAvailabilityValidator.field_n.e(true);
+              ConfirmedEmailAvailabilityValidator.field_n.position = 0;
               rk.field_b = param0[sm.field_i];
             }
             if (!ol.f((byte) 60)) {
@@ -638,7 +638,7 @@ final class ee extends lk {
             }
             var5 = new mo((long)var4 + var2_long, sm.field_i, new byte[rk.field_b]);
             for (var6 = 0; var6 < rk.field_b; var6++) {
-              var5.field_g[var6] = kd.field_n.payload[var6];
+              var5.field_g[var6] = ConfirmedEmailAvailabilityValidator.field_n.payload[var6];
             }
             bn.field_i.addLast(param1 ^ 64, var5);
             sm.field_i = -1;

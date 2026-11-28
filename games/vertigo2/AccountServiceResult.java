@@ -45,16 +45,16 @@ final class AccountServiceResult {
           return true;
         }
         if (null != IntrusiveDeque.field_b) {
-          if (de.field_f == 13) {
+          if (DebouncedFieldValidator.field_f == 13) {
             IntrusiveDeque.field_b = null;
             return true;
           }
           if (!MouseWheelInput.field_a) {
             if (!BufferedSocket.field_a &&
-              9 != de.field_f &&
-              de.field_f != 10 &&
-              de.field_f != 11) {
-              if (de.field_f == 80 &&
+              9 != DebouncedFieldValidator.field_f &&
+              DebouncedFieldValidator.field_f != 10 &&
+              DebouncedFieldValidator.field_f != 11) {
+              if (DebouncedFieldValidator.field_f == 80 &&
                 BufferedRandomAccessFile.a(-1)) {
                 MouseWheelInput.field_a = true;
                 return true;
@@ -68,8 +68,8 @@ final class AccountServiceResult {
           }
           stackIn_54_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;
           var4 = stackIn_54_0;
-          if (de.field_f == 80 ||
-            de.field_f == 84) {
+          if (DebouncedFieldValidator.field_f == 80 ||
+            DebouncedFieldValidator.field_f == 84) {
             MouseWheelInput.field_a = false;
             var4 = 1;
           }
@@ -78,12 +78,12 @@ final class AccountServiceResult {
             if (BufferedSocket.field_a) {
               return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
             }
-            if (9 == de.field_f) {
+            if (9 == DebouncedFieldValidator.field_f) {
               return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
             }
-            if (de.field_f != 10 &&
-              de.field_f != 11) {
-              if (de.field_f == 80 &&
+            if (DebouncedFieldValidator.field_f != 10 &&
+              DebouncedFieldValidator.field_f != 11) {
+              if (DebouncedFieldValidator.field_f == 80 &&
                 BufferedRandomAccessFile.a(-1)) {
                 MouseWheelInput.field_a = true;
                 return true;
@@ -97,17 +97,17 @@ final class AccountServiceResult {
           }
           stackIn_23_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;
           var4 = stackIn_23_0;
-          if (de.field_f == 80) {
+          if (DebouncedFieldValidator.field_f == 80) {
             MouseWheelInput.field_a = false;
             var4 = 1;
           } else {
-            if (de.field_f == 84) {
+            if (DebouncedFieldValidator.field_f == 84) {
               MouseWheelInput.field_a = false;
               var4 = 1;
             }
           }
         }
-        if (de.field_f == 13) {
+        if (DebouncedFieldValidator.field_f == 13) {
           SpriteState.h(0);
           var4 = 1;
           MouseWheelInput.field_a = false;

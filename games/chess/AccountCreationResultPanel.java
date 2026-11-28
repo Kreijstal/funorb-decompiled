@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends vn implements mj {
     private boolean field_Hb;
-    private ol field_Ib;
+    private AccountRegistrationPanel field_Ib;
     private boolean field_Jb;
     static String field_Gb;
 
@@ -22,7 +22,7 @@ final class AccountCreationResultPanel extends vn implements mj {
 
     public final void a(fb param0, int param1, int param2, int param3, int param4) {
         if (param4 != -24221) {
-          this.field_Ib = (ol) null;
+          this.field_Ib = (AccountRegistrationPanel) null;
         }
         if (this.field_Jb) {
           in.a((byte) 95, false, true);
@@ -112,7 +112,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         }
     }
 
-    AccountCreationResultPanel(fm param0, ol param1) {
+    AccountCreationResultPanel(fm param0, AccountRegistrationPanel param1) {
         super(param0, tk.field_a, ka.field_e, false, false);
         try {
           this.field_Ib = param1;

@@ -6,7 +6,7 @@ final class ik {
     static ef field_b;
     static String field_a;
     static String field_d;
-    static go field_e;
+    static DungeonRaidScreen field_e;
 
     final static void a(String param0, int param1, int param2) {
         sa.field_f = param2;

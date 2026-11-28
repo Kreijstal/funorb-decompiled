@@ -11,8 +11,8 @@ final class we extends kj {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (RasterBuffer.field_e <= param0 &&
           param0 <= qg.field_z) {
-          param4 = ln.a(qk.field_p, Bzip2State.field_q, param4, param3 ^ -2574);
-          param1 = ln.a(qk.field_p, Bzip2State.field_q, param1, param3 ^ -2613);
+          param4 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param4, param3 ^ -2574);
+          param1 = ln.a(LevelCompletionUpdate.field_p, Bzip2State.field_q, param1, param3 ^ -2613);
           wa.a(param2, param0, true, param1, param4);
         }
         if (param3 == -2686) {

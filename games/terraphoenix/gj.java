@@ -62,16 +62,16 @@ final class gj {
           GameApplet.a(9371, nc.field_c);
           nc.field_c.writeShort(-1564407352, param1);
           param3.a((byte) -2, nc.field_c);
-          di.field_l.position = 0;
+          TextFieldValidator.field_l.position = 0;
           if (!param0) {
-            di.field_l.writeByte(16, 18);
+            TextFieldValidator.field_l.writeByte(16, 18);
           } else {
-            di.field_l.writeByte(18, param2 ^ 16);
+            TextFieldValidator.field_l.writeByte(18, param2 ^ 16);
           }
-          di.field_l.position = di.field_l.position + 2;
-          var5_int = di.field_l.position;
-          di.field_l.writeInt(nd.field_i, 8959);
-          di.field_l.writeLong(pc.field_a, 21);
+          TextFieldValidator.field_l.position = TextFieldValidator.field_l.position + 2;
+          var5_int = TextFieldValidator.field_l.position;
+          TextFieldValidator.field_l.writeInt(nd.field_i, 8959);
+          TextFieldValidator.field_l.writeLong(pc.field_a, 21);
           var6 = 0;
           if (DelegatingCanvas.field_c) {
             var6 = var6 | 1;
@@ -85,17 +85,17 @@ final class gj {
           if (AccountRequestState.field_e != null) {
             var6 = var6 | 16;
           }
-          di.field_l.writeByte(var6, -112);
+          TextFieldValidator.field_l.writeByte(var6, -112);
           var7 = kf.a(-95, dg.a(false));
           if (var7 == null) {
             var7 = "";
           }
-          di.field_l.writeString(var7, 2295);
+          TextFieldValidator.field_l.writeString(var7, 2295);
           if (AccountRequestState.field_e != null) {
-            di.field_l.writePrefixedString(AccountRequestState.field_e, -108);
+            TextFieldValidator.field_l.writePrefixedString(AccountRequestState.field_e, -108);
           }
-          ea.a(ga.field_o, nc.field_c, 0, dj.field_c, di.field_l);
-          di.field_l.backpatchShortLength(-var5_int + di.field_l.position, -20125);
+          ea.a(ga.field_o, nc.field_c, 0, dj.field_c, TextFieldValidator.field_l);
+          TextFieldValidator.field_l.backpatchShortLength(-var5_int + TextFieldValidator.field_l.position, -20125);
           bc.a(-1, param2 - 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,8 +178,8 @@ final class gj {
           pe.a(param3, param4, 48, param17);
           aj.a(param7, -19605, param5, param15, param12);
           tb.a(param8, param2 ^ 21361, param19);
-          uh.a(param0, param1, param13, param9, -128, param11);
-          ph.a(param10, param14, param16, -1);
+          LoginPanel.a(param0, param1, param13, param9, -128, param11);
+          PasswordValidator.a(param10, param14, param16, -1);
           if (param2 != 0) {
             return;
           }

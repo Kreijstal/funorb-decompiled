@@ -78,7 +78,7 @@ final class ae {
           return;
         }
         try {
-          wi.field_c = new rg(lc.field_hb, (String) null, tc.field_x, param1, param3);
+          wi.field_c = new LoginPanel(lc.field_hb, (String) null, tc.field_x, param1, param3);
           t.field_h = new lc(ti.field_b, wi.field_c);
           ti.field_b.a((byte) 102, (UiWidget) (t.field_h));
         } catch (RuntimeException runtimeException) {

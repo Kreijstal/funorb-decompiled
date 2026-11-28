@@ -144,9 +144,9 @@ final class fc extends IntrusiveNode {
               kf.field_D = FullscreenFocusCanvas.a(var13, -2);
               c.field_H = te.field_N.readUnsignedByte(255);
               AccountRequestState.field_e = jj.field_Y;
-              if (MouseWheelInput.field_a.a(123) != dc.field_k) {
-                if (MouseWheelInput.field_a.a(param5 + 70) == qb.field_L) {
-                  bb.field_I.a((byte) 104, ia.g(-78));
+              if (MouseWheelInput.field_a.a(123) != EmailFormatValidator.field_k) {
+                if (MouseWheelInput.field_a.a(param5 + 70) == ValidatedTextField.field_L) {
+                  LoginPanel.field_I.a((byte) 104, ia.g(-78));
                 }
               } else {
                 ArchiveRequest.field_p.a((byte) 82, ia.g(-55));
@@ -172,7 +172,7 @@ final class fc extends IntrusiveNode {
                 }
               }
               if (0 < ob.field_l) {
-                cl.field_m = true;
+                AgeValidator.field_m = true;
               }
               id.field_c.setCipherSeed(-1, ed.field_a);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -208,7 +208,7 @@ final class fc extends IntrusiveNode {
                 if (GameApplet.b(-1) > 30000L) {
                   DiskArchiveRequest.field_v = il.field_d;
                 } else {
-                  DiskArchiveRequest.field_v = cl.field_j;
+                  DiskArchiveRequest.field_v = AgeValidator.field_j;
                 }
                 je.field_c = false;
                 stackIn_98_0 = 3;

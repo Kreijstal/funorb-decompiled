@@ -63,7 +63,7 @@ final class ba {
             var7 = var7 + param1 * (var10 - var7) / param4;
           }
         }
-        var11 = ui.field_i;
+        var11 = DebouncedFieldValidator.field_i;
         GzipDecoder.drawNineSlice(var11, var9, var8, (byte) 102, var7, var6);
         var12 = ph.field_o[var5];
         var7Lifetime1 = ic.field_B[param0][7];
@@ -164,7 +164,7 @@ final class ba {
           vl.field_b = var17.readUnsignedShort(false);
           GameApplet.field_e = new int[vl.field_b];
           vd.field_c = new boolean[vl.field_b];
-          gf.field_t = new byte[vl.field_b][];
+          MatchingFieldValidator.field_t = new byte[vl.field_b][];
           h.field_a = new byte[vl.field_b][];
           lg.field_e = new int[vl.field_b];
           MusicPatchPcmStream.field_r = new int[vl.field_b];
@@ -205,7 +205,7 @@ final class ba {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            gf.field_t[var4Lifetime5] = var21;
+            MatchingFieldValidator.field_t[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte(-91);
             stackIn_22_0 = 0;

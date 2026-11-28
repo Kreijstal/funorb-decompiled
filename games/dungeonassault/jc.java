@@ -29,8 +29,8 @@ final class jc {
             param0 = param0 - var6_int;
           }
           SoftwareRasterizer.setClip(param1, param2, 8 + param1, param0 + param2);
-          for (var7 = 0; var7 < param0; var7 = var7 + be.field_o.field_b) {
-            be.field_o.b(param1, param2 + var7);
+          for (var7 = 0; var7 < param0; var7 = var7 + MatchingFieldValidator.field_o.field_b) {
+            MatchingFieldValidator.field_o.b(param1, param2 + var7);
           }
           jh.b();
           if (2 == param3) {

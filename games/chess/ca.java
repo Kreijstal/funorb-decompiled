@@ -154,7 +154,7 @@ final class ca {
           }
           if (decompiledFrameRemainder1) {
             hb.field_a.field_tb = true;
-            oj.field_c.field_db = oc.a(gf.field_g, new String[]{ByteStorage.field_a}, (byte) -59);
+            oj.field_c.field_db = MatchingFieldValidator.a(gf.field_g, new String[]{ByteStorage.field_a}, (byte) -59);
             ea.field_bb.field_Kb.field_Jb.field_db = null;
             var6 = null;
             var7 = (ve) (var4.beginBackward(-18110));
@@ -245,11 +245,11 @@ final class ca {
                         !qf.field_b) {
                         if (!NanoFrameTimer.field_o) {
                           var17 = pi.field_d;
-                          var18 = oc.a(bc.field_c, new String[]{var16}, (byte) -97);
+                          var18 = MatchingFieldValidator.a(bc.field_c, new String[]{var16}, (byte) -97);
                           var17.field_b.a((byte) -12, var18, 8);
                         }
                         var17Lifetime1 = pi.field_d;
-                        var18Lifetime1 = oc.a(nd.field_b, new String[]{var16}, (byte) -107);
+                        var18Lifetime1 = MatchingFieldValidator.a(nd.field_b, new String[]{var16}, (byte) -107);
                         var17Lifetime1.field_b.a((byte) -12, var18Lifetime1, 18);
                       }
                       var5 = var7;
@@ -267,7 +267,7 @@ final class ca {
               } else {
                 decompiledFrameRemainder0 = (0 != ea.field_bb.field_Hb.field_L);
                 if (decompiledFrameRemainder0) {
-                  me.field_a = new kd(ea.field_bb.field_Hb.field_U, ea.field_bb.field_Hb.field_wb, ea.field_bb.field_Hb.field_M, ea.field_bb.field_Hb.field_pb, oc.field_r, od.field_V, qn.field_P, qn.field_P);
+                  me.field_a = new kd(ea.field_bb.field_Hb.field_U, ea.field_bb.field_Hb.field_wb, ea.field_bb.field_Hb.field_M, ea.field_bb.field_Hb.field_pb, MatchingFieldValidator.field_r, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -276,7 +276,7 @@ final class ca {
               if (ea.field_bb.field_Mb.field_L == 0) {
                 break;
               }
-              me.field_a = new kd(ea.field_bb.field_Mb.field_U, ea.field_bb.field_Mb.field_wb, ea.field_bb.field_Mb.field_M, ea.field_bb.field_Mb.field_pb, FullscreenFocusCanvas.field_i, od.field_V, qn.field_P, qn.field_P);
+              me.field_a = new kd(ea.field_bb.field_Mb.field_U, ea.field_bb.field_Mb.field_wb, ea.field_bb.field_Mb.field_M, ea.field_bb.field_Mb.field_pb, FullscreenFocusCanvas.field_i, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
               pk.field_b = 1;
               break;
             }

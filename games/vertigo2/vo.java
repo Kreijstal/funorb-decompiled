@@ -152,7 +152,7 @@ final class vo extends va {
         }
         PacketBuffer.field_t = false;
         if (tk.field_e) {
-          df.field_l.m(param0 ^ 2121781);
+          BirthDateValidator.field_l.m(param0 ^ 2121781);
         } else {
           var1 = rc.field_b;
           if (0 < var1) {
@@ -163,7 +163,7 @@ final class vo extends va {
             }
             eg.field_t = oq.a(new CharSequence[]{(CharSequence) ((Object) eg.field_t), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) e.field_j)}, param0 - 31);
           }
-          df.field_l.h((byte) 63);
+          BirthDateValidator.field_l.h((byte) 63);
           p.a(-33);
         }
     }

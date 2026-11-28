@@ -214,7 +214,7 @@ class r extends ek {
 
     final static boolean a(int param0, byte param1) {
         try {
-          if (!(param0 > rd.field_j.position)) {
+          if (!(param0 > EmailFormatValidator.field_j.position)) {
             return true;
           }
           if (null == cb.field_j) {
@@ -225,16 +225,16 @@ class r extends ek {
           }
           int var2_int = cb.field_j.availableBytes(126);
           if (var2_int > 0) {
-            if (!(param0 - rd.field_j.position >= var2_int)) {
-              var2_int = param0 - rd.field_j.position;
+            if (!(param0 - EmailFormatValidator.field_j.position >= var2_int)) {
+              var2_int = param0 - EmailFormatValidator.field_j.position;
             }
-            cb.field_j.readFully((byte) 66, rd.field_j.payload, var2_int, rd.field_j.position);
+            cb.field_j.readFully((byte) 66, EmailFormatValidator.field_j.payload, var2_int, EmailFormatValidator.field_j.position);
             uk.field_a = id.correctedCurrentTimeMillis(71);
-            rd.field_j.position = rd.field_j.position + var2_int;
-            if (param0 > rd.field_j.position) {
+            EmailFormatValidator.field_j.position = EmailFormatValidator.field_j.position + var2_int;
+            if (param0 > EmailFormatValidator.field_j.position) {
               return false;
             }
-            rd.field_j.position = 0;
+            EmailFormatValidator.field_j.position = 0;
             return true;
           }
           try {
@@ -276,7 +276,7 @@ class r extends ek {
     public final void a(int param0, lk param1, int param2, int param3, boolean param4) {
         try {
           if (param4) {
-            kl.b(param1.field_q, param3 + param1.field_i, param0 + param1.field_o, 48, param1.field_h);
+            AccountRegistrationPanel.b(param1.field_q, param3 + param1.field_i, param0 + param1.field_o, 48, param1.field_h);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {

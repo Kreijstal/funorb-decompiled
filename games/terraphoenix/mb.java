@@ -5,7 +5,7 @@ final class mb extends DualLinkNode {
     private int[] field_v;
     int[] field_r;
     private String[] field_t;
-    static uh field_s;
+    static LoginPanel field_s;
     static String[] field_p;
     static String field_u;
     private int[][] field_q;
@@ -14,7 +14,7 @@ final class mb extends DualLinkNode {
         if (param0 <= 59) {
           field_u = (String) null;
         }
-        return null == a.field_b ? ae.field_G : (java.awt.Canvas) ((Object) a.field_b);
+        return null == a.field_b ? DisplayNameSelectionPanel.field_G : (java.awt.Canvas) ((Object) a.field_b);
     }
 
     final void c(int param0) {
@@ -191,7 +191,7 @@ final class mb extends DualLinkNode {
                 this.field_v = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = param0.readUnsignedShort(-25578);
-                  var7 = di.a((byte) 33, var6);
+                  var7 = TextFieldValidator.a((byte) 33, var6);
                   if (var7 != null) {
                     this.field_v[var5] = var6;
                     array$0 = new int[var7.field_a];

@@ -206,7 +206,7 @@ class a implements ml, ui {
             }
             var10 = var18.b(var8, -98);
             var11 = var18.b(var9, -23);
-            qi.a(param1.field_l + (param3 + param1.field_r), true, param1.field_p + param5 + param1.field_e, param1.field_r + param3, param5 + param1.field_e);
+            LoginPanel.a(param1.field_l + (param3 + param1.field_r), true, param1.field_p + param5 + param1.field_e, param1.field_r + param3, param5 + param1.field_e);
             for (var12 = var10; var11 >= var12; var12++) {
               var13 = var17.field_c[var12];
               if (var10 != var12) {
@@ -428,7 +428,7 @@ class a implements ml, ui {
         int var12Lifetime1;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          qi.a(param3 + (param4.field_r + param4.field_l), true, param4.field_p + param1 + param4.field_e, param3 + param4.field_r, param4.field_e + param1);
+          LoginPanel.a(param3 + (param4.field_r + param4.field_l), true, param4.field_p + param1 + param4.field_e, param3 + param4.field_r, param4.field_e + param1);
           if (param5 != -1) {
             var14 = (UiWidget) null;
             discarded$0 = this.a((byte) 57, -109, (UiWidget) null, 41);
@@ -608,7 +608,7 @@ class a implements ml, ui {
             stackIn_7_3 = var13.field_c[var7 + 1].field_a;
           }
           var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
-          qi.a(param0.field_r + (param1 + param0.field_l), true, param0.field_p + param0.field_e + param2, param0.field_r + param1, param0.field_e + param2);
+          LoginPanel.a(param0.field_r + (param1 + param0.field_l), true, param0.field_p + param0.field_e + param2, param0.field_r + param1, param0.field_e + param2);
           GzipDecompressor.field_b.a(13421772, this.field_k, var10, var11, var12, var10);
           tj.b(param4 ^ 653);
           return;

@@ -108,7 +108,7 @@ final class tj extends g implements qh {
           try {
             try {
               var5 = param1.getCodeBase();
-              var3 = fh.a(param1, var5, -1).getFile();
+              var3 = DisplayNameSelectionPanel.a(param1, var5, -1).getFile();
               if (!param0) {
                 var4 = (java.applet.Applet) null;
                 tj.a(false, (java.applet.Applet) null);

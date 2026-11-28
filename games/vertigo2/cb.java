@@ -171,7 +171,7 @@ final class cb extends UiPanel {
         if (this.field_Tb != -2) {
           return false;
         }
-        if (de.field_f != 13) {
+        if (DebouncedFieldValidator.field_f != 13) {
           return true;
         }
         this.field_Tb = -1;

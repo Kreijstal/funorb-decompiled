@@ -78,7 +78,7 @@ abstract class sg extends ta {
         SoftwareRasterizer.clearRaster();
         this.a(0, 0, -9111);
         super.a(-param0 - this.field_n, param1, param2, -this.field_s - param3);
-        oc.g((byte) -105);
+        ValidatedTextField.g((byte) -105);
         me.field_f.a(param3 + this.field_s, param0 + this.field_n, this.field_D);
     }
 
@@ -100,7 +100,7 @@ abstract class sg extends ta {
         if (!param0) {
           return true;
         }
-        stackIn_7_0 = (hi.field_k >= 10) && (!d.field_k) && (!p.a(23236));
+        stackIn_7_0 = (TextFieldValidator.field_k >= 10) && (!d.field_k) && (!p.a(23236));
         return stackIn_7_0;
     }
 
@@ -126,7 +126,7 @@ abstract class sg extends ta {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = oc.field_M;
+            stackIn_4_0 = ValidatedTextField.field_M;
             return stackIn_4_0;
           }
           if (var2_int > 255) {
@@ -138,7 +138,7 @@ abstract class sg extends ta {
           }
           var3 = NanoFrameTimer.a(-121, '.', param1);
           if (var3.length < 2) {
-            stackIn_13_0 = oc.field_M;
+            stackIn_13_0 = ValidatedTextField.field_M;
             return stackIn_13_0;
           }
           var4 = var3;

@@ -118,7 +118,7 @@ final class rb extends ArchiveProvider {
               if (null != this.field_x.field_w &&
                 this.field_x.field_w[param0] != null) {
                 var30 = this.field_x.field_w[param0];
-                var29 = ld.a(var5, 0, 125, -2 + var18.length);
+                var29 = AgeValidator.a(var5, 0, 125, -2 + var18.length);
                 var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -169,7 +169,7 @@ final class rb extends ArchiveProvider {
             if (this.field_x.field_w != null &&
               null != this.field_x.field_w[param0]) {
               var27 = this.field_x.field_w[param0];
-              var28 = ld.a(var5, 0, 104, var18.length - 2);
+              var28 = AgeValidator.a(var5, 0, 104, var18.length - 2);
               for (var9 = 0; var9 < 64; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();

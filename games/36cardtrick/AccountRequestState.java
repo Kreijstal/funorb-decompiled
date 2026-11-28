@@ -54,8 +54,8 @@ final class AccountRequestState {
         var10 = Main.field_T;
         try {
           gh.field_g = true;
-          v.field_R = param0;
-          if (v.field_R == 0) {
+          ValidatedTextField.field_R = param0;
+          if (ValidatedTextField.field_R == 0) {
             var3_int = mh.a(false, rc.field_o, mb.field_a, BufferedRandomAccessFile.field_l, ij.field_a);
             var4 = 3 + var3_int;
             me.field_a = new String[var4];
@@ -74,7 +74,7 @@ final class AccountRequestState {
             me.field_a[-1 + var4] = gh.field_i;
             wd.field_d[var4 - 1] = 1;
             dd.field_j[1] = 5;
-          } else if (1 == v.field_R) {
+          } else if (1 == ValidatedTextField.field_R) {
             var3_int = mh.a(false, rc.field_o, mb.field_a, BufferedRandomAccessFile.field_l, ij.field_a);
             var4 = var3_int + 2;
             me.field_a = new String[var4];
@@ -90,8 +90,8 @@ final class AccountRequestState {
             me.field_a[var4 - 1] = gh.field_i;
             wd.field_d[-1 + var4] = 0;
             dd.field_j[0] = 5;
-          } else if (2 != v.field_R) {
-            if (v.field_R == 3) {
+          } else if (2 != ValidatedTextField.field_R) {
+            if (ValidatedTextField.field_R == 3) {
               if (jk.field_a.privilegedTasksEnabled) {
                 var3_int = mh.a(false, rc.field_o, mb.field_a, oj.field_b, ij.field_a);
               } else {
@@ -111,7 +111,7 @@ final class AccountRequestState {
               me.field_a[var4 - 1] = gh.field_i;
               wd.field_d[var4 - 1] = 0;
               dd.field_j[0] = 5;
-            } else if (v.field_R == 4) {
+            } else if (ValidatedTextField.field_R == 4) {
               var3_int = mh.a(false, rc.field_o, mb.field_a, fe.field_d, ij.field_a);
               var4 = var3_int + 2;
               me.field_a = new String[var4];
@@ -128,7 +128,7 @@ final class AccountRequestState {
               wd.field_d[var4 - 1] = 0;
               dd.field_j[0] = 5;
             } else {
-              if (v.field_R != 5) {
+              if (ValidatedTextField.field_R != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = mh.a(false, rc.field_o, mb.field_a, ij.field_b, ij.field_a);
@@ -143,7 +143,7 @@ final class AccountRequestState {
                 me.field_a[var5] = ij.field_a[var5];
               }
               me.field_a[-3 + var4] = "";
-              me.field_a[var4 - 2] = fh.field_D;
+              me.field_a[var4 - 2] = DisplayNameSelectionPanel.field_D;
               wd.field_d[-2 + var4] = 0;
               dd.field_j[0] = 3;
               me.field_a[var4 - 1] = gh.field_i;
@@ -210,7 +210,7 @@ final class AccountRequestState {
             dd.field_j[1] = 2;
             me.field_a[4] = ll.field_b;
             dd.field_j[0] = 5;
-            me.field_a[2] = ai.field_l;
+            me.field_a[2] = AgeValidator.field_l;
             me.field_a[5] = "";
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_41_0 = me.field_a;
@@ -238,7 +238,7 @@ final class AccountRequestState {
             }
             jl.field_c = id.correctedCurrentTimeMillis(79);
           }
-          cg.field_e.field_i = dd.field_j.length;
+          TextFieldValidator.field_e.field_i = dd.field_j.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; me.field_a.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_90_0 = false;
@@ -248,7 +248,7 @@ final class AccountRequestState {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (v.field_R == 2) {
+          if (ValidatedTextField.field_R == 2) {
             var11 = ia.field_d;
             var4_ref_String__ = var11;
             for (var5Lifetime2 = 0; var5Lifetime2 < var11.length; var5Lifetime2++) {
@@ -268,7 +268,7 @@ final class AccountRequestState {
             }
           }
           cc.field_d = dl.field_g + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          cc.field_e = cg.field_e.field_i * (e.field_i + a.field_o << 1);
+          cc.field_e = TextFieldValidator.field_e.field_i * (e.field_i + a.field_o << 1);
           cb.field_i = dl.field_g - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; me.field_a.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_115_0 = cc.field_e;
@@ -301,10 +301,10 @@ final class AccountRequestState {
             }
             var4Lifetime3++;
           }
-          if (2 != v.field_R) {
-            cg.field_e.a(-91, af.a(ij.field_e, true, eg.field_b), 0, param2);
+          if (2 != ValidatedTextField.field_R) {
+            TextFieldValidator.field_e.a(-91, af.a(ij.field_e, true, eg.field_b), 0, param2);
           } else {
-            cg.field_e.a(-88, -1, -1, param2);
+            TextFieldValidator.field_e.a(-88, -1, -1, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

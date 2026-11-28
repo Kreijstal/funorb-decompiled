@@ -111,7 +111,7 @@ final class ge extends k implements mj {
               }
               if (ug.field_b > an.field_e) {
                 if (an.field_e == 0) {
-                  tj.b((byte) -126);
+                  EmailFormatValidator.b((byte) -126);
                 }
                 an.field_e = an.field_e + 1;
                 return;

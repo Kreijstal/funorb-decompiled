@@ -233,11 +233,11 @@ final class AccountServiceResult {
           var7Lifetime1 = 0;
           var8Lifetime1 = ai.a(true, var6Lifetime1) >> 8;
           var9Lifetime1 = lc.b(param0 ^ -73, var6Lifetime1) >> 8;
-          if (-1 != LocalizedStrings.field_u &&
+          if (-1 != ConfirmedEmailAvailabilityValidator.field_u &&
             ph.field_d != -1) {
             var8Lifetime1 = -ph.field_d + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = LocalizedStrings.field_u - 320;
+            var7Lifetime1 = ConfirmedEmailAvailabilityValidator.field_u - 320;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);

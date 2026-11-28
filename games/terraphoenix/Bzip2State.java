@@ -71,12 +71,12 @@ final class Bzip2State {
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
-        pl.field_P = param2;
+        AccountRegistrationPanel.field_P = param2;
         if (param3 != -83) {
           field_a = (Sprite[]) null;
         }
         eb.field_I = param0;
-        ib.field_cb = param1;
+        ValidatedTextField.field_cb = param1;
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, boolean param11, int param12) {

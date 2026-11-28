@@ -59,7 +59,7 @@ final class of extends ec {
         java.net.URL var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = hd.mouseHandler;
+        var1 = ConfirmedEmailAvailabilityValidator.mouseHandler;
         synchronized (var1) {
           SecondaryNodeDeque.mouseButton = db.liveMouseButton;
           pa.idleTicks = pa.idleTicks + 1;
@@ -69,8 +69,8 @@ final class of extends ec {
           }
           kf.mouseX = BitPacketBuffer.liveMouseX;
           fg.mouseY = ArchiveSource.liveMouseY;
-          GameScreen.mouseMoved = hd.inputPending;
-          hd.inputPending = false;
+          GameScreen.mouseMoved = ConfirmedEmailAvailabilityValidator.inputPending;
+          ConfirmedEmailAvailabilityValidator.inputPending = false;
           uk.clickButton = wf.pendingClick;
           db.clickX = sa.pressX;
           wg.clickY = GameShell.pressY;

@@ -15,7 +15,7 @@ final class e {
     static int[] field_w;
     private int field_v;
     private int field_f;
-    private pg[] field_p;
+    private IndexedSprite[] field_p;
     static int[] field_y;
     private RgbSprite field_i;
     static int[] field_g;
@@ -248,13 +248,13 @@ final class e {
     }
 
     private final void c(int param0) {
-        pg var2;
+        IndexedSprite var2;
         int var3;
         int var4;
         int var5;
-        pg var6;
-        pg var7;
-        pg var2Lifetime1;
+        IndexedSprite var6;
+        IndexedSprite var7;
+        IndexedSprite var2Lifetime1;
         var5 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_p == null) {
           if (mn.field_e != null) {
@@ -265,7 +265,7 @@ final class e {
         var6 = this.field_p[this.field_b];
         var2 = var6;
         if (var2 != null) {
-          var6.a(9, 58);
+          var6.drawOpaque(9, 58);
         } else {
           if (mn.field_e != null) {
             mn.field_e.a(l.field_e, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
@@ -381,7 +381,7 @@ final class e {
         }
     }
 
-    private final void a(pg[] param0, String param1, String[] param2, java.applet.Applet param3, int param4, boolean param5) {
+    private final void a(IndexedSprite[] param0, String param1, String[] param2, java.applet.Applet param3, int param4, boolean param5) {
         String var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -398,8 +398,8 @@ final class e {
         try {
           var7 = param3.getParameter("currency");
           if (var7 != null &&
-            sf.a((byte) 90, (CharSequence) ((Object) var7))) {
-            this.field_t = hi.a(87, (CharSequence) ((Object) var7));
+            TextInputField.isDecimalInteger((byte) 90, (CharSequence) ((Object) var7))) {
+            this.field_t = TextFieldValidator.a(87, (CharSequence) ((Object) var7));
           } else {
             this.field_t = 2;
           }
@@ -491,7 +491,7 @@ final class e {
           var7 = sg.field_m;
           this.a(-16, var5.field_A, var8, ra.field_e, 0, var6, 0.5f, param0, var5, var5.field_z);
           this.a(20, var5.field_A, var8, ra.field_e, param0 + 0, var7, 0.5f, 0, var5, var5.field_z);
-          this.a(var5.field_A / 2 - ra.field_e.field_y + 12, var5.field_A / 3, var8, ra.field_e, 0, lk.field_E[this.field_t], 0.699999988079071f, 0, var5, var5.field_z);
+          this.a(var5.field_A / 2 - ra.field_e.field_y + 12, var5.field_A / 3, var8, ra.field_e, 0, LoginPanel.field_E[this.field_t], 0.699999988079071f, 0, var5, var5.field_z);
           eh.b(false);
           this.field_h = new RgbSprite(121, 122);
           sb.a(this.field_h, -126);
@@ -546,7 +546,7 @@ final class e {
           ra.field_e = th.a(jk.field_c, 126, "", cl.field_i, "pump32");
           FullscreenFocusCanvas.field_j = fg.a("members_expansion_screen", "benefit_orbs", jk.field_c, false);
           od.field_D = fg.a("members_expansion_screen", "button_text", jk.field_c, false);
-          vj.field_h = ei.a(jk.field_c, param0 ^ -49, "members_expansion_screen", "button_highlights");
+          vj.field_h = DelayedPacket.loadNamedRgbSprites(jk.field_c, param0 ^ -49, "members_expansion_screen", "button_highlights");
           cl.field_i = null;
           jk.field_c = null;
         }
@@ -556,7 +556,7 @@ final class e {
         }
         this.field_h.e(376, 339);
         this.field_i.e(9, 9);
-        im.field_g.a(0, 0);
+        im.field_g.drawOpaque(0, 0);
         if (null != jm.field_b) {
           jm.field_b.e(9, 257);
           jm.field_b.d(558, 257);
@@ -600,7 +600,7 @@ final class e {
         }
     }
 
-    e(java.applet.Applet param0, String param1, pg[] param2, String[] param3) {
+    e(java.applet.Applet param0, String param1, IndexedSprite[] param2, String[] param3) {
         this.field_j = true;
         this.field_s = 0;
         this.field_v = 0;

@@ -17,7 +17,7 @@ final class df {
         int var3 = 0;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          c.field_S = c.field_S + 1;
+          EditableTextField.field_S = EditableTextField.field_S + 1;
           if (~kb.field_r == param0 &&
             rf.field_a == -1) {
             kb.field_r = ag.field_f;
@@ -31,8 +31,8 @@ final class df {
           }
           if (decompiledFrameRemainder0) {
             if (!ok.field_w) {
-              if (c.field_S >= oh.field_db) {
-                stackIn_17_0 = (fj.field_b + oh.field_db > c.field_S) ? 1 : 0;
+              if (EditableTextField.field_S >= oh.field_db) {
+                stackIn_17_0 = (fj.field_b + oh.field_db > EditableTextField.field_S) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -41,20 +41,20 @@ final class df {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              c.field_S = 0;
+              EditableTextField.field_S = 0;
             } else {
               if (ok.field_w) {
-                c.field_S = oh.field_db;
+                EditableTextField.field_S = oh.field_db;
               } else {
                 if (var2_int == 0) {
-                  c.field_S = 0;
+                  EditableTextField.field_S = 0;
                 } else {
-                  c.field_S = oh.field_db;
+                  EditableTextField.field_S = oh.field_db;
                 }
               }
             }
             aa.field_t = kb.field_r;
-            gg.field_f = rf.field_a;
+            DebouncedFieldValidator.field_f = rf.field_a;
             if (param1 == null) {
               if (var2_int != 0) {
                 ok.field_w = true;
@@ -64,18 +64,18 @@ final class df {
             }
           }
           if (!ok.field_w &&
-            oh.field_db > c.field_S &&
+            oh.field_db > EditableTextField.field_S &&
             pl.field_c) {
             aa.field_t = kb.field_r;
-            gg.field_f = rf.field_a;
-            c.field_S = 0;
+            DebouncedFieldValidator.field_f = rf.field_a;
+            EditableTextField.field_S = 0;
           }
           gf.field_b = param1;
           kb.field_r = -1;
           if (ok.field_w &&
-            NetworkGameClient.field_y == c.field_S) {
+            NetworkGameClient.field_y == EditableTextField.field_S) {
             ok.field_w = false;
-            c.field_S = 0;
+            EditableTextField.field_S = 0;
           }
           rf.field_a = -1;
           return;

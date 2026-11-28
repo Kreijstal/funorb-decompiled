@@ -35,7 +35,7 @@ class fg extends jc {
           p.field_a = dupTemp$0;
           of.field_L = dupTemp$0;
           if (ia.field_f.status != 1) {
-            dh.field_bb = ug.field_p;
+            dh.field_bb = MatchingFieldValidator.field_p;
           } else {
             try {
               p.field_d = new BufferedSocket((java.net.Socket) (ia.field_f.result), ef.field_i);
@@ -53,7 +53,7 @@ class fg extends jc {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              dh.field_bb = ug.field_p;
+              dh.field_bb = MatchingFieldValidator.field_p;
               if (param1 > -14) {
                 return true;
               }
@@ -96,7 +96,7 @@ class fg extends jc {
         try {
           param1.removeKeyListener(ad.field_b);
           param1.removeFocusListener(ad.field_b);
-          wg.field_p = -1;
+          EmailFormatValidator.field_p = -1;
           if (param0 != 51) {
             MidiPcmStream var3 = (MidiPcmStream) null;
             fg.a(127, -79, -7, (java.awt.Component) null, (PlatformTaskDispatcher) null, false, (MidiPcmStream) null, false);

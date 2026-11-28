@@ -119,7 +119,7 @@ final class ia {
             boolean decompiledFrameRemainder0 = true;
             param0.field_l.b(var3_double, param0.field_c, 98);
             param0.a(8573);
-            var7 = param0.field_j.b(param2 ^ 14804);
+            var7 = param0.field_j.getClampedTileIndex(param2 ^ 14804);
             if (param1[var7] == 2) {
               param0.field_l.b(-var3_double, param0.field_c, 126);
               param0.a(8573);

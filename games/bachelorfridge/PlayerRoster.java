@@ -74,7 +74,7 @@ final class PlayerRoster {
           }
           if (0 == var3 &&
             BoardChangeAnimation.field_j == 2) {
-            var4 = f.correctedCurrentTimeMillis((byte) 73) - ph.field_P;
+            var4 = f.correctedCurrentTimeMillis((byte) 73) - LoginPanel.field_P;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               tfa.a(5, 1, true);

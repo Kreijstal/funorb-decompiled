@@ -4,7 +4,7 @@
 abstract class ib {
     static String field_a;
     static String[] field_c;
-    static ki field_b;
+    static AccountRegistrationPanel field_b;
     private static String field_z;
 
     public static void clearStaticReferences(int param0) {

@@ -98,7 +98,7 @@ final class ge extends WidgetWrapper {
           }
           dupTemp$1 = f.correctedCurrentTimeMillis((byte) 73);
           vla.field_v = dupTemp$1;
-          pk.field_c = dupTemp$1;
+          DebouncedFieldValidator.field_c = dupTemp$1;
           if (param0 != -29510) {
             field_K = (IndexedSprite) null;
           }
@@ -117,7 +117,7 @@ final class ge extends WidgetWrapper {
               eia.field_a = rga.field_c;
               var5.position = 0;
               HazmatAnimation.a(sja.field_fb, fl.field_q, (byte) -106, GameKeyHandler.field_a, kha.field_k);
-              hna.a(-1, 117);
+              ConfirmedEmailAvailabilityValidator.a(-1, 117);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

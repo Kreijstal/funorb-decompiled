@@ -130,7 +130,7 @@ final class td {
         if (param3 == -1) {
           this.field_b = null;
         } else {
-          var8Lifetime1 = e.a(104, param1);
+          var8Lifetime1 = ConfirmedEmailAvailabilityValidator.a(104, param1);
           this.field_b = PcmSampleStream.a(nl.field_r[param3], 100, dk.field_a[this.field_n], var8Lifetime1);
           PacketBuffer.a(-1630758008, this.field_b);
         }

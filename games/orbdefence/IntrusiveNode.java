@@ -97,10 +97,10 @@ class IntrusiveNode {
           if (!am.field_b.tryLoadGroupByName((byte) 111, "commonui")) {
             return 60;
           }
-          if (!wb.field_b.ensureIndexLoaded(-1)) {
+          if (!DebouncedFieldValidator.field_b.ensureIndexLoaded(-1)) {
             return 70;
           }
-          if (!wb.field_b.tryLoadAllGroups(7715)) {
+          if (!DebouncedFieldValidator.field_b.tryLoadAllGroups(7715)) {
             return 80;
           }
         } else {
@@ -127,10 +127,10 @@ class IntrusiveNode {
           if (!am.field_b.tryLoadGroupByName((byte) 94, "commonui")) {
             return 80;
           }
-          if (!wb.field_b.ensureIndexLoaded(-1)) {
+          if (!DebouncedFieldValidator.field_b.ensureIndexLoaded(-1)) {
             return 82;
           }
-          if (!wb.field_b.tryLoadAllGroups(7715)) {
+          if (!DebouncedFieldValidator.field_b.tryLoadAllGroups(7715)) {
             return 86;
           }
         }

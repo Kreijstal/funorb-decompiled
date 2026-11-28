@@ -223,7 +223,7 @@ final class ma extends pn {
         int var25Lifetime2;
         var26 = CrazyCrystals.field_B;
         try {
-          var27 = kd.field_n;
+          var27 = ConfirmedEmailAvailabilityValidator.field_n;
           var2 = var27.readUnsignedByte(255);
           if (param0 <= 56) {
             field_p = (ResourceArchive) null;
@@ -533,7 +533,7 @@ final class ma extends pn {
 
     final void c(int param0, int param1, PuzzleTile[][] param2, int param3) {
         try {
-          vk.field_N.a(16, param3 * 12, 12 * param0, 60, (byte) -111);
+          LoginPanel.field_N.a(16, param3 * 12, 12 * param0, 60, (byte) -111);
           if (param1 != 0) {
             RgbSprite[] var6 = (RgbSprite[]) null;
             this.a((PuzzleTile) null, 106, -41, (PuzzleTile[][]) null, (RgbSprite[]) null, (byte) -23);

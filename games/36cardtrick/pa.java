@@ -4,7 +4,7 @@
 final class pa extends dg {
     static String field_N;
     private int field_R;
-    private ba field_O;
+    private FieldValidator field_O;
     private RgbSprite field_Q;
     private String field_P;
 
@@ -22,7 +22,7 @@ final class pa extends dg {
           try {
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param1);
-              var3 = fh.a(param0, var3, -1);
+              var3 = DisplayNameSelectionPanel.a(param0, var3, -1);
               IntrusiveDeque.a(param0, -25573, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class pa extends dg {
               NetworkArchiveRequest.field_r.writeByte(-9469, 18);
               NetworkArchiveRequest.field_r.position = NetworkArchiveRequest.field_r.position + 2;
               var10 = NetworkArchiveRequest.field_r.position;
-              var11_ref_String = bi.a((byte) -27, mk.g(-119));
+              var11_ref_String = bi.a((byte) -27, PasswordValidator.g(-119));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -171,15 +171,15 @@ final class pa extends dg {
           }
           if (kg.field_c == ra.field_b &&
             r.a(1, (byte) 122)) {
-            var9Lifetime1 = rd.field_j.readUnsignedByte(72);
-            rd.field_j.position = 0;
+            var9Lifetime1 = EmailFormatValidator.field_j.readUnsignedByte(72);
+            EmailFormatValidator.field_j.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               ll.field_f = new String[var9Lifetime1 - 100];
               ra.field_b = ta.field_eb;
             } else {
               if (var9Lifetime1 == 248) {
-                wf.a((byte) -83, mk.g(-126));
+                wf.a((byte) -83, PasswordValidator.g(-126));
                 e.field_a = ResourceArchive.field_i;
                 mc.a((byte) -127);
                 lk.field_w = false;
@@ -192,20 +192,20 @@ final class pa extends dg {
                 pd.field_l = var9Lifetime1;
               } else {
                 r.a(ia.b(param5 - 23), (byte) 119);
-                ni.field_f = new Boolean(tg.a(-2, rd.field_j));
-                rd.field_j.position = 0;
+                ni.field_f = new Boolean(tg.a(-2, EmailFormatValidator.field_j));
+                EmailFormatValidator.field_j.position = 0;
               }
             }
           }
           if (ta.field_eb == ra.field_b) {
             var9Lifetime2 = 2;
             if (r.a(var9Lifetime2, (byte) 120)) {
-              var10Lifetime1 = rd.field_j.readUnsignedShort((byte) 72);
-              rd.field_j.position = 0;
+              var10Lifetime1 = EmailFormatValidator.field_j.readUnsignedShort((byte) 72);
+              EmailFormatValidator.field_j.position = 0;
               if (r.a(var10Lifetime1, (byte) 124)) {
                 var11 = ll.field_f.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ll.field_f[var12] = rd.field_j.readPrefixedString(-74);
+                  ll.field_f[var12] = EmailFormatValidator.field_j.readPrefixedString(-74);
                 }
                 mc.a((byte) -125);
                 lk.field_w = false;
@@ -217,11 +217,11 @@ final class pa extends dg {
           if (kb.field_a == ra.field_b &&
             gl.a(false)) {
             if (255 != pd.field_l) {
-              e.field_a = rd.field_j.readString(false);
+              e.field_a = EmailFormatValidator.field_j.readString(false);
             } else {
-              var9_ref_String = rd.field_j.readNullableString((byte) 29);
+              var9_ref_String = EmailFormatValidator.field_j.readNullableString((byte) 29);
               if (var9_ref_String != null) {
-                lk.a(mk.g(param5 - 146), 0, var9_ref_String);
+                lk.a(PasswordValidator.g(param5 - 146), 0, var9_ref_String);
               }
             }
             mc.a((byte) -128);
@@ -293,7 +293,7 @@ final class pa extends dg {
           if (param1 != -1) {
             field_N = (String) null;
           }
-          var2 = new ic(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, rd.field_k);
+          var2 = new ic(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, EmailFormatValidator.field_k);
           rh.d(-41);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -311,7 +311,7 @@ final class pa extends dg {
         }
     }
 
-    pa(ba param0, String param1, int param2, int param3, int param4, int param5) {
+    pa(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, dj.b(31959));
         try {
           this.field_O = param0;
@@ -339,7 +339,7 @@ final class pa extends dg {
           if (param0 > 71) {
             return false;
           }
-          this.field_O = (ba) null;
+          this.field_O = (FieldValidator) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -375,7 +375,7 @@ final class pa extends dg {
         int[] var16 = null;
         var8 = Main.field_T;
         try {
-          var11 = rd.field_j;
+          var11 = EmailFormatValidator.field_j;
           var2 = var11.readUnsignedByte(param0 ^ -121);
           if (var2 == param0) {
             var10 = eg.a(-60);
@@ -409,7 +409,7 @@ final class pa extends dg {
             var15.unlink(param0 ^ 121);
           } else {
             if (var2 != 2) {
-              k.a((Throwable) null, (byte) 70, "A1: " + aj.a((byte) 92));
+              DebouncedFieldValidator.a((Throwable) null, (byte) 70, "A1: " + aj.a((byte) 92));
               mc.a((byte) -128);
             } else {
               var14 = (rc) (ue.field_b.beginForward((byte) 74));
@@ -453,10 +453,10 @@ final class pa extends dg {
         RgbSprite var17;
         sg var6Lifetime1;
         var13 = Main.field_T;
-        var6 = this.field_O.a(true);
+        var6 = this.field_O.getValidationStatus(true);
         if (var6 != tb.field_b &&
           var6 != a.field_n) {
-          var5 = this.field_O.b(param2 ^ -26767);
+          var5 = this.field_O.getValidationMessage(param2 ^ -26767);
           if (var5 == null) {
             var5 = this.field_P;
           }
@@ -468,7 +468,7 @@ final class pa extends dg {
           this.e((byte) 5);
         }
         super.a(param0, param1, param2 ^ 0, param3);
-        var6Lifetime1 = this.field_O.a(true);
+        var6Lifetime1 = this.field_O.getValidationStatus(true);
         var8 = (ne) ((Object) this.field_v);
         var9 = this.field_o + param0;
         var10 = var8.a((lk) (this), -1815612287, param1) + (var8.a((byte) 92, (lk) (this)).b(0) >> 1);

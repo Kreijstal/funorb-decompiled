@@ -205,7 +205,7 @@ final class w extends hd {
             } else {
               sg.field_n = fb.a(dk.field_x, 127, new String[]{Integer.toString(var1)});
             }
-            sg.field_n = rg.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedSocket.field_f)});
+            sg.field_n = LoginPanel.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedSocket.field_f)});
           }
           fa.field_G.n(3);
           ea.a(-101);

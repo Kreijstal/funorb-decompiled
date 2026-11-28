@@ -47,7 +47,7 @@ abstract class rf {
           IterableNodeHashTable.a((byte) 114);
           if (0 < param4.field_D &&
             param4.field_N != null) {
-            df.h(-22);
+            PasswordValidator.h(-22);
           }
           s.field_R = 0;
           var8 = 0;
@@ -61,10 +61,10 @@ abstract class rf {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = bg.field_L[var9];
+                var12 = AccountRegistrationPanel.field_L[var9];
                 var13 = sb.field_l[var9];
-                var14 = -var12 + bg.field_L[var10];
-                var15 = -var12 + bg.field_L[var11];
+                var14 = -var12 + AccountRegistrationPanel.field_L[var10];
+                var15 = -var12 + AccountRegistrationPanel.field_L[var11];
                 var16 = sb.field_l[var10] - var13;
                 var17 = sb.field_l[var11] - var13;
               }

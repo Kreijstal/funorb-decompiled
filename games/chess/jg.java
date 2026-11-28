@@ -14,11 +14,11 @@ final class jg extends bh implements mj {
         if (param4 != -24221) {
           field_O = (byte[]) null;
         }
-        if (this.field_J.a(param4 ^ 24305).a(param4 + 45535) != ProxyAuthenticationRequiredException.field_a) {
+        if (this.field_J.getFieldValidator(param4 ^ 24305).getValidationStatus(param4 + 45535) != ProxyAuthenticationRequiredException.field_a) {
           return;
         }
         try {
-          s.b(this.field_J.c(false), this.field_J.h(-1), 0, this.field_J.i(82));
+          DisplayNameSelectionPanel.b(this.field_J.c(false), this.field_J.h(-1), 0, this.field_J.i(82));
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "jg.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -51,7 +51,7 @@ final class jg extends bh implements mj {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 76 / ((param0 - 9) / 61);
-          if (tj.a(param3, param1, param2, (byte) 83)) {
+          if (EmailFormatValidator.a(param3, param1, param2, (byte) 83)) {
             return rf.b((byte) 8);
           }
           return null;
@@ -78,7 +78,7 @@ final class jg extends bh implements mj {
     jg(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (jm) null);
         this.field_J = new ih(new wc(10000536), ej.field_f, 0, 0, 140, 25);
-        this.field_J.a(false, new ri());
+        this.field_J.a(false, new BirthDateValidator());
         this.field_N = new fb(sg.field_e, (rg) (this));
         this.field_E = new mf[]{(mf) ((Object) this.field_J), (mf) ((Object) this.field_N)};
         this.field_N.field_n = (jm) ((Object) new sf());
@@ -104,7 +104,7 @@ final class jg extends bh implements mj {
         try {
           super.a(param0, -103, param2, param3);
           stackIn_2_0 = this.field_N;
-          stackIn_3_1 = (this.field_J.a(-112).a(21314) == ProxyAuthenticationRequiredException.field_a);
+          stackIn_3_1 = (this.field_J.getFieldValidator(-112).getValidationStatus(21314) == ProxyAuthenticationRequiredException.field_a);
           stackIn_2_0.field_H = stackIn_3_1;
           if (param1 <= -6) {
             return;
@@ -145,13 +145,13 @@ final class jg extends bh implements mj {
     }
 
     final static void b(boolean param0) {
-        ri.g(124);
+        BirthDateValidator.g(124);
         if (!param0) {
           field_M = 3L;
-          uk.a(false, 4);
+          ChessBoardState.a(false, 4);
           return;
         }
-        uk.a(false, 4);
+        ChessBoardState.a(false, 4);
     }
 
     static {

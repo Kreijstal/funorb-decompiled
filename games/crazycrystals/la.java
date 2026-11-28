@@ -74,29 +74,29 @@ final class la {
             so.field_d = ArchiveRequest.a("headline", oj.field_H, 10, "benefits");
             uh.field_q = ArchiveRequest.a("blurbpane", oj.field_H, 10, "benefits");
             ad.field_h = ArchiveRequest.a("button", oj.field_H, 10, "benefits");
-            ga.field_E = ArchiveRequest.a("signup_text", oj.field_H, 10, "benefits");
+            EditableTextField.field_E = ArchiveRequest.a("signup_text", oj.field_H, 10, "benefits");
             el.field_g = ArchiveRequest.a("menu_text", oj.field_H, 10, "benefits");
             fl.field_a = ArchiveRequest.a("button_frame", oj.field_H, 10, "benefits");
-            qk.field_H = ArchiveRequest.a("arrow", oj.field_H, 10, "benefits");
+            DisplayNameSelectionPanel.field_H = ArchiveRequest.a("arrow", oj.field_H, 10, "benefits");
             ra.field_c = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
             rn.field_k = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
             var28 = SoftwareRasterizer.field_i;
             var2 = SoftwareRasterizer.field_l;
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
-            var11 = new RgbSprite(4 + qk.field_H.field_l, 4 + qk.field_H.field_u);
+            var11 = new RgbSprite(4 + DisplayNameSelectionPanel.field_H.field_l, 4 + DisplayNameSelectionPanel.field_H.field_u);
             var11.a();
-            qk.field_H.c(2, 2, qm.field_n);
+            DisplayNameSelectionPanel.field_H.c(2, 2, qm.field_n);
             hb.a(2, var11.field_u, 0, var11.field_l, var11, -46, 1, 0);
-            qk.field_H = var11;
-            bf.field_a = qk.field_H.c();
+            DisplayNameSelectionPanel.field_H = var11;
+            bf.field_a = DisplayNameSelectionPanel.field_H.c();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_l / 2;
             var12.a();
-            ra.field_c.c(ci.a(new String[]{pb.field_b}, qo.field_i, 3), var6, 40, 16777215, -1);
-            rn.field_k.c(ci.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
-            ra.field_c.c(ci.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
-            rn.field_k.c(ci.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
+            ra.field_c.c(AgeValidator.a(new String[]{pb.field_b}, qo.field_i, 3), var6, 40, 16777215, -1);
+            rn.field_k.c(AgeValidator.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
+            ra.field_c.c(AgeValidator.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
+            rn.field_k.c(AgeValidator.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
             ra.field_c.c(NanoFrameTimer.field_f, var6, 180, 16777215, -1);
             rn.field_k.c(IntrusiveNode.field_c, var6, 200, 16777215, -1);
             hb.a(3, var12.field_u, 0, var12.field_l, var12, -35, 1, 0);
@@ -108,7 +108,7 @@ final class la {
               hb.a(3, NetworkArchiveRequest.field_v[var7].field_u, 0, NetworkArchiveRequest.field_v[var7].field_l, NetworkArchiveRequest.field_v[var7], -76, 1, 0);
             }
             hf.field_c = null;
-            kp.field_n = ga.field_E.d();
+            kp.field_n = EditableTextField.field_E.d();
             kp.field_n.a();
             ne.a(0, SoftwareRasterizer.field_l, -102, 64, 0, 2 * SoftwareRasterizer.field_d / 3);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
@@ -128,7 +128,7 @@ final class la {
             var2Lifetime1 = SoftwareRasterizer.field_l;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
-            var14 = ci.a(new String[]{qf.field_t[v.field_d]}, Bzip2State.field_C, 3);
+            var14 = AgeValidator.a(new String[]{qf.field_t[v.field_d]}, Bzip2State.field_C, 3);
             var5 = ra.field_c.c(var14, wn.field_c);
             var6Lifetime1 = ra.field_c.b(var14, wn.field_c, ra.field_c.field_u + ra.field_c.field_o);
             var7Lifetime1 = (wn.field_c - var5) / 2 + SecondaryIntrusiveDeque.field_e;
@@ -195,7 +195,7 @@ final class la {
             var3Lifetime2 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
             var16 = new RgbSprite(412, 43);
-            var17 = ci.a(new String[]{gh.field_A}, nk.field_l, 3);
+            var17 = AgeValidator.a(new String[]{gh.field_A}, nk.field_l, 3);
             gh.field_A = null;
             var16.a();
             rn.field_k.a(var17, 3, 3, var16.field_l - 6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
@@ -243,7 +243,7 @@ final class la {
           if (ad.field_h != null &&
             fl.field_a != null) {
             ad.field_h.a(231, 390);
-            var1 = ga.field_E;
+            var1 = EditableTextField.field_E;
             if (AwtRasterBuffer.field_f.field_c == 0) {
               var1 = kp.field_n;
             }
@@ -285,27 +285,27 @@ final class la {
             stackIn_66_2 = (AwtRasterBuffer.field_f.field_c == 1);
             qf.a(stackIn_65_0, stackIn_65_1, stackIn_66_2, CipherPacketBuffer.field_q);
           }
-          if (null != qk.field_H) {
-            var1_int = 357 - qk.field_H.field_o / 2;
-            qk.field_H.a(-qk.field_H.field_n + 269, var1_int);
+          if (null != DisplayNameSelectionPanel.field_H) {
+            var1_int = 357 - DisplayNameSelectionPanel.field_H.field_o / 2;
+            DisplayNameSelectionPanel.field_H.a(-DisplayNameSelectionPanel.field_H.field_n + 269, var1_int);
             bf.field_a.a(586, var1_int);
             if (var1_int < IsaacRandom.field_h &&
-              qk.field_H.field_u + var1_int > IsaacRandom.field_h) {
+              DisplayNameSelectionPanel.field_H.field_u + var1_int > IsaacRandom.field_h) {
               var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, LevelLostEntrancePhase.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);
                 NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);
                 return;
               }
-              if (qh.field_i > 269 - qk.field_H.field_l &&
+              if (qh.field_i > 269 - DisplayNameSelectionPanel.field_H.field_l &&
                 qh.field_i < 269) {
-                qk.field_H.d(269 - (qk.field_H.field_n + 1), var1_int - 1, var2Lifetime5);
-                qk.field_H.d(-qk.field_H.field_n + 270, var1_int - 1, var2Lifetime5);
-                qk.field_H.d(-1 + (269 - qk.field_H.field_n), var1_int + 1, var2Lifetime5);
-                qk.field_H.d(-qk.field_H.field_n + 269 + 1, 1 + var1_int, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.d(269 - (DisplayNameSelectionPanel.field_H.field_n + 1), var1_int - 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.d(-DisplayNameSelectionPanel.field_H.field_n + 270, var1_int - 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.d(-1 + (269 - DisplayNameSelectionPanel.field_H.field_n), var1_int + 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.d(-DisplayNameSelectionPanel.field_H.field_n + 269 + 1, 1 + var1_int, var2Lifetime5);
               } else {
                 if (586 < qh.field_i &&
-                  qk.field_H.field_l + 586 > qh.field_i) {
+                  DisplayNameSelectionPanel.field_H.field_l + 586 > qh.field_i) {
                   bf.field_a.d(585, -1 + var1_int, var2Lifetime5);
                   bf.field_a.d(587, -1 + var1_int, var2Lifetime5);
                   bf.field_a.d(585, 1 + var1_int, var2Lifetime5);

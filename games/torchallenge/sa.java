@@ -28,14 +28,14 @@ final class sa {
         if (!IntrusiveDeque.field_a.tryLoadGroupByName(5, "commonui")) {
           return ra.field_m + " - " + IntrusiveDeque.field_a.getGroupLoadPercentByName(112, "commonui") + "%";
         }
-        if (!gf.field_p.ensureIndexLoaded(-7957)) {
+        if (!MatchingFieldValidator.field_p.ensureIndexLoaded(-7957)) {
           return wf.field_a;
         }
         if (!param0) {
           field_b = (String) null;
         }
-        if (!gf.field_p.tryLoadGroupByName(5, "commonui")) {
-          return ij.field_x + " - " + gf.field_p.getGroupLoadPercentByName(125, "commonui") + "%";
+        if (!MatchingFieldValidator.field_p.tryLoadGroupByName(5, "commonui")) {
+          return ij.field_x + " - " + MatchingFieldValidator.field_p.getGroupLoadPercentByName(125, "commonui") + "%";
         }
         if (!FrameTimer.field_b.ensureIndexLoaded(-7957)) {
           return wa.field_qb;
