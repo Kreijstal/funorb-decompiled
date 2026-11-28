@@ -144,12 +144,12 @@ final class rc extends hh {
             if (0 <= var5) {
               int var6 = IntrusiveDeque.a(true, ne.field_g[var3_int], true);
               int var7 = -(var6 >> 1) + ri.field_a;
-              var4 = var4 + pp.field_a;
+              var4 = var4 + TextLayout.field_a;
               if (rl.a((byte) -21, param1, param2, var6 + (ud.field_g << 1), lp.field_h + (as.field_c << 1), -ud.field_g + var7, var4)) {
                 int stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (pp.field_a + (as.field_c << 1) + lp.field_h);
+              var4 = var4 + (TextLayout.field_a + (as.field_c << 1) + lp.field_h);
             } else {
               var4 = var4 + LoginPanel.field_u;
             }

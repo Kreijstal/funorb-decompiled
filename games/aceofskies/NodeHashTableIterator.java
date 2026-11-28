@@ -202,10 +202,10 @@ final class NodeHashTableIterator implements Iterator {
         field_c = null;
     }
 
-    final static qm a(byte param0) {
+    final static DefaultTextWidgetRenderer a(byte param0) {
         int var1 = 33 / ((14 - param0) / 58);
         if (ij.field_j == null) {
-          ij.field_j = new qm(oi.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, oi.field_c.maxAscent, -1, 2147483647, true);
+          ij.field_j = new DefaultTextWidgetRenderer(oi.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, oi.field_c.maxAscent, -1, 2147483647, true);
         }
         return ij.field_j;
     }

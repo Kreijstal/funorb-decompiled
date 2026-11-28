@@ -20,11 +20,11 @@ final class aq {
           OpenGlFramebuffer.e((byte) -128);
           Sprite var2 = var1.copy();
           for (int var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           oo.field_W.makeRasterTarget();
-          var1.d(0, 0);
+          var1.drawHalfSize(0, 0);
           sl.c(2765);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "aq.C(" + param0 + ')');

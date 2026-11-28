@@ -1905,7 +1905,7 @@ final class FlightSession {
           boolean decompiledFrameCompleted6 = true;
           this.fadeMusicLayers(24260, 10);
           if (processInput) {
-            while (ek.a((byte) -126)) {
+            while (NameSuggestionsPanel.a((byte) -126)) {
               this.handleKeyEvent((byte) 73);
               if (obfuscationControl) {
                 decompiledFrameCompleted6 = false;
@@ -2689,16 +2689,16 @@ final class FlightSession {
           if (obfuscationGuard != 5000) {
             this.creditAnimationTicks = 84;
           }
-          ek.field_u.setFrom(listenerAircraft.position, true);
-          ek.field_u.subtract(sourceAircraft.position, -30507);
+          NameSuggestionsPanel.field_u.setFrom(listenerAircraft.position, true);
+          NameSuggestionsPanel.field_u.subtract(sourceAircraft.position, -30507);
           double var4_double = 3.141592653589793 * sourceAircraft.heading / 128.0;
           IntrusiveDeque.field_d.set(sourceAircraft.speed * Math.sin(var4_double), sourceAircraft.speed * Math.cos(var4_double), true);
           double var4_doubleLifetime1 = listenerAircraft.heading * 3.141592653589793 / 128.0;
           IntrusiveDeque.field_d.x = IntrusiveDeque.field_d.x - listenerAircraft.speed * Math.sin(var4_doubleLifetime1);
           IntrusiveDeque.field_d.y = IntrusiveDeque.field_d.y - listenerAircraft.speed * Math.cos(var4_doubleLifetime1);
-          double var6 = IntrusiveDeque.field_d.dot(ek.field_u, (byte) -67);
+          double var6 = IntrusiveDeque.field_d.dot(NameSuggestionsPanel.field_u, (byte) -67);
           int var8 = 500;
-          var8 = (int)(var6 * (double)var8 / ek.field_u.lengthSquared(127));
+          var8 = (int)(var6 * (double)var8 / NameSuggestionsPanel.field_u.lengthSquared(127));
           if (var8 < -100) {
             var8 = -100;
           }
@@ -2889,7 +2889,7 @@ final class FlightSession {
             }
           }
           sg.flightSession.startAttractMode((byte) 50);
-          co.returnMenuId = 0;
+          TextLineMetrics.returnMenuId = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException var4 = decompiledCaughtParameter0;
@@ -3446,7 +3446,7 @@ final class FlightSession {
                 -var25 - 500 <= var24 &&
                 (500 + var25 + sh.field_u) >= var23Lifetime1 &&
                 var24 <= var25 + NetworkArchiveRequest.field_w + 500) {
-                co.scorchSprites[var22.spriteIndex].drawScaledPlain(-(var25 >> 1) + var23Lifetime1, var24 - (var25 >> 1), var25, var25);
+                TextLineMetrics.scorchSprites[var22.spriteIndex].drawScaledPlain(-(var25 >> 1) + var23Lifetime1, var24 - (var25 >> 1), var25, var25);
               } else {
                 int incrementValue$0 = var21Lifetime1;
                 var21Lifetime1--;

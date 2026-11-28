@@ -62,7 +62,7 @@ public final class AceOfSkies extends NetworkGameClient {
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            PasswordValidator.setLoadingProgress(-91, 45.0f, qo.a(co.field_j, "", wi.gameSpriteArchive, 13525, lm.field_b));
+                            PasswordValidator.setLoadingProgress(-91, 45.0f, qo.a(TextLineMetrics.field_j, "", wi.gameSpriteArchive, 13525, lm.field_b));
                             return false;
                           }
                         }
@@ -97,7 +97,7 @@ public final class AceOfSkies extends NetworkGameClient {
               }
             }
             if (decompiledFrameRemainder0) {
-              PasswordValidator.setLoadingProgress(-110, 3.0f, qo.a(co.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
+              PasswordValidator.setLoadingProgress(-110, 3.0f, qo.a(TextLineMetrics.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
               return false;
             }
           }
@@ -544,7 +544,7 @@ public final class AceOfSkies extends NetworkGameClient {
           kn.clearStaticReferences(-1);
           lj.a(true);
           vi.clearStaticReferences(false);
-          mi.g(111);
+          InteractiveWidget.g(111);
           to.resetStaticState(0);
           rg.clearStaticReferences(true);
           gm.clearStaticReferences((byte) -76);
@@ -572,7 +572,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ValidatedTextField.clearStaticReferences(true);
           EditableTextField.d((byte) -106);
           dg.k(12);
-          ek.clearStaticReferences(false);
+          NameSuggestionsPanel.clearStaticReferences(false);
           pi.clearStaticReferences(4096);
           kb.clearStaticReferences(obfuscationGuard + 1927864887);
           TextFieldValidator.clearStaticReferences(14695);
@@ -615,7 +615,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ia.a(-6411);
           HardwareOpenGlRenderer.clearStaticReferences(obfuscationGuard ^ 19581);
           OpenGlVertexBuffer.clearStaticReferences(-33);
-          vg.clearStaticReferences(0);
+          RichTextLayout.clearStaticReferences(0);
           DirectByteStorage.clearDeclaredStaticReferences(85);
           ot.clearStaticReferences((byte) -44);
           hg.resetDeclaredStaticState(65793);
@@ -721,13 +721,13 @@ public final class AceOfSkies extends NetworkGameClient {
           te.clearStaticReferences(false);
           ds.clearStaticReferences(-93);
           sc.clearStaticReferences(126);
-          co.a(-13392);
+          TextLineMetrics.a(-13392);
           AccountNameAvailabilityValidator.clearStaticReferences((byte) -11);
           PasswordValidator.clearStaticReferences(true);
           ConfirmedEmailAvailabilityValidator.clearStaticReferences((byte) -22);
           AgeValidator.c((byte) 101);
           MatchingFieldValidator.e(obfuscationGuard ^ 27864);
-          jo.a((byte) -125);
+          TextHotspotBounds.a((byte) -125);
           pt.resetStaticState(0);
           DebouncedFieldValidator.b((byte) -90);
           ah.clearStaticReferences((byte) -27);

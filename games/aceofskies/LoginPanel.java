@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ab implements TextFieldListener, dn {
+final class LoginPanel extends ab implements TextFieldListener, WidgetActivationListener {
     static pt field_t;
     private EditableTextField field_x;
     private boolean field_B;
-    private mi field_D;
+    private InteractiveWidget field_D;
     static int field_u;
-    private mi field_z;
+    private InteractiveWidget field_z;
     private boolean field_C;
     private EditableTextField field_v;
-    private mi field_w;
+    private InteractiveWidget field_w;
     private String field_y;
     private boolean field_E;
     static int field_A;
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (this.field_y != null) {
           qo.field_b.drawParagraph(this.field_y, 20 + param3 + this.field_p, 15 + param2 + this.field_h, this.field_q - 40, this.field_n, 16777215, -1, 1, 0, qo.field_b.maxAscent);
         }
@@ -25,7 +25,7 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
         if (param0 <= 64) {
           return;
         }
-        super.a((byte) 77, param1, param2, param3);
+        super.drawWidget((byte) 77, param1, param2, param3);
     }
 
     final static float a(float param0, int param1) {
@@ -35,10 +35,10 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
         return param0 * (param0 * param0) * (param0 * (-15.0f + param0 * 6.0f) + 10.0f);
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_16_2 = null;
         try {
-          if (super.a(-20, param1, param2, param3)) {
+          if (super.handleKey(-20, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -237,13 +237,13 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
         String stackIn_11_2 = null;
         try {
           if (param0 == this.field_v) {
-            this.field_x.a((ea) (this), (byte) -42);
+            this.field_x.takeFocus((UiWidget) (this), (byte) -42);
           }
           if (this.field_x == param0) {
             this.submitLogin((byte) -85);
           }
           if (param1 != -40) {
-            this.field_D = (mi) null;
+            this.field_D = (InteractiveWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -278,7 +278,7 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         String stackIn_17_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -327,7 +327,7 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
     }
 
     LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (ir) null);
+        super(0, 0, 310, 190, (WidgetRenderer) null);
         String stackIn_19_3 = null;
         String stackIn_60_2 = null;
         String stackIn_63_2 = null;
@@ -343,38 +343,38 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
             this.field_E)) {
             throw new IllegalStateException();
           }
-          this.field_v = (EditableTextField) ((Object) new ValidatedTextField(param0, (no) (this), 100));
-          this.field_x = (EditableTextField) ((Object) new ValidatedTextField("", (no) (this), 20));
+          this.field_v = (EditableTextField) ((Object) new ValidatedTextField(param0, (WidgetEventListener) (this), 100));
+          this.field_x = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (!this.field_C) {
-            this.field_D = new mi(ms.field_a, (no) null);
-            mi stackIn_18_1 = null;
-            mi stackIn_18_2 = null;
+            this.field_D = new InteractiveWidget(ms.field_a, (WidgetEventListener) null);
+            InteractiveWidget stackIn_18_1 = null;
+            InteractiveWidget stackIn_18_2 = null;
             if (!this.field_E) {
               stackIn_19_3 = Bullet.field_j;
             } else {
-              mi stackIn_19_1 = null;
-              mi stackIn_19_2 = null;
+              InteractiveWidget stackIn_19_1 = null;
+              InteractiveWidget stackIn_19_2 = null;
               stackIn_19_3 = nu.field_a;
             }
-            this.field_z = new mi(stackIn_19_3, (no) null);
+            this.field_z = new InteractiveWidget(stackIn_19_3, (WidgetEventListener) null);
             if (this.field_B) {
-              this.field_w = new mi(SteeringMode.field_b, (no) (this));
+              this.field_w = new InteractiveWidget(SteeringMode.field_b, (WidgetEventListener) (this));
             }
           } else {
-            this.field_D = new mi(hg.field_z, (no) null);
-            this.field_z = new mi(SoftCacheReference.field_s, (no) null);
+            this.field_D = new InteractiveWidget(hg.field_z, (WidgetEventListener) null);
+            this.field_z = new InteractiveWidget(SoftCacheReference.field_s, (WidgetEventListener) null);
             this.field_v.field_u = false;
           }
-          this.field_v.field_e = (ir) ((Object) new sl(10000536));
-          this.field_x.field_e = (ir) ((Object) new ul(10000536));
+          this.field_v.field_e = (WidgetRenderer) ((Object) new sl(10000536));
+          this.field_x.field_e = (WidgetRenderer) ((Object) new ul(10000536));
           qb var6 = new qb();
-          this.field_D.field_e = (ir) ((Object) var6);
+          this.field_D.field_e = (WidgetRenderer) ((Object) var6);
           if (null != this.field_z) {
-            this.field_z.field_e = (ir) ((Object) var6);
+            this.field_z.field_e = (WidgetRenderer) ((Object) var6);
           }
           this.field_v.field_k = ae.field_g;
           if (null != this.field_w) {
-            this.field_w.field_e = (ir) ((Object) var6);
+            this.field_w.field_e = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_w != null) {
             this.field_w.field_k = cl.field_db;
@@ -383,9 +383,9 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
             this.field_z.field_k = WeightedObjectCache.field_d;
           } else if (this.field_E) {
             this.field_z.field_k = td.field_c;
-            this.field_z.field_e = (ir) ((Object) new wg());
+            this.field_z.field_e = (WidgetRenderer) ((Object) new wg());
           } else {
-            this.field_z.field_e = (ir) ((Object) new wg());
+            this.field_z.field_e = (WidgetRenderer) ((Object) new wg());
           }
           this.field_h = 15;
           BitmapFont var7 = qo.field_b;
@@ -402,40 +402,40 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
           bc dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
           bc var12 = dupTemp$0;
           this.a(dupTemp$0, 1);
-          this.field_h = this.field_h + (((ea) ((Object) var12)).field_n + 5);
+          this.field_h = this.field_h + (((UiWidget) ((Object) var12)).field_n + 5);
           bc dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, OpenGlShaderObject.field_b);
           bc var13 = dupTemp$1;
           this.a(dupTemp$1, 1);
-          this.field_D.field_o = (no) (this);
-          this.field_h = this.field_h + (5 + ((ea) ((Object) var13)).field_n);
+          this.field_D.field_o = (WidgetEventListener) (this);
+          this.field_h = this.field_h + (5 + ((UiWidget) ((Object) var13)).field_n);
           if (null != this.field_w) {
-            this.field_w.field_o = (no) (this);
+            this.field_w.field_o = (WidgetEventListener) (this);
           }
           if (null != this.field_z) {
-            this.field_z.field_o = (no) (this);
+            this.field_z.field_o = (WidgetEventListener) (this);
           }
           if (this.field_w != null) {
-            this.field_D.a(30, 85, this.field_h, -95 + this.field_q, (byte) 126);
+            this.field_D.setBounds(30, 85, this.field_h, -95 + this.field_q, (byte) 126);
             this.field_h = this.field_h + 60;
           } else {
-            this.field_D.a(30, 8, this.field_h, -6 + (this.field_q - 10), (byte) 126);
+            this.field_D.setBounds(30, 8, this.field_h, -6 + (this.field_q - 10), (byte) 126);
             this.field_h = this.field_h + 35;
           }
           if (null != this.field_w) {
-            this.field_w.a(30, 8, this.field_h, this.field_q - 6 - 10, (byte) 126);
+            this.field_w.setBounds(30, 8, this.field_h, this.field_q - 6 - 10, (byte) 126);
             this.field_h = this.field_h + 35;
           }
           if (this.field_z != null) {
             if (!this.field_C &&
               !this.field_E) {
-              this.field_z.a(20, 8, this.field_h, 40, (byte) 126);
+              this.field_z.setBounds(20, 8, this.field_h, 40, (byte) 126);
               this.field_h = this.field_h + 25;
             } else {
-              this.field_z.a(30, 8, this.field_h, this.field_q - 6 - 10, (byte) 127);
+              this.field_z.setBounds(30, 8, this.field_h, this.field_q - 6 - 10, (byte) 127);
               this.field_h = this.field_h + 35;
             }
           }
-          this.a(this.field_h + 3, 0, 0, this.field_q, (byte) 126);
+          this.setBounds(this.field_h + 3, 0, 0, this.field_q, (byte) 126);
           this.a(this.field_D, 1);
           if (this.field_w != null) {
             this.a(this.field_w, 1);

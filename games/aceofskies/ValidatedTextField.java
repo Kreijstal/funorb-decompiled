@@ -34,9 +34,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a((byte) 46, param1, param2, param3);
+          super.updatePointer((byte) 46, param1, param2, param3);
           if (param0 <= 13) {
             this.getFieldValidator(113);
           }
@@ -100,11 +100,11 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    ValidatedTextField(String param0, no param1, int param2) {
+    ValidatedTextField(String param0, WidgetEventListener param1, int param2) {
         super(param0, param1, param2);
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 >= -41) {
           return (String) null;
         }

@@ -89,7 +89,7 @@ final class qa {
             int var7Lifetime1 = IntrusiveDeque.a(stackIn_42_0, stackIn_42_1, stackIn_43_2);
             int var8Lifetime1 = -(var7Lifetime1 >> 1) + ri.field_a;
             if (var4 >= 0) {
-              var1_int = var1_int + pp.field_a;
+              var1_int = var1_int + TextLayout.field_a;
               if (pr.field_b.selectedIndex != var4) {
                 stackIn_47_0 = ej.field_a;
               } else {
@@ -103,7 +103,7 @@ final class qa {
             }
             if (var4 >= 0) {
               FlightSession.field_e.drawText(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
-              var1_int = var1_int + (pp.field_a + as.field_c + lp.field_h);
+              var1_int = var1_int + (TextLayout.field_a + as.field_c + lp.field_h);
             } else {
               nh.field_c.drawText(var6, var8Lifetime1, FrameTimer.field_b + var1_int, var5, -1);
               var1_int = var1_int + LoginPanel.field_u;
@@ -145,9 +145,9 @@ final class qa {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           sl.c(2765);
           if (it.field_c < 150) {
-            AccountRegistrationPanel.field_v.d(var3, var4);
+            AccountRegistrationPanel.field_v.drawHalfSize(var3, var4);
           } else {
-            HighscoreNameEntry.field_d.a(var3 + 15, var4 + 10, var5);
+            HighscoreNameEntry.field_d.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
           if (param1 != -4) {
             qa.b(109);
@@ -161,18 +161,18 @@ final class qa {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7 >> 8);
+                OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7 >> 8);
               }
               return;
             }
             if (20 > var6) {
               var7Lifetime10 = var6 * 256 / 20;
-              oo.field_W.d(var3, var4, var7Lifetime10);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime10);
             } else if (var6 < 30) {
-              oo.field_W.d(var3, var4, 256);
+              oo.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime10 = (12800 - var6 * 256) / 20;
-              oo.field_W.d(var3, var4, var7Lifetime10);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime10);
             }
           }
           int var6Lifetime5 = -140 + it.field_c;
@@ -181,13 +181,13 @@ final class qa {
             if (var6Lifetime5 < 20) {
               var7Lifetime9 = 256 * var6Lifetime5 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime9 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime9 >> 8);
           }
           return;
         }
         sl.c(2765);
         if (it.field_c >= 150) {
-          HighscoreNameEntry.field_d.a(var3 + 15, var4 + 10, var5);
+          HighscoreNameEntry.field_d.drawWithOpacity(var3 + 15, var4 + 10, var5);
           if (param1 != -4) {
             qa.b(109);
           }
@@ -196,12 +196,12 @@ final class qa {
             var6Lifetime1 < 50) {
             if (20 > var6Lifetime1) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              oo.field_W.d(var3, var4, var7Lifetime1);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime1);
             } else if (var6Lifetime1 < 30) {
-              oo.field_W.d(var3, var4, 256);
+              oo.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-              oo.field_W.d(var3, var4, var7Lifetime1);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
           int var6Lifetime1Lifetime1 = -140 + it.field_c;
@@ -210,11 +210,11 @@ final class qa {
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime1Lifetime1 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime1Lifetime1 >> 8);
           }
           return;
         }
-        AccountRegistrationPanel.field_v.d(var3, var4);
+        AccountRegistrationPanel.field_v.drawHalfSize(var3, var4);
         if (param1 == -4) {
           int var6Lifetime2 = it.field_c - 125;
           if (0 < var6Lifetime2) {
@@ -225,18 +225,18 @@ final class qa {
                 if (var6Lifetime2 < 20) {
                   var7Lifetime2 = 256 * var6Lifetime2 / 20;
                 }
-                OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
+                OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime2 >> 8);
               }
               return;
             }
             if (20 > var6Lifetime2) {
               var7Lifetime2Lifetime2 = var6Lifetime2 * 256 / 20;
-              oo.field_W.d(var3, var4, var7Lifetime2Lifetime2);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
             } else if (var6Lifetime2 < 30) {
-              oo.field_W.d(var3, var4, 256);
+              oo.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime2Lifetime2 = (12800 - var6Lifetime2 * 256) / 20;
-              oo.field_W.d(var3, var4, var7Lifetime2Lifetime2);
+              oo.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
             }
           }
           int var6Lifetime2Lifetime1 = -140 + it.field_c;
@@ -245,7 +245,7 @@ final class qa {
             if (var6Lifetime2Lifetime1 < 20) {
               var7Lifetime2Lifetime1 = 256 * var6Lifetime2Lifetime1 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime2Lifetime1 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime2Lifetime1 >> 8);
           }
           return;
         }
@@ -258,7 +258,7 @@ final class qa {
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = 256 * var6Lifetime3 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
@@ -269,44 +269,44 @@ final class qa {
             if (var6Lifetime3 < 20) {
               var7Lifetime4 = 256 * var6Lifetime3 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime4 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime4 >> 8);
           }
           return;
         }
         if (20 > var6Lifetime3) {
           int var7Lifetime5 = var6Lifetime3 * 256 / 20;
-          oo.field_W.d(var3, var4, var7Lifetime5);
+          oo.field_W.drawAdditive(var3, var4, var7Lifetime5);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
             int var7Lifetime5Lifetime1 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime5Lifetime1 = 256 * var6Lifetime3 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime5Lifetime1 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime5Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime3 < 30) {
-          oo.field_W.d(var3, var4, 256);
+          oo.field_W.drawAdditive(var3, var4, 256);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
             int var7Lifetime6 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime6 = 256 * var6Lifetime3 / 20;
             }
-            OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime6 >> 8);
+            OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime6 >> 8);
           }
           return;
         }
         int var7Lifetime7 = (12800 - var6Lifetime3 * 256) / 20;
-        oo.field_W.d(var3, var4, var7Lifetime7);
+        oo.field_W.drawAdditive(var3, var4, var7Lifetime7);
         int var6Lifetime4 = -140 + it.field_c;
         if (var6Lifetime4 > 0) {
           int var7Lifetime8 = 256;
           if (var6Lifetime4 < 20) {
             var7Lifetime8 = 256 * var6Lifetime4 / 20;
           }
-          OpenGlPbuffer.field_o.a(15 + var3, 10 + var4, var5 * var7Lifetime8 >> 8);
+          OpenGlPbuffer.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime8 >> 8);
         }
         return;
     }

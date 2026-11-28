@@ -38,7 +38,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.field_c) {
-            int var4_int = VorbisSample.readBits(ek.bitLength((byte) 121, this.field_c - var2));
+            int var4_int = VorbisSample.readBits(NameSuggestionsPanel.bitLength((byte) 121, this.field_c - var2));
             for (int var5 = 0; var5 < var4_int; var5++) {
               int incrementValue$0 = var2;
               var2++;

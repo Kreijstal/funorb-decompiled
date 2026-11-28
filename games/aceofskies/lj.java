@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj implements ir {
+final class lj implements WidgetRenderer {
     private int field_k;
     private int field_g;
     private BitmapFont field_l;
@@ -41,15 +41,15 @@ final class lj implements ir {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        ea stackIn_5_0 = null;
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_5_0 = null;
         String stackIn_17_2 = null;
         try {
           if (param1 != -7592) {
             return;
           }
           if (param3 instanceof sq) {
-            stackIn_5_0 = (ea) (param3);
+            stackIn_5_0 = (UiWidget) (param3);
           } else {
             stackIn_5_0 = null;
           }

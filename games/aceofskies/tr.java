@@ -71,10 +71,10 @@ final class tr {
         qk.a((byte) -92);
         HighscoreNameEntry.field_d = new Sprite(var3, 3 * var4 / 4);
         HighscoreNameEntry.field_d.makeRasterTarget();
-        var2.c(0, 0);
+        var2.drawOpaque(0, 0);
         OpenGlPbuffer.field_o = new Sprite(var3, var4 - HighscoreNameEntry.field_d.height);
         OpenGlPbuffer.field_o.makeRasterTarget();
-        var2.c(0, -HighscoreNameEntry.field_d.height);
+        var2.drawOpaque(0, -HighscoreNameEntry.field_d.height);
         OpenGlPbuffer.field_o.trimY = HighscoreNameEntry.field_d.height;
         if (param1 > -64) {
           return;

@@ -38,9 +38,9 @@ final class PcmOutputWorker implements Runnable {
               if (var3 == 1) {
                 Bzip2Decompressor.decompress(var12, var5_int, param0, var4, 9);
               } else {
-                Object var7 = vg.field_h;
+                Object var7 = RichTextLayout.field_h;
                 synchronized (var7) {
-                  vg.field_h.decompress(var12, 10, var9);
+                  RichTextLayout.field_h.decompress(var12, 10, var9);
                 }
               }
               byte[] stackIn_22_0 = var6;

@@ -68,7 +68,7 @@ final class jk {
 
     jk() {
         du discarded$0 = new du(786336);
-        ek.bitLength((byte) 108, 1600);
+        NameSuggestionsPanel.bitLength((byte) 108, 1600);
     }
 
     static {

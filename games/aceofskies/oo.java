@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oo extends dg implements dn {
+class oo extends dg implements WidgetActivationListener {
     static Sprite field_W;
     private ss field_bb;
     private boolean field_cb;
@@ -16,19 +16,19 @@ class oo extends dg implements dn {
     final void l(int param0) {
         if (param0 >= 82) {
           this.field_bb.a(4210752, 2121792, (byte) 61);
-          jn var2 = new jn(this, this.field_U, ek.field_x);
+          jn var2 = new jn(this, this.field_U, NameSuggestionsPanel.field_x);
           var2.a(15, (byte) -57, ArchiveRequest.field_o);
           this.d(var2, -30244);
           return;
         }
         this.field_bb = (ss) null;
         this.field_bb.a(4210752, 2121792, (byte) 61);
-        jn var2Lifetime1 = new jn(this, this.field_U, ek.field_x);
+        jn var2Lifetime1 = new jn(this, this.field_U, NameSuggestionsPanel.field_x);
         var2Lifetime1.a(15, (byte) -57, ArchiveRequest.field_o);
         this.d(var2Lifetime1, -30244);
     }
 
-    public void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         String stackIn_7_2 = null;
         try {
           int var6_int = 80 % ((param4 + 27) / 61);
@@ -95,7 +95,7 @@ class oo extends dg implements dn {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_9_2 = null;
         try {
           if (13 == param1) {
@@ -103,7 +103,7 @@ class oo extends dg implements dn {
             return true;
           }
           int var5_int = 48 % ((param0 + 53) / 33);
-          boolean stackIn_5_0 = super.a(23, param1, param2, param3);
+          boolean stackIn_5_0 = super.handleKey(23, param1, param2, param3);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -148,7 +148,7 @@ class oo extends dg implements dn {
             }
             ((jn) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
           } else {
-            var7.a((no) (this), 17547, hg.field_z);
+            var7.a((WidgetEventListener) (this), 17547, hg.field_z);
           }
           if (param1 == 3) {
             var7.a(7, (byte) 75, lu.field_a);
@@ -157,7 +157,7 @@ class oo extends dg implements dn {
           } else if (param1 == 6) {
             var7.a(9, (byte) -124, ao.field_d);
           } else if (param1 == 9) {
-            var7.a((no) (this), 17547, AgeValidator.field_g);
+            var7.a((WidgetEventListener) (this), 17547, AgeValidator.field_g);
           }
           this.d(var7, -30244);
           return;

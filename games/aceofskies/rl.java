@@ -191,7 +191,7 @@ final class rl {
         field_j = new rl(4, 2, BufferElementType.field_i);
         field_g = new rl(5, 3, BufferElementType.field_i);
         field_n = new rl(6, 4, BufferElementType.field_i);
-        field_e = ek.bitLength((byte) 108, 16);
+        field_e = NameSuggestionsPanel.bitLength((byte) 108, 16);
         field_p = false;
         field_i = "Unfortunately you are not eligible to create an account.";
         field_a = new int[4];

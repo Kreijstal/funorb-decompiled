@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class to extends ea implements vm {
-    ea field_s;
+abstract class to extends UiWidget implements vm {
+    UiWidget field_s;
     static ScoreSubmission lastScoreSubmission;
     static int field_t;
 
@@ -15,12 +15,12 @@ abstract class to extends ea implements vm {
         return (param1 & 16) != 0 ? true : false;
     }
 
-    to(int param0, int param1, int param2, int param3, ir param4, no param5) {
+    to(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    ea i(int param0) {
-        ea var2 = this.field_s;
+    UiWidget i(int param0) {
+        UiWidget var2 = this.field_s;
         if (param0 != 0) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           to.a(6, (d) null, (java.awt.Canvas) null, 19, -80);
@@ -28,19 +28,19 @@ abstract class to extends ea implements vm {
         if (var2 == null) {
           return null;
         }
-        if (var2.e(28660)) {
+        if (var2.isFocused(28660)) {
           return var2;
         }
         return null;
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param1 == 0 &&
           null != this.field_e) {
-          this.field_e.a(true, -7592, param3, (ea) (this), param2);
+          this.field_e.paintWidget(true, -7592, param3, (UiWidget) (this), param2);
         }
         if (this.field_s != null) {
-          this.field_s.a((byte) 104, param1, param2 + this.field_h, this.field_p + param3);
+          this.field_s.drawWidget((byte) 104, param1, param2 + this.field_h, this.field_p + param3);
         }
         if (param0 <= 64) {
           field_t = 58;
@@ -50,16 +50,16 @@ abstract class to extends ea implements vm {
     void a(byte param0) {
         int var2 = 111 / ((-13 - param0) / 50);
         if (this.field_s != null) {
-          this.field_s.a(false);
+          this.field_s.refreshLayout(false);
         }
     }
 
-    final void d(int param0) {
+    final void blur(int param0) {
         if (param0 != 7398) {
           return;
         }
         if (null != this.field_s) {
-          this.field_s.d(7398);
+          this.field_s.blur(7398);
         }
     }
 
@@ -71,14 +71,14 @@ abstract class to extends ea implements vm {
           StringBuilder discarded$11 = param0.append('\n');
           int var5_int = 0;
           if (param2 != -24) {
-            this.a((byte) -47, 125, 23, 0);
+            this.drawWidget((byte) -47, 125, 23, 0);
           }
           while (var5_int <= param3) {
             StringBuilder discarded$13 = param0.append(' ');
             var5_int++;
           }
           if (null != this.field_s) {
-            this.field_s.a(param0, 32462, 1 + param3, param1);
+            this.field_s.appendDebugTree(param0, 32462, 1 + param3, param1);
           } else {
             StringBuilder discarded$12 = param0.append("null");
           }
@@ -103,21 +103,21 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 28660) {
           return false;
         }
         return null != this.i(0) ? true : false;
     }
 
-    void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
+    void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         String stackIn_8_2 = null;
         try {
           if (param5 != 91) {
             this.a((byte) -52);
           }
           if (this.field_s != null) {
-            this.field_s.a(param0 + this.field_p, this.field_h + param1, param2, param3, param4, (byte) 91);
+            this.field_s.pointerReleased(param0 + this.field_p, this.field_h + param1, param2, param3, param4, (byte) 91);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,13 +142,13 @@ abstract class to extends ea implements vm {
         IntKeyLookup.incomingPacket.readUnsignedByte(param0 - 43);
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         boolean stackIn_11_0 = false;
         String stackIn_15_2 = null;
         try {
           if (this.field_s != null &&
-            this.field_s.e(28660) &&
-            this.field_s.a(-93, param1, param2, param3)) {
+            this.field_s.isFocused(28660) &&
+            this.field_s.handleKey(-93, param1, param2, param3)) {
             return true;
           }
           int var5_int = 61 % ((-53 - param0) / 33);
@@ -176,15 +176,15 @@ abstract class to extends ea implements vm {
         }
     }
 
-    void a(byte param0, ea param1, int param2, int param3) {
+    void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         String stackIn_9_2 = null;
         try {
-          super.a((byte) 117, param1, param2, param3);
+          super.updatePointer((byte) 117, param1, param2, param3);
           if (param0 <= 13) {
             return;
           }
           if (this.field_s != null) {
-            this.field_s.a((byte) 50, param1, param2 + this.field_h, this.field_p + param3);
+            this.field_s.updatePointer((byte) 50, param1, param2 + this.field_h, this.field_p + param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,13 +201,13 @@ abstract class to extends ea implements vm {
         }
     }
 
-    private final boolean a(byte param0, ea param1) {
+    private final boolean a(byte param0, UiWidget param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 >= -67) {
             field_t = 88;
           }
-          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
+          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.isFocused(28660)) && (this.field_s.takeFocus(param1, (byte) -42));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,14 +223,14 @@ abstract class to extends ea implements vm {
         }
     }
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 > -41) {
           Hashtable var4 = (Hashtable) null;
-          this.a((StringBuilder) null, -79, 77, (Hashtable) null);
+          this.appendDebugTree((StringBuilder) null, -79, 77, (Hashtable) null);
         }
-        String var2 = super.c((byte) -65);
+        String var2 = super.getTooltipText((byte) -65);
         if (null != this.field_s) {
-          String var3 = this.field_s.c((byte) -117);
+          String var3 = this.field_s.getTooltipText((byte) -117);
           if (var3 != null) {
             return var3;
           }
@@ -238,13 +238,13 @@ abstract class to extends ea implements vm {
         return var2;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
+    boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         String stackIn_10_2 = null;
         try {
           if (param0 != 34) {
-            this.a(-36, 37, 20, -53, (byte) -115);
+            this.setBounds(-36, 37, 20, -53, (byte) -115);
           }
-          boolean stackIn_6_0 = (this.field_s != null) && (this.field_s.a(34, this.field_p + param1, param2, param3, this.field_h + param4, param5, param6));
+          boolean stackIn_6_0 = (this.field_s != null) && (this.field_s.pointerPressed(34, this.field_p + param1, param2, param3, this.field_h + param4, param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,20 +260,20 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final int f(int param0) {
+    final int getMaximumRenderLayer(int param0) {
         if (param0 != 0) {
           return -36;
         }
-        return this.field_s != null ? this.field_s.f(0) : 0;
+        return this.field_s != null ? this.field_s.getMaximumRenderLayer(0) : 0;
     }
 
-    private final boolean a(int param0, ea param1) {
+    private final boolean a(int param0, UiWidget param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 >= -37) {
             lastScoreSubmission = (ScoreSubmission) null;
           }
-          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
+          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.isFocused(28660)) && (this.field_s.takeFocus(param1, (byte) -42));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,8 +325,8 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
-        super.a(param0, param1, param2, param3, (byte) 126);
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        super.setBounds(param0, param1, param2, param3, (byte) 126);
         this.a((byte) -94);
         if (param4 < 122) {
           field_t = 94;
@@ -346,14 +346,14 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final boolean a(ea param0, byte param1) {
+    final boolean takeFocus(UiWidget param0, byte param1) {
         String stackIn_10_2 = null;
         try {
           if (param1 != -42) {
-            ea var4 = (ea) null;
-            this.a((byte) -27, (ea) null, 12, -44);
+            UiWidget var4 = (UiWidget) null;
+            this.updatePointer((byte) -27, (UiWidget) null, 12, -44);
           }
-          boolean stackIn_6_0 = (null != this.field_s) && (this.field_s.a(param0, (byte) -42));
+          boolean stackIn_6_0 = (null != this.field_s) && (this.field_s.takeFocus(param0, (byte) -42));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -369,14 +369,14 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, boolean param6) {
+    final boolean handleWheel(int param0, int param1, int param2, int param3, int param4, UiWidget param5, boolean param6) {
         String stackIn_11_2 = null;
         try {
           if (param6) {
-            ea var9 = (ea) null;
-            this.a(-108, -17, '\022', (ea) null);
+            UiWidget var9 = (UiWidget) null;
+            this.handleKey(-108, -17, '\022', (UiWidget) null);
           }
-          boolean stackIn_7_0 = (null != this.field_s) && (this.field_s.e(28660)) && (this.field_s.a(param0, param1, param2, param3, param4, param5, false));
+          boolean stackIn_7_0 = (null != this.field_s) && (this.field_s.isFocused(28660)) && (this.field_s.handleWheel(param0, param1, param2, param3, param4, param5, false));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -392,7 +392,7 @@ abstract class to extends ea implements vm {
         }
     }
 
-    StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+    StringBuilder appendDebugTree(StringBuilder param0, int param1, int param2, Hashtable param3) {
         String stackIn_11_2 = null;
         String stackIn_14_2 = null;
         try {
@@ -400,8 +400,8 @@ abstract class to extends ea implements vm {
             StringBuilder stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, param2, false, param3)) {
-            this.a(param0, 0, param3, param2);
+          if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
+            this.appendDebugProperties(param0, 0, param3, param2);
             this.a(param0, param3, (byte) -24, param2);
           }
           StringBuilder stackIn_7_0 = (StringBuilder) (param0);

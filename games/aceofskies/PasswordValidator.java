@@ -107,7 +107,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           String var5 = var4;
           if (vr.a(var5, param1 ^ 74)) {
-            String stackIn_9_0 = co.field_a;
+            String stackIn_9_0 = TextLineMetrics.field_a;
             return stackIn_9_0;
           }
           if (ul.a(var5, (byte) -115)) {
@@ -135,7 +135,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_30_0;
           }
           if (!SoftwareFramebuffer.containsNameOrReverse(var6, var5, -115)) {
-            String stackIn_35_0 = co.field_a;
+            String stackIn_35_0 = TextLineMetrics.field_a;
             return stackIn_35_0;
           }
           String stackIn_33_0 = mr.field_a;

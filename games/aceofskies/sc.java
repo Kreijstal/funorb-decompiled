@@ -86,7 +86,7 @@ final class sc {
         }
     }
 
-    final void a(ea param0, boolean param1, int param2, vi param3, int param4) {
+    final void a(UiWidget param0, boolean param1, int param2, vi param3, int param4) {
         int stackIn_25_5 = 0;
         int stackIn_28_3 = 0;
         int stackIn_31_8;
@@ -113,7 +113,7 @@ final class sc {
             if (param3.field_f == 2) {
               var7 = var7 + (-this.field_f.fullHeight + param0.field_n);
             }
-            this.field_f.b(var6_int, var7);
+            this.field_f.draw(var6_int, var7);
           }
           String var6 = param3.d(param0, -91);
           if (!param1) {
@@ -171,7 +171,7 @@ final class sc {
         }
     }
 
-    final void a(vi param0, int param1, byte param2, int param3, ea param4, sc param5) {
+    final void a(vi param0, int param1, byte param2, int param3, UiWidget param4, sc param5) {
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
         String stackIn_30_2 = null;
@@ -267,7 +267,7 @@ final class sc {
           return this;
         }
         vi var4 = (vi) null;
-        this.a((ea) null, false, -68, (vi) null, 7);
+        this.a((UiWidget) null, false, -68, (vi) null, 7);
         return this;
     }
 

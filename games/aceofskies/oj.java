@@ -141,7 +141,7 @@ final class oj extends RenderEffect {
         try {
           boolean var1_int = false;
           boolean var2 = false;
-          while (ek.a((byte) -127)) {
+          while (NameSuggestionsPanel.a((byte) -127)) {
             pr.field_b.handleVerticalKey(true);
             if (pr.field_b.isActivated((byte) 115)) {
               var1_int = true;

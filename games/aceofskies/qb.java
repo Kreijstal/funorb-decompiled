@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends qm {
+final class qb extends DefaultTextWidgetRenderer {
     private int field_q;
     private int field_p;
     private Sprite[] field_r;
     static char[] field_o;
     private int field_n;
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         boolean stackIn_8_0 = false;
         int stackIn_16_0 = 0;
         String stackIn_24_2 = null;
@@ -17,13 +17,13 @@ final class qb extends qm {
             field_o = (char[]) null;
           }
           if (!param3.field_g) {
-            stackIn_8_0 = (param3.e(28660));
+            stackIn_8_0 = (param3.isFocused(28660));
           } else {
             stackIn_8_0 = true;
           }
           boolean var6_int = stackIn_8_0;
-          if (param3 instanceof mi) {
-            param0 = param0 & ((mi) (param3)).field_u;
+          if (param3 instanceof InteractiveWidget) {
+            param0 = param0 & ((InteractiveWidget) (param3)).field_u;
           }
           if (!param0) {
             stackIn_16_0 = this.field_n;

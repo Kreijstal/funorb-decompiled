@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sl extends qm {
+class sl extends DefaultTextWidgetRenderer {
     static AircraftDefinition field_p;
     static IndexedSprite[] field_o;
     static String field_q;
@@ -33,12 +33,12 @@ class sl extends qm {
         pu.field_b.addLast(99, var1);
     }
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             nn.a(param3.field_h + param4, (byte) 70, param3.field_p + param2, param3.field_q, param3.field_n);
           }
-          super.a(param0, param1, param2, param3, param4);
+          super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "sl.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

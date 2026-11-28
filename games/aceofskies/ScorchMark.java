@@ -66,7 +66,7 @@ final class ScorchMark {
         this.diameter = diameter;
         this.worldY = worldY;
         this.worldX = worldX;
-        this.spriteIndex = qq.a(20, co.scorchSprites.length);
+        this.spriteIndex = qq.a(20, TextLineMetrics.scorchSprites.length);
         if (obfuscationGuard <= 103) {
           String var6 = (String) null;
           ScorchMark.a(24, (String) null);

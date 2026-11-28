@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vi extends qm {
+final class vi extends DefaultTextWidgetRenderer {
     static String[] field_p;
     private sc field_q;
     static String field_n;
@@ -125,20 +125,20 @@ final class vi extends qm {
         var1.a(-70);
     }
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        ea stackIn_5_0 = null;
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_5_0 = null;
         String stackIn_32_2 = null;
         try {
           if (param1 != -7592) {
             PacketBuffer var10 = (PacketBuffer) null;
             vi.a((byte) -20, (PacketBuffer) null);
           }
-          if (param3 instanceof mi) {
-            stackIn_5_0 = (ea) (param3);
+          if (param3 instanceof InteractiveWidget) {
+            stackIn_5_0 = (UiWidget) (param3);
           } else {
             stackIn_5_0 = null;
           }
-          mi var11 = (mi) (stackIn_5_0);
+          InteractiveWidget var11 = (InteractiveWidget) (stackIn_5_0);
           fp.a((byte) 67, param4 + param3.field_h, param3.field_n + param3.field_h + param4, param3.field_q + (param2 + param3.field_p), param3.field_p + param2);
           if (var11 != null) {
             param0 = param0 & var11.field_u;
@@ -166,7 +166,7 @@ final class vi extends qm {
               }
             }
           }
-          if (param3.e(28660)) {
+          if (param3.isFocused(28660)) {
             sc var14 = this.field_o[5];
             if (var14 != null) {
               var14.a(this, param4, (byte) -107, param2, param3, this.field_q);

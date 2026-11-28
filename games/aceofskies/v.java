@@ -39,12 +39,12 @@ final class v {
             java.net.URL stackIn_16_3 = null;
             java.net.URL stackIn_16_4 = fb.field_c.getCodeBase();
             StringBuilder stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(GameKeyHandler.field_c).append("&u=");
-            if (co.field_g == null) {
+            if (TextLineMetrics.field_g == null) {
               stackIn_17_6 = "" + CipherPacketBuffer.field_o;
             } else {
               java.net.URL stackIn_17_2 = null;
               java.net.URL stackIn_17_3 = null;
-              stackIn_17_6 = co.field_g;
+              stackIn_17_6 = TextLineMetrics.field_g;
             }
             SystemTask var4 = ((SystemTaskService) (Object) stackIn_16_0).requestUrlStream((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(SystemTaskService.field_o).append("&v2=").append(SystemTaskService.field_l).append("&e=").append(var10).toString()));
             while (var4.status == 0) {

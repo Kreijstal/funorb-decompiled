@@ -113,7 +113,7 @@ final class SecondaryKeyHashTable {
               return true;
             }
             if (var4 == null) {
-              var4 = (File) (vg.field_j.get(param2));
+              var4 = (File) (RichTextLayout.field_j.get(param2));
             }
             if (var4 == null) {
               return false;

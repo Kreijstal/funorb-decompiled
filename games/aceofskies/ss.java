@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss extends ea {
+final class ss extends UiWidget {
     private int field_y;
     private Sprite field_A;
     private int field_B;
@@ -16,11 +16,11 @@ final class ss extends ea {
     boolean field_u;
     static boolean field_t;
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 <= 122) {
           return;
         }
-        super.a(param0, param1, param2, param3, (byte) 124);
+        super.setBounds(param0, param1, param2, param3, (byte) 124);
         this.a(-104);
     }
 
@@ -62,7 +62,7 @@ final class ss extends ea {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
@@ -110,7 +110,7 @@ final class ss extends ea {
         return var3;
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         String stackIn_11_2 = null;
         try {
           if (this.field_u) {
@@ -146,26 +146,26 @@ final class ss extends ea {
           fp.a((byte) 44, param2, param2 + this.field_n, -this.field_D.width + var5_int, param0 + this.field_D.width);
           int var6 = -13 / ((-39 - param1) / 58);
           for (int var7 = -this.field_r + param0; var5_int > var7; var7 = var7 + param3.width) {
-            param3.b(var7, param2);
+            param3.draw(var7, param2);
           }
           sl.c(2765);
           if (this.field_D.width + param0 >= SoftwareRasterizer.clipLeft) {
             ProxySocketConnector.a(this.field_A, -14492);
-            param3.b(-this.field_r, 0);
-            param3.b(2 * this.field_y - this.field_r, 0);
-            this.field_C.a(0, 0);
+            param3.draw(-this.field_r, 0);
+            param3.draw(2 * this.field_y - this.field_r, 0);
+            this.field_C.drawMultiply(0, 0);
             sl.c(2765);
-            this.field_A.b(param0, param2);
+            this.field_A.draw(param0, param2);
           }
           if (SoftwareRasterizer.clipRight >= var5_int - this.field_D.width) {
             ProxySocketConnector.a(this.field_A, -14492);
             for (var8 = this.field_r + this.field_q - this.field_D.width; 2 * this.field_y < var8; var8 = var8 - 2 * this.field_y) {
             }
-            param3.b(-var8, 0);
-            param3.b(this.field_y * 2 - var8, 0);
-            this.field_D.a(0, 0);
+            param3.draw(-var8, 0);
+            param3.draw(this.field_y * 2 - var8, 0);
+            this.field_D.drawMultiply(0, 0);
             sl.c(2765);
-            this.field_A.b(var5_int - this.field_D.width, param2);
+            this.field_A.draw(var5_int - this.field_D.width, param2);
             return;
           }
           return;
@@ -189,7 +189,7 @@ final class ss extends ea {
         this.field_B = param6;
         this.field_v = param5;
         this.field_x = param7;
-        this.a(param3, param0, param1, param2, (byte) 127);
+        this.setBounds(param3, param0, param1, param2, (byte) 127);
     }
 
     static {

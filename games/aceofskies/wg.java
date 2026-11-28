@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg implements ir {
+final class wg implements WidgetRenderer {
     private int field_e;
     static String field_c;
     private int field_d;
@@ -15,7 +15,7 @@ final class wg implements ir {
         field_c = null;
     }
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_7_0 = 0;
         String stackIn_23_2 = null;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -24,10 +24,10 @@ final class wg implements ir {
             wg.clearStaticReferences(false);
           }
           stackIn_7_0 = (!param3.field_g &&
-            !param3.e(28660)) ? (2188450) : (3249872);
+            !param3.isFocused(28660)) ? (2188450) : (3249872);
           int var6_int = stackIn_7_0;
           this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, this.field_e, this.field_d, this.field_a.maxAscent + this.field_a.maxDescent);
-          if (!param3.e(param1 + 36252)) {
+          if (!param3.isFocused(param1 + 36252)) {
             return;
           }
           int var7 = this.field_a.measureTextWidth(param3.field_f);
@@ -44,7 +44,7 @@ final class wg implements ir {
           } else if (1 == this.field_d) {
             var10 = var10 + (-var8 + param3.field_n >> 1);
           }
-          co.a(2 + var10, var8, 4 + var7, -2 + var9, 119);
+          TextLineMetrics.a(2 + var10, var8, 4 + var7, -2 + var9, 119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

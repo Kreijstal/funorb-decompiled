@@ -223,7 +223,7 @@ final class MenuScreen {
           var11 = OpenGlRenderer.field_zc;
         }
         if (2 == AchievementSubmission.highscoreView) {
-          var11 = jo.field_l;
+          var11 = TextHotspotBounds.field_l;
           String var12 = var11;
           String var12Lifetime3 = var11;
         }
@@ -330,11 +330,11 @@ final class MenuScreen {
     private final boolean isItemEnabled(int itemIndex, byte obfuscationGuard) {
         if (this.screenId == 3) {
           if (0 == itemIndex &&
-            0 == vq.instructionPage) {
+            0 == RichTextWidget.instructionPage) {
             return false;
           }
           if (itemIndex == 2 &&
-            vq.instructionPage == -1 + OpenGlShaderProgram.field_a.length) {
+            RichTextWidget.instructionPage == -1 + OpenGlShaderProgram.field_a.length) {
             return false;
           }
         }
@@ -431,7 +431,7 @@ final class MenuScreen {
                 if (this.input.isActivated((byte) 84)) {
                   sg.flightSession.startGame(101, false);
                   Bullet.requestMenu((byte) -96, -1, pointerSelection);
-                  co.returnMenuId = this.screenId;
+                  TextLineMetrics.returnMenuId = this.screenId;
                 }
               }
               break;
@@ -440,7 +440,7 @@ final class MenuScreen {
               if (this.input.isActivated((byte) 114)) {
                 Bullet.requestMenu((byte) 33, -1, pointerSelection);
                 sg.flightSession.resumeGame(-112);
-                co.returnMenuId = 0;
+                TextLineMetrics.returnMenuId = 0;
               }
               break;
             case 16:
@@ -454,19 +454,19 @@ final class MenuScreen {
             case 14:
               if (this.input.isActivated((byte) 127)) {
                 Bullet.requestMenu((byte) 98, 4, pointerSelection);
-                co.returnMenuId = this.screenId;
+                TextLineMetrics.returnMenuId = this.screenId;
               }
               break;
             case 3:
               if (this.input.isActivated((byte) 82)) {
-                vq.instructionPage = 0;
+                RichTextWidget.instructionPage = 0;
                 Bullet.requestMenu((byte) -94, 3, pointerSelection);
-                co.returnMenuId = this.screenId;
+                TextLineMetrics.returnMenuId = this.screenId;
               }
               break;
             case 6:
               if (this.input.isActivated((byte) 104)) {
-                Bullet.requestMenu((byte) -80, co.returnMenuId, pointerSelection);
+                Bullet.requestMenu((byte) -80, TextLineMetrics.returnMenuId, pointerSelection);
               }
               break;
             case 12:
@@ -600,7 +600,7 @@ final class MenuScreen {
             case 17:
               if (this.input.isActivated((byte) 112) &&
                 this.isItemEnabled(itemIndex, (byte) -17)) {
-                vq.instructionPage = vq.instructionPage + 1;
+                RichTextWidget.instructionPage = RichTextWidget.instructionPage + 1;
                 if (this.isItemEnabled(itemIndex, (byte) -17)) {
                   break;
                 }
@@ -612,7 +612,7 @@ final class MenuScreen {
                 if (!this.isItemEnabled(itemIndex, (byte) -17)) {
                   break;
                 }
-                vq.instructionPage = vq.instructionPage - 1;
+                RichTextWidget.instructionPage = RichTextWidget.instructionPage - 1;
                 if (!this.isItemEnabled(itemIndex, (byte) -17)) {
                   this.input.selectedIndex = 2;
                 }
@@ -636,14 +636,14 @@ final class MenuScreen {
             case 22:
               if (this.input.isActivated((byte) 81)) {
                 Bullet.requestMenu((byte) 122, 7, pointerSelection);
-                co.returnMenuId = 0;
+                TextLineMetrics.returnMenuId = 0;
               }
               break;
             case 19:
               if (this.input.isActivated((byte) 104)) {
                 sg.flightSession.startGame(61, true);
                 Bullet.requestMenu((byte) 78, -1, pointerSelection);
-                co.returnMenuId = this.screenId;
+                TextLineMetrics.returnMenuId = this.screenId;
               }
               break;
           }
@@ -722,7 +722,7 @@ final class MenuScreen {
         if (this.soundPreviewCooldown > 0) {
           this.soundPreviewCooldown = this.soundPreviewCooldown - 1;
         }
-        while (ek.a((byte) -126)) {
+        while (NameSuggestionsPanel.a((byte) -126)) {
           if (bk.lastKeyCode == 50 &&
             lp.heldKeys[81] &&
             ln.field_d >= 2) {
@@ -739,13 +739,13 @@ final class MenuScreen {
           if (1 == this.screenId) {
             Bullet.requestMenu((byte) -126, -1, false);
             sg.flightSession.resumeGame(obfuscationGuard ^ 24995);
-            co.returnMenuId = 0;
+            TextLineMetrics.returnMenuId = 0;
             continue;
           }
           if (this.screenId == 6) {
             continue;
           }
-          Bullet.requestMenu((byte) 37, co.returnMenuId, false);
+          Bullet.requestMenu((byte) 37, TextLineMetrics.returnMenuId, false);
         }
         if (obfuscationGuard != -25039) {
           this.pendingClickX = 31;
@@ -1191,24 +1191,24 @@ final class MenuScreen {
         int[] var12 = new int[50];
         for (int var13 = 0; var13 < 50; var13++) {
           var12[var13] = -24 + var7;
-          if (vq.instructionPage == 5) {
+          if (RichTextWidget.instructionPage == 5) {
             var12[var13] = var12[var13] - 64;
           }
         }
-        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(OpenGlShaderProgram.field_a[vq.instructionPage], 120, new String[]{"          "}));
+        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(OpenGlShaderProgram.field_a[RichTextWidget.instructionPage], 120, new String[]{"          "}));
         for (int var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
             RendererBitmapFont stackIn_19_0 = PacketBuffer.gameFont;
             int stackIn_19_1 = var4;
             int stackIn_19_2 = 0;
             RenderSprite[] stackIn_19_3 = SoftwareDepthBuffer.keySprites;
-            stackIn_20_4 = (vq.instructionPage != 5) ? (0) : (64);
+            stackIn_20_4 = (RichTextWidget.instructionPage != 5) ? (0) : (64);
             ((RendererBitmapFont) (Object) stackIn_19_0).drawTextWithImages(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_20_4 + (12 + var5), 0, var10[var14], var6 + var8 / 2 + var9 * (var14 - var13Lifetime1 / 2), var18);
           } else {
             se.bigGameFont.drawTextWithImages(var4, 0, SoftwareDepthBuffer.keySprites, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);
           }
         }
-        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(OpenGlShaderProgram.field_a.length, 1 + vq.instructionPage, (byte) 66), var7 + var5 - 10, SoftwareDepthBuffer.keySprites);
+        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(OpenGlShaderProgram.field_a.length, 1 + RichTextWidget.instructionPage, (byte) 66), var7 + var5 - 10, SoftwareDepthBuffer.keySprites);
     }
 
     final static void a(byte param0, int param1, boolean param2) {
@@ -1441,7 +1441,7 @@ final class MenuScreen {
             }
           }
           SoftwareDepthBuffer.field_c = ri.field_a - (var3_intLifetime1 >> 1);
-          OpenGlIndexBuffer.field_q = (pp.field_a + as.field_c << 1) * pr.field_b.itemCount;
+          OpenGlIndexBuffer.field_q = (TextLayout.field_a + as.field_c << 1) * pr.field_b.itemCount;
           je.field_a = -(var3_intLifetime1 >> 1) + (ri.field_a + var3_intLifetime1);
           for (int var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
             int stackIn_115_0 = OpenGlIndexBuffer.field_q;
@@ -1461,12 +1461,12 @@ final class MenuScreen {
             if (var6Lifetime1 >= 0) {
               int var7Lifetime2 = IntrusiveDeque.a(true, ne.field_g[var4Lifetime3], true);
               int var8Lifetime1 = -(var7Lifetime2 >> 1) + ri.field_a;
-              var5Lifetime3 = var5Lifetime3 + pp.field_a;
+              var5Lifetime3 = var5Lifetime3 + TextLayout.field_a;
               nb.field_b[var4Lifetime3] = new int[4];
               nb.field_b[var4Lifetime3][0] = var8Lifetime1 - ud.field_g;
               nb.field_b[var4Lifetime3][1] = var5Lifetime3;
               nb.field_b[var4Lifetime3][2] = var7Lifetime2 + (ud.field_g << 1);
-              var5Lifetime3 = var5Lifetime3 + (lp.field_h + (as.field_c << 1) + pp.field_a);
+              var5Lifetime3 = var5Lifetime3 + (lp.field_h + (as.field_c << 1) + TextLayout.field_a);
               nb.field_b[var4Lifetime3][3] = lp.field_h + (as.field_c << 1);
             } else {
               var5Lifetime3 = var5Lifetime3 + LoginPanel.field_u;

@@ -466,7 +466,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (this.field_m.field_i != null &&
                 this.field_m.field_i[param2] != null) {
                 byte[] var30 = this.field_m.field_i[param2];
-                byte[] var29 = qm.a(0, var18.length - 2, var18, 0);
+                byte[] var29 = DefaultTextWidgetRenderer.a(0, var18.length - 2, var18, 0);
                 int var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
@@ -517,7 +517,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             if (null != this.field_m.field_i &&
               null != this.field_m.field_i[param2]) {
               byte[] var28 = this.field_m.field_i[param2];
-              byte[] var27 = qm.a(param0 ^ -37, -2 + var18.length, var18, 0);
+              byte[] var27 = DefaultTextWidgetRenderer.a(param0 ^ -37, -2 + var18.length, var18, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();

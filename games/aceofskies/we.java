@@ -148,62 +148,62 @@ final class we {
             }
             int var18 = var14;
             int var19 = var15;
-            SoftwareRasterizer.saveClip(jo.field_j);
+            SoftwareRasterizer.saveClip(TextHotspotBounds.field_j);
             if (var18 > var19) {
               var19 = var8 * param0 / (var9 + var8) + param4;
               var18 = var8 * param0 / (var9 + var8) + param4;
             }
             if (param5[0] != null) {
               SoftwareRasterizer.intersectClip(param2, param4, var16, var18);
-              param5[0].b(param2, param4);
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              param5[0].draw(param2, param4);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
-              param5[2].b(var13, param4);
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              param5[2].draw(var13, param4);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[6] != null) {
               SoftwareRasterizer.intersectClip(param2, var19, var16, var11);
-              param5[6].b(param2, var15);
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              param5[6].draw(param2, var15);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param5[8].b(var13, var15);
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              param5[8].draw(var13, var15);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[1] != null &&
               0 != param5[1].fullWidth) {
               SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (int var20 = var12; var20 < var13; var20 = var20 + param5[1].fullWidth) {
-                param5[1].b(var20, param4);
+                param5[1].draw(var20, param4);
               }
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[7] != null &&
               param5[7].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].fullWidth) {
-                param5[7].b(var20Lifetime1, var15);
+                param5[7].draw(var20Lifetime1, var15);
               }
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (null != param5[3] &&
               param5[3].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(param2, var18, var16, var19);
               for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].fullHeight) {
-                param5[3].b(param2, var20Lifetime2);
+                param5[3].draw(param2, var20Lifetime2);
               }
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (null != param5[5] &&
               param5[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].fullHeight) {
-                param5[5].b(var13, var20Lifetime3);
+                param5[5].draw(var13, var20Lifetime3);
               }
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param5[4] != null &&
               param5[4].fullWidth != 0 &&
@@ -211,10 +211,10 @@ final class we {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (int var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].fullHeight) {
                 for (int var21 = var12; var21 < var13; var21 = var21 + param5[4].fullWidth) {
-                  param5[4].b(var21, var20Lifetime4);
+                  param5[4].draw(var21, var20Lifetime4);
                 }
               }
-              SoftwareRasterizer.restoreClip(jo.field_j);
+              SoftwareRasterizer.restoreClip(TextHotspotBounds.field_j);
             }
             if (param3) {
               field_a = (of) null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ij extends hh {
-    static qm field_j;
+    static DefaultTextWidgetRenderer field_j;
     private qe field_f;
     static ResourceArchive field_h;
     private ju field_d;
@@ -240,7 +240,7 @@ final class ij extends hh {
             this.field_e.b(false);
             return;
           }
-          field_j = (qm) null;
+          field_j = (DefaultTextWidgetRenderer) null;
           this.field_a.a(false, 1);
           this.field_a.a(8448, -26625, 8448);
           this.field_a.a(5890, 768, 34176, 0);
@@ -260,7 +260,7 @@ final class ij extends hh {
         this.field_e.b(false);
         this.field_e.a((byte) 66, 1);
         if (param0 < 100) {
-          field_j = (qm) null;
+          field_j = (DefaultTextWidgetRenderer) null;
           this.field_a.a(false, 1);
           this.field_a.a(8448, -26625, 8448);
           this.field_a.a(5890, 768, 34176, 0);

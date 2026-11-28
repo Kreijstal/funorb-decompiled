@@ -35,7 +35,7 @@ final class ul extends sl {
         }
     }
 
-    final String d(ea param0, int param1) {
+    final String d(UiWidget param0, int param1) {
         String stackIn_5_2 = null;
         try {
           int var3_int = -91 / ((3 - param1) / 35);

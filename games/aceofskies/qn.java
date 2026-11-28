@@ -26,7 +26,7 @@ final class qn {
           return dt.field_b;
         }
         if (!oi.field_a.ensureIndexLoaded((byte) 86)) {
-          return co.field_j;
+          return TextLineMetrics.field_j;
         }
         if (!oi.field_a.tryLoadGroupByName("commonui", -14012)) {
           return lm.field_b + " - " + oi.field_a.getGroupLoadPercentByName("commonui", (byte) -79) + "%";

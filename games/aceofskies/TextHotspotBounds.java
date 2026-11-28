@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo extends IntrusiveNode {
+final class TextHotspotBounds extends IntrusiveNode {
     int field_k;
     static int[] field_j;
-    jo field_f;
+    TextHotspotBounds field_f;
     static String field_l;
     int field_g;
     int field_i;
@@ -18,7 +18,7 @@ final class jo extends IntrusiveNode {
           return;
         }
         PcmSample var2 = (PcmSample) null;
-        jo.a((PcmSample) null, -12, (byte) -87);
+        TextHotspotBounds.a((PcmSample) null, -12, (byte) -87);
         field_l = null;
     }
 
@@ -26,7 +26,7 @@ final class jo extends IntrusiveNode {
         String stackIn_7_2 = null;
         try {
           if (param2 >= -18) {
-            jo.a((byte) 24);
+            TextHotspotBounds.a((byte) 24);
           }
           SoundPlayback stackIn_3_0 = EmailValidationError.startPcmPlayback(-23159, PcmSampleStream.createForPlaybackRate(param0, 100, param1));
           return stackIn_3_0;
@@ -44,7 +44,7 @@ final class jo extends IntrusiveNode {
         }
     }
 
-    jo(int param0, int param1, int param2, int param3, int param4) {
+    TextHotspotBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_g = param2;
         this.field_e = param4;
         this.field_k = param0;

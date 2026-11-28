@@ -21,7 +21,7 @@ abstract class gm extends ab {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.a(param2, fj.field_c - param0 >> 1, nc.field_d - param2 >> 1, param0, (byte) 124);
+        this.setBounds(param2, fj.field_c - param0 >> 1, nc.field_d - param2 >> 1, param0, (byte) 124);
         if (param1 != 29) {
           this.a(true, 82, -19);
         }
@@ -43,7 +43,7 @@ abstract class gm extends ab {
         return stackIn_4_0;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (this.field_t == 0) {
           return;
         }
@@ -52,7 +52,7 @@ abstract class gm extends ab {
             return;
           }
           this.a(false, this.field_p + param3, param2 + this.field_h);
-          super.a((byte) 94, param1, param2, param3);
+          super.drawWidget((byte) 94, param1, param2, param3);
           return;
         }
         if (null == na.field_b ||
@@ -63,16 +63,16 @@ abstract class gm extends ab {
         ProxySocketConnector.a(na.field_b, -14492);
         SoftwareRasterizer.clearFramebuffer();
         this.a(false, 0, 0);
-        super.a((byte) 87, param1, -this.field_h - param2, -this.field_p - param3);
+        super.drawWidget((byte) 87, param1, -this.field_h - param2, -this.field_p - param3);
         sl.c(2765);
-        na.field_b.a(param3 + this.field_p, param2 + this.field_h, this.field_t);
+        na.field_b.drawWithOpacity(param3 + this.field_p, param2 + this.field_h, this.field_t);
         if (param0 <= 64) {
           this.a(true, -76, 79);
         }
     }
 
     gm(lt param0, int param1, int param2) {
-        super(fj.field_c - param1 >> 1, nc.field_d - param2 >> 1, param1, param2, (ir) null);
+        super(fj.field_c - param1 >> 1, nc.field_d - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_t = 0;
           this.field_u = param0;
@@ -105,12 +105,12 @@ abstract class gm extends ab {
         return stackIn_12_0;
     }
 
-    final ea a(int param0) {
-        ea var2 = super.a(param0 + param0);
+    final UiWidget a(int param0) {
+        UiWidget var2 = super.a(param0 + param0);
         if (var2 != null) {
           return var2;
         }
-        return (ea) (this);
+        return (UiWidget) (this);
     }
 
     static {

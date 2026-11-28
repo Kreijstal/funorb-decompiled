@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class us implements ir {
+final class us implements WidgetRenderer {
     private int field_d;
     private BitmapFont field_g;
     private int field_b;
@@ -10,15 +10,15 @@ final class us implements ir {
     private int field_e;
     private int field_c;
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        ea stackIn_4_0 = null;
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_4_0 = null;
         String stackIn_16_2 = null;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!(param3 instanceof pf)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (ea) (param3);
+            stackIn_4_0 = (UiWidget) (param3);
           }
           pf var12 = (pf) (stackIn_4_0);
           SoftwareRasterizer.fillRectangle(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);

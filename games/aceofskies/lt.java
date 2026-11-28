@@ -12,7 +12,7 @@ final class lt extends to {
     }
 
     public lt() {
-        super(0, 0, fj.field_c, nc.field_d, (ir) null, (no) null);
+        super(0, 0, fj.field_c, nc.field_d, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_w = new IntrusiveDeque();
     }
 
@@ -61,7 +61,7 @@ final class lt extends to {
         this.field_s = null;
     }
 
-    final void a(ea param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           if (param1 != 0) {
             this.field_w = (IntrusiveDeque) null;
@@ -72,13 +72,13 @@ final class lt extends to {
           gm var3 = (gm) (param0);
           this.field_w.addFirst(var3, 25611);
           var3.field_z = true;
-          var3.a((ea) (this), (byte) -42);
+          var3.takeFocus((UiWidget) (this), (byte) -42);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "lt.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final ea i(int param0) {
+    final UiWidget i(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_w);
         gm var3 = (gm) (var2.c(-1372));
@@ -106,22 +106,22 @@ final class lt extends to {
           }
           var4 = (gm) (var2.a(-127));
         }
-        this.field_s = (ea) ((Object) this.d((byte) -112));
+        this.field_s = (UiWidget) ((Object) this.d((byte) -112));
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_e != null) {
-          this.field_e.a(true, -7592, param3, (ea) (this), param2);
+          this.field_e.paintWidget(true, -7592, param3, (UiWidget) (this), param2);
         }
         an var5 = new an(this.field_w);
         if (param0 < 64) {
           field_u = 45;
         }
-        ea var6 = (ea) (var5.b(true));
+        UiWidget var6 = (UiWidget) (var5.b(true));
         while (var6 != null) {
-          var6.a((byte) 112, param1, this.field_h + param2, this.field_p + param3);
-          var6 = (ea) (var5.a((byte) 120));
+          var6.drawWidget((byte) 112, param1, this.field_h + param2, this.field_p + param3);
+          var6 = (UiWidget) (var5.a((byte) 120));
         }
     }
 

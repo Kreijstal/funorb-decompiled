@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf extends mi {
+final class pf extends InteractiveWidget {
     int field_B;
     static int[] field_A;
     int field_x;
@@ -9,11 +9,11 @@ final class pf extends mi {
     static int field_z;
     private ot field_w;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         String stackIn_27_2 = null;
         int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (!super.a((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.pointerPressed((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
           int var8_int = -this.field_B + (param2 - param1);

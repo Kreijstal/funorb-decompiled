@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf implements ir {
+final class jf implements WidgetRenderer {
     static FullscreenFocusCanvas field_a;
     static String field_b;
 
@@ -40,7 +40,7 @@ final class jf implements ir {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         String stackIn_13_2 = null;
         try {
           if (param1 != -7592) {
@@ -50,14 +50,14 @@ final class jf implements ir {
           int var7 = param4 + param3.field_h;
           nn.a(var7, (byte) 70, var6_int, param3.field_q, param3.field_n);
           Sprite var8 = gu.field_c[1];
-          if (param3 instanceof mi &&
-            ((mi) (param3)).field_s) {
-            var8.d(var6_int + (1 + (param3.field_q - var8.fullWidth >> 1)), (param3.field_n - var8.fullHeight >> 1) + var7 + 1, 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_s) {
+            var8.drawAdditive(var6_int + (1 + (param3.field_q - var8.fullWidth >> 1)), (param3.field_n - var8.fullHeight >> 1) + var7 + 1, 256);
           }
-          if (!param3.e(28660)) {
+          if (!param3.isFocused(28660)) {
             return;
           }
-          co.a(var7 + 2, param3.field_n - 4, param3.field_q - 4, 2 + var6_int, 112);
+          TextLineMetrics.a(var7 + 2, param3.field_n - 4, param3.field_q - 4, 2 + var6_int, 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

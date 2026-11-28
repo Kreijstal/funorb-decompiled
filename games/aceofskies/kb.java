@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends vq {
+final class kb extends RichTextWidget {
     private Sprite field_F;
     static ej field_C;
     private String field_A;
@@ -19,10 +19,10 @@ final class kb extends vq {
         scoreDigitSpriteData = null;
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_E = this.field_E + 1;
-          super.a((byte) 42, param1, param2, param3);
+          super.updatePointer((byte) 42, param1, param2, param3);
           if (param0 < 13) {
             this.field_B = (FieldValidator) null;
           }
@@ -43,13 +43,13 @@ final class kb extends vq {
         try {
           this.field_B = param0;
           this.field_A = param1;
-          this.a(param5, param2, param3, param4, (byte) 123);
+          this.setBounds(param5, param2, param3, param4, (byte) 123);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "kb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final boolean a(ea param0, byte param1) {
+    final boolean takeFocus(UiWidget param0, byte param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 == -42) {
@@ -71,7 +71,7 @@ final class kb extends vq {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         String var5 = null;
         Object var18 = null;
         Object var22 = null;
@@ -82,13 +82,13 @@ final class kb extends vq {
           String var17 = MatchingFieldValidator.field_g;
           if (!var17.equals(this.field_f)) {
             this.field_f = var17;
-            this.a((byte) -67);
+            this.rebuildHotspotBounds((byte) -67);
           }
-          super.a((byte) 107, param1, param2, param3);
+          super.drawWidget((byte) 107, param1, param2, param3);
           var6 = this.field_B.getValidationStatus(true);
-          et var30 = (et) ((Object) this.field_e);
+          TextWidgetRenderer var30 = (TextWidgetRenderer) ((Object) this.field_e);
           int var9 = param3 + this.field_p;
-          int var10 = var30.a(param2, false, (ea) (this)) + (var30.a((byte) 86, (ea) (this)).a(0) >> 1);
+          int var10 = var30.getTextOriginY(param2, false, (UiWidget) (this)) + (var30.getTextLayout((byte) 86, (UiWidget) (this)).getLayoutHeight(0) >> 1);
           if (param0 <= 64) {
             return;
           }
@@ -100,42 +100,42 @@ final class kb extends vq {
             if (this.field_F == null) {
               this.field_F = new Sprite(var11, var12);
               ProxySocketConnector.a(this.field_F, -14492);
-              var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
+              var19.drawRotatedAbout(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
+              this.field_F.drawAdditive(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
               return;
             }
             if (this.field_F.width < var11) {
               this.field_F = new Sprite(var11, var12);
               ProxySocketConnector.a(this.field_F, -14492);
-              var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
+              var19.drawRotatedAbout(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
+              this.field_F.drawAdditive(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
               return;
             }
             if (this.field_F.height >= var12) {
               ProxySocketConnector.a(this.field_F, -14492);
               SoftwareRasterizer.clearFramebuffer();
-              var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
+              var19.drawRotatedAbout(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
+              this.field_F.drawAdditive(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
               return;
             }
             this.field_F = new Sprite(var11, var12);
             ProxySocketConnector.a(this.field_F, -14492);
-            var19.a(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
+            var19.drawRotatedAbout(112, 144, var19.fullWidth << 4, var19.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
-            this.field_F.d(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
+            this.field_F.drawAdditive(var9 - (var19.fullWidth >> 1), -var19.fullHeight + var10, 256);
             return;
           }
           if (var6 == bt.field_a) {
             Sprite var20 = gu.field_c[2];
-            var20.d(var9, -(var20.height >> 1) + var10, 256);
+            var20.drawAdditive(var9, -(var20.height >> 1) + var10, 256);
             return;
           }
           if (fd.field_a == var6) {
             Sprite var21 = gu.field_c[1];
-            var21.d(var9, -(var21.height >> 1) + var10, 256);
+            var21.drawAdditive(var9, -(var21.height >> 1) + var10, 256);
             return;
           }
           return;
@@ -149,11 +149,11 @@ final class kb extends vq {
           }
         }
         if (var5.equals(this.field_f)) {
-          super.a((byte) 107, param1, param2, param3);
+          super.drawWidget((byte) 107, param1, param2, param3);
           var6 = this.field_B.getValidationStatus(true);
-          et var31 = (et) ((Object) this.field_e);
+          TextWidgetRenderer var31 = (TextWidgetRenderer) ((Object) this.field_e);
           int var9Lifetime1 = param3 + this.field_p;
-          int var10Lifetime1 = var31.a(param2, false, (ea) (this)) + (var31.a((byte) 86, (ea) (this)).a(0) >> 1);
+          int var10Lifetime1 = var31.getTextOriginY(param2, false, (UiWidget) (this)) + (var31.getTextLayout((byte) 86, (UiWidget) (this)).getLayoutHeight(0) >> 1);
           if (param0 <= 64) {
             return;
           }
@@ -165,53 +165,53 @@ final class kb extends vq {
             if (this.field_F == null) {
               this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
               ProxySocketConnector.a(this.field_F, -14492);
-              var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
+              var23.drawRotatedAbout(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
+              this.field_F.drawAdditive(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
               return;
             }
             if (this.field_F.width < var11Lifetime1) {
               this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
               ProxySocketConnector.a(this.field_F, -14492);
-              var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
+              var23.drawRotatedAbout(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
+              this.field_F.drawAdditive(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
               return;
             }
             if (this.field_F.height >= var12Lifetime1) {
               ProxySocketConnector.a(this.field_F, -14492);
               SoftwareRasterizer.clearFramebuffer();
-              var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
+              var23.drawRotatedAbout(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
               sl.c(2765);
-              this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
+              this.field_F.drawAdditive(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
               return;
             }
             this.field_F = new Sprite(var11Lifetime1, var12Lifetime1);
             ProxySocketConnector.a(this.field_F, -14492);
-            var23.a(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
+            var23.drawRotatedAbout(112, 144, var23.fullWidth << 4, var23.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
-            this.field_F.d(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
+            this.field_F.drawAdditive(var9Lifetime1 - (var23.fullWidth >> 1), -var23.fullHeight + var10Lifetime1, 256);
             return;
           }
           if (var6 == bt.field_a) {
             Sprite var24 = gu.field_c[2];
-            var24.d(var9Lifetime1, -(var24.height >> 1) + var10Lifetime1, 256);
+            var24.drawAdditive(var9Lifetime1, -(var24.height >> 1) + var10Lifetime1, 256);
             return;
           }
           if (fd.field_a == var6) {
             Sprite var25 = gu.field_c[1];
-            var25.d(var9Lifetime1, -(var25.height >> 1) + var10Lifetime1, 256);
+            var25.drawAdditive(var9Lifetime1, -(var25.height >> 1) + var10Lifetime1, 256);
             return;
           }
           return;
         }
         this.field_f = var5;
-        this.a((byte) -67);
-        super.a((byte) 107, param1, param2, param3);
+        this.rebuildHotspotBounds((byte) -67);
+        super.drawWidget((byte) 107, param1, param2, param3);
         var6 = this.field_B.getValidationStatus(true);
-        et var32 = (et) ((Object) this.field_e);
+        TextWidgetRenderer var32 = (TextWidgetRenderer) ((Object) this.field_e);
         int var9Lifetime2 = param3 + this.field_p;
-        int var10Lifetime2 = var32.a(param2, false, (ea) (this)) + (var32.a((byte) 86, (ea) (this)).a(0) >> 1);
+        int var10Lifetime2 = var32.getTextOriginY(param2, false, (UiWidget) (this)) + (var32.getTextLayout((byte) 86, (UiWidget) (this)).getLayoutHeight(0) >> 1);
         if (param0 <= 64) {
           return;
         }
@@ -223,47 +223,47 @@ final class kb extends vq {
           if (this.field_F == null) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
             ProxySocketConnector.a(this.field_F, -14492);
-            var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
+            var27.drawRotatedAbout(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
-            this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
+            this.field_F.drawAdditive(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
             return;
           }
           if (this.field_F.width < var11Lifetime2) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
             ProxySocketConnector.a(this.field_F, -14492);
-            var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
+            var27.drawRotatedAbout(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
-            this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
+            this.field_F.drawAdditive(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
             return;
           }
           if (this.field_F.height < var12Lifetime2) {
             this.field_F = new Sprite(var11Lifetime2, var12Lifetime2);
             ProxySocketConnector.a(this.field_F, -14492);
-            var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
+            var27.drawRotatedAbout(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
             sl.c(2765);
-            this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
+            this.field_F.drawAdditive(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
             return;
           }
           ProxySocketConnector.a(this.field_F, -14492);
           SoftwareRasterizer.clearFramebuffer();
-          var27.a(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
+          var27.drawRotatedAbout(112, 144, var27.fullWidth << 4, var27.fullHeight << 4, -this.field_E << 10, 4096);
           sl.c(2765);
-          this.field_F.d(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
+          this.field_F.drawAdditive(var9Lifetime2 - (var27.fullWidth >> 1), -var27.fullHeight + var10Lifetime2, 256);
           return;
         }
         if (var6 == bt.field_a) {
           Sprite var28 = gu.field_c[2];
-          var28.d(var9Lifetime2, -(var28.height >> 1) + var10Lifetime2, 256);
+          var28.drawAdditive(var9Lifetime2, -(var28.height >> 1) + var10Lifetime2, 256);
           return;
         }
         if (fd.field_a != var6) {
           return;
         }
         Sprite var29 = gu.field_c[1];
-        var29.d(var9Lifetime2, -(var29.height >> 1) + var10Lifetime2, 256);
+        var29.drawAdditive(var9Lifetime2, -(var29.height >> 1) + var10Lifetime2, 256);
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 <= -41) {
           return null;
         }

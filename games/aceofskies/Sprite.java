@@ -4,7 +4,7 @@
 class Sprite extends SpriteState {
     int[] pixels;
 
-    void b(int param0, int param1, int param2) {
+    void drawTintedGray(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -108,7 +108,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4) {
+    private final void writeBilinearPixel(int param0, int param1, int param2, int param3, int param4) {
         int stackIn_5_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
@@ -306,7 +306,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void b(int param0, int param1) {
+    void draw(int param0, int param1) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -519,7 +519,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void c(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -562,7 +562,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawWithOpacity(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -605,7 +605,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAbout(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var19;
         int var20;
         int var21;
@@ -747,7 +747,7 @@ class Sprite extends SpriteState {
                     if (var37 >> 12 < this.width) {
                       int var34 = var38 >> 12;
                       if (var38 >> 12 < this.height) {
-                        this.a(var23, var33, var34, var37, var38);
+                        this.writeBilinearPixel(var23, var33, var34, var37, var38);
                         var39++;
                         var37 = var37 + var28;
                         var38 = var38 + var27;
@@ -807,7 +807,7 @@ class Sprite extends SpriteState {
                     int var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.width) {
                       int var34Lifetime3 = var38Lifetime3 >> 12;
-                      this.a(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
+                      this.writeBilinearPixel(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
                       var38Lifetime3 = var38Lifetime3 + var27;
@@ -868,7 +868,7 @@ class Sprite extends SpriteState {
                     int var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.height) {
                       int var33Lifetime1 = var37Lifetime1 >> 12;
-                      this.a(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
+                      this.writeBilinearPixel(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
                       var38Lifetime1 = var38Lifetime1 + var27;
@@ -928,7 +928,7 @@ class Sprite extends SpriteState {
                   var38Lifetime2 >= -4096) {
                   int var33Lifetime2 = var37Lifetime2 >> 12;
                   int var34Lifetime2 = var38Lifetime2 >> 12;
-                  this.a(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
+                  this.writeBilinearPixel(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
                   var38Lifetime2 = var38Lifetime2 + var27;
@@ -952,7 +952,7 @@ class Sprite extends SpriteState {
         SoftwareRasterizer.setRasterTarget(this.pixels, this.width, this.height);
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawAdditive(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -999,7 +999,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawSilhouette(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -1060,7 +1060,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawMultiply(int param0, int param1) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -1103,7 +1103,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void d(int param0, int param1) {
+    void drawHalfSize(int param0, int param1) {
         param0 = param0 + (this.trimX >> 1);
         param1 = param1 + (this.trimY >> 1);
         int var3 = param0 < SoftwareRasterizer.clipLeft ? SoftwareRasterizer.clipLeft - param0 << 1 : 0;

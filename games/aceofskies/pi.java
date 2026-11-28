@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends mi {
+final class pi extends InteractiveWidget {
     static qr field_x;
     private FieldValidator field_w;
     private int field_y;
 
-    final boolean a(ea param0, byte param1) {
+    final boolean takeFocus(UiWidget param0, byte param1) {
         String stackIn_7_2 = null;
         try {
           if (param1 == -42) {
             return false;
           }
-          this.c((byte) 100);
+          this.getTooltipText((byte) 100);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -35,9 +35,9 @@ final class pi extends mi {
         field_x = null;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
-        super.a((byte) 125, param1, param2, param3);
+        super.drawWidget((byte) 125, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
@@ -45,21 +45,21 @@ final class pi extends mi {
         int var6 = (this.field_n >> 1) + param2 + this.field_h;
         pt var8 = this.field_w.getValidationStatus(true);
         if (param0 < 64) {
-          ea var12 = (ea) null;
-          this.a((ea) null, (byte) -125);
+          UiWidget var12 = (UiWidget) null;
+          this.takeFocus((UiWidget) null, (byte) -125);
         }
         if (HardwareOpenGlRenderer.field_Pc != var8 &&
           LoginPanel.field_t != var8) {
           if (var8 == bt.field_a) {
             Sprite var13 = gu.field_c[2];
-            var13.d(var5 - (var13.width >> 1), -(var13.height >> 1) + var6, 256);
+            var13.drawAdditive(var5 - (var13.width >> 1), -(var13.height >> 1) + var6, 256);
             return;
           }
           if (fd.field_a != var8) {
             return;
           }
           Sprite var14 = gu.field_c[1];
-          var14.d(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
+          var14.drawAdditive(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
           return;
         }
         Sprite var15 = gu.field_c[0];
@@ -74,16 +74,16 @@ final class pi extends mi {
           ms.field_c = new Sprite(var9, var10);
           ProxySocketConnector.a(ms.field_c, -14492);
         }
-        var15.a(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_y << 10, 4096);
+        var15.drawRotatedAbout(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_y << 10, 4096);
         sl.c(2765);
-        ms.field_c.d(var5 - var15.fullWidth, -var15.fullHeight + var6, 256);
+        ms.field_c.drawAdditive(var5 - var15.fullWidth, -var15.fullHeight + var6, 256);
         return;
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_y = this.field_y + 1;
-          super.a((byte) 67, param1, param2, param3);
+          super.updatePointer((byte) 67, param1, param2, param3);
           if (param0 <= 13) {
             pi.clearStaticReferences(-28);
           }
@@ -92,7 +92,7 @@ final class pi extends mi {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_g) {
           return this.field_w.getValidationMessage(true);
         }

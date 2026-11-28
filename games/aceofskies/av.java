@@ -51,7 +51,7 @@ final class av {
         if (param0 != 22847) {
           field_b = (int[]) null;
         }
-        return mi.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
+        return InteractiveWidget.b(param1, param2, 22547) & ta.a(param2, param1, (byte) 82);
     }
 
     public static void clearStaticReferences(byte param0) {

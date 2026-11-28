@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends oo implements dn {
+final class AccountCreationResultPanel extends oo implements WidgetActivationListener {
     static AccountRequestState field_fb;
     private AccountRegistrationPanel field_db;
     private boolean field_eb;
@@ -30,7 +30,7 @@ final class AccountCreationResultPanel extends oo implements dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         if (this.field_eb) {
           hg.a(false, true, true);
           return;
@@ -58,7 +58,7 @@ final class AccountCreationResultPanel extends oo implements dn {
           } else if (null != param1.suggestions) {
             var4 = HudMessage.field_e;
             if (this.field_db != null) {
-              this.field_db.a((byte) -77);
+              this.field_db.onNameSuggestionsRefreshRequested((byte) -77);
             }
           } else {
             var4 = param1.message;
@@ -76,10 +76,10 @@ final class AccountCreationResultPanel extends oo implements dn {
               this.d(new rs(this), -30244);
               return;
             }
-            var5.a((no) (this), param2 + 17536, mq.field_i);
+            var5.a((WidgetEventListener) (this), param2 + 17536, mq.field_i);
           } else {
             if (this.field_eb) {
-              var5.a((no) (this), param2 ^ 17536, mq.field_i);
+              var5.a((WidgetEventListener) (this), param2 ^ 17536, mq.field_i);
             } else if (param1.statusCode == 5) {
               var5.a(11, (byte) 105, ln.field_a);
               var5.a(17, (byte) -126, SoftCacheReference.field_s);
@@ -110,8 +110,8 @@ final class AccountCreationResultPanel extends oo implements dn {
 
     final boolean h(int param0) {
         if (param0 != 11) {
-          mi var3 = (mi) null;
-          this.a(95, (mi) null, -21, 40, (byte) -17);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated(95, (InteractiveWidget) null, -21, 40, (byte) -17);
           if (!this.field_z) {
             return super.h(11);
           }

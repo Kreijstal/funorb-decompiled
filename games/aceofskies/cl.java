@@ -24,7 +24,7 @@ final class cl extends di {
         try {
           int var4_int = -1;
           for (int var5 = param0; var5 < param2; var5++) {
-            var4_int = var4_int >>> 8 ^ vg.field_e[(param1[var5] ^ var4_int) & 255];
+            var4_int = var4_int >>> 8 ^ RichTextLayout.field_e[(param1[var5] ^ var4_int) & 255];
           }
           var4_int = ~var4_int;
           if (param3 != -105) {

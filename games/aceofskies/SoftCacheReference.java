@@ -59,13 +59,13 @@ final class SoftCacheReference extends CacheReference {
             }
             return;
           }
-          hr.field_e.a(OpenGlRectangleTexture.field_l, true, qo.field_d, true);
+          hr.field_e.processPointerInput(OpenGlRectangleTexture.field_l, true, qo.field_d, true);
           hr.field_e.f((byte) 33);
           if (param0 < 120) {
             return;
           }
-          while (ek.a((byte) -127)) {
-            hr.field_e.a(108, AccountServiceResult.field_e, bk.lastKeyCode);
+          while (NameSuggestionsPanel.a((byte) -127)) {
+            hr.field_e.processKeyInput(108, AccountServiceResult.field_e, bk.lastKeyCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

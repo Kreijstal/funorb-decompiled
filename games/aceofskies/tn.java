@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends ab implements dn {
+final class tn extends ab implements WidgetActivationListener {
     static String field_t;
-    private mi field_v;
+    private InteractiveWidget field_v;
     static int[] field_w;
-    private mi field_x;
-    private mi field_u;
+    private InteractiveWidget field_x;
+    private InteractiveWidget field_u;
 
     public static void clearStaticReferences(byte param0) {
         int var1 = -30 / ((16 - param0) / 51);
@@ -34,20 +34,20 @@ final class tn extends ab implements dn {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         int var5 = this.field_p + param3;
         int var6 = this.field_h + param2;
         qo.field_b.drawParagraph(HardwareOpenGlRenderer.field_Mc, 20 + var5, var6 + 20, -40 + this.field_q, -50 + this.field_n, 16777215, -1, 1, 0, qo.field_b.maxAscent);
         if (param0 <= 64) {
-          this.a((byte) 126, -69, -35, 122);
+          this.drawWidget((byte) 126, -69, -35, 122);
         }
-        super.a((byte) 110, param1, param2, param3);
+        super.drawWidget((byte) 110, param1, param2, param3);
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_15_2 = null;
         try {
-          if (super.a(33, param1, param2, param3)) {
+          if (super.handleKey(33, param1, param2, param3)) {
             return true;
           }
           int var5_int = 103 % ((-53 - param0) / 33);
@@ -116,23 +116,23 @@ final class tn extends ab implements dn {
     }
 
     public tn() {
-        super(0, 0, 476, 225, (ir) null);
-        this.field_u = new mi(SteeringMode.field_b, (no) null);
-        this.field_v = new mi(Aircraft.field_s, (no) null);
-        this.field_x = new mi(nu.field_a, (no) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_u = new InteractiveWidget(SteeringMode.field_b, (WidgetEventListener) null);
+        this.field_v = new InteractiveWidget(Aircraft.field_s, (WidgetEventListener) null);
+        this.field_x = new InteractiveWidget(nu.field_a, (WidgetEventListener) null);
         qb var1 = new qb();
-        this.field_u.field_e = (ir) ((Object) var1);
-        this.field_v.field_e = (ir) ((Object) var1);
-        this.field_x.field_e = (ir) ((Object) var1);
+        this.field_u.field_e = (WidgetRenderer) ((Object) var1);
+        this.field_v.field_e = (WidgetRenderer) ((Object) var1);
+        this.field_x.field_e = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_v.a(30, -var3 + this.field_q >> 1, -48 + (this.field_n - var2), var4, (byte) 127);
-        this.field_x.a(30, var4 + (-var3 + this.field_q >> 1) + var2, -var2 - 48 + this.field_n, var4, (byte) 123);
-        this.field_u.a(30, this.field_q - var3 >> 1, -(var2 * 2) + (-78 + this.field_n), var3, (byte) 126);
-        this.field_v.field_o = (no) (this);
-        this.field_u.field_o = (no) (this);
-        this.field_x.field_o = (no) (this);
+        this.field_v.setBounds(30, -var3 + this.field_q >> 1, -48 + (this.field_n - var2), var4, (byte) 127);
+        this.field_x.setBounds(30, var4 + (-var3 + this.field_q >> 1) + var2, -var2 - 48 + this.field_n, var4, (byte) 123);
+        this.field_u.setBounds(30, this.field_q - var3 >> 1, -(var2 * 2) + (-78 + this.field_n), var3, (byte) 126);
+        this.field_v.field_o = (WidgetEventListener) (this);
+        this.field_u.field_o = (WidgetEventListener) (this);
+        this.field_x.field_o = (WidgetEventListener) (this);
         this.field_u.field_k = cl.field_db;
         this.field_x.field_k = td.field_c;
         this.a(this.field_v, 1);
@@ -153,7 +153,7 @@ final class tn extends ab implements dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         String stackIn_11_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

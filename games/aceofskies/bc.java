@@ -22,7 +22,7 @@ final class bc extends to {
             int stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          if (vg.field_j.containsKey(param0)) {
+          if (RichTextLayout.field_j.containsKey(param0)) {
             int stackIn_6_0 = 100;
             return stackIn_6_0;
           }
@@ -121,22 +121,22 @@ final class bc extends to {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         boolean var2 = (this.field_s.field_g);
         this.field_s.field_g = this.field_g;
         if (param0 < -41) {
-          String var3 = this.field_s.c((byte) -75);
+          String var3 = this.field_s.getTooltipText((byte) -75);
           this.field_s.field_g = (var2) ? true : false;
           return var3;
         }
         field_v = (String) null;
-        String var3Lifetime1 = this.field_s.c((byte) -75);
+        String var3Lifetime1 = this.field_s.getTooltipText((byte) -75);
         this.field_s.field_g = (var2) ? true : false;
         return var3Lifetime1;
     }
 
-    bc(int param0, int param1, int param2, int param3, ea param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (ir) null, (no) null);
+    bc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetEventListener) null);
         int stackIn_10_0 = 0;
         String stackIn_15_2 = null;
         String stackIn_18_2 = null;
@@ -155,7 +155,7 @@ final class bc extends to {
           if (var13 <= param3) {
             var13 = param3;
           } else {
-            this.a(var13, param0, param1, param2, (byte) 123);
+            this.setBounds(var13, param0, param1, param2, (byte) 123);
           }
           if (!this.field_y) {
             stackIn_10_0 = this.field_x + this.field_z * 2;
@@ -163,7 +163,7 @@ final class bc extends to {
             stackIn_10_0 = 0;
           }
           int var14 = stackIn_10_0;
-          this.field_s.a(param3 - 2 * this.field_z, var14, this.field_z + (var13 - param3 >> 1), param2 - (this.field_x + this.field_z * 3), (byte) 124);
+          this.field_s.setBounds(param3 - 2 * this.field_z, var14, this.field_z + (var13 - param3 >> 1), param2 - (this.field_x + this.field_z * 3), (byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,13 +191,13 @@ final class bc extends to {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         int var5 = this.field_p + param3;
         if (param0 < 64) {
           return;
         }
         int var6 = this.field_h + param2;
-        super.a((byte) 108, param1, param2, param3);
+        super.drawWidget((byte) 108, param1, param2, param3);
         if (0 == param1) {
           int var7 = this.field_y ? -this.field_x + this.field_q - 2 * this.field_z : 0;
           this.field_w.drawParagraph(this.field_A, this.field_z + var7 + var5, var6 + this.field_z, -this.field_z + this.field_x, -(2 * this.field_z) + this.field_n, this.field_u, -1, this.field_y ? 0 : 2, 1, this.field_w.maxAscent);

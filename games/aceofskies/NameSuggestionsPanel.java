@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends ab implements dn {
-    private mi[] field_t;
+final class NameSuggestionsPanel extends ab implements WidgetActivationListener {
+    private InteractiveWidget[] field_t;
     private String[] field_v;
     static Vector2 field_u;
-    private bh field_w;
+    private NameSuggestionListener field_w;
     static String field_x;
 
-    ek(bh param0) {
-        super(0, 0, 0, 0, (ir) null);
+    NameSuggestionsPanel(NameSuggestionListener param0) {
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {
@@ -38,7 +38,7 @@ final class ek extends ab implements dn {
             return false;
           }
           if (param0 >= -125) {
-            ek.a((byte) 107);
+            NameSuggestionsPanel.a((byte) 107);
           }
           bk.lastKeyCode = ArchiveIndex.field_e[ch.field_a];
           AccountServiceResult.field_e = qb.field_o[ch.field_a];
@@ -48,10 +48,10 @@ final class ek extends ab implements dn {
         return stackIn_8_0;
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_15_2 = null;
         try {
-          if (super.a(-1, param1, param2, param3)) {
+          if (super.handleKey(-1, param1, param2, param3)) {
             return true;
           }
           int var5_int = 114 / ((-53 - param0) / 33);
@@ -78,8 +78,8 @@ final class ek extends ab implements dn {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) 118, param1, param2, param3);
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget((byte) 118, param1, param2, param3);
         if (0 != param1) {
           return;
         }
@@ -90,10 +90,10 @@ final class ek extends ab implements dn {
         if (param0 >= 64) {
           return;
         }
-        this.a((byte) 54, 31, 107, 46);
+        this.drawWidget((byte) 54, 31, 107, 46);
     }
 
-    final void a(String[] param0, boolean param1) {
+    final void setNameSuggestions(String[] param0, boolean param1) {
         String stackIn_19_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -106,20 +106,20 @@ final class ek extends ab implements dn {
               this.field_v[var4_int] = ju.a(0, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
             wg var4 = new wg(qo.field_b, 0, 1);
-            this.field_t = new mi[var3_int + 1];
+            this.field_t = new InteractiveWidget[var3_int + 1];
             if (!param1) {
               return;
             }
             for (int var5 = 0; var3_int > var5; var5++) {
-              this.field_t[var5] = new mi(this.field_v[var5], (no) (this));
-              this.field_t[var5].field_e = (ir) ((Object) var4);
+              this.field_t[var5] = new InteractiveWidget(this.field_v[var5], (WidgetEventListener) (this));
+              this.field_t[var5].field_e = (WidgetRenderer) ((Object) var4);
               this.field_t[var5].field_k = HardwareOpenGlRenderer.field_wc;
-              this.field_t[var5].a(15, 0, 20 + var5 * 16, 80, (byte) 124);
+              this.field_t[var5].setBounds(15, 0, 20 + var5 * 16, 80, (byte) 124);
               this.a(this.field_t[var5], 1);
             }
-            this.field_t[var3_int] = new mi(mi.field_r, (no) (this));
-            this.field_t[var3_int].field_e = (ir) ((Object) var4);
-            this.field_t[var3_int].a(15, 0, var3_int * 16 + 16 + 20, 100, (byte) 123);
+            this.field_t[var3_int] = new InteractiveWidget(InteractiveWidget.field_r, (WidgetEventListener) (this));
+            this.field_t[var3_int].field_e = (WidgetRenderer) ((Object) var4);
+            this.field_t[var3_int].setBounds(15, 0, var3_int * 16 + 16 + 20, 100, (byte) 123);
             this.a(this.field_t[var3_int], 1);
             return;
           }
@@ -139,17 +139,17 @@ final class ek extends ab implements dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         String stackIn_16_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (int var6_int = 0; this.field_v.length > var6_int; var6_int++) {
             if (this.field_t[var6_int] == param1) {
-              this.field_w.a(this.field_v[var6_int], 10000536);
+              this.field_w.onNameSuggestionSelected(this.field_v[var6_int], 10000536);
             }
           }
           if (param1 == this.field_t[this.field_v.length]) {
-            this.field_w.a((byte) -77);
+            this.field_w.onNameSuggestionsRefreshRequested((byte) -77);
           }
           int var6_intLifetime1 = -47 / ((param4 + 27) / 61);
           return;

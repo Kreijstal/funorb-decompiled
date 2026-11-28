@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ab implements ue, dn, bh {
+final class AccountRegistrationPanel extends ab implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_E;
     private ValidatedTextField field_u;
-    private vq field_C;
-    ek field_B;
+    private RichTextWidget field_C;
+    NameSuggestionsPanel field_B;
     private ValidatedTextField field_x;
     private ValidatedTextField field_F;
     static IntrusiveDeque hudMessages;
@@ -13,11 +13,11 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
     static String[] field_G;
     private sq field_z;
     private ValidatedTextField field_y;
-    private mi field_A;
-    private mi field_w;
+    private InteractiveWidget field_A;
+    private InteractiveWidget field_w;
     static Sprite field_v;
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         try {
           if (param1 == this.field_w) {
             RasterBuffer.b((byte) -26);
@@ -30,11 +30,11 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_13_2 = null;
         try {
           int var5_int = 120 / ((-53 - param0) / 33);
-          if (super.a(-127, param1, param2, param3)) {
+          if (super.handleKey(-127, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
@@ -60,11 +60,11 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         try {
           if (param1 != 10000536) {
-            mi var5 = (mi) null;
-            this.a(-60, (mi) null, -13, 100, (byte) -81);
+            InteractiveWidget var5 = (InteractiveWidget) null;
+            this.onWidgetActivated(-60, (InteractiveWidget) null, -13, 100, (byte) -81);
           }
           ValidatedTextField var3 = this.field_D;
           String var4 = param0;
@@ -87,9 +87,9 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         return wk.a(this.field_D.field_f, var2, this.field_y.field_f, this.field_E.field_f, this, 0, this.field_z.field_s);
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         try {
-          super.a((byte) 79, param1, param2, param3);
+          super.updatePointer((byte) 79, param1, param2, param3);
           this.field_A.field_u = this.canSubmitRegistration(56);
           if (param0 < 13) {
             AccountRegistrationPanel.h(-67);
@@ -99,7 +99,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    private final int a(String param0, int param1, ea param2, byte param3, int param4, int param5, String param6) {
+    private final int a(String param0, int param1, UiWidget param2, byte param3, int param4, int param5, String param6) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -110,7 +110,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
             field_G = (String[]) null;
           }
           kb var9 = new kb(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(0), param0, 126, var10.field_n + param1, 50 + param4, param5);
-          var9.field_o = (no) (this);
+          var9.field_o = (WidgetEventListener) (this);
           this.a(var9, 1);
           int stackIn_3_0 = var9.field_n + var10.field_n;
           return stackIn_3_0;
@@ -140,7 +140,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    private final int a(String param0, int param1, ea param2, String param3, int param4, int param5) {
+    private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -178,14 +178,14 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
 
     private final String j(int param0) {
         if (param0 >= -4) {
-          mi var3 = (mi) null;
-          this.a(-75, (mi) null, -83, 121, (byte) -70);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated(-75, (InteractiveWidget) null, -83, 121, (byte) -70);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, String param1, ea param2, int param3, int param4) {
+    private final int a(int param0, String param1, UiWidget param2, int param3, int param4) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
@@ -216,11 +216,11 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_D.getFieldValidator(0))).e(param0 ^ 48);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_D.getFieldValidator(0))).invalidateCheckedName(param0 ^ 48);
         if (param0 != -77) {
           String var3 = (String) null;
-          this.a((String) null, 30);
+          this.onNameSuggestionSelected((String) null, 30);
         }
     }
 
@@ -253,17 +253,17 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
     }
 
     public AccountRegistrationPanel() {
-        super(0, 0, 496, 0, (ir) null);
-        this.field_D = new ValidatedTextField("", (no) null, 12);
-        this.field_E = new ValidatedTextField("", (no) null, 100);
-        this.field_u = new ValidatedTextField("", (no) null, 100);
-        this.field_y = new ValidatedTextField("", (no) null, 20);
-        this.field_F = new ValidatedTextField("", (no) null, 20);
-        this.field_x = new ValidatedTextField("", (no) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_D = new ValidatedTextField("", (WidgetEventListener) null, 12);
+        this.field_E = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_u = new ValidatedTextField("", (WidgetEventListener) null, 100);
+        this.field_y = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_F = new ValidatedTextField("", (WidgetEventListener) null, 20);
+        this.field_x = new ValidatedTextField("", (WidgetEventListener) null, 3);
         boolean var1 = true;
-        this.field_z = new sq("", (no) null, (var1));
-        this.field_A = new mi(mg.field_a, (no) null);
-        this.field_w = new mi(Aircraft.field_s, (no) null);
+        this.field_z = new sq("", (WidgetEventListener) null, (var1));
+        this.field_A = new InteractiveWidget(mg.field_a, (WidgetEventListener) null);
+        this.field_w = new InteractiveWidget(Aircraft.field_s, (WidgetEventListener) null);
         this.field_D.field_k = ht.field_e;
         this.field_E.field_k = AgeValidator.field_e;
         this.field_u.field_k = ol.field_f;
@@ -278,17 +278,17 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         this.field_F.setFieldValidator(new MatchingFieldValidator(this.field_F, this.field_y), 1472);
         this.field_x.setFieldValidator(new AgeValidator(this.field_x), 1472);
         this.field_A.field_u = false;
-        this.field_A.field_e = (ir) ((Object) new qb());
-        this.field_w.field_e = (ir) ((Object) new wg());
-        this.field_D.field_e = (ir) ((Object) new sl(10000536));
+        this.field_A.field_e = (WidgetRenderer) ((Object) new qb());
+        this.field_w.field_e = (WidgetRenderer) ((Object) new wg());
+        this.field_D.field_e = (WidgetRenderer) ((Object) new sl(10000536));
         sl dupTemp$0 = new sl(10000536);
-        this.field_u.field_e = (ir) ((Object) dupTemp$0);
-        this.field_E.field_e = (ir) ((Object) dupTemp$0);
-        this.field_x.field_e = (ir) ((Object) new sl(10000536));
-        this.field_z.field_e = (ir) ((Object) new jf());
+        this.field_u.field_e = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_E.field_e = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_x.field_e = (WidgetRenderer) ((Object) new sl(10000536));
+        this.field_z.field_e = (WidgetRenderer) ((Object) new jf());
         ul dupTemp$1 = new ul(10000536);
-        this.field_F.field_e = (ir) ((Object) dupTemp$1);
-        this.field_y.field_e = (ir) ((Object) dupTemp$1);
+        this.field_F.field_e = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_y.field_e = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = sn.a(we.field_b, 107, new String[]{this.j(-99), this.i(-111)});
         int var3 = 20;
         var3 = var3 + this.a(var3, ah.field_r, this.field_E, -1, 170);
@@ -300,27 +300,27 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         bc var4 = new bc(46, var3, -90 + this.field_q, 25, this.field_z, true, this.field_q - 120, 5, oi.field_c, 11579568, as.field_a);
         this.a(var4, 1);
         var3 = var3 + var4.field_n;
-        qm var5 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, qo.field_b.maxAscent, -1, 2147483647, true);
-        this.field_C = new vq(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(qo.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, qo.field_b.maxAscent, -1, 2147483647, true);
+        this.field_C = new RichTextWidget(var2, var5);
         this.field_C.field_k = "";
         this.field_C.a(-126, m.field_g, 0);
         this.field_C.a(-88, m.field_g, 1);
-        this.field_C.field_o = (no) (this);
+        this.field_C.field_o = (WidgetEventListener) (this);
         this.field_C.a(46, var3, -90 + this.field_q, (byte) 110);
         var3 = var3 + (this.field_C.field_n + 15);
         this.a(this.field_C, 1);
         int var6 = 4;
         int var7 = 200;
-        this.field_A.a(40, -var7 + 496 >> 1, var3, var7, (byte) 126);
-        this.field_w.a(40, var6 + 3, 15 + var3, 60, (byte) 124);
-        this.field_w.field_o = (no) (this);
-        this.field_A.field_o = (no) (this);
+        this.field_A.setBounds(40, -var7 + 496 >> 1, var3, var7, (byte) 126);
+        this.field_w.setBounds(40, var6 + 3, 15 + var3, 60, (byte) 124);
+        this.field_w.field_o = (WidgetEventListener) (this);
+        this.field_A.field_o = (WidgetEventListener) (this);
         this.a(this.field_A, 1);
         this.a(this.field_w, 1);
-        this.field_B = new ek((bh) (this));
-        this.field_B.a(150, this.field_D.field_p + (this.field_D.field_q + 60), this.field_D.field_h + 20, -60 - this.field_D.field_q - this.field_D.field_p + this.field_q, (byte) 126);
+        this.field_B = new NameSuggestionsPanel((NameSuggestionListener) (this));
+        this.field_B.setBounds(150, this.field_D.field_p + (this.field_D.field_q + 60), this.field_D.field_h + 20, -60 - this.field_D.field_q - this.field_D.field_p + this.field_q, (byte) 126);
         this.a(this.field_B, 1);
-        this.a(var3 - (-55 - var6), 0, 0, 496, (byte) 127);
+        this.setBounds(var3 - (-55 - var6), 0, 0, 496, (byte) 127);
     }
 
     final static int reverseLowBits(int param0, int param1, int param2) {
@@ -348,7 +348,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         String stackIn_20_2 = null;
         try {
           if (param1 >= -98) {
-            this.field_B = (ek) null;
+            this.field_B = (NameSuggestionsPanel) null;
           }
           FieldValidator var3 = param0.getFieldValidator(0);
           if (var3 == null) {
@@ -379,7 +379,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         }
     }
 
-    public final void a(byte param0, int param1, vq param2, int param3) {
+    public final void onTextHotspotActivated(byte param0, int param1, RichTextWidget param2, int param3) {
         String stackIn_14_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -426,7 +426,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         field_v = null;
     }
 
-    private final int a(boolean param0, String param1, ea param2, int param3, int param4) {
+    private final int a(boolean param0, String param1, UiWidget param2, int param3, int param4) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
@@ -434,7 +434,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
           this.a(var8, 1);
           pi var7 = new pi(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(0));
           this.a(var7, 1);
-          var7.a(15, 3 + (var8.field_q + var8.field_p), (-15 + var8.field_n >> 1) + var8.field_h, 15, (byte) 123);
+          var7.setBounds(15, 3 + (var8.field_q + var8.field_p), (-15 + var8.field_n >> 1) + var8.field_h, 15, (byte) 123);
           int stackIn_1_0 = var8.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

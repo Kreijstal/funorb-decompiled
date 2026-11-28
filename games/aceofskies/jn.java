@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends ab implements dn {
+final class jn extends ab implements WidgetActivationListener {
     static String field_u;
-    private mi[] field_y;
+    private InteractiveWidget[] field_y;
     static boolean field_t;
     private oo field_x;
     private String field_z;
@@ -12,14 +12,14 @@ final class jn extends ab implements dn {
     private int[] field_A;
 
     jn(oo param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (ir) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         this.field_v = 0;
         try {
           this.field_x = param0;
           this.field_z = param2;
           this.field_w = param1;
           int var4_int = null != this.field_z ? this.field_w.measureWrappedHeight(this.field_z, 260, this.field_w.maxAscent) : 0;
-          this.a(22 + var4_int, 0, 0, 288, (byte) 127);
+          this.setBounds(22 + var4_int, 0, 0, 288, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -33,21 +33,21 @@ final class jn extends ab implements dn {
         field_u = null;
     }
 
-    final mi a(no param0, int param1, String param2) {
+    final InteractiveWidget a(WidgetEventListener param0, int param1, String param2) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
-          mi var4 = new mi(param2, param0);
-          var4.field_e = (ir) ((Object) new qb());
+          InteractiveWidget var4 = new InteractiveWidget(param2, param0);
+          var4.field_e = (WidgetRenderer) ((Object) new qb());
           if (param1 != 17547) {
             String var6 = (String) null;
-            this.a((no) null, 91, (String) null);
+            this.a((WidgetEventListener) null, 91, (String) null);
           }
           int var5 = -2 + this.field_n;
-          this.a(34 + this.field_n, 0, 0, this.field_q, (byte) 123);
-          var4.a(30, 7, var5, -14 + this.field_q, (byte) 123);
+          this.setBounds(34 + this.field_n, 0, 0, this.field_q, (byte) 123);
+          var4.setBounds(30, 7, var5, -14 + this.field_q, (byte) 123);
           this.a(var4, param1 - 17546);
-          mi stackIn_3_0 = var4;
+          InteractiveWidget stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -69,7 +69,7 @@ final class jn extends ab implements dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (int var6_int = 0; var6_int < this.field_v; var6_int++) {
@@ -112,8 +112,8 @@ final class jn extends ab implements dn {
         if (this.field_v >= param1) {
           return;
         }
-        mi[] var7 = new mi[param1];
-        mi[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (int var5 = 0; var5 < this.field_v; var5++) {
           var7[var5] = this.field_y[var5];
@@ -169,11 +169,11 @@ final class jn extends ab implements dn {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param0 <= 64) {
-          this.field_y = (mi[]) null;
+          this.field_y = (InteractiveWidget[]) null;
         }
-        super.a((byte) 119, param1, param2, param3);
+        super.drawWidget((byte) 119, param1, param2, param3);
         this.field_w.drawParagraph(this.field_z, this.field_p + param3 + 14, 10 + this.field_h + param2, this.field_q - 28, this.field_n, 16777215, -1, 0, 0, this.field_w.maxAscent);
     }
 
@@ -181,7 +181,7 @@ final class jn extends ab implements dn {
         try {
           int var4_int = this.field_v;
           this.a(1, 1 + var4_int);
-          this.field_y[var4_int] = this.a((no) (this), 17547, param2);
+          this.field_y[var4_int] = this.a((WidgetEventListener) (this), 17547, param2);
           this.field_A[var4_int] = param0;
           int var5 = -116 % ((param1 - 17) / 58);
         } catch (RuntimeException runtimeException) {

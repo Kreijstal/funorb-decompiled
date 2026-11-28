@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co {
+final class TextLineMetrics {
     int field_d;
     static lh field_k;
     static String field_j;
@@ -17,7 +17,7 @@ final class co {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -13392) {
-          co.a(24, -31, -7, 40, 82);
+          TextLineMetrics.a(24, -31, -7, 40, 82);
         }
         field_j = null;
         field_g = null;
@@ -25,7 +25,7 @@ final class co {
         field_k = null;
     }
 
-    final int a(boolean param0, int param1) {
+    final int findNearestCharacterIndex(boolean param0, int param1) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_h == null) {
           return 0;
@@ -44,7 +44,7 @@ final class co {
         return -1 + this.field_h.length;
     }
 
-    final int a(boolean param0) {
+    final int getRightX(boolean param0) {
         int stackIn_7_0 = 0;
         if (!param0) {
           return -8;
@@ -66,7 +66,7 @@ final class co {
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 <= 109) {
-            co.a(23, -77, 74, -119, -5);
+            TextLineMetrics.a(23, -77, 74, -119, -5);
           }
           int var5_int = param3 + param2;
           int var6 = param0 + param1;
@@ -156,7 +156,7 @@ final class co {
         }
     }
 
-    co(int param0, int param1, int param2) {
+    TextLineMetrics(int param0, int param1, int param2) {
         this.field_d = param1;
         this.field_f = param0;
         this.field_h = new int[param2 + 1];

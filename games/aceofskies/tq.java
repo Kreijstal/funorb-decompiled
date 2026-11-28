@@ -40,7 +40,7 @@ final class tq extends fa {
         za.registerMenuLayout(32, new int[]{8, 9, 10, 21, 5, 20}, 400, 30, 2, 468, (byte) 120);
         GlyphMask.menuScreens[2] = new MenuScreen(2);
         if (qr.field_a <= 0) {
-          co.returnMenuId = 0;
+          TextLineMetrics.returnMenuId = 0;
           if ((64 & hg.field_D) != 0) {
             si.c(true);
             return;
@@ -57,7 +57,7 @@ final class tq extends fa {
           za.registerMenuLayout(32, new int[]{12, 13, 4, 5}, 180, 170, 7, 470, (byte) 87);
           GlyphMask.menuScreens[7] = new MenuScreen(7);
         }
-        co.returnMenuId = 0;
+        TextLineMetrics.returnMenuId = 0;
         if ((64 & hg.field_D) != 0) {
           si.c(true);
           return;

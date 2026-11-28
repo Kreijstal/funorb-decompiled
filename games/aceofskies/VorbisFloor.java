@@ -149,7 +149,7 @@ final class VorbisFloor {
         int var2 = this.field_d.length;
         System.arraycopy(this.field_d, 0, field_k, 0, var2);
         int var3 = field_l[this.field_a - 1];
-        int var4 = ek.bitLength((byte) 125, var3 - 1);
+        int var4 = NameSuggestionsPanel.bitLength((byte) 125, var3 - 1);
         field_c[0] = VorbisSample.readBits(var4);
         field_c[1] = VorbisSample.readBits(var4);
         int var5 = 2;

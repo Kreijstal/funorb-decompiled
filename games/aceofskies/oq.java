@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends rg implements dn {
-    private mi field_J;
+final class oq extends rg implements WidgetActivationListener {
+    private InteractiveWidget field_J;
     static int field_K;
 
     oq(lt param0, lh param1) {
@@ -12,7 +12,7 @@ final class oq extends rg implements dn {
         String stackIn_16_2 = null;
         try {
           var3 = null;
-          if (param1 == co.field_k) {
+          if (param1 == TextLineMetrics.field_k) {
             var3 = ht.field_h;
           } else if (param1 == OpenGlIndexBuffer.field_r) {
             var3 = tt.field_b;
@@ -25,14 +25,14 @@ final class oq extends rg implements dn {
             var3 = ur.field_c;
             this.field_n = this.field_n + 30;
           }
-          ea var4 = new ea((String) (var3), (no) null);
+          UiWidget var4 = new UiWidget((String) (var3), (WidgetEventListener) null);
           var4.field_q = this.field_q;
           var4.field_h = 50;
           var4.field_n = 80;
           var4.field_p = 0;
-          var4.field_e = (ir) ((Object) new qm(oi.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_e = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(oi.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, 1);
-          this.field_J = this.a(ne.field_e, -83, (no) (this));
+          this.field_J = this.a(ne.field_e, -83, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ final class oq extends rg implements dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         try {
           if (this.field_J == param1) {
             this.g((byte) 22);
@@ -75,19 +75,19 @@ final class oq extends rg implements dn {
         this.field_z = false;
     }
 
-    private final mi a(String param0, int param1, no param2) {
+    private final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
-          mi var4 = new mi(param0, param2);
-          var4.field_e = (ir) ((Object) new qb());
+          InteractiveWidget var4 = new InteractiveWidget(param0, param2);
+          var4.field_e = (WidgetRenderer) ((Object) new qb());
           int var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
-          var4.a(30, 15, var5, -16 + (-14 + this.field_q), (byte) 125);
+          var4.setBounds(30, 15, var5, -16 + (-14 + this.field_q), (byte) 125);
           this.a(var4, 1);
           int var6 = -20 / ((param1 - 1) / 59);
-          this.a(false);
-          mi stackIn_1_0 = var4;
+          this.refreshLayout(false);
+          InteractiveWidget stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

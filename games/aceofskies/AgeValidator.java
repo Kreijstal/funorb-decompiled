@@ -62,7 +62,7 @@ final class AgeValidator extends TextFieldValidator {
           return;
         }
         try {
-          vg.field_j.put(param2, param1);
+          RichTextLayout.field_j.put(param2, param1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

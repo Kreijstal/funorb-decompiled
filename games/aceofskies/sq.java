@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq extends mi {
-    sq(String param0, no param1, boolean param2) {
+final class sq extends InteractiveWidget {
+    sq(String param0, WidgetEventListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.field_s = param2 ? true : false;
@@ -11,12 +11,12 @@ final class sq extends mi {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_s = !this.field_s ? true : false;
-        super.a(param0 ^ param0, param1, param2, param3);
+        super.activateFromInput(param0 ^ param0, param1, param2, param3);
     }
 
-    private sq(String param0, ir param1, no param2) {
+    private sq(String param0, WidgetRenderer param1, WidgetEventListener param2) {
         super(param0, param1, param2);
         try {
           this.field_e = ArchiveRequest.field_n.field_g;
@@ -25,7 +25,7 @@ final class sq extends mi {
         }
     }
 
-    private sq(String param0, no param1) {
+    private sq(String param0, WidgetEventListener param1) {
         this(param0, ArchiveRequest.field_n.field_c, param1);
         try {
           this.field_e = ArchiveRequest.field_n.field_g;

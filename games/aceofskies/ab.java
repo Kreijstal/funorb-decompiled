@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-class ab extends ea implements vm {
+class ab extends UiWidget implements vm {
     IntrusiveDeque field_s;
     static String field_r;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         String stackIn_15_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -15,11 +15,11 @@ class ab extends ea implements vm {
           if (param0 != 34) {
             field_r = (String) null;
           }
-          ea var9 = (ea) (var8.c(-1372));
+          UiWidget var9 = (UiWidget) (var8.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 106)) {
-              if (!var9.a(34, param1 + this.field_p, param2, param3, this.field_h + param4, param5, param6)) {
-                var9 = (ea) (var8.a(126));
+              if (!var9.pointerPressed(34, param1 + this.field_p, param2, param3, this.field_h + param4, param5, param6)) {
+                var9 = (UiWidget) (var8.a(126));
                 continue;
               }
               return true;
@@ -41,16 +41,16 @@ class ab extends ea implements vm {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
-        ea var3 = (ea) (var2.c(-1372));
+        UiWidget var3 = (UiWidget) (var2.c(-1372));
         while (var3 != null) {
-          String var4 = var3.c((byte) -112);
+          String var4 = var3.getTooltipText((byte) -112);
           if (var4 != null) {
             return var4;
           }
-          var3 = (ea) (var2.a(-12));
+          var3 = (UiWidget) (var2.a(-12));
         }
         if (param0 < -41) {
           return null;
@@ -60,35 +60,35 @@ class ab extends ea implements vm {
         return null;
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
+    void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param1 == 0 &&
           this.field_e != null) {
-          this.field_e.a(true, -7592, param3, (ea) (this), param2);
+          this.field_e.paintWidget(true, -7592, param3, (UiWidget) (this), param2);
         }
         an var5 = new an(this.field_s);
         if (param0 < 64) {
           return;
         }
-        ea var6 = (ea) (var5.b(true));
+        UiWidget var6 = (UiWidget) (var5.b(true));
         while (var6 != null) {
-          var6.a((byte) 100, param1, param2 + this.field_h, param3 + this.field_p);
-          var6 = (ea) (var5.a((byte) 120));
+          var6.drawWidget((byte) 100, param1, param2 + this.field_h, param3 + this.field_p);
+          var6 = (UiWidget) (var5.a((byte) 120));
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, boolean param6) {
+    final boolean handleWheel(int param0, int param1, int param2, int param3, int param4, UiWidget param5, boolean param6) {
         String stackIn_16_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           an var12 = new an(this.field_s);
-          ea var9 = (ea) (var12.c(-1372));
+          UiWidget var9 = (UiWidget) (var12.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 85)) {
-              if (var9.e(28660) &&
-                var9.a(param0, param1, param2, param3, param4, param5, false)) {
+              if (var9.isFocused(28660) &&
+                var9.handleWheel(param0, param1, param2, param3, param4, param5, false)) {
                 return true;
               }
-              var9 = (ea) (var12.a(-121));
+              var9 = (UiWidget) (var12.a(-121));
               continue;
             }
             break;
@@ -97,7 +97,7 @@ class ab extends ea implements vm {
             return false;
           }
           Hashtable var11 = (Hashtable) null;
-          this.a((StringBuilder) null, -90, 100, (Hashtable) null);
+          this.appendDebugTree((StringBuilder) null, -90, 100, (Hashtable) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ class ab extends ea implements vm {
         }
     }
 
-    final void a(ea param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           if (param1 != 1) {
             field_r = (String) null;
@@ -124,7 +124,7 @@ class ab extends ea implements vm {
         }
     }
 
-    final boolean a(int param0, ea param1) {
+    final boolean a(int param0, UiWidget param1) {
         String stackIn_23_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -135,20 +135,20 @@ class ab extends ea implements vm {
             return false;
           }
           an var8 = new an(this.field_s);
-          ea var4 = (ea) (var8.c(-1372));
+          UiWidget var4 = (UiWidget) (var8.c(-1372));
           while (var4 != null) {
-            if (var4.e(28660)) {
+            if (var4.isFocused(28660)) {
               an var5 = new an(this.field_s);
               var5.a(46, var4);
-              ea var6 = (ea) (var5.a(23));
+              UiWidget var6 = (UiWidget) (var5.a(23));
               while (var6 != null) {
-                if (var6.a(param1, (byte) -42)) {
+                if (var6.takeFocus(param1, (byte) -42)) {
                   return true;
                 }
-                var6 = (ea) (var5.a(-126));
+                var6 = (UiWidget) (var5.a(-126));
               }
             }
-            var4 = (ea) (var8.a(-123));
+            var4 = (UiWidget) (var8.a(-123));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,17 +165,17 @@ class ab extends ea implements vm {
         }
     }
 
-    final int f(int param0) {
+    final int getMaximumRenderLayer(int param0) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
         an var3 = new an(this.field_s);
-        ea var4 = (ea) (var3.c(param0 ^ -1372));
+        UiWidget var4 = (UiWidget) (var3.c(param0 ^ -1372));
         while (var4 != null) {
-          int var5 = var4.f(param0 + 0);
+          int var5 = var4.getMaximumRenderLayer(param0 + 0);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (ea) (var3.a(-119));
+          var4 = (UiWidget) (var3.a(-119));
         }
         return var2;
     }
@@ -185,14 +185,14 @@ class ab extends ea implements vm {
         String stackIn_15_2 = null;
         try {
           an var5 = new an(this.field_s);
-          ea var6 = (ea) (var5.c(-1372));
+          UiWidget var6 = (UiWidget) (var5.c(-1372));
           while (var6 != null) {
             StringBuilder discarded$2 = param3.append('\n');
             for (int var7 = 0; var7 <= param1; var7++) {
               StringBuilder discarded$3 = param3.append(' ');
             }
-            var6.a(param3, 32462, 1 + param1, param2);
-            var6 = (ea) (var5.a(param0 - 232));
+            var6.appendDebugTree(param3, 32462, 1 + param1, param2);
+            var6 = (UiWidget) (var5.a(param0 - 232));
           }
           if (param0 != 115) {
             this.field_s = (IntrusiveDeque) null;
@@ -218,21 +218,21 @@ class ab extends ea implements vm {
         }
     }
 
-    ab(int param0, int param1, int param2, int param3, ir param4) {
-        super(param0, param1, param2, param3, param4, (no) null);
+    ab(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.field_s = new IntrusiveDeque();
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, int param2, Hashtable param3) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         try {
-          if (this.a(param0, param2, false, param3)) {
-            this.a(param0, param1 ^ 32462, param3, param2);
+          if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
+            this.appendDebugProperties(param0, param1 ^ 32462, param3, param2);
             this.a((byte) 115, param2, param3, param0);
           }
           if (param1 != 32462) {
-            this.a((byte) 77, -41, -88, 96);
+            this.drawWidget((byte) 77, -41, -88, 96);
           }
           StringBuilder stackIn_5_0 = (StringBuilder) (param0);
           return stackIn_5_0;
@@ -256,16 +256,16 @@ class ab extends ea implements vm {
         }
     }
 
-    final void d(int param0) {
+    final void blur(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         if (param0 != 7398) {
           return;
         }
-        ea var3 = (ea) (var2.c(-1372));
+        UiWidget var3 = (UiWidget) (var2.c(-1372));
         while (var3 != null) {
-          var3.d(7398);
-          var3 = (ea) (var2.a(param0 - 7523));
+          var3.blur(7398);
+          var3 = (UiWidget) (var2.a(param0 - 7523));
         }
     }
 
@@ -277,32 +277,32 @@ class ab extends ea implements vm {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
-        super.a(param0, param1, param2, param3, (byte) 126);
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        super.setBounds(param0, param1, param2, param3, (byte) 126);
         if (param4 <= 122) {
-          ea var7 = (ea) null;
-          this.a((byte) -120, (ea) null, 59, 121);
+          UiWidget var7 = (UiWidget) null;
+          this.updatePointer((byte) -120, (UiWidget) null, 59, 121);
         }
         this.b(false);
     }
 
-    void a(byte param0, ea param1, int param2, int param3) {
+    void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         String stackIn_10_2 = null;
         try {
-          super.a((byte) 94, param1, param2, param3);
+          super.updatePointer((byte) 94, param1, param2, param3);
           an var5 = new an(this.field_s);
-          ea var6 = (ea) (var5.c(-1372));
+          UiWidget var6 = (UiWidget) (var5.c(-1372));
           while (var6 != null) {
             if (var6.isLinked((byte) 119)) {
-              var6.a((byte) 108, param1, param2 + this.field_h, this.field_p + param3);
-              var6 = (ea) (var5.a(-125));
+              var6.updatePointer((byte) 108, param1, param2 + this.field_h, this.field_p + param3);
+              var6 = (UiWidget) (var5.a(-125));
               continue;
             }
             break;
           }
           if (param0 <= 13) {
             Hashtable var7 = (Hashtable) null;
-            this.a((StringBuilder) null, -85, 34, (Hashtable) null);
+            this.appendDebugTree((StringBuilder) null, -85, 34, (Hashtable) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -319,21 +319,21 @@ class ab extends ea implements vm {
         }
     }
 
-    boolean a(int param0, int param1, char param2, ea param3) {
+    boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         boolean stackIn_15_0 = false;
         String stackIn_19_2 = null;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           an var10 = new an(this.field_s);
           int var6 = -95 / ((param0 + 53) / 33);
-          ea var9 = (ea) (var10.c(-1372));
+          UiWidget var9 = (UiWidget) (var10.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 95)) {
-              if (var9.e(28660) &&
-                var9.a(-94, param1, param2, param3)) {
+              if (var9.isFocused(28660) &&
+                var9.handleKey(-94, param1, param2, param3)) {
                 return true;
               }
-              var9 = (ea) (var10.a(69));
+              var9 = (UiWidget) (var10.a(69));
               continue;
             }
             break;
@@ -362,7 +362,7 @@ class ab extends ea implements vm {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
+    final void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         String stackIn_11_2 = null;
         int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -370,11 +370,11 @@ class ab extends ea implements vm {
           if (param5 != 91) {
             return;
           }
-          ea var8 = (ea) (var7.c(-1372));
+          UiWidget var8 = (UiWidget) (var7.c(-1372));
           while (var8 != null) {
             if (var8.isLinked((byte) 115)) {
-              var8.a(param0 + this.field_p, param1 + this.field_h, param2, param3, param4, (byte) 91);
-              var8 = (ea) (var7.a(3));
+              var8.pointerReleased(param0 + this.field_p, param1 + this.field_h, param2, param3, param4, (byte) 91);
+              var8 = (UiWidget) (var7.a(3));
               continue;
             }
             break;
@@ -394,22 +394,22 @@ class ab extends ea implements vm {
         }
     }
 
-    final boolean e(int param0) {
+    final boolean isFocused(int param0) {
         if (param0 != 28660) {
           field_r = (String) null;
         }
         return this.a(0) != null ? true : false;
     }
 
-    ea a(int param0) {
+    UiWidget a(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
-        ea var3 = (ea) (var2.c(-1372));
+        UiWidget var3 = (UiWidget) (var2.c(-1372));
         while (var3 != null) {
-          if (var3.e(28660)) {
+          if (var3.isFocused(28660)) {
             return var3;
           }
-          var3 = (ea) (var2.a(-119));
+          var3 = (UiWidget) (var2.a(-119));
         }
         if (param0 == 0) {
           return null;
@@ -418,7 +418,7 @@ class ab extends ea implements vm {
         return null;
     }
 
-    final boolean b(ea param0, int param1) {
+    final boolean b(UiWidget param0, int param1) {
         String stackIn_23_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -427,23 +427,23 @@ class ab extends ea implements vm {
           }
           an var9 = new an(this.field_s);
           if (param1 >= -20) {
-            ea var8 = (ea) null;
-            this.a((ea) null, -61);
+            UiWidget var8 = (UiWidget) null;
+            this.a((UiWidget) null, -61);
           }
-          ea var4 = (ea) (var9.b(true));
+          UiWidget var4 = (UiWidget) (var9.b(true));
           while (var4 != null) {
-            if (var4.e(28660)) {
+            if (var4.isFocused(28660)) {
               an var5 = new an(this.field_s);
               var5.a(var4, 0);
-              ea var6 = (ea) (var5.a((byte) 120));
+              UiWidget var6 = (UiWidget) (var5.a((byte) 120));
               while (var6 != null) {
-                if (var6.a(param0, (byte) -42)) {
+                if (var6.takeFocus(param0, (byte) -42)) {
                   return true;
                 }
-                var6 = (ea) (var5.a((byte) 120));
+                var6 = (UiWidget) (var5.a((byte) 120));
               }
             }
-            var4 = (ea) (var9.a((byte) 120));
+            var4 = (UiWidget) (var9.a((byte) 120));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -460,20 +460,20 @@ class ab extends ea implements vm {
         }
     }
 
-    final boolean a(ea param0, byte param1) {
+    final boolean takeFocus(UiWidget param0, byte param1) {
         String stackIn_13_2 = null;
         try {
           an var3 = new an(this.field_s);
           if (param1 != -42) {
-            this.a((byte) 13, -25, 110, -87);
+            this.drawWidget((byte) 13, -25, 110, -87);
           }
-          ea var4 = (ea) (var3.c(-1372));
+          UiWidget var4 = (UiWidget) (var3.c(-1372));
           while (true) {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, (byte) -42)) {
-              var4 = (ea) (var3.a(param1 ^ -31));
+            if (!var4.takeFocus(param0, (byte) -42)) {
+              var4 = (UiWidget) (var3.a(param1 ^ -31));
               continue;
             }
             break;
@@ -495,13 +495,13 @@ class ab extends ea implements vm {
 
     private final void b(boolean param0) {
         an var2 = new an(this.field_s);
-        ea var3 = (ea) (var2.c(-1372));
+        UiWidget var3 = (UiWidget) (var2.c(-1372));
         if (param0) {
           return;
         }
         while (var3 != null) {
-          var3.a(false);
-          var3 = (ea) (var2.a(-124));
+          var3.refreshLayout(false);
+          var3 = (UiWidget) (var2.a(-124));
         }
     }
 

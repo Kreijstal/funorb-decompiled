@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pp {
+abstract class TextLayout {
     static int field_a;
-    co[] field_b;
+    TextLineMetrics[] field_b;
 
-    final int a(int param0, byte param1, int param2) {
+    final int getTextOffsetAt(int param0, byte param1, int param2) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_b == null ||
           0 == this.field_b.length ||
@@ -16,17 +16,17 @@ abstract class pp {
           return -1;
         }
         if (1 == this.field_b.length) {
-          return this.field_b[0].a(true, param0);
+          return this.field_b[0].findNearestCharacterIndex(true, param0);
         }
         int var4 = 0;
         if (param1 < 34) {
-          this.a(103);
+          this.getLayoutHeight(103);
         }
         for (int var5 = 0; this.field_b.length > var5; var5++) {
-          co var6 = this.field_b[var5];
+          TextLineMetrics var6 = this.field_b[var5];
           if (param2 >= var6.field_f &&
             !(var6.field_d < param2)) {
-            int var7 = var6.a(true, param0);
+            int var7 = var6.findNearestCharacterIndex(true, param0);
             if (-1 == var7) {
               return -1;
             }
@@ -37,13 +37,13 @@ abstract class pp {
         return -1;
     }
 
-    final int a(int param0, int param1) {
+    final int getLineIndexForTextOffset(int param0, int param1) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           return 124;
         }
         for (int var3 = 0; var3 < this.field_b.length; var3++) {
-          co var4 = this.field_b[var3];
+          TextLineMetrics var4 = this.field_b[var3];
           if (!(var4.field_h.length <= param1)) {
             return var3;
           }
@@ -52,16 +52,16 @@ abstract class pp {
         return this.field_b.length;
     }
 
-    final int b(int param0, int param1) {
+    final int getXForTextOffset(int param0, int param1) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
-        co[] var7 = this.field_b;
-        co[] var3 = var7;
+        TextLineMetrics[] var7 = this.field_b;
+        TextLineMetrics[] var3 = var7;
         int var4 = 0;
         if (param1 >= -101) {
           return 7;
         }
         while (var4 < var7.length) {
-          co var5 = var7[var4];
+          TextLineMetrics var5 = var7[var4];
           if (param0 < var5.field_h.length) {
             return var5.field_h[param0];
           }
@@ -151,19 +151,19 @@ abstract class pp {
         }
     }
 
-    final int a(byte param0) {
+    final int getMaxLineRightX(byte param0) {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = -1;
         if (param0 != 24) {
           String var8 = (String) null;
-          pp.a((String[]) null, -43, (String) null, -67);
+          TextLayout.a((String[]) null, -43, (String) null, -67);
         }
         if (null != this.field_b) {
-          co[] var3 = this.field_b;
+          TextLineMetrics[] var3 = this.field_b;
           for (int var4 = 0; var3.length > var4; var4++) {
-            co var5 = var3[var4];
+            TextLineMetrics var5 = var3[var4];
             if (var5 != null) {
-              int var6 = var5.a(true);
+              int var6 = var5.getRightX(true);
               if (var2 < var6) {
                 var2 = var6;
               }
@@ -173,10 +173,10 @@ abstract class pp {
         return var2;
     }
 
-    final int a(int param0) {
+    final int getLayoutHeight(int param0) {
         int stackIn_6_0 = 0;
         if (param0 != 0) {
-          this.a((byte) 95);
+          this.getMaxLineRightX((byte) 95);
         }
         if (this.field_b != null &&
           this.field_b.length > 0) {

@@ -57,7 +57,7 @@ final class ng extends rg {
         }
     }
 
-    final static void a(BitmapFont param0, String param1, co param2, int param3, byte param4) {
+    final static void a(BitmapFont param0, String param1, TextLineMetrics param2, int param3, byte param4) {
         String stackIn_20_2 = null;
         String stackIn_23_2 = null;
         String stackIn_26_2 = null;
@@ -115,8 +115,8 @@ final class ng extends rg {
     public static void j(int param0) {
         field_J = null;
         if (param0 != 11617) {
-          co var2 = (co) null;
-          ng.a((BitmapFont) null, (String) null, (co) null, 27, (byte) -23);
+          TextLineMetrics var2 = (TextLineMetrics) null;
+          ng.a((BitmapFont) null, (String) null, (TextLineMetrics) null, 27, (byte) -23);
         }
     }
 

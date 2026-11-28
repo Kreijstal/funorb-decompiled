@@ -10,7 +10,7 @@ final class sh extends to {
         field_v = null;
     }
 
-    private sh(int param0, int param1, int param2, int param3, ir param4, no param5, ea param6) {
+    private sh(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_s = param6;
@@ -19,14 +19,14 @@ final class sh extends to {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
+    final void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         String stackIn_11_2 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.pointerReleased(param0, param1, param2, param3, param4, param5);
           hg var8 = mm.field_a;
           hg var7 = var8;
           if (var8 != null) {
-            if (!this.a(param2, param1, param5 ^ -122, param0, param3)) {
+            if (!this.containsPointer(param2, param1, param5 ^ -122, param0, param3)) {
               return;
             }
             if (this.field_o instanceof ma) {

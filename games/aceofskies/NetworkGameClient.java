@@ -43,7 +43,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 2) {
             int var5_intLifetime1 = mj.a(BufferElementType.a(4), param0 ^ 11, this.field_E, ve.a(true), LoginPanel.g(-3), sa.b(-25752), of.a(false));
             if (-1 != var5_intLifetime1) {
-              pp.a(sd.field_j, var5_intLifetime1, HardwareRenderSprite.field_m, param0 + 26318);
+              TextLayout.a(sd.field_j, var5_intLifetime1, HardwareRenderSprite.field_m, param0 + 26318);
               sd.field_j = null;
               HardwareRenderSprite.field_m = null;
             }
@@ -316,7 +316,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + ArchiveRequest.field_s;
         byte[] var5 = new byte[var4];
         IntKeyLookup.incomingPacket.a(var5, var4, 0, false);
-        wc.a(ea.a(0, var5), EditableTextField.m(125), 14301, (var3));
+        wc.a(UiWidget.a(0, var5), EditableTextField.m(125), 14301, (var3));
     }
 
     private final int j(int param0) {
@@ -376,7 +376,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.a(false, -10);
         }
         fb.field_e = this.field_D;
-        qm.a(fb.field_e, (byte) -44);
+        DefaultTextWidgetRenderer.a(fb.field_e, (byte) -44);
         ka.a(-31808, this.field_z, this.field_w, 5000, this.field_F, param1, this.field_A, 5000, fb.field_e, this.field_s, this.field_y, this.field_u, pt.field_b, param2);
         hh.a(this.field_F, this.field_w, this.field_y, param2, (byte) -36, pt.field_b, fb.field_e, this.field_u, this.field_s);
         du.k(-128);
@@ -547,9 +547,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (rt.field_h == null) {
             rt.field_h = RasterBuffer.c((byte) -101);
-            co.field_c = ci.b(15);
+            TextLineMetrics.field_c = ci.b(15);
           }
-          du.a(co.field_c, 37, rt.field_h, cf.field_f);
+          du.a(TextLineMetrics.field_c, 37, rt.field_h, cf.field_f);
           oi.field_a = null;
           uj.field_b = null;
           cf.field_f = null;

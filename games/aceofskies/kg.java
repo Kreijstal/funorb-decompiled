@@ -23,14 +23,14 @@ final class kg {
             int var6_int = param5[0].fullWidth;
             int var7 = param5[2].fullWidth;
             int var8 = param5[1].fullWidth;
-            param5[0].b(param1, param3, param2);
-            param5[2].b(param4 + (param1 - var7), param3, param2);
+            param5[0].drawTintedGray(param1, param3, param2);
+            param5[2].drawTintedGray(param4 + (param1 - var7), param3, param2);
             SoftwareRasterizer.saveClip(rl.field_a);
             SoftwareRasterizer.intersectClip(var6_int + param1, param3, param4 + (param1 - var7), param5[1].fullHeight + param3);
             int var9 = param1 + var6_int;
             int var10 = -var7 + (param1 + param4);
             for (param1 = var9; param1 < var10; param1 = param1 + var8) {
-              param5[1].b(param1, param3, param2);
+              param5[1].drawTintedGray(param1, param3, param2);
             }
             int var11 = -92 / ((param0 + 40) / 54);
             SoftwareRasterizer.restoreClip(rl.field_a);
@@ -94,13 +94,13 @@ final class kg {
           Sprite var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           Sprite var18 = var15;
           var18.makeRasterTarget();
-          var17.c(0, 0);
+          var17.drawOpaque(0, 0);
           Sprite var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.makeRasterTarget();
-          var17.c(var9Lifetime1 - var17.width, 0);
+          var17.drawOpaque(var9Lifetime1 - var17.width, 0);
           Sprite var12 = new Sprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
           var12.makeRasterTarget();
-          var17.c(-var9Lifetime1, 0);
+          var17.drawOpaque(-var9Lifetime1, 0);
           sl.c(param0 + 2761);
           u.field_i = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

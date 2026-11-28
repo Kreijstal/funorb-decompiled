@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    final void b(int param0, int param1, int param2) {
+    final void drawTintedGray(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -43,7 +43,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -84,7 +84,7 @@ final class ArgbSprite extends Sprite {
         ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
-    final void b(int param0, int param1) {
+    final void draw(int param0, int param1) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -157,7 +157,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -248,7 +248,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -348,7 +348,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;

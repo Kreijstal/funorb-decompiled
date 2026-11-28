@@ -82,7 +82,7 @@ abstract class rg extends gm {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        eo.field_b.b(-90 + (param1 + this.field_q), param2 + 10);
+        eo.field_b.draw(-90 + (param1 + this.field_q), param2 + 10);
         cf.a(ArchiveProvider.field_c, param1 + 5, (byte) -121, 35 + param2, this.field_q - 10);
         cf.a(HighscoreQuery.field_k, param1, (byte) -114, this.field_n + param2 - 22, this.field_q);
         int var4Lifetime2 = this.field_n - 79;

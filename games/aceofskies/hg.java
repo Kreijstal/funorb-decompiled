@@ -16,15 +16,15 @@ final class hg extends to {
     static int field_D;
     static int[] field_C;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
+    final boolean pointerPressed(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
         String stackIn_14_2 = null;
         try {
-          boolean var8_int = (super.a((int) (char)param0, param1, param2, param3, param4, param5, param6));
+          boolean var8_int = (super.pointerPressed((int) (char)param0, param1, param2, param3, param4, param5, param6));
           if (var8_int &&
             this.field_E) {
             return true;
           }
-          if (!this.a(param6, param4, -73, param1, param2)) {
+          if (!this.containsPointer(param6, param4, -73, param1, param2)) {
             boolean stackIn_6_0 = var8_int;
             return (stackIn_6_0);
           }
@@ -84,12 +84,12 @@ final class hg extends to {
         }
     }
 
-    final StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
+    final StringBuilder appendDebugTree(StringBuilder param0, int param1, int param2, Hashtable param3) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         try {
-          if (this.a(param0, param2, false, param3)) {
-            this.a(param0, 0, param3, param2);
+          if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
+            this.appendDebugProperties(param0, 0, param3, param2);
             this.a(param0, param3, (byte) -24, param2);
             StringBuilder discarded$64 = param0.append(" revert=").append(this.field_w);
             if (this.field_u != 2147483647 &&
@@ -130,7 +130,7 @@ final class hg extends to {
         hr.a(param2, (String) null, param0, (byte) -61);
     }
 
-    private hg(int param0, int param1, int param2, int param3, ir param4, no param5, ea param6, boolean param7, boolean param8) {
+    private hg(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_u = 2147483647;
         this.field_v = 2147483647;
@@ -143,14 +143,14 @@ final class hg extends to {
         }
     }
 
-    final void a(byte param0, ea param1, int param2, int param3) {
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         int stackIn_12_2 = 0;
         int stackIn_20_2 = 0;
         String stackIn_32_2 = null;
         int var5_int = 0;
         try {
-          if ((!(this.field_s instanceof mi) ||
-            ((mi) (this.field_s)).field_u) &&
+          if ((!(this.field_s instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_s)).field_u) &&
             this.field_i == 1) {
             var5_int = -param3 + (-this.field_B + ic.field_b);
             int var6 = -param2 + cf.field_g - this.field_A;
@@ -188,7 +188,7 @@ final class hg extends to {
               this.field_h = stackIn_17_1 + stackIn_20_2;
             }
           }
-          super.a((byte) 40, param1, param2, param3);
+          super.updatePointer((byte) 40, param1, param2, param3);
           if (param0 < 13) {
             this.field_w = false;
           }
@@ -371,9 +371,9 @@ final class hg extends to {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
+    final void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.pointerReleased(param0, param1, param2, param3, param4, param5);
           this.field_i = 0;
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "hg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -383,7 +383,7 @@ final class hg extends to {
     final void a(byte param0) {
         super.a((byte) -112);
         int var2 = 117 % ((-13 - param0) / 50);
-        this.field_s.a(this.field_n, 0, 0, this.field_q, (byte) 127);
+        this.field_s.setBounds(this.field_n, 0, 0, this.field_q, (byte) 127);
         this.field_v = this.field_h;
         this.field_u = this.field_p;
     }

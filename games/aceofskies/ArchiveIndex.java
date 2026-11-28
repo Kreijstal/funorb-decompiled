@@ -28,10 +28,10 @@ final class ArchiveIndex {
         try {
           int var2_int = 60 / ((param1 - 53) / 55);
           if (null != qk.field_e) {
-            qk.field_e.field_B.a(args, true);
+            qk.field_e.field_B.setNameSuggestions(args, true);
           }
           if (null != fd.field_f) {
-            fd.field_f.field_t.a(args, true);
+            fd.field_f.field_t.setNameSuggestions(args, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,7 +292,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_c = qm.a(0, param0.length, param0, 0);
+            this.field_c = DefaultTextWidgetRenderer.a(0, param0.length, param0, 0);
             for (int var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_c[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

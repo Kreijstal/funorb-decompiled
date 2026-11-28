@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de implements ir {
+final class de implements WidgetRenderer {
     private BitmapFont field_c;
     private int field_d;
     private int field_e;
@@ -11,7 +11,7 @@ final class de implements ir {
     private int field_f;
     private int field_h;
 
-    public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
+    public final void paintWidget(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           cn var14 = !(param3 instanceof cn) ? null : (cn) (param3);
           SoftwareRasterizer.fillRectangle(param3.field_p + param2, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_b);
@@ -71,10 +71,10 @@ final class de implements ir {
             int stackIn_3_0 = -79;
             return stackIn_3_0;
           }
-          AgeValidator.field_f.a(pd.field_b, true, qe.field_k, true);
+          AgeValidator.field_f.processPointerInput(pd.field_b, true, qe.field_k, true);
           AgeValidator.field_f.f((byte) -117);
-          while (ek.a((byte) -127)) {
-            AgeValidator.field_f.a(param0 - 42, AccountServiceResult.field_e, bk.lastKeyCode);
+          while (NameSuggestionsPanel.a((byte) -127)) {
+            AgeValidator.field_f.processKeyInput(param0 - 42, AccountServiceResult.field_e, bk.lastKeyCode);
           }
           if (-1 != InstrumentEnvelope.field_c) {
             int var1_int = InstrumentEnvelope.field_c;

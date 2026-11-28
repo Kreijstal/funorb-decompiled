@@ -149,7 +149,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     static {
         field_e = new String[]{"Press 1 for speed increase", "Press 2 for improved fire rate", "Press 3 for improved manoeuvrability", "Press 4 for extra armour", "Press 5 for extra life", "Press 6 for extra wingmen", "Press 7 for score multiplier"};
         field_l = "settings";
-        ek.bitLength((byte) 116, 1600);
+        NameSuggestionsPanel.bitLength((byte) 116, 1600);
         field_g = "Passwords can only contain letters and numbers";
     }
 }

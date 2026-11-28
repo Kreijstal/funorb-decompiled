@@ -8,16 +8,16 @@ final class sa {
     int field_l;
     int field_d;
     private int field_a;
-    ir field_g;
+    WidgetRenderer field_g;
     int field_e;
     int field_j;
-    ir field_n;
+    WidgetRenderer field_n;
     BitmapFont field_b;
-    ir field_c;
-    ir field_k;
+    WidgetRenderer field_c;
+    WidgetRenderer field_k;
     int field_i;
     static int[] field_h;
-    ir field_p;
+    WidgetRenderer field_p;
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 != -54) {
@@ -141,9 +141,9 @@ final class sa {
     final void a(BitmapFont param0, int param1) {
         int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          qm var17 = new qm(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.maxDescent + param0.maxAscent));
+          DefaultTextWidgetRenderer var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.maxDescent + param0.maxAscent));
           var17.field_m = 16777215;
-          this.field_k = (ir) ((Object) var17);
+          this.field_k = (WidgetRenderer) ((Object) var17);
           vi var4 = new vi();
           var17.a(var4, 27529);
           this.field_a = 15658734;
@@ -169,21 +169,21 @@ final class sa {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(param1 ^ -63, 4).a((byte) -50, true).a(var5, false);
           var4.a(-99, 5).a(LoginPanel.b(0, 65793, -29003, 0, 0), false).a((byte) -50, true).a(-1, param1 - 5);
-          this.field_c = (ir) ((Object) var4);
+          this.field_c = (WidgetRenderer) ((Object) var4);
           vi var6 = new vi(var4, true);
           var6.field_e = 0;
           vi var7 = new vi(var4, true);
           var7.field_e = 0;
           var7.a(-117, GameKeyHandler.a(8947848, false));
           var7.a(-105, 1).a(GameKeyHandler.a(11184810, false), false).a(2236962, -2);
-          this.field_g = (ir) ((Object) new lj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_g = (WidgetRenderer) ((Object) new lj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           de discarded$0 = new de(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           us discarded$1 = new us(param0, 16777215, -1, 125269879, 4473924, param1, 268435455);
           vi var8 = new vi();
           var17.a(var8, 27529);
           var8.a(param1 - 58, 0).a(SpriteState.a(-80, 10066329, 7829367, 15658734), false).a(1118481, -2).c(-1, (byte) -79);
           var8.a(-63, 4).a((byte) -50, true).a(var5, false);
-          this.field_n = (ir) ((Object) var8);
+          this.field_n = (WidgetRenderer) ((Object) var8);
           Sprite[] var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           Sprite[] var10 = new Sprite[9];

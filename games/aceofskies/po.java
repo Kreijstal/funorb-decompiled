@@ -34,7 +34,7 @@ final class po extends ka {
             SoundPlayback stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
-          SoundPlayback var3 = jo.a(param2, param0, (byte) -44);
+          SoundPlayback var3 = TextHotspotBounds.a(param2, param0, (byte) -44);
           var3.field_g.setLoopCount(-1);
           SoundPlayback stackIn_4_0 = var3;
           return stackIn_4_0;

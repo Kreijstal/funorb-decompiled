@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vq extends mi {
+class RichTextWidget extends InteractiveWidget {
     private IntrusiveDeque field_x;
-    private jo field_z;
+    private TextHotspotBounds field_z;
     static int instructionPage;
     private String[] field_y;
 
@@ -39,64 +39,64 @@ class vq extends mi {
     }
 
     final void a(int param0, int param1, int param2, byte param3) {
-        this.a(((et) ((Object) this.field_e)).a(param3 + 2147483537, (ea) (this)), param0, param1, param2, (byte) 124);
+        this.setBounds(((TextWidgetRenderer) ((Object) this.field_e)).getPreferredHeight(param3 + 2147483537, (UiWidget) (this)), param0, param1, param2, (byte) 124);
         if (param3 != 110) {
-          this.a((byte) -98, -99, -83, 107);
+          this.drawWidget((byte) -98, -99, -83, 107);
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) 109, param1, param2, param3);
+    void drawWidget(byte param0, int param1, int param2, int param3) {
+        super.drawWidget((byte) 109, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
-        et var9 = (et) ((Object) this.field_e);
-        jo var6 = this.field_z;
+        TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_e);
+        TextHotspotBounds var6 = this.field_z;
         if (var6 != null) {
-          int var7 = var9.a(param3, (ea) (this), (byte) -128);
-          int var8 = var9.a(param2, false, (ea) (this));
+          int var7 = var9.getTextOriginX(param3, (UiWidget) (this), (byte) -128);
+          int var8 = var9.getTextOriginY(param2, false, (UiWidget) (this));
           do {
-            co.a(var8 + (var6.field_g - 2), var6.field_e + 2, 2 + var6.field_h, var7 + var6.field_i - 2, 112);
+            TextLineMetrics.a(var8 + (var6.field_g - 2), var6.field_e + 2, 2 + var6.field_h, var7 + var6.field_i - 2, 112);
             var6 = var6.field_f;
           } while (var6 != null);
         }
         if (param0 < 64) {
-          this.a(-83, 88, 88, -90, (byte) 51);
+          this.setBounds(-83, 88, 88, -90, (byte) 51);
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
-        super.a(param0, param1, param2, param3, (byte) 127);
+    final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
+        super.setBounds(param0, param1, param2, param3, (byte) 127);
         if (param4 <= 122) {
           return;
         }
-        this.a((byte) -67);
+        this.rebuildHotspotBounds((byte) -67);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param1 - this.field_p;
         int var6 = -this.field_h + param3;
-        jo var7 = this.c(var6, 0, var5);
+        TextHotspotBounds var7 = this.findHotspotAt(var6, 0, var5);
         if (var7 != null &&
           this.field_o != null) {
-          ((ue) ((Object) this.field_o)).a((byte) -73, param2, this, var7.field_k);
+          ((TextHotspotListener) ((Object) this.field_o)).onTextHotspotActivated((byte) -73, param2, this, var7.field_k);
         }
     }
 
-    void a(byte param0, ea param1, int param2, int param3) {
+    void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
         String stackIn_9_2 = null;
         try {
-          super.a((byte) 53, param1, param2, param3);
+          super.updatePointer((byte) 53, param1, param2, param3);
           this.field_z = null;
           if (this.field_g) {
             int var5_int = ic.field_b - (param3 + this.field_p);
             int var6 = -this.field_h + (cf.field_g - param2);
-            this.field_z = this.c(var6, 0, var5_int);
+            this.field_z = this.findHotspotAt(var6, 0, var5_int);
           }
           if (param0 < 13) {
-            ea var7 = (ea) null;
-            this.a((byte) 11, (ea) null, -123, 59);
+            UiWidget var7 = (UiWidget) null;
+            this.updatePointer((byte) 11, (UiWidget) null, -123, 59);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,17 +113,17 @@ class vq extends mi {
         }
     }
 
-    final void a(byte param0) {
+    final void rebuildHotspotBounds(byte param0) {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_x = new IntrusiveDeque();
         int var2 = 0;
-        et var3 = (et) ((Object) this.field_e);
+        TextWidgetRenderer var3 = (TextWidgetRenderer) ((Object) this.field_e);
         if (param0 != -67) {
           return;
         }
-        pp var4 = var3.a((byte) 66, (ea) (this));
+        TextLayout var4 = var3.getTextLayout((byte) 66, (UiWidget) (this));
         while (true) {
           int var5 = this.field_f.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -133,28 +133,28 @@ class vq extends mi {
           String var6 = this.field_f.substring(var5 + 9, var7);
           int var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.field_f.indexOf("</hotspot>", var5);
-          int var8 = var4.a(1, var5);
-          int var9 = var4.a(1, var2);
+          int var8 = var4.getLineIndexForTextOffset(1, var5);
+          int var9 = var4.getLineIndexForTextOffset(1, var2);
           Object var10 = null;
           for (int var11 = var8; var11 <= var9; var11++) {
-            co var12 = var4.field_b[var11];
+            TextLineMetrics var12 = var4.field_b[var11];
             if (var8 == var11) {
-              stackIn_9_0 = var4.b(var5, -122);
+              stackIn_9_0 = var4.getXForTextOffset(var5, -122);
             } else {
               stackIn_9_0 = var12.field_h[0];
             }
             int var13 = stackIn_9_0;
             if (var9 == var11) {
-              stackIn_14_0 = var4.b(var2, -114);
+              stackIn_14_0 = var4.getXForTextOffset(var2, -114);
             } else if (var12 != null) {
               stackIn_14_0 = var12.field_h[-1 + var12.field_h.length];
             } else {
               stackIn_14_0 = 0;
             }
             int var14 = stackIn_14_0;
-            jo var15 = new jo(var7Lifetime1, var13, var12.field_f, -var13 + var14, Math.max(var3.a(-4), var12.field_d - var12.field_f));
+            TextHotspotBounds var15 = new TextHotspotBounds(var7Lifetime1, var13, var12.field_f, -var13 + var14, Math.max(var3.getFontLineHeight(-4), var12.field_d - var12.field_f));
             if (var10 != null) {
-              ((jo) (var10)).field_f = var15;
+              ((TextHotspotBounds) (var10)).field_f = var15;
             }
             var10 = var15;
             this.field_x.addLast(66, var15);
@@ -162,15 +162,15 @@ class vq extends mi {
         }
     }
 
-    private final jo c(int param0, int param1, int param2) {
+    private final TextHotspotBounds findHotspotAt(int param0, int param1, int param2) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           String var7 = (String) null;
           this.a(-112, (String) null, -74);
         }
-        jo var4 = (jo) (this.field_x.first(268435455));
+        TextHotspotBounds var4 = (TextHotspotBounds) (this.field_x.first(268435455));
         while (var4 != null) {
-          jo var5 = var4;
+          TextHotspotBounds var5 = var4;
           while (var5 != null) {
             if (var5.field_i <= param2 &&
               var5.field_g <= param0 &&
@@ -180,12 +180,12 @@ class vq extends mi {
             }
             var5 = var5.field_f;
           }
-          var4 = (jo) (this.field_x.next((byte) 103));
+          var4 = (TextHotspotBounds) (this.field_x.next((byte) 103));
         }
         return null;
     }
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 >= -41) {
           return (String) null;
         }
@@ -201,7 +201,7 @@ class vq extends mi {
         return this.field_y[this.field_z.field_k];
     }
 
-    boolean a(ea param0, byte param1) {
+    boolean takeFocus(UiWidget param0, byte param1) {
         String stackIn_8_2 = null;
         try {
           if (param1 == -42) {
@@ -222,8 +222,8 @@ class vq extends mi {
         }
     }
 
-    vq(String param0, ir param1) {
-        super(param0, (no) null);
+    RichTextWidget(String param0, WidgetRenderer param1) {
+        super(param0, (WidgetEventListener) null);
         this.field_z = null;
         try {
           this.field_e = param1;

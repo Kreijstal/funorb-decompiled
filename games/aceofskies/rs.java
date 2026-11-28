@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends ab implements ue, dn {
+final class rs extends ab implements TextHotspotListener, WidgetActivationListener {
     static int rendererStrikethroughColor;
     static int[] field_B;
     private AccountCreationResultPanel field_y;
-    private vq field_A;
+    private RichTextWidget field_A;
     static int field_v;
     static int[] field_w;
     static String field_x;
     static boolean field_C;
-    private mi field_z;
+    private InteractiveWidget field_z;
     static RenderSprite[] medalSprites;
 
-    public final void a(byte param0, int param1, vq param2, int param3) {
+    public final void onTextHotspotActivated(byte param0, int param1, RichTextWidget param2, int param3) {
         String stackIn_14_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -43,10 +43,10 @@ final class rs extends ab implements ue, dn {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, ea param3) {
+    final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_16_2 = null;
         try {
-          if (super.a(-117, param1, param2, param3)) {
+          if (super.handleKey(-117, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
@@ -83,7 +83,7 @@ final class rs extends ab implements ue, dn {
         }
     }
 
-    public final void a(int param0, mi param1, int param2, int param3, byte param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         String stackIn_7_2 = null;
         try {
           int var6_int = 36 / ((-27 - param4) / 61);
@@ -108,29 +108,29 @@ final class rs extends ab implements ue, dn {
     }
 
     rs(AccountCreationResultPanel param0) {
-        super(0, 0, 288, 0, (ir) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         try {
           this.field_y = param0;
-          this.field_z = new mi(mq.field_i, (no) null);
-          this.field_z.field_e = (ir) ((Object) new qb());
+          this.field_z = new InteractiveWidget(mq.field_i, (WidgetEventListener) null);
+          this.field_z.field_e = (WidgetRenderer) ((Object) new qb());
           String var7 = sn.a(cd.field_c, 122, new String[]{this.a((byte) 127), this.e((byte) 101)});
           int var3 = 20;
-          qm var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
-          this.field_A = new vq(var7, var4);
+          DefaultTextWidgetRenderer var4 = new DefaultTextWidgetRenderer(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
+          this.field_A = new RichTextWidget(var7, var4);
           this.field_A.field_k = "";
           this.field_A.a(-57, m.field_g, 0);
           this.field_A.a(72, m.field_g, 1);
           this.field_A.field_q = this.field_q - 40;
-          this.field_A.field_o = (no) (this);
+          this.field_A.field_o = (WidgetEventListener) (this);
           this.field_A.a(26, var3, -40 + this.field_q, (byte) 110);
           var3 = var3 + (15 + this.field_A.field_n);
           this.a(this.field_A, 1);
           int var5 = 4;
           int var6 = 200;
-          this.field_z.a(40, -var6 + 300 >> 1, var3, var6, (byte) 127);
-          this.field_z.field_o = (no) (this);
+          this.field_z.setBounds(40, -var6 + 300 >> 1, var3, var6, (byte) 127);
+          this.field_z.field_o = (WidgetEventListener) (this);
           this.a(this.field_z, 1);
-          this.a(var3 + (55 + var5), 0, 0, 300, (byte) 125);
+          this.setBounds(var3 + (55 + var5), 0, 0, 300, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

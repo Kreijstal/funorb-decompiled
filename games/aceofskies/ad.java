@@ -6,7 +6,7 @@ final class ad extends dg {
     static String field_V;
     static int field_U;
 
-    final void d(ea param0, int param1) {
+    final void d(UiWidget param0, int param1) {
         try {
           super.d(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -14,7 +14,7 @@ final class ad extends dg {
         }
     }
 
-    ad(lt param0, ea param1) {
+    ad(lt param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

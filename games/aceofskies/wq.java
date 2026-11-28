@@ -164,7 +164,7 @@ final class wq {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        byte[] var15 = qm.a(0, var10.position - var13.length - 5, var10.payload, 5);
+        byte[] var15 = DefaultTextWidgetRenderer.a(0, var10.position - var13.length - 5, var10.payload, 5);
         for (int var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

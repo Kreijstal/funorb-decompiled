@@ -15,10 +15,10 @@ final class hi extends to {
         field_x = null;
     }
 
-    hi(ea param0) {
-        super(param0.field_p, param0.field_h, param0.field_q, param0.field_n, (ir) null, (no) null);
+    hi(UiWidget param0) {
+        super(param0.field_p, param0.field_h, param0.field_q, param0.field_n, (WidgetRenderer) null, (WidgetEventListener) null);
         try {
-          param0.a(this.field_n, 0, 0, this.field_q, (byte) 126);
+          param0.setBounds(this.field_n, 0, 0, this.field_q, (byte) 126);
           this.field_u = 256;
           this.field_s = param0;
         } catch (RuntimeException runtimeException) {
@@ -27,7 +27,7 @@ final class hi extends to {
     }
 
     public hi() {
-        super(0, 0, 0, 0, (ir) null, (no) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_u = 256;
     }
 
@@ -61,7 +61,7 @@ final class hi extends to {
         return stackIn_12_0 & stackIn_13_1;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
@@ -72,14 +72,14 @@ final class hi extends to {
           return;
         }
         if (this.field_u == 256) {
-          this.field_s.a((byte) 69, param1, this.field_h + param2, this.field_p + param3);
+          this.field_s.drawWidget((byte) 69, param1, this.field_h + param2, this.field_p + param3);
           return;
         }
         Sprite var6 = new Sprite(this.field_s.field_q, this.field_s.field_n);
         ProxySocketConnector.a(var6, -14492);
-        this.field_s.a((byte) 90, param1, 0, 0);
+        this.field_s.drawWidget((byte) 90, param1, 0, 0);
         sl.c(2765);
-        var6.a(param3 + this.field_p, param2 + this.field_h, this.field_u);
+        var6.drawWithOpacity(param3 + this.field_p, param2 + this.field_h, this.field_u);
         if (param0 >= 64) {
           return;
         }

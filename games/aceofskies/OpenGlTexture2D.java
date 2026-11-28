@@ -330,7 +330,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
         int var17 = 0;
         boolean var19 = (AceOfSkies.obfuscationControl);
         try {
-          int var5_int = ek.bitLength((byte) 103, (-param0 + param3) * 3);
+          int var5_int = NameSuggestionsPanel.bitLength((byte) 103, (-param0 + param3) * 3);
           int var6 = param0 * 3;
           pl.a(0);
           if (param2 >= -60) {

@@ -15,7 +15,7 @@ final class SmokeParticle extends FlightBody {
           if (param1 != 0) {
             field_k = (String) null;
           }
-          boolean stackIn_3_0 = mi.a(-120, param0, false);
+          boolean stackIn_3_0 = InteractiveWidget.a(-120, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

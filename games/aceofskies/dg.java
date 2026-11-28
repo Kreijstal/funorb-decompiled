@@ -11,7 +11,7 @@ abstract class dg extends rg {
     private int field_N;
     private of field_R;
     private int field_J;
-    private ea field_P;
+    private UiWidget field_P;
 
     final void f(byte param0) {
         if (vu.field_g == this.field_R) {
@@ -76,7 +76,7 @@ abstract class dg extends rg {
         super.e((byte) 101);
     }
 
-    void d(ea param0, int param1) {
+    void d(UiWidget param0, int param1) {
         String stackIn_11_2 = null;
         try {
           if (param1 != -30244) {
@@ -164,21 +164,21 @@ abstract class dg extends rg {
         return super.h(11);
     }
 
-    boolean a(int param0, int param1, char param2, ea param3) {
+    boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
         String stackIn_15_2 = null;
         try {
           int var5_int = 71 % ((-53 - param0) / 33);
-          if (super.a(82, param1, param2, param3)) {
+          if (super.handleKey(82, param1, param2, param3)) {
             return true;
           }
           if (this.field_M == null) {
             return false;
           }
           if (param1 == 98) {
-            this.field_M.a(param3, (byte) -42);
+            this.field_M.takeFocus(param3, (byte) -42);
           }
           if (param1 == 99) {
-            this.field_M.a(param3, (byte) -42);
+            this.field_M.takeFocus(param3, (byte) -42);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,7 +195,7 @@ abstract class dg extends rg {
         }
     }
 
-    private final void c(ea param0, int param1) {
+    private final void c(UiWidget param0, int param1) {
         String stackIn_11_2 = null;
         try {
           if (this.field_M != null) {
@@ -204,7 +204,7 @@ abstract class dg extends rg {
           if (param0 == null) {
             this.field_M = new hi();
           } else {
-            param0.a(param0.field_n, 6, this.field_N + 6, param0.field_q, (byte) 124);
+            param0.setBounds(param0.field_n, 6, this.field_N + 6, param0.field_q, (byte) 124);
             this.field_M = new hi(param0);
           }
           this.a(this.field_M, 1);
@@ -238,7 +238,7 @@ abstract class dg extends rg {
         field_Q = null;
     }
 
-    dg(lt param0, ea param1, int param2, int param3, int param4) {
+    dg(lt param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_q + 12, param2 + 12 + param1.field_n);
         try {
           this.field_S = param4;

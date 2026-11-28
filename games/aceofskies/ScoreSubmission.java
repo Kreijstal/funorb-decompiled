@@ -42,7 +42,7 @@ final class ScoreSubmission extends IntrusiveNode {
             ConfirmedEmailAvailabilityValidator.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
             Pickup.powerchuteSprites = new RenderSprite[ol.powerchuteSpriteData.length];
             po.powerIconSprites = new RenderSprite[nu.powerIconSpriteData.length];
-            co.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
+            TextLineMetrics.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
             ec.radarSprites = new RenderSprite[FlightBody.radarSpriteData.length];
             SoftCacheReference.brassButtonSprites = new RenderSprite[vl.brassButtonSpriteData.length];
             CipherPacketBuffer.brassSliderSprites = new RenderSprite[qk.brassSliderSpriteData.length];
@@ -80,7 +80,7 @@ final class ScoreSubmission extends IntrusiveNode {
             po.powerIconSprites[var2Lifetime7] = var6.createSprite(nu.powerIconSpriteData[var2Lifetime7], false);
           }
           for (int var2Lifetime8 = 0; gn.scorchSpriteData.length > var2Lifetime8; var2Lifetime8++) {
-            co.scorchSprites[var2Lifetime8] = var6.createSprite(gn.scorchSpriteData[var2Lifetime8], false);
+            TextLineMetrics.scorchSprites[var2Lifetime8] = var6.createSprite(gn.scorchSpriteData[var2Lifetime8], false);
           }
           for (int var2Lifetime9 = 0; FlightBody.radarSpriteData.length > var2Lifetime9; var2Lifetime9++) {
             ec.radarSprites[var2Lifetime9] = var6.createSprite(FlightBody.radarSpriteData[var2Lifetime9], false);

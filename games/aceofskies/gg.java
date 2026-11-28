@@ -67,7 +67,7 @@ abstract class gg {
           if (param2 != -27227) {
             field_a = (PcmSample) null;
           }
-          SoundPlayback stackIn_3_0 = jo.a(param0, param1, (byte) -33);
+          SoundPlayback stackIn_3_0 = TextHotspotBounds.a(param0, param1, (byte) -33);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

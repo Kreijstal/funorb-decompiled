@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vg extends pp {
+final class RichTextLayout extends TextLayout {
     private int field_i;
     private boolean field_m;
     private int field_k;
@@ -16,7 +16,7 @@ final class vg extends pp {
     static Hashtable field_j;
     static int[] field_e;
 
-    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
+    final void layoutSingleLineCentered(int param0, BitmapFont param1, int param2, String param3, int param4) {
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
         try {
@@ -34,11 +34,11 @@ final class vg extends pp {
           this.field_d = 1;
           if (param0 < 1) {
             String var8 = (String) null;
-            this.a(-95, (BitmapFont) null, -118, (String) null, -117);
+            this.layoutSingleLineCentered(-95, (BitmapFont) null, -118, (String) null, -117);
           }
           this.field_f = param1;
           this.field_m = true;
-          co var9 = this.a(param4, 77, param1, param3);
+          TextLineMetrics var9 = this.initializeSingleLineMetrics(param4, 77, param1, param3);
           int var7 = param1.measureTextWidth(param3);
           var9.field_h[0] = param2 - (var7 >> 1);
           var9.field_h[param3.length()] = (var7 >> 1) + param2;
@@ -64,7 +64,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
+    final void layoutSingleLineRightAligned(int param0, String param1, int param2, int param3, BitmapFont param4) {
         if (param1 == null) {
           this.field_b = null;
           return;
@@ -84,8 +84,8 @@ final class vg extends pp {
             field_j = (Hashtable) null;
           }
           this.field_f = param4;
-          co var8 = this.a(param3, 43, param4, param1);
-          co var9 = var8;
+          TextLineMetrics var8 = this.initializeSingleLineMetrics(param3, 43, param4, param1);
+          TextLineMetrics var9 = var8;
           var9.field_h[0] = -param4.measureTextWidth(param1) + param2;
           var9.field_h[param1.length()] = param2;
           ng.a(param4, param1, var9, 0, (byte) 30);
@@ -94,7 +94,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(String param0, int param1, int param2, BitmapFont param3, byte param4) {
+    final void layoutSingleLineLeftAligned(String param0, int param1, int param2, BitmapFont param3, byte param4) {
         if (param0 == null) {
           this.field_b = null;
           return;
@@ -111,13 +111,13 @@ final class vg extends pp {
           this.field_f = param3;
           this.field_m = true;
           this.field_l = param0;
-          co var8 = this.a(param2, -128, param3, param0);
-          co var9 = var8;
+          TextLineMetrics var8 = this.initializeSingleLineMetrics(param2, -128, param3, param0);
+          TextLineMetrics var9 = var8;
           var8.field_h[0] = param1;
           var9.field_h[param0.length()] = param3.measureTextWidth(param0) + param1;
           if (param4 >= -45) {
             BitmapFont var7 = (BitmapFont) null;
-            this.a(-111, (String) null, -109, -118, (BitmapFont) null);
+            this.layoutSingleLineRightAligned(-111, (String) null, -109, -118, (BitmapFont) null);
           }
           ng.a(param3, param0, var9, 0, (byte) 30);
         } catch (RuntimeException runtimeException) {
@@ -125,14 +125,14 @@ final class vg extends pp {
         }
     }
 
-    private final co a(int param0, int param1, BitmapFont param2, String param3) {
+    private final TextLineMetrics initializeSingleLineMetrics(int param0, int param1, BitmapFont param2, String param3) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
           int var5_int = -90 / ((-38 - param1) / 52);
-          co var6 = new co(param0 - param2.maxAscent, param2.maxDescent + param0, param3.length());
-          this.field_b = new co[]{var6};
-          co stackIn_1_0 = var6;
+          TextLineMetrics var6 = new TextLineMetrics(param0 - param2.maxAscent, param2.maxDescent + param0, param3.length());
+          this.field_b = new TextLineMetrics[]{var6};
+          TextLineMetrics stackIn_1_0 = var6;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -154,7 +154,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void layoutWrappedText(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_39_4 = 0;
         int stackIn_44_3;
         String stackIn_50_2 = null;
@@ -198,7 +198,7 @@ final class vg extends pp {
             var10 == 1) {
             this.field_g = 1;
           }
-          this.field_b = new co[var10];
+          this.field_b = new TextLineMetrics[var10];
           if (0 == this.field_g) {
             var11 = param1.maxAscent;
           } else if (this.field_g == 1) {
@@ -215,24 +215,24 @@ final class vg extends pp {
           }
           for (int var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             String var13 = var16[var12Lifetime1];
-            co stackIn_38_0 = null;
-            co stackIn_38_1 = null;
+            TextLineMetrics stackIn_38_0 = null;
+            TextLineMetrics stackIn_38_1 = null;
             int stackIn_38_2 = -param1.maxAscent + var11;
             int stackIn_38_3 = param1.maxDescent + var11;
             if (var13 == null) {
               stackIn_39_4 = 0;
             } else {
-              co stackIn_39_0 = null;
-              co stackIn_39_1 = null;
+              TextLineMetrics stackIn_39_0 = null;
+              TextLineMetrics stackIn_39_1 = null;
               stackIn_39_4 = var13.length();
             }
-            co var14 = new co(stackIn_38_2, stackIn_38_3, stackIn_39_4);
+            TextLineMetrics var14 = new TextLineMetrics(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_h[0] = 0;
             if (var13 != null) {
               var14.field_h[var13.length()] = param1.measureTextWidth(var13);
               BitmapFont stackIn_43_0 = (BitmapFont) (param1);
               String stackIn_43_1 = var13;
-              co stackIn_43_2 = var14;
+              TextLineMetrics stackIn_43_2 = var14;
               if (param6 != 3) {
                 stackIn_44_3 = 0;
               } else {
@@ -267,13 +267,13 @@ final class vg extends pp {
     public static void clearStaticReferences(int param0) {
         field_j = null;
         if (param0 != 0) {
-          vg.clearStaticReferences(-51);
+          RichTextLayout.clearStaticReferences(-51);
         }
         field_h = null;
         field_e = null;
     }
 
-    public vg() {
+    public RichTextLayout() {
     }
 
     static {

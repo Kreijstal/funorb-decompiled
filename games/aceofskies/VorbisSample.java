@@ -124,7 +124,7 @@ final class VorbisSample extends IntrusiveNode {
         int var17_intLifetime3;
         VorbisSample.a(this.field_x[param0], 0);
         VorbisSample.readBit();
-        int var2 = VorbisSample.readBits(ek.bitLength((byte) 120, field_u.length - 1));
+        int var2 = VorbisSample.readBits(NameSuggestionsPanel.bitLength((byte) 120, field_u.length - 1));
         boolean var3 = (field_K[var2]);
         if (!var3) {
           stackIn_3_0 = field_C;
@@ -243,7 +243,7 @@ final class VorbisSample extends IntrusiveNode {
             var20_ref_float__[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
             var20_ref_float__[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
           }
-          int var25Lifetime2 = ek.bitLength((byte) 102, var4 - 1);
+          int var25Lifetime2 = NameSuggestionsPanel.bitLength((byte) 102, var4 - 1);
           for (int var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
             int var27_int = var4 >> var26 + 2;
             int var28_int = 8 << var26;
@@ -465,7 +465,7 @@ final class VorbisSample extends IntrusiveNode {
             var8[2 * var9_int + 1] = -(float)Math.sin((double)(4 * var9_int + 2) * 3.141592653589793 / (double)var2);
           }
           int[] var9 = new int[var5];
-          int var10 = ek.bitLength((byte) 121, var5 - 1);
+          int var10 = NameSuggestionsPanel.bitLength((byte) 121, var5 - 1);
           for (int var11 = 0; var11 < var5; var11++) {
             var9[var11] = AccountRegistrationPanel.reverseLowBits(12871, var10, var11);
           }
