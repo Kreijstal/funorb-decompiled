@@ -17,7 +17,7 @@ final class IsaacGenerator {
     static RgbSprite field_c;
     static RgbSprite field_j;
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = HostileSpawn.field_I ? 1 : 0;
         int var4 = -1640531527;
@@ -143,7 +143,7 @@ final class IsaacGenerator {
           this.field_a[var2Lifetime2 + 6] = var9;
           this.field_a[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) 109);
+        this.generateResults((byte) 109);
         this.field_e = 256;
     }
 
@@ -152,12 +152,12 @@ final class IsaacGenerator {
         return li.field_o;
     }
 
-    final int a(boolean param0) {
+    final int nextInt(boolean param0) {
         if (!param0) {
           field_m = (String) null;
         }
         if (0 == this.field_e) {
-          this.a((byte) 112);
+          this.generateResults((byte) 112);
           this.field_e = 256;
         }
         int fieldTemp$0 = this.field_e - 1;
@@ -165,7 +165,7 @@ final class IsaacGenerator {
         return this.field_k[fieldTemp$0];
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int dupTemp$1 = 0;
@@ -214,7 +214,7 @@ final class IsaacGenerator {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_k[var2_int] = param0[var2_int];
           }
-          this.a(-7);
+          this.initializeState(-7);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

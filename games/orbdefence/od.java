@@ -3,7 +3,7 @@
  */
 final class od {
     static nc field_f;
-    private re field_l;
+    private IsaacRandom field_l;
     private int[] field_i;
     private int[] field_c;
     static String field_a;
@@ -39,7 +39,7 @@ final class od {
         this.field_b = new int[200];
         this.field_g = 320;
         this.field_c = new int[200];
-        this.field_l = new re(new int[]{1, 2, 3, 4, 5});
+        this.field_l = new IsaacRandom(new int[]{1, 2, 3, 4, 5});
         this.field_i = new int[64];
         for (var5 = 0; var5 < 64; var5++) {
           this.field_i[var5] = 65537 * var5;
@@ -181,8 +181,8 @@ final class od {
             this.field_c[var2] = this.field_c[var2] - 6;
           }
         }
-        var2Lifetime1 = 864 + this.field_l.a(128) % 160;
-        var3 = (double)(this.field_l.a(128) % 214) + (double)(this.field_l.a(128) % 100) * 0.01;
+        var2Lifetime1 = 864 + this.field_l.nextInt(128) % 160;
+        var3 = (double)(this.field_l.nextInt(128) % 214) + (double)(this.field_l.nextInt(128) % 100) * 0.01;
         this.field_m[this.field_o] = (int)((double)var2Lifetime1 * Math.sin(var3));
         this.field_b[this.field_o] = (int)((double)var2Lifetime1 * Math.cos(var3));
         this.field_o = this.field_o + 1;

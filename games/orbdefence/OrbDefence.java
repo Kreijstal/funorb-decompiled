@@ -470,7 +470,7 @@ public final class OrbDefence extends NetworkGameClient {
         mf.clearStaticReferences(127);
         fk.clearStaticReferences((byte) -102);
         ub.clearStaticReferences();
-        re.clearStaticReferences((byte) -77);
+        IsaacRandom.clearStaticReferences((byte) -77);
         nd.clearStaticReferences(-16996);
         PcmOutputWorker.clearStaticReferences((byte) 90);
         a.clearStaticReferences((byte) 29);

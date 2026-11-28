@@ -317,7 +317,7 @@ class d extends UiWidget {
               return;
             }
             if (var2 != 4) {
-              ke.a((Throwable) null, "F1: " + or.a(118), 0);
+              HuffmanCodec.a((Throwable) null, "F1: " + or.a(118), 0);
               rm.b((byte) -57);
               return;
             }

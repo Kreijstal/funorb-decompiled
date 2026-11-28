@@ -2612,6 +2612,30 @@
       "renamedSymbol": "M:gh.clearStaticReferences()V"
     },
     {
+      "symbol": "M:gi.a(B)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. Read the game flag before the byte<106 early return; counters and array writes happen only after that branch. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacGenerator.generateResults(B)V"
+    },
+    {
+      "symbol": "M:gi.a(I)V",
+      "originalName": "a",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. Wrong int!=-7 returns before mixing. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacGenerator.initializeState(I)V"
+    },
+    {
+      "symbol": "M:gi.a(Z)I",
+      "originalName": "a",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacGenerator.nextInt(Z)I"
+    },
+    {
       "symbol": "M:gi.b(Z)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -4962,6 +4986,22 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 fab994d44e9a041355ccda97e71d17d6da4585a78cf67478e82d1f5bf7828dc3.",
       "confidence": "reviewed",
       "renamedSymbol": "M:vh.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:vi.a(IBI[I)V",
+      "originalName": "a",
+      "to": "decryptXteaRange",
+      "evidence": "Source-purpose review: Source-purpose and bound caller review: Decrypt complete eight-byte blocks in the supplied [start,end) range with the stateful buffer cursor and XTEA subtraction rounds. Retain the package-visible final instance declaration, all supplied int/byte/key-array domains and exact helper arguments. Add no range/key-length/alignment validation, clamping or non-null precondition. Keep the global game flag read before the try block, signed division by8, integer subtraction/addition overflow, 32-round post-decrement loops, exact XOR/add/subtract precedence, all shifts, masks and literals. Do not normalize obfuscating masks. Keep two ordered big-endian reads before each block computation, cursor rewind by8, and two ordered big-endian writes. Preserve output/cursor partial effects and null/index/allocation/exception order. Retain catch wrapping, all diagnostic strings including original obfuscated method names, StringBuilder append order, null versus {...} formatting and wrapper reuse/allocation behavior. Do not add cursor restoration in finally. The key array is accessed only inside processed rounds. Empty or negative computed block counts retain their original behavior even with a null or short key array. Save cursor, assign param2 to cursor and compute (param0-param2)/8 before the byte guard. param1 > -114 returns with cursor at param2; do not restore it on that branch. Start sum at -957401312, subtract the second word, subtract delta, then subtract the first word. Preserve key indices (sum &7500) >>>11 and sum &3 exactly. Restore the saved cursor only when the block loop normally finishes. Both the archive caller using byte -126/start5 and the write-long dummy branch using byte -21/start-127 are bound references and must be renamed without argument or behavior changes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.decryptXteaRange(IBI[I)V"
+    },
+    {
+      "symbol": "M:vi.a([IB)V",
+      "originalName": "a",
+      "to": "encryptXtea",
+      "evidence": "Source-purpose review: Source-purpose and bound caller review: Encrypt the complete eight-byte blocks in the existing buffer prefix with XTEA addition rounds. Retain the package-visible final instance declaration, all supplied int/byte/key-array domains and exact helper arguments. Add no range/key-length/alignment validation, clamping or non-null precondition. Keep the global game flag read before the try block, signed division by8, integer subtraction/addition overflow, 32-round post-decrement loops, exact XOR/add/subtract precedence, all shifts, masks and literals. Do not normalize obfuscating masks. Keep two ordered big-endian reads before each block computation, cursor rewind by8, and two ordered big-endian writes. Preserve output/cursor partial effects and null/index/allocation/exception order. Retain catch wrapping, all diagnostic strings including original obfuscated method names, StringBuilder append order, null versus {...} formatting and wrapper reuse/allocation behavior. Do not add cursor restoration in finally. The key array is accessed only inside processed rounds. Empty or negative computed block counts retain their original behavior even with a null or short key array. Compute old cursor/8 and set cursor0 before checking param1. A byte <104 clears the existing static reference array; keep that effect and its position. Start sum0, add to first word, add delta, then add to second word; preserve key indices sum &3 and sum >>>11 &-1023410173. Keep the resulting cursor at the processed block boundary, including cursor0 for zero/negative block counts. Retain the login caller byte108, prefix copy/length update and surrounding packet construction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PacketBuffer.encryptXtea([IB)V"
     },
     {
       "symbol": "M:vi.e(I)I",
@@ -89235,7 +89275,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#0",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#0",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -89246,7 +89286,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#1",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#1",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -89257,7 +89297,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#2",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#2",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#2",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -89268,7 +89308,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#3",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#3",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#3",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -89279,7 +89319,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#4",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#4",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -89290,7 +89330,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#5",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#5",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -89301,7 +89341,7 @@
     },
     {
       "symbol": "L:gi.a(B)V#6",
-      "renamedSymbol": "L:IsaacGenerator.a(B)V#6",
+      "renamedSymbol": "L:IsaacGenerator.generateResults(B)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -89312,7 +89352,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#0",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#0",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -89323,7 +89363,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#1",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#1",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -89334,7 +89374,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#10",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#10",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#10",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -89345,7 +89385,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#11",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#11",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#11",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -89356,7 +89396,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#2",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#2",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -89367,7 +89407,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#3",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#3",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -89378,7 +89418,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#4",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#4",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -89389,7 +89429,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#5",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#5",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -89400,7 +89440,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#6",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#6",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -89411,7 +89451,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#7",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#7",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -89422,7 +89462,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#8",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#8",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -89433,7 +89473,7 @@
     },
     {
       "symbol": "L:gi.a(I)V#9",
-      "renamedSymbol": "L:IsaacGenerator.a(I)V#9",
+      "renamedSymbol": "L:IsaacGenerator.initializeState(I)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -89444,7 +89484,7 @@
     },
     {
       "symbol": "L:gi.a(Z)I#0",
-      "renamedSymbol": "L:IsaacGenerator.a(Z)I#0",
+      "renamedSymbol": "L:IsaacGenerator.nextInt(Z)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -192756,7 +192796,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#0",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#0",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -192767,7 +192807,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#1",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#1",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -192778,7 +192818,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#10",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#10",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -192789,7 +192829,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#11",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#11",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -192800,7 +192840,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#12",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#12",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -192811,7 +192851,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#13",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#13",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -192822,7 +192862,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#14",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#14",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -192833,7 +192873,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#15",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#15",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -192844,7 +192884,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#2",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#2",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#2",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -192855,7 +192895,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#3",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#3",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#3",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -192866,7 +192906,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#4",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#4",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -192877,7 +192917,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#5",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#5",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -192888,7 +192928,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#6",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#6",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -192899,7 +192939,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#7",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#7",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192910,7 +192950,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#8",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#8",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -192921,7 +192961,7 @@
     },
     {
       "symbol": "L:vi.a(IBI[I)V#9",
-      "renamedSymbol": "L:PacketBuffer.a(IBI[I)V#9",
+      "renamedSymbol": "L:PacketBuffer.decryptXteaRange(IBI[I)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -193350,7 +193390,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#0",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#0",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -193361,7 +193401,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#1",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#1",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -193372,7 +193412,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#10",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#10",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#10",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -193383,7 +193423,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#11",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#11",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -193394,7 +193434,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#12",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#12",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#12",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -193405,7 +193445,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#13",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#13",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -193416,7 +193456,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#14",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#14",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -193427,7 +193467,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#2",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#2",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -193438,7 +193478,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#3",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#3",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#3",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -193449,7 +193489,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#4",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#4",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -193460,7 +193500,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#5",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#5",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#5",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -193471,7 +193511,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#6",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#6",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -193482,7 +193522,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#7",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#7",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#7",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -193493,7 +193533,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#8",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#8",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -193504,7 +193544,7 @@
     },
     {
       "symbol": "L:vi.a([IB)V#9",
-      "renamedSymbol": "L:PacketBuffer.a([IB)V#9",
+      "renamedSymbol": "L:PacketBuffer.encryptXtea([IB)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -212930,9 +212970,9 @@
     },
     {
       "symbol": "M:gi.a(B)V",
-      "renamedSymbol": "M:IsaacGenerator.a(B)V",
+      "renamedSymbol": "M:IsaacGenerator.generateResults(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "gi.java",
         "start": 5684,
@@ -212941,9 +212981,9 @@
     },
     {
       "symbol": "M:gi.a(I)V",
-      "renamedSymbol": "M:IsaacGenerator.a(I)V",
+      "renamedSymbol": "M:IsaacGenerator.initializeState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "gi.java",
         "start": 428,
@@ -212952,9 +212992,9 @@
     },
     {
       "symbol": "M:gi.a(Z)I",
-      "renamedSymbol": "M:IsaacGenerator.a(Z)I",
+      "renamedSymbol": "M:IsaacGenerator.nextInt(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "gi.java",
         "start": 5336,
@@ -230112,9 +230152,9 @@
     },
     {
       "symbol": "M:vi.a(IBI[I)V",
-      "renamedSymbol": "M:PacketBuffer.a(IBI[I)V",
+      "renamedSymbol": "M:PacketBuffer.decryptXteaRange(IBI[I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decryptXteaRange",
       "declaration": {
         "file": "vi.java",
         "start": 8947,
@@ -230222,9 +230262,9 @@
     },
     {
       "symbol": "M:vi.a([IB)V",
-      "renamedSymbol": "M:PacketBuffer.a([IB)V",
+      "renamedSymbol": "M:PacketBuffer.encryptXtea([IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "encryptXtea",
       "declaration": {
         "file": "vi.java",
         "start": 26889,
@@ -255511,7 +255551,7 @@
     },
     {
       "symbol": "P:gi.a(B)V#0",
-      "renamedSymbol": "P:IsaacGenerator.a(B)V#0",
+      "renamedSymbol": "P:IsaacGenerator.generateResults(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255522,7 +255562,7 @@
     },
     {
       "symbol": "P:gi.a(I)V#0",
-      "renamedSymbol": "P:IsaacGenerator.a(I)V#0",
+      "renamedSymbol": "P:IsaacGenerator.initializeState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255533,7 +255573,7 @@
     },
     {
       "symbol": "P:gi.a(Z)I#0",
-      "renamedSymbol": "P:IsaacGenerator.a(Z)I#0",
+      "renamedSymbol": "P:IsaacGenerator.nextInt(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -296123,7 +296163,7 @@
     },
     {
       "symbol": "P:vi.a(IBI[I)V#0",
-      "renamedSymbol": "P:PacketBuffer.a(IBI[I)V#0",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(IBI[I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -296134,7 +296174,7 @@
     },
     {
       "symbol": "P:vi.a(IBI[I)V#1",
-      "renamedSymbol": "P:PacketBuffer.a(IBI[I)V#1",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(IBI[I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -296145,7 +296185,7 @@
     },
     {
       "symbol": "P:vi.a(IBI[I)V#2",
-      "renamedSymbol": "P:PacketBuffer.a(IBI[I)V#2",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(IBI[I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -296156,7 +296196,7 @@
     },
     {
       "symbol": "P:vi.a(IBI[I)V#3",
-      "renamedSymbol": "P:PacketBuffer.a(IBI[I)V#3",
+      "renamedSymbol": "P:PacketBuffer.decryptXteaRange(IBI[I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -296409,7 +296449,7 @@
     },
     {
       "symbol": "P:vi.a([IB)V#0",
-      "renamedSymbol": "P:PacketBuffer.a([IB)V#0",
+      "renamedSymbol": "P:PacketBuffer.encryptXtea([IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -296420,7 +296460,7 @@
     },
     {
       "symbol": "P:vi.a([IB)V#1",
-      "renamedSymbol": "P:PacketBuffer.a([IB)V#1",
+      "renamedSymbol": "P:PacketBuffer.encryptXtea([IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -328859,7 +328899,7 @@
       "original": "en.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "34f29bb634d6c956b485b38e0417ff68452082fe14965c2015e15fee0bc3ff5c",
-      "outputSha256": "cc0c874b39da67fb8c85467800d41fe15dde56cb8bb8c055c6dcdd8ed8cbf986",
+      "outputSha256": "59f1ed8a733658c0960069867aa89ed3b7d433e0e61c69b9890d18fd988c62bb",
       "edits": [
         {
           "start": 50,
@@ -328995,11 +329035,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 3682,
+          "end": 3683,
+          "symbol": "M:gi.a(Z)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
           "start": 4241,
           "end": 4243,
           "symbol": "C:gi",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 4474,
+          "end": 4475,
+          "symbol": "M:gi.a(Z)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 5016,
@@ -329014,6 +329068,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5365,
+          "end": 5366,
+          "symbol": "M:gi.a(Z)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 5561,
@@ -332510,7 +332571,7 @@
       "original": "gb.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "dbb0ffd9e5b8a3b0a8592477e8fde1fd127b49e87aec740f3d55a6b920a3905c",
-      "outputSha256": "97d006f85fc6d3cb635c5244b942686fe862f46d0a817f5d944dafba7217e66d",
+      "outputSha256": "78e5b90a8a38dbfff306d4f8dc7d54af65255171a70d9e1224cffc7096c11720",
       "edits": [
         {
           "start": 50,
@@ -332952,6 +333013,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 21353,
+          "end": 21354,
+          "symbol": "M:vi.a(IBI[I)V",
+          "original": "a",
+          "renamed": "decryptXteaRange"
         },
         {
           "start": 21501,
@@ -333867,7 +333935,7 @@
       "original": "gi.java",
       "renamed": "IsaacGenerator.java",
       "inputSha256": "d4cbab50e1702555ffb92dde5c6502bd29bb13bd388523b64da61de28abb1a47",
-      "outputSha256": "d55a355dd9d386998c192ce03cfea2000084f4c3cd123f80ce3ccd7a4d806450",
+      "outputSha256": "99df2e83efcedd51446976da168d62d64739df57903dbb735fe52d2b89ec4811",
       "edits": [
         {
           "start": 50,
@@ -333912,6 +333980,41 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 428,
+          "end": 429,
+          "symbol": "M:gi.a(I)V",
+          "original": "a",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 5149,
+          "end": 5150,
+          "symbol": "M:gi.a(B)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 5336,
+          "end": 5337,
+          "symbol": "M:gi.a(Z)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 5472,
+          "end": 5473,
+          "symbol": "M:gi.a(B)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 5684,
+          "end": 5685,
+          "symbol": "M:gi.a(B)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
           "start": 6773,
           "end": 6775,
           "symbol": "C:ua",
@@ -333931,6 +334034,13 @@
           "symbol": "M:gi.<init>([I)V",
           "original": "gi",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 7342,
+          "end": 7343,
+          "symbol": "M:gi.a(I)V",
+          "original": "a",
+          "renamed": "initializeState"
         },
         {
           "start": 7419,
@@ -337763,7 +337873,7 @@
       "original": "hg.java",
       "renamed": "hg.java",
       "inputSha256": "3a1f69959ff56a09fed0082a2fb24d0716857d6e627ec74c88ae3f3a1d6a3727",
-      "outputSha256": "b8ae3b7b2d4aa8378729695e26a68121402deafa1fb933e3d6dd7d6de7c52e27",
+      "outputSha256": "80b94579bb371a2a67d0c07e593988cc11fbbb0614dea4cbe190dab38531ae32",
       "edits": [
         {
           "start": 141,
@@ -337785,6 +337895,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 1703,
+          "end": 1704,
+          "symbol": "M:vi.a([IB)V",
+          "original": "a",
+          "renamed": "encryptXtea"
         },
         {
           "start": 1841,
@@ -382686,7 +382803,7 @@
       "original": "vi.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "2cdff2b8b25ce7aba6d5f597f54785d6b0d1ab669069ad0db973b843407b8122",
-      "outputSha256": "241884016e13e635afcc191b6b8dc886549486529f8a03b8b0bccc95d8b6a6dc",
+      "outputSha256": "accedf4557fdabf95f618e70c89b66e062365d706aeeb43d2bbee96aa9795867",
       "edits": [
         {
           "start": 44,
@@ -382715,6 +382832,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 1094,
+          "end": 1095,
+          "symbol": "M:vi.a(IBI[I)V",
+          "original": "a",
+          "renamed": "decryptXteaRange"
         },
         {
           "start": 1852,
@@ -382785,6 +382909,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8947,
+          "end": 8948,
+          "symbol": "M:vi.a(IBI[I)V",
+          "original": "a",
+          "renamed": "decryptXteaRange"
         },
         {
           "start": 11100,
@@ -382988,6 +383119,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 26889,
+          "end": 26890,
+          "symbol": "M:vi.a([IB)V",
+          "original": "a",
+          "renamed": "encryptXtea"
         },
         {
           "start": 28833,
@@ -388495,10 +388633,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "b264ff2981fbd3355400a8ebc528bceed8d497c13e85f081d056219cf1eede14",
+    "rulesSha256": "142c271bdc130ce5271ffd5252258c33842e38712756c846de4b18439f47f87f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "dd21b1c0665813e791012de4046e503efd407f2c399d50698e562e4b27b8f883",
+    "outputTreeSha256": "58f747e6b9f18d61dda0b342e0cbfbd1ec0fbfc51c4e7ad656ce7591fe10d54b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

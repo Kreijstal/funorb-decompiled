@@ -107,7 +107,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              ke.a((Throwable) ((Object) var2_ref), (String) null, 0);
+              HuffmanCodec.a((Throwable) ((Object) var2_ref), (String) null, 0);
               var7.field_z = false;
             }
           }

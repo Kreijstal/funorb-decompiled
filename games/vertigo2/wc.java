@@ -1949,7 +1949,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("text_lobby_pleaselogin_free", false);
                 if (var2 != null) {
-                  ke.field_g = in.a(0, var2);
+                  HuffmanCodec.field_g = in.a(0, var2);
                 }
                 var2 = tk.a("opengl", false);
                 if (var2 != null) {

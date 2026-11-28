@@ -297,12 +297,12 @@ final class kd extends ci {
         return true;
     }
 
-    final static void a(byte param0, sn param1) {
+    final static void a(byte param0, HuffmanCodec param1) {
         try {
           cg.field_c = param1;
           if (param0 != -90) {
-            sn var3 = (sn) null;
-            kd.a((byte) 123, (sn) null);
+            HuffmanCodec var3 = (HuffmanCodec) null;
+            kd.a((byte) 123, (HuffmanCodec) null);
           }
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "kd.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

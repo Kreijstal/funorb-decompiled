@@ -65,7 +65,7 @@ final class va extends tj {
           }
           var5 = var4;
           if (ph.a((byte) 107, var5)) {
-            stackIn_8_0 = pe.field_a;
+            stackIn_8_0 = IsaacRandom.field_a;
             return stackIn_8_0;
           }
           if (sh.d(var5, (byte) 50)) {
@@ -93,7 +93,7 @@ final class va extends tj {
             return stackIn_29_0;
           }
           if (!ni.a((byte) 120, var5, var7)) {
-            stackIn_34_0 = pe.field_a;
+            stackIn_34_0 = IsaacRandom.field_a;
             return stackIn_34_0;
           }
           stackIn_32_0 = uf.field_l;

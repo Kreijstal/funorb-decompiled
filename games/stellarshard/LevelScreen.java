@@ -565,7 +565,7 @@ final class LevelScreen extends ib {
                 if (param1 == 0 &&
                   a.entities[0] != null &&
                   a.entities[0].kind == -1) {
-                  na.field_j = null;
+                  IsaacRandom.field_j = null;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -574,7 +574,7 @@ final class LevelScreen extends ib {
                     (decompiledFrameRemainder0 = !(of.field_A <= 1))) {
                     ea.e((byte) 97);
                     vc.field_h.m((byte) 127);
-                    na.field_j = null;
+                    IsaacRandom.field_j = null;
                     stellarshard.field_K = false;
                     bi.field_u = null;
                     if (qi.level > 0) {
@@ -700,12 +700,12 @@ final class LevelScreen extends ib {
                           if (qi.level > 0) {
                             qi.level = qi.level - 1;
                           }
-                          na.field_j = null;
-                          na.field_j = null;
+                          IsaacRandom.field_j = null;
+                          IsaacRandom.field_j = null;
                           if (var4 != 0) {
                             nc.field_H = 0;
                             a.entities[0].field_g = -150;
-                            na.field_j = null;
+                            IsaacRandom.field_j = null;
                             if (DualLinkDequeIterator.field_e != null) {
                               nd.a(-26621, DualLinkDequeIterator.field_e);
                               DualLinkDequeIterator.field_e.exitFullscreen(ic.field_d, -104);
@@ -718,7 +718,7 @@ final class LevelScreen extends ib {
                       } else {
                         nc.field_H = 0;
                         a.entities[0].field_g = -150;
-                        na.field_j = null;
+                        IsaacRandom.field_j = null;
                         if (var4 != 0) {
                           if (DualLinkDequeIterator.field_e != null) {
                             nd.a(-26621, DualLinkDequeIterator.field_e);

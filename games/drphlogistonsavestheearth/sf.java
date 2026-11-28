@@ -350,7 +350,7 @@ final class sf {
                     }
                   }
                   if (var21 != null &&
-                    ta.a(6, var21)) {
+                    IsaacRandom.a(6, var21)) {
                     var8[1][var13] = SecondaryNodeDequeIterator.field_d;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

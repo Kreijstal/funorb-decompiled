@@ -289,7 +289,7 @@ final class rj {
             fg.field_S = param2;
             wh.field_c = param10;
             ll.field_f = param8;
-            ed.field_e = param4;
+            IsaacRandom.field_e = param4;
             mh.field_a = param7;
             ae.field_x = param3;
             na.field_c = param0;

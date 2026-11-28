@@ -11,7 +11,7 @@ final class pa extends PacketBuffer {
     static boolean[][] field_s;
     static int[] field_z;
     static int field_x;
-    private ed field_w;
+    private IsaacRandom field_w;
 
     pa(int param0) {
         super(param0);
@@ -39,7 +39,7 @@ final class pa extends PacketBuffer {
           while (param1 > var5_int) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_w.d(126));
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_w.nextInt(126));
             var5_int++;
           }
           return;
@@ -134,13 +134,13 @@ final class pa extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_w.d(-102) & 255;
+        return this.payload[fieldTemp$0] - this.field_w.nextInt(-102) & 255;
     }
 
     final void d(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_w.d(127));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_w.nextInt(127));
         if (param0 != 25) {
           field_z = (int[]) null;
         }
@@ -182,7 +182,7 @@ final class pa extends PacketBuffer {
           if (param0 != 61) {
             field_u = (String) null;
           }
-          this.field_w = new ed(param1);
+          this.field_w = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "pa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

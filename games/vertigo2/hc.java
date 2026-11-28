@@ -44,7 +44,7 @@ final class hc {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              ke.a((Throwable) null, "MGR1: " + param0, 0);
+              HuffmanCodec.a((Throwable) null, "MGR1: " + param0, 0);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

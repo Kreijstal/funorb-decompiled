@@ -135,7 +135,7 @@ final class fm implements cg {
               var18[0][var10 * 4 + 1] = fi.field_h[var11];
               var18[0][4 * var10 + 2] = kk.field_a[var11];
               var18[0][var10 * 4 + 3] = qj.field_d[var11];
-              if (ta.a(6, gd.field_d[var11]) &&
+              if (IsaacRandom.a(6, gd.field_d[var11]) &&
                 0 == qj.field_d[var11] + (kk.field_a[var11] + fi.field_h[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -153,7 +153,7 @@ final class fm implements cg {
               var18[1][1 + var13 * 4] = fi.field_h[var11Lifetime1];
               var18[1][var13 * 4 + 2] = kk.field_a[var11Lifetime1];
               var18[1][3 + var13 * 4] = qj.field_d[var11Lifetime1];
-              if (ta.a(6, gd.field_d[var11Lifetime1]) &&
+              if (IsaacRandom.a(6, gd.field_d[var11Lifetime1]) &&
                 0 == qj.field_d[var11Lifetime1] + kk.field_a[var11Lifetime1] + fi.field_h[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;

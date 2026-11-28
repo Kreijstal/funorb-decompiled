@@ -25,21 +25,21 @@ final class va {
 
     final static boolean b(int param0) {
         if (pe.field_d == -1) {
-          if (!qb.a(1, 3)) {
+          if (!IsaacRandom.a(1, 3)) {
             return false;
           }
           pe.field_d = jc.field_g.readUnsignedByte((byte) -106);
           jc.field_g.position = 0;
         }
         if (param0 == ~pe.field_d) {
-          if (qb.a(2, param0 ^ 2)) {
+          if (IsaacRandom.a(2, param0 ^ 2)) {
             pe.field_d = jc.field_g.readUnsignedShort(-1640531527);
             jc.field_g.position = 0;
-            return qb.a(pe.field_d, 3);
+            return IsaacRandom.a(pe.field_d, 3);
           }
           return false;
         }
-        return qb.a(pe.field_d, 3);
+        return IsaacRandom.a(pe.field_d, 3);
     }
 
     final static void a(int param0) {

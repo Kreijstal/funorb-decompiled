@@ -66,7 +66,7 @@ final class BucketBoard {
     private int integerState0481;
     int pieceY;
     int integerState0483;
-    MixedSupport030 mixedSupport030State0001;
+    IsaacRandom mixedSupport030State0001;
     static boolean booleanState0109;
     int integerState0484;
     private boolean booleanState0110;
@@ -236,7 +236,7 @@ final class BucketBoard {
           if (this.integerState0446 < integerLocal7) {
             integerLocal7 = this.integerState0446;
           }
-          RenderingSupport003.performAction0571(this.integerState0458, integerLocal7, (byte) 127, MixedSupport030.rawSoundState0006);
+          RenderingSupport003.performAction0571(this.integerState0458, integerLocal7, (byte) 127, IsaacRandom.rawSoundState0006);
         } else {
           if (integerLocal1 > 0) {
             integerLocal7 = ((int)((double)this.integerState0446 * Math.sqrt((double)integerLocal1)) + 1) / 2;
@@ -2487,8 +2487,8 @@ final class BucketBoard {
         if (1 <= this.integerState0471) {
           integerLocal1++;
         }
-        int integerLocal2 = this.mixedSupport030State0001.computeInteger0413(79, integerLocal1 + this.integerState0477);
-        int integerLocal3 = this.mixedSupport030State0001.computeInteger0413(107, this.integerState0477 + integerLocal1);
+        int integerLocal2 = this.mixedSupport030State0001.nextBounded(79, integerLocal1 + this.integerState0477);
+        int integerLocal3 = this.mixedSupport030State0001.nextBounded(107, this.integerState0477 + integerLocal1);
         if (integerArgument1 != 26580) {
           return -69;
         }

@@ -1961,7 +1961,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("music_colon", 91);
                 if (var2 != null) {
-                  ja.field_a = dj.a(var2, false);
+                  HuffmanDecoder.field_a = dj.a(var2, false);
                 }
                 var2 = rp.a("fullscreen", 48);
                 if (var2 != null) {

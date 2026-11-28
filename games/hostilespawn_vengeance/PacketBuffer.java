@@ -33,7 +33,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_n[fieldTemp$2] = (byte)(int)(param1 >> 32);
         if (param0 >= -126) {
           int[] var5 = (int[]) null;
-          this.a(125, (byte) -21, -127, (int[]) null);
+          this.decryptXteaRange(125, (byte) -21, -127, (int[]) null);
         }
         int fieldTemp$3 = this.field_i;
         this.field_i = this.field_i + 1;
@@ -265,7 +265,7 @@ class PacketBuffer extends IntrusiveNode {
         return var2;
     }
 
-    final void a(int param0, byte param1, int param2, int[] param3) {
+    final void decryptXteaRange(int param0, byte param1, int param2, int[] param3) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -791,7 +791,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final void a(int[] param0, byte param1) {
+    final void encryptXtea(int[] param0, byte param1) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

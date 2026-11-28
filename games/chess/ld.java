@@ -67,7 +67,7 @@ final class ld {
         this.field_m = sa.field_e;
         this.field_c = qn.field_M;
         this.field_k = tk.field_b;
-        this.field_n = sn.field_g;
+        this.field_n = HuffmanCodec.field_g;
         this.field_q = ud.field_a;
         if (!param0) {
           this.field_l = null;

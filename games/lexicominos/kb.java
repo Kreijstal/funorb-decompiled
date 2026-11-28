@@ -1471,7 +1471,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_optin_news");
                 if (null != var2) {
-                  pe.field_j = ni.a((byte) -55, var2);
+                  IsaacRandom.field_j = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_agreeterms");
                 if (null != var2) {
@@ -1623,7 +1623,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_alert_passlength");
                 if (null != var2) {
-                  pe.field_a = ni.a((byte) -55, var2);
+                  IsaacRandom.field_a = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_alert_passcontainsname");
                 if (null != var2) {
@@ -1815,7 +1815,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "loading_graphics");
                 if (null != var2) {
-                  pe.field_e = ni.a((byte) -55, var2);
+                  IsaacRandom.field_e = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "loading_models");
                 if (null != var2) {

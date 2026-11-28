@@ -50,7 +50,7 @@ final class to {
             return;
           }
           if (1 != var2) {
-            ke.a((Throwable) null, "A1: " + or.a(122), 0);
+            HuffmanCodec.a((Throwable) null, "A1: " + or.a(122), 0);
             rm.b((byte) 117);
             return;
           }

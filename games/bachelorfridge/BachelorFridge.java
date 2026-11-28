@@ -710,7 +710,7 @@ public final class BachelorFridge extends NetworkGameClient {
         rfa.releaseStatics((byte) -101);
         ModelMesh.releaseStatics();
         rba.releaseStatics(-52);
-        il.releaseStatics(4);
+        HuffmanCodec.releaseStatics(4);
         lf.resetStaticState(123);
         ina.releaseStatics((byte) -101);
         lna.releaseStatics((byte) 126);
@@ -1537,7 +1537,7 @@ public final class BachelorFridge extends NetworkGameClient {
             this.a(99.5999984741211f, true);
             waa.a(0, 32);
             if (fga.field_h != null) {
-              ika.a((byte) 18, new il(fga.field_h.a((byte) 123, "huffman", "")));
+              ika.a((byte) 18, new HuffmanCodec(fga.field_h.a((byte) 123, "huffman", "")));
               fga.field_h = null;
               mia.b(32);
               return false;

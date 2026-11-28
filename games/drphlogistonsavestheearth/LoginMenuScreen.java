@@ -1417,7 +1417,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_email_confirm", 0);
                 if (null != var2) {
-                  ta.field_a = mj.a((byte) 32, var2);
+                  IsaacRandom.field_a = mj.a((byte) 32, var2);
                 }
                 var2 = wg.a("create_age", 0);
                 if (null != var2) {
@@ -2735,7 +2735,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("mb_achievement_count_2", 0);
                 if (var2 != null) {
-                  ta.field_g = mj.a((byte) 52, var2);
+                  IsaacRandom.field_g = mj.a((byte) 52, var2);
                 }
                 var2 = wg.a("mb_exclusive_1", 0);
                 if (null != var2) {

@@ -396,7 +396,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime73 = DualLinkNode.a("showall", -523);
           if (null != var2Lifetime73) {
-            nf.field_h = ta.a(32200, var2Lifetime73);
+            IsaacRandom.field_h = ta.a(32200, var2Lifetime73);
           }
           var2Lifetime74 = DualLinkNode.a("showmine", param0 ^ -522);
           if (var2Lifetime74 != null) {

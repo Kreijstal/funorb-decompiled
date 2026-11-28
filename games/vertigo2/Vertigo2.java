@@ -208,7 +208,7 @@ public final class Vertigo2 extends GameShell {
                       sk.field_g = true;
                       lc.field_d = false;
                       if (am.field_b) {
-                        ke.field_i = qp.field_c;
+                        HuffmanCodec.field_i = qp.field_c;
                         gj.a((byte) -103, false, am.field_n, 11);
                       } else {
                         gj.a((byte) 124, false, am.field_n, 0);
@@ -262,7 +262,7 @@ public final class Vertigo2 extends GameShell {
               am.field_n = 11;
               kj.field_C = false;
               ProxyAuthenticationRequiredException.field_b = false;
-              ke.field_i = id.field_f.readString(128);
+              HuffmanCodec.field_i = id.field_f.readString(128);
               continue;
             }
             if (lc.field_f == 14) {
@@ -815,7 +815,7 @@ public final class Vertigo2 extends GameShell {
           mh.clearStaticReferences(-1);
           vh.clearStaticReferences();
           id.clearStaticReferences((byte) 76);
-          ke.clearStaticReferences((byte) -125);
+          HuffmanCodec.clearStaticReferences((byte) -125);
           n.clearStaticReferences(69);
           ib.resetStaticState((byte) -35);
           fr.clearStaticReferences(false);
@@ -1496,7 +1496,7 @@ public final class Vertigo2 extends GameShell {
             if (null != gi.field_p) {
               ProxySocketConnector.a(false, 98.0f, fa.field_v);
               this.d(-17);
-              AccountServiceResult.a(new ke(gi.field_p.a("", "huffman", 0)), (byte) 98);
+              AccountServiceResult.a(new HuffmanCodec(gi.field_p.a("", "huffman", 0)), (byte) 98);
               gi.field_p = null;
               di.b((byte) 126);
               return false;

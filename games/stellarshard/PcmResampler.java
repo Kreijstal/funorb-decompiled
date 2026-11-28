@@ -150,14 +150,14 @@ final class PcmResampler {
     }
 
     final static void b(int param0) {
-        na.field_d.e((byte) 109);
+        IsaacRandom.field_d.e((byte) 109);
         if (param0 != -21923) {
           return;
         }
         if (PcmOutputWorker.field_d == null) {
-          PcmOutputWorker.field_d = new ql(na.field_d, ii.field_F);
+          PcmOutputWorker.field_d = new ql(IsaacRandom.field_d, ii.field_F);
         }
-        na.field_d.a((byte) 72, (UiWidget) (PcmOutputWorker.field_d));
+        IsaacRandom.field_d.a((byte) 72, (UiWidget) (PcmOutputWorker.field_d));
     }
 
     final static void a(int param0, ha param1) {

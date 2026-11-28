@@ -303,7 +303,7 @@ abstract class ArenaTheme {
             ge.field_K.a(param4, param5);
           } else {
             if (var9 == 35) {
-              il.field_b.a(param4, param5);
+              HuffmanCodec.field_b.a(param4, param5);
             } else {
               if (var9 == 28) {
                 if (var23.field_h >= BuffVendorAnimation.field_w[var9].field_e) {

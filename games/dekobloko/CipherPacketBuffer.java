@@ -5,7 +5,7 @@ import java.util.*;
 
 final class CipherPacketBuffer extends PacketBuffer {
     private int integerState0797;
-    private MixedSupport030 mixedSupport030State0002;
+    private IsaacRandom mixedSupport030State0002;
     private int integerState0798;
     static int integerState0799;
     static NodeDeque nodeDequeState0033;
@@ -22,7 +22,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int integerLocal1 = -7 / ((byteArgument1 + 78) / 33);
         int integerLocal2 = this.position;
         this.position = this.position + 1;
-        return this.payload[integerLocal2] - this.mixedSupport030State0002.computeInteger0414(false) & 255;
+        return this.payload[integerLocal2] - this.mixedSupport030State0002.nextInt(false) & 255;
     }
 
     final void performAction1649(int integerArgument1) {
@@ -52,7 +52,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         int integerLocal2 = 0;
         int integerLocal3;
         integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
-        integerArgument3 = integerArgument3 & MixedSupport030.integerArrayState0037[integerArgument1];
+        integerArgument3 = integerArgument3 & IsaacRandom.integerArrayState0037[integerArgument1];
         if (integerArgument2 != 0) {
           rgbSpriteState0061 = (RgbSprite) null;
         }
@@ -168,7 +168,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (integerLocal1 = 0; integerLocal1 < integerArgument3; integerLocal1++) {
             integerLocal2 = this.position;
             this.position = this.position + 1;
-            byteArrayArgument2[integerArgument4 + integerLocal1] = (byte)(this.payload[integerLocal2] - this.mixedSupport030State0002.computeInteger0414(false));
+            byteArrayArgument2[integerArgument4 + integerLocal1] = (byte)(this.payload[integerLocal2] - this.mixedSupport030State0002.nextInt(false));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal10) {
@@ -206,7 +206,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void performAction1641(int integerArgument1, int integerArgument2) {
         int integerLocal1 = this.position;
         this.position = this.position + 1;
-        this.payload[integerLocal1] = (byte)(integerArgument1 + this.mixedSupport030State0002.computeInteger0414(false));
+        this.payload[integerLocal1] = (byte)(integerArgument1 + this.mixedSupport030State0002.nextInt(false));
         if (integerArgument2 != -4) {
           rgbSpriteArrayState0030 = (RgbSprite[]) null;
         }
@@ -225,14 +225,14 @@ final class CipherPacketBuffer extends PacketBuffer {
         while (integerLocal4 < integerArgument1) {
           previousIntegerLocal1 = integerLocal3;
           integerLocal3++;
-          integerLocal5 = integerLocal5 + ((MixedSupport030.integerArrayState0037[integerLocal4] & this.payload[previousIntegerLocal1]) << integerArgument1 - integerLocal4);
+          integerLocal5 = integerLocal5 + ((IsaacRandom.integerArrayState0037[integerLocal4] & this.payload[previousIntegerLocal1]) << integerArgument1 - integerLocal4);
           integerArgument1 = integerArgument1 - integerLocal4;
           integerLocal4 = 8;
         }
         if (integerArgument1 != integerLocal4) {
-          integerLocal5 = integerLocal5 + (this.payload[integerLocal3] >> -integerArgument1 + integerLocal4 & MixedSupport030.integerArrayState0037[integerArgument1]);
+          integerLocal5 = integerLocal5 + (this.payload[integerLocal3] >> -integerArgument1 + integerLocal4 & IsaacRandom.integerArrayState0037[integerArgument1]);
         } else {
-          integerLocal5 = integerLocal5 + (MixedSupport030.integerArrayState0037[integerLocal4] & this.payload[integerLocal3]);
+          integerLocal5 = integerLocal5 + (IsaacRandom.integerArrayState0037[integerLocal4] & this.payload[integerLocal3]);
         }
         return integerLocal5;
     }
@@ -254,7 +254,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void performAction1640(int[] integerArrayArgument1, byte byteArgument2) {
         try {
-          this.mixedSupport030State0002 = new MixedSupport030(integerArrayArgument1);
+          this.mixedSupport030State0002 = new IsaacRandom(integerArrayArgument1);
           if (byteArgument2 <= 61) {
             this.computeInteger1644((byte) -25);
           }

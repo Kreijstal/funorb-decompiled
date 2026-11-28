@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb {
+final class IsaacRandom {
     static int[] field_h;
     private int field_i;
     static int field_e;
@@ -30,7 +30,7 @@ final class jb {
         return stackIn_4_0;
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var3 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -66,7 +66,7 @@ final class jb {
         }
     }
 
-    jb(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];
@@ -74,13 +74,13 @@ final class jb {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_d[var2_int] = param0[var2_int];
           }
-          this.c(119);
+          this.initializeState(119);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "jb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var7 = -1640531527;
         int var5 = -1640531527;
@@ -161,7 +161,7 @@ final class jb {
           this.field_a[7 + var2Lifetime1] = var10;
         }
         if (param0 <= 97) {
-          this.d(-28);
+          this.nextInt(-28);
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var4 = var4 + this.field_a[1 + var2Lifetime2];
@@ -205,13 +205,13 @@ final class jb {
           this.field_a[var2Lifetime2 + 6] = var9;
           this.field_a[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) -122);
+        this.generateResults((byte) -122);
         this.field_b = 256;
     }
 
-    final int d(int param0) {
+    final int nextInt(int param0) {
         if (this.field_b == 0) {
-          this.a((byte) 100);
+          this.generateResults((byte) 100);
           this.field_b = 256;
         }
         if (param0 != 3) {

@@ -349,17 +349,17 @@ final class df extends wj {
           }
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_4_0 = ol.field_h;
+            stackIn_4_0 = IsaacRandom.field_h;
             return stackIn_4_0;
           }
           if (!ph.a(var3, -67, var4)) {
-            stackIn_7_0 = ol.field_h;
+            stackIn_7_0 = IsaacRandom.field_h;
             return stackIn_7_0;
           }
           if (!this.a((byte) 76, param0)) {
             return wj.field_i;
           }
-          stackIn_11_0 = ol.field_h;
+          stackIn_11_0 = IsaacRandom.field_h;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

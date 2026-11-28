@@ -294,7 +294,7 @@ abstract class wl extends tb {
         if (param0 != 1) {
           return (pf) null;
         }
-        return na.a(1, 255, param1, false, false, true);
+        return IsaacRandom.a(1, 255, param1, false, false, true);
     }
 
     static {

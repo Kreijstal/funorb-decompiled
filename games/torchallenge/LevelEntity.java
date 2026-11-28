@@ -286,10 +286,10 @@ final class LevelEntity {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (s.field_m) {
-            if (0 < ed.field_c) {
-              ed.field_c = ed.field_c - 1;
+            if (0 < IsaacRandom.field_c) {
+              IsaacRandom.field_c = IsaacRandom.field_c - 1;
             }
-            if (ed.field_c == 0) {
+            if (IsaacRandom.field_c == 0) {
               s.field_m = false;
             }
           }
@@ -454,7 +454,7 @@ final class LevelEntity {
             if (ii.field_e) {
               this.field_Q = (5 * this.field_K >> 2) * this.field_a;
               ii.field_e = false;
-              ed.field_c = 200;
+              IsaacRandom.field_c = 200;
               s.field_m = true;
               this.k((byte) -121);
               this.field_L = 9;

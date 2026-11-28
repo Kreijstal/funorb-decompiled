@@ -153,7 +153,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var8 = param1.a((byte) -77);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
-          if (null == ol.field_g &&
+          if (null == IsaacRandom.field_g &&
             !cb.a(-123, false)) {
             stackIn_8_0 = -1;
             return stackIn_8_0;
@@ -273,7 +273,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             stackIn_57_0 = wk.field_a;
             return stackIn_57_0;
           }
-          if (ol.field_g == null) {
+          if (IsaacRandom.field_g == null) {
             if (DequeCursor.field_e) {
               if (wf.a(114) > 30000L) {
                 ImageProducerRasterBuffer.field_n = kj.field_E;

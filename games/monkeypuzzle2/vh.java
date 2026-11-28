@@ -34,7 +34,7 @@ final class vh extends ButtonWidget {
           var8 = this.field_J.b(false);
           if (var8 != ke.field_d &&
             f.field_g != var8) {
-            if (ol.field_h == var8) {
+            if (IsaacRandom.field_h == var8) {
               var14 = hk.field_i[2];
               var14.c(-(var14.field_k >> 1) + var5, var6 - (var14.field_j >> 1), 256);
             } else {

@@ -120,7 +120,7 @@ final class kl extends IntrusiveNode {
               var9 = stackIn_46_0;
               var1_int = var1_int + nh.field_f;
               if (var9 != null) {
-                var9.a(true, var7Lifetime1 + (le.field_k << 1), na.field_a + (nh.field_h << 1), var1_int, var8Lifetime1 - le.field_k);
+                var9.a(true, var7Lifetime1 + (le.field_k << 1), IsaacRandom.field_a + (nh.field_h << 1), var1_int, var8Lifetime1 - le.field_k);
               }
               var1_int = var1_int + nh.field_h;
             }
@@ -129,7 +129,7 @@ final class kl extends IntrusiveNode {
               var1_int = var1_int + l.field_e;
             } else {
               mj.field_E.a(var6, var8Lifetime1, var1_int + fg.field_M, var5, -1);
-              var1_int = var1_int + (na.field_a + (nh.field_f + nh.field_h));
+              var1_int = var1_int + (IsaacRandom.field_a + (nh.field_f + nh.field_h));
             }
           }
           return;

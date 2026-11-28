@@ -191,7 +191,7 @@ final class rd extends wj {
             var3 = ((ag) ((Object) this.field_n)).a(81);
             if (var3 != null &&
               var3.b(false) != wj.field_i) {
-              stackIn_6_0 = ol.field_h;
+              stackIn_6_0 = IsaacRandom.field_h;
               return stackIn_6_0;
             }
           }
@@ -200,7 +200,7 @@ final class rd extends wj {
             return stackIn_9_0;
           }
           if (!param0.equals(this.field_n.field_s)) {
-            stackIn_13_0 = ol.field_h;
+            stackIn_13_0 = IsaacRandom.field_h;
           } else {
             stackIn_13_0 = wj.field_i;
           }

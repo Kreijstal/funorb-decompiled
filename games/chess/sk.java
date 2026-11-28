@@ -50,7 +50,7 @@ final class sk extends ph {
         int var7 = MusicPatchPcmStream.field_u.get(11);
         int var8 = MusicPatchPcmStream.field_u.get(12);
         int var9 = MusicPatchPcmStream.field_u.get(13);
-        return sn.field_f[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ij.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return HuffmanCodec.field_f[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ij.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static {

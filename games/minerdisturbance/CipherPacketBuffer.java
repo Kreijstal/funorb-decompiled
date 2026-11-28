@@ -88,7 +88,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 == 0) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_v.b(4) & 255;
+          return this.payload[fieldTemp$0] - this.field_v.nextInt(4) & 255;
         }
         return -16;
     }
@@ -164,13 +164,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 < -42) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.b(4));
+          this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.nextInt(4));
           return;
         }
         field_x = (Sprite) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(param1 + this.field_v.b(4));
+        this.payload[fieldTemp$1] = (byte)(param1 + this.field_v.nextInt(4));
     }
 
     final void o(int param0) {
@@ -204,7 +204,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (param2 > var5_int) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[var5_int + param3] = (byte)(this.payload[fieldTemp$0] - this.field_v.b(4));
+            param0[var5_int + param3] = (byte)(this.payload[fieldTemp$0] - this.field_v.nextInt(4));
             var5_int++;
             if (var7 != 0) {
               return;

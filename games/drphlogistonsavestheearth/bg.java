@@ -104,7 +104,7 @@ final class bg extends IntrusiveNode {
             md.field_a.b(a.a(5044, ja.field_g, new String[]{dc.field_f}), var6, 40, 16777215, -1);
             sc.field_f.b(a.a(5044, ek.field_p, new String[]{dc.field_f}), var6, 60, 16777215, -1);
             md.field_a.b(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
-            sc.field_f.b(a.a(param0 ^ -14537, ta.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
+            sc.field_f.b(a.a(param0 ^ -14537, IsaacRandom.field_g, new String[]{fl.field_d}), var6, 130, 16777215, -1);
             md.field_a.b(lc.field_k, var6, 180, 16777215, -1);
             sc.field_f.b(nb.field_c, var6, 200, 16777215, -1);
             p.a(var12.field_y, 3, 0, var12.field_w, 1, 0, 0, var12);

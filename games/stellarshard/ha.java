@@ -7,7 +7,7 @@ final class ha extends PacketBuffer {
     static int field_t;
     static String field_x;
     private int field_s;
-    private na field_u;
+    private IsaacRandom field_u;
 
     public static void clearStaticReferences(int param0) {
         field_x = null;
@@ -20,12 +20,12 @@ final class ha extends PacketBuffer {
         if (param0 == -9) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_u.a(-609392408);
+          return 255 & this.payload[fieldTemp$0] - this.field_u.nextInt(-609392408);
         }
         field_x = (String) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_u.a(-609392408);
+        return 255 & this.payload[fieldTemp$1] - this.field_u.nextInt(-609392408);
     }
 
     final void a(byte[] param0, boolean param1, int param2, int param3) {
@@ -40,12 +40,12 @@ final class ha extends PacketBuffer {
         var6 = stellarshard.field_B;
         try {
           if (!param1) {
-            this.field_u = (na) null;
+            this.field_u = (IsaacRandom) null;
           }
           for (var5_int = 0; param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_u.a(-609392408));
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_u.nextInt(-609392408));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,7 +65,7 @@ final class ha extends PacketBuffer {
     final void f(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_u.a(param1 - 609393358) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.field_u.nextInt(param1 - 609393358) + param0);
         if (param1 != 950) {
           this.f(-75, 25);
         }
@@ -76,7 +76,7 @@ final class ha extends PacketBuffer {
           if (param1 != -1001) {
             field_w = -27;
           }
-          this.field_u = new na(param0);
+          this.field_u = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ha.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

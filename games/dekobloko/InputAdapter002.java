@@ -162,14 +162,14 @@ final class InputAdapter002 extends ResourceSupport002 implements CallbackContra
         if (integerArgument2 > 95) {
           integerLocal1 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
           integerLocal2 = integerLocal1 - integerArgument1 * integerArgument1;
-          MixedSupport030.sceneWidgetState0023.performAction1764(199, 0, 90, -4 + SoftwareRaster.integerState0284 - 210, integerLocal3 - 199 * integerLocal2 / integerLocal1);
+          IsaacRandom.sceneWidgetState0023.performAction1764(199, 0, 90, -4 + SoftwareRaster.integerState0284 - 210, integerLocal3 - 199 * integerLocal2 / integerLocal1);
           NetworkSupport008.sceneWidgetState0093.performAction1764(438, 0, 0, SoftwareRaster.integerState0284 - 124, integerLocal3 + 202 + integerLocal2 * 438 / integerLocal1);
           return;
         }
         stringState0446 = (String) null;
         integerLocal4 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
         integerLocal5 = integerLocal4 - integerArgument1 * integerArgument1;
-        MixedSupport030.sceneWidgetState0023.performAction1764(199, 0, 90, -4 + SoftwareRaster.integerState0284 - 210, integerLocal3 - 199 * integerLocal5 / integerLocal4);
+        IsaacRandom.sceneWidgetState0023.performAction1764(199, 0, 90, -4 + SoftwareRaster.integerState0284 - 210, integerLocal3 - 199 * integerLocal5 / integerLocal4);
         NetworkSupport008.sceneWidgetState0093.performAction1764(438, 0, 0, SoftwareRaster.integerState0284 - 124, integerLocal3 + 202 + integerLocal5 * 438 / integerLocal4);
     }
 

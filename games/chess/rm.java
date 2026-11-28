@@ -210,7 +210,7 @@ final class rm extends mf {
           var5 = (CharSequence) ((Object) param1);
           var4 = dj.a(var5, 0);
           param0.writeUnsignedSmart((byte) -127, var4.length);
-          param0.position = param0.position + cg.field_c.a(true, var4.length, 0, var4, param0.data, param0.position);
+          param0.position = param0.position + cg.field_c.compress(true, var4.length, 0, var4, param0.data, param0.position);
           if (param2 != 16711422) {
             rm.a(-114);
           }

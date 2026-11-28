@@ -135,7 +135,7 @@ final class vg extends jj {
             var10 = var34.a((UiWidget) (this), -73, param2) + (var34.a(-1, (UiWidget) (this)).b(62) >> 1);
             if (var6 != ke.field_d &&
               var6 != f.field_g) {
-              if (ol.field_h == var6) {
+              if (IsaacRandom.field_h == var6) {
                 var30 = hk.field_i[2];
                 var30.c(var9, var10 - (var30.field_j >> 1), 256);
                 return;
@@ -198,7 +198,7 @@ final class vg extends jj {
             return;
           }
           if (var6 != f.field_g) {
-            if (ol.field_h == var6) {
+            if (IsaacRandom.field_h == var6) {
               var25 = hk.field_i[2];
               var25.c(var9Lifetime2, var10Lifetime2 - (var25.field_j >> 1), 256);
               return;
@@ -261,7 +261,7 @@ final class vg extends jj {
           }
         } else {
           if (var6Lifetime1 != f.field_g) {
-            if (ol.field_h == var6Lifetime1) {
+            if (IsaacRandom.field_h == var6Lifetime1) {
               var20 = hk.field_i[2];
               var20.c(var9Lifetime1, var10Lifetime1 - (var20.field_j >> 1), 256);
               return;
@@ -332,8 +332,8 @@ final class vg extends jj {
         if (param0 < 108) {
           return;
         }
-        if (ol.field_e > 32) {
-          w.a(-1, -32 + ol.field_e);
+        if (IsaacRandom.field_e > 32) {
+          w.a(-1, -32 + IsaacRandom.field_e);
           return;
         }
         w.a(-1, 0);

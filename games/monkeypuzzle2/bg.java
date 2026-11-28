@@ -116,7 +116,7 @@ final class bg extends WidgetContainer implements u, ql, sh {
             return true;
           }
           var5 = var4.b(false);
-          if (var5 == ol.field_h) {
+          if (var5 == IsaacRandom.field_h) {
             return false;
           }
           if (var5 == ke.field_d) {

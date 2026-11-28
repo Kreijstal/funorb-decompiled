@@ -16,8 +16,8 @@ final class nb extends ig {
     final static void a(boolean param0, float param1, String param2, byte param3) {
         try {
           if (PcmOutputWorker.field_d == null) {
-            PcmOutputWorker.field_d = new ql(na.field_d, ii.field_F);
-            na.field_d.a((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
+            PcmOutputWorker.field_d = new ql(IsaacRandom.field_d, ii.field_F);
+            IsaacRandom.field_d.a((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
           }
           if (param3 > -117) {
             String var5 = (String) null;

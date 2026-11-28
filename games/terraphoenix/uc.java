@@ -149,7 +149,7 @@ final class uc extends PacketBuffer {
           for (var5_int = param0; var5_int < param2; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param1[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.a(112));
+            param1[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.nextInt(112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,7 +183,7 @@ final class uc extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.a(65));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.nextInt(65));
     }
 
     final void n(int param0) {
@@ -204,7 +204,7 @@ final class uc extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_m.a(116) & 255;
+        return this.payload[fieldTemp$0] - this.field_m.nextInt(116) & 255;
     }
 
     static {

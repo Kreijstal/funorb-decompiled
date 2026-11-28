@@ -18,7 +18,7 @@ final class nl {
         if (pg.field_c) {
           int var1 = -119 / ((56 - param0) / 59);
           pa.field_e = true;
-          qb.a(false, -1402584374);
+          IsaacRandom.a(false, -1402584374);
           mh.field_U = 0;
           return;
         }

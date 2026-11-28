@@ -81,7 +81,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void d(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_r.a(false) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_r.nextInt(false) + param1);
         if (param0 != 8) {
           field_q = -127;
         }
@@ -152,11 +152,11 @@ final class CipherPacketBuffer extends PacketBuffer {
           this.e(false);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_r.a(!param0 ? true : false);
+          return 255 & this.payload[fieldTemp$0] - this.field_r.nextInt(!param0 ? true : false);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_r.a(!param0 ? true : false);
+        return 255 & this.payload[fieldTemp$1] - this.field_r.nextInt(!param0 ? true : false);
     }
 
     final void b(int param0, int param1, int param2, byte[] param3) {
@@ -176,7 +176,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param0; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_r.a(false));
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_r.nextInt(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

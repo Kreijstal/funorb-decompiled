@@ -53,10 +53,10 @@ final class b {
               hh.field_p.writeByte(14, (byte) 121);
               hh.field_p.writeByte(bj.field_E.b((byte) -101).field_a, (byte) 64);
               jj.a(-1, true);
-              pj.field_a = qb.field_h;
+              pj.field_a = IsaacRandom.field_h;
             }
-            if (qb.field_h == pj.field_a &&
-              qb.a(1, 3)) {
+            if (IsaacRandom.field_h == pj.field_a &&
+              IsaacRandom.a(1, 3)) {
               var6_int = jc.field_g.readUnsignedByte((byte) -103);
               if (var6_int == 0) {
                 pj.field_a = qf.field_a;
@@ -68,7 +68,7 @@ final class b {
               jc.field_g.position = 0;
             }
             if (pj.field_a == qf.field_a &&
-              qb.a(8, 3)) {
+              IsaacRandom.a(8, 3)) {
               qa.field_i = jc.field_g.readLong((byte) -121);
               jc.field_g.position = 0;
               vf.a(param1, bj.field_E, param5, param4, -93);
@@ -76,7 +76,7 @@ final class b {
             }
             boolean decompiledFrameRemainder0 = true;
             if (ae.field_g == pj.field_a &&
-              qb.a(1, 3)) {
+              IsaacRandom.a(1, 3)) {
               var6_intLifetime1 = jc.field_g.readUnsignedByte((byte) -75);
               mc.field_d = null;
               jc.field_g.position = 0;

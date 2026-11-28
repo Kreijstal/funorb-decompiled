@@ -13,7 +13,7 @@ final class IsaacRandom {
     static vr field_g;
     static String field_h;
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -61,7 +61,7 @@ final class IsaacRandom {
         sja.field_fb.writeByte(param0, 0);
     }
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var12 = BachelorFridge.field_y;
         int var5 = -1640531527;
@@ -187,7 +187,7 @@ final class IsaacRandom {
           this.field_c[var2Lifetime2 + 6] = var9;
           this.field_c[7 + var2Lifetime2] = var10;
         }
-        this.a(false);
+        this.generateResults(false);
         this.field_a = 256;
     }
 
@@ -209,7 +209,7 @@ final class IsaacRandom {
 
     final int nextInt(int param0) {
         if (0 == this.field_a) {
-          this.a(false);
+          this.generateResults(false);
           this.field_a = 256;
         }
         if (param0 != 28602) {
@@ -237,7 +237,7 @@ final class IsaacRandom {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
-          this.a(48);
+          this.initializeState(48);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ko.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

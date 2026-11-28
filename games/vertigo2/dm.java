@@ -213,7 +213,7 @@ final class dm extends UiPanel {
             var6_ref_vi.unlink(param0 ^ 2);
             return;
           }
-          ke.a((Throwable) null, "HS1: " + or.a(param0 + 121), 0);
+          HuffmanCodec.a((Throwable) null, "HS1: " + or.a(param0 + 121), 0);
           rm.b((byte) 5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

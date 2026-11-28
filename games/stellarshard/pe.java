@@ -8,7 +8,7 @@ final class pe {
 
     final static void b(int param0) {
         n.field_i = nk.a(-20);
-        na.field_d = new ei();
+        IsaacRandom.field_d = new ei();
         th.a(true, true, param0);
     }
 

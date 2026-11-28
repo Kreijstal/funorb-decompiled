@@ -726,7 +726,7 @@ final class GameEntity {
           GameEntity.$cfr$intArgs$a$590e95718a07(-45, (String) null, false);
         }
         l.field_e = param2;
-        na.field_a = param4;
+        IsaacRandom.field_a = param4;
     }
 
     private final static void b(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -1167,7 +1167,7 @@ final class GameEntity {
           if (this.kind == 11 &&
             16 != this.field_c &&
             qi.level == 1 &&
-            null == na.field_j) {
+            null == IsaacRandom.field_j) {
             SoftwareRasterizer.drawRectangleOutline(24 + var2 - ArchiveRequest.field_s / 2, -(ArchiveRequest.field_s / 2) + var3 + 24, ArchiveRequest.field_s + 48, 48 + ArchiveRequest.field_s, 65535);
             stackIn_176_0 = qj.field_a;
             stackIn_176_1 = cd.field_P;
@@ -1178,7 +1178,7 @@ final class GameEntity {
           }
           if (this.kind == 13 &&
             4 == qi.level &&
-            na.field_j == null) {
+            IsaacRandom.field_j == null) {
             SoftwareRasterizer.drawRectangleOutline(24 + (var2 - ArchiveRequest.field_s / 2), -(ArchiveRequest.field_s / 2) + 24 + var3, 48 + ArchiveRequest.field_s, ArchiveRequest.field_s + 48, 16711680);
             stackIn_184_0 = qj.field_a;
             stackIn_184_1 = FrameTimer.field_d;
@@ -1188,14 +1188,14 @@ final class GameEntity {
             ((ub) (Object) stackIn_184_0).c(stackIn_184_1, stackIn_184_2, stackIn_184_3, stackIn_185_4, 0);
           }
           if (this.kind == 12 &&
-            null == na.field_j) {
+            null == IsaacRandom.field_j) {
             if (50 < this.field_i) {
               var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)this.heading / 128.0) * (double)(-50 + this.field_i)) / 25.0);
               SoftwareRasterizer.addRadialGlow(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (this.field_i - 50) / 10 + 5 << 4, 255, AccountServiceResult.field_c);
             }
             if (qi.level == 5 &&
-              null == na.field_j) {
+              null == IsaacRandom.field_j) {
               SoftwareRasterizer.drawRectangleOutline(var2 - (-24 + ArchiveRequest.field_s / 2), -(ArchiveRequest.field_s / 2) + (24 + var3), 48 + ArchiveRequest.field_s, 48 + ArchiveRequest.field_s, 16711680);
               stackIn_197_0 = qj.field_a;
               stackIn_197_1 = mc.field_b;
@@ -1207,7 +1207,7 @@ final class GameEntity {
           }
           if (this.kind == 15 &&
             7 == qi.level &&
-            null == na.field_j) {
+            null == IsaacRandom.field_j) {
             SoftwareRasterizer.drawRectangleOutline(var2 + 24 - ArchiveRequest.field_s / 2, -(ArchiveRequest.field_s / 2) + var3 + 24, 48 + ArchiveRequest.field_s, 48 + ArchiveRequest.field_s, 16711680);
             stackIn_206_0 = qj.field_a;
             stackIn_206_1 = he.field_k;
@@ -1218,7 +1218,7 @@ final class GameEntity {
           }
           if (this.kind == 7 &&
             qi.level == 8 &&
-            null == na.field_j) {
+            null == IsaacRandom.field_j) {
             SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, 96 + ArchiveRequest.field_s, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_215_0 = qj.field_a;
             stackIn_215_1 = hc.field_h;
@@ -1229,7 +1229,7 @@ final class GameEntity {
           }
           if (this.kind == 6 &&
             qi.level == 9 &&
-            na.field_j == null) {
+            IsaacRandom.field_j == null) {
             SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, 96 + ArchiveRequest.field_s, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_223_0 = qj.field_a;
             stackIn_223_1 = hc.field_h;
@@ -1240,7 +1240,7 @@ final class GameEntity {
           }
           if (this.kind == 14 &&
             qi.level == 10 &&
-            null == na.field_j) {
+            null == IsaacRandom.field_j) {
             SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, ArchiveRequest.field_s + 96, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_230_0 = qj.field_a;
             stackIn_230_1 = jf.field_l;

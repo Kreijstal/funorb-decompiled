@@ -37,8 +37,8 @@ final class fl {
     }
 
     final static void a(int param0) {
-        if (~ol.field_e > param0) {
-          w.a(-1, 32 + ol.field_e);
+        if (~IsaacRandom.field_e > param0) {
+          w.a(-1, 32 + IsaacRandom.field_e);
           return;
         }
         w.a(-1, 256);

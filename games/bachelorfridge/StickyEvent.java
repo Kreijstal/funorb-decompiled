@@ -271,7 +271,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  il.field_e = qq.a(var2, param0);
+                  HuffmanCodec.field_e = qq.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_entered_other_game");
                 if (var2 != null) {

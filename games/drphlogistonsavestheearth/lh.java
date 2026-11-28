@@ -4,7 +4,7 @@
 final class lh extends PacketBuffer {
     static int[] field_n;
     static ok field_l;
-    private ta field_o;
+    private IsaacRandom field_o;
     static int field_m;
     static RgbSprite field_p;
     private int field_q;
@@ -16,11 +16,11 @@ final class lh extends PacketBuffer {
           this.a(-86, 117, (byte[]) null, (byte) -63);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_o.b((byte) -57);
+          return 255 & this.payload[fieldTemp$0] - this.field_o.nextInt((byte) -57);
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_o.b((byte) -57);
+        return 255 & this.payload[fieldTemp$1] - this.field_o.nextInt((byte) -57);
     }
 
     final void a(int param0, int param1, byte[] param2, byte param3) {
@@ -41,7 +41,7 @@ final class lh extends PacketBuffer {
           while (var5_int < param0) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param1 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_o.b((byte) -115));
+            param2[param1 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_o.nextInt((byte) -115));
             var5_int++;
           }
           return;
@@ -115,9 +115,9 @@ final class lh extends PacketBuffer {
     final void a(byte param0, int[] param1) {
         try {
           if (param0 > -100) {
-            this.field_o = (ta) null;
+            this.field_o = (IsaacRandom) null;
           }
-          this.field_o = new ta(param1);
+          this.field_o = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "lh.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -165,12 +165,12 @@ final class lh extends PacketBuffer {
           lh.sleepIgnoringInterrupts(2L, (byte) -21);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(this.field_o.b((byte) 127) + param0);
+          this.payload[fieldTemp$0] = (byte)(this.field_o.nextInt((byte) 127) + param0);
           return;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(this.field_o.b((byte) 127) + param0);
+        this.payload[fieldTemp$1] = (byte)(this.field_o.nextInt((byte) 127) + param0);
     }
 
     final int e(int param0, byte param1) {

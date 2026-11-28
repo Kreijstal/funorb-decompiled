@@ -52,7 +52,7 @@ abstract class o {
         if (param1 != 2) {
           field_c = (String) null;
         }
-        return na.a(param0, 255, param2, param3, false, param4);
+        return IsaacRandom.a(param0, 255, param2, param3, false, param4);
     }
 
     public static void a(int param0) {

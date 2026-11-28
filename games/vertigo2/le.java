@@ -78,7 +78,7 @@ final class le {
             return;
           }
           if (var2 != 1) {
-            ke.a((Throwable) null, "LR1: " + or.a(119), 0);
+            HuffmanCodec.a((Throwable) null, "LR1: " + or.a(119), 0);
             rm.b((byte) -30);
             return;
           }

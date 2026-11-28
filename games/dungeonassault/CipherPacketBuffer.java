@@ -3,7 +3,7 @@
  */
 final class CipherPacketBuffer extends PacketBuffer {
     static RgbSprite field_w;
-    private ff field_v;
+    private IsaacRandom field_v;
     static int field_s;
     private int field_t;
     static String field_x;
@@ -12,7 +12,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void d(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.a(26979));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_v.nextInt(26979));
         if (param0 > -76) {
           this.field_t = 30;
         }
@@ -21,7 +21,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void a(int[] param0, byte param1) {
         try {
           int var3_int = -58 % ((-42 - param1) / 36);
-          this.field_v = new ff(param0);
+          this.field_v = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "wj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -33,7 +33,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.field_v.a(26979);
+        return 255 & this.payload[fieldTemp$0] - this.field_v.nextInt(26979);
     }
 
     final int j(int param0, int param1) {
@@ -88,7 +88,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = 0; var5_int < param2; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_v.a(26979));
+            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_v.nextInt(26979));
           }
           if (param1 != 95) {
             this.e(true);

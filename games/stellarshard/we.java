@@ -187,11 +187,11 @@ final class we {
         try {
           ck.field_db = true;
           ak.field_a = param0 ? true : false;
-          ei.field_G = new ck(na.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
+          ei.field_G = new ck(IsaacRandom.field_d, DualLinkDequeIterator.field_c, param2, gk.field_a, ak.field_a);
           if (param1 != 12757) {
             field_e = (String) null;
           }
-          na.field_d.a((byte) -108, (UiWidget) (ei.field_G));
+          IsaacRandom.field_d.a((byte) -108, (UiWidget) (ei.field_G));
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

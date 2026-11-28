@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol {
+final class IsaacRandom {
     private int field_b;
     private int[] field_i;
     private int[] field_a;
@@ -20,9 +20,9 @@ final class ol {
         field_h = null;
     }
 
-    final int c(int param0) {
+    final int nextInt(int param0) {
         if (param0 == this.field_d) {
-          this.b(param0 ^ 0);
+          this.generateResults(param0 ^ 0);
           this.field_d = 256;
         }
         int fieldTemp$0 = this.field_d - 1;
@@ -30,7 +30,7 @@ final class ol {
         return this.field_a[fieldTemp$0];
     }
 
-    private final void d(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var2Lifetime1;
@@ -156,7 +156,7 @@ final class ol {
           this.field_i[6 + var2Lifetime2] = var9;
           this.field_i[var2Lifetime2 + 7] = var10;
         }
-        this.b(0);
+        this.generateResults(0);
         this.field_d = 256;
     }
 
@@ -313,7 +313,7 @@ final class ol {
         }
     }
 
-    private final void b(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -349,7 +349,7 @@ final class ol {
         }
     }
 
-    ol(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];
@@ -357,7 +357,7 @@ final class ol {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_a[var2_int] = param0[var2_int];
           }
-          this.d(8273);
+          this.initializeState(8273);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ol.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

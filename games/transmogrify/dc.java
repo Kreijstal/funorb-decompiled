@@ -110,7 +110,7 @@ final class dc {
                 vh.field_n = vh.field_n - (wk.field_d << 5);
                 eh.totalScore = eh.totalScore + wk.field_d;
                 DirectByteStorage.field_j = DirectByteStorage.field_j + (wk.field_d << 5);
-                ug.b(true);
+                IsaacRandom.b(true);
                 if (100 <= wk.field_d) {
                   if (fi.unlockAchievement(0, 243, 12)) {
                     var6Lifetime1++;

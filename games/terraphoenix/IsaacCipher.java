@@ -27,7 +27,7 @@ final class IsaacCipher {
         field_j = null;
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -66,7 +66,7 @@ final class IsaacCipher {
         }
     }
 
-    private final void b(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = Terraphoenix.field_V;
         int var2Lifetime1;
@@ -192,16 +192,16 @@ final class IsaacCipher {
           this.field_a[6 + var2Lifetime2] = var9;
           this.field_a[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) -38);
+        this.generateResults((byte) -38);
         this.field_d = 256;
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (param0 < 64) {
           this.field_e = -7;
         }
         if (this.field_d == 0) {
-          this.a((byte) -38);
+          this.generateResults((byte) -38);
           this.field_d = 256;
         }
         int fieldTemp$0 = this.field_d - 1;
@@ -274,7 +274,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_i[var2_int] = param0[var2_int];
           }
-          this.b(-1);
+          this.initializeState(-1);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "qe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

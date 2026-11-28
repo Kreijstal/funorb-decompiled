@@ -60,7 +60,7 @@ final class hh {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + ko.field_M.a(25330, var4, var3_int, param2.position, 0, param2.payload);
+            param2.position = param2.position + ko.field_M.decompress(25330, var4, var3_int, param2.position, 0, param2.payload);
             var5 = mj.a(-125, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;

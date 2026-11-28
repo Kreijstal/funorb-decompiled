@@ -37,10 +37,10 @@ final class od extends UiPanel {
           return 0;
         }
         if (np.field_Lb == 0) {
-          if (!ke.field_b.b(0)) {
+          if (!HuffmanCodec.field_b.b(0)) {
             return 20;
           }
-          if (!ke.field_b.c("commonui", 0)) {
+          if (!HuffmanCodec.field_b.c("commonui", 0)) {
             return 40;
           }
           if (!la.field_e.b(0)) {
@@ -67,10 +67,10 @@ final class od extends UiPanel {
               return 29;
             }
           }
-          if (!ke.field_b.b(0)) {
+          if (!HuffmanCodec.field_b.b(0)) {
             return 43;
           }
-          if (!ke.field_b.c("commonui", 0)) {
+          if (!HuffmanCodec.field_b.c("commonui", 0)) {
             return 57;
           }
           if (!la.field_e.b(0)) {

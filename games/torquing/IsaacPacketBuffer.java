@@ -33,7 +33,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
     final void f(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_t.b((byte) -103) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_t.nextInt((byte) -103) + param1);
         int var3 = -58 / ((param0 - 23) / 48);
     }
 
@@ -42,7 +42,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
         if (param0) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_t.b((byte) -103);
+          return 255 & this.payload[fieldTemp$0] - this.field_t.nextInt((byte) -103);
         }
         return -70;
     }
@@ -139,7 +139,7 @@ final class IsaacPacketBuffer extends PacketBuffer {
           for (var5_int = 0; param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_t.b((byte) -103));
+            param2[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_t.nextInt((byte) -103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -139,7 +139,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var26Lifetime1 = param1.field_z[var23Lifetime2];
                   al.field_b[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + (var12 * var24Lifetime1 + var18 * var26Lifetime1) >> 16);
                   je.field_N[var23Lifetime2] = (var25Lifetime1 * var16 + (var13 * var24Lifetime1 + var26Lifetime1 * var19) >> 16) + var10;
-                  pc.field_i[var23Lifetime2] = (var14 * var24Lifetime1 + (var25Lifetime1 * var17 + var26Lifetime1 * var20) >> 16) + var11;
+                  IsaacRandom.field_i[var23Lifetime2] = (var14 * var24Lifetime1 + (var25Lifetime1 * var17 + var26Lifetime1 * var20) >> 16) + var11;
                   var24Lifetime1 = param1.field_g[var23Lifetime2];
                   var25Lifetime1 = param1.field_d[var23Lifetime2];
                   var26Lifetime1 = param1.field_v[var23Lifetime2];

@@ -93,8 +93,8 @@ final class ci implements de {
         try {
           try {
             var10 = kj.field_E.getGraphics();
-            if (null == jb.field_c) {
-              jb.field_c = new java.awt.Font("Helvetica", 1, 13);
+            if (null == IsaacRandom.field_c) {
+              IsaacRandom.field_c = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param4 != -27746) {
               var9 = (String) null;
@@ -118,7 +118,7 @@ final class ci implements de {
               var11.setColor(java.awt.Color.black);
               var11.drawRect(1, 1, 301, 31);
               var11.fillRect(2 + 3 * param0, 2, 300 - param0 * 3, 30);
-              var11.setFont(jb.field_c);
+              var11.setFont(IsaacRandom.field_c);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
               var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + DiskCacheWorker.field_d / 2, (java.awt.image.ImageObserver) null);
@@ -133,14 +133,14 @@ final class ci implements de {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1 + var7, var8 + 1, 301, 31);
               var10.fillRect(2 + var7 + 3 * param0, 2 + var8, -(param0 * 3) + 300, 30);
-              var10.setFont(jb.field_c);
+              var10.setFont(IsaacRandom.field_c);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, var7 + (304 - param2.length() * 6) / 2, 22 + var8);
             }
             if (DelegatingCanvas.field_a == null) {
               return;
             }
-            var10.setFont(jb.field_c);
+            var10.setFont(IsaacRandom.field_c);
             var10.setColor(java.awt.Color.white);
             var10.drawString(DelegatingCanvas.field_a, eh.field_n / 2 - DelegatingCanvas.field_a.length() * 6 / 2, -26 + DiskCacheWorker.field_d / 2);
             return;

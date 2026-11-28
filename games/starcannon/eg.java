@@ -150,7 +150,7 @@ final class eg implements de {
         if (param0 >= -20) {
           return;
         }
-        jb.field_c = null;
+        IsaacRandom.field_c = null;
         nh.field_h = null;
     }
 

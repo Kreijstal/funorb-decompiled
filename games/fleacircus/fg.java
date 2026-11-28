@@ -84,7 +84,7 @@ final class fg extends IntrusiveNode {
                   jc.field_f = 2;
                 } else {
                   jc.field_f = 1;
-                  pc.field_b = var2;
+                  IsaacRandom.field_b = var2;
                   lb.field_m = var3;
                 }
                 Bzip2State.a(var3, 127, 29, var2, 16);

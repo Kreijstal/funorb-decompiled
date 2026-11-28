@@ -51,10 +51,10 @@ abstract class tl {
         var3 = var8.readUnsignedByte(-112);
         stackIn_5_0 = (0 != (var3 & 128));
         gg.field_a = stackIn_5_0;
-        hg.field_b = 127 & var3;
+        IsaacRandom.field_b = 127 & var3;
         KeyboardInputHandler.field_a = var8.readUnsignedByte(102);
         ff.field_a = var8.readLong(true);
-        if (hg.field_b == 2) {
+        if (IsaacRandom.field_b == 2) {
           fg.field_l = var8.readUnsignedShort((byte) 72);
           bi.field_a = var8.readUnsignedMedium(true);
         } else {
@@ -69,11 +69,11 @@ abstract class tl {
         } else {
           GameApplet.field_c = cd.field_g;
         }
-        if (hg.field_b == 1) {
+        if (IsaacRandom.field_b == 1) {
           var8.readUnsignedShort((byte) 72);
           var8.readString(false);
         } else {
-          if (hg.field_b == 4) {
+          if (IsaacRandom.field_b == 4) {
             var8.readUnsignedShort((byte) 72);
             var8.readString(false);
           }

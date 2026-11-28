@@ -28,16 +28,16 @@ final class sg {
         try {
           if (2 == this.field_d &&
             vb.field_i >= 2 &&
-            pe.field_b >= 97 &&
-            122 >= pe.field_b) {
-            if (pe.field_b == 115 &&
+            IsaacRandom.field_b >= 97 &&
+            122 >= IsaacRandom.field_b) {
+            if (IsaacRandom.field_b == 115 &&
               this.field_n != 1) {
               this.field_n = this.field_n + 1;
             } else {
-              if (pe.field_b == 115) {
+              if (IsaacRandom.field_b == 115) {
                 this.field_n = 1;
               } else {
-                if (117 == pe.field_b &&
+                if (117 == IsaacRandom.field_b &&
                   1 == this.field_n) {
                   this.field_n = this.field_n + 1;
                 } else {

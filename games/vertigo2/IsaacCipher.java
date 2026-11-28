@@ -70,7 +70,7 @@ final class IsaacCipher {
         return var1;
     }
 
-    private final void b(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -111,7 +111,7 @@ final class IsaacCipher {
 
     final int nextInt(byte param0) {
         if (this.field_j == 0) {
-          this.b(-93);
+          this.generateResults(-93);
           this.field_j = 256;
         }
         if (param0 != 72) {
@@ -131,7 +131,7 @@ final class IsaacCipher {
         field_i = null;
     }
 
-    private final void d(int param0) {
+    private final void initializeState(int param0) {
         int var12 = Vertigo2.field_L ? 1 : 0;
         int var5 = -1640531527;
         int var3 = -1640531527;
@@ -256,7 +256,7 @@ final class IsaacCipher {
           this.field_b[6 + var2Lifetime2] = var9;
           this.field_b[7 + var2Lifetime2] = var10;
         }
-        this.b(-86);
+        this.generateResults(-86);
         this.field_j = 256;
     }
 
@@ -268,7 +268,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_a[var2_int] = param0[var2_int];
           }
-          this.d(-28);
+          this.initializeState(-28);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "wa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

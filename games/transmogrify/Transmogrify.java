@@ -298,7 +298,7 @@ public final class Transmogrify extends SessionGameApplet {
                   be.field_q = DirectByteStorage.field_i;
                 } else {
                   kb.field_n = l.a((byte) 12, 4);
-                  ug.b(true);
+                  IsaacRandom.b(true);
                   sh.field_c = NetworkArchiveRequest.a(29, (byte) 114, 3, 10, 1);
                   be.field_q = vl.field_y;
                 }
@@ -1230,7 +1230,7 @@ public final class Transmogrify extends SessionGameApplet {
           bh.resetStaticState(126);
           nk.clearStaticReferences((byte) -119);
           kk.clearStaticReferences(false);
-          ug.clearStaticReferences((byte) 118);
+          IsaacRandom.clearStaticReferences((byte) 118);
           mc.clearStaticReferences(true);
           PcmOutputWorker.clearStaticReferences(-106);
           DelayedPcmStream.clearStaticReferences(0);

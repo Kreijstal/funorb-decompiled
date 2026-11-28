@@ -831,7 +831,7 @@ final class ad {
           int var8Lifetime1;
           var9 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
-            if (null == ol.field_g &&
+            if (null == IsaacRandom.field_g &&
               !cb.a(param1 ^ 665, param3)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -987,7 +987,7 @@ final class ad {
               var10 = (String) null;
               ad.a(-115, 60, false, false, (String) null, (String) null);
             }
-            if (ol.field_g == null) {
+            if (IsaacRandom.field_g == null) {
               if (DequeCursor.field_e) {
                 if (30000L >= wf.a(84)) {
                   ImageProducerRasterBuffer.field_n = AccountNameAvailabilityValidator.field_p;

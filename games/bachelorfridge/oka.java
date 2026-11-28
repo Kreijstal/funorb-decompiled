@@ -113,7 +113,7 @@ class oka extends DefaultWidgetRenderer {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + jka.field_l.a(var3_int, param0.payload, 0, var4, (byte) -69, param0.position);
+            param0.position = param0.position + jka.field_l.decompress(var3_int, param0.payload, 0, var4, (byte) -69, param0.position);
             var5 = gt.a(0, var4, (byte) 104, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;

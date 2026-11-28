@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il {
+final class HuffmanCodec {
     static IndexedSprite field_b;
     private byte[] field_d;
     private int[] field_c;
@@ -12,13 +12,13 @@ final class il {
     public static void releaseStatics(int param0) {
         field_a = null;
         if (param0 != 4) {
-          il.releaseStatics(56);
+          HuffmanCodec.releaseStatics(56);
         }
         field_b = null;
         field_e = null;
     }
 
-    final int a(int param0, byte[] param1, int param2, byte[] param3, byte param4, int param5) {
+    final int decompress(int param0, byte[] param1, int param2, byte[] param3, byte param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -224,7 +224,7 @@ final class il {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
+    final int compress(byte[] param0, int param1, int param2, byte[] param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -317,7 +317,7 @@ final class il {
         }
     }
 
-    il(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_39_0 = null;

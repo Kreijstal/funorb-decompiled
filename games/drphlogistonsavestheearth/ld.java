@@ -2091,7 +2091,7 @@ final class ld {
                   var19 = 4210752;
                   var20 = var29[var18];
                   var21 = var14[var18];
-                  if (ta.a(6, var21) &&
+                  if (IsaacRandom.a(6, var21) &&
                     var13 == 0 &&
                     null != bf.field_h &&
                     bf.field_h.field_n == var30[var18] &&

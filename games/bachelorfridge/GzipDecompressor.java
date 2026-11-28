@@ -383,7 +383,7 @@ final class GzipDecompressor {
             return stackIn_3_0;
           }
           if (param1 == 2) {
-            stackIn_7_0 = lga.a(true, new String[]{param0}, il.field_e);
+            stackIn_7_0 = lga.a(true, new String[]{param0}, HuffmanCodec.field_e);
             return stackIn_7_0;
           }
           if (param1 == 3) {

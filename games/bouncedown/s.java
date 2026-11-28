@@ -125,7 +125,7 @@ final class s extends vc {
           while (true) {
             if (bh.field_c < 0) {
               jc.field_g.position = 0;
-              if (!qb.a(1, 3)) {
+              if (!IsaacRandom.a(1, 3)) {
                 return false;
               }
               bh.field_c = jc.field_g.h((byte) 43);

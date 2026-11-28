@@ -115,7 +115,7 @@ final class vd {
             }
             var14Lifetime2 = stackIn_16_0;
             var15 = param1 * var61[var13] + (var63[var13] * param5 + var62[var13] * param0) >> 8;
-            stackIn_18_0 = ug.field_c;
+            stackIn_18_0 = IsaacRandom.field_c;
             if (var15 < 0) {
               stackIn_19_1 = -var15;
             } else {
@@ -126,7 +126,7 @@ final class vd {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < ug.field_h; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < IsaacRandom.field_h; var13Lifetime1++) {
             var14Lifetime1 = i.field_b[var13Lifetime1];
             var15Lifetime1 = param6.field_o[var14Lifetime1];
             var16 = param6.field_s[var14Lifetime1];

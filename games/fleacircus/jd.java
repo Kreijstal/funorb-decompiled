@@ -150,14 +150,14 @@ final class jd {
               var13 = var9 / var8;
               var12 = var8 + 2 * ((var13 + var9 % var8 - 1) / var13);
             }
-            if (null == pc.field_f) {
-              pc.field_f = new String[16];
+            if (null == IsaacRandom.field_f) {
+              IsaacRandom.field_f = new String[16];
             }
-            var11Lifetime1 = this.field_a.a(param2, new int[]{var12}, pc.field_f);
+            var11Lifetime1 = this.field_a.a(param2, new int[]{var12}, IsaacRandom.field_f);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_a.b(pc.field_f[var13Lifetime2]);
+              var14 = this.field_a.b(IsaacRandom.field_f[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

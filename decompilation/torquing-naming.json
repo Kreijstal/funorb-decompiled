@@ -2764,6 +2764,30 @@
       "renamedSymbol": "M:IsaacCipher.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:gn.a(I)V",
+      "originalName": "a",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. param0 is the ACTUAL initial index of the second memory-backed pass. The first seed-backed pass always precedes it. Preserve negative/misaligned/out-of-range index behavior, skipped second pass, later generate(false), and count256. Do not turn it into a dummy sentinel. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.initializeState(I)V"
+    },
+    {
+      "symbol": "M:gn.a(Z)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. The true branch calls the original initializer with104 before its own counter updates and separate loop; keep that call and both actual loops. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.generateResults(Z)V"
+    },
+    {
+      "symbol": "M:gn.b(B)I",
+      "originalName": "b",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.nextInt(B)I"
+    },
+    {
       "symbol": "M:go.c(I)V",
       "originalName": "c",
       "to": "clearStaticReferences",
@@ -82006,7 +82030,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#0",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#0",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -82017,7 +82041,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#1",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#1",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -82028,7 +82052,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#10",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#10",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#10",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -82039,7 +82063,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#11",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#11",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#11",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -82050,7 +82074,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#2",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#2",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -82061,7 +82085,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#3",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#3",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -82072,7 +82096,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#4",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#4",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -82083,7 +82107,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#5",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#5",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -82094,7 +82118,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#6",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#6",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -82105,7 +82129,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#7",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#7",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -82116,7 +82140,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#8",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#8",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -82127,7 +82151,7 @@
     },
     {
       "symbol": "L:gn.a(I)V#9",
-      "renamedSymbol": "L:IsaacCipher.a(I)V#9",
+      "renamedSymbol": "L:IsaacCipher.initializeState(I)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -82138,7 +82162,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#0",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#0",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -82149,7 +82173,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#1",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#1",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -82160,7 +82184,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#10",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#10",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#10",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -82171,7 +82195,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#11",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#11",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#11",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -82182,7 +82206,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#12",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#12",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#12",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -82193,7 +82217,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#2",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#2",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -82204,7 +82228,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#3",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#3",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -82215,7 +82239,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#4",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#4",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#4",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -82226,7 +82250,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#5",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#5",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#5",
       "originalName": "dupTemp$5",
       "renamedName": "dupTemp$5",
       "declaration": {
@@ -82237,7 +82261,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#6",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#6",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -82248,7 +82272,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#7",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#7",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -82259,7 +82283,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#8",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#8",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -82270,7 +82294,7 @@
     },
     {
       "symbol": "L:gn.a(Z)V#9",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#9",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -82281,7 +82305,7 @@
     },
     {
       "symbol": "L:gn.b(B)I#0",
-      "renamedSymbol": "L:IsaacCipher.b(B)I#0",
+      "renamedSymbol": "L:IsaacCipher.nextInt(B)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -82292,7 +82316,7 @@
     },
     {
       "symbol": "L:gn.b(B)I#1",
-      "renamedSymbol": "L:IsaacCipher.b(B)I#1",
+      "renamedSymbol": "L:IsaacCipher.nextInt(B)I#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -82303,7 +82327,7 @@
     },
     {
       "symbol": "L:gn.b(B)I#2",
-      "renamedSymbol": "L:IsaacCipher.b(B)I#2",
+      "renamedSymbol": "L:IsaacCipher.nextInt(B)I#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -82314,7 +82338,7 @@
     },
     {
       "symbol": "L:gn.b(B)I#3",
-      "renamedSymbol": "L:IsaacCipher.b(B)I#3",
+      "renamedSymbol": "L:IsaacCipher.nextInt(B)I#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -220584,9 +220608,9 @@
     },
     {
       "symbol": "M:gn.a(I)V",
-      "renamedSymbol": "M:IsaacCipher.a(I)V",
+      "renamedSymbol": "M:IsaacCipher.initializeState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "gn.java",
         "start": 639,
@@ -220595,9 +220619,9 @@
     },
     {
       "symbol": "M:gn.a(Z)V",
-      "renamedSymbol": "M:IsaacCipher.a(Z)V",
+      "renamedSymbol": "M:IsaacCipher.generateResults(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "gn.java",
         "start": 5365,
@@ -220606,9 +220630,9 @@
     },
     {
       "symbol": "M:gn.b(B)I",
-      "renamedSymbol": "M:IsaacCipher.b(B)I",
+      "renamedSymbol": "M:IsaacCipher.nextInt(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "gn.java",
         "start": 8157,
@@ -262351,7 +262375,7 @@
     },
     {
       "symbol": "P:gn.a(I)V#0",
-      "renamedSymbol": "P:IsaacCipher.a(I)V#0",
+      "renamedSymbol": "P:IsaacCipher.initializeState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262362,7 +262386,7 @@
     },
     {
       "symbol": "P:gn.a(Z)V#0",
-      "renamedSymbol": "P:IsaacCipher.a(Z)V#0",
+      "renamedSymbol": "P:IsaacCipher.generateResults(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262373,7 +262397,7 @@
     },
     {
       "symbol": "P:gn.b(B)I#0",
-      "renamedSymbol": "P:IsaacCipher.b(B)I#0",
+      "renamedSymbol": "P:IsaacCipher.nextInt(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -329819,7 +329843,7 @@
       "original": "df.java",
       "renamed": "IsaacPacketBuffer.java",
       "inputSha256": "a3a2c88840d7d9555640b5268b2f579bf8d7daf957d5e7afc4172fb953231546",
-      "outputSha256": "61d19bf5f2e7fd7a05b1b454033120bc014602129a2d4700a3dee7473727b21e",
+      "outputSha256": "88682e8c4dd1e70f6e5ee600f260930b0bbd94ab5f7922dc7a031ff4e98a8a3f",
       "edits": [
         {
           "start": 50,
@@ -329899,6 +329923,13 @@
           "renamed": "payload"
         },
         {
+          "start": 1002,
+          "end": 1003,
+          "symbol": "M:gn.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
+        },
+        {
           "start": 1196,
           "end": 1203,
           "symbol": "F:fj.field_n:I",
@@ -329925,6 +329956,13 @@
           "symbol": "F:fj.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 1312,
+          "end": 1313,
+          "symbol": "M:gn.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
         },
         {
           "start": 1369,
@@ -330044,6 +330082,13 @@
           "symbol": "F:fj.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 4616,
+          "end": 4617,
+          "symbol": "M:gn.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
         },
         {
           "start": 5145,
@@ -348701,7 +348746,7 @@
       "original": "gn.java",
       "renamed": "IsaacCipher.java",
       "inputSha256": "5027296721c71a55ecd95e18ae5302030a2400c393cb98383b72a9b7184102ec",
-      "outputSha256": "3ab9695a7bc16fea495ceed7429931350ee8f42d44a0cc2668d30f77fad9970b",
+      "outputSha256": "143c1f2aef500cb28a3dedf8e7214ddbb572d60cdcc0533c0d95051e77ec0d41",
       "edits": [
         {
           "start": 50,
@@ -348718,11 +348763,67 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 639,
+          "end": 640,
+          "symbol": "M:gn.a(I)V",
+          "original": "a",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 5297,
+          "end": 5298,
+          "symbol": "M:gn.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 5365,
+          "end": 5366,
+          "symbol": "M:gn.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 6915,
+          "end": 6916,
+          "symbol": "M:gn.a(I)V",
+          "original": "a",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 8157,
+          "end": 8158,
+          "symbol": "M:gn.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 8382,
+          "end": 8383,
+          "symbol": "M:gn.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 8895,
+          "end": 8896,
+          "symbol": "M:gn.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
           "start": 9071,
           "end": 9073,
           "symbol": "M:gn.<init>([I)V",
           "original": "gn",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 9359,
+          "end": 9360,
+          "symbol": "M:gn.a(I)V",
+          "original": "a",
+          "renamed": "initializeState"
         },
         {
           "start": 9438,
@@ -406580,10 +406681,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torquing"
     },
-    "rulesSha256": "990aac4e5561942afd94b4d9360c3b883ff8cb53da0bb8366e12f1d3b2129fe9",
+    "rulesSha256": "76d88d5c6d8af1f71b89b41bc82a2efa0650ce9cd0a55d1fe8798d6face6f5e6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
-    "outputTreeSha256": "9cfc247cdb2c1cecfffdb458cde9d9127f067c2081978a4c0b5762bfbaf68529",
+    "outputTreeSha256": "e17038ace2eabf9efda84fa642e965b0343e79550e1e82b5c65f39d29df7748a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

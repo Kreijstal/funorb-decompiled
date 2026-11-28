@@ -37,7 +37,7 @@ final class MusicPatchPcmStream extends PcmStream {
           ql.field_L = new UiPanel(0L, (UiPanel) null);
           if (param2 == null) {
             var10 = (Throwable) null;
-            ke.a((Throwable) null, "QC1", 0);
+            HuffmanCodec.a((Throwable) null, "QC1", 0);
             return;
           }
           param2.field_b = false;
@@ -47,7 +47,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var4 = sp.e((byte) -113);
           if (var4 == null) {
             var11 = (Throwable) null;
-            ke.a((Throwable) null, "QC2", 0);
+            HuffmanCodec.a((Throwable) null, "QC2", 0);
             return;
           }
           pe.a(var4, 97);

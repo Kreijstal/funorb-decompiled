@@ -26,7 +26,7 @@ final class IsaacCipher {
         field_f = null;
     }
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = Torquing.field_u;
         int var3 = -1640531527;
@@ -149,11 +149,11 @@ final class IsaacCipher {
           this.field_a[6 + var2Lifetime2] = var9;
           this.field_a[var2Lifetime2 + 7] = var10;
         }
-        this.a(false);
+        this.generateResults(false);
         this.field_c = 256;
     }
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int fieldTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -197,7 +197,7 @@ final class IsaacCipher {
           }
           return;
         }
-        this.a(104);
+        this.initializeState(104);
         fieldTemp$3 = this.field_e + 1;
         this.field_e = this.field_e + 1;
         this.field_j = this.field_j + fieldTemp$3;
@@ -227,14 +227,14 @@ final class IsaacCipher {
         return;
     }
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (param0 != -103) {
           this.field_k = (int[]) null;
           if (this.field_c == 0) {
-            this.a(false);
+            this.generateResults(false);
             this.field_c = 256;
             fieldTemp$0 = this.field_c - 1;
             this.field_c = this.field_c - 1;
@@ -249,7 +249,7 @@ final class IsaacCipher {
           this.field_c = this.field_c - 1;
           return this.field_k[fieldTemp$2];
         }
-        this.a(false);
+        this.generateResults(false);
         this.field_c = 256;
         int fieldTemp$3 = this.field_c - 1;
         this.field_c = this.field_c - 1;
@@ -264,7 +264,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_k[var2_int] = param0[var2_int];
           }
-          this.a(0);
+          this.initializeState(0);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

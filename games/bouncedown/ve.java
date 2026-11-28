@@ -210,7 +210,7 @@ final class ve {
     }
 
     final static void a(int param0) {
-        n var1 = (n) (qb.field_g.removeLast((byte) 60));
+        n var1 = (n) (IsaacRandom.field_g.removeLast((byte) 60));
         if (var1 != null) {
           SoftwareRasterizer.setRasterBuffer(var1.field_g, var1.field_k, var1.field_h);
           SoftwareRasterizer.setClip(var1.field_l, var1.field_j, var1.field_i, var1.field_n);

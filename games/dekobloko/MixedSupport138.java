@@ -305,7 +305,7 @@ final class MixedSupport138 {
               }
             }
           }
-          stackSceneWidgetLocal8 = MixedSupport030.sceneWidgetState0023;
+          stackSceneWidgetLocal8 = IsaacRandom.sceneWidgetState0023;
           stackBooleanLocal9 = false;
           stackBooleanLocal10 = (booleanArgument2) && (!booleanArgument3) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal8).performAction1772(stackBooleanLocal9, stackBooleanLocal10);

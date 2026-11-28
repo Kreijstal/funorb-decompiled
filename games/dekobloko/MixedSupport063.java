@@ -139,7 +139,7 @@ final class MixedSupport063 {
             for (integerLocal14 = integerArgument7; integerLocal13 > integerLocal14; integerLocal14++) {
               integerLocal15 = MixedSupport017.integerArrayState0022[integerLocal14];
               integerLocal16 = MixedSupport017.integerArrayState0022[1 + integerLocal14];
-              if (MixedSupport030.computeBoolean0411((byte) 100, booleanArgument2, integerLocal16, integerLocal15)) {
+              if (IsaacRandom.computeBoolean0411((byte) 100, booleanArgument2, integerLocal16, integerLocal15)) {
                 MixedSupport017.integerArrayState0022[integerLocal14] = integerLocal16;
                 MixedSupport017.integerArrayState0022[1 + integerLocal14] = integerLocal15;
               }

@@ -456,7 +456,7 @@ final class vh extends eh {
                         if (0 < param2.field_O &&
                           null != param2.field_u) {
                           dupTemp$0 = param2.field_u[var8];
-                          jb.field_h[dupTemp$0] = jb.field_h[dupTemp$0] + 1;
+                          IsaacRandom.field_h[dupTemp$0] = IsaacRandom.field_h[dupTemp$0] + 1;
                         }
                         wj.field_e = wj.field_e + 1;
                         break;
@@ -477,9 +477,9 @@ final class vh extends eh {
             param2.field_u != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= jb.field_h.length)) {
-              var10Lifetime1 = jb.field_h[var9Lifetime1];
-              jb.field_h[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= IsaacRandom.field_h.length)) {
+              var10Lifetime1 = IsaacRandom.field_h[var9Lifetime1];
+              IsaacRandom.field_h[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

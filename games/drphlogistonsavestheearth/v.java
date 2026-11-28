@@ -485,7 +485,7 @@ final class v extends pj implements ra, ke, fh {
         String var2 = a.a(5044, fk.field_p, new String[]{this.l(15), this.i(-87)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_P, BufferedRandomAccessFile.field_c, 16777215, var3);
-        var3 = var3 + (this.a(ta.field_a, 170, this.field_J, (byte) -103, var3, "", 20) + 5);
+        var3 = var3 + (this.a(IsaacRandom.field_a, 170, this.field_J, (byte) -103, var3, "", 20) + 5);
         var3 = var3 + this.a(170, this.field_S, qf.field_a, 16777215, var3);
         var3 = var3 + (this.a(var3, this.field_ab, cf.field_a, 170, (byte) -105, ob.field_d) + 5);
         var3 = var3 + (this.a(var3, this.field_K, hj.field_h, 170, (byte) -83, vh.field_b) + 5);

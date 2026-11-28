@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fc {
+final class IsaacRandom {
     private int field_a;
     private int field_d;
     private int[] field_b;
@@ -9,7 +9,7 @@ final class fc {
     private int[] field_e;
     private int field_f;
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 > -101) {
           return;
@@ -132,16 +132,16 @@ final class fc {
           this.field_e[6 + var2Lifetime2] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.c(1);
+        this.generateResults(1);
         this.field_a = 256;
     }
 
-    final int b(int param0) {
+    final int nextInt(int param0) {
         if (param0 != 256) {
           return -43;
         }
         if (this.field_a == 0) {
-          this.c(param0 ^ 257);
+          this.generateResults(param0 ^ 257);
           this.field_a = 256;
         }
         int fieldTemp$0 = this.field_a - 1;
@@ -149,7 +149,7 @@ final class fc {
         return this.field_b[fieldTemp$0];
     }
 
-    private final void c(int param0) {
+    private final void generateResults(int param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           this.field_e = (int[]) null;
@@ -180,14 +180,14 @@ final class fc {
         }
     }
 
-    fc(int[] param0) {
+    IsaacRandom(int[] param0) {
         try {
           this.field_b = new int[256];
           this.field_e = new int[256];
           for (int var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
-          this.a(-104);
+          this.initializeState(-104);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

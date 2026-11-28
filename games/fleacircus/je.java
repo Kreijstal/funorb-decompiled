@@ -1955,7 +1955,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("achievements", 0);
                 if (null != var2) {
-                  pc.field_d = ab.a(0, var2);
+                  IsaacRandom.field_d = ab.a(0, var2);
                 }
                 var2 = ad.a("achievementsthisgame", 0);
                 if (null != var2) {
@@ -2255,7 +2255,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("unreachedlevel_createtip", 0);
                 if (var2 != null) {
-                  pc.field_m = ab.a(0, var2);
+                  IsaacRandom.field_m = ab.a(0, var2);
                 }
                 var2 = ad.a("unreachedlevel_createtip_line1", 0);
                 if (null != var2) {

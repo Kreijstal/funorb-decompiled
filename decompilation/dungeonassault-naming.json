@@ -169,7 +169,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:ja.a([B[BBIII)I#0"
+      "renamedSymbol": "B:HuffmanDecoder.decompress([B[BBIII)I#0"
     },
     {
       "symbol": "B:lf.d(B)V#0",
@@ -484,6 +484,14 @@
       "renamedSymbol": "C:DirectByteStorage"
     },
     {
+      "symbol": "C:ff",
+      "originalName": "ff",
+      "to": "IsaacRandom",
+      "evidence": "Primary instance role reviewed from exact source: seeded ISAAC pseudorandom stream with two private int[256] tables and four private int state/count fields, four golden-ratio mixes, two eight-word initialization passes, generation with shifts13/6/2/16 and half-table/index lookups, and reverse-count result consumption. Every constructor and nonstatic method in this cohort is human-read, including bounded adapters where present. Packet masking and game-animation/random-choice callers are reviewed where selected. Mixed unrelated static responsibilities are retained. Rename identifiers only; preserve every declaration/modifier, primitive domain, table allocation, seed copy, class initializer, literal, arithmetic/guard/helper/recursion order, partial effect and exception. No library RNG substitution, guard removal, table normalization or runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IsaacRandom"
+    },
+    {
       "symbol": "C:fg",
       "originalName": "fg",
       "to": "NanoFrameTimer",
@@ -578,6 +586,14 @@
       "evidence": "GameAppletShell subclass reading gameport, servernum, gamecrc and js5 applet parameters and handling connect failures.",
       "confidence": "reviewed",
       "renamedSymbol": "C:NetworkGameClient"
+    },
+    {
+      "symbol": "C:ja",
+      "originalName": "ja",
+      "to": "HuffmanDecoder",
+      "evidence": "Primary instance purpose reviewed from exact constructor, every owned instance method, private fields and selected bound consumers. Build canonical Huffman codewords and a growing decode tree from signed byte code lengths; tree leaves store complemented symbols. Three codecs encode and decode; Dungeon Assault retains only decoding and does not retain the caller byte-length array. Archive resource constructors use the huffman entry; string packet helpers use returned encoded-byte counts to advance cursors. Preserve unrelated static responsibilities and class-initializer order; no complete unrelated-static-body claim. Identifier-only naming; retain primitive domains, array aliases, all allocation/read/write/guard/recursion/partial-effect/exception order, literal values and diagnostics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:HuffmanDecoder"
     },
     {
       "symbol": "C:jb",
@@ -2564,12 +2580,36 @@
       "renamedSymbol": "M:fe.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ff.a(I)I",
+      "originalName": "a",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I"
+    },
+    {
+      "symbol": "M:ff.b(B)V",
+      "originalName": "b",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. byte<=66 calls static c(89) before mixing. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.initializeState(B)V"
+    },
+    {
+      "symbol": "M:ff.b(I)V",
+      "originalName": "b",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. Counter and last-word updates happen before param0!=256 early return; do not move the guard ahead of them. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
+    },
+    {
       "symbol": "M:ff.c(I)V",
       "originalName": "c",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 e1ab3ec5adea390ebbba0d69bbdbc1bb0eb460277cabd20b828b4be50c314919.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ff.clearStaticReferences(I)V"
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:fg.a(I)J",
@@ -3529,7 +3569,15 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a1fa9c835a09a9dd776c937cfcc7da20f1d3bae7ed6b544d00cfef527d66a6ce.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ja.clearStaticReferences(Z)V"
+      "renamedSymbol": "M:HuffmanDecoder.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:ja.a([B[BBIII)I",
+      "originalName": "a",
+      "to": "decompress",
+      "evidence": "Source-purpose review: Exact Huffman source-purpose/body and bound caller review: Traverse the existing decode tree using signed-byte bit7 then masks64/32/16/8/4/2/1. Preserve every negative-leaf complement/cast/store, output-index postincrement before array access, per-bit exit and reset, source-index increment only after a full byte, and consumed-encoded-byte return. Retain supplied count/offset/array domains, zero/negative/overflow counts, every guard and recursive/static effect, partial writes and diagnostic/exception order. Do not normalize loops, byte masks or guard positions. Wrong byte!=-88 self-recurses with byte93/null arrays before zero-count return. Preserve repeated global reads and StackOverflowError behavior, including zero-length calls. Class primary instance role is decoding only; proposed readable class role is HuffmanDecoder.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HuffmanDecoder.decompress([B[BBIII)I"
     },
     {
       "symbol": "M:jb.a(Lvk;ZZ)V",
@@ -6427,7 +6475,7 @@
     },
     {
       "symbol": "B:ja.a([B[BBIII)I#0",
-      "renamedSymbol": "B:ja.a([B[BBIII)I#0",
+      "renamedSymbol": "B:HuffmanDecoder.decompress([B[BBIII)I#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -7681,9 +7729,9 @@
     },
     {
       "symbol": "C:ff",
-      "renamedSymbol": "C:ff",
+      "renamedSymbol": "C:IsaacRandom",
       "originalName": "ff",
-      "renamedName": "ff",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "ff.java",
         "start": 50,
@@ -8352,9 +8400,9 @@
     },
     {
       "symbol": "C:ja",
-      "renamedSymbol": "C:ja",
+      "renamedSymbol": "C:HuffmanDecoder",
       "originalName": "ja",
-      "renamedName": "ja",
+      "renamedName": "HuffmanDecoder",
       "declaration": {
         "file": "ja.java",
         "start": 50,
@@ -18549,7 +18597,7 @@
     },
     {
       "symbol": "F:ff.field_a:I",
-      "renamedSymbol": "F:ff.field_a:I",
+      "renamedSymbol": "F:IsaacRandom.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -18560,7 +18608,7 @@
     },
     {
       "symbol": "F:ff.field_b:[I",
-      "renamedSymbol": "F:ff.field_b:[I",
+      "renamedSymbol": "F:IsaacRandom.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -18571,7 +18619,7 @@
     },
     {
       "symbol": "F:ff.field_c:I",
-      "renamedSymbol": "F:ff.field_c:I",
+      "renamedSymbol": "F:IsaacRandom.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -18582,7 +18630,7 @@
     },
     {
       "symbol": "F:ff.field_d:I",
-      "renamedSymbol": "F:ff.field_d:I",
+      "renamedSymbol": "F:IsaacRandom.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -18593,7 +18641,7 @@
     },
     {
       "symbol": "F:ff.field_e:I",
-      "renamedSymbol": "F:ff.field_e:I",
+      "renamedSymbol": "F:IsaacRandom.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -18604,7 +18652,7 @@
     },
     {
       "symbol": "F:ff.field_f:[Ljava/lang/String;",
-      "renamedSymbol": "F:ff.field_f:[Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacRandom.field_f:[Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -18615,7 +18663,7 @@
     },
     {
       "symbol": "F:ff.field_g:[I",
-      "renamedSymbol": "F:ff.field_g:[I",
+      "renamedSymbol": "F:IsaacRandom.field_g:[I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -25259,7 +25307,7 @@
     },
     {
       "symbol": "F:ja.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ja.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanDecoder.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -25270,7 +25318,7 @@
     },
     {
       "symbol": "F:ja.field_b:[Lcn;",
-      "renamedSymbol": "F:ja.field_b:[LRgbSprite;",
+      "renamedSymbol": "F:HuffmanDecoder.field_b:[LRgbSprite;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -25281,7 +25329,7 @@
     },
     {
       "symbol": "F:ja.field_c:[I",
-      "renamedSymbol": "F:ja.field_c:[I",
+      "renamedSymbol": "F:HuffmanDecoder.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -25292,7 +25340,7 @@
     },
     {
       "symbol": "F:ja.field_d:[Ljava/lang/String;",
-      "renamedSymbol": "F:ja.field_d:[Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanDecoder.field_d:[Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -25303,7 +25351,7 @@
     },
     {
       "symbol": "F:ja.field_e:[I",
-      "renamedSymbol": "F:ja.field_e:[I",
+      "renamedSymbol": "F:HuffmanDecoder.field_e:[I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -38844,7 +38892,7 @@
     },
     {
       "symbol": "F:qh.field_G:Lja;",
-      "renamedSymbol": "F:qh.field_G:Lja;",
+      "renamedSymbol": "F:qh.field_G:LHuffmanDecoder;",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -48491,7 +48539,7 @@
     },
     {
       "symbol": "F:wj.field_v:Lff;",
-      "renamedSymbol": "F:CipherPacketBuffer.field_v:Lff;",
+      "renamedSymbol": "F:CipherPacketBuffer.field_v:LIsaacRandom;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -75419,7 +75467,7 @@
     },
     {
       "symbol": "L:df.a(BLja;)V#0",
-      "renamedSymbol": "L:df.a(BLja;)V#0",
+      "renamedSymbol": "L:df.a(BLHuffmanDecoder;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -75430,7 +75478,7 @@
     },
     {
       "symbol": "L:df.a(BLja;)V#1",
-      "renamedSymbol": "L:df.a(BLja;)V#1",
+      "renamedSymbol": "L:df.a(BLHuffmanDecoder;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -92678,7 +92726,7 @@
     },
     {
       "symbol": "L:ff.<init>([I)V#0",
-      "renamedSymbol": "L:ff.<init>([I)V#0",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -92689,7 +92737,7 @@
     },
     {
       "symbol": "L:ff.<init>([I)V#1",
-      "renamedSymbol": "L:ff.<init>([I)V#1",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -92700,7 +92748,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#0",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#0",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#0",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -92711,7 +92759,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#1",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#1",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92722,7 +92770,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#2",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#2",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -92733,7 +92781,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#3",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#3",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -92744,7 +92792,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#4",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#4",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -92755,7 +92803,7 @@
     },
     {
       "symbol": "L:ff.a(B)Lcn;#5",
-      "renamedSymbol": "L:ff.a(B)LRgbSprite;#5",
+      "renamedSymbol": "L:IsaacRandom.a(B)LRgbSprite;#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -92766,7 +92814,7 @@
     },
     {
       "symbol": "L:ff.a(I)I#0",
-      "renamedSymbol": "L:ff.a(I)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -92777,7 +92825,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#0",
-      "renamedSymbol": "L:ff.b(B)V#0",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -92788,7 +92836,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#1",
-      "renamedSymbol": "L:ff.b(B)V#1",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -92799,7 +92847,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#10",
-      "renamedSymbol": "L:ff.b(B)V#10",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#10",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -92810,7 +92858,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#11",
-      "renamedSymbol": "L:ff.b(B)V#11",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92821,7 +92869,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#2",
-      "renamedSymbol": "L:ff.b(B)V#2",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -92832,7 +92880,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#3",
-      "renamedSymbol": "L:ff.b(B)V#3",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -92843,7 +92891,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#4",
-      "renamedSymbol": "L:ff.b(B)V#4",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -92854,7 +92902,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#5",
-      "renamedSymbol": "L:ff.b(B)V#5",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -92865,7 +92913,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#6",
-      "renamedSymbol": "L:ff.b(B)V#6",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -92876,7 +92924,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#7",
-      "renamedSymbol": "L:ff.b(B)V#7",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -92887,7 +92935,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#8",
-      "renamedSymbol": "L:ff.b(B)V#8",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -92898,7 +92946,7 @@
     },
     {
       "symbol": "L:ff.b(B)V#9",
-      "renamedSymbol": "L:ff.b(B)V#9",
+      "renamedSymbol": "L:IsaacRandom.initializeState(B)V#9",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -92909,7 +92957,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#0",
-      "renamedSymbol": "L:ff.b(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -92920,7 +92968,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#1",
-      "renamedSymbol": "L:ff.b(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -92931,7 +92979,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#2",
-      "renamedSymbol": "L:ff.b(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -92942,7 +92990,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#3",
-      "renamedSymbol": "L:ff.b(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -92953,7 +93001,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#4",
-      "renamedSymbol": "L:ff.b(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -92964,7 +93012,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#5",
-      "renamedSymbol": "L:ff.b(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -92975,7 +93023,7 @@
     },
     {
       "symbol": "L:ff.b(I)V#6",
-      "renamedSymbol": "L:ff.b(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -129077,7 +129125,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -129088,7 +129136,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -129099,7 +129147,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#10",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#10",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#10",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -129110,7 +129158,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#11",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#11",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -129121,7 +129169,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -129132,7 +129180,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -129143,7 +129191,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -129154,7 +129202,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#5",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#5",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -129165,7 +129213,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#6",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#6",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -129176,7 +129224,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#7",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#7",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -129187,7 +129235,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#8",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#8",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -129198,7 +129246,7 @@
     },
     {
       "symbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#9",
-      "renamedSymbol": "L:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#9",
+      "renamedSymbol": "L:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#9",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -129209,7 +129257,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#0",
-      "renamedSymbol": "L:ja.<init>([B)V#0",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -129220,7 +129268,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#1",
-      "renamedSymbol": "L:ja.<init>([B)V#1",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -129231,7 +129279,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#10",
-      "renamedSymbol": "L:ja.<init>([B)V#10",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -129242,7 +129290,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#11",
-      "renamedSymbol": "L:ja.<init>([B)V#11",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -129253,7 +129301,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#12",
-      "renamedSymbol": "L:ja.<init>([B)V#12",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -129264,7 +129312,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#13",
-      "renamedSymbol": "L:ja.<init>([B)V#13",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -129275,7 +129323,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#14",
-      "renamedSymbol": "L:ja.<init>([B)V#14",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -129286,7 +129334,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#15",
-      "renamedSymbol": "L:ja.<init>([B)V#15",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -129297,7 +129345,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#16",
-      "renamedSymbol": "L:ja.<init>([B)V#16",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -129308,7 +129356,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#17",
-      "renamedSymbol": "L:ja.<init>([B)V#17",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -129319,7 +129367,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#18",
-      "renamedSymbol": "L:ja.<init>([B)V#18",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#18",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -129330,7 +129378,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#19",
-      "renamedSymbol": "L:ja.<init>([B)V#19",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#19",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -129341,7 +129389,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#2",
-      "renamedSymbol": "L:ja.<init>([B)V#2",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#2",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -129352,7 +129400,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#20",
-      "renamedSymbol": "L:ja.<init>([B)V#20",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#20",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -129363,7 +129411,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#21",
-      "renamedSymbol": "L:ja.<init>([B)V#21",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#21",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -129374,7 +129422,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#22",
-      "renamedSymbol": "L:ja.<init>([B)V#22",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#22",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -129385,7 +129433,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#23",
-      "renamedSymbol": "L:ja.<init>([B)V#23",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#23",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -129396,7 +129444,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#24",
-      "renamedSymbol": "L:ja.<init>([B)V#24",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#24",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -129407,7 +129455,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#25",
-      "renamedSymbol": "L:ja.<init>([B)V#25",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#25",
       "originalName": "decompiledFrameCompleted1",
       "renamedName": "decompiledFrameCompleted1",
       "declaration": {
@@ -129418,7 +129466,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#26",
-      "renamedSymbol": "L:ja.<init>([B)V#26",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#26",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -129429,7 +129477,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#27",
-      "renamedSymbol": "L:ja.<init>([B)V#27",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#27",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -129440,7 +129488,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#3",
-      "renamedSymbol": "L:ja.<init>([B)V#3",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#3",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -129451,7 +129499,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#4",
-      "renamedSymbol": "L:ja.<init>([B)V#4",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#4",
       "originalName": "stackIn_39_2",
       "renamedName": "stackIn_39_2",
       "declaration": {
@@ -129462,7 +129510,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#5",
-      "renamedSymbol": "L:ja.<init>([B)V#5",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -129473,7 +129521,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#6",
-      "renamedSymbol": "L:ja.<init>([B)V#6",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#6",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -129484,7 +129532,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#7",
-      "renamedSymbol": "L:ja.<init>([B)V#7",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#7",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -129495,7 +129543,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#8",
-      "renamedSymbol": "L:ja.<init>([B)V#8",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -129506,7 +129554,7 @@
     },
     {
       "symbol": "L:ja.<init>([B)V#9",
-      "renamedSymbol": "L:ja.<init>([B)V#9",
+      "renamedSymbol": "L:HuffmanDecoder.<init>([B)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -129517,7 +129565,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#0",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#0",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -129528,7 +129576,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#1",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#1",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#1",
       "originalName": "stackIn_35_0",
       "renamedName": "stackIn_35_0",
       "declaration": {
@@ -129539,7 +129587,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#10",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#10",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#10",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -129550,7 +129598,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#11",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#11",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -129561,7 +129609,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#2",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#2",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#2",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -129572,7 +129620,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#3",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#3",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#3",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -129583,7 +129631,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#4",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#4",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -129594,7 +129642,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#5",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#5",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -129605,7 +129653,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#6",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#6",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -129616,7 +129664,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#7",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#7",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -129627,7 +129675,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#8",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#8",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -129638,7 +129686,7 @@
     },
     {
       "symbol": "L:ja.a(IIBZ[Ldi;)V#9",
-      "renamedSymbol": "L:ja.a(IIBZ[Ldi;)V#9",
+      "renamedSymbol": "L:HuffmanDecoder.a(IIBZ[Ldi;)V#9",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -129649,7 +129697,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#0",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#0",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -129660,7 +129708,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#1",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#1",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -129671,7 +129719,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#10",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#10",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#10",
       "originalName": "dupTemp$10",
       "renamedName": "dupTemp$10",
       "declaration": {
@@ -129682,7 +129730,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#11",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#11",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#11",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -129693,7 +129741,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#12",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#12",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#12",
       "originalName": "dupTemp$12",
       "renamedName": "dupTemp$12",
       "declaration": {
@@ -129704,7 +129752,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#13",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#13",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#13",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -129715,7 +129763,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#14",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#14",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#14",
       "originalName": "dupTemp$14",
       "renamedName": "dupTemp$14",
       "declaration": {
@@ -129726,7 +129774,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#15",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#15",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#15",
       "originalName": "incrementValue$15",
       "renamedName": "incrementValue$15",
       "declaration": {
@@ -129737,7 +129785,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#16",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#16",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#16",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -129748,7 +129796,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#17",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#17",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#17",
       "originalName": "stackIn_68_0",
       "renamedName": "stackIn_68_0",
       "declaration": {
@@ -129759,7 +129807,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#18",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#18",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#18",
       "originalName": "stackIn_71_0",
       "renamedName": "stackIn_71_0",
       "declaration": {
@@ -129770,7 +129818,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#19",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#19",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#19",
       "originalName": "stackIn_71_1",
       "renamedName": "stackIn_71_1",
       "declaration": {
@@ -129781,7 +129829,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#2",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#2",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -129792,7 +129840,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#20",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#20",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#20",
       "originalName": "stackIn_72_2",
       "renamedName": "stackIn_72_2",
       "declaration": {
@@ -129803,7 +129851,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#21",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#21",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#21",
       "originalName": "stackIn_74_1",
       "renamedName": "stackIn_74_1",
       "declaration": {
@@ -129814,7 +129862,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#22",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#22",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#22",
       "originalName": "stackIn_75_2",
       "renamedName": "stackIn_75_2",
       "declaration": {
@@ -129825,7 +129873,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#23",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#23",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#23",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -129836,7 +129884,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#24",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#24",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#24",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -129847,7 +129895,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#25",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#25",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#25",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -129858,7 +129906,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#26",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#26",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#26",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -129869,7 +129917,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#27",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#27",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#27",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -129880,7 +129928,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#28",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#28",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#28",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -129891,7 +129939,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#29",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#29",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#29",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -129902,7 +129950,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#3",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#3",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#3",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -129913,7 +129961,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#30",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#30",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#30",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -129924,7 +129972,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#31",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#31",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#31",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -129935,7 +129983,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#32",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#32",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#32",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -129946,7 +129994,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#33",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#33",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#33",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -129957,7 +130005,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#34",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#34",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#34",
       "originalName": "var10Lifetime4",
       "renamedName": "var10Lifetime4",
       "declaration": {
@@ -129968,7 +130016,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#35",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#35",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#35",
       "originalName": "var10Lifetime5",
       "renamedName": "var10Lifetime5",
       "declaration": {
@@ -129979,7 +130027,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#36",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#36",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#36",
       "originalName": "var10Lifetime6",
       "renamedName": "var10Lifetime6",
       "declaration": {
@@ -129990,7 +130038,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#37",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#37",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#37",
       "originalName": "var10Lifetime7",
       "renamedName": "var10Lifetime7",
       "declaration": {
@@ -130001,7 +130049,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#38",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#38",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#38",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -130012,7 +130060,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#4",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#4",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#4",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -130023,7 +130071,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#5",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#5",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#5",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -130034,7 +130082,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#6",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#6",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#6",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -130045,7 +130093,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#7",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#7",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#7",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -130056,7 +130104,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#8",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#8",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#8",
       "originalName": "dupTemp$8",
       "renamedName": "dupTemp$8",
       "declaration": {
@@ -130067,7 +130115,7 @@
     },
     {
       "symbol": "L:ja.a([B[BBIII)I#9",
-      "renamedSymbol": "L:ja.a([B[BBIII)I#9",
+      "renamedSymbol": "L:HuffmanDecoder.decompress([B[BBIII)I#9",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -233621,7 +233669,7 @@
     },
     {
       "symbol": "M:df.a(BLja;)V",
-      "renamedSymbol": "M:df.a(BLja;)V",
+      "renamedSymbol": "M:df.a(BLHuffmanDecoder;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -236745,9 +236793,9 @@
     },
     {
       "symbol": "M:ff.<init>([I)V",
-      "renamedSymbol": "M:ff.<init>([I)V",
+      "renamedSymbol": "M:IsaacRandom.<init>([I)V",
       "originalName": "ff",
-      "renamedName": "ff",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "ff.java",
         "start": 7429,
@@ -236756,7 +236804,7 @@
     },
     {
       "symbol": "M:ff.a(B)Lcn;",
-      "renamedSymbol": "M:ff.a(B)LRgbSprite;",
+      "renamedSymbol": "M:IsaacRandom.a(B)LRgbSprite;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -236767,9 +236815,9 @@
     },
     {
       "symbol": "M:ff.a(I)I",
-      "renamedSymbol": "M:ff.a(I)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "ff.java",
         "start": 253,
@@ -236778,9 +236826,9 @@
     },
     {
       "symbol": "M:ff.b(B)V",
-      "renamedSymbol": "M:ff.b(B)V",
+      "renamedSymbol": "M:IsaacRandom.initializeState(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "ff.java",
         "start": 585,
@@ -236789,9 +236837,9 @@
     },
     {
       "symbol": "M:ff.b(I)V",
-      "renamedSymbol": "M:ff.b(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "ff.java",
         "start": 5369,
@@ -236800,7 +236848,7 @@
     },
     {
       "symbol": "M:ff.c(I)V",
-      "renamedSymbol": "M:ff.clearStaticReferences(I)V",
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(I)V",
       "originalName": "c",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -242685,7 +242733,7 @@
     },
     {
       "symbol": "M:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V",
-      "renamedSymbol": "M:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V",
+      "renamedSymbol": "M:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V",
       "originalName": "$cfr$intArgs$a$ed16b0445cf3",
       "renamedName": "$cfr$intArgs$a$ed16b0445cf3",
       "declaration": {
@@ -242696,9 +242744,9 @@
     },
     {
       "symbol": "M:ja.<init>([B)V",
-      "renamedSymbol": "M:ja.<init>([B)V",
+      "renamedSymbol": "M:HuffmanDecoder.<init>([B)V",
       "originalName": "ja",
-      "renamedName": "ja",
+      "renamedName": "HuffmanDecoder",
       "declaration": {
         "file": "ja.java",
         "start": 7342,
@@ -242707,7 +242755,7 @@
     },
     {
       "symbol": "M:ja.a(IIBZ[Ldi;)V",
-      "renamedSymbol": "M:ja.a(IIBZ[Ldi;)V",
+      "renamedSymbol": "M:HuffmanDecoder.a(IIBZ[Ldi;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -242718,7 +242766,7 @@
     },
     {
       "symbol": "M:ja.a(Z)V",
-      "renamedSymbol": "M:ja.clearStaticReferences(Z)V",
+      "renamedSymbol": "M:HuffmanDecoder.clearStaticReferences(Z)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -242729,9 +242777,9 @@
     },
     {
       "symbol": "M:ja.a([B[BBIII)I",
-      "renamedSymbol": "M:ja.a([B[BBIII)I",
+      "renamedSymbol": "M:HuffmanDecoder.decompress([B[BBIII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decompress",
       "declaration": {
         "file": "ja.java",
         "start": 392,
@@ -275014,7 +275062,7 @@
     },
     {
       "symbol": "P:df.a(BLja;)V#0",
-      "renamedSymbol": "P:df.a(BLja;)V#0",
+      "renamedSymbol": "P:df.a(BLHuffmanDecoder;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275025,7 +275073,7 @@
     },
     {
       "symbol": "P:df.a(BLja;)V#1",
-      "renamedSymbol": "P:df.a(BLja;)V#1",
+      "renamedSymbol": "P:df.a(BLHuffmanDecoder;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -282582,7 +282630,7 @@
     },
     {
       "symbol": "P:ff.<init>([I)V#0",
-      "renamedSymbol": "P:ff.<init>([I)V#0",
+      "renamedSymbol": "P:IsaacRandom.<init>([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282593,7 +282641,7 @@
     },
     {
       "symbol": "P:ff.a(B)Lcn;#0",
-      "renamedSymbol": "P:ff.a(B)LRgbSprite;#0",
+      "renamedSymbol": "P:IsaacRandom.a(B)LRgbSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282604,7 +282652,7 @@
     },
     {
       "symbol": "P:ff.a(I)I#0",
-      "renamedSymbol": "P:ff.a(I)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282615,7 +282663,7 @@
     },
     {
       "symbol": "P:ff.b(B)V#0",
-      "renamedSymbol": "P:ff.b(B)V#0",
+      "renamedSymbol": "P:IsaacRandom.initializeState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282626,7 +282674,7 @@
     },
     {
       "symbol": "P:ff.b(I)V#0",
-      "renamedSymbol": "P:ff.b(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282637,7 +282685,7 @@
     },
     {
       "symbol": "P:ff.c(I)V#0",
-      "renamedSymbol": "P:ff.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297102,7 +297150,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
-      "renamedSymbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
+      "renamedSymbol": "P:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297113,7 +297161,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
-      "renamedSymbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
+      "renamedSymbol": "P:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297124,7 +297172,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
-      "renamedSymbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
+      "renamedSymbol": "P:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297135,7 +297183,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
-      "renamedSymbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
+      "renamedSymbol": "P:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -297146,7 +297194,7 @@
     },
     {
       "symbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
-      "renamedSymbol": "P:ja.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
+      "renamedSymbol": "P:HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(IIIZ[Ldi;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -297157,7 +297205,7 @@
     },
     {
       "symbol": "P:ja.<init>([B)V#0",
-      "renamedSymbol": "P:ja.<init>([B)V#0",
+      "renamedSymbol": "P:HuffmanDecoder.<init>([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297168,7 +297216,7 @@
     },
     {
       "symbol": "P:ja.a(IIBZ[Ldi;)V#0",
-      "renamedSymbol": "P:ja.a(IIBZ[Ldi;)V#0",
+      "renamedSymbol": "P:HuffmanDecoder.a(IIBZ[Ldi;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297179,7 +297227,7 @@
     },
     {
       "symbol": "P:ja.a(IIBZ[Ldi;)V#1",
-      "renamedSymbol": "P:ja.a(IIBZ[Ldi;)V#1",
+      "renamedSymbol": "P:HuffmanDecoder.a(IIBZ[Ldi;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297190,7 +297238,7 @@
     },
     {
       "symbol": "P:ja.a(IIBZ[Ldi;)V#2",
-      "renamedSymbol": "P:ja.a(IIBZ[Ldi;)V#2",
+      "renamedSymbol": "P:HuffmanDecoder.a(IIBZ[Ldi;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297201,7 +297249,7 @@
     },
     {
       "symbol": "P:ja.a(IIBZ[Ldi;)V#3",
-      "renamedSymbol": "P:ja.a(IIBZ[Ldi;)V#3",
+      "renamedSymbol": "P:HuffmanDecoder.a(IIBZ[Ldi;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -297212,7 +297260,7 @@
     },
     {
       "symbol": "P:ja.a(IIBZ[Ldi;)V#4",
-      "renamedSymbol": "P:ja.a(IIBZ[Ldi;)V#4",
+      "renamedSymbol": "P:HuffmanDecoder.a(IIBZ[Ldi;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -297223,7 +297271,7 @@
     },
     {
       "symbol": "P:ja.a(Z)V#0",
-      "renamedSymbol": "P:ja.clearStaticReferences(Z)V#0",
+      "renamedSymbol": "P:HuffmanDecoder.clearStaticReferences(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297234,7 +297282,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#0",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#0",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297245,7 +297293,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#1",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#1",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297256,7 +297304,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#2",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#2",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297267,7 +297315,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#3",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#3",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -297278,7 +297326,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#4",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#4",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -297289,7 +297337,7 @@
     },
     {
       "symbol": "P:ja.a([B[BBIII)I#5",
-      "renamedSymbol": "P:ja.a([B[BBIII)I#5",
+      "renamedSymbol": "P:HuffmanDecoder.decompress([B[BBIII)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -344318,7 +344366,7 @@
       "original": "DungeonAssault.java",
       "renamed": "DungeonAssault.java",
       "inputSha256": "b5464cbb2115c14735feab48fc15b139ffc8cb70c93977ed2f68b3e29596a14a",
-      "outputSha256": "536b4edcaacf346440f27ce196a6f7df15c85df183f4c223668a7a7514728e28",
+      "outputSha256": "e59a4694216d60c35402a9b8c4b28febda7da6ae77cb115dbe581113a1e57062",
       "edits": [
         {
           "start": 101,
@@ -345046,6 +345094,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 18226,
+          "end": 18228,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
           "start": 18356,
           "end": 18359,
           "symbol": "B:DungeonAssault.a(I)V#0",
@@ -345586,6 +345641,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 23394,
+          "end": 23396,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
           "start": 23397,
           "end": 23398,
           "symbol": "M:ja.a(Z)V",
@@ -346046,6 +346108,13 @@
           "symbol": "M:fj.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 25053,
+          "end": 25055,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 25056,
@@ -352605,7 +352674,7 @@
       "original": "bl.java",
       "renamed": "bl.java",
       "inputSha256": "41fa483355b034e320ad1571bbfe9506560df306d2478a51f57fa99de5ef3a1e",
-      "outputSha256": "f7bcbd02934b112241cf607dbaae3a7db57a7477f73f3425d506a189f3e0465d",
+      "outputSha256": "e570fc591dd14fc6b8368b9a80f793804bf700cce4bfbb9683fa321bf9a86591",
       "edits": [
         {
           "start": 198,
@@ -353110,6 +353179,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 8669,
+          "end": 8671,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 11094,
@@ -360699,7 +360775,7 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "9c905aa2880992b845f89721cef4f4b64e915bb2fbddcb1557edd6e11bd13fb1",
-      "outputSha256": "2c516a3a2b4b73256bdb66c5d9828039f5fdee766b60513173a7c00eff7fe586",
+      "outputSha256": "59cde036af256842f398de3fc1eb7a340ea9888a679aa15af7acaf102abc78db",
       "edits": [
         {
           "start": 93,
@@ -360714,6 +360790,27 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 355,
+          "end": 357,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 597,
+          "end": 599,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 637,
+          "end": 639,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 1282,
@@ -360756,6 +360853,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 5106,
+          "end": 5108,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 5206,
@@ -362825,7 +362929,7 @@
       "original": "ec.java",
       "renamed": "PacketBuffer.java",
       "inputSha256": "2e19d6e3c95777c5a8674d94fcc8f2e531a5e6b31bb3a450cc3a1c5aab78a5d5",
-      "outputSha256": "2d8247c49966a91b50038e580f5800e4d71ff9cbc4cac2c20fdffd09f796f7f1",
+      "outputSha256": "312046b0d974d68970c17ec4dec3904abd5162116dc60ea70a456601a6c33821",
       "edits": [
         {
           "start": 44,
@@ -365202,6 +365306,20 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 91527,
+          "end": 91529,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 91694,
+          "end": 91696,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
           "start": 93170,
           "end": 93172,
           "symbol": "C:ll",
@@ -365312,6 +365430,62 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 109914,
+          "end": 109916,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110084,
+          "end": 110086,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110255,
+          "end": 110257,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110426,
+          "end": 110428,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110597,
+          "end": 110599,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110767,
+          "end": 110769,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 110937,
+          "end": 110939,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 111108,
+          "end": 111110,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 111280,
@@ -372625,16 +372799,65 @@
     },
     {
       "original": "ff.java",
-      "renamed": "ff.java",
+      "renamed": "IsaacRandom.java",
       "inputSha256": "cfaaaa2b1879b8c63ef37104e46af41e90d0cfb98679f2f7a64e3210116df591",
-      "outputSha256": "4ef04a31e475633ead3c041f4c0818805bc86e976f0411ba7ca5614e93bcf5d3",
+      "outputSha256": "f79f5c8ed07fc4f6354b943c93d339a5df84b0b32da532437f2aa3df10e78fc6",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 253,
+          "end": 254,
+          "symbol": "M:ff.a(I)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 317,
+          "end": 318,
+          "symbol": "M:ff.b(I)V",
+          "original": "b",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 585,
+          "end": 586,
+          "symbol": "M:ff.b(B)V",
+          "original": "b",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 985,
+          "end": 987,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
         {
           "start": 988,
           "end": 989,
           "symbol": "M:ff.c(I)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5303,
+          "end": 5304,
+          "symbol": "M:ff.b(I)V",
+          "original": "b",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 5369,
+          "end": 5370,
+          "symbol": "M:ff.b(I)V",
+          "original": "b",
+          "renamed": "generateResults"
         },
         {
           "start": 6719,
@@ -372677,6 +372900,20 @@
           "symbol": "M:ff.c(I)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 7429,
+          "end": 7431,
+          "symbol": "M:ff.<init>([I)V",
+          "original": "ff",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 7717,
+          "end": 7718,
+          "symbol": "M:ff.b(B)V",
+          "original": "b",
+          "renamed": "initializeState"
         },
         {
           "start": 7801,
@@ -380800,7 +381037,7 @@
       "original": "he.java",
       "renamed": "he.java",
       "inputSha256": "fd7c6b1324f6e47a87ee94e6fce588221fc431a0c0a4af4702fe6157f6e4fb53",
-      "outputSha256": "42326cf903b10bf49c6fcafa7df435a76a24582b386b35b93a11c307dbff1a15",
+      "outputSha256": "c088b391618d9cfe68bcdb3b833b27d02368844889155f52f5c56583eb1b343a",
       "edits": [
         {
           "start": 7192,
@@ -380922,6 +381159,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 8021,
+          "end": 8023,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
           "start": 8057,
           "end": 8059,
           "symbol": "C:ll",
@@ -381039,6 +381283,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 9527,
+          "end": 9529,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 9653,
@@ -381312,6 +381563,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 34272,
+          "end": 34274,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 34411,
@@ -389389,10 +389647,17 @@
     },
     {
       "original": "ja.java",
-      "renamed": "ja.java",
+      "renamed": "HuffmanDecoder.java",
       "inputSha256": "190f72a25553fe43ae71b7f7bdaf3b5d5af61453cf7ad3ce9a08e6c52966aba1",
-      "outputSha256": "664b4c5d27fcbb99c15707dfe910c913e597c60d8c9fd0d77c0aa0c9755281db",
+      "outputSha256": "7fd4cc7ee71a93b0384fddb8ac95c9a1821264b2e430fcdc2db26919d7b6b7a6",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
         {
           "start": 149,
           "end": 151,
@@ -389413,6 +389678,20 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 392,
+          "end": 393,
+          "symbol": "M:ja.a([B[BBIII)I",
+          "original": "a",
+          "renamed": "decompress"
+        },
+        {
+          "start": 1807,
+          "end": 1808,
+          "symbol": "M:ja.a([B[BBIII)I",
+          "original": "a",
+          "renamed": "decompress"
         },
         {
           "start": 2076,
@@ -389491,6 +389770,13 @@
           "symbol": "M:vk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lb;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 7342,
+          "end": 7344,
+          "symbol": "M:ja.<init>([B)V",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 11510,
@@ -390328,7 +390614,7 @@
       "original": "jf.java",
       "renamed": "jf.java",
       "inputSha256": "35861a15df12275da6e58baa3c1f83a58774d76c2ded84f7b6b646f35844e4ac",
-      "outputSha256": "fe4e2e93c4c701cb32e53e2ee3e25f184b8b993b480da0e982dfc616ae89da76",
+      "outputSha256": "c42802682cc6fab4b7daade7a1c96c726625ddb5280eedf0121b3b187742a7c6",
       "edits": [
         {
           "start": 106,
@@ -390427,6 +390713,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 2572,
+          "end": 2574,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 2681,
@@ -404802,7 +405095,7 @@
       "original": "ng.java",
       "renamed": "ng.java",
       "inputSha256": "4ead403e3c89f9ec416529d4dc4c4b02a3c5a174d44a5737331335e330310b7e",
-      "outputSha256": "22774e183d013cb3be0b4e42405f427ca68a2c87974a6308b93750265ecf3a86",
+      "outputSha256": "e30ebefb8072376c4a32ef2f27617ae5aaf4ae2d2a2bb136c4d9297cedbfae25",
       "edits": [
         {
           "start": 801,
@@ -404978,6 +405271,13 @@
           "symbol": "C:fg",
           "original": "fg",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 74853,
+          "end": 74855,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 76064,
@@ -420154,7 +420454,7 @@
       "original": "qh.java",
       "renamed": "qh.java",
       "inputSha256": "5befd5a137df089b60b36364c5077e1f9e3c07f77127a983dcadc6a69d6d894d",
-      "outputSha256": "054d0b842b4f42d49398e58799802e8ebbe412a4c5445b007723a753af191b44",
+      "outputSha256": "f3e18a67327799eb5e191d6d0e5f47cd85eab32600a87de1db768840bd92e9f4",
       "edits": [
         {
           "start": 83,
@@ -420162,6 +420462,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 823,
+          "end": 825,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 2735,
@@ -424733,7 +425040,7 @@
       "original": "sc.java",
       "renamed": "sc.java",
       "inputSha256": "5d178afcbca86cc8f73a52ae36c62cd38efe08faf1c61215a933bf508d7f3f09",
-      "outputSha256": "10e025dbb7594e8e1490bc3575080b835315f0cbb377d03ce125fcaf3dff3a97",
+      "outputSha256": "a9736ec188505b265c72238b3fcff4c273af75ff42a272d213a677afaf6f5c45",
       "edits": [
         {
           "start": 77,
@@ -424783,6 +425090,13 @@
           "symbol": "F:ec.field_o:I",
           "original": "field_o",
           "renamed": "position"
+        },
+        {
+          "start": 1128,
+          "end": 1129,
+          "symbol": "M:ja.a([B[BBIII)I",
+          "original": "a",
+          "renamed": "decompress"
         },
         {
           "start": 1137,
@@ -424967,7 +425281,7 @@
       "original": "sf.java",
       "renamed": "sf.java",
       "inputSha256": "d817d7a49418b3b1985334420a9f810e7b679664b8f171da378639e60329d4ff",
-      "outputSha256": "4cbe64fd0d128780b417594e998a79c1648b094d5cfb6a67039c808dd3b2bbfb",
+      "outputSha256": "8b0ea76fde77c6345d5be6b82470bed63e4ac17f68d18715063b50a3a7903404",
       "edits": [
         {
           "start": 181,
@@ -425145,6 +425459,55 @@
           "original": "L2",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 13198,
+          "end": 13200,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 13321,
+          "end": 13323,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 13575,
+          "end": 13577,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 14063,
+          "end": 14065,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 14210,
+          "end": 14212,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 14324,
+          "end": 14326,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
+        },
+        {
+          "start": 14438,
+          "end": 14440,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 15408,
@@ -428201,7 +428564,7 @@
       "original": "tf.java",
       "renamed": "tf.java",
       "inputSha256": "07d2f70de9b1cf49a5d907da735bbe0ea57861ab2f76291526e418c529eab54e",
-      "outputSha256": "e5f095d568df2eb28a05449c5526d9568c9ba4894f79c2a156d9333cf5e729b0",
+      "outputSha256": "e2b3535be36338f2b6ff75780d7d8d4b2ae8116773f534ae8e147dda23311c1e",
       "edits": [
         {
           "start": 67,
@@ -428265,6 +428628,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "SecondaryNodeDequeIterator"
+        },
+        {
+          "start": 2157,
+          "end": 2159,
+          "symbol": "C:ja",
+          "original": "ja",
+          "renamed": "HuffmanDecoder"
         },
         {
           "start": 2160,
@@ -438679,7 +439049,7 @@
       "original": "wj.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "1d50f54055ade15df4306ecc1b2e85cebcf42554fb467b1bf43b8388b19f92cb",
-      "outputSha256": "99a95787df204ffdd1c670c8ed010fe33c79ce880bcab79993fc86ed1d7ab785",
+      "outputSha256": "6548d6d8ff710f648ec11cf3e8a44f7e671a8494ff9b43bf1f84978960028f5b",
       "edits": [
         {
           "start": 50,
@@ -438701,6 +439071,13 @@
           "symbol": "C:cn",
           "original": "cn",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 101,
+          "end": 103,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 288,
@@ -438729,6 +439106,20 @@
           "symbol": "F:ec.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 403,
+          "end": 404,
+          "symbol": "M:ff.a(I)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 631,
+          "end": 633,
+          "symbol": "C:ff",
+          "original": "ff",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 713,
@@ -438771,6 +439162,13 @@
           "symbol": "F:ec.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 1079,
+          "end": 1080,
+          "symbol": "M:ff.a(I)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 1528,
@@ -438841,6 +439239,13 @@
           "symbol": "F:ec.field_m:[B",
           "original": "field_m",
           "renamed": "payload"
+        },
+        {
+          "start": 2808,
+          "end": 2809,
+          "symbol": "M:ff.a(I)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 3423,
@@ -439383,10 +439788,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/dungeonassault"
     },
-    "rulesSha256": "78f21d8f5c376910be7852cac9c2cfd52b8c5cf51b98174276e3c5766bf06280",
+    "rulesSha256": "b5df0191149b955fa763cf44fff41ce2f62d486a9bec1f957ba1384de6c17d4e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
-    "outputTreeSha256": "c82b0b535effa172a78b843beb60f3249157be1a00e6fd743aeeb078bc84d22d",
+    "outputTreeSha256": "e6481df263b2bcb962026a923842435786bf4730fdf56ab54ba4a2bf9d4a6c76",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

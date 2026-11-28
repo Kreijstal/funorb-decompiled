@@ -10,7 +10,7 @@ final class ko extends af {
     static tj field_O;
     static String field_U;
     static int field_P;
-    static ke field_M;
+    static HuffmanCodec field_M;
 
     final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
@@ -91,7 +91,7 @@ final class ko extends af {
 
     final static boolean e(byte param0) {
         if (param0 > -88) {
-          field_M = (ke) null;
+          field_M = (HuffmanCodec) null;
           return pp.a(ob.e((byte) -124), 0);
         }
         return pp.a(ob.e((byte) -124), 0);

@@ -75,8 +75,8 @@ final class rd {
           var11 = 1;
           if (var9 > var8 ||
             param0.indexOf("<br>") != -1) {
-            if (null == nf.field_g) {
-              nf.field_g = new String[16];
+            if (null == IsaacRandom.field_g) {
+              IsaacRandom.field_g = new String[16];
             }
             if (var9 > var8) {
               var13 = var9 / var8;
@@ -84,11 +84,11 @@ final class rd {
             } else {
               var12 = var8;
             }
-            var11Lifetime1 = this.field_c.a(param0, new int[]{var12}, nf.field_g);
+            var11Lifetime1 = this.field_c.a(param0, new int[]{var12}, IsaacRandom.field_g);
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_c.stringWidth(nf.field_g[var13Lifetime2]);
+              var14 = this.field_c.stringWidth(IsaacRandom.field_g[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }

@@ -21,10 +21,10 @@ final class td {
         RuntimeException decompiledCaughtException = null;
         var2 = stellarshard.field_B;
         try {
-          na.field_d.a(true, (byte) -123, ll.field_d, SectorCacheStore.field_c);
-          na.field_d.f((byte) -127);
+          IsaacRandom.field_d.a(true, (byte) -123, ll.field_d, SectorCacheStore.field_c);
+          IsaacRandom.field_d.f((byte) -127);
           while (PcmResampler.c(123)) {
-            na.field_d.a(SectorCacheStore.field_f, AccountRequestState.field_b, true);
+            IsaacRandom.field_d.a(SectorCacheStore.field_f, AccountRequestState.field_b, true);
           }
           if (-1 != ee.field_a) {
             var1_int = ee.field_a;

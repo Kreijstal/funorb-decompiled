@@ -335,9 +335,9 @@ final class de extends wd {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              ta.field_b.reset();
-              ta.field_b.update(var5, 0, -2 + var18.length);
-              var6_int = (int)ta.field_b.getValue();
+              IsaacRandom.field_b.reset();
+              IsaacRandom.field_b.update(var5, 0, -2 + var18.length);
+              var6_int = (int)IsaacRandom.field_b.getValue();
               if (var6_int != this.field_g.field_j[param1]) {
                 throw new RuntimeException();
               }
@@ -388,9 +388,9 @@ final class de extends wd {
         try {
           if (var5 != null &&
             2 < var18.length) {
-            ta.field_b.reset();
-            ta.field_b.update(var5, 0, -2 + var18.length);
-            var6_int = (int)ta.field_b.getValue();
+            IsaacRandom.field_b.reset();
+            IsaacRandom.field_b.update(var5, 0, -2 + var18.length);
+            var6_int = (int)IsaacRandom.field_b.getValue();
             if (this.field_g.field_j[param1] != var6_int) {
               throw new RuntimeException();
             }

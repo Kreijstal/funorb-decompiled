@@ -1515,7 +1515,7 @@ public final class Main extends c {
         RgbSprite[] var8 = null;
         int[] var8_array = null;
         int var9_int = 0;
-        hg var9 = null;
+        IsaacRandom var9 = null;
         RgbSprite var10_ref_kc = null;
         int var10 = 0;
         int var11_int = 0;
@@ -1791,7 +1791,7 @@ public final class Main extends c {
             var9_int++;
           } while (var46 == 0);
           var8_array = DelegatingCanvas.a(-126, "woodpal", "", mh.field_c).field_r;
-          var9 = new hg(new int[]{1523066134, 1523066134, 416118573, -1554371402, -117777497, 383414059, -751582233, -486225926});
+          var9 = new IsaacRandom(new int[]{1523066134, 1523066134, 416118573, -1554371402, -117777497, 383414059, -751582233, -486225926});
           mg.field_j[4] = new RgbSprite(640, 480);
           mg.field_j[4].c();
           var10 = var8_array.length >> 2;

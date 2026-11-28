@@ -102,10 +102,10 @@ final class hba extends AttackEvent {
           var10 = RageSpecial.a(29611, "basic", "special_tiles_ones", param1);
           qq.field_i = new IndexedSprite[3];
           dupTemp$0 = var10[6];
-          il.field_b = dupTemp$0;
+          HuffmanCodec.field_b = dupTemp$0;
           ge.field_K = dupTemp$0;
           nha.field_a = var10[4];
-          il.field_a = var10[15];
+          HuffmanCodec.field_a = var10[15];
           ProxyAuthenticationRequiredException.field_a = var10[3];
           ho.field_j = new IndexedSprite[]{var10[13], var10[14]};
           fw.field_f = var10[5];

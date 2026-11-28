@@ -16,7 +16,7 @@ final class ae {
         RuntimeException var1_ref = null;
         var4 = StarCannon.field_A;
         try {
-          var6 = jb.field_h;
+          var6 = IsaacRandom.field_h;
           var1 = var6;
           var2 = 0;
           if (param0 != -5607) {

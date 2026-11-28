@@ -418,7 +418,7 @@ final class qc {
           for (var4Lifetime2 = 0; var4Lifetime2 < stellarshard.field_L.length; var4Lifetime2++) {
             stackIn_110_0 = fl.field_a;
             if (sj.field_J[var4Lifetime2] >= 0) {
-              stackIn_111_1 = na.field_a;
+              stackIn_111_1 = IsaacRandom.field_a;
             } else {
               stackIn_111_1 = l.field_e;
             }
@@ -438,8 +438,8 @@ final class qc {
               vl.field_o[var4Lifetime3][0] = var8Lifetime1 - le.field_k;
               vl.field_o[var4Lifetime3][1] = var5Lifetime3;
               vl.field_o[var4Lifetime3][2] = var7Lifetime2 + (le.field_k << 1);
-              vl.field_o[var4Lifetime3][3] = na.field_a + (nh.field_h << 1);
-              var5Lifetime3 = var5Lifetime3 + (nh.field_f + ((nh.field_h << 1) + na.field_a));
+              vl.field_o[var4Lifetime3][3] = IsaacRandom.field_a + (nh.field_h << 1);
+              var5Lifetime3 = var5Lifetime3 + (nh.field_f + ((nh.field_h << 1) + IsaacRandom.field_a));
             } else {
               var5Lifetime3 = var5Lifetime3 + l.field_e;
             }

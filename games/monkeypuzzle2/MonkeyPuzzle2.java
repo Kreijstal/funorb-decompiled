@@ -161,7 +161,7 @@ public final class MonkeyPuzzle2 extends bi {
           BoundedRandomAccessFile.b((byte) -77);
           DelegatingCanvas.clearStaticReferences(-101);
           ec.clearStaticReferences((byte) 123);
-          ol.clearStaticReferences(120);
+          IsaacRandom.clearStaticReferences(120);
           NetworkArchiveRequest.clearDeclaredStaticReferences(8364);
           SectorCacheStore.clearStaticReferences(-4435);
           DiskArchiveRequest.b((byte) 20);
@@ -635,15 +635,15 @@ public final class MonkeyPuzzle2 extends bi {
             BufferedRandomAccessFile.field_j = null;
             oe.a((byte) 103);
           }
-          hk.field_k = ol.a(-92, 1);
-          cl.field_a = ol.a(-106, 2);
-          wi.field_d = ol.a(-89, 3);
+          hk.field_k = IsaacRandom.a(-92, 1);
+          cl.field_a = IsaacRandom.a(-106, 2);
+          wi.field_d = IsaacRandom.a(-89, 3);
           if (param0 != -32) {
             field_C = (ib) null;
           }
-          fi.field_b = ol.a(param0 - 92, 5);
+          fi.field_b = IsaacRandom.a(param0 - 92, 5);
           df.field_p = be.a(false, true, param0 + 13303, 6, false);
-          ha.field_fb = ol.a(-117, 7);
+          ha.field_fb = IsaacRandom.a(-117, 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

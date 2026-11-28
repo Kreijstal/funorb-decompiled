@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff {
+final class IsaacRandom {
     private int[] field_b;
     static String[] field_f;
     private int field_c;
@@ -10,9 +10,9 @@ final class ff {
     private int[] field_g;
     private int field_a;
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (this.field_a == 0) {
-          this.b(256);
+          this.generateResults(256);
           this.field_a = 256;
         }
         if (param0 != 26979) {
@@ -23,7 +23,7 @@ final class ff {
         return this.field_b[fieldTemp$0];
     }
 
-    private final void b(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = DungeonAssault.field_K;
         int var6 = -1640531527;
@@ -36,7 +36,7 @@ final class ff {
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 <= 66) {
-          ff.clearStaticReferences(89);
+          IsaacRandom.clearStaticReferences(89);
         }
         int var5 = -1640531527;
         for (var2 = 0; 4 > var2; var2++) {
@@ -149,11 +149,11 @@ final class ff {
           this.field_g[var2Lifetime2 + 6] = var9;
           this.field_g[7 + var2Lifetime2] = var10;
         }
-        this.b(256);
+        this.generateResults(256);
         this.field_a = 256;
     }
 
-    private final void b(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -217,7 +217,7 @@ final class ff {
         field_f = null;
     }
 
-    ff(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_b = new int[256];
@@ -225,7 +225,7 @@ final class ff {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
-          this.b((byte) 77);
+          this.initializeState((byte) 77);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ff.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

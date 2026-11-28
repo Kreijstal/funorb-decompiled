@@ -70,10 +70,10 @@ final class af extends IntrusiveNode {
     final static void a(boolean param0, byte param1) {
         if (param1 >= -41) {
           af.a(true, (byte) 62);
-          na.field_d.a(0, 0, 0);
+          IsaacRandom.field_d.a(0, 0, 0);
           return;
         }
-        na.field_d.a(0, 0, 0);
+        IsaacRandom.field_d.a(0, 0, 0);
     }
 
     final static int a(int param0, int param1, int param2) {

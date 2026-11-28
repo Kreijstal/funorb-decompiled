@@ -708,6 +708,14 @@
       "renamedSymbol": "C:AccountNameAvailabilityValidator"
     },
     {
+      "symbol": "C:pe",
+      "originalName": "pe",
+      "to": "IsaacRandom",
+      "evidence": "Primary instance role reviewed from exact source: seeded ISAAC pseudorandom stream with two private int[256] tables and four private int state/count fields, four golden-ratio mixes, two eight-word initialization passes, generation with shifts13/6/2/16 and half-table/index lookups, and reverse-count result consumption. Every constructor and nonstatic method in this cohort is human-read, including bounded adapters where present. Packet masking and game-animation/random-choice callers are reviewed where selected. Mixed unrelated static responsibilities are retained. Rename identifiers only; preserve every declaration/modifier, primitive domain, table allocation, seed copy, class initializer, literal, arithmetic/guard/helper/recursion order, partial effect and exception. No library RNG substitution, guard removal, table normalization or runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IsaacRandom"
+    },
+    {
       "symbol": "C:pi",
       "originalName": "pi",
       "to": "ArgbSprite",
@@ -4089,7 +4097,31 @@
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 3 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:pe.clearStaticReferences(B)V"
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:pe.a(I)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. Counters update before sentinel-dependent remaining-count reset; preserve count0 assignment before the loop. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
+    },
+    {
+      "symbol": "M:pe.b(I)V",
+      "originalName": "b",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. Wrong int!=-24892 returns before constants and mixing. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V"
+    },
+    {
+      "symbol": "M:pe.c(I)I",
+      "originalName": "c",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I"
     },
     {
       "symbol": "M:pf.c(Z)V",
@@ -7732,9 +7764,9 @@
     },
     {
       "symbol": "C:pe",
-      "renamedSymbol": "C:pe",
+      "renamedSymbol": "C:IsaacRandom",
       "originalName": "pe",
-      "renamedName": "pe",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "pe.java",
         "start": 50,
@@ -22846,7 +22878,7 @@
     },
     {
       "symbol": "F:pe.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:pe.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacRandom.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -22857,7 +22889,7 @@
     },
     {
       "symbol": "F:pe.field_b:C",
-      "renamedSymbol": "F:pe.field_b:C",
+      "renamedSymbol": "F:IsaacRandom.field_b:C",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -22868,7 +22900,7 @@
     },
     {
       "symbol": "F:pe.field_c:I",
-      "renamedSymbol": "F:pe.field_c:I",
+      "renamedSymbol": "F:IsaacRandom.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -22879,7 +22911,7 @@
     },
     {
       "symbol": "F:pe.field_d:I",
-      "renamedSymbol": "F:pe.field_d:I",
+      "renamedSymbol": "F:IsaacRandom.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -22890,7 +22922,7 @@
     },
     {
       "symbol": "F:pe.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:pe.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacRandom.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -22901,7 +22933,7 @@
     },
     {
       "symbol": "F:pe.field_f:I",
-      "renamedSymbol": "F:pe.field_f:I",
+      "renamedSymbol": "F:IsaacRandom.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -22912,7 +22944,7 @@
     },
     {
       "symbol": "F:pe.field_g:[I",
-      "renamedSymbol": "F:pe.field_g:[I",
+      "renamedSymbol": "F:IsaacRandom.field_g:[I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -22923,7 +22955,7 @@
     },
     {
       "symbol": "F:pe.field_h:[I",
-      "renamedSymbol": "F:pe.field_h:[I",
+      "renamedSymbol": "F:IsaacRandom.field_h:[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -22934,7 +22966,7 @@
     },
     {
       "symbol": "F:pe.field_i:I",
-      "renamedSymbol": "F:pe.field_i:I",
+      "renamedSymbol": "F:IsaacRandom.field_i:I",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -22945,7 +22977,7 @@
     },
     {
       "symbol": "F:pe.field_j:Ljava/lang/String;",
-      "renamedSymbol": "F:pe.field_j:Ljava/lang/String;",
+      "renamedSymbol": "F:IsaacRandom.field_j:Ljava/lang/String;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -27026,7 +27058,7 @@
     },
     {
       "symbol": "F:th.field_n:Lpe;",
-      "renamedSymbol": "F:th.field_n:Lpe;",
+      "renamedSymbol": "F:th.field_n:LIsaacRandom;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -112342,7 +112374,7 @@
     },
     {
       "symbol": "L:pe.<init>([I)V#0",
-      "renamedSymbol": "L:pe.<init>([I)V#0",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -112353,7 +112385,7 @@
     },
     {
       "symbol": "L:pe.<init>([I)V#1",
-      "renamedSymbol": "L:pe.<init>([I)V#1",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -112364,7 +112396,7 @@
     },
     {
       "symbol": "L:pe.a(B)V#0",
-      "renamedSymbol": "L:pe.clearStaticReferences(B)V#0",
+      "renamedSymbol": "L:IsaacRandom.clearStaticReferences(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -112375,7 +112407,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#0",
-      "renamedSymbol": "L:pe.a(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -112386,7 +112418,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#1",
-      "renamedSymbol": "L:pe.a(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -112397,7 +112429,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#2",
-      "renamedSymbol": "L:pe.a(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -112408,7 +112440,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#3",
-      "renamedSymbol": "L:pe.a(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -112419,7 +112451,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#4",
-      "renamedSymbol": "L:pe.a(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -112430,7 +112462,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#5",
-      "renamedSymbol": "L:pe.a(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -112441,7 +112473,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#6",
-      "renamedSymbol": "L:pe.a(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -112452,7 +112484,7 @@
     },
     {
       "symbol": "L:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#0",
-      "renamedSymbol": "L:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#0",
+      "renamedSymbol": "L:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#0",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -112463,7 +112495,7 @@
     },
     {
       "symbol": "L:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#1",
-      "renamedSymbol": "L:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#1",
+      "renamedSymbol": "L:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -112474,7 +112506,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#0",
-      "renamedSymbol": "L:pe.b(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -112485,7 +112517,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#1",
-      "renamedSymbol": "L:pe.b(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -112496,7 +112528,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#10",
-      "renamedSymbol": "L:pe.b(I)V#10",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -112507,7 +112539,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#11",
-      "renamedSymbol": "L:pe.b(I)V#11",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -112518,7 +112550,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#2",
-      "renamedSymbol": "L:pe.b(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -112529,7 +112561,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#3",
-      "renamedSymbol": "L:pe.b(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -112540,7 +112572,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#4",
-      "renamedSymbol": "L:pe.b(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -112551,7 +112583,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#5",
-      "renamedSymbol": "L:pe.b(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -112562,7 +112594,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#6",
-      "renamedSymbol": "L:pe.b(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#6",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -112573,7 +112605,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#7",
-      "renamedSymbol": "L:pe.b(I)V#7",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -112584,7 +112616,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#8",
-      "renamedSymbol": "L:pe.b(I)V#8",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -112595,7 +112627,7 @@
     },
     {
       "symbol": "L:pe.b(I)V#9",
-      "renamedSymbol": "L:pe.b(I)V#9",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -112606,7 +112638,7 @@
     },
     {
       "symbol": "L:pe.c(I)I#0",
-      "renamedSymbol": "L:pe.c(I)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(I)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -167936,9 +167968,9 @@
     },
     {
       "symbol": "M:pe.<init>([I)V",
-      "renamedSymbol": "M:pe.<init>([I)V",
+      "renamedSymbol": "M:IsaacRandom.<init>([I)V",
       "originalName": "pe",
-      "renamedName": "pe",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "pe.java",
         "start": 7960,
@@ -167947,7 +167979,7 @@
     },
     {
       "symbol": "M:pe.a(B)V",
-      "renamedSymbol": "M:pe.clearStaticReferences(B)V",
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -167958,9 +167990,9 @@
     },
     {
       "symbol": "M:pe.a(I)V",
-      "renamedSymbol": "M:pe.a(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "pe.java",
         "start": 1831,
@@ -167969,7 +168001,7 @@
     },
     {
       "symbol": "M:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V",
-      "renamedSymbol": "M:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V",
+      "renamedSymbol": "M:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -167980,9 +168012,9 @@
     },
     {
       "symbol": "M:pe.b(I)V",
-      "renamedSymbol": "M:pe.b(I)V",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "pe.java",
         "start": 3187,
@@ -167991,9 +168023,9 @@
     },
     {
       "symbol": "M:pe.c(I)I",
-      "renamedSymbol": "M:pe.c(I)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "pe.java",
         "start": 496,
@@ -213564,7 +213596,7 @@
     },
     {
       "symbol": "P:pe.<init>([I)V#0",
-      "renamedSymbol": "P:pe.<init>([I)V#0",
+      "renamedSymbol": "P:IsaacRandom.<init>([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213575,7 +213607,7 @@
     },
     {
       "symbol": "P:pe.a(B)V#0",
-      "renamedSymbol": "P:pe.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:IsaacRandom.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213586,7 +213618,7 @@
     },
     {
       "symbol": "P:pe.a(I)V#0",
-      "renamedSymbol": "P:pe.a(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213597,7 +213629,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#0",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#0",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213608,7 +213640,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#1",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#1",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213619,7 +213651,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#10",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#10",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -213630,7 +213662,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#11",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#11",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -213641,7 +213673,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#12",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#12",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -213652,7 +213684,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#13",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#13",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -213663,7 +213695,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#14",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#14",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -213674,7 +213706,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#2",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#2",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213685,7 +213717,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#3",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#3",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213696,7 +213728,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#4",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#4",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -213707,7 +213739,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#5",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#5",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -213718,7 +213750,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#6",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#6",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -213729,7 +213761,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#7",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#7",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -213740,7 +213772,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#8",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#8",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -213751,7 +213783,7 @@
     },
     {
       "symbol": "P:pe.a(IIILle;I[Ldb;[Ldb;ILle;IIIIIZ)V#9",
-      "renamedSymbol": "P:pe.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#9",
+      "renamedSymbol": "P:IsaacRandom.a(IIILBitmapFont;I[LRgbSprite;[LRgbSprite;ILBitmapFont;IIIIIZ)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -213762,7 +213794,7 @@
     },
     {
       "symbol": "P:pe.b(I)V#0",
-      "renamedSymbol": "P:pe.b(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.initializeState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213773,7 +213805,7 @@
     },
     {
       "symbol": "P:pe.c(I)I#0",
-      "renamedSymbol": "P:pe.c(I)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -231883,7 +231915,7 @@
       "original": "Lexicominos.java",
       "renamed": "Lexicominos.java",
       "inputSha256": "7d448cf7c5bc7e7de4fe96e210bd251f08f1e28a4d4692a6ccdf160b4f64b4ff",
-      "outputSha256": "de802083b43ce62328616e48c9aac77a5c02e35c4e11104ffe897d6710ad43f2",
+      "outputSha256": "b1f2f549fc40824e074d5797a77eaedd0e17530c8649ed1e41af2ec8b03b463b",
       "edits": [
         {
           "start": 142,
@@ -232082,6 +232114,13 @@
           "renamed": "SectorCacheStore"
         },
         {
+          "start": 6111,
+          "end": 6113,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 6241,
           "end": 6243,
           "symbol": "C:ec",
@@ -232115,6 +232154,13 @@
           "symbol": "C:kj",
           "original": "kj",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 6994,
+          "end": 6996,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7078,
@@ -233588,6 +233634,13 @@
           "symbol": "M:q.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 41649,
+          "end": 41651,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 41652,
@@ -235460,11 +235513,95 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 67233,
+          "end": 67235,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 67304,
+          "end": 67306,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 68456,
           "end": 68458,
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "AccountRequestState"
+        },
+        {
+          "start": 68893,
+          "end": 68895,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69152,
+          "end": 69154,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69190,
+          "end": 69192,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69348,
+          "end": 69350,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69555,
+          "end": 69557,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69605,
+          "end": 69607,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69689,
+          "end": 69691,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 69929,
+          "end": 69931,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 70089,
+          "end": 70091,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 70306,
+          "end": 70308,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 70724,
@@ -261441,7 +261578,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "a92c1f537a2bfd0cfe234cff5b97d82e0ac132b597d84decbae4b92b37afc339",
-      "outputSha256": "e7c58222c7f12a58a89329101f31c07d15adfaa53609edcac52922239ca46ab2",
+      "outputSha256": "55c05d11deb041ab40407af381858ba28608d56b1c847506bccaf236a6f46602",
       "edits": [
         {
           "start": 329,
@@ -261463,6 +261600,13 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 941,
+          "end": 943,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 1029,
@@ -262850,7 +262994,7 @@
       "original": "ji.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "5edd887bc513313cdbf3696888ec93cf06501b145b5261b9ba080478383c7113",
-      "outputSha256": "3b791199e2d3ffee4c5813ffa099a547cc3a8af94bfa45bee54c5adef8ad848c",
+      "outputSha256": "f5bd8c43a9940af29acf10d661a0c8a1d3f30ef14b0e44f28927843c12732889",
       "edits": [
         {
           "start": 71,
@@ -263033,6 +263177,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 1663,
+          "end": 1665,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 1676,
@@ -263470,7 +263621,7 @@
       "original": "ka.java",
       "renamed": "ka.java",
       "inputSha256": "028d71c8044433964cf71a00391b0c972ddfd0e83e009fca72c9a4f43b532f65",
-      "outputSha256": "cf6aea0da3183b28ba0876755b73b2f1ae63dc1545698dce30501a1b9edfc45d",
+      "outputSha256": "984eb1c824da67c5b5b76ac2c96527e2fa44a5facfdee636717748c510b9fc53",
       "edits": [
         {
           "start": 337,
@@ -263508,6 +263659,13 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 1573,
+          "end": 1575,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 1982,
           "end": 1984,
           "symbol": "C:ee",
@@ -263541,7 +263699,7 @@
       "original": "kb.java",
       "renamed": "kb.java",
       "inputSha256": "677ee68a4f71dc0fe7f23a3dafb0091a79a682e1b67f9f462e2325acf93fd693",
-      "outputSha256": "ea502822562ecd4591c7e4bb604765758a8118586b77a30e4e3f333bb0c72b05",
+      "outputSha256": "65d1a2f93a2db84a7ec0bead775f805e26357947f2a7a62f03831238a6adecc7",
       "edits": [
         {
           "start": 567,
@@ -263565,6 +263723,13 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 56186,
+          "end": 56188,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 56510,
           "end": 56512,
           "symbol": "C:ol",
@@ -263577,6 +263742,13 @@
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 62419,
+          "end": 62421,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 63781,
@@ -263605,6 +263777,13 @@
           "symbol": "C:fj",
           "original": "fj",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 69933,
+          "end": 69935,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 70404,
@@ -264445,7 +264624,7 @@
       "original": "kj.java",
       "renamed": "MusicPatchPcmStream.java",
       "inputSha256": "7a7a918c9dd28922bc8ca3416d8d89fc6f1b8d7cb8262ddc4ff34095f64057f4",
-      "outputSha256": "9bbb823334791ad3bb27b9007f65aab8227e8abee8ebf9481500fabc9daeefc9",
+      "outputSha256": "ef27ec294ea12073c9dc8a61f86bcb57fba1f7ccc2e50d81c2e2a0b91b6a0e09",
       "edits": [
         {
           "start": 50,
@@ -264805,6 +264984,13 @@
           "renamed": "IterableNodeHashTable"
         },
         {
+          "start": 10115,
+          "end": 10117,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 10373,
           "end": 10374,
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
@@ -265035,7 +265221,7 @@
       "original": "kl.java",
       "renamed": "DiskCacheWorker.java",
       "inputSha256": "6a550386e61067422746d157915b0dd14e90046aac110629dde3d967e64457fa",
-      "outputSha256": "fbe62e4e2a3da7121e4365ad704fd481a752e1943816af92b4e73a1a1c6ef120",
+      "outputSha256": "82304874bc3b8e3c07c9ab3d66d03006b04afb6ffd95aee76bc7f85dc73a287d",
       "edits": [
         {
           "start": 50,
@@ -265393,6 +265579,13 @@
           "symbol": "C:db",
           "original": "db",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 9186,
+          "end": 9188,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 9385,
@@ -274066,16 +274259,37 @@
     },
     {
       "original": "pe.java",
-      "renamed": "pe.java",
+      "renamed": "IsaacRandom.java",
       "inputSha256": "6c088a2f8b40b378b624d7dad1f5304391f9ffac13449bf914860ded95d347c8",
-      "outputSha256": "39f22c8cad1654fc8ea20d95db3fc7d14008b9f786bd568b4c181e11783cdbb2",
+      "outputSha256": "2eedf2f31711f60f79ca72f33663738b1facc3f9a2fe509b1001f2a18d83145d",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
         {
           "start": 339,
           "end": 340,
           "symbol": "M:pe.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 496,
+          "end": 497,
+          "symbol": "M:pe.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 565,
+          "end": 566,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 818,
@@ -274146,6 +274360,41 @@
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1831,
+          "end": 1832,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 3187,
+          "end": 3188,
+          "symbol": "M:pe.b(I)V",
+          "original": "b",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 7911,
+          "end": 7912,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 7960,
+          "end": 7962,
+          "symbol": "M:pe.<init>([I)V",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 8248,
+          "end": 8249,
+          "symbol": "M:pe.b(I)V",
+          "original": "b",
+          "renamed": "initializeState"
         },
         {
           "start": 8332,
@@ -275676,7 +275925,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "be145184ed124d12c573d1ce1ac923df1e21298752208fa7b5daffac5457a1f3",
-      "outputSha256": "1ef8a8ff39fbee1479a87b6a57d891fb957a4f2702aa5484775ae88a8fbb275e",
+      "outputSha256": "32f6b1748c53126141fa3cada3592978ff2ced2324e6607f7b298ead224438b5",
       "edits": [
         {
           "start": 555,
@@ -275705,6 +275954,13 @@
           "symbol": "C:ol",
           "original": "ol",
           "renamed": "AccountNameAvailabilityValidator"
+        },
+        {
+          "start": 5014,
+          "end": 5016,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7554,
@@ -281062,8 +281318,43 @@
       "original": "sg.java",
       "renamed": "sg.java",
       "inputSha256": "ec9a1917d45a6a061462313a1ed8ff5cb0cbd4b572d09b20e04eef8540bcfcb8",
-      "outputSha256": "ad1859a5a83f9969a1b4bd68e5d70581dca909fad0c4271c6429f2b58dc30796",
+      "outputSha256": "eefa88a6981d4ff44cc89fe107b5197d0f069fd1954c9f0a78b6aca2852d12bf",
       "edits": [
+        {
+          "start": 725,
+          "end": 727,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 764,
+          "end": 766,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 794,
+          "end": 796,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 936,
+          "end": 938,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 1041,
+          "end": 1043,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
         {
           "start": 5978,
           "end": 5979,
@@ -283882,7 +284173,7 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "d931d21ee2f13b601f8c5729f04c9525f5e6410345d93613e34945184f891674",
-      "outputSha256": "7e54daf5b23ff1636f9a294651e82c0c79d61fd107d73c791c9c1e62bc64f547",
+      "outputSha256": "e1412586c4891a8a42a85c00384e6989f5f16ae5dccd72bd08e0247fae2eb9f4",
       "edits": [
         {
           "start": 61,
@@ -283897,6 +284188,13 @@
           "symbol": "C:cc",
           "original": "cc",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 247,
+          "end": 249,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 294,
@@ -283934,6 +284232,13 @@
           "renamed": "payload"
         },
         {
+          "start": 561,
+          "end": 562,
+          "symbol": "M:pe.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
           "start": 643,
           "end": 650,
           "symbol": "F:wf.field_h:I",
@@ -283960,6 +284265,13 @@
           "symbol": "F:wf.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 749,
+          "end": 750,
+          "symbol": "M:pe.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
         },
         {
           "start": 812,
@@ -284016,6 +284328,13 @@
           "symbol": "F:wf.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 2223,
+          "end": 2224,
+          "symbol": "M:pe.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
         },
         {
           "start": 2361,
@@ -284109,11 +284428,25 @@
           "renamed": "payload"
         },
         {
+          "start": 6227,
+          "end": 6228,
+          "symbol": "M:pe.c(I)I",
+          "original": "c",
+          "renamed": "nextInt"
+        },
+        {
           "start": 6771,
           "end": 6772,
           "symbol": "M:ld.a(Ljava/lang/Throwable;Ljava/lang/String;)Lde;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 7050,
+          "end": 7052,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7135,
@@ -287602,7 +287935,7 @@
       "original": "va.java",
       "renamed": "va.java",
       "inputSha256": "49172f7f26b804b184ff022ce9fe524cc3d3c0caaaf0caee76e42030448c8763",
-      "outputSha256": "f3aa40a4a65aea65778fee56a0e3bb11cd7e3fd45174111b6cb21533051c9016",
+      "outputSha256": "3b67101065ea3ec52fafa9f78a404ef052b4e8e933ea78ece897f2b013b3e8b4",
       "edits": [
         {
           "start": 101,
@@ -287626,11 +287959,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 2101,
+          "end": 2103,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 2581,
           "end": 2583,
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 2965,
+          "end": 2967,
+          "symbol": "C:pe",
+          "original": "pe",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3547,
@@ -293902,10 +294249,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/lexicominos"
     },
-    "rulesSha256": "8a4fda5946741317892fa22b01c1da4b7083eaf402730fadda5d56cc3a32be67",
+    "rulesSha256": "5acbb4395eab635e705a2189656db21cd2192ad7958fb638f6b65bc0e1e8d6ec",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
-    "outputTreeSha256": "3c750cac95219e27f870971b52d17ef2163c91611b4a26a8d680b4e6aaafb667",
+    "outputTreeSha256": "64d79ecfa42a5ba668de6e549514dfd37c8c2f30ccfc3280aefa56a4df9f8b2a",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg {
+final class IsaacRandom {
     private int field_a;
     private int field_g;
     private int field_e;
@@ -10,7 +10,7 @@ final class hg {
     static int field_b;
     private int[] field_c;
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -22,7 +22,7 @@ final class hg {
         this.field_f = this.field_f + 1;
         this.field_e = this.field_e + fieldTemp$0;
         if (param0 > -76) {
-          this.a(true);
+          this.initializeState(true);
         }
         for (var2 = 0; var2 < 256; var2++) {
           var3 = this.field_c[var2];
@@ -49,7 +49,7 @@ final class hg {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void initializeState(boolean param0) {
         int var2 = 0;
         int var11 = Main.field_T;
         int var10 = -1640531527;
@@ -61,7 +61,7 @@ final class hg {
         int var2Lifetime2;
         if (param0) {
           CharSequence var12 = (CharSequence) null;
-          hg.a((CharSequence) null, (byte) 30);
+          IsaacRandom.a((CharSequence) null, (byte) 30);
         }
         int var4 = -1640531527;
         int var3 = -1640531527;
@@ -176,7 +176,7 @@ final class hg {
           this.field_c[6 + var2Lifetime2] = var9;
           this.field_c[7 + var2Lifetime2] = var10;
         }
-        this.a(-119);
+        this.generateResults(-119);
         this.field_a = 256;
     }
 
@@ -213,13 +213,13 @@ final class hg {
         }
     }
 
-    final int b(int param0) {
+    final int nextInt(int param0) {
         if (this.field_a == 0) {
-          this.a(-80);
+          this.generateResults(-80);
           this.field_a = 256;
         }
         if (param0 != -1427) {
-          this.a(61);
+          this.generateResults(61);
         }
         int fieldTemp$0 = this.field_a - 1;
         this.field_a = this.field_a - 1;
@@ -257,7 +257,7 @@ final class hg {
         }
     }
 
-    hg(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_c = new int[256];
@@ -265,7 +265,7 @@ final class hg {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_d[var2_int] = param0[var2_int];
           }
-          this.a(false);
+          this.initializeState(false);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "hg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

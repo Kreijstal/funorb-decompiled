@@ -38,7 +38,7 @@ final class ul extends gj implements nk, da {
         if (NanoFrameTimer.c((byte) 39) ||
           !(this.field_H.field_i.length() <= 0) &&
           !(0 >= this.field_J.field_i.length())) {
-          pc.a(false, this.field_H.field_i, this.field_J.field_i);
+          IsaacRandom.a(false, this.field_H.field_i, this.field_J.field_i);
         }
         if (param0 != -32) {
           this.field_P = false;

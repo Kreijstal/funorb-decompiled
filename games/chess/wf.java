@@ -107,7 +107,7 @@ final class wf extends ma implements ha, mj {
             }
           } else {
             this.field_M = new fb(hl.field_f, (rg) null);
-            this.field_O = new fb(sn.field_b, (rg) null);
+            this.field_O = new fb(HuffmanCodec.field_b, (rg) null);
             this.field_N.field_H = false;
           }
           this.field_N.field_n = (jm) ((Object) new wc(10000536));

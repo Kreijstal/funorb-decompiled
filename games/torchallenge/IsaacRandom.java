@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed {
+final class IsaacRandom {
     private int[] field_g;
     static int[] field_i;
     private int field_k;
@@ -15,7 +15,7 @@ final class ed {
     private int field_l;
     static long field_j;
 
-    private final void b(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = TorChallenge.field_F ? 1 : 0;
         int var5 = -1640531527;
@@ -97,7 +97,7 @@ final class ed {
           this.field_b[7 + var2Lifetime1] = var10;
         }
         if (param0 >= -57) {
-          this.c(75);
+          this.generateResults(75);
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var7 = var7 + this.field_b[4 + var2Lifetime2];
@@ -141,14 +141,14 @@ final class ed {
           this.field_b[var2Lifetime2 + 6] = var9;
           this.field_b[7 + var2Lifetime2] = var10;
         }
-        this.c(-26);
+        this.generateResults(-26);
         this.field_l = 256;
     }
 
-    final int d(int param0) {
+    final int nextInt(int param0) {
         int var2 = -24 % ((param0 - 75) / 51);
         if (this.field_l == 0) {
-          this.c(-26);
+          this.generateResults(-26);
           this.field_l = 256;
         }
         int fieldTemp$0 = this.field_l - 1;
@@ -199,7 +199,7 @@ final class ed {
             hb.field_f = hb.field_f - 1;
           }
           if (param0 <= 67) {
-            ed.resetStaticState(-124);
+            IsaacRandom.resetStaticState(-124);
           }
           for (var2_int = 0; 6 > var2_int; var2_int++) {
             if (0 <= wa.field_sb[var2_int]) {
@@ -267,7 +267,7 @@ final class ed {
         }
     }
 
-    ed(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_g = new int[256];
@@ -275,13 +275,13 @@ final class ed {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_g[var2_int] = param0[var2_int];
           }
-          this.b(-82);
+          this.initializeState(-82);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "ed.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;

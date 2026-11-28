@@ -445,7 +445,7 @@ final class wl {
             }
           }
         }
-        ed.a((byte) 89, aa.field_g);
+        IsaacRandom.a((byte) 89, aa.field_g);
         BufferedSocket.field_p.b(true, false);
         stackIn_180_0 = -73;
         stackIn_182_1 = (ui.field_b) || (ij.field_z);

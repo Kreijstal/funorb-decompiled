@@ -340,7 +340,7 @@ final class tq {
                     ao.field_N = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 31078);
                     return;
                   }
-                  ke.a((Throwable) null, "L1: " + or.a(param0 + 181), 0);
+                  HuffmanCodec.a((Throwable) null, "L1: " + or.a(param0 + 181), 0);
                   rm.b((byte) -115);
                   return;
                 }

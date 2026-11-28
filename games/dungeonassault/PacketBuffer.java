@@ -2297,11 +2297,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_circumvent,0", false);
                 if (var2 != null) {
-                  ja.field_d[0] = dj.a(var2, false);
+                  HuffmanDecoder.field_d[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_circumvent,1", false);
                 if (null != var2) {
-                  ja.field_d[1] = dj.a(var2, false);
+                  HuffmanDecoder.field_d[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_scout,0", false);
                 if (var2 != null) {
@@ -2735,35 +2735,35 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("titles_mastery_female,0", false);
                 if (null != var2) {
-                  ff.field_f[0] = dj.a(var2, false);
+                  IsaacRandom.field_f[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,1", false);
                 if (var2 != null) {
-                  ff.field_f[1] = dj.a(var2, false);
+                  IsaacRandom.field_f[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,2", param1);
                 if (var2 != null) {
-                  ff.field_f[2] = dj.a(var2, false);
+                  IsaacRandom.field_f[2] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,3", param1);
                 if (null != var2) {
-                  ff.field_f[3] = dj.a(var2, false);
+                  IsaacRandom.field_f[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,4", param1);
                 if (var2 != null) {
-                  ff.field_f[4] = dj.a(var2, false);
+                  IsaacRandom.field_f[4] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,5", false);
                 if (null != var2) {
-                  ff.field_f[5] = dj.a(var2, false);
+                  IsaacRandom.field_f[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_mastery_female,6", false);
                 if (var2 != null) {
-                  ff.field_f[6] = dj.a(var2, param1);
+                  IsaacRandom.field_f[6] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_mastery_female,7", false);
                 if (var2 != null) {
-                  ff.field_f[7] = dj.a(var2, false);
+                  IsaacRandom.field_f[7] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,0", param1);
                 if (var2 != null) {

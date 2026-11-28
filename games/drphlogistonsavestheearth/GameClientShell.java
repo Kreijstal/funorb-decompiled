@@ -452,7 +452,7 @@ abstract class GameClientShell extends GameAppletShell {
                       fm.a((byte) 124);
                     }
                   } else {
-                    ta.c(4);
+                    IsaacRandom.c(4);
                   }
                 } else {
                   uk.a(-31114);

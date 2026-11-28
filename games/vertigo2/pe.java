@@ -67,7 +67,7 @@ final class pe extends IntrusiveNode {
                 return stackIn_18_0;
               }
             } else {
-              if (ke.field_d.indexOf(var4) == -1) {
+              if (HuffmanCodec.field_d.indexOf(var4) == -1) {
                 stackIn_21_0 = bp.field_A;
                 return stackIn_21_0;
               }

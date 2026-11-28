@@ -1648,7 +1648,7 @@ public final class Chess extends gb {
         id.clearStaticReferences(23111);
         mm.clearStaticReferences(120);
         hb.a(false);
-        sn.clearStaticReferences((byte) -65);
+        HuffmanCodec.clearStaticReferences((byte) -65);
         wg.resetStaticState(69);
         cd.resetStaticState(1570);
         qe.clearStaticReferences(2);
@@ -1881,7 +1881,7 @@ public final class Chess extends gb {
           }
           if (null == mm.field_d) {
             if (wg.field_q != null) {
-              kd.a((byte) -90, new sn(wg.field_q.a("", 30045, "huffman")));
+              kd.a((byte) -90, new HuffmanCodec(wg.field_q.a("", 30045, "huffman")));
               wg.field_q = null;
               ob.f(param0 ^ 19763);
               return false;
@@ -1986,19 +1986,19 @@ public final class Chess extends gb {
                                     nj.a(-20, da.a(ld.field_a, wn.field_g, ca.field_b, -62), 80.0f);
                                     return false;
                                   }
-                                  nj.a(param0 ^ -19745, ji.a(sn.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
+                                  nj.a(param0 ^ -19745, ji.a(HuffmanCodec.field_d, "lobby", nc.field_P, ByteStorage.field_b, (byte) 126), 17.0f);
                                   return false;
                                 }
                                 nj.a(-20, ji.a(gb.field_o, "lobby", k.field_V, hm.field_e, (byte) 30), 13.0f);
                                 return false;
                               }
-                              nj.a(-20, ji.a(sn.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
+                              nj.a(-20, ji.a(HuffmanCodec.field_d, "kartika13", nc.field_P, ByteStorage.field_b, (byte) 95), 17.0f);
                               return false;
                             }
                             nj.a(-20, ji.a(gb.field_o, "kartika13", k.field_V, hm.field_e, (byte) 78), 11.0f);
                             return false;
                           }
-                          nj.a(-20, ji.a(sn.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
+                          nj.a(-20, ji.a(HuffmanCodec.field_d, "roman12", nc.field_P, ByteStorage.field_b, (byte) 86), 17.0f);
                           return false;
                         }
                         nj.a(-20, ji.a(gb.field_o, "roman12", k.field_V, hm.field_e, (byte) 118), 11.0f);
@@ -2007,7 +2007,7 @@ public final class Chess extends gb {
                       nj.a(-20, ji.a(gb.field_o, "basic", k.field_V, hm.field_e, (byte) 120), 65.0f);
                       return false;
                     }
-                    nj.a(param0 - 19783, ji.a(sn.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
+                    nj.a(param0 - 19783, ji.a(HuffmanCodec.field_d, "", nc.field_P, bo.field_d, (byte) 49), 63.0f);
                     return false;
                   }
                   nj.a(-20, ji.a(ld.field_a, "", wn.field_g, wg.field_q, (byte) 31), 55.0f);

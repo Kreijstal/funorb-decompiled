@@ -63,7 +63,7 @@ final class ff extends pj implements ke {
                 ka.a((byte) -123);
               }
             } else {
-              ta.b(false);
+              IsaacRandom.b(false);
             }
           } else {
             h.d(-126);

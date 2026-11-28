@@ -36,7 +36,7 @@ final class o {
           IntrusiveDeque.field_c[23] = mj.field_f;
           IntrusiveDeque.field_c[16] = oi.field_c;
           NodeHashTable.field_i = ka.field_e;
-          GzipDecompressor.field_a = nf.field_h + ad.field_s + ".";
+          GzipDecompressor.field_a = IsaacRandom.field_h + ad.field_s + ".";
           IntrusiveDeque.field_c[5] = q.field_j;
           ud.field_b = ag.field_g + ad.field_s + ".";
           return;
@@ -55,7 +55,7 @@ final class o {
         IntrusiveDeque.field_c[23] = mj.field_f;
         IntrusiveDeque.field_c[16] = oi.field_c;
         NodeHashTable.field_i = ka.field_e;
-        GzipDecompressor.field_a = nf.field_h + ad.field_s + ".";
+        GzipDecompressor.field_a = IsaacRandom.field_h + ad.field_s + ".";
         IntrusiveDeque.field_c[5] = q.field_j;
         ud.field_b = ag.field_g + ad.field_s + ".";
     }

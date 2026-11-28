@@ -66,10 +66,10 @@ final class qh extends kj implements tl, sg {
         if (param0 != 0 &&
           param0 != 1) {
           if (param0 == 2) {
-            var3Lifetime1 = ed.field_i[1];
-            var5Lifetime1 = ed.field_i[3];
-            var4Lifetime1 = ed.field_i[2];
-            var2Lifetime1 = ed.field_i[0];
+            var3Lifetime1 = IsaacRandom.field_i[1];
+            var5Lifetime1 = IsaacRandom.field_i[3];
+            var4Lifetime1 = IsaacRandom.field_i[2];
+            var2Lifetime1 = IsaacRandom.field_i[0];
             sf.a(uk.field_N, ng.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
           }
         } else {

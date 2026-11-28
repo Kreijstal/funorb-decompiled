@@ -596,6 +596,14 @@
       "renamedSymbol": "C:MidiPcmStream"
     },
     {
+      "symbol": "C:qb",
+      "originalName": "qb",
+      "to": "IsaacRandom",
+      "evidence": "Primary instance role reviewed from exact source: seeded ISAAC pseudorandom stream with two private int[256] tables and four private int state/count fields, four golden-ratio mixes, two eight-word initialization passes, generation with shifts13/6/2/16 and half-table/index lookups, and reverse-count result consumption. Every constructor and nonstatic method in this cohort is human-read, including bounded adapters where present. Packet masking and game-animation/random-choice callers are reviewed where selected. Mixed unrelated static responsibilities are retained. Rename identifiers only; preserve every declaration/modifier, primitive domain, table allocation, seed copy, class initializer, literal, arithmetic/guard/helper/recursion order, partial effect and exception. No library RNG substitution, guard removal, table normalization or runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IsaacRandom"
+    },
+    {
       "symbol": "C:qj",
       "originalName": "qj",
       "to": "GzipDecompressor",
@@ -3634,6 +3642,30 @@
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 5 declared own static reference fields, with parameter guards/returns/braces only. Own-field declaration, qualification and absent parameter/local shadow establish every target; preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 348cbf27ae000561bf5d902c9e3e556dc058131225cd466ad46f398910d40b7c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:q.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:qb.a(I)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. Counter updates precede the param0==4094 split; the other branch calls the original static String helper before its separate full loop. Retain both branches and possible helper failure. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
+    },
+    {
+      "symbol": "M:qb.b(B)I",
+      "originalName": "b",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(B)I"
+    },
+    {
+      "symbol": "M:qb.b(Z)V",
+      "originalName": "b",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. Boolean-true static qb.a(false,81) occurs between seed-backed and memory-backed passes. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.initializeState(Z)V"
     },
     {
       "symbol": "M:qc.b(I)V",
@@ -7534,9 +7566,9 @@
     },
     {
       "symbol": "C:qb",
-      "renamedSymbol": "C:qb",
+      "renamedSymbol": "C:IsaacRandom",
       "originalName": "qb",
-      "renamedName": "qb",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "qb.java",
         "start": 69,
@@ -16081,7 +16113,7 @@
     },
     {
       "symbol": "F:ii.field_o:Lqb;",
-      "renamedSymbol": "F:CipherPacketBuffer.field_o:Lqb;",
+      "renamedSymbol": "F:CipherPacketBuffer.field_o:LIsaacRandom;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -23924,7 +23956,7 @@
     },
     {
       "symbol": "F:qb.field_a:I",
-      "renamedSymbol": "F:qb.field_a:I",
+      "renamedSymbol": "F:IsaacRandom.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -23935,7 +23967,7 @@
     },
     {
       "symbol": "F:qb.field_b:I",
-      "renamedSymbol": "F:qb.field_b:I",
+      "renamedSymbol": "F:IsaacRandom.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -23946,7 +23978,7 @@
     },
     {
       "symbol": "F:qb.field_c:[I",
-      "renamedSymbol": "F:qb.field_c:[I",
+      "renamedSymbol": "F:IsaacRandom.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -23957,7 +23989,7 @@
     },
     {
       "symbol": "F:qb.field_d:I",
-      "renamedSymbol": "F:qb.field_d:I",
+      "renamedSymbol": "F:IsaacRandom.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -23968,7 +24000,7 @@
     },
     {
       "symbol": "F:qb.field_e:I",
-      "renamedSymbol": "F:qb.field_e:I",
+      "renamedSymbol": "F:IsaacRandom.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -23979,7 +24011,7 @@
     },
     {
       "symbol": "F:qb.field_f:[I",
-      "renamedSymbol": "F:qb.field_f:[I",
+      "renamedSymbol": "F:IsaacRandom.field_f:[I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -23990,7 +24022,7 @@
     },
     {
       "symbol": "F:qb.field_g:Lbc;",
-      "renamedSymbol": "F:qb.field_g:LIntrusiveDeque;",
+      "renamedSymbol": "F:IsaacRandom.field_g:LIntrusiveDeque;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -24001,7 +24033,7 @@
     },
     {
       "symbol": "F:qb.field_h:Luf;",
-      "renamedSymbol": "F:qb.field_h:Luf;",
+      "renamedSymbol": "F:IsaacRandom.field_h:Luf;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -105665,7 +105697,7 @@
     },
     {
       "symbol": "L:qb.<init>([I)V#0",
-      "renamedSymbol": "L:qb.<init>([I)V#0",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -105676,7 +105708,7 @@
     },
     {
       "symbol": "L:qb.<init>([I)V#1",
-      "renamedSymbol": "L:qb.<init>([I)V#1",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -105687,7 +105719,7 @@
     },
     {
       "symbol": "L:qb.a(B)V#0",
-      "renamedSymbol": "L:qb.a(B)V#0",
+      "renamedSymbol": "L:IsaacRandom.a(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105698,7 +105730,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#0",
-      "renamedSymbol": "L:qb.a(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -105709,7 +105741,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#1",
-      "renamedSymbol": "L:qb.a(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -105720,7 +105752,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#10",
-      "renamedSymbol": "L:qb.a(I)V#10",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#10",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -105731,7 +105763,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#11",
-      "renamedSymbol": "L:qb.a(I)V#11",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#11",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -105742,7 +105774,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#2",
-      "renamedSymbol": "L:qb.a(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -105753,7 +105785,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#3",
-      "renamedSymbol": "L:qb.a(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -105764,7 +105796,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#4",
-      "renamedSymbol": "L:qb.a(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105775,7 +105807,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#5",
-      "renamedSymbol": "L:qb.a(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105786,7 +105818,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#6",
-      "renamedSymbol": "L:qb.a(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -105797,7 +105829,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#7",
-      "renamedSymbol": "L:qb.a(I)V#7",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -105808,7 +105840,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#8",
-      "renamedSymbol": "L:qb.a(I)V#8",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -105819,7 +105851,7 @@
     },
     {
       "symbol": "L:qb.a(I)V#9",
-      "renamedSymbol": "L:qb.a(I)V#9",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#9",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -105830,7 +105862,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#0",
-      "renamedSymbol": "L:qb.a(II)Z#0",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -105841,7 +105873,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#1",
-      "renamedSymbol": "L:qb.a(II)Z#1",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -105852,7 +105884,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#2",
-      "renamedSymbol": "L:qb.a(II)Z#2",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -105863,7 +105895,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#3",
-      "renamedSymbol": "L:qb.a(II)Z#3",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105874,7 +105906,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#4",
-      "renamedSymbol": "L:qb.a(II)Z#4",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#4",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -105885,7 +105917,7 @@
     },
     {
       "symbol": "L:qb.a(II)Z#5",
-      "renamedSymbol": "L:qb.a(II)Z#5",
+      "renamedSymbol": "L:IsaacRandom.a(II)Z#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -105896,7 +105928,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -105907,7 +105939,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
       "originalName": "stackIn_32_0",
       "renamedName": "stackIn_32_0",
       "declaration": {
@@ -105918,7 +105950,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
       "originalName": "stackIn_32_1",
       "renamedName": "stackIn_32_1",
       "declaration": {
@@ -105929,7 +105961,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#3",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#3",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#3",
       "originalName": "stackIn_33_2",
       "renamedName": "stackIn_33_2",
       "declaration": {
@@ -105940,7 +105972,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#4",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#4",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#4",
       "originalName": "stackIn_35_1",
       "renamedName": "stackIn_35_1",
       "declaration": {
@@ -105951,7 +105983,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#5",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#5",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#5",
       "originalName": "stackIn_36_2",
       "renamedName": "stackIn_36_2",
       "declaration": {
@@ -105962,7 +105994,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#6",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#6",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -105973,7 +106005,7 @@
     },
     {
       "symbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#7",
-      "renamedSymbol": "L:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#7",
+      "renamedSymbol": "L:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -105984,7 +106016,7 @@
     },
     {
       "symbol": "L:qb.a(Z)I#0",
-      "renamedSymbol": "L:qb.a(Z)I#0",
+      "renamedSymbol": "L:IsaacRandom.a(Z)I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -105995,7 +106027,7 @@
     },
     {
       "symbol": "L:qb.a(Z)I#1",
-      "renamedSymbol": "L:qb.a(Z)I#1",
+      "renamedSymbol": "L:IsaacRandom.a(Z)I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -106006,7 +106038,7 @@
     },
     {
       "symbol": "L:qb.a(Z)I#2",
-      "renamedSymbol": "L:qb.a(Z)I#2",
+      "renamedSymbol": "L:IsaacRandom.a(Z)I#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -106017,7 +106049,7 @@
     },
     {
       "symbol": "L:qb.a(Z)I#3",
-      "renamedSymbol": "L:qb.a(Z)I#3",
+      "renamedSymbol": "L:IsaacRandom.a(Z)I#3",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -106028,7 +106060,7 @@
     },
     {
       "symbol": "L:qb.b(B)I#0",
-      "renamedSymbol": "L:qb.b(B)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -106039,7 +106071,7 @@
     },
     {
       "symbol": "L:qb.b(B)I#1",
-      "renamedSymbol": "L:qb.b(B)I#1",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#1",
       "originalName": "fieldTemp$1",
       "renamedName": "fieldTemp$1",
       "declaration": {
@@ -106050,7 +106082,7 @@
     },
     {
       "symbol": "L:qb.b(B)I#2",
-      "renamedSymbol": "L:qb.b(B)I#2",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#2",
       "originalName": "fieldTemp$2",
       "renamedName": "fieldTemp$2",
       "declaration": {
@@ -106061,7 +106093,7 @@
     },
     {
       "symbol": "L:qb.b(B)I#3",
-      "renamedSymbol": "L:qb.b(B)I#3",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#3",
       "originalName": "fieldTemp$3",
       "renamedName": "fieldTemp$3",
       "declaration": {
@@ -106072,7 +106104,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#0",
-      "renamedSymbol": "L:qb.b(Z)V#0",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -106083,7 +106115,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#1",
-      "renamedSymbol": "L:qb.b(Z)V#1",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -106094,7 +106126,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#10",
-      "renamedSymbol": "L:qb.b(Z)V#10",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#10",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -106105,7 +106137,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#11",
-      "renamedSymbol": "L:qb.b(Z)V#11",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#11",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -106116,7 +106148,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#2",
-      "renamedSymbol": "L:qb.b(Z)V#2",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -106127,7 +106159,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#3",
-      "renamedSymbol": "L:qb.b(Z)V#3",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -106138,7 +106170,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#4",
-      "renamedSymbol": "L:qb.b(Z)V#4",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -106149,7 +106181,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#5",
-      "renamedSymbol": "L:qb.b(Z)V#5",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106160,7 +106192,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#6",
-      "renamedSymbol": "L:qb.b(Z)V#6",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -106171,7 +106203,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#7",
-      "renamedSymbol": "L:qb.b(Z)V#7",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -106182,7 +106214,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#8",
-      "renamedSymbol": "L:qb.b(Z)V#8",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#8",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -106193,7 +106225,7 @@
     },
     {
       "symbol": "L:qb.b(Z)V#9",
-      "renamedSymbol": "L:qb.b(Z)V#9",
+      "renamedSymbol": "L:IsaacRandom.initializeState(Z)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -154494,9 +154526,9 @@
     },
     {
       "symbol": "M:qb.<init>([I)V",
-      "renamedSymbol": "M:qb.<init>([I)V",
+      "renamedSymbol": "M:IsaacRandom.<init>([I)V",
       "originalName": "qb",
-      "renamedName": "qb",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "qb.java",
         "start": 15989,
@@ -154505,7 +154537,7 @@
     },
     {
       "symbol": "M:qb.a(B)V",
-      "renamedSymbol": "M:qb.a(B)V",
+      "renamedSymbol": "M:IsaacRandom.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154516,9 +154548,9 @@
     },
     {
       "symbol": "M:qb.a(I)V",
-      "renamedSymbol": "M:qb.a(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "qb.java",
         "start": 8364,
@@ -154527,7 +154559,7 @@
     },
     {
       "symbol": "M:qb.a(II)Z",
-      "renamedSymbol": "M:qb.a(II)Z",
+      "renamedSymbol": "M:IsaacRandom.a(II)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154538,7 +154570,7 @@
     },
     {
       "symbol": "M:qb.a(ILjava/lang/String;Ljava/lang/String;)Z",
-      "renamedSymbol": "M:qb.a(ILjava/lang/String;Ljava/lang/String;)Z",
+      "renamedSymbol": "M:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154549,7 +154581,7 @@
     },
     {
       "symbol": "M:qb.a(Z)I",
-      "renamedSymbol": "M:qb.a(Z)I",
+      "renamedSymbol": "M:IsaacRandom.a(Z)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154560,7 +154592,7 @@
     },
     {
       "symbol": "M:qb.a(ZI)V",
-      "renamedSymbol": "M:qb.a(ZI)V",
+      "renamedSymbol": "M:IsaacRandom.a(ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -154571,9 +154603,9 @@
     },
     {
       "symbol": "M:qb.b(B)I",
-      "renamedSymbol": "M:qb.b(B)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "qb.java",
         "start": 289,
@@ -154582,9 +154614,9 @@
     },
     {
       "symbol": "M:qb.b(Z)V",
-      "renamedSymbol": "M:qb.b(Z)V",
+      "renamedSymbol": "M:IsaacRandom.initializeState(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "qb.java",
         "start": 11227,
@@ -197570,7 +197602,7 @@
     },
     {
       "symbol": "P:qb.<init>([I)V#0",
-      "renamedSymbol": "P:qb.<init>([I)V#0",
+      "renamedSymbol": "P:IsaacRandom.<init>([I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197581,7 +197613,7 @@
     },
     {
       "symbol": "P:qb.a(B)V#0",
-      "renamedSymbol": "P:qb.a(B)V#0",
+      "renamedSymbol": "P:IsaacRandom.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197592,7 +197624,7 @@
     },
     {
       "symbol": "P:qb.a(I)V#0",
-      "renamedSymbol": "P:qb.a(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197603,7 +197635,7 @@
     },
     {
       "symbol": "P:qb.a(II)Z#0",
-      "renamedSymbol": "P:qb.a(II)Z#0",
+      "renamedSymbol": "P:IsaacRandom.a(II)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197614,7 +197646,7 @@
     },
     {
       "symbol": "P:qb.a(II)Z#1",
-      "renamedSymbol": "P:qb.a(II)Z#1",
+      "renamedSymbol": "P:IsaacRandom.a(II)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197625,7 +197657,7 @@
     },
     {
       "symbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
-      "renamedSymbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
+      "renamedSymbol": "P:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197636,7 +197668,7 @@
     },
     {
       "symbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
-      "renamedSymbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
+      "renamedSymbol": "P:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197647,7 +197679,7 @@
     },
     {
       "symbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
-      "renamedSymbol": "P:qb.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
+      "renamedSymbol": "P:IsaacRandom.a(ILjava/lang/String;Ljava/lang/String;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -197658,7 +197690,7 @@
     },
     {
       "symbol": "P:qb.a(Z)I#0",
-      "renamedSymbol": "P:qb.a(Z)I#0",
+      "renamedSymbol": "P:IsaacRandom.a(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197669,7 +197701,7 @@
     },
     {
       "symbol": "P:qb.a(ZI)V#0",
-      "renamedSymbol": "P:qb.a(ZI)V#0",
+      "renamedSymbol": "P:IsaacRandom.a(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197680,7 +197712,7 @@
     },
     {
       "symbol": "P:qb.a(ZI)V#1",
-      "renamedSymbol": "P:qb.a(ZI)V#1",
+      "renamedSymbol": "P:IsaacRandom.a(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -197691,7 +197723,7 @@
     },
     {
       "symbol": "P:qb.b(B)I#0",
-      "renamedSymbol": "P:qb.b(B)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197702,7 +197734,7 @@
     },
     {
       "symbol": "P:qb.b(Z)V#0",
-      "renamedSymbol": "P:qb.b(Z)V#0",
+      "renamedSymbol": "P:IsaacRandom.initializeState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212446,7 +212478,7 @@
       "original": "Bounce.java",
       "renamed": "Bounce.java",
       "inputSha256": "78b98fbd6e8da86bcfe3fd55e0345ca4608cafab1c08ef61f8c859b7341c4eee",
-      "outputSha256": "61dcc112ce85f137a97b8bd6cb00e840f874207cafd432b4a4ac4113401ce66f",
+      "outputSha256": "6ae38da1dd249fde9915e06f263bef3eccfe55cc2fac4739e37fd3b6a2a54041",
       "edits": [
         {
           "start": 72,
@@ -213210,6 +213242,13 @@
           "symbol": "M:ma.d(I)V",
           "original": "d",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5523,
+          "end": 5525,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 5554,
@@ -214613,6 +214652,13 @@
           "original": "L84",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 27176,
+          "end": 27178,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 28108,
@@ -217664,7 +217710,7 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "3617413d32baabea13cb4dcea49f55dc43e6964cca86a8a98cd93386628f3ad5",
-      "outputSha256": "6a9fe69d1d050ed4781a343e9a9d39301cc77c4c71ff164e09ef50451cb445a0",
+      "outputSha256": "d7200ba45c3f6f291db2484a0746b476589edc9473dfa23c7a5e086aa3381993",
       "edits": [
         {
           "start": 1285,
@@ -217709,6 +217755,27 @@
           "renamed": "writeByte"
         },
         {
+          "start": 1932,
+          "end": 1934,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 1974,
+          "end": 1976,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 2016,
+          "end": 2018,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 2066,
           "end": 2067,
           "symbol": "M:wi.d(B)I",
@@ -217723,6 +217790,13 @@
           "renamed": "position"
         },
         {
+          "start": 2420,
+          "end": 2422,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 2472,
           "end": 2473,
           "symbol": "M:wi.f(B)J",
@@ -217735,6 +217809,13 @@
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 2752,
+          "end": 2754,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 2811,
@@ -219952,7 +220033,7 @@
       "original": "bf.java",
       "renamed": "bf.java",
       "inputSha256": "3ed9a3678b0541f632dfa8f73b1c5b3adfc78c66d19f1af5cddbdcc58e0469b4",
-      "outputSha256": "585b3713214edadbfc44ab8e3a104cd19636bf8ae2f7dcca3999e70fac5ee4d8",
+      "outputSha256": "7827a3aaa49cfc9691a35ba052ec501b30dacf6b21ec38af095b0b595371c6d5",
       "edits": [
         {
           "start": 231,
@@ -220030,6 +220111,13 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6100,
+          "end": 6102,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6797,
@@ -234729,7 +234817,7 @@
       "original": "ii.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "a84976b3f05c35ad990f7c36fcfeec24799f20f6e581e8fbfbc1457c50e4e31c",
-      "outputSha256": "162acfd2faac52647db0eedc2b231ca17678565a803e89f0cdd71f3475b739f3",
+      "outputSha256": "e5a1cebe7548189ff4bee2459c31d9c7ea8aa6396619c08e71095bcdf8d4edfc",
       "edits": [
         {
           "start": 50,
@@ -234744,6 +234832,13 @@
           "symbol": "C:wi",
           "original": "wi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 155,
+          "end": 157,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 252,
@@ -234816,11 +234911,25 @@
           "renamed": "payload"
         },
         {
+          "start": 1502,
+          "end": 1503,
+          "symbol": "M:qb.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
+        },
+        {
           "start": 1646,
           "end": 1653,
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 1913,
+          "end": 1915,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 2065,
@@ -234863,6 +234972,13 @@
           "symbol": "F:wi.field_i:[B",
           "original": "field_i",
           "renamed": "payload"
+        },
+        {
+          "start": 2425,
+          "end": 2426,
+          "symbol": "M:qb.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
         },
         {
           "start": 2457,
@@ -234947,6 +235063,13 @@
           "symbol": "F:wi.field_i:[B",
           "original": "field_i",
           "renamed": "payload"
+        },
+        {
+          "start": 3576,
+          "end": 3577,
+          "symbol": "M:qb.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
         },
         {
           "start": 4150,
@@ -246391,7 +246514,7 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "8c5fab4e73cc832ecb3532f83c1275c923b27e43cb63db92ee238e5263150a8d",
-      "outputSha256": "7e6b036c603e6e853cba4e6dda4f8e83b40be9875fd3fe72addf1eb40bbc8385",
+      "outputSha256": "b2983fb0c1b89700bbb429e4668003291edb4eafbab81f11e99d43efff7b408a",
       "edits": [
         {
           "start": 66,
@@ -246406,6 +246529,13 @@
           "symbol": "M:nl.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 481,
+          "end": 483,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         }
       ]
     },
@@ -251285,16 +251415,37 @@
     },
     {
       "original": "qb.java",
-      "renamed": "qb.java",
+      "renamed": "IsaacRandom.java",
       "inputSha256": "e92b69ffb791843815529947722d9a1163afd10d4dfdc91e9f3bdbfeea6fe4ad",
-      "outputSha256": "171068541081a660434d8f48b495c71fe33d064e4ba35224027594c669cea600",
+      "outputSha256": "e21a4b160812fa092f53d17d5e480c9eed1200524a6e403887da226b62ddcb14",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
         {
           "start": 262,
           "end": 264,
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "symbol": "M:qb.b(B)I",
+          "original": "b",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 441,
+          "end": 442,
+          "symbol": "M:qb.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 3010,
@@ -251416,6 +251567,13 @@
           "renamed": "position"
         },
         {
+          "start": 7134,
+          "end": 7136,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 7414,
           "end": 7416,
           "symbol": "C:ah",
@@ -251435,6 +251593,62 @@
           "symbol": "M:ii.a(Ljava/lang/Throwable;Ljava/lang/String;)Lga;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8364,
+          "end": 8365,
+          "symbol": "M:qb.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 9897,
+          "end": 9899,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 11131,
+          "end": 11133,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 11227,
+          "end": 11228,
+          "symbol": "M:qb.b(Z)V",
+          "original": "b",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 14189,
+          "end": 14191,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 15941,
+          "end": 15942,
+          "symbol": "M:qb.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 15989,
+          "end": 15991,
+          "symbol": "M:qb.<init>([I)V",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 16277,
+          "end": 16278,
+          "symbol": "M:qb.b(Z)V",
+          "original": "b",
+          "renamed": "initializeState"
         },
         {
           "start": 16357,
@@ -254694,7 +254908,7 @@
       "original": "s.java",
       "renamed": "s.java",
       "inputSha256": "88d08ddcbba5e63645a06fd45a35299139393949f5bc2d27764b308f7729f55f",
-      "outputSha256": "39922ce930867191878239965535ac0cc8c249be0108a558acf570138bf2f0de",
+      "outputSha256": "88ce389709631ba83555d32c36b7af06faf67d1dc844ffb2984bb81abcb088a9",
       "edits": [
         {
           "start": 154,
@@ -254849,6 +255063,13 @@
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 4075,
+          "end": 4077,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 4212,
@@ -261323,7 +261544,7 @@
       "original": "tk.java",
       "renamed": "ProxyAuthenticationRequiredException.java",
       "inputSha256": "679002ad331dcc601e57d1cd59958b7cea78bc74fd0e5b26bbd0f0bb90f27940",
-      "outputSha256": "5558ab8e03e5f95fa9316160811474ccdcc784aac4b346779a64591778b38c4e",
+      "outputSha256": "21d12733ee559403eab4b667970827afeaaa6633f4cd6404c6f2ab07277eab02",
       "edits": [
         {
           "start": 69,
@@ -261380,6 +261601,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 4317,
+          "end": 4319,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         }
       ]
     },
@@ -263333,7 +263561,7 @@
       "original": "va.java",
       "renamed": "va.java",
       "inputSha256": "6cc3a3b9947d49be5a974b4193f6b2cfebf15efaf74b17025af40dbd92cd7f57",
-      "outputSha256": "f6af3449ba7948a8d5a2c4b0b4e4b991929eda388182d17ce8d9c1a6cdc111cf",
+      "outputSha256": "01a424d60f04f04ca3964e1f89b3dd9c188cdbb33d330395872bac9c1267735c",
       "edits": [
         {
           "start": 191,
@@ -263350,6 +263578,13 @@
           "renamed": "resetStaticState"
         },
         {
+          "start": 589,
+          "end": 591,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 675,
           "end": 676,
           "symbol": "M:wi.d(B)I",
@@ -263364,6 +263599,13 @@
           "renamed": "position"
         },
         {
+          "start": 786,
+          "end": 788,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 845,
           "end": 846,
           "symbol": "M:wi.a(I)I",
@@ -263376,6 +263618,20 @@
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 916,
+          "end": 918,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
+          "start": 998,
+          "end": 1000,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 1288,
@@ -263397,7 +263653,7 @@
       "original": "vb.java",
       "renamed": "vb.java",
       "inputSha256": "e1e67ae1b6c25a43d9bef2bea5fc8686e41cf82e41167eeede4a6e46cb5f13a9",
-      "outputSha256": "7fe67a16392cb7391c09495d46a41ab67510ac9c4405173783eb586516098360",
+      "outputSha256": "ed26e3bf1794e7a5be781e8f22c3ca42111a3d9bb7007bc4a368bbfcb0c8ad48",
       "edits": [
         {
           "start": 285,
@@ -263687,6 +263943,13 @@
           "renamed": "position"
         },
         {
+          "start": 4992,
+          "end": 4994,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 5045,
           "end": 5046,
           "symbol": "M:wi.d(B)I",
@@ -263715,6 +263978,13 @@
           "renamed": "ImageProducerRasterBuffer"
         },
         {
+          "start": 5788,
+          "end": 5790,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 5793,
           "end": 5795,
           "symbol": "C:jf",
@@ -263729,6 +263999,13 @@
           "renamed": "position"
         },
         {
+          "start": 6106,
+          "end": 6108,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
+        },
+        {
           "start": 6166,
           "end": 6167,
           "symbol": "M:wi.a(I)I",
@@ -263741,6 +264018,13 @@
           "symbol": "F:wi.field_h:I",
           "original": "field_h",
           "renamed": "position"
+        },
+        {
+          "start": 6238,
+          "end": 6240,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6406,
@@ -264275,7 +264559,7 @@
       "original": "ve.java",
       "renamed": "ve.java",
       "inputSha256": "8d32540a7b5dc50a37afa339fffefe72ad6e089ddede70b00a5daafd9112252d",
-      "outputSha256": "66b8ab6e717e0274776d3f0421d41891945ed17f3dbeb064f25e43cee974b737",
+      "outputSha256": "66c8446ac4ed0c006ace3a39d2243aa6e8fca3ca8920432c7eced9678fa6a873",
       "edits": [
         {
           "start": 239,
@@ -264668,6 +264952,13 @@
           "symbol": "C:vh",
           "original": "vh",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 7164,
+          "end": 7166,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7175,
@@ -266534,7 +266825,7 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "b720bf8959fb282d71807854aa539f1bbb312c1ee8f8af7a0c6da3c94bda3c19",
-      "outputSha256": "4534c1dad1d6da1dd634c8f16b6a4be7bb37e420e00eeb53fa6b3ab1b48a6c3d",
+      "outputSha256": "bbcb84fd9d232c1b0b9de2a494ee7ab3819837103effb8c794d04c90b484cd4c",
       "edits": [
         {
           "start": 233,
@@ -266605,6 +266896,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 756,
+          "end": 758,
+          "symbol": "C:qb",
+          "original": "qb",
+          "renamed": "IsaacRandom"
         },
         {
           "start": 767,
@@ -270483,10 +270781,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/bouncedown"
     },
-    "rulesSha256": "75ac5a0e1d9bab5b949c233257a5a8a557de8e3273c82a10776c8bb70fc7992e",
+    "rulesSha256": "6dea10738d83b30bd02fa61d16c8116446a94d5d29311869149571a4e553a406",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
-    "outputTreeSha256": "e88b1db17f7974d71bb86e61bb2862672c25d23f40452d0e6bfb53f466fae436",
+    "outputTreeSha256": "ab321f5ad9c5e69f4ed4094d5cee4652da83467d91e2c5fcde503ef9dab65cce",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

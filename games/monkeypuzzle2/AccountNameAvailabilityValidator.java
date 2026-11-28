@@ -39,7 +39,7 @@ final class AccountNameAvailabilityValidator extends wj {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!q.a(var4, false)) {
-            stackIn_2_0 = ol.field_h;
+            stackIn_2_0 = IsaacRandom.field_h;
             return stackIn_2_0;
           }
           if (param1 != 3917) {
@@ -59,7 +59,7 @@ final class AccountNameAvailabilityValidator extends wj {
           if (this.nameAvailable) {
             stackIn_15_0 = wj.field_i;
           } else {
-            stackIn_15_0 = ol.field_h;
+            stackIn_15_0 = IsaacRandom.field_h;
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

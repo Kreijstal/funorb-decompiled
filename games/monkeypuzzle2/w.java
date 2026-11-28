@@ -151,9 +151,9 @@ final class w {
     }
 
     final static void a(int param0, int param1) {
-        ol.field_e = param1;
+        IsaacRandom.field_e = param1;
         if (null != vl.field_h) {
-          vl.field_h.a(ol.field_e * 80 / 256);
+          vl.field_h.a(IsaacRandom.field_e * 80 / 256);
         }
         if (param0 == -1) {
           return;

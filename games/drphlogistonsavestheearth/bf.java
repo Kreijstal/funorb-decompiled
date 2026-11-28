@@ -1036,7 +1036,7 @@ final class bf {
           boolean decompiledFrameCompleted1 = true;
           if (sd.field_e != 0 &&
             !this.field_s &&
-            ta.field_j[this.field_Q] >= 0) {
+            IsaacRandom.field_j[this.field_Q] >= 0) {
             var2_int = 0;
             while (this.field_i.length > var2_int) {
               this.field_i[var2_int].a(param0 ^ 30217);
@@ -2423,7 +2423,7 @@ final class bf {
             this.field_q.f(-1);
             this.field_q.c(0, nl.field_r[ac.field_j[this.field_Q]].field_i.length);
           }
-          this.field_i[0] = new hi(ta.field_j[this.field_Q]);
+          this.field_i[0] = new hi(IsaacRandom.field_j[this.field_Q]);
           this.field_o = 640.0;
           this.field_e = 0;
           this.field_N = (double)param4;

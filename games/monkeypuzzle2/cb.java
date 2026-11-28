@@ -29,7 +29,7 @@ final class cb {
             dk.field_h = ed.field_b;
           } else {
             try {
-              ol.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.result), IntrusiveDeque.field_g);
+              IsaacRandom.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.result), IntrusiveDeque.field_g);
               SectorCacheStore.field_c.position = 0;
               var2_ref_hb = MonkeyPuzzle2.field_D;
               stackIn_10_0 = (!param1) ? -1 : -2;
@@ -87,7 +87,7 @@ final class cb {
     final static boolean a(boolean param0) {
         if (param0) {
           field_c = (int[]) null;
-          if (null == ol.field_g) {
+          if (null == IsaacRandom.field_g) {
             return false;
           }
           if (wh.field_b == dk.field_h) {
@@ -95,7 +95,7 @@ final class cb {
           }
           return false;
         }
-        if (null == ol.field_g) {
+        if (null == IsaacRandom.field_g) {
           return false;
         }
         if (wh.field_b == dk.field_h) {

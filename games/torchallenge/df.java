@@ -347,7 +347,7 @@ class df extends ng {
             }
             break;
           }
-          stackIn_11_0 = ed.field_h;
+          stackIn_11_0 = IsaacRandom.field_h;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

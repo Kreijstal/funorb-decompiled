@@ -4148,6 +4148,22 @@
       "renamedSymbol": "M:ql.clearDeclaredStaticReferences(I)V"
     },
     {
+      "symbol": "M:r.a(B)I",
+      "originalName": "a",
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(B)I"
+    },
+    {
+      "symbol": "M:r.a(I)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. Counters precede wrong-int-sentinel remaining-count reset before the loop. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
+    },
+    {
       "symbol": "M:r.b(I)Lwg;",
       "originalName": "b",
       "to": "pollAccountCreationResult",
@@ -4162,6 +4178,14 @@
       "evidence": "Source-purpose review: Clears 5 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IsaacRandom.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:r.d(I)V",
+      "originalName": "d",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. int<=38 recursively calls initializer(-101) between passes; retain recursive stores and StackOverflow behavior. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V"
     },
     {
       "symbol": "M:rf.e(Z)V",
@@ -118635,7 +118659,7 @@
     },
     {
       "symbol": "L:r.a(B)I#0",
-      "renamedSymbol": "L:IsaacRandom.a(B)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118646,7 +118670,7 @@
     },
     {
       "symbol": "L:r.a(B)I#1",
-      "renamedSymbol": "L:IsaacRandom.a(B)I#1",
+      "renamedSymbol": "L:IsaacRandom.nextInt(B)I#1",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -118657,7 +118681,7 @@
     },
     {
       "symbol": "L:r.a(I)V#0",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118668,7 +118692,7 @@
     },
     {
       "symbol": "L:r.a(I)V#1",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -118679,7 +118703,7 @@
     },
     {
       "symbol": "L:r.a(I)V#2",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -118690,7 +118714,7 @@
     },
     {
       "symbol": "L:r.a(I)V#3",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -118701,7 +118725,7 @@
     },
     {
       "symbol": "L:r.a(I)V#4",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -118712,7 +118736,7 @@
     },
     {
       "symbol": "L:r.a(I)V#5",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -118723,7 +118747,7 @@
     },
     {
       "symbol": "L:r.a(I)V#6",
-      "renamedSymbol": "L:IsaacRandom.a(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -118756,7 +118780,7 @@
     },
     {
       "symbol": "L:r.d(I)V#0",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -118767,7 +118791,7 @@
     },
     {
       "symbol": "L:r.d(I)V#1",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -118778,7 +118802,7 @@
     },
     {
       "symbol": "L:r.d(I)V#10",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#10",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#10",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -118789,7 +118813,7 @@
     },
     {
       "symbol": "L:r.d(I)V#11",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#11",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#11",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -118800,7 +118824,7 @@
     },
     {
       "symbol": "L:r.d(I)V#2",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#2",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -118811,7 +118835,7 @@
     },
     {
       "symbol": "L:r.d(I)V#3",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -118822,7 +118846,7 @@
     },
     {
       "symbol": "L:r.d(I)V#4",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -118833,7 +118857,7 @@
     },
     {
       "symbol": "L:r.d(I)V#5",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -118844,7 +118868,7 @@
     },
     {
       "symbol": "L:r.d(I)V#6",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -118855,7 +118879,7 @@
     },
     {
       "symbol": "L:r.d(I)V#7",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#7",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#7",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -118866,7 +118890,7 @@
     },
     {
       "symbol": "L:r.d(I)V#8",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#8",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -118877,7 +118901,7 @@
     },
     {
       "symbol": "L:r.d(I)V#9",
-      "renamedSymbol": "L:IsaacRandom.d(I)V#9",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -164967,9 +164991,9 @@
     },
     {
       "symbol": "M:r.a(B)I",
-      "renamedSymbol": "M:IsaacRandom.a(B)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "r.java",
         "start": 2069,
@@ -164978,9 +165002,9 @@
     },
     {
       "symbol": "M:r.a(I)V",
-      "renamedSymbol": "M:IsaacRandom.a(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "r.java",
         "start": 723,
@@ -165033,9 +165057,9 @@
     },
     {
       "symbol": "M:r.d(I)V",
-      "renamedSymbol": "M:IsaacRandom.d(I)V",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "r.java",
         "start": 3272,
@@ -212685,7 +212709,7 @@
     },
     {
       "symbol": "P:r.a(B)I#0",
-      "renamedSymbol": "P:IsaacRandom.a(B)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212696,7 +212720,7 @@
     },
     {
       "symbol": "P:r.a(I)V#0",
-      "renamedSymbol": "P:IsaacRandom.a(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212795,7 +212819,7 @@
     },
     {
       "symbol": "P:r.d(I)V#0",
-      "renamedSymbol": "P:IsaacRandom.d(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.initializeState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259464,7 +259488,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "540d2b4d99c252dd3f9a4b61e8b7cb20cdcd5f7b020a710eebea3e1c3782dcb2",
-      "outputSha256": "78474550f9bc8b710ea3f7dde560a81e574bee9c822fd567fda3ccc3c37717c9",
+      "outputSha256": "c5a0aa21ea7d8763ed67393109d9387d603f102433c9c5cebc6cc9b5bcc0bb8a",
       "edits": [
         {
           "start": 61,
@@ -259507,6 +259531,13 @@
           "symbol": "F:gb.field_l:[B",
           "original": "field_l",
           "renamed": "payload"
+        },
+        {
+          "start": 634,
+          "end": 635,
+          "symbol": "M:r.a(B)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 886,
@@ -259642,6 +259673,13 @@
           "renamed": "payload"
         },
         {
+          "start": 11451,
+          "end": 11452,
+          "symbol": "M:r.a(B)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
           "start": 12097,
           "end": 12098,
           "symbol": "M:fc.a(Ljava/lang/Throwable;Ljava/lang/String;)Lve;",
@@ -259754,6 +259792,13 @@
           "symbol": "F:gb.field_l:[B",
           "original": "field_l",
           "renamed": "payload"
+        },
+        {
+          "start": 15394,
+          "end": 15395,
+          "symbol": "M:r.a(B)I",
+          "original": "a",
+          "renamed": "nextInt"
         },
         {
           "start": 15640,
@@ -284622,7 +284667,7 @@
       "original": "r.java",
       "renamed": "IsaacRandom.java",
       "inputSha256": "5f90dd71bb8e17d539094beaf17c050f9d6c2963f8160190031b9a9f07096b39",
-      "outputSha256": "c6340eaa8750100e760ff62f5ea3220b4fd5d56d0cefd8fdb71beeccea5511c2",
+      "outputSha256": "108b3492e6fbb1ddc313760a008d78246f5d8b76a2b6d4dfb6db0c6a5335028d",
       "edits": [
         {
           "start": 50,
@@ -284667,11 +284712,39 @@
           "renamed": "Archive"
         },
         {
+          "start": 723,
+          "end": 724,
+          "symbol": "M:r.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 2069,
+          "end": 2070,
+          "symbol": "M:r.a(B)I",
+          "original": "a",
+          "renamed": "nextInt"
+        },
+        {
+          "start": 2180,
+          "end": 2181,
+          "symbol": "M:r.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
           "start": 2368,
           "end": 2369,
           "symbol": "M:r.<init>([I)V",
           "original": "r",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 2655,
+          "end": 2656,
+          "symbol": "M:r.d(I)V",
+          "original": "d",
+          "renamed": "initializeState"
         },
         {
           "start": 2735,
@@ -284700,6 +284773,27 @@
           "symbol": "M:r.c(I)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 3272,
+          "end": 3273,
+          "symbol": "M:r.d(I)V",
+          "original": "d",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 6279,
+          "end": 6280,
+          "symbol": "M:r.d(I)V",
+          "original": "d",
+          "renamed": "initializeState"
+        },
+        {
+          "start": 8016,
+          "end": 8017,
+          "symbol": "M:r.a(I)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 8085,
@@ -302120,10 +302214,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/solknight"
     },
-    "rulesSha256": "0f6dbe452378f762da5fe4f42e569a297e4a14f1094098a943f0828f954f8f6f",
+    "rulesSha256": "4f33fb62166ffefba5fe8bf73f39861533d4e0c5ac2e334c1630aa69d3e8b08e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
-    "outputTreeSha256": "6224431b2eb9394a0d4fb736acbfcfde2f57ddbb915dc56f5f88259e65b41dec",
+    "outputTreeSha256": "925844134f79cf480e610faf0c52ce0bd1bb5732c6df3b61b987e45a2017d343",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

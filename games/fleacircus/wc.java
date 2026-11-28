@@ -118,7 +118,7 @@ final class wc extends IntrusiveNode {
             if (param0 != 22986) {
               field_q = -30;
             }
-            pc.field_j = param13;
+            IsaacRandom.field_j = param13;
             j.field_g = param1;
             bk.field_e = param3;
             DiskCacheWorker.field_f = param4;

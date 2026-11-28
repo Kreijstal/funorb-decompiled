@@ -25,8 +25,8 @@ final class wd {
           if (ok.field_a != o.field_l) {
             return false;
           }
-          var8 = new AccountCreationResultPanel(na.field_d, param6);
-          na.field_d.a((byte) 84, (UiWidget) (var8));
+          var8 = new AccountCreationResultPanel(IsaacRandom.field_d, param6);
+          IsaacRandom.field_d.a((byte) 84, (UiWidget) (var8));
           if (param2 != 5) {
             field_d = -43;
           }

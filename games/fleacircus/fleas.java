@@ -212,16 +212,16 @@ public final class fleas extends NetworkGameClient {
           }
           if (16 == fl.field_c[param3][param0] ||
             fl.field_c[param3][param0] == 29) {
-            if (~pc.field_b == ~param3 &&
+            if (~IsaacRandom.field_b == ~param3 &&
               ~lb.field_m == ~param0) {
               var10 = tg.field_d;
               var11 = hf.field_b;
               if (var12 != 0) {
-                var10 = pc.field_b;
+                var10 = IsaacRandom.field_b;
                 var11 = lb.field_m;
               }
             } else {
-              var10 = pc.field_b;
+              var10 = IsaacRandom.field_b;
               var11 = lb.field_m;
             }
             if (fl.field_c[var10][var11] == 16 ||
@@ -1056,7 +1056,7 @@ public final class fleas extends NetworkGameClient {
           kc.clearStaticReferences(param0 ^ -2);
           ug.resetStaticState((byte) -73);
           hh.a(true);
-          pc.clearStaticReferences(param0 - 119);
+          IsaacRandom.clearStaticReferences(param0 - 119);
           oj.clearDeclaredStaticReferences(param0 ^ -100);
           wc.a(-24464);
           de.clearStaticReferences(0);

@@ -340,7 +340,7 @@ abstract class vh extends DualLinkNode {
 
     final static void a(String param0, int param1, String param2) {
         try {
-          nf.a(false, param2, param0, (byte) -105);
+          IsaacRandom.a(false, param2, param0, (byte) -105);
           if (param1 != 224) {
             field_q = true;
           }

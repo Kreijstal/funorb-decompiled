@@ -53,7 +53,7 @@ final class am {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + cg.field_c.a((byte) 115, param0.data, var3_int, param0.position, 0, var4);
+            param0.position = param0.position + cg.field_c.decompress((byte) 115, param0.data, var3_int, param0.position, 0, var4);
             var5 = gh.a(var4, 0, -161, var3_int);
             if (param2 >= 54) {
               stackIn_8_0 = var5;

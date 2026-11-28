@@ -54,7 +54,7 @@ final class IterableNodeHashTable implements Iterable {
             IterableNodeHashTable.a((byte) 25);
           }
           da.field_b = gj.field_x[tj.field_h];
-          pe.field_b = Bzip2State.field_q[tj.field_h];
+          IsaacRandom.field_b = Bzip2State.field_q[tj.field_h];
           tj.field_h = 127 & tj.field_h + 1;
           stackIn_7_0 = true;
         }

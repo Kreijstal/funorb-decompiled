@@ -995,7 +995,7 @@ final class GameSession {
           }
           if (this.booleanState0140 &&
             this.integerState0607 == 10) {
-            musicTrackArrayLocal49 = MixedSupport030.musicTrackArrayState0001;
+            musicTrackArrayLocal49 = IsaacRandom.musicTrackArrayState0001;
           } else {
             musicTrackArrayLocal49 = MixedSupport113.musicTrackArrayArrayState0001[this.mixedSupport028State0001.integerState0166];
           }
@@ -1528,7 +1528,7 @@ final class GameSession {
             if (!this.mixedSupport028State0001.booleanState0031) {
               if (this.booleanState0140 &&
                 this.integerState0607 == 10) {
-                musicTrackArrayLocal2 = MixedSupport030.musicTrackArrayState0001;
+                musicTrackArrayLocal2 = IsaacRandom.musicTrackArrayState0001;
               } else {
                 musicTrackArrayLocal2 = MixedSupport113.musicTrackArrayArrayState0001[this.mixedSupport028State0001.integerState0166];
               }
@@ -5296,7 +5296,7 @@ final class GameSession {
           this.performAction1316(false, 0, 1, false, true);
           if (!this.booleanState0140) {
             this.mixedSupport028State0001.bucketBoardArrayState0001[0].nodeDequeState0018 = new NodeDeque();
-            this.mixedSupport028State0001.bucketBoardArrayState0001[0].mixedSupport030State0001 = new MixedSupport030(MixedSupport073.computeIntegerArray0921(4));
+            this.mixedSupport028State0001.bucketBoardArrayState0001[0].mixedSupport030State0001 = new IsaacRandom(MixedSupport073.computeIntegerArray0921(4));
             returnedShapeLocal17 = Sprite.computeReturnedShape0935(0, 0, this.mixedSupport028State0001.bucketBoardArrayState0001[0].computeInteger0992(26580));
             integerLocal15 = this.mixedSupport028State0001.bucketBoardArrayState0001[0].computeInteger0992(26580);
             this.integerState0615 = integerLocal15 * 7 - 4;

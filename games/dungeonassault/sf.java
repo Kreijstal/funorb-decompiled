@@ -360,13 +360,13 @@ final class sf implements cl {
                   }
                   var15 = stackIn_111_0;
                   if (var12Lifetime2 == 1) {
-                    ja.field_b[1].h(var2_int + var7, var2_int + var8);
+                    HuffmanDecoder.field_b[1].h(var2_int + var7, var2_int + var8);
                   } else if (0 == var12Lifetime2) {
-                    ja.field_b[0].h(var7 + var2_int, var8 + var2_int);
+                    HuffmanDecoder.field_b[0].h(var7 + var2_int, var8 + var2_int);
                     p.field_G[var15].d(var7 + var2_int, var2_int + var8, 128);
                     qe.b(var7 + var2_int, var8 + var2_int, 32, 32, 0, 0, 0);
                   } else {
-                    ja.field_b[var12Lifetime2].h(var7 + var2_int, var2_int + var8);
+                    HuffmanDecoder.field_b[var12Lifetime2].h(var7 + var2_int, var2_int + var8);
                     if (var6 != 24) {
                       p.field_G[var15].d(var2_int + var7, var8 + var2_int, 64);
                     }
@@ -375,15 +375,15 @@ final class sf implements cl {
                     }
                   }
                 } else if (0 == var6) {
-                  ja.field_b[3].h(var2_int + var7, var2_int + var8);
+                  HuffmanDecoder.field_b[3].h(var2_int + var7, var2_int + var8);
                 } else if (var6 != 6) {
                   if (var6 == 42) {
-                    ja.field_b[3].g(var2_int + var7, var8 + var2_int);
+                    HuffmanDecoder.field_b[3].g(var2_int + var7, var8 + var2_int);
                   } else if (48 == var6) {
-                    ja.field_b[3].b(var7 + var2_int, var8 + var2_int);
+                    HuffmanDecoder.field_b[3].b(var7 + var2_int, var8 + var2_int);
                   }
                 } else {
-                  ja.field_b[3].f(var7 + var2_int, var2_int + var8);
+                  HuffmanDecoder.field_b[3].f(var7 + var2_int, var2_int + var8);
                 }
                 if (this.field_j != null) {
                   if (var6 == this.field_j.field_q) {

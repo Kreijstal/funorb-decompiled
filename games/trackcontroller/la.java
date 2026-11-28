@@ -4,7 +4,7 @@
 final class la extends PacketBuffer {
     private int field_r;
     static volatile int liveMouseX;
-    private nf field_n;
+    private IsaacRandom field_n;
     static int[] field_p;
     static String field_q;
     static int field_o;
@@ -53,7 +53,7 @@ final class la extends PacketBuffer {
           while (var5_int < param0) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.c(127));
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.nextInt(127));
             var5_int++;
           }
           return;
@@ -84,7 +84,7 @@ final class la extends PacketBuffer {
           return;
         }
         try {
-          this.field_n = new nf(param1);
+          this.field_n = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "la.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -113,7 +113,7 @@ final class la extends PacketBuffer {
     final void c(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_n.c(126) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.field_n.nextInt(126) + param0);
         if (param1 == 7) {
           return;
         }
@@ -127,11 +127,11 @@ final class la extends PacketBuffer {
           this.a(-123, false, 4, (byte[]) null);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_n.c(125) & 255;
+          return this.payload[fieldTemp$0] - this.field_n.nextInt(125) & 255;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_n.c(125) & 255;
+        return this.payload[fieldTemp$1] - this.field_n.nextInt(125) & 255;
     }
 
     static {

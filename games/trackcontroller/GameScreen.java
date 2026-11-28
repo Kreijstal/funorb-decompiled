@@ -635,8 +635,8 @@ final class GameScreen {
         var5 = TrackController.field_F ? 1 : 0;
         if (2 <= LevelGrid.field_j &&
           1 == kg.field_d) {
-          stackIn_6_0 = !(nf.field_f);
-          nf.field_f = stackIn_6_0;
+          stackIn_6_0 = !(IsaacRandom.field_f);
+          IsaacRandom.field_f = stackIn_6_0;
         }
         var2 = 86 / ((22 - param0) / 62);
         if (kg.field_d == 13 &&

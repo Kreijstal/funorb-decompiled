@@ -77,7 +77,7 @@ final class AccountCreationResultPanel extends vn implements mj {
                 var5.a(-1, 114, GameAppletShell.field_k);
               } else {
                 var5.a(11, 67, PcmOutputWorker.field_a);
-                var5.a(17, 39, sn.field_b);
+                var5.a(17, 39, HuffmanCodec.field_b);
               }
             } else {
               var5.a((byte) -114, (rg) (this), sg.field_e);

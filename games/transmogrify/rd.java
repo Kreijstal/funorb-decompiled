@@ -23,16 +23,16 @@ final class rd {
             rd.a(true);
           }
           ka.c();
-          ug.field_c = new int[260];
+          IsaacRandom.field_c = new int[260];
           DelayedPcmStream.field_m = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            ug.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+            IsaacRandom.field_c[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < ug.field_c.length) {
-            ug.field_c[var5] = 255;
+          while (var5 < IsaacRandom.field_c.length) {
+            IsaacRandom.field_c[var5] = 255;
             var5++;
           }
           return;

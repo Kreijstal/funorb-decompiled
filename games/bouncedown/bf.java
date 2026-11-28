@@ -177,7 +177,7 @@ final class bf extends al {
             stackIn_5_0 = a.field_e;
             return stackIn_5_0;
           }
-          if (!qb.a(param1 - 177, var4, var3)) {
+          if (!IsaacRandom.a(param1 - 177, var4, var3)) {
             stackIn_8_0 = a.field_e;
             return stackIn_8_0;
           }

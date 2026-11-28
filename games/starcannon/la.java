@@ -60,7 +60,7 @@ final class la {
         te.a((byte) 98);
         li.a(1392);
         vf.a(79);
-        if (jb.b(param0 - 127)) {
+        if (IsaacRandom.b(param0 - 127)) {
           d.field_b.d((byte) 76, 1);
           nf.a(0, (byte) 95);
         }

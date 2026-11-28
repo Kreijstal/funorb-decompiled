@@ -241,7 +241,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:sn.a(B[BIII[B)I#0"
+      "renamedSymbol": "B:HuffmanCodec.decompress(B[BIII[B)I#0"
     },
     {
       "symbol": "B:uk.a(IZI)V#0",
@@ -730,6 +730,14 @@
       "evidence": "AWT ImageProducer/ImageObserver raster buffer with two private instance fields for ImageConsumer and ColorModel,plus inherited pixels/Image/two dimensions. Complete empty package-visible constructor and all nine nonconstructor instance bodies reviewed:consumer registration/removal/identity callbacks,always-true imageUpdate,empty resend callback,startProduction delegation,initialization,draw,and synchronized pixel publication. Platform setPixels/imageComplete/createImage/prepareImage/drawImage bindings and parent storage verified. All574type references inventoried and48representative contexts read. Preserve all unrelated static helpers,interface names,visibility/finality/monitors,full primitive domains,all game-specific guard/null/exception behavior,pixel/dimension aliases,and allocation/callback/partial-write order.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ImageProducerRasterBuffer"
+    },
+    {
+      "symbol": "C:sn",
+      "originalName": "sn",
+      "to": "HuffmanCodec",
+      "evidence": "Primary instance purpose reviewed from exact constructor, every owned instance method, private fields and selected bound consumers. Build canonical Huffman codewords and a growing decode tree from signed byte code lengths; tree leaves store complemented symbols. Three codecs encode and decode; Dungeon Assault retains only decoding and does not retain the caller byte-length array. Archive resource constructors use the huffman entry; string packet helpers use returned encoded-byte counts to advance cursors. Preserve unrelated static responsibilities and class-initializer order; no complete unrelated-static-body claim. Identifier-only naming; retain primitive domains, array aliases, all allocation/read/write/guard/recursion/partial-effect/exception order, literal values and diagnostics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:HuffmanCodec"
     },
     {
       "symbol": "C:tc",
@@ -2996,6 +3004,22 @@
       "renamedSymbol": "M:IsaacCipher.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ke.a(Z)V",
+      "originalName": "a",
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. false recursively calls the same method with true before the outer counter updates; both generations and the original call/exception order remain. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.generateResults(Z)V"
+    },
+    {
+      "symbol": "M:ke.b(B)V",
+      "originalName": "b",
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. Wrong byte!=41 invokes the original static byte-array helper(null,-20,3) before constants and mixing. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacCipher.initializeState(B)V"
+    },
+    {
       "symbol": "M:ke.b(I)I",
       "originalName": "b",
       "to": "nextValue",
@@ -4809,7 +4833,23 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 5 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 9cadeb46abacf2822eea017037b6eccd02ca9067c5ca16e011a071ee993a5434.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:sn.clearStaticReferences(B)V"
+      "renamedSymbol": "M:HuffmanCodec.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:sn.a(B[BIII[B)I",
+      "originalName": "a",
+      "to": "decompress",
+      "evidence": "Source-purpose review: Exact Huffman source-purpose/body and bound caller review: Traverse the existing decode tree using signed-byte bit7 then masks64/32/16/8/4/2/1. Preserve every negative-leaf complement/cast/store, output-index postincrement before array access, per-bit exit and reset, source-index increment only after a full byte, and consumed-encoded-byte return. Retain supplied count/offset/array domains, zero/negative/overflow counts, every guard and recursive/static effect, partial writes and diagnostic/exception order. Do not normalize loops, byte masks or guard positions. Zero output count returns0 first. Otherwise calculate end/index before byte<57 returns-103; no input read occurs on that return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HuffmanCodec.decompress(B[BIII[B)I"
+    },
+    {
+      "symbol": "M:sn.a(ZII[B[BI)I",
+      "originalName": "a",
+      "to": "compress",
+      "evidence": "Source-purpose review: Exact Huffman source-purpose/body and bound caller review: Emit source bytes as the existing high-bit-first Huffman codewords using the retained length-array alias and codeword table. Keep all full int/byte/boolean domains, guards, global flag reads, source/destination array aliasing, bit-position overflow, signed shifts and byte casts; preserve exact unrolled up-to-five-byte write order, zero-code-length RuntimeException text, output-byte-count return, and diagnostic evaluation/wrapping. No new validation or library codec substitution. Boolean false clears static field_b before output bit position and input end calculation, even for empty input.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HuffmanCodec.compress(ZII[B[BI)I"
     },
     {
       "symbol": "M:t.a(I)V",
@@ -6126,7 +6166,7 @@
     },
     {
       "symbol": "B:sn.a(B[BIII[B)I#0",
-      "renamedSymbol": "B:sn.a(B[BIII[B)I#0",
+      "renamedSymbol": "B:HuffmanCodec.decompress(B[BIII[B)I#0",
       "originalName": "L2",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -9393,9 +9433,9 @@
     },
     {
       "symbol": "C:sn",
-      "renamedSymbol": "C:sn",
+      "renamedSymbol": "C:HuffmanCodec",
       "originalName": "sn",
-      "renamedName": "sn",
+      "renamedName": "HuffmanCodec",
       "declaration": {
         "file": "sn.java",
         "start": 50,
@@ -13925,7 +13965,7 @@
     },
     {
       "symbol": "F:cg.field_c:Lsn;",
-      "renamedSymbol": "F:cg.field_c:Lsn;",
+      "renamedSymbol": "F:cg.field_c:LHuffmanCodec;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -37817,7 +37857,7 @@
     },
     {
       "symbol": "F:sn.field_a:[I",
-      "renamedSymbol": "F:sn.field_a:[I",
+      "renamedSymbol": "F:HuffmanCodec.field_a:[I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -37828,7 +37868,7 @@
     },
     {
       "symbol": "F:sn.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:sn.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanCodec.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -37839,7 +37879,7 @@
     },
     {
       "symbol": "F:sn.field_c:[I",
-      "renamedSymbol": "F:sn.field_c:[I",
+      "renamedSymbol": "F:HuffmanCodec.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -37850,7 +37890,7 @@
     },
     {
       "symbol": "F:sn.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:sn.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanCodec.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -37861,7 +37901,7 @@
     },
     {
       "symbol": "F:sn.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:sn.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanCodec.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -37872,7 +37912,7 @@
     },
     {
       "symbol": "F:sn.field_f:[Ljava/lang/String;",
-      "renamedSymbol": "F:sn.field_f:[Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanCodec.field_f:[Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -37883,7 +37923,7 @@
     },
     {
       "symbol": "F:sn.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:sn.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:HuffmanCodec.field_g:Ljava/lang/String;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -37894,7 +37934,7 @@
     },
     {
       "symbol": "F:sn.field_h:[B",
-      "renamedSymbol": "F:sn.field_h:[B",
+      "renamedSymbol": "F:HuffmanCodec.field_h:[B",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -109746,7 +109786,7 @@
     },
     {
       "symbol": "L:kd.a(BLsn;)V#0",
-      "renamedSymbol": "L:kd.a(BLsn;)V#0",
+      "renamedSymbol": "L:kd.a(BLHuffmanCodec;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109757,7 +109797,7 @@
     },
     {
       "symbol": "L:kd.a(BLsn;)V#1",
-      "renamedSymbol": "L:kd.a(BLsn;)V#1",
+      "renamedSymbol": "L:kd.a(BLHuffmanCodec;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -110010,7 +110050,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#0",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#0",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -110021,7 +110061,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#1",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#1",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -110032,7 +110072,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#2",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#2",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -110043,7 +110083,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#3",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#3",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#3",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -110054,7 +110094,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#4",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#4",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -110065,7 +110105,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#5",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#5",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -110076,7 +110116,7 @@
     },
     {
       "symbol": "L:ke.a(Z)V#6",
-      "renamedSymbol": "L:IsaacCipher.a(Z)V#6",
+      "renamedSymbol": "L:IsaacCipher.generateResults(Z)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -110175,7 +110215,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#0",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#0",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -110186,7 +110226,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#1",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#1",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -110197,7 +110237,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#10",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#10",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -110208,7 +110248,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#11",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#11",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -110219,7 +110259,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#12",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#12",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -110230,7 +110270,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#2",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#2",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -110241,7 +110281,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#3",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#3",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#3",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -110252,7 +110292,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#4",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#4",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -110263,7 +110303,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#5",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#5",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#5",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -110274,7 +110314,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#6",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#6",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -110285,7 +110325,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#7",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#7",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -110296,7 +110336,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#8",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#8",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -110307,7 +110347,7 @@
     },
     {
       "symbol": "L:ke.b(B)V#9",
-      "renamedSymbol": "L:IsaacCipher.b(B)V#9",
+      "renamedSymbol": "L:IsaacCipher.initializeState(B)V#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -171940,7 +171980,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#0",
-      "renamedSymbol": "L:sn.<init>([B)V#0",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -171951,7 +171991,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#1",
-      "renamedSymbol": "L:sn.<init>([B)V#1",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -171962,7 +172002,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#10",
-      "renamedSymbol": "L:sn.<init>([B)V#10",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -171973,7 +172013,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#11",
-      "renamedSymbol": "L:sn.<init>([B)V#11",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#11",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -171984,7 +172024,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#12",
-      "renamedSymbol": "L:sn.<init>([B)V#12",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#12",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -171995,7 +172035,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#13",
-      "renamedSymbol": "L:sn.<init>([B)V#13",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -172006,7 +172046,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#14",
-      "renamedSymbol": "L:sn.<init>([B)V#14",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#14",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -172017,7 +172057,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#15",
-      "renamedSymbol": "L:sn.<init>([B)V#15",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#15",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -172028,7 +172068,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#16",
-      "renamedSymbol": "L:sn.<init>([B)V#16",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#16",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -172039,7 +172079,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#17",
-      "renamedSymbol": "L:sn.<init>([B)V#17",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#17",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -172050,7 +172090,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#18",
-      "renamedSymbol": "L:sn.<init>([B)V#18",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#18",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -172061,7 +172101,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#19",
-      "renamedSymbol": "L:sn.<init>([B)V#19",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#19",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -172072,7 +172112,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#2",
-      "renamedSymbol": "L:sn.<init>([B)V#2",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#2",
       "originalName": "stackIn_38_0",
       "renamedName": "stackIn_38_0",
       "declaration": {
@@ -172083,7 +172123,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#20",
-      "renamedSymbol": "L:sn.<init>([B)V#20",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#20",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -172094,7 +172134,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#21",
-      "renamedSymbol": "L:sn.<init>([B)V#21",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#21",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -172105,7 +172145,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#22",
-      "renamedSymbol": "L:sn.<init>([B)V#22",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#22",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -172116,7 +172156,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#23",
-      "renamedSymbol": "L:sn.<init>([B)V#23",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#23",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -172127,7 +172167,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#24",
-      "renamedSymbol": "L:sn.<init>([B)V#24",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#24",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -172138,7 +172178,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#25",
-      "renamedSymbol": "L:sn.<init>([B)V#25",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#25",
       "originalName": "decompiledFrameCompleted1",
       "renamedName": "decompiledFrameCompleted1",
       "declaration": {
@@ -172149,7 +172189,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#26",
-      "renamedSymbol": "L:sn.<init>([B)V#26",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#26",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -172160,7 +172200,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#27",
-      "renamedSymbol": "L:sn.<init>([B)V#27",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#27",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -172171,7 +172211,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#3",
-      "renamedSymbol": "L:sn.<init>([B)V#3",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#3",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -172182,7 +172222,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#4",
-      "renamedSymbol": "L:sn.<init>([B)V#4",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#4",
       "originalName": "stackIn_39_2",
       "renamedName": "stackIn_39_2",
       "declaration": {
@@ -172193,7 +172233,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#5",
-      "renamedSymbol": "L:sn.<init>([B)V#5",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172204,7 +172244,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#6",
-      "renamedSymbol": "L:sn.<init>([B)V#6",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#6",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -172215,7 +172255,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#7",
-      "renamedSymbol": "L:sn.<init>([B)V#7",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#7",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -172226,7 +172266,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#8",
-      "renamedSymbol": "L:sn.<init>([B)V#8",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -172237,7 +172277,7 @@
     },
     {
       "symbol": "L:sn.<init>([B)V#9",
-      "renamedSymbol": "L:sn.<init>([B)V#9",
+      "renamedSymbol": "L:HuffmanCodec.<init>([B)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -172248,7 +172288,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#0",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#0",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -172259,7 +172299,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#1",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#1",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#1",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -172270,7 +172310,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#10",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#10",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#10",
       "originalName": "dupTemp$10",
       "renamedName": "dupTemp$10",
       "declaration": {
@@ -172281,7 +172321,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#11",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#11",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#11",
       "originalName": "incrementValue$11",
       "renamedName": "incrementValue$11",
       "declaration": {
@@ -172292,7 +172332,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#12",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#12",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#12",
       "originalName": "dupTemp$12",
       "renamedName": "dupTemp$12",
       "declaration": {
@@ -172303,7 +172343,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#13",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#13",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#13",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -172314,7 +172354,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#14",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#14",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#14",
       "originalName": "dupTemp$14",
       "renamedName": "dupTemp$14",
       "declaration": {
@@ -172325,7 +172365,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#15",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#15",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#15",
       "originalName": "incrementValue$15",
       "renamedName": "incrementValue$15",
       "declaration": {
@@ -172336,7 +172376,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#16",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#16",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#16",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -172347,7 +172387,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#17",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#17",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#17",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -172358,7 +172398,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#18",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#18",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#18",
       "originalName": "stackIn_70_0",
       "renamedName": "stackIn_70_0",
       "declaration": {
@@ -172369,7 +172409,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#19",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#19",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#19",
       "originalName": "stackIn_73_0",
       "renamedName": "stackIn_73_0",
       "declaration": {
@@ -172380,7 +172420,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#2",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#2",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -172391,7 +172431,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#20",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#20",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#20",
       "originalName": "stackIn_73_1",
       "renamedName": "stackIn_73_1",
       "declaration": {
@@ -172402,7 +172442,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#21",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#21",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#21",
       "originalName": "stackIn_74_2",
       "renamedName": "stackIn_74_2",
       "declaration": {
@@ -172413,7 +172453,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#22",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#22",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#22",
       "originalName": "stackIn_76_1",
       "renamedName": "stackIn_76_1",
       "declaration": {
@@ -172424,7 +172464,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#23",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#23",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#23",
       "originalName": "stackIn_77_2",
       "renamedName": "stackIn_77_2",
       "declaration": {
@@ -172435,7 +172475,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#24",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#24",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#24",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172446,7 +172486,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#25",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#25",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#25",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -172457,7 +172497,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#26",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#26",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#26",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -172468,7 +172508,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#27",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#27",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#27",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -172479,7 +172519,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#28",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#28",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#28",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -172490,7 +172530,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#29",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#29",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#29",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -172501,7 +172541,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#3",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#3",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#3",
       "originalName": "incrementValue$3",
       "renamedName": "incrementValue$3",
       "declaration": {
@@ -172512,7 +172552,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#30",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#30",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#30",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -172523,7 +172563,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#31",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#31",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#31",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -172534,7 +172574,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#32",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#32",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#32",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -172545,7 +172585,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#33",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#33",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#33",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -172556,7 +172596,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#34",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#34",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#34",
       "originalName": "var10Lifetime4",
       "renamedName": "var10Lifetime4",
       "declaration": {
@@ -172567,7 +172607,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#35",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#35",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#35",
       "originalName": "var10Lifetime5",
       "renamedName": "var10Lifetime5",
       "declaration": {
@@ -172578,7 +172618,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#36",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#36",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#36",
       "originalName": "var10Lifetime6",
       "renamedName": "var10Lifetime6",
       "declaration": {
@@ -172589,7 +172629,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#37",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#37",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#37",
       "originalName": "var10Lifetime7",
       "renamedName": "var10Lifetime7",
       "declaration": {
@@ -172600,7 +172640,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#38",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#38",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#38",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -172611,7 +172651,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#4",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#4",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#4",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -172622,7 +172662,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#5",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#5",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#5",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -172633,7 +172673,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#6",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#6",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#6",
       "originalName": "dupTemp$6",
       "renamedName": "dupTemp$6",
       "declaration": {
@@ -172644,7 +172684,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#7",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#7",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#7",
       "originalName": "incrementValue$7",
       "renamedName": "incrementValue$7",
       "declaration": {
@@ -172655,7 +172695,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#8",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#8",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#8",
       "originalName": "dupTemp$8",
       "renamedName": "dupTemp$8",
       "declaration": {
@@ -172666,7 +172706,7 @@
     },
     {
       "symbol": "L:sn.a(B[BIII[B)I#9",
-      "renamedSymbol": "L:sn.a(B[BIII[B)I#9",
+      "renamedSymbol": "L:HuffmanCodec.decompress(B[BIII[B)I#9",
       "originalName": "incrementValue$9",
       "renamedName": "incrementValue$9",
       "declaration": {
@@ -172677,7 +172717,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#0",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#0",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -172688,7 +172728,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#1",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#1",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#1",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -172699,7 +172739,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#10",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#10",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -172710,7 +172750,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#11",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#11",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -172721,7 +172761,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#12",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#12",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -172732,7 +172772,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#13",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#13",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -172743,7 +172783,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#14",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#14",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#14",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -172754,7 +172794,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#15",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#15",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#15",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -172765,7 +172805,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#16",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#16",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#16",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -172776,7 +172816,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#17",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#17",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#17",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -172787,7 +172827,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#18",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#18",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#18",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -172798,7 +172838,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#2",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#2",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#2",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -172809,7 +172849,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#3",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#3",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#3",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -172820,7 +172860,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#4",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#4",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#4",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -172831,7 +172871,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#5",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#5",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#5",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -172842,7 +172882,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#6",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#6",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#6",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -172853,7 +172893,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#7",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#7",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -172864,7 +172904,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#8",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#8",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#8",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -172875,7 +172915,7 @@
     },
     {
       "symbol": "L:sn.a(ZII[B[BI)I#9",
-      "renamedSymbol": "L:sn.a(ZII[B[BI)I#9",
+      "renamedSymbol": "L:HuffmanCodec.compress(ZII[B[BI)I#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -215445,7 +215485,7 @@
     },
     {
       "symbol": "M:kd.a(BLsn;)V",
-      "renamedSymbol": "M:kd.a(BLsn;)V",
+      "renamedSymbol": "M:kd.a(BLHuffmanCodec;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -215533,9 +215573,9 @@
     },
     {
       "symbol": "M:ke.a(Z)V",
-      "renamedSymbol": "M:IsaacCipher.a(Z)V",
+      "renamedSymbol": "M:IsaacCipher.generateResults(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "ke.java",
         "start": 1853,
@@ -215555,9 +215595,9 @@
     },
     {
       "symbol": "M:ke.b(B)V",
-      "renamedSymbol": "M:IsaacCipher.b(B)V",
+      "renamedSymbol": "M:IsaacCipher.initializeState(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "ke.java",
         "start": 4134,
@@ -226929,9 +226969,9 @@
     },
     {
       "symbol": "M:sn.<init>([B)V",
-      "renamedSymbol": "M:sn.<init>([B)V",
+      "renamedSymbol": "M:HuffmanCodec.<init>([B)V",
       "originalName": "sn",
-      "renamedName": "sn",
+      "renamedName": "HuffmanCodec",
       "declaration": {
         "file": "sn.java",
         "start": 10828,
@@ -226940,7 +226980,7 @@
     },
     {
       "symbol": "M:sn.a(B)V",
-      "renamedSymbol": "M:sn.clearStaticReferences(B)V",
+      "renamedSymbol": "M:HuffmanCodec.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -226951,9 +226991,9 @@
     },
     {
       "symbol": "M:sn.a(B[BIII[B)I",
-      "renamedSymbol": "M:sn.a(B[BIII[B)I",
+      "renamedSymbol": "M:HuffmanCodec.decompress(B[BIII[B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decompress",
       "declaration": {
         "file": "sn.java",
         "start": 289,
@@ -226962,9 +227002,9 @@
     },
     {
       "symbol": "M:sn.a(ZII[B[BI)I",
-      "renamedSymbol": "M:sn.a(ZII[B[BI)I",
+      "renamedSymbol": "M:HuffmanCodec.compress(ZII[B[BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "compress",
       "declaration": {
         "file": "sn.java",
         "start": 7186,
@@ -261997,7 +262037,7 @@
     },
     {
       "symbol": "P:kd.a(BLsn;)V#0",
-      "renamedSymbol": "P:kd.a(BLsn;)V#0",
+      "renamedSymbol": "P:kd.a(BLHuffmanCodec;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262008,7 +262048,7 @@
     },
     {
       "symbol": "P:kd.a(BLsn;)V#1",
-      "renamedSymbol": "P:kd.a(BLsn;)V#1",
+      "renamedSymbol": "P:kd.a(BLHuffmanCodec;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262162,7 +262202,7 @@
     },
     {
       "symbol": "P:ke.a(Z)V#0",
-      "renamedSymbol": "P:IsaacCipher.a(Z)V#0",
+      "renamedSymbol": "P:IsaacCipher.generateResults(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262206,7 +262246,7 @@
     },
     {
       "symbol": "P:ke.b(B)V#0",
-      "renamedSymbol": "P:IsaacCipher.b(B)V#0",
+      "renamedSymbol": "P:IsaacCipher.initializeState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292357,7 +292397,7 @@
     },
     {
       "symbol": "P:sn.<init>([B)V#0",
-      "renamedSymbol": "P:sn.<init>([B)V#0",
+      "renamedSymbol": "P:HuffmanCodec.<init>([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292368,7 +292408,7 @@
     },
     {
       "symbol": "P:sn.a(B)V#0",
-      "renamedSymbol": "P:sn.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:HuffmanCodec.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292379,7 +292419,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#0",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#0",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292390,7 +292430,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#1",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#1",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -292401,7 +292441,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#2",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#2",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -292412,7 +292452,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#3",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#3",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -292423,7 +292463,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#4",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#4",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -292434,7 +292474,7 @@
     },
     {
       "symbol": "P:sn.a(B[BIII[B)I#5",
-      "renamedSymbol": "P:sn.a(B[BIII[B)I#5",
+      "renamedSymbol": "P:HuffmanCodec.decompress(B[BIII[B)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -292445,7 +292485,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#0",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#0",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -292456,7 +292496,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#1",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#1",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -292467,7 +292507,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#2",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#2",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -292478,7 +292518,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#3",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#3",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -292489,7 +292529,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#4",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#4",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -292500,7 +292540,7 @@
     },
     {
       "symbol": "P:sn.a(ZII[B[BI)I#5",
-      "renamedSymbol": "P:sn.a(ZII[B[BI)I#5",
+      "renamedSymbol": "P:HuffmanCodec.compress(ZII[B[BI)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -304912,7 +304952,7 @@
       "original": "Chess.java",
       "renamed": "Chess.java",
       "inputSha256": "22e458e5c1d7a1f7753a3ad1945478749461d47a737a36be621acbbdb3021d20",
-      "outputSha256": "119275aad09ec6c75fcf553d5ba55238e560579017d49ccb4605753654b3b325",
+      "outputSha256": "2d31fa076753fa0f34df9afb3c1d847160f87e6db5b183c0e47959cd032e5b16",
       "edits": [
         {
           "start": 186,
@@ -306945,6 +306985,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 58047,
+          "end": 58049,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 58050,
           "end": 58051,
           "symbol": "M:sn.a(B)V",
@@ -308226,6 +308273,13 @@
           "renamed": "SpriteGeometry"
         },
         {
+          "start": 63658,
+          "end": 63660,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 64056,
           "end": 64058,
           "symbol": "C:um",
@@ -308366,11 +308420,25 @@
           "renamed": "BufferedRandomAccessFile"
         },
         {
+          "start": 68133,
+          "end": 68135,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 68166,
           "end": 68167,
           "symbol": "C:f",
           "original": "f",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 68514,
+          "end": 68516,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 68551,
@@ -308380,11 +308448,25 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 68878,
+          "end": 68880,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 68913,
           "end": 68914,
           "symbol": "C:f",
           "original": "f",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 69384,
+          "end": 69386,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 70204,
@@ -312840,7 +312922,7 @@
       "original": "am.java",
       "renamed": "am.java",
       "inputSha256": "02605881e817f952f1aba2dd0da352f7573a42ffbc8fdd281a3219e690b7372e",
-      "outputSha256": "21b089db4951b4e44fea926724157bbe07433bbe1265e7f657701e826704723f",
+      "outputSha256": "c305fc6f0ae5a3b579345edcfec15a72b94f30e03cc07183d53c36724ab2d374",
       "edits": [
         {
           "start": 936,
@@ -312883,6 +312965,13 @@
           "symbol": "F:p.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 1776,
+          "end": 1777,
+          "symbol": "M:sn.a(B[BIII[B)I",
+          "original": "a",
+          "renamed": "decompress"
         },
         {
           "start": 1797,
@@ -317846,7 +317935,7 @@
       "original": "ce.java",
       "renamed": "ce.java",
       "inputSha256": "aae85bb37e05f485841a05107a0ccd065b987f85844b9af167c794f84e94a7e9",
-      "outputSha256": "e0aef25ff3c327e137551e05f521c4cc006d6e9d049189f57f6e7ad9e49bf2d3",
+      "outputSha256": "7bfe770964fc47bc4ad8906e9cc374228b24c09100a403a6776ba67477645e50",
       "edits": [
         {
           "start": 281,
@@ -317868,6 +317957,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 2022,
+          "end": 2024,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 2150,
@@ -318205,8 +318301,15 @@
       "original": "cg.java",
       "renamed": "cg.java",
       "inputSha256": "706de9f75cef9b4be099e2f080da2f3451ec6c5dacbb9ff727f73f998f1d2ccd",
-      "outputSha256": "288f7e48b488f53cdcb4507722b69c5236c7c759cc4a8f66e39f00548b436648",
+      "outputSha256": "f06776bb0b06eddc58eac4672df38e3dd07eeaa5618f2c01711862a50ae9ae88",
       "edits": [
+        {
+          "start": 119,
+          "end": 121,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
         {
           "start": 1440,
           "end": 1442,
@@ -318262,6 +318365,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2494,
+          "end": 2496,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 5665,
@@ -328086,7 +328196,7 @@
       "original": "fa.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "a899826fd87de8982df18c9bac310f4a6ab735691ecf6d669b8d5769cbe10474",
-      "outputSha256": "6a4b905189f36d5d4807e8c9b79aa53cc3f2113e60505f49a92c4d88a0c1b132",
+      "outputSha256": "3c09ee4a04e2563c6f50a6314c7317de8c01a0871a9d1410c8eafefda1f0fdd5",
       "edits": [
         {
           "start": 60,
@@ -328453,6 +328563,13 @@
           "renamed": "readString"
         },
         {
+          "start": 13141,
+          "end": 13143,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 13297,
           "end": 13298,
           "symbol": "M:p.f(I)I",
@@ -328465,6 +328582,20 @@
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 13395,
+          "end": 13397,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 13976,
+          "end": 13978,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 14325,
@@ -332496,7 +332627,7 @@
       "original": "gm.java",
       "renamed": "FrameTimer.java",
       "inputSha256": "c8571f61631b9bd71063c98a59a453740e5f7c44741d93f47b06761af7bc4da1",
-      "outputSha256": "ca3122d50538821d50fb82c3f18af63194311451074a3e2bfd009eccbd6337ad",
+      "outputSha256": "76f29ab16b79fc129bef4255cf18d5c287610368617256e0b2a3e180b8883839",
       "edits": [
         {
           "start": 53,
@@ -332691,6 +332822,13 @@
           "renamed": "SecondaryNodeHashTable"
         },
         {
+          "start": 24813,
+          "end": 24815,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 24972,
           "end": 24974,
           "symbol": "C:hn",
@@ -332824,6 +332962,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 48171,
+          "end": 48173,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
           "start": 51856,
           "end": 51858,
           "symbol": "C:cc",
@@ -332913,6 +333058,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 72973,
+          "end": 72975,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 78824,
@@ -339208,7 +339360,7 @@
       "original": "jd.java",
       "renamed": "jd.java",
       "inputSha256": "b34c08c49469088dfc08c69eb81b85aabcf62d81144535bacd1e0ef207d82816",
-      "outputSha256": "f4f1a7229c43b1ba62f2c64e66c4180c7440049936b12be6f8a5794c4c7a1716",
+      "outputSha256": "c1198a2e7924167d7be00c975059625e64b7ec0098d890ded3bdd93fad80731d",
       "edits": [
         {
           "start": 619,
@@ -339265,6 +339417,13 @@
           "symbol": "M:fk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lae;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3925,
+          "end": 3927,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 6178,
@@ -342623,7 +342782,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "37b00078383597f128f9c3f145a37690618a6271480fc95118da424844a327b2",
-      "outputSha256": "afb44877baf06cec83239d0633bfcb6032b8dd2c9ca52f1346cb9899df116add",
+      "outputSha256": "58558da56dabeeceb2f08818b0509b6ac700af860abc05f07f772db44516a80d",
       "edits": [
         {
           "start": 255,
@@ -342638,6 +342797,34 @@
           "symbol": "C:p",
           "original": "p",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 9111,
+          "end": 9113,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 9212,
+          "end": 9214,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 9223,
+          "end": 9225,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 9263,
+          "end": 9265,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 9356,
@@ -342673,7 +342860,7 @@
       "original": "ke.java",
       "renamed": "IsaacCipher.java",
       "inputSha256": "ecf6f7df11f8644a47e454a1cb457fa5f22dc3587aa223abcfb1c7b3ba957d03",
-      "outputSha256": "60c06275423c8ec9fc27a368f935115e7535ebc84ed5028b25347e472da66145",
+      "outputSha256": "e8fc0562043f7a89a2d7220b0fb7f96be9235ae85c4d89be5b33d0d184a6ed19",
       "edits": [
         {
           "start": 50,
@@ -342730,6 +342917,27 @@
           "symbol": "P:ke.b(I)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1647,
+          "end": 1648,
+          "symbol": "M:ke.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 1853,
+          "end": 1854,
+          "symbol": "M:ke.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
+        },
+        {
+          "start": 2071,
+          "end": 2072,
+          "symbol": "M:ke.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 3376,
@@ -342802,11 +343010,25 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 4134,
+          "end": 4135,
+          "symbol": "M:ke.b(B)V",
+          "original": "b",
+          "renamed": "initializeState"
+        },
+        {
           "start": 4340,
           "end": 4342,
           "symbol": "C:ke",
           "original": "ke",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 8902,
+          "end": 8903,
+          "symbol": "M:ke.a(Z)V",
+          "original": "a",
+          "renamed": "generateResults"
         },
         {
           "start": 8963,
@@ -342835,6 +343057,13 @@
           "symbol": "M:ke.<init>([I)V",
           "original": "ke",
           "renamed": "IsaacCipher"
+        },
+        {
+          "start": 9667,
+          "end": 9668,
+          "symbol": "M:ke.b(B)V",
+          "original": "b",
+          "renamed": "initializeState"
         },
         {
           "start": 9751,
@@ -348238,7 +348467,7 @@
       "original": "ld.java",
       "renamed": "ld.java",
       "inputSha256": "8e22d4a8c3c30d09b4640ae93e0bbe10fd24d6283505b63d27155432f5ed745a",
-      "outputSha256": "47bc174b0be416a48b79f92b5fbcbfdb9be04c5e052513f4d3ae4a6d98e68a15",
+      "outputSha256": "3d0232958da06aa44d6513e60830c27d7d79cdab2cbd418aa4d24e7f34c10811",
       "edits": [
         {
           "start": 858,
@@ -348302,6 +348531,13 @@
           "symbol": "M:ld.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1806,
+          "end": 1808,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 2583,
@@ -370269,7 +370505,7 @@
       "original": "rm.java",
       "renamed": "rm.java",
       "inputSha256": "f272f99f4ce94bcb7085e7979b8dce1c513309aa1a6ad6d0ddd4183abfb0828d",
-      "outputSha256": "114162baf1edbe4b6cc89d2f69c6cfc2f0417f262008e2add0ed85067ae835a9",
+      "outputSha256": "c7195d7772e725c426594bf3731d9ef55766af7209a9f0cf84ac647fedded173",
       "edits": [
         {
           "start": 147,
@@ -370459,6 +370695,13 @@
           "symbol": "F:p.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 7639,
+          "end": 7640,
+          "symbol": "M:sn.a(ZII[B[BI)I",
+          "original": "a",
+          "renamed": "compress"
         },
         {
           "start": 7676,
@@ -372620,7 +372863,7 @@
       "original": "sk.java",
       "renamed": "sk.java",
       "inputSha256": "0c2a2311c6c4c49cfd10eaae51b05e89e43656aa44477e5765b4f460dc38794f",
-      "outputSha256": "566aeb2e6d1e4107a414d2513eeb2475c5e0e3d45adf4d45a5594d3f9e5cbf1a",
+      "outputSha256": "6c332d3e01048134d16b5260f50e62b239940db86e0cfb9eff98bc48e6945864",
       "edits": [
         {
           "start": 422,
@@ -372684,6 +372927,13 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 1282,
+          "end": 1284,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         }
       ]
     },
@@ -372718,10 +372968,24 @@
     },
     {
       "original": "sn.java",
-      "renamed": "sn.java",
+      "renamed": "HuffmanCodec.java",
       "inputSha256": "19c1c96663da7d012fe45ad29dffb3be697713062fc09eb97cf25a202339af18",
-      "outputSha256": "7e3ab5e80572e05eff5a42d38aa0d6e108c5db90c7ed9fbf93433d28cb3465fb",
+      "outputSha256": "b07c2a7d94f0bd5161f9944d26f493e3a1ff23b85aecaff1e736e7c7a11972b1",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "symbol": "M:sn.a(B[BIII[B)I",
+          "original": "a",
+          "renamed": "decompress"
+        },
         {
           "start": 1914,
           "end": 1916,
@@ -372801,6 +373065,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 7186,
+          "end": 7187,
+          "symbol": "M:sn.a(ZII[B[BI)I",
+          "original": "a",
+          "renamed": "compress"
+        },
+        {
           "start": 10409,
           "end": 10411,
           "symbol": "C:fk",
@@ -372820,6 +373091,13 @@
           "symbol": "M:sn.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 10828,
+          "end": 10830,
+          "symbol": "M:sn.<init>([B)V",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 15031,
@@ -378319,7 +378597,7 @@
       "original": "vd.java",
       "renamed": "AccountCreationResultPanel.java",
       "inputSha256": "fd44fc1294156edc929a77d170dce8401277f254fb71178ee84bd84194d42843",
-      "outputSha256": "59ea99640c01299cd93f8a9d23b826a4300576921f6c249d74a0fa9a0a9cf463",
+      "outputSha256": "9df8b15873515515400db3a9fdf26288ebdabb396a1d080208e8a430ef9e7de9",
       "edits": [
         {
           "start": 50,
@@ -378418,6 +378696,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 2397,
+          "end": 2399,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 2544,
@@ -380289,7 +380574,7 @@
       "original": "vn.java",
       "renamed": "vn.java",
       "inputSha256": "c4fe0533c5e8b08ed98258110e0da59142d091b03fb83c3961cd77b7feb7f9d7",
-      "outputSha256": "51335d6d8c0dee69bbd43f55386b505aac9646aca96cfcace743c5de60bff4c7",
+      "outputSha256": "630350e7dca72d0a663179fec456845986c7056cc063a63288f55259ea86ce42",
       "edits": [
         {
           "start": 85,
@@ -380535,6 +380820,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PcmOutputWorker"
+        },
+        {
+          "start": 5745,
+          "end": 5747,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 6112,
@@ -382213,7 +382505,7 @@
       "original": "wf.java",
       "renamed": "wf.java",
       "inputSha256": "003c3c0ae99610accc1e1879d918d137392f72aa52ea4599d58258587bf5ab26",
-      "outputSha256": "4d23bb06ae776888f96aae60215ad04b6c09ea29f90be3abc5713e5e82a9db9d",
+      "outputSha256": "9c09ba1c2133b41925f865e60a9d97718375768a17da1043e15274c34d5a3c93",
       "edits": [
         {
           "start": 123,
@@ -382249,6 +382541,13 @@
           "symbol": "C:fa",
           "original": "fa",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 3800,
+          "end": 3802,
+          "symbol": "C:sn",
+          "original": "sn",
+          "renamed": "HuffmanCodec"
         },
         {
           "start": 5059,
@@ -384699,10 +384998,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/chess"
     },
-    "rulesSha256": "fc5097f873aec16a6ad2d197eeeea4795a45e55cfc77a58bb62538732c1e3359",
+    "rulesSha256": "2b51f7b010e64c34e1408fa1d76cf97db86f11f2ab148325bc01e505333cbb6a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
-    "outputTreeSha256": "7e882baf5d1d2f8d4ea536351052f350e1594c9a2a1c5295ddba7e114ea9185b",
+    "outputTreeSha256": "45a8c776dded0023455150f6ce83aaa765c61032fbc1aa3c2bb71744a66fced4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

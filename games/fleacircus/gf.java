@@ -42,15 +42,15 @@ final class gf {
               jk.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
-            if (null != pc.field_h) {
+            if (null != IsaacRandom.field_h) {
               for (var2 = 0; a.field_g.length > var2; var2++) {
                 if (param1 == a.field_g[var2] &&
                   pj.field_x[var2] > 0) {
                   dupTemp$3 = pj.field_x[var2] - 1;
-                  arrayValue$4 = pc.field_h[var2];
+                  arrayValue$4 = IsaacRandom.field_h[var2];
                   pj.field_x[var2] = dupTemp$3;
                   var3 = arrayValue$4[dupTemp$3];
-                  pc.field_h[var2][pj.field_x[var2]] = null;
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
                   return var3;
                 }
               }
@@ -71,15 +71,15 @@ final class gf {
               jk.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
-            if (null != pc.field_h) {
+            if (null != IsaacRandom.field_h) {
               for (var2 = 0; a.field_g.length > var2; var2++) {
                 if (param1 == a.field_g[var2] &&
                   pj.field_x[var2] > 0) {
                   dupTemp$7 = pj.field_x[var2] - 1;
-                  arrayValue$8 = pc.field_h[var2];
+                  arrayValue$8 = IsaacRandom.field_h[var2];
                   pj.field_x[var2] = dupTemp$7;
                   var3 = arrayValue$8[dupTemp$7];
-                  pc.field_h[var2][pj.field_x[var2]] = null;
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
                   return var3;
                 }
               }
@@ -102,15 +102,15 @@ final class gf {
               jk.field_n[pg.field_a] = null;
               return var2_ref_byte__;
             }
-            if (null != pc.field_h) {
+            if (null != IsaacRandom.field_h) {
               for (var2 = 0; a.field_g.length > var2; var2++) {
                 if (param1 == a.field_g[var2] &&
                   pj.field_x[var2] > 0) {
                   dupTemp$16 = pj.field_x[var2] - 1;
-                  arrayValue$17 = pc.field_h[var2];
+                  arrayValue$17 = IsaacRandom.field_h[var2];
                   pj.field_x[var2] = dupTemp$16;
                   var3 = arrayValue$17[dupTemp$16];
-                  pc.field_h[var2][pj.field_x[var2]] = null;
+                  IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
                   return var3;
                 }
               }
@@ -124,15 +124,15 @@ final class gf {
               return var2_ref_byte__;
             }
             if (param1 != 30000) {
-              if (null != pc.field_h) {
+              if (null != IsaacRandom.field_h) {
                 for (var2 = 0; a.field_g.length > var2; var2++) {
                   if (param1 == a.field_g[var2] &&
                     pj.field_x[var2] > 0) {
                     dupTemp$13 = pj.field_x[var2] - 1;
-                    arrayValue$14 = pc.field_h[var2];
+                    arrayValue$14 = IsaacRandom.field_h[var2];
                     pj.field_x[var2] = dupTemp$13;
                     var3 = arrayValue$14[dupTemp$13];
-                    pc.field_h[var2][pj.field_x[var2]] = null;
+                    IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
                     return var3;
                   }
                 }
@@ -145,15 +145,15 @@ final class gf {
                 jk.field_n[pg.field_a] = null;
                 return var2_ref_byte__;
               }
-              if (null != pc.field_h) {
+              if (null != IsaacRandom.field_h) {
                 for (var2 = 0; a.field_g.length > var2; var2++) {
                   if (param1 == a.field_g[var2] &&
                     pj.field_x[var2] > 0) {
                     dupTemp$10 = pj.field_x[var2] - 1;
-                    arrayValue$11 = pc.field_h[var2];
+                    arrayValue$11 = IsaacRandom.field_h[var2];
                     pj.field_x[var2] = dupTemp$10;
                     var3 = arrayValue$11[dupTemp$10];
-                    pc.field_h[var2][pj.field_x[var2]] = null;
+                    IsaacRandom.field_h[var2][pj.field_x[var2]] = null;
                     return var3;
                   }
                 }

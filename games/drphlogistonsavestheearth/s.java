@@ -264,7 +264,7 @@ final class s {
                   var24Lifetime1Lifetime1 = param5.field_u[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param5.field_y[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_x[var23Lifetime2];
-                  ta.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 + var12 * var24Lifetime1Lifetime1 >> 16);
+                  IsaacRandom.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 + var12 * var24Lifetime1Lifetime1 >> 16);
                   rd.field_y[var23Lifetime2] = (var16 * var25Lifetime1Lifetime1 + (var13 * var24Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
                   ei.field_m[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1Lifetime1 = param5.field_p[var23Lifetime2];

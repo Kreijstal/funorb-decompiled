@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf {
+final class IsaacRandom {
     private int field_c;
     static int field_e;
     private int[] field_d;
@@ -13,7 +13,7 @@ final class nf {
     private int field_j;
     private int field_a;
 
-    private final void a(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = TrackController.field_F ? 1 : 0;
         int var10 = -1640531527;
@@ -22,7 +22,7 @@ final class nf {
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 <= 11) {
-          this.c(100);
+          this.nextInt(100);
         }
         int var9 = -1640531527;
         int var4 = -1640531527;
@@ -139,7 +139,7 @@ final class nf {
           this.field_d[var2Lifetime2 + 6] = var9;
           this.field_d[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) 35);
+        this.generateResults((byte) 35);
         this.field_a = 256;
     }
 
@@ -164,7 +164,7 @@ final class nf {
         }
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -176,7 +176,7 @@ final class nf {
         this.field_b = this.field_b + 1;
         this.field_j = this.field_j + fieldTemp$0;
         if (param0 != 35) {
-          this.a((byte) 91);
+          this.generateResults((byte) 91);
         }
         for (var2 = 0; var2 < 256; var2++) {
           var3 = this.field_d[var2];
@@ -203,20 +203,20 @@ final class nf {
         }
     }
 
-    final int c(int param0) {
+    final int nextInt(int param0) {
         if (0 == this.field_a) {
-          this.a((byte) 35);
+          this.generateResults((byte) 35);
           this.field_a = 256;
         }
         if (param0 <= 124) {
-          this.a((byte) 58);
+          this.generateResults((byte) 58);
         }
         int fieldTemp$0 = this.field_a - 1;
         this.field_a = this.field_a - 1;
         return this.field_i[fieldTemp$0];
     }
 
-    nf(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_i = new int[256];
@@ -224,7 +224,7 @@ final class nf {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_i[var2_int] = param0[var2_int];
           }
-          this.a(66);
+          this.initializeState(66);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

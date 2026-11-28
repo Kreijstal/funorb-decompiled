@@ -129,7 +129,7 @@ final class pj extends nb implements ue, jk, ag {
         var3 = var3 + (this.a(170, sc.field_a, uc.field_nb, var3, this.field_D, 10000536) + 5);
         var3 = var3 + (5 + this.a(170, hc.field_kb, nk.field_C, var3, this.field_E, 10000536));
         var3 = var3 + this.a((byte) -78, this.field_M, 170, var3, uf.field_o);
-        jf var4 = new jf(46, var3, this.field_j - 90, 25, this.field_J, true, -120 + this.field_j, 5, cl.field_T, 11579568, pe.field_j);
+        jf var4 = new jf(46, var3, this.field_j - 90, 25, this.field_J, true, -120 + this.field_j, 5, cl.field_T, 11579568, IsaacRandom.field_j);
         this.b((byte) -74, var4);
         var3 = var3 + var4.field_v;
         ik var5 = new ik(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 0, 0, ql.field_Q.field_E, -1, 2147483647, true);

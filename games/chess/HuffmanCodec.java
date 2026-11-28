@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn {
+final class HuffmanCodec {
     static String field_d;
     static String field_g;
     private int[] field_c;
@@ -11,7 +11,7 @@ final class sn {
     private int[] field_a;
     static String field_b;
 
-    final int a(byte param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
+    final int decompress(byte param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -219,7 +219,7 @@ final class sn {
         }
     }
 
-    final int a(boolean param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
+    final int compress(boolean param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
         int dupTemp$0 = 0;
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -323,7 +323,7 @@ final class sn {
         field_g = null;
     }
 
-    sn(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;

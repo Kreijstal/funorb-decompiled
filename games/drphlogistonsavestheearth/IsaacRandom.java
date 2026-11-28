@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ta {
+final class IsaacRandom {
     static int[] field_j;
     static String field_a;
     private int field_h;
@@ -107,7 +107,7 @@ final class ta {
         return var4;
     }
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -146,10 +146,10 @@ final class ta {
         }
     }
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         int var2 = 66 / ((param0 - 37) / 50);
         if (this.field_f == 0) {
-          this.a(true);
+          this.generateResults(true);
           this.field_f = 256;
         }
         int fieldTemp$0 = this.field_f - 1;
@@ -157,7 +157,7 @@ final class ta {
         return this.field_m[fieldTemp$0];
     }
 
-    private final void a(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         int var5 = -1640531527;
@@ -280,7 +280,7 @@ final class ta {
           this.field_e[6 + var2Lifetime2] = var9;
           this.field_e[7 + var2Lifetime2] = var10;
         }
-        this.a(true);
+        this.generateResults(true);
         this.field_f = 256;
         if (param0 >= -40) {
           field_b = (java.util.zip.CRC32) null;
@@ -336,7 +336,7 @@ final class ta {
         }
     }
 
-    ta(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_e = new int[256];
@@ -344,7 +344,7 @@ final class ta {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_m[var2_int] = param0[var2_int];
           }
-          this.a((byte) -105);
+          this.initializeState((byte) -105);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

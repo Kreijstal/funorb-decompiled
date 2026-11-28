@@ -314,7 +314,7 @@ final class bd extends g implements qh {
             var3_int = param1.length;
             this.field_E = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_E[var4_int] = hg.a((CharSequence) ((Object) param1[var4_int]), (byte) 115).replace(' ', ' ');
+              this.field_E[var4_int] = IsaacRandom.a((CharSequence) ((Object) param1[var4_int]), (byte) 115).replace(' ', ' ');
             }
             var4 = new nb(j.field_C, 0, 1);
             this.field_G = new hl[1 + var3_int];

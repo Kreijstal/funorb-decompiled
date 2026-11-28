@@ -274,7 +274,7 @@ final class MusicPatchPcmStream extends PcmStream {
           ti.field_L.a(ha.field_d, true, wc.field_a, (byte) 124);
           ti.field_L.f(true);
           while (IterableNodeHashTable.a((byte) -72)) {
-            ti.field_L.a((byte) 86, pe.field_b, da.field_b);
+            ti.field_L.a((byte) 86, IsaacRandom.field_b, da.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

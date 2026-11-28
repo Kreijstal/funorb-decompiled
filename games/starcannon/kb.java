@@ -143,7 +143,7 @@ final class kb {
           if (null != var45.field_u &&
             var45.field_O > 1) {
             var61 = var45.field_u;
-            fd.a(0, 0, var61, jb.field_h, param1 ^ -65912);
+            fd.a(0, 0, var61, IsaacRandom.field_h, param1 ^ -65912);
           } else {
             ng.j(1);
           }

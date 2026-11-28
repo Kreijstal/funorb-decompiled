@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj extends PacketBuffer {
-    private ug field_p;
+    private IsaacRandom field_p;
     private int field_n;
     static String field_o;
 
@@ -33,7 +33,7 @@ final class hj extends PacketBuffer {
           for (var5_int = 0; var5_int < param1; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_p.a(-88));
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_p.nextInt(-88));
           }
           if (param3 != 18570) {
             field_o = (String) null;
@@ -67,7 +67,7 @@ final class hj extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$0] - this.field_p.a(-108);
+        return 255 & this.payload[fieldTemp$0] - this.field_p.nextInt(-108);
     }
 
     final static String a(byte param0, CharSequence param1) {
@@ -181,7 +181,7 @@ final class hj extends PacketBuffer {
     final void a(byte param0, int[] param1) {
         try {
           int var3_int = 113 % ((-12 - param0) / 36);
-          this.field_p = new ug(param1);
+          this.field_p = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "hj.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -190,7 +190,7 @@ final class hj extends PacketBuffer {
     final void a(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_p.a(-50) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_p.nextInt(-50) + param1);
         if (param0) {
           field_o = (String) null;
         }

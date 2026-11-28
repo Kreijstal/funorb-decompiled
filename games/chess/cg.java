@@ -4,7 +4,7 @@
 final class cg {
     static int field_a;
     static byte[][] field_b;
-    static sn field_c;
+    static HuffmanCodec field_c;
 
     final static int a(vg param0, vg param1, boolean param2) {
         RuntimeException var3 = null;
@@ -62,7 +62,7 @@ final class cg {
     final static boolean a(int param0, char param1) {
         boolean stackIn_9_0 = false;
         if (param0 != 2) {
-          field_c = (sn) null;
+          field_c = (HuffmanCodec) null;
         }
         stackIn_9_0 = (param1 == 160) || (param1 == 32) || (param1 == 95) || (45 == param1);
         return stackIn_9_0;

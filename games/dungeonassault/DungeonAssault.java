@@ -508,7 +508,7 @@ public final class DungeonAssault extends NetworkGameClient {
               stackIn_208_1 = var3Lifetime3;
               stackIn_208_2 = 22;
               stackIn_209_3 = (hc.field_c == 57);
-              ja.$cfr$intArgs$a$ed16b0445cf3(stackIn_208_0, stackIn_208_1, stackIn_208_2, stackIn_209_3, var5_ref_di__);
+              HuffmanDecoder.$cfr$intArgs$a$ed16b0445cf3(stackIn_208_0, stackIn_208_1, stackIn_208_2, stackIn_209_3, var5_ref_di__);
               continue scanLoop1;
             }
             break;
@@ -679,7 +679,7 @@ public final class DungeonAssault extends NetworkGameClient {
           qj.a(-2418);
           bc.clearStaticReferences(24740);
           lc.clearStaticReferences(true);
-          ja.clearStaticReferences(param0);
+          HuffmanDecoder.clearStaticReferences(param0);
           lg.clearStaticReferences(true);
           eh.a(73);
           sg.clearStaticReferences((byte) -88);
@@ -749,7 +749,7 @@ public final class DungeonAssault extends NetworkGameClient {
           so.clearStaticReferences((byte) 95);
           df.a(255);
           fj.clearStaticReferences((byte) -75);
-          ff.clearStaticReferences(-103);
+          IsaacRandom.clearStaticReferences(-103);
           hj.clearDeclaredStaticReferences(16744448);
           lo.clearStaticReferences(114);
           DualLinkNode.a((byte) 92);

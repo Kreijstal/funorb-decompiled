@@ -470,11 +470,11 @@ final class MidiPcmStream extends PcmStream {
           }
           return bq.field_A;
         }
-        if (!ke.field_b.b(0)) {
+        if (!HuffmanCodec.field_b.b(0)) {
           return ib.field_b;
         }
-        if (!ke.field_b.c("commonui", 0)) {
-          return me.field_b + " - " + ke.field_b.a("commonui", 0) + "%";
+        if (!HuffmanCodec.field_b.c("commonui", 0)) {
+          return me.field_b + " - " + HuffmanCodec.field_b.a("commonui", 0) + "%";
         }
         if (!la.field_e.b(0)) {
           return vc.field_a;

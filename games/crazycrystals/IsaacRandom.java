@@ -38,12 +38,12 @@ final class IsaacRandom {
         }
     }
 
-    final int a(boolean param0) {
+    final int nextInt(boolean param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (0 == this.field_b) {
-          this.a(-95);
+          this.generateResults(-95);
           this.field_b = 256;
           if (param0) {
             IsaacRandom.b((byte) 50);
@@ -75,7 +75,7 @@ final class IsaacRandom {
         field_e = (int[][]) null;
     }
 
-    private final void b(boolean param0) {
+    private final void initializeState(boolean param0) {
         int var2 = 0;
         int var11 = CrazyCrystals.field_B;
         int var5 = -1640531527;
@@ -201,7 +201,7 @@ final class IsaacRandom {
             this.field_a[var2Lifetime2 + 7] = var10;
             var2Lifetime2 += 8;
           }
-          this.a(-53);
+          this.generateResults(-53);
           this.field_b = 256;
           return;
         }
@@ -249,7 +249,7 @@ final class IsaacRandom {
           this.field_a[var2Lifetime2 + 7] = var10;
           var2Lifetime2 += 8;
         }
-        this.a(-53);
+        this.generateResults(-53);
         this.field_b = 256;
     }
 
@@ -261,13 +261,13 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_f[var2_int] = param0[var2_int];
           }
-          this.b(true);
+          this.initializeState(true);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "bm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int fieldTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;

@@ -167,7 +167,7 @@ class vn extends bj implements mj {
             }
           } else {
             var6.a(11, 29, PcmOutputWorker.field_a);
-            var6.a(17, 62, sn.field_b);
+            var6.a(17, 62, HuffmanCodec.field_b);
           }
           if (param0 != 3) {
             if (param0 != 4) {

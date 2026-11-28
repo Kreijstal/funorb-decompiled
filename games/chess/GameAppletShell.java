@@ -357,7 +357,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             bh.field_H = var2.readString(0);
           }
           if (!param1) {
-            sn.field_g = am.a(var2, 80, (byte) 89);
+            HuffmanCodec.field_g = am.a(var2, 80, (byte) 89);
             mk.field_d = null;
           }
           if (param1 ||
@@ -365,7 +365,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var5 = var2.readUnsignedShort(674914976);
             try {
               var6 = ProxyAuthenticationRequiredException.field_b.a((byte) 79, var5);
-              sn.field_g = var6.e((byte) -125);
+              HuffmanCodec.field_g = var6.e((byte) -125);
               if (!oh.field_e.equals(ci.field_J)) {
                 stackIn_39_0 = var6.field_u;
               } else {
@@ -377,7 +377,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               var6_ref = (Exception) (Object) decompiledCaughtException;
               fg.a((Throwable) ((Object) var6_ref), (byte) -77, "CC1");
               mk.field_d = null;
-              sn.field_g = null;
+              HuffmanCodec.field_g = null;
             }
           }
           stackIn_43_0 = new ld(param1);

@@ -14,15 +14,15 @@ final class df {
         int var1_int = 0;
         ai var2 = null;
         int var3 = 0;
-        ja var4 = null;
+        HuffmanDecoder var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         ai var2Lifetime1;
         var3 = DungeonAssault.field_K;
         try {
           if (param0 != 16) {
-            var4 = (ja) null;
-            df.a((byte) 115, (ja) null);
+            var4 = (HuffmanDecoder) null;
+            df.a((byte) 115, (HuffmanDecoder) null);
           }
           for (var1_int = 0; var1_int < 49; var1_int++) {
             var2 = qj.field_c[var1_int];
@@ -133,7 +133,7 @@ final class df {
         }
     }
 
-    final static void a(byte param0, ja param1) {
+    final static void a(byte param0, HuffmanDecoder param1) {
         try {
           qh.field_G = param1;
           if (param0 != 11) {

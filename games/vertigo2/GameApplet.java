@@ -67,7 +67,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              ke.a(var8_ref, (String) null, 0);
+              HuffmanCodec.a(var8_ref, (String) null, 0);
               this.a(0, "crash");
             }
             return;
@@ -325,7 +325,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int <= var4))) {
-            stackIn_9_0 = (var3 << 5) - var3 + ke.a(param0.charAt(var4), (byte) -120);
+            stackIn_9_0 = (var3 << 5) - var3 + HuffmanCodec.a(param0.charAt(var4), (byte) -120);
             if (var5 == 0) {
               var3 = stackIn_9_0;
               var4++;
@@ -1048,7 +1048,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              ke.a((Throwable) (var1), (String) null, 0);
+              HuffmanCodec.a((Throwable) (var1), (String) null, 0);
               this.a(0, "crash");
             }
             this.a((byte) -53, true);

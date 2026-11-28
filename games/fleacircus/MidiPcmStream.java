@@ -454,7 +454,7 @@ final class MidiPcmStream extends PcmStream {
         DualLinkNode.field_i[1] = uj.field_f;
         DualLinkNode.field_i[15] = DiskArchiveRequest.field_C;
         DualLinkNode.field_i[0] = PcmOutputWorker.field_a;
-        DualLinkNode.field_i[14] = pc.field_d;
+        DualLinkNode.field_i[14] = IsaacRandom.field_d;
         DualLinkNode.field_i[4] = AccountServiceResult.field_c;
         DualLinkNode.field_i[7] = a.field_c;
         DualLinkNode.field_i[20] = hg.field_o;

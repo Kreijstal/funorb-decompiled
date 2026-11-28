@@ -205,7 +205,7 @@ final class AccountCreationResultPanel extends af implements qh {
         return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, qi.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, dg.field_G, jl.field_g};
     }
 
-    final static int a(int param0, int param1, hg param2) {
+    final static int a(int param0, int param1, IsaacRandom param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -220,12 +220,12 @@ final class AccountCreationResultPanel extends af implements qh {
             throw new IllegalArgumentException();
           }
           if (ng.a(param0, (byte) -128)) {
-            stackIn_6_0 = (int)((long)param0 * ((long)param2.b(-1427) & 4294967295L) >> 32);
+            stackIn_6_0 = (int)((long)param0 * ((long)param2.nextInt(-1427) & 4294967295L) >> 32);
             return stackIn_6_0;
           }
           var3_int = -(int)(4294967296L % (long)param0) + param1;
           do {
-            var4 = param2.b(-1427);
+            var4 = param2.nextInt(-1427);
           } while (var4 >= var3_int);
           stackIn_11_0 = sk.a(124, param0, var4);
           return stackIn_11_0;

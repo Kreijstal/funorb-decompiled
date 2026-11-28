@@ -36,7 +36,7 @@ final class OhNoEvent extends SpecialEvent {
         co.field_b = null;
         hh.field_b = null;
         DreamsEvent.field_r = null;
-        il.field_a = null;
+        HuffmanCodec.field_a = null;
         hl.field_D = null;
         lf.field_b = null;
         DefaultWidgetRenderer.field_h = null;
@@ -95,7 +95,7 @@ final class OhNoEvent extends SpecialEvent {
           ld.field_l = null;
           fw.field_f = null;
           sv.field_c = null;
-          il.field_b = null;
+          HuffmanCodec.field_b = null;
           Runtime.getRuntime().gc();
           return;
         }
@@ -107,7 +107,7 @@ final class OhNoEvent extends SpecialEvent {
         ld.field_l = null;
         fw.field_f = null;
         sv.field_c = null;
-        il.field_b = null;
+        HuffmanCodec.field_b = null;
         Runtime.getRuntime().gc();
     }
 

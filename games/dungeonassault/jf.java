@@ -68,7 +68,7 @@ final class jf extends en {
             return stackIn_2_0;
           }
           if (kk.a(param1, 1, param2, param0)) {
-            stackIn_7_0 = ff.a((byte) 86);
+            stackIn_7_0 = IsaacRandom.a((byte) 86);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

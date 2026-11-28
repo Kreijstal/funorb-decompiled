@@ -7,7 +7,7 @@ final class ad extends vh {
 
     final static void a(int param0, int param1, byte param2) {
         dd.field_o = 1;
-        nf.field_e = param1;
+        IsaacRandom.field_e = param1;
         if (param2 > -22) {
           ad.releaseDeclaredStaticReferences(-126);
           jh.field_a = param0;

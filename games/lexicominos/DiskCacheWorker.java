@@ -243,7 +243,7 @@ final class DiskCacheWorker implements Runnable {
     final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4, BitmapFont param5, int param6, byte param7, RgbSprite[] param8, boolean param9, int param10, int param11) {
         try {
           int var12_int = 11 / ((18 - param7) / 37);
-          pe.a(param10, param1, param2, param5, param0, param8, param3, param6, param5, param0, param4, -98, param11, param10, param9);
+          IsaacRandom.a(param10, param1, param2, param5, param0, param8, param3, param6, param5, param0, param4, -98, param11, param10, param9);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "kl.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ')');
         }

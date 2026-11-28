@@ -28,7 +28,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (var5_int = param1; param2 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[var5_int + param3] = (byte)(this.payload[fieldTemp$0] - this.field_q.c(km.a(param1, 256)));
+            param0[var5_int + param3] = (byte)(this.payload[fieldTemp$0] - this.field_q.nextInt(km.a(param1, 256)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,7 +52,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void b(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_q.c(256) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_q.nextInt(256) + param1);
         if (!param0) {
           this.j(-107);
         }
@@ -188,12 +188,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 == -1) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_q.c(param0 ^ -257) & 255;
+          return this.payload[fieldTemp$0] - this.field_q.nextInt(param0 ^ -257) & 255;
         }
         field_r = (PcmStreamMixer) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_q.c(param0 ^ -257) & 255;
+        return this.payload[fieldTemp$1] - this.field_q.nextInt(param0 ^ -257) & 255;
     }
 
     final void j(int param0) {

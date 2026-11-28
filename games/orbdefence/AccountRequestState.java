@@ -633,7 +633,7 @@ final class AccountRequestState {
           }
           var2Lifetime78 = jk.a(1, "flyboname");
           if (var2Lifetime78 != null) {
-            re.field_g = ProxyAuthenticationRequiredException.a(var2Lifetime78, -12465);
+            IsaacRandom.field_g = ProxyAuthenticationRequiredException.a(var2Lifetime78, -12465);
           }
           var2Lifetime79 = jk.a(1, "toughoname");
           if (var2Lifetime79 != null) {
@@ -641,7 +641,7 @@ final class AccountRequestState {
           }
           var2Lifetime80 = jk.a(1, "speedoname");
           if (null != var2Lifetime80) {
-            re.field_f = ProxyAuthenticationRequiredException.a(var2Lifetime80, -12465);
+            IsaacRandom.field_f = ProxyAuthenticationRequiredException.a(var2Lifetime80, -12465);
           }
           var2Lifetime81 = jk.a(1, "swarmoname");
           if (var2Lifetime81 != null) {

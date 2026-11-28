@@ -44,7 +44,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -83,7 +83,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void b(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = MinerDisturbance.field_ab;
         int var2Lifetime1;
@@ -209,7 +209,7 @@ final class IsaacRandom {
           this.field_e[6 + var2Lifetime2] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) -91);
+        this.generateResults((byte) -91);
         this.field_d = 256;
     }
 
@@ -218,12 +218,12 @@ final class IsaacRandom {
         return new pf(lm.n(81), wc.b((byte) 117));
     }
 
-    final int b(int param0) {
+    final int nextInt(int param0) {
         if (param0 != 4) {
           return 35;
         }
         if (this.field_d == 0) {
-          this.a((byte) -91);
+          this.generateResults((byte) -91);
           this.field_d = 256;
         }
         int fieldTemp$0 = this.field_d - 1;
@@ -239,7 +239,7 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_l[var2_int] = param0[var2_int];
           }
-          this.b((byte) 90);
+          this.initializeState((byte) 90);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

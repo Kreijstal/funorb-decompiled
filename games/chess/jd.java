@@ -119,7 +119,7 @@ final class jd {
           return k.field_V + " - " + fl.field_m.c("commonui", 0) + "%";
         }
         if (!Chess.field_B.c((byte) 119)) {
-          return sn.field_d;
+          return HuffmanCodec.field_d;
         }
         if (!Chess.field_B.b("commonui", 100)) {
           return nc.field_P + " - " + Chess.field_B.c("commonui", 0) + "%";

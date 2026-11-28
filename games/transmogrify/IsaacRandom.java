@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ug {
+final class IsaacRandom {
     static Sprite field_f;
     static int[] field_c;
     private int[] field_j;
@@ -41,7 +41,7 @@ final class ug {
         sh.field_c = null;
     }
 
-    private final void b(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -77,7 +77,7 @@ final class ug {
         }
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         int fieldTemp$0 = 0;
         int var2 = 0;
         int var2Lifetime1;
@@ -87,7 +87,7 @@ final class ug {
           this.field_a = this.field_a - 1;
           return this.field_e[fieldTemp$0];
         }
-        this.b(0);
+        this.generateResults(0);
         this.field_a = 256;
         var2Lifetime1 = -39 / ((11 - param0) / 54);
         int fieldTemp$1 = this.field_a - 1;
@@ -95,7 +95,7 @@ final class ug {
         return this.field_e[fieldTemp$1];
     }
 
-    ug(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_e = new int[256];
@@ -103,7 +103,7 @@ final class ug {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_e[var2_int] = param0[var2_int];
           }
-          this.a(true);
+          this.initializeState(true);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ug.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -120,7 +120,7 @@ final class ug {
         field_f = null;
     }
 
-    private final void a(boolean param0) {
+    private final void initializeState(boolean param0) {
         int var2 = 0;
         int var11 = Transmogrify.field_A ? 1 : 0;
         int var2Lifetime1;
@@ -246,7 +246,7 @@ final class ug {
           this.field_j[6 + var2Lifetime2] = var9;
           this.field_j[7 + var2Lifetime2] = var10;
         }
-        this.b(0);
+        this.generateResults(0);
         this.field_a = 256;
     }
 

@@ -18,7 +18,7 @@ final class th extends wj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, 3917) == ol.field_h) {
+          if (this.a(param1, 3917) == IsaacRandom.field_h) {
             stackIn_3_0 = mh.field_H;
             return stackIn_3_0;
           }
@@ -129,7 +129,7 @@ final class th extends wj {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!ra.a(var4, (byte) -128)) {
-            stackIn_3_0 = ol.field_h;
+            stackIn_3_0 = IsaacRandom.field_h;
             return stackIn_3_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -142,7 +142,7 @@ final class th extends wj {
             stackIn_12_0 = wj.field_i;
             return stackIn_12_0;
           }
-          stackIn_8_0 = ol.field_h;
+          stackIn_8_0 = IsaacRandom.field_h;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

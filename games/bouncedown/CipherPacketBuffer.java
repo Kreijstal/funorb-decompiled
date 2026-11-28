@@ -5,7 +5,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String field_l;
     static int field_k;
     static int[] field_n;
-    private qb field_o;
+    private IsaacRandom field_o;
     private int field_m;
 
     final void o(int param0) {
@@ -47,7 +47,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void a(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_o.b((byte) 123));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_o.nextInt((byte) 123));
         if (param0) {
           return;
         }
@@ -65,7 +65,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final void b(int[] param0, int param1) {
         try {
-          this.field_o = new qb(param0);
+          this.field_o = new IsaacRandom(param0);
           if (param1 <= 83) {
             this.f(60, 33);
           }
@@ -80,7 +80,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_o.b((byte) 123) & 255;
+        return this.payload[fieldTemp$0] - this.field_o.nextInt((byte) 123) & 255;
     }
 
     CipherPacketBuffer(int param0) {
@@ -120,7 +120,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (var5_int < param0) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_o.b((byte) 123));
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_o.nextInt((byte) 123));
             var5_int++;
           }
           return;

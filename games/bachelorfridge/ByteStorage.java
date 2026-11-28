@@ -58,7 +58,7 @@ abstract class ByteStorage {
             stackIn_2_0 = -15;
             return stackIn_2_0;
           }
-          param1.position = param1.position + jka.field_l.a(var4, var4.length, param2 + 42697, param1.payload, 0, param1.position);
+          param1.position = param1.position + jka.field_l.compress(var4, var4.length, param2 + 42697, param1.payload, 0, param1.position);
           stackIn_4_0 = -var3_int + param1.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

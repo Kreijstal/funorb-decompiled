@@ -44,11 +44,11 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
               var6 = GameEntity.$cfr$intArgs$a$590e95718a07(-103, stellarshard.field_L[var3_int], true);
               var4 = var4 + nh.field_f;
               var7 = DualLinkDequeIterator.field_b - (var6 >> 1);
-              if (ma.a(param0, var7 - le.field_k, var4, (byte) -86, na.field_a + (nh.field_h << 1), param1, var6 + (le.field_k << 1))) {
+              if (ma.a(param0, var7 - le.field_k, var4, (byte) -86, IsaacRandom.field_a + (nh.field_h << 1), param1, var6 + (le.field_k << 1))) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (na.field_a + ((nh.field_h << 1) + nh.field_f));
+              var4 = var4 + (IsaacRandom.field_a + ((nh.field_h << 1) + nh.field_f));
             }
             var3_int++;
           }

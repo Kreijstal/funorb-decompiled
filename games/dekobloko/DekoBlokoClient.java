@@ -515,7 +515,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                     if (integerLocal27 != 10) {
                       musicTrackArrayLocal50 = MixedSupport113.musicTrackArrayArrayState0001[integerLocal42];
                     } else {
-                      musicTrackArrayLocal50 = MixedSupport030.musicTrackArrayState0001;
+                      musicTrackArrayLocal50 = IsaacRandom.musicTrackArrayState0001;
                     }
                     MixedSupport087.performAction1134(gameSessionLocal47.computeInteger1323(true), musicTrackArrayLocal50[0], true);
                     continue scanLoop2;
@@ -1422,7 +1422,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         MixedSupport134.resetStaticState(-66);
         MixedSupport048.clearStaticReferences(98);
         MixedSupport043.performAction0546(true);
-        MixedSupport030.clearStaticReferences((byte) -78);
+        IsaacRandom.clearStaticReferences((byte) -78);
         MixedSupport054.performAction0634((byte) 126);
         ReturnedShape.performAction1433(false);
         RenderingSupport006.clearStaticReferences(123);
@@ -2630,10 +2630,10 @@ public final class DekoBlokoClient extends FunOrbClient {
             MixedSupport090.rawSoundState0015 = UiComponentPart016.networkSupport011State0001.computeRawSound1257((byte) 101, "", "db_loose_drill");
             MixedSupport040.rawSoundState0008 = UiComponentPart016.networkSupport011State0001.computeRawSound1257((byte) 101, "", "db_bucket_water_capsule2");
             NetworkSupport010.rawSoundState0017 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_quake", integerArgument1 ^ 0);
-            MixedSupport030.rawSoundState0006 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_special_item_explode", integerArgument1 ^ 0);
+            IsaacRandom.rawSoundState0006 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_special_item_explode", integerArgument1 ^ 0);
             pcmResamplerLocal24 = new PcmResampler(22050, 11025);
             NetworkSupport010.rawSoundState0017 = NetworkSupport010.rawSoundState0017.resample(pcmResamplerLocal24);
-            MixedSupport030.rawSoundState0006 = MixedSupport030.rawSoundState0006.resample(pcmResamplerLocal24);
+            IsaacRandom.rawSoundState0006 = IsaacRandom.rawSoundState0006.resample(pcmResamplerLocal24);
             SceneWidget.rawSoundState0022 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_poison", integerArgument1 ^ 0);
             MixedSupport103.rawSoundState0018 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_glass_lower", 0);
             SceneWidgetPart003.rawSoundArrayState0001[2] = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_bucket_glass_crack2_2", integerArgument1 + 0);
@@ -2688,10 +2688,10 @@ public final class DekoBlokoClient extends FunOrbClient {
             MixedSupport113.musicTrackArrayArrayState0001[5][1] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Swab the Deks!_remix_PANIC");
             MixedSupport113.musicTrackArrayArrayState0001[5][2] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Swab the Deks!_remix_REALLY_PANIC");
             MixedSupport113.musicTrackArrayArrayState0001[5][3] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Swab the Deks!_remix_FINISH_THEM");
-            MixedSupport030.musicTrackArrayState0001[0] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_NORMAL");
-            MixedSupport030.musicTrackArrayState0001[1] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_PANIC");
-            MixedSupport030.musicTrackArrayState0001[2] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_REALLY_PANIC");
-            MixedSupport030.musicTrackArrayState0001[3] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_FINISH_THEM");
+            IsaacRandom.musicTrackArrayState0001[0] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_NORMAL");
+            IsaacRandom.musicTrackArrayState0001[1] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_PANIC");
+            IsaacRandom.musicTrackArrayState0001[2] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_REALLY_PANIC");
+            IsaacRandom.musicTrackArrayState0001[3] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/momentum_remix_FINISH_THEM");
             SceneWidgetPart004.musicTrackState0001 = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Deko Bloko Game Win");
             MixedSupport110.musicTrackState0006 = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Deko Bloko Game Lose");
             MouseInput.resourceArchiveState0026 = null;

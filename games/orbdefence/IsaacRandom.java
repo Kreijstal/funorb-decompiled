@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re {
+final class IsaacRandom {
     private int field_e;
     private int field_d;
     private int field_h;
@@ -11,7 +11,7 @@ final class re {
     static String field_f;
     private int field_c;
 
-    private final void b(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var12 = OrbDefence.field_D ? 1 : 0;
         int var3 = -1640531527;
@@ -135,7 +135,7 @@ final class re {
           this.field_a[6 + var2Lifetime2] = var9;
           this.field_a[7 + var2Lifetime2] = var10;
         }
-        this.a((byte) 122);
+        this.generateResults((byte) 122);
         this.field_c = 256;
     }
 
@@ -147,9 +147,9 @@ final class re {
         field_f = null;
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (0 == this.field_c) {
-          this.a((byte) 119);
+          this.generateResults((byte) 119);
           this.field_c = 256;
         }
         if (param0 != 128) {
@@ -160,7 +160,7 @@ final class re {
         return this.field_b[fieldTemp$0];
     }
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -169,7 +169,7 @@ final class re {
         int var5;
         var5 = OrbDefence.field_D ? 1 : 0;
         if (param0 < 118) {
-          this.a(92);
+          this.nextInt(92);
         }
         int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
@@ -199,7 +199,7 @@ final class re {
         }
     }
 
-    re(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_b = new int[256];
@@ -207,7 +207,7 @@ final class re {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
-          this.b((byte) 92);
+          this.initializeState((byte) 92);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -19,7 +19,7 @@ final class jd extends PacketBuffer {
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
-          stackIn_4_0 = this.payload[fieldTemp$1] - this.field_n.a((byte) 7) & 255;
+          stackIn_4_0 = this.payload[fieldTemp$1] - this.field_n.nextInt((byte) 7) & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,7 +292,7 @@ final class jd extends PacketBuffer {
           while (param1 > var5_int) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.a((byte) -78));
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.nextInt((byte) -78));
             var5_int++;
             if (var6 != 0) {
               return;
@@ -406,7 +406,7 @@ final class jd extends PacketBuffer {
           }
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$1] = (byte)(this.field_n.a((byte) 103) + param0);
+          this.payload[fieldTemp$1] = (byte)(this.field_n.nextInt((byte) 103) + param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -265,22 +265,22 @@ class jg extends bg {
               var8.a(param1, Bzip2State.field_q);
               var8.field_R = var10Lifetime1;
               if (var12 != 0) {
-                ke.field_e[2] = Bzip2State.field_q[2];
-                ke.field_e[0] = Bzip2State.field_q[0];
-                ke.field_e[1] = Bzip2State.field_q[1];
+                HuffmanCodec.field_e[2] = Bzip2State.field_q[2];
+                HuffmanCodec.field_e[0] = Bzip2State.field_q[0];
+                HuffmanCodec.field_e[1] = Bzip2State.field_q[1];
                 var10Lifetime1 = var8.field_R;
                 var8.field_R = param3;
-                var8.a(param1, ke.field_e);
+                var8.a(param1, HuffmanCodec.field_e);
                 var8.field_R = var10Lifetime1;
               }
             }
           } else {
-            ke.field_e[2] = Bzip2State.field_q[2];
-            ke.field_e[0] = Bzip2State.field_q[0];
-            ke.field_e[1] = Bzip2State.field_q[1];
+            HuffmanCodec.field_e[2] = Bzip2State.field_q[2];
+            HuffmanCodec.field_e[0] = Bzip2State.field_q[0];
+            HuffmanCodec.field_e[1] = Bzip2State.field_q[1];
             var10Lifetime1 = var8.field_R;
             var8.field_R = param3;
-            var8.a(param1, ke.field_e);
+            var8.a(param1, HuffmanCodec.field_e);
             var8.field_R = var10Lifetime1;
           }
           if (null != var9 &&
@@ -644,8 +644,8 @@ class jg extends bg {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_g = param2;
-          if (ke.field_e == null) {
-            ke.field_e = new int[]{0, 0, 0, oo.field_h[0], 0, -oo.field_j[0], 0, 65536, 0, oo.field_j[0], 0, oo.field_h[0]};
+          if (HuffmanCodec.field_e == null) {
+            HuffmanCodec.field_e = new int[]{0, 0, 0, oo.field_h[0], 0, -oo.field_j[0], 0, 65536, 0, oo.field_j[0], 0, oo.field_h[0]};
           }
           this.field_l = param1;
           this.field_s = param3;

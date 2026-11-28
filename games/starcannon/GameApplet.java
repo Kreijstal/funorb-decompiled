@@ -542,8 +542,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.b(-40);
           }
           var2_long = dd.correctedCurrentTimeMillis(param0 + 160);
-          var4 = jb.field_j[kg.field_b];
-          jb.field_j[kg.field_b] = var2_long;
+          var4 = IsaacRandom.field_j[kg.field_b];
+          IsaacRandom.field_j[kg.field_b] = var2_long;
           kg.field_b = 31 & kg.field_b + 1;
           if (var4 != 0L &&
             var2_long > var4) {

@@ -158,12 +158,12 @@ abstract class GameShell extends GameApplet {
           if (0 != np.field_Lb) {
             qc.field_B = BufferedSocket.a(eh.field_f, 125);
           }
-          ke.field_b = FrameTimer.a(mp.field_d, false, true, false, 1);
+          HuffmanCodec.field_b = FrameTimer.a(mp.field_d, false, true, false, 1);
           la.field_e = FrameTimer.a(rh.field_F, false, true, false, 1);
           kb.field_b = FrameTimer.a(mk.field_G, false, true, false, 1);
           qc.field_A = 2;
           ac.field_G = la.field_e;
-          ml.field_y = ke.field_b;
+          ml.field_y = HuffmanCodec.field_b;
         }
         if (qc.field_A == 2) {
           if (null != qc.field_B &&
@@ -183,13 +183,13 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (qc.field_A == 3 &&
-          ir.a(-95, la.field_e, ke.field_b, kb.field_b) &&
+          ir.a(-95, la.field_e, HuffmanCodec.field_b, kb.field_b) &&
           lm.a(kb.field_b, (byte) 119)) {
           hb.e(-1);
           vl.b(2147483647);
           mg.field_O = false;
           IntrusiveNode.field_h = mq.field_t;
-          we.a(kb.field_b, pl.field_i, (byte) -7, ke.field_b, la.field_e);
+          we.a(kb.field_b, pl.field_i, (byte) -7, HuffmanCodec.field_b, la.field_e);
           if (pb.field_f ||
             null != MouseWheelInput.field_f) {
             stackIn_102_0 = MouseWheelInput.field_f;
@@ -207,7 +207,7 @@ abstract class GameShell extends GameApplet {
           }
           DiskCacheWorker.a(oq.field_E, param1 + 1513245, AccountRequestState.field_c, kb.field_b);
           la.field_e = null;
-          ke.field_b = null;
+          HuffmanCodec.field_b = null;
           kb.field_b = null;
           tq.a(false, (java.applet.Applet) (this));
           di.b((byte) -68);
@@ -391,7 +391,7 @@ abstract class GameShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              ke.a((Throwable) ((Object) var6), "S1", 0);
+              HuffmanCodec.a((Throwable) ((Object) var6), "S1", 0);
               var11 = (String) null;
               om.a((String) null, (byte) -39);
               ja.field_d = null;
@@ -559,7 +559,7 @@ abstract class GameShell extends GameApplet {
                                 pq.a((byte) 111);
                                 return;
                               }
-                              ke.a((Throwable) null, "MGS1: " + or.a(115), 0);
+                              HuffmanCodec.a((Throwable) null, "MGS1: " + or.a(115), 0);
                               rm.b((byte) 127);
                               return;
                             }
@@ -585,7 +585,7 @@ abstract class GameShell extends GameApplet {
           }
           return;
         }
-        ke.a((Throwable) null, "MGS2: " + or.a(117), 0);
+        HuffmanCodec.a((Throwable) null, "MGS2: " + or.a(117), 0);
         rm.b((byte) -52);
         return;
     }
@@ -641,7 +641,7 @@ abstract class GameShell extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            ke.a((Throwable) ((Object) var6_ref), (String) null, 0);
+            HuffmanCodec.a((Throwable) ((Object) var6_ref), (String) null, 0);
             this.a(0, "crash");
           }
           return;

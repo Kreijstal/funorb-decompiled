@@ -123,7 +123,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 == 64) {
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          return this.field_n[fieldTemp$0] - this.field_r.a(true) & 255;
+          return this.field_n[fieldTemp$0] - this.field_r.nextInt(true) & 255;
         }
         return 42;
     }
@@ -146,7 +146,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           while (param1 > var5_int) {
             fieldTemp$0 = this.field_i;
             this.field_i = this.field_i + 1;
-            param2[var5_int + param0] = (byte)(this.field_n[fieldTemp$0] - this.field_r.a(true));
+            param2[var5_int + param0] = (byte)(this.field_n[fieldTemp$0] - this.field_r.nextInt(true));
             var5_int++;
           }
           return;
@@ -167,7 +167,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void i(int param0, int param1) {
         int fieldTemp$0 = this.field_i;
         this.field_i = this.field_i + 1;
-        this.field_n[fieldTemp$0] = (byte)(this.field_r.a(true) + param1);
+        this.field_n[fieldTemp$0] = (byte)(this.field_r.nextInt(true) + param1);
         if (param0 != 19319) {
           this.field_x = -13;
           return;

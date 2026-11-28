@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class na {
+final class IsaacRandom {
     private int field_f;
     static Sprite field_e;
     static int field_a;
@@ -20,7 +20,7 @@ final class na {
           eh.field_a = new qc(param3);
           DirectByteStorage.field_h = param2;
           if (param1 != 256) {
-            na.a(67, 84, 117, false, true, true);
+            IsaacRandom.a(67, 84, 117, false, true, true);
           }
           PacketBuffer.field_q = param0;
           tf.a(0);
@@ -29,7 +29,7 @@ final class na {
         }
     }
 
-    private final void d(int param0) {
+    private final void generateResults(int param0) {
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
         int var2;
@@ -42,7 +42,7 @@ final class na {
         this.field_i = this.field_i + fieldTemp$0;
         var2 = 0;
         if (param0 < 113) {
-          this.d(20);
+          this.generateResults(20);
         }
         while (var2 < 256) {
           var3 = this.field_g[var2];
@@ -70,7 +70,7 @@ final class na {
         }
     }
 
-    private final void c(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = stellarshard.field_B;
         int var4 = -1640531527;
@@ -196,7 +196,7 @@ final class na {
           this.field_g[6 + var2Lifetime2] = var9;
           this.field_g[var2Lifetime2 + 7] = var10;
         }
-        this.d(116);
+        this.generateResults(116);
         this.field_b = 256;
     }
 
@@ -246,12 +246,12 @@ final class na {
         }
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (param0 != -609392408) {
-          this.c(22);
+          this.initializeState(22);
         }
         if (this.field_b == 0) {
-          this.d(120);
+          this.generateResults(120);
           this.field_b = 256;
         }
         int fieldTemp$0 = this.field_b - 1;
@@ -266,7 +266,7 @@ final class na {
         int var1 = -42 / ((61 - param0) / 60);
     }
 
-    na(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_g = new int[256];
@@ -274,7 +274,7 @@ final class na {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_h[var2_int] = param0[var2_int];
           }
-          this.c(1301311304);
+          this.initializeState(1301311304);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

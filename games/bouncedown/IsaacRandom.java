@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qb {
+final class IsaacRandom {
     private int field_b;
     private int field_e;
     private int field_a;
@@ -13,12 +13,12 @@ final class qb {
     static uf field_h;
     static IntrusiveDeque field_g;
 
-    final int b(byte param0) {
+    final int nextInt(byte param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (this.field_b == 0) {
-          this.a(4094);
+          this.generateResults(4094);
           this.field_b = 256;
           if (param0 != 123) {
             this.field_b = 27;
@@ -271,7 +271,7 @@ final class qb {
             return false;
           }
           if (param0 >= -122) {
-            qb.a(-112, 114);
+            IsaacRandom.a(-112, 114);
           }
           if (param2.length() == 0) {
             return true;
@@ -306,7 +306,7 @@ final class qb {
         }
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int dupTemp$3 = 0;
         int dupTemp$4 = 0;
         int dupTemp$1 = 0;
@@ -351,7 +351,7 @@ final class qb {
           return;
         }
         var6 = (String) null;
-        qb.a(-56, (String) null, (String) null);
+        IsaacRandom.a(-56, (String) null, (String) null);
         while (var2 < 256) {
           var3Lifetime1 = this.field_c[var2];
           if ((var2 & 2) != 0) {
@@ -386,11 +386,11 @@ final class qb {
           return;
         }
         String var2 = (String) null;
-        qb.a(-124, (String) null, (String) null);
+        IsaacRandom.a(-124, (String) null, (String) null);
         field_g = null;
     }
 
-    private final void b(boolean param0) {
+    private final void initializeState(boolean param0) {
         int var2 = 0;
         int var11 = Bounce.field_N;
         int var5 = -1640531527;
@@ -472,7 +472,7 @@ final class qb {
           this.field_c[7 + var2Lifetime1] = var10;
         }
         if (param0) {
-          qb.a(false, 81);
+          IsaacRandom.a(false, 81);
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var7 = var7 + this.field_c[4 + var2Lifetime2];
@@ -516,11 +516,11 @@ final class qb {
           this.field_c[var2Lifetime2 + 6] = var9;
           this.field_c[7 + var2Lifetime2] = var10;
         }
-        this.a(4094);
+        this.generateResults(4094);
         this.field_b = 256;
     }
 
-    qb(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_f = new int[256];
@@ -528,7 +528,7 @@ final class qb {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_f[var2_int] = param0[var2_int];
           }
-          this.b(false);
+          this.initializeState(false);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

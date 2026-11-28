@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja {
+final class HuffmanDecoder {
     static String[] field_d;
     private int[] field_e;
     private int[] field_c;
@@ -17,7 +17,7 @@ final class ja {
         field_b = null;
     }
 
-    final int a(byte[] param0, byte[] param1, byte param2, int param3, int param4, int param5) {
+    final int decompress(byte[] param0, byte[] param1, byte param2, int param3, int param4, int param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -60,7 +60,7 @@ final class ja {
         try {
           if (param2 != -88) {
             var12 = (byte[]) null;
-            this.a((byte[]) null, (byte[]) null, (byte) 93, -112, -52, -44);
+            this.decompress((byte[]) null, (byte[]) null, (byte) 93, -112, -52, -44);
           }
           if (param5 == 0) {
             stackIn_6_0 = 0;
@@ -225,7 +225,7 @@ final class ja {
         }
     }
 
-    ja(byte[] param0) {
+    HuffmanDecoder(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;

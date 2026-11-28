@@ -3,7 +3,7 @@
  */
 final class ih extends PacketBuffer {
     private int field_o;
-    private pc field_n;
+    private IsaacRandom field_n;
     static PcmSample field_l;
     static String field_m;
 
@@ -24,12 +24,12 @@ final class ih extends PacketBuffer {
         if (param0 == 47) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_n.a(995108848) & 255;
+          return this.payload[fieldTemp$0] - this.field_n.nextInt(995108848) & 255;
         }
         this.m(-38);
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_n.a(995108848) & 255;
+        return this.payload[fieldTemp$1] - this.field_n.nextInt(995108848) & 255;
     }
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -43,9 +43,9 @@ final class ih extends PacketBuffer {
     final void e(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_n.a(995108848) + param1);
+        this.payload[fieldTemp$0] = (byte)(this.field_n.nextInt(995108848) + param1);
         if (param0 != 8) {
-          this.field_n = (pc) null;
+          this.field_n = (IsaacRandom) null;
         }
     }
 
@@ -128,7 +128,7 @@ final class ih extends PacketBuffer {
           for (var5_int = 0; param1 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_n.a(995108848));
+            param3[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_n.nextInt(995108848));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ final class ih extends PacketBuffer {
 
     final void a(int[] param0, byte param1) {
         try {
-          this.field_n = new pc(param0);
+          this.field_n = new IsaacRandom(param0);
           if (param1 != 12) {
             this.e(-95, -126);
           }

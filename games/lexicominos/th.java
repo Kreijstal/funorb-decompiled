@@ -9,7 +9,7 @@ final class th extends PacketBuffer {
     private int field_q;
     static int field_r;
     static PcmSampleStream[] field_o;
-    private pe field_n;
+    private IsaacRandom field_n;
     static int field_t;
     static RgbSprite[] field_l;
     static int field_s;
@@ -19,12 +19,12 @@ final class th extends PacketBuffer {
         if (param0 == -76) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_n.c(0) & 255;
+          return this.payload[fieldTemp$0] - this.field_n.nextInt(0) & 255;
         }
         field_u = (sh) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_n.c(0) & 255;
+        return this.payload[fieldTemp$1] - this.field_n.nextInt(0) & 255;
     }
 
     final void f(int param0) {
@@ -66,7 +66,7 @@ final class th extends PacketBuffer {
     final void h(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param0 + this.field_n.c(param1));
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_n.nextInt(param1));
     }
 
     final void e(int param0) {
@@ -180,7 +180,7 @@ final class th extends PacketBuffer {
           for (var6 = 0; param0 > var6; var6++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var6 + param1] = (byte)(this.payload[fieldTemp$0] - this.field_n.c(0));
+            param3[var6 + param1] = (byte)(this.payload[fieldTemp$0] - this.field_n.nextInt(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,7 +200,7 @@ final class th extends PacketBuffer {
     final void a(int[] param0, int param1) {
         try {
           int var3_int = 18 / ((param1 + 36) / 50);
-          this.field_n = new pe(param0);
+          this.field_n = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "th.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -217,7 +217,7 @@ final class bl {
           lb.field_o = null;
           nb.field_d = oh.a(hj.field_Z, "", 11091, "base");
           var11 = kn.a(hj.field_Z, "", "room_icons", -66);
-          ja.field_b = kn.a(hj.field_Z, "", "room_icons_2d", -105);
+          HuffmanDecoder.field_b = kn.a(hj.field_Z, "", "room_icons_2d", -105);
           field_d = kn.a(hj.field_Z, "", "wall_icons_2d", -84);
           ri.field_d = kn.a(hj.field_Z, "", "walls", -127);
           mc.field_w = kn.a(hj.field_Z, "", "room_floors", -78);

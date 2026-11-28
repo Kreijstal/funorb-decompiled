@@ -141,7 +141,7 @@ public final class Lexicominos extends nk {
                           al.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
                           return false;
                         }
-                        al.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", pe.field_e, qf.field_s), 9.0f);
+                        al.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, qf.field_s), 9.0f);
                         return false;
                       }
                       al.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, DiskArchiveRequest.field_y), 6.0f);
@@ -159,7 +159,7 @@ public final class Lexicominos extends nk {
               al.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
               return false;
             }
-            al.a(16, rh.a(th.field_p, (byte) 55, "basic", pe.field_e, qf.field_s), 0.0f);
+            al.a(16, rh.a(th.field_p, (byte) 55, "basic", IsaacRandom.field_e, qf.field_s), 0.0f);
             return false;
           }
           if (SecondaryNodeDequeIterator.field_b != null) {
@@ -1010,7 +1010,7 @@ public final class Lexicominos extends nk {
           kb.a(false);
           q.clearStaticReferences((byte) 70);
           ph.a(87);
-          pe.clearStaticReferences((byte) -81);
+          IsaacRandom.clearStaticReferences((byte) -81);
           qf.e((byte) -15);
           ci.clearStaticReferences((byte) -127);
           NetworkArchiveRequest.clearStaticReferences((byte) -63);
@@ -1753,8 +1753,8 @@ public final class Lexicominos extends nk {
                     if (stackIn_336_0 == stackIn_336_1) {
                       ob.a(0, sk.field_a, (byte) 22, ' ');
                     } else {
-                      if (ci.a(true, pe.field_b)) {
-                        discarded$3 = sk.field_a.append(pe.field_b);
+                      if (ci.a(true, IsaacRandom.field_b)) {
+                        discarded$3 = sk.field_a.append(IsaacRandom.field_b);
                         if (na.a(1048576, (CharSequence) ((Object) sk.field_a)) == -26658124) {
                           stackIn_265_0 = !(mg.field_B);
                           mg.field_B = stackIn_265_0;
@@ -1784,38 +1784,38 @@ public final class Lexicominos extends nk {
                       el.field_c.field_T) {
                       stackIn_296_0 = System.out;
                       stackIn_296_1 = new StringBuilder().append("keycode=").append(da.field_b).append("; keychar=");
-                      stackIn_296_2 = pe.field_b;
+                      stackIn_296_2 = IsaacRandom.field_b;
                       stackIn_297_3 = !(param0);
                       ((PrintStream) (Object) stackIn_296_0).println(((StringBuilder) (Object) stackIn_296_1).append(va.a(stackIn_296_2, stackIn_297_3)).toString());
-                      if (65 <= pe.field_b &&
-                        pe.field_b <= 90) {
+                      if (65 <= IsaacRandom.field_b &&
+                        IsaacRandom.field_b <= 90) {
                         var3 = 0;
                         while (var3 < 4) {
-                          el.field_c.field_Q.field_h[var3] = pe.field_b;
+                          el.field_c.field_Q.field_h[var3] = IsaacRandom.field_b;
                           var3++;
                         }
                         el.field_c.field_h = true;
                         continue;
                       }
-                      if (pe.field_b >= 49 &&
-                        55 >= pe.field_b) {
-                        el.field_c.field_Q = new ha(el.field_c, -49 + pe.field_b, el.field_c.field_Q.field_h);
+                      if (IsaacRandom.field_b >= 49 &&
+                        55 >= IsaacRandom.field_b) {
+                        el.field_c.field_Q = new ha(el.field_c, -49 + IsaacRandom.field_b, el.field_c.field_Q.field_h);
                         el.field_c.field_h = true;
                         continue;
                       }
                     }
                     if (null != el.field_c &&
-                      pe.field_b == 102) {
+                      IsaacRandom.field_b == 102) {
                       el.field_c.field_T = true;
                     }
                     if (el.field_c != null &&
-                      pe.field_b == 117) {
+                      IsaacRandom.field_b == 117) {
                       el.field_c.field_T = false;
                     }
                     if (el.field_c == null) {
                       continue;
                     }
-                    if (pe.field_b != 105) {
+                    if (IsaacRandom.field_b != 105) {
                       continue;
                     }
                     stackIn_333_0 = el.field_c;

@@ -136,7 +136,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           throw new IllegalStateException();
         }
         pa.field_e = true;
-        qb.a(true, -1402584374);
+        IsaacRandom.a(true, -1402584374);
         if (param0 == -6144) {
           mh.field_U = 0;
           return;

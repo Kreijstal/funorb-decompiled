@@ -25,12 +25,12 @@ final class AccountServiceResult {
         field_d = null;
     }
 
-    final static void a(ke param0, byte param1) {
+    final static void a(HuffmanCodec param0, byte param1) {
         try {
           ko.field_M = param0;
           if (param1 < 97) {
-            ke var3 = (ke) null;
-            AccountServiceResult.a((ke) null, (byte) -110);
+            HuffmanCodec var3 = (HuffmanCodec) null;
+            AccountServiceResult.a((HuffmanCodec) null, (byte) -110);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ch.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

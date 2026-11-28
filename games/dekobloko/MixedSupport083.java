@@ -425,7 +425,7 @@ final class MixedSupport083 {
             }
             UiComponentPart013.sceneWidgetState0048.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(101, MixedSupport113.stringState0491, new String[]{Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0843), Integer.toString(MixedSupport016.sceneWidgetPart013State0001.integerState0840)});
           }
-          stackSceneWidgetLocal14 = MixedSupport030.sceneWidgetState0023;
+          stackSceneWidgetLocal14 = IsaacRandom.sceneWidgetState0023;
           stackBooleanLocal15 = false;
           stackBooleanLocal16 = (booleanArgument3) && (!booleanArgument4) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal14).performAction1772(stackBooleanLocal15, stackBooleanLocal16);

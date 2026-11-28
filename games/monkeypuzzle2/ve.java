@@ -73,7 +73,7 @@ final class ve extends mg {
             }
             if (param3 != null) {
               vl.field_h = new qf(param3);
-              w.a(-1, ol.field_e);
+              w.a(-1, IsaacRandom.field_e);
               if (param3 == kb.field_d) {
                 vl.field_h.a(false);
                 i.field_p.c(vl.field_h);

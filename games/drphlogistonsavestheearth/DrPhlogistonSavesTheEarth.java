@@ -591,7 +591,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           db.clearStaticReferences((byte) 89);
           u.clearStaticReferences((byte) 50);
           t.a((byte) -114);
-          ta.clearStaticReferences(1441320386);
+          IsaacRandom.clearStaticReferences(1441320386);
           cl.clearDeclaredStaticReferences(0);
           hl.e(108);
           NetworkArchiveRequest.clearStaticReferences((byte) -113);
@@ -1953,7 +1953,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           nl.field_n[1] = ij.a("scenery_tile_mothership_window", (byte) 78, kf.field_d, "");
           nl.field_n[2] = ij.a("scenery_tile_mothership_background_3", (byte) 107, kf.field_d, "");
           kc.field_l = ij.a("scenery_tile_mothership_antennae_yagi", (byte) 54, kf.field_d, "");
-          ta.field_d = ij.a("scenery_tile_mothership_antennae_parabolic", (byte) 109, kf.field_d, "");
+          IsaacRandom.field_d = ij.a("scenery_tile_mothership_antennae_parabolic", (byte) 109, kf.field_d, "");
           FrameTimer.field_a = ij.a("scenery_tile_mothership_antennae_yagi_broken", (byte) 90, kf.field_d, "");
           ki.field_a = ij.a("scenery_tile_mothership_antennae_parabolic_broken", (byte) 83, kf.field_d, "");
           hc.field_M[0] = ij.a("scenery_tile_mothership_platform_1", (byte) 110, kf.field_d, "");
@@ -1996,7 +1996,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(91, nl.field_n[1]);
           this.a(118, nl.field_n[2]);
           this.a(118, kc.field_l);
-          this.a(99, ta.field_d);
+          this.a(99, IsaacRandom.field_d);
           this.a(107, FrameTimer.field_a);
           this.a(121, ki.field_a);
           this.a(82, hc.field_M[0]);

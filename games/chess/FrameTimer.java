@@ -639,7 +639,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("message_lobby", -84);
                 if (var2 != null) {
-                  sn.field_e = ad.a(-29410, var2);
+                  HuffmanCodec.field_e = ad.a(-29410, var2);
                 }
                 var2 = cd.a("quickchat_lobby", -123);
                 if (var2 != null) {
@@ -1229,7 +1229,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("quittowebsite", -118);
                 if (null != var2) {
-                  sn.field_b = ad.a(-29410, var2);
+                  HuffmanCodec.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("connectionrestored", -75);
                 if (null != var2) {
@@ -1857,7 +1857,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("waitingfor_fonts", -113);
                 if (var2 != null) {
-                  sn.field_d = ad.a(-29410, var2);
+                  HuffmanCodec.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("waitingfor_soundeffects", -125);
                 if (var2 != null) {

@@ -473,7 +473,7 @@ final class vg {
                         if (IntrusiveDeque.b((byte) 82)) {
                           qf.field_d = 5;
                         } else {
-                          ug.b(true);
+                          IsaacRandom.b(true);
                           if (hc.field_u != 0) {
                             qf.field_d = 6;
                           } else {

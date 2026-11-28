@@ -343,9 +343,9 @@ abstract class ByteStorage {
           }
           if (param4 == 2 &&
             o.field_l > 0) {
-            var11Lifetime2 = ed.field_i[1] + 4 - (ec.field_a[1].fullWidth >> 2);
-            var12Lifetime2 = ed.field_i[2];
-            var10Lifetime2 = -(ec.field_a[1].fullWidth >> 2) + ed.field_i[0] + 1;
+            var11Lifetime2 = IsaacRandom.field_i[1] + 4 - (ec.field_a[1].fullWidth >> 2);
+            var12Lifetime2 = IsaacRandom.field_i[2];
+            var10Lifetime2 = -(ec.field_a[1].fullWidth >> 2) + IsaacRandom.field_i[0] + 1;
             for (var20Lifetime3 = 0; 10 > var20Lifetime3; var20Lifetime3++) {
               if (NetworkArchiveRequest.field_B <= var20Lifetime3) {
                 ec.field_a[2].drawTransparent(var10Lifetime2, var11Lifetime2);

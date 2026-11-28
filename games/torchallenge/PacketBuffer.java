@@ -211,7 +211,7 @@ class PacketBuffer extends IntrusiveNode {
                 qi.field_c = nj.a(param3, true, param4, false);
               } else {
                 var10 = (String) null;
-                qi.field_c = ac.a(ed.field_j, (String) null, 122, param3, false);
+                qi.field_c = ac.a(IsaacRandom.field_j, (String) null, 122, param3, false);
               }
               dk.field_s.position = 0;
               dk.field_s.writeByte(14, (byte) 122);
@@ -270,7 +270,7 @@ class PacketBuffer extends IntrusiveNode {
             }
             if (le.field_a == aj.field_c &&
               NodeHashTableIterator.a((byte) 113)) {
-              ed.field_j = id.field_b.readLong(-87);
+              IsaacRandom.field_j = id.field_b.readLong(-87);
               fa.field_g = id.field_b.readUnsignedByte(-108);
               id.field_b.readUnsignedByte(-109);
               UiComponent.field_o = id.field_b.readUnsignedShort(param5);
@@ -287,7 +287,7 @@ class PacketBuffer extends IntrusiveNode {
                 if (!na.field_e) {
                 }
               }
-              if (ed.field_e) {
+              if (IsaacRandom.field_e) {
                 id.field_b.readUnsignedByte(-127);
                 id.field_b.readUnsignedByte(-121);
                 id.field_b.readInt(81);
@@ -323,7 +323,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments("zap", new Object[]{MouseInputHandler.a(-113, ed.field_j)}, gi.b(12476), -29585);
+                  JavaScriptBridge.callWithArguments("zap", new Object[]{MouseInputHandler.a(-113, IsaacRandom.field_j)}, gi.b(12476), -29585);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

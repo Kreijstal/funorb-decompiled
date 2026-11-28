@@ -29,7 +29,7 @@ final class IsaacRandom {
         return null;
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -68,10 +68,10 @@ final class IsaacRandom {
         }
     }
 
-    final int a(byte param0) {
+    final int nextInt(byte param0) {
         int var2 = 58 % ((66 - param0) / 35);
         if (this.field_k == 0) {
-          this.a(12009);
+          this.generateResults(12009);
           this.field_k = 256;
         }
         int fieldTemp$0 = this.field_k - 1;
@@ -87,7 +87,7 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_f[var2_int] = param0[var2_int];
           }
-          this.d(93);
+          this.initializeState(93);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "r.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -109,7 +109,7 @@ final class IsaacRandom {
         field_i = null;
     }
 
-    private final void d(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = SolKnight.field_L ? 1 : 0;
         int var10 = -1640531527;
@@ -192,7 +192,7 @@ final class IsaacRandom {
         }
         var2Lifetime2 = 0;
         if (param0 <= 38) {
-          this.d(-101);
+          this.initializeState(-101);
         }
         while (256 > var2Lifetime2) {
           var10 = var10 + this.field_h[7 + var2Lifetime2];
@@ -237,7 +237,7 @@ final class IsaacRandom {
           this.field_h[var2Lifetime2 + 7] = var10;
           var2Lifetime2 += 8;
         }
-        this.a(12009);
+        this.generateResults(12009);
         this.field_k = 256;
     }
 

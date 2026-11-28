@@ -52,7 +52,7 @@ final class fk extends IntrusiveNode {
           if (!fl.a(param2, param1, param0, (byte) -98)) {
             return null;
           }
-          stackIn_6_0 = ta.a(param3 ^ 16732209);
+          stackIn_6_0 = IsaacRandom.a(param3 ^ 16732209);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

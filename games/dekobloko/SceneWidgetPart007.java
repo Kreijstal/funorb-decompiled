@@ -346,9 +346,9 @@ final class SceneWidgetPart007 extends SceneWidget {
 
     final static void performAction1053(int integerArgument1, boolean booleanArgument2) {
         PcmResampler.mixedSupport006State0002 = booleanArgument2 ? new MixedSupport006(MixedSupport128.stringState0557, MixedSupport020.sceneWidgetState0012) : new MixedSupport006(MixedSupport031.stringState0152, RenderingSupport006.sceneWidgetState0056);
-        MixedSupport030.sceneWidgetState0023 = new SceneWidget(0L, (SceneWidget) null);
-        MixedSupport030.sceneWidgetState0023.performAction1768(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001, -16834);
-        MixedSupport030.sceneWidgetState0023.performAction1768(ComponentDecorator.sceneWidgetState0078, -16834);
+        IsaacRandom.sceneWidgetState0023 = new SceneWidget(0L, (SceneWidget) null);
+        IsaacRandom.sceneWidgetState0023.performAction1768(PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001, -16834);
+        IsaacRandom.sceneWidgetState0023.performAction1768(ComponentDecorator.sceneWidgetState0078, -16834);
         MixedSupport083.sceneWidgetState0087 = new SceneWidget((long)integerArgument1, MusicTrack.sceneWidgetState0127);
         MixedSupport020.sceneWidgetState0013 = new SceneWidget(0L, (SceneWidget) null);
         MixedSupport083.sceneWidgetState0087.performAction1768(FrameTimer.sceneWidgetState0054, -16834);

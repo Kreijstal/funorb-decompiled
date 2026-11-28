@@ -38,7 +38,7 @@ final class qh {
     int field_b;
     int[] field_K;
     short[] field_C;
-    static ja field_G;
+    static HuffmanDecoder field_G;
     int field_a;
     static String field_j;
     short[] field_z;

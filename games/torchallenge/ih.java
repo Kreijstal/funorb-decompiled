@@ -100,7 +100,7 @@ final class ih extends kj implements sg {
         we.field_j = 0;
         ResourceArchive.field_b = 0;
         ec.field_b = -1;
-        ed.field_c = 0;
+        IsaacRandom.field_c = 0;
         gh.field_m = false;
         fa.field_t = -1;
         sd.field_d = 0;

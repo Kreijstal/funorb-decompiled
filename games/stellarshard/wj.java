@@ -721,7 +721,7 @@ final class wj extends fb {
             pl.field_T = qd.a(nh.field_g, "blurbpane", "benefits", (byte) 78);
             MouseWheelInput.field_a = qd.a(nh.field_g, "button", "benefits", (byte) 78);
             dd.field_a = qd.a(nh.field_g, "signup_text", "benefits", (byte) 57);
-            na.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
+            IsaacRandom.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
             ui.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
             ea.field_l = qd.a(nh.field_g, "arrow", "benefits", (byte) 118);
             o.field_h = (BitmapFont) ((Object) ae.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
@@ -917,7 +917,7 @@ final class wj extends fb {
           if (null != MouseWheelInput.field_a &&
             null != ui.field_F) {
             MouseWheelInput.field_a.e(434, 390);
-            na.field_e.e(0, 0);
+            IsaacRandom.field_e.e(0, 0);
             if (1 == cd.field_L.field_f) {
               ob.a(116, 436, 64, MouseWheelInput.field_a.field_v - 4, 7 * MouseWheelInput.field_a.field_y / 12, 392);
             }

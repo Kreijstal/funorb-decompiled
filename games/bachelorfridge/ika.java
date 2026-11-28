@@ -118,7 +118,7 @@ final class ika {
         this(new PacketBuffer(param0));
     }
 
-    final static void a(byte param0, il param1) {
+    final static void a(byte param0, HuffmanCodec param1) {
         try {
           if (param0 != 18) {
             ika.a(70, -118, -128, -79, -74, -69, 108, -112);

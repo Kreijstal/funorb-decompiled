@@ -47,7 +47,7 @@ final class IsaacCipher {
 
     final int nextValue(int obfuscationGuard) {
         if (obfuscationGuard == ~this.field_k) {
-          this.a(true);
+          this.generateResults(true);
           this.field_k = 256;
         }
         int fieldTemp$0 = this.field_k - 1;
@@ -55,7 +55,7 @@ final class IsaacCipher {
         return this.field_a[fieldTemp$0];
     }
 
-    private final void a(boolean param0) {
+    private final void generateResults(boolean param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -64,7 +64,7 @@ final class IsaacCipher {
         int var5;
         var5 = Chess.field_G;
         if (!param0) {
-          this.a(true);
+          this.generateResults(true);
         }
         int fieldTemp$0 = this.field_h + 1;
         this.field_h = this.field_h + 1;
@@ -119,7 +119,7 @@ final class IsaacCipher {
         }
     }
 
-    private final void b(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = Chess.field_G;
         int var2Lifetime1;
@@ -246,7 +246,7 @@ final class IsaacCipher {
           this.field_j[6 + var2Lifetime2] = var9;
           this.field_j[var2Lifetime2 + 7] = var10;
         }
-        this.a(true);
+        this.generateResults(true);
         this.field_k = 256;
     }
 
@@ -276,7 +276,7 @@ final class IsaacCipher {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_a[var2_int] = param0[var2_int];
           }
-          this.b((byte) 41);
+          this.initializeState((byte) 41);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ke.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

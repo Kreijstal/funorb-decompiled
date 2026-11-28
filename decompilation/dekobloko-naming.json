@@ -974,10 +974,10 @@
     {
       "symbol": "C:ee",
       "originalName": "ee",
-      "to": "MixedSupport030",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport030"
+      "to": "IsaacRandom",
+      "evidence": "Primary instance role reviewed from exact source: seeded ISAAC pseudorandom stream with two private int[256] tables and four private int state/count fields, four golden-ratio mixes, two eight-word initialization passes, generation with shifts13/6/2/16 and half-table/index lookups, and reverse-count result consumption. Every constructor and nonstatic method in this cohort is human-read, including bounded adapters where present. Packet masking and game-animation/random-choice callers are reviewed where selected. Mixed unrelated static responsibilities are retained. Rename identifiers only; preserve every declaration/modifier, primitive domain, table allocation, seed copy, class initializer, literal, arithmetic/guard/helper/recursion order, partial effect and exception. No library RNG substitution, guard removal, table normalization or runtime equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IsaacRandom"
     },
     {
       "symbol": "C:ef",
@@ -8169,7 +8169,7 @@
       "to": "musicTrackArrayState0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.musicTrackArrayState0001:[LMusicTrack;"
+      "renamedSymbol": "F:IsaacRandom.musicTrackArrayState0001:[LMusicTrack;"
     },
     {
       "symbol": "F:ee.field_b:[I",
@@ -8177,7 +8177,7 @@
       "to": "integerArrayState0037",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0037:[I"
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0037:[I"
     },
     {
       "symbol": "F:ee.field_c:I",
@@ -8185,7 +8185,7 @@
       "to": "integerState0183",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerState0183:I"
+      "renamedSymbol": "F:IsaacRandom.integerState0183:I"
     },
     {
       "symbol": "F:ee.field_d:[I",
@@ -8193,7 +8193,7 @@
       "to": "integerArrayState0038",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0038:[I"
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0038:[I"
     },
     {
       "symbol": "F:ee.field_e:I",
@@ -8201,7 +8201,7 @@
       "to": "integerState0185",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerState0185:I"
+      "renamedSymbol": "F:IsaacRandom.integerState0185:I"
     },
     {
       "symbol": "F:ee.field_f:[I",
@@ -8209,7 +8209,7 @@
       "to": "integerArrayState0036",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0036:[I"
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0036:[I"
     },
     {
       "symbol": "F:ee.field_g:Lud;",
@@ -8217,7 +8217,7 @@
       "to": "rawSoundState0006",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.rawSoundState0006:LRawSound;"
+      "renamedSymbol": "F:IsaacRandom.rawSoundState0006:LRawSound;"
     },
     {
       "symbol": "F:ee.field_h:I",
@@ -8225,7 +8225,7 @@
       "to": "integerState0186",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerState0186:I"
+      "renamedSymbol": "F:IsaacRandom.integerState0186:I"
     },
     {
       "symbol": "F:ee.field_i:Lw;",
@@ -8233,7 +8233,7 @@
       "to": "sceneWidgetState0023",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.sceneWidgetState0023:LSceneWidget;"
+      "renamedSymbol": "F:IsaacRandom.sceneWidgetState0023:LSceneWidget;"
     },
     {
       "symbol": "F:ee.field_j:I",
@@ -8241,7 +8241,7 @@
       "to": "integerState0184",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport030.integerState0184:I"
+      "renamedSymbol": "F:IsaacRandom.integerState0184:I"
     },
     {
       "symbol": "F:ef.field_M:[Ljava/lang/String;",
@@ -16361,7 +16361,7 @@
       "to": "mixedSupport030State0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:BucketBoard.mixedSupport030State0001:LMixedSupport030;"
+      "renamedSymbol": "F:BucketBoard.mixedSupport030State0001:LIsaacRandom;"
     },
     {
       "symbol": "F:lk.field_ub:I",
@@ -24905,7 +24905,7 @@
       "to": "mixedSupport030State0002",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:CipherPacketBuffer.mixedSupport030State0002:LMixedSupport030;"
+      "renamedSymbol": "F:CipherPacketBuffer.mixedSupport030State0002:LIsaacRandom;"
     },
     {
       "symbol": "F:uf.field_v:I",
@@ -53385,7 +53385,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.<init>([I)V#0"
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#0"
     },
     {
       "symbol": "L:ee.a(BZII)Z#0",
@@ -53393,7 +53393,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.computeBoolean0411(BZII)Z#0"
+      "renamedSymbol": "L:IsaacRandom.computeBoolean0411(BZII)Z#0"
     },
     {
       "symbol": "L:ee.a(BZII)Z#1",
@@ -53401,7 +53401,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.computeBoolean0411(BZII)Z#1"
+      "renamedSymbol": "L:IsaacRandom.computeBoolean0411(BZII)Z#1"
     },
     {
       "symbol": "L:ee.a(I)V#0",
@@ -53409,7 +53409,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#0"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#0"
     },
     {
       "symbol": "L:ee.a(I)V#1",
@@ -53417,7 +53417,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#1"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#1"
     },
     {
       "symbol": "L:ee.a(I)V#10",
@@ -53425,7 +53425,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#10"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#10"
     },
     {
       "symbol": "L:ee.a(I)V#11",
@@ -53433,7 +53433,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#11"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#11"
     },
     {
       "symbol": "L:ee.a(I)V#2",
@@ -53441,7 +53441,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#2"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#2"
     },
     {
       "symbol": "L:ee.a(I)V#3",
@@ -53449,7 +53449,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#3"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#3"
     },
     {
       "symbol": "L:ee.a(I)V#4",
@@ -53457,7 +53457,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#4"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#4"
     },
     {
       "symbol": "L:ee.a(I)V#5",
@@ -53465,7 +53465,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#5"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#5"
     },
     {
       "symbol": "L:ee.a(I)V#6",
@@ -53473,7 +53473,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#6"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#6"
     },
     {
       "symbol": "L:ee.a(I)V#7",
@@ -53481,7 +53481,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#7"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#7"
     },
     {
       "symbol": "L:ee.a(I)V#8",
@@ -53489,7 +53489,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#8"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#8"
     },
     {
       "symbol": "L:ee.a(I)V#9",
@@ -53497,7 +53497,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#9"
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#9"
     },
     {
       "symbol": "L:ee.a(II)I#0",
@@ -53505,7 +53505,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0413(II)I#0"
+      "renamedSymbol": "L:IsaacRandom.nextBounded(II)I#0"
     },
     {
       "symbol": "L:ee.a(II)I#1",
@@ -53513,7 +53513,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0413(II)I#1"
+      "renamedSymbol": "L:IsaacRandom.nextBounded(II)I#1"
     },
     {
       "symbol": "L:ee.a(Z)I#0",
@@ -53521,7 +53521,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0414(Z)I#0"
+      "renamedSymbol": "L:IsaacRandom.nextInt(Z)I#0"
     },
     {
       "symbol": "L:ee.b(I)V#0",
@@ -53529,7 +53529,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#0"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0"
     },
     {
       "symbol": "L:ee.b(I)V#1",
@@ -53537,7 +53537,7 @@
       "to": "cachedIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#1"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1"
     },
     {
       "symbol": "L:ee.b(I)V#2",
@@ -53545,7 +53545,7 @@
       "to": "cachedIntegerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#2"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2"
     },
     {
       "symbol": "L:ee.b(I)V#3",
@@ -53553,7 +53553,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#3"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3"
     },
     {
       "symbol": "L:ee.b(I)V#4",
@@ -53561,7 +53561,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#4"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4"
     },
     {
       "symbol": "L:ee.b(I)V#5",
@@ -53569,7 +53569,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#5"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5"
     },
     {
       "symbol": "L:ee.b(I)V#6",
@@ -53577,7 +53577,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#6"
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6"
     },
     {
       "symbol": "L:ef.a(IIII)V#0",
@@ -151001,7 +151001,7 @@
       "to": "clearStaticReferences",
       "evidence": "Reviewed complete statement classification and resolved field bindings: 5 null writes to 4 own static reference fields; only parameter guards, returns and braces otherwise. Preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 bfab420dc07bf502c9241b047c137dbfffec7057961c3beb0415a37998e52153.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport030.clearStaticReferences(B)V"
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(B)V"
     },
     {
       "symbol": "M:ee.a(BZII)Z",
@@ -151009,39 +151009,39 @@
       "to": "computeBoolean0411",
       "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport030.computeBoolean0411(BZII)Z"
+      "renamedSymbol": "M:IsaacRandom.computeBoolean0411(BZII)Z"
     },
     {
       "symbol": "M:ee.a(I)V",
       "originalName": "a",
-      "to": "performAction0412",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport030.performAction0412(I)V"
+      "to": "initializeState",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Initialize the ISAAC instance from its seed/result table through the original two mixing passes, generation and count update. Keep eight golden-ratio local values, four initial mixes, seed-backed and memory-backed passes, exact per-game array reads/stores and int arithmetic order, final generation and remaining-count writes. Retain full supplied primitive domains, every global flag read, early return, guard, recursion, unrelated helper, static clear, interim write, allocation/failure and partial-effect order. Do not replace a body with a canonical ISAAC implementation or remove guards; Torquing supplies an actual second-pass start index. Wrong sentinel!=8388607 writes last-word field_j=-27 before mixing. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V"
     },
     {
       "symbol": "M:ee.a(II)I",
       "originalName": "a",
-      "to": "computeInteger0413",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport030.computeInteger0413(II)I"
+      "to": "nextBounded",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Return a bounded ISAAC-derived value using the existing positive-bound check and signed rejection/modulo helper. Keep the positive-bound check, exact long modulo and cast expression for the rejection threshold, sentinel-side static clear or state write, signed comparison/retry order, exact unbounded accessor call and final bound helper call. Do not substitute a library RNG, unsigned arithmetic, a new rejection algorithm or a different modulo implementation.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextBounded(II)I"
     },
     {
       "symbol": "M:ee.a(Z)I",
       "originalName": "a",
-      "to": "computeInteger0414",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport030.computeInteger0414(Z)I"
+      "to": "nextInt",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Consume the next ISAAC result, retaining the exact refill predicate and count-decrement/read ordering. Keep this actual refill predicate, its position relative to all sentinel/byte/boolean/arithmetic guards, exact generation call(s), count assignment and post-decrement-before-array-read order. Preserve constant-return branches, static clears, instance writes, repeated calls, null/index/division failures and partial effects across the full supplied primitive domain. Do not standardize predicates to count==0 or remove dummy branches.  Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.nextInt(Z)I"
     },
     {
       "symbol": "M:ee.b(I)V",
       "originalName": "b",
-      "to": "performAction0415",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport030.performAction0415(I)V"
+      "to": "generateResults",
+      "evidence": "Source-purpose review: Exact source/body and bound caller review: Generate the next ISAAC result table using the original accumulator/counter/table state and exact supplied loop start and guards. Keep every global flag read where present, full signed int/byte/boolean argument domain, arithmetic guards, recursion and side-effect order. Retain the exact counter increment and accumulator-add sequence, loop start and bound, four index-bit branches with shifts13/6/2/16, half-table lookup, original mask helper calls/argument order/literals and every memory/state/result store in order. No normalization of masks/shifts/addition groupings, guards, duplicate loops or exceptions. param0!=-1 nulls the memory array before counters; preserve partial state and every helper/store order. Retain all supplied primitive domains, modifiers, literal values, diagnostic text, global reads, dummy branches, helper arguments, table aliases, partial effects and exception order. Rename this identifier only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V"
     },
     {
       "symbol": "M:ef.a(IIII)V",
@@ -177849,7 +177849,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.<init>([I)V#0"
+      "renamedSymbol": "P:IsaacRandom.<init>([I)V#0"
     },
     {
       "symbol": "P:ee.a(B)V#0",
@@ -177857,7 +177857,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.clearStaticReferences(B)V#0"
+      "renamedSymbol": "P:IsaacRandom.clearStaticReferences(B)V#0"
     },
     {
       "symbol": "P:ee.a(BZII)Z#0",
@@ -177865,7 +177865,7 @@
       "to": "byteArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#0"
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#0"
     },
     {
       "symbol": "P:ee.a(BZII)Z#1",
@@ -177873,7 +177873,7 @@
       "to": "booleanArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#1"
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#1"
     },
     {
       "symbol": "P:ee.a(BZII)Z#2",
@@ -177881,7 +177881,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#2"
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#2"
     },
     {
       "symbol": "P:ee.a(BZII)Z#3",
@@ -177889,7 +177889,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#3"
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#3"
     },
     {
       "symbol": "P:ee.a(I)V#0",
@@ -177897,7 +177897,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.performAction0412(I)V#0"
+      "renamedSymbol": "P:IsaacRandom.initializeState(I)V#0"
     },
     {
       "symbol": "P:ee.a(II)I#0",
@@ -177905,7 +177905,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0413(II)I#0"
+      "renamedSymbol": "P:IsaacRandom.nextBounded(II)I#0"
     },
     {
       "symbol": "P:ee.a(II)I#1",
@@ -177913,7 +177913,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0413(II)I#1"
+      "renamedSymbol": "P:IsaacRandom.nextBounded(II)I#1"
     },
     {
       "symbol": "P:ee.a(Z)I#0",
@@ -177921,7 +177921,7 @@
       "to": "booleanArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0414(Z)I#0"
+      "renamedSymbol": "P:IsaacRandom.nextInt(Z)I#0"
     },
     {
       "symbol": "P:ee.b(I)V#0",
@@ -177929,7 +177929,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport030.performAction0415(I)V#0"
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0"
     },
     {
       "symbol": "P:ef.<init>(Lce;)V#0",
@@ -223882,9 +223882,9 @@
     },
     {
       "symbol": "C:ee",
-      "renamedSymbol": "C:MixedSupport030",
+      "renamedSymbol": "C:IsaacRandom",
       "originalName": "ee",
-      "renamedName": "MixedSupport030",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "ee.java",
         "start": 50,
@@ -233782,7 +233782,7 @@
     },
     {
       "symbol": "F:ee.field_a:[Lui;",
-      "renamedSymbol": "F:MixedSupport030.musicTrackArrayState0001:[LMusicTrack;",
+      "renamedSymbol": "F:IsaacRandom.musicTrackArrayState0001:[LMusicTrack;",
       "originalName": "field_a",
       "renamedName": "musicTrackArrayState0001",
       "declaration": {
@@ -233793,7 +233793,7 @@
     },
     {
       "symbol": "F:ee.field_b:[I",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0037:[I",
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0037:[I",
       "originalName": "field_b",
       "renamedName": "integerArrayState0037",
       "declaration": {
@@ -233804,7 +233804,7 @@
     },
     {
       "symbol": "F:ee.field_c:I",
-      "renamedSymbol": "F:MixedSupport030.integerState0183:I",
+      "renamedSymbol": "F:IsaacRandom.integerState0183:I",
       "originalName": "field_c",
       "renamedName": "integerState0183",
       "declaration": {
@@ -233815,7 +233815,7 @@
     },
     {
       "symbol": "F:ee.field_d:[I",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0038:[I",
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0038:[I",
       "originalName": "field_d",
       "renamedName": "integerArrayState0038",
       "declaration": {
@@ -233826,7 +233826,7 @@
     },
     {
       "symbol": "F:ee.field_e:I",
-      "renamedSymbol": "F:MixedSupport030.integerState0185:I",
+      "renamedSymbol": "F:IsaacRandom.integerState0185:I",
       "originalName": "field_e",
       "renamedName": "integerState0185",
       "declaration": {
@@ -233837,7 +233837,7 @@
     },
     {
       "symbol": "F:ee.field_f:[I",
-      "renamedSymbol": "F:MixedSupport030.integerArrayState0036:[I",
+      "renamedSymbol": "F:IsaacRandom.integerArrayState0036:[I",
       "originalName": "field_f",
       "renamedName": "integerArrayState0036",
       "declaration": {
@@ -233848,7 +233848,7 @@
     },
     {
       "symbol": "F:ee.field_g:Lud;",
-      "renamedSymbol": "F:MixedSupport030.rawSoundState0006:LRawSound;",
+      "renamedSymbol": "F:IsaacRandom.rawSoundState0006:LRawSound;",
       "originalName": "field_g",
       "renamedName": "rawSoundState0006",
       "declaration": {
@@ -233859,7 +233859,7 @@
     },
     {
       "symbol": "F:ee.field_h:I",
-      "renamedSymbol": "F:MixedSupport030.integerState0186:I",
+      "renamedSymbol": "F:IsaacRandom.integerState0186:I",
       "originalName": "field_h",
       "renamedName": "integerState0186",
       "declaration": {
@@ -233870,7 +233870,7 @@
     },
     {
       "symbol": "F:ee.field_i:Lw;",
-      "renamedSymbol": "F:MixedSupport030.sceneWidgetState0023:LSceneWidget;",
+      "renamedSymbol": "F:IsaacRandom.sceneWidgetState0023:LSceneWidget;",
       "originalName": "field_i",
       "renamedName": "sceneWidgetState0023",
       "declaration": {
@@ -233881,7 +233881,7 @@
     },
     {
       "symbol": "F:ee.field_j:I",
-      "renamedSymbol": "F:MixedSupport030.integerState0184:I",
+      "renamedSymbol": "F:IsaacRandom.integerState0184:I",
       "originalName": "field_j",
       "renamedName": "integerState0184",
       "declaration": {
@@ -245046,7 +245046,7 @@
     },
     {
       "symbol": "F:lk.field_u:Lee;",
-      "renamedSymbol": "F:BucketBoard.mixedSupport030State0001:LMixedSupport030;",
+      "renamedSymbol": "F:BucketBoard.mixedSupport030State0001:LIsaacRandom;",
       "originalName": "field_u",
       "renamedName": "mixedSupport030State0001",
       "declaration": {
@@ -256794,7 +256794,7 @@
     },
     {
       "symbol": "F:uf.field_u:Lee;",
-      "renamedSymbol": "F:CipherPacketBuffer.mixedSupport030State0002:LMixedSupport030;",
+      "renamedSymbol": "F:CipherPacketBuffer.mixedSupport030State0002:LIsaacRandom;",
       "originalName": "field_u",
       "renamedName": "mixedSupport030State0002",
       "declaration": {
@@ -297076,7 +297076,7 @@
     },
     {
       "symbol": "L:ee.<init>([I)V#0",
-      "renamedSymbol": "L:MixedSupport030.<init>([I)V#0",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#0",
       "originalName": "var2_int",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297087,7 +297087,7 @@
     },
     {
       "symbol": "L:ee.<init>([I)V#1",
-      "renamedSymbol": "L:MixedSupport030.<init>([I)V#1",
+      "renamedSymbol": "L:IsaacRandom.<init>([I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -297098,7 +297098,7 @@
     },
     {
       "symbol": "L:ee.a(BZII)Z#0",
-      "renamedSymbol": "L:MixedSupport030.computeBoolean0411(BZII)Z#0",
+      "renamedSymbol": "L:IsaacRandom.computeBoolean0411(BZII)Z#0",
       "originalName": "var4",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297109,7 +297109,7 @@
     },
     {
       "symbol": "L:ee.a(BZII)Z#1",
-      "renamedSymbol": "L:MixedSupport030.computeBoolean0411(BZII)Z#1",
+      "renamedSymbol": "L:IsaacRandom.computeBoolean0411(BZII)Z#1",
       "originalName": "var5",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -297120,7 +297120,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#0",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297131,7 +297131,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#1",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#1",
       "originalName": "var11",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -297142,7 +297142,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#10",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#10",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#10",
       "originalName": "var8",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -297153,7 +297153,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#11",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#11",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#11",
       "originalName": "var9",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -297164,7 +297164,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#2",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#2",
       "originalName": "var6",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -297175,7 +297175,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#3",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#3",
       "originalName": "var7",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -297186,7 +297186,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#4",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#4",
       "originalName": "var4",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -297197,7 +297197,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#5",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#5",
       "originalName": "var5",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -297208,7 +297208,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#6",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#6",
       "originalName": "var2Lifetime1",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -297219,7 +297219,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#7",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#7",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#7",
       "originalName": "var2Lifetime2",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -297230,7 +297230,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#8",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#8",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#8",
       "originalName": "var10",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -297241,7 +297241,7 @@
     },
     {
       "symbol": "L:ee.a(I)V#9",
-      "renamedSymbol": "L:MixedSupport030.performAction0412(I)V#9",
+      "renamedSymbol": "L:IsaacRandom.initializeState(I)V#9",
       "originalName": "var3",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -297252,7 +297252,7 @@
     },
     {
       "symbol": "L:ee.a(II)I#0",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0413(II)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextBounded(II)I#0",
       "originalName": "var4",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297263,7 +297263,7 @@
     },
     {
       "symbol": "L:ee.a(II)I#1",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0413(II)I#1",
+      "renamedSymbol": "L:IsaacRandom.nextBounded(II)I#1",
       "originalName": "var3",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -297274,7 +297274,7 @@
     },
     {
       "symbol": "L:ee.a(Z)I#0",
-      "renamedSymbol": "L:MixedSupport030.computeInteger0414(Z)I#0",
+      "renamedSymbol": "L:IsaacRandom.nextInt(Z)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297285,7 +297285,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#0",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#0",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -297296,7 +297296,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#1",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#1",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "cachedIntegerLocal2",
       "declaration": {
@@ -297307,7 +297307,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#2",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#2",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "cachedIntegerLocal3",
       "declaration": {
@@ -297318,7 +297318,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#3",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#3",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#3",
       "originalName": "var3",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -297329,7 +297329,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#4",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#4",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#4",
       "originalName": "var4",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -297340,7 +297340,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#5",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#5",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#5",
       "originalName": "var5",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -297351,7 +297351,7 @@
     },
     {
       "symbol": "L:ee.b(I)V#6",
-      "renamedSymbol": "L:MixedSupport030.performAction0415(I)V#6",
+      "renamedSymbol": "L:IsaacRandom.generateResults(I)V#6",
       "originalName": "fieldTemp$0",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -435753,9 +435753,9 @@
     },
     {
       "symbol": "M:ee.<init>([I)V",
-      "renamedSymbol": "M:MixedSupport030.<init>([I)V",
+      "renamedSymbol": "M:IsaacRandom.<init>([I)V",
       "originalName": "ee",
-      "renamedName": "MixedSupport030",
+      "renamedName": "IsaacRandom",
       "declaration": {
         "file": "ee.java",
         "start": 8761,
@@ -435764,7 +435764,7 @@
     },
     {
       "symbol": "M:ee.a(B)V",
-      "renamedSymbol": "M:MixedSupport030.clearStaticReferences(B)V",
+      "renamedSymbol": "M:IsaacRandom.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -435775,7 +435775,7 @@
     },
     {
       "symbol": "M:ee.a(BZII)Z",
-      "renamedSymbol": "M:MixedSupport030.computeBoolean0411(BZII)Z",
+      "renamedSymbol": "M:IsaacRandom.computeBoolean0411(BZII)Z",
       "originalName": "a",
       "renamedName": "computeBoolean0411",
       "declaration": {
@@ -435786,9 +435786,9 @@
     },
     {
       "symbol": "M:ee.a(I)V",
-      "renamedSymbol": "M:MixedSupport030.performAction0412(I)V",
+      "renamedSymbol": "M:IsaacRandom.initializeState(I)V",
       "originalName": "a",
-      "renamedName": "performAction0412",
+      "renamedName": "initializeState",
       "declaration": {
         "file": "ee.java",
         "start": 2678,
@@ -435797,9 +435797,9 @@
     },
     {
       "symbol": "M:ee.a(II)I",
-      "renamedSymbol": "M:MixedSupport030.computeInteger0413(II)I",
+      "renamedSymbol": "M:IsaacRandom.nextBounded(II)I",
       "originalName": "a",
-      "renamedName": "computeInteger0413",
+      "renamedName": "nextBounded",
       "declaration": {
         "file": "ee.java",
         "start": 2210,
@@ -435808,9 +435808,9 @@
     },
     {
       "symbol": "M:ee.a(Z)I",
-      "renamedSymbol": "M:MixedSupport030.computeInteger0414(Z)I",
+      "renamedSymbol": "M:IsaacRandom.nextInt(Z)I",
       "originalName": "a",
-      "renamedName": "computeInteger0414",
+      "renamedName": "nextInt",
       "declaration": {
         "file": "ee.java",
         "start": 535,
@@ -435819,9 +435819,9 @@
     },
     {
       "symbol": "M:ee.b(I)V",
-      "renamedSymbol": "M:MixedSupport030.performAction0415(I)V",
+      "renamedSymbol": "M:IsaacRandom.generateResults(I)V",
       "originalName": "b",
-      "renamedName": "performAction0415",
+      "renamedName": "generateResults",
       "declaration": {
         "file": "ee.java",
         "start": 860,
@@ -475661,7 +475661,7 @@
     },
     {
       "symbol": "P:ee.<init>([I)V#0",
-      "renamedSymbol": "P:MixedSupport030.<init>([I)V#0",
+      "renamedSymbol": "P:IsaacRandom.<init>([I)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -475672,7 +475672,7 @@
     },
     {
       "symbol": "P:ee.a(B)V#0",
-      "renamedSymbol": "P:MixedSupport030.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:IsaacRandom.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -475683,7 +475683,7 @@
     },
     {
       "symbol": "P:ee.a(BZII)Z#0",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#0",
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#0",
       "originalName": "param0",
       "renamedName": "byteArgument1",
       "declaration": {
@@ -475694,7 +475694,7 @@
     },
     {
       "symbol": "P:ee.a(BZII)Z#1",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#1",
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#1",
       "originalName": "param1",
       "renamedName": "booleanArgument2",
       "declaration": {
@@ -475705,7 +475705,7 @@
     },
     {
       "symbol": "P:ee.a(BZII)Z#2",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#2",
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -475716,7 +475716,7 @@
     },
     {
       "symbol": "P:ee.a(BZII)Z#3",
-      "renamedSymbol": "P:MixedSupport030.computeBoolean0411(BZII)Z#3",
+      "renamedSymbol": "P:IsaacRandom.computeBoolean0411(BZII)Z#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -475727,7 +475727,7 @@
     },
     {
       "symbol": "P:ee.a(I)V#0",
-      "renamedSymbol": "P:MixedSupport030.performAction0412(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.initializeState(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -475738,7 +475738,7 @@
     },
     {
       "symbol": "P:ee.a(II)I#0",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0413(II)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextBounded(II)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -475749,7 +475749,7 @@
     },
     {
       "symbol": "P:ee.a(II)I#1",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0413(II)I#1",
+      "renamedSymbol": "P:IsaacRandom.nextBounded(II)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -475760,7 +475760,7 @@
     },
     {
       "symbol": "P:ee.a(Z)I#0",
-      "renamedSymbol": "P:MixedSupport030.computeInteger0414(Z)I#0",
+      "renamedSymbol": "P:IsaacRandom.nextInt(Z)I#0",
       "originalName": "param0",
       "renamedName": "booleanArgument1",
       "declaration": {
@@ -475771,7 +475771,7 @@
     },
     {
       "symbol": "P:ee.b(I)V#0",
-      "renamedSymbol": "P:MixedSupport030.performAction0415(I)V#0",
+      "renamedSymbol": "P:IsaacRandom.generateResults(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -661620,7 +661620,7 @@
       "original": "ch.java",
       "renamed": "MixedSupport017.java",
       "inputSha256": "f7be6ce0109e37f15df35f92d25c0d9ba6c81766d3314bd1eecd4fe4487c2b01",
-      "outputSha256": "f4dc24ff166457f7646374c462907c3d142cba89a638803b023a0a3717ef854c",
+      "outputSha256": "c05f6a816008ddbc0ad12a0144acc9ab0b3cf3dcaf84b9bddc219536f32db54b",
       "edits": [
         {
           "start": 50,
@@ -662642,7 +662642,7 @@
           "end": 3087,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3088,
@@ -662852,7 +662852,7 @@
           "end": 3565,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3566,
@@ -662880,7 +662880,7 @@
           "end": 3621,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3622,
@@ -663104,7 +663104,7 @@
           "end": 4195,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 4196,
@@ -663314,7 +663314,7 @@
           "end": 4691,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 4692,
@@ -663342,7 +663342,7 @@
           "end": 4749,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 4750,
@@ -663776,7 +663776,7 @@
           "end": 5806,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 5807,
@@ -663986,7 +663986,7 @@
           "end": 6248,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6249,
@@ -664014,7 +664014,7 @@
           "end": 6300,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6301,
@@ -664238,7 +664238,7 @@
           "end": 6832,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6833,
@@ -664448,7 +664448,7 @@
           "end": 7292,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7293,
@@ -664476,7 +664476,7 @@
           "end": 7346,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7347,
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "648c4e23b99248a290e6cae5210ea58502d7e38e56a2276708d04a21d28039aa",
+      "outputSha256": "c320fc162397df25cfae19260a7ff899114bc307ceac1ab15a02a4a7dbba31e5",
       "edits": [
         {
           "start": 57,
@@ -715083,7 +715083,7 @@
           "end": 19601,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 19602,
@@ -726902,7 +726902,7 @@
           "end": 53049,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 53050,
@@ -746104,7 +746104,7 @@
           "end": 98751,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 98752,
@@ -746202,7 +746202,7 @@
           "end": 98927,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 98928,
@@ -746216,7 +746216,7 @@
           "end": 98940,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 98941,
@@ -748666,7 +748666,7 @@
           "end": 103646,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 103647,
@@ -748722,7 +748722,7 @@
           "end": 103743,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 103744,
@@ -748778,7 +748778,7 @@
           "end": 103839,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 103840,
@@ -748834,7 +748834,7 @@
           "end": 103942,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 103943,
@@ -805005,16 +805005,16 @@
     },
     {
       "original": "ee.java",
-      "renamed": "MixedSupport030.java",
+      "renamed": "IsaacRandom.java",
       "inputSha256": "55fc1aec733ec501e65824ce09bf688bf295012a362edc3d70dbcaf9374be0a6",
-      "outputSha256": "b75c4a03d233a95062b7e3c07ea89cb8f3180c96dcb50731c13b4eb92c7842b1",
+      "outputSha256": "b2374b544cc8d4410dcddf751669d31d1b91ed0be6eb1978b5f674796d7a6f0e",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 66,
@@ -805175,7 +805175,7 @@
           "end": 536,
           "symbol": "M:ee.a(Z)I",
           "original": "a",
-          "renamed": "computeInteger0414"
+          "renamed": "nextInt"
         },
         {
           "start": 545,
@@ -805196,7 +805196,7 @@
           "end": 604,
           "symbol": "M:ee.b(I)V",
           "original": "b",
-          "renamed": "performAction0415"
+          "renamed": "generateResults"
         },
         {
           "start": 625,
@@ -805259,7 +805259,7 @@
           "end": 861,
           "symbol": "M:ee.b(I)V",
           "original": "b",
-          "renamed": "performAction0415"
+          "renamed": "generateResults"
         },
         {
           "start": 866,
@@ -805735,7 +805735,7 @@
           "end": 2211,
           "symbol": "M:ee.a(II)I",
           "original": "a",
-          "renamed": "computeInteger0413"
+          "renamed": "nextBounded"
         },
         {
           "start": 2216,
@@ -805812,7 +805812,7 @@
           "end": 2529,
           "symbol": "M:ee.a(Z)I",
           "original": "a",
-          "renamed": "computeInteger0414"
+          "renamed": "nextInt"
         },
         {
           "start": 2552,
@@ -805861,7 +805861,7 @@
           "end": 2679,
           "symbol": "M:ee.a(I)V",
           "original": "a",
-          "renamed": "performAction0412"
+          "renamed": "initializeState"
         },
         {
           "start": 2684,
@@ -808346,7 +808346,7 @@
           "end": 7411,
           "symbol": "M:ee.b(I)V",
           "original": "b",
-          "renamed": "performAction0415"
+          "renamed": "generateResults"
         },
         {
           "start": 7430,
@@ -808941,7 +808941,7 @@
           "end": 8763,
           "symbol": "M:ee.<init>([I)V",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 8770,
@@ -809032,7 +809032,7 @@
           "end": 9050,
           "symbol": "M:ee.a(I)V",
           "original": "a",
-          "renamed": "performAction0412"
+          "renamed": "initializeState"
         },
         {
           "start": 9131,
@@ -999474,7 +999474,7 @@
       "original": "j.java",
       "renamed": "MixedSupport063.java",
       "inputSha256": "f4fcd422d35c013ca285eaf84e3d7c4b23c3acb4229351a26e15415e810e7968",
-      "outputSha256": "0197c325bc8bc4ee474265cabed2379ac4dcba744335ec1b4fd76dc2b89a0b6e",
+      "outputSha256": "123562a616399944ac6c6cce1ec6db5d92f583b07621a84ce55b925ebeb25485",
       "edits": [
         {
           "start": 69,
@@ -1001315,7 +1001315,7 @@
           "end": 5633,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 5634,
@@ -1138977,7 +1138977,7 @@
       "original": "lk.java",
       "renamed": "BucketBoard.java",
       "inputSha256": "ed0d8f07e4545d4d7e69e57bcd155869c08f7c159d3e86c7da39066bea79d35b",
-      "outputSha256": "c79d08fd1d7ee2342b49bb26d5442778d7bc8b230a9aa42ac3c102a378941d3d",
+      "outputSha256": "11b30d1f56bc6d00c0ddf0dd6de25a302cd18202096880872734d0b952becf10",
       "edits": [
         {
           "start": 71,
@@ -1139446,7 +1139446,7 @@
           "end": 1380,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 1381,
@@ -1141329,7 +1141329,7 @@
           "end": 6574,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6575,
@@ -1166135,7 +1166135,7 @@
           "end": 85824,
           "symbol": "M:ee.a(II)I",
           "original": "a",
-          "renamed": "computeInteger0413"
+          "renamed": "nextBounded"
         },
         {
           "start": 85829,
@@ -1166170,7 +1166170,7 @@
           "end": 85884,
           "symbol": "M:ee.a(II)I",
           "original": "a",
-          "renamed": "computeInteger0413"
+          "renamed": "nextBounded"
         },
         {
           "start": 85895,
@@ -1212987,7 +1212987,7 @@
       "original": "mg.java",
       "renamed": "SceneWidgetPart007.java",
       "inputSha256": "483735658609c135fd24de88884d35eae387ce5795e3e998f05a01051869efa4",
-      "outputSha256": "bf94a864a4bfd7ef1e0ce8137be0650f4259ab4c7d4ecdc017692cb8960b7c05",
+      "outputSha256": "ebb2c2e6e6b734e23ea2a7475e625f7927254db2d9e522b1db15f3797ccff18c",
       "edits": [
         {
           "start": 50,
@@ -1217138,7 +1217138,7 @@
           "end": 12677,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 12678,
@@ -1217166,7 +1217166,7 @@
           "end": 12719,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 12720,
@@ -1217208,7 +1217208,7 @@
           "end": 12769,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 12770,
@@ -1280175,7 +1280175,7 @@
       "original": "mn.java",
       "renamed": "MixedSupport083.java",
       "inputSha256": "f1ed6c42bd00b42456928fb7e9368caae56ccd10023b5a97b57d2a73e159ecaa",
-      "outputSha256": "8fec38404531df341fa2e25ed1b7198561c54bfb62758d34b69e7855ab02a770",
+      "outputSha256": "88741129ef5b26ae60d21a6845097c027b7390a7dc45926a3a481c60b206aa6a",
       "edits": [
         {
           "start": 50,
@@ -1285222,7 +1285222,7 @@
           "end": 17452,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 17453,
@@ -1415588,7 +1415588,7 @@
       "original": "qc.java",
       "renamed": "GameSession.java",
       "inputSha256": "7a5446e9a9f769263f0e6ae2c0a4efa579defbcdd10bccd04e1a0259a23203ab",
-      "outputSha256": "610dccc3299278365ee56734d034c2d0cdabcd601495f3f0b3d688129d37d2e6",
+      "outputSha256": "04c9046c639b7b589134b0dd5055f40dcb81789b59598fb243f9086da435043b",
       "edits": [
         {
           "start": 71,
@@ -1426315,7 +1426315,7 @@
           "end": 36821,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 36822,
@@ -1433973,7 +1433973,7 @@
           "end": 57641,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 57642,
@@ -1489932,7 +1489932,7 @@
           "end": 216040,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 216041,
@@ -1497810,7 +1497810,7 @@
       "original": "qf.java",
       "renamed": "InputAdapter002.java",
       "inputSha256": "2a0a6277805dbcbfc0fef0202c7a0026ec6aba3cc9de478bcebb1521956a027f",
-      "outputSha256": "e3c566afae49459ce45e73264ec4cf683567d4b2a76883adf12470aec6c68399",
+      "outputSha256": "14b756e38c6f7057267c031e23faac57d88fea9b1bfeef0ed03d00db310bc15e",
       "edits": [
         {
           "start": 50,
@@ -1499469,7 +1499469,7 @@
           "end": 5681,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 5682,
@@ -1499651,7 +1499651,7 @@
           "end": 6016,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 6017,
@@ -1652578,7 +1652578,7 @@
       "original": "uf.java",
       "renamed": "CipherPacketBuffer.java",
       "inputSha256": "7979bba880f5057a71b56480c588e05749e228cbc3812bd68a643ee58fbfca17",
-      "outputSha256": "6e82ebe4f89bbdebcd8e01d007e13ca37fb6bd63b6c4e8e5a57e59322c61094f",
+      "outputSha256": "9ebfbeb73f435f1750b1fcaf9722ac29183046c241f2502a1ee0bd62f9347986",
       "edits": [
         {
           "start": 71,
@@ -1652606,7 +1652606,7 @@
           "end": 126,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 127,
@@ -1652788,7 +1652788,7 @@
           "end": 582,
           "symbol": "M:ee.a(Z)I",
           "original": "a",
-          "renamed": "computeInteger0414"
+          "renamed": "nextInt"
         },
         {
           "start": 619,
@@ -1653012,7 +1653012,7 @@
           "end": 1255,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 1256,
@@ -1654510,7 +1654510,7 @@
           "end": 5290,
           "symbol": "M:ee.a(Z)I",
           "original": "a",
-          "renamed": "computeInteger0414"
+          "renamed": "nextInt"
         },
         {
           "start": 5374,
@@ -1654839,7 +1654839,7 @@
           "end": 6554,
           "symbol": "M:ee.a(Z)I",
           "original": "a",
-          "renamed": "computeInteger0414"
+          "renamed": "nextInt"
         },
         {
           "start": 6576,
@@ -1655028,7 +1655028,7 @@
           "end": 7083,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7084,
@@ -1655161,7 +1655161,7 @@
           "end": 7311,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7312,
@@ -1655196,7 +1655196,7 @@
           "end": 7374,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 7375,
@@ -1655581,7 +1655581,7 @@
           "end": 8193,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 8194,
@@ -1692634,7 +1692634,7 @@
       "original": "vb.java",
       "renamed": "UiComponentPart032.java",
       "inputSha256": "3f309a51b78a50f861f39ab0d2cc0c1cffe8edce7bfeb1400911b4858213c92a",
-      "outputSha256": "1d8079e8e86f8bd553f7fa12310c2a97ea625e34581674ac91e2ab91bf8fd267",
+      "outputSha256": "473284e2c180e9d0cbd2af0679fba20090109383ec6f481437331624c9853586",
       "edits": [
         {
           "start": 53,
@@ -1693453,7 +1693453,7 @@
           "end": 2381,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 2382,
@@ -1693474,7 +1693474,7 @@
           "end": 2401,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 2402,
@@ -1693922,7 +1693922,7 @@
           "end": 3104,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3105,
@@ -1693943,7 +1693943,7 @@
           "end": 3134,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 3135,
@@ -1700731,7 +1700731,7 @@
       "original": "vg.java",
       "renamed": "MixedSupport138.java",
       "inputSha256": "16914e1c46a4c89ef94e6d1466a2f508e20f5c072d835629ccd152f77455ead7",
-      "outputSha256": "74207bf56738fd7f23dc59012d74011fedab36f071198d325cfb795fdb5d4799",
+      "outputSha256": "e3faaf1c2e7af098ce7a46a3aff38d78f5757f01eaec39576ed5352552106fdd",
       "edits": [
         {
           "start": 50,
@@ -1704315,7 +1704315,7 @@
           "end": 9529,
           "symbol": "C:ee",
           "original": "ee",
-          "renamed": "MixedSupport030"
+          "renamed": "IsaacRandom"
         },
         {
           "start": 9530,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "99c58851c1dd71e78ef2ac0363d72174e10167e061466ef5e9bf6426a0f0c808",
+    "rulesSha256": "30d62d7a210ade337888a8d36bbbb5533d8dc266635d9237c8f8642bdeb252f1",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "fae0eec38e974b31d45253d071b2dc6cb419ab05159fed1d930af43228fb7169",
+    "outputTreeSha256": "a4d824da9486f07ea3651007b94aa6f35c2526028e6bec1658b925a0e4fa31f0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

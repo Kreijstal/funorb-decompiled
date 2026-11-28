@@ -34,7 +34,7 @@ final class tc extends kf {
         int var2 = StarCannon.field_A;
         p.field_d.resetTiming((byte) -78);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
-          jb.field_j[var1_int] = 0L;
+          IsaacRandom.field_j[var1_int] = 0L;
         }
         if (param0 != 32) {
           return;

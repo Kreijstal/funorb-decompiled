@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pc {
+final class IsaacRandom {
     static String field_d;
     static int field_b;
     private int field_a;
@@ -24,7 +24,7 @@ final class pc {
         }
     }
 
-    private final void b(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -63,7 +63,7 @@ final class pc {
         }
     }
 
-    private final void a(byte param0) {
+    private final void initializeState(byte param0) {
         int var2 = 0;
         int var11 = fleas.field_A ? 1 : 0;
         int var4 = -1640531527;
@@ -186,10 +186,10 @@ final class pc {
           this.field_l[6 + var2Lifetime2] = var9;
           this.field_l[7 + var2Lifetime2] = var10;
         }
-        this.b(2);
+        this.generateResults(2);
         this.field_c = 256;
         if (param0 != -125) {
-          this.a(-54);
+          this.nextInt(-54);
         }
     }
 
@@ -198,7 +198,7 @@ final class pc {
         boolean stackIn_9_0 = false;
         if (!param0) {
           var2 = (String) null;
-          pc.a(false, (String) null, (String) null);
+          IsaacRandom.a(false, (String) null, (String) null);
         }
         stackIn_9_0 = (wi.field_b != 0) || (fleas.field_L != 0) || (hj.field_a[1] != 0) || (hj.field_a[0] != 0);
         return stackIn_9_0;
@@ -213,12 +213,12 @@ final class pc {
         int var1 = -53 / ((-72 - param0) / 43);
     }
 
-    final int a(int param0) {
+    final int nextInt(int param0) {
         if (param0 != 995108848) {
           field_m = (String) null;
         }
         if (this.field_c == 0) {
-          this.b(2);
+          this.generateResults(2);
           this.field_c = 256;
         }
         int fieldTemp$0 = this.field_c - 1;
@@ -226,7 +226,7 @@ final class pc {
         return this.field_e[fieldTemp$0];
     }
 
-    pc(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_e = new int[256];
@@ -234,7 +234,7 @@ final class pc {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_e[var2_int] = param0[var2_int];
           }
-          this.a((byte) -125);
+          this.initializeState((byte) -125);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

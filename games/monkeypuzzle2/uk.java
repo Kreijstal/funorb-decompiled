@@ -19,7 +19,7 @@ final class uk extends wj {
           if (param0 != 1) {
             field_q = -107;
           }
-          if (this.a(param1, 3917) != ol.field_h) {
+          if (this.a(param1, 3917) != IsaacRandom.field_h) {
             return ue.field_E;
           }
           stackIn_5_0 = AwtRasterBuffer.field_d;
@@ -58,7 +58,7 @@ final class uk extends wj {
           if (var3_int != 0) {
             return wj.field_i;
           }
-          stackIn_9_0 = ol.field_h;
+          stackIn_9_0 = IsaacRandom.field_h;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

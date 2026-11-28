@@ -333,7 +333,7 @@ final class fo {
                 kq.field_Kb.c(208, 256);
                 var2 = -24 % ((33 - param0) / 60);
               } else {
-                tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
+                tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
                 kq.field_Kb.c(208, 256);
                 var2Lifetime3 = -24 % ((33 - param0) / 60);
               }
@@ -346,7 +346,7 @@ final class fo {
               }
               else {
                 if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
-                  tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
+                  tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
                   hh.field_a.c(208, 256);
                 } else {
                   tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
@@ -359,7 +359,7 @@ final class fo {
               tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
               MouseWheelInput.field_c.c(208, 256);
             } else {
-              tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
+              tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
               MouseWheelInput.field_c.c(208, 256);
             }
           }
@@ -368,7 +368,7 @@ final class fo {
           tk.field_c.a(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
           tk.field_c.a(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
           tk.field_c.a(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
-          tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
+          tk.field_c.b(HuffmanCodec.field_c, 180, 240, 16777215, -1);
           if (SocketConnector.field_c[GameKeyHandler.field_d] <= te.field_B[GameKeyHandler.field_d]) {
             MouseWheelInput.field_c.c(208, 256);
           } else {
@@ -1349,7 +1349,7 @@ final class fo {
                   if (!(!this.field_a.a(84))) {
                     if (ag.b(49)) {
                       var8 = 0;
-                      MusicPatchPcmStream.a(true, (byte) 127, var8, param2, ke.field_g);
+                      MusicPatchPcmStream.a(true, (byte) 127, var8, param2, HuffmanCodec.field_g);
                     } else {
                       var8 = param2 ? 1 : 0;
                       gj.a((byte) 70, var8 != 0, am.field_n, -4);
@@ -1830,7 +1830,7 @@ final class fo {
                                         this.a(true);
                                       } else {
                                         if ((11 == this.field_b)) {
-                                          va.field_s.a(1, -1, ke.field_i, 480, 0, 100, 1, 440, 1, 16777215);
+                                          va.field_s.a(1, -1, HuffmanCodec.field_i, 480, 0, 100, 1, 440, 1, 16777215);
                                         }
                                       }
                                     }

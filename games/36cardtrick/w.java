@@ -3,7 +3,7 @@
  */
 final class w extends PacketBuffer {
     private int field_o;
-    private hg field_l;
+    private IsaacRandom field_l;
     static String field_m;
     static int field_n;
 
@@ -13,7 +13,7 @@ final class w extends PacketBuffer {
 
     final void b(int[] param0, int param1) {
         try {
-          this.field_l = new hg(param0);
+          this.field_l = new IsaacRandom(param0);
           if (param1 != 8) {
             int[] var4 = (int[]) null;
             this.b((int[]) null, 66);
@@ -38,7 +38,7 @@ final class w extends PacketBuffer {
         int var2 = 118 % ((39 - param0) / 51);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_l.b(-1427) & 255;
+        return this.payload[fieldTemp$0] - this.field_l.nextInt(-1427) & 255;
     }
 
     final void b(int param0, byte[] param1, int param2, int param3) {
@@ -55,10 +55,10 @@ final class w extends PacketBuffer {
           for (var5_int = 0; var5_int < param3; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param1[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_l.b(-1427));
+            param1[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_l.nextInt(-1427));
           }
           if (param2 != 28040) {
-            this.field_l = (hg) null;
+            this.field_l = (IsaacRandom) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -277,7 +277,7 @@ final class w extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param0 + this.field_l.b(-1427));
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_l.nextInt(-1427));
     }
 
     public static void h(int param0) {

@@ -259,7 +259,7 @@ final class ib extends kj implements tb, sg {
           RuntimeException var2_ref = null;
           var7 = TorChallenge.field_F ? 1 : 0;
           try {
-            if (ed.field_d) {
+            if (IsaacRandom.field_d) {
               return true;
             }
             try {
@@ -533,7 +533,7 @@ final class ib extends kj implements tb, sg {
           if (fg.field_S) {
             var6 = var6 | 1;
           }
-          if (ed.field_e) {
+          if (IsaacRandom.field_e) {
             var6 = var6 | 4;
           }
           if (param4) {

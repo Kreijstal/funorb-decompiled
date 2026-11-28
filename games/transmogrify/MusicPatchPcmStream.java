@@ -511,7 +511,7 @@ final class MusicPatchPcmStream extends PcmStream {
             null != param2.field_y) {
             BoundedRandomAccessFile.c(-11517);
           }
-          ug.field_h = 0;
+          IsaacRandom.field_h = 0;
           if (param1 > -122) {
             field_p = (String) null;
           }
@@ -572,7 +572,7 @@ final class MusicPatchPcmStream extends PcmStream {
                           dupTemp$0 = param2.field_y[var8];
                           ca.field_c[dupTemp$0] = ca.field_c[dupTemp$0] + 1;
                         }
-                        ug.field_h = ug.field_h + 1;
+                        IsaacRandom.field_h = IsaacRandom.field_h + 1;
                         break;
                       }
                     }
@@ -758,7 +758,7 @@ final class MusicPatchPcmStream extends PcmStream {
             null != param2.field_y) {
             BoundedRandomAccessFile.c(-11517);
           }
-          ug.field_h = 0;
+          IsaacRandom.field_h = 0;
           if (param1 > -122) {
             field_p = (String) null;
           }
@@ -819,7 +819,7 @@ final class MusicPatchPcmStream extends PcmStream {
                           dupTemp$0 = param2.field_y[var8];
                           ca.field_c[dupTemp$0] = ca.field_c[dupTemp$0] + 1;
                         }
-                        ug.field_h = ug.field_h + 1;
+                        IsaacRandom.field_h = IsaacRandom.field_h + 1;
                         break;
                       }
                     }

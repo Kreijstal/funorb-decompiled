@@ -41,7 +41,7 @@ class ik implements rd, ub {
           ik.b((byte) -17);
         }
         if (!we.field_h.a("commonui", 10762)) {
-          return pe.field_e + " - " + we.field_h.b("commonui", (byte) 118) + "%";
+          return IsaacRandom.field_e + " - " + we.field_h.b("commonui", (byte) 118) + "%";
         }
         if (!GzipDecompressor.field_a.c(-75)) {
           return li.field_P;

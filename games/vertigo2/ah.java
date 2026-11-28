@@ -1412,7 +1412,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -88, "TIMEATTACK_CURRENTMEDAL");
                 if (var2 != null) {
-                  ke.field_c = in.a(0, var2);
+                  HuffmanCodec.field_c = in.a(0, var2);
                 }
                 var2 = en.a((byte) -95, "TIMEATTACK_NEWBESTTIME");
                 if (var2 != null) {

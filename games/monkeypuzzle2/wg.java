@@ -98,7 +98,7 @@ final class wg extends IntrusiveNode {
           if (var5 == null) {
             return false;
           }
-          ol.a(var5, -83);
+          IsaacRandom.a(var5, -83);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

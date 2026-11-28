@@ -682,7 +682,7 @@ final class t {
           ve.field_d.a(var10, var4 + 5, var5, -10 + var6Lifetime1, var7, 1, -1, 0, 0, ve.field_d.field_N);
           if (DiskArchiveRequest.c((byte) 125)) {
             var5 = var5 + ve.field_d.field_N * 3;
-            ve.field_d.a(pc.field_m, var4 + 5, var5, -10 + var6Lifetime1, var7, 1, -1, 0, 0, ve.field_d.field_N);
+            ve.field_d.a(IsaacRandom.field_m, var4 + 5, var5, -10 + var6Lifetime1, var7, 1, -1, 0, 0, ve.field_d.field_N);
           }
         }
         return;
@@ -1047,7 +1047,7 @@ final class t {
                                     if (DiskArchiveRequest.c((byte) 68)) {
                                       if ((DiskArchiveRequest.c((byte) 72) ||
                                         !(wc.field_q > 0)) &&
-                                        pc.a(true)) {
+                                        IsaacRandom.a(true)) {
                                         stackIn_124_0 = 6;
                                       } else {
                                         stackIn_124_0 = 0;
@@ -1065,7 +1065,7 @@ final class t {
                                     if (wc.field_q > 0) {
                                       ImageProducerRasterBuffer.field_m = 0;
                                     } else {
-                                      if (!pc.a(true)) {
+                                      if (!IsaacRandom.a(true)) {
                                         ImageProducerRasterBuffer.field_m = 0;
                                       } else {
                                         stackIn_131_0 = 7;

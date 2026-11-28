@@ -82,7 +82,7 @@ final class PcmOutputWorker implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          ke.a((Throwable) ((Object) exception), (String) null, 0);
+          HuffmanCodec.a((Throwable) ((Object) exception), (String) null, 0);
         } finally {
           this.field_b = false;
         }

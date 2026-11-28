@@ -21,8 +21,8 @@ final class fd extends wj {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_q.a(param0, param1 ^ 0) == ol.field_h) {
-            stackIn_3_0 = ol.field_h;
+          if (this.field_q.a(param0, param1 ^ 0) == IsaacRandom.field_h) {
+            stackIn_3_0 = IsaacRandom.field_h;
             return stackIn_3_0;
           }
           if (param1 != 3917) {
@@ -40,7 +40,7 @@ final class fd extends wj {
           if (this.field_t) {
             stackIn_15_0 = wj.field_i;
           } else {
-            stackIn_15_0 = ol.field_h;
+            stackIn_15_0 = IsaacRandom.field_h;
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -79,11 +79,11 @@ final class fd extends wj {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_q.a(param1, 3917) == ol.field_h) {
+          if (this.field_q.a(param1, 3917) == IsaacRandom.field_h) {
             stackIn_3_0 = this.field_q.a(1, param1);
             return stackIn_3_0;
           }
-          if (this.a(param1, 3917) == ol.field_h) {
+          if (this.a(param1, 3917) == IsaacRandom.field_h) {
             stackIn_6_0 = qi.field_J;
             return stackIn_6_0;
           }

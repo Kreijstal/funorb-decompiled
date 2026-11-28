@@ -20,7 +20,7 @@ final class cj {
         String var3 = null;
         long var4 = 0L;
         try {
-          ed.field_d = true;
+          IsaacRandom.field_d = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           if (param0 <= 114) {

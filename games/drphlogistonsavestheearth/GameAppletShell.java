@@ -390,7 +390,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (kj.field_a > var2.width) {
                   return;
                 }
-                if (var2.height < ta.field_c) {
+                if (var2.height < IsaacRandom.field_c) {
                   return;
                 }
               }
@@ -902,7 +902,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               tg.field_b = 0;
               vb.field_o = param2;
               ByteStorage.field_a = param4;
-              ta.field_c = param4;
+              IsaacRandom.field_c = param4;
               hh.field_e = this;
               if (param0 != -4) {
                 field_i = (RgbSprite) null;

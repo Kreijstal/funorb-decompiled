@@ -48,7 +48,7 @@ final class hg {
           bb.field_f.field_i = 0;
           bb.field_f.a(param2, param0, true, param3);
           bb.field_f.g(var7_int, -122);
-          bb.field_f.a(var13, (byte) 108);
+          bb.field_f.encryptXtea(var13, (byte) 108);
           if (tb.field_M == null ||
             !(tb.field_M.field_n.length >= 100)) {
             tb.field_M = new PacketBuffer(100);

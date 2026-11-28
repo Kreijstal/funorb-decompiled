@@ -340,7 +340,7 @@ class PacketBuffer extends IntrusiveNode {
         throw new IllegalArgumentException();
     }
 
-    final void a(int[] param0, int param1, int param2, int param3) {
+    final void decryptXteaRange(int[] param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -424,7 +424,7 @@ class PacketBuffer extends IntrusiveNode {
         return ((255 & this.payload[-2 + this.position]) << 8) + (255 & this.payload[-1 + this.position]);
     }
 
-    final void a(int[] param0, int param1) {
+    final void encryptXtea(int[] param0, int param1) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

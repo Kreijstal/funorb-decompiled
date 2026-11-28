@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport030 {
+final class IsaacRandom {
     static SceneWidget sceneWidgetState0023;
     private int[] integerArrayState0036;
     static MusicTrack[] musicTrackArrayState0001;
@@ -23,9 +23,9 @@ final class MixedSupport030 {
         }
     }
 
-    final int computeInteger0414(boolean booleanArgument1) {
+    final int nextInt(boolean booleanArgument1) {
         if (0 == this.integerState0185) {
-          this.performAction0415(-1);
+          this.generateResults(-1);
           this.integerState0185 = 256;
         }
         if (booleanArgument1) {
@@ -36,7 +36,7 @@ final class MixedSupport030 {
         return this.integerArrayState0038[integerLocal1];
     }
 
-    private final void performAction0415(int integerArgument1) {
+    private final void generateResults(int integerArgument1) {
         int integerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int cachedIntegerLocal3 = 0;
@@ -75,7 +75,7 @@ final class MixedSupport030 {
         }
     }
 
-    final int computeInteger0413(int integerArgument1, int integerArgument2) {
+    final int nextBounded(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         if (0 >= integerArgument2) {
           throw new IllegalArgumentException();
@@ -85,7 +85,7 @@ final class MixedSupport030 {
           musicTrackArrayState0001 = (MusicTrack[]) null;
         }
         while (true) {
-          integerLocal1 = this.computeInteger0414(false);
+          integerLocal1 = this.nextInt(false);
           if (integerLocal1 <= integerLocal2) {
             break;
           }
@@ -93,7 +93,7 @@ final class MixedSupport030 {
         return ReturnedShapeCache.computeInteger1176(integerArgument2, 83, integerLocal1);
     }
 
-    private final void performAction0412(int integerArgument1) {
+    private final void initializeState(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         int integerLocal3 = -1640531527;
@@ -219,7 +219,7 @@ final class MixedSupport030 {
           this.integerArrayState0036[6 + integerLocal8] = integerLocal12;
           this.integerArrayState0036[7 + integerLocal8] = integerLocal9;
         }
-        this.performAction0415(-1);
+        this.generateResults(-1);
         this.integerState0185 = 256;
     }
 
@@ -267,7 +267,7 @@ final class MixedSupport030 {
         return !(integerArgument4 >= integerArgument3);
     }
 
-    MixedSupport030(int[] integerArrayArgument1) {
+    IsaacRandom(int[] integerArrayArgument1) {
         int integerLocal1 = 0;
         try {
           this.integerArrayState0036 = new int[256];
@@ -275,7 +275,7 @@ final class MixedSupport030 {
           for (integerLocal1 = 0; integerLocal1 < integerArrayArgument1.length; integerLocal1++) {
             this.integerArrayState0038[integerLocal1] = integerArrayArgument1[integerLocal1];
           }
-          this.performAction0412(8388607);
+          this.initializeState(8388607);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "ee.<init>(" + (integerArrayArgument1 != null ? "{...}" : "null") + ')');
         }

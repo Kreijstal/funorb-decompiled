@@ -470,7 +470,7 @@ abstract class bi extends GameApplet {
         }
         if (mc.field_a == 1) {
           if (fe.field_h != 0) {
-            ec.field_a = ol.a(-107, BoundedRandomAccessFile.field_g);
+            ec.field_a = IsaacRandom.a(-107, BoundedRandomAccessFile.field_g);
           }
           fj.field_B = b.a(false, 1, true, ph.field_c, (byte) 125);
           hf.field_a = b.a(false, 1, true, SecondaryNodeDequeIterator.field_e, (byte) -118);
@@ -528,7 +528,7 @@ abstract class bi extends GameApplet {
         }
         if (mc.field_a == 10) {
           if (fe.field_h != 0) {
-            BufferedRandomAccessFile.field_j = ol.a(-102, FullscreenFocusCanvas.field_e);
+            BufferedRandomAccessFile.field_j = IsaacRandom.a(-102, FullscreenFocusCanvas.field_e);
           }
           mc.field_a = 11;
         }

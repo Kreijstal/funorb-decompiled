@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe {
+final class IsaacRandom {
     static String field_e;
     static char field_b;
     private int field_i;
@@ -20,9 +20,9 @@ final class pe {
         field_a = null;
     }
 
-    final int c(int param0) {
+    final int nextInt(int param0) {
         if (this.field_d == param0) {
-          this.a(param0 ^ -2034);
+          this.generateResults(param0 ^ -2034);
           this.field_d = 256;
         }
         int fieldTemp$0 = this.field_d - 1;
@@ -43,7 +43,7 @@ final class pe {
         }
     }
 
-    private final void a(int param0) {
+    private final void generateResults(int param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -82,7 +82,7 @@ final class pe {
         }
     }
 
-    private final void b(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = Lexicominos.field_L ? 1 : 0;
         int var2Lifetime1;
@@ -208,11 +208,11 @@ final class pe {
           this.field_h[6 + var2Lifetime2] = var9;
           this.field_h[var2Lifetime2 + 7] = var10;
         }
-        this.a(-2034);
+        this.generateResults(-2034);
         this.field_d = 256;
     }
 
-    pe(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_g = new int[256];
@@ -220,7 +220,7 @@ final class pe {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_g[var2_int] = param0[var2_int];
           }
-          this.b(-24892);
+          this.initializeState(-24892);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "pe.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

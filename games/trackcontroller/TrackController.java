@@ -104,7 +104,7 @@ public final class TrackController extends GameShell {
                 if (null != ua.field_L) {
                   ua.field_L.g(param0 + 122);
                 }
-                ib.field_a = nf.field_e;
+                ib.field_a = IsaacRandom.field_e;
               } else {
                 ib.field_a = jh.field_a;
               }
@@ -281,7 +281,7 @@ public final class TrackController extends GameShell {
             }
             nc.a(stackIn_54_0, -131);
           }
-          if (nf.field_f) {
+          if (IsaacRandom.field_f) {
             bk.font.c(Integer.toString(dh.field_p), 10, 40, 0, -1);
           }
           qd.a((java.awt.Canvas) (var7), 0, 0, param0 + 2741);
@@ -394,7 +394,7 @@ public final class TrackController extends GameShell {
         oe.clearStaticReferences(-1);
         ByteStorage.clearStaticReferences((byte) 125);
         Bzip2Decompressor.clearStaticReferences();
-        nf.clearStaticReferences(261211);
+        IsaacRandom.clearStaticReferences(261211);
         SocketArchiveRequestConnection.clearStaticReferences(80);
         mb.clearStaticReferences((byte) -36);
         NetworkArchiveRequest.clearStaticReferences((byte) -81);

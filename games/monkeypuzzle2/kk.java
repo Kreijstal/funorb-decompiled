@@ -817,7 +817,7 @@ final class kk {
           if (var6 == 11) {
             stackIn_25_0 = re.field_e;
           } else {
-            stackIn_25_0 = ol.field_e;
+            stackIn_25_0 = IsaacRandom.field_e;
           }
           var13 = stackIn_25_0;
           de.field_f.c(146 * var13 / 256 - 2 + var12, 14);

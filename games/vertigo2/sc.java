@@ -8,16 +8,16 @@ final class sc {
 
     final static void a(boolean param0, int param1) {
         int var2 = (-268435329 & param1) << 4;
-        ke.field_e[3] = oo.field_h[var2];
+        HuffmanCodec.field_e[3] = oo.field_h[var2];
         if (param0) {
-          ke.field_e[4] = 0;
-          ke.field_e[5] = -oo.field_j[var2];
-          ke.field_e[7] = 65536;
-          ke.field_e[6] = 0;
-          ke.field_e[8] = 0;
-          ke.field_e[9] = oo.field_j[var2];
-          ke.field_e[10] = 0;
-          ke.field_e[11] = oo.field_h[var2];
+          HuffmanCodec.field_e[4] = 0;
+          HuffmanCodec.field_e[5] = -oo.field_j[var2];
+          HuffmanCodec.field_e[7] = 65536;
+          HuffmanCodec.field_e[6] = 0;
+          HuffmanCodec.field_e[8] = 0;
+          HuffmanCodec.field_e[9] = oo.field_j[var2];
+          HuffmanCodec.field_e[10] = 0;
+          HuffmanCodec.field_e[11] = oo.field_h[var2];
           return;
         }
     }

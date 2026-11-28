@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ke {
+final class HuffmanCodec {
     static String field_g;
     private int[] field_h;
     static String field_d;
@@ -14,7 +14,7 @@ final class ke {
     static int[] field_e;
     private int[] field_a;
 
-    final int a(int param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
+    final int decompress(int param0, byte[] param1, int param2, int param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -222,7 +222,7 @@ final class ke {
         }
     }
 
-    final int a(int param0, int param1, byte[] param2, int param3, int param4, byte[] param5) {
+    final int compress(int param0, int param1, byte[] param2, int param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -247,7 +247,7 @@ final class ke {
           var7_int = 0;
           if (param1 > -3) {
             var16 = (byte[]) null;
-            this.a(48, (byte[]) null, -36, 30, 56, (byte[]) null);
+            this.decompress(48, (byte[]) null, -36, 30, 56, (byte[]) null);
           }
           param4 = param4 + param0;
           var8 = param3 << 3;
@@ -336,7 +336,7 @@ final class ke {
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param1 >= -113) {
           var4 = (String) null;
-          ke.a((Throwable) null, (String) null, -71);
+          HuffmanCodec.a((Throwable) null, (String) null, -71);
         }
         {
           if ((param0 <= 0 ||
@@ -407,7 +407,7 @@ final class ke {
         return (byte) var2;
     }
 
-    ke(byte[] param0) {
+    HuffmanCodec(byte[] param0) {
         int var5 = 0;
         int var14 = 0;
         RuntimeException stackIn_38_0 = null;

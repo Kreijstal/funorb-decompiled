@@ -90,7 +90,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
             stackIntegerLocal3 = RenderingSupport001.integerState0064;
           }
           InputAdapter002.performAction1350(stackIntegerLocal3, 97);
-          PcmResampler.mixedSupport006State0002.performAction0066(-42 + MixedSupport030.sceneWidgetState0023.integerState0915, MixedSupport030.sceneWidgetState0023.integerState0896, 0, integerArgument2 + 117, 0);
+          PcmResampler.mixedSupport006State0002.performAction0066(-42 + IsaacRandom.sceneWidgetState0023.integerState0915, IsaacRandom.sceneWidgetState0023.integerState0896, 0, integerArgument2 + 117, 0);
           UiComponentPart013.sceneWidgetState0048.performAction1764(RenderingSupport006.sceneWidgetState0056.integerState0896, integerArgument2 ^ -2, 0, ComponentContainer.integerState0377, 0);
           stackSceneWidgetLocal4 = MixedSupport071.sceneWidgetState0070;
           stackIntegerLocal5 = RenderingSupport006.sceneWidgetState0056.integerState0896;
@@ -102,7 +102,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
           ((SceneWidget) (Object) stackSceneWidgetLocal4).performAction1764(stackIntegerLocal5 - stackIntegerLocal6, 0, 2 + ComponentContainer.integerState0377, 18, 0);
           RichTextLayout.sceneWidgetState0020.performAction1764(42 + MixedSupport139.integerState0855, 0, ComponentContainer.integerState0377 - integerArgument2, 18, -40 + (-2 + RenderingSupport006.sceneWidgetState0056.integerState0896 - MixedSupport139.integerState0855));
           ValidationStatus.sceneWidgetPart008State0006.performAction1122(6, ComponentContainer.integerState0377 + 22, MixedSupport139.integerState0855, 0, -2 + (-ComponentContainer.integerState0377 + RenderingSupport006.sceneWidgetState0056.integerState0915) - 20, RenderingSupport006.sceneWidgetState0056.integerState0896, 2);
-          ComponentDecorator.sceneWidgetState0078.performAction1764(MixedSupport030.sceneWidgetState0023.integerState0896, 0, -40 + MixedSupport030.sceneWidgetState0023.integerState0915, 40, 0);
+          ComponentDecorator.sceneWidgetState0078.performAction1764(IsaacRandom.sceneWidgetState0023.integerState0896, 0, -40 + IsaacRandom.sceneWidgetState0023.integerState0915, 40, 0);
           MixedSupport042.sceneWidgetState0033.performAction1764(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 0, 30, 0);
           MixedSupport106.sceneWidgetState0102.performAction1764(NetworkSupport008.sceneWidgetState0093.integerState0896, 0, 30, -2 + NetworkSupport008.sceneWidgetState0093.integerState0915 - 70, 0);
           integerLocal9 = MixedSupport063.integerState0336 + 3;

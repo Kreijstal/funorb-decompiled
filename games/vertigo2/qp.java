@@ -54,7 +54,7 @@ final class qp {
           kh.field_b.position = 0;
           kh.field_b.a(param3, param5 ^ -10149, param2, param4);
           kh.field_b.h(var7_int, 2);
-          kh.field_b.a(var13, -12257);
+          kh.field_b.encryptXtea(var13, -12257);
           if (null == hh.field_b ||
             !(100 <= hh.field_b.payload.length)) {
             hh.field_b = new PacketBuffer(100);

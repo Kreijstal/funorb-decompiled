@@ -4,7 +4,7 @@
 final class CipherPacketBuffer extends PacketBuffer {
     static TextureCombineSource field_p;
     private int field_q;
-    private fc field_l;
+    private IsaacRandom field_l;
     static RenderSprite[] brassSliderSprites;
     static long field_o;
     static SpriteData[] fontSpriteData;
@@ -22,7 +22,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (obfuscationGuard >= 35) {
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(this.field_l.b(256) + opcode);
+          this.payload[fieldTemp$0] = (byte)(this.field_l.nextInt(256) + opcode);
           return;
         }
     }
@@ -37,7 +37,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           for (int var5_int = 0; param1 > var5_int; var5_int++) {
             int fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_l.b(256));
+            param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_l.nextInt(256));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             int[] var4 = (int[]) null;
             this.initializeOpcodeCipher(true, (int[]) null);
           }
-          this.field_l = new fc(seed);
+          this.field_l = new IsaacRandom(seed);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "dl.F(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
@@ -128,12 +128,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 <= -1) {
           int fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_l.b(256);
+          return 255 & this.payload[fieldTemp$0] - this.field_l.nextInt(256);
         }
         field_p = (TextureCombineSource) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_l.b(256);
+        return 255 & this.payload[fieldTemp$1] - this.field_l.nextInt(256);
     }
 
     final int b(byte param0, int param1) {

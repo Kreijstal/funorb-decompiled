@@ -70,7 +70,7 @@ final class tf {
           if (SecondaryNodeDequeIterator.field_i == null) {
             return true;
           }
-          df.a((byte) 11, new ja(SecondaryNodeDequeIterator.field_i.a("", "huffman", (byte) -110)));
+          df.a((byte) 11, new HuffmanDecoder(SecondaryNodeDequeIterator.field_i.a("", "huffman", (byte) -110)));
           SecondaryNodeDequeIterator.field_i = null;
           nf.d(0);
           return false;

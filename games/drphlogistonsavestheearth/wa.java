@@ -369,7 +369,7 @@ final class wa extends pj implements kd, ke {
         try {
           if (this.field_S != param3) {
             if (param3 == this.field_K) {
-              ta.b(!param2);
+              IsaacRandom.b(!param2);
             } else {
               if (this.field_P == param3) {
                 if (this.field_T) {

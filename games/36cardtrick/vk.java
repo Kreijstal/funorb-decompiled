@@ -66,7 +66,7 @@ final class vk {
         } else {
           this.field_a = bl.field_c;
         }
-        this.field_k = hg.field_b;
+        this.field_k = IsaacRandom.field_b;
         this.field_g = GameApplet.field_c;
         this.field_c = fg.field_l;
         this.field_i = hi.field_b;

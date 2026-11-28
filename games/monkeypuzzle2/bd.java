@@ -39,7 +39,7 @@ final class bd {
         if (param0 != 25951) {
           return true;
         }
-        if (null == ol.field_g) {
+        if (null == IsaacRandom.field_g) {
           return false;
         }
         if (dk.field_h.b(param0 - 25949)) {

@@ -1605,7 +1605,7 @@ final class oj {
                 }
                 var2 = dl.a("create_alert_namechars", false);
                 if (null != var2) {
-                  ed.field_h = re.a(18990, var2);
+                  IsaacRandom.field_h = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_nameleadingspace", false);
                 if (var2 != null) {

@@ -17,14 +17,14 @@ final class vc extends IntrusiveNode {
         if (param1 == 60) {
           ff.field_o = param0;
           nh.field_e = 1;
-          jb.field_e = 0;
+          IsaacRandom.field_e = 0;
           vj.field_ab = param2;
           return;
         }
         vc.clearStaticReferences((byte) 96);
         ff.field_o = param0;
         nh.field_e = 1;
-        jb.field_e = 0;
+        IsaacRandom.field_e = 0;
         vj.field_ab = param2;
     }
 

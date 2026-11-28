@@ -185,7 +185,7 @@ public final class Bounce extends GameClient {
           gd.resetStaticState(255);
           ng.clearStaticReferences(2);
           SpriteGeometry.clearStaticReferences(65);
-          qb.a((byte) -30);
+          IsaacRandom.a((byte) -30);
           tb.clearStaticReferences((byte) 68);
           ml.clearStaticReferences(-1);
           NetworkArchiveRequest.a(false);
@@ -842,7 +842,7 @@ public final class Bounce extends GameClient {
                   break scanLoop1;
                 }
                 if (stackIn_478_0 > 0) {
-                  ua.field_c[var2_int].a(116, qb.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
+                  ua.field_c[var2_int].a(116, IsaacRandom.a(true), (double)(int)(Math.random() * 384.0 + 64.0));
                   var3 = Math.random() * 32.0;
                   if (ua.field_c[(-4 + ua.field_b + var2_int) % (-3 + ua.field_b)].field_h + 32.0 + var3 > ua.field_c[var2_int].field_h) {
                     ua.field_c[var2_int].field_h = ua.field_c[(var2_int - (-ua.field_b + 4)) % (-3 + ua.field_b)].field_h + 32.0 + var3;

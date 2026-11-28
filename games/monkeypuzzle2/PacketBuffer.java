@@ -735,9 +735,9 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -1) {
           field_e = -5;
         }
-        if (ol.field_g != null) {
-          ol.field_g.a((byte) 73);
-          ol.field_g = null;
+        if (IsaacRandom.field_g != null) {
+          IsaacRandom.field_g.a((byte) 73);
+          IsaacRandom.field_g = null;
         }
     }
 

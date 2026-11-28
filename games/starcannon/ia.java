@@ -4,7 +4,7 @@
 final class ia extends PacketBuffer {
     static String field_l;
     static int field_k;
-    private jb field_m;
+    private IsaacRandom field_m;
     private int field_j;
 
     final static void a(String param0, String param1, int param2) {
@@ -25,17 +25,17 @@ final class ia extends PacketBuffer {
           ia.a((IntrusiveNode) null, (IntrusiveNode) null, (byte) -73);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_m.d(param0 ^ 252) & 255;
+          return this.payload[fieldTemp$0] - this.field_m.nextInt(param0 ^ 252) & 255;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_m.d(param0 ^ 252) & 255;
+        return this.payload[fieldTemp$1] - this.field_m.nextInt(param0 ^ 252) & 255;
     }
 
     final void d(byte param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.d(3));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_m.nextInt(3));
         if (param0 >= 14) {
           return;
         }
@@ -112,7 +112,7 @@ final class ia extends PacketBuffer {
 
     final void a(int[] param0, byte param1) {
         try {
-          this.field_m = new jb(param0);
+          this.field_m = new IsaacRandom(param0);
           int var3_int = -76 / ((param1 + 5) / 46);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ia.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -137,7 +137,7 @@ final class ia extends PacketBuffer {
           while (var5_int < param0) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.d(dg.a((int) param1, -55)));
+            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_m.nextInt(dg.a((int) param1, -55)));
             var5_int++;
           }
           return;

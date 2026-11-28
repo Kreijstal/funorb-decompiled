@@ -39,7 +39,7 @@ final class ub {
         if (200 < si.field_l) {
           var5 = (-si.field_l + 250 << 8) / 50;
         }
-        CrossfadingMidiPcmStream.a(ug.field_f, 256);
+        CrossfadingMidiPcmStream.a(IsaacRandom.field_f, 256);
         if (param2 != 116) {
           ub.clearStaticReferences(-11);
           ka.c();
@@ -50,7 +50,7 @@ final class ub {
           }
           fi.c(true);
           if (150 > si.field_l) {
-            ug.field_f.d(var3, var4);
+            IsaacRandom.field_f.d(var3, var4);
           } else {
             ch.field_c.e(var3 + 15, var4 + 10, var5);
           }
@@ -77,14 +77,14 @@ final class ub {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
             fi.c(true);
             if (150 > si.field_l) {
-              ug.field_f.d(var3, var4);
+              IsaacRandom.field_f.d(var3, var4);
             } else {
               ch.field_c.e(var3 + 15, var4 + 10, var5);
             }
           } else {
             fi.c(true);
             if (150 > si.field_l) {
-              ug.field_f.d(var3, var4);
+              IsaacRandom.field_f.d(var3, var4);
               var6 = si.field_l - 125;
               if (var6 <= 0) {
                 var6 = -140 + si.field_l;

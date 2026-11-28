@@ -12,7 +12,7 @@ final class IsaacRandom {
     static volatile boolean field_f;
     private int field_h;
 
-    private final void a(byte param0) {
+    private final void generateResults(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -253,7 +253,7 @@ final class IsaacRandom {
         }
     }
 
-    private final void b(int param0) {
+    private final void initializeState(int param0) {
         int var2 = 0;
         int var11 = Confined.field_J ? 1 : 0;
         int var3 = -1640531527;
@@ -379,7 +379,7 @@ final class IsaacRandom {
           this.field_e[var2Lifetime2 + 6] = var9;
           this.field_e[var2Lifetime2 + 7] = var10;
         }
-        this.a((byte) -118);
+        this.generateResults((byte) -118);
         this.field_g = 256;
     }
 
@@ -455,12 +455,12 @@ final class IsaacRandom {
         }
     }
 
-    final int c(int param0) {
+    final int nextInt(int param0) {
         if (param0 != 256) {
           return 2;
         }
         if (this.field_g == 0) {
-          this.a((byte) -105);
+          this.generateResults((byte) -105);
           this.field_g = 256;
         }
         int fieldTemp$0 = this.field_g - 1;
@@ -507,7 +507,7 @@ final class IsaacRandom {
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
-          this.b(-4);
+          this.initializeState(-4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

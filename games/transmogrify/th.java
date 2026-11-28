@@ -35,14 +35,14 @@ final class th {
           DiskArchiveRequest.field_x = DiskArchiveRequest.field_x + (param1.readUnsignedShort((byte) -112) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) 64);
           DiskArchiveRequest.field_x = DiskArchiveRequest.field_x + (var2_intLifetime1 >> 6);
-          ug.field_b = 2064384 & var2_intLifetime1 << 15;
-          ug.field_b = ug.field_b + (param1.readUnsignedByte((byte) 41) << 7);
+          IsaacRandom.field_b = 2064384 & var2_intLifetime1 << 15;
+          IsaacRandom.field_b = IsaacRandom.field_b + (param1.readUnsignedByte((byte) 41) << 7);
           if (param0 < 91) {
             field_e = (String) null;
           }
           var2_intLifetime2 = param1.readUnsignedByte((byte) 127);
           BoundedRandomAccessFile.field_e = 65536 & var2_intLifetime2 << 16;
-          ug.field_b = ug.field_b + (var2_intLifetime2 >> 1);
+          IsaacRandom.field_b = IsaacRandom.field_b + (var2_intLifetime2 >> 1);
           BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e + param1.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "th.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

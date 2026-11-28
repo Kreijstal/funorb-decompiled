@@ -542,7 +542,7 @@ abstract class GameClientBase extends GameApplet {
                   te.a(-1, var5_intLifetime2, SecondaryNodeDequeIterator.field_c);
                   SecondaryNodeDequeIterator.field_c = null;
                 } else {
-                  je.field_a = ed.field_j;
+                  je.field_a = IsaacRandom.field_j;
                   mc.a(111);
                   gj.field_c = 10;
                   ResourceArchive.field_q = false;

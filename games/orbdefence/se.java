@@ -3,7 +3,7 @@
  */
 final class se extends PacketBuffer {
     private int field_p;
-    private re field_o;
+    private IsaacRandom field_o;
     static String field_n;
 
     final void m(int param0) {
@@ -38,11 +38,11 @@ final class se extends PacketBuffer {
           this.h(69, 70);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return this.payload[fieldTemp$0] - this.field_o.a(128) & 255;
+          return this.payload[fieldTemp$0] - this.field_o.nextInt(128) & 255;
         }
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$1] - this.field_o.a(128) & 255;
+        return this.payload[fieldTemp$1] - this.field_o.nextInt(128) & 255;
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
@@ -61,7 +61,7 @@ final class se extends PacketBuffer {
           for (var6 = 0; var6 < param3; var6++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param2[var6 + param1] = (byte)(this.payload[fieldTemp$0] - this.field_o.a(128));
+            param2[var6 + param1] = (byte)(this.payload[fieldTemp$0] - this.field_o.nextInt(128));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,7 +89,7 @@ final class se extends PacketBuffer {
     final void i(int param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(this.field_o.a(128) + param0);
+        this.payload[fieldTemp$0] = (byte)(this.field_o.nextInt(128) + param0);
         int var3 = -34 / ((21 - param1) / 58);
     }
 
@@ -114,7 +114,7 @@ final class se extends PacketBuffer {
     final void n(int param0) {
         this.field_p = this.position * 8;
         if (param0 != 9471) {
-          this.field_o = (re) null;
+          this.field_o = (IsaacRandom) null;
         }
     }
 
@@ -187,9 +187,9 @@ final class se extends PacketBuffer {
 
     final void b(int[] param0, int param1) {
         try {
-          this.field_o = new re(param0);
+          this.field_o = new IsaacRandom(param0);
           if (param1 != 3777) {
-            this.field_o = (re) null;
+            this.field_o = (IsaacRandom) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "se.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

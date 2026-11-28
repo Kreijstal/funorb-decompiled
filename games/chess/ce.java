@@ -67,7 +67,7 @@ final class ce {
             null == ib.field_d) {
             if (!NanoFrameTimer.field_o) {
               var5 = pi.field_d;
-              var6 = sn.field_e;
+              var6 = HuffmanCodec.field_e;
               var5.field_b.a((byte) -12, var6, 14);
             }
             var7 = pi.field_d;

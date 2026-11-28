@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hb extends PacketBuffer {
-    private ol field_j;
+    private IsaacRandom field_j;
     private int field_i;
     static Sprite[][] field_m;
     static int field_n;
@@ -12,7 +12,7 @@ final class hb extends PacketBuffer {
     final void b(boolean param0, int param1) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)(param1 + this.field_j.c(0));
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_j.nextInt(0));
         if (!param0) {
           this.field_i = -91;
         }
@@ -23,7 +23,7 @@ final class hb extends PacketBuffer {
           if (param1 != 0) {
             hb.b((byte) 106, 53);
           }
-          this.field_j = new ol(param0);
+          this.field_j = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "hb.DB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -65,7 +65,7 @@ final class hb extends PacketBuffer {
         int var2 = -21 % ((-81 - param0) / 36);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return this.payload[fieldTemp$0] - this.field_j.c(0) & 255;
+        return this.payload[fieldTemp$0] - this.field_j.nextInt(0) & 255;
     }
 
     final static int a(boolean param0) {
@@ -121,7 +121,7 @@ final class hb extends PacketBuffer {
           for (var5_int = 0; param2 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_j.c(0));
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_j.nextInt(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

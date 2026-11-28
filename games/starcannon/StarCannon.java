@@ -3287,7 +3287,7 @@ public final class StarCannon extends ag {
         BoundedRandomAccessFile.clearStaticReferences(0);
         la.clearStaticReferences((byte) 1);
         ArchiveRequest.clearStaticReferences(0);
-        jb.clearStaticReferences(-730625660);
+        IsaacRandom.clearStaticReferences(-730625660);
         pd.resetStaticState((byte) 98);
         vj.resetStaticState(true);
         fg.clearStaticReferences((byte) 6);
@@ -3565,7 +3565,7 @@ public final class StarCannon extends ag {
           af.field_y.a(di.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
         }
         if (nh.field_e != 0) {
-          var4Lifetime1 = 256 * jb.field_e / 50;
+          var4Lifetime1 = 256 * IsaacRandom.field_e / 50;
           if (0 < var4Lifetime1) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, var4Lifetime1);
           }
@@ -3696,8 +3696,8 @@ public final class StarCannon extends ag {
         }
         if (nh.field_e != 0) {
           if (1 == nh.field_e) {
-            jb.field_e = jb.field_e + 1;
-            if (jb.field_e == 50) {
+            IsaacRandom.field_e = IsaacRandom.field_e + 1;
+            if (IsaacRandom.field_e == 50) {
               if (!gh.f(-23093)) {
                 pk.b(0);
               } else {
@@ -3707,8 +3707,8 @@ public final class StarCannon extends ag {
             }
           } else {
             if (nh.field_e != 2) {
-              jb.field_e = jb.field_e - 1;
-              if (jb.field_e == 0) {
+              IsaacRandom.field_e = IsaacRandom.field_e - 1;
+              if (IsaacRandom.field_e == 0) {
                 nh.field_e = 0;
               }
             } else {

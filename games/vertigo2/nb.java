@@ -187,7 +187,7 @@ final class nb extends TextureOperator {
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
-            ke.a((Throwable) ((Object) var6), "CC1", 0);
+            HuffmanCodec.a((Throwable) ((Object) var6), "CC1", 0);
             sd.field_P = null;
             tj.field_a = null;
           }

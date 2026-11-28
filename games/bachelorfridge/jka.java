@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jka extends pu {
-    static il field_l;
+    static HuffmanCodec field_l;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         if (param5 != 88) {
-          field_l = (il) null;
+          field_l = (HuffmanCodec) null;
           if (param1 < DualLinkNode.field_l) {
             TileEffectAnimation.a(param0, 127, param4, param7, param1, param3, param2, param6);
             return;

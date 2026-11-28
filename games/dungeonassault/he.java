@@ -228,7 +228,7 @@ final class he extends ip {
           DualLinkNode.field_m[11] = vd.field_d.toUpperCase();
           DualLinkNode.field_m[12] = cd.field_h.toUpperCase();
           DualLinkNode.field_m[13] = pd.field_B.toUpperCase();
-          DualLinkNode.field_m[14] = ja.field_a.toUpperCase();
+          DualLinkNode.field_m[14] = HuffmanDecoder.field_a.toUpperCase();
           DualLinkNode.field_m[15] = ef.field_g.toUpperCase();
           DualLinkNode.field_m[16] = uo.field_e.toUpperCase();
           DualLinkNode.field_m[17] = jg.field_e.toUpperCase();
@@ -260,7 +260,7 @@ final class he extends ip {
           var1[ob.field_Jb] = oa.field_g;
           var1[ob.field_Sb] = vc.field_d;
           var1[ob.field_Ib] = lg.field_d;
-          var1[ob.field_Gb] = ja.field_d;
+          var1[ob.field_Gb] = HuffmanDecoder.field_d;
           var1[ob.field_pc] = hj.field_P;
           var1[ob.field_gc] = rf.field_N;
           var1[ob.field_bc] = BoundedRandomAccessFile.field_f;
@@ -833,7 +833,7 @@ final class he extends ip {
           }
           for (var3Lifetime1 = 0; Raider.field_m.length > var3Lifetime1; var3Lifetime1++) {
             DiskCacheWorker.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
-            DiskCacheWorker.field_e[rj.field_l + uf.field_a + var3Lifetime1] = ff.field_f[var3Lifetime1];
+            DiskCacheWorker.field_e[rj.field_l + uf.field_a + var3Lifetime1] = IsaacRandom.field_f[var3Lifetime1];
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < ci.field_s.length; var3Lifetime2++) {
             DiskCacheWorker.field_e[gn.field_d + var3Lifetime2] = BufferedRandomAccessFile.field_m[var3Lifetime2];

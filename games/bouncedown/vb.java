@@ -139,7 +139,7 @@ final class vb implements fc {
             pj.field_a = rj.field_q;
           }
           if (pj.field_a == rj.field_q &&
-            qb.a(1, 3)) {
+            IsaacRandom.a(1, 3)) {
             var9Lifetime1 = jc.field_g.readUnsignedByte((byte) -84);
             jc.field_g.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -160,7 +160,7 @@ final class vb implements fc {
                 pe.field_d = -1;
                 wa.field_d = var9Lifetime1;
               } else {
-                qb.a(BufferedRandomAccessFile.b(false), 3);
+                IsaacRandom.a(BufferedRandomAccessFile.b(false), 3);
                 lk.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
                 jc.field_g.position = 0;
               }
@@ -169,10 +169,10 @@ final class vb implements fc {
           var9Lifetime2 = 71 / ((param2 + 45) / 32);
           if (pj.field_a == kb.field_b) {
             var10Lifetime1 = 2;
-            if (qb.a(var10Lifetime1, 3)) {
+            if (IsaacRandom.a(var10Lifetime1, 3)) {
               var11 = jc.field_g.readUnsignedShort(-1640531527);
               jc.field_g.position = 0;
-              if (qb.a(var11, 3)) {
+              if (IsaacRandom.a(var11, 3)) {
                 var12 = bi.field_l.length;
                 for (var13 = 0; var12 > var13; var13++) {
                   bi.field_l[var13] = jc.field_g.readPrefixedString(true);
