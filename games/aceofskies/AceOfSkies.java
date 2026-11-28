@@ -1110,7 +1110,7 @@ public final class AceOfSkies extends NetworkGameClient {
             do {
               AchievementSubmission var2 = (AchievementSubmission) (sb.field_c.removeFirst(121));
               if (null != var2) {
-                PcmOutputWorker.a(var2, (byte) -117, 4);
+                PcmOutputWorker.enqueueAndWriteAchievementSubmission(var2, (byte) -117, 4);
               } else if (!var3) {
                 break;
               }

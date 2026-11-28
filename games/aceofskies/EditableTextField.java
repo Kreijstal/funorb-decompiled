@@ -60,27 +60,27 @@ class EditableTextField extends mi {
                 return true;
               }
               if (param1 == 13) {
-                this.f((byte) -2);
+                this.clearText((byte) -2);
                 return true;
               }
               if (param1 == 96) {
                 if (this.field_B > 0) {
                   int stackIn_58_1 = 120;
                   if (lp.heldKeys[82]) {
-                    stackIn_59_2 = this.e((byte) 76);
+                    stackIn_59_2 = this.findPreviousWordBoundary((byte) 76);
                   } else {
                     stackIn_59_2 = -1 + this.field_B;
                   }
-                  this.a((byte) stackIn_58_1, stackIn_59_2);
+                  this.moveCaret((byte) stackIn_58_1, stackIn_59_2);
                   return true;
                 }
               } else if (param1 != 97) {
                 if (102 == param1) {
-                  this.a((byte) 69, 0);
+                  this.moveCaret((byte) 69, 0);
                   return true;
                 }
                 if (param1 == 103) {
-                  this.a((byte) 59, this.field_f.length());
+                  this.moveCaret((byte) 59, this.field_f.length());
                   return true;
                 }
                 if (param1 == 84) {
@@ -107,9 +107,9 @@ class EditableTextField extends mi {
                 if (!lp.heldKeys[82]) {
                   stackIn_53_2 = 1 + this.field_B;
                 } else {
-                  stackIn_53_2 = this.k(0);
+                  stackIn_53_2 = this.findNextWordBoundary(0);
                 }
-                this.a((byte) stackIn_52_1, stackIn_53_2);
+                this.moveCaret((byte) stackIn_52_1, stackIn_53_2);
                 return true;
               }
             } else {
@@ -174,7 +174,7 @@ class EditableTextField extends mi {
         return (java.applet.Applet) ((Object) BufferedRandomAccessFile.field_f);
     }
 
-    private final int e(byte param0) {
+    private final int findPreviousWordBoundary(byte param0) {
         int var2;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_B == 0) {
@@ -189,7 +189,7 @@ class EditableTextField extends mi {
         return var2;
     }
 
-    final void a(int param0, String param1, boolean param2) {
+    final void setText(int param0, String param1, boolean param2) {
         String stackIn_15_2 = null;
         try {
           if (param1 == null) {
@@ -254,14 +254,14 @@ class EditableTextField extends mi {
           if (param0 > 64) {
             return;
           }
-          int discarded$6 = this.k(125);
+          int discarded$6 = this.findNextWordBoundary(125);
           return;
         }
         if (param1 != 0) {
           if (param0 > 64) {
             return;
           }
-          int discarded$5 = this.k(125);
+          int discarded$5 = this.findNextWordBoundary(125);
           return;
         }
         this.field_e.a(this.field_u, -7592, param3, (ea) (this), param2);
@@ -269,7 +269,7 @@ class EditableTextField extends mi {
           if (param0 > 64) {
             return;
           }
-          int discarded$4 = this.k(125);
+          int discarded$4 = this.findNextWordBoundary(125);
           return;
         }
         et var8 = (et) ((Object) this.field_e);
@@ -279,14 +279,14 @@ class EditableTextField extends mi {
             if (param0 > 64) {
               return;
             }
-            int discarded$1 = this.k(125);
+            int discarded$1 = this.findNextWordBoundary(125);
             return;
           }
           var8.a((byte) 71, param3, param2, this.field_B, (ea) (this));
           if (param0 > 64) {
             return;
           }
-          int discarded$0 = this.k(125);
+          int discarded$0 = this.findNextWordBoundary(125);
           return;
         }
         var8.a(this.field_D, this.field_B, param2, param3, (ea) (this), (byte) -123);
@@ -295,14 +295,14 @@ class EditableTextField extends mi {
           if (param0 > 64) {
             return;
           }
-          int discarded$2 = this.k(125);
+          int discarded$2 = this.findNextWordBoundary(125);
           return;
         }
         var8.a((byte) 71, param3, param2, this.field_B, (ea) (this));
         if (param0 > 64) {
           return;
         }
-        int discarded$3 = this.k(125);
+        int discarded$3 = this.findNextWordBoundary(125);
         return;
     }
 
@@ -324,7 +324,7 @@ class EditableTextField extends mi {
         try {
           this.field_H = param2;
           this.field_e = ArchiveRequest.field_n.field_n;
-          this.a(-20975, param0, true);
+          this.setText(-20975, param0, true);
           this.field_y = true;
           this.field_F = kh.correctedCurrentTimeMillis(-88);
         } catch (RuntimeException runtimeException) {
@@ -355,7 +355,7 @@ class EditableTextField extends mi {
         }
     }
 
-    private final void h(int param0) {
+    private final void scrollCaretIntoView(int param0) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_y) {
           this.field_j = 0;
@@ -392,7 +392,7 @@ class EditableTextField extends mi {
         return;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void moveCaret(byte param0, int param1) {
         this.field_B = param1;
         if (param0 > 30) {
           if (!lp.heldKeys[81]) {
@@ -412,7 +412,7 @@ class EditableTextField extends mi {
           if (param0 <= 13) {
             this.field_B = -1;
           }
-          this.h(0);
+          this.scrollCaretIntoView(0);
           if (this.field_i == 1) {
             if (this.field_e instanceof et) {
               et var7 = (et) ((Object) this.field_e);
@@ -461,7 +461,7 @@ class EditableTextField extends mi {
         }
     }
 
-    private final int k(int param0) {
+    private final int findNextWordBoundary(int param0) {
         int var3;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = this.field_f.length();
@@ -479,7 +479,7 @@ class EditableTextField extends mi {
         return var3;
     }
 
-    final void f(byte param0) {
+    final void clearText(byte param0) {
         this.field_f = "";
         this.field_B = 0;
         this.field_D = 0;
@@ -561,13 +561,13 @@ class EditableTextField extends mi {
           int var8_int = ((et) ((Object) this.field_e)).a((ea) (this), param1, param4, cf.field_g, param0 - 31, ic.field_b);
           int stackIn_6_1 = 82;
           stackIn_7_2 = (var8_int == -1) ? (0) : (var8_int);
-          this.a((byte) stackIn_6_1, stackIn_7_2);
+          this.moveCaret((byte) stackIn_6_1, stackIn_7_2);
           long var8_long = kh.correctedCurrentTimeMillis(param0 - 125);
           boolean stackIn_10_1 = !(var8_long - this.field_E >= 250L);
           this.field_G = stackIn_10_1;
           if (this.field_G) {
-            this.field_D = this.e((byte) 97);
-            this.field_B = this.k(0);
+            this.field_D = this.findPreviousWordBoundary((byte) 97);
+            this.field_B = this.findNextWordBoundary(0);
             if (this.field_B > 0 &&
               this.field_f.charAt(this.field_B - 1) == 32) {
               this.field_B = this.field_B - 1;

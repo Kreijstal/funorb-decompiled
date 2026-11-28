@@ -69,7 +69,7 @@ final class ArchiveIndex {
         int var14Lifetime1;
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          PacketBuffer var17 = new PacketBuffer(PcmOutputWorker.a(param0, 0));
+          PacketBuffer var17 = new PacketBuffer(PcmOutputWorker.decompressArchiveContainer(param0, 0));
           int var4 = var17.readUnsignedByte(-112);
           if (var4 >= 5 &&
             var4 <= 7) {

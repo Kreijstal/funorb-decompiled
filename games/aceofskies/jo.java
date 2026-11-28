@@ -28,7 +28,7 @@ final class jo extends IntrusiveNode {
           if (param2 >= -18) {
             jo.a((byte) 24);
           }
-          SoundPlayback stackIn_3_0 = EmailValidationError.startPcmPlayback(-23159, PcmSampleStream.a(param0, 100, param1));
+          SoundPlayback stackIn_3_0 = EmailValidationError.startPcmPlayback(-23159, PcmSampleStream.createForPlaybackRate(param0, 100, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

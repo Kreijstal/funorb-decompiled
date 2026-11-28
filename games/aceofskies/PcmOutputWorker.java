@@ -9,7 +9,7 @@ final class PcmOutputWorker implements Runnable {
     static long[] field_b;
     volatile AudioOutput[] field_c;
 
-    final static byte[] a(byte[] param0, int param1) {
+    final static byte[] decompressArchiveContainer(byte[] param0, int param1) {
         String stackIn_28_2 = null;
         try {
           if (param1 != 0) {
@@ -103,7 +103,7 @@ final class PcmOutputWorker implements Runnable {
         return var2;
     }
 
-    final static void a(AchievementSubmission param0, byte param1, int param2) {
+    final static void enqueueAndWriteAchievementSubmission(AchievementSubmission param0, byte param1, int param2) {
         try {
           ci.field_j.addLast(77, param0);
           if (param1 > -70) {

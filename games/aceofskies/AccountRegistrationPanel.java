@@ -68,7 +68,7 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
           }
           ValidatedTextField var3 = this.field_D;
           String var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(param1 ^ -10013047, var4, false);
+          ((EditableTextField) ((Object) var3)).setText(param1 ^ -10013047, var4, false);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wd.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -271,12 +271,12 @@ final class AccountRegistrationPanel extends ab implements ue, dn, bh {
         this.field_F.field_k = nc.field_b;
         this.field_x.field_k = MatchingFieldValidator.field_h;
         this.field_z.field_k = ai.field_b;
-        this.field_D.a(new AccountNameAvailabilityValidator(this.field_D), 1472);
-        this.field_E.a(new EmailFormatValidator(this.field_E), 1472);
-        this.field_u.a(new ConfirmedEmailAvailabilityValidator(this.field_u, this.field_E), 1472);
-        this.field_y.a(new PasswordValidator(this.field_y, this.field_D, this.field_E), 1472);
-        this.field_F.a(new MatchingFieldValidator(this.field_F, this.field_y), 1472);
-        this.field_x.a(new AgeValidator(this.field_x), 1472);
+        this.field_D.setFieldValidator(new AccountNameAvailabilityValidator(this.field_D), 1472);
+        this.field_E.setFieldValidator(new EmailFormatValidator(this.field_E), 1472);
+        this.field_u.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_u, this.field_E), 1472);
+        this.field_y.setFieldValidator(new PasswordValidator(this.field_y, this.field_D, this.field_E), 1472);
+        this.field_F.setFieldValidator(new MatchingFieldValidator(this.field_F, this.field_y), 1472);
+        this.field_x.setFieldValidator(new AgeValidator(this.field_x), 1472);
         this.field_A.field_u = false;
         this.field_A.field_e = (ir) ((Object) new qb());
         this.field_w.field_e = (ir) ((Object) new wg());

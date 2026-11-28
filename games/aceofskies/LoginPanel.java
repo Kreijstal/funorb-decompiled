@@ -69,20 +69,20 @@ final class LoginPanel extends ab implements TextFieldListener, dn {
         try {
           EditableTextField var3 = this.field_v;
           String var4 = param0;
-          var3.a(-20975, var4, false);
+          var3.setText(-20975, var4, false);
           if (param1 < 43) {
             EditableTextField var5 = (EditableTextField) null;
             this.onTextSubmitted((EditableTextField) null, 39);
           }
-          this.field_x.f((byte) -2);
+          this.field_x.clearText((byte) -2);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ce.HA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final void h(int param0) {
-        this.field_v.f((byte) -2);
-        this.field_x.f((byte) -2);
+        this.field_v.clearText((byte) -2);
+        this.field_x.clearText((byte) -2);
         if (param0 != 310) {
           this.field_x = (EditableTextField) null;
         }

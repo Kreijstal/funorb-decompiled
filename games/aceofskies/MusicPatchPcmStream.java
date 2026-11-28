@@ -62,16 +62,16 @@ final class MusicPatchPcmStream extends PcmStream {
             param2.field_t = var4_int * param1 + param2.field_t & 1048575;
             if (var5 <= param1) {
               if (this.field_l.field_z[param2.field_m] != 0) {
-                param2.field_e = PcmSampleStream.a(param2.field_x, param2.field_e.l(), 0, param2.field_e.g());
+                param2.field_e = PcmSampleStream.createForSampleStep(param2.field_x, param2.field_e.getSampleStepMagnitude(), 0, param2.field_e.getPan());
                 MidiPcmStream stackIn_8_0 = this.field_l;
                 MidiNote stackIn_8_1 = (MidiNote) (param2);
                 boolean stackIn_9_2 = !(param2.field_y.field_n[param2.field_n] >= 0);
                 ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, true);
               } else {
-                param2.field_e = PcmSampleStream.a(param2.field_x, param2.field_e.l(), param2.field_e.i(), param2.field_e.g());
+                param2.field_e = PcmSampleStream.createForSampleStep(param2.field_x, param2.field_e.getSampleStepMagnitude(), param2.field_e.getTargetVolume(), param2.field_e.getPan());
               }
               if (param2.field_y.field_n[param2.field_n] < 0) {
-                param2.field_e.d(-1);
+                param2.field_e.setLoopCount(-1);
               }
               param1 = param2.field_t / var4_int;
             }
@@ -280,21 +280,21 @@ final class MusicPatchPcmStream extends PcmStream {
               }
               PcmSampleStream var11 = param0.field_e;
               if (this.field_l.field_z[param0.field_m] != 0) {
-                param0.field_e = PcmSampleStream.a(param0.field_x, var11.l(), 0, var11.g());
+                param0.field_e = PcmSampleStream.createForSampleStep(param0.field_x, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 MidiPcmStream stackIn_12_0 = this.field_l;
                 MidiNote stackIn_12_1 = (MidiNote) (param0);
                 boolean stackIn_13_2 = !(0 <= param0.field_y.field_n[param0.field_n]);
                 ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, true);
-                param0.field_e.d(var9, var11.i());
+                param0.field_e.rampVolume(var9, var11.getTargetVolume());
               } else {
-                param0.field_e = PcmSampleStream.a(param0.field_x, var11.l(), var11.i(), var11.g());
+                param0.field_e = PcmSampleStream.createForSampleStep(param0.field_x, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
               }
               if (0 > param0.field_y.field_n[param0.field_n]) {
-                param0.field_e.d(-1);
+                param0.field_e.setLoopCount(-1);
               }
-              var11.h(var9);
+              var11.fadeOutAndUnlink(var9);
               var11.mixInto(param4, param5, -param5 + param3);
-              if (!var11.j()) {
+              if (!var11.hasRemainingRampFrames()) {
                 continue;
               }
               this.field_i.addSubstream(var11);

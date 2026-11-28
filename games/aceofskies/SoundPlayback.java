@@ -19,29 +19,29 @@ final class SoundPlayback extends IntrusiveNode {
     final void b(int param0, int param1) {
         if (param0 != -2580) {
           this.b(108, -13);
-          this.field_g.g(param1);
+          this.field_g.setSampleStepMagnitude(param1);
           return;
         }
-        this.field_g.g(param1);
+        this.field_g.setSampleStepMagnitude(param1);
     }
 
     final void a(int param0, int param1) {
         param1 = param1 << 6;
         this.field_h = param1;
         if (param0 == -128) {
-          this.field_g.f(128 + param1 * gn.field_a >> 8);
+          this.field_g.setVolume(128 + param1 * gn.field_a >> 8);
           return;
         }
         SoundPlayback.clearStaticReferences(-71);
-        this.field_g.f(128 + param1 * gn.field_a >> 8);
+        this.field_g.setVolume(128 + param1 * gn.field_a >> 8);
     }
 
     SoundPlayback(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
-          this.field_h = param0.i();
+          this.field_h = param0.getTargetVolume();
           this.field_i = param1;
-          this.field_g.f(this.field_h * gn.field_a + 128 >> 8);
+          this.field_g.setVolume(this.field_h * gn.field_a + 128 >> 8);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

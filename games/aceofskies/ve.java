@@ -34,7 +34,7 @@ final class ve {
     final static void a(byte param0, int param1) {
         RendererManager.field_c = param1;
         if (mg.field_d != null) {
-          mg.field_d.b(param1, false);
+          mg.field_d.setMasterVolume(param1, false);
         }
         if (param0 == 43) {
           if (null != DualLinkNode.field_e) {

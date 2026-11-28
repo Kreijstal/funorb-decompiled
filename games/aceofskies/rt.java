@@ -102,7 +102,7 @@ abstract class rt implements FramebufferAttachment {
             if (!var2.field_i.isLinked((byte) 99)) {
               var2.unlink(-128);
             } else {
-              var2.field_g.f(gn.field_a * var2.field_h + 128 >> 8);
+              var2.field_g.setVolume(gn.field_a * var2.field_h + 128 >> 8);
             }
             var2 = (SoundPlayback) (di.activeSoundPlaybacks.next((byte) 103));
           }
@@ -111,7 +111,7 @@ abstract class rt implements FramebufferAttachment {
             SoundPlayback var2Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_i.isLinked((byte) 82)) {
-                var2Lifetime1.field_g.f(128 + var2Lifetime1.field_h * gn.field_a >> 8);
+                var2Lifetime1.field_g.setVolume(128 + var2Lifetime1.field_h * gn.field_a >> 8);
               } else {
                 var2Lifetime1.unlink(-125);
               }

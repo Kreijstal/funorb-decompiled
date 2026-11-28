@@ -488,7 +488,7 @@ final class ResourceArchive {
             return true;
           }
           try {
-            var36 = PcmOutputWorker.a(var9, 0);
+            var36 = PcmOutputWorker.decompressArchiveContainer(var9, 0);
             byte[] var27 = var36;
             var23 = var27;
             var43 = var23;

@@ -4,7 +4,7 @@
 final class MonochromeBitmapFont extends BitmapFont {
     private byte[][] glyphMasks;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         param2 = ((param2 & 16711935) * param9 & -16711936) + ((param2 & 65280) * param9 & 16711680) >> 8;
         param9 = 256 - param9;
         for (int var10 = -param6; var10 < 0; var10++) {
@@ -23,7 +23,7 @@ final class MonochromeBitmapFont extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitGlyphClippedRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var19;
         int var13 = param2 - SoftwareRasterizer.clipLeft;
         int var14 = param3 - SoftwareRasterizer.clipTop;
@@ -111,10 +111,10 @@ final class MonochromeBitmapFont extends BitmapFont {
           height <= 0) {
           return;
         }
-        MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
+        MonochromeBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitGlyphRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
         for (int var10 = -param6; var10 < 0; var10++) {
@@ -191,9 +191,9 @@ final class MonochromeBitmapFont extends BitmapFont {
         if (width > 0 &&
           height > 0) {
           if (SoftwareRasterizer.scanlineMaskStarts == null) {
-            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var11, var8, width, height, var9, var10);
+            MonochromeBitmapFont.blitGlyphRows(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var11, var8, width, height, var9, var10);
           } else {
-            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], x, y, width, height, color, var11, var8, var9, var10, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
+            MonochromeBitmapFont.blitGlyphClippedRows(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], x, y, width, height, color, var11, var8, var9, var10, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
           }
           return;
         }

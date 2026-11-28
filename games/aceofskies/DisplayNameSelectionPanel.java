@@ -55,7 +55,7 @@ final class DisplayNameSelectionPanel extends ab implements bh, dn {
         this.field_v = new mi(SmokeParticle.field_k, (no) null);
         this.field_y = new mi(dd.field_d, (no) null);
         this.field_w.field_k = ht.field_e;
-        this.field_w.a(new AccountNameAvailabilityValidator(this.field_w), 1472);
+        this.field_w.setFieldValidator(new AccountNameAvailabilityValidator(this.field_w), 1472);
         this.field_v.field_u = false;
         this.field_v.field_e = (ir) ((Object) new qb());
         this.field_y.field_e = (ir) ((Object) new wg());
@@ -219,7 +219,7 @@ final class DisplayNameSelectionPanel extends ab implements bh, dn {
         try {
           ValidatedTextField var3 = this.field_w;
           String var4 = param0;
-          ((EditableTextField) ((Object) var3)).a(-20975, var4, false);
+          ((EditableTextField) ((Object) var3)).setText(-20975, var4, false);
           if (param1 == 10000536) {
             return;
           }

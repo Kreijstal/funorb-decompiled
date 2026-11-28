@@ -37,15 +37,15 @@ final class CoverageBitmapFont extends BitmapFont {
         if (width > 0 &&
           height > 0) {
           if (!shadowPass) {
-            CoverageBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
+            CoverageBitmapFont.blitGlyphRows(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
           } else {
-            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
+            MonochromeBitmapFont.blitGlyphRows(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitGlyphRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         for (int var9 = -param6; var9 < 0; var9++) {
           for (int var10 = -param5; var10 < 0; var10++) {
             int incrementValue$11 = param3;
@@ -73,7 +73,7 @@ final class CoverageBitmapFont extends BitmapFont {
         this.glyphCoverage = CoverageBitmapFont.convertPaletteToCoverage(palette, glyphPaletteIndices);
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGlyphAlphaRows(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         for (int var10 = -param6; var10 < 0; var10++) {
           for (int var11 = -param5; var11 < 0; var11++) {
             int incrementValue$11 = param3;
@@ -128,9 +128,9 @@ final class CoverageBitmapFont extends BitmapFont {
         if (width > 0 &&
           height > 0) {
           if (!shadowPass) {
-            CoverageBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
+            CoverageBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
           } else {
-            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
+            MonochromeBitmapFont.blitGlyphAlphaRows(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
           }
           return;
         }
