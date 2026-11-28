@@ -11236,17 +11236,17 @@
       "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
       "sources": {
         "files": 396,
-        "sha256": "b02e397d135c1a6e0a4ef5b0f31c3c43c88bbfe2ab580263aa27b091f65d83b5"
+        "sha256": "9605b02c4d59d4535e200ae59a45c4d22b47bcc1bb410d6d361f84c2af4540ce"
       },
       "dictionary": {
         "path": "decompilation/torquing-naming.json",
-        "sha256": "127eb14749dfed6f6e705e68bb7742ed7e8482b43ff054a3877fd94e06a7a8ec"
+        "sha256": "82d76aa3a42a1db9efce14f0ec0d715c01fb7c07265e65970ab0a0c090f8dd17"
       },
       "readingGuide": {
         "path": "games/torquing/README.md",
         "sha256": "360810831b947a25fb99d6415ba0aa714e0a2dee688846bfe64f04da473cd2eb"
       },
-      "rulesSha256": "1f3374f5ded1b06812f1eb985b000860c69a1fb1c1ffa6666008bae672950b1e",
+      "rulesSha256": "c8b654a8ea4cfe703c2b18ff080aa87cc8fa40070046e3c7c87243f0344cba74",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13447,7 +13447,7 @@
         },
         "publishedSources": {
           "files": 396,
-          "sha256": "b02e397d135c1a6e0a4ef5b0f31c3c43c88bbfe2ab580263aa27b091f65d83b5"
+          "sha256": "9605b02c4d59d4535e200ae59a45c4d22b47bcc1bb410d6d361f84c2af4540ce"
         }
       },
       "trackcontroller": {

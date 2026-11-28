@@ -31,11 +31,11 @@ final class Model extends IntrusiveNode {
             var5.field_B = u.a(32681, var5.field_B, var3);
             var5.field_E = u.a(32681, var5.field_E, var3);
           }
-          if (var5.vertexCount < var5.vertexX.length) {
-            var3Lifetime1 = var5.vertexCount;
-            var5.vertexX = u.a(32681, var5.vertexX, var3Lifetime1);
-            var5.vertexY = u.a(32681, var5.vertexY, var3Lifetime1);
-            var5.vertexZ = u.a(32681, var5.vertexZ, var3Lifetime1);
+          if (var5.faceCount < var5.faceVertexA.length) {
+            var3Lifetime1 = var5.faceCount;
+            var5.faceVertexA = u.a(32681, var5.faceVertexA, var3Lifetime1);
+            var5.faceVertexB = u.a(32681, var5.faceVertexB, var3Lifetime1);
+            var5.faceVertexC = u.a(32681, var5.faceVertexC, var3Lifetime1);
             var5.field_j = ProgressMessageDialog.a(-6058, var5.field_j, 0, var3Lifetime1);
             if (null != var5.field_D) {
               var5.field_D = cc.a(var3Lifetime1, (byte) 127, var5.field_D);

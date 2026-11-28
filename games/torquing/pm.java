@@ -51,8 +51,8 @@ final class pm extends IntrusiveNode {
           return;
         }
         try {
-          if (param2 + var16.vertexCount > var16.vertexX.length) {
-            var4 = var16.vertexCount;
+          if (param2 + var16.faceCount > var16.faceVertexA.length) {
+            var4 = var16.faceCount;
             var5 = 3 * (param2 + var4) / 2;
             var26 = new int[var5];
             var17 = var26;
@@ -72,22 +72,22 @@ final class pm extends IntrusiveNode {
             var31 = new short[var5];
             var22 = var31;
             var11 = var22;
-            dk.a(var16.vertexX, 0, var26, 0, var4);
+            dk.a(var16.faceVertexA, 0, var26, 0, var4);
             var32 = new short[var5];
             var23 = var32;
             var12 = var23;
-            dk.a(var16.vertexY, 0, var27, 0, var4);
-            dk.a(var16.vertexZ, 0, var28, 0, var4);
+            dk.a(var16.faceVertexB, 0, var27, 0, var4);
+            dk.a(var16.faceVertexC, 0, var28, 0, var4);
             dk.copyByteRange(var16.field_j, 0, var29, 0, var4);
             dk.copyByteRange(var16.field_D, 0, var30, 0, var4);
             dk.a(var16.field_m, 0, var31, 0, var4);
             dk.a(var16.field_A, 0, var32, 0, var4);
-            var16.vertexZ = var8;
-            var16.vertexY = var7;
+            var16.faceVertexC = var8;
+            var16.faceVertexB = var7;
             var16.field_m = var11;
             var16.field_j = var9;
             var16.field_D = var10;
-            var16.vertexX = var6;
+            var16.faceVertexA = var6;
             var16.field_A = var12;
             var13 = param0.field_q;
             if (var13.field_u != null) {

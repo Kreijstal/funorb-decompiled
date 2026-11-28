@@ -996,12 +996,12 @@ final class Level {
                         if (var23 != var25 &&
                           var24 != var26) {
                           pm.a(var3, -27226, 2);
-                          var29.addVertex(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
-                          var29.addVertex(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                          var29.addFace(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                          var29.addFace(var24, var26, var25, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                         } else {
                           if (var25 != var23) {
                             pm.a(var3, -27226, 1);
-                            var29.addVertex(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                            var29.addFace(var25, var23, var24, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                           } else {
                             if (var24 == var26) {
                               var24 = var26;
@@ -1009,7 +1009,7 @@ final class Level {
                               continue;
                             }
                             pm.a(var3, -27226, 1);
-                            var29.addVertex(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
+                            var29.addFace(var23, var24, var26, (byte) 1, (byte) -1, (short) 17493, (short) -1);
                           }
                         }
                         var24 = var26;
@@ -1021,8 +1021,8 @@ final class Level {
               }
             }
           }
-          if (16384 < var29.vertexCount) {
-            var29.vertexCount = 3840;
+          if (16384 < var29.faceCount) {
+            var29.faceCount = 3840;
           }
           Model.trimToUsedCounts(var3, (byte) -126);
           this.field_t = new Model(var29);

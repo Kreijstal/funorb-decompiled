@@ -471,7 +471,7 @@ final class SceneMeshBatch {
         }
         var3 = stackIn_3_0;
         if (param1.field_k == null) {
-          stackIn_6_0 = param1.field_l.vertexCount;
+          stackIn_6_0 = param1.field_l.faceCount;
         } else {
           stackIn_6_0 = param1.field_k.field_x;
         }
@@ -1125,21 +1125,21 @@ final class SceneMeshBatch {
         param5 = var58[9] * var10 + var58[10] * var11 + var58[11] * param5 >> 16;
         var12 = (int)Math.sqrt((double)(param3 * param3 + param4 * param4 + param5 * param5));
         var13 = param2 * var12 >> 8;
-        var14 = var6.vertexX.length;
+        var14 = var6.faceVertexA.length;
         if (param0.field_k != null) {
           var15 = param0.field_k;
         } else {
           var39 = new LitModelMesh(new LitModelMesh[]{}, 0);
           var15 = var39;
           var39.field_k = var6.field_f;
-          var39.field_x = var6.vertexCount;
+          var39.field_x = var6.faceCount;
           var39.field_m = var6.field_k;
           var39.field_j = var6.field_M;
           var39.field_y = var6.field_B;
           var39.field_v = var6.field_E;
-          var39.field_p = var6.vertexX;
-          var39.field_u = var6.vertexY;
-          var39.field_t = var6.vertexZ;
+          var39.field_p = var6.faceVertexA;
+          var39.field_u = var6.faceVertexB;
+          var39.field_t = var6.faceVertexC;
           if (var6.field_u != null) {
             var39.field_h = SceneMeshBatch.expandUnsignedShorts(var6.field_u);
             var39.field_g = SceneMeshBatch.expandUnsignedShorts(var6.field_n);
@@ -1164,9 +1164,9 @@ final class SceneMeshBatch {
           for (var20 = 0; var20 < var14; var20++) {
             if (var6.field_j == null ||
               var6.field_j[var20] == 0) {
-              var21 = var6.vertexX[var20];
-              var22 = var6.vertexY[var20];
-              var23 = var6.vertexZ[var20];
+              var21 = var6.faceVertexA[var20];
+              var22 = var6.faceVertexB[var20];
+              var23 = var6.faceVertexC[var20];
               var24 = var59[var22] - var59[var21];
               var25 = var60[var22] - var60[var21];
               var26 = var61[var22] - var61[var21];
@@ -1230,9 +1230,9 @@ final class SceneMeshBatch {
           }
         }
         for (var20Lifetime1 = 0; var20Lifetime1 < var14; var20Lifetime1++) {
-          var21Lifetime1 = var6.vertexX[var20Lifetime1];
-          var22Lifetime1 = var6.vertexY[var20Lifetime1];
-          var23Lifetime1 = var6.vertexZ[var20Lifetime1];
+          var21Lifetime1 = var6.faceVertexA[var20Lifetime1];
+          var22Lifetime1 = var6.faceVertexB[var20Lifetime1];
+          var23Lifetime1 = var6.faceVertexC[var20Lifetime1];
           if (var6.field_D != null) {
             stackIn_56_0 = (var6.field_D[var20Lifetime1] != -1) ? 1 : 0;
           } else {

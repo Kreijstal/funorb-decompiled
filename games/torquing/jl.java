@@ -203,12 +203,12 @@ final class jl extends MeshGeometry {
           }
           var12 = 0;
           var13Lifetime1 = 0;
-          while (var13Lifetime1 < this.vertexCount) {
-            stackIn_50_0 = ~this.vertexX[var13Lifetime1];
+          while (var13Lifetime1 < this.faceCount) {
+            stackIn_50_0 = ~this.faceVertexA[var13Lifetime1];
             stackIn_50_1 = ~var11Lifetime2;
             if (stackIn_50_0 == stackIn_50_1 ||
-              this.vertexY[var13Lifetime1] == var11Lifetime2 ||
-              var11Lifetime2 == this.vertexZ[var13Lifetime1]) {
+              this.faceVertexB[var13Lifetime1] == var11Lifetime2 ||
+              var11Lifetime2 == this.faceVertexC[var13Lifetime1]) {
               var12++;
             }
             var13Lifetime1++;
@@ -216,12 +216,12 @@ final class jl extends MeshGeometry {
           stackIn_50_0Lifetime1 = ~var12;
           stackIn_50_1Lifetime1 = -6;
           if (stackIn_50_0Lifetime1 == stackIn_50_1Lifetime1) {
-            for (var13Lifetime1Lifetime1 = 0; this.vertexCount > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
-              stackIn_40_0Lifetime1 = this.vertexX[var13Lifetime1Lifetime1];
+            for (var13Lifetime1Lifetime1 = 0; this.faceCount > var13Lifetime1Lifetime1; var13Lifetime1Lifetime1++) {
+              stackIn_40_0Lifetime1 = this.faceVertexA[var13Lifetime1Lifetime1];
               stackIn_40_1Lifetime1 = var11Lifetime2;
               if (stackIn_40_0Lifetime1 == stackIn_40_1Lifetime1 ||
-                var11Lifetime2 == this.vertexY[var13Lifetime1Lifetime1] ||
-                var11Lifetime2 == this.vertexZ[var13Lifetime1Lifetime1]) {
+                var11Lifetime2 == this.faceVertexB[var13Lifetime1Lifetime1] ||
+                var11Lifetime2 == this.faceVertexC[var13Lifetime1Lifetime1]) {
                 this.field_m[var13Lifetime1Lifetime1] = (short)32;
               }
             }
@@ -240,18 +240,18 @@ final class jl extends MeshGeometry {
           discarded$1 = this.a(-98, 102, 31, -9, false, 113);
         }
         while (true) {
-          if (var7 >= this.vertexCount) {
-            return super.addVertex(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
+          if (var7 >= this.faceCount) {
+            return super.addFace(param3, param0, param1, (byte)param2, (byte) -1, (short)param5, (short) -1);
           }
-          if ((param3 != this.vertexX[var7] ||
-            param0 != this.vertexY[var7] ||
-            param1 != this.vertexZ[var7]) &&
-            (param3 != this.vertexY[var7] ||
-            param0 != this.vertexZ[var7] ||
-            this.vertexX[var7] != param1) &&
-            (param3 != this.vertexZ[var7] ||
-            this.vertexX[var7] != param0 ||
-            this.vertexY[var7] != param1)) {
+          if ((param3 != this.faceVertexA[var7] ||
+            param0 != this.faceVertexB[var7] ||
+            param1 != this.faceVertexC[var7]) &&
+            (param3 != this.faceVertexB[var7] ||
+            param0 != this.faceVertexC[var7] ||
+            this.faceVertexA[var7] != param1) &&
+            (param3 != this.faceVertexC[var7] ||
+            this.faceVertexA[var7] != param0 ||
+            this.faceVertexB[var7] != param1)) {
             var7++;
             continue;
           }

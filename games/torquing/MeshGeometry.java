@@ -8,15 +8,15 @@ class MeshGeometry extends pa {
     short[] field_A;
     bl[] field_J;
     int[] field_E;
-    int[] vertexZ;
+    int[] faceVertexC;
     private byte[] field_t;
     short[] field_x;
     byte[] field_D;
     short[] field_u;
     dd[] field_l;
     private int[] field_p;
-    int vertexCount;
-    int[] vertexY;
+    int faceCount;
+    int[] faceVertexB;
     byte field_I;
     private short[] field_z;
     byte[] field_j;
@@ -36,21 +36,21 @@ class MeshGeometry extends pa {
     byte[] field_G;
     int[] field_B;
     int field_k;
-    int[] vertexX;
+    int[] faceVertexA;
     short[] field_n;
     private int[][] field_w;
     int field_f;
 
-    final int addVertex(int x, int y, int z, byte param3, byte param4, short param5, short param6) {
-        this.vertexX[this.vertexCount] = x;
-        this.vertexY[this.vertexCount] = y;
-        this.vertexZ[this.vertexCount] = z;
-        this.field_j[this.vertexCount] = (byte)param3;
-        this.field_D[this.vertexCount] = (byte)param4;
-        this.field_m[this.vertexCount] = (short)param5;
-        this.field_A[this.vertexCount] = (short)param6;
-        int fieldTemp$0 = this.vertexCount;
-        this.vertexCount = this.vertexCount + 1;
+    final int addFace(int vertexA, int vertexB, int vertexC, byte param3, byte param4, short param5, short param6) {
+        this.faceVertexA[this.faceCount] = vertexA;
+        this.faceVertexB[this.faceCount] = vertexB;
+        this.faceVertexC[this.faceCount] = vertexC;
+        this.field_j[this.faceCount] = (byte)param3;
+        this.field_D[this.faceCount] = (byte)param4;
+        this.field_m[this.faceCount] = (short)param5;
+        this.field_A[this.faceCount] = (short)param6;
+        int fieldTemp$0 = this.faceCount;
+        this.faceCount = this.faceCount + 1;
         return fieldTemp$0;
     }
 
@@ -183,14 +183,14 @@ class MeshGeometry extends pa {
         var34 = var21;
         var21 = var21 + var19;
         this.field_f = var9;
-        this.vertexCount = var10;
+        this.faceCount = var10;
         this.field_k = var11;
         this.field_M = new int[var9];
         this.field_B = new int[var9];
         this.field_E = new int[var9];
-        this.vertexX = new int[var10];
-        this.vertexY = new int[var10];
-        this.vertexZ = new int[var10];
+        this.faceVertexA = new int[var10];
+        this.faceVertexB = new int[var10];
+        this.faceVertexC = new int[var10];
         if (var11 > 0) {
           this.field_s = new byte[var11];
           this.field_u = new short[var11];
@@ -302,9 +302,9 @@ class MeshGeometry extends pa {
             var41Lifetime1 = var39Lifetime2;
             var40Lifetime1 = var4.readSignedSmart((byte) -121) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.vertexX[var42Lifetime1] = var38Lifetime2;
-            this.vertexY[var42Lifetime1] = var39Lifetime2;
-            this.vertexZ[var42Lifetime1] = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
             if (var38Lifetime2 > this.field_F) {
               this.field_F = var38Lifetime2;
             }
@@ -319,9 +319,9 @@ class MeshGeometry extends pa {
             var39Lifetime2 = var40Lifetime1;
             var40Lifetime1 = var4.readSignedSmart((byte) -118) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.vertexX[var42Lifetime1] = var38Lifetime2;
-            this.vertexY[var42Lifetime1] = var39Lifetime2;
-            this.vertexZ[var42Lifetime1] = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
             if (var40Lifetime1 > this.field_F) {
               this.field_F = var40Lifetime1;
             }
@@ -330,9 +330,9 @@ class MeshGeometry extends pa {
             var38Lifetime2 = var40Lifetime1;
             var40Lifetime1 = var4.readSignedSmart((byte) -122) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.vertexX[var42Lifetime1] = var38Lifetime2;
-            this.vertexY[var42Lifetime1] = var39Lifetime2;
-            this.vertexZ[var42Lifetime1] = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
             if (var40Lifetime1 > this.field_F) {
               this.field_F = var40Lifetime1;
             }
@@ -343,9 +343,9 @@ class MeshGeometry extends pa {
             var39Lifetime2 = var44;
             var40Lifetime1 = var4.readSignedSmart((byte) -117) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
-            this.vertexX[var42Lifetime1] = var38Lifetime2;
-            this.vertexY[var42Lifetime1] = var39Lifetime2;
-            this.vertexZ[var42Lifetime1] = var40Lifetime1;
+            this.faceVertexA[var42Lifetime1] = var38Lifetime2;
+            this.faceVertexB[var42Lifetime1] = var39Lifetime2;
+            this.faceVertexC[var42Lifetime1] = var40Lifetime1;
             if (var40Lifetime1 > this.field_F) {
               this.field_F = var40Lifetime1;
             }
@@ -366,9 +366,9 @@ class MeshGeometry extends pa {
           while (var45 < var10) {
             var44Lifetime1 = this.field_D[var45] & 255;
             if (var44Lifetime1 != 255) {
-              if ((this.field_u[var44Lifetime1] & 65535) == this.vertexX[var45] &&
-                (this.field_n[var44Lifetime1] & 65535) == this.vertexY[var45] &&
-                (this.field_x[var44Lifetime1] & 65535) == this.vertexZ[var45]) {
+              if ((this.field_u[var44Lifetime1] & 65535) == this.faceVertexA[var45] &&
+                (this.field_n[var44Lifetime1] & 65535) == this.faceVertexB[var45] &&
+                (this.field_x[var44Lifetime1] & 65535) == this.faceVertexC[var45]) {
                 this.field_D[var45] = (byte)-1;
               } else {
                 var42Lifetime3 = 1;
@@ -455,12 +455,12 @@ class MeshGeometry extends pa {
         }
         var1Lifetime1 = 0;
         while (true) {
-          if (var1Lifetime1 >= this.vertexCount) {
+          if (var1Lifetime1 >= this.faceCount) {
             return;
           }
-          var2 = this.vertexX[var1Lifetime1];
-          var3 = this.vertexY[var1Lifetime1];
-          var4 = this.vertexZ[var1Lifetime1];
+          var2 = this.faceVertexA[var1Lifetime1];
+          var3 = this.faceVertexB[var1Lifetime1];
+          var4 = this.faceVertexC[var1Lifetime1];
           var5 = this.field_M[var3] - this.field_M[var2];
           var6 = this.field_B[var3] - this.field_B[var2];
           var7 = this.field_E[var3] - this.field_E[var2];
@@ -492,7 +492,7 @@ class MeshGeometry extends pa {
               if (var15 != 0) {
                 if (var15 == 1) {
                   if (this.field_J == null) {
-                    this.field_J = new bl[this.vertexCount];
+                    this.field_J = new bl[this.faceCount];
                   }
                   dupTemp$0 = new bl();
                   this.field_J[var1Lifetime1] = dupTemp$0;
@@ -705,14 +705,14 @@ class MeshGeometry extends pa {
         var28Lifetime1 = var28Lifetime1 + (var26 + var27 * 2);
         var49 = var28Lifetime1;
         this.field_f = var9;
-        this.vertexCount = var10;
+        this.faceCount = var10;
         this.field_k = var11;
         this.field_M = new int[var9];
         this.field_B = new int[var9];
         this.field_E = new int[var9];
-        this.vertexX = new int[var10];
-        this.vertexY = new int[var10];
-        this.vertexZ = new int[var10];
+        this.faceVertexA = new int[var10];
+        this.faceVertexB = new int[var10];
+        this.faceVertexC = new int[var10];
         if (var19 == 1) {
           this.field_i = new int[var9];
         }
@@ -835,9 +835,9 @@ class MeshGeometry extends pa {
             var56Lifetime1 = var54Lifetime1;
             var55Lifetime1 = var2.readSignedSmart((byte) -116) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.vertexX[var57Lifetime1] = var53Lifetime2;
-            this.vertexY[var57Lifetime1] = var54Lifetime1;
-            this.vertexZ[var57Lifetime1] = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
             if (var53Lifetime2 > this.field_F) {
               this.field_F = var53Lifetime2;
             }
@@ -852,9 +852,9 @@ class MeshGeometry extends pa {
             var54Lifetime1 = var55Lifetime1;
             var55Lifetime1 = var2.readSignedSmart((byte) -127) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.vertexX[var57Lifetime1] = var53Lifetime2;
-            this.vertexY[var57Lifetime1] = var54Lifetime1;
-            this.vertexZ[var57Lifetime1] = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
             if (var55Lifetime1 > this.field_F) {
               this.field_F = var55Lifetime1;
             }
@@ -863,9 +863,9 @@ class MeshGeometry extends pa {
             var53Lifetime2 = var55Lifetime1;
             var55Lifetime1 = var2.readSignedSmart((byte) -118) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.vertexX[var57Lifetime1] = var53Lifetime2;
-            this.vertexY[var57Lifetime1] = var54Lifetime1;
-            this.vertexZ[var57Lifetime1] = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
             if (var55Lifetime1 > this.field_F) {
               this.field_F = var55Lifetime1;
             }
@@ -876,9 +876,9 @@ class MeshGeometry extends pa {
             var54Lifetime1 = var59;
             var55Lifetime1 = var2.readSignedSmart((byte) -121) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
-            this.vertexX[var57Lifetime1] = var53Lifetime2;
-            this.vertexY[var57Lifetime1] = var54Lifetime1;
-            this.vertexZ[var57Lifetime1] = var55Lifetime1;
+            this.faceVertexA[var57Lifetime1] = var53Lifetime2;
+            this.faceVertexB[var57Lifetime1] = var54Lifetime1;
+            this.faceVertexC[var57Lifetime1] = var55Lifetime1;
             if (var55Lifetime1 > this.field_F) {
               this.field_F = var55Lifetime1;
             }
@@ -1044,7 +1044,7 @@ class MeshGeometry extends pa {
         if (this.field_p != null) {
           var6 = new int[256];
           var2Lifetime1 = 0;
-          for (var3Lifetime1 = 0; var3Lifetime1 < this.vertexCount; var3Lifetime1++) {
+          for (var3Lifetime1 = 0; var3Lifetime1 < this.faceCount; var3Lifetime1++) {
             var4Lifetime1 = this.field_p[var3Lifetime1];
             var6[var4Lifetime1] = var6[var4Lifetime1] + 1;
             if (var4Lifetime1 > var2Lifetime1) {
@@ -1057,7 +1057,7 @@ class MeshGeometry extends pa {
             this.field_R[var3Lifetime1] = array$5;
             var6[var3Lifetime1] = 0;
           }
-          for (var3Lifetime1 = 0; var3Lifetime1 < this.vertexCount; var3Lifetime1++) {
+          for (var3Lifetime1 = 0; var3Lifetime1 < this.faceCount; var3Lifetime1++) {
             var4Lifetime1Lifetime1 = this.field_p[var3Lifetime1];
             dupTemp$3 = var6[var4Lifetime1Lifetime1];
             arrayValue$4 = this.field_R[var4Lifetime1Lifetime1];
@@ -1071,7 +1071,7 @@ class MeshGeometry extends pa {
     private MeshGeometry(byte[] param0) {
         this.field_I = (byte) 0;
         this.field_F = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_f = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
@@ -1084,15 +1084,15 @@ class MeshGeometry extends pa {
     MeshGeometry(int param0, int param1, int param2) {
         this.field_I = (byte) 0;
         this.field_F = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_f = 0;
         this.field_M = new int[param0];
         this.field_B = new int[param0];
         this.field_E = new int[param0];
         this.field_i = new int[param0];
-        this.vertexX = new int[param1];
-        this.vertexY = new int[param1];
-        this.vertexZ = new int[param1];
+        this.faceVertexA = new int[param1];
+        this.faceVertexB = new int[param1];
+        this.faceVertexC = new int[param1];
         this.field_j = new byte[param1];
         this.field_G = new byte[param1];
         this.field_r = new byte[param1];
@@ -1158,7 +1158,7 @@ class MeshGeometry extends pa {
         MeshGeometry var11Lifetime1;
         this.field_I = (byte) 0;
         this.field_F = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_f = 0;
         var3 = 0;
         var4 = 0;
@@ -1167,14 +1167,14 @@ class MeshGeometry extends pa {
         var7 = 0;
         var8 = 0;
         this.field_f = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_k = 0;
         this.field_I = (byte) -1;
         for (var9 = 0; var9 < param1; var9++) {
           var10_ref_rm = param0[var9];
           if (var10_ref_rm != null) {
             this.field_f = this.field_f + var10_ref_rm.field_f;
-            this.vertexCount = this.vertexCount + var10_ref_rm.vertexCount;
+            this.faceCount = this.faceCount + var10_ref_rm.faceCount;
             this.field_k = this.field_k + var10_ref_rm.field_k;
             if (var10_ref_rm.field_G == null) {
               if (this.field_I == -1) {
@@ -1228,29 +1228,29 @@ class MeshGeometry extends pa {
         this.field_E = new int[this.field_f];
         this.field_i = new int[this.field_f];
         this.field_H = new short[this.field_f];
-        this.vertexX = new int[this.vertexCount];
-        this.vertexY = new int[this.vertexCount];
-        this.vertexZ = new int[this.vertexCount];
+        this.faceVertexA = new int[this.faceCount];
+        this.faceVertexB = new int[this.faceCount];
+        this.faceVertexC = new int[this.faceCount];
         if (var3 != 0) {
-          this.field_j = new byte[this.vertexCount];
+          this.field_j = new byte[this.faceCount];
         }
         if (var4 != 0) {
-          this.field_G = new byte[this.vertexCount];
+          this.field_G = new byte[this.faceCount];
         }
         if (var5 != 0) {
-          this.field_r = new byte[this.vertexCount];
+          this.field_r = new byte[this.faceCount];
         }
         if (var6 != 0) {
-          this.field_p = new int[this.vertexCount];
+          this.field_p = new int[this.faceCount];
         }
         if (var7 != 0) {
-          this.field_A = new short[this.vertexCount];
+          this.field_A = new short[this.faceCount];
         }
         if (var8 != 0) {
-          this.field_D = new byte[this.vertexCount];
+          this.field_D = new byte[this.faceCount];
         }
-        this.field_m = new short[this.vertexCount];
-        this.field_P = new short[this.vertexCount];
+        this.field_m = new short[this.faceCount];
+        this.field_P = new short[this.faceCount];
         if (this.field_k > 0) {
           this.field_s = new byte[this.field_k];
           this.field_u = new short[this.field_k];
@@ -1266,7 +1266,7 @@ class MeshGeometry extends pa {
           this.field_t = new byte[this.field_k];
         }
         this.field_f = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_k = 0;
         for (var9Lifetime1 = 0; var9Lifetime1 < param1; var9Lifetime1++) {
           var10 = (short)(1 << var9Lifetime1);
@@ -1274,39 +1274,39 @@ class MeshGeometry extends pa {
           var18 = var15;
           var11 = var18;
           if (var11 != null) {
-            for (var12 = 0; var12 < var18.vertexCount; var12++) {
+            for (var12 = 0; var12 < var18.faceCount; var12++) {
               if (var3 != 0 &&
                 var18.field_j != null) {
-                this.field_j[this.vertexCount] = var15.field_j[var12];
+                this.field_j[this.faceCount] = var15.field_j[var12];
               }
               if (var4 != 0) {
                 if (var18.field_G == null) {
-                  this.field_G[this.vertexCount] = var15.field_I;
+                  this.field_G[this.faceCount] = var15.field_I;
                 } else {
-                  this.field_G[this.vertexCount] = var15.field_G[var12];
+                  this.field_G[this.faceCount] = var15.field_G[var12];
                 }
               }
               if (var5 != 0 &&
                 var18.field_r != null) {
-                this.field_r[this.vertexCount] = var15.field_r[var12];
+                this.field_r[this.faceCount] = var15.field_r[var12];
               }
               if (var6 != 0 &&
                 var18.field_p != null) {
-                this.field_p[this.vertexCount] = var15.field_p[var12];
+                this.field_p[this.faceCount] = var15.field_p[var12];
               }
               if (var7 != 0) {
                 if (var18.field_A == null) {
-                  this.field_A[this.vertexCount] = (short)-1;
+                  this.field_A[this.faceCount] = (short)-1;
                 } else {
-                  this.field_A[this.vertexCount] = var15.field_A[var12];
+                  this.field_A[this.faceCount] = var15.field_A[var12];
                 }
               }
-              this.field_m[this.vertexCount] = var15.field_m[var12];
-              this.field_P[this.vertexCount] = (short)var10;
-              this.vertexX[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexX[var12], (short) var10);
-              this.vertexY[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexY[var12], (short) var10);
-              this.vertexZ[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexZ[var12], (short) var10);
-              this.vertexCount = this.vertexCount + 1;
+              this.field_m[this.faceCount] = var15.field_m[var12];
+              this.field_P[this.faceCount] = (short)var10;
+              this.faceVertexA[this.faceCount] = this.findOrAddVertex(var15, var15.faceVertexA[var12], (short) var10);
+              this.faceVertexB[this.faceCount] = this.findOrAddVertex(var15, var15.faceVertexB[var12], (short) var10);
+              this.faceVertexC[this.faceCount] = this.findOrAddVertex(var15, var15.faceVertexC[var12], (short) var10);
+              this.faceCount = this.faceCount + 1;
             }
           }
         }
@@ -1318,7 +1318,7 @@ class MeshGeometry extends pa {
           var11Lifetime1 = var19;
           var12Lifetime1 = (short)(1 << var10Lifetime1);
           if (var11Lifetime1 != null) {
-            for (var13 = 0; var13 < var19.vertexCount; var13++) {
+            for (var13 = 0; var13 < var19.faceCount; var13++) {
               if (var8 != 0) {
                 incrementValue$1 = var9Lifetime2;
                 var9Lifetime2++;
@@ -1374,11 +1374,11 @@ class MeshGeometry extends pa {
         int var6Lifetime3;
         this.field_I = (byte) 0;
         this.field_F = 0;
-        this.vertexCount = 0;
+        this.faceCount = 0;
         this.field_f = 0;
         this.field_f = param0.field_f;
         this.field_F = param0.field_F;
-        this.vertexCount = param0.vertexCount;
+        this.faceCount = param0.faceCount;
         this.field_k = param0.field_k;
         if (!param1) {
           this.field_M = new int[this.field_f];
@@ -1395,8 +1395,8 @@ class MeshGeometry extends pa {
           this.field_E = param0.field_E;
         }
         if (!param2) {
-          this.field_m = new short[this.vertexCount];
-          for (var6Lifetime1 = 0; var6Lifetime1 < this.vertexCount; var6Lifetime1++) {
+          this.field_m = new short[this.faceCount];
+          for (var6Lifetime1 = 0; var6Lifetime1 < this.faceCount; var6Lifetime1++) {
             this.field_m[var6Lifetime1] = param0.field_m[var6Lifetime1];
           }
         } else {
@@ -1404,30 +1404,30 @@ class MeshGeometry extends pa {
         }
         if (!param3 &&
           param0.field_A != null) {
-          this.field_A = new short[this.vertexCount];
-          for (var6Lifetime2 = 0; var6Lifetime2 < this.vertexCount; var6Lifetime2++) {
+          this.field_A = new short[this.faceCount];
+          for (var6Lifetime2 = 0; var6Lifetime2 < this.faceCount; var6Lifetime2++) {
             this.field_A[var6Lifetime2] = param0.field_A[var6Lifetime2];
           }
         } else {
           this.field_A = param0.field_A;
         }
         if (!param4) {
-          this.field_r = new byte[this.vertexCount];
+          this.field_r = new byte[this.faceCount];
           if (param0.field_r != null) {
-            for (var6Lifetime3 = 0; var6Lifetime3 < this.vertexCount; var6Lifetime3++) {
+            for (var6Lifetime3 = 0; var6Lifetime3 < this.faceCount; var6Lifetime3++) {
               this.field_r[var6Lifetime3] = param0.field_r[var6Lifetime3];
             }
           } else {
-            for (var6Lifetime3 = 0; var6Lifetime3 < this.vertexCount; var6Lifetime3++) {
+            for (var6Lifetime3 = 0; var6Lifetime3 < this.faceCount; var6Lifetime3++) {
               this.field_r[var6Lifetime3] = (byte) 0;
             }
           }
         } else {
           this.field_r = param0.field_r;
         }
-        this.vertexX = param0.vertexX;
-        this.vertexY = param0.vertexY;
-        this.vertexZ = param0.vertexZ;
+        this.faceVertexA = param0.faceVertexA;
+        this.faceVertexB = param0.faceVertexB;
+        this.faceVertexC = param0.faceVertexC;
         this.field_j = param0.field_j;
         this.field_G = param0.field_G;
         this.field_D = param0.field_D;

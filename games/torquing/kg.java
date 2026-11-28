@@ -142,7 +142,7 @@ final class kg {
           this.field_d = param0;
           var4 = new MeshGeometry(1, 1, 0);
           var4.findOrAddVertex(0, 0, 0);
-          var4.addVertex(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
+          var4.addFace(0, 0, 0, (byte) 0, (byte) 0, (short)param2, (short) -1);
           this.field_a = (LitModelMesh) (var4.createModel(80, 1365, -1, -12, 12));
           this.field_a.field_z[0] = (short)param2;
           var5 = new Model();

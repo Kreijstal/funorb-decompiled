@@ -150,7 +150,7 @@ final class ji {
           param0.field_E = var12;
           param0.field_f = param0.field_f + 1;
           param0.field_M = var3_ref_int__;
-          var2_intLifetime1 = param0.vertexCount;
+          var2_intLifetime1 = param0.faceCount;
           var3 = var2_intLifetime1 + 1;
           var31 = new int[var3];
           var21 = var31;
@@ -163,12 +163,12 @@ final class ji {
           var33 = new int[var3];
           var23 = var33;
           var6 = var23;
-          dk.a(param0.vertexX, 0, var31, 0, var2_intLifetime1);
+          dk.a(param0.faceVertexA, 0, var31, 0, var2_intLifetime1);
           var37 = new short[var3];
           var27 = var37;
           var7 = var27;
-          dk.a(param0.vertexY, 0, var32, 0, var2_intLifetime1);
-          dk.a(param0.vertexZ, 0, var33, 0, var2_intLifetime1);
+          dk.a(param0.faceVertexB, 0, var32, 0, var2_intLifetime1);
+          dk.a(param0.faceVertexC, 0, var33, 0, var2_intLifetime1);
           if (null != param0.field_j) {
             var34 = new byte[var3];
             var24 = var34;
@@ -199,15 +199,15 @@ final class ji {
             param0.field_A = var17;
           }
           dk.a(param0.field_m, 0, var37, 0, var2_intLifetime1);
-          param0.vertexZ = var6;
-          param0.vertexX = var4Lifetime1;
+          param0.faceVertexC = var6;
+          param0.faceVertexA = var4Lifetime1;
           param0.field_m = var7;
-          param0.vertexY = var5Lifetime1;
-          var6[param0.vertexCount] = param0.field_f + param1;
-          var5Lifetime1[param0.vertexCount] = param0.field_f + param1;
-          var4Lifetime1[param0.vertexCount] = param0.field_f + param1;
-          param0.field_A[param0.vertexCount] = (short)-32768;
-          param0.vertexCount = param0.vertexCount + 1;
+          param0.faceVertexB = var5Lifetime1;
+          var6[param0.faceCount] = param0.field_f + param1;
+          var5Lifetime1[param0.faceCount] = param0.field_f + param1;
+          var4Lifetime1[param0.faceCount] = param0.field_f + param1;
+          param0.field_A[param0.faceCount] = (short)-32768;
+          param0.faceCount = param0.faceCount + 1;
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

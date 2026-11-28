@@ -1367,7 +1367,7 @@
       "symbol": "C:rm",
       "originalName": "rm",
       "to": "MeshGeometry",
-      "evidence": "Parallel vertex and triangle arrays with counts; addVertex appends x, y, z and attributes and returns the index.",
+      "evidence": "Stores vertex coordinates and triangular faces in parallel arrays with separate counts.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MeshGeometry"
     },
@@ -2054,34 +2054,34 @@
     {
       "symbol": "F:rm.field_g:I",
       "originalName": "field_g",
-      "to": "vertexCount",
-      "evidence": "addVertex indexes with and then increments this counter.",
+      "to": "faceCount",
+      "evidence": "The software model uses this count to size and traverse its face arrays.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:MeshGeometry.vertexCount:I"
+      "renamedSymbol": "F:MeshGeometry.faceCount:I"
     },
     {
       "symbol": "F:rm.field_o:[I",
       "originalName": "field_o",
-      "to": "vertexX",
-      "evidence": "addVertex stores its first argument here.",
+      "to": "faceVertexA",
+      "evidence": "The software model uses these indices to fetch the first vertex of each face.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:MeshGeometry.vertexX:[I"
+      "renamedSymbol": "F:MeshGeometry.faceVertexA:[I"
     },
     {
       "symbol": "F:rm.field_q:[I",
       "originalName": "field_q",
-      "to": "vertexZ",
-      "evidence": "addVertex stores its third argument here.",
+      "to": "faceVertexC",
+      "evidence": "The software model uses these indices to fetch the third vertex of each face.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:MeshGeometry.vertexZ:[I"
+      "renamedSymbol": "F:MeshGeometry.faceVertexC:[I"
     },
     {
       "symbol": "F:rm.field_y:[I",
       "originalName": "field_y",
-      "to": "vertexY",
-      "evidence": "addVertex stores its second argument here.",
+      "to": "faceVertexB",
+      "evidence": "The software model uses these indices to fetch the second vertex of each face.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:MeshGeometry.vertexY:[I"
+      "renamedSymbol": "F:MeshGeometry.faceVertexB:[I"
     },
     {
       "symbol": "F:vh.field_d:Z",
@@ -9254,10 +9254,10 @@
     {
       "symbol": "M:rm.a(IIIBBSS)I",
       "originalName": "a",
-      "to": "addVertex",
-      "evidence": "Stores the first three arguments in parallel vertex arrays and returns the new index.",
+      "to": "addFace",
+      "evidence": "Appends three vertex indices and their face attributes, then returns the new face index.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MeshGeometry.addVertex(IIIBBSS)I"
+      "renamedSymbol": "M:MeshGeometry.addFace(IIIBBSS)I"
     },
     {
       "symbol": "M:rm.a(IIII)V",
@@ -11654,26 +11654,26 @@
     {
       "symbol": "P:rm.a(IIIBBSS)I#0",
       "originalName": "param0",
-      "to": "x",
-      "evidence": "Stores the first three arguments in parallel vertex arrays and returns the new index.",
+      "to": "vertexA",
+      "evidence": "Appends three vertex indices and their face attributes, then returns the new face index.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#0"
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#0"
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#1",
       "originalName": "param1",
-      "to": "y",
-      "evidence": "Stores the first three arguments in parallel vertex arrays and returns the new index.",
+      "to": "vertexB",
+      "evidence": "Appends three vertex indices and their face attributes, then returns the new face index.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#1"
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#1"
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#2",
       "originalName": "param2",
-      "to": "z",
-      "evidence": "Stores the first three arguments in parallel vertex arrays and returns the new index.",
+      "to": "vertexC",
+      "evidence": "Appends three vertex indices and their face attributes, then returns the new face index.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#2"
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#2"
     },
     {
       "symbol": "P:ta.h(I)V#0",
@@ -38727,9 +38727,9 @@
     },
     {
       "symbol": "F:rm.field_g:I",
-      "renamedSymbol": "F:MeshGeometry.vertexCount:I",
+      "renamedSymbol": "F:MeshGeometry.faceCount:I",
       "originalName": "field_g",
-      "renamedName": "vertexCount",
+      "renamedName": "faceCount",
       "declaration": {
         "file": "rm.java",
         "start": 364,
@@ -38815,9 +38815,9 @@
     },
     {
       "symbol": "F:rm.field_o:[I",
-      "renamedSymbol": "F:MeshGeometry.vertexX:[I",
+      "renamedSymbol": "F:MeshGeometry.faceVertexA:[I",
       "originalName": "field_o",
-      "renamedName": "vertexX",
+      "renamedName": "faceVertexA",
       "declaration": {
         "file": "rm.java",
         "start": 840,
@@ -38837,9 +38837,9 @@
     },
     {
       "symbol": "F:rm.field_q:[I",
-      "renamedSymbol": "F:MeshGeometry.vertexZ:[I",
+      "renamedSymbol": "F:MeshGeometry.faceVertexC:[I",
       "originalName": "field_q",
-      "renamedName": "vertexZ",
+      "renamedName": "faceVertexC",
       "declaration": {
         "file": "rm.java",
         "start": 212,
@@ -38925,9 +38925,9 @@
     },
     {
       "symbol": "F:rm.field_y:[I",
-      "renamedSymbol": "F:MeshGeometry.vertexY:[I",
+      "renamedSymbol": "F:MeshGeometry.faceVertexB:[I",
       "originalName": "field_y",
-      "renamedName": "vertexY",
+      "renamedName": "faceVertexB",
       "declaration": {
         "file": "rm.java",
         "start": 383,
@@ -173037,7 +173037,7 @@
     },
     {
       "symbol": "L:rm.a(IIIBBSS)I#0",
-      "renamedSymbol": "L:MeshGeometry.addVertex(IIIBBSS)I#0",
+      "renamedSymbol": "L:MeshGeometry.addFace(IIIBBSS)I#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -240456,9 +240456,9 @@
     },
     {
       "symbol": "M:rm.a(IIIBBSS)I",
-      "renamedSymbol": "M:MeshGeometry.addVertex(IIIBBSS)I",
+      "renamedSymbol": "M:MeshGeometry.addFace(IIIBBSS)I",
       "originalName": "a",
-      "renamedName": "addVertex",
+      "renamedName": "addFace",
       "declaration": {
         "file": "rm.java",
         "start": 931,
@@ -302991,9 +302991,9 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#0",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#0",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#0",
       "originalName": "param0",
-      "renamedName": "x",
+      "renamedName": "vertexA",
       "declaration": {
         "file": "rm.java",
         "start": 937,
@@ -303002,9 +303002,9 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#1",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#1",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#1",
       "originalName": "param1",
-      "renamedName": "y",
+      "renamedName": "vertexB",
       "declaration": {
         "file": "rm.java",
         "start": 949,
@@ -303013,9 +303013,9 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#2",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#2",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#2",
       "originalName": "param2",
-      "renamedName": "z",
+      "renamedName": "vertexC",
       "declaration": {
         "file": "rm.java",
         "start": 961,
@@ -303024,7 +303024,7 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#3",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#3",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -303035,7 +303035,7 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#4",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#4",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -303046,7 +303046,7 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#5",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#5",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -303057,7 +303057,7 @@
     },
     {
       "symbol": "P:rm.a(IIIBBSS)I#6",
-      "renamedSymbol": "P:MeshGeometry.addVertex(IIIBBSS)I#6",
+      "renamedSymbol": "P:MeshGeometry.addFace(IIIBBSS)I#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -370809,7 +370809,7 @@
       "original": "hc.java",
       "renamed": "Level.java",
       "inputSha256": "c296abd9f4fbe50eeef718c33b7ba286e27cc327d902a7387c0b8cc843b43701",
-      "outputSha256": "b7e622a82d836fda4cb4933014aacf425fa887534d72156f9ea521c09889ee66",
+      "outputSha256": "a0eaf046267d1df30e685d45c6cb0699ff0e4afe04b9d2553c89f3f8127fbece",
       "edits": [
         {
           "start": 69,
@@ -371285,42 +371285,42 @@
           "end": 40402,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 40505,
           "end": 40506,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 40743,
           "end": 40744,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 41145,
           "end": 41146,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 41503,
           "end": 41510,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 41532,
           "end": 41539,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 41570,
@@ -384130,7 +384130,7 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "6b4325d1423ef8ac5dd056ca39af28ffd3d78834ffa7185ed82fd35c640b7512",
-      "outputSha256": "5c44929bbc4583523702e885d9c0a3250cbf623d80e8b277f29cc86601f03324",
+      "outputSha256": "5310154357bda7d7291893133f4a921d3369e23973b618b755c9a8e2e7ad2a62",
       "edits": [
         {
           "start": 122,
@@ -384305,28 +384305,28 @@
           "end": 5357,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 5735,
           "end": 5742,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 5883,
           "end": 5890,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 5947,
           "end": 5954,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 6160,
@@ -384347,63 +384347,63 @@
           "end": 7085,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 7111,
           "end": 7118,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 7186,
           "end": 7193,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 7233,
           "end": 7240,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7300,
           "end": 7307,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7367,
           "end": 7374,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7435,
           "end": 7442,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7478,
           "end": 7485,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7495,
           "end": 7502,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 7578,
@@ -385197,7 +385197,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "eb9fea54cfa1029eba446a79e1325200aae5e341133d19d4c549ad30f446a339",
-      "outputSha256": "e6a01fd1cbbdaa18ca808babcc10fc720a185408a7dcef431762dc684384fec9",
+      "outputSha256": "e4137ec9c0e8acdac88d648585871ab41bd608778d1135e99cc2302cdf55fe35",
       "edits": [
         {
           "start": 61,
@@ -385248,133 +385248,133 @@
           "end": 9332,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 9369,
           "end": 9376,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 9505,
           "end": 9512,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 9587,
           "end": 9594,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 9888,
           "end": 9895,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 9995,
           "end": 10002,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 10190,
           "end": 10197,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 10265,
           "end": 10272,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 10817,
           "end": 10824,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 10853,
           "end": 10854,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 10974,
           "end": 10981,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 11018,
           "end": 11025,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 11062,
           "end": 11069,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 11108,
           "end": 11115,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 11152,
           "end": 11159,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 11186,
           "end": 11193,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 11242,
           "end": 11249,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 11276,
           "end": 11283,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 11320,
           "end": 11327,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         }
       ]
     },
@@ -388172,7 +388172,7 @@
       "original": "kg.java",
       "renamed": "kg.java",
       "inputSha256": "3277aeb9ca1c2d05ce811b6ba0625edd7322370df0adbf9d530c747de5f602ee",
-      "outputSha256": "2a02bd0c39cc294bd65cc6be55317fc857d250cbf9bf8ee7a2b703cf493ec069",
+      "outputSha256": "6175d12cb7a5d69368faa847f68e2ced0a4f4d17aa77dd72b784180bf9eba996",
       "edits": [
         {
           "start": 67,
@@ -388431,7 +388431,7 @@
           "end": 4869,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 4953,
@@ -388586,7 +388586,7 @@
       "original": "kh.java",
       "renamed": "Model.java",
       "inputSha256": "f60e79ec99bf2f9f37e5df4f82430cb9c08a908e96a5c0c781055d9d938d0c3e",
-      "outputSha256": "bb3f8c3f4acb36178b76bae475a064edc3153348408d0f5b3035588121b2c1a2",
+      "outputSha256": "663a75c8f4fb1a57a8d443210e6c9b1560fb52c9c9e7d93b8a413a5c3883ff89",
       "edits": [
         {
           "start": 50,
@@ -388677,63 +388677,63 @@
           "end": 1010,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1018,
           "end": 1025,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 1069,
           "end": 1076,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1095,
           "end": 1102,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 1121,
           "end": 1128,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 1163,
           "end": 1170,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 1189,
           "end": 1196,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 1231,
           "end": 1238,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 1257,
           "end": 1264,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 1309,
@@ -413596,7 +413596,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "1e85c52f7e7b1ea1c03f7f3d792391d57c890cf5da7bf95a85e361966daf753e",
-      "outputSha256": "79c55d75b9bdb33e84ec767173b77754f97e4b94527298ccb4c82095024b56f4",
+      "outputSha256": "77b949fe4ec5dc4e0ece17d747b46aa787775c6224995dd55c8ba7df9da58ddb",
       "edits": [
         {
           "start": 64,
@@ -413841,7 +413841,7 @@
           "end": 6710,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 7170,
@@ -420778,7 +420778,7 @@
       "original": "pj.java",
       "renamed": "LitModelMesh.java",
       "inputSha256": "1b2e18451f88c286d9a1b655749857b6fb5361331953182e8b2dac981e7970ae",
-      "outputSha256": "77a495f50deea3d5110d312f3465476218645cbad4f295f6c2b8b7e8ed147be4",
+      "outputSha256": "a25d067cc27cb6097b5a05e2e5fc92b8f98edfb14b6c68b20cc78e4a251b9e6c",
       "edits": [
         {
           "start": 50,
@@ -420862,28 +420862,28 @@
           "end": 3900,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 3932,
           "end": 3939,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 3971,
           "end": 3978,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 4010,
           "end": 4017,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 4673,
@@ -421544,7 +421544,7 @@
       "original": "pm.java",
       "renamed": "pm.java",
       "inputSha256": "5006206e369faaecf3d8658d80a633cf7360e592cfcf6d57b70b49dd56c578ac",
-      "outputSha256": "5db4d3eb73be001888e28650a2746a62ae78da8286c2171fe13d6dde400140bd",
+      "outputSha256": "27bdb5167c5cf73cd3dc5374ae40596fbec39438c76d24ed0bf6baa037f2f5e1",
       "edits": [
         {
           "start": 61,
@@ -421593,42 +421593,42 @@
           "end": 1374,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1383,
           "end": 1390,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 1426,
           "end": 1433,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 2036,
           "end": 2043,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 2179,
           "end": 2186,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 2231,
           "end": 2238,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 2275,
@@ -421649,21 +421649,21 @@
           "end": 2493,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 2520,
           "end": 2527,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 2658,
           "end": 2665,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 2996,
@@ -429721,7 +429721,7 @@
       "original": "rm.java",
       "renamed": "MeshGeometry.java",
       "inputSha256": "e0ae6bf9e911849272badcc5e252f1a5398dc674b127d20fa7687b3156f4b947",
-      "outputSha256": "46f6480406f8d9e372b747cc5700a9900c414a473f16c3cc95d133a423fefb70",
+      "outputSha256": "bc65a129c2d02ee93398fb7fb9ac60371e71ef83701ab1aa208483042890a01d",
       "edits": [
         {
           "start": 44,
@@ -429735,168 +429735,168 @@
           "end": 219,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 364,
           "end": 371,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 383,
           "end": 390,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 840,
           "end": 847,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 931,
           "end": 932,
           "symbol": "M:rm.a(IIIBBSS)I",
           "original": "a",
-          "renamed": "addVertex"
+          "renamed": "addFace"
         },
         {
           "start": 937,
           "end": 943,
           "symbol": "P:rm.a(IIIBBSS)I#0",
           "original": "param0",
-          "renamed": "x"
+          "renamed": "vertexA"
         },
         {
           "start": 949,
           "end": 955,
           "symbol": "P:rm.a(IIIBBSS)I#1",
           "original": "param1",
-          "renamed": "y"
+          "renamed": "vertexB"
         },
         {
           "start": 961,
           "end": 967,
           "symbol": "P:rm.a(IIIBBSS)I#2",
           "original": "param2",
-          "renamed": "z"
+          "renamed": "vertexC"
         },
         {
           "start": 1038,
           "end": 1045,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 1051,
           "end": 1058,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1062,
           "end": 1068,
           "symbol": "P:rm.a(IIIBBSS)I#0",
           "original": "param0",
-          "renamed": "x"
+          "renamed": "vertexA"
         },
         {
           "start": 1083,
           "end": 1090,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 1096,
           "end": 1103,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1107,
           "end": 1113,
           "symbol": "P:rm.a(IIIBBSS)I#1",
           "original": "param1",
-          "renamed": "y"
+          "renamed": "vertexB"
         },
         {
           "start": 1128,
           "end": 1135,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 1141,
           "end": 1148,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1152,
           "end": 1158,
           "symbol": "P:rm.a(IIIBBSS)I#2",
           "original": "param2",
-          "renamed": "z"
+          "renamed": "vertexC"
         },
         {
           "start": 1186,
           "end": 1193,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1237,
           "end": 1244,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1288,
           "end": 1295,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1340,
           "end": 1347,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1397,
           "end": 1404,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1419,
           "end": 1426,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1434,
           "end": 1441,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 1499,
@@ -430113,28 +430113,28 @@
           "end": 4638,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 4805,
           "end": 4812,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 4844,
           "end": 4851,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 4883,
           "end": 4890,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 5698,
@@ -430323,21 +430323,21 @@
           "end": 8778,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 8830,
           "end": 8837,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 8889,
           "end": 8896,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 9374,
@@ -430351,21 +430351,21 @@
           "end": 9476,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 9528,
           "end": 9535,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 9587,
           "end": 9594,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 9856,
@@ -430379,21 +430379,21 @@
           "end": 9958,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 10010,
           "end": 10017,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 10069,
           "end": 10076,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 10410,
@@ -430407,21 +430407,21 @@
           "end": 10512,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 10564,
           "end": 10571,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 10623,
           "end": 10630,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 10849,
@@ -430456,21 +430456,21 @@
           "end": 11514,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 11588,
           "end": 11595,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 11669,
           "end": 11676,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 12102,
@@ -430526,35 +430526,35 @@
           "end": 13969,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 14027,
           "end": 14034,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 14073,
           "end": 14080,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 14119,
           "end": 14126,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 15464,
           "end": 15471,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 16804,
@@ -430785,28 +430785,28 @@
           "end": 21796,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 21963,
           "end": 21970,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 22002,
           "end": 22009,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 22041,
           "end": 22048,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 23342,
@@ -431023,21 +431023,21 @@
           "end": 26176,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 26228,
           "end": 26235,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 26287,
           "end": 26294,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 26772,
@@ -431051,21 +431051,21 @@
           "end": 26874,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 26926,
           "end": 26933,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 26985,
           "end": 26992,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 27254,
@@ -431079,21 +431079,21 @@
           "end": 27356,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 27408,
           "end": 27415,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 27467,
           "end": 27474,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 27808,
@@ -431107,21 +431107,21 @@
           "end": 27910,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 27962,
           "end": 27969,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 28021,
           "end": 28028,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 28247,
@@ -431478,14 +431478,14 @@
           "end": 34354,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 34958,
           "end": 34965,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 35354,
@@ -431499,7 +431499,7 @@
           "end": 35453,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 35592,
@@ -431527,28 +431527,28 @@
           "end": 35787,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 35992,
           "end": 35999,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 36032,
           "end": 36039,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 36072,
           "end": 36079,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 36956,
@@ -431618,224 +431618,224 @@
           "end": 38024,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 38203,
           "end": 38210,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 38482,
           "end": 38489,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 38497,
           "end": 38504,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 38520,
           "end": 38527,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40316,
           "end": 40323,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 40339,
           "end": 40346,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40362,
           "end": 40369,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 40385,
           "end": 40392,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40408,
           "end": 40415,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 40431,
           "end": 40438,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40505,
           "end": 40512,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40589,
           "end": 40596,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40673,
           "end": 40680,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40756,
           "end": 40763,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40841,
           "end": 40848,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40925,
           "end": 40932,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 40983,
           "end": 40990,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 41031,
           "end": 41038,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 41716,
           "end": 41723,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42041,
           "end": 42048,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42167,
           "end": 42174,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42328,
           "end": 42335,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42415,
           "end": 42422,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42588,
           "end": 42595,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42743,
           "end": 42750,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42904,
           "end": 42911,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 42987,
           "end": 42994,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43086,
           "end": 43093,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43151,
           "end": 43158,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43195,
           "end": 43202,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 43208,
           "end": 43215,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43224,
@@ -431849,21 +431849,21 @@
           "end": 43246,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 43290,
           "end": 43297,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 43303,
           "end": 43310,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43319,
@@ -431877,21 +431877,21 @@
           "end": 43341,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 43385,
           "end": 43392,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 43398,
           "end": 43405,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43414,
@@ -431905,28 +431905,28 @@
           "end": 43436,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 43480,
           "end": 43487,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43495,
           "end": 43502,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 43926,
           "end": 43933,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 44819,
@@ -431968,112 +431968,112 @@
           "end": 46373,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 46496,
           "end": 46503,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 46513,
           "end": 46520,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47174,
           "end": 47181,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47239,
           "end": 47246,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47519,
           "end": 47526,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47584,
           "end": 47591,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47827,
           "end": 47834,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 47934,
           "end": 47941,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 48127,
           "end": 48134,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 48316,
           "end": 48323,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 48333,
           "end": 48340,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 48355,
           "end": 48362,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 48372,
           "end": 48379,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 48394,
           "end": 48401,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 48411,
           "end": 48418,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         }
       ]
     },
@@ -433934,7 +433934,7 @@
       "original": "sg.java",
       "renamed": "SceneMeshBatch.java",
       "inputSha256": "80af7fe0755ab4b89fab8d1bbe8f488628b137ce971b373a33954378d603a164",
-      "outputSha256": "c479d195ee032f696c9a1b605e52518a31f1542e9a925ca5cce4a9d25d671adf",
+      "outputSha256": "2603e9ffcf3fc58a7166c212f3b8ae6038eb20e0489874f54cf6956c6469f4dc",
       "edits": [
         {
           "start": 50,
@@ -434256,7 +434256,7 @@
           "end": 15786,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 17233,
@@ -434585,7 +434585,7 @@
           "end": 36068,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 36188,
@@ -434606,28 +434606,28 @@
           "end": 36310,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 36503,
           "end": 36510,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 36543,
           "end": 36550,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 36583,
           "end": 36590,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 36658,
@@ -434676,42 +434676,42 @@
           "end": 37493,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 37529,
           "end": 37536,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 37572,
           "end": 37579,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 40757,
           "end": 40764,
           "symbol": "F:rm.field_o:[I",
           "original": "field_o",
-          "renamed": "vertexX"
+          "renamed": "faceVertexA"
         },
         {
           "start": 40814,
           "end": 40821,
           "symbol": "F:rm.field_y:[I",
           "original": "field_y",
-          "renamed": "vertexY"
+          "renamed": "faceVertexB"
         },
         {
           "start": 40871,
           "end": 40878,
           "symbol": "F:rm.field_q:[I",
           "original": "field_q",
-          "renamed": "vertexZ"
+          "renamed": "faceVertexC"
         },
         {
           "start": 41078,
@@ -443481,7 +443481,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "5e0da35dae2a270f6842c7f3020cb0bc5fd09983d52f6daa86822d2125e87756",
-      "outputSha256": "486ecead3421a268e3da20d7f28511162107e67b2855600ea2930eeec11576e9",
+      "outputSha256": "bb7d0897911f730ca790161d477904f21a24ca739e8f0edaae15fe46b5682027",
       "edits": [
         {
           "start": 191,
@@ -443649,7 +443649,7 @@
           "end": 3572,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 3872,
@@ -443677,7 +443677,7 @@
           "end": 5168,
           "symbol": "F:rm.field_g:I",
           "original": "field_g",
-          "renamed": "vertexCount"
+          "renamed": "faceCount"
         },
         {
           "start": 5298,
@@ -460942,10 +460942,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torquing"
     },
-    "rulesSha256": "1f3374f5ded1b06812f1eb985b000860c69a1fb1c1ffa6666008bae672950b1e",
+    "rulesSha256": "c8b654a8ea4cfe703c2b18ff080aa87cc8fa40070046e3c7c87243f0344cba74",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
-    "outputTreeSha256": "b02e397d135c1a6e0a4ef5b0f31c3c43c88bbfe2ab580263aa27b091f65d83b5",
+    "outputTreeSha256": "9605b02c4d59d4535e200ae59a45c4d22b47bcc1bb410d6d361f84c2af4540ce",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -163,7 +163,7 @@ final class oj implements WidgetRenderer {
                   }
                 }
                 pm.a(param9, -27226, 1);
-                var25 = var30.addVertex(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
+                var25 = var30.addFace(param5, param6, param8, (byte)(param0 & 1), (byte)(var24 >> 24), param1, param7);
                 var26 = param9.field_q;
                 if (var26 != null) {
                   var26.field_q[var25] = (short)var24;
