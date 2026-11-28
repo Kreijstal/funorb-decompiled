@@ -36,7 +36,7 @@ abstract class rf extends ii {
         this.a(0, 0, false);
         super.a(param0, -param1 - this.field_q, param2, -this.field_v - param3);
         ti.c(true);
-        np.field_F.d(param1 + this.field_q, param3 + this.field_v, this.field_U);
+        np.field_F.drawWithOpacity(param1 + this.field_q, param3 + this.field_v, this.field_U);
     }
 
     final void b(int param0, int param1, int param2) {

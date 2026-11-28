@@ -76,7 +76,7 @@ final class AudioService implements Runnable {
         return lk.field_v;
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void attachMouseAndFocusListeners(java.awt.Component param0, boolean param1) {
         param0.addMouseListener(ef.field_b);
         param0.addMouseMotionListener(ef.field_b);
         if (!param1) {

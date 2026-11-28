@@ -55,7 +55,7 @@ final class EmailFormatValidator extends TextFieldValidator {
     final static void a(int param0, int param1, qc param2, boolean param3) {
         try {
           AccountServiceResult.field_d = param2;
-          bb.field_C = param0;
+          InteractiveWidget.field_C = param0;
           q.field_d = param1;
           if (param3) {
             EmailFormatValidator.clearStaticReferences((byte) 109);

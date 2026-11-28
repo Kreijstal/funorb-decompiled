@@ -67,19 +67,19 @@ abstract class AwtRasterBuffer {
             }
             SoftwareRasterizer.fillRectangleAlpha(var4 + 4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
           }
-          HostileSpawn.field_J[0].e(var4, var3_int);
+          HostileSpawn.field_J[0].draw(var4, var3_int);
           var5Lifetime1 = var3_int + 64;
           var6Lifetime1 = param2;
           var7 = var3_int;
           while (var7 > -var6Lifetime1 + var5Lifetime1) {
             var7 = var7 - HostileSpawn.field_J[1].field_A;
-            HostileSpawn.field_J[1].e(var4, var7);
+            HostileSpawn.field_J[1].draw(var4, var7);
           }
           var7 = var7 - HostileSpawn.field_J[2].field_A;
           if (param1 > param2) {
             param1 = param2;
           }
-          HostileSpawn.field_J[2].e(var4, var7);
+          HostileSpawn.field_J[2].draw(var4, var7);
           SoftwareRasterizer.fillRectangleAlpha(7 + var4, 1 + var5Lifetime1 - param1, 6, param1, 16776960, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

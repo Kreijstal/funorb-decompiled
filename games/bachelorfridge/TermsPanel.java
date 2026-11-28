@@ -6,7 +6,7 @@ final class TermsPanel extends WidgetContainer implements pc, WidgetActionListen
     private InteractiveWidget field_E;
     private LinkTextWidget field_D;
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

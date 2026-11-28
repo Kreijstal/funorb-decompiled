@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class i extends im implements ng {
+final class i extends im implements WidgetActivationListener {
     static boolean[] field_P;
     static boolean field_R;
-    private lg field_O;
+    private InteractiveWidget field_O;
     static BinaryBitmapFont field_N;
     static PalettedBitmapFont field_Q;
 
@@ -77,8 +77,8 @@ final class i extends im implements ng {
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
-        lg discarded$1 = null;
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
+        InteractiveWidget discarded$1 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -157,11 +157,11 @@ final class i extends im implements ng {
         this.field_D = false;
     }
 
-    private final lg a(ca param0, boolean param1, String param2) {
-        lg var4 = null;
+    private final InteractiveWidget a(ca param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        lg stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -169,7 +169,7 @@ final class i extends im implements ng {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new lg(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           if (!param1) {
             field_R = true;
           }

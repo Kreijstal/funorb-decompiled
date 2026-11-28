@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends og implements im, vd, fd {
+final class AccountRegistrationPanel extends og implements im, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_K;
     private ValidatedTextField field_M;
     static int[] field_J;
     private ValidatedTextField field_N;
-    private pc field_E;
+    private InteractiveWidget field_E;
     private ValidatedTextField field_I;
     private ValidatedTextField field_z;
-    private pc field_G;
+    private InteractiveWidget field_G;
     private of field_F;
-    nh field_L;
+    NameSuggestionsPanel field_L;
     private ValidatedTextField field_A;
     private rf field_H;
     static String field_C;
@@ -29,7 +29,7 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -80) {
-            this.field_G = (pc) null;
+            this.field_G = (InteractiveWidget) null;
           }
           var8 = new ei(20, param3, param0 + 120, 25, param4, false, 120, 3, ai.field_h, 16777215, param2);
           this.b(var8, -117);
@@ -68,8 +68,8 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         this.field_z = new ValidatedTextField("", (bi) null, 3);
         int var1 = 1;
         this.field_F = new of("", (bi) null, var1 != 0);
-        this.field_G = new pc(ok.field_i, (bi) null);
-        this.field_E = new pc(ProfileDataRequest.field_i, (bi) null);
+        this.field_G = new InteractiveWidget(ok.field_i, (bi) null);
+        this.field_E = new InteractiveWidget(ProfileDataRequest.field_i, (bi) null);
         this.field_N.field_t = ac.field_k;
         this.field_A.field_t = go.field_g;
         this.field_K.field_t = dq.field_C;
@@ -123,7 +123,7 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         this.field_G.field_l = (bi) (this);
         this.b(this.field_G, -116);
         this.b(this.field_E, -124);
-        this.field_L = new nh((fd) (this));
+        this.field_L = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_L.a(150, 60 + this.field_N.field_r + this.field_N.field_g, 20 + this.field_N.field_j, -60 - this.field_N.field_r + (this.field_g - this.field_N.field_g), (byte) -52);
         this.b(this.field_L, 65);
         this.a(var6 + var3 + 55, 0, 0, 496, (byte) -52);
@@ -204,7 +204,7 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         if (param0 >= 87) {
           return mp.a(0, this.field_N.field_o, this, this.field_A.field_o, this.field_M.field_o, this.field_F.field_A, var2);
         }
-        this.field_E = (pc) null;
+        this.field_E = (InteractiveWidget) null;
         return mp.a(0, this.field_N.field_o, this, this.field_A.field_o, this.field_M.field_o, this.field_F.field_A, var2);
     }
 
@@ -401,7 +401,7 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         field_C = null;
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         boolean discarded$1 = false;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -434,14 +434,14 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
           var3 = this.field_N;
           var4 = param0;
           if (param1 != -23752) {
-            this.field_L = (nh) null;
+            this.field_L = (NameSuggestionsPanel) null;
           }
           ((EditableTextField) ((Object) var3)).setText(false, -100, var4);
         } catch (RuntimeException runtimeException) {
@@ -538,14 +538,14 @@ final class AccountRegistrationPanel extends og implements im, vd, fd {
     private final String c(boolean param0) {
         if (!param0) {
           String var3 = (String) null;
-          this.a((String) null, -79);
+          this.onNameSuggestionSelected((String) null, -79);
           return "</col></u>";
         }
         return "</col></u>";
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-101))).d(-31626);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-101))).invalidateCheckedName(-31626);
         if (param0 != 20) {
           this.field_F = (of) null;
         }

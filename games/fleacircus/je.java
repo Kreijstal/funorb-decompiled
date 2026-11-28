@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je extends bb {
+final class je extends InteractiveWidget {
     private int field_L;
     static ob field_M;
     private FieldValidator field_K;
@@ -1563,7 +1563,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_displayname_hint", 0);
                 if (var2 != null) {
-                  bb.field_J = ab.a(0, var2);
+                  InteractiveWidget.field_J = ab.a(0, var2);
                 }
                 var2 = ad.a("create_password_tooltip", 0);
                 if (var2 != null) {
@@ -2083,7 +2083,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("next", 0);
                 if (null != var2) {
-                  bb.field_I = ab.a(0, var2);
+                  InteractiveWidget.field_I = ab.a(0, var2);
                 }
                 var2 = ad.a("graphics_colon", 0);
                 if (null != var2) {
@@ -3157,9 +3157,9 @@ final class je extends bb {
               TextFieldValidator.a(pb.field_c, 45);
               SoftwareRasterizer.clearRaster();
             }
-            var7.a(112, 144, var7.field_x << 4, var7.field_r << 4, -this.field_L << 10, 4096);
+            var7.drawRotatedAbout(112, 144, var7.field_x << 4, var7.field_r << 4, -this.field_L << 10, 4096);
             ia.a(-80);
-            pb.field_c.a(var5_int - var7.field_x, var6 - var7.field_r, 256);
+            pb.field_c.drawAdditive(var5_int - var7.field_x, var6 - var7.field_r, 256);
             if (var11 == 0) {
               return;
             }
@@ -3169,13 +3169,13 @@ final class je extends bb {
               return;
             }
             var7Lifetime1 = t.field_h[1];
-            var7Lifetime1.a(-(var7Lifetime1.field_w >> 1) + var5_int, var6 - (var7Lifetime1.field_t >> 1), 256);
+            var7Lifetime1.drawAdditive(-(var7Lifetime1.field_w >> 1) + var5_int, var6 - (var7Lifetime1.field_t >> 1), 256);
             if (var11 == 0) {
               return;
             }
           }
           var7Lifetime2 = t.field_h[2];
-          var7Lifetime2.a(-(var7Lifetime2.field_w >> 1) + var5_int, var6 - (var7Lifetime2.field_t >> 1), 256);
+          var7Lifetime2.drawAdditive(-(var7Lifetime2.field_w >> 1) + var5_int, var6 - (var7Lifetime2.field_t >> 1), 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

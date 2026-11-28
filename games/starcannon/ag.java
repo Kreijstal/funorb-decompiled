@@ -287,13 +287,13 @@ abstract class ag extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = StarCannon.field_A;
-        if (null != kd.field_B) {
+        if (null != NameSuggestionsPanel.field_B) {
           if (null == n.field_a) {
             var6 = wi.a((byte) 120);
             var4 = var6.getSize();
-            kd.field_B.a(118, var4.width, var4.height);
+            NameSuggestionsPanel.field_B.a(118, var4.width, var4.height);
           }
-          kd.field_B.b((byte) 44);
+          NameSuggestionsPanel.field_B.b((byte) 44);
         }
         bi.a(119);
         gf.a(true);

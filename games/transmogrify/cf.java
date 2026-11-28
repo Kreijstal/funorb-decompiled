@@ -16,7 +16,7 @@ final class cf extends IntrusiveNode {
         int[] var1 = var10;
         Sprite var2 = new Sprite(640, 480);
         int var6Lifetime1;
-        var2.e();
+        var2.bindAsRenderTarget();
         int var3 = 0;
         int var4 = 637762;
         for (var5 = 0; var5 < 480; var5++) {

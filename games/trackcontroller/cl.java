@@ -14,10 +14,10 @@ final class cl {
           var4 = var2.field_q;
           nk.b(false);
           ej.field_d = new Sprite(var3, var4 * 3 / 4);
-          ej.field_d.a();
+          ej.field_d.bindAsRenderTarget();
           var2.drawOpaque(0, 0);
           jd.field_g = new Sprite(var3, var4 - ej.field_d.field_q);
-          jd.field_g.a();
+          jd.field_g.bindAsRenderTarget();
           var2.drawOpaque(0, -ej.field_d.field_q);
           jd.field_g.field_o = ej.field_d.field_q;
           if (param1 >= -64) {

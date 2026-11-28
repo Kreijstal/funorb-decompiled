@@ -22,22 +22,22 @@ final class sc {
           }
           var11 = (param0.field_v >> 1) + param0.field_y + param7;
           SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param8);
-          param0.f(param3 - 1, param7 - 1, param2);
-          param0.f(param3 - 1, 1 + param7, param2);
+          param0.drawAdditive(param3 - 1, param7 - 1, param2);
+          param0.drawAdditive(param3 - 1, 1 + param7, param2);
           SoftwareRasterizer.restoreClip(wc.field_b);
           SoftwareRasterizer.intersectClip(1 + var9_int, 0, 1 + var10, var11 + param8);
-          param0.f(param3 + 1, -1 + param7, param2);
-          param0.f(param3 + 1, 1 + param7, param2);
+          param0.drawAdditive(param3 + 1, -1 + param7, param2);
+          param0.drawAdditive(param3 + 1, 1 + param7, param2);
           SoftwareRasterizer.restoreClip(wc.field_b);
           var10Lifetime1 = -param6 + param0.field_u + (param0.field_w + param3) - param5;
           var9_intLifetime1 = param0.field_w + (param0.field_u + param3 - (param5 + param4));
           SoftwareRasterizer.intersectClip(var9_intLifetime1, -param8 + var11, var10Lifetime1, 480);
-          param0.f(-1 + param3, -1 + param7, param2);
-          param0.f(-1 + param3, param7 + 1, param2);
+          param0.drawAdditive(-1 + param3, -1 + param7, param2);
+          param0.drawAdditive(-1 + param3, param7 + 1, param2);
           SoftwareRasterizer.restoreClip(wc.field_b);
           SoftwareRasterizer.intersectClip(var9_intLifetime1 + 1, -param8 + var11, var10Lifetime1 + 1, 480);
-          param0.f(param3 + 1, -1 + param7, param2);
-          param0.f(param3 + 1, param7 + 1, param2);
+          param0.drawAdditive(param3 + 1, -1 + param7, param2);
+          param0.drawAdditive(param3 + 1, param7 + 1, param2);
           SoftwareRasterizer.restoreClip(wc.field_b);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

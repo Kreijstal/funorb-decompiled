@@ -135,7 +135,7 @@ final class qh {
             for (var7 = 0; 100 > var7; var7++) {
               var2 = 16 * var6 - this.field_t;
               var3 = 16 * var7 - this.field_f;
-              pk.field_d[this.field_o[var6][var7] % 320].e(var2, var3);
+              pk.field_d[this.field_o[var6][var7] % 320].draw(var2, var3);
               if (0 == this.field_a &&
                 this.field_w[var6][var7] == 0 ||
                 this.field_w[var6][var7] == 3 &&
@@ -212,7 +212,7 @@ final class qh {
               var8 = 159;
             }
             if (var8 != -1) {
-              pk.field_d[var8].b(var2Lifetime1, var3Lifetime1, 128);
+              pk.field_d[var8].drawWithOpacity(var2Lifetime1, var3Lifetime1, 128);
             }
           }
         }
@@ -281,11 +281,11 @@ final class qh {
               var2Lifetime6 = 16 * var6Lifetime5;
               var3Lifetime6 = var7Lifetime5 * 16;
               if (var7Lifetime5 * 8 + var6Lifetime5 < 160) {
-                pk.field_d[var6Lifetime5 + 8 * var7Lifetime5].e(var2Lifetime6, var3Lifetime6);
+                pk.field_d[var6Lifetime5 + 8 * var7Lifetime5].draw(var2Lifetime6, var3Lifetime6);
               }
               var2Lifetime6 += 144;
               if (var7Lifetime5 * 8 + var6Lifetime5 < 160) {
-                pk.field_d[160 + 8 * var7Lifetime5 + var6Lifetime5].e(var2Lifetime6, var3Lifetime6);
+                pk.field_d[160 + 8 * var7Lifetime5 + var6Lifetime5].draw(var2Lifetime6, var3Lifetime6);
               }
             }
           }
@@ -807,8 +807,8 @@ final class qh {
               }
               for (var7_int = 0; 5 > var7_int; var7_int++) {
                 for (var8_int = 0; var8_int < 5; var8_int++) {
-                  pk.field_d[var7_int + (var8_int + 24) * 8].a();
-                  var6.c(16 * -var7_int, 16 * -var8_int);
+                  pk.field_d[var7_int + (var8_int + 24) * 8].bindAsRenderTarget();
+                  var6.drawOpaque(16 * -var7_int, 16 * -var8_int);
                 }
               }
               o.field_n.setAsRasterTarget((byte) 113);

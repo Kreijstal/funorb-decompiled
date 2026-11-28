@@ -109,9 +109,9 @@ final class wh extends am {
         int[][] var3 = var22;
         if (!this.field_r.field_b) {
         } else {
-          var40 = this.b(param0 + 29116, 0, vp.field_I & param1 - 1);
+          var40 = this.b(param0 + 29116, 0, NameSuggestionsPanel.field_I & param1 - 1);
           var5 = this.b(0, 0, param1);
-          var41 = this.b(0, 0, vp.field_I & param1 + 1);
+          var41 = this.b(0, 0, NameSuggestionsPanel.field_I & param1 + 1);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];

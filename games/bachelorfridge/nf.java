@@ -127,7 +127,7 @@ final class nf extends LinkTextWidget {
               }
             }
           }
-          var19.b(112, 144, var19.field_n << 4, var19.field_o << 4, -this.field_Q << 10, 4096);
+          var19.drawRotatedAbout(112, 144, var19.field_n << 4, var19.field_o << 4, -this.field_Q << 10, 4096);
           db.b(120);
           this.field_N.drawAdditive(-(var19.field_n >> 1) + var10, -var19.field_o + var11, 256);
           return;
@@ -164,7 +164,7 @@ final class nf extends LinkTextWidget {
             }
           }
         }
-        var18.b(112, 144, var18.field_n << 4, var18.field_o << 4, -this.field_Q << 10, 4096);
+        var18.drawRotatedAbout(112, 144, var18.field_n << 4, var18.field_o << 4, -this.field_Q << 10, 4096);
         db.b(120);
         this.field_N.drawAdditive(-(var18.field_n >> 1) + var10, -var18.field_o + var11, 256);
         return;

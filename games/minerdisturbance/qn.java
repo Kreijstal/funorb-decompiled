@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends hc {
+final class qn extends InteractiveWidget {
     private FieldValidator field_I;
     private int field_L;
     static int field_K;
@@ -26,7 +26,7 @@ final class qn extends hc {
             qn.computeCrc32(74, 37, -101, (byte[]) null);
           }
           for (var5 = param1; param2 > var5; var5++) {
-            var4_int = ei.field_J[(var4_int ^ param3[var5]) & 255] ^ var4_int >>> 8;
+            var4_int = NameSuggestionsPanel.field_J[(var4_int ^ param3[var5]) & 255] ^ var4_int >>> 8;
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;
@@ -99,7 +99,7 @@ final class qn extends hc {
           if (ha.field_d == null) {
             ha.field_d = new Sprite(var9, var10);
             ArchiveProvider.a(ha.field_d, 127);
-            var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
@@ -107,7 +107,7 @@ final class qn extends hc {
           if (ha.field_d.field_y < var9) {
             ha.field_d = new Sprite(var9, var10);
             ArchiveProvider.a(ha.field_d, 127);
-            var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
@@ -115,14 +115,14 @@ final class qn extends hc {
           if (ha.field_d.field_C >= var10) {
             ArchiveProvider.a(ha.field_d, 125);
             SoftwareRasterizer.clearRaster();
-            var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           ha.field_d = new Sprite(var9, var10);
           ArchiveProvider.a(ha.field_d, 127);
-          var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
           ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
           return;
@@ -134,7 +134,7 @@ final class qn extends hc {
           if (ha.field_d == null) {
             ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
             ArchiveProvider.a(ha.field_d, 127);
-            var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
@@ -142,7 +142,7 @@ final class qn extends hc {
           if (ha.field_d.field_y < var9Lifetime1) {
             ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
             ArchiveProvider.a(ha.field_d, 127);
-            var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
@@ -150,14 +150,14 @@ final class qn extends hc {
           if (ha.field_d.field_C >= var10Lifetime1) {
             ArchiveProvider.a(ha.field_d, 125);
             SoftwareRasterizer.clearRaster();
-            var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
           ArchiveProvider.a(ha.field_d, 127);
-          var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
           ha.field_d.drawAdditive(var5 - var16.field_x, var6 - var16.field_A, 256);
           return;

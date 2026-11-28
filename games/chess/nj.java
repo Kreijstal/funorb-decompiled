@@ -59,18 +59,18 @@ final class nj extends hl {
         RuntimeException var6 = null;
         ai var7 = null;
         ai var9 = null;
-        fb var10 = null;
+        InteractiveWidget var10 = null;
         ai var11 = null;
         ai var12 = null;
         ai var13 = null;
         ai var14 = null;
         try {
-          if (param4 instanceof fb) {
+          if (param4 instanceof InteractiveWidget) {
             stackIn_3_0 = (mf) (param4);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (fb) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           cf.b(param4.field_C + (param4.field_r + param2), param4.field_y + (param1 + param4.field_u), param4.field_r + param2, 80, param4.field_u + param1);
           if (var10 != null) {
             param3 = param3 & var10.field_H;

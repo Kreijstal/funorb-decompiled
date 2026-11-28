@@ -25,7 +25,7 @@ final class sd {
         if (param0) {
           var4++;
         }
-        return s.field_E[var4];
+        return InteractiveWidget.field_E[var4];
     }
 
     public static void resetStaticState(byte param0) {

@@ -124,19 +124,19 @@ final class go extends ScoreModifier {
           var7 = tm.field_d[0][0].a((byte) -46);
           var8 = le.field_g[var7][0];
           for (var9 = -1; param1 >= var9; var9++) {
-            var8.b(-(param1 * 12) + (240 + 24 * var9), 234 - param0 * 12 - 24, 24, 36);
+            var8.drawScaled(-(param1 * 12) + (240 + 24 * var9), 234 - param0 * 12 - 24, 24, 36);
           }
           var9Lifetime1 = 0;
           if (param2) {
             field_l = (BinaryBitmapFont) null;
           }
           while (var9Lifetime1 < param0) {
-            var8.b(-24 + (240 - param1 * 12), var9Lifetime1 * 24 + (-(param0 * 12) + 234), 24, 36);
-            var8.b(240 + param1 * 12, 234 - 12 * param0 + var9Lifetime1 * 24, 24, 36);
+            var8.drawScaled(-24 + (240 - param1 * 12), var9Lifetime1 * 24 + (-(param0 * 12) + 234), 24, 36);
+            var8.drawScaled(240 + param1 * 12, 234 - 12 * param0 + var9Lifetime1 * 24, 24, 36);
             var9Lifetime1++;
           }
           for (var9Lifetime2 = -1; var9Lifetime2 <= param1; var9Lifetime2++) {
-            var8.b(var9Lifetime2 * 24 + (240 - 12 * param1), 234 + 12 * param0, 24, 36);
+            var8.drawScaled(var9Lifetime2 * 24 + (240 - 12 * param1), 234 + 12 * param0, 24, 36);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

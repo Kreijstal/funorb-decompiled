@@ -165,7 +165,7 @@ final class qh {
               tg.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.h(245, 199);
+            var6.draw(245, 199);
           }
           if (wf.field_x < am.field_g) {
             var7Lifetime2 = of.field_q[DungeonTileState.field_n];

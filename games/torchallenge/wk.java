@@ -181,7 +181,7 @@ final class wk extends ic {
           var2 = AccountRegistrationPanel.field_M[var3Lifetime1][0][1];
           var1_int = AccountRegistrationPanel.field_M[var3Lifetime1][0][0];
           if (var5 < 0) {
-            cg.field_g.d();
+            cg.field_g.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var13.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(117);
@@ -202,7 +202,7 @@ final class wk extends ic {
           var7Lifetime4 = var15Lifetime2;
           var5Lifetime1 = AccountRegistrationPanel.field_M[var4Lifetime1][1][2];
           if (var5Lifetime1 < 0) {
-            cg.field_g.d();
+            cg.field_g.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var15Lifetime2.drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(126);

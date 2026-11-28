@@ -109,7 +109,7 @@ final class ga extends bc {
         gj var7 = null;
         gj var9 = null;
         ga var10 = null;
-        ng var11 = null;
+        InteractiveWidget var11 = null;
         gj var12 = null;
         gj var13 = null;
         gj var14 = null;
@@ -119,12 +119,12 @@ final class ga extends bc {
             var10 = (ga) null;
             this.a((ga) null, true, 35);
           }
-          if (param0 instanceof ng) {
+          if (param0 instanceof InteractiveWidget) {
             stackIn_5_0 = (UiComponent) (param0);
           } else {
             stackIn_5_0 = null;
           }
-          var11 = (ng) (stackIn_5_0);
+          var11 = (InteractiveWidget) (stackIn_5_0);
           bc.a(param0.field_l + (param1 + param0.field_i), param0.field_m + param2, param0.field_i + param1, param2 + param0.field_m + param0.field_p, param3 - 96);
           if (var11 != null) {
             param4 = param4 & var11.field_F;

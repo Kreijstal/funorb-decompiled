@@ -138,7 +138,7 @@ final class tn extends bh {
           var6_int = param2.stringWidth(param5);
           var7 = param2.field_E + param2.field_H;
           var8 = new RgbSprite(var6_int, var7);
-          var8.e();
+          var8.bindAsRenderTarget();
           param2.drawString(param5, 0, param2.field_H, 16760960, -1);
           if (param4 > -36) {
             var18 = (String) null;
@@ -154,19 +154,19 @@ final class tn extends bh {
           var11 = -var8.field_y + param3.field_y >> 1;
           var12 = param3.field_v - var8.field_v >> 1;
           var13 = dd.a((byte) -112, 4, var9);
-          var14 = param3.d();
-          var14.e();
+          var14 = param3.copy();
+          var14.bindAsRenderTarget();
           bp.a(var12, var13, var11, (byte) 99);
-          var9.h(var11, var12);
-          var14.h();
-          var15 = var14.d();
-          var15.e();
+          var9.draw(var11, var12);
+          var14.makeTransparentPixelsOpaque();
+          var15 = var14.copy();
+          var15.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleAlpha(0, 0, param3.field_y, param3.field_v, 0, 160);
-          var15.h();
-          var16 = param3.d();
-          var16.e();
-          rb.a(8, var8, 12690143, (byte) -59).b(var11, var12, 32);
-          var8.h(var11, var12);
+          var15.makeTransparentPixelsOpaque();
+          var16 = param3.copy();
+          var16.bindAsRenderTarget();
+          rb.a(8, var8, 12690143, (byte) -59).drawAdditive(var11, var12, 32);
+          var8.draw(var11, var12);
           var10.field_w = var10.field_w + var11;
           var10.field_A = var10.field_A + var12;
           jh.b();
@@ -268,10 +268,10 @@ final class tn extends bh {
           oc.field_A != var6Lifetime1) {
           if (var6Lifetime1 == pd.field_J) {
             var15 = sl.field_c[2];
-            var15.b(var9, var10 - (var15.field_v >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.field_v >> 1), 256);
           } else if (var6Lifetime1 == AwtRasterBuffer.field_d) {
             var16 = sl.field_c[1];
-            var16.b(var9, var10 - (var16.field_v >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.field_v >> 1), 256);
           }
         } else {
           var14 = sl.field_c[0];
@@ -286,9 +286,9 @@ final class tn extends bh {
             this.field_V = new RgbSprite(var11, var12);
             lm.a(this.field_V, (byte) -79);
           }
-          var14.b(112, 144, var14.field_E << 4, var14.field_G << 4, -this.field_X << 10, 4096);
+          var14.drawRotatedAboutBilinear(112, 144, var14.field_E << 4, var14.field_G << 4, -this.field_X << 10, 4096);
           ti.c(true);
-          this.field_V.b(var9 - (var14.field_E >> 1), -var14.field_G + var10, 256);
+          this.field_V.drawAdditive(var9 - (var14.field_E >> 1), -var14.field_G + var10, 256);
         }
     }
 

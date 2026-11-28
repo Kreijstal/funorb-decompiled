@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oi extends WidgetContainer implements n {
+final class oi extends WidgetContainer implements WidgetActivationListener {
     static Sprite field_J;
-    private eb[] field_K;
+    private InteractiveWidget[] field_K;
     private int[] field_L;
     private BitmapFont field_I;
     static java.awt.Color field_H;
@@ -29,8 +29,8 @@ final class oi extends WidgetContainer implements n {
         if (param0 <= this.field_F) {
           return;
         }
-        eb[] var7 = new eb[param0];
-        eb[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = 0; this.field_F > var5; var5++) {
           var7[var5] = this.field_K[var5];
@@ -66,7 +66,7 @@ final class oi extends WidgetContainer implements n {
         field_M = null;
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var6_int = 0;
         int var8 = Terraphoenix.field_V;
@@ -102,12 +102,12 @@ final class oi extends WidgetContainer implements n {
         }
     }
 
-    final eb a(byte param0, sc param1, String param2) {
-        eb var4 = null;
+    final InteractiveWidget a(byte param0, sc param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
-        eb stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -119,7 +119,7 @@ final class oi extends WidgetContainer implements n {
             var6 = (String) null;
             this.a(-103, (String) null, (byte) -64);
           }
-          var4 = new eb(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.listener = (WidgetActionListener) ((Object) new ic());
           var5 = -2 + this.height;
           this.a(0, (byte) 107, this.width, 0, 34 + this.height);

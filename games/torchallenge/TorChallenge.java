@@ -94,7 +94,7 @@ public final class TorChallenge extends GameClientBase {
               IterableNodeHashTable.a((byte) -44, je.field_b);
               ResourceArchive.field_o = SpriteLoader.a(-127, "interface_clouds", "", ic.field_C);
               rd.field_i = SpriteLoader.a(param0 ^ -127, "interface_border", "", ic.field_C);
-              ng.field_L = SpriteLoader.a(param0 - 128, "interface_score_health", "", ic.field_C);
+              InteractiveWidget.field_L = SpriteLoader.a(param0 - 128, "interface_score_health", "", ic.field_C);
               ph.field_h = SpriteLoader.a(-127, "interface_lives_remaining", "", ic.field_C);
               di.field_t = SpriteLoader.a(-128, "interface_lives_heads", "", ic.field_C);
               rc.field_p = SpriteLoader.a(-127, "interface_bo_energy", "", ic.field_C);
@@ -236,7 +236,7 @@ public final class TorChallenge extends GameClientBase {
               si.field_I = new Sprite[3][][];
               break;
             }
-            pe.field_eb[var3_int].g();
+            pe.field_eb[var3_int].normalizeCanvas();
             var3_int++;
           } while (var12 == 0);
           var6_int = 0;
@@ -369,9 +369,9 @@ public final class TorChallenge extends GameClientBase {
                   SecondaryNodeDeque.field_a[1] = SpriteLoader.a(param0 - 129, "ziren_puff", "", ic.field_C);
                   SecondaryNodeDeque.field_a[2] = SpriteLoader.a(-128, "damen_puff", "", ic.field_C);
                   ra.field_b[0][0] = qk.a("", "damen_vert_swipe", ic.field_C, param0 - 1);
-                  ra.field_b[0][1] = ra.field_b[0][0].i();
+                  ra.field_b[0][1] = ra.field_b[0][0].copyMirroredHorizontally();
                   ra.field_b[1][0] = qk.a("", "damen_angled_swipe", ic.field_C, 0);
-                  ra.field_b[1][1] = ra.field_b[1][0].i();
+                  ra.field_b[1][1] = ra.field_b[1][0].copyMirroredHorizontally();
                   stackIn_134_0 = 0;
                 }
                 var6_int = stackIn_134_0;
@@ -505,11 +505,11 @@ public final class TorChallenge extends GameClientBase {
                     od.a(33, 30, 68, 90, 34, 45, je.field_g, var7, var6);
                     var6 = null;
                     var7_ref = null;
-                    je.field_g.h();
+                    je.field_g.trimTransparentBorders();
                     c.field_b = qk.a("", "door_sign", ic.field_C, 0);
-                    c.field_b.h();
+                    c.field_b.trimTransparentBorders();
                     si.field_F = new Sprite(kj.field_C[0].fullWidth, kj.field_C[0].fullHeight);
-                    si.field_F.d();
+                    si.field_F.bindAsRenderTarget();
                     SoftwareRasterizer.fillRectangle(33, 30, 68, 90, param0);
                     kj.field_C[1].drawTransparent(0, 0);
                     SectorCacheStore.field_f.bindAsTarget(101);
@@ -534,8 +534,8 @@ public final class TorChallenge extends GameClientBase {
                       qb.a((byte) 86, ResourceArchive.field_h);
                       var9 = tf.field_x.field_x + tf.field_x.field_K;
                       hh.field_b = new Sprite(var9, var9);
-                      hh.field_b.d();
-                      bc.field_f.c(0, 0, var9, var9);
+                      hh.field_b.bindAsRenderTarget();
+                      bc.field_f.drawDownscaledAreaAveraged(0, 0, var9, var9);
                       bc.field_f = null;
                       SectorCacheStore.field_f.bindAsTarget(105);
                       stackIn_235_0 = 12476;
@@ -1953,7 +1953,7 @@ public final class TorChallenge extends GameClientBase {
           Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(-113);
           IsaacRandom.resetStaticState(91);
-          PcmOutputWorker.b(6);
+          PcmOutputWorker.clearStaticReferences(6);
           fl.clearStaticReferences(-25984);
           ii.b(16711680);
           NetworkArchiveRequest.clearStaticReferences(117);
@@ -1989,7 +1989,7 @@ public final class TorChallenge extends GameClientBase {
           ph.clearStaticReferences(2);
           lg.a(-27840);
           UiComponent.clearStaticReferences(107);
-          ng.clearStaticReferences(true);
+          InteractiveWidget.clearStaticReferences(true);
           ic.clearDeclaredStaticReferences(1);
           v.clearStaticReferences(false);
           b.clearDeclaredStaticReferences(0);
@@ -2021,7 +2021,7 @@ public final class TorChallenge extends GameClientBase {
           EditableTextField.clearDeclaredStaticReferences(65);
           n.releaseDeclaredStaticReferences(5);
           ek.clearDeclaredStaticReferences((byte) 123);
-          li.c(true);
+          NameSuggestionsPanel.c(true);
           df.clearDeclaredStaticReferences(-1);
           tk.clearDeclaredStaticReferences((byte) 87);
           dh.g(112);

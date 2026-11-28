@@ -43,7 +43,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (null != hh.field_M) {
             uc.field_eb = 0;
-            bb.field_I = 0;
+            NameSuggestionsPanel.field_I = 0;
             ql.field_K = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
@@ -282,7 +282,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (hh.field_M != null) {
-            bb.field_I = 0;
+            NameSuggestionsPanel.field_I = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -367,14 +367,14 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             rf.correctedCurrentTimeMillis(0);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               lj.field_a = 1;
-              bb.field_I = 1;
+              NameSuggestionsPanel.field_I = 1;
               if (Lexicominos.field_L) {
                 lj.field_a = 2;
-                bb.field_I = 2;
+                NameSuggestionsPanel.field_I = 2;
               }
             } else {
               lj.field_a = 2;
-              bb.field_I = 2;
+              NameSuggestionsPanel.field_I = 2;
             }
             var2_int = param0.getModifiers();
             if ((4 & var2_int) != 0) {

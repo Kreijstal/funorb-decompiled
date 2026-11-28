@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dh extends sj implements el {
+class dh extends sj implements WidgetActivationListener {
     static ja field_vb;
     private boolean field_zb;
     static double field_sb;
@@ -224,7 +224,7 @@ class dh extends sj implements el {
         un.c(-18997);
     }
 
-    public void a(int param0, int param1, int param2, rg param3, int param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

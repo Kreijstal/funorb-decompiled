@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends ii implements vg {
-    private ck field_T;
+final class ia extends ii implements WidgetActivationListener {
+    private InteractiveWidget field_T;
     static boolean field_O;
     static int[] field_S;
     static int field_X;
@@ -10,19 +10,19 @@ final class ia extends ii implements vg {
     static ResourceArchive field_U;
     static RgbSprite field_R;
     static ResourceArchive field_W;
-    private ck field_Z;
+    private InteractiveWidget field_Z;
     static tk field_K;
     static String field_Y;
     static RgbSprite field_Q;
     static int field_M;
     static int[] field_P;
-    private ck field_V;
+    private InteractiveWidget field_V;
 
     public ia() {
         super(0, 0, 476, 225, (ca) null);
-        this.field_V = new ck(BoundedRandomAccessFile.field_c, (pg) null);
-        this.field_Z = new ck(pp.field_I, (pg) null);
-        this.field_T = new ck(kd.field_b, (pg) null);
+        this.field_V = new InteractiveWidget(BoundedRandomAccessFile.field_c, (pg) null);
+        this.field_Z = new InteractiveWidget(pp.field_I, (pg) null);
+        this.field_T = new InteractiveWidget(kd.field_b, (pg) null);
         na var1 = new na();
         this.field_V.field_o = (ca) ((Object) var1);
         this.field_Z.field_o = (ca) ((Object) var1);
@@ -43,7 +43,7 @@ final class ia extends ii implements vg {
         this.b((byte) -120, this.field_T);
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         lm var8 = null;

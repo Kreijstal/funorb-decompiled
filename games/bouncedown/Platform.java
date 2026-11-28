@@ -32,7 +32,7 @@ final class Platform {
         var4 = this.field_d;
         if (var4 == 0) {
           if (this.field_b != 0) {
-            kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h - od.field_f.field_s * (this.field_b + 2));
+            kc.field_c.draw((int)((double)param1 + this.field_c - 64.0), (int)this.field_h - od.field_f.field_s * (this.field_b + 2));
             var4 = param1 + (int)this.field_c;
             var5_int = -(od.field_f.field_s * (2 + this.field_b)) + (16 + ((int)this.field_h + 16));
             var5_int -= 64;
@@ -41,7 +41,7 @@ final class Platform {
             CipherPacketBuffer.a(var4, hf.field_c, var5_int, 16744512, param0 + 7);
             ve.a(8 + (var7 + 16), var5_int - 27, ig.field_d, (byte) -82, 8 + (var6 + 8), -8 + var4 - var6 / 2);
           } else {
-            kc.field_c.a((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
+            kc.field_c.draw((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
           }
         } else {
           if (var4 != 1) {
@@ -51,20 +51,20 @@ final class Platform {
                 if ((5 == var4)) {
                   if (this.field_b == 2) {
                     var3 = this.field_g * 4 / 256;
-                    nk.field_h[var3].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+                    nk.field_h[var3].draw((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
                     var3Lifetime4 = this.field_g * 16 / 256 % 20;
                     if (var3Lifetime4 > 1) {
                       var3Lifetime4 = 0;
                     }
-                    nl.field_d[var3Lifetime4].a((int)((double)param1 + this.field_c - 64.0), -16 + (int)this.field_h);
+                    nl.field_d[var3Lifetime4].draw((int)((double)param1 + this.field_c - 64.0), -16 + (int)this.field_h);
                   }
                   if (this.field_b == 0) {
                     var3Lifetime2 = 3 * this.field_g / 256;
-                    wb.field_e[var3Lifetime2].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
+                    wb.field_e[var3Lifetime2].draw((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
                   }
                   if ((this.field_b == 1)) {
                     var3Lifetime3 = this.field_g * 3 / 256;
-                    MatchingFieldValidator.field_j[var3Lifetime3].a((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
+                    MatchingFieldValidator.field_j[var3Lifetime3].draw((int)(this.field_c + (double)param1 - 64.0), (int)this.field_h);
                   }
                 }
                 decompiledFrameRemainder0 = false;
@@ -72,29 +72,29 @@ final class Platform {
               else {
                 var3Lifetime1 = this.field_b * 6 / 256;
                 if (4 == this.field_d) {
-                  fd.field_n[var3Lifetime1].a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+                  fd.field_n[var3Lifetime1].draw((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
                 } else {
-                  fd.field_n[var3Lifetime1].d((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
+                  fd.field_n[var3Lifetime1].drawFlippedHorizontal((int)((double)param1 + this.field_c - 64.0), (int)this.field_h);
                 }
               }
             } else {
               if (this.field_b < 16) {
-                DisplayNameSelectionPanel.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
+                DisplayNameSelectionPanel.field_F.drawWithOpacity((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
               }
               if (SectorCacheStore.a(0, (byte) 88)) {
                 for (var4 = 0; 2 > var4; var4++) {
                   var5 = 3.14 * (double)var4 + (0.05 * this.field_h + this.field_c);
                   var7 = (int)(Math.abs(this.field_h) / 10.0 + (double)var4) % 4;
                   var8 = 16 + this.field_b;
-                  uk.field_f[var7].a((int)(this.field_c + (double)param1 + Math.sin(var5) * (double)(4 * var8) - (double)(uk.field_f[var7].field_t / 2)), (int)(this.field_h + Math.cos((double)(1 + var4) * var5) * (double)var8 - (double)(4 * this.field_b)));
+                  uk.field_f[var7].draw((int)(this.field_c + (double)param1 + Math.sin(var5) * (double)(4 * var8) - (double)(uk.field_f[var7].field_t / 2)), (int)(this.field_h + Math.cos((double)(1 + var4) * var5) * (double)var8 - (double)(4 * this.field_b)));
                 }
               }
             }
           } else {
             if (0 >= this.field_b) {
-              re.field_a.a((int)(-64.0 + ((double)param1 + this.field_c)), -re.field_a.field_q + (int)this.field_h + a.field_f.field_q);
+              re.field_a.draw((int)(-64.0 + ((double)param1 + this.field_c)), -re.field_a.field_q + (int)this.field_h + a.field_f.field_q);
             } else {
-              a.field_f.a((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
+              a.field_f.draw((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h);
             }
           }
         }

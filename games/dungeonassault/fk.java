@@ -129,20 +129,20 @@ final class fk extends kl {
           var5_int = 70;
           var6 = 545;
           if (var3 == 0) {
-            hf.field_Ab.g(var5_int, var4);
-            hf.field_Ab.g(var6, var4);
+            hf.field_Ab.drawFlippedVertical(var5_int, var4);
+            hf.field_Ab.drawFlippedVertical(var6, var4);
           } else {
-            hf.field_Ab.h(var5_int, var4);
-            hf.field_Ab.h(var6, var4);
+            hf.field_Ab.draw(var5_int, var4);
+            hf.field_Ab.draw(var6, var4);
           }
           stackIn_8_0 = (var3 != 0) ? 0 : 1;
           var3 = stackIn_8_0;
         }
         SoftwareRasterizer.setClip(0, 0, 640, am.field_a.field_G + var2 - 12);
-        am.field_a.h(-(am.field_a.field_E / 2) + 320, var2);
+        am.field_a.draw(-(am.field_a.field_E / 2) + 320, var2);
         SoftwareRasterizer.resetClip();
-        lf.field_n.c(321 - lf.field_n.field_E / 2, 60 + var2);
-        lf.field_x.h(320 - lf.field_x.field_E / 2, am.field_a.field_G + (var2 - 28));
+        lf.field_n.drawOpaque(321 - lf.field_n.field_E / 2, 60 + var2);
+        lf.field_x.draw(320 - lf.field_x.field_E / 2, am.field_a.field_G + (var2 - 28));
         var4Lifetime1 = -51 / ((41 - param0) / 63);
         SoftwareRasterizer.fillRectangleAlpha(37 + this.field_k, 57 + this.field_j, 155, 158, 65793, 64);
         super.b(-64);
@@ -377,11 +377,11 @@ final class fk extends kl {
                 var7 = 0;
               }
               if (qd.field_c[var2]) {
-                this.field_u.b(var5, var6, var7);
+                this.field_u.drawAdditive(var5, var6, var7);
               }
               if (this.field_q == var2) {
-                this.field_m.b(var5, var6, 64);
-                this.field_n.b(var5, var6, var7);
+                this.field_m.drawAdditive(var5, var6, 64);
+                this.field_n.drawAdditive(var5, var6, var7);
               }
             }
             var4++;
@@ -497,7 +497,7 @@ final class fk extends kl {
             stackIn_3_0 = (RgbSprite) null;
             return stackIn_3_0;
           }
-          var12 = param1.d();
+          var12 = param1.copy();
           var13 = var12;
           var5 = param3 & 16711935;
           var6 = 65280 & param3;
@@ -512,7 +512,7 @@ final class fk extends kl {
             var12.field_B[var7] = var10 >>> 8;
           }
           jh.a(var13);
-          param1.d(-param1.field_w, -param1.field_A, -param2 + 256);
+          param1.drawWithOpacity(-param1.field_w, -param1.field_A, -param2 + 256);
           jh.b();
           stackIn_11_0 = var13;
           return stackIn_11_0;

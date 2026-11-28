@@ -184,9 +184,9 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_G != 256) {
-                                    var11_ref_th.a(param1, param2 + this.field_F - var12, field_G);
+                                    var11_ref_th.drawWithOpacity(param1, param2 + this.field_F - var12, field_G);
                                   } else {
-                                    var11_ref_th.a(param1, param2 + this.field_F - var12);
+                                    var11_ref_th.draw(param1, param2 + this.field_F - var12);
                                   }
                                   param1 = param1 + var11_ref_th.field_a;
                                   var5 = 0;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends ld implements ka {
+final class nf extends ld implements WidgetActivationListener {
     static String field_X;
     static int field_V;
     static int[] field_W;
     static int field_S;
-    private pj field_T;
+    private InteractiveWidget field_T;
     static int field_U;
 
     nf(i param0, ng param1) {
@@ -179,7 +179,7 @@ final class nf extends ld implements ka {
         }
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -210,11 +210,11 @@ final class nf extends ld implements ka {
         }
     }
 
-    private final pj a(int param0, dg param1, String param2) {
-        pj var4 = null;
+    private final InteractiveWidget a(int param0, dg param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        pj stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -222,7 +222,7 @@ final class nf extends ld implements ka {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new pj(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_w = (j) ((Object) new gh());
           var5 = -6 + this.field_x;
           this.field_x = this.field_x + param0;

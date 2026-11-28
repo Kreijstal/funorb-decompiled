@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class ui extends g implements qh {
+final class ui extends g implements WidgetActivationListener {
     static String field_K;
     private int[] field_G;
     private af field_E;
-    private hl[] field_I;
+    private InteractiveWidget[] field_I;
     private BitmapFont field_J;
     static byte[][][] field_H;
     private String field_L;
@@ -19,11 +19,11 @@ final class ui extends g implements qh {
         this.field_J.drawParagraph(this.field_L, this.field_o + param0 + 14, 10 + param1 + this.field_i, this.field_h - 28, this.field_q, 16777215, -1, 0, 0, this.field_J.field_s);
     }
 
-    final hl a(pl param0, boolean param1, String param2) {
-        hl var4 = null;
+    final InteractiveWidget a(pl param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hl stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -31,7 +31,7 @@ final class ui extends g implements qh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hl(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           var4.field_v = (ci) ((Object) new ki());
           var5 = -2 + this.field_q;
           this.a(this.field_q + 34, 0, this.field_h, 0, param1);
@@ -132,8 +132,8 @@ final class ui extends g implements qh {
         if (this.field_D >= param0) {
           return;
         }
-        hl[] var7 = new hl[param0];
-        hl[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         if (param1 >= -26) {
           return;
         }
@@ -163,7 +163,7 @@ final class ui extends g implements qh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

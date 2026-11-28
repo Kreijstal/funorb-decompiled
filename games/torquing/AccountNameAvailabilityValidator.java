@@ -74,7 +74,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void e(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 >= -38) {
           AccountNameAvailabilityValidator.a((byte) 36, 103);
@@ -255,7 +255,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
                     }
                   }
                   if (var21 != null &&
-                    SpriteBase.a(var21, -17310)) {
+                    SpriteBase.matchesCurrentDisplayName(var21, -17310)) {
                     var8[1][var13] = re.field_e;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

@@ -280,8 +280,8 @@ final class dl extends dg {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_y instanceof ig) ||
-            ((ig) (this.field_y)).field_E) &&
+          if ((!(this.field_y instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_y)).field_E) &&
             1 == this.field_o) {
             var5_int = -this.field_J + (ni.field_e - param2);
             var6 = -this.field_H + KeyHandler.field_a - param0;

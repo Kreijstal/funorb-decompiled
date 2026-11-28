@@ -102,29 +102,29 @@ final class GameplayControls {
             SoftwareRaster.saveClip(MixedSupport056.integerArrayState0064);
             if (null != rgbSpriteArrayArgument3[0]) {
               SoftwareRaster.intersectClip(integerArgument6, integerArgument5, integerLocal21, integerLocal23);
-              rgbSpriteArrayArgument3[0].performAction0278(integerArgument6, integerArgument5);
+              rgbSpriteArrayArgument3[0].draw(integerArgument6, integerArgument5);
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[2]) {
               SoftwareRaster.intersectClip(integerLocal22, integerArgument5, integerLocal15, integerLocal23);
-              rgbSpriteArrayArgument3[2].performAction0278(integerLocal18, integerArgument5);
+              rgbSpriteArrayArgument3[2].draw(integerLocal18, integerArgument5);
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[6]) {
               SoftwareRaster.intersectClip(integerArgument6, integerLocal24, integerLocal21, integerLocal16);
-              rgbSpriteArrayArgument3[6].performAction0278(integerArgument6, integerLocal20);
+              rgbSpriteArrayArgument3[6].draw(integerArgument6, integerLocal20);
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (rgbSpriteArrayArgument3[8] != null) {
               SoftwareRaster.intersectClip(integerLocal22, integerLocal24, integerLocal15, integerLocal16);
-              rgbSpriteArrayArgument3[8].performAction0278(integerLocal18, integerLocal20);
+              rgbSpriteArrayArgument3[8].draw(integerLocal18, integerLocal20);
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
             if (null != rgbSpriteArrayArgument3[1] &&
               rgbSpriteArrayArgument3[1].integerState0254 != 0) {
               SoftwareRaster.intersectClip(integerLocal21, integerArgument5, integerLocal22, integerLocal23);
               for (integerLocal25 = integerLocal17; integerLocal25 < integerLocal18; integerLocal25 = integerLocal25 + rgbSpriteArrayArgument3[1].integerState0254) {
-                rgbSpriteArrayArgument3[1].performAction0278(integerLocal25, integerArgument5);
+                rgbSpriteArrayArgument3[1].draw(integerLocal25, integerArgument5);
               }
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
@@ -132,7 +132,7 @@ final class GameplayControls {
               rgbSpriteArrayArgument3[7].integerState0254 != 0) {
               SoftwareRaster.intersectClip(integerLocal21, integerLocal24, integerLocal22, integerLocal16);
               for (integerLocal27 = integerLocal17; integerLocal27 < integerLocal18; integerLocal27 = integerLocal27 + rgbSpriteArrayArgument3[7].integerState0254) {
-                rgbSpriteArrayArgument3[7].performAction0278(integerLocal27, integerLocal20);
+                rgbSpriteArrayArgument3[7].draw(integerLocal27, integerLocal20);
               }
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
@@ -140,7 +140,7 @@ final class GameplayControls {
               rgbSpriteArrayArgument3[3].integerState0260 != 0) {
               SoftwareRaster.intersectClip(integerArgument6, integerLocal23, integerLocal21, integerLocal24);
               for (integerLocal28 = integerLocal19; integerLocal20 > integerLocal28; integerLocal28 = integerLocal28 + rgbSpriteArrayArgument3[3].integerState0260) {
-                rgbSpriteArrayArgument3[3].performAction0278(integerArgument6, integerLocal28);
+                rgbSpriteArrayArgument3[3].draw(integerArgument6, integerLocal28);
               }
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
@@ -148,7 +148,7 @@ final class GameplayControls {
               rgbSpriteArrayArgument3[5].integerState0260 != 0) {
               SoftwareRaster.intersectClip(integerLocal22, integerLocal23, integerLocal15, integerLocal24);
               for (integerLocal29 = integerLocal19; integerLocal29 < integerLocal20; integerLocal29 = integerLocal29 + rgbSpriteArrayArgument3[5].integerState0260) {
-                rgbSpriteArrayArgument3[5].performAction0278(integerLocal18, integerLocal29);
+                rgbSpriteArrayArgument3[5].draw(integerLocal18, integerLocal29);
               }
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
             }
@@ -160,7 +160,7 @@ final class GameplayControls {
               SoftwareRaster.intersectClip(integerLocal21, integerLocal23, integerLocal22, integerLocal24);
               for (integerLocal30 = integerLocal19; integerLocal30 < integerLocal20; integerLocal30 = integerLocal30 + rgbSpriteArrayArgument3[4].integerState0260) {
                 for (integerLocal1 = integerLocal17; integerLocal1 < integerLocal18; integerLocal1 = integerLocal1 + rgbSpriteArrayArgument3[4].integerState0254) {
-                  rgbSpriteArrayArgument3[4].performAction0278(integerLocal1, integerLocal30);
+                  rgbSpriteArrayArgument3[4].draw(integerLocal1, integerLocal30);
                 }
               }
               SoftwareRaster.restoreClip(MixedSupport056.integerArrayState0064);
@@ -211,14 +211,14 @@ final class GameplayControls {
             }
           }
         }
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].performAction0280(-45 + integerArgument2, integerArgument6 + 72, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].performAction0280(integerArgument2 - 27, 72 + integerArgument6, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].performAction0280(-27 + integerArgument2, integerArgument6 + 54, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].performAction0280(36 + integerArgument2 - 45, integerArgument6 + integerLocal1 + integerLocal2, 18, -integerLocal2 + 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].performAction0280(54 + (integerArgument2 - 45), integerLocal2 + integerArgument6 + integerLocal1, 18, 18 - integerLocal2);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].performAction0280(36 + (integerArgument2 - 45), integerArgument6 + 72, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].performAction0280(integerArgument2 + 9, integerArgument6 + 72, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].performAction0280(72 + (-45 + integerArgument2), 72 + integerArgument6, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].drawScaled(-45 + integerArgument2, integerArgument6 + 72, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].drawScaled(integerArgument2 - 27, 72 + integerArgument6, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].drawScaled(-27 + integerArgument2, integerArgument6 + 54, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][0].drawScaled(36 + integerArgument2 - 45, integerArgument6 + integerLocal1 + integerLocal2, 18, -integerLocal2 + 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].drawScaled(54 + (integerArgument2 - 45), integerLocal2 + integerArgument6 + integerLocal1, 18, 18 - integerLocal2);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].drawScaled(36 + (integerArgument2 - 45), integerArgument6 + 72, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].drawScaled(integerArgument2 + 9, integerArgument6 + 72, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument3][3].drawScaled(72 + (-45 + integerArgument2), 72 + integerArgument6, 18, 18);
     }
 
     final static void performAction1748(int integerArgument1) {
@@ -314,7 +314,7 @@ final class GameplayControls {
             mixedSupport138Local21 = DiagnosticSupport002.mixedSupport138ArrayState0001[integerLocal20];
             MixedSupport068.performAction0842(8192, integerLocal20);
             for (integerLocal3 = 0; 3 > integerLocal3; integerLocal3++) {
-              MixedSupport088.integerArrayState0171[integerLocal3] = MixedSupport088.integerArrayState0171[integerLocal3] + UiComponentPart007.integerArrayArrayState0006[integerLocal1][integerLocal3];
+              MixedSupport088.integerArrayState0171[integerLocal3] = MixedSupport088.integerArrayState0171[integerLocal3] + NameSuggestionsPanel.integerArrayArrayState0006[integerLocal1][integerLocal3];
             }
             MixedSupport094.performAction1200(true, SceneWidgetPart002.integerArrayState0049, false, MixedSupport088.integerArrayState0171, true, false, mixedSupport138Local21);
             MixedSupport129.performAction1653(mixedSupport138Local21, integerLocal31, integerLocal34, integerLocal30, false, integerLocal19, integerLocal32, integerLocal35);

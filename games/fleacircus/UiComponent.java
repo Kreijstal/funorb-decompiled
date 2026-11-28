@@ -443,7 +443,7 @@ class UiComponent extends IntrusiveNode {
         RgbSprite var4;
         int var5;
         var5 = fleas.field_A ? 1 : 0;
-        var1 = ob.field_a[0] * ij.field_H[0];
+        var1 = ob.field_a[0] * NameSuggestionsPanel.field_H[0];
         var2 = of.field_d[0];
         var3 = new int[var1];
         var4_int = 0;
@@ -455,7 +455,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        var4 = new RgbSprite(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], ij.field_H[0], ob.field_a[0], var3);
+        var4 = new RgbSprite(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], var3);
         EditableTextField.o(-28210);
         if (param0 > 75) {
           return var4;

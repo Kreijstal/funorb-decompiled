@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends dh implements el {
+final class AccountCreationResultPanel extends dh implements WidgetActivationListener {
     static ResourceArchive field_Bb;
     private boolean field_Fb;
     private AccountRegistrationPanel field_Hb;
@@ -19,7 +19,7 @@ final class AccountCreationResultPanel extends dh implements el {
         RuntimeException var4_ref = null;
         jn var5 = null;
         int var6 = 0;
-        rg var7 = null;
+        InteractiveWidget var7 = null;
         var6 = Confined.field_J ? 1 : 0;
         try {
           this.field_Fb = true;
@@ -38,7 +38,7 @@ final class AccountCreationResultPanel extends dh implements el {
             } else {
               var4 = fh.field_c;
               if (this.field_Hb != null) {
-                this.field_Hb.a((byte) -120);
+                this.field_Hb.onNameSuggestionsRefreshRequested((byte) -120);
               }
             }
           }
@@ -72,8 +72,8 @@ final class AccountCreationResultPanel extends dh implements el {
           if (param0 == -96) {
             return;
           }
-          var7 = (rg) null;
-          this.a(106, -28, -124, (rg) null, -89);
+          var7 = (InteractiveWidget) null;
+          this.onWidgetActivated(106, -28, -124, (InteractiveWidget) null, -89);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -89,7 +89,7 @@ final class AccountCreationResultPanel extends dh implements el {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         if (param0 < 68) {
           this.field_Fb = false;
         }
@@ -107,7 +107,7 @@ final class AccountCreationResultPanel extends dh implements el {
 
     final boolean l(int param0) {
         AccountServiceResult var2;
-        rg var3;
+        InteractiveWidget var3;
         AccountServiceResult var2Lifetime1;
         if (param0 == -6) {
           if (!this.field_H) {
@@ -123,8 +123,8 @@ final class AccountCreationResultPanel extends dh implements el {
           this.showAccountCreationResult((byte) -96, false, var2);
           return super.l(-6);
         }
-        var3 = (rg) null;
-        this.a(-51, -9, 28, (rg) null, -54);
+        var3 = (InteractiveWidget) null;
+        this.onWidgetActivated(-51, -9, 28, (InteractiveWidget) null, -54);
         if (!this.field_H) {
           return super.l(-6);
         }

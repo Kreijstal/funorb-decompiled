@@ -146,7 +146,7 @@ abstract class TunnelEntity extends DualLinkNode {
             TunnelEntity.b((int)qn.field_v.attenuateBrightnessToDepth((double)param9, param3 ^ 44, this.field_D) >> 2, var23);
           }
           SoftwareRasterizer.setClip(sk.field_u, sk.field_j, sk.field_h, sk.field_G);
-          fd.field_e.a(0, 0, -(param9 >> 1) + 256);
+          fd.field_e.drawWithOpacity(0, 0, -(param9 >> 1) + 256);
           SoftwareRasterizer.field_h = fd.field_e.field_z;
           SoftwareRasterizer.fillRectangle(0, 0, 640, 376, 0);
           SoftwareRasterizer.field_h = var14;
@@ -1009,7 +1009,7 @@ abstract class TunnelEntity extends DualLinkNode {
             } else {
               stackIn_7_5 = var23;
             }
-            ((RgbSprite) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+            ((RgbSprite) (Object) stackIn_6_0).drawScaledWithIntensity(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

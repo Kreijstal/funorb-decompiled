@@ -90,7 +90,7 @@ final class jj extends kj {
           de.a(-128, var5);
           this.field_y.a(0, param1, param2, 0);
           ValidatedTextField.g((byte) -105);
-          var5.a(this.field_s + param3, param0 + this.field_n, this.field_A);
+          var5.drawWithOpacity(this.field_s + param3, param0 + this.field_n, this.field_A);
           return;
         }
         this.field_y.a(this.field_n + param0, param1, 1048575, this.field_s + param3);

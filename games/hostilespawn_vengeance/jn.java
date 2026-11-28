@@ -51,7 +51,7 @@ final class jn extends fc {
             sb.a(var8, -125);
             this.field_A.a(0, 0, (byte) 60, param3);
             eh.b(false);
-            var8.b(this.field_v + param1, param0 + this.field_m, this.field_D);
+            var8.drawWithOpacity(this.field_v + param1, param0 + this.field_m, this.field_D);
             return;
           }
           this.field_A.a(param0 + this.field_m, param1 + this.field_v, (byte) 110, param3);
@@ -65,7 +65,7 @@ final class jn extends fc {
           sb.a(var9, -125);
           this.field_A.a(0, 0, (byte) 60, param3);
           eh.b(false);
-          var9.b(this.field_v + param1, param0 + this.field_m, this.field_D);
+          var9.drawWithOpacity(this.field_v + param1, param0 + this.field_m, this.field_D);
           return;
         }
         this.field_A.a(param0 + this.field_m, param1 + this.field_v, (byte) 110, param3);
@@ -115,7 +115,7 @@ final class jn extends fc {
             var5 = var9;
             var6 = param4;
             var7 = param3;
-            var9[var6] = var7 + PcmOutputWorker.a(8355711, var9[var6] >> 1);
+            var9[var6] = var7 + PcmOutputWorker.bitwiseAnd(8355711, var9[var6] >> 1);
             param4++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -193,11 +193,11 @@ final class ob extends ok {
           var4 = var2.field_v;
           ie.a(99);
           dm.field_g = new RgbSprite(var3, 3 * var4 / 4);
-          dm.field_g.e();
-          var2.c(0, 0);
+          dm.field_g.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           PlayerDungeonProfile.field_C = new RgbSprite(var3, -dm.field_g.field_v + var4);
-          PlayerDungeonProfile.field_C.e();
-          var2.c(0, -dm.field_g.field_v);
+          PlayerDungeonProfile.field_C.bindAsRenderTarget();
+          var2.drawOpaque(0, -dm.field_g.field_v);
           PlayerDungeonProfile.field_C.field_A = dm.field_g.field_v;
           ti.c(true);
         } catch (RuntimeException runtimeException) {

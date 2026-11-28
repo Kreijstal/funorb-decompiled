@@ -142,14 +142,14 @@ final class vb extends pn implements Cloneable {
     final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = -78 % ((74 - param0) / 41);
         if (param1 != 24) {
-          de.field_k.b(param4, param5 - param2, 2 * param1, 3 * param2);
+          de.field_k.drawScaled(param4, param5 - param2, 2 * param1, 3 * param2);
           return;
         }
         if (24 == param2) {
-          de.field_k.a(param4, -param2 + param5);
+          de.field_k.draw(param4, -param2 + param5);
           return;
         }
-        de.field_k.b(param4, param5 - param2, 2 * param1, 3 * param2);
+        de.field_k.drawScaled(param4, param5 - param2, 2 * param1, 3 * param2);
     }
 
     final PuzzleTile a(int param0, byte param1, int param2) {

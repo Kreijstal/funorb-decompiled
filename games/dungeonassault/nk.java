@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nk extends hf implements vg {
+class nk extends hf implements WidgetActivationListener {
     private uc field_Bb;
     static String field_Lb;
     private boolean field_Mb;
@@ -178,7 +178,7 @@ class nk extends hf implements vg {
         }
     }
 
-    public void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

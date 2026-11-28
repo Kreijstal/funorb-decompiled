@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends WidgetContainer implements ka {
-    private pj field_G;
+final class ig extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_G;
     static int[] field_H;
-    private pj field_E;
+    private InteractiveWidget field_E;
     static int[] field_D;
-    private pj field_F;
+    private InteractiveWidget field_F;
 
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = param2 + this.field_m;
         int var6 = this.field_j + param0;
-        ua.field_G.drawParagraph(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, ua.field_G.field_F);
+        NameSuggestionsPanel.field_G.drawParagraph(CrossfadingMidiPcmStream.field_z, 20 + var5, 20 + var6, -40 + this.field_t, -50 + this.field_x, 16777215, -1, 1, param3, NameSuggestionsPanel.field_G.field_F);
         super.a(param0, param1, param2, 0);
     }
 
@@ -28,9 +28,9 @@ final class ig extends WidgetContainer implements ka {
 
     public ig() {
         super(0, 0, 476, 225, (j) null);
-        this.field_E = new pj(DelegatingCanvas.field_g, (dg) null);
-        this.field_F = new pj(MidiPcmStream.field_F, (dg) null);
-        this.field_G = new pj(pf.field_c, (dg) null);
+        this.field_E = new InteractiveWidget(DelegatingCanvas.field_g, (dg) null);
+        this.field_F = new InteractiveWidget(MidiPcmStream.field_F, (dg) null);
+        this.field_G = new InteractiveWidget(pf.field_c, (dg) null);
         gh var1 = new gh();
         this.field_E.field_w = (j) ((Object) var1);
         this.field_F.field_w = (j) ((Object) var1);
@@ -134,7 +134,7 @@ final class ig extends WidgetContainer implements ka {
         return cj.a(-69);
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;

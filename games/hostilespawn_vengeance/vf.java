@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends ph {
+final class vf extends InteractiveWidget {
     static RgbSprite field_H;
     static String field_G;
     static String field_I;
@@ -223,9 +223,9 @@ final class vf extends ph {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void activateFromInput(int param0, boolean param1, int param2, int param3) {
         this.field_A = !this.field_A ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     public static void clearDeclaredStaticReferences(byte param0) {

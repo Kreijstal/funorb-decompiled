@@ -123,7 +123,7 @@ final class sc extends kd {
         if (param0) {
           return (nh) null;
         }
-        return nd.field_M;
+        return NameSuggestionsPanel.field_M;
     }
 
     sc(String param0, String param1) {

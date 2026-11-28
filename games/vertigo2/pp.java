@@ -133,12 +133,12 @@ final class pp extends IntrusiveNode {
         int[] var9 = SoftwareRasterizer.field_l;
         int var10 = SoftwareRasterizer.field_e;
         int var11 = SoftwareRasterizer.field_j;
-        var8.d();
+        var8.bindAsRenderTarget();
         int var12 = -9 % ((11 - param1) / 38);
         SoftwareRasterizer.fillRoundedRectangleVerticalGradient(0, 0, param3, param6, 12, param0, param7);
         SoftwareRasterizer.setRasterBuffer(var9, var10, var11);
-        var8.f(param4, param2);
-        var8.d(param4, param2, param5);
+        var8.drawMultiply(param4, param2);
+        var8.drawAdditive(param4, param2, param5);
     }
 
     final static boolean a(java.applet.Applet param0, int param1) {
@@ -164,7 +164,7 @@ final class pp extends IntrusiveNode {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWithoutArguments(param0, false, "getcookies"));
-              var4 = PcmOutputWorker.a((byte) -9, ';', var3);
+              var4 = PcmOutputWorker.splitStringOnCharacter((byte) -9, ';', var3);
               for (var5 = param1; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

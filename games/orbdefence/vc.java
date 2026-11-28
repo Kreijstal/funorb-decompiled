@@ -484,15 +484,15 @@ final class vc {
             }
             if (dh.field_bb == sk.field_E) {
               if (!param4) {
-                s.field_A = sj.a(true, param3, false, param5);
+                InteractiveWidget.field_A = sj.a(true, param3, false, param5);
               }
               if (param4 ||
                 var9 != 0) {
-                s.field_A = f.a(false, p.field_c, (String) null, 17470, param5);
+                InteractiveWidget.field_A = f.a(false, p.field_c, (String) null, 17470, param5);
               }
               uk.field_b.position = 0;
               uk.field_b.writeByte(14, -111);
-              uk.field_b.writeByte(s.field_A.a(10277).field_c, -53);
+              uk.field_b.writeByte(InteractiveWidget.field_A.a(10277).field_c, -53);
               bh.a(-1, -1);
               dh.field_bb = nh.field_c;
             }
@@ -514,7 +514,7 @@ final class vc {
               AccountRequestState.a(true, 8)) {
               tg.field_a = NetworkArchiveRequest.field_t.readLong((byte) -89);
               NetworkArchiveRequest.field_t.position = 0;
-              lg.a(3, param1, s.field_A, param4, param0);
+              lg.a(3, param1, InteractiveWidget.field_A, param4, param0);
               dh.field_bb = Bzip2State.field_m;
             }
             if (Bzip2State.field_m == dh.field_bb &&
@@ -587,8 +587,8 @@ final class vc {
                 BufferedSocket.field_j = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
                 dh.field_bb = Bzip2State.field_r;
               }
-              if (s.field_A.a(10277) != ci.field_b) {
-                if (s.field_A.a(10277) == oj.field_j) {
+              if (InteractiveWidget.field_A.a(10277) != ci.field_b) {
+                if (InteractiveWidget.field_A.a(10277) == oj.field_j) {
                   vh.field_s.a(12423, uj.b((byte) -120));
                   if (var9 != 0) {
                     mj.field_l.a(12423, uj.b((byte) -120));

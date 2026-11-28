@@ -42,12 +42,12 @@ final class BitPacketBuffer extends PacketBuffer {
             return;
           }
           if (null != SecondaryNodeDeque.field_b) {
-            SecondaryNodeDeque.field_b.field_C.a(param1, false);
+            SecondaryNodeDeque.field_b.field_C.setNameSuggestions(param1, false);
           }
           if (null == hd.field_a) {
             return;
           }
-          hd.field_a.field_F.a(param1, false);
+          hd.field_a.field_F.setNameSuggestions(param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

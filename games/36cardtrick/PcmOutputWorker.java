@@ -15,7 +15,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearStaticAssetReferences(boolean param0) {
         field_b = null;
         if (!param0) {
           byte[] var2 = (byte[]) null;
@@ -100,7 +100,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void exitFullscreenAndRestoreFocus(boolean param0) {
         if (!param0) {
           field_b = (ha[]) null;
         }

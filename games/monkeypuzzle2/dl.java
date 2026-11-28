@@ -243,11 +243,11 @@ final class dl {
           var4 = var2.field_j;
           vf.a((byte) 127);
           ki.field_H = new Sprite(var3, var4 * 3 / 4);
-          ki.field_H.e();
-          var2.a(0, 0);
+          ki.field_H.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           dj.field_b = new Sprite(var3, -ki.field_H.field_j + var4);
-          dj.field_b.e();
-          var2.a(0, -ki.field_H.field_j);
+          dj.field_b.bindAsRenderTarget();
+          var2.drawOpaque(0, -ki.field_H.field_j);
           dj.field_b.field_q = ki.field_H.field_j;
           tj.b(653);
         } catch (RuntimeException runtimeException) {

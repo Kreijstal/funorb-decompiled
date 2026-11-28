@@ -66,7 +66,7 @@ final class wi implements ml {
           var8 = hk.field_i[1];
           if (param1 instanceof ButtonWidget &&
             ((ButtonWidget) (param1)).field_u) {
-            var8.c((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
+            var8.drawAdditive((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
           }
           if (!param1.b((byte) 64)) {
             return;

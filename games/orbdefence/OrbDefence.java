@@ -511,7 +511,7 @@ public final class OrbDefence extends NetworkGameClient {
         ck.clearStaticReferences(22499);
         dm.clearStaticReferences(0);
         pj.clearDeclaredStaticReferences(-75);
-        s.resetStaticState(99);
+        InteractiveWidget.resetStaticState(99);
         kj.clearStaticReferences((byte) 81);
         ej.releaseDeclaredStaticReferences(-15640);
         sg.clearDeclaredStaticReferences((byte) 87);
@@ -544,7 +544,7 @@ public final class OrbDefence extends NetworkGameClient {
         EditableTextField.n(1);
         hl.discardDeclaredStaticReferences(0);
         dg.clearStaticReferences((byte) 120);
-        we.releaseDeclaredStaticReferences(29858);
+        NameSuggestionsPanel.releaseDeclaredStaticReferences(29858);
         te.releaseDeclaredStaticReferences(-3213);
         kk.discardDeclaredStaticReferences(79);
         of.clearStaticReferences((byte) -83);
@@ -720,7 +720,7 @@ public final class OrbDefence extends NetworkGameClient {
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 56, 16777215, 128);
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 55, 16777215, 192);
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 54, 0, 255);
-          bd.field_o[var3.field_k].d(var4 - 32, 370);
+          bd.field_o[var3.field_k].drawHalfSize(var4 - 32, 370);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4 - 1, 440 + ob.field_I.field_H, 0, 0);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, ob.field_I.field_H + 439, 0, 0);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, 440 + ob.field_I.field_H, 15610879, -1);
@@ -1053,8 +1053,8 @@ public final class OrbDefence extends NetworkGameClient {
         }
         var6Lifetime2 = ob.field_I.field_H + ob.field_I.field_B;
         ba.field_e = new RgbSprite(var6Lifetime2, var6Lifetime2);
-        ba.field_e.d();
-        jm.field_b.d(0, 0, var6Lifetime2, var6Lifetime2);
+        ba.field_e.bindAsRenderTarget();
+        jm.field_b.drawDownscaledAreaAveraged(0, 0, var6Lifetime2, var6Lifetime2);
         jm.field_b = null;
         BufferedSocket.field_a.a(-40);
         DualLinkNode.a(80, (byte) -38, (java.applet.Applet) (this), SpriteGeometry.field_r, 0, 255);

@@ -228,7 +228,7 @@ abstract class pc extends nf {
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param2 == null) {
-            stackIn_3_0 = cm.field_B;
+            stackIn_3_0 = NameSuggestionsPanel.field_B;
             return stackIn_3_0;
           }
           var3_int = param2.length();
@@ -278,10 +278,10 @@ abstract class pc extends nf {
               stackIn_18_0 = n.field_c;
               return stackIn_18_0;
             }
-            stackIn_13_0 = cm.field_B;
+            stackIn_13_0 = NameSuggestionsPanel.field_B;
             return stackIn_13_0;
           }
-          stackIn_8_0 = cm.field_B;
+          stackIn_8_0 = NameSuggestionsPanel.field_B;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

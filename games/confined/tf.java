@@ -59,9 +59,9 @@ final class tf {
         try {
           pn.field_a.drawCentred(he.field_b[param1], 320, param2 + 36, 16777215, -1);
           if ((1 << param1 & param3) == 0) {
-            kn.field_g.d(256, param2 + 44);
+            kn.field_g.draw(256, param2 + 44);
           } else {
-            db.field_w[param1].d(256, param2 + 44);
+            db.field_w[param1].draw(256, param2 + 44);
           }
           if ((32800 & ~param3 & 1 << param1) != 0) {
             var4 = n.field_e;
@@ -89,7 +89,7 @@ final class tf {
           }
           pn.field_a.drawString(Integer.toString(PcmOutputWorker.field_b[param1]), 500, param2 + 103, 16777215, -1);
           for (var6 = 0; eg.field_j[param1] > var6; var6++) {
-            PcmOutputWorker.field_h.d(var6 * 5 + 500, param2 + 108);
+            PcmOutputWorker.field_h.draw(var6 * 5 + 500, param2 + 108);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

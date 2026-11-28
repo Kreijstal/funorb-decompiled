@@ -89,22 +89,22 @@ final class lh {
         }
         wf.a(-123);
         if (qb.field_h >= 150) {
-          m.field_a.e(var3 + 15, 10 + var4, var5);
+          m.field_a.drawWithOpacity(var3 + 15, 10 + var4, var5);
         } else {
-          wj.field_g.a(var3, var4);
+          wj.field_g.drawHalfSize(var3, var4);
         }
         var6 = -125 + qb.field_h;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            ak.field_f.f(var3, var4, var7);
+            ak.field_f.drawAdditive(var3, var4, var7);
           } else {
             if (var6 >= 30) {
               var7 = 256 * (-var6 + 50) / 20;
-              ak.field_f.f(var3, var4, var7);
+              ak.field_f.drawAdditive(var3, var4, var7);
             } else {
-              ak.field_f.f(var3, var4, 256);
+              ak.field_f.drawAdditive(var3, var4, 256);
             }
           }
         }
@@ -114,7 +114,7 @@ final class lh {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          ai.field_g.e(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+          ai.field_g.drawWithOpacity(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         if (param1 > -43) {
           lh.a((byte) 88);

@@ -16,7 +16,7 @@ class InteractiveWidget extends UiWidget {
             this.field_u != LevitateEvent.field_t) {
             if (this.a(gd.field_m, mk.field_p, 0, param0, param1) &&
               LevitateEvent.field_t == 0) {
-              this.a(-param0 + mk.field_p, this.field_u, false, -param1 + gd.field_m);
+              this.activateFromInput(-param0 + mk.field_p, this.field_u, false, -param1 + gd.field_m);
             }
             this.a(param0, mk.field_p, (byte) -101, param2, gd.field_m, param1);
           }
@@ -110,12 +110,12 @@ class InteractiveWidget extends UiWidget {
         this.field_y = true;
     }
 
-    void a(int param0, int param1, boolean param2, int param3) {
+    void activateFromInput(int param0, int param1, boolean param2, int param3) {
         if (param2) {
           this.field_C = false;
           if (this.listener != null) {
             if (this.listener instanceof WidgetActionListener) {
-              ((WidgetActionListener) (this.listener)).a(param1, this, param0, (byte) 91, param3);
+              ((WidgetActionListener) (this.listener)).onWidgetActivated(param1, this, param0, (byte) 91, param3);
             }
             return;
           }
@@ -125,7 +125,7 @@ class InteractiveWidget extends UiWidget {
           return;
         }
         if (this.listener instanceof WidgetActionListener) {
-          ((WidgetActionListener) (this.listener)).a(param1, this, param0, (byte) 91, param3);
+          ((WidgetActionListener) (this.listener)).onWidgetActivated(param1, this, param0, (byte) 91, param3);
           return;
         }
     }
@@ -182,7 +182,7 @@ class InteractiveWidget extends UiWidget {
         try {
           if (this.isFocused(1023) && (84 == param1 ||
             83 == param1)) {
-            this.a(-1, 1, false, -1);
+            this.activateFromInput(-1, 1, false, -1);
             return true;
           }
           if (param0 == 10) {

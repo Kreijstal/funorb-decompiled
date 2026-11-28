@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements md, oi, rf {
+final class AccountRegistrationPanel extends WidgetContainer implements md, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_C;
-    private ig field_I;
+    private InteractiveWidget field_I;
     private ValidatedTextField field_K;
     private nd field_D;
     private rg field_M;
     static int field_F;
     private ValidatedTextField field_H;
-    ul field_O;
+    NameSuggestionsPanel field_O;
     static int field_L;
     private ValidatedTextField field_N;
     static BitmapFont field_E;
     private ValidatedTextField field_G;
     private ValidatedTextField field_B;
-    private ig field_J;
+    private InteractiveWidget field_J;
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSuggestionSelected(byte param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -30,7 +30,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         }
     }
 
-    public final void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -103,8 +103,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         return false;
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator((byte) 56))).a(false);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator((byte) 56))).invalidateCheckedName(false);
         int var2 = -120 % ((param0 - 63) / 60);
     }
 
@@ -202,7 +202,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -113) {
-            this.field_I = (ig) null;
+            this.field_I = (InteractiveWidget) null;
           }
           stackIn_3_0 = this.a(param4, param2, param5, param1, param0, 35, -2);
           return stackIn_3_0;
@@ -366,7 +366,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         try {
           var8 = new kg(20, param1, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param3);
           if (param0 != -17073) {
-            this.field_O = (ul) null;
+            this.field_O = (NameSuggestionsPanel) null;
           }
           this.b(4, var8);
           var7 = new ii(((FieldValidatorProvider) ((Object) param2)).getFieldValidator((byte) 38));
@@ -404,8 +404,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         this.field_C = new ValidatedTextField("", (lf) null, 3);
         int var1 = 1;
         this.field_D = new nd("", (lf) null, var1 != 0);
-        this.field_I = new ig(ta.field_k, (lf) null);
-        this.field_J = new ig(ProxySocketConnector.field_h, (lf) null);
+        this.field_I = new InteractiveWidget(ta.field_k, (lf) null);
+        this.field_J = new InteractiveWidget(ProxySocketConnector.field_h, (lf) null);
         this.field_N.field_x = fc.field_d;
         this.field_H.field_x = fk.field_r;
         this.field_K.field_x = ib.field_m;
@@ -459,7 +459,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, oi, 
         this.field_I.field_v = (lf) (this);
         this.b(4, this.field_I);
         this.b(4, this.field_J);
-        this.field_O = new ul((rf) (this));
+        this.field_O = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_O.b(-60 - this.field_N.field_p - this.field_N.field_w + this.field_p, 60 + this.field_N.field_w + this.field_N.field_p, 20 + this.field_N.field_k, 150, 23987);
         this.b(4, this.field_O);
         this.b(496, 0, 0, var3 - (-55 - var6), 23987);

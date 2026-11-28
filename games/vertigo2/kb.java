@@ -26,9 +26,9 @@ final class kb implements WidgetListener {
           var7 = param3.y + param4;
           h.a(var6_int, 1, var7, param3.width, param3.height);
           var8 = jn.field_b[1];
-          if (param3 instanceof d &&
-            ((d) (param3)).field_G) {
-            var8.d(var6_int + 1 + (param3.width - var8.field_x >> 1), (param3.height - var8.field_B >> 1) + (var7 + 1), 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_G) {
+            var8.drawAdditive(var6_int + 1 + (param3.width - var8.field_x >> 1), (param3.height - var8.field_B >> 1) + (var7 + 1), 256);
           }
           if (!param3.f(86)) {
             return;

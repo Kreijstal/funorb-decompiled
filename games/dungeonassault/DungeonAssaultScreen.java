@@ -159,7 +159,7 @@ abstract class DungeonAssaultScreen {
         var7 = 0;
         while (var7 < param4) {
           var8 = param3[var7];
-          var8.field_c.c(var5, var6, var8.field_a);
+          var8.field_c.drawGrayModulated(var5, var6, var8.field_a);
           var5 -= 16;
           var7++;
           if (var7 % param2 != 0) {
@@ -508,7 +508,7 @@ abstract class DungeonAssaultScreen {
         jh.a(var3);
         for (var4 = 0; var4 < 480; var4 = var4 + bf.field_d.field_v) {
           for (var5 = 0; var5 < 640; var5 = var5 + bf.field_d.field_y) {
-            bf.field_d.c(var5, var4);
+            bf.field_d.drawOpaque(var5, var4);
           }
         }
         var4Lifetime1 = 0;
@@ -780,7 +780,7 @@ abstract class DungeonAssaultScreen {
         int var14 = 0;
         int var15 = 0;
         DungeonAssaultScreen.b(param0, param1, 16, 16, 128, 64, 2, 192);
-        param5.c(param0, param1);
+        param5.drawOpaque(param0, param1);
         if (param3 > param4) {
           param3 = param4;
         }
@@ -811,7 +811,7 @@ abstract class DungeonAssaultScreen {
         int var14 = 0;
         int var15 = 0;
         DungeonAssaultScreen.b(param0 - 16, param1, 16, 16, 128, 64, 2, 192);
-        param5.c(param0 - 16, param1);
+        param5.drawOpaque(param0 - 16, param1);
         if (param3 > param4) {
           param3 = param4;
         }

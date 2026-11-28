@@ -65,7 +65,7 @@ final class nj {
         }
         if (this.field_l != null) {
           param1 -= 2;
-          this.field_l.a(486, 12 + (param1 + 4));
+          this.field_l.draw(486, 12 + (param1 + 4));
         }
         var13.a((byte) -85);
         if (this.field_i) {

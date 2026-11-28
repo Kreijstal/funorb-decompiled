@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ComponentContainer implements CallbackContract002, CallbackContract019 {
+final class DisplayNameSelectionPanel extends ComponentContainer implements NameSuggestionListener, WidgetActivationListener {
     static int integerState0122;
     static String stringState0100;
     private ValidatedTextField uiComponentPart021State0001;
@@ -10,7 +10,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
     static SceneWidget sceneWidgetState0014;
     static String stringState0102;
     private InteractiveComponent interactiveComponentState0002;
-    UiComponentPart007 uiComponentPart007State0001;
+    NameSuggestionsPanel uiComponentPart007State0001;
 
     final static boolean computeBoolean0321(byte byteArgument1) {
         if (byteArgument1 < 69) {
@@ -56,8 +56,8 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
         }
     }
 
-    public final void performAction0314(int integerArgument1) {
-        ((PlayerNameAvailabilityValidator) (this.uiComponentPart021State0001.getFieldValidator(-105))).performAction0826(true);
+    public final void onNameSuggestionsRefreshRequested(int integerArgument1) {
+        ((PlayerNameAvailabilityValidator) (this.uiComponentPart021State0001.getFieldValidator(-105))).invalidateCheckedName(true);
         if (integerArgument1 != 25) {
           UiComponent uiComponentLocal1 = (UiComponent) null;
           this.computeBoolean0182(79, 36, (UiComponent) null, 'ﾻ');
@@ -111,7 +111,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
         }
     }
 
-    public final void performAction0317(String stringArgument1, int integerArgument2) {
+    public final void onNameSuggestionSelected(String stringArgument1, int integerArgument2) {
         ValidatedTextField uiComponentPart021Local1 = null;
         String stringLocal2 = null;
         try {
@@ -255,7 +255,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
         }
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         InteractiveComponent interactiveComponentLocal2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -265,7 +265,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
         try {
           if (byteArgument1 != 67) {
             interactiveComponentLocal2 = (InteractiveComponent) null;
-            this.performAction0313((byte) 103, -75, (InteractiveComponent) null, 25, 38);
+            this.onWidgetActivated((byte) 103, -75, (InteractiveComponent) null, 25, 38);
           }
           if (this.interactiveComponentState0001 == interactiveComponentArgument3) {
             BirthDateInput.performAction1701((byte) 105);
@@ -407,7 +407,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Call
         this.interactiveComponentState0002.callbackContract006State0001 = (CallbackContract006) (this);
         this.performAction0895(this.interactiveComponentState0002, (byte) -55);
         this.performAction0895(this.interactiveComponentState0001, (byte) -55);
-        this.uiComponentPart007State0001 = new UiComponentPart007((CallbackContract002) (this));
+        this.uiComponentPart007State0001 = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.uiComponentPart007State0001.performAction0222(150, -60 - this.uiComponentPart021State0001.integerState0107 + this.integerState0107 - this.uiComponentPart021State0001.integerState0110, 60 + (this.uiComponentPart021State0001.integerState0107 + this.uiComponentPart021State0001.integerState0110), 20, -16555);
         this.performAction0895(this.uiComponentPart007State0001, (byte) -55);
         this.performAction0222(integerLocal4 + (integerLocal3 + 55), 496, 0, 0, -16555);

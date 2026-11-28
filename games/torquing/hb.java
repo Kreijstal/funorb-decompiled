@@ -61,13 +61,13 @@ final class hb extends am {
           }
           if (param4 > 0 &&
             param3 > 0) {
-            var21 = param2.c();
+            var21 = param2.copy();
             var30 = SoftwareRasterizer.field_e;
             var10 = SoftwareRasterizer.field_j;
             var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param2.e();
+            param2.bindAsRenderTarget();
             if (param1) {
               hb.clearStaticReferences(-75);
             }
@@ -94,7 +94,7 @@ final class hb extends am {
               }
               var13 = var13 + var14;
             }
-            var21.d(-param2.field_v, -param2.field_r);
+            var21.draw(-param2.field_v, -param2.field_r);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;
@@ -134,7 +134,7 @@ final class hb extends am {
         }
         wh.field_y[vg.field_o] = param1;
         vo.field_d[vg.field_o] = param4;
-        vp.field_F[vg.field_o] = param3;
+        NameSuggestionsPanel.field_F[vg.field_o] = param3;
         int var6 = param1 + param4 + param3;
         int var7 = var6 != 0 ? 1000 * param1 / var6 : 0;
         ji.field_a[vg.field_o] = var7;

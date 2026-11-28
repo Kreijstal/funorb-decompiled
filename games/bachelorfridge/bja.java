@@ -111,8 +111,8 @@ final class bja extends BoardChange {
             var16 = SoftwareRasterizer.field_e;
             for (var10 = 0; kaa.field_l.length > var10; var10++) {
               kaa.field_l[var10].normalizeCanvas();
-              kaa.field_l[var10].b();
-              var6[var10].a(0, 0, ep.field_m * 255 / 300);
+              kaa.field_l[var10].bindAsRenderTarget();
+              var6[var10].drawWithOpacity(0, 0, ep.field_m * 255 / 300);
               kaa.field_l[var10].trimTransparentBorders();
             }
             SoftwareRasterizer.setTarget(var16, var7, var8);

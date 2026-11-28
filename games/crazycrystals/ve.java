@@ -67,8 +67,8 @@ final class ve extends lb {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof pc) {
-            param4 = param4 & ((pc) (param3)).field_x;
+          if (param3 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param3)).field_x;
           }
           if (!param4) {
             stackIn_14_0 = this.field_q;

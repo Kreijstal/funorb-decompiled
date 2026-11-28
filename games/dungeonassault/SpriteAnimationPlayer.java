@@ -257,7 +257,7 @@ final class SpriteAnimationPlayer {
         }
         if (param1 != 1) {
           this.field_a = -66;
-          var8.c(param3, param0);
+          var8.drawOpaque(param3, param0);
           if (null == this.field_g) {
             return;
           }
@@ -281,7 +281,7 @@ final class SpriteAnimationPlayer {
           }
           return;
         }
-        var8.c(param3, param0);
+        var8.drawOpaque(param3, param0);
         if (null == this.field_g) {
           return;
         }

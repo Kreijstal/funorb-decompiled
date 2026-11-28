@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends mn implements ng {
+final class AccountCreationResultPanel extends mn implements WidgetActivationListener {
     private boolean field_gb;
     private boolean field_hb;
     private AccountRegistrationPanel field_ib;
@@ -15,10 +15,10 @@ final class AccountCreationResultPanel extends mn implements ng {
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         if (param0 >= -85) {
-          lg var7 = (lg) null;
-          this.a((byte) 95, (lg) null, 85, -55, 97);
+          InteractiveWidget var7 = (InteractiveWidget) null;
+          this.onWidgetActivated((byte) 95, (InteractiveWidget) null, 85, -55, 97);
         }
         if (this.field_gb) {
           ea.a(false, (byte) 126, true);
@@ -96,7 +96,7 @@ final class AccountCreationResultPanel extends mn implements ng {
             if (null != param1.suggestions) {
               var4 = s.field_u;
               if (null != this.field_ib) {
-                this.field_ib.a((byte) 121);
+                this.field_ib.onNameSuggestionsRefreshRequested((byte) 121);
               }
             } else {
               var4 = param1.message;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tj extends g implements qh {
+final class tj extends g implements WidgetActivationListener {
     static String field_H;
-    private hl field_E;
+    private InteractiveWidget field_E;
     static String field_D;
     static AccountRequestState field_F;
-    private hl field_G;
-    private hl field_I;
+    private InteractiveWidget field_G;
+    private InteractiveWidget field_I;
     static String field_J;
     static boolean field_K;
 
@@ -64,9 +64,9 @@ final class tj extends g implements qh {
 
     public tj() {
         super(0, 0, 476, 225, (ci) null);
-        this.field_E = new hl(mg.field_K, (pl) null);
-        this.field_I = new hl(dl.field_j, (pl) null);
-        this.field_G = new hl(oa.field_b, (pl) null);
+        this.field_E = new InteractiveWidget(mg.field_K, (pl) null);
+        this.field_I = new InteractiveWidget(dl.field_j, (pl) null);
+        this.field_G = new InteractiveWidget(oa.field_b, (pl) null);
         ki var1 = new ki();
         this.field_E.field_v = (ci) ((Object) var1);
         this.field_I.field_v = (ci) ((Object) var1);
@@ -144,7 +144,7 @@ final class tj extends g implements qh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;

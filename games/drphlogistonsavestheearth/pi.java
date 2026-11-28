@@ -32,12 +32,12 @@ final class pi extends si {
             field_W = (String) null;
           }
           if (null != MidiPcmStream.field_I) {
-            MidiPcmStream.field_I.field_V.a(2, param1);
+            MidiPcmStream.field_I.field_V.setNameSuggestions(2, param1);
           }
           if (null == dd.field_g) {
             return;
           }
-          dd.field_g.field_O.a(2, param1);
+          dd.field_g.field_O.setNameSuggestions(2, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,8 +216,8 @@ final class pi extends si {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_z instanceof hf) ||
-            ((hf) (this.field_z)).field_E) &&
+          if ((!(this.field_z instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_z)).field_E) &&
             this.field_y == 1) {
             var5_int = -param1 + (-this.field_L + ck.field_c);
             var6 = ob.field_g - this.field_U - param2;

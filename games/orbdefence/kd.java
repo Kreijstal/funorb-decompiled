@@ -142,13 +142,13 @@ final class kd {
                   this.field_o[var9] != 3 &&
                   !param3) {
                   if (192 < this.field_g[var9]) {
-                    mf.field_b[27].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                    mf.field_b[27].drawScaled(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                   } else {
                     if (this.field_j[var9] < mf.field_b.length) {
-                      mf.field_b[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                      mf.field_b[this.field_j[var9]].drawScaled(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                     if (!(this.field_g[var9] <= 0)) {
-                      mf.field_b[27].d(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e, 64 + this.field_g[var9]);
+                      mf.field_b[27].drawScaledAlpha(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e, 64 + this.field_g[var9]);
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -157,7 +157,7 @@ final class kd {
                   if (this.field_o[var9] == 3 &&
                     !param3) {
                     if (!(AccountNameAvailabilityValidator.field_q.length <= this.field_j[var9])) {
-                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].drawScaled(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -165,7 +165,7 @@ final class kd {
                     if (this.field_o[var9] == 4 &&
                       param3 &&
                       this.field_j[var9] < AccountNameAvailabilityValidator.field_q.length) {
-                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].b(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
+                      AccountNameAvailabilityValidator.field_q[this.field_j[var9]].drawScaled(var13, var14, DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e);
                     }
                   }
                 }
@@ -213,7 +213,7 @@ final class kd {
                 var12Lifetime2Lifetime1Lifetime1 = -param0 + (-(DualLinkDequeIterator.field_e >> 1) + 240 + var14Lifetime1Lifetime1 * DualLinkDequeIterator.field_e);
                 var11Lifetime1Lifetime1Lifetime1 = 320 + (DualLinkDequeIterator.field_e * var13Lifetime1Lifetime1 - (DualLinkDequeIterator.field_e >> 1)) - param2;
                 var17 = (long)(100 * Bzip2State.field_b);
-                hg.field_ab.c(var11Lifetime1Lifetime1Lifetime1 - (hg.field_ab.field_s / 2 - 4), var12Lifetime2Lifetime1Lifetime1 - 64 - (int)(8.0 + 8.0 * Math.sin((double)var14Lifetime1Lifetime1 + ((double)var13Lifetime1Lifetime1 + (double)var17 * 0.001))));
+                hg.field_ab.draw(var11Lifetime1Lifetime1Lifetime1 - (hg.field_ab.field_s / 2 - 4), var12Lifetime2Lifetime1Lifetime1 - 64 - (int)(8.0 + 8.0 * Math.sin((double)var14Lifetime1Lifetime1 + ((double)var13Lifetime1Lifetime1 + (double)var17 * 0.001))));
               }
               var9Lifetime1Lifetime1++;
             }

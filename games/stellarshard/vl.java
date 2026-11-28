@@ -223,12 +223,12 @@ final class vl {
             }
           }
           if (this.field_f == 1) {
-            param1.e();
+            param1.bindAsRenderTarget();
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
             pd.field_h.a((byte) -107);
           }
           if (this.field_f == 4) {
-            param1.e();
+            param1.bindAsRenderTarget();
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, this.field_b / 16 + 1, 255, 128 - this.field_b / 2);
             pd.field_h.a((byte) -107);
           }
@@ -236,17 +236,17 @@ final class vl {
             0 < this.field_b) {
             var6_intLifetime2 = this.field_b >> 4;
             var7Lifetime2 = 2 * this.field_b / 3 + 24;
-            pg.field_hb[var6_intLifetime2].c(-var7Lifetime2 + var3_int, var4 - var7Lifetime2, var7Lifetime2 * 2, 2 * var7Lifetime2, (255 - this.field_b) / 2);
+            pg.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2 + var3_int, var4 - var7Lifetime2, var7Lifetime2 * 2, 2 * var7Lifetime2, (255 - this.field_b) / 2);
             var7Lifetime2Lifetime1 = 24 + 2 * this.field_b / 9;
-            pg.field_hb[var6_intLifetime2].c(-var7Lifetime2Lifetime1 + var3_int, var4 - var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 * 2, 2 * var7Lifetime2Lifetime1, 255 - this.field_b);
+            pg.field_hb[var6_intLifetime2].drawScaledAdditive(-var7Lifetime2Lifetime1 + var3_int, var4 - var7Lifetime2Lifetime1, var7Lifetime2Lifetime1 * 2, 2 * var7Lifetime2Lifetime1, 255 - this.field_b);
           }
           if (this.field_f == 6 &&
             this.field_b > 0) {
             var6_intLifetime3 = this.field_b >> 4;
             var7Lifetime3 = 12 + this.field_b / 3;
-            pg.field_hb[var6_intLifetime3].c(var3_int - var7Lifetime3, var4 - var7Lifetime3, 2 * var7Lifetime3, var7Lifetime3 * 2, (255 - this.field_b) / 2);
+            pg.field_hb[var6_intLifetime3].drawScaledAdditive(var3_int - var7Lifetime3, var4 - var7Lifetime3, 2 * var7Lifetime3, var7Lifetime3 * 2, (255 - this.field_b) / 2);
             var7Lifetime3Lifetime1 = 12 + this.field_b / 9;
-            pg.field_hb[var6_intLifetime3].c(-var7Lifetime3Lifetime1 + var3_int, var4 - var7Lifetime3Lifetime1, var7Lifetime3Lifetime1 * 2, var7Lifetime3Lifetime1 * 2, -this.field_b + 255);
+            pg.field_hb[var6_intLifetime3].drawScaledAdditive(-var7Lifetime3Lifetime1 + var3_int, var4 - var7Lifetime3Lifetime1, var7Lifetime3Lifetime1 * 2, var7Lifetime3Lifetime1 * 2, -this.field_b + 255);
           }
           if (3 == this.field_f) {
             SoftwareRasterizer.fillCircleAlpha(var3_int, var4, 7, 0, 128);

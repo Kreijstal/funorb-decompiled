@@ -47,13 +47,13 @@ final class il {
         int var7 = SoftwareRasterizer.field_h;
         int var8 = SoftwareRasterizer.field_c;
         RgbSprite var9 = new RgbSprite(16, param2);
-        var9.e();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, param0, 16, param2, param5, param1);
         Object var10 = null;
         if (param3) {
-          var13 = var9.c();
+          var13 = var9.copy();
           var10 = var13;
-          var13.e();
+          var13.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -62,9 +62,9 @@ final class il {
         }
         Object var11 = null;
         if (param4) {
-          var14 = var9.c();
+          var14 = var9.copy();
           var11 = var14;
-          var14.e();
+          var14.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

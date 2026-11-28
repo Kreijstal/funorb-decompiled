@@ -144,16 +144,16 @@ final class cl {
 
     final static void a(int param0, int param1, byte param2, int param3, int[] param4, int param5, int param6) {
         try {
-          oj.field_O[param6] = param4;
-          oj.field_M[param6] = param3;
-          oj.field_I[param6] = param5;
-          oj.field_F[param6] = param0;
+          NameSuggestionsPanel.field_O[param6] = param4;
+          NameSuggestionsPanel.field_M[param6] = param3;
+          NameSuggestionsPanel.field_I[param6] = param5;
+          NameSuggestionsPanel.field_F[param6] = param0;
           if (param2 < 77) {
             int[] var8 = (int[]) null;
             cl.a(-33, 95, (byte) -63, -17, (int[]) null, -84, 85);
           }
-          oj.field_H[param6] = param1;
-          oj.field_Q[param6] = true;
+          NameSuggestionsPanel.field_H[param6] = param1;
+          NameSuggestionsPanel.field_Q[param6] = true;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

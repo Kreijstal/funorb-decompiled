@@ -37,9 +37,9 @@ final class dk implements ca {
           var7 = param3 + param1.field_v;
           DualLinkNode.a(param0 ^ 32, var6_int, param1.field_x, param1.field_s, var7);
           var8 = sl.field_c[1];
-          if (param1 instanceof ck &&
-            ((ck) (param1)).field_E) {
-            var8.b(var6_int + (1 + (-var8.field_E + param1.field_x >> 1)), 1 + var7 + (-var8.field_G + param1.field_s >> 1), 256);
+          if (param1 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param1)).field_E) {
+            var8.drawAdditive(var6_int + (1 + (-var8.field_E + param1.field_x >> 1)), 1 + var7 + (-var8.field_G + param1.field_s >> 1), 256);
           }
           if (!param1.a((byte) 28)) {
             return;

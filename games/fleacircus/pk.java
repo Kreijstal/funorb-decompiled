@@ -111,8 +111,8 @@ final class pk extends dk {
             this.a((byte) -72, (UiComponent) null, 106, 108, -8, 125);
           }
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_A instanceof bb) ||
-            ((bb) (this.field_A)).field_D) &&
+          if ((!(this.field_A instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_A)).field_D) &&
             this.field_v == 1) {
             var5_int = -param1 + (ag.field_f - this.field_F);
             var6 = -param0 - this.field_L + kc.field_b;

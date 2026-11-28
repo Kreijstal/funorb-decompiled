@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends fb {
+final class ki extends InteractiveWidget {
     static String field_O;
     static qk field_M;
     static ci field_P;
@@ -70,9 +70,9 @@ final class ki extends fb {
         DebouncedFieldValidator.a(stackIn_19_0, stackIn_20_1);
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void activateFromInput(int param0, boolean param1, int param2, int param3) {
         this.field_I = !this.field_I ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     public static void b(boolean param0) {

@@ -321,15 +321,15 @@ public final class Lexicominos extends nk {
           var4 = 150;
           var5_int = 100;
           var6_ref_db = new RgbSprite(var4, var5_int);
-          var6_ref_db.b();
-          PasswordValidator.field_m.b(-104, -198);
+          var6_ref_db.bindAsRenderTarget();
+          PasswordValidator.field_m.drawOpaque(-104, -198);
           var3_array[4] = new RgbSprite(var4 << 1, var5_int << 1);
-          var3_array[4].b();
-          var6_ref_db.b(0, 0);
-          var6_ref_db.g(var4, 0);
-          var6_ref_db.d();
-          var6_ref_db.b(0, var5_int);
-          var6_ref_db.g(var4, var5_int);
+          var3_array[4].bindAsRenderTarget();
+          var6_ref_db.drawOpaque(0, 0);
+          var6_ref_db.drawFlippedHorizontal(var4, 0);
+          var6_ref_db.flipVertically();
+          var6_ref_db.drawOpaque(0, var5_int);
+          var6_ref_db.drawFlippedHorizontal(var4, var5_int);
           nh.field_c = new RgbSprite[9];
           GameAppletShell.field_o = new RgbSprite[9];
           var7_int = 0;
@@ -350,11 +350,11 @@ public final class Lexicominos extends nk {
                   nh.field_c[var7_int] = null;
                 } else {
                   GameAppletShell.field_o[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
-                  GameAppletShell.field_o[var7_int].b();
-                  var3_array[var7_int].e(0, 0, 11345438);
+                  GameAppletShell.field_o[var7_int].bindAsRenderTarget();
+                  var3_array[var7_int].drawGrayModulated(0, 0, 11345438);
                   nh.field_c[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
-                  nh.field_c[var7_int].b();
-                  var3_array[var7_int].e(0, 0, 13343019);
+                  nh.field_c[var7_int].bindAsRenderTarget();
+                  var3_array[var7_int].drawGrayModulated(0, 0, 13343019);
                 }
                 var7_int++;
                 continue;
@@ -377,8 +377,8 @@ public final class Lexicominos extends nk {
                   jh.field_b[var7_int] = null;
                 } else {
                   jh.field_b[var7_int] = new RgbSprite(var3_array[var7_int].field_p, var3_array[var7_int].field_u);
-                  jh.field_b[var7_int].b();
-                  var3_array[var7_int].e(0, 0, 13343019);
+                  jh.field_b[var7_int].bindAsRenderTarget();
+                  var3_array[var7_int].drawGrayModulated(0, 0, 13343019);
                 }
                 var7_int++;
               }
@@ -387,9 +387,9 @@ public final class Lexicominos extends nk {
             break;
           }
           var7 = df.a("", "glass_case", SectorCacheStore.field_d, (byte) -54);
-          var7.e();
+          var7.normalizeCanvas();
           var8_ref_int__ = var7.field_y;
-          ef.field_d[10].e();
+          ef.field_d[10].normalizeCanvas();
           var9 = ef.field_d[10].field_y;
           var10_int = 0;
           boolean decompiledNaturalLoopExit1 = false;
@@ -411,7 +411,7 @@ public final class Lexicominos extends nk {
             break;
           }
           if (decompiledNaturalLoopExit1) {
-            ef.field_d[10].f();
+            ef.field_d[10].trimTransparentBorders();
             stackIn_150_0 = 0;
           }
           var7_int = stackIn_150_0;
@@ -431,7 +431,7 @@ public final class Lexicominos extends nk {
             stackIn_159_1 = fc.field_e.length;
             if (stackIn_159_0 < stackIn_159_1) {
               fc.field_e[var7_int] = this.a(-128, ef.field_d[var7_int]);
-              md.field_A[var7_int] = fc.field_e[var7_int].c();
+              md.field_A[var7_int] = fc.field_e[var7_int].copy();
               var8_ref_int__ = md.field_A[var7_int].field_y;
               stackIn_170_0 = var8_ref_int__;
               if (var17 == 0) {
@@ -449,7 +449,7 @@ public final class Lexicominos extends nk {
               }
             } else {
               DebouncedFieldValidator.field_b = this.a(param0 ^ -62, e.field_u);
-              fl.field_c = DebouncedFieldValidator.field_b.c();
+              fl.field_c = DebouncedFieldValidator.field_b.copy();
               stackIn_170_0 = fl.field_c.field_y;
             }
             var7_array = stackIn_170_0;
@@ -479,7 +479,7 @@ public final class Lexicominos extends nk {
                 jj.field_f = td.a("", "highlight", SectorCacheStore.field_d, 22306);
                 BitPacketBuffer.field_l = td.a("", "multipliers", SectorCacheStore.field_d, 22306);
                 ob.field_d = df.a("", "ingameleft", SectorCacheStore.field_d, (byte) -108);
-                kf.field_A = td.a("", "ingameright", SectorCacheStore.field_d, 22306);
+                InteractiveWidget.field_A = td.a("", "ingameright", SectorCacheStore.field_d, 22306);
                 wc.field_c = td.a("", "deleasy", SectorCacheStore.field_d, 22306);
                 ij.field_n[0] = df.a("", "mmleft", SectorCacheStore.field_d, (byte) -53);
                 ij.field_n[2] = df.a("", "pauseleft", SectorCacheStore.field_d, (byte) -97);
@@ -497,9 +497,9 @@ public final class Lexicominos extends nk {
                 break;
               }
               fg.field_e[var7_int] = new RgbSprite(32, 32);
-              fg.field_e[var7_int].b();
-              ef.field_d[var7_int].b(0, 0, 32, 32);
-              fg.field_e[var7_int].f();
+              fg.field_e[var7_int].bindAsRenderTarget();
+              ef.field_d[var7_int].drawDownscaledAreaAveraged(0, 0, 32, 32);
+              fg.field_e[var7_int].trimTransparentBorders();
               var7_int++;
             } while (var17 == 0);
             var7_array2 = td.a("", "mmoutlined", SectorCacheStore.field_d, 22306);
@@ -510,8 +510,8 @@ public final class Lexicominos extends nk {
               stackIn_189_0 = ~var8Lifetime1;
               stackIn_189_1 = ~var7_array2.length;
               if (stackIn_189_0 > stackIn_189_1) {
-                gg.field_a[var8Lifetime1] = var7_array2[var8Lifetime1].c();
-                ej.field_b[var8Lifetime1] = var7_array2[var8Lifetime1].c();
+                gg.field_a[var8Lifetime1] = var7_array2[var8Lifetime1].copy();
+                ej.field_b[var8Lifetime1] = var7_array2[var8Lifetime1].copy();
                 var9 = var7_array2[var8Lifetime1].field_y;
                 var10 = gg.field_a[var8Lifetime1].field_y;
                 var11 = ej.field_b[var8Lifetime1].field_y;
@@ -528,7 +528,7 @@ public final class Lexicominos extends nk {
                     }
                     var12--;
                   }
-                  gg.field_a[var8Lifetime1].f();
+                  gg.field_a[var8Lifetime1].trimTransparentBorders();
                   var8Lifetime1++;
                   continue;
                 }
@@ -543,8 +543,8 @@ public final class Lexicominos extends nk {
                 stackIn_205_0 = ~var7_array2.length;
                 stackIn_205_1 = ~var8Lifetime1;
                 if (stackIn_205_0 < stackIn_205_1) {
-                  hi.field_b[var8Lifetime1] = var7_array2[var8Lifetime1].c();
-                  NetworkArchiveRequest.field_z[var8Lifetime1] = var7_array2[var8Lifetime1].c();
+                  hi.field_b[var8Lifetime1] = var7_array2[var8Lifetime1].copy();
+                  NetworkArchiveRequest.field_z[var8Lifetime1] = var7_array2[var8Lifetime1].copy();
                   var9 = var7_array2[var8Lifetime1].field_y;
                   var10Lifetime1 = hi.field_b[var8Lifetime1].field_y;
                   var11Lifetime1 = NetworkArchiveRequest.field_z[var8Lifetime1].field_y;
@@ -561,7 +561,7 @@ public final class Lexicominos extends nk {
                       }
                       var12--;
                     }
-                    hi.field_b[var8Lifetime1].f();
+                    hi.field_b[var8Lifetime1].trimTransparentBorders();
                     var8Lifetime1++;
                     continue;
                   }
@@ -616,8 +616,8 @@ public final class Lexicominos extends nk {
           var5 = SoftwareRasterizer.field_b;
           var6 = SoftwareRasterizer.field_f;
           var7 = SoftwareRasterizer.field_a;
-          param2.b();
-          pa.field_a.b(0, 0);
+          param2.bindAsRenderTarget();
+          pa.field_a.drawOpaque(0, 0);
           if (param3 >= 0) {
             vg.field_d[param3].d(48);
           }
@@ -625,11 +625,11 @@ public final class Lexicominos extends nk {
             var8 != 0) {
             el.field_c.d(param0 ^ 22018);
           }
-          param1.b();
+          param1.bindAsRenderTarget();
           if (param0 != 22110) {
             field_G = -106;
           }
-          PasswordValidator.field_m.b(0, 0);
+          PasswordValidator.field_m.drawOpaque(0, 0);
           if (0 > param3) {
             el.field_c.b((byte) 62);
           }
@@ -1045,7 +1045,7 @@ public final class Lexicominos extends nk {
           og.clearStaticReferences((byte) 124);
           ve.resetStaticState(true);
           w.releaseDeclaredStaticReferences(false);
-          kf.clearStaticReferences(-85);
+          InteractiveWidget.clearStaticReferences(-85);
           mg.clearStaticReferences(false);
           ql.resetStaticState((byte) 42);
           al.clearStaticReferences((byte) 102);
@@ -1077,7 +1077,7 @@ public final class Lexicominos extends nk {
           EditableTextField.clearStaticReferences((byte) 93);
           re.clearDeclaredStaticReferences((byte) -27);
           md.e(344066273);
-          bb.clearStaticReferences((byte) -26);
+          NameSuggestionsPanel.clearStaticReferences((byte) -26);
           bc.clearStaticReferences(false);
           ld.clearDeclaredStaticReferences(6977);
           li.a((byte) 81);
@@ -1362,13 +1362,13 @@ public final class Lexicominos extends nk {
           if (ImageProducerRasterBuffer.field_j != -2 &&
             BitPacketBuffer.field_r != -2) {
             SoftwareRasterizer.setClip(0, 0, 640, 20);
-            cb.field_n.b(0, 0);
+            cb.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(0, 460, 640, 480);
-            cb.field_n.b(0, 0);
+            cb.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(0, 20, 24, 460);
-            cb.field_n.b(0, 0);
+            cb.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.setClip(616, 20, 640, 460);
-            cb.field_n.b(0, 0);
+            cb.field_n.drawOpaque(0, 0);
             SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameRemainder0 = true;
@@ -1383,12 +1383,12 @@ public final class Lexicominos extends nk {
               boolean decompiledSharedTail0 = !(cg.field_j > 0);
               if (!decompiledSharedTail0) {
                 this.a(param0 ^ 4498, ValidatedTextField.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
-                this.a(22110, v.field_z, bb.field_C, BitPacketBuffer.field_r);
+                this.a(22110, v.field_z, NameSuggestionsPanel.field_C, BitPacketBuffer.field_r);
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
                 this.a(22110, ValidatedTextField.field_S, jf.field_O, BitPacketBuffer.field_r);
-                this.a(22110, v.field_z, bb.field_C, ImageProducerRasterBuffer.field_j);
+                this.a(22110, v.field_z, NameSuggestionsPanel.field_C, ImageProducerRasterBuffer.field_j);
               }
               if (SpriteGeometry.field_v == 0) {
                 this.a(jf.field_O.field_y, ValidatedTextField.field_S.field_y, false);
@@ -1397,9 +1397,9 @@ public final class Lexicominos extends nk {
               if (decompiledFrameRemainder0) {
                 if (SpriteGeometry.field_v != 40) {
                   this.a(jf.field_O.field_y, v.field_z.field_y, false);
-                  this.a(SpriteGeometry.field_v, bb.field_C, (byte) 34, ValidatedTextField.field_S);
+                  this.a(SpriteGeometry.field_v, NameSuggestionsPanel.field_C, (byte) 34, ValidatedTextField.field_S);
                   if (var4 != 0) {
-                    this.a(bb.field_C.field_y, v.field_z.field_y, false);
+                    this.a(NameSuggestionsPanel.field_C.field_y, v.field_z.field_y, false);
                     this.a(22110, v.field_z, jf.field_O, 0);
                     if (SpriteGeometry.field_v > 40) {
                       stackIn_64_0 = 40;
@@ -1408,10 +1408,10 @@ public final class Lexicominos extends nk {
                     }
                     var3 = stackIn_64_0;
                     this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
-                    ib.field_a[var3].a(0, 0);
+                    ib.field_a[var3].draw(0, 0);
                   }
                 } else {
-                  this.a(bb.field_C.field_y, v.field_z.field_y, false);
+                  this.a(NameSuggestionsPanel.field_C.field_y, v.field_z.field_y, false);
                   if (var4 != 0) {
                     this.a(22110, v.field_z, jf.field_O, 0);
                     if (SpriteGeometry.field_v > 40) {
@@ -1421,7 +1421,7 @@ public final class Lexicominos extends nk {
                     }
                     var3 = stackIn_64_0;
                     this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
-                    ib.field_a[var3].a(0, 0);
+                    ib.field_a[var3].draw(0, 0);
                   }
                 }
               }
@@ -1435,7 +1435,7 @@ public final class Lexicominos extends nk {
             }
             var3 = stackIn_64_0;
             this.a(-102, GzipDecompressor.field_f[var3], v.field_z, c.field_i[var3], GameAppletShell.field_l[var3]);
-            ib.field_a[var3].a(0, 0);
+            ib.field_a[var3].draw(0, 0);
           }
           if (2 <= vb.field_i) {
             bi.field_a.drawRightAligned(Integer.toString(TextFieldValidator.field_i), 630, 25, 16711680, -1);
@@ -2049,7 +2049,7 @@ public final class Lexicominos extends nk {
           var5 = new RgbSprite(param1.field_p + 16, 16 + param1.field_u);
           var5.field_s = -8 + var3_int;
           var5.field_w = -8 + var4;
-          var5.b();
+          var5.bindAsRenderTarget();
           var6 = 0;
           var7_int = 0;
           while (true) {

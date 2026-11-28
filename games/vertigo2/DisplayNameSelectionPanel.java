@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij {
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     private ValidatedTextField field_H;
     static int field_P;
     static UiPanel field_G;
     static ej field_N;
     static int[] field_O;
-    private d field_L;
-    private d field_M;
-    oj field_K;
+    private InteractiveWidget field_L;
+    private InteractiveWidget field_M;
+    NameSuggestionsPanel field_K;
     static Sprite[] field_I;
     static java.awt.Canvas field_F;
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 == -4384) {
-          ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).h(-1);
+          ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).invalidateCheckedName(-1);
           return;
         }
         field_F = (java.awt.Canvas) null;
-        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).h(-1);
+        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).invalidateCheckedName(-1);
     }
 
     private final void submitDisplayName(int param0) {
@@ -80,8 +80,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
     final void a(byte param0, int param1, int param2, UiWidget param3) {
         try {
           if (param0 < 6) {
-            d var6 = (d) null;
-            this.a(-59, (d) null, (byte) -25, -54, -33);
+            InteractiveWidget var6 = (InteractiveWidget) null;
+            this.onWidgetActivated(-59, (InteractiveWidget) null, (byte) -25, -54, -33);
           }
           super.a((byte) 122, param1, param2, param3);
           this.field_L.field_F = this.canSubmitDisplayName(-94);
@@ -137,7 +137,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
         }
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -211,7 +211,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         boolean discarded$0 = false;
         String var4 = null;
@@ -232,8 +232,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
         this.field_H = new ValidatedTextField("", (uf) null, 12);
         va var1 = new va(bl.field_N, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(km.field_v, var1, (uf) null);
-        this.field_L = new d(bm.field_y, (uf) null);
-        this.field_M = new d(mp.field_c, (uf) null);
+        this.field_L = new InteractiveWidget(bm.field_y, (uf) null);
+        this.field_M = new InteractiveWidget(mp.field_c, (uf) null);
         this.field_H.field_q = BlastDebrisBatch.field_d;
         this.field_H.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_H));
         this.field_L.field_F = false;
@@ -253,7 +253,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements nc, ij 
         this.field_L.field_v = (uf) (this);
         this.c((byte) -31, this.field_L);
         this.c((byte) -71, this.field_M);
-        this.field_K = new oj((nc) (this));
+        this.field_K = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_K.setBounds(false, this.field_H.x + (this.field_H.width + 60), 20, 150, -60 + this.width - this.field_H.x - this.field_H.width);
         this.c((byte) 125, this.field_K);
         this.setBounds(false, 0, 0, var3 + 55 + var4, 496);

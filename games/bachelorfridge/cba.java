@@ -25,18 +25,18 @@ final class cba {
         int var6 = var5.field_h;
         int var8 = var5.field_l;
         if (var8 == 1) {
-          hh.field_b[var6].a(param2 + 5, param0 + 5, param1);
+          hh.field_b[var6].drawWithOpacity(param2 + 5, param0 + 5, param1);
           return;
         }
         if (var8 == 2) {
-          hh.field_b[var6].a(param2 + 5, param0 + 5, param1);
+          hh.field_b[var6].drawWithOpacity(param2 + 5, param0 + 5, param1);
           return;
         }
         if (var8 == 3) {
-          hh.field_b[var6].a(param2 + 5, param0 + 5, param1);
+          hh.field_b[var6].drawWithOpacity(param2 + 5, param0 + 5, param1);
           return;
         }
-        hh.field_b[var6].a(param2 + 5, param0 + 5, param1);
+        hh.field_b[var6].drawWithOpacity(param2 + 5, param0 + 5, param1);
     }
 
     static {

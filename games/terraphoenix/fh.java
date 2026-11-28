@@ -224,14 +224,14 @@ final class fh {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new hf(var4, true);
-          var14.a(0, var13.d());
-          var13.b();
+          var14.a(0, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new hf(var4, true);
-          var14Lifetime1.a(0, var13.d());
-          var13.b();
+          var14Lifetime1.a(0, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new hf(var4, true);
-          var14Lifetime2.a(0, var13.d());
-          var13.b();
+          var14Lifetime2.a(0, var13.copy());
+          var13.rotateClockwise();
           var19 = new hf(var4, true);
           var19.a(0, var13);
         } catch (RuntimeException runtimeException) {

@@ -22,7 +22,7 @@ final class nj extends TileEffect {
     }
 
     final void a(int param0, int param1, int param2) {
-        ve.field_m[-4 + this.field_h][(this.field_g >> 1) % 25].a(-18 + param2 + 64, -this.field_g + param0 - 56, 256 - (this.field_g << 2));
+        ve.field_m[-4 + this.field_h][(this.field_g >> 1) % 25].drawWithOpacity(-18 + param2 + 64, -this.field_g + param0 - 56, 256 - (this.field_g << 2));
         if (param1 != 0) {
           this.a(-102, 107, -32);
         }

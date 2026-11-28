@@ -43,7 +43,7 @@ final class pp extends rj {
           return;
         }
         if (!this.field_w) {
-          this.field_A.h(param0 + this.field_t, this.field_i + param2);
+          this.field_A.draw(param0 + this.field_t, this.field_i + param2);
           return;
         }
         int var4 = this != wi.field_ob ? this.field_p : mo.field_a;
@@ -55,52 +55,52 @@ final class pp extends rj {
         if (this.field_G) {
           if (wi.field_ob == this) {
             var7 = var5;
-            this.field_z.h(this.field_t + param0, param2 + this.field_i);
+            this.field_z.draw(this.field_t + param0, param2 + this.field_i);
           } else {
-            this.field_B.h(this.field_t + param0, param2 + this.field_i);
+            this.field_B.draw(this.field_t + param0, param2 + this.field_i);
             var7 = var6;
-            this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7);
+            this.field_z.drawWithOpacity(param0 + this.field_t, param2 + this.field_i, 4 * var7);
           }
           var8 = (int)((te.c(mo.field_a, 1, 0.015625) + 2.0) * (double)var7);
           if (0 > var8) {
             var8 = 0;
           }
-          this.field_C.b(this.field_t + param0, this.field_i + param2, var8);
+          this.field_C.drawAdditive(this.field_t + param0, this.field_i + param2, var8);
           return;
         }
         if (this == wi.field_ob) {
           if (wi.field_ob == this) {
             var7Lifetime1 = var5;
-            this.field_z.h(this.field_t + param0, param2 + this.field_i);
+            this.field_z.draw(this.field_t + param0, param2 + this.field_i);
           } else {
-            this.field_B.h(this.field_t + param0, param2 + this.field_i);
+            this.field_B.draw(this.field_t + param0, param2 + this.field_i);
             var7Lifetime1 = var6;
-            this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7Lifetime1);
+            this.field_z.drawWithOpacity(param0 + this.field_t, param2 + this.field_i, 4 * var7Lifetime1);
           }
           var8Lifetime1 = (int)((te.c(mo.field_a, 1, 0.015625) + 2.0) * (double)var7Lifetime1);
           if (0 > var8Lifetime1) {
             var8Lifetime1 = 0;
           }
-          this.field_C.b(this.field_t + param0, this.field_i + param2, var8Lifetime1);
+          this.field_C.drawAdditive(this.field_t + param0, this.field_i + param2, var8Lifetime1);
           return;
         }
         if (var6 <= 0) {
-          this.field_B.h(param0 + this.field_t, param2 + this.field_i);
+          this.field_B.draw(param0 + this.field_t, param2 + this.field_i);
           return;
         }
         if (wi.field_ob == this) {
           var7Lifetime2 = var5;
-          this.field_z.h(this.field_t + param0, param2 + this.field_i);
+          this.field_z.draw(this.field_t + param0, param2 + this.field_i);
         } else {
-          this.field_B.h(this.field_t + param0, param2 + this.field_i);
+          this.field_B.draw(this.field_t + param0, param2 + this.field_i);
           var7Lifetime2 = var6;
-          this.field_z.d(param0 + this.field_t, param2 + this.field_i, 4 * var7Lifetime2);
+          this.field_z.drawWithOpacity(param0 + this.field_t, param2 + this.field_i, 4 * var7Lifetime2);
         }
         var8Lifetime2 = (int)((te.c(mo.field_a, 1, 0.015625) + 2.0) * (double)var7Lifetime2);
         if (0 > var8Lifetime2) {
           var8Lifetime2 = 0;
         }
-        this.field_C.b(this.field_t + param0, this.field_i + param2, var8Lifetime2);
+        this.field_C.drawAdditive(this.field_t + param0, this.field_i + param2, var8Lifetime2);
     }
 
     private pp(RgbSprite param0, RgbSprite param1, RgbSprite param2, RgbSprite param3, int param4, int param5, int param6) {

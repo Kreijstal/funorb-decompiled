@@ -135,7 +135,7 @@ final class ProxySocketConnector extends SocketConnector {
         var4 = SolKnight.field_L ? 1 : 0;
         try {
           hk.a();
-          pj.field_H = 11;
+          InteractiveWidget.field_H = 11;
           ud.field_i = new int[260];
           for (var1_int = param0; var1_int < 256; var1_int++) {
             var2 = 15.0;

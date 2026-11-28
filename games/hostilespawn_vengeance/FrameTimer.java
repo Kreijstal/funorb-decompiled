@@ -259,10 +259,10 @@ abstract class FrameTimer {
                 var6 = 16728128;
               }
               if (var1_int == 0) {
-                GridPoint.field_c.e(0, 0);
+                GridPoint.field_c.draw(0, 0);
                 dn.a(var2, -112, var5, var3 - 16, var6);
               } else {
-                GridPoint.field_c.d(640 - GridPoint.field_c.field_z, 0);
+                GridPoint.field_c.drawFlippedHorizontal(640 - GridPoint.field_c.field_z, 0);
                 pf.a(var2, -16 + var3, 0, var5, var6);
               }
               if (var1_int != 0) {
@@ -275,11 +275,11 @@ abstract class FrameTimer {
               if (var7 != -1) {
                 if (var1_int == 0) {
                   var2 = var2 + (8 + qa.field_g[0].field_u);
-                  hh.field_a[var7].e(46, 5 + var3);
+                  hh.field_a[var7].draw(46, 5 + var3);
                 } else {
                   if (var1_int == 1) {
                     var2 -= 24;
-                    hh.field_a[var7].e(562, 5 + var3);
+                    hh.field_a[var7].draw(562, 5 + var3);
                   }
                 }
               }
@@ -342,7 +342,7 @@ abstract class FrameTimer {
                 }
                 SoftwareRasterizer.fillRectangle(stackIn_65_0, stackIn_65_1, stackIn_65_2, stackIn_65_3, stackIn_66_4);
               }
-              ti.field_j.e(var5Lifetime1, var6Lifetime1);
+              ti.field_j.draw(var5Lifetime1, var6Lifetime1);
               if (var1_intLifetime2 > 0 &&
                 VolumeRampingMidiPcmStream.field_ib[an.field_r[var1_intLifetime2]] <= 0) {
                 var8 = 0;
@@ -356,7 +356,7 @@ abstract class FrameTimer {
                   var8 = var8 + di.field_b[var1_intLifetime2].field_u * 2;
                 }
               } else {
-                di.field_b[var1_intLifetime2].b(var5Lifetime1 + 4, var6Lifetime1, di.field_b[var1_intLifetime2].field_z / 2, di.field_b[var1_intLifetime2].field_A / 2, 256);
+                di.field_b[var1_intLifetime2].drawScaledAdditive(var5Lifetime1 + 4, var6Lifetime1, di.field_b[var1_intLifetime2].field_z / 2, di.field_b[var1_intLifetime2].field_A / 2, 256);
               }
               if (VolumeRampingMidiPcmStream.field_cb[var1_intLifetime2]) {
                 var8Lifetime1 = 12 + var5Lifetime1;

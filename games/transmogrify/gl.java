@@ -145,7 +145,7 @@ final class gl extends fi {
         CrossfadingMidiPcmStream.a(var7, 256);
         this.field_v.a(0, 0, param2, (byte) -117);
         fi.c(true);
-        var7.e(this.field_p + param0, this.field_n + param1, this.field_A);
+        var7.drawWithOpacity(this.field_p + param0, this.field_n + param1, this.field_A);
     }
 
     final static void j(int param0) {

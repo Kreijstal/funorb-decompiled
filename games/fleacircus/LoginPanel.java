@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends gj implements TextFieldListener, da {
+final class LoginPanel extends gj implements TextFieldListener, WidgetActivationListener {
     private boolean field_K;
-    private bb field_N;
+    private InteractiveWidget field_N;
     static String field_F;
     private boolean field_P;
-    private bb field_I;
+    private InteractiveWidget field_I;
     private boolean field_M;
     private String field_O;
     private EditableTextField field_H;
-    private bb field_L;
+    private InteractiveWidget field_L;
     private EditableTextField field_J;
     static pl field_G;
 
@@ -94,7 +94,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
             this.submitLogin((byte) -32);
           }
           if (param0 != -31825) {
-            this.field_N = (bb) null;
+            this.field_N = (InteractiveWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
             }
             SoftwareRasterizer.fillRectangleAlpha(0, -4 + var3, var6.stringWidth(wa.field_f[var2.field_q]) + 64, 40, 16755200, 128);
             SoftwareRasterizer.drawRectangleOutlineAlpha(0, var3 - 4, var6.stringWidth(wa.field_f[var2.field_q]) + 64, 40, 16746496, 128);
-            il.field_d[var2.field_q].c(8, var3);
+            il.field_d[var2.field_q].drawQuarterSizeAveraged(8, var3);
             var6.drawString(wa.field_f[var2.field_q], 48, var3 + var7.field_H, 0, -1);
           }
           return;
@@ -193,7 +193,7 @@ final class LoginPanel extends gj implements TextFieldListener, da {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -252,10 +252,10 @@ final class LoginPanel extends gj implements TextFieldListener, da {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        bb stackIn_17_1 = null;
-        bb stackIn_17_2 = null;
-        bb stackIn_18_1 = null;
-        bb stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -285,11 +285,11 @@ final class LoginPanel extends gj implements TextFieldListener, da {
           this.field_H = (EditableTextField) ((Object) new ValidatedTextField(param0, (kd) (this), 100));
           this.field_J = (EditableTextField) ((Object) new ValidatedTextField("", (kd) (this), 20));
           if (this.field_P) {
-            this.field_I = new bb(uh.field_o, (kd) null);
-            this.field_L = new bb(vk.field_K, (kd) null);
+            this.field_I = new InteractiveWidget(uh.field_o, (kd) null);
+            this.field_L = new InteractiveWidget(vk.field_K, (kd) null);
             this.field_H.field_D = false;
           } else {
-            this.field_I = new bb(wi.field_h, (kd) null);
+            this.field_I = new InteractiveWidget(wi.field_h, (kd) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_K) {
@@ -301,9 +301,9 @@ final class LoginPanel extends gj implements TextFieldListener, da {
               stackIn_18_2 = null;
               stackIn_18_3 = tc.field_g;
             }
-            this.field_L = new bb(stackIn_18_3, (kd) null);
+            this.field_L = new InteractiveWidget(stackIn_18_3, (kd) null);
             if (this.field_M) {
-              this.field_N = new bb(qk.field_h, (kd) (this));
+              this.field_N = new InteractiveWidget(qk.field_h, (kd) (this));
             }
           }
           this.field_H.field_p = (ComponentLayout) ((Object) new aa(10000536));

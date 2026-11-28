@@ -339,9 +339,9 @@ class le extends cf {
             var25 = var25 + (-var18.field_r + this.field_sb);
           }
           if (this.field_db < 256) {
-            var18.b(var24_int, var25, this.field_db);
+            var18.drawWithOpacity(var24_int, var25, this.field_db);
           } else {
-            var18.e(var24_int, var25);
+            var18.draw(var24_int, var25);
           }
         }
         boolean decompiledFrameRemainder0 = true;

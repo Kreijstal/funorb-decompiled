@@ -67,12 +67,12 @@ final class ro extends kl {
               var4 = (-this.field_v.field_y + 200 >> 1) + var2;
               var5 = 192 + (-this.field_v.field_v + var3);
               if (100 <= this.field_z) {
-                this.field_q.b(var4, var5, 256);
-                this.field_v.h(var4, var5);
+                this.field_q.drawAdditive(var4, var5, 256);
+                this.field_v.draw(var4, var5);
               } else {
                 var6 = (this.field_z << 8) / 100;
-                this.field_q.b(var4, var5, var6);
-                this.field_v.d(var4, var5, var6);
+                this.field_q.drawAdditive(var4, var5, var6);
+                this.field_v.drawWithOpacity(var4, var5, var6);
               }
             }
             var4 = -49 % ((param0 - 41) / 63);
@@ -84,12 +84,12 @@ final class ro extends kl {
               var4Lifetime7 = (-this.field_v.field_y + 200 >> 1) + var2;
               var5Lifetime5 = 192 + (-this.field_v.field_v + var3);
               if (100 <= this.field_z) {
-                this.field_q.b(var4Lifetime7, var5Lifetime5, 256);
-                this.field_v.h(var4Lifetime7, var5Lifetime5);
+                this.field_q.drawAdditive(var4Lifetime7, var5Lifetime5, 256);
+                this.field_v.draw(var4Lifetime7, var5Lifetime5);
               } else {
                 var6Lifetime5 = (this.field_z << 8) / 100;
-                this.field_q.b(var4Lifetime7, var5Lifetime5, var6Lifetime5);
-                this.field_v.d(var4Lifetime7, var5Lifetime5, var6Lifetime5);
+                this.field_q.drawAdditive(var4Lifetime7, var5Lifetime5, var6Lifetime5);
+                this.field_v.drawWithOpacity(var4Lifetime7, var5Lifetime5, var6Lifetime5);
               }
             }
             var4Lifetime7 = -49 % ((param0 - 41) / 63);
@@ -107,13 +107,13 @@ final class ro extends kl {
           var5Lifetime6 = 192 + (-this.field_v.field_v + var3);
           if (100 > this.field_z) {
             var6Lifetime6 = (this.field_z << 8) / 100;
-            this.field_q.b(var4Lifetime9, var5Lifetime6, var6Lifetime6);
-            this.field_v.d(var4Lifetime9, var5Lifetime6, var6Lifetime6);
+            this.field_q.drawAdditive(var4Lifetime9, var5Lifetime6, var6Lifetime6);
+            this.field_v.drawWithOpacity(var4Lifetime9, var5Lifetime6, var6Lifetime6);
             var4Lifetime9 = -49 % ((param0 - 41) / 63);
             return;
           }
-          this.field_q.b(var4Lifetime9, var5Lifetime6, 256);
-          this.field_v.h(var4Lifetime9, var5Lifetime6);
+          this.field_q.drawAdditive(var4Lifetime9, var5Lifetime6, 256);
+          this.field_v.draw(var4Lifetime9, var5Lifetime6);
           var4Lifetime10 = -49 % ((param0 - 41) / 63);
           return;
         }
@@ -127,13 +127,13 @@ final class ro extends kl {
           var5Lifetime1 = 192 + (-this.field_v.field_v + var3);
           if (100 > this.field_z) {
             var6Lifetime1 = (this.field_z << 8) / 100;
-            this.field_q.b(var4Lifetime1Lifetime1, var5Lifetime1, var6Lifetime1);
-            this.field_v.d(var4Lifetime1Lifetime1, var5Lifetime1, var6Lifetime1);
+            this.field_q.drawAdditive(var4Lifetime1Lifetime1, var5Lifetime1, var6Lifetime1);
+            this.field_v.drawWithOpacity(var4Lifetime1Lifetime1, var5Lifetime1, var6Lifetime1);
             var4Lifetime1Lifetime1 = -49 % ((param0 - 41) / 63);
             return;
           }
-          this.field_q.b(var4Lifetime1Lifetime1, var5Lifetime1, 256);
-          this.field_v.h(var4Lifetime1Lifetime1, var5Lifetime1);
+          this.field_q.drawAdditive(var4Lifetime1Lifetime1, var5Lifetime1, 256);
+          this.field_v.draw(var4Lifetime1Lifetime1, var5Lifetime1);
           var4Lifetime1Lifetime2 = -49 % ((param0 - 41) / 63);
           return;
         }
@@ -146,13 +146,13 @@ final class ro extends kl {
           var5Lifetime2 = 192 + (-this.field_v.field_v + var3);
           if (100 > this.field_z) {
             var6Lifetime2 = (this.field_z << 8) / 100;
-            this.field_q.b(var4Lifetime2Lifetime1, var5Lifetime2, var6Lifetime2);
-            this.field_v.d(var4Lifetime2Lifetime1, var5Lifetime2, var6Lifetime2);
+            this.field_q.drawAdditive(var4Lifetime2Lifetime1, var5Lifetime2, var6Lifetime2);
+            this.field_v.drawWithOpacity(var4Lifetime2Lifetime1, var5Lifetime2, var6Lifetime2);
             var4Lifetime2Lifetime1 = -49 % ((param0 - 41) / 63);
             return;
           }
-          this.field_q.b(var4Lifetime2Lifetime1, var5Lifetime2, 256);
-          this.field_v.h(var4Lifetime2Lifetime1, var5Lifetime2);
+          this.field_q.drawAdditive(var4Lifetime2Lifetime1, var5Lifetime2, 256);
+          this.field_v.draw(var4Lifetime2Lifetime1, var5Lifetime2);
           var4Lifetime2Lifetime2 = -49 % ((param0 - 41) / 63);
           return;
         }
@@ -162,12 +162,12 @@ final class ro extends kl {
             var4Lifetime3 = (-this.field_v.field_y + 200 >> 1) + var2;
             var5Lifetime3 = 192 + (-this.field_v.field_v + var3);
             if (100 <= this.field_z) {
-              this.field_q.b(var4Lifetime3, var5Lifetime3, 256);
-              this.field_v.h(var4Lifetime3, var5Lifetime3);
+              this.field_q.drawAdditive(var4Lifetime3, var5Lifetime3, 256);
+              this.field_v.draw(var4Lifetime3, var5Lifetime3);
             } else {
               var6Lifetime3 = (this.field_z << 8) / 100;
-              this.field_q.b(var4Lifetime3, var5Lifetime3, var6Lifetime3);
-              this.field_v.d(var4Lifetime3, var5Lifetime3, var6Lifetime3);
+              this.field_q.drawAdditive(var4Lifetime3, var5Lifetime3, var6Lifetime3);
+              this.field_v.drawWithOpacity(var4Lifetime3, var5Lifetime3, var6Lifetime3);
             }
           }
           var4Lifetime3Lifetime1 = -49 % ((param0 - 41) / 63);
@@ -183,13 +183,13 @@ final class ro extends kl {
         var5Lifetime4 = 192 + (-this.field_v.field_v + var3);
         if (100 > this.field_z) {
           var6Lifetime4 = (this.field_z << 8) / 100;
-          this.field_q.b(var4Lifetime5, var5Lifetime4, var6Lifetime4);
-          this.field_v.d(var4Lifetime5, var5Lifetime4, var6Lifetime4);
+          this.field_q.drawAdditive(var4Lifetime5, var5Lifetime4, var6Lifetime4);
+          this.field_v.drawWithOpacity(var4Lifetime5, var5Lifetime4, var6Lifetime4);
           var4Lifetime5 = -49 % ((param0 - 41) / 63);
           return;
         }
-        this.field_q.b(var4Lifetime5, var5Lifetime4, 256);
-        this.field_v.h(var4Lifetime5, var5Lifetime4);
+        this.field_q.drawAdditive(var4Lifetime5, var5Lifetime4, 256);
+        this.field_v.draw(var4Lifetime5, var5Lifetime4);
         var4Lifetime6 = -49 % ((param0 - 41) / 63);
     }
 
@@ -561,7 +561,7 @@ final class ro extends kl {
           jh.a(this.field_v);
           IntrusiveNode.field_c.drawString(param0, 0, IntrusiveNode.field_c.field_H, param1, -1);
           this.field_q = rb.a(16, this.field_v, param1, (byte) 86);
-          this.field_v.d(65793);
+          this.field_v.addOutline(65793);
           jh.b();
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ro.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

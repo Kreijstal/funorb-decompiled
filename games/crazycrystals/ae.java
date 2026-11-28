@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends og implements vd {
+final class ae extends og implements WidgetActivationListener {
     static String field_D;
     static int field_F;
-    private pc field_z;
-    private pc field_B;
+    private InteractiveWidget field_z;
+    private InteractiveWidget field_B;
     static String field_G;
-    private pc field_E;
+    private InteractiveWidget field_E;
     static String field_C;
 
     public ae() {
         super(0, 0, 476, 225, (wo) null);
-        this.field_E = new pc(LaserTraceCursor.field_d, (bi) null);
-        this.field_B = new pc(ProfileDataRequest.field_i, (bi) null);
-        this.field_z = new pc(ip.field_b, (bi) null);
+        this.field_E = new InteractiveWidget(LaserTraceCursor.field_d, (bi) null);
+        this.field_B = new InteractiveWidget(ProfileDataRequest.field_i, (bi) null);
+        this.field_z = new InteractiveWidget(ip.field_b, (bi) null);
         ve var1 = new ve();
         this.field_E.field_i = (wo) ((Object) var1);
         this.field_B.field_i = (wo) ((Object) var1);
@@ -79,7 +79,7 @@ final class ae extends og implements vd {
         field_C = null;
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;

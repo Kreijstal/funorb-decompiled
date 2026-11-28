@@ -322,7 +322,7 @@ abstract class ei extends kh {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        hd.field_o.b(this.width + param0 - 90, 10 + param1);
+        hd.field_o.draw(this.width + param0 - 90, 10 + param1);
         gd.a(param1 + 35, BattleState.field_p, 5 + param0, 121, this.width - 10);
         gd.a(-22 + (this.height + param1), qb.field_f, param0, 126, this.width);
         var4Lifetime2 = this.height - 79;

@@ -74,7 +74,7 @@ final class uo extends el {
                 if (!param4) {
                   this.field_p = false;
                 }
-                bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
+                bd.field_n[var12].drawScaledAdditive(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
               }
               continue;
             }
@@ -87,7 +87,7 @@ final class uo extends el {
             if (!param4) {
               this.field_p = false;
             }
-            this.field_a.h(-30).b(var13Lifetime5, var14Lifetime5, var12Lifetime5 * 2, var12Lifetime5 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+            this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime5, var14Lifetime5, var12Lifetime5 * 2, var12Lifetime5 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           }
           SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
@@ -107,7 +107,7 @@ final class uo extends el {
                 if (!param4) {
                   this.field_p = false;
                 }
-                bd.field_n[var12Lifetime1].a(var15Lifetime1, var16Lifetime1, var14Lifetime1 >> 1, var14Lifetime1 * 3 >> 2, 256);
+                bd.field_n[var12Lifetime1].drawScaledAdditive(var15Lifetime1, var16Lifetime1, var14Lifetime1 >> 1, var14Lifetime1 * 3 >> 2, 256);
               }
               continue;
             }
@@ -120,7 +120,7 @@ final class uo extends el {
             if (!param4) {
               this.field_p = false;
             }
-            this.field_a.h(-30).b(var13Lifetime1Lifetime1, var14Lifetime1Lifetime1, var12Lifetime1Lifetime1 * 2, var12Lifetime1Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+            this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime1Lifetime1, var14Lifetime1Lifetime1, var12Lifetime1Lifetime1 * 2, var12Lifetime1Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           }
           SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
@@ -137,12 +137,12 @@ final class uo extends el {
                 return;
               }
               if (param4) {
-                this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+                this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
                 SoftwareRasterizer.setClip(var8, var9, var10, var11);
                 return;
               }
               this.field_p = false;
-              this.field_a.h(-30).b(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+              this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime2, var14Lifetime2, var12Lifetime2 * 2, var12Lifetime2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
               SoftwareRasterizer.setClip(var8, var9, var10, var11);
               return;
             }
@@ -155,7 +155,7 @@ final class uo extends el {
                 if (!param4) {
                   this.field_p = false;
                 }
-                bd.field_n[var12Lifetime2].a(var15Lifetime2, var16Lifetime2, var14Lifetime2Lifetime2 >> 1, var14Lifetime2Lifetime2 * 3 >> 2, 256);
+                bd.field_n[var12Lifetime2].drawScaledAdditive(var15Lifetime2, var16Lifetime2, var14Lifetime2Lifetime2 >> 1, var14Lifetime2Lifetime2 * 3 >> 2, 256);
               }
               var12Lifetime2++;
               continue;
@@ -167,10 +167,10 @@ final class uo extends el {
           var14Lifetime2Lifetime1 = param2 + param6 - (var12Lifetime2Lifetime1 * (this.field_j + 16) >> 3);
           if (0 < 3 * var12Lifetime2Lifetime1 + var14Lifetime2Lifetime1) {
             if (param4) {
-              this.field_a.h(-30).b(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+              this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             } else {
               this.field_p = false;
-              this.field_a.h(-30).b(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+              this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime2Lifetime1, var14Lifetime2Lifetime1, var12Lifetime2Lifetime1 * 2, var12Lifetime2Lifetime1 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             }
           }
           SoftwareRasterizer.setClip(var8, var9, var10, var11);
@@ -185,10 +185,10 @@ final class uo extends el {
             var14Lifetime3 = param2 + param6 - (var12Lifetime3 * (this.field_j + 16) >> 3);
             if (0 < 3 * var12Lifetime3 + var14Lifetime3) {
               if (param4) {
-                this.field_a.h(-30).b(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+                this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
               } else {
                 this.field_p = false;
-                this.field_a.h(-30).b(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+                this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime3, var14Lifetime3, var12Lifetime3 * 2, var12Lifetime3 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
               }
             }
             SoftwareRasterizer.setClip(var8, var9, var10, var11);
@@ -203,7 +203,7 @@ final class uo extends el {
               if (!param4) {
                 this.field_p = false;
               }
-              bd.field_n[var12Lifetime3].a(var15Lifetime3, var16Lifetime3, var14Lifetime3Lifetime1 >> 1, var14Lifetime3Lifetime1 * 3 >> 2, 256);
+              bd.field_n[var12Lifetime3].drawScaledAdditive(var15Lifetime3, var16Lifetime3, var14Lifetime3Lifetime1 >> 1, var14Lifetime3Lifetime1 * 3 >> 2, 256);
             }
             var12Lifetime3++;
             continue;
@@ -218,12 +218,12 @@ final class uo extends el {
           return;
         }
         if (param4) {
-          this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+          this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           SoftwareRasterizer.setClip(var8, var9, var10, var11);
           return;
         }
         this.field_p = false;
-        this.field_a.h(-30).b(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+        this.field_a.h(-30).drawGrayModulatedScaled(var13Lifetime4, var14Lifetime4, var12Lifetime4 * 2, var12Lifetime4 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         return;
     }

@@ -44,9 +44,9 @@ final class f implements nn {
           var7 = param0 + param3.field_m;
           DisplayNameSelectionPanel.a(param3.field_x, param3.field_s, var7, var6_int, false);
           var8 = cf.field_u[1];
-          if (param3 instanceof ph &&
-            ((ph) (param3)).field_A) {
-            var8.c(var6_int + (1 + (param3.field_s - var8.field_u >> 1)), (-var8.field_r + param3.field_x >> 1) + (var7 + 1), 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_A) {
+            var8.drawAdditive(var6_int + (1 + (param3.field_s - var8.field_u >> 1)), (-var8.field_r + param3.field_x >> 1) + (var7 + 1), 256);
           }
           if (param3.g(-9015)) {
             bh.a(param3.field_x - 4, 2 + var7, (byte) 65, 2 + var6_int, param3.field_s - 4);

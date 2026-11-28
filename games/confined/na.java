@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class na extends rg {
+class na extends InteractiveWidget {
     private PrimaryNodeDeque field_R;
     static AccountRequestState field_S;
     static String field_U;
@@ -80,8 +80,8 @@ class na extends rg {
         this.a(-121, param2, param0, ((pj) ((Object) this.field_n)).a(-1870081887, (fj) (this)), param1);
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param2 - this.field_q;
         int var6 = -this.field_m + param1;
         nn var7 = this.a(param0 ^ 30071, var6, var5);

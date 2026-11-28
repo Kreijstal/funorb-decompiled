@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ha extends pc implements ql {
+class ha extends pc implements WidgetActivationListener {
     static PcmSampleStream field_Z;
     static ResourceArchive field_fb;
     private boolean field_eb;
@@ -45,7 +45,7 @@ class ha extends pc implements ql {
         }
     }
 
-    public void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;

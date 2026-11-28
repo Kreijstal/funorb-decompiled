@@ -21,7 +21,7 @@ class bd extends DualLinkNode {
                 fl.field_g = fp.field_a;
                 sb.field_F = b.field_a;
                 sm.field_e = LevelProgressUpdate.field_h;
-                nh.field_F = je.field_j;
+                NameSuggestionsPanel.field_F = je.field_j;
                 ll.a(-105, true, param1);
                 ue.field_c = true;
                 return;
@@ -41,7 +41,7 @@ class bd extends DualLinkNode {
           fl.field_g = fp.field_a;
           sb.field_F = b.field_a;
           sm.field_e = LevelProgressUpdate.field_h;
-          nh.field_F = je.field_j;
+          NameSuggestionsPanel.field_F = je.field_j;
           ll.a(-105, true, param1);
           ue.field_c = true;
           return;

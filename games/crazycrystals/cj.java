@@ -85,13 +85,13 @@ final class cj extends qf implements Cloneable {
             var8 = (param3 << 3) + (param4 << 4);
             var9Lifetime1 = 4096 * param2 / 24;
             var10Lifetime1 = (int)(Math.random() * 2048.0 - 1024.0);
-            al.field_a.a(384, 576, var7, var8, var10Lifetime1, var9Lifetime1);
+            al.field_a.drawRotatedAbout(384, 576, var7, var8, var10Lifetime1, var9Lifetime1);
           } else {
             if (param2 == 24 &&
               param3 == 24) {
-              al.field_a.a(param1, param4 - param3);
+              al.field_a.draw(param1, param4 - param3);
             } else {
-              al.field_a.b(param1, -param3 + param4, param2 * 2, 3 * param3);
+              al.field_a.drawScaled(param1, -param3 + param4, param2 * 2, 3 * param3);
             }
           }
         }

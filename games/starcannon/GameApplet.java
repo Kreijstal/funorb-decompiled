@@ -384,7 +384,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (ic.field_b == this &&
-            !kd.field_E) {
+            !NameSuggestionsPanel.field_E) {
             v.field_b = true;
             if (FrameTimer.field_b &&
               -nh.field_b + dd.correctedCurrentTimeMillis(82) > 1000L) {
@@ -429,10 +429,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           var3_ref = this;
           synchronized (var3_ref) {
-            if (kd.field_E) {
+            if (NameSuggestionsPanel.field_E) {
               return;
             }
-            kd.field_E = true;
+            NameSuggestionsPanel.field_E = true;
           }
           if (oj.field_f != null) {
             oj.field_f.destroy();
@@ -580,7 +580,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void start() {
         if (this != ic.field_b ||
-          kd.field_E) {
+          NameSuggestionsPanel.field_E) {
           return;
         }
         try {
@@ -770,7 +770,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void destroy() {
         if (ic.field_b != this ||
-          kd.field_E) {
+          NameSuggestionsPanel.field_E) {
           return;
         }
         try {
@@ -785,7 +785,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (this != ic.field_b ||
-          kd.field_E) {
+          NameSuggestionsPanel.field_E) {
           return;
         }
         try {

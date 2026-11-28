@@ -38,7 +38,7 @@ final class lg implements cg {
             }
             return;
           }
-          hg.field_S.a(LoginMenuScreen.field_P, fl.field_f, true, 0);
+          hg.field_S.a(NameSuggestionsPanel.field_P, fl.field_f, true, 0);
           hg.field_S.b(false);
           while (th.a(-109)) {
             hg.field_S.a(di.field_c, sj.field_g, 121);

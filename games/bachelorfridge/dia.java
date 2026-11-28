@@ -14,9 +14,9 @@ final class dia extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void activateFromInput(int param0, int param1, boolean param2, int param3) {
         this.field_B = !this.field_B ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     dia(String param0, WidgetListener param1, boolean param2) {

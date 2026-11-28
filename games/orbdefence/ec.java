@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ec extends ta implements ai {
+final class ec extends ta implements WidgetActivationListener {
     static int field_K;
     static String field_J;
     static int[] field_E;
@@ -12,7 +12,7 @@ final class ec extends ta implements ai {
     private String field_A;
     private int field_D;
     private int[] field_C;
-    private s[] field_B;
+    private InteractiveWidget[] field_B;
     static String field_F;
     private dh field_G;
 
@@ -23,8 +23,8 @@ final class ec extends ta implements ai {
         if (this.field_D >= param0) {
           return;
         }
-        s[] var7 = new s[param0];
-        s[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         if (param1 == 11339) {
           for (var5 = 0; this.field_D > var5; var5++) {
@@ -61,11 +61,11 @@ final class ec extends ta implements ai {
         }
     }
 
-    final s a(String param0, int param1, ag param2) {
-        s var4 = null;
+    final InteractiveWidget a(String param0, int param1, ag param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        s stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -73,7 +73,7 @@ final class ec extends ta implements ai {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new s(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           var4.field_j = (td) ((Object) new vk());
           var5 = -2 + this.field_r;
           this.a(0, 0, this.field_r - param1, (byte) -90, this.field_m);
@@ -101,7 +101,7 @@ final class ec extends ta implements ai {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var7 = 0;
         int var6_int = 0;
         int var8 = OrbDefence.field_D ? 1 : 0;
@@ -186,7 +186,7 @@ final class ec extends ta implements ai {
               return;
             }
             try {
-              s.field_y = new BufferedRandomAccessFile(ef.field_i.field_v, 64, 0);
+              InteractiveWidget.field_y = new BufferedRandomAccessFile(ef.field_i.field_v, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -344,7 +344,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (param3 != -1) {
             field_t = (int[]) null;
           }
-          eb.field_D = param2;
+          InteractiveWidget.field_D = param2;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ph.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -381,7 +381,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = kh.field_M;
             return stackIn_5_0;
           }
-          if (am.a(var5, true)) {
+          if (NameSuggestionsPanel.a(var5, true)) {
             stackIn_9_0 = a.field_a;
             return stackIn_9_0;
           }

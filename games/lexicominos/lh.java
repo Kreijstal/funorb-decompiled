@@ -16,18 +16,18 @@ final class lh extends ik {
         RuntimeException var6 = null;
         n var7 = null;
         n var9 = null;
-        kf var10 = null;
+        InteractiveWidget var10 = null;
         n var11 = null;
         n var12 = null;
         n var13 = null;
         n var14 = null;
         try {
-          if (!(param3 instanceof kf)) {
+          if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (w) (param3);
           }
-          var10 = (kf) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           DualLinkNode.a(param3.field_t + (param1 + param3.field_j), param3.field_o + param0, param3.field_t + param1, param3.field_v + (param3.field_o + param0), false);
           if (var10 != null) {
             param2 = param2 & var10.field_D;

@@ -146,14 +146,14 @@ final class dq {
           var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new se(var4, true);
-          var14.a((byte) -57, var13.c());
-          var13.f();
+          var14.a((byte) -57, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new se(var4, true);
-          var14Lifetime1.a((byte) -57, var13.c());
-          var13.f();
+          var14Lifetime1.a((byte) -57, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new se(var4, true);
-          var14Lifetime2.a((byte) -57, var13.c());
-          var13.f();
+          var14Lifetime2.a((byte) -57, var13.copy());
+          var13.rotateClockwise();
           var20 = new se(var4, true);
           var20.a((byte) -57, var13);
         } catch (RuntimeException runtimeException) {

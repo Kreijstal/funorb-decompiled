@@ -197,7 +197,7 @@ final class rb {
           boolean decompiledFrameRemainder0 = true;
           if (nk.field_b != null) {
             if (param0 >= 0) {
-              decompiledFrameRemainder0 = (ll.field_Q == lj.field_z);
+              decompiledFrameRemainder0 = (ll.field_Q == InteractiveWidget.field_z);
               if ((decompiledFrameRemainder0) && (LoginPanel.field_D.position == 0 &&
                 (10000L + FrameTimer.field_b) < lk.correctedCurrentTimeMillis(0))) {
                 LoginPanel.field_D.writeCipheredByte(false, param0);

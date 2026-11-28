@@ -134,7 +134,7 @@ final class ge extends td implements jg, ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         el var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -347,14 +347,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (gf.field_C == -1) {
-            if (!LoginMenuScreen.a(1, param0 + 35356)) {
+            if (!NameSuggestionsPanel.a(1, param0 + 35356)) {
               return false;
             }
             gf.field_C = dh.field_N.readUnsignedByte(31760);
             dh.field_N.position = 0;
           }
           if (-2 == gf.field_C) {
-            if (!LoginMenuScreen.a(2, 5929)) {
+            if (!NameSuggestionsPanel.a(2, 5929)) {
               return false;
             }
             gf.field_C = dh.field_N.readUnsignedShort(-788751192);
@@ -363,7 +363,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != -29427) {
             field_h = (PacketBuffer) null;
           }
-          stackIn_18_0 = LoginMenuScreen.a(gf.field_C, 5929);
+          stackIn_18_0 = NameSuggestionsPanel.a(gf.field_C, 5929);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

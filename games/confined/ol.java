@@ -46,7 +46,7 @@ final class ol {
         if (param1 != 30613) {
           field_b = (String) null;
         }
-        nn.field_t[param3].d(param0, param4);
+        nn.field_t[param3].draw(param0, param4);
         pn.field_a.drawRightAligned(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
     }
 

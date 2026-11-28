@@ -40,7 +40,7 @@ final class de {
         int var4 = param1 * 16;
         int var5 = 16 * param3;
         SoftwareRasterizer.setClip(var4, var5, var4 + 16, var5 + 16);
-        se.field_a[param2].f(0, 0);
+        se.field_a[param2].drawOpaque(0, 0);
         SoftwareRasterizer.restoreClip(si.field_R);
     }
 

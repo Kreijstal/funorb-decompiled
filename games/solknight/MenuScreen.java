@@ -813,7 +813,7 @@ final class MenuScreen {
           } else {
             if (ClientException.field_b >= 250) {
               Bzip2State.field_n.drawScaled(320 - 250 * Bzip2State.field_n.field_q / Bzip2State.field_n.field_r, -10, 500 * Bzip2State.field_n.field_q / Bzip2State.field_n.field_r, 500);
-              Bzip2State.field_p.d(320 - Bzip2State.field_p.field_q / 2, 3 * (480 - Bzip2State.field_p.field_r) / 5);
+              Bzip2State.field_p.draw(320 - Bzip2State.field_p.field_q / 2, 3 * (480 - Bzip2State.field_p.field_r) / 5);
               if (330 <= ClientException.field_b) {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
               }
@@ -823,7 +823,7 @@ final class MenuScreen {
         if (ClientException.field_b >= 250) {
           return;
         }
-        qd.field_f[this.field_d].d(10, 11);
+        qd.field_f[this.field_d].draw(10, 11);
         var2Lifetime1 = 224;
         var3Lifetime1 = 416;
         var4 = ah.field_i[this.field_d];
@@ -859,7 +859,7 @@ final class MenuScreen {
                 7 != this.field_d) {
                 if (8 != this.field_d) {
                   if (this.field_d == 9) {
-                    BufferedSocket.field_b.drawParagraph(ua.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
+                    BufferedSocket.field_b.drawParagraph(NameSuggestionsPanel.field_E, 30, 80, 580, 300, 0, -1, 0, 0, 0);
                   } else {
                     if (this.field_d != 5) {
                       if ((6 == this.field_d)) {
@@ -915,8 +915,8 @@ final class MenuScreen {
                       if (var8 == 1) {
                         var14 = 8;
                       }
-                      td.field_e[var14 + hg.field_y].d(83, 248 + var13 - 103);
-                      td.field_e[hg.field_y + var14].d(526, var13 + 145);
+                      td.field_e[var14 + hg.field_y].draw(83, 248 + var13 - 103);
+                      td.field_e[hg.field_y + var14].draw(526, var13 + 145);
                       BufferedSocket.field_b.drawCentred(MidiPcmStream.field_y[var8], 320, -103 + (var13 + 277), 16727871, -1);
                       BufferedSocket.field_b.drawParagraph(AccountRegistrationPanel.field_N[var8], 38, var13 + 193, 564, 480, 16777215, -1, 1, 0, 28);
                       ah.field_i[this.field_d] = var13 + var10Lifetime1Lifetime1;
@@ -1175,15 +1175,15 @@ final class MenuScreen {
           if (var11 == 0) {
             if (ob.field_l <= 0) {
               if ((1 << var7 & 28032) == 0) {
-                jc.field_b.d(36, 226);
+                jc.field_b.draw(36, 226);
               } else {
-                nb.field_a.d(36, 226);
+                nb.field_a.draw(36, 226);
               }
             } else {
-              jc.field_b.d(36, 226);
+              jc.field_b.draw(36, 226);
             }
           } else {
-            IterableNodeHashTable.field_f[var7].d(36, 226);
+            IterableNodeHashTable.field_f[var7].draw(36, 226);
           }
           var10 = var10 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s);
           var12 = new String[16];
@@ -1199,7 +1199,7 @@ final class MenuScreen {
           BufferedSocket.field_b.drawString(cf.field_b, var3Lifetime1, var10, 16777215, -1);
           var3Lifetime1 = var3Lifetime1 + BufferedSocket.field_b.stringWidth(cf.field_b);
           for (var14Lifetime1 = 0; var14Lifetime1 < fc.field_n[var7]; var14Lifetime1++) {
-            pg.field_a.d(var3Lifetime1, -BufferedSocket.field_b.field_m + var10);
+            pg.field_a.draw(var3Lifetime1, -BufferedSocket.field_b.field_m + var10);
             var3Lifetime1 = var3Lifetime1 + pg.field_a.field_p / 3;
           }
         } else {

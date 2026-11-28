@@ -165,7 +165,7 @@ final class je {
         if (field_T >= 0) {
           var2 = field_o * 32 - li.field_c;
           var3 = field_f * 32 - ClientException.field_d;
-          je.e().f(var2, var3);
+          je.e().draw(var2, var3);
         }
         if (cm.field_o == 0) {
           return;
@@ -260,7 +260,7 @@ final class je {
                   var15 = stackIn_77_0 - stackIn_78_1;
                 }
                 if (var15 >= 0) {
-                  pj.field_e[var15].f(var7, var8);
+                  pj.field_e[var15].draw(var7, var8);
                 }
                 var15Lifetime1 = -1;
                 if (var12 == 0 &&
@@ -285,7 +285,7 @@ final class je {
                   var15Lifetime1 = stackIn_92_0 - stackIn_93_1;
                 }
                 if (var15Lifetime1 >= 0) {
-                  pj.field_e[var15Lifetime1].f(var7 + 16, var8);
+                  pj.field_e[var15Lifetime1].draw(var7 + 16, var8);
                 }
                 var15Lifetime2 = -1;
                 if (var12 == 0 &&
@@ -310,7 +310,7 @@ final class je {
                   var15Lifetime2 = stackIn_107_0 - stackIn_108_1;
                 }
                 if (var15Lifetime2 >= 0) {
-                  pj.field_e[var15Lifetime2].f(var7 + 16, var8 + 16);
+                  pj.field_e[var15Lifetime2].draw(var7 + 16, var8 + 16);
                 }
                 var15Lifetime3 = -1;
                 if (var11 == 0 &&
@@ -335,7 +335,7 @@ final class je {
                   var15Lifetime3 = stackIn_122_0 - stackIn_123_1;
                 }
                 if (var15Lifetime3 >= 0) {
-                  pj.field_e[var15Lifetime3].f(var7, var8 + 16);
+                  pj.field_e[var15Lifetime3].draw(var7, var8 + 16);
                 }
                 if (var11 != 0) {
                   SoftwareRasterizer.fillRectangle(var7 - 8, var8, 8, 32, 1642509);
@@ -538,7 +538,7 @@ final class je {
         }
         var8 = 512 - li.field_c;
         var9 = -ClientException.field_d;
-        hj.field_h.f(var8, var9);
+        hj.field_h.draw(var8, var9);
         field_O.a(var5, var6, var4, var7, 17761, field_I);
         var10 = cm.field_o;
         var11 = null;
@@ -722,38 +722,38 @@ final class je {
                     var15.field_v)) {
                     if (!var15.field_E) {
                       if (!var15.field_S) {
-                        field_L[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_L[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       } else {
                         if (var15.field_r < 500) {
-                          field_c[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                          field_c[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                         } else {
                           if (var15.field_r < 750) {
-                            field_C[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                            field_C[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                           } else {
-                            field_g[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                            field_g[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                             if ((!(var15.field_r <= 950)) &&
                               ((var15.field_r % 2 == 0)) &&
                               (!(field_I[var32][var16 + 1].field_a))) {
-                              field_g[var34].a(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
+                              field_g[var34].drawGrayModulated(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
                             }
                           }
                         }
                       }
                     } else {
                       if (!var15.field_S) {
-                        field_k[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_k[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       } else {
                         if (var15.field_r < 500) {
-                          field_y[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                          field_y[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                         } else {
                           if (var15.field_r < 750) {
-                            field_n[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                            field_n[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                           } else {
-                            field_G[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                            field_G[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                             if ((!(var15.field_r <= 950)) &&
                               ((var15.field_r % 2 == 0)) &&
                               (!(field_I[var32][var16 + 1].field_a))) {
-                              field_G[var34].a(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
+                              field_G[var34].drawGrayModulated(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
                             }
                           }
                         }
@@ -765,41 +765,41 @@ final class je {
                     if (var15.field_S) {
                       if (var15.field_r >= 500) {
                         if (var15.field_r >= 750) {
-                          var41[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                          var41[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                           if (var15.field_r > 950 &&
                             var15.field_r % 2 == 0 &&
                             !field_I[var32][var16 + 1].field_a) {
-                            var41[var34].a(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
+                            var41[var34].drawGrayModulated(var8Lifetime1 + param0 + 1, var9Lifetime1 + param1 + 1, var35);
                           }
                         } else {
-                          var40[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                          var40[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                         }
                       } else {
-                        var39[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        var39[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       }
                     } else {
-                      var38[var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                      var38[var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                     }
                     if (var10 == 1) {
                       if (var32 > 0 &&
                         field_I[var32 - 1][var16].field_V && (field_I[var32 - 1][var16].field_v ||
                         field_I[var32 - 1][var16].field_E)) {
-                        field_z[0][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_z[0][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       }
                       if (var32 < 31 &&
                         field_I[var32 + 1][var16].field_V && (field_I[var32 + 1][var16].field_v ||
                         field_I[var32 + 1][var16].field_E)) {
-                        field_z[2][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_z[2][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       }
                       if (field_I[var32][var16 + 1].field_V && (field_I[var32][var16 + 1].field_v ||
                         field_I[var32][var16 + 1].field_E)) {
-                        field_z[3][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_z[3][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       }
                       if (var16 > 1 &&
                         field_I[var32][var16 - 1].field_V && (field_I[var32][var16 - 1].field_v ||
                         field_I[var32][var16 - 1].field_E ||
                         !field_I[var32][var16 - 1].field_a)) {
-                        field_z[1][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                        field_z[1][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       }
                     }
                   }
@@ -811,21 +811,21 @@ final class je {
                   }
                   var36 = var32 - 16;
                   if (var36 * var36 > 1) {
-                    field_j[cm.field_o][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                    field_j[cm.field_o][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                   }
                   var34 = 0;
                   if (var16 == (var33 + 1) / 2 - 1) {
                     var34 = var32 % 2 + 1;
                     if (var32 <= 16) {
-                      field_x[cm.field_o][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                      field_x[cm.field_o][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       if (var34 == 2) {
-                        field_x[cm.field_o][0].a(var8Lifetime1 + param0, var9Lifetime1 + param1 - 32, var35);
+                        field_x[cm.field_o][0].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1 - 32, var35);
                       }
                     } else {
                       var34 += 3;
-                      field_x[cm.field_o][var34].a(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
+                      field_x[cm.field_o][var34].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1, var35);
                       if (var34 == 5) {
-                        field_x[cm.field_o][3].a(var8Lifetime1 + param0, var9Lifetime1 + param1 - 32, var35);
+                        field_x[cm.field_o][3].drawGrayModulated(var8Lifetime1 + param0, var9Lifetime1 + param1 - 32, var35);
                       }
                     }
                   }
@@ -835,14 +835,14 @@ final class je {
                 var15.field_b) {
                 if (var15.field_U != -1) {
                   var34Lifetime1 = var15.field_U;
-                  field_w[var34Lifetime1 + var15.field_Q * 6].f(var8Lifetime1 + param0, var9Lifetime1 + param1);
+                  field_w[var34Lifetime1 + var15.field_Q * 6].draw(var8Lifetime1 + param0, var9Lifetime1 + param1);
                 }
                 if (!var15.field_a) {
                   var34Lifetime1 = 3;
                 } else {
                   var34Lifetime1 = (var32 + var16) % 3;
                 }
-                field_B[var34Lifetime1].f(var8Lifetime1 + param0, var9Lifetime1 + param1);
+                field_B[var34Lifetime1].draw(var8Lifetime1 + param0, var9Lifetime1 + param1);
               } else {
                 if (var31 != 0 &&
                   var2 != 0 &&
@@ -1105,7 +1105,7 @@ final class je {
           }
           var3 = var3 + (60 + (int)(Math.sin(field_l) * 2.0));
           for (var9Lifetime2 = -var5 - qn.field_J.field_x; var9Lifetime2 < 640; var9Lifetime2 = var9Lifetime2 + qn.field_J.field_x) {
-            qn.field_J.f(var9Lifetime2, var3);
+            qn.field_J.draw(var9Lifetime2, var3);
           }
           var3 += 30;
           var4Lifetime2 = 0;
@@ -1115,7 +1115,7 @@ final class je {
               break;
             }
             for (var10 = -(int)(field_l * 10.0 + (double)(var4Lifetime2 * 5)) - ij.field_t.field_x - var4Lifetime2 * 200; var10 < 640; var10 = var10 + ij.field_t.field_x) {
-              ij.field_t.f(var10, var9Lifetime3);
+              ij.field_t.draw(var10, var9Lifetime3);
             }
             var3 += 70;
             var4Lifetime2++;
@@ -1194,10 +1194,10 @@ final class je {
               ((Sprite) (var7)).drawHorizontalFlip(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
             }
             if (var9 != 0) {
-              var13 = ((Sprite) (var7)).e();
+              var13 = ((Sprite) (var7)).copyMirroredHorizontally();
               var7 = var13;
               var13.adjustColourChannels(40, 40, 80);
-              var13.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+              var13.draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
               if (ce.field_b % 20 < 10) {
                 var13.drawTransparentWithIntensity(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4, 160);
               }
@@ -1220,13 +1220,13 @@ final class je {
               var10 != 0) {
               ((Sprite) (var7)).b(-127, var3 + param0 / 2 - 4 + 20, 4096, 23665, var4 + param1 / 2 - 4 + 20);
             } else {
-              ((Sprite) (var7)).f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+              ((Sprite) (var7)).draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
             }
             if (var9 != 0) {
-              var12_ref = ((Sprite) (var7)).c();
+              var12_ref = ((Sprite) (var7)).copy();
               var7 = var12_ref;
               var12_ref.adjustColourChannels(40, 40, 80);
-              var12_ref.f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+              var12_ref.draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
               if (ce.field_b % 20 < 10) {
                 var12_ref.drawTransparentWithIntensity(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4, 160);
               }
@@ -1234,13 +1234,13 @@ final class je {
             if (tc.field_s > 0) {
               if (var6 == 0) {
                 if (var5 == 0) {
-                  fg.field_c[-tb.field_c].f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  fg.field_c[-tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 }
               } else {
                 if (ch.field_h == 5) {
-                  tf.field_c[tb.field_c].f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  tf.field_c[tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 } else {
-                  rd.field_b[tb.field_c].f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+                  rd.field_b[tb.field_c].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
                 }
               }
             }
@@ -1248,7 +1248,7 @@ final class je {
           if (tc.field_s > 0 &&
             (field_m & 127) < 30) {
             var11 = (field_m & 127) / 5 % 6;
-            pf.field_a[var11].f(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
+            pf.field_a[var11].draw(var3 + param0 / 2 - 4, var4 + param1 / 2 - 4);
           }
           if (var5 == 0 &&
             var10 != 0) {
@@ -1452,9 +1452,9 @@ final class je {
                 if (!field_J ||
                   !(var7Lifetime1 >= field_D - ClientException.field_d)) {
                   if (var9.field_b) {
-                    field_w[var25Lifetime1 + var9.field_Q * 6].f(var6Lifetime1 + param0, var7Lifetime1 + param1, 82);
+                    field_w[var25Lifetime1 + var9.field_Q * 6].drawWithOpacity(var6Lifetime1 + param0, var7Lifetime1 + param1, 82);
                   } else {
-                    field_w[var25Lifetime1 + var9.field_Q * 6].f(var6Lifetime1 + param0, var7Lifetime1 + param1);
+                    field_w[var25Lifetime1 + var9.field_Q * 6].draw(var6Lifetime1 + param0, var7Lifetime1 + param1);
                   }
                 }
               }
@@ -1728,8 +1728,8 @@ final class je {
                     param2.drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 1);
                     var12_ref_ea.drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 11243013);
                   } else {
-                    param2.e().drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 1);
-                    var12_ref_ea.e().drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 11243013);
+                    param2.copyMirroredHorizontally().drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 1);
+                    var12_ref_ea.copyMirroredHorizontally().drawSilhouette(var6 + param0 / 2 - 4, var7 + param1 / 2 - 4, 11243013);
                   }
                 }
                 var14++;
@@ -1749,9 +1749,9 @@ final class je {
                 var8_ref_ea = lb.field_x[tb.field_c];
               }
               if (MidiPcmStream.field_K < 0) {
-                var8_ref_ea.e().a(var6 - 4, var7 - 4, 9348351);
+                var8_ref_ea.copyMirroredHorizontally().drawGrayModulated(var6 - 4, var7 - 4, 9348351);
               } else {
-                var8_ref_ea.a(var6 - 4, var7 - 4, 9348351);
+                var8_ref_ea.drawGrayModulated(var6 - 4, var7 - 4, 9348351);
               }
             }
           }
@@ -1784,7 +1784,7 @@ final class je {
                   SoftwareRasterizer.fillCircle(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                   SoftwareRasterizer.resetClip();
                 }
-                GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+                GzipDecompressor.field_a.drawWithOpacity(var8Lifetime1, var9Lifetime1, 100);
               }
             } else {
               if (var10Lifetime1 < 950) {
@@ -1811,7 +1811,7 @@ final class je {
                   SoftwareRasterizer.fillCircle(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                   SoftwareRasterizer.resetClip();
                 }
-                GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+                GzipDecompressor.field_a.drawWithOpacity(var8Lifetime1, var9Lifetime1, 100);
               }
             }
           } else {
@@ -1839,7 +1839,7 @@ final class je {
                 SoftwareRasterizer.fillCircle(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), GzipDecompressor.field_a.field_A >> 1, var11Lifetime1);
                 SoftwareRasterizer.resetClip();
               }
-              GzipDecompressor.field_a.f(var8Lifetime1, var9Lifetime1, 100);
+              GzipDecompressor.field_a.drawWithOpacity(var8Lifetime1, var9Lifetime1, 100);
               SoftwareRasterizer.drawCircleOutline(var8Lifetime1 + (GzipDecompressor.field_a.field_x >> 1), var9Lifetime1 + (GzipDecompressor.field_a.field_A >> 1), (GzipDecompressor.field_a.field_A >> 1) + 2, 16774927);
             }
           }
@@ -1851,20 +1851,20 @@ final class je {
               var14Lifetime1 = var11Lifetime2 * 16 / -300;
               var15Lifetime1 = kc.field_a.field_C;
               var16 = var15Lifetime1 - var14Lifetime1;
-              kc.field_a.g();
+              kc.field_a.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               SoftwareRasterizer.setClip(0, var14Lifetime1, kc.field_a.field_y, var15Lifetime1);
               SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 8, var15Lifetime1, 16722703, 1562103);
               SoftwareRasterizer.resetClip();
               if (var16 < var15Lifetime1 / 2 &&
                 ce.field_b % 10 < 5) {
-                rf.field_d.a(0, 0, 16711680);
+                rf.field_d.drawGrayModulated(0, 0, 16711680);
               } else {
-                rf.field_d.f(0, 0);
+                rf.field_d.draw(0, 0);
               }
               ResourceArchive.field_e.setAsRasterTarget((byte) -45);
               SoftwareRasterizer.setClip(var12Lifetime1, var13Lifetime1, var12Lifetime1 + pn.field_c.field_a, var13Lifetime1 + pn.field_c.field_f);
-              kc.field_a.a(pn.field_c, var12Lifetime1, var13Lifetime1);
+              kc.field_a.drawMasked(pn.field_c, var12Lifetime1, var13Lifetime1);
               SoftwareRasterizer.resetClip();
             }
           }

@@ -12,11 +12,11 @@ final class ip extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var4 = this.field_g * (int)((double)param0 / 30.0);
         if (param1 == 0) {
-          HuffmanCodec.field_a.a((-this.field_g + 30 << 1) + param2, var4, 128 - (30 - this.field_g << 1), 64);
+          HuffmanCodec.field_a.drawScaled((-this.field_g + 30 << 1) + param2, var4, 128 - (30 - this.field_g << 1), 64);
           return;
         }
         field_f = (Sprite[]) null;
-        HuffmanCodec.field_a.a((-this.field_g + 30 << 1) + param2, var4, 128 - (30 - this.field_g << 1), 64);
+        HuffmanCodec.field_a.drawScaled((-this.field_g + 30 << 1) + param2, var4, 128 - (30 - this.field_g << 1), 64);
     }
 
     final void a(int param0, boolean param1, int param2) {

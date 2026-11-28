@@ -46,7 +46,7 @@ final class kc {
               fj.field_f.drawParagraph(fl.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.e(245, 199);
+            var6.draw(245, 199);
           }
           if (param0 < 18) {
             return;

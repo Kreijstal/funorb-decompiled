@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class cj extends ph {
+class cj extends InteractiveWidget {
     private IntrusiveDeque field_G;
     static String field_K;
     private String[] field_H;
@@ -411,8 +411,8 @@ class cj extends ph {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, boolean param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param2 - this.field_v;
         int var6 = param0 - this.field_m;
         mm var7 = this.a(-2, var6, var5);

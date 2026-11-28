@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends ta implements ff, ai {
+final class ob extends ta implements ff, WidgetActivationListener {
     private AccountCreationResultPanel field_B;
     static String field_E;
     static int field_K;
@@ -12,9 +12,9 @@ final class ob extends ta implements ff, ai {
     static int field_H;
     static String field_C;
     private te field_A;
-    private s field_G;
+    private InteractiveWidget field_G;
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         try {
           if (param3 == this.field_G) {
             mh.b((byte) -57);
@@ -87,7 +87,7 @@ final class ob extends ta implements ff, ai {
         int var6 = 0;
         try {
           this.field_B = param0;
-          this.field_G = new s(sk.field_C, (ag) null);
+          this.field_G = new InteractiveWidget(sk.field_C, (ag) null);
           this.field_G.field_j = (td) ((Object) new vk());
           var7 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.m(67), this.k(-804)}, lb.field_a);
           var3 = 20;

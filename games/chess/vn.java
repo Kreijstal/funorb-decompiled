@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vn extends bj implements mj {
+class vn extends bj implements WidgetActivationListener {
     static IntrusiveDeque field_vb;
     static String field_Eb;
     static int[] field_sb;
@@ -33,7 +33,7 @@ class vn extends bj implements mj {
           MusicPatchPcmStream.field_t[21] = le.field_b;
           MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
           MusicPatchPcmStream.field_t[18] = kn.field_J;
-          MusicPatchPcmStream.field_t[16] = fb.field_G;
+          MusicPatchPcmStream.field_t[16] = InteractiveWidget.field_G;
           MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
           return;
         }
@@ -41,7 +41,7 @@ class vn extends bj implements mj {
         MusicPatchPcmStream.field_t[21] = le.field_b;
         MusicPatchPcmStream.field_t[7] = SecondaryNodeDequeIterator.field_e;
         MusicPatchPcmStream.field_t[18] = kn.field_J;
-        MusicPatchPcmStream.field_t[16] = fb.field_G;
+        MusicPatchPcmStream.field_t[16] = InteractiveWidget.field_G;
         MusicPatchPcmStream.field_t[13] = ProxyAuthenticationRequiredException.field_c;
     }
 
@@ -241,7 +241,7 @@ class vn extends bj implements mj {
         nj.field_w.i((byte) -126);
     }
 
-    public void a(fb param0, int param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

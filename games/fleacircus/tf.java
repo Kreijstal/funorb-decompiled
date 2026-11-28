@@ -95,7 +95,7 @@ final class tf extends dk {
         TextFieldValidator.a(var6, 45);
         this.field_A.b(0, 0, param2, param3);
         ia.a(-107);
-        var6.c(this.field_y + param1, param0 + this.field_z, this.field_F);
+        var6.drawWithOpacity(this.field_y + param1, param0 + this.field_z, this.field_F);
     }
 
     final static byte[] a(int param0, String param1) {

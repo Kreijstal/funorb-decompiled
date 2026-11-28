@@ -145,8 +145,8 @@ final class mb {
           var21Lifetime1 = param3[0] - param2[0];
           var22Lifetime1 = param3[1] - param2[1];
           var23Lifetime1 = -param2[2] + param3[2];
-          var9 = var22Lifetime1 * param2[4] + (param2[3] * var21Lifetime1 + var23Lifetime1 * param2[5]) >> -pj.field_H + 16;
-          var10 = var23Lifetime1 * param2[8] + param2[6] * var21Lifetime1 + var22Lifetime1 * param2[7] >> -pj.field_H + 16;
+          var9 = var22Lifetime1 * param2[4] + (param2[3] * var21Lifetime1 + var23Lifetime1 * param2[5]) >> -InteractiveWidget.field_H + 16;
+          var10 = var23Lifetime1 * param2[8] + param2[6] * var21Lifetime1 + var22Lifetime1 * param2[7] >> -InteractiveWidget.field_H + 16;
           var11 = param2[11] * var23Lifetime1 + var22Lifetime1 * param2[10] + var21Lifetime1 * param2[9] >> 16;
           var21Lifetime2 = hk.field_f;
           var22Lifetime2 = hk.field_e;
@@ -157,8 +157,8 @@ final class mb {
               var24Lifetime1 = param0.field_n[var23Lifetime2];
               var25Lifetime1 = param0.field_q[var23Lifetime2];
               var26Lifetime1 = param0.field_z[var23Lifetime2];
-              var27Lifetime1 = var9 + (var24Lifetime1 * var12 - (-(var25Lifetime1 * var15) - var18 * var26Lifetime1) >> -pj.field_H + 16);
-              var28Lifetime1 = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16 - pj.field_H);
+              var27Lifetime1 = var9 + (var24Lifetime1 * var12 - (-(var25Lifetime1 * var15) - var18 * var26Lifetime1) >> -InteractiveWidget.field_H + 16);
+              var28Lifetime1 = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16 - InteractiveWidget.field_H);
               var29Lifetime1 = var11 + (var20 * var26Lifetime1 + var25Lifetime1 * var17 + var14 * var24Lifetime1 >> 16);
               stackIn_56_0 = -51;
               stackIn_56_1 = ~var29Lifetime1;
@@ -185,8 +185,8 @@ final class mb {
                   hl.field_a[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
-                  ig.field_D[var23Lifetime2] = var27Lifetime1 >> pj.field_H;
-                  ob.field_m[var23Lifetime2] = var28Lifetime1 >> pj.field_H;
+                  ig.field_D[var23Lifetime2] = var27Lifetime1 >> InteractiveWidget.field_H;
+                  ob.field_m[var23Lifetime2] = var28Lifetime1 >> InteractiveWidget.field_H;
                   hf.field_b[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

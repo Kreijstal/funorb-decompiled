@@ -26,7 +26,7 @@ class IntrusiveNode {
           }
           if (param0 >= ~param3.field_e) {
             var4_int = -param3.field_e + 16;
-            sc.field_l.a(param2, param1, var4_int, var4_int);
+            sc.field_l.drawScaled(param2, param1, var4_int, var4_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

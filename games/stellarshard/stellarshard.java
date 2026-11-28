@@ -545,7 +545,7 @@ public final class stellarshard extends rb implements cf {
               sg.field_a.setAxisAngle(0.0, 0.0, 1.0, (byte) -20, 0.5);
               this.field_H.a(sg.field_a, 103);
               MatchingFieldValidator.field_m = new Sprite(80, 160);
-              MatchingFieldValidator.field_m.e();
+              MatchingFieldValidator.field_m.bindAsRenderTarget();
               var5 = 0;
               break;
             }
@@ -584,7 +584,7 @@ public final class stellarshard extends rb implements cf {
               fk.field_k[2 + var5 * 4] = (int)(33.0 * Math.random() - 16.0);
               fk.field_k[3 + 4 * var5] = (int)(33.0 * Math.random() - 16.0);
               ei.field_D[var5] = new Sprite(256, 256);
-              ei.field_D[var5].e();
+              ei.field_D[var5].bindAsRenderTarget();
               stackIn_33_0 = 0;
               if (var12 != 0) {
                 break scanLoop1;
@@ -601,7 +601,7 @@ public final class stellarshard extends rb implements cf {
               continue scanLoop1;
             }
             PasswordValidator.field_k = new Sprite(640, 480);
-            PasswordValidator.field_k.e();
+            PasswordValidator.field_k.bindAsRenderTarget();
             stackIn_33_0 = 0;
             break;
           }
@@ -1195,8 +1195,8 @@ public final class stellarshard extends rb implements cf {
             IsaacRandom.field_j.a(true);
             return;
           }
-          if (0 < ig.field_D) {
-            ig.field_D = ig.field_D - 6;
+          if (0 < InteractiveWidget.field_D) {
+            InteractiveWidget.field_D = InteractiveWidget.field_D - 6;
           }
           if (0 == wh.field_c) {
             AccountCreationResultPanel.field_pb = AccountCreationResultPanel.field_pb - 8;
@@ -2983,7 +2983,7 @@ public final class stellarshard extends rb implements cf {
           df.clearStaticReferences(11324);
           vk.clearDeclaredStaticReferences((byte) 112);
           UiWidget.b(true);
-          ig.clearDeclaredStaticReferences(-8278);
+          InteractiveWidget.clearDeclaredStaticReferences(-8278);
           dg.clearStaticReferences(32);
           ui.clearStaticReferences((byte) -29);
           WidgetContainer.d((byte) 109);
@@ -3009,7 +3009,7 @@ public final class stellarshard extends rb implements cf {
           EditableTextField.m(122);
           wl.clearStaticReferences(115);
           nc.clearStaticReferences(true);
-          ul.clearStaticReferences(160);
+          NameSuggestionsPanel.clearStaticReferences(160);
           rg.clearStaticReferences(true);
           ii.clearStaticReferences((byte) 25);
           cd.clearStaticReferences((byte) 122);
@@ -3267,7 +3267,7 @@ public final class stellarshard extends rb implements cf {
             rd.a((byte) -60, 100.0f, ve.field_b);
             this.renderClientFrame(-20880);
             kl.field_k = 16777215;
-            ul.field_G = 10742263;
+            NameSuggestionsPanel.field_G = 10742263;
             if (param1 >= -60) {
               this.a(70, -17);
             }
@@ -3312,8 +3312,8 @@ public final class stellarshard extends rb implements cf {
                 break;
               }
               var3 = new Sprite(96, 96);
-              ((Sprite) (var3)).e();
-              var4[var5].b(48, 48, 0, 4096);
+              ((Sprite) (var3)).bindAsRenderTarget();
+              var4[var5].drawRotated(48, 48, 0, 4096);
               e.field_g[var5] = (Sprite) (var3);
               var5++;
             } while (var11 == 0);
@@ -3430,36 +3430,36 @@ public final class stellarshard extends rb implements cf {
                 var10_ref_bj = var7.a(128, 341, 50, 50, -50);
                 if (1 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
-                  MouseWheelInput.field_d[cg.field_c][var6_int].e();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                  MouseWheelInput.field_d[cg.field_c][var6_int].d();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].trimTransparentBorders();
                 }
                 if (0 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
-                  MouseWheelInput.field_d[cg.field_c][var6_int].e();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                  MouseWheelInput.field_d[cg.field_c][var6_int].d();
+                  MouseWheelInput.field_d[cg.field_c][var6_int].trimTransparentBorders();
                 }
                 if (var4_int == 2 ||
                   var4_int == 4) {
                   rd.field_a[cg.field_c - 8][var6_int >> 2] = new Sprite(96, 96);
-                  rd.field_a[-8 + cg.field_c][var6_int >> 2].e();
+                  rd.field_a[-8 + cg.field_c][var6_int >> 2].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                  rd.field_a[-8 + cg.field_c][var6_int >> 2].d();
+                  rd.field_a[-8 + cg.field_c][var6_int >> 2].trimTransparentBorders();
                 }
                 if (var4_int == 3) {
                   cm.field_d[var6_int >> 1] = new Sprite(96, 96);
-                  cm.field_d[var6_int >> 1].e();
+                  cm.field_d[var6_int >> 1].bindAsRenderTarget();
                   SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
                   cc.a();
                   var10_ref_bj.a(0, 0, 0, 0, 0, 0, 2500, -1L);
-                  cm.field_d[var6_int >> 1].d();
+                  cm.field_d[var6_int >> 1].trimTransparentBorders();
                 }
                 var6_int++;
                 continue;
@@ -3511,9 +3511,9 @@ public final class stellarshard extends rb implements cf {
                 rh.field_a[var4_intLifetime1 - 0] = (Sprite) (((Object[]) (var3))[0]);
                 rh.field_a[var4_intLifetime1 + 1] = (Sprite) (((Object[]) (var3))[1]);
                 rh.field_a[2 + var4_intLifetime1] = (Sprite) (((Object[]) (var3))[2]);
-                rh.field_a[var4_intLifetime1 + 0].d();
-                rh.field_a[1 + var4_intLifetime1].d();
-                rh.field_a[2 + var4_intLifetime1].d();
+                rh.field_a[var4_intLifetime1 + 0].trimTransparentBorders();
+                rh.field_a[1 + var4_intLifetime1].trimTransparentBorders();
+                rh.field_a[2 + var4_intLifetime1].trimTransparentBorders();
                 var4_intLifetime1 += 3;
                 continue;
               }
@@ -3546,9 +3546,9 @@ public final class stellarshard extends rb implements cf {
                 fa.field_k[var4_intLifetime1Lifetime1 + 0] = (Sprite) (((Object[]) (var3))[0]);
                 fa.field_k[1 + var4_intLifetime1Lifetime1] = (Sprite) (((Object[]) (var3))[1]);
                 fa.field_k[2 + var4_intLifetime1Lifetime1] = (Sprite) (((Object[]) (var3))[2]);
-                fa.field_k[0 + var4_intLifetime1Lifetime1].d();
-                fa.field_k[1 + var4_intLifetime1Lifetime1].d();
-                fa.field_k[2 + var4_intLifetime1Lifetime1].d();
+                fa.field_k[0 + var4_intLifetime1Lifetime1].trimTransparentBorders();
+                fa.field_k[1 + var4_intLifetime1Lifetime1].trimTransparentBorders();
+                fa.field_k[2 + var4_intLifetime1Lifetime1].trimTransparentBorders();
                 var4_intLifetime1Lifetime1 += 3;
                 continue;
               }
@@ -3614,7 +3614,7 @@ public final class stellarshard extends rb implements cf {
                   var6 = "stars1";
                 }
                 var7_ref = n.a(qd.a(bh.field_a, (String) (var6), "", (byte) 42), (byte) -42, true);
-                var7_ref.e();
+                var7_ref.bindAsRenderTarget();
                 SoftwareRasterizer.blurRectangle(1, 1, 0, 0, 496, 496);
                 var8 = SoftwareRasterizer.field_a;
                 var9 = 0;
@@ -3638,26 +3638,26 @@ public final class stellarshard extends rb implements cf {
                     stackIn_236_0 = 0;
                     var10 = stackIn_236_0;
                     while (var10 < 4) {
-                      var4_ref.e();
+                      var4_ref.bindAsRenderTarget();
                       SoftwareRasterizer.setClip(2, 2, 126, 126);
-                      var7_ref.e(2 + -var9 * 124, -var10 * 124 + 2);
+                      var7_ref.draw(2 + -var9 * 124, -var10 * 124 + 2);
                       SoftwareRasterizer.setClip(0, 2, 1, 126);
-                      var4_ref.e(-2, 0);
+                      var4_ref.draw(-2, 0);
                       SoftwareRasterizer.setClip(1, 2, 2, 126);
-                      var4_ref.e(-1, 0);
+                      var4_ref.draw(-1, 0);
                       SoftwareRasterizer.setClip(127, 2, 128, 126);
-                      var4_ref.e(2, 0);
+                      var4_ref.draw(2, 0);
                       SoftwareRasterizer.setClip(126, 2, 127, 126);
-                      var4_ref.e(1, 0);
+                      var4_ref.draw(1, 0);
                       SoftwareRasterizer.setClip(0, 0, 128, 1);
-                      var4_ref.e(0, -2);
+                      var4_ref.draw(0, -2);
                       SoftwareRasterizer.setClip(0, 1, 128, 2);
-                      var4_ref.e(0, -1);
+                      var4_ref.draw(0, -1);
                       SoftwareRasterizer.setClip(0, 127, 128, 128);
-                      var4_ref.e(0, 2);
+                      var4_ref.draw(0, 2);
                       SoftwareRasterizer.setClip(0, 126, 128, 127);
-                      var4_ref.e(0, 1);
-                      mf.field_a[var9 + var10 * 4 + var5 * 16] = var4_ref.a();
+                      var4_ref.draw(0, 1);
+                      mf.field_a[var9 + var10 * 4 + var5 * 16] = var4_ref.copy();
                       var10++;
                     }
                     var9++;
@@ -4119,7 +4119,7 @@ public final class stellarshard extends rb implements cf {
           if (null != this.field_F &&
             DiskArchiveRequest.field_I > 0 &&
             IsaacRandom.field_j == null) {
-            this.field_F.e(0, 0, 5 * DiskArchiveRequest.field_I);
+            this.field_F.drawWithOpacity(0, 0, 5 * DiskArchiveRequest.field_I);
             if (!DualLinkDequeIterator.field_i) {
               DiskArchiveRequest.field_I = DiskArchiveRequest.field_I - 1;
             }
@@ -4134,7 +4134,7 @@ public final class stellarshard extends rb implements cf {
               var3 = 0;
               break;
             }
-            ei.field_D[var4].d((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - DiskArchiveRequest.field_I * 2);
+            ei.field_D[var4].drawAdditive((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - DiskArchiveRequest.field_I * 2);
             var3 += 8;
             var4 += 2;
           } while (var20 == 0);
@@ -4166,7 +4166,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (decompiledFrameCompleted5) {
               if (this.field_G != null) {
-                this.field_G.e();
+                this.field_G.bindAsRenderTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
                 pd.field_h.a((byte) -107);
                 if (var20 != 0) {
@@ -4262,7 +4262,7 @@ public final class stellarshard extends rb implements cf {
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameRemainder0)) {
-              this.field_G.d(0, 0, 255);
+              this.field_G.drawAdditive(0, 0, 255);
               var5_int = 0;
               while (true) {
                 stackIn_174_0Lifetime1 = 1000;
@@ -4288,7 +4288,7 @@ public final class stellarshard extends rb implements cf {
             var6_intLifetime1 = 1;
             while (true) {
               if (var6_intLifetime1 < 12) {
-                ei.field_D[var6_intLifetime1].d(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(DiskArchiveRequest.field_I * 2) + 128);
+                ei.field_D[var6_intLifetime1].drawAdditive(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(DiskArchiveRequest.field_I * 2) + 128);
                 var5_int += 8;
                 var6_intLifetime1 += 2;
                 if (var20 == 0) {
@@ -4502,7 +4502,7 @@ public final class stellarshard extends rb implements cf {
                 SoftwareRasterizer.fillRoundedRectangle(-var9Lifetime3 + 2 + var10_intLifetime1, 439, 21 - (-var9Lifetime3 - 96) - 140, 18, 8, 0);
                 qj.field_a.drawRightAligned((String) (var7_ref), -63 + var10_intLifetime1 + 33, 453, 16777215, -1);
                 SoftwareRasterizer.fillRoundedRectangleAlpha(var10_intLifetime1 - 15, 432, 32, 32, 14, 0, 192);
-                e.field_g[var8Lifetime3].e(var10_intLifetime1 + 33 - 80, 400);
+                e.field_g[var8Lifetime3].draw(var10_intLifetime1 + 33 - 80, 400);
               }
               var9Lifetime3Lifetime1 = 250;
               var10 = null;
@@ -4672,7 +4672,7 @@ public final class stellarshard extends rb implements cf {
                   stackIn_447_1 = 432;
                 }
                 SoftwareRasterizer.fillRoundedRectangleAlpha(stackIn_447_0, stackIn_447_1, 32, 32, 14, 0, 192);
-                e.field_g[var11].e(var9Lifetime3Lifetime1, 400);
+                e.field_g[var11].draw(var9Lifetime3Lifetime1, 400);
                 qj.field_a.drawRightAligned((String) (var10), 18 + var9Lifetime3Lifetime1, 453, 16777215, -1);
               }
               nj.field_f[0] = var6_intLifetime3;
@@ -4680,8 +4680,8 @@ public final class stellarshard extends rb implements cf {
                 var5Lifetime4 = DualLinkNode.field_k;
               }
             }
-            if (ig.field_D > 0) {
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, ig.field_D);
+            if (InteractiveWidget.field_D > 0) {
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, InteractiveWidget.field_D);
             }
             SoftwareRasterizer.drawRectangleOutlineAlpha(0, 0, 640, 480, 0, 192);
             SoftwareRasterizer.drawRectangleOutlineAlpha(1, 1, 638, 478, 0, 128);
@@ -4737,7 +4737,7 @@ public final class stellarshard extends rb implements cf {
               }
               SoftwareRasterizer.fillRectangleAlpha(4, 353, -6 + var9Lifetime4, 123, 0, var8Lifetime4);
               if (var8Lifetime4 == 255) {
-                wh.field_e[var6_ref.field_o].a(-24 + var9Lifetime4 / 2, 369, 48, 48);
+                wh.field_e[var6_ref.field_o].drawDownscaledAreaAveraged(-24 + var9Lifetime4 / 2, 369, 48, 48);
                 qj.field_a.drawParagraph(NanoFrameTimer.field_e[var6_ref.field_o], 8, 425, var9Lifetime4 - 16, 56, 65535, -1, 1, 1, qj.field_a.field_N);
               }
               var5Lifetime1 = te.field_a;

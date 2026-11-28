@@ -27,7 +27,7 @@ final class qb {
             field_i = 2;
           }
           while (param1.length > var2_int) {
-            param1[var2_int].h();
+            param1[var2_int].trimTransparentBorders();
             var2_int++;
           }
           return;

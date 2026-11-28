@@ -105,14 +105,14 @@ final class ea extends se {
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
               var19 = AccountNameAvailabilityValidator.field_p[2];
-              var19.d(var9, -(var19.field_t >> 1) + var10, 256);
+              var19.drawAdditive(var9, -(var19.field_t >> 1) + var10, 256);
               return;
             }
             if (ProxyAuthenticationRequiredException.field_a != var6) {
               return;
             }
             var20 = AccountNameAvailabilityValidator.field_p[1];
-            var20.d(var9, -(var20.field_t >> 1) + var10, 256);
+            var20.drawAdditive(var9, -(var20.field_t >> 1) + var10, 256);
             return;
           }
           var21 = AccountNameAvailabilityValidator.field_p[0];
@@ -135,9 +135,9 @@ final class ea extends se {
               }
             }
           }
-          var21.b(112, 144, var21.field_v << 4, var21.field_u << 4, -this.field_db << 10, 4096);
+          var21.drawRotatedAboutBilinear(112, 144, var21.field_v << 4, var21.field_u << 4, -this.field_db << 10, 4096);
           fd.a(28773);
-          this.field_T.d(-(var21.field_v >> 1) + var9, -var21.field_u + var10, 256);
+          this.field_T.drawAdditive(-(var21.field_v >> 1) + var9, -var21.field_u + var10, 256);
           return;
         }
         if (var6 == MouseWheelInput.field_d) {
@@ -155,14 +155,14 @@ final class ea extends se {
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
               var24 = AccountNameAvailabilityValidator.field_p[2];
-              var24.d(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
+              var24.drawAdditive(var9Lifetime1, -(var24.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (ProxyAuthenticationRequiredException.field_a != var6) {
               return;
             }
             var25 = AccountNameAvailabilityValidator.field_p[1];
-            var25.d(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
+            var25.drawAdditive(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
             return;
           }
           var26 = AccountNameAvailabilityValidator.field_p[0];
@@ -185,9 +185,9 @@ final class ea extends se {
               }
             }
           }
-          var26.b(112, 144, var26.field_v << 4, var26.field_u << 4, -this.field_db << 10, 4096);
+          var26.drawRotatedAboutBilinear(112, 144, var26.field_v << 4, var26.field_u << 4, -this.field_db << 10, 4096);
           fd.a(28773);
-          this.field_T.d(-(var26.field_v >> 1) + var9Lifetime1, -var26.field_u + var10Lifetime1, 256);
+          this.field_T.drawAdditive(-(var26.field_v >> 1) + var9Lifetime1, -var26.field_u + var10Lifetime1, 256);
           return;
         }
         var5 = this.field_fb.getValidationMessage(false);
@@ -205,14 +205,14 @@ final class ea extends se {
             var6Lifetime1 != MouseWheelInput.field_d) {
             if (var6Lifetime1 == qk.field_b) {
               var40 = AccountNameAvailabilityValidator.field_p[2];
-              var40.d(var9Lifetime2, -(var40.field_t >> 1) + var10Lifetime2, 256);
+              var40.drawAdditive(var9Lifetime2, -(var40.field_t >> 1) + var10Lifetime2, 256);
               return;
             }
             if (ProxyAuthenticationRequiredException.field_a != var6Lifetime1) {
               return;
             }
             var41 = AccountNameAvailabilityValidator.field_p[1];
-            var41.d(var9Lifetime2, -(var41.field_t >> 1) + var10Lifetime2, 256);
+            var41.drawAdditive(var9Lifetime2, -(var41.field_t >> 1) + var10Lifetime2, 256);
             return;
           }
           var42 = AccountNameAvailabilityValidator.field_p[0];
@@ -231,9 +231,9 @@ final class ea extends se {
             this.field_T = new RgbSprite(var11Lifetime2, var12Lifetime2);
             tl.a((byte) -67, this.field_T);
           }
-          var42.b(112, 144, var42.field_v << 4, var42.field_u << 4, -this.field_db << 10, 4096);
+          var42.drawRotatedAboutBilinear(112, 144, var42.field_v << 4, var42.field_u << 4, -this.field_db << 10, 4096);
           fd.a(28773);
-          this.field_T.d(-(var42.field_v >> 1) + var9Lifetime2, -var42.field_u + var10Lifetime2, 256);
+          this.field_T.drawAdditive(-(var42.field_v >> 1) + var9Lifetime2, -var42.field_u + var10Lifetime2, 256);
           return;
         }
         var27 = this.field_eb;
@@ -269,22 +269,22 @@ final class ea extends se {
               }
             }
           }
-          var29.b(112, 144, var29.field_v << 4, var29.field_u << 4, -this.field_db << 10, 4096);
+          var29.drawRotatedAboutBilinear(112, 144, var29.field_v << 4, var29.field_u << 4, -this.field_db << 10, 4096);
           fd.a(28773);
-          this.field_T.d(-(var29.field_v >> 1) + var9Lifetime3, -var29.field_u + var10Lifetime3, 256);
+          this.field_T.drawAdditive(-(var29.field_v >> 1) + var9Lifetime3, -var29.field_u + var10Lifetime3, 256);
           return;
         }
         if (var6Lifetime2 != MouseWheelInput.field_d) {
           if (var6Lifetime2 == qk.field_b) {
             var37 = AccountNameAvailabilityValidator.field_p[2];
-            var37.d(var9Lifetime3, -(var37.field_t >> 1) + var10Lifetime3, 256);
+            var37.drawAdditive(var9Lifetime3, -(var37.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (ProxyAuthenticationRequiredException.field_a != var6Lifetime2) {
             return;
           }
           var38 = AccountNameAvailabilityValidator.field_p[1];
-          var38.d(var9Lifetime3, -(var38.field_t >> 1) + var10Lifetime3, 256);
+          var38.drawAdditive(var9Lifetime3, -(var38.field_t >> 1) + var10Lifetime3, 256);
           return;
         }
         var31 = AccountNameAvailabilityValidator.field_p[0];
@@ -308,9 +308,9 @@ final class ea extends se {
             }
           }
         }
-        var31.b(112, 144, var31.field_v << 4, var31.field_u << 4, -this.field_db << 10, 4096);
+        var31.drawRotatedAboutBilinear(112, 144, var31.field_v << 4, var31.field_u << 4, -this.field_db << 10, 4096);
         fd.a(28773);
-        this.field_T.d(-(var31.field_v >> 1) + var9Lifetime3, -var31.field_u + var10Lifetime3, 256);
+        this.field_T.drawAdditive(-(var31.field_v >> 1) + var9Lifetime3, -var31.field_u + var10Lifetime3, 256);
     }
 
     final String g(int param0) {

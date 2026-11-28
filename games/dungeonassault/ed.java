@@ -224,13 +224,13 @@ final class ed extends np {
         if (this.field_U != null) {
           for (var6 = 0; var6 < 7; var6++) {
             SoftwareRasterizer.setClip(var4, var6 + var5, var4 + this.field_q, var5 - (-var6 - 1));
-            this.field_U.d(var4, var5, 32 * (-var6 + 7));
+            this.field_U.drawWithOpacity(var4, var5, 32 * (-var6 + 7));
           }
         }
         if (this.field_Q != null) {
           for (var6Lifetime1 = 0; var6Lifetime1 < 7; var6Lifetime1++) {
             SoftwareRasterizer.setClip(var4, var5 + this.field_x - 7 + var6Lifetime1, this.field_q + var4, -6 + (var5 + this.field_x) + var6Lifetime1);
-            this.field_Q.d(var4, var5 + this.field_x - 7, (var6Lifetime1 + 1) * 32);
+            this.field_Q.drawWithOpacity(var4, var5 + this.field_x - 7, (var6Lifetime1 + 1) * 32);
           }
         }
         SoftwareRasterizer.restoreClip(this.field_B);
@@ -520,10 +520,10 @@ final class ed extends np {
           if (var6 != null) {
             var7 = var6.field_E * 5 >> 3;
             var8 = 5 * var6.field_G >> 3;
-            var6.b(param1 + (-var7 + 48 >> 1), -var8 + (40 + param0), var7, var8, param4);
+            var6.drawScaledSilhouette(param1 + (-var7 + 48 >> 1), -var8 + (40 + param0), var7, var8, param4);
           }
         }
-        dm.field_a[var5].e(param1, param0 + 1, param4);
+        dm.field_a[var5].drawSilhouette(param1, param0 + 1, param4);
     }
 
     final rj a(int param0, int param1, int param2) {

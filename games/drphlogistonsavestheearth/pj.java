@@ -364,7 +364,7 @@ class pj extends vg implements ba {
             tl.field_O = eg.field_h;
           }
           if (tl.field_O == eg.field_h &&
-            LoginMenuScreen.a(1, param4 ^ 5929)) {
+            NameSuggestionsPanel.a(1, param4 ^ 5929)) {
             var9Lifetime1 = dh.field_N.readUnsignedByte(31760);
             dh.field_N.position = 0;
             if (100 <= var9Lifetime1 &&
@@ -381,7 +381,7 @@ class pj extends vg implements ba {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
-                LoginMenuScreen.a(ab.a(39), 5929);
+                NameSuggestionsPanel.a(ab.a(39), 5929);
                 oe.field_a = new Boolean(eb.a(dh.field_N, param4 + 126));
                 dh.field_N.position = 0;
               } else {
@@ -393,10 +393,10 @@ class pj extends vg implements ba {
           }
           if (tl.field_O == kc.field_n) {
             var9Lifetime2 = 2;
-            if (LoginMenuScreen.a(var9Lifetime2, 5929)) {
+            if (NameSuggestionsPanel.a(var9Lifetime2, 5929)) {
               var10Lifetime1 = dh.field_N.readUnsignedShort(-788751192);
               dh.field_N.position = 0;
-              if (LoginMenuScreen.a(var10Lifetime1, 5929)) {
+              if (NameSuggestionsPanel.a(var10Lifetime1, 5929)) {
                 var11 = td.field_m.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   td.field_m[var12] = dh.field_N.readPrefixedString(-75);

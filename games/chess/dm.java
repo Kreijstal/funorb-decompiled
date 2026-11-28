@@ -130,7 +130,7 @@ abstract class dm {
           var6 = SoftwareRasterizer.field_c;
           var16 = SoftwareRasterizer.field_d;
           mc.field_b = new RgbSprite(10, 14);
-          mc.field_b.e();
+          mc.field_b.bindAsRenderTarget();
           for (var8 = 2; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }

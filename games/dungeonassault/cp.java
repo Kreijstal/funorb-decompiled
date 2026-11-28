@@ -37,7 +37,7 @@ final class cp extends gd {
           var9 = this.field_x + var5 - 42;
           var10 = var4 + 5;
           if (var8 != null) {
-            var8.c(var10, var9);
+            var8.drawOpaque(var10, var9);
           } else {
             SoftwareRasterizer.fillRectangle(var10, var9, 32, 32, 0);
           }
@@ -129,18 +129,18 @@ final class cp extends gd {
             la.field_b.drawString(LoginPanel.field_T, 52, var14, 16711680, -1);
           }
           var14 += 4;
-          var12.e();
+          var12.bindAsRenderTarget();
           var15Lifetime1 = -40 + (var7 - 5);
           SoftwareRasterizer.clearRaster();
-          var11.e(0, 0, 16744448);
+          var11.drawSilhouette(0, 0, 16744448);
           al.a(52, var14, false, this.field_S, 16744448);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
-          var13.e();
+          var13.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          var11.e(0, 0, 12690143);
+          var11.drawSilhouette(0, 0, 12690143);
           al.a(52, var14, false, this.field_S, 10449103);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
-          var11.e();
+          var11.bindAsRenderTarget();
           al.a(52, var14, false, this.field_S, 12632256);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           jh.b();

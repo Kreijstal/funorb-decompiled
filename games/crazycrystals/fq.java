@@ -413,9 +413,9 @@ final class fq extends ea implements Cloneable {
         if (this.field_I == null) {
           if (24 == param2 &&
             param3 == 24) {
-            this.h(-110).c(param1, -param3 + param4, LevelCompleteEntrancePhase.field_f[this.field_u]);
+            this.h(-110).drawGrayModulated(param1, -param3 + param4, LevelCompleteEntrancePhase.field_f[this.field_u]);
           } else {
-            this.h(-62).b(param1, -param3 + param4, param2 * 2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_u]);
+            this.h(-62).drawGrayModulatedScaled(param1, -param3 + param4, param2 * 2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_u]);
           }
         } else {
           this.field_I.a(false, param2, param3, (byte) -107, false, param1, param4);

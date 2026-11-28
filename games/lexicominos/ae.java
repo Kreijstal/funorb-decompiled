@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends kf {
+final class ae extends InteractiveWidget {
     static int[] field_M;
     int field_L;
     int field_H;

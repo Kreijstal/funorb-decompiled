@@ -209,7 +209,7 @@ final class ffa extends TileEffect {
     final void a(int param0, boolean param1, int param2) {
         int var4 = (400 + (-(this.field_g * 655360) + 52428800 >> 16)) * this.field_g / 80;
         if (param1) {
-          DelegatingCanvas.field_c.a(param2, param0 + (-var4 - 64), 192);
+          DelegatingCanvas.field_c.drawWithOpacity(param2, param0 + (-var4 - 64), 192);
           return;
         }
     }

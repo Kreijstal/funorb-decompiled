@@ -48,7 +48,7 @@ final class sa {
           this.field_u = param0;
           this.field_r = new RgbSprite(this.field_u.field_y + 4, 4 + this.field_u.field_v);
           jh.a(this.field_r);
-          this.field_u.e(2, 2, 12690143);
+          this.field_u.drawSilhouette(2, 2, 12690143);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, this.field_r.field_y, this.field_r.field_v);
           jh.b();
           var7 = this.field_r;
@@ -136,13 +136,13 @@ final class sa {
           for (var7 = 1; var7 < this.field_k; var7++) {
             var8 = var7 * param3 / this.field_k;
             SoftwareRasterizer.setClip(this.field_m, var7 + this.field_j, this.field_m + this.field_b, 1 + (this.field_j + var7));
-            param4.b(param2, param0, var8);
+            param4.drawAdditive(param2, param0, var8);
             SoftwareRasterizer.setClip(this.field_m, this.field_y + (this.field_j - 1) - var7, this.field_b + this.field_m, -var7 + (this.field_j + this.field_y));
-            param4.b(param2, param0, var8);
+            param4.drawAdditive(param2, param0, var8);
           }
           var8Lifetime1 = -112 / ((param1 - 27) / 32);
           SoftwareRasterizer.setClip(this.field_m, this.field_k + this.field_j, this.field_m + this.field_b, this.field_j + this.field_y - this.field_k);
-          param4.b(param2, param0, param3);
+          param4.drawAdditive(param2, param0, param3);
           SoftwareRasterizer.restoreClip(var16);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sa.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
@@ -167,13 +167,13 @@ final class sa {
           for (var6 = 1; this.field_k > var6; var6++) {
             var7 = (var6 << 8) / this.field_k;
             SoftwareRasterizer.setClip(this.field_m, this.field_j + var6, this.field_m + this.field_b, var6 + (this.field_j + 1));
-            param2.d(param0, param1, var7);
+            param2.drawWithOpacity(param0, param1, var7);
             SoftwareRasterizer.setClip(this.field_m, -var6 + (-1 + (this.field_y + this.field_j)), this.field_b + this.field_m, this.field_y + this.field_j - var6);
-            param2.d(param0, param1, var7);
+            param2.drawWithOpacity(param0, param1, var7);
           }
           var6Lifetime1 = -73 / ((param3 + 20) / 35);
           SoftwareRasterizer.setClip(this.field_m, this.field_j + this.field_k, this.field_b + this.field_m, this.field_j + (this.field_y - this.field_k));
-          param2.h(param0, param1);
+          param2.draw(param0, param1);
           SoftwareRasterizer.restoreClip(var15);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -222,7 +222,7 @@ final class sa {
           }
           var10 = la.field_b.field_H;
           var11 = new RgbSprite(var6_int, var9);
-          var11.e();
+          var11.bindAsRenderTarget();
           if (param1 != null) {
             db.field_v.drawCentred(param1, var6_int >> 1, var10, param4, -1);
             var10 = var10 + 2 * la.field_b.field_H;

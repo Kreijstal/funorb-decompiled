@@ -299,17 +299,17 @@ final class MenuScreen {
                 !(3 + (var17_ref_t.field_u + param1) > k.field_e)) {
                 if (var14 >= var16) {
                   this.a(14211288, var15 - 3, 8947848, 111, var17_ref_t.field_u + 6, 6 + var17_ref_t.field_s, 8947848, -3 + param1);
-                  rp.field_b[var16 + 8].d(var15, param1);
+                  rp.field_b[var16 + 8].draw(var15, param1);
                 } else {
-                  var17_ref_t.e(var15, param1, 96);
+                  var17_ref_t.drawWithOpacity(var15, param1, 96);
                 }
               } else {
                 this.a(15000804, -3 + var15, 11184810, param3 + 72, var17_ref_t.field_u + 6, 6 + var17_ref_t.field_s, 1052688, -3 + param1);
-                rp.field_b[var16 + 16].d(var15, param1);
+                rp.field_b[var16 + 16].draw(var15, param1);
               }
             } else {
               this.a(10526880, var15 - 3, 1052688, -123, 6 + var17_ref_t.field_u, var17_ref_t.field_s + 6, 11184810, -3 + param1);
-              rp.field_b[24 + var16].d(var15, param1);
+              rp.field_b[24 + var16].draw(var15, param1);
             }
             var15 = var15 + (var17_ref_t.field_s + 10);
             var16++;
@@ -343,7 +343,7 @@ final class MenuScreen {
           } else {
             stackIn_131_3 = i.field_Q.field_O[9][1];
           }
-          ((Sprite) (Object) stackIn_130_0).d(stackIn_130_1, stackIn_130_2, stackIn_131_3);
+          ((Sprite) (Object) stackIn_130_0).drawGrayModulated(stackIn_130_1, stackIn_130_2, stackIn_131_3);
           decompiledSharedTail0 = (var22 != 0);
         }
         if (decompiledSharedTail0) {
@@ -771,7 +771,7 @@ final class MenuScreen {
         var4 = SoftwareRasterizer.field_j;
         var5 = SoftwareRasterizer.field_d;
         var6 = new Sprite(160, 120);
-        var6.e();
+        var6.bindAsRenderTarget();
         var7 = ol.field_f[param1];
         var8 = im.field_L.a(-58, var7);
         var9_ref_kh__ = MouseWheelInput.field_c;
@@ -1359,25 +1359,25 @@ final class MenuScreen {
         }
         ((PalettedBitmapFont) (Object) stackIn_70_0).drawCentred(stackIn_71_1, 321, 1 + var14 + dd.field_c.field_x, 1, -1);
         if (var12Lifetime1 != 0) {
-          tj.field_n[var7].d(256, 30 + var14);
+          tj.field_n[var7].draw(256, 30 + var14);
           if (var19 != 0) {
             if (wp.field_w <= 0 &&
               m.field_y[var7]) {
-              LoginPanel.field_J.d(256, 30 + var14);
-              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
+              LoginPanel.field_J.draw(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.draw(256, 30 + var14);
             } else {
-              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.draw(256, 30 + var14);
             }
           }
         } else {
           if (wp.field_w <= 0 &&
             m.field_y[var7]) {
-            LoginPanel.field_J.d(256, 30 + var14);
+            LoginPanel.field_J.draw(256, 30 + var14);
             if (var19 != 0) {
-              VolumeScaledPcmStream.field_o.d(256, 30 + var14);
+              VolumeScaledPcmStream.field_o.draw(256, 30 + var14);
             }
           } else {
-            VolumeScaledPcmStream.field_o.d(256, 30 + var14);
+            VolumeScaledPcmStream.field_o.draw(256, 30 + var14);
           }
         }
         var14 = var14 + (i.field_N.field_x + 46);
@@ -1403,7 +1403,7 @@ final class MenuScreen {
         qh.field_c.drawString(am.field_j, var3Lifetime1, var14 + (-3 + qh.field_c.field_x), 0, -1);
         var3Lifetime1 = var3Lifetime1 + qh.field_c.stringWidth(am.field_j);
         if (var16 != 0) {
-          Model.field_r.d(var3Lifetime1, var14 + 1);
+          Model.field_r.draw(var3Lifetime1, var14 + 1);
           qh.field_c.drawString(nl.field_u, var3Lifetime1 + Model.field_r.field_s, qh.field_c.field_x + (-3 + var14), 0, -1);
           if (var19 == 0) {
             return;
@@ -1411,7 +1411,7 @@ final class MenuScreen {
         }
         var18 = 0;
         while (!(ef.field_d[var7] <= var18)) {
-          Model.field_r.d(var3Lifetime1, var14 + 1);
+          Model.field_r.draw(var3Lifetime1, var14 + 1);
           var3Lifetime1 = var3Lifetime1 + Model.field_r.field_s / 3;
           var18++;
           if (var19 != 0) {
@@ -2601,7 +2601,7 @@ final class MenuScreen {
                 var13.addFlexibleVerticalSpace((byte) -109, 30);
                 var10.justifyPanelContents(0);
                 ti.field_l[rn.field_j].drawPanel(51, -116, 195);
-                this.e(param0 ^ 733, rn.field_j).b(414, 216);
+                this.e(param0 ^ 733, rn.field_j).drawOpaque(414, 216);
                 SoftwareRasterizer.drawRectangleOutline(414, 216, 160, 120, 16777215);
                 SoftwareRasterizer.drawRectangleOutline(413, 215, 162, 122, 0);
                 var3 = 195;
@@ -2973,7 +2973,7 @@ final class MenuScreen {
           return;
         }
         if (null == IterableNodeHashTable.field_c) {
-          IterableNodeHashTable.field_c = SpriteBase.a(11, 3, 1, (byte) 44, 10);
+          IterableNodeHashTable.field_c = SpriteBase.getOrRequestHighscoreTable(11, 3, 1, (byte) 44, 10);
         }
         if (param1 < 45) {
           this.a(-7, 127, -114, -69, 82, 6, 92, -22);
@@ -3011,7 +3011,7 @@ final class MenuScreen {
                     }
                     else {
                       var12 = 0;
-                      if (SpriteBase.a(var6[var11], -17310) &&
+                      if (SpriteBase.matchesCurrentDisplayName(var6[var11], -17310) &&
                         var9 == 0 &&
                         null != IsaacCipher.field_l &&
                         ~var27[var11] == ~IsaacCipher.field_l.field_l &&

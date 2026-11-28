@@ -316,7 +316,7 @@ final class GameScreen {
         SoftwareRasterizer.drawRectangleOutline(152, 75, 206, 284, 3352864);
         SoftwareRasterizer.drawRectangleOutline(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
-          var2 = nd.field_I;
+          var2 = NameSuggestionsPanel.field_I;
           DisplayNameSelectionPanel.font.drawCentred(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
         } else {
           if (null == SpriteState.field_w) {
@@ -324,7 +324,7 @@ final class GameScreen {
           }
           if (SpriteState.field_w.field_o) {
             if (SpriteState.field_w.field_m != null) {
-              var2 = nd.field_I;
+              var2 = NameSuggestionsPanel.field_I;
               var3_ref_String__ = SpriteState.field_w.field_m[TextFieldValidator.field_i];
               var4 = -1;
               var17 = SpriteState.field_w.field_n[TextFieldValidator.field_i];
@@ -1080,33 +1080,33 @@ final class GameScreen {
           if (this.field_c != 2 &&
             this.field_c != 3) {
             if (this.field_c == 15) {
-              cl.a(nd.field_L, 37, 254, 118, 566, 4);
+              cl.a(NameSuggestionsPanel.field_L, 37, 254, 118, 566, 4);
             } else if (this.field_c != 8 &&
               this.field_c != 9 &&
               16 != this.field_c) {
               if (null == he.field_f[this.field_c]) {
-                cl.a(nd.field_L, 11, 436, 38, 618, 4);
+                cl.a(NameSuggestionsPanel.field_L, 11, 436, 38, 618, 4);
               } else {
                 cl.a(ha.field_m, 11, 436, 38, 618, 4);
                 if (this.field_c == 10 ||
                   this.field_c == 11) {
                   SoftwareRasterizer.setClip(19, 384, 621, 466);
-                  cl.a(nd.field_L, 11, 436, 38, 618, param0 ^ -5);
+                  cl.a(NameSuggestionsPanel.field_L, 11, 436, 38, 618, param0 ^ -5);
                   SoftwareRasterizer.resetClip();
                 }
               }
             } else {
-              cl.a(nd.field_L, 102, 124, 56, 436, 4);
-              cl.a(nd.field_L, 11, 280, 194, 618, 4);
+              cl.a(NameSuggestionsPanel.field_L, 102, 124, 56, 436, 4);
+              cl.a(NameSuggestionsPanel.field_L, 11, 280, 194, 618, 4);
             }
           } else {
-            cl.a(nd.field_L, -10 + this.e((byte) 62), 20 + mf.field_f[this.field_c].length * mf.field_d[this.field_c], -10 + mf.field_h[this.field_c], 176, 4);
-            cl.a(nd.field_L, 349, 410, 52 + DisplayNameSelectionPanel.font.field_u, 212, 4);
+            cl.a(NameSuggestionsPanel.field_L, -10 + this.e((byte) 62), 20 + mf.field_f[this.field_c].length * mf.field_d[this.field_c], -10 + mf.field_h[this.field_c], 176, 4);
+            cl.a(NameSuggestionsPanel.field_L, 349, 410, 52 + DisplayNameSelectionPanel.font.field_u, 212, 4);
           }
         } else {
           cl.a(ha.field_m, 6, 436, 38, 436, 4);
-          cl.a(nd.field_L, 457, 124, 10, 176, param0 ^ -5);
-          cl.a(nd.field_L, 457, mf.field_f[this.field_c].length * 26 + 20, 219, 176, param0 ^ -5);
+          cl.a(NameSuggestionsPanel.field_L, 457, 124, 10, 176, param0 ^ -5);
+          cl.a(NameSuggestionsPanel.field_L, 457, mf.field_f[this.field_c].length * 26 + 20, 219, 176, param0 ^ -5);
         }
         if (null != he.field_f[this.field_c]) {
           he.field_f[this.field_c].a(true);
@@ -1170,7 +1170,7 @@ final class GameScreen {
                       }
                       UiWidget.field_z[3].drawTransparent(-UiWidget.field_z[3].field_t + 640 >> 1, 1);
                       if (qh.field_b.levelIndex > (1 + ArchiveIndex.field_i)) {
-                        cl.a(nd.field_L, 90, 254, 57, 176, 4);
+                        cl.a(NameSuggestionsPanel.field_L, 90, 254, 57, 176, 4);
                         if (!jj.s(param0 + 54)) {
                           var4_ref_String = Archive.field_a;
                           var12 = var4_ref_String;
@@ -1183,11 +1183,11 @@ final class GameScreen {
                         qh.field_b.a(100, (byte) -127, 67);
                         IndexedSpriteState.field_d.drawTransparent(-367, -162);
                       }
-                      cl.a(nd.field_L, 566, 46, 57, 46, param0 + 5);
+                      cl.a(NameSuggestionsPanel.field_L, 566, 46, 57, 46, param0 + 5);
                       stackIn_73_0 = (RandomAccessCacheFile.field_b != 0) ? 15252224 : 8110658;
                       var4 = stackIn_73_0;
                       ii.tileSprites[52].drawTinted(576, 67, var4);
-                      cl.a(nd.field_L, 566, 46, 421, 46, 4);
+                      cl.a(NameSuggestionsPanel.field_L, 566, 46, 421, 46, 4);
                       stackIn_76_0 = (RandomAccessCacheFile.field_b != 1) ? 15252224 : 8110658;
                       var4 = stackIn_76_0;
                       ii.tileSprites[53].drawTinted(576, 431, var4);

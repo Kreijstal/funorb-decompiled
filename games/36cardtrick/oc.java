@@ -115,7 +115,7 @@ final class oc {
             if (param4.field_f == 2) {
               var7 = var7 + (-this.field_b.field_k + param1.field_q);
             }
-            this.field_b.d(var6_int, var7);
+            this.field_b.draw(var6_int, var7);
           }
           var6 = param4.b(96, param1);
           if (var6 != null &&

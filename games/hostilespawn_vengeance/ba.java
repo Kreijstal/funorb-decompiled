@@ -60,7 +60,7 @@ final class ba extends ag {
         }
         this.field_C = new RgbSprite[]{this.a((byte) -38, this.field_K, this.field_L), this.a((byte) -38, this.field_A, this.field_B)};
         this.field_D = this.i(-1);
-        this.field_F = this.field_D.d();
+        this.field_F = this.field_D.copyMirroredHorizontally();
         this.field_I = new RgbSprite(this.field_x >> 1, this.field_x);
     }
 
@@ -141,7 +141,7 @@ final class ba extends ag {
           var5_int = this.field_s + param2;
           TextInputField.pushAndIntersectClip(-this.field_D.field_z + var5_int, param0, this.field_x + param0, this.field_D.field_z + param2, true);
           for (var6 = -this.field_z + param2; var6 < var5_int; var6 = var6 + param1.field_z) {
-            param1.e(var6, param0);
+            param1.draw(var6, param0);
           }
           if (param3 >= -117) {
             return;
@@ -149,21 +149,21 @@ final class ba extends ag {
           eh.b(false);
           if (this.field_D.field_z + param2 >= SoftwareRasterizer.field_b) {
             sb.a(this.field_I, -110);
-            param1.e(-this.field_z, 0);
-            param1.e(-this.field_z + this.field_y * 2, 0);
-            this.field_F.a(0, 0);
+            param1.draw(-this.field_z, 0);
+            param1.draw(-this.field_z + this.field_y * 2, 0);
+            this.field_F.drawMultiply(0, 0);
             eh.b(false);
-            this.field_I.e(param2, param0);
+            this.field_I.draw(param2, param0);
           }
           if (SoftwareRasterizer.field_l >= -this.field_D.field_z + var5_int) {
             sb.a(this.field_I, -124);
             for (var7 = this.field_z - this.field_D.field_z + this.field_s; 2 * this.field_y < var7; var7 = var7 - this.field_y * 2) {
             }
-            param1.e(-var7, 0);
-            param1.e(this.field_y * 2 - var7, 0);
-            this.field_D.a(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(this.field_y * 2 - var7, 0);
+            this.field_D.drawMultiply(0, 0);
             eh.b(false);
-            this.field_I.e(-this.field_D.field_z + var5_int, param0);
+            this.field_I.draw(-this.field_D.field_z + var5_int, param0);
             return;
           }
           return;

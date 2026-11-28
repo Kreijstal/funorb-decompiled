@@ -107,13 +107,13 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           this.field_w[param1].field_h != var11) {
           this.field_w[param1] = new tf(IntrusiveNode.field_c, var5, var14);
         }
-        of.field_j.h(640 - of.field_j.field_y >> 1, var9 - 4);
+        of.field_j.draw(640 - of.field_j.field_y >> 1, var9 - 4);
         this.field_w[param1].b(var9, 32, var10);
         if (param0) {
           if (param1 != this.field_y) {
             this.b(param1, -118);
           }
-          this.field_v.b(var10, var9, 64);
+          this.field_v.drawAdditive(var10, var9, 64);
           var12 = (int)((1.0 + te.a(mo.field_a)) * 128.0);
           if (0 > var12) {
             var12 = 0;
@@ -121,7 +121,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           if (256 < var12) {
             var12 = 256;
           }
-          this.field_C.b(var10, var9, var12);
+          this.field_C.drawAdditive(var10, var9, var12);
         }
         if (param2 != 0) {
           this.renderScreen(true);
@@ -214,7 +214,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
         var10 = DungeonAssault.field_K;
         super.renderScreen(param0);
         this.field_e.b(0, 0);
-        am.field_a.h(320 - am.field_a.field_E / 2, 48);
+        am.field_a.draw(320 - am.field_a.field_E / 2, 48);
         for (var2 = 0; var2 < -1 + nk.field_Jb.field_i; var2++) {
           if (MouseWheelInput.a(var2, (byte) -124)) {
             stackIn_9_1 = (var2 == nk.field_Jb.field_b) && (!kn.field_e);
@@ -603,7 +603,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           if (this.field_y != param1) {
             this.b(param1, -114);
           }
-          this.field_v.b(var10, var9, 64);
+          this.field_v.drawAdditive(var10, var9, 64);
           var12 = (int)(128.0 * (1.0 + te.a(mo.field_a)));
           if (var12 < 0) {
             var12 = 0;
@@ -611,7 +611,7 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           if (var12 > 256) {
             var12 = 256;
           }
-          this.field_C.b(var10, var9, var12);
+          this.field_C.drawAdditive(var10, var9, var12);
         }
         return;
     }

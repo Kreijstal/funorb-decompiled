@@ -30,7 +30,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var3 = ph.pollAccountNameCheck(param0, -79);
+            var3 = InteractiveWidget.pollAccountNameCheck(param0, -79);
             if (var3 != null &&
               null == var3.message) {
               this.checkedName = param0;
@@ -101,7 +101,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var5 = ph.pollAccountNameCheck(param1, -86);
+            var5 = InteractiveWidget.pollAccountNameCheck(param1, -86);
             if (var5 == null) {
               return null;
             }
@@ -150,7 +150,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         PasswordValidator.a(false, 256, dg.field_tb);
     }
 
-    final void f(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 != -2) {
           AccountNameAvailabilityValidator.clearStaticReferences((byte) 54);

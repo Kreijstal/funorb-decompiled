@@ -410,7 +410,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gameopt_reject_x_from_game", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart007.stringState0113 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NameSuggestionsPanel.stringState0113 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mu_gameopt_invite_x_to_game", -15192);
                 if (null != byteArrayState0015) {
@@ -718,7 +718,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("presstabtochat", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart007.stringState0114 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NameSuggestionsPanel.stringState0114 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("pressf10toquickchat", -15192);
                 if (null != byteArrayState0015) {
@@ -2689,7 +2689,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_nonmember", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart007.stringState0112 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NameSuggestionsPanel.stringState0112 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("fs_button_close", -15192);
                 if (byteArrayState0015 != null) {
@@ -2733,7 +2733,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_including_gamename", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart007.stringState0111 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NameSuggestionsPanel.stringState0111 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_full_access_1", -15192);
                 if (null != byteArrayState0015) {

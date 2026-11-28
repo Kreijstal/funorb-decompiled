@@ -106,14 +106,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
               if (validationStatusLocal1 == ReturnedShapeUpdate.validationStatusState0005) {
                 rgbSpriteLocal8 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-                rgbSpriteLocal8.performAction0295(integerLocal2, integerLocal3 - (rgbSpriteLocal8.integerState0255 >> 1), 256);
+                rgbSpriteLocal8.drawAdditive(integerLocal2, integerLocal3 - (rgbSpriteLocal8.integerState0255 >> 1), 256);
                 return;
               }
               if (validationStatusLocal1 != MixedSupport023.validationStatusState0001) {
                 return;
               }
               rgbSpriteLocal9 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-              rgbSpriteLocal9.performAction0295(integerLocal2, integerLocal3 - (rgbSpriteLocal9.integerState0255 >> 1), 256);
+              rgbSpriteLocal9.drawAdditive(integerLocal2, integerLocal3 - (rgbSpriteLocal9.integerState0255 >> 1), 256);
               return;
             }
             rgbSpriteLocal17 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -128,9 +128,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal14, integerLocal15);
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
             }
-            rgbSpriteLocal17.performAction0259(112, 144, rgbSpriteLocal17.integerState0254 << 4, rgbSpriteLocal17.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+            rgbSpriteLocal17.drawRotatedAbout(112, 144, rgbSpriteLocal17.integerState0254 << 4, rgbSpriteLocal17.integerState0260 << 4, -this.integerState0574 << 10, 4096);
             ByteStorage.performAction1060((byte) -5);
-            this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal17.integerState0254 >> 1), integerLocal3 - rgbSpriteLocal17.integerState0260, 256);
+            this.rgbSpriteState0039.drawAdditive(integerLocal2 - (rgbSpriteLocal17.integerState0254 >> 1), integerLocal3 - rgbSpriteLocal17.integerState0260, 256);
             return;
           }
           integerLocal46 = callbackContract012Local12.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
@@ -138,14 +138,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
             if (validationStatusLocal1 == ReturnedShapeUpdate.validationStatusState0005) {
               rgbSpriteLocal18 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-              rgbSpriteLocal18.performAction0295(integerLocal2, integerLocal46 - (rgbSpriteLocal18.integerState0255 >> 1), 256);
+              rgbSpriteLocal18.drawAdditive(integerLocal2, integerLocal46 - (rgbSpriteLocal18.integerState0255 >> 1), 256);
               return;
             }
             if (validationStatusLocal1 != MixedSupport023.validationStatusState0001) {
               return;
             }
             rgbSpriteLocal19 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-            rgbSpriteLocal19.performAction0295(integerLocal2, integerLocal46 - (rgbSpriteLocal19.integerState0255 >> 1), 256);
+            rgbSpriteLocal19.drawAdditive(integerLocal2, integerLocal46 - (rgbSpriteLocal19.integerState0255 >> 1), 256);
             return;
           }
           rgbSpriteLocal20 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -168,9 +168,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               }
             }
           }
-          rgbSpriteLocal20.performAction0259(112, 144, rgbSpriteLocal20.integerState0254 << 4, rgbSpriteLocal20.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+          rgbSpriteLocal20.drawRotatedAbout(112, 144, rgbSpriteLocal20.integerState0254 << 4, rgbSpriteLocal20.integerState0260 << 4, -this.integerState0574 << 10, 4096);
           ByteStorage.performAction1060((byte) -5);
-          this.rgbSpriteState0039.performAction0295(integerLocal2 - (rgbSpriteLocal20.integerState0254 >> 1), integerLocal46 - rgbSpriteLocal20.integerState0260, 256);
+          this.rgbSpriteState0039.drawAdditive(integerLocal2 - (rgbSpriteLocal20.integerState0254 >> 1), integerLocal46 - rgbSpriteLocal20.integerState0260, 256);
           return;
         }
         if (DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
@@ -194,14 +194,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal52) {
               if (validationStatusLocal52 == ReturnedShapeUpdate.validationStatusState0005) {
                 rgbSpriteLocal21 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-                rgbSpriteLocal21.performAction0295(integerLocal35, integerLocal37 - (rgbSpriteLocal21.integerState0255 >> 1), 256);
+                rgbSpriteLocal21.drawAdditive(integerLocal35, integerLocal37 - (rgbSpriteLocal21.integerState0255 >> 1), 256);
                 return;
               }
               if (validationStatusLocal52 != MixedSupport023.validationStatusState0001) {
                 return;
               }
               rgbSpriteLocal22 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-              rgbSpriteLocal22.performAction0295(integerLocal35, integerLocal37 - (rgbSpriteLocal22.integerState0255 >> 1), 256);
+              rgbSpriteLocal22.drawAdditive(integerLocal35, integerLocal37 - (rgbSpriteLocal22.integerState0255 >> 1), 256);
               return;
             }
             rgbSpriteLocal23 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -216,9 +216,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               this.rgbSpriteState0039 = new RgbSprite(integerLocal40, integerLocal43);
               ValidationStatus.performAction1570(true, this.rgbSpriteState0039);
             }
-            rgbSpriteLocal23.performAction0259(112, 144, rgbSpriteLocal23.integerState0254 << 4, rgbSpriteLocal23.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+            rgbSpriteLocal23.drawRotatedAbout(112, 144, rgbSpriteLocal23.integerState0254 << 4, rgbSpriteLocal23.integerState0260 << 4, -this.integerState0574 << 10, 4096);
             ByteStorage.performAction1060((byte) -5);
-            this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal23.integerState0254 >> 1), integerLocal37 - rgbSpriteLocal23.integerState0260, 256);
+            this.rgbSpriteState0039.drawAdditive(integerLocal35 - (rgbSpriteLocal23.integerState0254 >> 1), integerLocal37 - rgbSpriteLocal23.integerState0260, 256);
             return;
           }
           integerLocal49 = callbackContract012Local33.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
@@ -226,14 +226,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal52) {
             if (validationStatusLocal52 == ReturnedShapeUpdate.validationStatusState0005) {
               rgbSpriteLocal24 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-              rgbSpriteLocal24.performAction0295(integerLocal35, integerLocal49 - (rgbSpriteLocal24.integerState0255 >> 1), 256);
+              rgbSpriteLocal24.drawAdditive(integerLocal35, integerLocal49 - (rgbSpriteLocal24.integerState0255 >> 1), 256);
               return;
             }
             if (validationStatusLocal52 != MixedSupport023.validationStatusState0001) {
               return;
             }
             rgbSpriteLocal25 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-            rgbSpriteLocal25.performAction0295(integerLocal35, integerLocal49 - (rgbSpriteLocal25.integerState0255 >> 1), 256);
+            rgbSpriteLocal25.drawAdditive(integerLocal35, integerLocal49 - (rgbSpriteLocal25.integerState0255 >> 1), 256);
             return;
           }
           rgbSpriteLocal26 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -256,9 +256,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               }
             }
           }
-          rgbSpriteLocal26.performAction0259(112, 144, rgbSpriteLocal26.integerState0254 << 4, rgbSpriteLocal26.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+          rgbSpriteLocal26.drawRotatedAbout(112, 144, rgbSpriteLocal26.integerState0254 << 4, rgbSpriteLocal26.integerState0260 << 4, -this.integerState0574 << 10, 4096);
           ByteStorage.performAction1060((byte) -5);
-          this.rgbSpriteState0039.performAction0295(integerLocal35 - (rgbSpriteLocal26.integerState0254 >> 1), integerLocal49 - rgbSpriteLocal26.integerState0260, 256);
+          this.rgbSpriteState0039.drawAdditive(integerLocal35 - (rgbSpriteLocal26.integerState0254 >> 1), integerLocal49 - rgbSpriteLocal26.integerState0260, 256);
           return;
         }
         this.stringState0078 = stringLocal13;
@@ -273,14 +273,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal53) {
             if (validationStatusLocal53 == ReturnedShapeUpdate.validationStatusState0005) {
               rgbSpriteLocal30 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-              rgbSpriteLocal30.performAction0295(integerLocal36, integerLocal38 - (rgbSpriteLocal30.integerState0255 >> 1), 256);
+              rgbSpriteLocal30.drawAdditive(integerLocal36, integerLocal38 - (rgbSpriteLocal30.integerState0255 >> 1), 256);
               return;
             }
             if (validationStatusLocal53 != MixedSupport023.validationStatusState0001) {
               return;
             }
             rgbSpriteLocal31 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-            rgbSpriteLocal31.performAction0295(integerLocal36, integerLocal38 - (rgbSpriteLocal31.integerState0255 >> 1), 256);
+            rgbSpriteLocal31.drawAdditive(integerLocal36, integerLocal38 - (rgbSpriteLocal31.integerState0255 >> 1), 256);
             return;
           }
           rgbSpriteLocal32 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -303,9 +303,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
               }
             }
           }
-          rgbSpriteLocal32.performAction0259(112, 144, rgbSpriteLocal32.integerState0254 << 4, rgbSpriteLocal32.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+          rgbSpriteLocal32.drawRotatedAbout(112, 144, rgbSpriteLocal32.integerState0254 << 4, rgbSpriteLocal32.integerState0260 << 4, -this.integerState0574 << 10, 4096);
           ByteStorage.performAction1060((byte) -5);
-          this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal32.integerState0254 >> 1), integerLocal38 - rgbSpriteLocal32.integerState0260, 256);
+          this.rgbSpriteState0039.drawAdditive(integerLocal36 - (rgbSpriteLocal32.integerState0254 >> 1), integerLocal38 - rgbSpriteLocal32.integerState0260, 256);
           return;
         }
         uiComponentLocal55 = (UiComponent) null;
@@ -315,14 +315,14 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
           DiagnosticSupport002.validationStatusState0002 != validationStatusLocal53) {
           if (validationStatusLocal53 == ReturnedShapeUpdate.validationStatusState0005) {
             rgbSpriteLocal27 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-            rgbSpriteLocal27.performAction0295(integerLocal36, integerLocal39 - (rgbSpriteLocal27.integerState0255 >> 1), 256);
+            rgbSpriteLocal27.drawAdditive(integerLocal36, integerLocal39 - (rgbSpriteLocal27.integerState0255 >> 1), 256);
             return;
           }
           if (validationStatusLocal53 != MixedSupport023.validationStatusState0001) {
             return;
           }
           rgbSpriteLocal28 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-          rgbSpriteLocal28.performAction0295(integerLocal36, integerLocal39 - (rgbSpriteLocal28.integerState0255 >> 1), 256);
+          rgbSpriteLocal28.drawAdditive(integerLocal36, integerLocal39 - (rgbSpriteLocal28.integerState0255 >> 1), 256);
           return;
         }
         rgbSpriteLocal29 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -346,9 +346,9 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             }
           }
         }
-        rgbSpriteLocal29.performAction0259(112, 144, rgbSpriteLocal29.integerState0254 << 4, rgbSpriteLocal29.integerState0260 << 4, -this.integerState0574 << 10, 4096);
+        rgbSpriteLocal29.drawRotatedAbout(112, 144, rgbSpriteLocal29.integerState0254 << 4, rgbSpriteLocal29.integerState0260 << 4, -this.integerState0574 << 10, 4096);
         ByteStorage.performAction1060((byte) -5);
-        this.rgbSpriteState0039.performAction0295(integerLocal36 - (rgbSpriteLocal29.integerState0254 >> 1), integerLocal39 - rgbSpriteLocal29.integerState0260, 256);
+        this.rgbSpriteState0039.drawAdditive(integerLocal36 - (rgbSpriteLocal29.integerState0254 >> 1), integerLocal39 - rgbSpriteLocal29.integerState0260, 256);
         return;
     }
 

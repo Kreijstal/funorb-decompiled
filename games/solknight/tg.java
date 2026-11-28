@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends pj {
+final class tg extends InteractiveWidget {
     static Sprite field_J;
     static Sprite field_I;
     static String field_K;
@@ -95,9 +95,9 @@ final class tg extends pj {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void activateFromInput(boolean param0, int param1, int param2, int param3) {
         this.field_F = !this.field_F ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     tg(String param0, dg param1, boolean param2) {

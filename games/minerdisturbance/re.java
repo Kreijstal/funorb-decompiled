@@ -224,7 +224,7 @@ final class re implements uj {
                 if (AccountRequestState.field_b) {
                 }
               }
-              if (ei.field_L) {
+              if (NameSuggestionsPanel.field_L) {
                 kj.field_a.readUnsignedByte((byte) -54);
                 kj.field_a.readUnsignedByte((byte) -54);
                 kj.field_a.readInt((byte) 33);

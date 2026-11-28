@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm extends kn implements sh {
+final class fm extends kn implements WidgetActivationListener {
     private int[] field_P;
     static int[] field_N;
     private int field_R;
-    private hc[] field_M;
+    private InteractiveWidget[] field_M;
     private BitmapFont field_Q;
     static String field_K;
     static String field_O;
@@ -14,7 +14,7 @@ final class fm extends kn implements sh {
     private rg field_J;
     static String field_I;
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = MinerDisturbance.field_ab;
@@ -38,11 +38,11 @@ final class fm extends kn implements sh {
         }
     }
 
-    final hc a(String param0, int param1, rm param2) {
-        hc var4 = null;
+    final InteractiveWidget a(String param0, int param1, rm param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hc stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,7 +50,7 @@ final class fm extends kn implements sh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hc(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           if (param1 <= 28) {
             this.field_P = (int[]) null;
           }
@@ -161,8 +161,8 @@ final class fm extends kn implements sh {
         if (this.field_R >= param1) {
           return;
         }
-        hc[] var7 = new hc[param1];
-        hc[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_R; var5++) {
           var7[var5] = this.field_M[var5];

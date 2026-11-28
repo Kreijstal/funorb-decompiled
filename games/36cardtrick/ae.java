@@ -186,7 +186,7 @@ final class ae {
         int var10Lifetime2;
         int var10Lifetime2Lifetime1;
         if (param5 <= 0) {
-          param0.c(param1, param2, param3);
+          param0.drawGrayModulated(param1, param2, param3);
           return;
         }
         if (param5 >= param4) {
@@ -257,7 +257,7 @@ final class ae {
         int var9Lifetime2Lifetime1;
         int var9Lifetime2Lifetime2;
         if (param4 <= 0) {
-          param0.d(param1, param2);
+          param0.draw(param1, param2);
           return;
         }
         if (param4 >= param3) {

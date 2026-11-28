@@ -17,18 +17,18 @@ final class nd extends TileEffect {
         if (this.field_f < 10) {
           var5 = 6 * this.field_f << 1;
           var4 = this.field_f * 12 << 1;
-          uu.field_vb.a((127 - var4 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4 + 1, 1 + var5);
+          uu.field_vb.drawScaled((127 - var4 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4 + 1, 1 + var5);
           return;
         }
         if (this.field_f < 50) {
           var4Lifetime1 = 256;
           var5 = 128;
-          uu.field_vb.a((127 - var4Lifetime1 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4Lifetime1 + 1, 1 + var5);
+          uu.field_vb.drawScaled((127 - var4Lifetime1 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4Lifetime1 + 1, 1 + var5);
           return;
         }
         var4Lifetime2 = 128 - this.field_f * 12 + 588 << 1;
         var5 = 64 - 6 * (this.field_f - 49) << 1;
-        uu.field_vb.a((127 - var4Lifetime2 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4Lifetime2 + 1, 1 + var5);
+        uu.field_vb.drawScaled((127 - var4Lifetime2 >> 1) + param2, (-var5 + 64 - 1 >> 1) + (param0 - 64), var4Lifetime2 + 1, 1 + var5);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -45,18 +45,18 @@ final class nd extends TileEffect {
         if (this.field_f < 10) {
           var5 = this.field_f * 6 << 1;
           var4 = this.field_f * 12 << 1;
-          uu.field_vb.a((128 - var4 - 1 >> 1) + param2, param0 + (-var5 + 63 >> 1) - 64, 1 + var4, 1 + var5);
+          uu.field_vb.drawScaled((128 - var4 - 1 >> 1) + param2, param0 + (-var5 + 63 >> 1) - 64, 1 + var4, 1 + var5);
           return;
         }
         if (50 <= this.field_f) {
           var5Lifetime1 = 64 - (this.field_f * 6 - 294) << 1;
           var4Lifetime1 = -((this.field_f - 49) * 12) + 128 << 1;
-          uu.field_vb.a((128 - var4Lifetime1 - 1 >> 1) + param2, param0 + (-var5Lifetime1 + 63 >> 1) - 64, 1 + var4Lifetime1, 1 + var5Lifetime1);
+          uu.field_vb.drawScaled((128 - var4Lifetime1 - 1 >> 1) + param2, param0 + (-var5Lifetime1 + 63 >> 1) - 64, 1 + var4Lifetime1, 1 + var5Lifetime1);
           return;
         }
         var4Lifetime2 = 256;
         var5Lifetime2 = 128;
-        uu.field_vb.a((128 - var4Lifetime2 - 1 >> 1) + param2, param0 + (-var5Lifetime2 + 63 >> 1) - 64, 1 + var4Lifetime2, 1 + var5Lifetime2);
+        uu.field_vb.drawScaled((128 - var4Lifetime2 - 1 >> 1) + param2, param0 + (-var5Lifetime2 + 63 >> 1) - 64, 1 + var4Lifetime2, 1 + var5Lifetime2);
     }
 
     final boolean b(int param0) {

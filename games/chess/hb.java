@@ -173,7 +173,7 @@ final class hb {
                 var25 = param5.field_L[var23];
                 var26 = param5.field_u[var23];
                 ConfirmedEmailAvailabilityValidator.field_n[var23] = var9 + (var26 * var18 + (var15 * var25 + var12 * var24) >> 16);
-                t.field_M[var23] = var10 + (var26 * var19 + var24 * var13 + var16 * var25 >> 16);
+                NameSuggestionsPanel.field_M[var23] = var10 + (var26 * var19 + var24 * var13 + var16 * var25 >> 16);
                 uc.field_e[var23] = var11 + (var25 * var17 + (var24 * var14 + var26 * var20) >> 16);
                 var24 = param5.field_p[var23];
                 var25 = param5.field_D[var23];

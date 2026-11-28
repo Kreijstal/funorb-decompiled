@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends RgbSprite {
-    final void a(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -46,7 +46,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbAlpha(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -180,7 +180,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledWithIntensity(int param0, int param1, int param2, int param3, int param4) {
         int var14 = 0;
         int var16 = 0;
         int var14Lifetime1;
@@ -188,7 +188,7 @@ final class ArgbSprite extends RgbSprite {
         int var16Lifetime1;
         int var16Lifetime2;
         if (param4 == 256) {
-          this.b(param0, param1, param2, param3);
+          this.drawScaled(param0, param1, param2, param3);
           return;
         }
         if (param2 <= 0 ||
@@ -277,7 +277,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -347,7 +347,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -391,7 +391,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgb(SoftwareRasterizer.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawTintedGray(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -435,7 +435,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var13Lifetime1;
@@ -496,7 +496,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbScaled(SoftwareRasterizer.field_h, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void b(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;

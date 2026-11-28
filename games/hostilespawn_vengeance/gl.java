@@ -38,7 +38,7 @@ final class gl {
         for (var10 = 0; var10 < var9; var10++) {
           var3[var10] = new RgbSprite(var5, var6);
           sb.a(var3[var10], -122);
-          param0.c(-var7, -var8);
+          param0.drawOpaque(-var7, -var8);
           var7 = var7 + var5;
           if (var7 >= param0.field_z) {
             var7 = 0;

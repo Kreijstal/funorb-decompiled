@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends WidgetContainer implements ql {
+final class lb extends WidgetContainer implements WidgetActivationListener {
     private ButtonWidget field_B;
     static Sprite[] field_E;
     private ButtonWidget field_F;
@@ -66,7 +66,7 @@ final class lb extends WidgetContainer implements ql {
         return pi.field_p;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -316,29 +316,29 @@ final class lb extends WidgetContainer implements ql {
             SoftwareRasterizer.saveClip(cg.field_d);
             if (null != param3[0]) {
               SoftwareRasterizer.intersectClip(param0, param4, var16, var18);
-              param3[0].c(param0, param4);
+              param3[0].draw(param0, param4);
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
             if (null != param3[2]) {
               SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
-              param3[2].c(var13, param4);
+              param3[2].draw(var13, param4);
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
             if (param3[6] != null) {
               SoftwareRasterizer.intersectClip(param0, var20, var16, var11);
-              param3[6].c(param0, var15);
+              param3[6].draw(param0, var15);
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
             if (param3[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var20, var10, var11);
-              param3[8].c(var13, var15);
+              param3[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
             if (null != param3[1] &&
               param3[1].field_m != 0) {
               SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (var21 = var12; var21 < var13; var21 = var21 + param3[1].field_m) {
-                param3[1].c(var21, param4);
+                param3[1].draw(var21, param4);
               }
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
@@ -346,7 +346,7 @@ final class lb extends WidgetContainer implements ql {
               0 != param3[7].field_m) {
               SoftwareRasterizer.intersectClip(var16, var20, var17, var11);
               for (var21Lifetime1 = var12; var13 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param3[7].field_m) {
-                param3[7].c(var21Lifetime1, var15);
+                param3[7].draw(var21Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
@@ -354,7 +354,7 @@ final class lb extends WidgetContainer implements ql {
               param3[3].field_n != 0) {
               SoftwareRasterizer.intersectClip(param0, var18, var16, var20);
               for (var21Lifetime2 = var14; var15 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param3[3].field_n) {
-                param3[3].c(param0, var21Lifetime2);
+                param3[3].draw(param0, var21Lifetime2);
               }
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
@@ -362,7 +362,7 @@ final class lb extends WidgetContainer implements ql {
               param3[5].field_n != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var20);
               for (var21Lifetime3 = var14; var15 > var21Lifetime3; var21Lifetime3 = var21Lifetime3 + param3[5].field_n) {
-                param3[5].c(var13, var21Lifetime3);
+                param3[5].draw(var13, var21Lifetime3);
               }
               SoftwareRasterizer.restoreClip(cg.field_d);
             }
@@ -374,7 +374,7 @@ final class lb extends WidgetContainer implements ql {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var20);
               for (var21Lifetime4 = var14; var21Lifetime4 < var15; var21Lifetime4 = var21Lifetime4 + param3[4].field_n) {
                 for (var22 = var12; var13 > var22; var22 = var22 + param3[4].field_m) {
-                  param3[4].c(var22, var21Lifetime4);
+                  param3[4].draw(var22, var21Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(cg.field_d);

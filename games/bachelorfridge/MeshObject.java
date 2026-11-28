@@ -55,7 +55,7 @@ abstract class MeshObject {
               if (var8 > 256) {
                 var8 = 256;
               }
-              iga.field_a[2 + var7 % 7].a((var6.field_i * param1 >> 16) + (param4 - 32), param0 - (((var6.field_h - var6.field_q) * param1 >> 16) + 2 + 32), var6.field_o);
+              iga.field_a[2 + var7 % 7].drawWithOpacity((var6.field_i * param1 >> 16) + (param4 - 32), param0 - (((var6.field_h - var6.field_q) * param1 >> 16) + 2 + 32), var6.field_o);
             }
             var6 = (lh) (param5.nextForward(0));
             var7++;

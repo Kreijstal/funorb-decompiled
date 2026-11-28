@@ -95,29 +95,29 @@ final class ti extends sf {
             }
             if (null != param3[0]) {
               SoftwareRasterizer.intersectClip(param4, param5, var16, var18);
-              param3[0].c(param4, param5);
+              param3[0].draw(param4, param5);
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
             if (null != param3[2]) {
               SoftwareRasterizer.intersectClip(var17, param5, var10, var18);
-              param3[2].c(var13, param5);
+              param3[2].draw(var13, param5);
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
             if (param3[6] != null) {
               SoftwareRasterizer.intersectClip(param4, var19, var16, var11);
-              param3[6].c(param4, var15);
+              param3[6].draw(param4, var15);
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
             if (param3[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param3[8].c(var13, var15);
+              param3[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
             if (param3[1] != null &&
               0 != param3[1].field_s) {
               SoftwareRasterizer.intersectClip(var16, param5, var17, var18);
               for (var20 = var12; var13 > var20; var20 = var20 + param3[1].field_s) {
-                param3[1].c(var20, param5);
+                param3[1].draw(var20, param5);
               }
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
@@ -125,7 +125,7 @@ final class ti extends sf {
               param3[7].field_s != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param3[7].field_s) {
-                param3[7].c(var20Lifetime1, var15);
+                param3[7].draw(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
@@ -133,7 +133,7 @@ final class ti extends sf {
               0 != param3[3].field_t) {
               SoftwareRasterizer.intersectClip(param4, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param3[3].field_t) {
-                param3[3].c(param4, var20Lifetime2);
+                param3[3].draw(param4, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
@@ -141,7 +141,7 @@ final class ti extends sf {
               param3[5].field_t != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param3[5].field_t) {
-                param3[5].c(var13, var20Lifetime3);
+                param3[5].draw(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(sf.field_K);
             }
@@ -151,7 +151,7 @@ final class ti extends sf {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param3[4].field_t) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param3[4].field_s) {
-                  param3[4].c(var21, var20Lifetime4);
+                  param3[4].draw(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(sf.field_K);

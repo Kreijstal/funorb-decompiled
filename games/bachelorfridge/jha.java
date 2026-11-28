@@ -21,7 +21,7 @@ final class jha extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var4 = (int)(128.0 * (1.0 - Math.cos(3.141592653589793 * (double)this.field_f / 32.0)));
         super.a(param0, param1 + param1, param2);
-        this.field_h.a(param2, param0, var4);
+        this.field_h.drawWithOpacity(param2, param0, var4);
     }
 
     jha(BattleScreen param0, int param1, int param2, int param3) {
@@ -33,7 +33,7 @@ final class jha extends TileEffect {
           var5 = param0.field_s.field_p;
           this.field_h = new Sprite(var5.field_q, var5.field_p);
           bu.a(0, this.field_h);
-          var5.e(0, 0, 16777215);
+          var5.drawGrayRampTinted(0, 0, 16777215);
           db.b(73);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jha.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

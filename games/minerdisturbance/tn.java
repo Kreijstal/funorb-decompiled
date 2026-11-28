@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tn extends hc {
+class tn extends InteractiveWidget {
     private lb field_N;
     static boolean field_M;
     static Sprite[] field_K;
@@ -16,8 +16,8 @@ class tn extends hc {
         return param0 == (-param0 & param0) ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param1 - this.field_u;
         int var6 = param2 - this.field_t;
         lb var7 = this.b(var6, -2, var5);

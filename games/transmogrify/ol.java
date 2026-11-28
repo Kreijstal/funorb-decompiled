@@ -25,7 +25,7 @@ final class ol {
           try {
             WordLanguage.field_l = new BitPacketBuffer(param1);
             LoginPanel.field_D = new BitPacketBuffer(param6);
-            dh.field_x = param12;
+            NameSuggestionsPanel.field_x = param12;
             ua.field_c = param8;
             kc.field_D = param10;
             DiskArchiveRequest.field_w = param5;
@@ -125,7 +125,7 @@ final class ol {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4);
-              param0.getAppletContext().showDocument(dh.a(param0, (byte) 117, var5), "_self");
+              param0.getAppletContext().showDocument(NameSuggestionsPanel.a(param0, (byte) 117, var5), "_self");
               if (param1 == 30194) {
                 return;
               }

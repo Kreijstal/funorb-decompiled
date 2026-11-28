@@ -137,7 +137,7 @@ final class le {
                 if (pd.field_Rb != null) {
                   if (!qj.field_d ||
                     kb.field_P == null) {
-                    var4 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -112) + "] ";
+                    var4 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -112) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + kb.field_P + "] ";
                     }

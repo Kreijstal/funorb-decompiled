@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends vn implements mj {
+final class AccountCreationResultPanel extends vn implements WidgetActivationListener {
     private boolean field_Hb;
     private AccountRegistrationPanel field_Ib;
     private boolean field_Jb;
@@ -20,7 +20,7 @@ final class AccountCreationResultPanel extends vn implements mj {
         return false;
     }
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         if (param4 != -24221) {
           this.field_Ib = (AccountRegistrationPanel) null;
         }
@@ -55,7 +55,7 @@ final class AccountCreationResultPanel extends vn implements mj {
             if (param1.suggestions != null) {
               var4 = BoundedRandomAccessFile.field_g;
               if (null != this.field_Ib) {
-                this.field_Ib.a(120);
+                this.field_Ib.onNameSuggestionsRefreshRequested(120);
               }
             } else {
               var4 = param1.message;

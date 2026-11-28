@@ -183,13 +183,13 @@ final class gk {
         RuntimeException var2 = null;
         try {
           if (null != mc.field_H) {
-            mc.field_H.field_N.a(args, (byte) -58);
+            mc.field_H.field_N.setNameSuggestions(args, (byte) -58);
           }
           if (param1 >= -24) {
             gk.a(117);
           }
           if (null != ne.field_d) {
-            ne.field_d.field_I.a(args, (byte) -58);
+            ne.field_d.field_I.setNameSuggestions(args, (byte) -58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

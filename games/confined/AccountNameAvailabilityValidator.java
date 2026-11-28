@@ -88,7 +88,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void e(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 != 639775169) {
           PlayerShip var3 = (PlayerShip) null;

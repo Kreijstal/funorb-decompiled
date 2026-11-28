@@ -45,11 +45,11 @@ final class lc extends qj {
           var4 = var2.field_v;
           wj.b(true);
           m.field_a = new Sprite(var3, var4 * 3 / 4);
-          m.field_a.e();
-          var2.d(0, 0);
+          m.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           ai.field_g = new Sprite(var3, -m.field_a.field_v + var4);
-          ai.field_g.e();
-          var2.d(0, -m.field_a.field_v);
+          ai.field_g.bindAsRenderTarget();
+          var2.drawOpaque(0, -m.field_a.field_v);
           ai.field_g.field_y = m.field_a.field_v;
           wf.a(-61);
         } catch (RuntimeException runtimeException) {

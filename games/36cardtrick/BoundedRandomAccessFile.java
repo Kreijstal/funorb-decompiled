@@ -172,7 +172,7 @@ final class BoundedRandomAccessFile {
           if (!ia.a((byte) -79)) {
             if (null != DiskCacheWorker.field_a &&
               DiskCacheWorker.field_a.focusLost) {
-              PcmOutputWorker.a(true);
+              PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
               s.field_d.b(new ol(s.field_d, BufferedRandomAccessFile.field_b), (byte) -15);
             }
             return;

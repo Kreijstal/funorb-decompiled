@@ -55,7 +55,7 @@ final class l {
           NetworkGameClient.field_t = new byte[ef.field_l][];
           DebouncedFieldValidator.field_i = new boolean[ef.field_l];
           of.field_d = new byte[ef.field_l][];
-          ij.field_H = new int[ef.field_l];
+          NameSuggestionsPanel.field_H = new int[ef.field_l];
           ob.field_a = new int[ef.field_l];
           b.field_b = new int[ef.field_l];
           var17.position = -(ef.field_l * 8) + (-7 + param0.length);
@@ -69,7 +69,7 @@ final class l {
             b.field_b[var4Lifetime1] = var17.readUnsignedShort((byte) -124);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < ef.field_l; var4Lifetime2++) {
-            ij.field_H[var4Lifetime2] = var17.readUnsignedShort((byte) 106);
+            NameSuggestionsPanel.field_H[var4Lifetime2] = var17.readUnsignedShort((byte) 106);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < ef.field_l; var4Lifetime3++) {
             ob.field_a[var4Lifetime3] = var17.readUnsignedShort((byte) -74);
@@ -84,7 +84,7 @@ final class l {
           }
           var17.position = 0;
           for (var4Lifetime5 = 0; ef.field_l > var4Lifetime5; var4Lifetime5++) {
-            var5 = ij.field_H[var4Lifetime5];
+            var5 = NameSuggestionsPanel.field_H[var4Lifetime5];
             var6 = ob.field_a[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

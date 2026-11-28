@@ -104,9 +104,9 @@ final class mg {
         }
         gg.a(14756);
         if (h.field_F < 150) {
-          id.field_e.c(var3, var4);
+          id.field_e.drawHalfSize(var3, var4);
         } else {
-          sg.field_d.e(15 + var3, 10 + var4, var5);
+          sg.field_d.drawWithOpacity(15 + var3, 10 + var4, var5);
         }
         var6 = h.field_F - 125;
         if (param1 != 207) {
@@ -116,14 +116,14 @@ final class mg {
           var6 < 50) {
           if (var6 >= 20) {
             if (var6 < 30) {
-              rc.field_i.b(var3, var4, 256);
+              rc.field_i.drawAdditive(var3, var4, 256);
             } else {
               var7 = (12800 - var6 * 256) / 20;
-              rc.field_i.b(var3, var4, var7);
+              rc.field_i.drawAdditive(var3, var4, var7);
             }
           } else {
             var7 = 256 * var6 / 20;
-            rc.field_i.b(var3, var4, var7);
+            rc.field_i.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = h.field_F - 140;
@@ -132,7 +132,7 @@ final class mg {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          qg.field_z.e(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+          qg.field_z.drawWithOpacity(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }
@@ -163,10 +163,10 @@ final class mg {
           t.field_i = -80 + (207 + var1_int) >> 1;
           for (var1_intLifetime1 = 0; var1_intLifetime1 <= 14; var1_intLifetime1++) {
             ia.field_c[var1_intLifetime1] = new RgbSprite(207, 34);
-            ia.field_c[var1_intLifetime1].c();
+            ia.field_c[var1_intLifetime1].bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
             SoftwareRasterizer.setClip(4, 4, 203, 30);
-            field_j[4].b(0, 0);
+            field_j[4].drawOpaque(0, 0);
             var6 = IntrusiveDeque.field_c[var1_intLifetime1];
             var3 = qa.field_b.stringWidth(var6);
             var4 = -var3 + 207 >> 1;
@@ -181,10 +181,10 @@ final class mg {
           }
           for (var1_intLifetime2 = 15; var1_intLifetime2 <= 21; var1_intLifetime2++) {
             ia.field_c[var1_intLifetime2] = new RgbSprite(120, 31);
-            ia.field_c[var1_intLifetime2].c();
+            ia.field_c[var1_intLifetime2].bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 207, 34, 6962948);
             SoftwareRasterizer.setClip(2, 2, 118, 29);
-            field_j[4].b(0, 0);
+            field_j[4].drawOpaque(0, 0);
             var7 = IntrusiveDeque.field_c[var1_intLifetime2];
             var3Lifetime1 = qa.field_b.stringWidth(var7);
             var4Lifetime1 = 120 - var3Lifetime1 >> 1;

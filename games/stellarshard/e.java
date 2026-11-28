@@ -19,7 +19,7 @@ final class e {
           if (BufferedRandomAccessFile.field_g > ArchiveRequest.field_v) {
             return null;
           }
-          if (BufferedRandomAccessFile.field_g + ul.field_D > ArchiveRequest.field_v) {
+          if (BufferedRandomAccessFile.field_g + NameSuggestionsPanel.field_D > ArchiveRequest.field_v) {
             return hk.field_m;
           }
           return null;
@@ -30,7 +30,7 @@ final class e {
         if (BufferedRandomAccessFile.field_g > ArchiveRequest.field_v) {
           return null;
         }
-        if (BufferedRandomAccessFile.field_g + ul.field_D > ArchiveRequest.field_v) {
+        if (BufferedRandomAccessFile.field_g + NameSuggestionsPanel.field_D > ArchiveRequest.field_v) {
           return hk.field_m;
         }
         return null;

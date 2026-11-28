@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends s {
+final class jf extends InteractiveWidget {
     private FieldValidator field_I;
     static int field_H;
     private int field_G;
@@ -37,10 +37,10 @@ final class jf extends s {
           var8 != uj.field_b) {
           if (vh.field_h == var8) {
             var13 = wd.field_C[2];
-            var13.e(-(var13.field_o >> 1) + var5, var6 - (var13.field_k >> 1), 256);
+            var13.drawAdditive(-(var13.field_o >> 1) + var5, var6 - (var13.field_k >> 1), 256);
           } else if (nc.field_bb == var8) {
             var14 = wd.field_C[1];
-            var14.e(-(var14.field_o >> 1) + var5, -(var14.field_k >> 1) + var6, 256);
+            var14.drawAdditive(-(var14.field_o >> 1) + var5, -(var14.field_k >> 1) + var6, 256);
           }
         } else {
           var12 = wd.field_C[0];
@@ -55,9 +55,9 @@ final class jf extends s {
             MidiPcmStream.field_N = new RgbSprite(var9, var10);
             de.a(param2 ^ -1048454, MidiPcmStream.field_N);
           }
-          var12.b(112, 144, var12.field_s << 4, var12.field_t << 4, -this.field_G << 10, 4096);
+          var12.drawRotatedAboutBilinear(112, 144, var12.field_s << 4, var12.field_t << 4, -this.field_G << 10, 4096);
           ValidatedTextField.g((byte) -105);
-          MidiPcmStream.field_N.e(-var12.field_s + var5, var6 - var12.field_t, 256);
+          MidiPcmStream.field_N.drawAdditive(-var12.field_s + var5, var6 - var12.field_t, 256);
         }
     }
 

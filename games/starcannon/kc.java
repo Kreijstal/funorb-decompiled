@@ -148,7 +148,7 @@ abstract class kc extends qd {
           var9Lifetime1++;
           var7Lifetime1++;
         }
-        jk.field_g.e(this.field_i + param0 - 90, 10 + param2);
+        jk.field_g.draw(this.field_i + param0 - 90, 10 + param2);
         wj.a(112, DelayedPcmStream.field_o, param0 + 5, 35 + param2, this.field_i - 10);
         wj.a(121, ti.field_e, param0, this.field_f + (param2 - 22), this.field_i);
         var5Lifetime2 = 169;

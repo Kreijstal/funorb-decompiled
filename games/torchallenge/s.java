@@ -89,7 +89,7 @@ final class s extends IntrusiveNode {
               dk.field_s.position = 0;
               var4 = id.field_b;
               var5 = var4;
-              aj.field_c = ng.field_A;
+              aj.field_c = InteractiveWidget.field_A;
               var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               ul.field_j = stackIn_11_0;

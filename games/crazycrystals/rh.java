@@ -74,7 +74,7 @@ final class rh {
           var6 = nl.field_f[ue.field_a];
           var1 = var6;
           if (var6 != null) {
-            var6.a(245, 199);
+            var6.draw(245, 199);
           } else {
             if (null != rn.field_k) {
               rn.field_k.drawParagraph(vl.field_b, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -89,9 +89,9 @@ final class rh {
               var2_int = mb.field_f * (var7.field_n + 60) / h.field_b;
               var3 = var2_int - 30;
               if (!ve.field_t) {
-                pc.a(199, 617553576, 256 * (-var3 + var7.field_n) / 30, var7, -256 * var3 / 30, 245);
+                InteractiveWidget.a(199, 617553576, 256 * (-var3 + var7.field_n) / 30, var7, -256 * var3 / 30, 245);
               } else {
-                pc.a(199, 617553576, var3 * -256 / 30, var7, (-var3 + var7.field_n) * 256 / 30, 245);
+                InteractiveWidget.a(199, 617553576, var3 * -256 / 30, var7, (-var3 + var7.field_n) * 256 / 30, 245);
               }
             }
           }

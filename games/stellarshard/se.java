@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends WidgetContainer implements oi {
-    private ig field_D;
-    private ig field_I;
+final class se extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_D;
+    private InteractiveWidget field_I;
     static String[] field_E;
     static int[] field_B;
     static int[] field_C;
-    private ig field_F;
+    private InteractiveWidget field_F;
     static int field_H;
 
     final static String a(int param0, byte[] param1) {
@@ -39,9 +39,9 @@ final class se extends WidgetContainer implements oi {
 
     public se() {
         super(0, 0, 476, 225, (uk) null);
-        this.field_D = new ig(gk.field_g, (lf) null);
-        this.field_F = new ig(ProxySocketConnector.field_h, (lf) null);
-        this.field_I = new ig(o.field_c, (lf) null);
+        this.field_D = new InteractiveWidget(gk.field_g, (lf) null);
+        this.field_F = new InteractiveWidget(ProxySocketConnector.field_h, (lf) null);
+        this.field_I = new InteractiveWidget(o.field_c, (lf) null);
         b var1 = new b();
         this.field_D.field_u = (uk) ((Object) var1);
         this.field_F.field_u = (uk) ((Object) var1);
@@ -103,7 +103,7 @@ final class se extends WidgetContainer implements oi {
         }
     }
 
-    public final void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -113,7 +113,7 @@ final class se extends WidgetContainer implements oi {
         var7 = stellarshard.field_B;
         try {
           if (param3) {
-            this.field_I = (ig) null;
+            this.field_I = (InteractiveWidget) null;
           }
           if (param2 == this.field_F) {
             ll.c(32270);

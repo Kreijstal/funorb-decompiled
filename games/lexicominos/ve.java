@@ -123,7 +123,7 @@ abstract class ve {
               var6_int = ig.field_a.readUnsignedByte(true);
               ig.field_a.position = 0;
               if (var6_int == 0) {
-                AgeValidator.field_m = kf.field_z;
+                AgeValidator.field_m = InteractiveWidget.field_z;
               } else {
                 pg.field_d = var6_int;
                 a.field_c = -1;
@@ -134,7 +134,7 @@ abstract class ve {
               stackIn_20_0 = 43;
               return stackIn_20_0;
             }
-            if (kf.field_z == AgeValidator.field_m &&
+            if (InteractiveWidget.field_z == AgeValidator.field_m &&
               a.b(8, 10343)) {
               LoginPanel.field_M = ig.field_a.readLong((byte) 49);
               ig.field_a.position = 0;
@@ -202,7 +202,7 @@ abstract class ve {
               BufferedRandomAccessFile.field_l = ig.field_a.readUnsignedByte(true);
               AgeValidator.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == jf.field_M) {
-                bb.field_J.a(kk.c(-14047), 4096);
+                NameSuggestionsPanel.field_J.a(kk.c(-14047), 4096);
               } else {
                 if (fa.field_b.a((byte) 45) == ej.field_a) {
                   mh.field_B.a(kk.c(-14047), 4096);

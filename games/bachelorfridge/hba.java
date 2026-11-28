@@ -89,7 +89,7 @@ final class hba extends AttackEvent {
           nia.field_l = pi.a(param1, -8845, "basic", "icon_frames");
           hl.field_D = hh.field_b;
           fe.field_j = new Sprite(16, 16);
-          fe.field_j.b();
+          fe.field_j.bindAsRenderTarget();
           hh.field_b[2].drawHalfSize(0, 0);
           hga.field_U.a((byte) -45);
           ve.field_m = new Sprite[4][];
@@ -131,9 +131,9 @@ final class hba extends AttackEvent {
           nv.field_wb = var11[5];
           BuffVendorAnimation.field_C = var11[4];
           aea.field_k = new Sprite(256, 256);
-          aea.field_k.b();
-          var11[6].a(0, 0);
-          var11[7].a(128, 0);
+          aea.field_k.bindAsRenderTarget();
+          var11[6].draw(0, 0);
+          var11[7].draw(128, 0);
           hga.field_U.a((byte) 119);
           pfa.field_g = var11[8];
           co.field_b = new IndexedSprite[5];

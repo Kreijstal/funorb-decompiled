@@ -109,7 +109,7 @@ abstract class tb extends ui {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        ul.field_B.e(-90 + (param2 + this.field_p), 10 + param1);
+        NameSuggestionsPanel.field_B.draw(-90 + (param2 + this.field_p), 10 + param1);
         tf.a(-10 + this.field_p, 2, PcmResampler.field_a, 5 + param2, param1 + 35);
         tf.a(this.field_p, 2, DirectByteStorage.field_g, param2, -22 + (param1 + this.field_t));
         var4Lifetime2 = -79 + this.field_t;

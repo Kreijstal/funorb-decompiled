@@ -1570,7 +1570,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_password", false);
                 if (var2 != null) {
-                  eb.field_E = ll.a(0, var2);
+                  InteractiveWidget.field_E = ll.a(0, var2);
                 }
                 var2 = bc.a("create_password_confirm", false);
                 if (null != var2) {

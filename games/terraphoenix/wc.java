@@ -229,7 +229,7 @@ abstract class wc extends DualLinkNode {
                         }
                       }
                     }
-                    rh.field_b[var9Lifetime1].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
+                    rh.field_b[var9Lifetime1].draw(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                   }
                 }
                 if (((p.field_a[var4_intLifetime1].field_d == param0.field_q)) &&
@@ -263,7 +263,7 @@ abstract class wc extends DualLinkNode {
                   rh.field_b[p.field_a[var4_intLifetime1].field_b].drawAdditive(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
                   break regionExit1;
                 }
-                rh.field_b[p.field_a[var4_intLifetime1].field_b].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
+                rh.field_b[p.field_a[var4_intLifetime1].field_b].draw(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e);
                 if (param0.field_q != null &&
                   param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d)) {
                   SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, 16 + p.field_a[var4_intLifetime1].field_e, 16, 16711680);
@@ -273,10 +273,10 @@ abstract class wc extends DualLinkNode {
             }
             if (fd.field_o) {
               if (var8Lifetime1 == 1) {
-                rh.field_b[9].b(p.field_a[var4_intLifetime1].field_f, -8 + p.field_a[var4_intLifetime1].field_e);
+                rh.field_b[9].draw(p.field_a[var4_intLifetime1].field_f, -8 + p.field_a[var4_intLifetime1].field_e);
               }
               if (var8Lifetime1 == -1) {
-                rh.field_b[10].b(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 8);
+                rh.field_b[10].draw(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 8);
               }
             }
             if ((!(2 < p.field_a[var4_intLifetime1].field_b) ||

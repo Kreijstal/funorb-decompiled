@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends kn implements be, sh {
+final class ba extends kn implements be, WidgetActivationListener {
     static ln field_K;
     private AccountCreationResultPanel field_J;
     static boolean field_M;
     private tn field_L;
-    private hc field_I;
+    private InteractiveWidget field_I;
 
     ba(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ad) null);
@@ -17,7 +17,7 @@ final class ba extends kn implements be, sh {
         int var6 = 0;
         try {
           this.field_J = param0;
-          this.field_I = new hc(oh.field_A, (rm) null);
+          this.field_I = new InteractiveWidget(oh.field_A, (rm) null);
           this.field_I.field_A = (ad) ((Object) new wi());
           var7 = oa.a((byte) -98, tk.field_b, new String[]{this.a(false), this.e((byte) -65)});
           var3 = 20;
@@ -139,7 +139,7 @@ final class ba extends kn implements be, sh {
         }
     }
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -148,7 +148,7 @@ final class qg implements ad {
             sn.field_c = new CipherPacketBuffer(param12);
             ic.field_h = param6;
             cm.field_q = param3;
-            ei.field_L = param11;
+            NameSuggestionsPanel.field_L = param11;
             sj.field_c = param13;
             mm.field_b = param0;
             wf.field_U = param7;

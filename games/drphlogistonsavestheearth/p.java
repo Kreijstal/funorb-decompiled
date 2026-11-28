@@ -106,13 +106,13 @@ final class p {
           }
           if (param0 > 0 &&
             param3 > 0) {
-            var21 = param7.a();
+            var21 = param7.copy();
             var30 = SoftwareRasterizer.field_l;
             var10 = SoftwareRasterizer.field_k;
             var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param7.c();
+            param7.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[param2], var29[1], var29[2], var29[3]);
             var13 = param6 + param7.field_y * param5;
             var14 = param7.field_y - param0;
@@ -136,7 +136,7 @@ final class p {
               }
               var13 = var13 + var14;
             }
-            var21.d(-param7.field_D, -param7.field_v);
+            var21.draw(-param7.field_D, -param7.field_v);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;

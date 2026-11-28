@@ -180,8 +180,8 @@ final class RenderingSupport002 {
           }
           integerLocal7 += 36;
         }
-        ResourceSupport001.rgbSpriteState0003.performAction0291(integerArgument4 + integerArgument6, integerArgument5 + integerArgument7, 128);
-        ResourceSupport001.rgbSpriteState0003.performAction0278(integerArgument4, integerArgument5);
+        ResourceSupport001.rgbSpriteState0003.drawWithIntensity(integerArgument4 + integerArgument6, integerArgument5 + integerArgument7, 128);
+        ResourceSupport001.rgbSpriteState0003.draw(integerArgument4, integerArgument5);
     }
 
     final static RgbSprite[] computeRgbSpriteArray0239(byte byteArgument1, RgbSprite[] rgbSpriteArrayArgument2) {

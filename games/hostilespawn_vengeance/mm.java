@@ -544,7 +544,7 @@ final class mm extends IntrusiveNode {
                                         stackIn_15_7 = stackIn_16_7;
                                         stackIn_16_8 = param0.field_z[var7];
                                         stackIn_15_8 = stackIn_16_8;
-                                        if (PcmOutputWorker.a(1, param0.field_j[var7]) != 1) {
+                                        if (PcmOutputWorker.bitwiseAnd(1, param0.field_j[var7]) != 1) {
                                             /* Inlined CFG state: 16. */
                                             {
                                                 stackIn_17_0 = stackIn_16_0;

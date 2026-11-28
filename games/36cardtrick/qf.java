@@ -156,7 +156,7 @@ abstract class qf extends g {
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
-          ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
+          ad.field_j.drawWithOpacity(param0 + this.field_o, param1 + this.field_i, this.field_H);
           return;
         }
         if (this.field_h > ad.field_j.field_p) {
@@ -166,7 +166,7 @@ abstract class qf extends g {
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
-          ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
+          ad.field_j.drawWithOpacity(param0 + this.field_o, param1 + this.field_i, this.field_H);
           return;
         }
         if (ad.field_j.field_o < this.field_q) {
@@ -176,7 +176,7 @@ abstract class qf extends g {
           this.b(0, (byte) -77, 0);
           super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
           gg.a(14756);
-          ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
+          ad.field_j.drawWithOpacity(param0 + this.field_o, param1 + this.field_i, this.field_H);
           return;
         }
         dl.a(param2 ^ -128, ad.field_j);
@@ -184,7 +184,7 @@ abstract class qf extends g {
         this.b(0, (byte) -77, 0);
         super.a(-this.field_o - param0, -this.field_i - param1, -1, param3);
         gg.a(14756);
-        ad.field_j.e(param0 + this.field_o, param1 + this.field_i, this.field_H);
+        ad.field_j.drawWithOpacity(param0 + this.field_o, param1 + this.field_i, this.field_H);
     }
 
     static {

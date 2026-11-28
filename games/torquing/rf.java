@@ -50,8 +50,8 @@ final class rf extends pc {
             var9 = (UiWidget) null;
             this.a(-79, -81, -76, false, (UiWidget) null);
           }
-          if (param4 instanceof lg) {
-            param3 = param3 & ((lg) (param4)).field_x;
+          if (param4 instanceof InteractiveWidget) {
+            param3 = param3 & ((InteractiveWidget) (param4)).field_x;
           }
           if (param3) {
             if (var6_int != 0) {

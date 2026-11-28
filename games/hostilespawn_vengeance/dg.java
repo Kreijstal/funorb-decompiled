@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dg extends me implements qk {
+class dg extends me implements WidgetActivationListener {
     private ba field_ob;
     private boolean field_jb;
     static String field_sb;
@@ -41,7 +41,7 @@ class dg extends me implements qk {
         field_qb = null;
     }
 
-    public void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_6_0 = null;

@@ -449,7 +449,7 @@ final class bf {
               this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
-              this.field_f.a((int)this.field_o, (int)this.field_N, 382);
+              this.field_f.drawAdditive((int)this.field_o, (int)this.field_N, 382);
             }
           }
           return;

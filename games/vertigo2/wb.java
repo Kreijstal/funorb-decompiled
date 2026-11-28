@@ -137,7 +137,7 @@ final class wb extends TextureOperator {
           return false;
         }
         var2 = 65 / ((param1 - 54) / 56);
-        if (d.a(param0, 2)) {
+        if (InteractiveWidget.a(param0, 2)) {
           return true;
         }
         if (45 != param0 &&

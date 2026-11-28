@@ -212,7 +212,7 @@ final class je {
         SoftwareRasterizer.setClip(param4, param2, param4 + param5, param1 + param2);
         for (var6_int = param2; var6_int < param1 + param2; var6_int = var6_int + param3.field_v) {
           for (var7 = param4; var7 < param5 + param4; var7 = var7 + param3.field_y) {
-            param3.h(var7, var6_int);
+            param3.draw(var7, var6_int);
           }
         }
         if (param0 >= -83) {

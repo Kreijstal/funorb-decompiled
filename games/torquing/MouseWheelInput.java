@@ -38,8 +38,8 @@ abstract class MouseWheelInput {
           if (AccountNameAvailabilityValidator.field_o[param1] < AccountNameAvailabilityValidator.field_o[param3]) {
             return false;
           }
-          var4 = vp.field_F[param3] + vo.field_d[param3] + wh.field_y[param3];
-          var5 = wh.field_y[param1] + vo.field_d[param1] + vp.field_F[param1];
+          var4 = NameSuggestionsPanel.field_F[param3] + vo.field_d[param3] + wh.field_y[param3];
+          var5 = wh.field_y[param1] + vo.field_d[param1] + NameSuggestionsPanel.field_F[param1];
           if (var5 > var4) {
             return true;
           }
@@ -64,8 +64,8 @@ abstract class MouseWheelInput {
         if (ji.field_a[param1] < ji.field_a[param3]) {
           return false;
         }
-        var4Lifetime1 = vp.field_F[param3] + vo.field_d[param3] + wh.field_y[param3];
-        var5Lifetime1 = wh.field_y[param1] + vo.field_d[param1] + vp.field_F[param1];
+        var4Lifetime1 = NameSuggestionsPanel.field_F[param3] + vo.field_d[param3] + wh.field_y[param3];
+        var5Lifetime1 = wh.field_y[param1] + vo.field_d[param1] + NameSuggestionsPanel.field_F[param1];
         if (var5Lifetime1 > var4Lifetime1) {
           return true;
         }

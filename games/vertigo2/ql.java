@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends um implements ij {
+final class ql extends um implements WidgetActivationListener {
     static UiPanel field_L;
     private ko field_I;
     static String field_K;
     static int field_M;
-    private d field_J;
+    private InteractiveWidget field_J;
 
     final static void i(int param0) {
         if (null != un.field_Lb &&
@@ -27,7 +27,7 @@ final class ql extends um implements ij {
         this.field_J.setBounds(false, 10 + (140 + (this.width - var2 >> 1)), (-10 + this.height >> 1) + 2, 30, 100);
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         if (this.field_I.getFieldValidator((byte) -5).getValidationStatus(-23996) != qm.field_G) {
           return;
         }
@@ -60,7 +60,7 @@ final class ql extends um implements ij {
         super(param0, param1, param2, param3, (WidgetListener) null);
         this.field_I = new ko(new ml(10000536), lo.field_i, 0, 0, 140, 25);
         this.field_I.a(-11808, new BirthDateValidator());
-        this.field_J = new d(vi.field_x, (uf) (this));
+        this.field_J = new InteractiveWidget(vi.field_x, (uf) (this));
         this.field_G = new UiWidget[]{(UiWidget) ((Object) this.field_I), (UiWidget) ((Object) this.field_J)};
         this.field_J.listener = (WidgetListener) ((Object) new vo());
         this.g(-128);
@@ -197,7 +197,7 @@ final class ql extends um implements ij {
     }
 
     final void a(byte param0, int param1, int param2, UiWidget param3) {
-        d stackIn_2_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

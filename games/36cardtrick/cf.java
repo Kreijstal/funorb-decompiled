@@ -71,7 +71,7 @@ final class cf implements b {
           DisplayNameSelectionPanel.field_G[4] = new int[]{17};
           param0.field_E[4] = new re(param0, 4);
           if (d.field_c > 0 &&
-            hl.a(jk.field_a, -1)) {
+            InteractiveWidget.a(jk.field_a, -1)) {
             DisplayNameSelectionPanel.field_G[1] = new int[]{7, 3, 4, 8, 5, 10};
             param0.field_E[1] = new re(param0, 1);
             return;

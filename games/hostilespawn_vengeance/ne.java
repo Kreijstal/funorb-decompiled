@@ -81,9 +81,9 @@ final class ne extends IntrusiveNode {
                   var5 = var9;
                 } else {
                   if (32 <= var8) {
-                    fj.field_Kb[var9].b(param2, param1);
+                    fj.field_Kb[var9].drawQuarterSizeAveraged(param2, param1);
                   } else {
-                    fj.field_Kb[var9].a(-6 + param2, -6 + param1, var8, var8);
+                    fj.field_Kb[var9].drawScaled(-6 + param2, -6 + param1, var8, var8);
                   }
                 }
                 param2 = param2 + var8;
@@ -93,9 +93,9 @@ final class ne extends IntrusiveNode {
               return;
             }
             if (var8 >= 32) {
-              fj.field_Kb[var5].a(var6 - 6, var7 - 6, 44, 44);
+              fj.field_Kb[var5].drawScaled(var6 - 6, var7 - 6, 44, 44);
             } else {
-              fj.field_Kb[var5].a(var6 - 6, var7 - 6, var8, var8);
+              fj.field_Kb[var5].drawScaled(var6 - 6, var7 - 6, var8, var8);
             }
             al.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var3_int, param1 - 8, 16776960, -1);
             al.field_Z.drawParagraph(bh.field_g[var5].toUpperCase(), var3_int - 130, param1 + 24, 260, 100, 16777215, -1, 1, 0, 12);
@@ -124,12 +124,12 @@ final class ne extends IntrusiveNode {
             field_j = (vh) null;
           }
           if (!(param0 instanceof ArgbSprite)) {
-            stackIn_5_0 = param0.d();
+            stackIn_5_0 = param0.copyMirroredHorizontally();
             return stackIn_5_0;
           }
           var2 = (ArgbSprite) (param0);
-          var3 = var2.i();
-          var3.g();
+          var3 = var2.copyArgb();
+          var3.flipHorizontal();
           stackIn_7_0 = var3;
           return (RgbSprite) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

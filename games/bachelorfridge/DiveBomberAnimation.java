@@ -27,7 +27,7 @@ final class DiveBomberAnimation extends EventAnimation {
           for (var3 = 0; var3 < param0.length; var3++) {
             if (null != param0[var3]) {
               var2[var3] = new Sprite(param0[var3].field_n, param0[var3].field_o);
-              var2[var3].b();
+              var2[var3].bindAsRenderTarget();
               da.a(0, 0, -110, param0[var3]);
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vj extends eb {
+class vj extends InteractiveWidget {
     static rh field_K;
     static String field_L;
     static int field_P;
@@ -295,8 +295,8 @@ class vj extends eb {
         return jg.a(30, param4, false, param0, param2, param1);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param3 - this.x;
         int var6 = -this.y + param0;
         hh var7 = this.a(param2 + 4, var5, var6);

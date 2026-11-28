@@ -79,14 +79,14 @@ final class fm {
             var3 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
             var11 = new RgbSprite(4 + field_b.field_o, 4 + field_b.field_k);
-            var11.d();
-            field_b.d(2, 2, NodeHashTableIterator.field_d);
+            var11.bindAsRenderTarget();
+            field_b.drawGrayModulated(2, 2, NodeHashTableIterator.field_d);
             ve.a(2, var11.field_k, var11, var11.field_o, 1, 0, (byte) 91, 0);
             field_b = var11;
-            oh.field_a = field_b.b();
+            oh.field_a = field_b.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_o / 2;
-            var12.d();
+            var12.bindAsRenderTarget();
             MidiPcmStream.field_m.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{lf.field_c}, AccountServiceResult.field_a), var6, 40, 16777215, -1);
             rc.field_a.drawCentred(CrossfadingMidiPcmStream.a(param0 ^ -415993744, new String[]{lf.field_c}, ud.field_p), var6, 60, 16777215, -1);
             MidiPcmStream.field_m.drawCentred(CrossfadingMidiPcmStream.a(-415993727, new String[]{NodeHashTableIterator.field_a}, FullscreenFocusCanvas.field_g), var6, 110, 16777215, -1);
@@ -94,16 +94,16 @@ final class fm {
             MidiPcmStream.field_m.drawCentred(tg.field_d, var6, 180, 16777215, -1);
             rc.field_a.drawCentred(mm.field_E, var6, 200, 16777215, -1);
             ve.a(3, var12.field_k, var12, var12.field_o, 1, 0, (byte) 98, 0);
-            nl.field_e.d();
-            var12.c(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
+            nl.field_e.bindAsRenderTarget();
+            var12.draw(18 - nl.field_e.field_p, -nl.field_e.field_u + 241);
             for (var7 = 0; tb.field_c.length > var7; var7++) {
-              il.field_e[var7].d();
+              il.field_e[var7].bindAsRenderTarget();
               rc.field_a.drawParagraph(tb.field_c[var7], 3, 3, il.field_e[var7].field_o - 6, il.field_e[var7].field_k - 6, NodeHashTableIterator.field_d, -1, 1, 1, rc.field_a.field_B + rc.field_a.field_H);
               ve.a(3, il.field_e[var7].field_k, il.field_e[var7], il.field_e[var7].field_o, 1, 0, (byte) 61, 0);
             }
             tb.field_c = null;
-            ke.field_c = rh.field_b.f();
-            ke.field_c.d();
+            ke.field_c = rh.field_b.copy();
+            ke.field_c.bindAsRenderTarget();
             ld.a(SoftwareRasterizer.field_f, 103, 64, 0, 0, 2 * SoftwareRasterizer.field_l / 3);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(rh.field_e);
@@ -167,18 +167,18 @@ final class fm {
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
             }
-            pf.field_b.e();
+            pf.field_b.normalizeCanvas();
             var9 = new RgbSprite(pf.field_b.field_s, pf.field_b.field_t);
-            var9.d();
+            var9.bindAsRenderTarget();
             MidiPcmStream.field_m.drawParagraph(var14, ok.field_f, pa.field_d, vg.field_l, qf.field_m, 16777215, -1, 1, 1, MidiPcmStream.field_m.field_H + MidiPcmStream.field_m.field_B);
             ve.a(3, var9.field_t, var9, var9.field_s, 1, 0, (byte) 88, 0);
-            pf.field_b.d();
-            var9.c(0, 0);
+            pf.field_b.bindAsRenderTarget();
+            var9.draw(0, 0);
             DualLinkDeque.field_b = new RgbSprite(640, 480);
-            DualLinkDeque.field_b.d();
-            pf.field_b.a(qb.field_c + (pf.field_b.field_s >> 1), (pf.field_b.field_t >> 1) + ld.field_a, ba.field_c, 4096);
+            DualLinkDeque.field_b.bindAsRenderTarget();
+            pf.field_b.drawRotated(qb.field_c + (pf.field_b.field_s >> 1), (pf.field_b.field_t >> 1) + ld.field_a, ba.field_c, 4096);
             pf.field_b = null;
-            DualLinkDeque.field_b.a();
+            DualLinkDeque.field_b.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(rh.field_e);
           }
@@ -191,11 +191,11 @@ final class fm {
             var16 = new RgbSprite(412, 43);
             var17 = CrossfadingMidiPcmStream.a(-415993727, new String[]{pj.field_k}, ValidatedTextField.field_U);
             pj.field_k = null;
-            var16.d();
+            var16.bindAsRenderTarget();
             rc.field_a.drawParagraph(var17, 3, 3, var16.field_o - 6, -6 + var16.field_k, 16777215, -1, 0, 1, rc.field_a.field_B + rc.field_a.field_H);
             ve.a(3, var16.field_k, var16, var16.field_o, 1, 0, (byte) 55, 0);
-            hc.field_l.d();
-            var16.c(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
+            hc.field_l.bindAsRenderTarget();
+            var16.draw(199 - hc.field_l.field_p, 83 - hc.field_l.field_u);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(rh.field_e);
           }
@@ -209,11 +209,11 @@ final class fm {
             var5Lifetime1 = 20 + (var4 + lc.field_w.field_s);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = lc.field_w.field_s + (var6Lifetime2 + 20);
-            hc.field_l.d();
+            hc.field_l.bindAsRenderTarget();
             rc.field_a.drawString(FrameTimer.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
             ve.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
             var8Lifetime1 = -hc.field_l.field_u + (155 - (-rc.field_a.field_B - rc.field_a.field_H - 3 + lc.field_w.field_t) / 2);
-            lc.field_w.c(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);
+            lc.field_w.draw(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(rh.field_e);
             lc.field_w = null;
@@ -222,26 +222,26 @@ final class fm {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, uh.field_a, hd.field_t);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, uh.field_a, hd.field_t);
           if (vg.field_i != null) {
-            vg.field_i.c(0, 0);
+            vg.field_i.draw(0, 0);
           }
           if (nl.field_e != null) {
-            nl.field_e.c(0, 0);
+            nl.field_e.draw(0, 0);
           }
-          hc.field_l.c(0, 0);
+          hc.field_l.draw(0, 0);
           if (null != DualLinkDeque.field_b) {
-            DualLinkDeque.field_b.c(0, 0);
+            DualLinkDeque.field_b.draw(0, 0);
           }
           if (param0 != 241) {
             field_b = (RgbSprite) null;
           }
           if (rl.field_a != null &&
             bl.field_n != null) {
-            rl.field_a.c(231, 390);
+            rl.field_a.draw(231, 390);
             var1 = rh.field_b;
             if (ArchiveRequest.field_k.field_h == 0) {
               var1 = ke.field_c;
             }
-            var1.c(0, 0);
+            var1.draw(0, 0);
             stackIn_49_0 = 40;
             stackIn_49_1 = GzipDecompressor.field_c;
             if (0 != ArchiveRequest.field_k.field_h) {
@@ -251,14 +251,14 @@ final class fm {
             }
             var2Lifetime4 = stackIn_49_0 + (fm.a(stackIn_49_1 << stackIn_50_2, 2047) * 40 >> 16);
             if (var2Lifetime4 > 0) {
-              rl.field_a.e(230, 389, var2Lifetime4);
-              rl.field_a.e(232, 389, var2Lifetime4);
-              rl.field_a.e(232, 391, var2Lifetime4);
-              rl.field_a.e(230, 391, var2Lifetime4);
-              var1.e(1, 1, var2Lifetime4);
-              var1.e(-1, 1, var2Lifetime4);
-              var1.e(1, -1, var2Lifetime4);
-              var1.e(-1, -1, var2Lifetime4);
+              rl.field_a.drawAdditive(230, 389, var2Lifetime4);
+              rl.field_a.drawAdditive(232, 389, var2Lifetime4);
+              rl.field_a.drawAdditive(232, 391, var2Lifetime4);
+              rl.field_a.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_55_0 = 8;
             stackIn_55_1 = ua.field_c;
@@ -267,8 +267,8 @@ final class fm {
           }
           if (null != rl.field_a &&
             bl.field_n != null) {
-            rl.field_a.c(434, 390);
-            hd.field_e.c(0, 0);
+            rl.field_a.draw(434, 390);
+            hd.field_e.draw(0, 0);
             if (ArchiveRequest.field_k.field_h == 1) {
               ld.a(-4 + rl.field_a.field_o, param0 - 155, 64, 392, 436, 7 * rl.field_a.field_k / 12);
             }
@@ -279,36 +279,36 @@ final class fm {
           }
           if (null != field_b) {
             var1_int = 357 - field_b.field_t / 2;
-            field_b.c(269 - field_b.field_s, var1_int);
-            oh.field_a.c(586, var1_int);
+            field_b.draw(269 - field_b.field_s, var1_int);
+            oh.field_a.draw(586, var1_int);
             if (DiskCacheWorker.field_d > var1_int &&
               DiskCacheWorker.field_d < field_b.field_k + var1_int) {
               var2Lifetime5 = (40 * fm.a(GzipDecompressor.field_c << 4, 2047) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (269 - field_b.field_o < ua.field_a &&
                   269 > ua.field_a) {
-                  field_b.e(269 - (field_b.field_s + 1), var1_int - 1, var2Lifetime5);
-                  field_b.e(-field_b.field_s + 270, var1_int - 1, var2Lifetime5);
-                  field_b.e(-field_b.field_s + 269 - 1, 1 + var1_int, var2Lifetime5);
-                  field_b.e(269 - (field_b.field_s - 1), var1_int + 1, var2Lifetime5);
+                  field_b.drawAdditive(269 - (field_b.field_s + 1), var1_int - 1, var2Lifetime5);
+                  field_b.drawAdditive(-field_b.field_s + 270, var1_int - 1, var2Lifetime5);
+                  field_b.drawAdditive(-field_b.field_s + 269 - 1, 1 + var1_int, var2Lifetime5);
+                  field_b.drawAdditive(269 - (field_b.field_s - 1), var1_int + 1, var2Lifetime5);
                 } else {
                   if (ua.field_a > 586) {
                     if (ua.field_a >= field_b.field_o + 586) {
                       ei.a(-463);
-                      il.field_e[kb.field_m].c(269, 340);
+                      il.field_e[kb.field_m].draw(269, 340);
                       return;
                     }
-                    oh.field_a.e(585, var1_int - 1, var2Lifetime5);
-                    oh.field_a.e(587, var1_int - 1, var2Lifetime5);
-                    oh.field_a.e(585, 1 + var1_int, var2Lifetime5);
-                    oh.field_a.e(587, 1 + var1_int, var2Lifetime5);
+                    oh.field_a.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    oh.field_a.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                    oh.field_a.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    oh.field_a.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }
             }
           }
           ei.a(-463);
-          il.field_e[kb.field_m].c(269, 340);
+          il.field_e[kb.field_m].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

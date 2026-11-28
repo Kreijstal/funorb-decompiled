@@ -113,7 +113,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         rm.field_Q = 0;
     }
 
-    final void h(int param0) {
+    final void invalidateCheckedName(int param0) {
         int var2 = -52 / ((param0 + 6) / 52);
         this.checkedName = null;
     }

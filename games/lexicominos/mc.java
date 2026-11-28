@@ -49,7 +49,7 @@ final class mc extends IntrusiveNode {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (PcmOutputWorker.a((byte) -58, var3) != 0L) {
+            if (PcmOutputWorker.encodeNameBase37((byte) -58, var3) != 0L) {
               return;
             }
           }

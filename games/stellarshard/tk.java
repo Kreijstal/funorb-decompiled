@@ -28,7 +28,7 @@ final class tk {
         if (param3 > -101) {
           return;
         }
-        ui.field_F.e(param1, param2);
+        ui.field_F.draw(param1, param2);
         if (!param0) {
           return;
         }

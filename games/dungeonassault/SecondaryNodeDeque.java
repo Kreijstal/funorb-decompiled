@@ -58,11 +58,11 @@ final class SecondaryNodeDeque implements Iterable {
           SoftwareRasterizer.setClip(0, param3 - 16, 640, param2 + (param0 + param3));
           var5 = (200 - bl.field_s.field_E >> 1) + param1;
           for (var6 = -16 + param3; 32 + param2 + param3 > var6; var6 = var6 + bl.field_s.field_G) {
-            bl.field_s.h(var5, var6);
+            bl.field_s.draw(var5, var6);
           }
           SoftwareRasterizer.restoreClip(var14);
-          ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> 1), -(ao.field_n.field_G >> 1) - 16 + param3, 500, 0);
-          rn.field_c.d((200 - rn.field_c.field_E >> 1) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> 1)), 0, 500);
+          ao.field_n.drawWithVerticalOpacityGradient(param1 + (-ao.field_n.field_E + 200 >> 1), -(ao.field_n.field_G >> 1) - 16 + param3, 500, 0);
+          rn.field_c.drawWithVerticalOpacityGradient((200 - rn.field_c.field_E >> 1) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> 1)), 0, 500);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "dh.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

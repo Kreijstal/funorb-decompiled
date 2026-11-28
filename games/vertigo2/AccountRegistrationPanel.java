@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, nc {
+final class AccountRegistrationPanel extends WidgetContainer implements cm, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_L;
     private ck field_R;
     private ValidatedTextField field_F;
-    oj field_V;
+    NameSuggestionsPanel field_V;
     static String field_K;
     static String field_S;
     private ValidatedTextField field_Q;
@@ -13,15 +13,15 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
     static int field_M;
     private ValidatedTextField field_T;
     private ValidatedTextField field_H;
-    private d field_O;
+    private InteractiveWidget field_O;
     private pn field_N;
-    private d field_I;
+    private InteractiveWidget field_I;
     private ValidatedTextField field_U;
     static int field_E;
     static int field_G;
     static IntrusiveDeque field_J;
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         boolean discarded$0 = false;
         try {
           if (this.field_O == param1) {
@@ -316,8 +316,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
         this.field_T = new ValidatedTextField("", (uf) null, 3);
         int var1 = 1;
         this.field_R = new ck("", (uf) null, var1 != 0);
-        this.field_I = new d(DiskArchiveRequest.field_K, (uf) null);
-        this.field_O = new d(tc.field_a, (uf) null);
+        this.field_I = new InteractiveWidget(DiskArchiveRequest.field_K, (uf) null);
+        this.field_O = new InteractiveWidget(tc.field_a, (uf) null);
         this.field_H.field_q = BlastDebrisBatch.field_d;
         this.field_F.field_q = ak.field_f;
         this.field_L.field_q = BirthDateValidator.field_i;
@@ -371,7 +371,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
         this.field_I.field_v = (uf) (this);
         this.c((byte) 119, this.field_I);
         this.c((byte) 110, this.field_O);
-        this.field_V = new oj((nc) (this));
+        this.field_V = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_V.setBounds(false, 60 + this.field_H.width + this.field_H.x, 20 + this.field_H.y, 150, -this.field_H.width - this.field_H.x + this.width - 60);
         this.c((byte) 116, this.field_V);
         this.setBounds(false, 0, 0, var6 + (var3 + 55), 496);
@@ -407,8 +407,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
         }
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).h(-1);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator((byte) -5))).invalidateCheckedName(-1);
         if (param0 != -4384) {
           field_K = (String) null;
         }
@@ -509,7 +509,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, ij, 
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = this.field_H;
         String var4 = param0;
         if (param1 != 4944) {

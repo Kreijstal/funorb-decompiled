@@ -85,14 +85,14 @@ final class la {
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
             var11 = new RgbSprite(4 + DisplayNameSelectionPanel.field_H.field_l, 4 + DisplayNameSelectionPanel.field_H.field_u);
-            var11.a();
-            DisplayNameSelectionPanel.field_H.c(2, 2, qm.field_n);
+            var11.bindAsRenderTarget();
+            DisplayNameSelectionPanel.field_H.drawGrayModulated(2, 2, qm.field_n);
             hb.a(2, var11.field_u, 0, var11.field_l, var11, -46, 1, 0);
             DisplayNameSelectionPanel.field_H = var11;
-            bf.field_a = DisplayNameSelectionPanel.field_H.c();
+            bf.field_a = DisplayNameSelectionPanel.field_H.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_l / 2;
-            var12.a();
+            var12.bindAsRenderTarget();
             ra.field_c.drawCentred(AgeValidator.a(new String[]{pb.field_b}, qo.field_i, 3), var6, 40, 16777215, -1);
             rn.field_k.drawCentred(AgeValidator.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
             ra.field_c.drawCentred(AgeValidator.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
@@ -100,16 +100,16 @@ final class la {
             ra.field_c.drawCentred(NanoFrameTimer.field_f, var6, 180, 16777215, -1);
             rn.field_k.drawCentred(IntrusiveNode.field_c, var6, 200, 16777215, -1);
             hb.a(3, var12.field_u, 0, var12.field_l, var12, -35, 1, 0);
-            uh.field_q.a();
-            var12.a(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
+            uh.field_q.bindAsRenderTarget();
+            var12.draw(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
             for (var7 = 0; var7 < hf.field_c.length; var7++) {
-              NetworkArchiveRequest.field_v[var7].a();
+              NetworkArchiveRequest.field_v[var7].bindAsRenderTarget();
               rn.field_k.drawParagraph(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
               hb.a(3, NetworkArchiveRequest.field_v[var7].field_u, 0, NetworkArchiveRequest.field_v[var7].field_l, NetworkArchiveRequest.field_v[var7], -76, 1, 0);
             }
             hf.field_c = null;
-            kp.field_n = EditableTextField.field_E.d();
-            kp.field_n.a();
+            kp.field_n = EditableTextField.field_E.copy();
+            kp.field_n.bindAsRenderTarget();
             ne.a(0, SoftwareRasterizer.field_l, -102, 64, 0, 2 * SoftwareRasterizer.field_d / 3);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
@@ -173,18 +173,18 @@ final class la {
               fk.field_u = fk.field_u + var9_intLifetime3;
               MouseInputHandler.field_c.field_o = MouseInputHandler.field_c.field_o + var9_intLifetime3 * 2;
             }
-            MouseInputHandler.field_c.e();
+            MouseInputHandler.field_c.normalizeCanvas();
             var9 = new RgbSprite(MouseInputHandler.field_c.field_n, MouseInputHandler.field_c.field_o);
-            var9.a();
+            var9.bindAsRenderTarget();
             ra.field_c.drawParagraph(var14, SecondaryIntrusiveDeque.field_e, fk.field_u, wn.field_c, sc.field_h, 16777215, -1, 1, 1, ra.field_c.field_u + ra.field_c.field_o);
             hb.a(3, var9.field_o, 0, var9.field_n, var9, -42, 1, 0);
-            MouseInputHandler.field_c.a();
-            var9.a(0, 0);
+            MouseInputHandler.field_c.bindAsRenderTarget();
+            var9.draw(0, 0);
             em.field_m = new RgbSprite(640, 480);
-            em.field_m.a();
-            MouseInputHandler.field_c.a((MouseInputHandler.field_c.field_n >> 1) + sj.field_f, (MouseInputHandler.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
+            em.field_m.bindAsRenderTarget();
+            MouseInputHandler.field_c.drawRotated((MouseInputHandler.field_c.field_n >> 1) + sj.field_f, (MouseInputHandler.field_c.field_o >> 1) + kl.field_U, o.field_f, 4096);
             MouseInputHandler.field_c = null;
-            em.field_m.b();
+            em.field_m.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           }
@@ -197,11 +197,11 @@ final class la {
             var16 = new RgbSprite(412, 43);
             var17 = AgeValidator.a(new String[]{gh.field_A}, nk.field_l, 3);
             gh.field_A = null;
-            var16.a();
+            var16.bindAsRenderTarget();
             rn.field_k.drawParagraph(var17, 3, 3, var16.field_l - 6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
             hb.a(3, var16.field_u, 0, var16.field_l, var16, -38, 1, 0);
-            ArchiveRequest.field_o.a();
-            var16.a(-ArchiveRequest.field_o.field_v + 199, -ArchiveRequest.field_o.field_t + 83);
+            ArchiveRequest.field_o.bindAsRenderTarget();
+            var16.draw(-ArchiveRequest.field_o.field_v + 199, -ArchiveRequest.field_o.field_t + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           }
@@ -215,11 +215,11 @@ final class la {
             var5Lifetime1 = var4 + (mb.field_b.field_n + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + mb.field_b.field_n);
-            ArchiveRequest.field_o.a();
+            ArchiveRequest.field_o.bindAsRenderTarget();
             rn.field_k.drawString(fp.field_d, var7Lifetime2 - ArchiveRequest.field_o.field_v, -ArchiveRequest.field_o.field_t + 155 + rn.field_k.field_o + rn.field_k.field_u, 16777215, -1);
             hb.a(3, 50, 155 - ArchiveRequest.field_o.field_t, var4, ArchiveRequest.field_o, -91, 1, -ArchiveRequest.field_o.field_v + var7Lifetime2 - 4);
             var8Lifetime1 = 155 - ArchiveRequest.field_o.field_t - (-rn.field_k.field_o + (mb.field_b.field_o - 3 - rn.field_k.field_u)) / 2;
-            mb.field_b.a(var6Lifetime2 - ArchiveRequest.field_o.field_v, var8Lifetime1);
+            mb.field_b.draw(var6Lifetime2 - ArchiveRequest.field_o.field_v, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
             mb.field_b = null;
@@ -228,26 +228,26 @@ final class la {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, pb.field_a, mg.field_e);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, pb.field_a, mg.field_e);
           if (null != so.field_d) {
-            so.field_d.a(0, 0);
+            so.field_d.draw(0, 0);
           }
           if (uh.field_q != null) {
-            uh.field_q.a(0, 0);
+            uh.field_q.draw(0, 0);
           }
           if (param0 > -45) {
             field_a = (hj) null;
           }
-          ArchiveRequest.field_o.a(0, 0);
+          ArchiveRequest.field_o.draw(0, 0);
           if (null != em.field_m) {
-            em.field_m.a(0, 0);
+            em.field_m.draw(0, 0);
           }
           if (ad.field_h != null &&
             fl.field_a != null) {
-            ad.field_h.a(231, 390);
+            ad.field_h.draw(231, 390);
             var1 = EditableTextField.field_E;
             if (AwtRasterBuffer.field_f.field_c == 0) {
               var1 = kp.field_n;
             }
-            var1.a(0, 0);
+            var1.draw(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 40;
             stackIn_51_2 = 2047;
@@ -259,14 +259,14 @@ final class la {
             }
             var2Lifetime4 = stackIn_51_0 + (stackIn_51_1 * ProxyAuthenticationRequiredException.a(stackIn_51_2, stackIn_51_3 << stackIn_52_4) >> 16);
             if (var2Lifetime4 > 0) {
-              ad.field_h.d(230, 389, var2Lifetime4);
-              ad.field_h.d(232, 389, var2Lifetime4);
-              ad.field_h.d(232, 391, var2Lifetime4);
-              ad.field_h.d(230, 391, var2Lifetime4);
-              var1.d(1, 1, var2Lifetime4);
-              var1.d(-1, 1, var2Lifetime4);
-              var1.d(1, -1, var2Lifetime4);
-              var1.d(-1, -1, var2Lifetime4);
+              ad.field_h.drawAdditive(230, 389, var2Lifetime4);
+              ad.field_h.drawAdditive(232, 389, var2Lifetime4);
+              ad.field_h.drawAdditive(232, 391, var2Lifetime4);
+              ad.field_h.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_56_0 = kb.field_a;
             stackIn_56_1 = -1;
@@ -275,8 +275,8 @@ final class la {
           }
           if (null != ad.field_h &&
             null != fl.field_a) {
-            ad.field_h.a(434, 390);
-            el.field_g.a(0, 0);
+            ad.field_h.draw(434, 390);
+            el.field_g.draw(0, 0);
             if (1 == AwtRasterBuffer.field_f.field_c) {
               ne.a(392, ad.field_h.field_l - 4, -122, 64, 436, 7 * ad.field_h.field_u / 12);
             }
@@ -287,35 +287,35 @@ final class la {
           }
           if (null != DisplayNameSelectionPanel.field_H) {
             var1_int = 357 - DisplayNameSelectionPanel.field_H.field_o / 2;
-            DisplayNameSelectionPanel.field_H.a(-DisplayNameSelectionPanel.field_H.field_n + 269, var1_int);
-            bf.field_a.a(586, var1_int);
+            DisplayNameSelectionPanel.field_H.draw(-DisplayNameSelectionPanel.field_H.field_n + 269, var1_int);
+            bf.field_a.draw(586, var1_int);
             if (var1_int < IsaacRandom.field_h &&
               DisplayNameSelectionPanel.field_H.field_u + var1_int > IsaacRandom.field_h) {
               var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, LevelLostEntrancePhase.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);
-                NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);
+                NetworkArchiveRequest.field_v[ue.field_a].draw(269, 340);
                 return;
               }
               if (qh.field_i > 269 - DisplayNameSelectionPanel.field_H.field_l &&
                 qh.field_i < 269) {
-                DisplayNameSelectionPanel.field_H.d(269 - (DisplayNameSelectionPanel.field_H.field_n + 1), var1_int - 1, var2Lifetime5);
-                DisplayNameSelectionPanel.field_H.d(-DisplayNameSelectionPanel.field_H.field_n + 270, var1_int - 1, var2Lifetime5);
-                DisplayNameSelectionPanel.field_H.d(-1 + (269 - DisplayNameSelectionPanel.field_H.field_n), var1_int + 1, var2Lifetime5);
-                DisplayNameSelectionPanel.field_H.d(-DisplayNameSelectionPanel.field_H.field_n + 269 + 1, 1 + var1_int, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.drawAdditive(269 - (DisplayNameSelectionPanel.field_H.field_n + 1), var1_int - 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.drawAdditive(-DisplayNameSelectionPanel.field_H.field_n + 270, var1_int - 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.drawAdditive(-1 + (269 - DisplayNameSelectionPanel.field_H.field_n), var1_int + 1, var2Lifetime5);
+                DisplayNameSelectionPanel.field_H.drawAdditive(-DisplayNameSelectionPanel.field_H.field_n + 269 + 1, 1 + var1_int, var2Lifetime5);
               } else {
                 if (586 < qh.field_i &&
                   DisplayNameSelectionPanel.field_H.field_l + 586 > qh.field_i) {
-                  bf.field_a.d(585, -1 + var1_int, var2Lifetime5);
-                  bf.field_a.d(587, -1 + var1_int, var2Lifetime5);
-                  bf.field_a.d(585, 1 + var1_int, var2Lifetime5);
-                  bf.field_a.d(587, 1 + var1_int, var2Lifetime5);
+                  bf.field_a.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                  bf.field_a.drawAdditive(587, -1 + var1_int, var2Lifetime5);
+                  bf.field_a.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                  bf.field_a.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                 }
               }
             }
           }
           rh.a(false);
-          NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);
+          NetworkArchiveRequest.field_v[ue.field_a].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends ej implements ai {
+final class gg extends ej implements WidgetActivationListener {
     static int field_Q;
-    private s field_P;
+    private InteractiveWidget field_P;
     static int[] field_O;
     static int field_N;
 
@@ -150,7 +150,7 @@ final class gg extends ej implements ai {
         field_O = null;
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_6_0 = null;
@@ -186,11 +186,11 @@ final class gg extends ej implements ai {
         this.field_A = false;
     }
 
-    private final s a(String param0, int param1, ag param2) {
-        s var4 = null;
+    private final InteractiveWidget a(String param0, int param1, ag param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        s stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -198,7 +198,7 @@ final class gg extends ej implements ai {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new s(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           var4.field_j = (td) ((Object) new vk());
           var5 = this.field_r - param1;
           this.field_r = this.field_r + 38;

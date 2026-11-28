@@ -41,27 +41,27 @@ final class dg extends pj {
             discarded$0 = this.i(114);
           }
           while (var6 < var5_int) {
-            param3.c(var6, param1);
+            param3.draw(var6, param1);
             var6 = var6 + param3.field_o;
           }
           ValidatedTextField.g((byte) -105);
           if (this.field_L.field_o + param2 >= SoftwareRasterizer.field_i) {
             de.a(-128, this.field_G);
-            param3.c(-this.field_A, 0);
-            param3.c(-this.field_A + 2 * this.field_D, 0);
-            this.field_F.e(0, 0);
+            param3.draw(-this.field_A, 0);
+            param3.draw(-this.field_A + 2 * this.field_D, 0);
+            this.field_F.drawMultiply(0, 0);
             ValidatedTextField.g((byte) -105);
-            this.field_G.c(param2, param1);
+            this.field_G.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_e >= -this.field_L.field_o + var5_int) {
             de.a(-127, this.field_G);
             for (var7 = this.field_A + this.field_m - this.field_L.field_o; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
-            param3.c(-var7, 0);
-            param3.c(-var7 + 2 * this.field_D, 0);
-            this.field_L.e(0, 0);
+            param3.draw(-var7, 0);
+            param3.draw(-var7 + 2 * this.field_D, 0);
+            this.field_L.drawMultiply(0, 0);
             ValidatedTextField.g((byte) -105);
-            this.field_G.c(var5_int - this.field_L.field_o, param1);
+            this.field_G.draw(var5_int - this.field_L.field_o, param1);
             return;
           }
           return;
@@ -170,7 +170,7 @@ final class dg extends pj {
         if (param0) {
           this.field_y = -26;
         }
-        this.field_F = this.field_L.b();
+        this.field_F = this.field_L.copyMirroredHorizontally();
         this.field_G = new RgbSprite(this.field_r >> 1, this.field_r);
     }
 

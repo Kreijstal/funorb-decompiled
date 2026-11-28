@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends g implements wi, qh {
-    private hl field_F;
+final class DisplayNameSelectionPanel extends g implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_F;
     static int[][] field_G;
-    private hl field_H;
+    private InteractiveWidget field_H;
     private ValidatedTextField field_E;
     static String field_D;
-    bd field_I;
+    NameSuggestionsPanel field_I;
 
     private final int a(String param0, int param1, lk param2, String param3, int param4, int param5, byte param6) {
         boolean discarded$1 = false;
@@ -60,13 +60,13 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         }
     }
 
-    public final void a(boolean param0) {
+    public final void onNameSuggestionsRefreshRequested(boolean param0) {
         if (param0) {
-          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-67))).g(80);
+          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-67))).invalidateCheckedName(80);
           return;
         }
         this.field_E = (ValidatedTextField) null;
-        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-67))).g(80);
+        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-67))).invalidateCheckedName(80);
     }
 
     final boolean a(char param0, byte param1, int param2, lk param3) {
@@ -118,13 +118,13 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         field_G = (int[][]) null;
     }
 
-    public final void a(String param0, boolean param1) {
+    public final void onNameSuggestionSelected(String param0, boolean param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
           if (!param1) {
             String var5 = (String) null;
-            this.a((String) null, true);
+            this.onNameSuggestionSelected((String) null, true);
           }
           var3 = this.field_E;
           var4 = param0;
@@ -139,8 +139,8 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         this.field_E = new ValidatedTextField("", (pl) null, 12);
         ek var1 = new ek(me.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
         lk var2 = new lk(ui.field_F, var1, (pl) null);
-        this.field_F = new hl(bl.field_g, (pl) null);
-        this.field_H = new hl(cj.field_m, (pl) null);
+        this.field_F = new InteractiveWidget(bl.field_g, (pl) null);
+        this.field_H = new InteractiveWidget(cj.field_m, (pl) null);
         this.field_E.field_n = re.field_h;
         this.field_E.setFieldValidator((byte) 68, new AccountNameAvailabilityValidator(this.field_E));
         this.field_F.field_B = false;
@@ -160,13 +160,13 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         this.field_F.field_k = (pl) (this);
         this.b(this.field_F, (byte) 118);
         this.b(this.field_H, (byte) 118);
-        this.field_I = new bd((wi) (this));
+        this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_I.a(150, 20, -60 - this.field_E.field_o + (this.field_h - this.field_E.field_h), 60 + this.field_E.field_h + this.field_E.field_o, true);
         this.b(this.field_I, (byte) 118);
         this.a(var3 + (55 + var4), 0, 496, 0, true);
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -204,7 +204,7 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
         if (param0 == 68) {
           return true;
         }
-        this.field_F = (hl) null;
+        this.field_F = (InteractiveWidget) null;
         return true;
     }
 
@@ -220,7 +220,7 @@ final class DisplayNameSelectionPanel extends g implements wi, qh {
     private final void submitDisplayName(int param0) {
         if (param0 != 14831) {
           String var3 = (String) null;
-          this.a((String) null, true);
+          this.onNameSuggestionSelected((String) null, true);
           if (this.canSubmitDisplayName((byte) 68)) {
             EmailFormatValidator.a((byte) 68, this.field_E.field_r);
             return;

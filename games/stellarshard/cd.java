@@ -228,14 +228,14 @@ final class cd extends rg {
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
               var21 = DualLinkNode.field_p[2];
-              var21.d(var9, -(var21.field_y >> 1) + var10, 256);
+              var21.drawAdditive(var9, -(var21.field_y >> 1) + var10, 256);
               return;
             }
             if (var6 != lg.field_c) {
               return;
             }
             var20 = DualLinkNode.field_p[1];
-            var20.d(var9, var10 - (var20.field_y >> 1), 256);
+            var20.drawAdditive(var9, var10 - (var20.field_y >> 1), 256);
             return;
           }
           var19 = DualLinkNode.field_p[0];
@@ -258,9 +258,9 @@ final class cd extends rg {
               }
             }
           }
-          var19.b(112, 144, var19.field_w << 4, var19.field_x << 4, -this.field_N << 10, 4096);
+          var19.drawRotatedAboutBilinear(112, 144, var19.field_w << 4, var19.field_x << 4, -this.field_N << 10, 4096);
           id.b((byte) -58);
-          this.field_O.d(var9 - (var19.field_w >> 1), -var19.field_x + var10, 256);
+          this.field_O.drawAdditive(var9 - (var19.field_w >> 1), -var19.field_x + var10, 256);
           return;
         }
         if (var6 == vk.field_d) {
@@ -278,14 +278,14 @@ final class cd extends rg {
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
               var26 = DualLinkNode.field_p[2];
-              var26.d(var9Lifetime1, -(var26.field_y >> 1) + var10Lifetime1, 256);
+              var26.drawAdditive(var9Lifetime1, -(var26.field_y >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != lg.field_c) {
               return;
             }
             var25 = DualLinkNode.field_p[1];
-            var25.d(var9Lifetime1, var10Lifetime1 - (var25.field_y >> 1), 256);
+            var25.drawAdditive(var9Lifetime1, var10Lifetime1 - (var25.field_y >> 1), 256);
             return;
           }
           var24 = DualLinkNode.field_p[0];
@@ -308,9 +308,9 @@ final class cd extends rg {
               }
             }
           }
-          var24.b(112, 144, var24.field_w << 4, var24.field_x << 4, -this.field_N << 10, 4096);
+          var24.drawRotatedAboutBilinear(112, 144, var24.field_w << 4, var24.field_x << 4, -this.field_N << 10, 4096);
           id.b((byte) -58);
-          this.field_O.d(var9Lifetime1 - (var24.field_w >> 1), -var24.field_x + var10Lifetime1, 256);
+          this.field_O.drawAdditive(var9Lifetime1 - (var24.field_w >> 1), -var24.field_x + var10Lifetime1, 256);
           return;
         }
         var5 = this.field_R.getValidationMessage(-22773);
@@ -330,14 +330,14 @@ final class cd extends rg {
             var6Lifetime1 != vk.field_d) {
             if (var6Lifetime1 == qj.field_c) {
               var31 = DualLinkNode.field_p[2];
-              var31.d(var9Lifetime2, -(var31.field_y >> 1) + var10Lifetime2, 256);
+              var31.drawAdditive(var9Lifetime2, -(var31.field_y >> 1) + var10Lifetime2, 256);
               return;
             }
             if (var6Lifetime1 != lg.field_c) {
               return;
             }
             var30 = DualLinkNode.field_p[1];
-            var30.d(var9Lifetime2, var10Lifetime2 - (var30.field_y >> 1), 256);
+            var30.drawAdditive(var9Lifetime2, var10Lifetime2 - (var30.field_y >> 1), 256);
             return;
           }
           var29 = DualLinkNode.field_p[0];
@@ -360,9 +360,9 @@ final class cd extends rg {
               }
             }
           }
-          var29.b(112, 144, var29.field_w << 4, var29.field_x << 4, -this.field_N << 10, 4096);
+          var29.drawRotatedAboutBilinear(112, 144, var29.field_w << 4, var29.field_x << 4, -this.field_N << 10, 4096);
           id.b((byte) -58);
-          this.field_O.d(var9Lifetime2 - (var29.field_w >> 1), -var29.field_x + var10Lifetime2, 256);
+          this.field_O.drawAdditive(var9Lifetime2 - (var29.field_w >> 1), -var29.field_x + var10Lifetime2, 256);
           return;
         }
         if (!var5.equals(this.field_m)) {
@@ -377,14 +377,14 @@ final class cd extends rg {
             var6Lifetime2 != vk.field_d) {
             if (var6Lifetime2 == qj.field_c) {
               var35 = DualLinkNode.field_p[2];
-              var35.d(var9Lifetime3, -(var35.field_y >> 1) + var10Lifetime3, 256);
+              var35.drawAdditive(var9Lifetime3, -(var35.field_y >> 1) + var10Lifetime3, 256);
               return;
             }
             if (var6Lifetime2 != lg.field_c) {
               return;
             }
             var34 = DualLinkNode.field_p[1];
-            var34.d(var9Lifetime3, var10Lifetime3 - (var34.field_y >> 1), 256);
+            var34.drawAdditive(var9Lifetime3, var10Lifetime3 - (var34.field_y >> 1), 256);
             return;
           }
           var33 = DualLinkNode.field_p[0];
@@ -407,9 +407,9 @@ final class cd extends rg {
               }
             }
           }
-          var33.b(112, 144, var33.field_w << 4, var33.field_x << 4, -this.field_N << 10, 4096);
+          var33.drawRotatedAboutBilinear(112, 144, var33.field_w << 4, var33.field_x << 4, -this.field_N << 10, 4096);
           id.b((byte) -58);
-          this.field_O.d(var9Lifetime3 - (var33.field_w >> 1), -var33.field_x + var10Lifetime3, 256);
+          this.field_O.drawAdditive(var9Lifetime3 - (var33.field_w >> 1), -var33.field_x + var10Lifetime3, 256);
           return;
         }
         super.a(param0, param1, param2, param3);
@@ -438,22 +438,22 @@ final class cd extends rg {
               }
             }
           }
-          var38.b(112, 144, var38.field_w << 4, var38.field_x << 4, -this.field_N << 10, 4096);
+          var38.drawRotatedAboutBilinear(112, 144, var38.field_w << 4, var38.field_x << 4, -this.field_N << 10, 4096);
           id.b((byte) -58);
-          this.field_O.d(var9Lifetime4 - (var38.field_w >> 1), -var38.field_x + var10Lifetime4, 256);
+          this.field_O.drawAdditive(var9Lifetime4 - (var38.field_w >> 1), -var38.field_x + var10Lifetime4, 256);
           return;
         }
         if (var6Lifetime3 != vk.field_d) {
           if (var6Lifetime3 == qj.field_c) {
             var40 = DualLinkNode.field_p[2];
-            var40.d(var9Lifetime4, -(var40.field_y >> 1) + var10Lifetime4, 256);
+            var40.drawAdditive(var9Lifetime4, -(var40.field_y >> 1) + var10Lifetime4, 256);
             return;
           }
           if (var6Lifetime3 != lg.field_c) {
             return;
           }
           var39 = DualLinkNode.field_p[1];
-          var39.d(var9Lifetime4, var10Lifetime4 - (var39.field_y >> 1), 256);
+          var39.drawAdditive(var9Lifetime4, var10Lifetime4 - (var39.field_y >> 1), 256);
           return;
         }
         var37 = DualLinkNode.field_p[0];
@@ -472,9 +472,9 @@ final class cd extends rg {
           this.field_O = new Sprite(var11Lifetime5, var12Lifetime5);
           hj.a(this.field_O, param1 ^ -58);
         }
-        var37.b(112, 144, var37.field_w << 4, var37.field_x << 4, -this.field_N << 10, 4096);
+        var37.drawRotatedAboutBilinear(112, 144, var37.field_w << 4, var37.field_x << 4, -this.field_N << 10, 4096);
         id.b((byte) -58);
-        this.field_O.d(var9Lifetime4 - (var37.field_w >> 1), -var37.field_x + var10Lifetime4, 256);
+        this.field_O.drawAdditive(var9Lifetime4 - (var37.field_w >> 1), -var37.field_x + var10Lifetime4, 256);
     }
 
     final static String h(int param0) {

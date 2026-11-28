@@ -946,16 +946,16 @@ final class DelayedPacket extends IntrusiveNode {
               vj.field_e[0].a(true, 128, 192, var1 + MusicPatchPcmStream.field_n.field_z / 2, MusicPatchPcmStream.field_n.field_z / 2 + var2);
               if (var3 == 0) {
                 if (jf.field_d >= 40) {
-                  MusicPatchPcmStream.field_n.c(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
+                  MusicPatchPcmStream.field_n.drawScaledAlpha(-((50 - jf.field_d) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, -jf.field_d + MusicPatchPcmStream.field_n.field_u + 50, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, -(25 * jf.field_d) + 1250);
                 } else {
-                  MusicPatchPcmStream.field_n.a(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - jf.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - jf.field_d));
+                  MusicPatchPcmStream.field_n.drawScaled(var1 - (-jf.field_d + 50) / 2, var2 - (50 - jf.field_d) / 2, 50 + (MusicPatchPcmStream.field_n.field_u - jf.field_d), 50 + (MusicPatchPcmStream.field_n.field_r - jf.field_d));
                   SoftwareRasterizer.fillRectangleAlpha(-((-jf.field_d + 50) / 2) + var1, -((-jf.field_d + 50) / 2) + var2, MusicPatchPcmStream.field_n.field_u + 50 - jf.field_d, 50 + MusicPatchPcmStream.field_n.field_r - jf.field_d, 0, (10200 - 255 * jf.field_d) / 40);
                 }
               } else {
                 if (jf.field_d < 40) {
-                  MusicPatchPcmStream.field_n.b(var1 + MusicPatchPcmStream.field_n.field_z / 2, var2 + MusicPatchPcmStream.field_n.field_z / 2, 0, jf.field_d + 78 << 5);
+                  MusicPatchPcmStream.field_n.drawRotated(var1 + MusicPatchPcmStream.field_n.field_z / 2, var2 + MusicPatchPcmStream.field_n.field_z / 2, 0, jf.field_d + 78 << 5);
                 } else {
-                  MusicPatchPcmStream.field_n.c((50 - jf.field_d) / 4 + var1, var2 + (-jf.field_d + 50) / 4, -((-jf.field_d + 50) / 2) + MusicPatchPcmStream.field_n.field_u, MusicPatchPcmStream.field_n.field_r - (50 - jf.field_d) / 2, -(25 * jf.field_d) + 1250);
+                  MusicPatchPcmStream.field_n.drawScaledAlpha((50 - jf.field_d) / 4 + var1, var2 + (-jf.field_d + 50) / 4, -((-jf.field_d + 50) / 2) + MusicPatchPcmStream.field_n.field_u, MusicPatchPcmStream.field_n.field_r - (50 - jf.field_d) / 2, -(25 * jf.field_d) + 1250);
                 }
               }
             }

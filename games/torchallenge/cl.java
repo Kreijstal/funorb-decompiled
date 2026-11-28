@@ -93,8 +93,8 @@ final class cl extends bc {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param0 instanceof ng) {
-            param4 = param4 & ((ng) (param0)).field_F;
+          if (param0 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param0)).field_F;
           }
           if (!param4) {
             stackIn_14_0 = this.field_B;

@@ -42,14 +42,14 @@ final class ProxyAuthenticationRequiredException extends IOException {
           var5_int = param4[0].field_x;
           var6 = param4[2].field_x;
           var7 = param4[param1].field_x;
-          param4[0].f(param2, param0);
-          param4[2].f(param3 + param2 - var6, param0);
+          param4[0].draw(param2, param0);
+          param4[2].draw(param3 + param2 - var6, param0);
           SoftwareRasterizer.saveClip(en.field_b);
           SoftwareRasterizer.intersectClip(param2 + var5_int, param0, param2 - (-param3 + var6), param0 + param4[1].field_A);
           var8 = param2 + var5_int;
           var9 = param3 + param2 - var6;
           for (param2 = var8; var9 > param2; param2 = param2 + var7) {
-            param4[1].f(param2, param0);
+            param4[1].draw(param2, param0);
           }
           SoftwareRasterizer.restoreClip(en.field_b);
         } catch (RuntimeException runtimeException) {

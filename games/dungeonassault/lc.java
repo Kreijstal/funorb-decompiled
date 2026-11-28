@@ -344,9 +344,9 @@ final class lc {
           jh.a(var5);
           if (param2 < param1.field_y &&
             param1.field_v > param3) {
-            param1.b(0, 0, param2, param3);
+            param1.drawDownscaledAreaBlended(0, 0, param2, param3);
           } else {
-            param1.e(param2 >> 1, param3 >> 1, 0, (param2 << 12) / param1.field_y);
+            param1.drawRotated(param2 >> 1, param3 >> 1, 0, (param2 << 12) / param1.field_y);
           }
           jh.b();
           stackIn_11_0 = var5;

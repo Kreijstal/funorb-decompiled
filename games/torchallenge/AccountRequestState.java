@@ -32,17 +32,17 @@ final class AccountRequestState {
             de.field_a = new Sprite(var14_int, var15);
           }
           var17 = -param4 + var15 >> 1;
-          de.field_a.d();
+          de.field_a.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           GzipDecoder.drawNineSlice(param8, param4, param0, (byte) -96, var17, var16);
           SoftwareRasterizer.fillRoundedRectangleAlpha(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
           if (MatchingFieldValidator.field_n == null) {
             MatchingFieldValidator.field_n = new Sprite(var14_int, var15);
           }
-          MatchingFieldValidator.field_n.d();
+          MatchingFieldValidator.field_n.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           SoftwareRasterizer.fillRoundedRectangle(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
-          de.field_a.d();
+          de.field_a.bindAsRenderTarget();
           od.b(MatchingFieldValidator.field_n, 0, 0, 0, param13);
           SectorCacheStore.field_f.bindAsTarget(-97);
         } catch (RuntimeException runtimeException) {

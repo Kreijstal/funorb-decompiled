@@ -63,7 +63,7 @@ abstract class jq {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         Sprite var6 = new Sprite(param3, param4);
-        var6.d();
+        var6.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, param3, param4, 12, 5921370);
         if (param0 > 57) {
           SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param3, param4 - 8, 8, 0);
@@ -73,7 +73,7 @@ abstract class jq {
           SoftwareRasterizer.setClip(param1, 40 + param2, param3 + param1, param2 + param4);
           SoftwareRasterizer.fillRoundedRectangleAlpha(param1, param2, param3, param4, 12, 0, 150);
           SoftwareRasterizer.setClip(0, 0, 640, 480);
-          var6.e(param1, param2);
+          var6.draw(param1, param2);
           return;
         }
         jq.a(1, 91, 33, -110, -47);
@@ -84,7 +84,7 @@ abstract class jq {
         SoftwareRasterizer.setClip(param1, 40 + param2, param3 + param1, param2 + param4);
         SoftwareRasterizer.fillRoundedRectangleAlpha(param1, param2, param3, param4, 12, 0, 150);
         SoftwareRasterizer.setClip(0, 0, 640, 480);
-        var6.e(param1, param2);
+        var6.draw(param1, param2);
     }
 
     jq(int param0, int param1, int param2) {

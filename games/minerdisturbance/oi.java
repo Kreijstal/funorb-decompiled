@@ -84,7 +84,7 @@ final class oi extends fe {
         }
         this.field_E = new Sprite[]{this.a(this.field_P, this.field_H, false), this.a(this.field_L, this.field_Q, false)};
         this.field_F = this.c((byte) -125);
-        this.field_I = this.field_F.e();
+        this.field_I = this.field_F.copyMirroredHorizontally();
         this.field_M = new Sprite(this.field_q >> 1, this.field_q);
     }
 
@@ -178,26 +178,26 @@ final class oi extends fe {
             oi.a(-125, (CharSequence) null);
           }
           for (var6 = param2 - this.field_D; var5_int > var6; var6 = var6 + param3.field_y) {
-            param3.f(var6, param1);
+            param3.draw(var6, param1);
           }
           tk.b(true);
           if (SoftwareRasterizer.field_a <= this.field_F.field_y + param2) {
             ArchiveProvider.a(this.field_M, 126);
-            param3.f(-this.field_D, 0);
-            param3.f(-this.field_D + this.field_N * 2, 0);
+            param3.draw(-this.field_D, 0);
+            param3.draw(-this.field_D + this.field_N * 2, 0);
             this.field_I.drawMultiply(0, 0);
             tk.b(true);
-            this.field_M.f(param2, param1);
+            this.field_M.draw(param2, param1);
           }
           if (var5_int - this.field_F.field_y <= SoftwareRasterizer.field_k) {
             ArchiveProvider.a(this.field_M, 127);
             for (var7 = this.field_v - (this.field_F.field_y - this.field_D); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
             }
-            param3.f(-var7, 0);
-            param3.f(-var7 + 2 * this.field_N, 0);
+            param3.draw(-var7, 0);
+            param3.draw(-var7 + 2 * this.field_N, 0);
             this.field_F.drawMultiply(0, 0);
             tk.b(true);
-            this.field_M.f(-this.field_F.field_y + var5_int, param1);
+            this.field_M.draw(-this.field_F.field_y + var5_int, param1);
             return;
           }
           return;

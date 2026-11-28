@@ -32,7 +32,7 @@ final class tg extends IntrusiveNode {
           if (param3 != 84) {
             field_i = (java.applet.Applet) null;
           }
-          var7_int = kf.a((byte) -21, param1);
+          var7_int = InteractiveWidget.a((byte) -21, param1);
           if (null == IntrusiveNode.field_e) {
             IntrusiveNode.field_e = new java.security.SecureRandom();
           }

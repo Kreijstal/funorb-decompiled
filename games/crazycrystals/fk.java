@@ -255,7 +255,7 @@ final class fk extends lb {
         RuntimeException var6 = null;
         pm var7 = null;
         pm var9 = null;
-        pc var10 = null;
+        InteractiveWidget var10 = null;
         pm var11 = null;
         pm var12 = null;
         pm var13 = null;
@@ -264,12 +264,12 @@ final class fk extends lb {
           if (param1) {
             return;
           }
-          if (!(param3 instanceof pc)) {
+          if (!(param3 instanceof InteractiveWidget)) {
             stackIn_5_0 = null;
           } else {
             stackIn_5_0 = (qm) (param3);
           }
-          var10 = (pc) (stackIn_5_0);
+          var10 = (InteractiveWidget) (stackIn_5_0);
           qp.a(param2 + param3.field_r, param0 - (-param3.field_j - param3.field_f), param3.field_r + param2 + param3.field_g, (byte) 73, param0 + param3.field_j);
           if (var10 != null) {
             param4 = param4 & var10.field_x;

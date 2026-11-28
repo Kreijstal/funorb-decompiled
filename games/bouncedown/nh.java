@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends wk implements rc {
+final class nh extends wk implements WidgetActivationListener {
     static int[] field_S;
     static int[] field_N;
     static boolean field_P;
     static char[] field_O;
     static we[] field_R;
-    private wd field_Q;
+    private InteractiveWidget field_Q;
 
     nh(pf param0, lg param1) {
         super(param0, 200, 150);
@@ -77,7 +77,7 @@ final class nh extends wk implements rc {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -85,7 +85,7 @@ final class nh extends wk implements rc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 6) {
-            this.field_Q = (wd) null;
+            this.field_Q = (InteractiveWidget) null;
           }
           if (param4 != this.field_Q) {
             return;
@@ -161,11 +161,11 @@ final class nh extends wk implements rc {
         }
     }
 
-    private final wd a(int param0, sk param1, String param2) {
-        wd var4 = null;
+    private final InteractiveWidget a(int param0, sk param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        wd stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -176,7 +176,7 @@ final class nh extends wk implements rc {
           if (param0 != -20017) {
             field_N = (int[]) null;
           }
-          var4 = new wd(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_j = (fc) ((Object) new jh());
           var5 = -6 + this.field_m;
           this.field_m = this.field_m + 38;

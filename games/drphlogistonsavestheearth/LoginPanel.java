@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends pj implements TextFieldListener, ke {
-    private hf field_P;
+final class LoginPanel extends pj implements TextFieldListener, WidgetActivationListener {
+    private InteractiveWidget field_P;
     static int field_N;
-    private hf field_S;
+    private InteractiveWidget field_S;
     private EditableTextField field_L;
     private String field_J;
     static int[] field_Q;
     static int field_R;
     static he[] field_O;
     private boolean field_U;
-    private hf field_K;
+    private InteractiveWidget field_K;
     private boolean field_V;
     private boolean field_T;
     private EditableTextField field_M;
@@ -68,7 +68,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
 
     final void i(int param0) {
         if (param0 != 134) {
-          this.field_P = (hf) null;
+          this.field_P = (InteractiveWidget) null;
         }
         this.field_L.clearText((byte) 88);
         this.field_M.clearText((byte) 88);
@@ -162,10 +162,10 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        hf stackIn_18_1 = null;
-        hf stackIn_18_2 = null;
-        hf stackIn_19_1 = null;
-        hf stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -195,7 +195,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
           this.field_L = (EditableTextField) ((Object) new ValidatedTextField(param0, (fd) (this), 100));
           this.field_M = (EditableTextField) ((Object) new ValidatedTextField("", (fd) (this), 20));
           if (!this.field_T) {
-            this.field_S = new hf(rc.field_b, (fd) null);
+            this.field_S = new InteractiveWidget(rc.field_b, (fd) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_U) {
@@ -207,13 +207,13 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
               stackIn_19_2 = null;
               stackIn_19_3 = ml.field_m;
             }
-            this.field_P = new hf(stackIn_19_3, (fd) null);
+            this.field_P = new InteractiveWidget(stackIn_19_3, (fd) null);
             if (this.field_V) {
-              this.field_K = new hf(ai.field_v, (fd) (this));
+              this.field_K = new InteractiveWidget(ai.field_v, (fd) (this));
             }
           } else {
-            this.field_S = new hf(DrPhlogistonSavesTheEarth.field_E, (fd) null);
-            this.field_P = new hf(ProxyAuthenticationRequiredException.field_d, (fd) null);
+            this.field_S = new InteractiveWidget(DrPhlogistonSavesTheEarth.field_E, (fd) null);
+            this.field_P = new InteractiveWidget(ProxyAuthenticationRequiredException.field_d, (fd) null);
             this.field_L.field_E = false;
           }
           this.field_L.field_l = (cg) ((Object) new mj(10000536));
@@ -332,7 +332,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
             return true;
           }
           if (param3 <= 63) {
-            this.field_S = (hf) null;
+            this.field_S = (InteractiveWidget) null;
           }
           if (param0 == 98) {
             stackIn_9_0 = this.a(param2, 65535);
@@ -357,7 +357,7 @@ final class LoginPanel extends pj implements TextFieldListener, ke {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

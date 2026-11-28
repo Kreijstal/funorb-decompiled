@@ -68,7 +68,7 @@ final class pa {
           } else {
             stackIn_9_5 = var31;
           }
-          ((RgbSprite) (Object) stackIn_8_0).d(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_9_5);
+          ((RgbSprite) (Object) stackIn_8_0).drawScaledAdditive(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_9_5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

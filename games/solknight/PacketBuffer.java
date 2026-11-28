@@ -458,7 +458,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        ua.field_H = 0;
+        NameSuggestionsPanel.field_H = 0;
         ri.field_f = param1;
         if (param2 >= -126) {
           field_h = (pc) null;

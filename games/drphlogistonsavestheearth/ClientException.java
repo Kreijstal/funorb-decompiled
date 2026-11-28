@@ -17,7 +17,7 @@ final class ClientException extends RuntimeException {
           }
           ph.field_e = param6;
           af.field_d = param0;
-          hf.field_z = param5;
+          InteractiveWidget.field_z = param5;
           ca.field_db = param1;
           ac.field_a = param3;
           KeyboardInput.field_a = param7;

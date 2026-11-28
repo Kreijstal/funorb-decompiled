@@ -227,7 +227,7 @@ final class hc {
             if (param0.field_o == 2) {
               var7 = var7 + (param1.field_p - this.field_a.field_n);
             }
-            this.field_a.c(var6_int, var7);
+            this.field_a.draw(var6_int, var7);
           }
           if (param2 != -2) {
             this.field_g = 99;

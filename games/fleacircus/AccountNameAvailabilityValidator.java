@@ -139,7 +139,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void d(boolean param0) {
+    final void invalidateCheckedName(boolean param0) {
         if (!param0) {
           AccountNameAvailabilityValidator.resetStaticState(false);
         }

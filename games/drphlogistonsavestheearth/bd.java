@@ -81,7 +81,7 @@ abstract class bd extends pj {
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
-          uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
+          uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
         if (this.field_w > uk.field_f.field_y) {
@@ -91,7 +91,7 @@ abstract class bd extends pj {
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
-          uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
+          uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
         if (uk.field_f.field_w < this.field_k) {
@@ -101,7 +101,7 @@ abstract class bd extends pj {
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
           cl.d((byte) -106);
-          uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
+          uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
         MouseInput.a(uk.field_f, (byte) 79);
@@ -109,7 +109,7 @@ abstract class bd extends pj {
         this.c(0, param2 ^ -68, 0);
         super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
         cl.d((byte) -106);
-        uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
+        uk.field_f.drawWithOpacity(param0 + this.field_o, param3 + this.field_m, this.field_J);
     }
 
     public static void releaseDeclaredStaticReferences(byte param0) {

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends pj implements ra, ke, fh {
+final class AccountRegistrationPanel extends pj implements ra, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_S;
     private ValidatedTextField field_Q;
     private ValidatedTextField field_K;
     private ValidatedTextField field_ab;
-    private hf field_L;
+    private InteractiveWidget field_L;
     private nc field_T;
     private qa field_Z;
     static String field_U;
-    LoginMenuScreen field_V;
+    NameSuggestionsPanel field_V;
     private ValidatedTextField field_P;
     static he[] field_W;
-    private hf field_R;
+    private InteractiveWidget field_R;
     static int field_N;
     static String field_X;
     static RgbSprite field_Y;
@@ -70,7 +70,7 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         if (param1 != 0) {
@@ -120,7 +120,7 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -356,7 +356,7 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (param1 > -90) {
-            this.field_V = (LoginMenuScreen) null;
+            this.field_V = (NameSuggestionsPanel) null;
           }
           if (0 == param0) {
             nd.a(-1, "terms.ws");
@@ -385,8 +385,8 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator((byte) 84))).e((byte) -27);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator((byte) 84))).invalidateCheckedName((byte) -27);
         if (param0 > -23) {
           this.field_Z = (qa) null;
         }
@@ -455,8 +455,8 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         this.field_Q = new ValidatedTextField("", (fd) null, 3);
         int var1 = 1;
         this.field_T = new nc("", (fd) null, var1 != 0);
-        this.field_R = new hf(IntrusiveDeque.field_d, (fd) null);
-        this.field_L = new hf(ej.field_c, (fd) null);
+        this.field_R = new InteractiveWidget(IntrusiveDeque.field_d, (fd) null);
+        this.field_L = new InteractiveWidget(ej.field_c, (fd) null);
         this.field_K.field_v = bj.field_c;
         this.field_P.field_v = fm.field_i;
         this.field_J.field_v = PasswordValidator.field_r;
@@ -510,7 +510,7 @@ final class AccountRegistrationPanel extends pj implements ra, ke, fh {
         this.field_R.field_u = (fd) (this);
         this.b(this.field_R, (byte) 105);
         this.b(this.field_L, (byte) 39);
-        this.field_V = new LoginMenuScreen((fh) (this));
+        this.field_V = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_V.a(this.field_K.field_m + 20, 150, this.field_K.field_o + this.field_K.field_w + 60, 16535, -60 - this.field_K.field_w + (this.field_w - this.field_K.field_o));
         this.b(this.field_V, (byte) 118);
         this.a(0, var6 + (55 + var3), 0, 16535, 496);

@@ -133,7 +133,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void h(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 != -1) {
           java.awt.Component var3 = (java.awt.Component) null;

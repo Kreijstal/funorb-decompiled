@@ -40,14 +40,14 @@ final class wg extends pk {
         }
         int var5 = (this.field_x - this.field_s) * this.field_u / (this.field_y - this.field_s);
         if (!this.field_v) {
-          this.field_o.a(var5 + this.field_i - this.field_o.field_w / 8, this.field_k - this.field_o.field_t / 8);
+          this.field_o.drawQuarterSizeAveraged(var5 + this.field_i - this.field_o.field_w / 8, this.field_k - this.field_o.field_t / 8);
           return;
         }
         if (null != this.field_t) {
-          this.field_t.b(this.field_i + var5 - this.field_t.field_w / 2, this.field_k - this.field_t.field_t / 2);
+          this.field_t.draw(this.field_i + var5 - this.field_t.field_w / 2, this.field_k - this.field_t.field_t / 2);
           return;
         }
-        this.field_o.a(var5 + this.field_i - this.field_o.field_w / 8, this.field_k - this.field_o.field_t / 8);
+        this.field_o.drawQuarterSizeAveraged(var5 + this.field_i - this.field_o.field_w / 8, this.field_k - this.field_o.field_t / 8);
     }
 
     final static void a(String param0, byte param1, long param2) {

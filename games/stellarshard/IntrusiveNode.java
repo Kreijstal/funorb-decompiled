@@ -16,7 +16,7 @@ class IntrusiveNode {
     final static void a(String param0, int param1) {
         try {
           df.a(param1 ^ -11, param0);
-          we.a(false, param1 + 12660, ul.field_H);
+          we.a(false, param1 + 12660, NameSuggestionsPanel.field_H);
           if (param1 != 97) {
             IntrusiveNode.resetStaticState((byte) -95);
           }

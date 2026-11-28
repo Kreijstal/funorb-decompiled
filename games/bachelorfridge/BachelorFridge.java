@@ -846,7 +846,7 @@ public final class BachelorFridge extends NetworkGameClient {
         TextInputWidget.releaseStatics((byte) -127);
         uda.releaseStatics(114);
         de.resetStaticState(1);
-        dd.resetStaticState(0);
+        NameSuggestionsPanel.resetStaticState(0);
         LinkTextWidget.b(true);
         nf.clearStaticReferences((byte) -127);
         dia.releaseStatics(14213);
@@ -1601,7 +1601,7 @@ public final class BachelorFridge extends NetworkGameClient {
           FullHealSpecial.a((byte) -33, rc.field_l);
           TriangleRasterizer.a(new wi(WidgetContainer.field_y, fw.field_j, uda.field_U, 32, false));
           SleepSpecial.field_p = new Sprite(32, 32);
-          SleepSpecial.field_p.b();
+          SleepSpecial.field_p.bindAsRenderTarget();
           rc.field_l.drawScaledAveraged(0, 0, 32, 32);
           hga.field_U.a((byte) -97);
           rc.field_l = null;

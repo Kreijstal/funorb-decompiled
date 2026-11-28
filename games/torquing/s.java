@@ -70,7 +70,7 @@ final class s extends am {
           }
           var4 = MatchingFieldValidator.field_o;
           nn.a(param0, (byte) -114);
-          om.a(0, 0, jh.field_A, 0, vp.field_I);
+          om.a(0, 0, jh.field_A, 0, NameSuggestionsPanel.field_I);
           if (null != this.field_v) {
             for (var5 = 0; var5 < this.field_v.length; var5++) {
               var6 = this.field_v[var5];

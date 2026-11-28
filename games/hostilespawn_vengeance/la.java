@@ -243,7 +243,7 @@ final class la extends ca {
                     } else {
                       var19 = SoftwareRasterizer.field_i[var8];
                       var20 = var16 * (var18 & 16711935) + var17 * (var19 & 16711935) >> 8 & 16711935;
-                      SoftwareRasterizer.field_i[var8] = var20 + (PcmOutputWorker.a(16711749, var16 * PcmOutputWorker.a(65280, var18) + PcmOutputWorker.a(var19, 65280) * var17) >> 8);
+                      SoftwareRasterizer.field_i[var8] = var20 + (PcmOutputWorker.bitwiseAnd(16711749, var16 * PcmOutputWorker.bitwiseAnd(65280, var18) + PcmOutputWorker.bitwiseAnd(var19, 65280) * var17) >> 8);
                     }
                   }
                   var8++;

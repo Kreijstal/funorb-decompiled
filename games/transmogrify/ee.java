@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends aj implements df {
+final class ee extends aj implements WidgetActivationListener {
     private String field_z;
-    private lj[] field_F;
+    private InteractiveWidget[] field_F;
     private int[] field_E;
     private int field_w;
     static int field_D;
@@ -52,8 +52,8 @@ final class ee extends aj implements df {
         if (this.field_w >= param1) {
           return;
         }
-        lj[] var7 = new lj[param1];
-        lj[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         int var5 = 0;
         if (param0 > -45) {
@@ -75,7 +75,7 @@ final class ee extends aj implements df {
         int var5 = -84 / ((77 - param3) / 34);
     }
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -174,11 +174,11 @@ final class ee extends aj implements df {
         }
     }
 
-    final lj a(ma param0, int param1, String param2) {
-        lj var4 = null;
+    final InteractiveWidget a(ma param0, int param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        lj stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -186,7 +186,7 @@ final class ee extends aj implements df {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new lj(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -2 + this.field_h;
           this.a(85, 0, 0, this.field_l, 34 + this.field_h);

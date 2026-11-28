@@ -170,13 +170,13 @@ final class bs extends UiPanel {
           SoftwareRasterizer.clearRaster();
           hm.field_F = 0;
           bq.h(-105);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          pl.field_h.d();
-          var1.b(0, 0);
+          pl.field_h.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ln.d(-28558);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "bs.D(" + param0 + ')');

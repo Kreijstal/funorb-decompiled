@@ -90,12 +90,12 @@ final class cb {
         RuntimeException var2 = null;
         try {
           FrameTimer.a(false);
-          KeyboardInput.field_d.e((640 - KeyboardInput.field_d.field_z) / 2, -4 + (-KeyboardInput.field_d.field_A + 480));
+          KeyboardInput.field_d.draw((640 - KeyboardInput.field_d.field_z) / 2, -4 + (-KeyboardInput.field_d.field_A + 480));
           var2_int = (640 - gj.field_d.field_z) / 2;
           var3 = -gj.field_d.field_A + 478;
           var4 = (gj.field_d.field_z - 4) * DisplayNameSelectionPanel.k(param0 ^ -547) >> 9;
           SoftwareRasterizer.fillRectangle(var2_int + 2, var3 + 3, var4, 2, 16772608);
-          gj.field_d.e(var2_int, var3);
+          gj.field_d.draw(var2_int, var3);
           al.field_Z.drawString(hk.field_k.toUpperCase(), 8, 472, 16776960, -1);
           al.field_Z.drawCentred(bi.field_c[AccountNameAvailabilityValidator.field_s].toUpperCase(), 320, 471, 16776960, -1);
           var5 = ProxySocketFactory.field_i.toUpperCase();

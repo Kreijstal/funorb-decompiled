@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ta implements bf, ai {
-    private s field_H;
+final class DisplayNameSelectionPanel extends ta implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_H;
     static int[] field_A;
-    private s field_J;
-    we field_I;
+    private InteractiveWidget field_J;
+    NameSuggestionsPanel field_I;
     static long field_G;
     private ValidatedTextField field_C;
     static int field_D;
@@ -82,10 +82,10 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_C.getFieldValidator((byte) -104))).b((byte) 60);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_C.getFieldValidator((byte) -104))).invalidateCheckedName((byte) 60);
         if (param0 != -8) {
-          this.field_J = (s) null;
+          this.field_J = (InteractiveWidget) null;
         }
     }
 
@@ -136,7 +136,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         return true;
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -172,8 +172,8 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         this.field_C = new ValidatedTextField("", (ag) null, 12);
         jc var1 = new jc(pc.field_bb, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
         pj var2 = new pj(AccountRegistrationPanel.field_A, var1, (ag) null);
-        this.field_J = new s(qk.field_b, (ag) null);
-        this.field_H = new s(ob.field_D, (ag) null);
+        this.field_J = new InteractiveWidget(qk.field_b, (ag) null);
+        this.field_H = new InteractiveWidget(ob.field_D, (ag) null);
         this.field_C.field_i = bg.field_b;
         this.field_C.setFieldValidator(new AccountNameAvailabilityValidator(this.field_C), 22);
         this.field_J.field_F = false;
@@ -193,7 +193,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         this.field_J.field_h = (ag) (this);
         this.a(this.field_J, (byte) 74);
         this.a(this.field_H, (byte) 74);
-        this.field_I = new we((bf) (this));
+        this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_I.a(60 + this.field_C.field_m + this.field_C.field_s, 20, 150, (byte) -90, -this.field_C.field_m + this.field_m + (-this.field_C.field_s - 60));
         this.a(this.field_I, (byte) 74);
         this.a(0, 0, var3 + 55 + var4, (byte) -90, 496);
@@ -241,7 +241,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
         }
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSuggestionSelected(int param0, String param1) {
         ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -256,7 +256,7 @@ final class DisplayNameSelectionPanel extends ta implements bf, ai {
           if (param0 > 104) {
             return;
           }
-          this.field_J = (s) null;
+          this.field_J = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

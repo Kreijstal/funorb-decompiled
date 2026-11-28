@@ -1161,7 +1161,7 @@ final class oj {
                 }
                 var2 = dl.a("warning_ifyouquit", false);
                 if (null != var2) {
-                  ng.field_J = re.a(18990, var2);
+                  InteractiveWidget.field_J = re.a(18990, var2);
                 }
                 var2 = dl.a("warning_ifyouquitorleavepage", false);
                 if (var2 != null) {
@@ -1609,7 +1609,7 @@ final class oj {
                 }
                 var2 = dl.a("create_alert_nameleadingspace", false);
                 if (var2 != null) {
-                  ng.field_E = re.a(18990, var2);
+                  InteractiveWidget.field_E = re.a(18990, var2);
                 }
                 var2 = dl.a("create_alert_doublespace", false);
                 if (var2 != null) {

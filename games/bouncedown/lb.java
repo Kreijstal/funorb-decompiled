@@ -60,7 +60,7 @@ final class lb {
           var4 = new a[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!re.a(101, param1)) {
-              var6 = param1.f(7, wd.a(var5 - 1, -95));
+              var6 = param1.f(7, InteractiveWidget.a(var5 - 1, -95));
               var4[var5] = var4[var6];
             } else {
               var6_ref_a = new a();

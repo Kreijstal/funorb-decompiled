@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends vk implements dc, ga {
+final class jj extends vk implements dc, WidgetActivationListener {
     private ab field_H;
     static String field_C;
     static volatile boolean field_E;
     private AccountCreationResultPanel field_z;
-    private dk field_y;
+    private InteractiveWidget field_y;
     static int field_D;
     static Sprite field_A;
     static int field_F;
@@ -102,7 +102,7 @@ final class jj extends vk implements dc, ga {
         }
     }
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -219,7 +219,7 @@ final class jj extends vk implements dc, ga {
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_y = new dk(SpriteState.field_s, (qg) null);
+          this.field_y = new InteractiveWidget(SpriteState.field_s, (qg) null);
           this.field_y.field_o = (de) ((Object) new gb());
           var7 = fb.a(field_C, -98, new String[]{this.a(false), this.j(-99)});
           var3 = 20;

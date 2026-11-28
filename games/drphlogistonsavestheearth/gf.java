@@ -371,7 +371,7 @@ final class gf {
           } else {
             if (26 == var17) {
               var13 = -this.field_a + 255;
-              this.field_g.c();
+              this.field_g.bindAsRenderTarget();
               SoftwareRasterizer.fillCircle(this.field_g.field_y / 2, this.field_g.field_w / 2, var13, 1);
               ArchiveRequest.field_C.setAsRasterTarget(119);
               var15 = (int)this.field_m + this.field_g.field_w / 2;
@@ -390,12 +390,12 @@ final class gf {
               SoftwareRasterizer.addRadialGlow(var14 << 4, var15 << 4, var13 << 3, 254, var21);
             } else {
               if (gg.field_n[this.field_I] != 0) {
-                this.field_g.a((int)this.field_i, (int)this.field_m, this.field_a);
+                this.field_g.drawAdditive((int)this.field_i, (int)this.field_m, this.field_a);
               } else {
                 if (this.field_a == 256) {
-                  this.field_g.d((int)this.field_i, (int)this.field_m);
+                  this.field_g.draw((int)this.field_i, (int)this.field_m);
                 } else {
-                  this.field_g.e((int)this.field_i, (int)this.field_m, this.field_a);
+                  this.field_g.drawWithOpacity((int)this.field_i, (int)this.field_m, this.field_a);
                 }
               }
             }

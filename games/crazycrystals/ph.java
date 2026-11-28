@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph extends og implements im, vd {
+final class ph extends og implements im, WidgetActivationListener {
     static FullscreenFocusCanvas field_E;
     private AccountCreationResultPanel field_z;
     private rf field_B;
-    private pc field_C;
+    private InteractiveWidget field_C;
 
     public final void a(int param0, int param1, rf param2, byte param3) {
         int var6 = 0;
@@ -30,7 +30,7 @@ final class ph extends og implements im, vd {
           if (param3 < -127) {
             return;
           }
-          this.field_C = (pc) null;
+          this.field_C = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class ph extends og implements im, vd {
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_C = new pc(go.field_j, (bi) null);
+          this.field_C = new InteractiveWidget(go.field_j, (bi) null);
           this.field_C.field_i = (wo) ((Object) new ve());
           var7 = AgeValidator.a(new String[]{this.a(106), this.i(64)}, cc.field_d, 3);
           var3 = 20;
@@ -123,7 +123,7 @@ final class ph extends og implements im, vd {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_5_0 = null;

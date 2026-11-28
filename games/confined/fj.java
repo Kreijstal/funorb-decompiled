@@ -164,7 +164,7 @@ class fj extends IntrusiveNode {
             ta.a(116, 178, ui.field_a, 148, r.field_b);
             ta.a(114, 202, ui.field_a, 148, AwtRasterBuffer.field_g);
             ta.a(115, 400, qe.field_J, 172, si.field_a);
-            MatchingFieldValidator.field_j.d(448, 148);
+            MatchingFieldValidator.field_j.draw(448, 148);
             var2_int = pn.field_a.stringWidth(fh.field_e);
             var3 = (-var2_int + 578) / 2;
             pn.field_a.drawString(fh.field_e, var3, 76, 16777215, -1);
@@ -199,7 +199,7 @@ class fj extends IntrusiveNode {
           incrementValue$14 = param0;
           param0--;
           if (incrementValue$14 == 0) {
-            fa.field_U.d(90, 160);
+            fa.field_U.draw(90, 160);
             ta.a(121, 204, qe.field_J, 222, si.field_a);
             ta.a(103, 246, ui.field_a, 174, ic.field_d);
             ta.a(120, 270, ui.field_a, 174, s.field_L);
@@ -238,16 +238,16 @@ class fj extends IntrusiveNode {
           param0--;
           if (0 == incrementValue$15) {
             SoftwareRasterizer.setClip(84, 88, 204, 114);
-            IntrusiveDeque.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.draw(-76, 88);
             SoftwareRasterizer.setClip(78, 114, 210, 166);
-            IntrusiveDeque.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.draw(-76, 88);
             SoftwareRasterizer.setClip(80, 166, 202, 192);
-            IntrusiveDeque.field_c.d(-76, 88);
+            IntrusiveDeque.field_c.draw(-76, 88);
             SoftwareRasterizer.resetClip();
             var2_intLifetime2 = 0;
             while (true) {
               if (var2_intLifetime2 < 3) {
-                dn.field_c[var2_intLifetime2].c(var2_intLifetime2 * 32 + 100, 96);
+                dn.field_c[var2_intLifetime2].drawOpaque(var2_intLifetime2 * 32 + 100, 96);
                 var2_intLifetime2++;
                 if (var7 == 0) {
                   continue;
@@ -264,11 +264,11 @@ class fj extends IntrusiveNode {
                 tj.a(11038741, 170, (byte) 104, 218, 212, 170);
                 pn.field_a.drawParagraph(rj.field_d, 226, 160, 334, 60, 4243584, -1, 0, 0, 20);
                 SoftwareRasterizer.setClip(90, 0, 640, 254);
-                IntrusiveDeque.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.draw(-470, 224);
                 SoftwareRasterizer.setClip(110, 254, 640, 288);
-                IntrusiveDeque.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.draw(-470, 224);
                 SoftwareRasterizer.setClip(118, 288, 640, 307);
-                IntrusiveDeque.field_c.d(-470, 224);
+                IntrusiveDeque.field_c.draw(-470, 224);
                 SoftwareRasterizer.resetClip();
                 ol.a(122, 30613, 2, 9, 232);
                 pn.field_a.drawParagraph(ug.field_Z, 178, 230, 252, 60, 4243584, -1, 0, 0, 20);

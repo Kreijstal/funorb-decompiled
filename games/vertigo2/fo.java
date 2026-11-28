@@ -265,7 +265,7 @@ final class fo {
 
     private final int a(int param0, int param1) {
         int var3 = -115 / ((63 - param1) / 62);
-        if (oj.field_Q[this.field_b]) {
+        if (NameSuggestionsPanel.field_Q[this.field_b]) {
           if ((this.field_b == 5 || this.field_b == 6) &&
             2 == this.field_a.itemCount) {
             if (param0 == 0) {
@@ -273,9 +273,9 @@ final class fo {
             }
             return this.b(param0, 26) + 160;
           }
-          return this.b(param0, 31) + oj.field_H[this.field_b];
+          return this.b(param0, 31) + NameSuggestionsPanel.field_H[this.field_b];
         }
-        return oj.field_I[this.field_b];
+        return NameSuggestionsPanel.field_I[this.field_b];
     }
 
     private final void a(boolean param0, byte param1) {
@@ -330,11 +330,11 @@ final class fo {
             if (fm.field_d <= sf.field_e[GameKeyHandler.field_d]) {
               if (SocketConnector.field_c[GameKeyHandler.field_d] > sf.field_e[GameKeyHandler.field_d]) {
                 tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
-                kq.field_Kb.c(208, 256);
+                kq.field_Kb.drawOpaque(208, 256);
                 var2 = -24 % ((33 - param0) / 60);
               } else {
                 tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
-                kq.field_Kb.c(208, 256);
+                kq.field_Kb.drawOpaque(208, 256);
                 var2Lifetime3 = -24 % ((33 - param0) / 60);
               }
               decompiledFrameRemainder0 = false;
@@ -347,20 +347,20 @@ final class fo {
               else {
                 if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
                   tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
-                  hh.field_a.c(208, 256);
+                  hh.field_a.drawOpaque(208, 256);
                 } else {
                   tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
-                  hh.field_a.c(208, 256);
+                  hh.field_a.drawOpaque(208, 256);
                 }
               }
             }
           } else {
             if (te.field_B[GameKeyHandler.field_d] < SocketConnector.field_c[GameKeyHandler.field_d]) {
               tk.field_c.drawString(hd.field_h, 180, 240, 16777215, -1);
-              MouseWheelInput.field_c.c(208, 256);
+              MouseWheelInput.field_c.drawOpaque(208, 256);
             } else {
               tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
-              MouseWheelInput.field_c.c(208, 256);
+              MouseWheelInput.field_c.drawOpaque(208, 256);
             }
           }
         } else {
@@ -370,14 +370,14 @@ final class fo {
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
           tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
           if (SocketConnector.field_c[GameKeyHandler.field_d] <= te.field_B[GameKeyHandler.field_d]) {
-            MouseWheelInput.field_c.c(208, 256);
+            MouseWheelInput.field_c.drawOpaque(208, 256);
           } else {
             if (sf.field_e[GameKeyHandler.field_d] < SocketConnector.field_c[GameKeyHandler.field_d]) {
               if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
-                hh.field_a.c(208, 256);
+                hh.field_a.drawOpaque(208, 256);
               }
             } else {
-              kq.field_Kb.c(208, 256);
+              kq.field_Kb.drawOpaque(208, 256);
             }
           }
         }
@@ -444,12 +444,12 @@ final class fo {
               var8_ref_er = vj.field_b[var7];
             }
             if (qc.field_t == var7) {
-              var8_ref_er.d(var3 + 4, -4 + var4);
+              var8_ref_er.drawQuarterSizeAveraged(var3 + 4, -4 + var4);
             } else {
               if (var7 != ConfirmedEmailAvailabilityValidator.field_q) {
-                var8_ref_er.d(var3, var4);
+                var8_ref_er.drawQuarterSizeAveraged(var3, var4);
               } else {
-                var8_ref_er.d(var3 + 2, -2 + var4);
+                var8_ref_er.drawQuarterSizeAveraged(var3 + 2, -2 + var4);
               }
             }
             incrementValue$0 = var6;
@@ -469,7 +469,7 @@ final class fo {
         }
         var7Lifetime1 = stackIn_32_0;
         if (ag.b(49)) {
-          var8 = 240 + oj.field_F[this.field_b] >> 1;
+          var8 = 240 + NameSuggestionsPanel.field_F[this.field_b] >> 1;
           va.field_s.a(vg.field_b, 16777215, -1, 320, var8, 2);
         }
         if (var7Lifetime1 != -1) {
@@ -485,9 +485,9 @@ final class fo {
             }
             var10 = 240;
             if (var9 == 0) {
-              IntrusiveDequeCursor.field_b.e(80, var10);
+              IntrusiveDequeCursor.field_b.draw(80, var10);
             } else {
-              ((ArgbSprite) (vj.field_b[var7Lifetime1])).e(80, var10);
+              ((ArgbSprite) (vj.field_b[var7Lifetime1])).draw(80, var10);
             }
             var10 = var10 + (va.field_s.field_j + var8Lifetime1);
             var11 = var10;
@@ -509,7 +509,7 @@ final class fo {
             var16Lifetime1 = tk.field_c.stringWidth(vl.field_f) + 250;
             var17 = -((GzipDecompressor.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
             for (var18 = 0; var18 < MouseInputHandler.field_d[var7Lifetime1]; var18++) {
-              GzipDecompressor.field_c.e(var16Lifetime1, var17);
+              GzipDecompressor.field_c.draw(var16Lifetime1, var17);
               var16Lifetime1 = var16Lifetime1 + GzipDecompressor.field_c.field_y / 3;
             }
           }
@@ -622,7 +622,7 @@ final class fo {
         if (param0 <= 105) {
           discarded$0 = this.a(-63, 122);
         }
-        if (oj.field_Q[this.field_b]) {
+        if (NameSuggestionsPanel.field_Q[this.field_b]) {
           this.field_a.a(1, true);
           if (this.field_a.selectedIndex > -1 &&
             !this.b(this.field_a.selectedIndex, (byte) 58)) {
@@ -669,7 +669,7 @@ final class fo {
         if (param0 != 3767) {
           field_c = (UiPanel) null;
         }
-        ie.field_Hb.e(-(ie.field_Hb.field_y / 2) + 320, 240 - ie.field_Hb.field_t / 2);
+        ie.field_Hb.draw(-(ie.field_Hb.field_y / 2) + 320, 240 - ie.field_Hb.field_t / 2);
     }
 
     private final void b(int param0) {
@@ -687,7 +687,7 @@ final class fo {
         if (param0 < 25) {
           this.a(true, (byte) 118, false, -99);
         }
-        for (var4 = 0; oj.field_O[this.field_b].length > var4; var4++) {
+        for (var4 = 0; NameSuggestionsPanel.field_O[this.field_b].length > var4; var4++) {
           var5 = this.a(var4, (byte) -80);
           if (this.b(var4, (byte) 54) &&
             this.b(var4, 121) <= param1 &&
@@ -737,7 +737,7 @@ final class fo {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        var4 = oj.field_O[this.field_b][param0];
+        var4 = NameSuggestionsPanel.field_O[this.field_b][param0];
         var21 = sl.field_q[var4];
         var5 = var21;
         var5 = var21;
@@ -810,13 +810,13 @@ final class fo {
         var13 = var13 + var14 * var12[1].field_y;
         var15 = -(var12[0].field_t / 2) + var9;
         var16 = (-var13 + var11) / 2 + var7;
-        var12[0].e(var16, var15);
+        var12[0].draw(var16, var15);
         var16 = var16 + var12[0].field_y;
         for (var17 = 0; var14 > var17; var17++) {
-          var12[1].e(var16, var15);
+          var12[1].draw(var16, var15);
           var16 = var16 + var12[1].field_y;
         }
-        var12[2].e(var16, var15);
+        var12[2].draw(var16, var15);
         if (param1 &&
           this.b(param0, (byte) 68)) {
           stackIn_58_0 = 15637810;
@@ -861,7 +861,7 @@ final class fo {
         if (param1) {
           var19 = cd.field_b;
         }
-        var19.e(var10 + var18 - 2, -2 + (-(var19.field_t / 2) + var9));
+        var19.draw(var10 + var18 - 2, -2 + (-(var19.field_t / 2) + var9));
         return;
     }
 
@@ -938,8 +938,8 @@ final class fo {
         if (param1 < 1) {
           field_e = (si) null;
         }
-        if (!oj.field_Q[this.field_b]) {
-          return oj.field_M[this.field_b];
+        if (!NameSuggestionsPanel.field_Q[this.field_b]) {
+          return NameSuggestionsPanel.field_M[this.field_b];
         }
         if (-1 + this.field_a.itemCount == param0 && (this.field_b == 7 ||
           this.field_b == 9 ||
@@ -952,7 +952,7 @@ final class fo {
         }
         if (this.field_b == 13 &&
           param0 == 2) {
-          return oj.field_H[this.field_b] + oj.field_M[this.field_b];
+          return NameSuggestionsPanel.field_H[this.field_b] + NameSuggestionsPanel.field_M[this.field_b];
         }
         if ((this.field_b == 5 ||
           this.field_b == 6) &&
@@ -960,7 +960,7 @@ final class fo {
           param0 == 0)) {
           return -24 - va.field_s.a(1, sp.field_Q) / 2 + 320;
         }
-        return param0 * oj.field_H[this.field_b] + oj.field_M[this.field_b];
+        return param0 * NameSuggestionsPanel.field_H[this.field_b] + NameSuggestionsPanel.field_M[this.field_b];
     }
 
     private final void g(byte param0) {
@@ -992,17 +992,17 @@ final class fo {
         var3 = stackIn_9_0;
         if (0 == var3) {
           if (0 == var7.getWinningPlayerIndex((byte) 116)) {
-            ea.field_d[2].e(-(ea.field_d[2].field_x / 2) + 320, 0);
+            ea.field_d[2].draw(-(ea.field_d[2].field_x / 2) + 320, 0);
           } else {
             if (var7.getWinningPlayerIndex((byte) 116) != 1) {
-              ea.field_d[4].e(320 - ea.field_d[4].field_x / 2, 0);
+              ea.field_d[4].draw(320 - ea.field_d[4].field_x / 2, 0);
             } else {
-              ea.field_d[3].e(-(ea.field_d[3].field_x / 2) + 320, 0);
+              ea.field_d[3].draw(-(ea.field_d[3].field_x / 2) + 320, 0);
             }
           }
         } else {
           if (var3 != 1) {
-            ea.field_d[6].e(-(ea.field_d[6].field_x / 2) + 320, 0);
+            ea.field_d[6].draw(-(ea.field_d[6].field_x / 2) + 320, 0);
             var4 = var7.field_w[0];
             var5 = var7.field_w[1];
             if (var7.getWinningPlayerIndex((byte) 106) == 0) {
@@ -1016,12 +1016,12 @@ final class fo {
             }
           } else {
             if (var7.getWinningPlayerIndex((byte) 114) == 1) {
-              ea.field_d[2].e(-(ea.field_d[2].field_x / 2) + 320, 0);
+              ea.field_d[2].draw(-(ea.field_d[2].field_x / 2) + 320, 0);
             } else {
               if (var7.getWinningPlayerIndex((byte) 123) == 0) {
-                ea.field_d[3].e(320 - ea.field_d[3].field_x / 2, 0);
+                ea.field_d[3].draw(320 - ea.field_d[3].field_x / 2, 0);
               } else {
-                ea.field_d[4].e(-(ea.field_d[4].field_x / 2) + 320, 0);
+                ea.field_d[4].draw(-(ea.field_d[4].field_x / 2) + 320, 0);
               }
             }
           }
@@ -1086,7 +1086,7 @@ final class fo {
 
     fo(int param0) {
         this.field_b = param0;
-        this.field_a = new MenuSelectionCursor(oj.field_O[this.field_b].length);
+        this.field_a = new MenuSelectionCursor(NameSuggestionsPanel.field_O[this.field_b].length);
     }
 
     private final void g(int param0) {
@@ -1206,7 +1206,7 @@ final class fo {
         if (param1 != -80) {
           this.d(-72);
         }
-        if (!oj.field_Q[this.field_b]) {
+        if (!NameSuggestionsPanel.field_Q[this.field_b]) {
           if (this.field_a.itemCount - 1 == param0) {
             if (this.field_b == 7 ||
               this.field_b == 8 ||
@@ -1220,13 +1220,13 @@ final class fo {
               return 380;
             }
           }
-          return oj.field_F[this.field_b] + param0 * oj.field_H[this.field_b];
+          return NameSuggestionsPanel.field_F[this.field_b] + param0 * NameSuggestionsPanel.field_H[this.field_b];
         }
         if (13 == this.field_b &&
           param0 == 2) {
-          return oj.field_F[this.field_b] - 38;
+          return NameSuggestionsPanel.field_F[this.field_b] - 38;
         }
-        return oj.field_F[this.field_b];
+        return NameSuggestionsPanel.field_F[this.field_b];
     }
 
     private final int c(int param0, byte param1) {
@@ -1259,7 +1259,7 @@ final class fo {
         if (param1 > -56) {
           this.field_b = 20;
         }
-        var5 = oj.field_O[this.field_b][param3];
+        var5 = NameSuggestionsPanel.field_O[this.field_b][param3];
         if (var5 != 21 &&
           var5 != 20 &&
           this.field_a.a(84)) {
@@ -1753,8 +1753,8 @@ final class fo {
         regionExit1: {
           var3 = Vertigo2.field_L ? 1 : 0;
           if (this.field_b == 0) {
-            uq.field_a.e(-70, 480 - (uq.field_a.field_t + 20));
-            eq.field_F.e(50, 10);
+            uq.field_a.draw(-70, 480 - (uq.field_a.field_t + 20));
+            eq.field_F.draw(50, 10);
             MusicPatchPcmStream.a(this.a(this.field_a.itemCount - 1, (byte) -80) + (this.c(-1 + this.field_a.itemCount, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
           } else {
             if (this.field_b != 17 &&
@@ -1792,11 +1792,11 @@ final class fo {
                         ap.field_d.field_t < 50) {
                         tk.field_c.drawCentred(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, wq.field_L, ~param0), 404, 125, 16777215, -1);
                       }
-                      MouseWheelInput.field_c.a(350, 140, 28, 26);
+                      MouseWheelInput.field_c.drawScaled(350, 140, 28, 26);
                       tk.field_c.drawString(gl.a(-42, false, false, te.field_B[ap.field_d.field_t]), 390, 160, 16777215, -1);
-                      kq.field_Kb.a(350, 175, 28, 26);
+                      kq.field_Kb.drawScaled(350, 175, 28, 26);
                       tk.field_c.drawString(gl.a(param0 + 1, false, false, sf.field_e[ap.field_d.field_t]), 390, 195, 16777215, -1);
-                      hh.field_a.a(350, 210, 28, 26);
+                      hh.field_a.drawScaled(350, 210, 28, 26);
                       tk.field_c.drawString(gl.a(-88, false, false, bp.field_E[ap.field_d.field_t]), 390, 230, 16777215, -1);
                     }
                     this.e(-14189);
@@ -1875,7 +1875,7 @@ final class fo {
           th.field_f[this.field_b] != null) {
           var4 = th.field_f[this.field_b];
           var2_ref_er = var4;
-          var2_ref_er.e(-(var4.field_y / 2) + 320, 50 - var4.field_t / 2);
+          var2_ref_er.draw(-(var4.field_y / 2) + 320, 50 - var4.field_t / 2);
         }
         for (var2 = 0; var2 < this.field_a.itemCount; var2++) {
           stackIn_70_1 = var2;

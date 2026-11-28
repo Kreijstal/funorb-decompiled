@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends kn implements f, sh {
-    private hc field_J;
-    private hc field_P;
-    ei field_K;
+final class DisplayNameSelectionPanel extends kn implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_J;
+    private InteractiveWidget field_P;
+    NameSuggestionsPanel field_K;
     private ValidatedTextField field_N;
     static ae field_M;
     static gh field_O;
@@ -63,15 +63,15 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         return pl.field_a;
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(35))).b((byte) -82);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(35))).invalidateCheckedName((byte) -82);
         if (param0 != 47) {
           String var3 = (String) null;
           DisplayNameSelectionPanel.a((String) null, (String) null, -67);
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -175,7 +175,7 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         }
     }
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         int discarded$1 = 0;
         fe var7 = null;
         RuntimeException stackIn_9_0 = null;
@@ -215,8 +215,8 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         this.field_N = new ValidatedTextField("", (rm) null, 12);
         eg var1 = new eg(sl.field_q, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
         fe var2 = new fe(BufferedRandomAccessFile.field_l, var1, (rm) null);
-        this.field_P = new hc(he.field_c, (rm) null);
-        this.field_J = new hc(u.field_b, (rm) null);
+        this.field_P = new InteractiveWidget(he.field_c, (rm) null);
+        this.field_J = new InteractiveWidget(u.field_b, (rm) null);
         this.field_N.field_n = ImageProducerRasterBuffer.field_l;
         this.field_N.setFieldValidator(new AccountNameAvailabilityValidator(this.field_N), 1048576);
         this.field_P.field_E = false;
@@ -236,7 +236,7 @@ final class DisplayNameSelectionPanel extends kn implements f, sh {
         this.field_P.field_y = (rm) (this);
         this.a(-1, this.field_P);
         this.a(-1, this.field_J);
-        this.field_K = new ei((f) (this));
+        this.field_K = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_K.a(150, -44, this.field_N.field_v + this.field_N.field_u + 60, -this.field_N.field_v + (this.field_v - this.field_N.field_u - 60), 20);
         this.a(-1, this.field_K);
         this.a(55 + (var3 + var4), -101, 0, 496, 0);

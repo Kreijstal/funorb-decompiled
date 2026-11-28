@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends jc implements qh {
+final class ol extends jc implements WidgetActivationListener {
     static int field_W;
-    private hl field_Y;
+    private InteractiveWidget field_Y;
     static int field_X;
 
     final static wb[] a(int param0, ResourceArchive param1, int param2, int param3) {
@@ -36,7 +36,7 @@ final class ol extends jc implements qh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -63,12 +63,12 @@ final class ol extends jc implements qh {
         }
     }
 
-    private final hl a(String param0, int param1, pl param2) {
-        hl var4 = null;
+    private final InteractiveWidget a(String param0, int param1, pl param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         ResourceArchive var6 = null;
-        hl stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -76,7 +76,7 @@ final class ol extends jc implements qh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hl(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           if (param1 != -29995) {
             var6 = (ResourceArchive) null;
             ol.a(76, (ResourceArchive) null, 39, 118);
@@ -199,7 +199,7 @@ final class ol extends jc implements qh {
         for (var2 = 0; var2 < cf.field_c; var2++) {
           var3 = NetworkArchiveRequest.field_q[var2] * hb.field_a[var2];
           var21 = EmailFormatValidator.field_k[var2];
-          if (!hl.field_y[var2]) {
+          if (!InteractiveWidget.field_y[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {

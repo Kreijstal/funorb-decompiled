@@ -144,8 +144,8 @@ final class sj {
           LoginPanel.field_K = lb.a(false, "", param3, "blocks");
           for (var6_intLifetime2 = 0; dj.field_a.length > var6_intLifetime2; var6_intLifetime2++) {
             var14 = new Sprite(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
-            var14.e();
-            dj.field_a[var6_intLifetime2].c(1, 0);
+            var14.bindAsRenderTarget();
+            dj.field_a[var6_intLifetime2].draw(1, 0);
             var14.addOutline(1);
             dj.field_a[var6_intLifetime2] = var14;
           }
@@ -166,12 +166,12 @@ final class sj {
           kb.field_a[1] = var6[1];
           kb.field_a[0] = var6[0];
           kb.field_a[7] = var6[5];
-          cm.field_F = new Sprite[AwtRasterBuffer.field_a[0].length];
-          for (var7 = 0; cm.field_F.length > var7; var7++) {
-            cm.field_F[var7] = new Sprite(6 + AwtRasterBuffer.field_a[0][var7].field_m, AwtRasterBuffer.field_a[0][var7].field_n + 6);
-            cm.field_F[var7].e();
-            AwtRasterBuffer.field_a[0][var7].a(3, 3);
-            h.a(3, 16777215, 0, false, cm.field_F[var7].field_j, 0, cm.field_F[var7].field_k, cm.field_F[var7]);
+          NameSuggestionsPanel.field_F = new Sprite[AwtRasterBuffer.field_a[0].length];
+          for (var7 = 0; NameSuggestionsPanel.field_F.length > var7; var7++) {
+            NameSuggestionsPanel.field_F[var7] = new Sprite(6 + AwtRasterBuffer.field_a[0][var7].field_m, AwtRasterBuffer.field_a[0][var7].field_n + 6);
+            NameSuggestionsPanel.field_F[var7].bindAsRenderTarget();
+            AwtRasterBuffer.field_a[0][var7].drawOpaque(3, 3);
+            h.a(3, 16777215, 0, false, NameSuggestionsPanel.field_F[var7].field_j, 0, NameSuggestionsPanel.field_F[var7].field_k, NameSuggestionsPanel.field_F[var7]);
           }
           ac.field_a.setAsRasterTarget((byte) 119);
           wl.field_f = lb.a(false, "", param3, "catapult");
@@ -251,8 +251,8 @@ final class sj {
             hb.field_m[var9_intLifetime2] = array$0;
             for (var10_intLifetime2 = 0; var8.length > var10_intLifetime2; var10_intLifetime2++) {
               hb.field_m[var9_intLifetime2][var10_intLifetime2] = new Sprite(var8[var10_intLifetime2].field_m, var8[var10_intLifetime2].field_n);
-              hb.field_m[var9_intLifetime2][var10_intLifetime2].e();
-              var8[var10_intLifetime2].d(0, 0, vg.field_K[var9_intLifetime2]);
+              hb.field_m[var9_intLifetime2][var10_intLifetime2].bindAsRenderTarget();
+              var8[var10_intLifetime2].drawGrayModulated(0, 0, vg.field_K[var9_intLifetime2]);
             }
           }
           ac.field_a.setAsRasterTarget((byte) 113);

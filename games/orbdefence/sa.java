@@ -64,7 +64,7 @@ final class sa {
             if (param0.field_c == 2) {
               var7 = var7 + (param3.field_r - this.field_e.field_t);
             }
-            this.field_e.c(var6_int, var7);
+            this.field_e.draw(var6_int, var7);
           }
           var6 = param0.a((byte) -95, param3);
           if (var6 != null &&
@@ -140,14 +140,14 @@ final class sa {
           var5_int = param1[param0].field_s;
           var6 = param1[2].field_s;
           var7 = param1[1].field_s;
-          param1[0].c(param2, param4);
-          param1[2].c(param2 + param3 - var6, param4);
+          param1[0].draw(param2, param4);
+          param1[2].draw(param2 + param3 - var6, param4);
           SoftwareRasterizer.saveClip(LoginPanel.field_F);
           SoftwareRasterizer.intersectClip(param2 + var5_int, param4, -var6 + (param3 + param2), param4 + param1[1].field_t);
           var8 = var5_int + param2;
           var9 = param2 + param3 - var6;
           for (param2 = var8; param2 < var9; param2 = param2 + var7) {
-            param1[1].c(param2, param4);
+            param1[1].draw(param2, param4);
           }
           SoftwareRasterizer.restoreClip(LoginPanel.field_F);
         } catch (RuntimeException runtimeException) {

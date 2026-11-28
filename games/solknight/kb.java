@@ -26,7 +26,7 @@ final class kb {
         if (param0 >= -5) {
           return;
         }
-        GameApplet.field_j.d(param1, param3);
+        GameApplet.field_j.draw(param1, param3);
         if (!param2) {
           return;
         }

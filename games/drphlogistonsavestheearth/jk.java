@@ -395,13 +395,13 @@ final class jk extends si {
             }
             vi.field_e = stackIn_113_0 + stackIn_114_1;
           }
-          LoginMenuScreen.field_N = sa.field_f - (vi.field_e >> 1);
+          NameSuggestionsPanel.field_N = sa.field_f - (vi.field_e >> 1);
           if (param0 != 49) {
             return;
           }
           cj.field_f = new int[sg.field_f.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = LoginMenuScreen.field_N;
+          var5Lifetime3 = NameSuggestionsPanel.field_N;
           while (var4Lifetime3 < sg.field_f.length) {
             var6Lifetime1 = lg.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {

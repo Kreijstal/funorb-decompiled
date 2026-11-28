@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi extends eb {
+final class wi extends InteractiveWidget {
     private fc field_N;
     int field_K;
     private int field_L;

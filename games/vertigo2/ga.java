@@ -14,7 +14,7 @@ final class ga extends rl {
 
     final static void a(int[] param0, int param1, int param2) {
         try {
-          oj.field_O[param1] = param0;
+          NameSuggestionsPanel.field_O[param1] = param0;
           if (param2 <= 40) {
             int[] var4 = (int[]) null;
             ga.a((int[]) null, -31, 97);

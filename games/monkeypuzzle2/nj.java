@@ -149,22 +149,22 @@ final class nj {
         }
         tj.b(653);
         if (DiskCacheWorker.field_i >= 150) {
-          ki.field_H.b(15 + var3, var4 + 10, var5);
+          ki.field_H.drawWithOpacity(15 + var3, var4 + 10, var5);
         } else {
-          EditableTextField.field_H.e(var3, var4);
+          EditableTextField.field_H.drawHalfSize(var3, var4);
         }
         var6 = DiskCacheWorker.field_i - 125;
         if (var6 > 0 &&
           50 > var6) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            ca.field_f.c(var3, var4, var7);
+            ca.field_f.drawAdditive(var3, var4, var7);
           } else {
             if (var6 < 30) {
-              ca.field_f.c(var3, var4, 256);
+              ca.field_f.drawAdditive(var3, var4, 256);
             } else {
               var7 = (50 - var6) * 256 / 20;
-              ca.field_f.c(var3, var4, var7);
+              ca.field_f.drawAdditive(var3, var4, var7);
             }
           }
         }
@@ -174,7 +174,7 @@ final class nj {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          dj.field_b.b(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+          dj.field_b.drawWithOpacity(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

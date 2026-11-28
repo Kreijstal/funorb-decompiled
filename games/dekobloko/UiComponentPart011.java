@@ -54,22 +54,22 @@ final class UiComponentPart011 extends InteractiveComponent {
               MixedSupport071.rgbSpriteState0027 = new RgbSprite(integerLocal4, integerLocal5);
               ValidationStatus.performAction1570(true, MixedSupport071.rgbSpriteState0027);
             }
-            rgbSpriteLocal8.performAction0259(112, 144, rgbSpriteLocal8.integerState0254 << 4, rgbSpriteLocal8.integerState0260 << 4, -this.integerState0239 << 10, 4096);
+            rgbSpriteLocal8.drawRotatedAbout(112, 144, rgbSpriteLocal8.integerState0254 << 4, rgbSpriteLocal8.integerState0260 << 4, -this.integerState0239 << 10, 4096);
             ByteStorage.performAction1060((byte) -5);
-            MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal8.integerState0254, -rgbSpriteLocal8.integerState0260 + integerLocal2, 256);
+            MixedSupport071.rgbSpriteState0027.drawAdditive(integerLocal1 - rgbSpriteLocal8.integerState0254, -rgbSpriteLocal8.integerState0260 + integerLocal2, 256);
             return;
           }
           if (DiagnosticSupport002.validationStatusState0002 != validationStatusLocal3) {
             if (validationStatusLocal3 == ReturnedShapeUpdate.validationStatusState0005) {
               rgbSpriteLocal10 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-              rgbSpriteLocal10.performAction0295(integerLocal1 - (rgbSpriteLocal10.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal10.integerState0255 >> 1), 256);
+              rgbSpriteLocal10.drawAdditive(integerLocal1 - (rgbSpriteLocal10.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal10.integerState0255 >> 1), 256);
               return;
             }
             if (validationStatusLocal3 != MixedSupport023.validationStatusState0001) {
               return;
             }
             rgbSpriteLocal11 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-            rgbSpriteLocal11.performAction0295(-(rgbSpriteLocal11.integerState0258 >> 1) + integerLocal1, integerLocal2 - (rgbSpriteLocal11.integerState0255 >> 1), 256);
+            rgbSpriteLocal11.drawAdditive(-(rgbSpriteLocal11.integerState0258 >> 1) + integerLocal1, integerLocal2 - (rgbSpriteLocal11.integerState0255 >> 1), 256);
             return;
           }
           rgbSpriteLocal9 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -93,9 +93,9 @@ final class UiComponentPart011 extends InteractiveComponent {
               }
             }
           }
-          rgbSpriteLocal9.performAction0259(112, 144, rgbSpriteLocal9.integerState0254 << 4, rgbSpriteLocal9.integerState0260 << 4, -this.integerState0239 << 10, 4096);
+          rgbSpriteLocal9.drawRotatedAbout(112, 144, rgbSpriteLocal9.integerState0254 << 4, rgbSpriteLocal9.integerState0260 << 4, -this.integerState0239 << 10, 4096);
           ByteStorage.performAction1060((byte) -5);
-          MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal9.integerState0254, -rgbSpriteLocal9.integerState0260 + integerLocal2, 256);
+          MixedSupport071.rgbSpriteState0027.drawAdditive(integerLocal1 - rgbSpriteLocal9.integerState0254, -rgbSpriteLocal9.integerState0260 + integerLocal2, 256);
           return;
         }
         validationStatusLocal19 = this.callbackContract011State0001.getValidationStatus(20350);
@@ -103,14 +103,14 @@ final class UiComponentPart011 extends InteractiveComponent {
           DiagnosticSupport002.validationStatusState0002 != validationStatusLocal19) {
           if (validationStatusLocal19 == ReturnedShapeUpdate.validationStatusState0005) {
             rgbSpriteLocal12 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[2];
-            rgbSpriteLocal12.performAction0295(integerLocal1 - (rgbSpriteLocal12.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal12.integerState0255 >> 1), 256);
+            rgbSpriteLocal12.drawAdditive(integerLocal1 - (rgbSpriteLocal12.integerState0258 >> 1), integerLocal2 - (rgbSpriteLocal12.integerState0255 >> 1), 256);
             return;
           }
           if (validationStatusLocal19 != MixedSupport023.validationStatusState0001) {
             return;
           }
           rgbSpriteLocal13 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
-          rgbSpriteLocal13.performAction0295(-(rgbSpriteLocal13.integerState0258 >> 1) + integerLocal1, integerLocal2 - (rgbSpriteLocal13.integerState0255 >> 1), 256);
+          rgbSpriteLocal13.drawAdditive(-(rgbSpriteLocal13.integerState0258 >> 1) + integerLocal1, integerLocal2 - (rgbSpriteLocal13.integerState0255 >> 1), 256);
           return;
         }
         rgbSpriteLocal14 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -133,9 +133,9 @@ final class UiComponentPart011 extends InteractiveComponent {
             }
           }
         }
-        rgbSpriteLocal14.performAction0259(112, 144, rgbSpriteLocal14.integerState0254 << 4, rgbSpriteLocal14.integerState0260 << 4, -this.integerState0239 << 10, 4096);
+        rgbSpriteLocal14.drawRotatedAbout(112, 144, rgbSpriteLocal14.integerState0254 << 4, rgbSpriteLocal14.integerState0260 << 4, -this.integerState0239 << 10, 4096);
         ByteStorage.performAction1060((byte) -5);
-        MixedSupport071.rgbSpriteState0027.performAction0295(integerLocal1 - rgbSpriteLocal14.integerState0254, -rgbSpriteLocal14.integerState0260 + integerLocal2, 256);
+        MixedSupport071.rgbSpriteState0027.drawAdditive(integerLocal1 - rgbSpriteLocal14.integerState0254, -rgbSpriteLocal14.integerState0260 + integerLocal2, 256);
     }
 
     final void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class te extends s {
+class te extends InteractiveWidget {
     static String field_J;
     static int field_O;
     static boolean field_G;
@@ -202,7 +202,7 @@ class te extends s {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -81) {
-            this.b(-120, 119, 43, -76);
+            this.activateFromInput(-120, 119, 43, -76);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -268,8 +268,8 @@ class te extends s {
         field_L = null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0 ^ 0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0 ^ 0, param1, param2, param3);
         if (param0 != 84) {
           this.a(93, (byte) 51, 88, -37);
         }

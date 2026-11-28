@@ -58,7 +58,7 @@ final class ql extends af {
         RuntimeException var6 = null;
         bf var7 = null;
         bf var9 = null;
-        pj var10 = null;
+        InteractiveWidget var10 = null;
         bf var11 = null;
         bf var12 = null;
         bf var13 = null;
@@ -67,12 +67,12 @@ final class ql extends af {
           if (param0 < 113) {
             return;
           }
-          if (param4 instanceof pj) {
+          if (param4 instanceof InteractiveWidget) {
             stackIn_5_0 = (UiWidget) (param4);
           } else {
             stackIn_5_0 = null;
           }
-          var10 = (pj) (stackIn_5_0);
+          var10 = (InteractiveWidget) (stackIn_5_0);
           kf.a((byte) 97, param3 + param4.field_m, param1 + param4.field_j, param3 + param4.field_m + param4.field_t, param4.field_x + (param4.field_j + param1));
           if (var10 != null) {
             param2 = param2 & var10.field_B;

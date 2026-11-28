@@ -12,17 +12,17 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = Vertigo2.field_L ? 1 : 0;
-        qe.field_W.c(-qe.field_W.field_x + param1, param3, 64);
+        qe.field_W.drawWithOpacity(-qe.field_W.field_x + param1, param3, 64);
         SoftwareRasterizer.setClip(param1, 0, param2 + param1, 480);
         if (param0) {
           return;
         }
         try {
           for (var4_int = param1; var4_int < param1 + param2; var4_int = var4_int + qp.field_h.field_x) {
-            qp.field_h.c(var4_int, param3, 64);
+            qp.field_h.drawWithOpacity(var4_int, param3, 64);
           }
           SoftwareRasterizer.resetClip();
-          ln.field_f.c(param2 + param1, param3, 64);
+          ln.field_f.drawWithOpacity(param2 + param1, param3, 64);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

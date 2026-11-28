@@ -36,7 +36,7 @@ final class lc extends td implements ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

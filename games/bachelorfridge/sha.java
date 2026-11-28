@@ -15,11 +15,11 @@ final class sha extends pu {
         try {
           uc.d(76);
           nd.field_g = new Sprite(var3, 3 * var4 / 4);
-          nd.field_g.b();
-          var2.c(0, 0);
+          nd.field_g.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           lt.field_a = new Sprite(var3, var4 - nd.field_g.field_p);
-          lt.field_a.b();
-          var2.c(0, -nd.field_g.field_p);
+          lt.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, -nd.field_g.field_p);
           lt.field_a.field_u = nd.field_g.field_p;
           db.b(99);
         } catch (RuntimeException runtimeException) {

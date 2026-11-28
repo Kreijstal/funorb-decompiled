@@ -163,7 +163,7 @@ final class NanoFrameTimer extends FrameTimer {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          IntrusiveNode.field_f.b(param3, param0);
+          IntrusiveNode.field_f.draw(param3, param0);
           if (!param2) {
             return;
           }
@@ -186,7 +186,7 @@ final class NanoFrameTimer extends FrameTimer {
           return;
         }
         NanoFrameTimer.a(false, -74);
-        IntrusiveNode.field_f.b(param3, param0);
+        IntrusiveNode.field_f.draw(param3, param0);
         if (!param2) {
           return;
         }
@@ -255,7 +255,7 @@ final class NanoFrameTimer extends FrameTimer {
           } while (var5 == 0);
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
-            if (var2_int < am.field_J) {
+            if (var2_int < NameSuggestionsPanel.field_J) {
               stackIn_11_0 = ra.field_i[var2_int].field_l;
               stackIn_11_1 = param0.field_l;
               if (var5 != 0) {
@@ -285,7 +285,7 @@ final class NanoFrameTimer extends FrameTimer {
           var2_int = 0;
           var3 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var3 < am.field_J)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var3 < NameSuggestionsPanel.field_J)))) {
             stackIn_27_0 = ~param0.field_l;
             if (var5 == 0) {
               boolean decompiledFrameRemainder0 = true;
@@ -309,9 +309,9 @@ final class NanoFrameTimer extends FrameTimer {
           if (decompiledNaturalLoopExit0) {
             stackIn_27_0 = var2_int;
           }
-          am.field_J = stackIn_27_0;
-          fieldTemp$3 = am.field_J;
-          am.field_J = am.field_J + 1;
+          NameSuggestionsPanel.field_J = stackIn_27_0;
+          fieldTemp$3 = NameSuggestionsPanel.field_J;
+          NameSuggestionsPanel.field_J = NameSuggestionsPanel.field_J + 1;
           ra.field_i[fieldTemp$3] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -348,7 +348,7 @@ final class NanoFrameTimer extends FrameTimer {
         int var4;
         int var4Lifetime1;
         if (param1 < -21) {
-          IntrusiveNode.field_f.b(param3, param0);
+          IntrusiveNode.field_f.draw(param3, param0);
           if (!param2) {
             return;
           }
@@ -371,7 +371,7 @@ final class NanoFrameTimer extends FrameTimer {
           return;
         }
         NanoFrameTimer.a(false, -74);
-        IntrusiveNode.field_f.b(param3, param0);
+        IntrusiveNode.field_f.draw(param3, param0);
         if (!param2) {
           return;
         }

@@ -171,14 +171,14 @@ final class wb extends am {
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(mo.field_w);
             var11 = new Sprite(qc.field_db.field_s + 4, 4 + qc.field_db.field_t);
-            var11.e();
-            qc.field_db.d(2, 2, fa.field_c);
+            var11.bindAsRenderTarget();
+            qc.field_db.drawGrayModulated(2, 2, fa.field_c);
             hb.a(0, false, var11, var11.field_t, var11.field_s, 1, 0, 2);
             qc.field_db = var11;
-            p.field_w = qc.field_db.b();
+            p.field_w = qc.field_db.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.field_s / 2;
-            var12.e();
+            var12.bindAsRenderTarget();
             lh.field_O.drawCentred(ff.a(new String[]{Level.field_u}, 0, eo.field_c), var6, 40, 16777215, -1);
             DelayedPcmStream.field_o.drawCentred(ff.a(new String[]{Level.field_u}, 0, wd.field_r), var6, 60, 16777215, -1);
             lh.field_O.drawCentred(ff.a(new String[]{rj.field_y}, 0, IndexedSpriteLayer.field_c), var6, 110, 16777215, -1);
@@ -186,16 +186,16 @@ final class wb extends am {
             lh.field_O.drawCentred(rn.field_a, var6, 180, 16777215, -1);
             DelayedPcmStream.field_o.drawCentred(ii.field_o, var6, 200, 16777215, -1);
             hb.a(0, false, var12, var12.field_t, var12.field_s, 1, 0, 3);
-            mk.field_a.e();
-            var12.d(18 - mk.field_a.field_v, -mk.field_a.field_r + 241);
+            mk.field_a.bindAsRenderTarget();
+            var12.draw(18 - mk.field_a.field_v, -mk.field_a.field_r + 241);
             for (var7 = 0; ik.field_k.length > var7; var7++) {
-              ln.field_H[var7].e();
+              ln.field_H[var7].bindAsRenderTarget();
               DelayedPcmStream.field_o.drawParagraph(ik.field_k[var7], 3, 3, ln.field_H[var7].field_s - 6, ln.field_H[var7].field_t - 6, fa.field_c, -1, 1, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);
               hb.a(0, false, ln.field_H[var7], ln.field_H[var7].field_t, ln.field_H[var7].field_s, 1, 0, 3);
             }
             ik.field_k = null;
-            RandomAccessCacheFile.field_f = je.field_e.c();
-            RandomAccessCacheFile.field_f.e();
+            RandomAccessCacheFile.field_f = je.field_e.copy();
+            RandomAccessCacheFile.field_f.bindAsRenderTarget();
             kp.a(SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_d / 3, 0, (byte) 16, 64, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(mo.field_w);
@@ -262,18 +262,18 @@ final class wb extends am {
               var8 = var8 + var9_intLifetime3;
               Torquing.field_x = Torquing.field_x - var9_intLifetime3;
             }
-            Bzip2State.field_F.a();
+            Bzip2State.field_F.normalizeCanvas();
             var9 = new Sprite(Bzip2State.field_F.field_w, Bzip2State.field_F.field_u);
-            var9.e();
+            var9.bindAsRenderTarget();
             lh.field_O.drawParagraph(var14, up.field_d, DiskArchiveRequest.field_y, WidgetContainer.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
-            Bzip2State.field_F.e();
-            var9.d(0, 0);
+            Bzip2State.field_F.bindAsRenderTarget();
+            var9.draw(0, 0);
             MouseWheelInput.field_b = new Sprite(640, 480);
-            MouseWheelInput.field_b.e();
-            Bzip2State.field_F.a((Bzip2State.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (Bzip2State.field_F.field_u >> 1), tl.field_n, 4096);
+            MouseWheelInput.field_b.bindAsRenderTarget();
+            Bzip2State.field_F.drawRotated((Bzip2State.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (Bzip2State.field_F.field_u >> 1), tl.field_n, 4096);
             Bzip2State.field_F = null;
-            MouseWheelInput.field_b.d();
+            MouseWheelInput.field_b.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(mo.field_w);
           }
@@ -286,11 +286,11 @@ final class wb extends am {
             var16 = new Sprite(412, 43);
             var5_ref_String = ff.a(new String[]{hf.field_a}, 0, DiskCacheWorker.field_d);
             hf.field_a = null;
-            var16.e();
+            var16.bindAsRenderTarget();
             DelayedPcmStream.field_o.drawParagraph(var5_ref_String, 3, 3, var16.field_s - 6, -6 + var16.field_t, 16777215, -1, 0, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);
             hb.a(0, false, var16, var16.field_t, var16.field_s, 1, 0, 3);
-            jd.field_D.e();
-            var16.d(199 - jd.field_D.field_v, -jd.field_D.field_r + 83);
+            jd.field_D.bindAsRenderTarget();
+            var16.draw(199 - jd.field_D.field_v, -jd.field_D.field_r + 83);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(mo.field_w);
           }
@@ -304,11 +304,11 @@ final class wb extends am {
             var5Lifetime1 = var4 - (-kj.field_b.field_w - 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + var6Lifetime2 + kj.field_b.field_w;
-            jd.field_D.e();
+            jd.field_D.bindAsRenderTarget();
             DelayedPcmStream.field_o.drawString(eh.field_e, -jd.field_D.field_v + var7Lifetime2, DelayedPcmStream.field_o.field_x + (155 - (jd.field_D.field_r - DelayedPcmStream.field_o.field_t)), 16777215, -1);
             hb.a(var7Lifetime2 + (-jd.field_D.field_v - 4), false, jd.field_D, 50, var4, 1, 155 - jd.field_D.field_r, 3);
             var8Lifetime1 = -((-DelayedPcmStream.field_o.field_t + (-DelayedPcmStream.field_o.field_x + kj.field_b.field_u) - 3) / 2) + (-jd.field_D.field_r + 155);
-            kj.field_b.d(var6Lifetime2 - jd.field_D.field_v, var8Lifetime1);
+            kj.field_b.draw(var6Lifetime2 - jd.field_D.field_v, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(mo.field_w);
             kj.field_b = null;
@@ -317,23 +317,23 @@ final class wb extends am {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ln.field_G, VertexMesh.field_o);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ln.field_G, VertexMesh.field_o);
           if (RasterBuffer.field_f != null) {
-            RasterBuffer.field_f.d(0, 0);
+            RasterBuffer.field_f.draw(0, 0);
           }
           if (null != mk.field_a) {
-            mk.field_a.d(0, 0);
+            mk.field_a.draw(0, 0);
           }
-          jd.field_D.d(0, 0);
+          jd.field_D.draw(0, 0);
           if (MouseWheelInput.field_b != null) {
-            MouseWheelInput.field_b.d(0, 0);
+            MouseWheelInput.field_b.draw(0, 0);
           }
           if (vk.field_s != null &&
             jg.field_t != null) {
-            vk.field_s.d(231, 390);
+            vk.field_s.draw(231, 390);
             var1 = je.field_e;
             if (sd.field_s.field_g == 0) {
               var1 = RandomAccessCacheFile.field_f;
             }
-            var1.d(0, 0);
+            var1.draw(0, 0);
             stackIn_52_0 = -109;
             stackIn_52_1 = ke.field_c;
             if (sd.field_s.field_g != 0) {
@@ -360,8 +360,8 @@ final class wb extends am {
           }
           if (vk.field_s != null &&
             null != jg.field_t) {
-            vk.field_s.d(434, 390);
-            AccountRegistrationPanel.field_H.d(0, 0);
+            vk.field_s.draw(434, 390);
+            AccountRegistrationPanel.field_H.draw(0, 0);
             if (sd.field_s.field_g == 1) {
               kp.a(-4 + vk.field_s.field_s, vk.field_s.field_t * 7 / 12, 436, (byte) 16, 64, 392);
             }
@@ -373,8 +373,8 @@ final class wb extends am {
           }
           if (qc.field_db != null) {
             var1_int = 357 - qc.field_db.field_u / 2;
-            qc.field_db.d(269 - qc.field_db.field_w, var1_int);
-            p.field_w.d(586, var1_int);
+            qc.field_db.draw(269 - qc.field_db.field_w, var1_int);
+            p.field_w.draw(586, var1_int);
             if (k.field_e > var1_int &&
               k.field_e < qc.field_db.field_t + var1_int) {
               var2Lifetime5 = (cd.a(-118, ke.field_c << 4) * 40 >> 16) + 40;
@@ -397,10 +397,10 @@ final class wb extends am {
               }
             }
             lc.g(param0 + 102);
-            ln.field_H[da.field_a].d(269, 340);
+            ln.field_H[da.field_a].draw(269, 340);
           } else {
             lc.g(param0 + 102);
-            ln.field_H[da.field_a].d(269, 340);
+            ln.field_H[da.field_a].draw(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -431,9 +431,9 @@ final class wb extends am {
         var17 = this.field_l.a(param1, 25657);
         var3 = var17;
         if (this.field_l.field_b) {
-          var25 = this.b(0, 0, vp.field_I & -1 + param1);
+          var25 = this.b(0, 0, NameSuggestionsPanel.field_I & -1 + param1);
           var5 = this.b(0, 0, param1);
-          var24 = this.b(0, 0, 1 + param1 & vp.field_I);
+          var24 = this.b(0, 0, 1 + param1 & NameSuggestionsPanel.field_I);
           for (var7 = 0; ci.field_c > var7; var7++) {
             var8 = this.field_s * (var24[var7] - var25[var7]);
             var9 = this.field_s * (var5[jh.field_A & 1 + var7] - var5[var7 - 1 & jh.field_A]);

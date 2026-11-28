@@ -231,7 +231,7 @@ final class wd {
         mf.field_g = 2147483647;
         DirectByteArrayStore.field_f = 0;
         ah.field_d = -2147483648;
-        bd.field_F = -2147483648;
+        NameSuggestionsPanel.field_F = -2147483648;
     }
 
     final static void a(int param0) {

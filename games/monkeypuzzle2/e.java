@@ -147,7 +147,7 @@ final class e {
         int var8 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          j.field_c.a(0, 0);
+          j.field_c.drawOpaque(0, 0);
           var1_int = -290 + m.field_h;
           if (var1_int < 0) {
             var1_int = 0;
@@ -166,8 +166,8 @@ final class e {
             var3 = 0;
           }
           var4 = -(wg.field_g.field_n >> 1) + (240 + var1_int);
-          wg.field_g.c(var2 + (320 - (wg.field_g.field_m >> 1)), var4);
-          EmailFormatValidator.field_n.c(500, var3 + (30 + var4));
+          wg.field_g.draw(var2 + (320 - (wg.field_g.field_m >> 1)), var4);
+          EmailFormatValidator.field_n.draw(500, var3 + (30 + var4));
           var5 = -330 + m.field_h;
           if (0 > var5) {
             var5 = 0;
@@ -177,7 +177,7 @@ final class e {
           if (param0 != 117) {
             return;
           }
-          UiWidget.field_f[mg.field_q].c(var2 + (-(UiWidget.field_f[mg.field_q].field_m >> 1) + 320), var6 - (UiWidget.field_f[mg.field_q].field_n - 40));
+          UiWidget.field_f[mg.field_q].draw(var2 + (-(UiWidget.field_f[mg.field_q].field_m >> 1) + 320), var6 - (UiWidget.field_f[mg.field_q].field_n - 40));
           var7_ref_ki = (ki) (bd.field_b.beginBackward((byte) -117));
           while (var7_ref_ki != null) {
             var7_ref_ki.field_q = var7_ref_ki.field_q + (float)var1_int;
@@ -187,7 +187,7 @@ final class e {
           }
           for (var7 = 0; ii.field_E > var7; var7++) {
             if (ii.field_U[var7] >= 0) {
-              w.field_b[ii.field_U[var7]].c((int)((float)(-(w.field_b[0].field_m >> 1)) + jc.field_f[var7][0]) + var2, (int)((float)(-(w.field_b[0].field_n >> 1)) + jc.field_f[var7][1] + (float)var1_int));
+              w.field_b[ii.field_U[var7]].draw((int)((float)(-(w.field_b[0].field_m >> 1)) + jc.field_f[var7][0]) + var2, (int)((float)(-(w.field_b[0].field_n >> 1)) + jc.field_f[var7][1] + (float)var1_int));
             }
           }
           f.a(m.field_h - 374, (byte) 84);

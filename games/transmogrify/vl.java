@@ -38,7 +38,7 @@ final class vl extends fi {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               var3 = -62 / ((param0 - 47) / 43);
-              param1.getAppletContext().showDocument(dh.a(param1, (byte) 59, var2), "_top");
+              param1.getAppletContext().showDocument(NameSuggestionsPanel.a(param1, (byte) 59, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -274,8 +274,8 @@ final class vl extends fi {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_v instanceof lj) ||
-            ((lj) (this.field_v)).field_t) &&
+          if ((!(this.field_v instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_v)).field_t) &&
             this.field_s == 1) {
             var5_int = PacketBuffer.field_j + (-this.field_E - param3);
             var6 = -this.field_H + bk.field_a - param0;

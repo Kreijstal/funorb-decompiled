@@ -38,8 +38,8 @@ final class wi extends eg {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param2 instanceof hc) {
-            param4 = param4 & ((hc) (param2)).field_E;
+          if (param2 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param2)).field_E;
           }
           if (!param4) {
             stackIn_15_0 = this.field_D;

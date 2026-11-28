@@ -105,11 +105,11 @@ final class jl {
         if (var3 != null) {
           var4 = -var22.field_u + 640 >> 1;
           if (100 == param1) {
-            rh.field_f[this.field_f].f(var4, 35, 256);
-            var22.e(var4, 35);
+            rh.field_f[this.field_f].drawAdditive(var4, 35, 256);
+            var22.draw(var4, 35);
           } else {
-            rh.field_f[this.field_f].f(var4, 35, param1 * 256 / 100);
-            var22.e(var4, 35, param1 * 256 / 100);
+            rh.field_f[this.field_f].drawAdditive(var4, 35, param1 * 256 / 100);
+            var22.drawWithOpacity(var4, 35, param1 * 256 / 100);
           }
         }
         var4Lifetime1 = 640;
@@ -317,8 +317,8 @@ final class jl {
             stackIn_146_0 = var17;
             stackIn_146_1 = 1;
             if (stackIn_146_0 < stackIn_146_1) {
-              NanoFrameTimer.field_i.e(-NanoFrameTimer.field_i.field_x + (NanoFrameTimer.field_i.field_x + 10) * param1 / 100, 1);
-              NanoFrameTimer.field_i.g(-(param1 * (NanoFrameTimer.field_i.field_x + 10) / 100) + 640, 1);
+              NanoFrameTimer.field_i.draw(-NanoFrameTimer.field_i.field_x + (NanoFrameTimer.field_i.field_x + 10) * param1 / 100, 1);
+              NanoFrameTimer.field_i.drawFlippedHorizontal(-(param1 * (NanoFrameTimer.field_i.field_x + 10) / 100) + 640, 1);
               break;
             }
             var12Lifetime2 = var8Lifetime2 * var17 / var11Lifetime3;
@@ -351,10 +351,10 @@ final class jl {
         }
         if (100 != param1 && (!(StarCannon.field_z >= 0) ||
           !(0 <= pa.field_L))) {
-          pk.field_e.a(param1 - 100 >> 2, param1 - 100 >> 2, (-param1 + 100 >> 1) + 640, (100 - param1 >> 1) + 480);
+          pk.field_e.drawScaled(param1 - 100 >> 2, param1 - 100 >> 2, (-param1 + 100 >> 1) + 640, (100 - param1 >> 1) + 480);
           return;
         }
-        pk.field_e.e(0, 0);
+        pk.field_e.draw(0, 0);
         return;
     }
 
@@ -1081,13 +1081,13 @@ final class jl {
               (decompiledFrameRemainder0 = (var7 != 5))) {
               if (u.field_d <= 0 &&
                 (340 & 1 << var7) != 0) {
-                sc.field_a.c(var3, var4);
+                sc.field_a.drawQuarterSizeAveraged(var3, var4);
               } else {
-                lf.field_V.c(var3, var4);
+                lf.field_V.drawQuarterSizeAveraged(var3, var4);
               }
             }
           } else {
-            j.field_c[var7].c(var3, var4);
+            j.field_c[var7].drawQuarterSizeAveraged(var3, var4);
           }
           if (decompiledFrameRemainder0) {
             if (var3 <= pe.field_d &&
@@ -1135,12 +1135,12 @@ final class jl {
           if (var9 == 0) {
             if (u.field_d <= 0 &&
               (1 << var6 & 340) != 0) {
-              sc.field_a.e(128, -18 + var10);
+              sc.field_a.draw(128, -18 + var10);
             } else {
-              lf.field_V.e(128, var10 - 18);
+              lf.field_V.draw(128, var10 - 18);
             }
           } else {
-            j.field_c[var6].e(128, var10 - 18);
+            j.field_c[var6].draw(128, var10 - 18);
           }
           var10 = var10 + af.field_y.field_p;
           var10 = var10 + ((var8 >> 1) + af.field_y.drawParagraph(vd.field_h[var6], 276, var10 - af.field_y.field_p, 236, 1000, 65535, -1, 0, 0, var8) * var8);
@@ -1150,7 +1150,7 @@ final class jl {
           af.field_y.drawString(ja.field_g, var3Lifetime1, var10, 65535, -1);
           var3Lifetime1 = var3Lifetime1 + af.field_y.stringWidth(ja.field_g);
           for (var11 = 0; var11 < s.field_b[var6]; var11++) {
-            el.field_J.e(var3Lifetime1, -af.field_y.field_p + var10);
+            el.field_J.draw(var3Lifetime1, -af.field_y.field_p + var10);
             var3Lifetime1 = var3Lifetime1 + el.field_J.field_u / 3;
           }
           return;
@@ -1412,7 +1412,7 @@ final class jl {
                 if (null != m.field_f &&
                   var7 == -1) {
                   var16.drawString(we.field_i, 180, var8, 65535, -1);
-                  var9Lifetime1 = kd.field_C % 3;
+                  var9Lifetime1 = NameSuggestionsPanel.field_C % 3;
                   if (0 != var9Lifetime1) {
                     if (var9Lifetime1 == 1) {
                       var10 = lb.field_l;
@@ -1424,7 +1424,7 @@ final class jl {
                     var10 = stackIn_30_0Lifetime1;
                   }
                   var16.drawCentred(var10, 355, var8, 65535, -1);
-                  var16.drawRightAligned(Integer.toString(kd.field_C / 3), 480, var8, 65535, -1);
+                  var16.drawRightAligned(Integer.toString(NameSuggestionsPanel.field_C / 3), 480, var8, 65535, -1);
                 }
                 break regionExit1;
               }

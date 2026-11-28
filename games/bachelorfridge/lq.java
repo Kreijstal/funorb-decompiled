@@ -598,8 +598,8 @@ abstract class lq extends UiWidget implements e {
           if (param1 != 8533) {
             field_z = (String) null;
           }
-          var11.b();
-          param0.a(param4, param3, param2.field_q, param2.field_p);
+          var11.bindAsRenderTarget();
+          param0.drawScaled(param4, param3, param2.field_q, param2.field_p);
           SoftwareRasterizer.drawLine(0, param3, param4, param3, 16777215);
           SoftwareRasterizer.drawLine(param2.field_q + param4, param3, param2.field_q, param3, 16777215);
           hga.field_U.a((byte) 117);

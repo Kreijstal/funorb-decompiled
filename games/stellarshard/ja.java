@@ -146,7 +146,7 @@ final class ja extends IntrusiveNode {
               }
               var21++;
             }
-            var17.d(var8_int, var9);
+            var17.drawOpaque(var8_int, var9);
             SoftwareRasterizer.addRadialGlowClippedSpans(param0 << 4, param3 << 4, param1 + param2 << 4, 255, var33);
             return;
           }

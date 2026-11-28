@@ -192,7 +192,7 @@ final class md extends w {
           discarded$0 = this.d(false);
         }
         this.field_H = this.d(false);
-        this.field_z = this.field_H.g();
+        this.field_z = this.field_H.copyMirroredHorizontally();
         this.field_D = new RgbSprite(this.field_v >> 1, this.field_v);
     }
 
@@ -216,26 +216,26 @@ final class md extends w {
           var5_int = param3 + this.field_j;
           DualLinkNode.a(-this.field_H.field_p + var5_int, param1, this.field_H.field_p + param3, this.field_v + param1, false);
           for (var6 = -this.field_y + param3; var5_int > var6; var6 = var6 + param0.field_p) {
-            param0.d(var6, param1);
+            param0.draw(var6, param1);
           }
           pd.a(-22949);
           if (SoftwareRasterizer.field_g <= param3 + this.field_H.field_p) {
             de.a(this.field_D, param2 - 16711929);
-            param0.d(-this.field_y, 0);
-            param0.d(-this.field_y + 2 * this.field_I, 0);
-            this.field_z.e(0, 0);
+            param0.draw(-this.field_y, 0);
+            param0.draw(-this.field_y + 2 * this.field_I, 0);
+            this.field_z.drawMultiply(0, 0);
             pd.a(-22949);
-            this.field_D.d(param3, param1);
+            this.field_D.draw(param3, param1);
           }
           if (SoftwareRasterizer.field_e >= var5_int - this.field_H.field_p) {
             de.a(this.field_D, 6);
             for (var7 = this.field_j - this.field_H.field_p + this.field_y; 2 * this.field_I < var7; var7 = var7 - 2 * this.field_I) {
             }
-            param0.d(-var7, 0);
-            param0.d(2 * this.field_I - var7, 0);
-            this.field_H.e(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(2 * this.field_I - var7, 0);
+            this.field_H.drawMultiply(0, 0);
             pd.a(-22949);
-            this.field_D.d(var5_int - this.field_H.field_p, param1);
+            this.field_D.draw(var5_int - this.field_H.field_p, param1);
           }
           if (param2 != 16711935) {
             this.field_K = -126;

@@ -29,17 +29,17 @@ abstract class SpriteGeometry extends DualLinkNode {
         field_m = null;
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRotatedAboutNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     private final void a(int param0, boolean param1, int param2, int param3, int param4) {
         int var6 = this.field_t << 3;
         if (!param1) {
-          this.a(-84, -19, 80, 103, -64, 69);
+          this.drawRotatedAboutNearest(-84, -19, 80, 103, -64, 69);
         }
         param2 = (param2 << 4) + (var6 & 15);
         int var7 = this.field_o << 3;
         param3 = (param3 << 4) + (15 & var7);
-        this.a(var6, var7, param2, param3, param0, param4);
+        this.drawRotatedAboutNearest(var6, var7, param2, param3, param0, param4);
     }
 
     SpriteGeometry() {

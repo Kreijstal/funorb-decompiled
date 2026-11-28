@@ -92,7 +92,7 @@ final class mh {
               ja.field_m.drawParagraph(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.b(245, 199);
+            var6.draw(245, 199);
           }
           if (vi.field_p < ByteStorage.field_c) {
             var7 = rk.field_f[hd.field_h];

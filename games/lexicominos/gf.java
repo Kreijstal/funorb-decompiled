@@ -284,7 +284,7 @@ final class gf {
             }
             if (null != param2[0]) {
               SoftwareRasterizer.intersectClip(param0, param4, var16, var18);
-              param2[0].d(param0, param4);
+              param2[0].draw(param0, param4);
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param5 <= 77) {
@@ -292,24 +292,24 @@ final class gf {
             }
             if (param2[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param4, var10, var18);
-              param2[2].d(var13, param4);
+              param2[2].draw(var13, param4);
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (param2[6] != null) {
               SoftwareRasterizer.intersectClip(param0, var19, var16, var11);
-              param2[6].d(param0, var15);
+              param2[6].draw(param0, var15);
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[8]) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param2[8].d(var13, var15);
+              param2[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
             if (null != param2[1] &&
               0 != param2[1].field_r) {
               SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_r) {
-                param2[1].d(var20, param4);
+                param2[1].draw(var20, param4);
               }
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
@@ -317,7 +317,7 @@ final class gf {
               0 != param2[7].field_r) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param2[7].field_r) {
-                param2[7].d(var20Lifetime1, var15);
+                param2[7].draw(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
@@ -325,7 +325,7 @@ final class gf {
               param2[3].field_x != 0) {
               SoftwareRasterizer.intersectClip(param0, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_x) {
-                param2[3].d(param0, var20Lifetime2);
+                param2[3].draw(param0, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
@@ -333,7 +333,7 @@ final class gf {
               param2[5].field_x != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_x) {
-                param2[5].d(var13, var20Lifetime3);
+                param2[5].draw(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);
             }
@@ -343,7 +343,7 @@ final class gf {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param2[4].field_x) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param2[4].field_r) {
-                  param2[4].d(var21, var20Lifetime4);
+                  param2[4].draw(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(IterableNodeHashTable.field_a);

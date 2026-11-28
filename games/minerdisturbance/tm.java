@@ -435,7 +435,7 @@ final class tm extends IntrusiveNode {
           }
           if (this.field_D > 0 &&
             this.field_J > 0) {
-            ef.field_b[3].a(-li.field_c + (this.field_D - ef.field_b[3].field_x), (ef.field_b[3].field_A >> 2) + (this.field_J - ClientException.field_d), ~this.field_G | this.field_G << 12);
+            ef.field_b[3].drawGrayModulated(-li.field_c + (this.field_D - ef.field_b[3].field_x), (ef.field_b[3].field_A >> 2) + (this.field_J - ClientException.field_d), ~this.field_G | this.field_G << 12);
           }
           boolean decompiledFrameRemainder0 = true;
           var3 = -li.field_c + this.field_E;

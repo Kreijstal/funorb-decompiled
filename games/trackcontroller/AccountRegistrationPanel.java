@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class AccountRegistrationPanel extends td implements jg, ButtonListener, a {
+final class AccountRegistrationPanel extends td implements jg, ButtonListener, NameSuggestionListener {
     private ValidatedTextField field_I;
     private ButtonWidget field_H;
     private ButtonWidget field_C;
     static nk field_G;
     private ValidatedTextField field_F;
     private ed field_O;
-    nd field_N;
+    NameSuggestionsPanel field_N;
     private ValidatedTextField field_E;
     private ValidatedTextField field_L;
     private ValidatedTextField field_M;
@@ -109,7 +109,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         this.field_C.field_l = (tg) (this);
         this.a(false, this.field_C);
         this.a(false, this.field_H);
-        this.field_N = new nd((a) (this));
+        this.field_N = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_N.a(150, -3050, 20 + this.field_F.field_m, -60 + (-this.field_F.field_p + this.field_x - this.field_F.field_x), this.field_F.field_x + (this.field_F.field_p + 60));
         this.a(false, this.field_N);
         this.a(var6 + (var3 + 55), -3050, 0, 496, 0);
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
 
     final static void b(int param0, int param1, int param2) {
         if (uh.field_b[param1] == null) {
-          uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(va.field_d[param1], 100, nd.field_G[param1]);
+          uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(va.field_d[param1], 100, NameSuggestionsPanel.field_G[param1]);
         }
         if (!uh.field_b[param1].isLinked(10000536)) {
           uh.field_b[param1].setSamplePosition(0);
@@ -129,9 +129,9 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         }
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         int discarded$0 = 0;
-        ((AccountNameAvailabilityValidator) (this.field_F.getFieldValidator((byte) -123))).a(false);
+        ((AccountNameAvailabilityValidator) (this.field_F.getFieldValidator((byte) -123))).invalidateCheckedName(false);
         if (param0 < 117) {
           UiWidget var3 = (UiWidget) null;
           discarded$0 = this.a(-92, (String) null, -91, 17, (String) null, (UiWidget) null);
@@ -277,7 +277,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
     private final String m(int param0) {
         if (param0 != -9700) {
           ButtonWidget var3 = (ButtonWidget) null;
-          this.a((ButtonWidget) null, -78, 87, -1, -54);
+          this.onWidgetActivated((ButtonWidget) null, -78, 87, -1, -54);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -574,7 +574,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         }
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         int discarded$1 = 0;
         ValidatedTextField var3 = null;
         String var4 = null;
@@ -607,7 +607,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, a
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

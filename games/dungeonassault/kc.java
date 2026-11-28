@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends ii implements vg {
+final class kc extends ii implements WidgetActivationListener {
     private int[] field_N;
     private BitmapFont field_K;
     private int field_O;
     static String field_P;
     private nk field_L;
-    private ck[] field_T;
+    private InteractiveWidget[] field_T;
     static int[][] field_S;
     static int[] field_Q;
     static int[] field_M;
@@ -49,7 +49,7 @@ final class kc extends ii implements vg {
         }
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -171,8 +171,8 @@ final class kc extends ii implements vg {
         if (param0 <= this.field_O) {
           return;
         }
-        ck[] var7 = new ck[param0];
-        ck[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = param1; this.field_O > var5; var5++) {
           var7[var5] = this.field_T[var5];
@@ -231,11 +231,11 @@ final class kc extends ii implements vg {
         }
     }
 
-    final ck a(String param0, pg param1, byte param2) {
-        ck var4 = null;
+    final InteractiveWidget a(String param0, pg param1, byte param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ck stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -243,7 +243,7 @@ final class kc extends ii implements vg {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ck(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           if (param2 > -73) {
             this.a(-80, 42, 35, 65);
           }

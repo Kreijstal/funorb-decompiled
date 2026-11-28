@@ -280,9 +280,9 @@ final class IntrusiveDeque {
         }
         fd.a(28773);
         if (sl.field_a >= 150) {
-          v.field_i.b(15 + var3, var4 + 10, var5);
+          v.field_i.drawWithOpacity(15 + var3, var4 + 10, var5);
         } else {
-          gf.field_f.c(var3, var4);
+          gf.field_f.drawHalfSize(var3, var4);
         }
         var6 = sl.field_a - 125;
         if (var6 > 0 &&
@@ -290,13 +290,13 @@ final class IntrusiveDeque {
           if (var6 >= 20) {
             if (var6 >= 30) {
               var7 = (50 - var6) * 256 / 20;
-              tg.field_u.d(var3, var4, var7);
+              tg.field_u.drawAdditive(var3, var4, var7);
             } else {
-              tg.field_u.d(var3, var4, 256);
+              tg.field_u.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            tg.field_u.d(var3, var4, var7);
+            tg.field_u.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + sl.field_a;
@@ -305,7 +305,7 @@ final class IntrusiveDeque {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          re.field_u.b(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+          re.field_u.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }
@@ -388,13 +388,13 @@ final class IntrusiveDeque {
         RuntimeException var2 = null;
         try {
           if (null != kb.field_O) {
-            kb.field_O.field_Y.a(param1, -1);
+            kb.field_O.field_Y.setNameSuggestions(param1, -1);
           }
           if (param0 < 88) {
             field_b = (String) null;
           }
           if (BufferedSocket.field_u != null) {
-            BufferedSocket.field_u.field_Q.a(param1, -1);
+            BufferedSocket.field_u.field_Q.setNameSuggestions(param1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

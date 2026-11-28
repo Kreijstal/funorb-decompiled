@@ -1,0 +1,6 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+interface WidgetActivationListener extends ca {
+    public abstract void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4);
+}

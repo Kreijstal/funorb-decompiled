@@ -56,7 +56,7 @@ final class hf implements j {
             MatchingFieldValidator.field_v = param4;
           } else {
             pi.field_c = param3;
-            ng.field_I = param2;
+            InteractiveWidget.field_I = param2;
             rj.field_d = param4;
           }
           return;
@@ -192,8 +192,8 @@ final class hf implements j {
           var7 = param1 + param0.field_i;
           v.b(var6_int, 12105912, param0.field_p, var7, param0.field_l);
           var8 = ub.field_f[1];
-          if (param0 instanceof ng &&
-            ((ng) (param0)).field_D) {
+          if (param0 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param0)).field_D) {
             var8.drawAdditiveWithIntensity(var6_int + 1 + (param0.field_p - var8.fullWidth >> 1), (-var8.fullHeight + param0.field_l >> 1) + (var7 + 1), 256);
           }
           if (param0.c(param3 - 11)) {
@@ -259,7 +259,7 @@ final class hf implements j {
             MatchingFieldValidator.field_v = param4;
           } else {
             pi.field_c = param3;
-            ng.field_I = param2;
+            InteractiveWidget.field_I = param2;
             rj.field_d = param4;
           }
           return;

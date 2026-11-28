@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends pc {
+class EditableTextField extends InteractiveWidget {
     static String[] field_Q;
     private int field_D;
     private long field_C;

@@ -195,7 +195,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         ProxyAuthenticationRequiredException.b(107);
     }
 
-    final void g(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 != -4328) {
           String var3 = (String) null;

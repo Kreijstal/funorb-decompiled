@@ -247,8 +247,8 @@ class UiComponentPart025 extends InteractiveComponent {
         MouseWheelInput.performAction0670(integerArgument1, (byte) -104);
     }
 
-    final void performAction0378(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        super.performAction0378(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
+    final void activateFromInput(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        super.activateFromInput(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
         int integerLocal1 = -this.integerState0110 + integerArgument1;
         int integerLocal2 = integerArgument2 - this.integerState0104;
         NetworkSupport010 networkSupport010Local3 = this.computeNetworkSupport0101361(1, integerLocal2, integerLocal1);

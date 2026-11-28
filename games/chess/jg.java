@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends bh implements mj {
+final class jg extends bh implements WidgetActivationListener {
     static int field_K;
     static int field_I;
     static String field_L;
-    private fb field_N;
+    private InteractiveWidget field_N;
     static long field_M;
     static byte[] field_O;
     private ih field_J;
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         if (param4 != -24221) {
           field_O = (byte[]) null;
         }
@@ -79,7 +79,7 @@ final class jg extends bh implements mj {
         super(param0, param1, param2, param3, (jm) null);
         this.field_J = new ih(new wc(10000536), ej.field_f, 0, 0, 140, 25);
         this.field_J.a(false, new BirthDateValidator());
-        this.field_N = new fb(sg.field_e, (rg) (this));
+        this.field_N = new InteractiveWidget(sg.field_e, (rg) (this));
         this.field_E = new mf[]{(mf) ((Object) this.field_J), (mf) ((Object) this.field_N)};
         this.field_N.field_n = (jm) ((Object) new sf());
         this.c((byte) 113);
@@ -95,7 +95,7 @@ final class jg extends bh implements mj {
 
     final void a(int param0, int param1, mf param2, int param3) {
         RuntimeException var5 = null;
-        fb stackIn_2_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

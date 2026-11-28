@@ -178,7 +178,7 @@ final class il {
             if (param3.field_a == 2) {
               var7 = var7 + (-this.field_d.field_q + param4.field_f);
             }
-            this.field_d.e(var6_int, var7);
+            this.field_d.draw(var6_int, var7);
           }
           var6 = param3.a(param4, false);
           if (param1 < 13) {

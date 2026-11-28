@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pn extends d {
+class pn extends InteractiveWidget {
     private IntrusiveDeque field_P;
     static String[] field_Q;
     private pk field_I;
@@ -297,8 +297,8 @@ class pn extends d {
         return null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) 127, param3);
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
+        super.activateFromInput(param0, param1, (byte) 127, param3);
         if (param2 < 111) {
           UiWidget var8 = (UiWidget) null;
           this.a((byte) -49, -96, 6, (UiWidget) null);

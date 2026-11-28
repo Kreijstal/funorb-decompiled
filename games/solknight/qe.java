@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends WidgetContainer implements re, ka {
-    private pj field_H;
+final class qe extends WidgetContainer implements re, WidgetActivationListener {
+    private InteractiveWidget field_H;
     static int[] field_G;
     static String field_F;
     private AccountCreationResultPanel field_D;
@@ -47,7 +47,7 @@ final class qe extends WidgetContainer implements re, ka {
         }
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -55,7 +55,7 @@ final class qe extends WidgetContainer implements re, ka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 == this.field_H) {
-            ua.a((byte) -118);
+            NameSuggestionsPanel.a((byte) -118);
             this.field_D.f(param4);
           }
           if (param4) {
@@ -86,11 +86,11 @@ final class qe extends WidgetContainer implements re, ka {
         int var6 = 0;
         try {
           this.field_D = param0;
-          this.field_H = new pj(dd.field_a, (dg) null);
+          this.field_H = new InteractiveWidget(dd.field_a, (dg) null);
           this.field_H.field_w = (j) ((Object) new gh());
           var7 = LoginPanel.a(AccountRegistrationPanel.field_F, new String[]{this.e(true), this.h(-18655)}, -63);
           var3 = 20;
-          var4 = new af(ua.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
+          var4 = new af(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
           this.field_E = new kj(var7, var4);
           this.field_E.field_z = "";
           this.field_E.a(0, mj.field_a, 1);

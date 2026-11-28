@@ -275,7 +275,7 @@ final class sf implements cl {
                 stackIn_169_0 = -1;
                 stackIn_169_1 = ~var9;
                 if (stackIn_169_0 <= stackIn_169_1) {
-                  bl.field_d[0].h(var2_int + var7, var8);
+                  bl.field_d[0].draw(var2_int + var7, var8);
                 } else {
                   var11_int = 0;
                   if (this.field_f.isBitSet(35 + var6, (byte) 96)) {
@@ -297,10 +297,10 @@ final class sf implements cl {
                       var11_int = stackIn_44_0;
                     }
                   }
-                  bl.field_d[var11_int].h(var2_int + var7, var8);
+                  bl.field_d[var11_int].draw(var2_int + var7, var8);
                 }
                 if (0 >= var10) {
-                  bl.field_d[3].h(var7, var2_int + var8);
+                  bl.field_d[3].draw(var7, var2_int + var8);
                 } else {
                   var11_intLifetime1 = 3;
                   if (this.field_f.isBitSet(-1 - var6 / 7 + var6, (byte) 103)) {
@@ -322,7 +322,7 @@ final class sf implements cl {
                       var11_intLifetime1 = stackIn_76_0;
                     }
                   }
-                  bl.field_d[var11_intLifetime1].h(var7, var8 + var2_int);
+                  bl.field_d[var11_intLifetime1].draw(var7, var8 + var2_int);
                 }
                 if (this.field_j != null) {
                   var11 = this.field_j.field_h[var6];
@@ -360,37 +360,37 @@ final class sf implements cl {
                   }
                   var15 = stackIn_111_0;
                   if (var12Lifetime2 == 1) {
-                    HuffmanDecoder.field_b[1].h(var2_int + var7, var2_int + var8);
+                    HuffmanDecoder.field_b[1].draw(var2_int + var7, var2_int + var8);
                   } else if (0 == var12Lifetime2) {
-                    HuffmanDecoder.field_b[0].h(var7 + var2_int, var8 + var2_int);
-                    DungeonBuilderScreen.field_G[var15].d(var7 + var2_int, var2_int + var8, 128);
+                    HuffmanDecoder.field_b[0].draw(var7 + var2_int, var8 + var2_int);
+                    DungeonBuilderScreen.field_G[var15].drawWithOpacity(var7 + var2_int, var2_int + var8, 128);
                     DungeonAssaultScreen.b(var7 + var2_int, var8 + var2_int, 32, 32, 0, 0, 0);
                   } else {
-                    HuffmanDecoder.field_b[var12Lifetime2].h(var7 + var2_int, var2_int + var8);
+                    HuffmanDecoder.field_b[var12Lifetime2].draw(var7 + var2_int, var2_int + var8);
                     if (var6 != 24) {
-                      DungeonBuilderScreen.field_G[var15].d(var2_int + var7, var8 + var2_int, 64);
+                      DungeonBuilderScreen.field_G[var15].drawWithOpacity(var2_int + var7, var8 + var2_int, 64);
                     }
                     if (var14 != 0) {
-                      sm.field_g.d((-sm.field_g.field_y + 32 >> 1) + (var2_int + var7), (32 - sm.field_g.field_v >> 1) + (var8 + var2_int), 128);
+                      sm.field_g.drawWithOpacity((-sm.field_g.field_y + 32 >> 1) + (var2_int + var7), (32 - sm.field_g.field_v >> 1) + (var8 + var2_int), 128);
                     }
                   }
                 } else if (0 == var6) {
-                  HuffmanDecoder.field_b[3].h(var2_int + var7, var2_int + var8);
+                  HuffmanDecoder.field_b[3].draw(var2_int + var7, var2_int + var8);
                 } else if (var6 != 6) {
                   if (var6 == 42) {
-                    HuffmanDecoder.field_b[3].g(var2_int + var7, var8 + var2_int);
+                    HuffmanDecoder.field_b[3].drawFlippedVertical(var2_int + var7, var8 + var2_int);
                   } else if (48 == var6) {
-                    HuffmanDecoder.field_b[3].b(var7 + var2_int, var8 + var2_int);
+                    HuffmanDecoder.field_b[3].drawFlippedBothAxes(var7 + var2_int, var8 + var2_int);
                   }
                 } else {
-                  HuffmanDecoder.field_b[3].f(var7 + var2_int, var2_int + var8);
+                  HuffmanDecoder.field_b[3].drawFlippedHorizontal(var7 + var2_int, var2_int + var8);
                 }
                 if (this.field_j != null) {
                   if (var6 == this.field_j.field_q) {
-                    rj.field_k.h(var7 - (-2 - (var3 - rj.field_k.field_E >> 1)), 2 + (var8 + (-rj.field_k.field_G + var3 >> 1)));
+                    rj.field_k.draw(var7 - (-2 - (var3 - rj.field_k.field_E >> 1)), 2 + (var8 + (-rj.field_k.field_G + var3 >> 1)));
                   } else {
                     if (~this.field_j.field_B == ~var6) {
-                      rj.field_k.d((var3 - rj.field_k.field_E >> 1) + 2 + var7, (var3 - rj.field_k.field_G >> 1) + (2 + var8), 128);
+                      rj.field_k.drawWithOpacity((var3 - rj.field_k.field_E >> 1) + 2 + var7, (var3 - rj.field_k.field_G >> 1) + (2 + var8), 128);
                     }
                   }
                 }
@@ -398,7 +398,7 @@ final class sf implements cl {
                 var10++;
                 var6++;
               }
-              bl.field_d[3].h(var7, var8 + var2_int);
+              bl.field_d[3].draw(var7, var8 + var2_int);
               var7 = this.field_a;
               var9++;
               stackIn_169_0Lifetime1 = var8;
@@ -418,7 +418,7 @@ final class sf implements cl {
               var8 = this.field_d;
               break;
             }
-            bl.field_d[0].h(var7 + var2_int, var8);
+            bl.field_d[0].draw(var7 + var2_int, var8);
             var9++;
             var7 = var7 + var3;
           } while (var16 == 0);
@@ -570,12 +570,12 @@ final class sf implements cl {
                     var15 != 0) {
                     if (((var14 == 0)) &&
                       ((var15 != 0))) {
-                      i.field_v.h(-1 + (var9 + (var6 - i.field_v.field_y >> 1)), (-i.field_v.field_v - 4 >> 1) + (var4_int + var10));
+                      i.field_v.draw(-1 + (var9 + (var6 - i.field_v.field_y >> 1)), (-i.field_v.field_v - 4 >> 1) + (var4_int + var10));
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    fo.field_a.h((var6 - fo.field_a.field_y >> 1) + (-1 + var9), (-fo.field_a.field_v - 4 >> 1) - var4_int + var10);
+                    fo.field_a.draw((var6 - fo.field_a.field_y >> 1) + (-1 + var9), (-fo.field_a.field_v - 4 >> 1) - var4_int + var10);
                   }
                 }
               }
@@ -602,12 +602,12 @@ final class sf implements cl {
                     var15Lifetime1 == 0) {
                     if (((var14Lifetime1 != 0)) &&
                       ((var15Lifetime1 == 0))) {
-                      IterableNodeHashTable.field_i.h(var9 + (-var4_int + (-BoundedRandomAccessFile.field_a.field_y - 2 >> 1)), -1 + var10 + (-BoundedRandomAccessFile.field_a.field_v + var6 >> 1));
+                      IterableNodeHashTable.field_i.draw(var9 + (-var4_int + (-BoundedRandomAccessFile.field_a.field_y - 2 >> 1)), -1 + var10 + (-BoundedRandomAccessFile.field_a.field_v + var6 >> 1));
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    BoundedRandomAccessFile.field_a.h((-BoundedRandomAccessFile.field_a.field_y - 2 >> 1) + (var9 + var4_int), var10 + (-1 + (var6 - BoundedRandomAccessFile.field_a.field_v >> 1)));
+                    BoundedRandomAccessFile.field_a.draw((-BoundedRandomAccessFile.field_a.field_y - 2 >> 1) + (var9 + var4_int), var10 + (-1 + (var6 - BoundedRandomAccessFile.field_a.field_v >> 1)));
                   }
                 }
               }
@@ -715,7 +715,7 @@ final class sf implements cl {
             stackIn_9_1 = var7;
             if (stackIn_9_0 > stackIn_9_1) {
               var8 = new RgbSprite(32, 32);
-              var8.e();
+              var8.bindAsRenderTarget();
               SoftwareRasterizer.fillRectangle(0, 0, 32, 32, 65793);
               var9 = 16777215;
               var10 = 10;

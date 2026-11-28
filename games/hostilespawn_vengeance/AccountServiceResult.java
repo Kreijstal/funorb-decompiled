@@ -26,12 +26,12 @@ final class AccountServiceResult {
             return;
           }
           if (ik.field_d != null) {
-            ik.field_d.field_J.a(param1, (byte) -118);
+            ik.field_d.field_J.setNameSuggestions(param1, (byte) -118);
           }
           if (null == te.field_M) {
             return;
           }
-          te.field_M.field_I.a(param1, (byte) 127);
+          te.field_M.field_I.setNameSuggestions(param1, (byte) 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

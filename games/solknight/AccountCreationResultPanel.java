@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ci implements ka {
+final class AccountCreationResultPanel extends ci implements WidgetActivationListener {
     private boolean field_tb;
     private AccountRegistrationPanel field_vb;
     private boolean field_wb;
@@ -23,13 +23,13 @@ final class AccountCreationResultPanel extends ci implements ka {
         }
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         if (this.field_wb) {
           hl.a(true, 24574, false);
           return;
         }
         try {
-          ua.a((byte) -110);
+          NameSuggestionsPanel.a((byte) -110);
           this.f(param4);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "jk.I(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -63,7 +63,7 @@ final class AccountCreationResultPanel extends ci implements ka {
             } else {
               var4 = pc.field_d;
               if (null != this.field_vb) {
-                this.field_vb.a((byte) 22);
+                this.field_vb.onNameSuggestionsRefreshRequested((byte) 22);
               }
             }
           }

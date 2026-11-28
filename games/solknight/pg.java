@@ -211,7 +211,7 @@ final class pg {
             }
             if (SocketConnector.field_f == 1) {
               if (2 == SecondaryNodeDeque.field_b.status) {
-                stackIn_14_0 = ua.a(-1, (byte) -86);
+                stackIn_14_0 = NameSuggestionsPanel.a(-1, (byte) -86);
                 return stackIn_14_0;
               }
               if (SecondaryNodeDeque.field_b.status == 1) {
@@ -231,13 +231,13 @@ final class pg {
             if (SocketConnector.field_f == 3) {
               if (qf.field_a.b(-30119) <= 0) {
                 if (cj.field_c < je.correctedCurrentTimeMillis(param0 ^ 82)) {
-                  stackIn_29_0 = ua.a(-2, (byte) -86);
+                  stackIn_29_0 = NameSuggestionsPanel.a(-2, (byte) -86);
                   return stackIn_29_0;
                 }
               } else {
                 var1_int = qf.field_a.a(-116);
                 if (0 != var1_int) {
-                  stackIn_25_0 = ua.a(var1_int, (byte) -86);
+                  stackIn_25_0 = NameSuggestionsPanel.a(var1_int, (byte) -86);
                   return stackIn_25_0;
                 }
                 SocketConnector.field_f = SocketConnector.field_f + 1;
@@ -259,7 +259,7 @@ final class pg {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return ua.a(-3, (byte) -86);
+            return NameSuggestionsPanel.a(-3, (byte) -86);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

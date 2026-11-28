@@ -3621,15 +3621,15 @@ final class LevelEntity {
                 if (var10 != 0 &&
                   9 != var14 &&
                   10 != var14) {
-                  oa.field_e.d();
+                  oa.field_e.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
                   c.field_c[var14][var9_int][var15].drawFlippedHorizontal(0, 0);
                   if (var17 != 0) {
-                    ByteStorage.field_b.d();
+                    ByteStorage.field_b.bindAsRenderTarget();
                     SoftwareRasterizer.clearRaster();
                     PacketBuffer.field_o[var14][var9_int][var15].drawFlippedHorizontal(0, 0);
                     if (param7 == 2) {
-                      oa.field_e.d();
+                      oa.field_e.bindAsRenderTarget();
                       od.a(0, 0, 0, var16, 0, ByteStorage.field_b);
                     }
                   }
@@ -3674,7 +3674,7 @@ final class LevelEntity {
                           1 != param7) {
                           if (param0 != null &&
                             var10 != 0) {
-                            param0.d();
+                            param0.bindAsRenderTarget();
                             SoftwareRasterizer.clearRaster();
                             oa.field_e.drawScaled(var11, param1, var20, var19);
                             if (var17 != 0) {
@@ -3754,7 +3754,7 @@ final class LevelEntity {
                               return;
                             }
                           }
-                          param0.d();
+                          param0.bindAsRenderTarget();
                           SoftwareRasterizer.clearRaster();
                           c.field_c[var14][var9_int][var15].drawScaled(param4 + param6, param1, var20, var19);
                           if (var17 != 0) {
@@ -3768,14 +3768,14 @@ final class LevelEntity {
                             return;
                           }
                         }
-                        param0.d();
+                        param0.bindAsRenderTarget();
                         SoftwareRasterizer.clearRaster();
                         c.field_c[var14][var9_int][var15].drawMask(var11, var13, var16);
                         if (var27 == 0) {
                           return;
                         }
                       }
-                      param0.d();
+                      param0.bindAsRenderTarget();
                       SoftwareRasterizer.clearRaster();
                       oa.field_e.drawMask(var11, var13, param3[3]);
                       if (var27 == 0) {
@@ -3825,7 +3825,7 @@ final class LevelEntity {
                     var26 = 16777215;
                   }
                   SoftwareRasterizer.saveClip(bf.field_l);
-                  SpriteLoader.field_e.d();
+                  SpriteLoader.field_e.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
                   if (var10 == 0) {
                     c.field_c[var14][var9_int][var15].drawScaled(0, 0, var20, var19);
@@ -3851,7 +3851,7 @@ final class LevelEntity {
                     }
                   }
                   if (var18 != 0) {
-                    SpriteLoader.field_e.a(param6 + param4, param1, var24Lifetime1, var26);
+                    SpriteLoader.field_e.drawBlendedTowardColor(param6 + param4, param1, var24Lifetime1, var26);
                   }
                   if (this.field_l > 0 ||
                     !(SocketConnector.field_k > 0)) {
@@ -5838,7 +5838,7 @@ final class LevelEntity {
                         var19 = ra.field_b[var11][1];
                         var24 = var24 - var21 / 2;
                         var22 = var22 - var20 / 2;
-                        var19.d(var22, var24, var20, var21, var17);
+                        var19.drawScaledAdditive(var22, var24, var20, var21, var17);
                       }
                     }
                   }
@@ -5852,7 +5852,7 @@ final class LevelEntity {
                   }
                   var24 = var24 - var21 / 2;
                   var22 = var22 - var20 / 2;
-                  var19.d(var22, var24, var20, var21, var17);
+                  var19.drawScaledAdditive(var22, var24, var20, var21, var17);
                 }
                 return;
               }
@@ -6656,7 +6656,7 @@ final class LevelEntity {
               if (cb.field_f == null) {
                 cb.field_f = new Sprite(ki.field_e[AccountRegistrationPanel.field_T[24]], ae.field_s[AccountRegistrationPanel.field_T[24]]);
               }
-              cb.field_f.d();
+              cb.field_f.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               EditableTextField.field_O.drawFlippedHorizontal(0, 0);
               SectorCacheStore.field_f.bindAsTarget(110);
@@ -6679,10 +6679,10 @@ final class LevelEntity {
                   if (this.type == 5 &&
                     this.field_D == 0) {
                     SoftwareRasterizer.saveClip(bf.field_l);
-                    mb.field_e.d();
+                    mb.field_e.bindAsRenderTarget();
                     SoftwareRasterizer.clearRaster();
                     ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
-                    jc.field_i.d();
+                    jc.field_i.bindAsRenderTarget();
                     SoftwareRasterizer.clearRaster();
                     mb.field_e.drawFlippedVertical(0, var10 - this.field_w >> 1);
                     SectorCacheStore.field_f.bindAsTarget(126);
@@ -6690,10 +6690,10 @@ final class LevelEntity {
                   }
                   if (var9 != 0) {
                     SoftwareRasterizer.saveClip(bf.field_l);
-                    mb.field_e.d();
+                    mb.field_e.bindAsRenderTarget();
                     SoftwareRasterizer.clearRaster();
                     ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, param5 - param2, var10);
-                    jj.field_e.d();
+                    jj.field_e.bindAsRenderTarget();
                     SoftwareRasterizer.clearRaster();
                     if (5 != this.type ||
                       this.field_D != 0) {
@@ -6802,7 +6802,7 @@ final class LevelEntity {
                             }
                           }
                           SoftwareRasterizer.saveClip(bf.field_l);
-                          mb.field_e.d();
+                          mb.field_e.bindAsRenderTarget();
                           SoftwareRasterizer.clearRaster();
                           ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawScaled(0, 0, -param2 + param5, var10);
                           SectorCacheStore.field_f.bindAsTarget(100);
@@ -6878,7 +6878,7 @@ final class LevelEntity {
                           this.field_D == 0) {
                           var7_intLifetime1Lifetime1 = param2;
                           var8Lifetime1Lifetime1 = var10 - 96 + param3;
-                          jc.field_i.a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          jc.field_i.drawBlendedTowardColor(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                           decompiledFrameRemainder0 = (var15 != 0);
                         }
                         if (decompiledFrameRemainder0) {
@@ -6887,7 +6887,7 @@ final class LevelEntity {
                           if (5 == this.type) {
                             var8Lifetime1Lifetime1 = -(var10 - this.field_w >> 1) + var8Lifetime1Lifetime1;
                           }
-                          ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          ah.field_d[AccountRegistrationPanel.field_T[this.type]][this.field_g][this.variant][this.field_P].drawBlendedTowardColor(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                         }
                       }
                       if ((decompiledFrameRemainder0) &&
@@ -6900,16 +6900,16 @@ final class LevelEntity {
                           if (this.type == 5) {
                             var8Lifetime1Lifetime1 = -(-this.field_w + var10 >> 1) + var8Lifetime1Lifetime1;
                           }
-                          jj.field_e.a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          jj.field_e.drawBlendedTowardColor(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                           if (var15 != 0) {
                             var8Lifetime1Lifetime1 = param3 - 96 + var10;
                             var7_intLifetime1Lifetime1 = -param2 + param5 - 96 + param2;
-                            jj.field_e.a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                            jj.field_e.drawBlendedTowardColor(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                           }
                         } else {
                           var8Lifetime1Lifetime1 = param3 - 96 + var10;
                           var7_intLifetime1Lifetime1 = -param2 + param5 - 96 + param2;
-                          jj.field_e.a(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
+                          jj.field_e.drawBlendedTowardColor(var7_intLifetime1Lifetime1, var8Lifetime1Lifetime1, var13Lifetime1, 16711680);
                         }
                       }
                       if (var15 != 0) {
@@ -7139,7 +7139,7 @@ final class LevelEntity {
                   GameScreen.field_i = new Sprite(dk.field_c[0][0].fullWidth, dk.field_c[0][0].fullHeight);
                 }
                 SoftwareRasterizer.saveClip(bf.field_l);
-                GameScreen.field_i.d();
+                GameScreen.field_i.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 ((Sprite) (var11)).drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(-117);
@@ -7164,10 +7164,10 @@ final class LevelEntity {
                     if (te.field_e == null) {
                       te.field_e = new Sprite(16 + ((Sprite) (var11)).fullWidth, ((Sprite) (var11)).fullHeight + 16);
                     }
-                    te.field_e.d();
+                    te.field_e.bindAsRenderTarget();
                     SoftwareRasterizer.restoreClip(bf.field_l);
                     SoftwareRasterizer.clearRaster();
-                    ((Sprite) (var11)).a(0, 0, -(this.field_D * 5) + 255, 16777215);
+                    ((Sprite) (var11)).drawBlendedTowardColor(0, 0, -(this.field_D * 5) + 255, 16777215);
                     SectorCacheStore.field_f.bindAsTarget(115);
                     te.field_e.drawTransparent(var4_int, var6);
                     var11 = te.field_e;
@@ -8608,7 +8608,7 @@ final class LevelEntity {
             dl.field_n[2] = 0;
             dl.field_n[0] = 0;
             this.a(ea.field_h, param2, param4, new int[]{this.field_a, AccountNameAvailabilityValidator.field_r, n.field_jb, 16777215}, param0, -20861, param3, 1);
-            ea.field_h.d();
+            ea.field_h.bindAsRenderTarget();
             SoftwareRasterizer.blurRectangle(2, 2, 0, 0, ea.field_h.storedWidth, ea.field_h.storedHeight);
             SectorCacheStore.field_f.bindAsTarget(124);
             ul.field_m = this.field_a;
@@ -8937,7 +8937,7 @@ final class LevelEntity {
                 if (!DebouncedFieldValidator.field_b) {
                   break;
                 }
-                if (ng.field_I > 0) {
+                if (InteractiveWidget.field_I > 0) {
                   break;
                 }
                 var2_int = 6;
@@ -9773,7 +9773,7 @@ final class LevelEntity {
             oj.field_b = new Sprite(ImageProducerRasterBuffer.field_m[0].fullWidth * 3 + param4.fullWidth, this.field_w);
           }
           SoftwareRasterizer.saveClip(bf.field_l);
-          oj.field_b.d();
+          oj.field_b.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           if (param2 < 12) {
             return;
@@ -9792,7 +9792,7 @@ final class LevelEntity {
             var9++;
           } while (var10 == 0);
           if (this.field_a < 0) {
-            oj.field_b.a();
+            oj.field_b.flipHorizontal();
           }
           if (-param3 + param1 >= 128) {
             if (!(oj.field_b.fullWidth >= param1 - param3)) {
@@ -10219,7 +10219,7 @@ final class LevelEntity {
                 if (cb.field_f == null) {
                   cb.field_f = new Sprite(ki.field_e[AccountRegistrationPanel.field_T[24]], ae.field_s[AccountRegistrationPanel.field_T[24]]);
                 }
-                cb.field_f.d();
+                cb.field_f.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 EditableTextField.field_O.drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(126);
@@ -10235,7 +10235,7 @@ final class LevelEntity {
           var10 = stackIn_33_0;
           if (var6_int != 0) {
             SoftwareRasterizer.saveClip(bf.field_l);
-            vd.field_d[fh.field_e].d();
+            vd.field_d[fh.field_e].bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             g.field_i[we.field_j][fh.field_e][oa.field_g].drawFlippedHorizontal(0, 0);
             SectorCacheStore.field_f.bindAsTarget(123);
@@ -10245,7 +10245,7 @@ final class LevelEntity {
           if (this.field_G <= 0 ||
             we.field_j == 7) {
             if (we.field_j == 7) {
-              FrameTimer.field_a[fh.field_e].d();
+              FrameTimer.field_a[fh.field_e].bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               if (var6_int != 0) {
                 vd.field_d[fh.field_e].drawScaled(0, 0, var8, var7);
@@ -10291,7 +10291,7 @@ final class LevelEntity {
             }
             var16Lifetime1 = 16711680;
             SoftwareRasterizer.saveClip(bf.field_l);
-            FrameTimer.field_a[fh.field_e].d();
+            FrameTimer.field_a[fh.field_e].bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             if (var6_int == 0) {
               g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(0, 0, var8, var7);
@@ -10302,7 +10302,7 @@ final class LevelEntity {
             }
             SectorCacheStore.field_f.bindAsTarget(106);
             SoftwareRasterizer.restoreClip(bf.field_l);
-            FrameTimer.field_a[fh.field_e].a(param0 + param4, param1, var14Lifetime1, var16Lifetime1);
+            FrameTimer.field_a[fh.field_e].drawBlendedTowardColor(param0 + param4, param1, var14Lifetime1, var16Lifetime1);
           }
           if (var10 != 0) {
             var11Lifetime2 = 192;
@@ -10323,17 +10323,17 @@ final class LevelEntity {
                   gj.field_b = new Sprite(var12_intLifetime2, var13Lifetime2);
                 }
                 SoftwareRasterizer.saveClip(bf.field_l);
-                gj.field_b.d();
+                gj.field_b.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 si.field_I[fh.field_e][var9][oa.field_g].drawFlippedHorizontal(0, 0);
                 SectorCacheStore.field_f.bindAsTarget(-67);
                 SoftwareRasterizer.restoreClip(bf.field_l);
-                gj.field_b.d(param0 + param4, param1, var8, var7, var11Lifetime2);
+                gj.field_b.drawScaledAdditive(param0 + param4, param1, var8, var7, var11Lifetime2);
                 if (var17 != 0) {
-                  si.field_I[fh.field_e][var9][oa.field_g].d(param4 + param0, param1, var8, var7, var11Lifetime2);
+                  si.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
                 }
               } else {
-                si.field_I[fh.field_e][var9][oa.field_g].d(param4 + param0, param1, var8, var7, var11Lifetime2);
+                si.field_I[fh.field_e][var9][oa.field_g].drawScaledAdditive(param4 + param0, param1, var8, var7, var11Lifetime2);
               }
             }
           }

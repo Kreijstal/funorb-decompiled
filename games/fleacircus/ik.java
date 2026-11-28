@@ -132,7 +132,7 @@ final class ik extends wi {
             SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_d - this.field_D.field_N, this.field_s & BufferedRandomAccessFile.field_a, this.field_s >>> ii.field_b);
             SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_s, this.field_s >>> ii.field_b);
             if (null != this.field_q) {
-              this.field_q.d(var3, var4, this.field_P, this.field_d - this.field_D.field_N);
+              this.field_q.drawScaled(var3, var4, this.field_P, this.field_d - this.field_D.field_N);
             }
             SoftwareRasterizer.fillRectangleAlpha(var3, this.field_a - (-this.field_d + this.field_P), this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_s, this.field_s >>> ii.field_b);
             var5 = (float)this.field_x / (float)(-1 + this.field_z.length);
@@ -157,14 +157,14 @@ final class ik extends wi {
                 stackIn_34_0 = this.field_y;
               }
               var8 = stackIn_34_0;
-              var7.d(var3, var4);
-              var8.b(var3, -var8.field_r + this.field_d + this.field_a);
+              var7.draw(var3, var4);
+              var8.drawFlippedVertical(var3, -var8.field_r + this.field_d + this.field_a);
             }
             if (null == this.field_K) {
               SoftwareRasterizer.fillRectangleAlpha(var3, var4 + var6, this.field_P, this.field_P, this.field_r & BufferedRandomAccessFile.field_a, this.field_r >>> ii.field_b);
               SoftwareRasterizer.drawRectangleOutlineAlpha(var3, var4 + var6, this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_F, this.field_F >>> ii.field_b);
             } else {
-              this.field_K.d(-(this.field_K.field_x / 2) + var3 + this.field_P / 2, var6 + var4 + this.field_K.field_r / 2);
+              this.field_K.draw(-(this.field_K.field_x / 2) + var3 + this.field_P / 2, var6 + var4 + this.field_K.field_r / 2);
             }
             SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_I & BufferedRandomAccessFile.field_a, this.field_I >>> ii.field_b);
             SoftwareRasterizer.drawRectangleOutlineAlpha(param0 + this.field_l, this.field_a - 1, this.field_n + 2, 2 + this.field_d, BufferedRandomAccessFile.field_a & this.field_N, this.field_N >>> ii.field_b);
@@ -247,7 +247,7 @@ final class ik extends wi {
           if (MidiPcmStream.field_H[98]) {
             if (this.field_v < 0) {
               this.field_x = this.field_x - 1;
-              this.field_v = ij.field_L;
+              this.field_v = NameSuggestionsPanel.field_L;
             }
           } else {
             if (!MidiPcmStream.field_H[99]) {
@@ -255,7 +255,7 @@ final class ik extends wi {
             } else {
               if (this.field_v < 0) {
                 this.field_x = this.field_x + 1;
-                this.field_v = ij.field_L;
+                this.field_v = NameSuggestionsPanel.field_L;
               }
             }
           }
@@ -327,7 +327,7 @@ final class ik extends wi {
             } else {
               if (this.field_B < 0) {
                 this.field_x = this.field_x + 1;
-                this.field_B = ij.field_L;
+                this.field_B = NameSuggestionsPanel.field_L;
               }
               this.field_L = true;
             }
@@ -335,7 +335,7 @@ final class ik extends wi {
             this.field_A = true;
             if (this.field_B < 0) {
               this.field_x = this.field_x - 1;
-              this.field_B = ij.field_L;
+              this.field_B = NameSuggestionsPanel.field_L;
             }
           }
         }

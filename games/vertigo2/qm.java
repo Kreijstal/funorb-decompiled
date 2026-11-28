@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends WidgetContainer implements ij {
-    private d field_F;
+final class qm extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_F;
     static ba field_G;
-    private d field_E;
-    private d field_H;
+    private InteractiveWidget field_E;
+    private InteractiveWidget field_H;
 
     public qm() {
         super(0, 0, 476, 225, (WidgetListener) null);
-        this.field_F = new d(pk.field_r, (uf) null);
-        this.field_E = new d(tc.field_a, (uf) null);
-        this.field_H = new d(fd.field_o, (uf) null);
+        this.field_F = new InteractiveWidget(pk.field_r, (uf) null);
+        this.field_E = new InteractiveWidget(tc.field_a, (uf) null);
+        this.field_H = new InteractiveWidget(fd.field_o, (uf) null);
         vo var1 = new vo();
         this.field_F.listener = (WidgetListener) ((Object) var1);
         this.field_E.listener = (WidgetListener) ((Object) var1);
@@ -70,7 +70,7 @@ final class qm extends WidgetContainer implements ij {
         }
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;

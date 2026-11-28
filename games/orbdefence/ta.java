@@ -267,13 +267,13 @@ class ta extends pj implements c {
           SoftwareRasterizer.clearRaster();
           ji.field_b = 0;
           bj.j(92);
-          var2 = var1.f();
+          var2 = var1.copy();
           for (var3 = param0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          jc.field_k.d();
-          var1.d(0, 0);
+          jc.field_k.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ValidatedTextField.g((byte) -105);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "ta.EA(" + param0 + ')');

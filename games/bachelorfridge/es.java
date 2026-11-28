@@ -9,7 +9,7 @@ final class es extends IntrusiveNode {
     private int field_g;
 
     final void a(int param0, int param1) {
-        pr.field_h[this.field_g].a(12 + (this.field_i + param1), -20 + this.field_f, param0);
+        pr.field_h[this.field_g].drawWithOpacity(12 + (this.field_i + param1), -20 + this.field_f, param0);
     }
 
     public static void releaseStatics(boolean param0) {

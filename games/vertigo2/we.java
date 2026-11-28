@@ -39,27 +39,27 @@ final class we extends UiWidget {
             return;
           }
           while (var5_int > var6) {
-            param1.e(var6, param3);
+            param1.draw(var6, param3);
             var6 = var6 + param1.field_y;
           }
           ln.d(-28558);
           if (SoftwareRasterizer.field_d <= param0 + this.field_I.field_y) {
             lq.a(this.field_Q, (byte) -94);
-            param1.e(-this.field_P, 0);
-            param1.e(-this.field_P + 2 * this.field_O, 0);
-            this.field_E.f(0, 0);
+            param1.draw(-this.field_P, 0);
+            param1.draw(-this.field_P + 2 * this.field_O, 0);
+            this.field_E.drawMultiply(0, 0);
             ln.d(-28558);
-            this.field_Q.e(param0, param3);
+            this.field_Q.draw(param0, param3);
           }
           if (var5_int - this.field_I.field_y <= SoftwareRasterizer.field_i) {
             lq.a(this.field_Q, (byte) -94);
             for (var7 = this.field_P + (this.width - this.field_I.field_y); 2 * this.field_O < var7; var7 = var7 - 2 * this.field_O) {
             }
-            param1.e(-var7, 0);
-            param1.e(-var7 + this.field_O * 2, 0);
-            this.field_I.f(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(-var7 + this.field_O * 2, 0);
+            this.field_I.drawMultiply(0, 0);
             ln.d(-28558);
-            this.field_Q.e(-this.field_I.field_y + var5_int, param3);
+            this.field_Q.draw(-this.field_I.field_y + var5_int, param3);
             return;
           }
           return;
@@ -300,7 +300,7 @@ final class we extends UiWidget {
     private final void a(int param0) {
         this.field_D = new Sprite[]{this.a(this.field_K, this.field_C, (byte) 100), this.a(this.field_S, this.field_R, (byte) 48)};
         this.field_I = this.h(2);
-        this.field_E = this.field_I.a();
+        this.field_E = this.field_I.copyMirroredHorizontally();
         this.field_Q = new Sprite(this.height >> 1, this.height);
         int var2 = 6 % ((-7 - param0) / 48);
     }
@@ -362,18 +362,18 @@ final class we extends UiWidget {
           }
           var9Lifetime1 = var17.field_t;
           DelegatingCanvas.a((byte) -123);
-          var17.d();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.d();
-          var17.c(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.d();
-          var17.c(-var17.field_y + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_y + var9Lifetime1, 0);
           var12 = new Sprite(var17.field_y - var9Lifetime1 * 2, var9Lifetime1);
-          var12.d();
-          var17.c(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           ln.d(-28558);
           q.field_z = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

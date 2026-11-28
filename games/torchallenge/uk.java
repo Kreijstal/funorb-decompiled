@@ -33,8 +33,8 @@ final class uk extends ic {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_A instanceof ng) ||
-            ((ng) (this.field_A)).field_F) &&
+          if ((!(this.field_A instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_A)).field_F) &&
             this.field_z == 1) {
             var5_int = -this.field_P + ConfirmedEmailAvailabilityValidator.field_u - param1;
             var6 = -this.field_F + ph.field_d - param3;

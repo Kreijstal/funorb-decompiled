@@ -52,7 +52,7 @@ final class ia extends mg {
           de.a(var6, 6);
           this.field_A.a(param0, 0, 0, param3);
           pd.a(-22949);
-          var6.b(this.field_t + param2, param1 + this.field_o, this.field_E);
+          var6.drawWithOpacity(this.field_t + param2, param1 + this.field_o, this.field_E);
           return;
         }
         this.field_A.a((byte) -115, this.field_o + param1, param2 + this.field_t, param3);

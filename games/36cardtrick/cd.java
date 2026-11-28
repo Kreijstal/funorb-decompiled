@@ -43,8 +43,8 @@ final class cd {
             var5_int = param0[0].field_l;
             var6 = param0[2].field_l;
             var7 = param0[1].field_l;
-            param0[0].d(param3, param4);
-            param0[2].d(param1 + param3 - var6, param4);
+            param0[0].draw(param3, param4);
+            param0[2].draw(param1 + param3 - var6, param4);
             SoftwareRasterizer.saveClip(sg.field_c);
             SoftwareRasterizer.intersectClip(var5_int + param3, param4, -var6 + param1 + param3, param4 + param0[1].field_k);
             if (param2 != -94) {
@@ -53,7 +53,7 @@ final class cd {
             var8 = var5_int + param3;
             var9 = -var6 + param3 + param1;
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
-              param0[1].d(param3, param4);
+              param0[1].draw(param3, param4);
             }
             SoftwareRasterizer.restoreClip(sg.field_c);
             return;

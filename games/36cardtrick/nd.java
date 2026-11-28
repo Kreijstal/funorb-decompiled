@@ -193,18 +193,18 @@ final class nd extends ek {
         RuntimeException var6 = null;
         oc var7 = null;
         oc var9 = null;
-        hl var10 = null;
+        InteractiveWidget var10 = null;
         oc var11 = null;
         oc var12 = null;
         oc var13 = null;
         oc var14 = null;
         try {
-          if (param1 instanceof hl) {
+          if (param1 instanceof InteractiveWidget) {
             stackIn_3_0 = (lk) (param1);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (hl) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           ek.a(param1.field_i + param3, param1.field_h + param1.field_o + param0, param0 + param1.field_o, (byte) 43, param1.field_q + (param1.field_i + param3));
           if (var10 != null) {
             param4 = param4 & var10.field_B;

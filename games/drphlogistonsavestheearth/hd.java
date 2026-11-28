@@ -339,7 +339,7 @@ final class hd extends vg {
         }
         this.field_D = new RgbSprite[]{this.a(this.field_A, (byte) 43, this.field_N), this.a(this.field_K, (byte) 43, this.field_G)};
         this.field_C = this.a((byte) 101);
-        this.field_H = this.field_C.e();
+        this.field_H = this.field_C.copyMirroredHorizontally();
         this.field_F = new RgbSprite(this.field_k >> 1, this.field_k);
     }
 
@@ -361,26 +361,26 @@ final class hd extends vg {
           }
           ib.a(param3, param3 + this.field_k, (byte) 114, -this.field_C.field_y + var5_int, param1 + this.field_C.field_y);
           for (var6 = param1 - this.field_z; var5_int > var6; var6 = var6 + param2.field_y) {
-            param2.d(var6, param3);
+            param2.draw(var6, param3);
           }
           cl.d((byte) -67);
           if (this.field_C.field_y + param1 >= SoftwareRasterizer.field_g) {
             MouseInput.a(this.field_F, (byte) 84);
-            param2.d(-this.field_z, 0);
-            param2.d(2 * this.field_J - this.field_z, 0);
-            this.field_H.c(0, 0);
+            param2.draw(-this.field_z, 0);
+            param2.draw(2 * this.field_J - this.field_z, 0);
+            this.field_H.drawMultiply(0, 0);
             cl.d((byte) -120);
-            this.field_F.d(param1, param3);
+            this.field_F.draw(param1, param3);
           }
           if (-this.field_C.field_y + var5_int <= SoftwareRasterizer.field_b) {
             MouseInput.a(this.field_F, (byte) 63);
             for (var7 = this.field_z + (-this.field_C.field_y + this.field_w); this.field_J * 2 < var7; var7 = var7 - 2 * this.field_J) {
             }
-            param2.d(-var7, 0);
-            param2.d(this.field_J * 2 - var7, 0);
-            this.field_C.c(0, 0);
+            param2.draw(-var7, 0);
+            param2.draw(this.field_J * 2 - var7, 0);
+            this.field_C.drawMultiply(0, 0);
             cl.d((byte) -85);
-            this.field_F.d(var5_int - this.field_C.field_y, param3);
+            this.field_F.draw(var5_int - this.field_C.field_y, param3);
             return;
           }
           return;

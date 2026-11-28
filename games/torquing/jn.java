@@ -27,9 +27,9 @@ final class jn {
           !(vo.field_d.length >= param2)) {
           vo.field_d = new int[param2 * 2];
         }
-        if (null == vp.field_F ||
-          !(vp.field_F.length >= param2)) {
-          vp.field_F = new int[param2 * 2];
+        if (null == NameSuggestionsPanel.field_F ||
+          !(NameSuggestionsPanel.field_F.length >= param2)) {
+          NameSuggestionsPanel.field_F = new int[param2 * 2];
         }
         if (ji.field_a == null ||
           !(param2 <= ji.field_a.length)) {

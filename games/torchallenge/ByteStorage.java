@@ -258,7 +258,7 @@ abstract class ByteStorage {
               if ((vi.field_a & 1 << var20Lifetime1) > 0) {
                 if (var15 != 0 &&
                   var16 == var20Lifetime1) {
-                  dl.field_j.a(var10 + param0, param1 + var11, -(5 * var17) + 255, 16777215);
+                  dl.field_j.drawBlendedTowardColor(var10 + param0, param1 + var11, -(5 * var17) + 255, 16777215);
                 } else {
                   dl.field_j.drawTransparent(param0 + var10, param1 + var11);
                 }
@@ -275,7 +275,7 @@ abstract class ByteStorage {
               }
               if (var15 != 0 &&
                 0 < var14) {
-                dl.field_j.a(var10 + param0, var11 + param1, 255 - 5 * var17, 16777215);
+                dl.field_j.drawBlendedTowardColor(var10 + param0, var11 + param1, 255 - 5 * var17, 16777215);
               } else {
                 if (var14 > 0) {
                   dl.field_j.drawTransparent(param0 + var10, param1 + var11);
@@ -311,7 +311,7 @@ abstract class ByteStorage {
               if (FullscreenFocusCanvas.field_b.length > var24) {
                 if (0 < var23 &&
                   var24 >= be.field_d) {
-                  mb.field_d[0].a(var10Lifetime1 + param0, param1 + var11Lifetime1, var23, 16777215);
+                  mb.field_d[0].drawBlendedTowardColor(var10Lifetime1 + param0, param1 + var11Lifetime1, var23, 16777215);
                 } else {
                   mb.field_d[0].drawTransparent(var10Lifetime1 + param0, var11Lifetime1 + param1);
                 }
@@ -338,7 +338,7 @@ abstract class ByteStorage {
             var13Lifetime4 = mb.field_d[0].fullHeight;
             var12Lifetime1Lifetime1 = mb.field_d[0].fullWidth;
             if (var22Lifetime3 % 5 > 0) {
-              mb.field_d[0].c(-var12Lifetime1Lifetime1 + (-10 + ob.field_b[2] + (ob.field_b[0] - (-param0 - var24Lifetime3))), var24Lifetime3 + (var11Lifetime1 + param1), -(2 * var24Lifetime3) + var12Lifetime1Lifetime1, -(var24Lifetime3 * 2) + var13Lifetime4);
+              mb.field_d[0].drawDownscaledAreaAveraged(-var12Lifetime1Lifetime1 + (-10 + ob.field_b[2] + (ob.field_b[0] - (-param0 - var24Lifetime3))), var24Lifetime3 + (var11Lifetime1 + param1), -(2 * var24Lifetime3) + var12Lifetime1Lifetime1, -(var24Lifetime3 * 2) + var13Lifetime4);
             }
           }
           if (param4 == 2 &&

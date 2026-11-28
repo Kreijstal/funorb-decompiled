@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends ug implements el {
-    private rg field_hb;
+final class ei extends ug implements WidgetActivationListener {
+    private InteractiveWidget field_hb;
     static e field_lb;
     static AudioOutput field_ob;
     static RgbSprite[] field_mb;
@@ -129,13 +129,13 @@ final class ei extends ug implements el {
         }
     }
 
-    private final rg a(uk param0, String param1, int param2) {
-        rg discarded$1 = null;
-        rg var4 = null;
+    private final InteractiveWidget a(uk param0, String param1, int param2) {
+        InteractiveWidget discarded$1 = null;
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
-        rg stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -143,7 +143,7 @@ final class ei extends ug implements el {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new rg(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_n = (fe) ((Object) new je());
           if (param2 != -27167) {
             var6 = (String) null;
@@ -186,7 +186,7 @@ final class ei extends ug implements el {
     }
 
     final static bm o(int param0) {
-        bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
+        bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], InteractiveWidget.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
         StageDirector.clearIndexedSpriteDecodeBuffers(false);
         if (param0 >= 20) {
           return var1;
@@ -195,7 +195,7 @@ final class ei extends ug implements el {
         return var1;
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -203,7 +203,7 @@ final class ei extends ug implements el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 68) {
-            this.field_hb = (rg) null;
+            this.field_hb = (InteractiveWidget) null;
           }
           if (this.field_hb != param3) {
             return;

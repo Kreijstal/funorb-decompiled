@@ -79,8 +79,8 @@ final class pb implements j {
           var7 = param4.field_j + param1;
           pl.a(true, param4.field_x, param4.field_t, var7, var6_int);
           var8 = PacketBuffer.field_k[1];
-          if (param4 instanceof pj &&
-            ((pj) (param4)).field_F) {
+          if (param4 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param4)).field_F) {
             var8.drawAdditive((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);
           }
           if (param4.b(true)) {

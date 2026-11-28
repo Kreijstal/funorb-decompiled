@@ -35,7 +35,7 @@ final class qj {
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
         int var4 = 0;
-        DualLinkNode.field_r.d(param2, param1);
+        DualLinkNode.field_r.draw(param2, param1);
         if (!param0) {
         } else {
           var4 = k.field_L % DualLinkNode.field_r.field_y * 2;

@@ -99,7 +99,7 @@ abstract class vf extends WidgetContainer {
           this.a(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
+          lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
         if (this.width > lfa.field_u.field_q) {
@@ -110,7 +110,7 @@ abstract class vf extends WidgetContainer {
           this.a(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
+          lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
         if (this.height > lfa.field_u.field_p) {
@@ -121,7 +121,7 @@ abstract class vf extends WidgetContainer {
           this.a(0, (byte) -109, 0);
           super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
           db.b(110);
-          lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
+          lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
           return;
         }
         bu.a(0, lfa.field_u);
@@ -130,7 +130,7 @@ abstract class vf extends WidgetContainer {
         this.a(0, (byte) -109, 0);
         super.draw((byte) 43, -this.y - param1, param2, -param3 - this.x);
         db.b(110);
-        lfa.field_u.a(param3 + this.x, param1 + this.y, this.field_E);
+        lfa.field_u.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_E);
     }
 
     final static void a(String param0, int param1, int param2, String param3, String param4, int param5) {

@@ -135,8 +135,8 @@ final class qg extends WidgetWrapper {
           if (param0 <= 6) {
             return;
           }
-          if ((!(this.field_C instanceof d) ||
-            ((d) (this.field_C)).field_F) &&
+          if ((!(this.field_C instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_C)).field_F) &&
             this.field_A == 1) {
             var5_int = -this.field_H + (PacketBuffer.field_n - param1);
             var6 = -this.field_J + (gb.field_d - param2);

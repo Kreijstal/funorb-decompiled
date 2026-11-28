@@ -27,7 +27,7 @@ class uf extends af {
     }
 
     uf(int param0) {
-        this(ua.field_G, param0);
+        this(NameSuggestionsPanel.field_G, param0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -100,20 +100,20 @@ class uf extends af {
           if (null != ah.field_a) {
             kd.a(param2, (byte) 101, param3, 1048576, param0);
           }
-          if (null == ua.field_I) {
+          if (null == NameSuggestionsPanel.field_I) {
             return;
           }
           var5 = kj.field_P;
           synchronized (var5) {
-            ua.field_I.b(param2, -1, -129);
+            NameSuggestionsPanel.field_I.b(param2, -1, -129);
             if (param3 == dj.field_j) {
               return;
             }
-            ua.field_I.stopPlayback((byte) 97);
+            NameSuggestionsPanel.field_I.stopPlayback((byte) 97);
             kj.field_P.flushAndMarkDrainCheck();
             dj.field_j = param3;
             if (null != dj.field_j) {
-              ua.field_I.a(param0, dj.field_j, true);
+              NameSuggestionsPanel.field_I.a(param0, dj.field_j, true);
             }
           }
           return;
@@ -182,10 +182,10 @@ class uf extends af {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (null != pj.field_D) {
+          if (null != InteractiveWidget.field_D) {
             try {
-              pj.field_D.seek(0L, (byte) 45);
-              pj.field_D.write(te.field_N.payload, -20291, 24, te.field_N.position);
+              InteractiveWidget.field_D.seek(0L, (byte) 45);
+              InteractiveWidget.field_D.write(te.field_N.payload, -20291, 24, te.field_N.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

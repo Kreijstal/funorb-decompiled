@@ -16,14 +16,14 @@ final class PcmOutputWorker implements Runnable {
     static int[][] field_k;
     static int field_c;
 
-    final static String a(int param0) {
+    final static String readStringFromPacketBuffer(int param0) {
         if (param0 != 6) {
           field_g = (int[]) null;
         }
         return id.field_b.readString(false);
     }
 
-    final static ResourceArchive a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
+    final static ResourceArchive createResourceArchiveWithDiskCache(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -31,7 +31,7 @@ final class PcmOutputWorker implements Runnable {
           ResourceArchive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           if (param3 <= 91) {
-            PcmOutputWorker.a(70, true, 52, (byte) -68, false, false);
+            PcmOutputWorker.createResourceArchiveWithDiskCache(70, true, 52, (byte) -68, false, false);
           }
           try {
             var6 = null;
@@ -101,13 +101,13 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_k = (int[][]) null;
         field_g = null;
         field_j = null;
         field_d = null;
         if (param0 != 6) {
-          PcmOutputWorker.a(21, false, 57, (byte) -119, true, false);
+          PcmOutputWorker.createResourceArchiveWithDiskCache(21, false, 57, (byte) -119, true, false);
         }
     }
 

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends g implements cl, qh {
+final class qe extends g implements cl, WidgetActivationListener {
     private AccountCreationResultPanel field_K;
-    private hl field_F;
+    private InteractiveWidget field_F;
     private dg field_D;
     static de field_J;
     static int field_E;
@@ -65,7 +65,7 @@ final class qe extends g implements cl, qh {
         int var6 = 0;
         try {
           this.field_K = param0;
-          this.field_F = new hl(bj.field_b, (pl) null);
+          this.field_F = new InteractiveWidget(bj.field_b, (pl) null);
           this.field_F.field_v = (ci) ((Object) new ki());
           var7 = re.a(dd.field_h, new String[]{this.l(1), this.d((byte) -110)}, (byte) -50);
           var3 = 20;
@@ -155,7 +155,7 @@ final class qe extends g implements cl, qh {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_5_0 = null;

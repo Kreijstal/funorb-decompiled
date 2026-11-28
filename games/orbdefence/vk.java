@@ -57,8 +57,8 @@ final class vk extends jc {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param2 instanceof s) {
-            param4 = param4 & ((s) (param2)).field_F;
+          if (param2 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param2)).field_F;
           }
           if (!param4) {
             stackIn_15_0 = this.field_z;

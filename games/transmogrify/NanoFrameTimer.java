@@ -322,7 +322,7 @@ final class NanoFrameTimer extends FrameTimer {
         int var13Lifetime1;
         var21 = Transmogrify.field_A ? 1 : 0;
         try {
-          param0.d();
+          param0.normalizeCanvas();
           var3_int = ga.a(param0.field_w[0], (byte) -107);
           var4 = (var3_int & 252) >> 2;
           if (var4 > 0) {

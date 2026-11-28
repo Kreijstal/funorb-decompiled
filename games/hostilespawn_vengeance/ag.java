@@ -52,7 +52,7 @@ class ag extends IntrusiveNode {
               var5_ref_int__ = new int[var1];
               var6 = 0;
               while (var6 < var1) {
-                var5_ref_int__[var6] = ll.a(PcmOutputWorker.a(255, (int) var16[var6]) << 24, bf.field_d[PcmOutputWorker.a((int) var17[var6], 255)]);
+                var5_ref_int__[var6] = ll.a(PcmOutputWorker.bitwiseAnd(255, (int) var16[var6]) << 24, bf.field_d[PcmOutputWorker.bitwiseAnd((int) var17[var6], 255)]);
                 var6++;
                 if (var7 == 0) {
                   continue;
@@ -67,7 +67,7 @@ class ag extends IntrusiveNode {
             var9 = new int[var1];
             var5 = 0;
             while (var1 > var5) {
-              var9[var5] = bf.field_d[PcmOutputWorker.a((int) var17[var5], 255)];
+              var9[var5] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var17[var5], 255)];
               var5++;
               if (var7 == 0) {
                 continue;
@@ -85,7 +85,7 @@ class ag extends IntrusiveNode {
               var5_ref_int__ = new int[var1];
               var6 = 0;
               while (var6 < var1) {
-                var5_ref_int__[var6] = ll.a(PcmOutputWorker.a(255, (int) var14[var6]) << 24, bf.field_d[PcmOutputWorker.a((int) var15[var6], 255)]);
+                var5_ref_int__[var6] = ll.a(PcmOutputWorker.bitwiseAnd(255, (int) var14[var6]) << 24, bf.field_d[PcmOutputWorker.bitwiseAnd((int) var15[var6], 255)]);
                 var6++;
                 if (var7 == 0) {
                   continue;
@@ -100,7 +100,7 @@ class ag extends IntrusiveNode {
             var9 = new int[var1];
             var5 = 0;
             while (var1 > var5) {
-              var9[var5] = bf.field_d[PcmOutputWorker.a((int) var15[var5], 255)];
+              var9[var5] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var15[var5], 255)];
               var5++;
               if (var7 == 0) {
                 continue;

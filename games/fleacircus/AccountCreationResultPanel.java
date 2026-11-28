@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends bd implements da {
+final class AccountCreationResultPanel extends bd implements WidgetActivationListener {
     static RgbSprite[] field_tb;
     static String field_xb;
     static long field_sb;
@@ -53,7 +53,7 @@ final class AccountCreationResultPanel extends bd implements da {
             } else {
               var4 = de.field_o;
               if (null != this.field_ub) {
-                this.field_ub.a(-72);
+                this.field_ub.onNameSuggestionsRefreshRequested(-72);
               }
             }
           }
@@ -122,7 +122,7 @@ final class AccountCreationResultPanel extends bd implements da {
         return super.a(100);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         if (this.field_vb) {
           wa.a(false, true, param3 - 370);
           return;

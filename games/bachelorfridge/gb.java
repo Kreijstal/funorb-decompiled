@@ -36,7 +36,7 @@ final class gb extends IntrusiveNode {
             param1 = param1 - (-hl.field_C.field_B + hl.field_C.field_u);
             var9 = hl.field_C.stringWidth(param5);
             var9 += 10;
-            cea.field_i.b();
+            cea.field_i.bindAsRenderTarget();
             if ((var9 & 1) == 1) {
               var9++;
             }
@@ -74,7 +74,7 @@ final class gb extends IntrusiveNode {
         int var8 = BachelorFridge.field_y;
         int var2_int = param0 > 0 ? (param0 + 0 << 8) / 255 : 0;
         int var3 = 137 * var2_int >> 8;
-        ada.field_p.d(-var3, 0);
+        ada.field_p.drawOpaque(-var3, 0);
         gs.field_f.a(param1 ^ 16777213, -var3 + 137, false);
         if (au.field_b) {
           if (!bf.field_f) {

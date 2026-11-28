@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qa extends hf {
+class qa extends InteractiveWidget {
     static int[] field_I;
     private fk field_P;
     private IntrusiveDeque field_Q;
@@ -260,8 +260,8 @@ class qa extends hf {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = -this.field_o + param3;
         int var6 = -this.field_m + param2;
         fk var7 = this.a(var6, var5, (byte) -70);

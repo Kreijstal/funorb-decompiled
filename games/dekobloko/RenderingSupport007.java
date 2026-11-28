@@ -336,8 +336,8 @@ final class RenderingSupport007 {
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         integerLocal2 = -(640 * this.integerState0363 * this.integerState0363 / 400) + (640 - (this.integerState0369 >> 2));
         integerLocal3 = -1;
-        integerArrayLocal7 = PcmPlayerService.computeIntegerArray1411(NodeHashTableIterator.integerArrayState0028, (byte) 47, this.integerArrayState0121);
-        integerArrayLocal8 = PcmPlayerService.computeIntegerArray1411(NodeHashTableIterator.integerArrayState0025, (byte) 47, integerArrayLocal7);
+        integerArrayLocal7 = PcmPlayerService.subtractBitMask(NodeHashTableIterator.integerArrayState0028, (byte) 47, this.integerArrayState0121);
+        integerArrayLocal8 = PcmPlayerService.subtractBitMask(NodeHashTableIterator.integerArrayState0025, (byte) 47, integerArrayLocal7);
         integerLocal4 = -((GameDomainSupport004.computeInteger0797(integerArrayLocal8, 120) - 1) * 18) + 304;
         if (byteArgument2 != -51) {
           return 9;
@@ -385,23 +385,23 @@ final class RenderingSupport007 {
                   integerLocal5 <= MixedSupport101.integerState0590 &&
                   MixedSupport101.integerState0590 < 32 + integerLocal5) {
                   if (!MixedSupport107.computeBoolean1404(-113, integerLocal1, this.integerArrayState0121)) {
-                    MixedSupport138.rgbSpriteState0063.performAction0271(-2 + integerLocal4, integerLocal5 - 2, 36, 36);
+                    MixedSupport138.rgbSpriteState0063.drawDownscaledAreaBlended(-2 + integerLocal4, integerLocal5 - 2, 36, 36);
                   } else {
-                    CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal1].performAction0258(integerLocal4 - 2, -2 + integerLocal5, 36, 36);
+                    CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal1].drawDownscaledAreaAveraged(integerLocal4 - 2, -2 + integerLocal5, 36, 36);
                   }
                   integerLocal3 = integerLocal1;
                 } else {
                   if (!MixedSupport107.computeBoolean1404(byteArgument2 + 23, integerLocal1, this.integerArrayState0121)) {
-                    MixedSupport138.rgbSpriteState0063.performAction0271(integerLocal4, integerLocal5, 32, 32);
+                    MixedSupport138.rgbSpriteState0063.drawDownscaledAreaBlended(integerLocal4, integerLocal5, 32, 32);
                   } else {
-                    ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0029[integerLocal1].performAction0278(integerLocal4, integerLocal5);
+                    ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0029[integerLocal1].draw(integerLocal4, integerLocal5);
                   }
                 }
               } else {
                 if (MixedSupport107.computeBoolean1404(-112, integerLocal1, this.integerArrayState0121)) {
-                  CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal1].performAction0258(integerLocal4 - 4, -4 + integerLocal5, 40, 40);
+                  CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal1].drawDownscaledAreaAveraged(integerLocal4 - 4, -4 + integerLocal5, 40, 40);
                 } else {
-                  MixedSupport138.rgbSpriteState0063.performAction0271(-4 + integerLocal4, integerLocal5 - 4, 40, 40);
+                  MixedSupport138.rgbSpriteState0063.drawDownscaledAreaBlended(-4 + integerLocal4, integerLocal5 - 4, 40, 40);
                 }
               }
             }
@@ -580,7 +580,7 @@ final class RenderingSupport007 {
           this.booleanState0095 = false;
         }
         RgbSprite rgbSpriteLocal2 = MixedSupport086.rgbSpriteState0036;
-        rgbSpriteLocal2.performAction0278(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (50 - rgbSpriteLocal2.integerState0260 / 2));
+        rgbSpriteLocal2.draw(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (50 - rgbSpriteLocal2.integerState0260 / 2));
         SoftwareRaster.fillRectangleAlpha(integerLocal1 + 4 + this.integerState0374, this.integerState0375 + 4, -8 + this.integerState0368, -8 + this.integerState0372, 0, 150);
         GameplayControls.performAction1749(this.integerState0372, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, integerLocal1 + this.integerState0374);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 362, LobbyRoomRow.computeString1709(this.integerState0367, 26135), 16777215, 560 + integerLocal1);
@@ -611,7 +611,7 @@ final class RenderingSupport007 {
         if (byteArgument1 < 23) {
           this.integerState0375 = -77;
         }
-        rgbSpriteLocal9.performAction0278(-(rgbSpriteLocal9.integerState0254 / 2) + 320, -(rgbSpriteLocal9.integerState0260 / 2) + 40 - (integerLocal8 >> 2));
+        rgbSpriteLocal9.draw(-(rgbSpriteLocal9.integerState0254 / 2) + 320, -(rgbSpriteLocal9.integerState0260 / 2) + 40 - (integerLocal8 >> 2));
         integerLocal10 = this.computeInteger0861(false, (byte) -51);
         if (integerLocal10 < 0) {
           MixedSupport029.performAction0407(16777215, integerLocal8 + 320, MixedSupport134.stringState0579, 200, (byte) 75, SceneWidget.renderingSupport009State0007);
@@ -625,9 +625,9 @@ final class RenderingSupport007 {
           }
           integerLocal12 = stackIntegerLocal3;
           if (integerLocal11 == 0) {
-            MixedSupport138.rgbSpriteState0063.performAction0278(256 + integerLocal8, 210);
+            MixedSupport138.rgbSpriteState0063.draw(256 + integerLocal8, 210);
           } else {
-            CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal10].performAction0278(integerLocal8 + 256, 210);
+            CipherPacketBuffer.rgbSpriteArrayState0030[integerLocal10].draw(integerLocal8 + 256, 210);
           }
           if (integerLocal12 == 0) {
             stringLocal13 = GameDomainSupport004.stringArrayState0016[integerLocal10];
@@ -650,7 +650,7 @@ final class RenderingSupport007 {
           if (integerLocal12 == 0) {
             MixedSupport042.performAction0537(271, 256, 16769088, Integer.toString(MixedSupport094.integerArrayState0178[integerLocal10]), integerLocal8 + 500, UiComponentPart029.renderingSupport009State0005);
             for (integerLocal1 = 0; BirthDateInput.integerArrayState0238[integerLocal10] > integerLocal1; integerLocal1++) {
-              MixedSupport111.rgbSpriteState0052.performAction0278(integerLocal1 * 5 + (integerLocal8 + 500), 274);
+              MixedSupport111.rgbSpriteState0052.draw(integerLocal1 * 5 + (integerLocal8 + 500), 274);
             }
           } else {
             MixedSupport042.performAction0537(271, 256, 16769088, "???", 500 + integerLocal8, UiComponentPart029.renderingSupport009State0005);
@@ -722,7 +722,7 @@ final class RenderingSupport007 {
         integerLocal2 = -(this.integerState0369 >> 2) + (-(640 * this.integerState0363 * this.integerState0363 / 400) + 640);
         this.performAction0856(false, 15764);
         rgbSpriteLocal3 = MixedSupport061.rgbSpriteState0021;
-        rgbSpriteLocal3.performAction0278(320 - rgbSpriteLocal3.integerState0254 / 2, 45 - rgbSpriteLocal3.integerState0260 / 2 - (integerLocal2 >> 2));
+        rgbSpriteLocal3.draw(320 - rgbSpriteLocal3.integerState0254 / 2, 45 - rgbSpriteLocal3.integerState0260 / 2 - (integerLocal2 >> 2));
         if (null == this.mixedSupport068State0001 &&
           !UiComponentPart023.computeBoolean1242(-30146)) {
           this.mixedSupport068State0001 = MixedSupport007.computeMixedSupport0680070(3, false, 1, 0, 10);
@@ -797,7 +797,7 @@ final class RenderingSupport007 {
         this.performAction0856(true, integerArgument1 ^ -23361);
         int integerLocal1 = -(this.integerState0369 >> 2) + 640 - 640 * this.integerState0363 * this.integerState0363 / 400;
         RgbSprite rgbSpriteLocal2 = MixedSupport073.rgbSpriteState0029;
-        rgbSpriteLocal2.performAction0278(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (this.integerState0375 / 2 - (-2 + rgbSpriteLocal2.integerState0260 / 2)));
+        rgbSpriteLocal2.draw(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (this.integerState0375 / 2 - (-2 + rgbSpriteLocal2.integerState0260 / 2)));
         if (integerArgument1 != -26325) {
           this.integerState0372 = -96;
         }
@@ -861,7 +861,7 @@ final class RenderingSupport007 {
         integerLocal6 = -(this.integerState0369 >> 2) + (-(this.integerState0363 * (this.integerState0363 * 640) / 400) + 640);
         this.performAction0856(false, 15764);
         rgbSpriteLocal7 = ResourceSupport001.rgbSpriteState0004;
-        rgbSpriteLocal7.performAction0278(-(rgbSpriteLocal7.integerState0254 / 2) + 320, -(rgbSpriteLocal7.integerState0260 / 2) + (45 - (integerLocal6 >> 2)));
+        rgbSpriteLocal7.draw(-(rgbSpriteLocal7.integerState0254 / 2) + 320, -(rgbSpriteLocal7.integerState0260 / 2) + (45 - (integerLocal6 >> 2)));
         if (this.mixedSupport020State0001 == null &&
           !UiComponentPart023.computeBoolean1242(-30146)) {
           this.mixedSupport020State0001 = UiComponentPart001.computeMixedSupport0200055(7, 10, (byte) -111, 0);
@@ -967,7 +967,7 @@ final class RenderingSupport007 {
         }
         this.performAction0856(true, 15764);
         int integerLocal1 = -(this.integerState0363 * this.integerState0363 * 640 / 400) + (640 - (this.integerState0369 >> 2));
-        GameDomainSupport006.rgbSpriteState0075.performAction0278(320 - GameDomainSupport006.rgbSpriteState0075.integerState0258 / 2, -(integerLocal1 >> 2) + 20);
+        GameDomainSupport006.rgbSpriteState0075.draw(320 - GameDomainSupport006.rgbSpriteState0075.integerState0258 / 2, -(integerLocal1 >> 2) + 20);
     }
 
     final void performAction0849(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4, int integerArgument5) {
@@ -1548,7 +1548,7 @@ final class RenderingSupport007 {
         integerLocal2 = -(this.integerState0369 >> 2) + (-(640 * this.integerState0363 * this.integerState0363 / 400) + 640);
         this.performAction0856(false, 15764);
         rgbSpriteLocal3 = MixedSupport146.rgbSpriteState0074;
-        rgbSpriteLocal3.performAction0278(-(rgbSpriteLocal3.integerState0254 / 2) + 320, 45 + (-(rgbSpriteLocal3.integerState0260 / 2) - (integerLocal2 >> 2)));
+        rgbSpriteLocal3.draw(-(rgbSpriteLocal3.integerState0254 / 2) + 320, 45 + (-(rgbSpriteLocal3.integerState0260 / 2) - (integerLocal2 >> 2)));
         if (null == this.mixedSupport068State0001 &&
           !UiComponentPart023.computeBoolean1242(-30146)) {
           this.mixedSupport068State0001 = MixedSupport007.computeMixedSupport0680070(3, false, 1, 1, 10);
@@ -1759,7 +1759,7 @@ final class RenderingSupport007 {
             MixedSupport045.computeInteger0552(-5 + integerLocal14 - gameDomainSupport002Local6.integerState0174, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, MixedSupport001.renderingSupport009State0001, (byte) -124, 2, gameDomainSupport002Local6.integerState0174 + integerLocal5);
             stackIntegerLocal4 = (gameDomainSupport002Local6.integerState0179 == 6) ? 1 : 3;
             integerLocal16 = stackIntegerLocal4;
-            MixedSupport121.computeRgbSprite1601(true, integerLocal16).performAction0280(integerLocal5 + (-9 + integerLocal14) + integerLocal15, 6 + integerLocal8, 18, 18);
+            MixedSupport121.computeRgbSprite1601(true, integerLocal16).drawScaled(integerLocal5 + (-9 + integerLocal14) + integerLocal15, 6 + integerLocal8, 18, 18);
           }
           if (gameDomainSupport002Local6.integerState0179 == 2 && (!(UiComponentPart015.integerState0319 >= 3) ||
             MixedSupport051.computeBoolean0607(false))) {

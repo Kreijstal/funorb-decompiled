@@ -331,7 +331,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         var19 = fleas.field_A ? 1 : 0;
         try {
           jj.field_Z = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ij.field_F.length;
+          var1_int = NameSuggestionsPanel.field_F.length;
           var2 = new int[var1_int];
           var3 = 0;
           do {
@@ -339,7 +339,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = jj.field_Z[9] >> 8;
               break;
             }
-            var4_ref_si = ij.field_F[var3];
+            var4_ref_si = NameSuggestionsPanel.field_F[var3];
             var4_ref_si.b(-23443);
             vi.a(var3, false);
             var5 = var4_ref_si.field_m + var4_ref_si.field_B >> 1;
@@ -383,14 +383,14 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var15 = 0;
           scanLoop1: while (true) {
             stackIn_18_0 = ~var15;
-            stackIn_18_1 = ~ij.field_F.length;
+            stackIn_18_1 = ~NameSuggestionsPanel.field_F.length;
             if (stackIn_18_0 > stackIn_18_1) {
               var16 = 0;
               if (var19 != 0) {
                 return;
               }
               var17_int = 1;
-              while (var17_int < ij.field_F.length) {
+              while (var17_int < NameSuggestionsPanel.field_F.length) {
                 stackIn_18_0 = ~var2[var17_int];
                 stackIn_18_1 = ~var2[var16];
                 if (stackIn_18_0 < stackIn_18_1) {
@@ -399,7 +399,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var17_int++;
               }
               var2[var16] = -2147483648;
-              var17 = ij.field_F[var16];
+              var17 = NameSuggestionsPanel.field_F[var16];
               vi.a(var16, false);
               var18 = 0;
               while (var18 < 3) {

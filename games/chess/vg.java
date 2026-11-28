@@ -224,7 +224,7 @@ final class vg {
                 dn.a((byte) 72, param1);
               }
             }
-            t.a(ib.field_d, true, param1, true);
+            NameSuggestionsPanel.a(ib.field_d, true, param1, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

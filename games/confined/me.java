@@ -93,7 +93,7 @@ final class me extends am {
           vm.a(var6, -8409);
           this.field_H.a(0, param1, (byte) 83, 0);
           ib.b(false);
-          var6.a(param3 + this.field_q, this.field_m + param0, this.field_K);
+          var6.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_K);
           return;
         }
         this.field_H.a(param0 + this.field_m, param1, (byte) 45, param3 + this.field_q);

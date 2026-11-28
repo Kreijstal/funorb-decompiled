@@ -97,7 +97,7 @@ final class ph {
     }
 
     final void h(int param0, int param1) {
-        this.field_a.h(param0, param1);
+        this.field_a.draw(param0, param1);
         this.d(param0, param1);
     }
 
@@ -113,7 +113,7 @@ final class ph {
     }
 
     final void f(int param0, int param1) {
-        this.field_a.b(param0, param1);
+        this.field_a.drawFlippedBothAxes(param0, param1);
         this.c(param0, param1);
     }
 
@@ -139,7 +139,7 @@ final class ph {
     }
 
     final void i(int param0, int param1) {
-        this.field_a.g(param0, param1);
+        this.field_a.drawFlippedVertical(param0, param1);
         this.g(param0, param1);
     }
 
@@ -276,7 +276,7 @@ final class ph {
     }
 
     final void b(int param0, int param1) {
-        this.field_a.c(param0, param1);
+        this.field_a.drawOpaque(param0, param1);
         this.e(param0, param1);
     }
 
@@ -458,7 +458,7 @@ final class ph {
     }
 
     final void j(int param0, int param1) {
-        this.field_a.f(param0, param1);
+        this.field_a.drawFlippedHorizontal(param0, param1);
         this.a(param0, param1);
     }
 

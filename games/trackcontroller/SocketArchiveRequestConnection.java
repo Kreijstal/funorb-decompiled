@@ -179,7 +179,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               dd.field_p = r.a(var11, -11133);
               si.field_d = ne.field_a.readUnsignedByte(16383);
               jc.field_a = ka.field_b;
-              if (AccountNameAvailabilityValidator.field_o.a(false) != nd.field_M) {
+              if (AccountNameAvailabilityValidator.field_o.a(false) != NameSuggestionsPanel.field_M) {
                 if (AccountNameAvailabilityValidator.field_o.a(false) == ji.field_a) {
                   qi.field_f.a(CachedArchiveSource.b((byte) 77), -4);
                 }

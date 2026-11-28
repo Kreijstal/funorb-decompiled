@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
+final class DisplayNameSelectionPanel extends td implements NameSuggestionListener, ButtonListener {
     static int field_D;
     static String[] field_J;
     private ButtonWidget field_H;
     private ValidatedTextField field_K;
     static String field_G;
     static BitmapFont font;
-    nd field_I;
+    NameSuggestionsPanel field_I;
     private ButtonWidget field_F;
 
     final void a(int param0, int param1, byte param2, UiWidget param3) {
@@ -70,7 +70,7 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
         }
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         boolean discarded$0 = false;
         ValidatedTextField var3 = null;
         String var4 = null;
@@ -87,7 +87,7 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -154,7 +154,7 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
         this.field_F.field_l = (tg) (this);
         this.a(false, this.field_F);
         this.a(false, this.field_H);
-        this.field_I = new nd((a) (this));
+        this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_I.a(150, -3050, 20, -60 - this.field_K.field_p + this.field_x - this.field_K.field_x, 60 + (this.field_K.field_p + this.field_K.field_x));
         this.a(false, this.field_I);
         this.a(55 + var3 + var4, -3050, 0, 496, 0);
@@ -252,8 +252,8 @@ final class DisplayNameSelectionPanel extends td implements a, ButtonListener {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator((byte) -97))).a(false);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator((byte) -97))).invalidateCheckedName(false);
         if (param0 <= 117) {
           UiWidget var3 = (UiWidget) null;
           this.a((byte) -3, 'o', (UiWidget) null, 53);

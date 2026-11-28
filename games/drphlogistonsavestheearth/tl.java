@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tl extends hf {
+final class tl extends InteractiveWidget {
     private rb field_M;
     static he field_P;
     static he[] field_I;

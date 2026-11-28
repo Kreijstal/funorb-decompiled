@@ -294,7 +294,7 @@ final class db {
             if (2 == param1.field_d) {
               var7 = var7 + (-this.field_b.field_x + param2.field_t);
             }
-            this.field_b.e(var6_int, var7);
+            this.field_b.draw(var6_int, var7);
           }
           if (param3 != 2) {
             this.field_d = (Sprite[]) null;

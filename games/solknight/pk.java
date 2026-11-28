@@ -169,7 +169,7 @@ final class pk extends kj {
               }
             }
           }
-          var21.b(112, 144, var21.field_q << 4, var21.field_r << 4, -this.field_Z << 10, 4096);
+          var21.drawRotatedAbout(112, 144, var21.field_q << 4, var21.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
           this.field_W.drawAdditive(-(var21.field_q >> 1) + var9, var10 - var21.field_r, 256);
           return;
@@ -219,7 +219,7 @@ final class pk extends kj {
               }
             }
           }
-          var26.b(112, 144, var26.field_q << 4, var26.field_r << 4, -this.field_Z << 10, 4096);
+          var26.drawRotatedAbout(112, 144, var26.field_q << 4, var26.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
           this.field_W.drawAdditive(-(var26.field_q >> 1) + var9Lifetime1, var10Lifetime1 - var26.field_r, 256);
           return;
@@ -270,7 +270,7 @@ final class pk extends kj {
               }
             }
           }
-          var31.b(112, 144, var31.field_q << 4, var31.field_r << 4, -this.field_Z << 10, 4096);
+          var31.drawRotatedAbout(112, 144, var31.field_q << 4, var31.field_r << 4, -this.field_Z << 10, 4096);
           MidiPcmStream.e(4096);
           this.field_W.drawAdditive(-(var31.field_q >> 1) + var9Lifetime2, var10Lifetime2 - var31.field_r, 256);
           return;
@@ -319,7 +319,7 @@ final class pk extends kj {
             }
           }
         }
-        var36.b(112, 144, var36.field_q << 4, var36.field_r << 4, -this.field_Z << 10, 4096);
+        var36.drawRotatedAbout(112, 144, var36.field_q << 4, var36.field_r << 4, -this.field_Z << 10, 4096);
         MidiPcmStream.e(4096);
         this.field_W.drawAdditive(-(var36.field_q >> 1) + var9Lifetime3, var10Lifetime3 - var36.field_r, 256);
         return;

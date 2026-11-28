@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ck extends wl implements oi {
+class ck extends wl implements WidgetActivationListener {
     static boolean field_db;
     private boolean field_eb;
     static int field_hb;
@@ -182,7 +182,7 @@ class ck extends wl implements oi {
         this.b(var2Lifetime1, 23143);
     }
 
-    public void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -214,9 +214,9 @@ class ck extends wl implements oi {
     }
 
     final void o(int param0) {
-        ig var3 = null;
-        ig var3Lifetime1;
-        ig var3Lifetime2;
+        InteractiveWidget var3 = null;
+        InteractiveWidget var3Lifetime1;
+        InteractiveWidget var3Lifetime2;
         if (!this.field_G) {
           return;
         }
@@ -224,16 +224,16 @@ class ck extends wl implements oi {
         if (this.field_eb) {
           tk.a(param0 ^ -16);
           if (param0 != 3) {
-            var3 = (ig) null;
-            this.a(-54, 36, (ig) null, false, -76);
+            var3 = (InteractiveWidget) null;
+            this.onWidgetActivated(-54, 36, (InteractiveWidget) null, false, -76);
             return;
           }
           return;
         }
         if (!this.field_gb) {
           if (param0 != 3) {
-            var3Lifetime1 = (ig) null;
-            this.a(-54, 36, (ig) null, false, -76);
+            var3Lifetime1 = (InteractiveWidget) null;
+            this.onWidgetActivated(-54, 36, (InteractiveWidget) null, false, -76);
             return;
           }
           return;
@@ -242,8 +242,8 @@ class ck extends wl implements oi {
         if (param0 == 3) {
           return;
         }
-        var3Lifetime2 = (ig) null;
-        this.a(-54, 36, (ig) null, false, -76);
+        var3Lifetime2 = (InteractiveWidget) null;
+        this.onWidgetActivated(-54, 36, (InteractiveWidget) null, false, -76);
     }
 
     final static int a(int param0, int param1, boolean param2, boolean param3) {

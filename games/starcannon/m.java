@@ -63,7 +63,7 @@ final class m {
         if (param0 != 112) {
           return;
         }
-        KeyboardInput.field_c.e(param2, param3);
+        KeyboardInput.field_c.draw(param2, param3);
         if (!param1) {
           return;
         }
@@ -93,7 +93,7 @@ final class m {
         if (param0 != 112) {
           return;
         }
-        KeyboardInput.field_c.e(param2, param3);
+        KeyboardInput.field_c.draw(param2, param3);
         if (!param1) {
           return;
         }

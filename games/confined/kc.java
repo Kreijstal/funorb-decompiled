@@ -193,14 +193,14 @@ final class kc {
           var13 = new RgbSprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new qh(var4, true);
-          var14.a(-92, var13.c());
-          var13.a();
+          var14.a(-92, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new qh(var4, true);
-          var14Lifetime1.a(94, var13.c());
-          var13.a();
+          var14Lifetime1.a(94, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new qh(var4, true);
-          var14Lifetime2.a(-75, var13.c());
-          var13.a();
+          var14Lifetime2.a(-75, var13.copy());
+          var13.rotateClockwise();
           var19 = new qh(var4, true);
           var19.a(-69, var13);
         } catch (RuntimeException runtimeException) {
@@ -406,16 +406,16 @@ final class kc {
         int var4 = (int)(uh.field_e[param2] * 48.0 + 0.5);
         int var5 = -var4 + 48 >> 1;
         if ((1 << param2 & 50087) != 0) {
-          m.field_i[param2].d(param3 + var5, param1 + var5, var4, var4, 256);
-          TunnelEntity.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
+          m.field_i[param2].drawScaledAdditive(param3 + var5, param1 + var5, var4, var4, 256);
+          TunnelEntity.field_w[qn.field_r >> 1 & 15].drawScaledAdditive(param3, param1, 48, 48, 256);
           if (param0) {
             field_k = (java.applet.Applet) null;
             return;
           }
           return;
         }
-        m.field_i[param2].b(param3 + var5, param1 + var5, var4, var4);
-        TunnelEntity.field_w[qn.field_r >> 1 & 15].d(param3, param1, 48, 48, 256);
+        m.field_i[param2].drawScaled(param3 + var5, param1 + var5, var4, var4);
+        TunnelEntity.field_w[qn.field_r >> 1 & 15].drawScaledAdditive(param3, param1, 48, 48, 256);
         if (param0) {
           field_k = (java.applet.Applet) null;
           return;

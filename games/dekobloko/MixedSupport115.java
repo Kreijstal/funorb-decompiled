@@ -93,7 +93,7 @@ abstract class MixedSupport115 extends DualNode {
                   integerLocal10 = 1;
                 }
               }
-              if (PcmPlayerService.computeBoolean1409(false)) {
+              if (PcmPlayerService.hasSceneWidgetState(false)) {
                 stackStringLocal1 = ": ";
               } else {
                 stackStringLocal1 = "<img=3>: ";
@@ -114,7 +114,7 @@ abstract class MixedSupport115 extends DualNode {
                 stringLocal8 = "<col=999999>" + stringLocal8 + MixedSupport138.stringState0591 + "</col>";
               }
               integerLocal13 = MixedSupport038.bitmapFontState0013.stringWidth(stringLocal8);
-              if (!PcmPlayerService.computeBoolean1409(false)) {
+              if (!PcmPlayerService.hasSceneWidgetState(false)) {
                 if (UiComponentPart033.sceneWidgetState0150.booleanState0218 &&
                   (HashNode.integerState0069 - UiComponentPart033.sceneWidgetState0150.integerState0892) < integerLocal13) {
                   if (MixedSupport144.booleanState0221) {

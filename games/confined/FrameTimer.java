@@ -34,7 +34,7 @@ abstract class FrameTimer {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, rj.field_f);
+          var2 = new BinaryBitmapFont(param1, DualLinkNode.field_p, ij.field_r, InteractiveWidget.field_I, sd.field_f, rj.field_f);
           StageDirector.clearIndexedSpriteDecodeBuffers(false);
           stackIn_7_0 = var2;
           return stackIn_7_0;

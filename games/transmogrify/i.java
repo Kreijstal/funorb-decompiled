@@ -76,7 +76,7 @@ final class i {
           if (null == nk.field_b) {
             return false;
           }
-          if (lj.field_z == ll.field_Q) {
+          if (InteractiveWidget.field_z == ll.field_Q) {
             return true;
           }
           return false;
@@ -84,7 +84,7 @@ final class i {
         if (null == nk.field_b) {
           return false;
         }
-        if (lj.field_z == ll.field_Q) {
+        if (InteractiveWidget.field_z == ll.field_Q) {
           return true;
         }
         return false;

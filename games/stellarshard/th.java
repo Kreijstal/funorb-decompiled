@@ -168,13 +168,13 @@ final class th {
           SoftwareRasterizer.clearRaster();
           ni.field_d = 0;
           ja.a(4);
-          var3 = var1.a();
+          var3 = var1.copy();
           for (var4 = 0; var4 < 15; var4++) {
-            var3.b(-2, -2, 16777215);
+            var3.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          pd.field_s.e();
-          var1.b(0, 0);
+          pd.field_s.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           id.b((byte) -58);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.C(" + param0 + ')');

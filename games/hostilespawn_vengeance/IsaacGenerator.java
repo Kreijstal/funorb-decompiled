@@ -196,10 +196,10 @@ final class IsaacGenerator {
             }
           }
           this.field_g = this.field_g + this.field_a[255 & 128 + var2];
-          dupTemp$1 = this.field_b + (this.field_g + this.field_a[PcmOutputWorker.a(1020, var3) >> 2]);
+          dupTemp$1 = this.field_b + (this.field_g + this.field_a[PcmOutputWorker.bitwiseAnd(1020, var3) >> 2]);
           var4 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
-          dupTemp$2 = this.field_a[PcmOutputWorker.a(var4 >> 8, 1020) >> 2] + var3;
+          dupTemp$2 = this.field_a[PcmOutputWorker.bitwiseAnd(var4 >> 8, 1020) >> 2] + var3;
           this.field_b = dupTemp$2;
           this.field_k[var2] = dupTemp$2;
         }

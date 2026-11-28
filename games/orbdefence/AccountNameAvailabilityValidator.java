@@ -39,7 +39,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (param1 != -99) {
-            this.b((byte) -37);
+            this.invalidateCheckedName((byte) -37);
           }
           if (this.nameAvailable) {
             stackIn_16_0 = nc.field_bb;
@@ -127,7 +127,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         this.nameAvailable = false;
     }
 
-    final void b(byte param0) {
+    final void invalidateCheckedName(byte param0) {
         this.checkedName = null;
         if (param0 <= 59) {
           field_t = (String[]) null;

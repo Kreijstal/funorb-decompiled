@@ -50,9 +50,9 @@ final class ub {
           }
           fi.c(true);
           if (150 > si.field_l) {
-            IsaacRandom.field_f.d(var3, var4);
+            IsaacRandom.field_f.drawHalfSize(var3, var4);
           } else {
-            ch.field_c.e(var3 + 15, var4 + 10, var5);
+            ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
           var6 = si.field_l - 125;
           if (var6 > 0 &&
@@ -60,13 +60,13 @@ final class ub {
             if (20 <= var6) {
               if (var6 >= 30) {
                 var7 = 256 * (50 - var6) / 20;
-                ac.field_m.c(var3, var4, var7);
+                ac.field_m.drawAdditive(var3, var4, var7);
               } else {
-                ac.field_m.c(var3, var4, 256);
+                ac.field_m.drawAdditive(var3, var4, 256);
               }
             } else {
               var7 = var6 * 256 / 20;
-              ac.field_m.c(var3, var4, var7);
+              ac.field_m.drawAdditive(var3, var4, var7);
             }
           }
         } else {
@@ -77,14 +77,14 @@ final class ub {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g, 0, 256 - var5);
             fi.c(true);
             if (150 > si.field_l) {
-              IsaacRandom.field_f.d(var3, var4);
+              IsaacRandom.field_f.drawHalfSize(var3, var4);
             } else {
-              ch.field_c.e(var3 + 15, var4 + 10, var5);
+              ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
             }
           } else {
             fi.c(true);
             if (150 > si.field_l) {
-              IsaacRandom.field_f.d(var3, var4);
+              IsaacRandom.field_f.drawHalfSize(var3, var4);
               var6 = si.field_l - 125;
               if (var6 <= 0) {
                 var6 = -140 + si.field_l;
@@ -93,7 +93,7 @@ final class ub {
                   if (var6 < 20) {
                     var7 = var6 * 256 / 20;
                   }
-                  tb.field_e.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                  tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
                 }
               } else {
                 if (var6 >= 50) {
@@ -103,41 +103,41 @@ final class ub {
                     if (var6 < 20) {
                       var7 = var6 * 256 / 20;
                     }
-                    tb.field_e.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                    tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
                   }
                 } else {
                   if (20 > var6) {
                     var7 = var6 * 256 / 20;
-                    ac.field_m.c(var3, var4, var7);
+                    ac.field_m.drawAdditive(var3, var4, var7);
                     var6 = -140 + si.field_l;
                     if (var6 > 0) {
                       var7 = 256;
                       if (var6 < 20) {
                         var7 = var6 * 256 / 20;
                       }
-                      tb.field_e.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                      tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
                     }
                   } else {
                     if (var6 < 30) {
-                      ac.field_m.c(var3, var4, 256);
+                      ac.field_m.drawAdditive(var3, var4, 256);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
                         }
-                        tb.field_e.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                        tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
                       }
                     } else {
                       var7 = 256 * (50 - var6) / 20;
-                      ac.field_m.c(var3, var4, var7);
+                      ac.field_m.drawAdditive(var3, var4, var7);
                       var6 = -140 + si.field_l;
                       if (var6 > 0) {
                         var7 = 256;
                         if (var6 < 20) {
                           var7 = var6 * 256 / 20;
                         }
-                        tb.field_e.e(15 + var3, var4 + 10, var7 * var5 >> 8);
+                        tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7 * var5 >> 8);
                       }
                     }
                   }
@@ -145,20 +145,20 @@ final class ub {
               }
               return;
             }
-            ch.field_c.e(var3 + 15, var4 + 10, var5);
+            ch.field_c.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
           var6 = si.field_l - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (20 > var6) {
               var7 = var6 * 256 / 20;
-              ac.field_m.c(var3, var4, var7);
+              ac.field_m.drawAdditive(var3, var4, var7);
             } else {
               if (var6 < 30) {
-                ac.field_m.c(var3, var4, 256);
+                ac.field_m.drawAdditive(var3, var4, 256);
               } else {
                 var7 = 256 * (50 - var6) / 20;
-                ac.field_m.c(var3, var4, var7);
+                ac.field_m.drawAdditive(var3, var4, var7);
               }
             }
           }
@@ -169,7 +169,7 @@ final class ub {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          tb.field_e.e(15 + var3, var4 + 10, var7Lifetime1 * var5 >> 8);
+          tb.field_e.drawWithOpacity(15 + var3, var4 + 10, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

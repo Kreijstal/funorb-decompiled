@@ -147,7 +147,7 @@ final class kw extends TileEffect {
           var5 = kka.field_f;
           var6 = param2 - this.field_i * this.field_l / 80;
           var7 = param0 - var4 - this.field_l * this.field_h / 80;
-          var5.a(var6, var7 - 64);
+          var5.draw(var6, var7 - 64);
           return;
         }
     }

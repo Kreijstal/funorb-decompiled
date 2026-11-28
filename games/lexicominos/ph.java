@@ -40,7 +40,7 @@ final class ph {
           param0.removeMouseListener(hh.field_M);
           param0.removeMouseMotionListener(hh.field_M);
           param0.removeFocusListener(hh.field_M);
-          bb.field_I = 0;
+          NameSuggestionsPanel.field_I = 0;
           int var2_int = 102 / ((param1 - 71) / 52);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ph.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

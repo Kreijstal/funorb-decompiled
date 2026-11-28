@@ -51,9 +51,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, -var5 + 256);
           pd.a(param1 ^ -22835);
           if (param1 <= mc.field_k) {
-            nc.field_n.b(var3 + 15, var4 + 10, var5);
+            nc.field_n.drawWithOpacity(var3 + 15, var4 + 10, var5);
           } else {
-            BufferedRandomAccessFile.field_d.f(var3, var4);
+            BufferedRandomAccessFile.field_d.drawHalfSize(var3, var4);
           }
           var6 = mc.field_k - 125;
           if (var6 > 0) {
@@ -64,20 +64,20 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7 >> 8);
               }
               return;
             }
             if (var6 >= 20) {
               if (30 > var6) {
-                t.field_a.d(var3, var4, 256);
+                t.field_a.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime9 = 256 * (50 - var6) / 20;
-                t.field_a.d(var3, var4, var7Lifetime9);
+                t.field_a.drawAdditive(var3, var4, var7Lifetime9);
               }
             } else {
               var7Lifetime9 = var6 * 256 / 20;
-              t.field_a.d(var3, var4, var7Lifetime9);
+              t.field_a.drawAdditive(var3, var4, var7Lifetime9);
             }
           }
           var6Lifetime4 = mc.field_k - 140;
@@ -86,26 +86,26 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime4 < 20) {
               var7Lifetime8 = 256 * var6Lifetime4 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
           }
           return;
         }
         pd.a(param1 ^ -22835);
         if (param1 > mc.field_k) {
-          BufferedRandomAccessFile.field_d.f(var3, var4);
+          BufferedRandomAccessFile.field_d.drawHalfSize(var3, var4);
           var6Lifetime1 = mc.field_k - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (var6Lifetime1 >= 20) {
               if (30 > var6Lifetime1) {
-                t.field_a.d(var3, var4, 256);
+                t.field_a.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime1 = 256 * (50 - var6Lifetime1) / 20;
-                t.field_a.d(var3, var4, var7Lifetime1);
+                t.field_a.drawAdditive(var3, var4, var7Lifetime1);
               }
             } else {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              t.field_a.d(var3, var4, var7Lifetime1);
+              t.field_a.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
           var6Lifetime1Lifetime1 = mc.field_k - 140;
@@ -114,11 +114,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
           }
           return;
         }
-        nc.field_n.b(var3 + 15, var4 + 10, var5);
+        nc.field_n.drawWithOpacity(var3 + 15, var4 + 10, var5);
         var6Lifetime2 = mc.field_k - 125;
         if (var6Lifetime2 <= 0) {
           var6Lifetime2 = mc.field_k - 140;
@@ -127,7 +127,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
@@ -138,44 +138,44 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = 256 * var6Lifetime2 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime3 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
         if (var6Lifetime2 < 20) {
           var7Lifetime4 = var6Lifetime2 * 256 / 20;
-          t.field_a.d(var3, var4, var7Lifetime4);
+          t.field_a.drawAdditive(var3, var4, var7Lifetime4);
           var6Lifetime2 = mc.field_k - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime4Lifetime1 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime4Lifetime1 = 256 * var6Lifetime2 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
           }
           return;
         }
         if (30 > var6Lifetime2) {
-          t.field_a.d(var3, var4, 256);
+          t.field_a.drawAdditive(var3, var4, 256);
           var6Lifetime2 = mc.field_k - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime5 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime5 = 256 * var6Lifetime2 / 20;
             }
-            ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime5 >> 8);
+            ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime5 >> 8);
           }
           return;
         }
         var7Lifetime6 = 256 * (50 - var6Lifetime2) / 20;
-        t.field_a.d(var3, var4, var7Lifetime6);
+        t.field_a.drawAdditive(var3, var4, var7Lifetime6);
         var6Lifetime3 = mc.field_k - 140;
         if (var6Lifetime3 > 0) {
           var7Lifetime7 = 256;
           if (var6Lifetime3 < 20) {
             var7Lifetime7 = 256 * var6Lifetime3 / 20;
           }
-          ConfirmedEmailAvailabilityValidator.field_m.b(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
+          ConfirmedEmailAvailabilityValidator.field_m.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime7 >> 8);
         }
         return;
     }

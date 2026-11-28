@@ -86,7 +86,7 @@ final class DirectByteStorage extends ByteStorage {
           if (param2 > -68) {
             return false;
           }
-          if (!bb.a(param1, param0, -1)) {
+          if (!NameSuggestionsPanel.a(param1, param0, -1)) {
             return false;
           }
           for (var3_int = 0; param1.length() > var3_int; var3_int++) {

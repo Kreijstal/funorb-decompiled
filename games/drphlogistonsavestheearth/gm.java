@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class gm extends hf {
+final class gm extends InteractiveWidget {
     static he[] field_L;
     static String field_K;
     static int field_O;
@@ -146,10 +146,10 @@ final class gm extends hf {
           var8 != nd.field_P) {
           if (u.field_b == var8) {
             var14 = ja.field_n[2];
-            var14.a(var5 - (var14.field_y >> 1), -(var14.field_w >> 1) + var6, 256);
+            var14.drawAdditive(var5 - (var14.field_y >> 1), -(var14.field_w >> 1) + var6, 256);
           } else if (var8 == ce.field_e) {
             var13 = ja.field_n[1];
-            var13.a(var5 - (var13.field_y >> 1), var6 - (var13.field_w >> 1), 256);
+            var13.drawAdditive(var5 - (var13.field_y >> 1), var6 - (var13.field_w >> 1), 256);
           }
         } else {
           var12 = ja.field_n[0];
@@ -164,9 +164,9 @@ final class gm extends hf {
             mj.field_v = new RgbSprite(var9, var10);
             MouseInput.a(mj.field_v, (byte) 125);
           }
-          var12.b(112, 144, var12.field_z << 4, var12.field_C << 4, -this.field_N << 10, 4096);
+          var12.drawRotatedAboutBilinear(112, 144, var12.field_z << 4, var12.field_C << 4, -this.field_N << 10, 4096);
           cl.d((byte) -80);
-          mj.field_v.a(var5 - var12.field_z, -var12.field_C + var6, 256);
+          mj.field_v.drawAdditive(var5 - var12.field_z, -var12.field_C + var6, 256);
         }
     }
 
@@ -230,8 +230,8 @@ final class gm extends hf {
             !(var6_int * var7 <= param3.field_m.length) ||
             !(param0.field_B.length >= var8 * var9)) {
             var25 = new RgbSprite(var6_int, var7);
-            var25.c();
-            param0.a(0, 0);
+            var25.bindAsRenderTarget();
+            param0.drawOpaque(0, 0);
             ArchiveRequest.field_C.setAsRasterTarget(114);
             param0 = var25;
           }

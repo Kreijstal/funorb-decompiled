@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends wf implements sh {
+final class bh extends wf implements WidgetActivationListener {
     static char[] field_db;
-    private hc field_eb;
+    private InteractiveWidget field_eb;
     static volatile boolean field_cb;
     static ae field_bb;
     static String field_ab;
     static DisplayNameSelectionPanel field_Z;
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -50,12 +50,12 @@ final class bh extends wf implements sh {
         field_ab = null;
     }
 
-    private final hc a(String param0, byte param1, rm param2) {
-        hc var4 = null;
+    private final InteractiveWidget a(String param0, byte param1, rm param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hc stackIn_2_0 = null;
-        hc stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -63,12 +63,12 @@ final class bh extends wf implements sh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hc(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           var4.field_A = (ad) ((Object) new wi());
           var5 = -6 + this.field_q;
           this.field_q = this.field_q + 38;
           if (param1 != 62) {
-            stackIn_2_0 = (hc) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var4.a(30, -113, 15, -16 + (this.field_v - 14), var5);

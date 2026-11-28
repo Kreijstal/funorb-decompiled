@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends Sprite {
-    final void d(int param0, int param1, int param2, int param3) {
+    final void adjustArgbChannelsInPlace(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6;
         int var7;
@@ -108,7 +108,7 @@ final class ArgbSprite extends Sprite {
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.f(param0, param1);
+          this.draw(param0, param1);
           return;
         }
         param0 = param0 + this.field_B;
@@ -204,7 +204,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -250,7 +250,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledWithIntensity(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1133,7 +1133,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawTintedGray(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1179,7 +1179,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawGrayModulated(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1225,7 +1225,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1481,7 +1481,7 @@ final class ArgbSprite extends Sprite {
         return var1;
     }
 
-    final void f(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

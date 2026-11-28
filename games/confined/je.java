@@ -101,8 +101,8 @@ final class je extends vf {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param3 instanceof rg) {
-            param2 = param2 & ((rg) (param3)).field_L;
+          if (param3 instanceof InteractiveWidget) {
+            param2 = param2 & ((InteractiveWidget) (param3)).field_L;
           }
           if (param2) {
             if (var6_int != 0) {

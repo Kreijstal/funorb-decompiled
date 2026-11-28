@@ -465,7 +465,7 @@ final class BufferedSocket implements Runnable {
         int var7 = 0;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (ll.field_Q != lj.field_z) {
+          if (ll.field_Q != InteractiveWidget.field_z) {
             return false;
           }
           var2_long = lk.correctedCurrentTimeMillis(0);
@@ -512,8 +512,8 @@ final class BufferedSocket implements Runnable {
               return true;
             }
             var4 = aa.field_a;
-            if (lj.field_x != 0.0) {
-              var4 = (int)((double)var4 + d.field_c.nextGaussian() * lj.field_x);
+            if (InteractiveWidget.field_x != 0.0) {
+              var4 = (int)((double)var4 + d.field_c.nextGaussian() * InteractiveWidget.field_x);
               if (0 > var4) {
                 var4 = 0;
               }

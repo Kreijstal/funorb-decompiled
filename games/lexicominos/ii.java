@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends ql implements jk {
-    private kf field_R;
+final class ii extends ql implements WidgetActivationListener {
+    private InteractiveWidget field_R;
 
     ii(eg param0, oc param1) {
         super(param0, 200, 150);
@@ -106,8 +106,8 @@ final class ii extends ql implements jk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
-        kf discarded$1 = null;
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
+        InteractiveWidget discarded$1 = null;
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -138,11 +138,11 @@ final class ii extends ql implements jk {
         }
     }
 
-    private final kf a(vd param0, boolean param1, String param2) {
-        kf var4 = null;
+    private final InteractiveWidget a(vd param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kf stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -150,7 +150,7 @@ final class ii extends ql implements jk {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kf(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           var4.field_i = (rd) ((Object) new v());
           var5 = this.field_v - 6;
           this.field_v = this.field_v + 38;

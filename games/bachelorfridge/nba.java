@@ -15,14 +15,14 @@ final class nba extends ao {
         int var8 = SoftwareRasterizer.field_c;
         Sprite var9 = new Sprite(16, param4);
         if (param2 == 1) {
-          var9.b();
+          var9.bindAsRenderTarget();
           SoftwareRasterizer.fillVerticalGradient(0, 0, 16, param4, param1, param5);
           var10 = null;
           var11 = null;
           if (param3) {
             var13 = var9.copy();
             var10 = var13;
-            var13.b();
+            var13.bindAsRenderTarget();
             SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -32,7 +32,7 @@ final class nba extends ao {
           if (param0) {
             var14 = var9.copy();
             var11 = var14;
-            var14.b();
+            var14.bindAsRenderTarget();
             SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
             SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
             SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

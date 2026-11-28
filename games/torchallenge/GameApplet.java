@@ -547,7 +547,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8_int = 111 / ((-79 - param2) / 46);
               GameKeyHandler.field_c = this;
               bc.field_d = 0;
-              li.field_O = gi.b(12476);
+              NameSuggestionsPanel.field_O = gi.b(12476);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param1, param6, true);
               ArchiveRequest.field_u = dupTemp$0;
               u.field_a = dupTemp$0;
@@ -1027,13 +1027,13 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   stackIn_49_0 = var6;
                 }
                 if (stackIn_49_0 > 0) {
-                  stackIn_52_0 = ng.field_E;
+                  stackIn_52_0 = InteractiveWidget.field_E;
                   return stackIn_52_0;
                 }
                 stackIn_54_0 = null;
                 return (String) (stackIn_54_0);
               }
-              stackIn_29_0 = ng.field_E;
+              stackIn_29_0 = InteractiveWidget.field_E;
               return stackIn_29_0;
             }
             stackIn_21_0 = le.field_b;

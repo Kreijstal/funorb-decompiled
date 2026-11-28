@@ -148,18 +148,18 @@ final class an extends hh {
         pi var7 = null;
         pi var9 = null;
         RgbSprite[] var10 = null;
-        ck var11 = null;
+        InteractiveWidget var11 = null;
         pi var12 = null;
         pi var13 = null;
         pi var14 = null;
         pi var15 = null;
         try {
-          if (param1 instanceof ck) {
+          if (param1 instanceof InteractiveWidget) {
             stackIn_3_0 = (lm) (param1);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (ck) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           d.a(param1.field_q + param2, param1.field_s + (param1.field_v + param3), param1.field_x + param2 + param1.field_q, param1.field_v + param3, false);
           if (var11 != null) {
             param4 = param4 & var11.field_B;

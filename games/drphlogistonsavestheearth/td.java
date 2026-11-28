@@ -46,7 +46,7 @@ final class td {
           }
         } else {
           if (this.field_n != 0) {
-            var2 = 255 * (hf.field_H[this.field_n] - vh.field_e[this.field_n] * this.field_k / 2) / hf.field_H[this.field_n];
+            var2 = 255 * (InteractiveWidget.field_H[this.field_n] - vh.field_e[this.field_n] * this.field_k / 2) / InteractiveWidget.field_H[this.field_n];
             if (255 < var2) {
               var2 = 255;
             } else {

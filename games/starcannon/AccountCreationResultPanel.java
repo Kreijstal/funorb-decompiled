@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ph implements ga {
+final class AccountCreationResultPanel extends ph implements WidgetActivationListener {
     private AccountRegistrationPanel field_pb;
     static BufferedSocket field_sb;
     static String field_qb;
@@ -57,7 +57,7 @@ final class AccountCreationResultPanel extends ph implements ga {
         field_tb = null;
     }
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -111,7 +111,7 @@ final class AccountCreationResultPanel extends ph implements ga {
             if (null != param1.suggestions) {
               var4 = ConfirmedEmailAvailabilityValidator.field_s;
               if (this.field_pb != null) {
-                this.field_pb.a(-12920);
+                this.field_pb.onNameSuggestionsRefreshRequested(-12920);
               }
             } else {
               var4 = param1.message;
@@ -137,7 +137,7 @@ final class AccountCreationResultPanel extends ph implements ga {
                 var5.a(hd.field_i, 13759, 11);
                 var5.a(KeyboardInput.field_b, 13759, 17);
               } else {
-                var5.a(dk.field_t, 13759, -1);
+                var5.a(InteractiveWidget.field_t, 13759, -1);
               }
             } else {
               var5.a((byte) 110, (qg) (this), SpriteState.field_s);
@@ -146,7 +146,7 @@ final class AccountCreationResultPanel extends ph implements ga {
               var5.a(kf.field_u, param2 ^ 7507, 7);
             } else {
               if (6 == param1.statusCode) {
-                var5.a(dk.field_w, 13759, 9);
+                var5.a(InteractiveWidget.field_w, 13759, 9);
               }
             }
           }

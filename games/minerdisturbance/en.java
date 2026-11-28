@@ -30,7 +30,7 @@ final class en {
         RuntimeException decompiledCaughtException = null;
         try {
           if (kb.field_b != null) {
-            kb.field_b.field_U.a((byte) -123, args);
+            kb.field_b.field_U.setNameSuggestions((byte) -123, args);
           }
           if (param1 != 18423) {
             var3 = (String[]) null;
@@ -39,7 +39,7 @@ final class en {
           if (bh.field_Z == null) {
             return;
           }
-          bh.field_Z.field_K.a((byte) 118, args);
+          bh.field_Z.field_K.setNameSuggestions((byte) 118, args);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

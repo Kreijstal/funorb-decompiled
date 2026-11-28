@@ -24,7 +24,7 @@ final class fc {
         var8 = fleas.field_A ? 1 : 0;
         var1 = new RgbSprite[ef.field_l];
         for (var2 = 0; ef.field_l > var2; var2++) {
-          var3 = ij.field_H[var2] * ob.field_a[var2];
+          var3 = NameSuggestionsPanel.field_H[var2] * ob.field_a[var2];
           var20 = of.field_d[var2];
           if (!DebouncedFieldValidator.field_i[var2]) {
             var9 = new int[var3];
@@ -32,7 +32,7 @@ final class fc {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = rd.field_d[sc.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var21);
+            var1[var2] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
           } else {
             var22 = NetworkGameClient.field_t[var2];
             var16 = new int[var3];
@@ -41,7 +41,7 @@ final class fc {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ne.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
           }
         }
         if (param0 >= -127) {
@@ -186,7 +186,7 @@ final class fc {
           }
           var2 = var1_int * se.field_a.length / ia.field_m[fleas.field_E].length;
           var8 = nl.field_c[fleas.field_E][var1_int];
-          var8.d(0, 0);
+          var8.draw(0, 0);
           DualLinkNode.a(111);
           for (var3 = 39; var3 >= 0; var3--) {
             for (var4 = 20; 0 <= var4; var4--) {
@@ -200,7 +200,7 @@ final class fc {
                 de.a((byte) 88, var3, var2, var4);
               }
               if (var7 != 0) {
-                aj.field_t[var7].d(16 * var3 - 4, 16 * var4 - 4);
+                aj.field_t[var7].draw(16 * var3 - 4, 16 * var4 - 4);
               }
             }
           }
@@ -208,16 +208,16 @@ final class fc {
             if (1 != jd.field_o[var9] &&
               cl.field_d[var9] == 0) {
               if (db.field_H == 0) {
-                el.field_s[va.field_t[var9]].d(-2 + qg.field_a[var9], -2 + dh.field_b[var9]);
+                el.field_s[va.field_t[var9]].draw(-2 + qg.field_a[var9], -2 + dh.field_b[var9]);
               } else {
-                el.field_s[va.field_t[var9]].b(qg.field_a[var9] - 2, dh.field_b[var9] - 2);
+                el.field_s[va.field_t[var9]].drawFlippedVertical(qg.field_a[var9] - 2, dh.field_b[var9] - 2);
               }
             }
           }
           for (var9Lifetime1 = 0; pl.field_g > var9Lifetime1; var9Lifetime1++) {
             var5 = f.field_F[var9Lifetime1];
             var6 = ek.field_b[var9Lifetime1];
-            aj.field_t[15].d(16 * var5 - 4, -4 + (-2 + var6) * 16 + hl.field_C[var9Lifetime1]);
+            aj.field_t[15].draw(16 * var5 - 4, -4 + (-2 + var6) * 16 + hl.field_C[var9Lifetime1]);
           }
           for (var3Lifetime1 = 39; 0 <= var3Lifetime1; var3Lifetime1--) {
             for (var4Lifetime1 = 20; 0 <= var4Lifetime1; var4Lifetime1--) {
@@ -225,7 +225,7 @@ final class fc {
               if (2 != var7Lifetime1 &&
                 var7Lifetime1 != 7) {
                 if (var7Lifetime1 != 0) {
-                  aj.field_t[var7Lifetime1 + 36].d(16 * var3Lifetime1 - 4, -4 + 16 * var4Lifetime1);
+                  aj.field_t[var7Lifetime1 + 36].draw(16 * var3Lifetime1 - 4, -4 + 16 * var4Lifetime1);
                 }
               } else {
                 de.a((byte) 88, var3Lifetime1, var2, var4Lifetime1);
@@ -237,7 +237,7 @@ final class fc {
               var7Lifetime2 = fl.field_c[var3Lifetime2][var4Lifetime2];
               if (var7Lifetime2 == 17 ||
                 var7Lifetime2 == 31) {
-                aj.field_t[var7Lifetime2 + 36].d(16 * var3Lifetime2 - 4, 16 * var4Lifetime2 - 4);
+                aj.field_t[var7Lifetime2 + 36].draw(16 * var3Lifetime2 - 4, 16 * var4Lifetime2 - 4);
                 if (fl.field_f) {
                   var9Lifetime2 = 64 - PacketBuffer.field_j % 64;
                   SoftwareRasterizer.fillCircleAlpha(-2 + (var3Lifetime2 * 16 + 8), 16 * var4Lifetime2 + 6, var9Lifetime2 / 4, 16777215, 256 - 4 * var9Lifetime2);
@@ -252,8 +252,8 @@ final class fc {
           }
           for (var9Lifetime3 = 0; var9Lifetime3 < nb.field_b; var9Lifetime3++) {
             if (1 == jd.field_o[var9Lifetime3]) {
-              aj.field_t[5].d(qg.field_a[var9Lifetime3] - 10, dh.field_b[var9Lifetime3] - 18);
-              el.field_s[va.field_t[var9Lifetime3]].d(qg.field_a[var9Lifetime3] - 2, dh.field_b[var9Lifetime3] - 2);
+              aj.field_t[5].draw(qg.field_a[var9Lifetime3] - 10, dh.field_b[var9Lifetime3] - 18);
+              el.field_s[va.field_t[var9Lifetime3]].draw(qg.field_a[var9Lifetime3] - 2, dh.field_b[var9Lifetime3] - 2);
             }
           }
           if (ab.field_b == -1) {
@@ -267,11 +267,11 @@ final class fc {
               var11 = var9Lifetime4 * 16 - 4;
               var12_int = var10_int * 16 - 4;
               var13_int = mh.field_u + 1;
-              aj.field_t[var13_int].a(var11, var12_int, 64);
+              aj.field_t[var13_int].drawAdditive(var11, var12_int, 64);
               if (var13_int == 2) {
                 SoftwareRasterizer.saveClip(si.field_R);
                 SoftwareRasterizer.setClip(4 + var11, var12_int + 4, 4 + var11 + 16, var12_int + 20);
-                se.field_a[var2].a(0, 0, 64);
+                se.field_a[var2].drawAdditive(0, 0, 64);
                 SoftwareRasterizer.restoreClip(si.field_R);
               }
             }
@@ -285,12 +285,12 @@ final class fc {
               var12_intLifetime1 = var12_intLifetime1 - var11Lifetime1 / 2;
               var13_intLifetime1 = 16 * fb.field_e[var9Lifetime5];
               var13_intLifetime1 = var13_intLifetime1 - var11Lifetime1 / 2;
-              AccountRegistrationPanel.field_P.c(var12_intLifetime1, var13_intLifetime1, var11Lifetime1, var11Lifetime1, var10_intLifetime1);
+              AccountRegistrationPanel.field_P.drawScaledAlpha(var12_intLifetime1, var13_intLifetime1, var11Lifetime1, var11Lifetime1, var10_intLifetime1);
             }
           }
           var9Lifetime6 = aj.field_t[2].field_t + 365;
-          nc.field_d.f(0, 0);
-          nc.field_d.g(320, 0);
+          nc.field_d.drawOpaque(0, 0);
+          nc.field_d.drawFlippedHorizontal(320, 0);
           stackIn_85_0 = dk.field_C.field_a;
           if (mh.field_u == 1) {
             stackIn_86_1 = gj.field_E;
@@ -298,7 +298,7 @@ final class fc {
             stackIn_86_1 = a.field_b;
           }
           og.a(stackIn_85_0, stackIn_86_1, 93, dk.field_C.field_l, dk.field_C.field_d, dk.field_C.field_n);
-          aj.field_t[2].d(132, 367);
+          aj.field_t[2].draw(132, 367);
           oj.a(371, 0, 136, var2);
           stackIn_88_0 = MatchingFieldValidator.field_p;
           stackIn_88_1 = ha.field_p.toLowerCase();
@@ -319,7 +319,7 @@ final class fc {
             stackIn_95_1 = gj.field_E;
           }
           og.a(stackIn_94_0, stackIn_95_1, 112, wd.field_a.field_l, wd.field_a.field_d, wd.field_a.field_n);
-          aj.field_t[3].d(352, 367);
+          aj.field_t[3].draw(352, 367);
           stackIn_97_0 = MatchingFieldValidator.field_p;
           stackIn_97_1 = j.field_h.toLowerCase();
           stackIn_97_2 = 7 + (wd.field_a.field_l + 5);
@@ -339,7 +339,7 @@ final class fc {
             stackIn_104_1 = a.field_b;
           }
           og.a(stackIn_103_0, stackIn_104_1, 86, de.field_b.field_l, de.field_b.field_d, de.field_b.field_n);
-          aj.field_t[4].d(582, 367);
+          aj.field_t[4].draw(582, 367);
           stackIn_106_0 = MatchingFieldValidator.field_p;
           stackIn_106_1 = tb.field_e.toLowerCase();
           stackIn_106_2 = 5 + (7 + de.field_b.field_l);
@@ -481,9 +481,9 @@ final class fc {
             var6Lifetime1 = var6Lifetime1 - nc.field_d.field_t / 2;
             var25Lifetime1 = var23Lifetime2 * var24.field_x / 50;
             var26Lifetime1 = var23Lifetime2 * var24.field_r / 50;
-            var24.d(var5Lifetime1 - var25Lifetime1 / 2, var6Lifetime1 - var26Lifetime1 / 2, var25Lifetime1, var26Lifetime1, 128);
-            EmailFormatValidator.field_n[var22Lifetime4].d(-(var25Lifetime1 / 2) + var5Lifetime1, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 16);
-            EmailFormatValidator.field_n[var22Lifetime4].c(var5Lifetime1 - var25Lifetime1 / 2, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 128);
+            var24.drawScaledAdditive(var5Lifetime1 - var25Lifetime1 / 2, var6Lifetime1 - var26Lifetime1 / 2, var25Lifetime1, var26Lifetime1, 128);
+            EmailFormatValidator.field_n[var22Lifetime4].drawScaledAdditive(-(var25Lifetime1 / 2) + var5Lifetime1, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 16);
+            EmailFormatValidator.field_n[var22Lifetime4].drawScaledAlpha(var5Lifetime1 - var25Lifetime1 / 2, -(var26Lifetime1 / 2) + var6Lifetime1, var25Lifetime1, var26Lifetime1, 128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

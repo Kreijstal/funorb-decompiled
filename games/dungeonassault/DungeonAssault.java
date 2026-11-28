@@ -273,11 +273,11 @@ public final class DungeonAssault extends NetworkGameClient {
                 di.field_e = true;
               }
             } else {
-              if (AwtRasterBuffer.field_h != gi.field_R ||
+              if (AwtRasterBuffer.field_h != NameSuggestionsPanel.field_R ||
                 di.field_e) {
                 i.field_A.requestCursorVisibility((java.awt.Component) ((Object) AwtRasterBuffer.field_h), (byte) 116, false);
                 di.field_e = false;
-                gi.field_R = AwtRasterBuffer.field_h;
+                NameSuggestionsPanel.field_R = AwtRasterBuffer.field_h;
               }
             }
           }
@@ -757,7 +757,7 @@ public final class DungeonAssault extends NetworkGameClient {
           s.clearStaticReferences(-55);
           pa.clearStaticReferences(2601);
           ka.resetStaticState((byte) -67);
-          PcmOutputWorker.a(param0);
+          PcmOutputWorker.clearStaticReferences(param0);
           il.clearStaticReferences((byte) 111);
           bb.clearStaticReferences((byte) 127);
           DiskCacheWorker.clearStaticReferences(-86);
@@ -797,7 +797,7 @@ public final class DungeonAssault extends NetworkGameClient {
           im.clearStaticReferences(-1);
           l.a((byte) -24);
           lm.clearStaticReferences((byte) -123);
-          ck.b(!param0);
+          InteractiveWidget.b(!param0);
           da.clearDeclaredStaticReferences(6);
           sj.releaseDeclaredStaticReferences((byte) -10);
           rf.clearStaticReferences(param0);
@@ -839,7 +839,7 @@ public final class DungeonAssault extends NetworkGameClient {
           EditableTextField.resetStaticState(4);
           hf.clearDeclaredStaticReferences(0);
           uc.clearStaticReferences(false);
-          gi.releaseDeclaredStaticReferences((byte) -32);
+          NameSuggestionsPanel.releaseDeclaredStaticReferences((byte) -32);
           bh.clearDeclaredStaticReferences((byte) -106);
           ng.f((byte) 124);
           tn.h((byte) -89);
@@ -1017,7 +1017,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ag.a(50, 55);
           nf.d(param0 + 0);
           i.field_A.requestCursorVisibility((java.awt.Component) ((Object) AwtRasterBuffer.field_h), (byte) 25, false);
-          gi.field_R = AwtRasterBuffer.field_h;
+          NameSuggestionsPanel.field_R = AwtRasterBuffer.field_h;
           DualLinkNode.a(-26);
           stackIn_46_0Lifetime1 = ResourceArchive.field_k;
           stackIn_46_1Lifetime1 = 2;
@@ -1138,7 +1138,7 @@ public final class DungeonAssault extends NetworkGameClient {
             if (40 <= ke.field_e) {
               if (80 > ke.field_e) {
                 var5_int = (ke.field_e - 40 << 8) / 40;
-                ri.field_g.d(8, 0, 32, 32, var5_int);
+                ri.field_g.drawScaledAlpha(8, 0, 32, 32, var5_int);
               } else {
                 if (230 <= ke.field_e) {
                   if (ke.field_e >= 270) {
@@ -1146,7 +1146,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   } else {
                     var5_int = (-ke.field_e + 270 << 8) / 40;
                     var4_intLifetime1 = 1;
-                    ri.field_g.d(8, 0, 32, 32, var5_int);
+                    ri.field_g.drawScaledAlpha(8, 0, 32, 32, var5_int);
                   }
                 } else {
                   PacketBuffer.field_j[var3_ref.field_j].a(8, 0, 32, 32);
@@ -1191,8 +1191,8 @@ public final class DungeonAssault extends NetworkGameClient {
           var5 = jg.field_c[kj.field_n / 5];
           if (hj.field_S != -1) {
             var6 = (int)((3.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 64.0);
-            var5.b(hj.field_S, eh.field_h, var6);
-            var4.h(hj.field_S, eh.field_h);
+            var5.drawAdditive(hj.field_S, eh.field_h, var6);
+            var4.draw(hj.field_S, eh.field_h);
           }
           ob.a(0, param0 - 161, var11, 0);
           return;

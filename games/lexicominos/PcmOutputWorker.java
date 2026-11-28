@@ -76,7 +76,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static long a(byte param0, CharSequence param1) {
+    final static long encodeNameBase37(byte param0, CharSequence param1) {
         int var5 = 0;
         long stackIn_26_0 = 0L;
         RuntimeException stackIn_29_0 = null;

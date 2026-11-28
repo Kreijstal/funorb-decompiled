@@ -324,18 +324,18 @@ final class mq extends va {
         RuntimeException var6 = null;
         e var7 = null;
         e var9 = null;
-        d var10 = null;
+        InteractiveWidget var10 = null;
         e var11 = null;
         e var12 = null;
         e var13 = null;
         e var14 = null;
         try {
-          if (param3 instanceof d) {
+          if (param3 instanceof InteractiveWidget) {
             stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (d) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           jb.a(param3.y + param4, param3.x + param1 + param3.width, param3.x + param1, -30486, param3.height + (param3.y + param4));
           if (var10 != null) {
             param0 = param0 & var10.field_F;

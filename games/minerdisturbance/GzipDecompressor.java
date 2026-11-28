@@ -39,7 +39,7 @@ final class GzipDecompressor {
         }
         tk.b(true);
         if (mn.field_x >= 150) {
-          bl.field_x.f(15 + var3, 10 + var4, var5);
+          bl.field_x.drawWithOpacity(15 + var3, 10 + var4, var5);
         } else {
           nn.field_c.drawHalfSize(var3, var4);
         }
@@ -67,7 +67,7 @@ final class GzipDecompressor {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          eg.field_b.f(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+          eg.field_b.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

@@ -129,14 +129,14 @@ final class qf extends en {
           return null;
         }
         jh.c();
-        String[] var12 = jn.a(ck.field_H.a(this.field_d, (byte) -48), new int[]{200}, -63, db.field_v);
+        String[] var12 = jn.a(InteractiveWidget.field_H.a(this.field_d, (byte) -48), new int[]{200}, -63, db.field_v);
         String[] var2 = var12;
         int var3 = var12.length;
         int var4 = db.field_v.field_E + db.field_v.field_H * var3;
         int var5 = db.field_v.field_H;
         RgbSprite var6 = new RgbSprite(200, var4);
         int var7 = -48 / ((param0 + 58) / 35);
-        var6.e();
+        var6.bindAsRenderTarget();
         String[] var8 = var12;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
@@ -162,7 +162,7 @@ final class qf extends en {
         String var10 = null;
         int var11 = DungeonAssault.field_K;
         jh.c();
-        String[] var12 = jn.a(ck.field_H.a(this.field_g, (byte) -48), new int[]{param1}, -83, la.field_b);
+        String[] var12 = jn.a(InteractiveWidget.field_H.a(this.field_g, (byte) -48), new int[]{param1}, -83, la.field_b);
         String[] var3 = var12;
         int var4 = var12.length;
         int var5 = var4 * la.field_b.field_H + la.field_b.field_E;
@@ -174,9 +174,9 @@ final class qf extends en {
         if (param0 <= 22) {
           return (RgbSprite) null;
         }
-        var7.e();
+        var7.bindAsRenderTarget();
         if (null != this.field_e) {
-          db.field_v.drawCentred(ck.field_H.a(this.field_e, (byte) -48), param1 >> 1, var6, 16777215, -1);
+          db.field_v.drawCentred(InteractiveWidget.field_H.a(this.field_e, (byte) -48), param1 >> 1, var6, 16777215, -1);
           var6 = var6 + la.field_b.field_H * 2;
         }
         String[] var8 = var12;

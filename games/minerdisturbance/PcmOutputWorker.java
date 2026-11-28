@@ -255,7 +255,7 @@ final class PcmOutputWorker implements Runnable {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int cosineFixed16At8192Angle(int param0, int param1) {
         int var2 = -13 % ((param1 - 7) / 38);
         param0 = param0 & 8191;
         if (param0 < 4096) {

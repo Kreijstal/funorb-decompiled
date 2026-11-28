@@ -58,14 +58,14 @@ abstract class pe {
           var5_int = param0[0].field_z;
           var6 = param0[2].field_z;
           var7 = param0[1].field_z;
-          param0[0].d(param2, param4);
-          param0[2].d(param3 + (param2 - var6), param4);
+          param0[0].draw(param2, param4);
+          param0[2].draw(param3 + (param2 - var6), param4);
           SoftwareRasterizer.saveClip(rb.field_e);
           SoftwareRasterizer.intersectClip(var5_int + param2, param4, -var6 + param2 + param3, param4 + param0[1].field_C);
           var8 = var5_int + param2;
           var9 = param2 + (param3 - var6);
           for (param2 = var8; var9 > param2; param2 = param2 + var7) {
-            param0[1].d(param2, param4);
+            param0[1].draw(param2, param4);
           }
           SoftwareRasterizer.restoreClip(rb.field_e);
         } catch (RuntimeException runtimeException) {

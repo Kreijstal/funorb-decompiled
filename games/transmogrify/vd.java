@@ -575,14 +575,14 @@ final class vd {
           var13 = new Sprite(7, 4);
           var13.field_w = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ki(var4, true);
-          var14.a(var13.a(), 1);
-          var13.f();
+          var14.a(var13.copy(), 1);
+          var13.rotateClockwise();
           var14Lifetime1 = new ki(var4, true);
-          var14Lifetime1.a(var13.a(), 1);
-          var13.f();
+          var14Lifetime1.a(var13.copy(), 1);
+          var13.rotateClockwise();
           var14Lifetime2 = new ki(var4, true);
-          var14Lifetime2.a(var13.a(), 1);
-          var13.f();
+          var14Lifetime2.a(var13.copy(), 1);
+          var13.rotateClockwise();
           var19 = new ki(var4, true);
           var19.a(var13, 1);
         } catch (RuntimeException runtimeException) {

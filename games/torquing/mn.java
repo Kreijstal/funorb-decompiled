@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mn extends aa implements ng {
+class mn extends aa implements WidgetActivationListener {
     private boolean field_eb;
     private BitmapFont field_cb;
     private boolean field_Y;
@@ -319,7 +319,7 @@ class mn extends aa implements ng {
         }
     }
 
-    public void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;

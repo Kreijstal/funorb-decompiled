@@ -155,7 +155,7 @@ final class pm {
             if (param0.field_a == 2) {
               var7 = var7 + (param2.field_f - this.field_h.field_o);
             }
-            this.field_h.a(var6_int, var7);
+            this.field_h.draw(var6_int, var7);
           }
           var7Lifetime1 = -86 / ((param4 + 74) / 49);
           var6 = param0.d(param2, -1);

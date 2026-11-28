@@ -109,7 +109,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             stackIn_15_1 = null;
             stackIn_15_2 = null;
             stackIn_15_3 = ResourceArchive.field_j.getCodeBase();
-            stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(nd.field_E).append("&u=");
+            stackIn_15_4 = new StringBuilder().append("clienterror.ws?c=").append(NameSuggestionsPanel.field_E).append("&u=");
             if (ke.field_m != null) {
               stackIn_16_1 = null;
               stackIn_16_2 = null;

@@ -140,8 +140,8 @@ final class nk {
                     break regionExit2;
                   case 5:
                     if (param0 == 0) {
-                      stackIn_89_0 = !(wd.field_x);
-                      wd.field_x = stackIn_89_0;
+                      stackIn_89_0 = !(InteractiveWidget.field_x);
+                      InteractiveWidget.field_x = stackIn_89_0;
                       break regionExit2;
                     }
                     DiskArchiveRequest.field_w = DiskArchiveRequest.field_w + param0;
@@ -537,7 +537,7 @@ final class nk {
           var9 = 6;
           var10 = 120 + (320 - kc.field_c.field_t / 2);
           this.field_l = this.field_l + 8;
-          kc.field_c.a(var10, var9 + this.field_l);
+          kc.field_c.draw(var10, var9 + this.field_l);
           this.field_l = this.field_l + this.a(60 + (var4 - ResourceArchive.field_e.stringWidth(Bounce.field_A[4]) / 2), 16741888, 480, 1, Bounce.field_A[4], this.field_l, 0, var5, param1 - 16721822, 20) * 20;
           if (Slime.field_a == 3) {
             this.field_l = this.field_l - 6;
@@ -545,9 +545,9 @@ final class nk {
           this.field_l = this.field_l + 24;
           var11 = ae.field_f % 24;
           if (var11 <= 12) {
-            a.field_f.a(var10, var9 + (this.field_l + re.field_a.field_q - a.field_f.field_q));
+            a.field_f.draw(var10, var9 + (this.field_l + re.field_a.field_q - a.field_f.field_q));
           } else {
-            re.field_a.a(var10, var9 + this.field_l);
+            re.field_a.draw(var10, var9 + this.field_l);
           }
           this.field_l = this.field_l + this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[5]) / 2) + var4 + 60, 16741888, 480, 1, Bounce.field_A[5], this.field_l, 0, var5, 20066, 20) * 20;
           this.field_l = this.field_l + 8;
@@ -556,7 +556,7 @@ final class nk {
             this.field_l = this.field_l - 6;
           }
           this.field_l = this.field_l + 22;
-          DisplayNameSelectionPanel.field_F.d(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
+          DisplayNameSelectionPanel.field_F.drawWithOpacity(var10, var9 + this.field_l, (int)(128.0 + 128.0 * Math.sin((double)(ae.field_f / 4))));
           this.field_l = this.field_l + 20 * this.a(var4 + 60 - ResourceArchive.field_e.stringWidth(Bounce.field_A[7]) / 2, 16741888, 480, 1, Bounce.field_A[7], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[8], 1, 80, this.field_l) * 12;
@@ -564,7 +564,7 @@ final class nk {
             this.field_l = this.field_l - 6;
           }
           this.field_l = this.field_l + 22;
-          fd.field_n[ae.field_f / 8 % 6].a(var10, var9 + this.field_l);
+          fd.field_n[ae.field_f / 8 % 6].draw(var10, var9 + this.field_l);
           this.field_l = this.field_l + 20 * this.a(57 + (var4 - ResourceArchive.field_e.stringWidth(Bounce.field_A[9]) / 2), 16741888, 480, 1, Bounce.field_A[9], this.field_l, 0, var5, param1 - 16721822, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, -1, 0, 12, 16777215, Bounce.field_A[10], 1, 80, this.field_l) * 12;
@@ -572,18 +572,18 @@ final class nk {
             this.field_l = this.field_l + 4;
           }
           this.field_l = this.field_l + 26;
-          MatchingFieldValidator.field_j[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
+          MatchingFieldValidator.field_j[ae.field_f / 8 % 3].draw(var10, this.field_l + var9);
           this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[11]) / 2) + (60 + var4), 16741888, 480, 1, Bounce.field_A[11], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[12], 1, 80, this.field_l) * 12;
           this.field_l = this.field_l + 22;
-          wb.field_e[ae.field_f / 8 % 3].a(var10, this.field_l + var9);
+          wb.field_e[ae.field_f / 8 % 3].draw(var10, this.field_l + var9);
           this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[13]) / 2) + 60 + var4, 16741888, 480, 1, Bounce.field_A[13], this.field_l, 0, var5, 20066, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + 12 * this.a(480, 480, param1 - 16741889, 0, 12, 16777215, Bounce.field_A[14], 1, 80, this.field_l);
           this.field_l = this.field_l + 22;
-          field_h[ae.field_f / 8 % 4].a(var10, var9 + this.field_l);
-          nl.field_d[0].a(var10, this.field_l + var9 - nl.field_d[0].field_q);
+          field_h[ae.field_f / 8 % 4].draw(var10, var9 + this.field_l);
+          nl.field_d[0].draw(var10, this.field_l + var9 - nl.field_d[0].field_q);
           this.field_l = this.field_l + 20 * this.a(-(ResourceArchive.field_e.stringWidth(Bounce.field_A[15]) / 2) + (var4 + 60), 16741888, 480, 1, Bounce.field_A[15], this.field_l, 0, var5, param1 ^ 16726114, 20);
           this.field_l = this.field_l + 8;
           this.field_l = this.field_l + this.a(480, 480, param1 ^ -16741889, 0, 12, 16777215, Bounce.field_A[16], 1, 80, this.field_l) * 12;
@@ -615,7 +615,7 @@ final class nk {
           var7Lifetime1 = this.field_g - 35;
           var8Lifetime1 = 295;
           this.a(var7Lifetime1, 80, var8Lifetime1, 4, 480);
-          AccountRequestState.field_b.a(320 - AccountRequestState.field_b.field_t / 2, this.field_g - 120);
+          AccountRequestState.field_b.draw(320 - AccountRequestState.field_b.field_t / 2, this.field_g - 120);
           SoftwareRasterizer.setClip(84, var7Lifetime1 + 4, 556, -4 + (var7Lifetime1 + var8Lifetime1));
         }
         if (this.field_i == 1) {
@@ -626,10 +626,10 @@ final class nk {
           } else {
             stackIn_69_2 = -160 + this.field_g;
           }
-          ((RgbSprite) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_69_2);
+          ((RgbSprite) (Object) stackIn_68_0).draw(stackIn_68_1, stackIn_69_2);
         }
         if (this.field_i == 13) {
-          mi.field_k.a(-(mi.field_k.field_t / 2) + 320, this.field_g - 470);
+          mi.field_k.draw(-(mi.field_k.field_t / 2) + 320, this.field_g - 470);
         }
         if (this.field_i < 0 &&
           ProxyAuthenticationRequiredException.field_c == this.field_i) {
@@ -809,7 +809,7 @@ final class nk {
               this.a(this.field_g, var5Lifetime1, var6Lifetime1, var7Lifetime2 + od.field_f.stringWidth(var24) / 2 - 35, param1 - 16720247);
             }
           } else {
-            if (!wd.field_x &&
+            if (!InteractiveWidget.field_x &&
               param0 == var5Lifetime1) {
               var5Lifetime1 = 8930338;
             }
@@ -824,7 +824,7 @@ final class nk {
           }
         }
         if (12 == this.field_i) {
-          ej.field_a.a(-(ej.field_a.field_t / 2) + 320, -430 + this.field_g);
+          ej.field_a.draw(-(ej.field_a.field_t / 2) + 320, -430 + this.field_g);
           discarded$1 = new RgbSprite(32, 32);
           fa.field_b = -1;
           var7Lifetime3 = 140;
@@ -885,9 +885,9 @@ final class nk {
                   if (kb.field_a > 0) {
                     break regionExit2;
                   }
-                  cf.field_c.a(-var13Lifetime2 + var7Lifetime3Lifetime1, -var13Lifetime2 + var8Lifetime4, 32 + var13Lifetime2 * 2, var13Lifetime2 * 2 + 32);
+                  cf.field_c.drawDownscaledAreaAveraged(-var13Lifetime2 + var7Lifetime3Lifetime1, -var13Lifetime2 + var8Lifetime4, 32 + var13Lifetime2 * 2, var13Lifetime2 * 2 + 32);
                 } else {
-                  DualLinkNode.field_h[var11].a(var7Lifetime3Lifetime1 - var13Lifetime2, -var13Lifetime2 + var8Lifetime4, 32 + var13Lifetime2 * 2, 2 * var13Lifetime2 + 32);
+                  DualLinkNode.field_h[var11].drawDownscaledAreaAveraged(var7Lifetime3Lifetime1 - var13Lifetime2, -var13Lifetime2 + var8Lifetime4, 32 + var13Lifetime2 * 2, 2 * var13Lifetime2 + 32);
                 }
                 if (var11 == ua.field_a ||
                   !(uc.field_C < var7Lifetime3Lifetime1) &&
@@ -904,9 +904,9 @@ final class nk {
                   }
                   var14Lifetime1 = this.field_g + (-228 + 4 * od.field_f.field_s / 2);
                   if ((var9Lifetime3 & 1 << var11) == 0) {
-                    cf.field_c.a(112, -36 + (1 + var14Lifetime1));
+                    cf.field_c.draw(112, -36 + (1 + var14Lifetime1));
                   } else {
-                    DualLinkNode.field_h[var11].a(112, 1 + (var14Lifetime1 - 36));
+                    DualLinkNode.field_h[var11].draw(112, 1 + (var14Lifetime1 - 36));
                   }
                   var15 = 0;
                   if (Slime.field_a == 3) {
@@ -1042,7 +1042,7 @@ final class nk {
               boolean decompiledFrameRemainder0 = true;
               stackIn_65_0 = 0;
               if (this.field_i == 5) {
-                decompiledFrameRemainder0 = !(wd.field_x);
+                decompiledFrameRemainder0 = !(InteractiveWidget.field_x);
               } else {
                 decompiledFrameRemainder0 = !(rd.field_a);
               }

@@ -115,7 +115,7 @@ final class ik extends IntrusiveNode {
         var16 = SoftwareRasterizer.field_e;
         var8Lifetime1 = SoftwareRasterizer.field_j;
         var9Lifetime1 = SoftwareRasterizer.field_d;
-        this.field_j.e();
+        this.field_j.bindAsRenderTarget();
         stackIn_23_0 = (param0 != 6) ? 16777215 : 1;
         var10Lifetime1 = stackIn_23_0;
         for (var11 = 0; this.field_s.length > var11; var11++) {

@@ -95,7 +95,7 @@ final class sj {
               var6 = hl.a(ne.field_K[var3_int], true, -15388);
               var7 = -(var6 >> 1) + rj.field_e;
               var4 = var4 + SpriteState.field_z;
-              if (hc.a(103, var4, nk.field_u + (sn.field_d << 1), var7 - ka.field_a, param0, (ka.field_a << 1) + var6, param2)) {
+              if (InteractiveWidget.a(103, var4, nk.field_u + (sn.field_d << 1), var7 - ka.field_a, param0, (ka.field_a << 1) + var6, param2)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

@@ -206,7 +206,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (lg.a(param1, 98) != null) ? 0 : 1;
+          stackIn_3_0 = (InteractiveWidget.a(param1, 98) != null) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (var3_int == 0) {
             stackIn_6_0 = so.field_u;

@@ -70,7 +70,7 @@ final class kf {
                 stackIn_127_1 = (param1) && (!BufferedRandomAccessFile.field_g);
                 ((UiPanel) (Object) stackIn_126_0).b(stackIn_127_1, 0);
               } else {
-                jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+                jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
                 stackIn_131_0 = AccountNameAvailabilityValidator.field_o;
                 stackIn_132_1 = (param1) && (!BufferedRandomAccessFile.field_g);
                 ((UiPanel) (Object) stackIn_131_0).b(stackIn_132_1, 0);
@@ -81,7 +81,7 @@ final class kf {
             }
           } else {
             if (jl.field_g != null) {
-              jl.field_g.c(ca.field_h.field_wb, 0);
+              jl.field_g.drawOpaque(ca.field_h.field_wb, 0);
             }
             stackIn_85_0 = ca.field_h;
             stackIn_86_1 = (param1) && (!ce.field_c);
@@ -102,7 +102,7 @@ final class kf {
               stackIn_102_1 = (param1) && (!BufferedRandomAccessFile.field_g);
               ((UiPanel) (Object) stackIn_101_0).b(stackIn_102_1, 0);
             } else {
-              jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+              jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
               stackIn_106_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_107_1 = (param1) && (!BufferedRandomAccessFile.field_g);
               ((UiPanel) (Object) stackIn_106_0).b(stackIn_107_1, 0);
@@ -127,7 +127,7 @@ final class kf {
             if (!(0 >= ko.field_P) ||
               !(0 >= mp.field_b)) {
               if (null != jl.field_g) {
-                jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+                jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
               }
               stackIn_19_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_20_1 = (param1) && (!BufferedRandomAccessFile.field_g);
@@ -139,7 +139,7 @@ final class kf {
             ln.d(-28558);
             return;
           }
-          jl.field_g.c(ca.field_h.field_wb, 0);
+          jl.field_g.drawOpaque(ca.field_h.field_wb, 0);
           stackIn_29_0 = ca.field_h;
           stackIn_30_1 = (param1) && (!ce.field_c);
           ((UiPanel) (Object) stackIn_29_0).b(stackIn_30_1, 0);
@@ -156,7 +156,7 @@ final class kf {
             stackIn_45_1 = (param1) && (!BufferedRandomAccessFile.field_g);
             ((UiPanel) (Object) stackIn_44_0).b(stackIn_45_1, 0);
           } else {
-            jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+            jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
             stackIn_49_0 = AccountNameAvailabilityValidator.field_o;
             stackIn_50_1 = (param1) && (!BufferedRandomAccessFile.field_g);
             ((UiPanel) (Object) stackIn_49_0).b(stackIn_50_1, 0);
@@ -174,7 +174,7 @@ final class kf {
               stackIn_67_1 = (param1) && (!BufferedRandomAccessFile.field_g);
               ((UiPanel) (Object) stackIn_66_0).b(stackIn_67_1, 0);
             } else {
-              jl.field_g.c(AccountNameAvailabilityValidator.field_o.field_wb, 0);
+              jl.field_g.drawOpaque(AccountNameAvailabilityValidator.field_o.field_wb, 0);
               stackIn_71_0 = AccountNameAvailabilityValidator.field_o;
               stackIn_72_1 = (param1) && (!BufferedRandomAccessFile.field_g);
               ((UiPanel) (Object) stackIn_71_0).b(stackIn_72_1, 0);

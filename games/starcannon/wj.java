@@ -28,15 +28,15 @@ final class wj {
             var5_int = param1[0].field_x;
             var6 = param1[2].field_x;
             var7 = param1[1].field_x;
-            param1[0].e(param2, param3);
-            param1[2].e(param2 + param4 - var6, param3);
+            param1[0].draw(param2, param3);
+            param1[2].draw(param2 + param4 - var6, param3);
             SoftwareRasterizer.saveClip(be.field_c);
             SoftwareRasterizer.intersectClip(var5_int + param2, param3, -var6 + param2 + param4, param1[1].field_q + param3);
             var8 = param2 + var5_int;
             var9 = 80 % ((param0 - 53) / 32);
             var10 = param2 + (param4 - var6);
             for (param2 = var8; var10 > param2; param2 = param2 + var7) {
-              param1[1].e(param2, param3);
+              param1[1].draw(param2, param3);
             }
             SoftwareRasterizer.restoreClip(be.field_c);
             return;

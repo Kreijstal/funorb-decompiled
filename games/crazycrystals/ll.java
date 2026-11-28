@@ -24,14 +24,14 @@ final class ll {
             ll.a((ce) null, -78, (ce) null);
           }
           var3_int = -param2.field_db + param0.field_db;
-          if (nh.field_z != param0.field_cb) {
+          if (NameSuggestionsPanel.field_z != param0.field_cb) {
             if (null == param0.field_cb) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (nh.field_z == param2.field_cb) {
+          if (NameSuggestionsPanel.field_z == param2.field_cb) {
             var3_int += 200;
           } else {
             if (null == param2.field_cb) {

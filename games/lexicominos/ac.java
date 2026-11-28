@@ -26,14 +26,14 @@ final class ac {
             var5_int = param2[0].field_r;
             var6 = param2[2].field_r;
             var7 = param2[1].field_r;
-            param2[0].d(param3, param1);
-            param2[2].d(-var6 + param3 + param4, param1);
+            param2[0].draw(param3, param1);
+            param2[2].draw(-var6 + param3 + param4, param1);
             SoftwareRasterizer.saveClip(CrossfadingMidiPcmStream.field_C);
             SoftwareRasterizer.intersectClip(var5_int + param3, param1, param4 + (param3 - var6), param1 + param2[1].field_x);
             var8 = var5_int + param3;
             var9 = param4 + (param3 - var6);
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param2[1].d(param3, param1);
+              param2[1].draw(param3, param1);
             }
             SoftwareRasterizer.restoreClip(CrossfadingMidiPcmStream.field_C);
             return;

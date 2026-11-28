@@ -106,7 +106,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         field_N = null;
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

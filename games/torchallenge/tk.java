@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tk extends ng {
+final class tk extends InteractiveWidget {
     static String field_T;
     private int field_S;
     static boolean field_P;
@@ -287,7 +287,7 @@ final class tk extends ng {
             lh.field_v = new Sprite(var9, var10);
             FullscreenFocusCanvas.a(120, lh.field_v);
           }
-          var12.b(112, 144, var12.fullWidth << 4, var12.fullHeight << 4, -this.field_S << 10, 4096);
+          var12.drawRotatedAbout(112, 144, var12.fullWidth << 4, var12.fullHeight << 4, -this.field_S << 10, 4096);
           ie.b((byte) -9);
           lh.field_v.drawAdditiveWithIntensity(var5 - var12.fullWidth, var6 - var12.fullHeight, 256);
         }

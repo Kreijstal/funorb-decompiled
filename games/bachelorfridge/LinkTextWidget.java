@@ -19,14 +19,14 @@ class LinkTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, boolean param2, int param3) {
+    final void activateFromInput(int param0, int param1, boolean param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
         TextLinkRegion var7 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.activateFromInput(param0, param1, param2, param3);
           var5_int = -this.x + param0;
           if (param2) {
             field_D = (BinaryBitmapFont) null;

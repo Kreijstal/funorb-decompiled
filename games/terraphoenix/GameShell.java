@@ -159,7 +159,7 @@ abstract class GameShell extends GameApplet {
         pe.a(this.field_B, this.field_w, param6, this.field_A, this.field_v, PasswordValidator.field_o, 128, DirectByteStorage.field_l, this.field_x);
         wd.a(false);
         lk.field_d = TutorialController.c(-3109);
-        am.a((byte) 29, DisplayNameSelectionPanel.field_G);
+        NameSuggestionsPanel.a((byte) 29, DisplayNameSelectionPanel.field_G);
         f.field_g = param7;
         fg.field_b = param4;
         wc.field_s = param2;
@@ -467,7 +467,7 @@ abstract class GameShell extends GameApplet {
           hj.clearStaticReferences(-7958);
           TutorialController.field_e = hh.field_k;
           wd.field_b = false;
-          am.a(ch.field_g, DelegatingCanvas.field_c, PasswordValidator.field_q, bi.field_d, (byte) -22);
+          NameSuggestionsPanel.a(ch.field_g, DelegatingCanvas.field_c, PasswordValidator.field_q, bi.field_d, (byte) -22);
           if (ea.field_j ||
             i.field_d != null) {
             stackIn_103_0 = !(ea.field_j);
@@ -527,7 +527,7 @@ abstract class GameShell extends GameApplet {
           ai.field_h) {
           hk.a(DisplayNameSelectionPanel.field_G, (byte) 112);
           this.d(0);
-          am.a((byte) -128, DisplayNameSelectionPanel.field_G);
+          NameSuggestionsPanel.a((byte) -128, DisplayNameSelectionPanel.field_G);
         }
         var3Lifetime3 = -108 / ((-17 - param0) / 32);
         if (tg.field_c[8]) {

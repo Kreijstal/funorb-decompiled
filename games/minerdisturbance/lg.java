@@ -1649,7 +1649,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipHooks");
                 if (var2 != null) {
-                  ei.field_K = bh.a(var2, -126);
+                  NameSuggestionsPanel.field_K = bh.a(var2, -126);
                 }
                 var2 = lh.b(-1, "tooltipShaft");
                 if (null != var2) {

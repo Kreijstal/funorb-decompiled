@@ -132,7 +132,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void e(byte param0) {
+    final void invalidateCheckedName(byte param0) {
         this.checkedName = null;
         if (param0 != -27) {
           this.nameAvailable = false;

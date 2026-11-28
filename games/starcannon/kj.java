@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends vk implements ga {
+final class kj extends vk implements WidgetActivationListener {
     private int field_B;
     static Sprite[] field_y;
     private BitmapFont field_F;
     private String field_D;
     private ph field_C;
-    private dk[] field_A;
+    private InteractiveWidget[] field_A;
     static java.awt.Canvas field_E;
     private int[] field_z;
 
-    final dk a(byte param0, qg param1, String param2) {
-        dk var4 = null;
+    final InteractiveWidget a(byte param0, qg param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        dk stackIn_2_0 = null;
-        dk stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,12 +24,12 @@ final class kj extends vk implements ga {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new dk(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_o = (de) ((Object) new gb());
           var5 = this.field_f - 2;
           this.a(0, this.field_i, (byte) 124, 34 + this.field_f, 0);
           if (param0 < 87) {
-            stackIn_2_0 = (dk) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var4.a(7, this.field_i - 14, (byte) 116, 30, var5);
@@ -79,7 +79,7 @@ final class kj extends vk implements ga {
         }
     }
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -146,9 +146,9 @@ final class kj extends vk implements ga {
         if (this.field_B >= param0) {
           return;
         }
-        dk[] var6 = new dk[param0];
-        dk[] var7 = var6;
-        dk[] var3 = var7;
+        InteractiveWidget[] var6 = new InteractiveWidget[param0];
+        InteractiveWidget[] var7 = var6;
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = param1; var5 < this.field_B; var5++) {
           var6[var5] = this.field_A[var5];

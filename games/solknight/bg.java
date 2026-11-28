@@ -108,7 +108,7 @@ final class bg extends uf {
     }
 
     bg(int param0) {
-        this(ua.field_G, param0);
+        this(NameSuggestionsPanel.field_G, param0);
     }
 
     static {

@@ -151,7 +151,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("error_js5io", -102);
                 if (var2 != null) {
-                  fb.field_F = ad.a(-29410, var2);
+                  InteractiveWidget.field_F = ad.a(-29410, var2);
                 }
                 var2 = cd.a("error_js5connect_full", -100);
                 if (null != var2) {
@@ -623,7 +623,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("xs_game", -94);
                 if (var2 != null) {
-                  fb.field_D = ad.a(-29410, var2);
+                  InteractiveWidget.field_D = ad.a(-29410, var2);
                 }
                 var2 = cd.a("waiting_for_x_to_start_game", -99);
                 if (var2 != null) {
@@ -1057,7 +1057,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("rule_1_0", -83);
                 if (var2 != null) {
-                  fb.field_G = ad.a(-29410, var2);
+                  InteractiveWidget.field_G = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rule_1_1", -98);
                 if (null != var2) {

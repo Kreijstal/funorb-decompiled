@@ -16,11 +16,11 @@ final class ea {
           var4 = var2.field_w;
           MouseInput.a(true);
           ji.field_b = new RgbSprite(var3, 3 * var4 / 4);
-          ji.field_b.c();
-          var2.a(param0, 0);
+          ji.field_b.bindAsRenderTarget();
+          var2.drawOpaque(param0, 0);
           vb.field_s = new RgbSprite(var3, -ji.field_b.field_w + var4);
-          vb.field_s.c();
-          var2.a(0, -ji.field_b.field_w);
+          vb.field_s.bindAsRenderTarget();
+          var2.drawOpaque(0, -ji.field_b.field_w);
           vb.field_s.field_v = ji.field_b.field_w;
           cl.d((byte) -99);
         } catch (RuntimeException runtimeException) {

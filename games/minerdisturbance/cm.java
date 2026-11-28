@@ -45,7 +45,7 @@ final class cm extends IntrusiveNode {
           if (v.field_e) {
             var6 = var6 | 1;
           }
-          if (ei.field_L) {
+          if (NameSuggestionsPanel.field_L) {
             var6 = var6 | 4;
           }
           if (param4) {

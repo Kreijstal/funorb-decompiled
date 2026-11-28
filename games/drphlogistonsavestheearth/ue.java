@@ -98,9 +98,9 @@ final class ue implements cg {
           var7 = param2.field_m + param3;
           MouseInput.a(param2.field_w, var6_int, var7, param2.field_k, 106);
           var8 = ja.field_n[1];
-          if (param2 instanceof hf &&
-            ((hf) (param2)).field_A) {
-            var8.a(1 + var6_int + (-var8.field_z + param2.field_w >> 1), var7 - (-1 - (param2.field_k - var8.field_C >> 1)), 256);
+          if (param2 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param2)).field_A) {
+            var8.drawAdditive(1 + var6_int + (-var8.field_z + param2.field_w >> 1), var7 - (-1 - (param2.field_k - var8.field_C >> 1)), 256);
           }
           if (param2.a(true)) {
             ce.a(-4 + param2.field_k, 2 + var6_int, -16579, param2.field_w - 4, 2 + var7);

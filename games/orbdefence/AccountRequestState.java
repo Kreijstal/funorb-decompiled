@@ -637,7 +637,7 @@ final class AccountRequestState {
           }
           var2Lifetime79 = jk.a(1, "toughoname");
           if (var2Lifetime79 != null) {
-            we.field_A = ProxyAuthenticationRequiredException.a(var2Lifetime79, -12465);
+            NameSuggestionsPanel.field_A = ProxyAuthenticationRequiredException.a(var2Lifetime79, -12465);
           }
           var2Lifetime80 = jk.a(1, "speedoname");
           if (null != var2Lifetime80) {
@@ -677,7 +677,7 @@ final class AccountRequestState {
           }
           var2Lifetime89 = jk.a(1, "scoretitle");
           if (var2Lifetime89 != null) {
-            we.field_F = ProxyAuthenticationRequiredException.a(var2Lifetime89, -12465);
+            NameSuggestionsPanel.field_F = ProxyAuthenticationRequiredException.a(var2Lifetime89, -12465);
           }
           var2Lifetime90 = jk.a(1, "wavetitle");
           if (null != var2Lifetime90) {

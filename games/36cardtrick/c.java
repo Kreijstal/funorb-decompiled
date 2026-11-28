@@ -1665,7 +1665,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_alert_passchars", (byte) -127);
                 if (null != var2) {
-                  hl.field_C = GzipInflater.a(var2, (byte) 79);
+                  InteractiveWidget.field_C = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = SectorCacheStore.a("create_alert_passrepeated", (byte) -127);
                 if (null != var2) {
@@ -4026,7 +4026,7 @@ abstract class c extends GameApplet {
                     decompiledSharedTail0 = (var8 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    var7 = bd.decodeCp1252String(255, 0, var6_ref.payload, var6_ref.position);
+                    var7 = NameSuggestionsPanel.decodeCp1252String(255, 0, var6_ref.payload, var6_ref.position);
                     ok.a(564, var7);
                   }
                   di.field_d = null;

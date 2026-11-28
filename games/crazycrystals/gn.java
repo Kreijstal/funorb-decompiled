@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gn extends en implements vd {
-    private pc field_V;
+final class gn extends en implements WidgetActivationListener {
+    private InteractiveWidget field_V;
     static IntrusiveDeque field_Q;
     static java.math.BigInteger field_S;
     static String field_U;
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         try {
           if (param4 == this.field_V) {
             this.l(15);
@@ -38,11 +38,11 @@ final class gn extends en implements vd {
         field_S = null;
     }
 
-    private final pc a(bi param0, String param1, byte param2) {
-        pc var4 = null;
+    private final InteractiveWidget a(bi param0, String param1, byte param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        pc stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -50,7 +50,7 @@ final class gn extends en implements vd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new pc(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_i = (wo) ((Object) new ve());
           var5 = this.field_f - 6;
           if (param2 <= 115) {
@@ -90,7 +90,7 @@ final class gn extends en implements vd {
           this.field_C = false;
           return;
         }
-        this.field_V = (pc) null;
+        this.field_V = (InteractiveWidget) null;
         this.field_C = false;
     }
 
@@ -111,7 +111,7 @@ final class gn extends en implements vd {
           } else {
             if (ab.field_A == param1) {
               this.field_f = this.field_f + 10;
-              var3 = nh.field_C;
+              var3 = NameSuggestionsPanel.field_C;
               if (jl.a(100)) {
                 var3 = CipherPacketBuffer.field_n;
                 this.field_f = this.field_f + 20;

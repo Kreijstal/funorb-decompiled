@@ -225,7 +225,7 @@ abstract class o {
             if (MouseWheelInput.field_e) {
               ll.field_c.playSample(sb.field_e[28], 100, 2 * pk.field_h);
             }
-            ig.field_D = 255;
+            InteractiveWidget.field_D = 255;
             for (var4 = 0; var4 < 256; var4++) {
               var6 = new vl(0, a.entities[0]);
               var8 = var6;

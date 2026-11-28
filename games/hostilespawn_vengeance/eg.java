@@ -42,7 +42,7 @@ final class eg {
           return;
         }
         if (bm.field_c == 0) {
-          uf.field_i[4].b(0, 0, this.field_y);
+          uf.field_i[4].drawWithOpacity(0, 0, this.field_y);
           this.b(-7068);
           if (0 <= this.field_z) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 256 - this.field_z * 4);

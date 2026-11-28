@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka {
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     static boolean field_G;
     static String field_H;
-    private pj field_J;
-    private pj field_I;
-    ua field_F;
+    private InteractiveWidget field_J;
+    private InteractiveWidget field_I;
+    NameSuggestionsPanel field_F;
     static IntrusiveDeque field_E;
     private ValidatedTextField field_K;
 
@@ -21,13 +21,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         field_H = null;
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         if (param0 == 22) {
-          ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator(87))).a(true);
+          ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator(87))).invalidateCheckedName(true);
           return;
         }
         field_H = (String) null;
-        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator(87))).a(true);
+        ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator(87))).invalidateCheckedName(true);
     }
 
     private final void submitDisplayName(byte param0) {
@@ -80,10 +80,10 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (j) null);
         this.field_K = new ValidatedTextField("", (dg) null, 12);
-        af var1 = new af(jh.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, ua.field_G.field_F, -1, 2147483647, true);
+        af var1 = new af(jh.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(cd.field_a, var1, (dg) null);
-        this.field_J = new pj(MidiPcmStream.field_x, (dg) null);
-        this.field_I = new pj(nf.field_X, (dg) null);
+        this.field_J = new InteractiveWidget(MidiPcmStream.field_x, (dg) null);
+        this.field_I = new InteractiveWidget(nf.field_X, (dg) null);
         this.field_K.field_z = ql.field_u;
         this.field_K.setFieldValidator(new AccountNameAvailabilityValidator(this.field_K), false);
         this.field_J.field_B = false;
@@ -103,13 +103,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         this.field_J.field_n = (dg) (this);
         this.a(this.field_J, 5411);
         this.a(this.field_I, 5411);
-        this.field_F = new ua((ge) (this));
+        this.field_F = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_F.b(150, -this.field_K.field_t + (this.field_t - this.field_K.field_m - 60), 60 + (this.field_K.field_m + this.field_K.field_t), 0, 20);
         this.a(this.field_F, 5411);
         this.b(55 + var3 + var4, 496, 0, 0, 0);
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         if (!param0) {
@@ -137,7 +137,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 15016) {
-            this.field_I = (pj) null;
+            this.field_I = (InteractiveWidget) null;
           }
           stackIn_3_0 = this.a((byte) -121, 35, param5, param4, param3, param0, param2);
           return stackIn_3_0;
@@ -178,7 +178,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 270) {
-            this.field_J = (pj) null;
+            this.field_J = (InteractiveWidget) null;
           }
           var3 = param1.getFieldValidator(96);
           if (var3 == null) {
@@ -234,7 +234,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         return true;
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -281,7 +281,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ge, ka 
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ke(20, param5, 120 + param3, 25, param4, false, 120, 3, ua.field_G, 16777215, param6);
+          var10 = new ke(20, param5, 120 + param3, 25, param4, false, 120, 3, NameSuggestionsPanel.field_G, 16777215, param6);
           this.a(var10, 5411);
           if (param0 != -121) {
             DisplayNameSelectionPanel.b(-99, 56, false, 23);

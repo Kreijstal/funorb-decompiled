@@ -17,7 +17,7 @@ abstract class MenuLayer {
           SoftwareRasterizer.clearRaster();
           jh.field_z = 0;
           so.b(119);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
@@ -25,7 +25,7 @@ abstract class MenuLayer {
           if (!param0) {
             MenuLayer.clearDeclaredStaticReferences(-61);
           }
-          ff.field_c.e();
+          ff.field_c.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           r.a(126);
         } catch (RuntimeException runtimeException) {

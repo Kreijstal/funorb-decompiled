@@ -92,7 +92,7 @@ final class vn extends ue {
         var7 = this.c((byte) -55);
         var8 = 304 - 20 * (-1 + var7 / 2);
         if (this.field_n) {
-          var6 = pc.field_y;
+          var6 = InteractiveWidget.field_y;
           var8 = 324 - 20 * mm.countSetBits(var6, (byte) -37);
         }
         var9 = this.field_q;
@@ -112,7 +112,7 @@ final class vn extends ue {
                 if ((1 << var10 & var6) != 0) {
                   var11 = cn.field_c[var10];
                 }
-                var11.a(var8, var9);
+                var11.draw(var8, var9);
                 break regionExit1;
               }
               var11Lifetime2 = ro.field_q;
@@ -124,10 +124,10 @@ final class vn extends ue {
                 var11Lifetime2 = d.field_c[var10];
               }
               if (this.field_o != var10) {
-                var11Lifetime2.d(var8 - 2, -2 + var9, 36, 36);
+                var11Lifetime2.drawDownscaledAreaAveraged(var8 - 2, -2 + var9, 36, 36);
                 var5 = var10;
               } else {
-                var11Lifetime2.d(var8 - 4, -4 + var9, 40, 40);
+                var11Lifetime2.drawDownscaledAreaAveraged(var8 - 4, -4 + var9, 40, 40);
               }
             }
             var8 += 40;
@@ -160,7 +160,7 @@ final class vn extends ue {
           }
           var8Lifetime1 = 256;
           var9Lifetime1 = this.field_h;
-          var11Lifetime1.a(var8Lifetime1, var9Lifetime1);
+          var11Lifetime1.draw(var8Lifetime1, var9Lifetime1);
           if (var10Lifetime1 == 0) {
             stackIn_74_0 = ((16 & 1 << var5) != 0) ? 1 : 0;
           } else {
@@ -201,7 +201,7 @@ final class vn extends ue {
           go.field_l.drawRightAligned(lc.field_b, 510, this.field_h + 64 + 15, 8438015, -1);
           if (var12 == 0) {
             for (var15 = 0; var15 < eq.field_l[var5]; var15++) {
-              ne.field_i.a(5 * var15 + 510, this.field_h + 64);
+              ne.field_i.draw(5 * var15 + 510, this.field_h + 64);
             }
           } else {
             go.field_l.drawString("?", 510, 15 + this.field_h + 64, 16760896, -1);
@@ -308,7 +308,7 @@ final class vn extends ue {
         }
         var3 = fk.field_s;
         if (this.field_n) {
-          var3 = pc.field_y;
+          var3 = InteractiveWidget.field_y;
         }
         if ((4096 & var3) != 0) {
           this.field_j = var2;
@@ -423,7 +423,7 @@ final class vn extends ue {
                 var3 = this.c((byte) -117);
                 var4 = 304 - var3 / 2 * 20 + 20;
                 if (this.field_n) {
-                  var2 = pc.field_y;
+                  var2 = InteractiveWidget.field_y;
                   var4 = 324 - 20 * mm.countSetBits(var2, (byte) -43);
                 }
                 var5 = this.field_q;

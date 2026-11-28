@@ -139,13 +139,13 @@ final class me implements ComponentLayout {
         int var1 = -93 / ((param0 + 66) / 37);
         RgbSprite[] var2 = new RgbSprite[ef.field_l];
         for (var3 = 0; ef.field_l > var3; var3++) {
-          var4 = ij.field_H[var3] * ob.field_a[var3];
+          var4 = NameSuggestionsPanel.field_H[var3] * ob.field_a[var3];
           var5 = of.field_d[var3];
           var6 = new int[var4];
           for (var7 = 0; var4 > var7; var7++) {
             var6[var7] = rd.field_d[sc.a((int) var5[var7], 255)];
           }
-          var2[var3] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], ij.field_H[var3], ob.field_a[var3], var6);
+          var2[var3] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var3], b.field_b[var3], NameSuggestionsPanel.field_H[var3], ob.field_a[var3], var6);
         }
         EditableTextField.o(-28210);
         return var2;

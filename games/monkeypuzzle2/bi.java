@@ -796,9 +796,9 @@ abstract class bi extends GameApplet {
           if (var4 == 1) {
             var5_int = hb.a(-7468, qj.l(111), NodeHashTableIterator.a((byte) 112));
             if (var5_int != -1) {
-              p.a(ImageProducerRasterBuffer.field_n, (byte) 121, var5_int, cm.field_E);
+              p.a(ImageProducerRasterBuffer.field_n, (byte) 121, var5_int, NameSuggestionsPanel.field_E);
               ImageProducerRasterBuffer.field_n = null;
-              cm.field_E = null;
+              NameSuggestionsPanel.field_E = null;
             }
             var11 = na.a(55);
             if (var11 != null) {
@@ -808,8 +808,8 @@ abstract class bi extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
             if (var5_intLifetime1 != -1) {
-              fj.a(cm.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
-              cm.field_E = null;
+              fj.a(NameSuggestionsPanel.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
+              NameSuggestionsPanel.field_E = null;
               ImageProducerRasterBuffer.field_n = null;
             }
           }

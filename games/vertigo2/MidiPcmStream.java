@@ -215,11 +215,11 @@ final class MidiPcmStream extends PcmStream {
         int[] var6 = SoftwareRasterizer.field_l;
         int var7 = SoftwareRasterizer.field_e;
         int var8 = SoftwareRasterizer.field_j;
-        var5.d();
+        var5.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(param3, 0, param2, param1, 12, 5921370);
         SoftwareRasterizer.fillRoundedRectangle(4, 4, param2 - 8, -8 + param1, 8, 0);
         SoftwareRasterizer.setRasterBuffer(var6, var7, var8);
-        var5.e(param0, param4);
+        var5.draw(param0, param4);
     }
 
     final static void a(boolean param0, int param1, byte param2, si param3, boolean param4, int param5) {

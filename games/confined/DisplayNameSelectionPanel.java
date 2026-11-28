@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ga implements pg, el {
-    ak field_H;
+final class DisplayNameSelectionPanel extends ga implements NameSuggestionListener, WidgetActivationListener {
+    NameSuggestionsPanel field_H;
     static String field_S;
     static od[][] field_R;
     static int[][] field_L;
-    private rg field_Q;
+    private InteractiveWidget field_Q;
     private ValidatedTextField field_O;
-    private rg field_P;
+    private InteractiveWidget field_P;
 
     final void a(fj param0, int param1, int param2, int param3) {
         try {
@@ -19,7 +19,7 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
         }
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSuggestionSelected(int param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -98,7 +98,7 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -136,8 +136,8 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
         this.field_O = new ValidatedTextField("", (uk) null, 12);
         vf var1 = new vf(fa.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
         fj var2 = new fj(Confined.field_G, var1, (uk) null);
-        this.field_Q = new rg(ta.field_a, (uk) null);
-        this.field_P = new rg(AwtRasterBuffer.field_d, (uk) null);
+        this.field_Q = new InteractiveWidget(ta.field_a, (uk) null);
+        this.field_P = new InteractiveWidget(AwtRasterBuffer.field_d, (uk) null);
         this.field_O.field_C = DebouncedFieldValidator.field_b;
         this.field_O.setFieldValidator(-18312, new AccountNameAvailabilityValidator(this.field_O));
         this.field_Q.field_L = false;
@@ -157,14 +157,14 @@ final class DisplayNameSelectionPanel extends ga implements pg, el {
         this.field_Q.field_t = (uk) (this);
         this.b(this.field_Q, 10);
         this.b(this.field_P, 10);
-        this.field_H = new ak((pg) (this));
+        this.field_H = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_H.a(-126, -this.field_O.field_F + (-this.field_O.field_q + this.field_F - 60), 20, 150, this.field_O.field_F + this.field_O.field_q + 60);
         this.b(this.field_H, 10);
         this.a(-125, 496, 0, var3 + (55 + var4), 0);
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_O.getFieldValidator((byte) -9))).e(639775169);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_O.getFieldValidator((byte) -9))).invalidateCheckedName(639775169);
         if (param0 >= -101) {
           DisplayNameSelectionPanel.clearStaticReferences(false);
         }

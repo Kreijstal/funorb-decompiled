@@ -322,13 +322,13 @@ final class RenderingSupport012 {
         int integerLocal7 = SoftwareRaster.integerState0285;
         int integerLocal8 = SoftwareRaster.integerState0284;
         RgbSprite rgbSpriteLocal9 = new RgbSprite(16, integerArgument2);
-        rgbSpriteLocal9.performAction0256();
+        rgbSpriteLocal9.bindAsRenderTarget();
         SoftwareRaster.fillRectangleVerticalGradient(0, 0, 16, integerArgument2, integerArgument4, integerArgument5);
         Object objectLocal10 = null;
         if (booleanArgument3) {
-          rgbSpriteLocal1 = rgbSpriteLocal9.computeRgbSprite0277();
+          rgbSpriteLocal1 = rgbSpriteLocal9.copy();
           objectLocal10 = rgbSpriteLocal1;
-          rgbSpriteLocal1.performAction0256();
+          rgbSpriteLocal1.bindAsRenderTarget();
           SoftwareRaster.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRaster.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRaster.drawHorizontalLine(0, 2, 2, 0);
@@ -337,9 +337,9 @@ final class RenderingSupport012 {
         }
         Object objectLocal11 = null;
         if (booleanArgument1) {
-          rgbSpriteLocal2 = rgbSpriteLocal9.computeRgbSprite0277();
+          rgbSpriteLocal2 = rgbSpriteLocal9.copy();
           objectLocal11 = rgbSpriteLocal2;
-          rgbSpriteLocal2.performAction0256();
+          rgbSpriteLocal2.bindAsRenderTarget();
           SoftwareRaster.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRaster.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRaster.drawHorizontalLine(14, 2, 2, 0);

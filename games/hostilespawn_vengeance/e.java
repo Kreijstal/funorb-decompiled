@@ -330,11 +330,11 @@ final class e {
           var12 = (int)((float)param1 / param6);
           var13 = new RgbSprite(var11_int, var12);
           sb.a(var13, param4 - 120);
-          param8.a((int)((float)(-param7) / param6), (int)((float)(-param0) / param6), (int)((float)param8.field_z / param6), (int)((float)param8.field_A / param6));
+          param8.drawScaled((int)((float)(-param7) / param6), (int)((float)(-param0) / param6), (int)((float)param8.field_z / param6), (int)((float)param8.field_A / param6));
           this.a(param4, param2, 0, param5, 1, var12, param3, var11_int);
           eh.b(false);
           sb.a(param8, -128);
-          var13.c(param7, param0, param9, param1);
+          var13.drawDownscaledAreaAveraged(param7, param0, param9, param1);
           eh.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -495,7 +495,7 @@ final class e {
           eh.b(false);
           this.field_h = new RgbSprite(121, 122);
           sb.a(this.field_h, -126);
-          var5.b(this.field_h.field_z / 2, this.field_h.field_A / 2, -2048, 4096);
+          var5.drawRotated(this.field_h.field_z / 2, this.field_h.field_A / 2, -2048, 4096);
           eh.b(false);
           return;
         }
@@ -554,49 +554,49 @@ final class e {
         if (im.field_g == null) {
           return;
         }
-        this.field_h.e(376, 339);
-        this.field_i.e(9, 9);
+        this.field_h.draw(376, 339);
+        this.field_i.draw(9, 9);
         im.field_g.drawOpaque(0, 0);
         if (null != jm.field_b) {
-          jm.field_b.e(9, 257);
-          jm.field_b.d(558, 257);
+          jm.field_b.draw(9, 257);
+          jm.field_b.drawFlippedHorizontal(558, 257);
           if (rb.field_m > 257 &&
             rb.field_m < 290) {
             var2Lifetime2 = 40 + (40 * la.a(this.field_v << 4, false) >> 16);
             if (var2Lifetime2 > 0) {
               if (j.field_c > 9 &&
                 82 > j.field_c) {
-                jm.field_b.c(8, 256, var2Lifetime2);
-                jm.field_b.c(10, 256, var2Lifetime2);
-                jm.field_b.c(8, 258, var2Lifetime2);
-                jm.field_b.c(10, 258, var2Lifetime2);
+                jm.field_b.drawAdditive(8, 256, var2Lifetime2);
+                jm.field_b.drawAdditive(10, 256, var2Lifetime2);
+                jm.field_b.drawAdditive(8, 258, var2Lifetime2);
+                jm.field_b.drawAdditive(10, 258, var2Lifetime2);
               } else {
                 if (j.field_c > 558 &&
                   j.field_c < 631) {
-                  jm.field_b.g();
-                  jm.field_b.c(557, 256, var2Lifetime2);
-                  jm.field_b.c(559, 256, var2Lifetime2);
-                  jm.field_b.c(557, 258, var2Lifetime2);
-                  jm.field_b.c(559, 258, var2Lifetime2);
-                  jm.field_b.g();
+                  jm.field_b.flipHorizontal();
+                  jm.field_b.drawAdditive(557, 256, var2Lifetime2);
+                  jm.field_b.drawAdditive(559, 256, var2Lifetime2);
+                  jm.field_b.drawAdditive(557, 258, var2Lifetime2);
+                  jm.field_b.drawAdditive(559, 258, var2Lifetime2);
+                  jm.field_b.flipHorizontal();
                 }
               }
             }
           }
         }
-        this.field_e.e(16, 302);
+        this.field_e.draw(16, 302);
         mn.field_e.drawParagraph(this.field_a[this.field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        FullscreenFocusCanvas.field_j.e(30, 330);
+        FullscreenFocusCanvas.field_j.draw(30, 330);
         mn.field_e.drawParagraph(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.drawParagraph(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         mn.field_e.drawParagraph(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        od.field_D.e((127 - od.field_D.field_u) / 2 + 508, 315);
+        od.field_D.draw((127 - od.field_D.field_u) / 2 + 508, 315);
         if (this.field_u.field_f != 0) {
           if (this.field_u.field_f == 1) {
-            vj.field_h[1].e(508, 387);
+            vj.field_h[1].draw(508, 387);
           }
         } else {
-          vj.field_h[0].e(508, 299);
+          vj.field_h[0].draw(508, 299);
         }
     }
 
@@ -621,7 +621,7 @@ final class e {
         for (var0_int = 18; var0_int < 42; var0_int++) {
           var1 = field_w;
           var2 = var0_int;
-          var1[var2 >> 5] = ll.a(var1[var2 >> 5], 1 << PcmOutputWorker.a(var2, 31));
+          var1[var2 >> 5] = ll.a(var1[var2 >> 5], 1 << PcmOutputWorker.bitwiseAnd(var2, 31));
         }
         int[] var17 = field_y;
         int[] var3 = var17;

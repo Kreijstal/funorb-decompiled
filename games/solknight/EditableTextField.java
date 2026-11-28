@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends pj {
+class EditableTextField extends InteractiveWidget {
     static int field_N;
     private int field_O;
     static int[] field_I;
@@ -52,7 +52,7 @@ class EditableTextField extends pj {
         if (BufferedSocket.field_h < 150) {
           tg.field_J.drawHalfSize(var3, var4);
         } else {
-          IntrusiveNode.field_e.c(15 + var3, var4 + 10, var5);
+          IntrusiveNode.field_e.drawWithOpacity(15 + var3, var4 + 10, var5);
         }
         var6 = BufferedSocket.field_h - 125;
         if (0 < var6 &&
@@ -75,7 +75,7 @@ class EditableTextField extends pj {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          ql.field_p.c(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+          ql.field_p.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
     }
 

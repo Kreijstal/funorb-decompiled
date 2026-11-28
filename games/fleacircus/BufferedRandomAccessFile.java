@@ -179,7 +179,7 @@ final class BufferedRandomAccessFile {
         if (param0 != -40) {
           field_a = 108;
         }
-        df.field_b.d(param2, param1);
+        df.field_b.draw(param2, param1);
         if (!param3) {
         } else {
           var4 = 2 * (bf.field_b % df.field_b.field_w);

@@ -159,7 +159,7 @@ public final class SolKnight extends ab {
             }
           }
           if (na.field_b &&
-            !ua.field_I.isMidiReady(144)) {
+            !NameSuggestionsPanel.field_I.isMidiReady(144)) {
             pk.a((byte) -96, 0, true);
           }
           if (!il.b(507)) {
@@ -328,7 +328,7 @@ public final class SolKnight extends ab {
           sj.clearStaticReferences(1);
           jf.clearStaticReferences(-25616);
           UiWidget.e(-24922);
-          pj.clearDeclaredStaticReferences(85);
+          InteractiveWidget.clearDeclaredStaticReferences(85);
           si.i(126);
           ld.releaseDeclaredStaticReferences(73);
           kf.clearDeclaredStaticReferences(112);
@@ -356,7 +356,7 @@ public final class SolKnight extends ab {
           EditableTextField.releaseDeclaredStaticReferences(106);
           gf.clearStaticReferences((byte) 87);
           c.clearStaticReferences((byte) 113);
-          ua.clearStaticReferences((byte) -88);
+          NameSuggestionsPanel.clearStaticReferences((byte) -88);
           kj.a(2);
           kc.clearStaticReferences((byte) 110);
           pk.releaseDeclaredStaticReferences(-124);
@@ -590,12 +590,12 @@ public final class SolKnight extends ab {
           if (null != NetworkArchiveRequest.field_u) {
             for (var3_int = 0; 6 > var3_int; var3_int++) {
               if (null != c.field_M[var3_int] &&
-                !ua.field_I.a(176400, c.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
+                !NameSuggestionsPanel.field_I.a(176400, c.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
                 stackIn_56_0 = fc.field_o;
                 return stackIn_56_0;
               }
             }
-            ua.field_I.b(true);
+            NameSuggestionsPanel.field_I.b(true);
             NetworkArchiveRequest.field_u = null;
             qc.field_s = null;
             stackIn_59_0 = fc.field_o;
@@ -645,7 +645,7 @@ public final class SolKnight extends ab {
           qd.field_f = SecondaryNodeDeque.a(fh.field_c, -18362, "overlays", "");
           Asteroid.a("space", "", fh.field_c, (byte) -128);
           IterableNodeHashTable.field_g = SecondaryNodeDeque.a(fh.field_c, -18362, "explosion", "");
-          ua.field_F = SecondaryNodeDeque.a(fh.field_c, -18362, "nukeexplosion", "");
+          NameSuggestionsPanel.field_F = SecondaryNodeDeque.a(fh.field_c, -18362, "nukeexplosion", "");
           ak.field_e = new Sprite[8];
           ak.field_e[0] = Asteroid.a("pluto", "", fh.field_c, (byte) -123);
           ak.field_e[1] = Asteroid.a("neptune", "", fh.field_c, (byte) -110);
@@ -660,7 +660,7 @@ public final class SolKnight extends ab {
           ak.a(80, 0, ql.field_s, true, 16776960, ia.g(param0 + 113));
           var19 = new Sprite(152, 152);
           var20 = var19;
-          var20.a();
+          var20.bindAsRenderTarget();
           ak.field_e[4].drawScaledAveraged(0, 0, 152, 152);
           ai.a(10, SocketConnector.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
           dd.field_c = SecondaryNodeDeque.a(fh.field_c, param0 ^ -18362, "uberframe", "");
@@ -680,30 +680,30 @@ public final class SolKnight extends ab {
           dupTemp$0 = new Sprite(var6, 316);
           h.field_b = dupTemp$0;
           var7 = dupTemp$0;
-          var7.a();
+          var7.bindAsRenderTarget();
           var5.drawScaledAveraged(var6 - 316 * var5.field_q / var5.field_r >> 1, 0, var5.field_q * 316 / var5.field_r, 316);
           var21.drawScaledAveraged(0, 3 * (316 - 316 * var21.field_r / var5.field_r) / 5, var6, var21.field_r * 316 / var5.field_r);
           var8 = 40;
           var9 = 191;
           var10 = -8 - var8 * var7.field_q / var7.field_r + var9;
           var11 = new Sprite(var9, var8);
-          var11.a();
+          var11.bindAsRenderTarget();
           var7.drawScaledAveraged(0, 0, var8 * var7.field_q / var7.field_r, var8);
           var12 = var10 * qd.field_f[0].field_r / qd.field_f[0].field_q;
           qd.field_f[0].drawScaledAveraged(var7.field_q * var8 / var7.field_r + 8, -var12 + var8 >> 1, var10, var12);
           ah.a(var11, false);
           var13 = BufferedSocket.field_b.field_m;
           pg.field_a = new Sprite(var13, var13);
-          pg.field_a.a();
+          pg.field_a.bindAsRenderTarget();
           u.field_c.drawScaledAveraged(0, 0, var13, var13);
           u.field_c = null;
           eh.field_b = new Sprite[IterableNodeHashTable.field_g.length];
           for (var14 = 0; IterableNodeHashTable.field_g.length > var14; var14++) {
             var15 = IterableNodeHashTable.field_g[var14];
             eh.field_b[var14] = new Sprite(var15.field_p, var15.field_t);
-            eh.field_b[var14].a();
+            eh.field_b[var14].bindAsRenderTarget();
             var15.drawSilhouette(-var15.field_s, -var15.field_n, 65793);
-            var15.c(-var15.field_s, -var15.field_n, 64);
+            var15.drawWithOpacity(-var15.field_s, -var15.field_n, 64);
             SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           }
           Bzip2State.field_e.a(true);
@@ -788,8 +788,8 @@ public final class SolKnight extends ab {
               kh.field_d = kh.field_d * 9 / 10;
             }
             if (kd.currentScreenIndex != ri.field_f) {
-              ua.field_H = ua.field_H + 1;
-              if (32 == ua.field_H) {
+              NameSuggestionsPanel.field_H = NameSuggestionsPanel.field_H + 1;
+              if (32 == NameSuggestionsPanel.field_H) {
                 if (kd.currentScreenIndex == 2) {
                   kh.field_c = null;
                 }
@@ -799,7 +799,7 @@ public final class SolKnight extends ab {
                   SecondaryNodeDequeIterator.field_d = 0;
                   w.field_a.clear(true);
                 }
-                ua.field_H = 0;
+                NameSuggestionsPanel.field_H = 0;
                 kd.currentScreenIndex = ri.field_f;
               }
             } else {
@@ -836,8 +836,8 @@ public final class SolKnight extends ab {
             }
           } else {
             if (1 == je.field_d) {
-              ua.field_H = ua.field_H + 1;
-              if (ua.field_H != 32) {
+              NameSuggestionsPanel.field_H = NameSuggestionsPanel.field_H + 1;
+              if (NameSuggestionsPanel.field_H != 32) {
                 return;
               }
               if (!RandomAccessCacheFile.b((byte) -104)) {
@@ -865,8 +865,8 @@ public final class SolKnight extends ab {
               je.field_d = 3;
               return;
             }
-            ua.field_H = ua.field_H - 1;
-            if (ua.field_H == 0) {
+            NameSuggestionsPanel.field_H = NameSuggestionsPanel.field_H - 1;
+            if (NameSuggestionsPanel.field_H == 0) {
               je.field_d = 0;
               return;
             }
@@ -968,22 +968,22 @@ public final class SolKnight extends ab {
               vd.screens[kd.currentScreenIndex].d(582);
             }
           } else {
-            if (16 > ua.field_H) {
+            if (16 > NameSuggestionsPanel.field_H) {
               if (kd.currentScreenIndex == -1) {
                 d.a(false, (byte) -48);
               } else {
                 vd.screens[kd.currentScreenIndex].d(582);
               }
-              ll.a(1 + ua.field_H, 256, false, false);
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, ua.field_H << 4);
+              ll.a(1 + NameSuggestionsPanel.field_H, 256, false, false);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, NameSuggestionsPanel.field_H << 4);
             } else {
               if (ri.field_f != -1) {
                 vd.screens[ri.field_f].d(582);
               } else {
                 d.a(false, (byte) -48);
               }
-              ll.a(1 - ua.field_H + 32, 256, false, false);
-              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
+              ll.a(1 - NameSuggestionsPanel.field_H + 32, 256, false, false);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16769381, 32 - NameSuggestionsPanel.field_H << 4);
             }
           }
           var4 = (la) (lc.field_t.beginBackward((byte) 51));
@@ -1008,7 +1008,7 @@ public final class SolKnight extends ab {
             ai.a(h.field_d, (byte) -83, h.field_d[0].field_t, h.field_d[0].field_p);
           }
           if (je.field_d != 0) {
-            var5Lifetime2 = ua.field_H * 256 / 32;
+            var5Lifetime2 = NameSuggestionsPanel.field_H * 256 / 32;
             if (0 < var5Lifetime2) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, var5Lifetime2);
             }
@@ -1145,7 +1145,7 @@ public final class SolKnight extends ab {
           var40 = new Sprite[param0.length];
           var11 = var40;
           for (var12_intLifetime1 = 0; var12_intLifetime1 < param0.length; var12_intLifetime1++) {
-            dupTemp$0 = param0[var12_intLifetime1].c();
+            dupTemp$0 = param0[var12_intLifetime1].copy();
             var11[var12_intLifetime1] = dupTemp$0;
             var38 = dupTemp$0;
             var13 = var38;
@@ -1160,7 +1160,7 @@ public final class SolKnight extends ab {
                 var49[var15_int] = 0;
               }
             }
-            var38.f();
+            var38.trimTransparentBorders();
             var13.field_q = var38.field_p;
             var13.field_r = var38.field_t;
             var13.field_n = 0;

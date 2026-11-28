@@ -143,7 +143,7 @@ abstract class wf extends cc {
         if (param0 != 21533) {
           return;
         }
-        fh.field_a.f(-90 + param2 + this.field_v, param1 + 10);
+        fh.field_a.draw(-90 + param2 + this.field_v, param1 + 10);
         ProxyAuthenticationRequiredException.a(param1 + 35, param0 - 21532, 5 + param2, -10 + this.field_v, vk.field_e);
         ProxyAuthenticationRequiredException.a(-22 + this.field_q + param1, param0 - 21532, param2, this.field_v, v.field_d);
         var6Lifetime2 = 127;

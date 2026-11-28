@@ -104,7 +104,7 @@ final class be {
               var15 = -1;
             }
             var16 = var9Lifetime1 / var14;
-            ac.field_a.d();
+            ac.field_a.bindAsRenderTarget();
             if (var15 < 0) {
               var16 = var12 - var16;
               var8_int = var10;

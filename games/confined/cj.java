@@ -80,9 +80,9 @@ final class cj implements fe {
           var7 = param4 + param3.field_m;
           ea.a(true, var7, var6_int, param3.field_z, param3.field_F);
           var8 = gg.field_q[1];
-          if (param3 instanceof rg &&
-            ((rg) (param3)).field_O) {
-            var8.c((-var8.field_t + param3.field_F >> 1) + (1 + var6_int), (param3.field_z - var8.field_x >> 1) + 1 + var7, 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_O) {
+            var8.drawAdditive((-var8.field_t + param3.field_F >> 1) + (1 + var6_int), (param3.field_z - var8.field_x >> 1) + 1 + var7, 256);
           }
           if (!param3.e((byte) -1)) {
             return;

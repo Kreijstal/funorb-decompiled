@@ -322,7 +322,7 @@ final class ap extends ob {
             }
             mh.field_h = 1;
             var3 = var1.readString(111);
-            nh.field_z = ((String) (var3)).intern();
+            NameSuggestionsPanel.field_z = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
             ArchiveRequest.a(7, var4);
             return;

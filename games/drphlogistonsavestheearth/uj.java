@@ -81,7 +81,7 @@ final class uj extends IntrusiveNode {
         int var3;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         ea.field_a = null;
-        hf.field_C = 0;
+        InteractiveWidget.field_C = 0;
         IterableNodeHashTable.field_e = null;
         var2 = LevelSession.field_ib;
         LevelSession.field_ib = vc.field_e;

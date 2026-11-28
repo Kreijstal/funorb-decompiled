@@ -214,7 +214,7 @@ abstract class eh {
                 }
                 var2 = rd.a("ticketing_xunread", 90);
                 if (var2 != null) {
-                  dk.field_x = DualLinkNode.a(param0 + 56, var2);
+                  InteractiveWidget.field_x = DualLinkNode.a(param0 + 56, var2);
                 }
                 var2 = rd.a("ticketing_gotowebsite", -106);
                 if (null != var2) {
@@ -1150,7 +1150,7 @@ abstract class eh {
                 }
                 var2 = rd.a("tocustomersupport", 122);
                 if (var2 != null) {
-                  dk.field_w = DualLinkNode.a(113, var2);
+                  InteractiveWidget.field_w = DualLinkNode.a(113, var2);
                 }
                 var2 = rd.a("changedisplayname", param0 - 123);
                 if (null != var2) {
@@ -1236,7 +1236,7 @@ abstract class eh {
                 }
                 var2 = rd.a("back", -53);
                 if (null != var2) {
-                  dk.field_t = DualLinkNode.a(124, var2);
+                  InteractiveWidget.field_t = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("exitfullscreenmode", 126);
                 if (null != var2) {
@@ -2798,7 +2798,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_focus", 111);
                 if (null != var2) {
-                  kd.field_D = DualLinkNode.a(param0 + 51, var2);
+                  NameSuggestionsPanel.field_D = DualLinkNode.a(param0 + 51, var2);
                 }
                 var2 = rd.a("fs_focus_or_resolution", 116);
                 if (null != var2) {

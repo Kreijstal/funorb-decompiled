@@ -81,13 +81,13 @@ final class gv extends TileEffect {
         var5 = BachelorFridge.field_y;
         if (this.field_f < 10) {
           var4 = (int)((double)param0 / 10.0) * this.field_f;
-          DefaultWidgetRenderer.field_h.a(-128 + param2, var4 - 64);
+          DefaultWidgetRenderer.field_h.draw(-128 + param2, var4 - 64);
         } else {
           if (30 >= this.field_f) {
-            DefaultWidgetRenderer.field_h.a(-128 + param2, param0 - 64);
+            DefaultWidgetRenderer.field_h.draw(-128 + param2, param0 - 64);
           } else {
             if ((2 & this.field_f) == 0) {
-              DefaultWidgetRenderer.field_h.a(-128 + param2, -64 + param0, 128);
+              DefaultWidgetRenderer.field_h.drawWithOpacity(-128 + param2, -64 + param0, 128);
             }
           }
         }

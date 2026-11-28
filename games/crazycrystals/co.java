@@ -55,7 +55,7 @@ final class co extends qm {
     private final void h(int param0) {
         this.field_y = new RgbSprite[]{this.a(this.field_w, this.field_C, 2), this.a(this.field_u, this.field_E, 2)};
         this.field_z = this.j(param0 + 255);
-        this.field_B = this.field_z.c();
+        this.field_B = this.field_z.copyMirroredHorizontally();
         this.field_D = new RgbSprite(this.field_f >> 1, this.field_f);
         if (param0 != 0) {
           field_G = (String[]) null;
@@ -214,26 +214,26 @@ final class co extends qm {
             this.a(-15, -31, 68, -69, (byte) -1);
           }
           for (var6 = -this.field_I + param3; var6 < var5_int; var6 = var6 + param1.field_l) {
-            param1.a(var6, param2);
+            param1.draw(var6, param2);
           }
           lg.a(1);
           if (this.field_z.field_l + param3 >= SoftwareRasterizer.field_c) {
             em.a((byte) 38, this.field_D);
-            param1.a(-this.field_I, 0);
-            param1.a(2 * this.field_v - this.field_I, 0);
-            this.field_B.d(0, 0);
+            param1.draw(-this.field_I, 0);
+            param1.draw(2 * this.field_v - this.field_I, 0);
+            this.field_B.drawMultiply(0, 0);
             lg.a(1);
-            this.field_D.a(param3, param2);
+            this.field_D.draw(param3, param2);
           }
           if (SoftwareRasterizer.field_g >= var5_int - this.field_z.field_l) {
             em.a((byte) 38, this.field_D);
             for (var7 = this.field_I + (-this.field_z.field_l + this.field_g); var7 > 2 * this.field_v; var7 = var7 - this.field_v * 2) {
             }
-            param1.a(-var7, 0);
-            param1.a(-var7 + 2 * this.field_v, 0);
-            this.field_z.d(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(-var7 + 2 * this.field_v, 0);
+            this.field_z.drawMultiply(0, 0);
             lg.a(1);
-            this.field_D.a(-this.field_z.field_l + var5_int, param2);
+            this.field_D.draw(-this.field_z.field_l + var5_int, param2);
             return;
           }
           return;

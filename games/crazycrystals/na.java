@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class na extends ud implements vd {
+class na extends ud implements WidgetActivationListener {
     private boolean field_gb;
     static RgbSprite field_eb;
     private boolean field_db;
@@ -122,8 +122,8 @@ class na extends ud implements vd {
           this.a((qm) (var2), (byte) -50);
           return;
         }
-        pc var3 = (pc) null;
-        this.a((byte) -113, -16, -83, 107, (pc) null);
+        InteractiveWidget var3 = (InteractiveWidget) null;
+        this.onWidgetActivated((byte) -113, -16, -83, 107, (InteractiveWidget) null);
         this.field_cb.b((byte) 0, 4210752, 2121792);
         var2Lifetime1 = new jd(this, this.field_jb, kj.field_c);
         var2Lifetime1.a(vm.field_e, (byte) -124, 15);
@@ -144,7 +144,7 @@ class na extends ud implements vd {
         }
     }
 
-    public void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_6_0 = null;

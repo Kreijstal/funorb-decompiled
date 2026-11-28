@@ -106,18 +106,18 @@ final class qi extends jd {
         kg var7 = null;
         int var8 = 0;
         kg var9 = null;
-        wd var10 = null;
+        InteractiveWidget var10 = null;
         kg var11 = null;
         kg var12 = null;
         kg var13 = null;
         kg var14 = null;
         try {
-          if (param1 instanceof wd) {
+          if (param1 instanceof InteractiveWidget) {
             stackIn_3_0 = (lk) (param1);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (wd) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           IntrusiveNode.a(param1.field_k + (param1.field_r + param4), param1.field_m + (param0 + param1.field_i), param0 + param1.field_i, param1.field_r + param4, -19852);
           if (var10 != null) {
             param3 = param3 & var10.field_y;

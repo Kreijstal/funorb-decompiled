@@ -40,7 +40,7 @@ final class ba {
         try {
           i.field_a = new RgbSprite(640, 58);
           hc.field_i = new RgbSprite(640, 122);
-          i.field_a.d();
+          i.field_a.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 634, 50, 0);
           SoftwareRasterizer.fillRectangle(65, 3, 511, 50, 10359);
           for (var1_int = 0; var1_int < 256; var1_int++) {
@@ -53,7 +53,7 @@ final class ba {
           SoftwareRasterizer.drawVerticalLineAlpha(257, 2, 50, 8947848, 32);
           SoftwareRasterizer.drawVerticalLineAlpha(390, 2, 50, 8947848, 32);
           SoftwareRasterizer.drawVerticalLineAlpha(391, 2, 50, 8947848, 32);
-          MouseInputListener.field_a.e(2, 2, 636, 50, 32);
+          MouseInputListener.field_a.drawScaledAdditive(2, 2, 636, 50, 32);
           if (param0 != -27) {
             ba.a(-15);
           }
@@ -63,11 +63,11 @@ final class ba {
           SoftwareRasterizer.drawHorizontalLine(2, 56, 636, 13749446);
           SoftwareRasterizer.drawHorizontalLine(3, 57, 634, 0);
           SoftwareRasterizer.setClip(0, 0, 150, 480);
-          dh.field_X.c(-(dh.field_X.field_s / 2) + 295, 0);
+          dh.field_X.draw(-(dh.field_X.field_s / 2) + 295, 0);
           SoftwareRasterizer.setClip(200, 0, 300, 480);
-          dh.field_X.c(-(dh.field_X.field_s / 2) + 320, 0);
+          dh.field_X.draw(-(dh.field_X.field_s / 2) + 320, 0);
           SoftwareRasterizer.setClip(300, 0, 640, 480);
-          dh.field_X.c(210 - dh.field_X.field_s / 2, 0);
+          dh.field_X.draw(210 - dh.field_X.field_s / 2, 0);
           SoftwareRasterizer.resetClip();
           ob.field_I.drawRightAligned(gb.field_e, 85, 30, 16777215, -1);
           jd.field_c.drawRightAligned(cf.field_g, 200, 40, 16777215, -1);
@@ -75,7 +75,7 @@ final class ba {
           SoftwareRasterizer.setClip(0, 0, 640, 2);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
           BufferedSocket.field_a.a(-40);
-          hc.field_i.d();
+          hc.field_i.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(3, 2, 634, 117, 0, 10359);
           SoftwareRasterizer.setClip(0, 120, 640, 480);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, -358, 640, 480, 11184810, 4605510);

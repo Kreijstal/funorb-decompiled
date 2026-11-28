@@ -99,27 +99,27 @@ final class uc extends lm {
           var6 = param2 - this.field_O;
           var7 = -26 / ((-35 - param0) / 41);
           while (var5_int > var6) {
-            param3.h(var6, param1);
+            param3.draw(var6, param1);
             var6 = var6 + param3.field_y;
           }
           ti.c(true);
           if (SoftwareRasterizer.field_j <= param2 + this.field_D.field_y) {
             lm.a(this.field_P, (byte) -107);
-            param3.h(-this.field_O, 0);
-            param3.h(-this.field_O + 2 * this.field_B, 0);
-            this.field_T.d(0, 0);
+            param3.draw(-this.field_O, 0);
+            param3.draw(-this.field_O + 2 * this.field_B, 0);
+            this.field_T.drawMultiply(0, 0);
             ti.c(true);
-            this.field_P.h(param2, param1);
+            this.field_P.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_h >= var5_int - this.field_D.field_y) {
             lm.a(this.field_P, (byte) -94);
             for (var7Lifetime1 = this.field_x + (-this.field_D.field_y + this.field_O); var7Lifetime1 > this.field_B * 2; var7Lifetime1 = var7Lifetime1 - this.field_B * 2) {
             }
-            param3.h(-var7Lifetime1, 0);
-            param3.h(2 * this.field_B - var7Lifetime1, 0);
-            this.field_D.d(0, 0);
+            param3.draw(-var7Lifetime1, 0);
+            param3.draw(2 * this.field_B - var7Lifetime1, 0);
+            this.field_D.drawMultiply(0, 0);
             ti.c(true);
-            this.field_P.h(var5_int - this.field_D.field_y, param1);
+            this.field_P.draw(var5_int - this.field_D.field_y, param1);
             return;
           }
           return;
@@ -185,13 +185,13 @@ final class uc extends lm {
           }
           if (0 < param2 &&
             param5 > 0) {
-            var21 = param3.d();
+            var21 = param3.copy();
             var30 = SoftwareRasterizer.field_b;
             var10 = SoftwareRasterizer.field_i;
             var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param3.e();
+            param3.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param3.field_y * param6 + param4;
             var14 = -param2 + param3.field_y;
@@ -218,7 +218,7 @@ final class uc extends lm {
               }
               var13 = var13 + var14;
             }
-            var21.h(-param3.field_w, -param3.field_A);
+            var21.draw(-param3.field_w, -param3.field_A);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;
@@ -338,7 +338,7 @@ final class uc extends lm {
         }
         this.field_M = new RgbSprite[]{this.b(this.field_G, -123, this.field_F), this.b(this.field_H, -88, this.field_J)};
         this.field_D = this.b(true);
-        this.field_T = this.field_D.b();
+        this.field_T = this.field_D.copyMirroredHorizontally();
         this.field_P = new RgbSprite(this.field_s >> 1, this.field_s);
     }
 

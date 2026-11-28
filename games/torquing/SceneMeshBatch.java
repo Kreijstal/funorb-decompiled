@@ -258,7 +258,7 @@ final class SceneMeshBatch {
         var4 = be.field_b + (field_n[0] << 9) / var2;
         if (param0 != -32768) {
           var5 = field_e[param0];
-          var5.d(var3 - (var5.field_w >> 1), var4 - (var5.field_u >> 1));
+          var5.draw(var3 - (var5.field_w >> 1), var4 - (var5.field_u >> 1));
           return;
         }
         if (ie.field_b == null) {

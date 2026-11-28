@@ -501,7 +501,7 @@ final class si extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (-var27Lifetime6Lifetime1 + var30) / 2 + var28 * (var30 - var27Lifetime6Lifetime1);
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = dh.b(15, var30 - var27Lifetime6Lifetime1, var32);
+                var34 = NameSuggestionsPanel.b(15, var30 - var27Lifetime6Lifetime1, var32);
                 var32 = var32 + (-var28 + var31);
                 this.field_n[var33] = (byte)(32 + var34 * this.field_n[var33] >> 6);
               }
@@ -545,7 +545,7 @@ final class si extends IntrusiveNode {
               var37 = var27Lifetime7;
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
-                var34Lifetime1 = dh.b(15, -var27Lifetime7 + var30Lifetime1Lifetime1, var32Lifetime1);
+                var34Lifetime1 = NameSuggestionsPanel.b(15, -var27Lifetime7 + var30Lifetime1Lifetime1, var32Lifetime1);
                 var35 = var34Lifetime1 + (255 & this.field_p[var37]);
                 if (var35 < 0) {
                   var35 = 0;

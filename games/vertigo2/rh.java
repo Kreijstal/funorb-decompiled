@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends WidgetContainer implements ij {
+final class rh extends WidgetContainer implements WidgetActivationListener {
     static int[] field_O;
     static UiPanel field_I;
     private int field_N;
-    private d[] field_P;
+    private InteractiveWidget[] field_P;
     private BitmapFont field_M;
     static int field_H;
     private int[] field_J;
@@ -21,8 +21,8 @@ final class rh extends WidgetContainer implements ij {
         if (this.field_N >= param1) {
           return;
         }
-        d[] var7 = new d[param1];
-        d[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         if (param0 != 27812) {
           this.field_J = (int[]) null;
@@ -146,7 +146,7 @@ final class rh extends WidgetContainer implements ij {
         return new String(var6);
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -193,11 +193,11 @@ final class rh extends WidgetContainer implements ij {
         return ii.field_z;
     }
 
-    final d a(String param0, uf param1, int param2) {
-        d var4 = null;
+    final InteractiveWidget a(String param0, uf param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        d stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -208,7 +208,7 @@ final class rh extends WidgetContainer implements ij {
           if (param2 >= -99) {
             this.field_N = 47;
           }
-          var4 = new d(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.listener = (WidgetListener) ((Object) new vo());
           var5 = -2 + this.height;
           this.setBounds(false, 0, 0, this.height + 34, this.width);

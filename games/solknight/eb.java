@@ -44,7 +44,7 @@ final class eb {
         int var9Lifetime2;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
-          param1.d();
+          param1.normalizeCanvas();
           var11 = new Sprite(param1.field_p, param1.field_t / 3);
           var4 = 0;
           var5 = 0;
@@ -76,7 +76,7 @@ final class eb {
             }
           }
           var8Lifetime1 = -54 % ((param2 + 21) / 57);
-          var11.f();
+          var11.trimTransparentBorders();
           stackIn_14_0 = var11;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

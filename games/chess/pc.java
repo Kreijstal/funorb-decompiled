@@ -733,7 +733,7 @@ final class pc extends ci {
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder3 = true;
               if ((var10 >= 2) &&
-                (decompiledFrameRemainder0 = (null != t.field_L ||
+                (decompiledFrameRemainder0 = (null != NameSuggestionsPanel.field_L ||
                 uj.field_k != null ||
                 il.field_b != null ||
                 BitPacketBuffer.field_r != null))) {
@@ -747,9 +747,9 @@ final class pc extends ci {
                 while (!(decompiledNaturalLoopExit0 = (!(var16 < qa.field_e)))) {
                   var17_int = pd.field_Rb.field_sc[var16] & 255;
                   if (var19 == 0) {
-                    if (null != t.field_L &&
-                      t.field_L[var16] != null &&
-                      t.field_L[var16][var17_int]) {
+                    if (null != NameSuggestionsPanel.field_L &&
+                      NameSuggestionsPanel.field_L[var16] != null &&
+                      NameSuggestionsPanel.field_L[var16][var17_int]) {
                       var11_int = 1;
                     }
                     if (null != uj.field_k &&
@@ -935,14 +935,14 @@ final class pc extends ci {
               }
               if (var19 != 0) {
                 var9_ref_String = pd.field_Rb.field_Gb;
-                sc.field_f.field_db = MatchingFieldValidator.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
+                sc.field_f.field_db = MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
                 tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
                 tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
                 var8 = tn.field_j;
               }
             } else {
               var9_ref_String = pd.field_Rb.field_Gb;
-              sc.field_f.field_db = MatchingFieldValidator.a(fb.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
+              sc.field_f.field_db = MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{var9_ref_String}, (byte) -88).toUpperCase();
               tn.field_j.a(0, BirthDateValidator.field_k.field_M, -2147483648, 40, BirthDateValidator.field_k.field_pb - 40);
               tn.field_j.field_db = MatchingFieldValidator.a(kb.field_R, new String[]{var9_ref_String}, (byte) -93);
               var8 = tn.field_j;
@@ -981,7 +981,7 @@ final class pc extends ci {
             if (BufferedSocket.field_d.field_L != 0) {
               jh.field_a = false;
             }
-            t.a(pd.field_Rb, false, param4, true);
+            NameSuggestionsPanel.a(pd.field_Rb, false, param4, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

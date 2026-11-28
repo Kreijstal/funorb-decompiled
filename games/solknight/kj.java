@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class kj extends pj {
+class kj extends InteractiveWidget {
     static PcmPlayerService field_P;
     static ff field_J;
     static long field_I;
@@ -73,8 +73,8 @@ class kj extends pj {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(boolean param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         if (!param0) {
           field_R = -105;
         }

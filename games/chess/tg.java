@@ -119,14 +119,14 @@ final class tg {
           var13 = new RgbSprite(7, 4);
           var13.field_x = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new nj(var4, true);
-          var14.a(var13.c(), -4755);
-          var13.a();
+          var14.a(var13.copy(), -4755);
+          var13.rotateClockwise();
           var14Lifetime1 = new nj(var4, true);
-          var14Lifetime1.a(var13.c(), -4755);
-          var13.a();
+          var14Lifetime1.a(var13.copy(), -4755);
+          var13.rotateClockwise();
           var14Lifetime2 = new nj(var4, true);
-          var14Lifetime2.a(var13.c(), -4755);
-          var13.a();
+          var14Lifetime2.a(var13.copy(), -4755);
+          var13.rotateClockwise();
           var19 = new nj(var4, true);
           var19.a(var13, -4755);
         } catch (RuntimeException runtimeException) {

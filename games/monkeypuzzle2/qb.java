@@ -64,15 +64,15 @@ final class qb {
             var5_int = param1[0].field_m;
             var6 = param1[2].field_m;
             var7 = param1[1].field_m;
-            param1[0].c(param3, param0);
-            param1[2].c(param4 + (param3 - var6), param0);
+            param1[0].draw(param3, param0);
+            param1[2].draw(param4 + (param3 - var6), param0);
             SoftwareRasterizer.saveClip(DiskArchiveRequest.field_u);
             SoftwareRasterizer.intersectClip(param3 + var5_int, param0, -var6 + param3 + param4, param0 + param1[1].field_n);
             var10 = 29 % ((param2 - 22) / 48);
             var8 = param3 + var5_int;
             var9 = param4 + (param3 - var6);
             for (param3 = var8; var9 > param3; param3 = param3 + var7) {
-              param1[1].c(param3, param0);
+              param1[1].draw(param3, param0);
             }
             SoftwareRasterizer.restoreClip(DiskArchiveRequest.field_u);
             return;

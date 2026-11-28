@@ -707,7 +707,7 @@ final class ArgbSprite extends Sprite {
         return;
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawGrayModulated(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -757,7 +757,7 @@ final class ArgbSprite extends Sprite {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void drawTintedGray(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -902,7 +902,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1128,7 +1128,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1255,7 +1255,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

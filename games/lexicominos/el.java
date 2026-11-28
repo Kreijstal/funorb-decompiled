@@ -90,9 +90,9 @@ final class el {
             var5 = (double)var4 * 3.141592653589793 / 64.0;
             var7 = (int)(1.0 + Math.abs(Math.sin(var5)) * (double)param1.field_u + Math.abs(Math.cos(var5)) * (double)param1.field_p);
             var9[var3] = new RgbSprite(var7, var7);
-            var9[var3].b();
-            param1.a(8 * param1.field_p, 8 * param1.field_u, var7 * 8, 8 * var7, var4 * 16384 / 32, 4096);
-            var9[var3].h();
+            var9[var3].bindAsRenderTarget();
+            param1.drawRotatedAbout(8 * param1.field_p, 8 * param1.field_u, var7 * 8, 8 * var7, var4 * 16384 / 32, 4096);
+            var9[var3].flipHorizontal();
           }
           stackIn_5_0 = var2;
           return stackIn_5_0;

@@ -598,7 +598,7 @@ final class TutorialController {
             var5 = 640 - DiskCacheWorker.field_e.field_r;
           }
           if (this.field_a) {
-            aa.field_j.b(var5, var3 + var2);
+            aa.field_j.draw(var5, var3 + var2);
             if (this.field_g >= var5 &&
               this.field_g < DiskCacheWorker.field_e.field_r + var5 &&
               var3 + var2 <= this.field_c &&
@@ -613,7 +613,7 @@ final class TutorialController {
             }
           } else {
             if (this.field_p == 0) {
-              qh.field_b.b(var5, var2 + var3);
+              qh.field_b.draw(var5, var2 + var3);
               if (var5 <= this.field_g &&
                 qh.field_b.field_r + var5 > this.field_g &&
                 var3 + var2 <= this.field_c &&

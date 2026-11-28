@@ -14,7 +14,7 @@ final class uh {
           fd var5 = (fd) null;
           uh.a((fd) null, -29, (fd) null);
         }
-        ul.field_G = param1;
+        NameSuggestionsPanel.field_G = param1;
         kl.field_k = param2;
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ma implements ke {
+final class AccountCreationResultPanel extends ma implements WidgetActivationListener {
     static ResourceArchive field_Jb;
     static String field_Fb;
     static String field_Db;
@@ -99,7 +99,7 @@ final class AccountCreationResultPanel extends ma implements ke {
             } else {
               var4 = FullscreenFocusCanvas.field_g;
               if (this.field_Ib != null) {
-                this.field_Ib.a((byte) -82);
+                this.field_Ib.onNameSuggestionsRefreshRequested((byte) -82);
               }
             }
           }
@@ -150,7 +150,7 @@ final class AccountCreationResultPanel extends ma implements ke {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         if (this.field_Hb) {
           FullscreenFocusCanvas.a((byte) -115, false, true);
           return;

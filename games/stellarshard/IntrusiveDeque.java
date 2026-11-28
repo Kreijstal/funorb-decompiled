@@ -97,7 +97,7 @@ final class IntrusiveDeque {
           }
           if (param6 > 0 &&
             param3 > 0) {
-            var21 = param0.a();
+            var21 = param0.copy();
             if (!param7) {
               return;
             }
@@ -106,7 +106,7 @@ final class IntrusiveDeque {
             var11 = SoftwareRasterizer.field_b;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param0.e();
+            param0.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param2 + param5 * param0.field_v;
             var14 = param0.field_v - param6;
@@ -141,7 +141,7 @@ final class IntrusiveDeque {
               }
               var13 = var13 + var14;
             }
-            var21.e(-param0.field_t, -param0.field_s);
+            var21.draw(-param0.field_t, -param0.field_s);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class df extends ng {
+class df extends InteractiveWidget {
     static int field_Q;
     static int field_R;
     private String[] field_U;
@@ -46,8 +46,8 @@ class df extends ng {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = -this.field_m + param2;
         int var6 = -this.field_i + param0;
         ia var7 = this.b(var6, var5, 91);

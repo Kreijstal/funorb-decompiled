@@ -99,22 +99,22 @@ final class SectorCacheStore {
         }
         cl.d((byte) -106);
         if (150 <= vb.field_n) {
-          ji.field_b.e(var3 + 15, var4 + 10, var5);
+          ji.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
         } else {
-          bb.field_f.b(var3, var4);
+          bb.field_f.drawHalfSize(var3, var4);
         }
         var6 = -125 + vb.field_n;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            vh.field_f.a(var3, var4, var7);
+            vh.field_f.drawAdditive(var3, var4, var7);
           } else {
             if (30 > var6) {
-              vh.field_f.a(var3, var4, 256);
+              vh.field_f.drawAdditive(var3, var4, 256);
             } else {
               var7 = (-(256 * var6) + 12800) / 20;
-              vh.field_f.a(var3, var4, var7);
+              vh.field_f.drawAdditive(var3, var4, var7);
             }
           }
         }
@@ -124,7 +124,7 @@ final class SectorCacheStore {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          vb.field_s.e(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
+          vb.field_s.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

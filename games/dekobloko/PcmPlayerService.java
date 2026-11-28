@@ -15,7 +15,7 @@ final class PcmPlayerService implements Runnable {
     static InputAdapter003[] inputAdapter003ArrayState0001;
     static RawSound rawSoundState0019;
 
-    final static int[] computeIntegerArray1411(int[] integerArrayArgument1, byte byteArgument2, int[] integerArrayArgument3) {
+    final static int[] subtractBitMask(int[] integerArrayArgument1, byte byteArgument2, int[] integerArrayArgument3) {
         int[] integerArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -101,9 +101,9 @@ final class PcmPlayerService implements Runnable {
         }
     }
 
-    final static boolean computeBoolean1409(boolean booleanArgument1) {
+    final static boolean hasSceneWidgetState(boolean booleanArgument1) {
         if (booleanArgument1) {
-          PcmPlayerService.computeBoolean1409(true);
+          PcmPlayerService.hasSceneWidgetState(true);
         }
         return ComponentContainer.sceneWidgetState0069 != null ? true : false;
     }

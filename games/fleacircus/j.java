@@ -159,18 +159,18 @@ final class j extends ne {
           }
           var9Lifetime1 = var17.field_t;
           we.a(-111);
-          var17.f();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.f();
-          var17.f(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.f();
-          var17.f(-var17.field_w + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_w + var9Lifetime1, 0);
           var12 = new RgbSprite(var17.field_w - 2 * var9Lifetime1, var9Lifetime1);
-          var12.f();
-          var17.f(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           ia.a(-125);
           ng.field_h = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

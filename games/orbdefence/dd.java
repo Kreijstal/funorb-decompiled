@@ -40,8 +40,8 @@ final class dd extends kj {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_y instanceof s) ||
-            ((s) (this.field_y)).field_F) &&
+          if ((!(this.field_y instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_y)).field_F) &&
             this.field_v == 1) {
             var5_int = -this.field_C + (ua.field_a - param2);
             var6 = DiskCacheWorker.field_d + (-this.field_F - param3);

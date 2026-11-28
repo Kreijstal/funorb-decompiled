@@ -139,7 +139,7 @@ final class IntrusiveDequeCursor {
 
     final static int a(byte param0, int param1) {
         int var2 = -36 / ((28 - param0) / 47);
-        return oj.field_O[param1].length;
+        return NameSuggestionsPanel.field_O[param1].length;
     }
 
     IntrusiveDequeCursor(IntrusiveDeque param0) {

@@ -63,8 +63,8 @@ final class cb extends jc {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_F instanceof eb) ||
-            ((eb) (this.field_F)).field_A) &&
+          if ((!(this.field_F instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_F)).field_A) &&
             this.field_j == 1) {
             var5_int = -param2 + (ef.field_j - this.field_A);
             var6 = -param1 + (MouseWheelInput.field_b - this.field_K);

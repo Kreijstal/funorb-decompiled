@@ -141,18 +141,18 @@ final class BufferedRandomAccessFile {
           }
           var9Lifetime1 = var18.field_k;
           h.k(126);
-          var18.d();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
           var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.d();
-          var18.b(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.d();
-          var18.b(-var18.field_o + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var18.drawOpaque(-var18.field_o + var9Lifetime1, 0);
           var12 = new RgbSprite(-(2 * var9Lifetime1) + var18.field_o, var9Lifetime1);
-          var12.d();
-          var18.b(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           ValidatedTextField.g((byte) -105);
           FullscreenFocusCanvas.field_b = new RgbSprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {

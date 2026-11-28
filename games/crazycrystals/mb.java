@@ -13,7 +13,7 @@ final class mb {
     final static void a(ca param0, int param1, int param2) {
         try {
           gn.field_Q.addLast(param2, param0);
-          nh.a(param1, (byte) -94, param0);
+          NameSuggestionsPanel.a(param1, (byte) -94, param0);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "mb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

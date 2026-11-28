@@ -47,7 +47,7 @@ final class rj {
           var2_long = ll.correctedCurrentTimeMillis(param0 ^ -1491051318);
           if (GameApplet.field_d != 0 &&
             fg.field_d < 0) {
-            var4_ref_ra = (ra) (am.field_F.beginBackward(9272));
+            var4_ref_ra = (ra) (NameSuggestionsPanel.field_F.beginBackward(9272));
             if (var4_ref_ra != null &&
               var4_ref_ra.field_o < var2_long) {
               var4_ref_ra.unlink((byte) 12);
@@ -98,7 +98,7 @@ final class rj {
             for (var6 = 0; qh.field_d > var6; var6++) {
               var5.field_k[var6] = LevelEditor.field_j.payload[var6];
             }
-            am.field_F.addFirst(var5, param0 ^ 1491066943);
+            NameSuggestionsPanel.field_F.addFirst(var5, param0 ^ 1491066943);
             fg.field_d = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

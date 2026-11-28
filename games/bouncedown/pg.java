@@ -24,7 +24,7 @@ final class pg {
         int var2 = 0;
         int var1 = hj.a(24777);
         if (param0 == 0) {
-          var2 = nd.a(-21065);
+          var2 = NameSuggestionsPanel.a(-21065);
           cf.field_g.a(jl.field_a - td.field_a, -AccountRegistrationPanel.field_H + bb.field_b, var1 + (AccountRegistrationPanel.field_H << 1), -21907, var2 + (td.field_a << 1));
           ValidatedTextField.l(6);
           return;

@@ -376,14 +376,14 @@ final class d {
                         if (this.field_i == 1) {
                           SoftwareRasterizer.drawLine(var4, this.field_q, -(this.field_j / 32) + var4, this.field_q - this.field_e / 32, this.field_o);
                         }
-                        jg.field_C[4 + (-5 + 5 * this.field_i)].a(var4 - 3, this.field_q - 3, this.field_o);
+                        jg.field_C[4 + (-5 + 5 * this.field_i)].drawTintedGray(var4 - 3, this.field_q - 3, this.field_o);
                         break regionExit1;
                       case 3:
                         var4 = 0;
                         if (3 == this.field_h) {
                           var4 = param0 / 20 + this.field_d;
                         }
-                        jg.field_C[4].a(-3 + var4, -3 + this.field_q, this.field_o);
+                        jg.field_C[4].drawTintedGray(-3 + var4, -3 + this.field_q, this.field_o);
                         break regionExit1;
                       case 0:
                         var4 = (param0 >> 4) + this.field_d;
@@ -406,7 +406,7 @@ final class d {
                       case 5:
                         var4 = (param0 >> 4) + this.field_d;
                         if (14 > this.field_o) {
-                          ie.field_B[this.field_o].f(var4 - 16, -16 + this.field_q, 64);
+                          ie.field_B[this.field_o].drawAdditive(var4 - 16, -16 + this.field_q, 64);
                         }
                         return;
                       case 6:
@@ -414,12 +414,12 @@ final class d {
                         if (this.field_o >= 14) {
                           break regionExit1;
                         }
-                        ad.field_z[this.field_o].f(var4 - 16, this.field_q - 16, 64);
+                        ad.field_z[this.field_o].drawAdditive(var4 - 16, this.field_q - 16, 64);
                         break regionExit1;
                       case 7:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_o < 24) {
-                          oh.field_d[this.field_o].b(var4 - 64, this.field_q - 64, 128, 128, 255);
+                          oh.field_d[this.field_o].drawScaledAdditive(var4 - 64, this.field_q - 64, 128, 128, 255);
                         }
                         return;
                       case 8:
@@ -427,14 +427,14 @@ final class d {
                         if (24 <= this.field_o) {
                           break regionExit1;
                         }
-                        oh.field_d[this.field_o].b(var4 - 96, -96 + this.field_q, 192, 192, 255);
+                        oh.field_d[this.field_o].drawScaledAdditive(var4 - 96, -96 + this.field_q, 192, 192, 255);
                         break regionExit1;
                       default:
                         return;
                       case 9:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_o < 24) {
-                          oh.field_d[this.field_o].b(var4 - 128, -128 + this.field_q, 256, 256, 255);
+                          oh.field_d[this.field_o].drawScaledAdditive(var4 - 128, -128 + this.field_q, 256, 256, 255);
                         }
                         return;
                     }
@@ -444,28 +444,28 @@ final class d {
                   if (this.field_o != 65280) {
                     if (this.field_i > 2) {
                       if (3 == this.field_i) {
-                        ie.field_B[0].f(var4 - 8, this.field_q - 8, 192);
-                        ie.field_B[2].f(-8 + var4, -8 + (this.field_q + 4), 64);
-                        ie.field_B[4].f(-8 + var4, 8 + (-8 + this.field_q), 64);
-                        ie.field_B[6].f(var4 - 8, -8 + this.field_q + 12, 64);
-                        ie.field_B[8].f(-8 + var4, 8 + this.field_q, 64);
-                        ie.field_B[10].f(-8 + var4, -8 + this.field_q + 20, 64);
-                        ie.field_B[12].f(var4 - 8, 24 + (-8 + this.field_q), 64);
-                        ie.field_B[14].f(var4 - 8, 20 + this.field_q, 64);
+                        ie.field_B[0].drawAdditive(var4 - 8, this.field_q - 8, 192);
+                        ie.field_B[2].drawAdditive(-8 + var4, -8 + (this.field_q + 4), 64);
+                        ie.field_B[4].drawAdditive(-8 + var4, 8 + (-8 + this.field_q), 64);
+                        ie.field_B[6].drawAdditive(var4 - 8, -8 + this.field_q + 12, 64);
+                        ie.field_B[8].drawAdditive(-8 + var4, 8 + this.field_q, 64);
+                        ie.field_B[10].drawAdditive(-8 + var4, -8 + this.field_q + 20, 64);
+                        ie.field_B[12].drawAdditive(var4 - 8, 24 + (-8 + this.field_q), 64);
+                        ie.field_B[14].drawAdditive(var4 - 8, 20 + this.field_q, 64);
                       } else {
                         if (4 != this.field_i) {
-                          jg.field_C[9].a(6 + var4, this.field_q - 3, this.field_o);
-                          jg.field_C[9].a(12 + var4, -3 + this.field_q, this.field_o);
+                          jg.field_C[9].drawTintedGray(6 + var4, this.field_q - 3, this.field_o);
+                          jg.field_C[9].drawTintedGray(12 + var4, -3 + this.field_q, this.field_o);
                         } else {
-                          jg.field_C[9].a(-2 + var4, -3 + this.field_q, this.field_o);
-                          jg.field_C[9].a(4 + var4, -3 + this.field_q, this.field_o);
+                          jg.field_C[9].drawTintedGray(-2 + var4, -3 + this.field_q, this.field_o);
+                          jg.field_C[9].drawTintedGray(4 + var4, -3 + this.field_q, this.field_o);
                         }
                       }
                     } else {
-                      jg.field_C[5 * (-1 + this.field_i) + 4].a(-3 + var4, this.field_q - 3, this.field_o);
+                      jg.field_C[5 * (-1 + this.field_i) + 4].drawTintedGray(-3 + var4, this.field_q - 3, this.field_o);
                     }
                   } else {
-                    ie.field_A[this.field_f].f(var4 - 8, -8 + this.field_q, 128);
+                    ie.field_A[this.field_f].drawAdditive(var4 - 8, -8 + this.field_q, 128);
                   }
                 }
               }

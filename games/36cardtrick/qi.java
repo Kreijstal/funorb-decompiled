@@ -405,8 +405,8 @@ final class qi extends qg {
         int var5_intLifetime1Lifetime1;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_y instanceof hl) ||
-            ((hl) (this.field_y)).field_B) &&
+          if ((!(this.field_y instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_y)).field_B) &&
             this.field_x == 1) {
             var5_int = -this.field_C + eg.field_b - param1;
             var6 = ij.field_e + (-this.field_G - param0);

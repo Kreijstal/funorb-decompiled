@@ -36,7 +36,7 @@ final class tl {
             na.field_W = param8;
             d.field_d = param5;
             ld.field_k = param6;
-            rg.field_M = param12;
+            InteractiveWidget.field_M = param12;
             ac.field_b = param11;
             mc.field_a = param9;
             wm.field_db = param0;

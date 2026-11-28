@@ -515,7 +515,7 @@ class ChessBoardState {
           this.d(3, var13);
           this.a(param3, 0, param2, param1);
           this.a(-1, false, -1);
-          t.field_Q = true;
+          NameSuggestionsPanel.field_Q = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -54,7 +54,7 @@ class ButtonWidget extends UiWidget {
           this.field_D = false;
           if (this.field_l != null) {
             if (this.field_l instanceof ButtonListener) {
-              ((ButtonListener) (this.field_l)).a(this, param3, param0, param1, -27322);
+              ((ButtonListener) (this.field_l)).onWidgetActivated(this, param3, param0, param1, -27322);
             }
             return;
           }
@@ -64,7 +64,7 @@ class ButtonWidget extends UiWidget {
           return;
         }
         if (this.field_l instanceof ButtonListener) {
-          ((ButtonListener) (this.field_l)).a(this, param3, param0, param1, -27322);
+          ((ButtonListener) (this.field_l)).onWidgetActivated(this, param3, param0, param1, -27322);
           return;
         }
     }

@@ -428,12 +428,12 @@ final class bl extends l {
                   stackIn_51_0 = this.field_G;
                 }
                 var10 = stackIn_51_0;
-                var9.e(var3, var4);
-                var10.g(var3, -var10.field_B + this.field_c + this.field_j);
+                var9.draw(var3, var4);
+                var10.drawFlippedVertical(var3, -var10.field_B + this.field_c + this.field_j);
               }
               SoftwareRasterizer.fillRoundedRectangle(var3, 2 + (var4 + this.field_E), this.field_E, this.field_j - (this.field_l.field_k - (-(2 * this.field_M.field_t) - 4)), 3, 4013373);
               SoftwareRasterizer.fillRoundedRectangle(var3 + 2, this.field_E + var4 + 4, -4 + this.field_E, -8 + (-this.field_l.field_k + this.field_j - 2 * this.field_M.field_t), 3, 5921370);
-              this.field_A.e(-(this.field_A.field_x / 2) + this.field_E / 2 + var3, -(this.field_A.field_t / 2) + var8 + var4);
+              this.field_A.draw(-(this.field_A.field_x / 2) + this.field_E / 2 + var3, -(this.field_A.field_t / 2) + var8 + var4);
             }
             this.field_l.b(param0 ^ 109);
             if (this.field_n) {
@@ -482,24 +482,24 @@ final class bl extends l {
             var8Lifetime1 = var8Lifetime1 + var9_int * var7_ref_er__[1].field_y;
             var10_int = -this.field_D + (this.field_l.field_k + var2 - 2 * this.field_l.field_c) - var7_ref_er__[0].field_t / 2;
             var11 = -10 + this.field_g + (-var8Lifetime1 + this.field_f) / 2;
-            var7_ref_er__[0].e(var11, var10_int);
+            var7_ref_er__[0].draw(var11, var10_int);
             var11 = var11 + var7_ref_er__[0].field_y;
             for (var12 = 0; var9_int > var12; var12++) {
-              var7_ref_er__[1].e(var11, var10_int);
+              var7_ref_er__[1].draw(var11, var10_int);
               var11 = var11 + var7_ref_er__[1].field_y;
             }
-            var7_ref_er__[2].e(var11, var10_int);
+            var7_ref_er__[2].draw(var11, var10_int);
             this.field_l.a(var5_int, (byte) 78, -1, -10 + (this.field_g + this.field_f / 2 - var6Lifetime1 / 2), var4_ref_String, (-this.field_l.field_c + (-this.field_l.field_g + var7_ref_er__[1].field_t)) / 2 + var10_int + var7_ref_er__[0].field_t / 2);
             if (SocketConnector.field_c != null &&
               this.field_u) {
               if (te.field_B[var3] >= SocketConnector.field_c[var3]) {
-                MouseWheelInput.field_c.c(42, var10_int - 2);
+                MouseWheelInput.field_c.drawOpaque(42, var10_int - 2);
               } else {
                 if (sf.field_e[var3] >= SocketConnector.field_c[var3]) {
-                  kq.field_Kb.c(42, var10_int - 2);
+                  kq.field_Kb.drawOpaque(42, var10_int - 2);
                 } else {
                   if (!(SocketConnector.field_c[var3] > bp.field_E[var3])) {
-                    hh.field_a.c(42, var10_int - 2);
+                    hh.field_a.drawOpaque(42, var10_int - 2);
                   }
                 }
               }

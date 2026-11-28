@@ -462,7 +462,7 @@ final class TooltipPanel {
             var5 = this.field_a[var4];
             var6 = 0;
             if (var5 != null) {
-              var5.d(param0, this.field_u[var4] + param2);
+              var5.draw(param0, this.field_u[var4] + param2);
               var6 = var5.field_s;
             }
             var7 = this.field_u[var4] + (param2 + this.field_b.field_x);

@@ -71,7 +71,7 @@ final class kl extends UiPanel {
             }
             try {
               var3 = (String) (JavaScriptBridge.callWithoutArguments(param2, false, "getcookies"));
-              var4 = PcmOutputWorker.a((byte) -9, ';', var3);
+              var4 = PcmOutputWorker.splitStringOnCharacter((byte) -9, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

@@ -58,7 +58,7 @@ final class wn {
           var8 = SoftwareRasterizer.field_e;
           var9 = SoftwareRasterizer.field_j;
           SoftwareRasterizer.saveClip(this.field_a);
-          this.field_h.d();
+          this.field_h.bindAsRenderTarget();
           SoftwareRasterizer.restoreClip(this.field_a);
           this.field_f.drawString(param4, param3, param5, param0, param2);
           SoftwareRasterizer.setRasterBuffer(var10, var8, var9);
@@ -91,12 +91,12 @@ final class wn {
           var3 = SoftwareRasterizer.field_e;
           var4 = SoftwareRasterizer.field_j;
           SoftwareRasterizer.saveClip(this.field_a);
-          this.field_h.d();
+          this.field_h.bindAsRenderTarget();
           an.a((byte) 41, 0, 640, 480, 0);
           SoftwareRasterizer.setRasterBuffer(var2_ref_int__, var3, var4);
           SoftwareRasterizer.restoreClip(this.field_a);
-          this.field_h.e(0, 0);
-          this.field_h.d();
+          this.field_h.draw(0, 0);
+          this.field_h.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           ro.field_g.a(-39);
           this.field_e = false;
@@ -602,7 +602,7 @@ final class wn {
         int var12 = SoftwareRasterizer.field_e;
         int var13 = SoftwareRasterizer.field_j;
         SoftwareRasterizer.saveClip(this.field_a);
-        this.field_h.d();
+        this.field_h.bindAsRenderTarget();
         if (param6 != 1) {
           return;
         }

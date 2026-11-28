@@ -130,41 +130,41 @@ final class NanoFrameTimer extends FrameTimer {
                     if (0.0 != var8_double) {
                       if (64.0 == var8_double) {
                         var10 = ng.field_u / 2 % 3;
-                        ie.field_b[var10].c(var5 - 16, -56 + var6);
+                        ie.field_b[var10].drawOpaque(var5 - 16, -56 + var6);
                         var10++;
                         if (var10 >= ie.field_b.length) {
                           var10 = 0;
                         }
-                        ie.field_b[var10].c(var5 - 16, 23 + var6);
+                        ie.field_b[var10].drawOpaque(var5 - 16, 23 + var6);
                       } else {
                         if (128.0 == var8_double) {
                           var10 = ng.field_u / 2 % 3;
-                          ie.field_b[var10].c(-56 + var5, -16 + var6);
+                          ie.field_b[var10].drawOpaque(-56 + var5, -16 + var6);
                           var10++;
                           if (ie.field_b.length <= var10) {
                             var10 = 0;
                           }
-                          ie.field_b[var10].c(23 + var5, -16 + var6);
+                          ie.field_b[var10].drawOpaque(23 + var5, -16 + var6);
                         } else {
                           if (192.0 == var8_double) {
                             var10 = ng.field_u / 2 % 3;
-                            ie.field_b[var10].c(var5 - 16, -55 + var6);
+                            ie.field_b[var10].drawOpaque(var5 - 16, -55 + var6);
                             var10++;
                             if (var10 >= ie.field_b.length) {
                               var10 = 0;
                             }
-                            ie.field_b[var10].c(-16 + var5, 24 + var6);
+                            ie.field_b[var10].drawOpaque(-16 + var5, 24 + var6);
                           }
                         }
                       }
                     } else {
                       var10 = ng.field_u / 2 % 3;
-                      ie.field_b[var10].c(-54 + var5, var6 - 16);
+                      ie.field_b[var10].drawOpaque(-54 + var5, var6 - 16);
                       var10++;
                       if (var10 >= ie.field_b.length) {
                         var10 = 0;
                       }
-                      ie.field_b[var10].c(25 + var5, var6 - 16);
+                      ie.field_b[var10].drawOpaque(25 + var5, var6 - 16);
                     }
                   }
                 }

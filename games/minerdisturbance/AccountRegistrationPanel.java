@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends kn implements be, sh, f {
+final class AccountRegistrationPanel extends kn implements be, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_P;
     static String field_S;
     private ti field_V;
     private tn field_L;
-    ei field_U;
+    NameSuggestionsPanel field_U;
     static String[] field_N;
-    private hc field_K;
+    private InteractiveWidget field_K;
     private ValidatedTextField field_Q;
     private ValidatedTextField field_O;
-    private hc field_R;
+    private InteractiveWidget field_R;
     static int field_T;
     private ValidatedTextField field_J;
     private ValidatedTextField field_I;
     private ValidatedTextField field_M;
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var5 = null;
         try {
@@ -30,10 +30,10 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_I.getFieldValidator(35))).b((byte) -78);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_I.getFieldValidator(35))).invalidateCheckedName((byte) -78);
         if (param0 != 47) {
-          this.field_U = (ei) null;
+          this.field_U = (NameSuggestionsPanel) null;
         }
     }
 
@@ -122,7 +122,7 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
         return "</col></u>";
     }
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -367,8 +367,8 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
         this.field_Q = new ValidatedTextField("", (rm) null, 3);
         int var1 = 1;
         this.field_V = new ti("", (rm) null, var1 != 0);
-        this.field_K = new hc(cg.field_r, (rm) null);
-        this.field_R = new hc(hk.field_c, (rm) null);
+        this.field_K = new InteractiveWidget(cg.field_r, (rm) null);
+        this.field_R = new InteractiveWidget(hk.field_c, (rm) null);
         this.field_I.field_n = ImageProducerRasterBuffer.field_l;
         this.field_P.field_n = fm.field_I;
         this.field_M.field_n = lg.field_b;
@@ -422,7 +422,7 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
         this.field_K.field_y = (rm) (this);
         this.a(-1, this.field_K);
         this.a(-1, this.field_R);
-        this.field_U = new ei((f) (this));
+        this.field_U = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_U.a(150, -36, 60 + this.field_I.field_v + this.field_I.field_u, this.field_v - (this.field_I.field_u - (-this.field_I.field_v - 60)), 20 + this.field_I.field_t);
         this.a(-1, this.field_U);
         this.a(55 + (var3 + var6), -45, 0, 496, 0);
@@ -438,7 +438,7 @@ final class AccountRegistrationPanel extends kn implements be, sh, f {
             return false;
           }
           if (!param0) {
-            this.field_U = (ei) null;
+            this.field_U = (NameSuggestionsPanel) null;
           }
           return true;
         }

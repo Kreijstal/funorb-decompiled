@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends lc implements TextFieldListener, rc {
+final class LoginPanel extends lc implements TextFieldListener, WidgetActivationListener {
     private boolean field_J;
     private String field_E;
-    private wd field_H;
+    private InteractiveWidget field_H;
     private EditableTextField field_z;
     private EditableTextField field_I;
     private boolean field_B;
-    private wd field_D;
-    private wd field_K;
+    private InteractiveWidget field_D;
+    private InteractiveWidget field_K;
     static IntrusiveDeque field_F;
     static RgbSprite[] field_G;
     private boolean field_C;
@@ -101,7 +101,7 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -173,10 +173,10 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        wd stackIn_17_1 = null;
-        wd stackIn_17_2 = null;
-        wd stackIn_18_1 = null;
-        wd stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -206,11 +206,11 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
           this.field_I = (EditableTextField) ((Object) new ValidatedTextField(param0, (sk) (this), 100));
           this.field_z = (EditableTextField) ((Object) new ValidatedTextField("", (sk) (this), 20));
           if (this.field_J) {
-            this.field_D = new wd(mh.field_W, (sk) null);
-            this.field_K = new wd(i.field_g, (sk) null);
+            this.field_D = new InteractiveWidget(mh.field_W, (sk) null);
+            this.field_K = new InteractiveWidget(i.field_g, (sk) null);
             this.field_I.field_y = false;
           } else {
-            this.field_D = new wd(bi.field_k, (sk) null);
+            this.field_D = new InteractiveWidget(bi.field_k, (sk) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_B) {
@@ -222,9 +222,9 @@ final class LoginPanel extends lc implements TextFieldListener, rc {
               stackIn_18_2 = null;
               stackIn_18_3 = bi.field_i;
             }
-            this.field_K = new wd(stackIn_18_3, (sk) null);
+            this.field_K = new InteractiveWidget(stackIn_18_3, (sk) null);
             if (this.field_C) {
-              this.field_H = new wd(ResourceArchive.field_m, (sk) (this));
+              this.field_H = new InteractiveWidget(ResourceArchive.field_m, (sk) (this));
             }
           }
           this.field_I.field_j = (fc) ((Object) new tc(10000536));

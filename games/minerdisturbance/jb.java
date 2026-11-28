@@ -46,7 +46,7 @@ final class jb extends IntrusiveNode {
         var26 = MinerDisturbance.field_ab;
         try {
           param3 = 640 + (-param3 - 640);
-          ol.field_c.f(param3 + (320 - (ol.field_c.field_x >> 1)), 15);
+          ol.field_c.draw(param3 + (320 - (ol.field_c.field_x >> 1)), 15);
           var6 = -33 % ((-13 - param1) / 33);
           if (!param0) {
             stackIn_4_0 = sj.field_d;
@@ -117,9 +117,9 @@ final class jb extends IntrusiveNode {
                 var13 <= NodeHashTableIterator.field_e &&
                 NodeHashTableIterator.field_e <= 32 + var13) {
                 if (qh.field_c < 0) {
-                  te.field_d[0].f(var12 - 16, -8 + var13);
+                  te.field_d[0].draw(var12 - 16, -8 + var13);
                   if (qh.field_c < 10) {
-                    te.field_d[ph.field_c / 4 % 5].f(-16 + var12, -8 + var13);
+                    te.field_d[ph.field_c / 4 % 5].draw(-16 + var12, -8 + var13);
                   }
                 }
                 var15 = var18;
@@ -127,13 +127,13 @@ final class jb extends IntrusiveNode {
               if (ah.field_e == var18) {
                 if (qh.field_c >= 0) {
                   if (qh.field_c >= 5) {
-                    te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                    te.field_d[qh.field_c].draw(var12 - 16, -8 + var13);
                   } else {
-                    te.field_d[0].f(-16 + var12, var13 - 8);
-                    te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                    te.field_d[0].draw(-16 + var12, var13 - 8);
+                    te.field_d[qh.field_c].draw(var12 - 16, -8 + var13);
                   }
                 } else {
-                  mb.field_d[4].f(var12 - 1, -4 + var13);
+                  mb.field_d[4].draw(var12 - 1, -4 + var13);
                 }
               }
               var14++;
@@ -164,11 +164,11 @@ final class jb extends IntrusiveNode {
             var21 = 30 + (278 - var11);
             var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
-              ha.field_c.f(30 + var19, var21 + 7);
+              ha.field_c.draw(30 + var19, var21 + 7);
               var21 += 30;
               mm.field_a.drawString(mc.field_e, 150 + var19, var21, 33023, -1);
             } else {
-              nj.field_c[var15].f(var19 + 30, 7 + var21);
+              nj.field_c[var15].draw(var19 + 30, 7 + var21);
               var21 += 30;
               mm.field_a.drawString(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
             }
@@ -333,7 +333,7 @@ final class jb extends IntrusiveNode {
         var26 = MinerDisturbance.field_ab;
         try {
           param3 = 640 + (-param3 - 640);
-          ol.field_c.f(param3 + (320 - (ol.field_c.field_x >> 1)), 15);
+          ol.field_c.draw(param3 + (320 - (ol.field_c.field_x >> 1)), 15);
           var6 = -33 % ((-13 - param1) / 33);
           if (!param0) {
             stackIn_4_0 = sj.field_d;
@@ -404,9 +404,9 @@ final class jb extends IntrusiveNode {
                 var13 <= NodeHashTableIterator.field_e &&
                 NodeHashTableIterator.field_e <= 32 + var13) {
                 if (qh.field_c < 0) {
-                  te.field_d[0].f(var12 - 16, -8 + var13);
+                  te.field_d[0].draw(var12 - 16, -8 + var13);
                   if (qh.field_c < 10) {
-                    te.field_d[ph.field_c / 4 % 5].f(-16 + var12, -8 + var13);
+                    te.field_d[ph.field_c / 4 % 5].draw(-16 + var12, -8 + var13);
                   }
                 }
                 var15 = var18;
@@ -414,13 +414,13 @@ final class jb extends IntrusiveNode {
               if (ah.field_e == var18) {
                 if (qh.field_c >= 0) {
                   if (qh.field_c >= 5) {
-                    te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                    te.field_d[qh.field_c].draw(var12 - 16, -8 + var13);
                   } else {
-                    te.field_d[0].f(-16 + var12, var13 - 8);
-                    te.field_d[qh.field_c].f(var12 - 16, -8 + var13);
+                    te.field_d[0].draw(-16 + var12, var13 - 8);
+                    te.field_d[qh.field_c].draw(var12 - 16, -8 + var13);
                   }
                 } else {
-                  mb.field_d[4].f(var12 - 1, -4 + var13);
+                  mb.field_d[4].draw(var12 - 1, -4 + var13);
                 }
               }
               var14++;
@@ -451,11 +451,11 @@ final class jb extends IntrusiveNode {
             var21 = 30 + (278 - var11);
             var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
-              ha.field_c.f(30 + var19, var21 + 7);
+              ha.field_c.draw(30 + var19, var21 + 7);
               var21 += 30;
               mm.field_a.drawString(mc.field_e, 150 + var19, var21, 33023, -1);
             } else {
-              nj.field_c[var15].f(var19 + 30, 7 + var21);
+              nj.field_c[var15].draw(var19 + 30, 7 + var21);
               var21 += 30;
               mm.field_a.drawString(dl.field_f, 50 + (var19 + 150), var21, 33023, -1);
             }

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends kj implements TextFieldListener, sg {
+final class LoginPanel extends kj implements TextFieldListener, WidgetActivationListener {
     private boolean field_P;
-    private ng field_R;
+    private InteractiveWidget field_R;
     private boolean field_K;
     private String field_U;
     private EditableTextField field_T;
     private EditableTextField field_Q;
-    private ng field_O;
+    private InteractiveWidget field_O;
     static boolean field_S;
     static int[] field_M;
     private boolean field_L;
     static int field_N;
-    private ng field_J;
+    private InteractiveWidget field_J;
 
     final static void i(int param0) {
         eb.field_m = false;
@@ -90,10 +90,10 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        ng stackIn_18_1 = null;
-        ng stackIn_18_2 = null;
-        ng stackIn_19_1 = null;
-        ng stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -123,7 +123,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
           this.field_T = (EditableTextField) ((Object) new ValidatedTextField(param0, (gg) (this), 100));
           this.field_Q = (EditableTextField) ((Object) new ValidatedTextField("", (gg) (this), 20));
           if (!this.field_P) {
-            this.field_J = new ng(s.field_p, (gg) null);
+            this.field_J = new InteractiveWidget(s.field_p, (gg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_K) {
@@ -135,13 +135,13 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
               stackIn_19_2 = null;
               stackIn_19_3 = b.field_R;
             }
-            this.field_R = new ng(stackIn_19_3, (gg) null);
+            this.field_R = new InteractiveWidget(stackIn_19_3, (gg) null);
             if (this.field_L) {
-              this.field_O = new ng(RandomAccessCacheFile.field_a, (gg) (this));
+              this.field_O = new InteractiveWidget(RandomAccessCacheFile.field_a, (gg) (this));
             }
           } else {
-            this.field_J = new ng(qb.field_e, (gg) null);
-            this.field_R = new ng(ph.field_f, (gg) null);
+            this.field_J = new InteractiveWidget(qb.field_e, (gg) null);
+            this.field_R = new InteractiveWidget(ph.field_f, (gg) null);
             this.field_T.field_F = false;
           }
           this.field_T.field_q = (j) ((Object) new fk(10000536));
@@ -166,7 +166,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
               this.field_R.field_q = (j) ((Object) new me());
             }
           } else {
-            this.field_R.field_r = ng.field_J;
+            this.field_R.field_r = InteractiveWidget.field_J;
           }
           this.field_i = 15;
           var7 = RasterBuffer.field_g;
@@ -266,7 +266,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
         }
         super.a(param0, param1, param2, param3);
         if (param2) {
-          this.field_J = (ng) null;
+          this.field_J = (InteractiveWidget) null;
         }
     }
 
@@ -359,7 +359,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
         }
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -388,7 +388,7 @@ final class LoginPanel extends kj implements TextFieldListener, sg {
             this.submitLogin(110);
           }
           if (param4) {
-            this.field_O = (ng) null;
+            this.field_O = (InteractiveWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

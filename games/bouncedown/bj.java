@@ -240,8 +240,8 @@ final class bj extends ak {
           if (param0 != -1) {
             return;
           }
-          if ((!(this.field_x instanceof wd) ||
-            ((wd) (this.field_x)).field_y) &&
+          if ((!(this.field_x instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_x)).field_y) &&
             this.field_u == 1) {
             var5_int = -param1 + (-this.field_B + uc.field_C);
             var6 = ll.field_y - this.field_H - param2;
@@ -385,7 +385,7 @@ final class bj extends ak {
             return true;
           }
           this.field_H = -param6 + (-this.field_i + param5);
-          nd.field_A = this;
+          NameSuggestionsPanel.field_A = this;
           this.field_B = -param2 + (param3 - this.field_r);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

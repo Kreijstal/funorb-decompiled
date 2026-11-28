@@ -43,7 +43,7 @@ final class ac {
               ArchiveRequest.field_n.drawParagraph(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.d(245, 199);
+            var6.draw(245, 199);
           }
           if (ti.field_e < uc.field_e) {
             var7Lifetime2 = jb.field_d[vb.field_g];

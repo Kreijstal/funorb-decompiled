@@ -60,7 +60,7 @@ final class vg {
           this.a(true, -9, -1, 116);
         }
         IntrusiveNode.field_d.drawRightAligned(ArchiveRequest.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
-        SpriteState.field_t.c(166, param0);
+        SpriteState.field_t.draw(166, param0);
     }
 
     private final boolean a(int param0, boolean param1) {
@@ -155,12 +155,12 @@ final class vg {
               var9 != 15 ||
               (32768 & var6) != 0) {
               if ((1 << var9 & var6) != 0) {
-                fc.field_h[var9].e(var4, param2 + var5);
+                fc.field_h[var9].drawQuarterSizeAveraged(var4, param2 + var5);
               } else {
                 if (param0) {
                   break regionExit1;
                 }
-                LoginPanel.field_z.e(var4, var5 + param2);
+                LoginPanel.field_z.drawQuarterSizeAveraged(var4, var5 + param2);
               }
               if (var4 <= PacketBuffer.field_j &&
                 32 + var4 >= PacketBuffer.field_j &&
@@ -211,9 +211,9 @@ final class vg {
             IntrusiveNode.field_d.drawCentred(LoginPanel.field_x, 438, var9Lifetime1 + 206 + param2, 16711680, -1);
           }
           if (var10 == 0) {
-            LoginPanel.field_z.c(263, 206 + var9Lifetime1 + param2);
+            LoginPanel.field_z.draw(263, 206 + var9Lifetime1 + param2);
           } else {
-            fc.field_h[var8].c(263, param2 + (206 + var9Lifetime1));
+            fc.field_h[var8].draw(263, param2 + (206 + var9Lifetime1));
           }
           var11 = 4 + (IntrusiveNode.field_d.field_y * 2 + (206 + param2));
           var12 = new String[16];
@@ -232,7 +232,7 @@ final class vg {
           IntrusiveNode.field_d.drawString(DisplayNameSelectionPanel.field_F, var4Lifetime1, var11, 0, -1);
           var4Lifetime1 = var4Lifetime1 + IntrusiveNode.field_d.stringWidth(DisplayNameSelectionPanel.field_F);
           for (var14Lifetime1 = 0; wd.field_k[var8] > var14Lifetime1; var14Lifetime1++) {
-            og.field_b.c(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
+            og.field_b.draw(var4Lifetime1, -IntrusiveNode.field_d.field_y + var11);
             var4Lifetime1 = var4Lifetime1 + og.field_b.field_n / 3;
           }
         } else {
@@ -405,11 +405,11 @@ final class vg {
                       var7 == 0) {
                       break regionExit2;
                     }
-                    if ((!(lj.field_u.isLinked(8)) ||
-                      lj.field_u.isSamplePositionOutOfRange())) {
-                      lj.field_u.setSamplePosition(0);
-                      lj.field_u.setScaledVolume(255);
-                      ic.a(lj.field_u, 4);
+                    if ((!(InteractiveWidget.field_u.isLinked(8)) ||
+                      InteractiveWidget.field_u.isSamplePositionOutOfRange())) {
+                      InteractiveWidget.field_u.setSamplePosition(0);
+                      InteractiveWidget.field_u.setScaledVolume(255);
+                      ic.a(InteractiveWidget.field_u, 4);
                     }
                     break regionExit1;
                   }
@@ -844,7 +844,7 @@ final class vg {
                     var5_ref_mi.drawString(var17, 268, var12, var14, -1);
                     var5_ref_mi.drawRightAligned(Integer.toString(var15), 520, var12, var14, -1);
                     var18 = BufferedRandomAccessFile.field_l[var16].field_a;
-                    var18.f(528, -1 + (-var5_ref_mi.field_y + (var12 + var5_ref_mi.field_C)) - (24 - (-var18.field_m + 24) / 2));
+                    var18.drawOpaque(528, -1 + (-var5_ref_mi.field_y + (var12 + var5_ref_mi.field_C)) - (24 - (-var18.field_m + 24) / 2));
                     var3 = "";
                   }
                   var12 += 28;
@@ -855,7 +855,7 @@ final class vg {
                   var5_ref_mi.drawString(NodeHashTableIterator.field_a, 268, var12, 255, -1);
                   var5_ref_mi.drawRightAligned(Integer.toString(SecondaryNodeDeque.field_g), 520, var12, 255, -1);
                   var13 = MouseInputHandler.field_c.field_a;
-                  var13.f(528, (24 - var13.field_m) / 2 + (-1 + var5_ref_mi.field_C - var5_ref_mi.field_y) + (var12 - 24));
+                  var13.drawOpaque(528, (24 - var13.field_m) / 2 + (-1 + var5_ref_mi.field_C - var5_ref_mi.field_y) + (var12 - 24));
                 }
                 break regionExit1;
               }
@@ -899,7 +899,7 @@ final class vg {
         int var5Lifetime2;
         int var5Lifetime3;
         var7 = Transmogrify.field_A ? 1 : 0;
-        rk.field_r[this.field_i].f(0, param1);
+        rk.field_r[this.field_i].drawOpaque(0, param1);
         if (this.field_i != 2) {
           if (3 == this.field_i) {
             this.e(param1, -92);
@@ -1183,7 +1183,7 @@ final class vg {
             var13 = var11.stringWidth(var9);
             var14 = 36 + var13;
             var15 = var6 + var7 - var14 >> 1;
-            var12_ref_ti.c(var13 + (var15 + (36 - var12_ref_ti.field_n) / 2), -24 + var5 + (var11.field_C - 1) + (-var12_ref_ti.field_m + 24) / 2);
+            var12_ref_ti.draw(var13 + (var15 + (36 - var12_ref_ti.field_n) / 2), -24 + var5 + (var11.field_C - 1) + (-var12_ref_ti.field_m + 24) / 2);
             if (!param0) {
               var11.drawString(var9, var15, var11.field_y + var5, var10, -1);
             } else {

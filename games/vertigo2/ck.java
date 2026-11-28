@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends d {
+final class ck extends InteractiveWidget {
     static String[][] field_H;
     static String field_K;
     static SecondaryNodeHashTable field_I;
     static int field_J;
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
         this.field_G = !this.field_G ? true : false;
         if (param2 > 111) {
-          super.a(param0, param1, (byte) 126, param3);
+          super.activateFromInput(param0, param1, (byte) 126, param3);
           return;
         }
         ck.clearStaticReferences(false);
-        super.a(param0, param1, (byte) 126, param3);
+        super.activateFromInput(param0, param1, (byte) 126, param3);
     }
 
     private ck(String param0, WidgetListener param1, uf param2) {

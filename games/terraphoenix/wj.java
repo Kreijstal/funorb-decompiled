@@ -34,7 +34,7 @@ final class wj {
             ig.a(2, 12);
           }
           if (null != a.field_b) {
-            am.a((byte) -114, a.field_b);
+            NameSuggestionsPanel.a((byte) -114, a.field_b);
             var2 = 2;
           } else {
             var2 = 3;
@@ -88,13 +88,13 @@ final class wj {
             if (va.field_e == mh.field_a) {
               if (param0) {
                 var10 = (String) null;
-                am.field_K = NetworkArchiveRequest.a(SpriteState.field_y, false, -95, param2, (String) null);
+                NameSuggestionsPanel.field_K = NetworkArchiveRequest.a(SpriteState.field_y, false, -95, param2, (String) null);
               } else {
-                am.field_K = ji.a(-1, param3, false, param2);
+                NameSuggestionsPanel.field_K = ji.a(-1, param3, false, param2);
               }
               TextFieldValidator.field_l.position = 0;
               TextFieldValidator.field_l.writeByte(14, 28);
-              TextFieldValidator.field_l.writeByte(am.field_K.c(0).field_c, -115);
+              TextFieldValidator.field_l.writeByte(NameSuggestionsPanel.field_K.c(0).field_c, -115);
               bc.a(-1, 0);
               mh.field_a = s.field_c;
             }
@@ -117,7 +117,7 @@ final class wj {
               FrameTimer.a(-110, 8)) {
               kd.field_c = LevelEditor.field_j.readLong((byte) 78);
               LevelEditor.field_j.position = 0;
-              gj.a(param0, param4, 1, am.field_K, param5);
+              gj.a(param0, param4, 1, NameSuggestionsPanel.field_K, param5);
               mh.field_a = DebouncedFieldValidator.field_b;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -180,8 +180,8 @@ final class wj {
               IntrusiveDeque.field_e = hm.a((byte) 2, var11);
               MouseInputHandler.field_b = LevelEditor.field_j.readUnsignedByte(-16384);
               mh.field_a = od.field_g;
-              if (am.field_K.c(0) != rj.field_a) {
-                if (am.field_K.c(param1 ^ 29398) == hf.field_s) {
+              if (NameSuggestionsPanel.field_K.c(0) != rj.field_a) {
+                if (NameSuggestionsPanel.field_K.c(param1 ^ 29398) == hf.field_s) {
                   GameShell.field_u.a(dg.a(false), (byte) 117);
                 }
               } else {

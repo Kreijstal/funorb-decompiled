@@ -136,11 +136,11 @@ final class MixedSupport143 {
         RuntimeException caughtExceptionLocal8 = null;
         try {
           sceneWidgetLocal1 = new SceneWidget(0L, (SceneWidget) null);
-          sceneWidgetLocal1.rgbSpriteArrayState0033 = UiComponentPart007.computeRgbSpriteArray0358(integerArgument10, 0, integerArgument7);
-          sceneWidgetLocal1.rgbSpriteArrayState0035 = UiComponentPart007.computeRgbSpriteArray0358(integerArgument4, 0, integerArgument2);
-          sceneWidgetLocal1.rgbSpriteArrayState0036 = UiComponentPart007.computeRgbSpriteArray0358(integerArgument1, 0, integerArgument6);
-          sceneWidgetLocal1.rgbSpriteArrayState0032 = UiComponentPart007.computeRgbSpriteArray0358(integerArgument5, integerArgument12 + 24447, integerArgument9);
-          sceneWidgetLocal1.rgbSpriteArrayState0034 = UiComponentPart007.computeRgbSpriteArray0358(integerArgument11, 0, integerArgument8);
+          sceneWidgetLocal1.rgbSpriteArrayState0033 = NameSuggestionsPanel.computeRgbSpriteArray0358(integerArgument10, 0, integerArgument7);
+          sceneWidgetLocal1.rgbSpriteArrayState0035 = NameSuggestionsPanel.computeRgbSpriteArray0358(integerArgument4, 0, integerArgument2);
+          sceneWidgetLocal1.rgbSpriteArrayState0036 = NameSuggestionsPanel.computeRgbSpriteArray0358(integerArgument1, 0, integerArgument6);
+          sceneWidgetLocal1.rgbSpriteArrayState0032 = NameSuggestionsPanel.computeRgbSpriteArray0358(integerArgument5, integerArgument12 + 24447, integerArgument9);
+          sceneWidgetLocal1.rgbSpriteArrayState0034 = NameSuggestionsPanel.computeRgbSpriteArray0358(integerArgument11, 0, integerArgument8);
           sceneWidgetLocal1.integerState0910 = integerArgument3;
           if (integerArgument12 != -24447) {
             sceneWidgetLocal3 = (SceneWidget) null;
@@ -189,10 +189,10 @@ final class MixedSupport143 {
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
           RenderingSupport002.performAction0243(integerArgument6, 2, 1, integerArgument4 + 18, integerArgument3 + 72 + 1, 1, -2);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
           return;
         }
         if (integerArgument7 < 80) {
@@ -201,10 +201,10 @@ final class MixedSupport143 {
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
           RenderingSupport002.performAction0243(integerArgument6, 2, 1, integerArgument4 + 18, integerArgument3 + 72 + 1, 1, -2);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
           return;
         }
         if (93 > integerArgument7) {
@@ -213,10 +213,10 @@ final class MixedSupport143 {
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
           RenderingSupport002.performAction0243(integerArgument6, 2, 1, integerArgument4 + 18, integerArgument3 + 72 + 1, 1, -2);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
           return;
         }
         SoftwareRaster.fillRoundedRectangleAlpha(integerArgument4 - 3, integerArgument3 + 36 - 3, 60, 60, 4, 65280, 100);
@@ -224,10 +224,10 @@ final class MixedSupport143 {
         RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
         RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
         RenderingSupport002.performAction0243(integerArgument6, 2, 1, integerArgument4 + 18, integerArgument3 + 72 + 1, 1, -2);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].performAction0280(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, integerArgument3 + 36, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 18, 54 + integerArgument3, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(integerArgument4 + 36, 72 + integerArgument3, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument6][2].drawScaled(36 + integerArgument4, integerLocal2 + (integerArgument3 + integerLocal3), 18, 18 - integerLocal3);
     }
 
     static {

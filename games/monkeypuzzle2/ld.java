@@ -65,14 +65,14 @@ final class ld {
           if (param1 != -24612) {
             return false;
           }
-          if (cm.field_G == param2.field_bb) {
+          if (NameSuggestionsPanel.field_G == param2.field_bb) {
             var3_int -= 200;
           } else {
             if (null == param2.field_bb) {
               var3_int += 200;
             }
           }
-          if (cm.field_G != param0.field_bb) {
+          if (NameSuggestionsPanel.field_G != param0.field_bb) {
             if (null == param0.field_bb) {
               var3_int -= 200;
             }

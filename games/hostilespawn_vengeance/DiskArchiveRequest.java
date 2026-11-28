@@ -91,7 +91,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             if (0 > var5) {
               var6 = ce.field_c;
             } else {
-              if (mc.field_F.field_f != var5) {
+              if (NameSuggestionsPanel.field_F.field_f != var5) {
                 var6 = nf.field_m;
               } else {
                 var6 = hh.field_e;
@@ -140,7 +140,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             var9Lifetime1 = wk.field_c - (var8Lifetime1 >> 1);
             if (var5 >= 0) {
               var1_int = var1_int + cl.field_l;
-              if (mc.field_F.field_f == var5) {
+              if (NameSuggestionsPanel.field_F.field_f == var5) {
                 stackIn_43_0 = al.field_N;
               } else {
                 stackIn_43_0 = tk.field_c;

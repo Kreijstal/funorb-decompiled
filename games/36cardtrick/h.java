@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class h extends hl {
+final class h extends InteractiveWidget {
     int field_J;
     private fl field_H;
     private int field_G;

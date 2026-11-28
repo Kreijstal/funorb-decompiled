@@ -306,7 +306,7 @@ abstract class jc extends qf {
         if (param1 != -77) {
           field_O = (ik) null;
         }
-        PacketBuffer.field_k.d(-90 + (param0 + this.field_h), 10 + param2);
+        PacketBuffer.field_k.draw(-90 + (param0 + this.field_h), 10 + param2);
         cd.a(se.field_G, this.field_h - 10, (byte) -94, param0 + 5, param2 + 35);
         cd.a(rc.field_k, this.field_h, (byte) -94, param0, -22 + this.field_q + param2);
         var4Lifetime2 = this.field_q - 79;

@@ -37,7 +37,7 @@ abstract class al extends nb {
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
         if (AccountRequestState.field_c.field_p < this.field_j) {
@@ -47,7 +47,7 @@ abstract class al extends nb {
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
         if (this.field_v <= AccountRequestState.field_c.field_u) {
@@ -56,7 +56,7 @@ abstract class al extends nb {
           this.a(0, (byte) 115, 0);
           super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
           pd.a(-22949);
-          AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+          AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
           return;
         }
         AccountRequestState.field_c = new RgbSprite(this.field_j, this.field_v);
@@ -65,7 +65,7 @@ abstract class al extends nb {
         this.a(0, (byte) 115, 0);
         super.a(param0, -this.field_o - param1, -param2 - this.field_t, param3);
         pd.a(-22949);
-        AccountRequestState.field_c.b(param2 + this.field_t, this.field_o + param1, this.field_E);
+        AccountRequestState.field_c.drawWithOpacity(param2 + this.field_t, this.field_o + param1, this.field_E);
     }
 
     boolean a(byte param0) {

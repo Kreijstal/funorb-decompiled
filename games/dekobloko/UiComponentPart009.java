@@ -36,7 +36,7 @@ final class UiComponentPart009 extends InteractiveComponent {
         try {
           if (rgbSpriteArgument3 != SceneWidgetPart011.rgbSpriteState0058) {
             if (rgbSpriteArgument3 != null) {
-              rgbSpriteArgument3.performAction0291(0, integerArgument4, integerArgument5);
+              rgbSpriteArgument3.drawWithIntensity(0, integerArgument4, integerArgument5);
             } else {
               SoftwareRaster.fillRectangle(0, 0, 640, 480, 0);
             }
@@ -108,9 +108,9 @@ final class UiComponentPart009 extends InteractiveComponent {
         }
     }
 
-    final void performAction0378(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void activateFromInput(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         this.booleanState0034 = !this.booleanState0034 ? true : false;
-        super.performAction0378(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
+        super.activateFromInput(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
     }
 
     final static boolean computeBoolean0376(int integerArgument1) {

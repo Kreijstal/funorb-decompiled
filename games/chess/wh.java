@@ -74,25 +74,25 @@ final class wh {
         int var8 = 7 % ((param0 + 10) / 58);
         int var9 = SoftwareRasterizer.field_c;
         RgbSprite var10 = new RgbSprite(param2, param1 - 2 * param2);
-        var10.e();
+        var10.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, param2, -(2 * param2) + param1, param3, param4);
         RgbSprite var11 = new RgbSprite(param2, param2);
-        var11.e();
+        var11.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param3);
         RgbSprite var12 = new RgbSprite(16, param2);
-        var12.e();
+        var12.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param3);
         RgbSprite var13 = new RgbSprite(param2, param2);
-        var13.e();
+        var13.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param2, param2, param4);
         RgbSprite var14 = new RgbSprite(16, param2);
-        var14.e();
+        var14.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param2, param4);
         Object var15 = null;
         if (param5 > 0) {
           var17 = new RgbSprite(16, 16);
           var15 = var17;
-          var17.e();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param5);
         }
         SoftwareRasterizer.setRasterBuffer(var19, var7, var9);

@@ -51,9 +51,9 @@ final class ma extends pn {
         int var7;
         if (param1 == 24 &&
           24 == param2) {
-          this.field_q.d(param4, param5 - param2, 256);
+          this.field_q.drawAdditive(param4, param5 - param2, 256);
         } else {
-          this.field_q.a(param4, param5 - param2, param1 * 2, 3 * param2, 256);
+          this.field_q.drawScaledAdditive(param4, param5 - param2, param1 * 2, 3 * param2, 256);
         }
         var7 = 85 % ((param0 - 74) / 41);
     }

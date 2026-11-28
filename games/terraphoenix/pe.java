@@ -16,7 +16,7 @@ final class pe {
           ml.field_s = param3;
           ng.field_y = param2;
           ai.field_c = param8;
-          eb.field_B = param1;
+          InteractiveWidget.field_B = param1;
           AccountCreationResultPanel.field_wb = param5;
           lg.field_h = param4;
           if (param6 != 128) {

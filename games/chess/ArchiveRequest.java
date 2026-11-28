@@ -32,14 +32,14 @@ abstract class ArchiveRequest extends DualLinkNode {
               ArchiveRequest.a(13, -74, (String) null);
             }
             var8 = param5[1].field_v;
-            param5[0].e(param2, param3, param0);
-            param5[2].e(param1 + (param2 - var7), param3, param0);
+            param5[0].drawTintedGray(param2, param3, param0);
+            param5[2].drawTintedGray(param1 + (param2 - var7), param3, param0);
             SoftwareRasterizer.saveClip(IntrusiveNode.field_d);
             SoftwareRasterizer.intersectClip(param2 + var6_int, param3, -var7 + (param1 + param2), param3 + param5[1].field_u);
             var9 = param2 + var6_int;
             var10 = -var7 + (param1 + param2);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
-              param5[1].e(param2, param3, param0);
+              param5[1].drawTintedGray(param2, param3, param0);
             }
             SoftwareRasterizer.restoreClip(IntrusiveNode.field_d);
             return;

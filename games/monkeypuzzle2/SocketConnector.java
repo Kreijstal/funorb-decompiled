@@ -45,7 +45,7 @@ abstract class SocketConnector {
         var2 = -50 / ((param1 + 40) / 48);
         var4 = aa.field_a;
         if (var4 == 1) {
-          ib.field_b.a(0, 0);
+          ib.field_b.drawOpaque(0, 0);
           var4 = (int)(20.0f * ProxySocketConnector.a(true, (float)param0 * 0.009999999776482582f)) + 70;
           m.field_k.b(0, 0, var4);
           return;
@@ -54,15 +54,15 @@ abstract class SocketConnector {
           if (var4 != 3) {
             return;
           }
-          tj.field_a.c(0, 0);
+          tj.field_a.draw(0, 0);
           return;
         }
         ne.field_a[1].b(0, 0);
         var3 = 50 + (int)(ProxySocketConnector.a(true, 0.14000000059604645f * (float)param0) * 30.0f + 10.0f * ha.a((byte) 51, (float)param0 * 0.11999999731779099f));
         ne.field_a[0].b(0, 0, var3);
         SoftwareRasterizer.setClip(80, 0, 560, 480);
-        SpriteState.field_p[i.field_n].b(100, 0, 70);
-        cl.field_c[sk.field_G].b(0, 0, 100);
+        SpriteState.field_p[i.field_n].drawWithOpacity(100, 0, 70);
+        cl.field_c[sk.field_G].drawWithOpacity(0, 0, 100);
         SoftwareRasterizer.resetClip();
         return;
     }

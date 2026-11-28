@@ -209,8 +209,8 @@ final class ml {
         int var5_int = param1[0].field_v;
         int var6 = param1[2].field_v;
         int var7 = param1[1].field_v;
-        param1[0].b(param2, param0);
-        param1[2].b(param2 + (param4 - var6), param0);
+        param1[0].draw(param2, param0);
+        param1[2].draw(param2 + (param4 - var6), param0);
         SoftwareRasterizer.saveClip(IntrusiveNode.field_d);
         SoftwareRasterizer.intersectClip(var5_int + param2, param0, param4 + (param2 - var6), param1[1].field_u + param0);
         if (param3 > -125) {
@@ -220,7 +220,7 @@ final class ml {
           var8 = var5_int + param2;
           var9 = -var6 + param2 + param4;
           for (param2 = var8; param2 < var9; param2 = param2 + var7) {
-            param1[1].b(param2, param0);
+            param1[1].draw(param2, param0);
           }
           SoftwareRasterizer.restoreClip(IntrusiveNode.field_d);
         } catch (RuntimeException runtimeException) {

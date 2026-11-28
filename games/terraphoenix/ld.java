@@ -435,7 +435,7 @@ abstract class ld {
           var5_int = je.bitLength(-101, 3 * (-param3 + param0));
           var6 = 3 * param3;
           var7 = var5_int - 10;
-          am.g((byte) -3);
+          NameSuggestionsPanel.g((byte) -3);
           if (param2.field_I > 0 &&
             param2.field_f != null) {
             QuickChatMenu.a((byte) 87);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kc extends pj {
+final class kc extends InteractiveWidget {
     static Archive field_Q;
     static int field_O;
     private FieldValidator field_J;
@@ -79,7 +79,7 @@ final class kc extends pj {
           if (null == pk.field_Y) {
             pk.field_Y = new Sprite(var9, var10);
             AgeValidator.a(-116, pk.field_Y);
-            var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
@@ -87,7 +87,7 @@ final class kc extends pj {
           if (var9 > pk.field_Y.field_p) {
             pk.field_Y = new Sprite(var9, var10);
             AgeValidator.a(-116, pk.field_Y);
-            var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
@@ -95,14 +95,14 @@ final class kc extends pj {
           if (pk.field_Y.field_t >= var10) {
             AgeValidator.a(-97, pk.field_Y);
             SoftwareRasterizer.clearRaster();
-            var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9, var10);
           AgeValidator.a(-116, pk.field_Y);
-          var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
           pk.field_Y.drawAdditive(-var15.field_q + var5, -var15.field_r + var6, 256);
           return;
@@ -114,7 +114,7 @@ final class kc extends pj {
           if (null == pk.field_Y) {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             AgeValidator.a(-116, pk.field_Y);
-            var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
@@ -122,7 +122,7 @@ final class kc extends pj {
           if (var9Lifetime1 > pk.field_Y.field_p) {
             pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             AgeValidator.a(-116, pk.field_Y);
-            var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
@@ -130,14 +130,14 @@ final class kc extends pj {
           if (pk.field_Y.field_t >= var10Lifetime1) {
             AgeValidator.a(-97, pk.field_Y);
             SoftwareRasterizer.clearRaster();
-            var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             MidiPcmStream.e(param3 + 4096);
             pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
           pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
           AgeValidator.a(-116, pk.field_Y);
-          var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
           MidiPcmStream.e(param3 + 4096);
           pk.field_Y.drawAdditive(-var16.field_q + var5, -var16.field_r + var6, 256);
           return;

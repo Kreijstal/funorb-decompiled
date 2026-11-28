@@ -25,13 +25,13 @@ final class ja {
           ja.a(-63);
         }
         for (var2 = 0; wc.field_hc > var2; var2++) {
-          var3 = sd.field_f[var2] * rg.field_I[var2];
+          var3 = sd.field_f[var2] * InteractiveWidget.field_I[var2];
           var4 = rj.field_f[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = an.field_p[va.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], var5);
+          var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], sd.field_f[var2], var5);
         }
         StageDirector.clearIndexedSpriteDecodeBuffers(false);
         return var1;

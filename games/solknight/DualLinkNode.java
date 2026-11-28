@@ -14,7 +14,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         if (null == ji.field_b) {
           ji.field_b = new aj();
-          ji.field_b.a(87, ua.field_G);
+          ji.field_b.a(87, NameSuggestionsPanel.field_G);
           ji.field_b.field_n = 2763306;
           ji.field_b.field_f = 14;
           ji.field_b.field_b = 7697781;

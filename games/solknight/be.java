@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends pj {
+final class be extends InteractiveWidget {
     static int field_I;
     static int field_K;
     int field_M;

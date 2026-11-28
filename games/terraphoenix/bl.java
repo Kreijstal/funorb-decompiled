@@ -136,7 +136,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 77, "blockterr");
                 if (var2 != null) {
-                  am.field_H = ll.a(0, var2);
+                  NameSuggestionsPanel.field_H = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "impassableterr");
                 if (null != var2) {
@@ -168,71 +168,71 @@ final class bl {
                 }
                 var2 = il.a((byte) 122, "achievement_criteria,0");
                 if (var2 != null) {
-                  eb.field_J[0] = ll.a(0, var2);
+                  InteractiveWidget.field_J[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 74, "achievement_criteria,1");
                 if (null != var2) {
-                  eb.field_J[1] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[1] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 122, "achievement_criteria,2");
                 if (var2 != null) {
-                  eb.field_J[2] = ll.a(param0 - 96, var2);
+                  InteractiveWidget.field_J[2] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 123, "achievement_criteria,3");
                 if (null != var2) {
-                  eb.field_J[3] = ll.a(0, var2);
+                  InteractiveWidget.field_J[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 96, "achievement_criteria,4");
                 if (null != var2) {
-                  eb.field_J[4] = ll.a(0, var2);
+                  InteractiveWidget.field_J[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 114, "achievement_criteria,5");
                 if (var2 != null) {
-                  eb.field_J[5] = ll.a(0, var2);
+                  InteractiveWidget.field_J[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "achievement_criteria,6");
                 if (null != var2) {
-                  eb.field_J[6] = ll.a(param0 - 96, var2);
+                  InteractiveWidget.field_J[6] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 79, "achievement_criteria,7");
                 if (var2 != null) {
-                  eb.field_J[7] = ll.a(0, var2);
+                  InteractiveWidget.field_J[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 94, "achievement_criteria,8");
                 if (var2 != null) {
-                  eb.field_J[8] = ll.a(param0 - 96, var2);
+                  InteractiveWidget.field_J[8] = ll.a(param0 - 96, var2);
                 }
                 var2 = il.a((byte) 91, "achievement_criteria,9");
                 if (var2 != null) {
-                  eb.field_J[9] = ll.a(0, var2);
+                  InteractiveWidget.field_J[9] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 123, "achievement_criteria,10");
                 if (var2 != null) {
-                  eb.field_J[10] = ll.a(0, var2);
+                  InteractiveWidget.field_J[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "achievement_criteria,11");
                 if (var2 != null) {
-                  eb.field_J[11] = ll.a(0, var2);
+                  InteractiveWidget.field_J[11] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 72, "achievement_criteria,12");
                 if (null != var2) {
-                  eb.field_J[12] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[12] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 77, "achievement_criteria,13");
                 if (var2 != null) {
-                  eb.field_J[13] = ll.a(sl.a((int) param0, 96), var2);
+                  InteractiveWidget.field_J[13] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 90, "achievement_criteria,14");
                 if (var2 != null) {
-                  eb.field_J[14] = ll.a(0, var2);
+                  InteractiveWidget.field_J[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 107, "achievement_criteria,15");
                 if (null != var2) {
-                  eb.field_J[15] = ll.a(0, var2);
+                  InteractiveWidget.field_J[15] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 82, "achievement_criteria,16");
                 if (var2 != null) {
-                  eb.field_J[16] = ll.a(0, var2);
+                  InteractiveWidget.field_J[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "thousandseperator");
                 if (var2 != null) {
@@ -2336,7 +2336,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 74, "selectmission");
                 if (var2 != null) {
-                  eb.field_G = ll.a(0, var2);
+                  InteractiveWidget.field_G = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 110, "selectcitymission");
                 if (var2 != null) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vc extends wd {
+class vc extends InteractiveWidget {
     static AccountRequestState field_F;
     static String field_B;
     private ui field_E;
@@ -78,8 +78,8 @@ class vc extends wd {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -119, param3);
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
+        super.activateFromInput(param0, param1, (byte) -119, param3);
         int var5 = param1 - this.field_r;
         if (param2 > -77) {
           return;

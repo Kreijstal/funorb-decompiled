@@ -67,7 +67,7 @@ class gd extends rj {
         var4 = param0 + this.field_t;
         var5 = this.field_i + param2;
         if (!this.field_w) {
-          this.field_K.h(var4, var5);
+          this.field_K.draw(var4, var5);
           if (param1 == 8187) {
             return;
           }
@@ -87,19 +87,19 @@ class gd extends rj {
         }
         var8 = var7 - mo.field_a + this.field_L;
         if (this.field_B) {
-          this.field_H.h(var4, var5);
+          this.field_H.draw(var4, var5);
           if (this.field_B) {
             var9 = var7;
           } else {
-            this.field_K.h(var4, param2 + this.field_i);
+            this.field_K.draw(var4, param2 + this.field_i);
             var9 = var8;
-            this.field_H.d(var4, var5, 4 * var9);
+            this.field_H.drawWithOpacity(var4, var5, 4 * var9);
           }
           var10 = (int)((double)var9 * (2.0 + te.c(mo.field_a, 1, 0.125)));
           if (var10 < 0) {
             var10 = 0;
           }
-          this.field_N.b(var4, var5, var10);
+          this.field_N.drawAdditive(var4, var5, var10);
           if (param1 == 8187) {
             return;
           }
@@ -108,19 +108,19 @@ class gd extends rj {
           return;
         }
         if (0 < var8) {
-          this.field_H.h(var4, var5);
+          this.field_H.draw(var4, var5);
           if (this.field_B) {
             var9Lifetime1 = var7;
           } else {
-            this.field_K.h(var4, param2 + this.field_i);
+            this.field_K.draw(var4, param2 + this.field_i);
             var9Lifetime1 = var8;
-            this.field_H.d(var4, var5, 4 * var9Lifetime1);
+            this.field_H.drawWithOpacity(var4, var5, 4 * var9Lifetime1);
           }
           var10Lifetime1 = (int)((double)var9Lifetime1 * (2.0 + te.c(mo.field_a, 1, 0.125)));
           if (var10Lifetime1 < 0) {
             var10Lifetime1 = 0;
           }
-          this.field_N.b(var4, var5, var10Lifetime1);
+          this.field_N.drawAdditive(var4, var5, var10Lifetime1);
           if (param1 == 8187) {
             return;
           }
@@ -141,18 +141,18 @@ class gd extends rj {
         var8Lifetime1 = var7Lifetime1 + (-mo.field_a + this.field_p);
         if (this == wi.field_ob) {
           if (this != wi.field_ob) {
-            this.field_K.h(var4, param2 + this.field_i);
+            this.field_K.draw(var4, param2 + this.field_i);
             var10Lifetime2 = var8Lifetime1;
-            this.field_z.d(var4, var5, 4 * var10Lifetime2);
+            this.field_z.drawWithOpacity(var4, var5, 4 * var10Lifetime2);
           } else {
-            this.field_z.h(var4, var5);
+            this.field_z.draw(var4, var5);
             var10Lifetime2 = var7Lifetime1;
           }
           var11 = (int)((double)var10Lifetime2 * (te.c(mo.field_a, 1, 0.125) + 2.0));
           if (var11 < 0) {
             var11 = 0;
           }
-          this.field_I.b(var4, var5, var11);
+          this.field_I.drawAdditive(var4, var5, var11);
           if (param1 == 8187) {
             return;
           }
@@ -161,7 +161,7 @@ class gd extends rj {
           return;
         }
         if (0 >= var8Lifetime1) {
-          this.field_K.h(var4, var5);
+          this.field_K.draw(var4, var5);
           if (param1 == 8187) {
             return;
           }
@@ -170,18 +170,18 @@ class gd extends rj {
           return;
         }
         if (this != wi.field_ob) {
-          this.field_K.h(var4, param2 + this.field_i);
+          this.field_K.draw(var4, param2 + this.field_i);
           var10Lifetime3 = var8Lifetime1;
-          this.field_z.d(var4, var5, 4 * var10Lifetime3);
+          this.field_z.drawWithOpacity(var4, var5, 4 * var10Lifetime3);
         } else {
-          this.field_z.h(var4, var5);
+          this.field_z.draw(var4, var5);
           var10Lifetime3 = var7Lifetime1;
         }
         var11Lifetime1 = (int)((double)var10Lifetime3 * (te.c(mo.field_a, 1, 0.125) + 2.0));
         if (var11Lifetime1 < 0) {
           var11Lifetime1 = 0;
         }
-        this.field_I.b(var4, var5, var11Lifetime1);
+        this.field_I.drawAdditive(var4, var5, var11Lifetime1);
         if (param1 == 8187) {
           return;
         }

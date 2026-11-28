@@ -107,7 +107,7 @@ final class om {
           g.field_Gb[2] = rc.a("", sb.field_a, "mb_da_thumbs_06.jpg", (byte) 71);
           g.field_Gb[3] = rc.a("", sb.field_a, "mb_da_thumbs_05.jpg", (byte) 71);
           for (var2 = g.field_Gb.length - 1; var2 >= 0; var2--) {
-            g.field_Gb[var2].h();
+            g.field_Gb[var2].makeTransparentPixelsOpaque();
           }
           bp.a(bl.field_j, (byte) 51, ba.field_h);
           eg.a(80, 15, 16744576, 40, 5, rj.field_s, 2, 40, -2400, IntrusiveNode.field_c, 80);

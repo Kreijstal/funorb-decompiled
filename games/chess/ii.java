@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends ma implements mj {
+final class ii extends ma implements WidgetActivationListener {
     static int field_Q;
     static String field_N;
     static String field_O;
     static String field_K;
-    private fb field_U;
-    private fb field_M;
-    private fb field_R;
+    private InteractiveWidget field_U;
+    private InteractiveWidget field_M;
+    private InteractiveWidget field_R;
     static tk field_P;
     static MouseWheelInput field_L;
     static String field_S;
@@ -26,7 +26,7 @@ final class ii extends ma implements mj {
           super.a(param0, param1, -90, param3);
           return;
         }
-        this.field_M = (fb) null;
+        this.field_M = (InteractiveWidget) null;
         var5Lifetime1 = param3 + this.field_u;
         var6Lifetime1 = this.field_r + param0;
         rb.field_b.drawParagraph(pe.field_e, 20 + var5Lifetime1, 20 + var6Lifetime1, this.field_y - 40, this.field_C - 50, 16777215, -1, 1, 0, rb.field_b.field_C);
@@ -35,7 +35,7 @@ final class ii extends ma implements mj {
 
     final boolean a(char param0, int param1, int param2, mf param3) {
         RuntimeException var5 = null;
-        fb var6 = null;
+        InteractiveWidget var6 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -51,8 +51,8 @@ final class ii extends ma implements mj {
             return stackIn_7_0;
           }
           if (param2 != -1) {
-            var6 = (fb) null;
-            this.a((fb) null, -72, -53, -40, -75);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, -72, -53, -40, -75);
           }
           if (99 != param1) {
             return false;
@@ -88,9 +88,9 @@ final class ii extends ma implements mj {
 
     public ii() {
         super(0, 0, 476, 225, (jm) null);
-        this.field_R = new fb(fd.field_o, (rg) null);
-        this.field_M = new fb(vf.field_c, (rg) null);
-        this.field_U = new fb(jd.field_g, (rg) null);
+        this.field_R = new InteractiveWidget(fd.field_o, (rg) null);
+        this.field_M = new InteractiveWidget(vf.field_c, (rg) null);
+        this.field_U = new InteractiveWidget(jd.field_g, (rg) null);
         sf var1 = new sf();
         this.field_R.field_n = (jm) ((Object) var1);
         this.field_M.field_n = (jm) ((Object) var1);
@@ -111,7 +111,7 @@ final class ii extends ma implements mj {
         this.b(this.field_U, 95);
     }
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;

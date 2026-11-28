@@ -258,7 +258,7 @@ final class fd {
 
     final static void a(int param0, int param1) {
         fb.field_c = TunnelEntity.field_B[param1];
-        hc.field_s = ak.field_L[param1];
+        hc.field_s = NameSuggestionsPanel.field_L[param1];
         b.field_k = th.field_eb[param1];
         if (param0 != 30177) {
           field_k = (BitmapFont) null;

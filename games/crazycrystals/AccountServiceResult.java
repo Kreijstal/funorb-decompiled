@@ -31,7 +31,7 @@ final class AccountServiceResult {
         try {
           var4 = (ca) (gn.field_Q.beginForward(32073));
           while (var4 != null) {
-            nh.a(param0, (byte) -99, var4);
+            NameSuggestionsPanel.a(param0, (byte) -99, var4);
             var4 = (ca) (gn.field_Q.nextForward(false));
           }
           var2 = pm.field_c.beginForward(32073);

@@ -250,16 +250,16 @@ abstract class LevelGrid {
         int var10;
         Sprite var11;
         var10 = TrackController.field_F ? 1 : 0;
-        var11 = nd.field_L[4];
+        var11 = NameSuggestionsPanel.field_L[4];
         var4 = var11;
-        cl.a(nd.field_L, -10 + param0, 228, param2 - 10, 176, 4);
+        cl.a(NameSuggestionsPanel.field_L, -10 + param0, 228, param2 - 10, 176, 4);
         if (param1 > 0) {
           return;
         }
-        nd.field_L[4] = var11;
-        SoftwareRasterizer.saveClip(nd.field_F);
+        NameSuggestionsPanel.field_L[4] = var11;
+        SoftwareRasterizer.saveClip(NameSuggestionsPanel.field_F);
         SoftwareRasterizer.intersectClip(param0, param2, param0 + 156, param2 + 208);
-        cl.a(nd.field_L, param0 - 10, 228, -10 + param2, 176, 4);
+        cl.a(NameSuggestionsPanel.field_L, param0 - 10, 228, -10 + param2, 176, 4);
         var5 = this.field_c + param2;
         for (var6 = 0; 8 > var6; var6++) {
           var7 = param0 + this.field_k;
@@ -273,7 +273,7 @@ abstract class LevelGrid {
           }
           var5 += 26;
         }
-        SoftwareRasterizer.restoreClip(nd.field_F);
+        SoftwareRasterizer.restoreClip(NameSuggestionsPanel.field_F);
     }
 
     LevelGrid(boolean param0, int param1, int param2) {

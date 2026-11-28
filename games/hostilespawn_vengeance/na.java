@@ -184,14 +184,14 @@ final class na {
           var13 = new RgbSprite(7, 4);
           var13.field_D = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ha(var4, true);
-          var14.a(true, var13.h());
-          var13.b();
+          var14.a(true, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new ha(var4, true);
-          var14Lifetime1.a(true, var13.h());
-          var13.b();
+          var14Lifetime1.a(true, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new ha(var4, true);
-          var14Lifetime2.a(true, var13.h());
-          var13.b();
+          var14Lifetime2.a(true, var13.copy());
+          var13.rotateClockwise();
           var19 = new ha(var4, true);
           var19.a(true, var13);
         } catch (RuntimeException runtimeException) {

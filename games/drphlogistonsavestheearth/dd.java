@@ -142,7 +142,7 @@ final class dd extends u {
           var41 = var49;
           var8 = var41;
           var64 = new int[param7.field_H];
-          var62 = LoginMenuScreen.field_L;
+          var62 = NameSuggestionsPanel.field_L;
           if (param6 != -81) {
             field_g = (DisplayNameSelectionPanel) null;
           }
@@ -180,19 +180,19 @@ final class dd extends u {
             var15Lifetime1 = param7.field_h[var14Lifetime1];
             var16 = param7.field_a[var14Lifetime1];
             var17 = param7.field_K[var14Lifetime1];
-            if (LoginMenuScreen.field_L.length <= param7.field_A[var14Lifetime1]) {
+            if (NameSuggestionsPanel.field_L.length <= param7.field_A[var14Lifetime1]) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param7.field_A[var14Lifetime1];
             }
             var18 = stackIn_26_0;
-            if (LoginMenuScreen.field_L.length <= param7.field_l[var14Lifetime1]) {
+            if (NameSuggestionsPanel.field_L.length <= param7.field_l[var14Lifetime1]) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param7.field_l[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (LoginMenuScreen.field_L.length > param7.field_e[var14Lifetime1]) {
+            if (NameSuggestionsPanel.field_L.length > param7.field_e[var14Lifetime1]) {
               stackIn_32_0 = param7.field_e[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

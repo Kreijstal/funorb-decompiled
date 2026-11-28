@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends lj {
+final class bf extends InteractiveWidget {
     static pe field_C;
     static int field_B;
 
@@ -14,10 +14,10 @@ final class bf extends lj {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void activateFromInput(byte param0, int param1, int param2, int param3) {
         this.field_y = !this.field_y ? true : false;
         int var5 = 87 % ((param0 - 50) / 45);
-        super.a((byte) -126, param1, param2, param3);
+        super.activateFromInput((byte) -126, param1, param2, param3);
     }
 
     final static kk a(String param0, byte param1, boolean param2, String param3) {

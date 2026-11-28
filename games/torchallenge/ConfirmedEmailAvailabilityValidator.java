@@ -537,15 +537,15 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           var2Lifetime71 = MouseInputHandler.a(95, "MASTER_MONK_NAMES,0");
           if (var2Lifetime71 != null) {
-            li.field_J[0] = re.a(18990, var2Lifetime71);
+            NameSuggestionsPanel.field_J[0] = re.a(18990, var2Lifetime71);
           }
           var2Lifetime72 = MouseInputHandler.a(95, "MASTER_MONK_NAMES,1");
           if (null != var2Lifetime72) {
-            li.field_J[1] = re.a(18990, var2Lifetime72);
+            NameSuggestionsPanel.field_J[1] = re.a(18990, var2Lifetime72);
           }
           var2Lifetime73 = MouseInputHandler.a(95, "MASTER_MONK_NAMES,2");
           if (null != var2Lifetime73) {
-            li.field_J[2] = re.a(18990, var2Lifetime73);
+            NameSuggestionsPanel.field_J[2] = re.a(18990, var2Lifetime73);
           }
           var2Lifetime74 = MouseInputHandler.a(95, "UNIT_NAMES,0");
           if (var2Lifetime74 != null) {

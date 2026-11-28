@@ -1044,7 +1044,7 @@ final class fc {
         int stackIn_38_0Lifetime1;
         int stackIn_38_1Lifetime1;
         var9 = Lexicominos.field_L ? 1 : 0;
-        ob.field_d.d(0, 0);
+        ob.field_d.draw(0, 0);
         if (this.field_g == null) {
           var13 = "LOADING";
           var3_ref_String = "LANGUAGE...";
@@ -1084,14 +1084,14 @@ final class fc {
                 if (var7Lifetime1 >= 255) {
                   var14Lifetime1 = var2;
                   if (mg.field_B) {
-                    var14Lifetime1.d(var5Lifetime1, var3 - this.field_F[var4Lifetime1][var6Lifetime1]);
+                    var14Lifetime1.draw(var5Lifetime1, var3 - this.field_F[var4Lifetime1][var6Lifetime1]);
                   } else {
                     eb.a(89, this.field_m, 0, var14Lifetime1, this.field_w[var4Lifetime1][var6Lifetime1], -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var5Lifetime1);
                   }
                 } else {
                   if (var7Lifetime1 > 0) {
                     var14Lifetime1 = var2;
-                    var14Lifetime1.b(var5Lifetime1, -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var7Lifetime1);
+                    var14Lifetime1.drawWithOpacity(var5Lifetime1, -this.field_F[var4Lifetime1][var6Lifetime1] + var3, var7Lifetime1);
                     if (!mg.field_B) {
                       this.field_m.field_f.drawCentredCharacterAlpha(this.field_w[var4Lifetime1][var6Lifetime1], var14Lifetime1.field_p / 2 + var5Lifetime1, (this.field_m.field_b + var14Lifetime1.field_u) / 2 + var3, 0, var7Lifetime1);
                     }
@@ -1121,7 +1121,7 @@ final class fc {
                 stackIn_38_1 = stackOut_32_1;
                 stackIn_33_1 = stackOut_32_1;
                 if (stackIn_38_0 != stackIn_33_1) {
-                  lg.field_c.b(var5Lifetime2, var6Lifetime2, var7Lifetime2);
+                  lg.field_c.drawWithOpacity(var5Lifetime2, var6Lifetime2, var7Lifetime2);
                   bi.field_a.drawCentredCharacterAlpha(var15.charAt(var8), var5Lifetime2 + lg.field_c.field_p / 2, (lg.field_c.field_u + pa.field_d) / 2 + var6Lifetime2, 0, var7Lifetime2);
                 }
                 var5Lifetime2 += 24;
@@ -1147,7 +1147,7 @@ final class fc {
             stackIn_46_0 = 75 + this.field_n;
           }
           var5Lifetime3 = stackIn_46_0 * 4096 / 100;
-          BitPacketBuffer.field_l[this.field_l].a(this.field_o, this.field_V, 0, var5Lifetime3);
+          BitPacketBuffer.field_l[this.field_l].drawRotated(this.field_o, this.field_V, 0, var5Lifetime3);
         }
         var10 = (vf) (this.field_B.beginForward(true));
         while (var10 != null) {
@@ -1275,12 +1275,12 @@ final class fc {
         RgbSprite var9Lifetime1;
         RgbSprite var9Lifetime2;
         var5 = Lexicominos.field_L ? 1 : 0;
-        var6 = kf.field_A;
+        var6 = InteractiveWidget.field_A;
         for (var3 = 0; var6.length > var3; var3++) {
           var7 = var6[var3];
           var9 = var7;
           var9Lifetime2 = var7;
-          var7.d(0, 0);
+          var7.draw(0, 0);
         }
         SoftwareRasterizer.setClip(125, 54, 221, 102);
         if (this.field_L > 0 &&
@@ -1292,14 +1292,14 @@ final class fc {
         SoftwareRasterizer.resetClip();
         this.c((byte) 72);
         SoftwareRasterizer.setClip(60, 266 + this.field_M + 120, 252, 450);
-        PasswordValidator.field_m.d(0, 0);
+        PasswordValidator.field_m.draw(0, 0);
         if (param0 <= 54) {
           this.field_r = -50;
         }
-        var8 = kf.field_A;
+        var8 = InteractiveWidget.field_A;
         for (var3Lifetime1 = 0; var8.length > var3Lifetime1; var3Lifetime1++) {
           var9Lifetime1 = var8[var3Lifetime1];
-          var9Lifetime1.d(0, 0);
+          var9Lifetime1.draw(0, 0);
         }
         SoftwareRasterizer.resetClip();
         oh.a(183, lg.field_c, false, Integer.toString(Math.abs(this.field_r)), 0, 230);
@@ -1330,7 +1330,7 @@ final class fc {
             }
           }
           if (var4 == 0) {
-            ef.field_d[var10.field_h].c(265, var3Lifetime2);
+            ef.field_d[var10.field_h].drawQuarterSizeAveraged(265, var3Lifetime2);
             bi.field_a.drawRightAligned(df.field_d[var10.field_h], 260, var3Lifetime2 + bi.field_a.field_E, 0, -1);
           }
         }
@@ -1361,7 +1361,7 @@ final class fc {
           var4 = 413 - param0[0] * 24;
           stackIn_4_0 = (param0[2] != 1) ? 0 : 3;
           var5 = stackIn_4_0;
-          jj.field_f[var5].d(var3_int, var4);
+          jj.field_f[var5].draw(var3_int, var4);
           stackIn_7_0 = (param0[2] == 1) ? 0 : 24;
           var6 = stackIn_7_0;
           if (param1 != 371) {
@@ -1379,9 +1379,9 @@ final class fc {
           for (var9 = 1; var9 < (var8 - 1); var9++) {
             var3_int = var3_int + var6;
             var4 = var4 + var7;
-            jj.field_f[1 + var5].d(var3_int, var4);
+            jj.field_f[1 + var5].draw(var3_int, var4);
           }
-          jj.field_f[2 + var5].d(var3_int + var6, var7 + var4);
+          jj.field_f[2 + var5].draw(var3_int + var6, var7 + var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

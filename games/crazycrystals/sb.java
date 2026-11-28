@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sb extends pc {
+final class sb extends InteractiveWidget {
     private int field_D;
     private FieldValidator field_H;
     static sj field_E;
@@ -165,14 +165,14 @@ final class sb extends pc {
             var8 != ec.field_h) {
             if (var8 == rk.field_c) {
               var20 = ao.field_b[2];
-              var20.d(-(var20.field_l >> 1) + var5, -(var20.field_u >> 1) + var6, 256);
+              var20.drawAdditive(-(var20.field_l >> 1) + var5, -(var20.field_u >> 1) + var6, 256);
               return;
             }
             if (GzipDecompressor.field_b != var8) {
               return;
             }
             var21 = ao.field_b[1];
-            var21.d(-(var21.field_l >> 1) + var5, -(var21.field_u >> 1) + var6, 256);
+            var21.drawAdditive(-(var21.field_l >> 1) + var5, -(var21.field_u >> 1) + var6, 256);
             return;
           }
           var22 = ao.field_b[0];
@@ -195,9 +195,9 @@ final class sb extends pc {
               }
             }
           }
-          var22.a(112, 144, var22.field_n << 4, var22.field_o << 4, -this.field_D << 10, 4096);
+          var22.drawRotatedAbout(112, 144, var22.field_n << 4, var22.field_o << 4, -this.field_D << 10, 4096);
           lg.a(1);
-          ImageProducerRasterBuffer.field_l.d(-var22.field_n + var5, -var22.field_o + var6, 256);
+          ImageProducerRasterBuffer.field_l.drawAdditive(-var22.field_n + var5, -var22.field_o + var6, 256);
           return;
         }
         field_C = (String) null;
@@ -215,22 +215,22 @@ final class sb extends pc {
             ImageProducerRasterBuffer.field_l = new RgbSprite(var9Lifetime1, var10Lifetime1);
             em.a((byte) 38, ImageProducerRasterBuffer.field_l);
           }
-          var15.a(112, 144, var15.field_n << 4, var15.field_o << 4, -this.field_D << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_n << 4, var15.field_o << 4, -this.field_D << 10, 4096);
           lg.a(1);
-          ImageProducerRasterBuffer.field_l.d(-var15.field_n + var5, -var15.field_o + var6, 256);
+          ImageProducerRasterBuffer.field_l.drawAdditive(-var15.field_n + var5, -var15.field_o + var6, 256);
           return;
         }
         if (var8Lifetime1 != ec.field_h) {
           if (var8Lifetime1 == rk.field_c) {
             var17 = ao.field_b[2];
-            var17.d(-(var17.field_l >> 1) + var5, -(var17.field_u >> 1) + var6, 256);
+            var17.drawAdditive(-(var17.field_l >> 1) + var5, -(var17.field_u >> 1) + var6, 256);
             return;
           }
           if (GzipDecompressor.field_b != var8Lifetime1) {
             return;
           }
           var18 = ao.field_b[1];
-          var18.d(-(var18.field_l >> 1) + var5, -(var18.field_u >> 1) + var6, 256);
+          var18.drawAdditive(-(var18.field_l >> 1) + var5, -(var18.field_u >> 1) + var6, 256);
           return;
         }
         var16 = ao.field_b[0];
@@ -246,9 +246,9 @@ final class sb extends pc {
           ImageProducerRasterBuffer.field_l = new RgbSprite(var9Lifetime2, var10Lifetime2);
           em.a((byte) 38, ImageProducerRasterBuffer.field_l);
         }
-        var16.a(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
+        var16.drawRotatedAbout(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
         lg.a(1);
-        ImageProducerRasterBuffer.field_l.d(-var16.field_n + var5, -var16.field_o + var6, 256);
+        ImageProducerRasterBuffer.field_l.drawAdditive(-var16.field_n + var5, -var16.field_o + var6, 256);
     }
 
     static {

@@ -833,7 +833,7 @@ public final class Chess extends NetworkGameClient {
         }
         se.field_N[0] = null;
         for (var3 = 1; var3 <= 6; var3++) {
-          se.field_N[var3] = (dd) (kl.field_k[var3].a(t.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
+          se.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
           n.field_b[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           dupTemp$0 = n.field_b[var3].field_j;
           var10 = dupTemp$0;
@@ -842,7 +842,7 @@ public final class Chess extends NetworkGameClient {
             var10[var5] = (short)0;
           }
           n.field_b[var3].a(this.field_H);
-          jj.field_c[var3] = (dd) (n.field_b[var3].a(t.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
+          jj.field_c[var3] = (dd) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
           dl.field_c[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           for (var5 = dl.field_c[var3].field_h - 1; var5 >= 0; var5--) {
             dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
@@ -850,7 +850,7 @@ public final class Chess extends NetworkGameClient {
           var5_ref_int__ = dl.field_c[var3].field_O;
           dl.field_c[var3].field_O = dl.field_c[var3].field_P;
           dl.field_c[var3].field_P = var5_ref_int__;
-          q.field_b[var3] = (dd) (dl.field_c[var3].a(t.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, 10, 5));
+          q.field_b[var3] = (dd) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, 10, 5));
         }
         var3 = qm.field_g;
         if (var3 != 1) {
@@ -872,7 +872,7 @@ public final class Chess extends NetworkGameClient {
         }
         var3 = -19 % ((26 - param0) / 45);
         ad.field_f[0] = null;
-        var3 = t.field_P[qm.field_g];
+        var3 = NameSuggestionsPanel.field_P[qm.field_g];
         var4 = vn.field_sb[qm.field_g];
         for (var5 = 1; var5 <= 6; var5++) {
           ad.field_f[var5] = (dd) (kl.field_k[var5].a(var3, var4, 5, -10, 5));
@@ -961,27 +961,27 @@ public final class Chess extends NetworkGameClient {
         RgbSprite var6 = new RgbSprite(25, 25);
         RgbSprite var3 = new RgbSprite(25, 25);
         int[] var4 = new int[]{12, 3, 19, 10, 15, 10, 15, 18, 10, 18, 10, 10, 6, 10, 12, 4};
-        var6.e();
+        var6.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 4, 1647364);
         PolygonScanlineRasterizer.fillPolygon(var4, 16777215);
-        var3.e();
+        var3.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, 4, 1647364);
         PolygonScanlineRasterizer.fillPolygon(var4, 255);
-        be.field_d = var6.c();
-        df.field_e = var3.c();
-        var6.a();
-        var3.a();
-        tb.field_c = var6.c();
-        vn.field_rb = var3.c();
-        ng.field_b = var6.b();
-        me.field_d = var3.b();
-        var6.a();
-        var3.a();
-        kn.field_G = var6.c();
+        be.field_d = var6.copy();
+        df.field_e = var3.copy();
+        var6.rotateClockwise();
+        var3.rotateClockwise();
+        tb.field_c = var6.copy();
+        vn.field_rb = var3.copy();
+        ng.field_b = var6.copyMirroredHorizontally();
+        me.field_d = var3.copyMirroredHorizontally();
+        var6.rotateClockwise();
+        var3.rotateClockwise();
+        kn.field_G = var6.copy();
         int var5 = -41 / ((19 - param0) / 56);
-        vn.field_xb = var3.c();
+        vn.field_xb = var3.copy();
         ValidatedTextField.field_Z = new RgbSprite(77, 20);
-        ValidatedTextField.field_Z.e();
+        ValidatedTextField.field_Z.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
         ph.field_j.setAsRasterTarget(48);
         MouseWheelInput.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
@@ -1083,7 +1083,7 @@ public final class Chess extends NetworkGameClient {
           var9_ref_dd__ = stackIn_5_0;
           for (var10 = 1; 7 > var10; var10++) {
             ub.field_d[var8_int][var10] = new RgbSprite(180, 180);
-            ub.field_d[var8_int][var10].e();
+            ub.field_d[var8_int][var10].bindAsRenderTarget();
             nh.a();
             if (var10 == 2) {
               var11_ref_int__ = var4;
@@ -1098,30 +1098,30 @@ public final class Chess extends NetworkGameClient {
             rl.field_d[var8_int][var10] = tg.field_r[-var10 + 6 + 6 * var8_int];
           }
         }
-        dj.field_t = ub.field_d[1][1].c();
+        dj.field_t = ub.field_d[1][1].copy();
         ph.field_j.setAsRasterTarget(48);
         nh.a();
         nh.c(370, ec.c((byte) -63) + 240);
         for (var8_intLifetime1 = 0; 2 > var8_intLifetime1; var8_intLifetime1++) {
-          dj.field_t.f(1);
+          dj.field_t.addOutline(1);
         }
         for (var8_intLifetime2 = 0; var8_intLifetime2 <= 1; var8_intLifetime2++) {
           var9 = (var8_intLifetime2 != 0) ? 1 : 16777215;
           for (var10Lifetime1 = 1; var10Lifetime1 < 7; var10Lifetime1++) {
             for (var11 = 0; var11 < 2; var11++) {
-              rl.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
+              rl.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             }
             hb.field_b[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
-            hb.field_b[var8_intLifetime2][var10Lifetime1].e();
+            hb.field_b[var8_intLifetime2][var10Lifetime1].bindAsRenderTarget();
             rl.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 94);
-            hb.field_b[var8_intLifetime2][var10Lifetime1].f(var9);
+            hb.field_b[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             for (var11Lifetime2 = 0; var11Lifetime2 < 2; var11Lifetime2++) {
-              ub.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
+              ub.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             }
             qc.field_d[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
-            qc.field_d[var8_intLifetime2][var10Lifetime1].e();
+            qc.field_d[var8_intLifetime2][var10Lifetime1].bindAsRenderTarget();
             ub.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 101);
-            qc.field_d[var8_intLifetime2][var10Lifetime1].f(var9);
+            qc.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
           }
         }
         var10Lifetime2 = 0;
@@ -1145,16 +1145,16 @@ public final class Chess extends NetworkGameClient {
             for (var12 = 0; var12 < 2; var12++) {
               for (var13 = 0; 7 > var13; var13++) {
                 var8 = new RgbSprite(45, 45);
-                var8.e();
+                var8.bindAsRenderTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 45, 45, var9Lifetime1);
-                rl.field_d[var12][var13].a(0, 0);
+                rl.field_d[var12][var13].drawQuarterSizeAveraged(0, 0);
                 cl.field_c[var10Lifetime2][var11Lifetime1][var12][var13] = var8;
               }
             }
           }
           var10Lifetime2++;
         }
-        dj.field_t.d();
+        dj.field_t.trimTransparentBorders();
         dj.field_t.field_r = 0;
         dj.field_t.field_s = 0;
         ph.field_j.setAsRasterTarget(48);
@@ -1446,7 +1446,7 @@ public final class Chess extends NetworkGameClient {
               aa.field_f = aa.field_f + 1;
               nh.c(370, 240 + ec.c((byte) -63));
               vk.field_e = true;
-              t.field_Q = true;
+              NameSuggestionsPanel.field_Q = true;
               var5 = ug.field_b * ug.field_b;
               var6 = var5 - aa.field_f * aa.field_f;
               var7 = var6 * 120 / var5 + sb.field_tb;
@@ -1456,7 +1456,7 @@ public final class Chess extends NetworkGameClient {
             if (aa.field_f > 0) {
               aa.field_f = aa.field_f - 1;
               nh.c(370, ec.c((byte) -63) + 240);
-              t.field_Q = true;
+              NameSuggestionsPanel.field_Q = true;
               vk.field_e = true;
             }
             var5 = ug.field_b * ug.field_b;
@@ -1514,8 +1514,8 @@ public final class Chess extends NetworkGameClient {
           var2 = wk.a(mm.field_d, 1, "background_3d_halloween", "");
         }
         ph.field_f = new RgbSprite(var2.field_w * 2, var2.field_t * 2);
-        ph.field_f.e();
-        var2.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+        ph.field_f.bindAsRenderTarget();
+        var2.drawScaled(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         ph.field_j.setAsRasterTarget(48);
         var3Lifetime1 = qm.field_g;
@@ -1536,7 +1536,7 @@ public final class Chess extends NetworkGameClient {
           tg.field_r = ao.a(mm.field_d, "2d_icons_halloween", 2993, "halloween_chess_background");
         }
         for (var3Lifetime3 = 0; tg.field_r.length > var3Lifetime3; var3Lifetime3++) {
-          tg.field_r[var3Lifetime3].f();
+          tg.field_r[var3Lifetime3].normalizeCanvas();
         }
         LoginPanel.field_Q = wk.a(mm.field_d, 1, "logo_for_lobby", "");
     }
@@ -1718,7 +1718,7 @@ public final class Chess extends NetworkGameClient {
         sj.clearStaticReferences(true);
         ub.clearDeclaredStaticReferences((byte) 80);
         mf.clearStaticReferences(0);
-        fb.clearDeclaredStaticReferences(-1);
+        InteractiveWidget.clearDeclaredStaticReferences(-1);
         kn.e((byte) 127);
         k.clearDeclaredStaticReferences((byte) -24);
         eh.clearDeclaredStaticReferences(888706465);
@@ -1757,7 +1757,7 @@ public final class Chess extends NetworkGameClient {
         EditableTextField.releaseDeclaredStaticReferences(-14);
         bj.releaseDeclaredStaticReferences(45);
         rm.a(850101921);
-        t.clearDeclaredStaticReferences(8);
+        NameSuggestionsPanel.clearDeclaredStaticReferences(8);
         se.resetStaticState((byte) 67);
         jn.clearStaticReferences((byte) -61);
         ea.clearStaticReferences((byte) -44);
@@ -2039,8 +2039,8 @@ public final class Chess extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = new RgbSprite(2 * param1.field_w, param1.field_t * 2);
-          var3.e();
-          param1.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
+          var3.bindAsRenderTarget();
+          param1.drawScaled(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           SoftwareRasterizer.blurRectangle(param0, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           ph.field_j.setAsRasterTarget(48);
           stackIn_1_0 = var3;
@@ -2065,13 +2065,13 @@ public final class Chess extends NetworkGameClient {
         }
         tb.field_a = new RgbSprite(270, 325);
         tb.field_a.field_r = 145;
-        tb.field_a.e();
+        tb.field_a.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 270, 325, 13875857, 15987691);
         SoftwareRasterizer.drawRectangleOutline(0, 0, 270, 325, 1);
         SoftwareRasterizer.fillRectangle(0, 0, 4, SoftwareRasterizer.field_c, 0);
         SoftwareRasterizer.drawVerticalLine(4, 0, SoftwareRasterizer.field_c, 1);
         ph.field_j.setAsRasterTarget(48);
-        tb.field_a.d();
+        tb.field_a.trimTransparentBorders();
     }
 
     private final void loadInterfaceAndPieceSoundEffects(int param0) {

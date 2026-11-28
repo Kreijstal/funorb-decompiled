@@ -265,12 +265,12 @@ final class vj {
             return;
           }
           if (null != vd.field_b) {
-            vd.field_b.field_V.a(param1, -1546);
+            vd.field_b.field_V.setNameSuggestions(param1, -1546);
           }
           if (null == MatchSession.field_m) {
             return;
           }
-          MatchSession.field_m.field_K.a(param1, -1546);
+          MatchSession.field_m.field_K.setNameSuggestions(param1, -1546);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

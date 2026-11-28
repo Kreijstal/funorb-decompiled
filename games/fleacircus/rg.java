@@ -144,13 +144,13 @@ final class rg extends ef {
           }
           if (param2 > 0 &&
             param3 > 0) {
-            var21 = param1.c();
+            var21 = param1.copy();
             var30 = SoftwareRasterizer.field_a;
             var10 = SoftwareRasterizer.field_d;
             var11 = SoftwareRasterizer.field_k;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param1.f();
+            param1.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param7 * param1.field_w + param0;
             var14 = param1.field_w - param2;
@@ -185,7 +185,7 @@ final class rg extends ef {
               }
               var13 = var13 + var14;
             }
-            var21.d(-param1.field_q, -param1.field_v);
+            var21.draw(-param1.field_q, -param1.field_v);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             if (param5 > -3) {

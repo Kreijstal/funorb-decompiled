@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fj extends rl implements ij {
+class fj extends rl implements WidgetActivationListener {
     static int[] field_lb;
     private boolean field_jb;
     private boolean field_kb;
@@ -280,7 +280,7 @@ class fj extends rl implements ij {
         this.a(false, var2);
     }
 
-    public void a(int param0, d param1, byte param2, int param3, int param4) {
+    public void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

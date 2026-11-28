@@ -40,9 +40,9 @@ final class ah {
         }
         ti.c(true);
         if (MouseWheelInput.field_d < 150) {
-          hc.field_a.a(var3, var4);
+          hc.field_a.drawHalfSize(var3, var4);
         } else {
-          dm.field_g.d(15 + var3, var4 + 10, var5);
+          dm.field_g.drawWithOpacity(15 + var3, var4 + 10, var5);
         }
         var6 = -125 + MouseWheelInput.field_d;
         if (var6 > 0 &&
@@ -50,13 +50,13 @@ final class ah {
           if (20 <= var6) {
             if (30 <= var6) {
               var7 = (-(var6 * 256) + 12800) / 20;
-              ie.field_l.b(var3, var4, var7);
+              ie.field_l.drawAdditive(var3, var4, var7);
             } else {
-              ie.field_l.b(var3, var4, 256);
+              ie.field_l.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = var6 * 256 / 20;
-            ie.field_l.b(var3, var4, var7);
+            ie.field_l.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + MouseWheelInput.field_d;
@@ -65,7 +65,7 @@ final class ah {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          PlayerDungeonProfile.field_C.d(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          PlayerDungeonProfile.field_C.drawWithOpacity(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }
@@ -228,12 +228,12 @@ final class ah {
         if (!param0) {
           field_a = (String) null;
         }
-        var4.e();
-        ri.field_g.c(0, 0, 32, 32);
+        var4.bindAsRenderTarget();
+        ri.field_g.drawScaled(0, 0, 32, 32);
         IntrusiveNode.field_c.drawString(var5, 40, IntrusiveNode.field_c.field_H + 32 >> 1, 16777215, -1);
-        var4.d(16777215);
-        var4.e();
-        ri.field_g.b(0, 0, 32, 32, 0);
+        var4.addOutline(16777215);
+        var4.bindAsRenderTarget();
+        ri.field_g.drawScaledSilhouette(0, 0, 32, 32, 0);
         IntrusiveNode.field_c.drawString(var5, 40, 32 + IntrusiveNode.field_c.field_H >> 1, 0, -1);
         jh.b();
         ke.field_e = 0;

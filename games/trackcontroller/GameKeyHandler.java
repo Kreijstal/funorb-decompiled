@@ -171,7 +171,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 &&
               var2_int != 65535 &&
-              nd.isSupportedCp1252KeyCharacter(-92, (char) var2_int)) {
+              NameSuggestionsPanel.isSupportedCp1252KeyCharacter(-92, (char) var2_int)) {
               var3 = 1 + ActiveLevel.field_V & 127;
               if (field_d != var3) {
                 mc.field_K[ActiveLevel.field_V] = -1;

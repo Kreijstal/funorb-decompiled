@@ -776,13 +776,13 @@ class UiWidget extends IntrusiveNode {
           }
           if (param0 > 0 &&
             0 < param2) {
-            var21 = param4.c();
+            var21 = param4.copy();
             var24 = SoftwareRasterizer.field_f;
             var10 = SoftwareRasterizer.field_a;
             var11 = SoftwareRasterizer.field_d;
             var23 = new int[4];
             SoftwareRasterizer.saveClip(var23);
-            param4.a();
+            param4.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var23[0], var23[1], var23[2], var23[3]);
             var13 = param4.field_p * param5 + param1;
             var14 = -param0 + param4.field_p;
@@ -816,7 +816,7 @@ class UiWidget extends IntrusiveNode {
               var13 = stackIn_38_0Lifetime1;
               var16++;
             }
-            var21.d(-param4.field_s, -param4.field_n);
+            var21.draw(-param4.field_s, -param4.field_n);
             SoftwareRasterizer.setRasterBuffer(var24, var10, var11);
             SoftwareRasterizer.restoreClip(var23);
             return;

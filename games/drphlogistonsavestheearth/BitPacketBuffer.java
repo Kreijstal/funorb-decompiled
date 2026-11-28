@@ -81,14 +81,14 @@ final class BitPacketBuffer extends PacketBuffer {
             }
             var7 = param0[2].field_z;
             var8 = param0[1].field_z;
-            param0[0].b(param4, param5, param3);
-            param0[2].b(param4 + param2 - var7, param5, param3);
+            param0[0].drawTintedGray(param4, param5, param3);
+            param0[2].drawTintedGray(param4 + param2 - var7, param5, param3);
             SoftwareRasterizer.saveClip(rb.field_e);
             SoftwareRasterizer.intersectClip(param4 + var6_int, param5, param4 + (param2 - var7), param0[1].field_C + param5);
             var9 = param4 + var6_int;
             var10 = -var7 + (param4 + param2);
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
-              param0[1].b(param4, param5, param3);
+              param0[1].drawTintedGray(param4, param5, param3);
             }
             SoftwareRasterizer.restoreClip(rb.field_e);
             return;

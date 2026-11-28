@@ -148,7 +148,7 @@ final class IntroSequenceScreen extends DungeonAssaultScreen {
             SoftwareRasterizer.clearRaster();
             var2 = -sg.field_b.field_y + 640 >> 1;
             var3 = -sg.field_b.field_v + 480 >> 1;
-            sg.field_b.h(var2, var3);
+            sg.field_b.draw(var2, var3);
             if (sf.field_g != 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, sf.field_g);
             }

@@ -63,23 +63,23 @@ final class dc {
         if (var5 >= 256) {
           eh.b(false);
           if (150 > tk.field_e) {
-            il.field_f.f(var3, var4);
+            il.field_f.drawHalfSize(var3, var4);
           } else {
-            ob.field_C.b(var3 + 15, 10 + var4, var5);
+            ob.field_C.drawWithOpacity(var3 + 15, 10 + var4, var5);
           }
           var6 = tk.field_e - 125;
           if (var6 > 0 &&
             var6 < 50) {
             if (20 <= var6) {
               if (var6 < 30) {
-                ti.field_c.c(var3, var4, 256);
+                ti.field_c.drawAdditive(var3, var4, 256);
               } else {
                 var7 = (-(256 * var6) + 12800) / 20;
-                ti.field_c.c(var3, var4, var7);
+                ti.field_c.drawAdditive(var3, var4, var7);
               }
             } else {
               var7 = var6 * 256 / 20;
-              ti.field_c.c(var3, var4, var7);
+              ti.field_c.drawAdditive(var3, var4, var7);
             }
           }
           if (param0 != 11) {
@@ -91,27 +91,27 @@ final class dc {
             if (var6Lifetime4 < 20) {
               var7Lifetime5 = 256 * var6Lifetime4 / 20;
             }
-            ki.field_e.b(var3 + 15, var4 + 10, var7Lifetime5 * var5 >> 8);
+            ki.field_e.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime5 * var5 >> 8);
           }
           return;
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, -var5 + 256);
         eh.b(false);
         if (150 <= tk.field_e) {
-          ob.field_C.b(var3 + 15, 10 + var4, var5);
+          ob.field_C.drawWithOpacity(var3 + 15, 10 + var4, var5);
           var6Lifetime1 = tk.field_e - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (20 <= var6Lifetime1) {
               if (var6Lifetime1 < 30) {
-                ti.field_c.c(var3, var4, 256);
+                ti.field_c.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime1 = (-(256 * var6Lifetime1) + 12800) / 20;
-                ti.field_c.c(var3, var4, var7Lifetime1);
+                ti.field_c.drawAdditive(var3, var4, var7Lifetime1);
               }
             } else {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              ti.field_c.c(var3, var4, var7Lifetime1);
+              ti.field_c.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
           if (param0 != 11) {
@@ -123,11 +123,11 @@ final class dc {
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            ki.field_e.b(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+            ki.field_e.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
           }
           return;
         }
-        il.field_f.f(var3, var4);
+        il.field_f.drawHalfSize(var3, var4);
         var6Lifetime2 = tk.field_e - 125;
         if (var6Lifetime2 <= 0) {
           if (param0 != 11) {
@@ -139,20 +139,20 @@ final class dc {
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            ki.field_e.b(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
+            ki.field_e.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
           }
           return;
         }
         if (var6Lifetime2 < 50) {
           if (20 > var6Lifetime2) {
             var7Lifetime3 = var6Lifetime2 * 256 / 20;
-            ti.field_c.c(var3, var4, var7Lifetime3);
+            ti.field_c.drawAdditive(var3, var4, var7Lifetime3);
           } else {
             if (var6Lifetime2 < 30) {
-              ti.field_c.c(var3, var4, 256);
+              ti.field_c.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime3 = (-(256 * var6Lifetime2) + 12800) / 20;
-              ti.field_c.c(var3, var4, var7Lifetime3);
+              ti.field_c.drawAdditive(var3, var4, var7Lifetime3);
             }
           }
         }
@@ -165,7 +165,7 @@ final class dc {
           if (var6Lifetime3 < 20) {
             var7Lifetime4 = 256 * var6Lifetime3 / 20;
           }
-          ki.field_e.b(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
+          ki.field_e.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
         }
         return;
     }

@@ -46,8 +46,8 @@ final class qj {
             var6_int = param0[0].field_t;
             var7 = param0[2].field_t;
             var8 = param0[1].field_t;
-            param0[0].b(param4, param1, param5);
-            param0[2].b(-var7 + param4 + param2, param1, param5);
+            param0[0].drawTintedGray(param4, param1, param5);
+            param0[2].drawTintedGray(-var7 + param4 + param2, param1, param5);
             SoftwareRasterizer.saveClip(AgeValidator.field_l);
             if (param3 <= 43) {
               var12 = (RgbSprite[]) null;
@@ -57,7 +57,7 @@ final class qj {
             var9 = var6_int + param4;
             var10 = -var7 + (param2 + param4);
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
-              param0[1].b(param4, param1, param5);
+              param0[1].drawTintedGray(param4, param1, param5);
             }
             SoftwareRasterizer.restoreClip(AgeValidator.field_l);
             return;

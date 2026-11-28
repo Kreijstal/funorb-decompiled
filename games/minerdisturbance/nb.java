@@ -94,7 +94,7 @@ final class nb {
             if (2 == param2.field_d) {
               var7_int = var7_int + (-this.field_e.field_A + param1.field_q);
             }
-            this.field_e.f(var6_int, var7_int);
+            this.field_e.draw(var6_int, var7_int);
           }
           var6_intLifetime1 = -22 / ((param4 + 35) / 61);
           var7 = param2.a(param1, (byte) -115);

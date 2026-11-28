@@ -63,8 +63,8 @@ final class na extends hh {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof ck) {
-            param4 = param4 & ((ck) (param1)).field_B;
+          if (param1 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param1)).field_B;
           }
           if (param4) {
             if (var6_int != 0) {

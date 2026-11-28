@@ -63,7 +63,7 @@ final class mi extends am {
             var9 = de.field_d[var7] * var8 >> 12;
             var10 = var8 * jh.field_x[var7] >> 12;
             var11 = var6 + (var9 >> 12) & jh.field_A;
-            var12 = vp.field_I & (var10 >> 12) + param1;
+            var12 = NameSuggestionsPanel.field_I & (var10 >> 12) + param1;
             var27 = this.b(0, 0, var12);
             var15[var6] = var27[var11];
           }
@@ -155,7 +155,7 @@ final class mi extends am {
             var12 = de.field_d[var10] * var11 >> 12;
             var13 = jh.field_x[var10] * var11 >> 12;
             var14 = jh.field_A & (var12 >> 12) + var9;
-            var15 = vp.field_I & param1 + (var13 >> 12);
+            var15 = NameSuggestionsPanel.field_I & param1 + (var13 >> 12);
             var32 = this.c(24066, var15, 0);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];

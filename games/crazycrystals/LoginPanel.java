@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends og implements TextFieldListener, vd {
+final class LoginPanel extends og implements TextFieldListener, WidgetActivationListener {
     static String field_D;
-    private pc field_G;
+    private InteractiveWidget field_G;
     private EditableTextField field_J;
     static int field_L;
     private EditableTextField field_z;
@@ -11,10 +11,10 @@ final class LoginPanel extends og implements TextFieldListener, vd {
     private String field_B;
     private boolean field_E;
     private boolean field_A;
-    private pc field_M;
+    private InteractiveWidget field_M;
     static am field_N;
     private boolean field_C;
-    private pc field_H;
+    private InteractiveWidget field_H;
     static int field_I;
 
     public final void onTextChanged(EditableTextField param0, int param1) {
@@ -67,7 +67,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -200,7 +200,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
           uo.field_o <= FrameTimer.field_b[CrystalTile.field_o]) {
           MouseInputHandler.field_b = (ue) ((Object) new nc((m) (var3), var2));
         } else {
-          if (0 != pc.field_y) {
+          if (0 != InteractiveWidget.field_y) {
             MouseInputHandler.field_b = (ue) ((Object) new vn((m) (var3), var2, true));
           } else {
             if (mo.field_l == 0 &&
@@ -219,10 +219,10 @@ final class LoginPanel extends og implements TextFieldListener, vd {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        pc stackIn_17_1 = null;
-        pc stackIn_17_2 = null;
-        pc stackIn_18_1 = null;
-        pc stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -252,11 +252,11 @@ final class LoginPanel extends og implements TextFieldListener, vd {
           this.field_J = (EditableTextField) ((Object) new ValidatedTextField(param0, (bi) (this), 100));
           this.field_z = (EditableTextField) ((Object) new ValidatedTextField("", (bi) (this), 20));
           if (this.field_E) {
-            this.field_M = new pc(ba.field_l, (bi) null);
-            this.field_G = new pc(dn.field_c, (bi) null);
+            this.field_M = new InteractiveWidget(ba.field_l, (bi) null);
+            this.field_G = new InteractiveWidget(dn.field_c, (bi) null);
             this.field_J.field_x = false;
           } else {
-            this.field_M = new pc(e.field_b, (bi) null);
+            this.field_M = new InteractiveWidget(e.field_b, (bi) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_A) {
@@ -268,9 +268,9 @@ final class LoginPanel extends og implements TextFieldListener, vd {
               stackIn_18_2 = null;
               stackIn_18_3 = cf.field_h;
             }
-            this.field_G = new pc(stackIn_18_3, (bi) null);
+            this.field_G = new InteractiveWidget(stackIn_18_3, (bi) null);
             if (this.field_C) {
-              this.field_H = new pc(LaserTraceCursor.field_d, (bi) (this));
+              this.field_H = new InteractiveWidget(LaserTraceCursor.field_d, (bi) (this));
             }
           }
           this.field_J.field_i = (wo) ((Object) new wc(10000536));
@@ -389,7 +389,7 @@ final class LoginPanel extends og implements TextFieldListener, vd {
             return true;
           }
           if (param1 != 19279) {
-            this.field_G = (pc) null;
+            this.field_G = (InteractiveWidget) null;
           }
           if (param0 == 98) {
             stackIn_8_0 = this.a((byte) -117, param2);

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm extends ta implements ai {
-    private s field_B;
+final class hm extends ta implements WidgetActivationListener {
+    private InteractiveWidget field_B;
     static int field_C;
-    private s field_E;
-    private s field_D;
+    private InteractiveWidget field_E;
+    private InteractiveWidget field_D;
 
     public hm() {
         super(0, 0, 476, 225, (td) null);
-        this.field_D = new s(ResourceArchive.field_h, (ag) null);
-        this.field_B = new s(bi.field_b, (ag) null);
-        this.field_E = new s(BoundedRandomAccessFile.field_k, (ag) null);
+        this.field_D = new InteractiveWidget(ResourceArchive.field_h, (ag) null);
+        this.field_B = new InteractiveWidget(bi.field_b, (ag) null);
+        this.field_E = new InteractiveWidget(BoundedRandomAccessFile.field_k, (ag) null);
         vk var1 = new vk();
         this.field_D.field_j = (td) ((Object) var1);
         this.field_B.field_j = (td) ((Object) var1);
@@ -128,7 +128,7 @@ final class hm extends ta implements ai {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

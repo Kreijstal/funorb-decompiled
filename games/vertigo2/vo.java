@@ -190,8 +190,8 @@ final class vo extends va {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param3 instanceof d) {
-            param0 = param0 & ((d) (param3)).field_F;
+          if (param3 instanceof InteractiveWidget) {
+            param0 = param0 & ((InteractiveWidget) (param3)).field_F;
           }
           if (param0) {
             if (var6_int != 0) {

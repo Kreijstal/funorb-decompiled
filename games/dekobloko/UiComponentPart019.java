@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UiComponentPart019 extends UiComponentPart020 implements CallbackContract019 {
+final class UiComponentPart019 extends UiComponentPart020 implements WidgetActivationListener {
     static String stringState0348;
     static String stringState0349;
     static int integerState0504;
@@ -24,7 +24,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
         }
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         if (byteArgument1 != 67) {
           integerState0505 = -124;
         }
@@ -272,33 +272,33 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           MixedSupport132.sceneWidgetArrayState0008[0] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, GameSession.stringState0439);
           MixedSupport103.sceneWidgetPart009ArrayArrayState0001[0] = new IconLabelWidget[6];
           for (integerLocal38 = 0; integerLocal38 < 5; integerLocal38++) {
-            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[0][integerLocal38 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, MixedSupport040.rgbSpriteArrayState0011[integerLocal38], MixedSupport029.stringArrayState0011[integerLocal38]);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[0][integerLocal38 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, MixedSupport040.rgbSpriteArrayState0011[integerLocal38], MixedSupport029.stringArrayState0011[integerLocal38]);
           }
           if (2 <= UiComponentPart002.integerArrayState0014.length) {
             MixedSupport132.sceneWidgetArrayState0008[1] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, PlayerNamePrompt.stringState0215);
             sceneWidgetPart009ArrayLocal1 = new IconLabelWidget[1 + UiComponentPart002.integerArrayState0014.length];
             MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1] = sceneWidgetPart009ArrayLocal1;
-            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal48 = 0; UiComponentPart002.integerArrayState0014.length > integerLocal48; integerLocal48++) {
-              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][integerLocal48 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, Integer.toString(UiComponentPart002.integerArrayState0014[integerLocal48]));
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[1][integerLocal48 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, Integer.toString(UiComponentPart002.integerArrayState0014[integerLocal48]));
             }
           }
           MixedSupport132.sceneWidgetArrayState0008[2] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, MixedSupport009.stringState0040);
-          MixedSupport103.sceneWidgetPart009ArrayArrayState0001[2] = new IconLabelWidget[]{new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220), new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[0], GameDomainSupport004.stringState0284), new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[1], MixedSupport051.stringState0214)};
+          MixedSupport103.sceneWidgetPart009ArrayArrayState0001[2] = new IconLabelWidget[]{new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220), new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[0], GameDomainSupport004.stringState0284), new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, GameDomainSupport001.rgbSpriteArrayState0002[1], MixedSupport051.stringState0214)};
           if (SceneWidgetPart007.integerState0506 > 1) {
             MixedSupport132.sceneWidgetArrayState0008[3] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, ByteStorage.stringState0351);
             sceneWidgetPart009ArrayLocal2 = new IconLabelWidget[SceneWidgetPart007.integerState0506 + 1];
             MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3] = sceneWidgetPart009ArrayLocal2;
-            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal49 = 0; SceneWidgetPart007.integerState0506 > integerLocal49; integerLocal49++) {
-              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][integerLocal49 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport099.stringArrayState0029[integerLocal49]);
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[3][integerLocal49 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, MixedSupport099.stringArrayState0029[integerLocal49]);
             }
           }
           for (integerLocal50 = 0; integerArgument13 > integerLocal50; integerLocal50++) {
             MixedSupport132.sceneWidgetArrayState0008[4 + integerLocal50] = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110, AccountFieldStatusIndicator.stringArrayState0026[integerLocal50]);
             sceneWidgetPart009ArrayLocal3 = new IconLabelWidget[PlayerBoardUpdateQueue.bitwiseAnd((int) MixedSupport022.byteArrayState0005[integerLocal50], 255) + 1];
             MixedSupport103.sceneWidgetPart009ArrayArrayState0001[4 + integerLocal50] = sceneWidgetPart009ArrayLocal3;
-            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
+            MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][0] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) null, MixedSupport053.stringState0220);
             for (integerLocal40 = 0; (MixedSupport022.byteArrayState0005[integerLocal50] & 255) > integerLocal40; integerLocal40++) {
               if (MixedSupport111.rgbSpriteArrayArrayState0011 == null) {
                 objectLocal41 = null;
@@ -318,7 +318,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
               } else {
                 objectLocal42 = null;
               }
-              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][integerLocal40 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, UiComponentPart007.sceneWidgetState0019, (RgbSprite) (objectLocal41), (String) (objectLocal42));
+              MixedSupport103.sceneWidgetPart009ArrayArrayState0001[integerLocal50 + 4][integerLocal40 + 1] = new IconLabelWidget(0L, MixedSupport073.sceneWidgetState0073, (SceneWidget) null, NameSuggestionsPanel.sceneWidgetState0019, (RgbSprite) (objectLocal41), (String) (objectLocal42));
             }
           }
           for (integerLocal51 = 0; integerLocal51 < integerArgument13 + 4; integerLocal51++) {
@@ -470,7 +470,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
         MixedSupport011.bitmapFontState0006.drawString(MixedSupport137.stringState0589, 4 + integerArgument1 + this.integerState0110, 4 + MixedSupport011.bitmapFontState0006.integerState0518 + integerArgument4 + this.integerState0104, 16777215, -1);
         if (integerArgument2 >= -103) {
           InteractiveComponent interactiveComponentLocal1 = (InteractiveComponent) null;
-          this.performAction0313((byte) -51, -52, (InteractiveComponent) null, -94, 59);
+          this.onWidgetActivated((byte) -51, -52, (InteractiveComponent) null, -94, 59);
         }
     }
 

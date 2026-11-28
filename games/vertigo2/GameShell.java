@@ -548,7 +548,7 @@ abstract class GameShell extends GameApplet {
                             if (11 != var2 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                d.a(46);
+                                InteractiveWidget.a(46);
                                 return;
                               }
                               if (var2 == 17) {

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends og implements vd {
+final class jd extends og implements WidgetActivationListener {
     static java.awt.Canvas field_D;
     private String field_M;
     static RgbSprite field_A;
     private int field_F;
-    private pc[] field_L;
+    private InteractiveWidget[] field_L;
     static int field_I;
     private na field_B;
     private int[] field_E;
@@ -53,7 +53,7 @@ final class jd extends og implements vd {
         return null;
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -113,12 +113,12 @@ final class jd extends og implements vd {
         }
     }
 
-    final pc a(String param0, bi param1, int param2) {
-        pc var4 = null;
+    final InteractiveWidget a(String param0, bi param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
-        pc stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -126,7 +126,7 @@ final class jd extends og implements vd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new pc(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_i = (wo) ((Object) new ve());
           var5 = -2 + this.field_f;
           this.a(34 + this.field_f, 0, 0, this.field_g, (byte) -52);
@@ -173,8 +173,8 @@ final class jd extends og implements vd {
         if (param1 <= this.field_F) {
           return;
         }
-        pc[] var7 = new pc[param1];
-        pc[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; this.field_F > var5; var5++) {
           var7[var5] = this.field_L[var5];

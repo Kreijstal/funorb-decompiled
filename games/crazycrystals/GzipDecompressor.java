@@ -74,11 +74,11 @@ final class GzipDecompressor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > 96) {
-            gi.field_n.a();
+            gi.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             go.field_l.drawString(param2, 0, 20, 16760896, -1);
             dk.field_o.setAsRasterTarget(param0 ^ -6963);
-            gi.field_n.c(538, param3 - 20, 24576 / param1, 25);
+            gi.field_n.drawDownscaledAreaBlended(538, param3 - 20, 24576 / param1, 25);
           } else {
             go.field_l.drawString(param2, 538, param3, 16760896, -1);
           }

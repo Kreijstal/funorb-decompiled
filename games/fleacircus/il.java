@@ -40,7 +40,7 @@ final class il {
               qj.field_H.drawParagraph(MouseWheelInput.field_a, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.d(245, 199);
+            var6.draw(245, 199);
           }
           if (BufferedSocket.field_i < ByteStorage.field_c) {
             var7 = wa.field_k[t.field_a];

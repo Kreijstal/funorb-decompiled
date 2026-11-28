@@ -28,19 +28,19 @@ final class ki extends h {
         RuntimeException var6 = null;
         ab var7 = null;
         int var8 = 0;
-        lj var10 = null;
+        InteractiveWidget var10 = null;
         ab var11 = null;
         ab var12 = null;
         ab var13 = null;
         ab var14 = null;
         ab var15 = null;
         try {
-          if (!(param4 instanceof lj)) {
+          if (!(param4 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param4);
           }
-          var10 = (lj) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           c.a(param4.field_p + (param0 + param4.field_l), param4.field_p + param0, (byte) -50, param4.field_n + (param1 + param4.field_h), param4.field_n + param1);
           if (var10 != null) {
             param2 = param2 & var10.field_t;

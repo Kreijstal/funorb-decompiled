@@ -118,9 +118,9 @@ final class ql {
         int var9 = 0;
         int var10 = 0;
         int var3 = DiskCacheWorker.a(param0, (byte) -128);
-        int var4 = PcmOutputWorker.a(param0, -121);
+        int var4 = PcmOutputWorker.cosineFixed16At8192Angle(param0, -121);
         int var5 = DiskCacheWorker.a(param1, (byte) 85);
-        int var6 = PcmOutputWorker.a(param1, -31);
+        int var6 = PcmOutputWorker.cosineFixed16At8192Angle(param1, -31);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         if (param2 >= 89) {

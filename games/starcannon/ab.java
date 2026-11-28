@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ab extends dk {
+class ab extends InteractiveWidget {
     static IntrusiveDeque field_H;
     private String[] field_D;
     static ge field_F;
@@ -85,7 +85,7 @@ class ab extends dk {
               ah.field_d.drawParagraph(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var7.e(245, 199);
+            var7.draw(245, 199);
           }
           if (IntrusiveDeque.field_a < ByteStorage.field_a) {
             var8Lifetime2 = og.field_d[od.field_i];
@@ -144,8 +144,8 @@ class ab extends dk {
         return this.field_D[this.field_E.field_m];
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, 94, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, 94, param2, param3);
         int var5 = param2 - this.field_s;
         if (param1 <= 59) {
           field_A = (int[]) null;

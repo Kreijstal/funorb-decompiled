@@ -578,11 +578,11 @@ class jj extends ButtonWidget {
         return null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         if (param0 >= -23) {
           this.a((byte) -81);
         }
-        super.b(-102, param1, param2, param3);
+        super.activateFromInput(-102, param1, param2, param3);
         int var5 = -this.field_r + param1;
         int var6 = param2 - this.field_e;
         bl var7 = this.b(var6, var5, 2);

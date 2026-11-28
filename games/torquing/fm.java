@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm extends WidgetContainer implements ng {
-    private lg field_C;
+final class fm extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_C;
     static int field_E;
-    private lg field_D;
-    private lg field_B;
+    private InteractiveWidget field_D;
+    private InteractiveWidget field_B;
     static ResourceArchive field_F;
 
     final boolean a(int param0, UiWidget param1, char param2, int param3) {
@@ -141,7 +141,7 @@ final class fm extends WidgetContainer implements ng {
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -181,9 +181,9 @@ final class fm extends WidgetContainer implements ng {
 
     public fm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_C = new lg(qh.field_e, (ca) null);
-        this.field_D = new lg(cm.field_k, (ca) null);
-        this.field_B = new lg(FrameTimer.field_c, (ca) null);
+        this.field_C = new InteractiveWidget(qh.field_e, (ca) null);
+        this.field_D = new InteractiveWidget(cm.field_k, (ca) null);
+        this.field_B = new InteractiveWidget(FrameTimer.field_c, (ca) null);
         rf var1 = new rf();
         this.field_C.renderer = (WidgetRenderer) ((Object) var1);
         this.field_D.renderer = (WidgetRenderer) ((Object) var1);

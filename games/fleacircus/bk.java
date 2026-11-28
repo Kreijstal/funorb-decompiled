@@ -27,7 +27,7 @@ final class bk {
             stackIn_5_0 = (PalettedBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new PalettedBitmapFont(param1, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
+          var2 = new PalettedBitmapFont(param1, vg.field_I, b.field_b, NameSuggestionsPanel.field_H, ob.field_a, rd.field_d, of.field_d);
           EditableTextField.o(-28210);
           stackIn_7_0 = var2;
           return stackIn_7_0;

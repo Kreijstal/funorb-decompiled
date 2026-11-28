@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class AccountCreationResultPanel extends ha implements ql {
+final class AccountCreationResultPanel extends ha implements WidgetActivationListener {
     private AccountRegistrationPanel field_jb;
     private boolean field_mb;
     private boolean field_nb;
@@ -46,7 +46,7 @@ final class AccountCreationResultPanel extends ha implements ql {
             } else {
               var4 = me.field_l;
               if (null != this.field_jb) {
-                this.field_jb.a(param1 ^ 193);
+                this.field_jb.onNameSuggestionsRefreshRequested(param1 ^ 193);
               }
             }
           }
@@ -115,10 +115,10 @@ final class AccountCreationResultPanel extends ha implements ql {
         field_kb = null;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         if (param3 != 7) {
           ButtonWidget var7 = (ButtonWidget) null;
-          this.a(63, -42, -38, 66, (ButtonWidget) null);
+          this.onWidgetActivated(63, -42, -38, 66, (ButtonWidget) null);
         }
         if (this.field_nb) {
           ll.a((byte) 91, true, false);

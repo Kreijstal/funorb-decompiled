@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class va extends lg {
+final class va extends InteractiveWidget {
     int field_D;
     int field_E;
     static bp field_H;

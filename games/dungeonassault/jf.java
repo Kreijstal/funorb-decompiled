@@ -33,9 +33,9 @@ final class jf extends en {
             var3 = this.field_d.field_c.field_v;
           }
           var5 = new RgbSprite(var2, var3);
-          var5.e();
-          this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
-          la.field_b.drawString(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
+          var5.bindAsRenderTarget();
+          this.field_d.field_c.drawGrayModulated(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
+          la.field_b.drawString(InteractiveWidget.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
           jh.b();
           return var5;
         }
@@ -46,9 +46,9 @@ final class jf extends en {
           var3Lifetime1 = this.field_d.field_c.field_v;
         }
         RgbSprite var6 = new RgbSprite(var2Lifetime1, var3Lifetime1);
-        var6.e();
-        this.field_d.field_c.c(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
-        la.field_b.drawString(ck.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
+        var6.bindAsRenderTarget();
+        this.field_d.field_c.drawGrayModulated(0, la.field_b.field_H - this.field_d.field_c.field_v >> 1, this.field_d.field_a);
+        la.field_b.drawString(InteractiveWidget.field_H.a(this.field_d.field_b, (byte) -48), 4 + this.field_d.field_c.field_y, la.field_b.field_H, this.field_d.field_a, -1);
         jh.b();
         return var6;
     }

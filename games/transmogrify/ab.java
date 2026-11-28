@@ -123,7 +123,7 @@ final class ab {
             if (param1.field_a == 2) {
               var7 = var7 + (param3.field_h - this.field_d.field_s);
             }
-            this.field_d.c(var6_int, var7);
+            this.field_d.draw(var6_int, var7);
           }
           var6 = param1.c(param3, 82);
           var7Lifetime1 = -84 / ((-29 - param0) / 48);

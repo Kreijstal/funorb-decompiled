@@ -144,10 +144,10 @@ final class FlyAnimation extends EventAnimation {
             var8 = 48 - (var5 >> 2);
             nk.a(this.screen.field_s.field_y, -(var7Lifetime1 >> 1) + 64 + var2, 24 + (var3 - (var8 >> 1)), var7Lifetime1, var8);
             if (!this.field_A) {
-              ho.field_j[var4].c(var2, -45 + var3 - var5);
+              ho.field_j[var4].drawFlippedHorizontal(var2, -45 + var3 - var5);
               return;
             }
-            ho.field_j[var4].a(var2, -var5 + var3 - 45);
+            ho.field_j[var4].draw(var2, -var5 + var3 - 45);
             return;
           }
           ve.field_m[var7Lifetime1][(this.screen.field_L >> 2) % 25].draw(var2 + 44, -var5 + var3);
@@ -155,20 +155,20 @@ final class FlyAnimation extends EventAnimation {
           var8Lifetime2 = 48 - (var5 >> 2);
           nk.a(this.screen.field_s.field_y, -(var7Lifetime1Lifetime1 >> 1) + 64 + var2, 24 + (var3 - (var8Lifetime2 >> 1)), var7Lifetime1Lifetime1, var8Lifetime2);
           if (!this.field_A) {
-            ho.field_j[var4].c(var2, -45 + var3 - var5);
+            ho.field_j[var4].drawFlippedHorizontal(var2, -45 + var3 - var5);
             return;
           }
-          ho.field_j[var4].a(var2, -var5 + var3 - 45);
+          ho.field_j[var4].draw(var2, -var5 + var3 - 45);
           return;
         }
         var7Lifetime2 = -(var5 >> 2) + 64;
         var8Lifetime1 = 48 - (var5 >> 2);
         nk.a(this.screen.field_s.field_y, -(var7Lifetime2 >> 1) + 64 + var2, 24 + (var3 - (var8Lifetime1 >> 1)), var7Lifetime2, var8Lifetime1);
         if (!this.field_A) {
-          ho.field_j[var4].c(var2, -45 + var3 - var5);
+          ho.field_j[var4].drawFlippedHorizontal(var2, -45 + var3 - var5);
           return;
         }
-        ho.field_j[var4].a(var2, -var5 + var3 - 45);
+        ho.field_j[var4].draw(var2, -var5 + var3 - 45);
     }
 
     static {

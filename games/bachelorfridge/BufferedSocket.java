@@ -560,14 +560,14 @@ final class BufferedSocket implements Runnable {
             var6_int = param5[0].field_n;
             var7 = param5[2].field_n;
             var8 = param5[1].field_n;
-            param5[0].e(param0, param3, param1);
-            param5[2].e(param4 + param0 - var7, param3, param1);
+            param5[0].drawGrayRampTinted(param0, param3, param1);
+            param5[2].drawGrayRampTinted(param4 + param0 - var7, param3, param1);
             SoftwareRasterizer.saveClip(InsanoSauceSpecial.field_q);
             SoftwareRasterizer.intersectClip(var6_int + param0, param3, -var7 + (param0 + param4), param3 + param5[1].field_o);
             var9 = var6_int + param0;
             var10 = param0 + param4 - var7;
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
-              param5[1].e(param0, param3, param1);
+              param5[1].drawGrayRampTinted(param0, param3, param1);
             }
             if (param2 != 447) {
               field_b = (int[][]) null;

@@ -17,7 +17,7 @@ abstract class SpriteBase {
 
     abstract void drawWithAlpha(int param0, int param1, int param2);
 
-    final static bm a(int param0, int param1, int param2, byte param3, int param4) {
+    final static bm getOrRequestHighscoreTable(int param0, int param1, int param2, byte param3, int param4) {
         int var6 = Torquing.field_u;
         bm var5 = (bm) (CachedArchiveSource.field_d.beginBackward(0));
         while (var5 != null) {
@@ -37,7 +37,7 @@ abstract class SpriteBase {
           return var9;
         }
         String var7 = (String) null;
-        SpriteBase.a((String) null, 73);
+        SpriteBase.matchesCurrentDisplayName((String) null, 73);
         var9.field_o = param2;
         var9.field_s = param0;
         CachedArchiveSource.field_d.addFirst((byte) 54, var9);
@@ -52,7 +52,7 @@ abstract class SpriteBase {
         }
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean matchesCurrentDisplayName(String param0, int param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;

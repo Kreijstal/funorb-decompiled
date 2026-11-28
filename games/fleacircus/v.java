@@ -107,14 +107,14 @@ final class v extends ja {
               var6 != w.field_e) {
               if (var6 == ml.field_K) {
                 var19 = t.field_h[2];
-                var19.a(var9, var10 - (var19.field_t >> 1), 256);
+                var19.drawAdditive(var9, var10 - (var19.field_t >> 1), 256);
                 return;
               }
               if (hm.field_b != var6) {
                 return;
               }
               var20 = t.field_h[1];
-              var20.a(var9, -(var20.field_t >> 1) + var10, 256);
+              var20.drawAdditive(var9, -(var20.field_t >> 1) + var10, 256);
               return;
             }
             var21 = t.field_h[0];
@@ -129,9 +129,9 @@ final class v extends ja {
               this.field_Q = new RgbSprite(var11, var12);
               TextFieldValidator.a(this.field_Q, 45);
             }
-            var21.a(112, 144, var21.field_x << 4, var21.field_r << 4, -this.field_T << 10, 4096);
+            var21.drawRotatedAbout(112, 144, var21.field_x << 4, var21.field_r << 4, -this.field_T << 10, 4096);
             ia.a(-66);
-            this.field_Q.a(var9 - (var21.field_x >> 1), -var21.field_r + var10, 256);
+            this.field_Q.drawAdditive(var9 - (var21.field_x >> 1), -var21.field_r + var10, 256);
             return;
           }
           super.b(param0, param1, true, param3);
@@ -143,14 +143,14 @@ final class v extends ja {
             var6 != w.field_e) {
             if (var6 == ml.field_K) {
               var23 = t.field_h[2];
-              var23.a(var9Lifetime3, var10Lifetime3 - (var23.field_t >> 1), 256);
+              var23.drawAdditive(var9Lifetime3, var10Lifetime3 - (var23.field_t >> 1), 256);
               return;
             }
             if (hm.field_b != var6) {
               return;
             }
             var24 = t.field_h[1];
-            var24.a(var9Lifetime3, -(var24.field_t >> 1) + var10Lifetime3, 256);
+            var24.drawAdditive(var9Lifetime3, -(var24.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           var25 = t.field_h[0];
@@ -173,9 +173,9 @@ final class v extends ja {
               }
             }
           }
-          var25.a(112, 144, var25.field_x << 4, var25.field_r << 4, -this.field_T << 10, 4096);
+          var25.drawRotatedAbout(112, 144, var25.field_x << 4, var25.field_r << 4, -this.field_T << 10, 4096);
           ia.a(-66);
-          this.field_Q.a(var9Lifetime3 - (var25.field_x >> 1), -var25.field_r + var10Lifetime3, 256);
+          this.field_Q.drawAdditive(var9Lifetime3 - (var25.field_x >> 1), -var25.field_r + var10Lifetime3, 256);
           return;
         }
         if (var6 != w.field_e) {
@@ -196,14 +196,14 @@ final class v extends ja {
             var6Lifetime1 != w.field_e) {
             if (var6Lifetime1 == ml.field_K) {
               var37 = t.field_h[2];
-              var37.a(var9Lifetime1, var10Lifetime1 - (var37.field_t >> 1), 256);
+              var37.drawAdditive(var9Lifetime1, var10Lifetime1 - (var37.field_t >> 1), 256);
               return;
             }
             if (hm.field_b != var6Lifetime1) {
               return;
             }
             var38 = t.field_h[1];
-            var38.a(var9Lifetime1, -(var38.field_t >> 1) + var10Lifetime1, 256);
+            var38.drawAdditive(var9Lifetime1, -(var38.field_t >> 1) + var10Lifetime1, 256);
             return;
           }
           var39 = t.field_h[0];
@@ -226,9 +226,9 @@ final class v extends ja {
               }
             }
           }
-          var39.a(112, 144, var39.field_x << 4, var39.field_r << 4, -this.field_T << 10, 4096);
+          var39.drawRotatedAbout(112, 144, var39.field_x << 4, var39.field_r << 4, -this.field_T << 10, 4096);
           ia.a(-66);
-          this.field_Q.a(var9Lifetime1 - (var39.field_x >> 1), -var39.field_r + var10Lifetime1, 256);
+          this.field_Q.drawAdditive(var9Lifetime1 - (var39.field_x >> 1), -var39.field_r + var10Lifetime1, 256);
           return;
         }
         this.field_i = var5;
@@ -251,22 +251,22 @@ final class v extends ja {
             this.field_Q = new RgbSprite(var11Lifetime2, var12Lifetime2);
             TextFieldValidator.a(this.field_Q, 45);
           }
-          var27.a(112, 144, var27.field_x << 4, var27.field_r << 4, -this.field_T << 10, 4096);
+          var27.drawRotatedAbout(112, 144, var27.field_x << 4, var27.field_r << 4, -this.field_T << 10, 4096);
           ia.a(-66);
-          this.field_Q.a(var9Lifetime2 - (var27.field_x >> 1), -var27.field_r + var10Lifetime2, 256);
+          this.field_Q.drawAdditive(var9Lifetime2 - (var27.field_x >> 1), -var27.field_r + var10Lifetime2, 256);
           return;
         }
         if (var6Lifetime2 != w.field_e) {
           if (var6Lifetime2 == ml.field_K) {
             var28 = t.field_h[2];
-            var28.a(var9Lifetime2, var10Lifetime2 - (var28.field_t >> 1), 256);
+            var28.drawAdditive(var9Lifetime2, var10Lifetime2 - (var28.field_t >> 1), 256);
             return;
           }
           if (hm.field_b != var6Lifetime2) {
             return;
           }
           var29 = t.field_h[1];
-          var29.a(var9Lifetime2, -(var29.field_t >> 1) + var10Lifetime2, 256);
+          var29.drawAdditive(var9Lifetime2, -(var29.field_t >> 1) + var10Lifetime2, 256);
           return;
         }
         var30 = t.field_h[0];
@@ -290,9 +290,9 @@ final class v extends ja {
             }
           }
         }
-        var30.a(112, 144, var30.field_x << 4, var30.field_r << 4, -this.field_T << 10, 4096);
+        var30.drawRotatedAbout(112, 144, var30.field_x << 4, var30.field_r << 4, -this.field_T << 10, 4096);
         ia.a(-66);
-        this.field_Q.a(var9Lifetime2 - (var30.field_x >> 1), -var30.field_r + var10Lifetime2, 256);
+        this.field_Q.drawAdditive(var9Lifetime2 - (var30.field_x >> 1), -var30.field_r + var10Lifetime2, 256);
         return;
     }
 

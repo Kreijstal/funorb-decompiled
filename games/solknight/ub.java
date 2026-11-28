@@ -24,9 +24,9 @@ final class ub {
           ti.field_f = new PcmStreamMixer();
           ak.field_a = 1000 * param3 / param7;
           ql.field_r.setRootStream(ti.field_f);
-          ua.field_I = param5;
-          ua.field_I.setMasterVolume(1349013231, la.field_k);
-          kj.field_P.setRootStream(ua.field_I);
+          NameSuggestionsPanel.field_I = param5;
+          NameSuggestionsPanel.field_I.setMasterVolume(1349013231, la.field_k);
+          kj.field_P.setRootStream(NameSuggestionsPanel.field_I);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ub.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

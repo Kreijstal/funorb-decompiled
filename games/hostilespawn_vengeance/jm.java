@@ -190,7 +190,7 @@ final class jm {
                     }
                     var44 = (int)((var6 + var42 * var36) * 24.0);
                     var45 = (int)((var8 + var42 * var38) * 24.0);
-                    stackIn_39_0 = (!var31.field_u.d(var40, var41, var44, var45)) ? 0 : 1;
+                    stackIn_39_0 = (!var31.field_u.isOpaqueAt(var40, var41, var44, var45)) ? 0 : 1;
                     var35 = stackIn_39_0;
                     if (var35 != 0) {
                       var6 = var6 + var36 * var42;

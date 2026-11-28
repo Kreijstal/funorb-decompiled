@@ -304,7 +304,7 @@ final class sg {
             bi.field_a.drawString(he.field_i, var14, var8, 0, -1);
             var14 = var14 + var11;
             while (0 < var12) {
-              ob.field_e.c(var14, -bi.field_a.field_E + var8);
+              ob.field_e.drawQuarterSizeAveraged(var14, -bi.field_a.field_E + var8);
               var14 += 10;
               var12--;
             }
@@ -313,7 +313,7 @@ final class sg {
             var13 = 338 - var12 >> 1;
             bi.field_a.drawString(he.field_i, var13, var8, 0, -1);
             var13 = var13 + var11;
-            ob.field_e.c(var13, var8 - bi.field_a.field_E);
+            ob.field_e.drawQuarterSizeAveraged(var13, var8 - bi.field_a.field_E);
             bi.field_a.drawString(id.field_t, var13 + (ob.field_e.field_p >> 2), var8, 0, -1);
           }
           var8 = var8 + ob.field_e.field_u;
@@ -883,9 +883,9 @@ final class sg {
                 var14 = ik.field_b[var11];
               }
               if (var12 != 0) {
-                ef.field_d[var11].c(var13, var14);
+                ef.field_d[var11].drawQuarterSizeAveraged(var13, var14);
               } else {
-                e.field_u.c(var13, var14);
+                e.field_u.drawQuarterSizeAveraged(var13, var14);
               }
               if (var3_int >= var13 &&
                 var3_int <= 32 + var13 &&
@@ -893,9 +893,9 @@ final class sg {
                 var4 <= 32 + var14) {
                 this.field_e = var11;
                 if (var12 != 0) {
-                  md.field_A[var11].c(var13, var14);
+                  md.field_A[var11].drawQuarterSizeAveraged(var13, var14);
                 } else {
-                  fl.field_c.c(var13, var14);
+                  fl.field_c.drawQuarterSizeAveraged(var13, var14);
                 }
               }
               if (-1 != this.field_o &&
@@ -912,9 +912,9 @@ final class sg {
               }
               if (this.field_h == var11) {
                 if (var12 != 0) {
-                  fc.field_e[var11].c(var13, var14);
+                  fc.field_e[var11].drawQuarterSizeAveraged(var13, var14);
                 } else {
-                  DebouncedFieldValidator.field_b.c(var13, var14);
+                  DebouncedFieldValidator.field_b.drawQuarterSizeAveraged(var13, var14);
                 }
               }
             }
@@ -1611,13 +1611,13 @@ final class sg {
               if (this.field_m.field_J != 0) {
                 if (this.field_m.field_J > this.field_m.field_r) {
                   var2_intLifetime2 = 256 * this.field_m.field_r / this.field_m.field_J;
-                  ia.field_G.b(50, 213, -var2_intLifetime2 + 256);
-                  kf.field_A[1].b(0, this.field_m.field_M, var2_intLifetime2);
+                  ia.field_G.drawWithOpacity(50, 213, -var2_intLifetime2 + 256);
+                  InteractiveWidget.field_A[1].drawWithOpacity(0, this.field_m.field_M, var2_intLifetime2);
                 } else {
-                  kf.field_A[1].d(0, this.field_m.field_M);
+                  InteractiveWidget.field_A[1].draw(0, this.field_m.field_M);
                 }
               } else {
-                ia.field_G.d(50, 213);
+                ia.field_G.draw(50, 213);
                 if (this.field_m.field_A) {
                   this.a((byte) 66, 215, 53);
                 }
@@ -1633,7 +1633,7 @@ final class sg {
               }
             } else {
               if (11 != this.field_d) {
-                kf.field_A[1].d(0, this.field_m.field_M);
+                InteractiveWidget.field_A[1].draw(0, this.field_m.field_M);
               }
             }
             this.field_m.c((byte) -109);
@@ -1666,7 +1666,7 @@ final class sg {
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
           if (ij.field_n[this.field_d] != null) {
-            ij.field_n[this.field_d].d(0, 0);
+            ij.field_n[this.field_d].draw(0, 0);
           }
           if (param0 != 48) {
             field_l = (dg) null;
@@ -1767,7 +1767,7 @@ final class sg {
           if (var5 == 21) {
             var6_int = this.a(true, ResourceArchive.field_e, bk.field_b, -107);
             for (var7 = 0; 4 > var7; var7++) {
-              hi.field_b[var7].d(95 * var7, var4_int);
+              hi.field_b[var7].draw(95 * var7, var4_int);
               stackIn_10_0 = (var7 == 3) ? 2 : var7;
               var8 = stackIn_10_0;
               var9 = 0;
@@ -1786,44 +1786,44 @@ final class sg {
                 var9 = 16777215;
               }
               if (16777215 == var9) {
-                NetworkArchiveRequest.field_z[var7].d(95 * var7, var4_int);
+                NetworkArchiveRequest.field_z[var7].draw(95 * var7, var4_int);
               } else {
                 if (var9 != 0) {
-                  NetworkArchiveRequest.field_z[var7].b(95 * var7, var4_int, 128);
+                  NetworkArchiveRequest.field_z[var7].drawWithOpacity(95 * var7, var4_int, 128);
                 }
               }
             }
           } else {
             var6_int = this.a((byte) 46, param1);
             if (param0) {
-              ej.field_b[-1 + var5].d(var6_int, var4_int);
+              ej.field_b[-1 + var5].draw(var6_int, var4_int);
             }
-            gg.field_a[var5 - 1].d(var6_int, var4_int);
+            gg.field_a[var5 - 1].draw(var6_int, var4_int);
           }
           var7Lifetime1 = var5;
           if (var7Lifetime1 != 4) {
             if (var7Lifetime1 != 7) {
               if (var7Lifetime1 != 3) {
                 if (var7Lifetime1 == 9) {
-                  wc.field_c[-1 + tg.field_j / 4].d(163, var4_int);
+                  wc.field_c[-1 + tg.field_j / 4].draw(163, var4_int);
                 }
               } else {
                 var6 = id.field_w[rg.field_b].field_h;
-                var6.d(199 + (-var6.field_p + 36 >> 1), (24 - var6.field_u >> 1) + 9 + var4_int);
+                var6.draw(199 + (-var6.field_p + 36 >> 1), (24 - var6.field_u >> 1) + 9 + var4_int);
               }
             } else {
               var7Lifetime1 = CrossfadingMidiPcmStream.field_n.field_u;
               if (var7Lifetime1 < 0) {
                 var7Lifetime1 = 0;
               }
-              jf.field_N.d(var7Lifetime1 / 2 + 118, 11 + var4_int);
+              jf.field_N.draw(var7Lifetime1 / 2 + 118, 11 + var4_int);
             }
           } else {
             var7Lifetime1 = oc.field_e;
             if (0 > var7Lifetime1) {
               var7Lifetime1 = 0;
             }
-            jf.field_N.d(118 + var7Lifetime1 / 2, var4_int + 11);
+            jf.field_N.draw(118 + var7Lifetime1 / 2, var4_int + 11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -196,7 +196,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           if (var8 == null) {
             SoftwareRasterizer.fillRectangleAlpha(var6, var7, 40, 40, 0, 128);
           } else {
-            var8.d(var6, var7, 128);
+            var8.drawWithOpacity(var6, var7, 128);
           }
         }
         oh.a((byte) 99);
@@ -573,14 +573,14 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
               if (var2 != this.field_t) {
                 if (um.field_i[var2] != gm.field_d.field_a[var2]) {
                   var8 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 64.0) + 128;
-                  this.field_I.b(var5, var6, var8);
+                  this.field_I.drawAdditive(var5, var6, var8);
                 }
               } else {
-                this.field_A.b(var5, var6, 64);
-                this.field_u.b(var5, var6, var7);
+                this.field_A.drawAdditive(var5, var6, 64);
+                this.field_u.drawAdditive(var5, var6, var7);
               }
             } else {
-              this.field_z.b(var5, var6, var7);
+              this.field_z.drawAdditive(var5, var6, var7);
             }
             if (var2 != 7) {
               var2++;

@@ -362,7 +362,7 @@ abstract class ab extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = si.a(ua.h(0), ih.a(true), -120);
+            var5_int = si.a(NameSuggestionsPanel.h(0), ih.a(true), -120);
             if (var5_int != -1) {
               fb.a(12239, ke.field_O, var5_int, DiskArchiveRequest.field_v);
               ke.field_O = null;
@@ -737,9 +737,9 @@ abstract class ab extends GameApplet {
           if (vd.field_b != 0) {
             af.field_c = IsaacRandom.a(og.field_c, 82);
           }
-          MusicPatchPcmStream.field_o = pj.a(vd.field_c, (byte) -30, 1, false, true);
-          DelegatingCanvas.field_c = pj.a(AccountRequestState.field_g, (byte) -126, 1, false, true);
-          AccountCreationResultPanel.field_ub = pj.a(aj.field_u, (byte) 52, 1, false, true);
+          MusicPatchPcmStream.field_o = InteractiveWidget.a(vd.field_c, (byte) -30, 1, false, true);
+          DelegatingCanvas.field_c = InteractiveWidget.a(AccountRequestState.field_g, (byte) -126, 1, false, true);
+          AccountCreationResultPanel.field_ub = InteractiveWidget.a(aj.field_u, (byte) 52, 1, false, true);
           pl.field_d = MusicPatchPcmStream.field_o;
           ai.field_b = DelegatingCanvas.field_c;
           kj.field_R = 2;
@@ -762,7 +762,7 @@ abstract class ab extends GameApplet {
           }
         }
         if (3 == kj.field_R &&
-          pj.a(DelegatingCanvas.field_c, -16925, MusicPatchPcmStream.field_o, AccountCreationResultPanel.field_ub) &&
+          InteractiveWidget.a(DelegatingCanvas.field_c, -16925, MusicPatchPcmStream.field_o, AccountCreationResultPanel.field_ub) &&
           td.a(-3, AccountCreationResultPanel.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
           GzipDecompressor.a(-15617);
@@ -867,32 +867,32 @@ abstract class ab extends GameApplet {
           var4 = wa.a(param0, (byte) -114) ? 1 : 0;
           var5 = new uh();
           var5.field_y = (short)param0.readBits((byte) 48, 16);
-          var5.field_n = pj.a(param1 ^ 14944, param0, 16, var5.field_n);
-          var5.field_q = pj.a(-1, param0, 16, var5.field_q);
-          var5.field_z = pj.a(-1, param0, 16, var5.field_z);
+          var5.field_n = InteractiveWidget.a(param1 ^ 14944, param0, 16, var5.field_n);
+          var5.field_q = InteractiveWidget.a(-1, param0, 16, var5.field_q);
+          var5.field_z = InteractiveWidget.a(-1, param0, 16, var5.field_z);
           var5.field_F = (short)param0.readBits((byte) 48, 16);
-          var5.field_K = pj.a(-1, param0, 16, var5.field_K);
-          var5.field_o = pj.a(-1, param0, 16, var5.field_o);
-          var5.field_w = pj.a(-1, param0, 16, var5.field_w);
+          var5.field_K = InteractiveWidget.a(-1, param0, 16, var5.field_K);
+          var5.field_o = InteractiveWidget.a(-1, param0, 16, var5.field_o);
+          var5.field_w = InteractiveWidget.a(-1, param0, 16, var5.field_w);
           if (var3 != 0) {
             var5.field_b = (short)param0.readBits((byte) 48, 16);
-            var5.field_B = pj.a(-1, param0, 16, var5.field_B);
-            var5.field_v = pj.a(-1, param0, 16, var5.field_v);
-            var5.field_J = pj.a(-1, param0, 16, var5.field_J);
-            var5.field_D = pj.a(param1 + 14944, param0, 16, var5.field_D);
-            var5.field_C = pj.a(-1, param0, 16, var5.field_C);
-            var5.field_g = pj.a(-1, param0, 16, var5.field_g);
+            var5.field_B = InteractiveWidget.a(-1, param0, 16, var5.field_B);
+            var5.field_v = InteractiveWidget.a(-1, param0, 16, var5.field_v);
+            var5.field_J = InteractiveWidget.a(-1, param0, 16, var5.field_J);
+            var5.field_D = InteractiveWidget.a(param1 + 14944, param0, 16, var5.field_D);
+            var5.field_C = InteractiveWidget.a(-1, param0, 16, var5.field_C);
+            var5.field_g = InteractiveWidget.a(-1, param0, 16, var5.field_g);
           }
           if (var4 != 0) {
             param0.readBits((byte) 48, 16);
-            var5.field_c = pj.a(param1 + 14944, param0, 16, var5.field_c);
-            var5.field_H = pj.a(param1 + 14944, param0, 16, var5.field_H);
-            var5.field_A = pj.a(-1, param0, 16, var5.field_A);
-            var5.field_a = pj.a(param1 ^ 14944, param0, 16, var5.field_a);
-            var5.field_e = pj.a(param1 + 14944, param0, 16, var5.field_e);
+            var5.field_c = InteractiveWidget.a(param1 + 14944, param0, 16, var5.field_c);
+            var5.field_H = InteractiveWidget.a(param1 + 14944, param0, 16, var5.field_H);
+            var5.field_A = InteractiveWidget.a(-1, param0, 16, var5.field_A);
+            var5.field_a = InteractiveWidget.a(param1 ^ 14944, param0, 16, var5.field_a);
+            var5.field_e = InteractiveWidget.a(param1 + 14944, param0, 16, var5.field_e);
           }
           if (wa.a(param0, (byte) -121)) {
-            var5.field_s = pj.a(-1, param0, 16, var5.field_s);
+            var5.field_s = InteractiveWidget.a(-1, param0, 16, var5.field_s);
           }
           if (wa.a(param0, (byte) -127)) {
             var5.field_k = be.a((byte) 63, var5.field_k, param0, 16);

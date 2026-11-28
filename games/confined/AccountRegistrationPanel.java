@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ga implements ge, el, pg {
+final class AccountRegistrationPanel extends ga implements ge, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_H;
     static String field_ab;
     static double field_Z;
     static PcmSample field_cb;
     private ValidatedTextField field_R;
-    ak field_O;
+    NameSuggestionsPanel field_O;
     private na field_T;
     static String field_L;
     private ValidatedTextField field_X;
@@ -15,9 +15,9 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
     private ValidatedTextField field_U;
     private ValidatedTextField field_W;
     static int[] field_P;
-    private rg field_Y;
+    private InteractiveWidget field_Y;
     private ValidatedTextField field_V;
-    private rg field_S;
+    private InteractiveWidget field_S;
 
     private final int a(fj param0, String param1, int param2, int param3, int param4) {
         la var6 = null;
@@ -60,7 +60,7 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         }
         if (!param0) {
           String var4 = (String) null;
-          this.a(-115, (String) null);
+          this.onNameSuggestionSelected(-115, (String) null);
         }
         int var2 = -1;
         try {
@@ -213,9 +213,9 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         }
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         String discarded$0 = null;
-        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator((byte) -9))).e(639775169);
+        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator((byte) -9))).invalidateCheckedName(639775169);
         if (param0 > -101) {
           discarded$0 = this.h((byte) -41);
         }
@@ -238,8 +238,8 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         this.field_V = new ValidatedTextField("", (uk) null, 3);
         int var1 = 1;
         this.field_bb = new fa("", (uk) null, var1 != 0);
-        this.field_S = new rg(he.field_c, (uk) null);
-        this.field_Y = new rg(qn.field_m, (uk) null);
+        this.field_S = new InteractiveWidget(he.field_c, (uk) null);
+        this.field_Y = new InteractiveWidget(qn.field_m, (uk) null);
         this.field_R.field_C = DebouncedFieldValidator.field_b;
         this.field_U.field_C = p.field_a;
         this.field_W.field_C = tf.field_g;
@@ -293,7 +293,7 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         this.field_S.field_t = (uk) (this);
         this.b(this.field_S, 10);
         this.b(this.field_Y, 10);
-        this.field_O = new ak((pg) (this));
+        this.field_O = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_O.a(-128, -60 + (this.field_F - this.field_R.field_q) - this.field_R.field_F, 20 + this.field_R.field_m, 150, this.field_R.field_q - (-this.field_R.field_F - 60));
         this.b(this.field_O, 10);
         this.a(-124, 496, 0, 55 + (var3 + var6), 0);
@@ -469,7 +469,7 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         String discarded$2 = null;
         boolean discarded$3 = false;
         RuntimeException var6 = null;
@@ -504,7 +504,7 @@ final class AccountRegistrationPanel extends ga implements ge, el, pg {
         }
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSuggestionSelected(int param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {

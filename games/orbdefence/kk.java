@@ -145,10 +145,10 @@ final class kk extends te {
           uj.field_b != var6Lifetime1) {
           if (vh.field_h == var6Lifetime1) {
             var14 = wd.field_C[2];
-            var14.e(var9, var10 - (var14.field_k >> 1), 256);
+            var14.drawAdditive(var9, var10 - (var14.field_k >> 1), 256);
           } else if (var6Lifetime1 == nc.field_bb) {
             var15 = wd.field_C[1];
-            var15.e(var9, -(var15.field_k >> 1) + var10, 256);
+            var15.drawAdditive(var9, -(var15.field_k >> 1) + var10, 256);
           }
         } else {
           var16 = wd.field_C[0];
@@ -163,9 +163,9 @@ final class kk extends te {
             this.field_W = new RgbSprite(var11, var12);
             de.a(param2 - 1048697, this.field_W);
           }
-          var16.b(112, 144, var16.field_s << 4, var16.field_t << 4, -this.field_Q << 10, 4096);
+          var16.drawRotatedAboutBilinear(112, 144, var16.field_s << 4, var16.field_t << 4, -this.field_Q << 10, 4096);
           ValidatedTextField.g((byte) -105);
-          this.field_W.e(-(var16.field_s >> 1) + var9, -var16.field_t + var10, 256);
+          this.field_W.drawAdditive(-(var16.field_s >> 1) + var9, -var16.field_t + var10, 256);
         }
     }
 

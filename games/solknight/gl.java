@@ -227,7 +227,7 @@ final class gl {
           SoftwareRasterizer.clearRaster();
           BufferedSocket.field_h = 0;
           ee.g(101);
-          var2 = var1.c();
+          var2 = var1.copy();
           var3 = 0;
           if (param0 != 28) {
             String var5 = (String) null;
@@ -238,7 +238,7 @@ final class gl {
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
           }
-          tg.field_I.a();
+          tg.field_I.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           MidiPcmStream.e(4096);
         } catch (RuntimeException runtimeException) {

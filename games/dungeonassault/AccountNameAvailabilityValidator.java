@@ -12,7 +12,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static boolean field_s;
     static RgbSprite[] field_m;
 
-    final void e(boolean param0) {
+    final void invalidateCheckedName(boolean param0) {
         if (!param0) {
           return;
         }
@@ -54,7 +54,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             PackedBitSet.field_c.field_A = -16;
             PackedBitSet.field_c.field_w = -16;
           }
-          bn.field_f.e();
+          bn.field_f.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           for (var1_int = 0; var1_int < 7; var1_int++) {
             var2 = 27 * (-var1_int + 6);
@@ -66,15 +66,15 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               if (null != qj.field_c[var4]) {
                 if (var4 != 0 &&
                   var4 != 6) {
-                  rl.field_d[5].e(var2, var3, var6);
+                  rl.field_d[5].drawSilhouette(var2, var3, var6);
                 }
                 if (var4 != 6 &&
                   48 != var4) {
-                  rl.field_d[4].e(27 + var2, var3, var6);
+                  rl.field_d[4].drawSilhouette(27 + var2, var3, var6);
                 }
                 ed.a(var3, var2, var4, (byte) -127, var6);
-                rl.field_d[4].e(var2, var3 + 20, var6);
-                rl.field_d[5].e(27 + var2, 20 + var3, var6);
+                rl.field_d[4].drawSilhouette(var2, var3 + 20, var6);
+                rl.field_d[5].drawSilhouette(27 + var2, 20 + var3, var6);
               }
               var4 += 8;
               var5++;
@@ -91,25 +91,25 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               stackIn_25_0 = null;
               stackIn_25_1 = qj.field_c[var4Lifetime1];
               if (stackIn_25_0 != stackIn_25_1) {
-                rl.field_d[5].e(var2Lifetime1, var3Lifetime1, var6Lifetime1);
-                rl.field_d[4].e(27 + var2Lifetime1, var3Lifetime1, var6Lifetime1);
+                rl.field_d[5].drawSilhouette(var2Lifetime1, var3Lifetime1, var6Lifetime1);
+                rl.field_d[4].drawSilhouette(27 + var2Lifetime1, var3Lifetime1, var6Lifetime1);
                 ed.a(var3Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -93, var6Lifetime1);
-                rl.field_d[5].e(27 + var2Lifetime1, var3Lifetime1 + 20 + 0, var6Lifetime1);
-                rl.field_d[4].e(var2Lifetime1, var3Lifetime1 + 20 - 0, var6Lifetime1);
+                rl.field_d[5].drawSilhouette(27 + var2Lifetime1, var3Lifetime1 + 20 + 0, var6Lifetime1);
+                rl.field_d[4].drawSilhouette(var2Lifetime1, var3Lifetime1 + 20 - 0, var6Lifetime1);
               }
               var4Lifetime1 += 8;
               var5Lifetime1++;
               var2Lifetime1 += 54;
             }
           }
-          PackedBitSet.field_c.e();
+          PackedBitSet.field_c.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           if (param0 < 35) {
             field_t = -99;
           }
-          bn.field_f.e(16, 16, 8454143);
+          bn.field_f.drawSilhouette(16, 16, 8454143);
           SoftwareRasterizer.blurRectangle(8, 8, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
-          bn.field_f.e(16, 16, 0);
+          bn.field_f.drawSilhouette(16, 16, 0);
           jh.b();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (!param0) {
           field_r = (RgbSprite) null;
         }
-        stackIn_9_0 = (null != gi.field_S) || (uc.g(127)) || (null != MouseInput.field_e) || (ck.g(-1));
+        stackIn_9_0 = (null != NameSuggestionsPanel.field_S) || (uc.g(127)) || (null != MouseInput.field_e) || (InteractiveWidget.g(-1));
         return stackIn_9_0;
     }
 

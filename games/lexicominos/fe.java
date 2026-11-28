@@ -21,14 +21,14 @@ final class fe implements rd {
             var6_int = param0[0].field_r;
             var7 = param0[2].field_r;
             var8 = param0[param3].field_r;
-            param0[0].a(param4, param5, param1);
-            param0[2].a(-var7 + (param4 + param2), param5, param1);
+            param0[0].drawTintedGray(param4, param5, param1);
+            param0[2].drawTintedGray(-var7 + (param4 + param2), param5, param1);
             SoftwareRasterizer.saveClip(CrossfadingMidiPcmStream.field_C);
             SoftwareRasterizer.intersectClip(param4 + var6_int, param5, -var7 + (param2 + param4), param0[1].field_x + param5);
             var9 = var6_int + param4;
             var10 = -var7 + param2 + param4;
             for (param4 = var9; var10 > param4; param4 = param4 + var8) {
-              param0[1].a(param4, param5, param1);
+              param0[1].drawTintedGray(param4, param5, param1);
             }
             SoftwareRasterizer.restoreClip(CrossfadingMidiPcmStream.field_C);
             return;
@@ -62,9 +62,9 @@ final class fe implements rd {
           var7 = param3.field_o + param0;
           ae.a(true, param3.field_j, var7, param3.field_v, var6_int);
           var8 = BufferedRandomAccessFile.field_b[1];
-          if (param3 instanceof kf &&
-            ((kf) (param3)).field_C) {
-            var8.d(var6_int - (-1 - (param3.field_j - var8.field_r >> 1)), (param3.field_v - var8.field_x >> 1) + (var7 + 1), 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_C) {
+            var8.drawAdditive(var6_int - (-1 - (param3.field_j - var8.field_r >> 1)), (param3.field_v - var8.field_x >> 1) + (var7 + 1), 256);
           }
           if (param3.a(18337)) {
             TriangleMesh.a(param3.field_v - 4, var7 + 2, 2 + var6_int, 1, param3.field_j - 4);

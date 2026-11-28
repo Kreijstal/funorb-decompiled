@@ -183,7 +183,7 @@ final class DiagnosticSupport002 extends RuntimeException {
             if (PacketBuffer.booleanState0228) {
               stringLocal11 = MixedSupport080.stringState0338;
             } else {
-              stringLocal11 = UiComponentPart007.stringState0114;
+              stringLocal11 = NameSuggestionsPanel.stringState0114;
             }
           }
           stringLocal14 = (String) null;

@@ -106,18 +106,18 @@ final class se extends pc {
         v var7 = null;
         v var9 = null;
         Sprite var10 = null;
-        lg var11 = null;
+        InteractiveWidget var11 = null;
         v var12 = null;
         v var13 = null;
         v var14 = null;
         v var15 = null;
         try {
-          if (!(param4 instanceof lg)) {
+          if (!(param4 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param4);
           }
-          var11 = (lg) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           ld.a(param4.width + (param4.x + param2), param4.x + param2, param1 - (-param4.y - param4.height), param4.y + param1, (byte) -108);
           if (param0 < 89) {
             var10 = (Sprite) null;

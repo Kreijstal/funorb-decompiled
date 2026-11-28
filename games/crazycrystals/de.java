@@ -55,23 +55,23 @@ final class de extends PuzzleTile implements Cloneable {
     final void drawTile(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7;
         if (param2 != 24) {
-          kj.field_a[this.field_i].b(param5, param4, 2 * param2, param0 * 2);
+          kj.field_a[this.field_i].drawScaled(param5, param4, 2 * param2, param0 * 2);
           if (null != this.field_j) {
             this.field_j.a(param0, param5, param2, param4, true);
-            qc.field_f[this.field_i].b(param5, param4, 2 * param2, 2 * param0);
+            qc.field_f[this.field_i].drawScaled(param5, param4, 2 * param2, 2 * param0);
           }
         } else {
           if (param0 == 24) {
-            kj.field_a[this.field_i].c(param5, param4);
+            kj.field_a[this.field_i].drawOpaque(param5, param4);
             if (null != this.field_j) {
               this.field_j.a(param0, param5, param2, param4, true);
-              qc.field_f[this.field_i].a(param5, param4);
+              qc.field_f[this.field_i].draw(param5, param4);
             }
           } else {
-            kj.field_a[this.field_i].b(param5, param4, 2 * param2, param0 * 2);
+            kj.field_a[this.field_i].drawScaled(param5, param4, 2 * param2, param0 * 2);
             if (null != this.field_j) {
               this.field_j.a(param0, param5, param2, param4, true);
-              qc.field_f[this.field_i].b(param5, param4, 2 * param2, 2 * param0);
+              qc.field_f[this.field_i].drawScaled(param5, param4, 2 * param2, 2 * param0);
             }
           }
         }
@@ -162,11 +162,11 @@ final class de extends PuzzleTile implements Cloneable {
             field_l = (PcmSample) null;
           }
           kn.field_p = new RgbSprite(var3, var4 * 3 / 4);
-          kn.field_p.a();
-          var2.c(0, 0);
+          kn.field_p.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           ne.field_e = new RgbSprite(var3, var4 - kn.field_p.field_u);
-          ne.field_e.a();
-          var2.c(0, -kn.field_p.field_u);
+          ne.field_e.bindAsRenderTarget();
+          var2.drawOpaque(0, -kn.field_p.field_u);
           ne.field_e.field_t = kn.field_p.field_u;
           lg.a(1);
         } catch (RuntimeException runtimeException) {

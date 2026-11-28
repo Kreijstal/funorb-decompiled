@@ -36,28 +36,28 @@ final class mu {
         int var7 = SoftwareRasterizer.field_i;
         int var8 = SoftwareRasterizer.field_c;
         Sprite var9 = new Sprite(param1, param2 - 2 * param1);
-        var9.b();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillVerticalGradient(0, 0, param1, param2 - 2 * param1, param0, param3);
         Sprite var10 = new Sprite(param1, param1);
-        var10.b();
+        var10.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param0);
         Sprite var11 = new Sprite(16, param1);
-        var11.b();
+        var11.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param0);
         Sprite var12 = new Sprite(param1, param1);
-        var12.b();
+        var12.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param3);
         if (param5 != 17) {
           field_j = (int[]) null;
         }
         Sprite var13 = new Sprite(16, param1);
-        var13.b();
+        var13.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param3);
         Object var14 = null;
         if (param4 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.b();
+          var16.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param4);
         }
         SoftwareRasterizer.setTarget(var18, var7, var8);

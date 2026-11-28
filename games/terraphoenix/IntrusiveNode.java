@@ -47,7 +47,7 @@ class IntrusiveNode {
             field_f = (Sprite) null;
           }
           while (var2 != null) {
-            eb.a(param1, (byte) 125);
+            InteractiveWidget.a(param1, (byte) 125);
             var2 = FrameTimer.field_g.nextBackward((byte) -119);
           }
           return;

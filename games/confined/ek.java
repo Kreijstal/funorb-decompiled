@@ -212,10 +212,10 @@ final class ek {
                 } else {
                   stackIn_8_5 = var2;
                 }
-                ((RgbSprite) (Object) stackIn_7_0).d(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
+                ((RgbSprite) (Object) stackIn_7_0).drawScaledAdditive(stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_7_4, stackIn_8_5);
               }
               if (var4 > 0) {
-                dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4);
+                dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4);
               }
               if (var3 > 0) {
                 stackIn_14_0 = ue.field_u[this.field_m >> 1 & 3];
@@ -228,7 +228,7 @@ final class ek {
                 } else {
                   stackIn_15_5 = 256;
                 }
-                ((RgbSprite) (Object) stackIn_14_0).d(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
+                ((RgbSprite) (Object) stackIn_14_0).drawScaledAdditive(stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4, stackIn_15_5);
               }
             }
             return;
@@ -249,7 +249,7 @@ final class ek {
             } else {
               stackIn_26_5 = var2;
             }
-            ((RgbSprite) (Object) stackIn_25_0).d(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_26_5);
+            ((RgbSprite) (Object) stackIn_25_0).drawScaledAdditive(stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, stackIn_26_5);
           }
           if (var4Lifetime3 <= 0) {
             if (var3 > 0) {
@@ -263,11 +263,11 @@ final class ek {
               } else {
                 stackIn_32_5 = 256;
               }
-              ((RgbSprite) (Object) stackIn_31_0).d(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_32_5);
+              ((RgbSprite) (Object) stackIn_31_0).drawScaledAdditive(stackIn_31_1, stackIn_31_2, stackIn_31_3, stackIn_31_4, stackIn_32_5);
             }
             return;
           }
-          dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4Lifetime3);
+          dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime3);
           if (var3 <= 0) {
             return;
           }
@@ -281,7 +281,7 @@ final class ek {
           } else {
             stackIn_38_5 = 256;
           }
-          ((RgbSprite) (Object) stackIn_37_0).d(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5);
+          ((RgbSprite) (Object) stackIn_37_0).drawScaledAdditive(stackIn_37_1, stackIn_37_2, stackIn_37_3, stackIn_37_4, stackIn_38_5);
           return;
         }
         var2Lifetime1 = this.field_o >> 4;
@@ -305,7 +305,7 @@ final class ek {
               } else {
                 stackIn_50_5 = var2Lifetime1;
               }
-              ((RgbSprite) (Object) stackIn_49_0).d(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_50_5);
+              ((RgbSprite) (Object) stackIn_49_0).drawScaledAdditive(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_50_5);
             }
             if (var4Lifetime1 <= 0) {
               if (var3Lifetime1 > 0) {
@@ -319,10 +319,10 @@ final class ek {
                 } else {
                   stackIn_56_5 = 256;
                 }
-                ((RgbSprite) (Object) stackIn_55_0).d(stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_56_5);
+                ((RgbSprite) (Object) stackIn_55_0).drawScaledAdditive(stackIn_55_1, stackIn_55_2, stackIn_55_3, stackIn_55_4, stackIn_56_5);
               }
             } else {
-              dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4Lifetime1);
+              dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime1);
               if (var3Lifetime1 > 0) {
                 stackIn_61_0 = ue.field_u[this.field_m >> 1 & 3];
                 stackIn_61_1 = 0;
@@ -334,7 +334,7 @@ final class ek {
                 } else {
                   stackIn_62_5 = 256;
                 }
-                ((RgbSprite) (Object) stackIn_61_0).d(stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_62_5);
+                ((RgbSprite) (Object) stackIn_61_0).drawScaledAdditive(stackIn_61_1, stackIn_61_2, stackIn_61_3, stackIn_61_4, stackIn_62_5);
               }
             }
             return;
@@ -356,7 +356,7 @@ final class ek {
           } else {
             stackIn_73_5 = var2Lifetime1;
           }
-          ((RgbSprite) (Object) stackIn_72_0).d(stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_73_5);
+          ((RgbSprite) (Object) stackIn_72_0).drawScaledAdditive(stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_73_5);
         }
         if (var4Lifetime2 <= 0) {
           if (var3Lifetime1 > 0) {
@@ -370,10 +370,10 @@ final class ek {
             } else {
               stackIn_79_5 = 256;
             }
-            ((RgbSprite) (Object) stackIn_78_0).d(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
+            ((RgbSprite) (Object) stackIn_78_0).drawScaledAdditive(stackIn_78_1, stackIn_78_2, stackIn_78_3, stackIn_78_4, stackIn_79_5);
           }
         } else {
-          dl.field_d[(30 & this.field_m) >> 1].d(0, 0, 640, 376, var4Lifetime2);
+          dl.field_d[(30 & this.field_m) >> 1].drawScaledAdditive(0, 0, 640, 376, var4Lifetime2);
           if (var3Lifetime1 > 0) {
             stackIn_84_0 = ue.field_u[this.field_m >> 1 & 3];
             stackIn_84_1 = 0;
@@ -385,7 +385,7 @@ final class ek {
             } else {
               stackIn_85_5 = 256;
             }
-            ((RgbSprite) (Object) stackIn_84_0).d(stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_84_4, stackIn_85_5);
+            ((RgbSprite) (Object) stackIn_84_0).drawScaledAdditive(stackIn_84_1, stackIn_84_2, stackIn_84_3, stackIn_84_4, stackIn_85_5);
           }
         }
         return;
@@ -565,10 +565,10 @@ final class ek {
                 } else {
                   stackIn_22_5 = var7;
                 }
-                ((RgbSprite) (Object) stackIn_21_0).d(stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_22_5);
+                ((RgbSprite) (Object) stackIn_21_0).drawScaledAdditive(stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_22_5);
               }
               if (var9 > 0) {
-                pn.field_l[(30 & this.field_m) >> 1].d(var22 - var24, -var24 + var23, var24 * 2, 2 * var24, var9);
+                pn.field_l[(30 & this.field_m) >> 1].drawScaledAdditive(var22 - var24, -var24 + var23, var24 * 2, 2 * var24, var9);
               }
               if (var8 <= 0) {
                 return;
@@ -588,7 +588,7 @@ final class ek {
               } else {
                 stackIn_33_5 = 256;
               }
-              ((RgbSprite) (Object) stackIn_32_0).d(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
+              ((RgbSprite) (Object) stackIn_32_0).drawScaledAdditive(stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5);
             }
           }
           return;

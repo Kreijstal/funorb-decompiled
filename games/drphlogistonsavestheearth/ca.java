@@ -272,7 +272,7 @@ abstract class ca extends bd {
         if (param1 < 26) {
           return;
         }
-        ck.field_l.d(-90 + (param2 + this.field_w), 10 + param0);
+        ck.field_l.draw(-90 + (param2 + this.field_w), 10 + param0);
         pe.a(ob.field_f, 110, 5 + param2, this.field_w - 10, param0 + 35);
         pe.a(kc.field_i, 90, param2, this.field_w, -22 + (this.field_k + param0));
         var4Lifetime2 = -79 + this.field_k;

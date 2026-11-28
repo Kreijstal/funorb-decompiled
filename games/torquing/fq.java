@@ -43,7 +43,7 @@ final class fq extends jh {
           GzipDecompressor.a((byte) 34, var5);
           this.field_C.a(param0, (byte) -61, 0, 0);
           r.a(122);
-          var5.e(param3 + this.x, this.y + param2, this.field_D);
+          var5.drawWithOpacity(param3 + this.x, this.y + param2, this.field_D);
           return;
         }
     }

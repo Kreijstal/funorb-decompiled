@@ -92,8 +92,8 @@ final class nl {
             var5_int = param2[0].field_t;
             var6 = param2[2].field_t;
             var7 = param2[1].field_t;
-            param2[0].d(param1, param4);
-            param2[2].d(param1 + param3 - var6, param4);
+            param2[0].draw(param1, param4);
+            param2[2].draw(param1 + param3 - var6, param4);
             SoftwareRasterizer.saveClip(AgeValidator.field_l);
             if (param0 <= 101) {
               field_e = (String) null;
@@ -102,7 +102,7 @@ final class nl {
             var8 = param1 + var5_int;
             var9 = -var6 + (param1 + param3);
             for (param1 = var8; param1 < var9; param1 = param1 + var7) {
-              param2[1].d(param1, param4);
+              param2[1].draw(param1, param4);
             }
             SoftwareRasterizer.restoreClip(AgeValidator.field_l);
             return;

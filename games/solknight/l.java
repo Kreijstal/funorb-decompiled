@@ -23,7 +23,7 @@ final class l {
             return false;
           }
           var5 = -92 / ((param0 - 11) / 39);
-          ua.a(0, var6);
+          NameSuggestionsPanel.a(0, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -103,8 +103,8 @@ final class l {
         int var2 = 0;
         int var2Lifetime1;
         la.field_k = param1;
-        if (null != ua.field_I) {
-          ua.field_I.setMasterVolume(1349013231, param1);
+        if (null != NameSuggestionsPanel.field_I) {
+          NameSuggestionsPanel.field_I.setMasterVolume(1349013231, param1);
         }
         if (null == ah.field_a) {
           var2 = 103 % ((param0 - 50) / 46);

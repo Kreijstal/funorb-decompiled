@@ -298,18 +298,18 @@ final class pfa {
                 if (!(var14 instanceof SpecialMoveDefinition)) {
                   if (var14 instanceof a) {
                     if (var14.field_b == 3) {
-                      nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 16769792);
+                      nia.field_l[var14.field_b].drawGrayRampTinted(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 16769792);
                     } else {
                       if (4 != var14.field_b) {
                         if (var14.field_b == 2) {
-                          nia.field_l[var14.field_b].e(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 15204352);
+                          nia.field_l[var14.field_b].drawGrayRampTinted(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 15204352);
                         } else {
                           if (var14.field_b == 1) {
-                            nia.field_l[var14.field_b].e(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 818659);
+                            nia.field_l[var14.field_b].drawGrayRampTinted(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 818659);
                           }
                         }
                       } else {
-                        nia.field_l[var14.field_b].e(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
+                        nia.field_l[var14.field_b].drawGrayRampTinted(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
                       }
                     }
                   } else {
@@ -317,20 +317,20 @@ final class pfa {
                       if (((BasicMoveDefinition) (var14)).field_p != 1 &&
                         ((BasicMoveDefinition) (var14)).field_p != 2) {
                         if (4 != ((BasicMoveDefinition) (var14)).field_p) {
-                          nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, -1 + this.field_e[var3_int].field_rb, 15204352);
+                          nia.field_l[var14.field_b].drawGrayRampTinted(-1 + this.field_e[var3_int].field_kb, -1 + this.field_e[var3_int].field_rb, 15204352);
                         } else {
-                          nia.field_l[var14.field_b].e(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 16754688);
+                          nia.field_l[var14.field_b].drawGrayRampTinted(this.field_e[var3_int].field_kb - 1, this.field_e[var3_int].field_rb - 1, 16754688);
                         }
                         break regionExit1;
                       }
-                      nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 818659);
+                      nia.field_l[var14.field_b].drawGrayRampTinted(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 818659);
                     }
                   }
                 } else {
-                  nia.field_l[var14.field_b].e(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 14964736);
+                  nia.field_l[var14.field_b].drawGrayRampTinted(-1 + this.field_e[var3_int].field_kb, this.field_e[var3_int].field_rb - 1, 14964736);
                 }
               } else {
-                nia.field_l[var11.field_b].e(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
+                nia.field_l[var11.field_b].drawGrayRampTinted(this.field_e[var3_int].field_kb - 1, -1 + this.field_e[var3_int].field_rb, 51233);
               }
             }
             CreatureType.drawMoveIcon(true, this.field_e[var3_int].field_rb, this.field_e[var3_int].field_kb, this.field_e[var3_int].field_zb, 117);
@@ -344,7 +344,7 @@ final class pfa {
         stackIn_42_1 = 510;
         stackIn_42_2 = 142;
         stackIn_43_3 = (!this.field_d.field_T) ? 16764160 : 16777215;
-        ((Sprite) (Object) stackIn_42_0).e(stackIn_42_1, stackIn_42_2, stackIn_43_3);
+        ((Sprite) (Object) stackIn_42_0).drawGrayRampTinted(stackIn_42_1, stackIn_42_2, stackIn_43_3);
         var12 = 0;
         var3_intLifetime1 = var12;
         while (var12 < this.field_e.length) {

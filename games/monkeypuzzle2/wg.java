@@ -31,7 +31,7 @@ final class wg extends IntrusiveNode {
             ImageProducerRasterBuffer.field_k[var2] = -(m.field_e[var2] / 2) + 320;
             DiskArchiveRequest.field_v[var2] = 240 - AgeValidator.field_o[var2] / 2;
             vh.field_E[var2] = new Sprite(m.field_e[var2], AgeValidator.field_o[var2]);
-            vh.field_E[var2].e();
+            vh.field_E[var2].bindAsRenderTarget();
             lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
             BoundedRandomAccessFile.field_e.drawParagraph(AgeValidator.field_n[var2], 57, 15, m.field_e[var2] - 72, AgeValidator.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
             sb.field_r.drawString(lb.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
@@ -39,32 +39,32 @@ final class wg extends IntrusiveNode {
             if (0 != var3) {
               if (3 != var3) {
                 if (var3 == 4) {
-                  LoginPanel.field_K[1].d(15, 15, 32, 32);
-                  LoginPanel.field_K[2].d(15, 47, 32, 32);
-                  LoginPanel.field_K[3].d(15, 79, 32, 32);
+                  LoginPanel.field_K[1].drawDownscaledAreaAveraged(15, 15, 32, 32);
+                  LoginPanel.field_K[2].drawDownscaledAreaAveraged(15, 47, 32, 32);
+                  LoginPanel.field_K[3].drawDownscaledAreaAveraged(15, 79, 32, 32);
                 } else {
                   if (var3 == 1) {
-                    ak.field_t[1].c(15, 15);
-                    ak.field_t[2].c(15, 47);
-                    tl.field_b.c(15, 79);
+                    ak.field_t[1].draw(15, 15);
+                    ak.field_t[2].draw(15, 47);
+                    tl.field_b.draw(15, 79);
                   } else {
                     if (var3 == 2) {
                       SoftwareRasterizer.setClip(15, 15, 42, 106);
-                      NodeHashTableIterator.field_h.c(15, 15);
-                      hb.field_m[4][0].c(15, 47);
-                      ak.field_t[4].c(15, 79);
+                      NodeHashTableIterator.field_h.draw(15, 15);
+                      hb.field_m[4][0].draw(15, 47);
+                      ak.field_t[4].draw(15, 79);
                     }
                   }
                 }
               } else {
-                LoginPanel.field_K[0].d(15, 15, 32, 32);
-                LoginPanel.field_K[0].d(15, 47, 32, 32);
-                LoginPanel.field_K[0].d(15, 79, 32, 32);
+                LoginPanel.field_K[0].drawDownscaledAreaAveraged(15, 15, 32, 32);
+                LoginPanel.field_K[0].drawDownscaledAreaAveraged(15, 47, 32, 32);
+                LoginPanel.field_K[0].drawDownscaledAreaAveraged(15, 79, 32, 32);
               }
             } else {
-              nh.field_f[0][0][0].c(15, 15);
-              ak.field_t[0].c(15, 47);
-              ak.field_t[0].c(15, 79);
+              nh.field_f[0][0][0].draw(15, 15);
+              ak.field_t[0].draw(15, 47);
+              ak.field_t[0].draw(15, 79);
             }
           }
           ac.field_a.setAsRasterTarget((byte) 118);

@@ -191,14 +191,14 @@ final class io extends rf {
               ec.field_h != var6) {
               if (var6 == rk.field_c) {
                 var20 = ao.field_b[2];
-                var20.d(var9, -(var20.field_u >> 1) + var10, 256);
+                var20.drawAdditive(var9, -(var20.field_u >> 1) + var10, 256);
                 return;
               }
               if (GzipDecompressor.field_b != var6) {
                 return;
               }
               var19 = ao.field_b[1];
-              var19.d(var9, -(var19.field_u >> 1) + var10, 256);
+              var19.drawAdditive(var9, -(var19.field_u >> 1) + var10, 256);
               return;
             }
             var21 = ao.field_b[0];
@@ -213,9 +213,9 @@ final class io extends rf {
               this.field_K = new RgbSprite(var11, var12);
               em.a((byte) 38, this.field_K);
             }
-            var21.a(112, 144, var21.field_n << 4, var21.field_o << 4, -this.field_E << 10, 4096);
+            var21.drawRotatedAbout(112, 144, var21.field_n << 4, var21.field_o << 4, -this.field_E << 10, 4096);
             lg.a(1);
-            this.field_K.d(var9 - (var21.field_n >> 1), var10 - var21.field_o, 256);
+            this.field_K.drawAdditive(var9 - (var21.field_n >> 1), var10 - var21.field_o, 256);
             return;
           }
           super.a(param0, (byte) -110, param2, param3);
@@ -227,14 +227,14 @@ final class io extends rf {
             ec.field_h != var6) {
             if (var6 == rk.field_c) {
               var24 = ao.field_b[2];
-              var24.d(var9Lifetime5, -(var24.field_u >> 1) + var10Lifetime5, 256);
+              var24.drawAdditive(var9Lifetime5, -(var24.field_u >> 1) + var10Lifetime5, 256);
               return;
             }
             if (GzipDecompressor.field_b != var6) {
               return;
             }
             var23 = ao.field_b[1];
-            var23.d(var9Lifetime5, -(var23.field_u >> 1) + var10Lifetime5, 256);
+            var23.drawAdditive(var9Lifetime5, -(var23.field_u >> 1) + var10Lifetime5, 256);
             return;
           }
           var25 = ao.field_b[0];
@@ -257,9 +257,9 @@ final class io extends rf {
               }
             }
           }
-          var25.a(112, 144, var25.field_n << 4, var25.field_o << 4, -this.field_E << 10, 4096);
+          var25.drawRotatedAbout(112, 144, var25.field_n << 4, var25.field_o << 4, -this.field_E << 10, 4096);
           lg.a(1);
-          this.field_K.d(var9Lifetime5 - (var25.field_n >> 1), var10Lifetime5 - var25.field_o, 256);
+          this.field_K.drawAdditive(var9Lifetime5 - (var25.field_n >> 1), var10Lifetime5 - var25.field_o, 256);
           return;
         }
         if (ec.field_h == var6) {
@@ -279,14 +279,14 @@ final class io extends rf {
               ec.field_h != var6) {
               if (var6 == rk.field_c) {
                 var29 = ao.field_b[2];
-                var29.d(var9Lifetime1, -(var29.field_u >> 1) + var10Lifetime1, 256);
+                var29.drawAdditive(var9Lifetime1, -(var29.field_u >> 1) + var10Lifetime1, 256);
                 return;
               }
               if (GzipDecompressor.field_b != var6) {
                 return;
               }
               var28 = ao.field_b[1];
-              var28.d(var9Lifetime1, -(var28.field_u >> 1) + var10Lifetime1, 256);
+              var28.drawAdditive(var9Lifetime1, -(var28.field_u >> 1) + var10Lifetime1, 256);
               return;
             }
             var30 = ao.field_b[0];
@@ -301,9 +301,9 @@ final class io extends rf {
               this.field_K = new RgbSprite(var11Lifetime1, var12Lifetime1);
               em.a((byte) 38, this.field_K);
             }
-            var30.a(112, 144, var30.field_n << 4, var30.field_o << 4, -this.field_E << 10, 4096);
+            var30.drawRotatedAbout(112, 144, var30.field_n << 4, var30.field_o << 4, -this.field_E << 10, 4096);
             lg.a(1);
-            this.field_K.d(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_o, 256);
+            this.field_K.drawAdditive(var9Lifetime1 - (var30.field_n >> 1), var10Lifetime1 - var30.field_o, 256);
             return;
           }
           super.a(param0, (byte) -110, param2, param3);
@@ -315,14 +315,14 @@ final class io extends rf {
             ec.field_h != var6) {
             if (var6 == rk.field_c) {
               var33 = ao.field_b[2];
-              var33.d(var9Lifetime1Lifetime1, -(var33.field_u >> 1) + var10Lifetime1Lifetime1, 256);
+              var33.drawAdditive(var9Lifetime1Lifetime1, -(var33.field_u >> 1) + var10Lifetime1Lifetime1, 256);
               return;
             }
             if (GzipDecompressor.field_b != var6) {
               return;
             }
             var32 = ao.field_b[1];
-            var32.d(var9Lifetime1Lifetime1, -(var32.field_u >> 1) + var10Lifetime1Lifetime1, 256);
+            var32.drawAdditive(var9Lifetime1Lifetime1, -(var32.field_u >> 1) + var10Lifetime1Lifetime1, 256);
             return;
           }
           var34 = ao.field_b[0];
@@ -345,9 +345,9 @@ final class io extends rf {
               }
             }
           }
-          var34.a(112, 144, var34.field_n << 4, var34.field_o << 4, -this.field_E << 10, 4096);
+          var34.drawRotatedAbout(112, 144, var34.field_n << 4, var34.field_o << 4, -this.field_E << 10, 4096);
           lg.a(1);
-          this.field_K.d(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_o, 256);
+          this.field_K.drawAdditive(var9Lifetime1Lifetime1 - (var34.field_n >> 1), var10Lifetime1Lifetime1 - var34.field_o, 256);
           return;
         }
         var5 = this.field_L.getValidationMessage(-16774);
@@ -365,14 +365,14 @@ final class io extends rf {
               ec.field_h != var6Lifetime1) {
               if (var6Lifetime1 == rk.field_c) {
                 var49 = ao.field_b[2];
-                var49.d(var9Lifetime2, -(var49.field_u >> 1) + var10Lifetime2, 256);
+                var49.drawAdditive(var9Lifetime2, -(var49.field_u >> 1) + var10Lifetime2, 256);
                 return;
               }
               if (GzipDecompressor.field_b != var6Lifetime1) {
                 return;
               }
               var48 = ao.field_b[1];
-              var48.d(var9Lifetime2, -(var48.field_u >> 1) + var10Lifetime2, 256);
+              var48.drawAdditive(var9Lifetime2, -(var48.field_u >> 1) + var10Lifetime2, 256);
               return;
             }
             var50 = ao.field_b[0];
@@ -387,9 +387,9 @@ final class io extends rf {
               this.field_K = new RgbSprite(var11Lifetime2, var12Lifetime2);
               em.a((byte) 38, this.field_K);
             }
-            var50.a(112, 144, var50.field_n << 4, var50.field_o << 4, -this.field_E << 10, 4096);
+            var50.drawRotatedAbout(112, 144, var50.field_n << 4, var50.field_o << 4, -this.field_E << 10, 4096);
             lg.a(1);
-            this.field_K.d(var9Lifetime2 - (var50.field_n >> 1), var10Lifetime2 - var50.field_o, 256);
+            this.field_K.drawAdditive(var9Lifetime2 - (var50.field_n >> 1), var10Lifetime2 - var50.field_o, 256);
             return;
           }
           this.field_N = (String) null;
@@ -402,14 +402,14 @@ final class io extends rf {
             ec.field_h != var6Lifetime1Lifetime1) {
             if (var6Lifetime1Lifetime1 == rk.field_c) {
               var45 = ao.field_b[2];
-              var45.d(var9Lifetime2Lifetime1, -(var45.field_u >> 1) + var10Lifetime2Lifetime1, 256);
+              var45.drawAdditive(var9Lifetime2Lifetime1, -(var45.field_u >> 1) + var10Lifetime2Lifetime1, 256);
               return;
             }
             if (GzipDecompressor.field_b != var6Lifetime1Lifetime1) {
               return;
             }
             var44 = ao.field_b[1];
-            var44.d(var9Lifetime2Lifetime1, -(var44.field_u >> 1) + var10Lifetime2Lifetime1, 256);
+            var44.drawAdditive(var9Lifetime2Lifetime1, -(var44.field_u >> 1) + var10Lifetime2Lifetime1, 256);
             return;
           }
           var46 = ao.field_b[0];
@@ -424,9 +424,9 @@ final class io extends rf {
             this.field_K = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
             em.a((byte) 38, this.field_K);
           }
-          var46.a(112, 144, var46.field_n << 4, var46.field_o << 4, -this.field_E << 10, 4096);
+          var46.drawRotatedAbout(112, 144, var46.field_n << 4, var46.field_o << 4, -this.field_E << 10, 4096);
           lg.a(1);
-          this.field_K.d(var9Lifetime2Lifetime1 - (var46.field_n >> 1), var10Lifetime2Lifetime1 - var46.field_o, 256);
+          this.field_K.drawAdditive(var9Lifetime2Lifetime1 - (var46.field_n >> 1), var10Lifetime2Lifetime1 - var46.field_o, 256);
           return;
         }
         this.field_o = var5;
@@ -442,14 +442,14 @@ final class io extends rf {
             ec.field_h != var6Lifetime2) {
             if (var6Lifetime2 == rk.field_c) {
               var37 = ao.field_b[2];
-              var37.d(var9Lifetime3, -(var37.field_u >> 1) + var10Lifetime3, 256);
+              var37.drawAdditive(var9Lifetime3, -(var37.field_u >> 1) + var10Lifetime3, 256);
               return;
             }
             if (GzipDecompressor.field_b != var6Lifetime2) {
               return;
             }
             var36 = ao.field_b[1];
-            var36.d(var9Lifetime3, -(var36.field_u >> 1) + var10Lifetime3, 256);
+            var36.drawAdditive(var9Lifetime3, -(var36.field_u >> 1) + var10Lifetime3, 256);
             return;
           }
           var38 = ao.field_b[0];
@@ -464,9 +464,9 @@ final class io extends rf {
             this.field_K = new RgbSprite(var11Lifetime3, var12Lifetime3);
             em.a((byte) 38, this.field_K);
           }
-          var38.a(112, 144, var38.field_n << 4, var38.field_o << 4, -this.field_E << 10, 4096);
+          var38.drawRotatedAbout(112, 144, var38.field_n << 4, var38.field_o << 4, -this.field_E << 10, 4096);
           lg.a(1);
-          this.field_K.d(var9Lifetime3 - (var38.field_n >> 1), var10Lifetime3 - var38.field_o, 256);
+          this.field_K.drawAdditive(var9Lifetime3 - (var38.field_n >> 1), var10Lifetime3 - var38.field_o, 256);
           return;
         }
         super.a(param0, (byte) -110, param2, param3);
@@ -478,14 +478,14 @@ final class io extends rf {
           ec.field_h != var6Lifetime3) {
           if (var6Lifetime3 == rk.field_c) {
             var41 = ao.field_b[2];
-            var41.d(var9Lifetime4, -(var41.field_u >> 1) + var10Lifetime4, 256);
+            var41.drawAdditive(var9Lifetime4, -(var41.field_u >> 1) + var10Lifetime4, 256);
             return;
           }
           if (GzipDecompressor.field_b != var6Lifetime3) {
             return;
           }
           var40 = ao.field_b[1];
-          var40.d(var9Lifetime4, -(var40.field_u >> 1) + var10Lifetime4, 256);
+          var40.drawAdditive(var9Lifetime4, -(var40.field_u >> 1) + var10Lifetime4, 256);
           return;
         }
         var42 = ao.field_b[0];
@@ -508,9 +508,9 @@ final class io extends rf {
             }
           }
         }
-        var42.a(112, 144, var42.field_n << 4, var42.field_o << 4, -this.field_E << 10, 4096);
+        var42.drawRotatedAbout(112, 144, var42.field_n << 4, var42.field_o << 4, -this.field_E << 10, 4096);
         lg.a(1);
-        this.field_K.d(var9Lifetime4 - (var42.field_n >> 1), var10Lifetime4 - var42.field_o, 256);
+        this.field_K.drawAdditive(var9Lifetime4 - (var42.field_n >> 1), var10Lifetime4 - var42.field_o, 256);
         return;
     }
 

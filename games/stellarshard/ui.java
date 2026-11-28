@@ -29,7 +29,7 @@ abstract class ui extends WidgetContainer {
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
         if (this.field_p > UiWidget.field_s.field_v) {
@@ -39,7 +39,7 @@ abstract class ui extends WidgetContainer {
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
         if (this.field_t > UiWidget.field_s.field_y) {
@@ -49,7 +49,7 @@ abstract class ui extends WidgetContainer {
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
           id.b((byte) -58);
-          UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+          UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
         hj.a(UiWidget.field_s, 1);
@@ -57,7 +57,7 @@ abstract class ui extends WidgetContainer {
         this.b(param1 + 58, 0, 0);
         super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
         id.b((byte) -58);
-        UiWidget.field_s.e(param3 + this.field_w, param2 + this.field_k, this.field_E);
+        UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
     }
 
     private final int a(int param0) {

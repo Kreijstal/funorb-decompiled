@@ -40,7 +40,7 @@ final class UiComponentPart027 extends UiComponent {
         }
         this.rgbSpriteArrayState0023 = new RgbSprite[]{this.computeRgbSprite1399(-81, this.integerState0676, this.integerState0678), this.computeRgbSprite1399(-107, this.integerState0677, this.integerState0674)};
         this.rgbSpriteState0048 = this.computeRgbSprite1401((byte) -125);
-        this.rgbSpriteState0049 = this.rgbSpriteState0048.computeRgbSprite0289();
+        this.rgbSpriteState0049 = this.rgbSpriteState0048.copyMirroredHorizontally();
         this.rgbSpriteState0050 = new RgbSprite(this.integerState0108 >> 1, this.integerState0108);
     }
 
@@ -187,26 +187,26 @@ final class UiComponentPart027 extends UiComponent {
           }
           RenderingSupport004.performAction0579(integerArgument2, 20763, integerLocal6 - this.rgbSpriteState0048.integerState0258, this.rgbSpriteState0048.integerState0258 + integerArgument3, this.integerState0108 + integerArgument2);
           for (integerLocal1 = integerArgument3 - this.integerState0679; integerLocal6 > integerLocal1; integerLocal1 = integerLocal1 + rgbSpriteArgument4.integerState0258) {
-            rgbSpriteArgument4.performAction0278(integerLocal1, integerArgument2);
+            rgbSpriteArgument4.draw(integerLocal1, integerArgument2);
           }
           ByteStorage.performAction1060((byte) -5);
           if (integerArgument3 + this.rgbSpriteState0048.integerState0258 >= SoftwareRaster.integerState0282) {
             ValidationStatus.performAction1570(true, this.rgbSpriteState0050);
-            rgbSpriteArgument4.performAction0278(-this.integerState0679, 0);
-            rgbSpriteArgument4.performAction0278(-this.integerState0679 + this.integerState0675 * 2, 0);
-            this.rgbSpriteState0049.performAction0294(0, 0);
+            rgbSpriteArgument4.draw(-this.integerState0679, 0);
+            rgbSpriteArgument4.draw(-this.integerState0679 + this.integerState0675 * 2, 0);
+            this.rgbSpriteState0049.drawMultiply(0, 0);
             ByteStorage.performAction1060((byte) -5);
-            this.rgbSpriteState0050.performAction0278(integerArgument3, integerArgument2);
+            this.rgbSpriteState0050.draw(integerArgument3, integerArgument2);
           }
           if (-this.rgbSpriteState0048.integerState0258 + integerLocal6 <= SoftwareRaster.integerState0281) {
             ValidationStatus.performAction1570(true, this.rgbSpriteState0050);
             for (integerLocal8 = -this.rgbSpriteState0048.integerState0258 + (this.integerState0107 + this.integerState0679); this.integerState0675 * 2 < integerLocal8; integerLocal8 = integerLocal8 - 2 * this.integerState0675) {
             }
-            rgbSpriteArgument4.performAction0278(-integerLocal8, 0);
-            rgbSpriteArgument4.performAction0278(2 * this.integerState0675 - integerLocal8, 0);
-            this.rgbSpriteState0048.performAction0294(0, 0);
+            rgbSpriteArgument4.draw(-integerLocal8, 0);
+            rgbSpriteArgument4.draw(2 * this.integerState0675 - integerLocal8, 0);
+            this.rgbSpriteState0048.drawMultiply(0, 0);
             ByteStorage.performAction1060((byte) -5);
-            this.rgbSpriteState0050.performAction0278(integerLocal6 - this.rgbSpriteState0048.integerState0258, integerArgument2);
+            this.rgbSpriteState0050.draw(integerLocal6 - this.rgbSpriteState0048.integerState0258, integerArgument2);
             return;
           }
           return;

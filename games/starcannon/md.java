@@ -41,12 +41,12 @@ final class md {
             var4 = ni.a(116, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!dk.a((byte) -123, var4.charAt(0)) &&
-                !dk.a((byte) -124, var4.charAt(var4.length() - 1))) {
+              if (!InteractiveWidget.a((byte) -123, var4.charAt(0)) &&
+                !InteractiveWidget.a((byte) -124, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = 0; param1.length() > var6; var6++) {
                   var7 = param1.charAt(var6);
-                  if (dk.a((byte) -128, (char) var7)) {
+                  if (InteractiveWidget.a((byte) -128, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

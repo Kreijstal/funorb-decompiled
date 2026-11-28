@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements jf, n, rg {
+final class AccountRegistrationPanel extends WidgetContainer implements jf, WidgetActivationListener, NameSuggestionListener {
     static int field_P;
     private vj field_T;
     private ValidatedTextField field_R;
     private df field_W;
     private ValidatedTextField field_J;
-    private eb field_M;
-    private eb field_O;
+    private InteractiveWidget field_M;
+    private InteractiveWidget field_O;
     static long field_Q;
     static int field_L;
     static String field_G;
     static String field_V;
     private ValidatedTextField field_I;
     private ValidatedTextField field_H;
-    am field_N;
+    NameSuggestionsPanel field_N;
     private ValidatedTextField field_U;
     private ValidatedTextField field_S;
 
@@ -111,8 +111,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         this.field_R = new ValidatedTextField("", (sc) null, 3);
         int var1 = 1;
         this.field_W = new df("", (sc) null, var1 != 0);
-        this.field_O = new eb(fm.field_a, (sc) null);
-        this.field_M = new eb(sl.field_f, (sc) null);
+        this.field_O = new InteractiveWidget(fm.field_a, (sc) null);
+        this.field_M = new InteractiveWidget(sl.field_f, (sc) null);
         this.field_J.field_x = p.field_g;
         this.field_S.field_x = tg.field_h;
         this.field_I.field_x = ga.field_p;
@@ -142,7 +142,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         int var3 = 20;
         var3 = var3 + this.a(g.field_nb, this.field_S, 170, 16777215, var3);
         var3 = var3 + (5 + this.a(false, 20, "", this.field_I, bh.field_h, var3, 170));
-        var3 = var3 + this.a(eb.field_E, this.field_H, 170, 16777215, var3);
+        var3 = var3 + this.a(InteractiveWidget.field_E, this.field_H, 170, 16777215, var3);
         var3 = var3 + (5 + this.a(q.field_Kb, this.field_U, var3, EditableTextField.field_N, 170, 16777215));
         var3 = var3 + (this.a(im.field_b, this.field_J, var3, ag.field_b, 170, 16777215) + 5);
         var3 = var3 + this.a(170, false, ig.field_d, this.field_R, var3);
@@ -166,13 +166,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         this.field_O.field_r = (sc) (this);
         this.b((byte) 95, this.field_O);
         this.b((byte) 95, this.field_M);
-        this.field_N = new am((rg) (this));
+        this.field_N = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_N.a(this.field_J.y + 20, (byte) 61, this.width - this.field_J.x + (-this.field_J.width - 60), 60 + (this.field_J.x + this.field_J.width), 150);
         this.b((byte) 95, this.field_N);
         this.a(0, (byte) 56, 496, 0, 55 + (var3 + var6));
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$0 = false;
         try {
           if (param0 == this.field_M) {
@@ -256,7 +256,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         return vf.a(this, this.field_S.text, this.field_W.field_C, var2, false, this.field_J.text, this.field_H.text);
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var4 = null;
         String var5 = null;
         try {
@@ -473,14 +473,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, n, r
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 == 50) {
-          ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).g(-4328);
+          ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).invalidateCheckedName(-4328);
           return;
         }
         UiWidget var3 = (UiWidget) null;
         this.a((UiWidget) null, 45, -116, 19);
-        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).g(-4328);
+        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).invalidateCheckedName(-4328);
     }
 
     private final String g(byte param0) {

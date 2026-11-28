@@ -164,9 +164,9 @@ abstract class jf {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l, 0, -var5 + 256);
           ib.b(false);
           if (tg.field_H < 150) {
-            ResourceArchive.field_a.b(var3, var4);
+            ResourceArchive.field_a.drawHalfSize(var3, var4);
           } else {
-            ad.field_b.a(var3 + 15, var4 + 10, var5);
+            ad.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
           var6 = tg.field_H - 125;
           if (var6 <= 0) {
@@ -176,20 +176,20 @@ abstract class jf {
               if (var6 < 20) {
                 var7 = 256 * var6 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7 * var5 >> 8);
             }
             return;
           }
           if (50 > var6) {
             if (var6 < 20) {
               var7Lifetime8 = var6 * 256 / 20;
-              KeyboardInput.field_c.c(var3, var4, var7Lifetime8);
+              KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime8);
             } else {
               if (var6 >= 30) {
                 var7Lifetime8 = (-var6 + 50) * 256 / 20;
-                KeyboardInput.field_c.c(var3, var4, var7Lifetime8);
+                KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime8);
               } else {
-                KeyboardInput.field_c.c(var3, var4, 256);
+                KeyboardInput.field_c.drawAdditive(var3, var4, 256);
               }
             }
             var6 = tg.field_H - 140;
@@ -198,7 +198,7 @@ abstract class jf {
               if (var6 < 20) {
                 var7Lifetime8 = 256 * var6 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime8 * var5 >> 8);
             }
             return;
           }
@@ -208,13 +208,13 @@ abstract class jf {
             if (var6Lifetime4 < 20) {
               var7Lifetime9 = 256 * var6Lifetime4 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime9 * var5 >> 8);
           }
           return;
         }
         ib.b(false);
         if (tg.field_H < 150) {
-          ResourceArchive.field_a.b(var3, var4);
+          ResourceArchive.field_a.drawHalfSize(var3, var4);
           var6Lifetime1 = tg.field_H - 125;
           if (var6Lifetime1 <= 0) {
             var6Lifetime1 = tg.field_H - 140;
@@ -223,7 +223,7 @@ abstract class jf {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1 = 256 * var6Lifetime1 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
             }
             return;
           }
@@ -234,48 +234,48 @@ abstract class jf {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1Lifetime1 = 256 * var6Lifetime1 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
             }
             return;
           }
           if (var6Lifetime1 < 20) {
             var7Lifetime1Lifetime2 = var6Lifetime1 * 256 / 20;
-            KeyboardInput.field_c.c(var3, var4, var7Lifetime1Lifetime2);
+            KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime2);
             var6Lifetime1 = tg.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime2 = 256;
               if (var6Lifetime1 < 20) {
                 var7Lifetime1Lifetime2 = 256 * var6Lifetime1 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime1Lifetime2 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime2 * var5 >> 8);
             }
             return;
           }
           if (var6Lifetime1 < 30) {
-            KeyboardInput.field_c.c(var3, var4, 256);
+            KeyboardInput.field_c.drawAdditive(var3, var4, 256);
             var6Lifetime1 = tg.field_H - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime3 = 256;
               if (var6Lifetime1 < 20) {
                 var7Lifetime1Lifetime3 = 256 * var6Lifetime1 / 20;
               }
-              ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime1Lifetime3 * var5 >> 8);
+              ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime3 * var5 >> 8);
             }
             return;
           }
           var7Lifetime1Lifetime4 = (-var6Lifetime1 + 50) * 256 / 20;
-          KeyboardInput.field_c.c(var3, var4, var7Lifetime1Lifetime4);
+          KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime1Lifetime4);
           var6Lifetime1Lifetime1 = tg.field_H - 140;
           if (var6Lifetime1Lifetime1 > 0) {
             var7Lifetime1Lifetime5 = 256;
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime5 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime1Lifetime5 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime5 * var5 >> 8);
           }
           return;
         }
-        ad.field_b.a(var3 + 15, var4 + 10, var5);
+        ad.field_b.drawWithOpacity(var3 + 15, var4 + 10, var5);
         var6Lifetime2 = tg.field_H - 125;
         if (var6Lifetime2 <= 0) {
           var6Lifetime2 = tg.field_H - 140;
@@ -284,7 +284,7 @@ abstract class jf {
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
           }
           return;
         }
@@ -295,44 +295,44 @@ abstract class jf {
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = 256 * var6Lifetime2 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
           }
           return;
         }
         if (var6Lifetime2 < 20) {
           var7Lifetime4 = var6Lifetime2 * 256 / 20;
-          KeyboardInput.field_c.c(var3, var4, var7Lifetime4);
+          KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime4);
           var6Lifetime2 = tg.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime4Lifetime1 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime4Lifetime1 = 256 * var6Lifetime2 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime4Lifetime1 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime4Lifetime1 * var5 >> 8);
           }
           return;
         }
         if (var6Lifetime2 < 30) {
-          KeyboardInput.field_c.c(var3, var4, 256);
+          KeyboardInput.field_c.drawAdditive(var3, var4, 256);
           var6Lifetime2 = tg.field_H - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime5 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime5 = 256 * var6Lifetime2 / 20;
             }
-            ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime5 * var5 >> 8);
+            ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime5 * var5 >> 8);
           }
           return;
         }
         var7Lifetime6 = (-var6Lifetime2 + 50) * 256 / 20;
-        KeyboardInput.field_c.c(var3, var4, var7Lifetime6);
+        KeyboardInput.field_c.drawAdditive(var3, var4, var7Lifetime6);
         var6Lifetime3 = tg.field_H - 140;
         if (var6Lifetime3 > 0) {
           var7Lifetime7 = 256;
           if (var6Lifetime3 < 20) {
             var7Lifetime7 = 256 * var6Lifetime3 / 20;
           }
-          ic.field_a.a(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
+          ic.field_a.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime7 * var5 >> 8);
         }
     }
 

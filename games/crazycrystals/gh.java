@@ -528,14 +528,14 @@ final class gh extends ea implements Cloneable {
         }
         if (param2 == 24 &&
           param3 == 24) {
-          il.field_e.a(param1, param4 - param3);
+          il.field_e.draw(param1, param4 - param3);
           if (param0) {
-            this.e((byte) 79).a(param1, param4 - param3);
+            this.e((byte) 79).draw(param1, param4 - param3);
           }
         } else {
-          il.field_e.b(param1, param4 - param3, 2 * param2, param3 * 3);
+          il.field_e.drawScaled(param1, param4 - param3, 2 * param2, param3 * 3);
           if (param0) {
-            this.e((byte) 79).b(param1, param4 - param3, 2 * param2, 3 * param3);
+            this.e((byte) 79).drawScaled(param1, param4 - param3, 2 * param2, 3 * param3);
           }
         }
         if (this.field_v) {

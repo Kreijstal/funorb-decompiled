@@ -162,7 +162,7 @@ final class pb extends wf {
                   var24Lifetime1 = param4.field_k[var23Lifetime2];
                   var25Lifetime1 = param4.field_g[var23Lifetime2];
                   var26Lifetime1 = param4.field_O[var23Lifetime2];
-                  gi.field_L[var23Lifetime2] = (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var18 * var26Lifetime1 >> 16) + var9;
+                  NameSuggestionsPanel.field_L[var23Lifetime2] = (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var18 * var26Lifetime1 >> 16) + var9;
                   lp.field_B[var23Lifetime2] = var10 + (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var19 * var26Lifetime1 >> 16);
                   ok.field_S[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + var14 * var24Lifetime1 + var26Lifetime1 * var20 >> 16);
                   var24Lifetime1 = param4.field_r[var23Lifetime2];

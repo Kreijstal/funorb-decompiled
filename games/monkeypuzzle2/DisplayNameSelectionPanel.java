@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql {
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     private ButtonWidget field_z;
     static String field_E;
-    cm field_H;
+    NameSuggestionsPanel field_H;
     static IntrusiveDeque field_C;
     private ValidatedTextField field_G;
     static MouseWheelInput field_A;
     private ButtonWidget field_D;
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -99,7 +99,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql 
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -247,7 +247,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql 
         this.field_D.field_o = (of) (this);
         this.b((byte) -102, this.field_D);
         this.b((byte) -27, this.field_z);
-        this.field_H = new cm((sh) (this));
+        this.field_H = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_H.a(150, 13361, 60 + (this.field_G.field_l + this.field_G.field_r), -60 + (-this.field_G.field_l + this.field_l) - this.field_G.field_r, 20);
         this.b((byte) -56, this.field_H);
         this.a(var4 + (55 + var3), 13361, 0, 496, 0);
@@ -860,8 +860,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements sh, ql 
         }
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(-125))).f((byte) -88);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(-125))).invalidateCheckedName((byte) -88);
         if (param0 != 200) {
           DisplayNameSelectionPanel.m(63);
         }

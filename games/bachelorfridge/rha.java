@@ -89,7 +89,7 @@ final class rha {
           if (WhirlpoolDigest.field_d < 150) {
             BuffVendorSpecial.field_r.drawHalfSize(var3, var4);
           } else {
-            nd.field_g.a(var3 + 15, var4 + 10, var5);
+            nd.field_g.drawWithOpacity(var3 + 15, var4 + 10, var5);
           }
           var6 = WhirlpoolDigest.field_d - 125;
           if (var6 > 0 &&
@@ -109,7 +109,7 @@ final class rha {
         } else {
           db.b(110);
           if (WhirlpoolDigest.field_d >= 150) {
-            nd.field_g.a(var3 + 15, var4 + 10, var5);
+            nd.field_g.drawWithOpacity(var3 + 15, var4 + 10, var5);
             var6 = WhirlpoolDigest.field_d - 125;
             if (var6 > 0 &&
               var6 < 50) {
@@ -154,7 +154,7 @@ final class rha {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          lt.field_a.a(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
+          lt.field_a.drawWithOpacity(var3 + 15, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
     }
 

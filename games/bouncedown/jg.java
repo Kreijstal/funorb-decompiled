@@ -67,7 +67,7 @@ final class jg extends ak {
           kh.a(var6, 1);
           this.field_x.a(param0, 0, 59, 0);
           ve.a(-121);
-          var6.d(this.field_r + param3, param1 + this.field_i, this.field_E);
+          var6.drawWithOpacity(this.field_r + param3, param1 + this.field_i, this.field_E);
           return;
         }
         this.field_x.a(param0, param1 + this.field_i, 87, this.field_r + param3);

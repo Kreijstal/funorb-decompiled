@@ -127,7 +127,7 @@ final class fa extends UiWidget {
         if (param0 != 34) {
           this.field_x = -4;
         }
-        this.field_J = this.field_v.g();
+        this.field_J = this.field_v.copyMirroredHorizontally();
         this.field_H = new Sprite(this.field_f >> 1, this.field_f);
     }
 
@@ -220,7 +220,7 @@ final class fa extends UiWidget {
           var5_int = this.field_i + param1;
           cl.a(true, this.field_f + param2, this.field_v.field_u + param1, param2, var5_int - this.field_v.field_u);
           for (var6 = -this.field_I + param1; var6 < var5_int; var6 = var6 + param0.field_u) {
-            param0.e(var6, param2);
+            param0.draw(var6, param2);
           }
           if (param3 != -22917) {
             this.field_x = 78;
@@ -228,21 +228,21 @@ final class fa extends UiWidget {
           wf.a(param3 + 22830);
           if (param1 + this.field_v.field_u >= SoftwareRasterizer.field_l) {
             bc.a(this.field_H, 26095);
-            param0.e(-this.field_I, 0);
-            param0.e(-this.field_I + this.field_C * 2, 0);
-            this.field_J.f(0, 0);
+            param0.draw(-this.field_I, 0);
+            param0.draw(-this.field_I + this.field_C * 2, 0);
+            this.field_J.drawMultiply(0, 0);
             wf.a(-103);
-            this.field_H.e(param1, param2);
+            this.field_H.draw(param1, param2);
           }
           if (var5_int - this.field_v.field_u <= SoftwareRasterizer.field_g) {
             bc.a(this.field_H, 26095);
             for (var7 = this.field_i + (-this.field_v.field_u + this.field_I); 2 * this.field_C < var7; var7 = var7 - 2 * this.field_C) {
             }
-            param0.e(-var7, 0);
-            param0.e(this.field_C * 2 - var7, 0);
-            this.field_v.f(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(this.field_C * 2 - var7, 0);
+            this.field_v.drawMultiply(0, 0);
             wf.a(-72);
-            this.field_H.e(var5_int - this.field_v.field_u, param2);
+            this.field_H.draw(var5_int - this.field_v.field_u, param2);
             return;
           }
           return;

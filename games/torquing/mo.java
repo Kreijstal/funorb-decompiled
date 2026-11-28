@@ -148,9 +148,9 @@ final class mo extends am {
         int var5 = 0;
         var5 = Torquing.field_u;
         try {
-          vp.field_E = vp.field_E + 65536;
-          while (65536 <= rn.a(vp.field_E, (byte) -18, op.field_k)) {
-            vp.field_E = vp.field_E - op.field_k;
+          NameSuggestionsPanel.field_E = NameSuggestionsPanel.field_E + 65536;
+          while (65536 <= rn.a(NameSuggestionsPanel.field_E, (byte) -18, op.field_k)) {
+            NameSuggestionsPanel.field_E = NameSuggestionsPanel.field_E - op.field_k;
             ke.field_c = ke.field_c + 1;
           }
           var2_int = -1;

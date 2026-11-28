@@ -99,15 +99,15 @@ final class lk extends gd {
             this.field_H = new RgbSprite(var6, var7);
             this.field_z = new RgbSprite(var6, var7);
             jh.c();
-            this.field_K.e();
+            this.field_K.bindAsRenderTarget();
             db.field_v.drawString(var10, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
-              this.field_H.e();
+              this.field_H.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 16744448);
-              this.field_z.e();
+              this.field_K.drawSilhouette(0, 0, 16744448);
+              this.field_z.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 12690143);
+              this.field_K.drawSilhouette(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7 >> 1;
               this.field_K.field_w = 60;
@@ -120,12 +120,12 @@ final class lk extends gd {
               return;
             }
             db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
-            this.field_H.e();
+            this.field_H.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 16744448);
-            this.field_z.e();
+            this.field_K.drawSilhouette(0, 0, 16744448);
+            this.field_z.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 12690143);
+            this.field_K.drawSilhouette(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7 >> 1;
             this.field_K.field_w = 60;
@@ -152,15 +152,15 @@ final class lk extends gd {
             this.field_H = new RgbSprite(var6Lifetime2, var7Lifetime2);
             this.field_z = new RgbSprite(var6Lifetime2, var7Lifetime2);
             jh.c();
-            this.field_K.e();
+            this.field_K.bindAsRenderTarget();
             db.field_v.drawString(var11, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
-              this.field_H.e();
+              this.field_H.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 16744448);
-              this.field_z.e();
+              this.field_K.drawSilhouette(0, 0, 16744448);
+              this.field_z.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 12690143);
+              this.field_K.drawSilhouette(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7Lifetime2 >> 1;
               this.field_K.field_w = 60;
@@ -173,12 +173,12 @@ final class lk extends gd {
               return;
             }
             db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
-            this.field_H.e();
+            this.field_H.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 16744448);
-            this.field_z.e();
+            this.field_K.drawSilhouette(0, 0, 16744448);
+            this.field_z.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 12690143);
+            this.field_K.drawSilhouette(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime2 >> 1;
             this.field_K.field_w = 60;
@@ -205,15 +205,15 @@ final class lk extends gd {
             this.field_H = new RgbSprite(var6Lifetime3, var7Lifetime3);
             this.field_z = new RgbSprite(var6Lifetime3, var7Lifetime3);
             jh.c();
-            this.field_K.e();
+            this.field_K.bindAsRenderTarget();
             db.field_v.drawString(var12, 0, la.field_b.field_H, 12632256, -1);
             if (var4 == null) {
-              this.field_H.e();
+              this.field_H.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 16744448);
-              this.field_z.e();
+              this.field_K.drawSilhouette(0, 0, 16744448);
+              this.field_z.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_K.e(0, 0, 12690143);
+              this.field_K.drawSilhouette(0, 0, 12690143);
               jh.b();
               this.field_K.field_A = this.field_x - var7Lifetime3 >> 1;
               this.field_K.field_w = 60;
@@ -226,12 +226,12 @@ final class lk extends gd {
               return;
             }
             db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
-            this.field_H.e();
+            this.field_H.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 16744448);
-            this.field_z.e();
+            this.field_K.drawSilhouette(0, 0, 16744448);
+            this.field_z.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 12690143);
+            this.field_K.drawSilhouette(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime3 >> 1;
             this.field_K.field_w = 60;
@@ -258,15 +258,15 @@ final class lk extends gd {
           this.field_H = new RgbSprite(var6Lifetime4, var7Lifetime4);
           this.field_z = new RgbSprite(var6Lifetime4, var7Lifetime4);
           jh.c();
-          this.field_K.e();
+          this.field_K.bindAsRenderTarget();
           db.field_v.drawString(var13, 0, la.field_b.field_H, 12632256, -1);
           if (var14 == null) {
-            this.field_H.e();
+            this.field_H.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 16744448);
-            this.field_z.e();
+            this.field_K.drawSilhouette(0, 0, 16744448);
+            this.field_z.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
-            this.field_K.e(0, 0, 12690143);
+            this.field_K.drawSilhouette(0, 0, 12690143);
             jh.b();
             this.field_K.field_A = this.field_x - var7Lifetime4 >> 1;
             this.field_K.field_w = 60;
@@ -279,12 +279,12 @@ final class lk extends gd {
             return;
           }
           db.field_v.drawString(var14, 0, la.field_b.field_H * 2, 8421504, -1);
-          this.field_H.e();
+          this.field_H.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          this.field_K.e(0, 0, 16744448);
-          this.field_z.e();
+          this.field_K.drawSilhouette(0, 0, 16744448);
+          this.field_z.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          this.field_K.e(0, 0, 12690143);
+          this.field_K.drawSilhouette(0, 0, 12690143);
           jh.b();
           this.field_K.field_A = this.field_x - var7Lifetime4 >> 1;
           this.field_K.field_w = 60;
@@ -313,15 +313,15 @@ final class lk extends gd {
         this.field_H = new RgbSprite(var6Lifetime1, var7Lifetime1);
         this.field_z = new RgbSprite(var6Lifetime1, var7Lifetime1);
         jh.c();
-        this.field_K.e();
+        this.field_K.bindAsRenderTarget();
         db.field_v.drawString(var15, 0, la.field_b.field_H, 12632256, -1);
         if (var4 == null) {
-          this.field_H.e();
+          this.field_H.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          this.field_K.e(0, 0, 16744448);
-          this.field_z.e();
+          this.field_K.drawSilhouette(0, 0, 16744448);
+          this.field_z.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          this.field_K.e(0, 0, 12690143);
+          this.field_K.drawSilhouette(0, 0, 12690143);
           jh.b();
           this.field_K.field_A = this.field_x - var7Lifetime1 >> 1;
           this.field_K.field_w = 60;
@@ -334,12 +334,12 @@ final class lk extends gd {
           return;
         }
         db.field_v.drawString((String) (var4), 0, la.field_b.field_H * 2, 8421504, -1);
-        this.field_H.e();
+        this.field_H.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
-        this.field_K.e(0, 0, 16744448);
-        this.field_z.e();
+        this.field_K.drawSilhouette(0, 0, 16744448);
+        this.field_z.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
-        this.field_K.e(0, 0, 12690143);
+        this.field_K.drawSilhouette(0, 0, 12690143);
         jh.b();
         this.field_K.field_A = this.field_x - var7Lifetime1 >> 1;
         this.field_K.field_w = 60;

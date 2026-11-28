@@ -22,7 +22,7 @@ final class IndexedSprite extends IndexedSpriteState {
         this.field_c = this.field_b - this.field_e - this.field_c;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_d;
@@ -79,7 +79,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.blitIndexedScaled(SoftwareRasterizer.field_e, this.field_g, this.field_h, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -176,7 +176,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -243,7 +243,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return var1;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAbout(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -839,7 +839,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -895,7 +895,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return new Sprite(this.field_a, this.field_b, this.field_f, this.field_c, this.field_d, this.field_e, var2);
     }
 
-    final void b(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var10 = 0;
         int var11 = 0;
         int var17 = 0;
@@ -1082,7 +1082,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawFlippedHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1167,7 +1167,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void d(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

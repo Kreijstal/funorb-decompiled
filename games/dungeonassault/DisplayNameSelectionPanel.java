@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ii implements mg, vg {
+final class DisplayNameSelectionPanel extends ii implements NameSuggestionListener, WidgetActivationListener {
     static String field_O;
-    private ck field_M;
-    gi field_P;
-    private ck field_N;
+    private InteractiveWidget field_M;
+    NameSuggestionsPanel field_P;
+    private InteractiveWidget field_N;
     static String field_K;
     private ValidatedTextField field_R;
     static boolean[] field_Q;
@@ -44,10 +44,10 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         }
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator(-98))).e(true);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator(-98))).invalidateCheckedName(true);
         if (param0 < 121) {
-          this.field_M = (ck) null;
+          this.field_M = (InteractiveWidget) null;
         }
     }
 
@@ -235,7 +235,7 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSuggestionSelected(byte param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -321,8 +321,8 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         this.field_R = new ValidatedTextField("", (pg) null, 12);
         hh var1 = new hh(ta.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
         lm var2 = new lm(PasswordValidator.field_q, var1, (pg) null);
-        this.field_M = new ck(DebouncedFieldValidator.field_g, (pg) null);
-        this.field_N = new ck(Bzip2State.field_v, (pg) null);
+        this.field_M = new InteractiveWidget(DebouncedFieldValidator.field_g, (pg) null);
+        this.field_N = new InteractiveWidget(Bzip2State.field_v, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
         this.field_R.setFieldValidator(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_M.field_B = false;
@@ -342,7 +342,7 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         this.field_M.field_n = (pg) (this);
         this.b((byte) -90, this.field_M);
         this.b((byte) -115, this.field_N);
-        this.field_P = new gi((mg) (this));
+        this.field_P = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_P.b(0, this.field_x - this.field_R.field_q + (-this.field_R.field_x - 60), 20, 60 + this.field_R.field_x + this.field_R.field_q, 150);
         this.b((byte) -77, this.field_P);
         this.b(0, 496, 0, 0, 55 + (var3 + var4));
@@ -390,7 +390,7 @@ final class DisplayNameSelectionPanel extends ii implements mg, vg {
         }
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         lm var7 = null;
         RuntimeException stackIn_10_0 = null;

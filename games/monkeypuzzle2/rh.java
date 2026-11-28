@@ -141,7 +141,7 @@ abstract class rh extends WidgetContainer {
           this.a(false, 0, 0);
           super.a(param0, param1, -param2 - this.field_e, -this.field_r - param3);
           tj.b(653);
-          vg.field_M.b(this.field_r + param3, param2 + this.field_e, this.field_D);
+          vg.field_M.drawWithOpacity(this.field_r + param3, param2 + this.field_e, this.field_D);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -510,9 +510,9 @@ abstract class rh extends WidgetContainer {
             }
             ci.field_b = 1;
             var4 = var1.readString(-1);
-            cm.field_G = ((String) (var4)).intern();
+            NameSuggestionsPanel.field_G = ((String) (var4)).intern();
             var5 = var1.readUnsignedByte((byte) 114);
-            cm.a(var5, (byte) -117);
+            NameSuggestionsPanel.a(var5, (byte) -117);
             return;
           }
           if (null == IntrusiveDeque.field_a) {

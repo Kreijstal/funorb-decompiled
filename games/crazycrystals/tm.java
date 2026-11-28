@@ -216,14 +216,14 @@ final class tm {
             var6_int = param3[0].field_n;
             var7 = param3[2].field_n;
             var8 = param3[1].field_n;
-            param3[0].b(param0, param2, param1);
-            param3[2].b(-var7 + param4 + param0, param2, param1);
+            param3[0].drawTintedGray(param0, param2, param1);
+            param3[2].drawTintedGray(-var7 + param4 + param0, param2, param1);
             SoftwareRasterizer.saveClip(ob.field_b);
             SoftwareRasterizer.intersectClip(var6_int + param0, param2, param4 + (param0 - var7), param3[1].field_o + param2);
             var9 = var6_int + param0;
             var10 = -var7 + (param4 + param0);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
-              param3[1].b(param0, param2, param1);
+              param3[1].drawTintedGray(param0, param2, param1);
             }
             SoftwareRasterizer.restoreClip(ob.field_b);
             return;

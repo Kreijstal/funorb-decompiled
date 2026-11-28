@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArgbSprite extends RgbSprite {
-    final void b(int param0, int param1, int param2) {
+    final void drawTintedGray(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -48,7 +48,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void b(int param0, int param1) {
+    final void drawHalfSize(int param0, int param1) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -147,7 +147,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -220,7 +220,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void d(int param0, int param1, int param2) {
+    final void drawGrayModulated(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -266,7 +266,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAboutNearest(int param0, int param1, int param2, int param3, int param4, int param5) {
         int incrementValue$8 = 0;
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
@@ -871,7 +871,7 @@ final class ArgbSprite extends RgbSprite {
         return;
     }
 
-    final void d(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -1003,7 +1003,7 @@ final class ArgbSprite extends RgbSprite {
         super(param0, param1);
     }
 
-    final void e(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1049,7 +1049,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAdditive(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;

@@ -375,18 +375,18 @@ class aj extends UiWidget implements pb {
           }
           var9Lifetime1 = var17.field_m;
           og.a((byte) 108);
-          var17.e();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_c, SoftwareRasterizer.field_g);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.e();
-          var17.f(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.e();
-          var17.f(-var17.field_n + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_n + var9Lifetime1, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_n, var9Lifetime1);
-          var12.e();
-          var17.f(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           fi.c(true);
           mc.field_b = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

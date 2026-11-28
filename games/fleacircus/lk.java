@@ -284,27 +284,27 @@ final class lk extends UiComponent {
             field_A = (fh) null;
           }
           while (var5_int > var6) {
-            param0.d(var6, param1);
+            param0.draw(var6, param1);
             var6 = var6 + param0.field_w;
           }
           ia.a(param2 ^ -81);
           if (SoftwareRasterizer.field_l <= this.field_P.field_w + param3) {
             TextFieldValidator.a(this.field_M, 45);
-            param0.d(-this.field_B, 0);
-            param0.d(this.field_N * 2 - this.field_B, 0);
-            this.field_F.a(0, 0);
+            param0.draw(-this.field_B, 0);
+            param0.draw(this.field_N * 2 - this.field_B, 0);
+            this.field_F.drawMultiply(0, 0);
             ia.a(-70);
-            this.field_M.d(param3, param1);
+            this.field_M.draw(param3, param1);
           }
           if (var5_int - this.field_P.field_w <= SoftwareRasterizer.field_h) {
             TextFieldValidator.a(this.field_M, 45);
             for (var7 = this.field_B + (-this.field_P.field_w + this.field_u); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
             }
-            param0.d(-var7, 0);
-            param0.d(-var7 + this.field_N * 2, 0);
-            this.field_P.a(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(-var7 + this.field_N * 2, 0);
+            this.field_P.drawMultiply(0, 0);
             ia.a(-79);
-            this.field_M.d(-this.field_P.field_w + var5_int, param1);
+            this.field_M.draw(-this.field_P.field_w + var5_int, param1);
             return;
           }
           return;
@@ -353,7 +353,7 @@ final class lk extends UiComponent {
         }
         this.field_E = new RgbSprite[]{this.b(this.field_G, this.field_C, -117), this.b(this.field_L, this.field_K, 118)};
         this.field_P = this.d((byte) -15);
-        this.field_F = this.field_P.b();
+        this.field_F = this.field_P.copyMirroredHorizontally();
         this.field_M = new RgbSprite(this.field_j >> 1, this.field_j);
     }
 

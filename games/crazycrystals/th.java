@@ -30,14 +30,14 @@ final class th extends om {
           em.a((byte) 38, var6);
           this.field_w.a(0, (byte) -121, 0, param3);
           lg.a(1);
-          var6.f(this.field_r + param2, param0 + this.field_j, this.field_z);
+          var6.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_z);
           return;
         }
         this.a(75, (byte) 112, 48, 106);
         em.a((byte) 38, var6);
         this.field_w.a(0, (byte) -121, 0, param3);
         lg.a(1);
-        var6.f(this.field_r + param2, param0 + this.field_j, this.field_z);
+        var6.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_z);
     }
 
     final static void a(int param0, int param1) {

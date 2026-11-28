@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends kf {
+final class te extends InteractiveWidget {
     static java.awt.Color field_E;
 
     private te(String param0, rd param1, vd param2) {
@@ -38,9 +38,9 @@ final class te extends kf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_C = !this.field_C ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     final static void a(String param0, long param1, java.applet.Applet param2, String param3, int param4) {

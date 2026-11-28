@@ -129,7 +129,7 @@ class mf extends uda implements WidgetActionListener {
         }
     }
 
-    public void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

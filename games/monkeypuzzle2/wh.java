@@ -27,7 +27,7 @@ final class wh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (nf.field_F != null) {
-            nf.field_F.field_G.a(args, 560186724);
+            nf.field_F.field_G.setNameSuggestions(args, 560186724);
           }
           if (!param1) {
             field_b = (ib) null;
@@ -35,7 +35,7 @@ final class wh {
           if (sc.field_f == null) {
             return;
           }
-          sc.field_f.field_H.a(args, 560186724);
+          sc.field_f.field_H.setNameSuggestions(args, 560186724);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

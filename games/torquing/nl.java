@@ -37,9 +37,9 @@ final class nl extends am {
           return var18;
         }
         var7 = ff.field_b * this.field_t >> 12;
-        var26 = this.b(0, 0, vp.field_I & -1 + param1);
+        var26 = this.b(0, 0, NameSuggestionsPanel.field_I & -1 + param1);
         var9 = this.b(0, 0, param1);
-        var25 = this.b(0, 0, param1 + 1 & vp.field_I);
+        var25 = this.b(0, 0, param1 + 1 & NameSuggestionsPanel.field_I);
         for (var11 = 0; ci.field_c > var11; var11++) {
           var12 = var7 * (var25[var11] - var26[var11]) >> 12;
           var13 = (-var9[1 + var11 & jh.field_A] + var9[var11 - 1 & jh.field_A]) * var7 >> 12;

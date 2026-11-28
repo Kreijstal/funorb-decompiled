@@ -316,7 +316,7 @@ final class PcmResampler {
                       var4 = var4 - var11Lifetime1;
                     }
                     while (var4 < var14) {
-                      c.field_f[var16].e(-12 + var3, var4);
+                      c.field_f[var16].draw(-12 + var3, var4);
                       var4 = var4 + var11Lifetime1;
                     }
                     SoftwareRasterizer.resetClip();

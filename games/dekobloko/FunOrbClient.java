@@ -735,7 +735,7 @@ abstract class FunOrbClient extends GameApplet {
         }
         try {
           AgeValidator.integerState0360 = this.integerState0060;
-          Sprite.performAction0934(AgeValidator.integerState0360, true);
+          Sprite.selectLocalizedStartupMessages(AgeValidator.integerState0360, true);
           MixedSupport063.performAction0754(integerArgument3, this.integerState0055, GzipDecompressor.platformServiceState0003, 5000, 5000, this.longState0002, AgeValidator.integerState0360, booleanArgument8, this.integerState0059, this.integerState0058, this.booleanState0007, true, this.integerState0057, this.stringState0042);
           UiComponent.performAction0212(this.integerState0058, this.integerState0055, AgeValidator.integerState0360, integerArgument3, this.integerState0057, this.stringState0042, GzipDecompressor.platformServiceState0003, 0, this.integerState0059);
           MixedSupport028.performAction0402(120);

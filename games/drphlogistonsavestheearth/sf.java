@@ -90,14 +90,14 @@ final class sf {
           return;
         }
         try {
-          var14.a(-32680, var13.a());
-          var13.f();
+          var14.a(-32680, var13.copy());
+          var13.rotateClockwise();
           var14 = new ch(var4, true);
-          var14.a(-32680, var13.a());
-          var13.f();
+          var14.a(-32680, var13.copy());
+          var13.rotateClockwise();
           var14 = new ch(var4, true);
-          var14.a(-32680, var13.a());
-          var13.f();
+          var14.a(-32680, var13.copy());
+          var13.rotateClockwise();
           var19 = new ch(var4, true);
           var19.a(-32680, var13);
         } catch (RuntimeException runtimeException) {

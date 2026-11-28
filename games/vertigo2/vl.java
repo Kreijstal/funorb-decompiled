@@ -432,25 +432,25 @@ final class vl {
         int var7 = SoftwareRasterizer.field_e;
         int var8 = SoftwareRasterizer.field_j;
         Sprite var9 = new Sprite(param1, param0 - param1 * 2);
-        var9.d();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, param2, param1, -(param1 * 2) + param0, param4, param5);
         Sprite var10 = new Sprite(param1, param1);
-        var10.d();
+        var10.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param4);
         Sprite var11 = new Sprite(16, param1);
-        var11.d();
+        var11.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param4);
         Sprite var12 = new Sprite(param1, param1);
-        var12.d();
+        var12.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, param1, param1, param5);
         Sprite var13 = new Sprite(16, param1);
-        var13.d();
+        var13.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 16, param1, param5);
         Object var14 = null;
         if (param3 > 0) {
           var16 = new Sprite(16, 16);
           var14 = var16;
-          var16.d();
+          var16.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 16, 16, param3);
         }
         SoftwareRasterizer.setRasterBuffer(var18, var7, var8);

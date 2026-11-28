@@ -28,13 +28,13 @@ abstract class FrameTimer {
           SoftwareRasterizer.clearRaster();
           qb.field_h = 0;
           GzipDecompressor.a(-1196777214);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ak.field_f.e();
-          var1.a(0, 0);
+          ak.field_f.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           wf.a(-71);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "fi.K(" + param0 + ')');

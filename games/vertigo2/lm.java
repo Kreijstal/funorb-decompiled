@@ -153,22 +153,22 @@ final class lm extends TextureOperator {
         }
         ln.d(-28558);
         if (150 > hm.field_F) {
-          n.field_a.b(var3, var4);
+          n.field_a.drawHalfSize(var3, var4);
         } else {
-          qn.field_r.c(15 + var3, var4 + 10, var5);
+          qn.field_r.drawWithOpacity(15 + var3, var4 + 10, var5);
         }
         var6 = -125 + hm.field_F;
         if (var6 > 0 &&
           var6 < 50) {
           if (var6 < 20) {
             var7 = var6 * 256 / 20;
-            pl.field_h.d(var3, var4, var7);
+            pl.field_h.drawAdditive(var3, var4, var7);
           } else {
             if (var6 >= 30) {
               var7 = (-(var6 * 256) + 12800) / 20;
-              pl.field_h.d(var3, var4, var7);
+              pl.field_h.drawAdditive(var3, var4, var7);
             } else {
-              pl.field_h.d(var3, var4, 256);
+              pl.field_h.drawAdditive(var3, var4, 256);
             }
           }
         }
@@ -182,7 +182,7 @@ final class lm extends TextureOperator {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          lr.field_O.c(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          lr.field_O.drawWithOpacity(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

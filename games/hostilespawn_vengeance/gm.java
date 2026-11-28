@@ -202,7 +202,7 @@ final class gm {
             if (param0.field_b == 2) {
               var7 = var7 + (param3.field_x - this.field_a.field_r);
             }
-            this.field_a.e(var6_int, var7);
+            this.field_a.draw(var6_int, var7);
           }
           if (param1 < 118) {
             return;

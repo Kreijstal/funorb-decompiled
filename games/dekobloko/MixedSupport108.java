@@ -11,9 +11,9 @@ final class MixedSupport108 {
     final static SceneWidget computeSceneWidget1421(int integerArgument1) {
         if (integerArgument1 > -26) {
           MixedSupport108.reverseLowBits((byte) -21, 73, 124);
-          return UiComponentPart007.computeSceneWidget0360(119);
+          return NameSuggestionsPanel.computeSceneWidget0360(119);
         }
-        return UiComponentPart007.computeSceneWidget0360(119);
+        return NameSuggestionsPanel.computeSceneWidget0360(119);
     }
 
     final HashNode computeHashNode1416(HashNode hashNodeArgument1, boolean booleanArgument2) {

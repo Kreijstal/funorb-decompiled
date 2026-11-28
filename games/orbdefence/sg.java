@@ -79,7 +79,7 @@ abstract class sg extends ta {
         this.a(0, 0, -9111);
         super.a(-param0 - this.field_n, param1, param2, -this.field_s - param3);
         ValidatedTextField.g((byte) -105);
-        me.field_f.a(param3 + this.field_s, param0 + this.field_n, this.field_D);
+        me.field_f.drawWithOpacity(param3 + this.field_s, param0 + this.field_n, this.field_D);
     }
 
     sg(sk param0, int param1, int param2) {

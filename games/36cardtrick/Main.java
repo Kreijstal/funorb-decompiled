@@ -170,7 +170,7 @@ public final class Main extends c {
 
     private final void a(double param0, int param1, double param2, int param3) {
         try {
-          this.field_I[param1].b((int)(param2 + 0.5), (int)(param0 + 0.5));
+          this.field_I[param1].drawOpaque((int)(param2 + 0.5), (int)(param0 + 0.5));
           if (param3 != 0) {
             this.field_A = 77;
           }
@@ -460,7 +460,7 @@ public final class Main extends c {
         try {
           jl.b((byte) 22);
           if (null != DiskCacheWorker.field_a) {
-            PcmOutputWorker.a(true);
+            PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
           }
           ph.c(1);
           if (param0 >= -36) {
@@ -590,7 +590,7 @@ public final class Main extends c {
           h.e((byte) -84);
           if (null != DiskCacheWorker.field_a &&
             DiskCacheWorker.field_a.focusLost) {
-            PcmOutputWorker.a(!param0);
+            PcmOutputWorker.exitFullscreenAndRestoreFocus(!param0);
             g.k(4);
           }
           stackIn_15_1 = -71;
@@ -683,7 +683,7 @@ public final class Main extends c {
                     if (var2_int == 1 ||
                       var2_int == 2) {
                       if (null != DiskCacheWorker.field_a) {
-                        PcmOutputWorker.a(true);
+                        PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
                       }
                       if (2 == var2_int) {
                         PacketBuffer.a((byte) -124, PasswordValidator.g(-124));
@@ -706,7 +706,7 @@ public final class Main extends c {
                           break;
                         }
                       case 2:
-                        PcmOutputWorker.a(true);
+                        PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
                         break;
                     }
                     if (!eh.d(19314)) {
@@ -960,13 +960,13 @@ public final class Main extends c {
             }
           }
           if (dh.field_m >= param4) {
-            this.field_I[0].b(param1, param3);
+            this.field_I[0].drawOpaque(param1, param3);
             if (var14 == 0) {
               return;
             }
           }
           if (param4 - 300L >= dh.field_m) {
-            this.field_I[param2].b(param1, param3);
+            this.field_I[param2].drawOpaque(param1, param3);
             if (var14 == 0) {
               return;
             }
@@ -1283,7 +1283,7 @@ public final class Main extends c {
         int var12Lifetime1;
         var14 = field_T;
         try {
-          bd.field_H.b(0, 0);
+          NameSuggestionsPanel.field_H.drawOpaque(0, 0);
           qa.field_b.drawRightAligned(Integer.toString(dg.field_J), 85, 80, 16777215, -1);
           stackIn_4_0 = qa.field_b;
           stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
@@ -1330,7 +1330,7 @@ public final class Main extends c {
             } else {
               var5 = -32 + var6 / 2;
             }
-            ResourceArchive.field_a[var4.field_h].a(8, var5);
+            ResourceArchive.field_a[var4.field_h].drawQuarterSizeAveraged(8, var5);
             qa.field_b.drawString(GzipInflater.field_b[var4.field_h], 45, var5 + qa.field_b.field_s, 0, -1);
           }
           boolean decompiledSharedTail0 = (this.field_U != 4);
@@ -1431,7 +1431,7 @@ public final class Main extends c {
                     } else {
                       stackIn_113_0 = (~var8 != ~this.field_N) ? 0 : 1;
                       var13 = stackIn_113_0;
-                      this.field_I[var13].b(var10, var7);
+                      this.field_I[var13].drawOpaque(var10, var7);
                     }
                   }
                   var8++;
@@ -1705,9 +1705,9 @@ public final class Main extends c {
             } while (var46 == 0);
             var3_ref = ia.field_c[15];
             ArchiveRequest.field_k = new RgbSprite(var3_ref.field_p, var3_ref.field_o);
-            ArchiveRequest.field_k.c();
+            ArchiveRequest.field_k.bindAsRenderTarget();
             var4 = 40 / ((param1 - 23) / 52);
-            var3_ref.c(0, 0, 4405028);
+            var3_ref.drawGrayModulated(0, 0, 4405028);
             gf.field_e.setAsRasterTarget(200);
             stackIn_115_0 = 2;
             return stackIn_115_0;
@@ -1720,8 +1720,8 @@ public final class Main extends c {
           eb.field_c = kk.a(var4_ref_wb__, var3_array, 1, 256, 16777215);
           var5Lifetime1 = qa.field_b.field_s + qa.field_b.field_x;
           sk.field_c = new RgbSprite(var5Lifetime1, var5Lifetime1);
-          sk.field_c.c();
-          qi.field_D.a(0, 0, var5Lifetime1, var5Lifetime1);
+          sk.field_c.bindAsRenderTarget();
+          qi.field_D.drawDownscaledAreaAveraged(0, 0, var5Lifetime1, var5Lifetime1);
           qi.field_D = null;
           gf.field_e.setAsRasterTarget(200);
           this.field_I = gl.a("tiles", mh.field_c, "", -13244);
@@ -1730,28 +1730,28 @@ public final class Main extends c {
           var6_ref.field_c = 0;
           var6_ref.field_f = var6_ref.field_b;
           td.field_c[0] = new RgbSprite(415, 415);
-          td.field_c[0].c();
+          td.field_c[0].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 9351922);
           var6_ref.field_j[1] = 8024722;
           var6_ref.a(0, var7);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 8090514, 11373689);
           lh.a("hs", mh.field_c, "", -89).a(0, 0);
           td.field_c[3] = new RgbSprite(415, 415);
-          td.field_c[3].c();
+          td.field_c[3].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 10932727);
           var6_ref.field_j[1] = 9675196;
           var6_ref.a(0, var7);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 9675196, 11645356);
           lh.a("atl", mh.field_c, "", -108).a(0, 0);
           td.field_c[5] = new RgbSprite(415, 415);
-          td.field_c[5].c();
+          td.field_c[5].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 13869944);
           var6_ref.field_j[1] = 11698531;
           var6_ref.a(0, var7);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 261, 415, 154, 11698531, 13734228);
           lh.a("atg", mh.field_c, "", -21).a(0, 0);
           td.field_c[4] = new RgbSprite(415, 415);
-          td.field_c[4].c();
+          td.field_c[4].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 415, 415, 10211583);
           var6_ref.field_j[1] = 5081598;
           var6_ref.a(0, var7);
@@ -1772,17 +1772,17 @@ public final class Main extends c {
               mg.field_j[6] = dupTemp$0;
               mg.field_j[2] = dupTemp$0;
               mg.field_j[0] = dupTemp$0;
-              mg.field_j[0].c();
+              mg.field_j[0].bindAsRenderTarget();
               SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               dupTemp$1 = new RgbSprite(256, 4);
               mg.field_j[7] = dupTemp$1;
               mg.field_j[1] = dupTemp$1;
-              mg.field_j[1].c();
+              mg.field_j[1].bindAsRenderTarget();
               SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               dupTemp$2 = new RgbSprite(4, 256);
               mg.field_j[5] = dupTemp$2;
               mg.field_j[3] = dupTemp$2;
-              mg.field_j[3].c();
+              mg.field_j[3].bindAsRenderTarget();
               SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g, 6962948);
               break;
             }
@@ -1793,7 +1793,7 @@ public final class Main extends c {
           var8_array = DelegatingCanvas.a(-126, "woodpal", "", mh.field_c).field_r;
           var9 = new IsaacRandom(new int[]{1523066134, 1523066134, 416118573, -1554371402, -117777497, 383414059, -751582233, -486225926});
           mg.field_j[4] = new RgbSprite(640, 480);
-          mg.field_j[4].c();
+          mg.field_j[4].bindAsRenderTarget();
           var10 = var8_array.length >> 2;
           var11_int = -1 + SoftwareRasterizer.field_j.length;
           while (var11_int >= 0) {
@@ -1814,12 +1814,12 @@ public final class Main extends c {
                 var15_int = 5 + AccountCreationResultPanel.a(12, -2147483648, var9);
                 var16_int = var8_array[(var8_array.length >> 1) + AccountCreationResultPanel.a(var8_array.length >> 1, -2147483648, var9)];
                 var17_int = var8_array[var10];
-                var11.c();
+                var11.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 SoftwareRasterizer.fillRectangleVerticalGradient(0, 20 - var15_int, 1, var15_int, var16_int, var17_int);
                 SoftwareRasterizer.fillRectangleVerticalGradient(0, 20, 1, var15_int, var17_int, var16_int);
-                mg.field_j[4].c();
-                var11.e(var12_int, var14 - 20, AccountCreationResultPanel.a(56, -2147483648, var9) + 200);
+                mg.field_j[4].bindAsRenderTarget();
+                var11.drawWithOpacity(var12_int, var14 - 20, AccountCreationResultPanel.a(56, -2147483648, var9) + 200);
                 var13_int++;
                 if (var46 == 0) {
                   continue;
@@ -1835,7 +1835,7 @@ public final class Main extends c {
             break;
           }
           var12 = new RgbSprite(640, 480);
-          var12.c();
+          var12.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 300, 21670, 39641);
           var13 = lh.a("canyonmask", mh.field_c, "", 127);
           var14Lifetime1 = var13.field_c;
@@ -1853,54 +1853,54 @@ public final class Main extends c {
           var22 = DelegatingCanvas.a(-128, "menucactus", "", mh.field_c);
           var23 = DelegatingCanvas.a(-127, "logocactus", "", mh.field_c);
           TextFieldValidator.field_i = DelegatingCanvas.a(-128, "screw", "", mh.field_c);
-          d.field_u[0] = var12.b();
-          d.field_u[0].c();
+          d.field_u[0] = var12.copy();
+          d.field_u[0].bindAsRenderTarget();
           re.a(16777215, 0, 0, (byte) 111, var16);
           re.a(16777215, 0, 0, (byte) 118, var17);
           re.a(16777215, 0, 0, (byte) 60, var18);
           re.a(16777215, 0, 0, (byte) 102, var19);
-          var22.d(0, 0);
-          var23.d(0, 0);
-          DelegatingCanvas.a(-128, "maintitle", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-126, "mmextra1", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-128, "mmextra2", "", mh.field_c).d(0, 0);
-          d.field_u[1] = var12.b();
-          d.field_u[1].c();
+          var22.draw(0, 0);
+          var23.draw(0, 0);
+          DelegatingCanvas.a(-128, "maintitle", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-126, "mmextra1", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-128, "mmextra2", "", mh.field_c).draw(0, 0);
+          d.field_u[1] = var12.copy();
+          d.field_u[1].bindAsRenderTarget();
           re.a(16777215, 0, 0, (byte) 71, var16);
           re.a(16777215, 0, 0, (byte) 94, var17);
           re.a(16777215, 0, 0, (byte) 118, var20);
-          var22.d(0, 0);
-          var23.d(0, 0);
-          DelegatingCanvas.a(-128, "pausetitle", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-126, "pmextra1", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-128, "pmextra2", "", mh.field_c).d(0, 0);
+          var22.draw(0, 0);
+          var23.draw(0, 0);
+          DelegatingCanvas.a(-128, "pausetitle", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-126, "pmextra1", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-128, "pmextra2", "", mh.field_c).draw(0, 0);
           d.field_u[2] = DelegatingCanvas.a(-126, "titlescreen", "", mh.field_c);
-          d.field_u[3] = var12.b();
-          d.field_u[3].c();
+          d.field_u[3] = var12.copy();
+          d.field_u[3].bindAsRenderTarget();
           SoftwareRasterizer.setClip(153, 105, 491, 397);
-          mg.field_j[4].b(0, 0);
+          mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(169, 121, 308, 261, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 103, 8475405, 296, 151, 342);
-          TextFieldValidator.field_i.d(174, 128);
-          TextFieldValidator.field_i.d(461, 128);
-          TextFieldValidator.field_i.d(176, 363);
-          TextFieldValidator.field_i.d(461, 363);
-          var23.d(4, -38);
-          DelegatingCanvas.a(-127, "insttitle", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-126, "instextra1", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-128, "instextra2", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-126, "instextra3", "", mh.field_c).d(0, 0);
+          TextFieldValidator.field_i.draw(174, 128);
+          TextFieldValidator.field_i.draw(461, 128);
+          TextFieldValidator.field_i.draw(176, 363);
+          TextFieldValidator.field_i.draw(461, 363);
+          var23.draw(4, -38);
+          DelegatingCanvas.a(-127, "insttitle", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-126, "instextra1", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-128, "instextra2", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-126, "instextra3", "", mh.field_c).draw(0, 0);
           Crc32Table.field_d = new RgbSprite[9];
           var24 = new RgbSprite(640, 480);
-          var24.c();
-          mg.field_j[4].b(0, 0);
+          var24.bindAsRenderTarget();
+          mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.fillRectangle(18, 18, 604, 444, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 0, 8475405, 480, 0, 640);
-          TextFieldValidator.field_i.d(23, 25);
-          TextFieldValidator.field_i.d(-TextFieldValidator.field_i.field_p + 617, 25);
-          TextFieldValidator.field_i.d(23, 455 - TextFieldValidator.field_i.field_o);
-          TextFieldValidator.field_i.d(-TextFieldValidator.field_i.field_p + 617, -2 + (457 - TextFieldValidator.field_i.field_o));
+          TextFieldValidator.field_i.draw(23, 25);
+          TextFieldValidator.field_i.draw(-TextFieldValidator.field_i.field_p + 617, 25);
+          TextFieldValidator.field_i.draw(23, 455 - TextFieldValidator.field_i.field_o);
+          TextFieldValidator.field_i.draw(-TextFieldValidator.field_i.field_p + 617, -2 + (457 - TextFieldValidator.field_i.field_o));
           var25 = 1 + (23 + TextFieldValidator.field_i.field_p);
           var26 = 1 + (25 + TextFieldValidator.field_i.field_o);
           Crc32Table.field_d[0] = new RgbSprite(var25, var26);
@@ -1912,63 +1912,63 @@ public final class Main extends c {
           Crc32Table.field_d[3] = new RgbSprite(var25, 480 - 2 * var26);
           Crc32Table.field_d[5] = new RgbSprite(var25, 480 - 2 * var26);
           Crc32Table.field_d[4] = new RgbSprite(-(var25 * 2) + 640, -(var26 * 2) + 480);
-          RgbSprite.a(var24, Crc32Table.field_d[0], 0, 0, 0, 0, var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[2], 640 - var25, 0, 0, 0, var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[6], 0, -var26 + 480, 0, 0, var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[8], -var25 + 640, -var26 + 480, 0, 0, var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[1], var25, 0, 0, 0, 640 - 2 * var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[7], var25, 480 - var26, 0, 0, 640 - 2 * var25, var26);
-          RgbSprite.a(var24, Crc32Table.field_d[3], 0, var26, 0, 0, var25, -(2 * var26) + 480);
-          RgbSprite.a(var24, Crc32Table.field_d[5], -var25 + 640, var26, 0, 0, var25, -(2 * var26) + 480);
-          RgbSprite.a(var24, Crc32Table.field_d[4], var25, var26, 0, 0, -(var25 * 2) + 640, 480 - var25 * 2);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[0], 0, 0, 0, 0, var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[2], 640 - var25, 0, 0, 0, var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[6], 0, -var26 + 480, 0, 0, var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[8], -var25 + 640, -var26 + 480, 0, 0, var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[1], var25, 0, 0, 0, 640 - 2 * var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[7], var25, 480 - var26, 0, 0, 640 - 2 * var25, var26);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[3], 0, var26, 0, 0, var25, -(2 * var26) + 480);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[5], -var25 + 640, var26, 0, 0, var25, -(2 * var26) + 480);
+          RgbSprite.copyTransparentSpriteRegion(var24, Crc32Table.field_d[4], var25, var26, 0, 0, -(var25 * 2) + 640, 480 - var25 * 2);
           var24_ref = null;
-          d.field_u[4] = var12.b();
-          d.field_u[4].c();
+          d.field_u[4] = var12.copy();
+          d.field_u[4].bindAsRenderTarget();
           re.a(16777215, 0, 0, (byte) 83, var15);
           re.a(16777215, 0, 0, (byte) 111, var16);
           re.a(16777215, 0, 0, (byte) 118, var17);
           re.a(16777215, 0, 0, (byte) 52, var18);
           re.a(16777215, 0, 0, (byte) 78, var19);
           re.a(16777215, 0, 0, (byte) 74, var20);
-          DelegatingCanvas.a(-128, "achtitle", "", mh.field_c).d(0, 0);
+          DelegatingCanvas.a(-128, "achtitle", "", mh.field_c).draw(0, 0);
           var27 = DelegatingCanvas.a(-127, "achextra2", "", mh.field_c);
-          var27.d(0, 0);
-          var23.d(0, -38);
+          var27.draw(0, 0);
+          var23.draw(0, -38);
           SoftwareRasterizer.setClip(225, 93, 589, 407);
-          mg.field_j[4].b(0, 0);
+          mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(236, 103, 343, 291, 16777215);
           ek.a((byte) 92, 11173684, 2955525, 5122825, 91, 8475405, 318, 223, 368);
-          TextFieldValidator.field_i.d(242, 109);
-          TextFieldValidator.field_i.d(562, 109);
-          TextFieldValidator.field_i.d(243, 374);
-          TextFieldValidator.field_i.d(562, 374);
-          bd.field_H = var12.b();
-          bd.field_H.c();
-          var23.d(0, 0);
+          TextFieldValidator.field_i.draw(242, 109);
+          TextFieldValidator.field_i.draw(562, 109);
+          TextFieldValidator.field_i.draw(243, 374);
+          TextFieldValidator.field_i.draw(562, 374);
+          NameSuggestionsPanel.field_H = var12.copy();
+          NameSuggestionsPanel.field_H.bindAsRenderTarget();
+          var23.draw(0, 0);
           re.a(16777215, 0, 0, (byte) 71, var15);
           re.a(16777215, 0, 0, (byte) 94, var16);
           re.a(16777215, 0, 0, (byte) 59, var17);
           re.a(16777215, 0, 0, (byte) 65, var18);
           re.a(16777215, 0, 0, (byte) 103, var20);
           re.a(16777215, 0, 0, (byte) 100, var21);
-          DelegatingCanvas.a(-128, "ropeout", "", mh.field_c).d(0, 0);
-          DelegatingCanvas.a(-128, "ropein", "", mh.field_c).e(0, 0, 116);
+          DelegatingCanvas.a(-128, "ropeout", "", mh.field_c).draw(0, 0);
+          DelegatingCanvas.a(-128, "ropein", "", mh.field_c).drawWithOpacity(0, 0, 116);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
           a.a(16777215, tj.field_D, -1, 98, 6697779, 162);
           a.a(16777215, ti.field_b, -1, 15, 6697779, 262);
           a.a(16777215, uc.field_o, -1, 36, 6697779, 313);
-          f.field_a = var12.b();
-          f.field_a.c();
+          f.field_a = var12.copy();
+          f.field_a.bindAsRenderTarget();
           re.a(16777215, 0, 0, (byte) 100, var15);
           re.a(16777215, 0, 0, (byte) 90, var16);
           re.a(16777215, 0, 0, (byte) 106, var17);
           re.a(16777215, 0, 0, (byte) 57, var18);
           re.a(16777215, 0, 0, (byte) 116, var20);
-          var23.d(0, -38);
-          var27.d(-5, 0);
+          var23.draw(0, -38);
+          var27.draw(-5, 0);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           gf.field_e.setAsRasterTarget(200);
@@ -2185,7 +2185,7 @@ public final class Main extends c {
           tb.a(param0 + 128);
           mj.a((byte) 126);
           lk.clearStaticReferences(0);
-          hl.clearDeclaredStaticReferences((byte) -69);
+          InteractiveWidget.clearDeclaredStaticReferences((byte) -69);
           qg.clearDeclaredStaticReferences(80);
           jc.clearDeclaredStaticReferences(42);
           qf.n(param0 + 8736);
@@ -2206,13 +2206,13 @@ public final class Main extends c {
           NanoFrameTimer.resetDeclaredStaticState(param0 ^ 10);
           ImageProducerRasterBuffer.resetStaticState(param0 ^ -14143);
           hi.clearStaticReferences(0);
-          PcmOutputWorker.b(true);
+          PcmOutputWorker.clearStaticAssetReferences(true);
           dd.clearStaticReferences(false);
           ck.clearStaticReferences((byte) 41);
           EditableTextField.o(-31141);
           ta.clearStaticReferences((byte) 116);
           ng.resetStaticState(2);
-          bd.resetStaticState(-10790);
+          NameSuggestionsPanel.resetStaticState(-10790);
           dg.clearDeclaredStaticReferences(param0 ^ -74);
           gl.clearDeclaredStaticReferences(1);
           pa.clearStaticReferences((byte) -78);
@@ -2491,8 +2491,8 @@ public final class Main extends c {
             if (var3 == 7 &&
               var8 == 0) {
               this.field_E[rk.field_X].a(0, 0, 0);
-              td.field_c[-5 + dj.field_a].e(198, 33, -hb.field_d + 32 << 3);
-              ArchiveRequest.field_k.b(347, 401);
+              td.field_c[-5 + dj.field_a].drawWithOpacity(198, 33, -hb.field_d + 32 << 3);
+              ArchiveRequest.field_k.drawOpaque(347, 401);
               decompiledFrameRemainder5 = false;
             } else if (var3 != 4 ||
               var8 != 0) {
@@ -2529,7 +2529,7 @@ public final class Main extends c {
                   stackIn_86_0 = 0;
                   var7 = stackIn_86_0;
                   while (6 > var7) {
-                    this.field_I[0].b(var6, var3, var4, var4);
+                    this.field_I[0].drawScaled(var6, var3, var4, var4);
                     var6 += 69;
                     var7++;
                   }
@@ -2538,8 +2538,8 @@ public final class Main extends c {
                 }
               }
               var3_ref_kc = td.field_c[-5 + rk.field_X];
-              var3_ref_kc.b(198 + hb.field_d * var3_ref_kc.field_p / 64, 33 + var3_ref_kc.field_o * hb.field_d / 64, var3_ref_kc.field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * var3_ref_kc.field_o / 32);
-              ArchiveRequest.field_k.b(198 + (-hb.field_d + 32) * (-var3_ref_kc.field_p + 298) / 64 + var3_ref_kc.field_p / 2, 33 + (32 - hb.field_d) * (-var3_ref_kc.field_o + 736) / 64 + var3_ref_kc.field_o / 2, (32 - hb.field_d) * ArchiveRequest.field_k.field_p / 32, (32 - hb.field_d) * ArchiveRequest.field_k.field_o / 32);
+              var3_ref_kc.drawScaled(198 + hb.field_d * var3_ref_kc.field_p / 64, 33 + var3_ref_kc.field_o * hb.field_d / 64, var3_ref_kc.field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * var3_ref_kc.field_o / 32);
+              ArchiveRequest.field_k.drawScaled(198 + (-hb.field_d + 32) * (-var3_ref_kc.field_p + 298) / 64 + var3_ref_kc.field_p / 2, 33 + (32 - hb.field_d) * (-var3_ref_kc.field_o + 736) / 64 + var3_ref_kc.field_o / 2, (32 - hb.field_d) * ArchiveRequest.field_k.field_p / 32, (32 - hb.field_d) * ArchiveRequest.field_k.field_o / 32);
               decompiledFrameRemainder5 = false;
             }
           }
@@ -2587,8 +2587,8 @@ public final class Main extends c {
           if (decompiledFrameRemainder5) {
             this.b(0, 2);
             var3_ref_kcLifetime1 = td.field_c[-5 + rk.field_X];
-            var3_ref_kcLifetime1.b(198 + (32 - hb.field_d) * var3_ref_kcLifetime1.field_p / 64, 33 + var3_ref_kcLifetime1.field_o * (-hb.field_d + 32) / 64, hb.field_d * var3_ref_kcLifetime1.field_p / 32, var3_ref_kcLifetime1.field_o * hb.field_d / 32);
-            ArchiveRequest.field_k.b(var3_ref_kcLifetime1.field_p / 2 + (-var3_ref_kcLifetime1.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var3_ref_kcLifetime1.field_o + 736) * hb.field_d / 64 + var3_ref_kcLifetime1.field_o / 2), hb.field_d * ArchiveRequest.field_k.field_p / 32, hb.field_d * ArchiveRequest.field_k.field_o / 32);
+            var3_ref_kcLifetime1.drawScaled(198 + (32 - hb.field_d) * var3_ref_kcLifetime1.field_p / 64, 33 + var3_ref_kcLifetime1.field_o * (-hb.field_d + 32) / 64, hb.field_d * var3_ref_kcLifetime1.field_p / 32, var3_ref_kcLifetime1.field_o * hb.field_d / 32);
+            ArchiveRequest.field_k.drawScaled(var3_ref_kcLifetime1.field_p / 2 + (-var3_ref_kcLifetime1.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var3_ref_kcLifetime1.field_o + 736) * hb.field_d / 64 + var3_ref_kcLifetime1.field_o / 2), hb.field_d * ArchiveRequest.field_k.field_p / 32, hb.field_d * ArchiveRequest.field_k.field_o / 32);
           }
           stackIn_86_0Lifetime1 = param0;
           if (stackIn_86_0Lifetime1 >= -98) {

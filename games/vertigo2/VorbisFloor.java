@@ -255,7 +255,7 @@ final class VorbisFloor {
         var2 = this.field_l.length;
         System.arraycopy(this.field_l, 0, field_e, 0, var2);
         var3 = field_d[this.field_f - 1];
-        var4 = d.bitLength(-80, var3 - 1);
+        var4 = InteractiveWidget.bitLength(-80, var3 - 1);
         field_i[0] = vh.readBits(var4);
         field_i[1] = vh.readBits(var4);
         var5 = 2;

@@ -70,7 +70,7 @@ final class f extends IntrusiveNode {
               tl.field_O = i.field_b;
             }
             if (i.field_b == tl.field_O &&
-              LoginMenuScreen.a(1, 5929)) {
+              NameSuggestionsPanel.a(1, 5929)) {
               var7 = dh.field_N.readUnsignedByte(31760);
               if (var7 == 0) {
                 tl.field_O = bd.field_T;
@@ -82,7 +82,7 @@ final class f extends IntrusiveNode {
               dh.field_N.position = 0;
             }
             if (tl.field_O == bd.field_T &&
-              LoginMenuScreen.a(8, 5929)) {
+              NameSuggestionsPanel.a(8, 5929)) {
               s.field_c = dh.field_N.readLong((byte) -53);
               dh.field_N.position = 0;
               le.a(dl.field_H, param5, param0, param2, 16);
@@ -90,7 +90,7 @@ final class f extends IntrusiveNode {
             }
             boolean decompiledFrameRemainder0 = true;
             if (tl.field_O == uf.field_c &&
-              LoginMenuScreen.a(1, 5929)) {
+              NameSuggestionsPanel.a(1, 5929)) {
               var7Lifetime1 = dh.field_N.readUnsignedByte(31760);
               dh.field_N.position = 0;
               cj.field_i = null;

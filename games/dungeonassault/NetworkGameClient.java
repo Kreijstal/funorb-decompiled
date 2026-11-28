@@ -685,7 +685,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                   }
                 }
               } else {
-                nf.a(256, true, ck.field_D);
+                nf.a(256, true, InteractiveWidget.field_D);
               }
               hh.field_c = true;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class le extends lj {
+class le extends InteractiveWidget {
     static PalettedBitmapFont field_A;
     private String[] field_D;
     private nj field_B;
@@ -151,8 +151,8 @@ class le extends lj {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        super.a((byte) -127, param1, param2, param3);
+    final void activateFromInput(byte param0, int param1, int param2, int param3) {
+        super.activateFromInput((byte) -127, param1, param2, param3);
         int var5 = -this.field_p + param3;
         int var6 = param1 - this.field_n;
         int var7 = -35 / ((50 - param0) / 45);

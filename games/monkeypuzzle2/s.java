@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends nf implements ql {
+final class s extends nf implements WidgetActivationListener {
     static String[] field_Q;
     static int field_R;
     private ButtonWidget field_P;
@@ -129,7 +129,7 @@ final class s extends nf implements ql {
         this.field_z = false;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

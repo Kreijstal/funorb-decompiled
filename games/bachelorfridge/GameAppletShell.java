@@ -22,10 +22,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3 = this;
           synchronized (var3) {
-            if (dd.field_H) {
+            if (NameSuggestionsPanel.field_H) {
               return;
             }
-            dd.field_H = true;
+            NameSuggestionsPanel.field_H = true;
           }
           if (null != ov.field_f) {
             ov.field_f.destroy();
@@ -317,7 +317,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void stop() {
         if (re.field_C != this ||
-          dd.field_H) {
+          NameSuggestionsPanel.field_H) {
           return;
         }
         try {
@@ -471,7 +471,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (this == re.field_C &&
-            !dd.field_H) {
+            !NameSuggestionsPanel.field_H) {
             nf.field_K = true;
             if (bha.field_n &&
               -gd.field_l + f.correctedCurrentTimeMillis((byte) 73) > 1000L) {
@@ -699,7 +699,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void destroy() {
         if (re.field_C != this ||
-          dd.field_H) {
+          NameSuggestionsPanel.field_H) {
           return;
         }
         try {
@@ -714,7 +714,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         if (re.field_C != this ||
-          dd.field_H) {
+          NameSuggestionsPanel.field_H) {
           return;
         }
         try {

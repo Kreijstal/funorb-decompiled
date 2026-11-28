@@ -107,7 +107,7 @@ final class vca extends IntrusiveNode {
         }
         var6Lifetime1 = 40 * var4Lifetime1 / this.field_k;
         if (var5Lifetime1 > 0) {
-          this.field_g.a(-(this.field_g.field_q >> 1) + param1, -(this.field_g.field_p >> 1) + (this.field_j + param0 - (20 + var6Lifetime1)), var5Lifetime1);
+          this.field_g.drawWithOpacity(-(this.field_g.field_q >> 1) + param1, -(this.field_g.field_p >> 1) + (this.field_j + param0 - (20 + var6Lifetime1)), var5Lifetime1);
           return;
         }
     }

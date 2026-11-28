@@ -235,7 +235,7 @@ public final class MonkeyPuzzle2 extends bi {
           EditableTextField.clearDeclaredStaticReferences(0);
           pc.resetStaticState(true);
           jh.clearDeclaredStaticReferences(7434);
-          cm.clearStaticReferences((byte) 111);
+          NameSuggestionsPanel.clearStaticReferences((byte) 111);
           jj.d((byte) 117);
           vh.clearDeclaredStaticReferences(-9473);
           vg.clearDeclaredStaticReferences(-3114);
@@ -430,7 +430,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (AwtRasterBuffer.field_f != null &&
             AwtRasterBuffer.field_f.focusLost) {
             rb.h(3591);
-            cm.k(param0 - 15241);
+            NameSuggestionsPanel.k(param0 - 15241);
           }
           stackIn_9_1 = 99;
           stackIn_10_2 = (null != AwtRasterBuffer.field_f);

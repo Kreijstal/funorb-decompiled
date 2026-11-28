@@ -355,7 +355,7 @@ final class ProxySocketConnector extends SocketConnector {
             String var4 = (String) null;
             ProxySocketConnector.a(false, -0.6848612427711487f, (String) null);
           }
-          d.field_C = param1;
+          InteractiveWidget.field_C = param1;
           IntrusiveNode.field_h = param2;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "aj.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

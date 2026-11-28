@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends kj implements sg {
+final class sj extends kj implements WidgetActivationListener {
     private BitmapFont field_P;
     static int[] field_S;
     static int field_N;
     private String field_Q;
     private wa field_J;
     private int field_M;
-    private ng[] field_O;
+    private InteractiveWidget[] field_O;
     static boolean field_R;
     private int[] field_K;
     static volatile int field_L;
@@ -31,8 +31,8 @@ final class sj extends kj implements sg {
         if (this.field_M >= param0) {
           return;
         }
-        ng[] var7 = new ng[param0];
-        ng[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         if (!param1) {
           this.field_M = 16;
         }
@@ -91,7 +91,7 @@ final class sj extends kj implements sg {
         }
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -132,12 +132,12 @@ final class sj extends kj implements sg {
         }
     }
 
-    final ng a(byte param0, gg param1, String param2) {
-        ng var4 = null;
+    final InteractiveWidget a(byte param0, gg param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ng var6 = null;
-        ng stackIn_3_0 = null;
+        InteractiveWidget var6 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -146,10 +146,10 @@ final class sj extends kj implements sg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 46) {
-            var6 = (ng) null;
-            this.a((ng) null, 51, -46, 106, false);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, 51, -46, 106, false);
           }
-          var4 = new ng(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_q = (j) ((Object) new cl());
           var5 = -2 + this.field_l;
           this.a((byte) 112, 0, 34 + this.field_l, this.field_p, 0);

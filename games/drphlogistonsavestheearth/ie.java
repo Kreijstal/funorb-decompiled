@@ -72,8 +72,8 @@ final class ie extends l {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param2 instanceof hf) {
-            param0 = param0 & ((hf) (param2)).field_E;
+          if (param2 instanceof InteractiveWidget) {
+            param0 = param0 & ((InteractiveWidget) (param2)).field_E;
           }
           if (param0) {
             if (var6_int != 0) {

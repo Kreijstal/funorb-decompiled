@@ -44,17 +44,17 @@ final class pl {
           SoftwareRasterizer.clearRaster();
           tk.field_e = 0;
           uc.b(-40);
-          var2 = var1.h();
+          var2 = var1.copy();
           if (param0 != -16183) {
             oj var5 = (oj) null;
             pl.a((byte) -53, (oj) null, -107);
           }
           for (var3 = 0; var3 < 15; var3++) {
-            var2.a(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ti.field_c.a();
-          var1.f(0, 0);
+          ti.field_c.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           eh.b(false);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "pl.C(" + param0 + ')');

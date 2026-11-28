@@ -176,8 +176,8 @@ final class oj extends om {
         try {
           boolean decompiledFrameRemainder0 = true;
           var5_int = -59 / ((param1 + 50) / 59);
-          if ((!(this.field_w instanceof pc) ||
-            ((pc) (this.field_w)).field_x) && this.field_s == 1) {
+          if ((!(this.field_w instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_w)).field_x) && this.field_s == 1) {
             var6 = qh.field_i + (-this.field_z - param3);
             var7 = IsaacRandom.field_h - this.field_G - param2;
             if ((var6 != this.field_r ||

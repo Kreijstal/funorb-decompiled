@@ -445,7 +445,7 @@ final class MixedSupport094 implements CallbackContract004 {
           if (null != rgbSpriteArrayArgument1) {
             integerLocal2 = 0;
             while (integerLocal2 < rgbSpriteArrayArgument1.length) {
-              rgbSpriteArrayArgument1[integerLocal2].performAction0269();
+              rgbSpriteArrayArgument1[integerLocal2].normalizeCanvas();
               integerLocal2++;
               if (integerLocal3 != 0) {
                 return;

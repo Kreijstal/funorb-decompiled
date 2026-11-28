@@ -59,7 +59,7 @@ final class e extends en {
           if (param0 != 0) {
             field_e = -78;
           }
-          param1.a(false, ck.field_H.a(this.field_f, (byte) -48), (byte) 91, ck.field_H.a(this.field_h, (byte) -48), 16777215);
+          param1.a(false, InteractiveWidget.field_H.a(this.field_f, (byte) -48), (byte) 91, InteractiveWidget.field_H.a(this.field_h, (byte) -48), 16777215);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "e.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

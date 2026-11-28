@@ -175,15 +175,15 @@ final class ResourceArchive {
         int var4 = var2.field_A;
         pf.b(param1 ^ -11731);
         ob.field_C = new RgbSprite(var3, 3 * var4 / 4);
-        ob.field_C.a();
-        var2.c(0, 0);
+        ob.field_C.bindAsRenderTarget();
+        var2.drawOpaque(0, 0);
         if (param1 != -11310) {
           return;
         }
         try {
           ki.field_e = new RgbSprite(var3, -ob.field_C.field_A + var4);
-          ki.field_e.a();
-          var2.c(0, -ob.field_C.field_A);
+          ki.field_e.bindAsRenderTarget();
+          var2.drawOpaque(0, -ob.field_C.field_A);
           ki.field_e.field_y = ob.field_C.field_A;
           eh.b(false);
         } catch (RuntimeException runtimeException) {
@@ -269,10 +269,10 @@ final class ResourceArchive {
             if (param2.field_i == 20) {
               var7 = new RgbSprite(64, 64);
               var8 = var7;
-              var7.a();
+              var7.bindAsRenderTarget();
               pe.field_fb[12].a(true, 128, (int)param2.field_c, 32, 32);
               o.field_n.setAsRasterTarget((byte) 119);
-              var8.b(-32 + param3, -32 + param0, 64);
+              var8.drawWithOpacity(-32 + param3, -32 + param0, 64);
               pe.field_fb[8].a(true, 128, (int)param2.field_c, param3, param0);
             }
           }

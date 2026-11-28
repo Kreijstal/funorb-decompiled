@@ -138,22 +138,22 @@ final class GameAssets {
           }
           integerLocal4 = integerArgument9 + rgbSpriteArgument8.integerState0256 + (rgbSpriteArgument8.integerState0255 >> 1);
           SoftwareRaster.intersectClip(integerLocal2, 0, integerLocal3, integerLocal4 + integerArgument6);
-          rgbSpriteArgument8.performAction0295(-1 + integerArgument4, integerArgument9 - 1, integerArgument2);
-          rgbSpriteArgument8.performAction0295(integerArgument4 - 1, integerArgument9 + 1, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(-1 + integerArgument4, integerArgument9 - 1, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(integerArgument4 - 1, integerArgument9 + 1, integerArgument2);
           SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           SoftwareRaster.intersectClip(integerLocal2 + 1, 0, integerLocal3 + 1, integerArgument6 + integerLocal4);
-          rgbSpriteArgument8.performAction0295(integerArgument4 + 1, -1 + integerArgument9, integerArgument2);
-          rgbSpriteArgument8.performAction0295(1 + integerArgument4, integerArgument9 + 1, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(integerArgument4 + 1, -1 + integerArgument9, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(1 + integerArgument4, integerArgument9 + 1, integerArgument2);
           SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           integerLocal10 = -integerArgument1 - integerArgument7 + integerArgument4 + rgbSpriteArgument8.integerState0259 + rgbSpriteArgument8.integerState0258;
           integerLocal9 = -integerArgument5 + (-integerArgument7 + rgbSpriteArgument8.integerState0258 + rgbSpriteArgument8.integerState0259) + integerArgument4;
           SoftwareRaster.intersectClip(integerLocal9, -integerArgument6 + integerLocal4, integerLocal10, 480);
-          rgbSpriteArgument8.performAction0295(integerArgument4 - 1, -1 + integerArgument9, integerArgument2);
-          rgbSpriteArgument8.performAction0295(integerArgument4 - 1, 1 + integerArgument9, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(integerArgument4 - 1, -1 + integerArgument9, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(integerArgument4 - 1, 1 + integerArgument9, integerArgument2);
           SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           SoftwareRaster.intersectClip(1 + integerLocal9, integerLocal4 - integerArgument6, integerLocal10 + 1, 480);
-          rgbSpriteArgument8.performAction0295(1 + integerArgument4, -1 + integerArgument9, integerArgument2);
-          rgbSpriteArgument8.performAction0295(integerArgument4 + 1, integerArgument9 + 1, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(1 + integerArgument4, -1 + integerArgument9, integerArgument2);
+          rgbSpriteArgument8.drawAdditive(integerArgument4 + 1, integerArgument9 + 1, integerArgument2);
           SoftwareRaster.restoreClip(LoginPanel.integerArrayState0055);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {

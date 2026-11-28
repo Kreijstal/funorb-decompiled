@@ -93,7 +93,7 @@ final class ra {
             im.field_e.field_A = -8;
             im.field_e.field_w = -8;
           }
-          im.field_e.e();
+          im.field_e.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           for (var1_int = 0; var1_int < 7; var1_int++) {
             var2 = -19 + (-(var1_int * 27) + 189);

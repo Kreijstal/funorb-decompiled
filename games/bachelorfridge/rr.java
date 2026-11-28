@@ -36,7 +36,7 @@ final class rr extends AnimationNode {
           if (this.field_w > -32) {
             var6 = var6 * -this.field_w >> 5;
           }
-          nv.field_wb.b(var2 + 44, var3 - var6);
+          nv.field_wb.drawHalfSize(var2 + 44, var3 - var6);
         }
         var6Lifetime1 = -(var5 >> 2) + 64;
         if (param0 >= -10) {
@@ -44,19 +44,19 @@ final class rr extends AnimationNode {
           var7 = -(var5 >> 2) + 48;
           nk.a(this.field_j.field_s.field_y, -(var6Lifetime1 >> 1) + (64 + var2), -(var7 >> 1) + var3 + 24, var6Lifetime1, var7);
           if (!this.field_m) {
-            ho.field_j[var4].c(var2, -45 + (var3 - var5));
+            ho.field_j[var4].drawFlippedHorizontal(var2, -45 + (var3 - var5));
             return;
           }
-          ho.field_j[var4].a(var2, -45 + (var3 - var5));
+          ho.field_j[var4].draw(var2, -45 + (var3 - var5));
           return;
         }
         var7Lifetime1 = -(var5 >> 2) + 48;
         nk.a(this.field_j.field_s.field_y, -(var6Lifetime1 >> 1) + (64 + var2), -(var7Lifetime1 >> 1) + var3 + 24, var6Lifetime1, var7Lifetime1);
         if (!this.field_m) {
-          ho.field_j[var4].c(var2, -45 + (var3 - var5));
+          ho.field_j[var4].drawFlippedHorizontal(var2, -45 + (var3 - var5));
           return;
         }
-        ho.field_j[var4].a(var2, -45 + (var3 - var5));
+        ho.field_j[var4].draw(var2, -45 + (var3 - var5));
     }
 
     private final void e(int param0) {

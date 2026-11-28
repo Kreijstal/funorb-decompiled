@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ph extends qj implements ga {
+class ph extends qj implements WidgetActivationListener {
     static String[] field_nb;
     private fa field_kb;
     private BitmapFont field_fb;
@@ -79,7 +79,7 @@ class ph extends qj implements ga {
         }
     }
 
-    public void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -172,7 +172,7 @@ class ph extends qj implements ga {
               if (this.field_ib) {
                 stackIn_15_1 = ma.field_g;
               } else {
-                stackIn_15_1 = dk.field_t;
+                stackIn_15_1 = InteractiveWidget.field_t;
               }
               ((kj) (Object) stackIn_14_0).a(stackIn_15_1, 13759, -1);
             } else {
@@ -190,7 +190,7 @@ class ph extends qj implements ga {
                   var5.a((byte) 123, (qg) (this), db.field_B);
                 }
               } else {
-                var5.a(dk.field_w, 13759, 9);
+                var5.a(InteractiveWidget.field_w, 13759, 9);
               }
             }
           }

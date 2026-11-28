@@ -2602,7 +2602,7 @@ final class LevelSimulation {
             LevelSimulation.drawTutorialEntries(100, 111, -35, (String[]) null, -77, (BitmapFont) null, -38, -114, (String[]) null, 20, 47, (ArgbSprite[]) null, 8);
           }
           for (var16 = param0; var16 < param4; var16++) {
-            param11[var16].e(param7, var15 - param12 / 2);
+            param11[var16].draw(param7, var15 - param12 / 2);
             va.field_s.a(16777215, (byte) 115, -1, param1 + param7 + 10, param8[var16], var15);
             param5.drawParagraph(param3[var16], param7 + param1 + 10, 6 + var15, 210, 200, 16777215, -1, 0, 0, param2);
             var15 = var15 + (var14Lifetime1 + 6 + param5.textHeight(param3[var16], 210, param2) - (-param5.field_z - param5.field_M));

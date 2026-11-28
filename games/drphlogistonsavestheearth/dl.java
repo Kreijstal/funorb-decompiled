@@ -171,7 +171,7 @@ final class dl extends si {
           MouseInput.a(var5, (byte) 47);
           this.field_z.a(0, param1, param2, 0);
           cl.d((byte) -81);
-          var5.e(this.field_o + param0, this.field_m + param3, this.field_K);
+          var5.drawWithOpacity(this.field_o + param0, this.field_m + param3, this.field_K);
           return;
         }
         this.field_z.a(this.field_o + param0, param1, (byte) -21, this.field_m + param3);

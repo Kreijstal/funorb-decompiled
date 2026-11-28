@@ -273,7 +273,7 @@ final class f extends TextureOperator {
           if (param0 != -6) {
             field_I = (String[]) null;
           }
-          JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, oj.field_N);
+          JaggrabClient.field_d.a(qg.field_I, true, (byte) 115, NameSuggestionsPanel.field_N);
           JaggrabClient.field_d.l(0);
           while (NodeHashTableIterator.a(false)) {
             JaggrabClient.field_d.a(-122, DebouncedFieldValidator.field_f, TextureOperator.field_r);

@@ -129,7 +129,7 @@ class vg extends IntrusiveNode {
           }
           break;
         }
-        var5 = hf.g(~param1);
+        var5 = InteractiveWidget.g(~param1);
         if (var5 == null) {
           return;
         }

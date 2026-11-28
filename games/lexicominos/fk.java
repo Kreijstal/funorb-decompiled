@@ -49,7 +49,7 @@ class fk extends kb {
           if (param2 != 40) {
             fk.clearStaticReferences(false);
           }
-          kf.f(1);
+          InteractiveWidget.f(1);
           bk.field_c = c.field_m;
           MouseWheelInput.field_c = c.field_m;
         } catch (RuntimeException runtimeException) {

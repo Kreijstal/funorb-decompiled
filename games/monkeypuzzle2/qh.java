@@ -219,7 +219,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             MonkeyPuzzle2.field_D.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
-              cm.field_E = new String[-100 + var9Lifetime1];
+              NameSuggestionsPanel.field_E = new String[-100 + var9Lifetime1];
               dk.field_h = MonkeyPuzzle2.field_C;
             } else {
               if (var9Lifetime1 == 248) {
@@ -247,9 +247,9 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               var10Lifetime1 = MonkeyPuzzle2.field_D.readUnsignedShort(17277);
               MonkeyPuzzle2.field_D.position = 0;
               if (hj.a(var10Lifetime1, true)) {
-                var11 = cm.field_E.length;
+                var11 = NameSuggestionsPanel.field_E.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  cm.field_E[var12] = MonkeyPuzzle2.field_D.readPrefixedString((byte) 93);
+                  NameSuggestionsPanel.field_E[var12] = MonkeyPuzzle2.field_D.readPrefixedString((byte) 93);
                 }
                 PacketBuffer.a(-1);
                 DequeCursor.field_e = false;

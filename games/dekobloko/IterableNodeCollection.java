@@ -115,7 +115,7 @@ final class IterableNodeCollection implements Iterable {
         try {
           if (indexedSpriteArrayArgument1 != null) {
             for (integerLocal1 = 0; indexedSpriteArrayArgument1.length > integerLocal1; integerLocal1++) {
-              indexedSpriteArrayArgument1[integerLocal1].performAction1243();
+              indexedSpriteArrayArgument1[integerLocal1].normalizeCanvas();
             }
           }
           integerLocal3 = -73 / ((byteArgument2 - 53) / 55);

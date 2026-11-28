@@ -24,7 +24,7 @@ final class bg extends DungeonAssaultScreen {
         this.field_e.b(0, 0);
         SoftwareRasterizer.setClip(41, 48, 599, 416);
         for (var2 = 41; var2 < 599; var2 = var2 + df.field_c.field_E) {
-          df.field_c.c(var2, 48);
+          df.field_c.drawOpaque(var2, 48);
         }
         SoftwareRasterizer.resetClip();
         this.a(117, 122);
@@ -170,7 +170,7 @@ final class bg extends DungeonAssaultScreen {
             this.a(param3, param0 ^ 461);
           }
           param2 = param2 + (24 - la.field_b.field_H >> 1);
-          this.field_u.b(s.field_b[0], param2, 64);
+          this.field_u.drawAdditive(s.field_b[0], param2, 64);
           var5_int = (int)((te.a(mo.field_a) + 1.0) * 128.0);
           if (param0 != 432) {
             di var6 = (di) null;
@@ -182,7 +182,7 @@ final class bg extends DungeonAssaultScreen {
           if (var5_int > 256) {
             var5_int = 256;
           }
-          this.field_v.b(s.field_b[0], param2, var5_int);
+          this.field_v.drawAdditive(s.field_b[0], param2, var5_int);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "bg.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -291,10 +291,10 @@ final class bg extends DungeonAssaultScreen {
           }
           db.field_v.drawString(var6, var9, var4, 16629550, -1);
           if (var5 == 1) {
-            ue.field_i[0].h(-18 + var9, -12 + var4);
+            ue.field_i[0].draw(-18 + var9, -12 + var4);
           }
           if (var5 == 3) {
-            ue.field_i[1].h(-18 + var9, -12 + var4);
+            ue.field_i[1].draw(-18 + var9, -12 + var4);
           }
         }
     }
@@ -336,7 +336,7 @@ final class bg extends DungeonAssaultScreen {
         int var5Lifetime1;
         int var6Lifetime1;
         var7 = DungeonAssault.field_K;
-        am.field_a.h(41, 48);
+        am.field_a.draw(41, 48);
         for (var3 = 0; var3 < 4; var3++) {
           bg.b(s.field_b[var3], 85, -2 + (s.field_b[1 + var3] - s.field_b[var3]), 25, 0, 48, 128);
           bg.b(s.field_b[var3], 112, -2 - s.field_b[var3] + s.field_b[1 + var3], 256, 0, 48, 128);
@@ -430,7 +430,7 @@ final class bg extends DungeonAssaultScreen {
                   var11 = ue.field_i[8];
                 }
               }
-              var11.h(var10, param0 - la.field_b.field_H);
+              var11.draw(var10, param0 - la.field_b.field_H);
               la.field_b.drawString(var9, var10 + 20, param0, var5_int, -1);
             } else {
               la.field_b.drawCentred("-", s.field_b[3] + s.field_b[4] >> 1, param0, 16777215, -1);
@@ -628,7 +628,7 @@ final class bg extends DungeonAssaultScreen {
                 var9 = ue.field_i[8];
               }
             }
-            var9.h(var8, 0);
+            var9.draw(var8, 0);
             ((BitmapFont) ((Object) var3)).drawString(var7, var8 + 20, ((BitmapFont) ((Object) var3)).field_H, 12690143, -1);
           } else {
             ((BitmapFont) ((Object) var11)).drawCentred("-", (s.field_b[4] + s.field_b[3] >> 1) - s.field_b[0], la.field_b.field_H, 12690143, -1);
@@ -758,7 +758,7 @@ final class bg extends DungeonAssaultScreen {
                   var11 = ue.field_i[1];
                 }
               }
-              var11.h(var10, param3 - la.field_b.field_H);
+              var11.draw(var10, param3 - la.field_b.field_H);
               la.field_b.drawString(var9, 20 + var10, param3, var6, -1);
             } else {
               la.field_b.drawCentred("-", s.field_b[4] + s.field_b[3] >> 1, param3, var5_int, -1);

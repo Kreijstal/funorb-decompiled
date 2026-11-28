@@ -9,7 +9,7 @@ final class PcmOutputWorker implements Runnable {
     volatile boolean field_e;
     volatile AudioOutput[] field_a;
 
-    public static void a(int param0) {
+    public static void clearStaticReferences(int param0) {
         field_c = null;
         if (param0 != -3968) {
           PcmOutputWorker.a((byte) 102, -80);
@@ -221,7 +221,7 @@ final class PcmOutputWorker implements Runnable {
           }
           return (byte) var2Lifetime4;
         }
-        PcmOutputWorker.a(118);
+        PcmOutputWorker.clearStaticReferences(118);
         if (param0 > 0) {
           if (param0 < 128) {
             var2Lifetime1 = (byte)param0;

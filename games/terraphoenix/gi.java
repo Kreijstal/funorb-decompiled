@@ -1226,18 +1226,18 @@ final class gi {
           }
           var9Lifetime1 = var18.field_t;
           ja.c((byte) 109);
-          var18.a();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_j);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.a();
-          var18.d(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
-          var18.d(var9Lifetime1 - var18.field_r, 0);
+          var11.bindAsRenderTarget();
+          var18.drawOpaque(var9Lifetime1 - var18.field_r, 0);
           var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_r, var9Lifetime1);
-          var12.a();
-          var18.d(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           MessageKeys.a(false);
           i.field_c = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {

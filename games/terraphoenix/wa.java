@@ -68,13 +68,13 @@ class wa extends DualLinkNode {
           }
           if (param7 > 0 &&
             param2 > 0) {
-            var21 = param0.d();
+            var21 = param0.copy();
             var30 = SoftwareRasterizer.field_i;
             var10 = SoftwareRasterizer.field_k;
             var11 = SoftwareRasterizer.field_j;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param0.a();
+            param0.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param1 + param0.field_r * param5;
             var14 = -param7 + param0.field_r;
@@ -99,7 +99,7 @@ class wa extends DualLinkNode {
               var13 = var13 + var14;
             }
             var16Lifetime1 = 60 / ((param3 - 1) / 51);
-            var21.b(-param0.field_p, -param0.field_v);
+            var21.draw(-param0.field_p, -param0.field_v);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;

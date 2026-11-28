@@ -46,14 +46,14 @@ final class s extends IntrusiveNode {
             var6_int = param1[0].field_x;
             var7 = param1[2].field_x;
             var8 = param1[1].field_x;
-            param1[0].a(param4, param2, param5);
-            param1[2].a(param4 + (param3 - var7), param2, param5);
+            param1[0].drawTintedGray(param4, param2, param5);
+            param1[2].drawTintedGray(param4 + (param3 - var7), param2, param5);
             SoftwareRasterizer.saveClip(ak.field_d);
             SoftwareRasterizer.intersectClip(var6_int + param4, param2, param3 + (param4 - var7), param1[1].field_B + param2);
             var9 = var6_int + param4;
             var10 = param4 + (param3 - var7);
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param1[1].a(param4, param2, param5);
+              param1[1].drawTintedGray(param4, param2, param5);
             }
             SoftwareRasterizer.restoreClip(ak.field_d);
             return;

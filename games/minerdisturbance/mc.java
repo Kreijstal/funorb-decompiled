@@ -837,10 +837,10 @@ final class mc {
           if (this.field_c <= 40) {
             vh.field_a[ah.field_f].drawTransparentWithIntensity(this.field_v, 0, 178 + (int)(60.0 * Math.sin((double)(this.field_c * 2)) + 18.0 * Math.cos((double)(3 * this.field_c))));
           } else {
-            vh.field_a[ah.field_f].g(this.field_v, 0);
+            vh.field_a[ah.field_f].drawOpaque(this.field_v, 0);
           }
         }
-        SecondaryNodeDeque.field_d.f(-(SecondaryNodeDeque.field_d.field_x >> 1) + 320, this.field_v);
+        SecondaryNodeDeque.field_d.draw(-(SecondaryNodeDeque.field_d.field_x >> 1) + 320, this.field_v);
         if (this.field_v >= 0) {
           if (this.field_c > 40) {
             stackIn_10_0 = 30;
@@ -880,7 +880,7 @@ final class mc {
             if (this.field_a == var5) {
               var11 = -var3Lifetime1 + pk.field_d.field_x >> 1;
               var12 = -var2Lifetime1 + pk.field_d.field_A >> 1;
-              pk.field_d.f(var9_int - var11, var10 - var12);
+              pk.field_d.draw(var9_int - var11, var10 - var12);
             }
             var5++;
             var8_int++;
@@ -942,23 +942,23 @@ final class mc {
             }
             var19 = stackIn_56_0;
             if (var19 != 0) {
-              var22.d(var18, var17, var12, var2Lifetime1, 100);
+              var22.drawScaledWithIntensity(var18, var17, var12, var2Lifetime1, 100);
             } else {
               if (var13_int != 0) {
                 var15.drawScaled(var18, var17, var12, var2Lifetime1);
                 if (var21 == this.field_a) {
-                  var15.e(var18, var17, var12, var2Lifetime1, this.field_k);
+                  var15.drawScaledAdditive(var18, var17, var12, var2Lifetime1, this.field_k);
                 }
               } else {
                 var22.drawScaled(var18, var17, var12, var2Lifetime1);
                 if (var21 == this.field_a) {
-                  var22.e(var18, var17, var12, var2Lifetime1, this.field_k);
+                  var22.drawScaledAdditive(var18, var17, var12, var2Lifetime1, this.field_k);
                 }
               }
             }
             var21++;
             if (var13_int == 0) {
-              this.field_h.g();
+              this.field_h.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               stackIn_70_0 = ce.field_d;
               stackIn_70_1 = Integer.toString(var10Lifetime1 * 100);
@@ -1011,7 +1011,7 @@ final class mc {
         stackIn_96_2 = (-3 == this.field_a);
         this.a(stackIn_95_1, stackIn_96_2, mn.field_v, 40, (byte) -66, false);
         if (0 == this.field_f) {
-          a.field_a[this.field_b + 16].f(this.field_v + 590, -a.field_a[0].field_u - a.field_a[0].field_C + 480);
+          a.field_a[this.field_b + 16].draw(this.field_v + 590, -a.field_a[0].field_u - a.field_a[0].field_C + 480);
         }
         var7Lifetime2 = -this.field_v - 0;
         var8 = IntrusiveDeque.field_f;
@@ -1019,8 +1019,8 @@ final class mc {
           var8 = se.field_L;
         }
         var9 = mm.field_a;
-        this.field_r.g();
-        kd.field_r.g(0, 0);
+        this.field_r.bindAsRenderTarget();
+        kd.field_r.drawOpaque(0, 0);
         var10Lifetime2 = 3 + (var9.field_E + var9.field_I);
         var9.drawParagraph(var8, -2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
         var9.drawParagraph(var8, 2, 0, kd.field_r.field_x, kd.field_r.field_A, 2829610, -1, 1, 1, var10Lifetime2);
@@ -1048,12 +1048,12 @@ final class mc {
           }
           var13 = null;
           if (6 == var12) {
-            tn.field_K[6].g(487, 326);
+            tn.field_K[6].drawOpaque(487, 326);
             var13_ref = vh.field_h[ah.field_f];
           } else {
             if (var12 != 0) {
               if (var12 == 2) {
-                tn.field_K[2].g(487, 326);
+                tn.field_K[2].drawOpaque(487, 326);
                 var13_ref = gl.field_x[ah.field_f];
               } else {
                 if (var12 != 3) {
@@ -1061,17 +1061,17 @@ final class mc {
                     if (var12 != 9) {
                       if (var12 != 1) {
                         if (var12 == 11) {
-                          tn.field_K[11].g(487, 326);
+                          tn.field_K[11].drawOpaque(487, 326);
                           var13_ref = tc.field_p;
                         } else {
                           if (8 != var12) {
                             if (4 == var12) {
-                              tn.field_K[4].g(487, 326);
+                              tn.field_K[4].drawOpaque(487, 326);
                               var13_ref = LoginPanel.field_M;
                             } else {
                               if (10 != var12) {
                                 if (var12 == 5) {
-                                  tn.field_K[5].g(487, 326);
+                                  tn.field_K[5].drawOpaque(487, 326);
                                   var13_ref = uf.field_u;
                                 } else {
                                   if (var12 != 12) {
@@ -1082,74 +1082,74 @@ final class mc {
                                             if (17 != var12) {
                                               if (var12 != 18) {
                                                 if (var12 == 19) {
-                                                  tn.field_K[18].g(487, 326);
+                                                  tn.field_K[18].drawOpaque(487, 326);
                                                   var13_ref = ck.field_e;
                                                 } else {
                                                   if (20 == var12) {
-                                                    tn.field_K[19].g(487, 326);
+                                                    tn.field_K[19].drawOpaque(487, 326);
                                                     var13_ref = fm.field_K;
                                                   } else {
                                                     var13_ref = ne.field_R[ah.field_f];
                                                   }
                                                 }
                                               } else {
-                                                tn.field_K[17].g(487, 326);
+                                                tn.field_K[17].drawOpaque(487, 326);
                                                 var13_ref = DisplayNameSelectionPanel.field_I;
                                               }
                                             } else {
-                                              tn.field_K[16].g(487, 326);
+                                              tn.field_K[16].drawOpaque(487, 326);
                                               var13_ref = nf.field_b;
                                             }
                                           } else {
-                                            tn.field_K[15].g(487, 326);
+                                            tn.field_K[15].drawOpaque(487, 326);
                                             var13_ref = ol.field_d;
                                           }
                                         } else {
-                                          tn.field_K[14].g(487, 326);
+                                          tn.field_K[14].drawOpaque(487, 326);
                                           var13_ref = jn.field_p;
                                         }
                                       } else {
-                                        tn.field_K[13].g(487, 326);
+                                        tn.field_K[13].drawOpaque(487, 326);
                                         var13_ref = fd.field_kb[ah.field_f];
                                       }
                                     } else {
-                                      tn.field_K[12].g(487, 326);
+                                      tn.field_K[12].drawOpaque(487, 326);
                                       var13_ref = qh.field_d;
                                     }
                                   } else {
-                                    tn.field_K[12].g(487, 326);
+                                    tn.field_K[12].drawOpaque(487, 326);
                                     var13_ref = hh.field_c;
                                   }
                                 }
                               } else {
-                                tn.field_K[10].g(487, 326);
+                                tn.field_K[10].drawOpaque(487, 326);
                                 var13_ref = wc.field_d;
                               }
                             }
                           } else {
-                            tn.field_K[8].g(487, 326);
+                            tn.field_K[8].drawOpaque(487, 326);
                             var13_ref = ef.field_d;
                           }
                         }
                       } else {
-                        tn.field_K[1].g(487, 326);
+                        tn.field_K[1].drawOpaque(487, 326);
                         var13_ref = ig.field_d;
                       }
                     } else {
-                      tn.field_K[9].g(487, 326);
+                      tn.field_K[9].drawOpaque(487, 326);
                       var13_ref = mn.field_w[ah.field_f];
                     }
                   } else {
-                    tn.field_K[7].g(487, 326);
+                    tn.field_K[7].drawOpaque(487, 326);
                     var13_ref = ii.field_c;
                   }
                 } else {
-                  tn.field_K[3].g(487, 326);
+                  tn.field_K[3].drawOpaque(487, 326);
                   var13_ref = ob.field_v;
                 }
               }
             } else {
-              tn.field_K[0].g(487, 326);
+              tn.field_K[0].drawOpaque(487, 326);
               var13_ref = hm.field_J[ah.field_f];
             }
           }

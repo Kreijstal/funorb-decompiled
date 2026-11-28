@@ -109,9 +109,9 @@ final class WallTile extends bo implements Cloneable {
           }
           if (24 == param1 &&
             param2 == 24) {
-            le.field_g[this.field_u][var7].a(param4, param5 - param2);
+            le.field_g[this.field_u][var7].draw(param4, param5 - param2);
           } else {
-            le.field_g[this.field_u][var7].b(param4, param5 - param2, param1 * 2, 3 * param2);
+            le.field_g[this.field_u][var7].drawScaled(param4, param5 - param2, param1 * 2, 3 * param2);
           }
         }
         var7Lifetime1 = 74 / ((param0 - 74) / 41);

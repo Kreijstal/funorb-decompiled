@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends WidgetContainer implements ql {
+final class sk extends WidgetContainer implements WidgetActivationListener {
     static int field_G;
     private ButtonWidget[] field_B;
     private int[] field_z;
@@ -16,7 +16,7 @@ final class sk extends WidgetContainer implements ql {
         return param0 & param1;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -151,7 +151,7 @@ final class sk extends WidgetContainer implements ql {
         ButtonWidget[] var3 = var8;
         if (param1 > -67) {
           ButtonWidget var7 = (ButtonWidget) null;
-          this.a(-89, -86, -14, 112, (ButtonWidget) null);
+          this.onWidgetActivated(-89, -86, -14, 112, (ButtonWidget) null);
         }
         int[] var4 = new int[param0];
         for (var5 = 0; this.field_C > var5; var5++) {

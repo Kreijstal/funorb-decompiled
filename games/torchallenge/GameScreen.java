@@ -96,7 +96,7 @@ final class GameScreen {
               return stackIn_9_0;
             }
           }
-          if (aj.field_c == ng.field_A) {
+          if (aj.field_c == InteractiveWidget.field_A) {
             boolean decompiledFrameRemainder1 = true;
             NanoFrameTimer.field_k = null;
             dk.field_s.position = 0;
@@ -1346,7 +1346,7 @@ final class GameScreen {
             var17_intLifetime1 = param1[0];
             var18Lifetime1 = param1[1];
             if (var19Lifetime1 >= 0) {
-              param8.a(var17_intLifetime1, var18Lifetime1, var19Lifetime1, 1);
+              param8.drawBlendedTowardColor(var17_intLifetime1, var18Lifetime1, var19Lifetime1, 1);
               if (var26 != 0) {
                 param8.drawTransparent(var17_intLifetime1, var18Lifetime1);
               }
@@ -1373,7 +1373,7 @@ final class GameScreen {
               }
               vj.field_d[ok.field_b].drawAdditiveWithIntensity(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
             }
-            param9.a(var17_intLifetime2, var18Lifetime2, var24Lifetime2, 16777215);
+            param9.drawBlendedTowardColor(var17_intLifetime2, var18Lifetime2, var24Lifetime2, 16777215);
           }
           if ((!(param11 <= param5) ||
             !(param5 <= param4 + param11) || var26 != 0) && (param11 <= param5)) {
@@ -2901,7 +2901,7 @@ final class GameScreen {
               if (null == oj.field_d) {
                 oj.field_d = new Sprite(640, 480);
               }
-              oj.field_d.d();
+              oj.field_d.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               var3_intLifetime1Lifetime1 = 0;
               while (true) {
@@ -3315,7 +3315,7 @@ final class GameScreen {
             LevelEntity.field_E = new Sprite(var10, var11);
           }
           if (0 <= var16Lifetime1) {
-            LevelEntity.field_E.d();
+            LevelEntity.field_E.bindAsRenderTarget();
             var8 = 0;
             SoftwareRasterizer.clearRaster();
             var9 = 0;
@@ -4468,7 +4468,7 @@ final class GameScreen {
             var17_intLifetime1 = param6[0];
             var18Lifetime1 = param6[1];
             if (0 <= var21Lifetime1) {
-              param0.a(var17_intLifetime1, var18Lifetime1, var21Lifetime1, 1);
+              param0.drawBlendedTowardColor(var17_intLifetime1, var18Lifetime1, var21Lifetime1, 1);
               if (var24 != 0) {
                 param0.drawTransparent(var17_intLifetime1, var18Lifetime1);
               }
@@ -4899,7 +4899,7 @@ final class GameScreen {
               if (oj.field_d == null) {
                 oj.field_d = new Sprite(640, 480);
               }
-              oj.field_d.d();
+              oj.field_d.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               GzipDecoder.drawNineSlice(var12, var5, var4, (byte) -55, var3, var2_int);
               var3 = var8 + var3;
@@ -4959,7 +4959,7 @@ final class GameScreen {
               var5 = jj.field_a[ok.field_b].fullHeight;
               var3 = var3 + var10;
               this.a((byte) 42, var4, 0, var5, var13, false, 0);
-              oj.field_d.d();
+              oj.field_d.bindAsRenderTarget();
               jj.field_a[ok.field_b].drawTransparent(var2_int, var3);
               SectorCacheStore.field_f.bindAsTarget(113);
               oj.field_d.drawTransparentWithOpacity(0, 0, var7);
@@ -5032,7 +5032,7 @@ final class GameScreen {
               var3 = var10 + var3;
               this.a((byte) 42, var4, var2_int, var5, var13, true, var3);
               SoftwareRasterizer.restoreClip(pf.field_g);
-              oj.field_d.d();
+              oj.field_d.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               var4 = bg.field_I[var13][2];
               var5 = bg.field_I[var13][3];
@@ -5052,7 +5052,7 @@ final class GameScreen {
               }
               od.a(var11, var2_int, var3);
               SectorCacheStore.field_f.bindAsTarget(122);
-              oj.field_d.a(0, 0, var6, 16777215);
+              oj.field_d.drawBlendedTowardColor(0, 0, var6, 16777215);
             }
             var13++;
           }
@@ -5627,8 +5627,8 @@ final class GameScreen {
                       IterableNodeHashTable.field_h == null) {
                       IterableNodeHashTable.field_h = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
                       ac.field_a = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].fullWidth, ie.field_f[var13Lifetime1Lifetime1][1].fullHeight);
-                      IterableNodeHashTable.field_h.d();
-                      ie.field_f[var13Lifetime1Lifetime1][1].a(0, 0, 0, 47211);
+                      IterableNodeHashTable.field_h.bindAsRenderTarget();
+                      ie.field_f[var13Lifetime1Lifetime1][1].drawBlendedTowardColor(0, 0, 0, 47211);
                       SectorCacheStore.field_f.bindAsTarget(105);
                       uk.field_G = var13Lifetime1Lifetime1;
                     }
@@ -5977,7 +5977,7 @@ final class GameScreen {
             rj.a(2, this.screenId, var13, var14, var12);
           }
           if (param3 != null) {
-            param3.d();
+            param3.bindAsRenderTarget();
           }
           if (param0 >= -87) {
             this.field_b = 92;
@@ -6573,7 +6573,7 @@ final class GameScreen {
               return;
             }
           }
-          param0.a(param2, param1, var8, 16777215);
+          param0.drawBlendedTowardColor(param2, param1, var8, 16777215);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

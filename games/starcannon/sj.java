@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends dk {
+final class sj extends InteractiveWidget {
     static byte[][] field_B;
     int field_A;
     static String field_C;

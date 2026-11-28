@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc extends WidgetContainer implements fp, ng {
+final class sc extends WidgetContainer implements fp, WidgetActivationListener {
     private AccountCreationResultPanel field_C;
     private rb field_D;
-    private lg field_E;
+    private InteractiveWidget field_E;
 
     private final String h(int param0) {
         if (param0 != -29996) {
-          lg var3 = (lg) null;
-          this.a((byte) -117, (lg) null, -25, -101, -74);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated((byte) -117, (InteractiveWidget) null, -25, -101, -74);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -24,7 +24,7 @@ final class sc extends WidgetContainer implements fp, ng {
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_E = new lg(vd.field_d, (ca) null);
+          this.field_E = new InteractiveWidget(vd.field_d, (ca) null);
           this.field_E.renderer = (WidgetRenderer) ((Object) new rf());
           var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
@@ -179,7 +179,7 @@ final class sc extends WidgetContainer implements fp, ng {
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -248,7 +248,7 @@ final class sc extends WidgetContainer implements fp, ng {
 
     private final String i(int param0) {
         if (param0 <= 117) {
-          this.field_E = (lg) null;
+          this.field_E = (InteractiveWidget) null;
           return "</col></u>";
         }
         return "</col></u>";

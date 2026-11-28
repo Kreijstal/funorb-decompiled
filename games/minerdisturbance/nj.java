@@ -102,18 +102,18 @@ final class nj {
               var1 = 255 + (-255 + var1);
             }
             if (var1 >= 255) {
-              IsaacRandom.field_c.g(0, 0);
+              IsaacRandom.field_c.drawOpaque(0, 0);
             } else {
               if (tb.field_e) {
-                IsaacRandom.field_c.f(0, 0, var1);
+                IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
               } else {
                 if (el.field_c) {
-                  IsaacRandom.field_c.f(0, 0, var1);
+                  IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                 } else {
                   if (oj.field_J <= 11) {
-                    IsaacRandom.field_c.g(0, 0);
+                    IsaacRandom.field_c.drawOpaque(0, 0);
                   } else {
-                    IsaacRandom.field_c.f(0, 0, var1);
+                    IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                   }
                 }
               }
@@ -121,7 +121,7 @@ final class nj {
           } else {
             if (!el.field_c) {
               ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
-              IsaacRandom.field_c.g();
+              IsaacRandom.field_c.bindAsRenderTarget();
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
               IsaacRandom.field_c.drawAdditive(0, 0, 50);
               ResourceArchive.field_e.setAsRasterTarget((byte) -45);
@@ -134,18 +134,18 @@ final class nj {
               var1 = 255 + (-255 + var1);
             }
             if (var1 >= 255) {
-              IsaacRandom.field_c.g(0, 0);
+              IsaacRandom.field_c.drawOpaque(0, 0);
             } else {
               if (tb.field_e) {
-                IsaacRandom.field_c.f(0, 0, var1);
+                IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
               } else {
                 if (el.field_c) {
-                  IsaacRandom.field_c.f(0, 0, var1);
+                  IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                 } else {
                   if (oj.field_J > 11) {
-                    IsaacRandom.field_c.f(0, 0, var1);
+                    IsaacRandom.field_c.drawWithOpacity(0, 0, var1);
                   } else {
-                    IsaacRandom.field_c.g(0, 0);
+                    IsaacRandom.field_c.drawOpaque(0, 0);
                   }
                 }
               }
@@ -167,20 +167,20 @@ final class nj {
           }
           if (var1Lifetime1 < 255) {
             if (tb.field_e) {
-              IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+              IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
             } else {
               if (el.field_c) {
-                IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
               } else {
                 if (oj.field_J > 11) {
-                  IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                  IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
-                  IsaacRandom.field_c.g(0, 0);
+                  IsaacRandom.field_c.drawOpaque(0, 0);
                 }
               }
             }
           } else {
-            IsaacRandom.field_c.g(0, 0);
+            IsaacRandom.field_c.drawOpaque(0, 0);
           }
         } else {
           if (el.field_c) {
@@ -192,24 +192,24 @@ final class nj {
             }
             if (var1Lifetime1 < 255) {
               if (tb.field_e) {
-                IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
               } else {
                 if (el.field_c) {
-                  IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                  IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
                   if (oj.field_J > 11) {
-                    IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                    IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                   } else {
-                    IsaacRandom.field_c.g(0, 0);
+                    IsaacRandom.field_c.drawOpaque(0, 0);
                   }
                 }
               }
             } else {
-              IsaacRandom.field_c.g(0, 0);
+              IsaacRandom.field_c.drawOpaque(0, 0);
             }
           } else {
             ai.a(ResourceArchive.field_e.field_f, 0, IsaacRandom.field_c.field_D, 0, 307200);
-            IsaacRandom.field_c.g();
+            IsaacRandom.field_c.bindAsRenderTarget();
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
             IsaacRandom.field_c.drawAdditive(0, 0, 50);
             ResourceArchive.field_e.setAsRasterTarget((byte) -45);
@@ -221,18 +221,18 @@ final class nj {
               var1Lifetime1 = 255 + (-255 + var1Lifetime1);
             }
             if (var1Lifetime1 >= 255) {
-              IsaacRandom.field_c.g(0, 0);
+              IsaacRandom.field_c.drawOpaque(0, 0);
             } else {
               if (tb.field_e) {
-                IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
               } else {
                 if (el.field_c) {
-                  IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                  IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                 } else {
                   if (oj.field_J <= 11) {
-                    IsaacRandom.field_c.g(0, 0);
+                    IsaacRandom.field_c.drawOpaque(0, 0);
                   } else {
-                    IsaacRandom.field_c.f(0, 0, var1Lifetime1);
+                    IsaacRandom.field_c.drawWithOpacity(0, 0, var1Lifetime1);
                   }
                 }
               }

@@ -459,7 +459,7 @@ final class MidiPcmStream extends PcmStream {
         DualLinkNode.field_i[7] = a.field_c;
         DualLinkNode.field_i[20] = hg.field_o;
         DualLinkNode.field_i[17] = ResourceArchive.field_b;
-        DualLinkNode.field_i[18] = bb.field_I;
+        DualLinkNode.field_i[18] = InteractiveWidget.field_I;
         DualLinkNode.field_i[9] = q.field_b[1];
         DualLinkNode.field_i[19] = kf.field_l;
         DualLinkNode.field_i[8] = q.field_b[0];

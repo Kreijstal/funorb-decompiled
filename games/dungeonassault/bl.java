@@ -126,12 +126,12 @@ final class bl {
           bo.field_Kb = oh.a(hj.field_Z, "", 11091, "scrollbar_top");
           IntroSequenceScreen.field_y = oh.a(hj.field_Z, "", 11091, "scrollbar_bottom");
           qh.field_q = oh.a(hj.field_Z, "", 11091, "scrollbar_slider");
-          tn.field_W = bo.field_Kb.d();
-          tn.field_W.f();
-          Bzip2State.field_x = IntroSequenceScreen.field_y.d();
-          Bzip2State.field_x.f();
-          ml.field_a = qh.field_q.d();
-          ml.field_a.f();
+          tn.field_W = bo.field_Kb.copy();
+          tn.field_W.rotateCounterclockwise();
+          Bzip2State.field_x = IntroSequenceScreen.field_y.copy();
+          Bzip2State.field_x.rotateCounterclockwise();
+          ml.field_a = qh.field_q.copy();
+          ml.field_a.rotateCounterclockwise();
           AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
           qf.field_f = dd.a((byte) -112, 4, IntroSequenceScreen.field_y);
           ji.field_G = dd.a((byte) -112, 4, qh.field_q);
@@ -139,11 +139,11 @@ final class bl {
           DungeonRaidScreen.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
           im.field_m = dd.a((byte) -112, 4, ml.field_a);
           var19 = oh.a(hj.field_Z, "", 11091, "cracked_bar");
-          var2 = var19.d();
-          var2.g();
+          var2 = var19.copy();
+          var2.rotateClockwise();
           var3 = oh.a(hj.field_Z, "", 11091, "cracked_bar_endcap");
-          var4 = var3.d();
-          var4.g();
+          var4 = var3.copy();
+          var4.rotateClockwise();
           ad.field_e = ph.a(hj.field_Z, "", "interface_crescent");
           oe.field_m = ph.a(hj.field_Z, "", "interface_dragon");
           pi.field_b = oh.a(hj.field_Z, "", 11091, "interface_lattice");
@@ -157,7 +157,7 @@ final class bl {
             var19.field_B[var7_int] = mp.a(var19.field_B[var7_int], -2147483648);
           }
           var7 = new RgbSprite(var5, var6);
-          var7.e();
+          var7.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, var5, 2, 16416);
           SoftwareRasterizer.fillRectangle(0, 2, var5, var6 - 4, 96);
           SoftwareRasterizer.fillRectangle(0, var6 - 2, var5, 2, 49184);
@@ -168,7 +168,7 @@ final class bl {
             var2.field_B[var8_int] = mp.a(var2.field_B[var8_int], -2147483648);
           }
           var8 = new RgbSprite(var5Lifetime1, var6Lifetime1);
-          var8.e();
+          var8.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime1, 4194336);
           SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime1 - 4, var6Lifetime1, 96);
           SoftwareRasterizer.fillRectangle(-2 + var5Lifetime1, 0, 2, var6Lifetime1, 12582944);
@@ -179,7 +179,7 @@ final class bl {
             var3.field_B[var9_int] = mp.a(var3.field_B[var9_int], -2147483648);
           }
           var9 = new RgbSprite(var5Lifetime2, var6Lifetime2);
-          var9.e();
+          var9.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, var5Lifetime2, 2, 16416);
           SoftwareRasterizer.fillRectangle(0, 2, var5Lifetime2, -4 + var6Lifetime2, 96);
           SoftwareRasterizer.fillRectangle(0, var6Lifetime2 - 2, var5Lifetime2, 2, 49184);
@@ -196,7 +196,7 @@ final class bl {
             var4.field_B[var10_intLifetime1] = mp.a(var4.field_B[var10_intLifetime1], -2147483648);
           }
           var10 = new RgbSprite(var5Lifetime3, var6Lifetime3);
-          var10.e();
+          var10.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 2, var6Lifetime3, 4194336);
           SoftwareRasterizer.fillRectangle(2, 0, var5Lifetime3 - 4, var6Lifetime3, 96);
           SoftwareRasterizer.fillRectangle(var5Lifetime3 - 2, 0, 2, var6Lifetime3, 12582944);
@@ -211,8 +211,8 @@ final class bl {
           IntrusiveDeque.a(97, f.field_a);
           IntrusiveDeque.a(98, PlayerDungeonProfile.field_o);
           cf.field_f = new RgbSprite(32, 32);
-          cf.field_f.e();
-          PlayerDungeonProfile.field_o.a(0, 0, 32, 32);
+          cf.field_f.bindAsRenderTarget();
+          PlayerDungeonProfile.field_o.drawDownscaledAreaAveraged(0, 0, 32, 32);
           jh.b();
           PlayerDungeonProfile.field_o = null;
           nb.field_d = oh.a(hj.field_Z, "", 11091, "base");
@@ -262,8 +262,8 @@ final class bl {
               }
             }
             var15_ref_cn = new RgbSprite(var22Lifetime1.field_y, var22Lifetime1.field_v);
-            var15_ref_cn.e();
-            var22Lifetime1.e(0, 0, (1 & var13_intLifetime2) == 0 ? 3199008 : 13684768);
+            var15_ref_cn.bindAsRenderTarget();
+            var22Lifetime1.drawSilhouette(0, 0, (1 & var13_intLifetime2) == 0 ? 3199008 : 13684768);
             ua.field_b[var13_intLifetime2] = new ph(var22Lifetime1, var15_ref_cn);
           }
           jh.b();
@@ -275,7 +275,7 @@ final class bl {
           EmailFormatValidator.field_m = oh.a(hj.field_Z, "pieces", 11091, "piece_bat");
           ia.field_R = oh.a(hj.field_Z, "pieces", 11091, "piece_beastman");
           ld.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_blackknight");
-          ck.field_G = oh.a(hj.field_Z, "pieces", 11091, "piece_blade_construct");
+          InteractiveWidget.field_G = oh.a(hj.field_Z, "pieces", 11091, "piece_blade_construct");
           DualLinkNode.field_q = oh.a(hj.field_Z, "pieces", 11091, "piece_darkelf");
           PlayerDungeonProfile.field_v = oh.a(hj.field_Z, "pieces", 11091, "piece_demon");
           fp.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_dryhad");
@@ -355,16 +355,16 @@ final class bl {
           }
           la.field_b.setInlineSprites(new q[]{fb.field_f, rf.a(10)}, new int[]{9, 10});
           fl.field_i = fn.a(2);
-          PackedBitSet.field_h = fl.field_i.b();
+          PackedBitSet.field_h = fl.field_i.copyMirroredHorizontally();
           SecondaryNodeDeque.field_a = rj.a((byte) 127);
           sm.field_g = BoundedRandomAccessFile.a(true);
           fo.field_a = wo.a(5, 1, 6, 5, 16744448);
-          BoundedRandomAccessFile.field_a = fo.field_a.d();
-          BoundedRandomAccessFile.field_a.g();
-          i.field_v = BoundedRandomAccessFile.field_a.d();
-          i.field_v.g();
-          IterableNodeHashTable.field_i = i.field_v.d();
-          IterableNodeHashTable.field_i.g();
+          BoundedRandomAccessFile.field_a = fo.field_a.copy();
+          BoundedRandomAccessFile.field_a.rotateClockwise();
+          i.field_v = BoundedRandomAccessFile.field_a.copy();
+          i.field_v.rotateClockwise();
+          IterableNodeHashTable.field_i = i.field_v.copy();
+          IterableNodeHashTable.field_i.rotateClockwise();
           DungeonAssaultScreen.setStatBarIcons(gd.field_E, jj.field_b, ProxyAuthenticationRequiredException.field_d, pk.field_o, tb.field_c, kd.field_f);
           ao.field_n = oh.a(hj.field_Z, "", 11091, "scroll_top");
           rn.field_c = oh.a(hj.field_Z, "", 11091, "scroll_bottom");
@@ -375,7 +375,7 @@ final class bl {
           li.field_l[2] = oh.a(hj.field_Z, "", 11091, "scroll_top_right");
           li.field_l[3] = oh.a(hj.field_Z, "", 11091, "scroll_centre_left");
           li.field_l[4] = new RgbSprite(li.field_l[0].field_y, li.field_l[0].field_v);
-          li.field_l[4].e();
+          li.field_l[4].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 13619075);
           k.field_h.setAsRasterTarget(true);
           li.field_l[5] = oh.a(hj.field_Z, "", 11091, "scroll_centre_right");

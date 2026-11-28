@@ -142,7 +142,7 @@ final class qe extends UiWidget {
         }
         this.field_D = new Sprite[]{this.a((byte) 90, this.field_B, this.field_M), this.a((byte) 90, this.field_u, this.field_L)};
         this.field_y = this.h(-29239);
-        this.field_C = this.field_y.c();
+        this.field_C = this.field_y.copyMirroredHorizontally();
         this.field_K = new Sprite(this.field_h >> 1, this.field_h);
     }
 
@@ -166,27 +166,27 @@ final class qe extends UiWidget {
             discarded$0 = this.h(-123);
           }
           while (var6 < var5_int) {
-            param1.c(var6, param2);
+            param1.draw(var6, param2);
             var6 = var6 + param1.field_n;
           }
           fi.c(true);
           if (param3 + this.field_y.field_n >= SoftwareRasterizer.field_d) {
             CrossfadingMidiPcmStream.a(this.field_K, 256);
-            param1.c(-this.field_G, 0);
-            param1.c(this.field_t * 2 - this.field_G, 0);
-            this.field_C.b(0, 0);
+            param1.draw(-this.field_G, 0);
+            param1.draw(this.field_t * 2 - this.field_G, 0);
+            this.field_C.drawMultiply(0, 0);
             fi.c(true);
-            this.field_K.c(param3, param2);
+            this.field_K.draw(param3, param2);
           }
           if (var5_int - this.field_y.field_n <= SoftwareRasterizer.field_b) {
             CrossfadingMidiPcmStream.a(this.field_K, 256);
             for (var7 = this.field_G + this.field_l - this.field_y.field_n; 2 * this.field_t < var7; var7 = var7 - 2 * this.field_t) {
             }
-            param1.c(-var7, 0);
-            param1.c(this.field_t * 2 - var7, 0);
-            this.field_y.b(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(this.field_t * 2 - var7, 0);
+            this.field_y.drawMultiply(0, 0);
             fi.c(true);
-            this.field_K.c(-this.field_y.field_n + var5_int, param2);
+            this.field_K.draw(-this.field_y.field_n + var5_int, param2);
             return;
           }
           return;

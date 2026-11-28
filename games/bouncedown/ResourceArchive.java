@@ -417,14 +417,14 @@ final class ResourceArchive {
           var5_int = param2[0].field_t;
           var6 = param2[2].field_t;
           var7 = param2[1].field_t;
-          param2[0].a(param0, param3);
-          param2[2].a(param4 + (param0 - var6), param3);
+          param2[0].draw(param0, param3);
+          param2[2].draw(param4 + (param0 - var6), param3);
           SoftwareRasterizer.saveClip(hh.field_h);
           SoftwareRasterizer.intersectClip(var5_int + param0, param3, param4 + param0 - var6, param3 + param2[param1].field_o);
           var8 = param0 + var5_int;
           var9 = param4 + (param0 - var6);
           for (param0 = var8; var9 > param0; param0 = param0 + var7) {
-            param2[1].a(param0, param3);
+            param2[1].draw(param0, param3);
           }
           SoftwareRasterizer.restoreClip(hh.field_h);
         } catch (RuntimeException runtimeException) {

@@ -121,14 +121,14 @@ final class te extends TileEffect {
           var5 = sv.field_c;
           var6 = -(this.field_g * this.field_i / 80) + param2;
           var7 = -var4 + (param0 - this.field_h * this.field_g / 80);
-          var5.a(var6, var7 - 64);
+          var5.draw(var6, var7 - 64);
           return;
         }
         this.field_h = -112;
         var5Lifetime1 = sv.field_c;
         var6Lifetime1 = -(this.field_g * this.field_i / 80) + param2;
         var7Lifetime1 = -var4 + (param0 - this.field_h * this.field_g / 80);
-        var5Lifetime1.a(var6Lifetime1, var7Lifetime1 - 64);
+        var5Lifetime1.draw(var6Lifetime1, var7Lifetime1 - 64);
     }
 
     te(BattleScreen param0, int param1, int param2) {

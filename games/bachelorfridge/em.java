@@ -288,7 +288,7 @@ final class em extends am implements WidgetActionListener {
         return null != RefreshingSpecial.field_p ? true : false;
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

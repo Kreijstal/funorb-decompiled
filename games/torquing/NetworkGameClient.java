@@ -116,7 +116,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(var3 >= NetworkArchiveRequest.d((byte) -97))) {
             this.field_n = false;
             ih.b(true);
-            lg.h(-101);
+            InteractiveWidget.h(-101);
             dc.a(2, gh.field_b, 2);
             FullscreenFocusCanvas.a(false);
             gk.field_a = true;
@@ -161,7 +161,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           } else {
             if (op.field_i >= 10) {
-              lg.h(param0 ^ -107);
+              InteractiveWidget.h(param0 ^ -107);
               if (aj.field_J != 3) {
                 if (aj.field_J == 4) {
                   dc.a(256, ib.field_a, 2);
@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (!hg.field_c) {
           this.a(10, "reconnect");
         }
-        lg.h(-128);
+        InteractiveWidget.h(-128);
         dc.a(var2, pl.field_u, 2);
         gk.field_a = true;
         DualLinkNode.field_k = 15000L + km.correctedCurrentTimeMillis(-1);

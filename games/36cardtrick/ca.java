@@ -93,18 +93,18 @@ final class ca {
           }
           var9Lifetime1 = var17.field_o;
           ji.a(true);
-          var17.c();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_l, SoftwareRasterizer.field_g);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.c();
-          var17.b(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.c();
-          var17.b(var9Lifetime1 - var17.field_p, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.field_p, 0);
           var12 = new RgbSprite(-(2 * var9Lifetime1) + var17.field_p, var9Lifetime1);
-          var12.c();
-          var17.b(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           gg.a(14756);
           eg.field_c = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

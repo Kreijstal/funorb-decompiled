@@ -61,9 +61,9 @@ final class pj implements fc {
           var7 = param0 + param1.field_i;
           NodeHashTableIterator.a(var7, 1232050056, param1.field_k, var6_int, param1.field_m);
           var8 = la.field_E[1];
-          if (param1 instanceof wd &&
-            ((wd) (param1)).field_z) {
-            var8.a((-var8.field_t + param1.field_k >> 1) + (1 + var6_int), var7 + 1 + (param1.field_m - var8.field_o >> 1), 256);
+          if (param1 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param1)).field_z) {
+            var8.drawAdditive((-var8.field_t + param1.field_k >> 1) + (1 + var6_int), var7 + 1 + (param1.field_m - var8.field_o >> 1), 256);
           }
           if (param1.e(1)) {
             DebouncedFieldValidator.a(2 + var6_int, param1.field_m - 4, -4 + param1.field_k, 2 + var7, 14677);

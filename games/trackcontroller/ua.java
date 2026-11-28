@@ -105,7 +105,7 @@ final class ua extends ButtonWidget {
               }
             }
           }
-          var16.a(112, 144, var16.field_s << 4, var16.field_v << 4, -this.field_J << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_s << 4, var16.field_v << 4, -this.field_J << 10, 4096);
           GameShell.m(-74);
           bl.field_a.drawAdditiveWithIntensity(-var16.field_s + var5, -var16.field_v + var6, 256);
           return;
@@ -143,7 +143,7 @@ final class ua extends ButtonWidget {
             }
           }
         }
-        var15.a(112, 144, var15.field_s << 4, var15.field_v << 4, -this.field_J << 10, 4096);
+        var15.drawRotatedAbout(112, 144, var15.field_s << 4, var15.field_v << 4, -this.field_J << 10, 4096);
         GameShell.m(-74);
         bl.field_a.drawAdditiveWithIntensity(-var15.field_s + var5, -var15.field_v + var6, 256);
     }

@@ -617,21 +617,21 @@ final class eg {
           if (this.field_a < 30) {
             var4Lifetime1 = this.field_f.field_w * ((1 + this.field_a) * (1 + this.field_a)) / 961;
             var5 = 34 * this.field_f.field_u / (this.field_a + 4);
-            this.field_f.b((this.field_f.field_u - var5 >> 1) + this.field_d, (this.field_f.field_w - var4Lifetime1 >> 1) + this.field_g, var5, var4Lifetime1);
+            this.field_f.drawScaled((this.field_f.field_u - var5 >> 1) + this.field_d, (this.field_f.field_w - var4Lifetime1 >> 1) + this.field_g, var5, var4Lifetime1);
             decompiledFrameRemainder0 = (var17 != 0);
           }
           if (decompiledFrameRemainder0) {
             if (this.field_e - this.field_a >= 30) {
-              this.field_f.d(this.field_d, this.field_g);
+              this.field_f.draw(this.field_d, this.field_g);
               if (var17 != 0) {
                 var4Lifetime1Lifetime1 = this.field_f.field_w * 34 / (this.field_e + (-this.field_a + 4));
                 var5Lifetime1 = this.field_f.field_u * (1 + (-this.field_a + this.field_e)) * (-this.field_a + (this.field_e + 1)) / 961;
-                this.field_f.b(this.field_d + (this.field_f.field_u - var5Lifetime1 >> 1), this.field_g + (-var4Lifetime1Lifetime1 + this.field_f.field_w >> 1), var5Lifetime1, var4Lifetime1Lifetime1);
+                this.field_f.drawScaled(this.field_d + (this.field_f.field_u - var5Lifetime1 >> 1), this.field_g + (-var4Lifetime1Lifetime1 + this.field_f.field_w >> 1), var5Lifetime1, var4Lifetime1Lifetime1);
               }
             } else {
               var4Lifetime1Lifetime1 = this.field_f.field_w * 34 / (this.field_e + (-this.field_a + 4));
               var5Lifetime1 = this.field_f.field_u * (1 + (-this.field_a + this.field_e)) * (-this.field_a + (this.field_e + 1)) / 961;
-              this.field_f.b(this.field_d + (this.field_f.field_u - var5Lifetime1 >> 1), this.field_g + (-var4Lifetime1Lifetime1 + this.field_f.field_w >> 1), var5Lifetime1, var4Lifetime1Lifetime1);
+              this.field_f.drawScaled(this.field_d + (this.field_f.field_u - var5Lifetime1 >> 1), this.field_g + (-var4Lifetime1Lifetime1 + this.field_f.field_w >> 1), var5Lifetime1, var4Lifetime1Lifetime1);
             }
           }
         }
@@ -858,7 +858,7 @@ final class eg {
               if (decompiledSharedTail0) {
                 var10 = (-170 + this.field_a) / 4;
                 if (uc.field_db.length > var10) {
-                  uc.field_db[var10].d(0, 0, 104, 104, 256);
+                  uc.field_db[var10].drawScaledAdditive(0, 0, 104, 104, 256);
                 }
               }
               var10 = 0;
@@ -902,7 +902,7 @@ final class eg {
                         var26_int = var23 * 640 / var25 + 52;
                         var27_int = 640 * var24 / var25 + 52;
                         var28_int = var19_int * 640 / var25;
-                        var15_ref_nf.d(var26_int - var28_int, -var28_int + var27_int, 2 * var28_int, 2 * var28_int, 256);
+                        var15_ref_nf.drawScaledAdditive(var26_int - var28_int, -var28_int + var27_int, 2 * var28_int, 2 * var28_int, 256);
                       }
                     }
                     var10++;
@@ -934,8 +934,8 @@ final class eg {
                   SoftwareRasterizer.clearRaster();
                   var10 = (int)(0.5 + 64.0 * uh.field_e[var9_int]);
                   var11_int = 64 - var10 >> 1;
-                  m.field_i[var9_int].b(var11_int, var11_int, var10, var10);
-                  TunnelEntity.field_w[15 & this.field_a >> 1].c(0, 0, 256);
+                  m.field_i[var9_int].drawScaled(var11_int, var11_int, var10, var10);
+                  TunnelEntity.field_w[15 & this.field_a >> 1].drawAdditive(0, 0, 256);
                   decompiledFrameRemainder1 = (var35 != 0);
                 }
                 if (decompiledFrameRemainder1) {
@@ -945,7 +945,7 @@ final class eg {
                     var9_int = 176 - var9_int;
                   }
                   SoftwareRasterizer.field_b = var9_int;
-                  dn.field_c[1].d(0, 0);
+                  dn.field_c[1].draw(0, 0);
                   decompiledFrameRemainder1 = (var35 != 0);
                 }
               }
@@ -956,14 +956,14 @@ final class eg {
                   var9_intLifetime2 = -var9_intLifetime2 + 176;
                 }
                 SoftwareRasterizer.field_b = var9_intLifetime2;
-                dn.field_c[0].d(0, 0);
+                dn.field_c[0].draw(0, 0);
                 if (240 <= this.field_a) {
                   var9_intLifetime3 = (2 * this.field_a - 392) % 176;
                   if (var9_intLifetime3 > 88) {
                     var9_intLifetime3 = -var9_intLifetime3 + 176;
                   }
                   SoftwareRasterizer.field_b = var9_intLifetime3;
-                  dn.field_c[2].d(32, 0);
+                  dn.field_c[2].draw(32, 0);
                 }
                 decompiledFrameRemainder1 = (var35 != 0);
               }
@@ -996,13 +996,13 @@ final class eg {
             var20Lifetime1 = -var14Lifetime1 + 64 >> 1;
             SoftwareRasterizer.fillCircle(31, 31, 31, 1);
             if (var11_int == 0) {
-              m.field_i[var12].b(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1);
+              m.field_i[var12].drawScaled(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1);
             }
             if (var11_int != 0 ||
               var35 != 0) {
-              m.field_i[var12].c(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1, 160);
+              m.field_i[var12].drawScaledWithIntensity(var19_intLifetime1, var20Lifetime1, var13_intLifetime1, var14Lifetime1, 160);
             }
-            TunnelEntity.field_w[15 & this.field_a >> 1].c(0, 0, 256);
+            TunnelEntity.field_w[15 & this.field_a >> 1].drawAdditive(0, 0, 256);
             decompiledFrameRemainder1 = (var35 != 0);
           }
         }
@@ -1047,7 +1047,7 @@ final class eg {
             break;
           }
           var24Lifetime2 = stackIn_68_0;
-          s.field_M[2].a(var21Lifetime1, var22, -var21Lifetime1 + var23, var24Lifetime2 - var22);
+          s.field_M[2].drawDownscaledAreaAveraged(var21Lifetime1, var22, -var21Lifetime1 + var23, var24Lifetime2 - var22);
           SoftwareRasterizer.addRadialGlow((int)(var19 * 16.0), 832, (int)(var9 * 5.0 * 16.0), 255, mm.field_cb);
           var25Lifetime2 = 0;
           while (var25Lifetime2 < 7) {
@@ -1089,7 +1089,7 @@ final class eg {
               SoftwareRasterizer.field_c < var23Lifetime1 &&
               var22Lifetime1 < SoftwareRasterizer.field_j &&
               SoftwareRasterizer.field_b < var24Lifetime3) {
-              var34.a(var21Lifetime2, var22Lifetime1, var23Lifetime1 - var21Lifetime2, -var22Lifetime1 + var24Lifetime3);
+              var34.drawDownscaledAreaAveraged(var21Lifetime2, var22Lifetime1, var23Lifetime1 - var21Lifetime2, -var22Lifetime1 + var24Lifetime3);
             }
             if (3 == var25Lifetime2) {
               SoftwareRasterizer.addRadialGlow((int)(var28 * 16.0), (int)(16.0 * var30), (int)(var32 * 16.0), 96, mm.field_gb);

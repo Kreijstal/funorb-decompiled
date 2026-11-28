@@ -15,9 +15,9 @@ abstract class SpriteState extends DualLinkNode {
     static String field_A;
     static UiPanel field_u;
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawScaledAlpha(int param0, int param1, int param2, int param3, int param4);
 
-    abstract void a(int param0, int param1, int param2, int param3);
+    abstract void drawScaled(int param0, int param1, int param2, int param3);
 
     final static void h(int param0) {
         field_D.setLength(param0);
@@ -57,7 +57,7 @@ abstract class SpriteState extends DualLinkNode {
         if (tf.a((byte) 117)) {
           param1 = false;
         }
-        d.a(69, param1);
+        InteractiveWidget.a(69, param1);
         EditableTextField.i(param0);
     }
 

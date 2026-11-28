@@ -85,8 +85,8 @@ final class qa extends h {
             stackIn_6_0 = 1;
           }
           var7 = stackIn_6_0;
-          if (param4 instanceof lj) {
-            param2 = param2 & ((lj) (param4)).field_t;
+          if (param4 instanceof InteractiveWidget) {
+            param2 = param2 & ((InteractiveWidget) (param4)).field_t;
           }
           if (!param2) {
             stackIn_13_0 = this.field_o;

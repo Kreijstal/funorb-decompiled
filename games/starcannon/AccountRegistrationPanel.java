@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends vk implements dc, ga, qk {
+final class AccountRegistrationPanel extends vk implements dc, WidgetActivationListener, NameSuggestionListener {
     private ab field_B;
     private ValidatedTextField field_K;
     private ValidatedTextField field_z;
     private ValidatedTextField field_G;
     private ValidatedTextField field_E;
-    private dk field_I;
+    private InteractiveWidget field_I;
     private gh field_D;
-    private dk field_M;
-    kd field_H;
+    private InteractiveWidget field_M;
+    NameSuggestionsPanel field_H;
     static IntrusiveDeque field_y;
     private ValidatedTextField field_J;
     private ValidatedTextField field_L;
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         String var5 = null;
@@ -30,7 +30,7 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
           ((EditableTextField) ((Object) var3)).setText((byte) -91, false, var4);
           if (param1 > -120) {
             var5 = (String) null;
-            this.a((String) null, (byte) -101);
+            this.onNameSuggestionSelected((String) null, (byte) -101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,8 +64,8 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         this.field_K = new ValidatedTextField("", (qg) null, 3);
         int var1 = 1;
         this.field_D = new gh("", (qg) null, var1 != 0);
-        this.field_M = new dk(MouseInput.field_a, (qg) null);
-        this.field_I = new dk(Bzip2State.field_v, (qg) null);
+        this.field_M = new InteractiveWidget(MouseInput.field_a, (qg) null);
+        this.field_I = new InteractiveWidget(Bzip2State.field_v, (qg) null);
         this.field_J.field_p = ld.field_jb;
         this.field_z.field_p = q.field_h;
         this.field_E.field_p = ca.field_M;
@@ -119,7 +119,7 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         this.field_M.field_g = (qg) (this);
         this.a(true, this.field_M);
         this.a(true, this.field_I);
-        this.field_H = new kd((qk) (this));
+        this.field_H = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_H.a(60 + (this.field_J.field_s + this.field_J.field_i), -this.field_J.field_s + this.field_i - (this.field_J.field_i + 60), (byte) 116, 150, 20 + this.field_J.field_j);
         this.a(true, this.field_H);
         this.a(0, 496, (byte) 121, var3 + (55 + var6), 0);
@@ -224,7 +224,7 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         }
     }
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -257,9 +257,9 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         boolean discarded$0 = false;
-        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(false))).f(param0 ^ 31293);
+        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(false))).invalidateCheckedName(param0 ^ 31293);
         if (param0 != -12920) {
           discarded$0 = this.canSubmitRegistration(26);
         }
@@ -664,7 +664,7 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
 
     public final void a(int param0, byte param1, int param2, ab param3) {
         int var6 = 0;
-        dk var7 = null;
+        InteractiveWidget var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -684,8 +684,8 @@ final class AccountRegistrationPanel extends vk implements dc, ga, qk {
             qa.a((byte) -107, "terms.ws");
           }
           if (param1 != -123) {
-            var7 = (dk) null;
-            this.a((dk) null, 78, true, -77, 22);
+            var7 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, 78, true, -77, 22);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

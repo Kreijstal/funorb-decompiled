@@ -110,7 +110,7 @@ final class da extends ArchiveProvider {
           uc.field_c = new ci(0L, (ci) null);
           uc.field_c.field_Ab = var16;
           qj.field_e.a((byte) 124, uc.field_c);
-          t.field_K = new ci[5];
+          NameSuggestionsPanel.field_K = new ci[5];
           ig.field_i = new ci[5];
           mf.field_l = new ci[5];
           DelegatingCanvas.field_d = new ci[5];
@@ -140,12 +140,12 @@ final class da extends ArchiveProvider {
               }
               if (decompiledFrameRemainder0) {
                 DelegatingCanvas.field_d[var18] = new ci(0L, param0);
-                t.field_K[var18] = new ci(0L, eh.field_M, var19);
+                NameSuggestionsPanel.field_K[var18] = new ci(0L, eh.field_M, var19);
                 ig.field_i[var18] = new ci(0L, (ci) null);
                 ig.field_i[var18].field_cb = 1;
                 mf.field_l[var18] = new ci(0L, eh.field_M);
                 mf.field_l[var18].field_cb = 1;
-                DelegatingCanvas.field_d[var18].a((byte) 125, t.field_K[var18]);
+                DelegatingCanvas.field_d[var18].a((byte) 125, NameSuggestionsPanel.field_K[var18]);
                 DelegatingCanvas.field_d[var18].a((byte) 123, ig.field_i[var18]);
                 DelegatingCanvas.field_d[var18].a((byte) 127, mf.field_l[var18]);
                 DelegatingCanvas.field_d[var18].h(0);

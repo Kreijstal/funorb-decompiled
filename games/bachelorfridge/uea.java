@@ -11,7 +11,7 @@ final class uea extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var4 = (int)((1.0 - Math.cos((double)(this.field_h * 4) * 3.141592653589793 / 50.0)) * 64.0);
         super.a(param0, param1, param2);
-        this.field_f.a(param2, param0, var4);
+        this.field_f.drawWithOpacity(param2, param0, var4);
     }
 
     public static void releaseStatics(byte param0) {
@@ -42,7 +42,7 @@ final class uea extends TileEffect {
           this.field_h = 50;
           this.field_f = new Sprite(128, 64);
           bu.a(0, this.field_f);
-          param0.field_s.field_p.e(0, 0, param3);
+          param0.field_s.field_p.drawGrayRampTinted(0, 0, param3);
           db.b(100);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

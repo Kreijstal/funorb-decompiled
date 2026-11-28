@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends d {
+final class ao extends InteractiveWidget {
     static String[] field_Q;
     static String field_P;
     int field_I;
@@ -58,11 +58,11 @@ final class ao extends d {
           var4 = var2.field_t;
           DelegatingCanvas.a((byte) -31);
           qn.field_r = new Sprite(var3, param0 * var4 / 4);
-          qn.field_r.d();
-          var2.c(0, 0);
+          qn.field_r.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           lr.field_O = new Sprite(var3, -qn.field_r.field_t + var4);
-          lr.field_O.d();
-          var2.c(0, -qn.field_r.field_t);
+          lr.field_O.bindAsRenderTarget();
+          var2.drawOpaque(0, -qn.field_r.field_t);
           lr.field_O.field_z = qn.field_r.field_t;
           ln.d(-28558);
         } catch (RuntimeException runtimeException) {

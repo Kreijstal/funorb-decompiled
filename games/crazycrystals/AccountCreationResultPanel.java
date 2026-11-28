@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends na implements vd {
+final class AccountCreationResultPanel extends na implements WidgetActivationListener {
     static RgbSprite[] field_qb;
     static lb field_lb;
     private boolean field_ob;
@@ -29,8 +29,8 @@ final class AccountCreationResultPanel extends na implements vd {
 
     final void o(int param0) {
         if (param0 < 85) {
-          pc var3 = (pc) null;
-          this.a((byte) -11, -96, 75, -54, (pc) null);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated((byte) -11, -96, 75, -54, (InteractiveWidget) null);
         }
         this.showAccountCreationResult(-1, true, me.createAccountErrorResult(on.field_c, 20, 248));
     }
@@ -73,7 +73,7 @@ final class AccountCreationResultPanel extends na implements vd {
           var7 = RawPcmStream.createForPlaybackRate(nj.field_c, 100, 0);
           var7.setLoopCount(-1);
           aa.field_a = new am(var7);
-          nh.field_F = je.field_j;
+          NameSuggestionsPanel.field_F = je.field_j;
           sb.field_F = b.field_a;
           fl.field_g = fp.field_a;
           int var2 = 110 % ((param0 - 27) / 50);
@@ -122,7 +122,7 @@ final class AccountCreationResultPanel extends na implements vd {
             } else {
               var4 = ResourceArchive.field_f;
               if (this.field_pb != null) {
-                this.field_pb.a(param0 ^ -21);
+                this.field_pb.onNameSuggestionsRefreshRequested(param0 ^ -21);
               }
             }
           }
@@ -173,7 +173,7 @@ final class AccountCreationResultPanel extends na implements vd {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         if (this.field_ob) {
           LoginPanel.a(-40, true, false);
           return;

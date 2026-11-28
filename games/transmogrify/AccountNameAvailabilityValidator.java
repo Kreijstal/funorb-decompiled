@@ -39,7 +39,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.g(7);
+            this.invalidateCheckedName(7);
           }
           var5 = (CharSequence) ((Object) param1);
           var3 = da.a(true, var5);
@@ -213,7 +213,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void g(int param0) {
+    final void invalidateCheckedName(int param0) {
         int var2 = 73 / ((param0 - 9) / 61);
         this.checkedName = null;
     }

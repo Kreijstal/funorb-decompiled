@@ -170,10 +170,10 @@ final class ah {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = nh.a((byte) 121, var11[var18]);
+                      var13[var18] = NameSuggestionsPanel.a((byte) 121, var11[var18]);
                       var18++;
                     }
-                    var19.field_m[var6] = param3.requestDeclaredMethod((byte) -93, nh.a((byte) -126, var21), var13, var22);
+                    var19.field_m[var6] = param3.requestDeclaredMethod((byte) -93, NameSuggestionsPanel.a((byte) -126, var21), var13, var22);
                     var19.field_h[var6] = var23;
                   }
                 } else {
@@ -187,7 +187,7 @@ final class ah {
                   }
                   var19.field_f[var6] = var7_int;
                   var19.field_g[var6] = var10;
-                  var19.field_k[var6] = param3.requestDeclaredField(22, var16, nh.a((byte) -105, var17));
+                  var19.field_k[var6] = param3.requestDeclaredField(22, var16, NameSuggestionsPanel.a((byte) -105, var17));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

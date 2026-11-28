@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends gj implements pe, da {
+final class DisplayNameSelectionPanel extends gj implements NameSuggestionListener, WidgetActivationListener {
     static int field_K;
     static jd field_M;
     private ValidatedTextField field_I;
-    ij field_H;
+    NameSuggestionsPanel field_H;
     static byte[] field_G;
-    private bb field_J;
-    private bb field_L;
+    private InteractiveWidget field_J;
+    private InteractiveWidget field_L;
     static ej field_F;
 
     private final boolean canSubmitDisplayName(byte param0) {
@@ -85,15 +85,15 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
         el.a(this.field_I.field_i, (byte) 126);
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_I.getFieldValidator((byte) 76))).d(true);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_I.getFieldValidator((byte) 76))).invalidateCheckedName(true);
         if (param0 > -66) {
           UiComponent var3 = (UiComponent) null;
           this.a(26, 17, (UiComponent) null, '﾿');
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -113,8 +113,8 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
         this.field_I = new ValidatedTextField("", (kd) null, 12);
         e var1 = new e(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(t.field_c, var1, (kd) null);
-        this.field_J = new bb(e.field_g, (kd) null);
-        this.field_L = new bb(gd.field_d, (kd) null);
+        this.field_J = new InteractiveWidget(e.field_g, (kd) null);
+        this.field_L = new InteractiveWidget(gd.field_d, (kd) null);
         this.field_I.field_m = df.field_c;
         this.field_I.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_I));
         this.field_J.field_D = false;
@@ -127,14 +127,14 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
         var2.a(20, 270, var3, 50, 80);
         this.a(var2, (byte) -50);
         var3 += 50;
-        var3 = var3 + (5 + this.a(me.field_a, 98, bb.field_J, var3, 170, this.field_I));
+        var3 = var3 + (5 + this.a(me.field_a, 98, InteractiveWidget.field_J, var3, 170, this.field_I));
         this.field_J.a(-var5 + 496 >> 1, var5, var3, 40, 80);
         this.field_L.a(3 + var4, 60, var3 + 15, 40, 80);
         this.field_L.field_s = (kd) (this);
         this.field_J.field_s = (kd) (this);
         this.a((UiComponent) (this.field_J), (byte) -45);
         this.a((UiComponent) (this.field_L), (byte) -126);
-        this.field_H = new ij((pe) (this));
+        this.field_H = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_H.a(60 + this.field_I.field_y + this.field_I.field_u, -this.field_I.field_u + (-this.field_I.field_y + this.field_u - 60), 20, 150, 80);
         this.a((UiComponent) (this.field_H), (byte) -38);
         this.a(0, 496, 0, var4 + (55 + var3), 80);
@@ -143,7 +143,7 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
     final void a(int param0, int param1, UiComponent param2, byte param3) {
         try {
           if (param3 > -85) {
-            this.field_J = (bb) null;
+            this.field_J = (InteractiveWidget) null;
           }
           super.a(param0, param1, param2, (byte) -96);
           this.field_J.field_D = this.canSubmitDisplayName((byte) -74);
@@ -152,7 +152,7 @@ final class DisplayNameSelectionPanel extends gj implements pe, da {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

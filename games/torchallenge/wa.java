@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wa extends n implements sg {
+class wa extends n implements WidgetActivationListener {
     static String field_qb;
     private BitmapFont field_yb;
     static boolean[] field_pb;
@@ -80,22 +80,22 @@ class wa extends n implements sg {
           this.c(0, var2);
           return;
         }
-        ng var3 = (ng) null;
-        this.a((ng) null, -19, -53, 4, true);
+        InteractiveWidget var3 = (InteractiveWidget) null;
+        this.onWidgetActivated((InteractiveWidget) null, -19, -53, 4, true);
         this.c(0, var2);
     }
 
-    public void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
-        ng var7 = null;
+        InteractiveWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4) {
-            var7 = (ng) null;
-            this.a((ng) null, -14, -19, -46, true);
+            var7 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, -14, -19, -46, true);
           }
           if (!this.field_wb) {
             ob.a("tochangedisplayname.ws", gi.b(12476), (byte) 43);

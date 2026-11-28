@@ -99,10 +99,10 @@ final class ka implements jm {
             sj.a(0, param1, var5);
             var5 = (ak) (nc.field_O.nextBackward((byte) -112));
           }
-          var4 = (fd) (fb.field_L.beginBackward(-18110));
+          var4 = (fd) (InteractiveWidget.field_L.beginBackward(-18110));
           while (var4 != null) {
             pk.a(param1, -90, var4);
-            var4 = (fd) (fb.field_L.nextBackward((byte) -121));
+            var4 = (fd) (InteractiveWidget.field_L.nextBackward((byte) -121));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

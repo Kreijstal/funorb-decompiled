@@ -829,19 +829,19 @@ final class ml {
                       if (var5 != 4) {
                         if ((var5 == 9)) {
                           var4 = 640 + param2 - 640;
-                          jc.field_G.f(320 + var4 - (jc.field_G.field_x >> 1), 15);
+                          jc.field_G.draw(320 + var4 - (jc.field_G.field_x >> 1), 15);
                         }
                       } else {
-                        GameAppletShell.field_m.f(param2, 0);
+                        GameAppletShell.field_m.draw(param2, 0);
                         if (!eg.b(112)) {
-                          FullscreenFocusCanvas.field_c.f(640 - (FullscreenFocusCanvas.field_c.field_x + param2), -FullscreenFocusCanvas.field_c.field_A + 480);
+                          FullscreenFocusCanvas.field_c.draw(640 - (FullscreenFocusCanvas.field_c.field_x + param2), -FullscreenFocusCanvas.field_c.field_A + 480);
                         } else {
                           if (!fa.field_e) {
-                            ak.field_c.f(-param2 + 640 - ak.field_c.field_x, -ak.field_c.field_A + 480);
+                            ak.field_c.draw(-param2 + 640 - ak.field_c.field_x, -ak.field_c.field_A + 480);
                           } else {
                             var5 = -gi.field_a.field_A + 480;
                             var6 = -param2 + (-gi.field_a.field_x + 640);
-                            gi.field_a.f(var6, 10 * (qd.field_R / 20) + var5);
+                            gi.field_a.draw(var6, 10 * (qd.field_R / 20) + var5);
                           }
                         }
                       }
@@ -925,7 +925,7 @@ final class ml {
           var7 = stackIn_3_0 + stackIn_4_1;
           var6 = var7 + param3 + 125;
         }
-        ha.field_a.f(param3 - (-320 + (ha.field_a.field_x >> 1)), 15);
+        ha.field_a.draw(param3 - (-320 + (ha.field_a.field_x >> 1)), 15);
         var7Lifetime1 = 390;
         var8 = ce.field_d.field_E + ce.field_d.field_I - 2;
         var9 = mm.field_a.field_E + mm.field_a.field_I;
@@ -968,7 +968,7 @@ final class ml {
                   } else {
                     var11Lifetime1 = var11Lifetime1 + var8 * ce.field_d.drawParagraph(var19[var12], var6, var11Lifetime1 - ce.field_d.field_I, var7Lifetime1, 480, 1, -1, 0, 0, var8);
                     var11Lifetime1 = var11Lifetime1 + var8;
-                    ib.field_a.f(var6, var11Lifetime1);
+                    ib.field_a.draw(var6, var11Lifetime1);
                   }
                 } else {
                   var11Lifetime1 = var11Lifetime1 + ce.field_d.drawParagraph(var19[var12], var6 + 40, -ce.field_d.field_I + var11Lifetime1, var7Lifetime1 - 40, 480, 1, -1, 0, 0, var8) * var8;
@@ -1457,7 +1457,7 @@ final class ml {
             var16_ref_ea = h.field_c;
           }
           regionExit2: {
-            var16_ref_ea.g(var10, 83);
+            var16_ref_ea.drawOpaque(var10, 83);
             var10 = var15Lifetime1 + (-param0 + 468);
             if ((!param1 ||
               var18 == 0) && (!param1 ||
@@ -1467,9 +1467,9 @@ final class ml {
             }
             var16_ref_ea = h.field_c;
           }
-          var16_ref_ea.a();
-          var16_ref_ea.g(var10, 83);
-          var16_ref_ea.a();
+          var16_ref_ea.flipHorizontal();
+          var16_ref_ea.drawOpaque(var10, 83);
+          var16_ref_ea.flipHorizontal();
           return;
         }
         if (var6 == 20 &&
@@ -1789,13 +1789,13 @@ final class ml {
           var7 = 0;
         }
         if (param2 == 0) {
-          on.field_x.f(640 + (-(on.field_x.field_x >> 1) + (320 + (-param0 - 640)) + var7), 6);
+          on.field_x.draw(640 + (-(on.field_x.field_x >> 1) + (320 + (-param0 - 640)) + var7), 6);
         } else {
           if (param2 == 2) {
-            sk.field_e.f(var7 + 640 + (-(sk.field_e.field_x >> 1) - param0 - 320), 6);
+            sk.field_e.draw(var7 + 640 + (-(sk.field_e.field_x >> 1) - param0 - 320), 6);
           } else {
             if (param2 == 1) {
-              CipherPacketBuffer.field_x.f(var7 - (CipherPacketBuffer.field_x.field_x >> 1) + (320 - param0) + 0, 6);
+              CipherPacketBuffer.field_x.draw(var7 - (CipherPacketBuffer.field_x.field_x >> 1) + (320 - param0) + 0, 6);
             }
           }
         }
@@ -1819,7 +1819,7 @@ final class ml {
           var11 = var11 + ak.field_a[1].field_A;
         }
         ArchiveIndex.a(80, var11, var9 + (var8 - var10) / 2, var10, (byte) 113, ak.field_a);
-        ff.field_f.f(var9 + (var8 - ff.field_f.field_x) / 2, 85);
+        ff.field_f.draw(var9 + (var8 - ff.field_f.field_x) / 2, 85);
         if (0 != var5) {
           stackIn_46_0 = rj.field_a;
         } else {
@@ -2086,7 +2086,7 @@ final class ml {
     private final void a(int param0, int param1) {
         int var3 = this.field_e;
         int var4 = var3 + (-param1 + 755);
-        on.field_x.f(var3 + (-param1 + 640 + (320 - (on.field_x.field_x >> 1))), 15);
+        on.field_x.draw(var3 + (-param1 + 640 + (320 - (on.field_x.field_x >> 1))), 15);
         ArchiveIndex.a(param0, 235, var4, 410, (byte) 113, hd.field_d);
         String var5 = ae.field_b;
         int var6 = 176 + pk.field_b.field_I;

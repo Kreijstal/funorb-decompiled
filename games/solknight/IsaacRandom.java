@@ -246,7 +246,7 @@ final class IsaacRandom {
           TextFieldValidator.field_i = param1 * l.a((byte) 96) / 1000;
           DiskCacheWorker.a(26197, param0);
           pb.a(param0, param2 ^ -89);
-          pj.a(param2 + 2, param0);
+          InteractiveWidget.a(param2 + 2, param0);
           ProxySocketConnector.e(param2 ^ param2);
           gl.a((byte) 28);
           BufferedSocket.field_h = 0 - TextFieldValidator.field_i;

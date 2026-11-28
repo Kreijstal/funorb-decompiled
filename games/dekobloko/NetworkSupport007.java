@@ -248,7 +248,7 @@ final class NetworkSupport007 extends DualNode {
         int integerLocal32;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          rgbSpriteArgument1.performAction0269();
+          rgbSpriteArgument1.normalizeCanvas();
           rgbSpriteLocal13 = new RgbSprite(36, 36);
           rgbSpriteLocal14 = rgbSpriteLocal13;
           for (integerLocal7 = 0; integerLocal7 < 18; integerLocal7++) {

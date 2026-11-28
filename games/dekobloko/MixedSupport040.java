@@ -49,15 +49,15 @@ final class MixedSupport040 {
     }
 
     final static void performAction0531(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        DelegatingCanvas.rgbSpriteState0013.performAction0291(integerArgument1, integerArgument4, integerArgument2);
-        GameDomainSupport004.rgbSpriteState0024.performAction0291(integerArgument1 + 35, integerArgument4, integerArgument2);
-        MixedSupport116.rgbSpriteState0056.performAction0291(integerArgument1 + 605, integerArgument4, integerArgument2);
-        MixedSupport042.rgbSpriteState0016.performAction0291(integerArgument1, integerArgument4 + 35, integerArgument2);
-        TextFieldValidator.rgbSpriteState0076.performAction0291(integerArgument1 + 605, integerArgument4 + 35, integerArgument2);
+        DelegatingCanvas.rgbSpriteState0013.drawWithIntensity(integerArgument1, integerArgument4, integerArgument2);
+        GameDomainSupport004.rgbSpriteState0024.drawWithIntensity(integerArgument1 + 35, integerArgument4, integerArgument2);
+        MixedSupport116.rgbSpriteState0056.drawWithIntensity(integerArgument1 + 605, integerArgument4, integerArgument2);
+        MixedSupport042.rgbSpriteState0016.drawWithIntensity(integerArgument1, integerArgument4 + 35, integerArgument2);
+        TextFieldValidator.rgbSpriteState0076.drawWithIntensity(integerArgument1 + 605, integerArgument4 + 35, integerArgument2);
         if (integerArgument3 <= -7) {
-          MixedSupport138.rgbSpriteState0064.performAction0291(integerArgument1, 445 + integerArgument4, integerArgument2);
-          MixedSupport100.rgbSpriteState0041.performAction0291(integerArgument1 + 35, integerArgument4 + 445, integerArgument2);
-          MixedSupport144.rgbSpriteState0071.performAction0291(integerArgument1 + 605, integerArgument4 + 445, integerArgument2);
+          MixedSupport138.rgbSpriteState0064.drawWithIntensity(integerArgument1, 445 + integerArgument4, integerArgument2);
+          MixedSupport100.rgbSpriteState0041.drawWithIntensity(integerArgument1 + 35, integerArgument4 + 445, integerArgument2);
+          MixedSupport144.rgbSpriteState0071.drawWithIntensity(integerArgument1 + 605, integerArgument4 + 445, integerArgument2);
           return;
         }
     }

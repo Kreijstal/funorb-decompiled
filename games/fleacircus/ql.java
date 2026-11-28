@@ -30,7 +30,7 @@ final class ql extends IntrusiveNode {
         int var5 = param2;
         int var6 = 26 % ((-63 - param1) / 50);
         SoftwareRasterizer.setClip(var4, var5, 16 + var4, 16 + var5);
-        se.field_a[param0].f(-4, -4, 128);
+        se.field_a[param0].drawWithIntensity(-4, -4, 128);
         SoftwareRasterizer.restoreClip(si.field_R);
     }
 

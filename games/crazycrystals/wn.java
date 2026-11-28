@@ -101,9 +101,9 @@ final class wn implements wo {
           var7 = param3.field_j + param0;
           ca.a((byte) -128, var6_int, var7, param3.field_f, param3.field_g);
           var8 = ao.field_b[1];
-          if (param3 instanceof pc &&
-            ((pc) (param3)).field_A) {
-            var8.d(var6_int + 1 + (param3.field_g - var8.field_n >> 1), var7 + 1 + (param3.field_f - var8.field_o >> 1), 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_A) {
+            var8.drawAdditive(var6_int + 1 + (param3.field_g - var8.field_n >> 1), var7 + 1 + (param3.field_f - var8.field_o >> 1), 256);
           }
           if (!param3.e(-122)) {
             return;

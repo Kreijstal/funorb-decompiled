@@ -39,13 +39,13 @@ final class ie {
           SoftwareRasterizer.clearRaster();
           sl.field_a = 0;
           di.k(9);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          tg.field_u.e();
-          var1.c(0, 0);
+          tg.field_u.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ie.C(" + param0 + ')');

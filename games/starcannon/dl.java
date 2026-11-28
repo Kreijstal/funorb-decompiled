@@ -135,10 +135,10 @@ final class dl {
             return;
           }
           if (BufferedSocket.field_g != null) {
-            BufferedSocket.field_g.field_H.a(param0 ^ -1897, param1);
+            BufferedSocket.field_g.field_H.setNameSuggestions(param0 ^ -1897, param1);
           }
           if (n.field_l != null) {
-            n.field_l.field_z.a(1891, param1);
+            n.field_l.field_z.setNameSuggestions(1891, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

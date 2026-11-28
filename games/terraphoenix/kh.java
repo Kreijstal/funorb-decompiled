@@ -46,7 +46,7 @@ abstract class kh extends WidgetContainer {
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+            hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
@@ -55,7 +55,7 @@ abstract class kh extends WidgetContainer {
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+          hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         if (this.width > hf.field_y.field_r) {
@@ -66,7 +66,7 @@ abstract class kh extends WidgetContainer {
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+            hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
@@ -75,7 +75,7 @@ abstract class kh extends WidgetContainer {
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+          hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         if (this.height > hf.field_y.field_t) {
@@ -86,7 +86,7 @@ abstract class kh extends WidgetContainer {
             this.a(0, 0, (byte) 82);
             super.a(-param0 - this.x, -127, param2, -param3 - this.y);
             MessageKeys.a(false);
-            hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+            hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
             return;
           }
           this.field_G = 14;
@@ -95,7 +95,7 @@ abstract class kh extends WidgetContainer {
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+          hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         if (param1 <= -106) {
@@ -104,7 +104,7 @@ abstract class kh extends WidgetContainer {
           this.a(0, 0, (byte) 82);
           super.a(-param0 - this.x, -127, param2, -param3 - this.y);
           MessageKeys.a(false);
-          hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+          hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
           return;
         }
         this.field_G = 14;
@@ -113,7 +113,7 @@ abstract class kh extends WidgetContainer {
         this.a(0, 0, (byte) 82);
         super.a(-param0 - this.x, -127, param2, -param3 - this.y);
         MessageKeys.a(false);
-        hf.field_y.a(param0 + this.x, param3 + this.y, this.field_G);
+        hf.field_y.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_G);
     }
 
     private final int h(int param0) {

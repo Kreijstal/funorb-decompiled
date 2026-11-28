@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class AccountRegistrationPanel extends ComponentContainer implements CallbackContract015, CallbackContract019, CallbackContract002 {
-    UiComponentPart007 uiComponentPart007State0002;
+final class AccountRegistrationPanel extends ComponentContainer implements CallbackContract015, WidgetActivationListener, NameSuggestionListener {
+    NameSuggestionsPanel uiComponentPart007State0002;
     static SceneWidget sceneWidgetState0116;
     private ValidatedTextField uiComponentPart021State0002;
     private ValidatedTextField uiComponentPart021State0003;
@@ -86,7 +86,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         this.interactiveComponentState0012.callbackContract006State0001 = (CallbackContract006) (this);
         this.performAction0895(this.interactiveComponentState0012, (byte) -55);
         this.performAction0895(this.interactiveComponentState0013, (byte) -55);
-        this.uiComponentPart007State0002 = new UiComponentPart007((CallbackContract002) (this));
+        this.uiComponentPart007State0002 = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.uiComponentPart007State0002.performAction0222(150, -60 - this.uiComponentPart021State0002.integerState0107 + (this.integerState0107 - this.uiComponentPart021State0002.integerState0110), this.uiComponentPart021State0002.integerState0110 + this.uiComponentPart021State0002.integerState0107 + 60, this.uiComponentPart021State0002.integerState0104 + 20, -16555);
         this.performAction0895(this.uiComponentPart007State0002, (byte) -55);
         this.performAction0222(55 + integerLocal5 + integerLocal8, 496, 0, 0, -16555);
@@ -146,7 +146,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         int integerLocal1 = 36 / ((-24 - byteArgument1) / 53);
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         boolean discarded$1 = false;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;
@@ -204,11 +204,11 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         }
     }
 
-    public final void performAction0314(int integerArgument1) {
+    public final void onNameSuggestionsRefreshRequested(int integerArgument1) {
         if (integerArgument1 != 25) {
           return;
         }
-        ((PlayerNameAvailabilityValidator) (this.uiComponentPart021State0002.getFieldValidator(-96))).performAction0826(true);
+        ((PlayerNameAvailabilityValidator) (this.uiComponentPart021State0002.getFieldValidator(-96))).invalidateCheckedName(true);
     }
 
     private final int computeInteger1589(int integerArgument1, UiComponent uiComponentArgument2, int integerArgument3, String stringArgument4, String stringArgument5, int integerArgument6) {
@@ -464,7 +464,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         }
     }
 
-    public final void performAction0317(String stringArgument1, int integerArgument2) {
+    public final void onNameSuggestionSelected(String stringArgument1, int integerArgument2) {
         ValidatedTextField uiComponentPart021Local1 = null;
         int discarded$0 = 0;
         String stringLocal3 = null;
@@ -523,7 +523,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
             }
           }
           if (NetworkArchiveRequestManager.sceneWidgetState0098.integerState0891 != 0) {
-            MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(NetworkArchiveRequestManager.sceneWidgetState0098.integerState0892, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0886, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0896, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0915, integerArgument1, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019, (String) null, 0L);
+            MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(NetworkArchiveRequestManager.sceneWidgetState0098.integerState0892, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0886, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0896, NetworkArchiveRequestManager.sceneWidgetState0098.integerState0915, integerArgument1, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, (String) null, 0L);
           }
           mixedSupport056Local8 = UiComponentPart033.computeMixedSupport0561813((byte) 55, ComponentContainer.integerState0377, integerArgument4, SecondaryNodeHashTable.integerState0540);
           if (mixedSupport056Local8 != null) {
@@ -558,7 +558,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
           uiComponentPart011Local2 = new UiComponentPart011(((FieldValidatorProvider) ((Object) uiComponentArgument3)).getFieldValidator(-126));
           this.performAction0895(uiComponentPart011Local2, (byte) -55);
           if (byteArgument2 != -107) {
-            this.uiComponentPart007State0002 = (UiComponentPart007) null;
+            this.uiComponentPart007State0002 = (NameSuggestionsPanel) null;
           }
           uiComponentPart011Local2.performAction0222(15, 15, uiComponentPart006Local3.integerState0107 + (uiComponentPart006Local3.integerState0110 + 3), uiComponentPart006Local3.integerState0104 + (-15 + uiComponentPart006Local3.integerState0108 >> 1), -16555);
           stackIntegerLocal4 = uiComponentPart006Local3.integerState0108;

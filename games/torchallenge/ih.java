@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends kj implements sg {
+final class ih extends kj implements WidgetActivationListener {
     static int[] field_O;
-    private ng field_M;
-    private ng field_P;
+    private InteractiveWidget field_M;
+    private InteractiveWidget field_P;
     static int field_K;
-    private ng field_L;
+    private InteractiveWidget field_L;
     static int[] field_N;
     static int field_J;
 
     public ih() {
         super(0, 0, 476, 225, (j) null);
-        this.field_M = new ng(RandomAccessCacheFile.field_a, (gg) null);
-        this.field_P = new ng(uk.field_Q, (gg) null);
-        this.field_L = new ng(cj.field_k, (gg) null);
+        this.field_M = new InteractiveWidget(RandomAccessCacheFile.field_a, (gg) null);
+        this.field_P = new InteractiveWidget(uk.field_Q, (gg) null);
+        this.field_L = new InteractiveWidget(cj.field_k, (gg) null);
         cl var1 = new cl();
         this.field_M.field_q = (j) ((Object) var1);
         this.field_P.field_q = (j) ((Object) var1);
@@ -35,7 +35,7 @@ final class ih extends kj implements sg {
         this.a(0, this.field_L);
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -78,7 +78,7 @@ final class ih extends kj implements sg {
         if (param0 >= -77) {
           ih.resetDeclaredStaticState(-21);
         }
-        stackIn_6_0 = (gj.field_c >= 10) && (li.field_K >= 13);
+        stackIn_6_0 = (gj.field_c >= 10) && (NameSuggestionsPanel.field_K >= 13);
         return stackIn_6_0;
     }
 
@@ -92,7 +92,7 @@ final class ih extends kj implements sg {
         ra.field_q = false;
         dk.field_a = 0;
         ah.field_i = false;
-        ng.field_I = 0;
+        InteractiveWidget.field_I = 0;
         ni.field_b = false;
         lc.field_r = false;
         me.field_g = 0;
@@ -229,13 +229,13 @@ final class ih extends kj implements sg {
           }
           if (param0 > 0 &&
             param3 > 0) {
-            var21 = param5.c();
+            var21 = param5.copy();
             var30 = SoftwareRasterizer.pixels;
             var10 = SoftwareRasterizer.width;
             var11 = SoftwareRasterizer.height;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param5.d();
+            param5.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6 * param5.storedWidth + param1;
             var14 = -param0 + param5.storedWidth;

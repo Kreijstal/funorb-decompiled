@@ -2896,7 +2896,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("fs_timeout", 24);
                 if (null != var2) {
-                  ph.field_y = PcmResampler.a(123, var2);
+                  InteractiveWidget.field_y = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("fs_button_tryagain", 24);
                 if (null != var2) {

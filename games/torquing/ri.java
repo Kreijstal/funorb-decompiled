@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends lg {
+final class ri extends InteractiveWidget {
     private hq field_G;
     int field_C;
     private int field_D;

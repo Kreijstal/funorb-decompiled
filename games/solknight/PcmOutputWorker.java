@@ -54,7 +54,7 @@ final class PcmOutputWorker implements Runnable {
         this.field_f = false;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int multiplyFixed16(int param0, int param1, int param2) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends lg {
+final class ok extends InteractiveWidget {
     static int[] field_D;
     static int field_E;
     static int[] field_C;
@@ -133,9 +133,9 @@ final class ok extends lg {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_A = !this.field_A ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     private ok(String param0, ca param1) {

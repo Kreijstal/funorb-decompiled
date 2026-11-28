@@ -48,7 +48,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
         this.performAction0165(-128, 0, 0);
         super.performAction0162(-this.integerState0110 - integerArgument1, -116, integerArgument3, -integerArgument4 - this.integerState0104);
         ByteStorage.performAction1060((byte) -5);
-        NodeHashTable.rgbSpriteState0055.performAction0279(this.integerState0110 + integerArgument1, this.integerState0104 + integerArgument4, this.integerState0074);
+        NodeHashTable.rgbSpriteState0055.drawWithOpacity(this.integerState0110 + integerArgument1, this.integerState0104 + integerArgument4, this.integerState0074);
         if (integerArgument2 >= -103) {
           this.integerState0074 = -41;
         }
@@ -121,7 +121,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
           MixedSupport040.booleanState0046 = true;
           MixedSupport009.integerState0054 = integerArgument2;
           if (MixedSupport009.integerState0054 == 0) {
-            integerLocal15 = PasswordValidator.wrapBalancedText(UiComponentPart007.stringState0112, 124, MixedSupport093.integerState0568, MixedSupport138.stringArrayState0053, EditableTextField.bitmapFontState0019);
+            integerLocal15 = PasswordValidator.wrapBalancedText(NameSuggestionsPanel.stringState0112, 124, MixedSupport093.integerState0568, MixedSupport138.stringArrayState0053, EditableTextField.bitmapFontState0019);
             integerLocal17 = 3 + integerLocal15;
             EditableTextField.stringArrayState0039 = new String[integerLocal17];
             MixedSupport066.integerArrayState0119 = new int[integerLocal17];
@@ -140,7 +140,7 @@ abstract class UiComponentPart003 extends ComponentContainer {
             MixedSupport066.integerArrayState0119[-1 + integerLocal17] = 1;
             BirthDateValidator.integerArrayState0192[1] = 5;
           } else if (MixedSupport009.integerState0054 == 1) {
-            integerLocal15 = PasswordValidator.wrapBalancedText(UiComponentPart007.stringState0112, 96, MixedSupport093.integerState0568, MixedSupport138.stringArrayState0053, EditableTextField.bitmapFontState0019);
+            integerLocal15 = PasswordValidator.wrapBalancedText(NameSuggestionsPanel.stringState0112, 96, MixedSupport093.integerState0568, MixedSupport138.stringArrayState0053, EditableTextField.bitmapFontState0019);
             integerLocal17 = integerLocal15 + 2;
             MixedSupport066.integerArrayState0119 = new int[integerLocal17];
             EditableTextField.stringArrayState0039 = new String[integerLocal17];
@@ -384,23 +384,23 @@ abstract class UiComponentPart003 extends ComponentContainer {
         int integerLocal1;
         MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, NetworkSupport006.stringState0339, 80 + integerArgument1, SceneWidget.renderingSupport009State0007);
         int integerLocal2 = 145;
-        AgeValidator.rgbSpriteState0026.performAction0280(integerArgument1 + 82, integerLocal2, 18, 18);
+        AgeValidator.rgbSpriteState0026.drawScaled(integerArgument1 + 82, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, SecondaryNodeHashTable.stringState0367, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
-        MixedSupport121.computeRgbSprite1601(true, 2).performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
+        MixedSupport121.computeRgbSprite1601(true, 2).drawScaled(82 + integerArgument1, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + ((AgeValidator.integerState0360 == 0 ? 16 : 0) + MixedSupport045.computeInteger0552(188, 0, integerLocal2, MixedSupport067.stringState0301, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, integerArgument1 + 110) * 16);
         GameplayControls.performAction1750(TextLineMetrics.integerState0534, integerArgument1 + 190, 3, MixedSupport049.integerState0264, MixedSupport070.integerState0396, integerLocal2, -22981);
         SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
         SoftwareRaster.drawVerticalLine(310 + integerArgument1, 117, 242, 6316128);
         MixedSupport042.performAction0537(130, integerArgument2 ^ 12362, 16694016, MixedSupport054.stringState0233, 320 + integerArgument1, SceneWidget.renderingSupport009State0007);
         integerLocal1 = 145;
-        MixedSupport121.computeRgbSprite1601(true, 0).performAction0280(320 + integerArgument1, integerLocal1, 18, 18);
+        MixedSupport121.computeRgbSprite1601(true, 0).drawScaled(320 + integerArgument1, integerLocal1, 18, 18);
         integerLocal1 = integerLocal1 + (16 * MixedSupport045.computeInteger0552(212, 0, integerLocal1, DelegatingCanvas.stringState0123, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 0, 348 + integerArgument1) + 16);
         if (integerArgument2 != 12618) {
           UiComponentPart003.performAction0163(105, 85, false);
         }
         MixedSupport042.performAction0537(integerLocal1 + 14, 256, 16694016, MixedSupport068.stringState0303, integerArgument1 + 320, SceneWidget.renderingSupport009State0007);
         integerLocal1 += 29;
-        MixedSupport121.computeRgbSprite1601(true, 3).performAction0280(integerArgument1 + 320, integerLocal1, 18, 18);
+        MixedSupport121.computeRgbSprite1601(true, 3).drawScaled(integerArgument1 + 320, integerLocal1, 18, 18);
         integerLocal1 = integerLocal1 + (16 + MixedSupport045.computeInteger0552(212, 0, integerLocal1, NetworkSupport005.stringState0313, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 0, 348 + integerArgument1) * 16);
     }
 

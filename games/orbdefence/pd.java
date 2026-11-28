@@ -138,18 +138,18 @@ final class pd extends IntrusiveNode {
         var11 = var10 + this.field_A / 2 % var9;
         var5 = var5 - (-2 + ab.field_g[var10].field_k / 2 * var7 / 4096);
         if (this.field_i > 0) {
-          var28 = ab.field_g[var11].f();
+          var28 = ab.field_g[var11].copy();
           var29 = var28;
           for (var13 = 0; var13 < var29.field_v.length; var13++) {
             var29.field_v[var13] = ((EditableTextField.a(65280, var28.field_v[var13]) >> 8) + (EditableTextField.a(16711680, var28.field_v[var13]) >> 16)) / 8 * 65793 + EditableTextField.a(255, var28.field_v[var13]) / 2 * 257;
           }
-          var29.a(var4, var5, 0, var7);
+          var29.drawRotated(var4, var5, 0, var7);
         } else if (this.field_y == 9 &&
           this.field_E == 0) {
           if (!this.field_n) {
             var12 = ab.field_g[var11].field_o * var7 >> 12;
             var13 = var7 * ab.field_g[var11].field_k >> 12;
-            ab.field_g[var11].d(-(var12 >> 1) + var4, -(var13 >> 1) + var5, var12, var13, 100);
+            ab.field_g[var11].drawScaledAlpha(-(var12 >> 1) + var4, -(var13 >> 1) + var5, var12, var13, 100);
           } else {
             var30 = ab.field_g[var11];
             var13_ref_hj = new RgbSprite(var30.field_o, var30.field_k);
@@ -186,10 +186,10 @@ final class pd extends IntrusiveNode {
               }
               var15++;
             }
-            var13_ref_hj.a(var4, var5, 0, var7);
+            var13_ref_hj.drawRotated(var4, var5, 0, var7);
           }
         } else {
-          ab.field_g[var11].a(var4, var5, 0, var7);
+          ab.field_g[var11].drawRotated(var4, var5, 0, var7);
         }
         if (this.field_f > 0) {
           var12Lifetime1 = var7 * ab.field_g[var11].field_o >> 12;

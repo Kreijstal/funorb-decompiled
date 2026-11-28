@@ -365,8 +365,8 @@ final class hh extends mg {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_A instanceof kf) ||
-            ((kf) (this.field_A)).field_D) &&
+          if ((!(this.field_A instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_A)).field_D) &&
             this.field_h == 1) {
             var5_int = -param3 + (-this.field_C + bk.field_b);
             var6 = -param2 + ResourceArchive.field_e - this.field_K;

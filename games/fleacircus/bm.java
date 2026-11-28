@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm extends gj implements da {
-    private bb[] field_F;
+final class bm extends gj implements WidgetActivationListener {
+    private InteractiveWidget[] field_F;
     private bd field_L;
     private String field_H;
     static int field_K;
@@ -12,7 +12,7 @@ final class bm extends gj implements da {
     private int[] field_I;
     private int field_J;
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -59,8 +59,8 @@ final class bm extends gj implements da {
         if (this.field_J >= param1) {
           return;
         }
-        bb[] var7 = new bb[param1];
-        bb[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = param0; this.field_J > var5; var5++) {
           var7[var5] = this.field_F[var5];
@@ -78,11 +78,11 @@ final class bm extends gj implements da {
         field_N = null;
     }
 
-    final bb a(kd param0, boolean param1, String param2) {
-        bb var4 = null;
+    final InteractiveWidget a(kd param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        bb stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -90,7 +90,7 @@ final class bm extends gj implements da {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new bb(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           var4.field_p = (ComponentLayout) ((Object) new ri());
           if (!param1) {
             this.field_G = (BitmapFont) null;

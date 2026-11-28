@@ -184,8 +184,8 @@ final class tj extends kf {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_t instanceof dk) ||
-            ((dk) (this.field_t)).field_u) &&
+          if ((!(this.field_t instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_t)).field_u) &&
             this.field_l == 1) {
             var5_int = -this.field_A + (pe.field_d - param1);
             var6 = -param3 + (la.field_c - this.field_x);
@@ -294,12 +294,12 @@ final class tj extends kf {
             var4 = ni.a(127, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!dk.a((byte) -121, var4.charAt(0)) &&
-                !dk.a((byte) -127, var4.charAt(var4.length() - 1))) {
+              if (!InteractiveWidget.a((byte) -121, var4.charAt(0)) &&
+                !InteractiveWidget.a((byte) -127, var4.charAt(var4.length() - 1))) {
                 var5 = 0;
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (dk.a((byte) -122, (char) var7)) {
+                  if (InteractiveWidget.a((byte) -122, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

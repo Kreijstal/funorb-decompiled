@@ -109,10 +109,10 @@ final class wr extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (qi.field_b != null) {
-            qi.field_b.field_J.a(args, (byte) -52);
+            qi.field_b.field_J.setNameSuggestions(args, (byte) -52);
           }
           if (MartyrEvent.field_q != null) {
-            MartyrEvent.field_q.field_E.a(args, (byte) -35);
+            MartyrEvent.field_q.field_E.setNameSuggestions(args, (byte) -35);
           }
           if (param1 == -38) {
             return;

@@ -121,7 +121,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void e(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 <= 79) {
           AccountNameAvailabilityValidator.clearStaticReferences(false);

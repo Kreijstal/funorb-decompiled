@@ -69,20 +69,20 @@ final class ChessBoardRenderer extends ChessBoardState {
         qk.field_k.field_w = SoftwareRasterizer.field_h;
         qk.field_k.field_t = SoftwareRasterizer.field_c;
         if (hd.field_f != null) {
-          hd.field_f.e();
+          hd.field_f.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
         } else {
           hd.field_f = new RgbSprite(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-          hd.field_f.e();
+          hd.field_f.bindAsRenderTarget();
         }
         this.a(param3, param1, 64, -13147);
         if (rn.field_b != 0 &&
-          t.field_Q) {
-          this.field_A.e();
+          NameSuggestionsPanel.field_Q) {
+          this.field_A.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
         }
         SoftwareRasterizer.setRasterBuffer(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
-        if (t.field_Q) {
+        if (NameSuggestionsPanel.field_Q) {
           for (var7 = 0; var7 < this.field_z.length; var7++) {
             var8_ref_km__ = this.field_z;
             var9 = var7;
@@ -119,11 +119,11 @@ final class ChessBoardRenderer extends ChessBoardState {
             param2 -= 4;
             var23 = new int[]{64 + (param0 << 7), param1 << 7, 64 + (param2 << 7), 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
             if (rn.field_b != 0 &&
-              t.field_Q &&
+              NameSuggestionsPanel.field_Q &&
               var16 != var8) {
-              this.field_A.e();
+              this.field_A.bindAsRenderTarget();
               var21.a(param3, var23);
-              this.field_M.e();
+              this.field_M.bindAsRenderTarget();
               var22.a(param3, var23);
               var22.a();
               var11 = dd.field_x;
@@ -143,17 +143,17 @@ final class ChessBoardRenderer extends ChessBoardState {
                 var14[3] = var12;
               }
               this.field_N[var7Lifetime1] = new RgbSprite(var10 - var11 + 2, var12 - var13 + 2);
-              this.field_N[var7Lifetime1].e();
-              this.field_M.b(1 - var11, 1 - var13);
+              this.field_N[var7Lifetime1].bindAsRenderTarget();
+              this.field_M.draw(1 - var11, 1 - var13);
               this.field_N[var7Lifetime1].field_s = var11;
               this.field_N[var7Lifetime1].field_r = var13;
-              this.field_N[var7Lifetime1].a(64, 64, 64);
-              this.field_M.e();
+              this.field_N[var7Lifetime1].adjustRgbChannelsInPlace(64, 64, 64);
+              this.field_M.bindAsRenderTarget();
               SoftwareRasterizer.setClip(var11, var13, var10, var12);
               SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
             }
-            if (t.field_Q) {
-              this.field_M.e();
+            if (NameSuggestionsPanel.field_Q) {
+              this.field_M.bindAsRenderTarget();
               var20.a(param3, var23);
               var20.a();
               var10Lifetime1 = dd.field_Z;
@@ -161,23 +161,23 @@ final class ChessBoardRenderer extends ChessBoardState {
               var12Lifetime1 = dd.field_eb;
               var13Lifetime1 = dd.field_D;
               this.field_z[var7Lifetime1] = new RgbSprite(var10Lifetime1 - var11Lifetime1 + 2, var12Lifetime1 - var13Lifetime1 + 2);
-              this.field_z[var7Lifetime1].e();
-              this.field_M.b(1 - var11Lifetime1, 1 - var13Lifetime1);
+              this.field_z[var7Lifetime1].bindAsRenderTarget();
+              this.field_M.draw(1 - var11Lifetime1, 1 - var13Lifetime1);
               this.field_z[var7Lifetime1].field_s = var11Lifetime1;
               this.field_z[var7Lifetime1].field_r = var13Lifetime1;
-              this.field_M.e();
+              this.field_M.bindAsRenderTarget();
               SoftwareRasterizer.setClip(var11Lifetime1, var13Lifetime1, var10Lifetime1, var12Lifetime1);
               SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
               decompiledFrameRemainder0 = (IntrusiveDeque.field_f == -1);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_z[var7Lifetime1] != null))) {
-                decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].c(0, 0, var5, var6));
+                decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].isOpaqueAtScreenPosition(0, 0, var5, var6));
               }
             } else {
               decompiledFrameRemainder0 = (IntrusiveDeque.field_f == -1);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (this.field_z[var7Lifetime1] != null))) {
-                decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].c(0, 0, var5, var6));
+                decompiledFrameRemainder0 = !(!this.field_z[var7Lifetime1].isOpaqueAtScreenPosition(0, 0, var5, var6));
               }
             }
             if (decompiledFrameRemainder0) {
@@ -189,7 +189,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         SoftwareRasterizer.setRasterBuffer(qk.field_k.field_x, qk.field_k.field_w, qk.field_k.field_t);
         SoftwareRasterizer.resetClip();
         this.g(-1, var8);
-        t.field_Q = false;
+        NameSuggestionsPanel.field_Q = false;
     }
 
     private final void b(int param0, int param1, byte param2) {
@@ -213,9 +213,9 @@ final class ChessBoardRenderer extends ChessBoardState {
         RgbSprite var13Lifetime2;
         var11 = Chess.field_G;
         this.e(-73);
-        this.field_S.b(0, 0);
+        this.field_S.draw(0, 0);
         if (rn.field_b != 0) {
-          this.field_A.b(0, 0, 128);
+          this.field_A.drawWithOpacity(0, 0, 128);
         }
         var4 = 0;
         if (param2 < 19) {
@@ -235,21 +235,21 @@ final class ChessBoardRenderer extends ChessBoardState {
               var8 = var7;
               var9 = -var7 / 4;
               var10 = -3 * var7 / 4;
-              var13Lifetime2 = var12.c();
+              var13Lifetime2 = var12.copy();
               var6Lifetime2 = var13Lifetime2;
-              var13Lifetime2.a(var8, var9, var10);
+              var13Lifetime2.adjustRgbChannelsInPlace(var8, var9, var10);
             }
             var7Lifetime1 = 192 + (int)(Math.sin((double)qb.field_a / 10.0) * 63.0);
             if (var5 == this.field_m) {
-              var14 = var6Lifetime2.c();
+              var14 = var6Lifetime2.copy();
               var6Lifetime2 = var14;
-              var14.f(16711680);
+              var14.addOutline(16711680);
             }
             if (var5 != this.field_j) {
               if (param1 == var5) {
-                var6Lifetime2.b(0, 0, (-128 + var7Lifetime1) / 2);
+                var6Lifetime2.drawWithOpacity(0, 0, (-128 + var7Lifetime1) / 2);
               } else {
-                var6Lifetime2.b(0, 0);
+                var6Lifetime2.draw(0, 0);
               }
             } else {
               if (this.field_f[var5] == 0) {
@@ -259,9 +259,9 @@ final class ChessBoardRenderer extends ChessBoardState {
               }
               var8Lifetime1 = (var9Lifetime1 == 0) ? 0 : 8421504;
               if (var5 == param1) {
-                var6Lifetime2.b(0, 0, (var7Lifetime1 - 128) / 2);
+                var6Lifetime2.drawWithOpacity(0, 0, (var7Lifetime1 - 128) / 2);
               } else {
-                var6Lifetime2.b(0, 0, var7Lifetime1, var8Lifetime1);
+                var6Lifetime2.drawTinted(0, 0, var7Lifetime1, var8Lifetime1);
               }
             }
           }
@@ -277,9 +277,9 @@ final class ChessBoardRenderer extends ChessBoardState {
         }
         int var3 = SoftwareRasterizer.field_h;
         int var4 = SoftwareRasterizer.field_c;
-        this.field_S.e();
+        this.field_S.bindAsRenderTarget();
         SoftwareRasterizer.saveClip(this.field_x);
-        this.field_p.e(0, 0);
+        this.field_p.drawMultiply(0, 0);
         SoftwareRasterizer.restoreClip(this.field_x);
         SoftwareRasterizer.setRasterBuffer(var5, var3, var4);
     }
@@ -482,7 +482,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           var19 = SoftwareRasterizer.field_d;
           var8 = SoftwareRasterizer.field_h;
           var9 = SoftwareRasterizer.field_c;
-          this.field_S.e();
+          this.field_S.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var10 = -1;
           if (MatchingFieldValidator.field_p != null) {
@@ -517,7 +517,7 @@ final class ChessBoardRenderer extends ChessBoardState {
             var13.a(param0, var12);
             if (IntrusiveDeque.field_f == -1 &&
               this.field_j == -1 &&
-              this.field_S.c(0, 0, BufferedSocket.field_k, rf.field_b)) {
+              this.field_S.isOpaqueAtScreenPosition(0, 0, BufferedSocket.field_k, rf.field_b)) {
               this.field_j = var11;
             }
           }
@@ -568,7 +568,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         if (vk.field_e) {
           this.b(var11, var2, 0, var4);
         }
-        this.field_F.d(0, 0);
+        this.field_F.drawOpaque(0, 0);
         this.a(var2, var3, var4, var11);
         this.b(this.m(93), this.d(-1), (byte) 122);
     }
@@ -613,15 +613,15 @@ final class ChessBoardRenderer extends ChessBoardState {
           qk.field_k.field_w = SoftwareRasterizer.field_h;
           vk.field_e = false;
           qk.field_k.field_x = SoftwareRasterizer.field_d;
-          this.field_F.e();
+          this.field_F.bindAsRenderTarget();
           var5_int = 170 + ((int)(500.0 * this.field_t) + ec.c((byte) -63) / 2);
           SoftwareRasterizer.clearRaster();
           if (ph.field_f != null) {
             var6_int = -(int)((double)ph.field_f.field_w * this.field_T / 6.283185307179586);
             var7 = var5_int - 120;
-            ph.field_f.b(var6_int, var7);
-            ph.field_f.b(-ph.field_f.field_w + var6_int, var7);
-            ph.field_f.b(var6_int + ph.field_f.field_w, var7);
+            ph.field_f.draw(var6_int, var7);
+            ph.field_f.draw(-ph.field_f.field_w + var6_int, var7);
+            ph.field_f.draw(var6_int + ph.field_f.field_w, var7);
           }
           stackIn_5_0 = 0;
           stackIn_5_1 = var5_int;
@@ -672,7 +672,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           if (rn.field_b != 0) {
             sl.field_g.a(param0, var6);
           }
-          qk.field_k.e();
+          qk.field_k.bindAsRenderTarget();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -807,7 +807,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         qk.field_k.field_w = SoftwareRasterizer.field_h;
         qk.field_k.field_x = SoftwareRasterizer.field_d;
         qk.field_k.field_t = SoftwareRasterizer.field_c;
-        hd.field_f.e();
+        hd.field_f.bindAsRenderTarget();
         if (!param5) {
           SoftwareRasterizer.clearRaster();
         } else {
@@ -868,18 +868,18 @@ final class ChessBoardRenderer extends ChessBoardState {
               var22 = stackIn_49_0;
               stackIn_52_0 = (GzipInflater.field_b[var15] != 4096) ? 1 : 0;
               var23 = stackIn_52_0;
-              cl.field_c[var22][var23][var19][var18].d(var11Lifetime1, var12Lifetime1);
+              cl.field_c[var22][var23][var19][var18].drawOpaque(var11Lifetime1, var12Lifetime1);
             } else {
               if (rn.field_b != 0) {
-                var26 = rl.field_d[var19][var18].c();
+                var26 = rl.field_d[var19][var18].copy();
                 for (var22 = 0; 4 > var22; var22++) {
-                  var26.f(16711680);
+                  var26.addOutline(16711680);
                 }
-                var26.a(var11Lifetime1, var12Lifetime1);
+                var26.drawQuarterSizeAveraged(var11Lifetime1, var12Lifetime1);
               } else {
-                var25 = hb.field_b[var19][var18].c();
-                var25.f(16711680);
-                var25.b(var11Lifetime1, var12Lifetime1);
+                var25 = hb.field_b[var19][var18].copy();
+                var25.addOutline(16711680);
+                var25.draw(var11Lifetime1, var12Lifetime1);
               }
             }
             if (param1 &&
@@ -938,15 +938,15 @@ final class ChessBoardRenderer extends ChessBoardState {
         var30 = (int[]) ((Object) this.field_H.clone());
         se.a(var20Lifetime1, var30, 45, (byte) 44, var19Lifetime1, var21Lifetime1, var18Lifetime1);
         PolygonScanlineRasterizer.fillPolygonAlpha(var30, 16711680, var22Lifetime1);
-        qk.field_k.e();
+        qk.field_k.bindAsRenderTarget();
         if (param5) {
           if (IntrusiveDeque.field_f == -1) {
-            hd.field_f.b(0, 0, 64);
+            hd.field_f.drawWithOpacity(0, 0, 64);
           } else {
-            hd.field_f.d(0, 0);
+            hd.field_f.drawOpaque(0, 0);
           }
         } else {
-          hd.field_f.d(0, 0);
+          hd.field_f.drawOpaque(0, 0);
         }
         return var10 - 315;
     }
@@ -1077,7 +1077,7 @@ final class ChessBoardRenderer extends ChessBoardState {
     }
 
     final void setCameraOrbit(double param0, double param1, boolean param2) {
-        t.field_Q = true;
+        NameSuggestionsPanel.field_Q = true;
         vk.field_e = param2 ? true : false;
         this.field_T = param1 % 6.283185307179586;
         this.field_t = param0 % 6.283185307179586;
@@ -1109,13 +1109,13 @@ final class ChessBoardRenderer extends ChessBoardState {
         int[] var4 = var8;
         int var5 = SoftwareRasterizer.field_h;
         int var6 = SoftwareRasterizer.field_c;
-        this.field_q.e();
+        this.field_q.bindAsRenderTarget();
         int var7 = 0;
         if (this.field_K != null) {
           var7 = this.field_K.a(false, false, param1, 0, (byte) -100, false);
         }
         SoftwareRasterizer.setRasterBuffer(var8, var5, var6);
-        this.field_q.b(120, ec.c((byte) -63) / 2 - 21, 196);
+        this.field_q.drawWithOpacity(120, ec.c((byte) -63) / 2 - 21, 196);
         return var7;
     }
 
@@ -1132,7 +1132,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         var3 = var9;
         var4 = SoftwareRasterizer.field_h;
         var5 = SoftwareRasterizer.field_c;
-        this.field_p.e();
+        this.field_p.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
         if (param0 != -1) {
           return;
@@ -1142,7 +1142,7 @@ final class ChessBoardRenderer extends ChessBoardState {
           if (rn.field_b != 0 &&
             this.field_N[var6] != null &&
             param1 != var7) {
-            this.field_N[var6].b(0, 0);
+            this.field_N[var6].draw(0, 0);
           }
         }
         SoftwareRasterizer.setRasterBuffer(var9, var4, var5);

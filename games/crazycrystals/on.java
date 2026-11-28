@@ -18,18 +18,18 @@ final class on {
           SoftwareRasterizer.clearRaster();
           sn.field_c = 0;
           LevelCompleteScene.drawModelsInDepthOrder((byte) -67);
-          var2 = var1.d();
+          var2 = var1.copy();
           var3 = 0;
           if (param0 > -66) {
             on.clearStaticReferences((byte) -56);
           }
           while (var3 < 15) {
-            var2.g(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
           }
-          eq.field_k.a();
-          var1.b(0, 0);
+          eq.field_k.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           lg.a(1);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "on.A(" + param0 + ')');

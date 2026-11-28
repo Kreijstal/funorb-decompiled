@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends nk implements vg {
+final class AccountCreationResultPanel extends nk implements WidgetActivationListener {
     static int[] field_Tb;
     static DungeonTileState field_Pb;
     private AccountRegistrationPanel field_Ob;
@@ -150,7 +150,7 @@ final class AccountCreationResultPanel extends nk implements vg {
         }
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         if (this.field_Wb) {
           na.a(false, 2591221, true);
           return;
@@ -186,7 +186,7 @@ final class AccountCreationResultPanel extends nk implements vg {
             if (null != param0.suggestions) {
               var4 = fp.field_a;
               if (null != this.field_Ob) {
-                this.field_Ob.a(127);
+                this.field_Ob.onNameSuggestionsRefreshRequested(127);
               }
             } else {
               var4 = param0.message;
@@ -336,7 +336,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           return null;
         }
         if (param1 == 22) {
-          return ck.field_G;
+          return InteractiveWidget.field_G;
         }
         if (param1 == 24) {
           return EmailFormatValidator.field_m;
@@ -345,7 +345,7 @@ final class AccountCreationResultPanel extends nk implements vg {
           return fl.field_j;
         }
         if (param1 == 26) {
-          return ck.field_G;
+          return InteractiveWidget.field_G;
         }
         if (param1 == 27) {
           return hh.field_o;

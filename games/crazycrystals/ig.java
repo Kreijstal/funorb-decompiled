@@ -330,16 +330,16 @@ class ig extends pn {
         int var7Lifetime1;
         int var7Lifetime2;
         if (param1 != 24) {
-          this.field_o[this.field_n / 3].a(param4, -param2 + param5, param1 * 2, param2 * 3, 256);
+          this.field_o[this.field_n / 3].drawScaledAdditive(param4, -param2 + param5, param1 * 2, param2 * 3, 256);
           var7 = 49 / ((74 - param0) / 41);
           return;
         }
         if (param2 == 24) {
-          this.field_o[this.field_n / 3].d(param4, -param2 + param5, 256);
+          this.field_o[this.field_n / 3].drawAdditive(param4, -param2 + param5, 256);
           var7Lifetime1 = 49 / ((74 - param0) / 41);
           return;
         }
-        this.field_o[this.field_n / 3].a(param4, -param2 + param5, param1 * 2, param2 * 3, 256);
+        this.field_o[this.field_n / 3].drawScaledAdditive(param4, -param2 + param5, param1 * 2, param2 * 3, 256);
         var7Lifetime2 = 49 / ((74 - param0) / 41);
     }
 

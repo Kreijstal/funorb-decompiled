@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends rg {
+final class ba extends InteractiveWidget {
     static String field_Q;
     private int field_R;
     private FieldValidator field_S;
@@ -133,22 +133,22 @@ final class ba extends rg {
               FrameTimer.field_g = new RgbSprite(var9, var10);
               vm.a(FrameTimer.field_g, -8409);
             }
-            var15.a(112, 144, var15.field_t << 4, var15.field_x << 4, -this.field_R << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_t << 4, var15.field_x << 4, -this.field_R << 10, 4096);
             ib.b(false);
-            FrameTimer.field_g.c(var5 - var15.field_t, -var15.field_x + var6, 256);
+            FrameTimer.field_g.drawAdditive(var5 - var15.field_t, -var15.field_x + var6, 256);
             return;
           }
           if (qh.field_x != var8) {
             if (var8 == fb.field_e) {
               var17 = gg.field_q[2];
-              var17.c(-(var17.field_u >> 1) + var5, -(var17.field_w >> 1) + var6, 256);
+              var17.drawAdditive(-(var17.field_u >> 1) + var5, -(var17.field_w >> 1) + var6, 256);
               return;
             }
             if (var8 != nn.field_q) {
               return;
             }
             var18 = gg.field_q[1];
-            var18.c(var5 - (var18.field_u >> 1), var6 - (var18.field_w >> 1), 256);
+            var18.drawAdditive(var5 - (var18.field_u >> 1), var6 - (var18.field_w >> 1), 256);
             return;
           }
           var16 = gg.field_q[0];
@@ -172,9 +172,9 @@ final class ba extends rg {
               }
             }
           }
-          var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -this.field_R << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_t << 4, var16.field_x << 4, -this.field_R << 10, 4096);
           ib.b(false);
-          FrameTimer.field_g.c(var5 - var16.field_t, -var16.field_x + var6, 256);
+          FrameTimer.field_g.drawAdditive(var5 - var16.field_t, -var16.field_x + var6, 256);
           return;
         }
         var5Lifetime1 = (this.field_F >> 1) + (this.field_q + param3);
@@ -184,14 +184,14 @@ final class ba extends rg {
           qh.field_x != var8Lifetime1) {
           if (var8Lifetime1 == fb.field_e) {
             var20 = gg.field_q[2];
-            var20.c(-(var20.field_u >> 1) + var5Lifetime1, -(var20.field_w >> 1) + var6Lifetime1, 256);
+            var20.drawAdditive(-(var20.field_u >> 1) + var5Lifetime1, -(var20.field_w >> 1) + var6Lifetime1, 256);
             return;
           }
           if (var8Lifetime1 != nn.field_q) {
             return;
           }
           var21 = gg.field_q[1];
-          var21.c(var5Lifetime1 - (var21.field_u >> 1), var6Lifetime1 - (var21.field_w >> 1), 256);
+          var21.drawAdditive(var5Lifetime1 - (var21.field_u >> 1), var6Lifetime1 - (var21.field_w >> 1), 256);
           return;
         }
         var22 = gg.field_q[0];
@@ -214,9 +214,9 @@ final class ba extends rg {
             }
           }
         }
-        var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -this.field_R << 10, 4096);
+        var22.drawRotatedAbout(112, 144, var22.field_t << 4, var22.field_x << 4, -this.field_R << 10, 4096);
         ib.b(false);
-        FrameTimer.field_g.c(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
+        FrameTimer.field_g.drawAdditive(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
     }
 
     ba(FieldValidator param0) {

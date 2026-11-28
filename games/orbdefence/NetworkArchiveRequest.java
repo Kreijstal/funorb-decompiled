@@ -149,9 +149,9 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, 256 - var5);
           ValidatedTextField.g((byte) -105);
           if (150 <= ji.field_b) {
-            CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
+            CrossfadingMidiPcmStream.field_j.drawWithOpacity(15 + var3, var4 + 10, var5);
           } else {
-            kf.field_a.d(var3, var4);
+            kf.field_a.drawHalfSize(var3, var4);
           }
           var6 = ji.field_b - 125;
           if (param1) {
@@ -162,19 +162,19 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             if (20 <= var6) {
               if (var6 >= 30) {
                 var7 = (12800 - 256 * var6) / 20;
-                jc.field_k.e(var3, var4, var7);
+                jc.field_k.drawAdditive(var3, var4, var7);
               } else {
-                jc.field_k.e(var3, var4, 256);
+                jc.field_k.drawAdditive(var3, var4, 256);
               }
             } else {
               var7 = 256 * var6 / 20;
-              jc.field_k.e(var3, var4, var7);
+              jc.field_k.drawAdditive(var3, var4, var7);
             }
           }
         } else {
           ValidatedTextField.g((byte) -105);
           if (150 <= ji.field_b) {
-            CrossfadingMidiPcmStream.field_j.a(15 + var3, var4 + 10, var5);
+            CrossfadingMidiPcmStream.field_j.drawWithOpacity(15 + var3, var4 + 10, var5);
             var6 = ji.field_b - 125;
             if (param1) {
               field_w = (AudioOutput) null;
@@ -183,13 +183,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 if (20 <= var6) {
                   if (var6 >= 30) {
                     var7 = (12800 - 256 * var6) / 20;
-                    jc.field_k.e(var3, var4, var7);
+                    jc.field_k.drawAdditive(var3, var4, var7);
                   } else {
-                    jc.field_k.e(var3, var4, 256);
+                    jc.field_k.drawAdditive(var3, var4, 256);
                   }
                 } else {
                   var7 = 256 * var6 / 20;
-                  jc.field_k.e(var3, var4, var7);
+                  jc.field_k.drawAdditive(var3, var4, var7);
                 }
               }
               var6 = ji.field_b - 140;
@@ -198,7 +198,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 if (20 > var6) {
                   var7 = 256 * var6 / 20;
                 }
-                fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
               }
             } else {
               if (0 >= var6) {
@@ -208,7 +208,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                   if (20 > var6) {
                     var7 = 256 * var6 / 20;
                   }
-                  fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                  fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
                 }
               } else {
                 if (var6 >= 50) {
@@ -218,41 +218,41 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                     if (20 > var6) {
                       var7 = 256 * var6 / 20;
                     }
-                    fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                    fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
                   }
                 } else {
                   if (20 > var6) {
                     var7 = 256 * var6 / 20;
-                    jc.field_k.e(var3, var4, var7);
+                    jc.field_k.drawAdditive(var3, var4, var7);
                     var6 = ji.field_b - 140;
                     if (var6 > 0) {
                       var7 = 256;
                       if (20 > var6) {
                         var7 = 256 * var6 / 20;
                       }
-                      fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                      fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
                     }
                   } else {
                     if (var6 < 30) {
-                      jc.field_k.e(var3, var4, 256);
+                      jc.field_k.drawAdditive(var3, var4, 256);
                       var6 = ji.field_b - 140;
                       if (var6 > 0) {
                         var7 = 256;
                         if (20 > var6) {
                           var7 = 256 * var6 / 20;
                         }
-                        fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                        fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
                       }
                     } else {
                       var7 = (12800 - 256 * var6) / 20;
-                      jc.field_k.e(var3, var4, var7);
+                      jc.field_k.drawAdditive(var3, var4, var7);
                       var6 = ji.field_b - 140;
                       if (var6 > 0) {
                         var7 = 256;
                         if (20 > var6) {
                           var7 = 256 * var6 / 20;
                         }
-                        fd.field_a.a(var3 + 15, 10 + var4, var7 * var5 >> 8);
+                        fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7 * var5 >> 8);
                       }
                     }
                   }
@@ -261,7 +261,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             }
             return;
           }
-          kf.field_a.d(var3, var4);
+          kf.field_a.drawHalfSize(var3, var4);
           var6 = ji.field_b - 125;
           if (param1) {
             field_w = (AudioOutput) null;
@@ -270,13 +270,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               if (20 <= var6) {
                 if (var6 >= 30) {
                   var7 = (12800 - 256 * var6) / 20;
-                  jc.field_k.e(var3, var4, var7);
+                  jc.field_k.drawAdditive(var3, var4, var7);
                 } else {
-                  jc.field_k.e(var3, var4, 256);
+                  jc.field_k.drawAdditive(var3, var4, 256);
                 }
               } else {
                 var7 = 256 * var6 / 20;
-                jc.field_k.e(var3, var4, var7);
+                jc.field_k.drawAdditive(var3, var4, var7);
               }
             }
           } else {
@@ -284,13 +284,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               var6 < 50) {
               if (20 > var6) {
                 var7 = 256 * var6 / 20;
-                jc.field_k.e(var3, var4, var7);
+                jc.field_k.drawAdditive(var3, var4, var7);
               } else {
                 if (var6 < 30) {
-                  jc.field_k.e(var3, var4, 256);
+                  jc.field_k.drawAdditive(var3, var4, 256);
                 } else {
                   var7 = (12800 - 256 * var6) / 20;
-                  jc.field_k.e(var3, var4, var7);
+                  jc.field_k.drawAdditive(var3, var4, var7);
                 }
               }
             }
@@ -302,7 +302,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           if (20 > var6Lifetime1) {
             var7Lifetime1 = 256 * var6Lifetime1 / 20;
           }
-          fd.field_a.a(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
+          fd.field_a.drawWithOpacity(var3 + 15, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

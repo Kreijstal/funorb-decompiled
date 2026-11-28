@@ -23,7 +23,7 @@ final class ua {
           var2 = (String) null;
           ua.a((ResourceArchive) null, (String) null, -14, (ResourceArchive) null, (String) null);
         }
-        stackIn_6_0 = (null != nk.field_b) && (lj.field_z.a(-65));
+        stackIn_6_0 = (null != nk.field_b) && (InteractiveWidget.field_z.a(-65));
         return stackIn_6_0;
     }
 

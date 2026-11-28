@@ -31,8 +31,8 @@ final class v extends ik {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof kf) {
-            param2 = param2 & ((kf) (param3)).field_D;
+          if (param3 instanceof InteractiveWidget) {
+            param2 = param2 & ((InteractiveWidget) (param3)).field_D;
           }
           if (param2) {
             if (var6_int == 0) {

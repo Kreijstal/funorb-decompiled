@@ -62,7 +62,7 @@ final class w extends wd implements ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -156,7 +156,7 @@ final class w extends wd implements ButtonListener {
         this.field_E = false;
         if (param0 != 0) {
           ButtonWidget var3 = (ButtonWidget) null;
-          this.a((ButtonWidget) null, -7, -55, -15, 33);
+          this.onWidgetActivated((ButtonWidget) null, -7, -55, -15, 33);
         }
     }
 

@@ -127,26 +127,26 @@ final class hm extends UiWidget {
           var5_int = this.width + param2;
           TextFieldValidator.a(-this.field_C.field_r + var5_int, param1, 16105, param1 + this.height, this.field_C.field_r + param2);
           for (var6 = -this.field_A + param2; var6 < var5_int; var6 = var6 + param0.field_r) {
-            param0.b(var6, param1);
+            param0.draw(var6, param1);
           }
           MessageKeys.a(false);
           if (SoftwareRasterizer.field_b <= param2 + this.field_C.field_r) {
             il.a(1, this.field_I);
-            param0.b(-this.field_A, 0);
-            param0.b(2 * this.field_K - this.field_A, 0);
+            param0.draw(-this.field_A, 0);
+            param0.draw(2 * this.field_K - this.field_A, 0);
             this.field_z.drawMultiply(0, 0);
             MessageKeys.a(false);
-            this.field_I.b(param2, param1);
+            this.field_I.draw(param2, param1);
           }
           if (SoftwareRasterizer.field_f >= -this.field_C.field_r + var5_int) {
             il.a(1, this.field_I);
             for (var7 = -this.field_C.field_r + (this.width + this.field_A); 2 * this.field_K < var7; var7 = var7 - 2 * this.field_K) {
             }
-            param0.b(-var7, 0);
-            param0.b(-var7 + this.field_K * 2, 0);
+            param0.draw(-var7, 0);
+            param0.draw(-var7 + this.field_K * 2, 0);
             this.field_C.drawMultiply(0, 0);
             MessageKeys.a(false);
-            this.field_I.b(-this.field_C.field_r + var5_int, param1);
+            this.field_I.draw(-this.field_C.field_r + var5_int, param1);
             return;
           }
           return;
@@ -302,7 +302,7 @@ final class hm extends UiWidget {
         this.field_D = new Sprite[]{this.b(this.field_B, -27888, this.field_Q), this.b(this.field_F, -27888, this.field_E)};
         int var2 = -120 % ((12 - param0) / 40);
         this.field_C = this.a(0);
-        this.field_z = this.field_C.e();
+        this.field_z = this.field_C.copyMirroredHorizontally();
         this.field_I = new Sprite(this.height >> 1, this.height);
     }
 

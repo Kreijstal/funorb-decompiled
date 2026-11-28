@@ -217,7 +217,7 @@ final class wp {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = pc.a(param2, 0);
+          var3 = InteractiveWidget.a(param2, 0);
           if (param0.indexOf(param2) != param1) {
             return true;
           }

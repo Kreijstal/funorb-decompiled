@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends aj implements tc, df {
-    private lj field_x;
+final class DisplayNameSelectionPanel extends aj implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_x;
     static hi field_I;
-    private lj field_w;
+    private InteractiveWidget field_w;
     static String field_H;
-    dh field_B;
+    NameSuggestionsPanel field_B;
     static String field_F;
     private ValidatedTextField field_D;
     static boolean field_A;
@@ -100,7 +100,7 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         }
     }
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         String var7 = null;
@@ -178,8 +178,8 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         this.field_D = new ValidatedTextField("", (ma) null, 12);
         h var1 = new h(al.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(bj.field_P, var1, (ma) null);
-        this.field_x = new lj(Transmogrify.field_E, (ma) null);
-        this.field_w = new lj(fk.field_D, (ma) null);
+        this.field_x = new InteractiveWidget(Transmogrify.field_E, (ma) null);
+        this.field_w = new InteractiveWidget(fk.field_D, (ma) null);
         this.field_D.field_j = mf.field_a;
         this.field_D.setFieldValidator(-65, new AccountNameAvailabilityValidator(this.field_D));
         this.field_x.field_t = false;
@@ -199,7 +199,7 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         this.field_x.field_m = (ma) (this);
         this.a((UiWidget) (this.field_x), (byte) -111);
         this.a((UiWidget) (this.field_w), (byte) -95);
-        this.field_B = new dh((tc) (this));
+        this.field_B = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_B.a(-110, 20, 60 + (this.field_D.field_p + this.field_D.field_l), -60 - this.field_D.field_p + (this.field_l - this.field_D.field_l), 150);
         this.a((UiWidget) (this.field_B), (byte) -104);
         this.a(109, 0, 0, 496, 55 + (var3 + var4));
@@ -235,7 +235,7 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         rd.a(this.field_D.field_k, false);
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -247,8 +247,8 @@ final class DisplayNameSelectionPanel extends aj implements tc, df {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_D.getFieldValidator((byte) 120))).g(-80);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_D.getFieldValidator((byte) 120))).invalidateCheckedName(-80);
         if (param0 != -69) {
           this.a(-52, (UiWidget) null, (byte) 25, 'ￚ');
         }

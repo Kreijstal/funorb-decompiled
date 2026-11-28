@@ -180,14 +180,14 @@ class jc implements td, rj {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = dd.field_D.nextInt();
           }
-          if (s.field_C == null ||
-            !(var7_int <= s.field_C.payload.length)) {
-            s.field_C = new PacketBuffer(var7_int);
+          if (InteractiveWidget.field_C == null ||
+            !(var7_int <= InteractiveWidget.field_C.payload.length)) {
+            InteractiveWidget.field_C = new PacketBuffer(var7_int);
           }
-          s.field_C.position = 0;
-          s.field_C.writeBytes(param2, param4, (byte) -11, param3);
-          s.field_C.padZerosTo((byte) -115, var7_int);
-          s.field_C.encryptXtea(var13, -87);
+          InteractiveWidget.field_C.position = 0;
+          InteractiveWidget.field_C.writeBytes(param2, param4, (byte) -11, param3);
+          InteractiveWidget.field_C.padZerosTo((byte) -115, var7_int);
+          InteractiveWidget.field_C.encryptXtea(var13, -87);
           if (param1 < 24) {
             return;
           }
@@ -206,7 +206,7 @@ class jc implements td, rj {
           vd.field_a.writeShort((byte) -60, param4);
           vd.field_a.applyRsa(param5, param6, 27551);
           param0.writeBytes(0, vd.field_a.position, (byte) -11, vd.field_a.payload);
-          param0.writeBytes(0, s.field_C.position, (byte) -11, s.field_C.payload);
+          param0.writeBytes(0, InteractiveWidget.field_C.position, (byte) -11, InteractiveWidget.field_C.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -77,10 +77,10 @@ final class ob extends le {
           fi.field_u != var6Lifetime1) {
           if (SocketConnector.field_d == var6Lifetime1) {
             var16 = ai.field_b[2];
-            var16.c(var10, var11 - (var16.field_m >> 1), 256);
+            var16.drawAdditive(var10, var11 - (var16.field_m >> 1), 256);
           } else if (hi.field_b == var6Lifetime1) {
             var17 = ai.field_b[1];
-            var17.c(var10, -(var17.field_m >> 1) + var11, 256);
+            var17.drawAdditive(var10, -(var17.field_m >> 1) + var11, 256);
           }
         } else {
           var15 = ai.field_b[0];
@@ -95,9 +95,9 @@ final class ob extends le {
             this.field_H = new Sprite(var12, var13);
             CrossfadingMidiPcmStream.a(this.field_H, 256);
           }
-          var15.a(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_s << 4, -this.field_K << 10, 4096);
           fi.c(true);
-          this.field_H.c(var10 - (var15.field_r >> 1), var11 - var15.field_s, 256);
+          this.field_H.drawAdditive(var10 - (var15.field_r >> 1), var11 - var15.field_s, 256);
         }
     }
 
@@ -136,7 +136,7 @@ final class ob extends le {
           if (null == tj.field_s) {
             tj.field_s = new Sprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m);
           }
-          tj.field_s.e();
+          tj.field_s.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           param2.draw(param3, -param2.y, 1, -param2.x);
           var11 = ue.field_c[param1];

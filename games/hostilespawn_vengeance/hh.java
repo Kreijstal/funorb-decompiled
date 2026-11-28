@@ -130,7 +130,7 @@ final class hh {
               if (5 != be.field_e) {
                 throw new IllegalArgumentException();
               }
-              var3_int = fa.a(gf.field_c, cg.field_a, 62, lj.field_u, ph.field_y);
+              var3_int = fa.a(gf.field_c, cg.field_a, 62, lj.field_u, InteractiveWidget.field_y);
               var4 = 3 + var3_int;
               hf.field_d = new String[var4];
               jf.field_b = new int[var4];
@@ -235,7 +235,7 @@ final class hh {
             }
             fj.field_Rb = hn.correctedCurrentTimeMillis((byte) 80);
           }
-          mc.field_F.field_b = FullscreenFocusCanvas.field_k.length;
+          NameSuggestionsPanel.field_F.field_b = FullscreenFocusCanvas.field_k.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < hf.field_d.length; var4Lifetime1++) {
             stackIn_88_0 = 110;
@@ -266,7 +266,7 @@ final class hh {
           }
           pc.field_d = -(var3_intLifetime1 >> 1) + (wk.field_c + var3_intLifetime1);
           hg.field_f = -(var3_intLifetime1 >> 1) + wk.field_c;
-          ArchiveIndex.field_m = (ProxyAuthenticationRequiredException.field_b + cl.field_l << 1) * mc.field_F.field_b;
+          ArchiveIndex.field_m = (ProxyAuthenticationRequiredException.field_b + cl.field_l << 1) * NameSuggestionsPanel.field_F.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < hf.field_d.length; var4Lifetime2++) {
             stackIn_112_0 = ArchiveIndex.field_m;
             if (jf.field_b[var4Lifetime2] < 0) {
@@ -301,9 +301,9 @@ final class hh {
             var4Lifetime3++;
           }
           if (2 == be.field_e) {
-            mc.field_F.a(param2, 0, -1, -1);
+            NameSuggestionsPanel.field_F.a(param2, 0, -1, -1);
           } else {
-            mc.field_F.a(param2, 0, sd.a(2, j.field_c, rb.field_m), 0);
+            NameSuggestionsPanel.field_F.a(param2, 0, sd.a(2, j.field_c, rb.field_m), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

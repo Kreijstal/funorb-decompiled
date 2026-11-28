@@ -22,7 +22,7 @@ final class nc extends sf {
           m.field_b = param6;
           hc.field_f = param1;
           lh.field_b = param7;
-          s.field_x = param0;
+          InteractiveWidget.field_x = param0;
           fm.field_c = param3;
           if (param4 <= 87) {
             PlatformTaskDispatcher var10 = (PlatformTaskDispatcher) null;

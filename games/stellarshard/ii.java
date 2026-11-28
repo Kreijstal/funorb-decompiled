@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends ig {
+final class ii extends InteractiveWidget {
     static int field_J;
     private int field_I;
     static String field_G;
@@ -32,32 +32,32 @@ final class ii extends ig {
           if (ta.field_s == null) {
             ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
-            var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
+            var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
           if (var9 > ta.field_s.field_v) {
             ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
-            var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
+            var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
           if (ta.field_s.field_y >= var10) {
             hj.a(ta.field_s, 1);
             SoftwareRasterizer.clearRaster();
-            var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
+            var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
           ta.field_s = new Sprite(var9, var10);
           hj.a(ta.field_s, 1);
-          var15.b(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
+          var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
           id.b((byte) -58);
-          ta.field_s.d(-var15.field_w + var5, -var15.field_x + var6, 256);
+          ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
           return;
         }
         if (var8 == vk.field_d) {
@@ -67,42 +67,42 @@ final class ii extends ig {
           if (ta.field_s == null) {
             ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
-            var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
+            var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
           if (var9Lifetime1 > ta.field_s.field_v) {
             ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
-            var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
+            var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
           if (ta.field_s.field_y >= var10Lifetime1) {
             hj.a(ta.field_s, 1);
             SoftwareRasterizer.clearRaster();
-            var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
+            var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
             id.b((byte) -58);
-            ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);
+            ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
           ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
           hj.a(ta.field_s, 1);
-          var18.b(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
+          var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
           id.b((byte) -58);
-          ta.field_s.d(-var18.field_w + var5, -var18.field_x + var6, 256);
+          ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
           return;
         }
         if (var8 == qj.field_c) {
           var12 = DualLinkNode.field_p[2];
-          var12.d(-(var12.field_v >> 1) + var5, -(var12.field_y >> 1) + var6, 256);
+          var12.drawAdditive(-(var12.field_v >> 1) + var5, -(var12.field_y >> 1) + var6, 256);
           return;
         }
         if (var8 == lg.field_c) {
           var21 = DualLinkNode.field_p[1];
-          var21.d(var5 - (var21.field_v >> 1), -(var21.field_y >> 1) + var6, 256);
+          var21.drawAdditive(var5 - (var21.field_v >> 1), -(var21.field_y >> 1) + var6, 256);
           return;
         }
     }

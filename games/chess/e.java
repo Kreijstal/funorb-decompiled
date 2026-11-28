@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class e extends ma implements mj {
+final class e extends ma implements WidgetActivationListener {
     private int[] field_K;
     private BitmapFont field_R;
-    private fb[] field_S;
+    private InteractiveWidget[] field_S;
     static double field_L;
     static ci field_M;
     private vn field_N;
@@ -19,8 +19,8 @@ final class e extends ma implements mj {
         if (this.field_Q >= param1) {
           return;
         }
-        fb[] var7 = new fb[param1];
-        fb[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         if (param0 == 2116) {
           for (var5 = 0; this.field_Q > var5; var5++) {
@@ -38,7 +38,7 @@ final class e extends ma implements mj {
         super.a(param0, param1, -117, param3);
         this.field_R.drawParagraph(this.field_P, 14 + (param3 + this.field_u), param0 - (-this.field_r - 10), -28 + this.field_y, this.field_C, 16777215, -1, 0, 0, this.field_R.field_C);
         if (param2 >= -80) {
-          this.field_S = (fb[]) null;
+          this.field_S = (InteractiveWidget[]) null;
         }
     }
 
@@ -60,12 +60,12 @@ final class e extends ma implements mj {
         field_T = null;
     }
 
-    final fb a(byte param0, rg param1, String param2) {
-        fb var4 = null;
+    final InteractiveWidget a(byte param0, rg param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        fb stackIn_2_0 = null;
-        fb stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -73,10 +73,10 @@ final class e extends ma implements mj {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fb(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_n = (jm) ((Object) new sf());
           if (param0 != -114) {
-            stackIn_2_0 = (fb) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var5 = this.field_C - 2;
@@ -223,7 +223,7 @@ final class e extends ma implements mj {
         }
     }
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

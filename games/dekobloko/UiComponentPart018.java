@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UiComponentPart018 extends ComponentContainer implements CallbackContract015, CallbackContract019 {
+final class UiComponentPart018 extends ComponentContainer implements CallbackContract015, WidgetActivationListener {
     static String stringState0343;
     static String[] stringArrayState0021;
     static int integerState0502;
@@ -208,7 +208,7 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
         }
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         RuntimeException runtimeExceptionLocal1 = null;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

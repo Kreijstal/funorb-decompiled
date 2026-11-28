@@ -129,23 +129,23 @@ final class kk {
         int var4Lifetime2;
         int var5Lifetime1;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ke.field_i.a(0, 0);
+        ke.field_i.drawOpaque(0, 0);
         var2_int = 0;
         do {
           if (480 <= var2_int) {
-            PasswordValidator.field_q[bc.field_a].c(-(PasswordValidator.field_q[0].field_m >> 1) + 80, ne.field_b);
+            PasswordValidator.field_q[bc.field_a].draw(-(PasswordValidator.field_q[0].field_m >> 1) + 80, ne.field_b);
             break;
           }
-          kj.field_F.c(-(kj.field_F.field_m >> 1) + 80, var2_int);
+          kj.field_F.draw(-(kj.field_F.field_m >> 1) + 80, var2_int);
           var2_int = var2_int + kj.field_F.field_n;
         } while (var6 == 0);
         var2_int = 0;
         do {
           if (var2_int >= 480) {
-            PasswordValidator.field_q[NetworkArchiveRequest.field_r].f(-(PasswordValidator.field_q[0].field_m >> 1) + 560, ClientException.field_e);
+            PasswordValidator.field_q[NetworkArchiveRequest.field_r].drawFlippedHorizontal(-(PasswordValidator.field_q[0].field_m >> 1) + 560, ClientException.field_e);
             break;
           }
-          kj.field_F.c(560 - (kj.field_F.field_m >> 1), var2_int);
+          kj.field_F.draw(560 - (kj.field_F.field_m >> 1), var2_int);
           var2_int = var2_int + kj.field_F.field_n;
         } while (var6 == 0);
         var2_int = 0;
@@ -199,10 +199,10 @@ final class kk {
           }
           ma.a(var2, 320 - (var2.field_m >> 1), 0, var3Lifetime1, var4, var5);
           if (var6 != 0) {
-            var2.c(-(var2.field_m >> 1) + 320, 0);
+            var2.draw(-(var2.field_m >> 1) + 320, 0);
           }
         } else {
-          var2.c(-(var2.field_m >> 1) + 320, 0);
+          var2.draw(-(var2.field_m >> 1) + 320, 0);
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_g != 2) {
@@ -326,7 +326,7 @@ final class kk {
         int var8;
         int var9;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
-        this.field_a.e();
+        this.field_a.bindAsRenderTarget();
         var3 = 380;
         var4 = 263;
         SoftwareRasterizer.fillRectangle(3, 3, var3 - 6, -6 + var4, 16249775);
@@ -364,7 +364,7 @@ final class kk {
             if (stackIn_15_0 <= stackIn_15_1) {
               var8 = var7_int % 4;
             }
-            nh.field_f[0][var6 % 5][var8].c(-160 + 40 * var6 + (var3 >> 1), 15);
+            nh.field_f[0][var6 % 5][var8].draw(-160 + 40 * var6 + (var3 >> 1), 15);
             var6++;
             var7_int++;
             continue;
@@ -374,7 +374,7 @@ final class kk {
         if (stackIn_15_0 < stackIn_15_1) {
           var6 = var4;
         }
-        this.field_a.b(130, (-var6 + var4 >> 1) + 104, var3, var6);
+        this.field_a.drawScaled(130, (-var6 + var4 >> 1) + 104, var3, var6);
         return;
     }
 
@@ -442,7 +442,7 @@ final class kk {
           kk.a((String) null, (byte) -126, (Throwable) null);
         }
         regionExit1: {
-          this.field_a.e();
+          this.field_a.bindAsRenderTarget();
           var2 = 380;
           var3 = 275;
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
@@ -517,7 +517,7 @@ final class kk {
         if (var8 > var3) {
           var8 = var3;
         }
-        this.field_a.b(130, (-var8 + var3 >> 1) + 90, var2, var8);
+        this.field_a.drawScaled(130, (-var8 + var3 >> 1) + 90, var2, var8);
     }
 
     final void a(int param0) {
@@ -800,7 +800,7 @@ final class kk {
         if (param0 != -1) {
           return;
         }
-        this.field_f[param1].e();
+        this.field_f[param1].bindAsRenderTarget();
         stackIn_17_0 = (param2) ? 5683782 : 1;
         var9 = stackIn_17_0;
         if (this.field_g != 7) {
@@ -813,14 +813,14 @@ final class kk {
           var12 = -var11 + var8 >> 1;
           var12 = var12 + (lh.field_b + 13);
           var10.drawRightAligned(var7, var12, var10.field_C, var9, -1);
-          sd.field_f.c(var12, -6 + mc.field_b[this.field_g] / 2);
+          sd.field_f.draw(var12, -6 + mc.field_b[this.field_g] / 2);
           if (var6 == 11) {
             stackIn_25_0 = re.field_e;
           } else {
             stackIn_25_0 = IsaacRandom.field_e;
           }
           var13 = stackIn_25_0;
-          de.field_f.c(146 * var13 / 256 - 2 + var12, 14);
+          de.field_f.draw(146 * var13 / 256 - 2 + var12, 14);
           if (var14 != 0) {
             var10.drawCentred(var7, var8 >> 1, var10.field_C, var9, -1);
           }
@@ -833,7 +833,7 @@ final class kk {
           ResourceArchive.isMessageDialogActive(false)) {
           var11Lifetime1 = 40;
         }
-        this.field_f[param1].b(var5, var4 + (40 - var11Lifetime1 >> 1), var8, var11Lifetime1);
+        this.field_f[param1].drawScaled(var5, var4 + (40 - var11Lifetime1 >> 1), var8, var11Lifetime1);
         return;
     }
 
@@ -845,7 +845,7 @@ final class kk {
     }
 
     private final void c(int param0) {
-        this.field_a.e();
+        this.field_a.bindAsRenderTarget();
         int var2 = 380;
         int var3 = 275;
         SoftwareRasterizer.fillRectangle(3, 3, -6 + var2, -6 + var3, 16249775);
@@ -858,7 +858,7 @@ final class kk {
         if (var3 < var6) {
           var6 = var3;
         }
-        this.field_a.b(130, 90 + (var3 - var6 >> 1), var2, var6);
+        this.field_a.drawScaled(130, 90 + (var3 - var6 >> 1), var2, var6);
     }
 
     private final int d(int param0) {

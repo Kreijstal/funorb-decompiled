@@ -478,7 +478,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 IntrusiveDeque.a(256, ti.field_b, (byte) 109);
               } else {
                 if (cf.field_Lb == 4) {
-                  IntrusiveDeque.a(256, fb.field_F, (byte) -49);
+                  IntrusiveDeque.a(256, InteractiveWidget.field_F, (byte) -49);
                 } else {
                   if (cf.field_Lb != 2) {
                     if (5 == cf.field_Lb) {
@@ -543,7 +543,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (il.field_a == 3 &&
-          PcmOutputWorker.a(fl.field_m, 99, Chess.field_B, bi.field_a) &&
+          PcmOutputWorker.areCommonUiAssetsReady(fl.field_m, 99, Chess.field_B, bi.field_a) &&
           ml.a(0, bi.field_a)) {
           NetworkGameClient.e(-5);
           ag.a((byte) -119);

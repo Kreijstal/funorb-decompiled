@@ -28,8 +28,8 @@ final class f {
           var3 = var6;
           for (var4 = 0; var4 < param1.length; var4++) {
             var6[var4] = new RgbSprite(160, 94);
-            var6[var4].d();
-            param1[var4].a(param1[var4].field_t << 3, param1[var4].field_x << 3, 1280, 752, 0, 655360 / param2);
+            var6[var4].bindAsRenderTarget();
+            param1[var4].drawRotatedAbout(param1[var4].field_t << 3, param1[var4].field_x << 3, 1280, 752, 0, 655360 / param2);
           }
           pi.field_S.setAsRasterTarget((byte) 110);
           stackIn_8_0 = var3;

@@ -96,7 +96,7 @@ final class li {
             PackedBitSet.field_c.field_w = -16;
             PackedBitSet.field_c.field_A = -16;
           }
-          bn.field_f.e();
+          bn.field_f.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var1_int = 0;
           for (var2 = 0; var2 < 7; var2++) {
@@ -107,11 +107,11 @@ final class li {
               var1_int++;
             }
           }
-          PackedBitSet.field_c.e();
+          PackedBitSet.field_c.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          bn.field_f.e(16, 16, 8454143);
+          bn.field_f.drawSilhouette(16, 16, 8454143);
           SoftwareRasterizer.blurRectangle(8, 8, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
-          bn.field_f.e(16, 16, 0);
+          bn.field_f.drawSilhouette(16, 16, 0);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, PackedBitSet.field_c.field_y, PackedBitSet.field_c.field_v);
           jh.b();
           return;

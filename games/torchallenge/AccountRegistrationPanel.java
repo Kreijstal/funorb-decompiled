@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends kj implements tl, sg, tb {
-    private ng field_Z;
+final class AccountRegistrationPanel extends kj implements tl, WidgetActivationListener, NameSuggestionListener {
+    private InteractiveWidget field_Z;
     private ValidatedTextField field_K;
     static int[] field_T;
     static k field_O;
-    li field_L;
+    NameSuggestionsPanel field_L;
     private ValidatedTextField field_X;
     static String[][] field_bb;
     static int[][][] field_M;
     private ValidatedTextField field_Q;
     private df field_U;
     static int field_ab;
-    private ng field_V;
+    private InteractiveWidget field_V;
     private ValidatedTextField field_S;
     static Sprite[] field_J;
     private ValidatedTextField field_P;
@@ -25,7 +25,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
     private final String i(int param0) {
         if (param0 != -19224) {
           String var3 = (String) null;
-          this.a((String) null, 117);
+          this.onNameSuggestionSelected((String) null, 117);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -238,7 +238,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         }
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -347,7 +347,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         return false;
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         String var4 = null;
         ValidatedTextField var3 = this.field_Q;
         if (param1 > -84) {
@@ -439,11 +439,11 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 != -23128) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_Q.getFieldValidator(-116))).f(0);
+        ((AccountNameAvailabilityValidator) (this.field_Q.getFieldValidator(-116))).invalidateCheckedName(0);
     }
 
     final void a(UiComponent param0, int param1, byte param2, int param3) {
@@ -451,7 +451,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
           super.a(param0, param1, (byte) -104, param3);
           this.field_Z.field_F = this.canSubmitRegistration((byte) -122);
           if (param2 >= -97) {
-            this.field_Z = (ng) null;
+            this.field_Z = (InteractiveWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "dg.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -468,8 +468,8 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         this.field_S = new ValidatedTextField("", (gg) null, 3);
         int var1 = 1;
         this.field_W = new hc("", (gg) null, var1 != 0);
-        this.field_Z = new ng(id.field_c, (gg) null);
-        this.field_V = new ng(uk.field_Q, (gg) null);
+        this.field_Z = new InteractiveWidget(id.field_c, (gg) null);
+        this.field_V = new InteractiveWidget(uk.field_Q, (gg) null);
         this.field_Q.field_r = AgeValidator.field_o;
         this.field_cb.field_r = SecondaryNodeDeque.field_c;
         this.field_P.field_r = GameScreen.field_d;
@@ -523,7 +523,7 @@ final class AccountRegistrationPanel extends kj implements tl, sg, tb {
         this.field_Z.field_k = (gg) (this);
         this.a(0, this.field_Z);
         this.a(0, this.field_V);
-        this.field_L = new li((tb) (this));
+        this.field_L = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_L.a((byte) 119, this.field_Q.field_m + (this.field_Q.field_p + 60), 150, -this.field_Q.field_p + (this.field_p + (-this.field_Q.field_m - 60)), this.field_Q.field_i + 20);
         this.a(0, this.field_L);
         this.a((byte) 122, 0, var3 - (-55 - var6), 496, 0);

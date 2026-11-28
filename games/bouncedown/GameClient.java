@@ -560,7 +560,7 @@ abstract class GameClient extends AppletShell {
             mh.field_U = 10;
           }
           if (7 == var4) {
-            nd.a(DiskCacheWorker.b(0), 8192);
+            NameSuggestionsPanel.a(DiskCacheWorker.b(0), 8192);
           }
           if (8 == var4) {
             fl.a(8192, DiskCacheWorker.b(0));

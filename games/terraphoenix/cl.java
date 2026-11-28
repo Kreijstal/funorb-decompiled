@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends WidgetContainer implements jf, n {
-    private eb field_G;
+final class cl extends WidgetContainer implements jf, WidgetActivationListener {
+    private InteractiveWidget field_G;
     static d field_J;
     static String field_I;
     private AccountCreationResultPanel field_H;
@@ -17,7 +17,7 @@ final class cl extends WidgetContainer implements jf, n {
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_G = new eb(rj.field_e, (sc) null);
+          this.field_G = new InteractiveWidget(rj.field_e, (sc) null);
           this.field_G.listener = (WidgetActionListener) ((Object) new ic());
           var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, ArchiveRequest.field_y);
           var3 = 20;
@@ -258,7 +258,7 @@ final class cl extends WidgetContainer implements jf, n {
         }
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         try {
           if (this.field_G == param0) {
             jh.c((byte) 114);

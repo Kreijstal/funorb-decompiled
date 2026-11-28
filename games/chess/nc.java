@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends fb {
+final class nc extends InteractiveWidget {
     private int field_R;
     int field_M;
     static GzipInflater field_N;

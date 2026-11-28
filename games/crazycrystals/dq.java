@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dq extends pc {
+final class dq extends InteractiveWidget {
     static String field_C;
     static String field_H;
     static String field_F;
@@ -103,7 +103,7 @@ final class dq extends pc {
           if (param1 >= -53) {
             field_C = (String) null;
           }
-          var3 = pc.a(param0, 0);
+          var3 = InteractiveWidget.a(param0, 0);
           stackIn_7_0 = (param2.indexOf(param0) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

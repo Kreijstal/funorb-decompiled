@@ -118,7 +118,7 @@ class lc extends DualLinkNode {
             stackIn_2_0 = null;
             return (BinaryBitmapFont) (stackIn_2_0);
           }
-          var2 = new BinaryBitmapFont(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, of.field_d);
+          var2 = new BinaryBitmapFont(param0, vg.field_I, b.field_b, NameSuggestionsPanel.field_H, ob.field_a, of.field_d);
           EditableTextField.o(-28210);
           if (param1) {
             lc.f(105);

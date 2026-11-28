@@ -3260,15 +3260,15 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "hs_mode_name,0");
                 if (var2 != null) {
-                  vp.field_C[0] = SecondaryNodeDeque.a(var2, false);
+                  NameSuggestionsPanel.field_C[0] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "hs_mode_name,1");
                 if (var2 != null) {
-                  vp.field_C[1] = SecondaryNodeDeque.a(var2, false);
+                  NameSuggestionsPanel.field_C[1] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "hs_mode_name,2");
                 if (var2 != null) {
-                  vp.field_C[2] = SecondaryNodeDeque.a(var2, false);
+                  NameSuggestionsPanel.field_C[2] = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "rating_mode_name,0");
                 if (var2 != null) {

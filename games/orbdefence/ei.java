@@ -76,7 +76,7 @@ final class ei {
           }
           var7 = dm.field_b[kb.field_m];
           if (var7 != null) {
-            var7.c(245, 199);
+            var7.draw(245, 199);
           } else {
             if (rc.field_a != null) {
               rc.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

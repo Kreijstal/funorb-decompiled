@@ -278,7 +278,7 @@ final class AgeValidator extends TextFieldValidator {
           var2[ob.field_Qb] = to.field_b;
           var2[ob.field_Lb] = fe.field_n;
           var2[ob.field_mc] = rj.field_j;
-          var2[ob.field_dc] = gi.field_K;
+          var2[ob.field_dc] = NameSuggestionsPanel.field_K;
           var2[ob.field_Vb] = jf.field_e;
           var2[ob.field_Zb] = bh.field_N;
           var2[ob.field_Jb] = rp.field_b;
@@ -682,7 +682,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[20].field_z = var3_ref_StringLifetime54;
             gh.field_i[20].field_o = var5Lifetime20;
           }
-          var3_ref_StringLifetime55 = gi.field_P;
+          var3_ref_StringLifetime55 = NameSuggestionsPanel.field_P;
           var4Lifetime55 = bc.field_c;
           var5Lifetime21 = fm.field_l;
           if (null != gh.field_i[21]) {
@@ -847,37 +847,37 @@ final class AgeValidator extends TextFieldValidator {
             DiskCacheWorker.field_e[cp.field_R + var3Lifetime4] = PackedBitSet.field_i[var3Lifetime4];
             DiskCacheWorker.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = PackedBitSet.field_d[var3Lifetime4];
           }
-          ck.field_H = new fm();
-          ck.field_H.a("<col=FF0000>" + qk.field_d + "</col>", -111, "attack");
-          ck.field_H.a("<col=0A7500>" + dj.field_c + "</col>", param0 + 23590, "defence");
-          ck.field_H.a("<col=21634A>" + pm.field_n + "</col>", -114, "dodge");
-          ck.field_H.a("<col=00A7D2>" + nf.field_x + "</col>", 59, "sneak");
-          ck.field_H.a("<col=9F70CF>" + BufferedSocket.field_a + "</col>", 93, "snare");
-          ck.field_H.a("<col=7B633A>" + eg.field_f + "</col>", 116, "detect");
-          ck.field_H.a(lh.field_b, -114, "charge");
-          ck.field_H.a(LoginPanel.field_L, param0 + 23391, "advance");
-          ck.field_H.a(qa.field_d, 66, "flee");
-          ck.field_H.a(PasswordValidator.field_m, 69, "useskill");
-          ck.field_H.a("<img=1>", 104, "command");
-          ck.field_H.a("<col=FF0000>", -117, "highlight");
-          ck.field_H.a(ClientException.a(gg.field_e, -1), param0 ^ 23494, "raider");
-          ck.field_H.a(ClientException.a(AccountRequestState.field_a, param0 ^ 23486), -107, "monster");
-          ck.field_H.a(ClientException.a(DungeonAssault.field_H, -1), 74, "trap");
-          ck.field_H.a(ClientException.a(ki.field_e, -1), -106, "guardian");
-          ck.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
-          ck.field_H.a(ClientException.a(wo.field_f, -1), 102, "monsters");
-          ck.field_H.a(ClientException.a(SecondaryNodeDeque.field_e, -1), param0 ^ -23517, "traps");
-          ck.field_H.a(ClientException.a(PackedBitSet.field_j, -1), -115, "guardians");
-          ck.field_H.a("<col=8B1717>", -103, "col_charge");
-          ck.field_H.a("<col=2E5D17>", -106, "col_advance");
-          ck.field_H.a("<col=8B8B2E>", -101, "col_flee");
-          ck.field_H.a("<col=178B8B>", -113, "col_useskill");
-          ck.field_H.a("<col=FF0000>", 93, "col_attack");
-          ck.field_H.a("<col=0A7500>", 87, "col_defence");
-          ck.field_H.a("<col=21634A>", -126, "col_dodge");
-          ck.field_H.a("<col=00A7D2>", -117, "col_sneak");
-          ck.field_H.a("<col=9F70CF>", 72, "col_snare");
-          ck.field_H.a("<col=7B633A>", -122, "col_detect");
+          InteractiveWidget.field_H = new fm();
+          InteractiveWidget.field_H.a("<col=FF0000>" + qk.field_d + "</col>", -111, "attack");
+          InteractiveWidget.field_H.a("<col=0A7500>" + dj.field_c + "</col>", param0 + 23590, "defence");
+          InteractiveWidget.field_H.a("<col=21634A>" + pm.field_n + "</col>", -114, "dodge");
+          InteractiveWidget.field_H.a("<col=00A7D2>" + nf.field_x + "</col>", 59, "sneak");
+          InteractiveWidget.field_H.a("<col=9F70CF>" + BufferedSocket.field_a + "</col>", 93, "snare");
+          InteractiveWidget.field_H.a("<col=7B633A>" + eg.field_f + "</col>", 116, "detect");
+          InteractiveWidget.field_H.a(lh.field_b, -114, "charge");
+          InteractiveWidget.field_H.a(LoginPanel.field_L, param0 + 23391, "advance");
+          InteractiveWidget.field_H.a(qa.field_d, 66, "flee");
+          InteractiveWidget.field_H.a(PasswordValidator.field_m, 69, "useskill");
+          InteractiveWidget.field_H.a("<img=1>", 104, "command");
+          InteractiveWidget.field_H.a("<col=FF0000>", -117, "highlight");
+          InteractiveWidget.field_H.a(ClientException.a(gg.field_e, -1), param0 ^ 23494, "raider");
+          InteractiveWidget.field_H.a(ClientException.a(AccountRequestState.field_a, param0 ^ 23486), -107, "monster");
+          InteractiveWidget.field_H.a(ClientException.a(DungeonAssault.field_H, -1), 74, "trap");
+          InteractiveWidget.field_H.a(ClientException.a(ki.field_e, -1), -106, "guardian");
+          InteractiveWidget.field_H.a(ClientException.a(ak.field_m, -1), param0 + 23560, "raiders");
+          InteractiveWidget.field_H.a(ClientException.a(wo.field_f, -1), 102, "monsters");
+          InteractiveWidget.field_H.a(ClientException.a(SecondaryNodeDeque.field_e, -1), param0 ^ -23517, "traps");
+          InteractiveWidget.field_H.a(ClientException.a(PackedBitSet.field_j, -1), -115, "guardians");
+          InteractiveWidget.field_H.a("<col=8B1717>", -103, "col_charge");
+          InteractiveWidget.field_H.a("<col=2E5D17>", -106, "col_advance");
+          InteractiveWidget.field_H.a("<col=8B8B2E>", -101, "col_flee");
+          InteractiveWidget.field_H.a("<col=178B8B>", -113, "col_useskill");
+          InteractiveWidget.field_H.a("<col=FF0000>", 93, "col_attack");
+          InteractiveWidget.field_H.a("<col=0A7500>", 87, "col_defence");
+          InteractiveWidget.field_H.a("<col=21634A>", -126, "col_dodge");
+          InteractiveWidget.field_H.a("<col=00A7D2>", -117, "col_sneak");
+          InteractiveWidget.field_H.a("<col=9F70CF>", 72, "col_snare");
+          InteractiveWidget.field_H.a("<col=7B633A>", -122, "col_detect");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1050,14 +1050,14 @@ final class AgeValidator extends TextFieldValidator {
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var11 = new RgbSprite(4 + DelegatingCanvas.field_c.field_y, DelegatingCanvas.field_c.field_v + 4);
-            var11.e();
-            DelegatingCanvas.field_c.c(2, 2, uj.field_d);
+            var11.bindAsRenderTarget();
+            DelegatingCanvas.field_c.drawGrayModulated(2, 2, uj.field_d);
             uc.a(1, 2, var11.field_y, var11, 0, var11.field_v, 0, false);
             DelegatingCanvas.field_c = var11;
-            al.field_j = DelegatingCanvas.field_c.b();
+            al.field_j = DelegatingCanvas.field_c.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
-            var12.e();
+            var12.bindAsRenderTarget();
             Bzip2State.field_e.drawCentred(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
             tg.field_l.drawCentred(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
             Bzip2State.field_e.drawCentred(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
@@ -1065,16 +1065,16 @@ final class AgeValidator extends TextFieldValidator {
             Bzip2State.field_e.drawCentred(je.field_l, var6, 180, 16777215, -1);
             tg.field_l.drawCentred(cg.field_c, var6, 200, 16777215, -1);
             uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
-            gn.field_c.e();
-            var12.h(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
+            gn.field_c.bindAsRenderTarget();
+            var12.draw(18 - gn.field_c.field_w, -gn.field_c.field_A + 241);
             for (var7 = 0; var7 < PacketBuffer.field_l.length; var7++) {
-              en.field_b[var7].e();
+              en.field_b[var7].bindAsRenderTarget();
               tg.field_l.drawParagraph(PacketBuffer.field_l[var7], 3, 3, en.field_b[var7].field_y - 6, -6 + en.field_b[var7].field_v, uj.field_d, -1, 1, 1, tg.field_l.field_H + tg.field_l.field_E);
               uc.a(1, 3, en.field_b[var7].field_y, en.field_b[var7], 0, en.field_b[var7].field_v, 0, false);
             }
             PacketBuffer.field_l = null;
-            IntrusiveNode.field_d = DirectByteStorage.field_g.d();
-            IntrusiveNode.field_d.e();
+            IntrusiveNode.field_d = DirectByteStorage.field_g.copy();
+            IntrusiveNode.field_d.bindAsRenderTarget();
             jj.a(64, -971598481, 0, 0, 2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_i);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(rp.field_e);
@@ -1138,18 +1138,18 @@ final class AgeValidator extends TextFieldValidator {
               MenuScreen.field_z.field_A = MenuScreen.field_z.field_A + var9_intLifetime3;
               cb.field_b = cb.field_b + var9_intLifetime3;
             }
-            MenuScreen.field_z.a();
+            MenuScreen.field_z.normalizeCanvas();
             var9 = new RgbSprite(MenuScreen.field_z.field_E, MenuScreen.field_z.field_G);
-            var9.e();
+            var9.bindAsRenderTarget();
             Bzip2State.field_e.drawParagraph(var14, lj.field_m, cb.field_b, PackedBitSet.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
             uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
-            MenuScreen.field_z.e();
-            var9.h(0, 0);
+            MenuScreen.field_z.bindAsRenderTarget();
+            var9.draw(0, 0);
             IntroSequenceScreen.field_r = new RgbSprite(640, 480);
-            IntroSequenceScreen.field_r.e();
-            MenuScreen.field_z.e((MenuScreen.field_z.field_E >> 1) + je.field_b, (MenuScreen.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
+            IntroSequenceScreen.field_r.bindAsRenderTarget();
+            MenuScreen.field_z.drawRotated((MenuScreen.field_z.field_E >> 1) + je.field_b, (MenuScreen.field_z.field_G >> 1) + ig.field_a, IntrusiveDeque.field_f, 4096);
             MenuScreen.field_z = null;
-            IntroSequenceScreen.field_r.c();
+            IntroSequenceScreen.field_r.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(rp.field_e);
           }
@@ -1162,11 +1162,11 @@ final class AgeValidator extends TextFieldValidator {
             var16 = new RgbSprite(412, 43);
             var5_ref_String = jk.a(new String[]{lg.field_m}, je.field_a, 30496);
             lg.field_m = null;
-            var16.e();
+            var16.bindAsRenderTarget();
             tg.field_l.drawParagraph(var5_ref_String, 3, 3, var16.field_y - 6, var16.field_v - 6, 16777215, -1, 0, 1, tg.field_l.field_H + tg.field_l.field_E);
             uc.a(1, 3, var16.field_y, var16, 0, var16.field_v, 0, false);
-            rf.field_Q.e();
-            var16.h(199 - rf.field_Q.field_w, 83 - rf.field_Q.field_A);
+            rf.field_Q.bindAsRenderTarget();
+            var16.draw(199 - rf.field_Q.field_w, 83 - rf.field_Q.field_A);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(rp.field_e);
           }
@@ -1180,11 +1180,11 @@ final class AgeValidator extends TextFieldValidator {
             var5Lifetime1 = 20 + ol.field_b.field_E + var4;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = ol.field_b.field_E + (var6Lifetime2 + 20);
-            rf.field_Q.e();
+            rf.field_Q.bindAsRenderTarget();
             tg.field_l.drawString(rp.field_h, var7Lifetime2 - rf.field_Q.field_w, tg.field_l.field_H + 155 - (rf.field_Q.field_A - tg.field_l.field_E), 16777215, -1);
             uc.a(1, 3, var4, rf.field_Q, -rf.field_Q.field_w + (var7Lifetime2 - 4), 50, -rf.field_Q.field_A + 155, false);
             var8Lifetime1 = -((-tg.field_l.field_E - tg.field_l.field_H + (-3 + ol.field_b.field_G)) / 2) + (155 - rf.field_Q.field_A);
-            ol.field_b.h(-rf.field_Q.field_w + var6Lifetime2, var8Lifetime1);
+            ol.field_b.draw(-rf.field_Q.field_w + var6Lifetime2, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(rp.field_e);
             ol.field_b = null;
@@ -1194,23 +1194,23 @@ final class AgeValidator extends TextFieldValidator {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ld.field_c, lj.field_u);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ld.field_c, lj.field_u);
           if (null != ia.field_Q) {
-            ia.field_Q.h(0, 0);
+            ia.field_Q.draw(0, 0);
           }
           if (gn.field_c != null) {
-            gn.field_c.h(0, 0);
+            gn.field_c.draw(0, 0);
           }
-          rf.field_Q.h(0, 0);
+          rf.field_Q.draw(0, 0);
           if (IntroSequenceScreen.field_r != null) {
-            IntroSequenceScreen.field_r.h(0, 0);
+            IntroSequenceScreen.field_r.draw(0, 0);
           }
           if (tl.field_i != null &&
             MouseWheelInput.field_g != null) {
-            tl.field_i.h(231, 390);
+            tl.field_i.draw(231, 390);
             var2_ref_cn = DirectByteStorage.field_g;
             if (o.field_i.field_b == 0) {
               var2_ref_cn = IntrusiveNode.field_d;
             }
-            var2_ref_cn.h(0, 0);
+            var2_ref_cn.draw(0, 0);
             stackIn_50_0 = jc.field_e;
             if (o.field_i.field_b == 0) {
               stackIn_51_1 = 4;
@@ -1219,22 +1219,22 @@ final class AgeValidator extends TextFieldValidator {
             }
             var3Lifetime4 = (la.a(stackIn_50_0 << stackIn_51_1, (byte) 86) * 40 >> 16) + 40;
             if (var3Lifetime4 > 0) {
-              tl.field_i.b(230, 389, var3Lifetime4);
-              tl.field_i.b(232, 389, var3Lifetime4);
-              tl.field_i.b(232, 391, var3Lifetime4);
-              tl.field_i.b(230, 391, var3Lifetime4);
-              var2_ref_cn.b(1, 1, var3Lifetime4);
-              var2_ref_cn.b(-1, 1, var3Lifetime4);
-              var2_ref_cn.b(1, -1, var3Lifetime4);
-              var2_ref_cn.b(-1, -1, var3Lifetime4);
+              tl.field_i.drawAdditive(230, 389, var3Lifetime4);
+              tl.field_i.drawAdditive(232, 389, var3Lifetime4);
+              tl.field_i.drawAdditive(232, 391, var3Lifetime4);
+              tl.field_i.drawAdditive(230, 391, var3Lifetime4);
+              var2_ref_cn.drawAdditive(1, 1, var3Lifetime4);
+              var2_ref_cn.drawAdditive(-1, 1, var3Lifetime4);
+              var2_ref_cn.drawAdditive(1, -1, var3Lifetime4);
+              var2_ref_cn.drawAdditive(-1, -1, var3Lifetime4);
             }
             stackIn_57_0 = (o.field_i.field_b == 0);
             cf.a(stackIn_57_0, wk.field_h, 127, fo.field_b);
           }
           if (tl.field_i != null &&
             null != MouseWheelInput.field_g) {
-            tl.field_i.h(434, 390);
-            lg.field_u.h(0, 0);
+            tl.field_i.draw(434, 390);
+            lg.field_u.draw(0, 0);
             if (1 == o.field_i.field_b) {
               jj.a(64, -971598481, 436, 392, 7 * tl.field_i.field_v / 12, -4 + tl.field_i.field_y);
             }
@@ -1243,35 +1243,35 @@ final class AgeValidator extends TextFieldValidator {
           }
           if (DelegatingCanvas.field_c != null) {
             var2Lifetime4 = -(DelegatingCanvas.field_c.field_G / 2) + 357;
-            DelegatingCanvas.field_c.h(-DelegatingCanvas.field_c.field_E + 269, var2Lifetime4);
-            al.field_j.h(586, var2Lifetime4);
+            DelegatingCanvas.field_c.draw(-DelegatingCanvas.field_c.field_E + 269, var2Lifetime4);
+            al.field_j.draw(586, var2Lifetime4);
             if (var2Lifetime4 < eh.field_h &&
               var2Lifetime4 + DelegatingCanvas.field_c.field_v > eh.field_h) {
               var3Lifetime5 = 40 + (la.a(jc.field_e << 4, (byte) 86) * 40 >> 16);
               if (var3Lifetime5 <= 0) {
                 qh.a(245);
-                en.field_b[me.field_f].h(269, 340);
+                en.field_b[me.field_f].draw(269, 340);
                 return;
               }
               if (hj.field_S > -DelegatingCanvas.field_c.field_y + 269 &&
                 hj.field_S < 269) {
-                DelegatingCanvas.field_c.b(269 - DelegatingCanvas.field_c.field_E - 1, var2Lifetime4 - 1, var3Lifetime5);
-                DelegatingCanvas.field_c.b(-DelegatingCanvas.field_c.field_E + 269 + 1, -1 + var2Lifetime4, var3Lifetime5);
-                DelegatingCanvas.field_c.b(-DelegatingCanvas.field_c.field_E + 269 - 1, 1 + var2Lifetime4, var3Lifetime5);
-                DelegatingCanvas.field_c.b(269 - DelegatingCanvas.field_c.field_E + 1, 1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.drawAdditive(269 - DelegatingCanvas.field_c.field_E - 1, var2Lifetime4 - 1, var3Lifetime5);
+                DelegatingCanvas.field_c.drawAdditive(-DelegatingCanvas.field_c.field_E + 269 + 1, -1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.drawAdditive(-DelegatingCanvas.field_c.field_E + 269 - 1, 1 + var2Lifetime4, var3Lifetime5);
+                DelegatingCanvas.field_c.drawAdditive(269 - DelegatingCanvas.field_c.field_E + 1, 1 + var2Lifetime4, var3Lifetime5);
               } else {
                 if (hj.field_S > 586 &&
                   DelegatingCanvas.field_c.field_y + 586 > hj.field_S) {
-                  al.field_j.b(585, -1 + var2Lifetime4, var3Lifetime5);
-                  al.field_j.b(587, var2Lifetime4 - 1, var3Lifetime5);
-                  al.field_j.b(585, 1 + var2Lifetime4, var3Lifetime5);
-                  al.field_j.b(587, var2Lifetime4 + 1, var3Lifetime5);
+                  al.field_j.drawAdditive(585, -1 + var2Lifetime4, var3Lifetime5);
+                  al.field_j.drawAdditive(587, var2Lifetime4 - 1, var3Lifetime5);
+                  al.field_j.drawAdditive(585, 1 + var2Lifetime4, var3Lifetime5);
+                  al.field_j.drawAdditive(587, var2Lifetime4 + 1, var3Lifetime5);
                 }
               }
             }
           }
           qh.a(245);
-          en.field_b[me.field_f].h(269, 340);
+          en.field_b[me.field_f].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -128,16 +128,16 @@ final class cd extends ea implements Cloneable {
         }
         if (param2 == 24 &&
           param3 == 24) {
-          qj.field_b.a(param1, -param3 + param4);
+          qj.field_b.draw(param1, -param3 + param4);
           if (param0) {
-            this.i(param5 - 4261).a(param1, param4 - param3);
-            this.h(0).a(param1, param4 - param3);
+            this.i(param5 - 4261).draw(param1, param4 - param3);
+            this.h(0).draw(param1, param4 - param3);
           }
         } else {
-          qj.field_b.b(param1, param4 - param3, param2 * 2, 3 * param3);
+          qj.field_b.drawScaled(param1, param4 - param3, param2 * 2, 3 * param3);
           if (param0) {
-            this.i(0).b(param1, -param3 + param4, 2 * param2, 3 * param3);
-            this.h(param5 ^ 4261).b(param1, param4 - param3, 2 * param2, 3 * param3);
+            this.i(0).drawScaled(param1, -param3 + param4, 2 * param2, 3 * param3);
+            this.h(param5 ^ 4261).drawScaled(param1, param4 - param3, 2 * param2, 3 * param3);
           }
         }
         if (param5 != 4261) {

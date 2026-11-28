@@ -97,7 +97,7 @@ final class lr extends IntrusiveNode {
               var8 = 256;
             }
             var7++;
-            ed.field_f[3 + (var7 & 3)].a(param4 + (param2 * var6.field_i >> 16) - 32, param1 + (-(param2 * var6.field_q >> 16) - 34), var6.field_o << 1);
+            ed.field_f[3 + (var7 & 3)].drawWithOpacity(param4 + (param2 * var6.field_i >> 16) - 32, param1 + (-(param2 * var6.field_q >> 16) - 34), var6.field_o << 1);
             var6 = (lh) (param3.nextForward(0));
           }
           return;
@@ -179,7 +179,7 @@ final class lr extends IntrusiveNode {
             if (var8 > 256) {
               var8 = 256;
             }
-            lw.field_b[1 + (var7 & 1)].a(-32 + param1 + (var6.field_i >> 4), -32 + (-2 + (var6.field_q >> 4) + param5) - (var6.field_h >> 5), 256 - ((var6.field_o << 2) + (var6.field_o << 1)));
+            lw.field_b[1 + (var7 & 1)].drawWithOpacity(-32 + param1 + (var6.field_i >> 4), -32 + (-2 + (var6.field_q >> 4) + param5) - (var6.field_h >> 5), 256 - ((var6.field_o << 2) + (var6.field_o << 1)));
             var6 = (lh) (param3.nextForward(0));
             var7++;
           }

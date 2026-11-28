@@ -396,7 +396,7 @@ final class BattleScreen extends dfa {
                 }
               }
               if (var4 != 0) {
-                this.field_x.e(-8 + (this.field_C.field_kb - (var3 >> 1)), -(var3 >> 1) + this.field_C.field_rb - 7, var3 + 16 + this.field_C.field_sb, this.field_C.field_p + (16 + var3), 256);
+                this.field_x.drawScaledAdditive(-8 + (this.field_C.field_kb - (var3 >> 1)), -(var3 >> 1) + this.field_C.field_rb - 7, var3 + 16 + this.field_C.field_sb, this.field_C.field_p + (16 + var3), 256);
               }
               SauceOfFlameEvent.field_t.draw(574, 64);
               if (this.field_C.field_T) {
@@ -688,12 +688,12 @@ final class BattleScreen extends dfa {
             }
           } else if (this.field_h.field_o == 2) {
             for (var6 = 0; var6 < this.field_T[var4]; var6++) {
-              sj.field_k[0].a(10 + var5 + var3 + var6 * 14, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 22);
+              sj.field_k[0].draw(10 + var5 + var3 + var6 * 14, -ScavengerAnimation.field_w.field_p + i.field_a.field_rb + 22);
             }
           } else {
             if (3 == this.field_h.field_o) {
               for (var6 = 0; var6 < this.field_h.field_C[var4]; var6++) {
-                ela.field_j[0].a(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
+                ela.field_j[0].draw(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
               }
             }
           }
@@ -1048,7 +1048,7 @@ final class BattleScreen extends dfa {
             if (!var6.field_s.isDown(100)) {
               var6.field_f.a(2048, -43, 255, 8, 2048, var2 - 66);
             } else {
-              CurryArenaTheme.field_g.a(var2, 15, 192);
+              CurryArenaTheme.field_g.drawWithOpacity(var2, 15, 192);
             }
             var8 = -7 + var2;
             var9 = 11;
@@ -2464,7 +2464,7 @@ final class BattleScreen extends dfa {
             var9[var6] = 65793 * var6;
           }
           this.field_x = new Sprite(45, 45);
-          this.field_x.b();
+          this.field_x.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(352, 352, 352, 255, var16);
           hga.field_U.a((byte) 120);
           var17 = nga.field_i;

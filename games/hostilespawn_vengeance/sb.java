@@ -75,7 +75,7 @@ final class sb {
             var13 = param4;
             var14 = param8;
             var15 = (var17[var11] & 16711422) >> 1;
-            var10[var11] = var15 + PcmOutputWorker.a(65280, var13 >> 9) + (PcmOutputWorker.a(var12 >> 1, 16711680) + PcmOutputWorker.a(255, var14 >> 17));
+            var10[var11] = var15 + PcmOutputWorker.bitwiseAnd(65280, var13 >> 9) + (PcmOutputWorker.bitwiseAnd(var12 >> 1, 16711680) + PcmOutputWorker.bitwiseAnd(255, var14 >> 17));
             param8 = param8 + param5;
             param1 = param1 + param6;
             param2++;

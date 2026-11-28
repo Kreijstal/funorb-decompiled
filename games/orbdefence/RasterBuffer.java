@@ -133,7 +133,7 @@ abstract class RasterBuffer {
 
     final static void a(byte param0, int param1, boolean param2, int param3) {
         int var4 = 0;
-        bl.field_n.c(param3, param1);
+        bl.field_n.draw(param3, param1);
         if (param0 != 8) {
           ResourceArchive var5 = (ResourceArchive) null;
           RasterBuffer.a((ResourceArchive) null, 88);
@@ -200,7 +200,7 @@ abstract class RasterBuffer {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void $cfr$intArgs$a$a1440e9a5aa4(int param0, int param1, boolean param2, int param3) {
         int var4 = 0;
-        bl.field_n.c(param3, param1);
+        bl.field_n.draw(param3, param1);
         if (param0 != 8) {
           ResourceArchive var5 = (ResourceArchive) null;
           RasterBuffer.a((ResourceArchive) null, 88);

@@ -416,7 +416,7 @@ final class se extends bd {
             if (param1 != 480) {
               field_t = (String) null;
             }
-            if (kd.field_B == null &&
+            if (NameSuggestionsPanel.field_B == null &&
               vf.field_b) {
               AccountServiceResult.a((byte) 61, var2, param0);
               return;
@@ -427,23 +427,23 @@ final class se extends bd {
           if (param1 != 480) {
             field_t = (String) null;
           }
-          if (kd.field_B == null &&
+          if (NameSuggestionsPanel.field_B == null &&
             vf.field_b) {
             AccountServiceResult.a((byte) 61, var2Lifetime2, param0);
             return;
           }
           return;
         }
-        if (null == kd.field_B) {
+        if (null == NameSuggestionsPanel.field_B) {
           n.field_a = re.createFullscreenCanvas(0, nb.field_e, 0, true, 640, 480);
         } else {
-          n.field_a = kd.field_B.a(2);
+          n.field_a = NameSuggestionsPanel.field_B.a(2);
           ae.a(2, (byte) 31);
         }
         if (n.field_a == null) {
           var2Lifetime1 = 3;
           if (param1 == 480) {
-            if (kd.field_B == null &&
+            if (NameSuggestionsPanel.field_B == null &&
               vf.field_b) {
               AccountServiceResult.a((byte) 61, var2Lifetime1, param0);
               return;
@@ -458,7 +458,7 @@ final class se extends bd {
             field_t = (String) null;
           }
         }
-        if (kd.field_B != null) {
+        if (NameSuggestionsPanel.field_B != null) {
           return;
         }
         if (!vf.field_b) {

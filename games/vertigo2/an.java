@@ -57,7 +57,7 @@ final class an {
           var5 = var4;
           var6 = var3;
           var7 = new Sprite(var5, var6);
-          var7.d();
+          var7.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(32, 32, var7.field_y - 64, var7.field_t - 64, 9361151, 1282259);
           var10 = 0;
           var11 = 128;
@@ -76,12 +76,12 @@ final class an {
             }
           }
           var13 = new Sprite(var4, var3);
-          var13.d();
+          var13.bindAsRenderTarget();
           var19.drawString(param1, 32, var19.field_D + 32, 16711680, -1);
           var14 = -35 % ((param0 - 29) / 61);
-          var13.d();
+          var13.bindAsRenderTarget();
           var15 = new Sprite(var5, var6);
-          var15.d();
+          var15.bindAsRenderTarget();
           for (var16 = 0; var16 < var13.field_F.length; var16++) {
             if (var13.field_F[var16] != 0 && (0 == var13.field_F[1 + var16] ||
               var13.field_F[var16 - 1] == 0 ||
@@ -102,7 +102,7 @@ final class an {
               SoftwareRasterizer.fillCircle(var8Lifetime2, var9Lifetime2, 5, 3039099);
             }
           }
-          var13.e(0, 0);
+          var13.draw(0, 0);
           var16Lifetime2 = 0;
           for (var17 = 0; var13.field_F.length > var17; var17++) {
             if (0 != var13.field_F[var17]) {
@@ -455,7 +455,7 @@ final class an {
           if (hn.field_w == 11) {
             pc.clearStaticReferences((byte) -111);
           }
-          mg.a(param0 + 1244, DiskArchiveRequest.field_E, d.field_C, IntrusiveNode.field_h);
+          mg.a(param0 + 1244, DiskArchiveRequest.field_E, InteractiveWidget.field_C, IntrusiveNode.field_h);
           ByteStorage.a(0, (byte) -99, param1, 0);
           if (param0 != -1243) {
             var3 = (String) null;
@@ -519,7 +519,7 @@ final class an {
         if (hn.field_t) {
           qr.field_l.a(this.field_d, 28580);
         } else {
-          ue.field_N.c(0, 0);
+          ue.field_N.drawOpaque(0, 0);
         }
         if (LevelCamera.field_r) {
           RasterBuffer.a(this.field_d, (byte) -48);

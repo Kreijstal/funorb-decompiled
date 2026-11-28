@@ -189,10 +189,10 @@ class wc extends hl {
           var2 = var27.readUnsignedByte(param0 ^ 127);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(674914976);
-            var4_ref = (fd) (fb.field_L.beginBackward(-18110));
+            var4_ref = (fd) (InteractiveWidget.field_L.beginBackward(-18110));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_j) {
-                var4_ref = (fd) (fb.field_L.nextBackward((byte) -93));
+                var4_ref = (fd) (InteractiveWidget.field_L.nextBackward((byte) -93));
                 continue;
               }
               break;

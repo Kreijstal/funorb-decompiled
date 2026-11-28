@@ -52,12 +52,12 @@ final class ke {
           jh.c();
           var4 = param2;
           var5 = new RgbSprite(param2.field_y, param2.field_v);
-          var5.e();
-          var4.f(0, 0, 96);
-          var6 = param2.d();
-          var6.e();
-          param2.b(0, 0, 256);
-          param2.b(0, 0, 256);
+          var5.bindAsRenderTarget();
+          var4.drawWithIntensity(0, 0, 96);
+          var6 = param2.copy();
+          var6.bindAsRenderTarget();
+          param2.drawAdditive(0, 0, 256);
+          param2.drawAdditive(0, 0, 256);
           if (param1 > -108) {
             field_e = -70;
           }

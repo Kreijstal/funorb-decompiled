@@ -48,7 +48,7 @@ final class lf {
         try {
           AccountServiceResult.field_d = new qc(param0);
           q.field_d = param1;
-          bb.field_C = param2;
+          InteractiveWidget.field_C = param2;
           if (param3 <= 64) {
             PlatformTaskDispatcher var5 = (PlatformTaskDispatcher) null;
             lf.a((PlatformTaskDispatcher) null, 38);

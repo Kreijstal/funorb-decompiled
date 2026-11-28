@@ -10,9 +10,9 @@ abstract class IndexedSpriteState {
     int field_a;
     private static String field_z;
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawWithOpacity(int param0, int param1, int param2);
 
     final static void a(int param0) {
         if (null != lr.field_k) {

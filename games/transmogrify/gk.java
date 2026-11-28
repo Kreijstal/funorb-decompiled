@@ -30,7 +30,7 @@ final class gk {
           FrameTimer.field_b = dupTemp$1;
           wi.field_q = dupTemp$1;
           if (fk.field_F.status != 1) {
-            lj.field_z = ng.field_j;
+            InteractiveWidget.field_z = ng.field_j;
           } else {
             try {
               nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.result), l.field_b);
@@ -41,13 +41,13 @@ final class gk {
               bd.field_t = stackIn_10_0;
               WordLanguage.field_k = stackIn_10_0;
               FullscreenFocusCanvas.field_a = stackIn_10_0;
-              lj.field_z = jk.field_y;
-              qb.a(124, AchievementUnlockEvent.field_h, LoginPanel.field_D, dh.field_x, ua.field_c);
+              InteractiveWidget.field_z = jk.field_y;
+              qb.a(124, AchievementUnlockEvent.field_h, LoginPanel.field_D, NameSuggestionsPanel.field_x, ua.field_c);
               rb.a(-1, -377);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref_IOException = (IOException) (Object) decompiledCaughtException;
-              lj.field_z = ng.field_j;
+              InteractiveWidget.field_z = ng.field_j;
               fk.field_F = null;
               var2 = 100 / ((param1 - 71) / 43);
               return true;

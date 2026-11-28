@@ -289,18 +289,18 @@ final class sj extends jc {
         sa var7 = null;
         sa var9 = null;
         String var10 = null;
-        s var11 = null;
+        InteractiveWidget var11 = null;
         sa var12 = null;
         sa var13 = null;
         sa var14 = null;
         sa var15 = null;
         try {
-          if (!(param2 instanceof s)) {
+          if (!(param2 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (pj) (param2);
           }
-          var11 = (s) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           id.a(param2.field_s + (param1 + param2.field_m), param2.field_s + param1, param2.field_r + param0 + param2.field_n, param0 + param2.field_n, param3 ^ -5112);
           if (var11 != null) {
             param4 = param4 & var11.field_F;

@@ -1793,7 +1793,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("corrosive_slime", false);
                 if (null != var2) {
-                  gi.field_P = dj.a(var2, false);
+                  NameSuggestionsPanel.field_P = dj.a(var2, false);
                 }
                 var2 = gm.a("razor_construct", param1);
                 if (var2 != null) {
@@ -2489,11 +2489,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_scout_brief,0", false);
                 if (var2 != null) {
-                  gi.field_K[0] = dj.a(var2, param1);
+                  NameSuggestionsPanel.field_K[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_scout_brief,1", false);
                 if (var2 != null) {
-                  gi.field_K[1] = dj.a(var2, false);
+                  NameSuggestionsPanel.field_K[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_spy_brief,0", false);
                 if (null != var2) {
@@ -3477,7 +3477,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_advance_minitip", param1);
                 if (null != var2) {
-                  gi.field_Q = dj.a(var2, false);
+                  NameSuggestionsPanel.field_Q = dj.a(var2, false);
                 }
                 var2 = gm.a("text_charge_minitip", false);
                 if (var2 != null) {

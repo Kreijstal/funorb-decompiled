@@ -62,7 +62,7 @@ final class ue extends jk {
         mc.a(-8497, var6);
         this.field_v.a(param0, param1, 0, 0);
         tj.b(param0 ^ 659);
-        var6.b(param3 + this.field_r, param2 + this.field_e, this.field_F);
+        var6.drawWithOpacity(param3 + this.field_r, param2 + this.field_e, this.field_F);
     }
 
     ue(UiWidget param0) {

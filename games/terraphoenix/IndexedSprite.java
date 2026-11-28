@@ -44,7 +44,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -150,7 +150,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -194,7 +194,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.blitIndexed(SoftwareRasterizer.field_i, this.field_l, this.field_m, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void drawTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -238,7 +238,7 @@ final class IndexedSprite extends IndexedSpriteState {
         IndexedSprite.blitTinted(SoftwareRasterizer.field_i, this.field_l, this.field_m, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void c(int param0, int param1) {
+    final void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -442,7 +442,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void drawScaled(int param0, int param1, int param2, int param3) {
         int var13 = 0;
         int var15 = 0;
         int var5 = this.field_k;
@@ -535,7 +535,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return new Sprite(this.field_f, this.field_i, this.field_g, this.field_d, this.field_k, this.field_c, var2);
     }
 
-    final void b(int param0, int param1) {
+    final void drawFlippedHorizontal(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

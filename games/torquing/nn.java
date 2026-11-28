@@ -171,14 +171,14 @@ final class nn {
             var3 = sp.a(var3, "@", "%40", (byte) -71);
             var3 = sp.a(var3, "&", "%26", (byte) -85);
             var7 = sp.a(var3, "#", "%23", (byte) -92);
-            if (null == lg.field_B) {
+            if (null == InteractiveWidget.field_B) {
               return;
             }
             stackIn_13_0 = FullscreenFocusCanvas.field_f;
             stackIn_13_1 = 0;
             stackIn_13_2 = null;
             stackIn_13_3 = null;
-            stackIn_13_4 = lg.field_B.getCodeBase();
+            stackIn_13_4 = InteractiveWidget.field_B.getCodeBase();
             stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(dq.field_m).append("&u=");
             if (null == vd.field_b) {
               stackIn_14_2 = null;

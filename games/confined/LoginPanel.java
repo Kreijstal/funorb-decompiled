@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ga implements TextFieldListener, el {
+final class LoginPanel extends ga implements TextFieldListener, WidgetActivationListener {
     private boolean field_L;
-    private rg field_P;
+    private InteractiveWidget field_P;
     static int[] field_R;
     private boolean field_W;
     private boolean field_S;
     static String field_Q;
     private String field_H;
-    private rg field_U;
+    private InteractiveWidget field_U;
     private EditableTextField field_X;
-    private rg field_V;
+    private InteractiveWidget field_V;
     private EditableTextField field_T;
 
     private final void submitLogin(byte param0) {
         if (param0 != -65) {
-          this.field_U = (rg) null;
+          this.field_U = (InteractiveWidget) null;
         }
         if (hh.a(param0 ^ 13676) ||
           !(this.field_T.field_B.length() <= 0) &&
@@ -25,7 +25,7 @@ final class LoginPanel extends ga implements TextFieldListener, el {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -213,10 +213,10 @@ final class LoginPanel extends ga implements TextFieldListener, el {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        rg stackIn_18_1 = null;
-        rg stackIn_18_2 = null;
-        rg stackIn_19_1 = null;
-        rg stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -246,7 +246,7 @@ final class LoginPanel extends ga implements TextFieldListener, el {
           this.field_T = (EditableTextField) ((Object) new ValidatedTextField(param0, (uk) (this), 100));
           this.field_X = (EditableTextField) ((Object) new ValidatedTextField("", (uk) (this), 20));
           if (!this.field_W) {
-            this.field_V = new rg(IntrusiveNodeHashTableIterator.field_d, (uk) null);
+            this.field_V = new InteractiveWidget(IntrusiveNodeHashTableIterator.field_d, (uk) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_L) {
@@ -258,13 +258,13 @@ final class LoginPanel extends ga implements TextFieldListener, el {
               stackIn_19_2 = null;
               stackIn_19_3 = ug.field_cb;
             }
-            this.field_U = new rg(stackIn_19_3, (uk) null);
+            this.field_U = new InteractiveWidget(stackIn_19_3, (uk) null);
             if (this.field_S) {
-              this.field_P = new rg(ej.field_c, (uk) (this));
+              this.field_P = new InteractiveWidget(ej.field_c, (uk) (this));
             }
           } else {
-            this.field_V = new rg(aa.field_a, (uk) null);
-            this.field_U = new rg(al.field_c, (uk) null);
+            this.field_V = new InteractiveWidget(aa.field_a, (uk) null);
+            this.field_U = new InteractiveWidget(al.field_c, (uk) null);
             this.field_T.field_L = false;
           }
           this.field_T.field_n = (fe) ((Object) new db(10000536));

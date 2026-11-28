@@ -51,7 +51,7 @@ final class SecondaryNodeDeque implements Iterable {
         try {
           var1 = th.field_g;
           synchronized (var1) {
-            eb.field_F = eb.field_F + 1;
+            InteractiveWidget.field_F = InteractiveWidget.field_F + 1;
             BattleUnit.field_V = d.field_M;
             if (0 > dj.field_e) {
               for (var2 = 0; var2 < 112; var2++) {

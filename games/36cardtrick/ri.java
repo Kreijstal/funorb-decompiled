@@ -29,14 +29,14 @@ final class ri {
           SoftwareRasterizer.clearRaster();
           h.field_F = 0;
           de.b(30);
-          var2 = var1.b();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.d(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          rc.field_i.c();
+          rc.field_i.bindAsRenderTarget();
           var3Lifetime1 = -29 / ((param0 - 1) / 58);
-          var1.c(0, 0);
+          var1.drawHalfSize(0, 0);
           gg.a(14756);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "ri.B(" + param0 + ')');

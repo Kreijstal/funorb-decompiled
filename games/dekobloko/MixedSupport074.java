@@ -116,7 +116,7 @@ final class MixedSupport074 {
           EmailValidationError.sceneWidgetState0060.integerState0916 = 1;
           SceneWidgetPart011.sceneWidgetState0114 = new SceneWidget(0L, MixedSupport039.sceneWidgetState0029, MixedSupport014.stringState0069);
           TextLayout.sceneWidgetState0010 = new SceneWidget(0L, NetworkSupport003.sceneWidgetState0018, MixedSupport105.stringState0453);
-          EmailValidationError.sceneWidgetState0059 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
+          EmailValidationError.sceneWidgetState0059 = new SceneWidget(0L, NameSuggestionsPanel.sceneWidgetState0019);
           ValidationStatus.sceneWidgetState0112.performAction1768(EmailValidationError.sceneWidgetState0060, -16834);
           ValidationStatus.sceneWidgetState0112.performAction1768(SceneWidgetPart011.sceneWidgetState0114, -16834);
           ValidationStatus.sceneWidgetState0112.performAction1768(TextLayout.sceneWidgetState0010, -16834);

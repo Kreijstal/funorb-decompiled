@@ -58,10 +58,10 @@ final class s extends vc {
           var6Lifetime1 != mi.field_c) {
           if (a.field_e == var6Lifetime1) {
             var14 = la.field_E[2];
-            var14.a(var9, var10 - (var14.field_q >> 1), 256);
+            var14.drawAdditive(var9, var10 - (var14.field_q >> 1), 256);
           } else if (mc.field_a == var6Lifetime1) {
             var15 = la.field_E[1];
-            var15.a(var9, -(var15.field_q >> 1) + var10, 256);
+            var15.drawAdditive(var9, -(var15.field_q >> 1) + var10, 256);
           }
         } else {
           var16 = la.field_E[0];
@@ -76,9 +76,9 @@ final class s extends vc {
             this.field_K = new RgbSprite(var11, var12);
             kh.a(this.field_K, 1);
           }
-          var16.b(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_L << 10, 4096);
+          var16.drawRotatedAboutBilinear(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_L << 10, 4096);
           ve.a(-125);
-          this.field_K.a(var9 - (var16.field_t >> 1), -var16.field_o + var10, 256);
+          this.field_K.drawAdditive(var9 - (var16.field_t >> 1), -var16.field_o + var10, 256);
         }
     }
 

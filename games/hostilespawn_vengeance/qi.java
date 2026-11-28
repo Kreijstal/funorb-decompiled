@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends vd implements qk {
+final class qi extends vd implements WidgetActivationListener {
     private dg field_F;
     private String field_I;
     static RgbSprite field_H;
@@ -9,7 +9,7 @@ final class qi extends vd implements qk {
     static int field_N;
     private int field_E;
     static String field_G;
-    private ph[] field_K;
+    private InteractiveWidget[] field_K;
     private BitmapFont field_L;
     static int field_J;
 
@@ -46,13 +46,13 @@ final class qi extends vd implements qk {
     }
 
     private final void b(int param0, int param1) {
-        ph[] var7 = null;
-        ph[] var3 = null;
+        InteractiveWidget[] var7 = null;
+        InteractiveWidget[] var3 = null;
         int[] var4 = null;
         int var5 = 0;
         int var6 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_E < param1) {
-          var7 = new ph[param1];
+          var7 = new InteractiveWidget[param1];
           var3 = var7;
           var4 = new int[param1];
           for (var5 = param0; this.field_E > var5; var5++) {
@@ -66,7 +66,7 @@ final class qi extends vd implements qk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -111,11 +111,11 @@ final class qi extends vd implements qk {
         }
     }
 
-    final ph a(mh param0, String param1, int param2) {
-        ph var4 = null;
+    final InteractiveWidget a(mh param0, String param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ph stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -123,7 +123,7 @@ final class qi extends vd implements qk {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ph(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_h = (nn) ((Object) new ke());
           var5 = -2 + this.field_x;
           this.a(this.field_s, 0, 0, 0, this.field_x + 34);

@@ -24,7 +24,7 @@ final class cf {
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4;
-        MouseWheelInput.field_g.h(param1, param3);
+        MouseWheelInput.field_g.draw(param1, param3);
         if (param2 < 125) {
           return;
         }

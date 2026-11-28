@@ -191,7 +191,7 @@ abstract class en extends ab {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        PauseMenu.field_f.a(this.field_g + (param1 - 90), 10 + param2);
+        PauseMenu.field_f.draw(this.field_g + (param1 - 90), 10 + param2);
         fb.a(param0 - 29, gk.field_d, -10 + this.field_g, 5 + param1, param2 + 35);
         fb.a(param0 ^ 31, lm.field_g, this.field_g, param1, this.field_f + param2 - 22);
         var4Lifetime2 = this.field_f - 79;

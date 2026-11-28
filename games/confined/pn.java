@@ -196,7 +196,7 @@ final class pn {
             if (2 == param4.field_k) {
               var7 = var7 + (param2.field_z - this.field_d.field_x);
             }
-            this.field_d.d(var6_int, var7);
+            this.field_d.draw(var6_int, var7);
           }
           var6 = param4.b(param2, -2);
           if (param3 < 43) {

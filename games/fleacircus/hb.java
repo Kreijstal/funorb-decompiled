@@ -71,18 +71,18 @@ final class hb extends e {
         RuntimeException var6 = null;
         te var7 = null;
         te var9 = null;
-        bb var10 = null;
+        InteractiveWidget var10 = null;
         te var11 = null;
         te var12 = null;
         te var13 = null;
         te var14 = null;
         try {
-          if (param3 instanceof bb) {
+          if (param3 instanceof InteractiveWidget) {
             stackIn_3_0 = (UiComponent) (param3);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (bb) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           mi.a((byte) -52, param1 + (param3.field_y + param3.field_u), param3.field_y + param1, param4 + (param3.field_z + param3.field_j), param4 + param3.field_z);
           if (var10 != null) {
             param2 = param2 & var10.field_D;

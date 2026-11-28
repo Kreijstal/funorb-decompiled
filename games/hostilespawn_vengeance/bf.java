@@ -31,7 +31,7 @@ final class bf {
         int var8 = 0;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          this.field_i[this.field_e] = (byte)ll.a((int) this.field_i[this.field_e], 128 >>> PcmOutputWorker.a(7, this.field_b));
+          this.field_i[this.field_e] = (byte)ll.a((int) this.field_i[this.field_e], 128 >>> PcmOutputWorker.bitwiseAnd(7, this.field_b));
           this.field_e = this.field_e + 1;
           if (this.field_e > 32) {
             while (this.field_e < 64) {
@@ -138,7 +138,7 @@ final class bf {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_k[var3Lifetime1] = ga.a(this.field_k[var3Lifetime1], i.field_a[var4][PcmOutputWorker.a((int)(this.field_g[PcmOutputWorker.a(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_k[var3Lifetime1] = ga.a(this.field_k[var3Lifetime1], i.field_a[var4][PcmOutputWorker.bitwiseAnd((int)(this.field_g[PcmOutputWorker.bitwiseAnd(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -153,7 +153,7 @@ final class bf {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_k[var3Lifetime1Lifetime2] = ga.a(this.field_k[var3Lifetime1Lifetime2], i.field_a[var7][PcmOutputWorker.a((int)(this.field_h[PcmOutputWorker.a(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
+              this.field_k[var3Lifetime1Lifetime2] = ga.a(this.field_k[var3Lifetime1Lifetime2], i.field_a[var7][PcmOutputWorker.bitwiseAnd((int)(this.field_h[PcmOutputWorker.bitwiseAnd(7, -var7 + var3Lifetime1Lifetime2)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -271,7 +271,7 @@ final class bf {
                 this.field_e = 0;
                 this.field_b = 0;
               }
-              this.field_i[this.field_e] = (byte)PcmOutputWorker.a(255, var8 << 8 - var7);
+              this.field_i[this.field_e] = (byte)PcmOutputWorker.bitwiseAnd(255, var8 << 8 - var7);
               var5_int++;
               param2 = param2 - 8L;
               this.field_b = this.field_b + var7;
@@ -298,7 +298,7 @@ final class bf {
               this.field_e = 0;
               this.field_b = 0;
             }
-            this.field_i[this.field_e] = (byte)PcmOutputWorker.a(255, var8Lifetime1 << 8 - var7);
+            this.field_i[this.field_e] = (byte)PcmOutputWorker.bitwiseAnd(255, var8Lifetime1 << 8 - var7);
             this.field_b = this.field_b + (int)param2;
           }
           return;

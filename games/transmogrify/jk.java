@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends aj implements df {
-    private lj field_z;
+final class jk extends aj implements WidgetActivationListener {
+    private InteractiveWidget field_z;
     static int field_B;
     static hi field_y;
-    private lj field_C;
-    private lj field_w;
+    private InteractiveWidget field_C;
+    private InteractiveWidget field_w;
     static MidiPcmStream field_D;
     static mg field_x;
 
@@ -26,7 +26,7 @@ final class jk extends aj implements df {
         }
     }
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -66,9 +66,9 @@ final class jk extends aj implements df {
 
     public jk() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_w = new lj(je.field_c, (ma) null);
-        this.field_z = new lj(el.field_a, (ma) null);
-        this.field_C = new lj(gl.field_z, (ma) null);
+        this.field_w = new InteractiveWidget(je.field_c, (ma) null);
+        this.field_z = new InteractiveWidget(el.field_a, (ma) null);
+        this.field_C = new InteractiveWidget(gl.field_z, (ma) null);
         qa var1 = new qa();
         this.field_w.field_q = (WidgetRenderer) ((Object) var1);
         this.field_z.field_q = (WidgetRenderer) ((Object) var1);

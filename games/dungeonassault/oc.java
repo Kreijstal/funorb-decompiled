@@ -208,7 +208,7 @@ final class oc extends kl {
           var7 = var6.length * la.field_b.field_H + la.field_b.field_E;
           jh.c();
           this.field_m = new RgbSprite(var5_int, var7);
-          this.field_m.e();
+          this.field_m.bindAsRenderTarget();
           var8 = la.field_b.field_H;
           var13 = var6;
           var9 = var13;
@@ -218,8 +218,8 @@ final class oc extends kl {
             var8 = var8 + la.field_b.field_H;
           }
           this.field_o = new RgbSprite(var5_int + 4, 4 + var7);
-          this.field_o.e();
-          this.field_m.e(2, 2, 12690143);
+          this.field_o.bindAsRenderTarget();
+          this.field_m.drawSilhouette(2, 2, 12690143);
           SoftwareRasterizer.blurRectangle(2, 2, 0, 0, 4 + var5_int, 4 + var7);
           if (!this.field_x) {
             stackIn_16_0 = lp.field_n;
@@ -233,10 +233,10 @@ final class oc extends kl {
           var5_int = IntrusiveNode.field_c.stringWidth(var14);
           var7Lifetime1 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
           this.field_y = new RgbSprite(var5_int, var7Lifetime1);
-          this.field_y.e();
+          this.field_y.bindAsRenderTarget();
           IntrusiveNode.field_c.drawString(var14, 0, IntrusiveNode.field_c.field_H, var10Lifetime1, -1);
           this.field_I = rb.a(16, this.field_y, var10Lifetime1, (byte) 100);
-          this.field_y.d(65793);
+          this.field_y.addOutline(65793);
           jh.b();
           gd.a(64, bc.field_b);
           return;
@@ -311,7 +311,7 @@ final class oc extends kl {
         }
         var19 = hf.field_ib.a(108, var6, 108, 0);
         if (var19 != null) {
-          var19.c(10, 57);
+          var19.drawOpaque(10, 57);
         }
         var6Lifetime1 = (int)(-0.5 + (1.0 - Math.exp(-var2 * (double)this.field_C)) * var4 + (double)this.field_H);
         var6Lifetime1 = var6Lifetime1 % hf.field_ib.field_c;
@@ -320,7 +320,7 @@ final class oc extends kl {
         }
         var20 = hf.field_ib.a(108, var6Lifetime1, 108, 0);
         if (var20 != null) {
-          var20.c(518, 57);
+          var20.drawOpaque(518, 57);
         }
         var8 = new int[64];
         for (var9_int = 0; var9_int < 64; var9_int++) {
@@ -342,30 +342,30 @@ final class oc extends kl {
           if (this.field_C >= 250) {
             var15 = var10 + (-this.field_y.field_y + 216 >> 1);
             var16 = var11 + 208 - this.field_y.field_v;
-            this.field_I.b(var15, var16, 256);
-            this.field_y.h(var15, var16);
+            this.field_I.drawAdditive(var15, var16, 256);
+            this.field_y.draw(var15, var16);
           } else {
             var15 = 192 - 192 * (-100 + this.field_C) / 150;
-            ((RgbSprite) (var9)).d(var10 - 4, var11 - 4, var15);
+            ((RgbSprite) (var9)).drawWithOpacity(var10 - 4, var11 - 4, var15);
             var15 = (this.field_C - 100 << 8) / 150;
             var16 = var10 + (216 - this.field_y.field_y >> 1);
             var17 = var11 + (-this.field_y.field_v + 208);
-            this.field_I.b(var16, var17, var15);
-            this.field_y.d(var16, var17, var15);
+            this.field_I.drawAdditive(var16, var17, var15);
+            this.field_y.drawWithOpacity(var16, var17, var15);
           }
           if (175 > this.field_C) {
-            this.field_o.b(-2 + var12, -2 + var14, (this.field_C * 256 - 25600) / 75);
+            this.field_o.drawAdditive(-2 + var12, -2 + var14, (this.field_C * 256 - 25600) / 75);
           } else {
             if (this.field_C >= 250) {
-              this.field_m.b(var12, var14, 256);
+              this.field_m.drawAdditive(var12, var14, 256);
             } else {
-              this.field_o.b(var12 - 2, var14 - 2, -((256 * (this.field_C - 100) - 19200) / 75) + 256);
-              this.field_m.b(var12, var14, (this.field_C - 100 - 150 - 75) * 256 / 75);
+              this.field_o.drawAdditive(var12 - 2, var14 - 2, -((256 * (this.field_C - 100) - 19200) / 75) + 256);
+              this.field_m.drawAdditive(var12, var14, (this.field_C - 100 - 150 - 75) * 256 / 75);
             }
           }
         } else {
           this.field_p.drawAnimation(216, var11, (byte) 102, var10, 216);
-          ((RgbSprite) (var9)).d(-4 + var10, -4 + var11, 192);
+          ((RgbSprite) (var9)).drawWithOpacity(-4 + var10, -4 + var11, 192);
         }
     }
 

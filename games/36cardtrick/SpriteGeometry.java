@@ -71,7 +71,7 @@ abstract class SpriteGeometry extends DualLinkNode {
             var3 = (CharSequence) null;
             SpriteGeometry.a(false, (CharSequence) null);
           }
-          stackIn_3_0 = bd.a(true, param1, (byte) 122, 10);
+          stackIn_3_0 = NameSuggestionsPanel.a(true, param1, (byte) 122, 10);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

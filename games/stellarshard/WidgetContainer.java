@@ -1615,7 +1615,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(91, "logging_in");
                 if (var2 != null) {
-                  ul.field_H = se.a(0, var2);
+                  NameSuggestionsPanel.field_H = se.a(0, var2);
                 }
                 var2 = ca.a(127, "reconnect");
                 if (var2 != null) {
@@ -2403,7 +2403,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 ^ 123, "instructions");
                 if (var2 != null) {
-                  ig.field_C = se.a(0, var2);
+                  InteractiveWidget.field_C = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 98, "tutorial");
                 if (var2 != null) {

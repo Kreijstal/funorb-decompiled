@@ -173,10 +173,10 @@ final class tl extends ci {
           tl.a(-57, -23, 14, -33);
         }
         if (hd.field_l.beginBackward(-18110) != null) {
-          fieldTemp$0 = fb.field_K + 1;
-          fb.field_K = fb.field_K + 1;
+          fieldTemp$0 = InteractiveWidget.field_K + 1;
+          InteractiveWidget.field_K = InteractiveWidget.field_K + 1;
           if (fieldTemp$0 == 335) {
-            fb.field_K = 0;
+            InteractiveWidget.field_K = 0;
             hd.field_l.removeLast(1184188328);
           }
         }

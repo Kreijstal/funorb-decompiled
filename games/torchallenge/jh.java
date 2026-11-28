@@ -47,7 +47,7 @@ final class jh {
         if (param0 < 30) {
           return false;
         }
-        if (li.field_N) {
+        if (NameSuggestionsPanel.field_N) {
           if (null == eb.field_l) {
             return true;
           }

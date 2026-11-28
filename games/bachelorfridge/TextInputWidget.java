@@ -115,7 +115,7 @@ class TextInputWidget extends InteractiveWidget {
           if (param0 != 54) {
             TextInputWidget.releaseStatics((byte) -47);
           }
-          param1.g(2);
+          param1.padWithinCanvas(2);
           param1.addOutline(65793);
           stackIn_3_0 = (Sprite) (param1);
           return stackIn_3_0;

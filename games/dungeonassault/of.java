@@ -46,7 +46,7 @@ final class of {
             im.field_e.field_w = -8;
             im.field_e.field_A = -8;
           }
-          im.field_e.e();
+          im.field_e.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var1_int = 0;
           for (var2 = 0; var2 < 7; var2++) {

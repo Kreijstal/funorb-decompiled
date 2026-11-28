@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends kj implements tl, sg {
+final class qh extends kj implements tl, WidgetActivationListener {
     static int field_J;
     static int field_P;
     private AccountCreationResultPanel field_Q;
     private df field_N;
-    private ng field_K;
+    private InteractiveWidget field_K;
     static boolean[][][] field_O;
     static String field_L;
     static ResourceArchive field_M;
@@ -44,11 +44,11 @@ final class qh extends kj implements tl, sg {
         int var5Lifetime3;
         var9 = TorChallenge.field_F ? 1 : 0;
         if (null != uk.field_N) {
-          uk.field_N.d();
+          uk.field_N.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
         } else {
           uk.field_N = new Sprite(640, 480);
-          uk.field_N.d();
+          uk.field_N.bindAsRenderTarget();
         }
         if (3 != param0) {
           if (ii.field_h == null) {
@@ -62,7 +62,7 @@ final class qh extends kj implements tl, sg {
         var3 = af.field_f[1];
         var5 = af.field_f[3];
         var4 = af.field_f[2];
-        sf.a(uk.field_N, ng.field_L, var3, var5, var2, var4, (byte) -55);
+        sf.a(uk.field_N, InteractiveWidget.field_L, var3, var5, var2, var4, (byte) -55);
         if (param0 != 0 &&
           param0 != 1) {
           if (param0 == 2) {
@@ -70,14 +70,14 @@ final class qh extends kj implements tl, sg {
             var5Lifetime1 = IsaacRandom.field_i[3];
             var4Lifetime1 = IsaacRandom.field_i[2];
             var2Lifetime1 = IsaacRandom.field_i[0];
-            sf.a(uk.field_N, ng.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
+            sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
           }
         } else {
           var4Lifetime1 = ob.field_b[2];
           var3Lifetime1 = ob.field_b[1];
           var2Lifetime1 = ob.field_b[0];
           var5Lifetime1 = ob.field_b[3];
-          sf.a(uk.field_N, ng.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
+          sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime1, var5Lifetime1, var2Lifetime1, var4Lifetime1, (byte) -55);
         }
         var4Lifetime2 = oj.field_e[2];
         if (!param1) {
@@ -88,7 +88,7 @@ final class qh extends kj implements tl, sg {
         var3Lifetime2 = oj.field_e[1];
         var10 = new Sprite(1 + var4Lifetime2 / 2, var5Lifetime2);
         sf.a(var10, ph.field_h, 0, var5Lifetime2, 0, var4Lifetime2 / 2 + 1, (byte) -55);
-        uk.field_N.d();
+        uk.field_N.bindAsRenderTarget();
         var10.drawTransparent(var2Lifetime2, var3Lifetime2);
         var10.drawFlippedHorizontal(var2Lifetime2 + var4Lifetime2 / 2 - 2, var3Lifetime2);
         var7 = di.field_t[vj.field_c].fullHeight;
@@ -102,23 +102,23 @@ final class qh extends kj implements tl, sg {
             var2Lifetime3 = oa.field_a[0];
             var4Lifetime3 = oa.field_a[2];
             var5Lifetime3 = oa.field_a[3];
-            sf.a(uk.field_N, ng.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
+            sf.a(uk.field_N, InteractiveWidget.field_L, var3Lifetime3, var5Lifetime3, var2Lifetime3, var4Lifetime3, (byte) -55);
           }
         } else {
           var3Lifetime3 = ValidatedTextField.field_eb[vj.field_c][1];
           var2Lifetime3 = ValidatedTextField.field_eb[vj.field_c][0];
-          uk.field_N.d();
+          uk.field_N.bindAsRenderTarget();
           ie.field_f[vj.field_c][0].drawTransparent(var2Lifetime3, var3Lifetime3);
           IterableNodeHashTable.field_h = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
           ac.field_a = new Sprite(ie.field_f[vj.field_c][1].fullWidth, ie.field_f[vj.field_c][1].fullHeight);
-          IterableNodeHashTable.field_h.d();
-          ie.field_f[vj.field_c][1].a(0, 0, 0, 47211);
+          IterableNodeHashTable.field_h.bindAsRenderTarget();
+          ie.field_f[vj.field_c][1].drawBlendedTowardColor(0, 0, 0, 47211);
         }
         if (param0 == 0 ||
           2 == param0) {
           var3Lifetime4 = nh.field_db[1];
           var2Lifetime4 = nh.field_db[0];
-          uk.field_N.d();
+          uk.field_N.bindAsRenderTarget();
           wf.field_b.drawTransparent(var2Lifetime4, var3Lifetime4);
         }
         SectorCacheStore.field_f.bindAsTarget(-53);
@@ -126,7 +126,7 @@ final class qh extends kj implements tl, sg {
 
     public final void a(df param0, int param1, int param2, boolean param3) {
         int var6 = 0;
-        ng var7 = null;
+        InteractiveWidget var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -135,8 +135,8 @@ final class qh extends kj implements tl, sg {
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           if (!param3) {
-            var7 = (ng) null;
-            this.a((ng) null, -60, 57, -19, true);
+            var7 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, -60, 57, -19, true);
           }
           if (0 == param1) {
             ri.a("terms.ws", (byte) -90);
@@ -360,7 +360,7 @@ final class qh extends kj implements tl, sg {
         }
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -406,7 +406,7 @@ final class qh extends kj implements tl, sg {
         int var6 = 0;
         try {
           this.field_Q = param0;
-          this.field_K = new ng(be.field_a, (gg) null);
+          this.field_K = new InteractiveWidget(be.field_a, (gg) null);
           this.field_K.field_q = (j) ((Object) new cl());
           var7 = ni.a(new String[]{this.c(false), this.a(109)}, 0, lc.field_m);
           var3 = 20;

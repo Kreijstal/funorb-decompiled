@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends kf {
+final class ld extends InteractiveWidget {
     private int field_F;
     private FieldValidator field_E;
     static String field_G;
@@ -134,32 +134,32 @@ final class ld extends kf {
           if (AwtRasterBuffer.field_f == null) {
             AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
             de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-            var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
           if (var9 > AwtRasterBuffer.field_f.field_p) {
             AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
             de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-            var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
           if (AwtRasterBuffer.field_f.field_u >= var10) {
             de.a(AwtRasterBuffer.field_f, 6);
             SoftwareRasterizer.clearRaster();
-            var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
           AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
           de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-          var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);
-          AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+          AwtRasterBuffer.field_f.drawAdditive(-var15.field_r + var5, -var15.field_x + var6, 256);
           return;
         }
         if (BufferedRandomAccessFile.field_q == var8) {
@@ -169,42 +169,42 @@ final class ld extends kf {
           if (AwtRasterBuffer.field_f == null) {
             AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
             de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-            var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
           if (var9Lifetime1 > AwtRasterBuffer.field_f.field_p) {
             AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
             de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-            var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
           if (AwtRasterBuffer.field_f.field_u >= var10Lifetime1) {
             de.a(AwtRasterBuffer.field_f, 6);
             SoftwareRasterizer.clearRaster();
-            var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.drawAdditive(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
           AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
           de.a(AwtRasterBuffer.field_f, param0 ^ -117);
-          var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);
-          AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+          AwtRasterBuffer.field_f.drawAdditive(-var16.field_r + var5, -var16.field_x + var6, 256);
           return;
         }
         if (ni.field_b == var8) {
           var14 = BufferedRandomAccessFile.field_b[2];
-          var14.d(var5 - (var14.field_p >> 1), var6 - (var14.field_u >> 1), 256);
+          var14.drawAdditive(var5 - (var14.field_p >> 1), var6 - (var14.field_u >> 1), 256);
           return;
         }
         if (rh.field_p == var8) {
           var13 = BufferedRandomAccessFile.field_b[1];
-          var13.d(-(var13.field_p >> 1) + var5, var6 - (var13.field_u >> 1), 256);
+          var13.drawAdditive(-(var13.field_p >> 1) + var5, var6 - (var13.field_u >> 1), 256);
           return;
         }
     }

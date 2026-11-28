@@ -45,7 +45,7 @@ final class rea extends IntrusiveNode {
             if (var8 > 256) {
               var8 = 256;
             }
-            qna.field_l[var7.field_i].a((int)var7.field_m + param2 - 128, param5 + ((int)var7.field_l - 64 - 16), 4 * var7.field_n);
+            qna.field_l[var7.field_i].drawWithOpacity((int)var7.field_m + param2 - 128, param5 + ((int)var7.field_l - 64 - 16), 4 * var7.field_n);
             var7 = (rea) (param0.nextForward(0));
           }
           return;

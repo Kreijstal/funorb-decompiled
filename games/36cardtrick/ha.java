@@ -160,7 +160,7 @@ final class ha {
               var11 = EmailFormatValidator.field_j.readNullableString((byte) 29);
               var7 = EmailFormatValidator.field_j.readUnsignedByte(113);
               if (0 != (var7 & 1)) {
-                bd.d((byte) -86);
+                NameSuggestionsPanel.d((byte) -86);
               }
               if (!param3) {
                 stackIn_43_0 = ((var7 & 4) != 0);

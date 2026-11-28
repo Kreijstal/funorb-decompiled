@@ -58,7 +58,7 @@ abstract class eh {
         int var4;
         int var4Lifetime1;
         if (param2 == 0) {
-          jg.field_t.d(param1, param0);
+          jg.field_t.draw(param1, param0);
           if (!param3) {
             return;
           }
@@ -77,7 +77,7 @@ abstract class eh {
           return;
         }
         eh.clearDeclaredStaticReferences((byte) -115);
-        jg.field_t.d(param1, param0);
+        jg.field_t.draw(param1, param0);
         if (!param3) {
           return;
         }

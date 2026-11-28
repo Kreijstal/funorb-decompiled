@@ -510,7 +510,7 @@ class UiComponent extends UiNode {
           if (this.field_F >= 256) {
             var17.draw(var23_int, var24);
           } else {
-            var17.a(var23_int, var24, this.field_F);
+            var17.drawWithOpacity(var23_int, var24, this.field_F);
           }
         }
         boolean decompiledFrameRemainder0 = true;

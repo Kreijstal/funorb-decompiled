@@ -275,10 +275,10 @@ final class kb extends IntrusiveNode {
             if (param1) {
               field_m = -86;
             }
-            if (null != s.field_y) {
+            if (null != InteractiveWidget.field_y) {
               try {
-                s.field_y.seek(0L, -1);
-                s.field_y.readFully(var2, 4);
+                InteractiveWidget.field_y.seek(0L, -1);
+                InteractiveWidget.field_y.readFully(var2, 4);
                 var3_int = 0;
                 scanLoop1: while (true) {
                   if (var3_int < 24) {
@@ -931,7 +931,7 @@ final class kb extends IntrusiveNode {
             if (this.field_C == 1) {
               var5 = var5 + DualLinkDequeIterator.field_e / 2;
               var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
-              hf.field_g[this.field_C * 7 + 0].a(var4_int, -5 + var5, 0, 1950);
+              hf.field_g[this.field_C * 7 + 0].drawRotated(var4_int, -5 + var5, 0, 1950);
               var6Lifetime1 = 32;
               if (this.field_F == 0) {
                 var6Lifetime1 = 24;
@@ -948,15 +948,15 @@ final class kb extends IntrusiveNode {
               if (this.field_F == 4) {
                 var6Lifetime1 = 24;
               }
-              hf.field_g[this.field_C * 7 + this.field_F + 2].a(528, var6Lifetime1 << 4, var4_int << 4, var5 - 8 << 4, 32768 + this.field_o, 1950);
-              hf.field_g[1 + 7 * this.field_C].a(var4_int, var5 - 5, 0, 1950);
+              hf.field_g[this.field_C * 7 + this.field_F + 2].drawRotatedAboutNearest(528, var6Lifetime1 << 4, var4_int << 4, var5 - 8 << 4, 32768 + this.field_o, 1950);
+              hf.field_g[1 + 7 * this.field_C].drawRotated(var4_int, var5 - 5, 0, 1950);
               decompiledFrameRemainder0 = (var15 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (2 == this.field_C) {
                 var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
                 var5 = var5 + DualLinkDequeIterator.field_e / 2;
-                hf.field_g[0 + 7 * this.field_C].a(var4_int, var5 - 5, 0, 1950);
+                hf.field_g[0 + 7 * this.field_C].drawRotated(var4_int, var5 - 5, 0, 1950);
                 var6Lifetime1 = 32;
                 if (this.field_F == 0) {
                   var6Lifetime1 = 24;
@@ -973,14 +973,14 @@ final class kb extends IntrusiveNode {
                 if (this.field_F == 4) {
                   var6Lifetime1 = 24;
                 }
-                hf.field_g[this.field_F + (2 + 7 * this.field_C)].a(528, var6Lifetime1 << 4, var4_int << 4, var5 - 12 << 4, this.field_o + 32768, 1950);
-                hf.field_g[7 * this.field_C + 1].a(var4_int, -8 + var5, 0, 1950);
+                hf.field_g[this.field_F + (2 + 7 * this.field_C)].drawRotatedAboutNearest(528, var6Lifetime1 << 4, var4_int << 4, var5 - 12 << 4, this.field_o + 32768, 1950);
+                hf.field_g[7 * this.field_C + 1].drawRotated(var4_int, -8 + var5, 0, 1950);
                 decompiledFrameRemainder0 = (var15 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.field_C != 5) {
                   if (this.field_C == 6) {
-                    hf.field_g[7 * this.field_C + 0].a(var4_int, var5 - 5, 0, 1300);
+                    hf.field_g[7 * this.field_C + 0].drawRotated(var4_int, var5 - 5, 0, 1300);
                     decompiledFrameRemainder0 = (this.field_s != null);
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameRemainder0 = (this.field_s.field_C != -1))) {
@@ -1016,7 +1016,7 @@ final class kb extends IntrusiveNode {
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.field_C == 3) {
-                      hf.field_g[7 * this.field_C + 0].a(var4_int, -5 + var5, 0, 1300);
+                      hf.field_g[7 * this.field_C + 0].drawRotated(var4_int, -5 + var5, 0, 1300);
                       var6Lifetime1 = 32;
                       if (0 == this.field_F) {
                         var6Lifetime1 = 24;
@@ -1033,15 +1033,15 @@ final class kb extends IntrusiveNode {
                       if (this.field_F == 4) {
                         var6Lifetime1 = 24;
                       }
-                      hf.field_g[7 * this.field_C + (this.field_F + 2)].a(528, var6Lifetime1 << 4, var4_int << 4, -12 + var5 << 4, this.field_o + 32768, 1800);
-                      hf.field_g[1 + 7 * this.field_C].a(var4_int, var5 - 10, 0, 1300);
+                      hf.field_g[7 * this.field_C + (this.field_F + 2)].drawRotatedAboutNearest(528, var6Lifetime1 << 4, var4_int << 4, -12 + var5 << 4, this.field_o + 32768, 1800);
+                      hf.field_g[1 + 7 * this.field_C].drawRotated(var4_int, var5 - 10, 0, 1300);
                       decompiledFrameRemainder0 = (var15 != 0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameRemainder0 = (4 == this.field_C))) {
                       var4_int = var4_int + DualLinkDequeIterator.field_e;
                       var5 = var5 + DualLinkDequeIterator.field_e;
-                      hf.field_g[0 + this.field_C * 7].a(var4_int, var5 - 5, 0, 2600);
+                      hf.field_g[0 + this.field_C * 7].drawRotated(var4_int, var5 - 5, 0, 2600);
                       var6Lifetime1 = 32;
                       if (this.field_F == 0) {
                         var6Lifetime1 = 16;
@@ -1058,8 +1058,8 @@ final class kb extends IntrusiveNode {
                       if (4 == this.field_F) {
                         var6Lifetime1 = 16;
                       }
-                      hf.field_g[7 * this.field_C + (this.field_F + 2)].a(528, var6Lifetime1 << 4, var4_int << 4, var5 - 12 << 4, 32768 + this.field_o, 2600);
-                      hf.field_g[this.field_C * 7 + 1].a(var4_int, var5 - 8, 0, 2600);
+                      hf.field_g[7 * this.field_C + (this.field_F + 2)].drawRotatedAboutNearest(528, var6Lifetime1 << 4, var4_int << 4, var5 - 12 << 4, 32768 + this.field_o, 2600);
+                      hf.field_g[this.field_C * 7 + 1].drawRotated(var4_int, var5 - 8, 0, 2600);
                       decompiledFrameRemainder0 = (var15 != 0);
                     }
                   }
@@ -1068,10 +1068,10 @@ final class kb extends IntrusiveNode {
                   var4_int = var4_int + DualLinkDequeIterator.field_e / 2;
                   var5 = var5 + DualLinkDequeIterator.field_e / 2;
                   var6Lifetime1 = 1950;
-                  hf.field_g[7 * this.field_C + 0].a(var4_int, -5 + var5, 0, var6Lifetime1);
+                  hf.field_g[7 * this.field_C + 0].drawRotated(var4_int, -5 + var5, 0, var6Lifetime1);
                   var7_ref_hj = hf.field_g[2 + this.field_F + this.field_C * 7];
-                  var7_ref_hj.a(var7_ref_hj.field_s << 3, var7_ref_hj.field_t << 3, var4_int << 4, -12 + var5 << 4, 32768 + this.field_o, var6Lifetime1);
-                  hf.field_g[this.field_C * 7 + 1].a(var4_int, var5 - 8, 0, var6Lifetime1);
+                  var7_ref_hj.drawRotatedAboutNearest(var7_ref_hj.field_s << 3, var7_ref_hj.field_t << 3, var4_int << 4, -12 + var5 << 4, 32768 + this.field_o, var6Lifetime1);
+                  hf.field_g[this.field_C * 7 + 1].drawRotated(var4_int, var5 - 8, 0, var6Lifetime1);
                   if (this.field_t <= 5) {
                     var8Lifetime1Lifetime1 = this.field_f.field_i % 9000;
                     var9Lifetime1Lifetime1 = var6Lifetime1 * hf.field_g[7 * this.field_C].field_o >> 12;
@@ -1088,7 +1088,7 @@ final class kb extends IntrusiveNode {
             }
           }
           if (decompiledFrameRemainder0) {
-            hf.field_g[0 + this.field_C * 7].a(var4_int, var5 - 5, 0, 1300);
+            hf.field_g[0 + this.field_C * 7].drawRotated(var4_int, var5 - 5, 0, 1300);
             var6Lifetime1Lifetime1 = 32;
             if (this.field_F == 0) {
               var6Lifetime1Lifetime1 = 32;
@@ -1105,8 +1105,8 @@ final class kb extends IntrusiveNode {
             if (this.field_F == 4) {
               var6Lifetime1Lifetime1 = 24;
             }
-            hf.field_g[7 * this.field_C + (2 + this.field_F)].a(528, var6Lifetime1Lifetime1 << 4, var4_int << 4, var5 - 8 << 4, 32768 + this.field_o, 1300);
-            hf.field_g[1 + 7 * this.field_C].a(var4_int, -6 + var5, 0, 1300);
+            hf.field_g[7 * this.field_C + (2 + this.field_F)].drawRotatedAboutNearest(528, var6Lifetime1Lifetime1 << 4, var4_int << 4, var5 - 8 << 4, 32768 + this.field_o, 1300);
+            hf.field_g[1 + 7 * this.field_C].drawRotated(var4_int, -6 + var5, 0, 1300);
           }
           if (null != this.field_p) {
             var6Lifetime2 = 0;

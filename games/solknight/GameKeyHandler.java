@@ -202,7 +202,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (param2) {
             var4++;
           }
-          return ua.field_M[var4];
+          return NameSuggestionsPanel.field_M[var4];
         }
         field_c = -10;
         var4Lifetime1 = 0;
@@ -215,7 +215,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param2) {
           var4Lifetime1++;
         }
-        return ua.field_M[var4Lifetime1];
+        return NameSuggestionsPanel.field_M[var4Lifetime1];
     }
 
     public static void b(int param0) {

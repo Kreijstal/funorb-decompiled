@@ -57,11 +57,11 @@ final class ti implements nn {
         int[] var6 = ArchiveProvider.field_c;
         int[] var3 = var6;
         int var4 = param2;
-        var6[var4 >> 5] = ll.a(var6[var4 >> 5], 1 << PcmOutputWorker.a(31, var4));
+        var6[var4 >> 5] = ll.a(var6[var4 >> 5], 1 << PcmOutputWorker.bitwiseAnd(31, var4));
         int[] var7 = bm.field_b;
         var3 = var7;
         var4 = param2;
-        var7[var4 >> 5] = ll.a(var7[var4 >> 5], 1 << PcmOutputWorker.a(var4, 31));
+        var7[var4 >> 5] = ll.a(var7[var4 >> 5], 1 << PcmOutputWorker.bitwiseAnd(var4, 31));
         int var5 = 20 / ((-70 - param1) / 40);
         ac.field_i.addLast(new AchievementNotification(param2), 90);
         if (!ta.p(3)) {

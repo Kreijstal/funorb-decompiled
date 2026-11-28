@@ -410,14 +410,14 @@ final class ha {
           this.field_c = new Sprite(param0, param3);
         }
         param4 = 0;
-        this.field_c.d();
+        this.field_c.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(param2, param4, param0, param3, 12, 16777215);
         if (null == this.field_e ||
           this.field_e.field_y != param0 &&
           param3 != this.field_e.field_t) {
           this.field_e = new Sprite(param0, param3);
         }
-        this.field_e.d();
+        this.field_e.bindAsRenderTarget();
         SoftwareRasterizer.fillCircle(param2 + var7, var7 + param4, -3 + var7, 4027280);
         if (!param1) {
           ha.clearStaticReferences((byte) -33);
@@ -462,7 +462,7 @@ final class ha {
         for (var10Lifetime2 = 0; this.field_e.field_F.length > var10Lifetime2; var10Lifetime2++) {
           this.field_e.field_F[var10Lifetime2] = b.a(this.field_e.field_F[var10Lifetime2], this.field_c.field_F[var10Lifetime2]);
         }
-        this.field_e.e(var8, var9);
+        this.field_e.draw(var8, var9);
         return;
     }
 

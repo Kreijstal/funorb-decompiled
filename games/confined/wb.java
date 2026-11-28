@@ -1564,7 +1564,7 @@ final class wb {
                 }
                 var2 = ha.a("create_select_alternative", (byte) 82);
                 if (var2 != null) {
-                  ak.field_O = va.a(param0 ^ 6, var2);
+                  NameSuggestionsPanel.field_O = va.a(param0 ^ 6, var2);
                 }
                 var2 = ha.a("create_optin_news", (byte) 93);
                 if (null != var2) {
@@ -1916,7 +1916,7 @@ final class wb {
                 }
                 var2 = ha.a("loading_models", (byte) 102);
                 if (null != var2) {
-                  ak.field_P = va.a(0, var2);
+                  NameSuggestionsPanel.field_P = va.a(0, var2);
                 }
                 var2 = ha.a("loading_fonts", (byte) 24);
                 if (null != var2) {
@@ -2366,7 +2366,7 @@ final class wb {
                 }
                 var2 = ha.a("mouseoveranicon", (byte) 57);
                 if (null != var2) {
-                  rg.field_J = va.a(0, var2);
+                  InteractiveWidget.field_J = va.a(0, var2);
                 }
                 var2 = ha.a("notyetachieved", (byte) 105);
                 if (var2 != null) {

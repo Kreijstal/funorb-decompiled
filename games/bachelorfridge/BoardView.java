@@ -66,7 +66,7 @@ final class BoardView {
     }
 
     private final void b(int param0, aj param1) {
-        this.field_u.a(param1.field_c + 1, 1 + param1.field_a, 64);
+        this.field_u.drawWithOpacity(param1.field_c + 1, 1 + param1.field_a, 64);
         int var3_int = this.field_i.field_L >> 2;
         int var4 = this.field_v[this.field_i.field_L % 128 < 64 ? this.field_i.field_L % 128 : 127 - this.field_i.field_L % 128];
         int var5 = 255;
@@ -143,7 +143,7 @@ final class BoardView {
             }
           }
           if (-1 != var6) {
-            this.field_p.e(param1, param3, this.field_i.c(var6, 2271));
+            this.field_p.drawGrayRampTinted(param1, param3, this.field_i.c(var6, 2271));
           }
         }
         if (param0 != -1) {
@@ -206,7 +206,7 @@ final class BoardView {
                         (!(this.field_a <= var17)) &&
                         (!(var18 >= this.field_z))) {
                         var28 = this.a(var18, (byte) -108, var17);
-                        this.field_g.a(1 + var28.field_c, 1 + var28.field_a, 128 - param6 * 20);
+                        this.field_g.drawWithOpacity(1 + var28.field_c, 1 + var28.field_a, 128 - param6 * 20);
                       }
                       decompiledFrameRemainder0 = false;
                     }
@@ -225,7 +225,7 @@ final class BoardView {
                 this.field_a > var17 &&
                 var18 < this.field_z)) {
                 var29 = this.a(var18, (byte) -108, var17);
-                this.field_g.a(1 + var29.field_c, 1 + var29.field_a, 128 - param6 * 20);
+                this.field_g.drawWithOpacity(1 + var29.field_c, 1 + var29.field_a, 128 - param6 * 20);
               }
             }
             var20++;
@@ -332,7 +332,7 @@ final class BoardView {
                     this.field_a > var17 &&
                     var18 < this.field_z) {
                     var24 = this.a(var18, (byte) 106, var17);
-                    this.field_g.a(var24.field_c, var24.field_a, -(param1 * 10) + 64);
+                    this.field_g.drawWithOpacity(var24.field_c, var24.field_a, -(param1 * 10) + 64);
                   }
                 }
                 var20++;
@@ -371,7 +371,7 @@ final class BoardView {
           }
           while (1 > var3_int) {
             for (var4 = -1; var4 < 2; var4++) {
-              to.field_b.c(ZombiesSpecial.a(to.field_b.field_q, param1 ^ 1816304478, this.field_b) + var3_int * to.field_b.field_q, ZombiesSpecial.a(to.field_b.field_p, 1816304479, this.field_B) + var4 * to.field_b.field_p);
+              to.field_b.drawOpaque(ZombiesSpecial.a(to.field_b.field_q, param1 ^ 1816304478, this.field_b) + var3_int * to.field_b.field_q, ZombiesSpecial.a(to.field_b.field_p, 1816304479, this.field_B) + var4 * to.field_b.field_p);
             }
             var3_int++;
           }
@@ -568,48 +568,48 @@ final class BoardView {
           this.a(-31, (aj) null, (CreatureActor) null);
         }
         if (-1 != var4) {
-          this.field_o.e(var5.field_c, var5.field_a, this.field_i.c(var4, 2271));
+          this.field_o.drawGrayRampTinted(var5.field_c, var5.field_a, this.field_i.c(var4, 2271));
           if (var9 < 0) {
             if (var6 % 3.141592653589793 > 2.0943951023931953) {
-              SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5 + 10].b(var5.field_c + 64 - (18 - var8), -18 + var5.field_a + 32 + var9, this.field_i.c(var4, 2271));
+              SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5 + 10].drawTinted(var5.field_c + 64 - (18 - var8), -18 + var5.field_a + 32 + var9, this.field_i.c(var4, 2271));
             } else {
               if (!(1.0471975511965976 < var6 % 3.141592653589793)) {
-                SleepAnimation.field_y[5 + (this.field_i.field_L >> 3) % 5].b(var8 + 46 + var5.field_c, var9 + var5.field_a + 14, this.field_i.c(var4, 2271));
+                SleepAnimation.field_y[5 + (this.field_i.field_L >> 3) % 5].drawTinted(var8 + 46 + var5.field_c, var9 + var5.field_a + 14, this.field_i.c(var4, 2271));
               } else {
-                SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5].b(var8 - 18 + (var5.field_c + 64), var9 + (-18 + (32 + var5.field_a)), this.field_i.c(var4, param1 ^ 2191));
+                SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5].drawTinted(var8 - 18 + (var5.field_c + 64), var9 + (-18 + (32 + var5.field_a)), this.field_i.c(var4, param1 ^ 2191));
               }
             }
           } else {
             if (!(2.0943951023931953 < var6 % 3.141592653589793)) {
               if (1.0471975511965976 < var6 % 3.141592653589793) {
-                ik.field_h[(this.field_i.field_L >> 3) % 5].b(-18 + (var5.field_c + (64 + var8)), var9 + (var5.field_a + 14), this.field_i.c(var4, 2271));
+                ik.field_h[(this.field_i.field_L >> 3) % 5].drawTinted(-18 + (var5.field_c + (64 + var8)), var9 + (var5.field_a + 14), this.field_i.c(var4, 2271));
               } else {
-                ik.field_h[(this.field_i.field_L >> 3) % 5 + 10].b(var5.field_c + 64 + (-18 + var8), 32 + var5.field_a + (-18 + var9), this.field_i.c(var4, 2271));
+                ik.field_h[(this.field_i.field_L >> 3) % 5 + 10].drawTinted(var5.field_c + 64 + (-18 + var8), 32 + var5.field_a + (-18 + var9), this.field_i.c(var4, 2271));
               }
             } else {
-              ik.field_h[(this.field_i.field_L >> 3) % 5 + 5].b(var8 + 64 + var5.field_c - 18, var9 + (-18 + (32 + var5.field_a)), this.field_i.c(var4, 2271));
+              ik.field_h[(this.field_i.field_L >> 3) % 5 + 5].drawTinted(var8 + 64 + var5.field_c - 18, var9 + (-18 + (32 + var5.field_a)), this.field_i.c(var4, 2271));
             }
           }
         } else {
           if (var9 < 0) {
             if (var6 % 3.141592653589793 > 2.0943951023931953) {
-              SleepAnimation.field_y[10 + (this.field_i.field_L >> 3) % 5].a(-18 + (var5.field_c + 64 + var8), var9 - 18 + (32 + var5.field_a));
+              SleepAnimation.field_y[10 + (this.field_i.field_L >> 3) % 5].draw(-18 + (var5.field_c + 64 + var8), var9 - 18 + (32 + var5.field_a));
             } else {
               if (!(var6 % 3.141592653589793 > 1.0471975511965976)) {
-                SleepAnimation.field_y[5 + (this.field_i.field_L >> 3) % 5].a(-18 + var5.field_c + 64 + var8, var5.field_a + 14 + var9);
+                SleepAnimation.field_y[5 + (this.field_i.field_L >> 3) % 5].draw(-18 + var5.field_c + 64 + var8, var5.field_a + 14 + var9);
               } else {
-                SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5].a(var8 + (var5.field_c + 64) - 18, var5.field_a + 14 + var9);
+                SleepAnimation.field_y[(this.field_i.field_L >> 3) % 5].draw(var8 + (var5.field_c + 64) - 18, var5.field_a + 14 + var9);
               }
             }
           } else {
             if (!(var6 % 3.141592653589793 > 2.0943951023931953)) {
               if (!(1.0471975511965976 < var6 % 3.141592653589793)) {
-                ik.field_h[(this.field_i.field_L >> 3) % 5 + 10].a(var8 + 64 + var5.field_c - 18, var9 + (var5.field_a + 14));
+                ik.field_h[(this.field_i.field_L >> 3) % 5 + 10].draw(var8 + 64 + var5.field_c - 18, var9 + (var5.field_a + 14));
               } else {
-                ik.field_h[(this.field_i.field_L >> 3) % 5].a(var8 - 18 + (64 + var5.field_c), var9 + var5.field_a + 32 - 18);
+                ik.field_h[(this.field_i.field_L >> 3) % 5].draw(var8 - 18 + (64 + var5.field_c), var9 + var5.field_a + 32 - 18);
               }
             } else {
-              ik.field_h[(this.field_i.field_L >> 3) % 5 + 5].a(64 + (var5.field_c - 18 + var8), var9 + (var5.field_a + 32 - 18));
+              ik.field_h[(this.field_i.field_L >> 3) % 5 + 5].draw(64 + (var5.field_c - 18 + var8), var9 + (var5.field_a + 32 - 18));
             }
           }
         }
@@ -649,7 +649,7 @@ final class BoardView {
             var17 = this.a(this.field_i.field_P.field_s.tileY, (byte) 49, this.field_i.field_P.field_s.tileX);
             param1 = var17;
             this.b(25443, var17);
-            this.field_n.e(var17.field_c + 2, var17.field_a - 40 - 12, 32 + this.field_n.field_q, 32 + this.field_n.field_p, 192);
+            this.field_n.drawScaledAdditive(var17.field_c + 2, var17.field_a - 40 - 12, 32 + this.field_n.field_q, 32 + this.field_n.field_p, 192);
           }
           var18 = this.field_e;
           for (var4 = 0; var4 < var18.length; var4++) {
@@ -661,7 +661,7 @@ final class BoardView {
               param1 = var19;
               if (!var5.field_s.isDown(126)) {
                 if (39 == var6.statusId) {
-                  BuffVendorAnimation.field_C.a(var19.field_c, var19.field_a - 64);
+                  BuffVendorAnimation.field_C.draw(var19.field_c, var19.field_a - 64);
                 } else {
                   if (var6.statusId == 2) {
                     ala.field_a[(this.field_i.field_L >> 2) % 4 + 8].draw(42 + var19.field_c, var19.field_a - 42);
@@ -718,7 +718,7 @@ final class BoardView {
                 if (this.field_i.field_h.field_o == 3 &&
                   var6.isCarryingFlag((byte) 85)) {
                   var14Lifetime1 = (int)(15.0 * Math.cos(0.5 * ((double)(this.field_i.field_L + (var6.tileX * var6.tileY << 2)) / 40.0)));
-                  IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].a(72 + var19.field_c, var14Lifetime1 + (var19.field_a - 32));
+                  IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].draw(72 + var19.field_c, var14Lifetime1 + (var19.field_a - 32));
                 }
                 if (var5.field_s.statusId != 0 &&
                   pna.field_zb[var5.field_s.statusId].field_i != -1) {
@@ -727,7 +727,7 @@ final class BoardView {
                 }
                 if (!var5.field_s.isDown(-89)) {
                   if (var5.field_s.statusId == 39) {
-                    DelegatingCanvas.field_c.a(var19.field_c, var19.field_a - 64, 192);
+                    DelegatingCanvas.field_c.drawWithOpacity(var19.field_c, var19.field_a - 64, 192);
                   } else {
                     if (var5.field_s.statusId == 2) {
                       SoftwareRasterizer.setClip(var19.field_c + 42, var19.field_a - 28, var19.field_c + 88, var19.field_a);
@@ -914,9 +914,9 @@ final class BoardView {
             -1 != this.field_r) {
             param1 = this.a(this.field_r, (byte) -97, this.field_q);
             if (param0) {
-              SetFriendlyEffect.field_k.e(22 + param1.field_c, 10 + param1.field_a, 65376);
+              SetFriendlyEffect.field_k.drawGrayRampTinted(22 + param1.field_c, 10 + param1.field_a, 65376);
             } else {
-              SetFriendlyEffect.field_k.e(param1.field_c + 22, param1.field_a + 10, 16711680);
+              SetFriendlyEffect.field_k.drawGrayRampTinted(param1.field_c + 22, param1.field_a + 10, 16711680);
             }
             if (param2 != 18503) {
               this.a((byte) -63, -5, -59);
@@ -1120,9 +1120,9 @@ final class BoardView {
           var7 = (int)(Math.sin(0.5 * ((double)(this.field_i.field_L + (var4 * var3 << 2)) / 40.0)) * 30.0);
           var8 = (int)(Math.cos(0.5 * ((double)(this.field_i.field_L + (var3 * var4 << 2)) / 40.0)) * 15.0);
           if (var8 >= 0) {
-            MatchingFieldValidator.field_k[(this.field_i.field_L >> 2) % 2].b(var6.field_c + 56 + var7, var8 + (var6.field_a - 16), this.field_i.c(param0, 2271));
+            MatchingFieldValidator.field_k[(this.field_i.field_L >> 2) % 2].drawTinted(var6.field_c + 56 + var7, var8 + (var6.field_a - 16), this.field_i.c(param0, 2271));
           } else {
-            IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].b(64 + var6.field_c - (8 - var7), var6.field_a + (-16 + var8), this.field_i.c(param0, 2271));
+            IncomingAnimation.field_v[(this.field_i.field_L >> 2) % 2].drawTinted(64 + var6.field_c - (8 - var7), var6.field_a + (-16 + var8), this.field_i.c(param0, 2271));
           }
           return;
         }
@@ -1355,36 +1355,36 @@ final class BoardView {
         int var3Lifetime1;
         this.field_p = UiNode.a((byte) 119, 3, 3, 127, 64);
         this.field_o = new Sprite(128, 64);
-        this.field_o.b();
+        this.field_o.bindAsRenderTarget();
         this.field_u = new Sprite(128, 64);
-        this.field_u.b();
-        this.field_p.e(0, 0, 33023);
+        this.field_u.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 33023);
         this.field_C = new Sprite(128, 64);
-        this.field_C.b();
-        this.field_p.e(0, 0, 16776960);
+        this.field_C.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 16776960);
         this.field_m = new Sprite(128, 64);
-        this.field_m.b();
-        this.field_p.e(0, 0, 16777215);
+        this.field_m.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 16777215);
         this.field_g = new Sprite(128, 64);
-        this.field_g.b();
-        this.field_p.e(0, 0, 16711680);
+        this.field_g.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 16711680);
         this.field_f = new Sprite(128, 64);
-        this.field_f.b();
-        this.field_p.e(0, 0, 8454016);
+        this.field_f.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 8454016);
         this.field_y = new Sprite(49, 49);
         int[] var5 = new int[256];
         int[] var10 = var5;
         for (var3 = 0; var3 < 256; var3++) {
           var5[var3] = 65793 * var3;
         }
-        this.field_y.b();
+        this.field_y.bindAsRenderTarget();
         SoftwareRasterizer.addRadialGlow(400, 400, 384, 128, var10);
         this.field_x = new Sprite(128, 64);
-        this.field_x.b();
-        this.field_p.e(0, 0, 2302755);
+        this.field_x.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 2302755);
         this.field_c = new Sprite(128, 64);
-        this.field_c.b();
-        this.field_p.e(0, 0, 16711680);
+        this.field_c.bindAsRenderTarget();
+        this.field_p.drawGrayRampTinted(0, 0, 16711680);
         this.field_w = new Sprite[4];
         if (param0 != -124) {
           this.field_v = (int[]) null;
@@ -1393,15 +1393,15 @@ final class BoardView {
         var3Lifetime1 = var6;
         while (var6 < 4) {
           this.field_w[var6] = new Sprite(128, 64);
-          this.field_w[var6].b();
-          this.field_p.e(0, 0, this.field_i.c(var6, 2271));
+          this.field_w[var6].bindAsRenderTarget();
+          this.field_p.drawGrayRampTinted(0, 0, this.field_i.c(var6, 2271));
           var6++;
         }
         this.field_n = new Sprite(84, 84);
-        this.field_n.b();
+        this.field_n.bindAsRenderTarget();
         SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, var10);
         this.field_A = new Sprite(128, 64);
-        this.field_A.b();
+        this.field_A.bindAsRenderTarget();
         this.field_p.drawSilhouette(0, 0, 65280);
         this.field_H = this.field_A.copy();
         this.a(-64, (byte) -115, 1, 2, this.field_H);
@@ -1720,9 +1720,9 @@ final class BoardView {
           param1 = this.a(this.field_r, (byte) -95, this.field_q);
           if (this.field_i.field_h.tiles[this.field_q][this.field_r].isTraversableTerrain(-97) &&
             !this.field_i.field_h.isFlagBaseTile((byte) -101, this.field_i.field_n, this.field_q, this.field_r)) {
-            this.field_m.a(param1.field_c + 1, param1.field_a + 1, 64);
+            this.field_m.drawWithOpacity(param1.field_c + 1, param1.field_a + 1, 64);
           } else {
-            this.field_g.a(param1.field_c + 1, 1 + param1.field_a, 64);
+            this.field_g.drawWithOpacity(param1.field_c + 1, 1 + param1.field_a, 64);
           }
           var3_int = this.field_i.field_L >> 2;
           var4 = 16777215;
@@ -1864,12 +1864,12 @@ final class BoardView {
         if (this.field_d > 0) {
           var28 = this.a(-3, (byte) -97, (this.field_i.field_h.width >> 1) - 1);
           var6 = var28;
-          du.field_b.a(-42 + var28.field_c, -this.field_d + 106 + var28.field_a);
+          du.field_b.draw(-42 + var28.field_c, -this.field_d + 106 + var28.field_a);
           var7Lifetime1 = var3;
           if (mk.field_p != -1) {
             var7Lifetime1 = -6 + (6 * mk.field_p / 640 + 6 * gd.field_m / 480);
           }
-          PacketBuffer.field_f.a(-16 + (var28.field_c + var7Lifetime1), var28.field_a - (-106 + this.field_d) + (var7Lifetime1 >> 1));
+          PacketBuffer.field_f.draw(-16 + (var28.field_c + var7Lifetime1), var28.field_a - (-106 + this.field_d) + (var7Lifetime1 >> 1));
         }
         this.field_k.b(this, param0 ^ 18776);
         this.field_k.a(this, (byte) 117);
@@ -1879,7 +1879,7 @@ final class BoardView {
               this.field_i.field_h.tiles[var7Lifetime2][var8].isTraversableTerrain(-111)) {
               var29 = this.a(var8, (byte) -98, var7Lifetime2);
               var6 = var29;
-              this.field_w[this.field_i.field_n].a(var29.field_c, var29.field_a, 64 - var3 * 10);
+              this.field_w[this.field_i.field_n].drawWithOpacity(var29.field_c, var29.field_a, 64 - var3 * 10);
             }
           }
         }
@@ -1890,14 +1890,14 @@ final class BoardView {
               var6 = var31;
               if (this.field_i.field_h.field_E != 1) {
                 if (this.field_i.field_h.field_E == 2) {
-                  this.field_k.field_b[95].a(var31.field_c, var31.field_a - 64);
+                  this.field_k.field_b[95].draw(var31.field_c, var31.field_a - 64);
                 } else {
                   if (this.field_i.field_h.field_E == 0) {
-                    this.field_k.field_b[95].a(var31.field_c, var31.field_a - 64);
+                    this.field_k.field_b[95].draw(var31.field_c, var31.field_a - 64);
                   }
                 }
               } else {
-                this.field_k.field_b[95].a(var31.field_c, var31.field_a - 64);
+                this.field_k.field_b[95].draw(var31.field_c, var31.field_a - 64);
               }
             } else {
               if (39 == this.field_I[var7Lifetime3][var8Lifetime1].terrain) {
@@ -1978,7 +1978,7 @@ final class BoardView {
               } else {
                 var37 = this.a(var17, (byte) -100, var16 - var8Lifetime5);
                 var6 = var37;
-                this.field_u.a(var37.field_c, var37.field_a, -(10 * var3) + 128);
+                this.field_u.drawWithOpacity(var37.field_c, var37.field_a, -(10 * var3) + 128);
                 if (((-var8Lifetime5 + var16 == this.field_q)) &&
                   ((var17 == this.field_r))) {
                   var2 = 1;
@@ -1999,7 +1999,7 @@ final class BoardView {
               } else {
                 var38 = this.a(var17 - var8Lifetime5, (byte) -100, var16);
                 var6 = var38;
-                this.field_u.a(var38.field_c, var38.field_a, 128 - 10 * var3);
+                this.field_u.drawWithOpacity(var38.field_c, var38.field_a, 128 - 10 * var3);
                 if (((this.field_q == var16)) &&
                   ((this.field_r == var17 - var8Lifetime5))) {
                   this.a(true, var38, 18503);
@@ -2020,7 +2020,7 @@ final class BoardView {
               } else {
                 var39 = this.a(var17, (byte) -118, var16 + var8Lifetime5);
                 var6 = var39;
-                this.field_u.a(var39.field_c, var39.field_a, -(10 * var3) + 128);
+                this.field_u.drawWithOpacity(var39.field_c, var39.field_a, -(10 * var3) + 128);
                 if (((var16 + var8Lifetime5 == this.field_q)) &&
                   ((var17 == this.field_r))) {
                   this.a(true, var39, param0 + 50598);
@@ -2039,7 +2039,7 @@ final class BoardView {
               !this.field_i.field_h.isFlagBaseTile((byte) -121, this.field_i.field_n, var16, var17 + var8Lifetime5))) {
               var40 = this.a(var17 + var8Lifetime5, (byte) 83, var16);
               var6 = var40;
-              this.field_u.a(var40.field_c, var40.field_a, -(10 * var3) + 128);
+              this.field_u.drawWithOpacity(var40.field_c, var40.field_a, -(10 * var3) + 128);
               if (((this.field_q == var16)) &&
                 ((var17 + var8Lifetime5 == this.field_r))) {
                 var2 = 1;
@@ -2083,7 +2083,7 @@ final class BoardView {
                 var2 = 1;
                 var15Lifetime1 = 2;
               }
-              this.field_C.a(var42.field_c, var42.field_a, 64 - var3 * 10);
+              this.field_C.drawWithOpacity(var42.field_c, var42.field_a, 64 - var3 * 10);
             } else {
               var19 = 1;
             }
@@ -2098,7 +2098,7 @@ final class BoardView {
                 var15Lifetime1 = 1;
                 var2 = 1;
               }
-              this.field_C.a(var43.field_c, var43.field_a, -(10 * var3) + 64);
+              this.field_C.drawWithOpacity(var43.field_c, var43.field_a, -(10 * var3) + 64);
             } else {
               var17Lifetime1 = 1;
             }
@@ -2113,7 +2113,7 @@ final class BoardView {
                 var14 = 1;
                 var2 = 1;
               }
-              this.field_C.a(var44.field_c, var44.field_a, -(var3 * 10) + 64);
+              this.field_C.drawWithOpacity(var44.field_c, var44.field_a, -(var3 * 10) + 64);
             } else {
               var20 = 1;
             }
@@ -2128,7 +2128,7 @@ final class BoardView {
                 var16Lifetime1 = var13Lifetime1;
                 var14 = 1;
               }
-              this.field_C.a(var45.field_c, var45.field_a, -(10 * var3) + 64);
+              this.field_C.drawWithOpacity(var45.field_c, var45.field_a, -(10 * var3) + 64);
             } else {
               var18 = 1;
             }
@@ -2251,7 +2251,7 @@ final class BoardView {
           for (var9Lifetime3 = 0; var9Lifetime3 < this.field_i.field_h.height; var9Lifetime3++) {
             var48 = this.a(var9Lifetime3, (byte) 124, var8Lifetime8);
             if (this.field_i.field_h.tiles[var8Lifetime8][var9Lifetime3].field_d) {
-              co.field_b[4].a(var48.field_c, -64 + (var48.field_a + (var3 >> 1)), 192);
+              co.field_b[4].drawWithOpacity(var48.field_c, -64 + (var48.field_a + (var3 >> 1)), 192);
             }
           }
         }
@@ -2422,39 +2422,39 @@ final class BoardView {
               var6 = this.a(this.field_z + 1, (byte) 27, var3_int);
               param1 = var6;
               if (var3_int != 0) {
-                as.field_a[5 * this.field_i.field_h.field_E + 2].a(var6.field_c + 14, var6.field_a + 48, 128);
+                as.field_a[5 * this.field_i.field_h.field_E + 2].drawWithOpacity(var6.field_c + 14, var6.field_a + 48, 128);
               } else {
-                as.field_a[1 + 5 * this.field_i.field_h.field_E].a(var6.field_c + 14, 48 + var6.field_a, 128);
+                as.field_a[1 + 5 * this.field_i.field_h.field_E].drawWithOpacity(var6.field_c + 14, 48 + var6.field_a, 128);
               }
             }
             for (var3_int = 0; this.field_z + 1 > var3_int; var3_int++) {
               var7 = this.a(var3_int, (byte) -116, this.field_a + 1);
               param1 = var7;
               if (var3_int == 0) {
-                ls.field_a[5 * this.field_i.field_h.field_E + 1].a(var7.field_c + 14, 48 + var7.field_a, 128);
+                ls.field_a[5 * this.field_i.field_h.field_E + 1].drawWithOpacity(var7.field_c + 14, 48 + var7.field_a, 128);
               } else {
-                ls.field_a[2 + this.field_i.field_h.field_E * 5].a(var7.field_c + 14, var7.field_a + 48, 128);
+                ls.field_a[2 + this.field_i.field_h.field_E * 5].drawWithOpacity(var7.field_c + 14, var7.field_a + 48, 128);
               }
             }
             var8 = this.a(this.field_z + 1, (byte) -114, 1 + this.field_a);
-            ls.field_a[5 * this.field_i.field_h.field_E + 3].a(14 + var8.field_c, 48 + var8.field_a, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E + 3].drawWithOpacity(14 + var8.field_c, 48 + var8.field_a, 128);
             var9 = this.a(-1, (byte) -114, this.field_a + 1);
-            ls.field_a[5 * this.field_i.field_h.field_E].a(14 + var9.field_c, var9.field_a + 48, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E].drawWithOpacity(14 + var9.field_c, var9.field_a + 48, 128);
             var10 = this.a(-1, (byte) 32, this.field_a);
-            ls.field_a[4 + this.field_i.field_h.field_E * 5].a(14 + var10.field_c, var10.field_a + 48, 128);
+            ls.field_a[4 + this.field_i.field_h.field_E * 5].drawWithOpacity(14 + var10.field_c, var10.field_a + 48, 128);
             var11 = this.a(-1, (byte) -123, -1 + this.field_a);
-            ls.field_a[5 * this.field_i.field_h.field_E + 4].a(14 + var11.field_c, 48 + var11.field_a, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E + 4].drawWithOpacity(14 + var11.field_c, 48 + var11.field_a, 128);
             var12 = this.a(0, (byte) -99, this.field_a);
-            ls.field_a[2 + 5 * this.field_i.field_h.field_E].a(4 + var12.field_c + 14, var12.field_a + 50, 128);
+            ls.field_a[2 + 5 * this.field_i.field_h.field_E].drawWithOpacity(4 + var12.field_c + 14, var12.field_a + 50, 128);
             var13 = this.a(1 + this.field_z, (byte) -111, -1);
-            as.field_a[this.field_i.field_h.field_E * 5].a(14 + var13.field_c, var13.field_a + 48, 128);
+            as.field_a[this.field_i.field_h.field_E * 5].drawWithOpacity(14 + var13.field_c, var13.field_a + 48, 128);
             var14 = this.a(this.field_z, (byte) -113, -1);
-            as.field_a[4 + 5 * this.field_i.field_h.field_E].a(var14.field_c + 14, 48 + var14.field_a, 128);
+            as.field_a[4 + 5 * this.field_i.field_h.field_E].drawWithOpacity(var14.field_c + 14, 48 + var14.field_a, 128);
             var15 = this.a(this.field_z - 1, (byte) -123, -1);
-            as.field_a[this.field_i.field_h.field_E * 5 + 4].a(14 + var15.field_c, 48 + var15.field_a, 128);
+            as.field_a[this.field_i.field_h.field_E * 5 + 4].drawWithOpacity(14 + var15.field_c, 48 + var15.field_a, 128);
             var16 = this.a(this.field_z, (byte) 105, 0);
             param1 = var16;
-            as.field_a[5 * this.field_i.field_h.field_E + 2].a(14 + var16.field_c - 4, var16.field_a + 50, 128);
+            as.field_a[5 * this.field_i.field_h.field_E + 2].drawWithOpacity(14 + var16.field_c - 4, var16.field_a + 50, 128);
             return;
           }
           if (var3_int == 0) {
@@ -2462,35 +2462,35 @@ final class BoardView {
               var17 = this.a(this.field_z + 1, (byte) -110, var3_int);
               param1 = var17;
               if (-1 == var3_int) {
-                as.field_a[1 + this.field_i.field_h.field_E * 5].a(14 + var17.field_c, var17.field_a + 48, 128);
+                as.field_a[1 + this.field_i.field_h.field_E * 5].drawWithOpacity(14 + var17.field_c, var17.field_a + 48, 128);
               } else {
-                as.field_a[2 + this.field_i.field_h.field_E * 5].a(var17.field_c + 14, 48 + var17.field_a, 128);
+                as.field_a[2 + this.field_i.field_h.field_E * 5].drawWithOpacity(var17.field_c + 14, 48 + var17.field_a, 128);
               }
             }
             for (var3_int = -5; var3_int < -1; var3_int++) {
               var18 = this.a(this.field_z + 1, (byte) 74, var3_int);
               param1 = var18;
-              as.field_a[2 + 5 * this.field_i.field_h.field_E].a(30 + var18.field_c, 40 + var18.field_a, 128);
+              as.field_a[2 + 5 * this.field_i.field_h.field_E].drawWithOpacity(30 + var18.field_c, 40 + var18.field_a, 128);
             }
             for (var3_int = 0; this.field_z + 1 > var3_int; var3_int++) {
               var19 = this.a(var3_int, (byte) 72, this.field_a + 1);
               param1 = var19;
               if (var3_int == 0) {
-                ls.field_a[1 + 5 * this.field_i.field_h.field_E].a(14 + var19.field_c, 48 + var19.field_a, 128);
+                ls.field_a[1 + 5 * this.field_i.field_h.field_E].drawWithOpacity(14 + var19.field_c, 48 + var19.field_a, 128);
               } else {
-                ls.field_a[2 + this.field_i.field_h.field_E * 5].a(14 + var19.field_c, 48 + var19.field_a, 128);
+                ls.field_a[2 + this.field_i.field_h.field_E * 5].drawWithOpacity(14 + var19.field_c, 48 + var19.field_a, 128);
               }
             }
             var20 = this.a(this.field_z + 1, (byte) 70, this.field_a + 1);
-            ls.field_a[5 * this.field_i.field_h.field_E + 3].a(var20.field_c + 14, var20.field_a + 48, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E + 3].drawWithOpacity(var20.field_c + 14, var20.field_a + 48, 128);
             var21 = this.a(-1, (byte) 124, 1 + this.field_a);
-            ls.field_a[this.field_i.field_h.field_E * 5].a(var21.field_c + 14, var21.field_a + 48, 128);
+            ls.field_a[this.field_i.field_h.field_E * 5].drawWithOpacity(var21.field_c + 14, var21.field_a + 48, 128);
             var22 = this.a(-1, (byte) 58, this.field_a);
-            ls.field_a[4 + 5 * this.field_i.field_h.field_E].a(var22.field_c + 14, 48 + var22.field_a, 128);
+            ls.field_a[4 + 5 * this.field_i.field_h.field_E].drawWithOpacity(var22.field_c + 14, 48 + var22.field_a, 128);
             var23 = this.a(-1, (byte) -95, -1 + this.field_a);
-            ls.field_a[this.field_i.field_h.field_E * 5 + 4].a(var23.field_c + 14, 48 + var23.field_a, 128);
+            ls.field_a[this.field_i.field_h.field_E * 5 + 4].drawWithOpacity(var23.field_c + 14, 48 + var23.field_a, 128);
             var24 = this.a(0, (byte) 95, this.field_a);
-            ls.field_a[this.field_i.field_h.field_E * 5 + 2].a(14 + var24.field_c + 4, 50 + var24.field_a, 128);
+            ls.field_a[this.field_i.field_h.field_E * 5 + 2].drawWithOpacity(14 + var24.field_c + 4, 50 + var24.field_a, 128);
             param1 = this.a(1 + this.field_z, (byte) -104, -2);
             param1 = this.a(this.field_z, (byte) 70, -1);
             param1 = this.a(this.field_z - 1, (byte) -122, -1);
@@ -2502,39 +2502,39 @@ final class BoardView {
               var25 = this.a(this.field_z + 1, (byte) -110, var3_int);
               param1 = var25;
               if (var3_int == 0) {
-                as.field_a[this.field_i.field_h.field_E * 5 + 1].a(16 + var25.field_c, var25.field_a - 32, 128);
+                as.field_a[this.field_i.field_h.field_E * 5 + 1].drawWithOpacity(16 + var25.field_c, var25.field_a - 32, 128);
               } else {
-                as.field_a[2 + this.field_i.field_h.field_E * 5].a(16 + var25.field_c, var25.field_a - 32, 128);
+                as.field_a[2 + this.field_i.field_h.field_E * 5].drawWithOpacity(16 + var25.field_c, var25.field_a - 32, 128);
               }
             }
             for (var3_int = 0; this.field_z + 1 > var3_int; var3_int++) {
               var26 = this.a(var3_int, (byte) -112, this.field_a + 1);
               param1 = var26;
               if (0 == var3_int) {
-                ls.field_a[5 * this.field_i.field_h.field_E + 1].a(var26.field_c + 16, -32 + var26.field_a, 128);
+                ls.field_a[5 * this.field_i.field_h.field_E + 1].drawWithOpacity(var26.field_c + 16, -32 + var26.field_a, 128);
               } else {
-                ls.field_a[2 + this.field_i.field_h.field_E * 5].a(16 + var26.field_c, var26.field_a - 32, 128);
+                ls.field_a[2 + this.field_i.field_h.field_E * 5].drawWithOpacity(16 + var26.field_c, var26.field_a - 32, 128);
               }
             }
             var27 = this.a(1 + this.field_z, (byte) -108, 1 + this.field_a);
-            ls.field_a[3 + 5 * this.field_i.field_h.field_E].a(var27.field_c + 16, -32 + var27.field_a, 128);
+            ls.field_a[3 + 5 * this.field_i.field_h.field_E].drawWithOpacity(var27.field_c + 16, -32 + var27.field_a, 128);
             var28 = this.a(-1, (byte) -114, this.field_a + 1);
-            ls.field_a[5 * this.field_i.field_h.field_E].a(var28.field_c + 16, var28.field_a - 32, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E].drawWithOpacity(var28.field_c + 16, var28.field_a - 32, 128);
             var29 = this.a(-1, (byte) 42, this.field_a);
-            ls.field_a[this.field_i.field_h.field_E * 5 + 4].a(var29.field_c + 16, -32 + var29.field_a, 128);
+            ls.field_a[this.field_i.field_h.field_E * 5 + 4].drawWithOpacity(var29.field_c + 16, -32 + var29.field_a, 128);
             var30 = this.a(-1, (byte) 101, this.field_a - 1);
-            ls.field_a[5 * this.field_i.field_h.field_E + 4].a(16 + var30.field_c, -32 + var30.field_a, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E + 4].drawWithOpacity(16 + var30.field_c, -32 + var30.field_a, 128);
             var31 = this.a(0, (byte) -111, this.field_a);
-            ls.field_a[5 * this.field_i.field_h.field_E + 2].a(var31.field_c + 16, -32 + var31.field_a, 128);
+            ls.field_a[5 * this.field_i.field_h.field_E + 2].drawWithOpacity(var31.field_c + 16, -32 + var31.field_a, 128);
             var32 = this.a(this.field_z + 1, (byte) 88, -1);
-            as.field_a[this.field_i.field_h.field_E * 5].a(var32.field_c + 16, -32 + var32.field_a, 128);
+            as.field_a[this.field_i.field_h.field_E * 5].drawWithOpacity(var32.field_c + 16, -32 + var32.field_a, 128);
             var33 = this.a(this.field_z, (byte) 71, -1);
-            as.field_a[4 + 5 * this.field_i.field_h.field_E].a(16 + var33.field_c, -32 + var33.field_a, 128);
+            as.field_a[4 + 5 * this.field_i.field_h.field_E].drawWithOpacity(16 + var33.field_c, -32 + var33.field_a, 128);
             var34 = this.a(-1 + this.field_z, (byte) -95, -1);
-            as.field_a[this.field_i.field_h.field_E * 5 + 4].a(16 + var34.field_c, -32 + var34.field_a, 128);
+            as.field_a[this.field_i.field_h.field_E * 5 + 4].drawWithOpacity(16 + var34.field_c, -32 + var34.field_a, 128);
             var35 = this.a(this.field_z, (byte) -96, 0);
             param1 = var35;
-            as.field_a[2 + 5 * this.field_i.field_h.field_E].a(16 + var35.field_c, var35.field_a - 32, 128);
+            as.field_a[2 + 5 * this.field_i.field_h.field_E].drawWithOpacity(16 + var35.field_c, var35.field_a - 32, 128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

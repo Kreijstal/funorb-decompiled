@@ -194,7 +194,7 @@ final class gna extends UiComponent {
             lo.field_b != null) {
             param5 = param5 - (lo.field_b.field_F - lo.field_b.field_B);
             var9 = lo.field_b.stringWidth(param2) + 10;
-            MouseWheelInput.field_a.b();
+            MouseWheelInput.field_a.bindAsRenderTarget();
             if ((1 & var9) == 1) {
               var9++;
             }

@@ -124,7 +124,7 @@ final class wc extends IntrusiveNode {
             DiskCacheWorker.field_f = param4;
             a.field_d = param6;
             va.field_m = param7;
-            bb.field_E = param2;
+            InteractiveWidget.field_E = param2;
             ab.field_d = param5;
             EditableTextField.field_P = param11;
             cj.field_b = param10;

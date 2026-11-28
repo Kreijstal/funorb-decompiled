@@ -56,7 +56,7 @@ final class te extends am {
           var30 = var38;
           var8 = var30;
           for (var9_int = param1 - this.field_u; var9_int <= param1 + this.field_u; var9_int++) {
-            var46 = this.c(24066, vp.field_I & var9_int, 0);
+            var46 = this.c(24066, NameSuggestionsPanel.field_I & var9_int, 0);
             var50 = new int[3][ci.field_c];
             var12 = 0;
             var13 = 0;
@@ -147,7 +147,7 @@ final class te extends am {
           var17 = var19;
           var8 = var17;
           for (var9 = -this.field_u + param1; this.field_u + param1 >= var9; var9++) {
-            var10_ref_int__ = this.b(0, 0, vp.field_I & var9);
+            var10_ref_int__ = this.b(0, 0, NameSuggestionsPanel.field_I & var9);
             var18 = new int[ci.field_c];
             var16 = var18;
             var11_ref_int__ = var16;

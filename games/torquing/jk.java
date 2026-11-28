@@ -19,7 +19,7 @@ final class jk {
           if (SocketJs5Transport.field_r >= 35) {
             if (SocketJs5Transport.field_r >= 70) {
               jh.field_B.drawTranslucentSprite(false, 0, 0);
-              ResourceArchive.field_j.d(je.field_a - ResourceArchive.field_j.field_s / 2, -(ResourceArchive.field_j.field_t / 2) + kc.field_v);
+              ResourceArchive.field_j.draw(je.field_a - ResourceArchive.field_j.field_s / 2, -(ResourceArchive.field_j.field_t / 2) + kc.field_v);
               jb.field_b.drawFramedPanel((byte) 81, 0, nn.field_e);
               nh.field_l.drawOpaque(0, nn.field_e);
               var5 = vo.field_f[0];
@@ -29,11 +29,11 @@ final class jk {
                 }
               }
               fq.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
-              VertexMesh.field_l.d(hb.field_s, ra.field_e);
-              cq.field_w.d(0, nn.field_e);
+              VertexMesh.field_l.draw(hb.field_s, ra.field_e);
+              cq.field_w.draw(0, nn.field_e);
             } else {
               fq.field_F.drawTranslucentSprite(false, hb.field_s, ra.field_e);
-              VertexMesh.field_l.d(hb.field_s, ra.field_e);
+              VertexMesh.field_l.draw(hb.field_s, ra.field_e);
               var1_int = ResourceArchive.field_j.field_s * MouseWheelInput.field_d / 100;
               var2 = ResourceArchive.field_j.field_t * MouseWheelInput.field_d / 100;
               ResourceArchive.field_j.drawScaled(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);

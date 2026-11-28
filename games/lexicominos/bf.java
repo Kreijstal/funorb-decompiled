@@ -16,7 +16,7 @@ final class bf {
         Object var1 = null;
         var1 = hh.field_M;
         synchronized (var1) {
-          ul.field_o = bb.field_I;
+          ul.field_o = NameSuggestionsPanel.field_I;
           uc.field_eb = uc.field_eb + 1;
           bk.field_b = cj.field_i;
           ResourceArchive.field_e = ij.field_h;

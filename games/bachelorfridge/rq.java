@@ -13,7 +13,7 @@ final class rq extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var5 = BachelorFridge.field_y;
         if (15 > this.field_h) {
-          rw.field_a.a(param2, -32 + param0);
+          rw.field_a.draw(param2, -32 + param0);
           if (param1 != 0) {
             this.a(120, 124, -85);
             return;
@@ -21,14 +21,14 @@ final class rq extends TileEffect {
           return;
         }
         if (this.field_h < 30) {
-          it.field_i.a(param2, param0 - 32);
+          it.field_i.draw(param2, param0 - 32);
           if (param1 != 0) {
             this.a(120, 124, -85);
             return;
           }
           return;
         }
-        ena.field_l.a(param2, param0 - 32);
+        ena.field_l.draw(param2, param0 - 32);
         if (param1 == 0) {
           return;
         }

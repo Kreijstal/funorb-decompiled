@@ -16,7 +16,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (kj.a(param0)) {
             return false;
           }
-          if (!hc.field_D) {
+          if (!InteractiveWidget.field_D) {
             return true;
           }
           return false;
@@ -24,7 +24,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         if (kj.a(param0)) {
           return false;
         }
-        if (!hc.field_D) {
+        if (!InteractiveWidget.field_D) {
           return true;
         }
         return false;

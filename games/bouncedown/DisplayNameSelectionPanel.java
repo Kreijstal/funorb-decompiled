@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends lc implements rf, rc {
+final class DisplayNameSelectionPanel extends lc implements NameSuggestionListener, WidgetActivationListener {
     static RgbSprite field_F;
     static db field_A;
-    private wd field_D;
-    nd field_C;
-    private wd field_z;
+    private InteractiveWidget field_D;
+    NameSuggestionsPanel field_C;
+    private InteractiveWidget field_z;
     static double field_L;
     static float field_I;
     static String field_J;
@@ -36,13 +36,13 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 == -3814) {
-          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(true))).i((byte) -115);
+          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(true))).invalidateCheckedName((byte) -115);
           return;
         }
         field_F = (RgbSprite) null;
-        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(true))).i((byte) -115);
+        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(true))).invalidateCheckedName((byte) -115);
     }
 
     private final int a(int param0, String param1, int param2, String param3, int param4, lk param5) {
@@ -155,7 +155,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         if (param1 != 43) {
@@ -183,8 +183,8 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         this.field_E = new ValidatedTextField("", (sk) null, 12);
         jd var1 = new jd(GzipDecompressor.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
         lk var2 = new lk(SectorCacheStore.field_d, var1, (sk) null);
-        this.field_z = new wd(ClientException.field_b, (sk) null);
-        this.field_D = new wd(qa.field_g, (sk) null);
+        this.field_z = new InteractiveWidget(ClientException.field_b, (sk) null);
+        this.field_D = new InteractiveWidget(qa.field_g, (sk) null);
         this.field_E.field_q = ej.field_e;
         this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), true);
         this.field_z.field_y = false;
@@ -204,7 +204,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         this.field_z.field_n = (sk) (this);
         this.b(this.field_z, true);
         this.b(this.field_D, true);
-        this.field_C = new nd((rf) (this));
+        this.field_C = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_C.b(150, 80, -60 - this.field_E.field_k + (this.field_k - this.field_E.field_r), this.field_E.field_k + this.field_E.field_r + 60, 20);
         this.b(this.field_C, true);
         this.b(var4 + var3 + 55, 80, 496, 0, 0);
@@ -317,7 +317,7 @@ final class DisplayNameSelectionPanel extends lc implements rf, rc {
         return stackIn_8_0;
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

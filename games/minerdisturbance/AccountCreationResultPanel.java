@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends rg implements sh {
+final class AccountCreationResultPanel extends rg implements WidgetActivationListener {
     private boolean field_yb;
     private AccountRegistrationPanel field_Ab;
     static ResourceArchive field_xb;
@@ -34,7 +34,7 @@ final class AccountCreationResultPanel extends rg implements sh {
         }
     }
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         if (param1 != 6) {
           field_xb = (ResourceArchive) null;
         }
@@ -74,7 +74,7 @@ final class AccountCreationResultPanel extends rg implements sh {
             if (param0.suggestions != null) {
               var4 = hm.field_L;
               if (this.field_Ab != null) {
-                this.field_Ab.a((byte) 47);
+                this.field_Ab.onNameSuggestionsRefreshRequested((byte) 47);
               }
             } else {
               var4 = param0.message;

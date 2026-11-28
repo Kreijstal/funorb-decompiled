@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uc extends re implements jk {
+class uc extends re implements WidgetActivationListener {
     private BitmapFont field_jb;
     static volatile int field_eb;
     private boolean field_ob;
@@ -144,7 +144,7 @@ class uc extends re implements jk {
         TextFieldValidator.c(0);
     }
 
-    public void a(int param0, int param1, int param2, int param3, kf param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

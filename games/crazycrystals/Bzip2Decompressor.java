@@ -41,7 +41,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_w;
         var4 = param0.field_B;
         var5 = param0.field_G;
-        var15 = nh.field_H;
+        var15 = NameSuggestionsPanel.field_H;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_r;
@@ -143,7 +143,7 @@ final class Bzip2Decompressor {
         param0.field_w = var3;
         param0.field_B = var4;
         param0.field_G = var5;
-        nh.field_H = var6;
+        NameSuggestionsPanel.field_H = var6;
         param0.field_r = var7;
         param0.field_M = var8;
         param0.field_k = var9;
@@ -307,8 +307,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_L = 1;
-        if (nh.field_H == null) {
-          nh.field_H = new int[param0.field_L * 100000];
+        if (NameSuggestionsPanel.field_H == null) {
+          NameSuggestionsPanel.field_H = new int[param0.field_L * 100000];
         }
         var26 = 1;
         while (true) {
@@ -479,14 +479,14 @@ final class Bzip2Decompressor {
                 param0.field_K[var4] = param0.field_K[var4] + param0.field_K[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(nh.field_H[var4] & 255);
+                var1 = (byte)(NameSuggestionsPanel.field_H[var4] & 255);
                 dupTemp$1 = param0.field_K[var1 & 255];
-                nh.field_H[dupTemp$1] = nh.field_H[dupTemp$1] | var4 << 8;
+                NameSuggestionsPanel.field_H[dupTemp$1] = NameSuggestionsPanel.field_H[dupTemp$1] | var4 << 8;
                 param0.field_K[var1 & 255] = param0.field_K[var1 & 255] + 1;
               }
-              param0.field_r = nh.field_H[param0.field_I] >> 8;
+              param0.field_r = NameSuggestionsPanel.field_H[param0.field_I] >> 8;
               param0.field_B = 0;
-              param0.field_r = nh.field_H[param0.field_r];
+              param0.field_r = NameSuggestionsPanel.field_H[param0.field_r];
               param0.field_G = (byte)(param0.field_r & 255);
               param0.field_r = param0.field_r >> 8;
               param0.field_B = param0.field_B + 1;
@@ -550,7 +550,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_H[var1 & 255] & 255;
               param0.field_o[dupTemp$0] = param0.field_o[dupTemp$0] + 1;
-              nh.field_H[var14] = param0.field_H[var1 & 255] & 255;
+              NameSuggestionsPanel.field_H[var14] = param0.field_H[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -607,7 +607,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_H[param0.field_i[param0.field_D[0]] & 255];
             param0.field_o[var1 & 255] = param0.field_o[var1 & 255] + var15;
             while (var15 > 0) {
-              nh.field_H[var14] = var1 & 255;
+              NameSuggestionsPanel.field_H[var14] = var1 & 255;
               var14++;
               var15--;
             }

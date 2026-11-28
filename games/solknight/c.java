@@ -87,7 +87,7 @@ final class c extends UiWidget {
         }
         this.field_S = new Sprite[]{this.b(this.field_O, param0 + 294709246, this.field_K), this.b(this.field_I, param0 ^ -275703298, this.field_F)};
         this.field_P = this.a((byte) -119);
-        this.field_A = this.field_P.b();
+        this.field_A = this.field_P.copyMirroredHorizontally();
         this.field_G = new Sprite(this.field_x >> 1, this.field_x);
     }
 
@@ -153,7 +153,7 @@ final class c extends UiWidget {
           var5_int = this.field_t + param3;
           kf.a((byte) 97, param3 + this.field_P.field_p, param1, -this.field_P.field_p + var5_int, this.field_x + param1);
           for (var6 = -this.field_D + param3; var5_int > var6; var6 = var6 + param2.field_p) {
-            param2.d(var6, param1);
+            param2.draw(var6, param1);
           }
           if (param0 != 0) {
             discarded$0 = this.a((byte) 120);
@@ -161,21 +161,21 @@ final class c extends UiWidget {
           MidiPcmStream.e(4096);
           if (SoftwareRasterizer.field_b <= this.field_P.field_p + param3) {
             AgeValidator.a(param0 ^ -100, this.field_G);
-            param2.d(-this.field_D, 0);
-            param2.d(-this.field_D + 2 * this.field_N, 0);
+            param2.draw(-this.field_D, 0);
+            param2.draw(-this.field_D + 2 * this.field_N, 0);
             this.field_A.drawMultiply(0, 0);
             MidiPcmStream.e(param0 ^ 4096);
-            this.field_G.d(param3, param1);
+            this.field_G.draw(param3, param1);
           }
           if (SoftwareRasterizer.field_k >= -this.field_P.field_p + var5_int) {
             AgeValidator.a(param0 - 119, this.field_G);
             for (var7 = this.field_D + (-this.field_P.field_p + this.field_t); var7 > 2 * this.field_N; var7 = var7 - this.field_N * 2) {
             }
-            param2.d(-var7, 0);
-            param2.d(-var7 + 2 * this.field_N, 0);
+            param2.draw(-var7, 0);
+            param2.draw(-var7 + 2 * this.field_N, 0);
             this.field_P.drawMultiply(0, 0);
             MidiPcmStream.e(param0 ^ 4096);
-            this.field_G.d(-this.field_P.field_p + var5_int, param1);
+            this.field_G.draw(-this.field_P.field_p + var5_int, param1);
             return;
           }
           return;

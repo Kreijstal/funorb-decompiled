@@ -198,7 +198,7 @@ final class hl extends WidgetWrapper {
         bu.a(0, var7);
         this.child.draw((byte) -85, 0, param2, 0);
         db.b(111);
-        var7.a(param3 + this.x, param1 + this.y, this.field_F);
+        var7.drawWithOpacity(param3 + this.x, param1 + this.y, this.field_F);
     }
 
     public hl() {

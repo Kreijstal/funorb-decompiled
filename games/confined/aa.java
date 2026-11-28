@@ -23,7 +23,7 @@ final class aa {
         PrimaryNodeDeque.field_b = cc.a(9, -14245);
         dg.field_n = new ad(50);
         dg.field_n.a(param0, fi.field_b, dl.field_a, pb.field_e, "basic");
-        dg.field_n.a((byte) -6, ka.field_N, un.field_b, ak.field_P);
+        dg.field_n.a((byte) -6, ka.field_N, un.field_b, NameSuggestionsPanel.field_P);
         dg.field_n.a((byte) -6, GameCanvas.field_a, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, i.field_u, d.field_f, DualLinkNode.field_n);
         dg.field_n.a((byte) -6, PasswordValidator.field_j, d.field_f, DualLinkNode.field_n);

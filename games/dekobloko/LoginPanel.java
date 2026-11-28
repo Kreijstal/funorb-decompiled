@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ComponentContainer implements TextFieldListener, CallbackContract019 {
+final class LoginPanel extends ComponentContainer implements TextFieldListener, WidgetActivationListener {
     private InteractiveComponent interactiveComponentState0003;
     static int integerState0274;
     private InteractiveComponent interactiveComponentState0004;
@@ -586,7 +586,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         super.performAction0162(integerArgument1, -119, integerArgument3, integerArgument4);
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

@@ -50,7 +50,7 @@ final class NodeHashTableIterator implements Iterator {
           return;
         }
         String var2 = (String) null;
-        ij.a(-1, "", (String) null);
+        NameSuggestionsPanel.a(-1, "", (String) null);
     }
 
     public static void clearStaticReferences(int param0) {

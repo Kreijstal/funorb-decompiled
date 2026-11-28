@@ -299,7 +299,7 @@ final class rd {
           if (1 == ln.field_a.field_m) {
             SoftwareRasterizer.clearRaster();
           } else {
-            uf.field_i[4].c(-24 + -var3 / 16, -var4 / 16 - 24);
+            uf.field_i[4].drawOpaque(-24 + -var3 / 16, -var4 / 16 - 24);
           }
           stackIn_11_0 = qa.field_b;
           if (80 > qa.field_b) {
@@ -383,7 +383,7 @@ final class rd {
                 }
               }
               if (eh.field_g <= 0) {
-                if (4 > mc.field_I) {
+                if (4 > NameSuggestionsPanel.field_I) {
                   eh.field_c.playSample(fg.field_b[17], 100, 2 * uh.field_i);
                 }
                 mf.a(false, 4);
@@ -426,7 +426,7 @@ final class rd {
                   var16[var7] ||
                   !var17[var7]) && pk.field_d[var40[var7]] != null) {
                   var8 = -var3 + 24 * var21;
-                  pk.field_d[var40[var7]].e(var8, var9);
+                  pk.field_d[var40[var7]].draw(var8, var9);
                 }
               }
             }
@@ -542,7 +542,7 @@ final class rd {
               }
               else {
                 var6 = 0;
-                if (mc.field_I == 5) {
+                if (NameSuggestionsPanel.field_I == 5) {
                   var6 = 16777215;
                 }
                 if (0 < jf.field_c &&
@@ -565,11 +565,11 @@ final class rd {
           }
           if ((decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            uf.field_i[4].c(-(uf.field_i[4].field_z / 2) + 320, 240 - uf.field_i[4].field_A / 2);
+            uf.field_i[4].drawOpaque(-(uf.field_i[4].field_z / 2) + 320, 240 - uf.field_i[4].field_A / 2);
           }
           if (decompiledFrameRemainder1) {
             var6Lifetime1 = 0;
-            if (mc.field_I == 5) {
+            if (NameSuggestionsPanel.field_I == 5) {
               var6Lifetime1 = 16777215;
             }
             if (0 < jf.field_c &&

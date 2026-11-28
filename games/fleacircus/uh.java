@@ -674,67 +674,67 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime90 = tf.a(0, "achievement_criteria,0");
           if (var2Lifetime90 != null) {
-            ij.field_J[0] = ab.a(0, var2Lifetime90);
+            NameSuggestionsPanel.field_J[0] = ab.a(0, var2Lifetime90);
           }
           var2Lifetime91 = tf.a(0, "achievement_criteria,1");
           if (null != var2Lifetime91) {
-            ij.field_J[1] = ab.a(0, var2Lifetime91);
+            NameSuggestionsPanel.field_J[1] = ab.a(0, var2Lifetime91);
           }
           var2Lifetime92 = tf.a(0, "achievement_criteria,2");
           if (var2Lifetime92 != null) {
-            ij.field_J[2] = ab.a(0, var2Lifetime92);
+            NameSuggestionsPanel.field_J[2] = ab.a(0, var2Lifetime92);
           }
           var2Lifetime93 = tf.a(0, "achievement_criteria,3");
           if (var2Lifetime93 != null) {
-            ij.field_J[3] = ab.a(0, var2Lifetime93);
+            NameSuggestionsPanel.field_J[3] = ab.a(0, var2Lifetime93);
           }
           var2Lifetime94 = tf.a(0, "achievement_criteria,4");
           if (var2Lifetime94 != null) {
-            ij.field_J[4] = ab.a(0, var2Lifetime94);
+            NameSuggestionsPanel.field_J[4] = ab.a(0, var2Lifetime94);
           }
           var2Lifetime95 = tf.a(0, "achievement_criteria,5");
           if (null != var2Lifetime95) {
-            ij.field_J[5] = ab.a(0, var2Lifetime95);
+            NameSuggestionsPanel.field_J[5] = ab.a(0, var2Lifetime95);
           }
           var2Lifetime96 = tf.a(0, "achievement_criteria,6");
           if (var2Lifetime96 != null) {
-            ij.field_J[6] = ab.a(0, var2Lifetime96);
+            NameSuggestionsPanel.field_J[6] = ab.a(0, var2Lifetime96);
           }
           var2Lifetime97 = tf.a(0, "achievement_criteria,7");
           if (null != var2Lifetime97) {
-            ij.field_J[7] = ab.a(0, var2Lifetime97);
+            NameSuggestionsPanel.field_J[7] = ab.a(0, var2Lifetime97);
           }
           var2Lifetime98 = tf.a(0, "achievement_criteria,8");
           if (var2Lifetime98 != null) {
-            ij.field_J[8] = ab.a(0, var2Lifetime98);
+            NameSuggestionsPanel.field_J[8] = ab.a(0, var2Lifetime98);
           }
           var2Lifetime99 = tf.a(0, "achievement_criteria,9");
           if (var2Lifetime99 != null) {
-            ij.field_J[9] = ab.a(0, var2Lifetime99);
+            NameSuggestionsPanel.field_J[9] = ab.a(0, var2Lifetime99);
           }
           var2Lifetime100 = tf.a(0, "achievement_criteria,10");
           if (null != var2Lifetime100) {
-            ij.field_J[10] = ab.a(0, var2Lifetime100);
+            NameSuggestionsPanel.field_J[10] = ab.a(0, var2Lifetime100);
           }
           var2Lifetime101 = tf.a(0, "achievement_criteria,11");
           if (null != var2Lifetime101) {
-            ij.field_J[11] = ab.a(0, var2Lifetime101);
+            NameSuggestionsPanel.field_J[11] = ab.a(0, var2Lifetime101);
           }
           var2Lifetime102 = tf.a(0, "achievement_criteria,12");
           if (var2Lifetime102 != null) {
-            ij.field_J[12] = ab.a(0, var2Lifetime102);
+            NameSuggestionsPanel.field_J[12] = ab.a(0, var2Lifetime102);
           }
           var2Lifetime103 = tf.a(0, "achievement_criteria,13");
           if (null != var2Lifetime103) {
-            ij.field_J[13] = ab.a(0, var2Lifetime103);
+            NameSuggestionsPanel.field_J[13] = ab.a(0, var2Lifetime103);
           }
           var2Lifetime104 = tf.a(0, "achievement_criteria,14");
           if (null != var2Lifetime104) {
-            ij.field_J[14] = ab.a(0, var2Lifetime104);
+            NameSuggestionsPanel.field_J[14] = ab.a(0, var2Lifetime104);
           }
           var2Lifetime105 = tf.a(0, "achievement_criteria,15");
           if (null != var2Lifetime105) {
-            ij.field_J[15] = ab.a(0, var2Lifetime105);
+            NameSuggestionsPanel.field_J[15] = ab.a(0, var2Lifetime105);
           }
           var2Lifetime106 = tf.a(0, "BLOCKS_IN_THE_LEVEL_INTRO");
           if (null != var2Lifetime106) {
@@ -914,7 +914,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime150 = tf.a(0, "SHOW_TIPS");
           if (var2Lifetime150 != null) {
-            bb.field_H = ab.a(0, var2Lifetime150);
+            InteractiveWidget.field_H = ab.a(0, var2Lifetime150);
           }
           var2Lifetime151 = tf.a(0, "INSTRUCTIONS_TITLES_1");
           if (null != var2Lifetime151) {

@@ -437,7 +437,7 @@ final class nf extends IntrusiveNode {
               }
               var22 = var38.m(127);
             }
-            this.field_r[var23] = (short)(this.field_r[var23] + (PcmOutputWorker.a(2, -1 + var22) << 14));
+            this.field_r[var23] = (short)(this.field_r[var23] + (PcmOutputWorker.bitwiseAnd(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.field_k[var23] = var22;
           }

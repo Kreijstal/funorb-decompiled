@@ -141,7 +141,7 @@ abstract class ByteStorage {
                 }
                 if (stackIn_247_0 < stackIn_247_1) {
                   go.field_l.drawRightAligned(Integer.toString(gm.field_c[var4_int]), 608, 12 + var3_int + 5, 8438015, -1);
-                  vp.field_i[var4_int][SecondaryIntrusiveDeque.field_d % vp.field_i[var4_int].length].a(506, -24 + var3_int);
+                  vp.field_i[var4_int][SecondaryIntrusiveDeque.field_d % vp.field_i[var4_int].length].draw(506, -24 + var3_int);
                 }
                 var3_int += 48;
                 var4_int++;
@@ -432,14 +432,14 @@ abstract class ByteStorage {
                         var9++;
                         continue;
                       }
-                      jd.field_A.c(var6Lifetime1, 60, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
+                      jd.field_A.drawGrayModulated(var6Lifetime1, 60, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
                       break;
                     }
                     decompiledFrameRemainder2 = false;
                   }
                   else {
-                    vj.field_a[3][(SecondaryIntrusiveDeque.field_d >> 2) % bp.field_c[3]].c(var6Lifetime1, 48, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
-                    jf.field_b[var7Lifetime1].a(-(jf.field_b[var7Lifetime1].field_n / 2) + (24 + var6Lifetime1), 110);
+                    vj.field_a[3][(SecondaryIntrusiveDeque.field_d >> 2) % bp.field_c[3]].drawGrayModulated(var6Lifetime1, 48, LevelCompleteEntrancePhase.field_f[var7Lifetime1]);
+                    jf.field_b[var7Lifetime1].draw(-(jf.field_b[var7Lifetime1].field_n / 2) + (24 + var6Lifetime1), 110);
                   }
                   stackIn_293_0Lifetime1 = ~q.field_a[var7Lifetime1].field_i;
                   stackIn_293_1Lifetime1 = -1;
@@ -3178,7 +3178,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("fs_focus", 5236);
                 if (null != var2) {
-                  nh.field_C = fa.a((byte) -97, var2);
+                  NameSuggestionsPanel.field_C = fa.a((byte) -97, var2);
                 }
                 var2 = ah.a("fs_focus_or_resolution", 5236);
                 if (null != var2) {

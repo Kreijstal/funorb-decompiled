@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nb extends vd implements qk {
-    private ph field_H;
-    private ph field_G;
+final class nb extends vd implements WidgetActivationListener {
+    private InteractiveWidget field_H;
+    private InteractiveWidget field_G;
     static RgbSprite field_J;
-    private ph field_K;
+    private InteractiveWidget field_K;
     static java.math.BigInteger field_L;
     static RgbSprite field_E;
     static int field_I;
@@ -134,8 +134,8 @@ final class nb extends vd implements qk {
         if (param2 >= 42) {
           return;
         }
-        ph var7 = (ph) null;
-        this.a(4, -115, 34, (ph) null, (byte) 88);
+        InteractiveWidget var7 = (InteractiveWidget) null;
+        this.onWidgetActivated(4, -115, 34, (InteractiveWidget) null, (byte) 88);
     }
 
     final boolean a(int param0, ag param1, int param2, char param3) {
@@ -175,9 +175,9 @@ final class nb extends vd implements qk {
 
     public nb() {
         super(0, 0, 476, 225, (nn) null);
-        this.field_G = new ph(kc.field_f, (mh) null);
-        this.field_H = new ph(DualLinkNode.field_l, (mh) null);
-        this.field_K = new ph(ej.field_n, (mh) null);
+        this.field_G = new InteractiveWidget(kc.field_f, (mh) null);
+        this.field_H = new InteractiveWidget(DualLinkNode.field_l, (mh) null);
+        this.field_K = new InteractiveWidget(ej.field_n, (mh) null);
         ke var1 = new ke();
         this.field_G.field_h = (nn) ((Object) var1);
         this.field_H.field_h = (nn) ((Object) var1);
@@ -198,7 +198,7 @@ final class nb extends vd implements qk {
         this.a(51448, this.field_K);
     }
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;

@@ -227,7 +227,7 @@ final class bf {
             if (2 == param3.field_b) {
               var7 = var7 + (param4.field_x - this.field_k.field_r);
             }
-            this.field_k.d(var6_int, var7);
+            this.field_k.draw(var6_int, var7);
           }
           var6 = param3.b(param4, 0);
           if (var6 != null &&

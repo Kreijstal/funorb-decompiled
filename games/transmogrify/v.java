@@ -115,14 +115,14 @@ final class v {
           var4 = var2.field_m;
           og.a((byte) 45);
           ch.field_c = new Sprite(var3, var4 * 3 / 4);
-          ch.field_c.e();
-          var2.f(0, 0);
+          ch.field_c.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           if (param0 < 86) {
             field_a = (Calendar) null;
           }
           tb.field_e = new Sprite(var3, -ch.field_c.field_m + var4);
-          tb.field_e.e();
-          var2.f(0, -ch.field_c.field_m);
+          tb.field_e.bindAsRenderTarget();
+          var2.drawOpaque(0, -ch.field_c.field_m);
           tb.field_e.field_l = ch.field_c.field_m;
           fi.c(true);
         } catch (RuntimeException runtimeException) {
@@ -155,7 +155,7 @@ final class v {
                 var3 = (java.applet.Applet) null;
                 v.a((byte) -68, (java.applet.Applet) null);
               }
-              param1.getAppletContext().showDocument(dh.a(param1, (byte) -95, var2), "_top");
+              param1.getAppletContext().showDocument(NameSuggestionsPanel.a(param1, (byte) -95, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements u, ql, sh {
+final class AccountRegistrationPanel extends WidgetContainer implements u, WidgetActivationListener, NameSuggestionListener {
     private em field_O;
     private ButtonWidget field_z;
     private ButtonWidget field_K;
@@ -12,7 +12,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, ql, s
     private ValidatedTextField field_J;
     private ValidatedTextField field_F;
     private ValidatedTextField field_I;
-    cm field_G;
+    NameSuggestionsPanel field_G;
     private ValidatedTextField field_D;
     static int field_E;
     private ValidatedTextField field_H;
@@ -495,17 +495,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, ql, s
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 == 200) {
-          ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-114))).f((byte) -82);
+          ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-114))).invalidateCheckedName((byte) -82);
           return;
         }
         String var3 = (String) null;
         int discarded$0 = this.a(-96, -126, (String) null, 71, (UiWidget) null, 63, (String) null);
-        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-114))).f((byte) -82);
+        ((AccountNameAvailabilityValidator) (this.field_N.getFieldValidator(-114))).invalidateCheckedName((byte) -82);
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -513,7 +513,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, ql, s
           var4 = param0;
           if (param1 >= -50) {
             String var5 = (String) null;
-            this.a((String) null, -32);
+            this.onNameSuggestionSelected((String) null, -32);
           }
           ((EditableTextField) ((Object) var3)).setText(false, -5905, var4);
         } catch (RuntimeException runtimeException) {
@@ -586,13 +586,13 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, ql, s
         this.field_z.field_o = (of) (this);
         this.b((byte) -33, this.field_z);
         this.b((byte) -27, this.field_K);
-        this.field_G = new cm((sh) (this));
+        this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_G.a(150, 13361, this.field_N.field_r + this.field_N.field_l + 60, -60 + (-this.field_N.field_l - this.field_N.field_r) + this.field_l, this.field_N.field_e + 20);
         this.b((byte) -112, this.field_G);
         this.a(var6 + 55 + var3, 13361, 0, 496, 0);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
         jj var7 = null;
         RuntimeException stackIn_10_0 = null;

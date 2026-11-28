@@ -124,12 +124,12 @@ abstract class kf extends WidgetContainer {
             return;
           }
           if (k.field_d != null) {
-            k.field_d.field_G.a(20870, param1);
+            k.field_d.field_G.setNameSuggestions(20870, param1);
           }
           if (null == sj.field_d) {
             return;
           }
-          sj.field_d.field_F.a(20870, param1);
+          sj.field_d.field_F.setNameSuggestions(20870, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -177,7 +177,7 @@ abstract class kf extends WidgetContainer {
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
-          jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
+          jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
         if (jj.field_x.field_p < this.field_t) {
@@ -187,7 +187,7 @@ abstract class kf extends WidgetContainer {
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
-          jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
+          jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
         if (jj.field_x.field_t < this.field_x) {
@@ -197,7 +197,7 @@ abstract class kf extends WidgetContainer {
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           MidiPcmStream.e(4096);
-          jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
+          jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
           return;
         }
         AgeValidator.a(-100, jj.field_x);
@@ -205,7 +205,7 @@ abstract class kf extends WidgetContainer {
         this.a(param3, (byte) 94, 0);
         super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
         MidiPcmStream.e(4096);
-        jj.field_x.c(this.field_m + param2, this.field_j + param0, this.field_I);
+        jj.field_x.drawWithOpacity(this.field_m + param2, this.field_j + param0, this.field_I);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

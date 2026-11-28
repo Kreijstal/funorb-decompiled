@@ -169,8 +169,8 @@ final class ma extends jc {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_I instanceof hc) ||
-            ((hc) (this.field_I)).field_E) &&
+          if ((!(this.field_I instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_I)).field_E) &&
             this.field_w == 1) {
             var5_int = -param1 + nk.field_w - this.field_N;
             var6 = -param0 + (-this.field_K + NodeHashTableIterator.field_e);

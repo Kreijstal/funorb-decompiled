@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends ph {
+final class tb extends InteractiveWidget {
     private df field_O;
     int field_G;
     static int field_N;

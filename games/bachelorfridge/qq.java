@@ -87,7 +87,7 @@ final class qq extends EventEffect {
             if (256 < var6) {
               var6 = 256;
             }
-            lw.field_b[1 + (var5 & 1)].a(param1 + (var4.field_i >> 4) - 32, -32 + (-(var4.field_h >> 5) + (param2 + (var4.field_q >> 4)) - 2), var4.field_o << 3);
+            lw.field_b[1 + (var5 & 1)].drawWithOpacity(param1 + (var4.field_i >> 4) - 32, -32 + (-(var4.field_h >> 5) + (param2 + (var4.field_q >> 4)) - 2), var4.field_o << 3);
             var5++;
             var4 = (lh) (param0.nextForward(param3 ^ -3227));
           }

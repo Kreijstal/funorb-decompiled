@@ -55,8 +55,8 @@ final class gh extends af {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param4 instanceof pj) {
-            param2 = param2 & ((pj) (param4)).field_B;
+          if (param4 instanceof InteractiveWidget) {
+            param2 = param2 & ((InteractiveWidget) (param4)).field_B;
           }
           if (param2) {
             if (var6_int != 0) {

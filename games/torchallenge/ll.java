@@ -107,7 +107,7 @@ final class ll {
           }
           if (param1 == 2 &&
             !je.field_i) {
-            cj.field_c.d();
+            cj.field_c.bindAsRenderTarget();
             je.field_g.drawTransparentWithIntensity(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.drawTransparent(0, 0);
@@ -184,7 +184,7 @@ final class ll {
           }
           if (param1 == 2 &&
             !je.field_i) {
-            cj.field_c.d();
+            cj.field_c.bindAsRenderTarget();
             je.field_g.drawTransparentWithIntensity(0, 0, param8);
             od.a(cj.field_c, 33, 30, 68, 90);
             var16.drawTransparent(0, 0);
@@ -261,7 +261,7 @@ final class ll {
         }
         if (param1 == 2 &&
           !je.field_i) {
-          cj.field_c.d();
+          cj.field_c.bindAsRenderTarget();
           je.field_g.drawTransparentWithIntensity(0, 0, param8);
           od.a(cj.field_c, 33, 30, 68, 90);
           var16.drawTransparent(0, 0);

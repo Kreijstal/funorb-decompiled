@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
+final class LoginPanel extends WidgetContainer implements TextFieldListener, WidgetActivationListener {
     private boolean field_O;
     static String[] field_L;
     static String[] field_J;
     private boolean field_Q;
-    private eb field_G;
+    private InteractiveWidget field_G;
     static int field_P;
-    private eb field_K;
+    private InteractiveWidget field_K;
     static int field_H;
     private EditableTextField field_N;
     private EditableTextField field_R;
-    private eb field_F;
+    private InteractiveWidget field_F;
     private boolean field_M;
     private String field_I;
 
@@ -84,10 +84,10 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        eb stackIn_17_1 = null;
-        eb stackIn_17_2 = null;
-        eb stackIn_18_1 = null;
-        eb stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -117,11 +117,11 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
           this.field_N = (EditableTextField) ((Object) new ValidatedTextField(param0, (sc) (this), 100));
           this.field_R = (EditableTextField) ((Object) new ValidatedTextField("", (sc) (this), 20));
           if (this.field_O) {
-            this.field_F = new eb(rb.field_c, (sc) null);
-            this.field_G = new eb(ed.field_c, (sc) null);
+            this.field_F = new InteractiveWidget(rb.field_c, (sc) null);
+            this.field_G = new InteractiveWidget(ed.field_c, (sc) null);
             this.field_N.field_A = false;
           } else {
-            this.field_F = new eb(ik.field_a, (sc) null);
+            this.field_F = new InteractiveWidget(ik.field_a, (sc) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_Q) {
@@ -133,9 +133,9 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
               stackIn_18_2 = null;
               stackIn_18_3 = aj.field_c;
             }
-            this.field_G = new eb(stackIn_18_3, (sc) null);
+            this.field_G = new InteractiveWidget(stackIn_18_3, (sc) null);
             if (this.field_M) {
-              this.field_K = new eb(IndexedSpriteState.field_j, (sc) (this));
+              this.field_K = new InteractiveWidget(IndexedSpriteState.field_j, (sc) (this));
             }
           }
           this.field_N.listener = (WidgetActionListener) ((Object) new ng(10000536));
@@ -180,7 +180,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
           var12 = dupTemp$0;
           this.b((byte) 95, dupTemp$0);
           this.y = this.y + (((UiWidget) ((Object) var12)).height + 5);
-          dupTemp$1 = new j(10, this.y, this.width - 20, 25, this.field_R, false, 80, 3, var7, 16777215, eb.field_E);
+          dupTemp$1 = new j(10, this.y, this.width - 20, 25, this.field_R, false, 80, 3, var7, 16777215, InteractiveWidget.field_E);
           var13 = dupTemp$1;
           this.b((byte) 95, dupTemp$1);
           this.field_F.field_r = (sc) (this);
@@ -361,7 +361,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, n {
         super.a(param0, -118, param2, param3);
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;

@@ -120,7 +120,7 @@ final class aa {
           if (null == b.field_a) {
             b.field_a = new RgbSprite(SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           }
-          b.field_a.e();
+          b.field_a.bindAsRenderTarget();
           nh.a();
           nh.c(370, 240 + ec.c((byte) -63));
         }
@@ -278,7 +278,7 @@ final class aa {
           2 == rn.field_b && (AccountNameAvailabilityValidator.i(23156) == null ||
           AccountNameAvailabilityValidator.i(23156).field_g &&
           nc.field_T == 0)) {
-          b.field_a.b(0, 0, var4 << 1);
+          b.field_a.drawWithOpacity(0, 0, var4 << 1);
         }
         if (MatchingFieldValidator.field_p != null) {
           sf.b(16777215);
@@ -595,16 +595,16 @@ final class aa {
           stackIn_52_0 = (0 != MatchingFieldValidator.field_p.field_C) ? 0 : 1;
           var13Lifetime1 = stackIn_52_0;
           if (var7 == 29) {
-            rl.field_d[var13Lifetime1][3].c(var12Lifetime1, var11Lifetime2);
+            rl.field_d[var13Lifetime1][3].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 28) {
-            rl.field_d[var13Lifetime1][2].c(var12Lifetime1, var11Lifetime2);
+            rl.field_d[var13Lifetime1][2].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 30) {
-            rl.field_d[var13Lifetime1][5].c(var12Lifetime1, var11Lifetime2);
+            rl.field_d[var13Lifetime1][5].drawHalfSize(var12Lifetime1, var11Lifetime2);
           }
           if (var7 == 27) {
-            rl.field_d[var13Lifetime1][4].c(var12Lifetime1, var11Lifetime2);
+            rl.field_d[var13Lifetime1][4].drawHalfSize(var12Lifetime1, var11Lifetime2);
             return;
           }
         }
@@ -674,7 +674,7 @@ final class aa {
           var4 = IntrusiveNode.field_i[var5];
           var3 = pa.field_j[var5];
         }
-        tb.field_a.b(-param0, 0);
+        tb.field_a.draw(-param0, 0);
         SoftwareRasterizer.drawRectangleShadow(tb.field_a.field_s + 1 - param0, tb.field_a.field_r + 1, tb.field_a.field_w - 1, tb.field_a.field_t - 1, 1);
         v.field_j.drawString(var4, 15 - param0, v.field_j.field_q + 155, 4096, -1);
         jj.field_d.drawParagraph(var3, 15 - param0, 165, 250, 640, 4096, -1, 0, 0, -1 + jj.field_d.field_q);
@@ -2364,11 +2364,11 @@ final class aa {
           boolean decompiledSharedTail0 = !(16 <= nc.field_T);
           if (!decompiledSharedTail0) {
             this.b(param0 - 17792);
-            var2_ref.b(0, 0, (-4096 + nc.field_T * 256) / 16);
+            var2_ref.drawWithOpacity(0, 0, (-4096 + nc.field_T * 256) / 16);
             decompiledSharedTail0 = (var15 != 0);
           }
           if (decompiledSharedTail0) {
-            var2_ref.d(0, 0);
+            var2_ref.drawOpaque(0, 0);
             SoftwareRasterizer.fillRoundedRectangleAlpha(15, 16, 210, 2 * ec.c((byte) -63) + 435, 9, 13421772, 96);
           }
           var5 = nb.field_Fb;

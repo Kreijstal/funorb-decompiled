@@ -42,7 +42,7 @@ final class Bzip2State {
 
     final static m[] b(byte param0) {
         int var1 = -103 / ((10 - param0) / 62);
-        return new m[]{bb.field_J, mh.field_B, el.field_b};
+        return new m[]{NameSuggestionsPanel.field_J, mh.field_B, el.field_b};
     }
 
     public static void clearStaticReferences(byte param0) {

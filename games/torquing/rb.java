@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rb extends lg {
+class rb extends InteractiveWidget {
     private IntrusiveDeque field_D;
     private String[] field_E;
     static long field_C;
@@ -324,8 +324,8 @@ class rb extends lg {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2 ^ 0, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2 ^ 0, param3);
         if (param2 != -1) {
           return;
         }

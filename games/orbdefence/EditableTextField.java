@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class EditableTextField extends s {
+class EditableTextField extends InteractiveWidget {
     private int field_P;
     private int field_N;
     private boolean field_G;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationPanel extends WidgetContainer implements pc, WidgetActionListener, uja {
+final class AccountCreationPanel extends WidgetContainer implements pc, WidgetActionListener, NameSuggestionListener {
     private ValidatedTextField field_D;
     private ValidatedTextField field_K;
     private InteractiveWidget field_M;
-    dd field_J;
+    NameSuggestionsPanel field_J;
     private ValidatedTextField field_C;
     private ValidatedTextField field_I;
     static volatile int field_N;
@@ -115,9 +115,9 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         boolean discarded$0 = false;
-        ((AccountNameAvailabilityValidator) (this.field_C.getFieldValidator(16728128))).d(-121);
+        ((AccountNameAvailabilityValidator) (this.field_C.getFieldValidator(16728128))).invalidateCheckedName(-121);
         if (param0 != 14322) {
           FieldValidatorProvider var3 = (FieldValidatorProvider) null;
           discarded$0 = this.isFieldReadyForRegistration(50, (FieldValidatorProvider) null);
@@ -228,7 +228,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         this.field_L.listener = (WidgetListener) (this);
         this.c(this.field_L, -126);
         this.c(this.field_M, -120);
-        this.field_J = new dd((uja) (this));
+        this.field_J = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_J.a(60 + (this.field_C.x + this.field_C.width), 150, (byte) 59, -60 + (-this.field_C.width - this.field_C.x) + this.width, 20 + this.field_C.y);
         this.c(this.field_J, 39);
         this.a(0, var6 + var3 + 55, (byte) 59, 496, 0);
@@ -285,7 +285,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -298,7 +298,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         UiWidget var7 = null;

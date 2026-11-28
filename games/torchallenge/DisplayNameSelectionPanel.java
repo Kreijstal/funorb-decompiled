@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends kj implements tb, sg {
-    li field_L;
-    private ng field_J;
+final class DisplayNameSelectionPanel extends kj implements NameSuggestionListener, WidgetActivationListener {
+    NameSuggestionsPanel field_L;
+    private InteractiveWidget field_J;
     static int[] field_O;
     static Sprite[] field_M;
     static String field_N;
-    private ng field_K;
+    private InteractiveWidget field_K;
     private ValidatedTextField field_P;
 
     final static void a(java.awt.Canvas param0, int param1, boolean param2) {
@@ -25,7 +25,7 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
             var5 = (bf) null;
             DisplayNameSelectionPanel.a(true, (bf) null);
           }
-          if (10 <= li.field_K) {
+          if (10 <= NameSuggestionsPanel.field_K) {
             if (!eh.a(param1 ^ 43)) {
               SoftwareRasterizer.clearRaster();
               v.e(240, 320, 101);
@@ -175,7 +175,7 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         }
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -314,7 +314,7 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -358,8 +358,8 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         this.field_P = new ValidatedTextField("", (gg) null, 12);
         bc var1 = new bc(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(kg.field_eb, var1, (gg) null);
-        this.field_J = new ng(FrameTimer.field_g, (gg) null);
-        this.field_K = new ng(nh.field_fb, (gg) null);
+        this.field_J = new InteractiveWidget(FrameTimer.field_g, (gg) null);
+        this.field_K = new InteractiveWidget(nh.field_fb, (gg) null);
         this.field_P.field_r = AgeValidator.field_o;
         this.field_P.setFieldValidator(-27997, new AccountNameAvailabilityValidator(this.field_P));
         this.field_J.field_F = false;
@@ -379,19 +379,19 @@ final class DisplayNameSelectionPanel extends kj implements tb, sg {
         this.field_J.field_k = (gg) (this);
         this.a(0, this.field_J);
         this.a(0, this.field_K);
-        this.field_L = new li((tb) (this));
+        this.field_L = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_L.a((byte) 115, this.field_P.field_m + (this.field_P.field_p + 60), 150, -60 + (-this.field_P.field_p + this.field_p) - this.field_P.field_m, 20);
         this.a(0, this.field_L);
         this.a((byte) 114, 0, 55 + var3 + var4, 496, 0);
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_P.getFieldValidator(param0 + 23025))).f(param0 ^ param0);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_P.getFieldValidator(param0 + 23025))).invalidateCheckedName(param0 ^ param0);
     }
 
     private final boolean canSubmitDisplayName(byte param0) {
         if (param0 <= 52) {
-          this.field_L = (li) null;
+          this.field_L = (NameSuggestionsPanel) null;
         }
         if (this.isFieldValid(-95, (FieldValidatorProvider) (this.field_P))) {
           return true;

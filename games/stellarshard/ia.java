@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends tb implements oi {
-    private ig field_P;
+final class ia extends tb implements WidgetActivationListener {
+    private InteractiveWidget field_P;
 
     ia(ei param0, di param1) {
         super(param0, 200, 150);
@@ -124,8 +124,8 @@ final class ia extends tb implements oi {
 
     private final void k(int param0) {
         if (param0 != 13807) {
-          ig var3 = (ig) null;
-          this.a(-72, -99, (ig) null, false, 3);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated(-72, -99, (InteractiveWidget) null, false, 3);
           if (this.field_G) {
             this.field_G = false;
             return;
@@ -138,7 +138,7 @@ final class ia extends tb implements oi {
         }
     }
 
-    public final void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -167,11 +167,11 @@ final class ia extends tb implements oi {
         }
     }
 
-    private final ig a(int param0, lf param1, String param2) {
-        ig var4 = null;
+    private final InteractiveWidget a(int param0, lf param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ig stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -179,7 +179,7 @@ final class ia extends tb implements oi {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ig(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_u = (uk) ((Object) new b());
           var5 = -6 + this.field_t;
           this.field_t = this.field_t + 38;

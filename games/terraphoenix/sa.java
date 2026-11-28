@@ -57,7 +57,7 @@ final class sa {
         try {
           var4 = (ja) (MusicPatchPcmStream.field_l.beginBackward(9272));
           while (var4 != null) {
-            eb.a(var4, 0, param1);
+            InteractiveWidget.a(var4, 0, param1);
             var4 = (ja) (MusicPatchPcmStream.field_l.nextBackward((byte) -119));
           }
           if (param0 == -336) {

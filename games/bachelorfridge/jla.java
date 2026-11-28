@@ -86,38 +86,38 @@ class jla {
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[5], 25, (var3 + 1) * g.field_g.field_u + 40, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var4 = 570;
         var5 = 20 + var3 * g.field_g.field_u;
-        vw.field_a[2].field_b[102].a(-(vw.field_a[0].field_b[0].field_d / 2) + var4, 16 + var5);
+        vw.field_a[2].field_b[102].draw(-(vw.field_a[0].field_b[0].field_d / 2) + var4, 16 + var5);
         var6 = ResourceArchive.field_b;
         var7 = (int)(Math.sin(0.5 * ((double)((var5 * var4 << 2) + var6) / 40.0)) * 30.0);
         var8 = (int)(Math.cos((double)(var6 + (var4 * var5 << 2)) / 40.0 * 0.5) * 15.0);
         var3 += 7;
         if (var8 < 0) {
-          SuperSpeedAllAnimation.field_z[(var6 >> 2) % 2].b(var7 + var4 - 7, var5 + var8, 16711680);
+          SuperSpeedAllAnimation.field_z[(var6 >> 2) % 2].drawTinted(var7 + var4 - 7, var5 + var8, 16711680);
         }
         if (var8 >= 0 ||
           var11 != 0) {
-          vla.field_r[(var6 >> 2) % 2].b(-7 + var4 + var7, var5 + var8, 16711680);
+          vla.field_r[(var6 >> 2) % 2].drawTinted(-7 + var4 + var7, var5 + var8, 16711680);
         }
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_o[6], 25, g.field_g.field_u * var3 + 40, var2, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var5Lifetime1 = g.field_g.field_u * (-2 + var3) + 40;
-        vw.field_a[1].field_b[102].a(-(vw.field_a[0].field_b[0].field_d / 2) + var4, var5Lifetime1 - 14);
+        vw.field_a[1].field_b[102].draw(-(vw.field_a[0].field_b[0].field_d / 2) + var4, var5Lifetime1 - 14);
         var7Lifetime1 = (int)(32.0 * Math.sin((double)(var6 + (var4 * var5Lifetime1 << 2)) / 80.0 * 0.5));
         var8Lifetime1 = (int)(Math.cos(0.5 * ((double)((var5Lifetime1 * var4 << 2) + var6) / 80.0)) * 15.0);
         var9 = 0.5 * ((double)(var6 + (var4 * var5Lifetime1 << 2)) / 80.0) + 1.5707963267948966;
         if (var8Lifetime1 >= 0) {
           if (2.0943951023931953 < var9 % 3.141592653589793) {
-            vu.field_k[5 + (var6 >> 3) % 5].a(-(AttackUpAllAnimation.field_y[0].field_a / 2) + (var7Lifetime1 + var4), var5Lifetime1 + var8Lifetime1);
+            vu.field_k[5 + (var6 >> 3) % 5].draw(-(AttackUpAllAnimation.field_y[0].field_a / 2) + (var7Lifetime1 + var4), var5Lifetime1 + var8Lifetime1);
             decompiledFrameRemainder1 = (var11 != 0);
           }
           if (decompiledFrameRemainder1) {
             if (var9 % 3.141592653589793 > 1.0471975511965976) {
-              vu.field_k[(var6 >> 3) % 5].a(-(AttackUpAllAnimation.field_y[0].field_a / 2) + (var4 + var7Lifetime1), var5Lifetime1 + var8Lifetime1);
+              vu.field_k[(var6 >> 3) % 5].draw(-(AttackUpAllAnimation.field_y[0].field_a / 2) + (var4 + var7Lifetime1), var5Lifetime1 + var8Lifetime1);
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
-              vu.field_k[10 + (var6 >> 3) % 5].a(-(AttackUpAllAnimation.field_y[0].field_a / 2) + var7Lifetime1 + var4, var5Lifetime1 + var8Lifetime1);
+              vu.field_k[10 + (var6 >> 3) % 5].draw(-(AttackUpAllAnimation.field_y[0].field_a / 2) + var7Lifetime1 + var4, var5Lifetime1 + var8Lifetime1);
             }
           }
         }
@@ -126,23 +126,23 @@ class jla {
           (!(var8Lifetime1 >= 0) ||
           var11 != 0)) {
           if (var9 % 3.141592653589793 > 2.0943951023931953) {
-            AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 10].a(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
+            AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 10].draw(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
             if (var11 != 0) {
               if (1.0471975511965976 < var9 % 3.141592653589793) {
-                AttackUpAllAnimation.field_y[(var6 >> 3) % 5].a(var7Lifetime1 + var4 - AttackUpAllAnimation.field_y[0].field_a / 2, var8Lifetime1 + var5Lifetime1);
-                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].a(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
+                AttackUpAllAnimation.field_y[(var6 >> 3) % 5].draw(var7Lifetime1 + var4 - AttackUpAllAnimation.field_y[0].field_a / 2, var8Lifetime1 + var5Lifetime1);
+                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].draw(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
               } else {
-                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].a(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
+                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].draw(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
               }
             }
           } else {
             if (1.0471975511965976 < var9 % 3.141592653589793) {
-              AttackUpAllAnimation.field_y[(var6 >> 3) % 5].a(var7Lifetime1 + var4 - AttackUpAllAnimation.field_y[0].field_a / 2, var8Lifetime1 + var5Lifetime1);
+              AttackUpAllAnimation.field_y[(var6 >> 3) % 5].draw(var7Lifetime1 + var4 - AttackUpAllAnimation.field_y[0].field_a / 2, var8Lifetime1 + var5Lifetime1);
               if (var11 != 0) {
-                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].a(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
+                AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].draw(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
               }
             } else {
-              AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].a(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
+              AttackUpAllAnimation.field_y[(var6 >> 3) % 5 + 5].draw(var4 + (var7Lifetime1 - AttackUpAllAnimation.field_y[0].field_a / 2), var5Lifetime1 + var8Lifetime1);
             }
           }
         }
@@ -374,9 +374,9 @@ class jla {
 
     void i(int param0) {
         int var2;
-        ada.field_p.d(0, 0);
-        DirectByteStorage.field_j.c(137, 0);
-        ml.field_a.d(127, 0);
+        ada.field_p.drawOpaque(0, 0);
+        DirectByteStorage.field_j.drawOpaque(137, 0);
+        ml.field_a.drawOpaque(127, 0);
         var2 = 137;
         bh.field_r.draw(418 + var2, 41);
         if (FloodEvent.field_q &&
@@ -480,7 +480,7 @@ class jla {
             var3 = 180;
           }
           if (var2 != 255) {
-            wt.field_q.a((640 - wt.field_q.field_q) / 2, var3, var2);
+            wt.field_q.drawWithOpacity((640 - wt.field_q.field_q) / 2, var3, var2);
           }
           if (var2 == 255 ||
             var4 != 0) {
@@ -491,10 +491,10 @@ class jla {
             if (var2 == 255) {
               GasCloudEvent.field_q.draw((-GasCloudEvent.field_q.field_q + 640) / 2, 480 - GasCloudEvent.field_q.field_p - 2);
               if (var4 != 0) {
-                GasCloudEvent.field_q.a((-GasCloudEvent.field_q.field_q + 640) / 2, -2 + (-GasCloudEvent.field_q.field_p + 480), var2);
+                GasCloudEvent.field_q.drawWithOpacity((-GasCloudEvent.field_q.field_q + 640) / 2, -2 + (-GasCloudEvent.field_q.field_p + 480), var2);
               }
             } else {
-              GasCloudEvent.field_q.a((-GasCloudEvent.field_q.field_q + 640) / 2, -2 + (-GasCloudEvent.field_q.field_p + 480), var2);
+              GasCloudEvent.field_q.drawWithOpacity((-GasCloudEvent.field_q.field_q + 640) / 2, -2 + (-GasCloudEvent.field_q.field_p + 480), var2);
             }
           }
         }
@@ -1945,7 +1945,7 @@ class jla {
         if (20 == var4Lifetime1 ||
           var4Lifetime1 == 21) {
           var10 = var10 + mv.field_n;
-          ls.field_c.c(var10, var9);
+          ls.field_c.drawOpaque(var10, var9);
           SoftwareRasterizer.saveClip(dfa.field_c);
           if (var4Lifetime1 != 20) {
             stackIn_36_0 = 89 * bs.field_k / 230;
@@ -1955,7 +1955,7 @@ class jla {
           var15 = stackIn_36_0;
           var15 += 7;
           SoftwareRasterizer.setClip(var10, var9, var15 + var10, var9 + var11);
-          ni.field_j.c(var10, var9);
+          ni.field_j.drawOpaque(var10, var9);
           SoftwareRasterizer.restoreClip(dfa.field_c);
           qw.field_c.draw(-qw.field_c.field_q + 2 * var15 + 2 * var10 >> 1, -var11 + (2 * qw.field_c.field_p + var9 * 2) >> 1);
         }
@@ -2035,13 +2035,13 @@ class jla {
         var3 += 2;
         g.field_g.drawText(EventAnimation.field_t[1], 25, 30 + g.field_g.field_u * var3, 3518976, -1);
         var3++;
-        vw.field_a[0].field_b[80].a(25, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[2], 99, var3 * g.field_g.field_u + 30, -64 + (var2 - 10), 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
-        vw.field_a[2].field_b[80].a(25, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[80].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[3], 99, 30 + g.field_g.field_u * var3, -10 + var2 - 64, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
-        vw.field_a[1].field_b[80].a(25, var3 * g.field_g.field_u + 30, 64, 32);
+        vw.field_a[1].field_b[80].drawScaled(25, var3 * g.field_g.field_u + 30, 64, 32);
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[4], 99, g.field_g.field_u * var3 + 30, var2 - 64 - 10, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3 += 4;
         if (param0 > -20) {
@@ -2049,33 +2049,33 @@ class jla {
         }
         LinkTextWidget.field_D.drawText(EventAnimation.field_t[5], 25, 30 + g.field_g.field_u * var3, FullHealAnimation.field_v, -1);
         var3++;
-        vw.field_a[0].field_b[120].a(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[120].a(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[120].a(153, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[120].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[120].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[120].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
         g.field_g.drawText(EventAnimation.field_t[6], 227, 30 + (g.field_g.field_u * (var3 + 1) + 3 * g.field_g.field_u / 8), 3518976, -1);
         var3 += 3;
-        vw.field_a[0].field_b[88].a(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[2].field_b[88].a(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[88].a(153, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[88].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[2].field_b[88].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[88].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[7], 227, 30 + g.field_g.field_u * var3, -10 + (-192 + var2), 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3 += 2;
-        vw.field_a[0].field_b[80].a(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[103].a(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[95].a(25, -32 + (30 + var3 * g.field_g.field_u), 64, 32);
-        vw.field_a[2].field_b[80].a(89, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[103].a(89, var3 * g.field_g.field_u + 30, 64, 32);
-        vw.field_a[2].field_b[95].a(89, var3 * g.field_g.field_u + 30 - 32, 64, 32);
-        vw.field_a[1].field_b[80].a(153, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[1].field_b[103].a(153, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[1].field_b[95].a(153, 30 + var3 * g.field_g.field_u - 32, 64, 32);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[103].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[95].drawScaled(25, -32 + (30 + var3 * g.field_g.field_u), 64, 32);
+        vw.field_a[2].field_b[80].drawScaled(89, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[103].drawScaled(89, var3 * g.field_g.field_u + 30, 64, 32);
+        vw.field_a[2].field_b[95].drawScaled(89, var3 * g.field_g.field_u + 30 - 32, 64, 32);
+        vw.field_a[1].field_b[80].drawScaled(153, g.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[1].field_b[103].drawScaled(153, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[1].field_b[95].drawScaled(153, 30 + var3 * g.field_g.field_u - 32, 64, 32);
         var3 = var3 + g.field_g.drawParagraph(EventAnimation.field_t[8], 227, 30 + (var3 * g.field_g.field_u - g.field_g.field_u / 2), -192 + var2 - 10, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3++;
-        vw.field_a[0].field_b[80].a(25, 30 + g.field_g.field_u * var3, 64, 32);
-        vw.field_a[0].field_b[109].a(25, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[2].field_b[80].a(89, g.field_g.field_u * var3 + 30, 64, 32);
-        vw.field_a[2].field_b[109].a(89, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[1].field_b[80].a(153, 30 + var3 * g.field_g.field_u, 64, 32);
-        vw.field_a[1].field_b[109].a(153, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[0].field_b[80].drawScaled(25, 30 + g.field_g.field_u * var3, 64, 32);
+        vw.field_a[0].field_b[109].drawScaled(25, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[2].field_b[80].drawScaled(89, g.field_g.field_u * var3 + 30, 64, 32);
+        vw.field_a[2].field_b[109].drawScaled(89, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[1].field_b[80].drawScaled(153, 30 + var3 * g.field_g.field_u, 64, 32);
+        vw.field_a[1].field_b[109].drawScaled(153, 30 + var3 * g.field_g.field_u, 64, 32);
         g.field_g.drawText(EventAnimation.field_t[9], 227, (1 + var3) * g.field_g.field_u + 30 + 3 * g.field_g.field_u / 8, 3518976, -1);
     }
 

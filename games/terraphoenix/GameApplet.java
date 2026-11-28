@@ -953,10 +953,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2 = null;
         try {
           if (null != pe.field_b) {
-            pe.field_b.field_N.a(-11678, param1);
+            pe.field_b.field_N.setNameSuggestions(-11678, param1);
           }
           if (rd.field_s != null) {
-            rd.field_s.field_N.a(-11678, param1);
+            rd.field_s.field_N.setNameSuggestions(-11678, param1);
           }
           if (param0 != -32202) {
             GameApplet.a(-61, (String[]) null);

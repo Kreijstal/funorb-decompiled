@@ -129,18 +129,18 @@ final class on extends eg {
         RuntimeException var6 = null;
         nb var7 = null;
         nb var9 = null;
-        hc var10 = null;
+        InteractiveWidget var10 = null;
         nb var11 = null;
         nb var12 = null;
         nb var13 = null;
         nb var14 = null;
         try {
-          if (!(param2 instanceof hc)) {
+          if (!(param2 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (fe) (param2);
           }
-          var10 = (hc) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           wf.a(param2.field_t + param3, param2.field_u + param1, (byte) 8, param2.field_u + param1 + param2.field_v, param3 + param2.field_t + param2.field_q);
           if (param0 != 12088) {
             this.field_y = (nb) null;

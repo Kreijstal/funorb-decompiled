@@ -102,14 +102,14 @@ final class fh {
           var14 = new RgbSprite(7, 4);
           var14.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var15 = new lh(var4, true);
-          var15.a(-10, var14.c());
-          var14.a();
+          var15.a(-10, var14.copy());
+          var14.rotateClockwise();
           var15Lifetime1 = new lh(var4, true);
-          var15Lifetime1.a(30, var14.c());
-          var14.a();
+          var15Lifetime1.a(30, var14.copy());
+          var14.rotateClockwise();
           var15Lifetime2 = new lh(var4, true);
-          var15Lifetime2.a(-118, var14.c());
-          var14.a();
+          var15Lifetime2.a(-118, var14.copy());
+          var14.rotateClockwise();
           var20 = new lh(var4, true);
           var20.a(-102, var14);
         } catch (RuntimeException runtimeException) {

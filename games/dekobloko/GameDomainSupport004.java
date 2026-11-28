@@ -142,7 +142,7 @@ final class GameDomainSupport004 {
           integerLocal12 = SoftwareRaster.integerState0284;
           integerArrayLocal17 = SoftwareRaster.integerArrayState0063;
           NetworkArchiveRequestManager.rgbSpriteState0044 = new RgbSprite(10, 14);
-          NetworkArchiveRequestManager.rgbSpriteState0044.performAction0256();
+          NetworkArchiveRequestManager.rgbSpriteState0044.bindAsRenderTarget();
           for (integerLocal1 = 2; integerLocal1 < 7; integerLocal1++) {
             SoftwareRaster.drawVerticalLine(integerLocal1, integerLocal1 + 1, 14 - (integerLocal1 << 1), 16777215);
           }

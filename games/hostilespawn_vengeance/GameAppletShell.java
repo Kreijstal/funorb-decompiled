@@ -778,7 +778,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                ph.h(1048576);
+                InteractiveWidget.h(1048576);
                 this.b(-54);
                 o.field_n = rf.a(hf.field_h, (java.awt.Component) ((Object) field_h), SpriteGeometry.field_s, false);
                 this.initializeGame(-4323);

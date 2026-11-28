@@ -155,7 +155,7 @@ abstract class ld extends kf {
           var9Lifetime1++;
           var8Lifetime1++;
         }
-        fa.field_b.d(param0 - (-this.field_t + 90), param2 + 10);
+        fa.field_b.draw(param0 - (-this.field_t + 90), param2 + 10);
         je.a(fi.field_a, 5 + param0, param2 + 35, this.field_t - 10, (byte) 93);
         je.a(ProxySocketConnector.field_l, param0, -22 + (this.field_x + param2), this.field_t, (byte) 114);
         var7Lifetime2 = 127;

@@ -1201,7 +1201,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             nd.a(ln.field_a.field_h[param3], param2, param4 + 18459);
           }
           if (SectorCacheStore.field_e > 0 &&
-            mc.field_I != 4) {
+            NameSuggestionsPanel.field_I != 4) {
             SectorCacheStore.field_e = SectorCacheStore.field_e - 1;
             var6Lifetime1 = ba.a((byte) 87);
             if (var6Lifetime1 > eh.field_g) {

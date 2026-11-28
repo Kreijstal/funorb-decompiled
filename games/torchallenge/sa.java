@@ -13,7 +13,7 @@ final class sa {
     }
 
     final static String a(boolean param0) {
-        if (li.field_K < 2) {
+        if (NameSuggestionsPanel.field_K < 2) {
           return AccountCreationResultPanel.field_Ab;
         }
         if (null != rj.field_f) {

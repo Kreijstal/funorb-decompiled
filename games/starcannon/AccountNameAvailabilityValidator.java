@@ -108,7 +108,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
     }
 
-    final void f(int param0) {
+    final void invalidateCheckedName(int param0) {
         if (param0 != -18507) {
           field_p = (ResourceArchive) null;
           this.checkedName = null;

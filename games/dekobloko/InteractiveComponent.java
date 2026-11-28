@@ -46,14 +46,14 @@ class InteractiveComponent extends UiComponent {
         }
     }
 
-    void performAction0378(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    void activateFromInput(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (integerArgument4 != 520) {
           this.booleanState0037 = false;
           if (null == this.callbackContract006State0001) {
             return;
           }
-          if (this.callbackContract006State0001 instanceof CallbackContract019) {
-            ((CallbackContract019) (this.callbackContract006State0001)).performAction0313((byte) 67, integerArgument3, this, integerArgument1, integerArgument2);
+          if (this.callbackContract006State0001 instanceof WidgetActivationListener) {
+            ((WidgetActivationListener) (this.callbackContract006State0001)).onWidgetActivated((byte) 67, integerArgument3, this, integerArgument1, integerArgument2);
             return;
           }
           return;
@@ -61,8 +61,8 @@ class InteractiveComponent extends UiComponent {
         if (null == this.callbackContract006State0001) {
           return;
         }
-        if (this.callbackContract006State0001 instanceof CallbackContract019) {
-          ((CallbackContract019) (this.callbackContract006State0001)).performAction0313((byte) 67, integerArgument3, this, integerArgument1, integerArgument2);
+        if (this.callbackContract006State0001 instanceof WidgetActivationListener) {
+          ((WidgetActivationListener) (this.callbackContract006State0001)).onWidgetActivated((byte) 67, integerArgument3, this, integerArgument1, integerArgument2);
           return;
         }
     }
@@ -254,7 +254,7 @@ class InteractiveComponent extends UiComponent {
             DualNode.integerState0062 != this.integerState0109) {
             if (this.computeBoolean0207(HashNode.integerState0069, (byte) -124, integerArgument3, MixedSupport101.integerState0590, integerArgument4) &&
               DualNode.integerState0062 == 0) {
-              this.performAction0378(-integerArgument4 + HashNode.integerState0069, MixedSupport101.integerState0590 - integerArgument3, this.integerState0109, 520);
+              this.activateFromInput(-integerArgument4 + HashNode.integerState0069, MixedSupport101.integerState0590 - integerArgument3, this.integerState0109, 520);
             }
             this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument4, uiComponentArgument1, integerArgument3, HashNode.integerState0069);
           }
@@ -278,7 +278,7 @@ class InteractiveComponent extends UiComponent {
           integerLocal1 = -127 / ((integerArgument1 + 22) / 49);
           if (this.computeBoolean0220(true) && (integerArgument2 == 84 ||
             integerArgument2 == 83)) {
-            this.performAction0378(-1, -1, 1, 520);
+            this.activateFromInput(-1, -1, 1, 520);
             return true;
           }
           return false;

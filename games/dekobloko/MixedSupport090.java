@@ -109,9 +109,9 @@ final class MixedSupport090 extends MixedSupport043 {
 
     final static void performAction1146(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         if (256 == integerArgument3) {
-          MixedSupport100.rgbSpriteState0042.performAction0295(integerArgument1, integerArgument4, 64);
+          MixedSupport100.rgbSpriteState0042.drawAdditive(integerArgument1, integerArgument4, 64);
         } else {
-          MixedSupport100.rgbSpriteState0042.performAction0295(integerArgument1, integerArgument4, integerArgument3 >> 2);
+          MixedSupport100.rgbSpriteState0042.drawAdditive(integerArgument1, integerArgument4, integerArgument3 >> 2);
         }
         if (integerArgument2 != -299374302) {
           MixedSupport090.performAction1141((byte) 0);

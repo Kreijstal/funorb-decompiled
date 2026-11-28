@@ -131,14 +131,14 @@ final class mc {
             if (param0 != 100) {
               mc.a((byte) 61);
             }
-            param1[0].a(param3, param5, param4);
-            param1[2].a(param2 + (param3 - var7), param5, param4);
+            param1[0].drawTintedGray(param3, param5, param4);
+            param1[2].drawTintedGray(param2 + (param3 - var7), param5, param4);
             SoftwareRasterizer.saveClip(be.field_c);
             SoftwareRasterizer.intersectClip(var6_int + param3, param5, -var7 + (param3 + param2), param1[1].field_q + param5);
             var9 = var6_int + param3;
             var10 = param3 + (param2 - var7);
             for (param3 = var9; param3 < var10; param3 = param3 + var8) {
-              param1[1].a(param3, param5, param4);
+              param1[1].drawTintedGray(param3, param5, param4);
             }
             SoftwareRasterizer.restoreClip(be.field_c);
             return;

@@ -17,7 +17,7 @@ final class ok {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = dh.a(param1, (byte) 39, var4).getFile();
+              var3 = NameSuggestionsPanel.a(param1, (byte) 39, var4).getFile();
               JavaScriptBridge.callWithArguments(22102, "updatelinks", new Object[]{"home", var3 + "home.ws"}, param1);
               JavaScriptBridge.callWithArguments(22102, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
               JavaScriptBridge.callWithArguments(22102, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);

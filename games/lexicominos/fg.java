@@ -30,10 +30,10 @@ final class fg {
           Exception var2 = null;
           Throwable decompiledCaughtException = null;
           var1 = 4 % ((41 - param0) / 63);
-          if (kf.field_y != null) {
+          if (InteractiveWidget.field_y != null) {
             try {
-              kf.field_y.seek((byte) 40, 0L);
-              kf.field_y.write(ig.field_a.position, ig.field_a.payload, 24, -31593);
+              InteractiveWidget.field_y.seek((byte) 40, 0L);
+              InteractiveWidget.field_y.write(ig.field_a.position, ig.field_a.payload, 24, -31593);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;

@@ -226,7 +226,7 @@ final class TunnelMesh {
           DualLinkNode.field_p = new int[wc.field_hc];
           ij.field_r = new int[wc.field_hc];
           sd.field_f = new int[wc.field_hc];
-          rg.field_I = new int[wc.field_hc];
+          InteractiveWidget.field_I = new int[wc.field_hc];
           pa.field_e = new boolean[wc.field_hc];
           var17.position = -(8 * wc.field_hc) + param1.length - 7;
           kb.field_a = var17.readUnsignedShort((byte) 25);
@@ -239,7 +239,7 @@ final class TunnelMesh {
             ij.field_r[var4Lifetime1] = var17.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime2 = 0; wc.field_hc > var4Lifetime2; var4Lifetime2++) {
-            rg.field_I[var4Lifetime2] = var17.readUnsignedShort((byte) 25);
+            InteractiveWidget.field_I[var4Lifetime2] = var17.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < wc.field_hc; var4Lifetime3++) {
             sd.field_f[var4Lifetime3] = var17.readUnsignedShort((byte) 25);
@@ -257,7 +257,7 @@ final class TunnelMesh {
             field_l = (String[]) null;
           }
           for (var4Lifetime5 = 0; wc.field_hc > var4Lifetime5; var4Lifetime5++) {
-            var5 = rg.field_I[var4Lifetime5];
+            var5 = InteractiveWidget.field_I[var4Lifetime5];
             var6 = sd.field_f[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

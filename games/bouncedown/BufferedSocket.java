@@ -359,9 +359,9 @@ final class BufferedSocket implements Runnable {
         }
         ve.a(-121);
         if (oa.field_a < 150) {
-          bi.field_j.c(var3, var4);
+          bi.field_j.drawHalfSize(var3, var4);
         } else {
-          jl.field_c.d(15 + var3, 10 + var4, var5);
+          jl.field_c.drawWithOpacity(15 + var3, 10 + var4, var5);
         }
         var6 = -125 + oa.field_a;
         if (var6 > 0 &&
@@ -369,13 +369,13 @@ final class BufferedSocket implements Runnable {
           if (var6 >= 20) {
             if (30 <= var6) {
               var7 = (-(var6 * 256) + 12800) / 20;
-              Bounce.field_G.a(var3, var4, var7);
+              Bounce.field_G.drawAdditive(var3, var4, var7);
             } else {
-              Bounce.field_G.a(var3, var4, 256);
+              Bounce.field_G.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = 256 * var6 / 20;
-            Bounce.field_G.a(var3, var4, var7);
+            Bounce.field_G.drawAdditive(var3, var4, var7);
           }
         }
         var6Lifetime1 = -140 + oa.field_a;
@@ -387,7 +387,7 @@ final class BufferedSocket implements Runnable {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          PasswordValidator.field_o.d(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
+          PasswordValidator.field_o.drawWithOpacity(15 + var3, 10 + var4, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

@@ -205,7 +205,7 @@ abstract class ug extends oe {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        rh.field_Z.d(-90 + param0 + this.field_F, param2 + 10);
+        rh.field_Z.draw(-90 + param0 + this.field_F, param2 + 10);
         nl.a(109, param0 + 5, wc.field_nc, this.field_F - 10, 35 + param2);
         nl.a(124, param0, fi.field_d, this.field_F, -22 + this.field_z + param2);
         var5Lifetime2 = 169;

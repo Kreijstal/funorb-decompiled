@@ -128,11 +128,11 @@ final class k {
           var4 = var2.field_y;
           kg.d(false);
           wh.field_a = new Sprite(var3, param1 * var4 / 4);
-          wh.field_a.e();
-          var2.d(0, 0);
+          wh.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           fb.field_h = new Sprite(var3, var4 - wh.field_a.field_y);
-          fb.field_h.e();
-          var2.d(0, -wh.field_a.field_y);
+          fb.field_h.bindAsRenderTarget();
+          var2.drawOpaque(0, -wh.field_a.field_y);
           fb.field_h.field_s = wh.field_a.field_y;
           id.b((byte) -58);
         } catch (RuntimeException runtimeException) {

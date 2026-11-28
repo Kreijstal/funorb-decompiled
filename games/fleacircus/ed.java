@@ -82,14 +82,14 @@ final class ed {
             var3 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
             var11 = new RgbSprite(4 + MouseWheelInput.field_f.field_w, 4 + MouseWheelInput.field_f.field_t);
-            var11.f();
-            MouseWheelInput.field_f.d(2, 2, SecondaryNodeDequeIterator.field_e);
+            var11.bindAsRenderTarget();
+            MouseWheelInput.field_f.drawGrayModulated(2, 2, SecondaryNodeDequeIterator.field_e);
             rg.a(0, var11, var11.field_w, var11.field_t, 1, -122, 2, 0);
             MouseWheelInput.field_f = var11;
-            mi.field_o = MouseWheelInput.field_f.b();
+            mi.field_o = MouseWheelInput.field_f.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_w / 2;
-            var12.f();
+            var12.bindAsRenderTarget();
             ql.field_k.drawCentred(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
             qj.field_H.drawCentred(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
             ql.field_k.drawCentred(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
@@ -97,16 +97,16 @@ final class ed {
             ql.field_k.drawCentred(MidiPcmStream.field_N, var6, 180, 16777215, -1);
             qj.field_H.drawCentred(pg.field_b, var6, 200, 16777215, -1);
             rg.a(0, var12, var12.field_w, var12.field_t, 1, -68, 3, 0);
-            wh.field_b.f();
-            var12.d(-wh.field_b.field_q + 18, 241 - wh.field_b.field_v);
+            wh.field_b.bindAsRenderTarget();
+            var12.draw(-wh.field_b.field_q + 18, 241 - wh.field_b.field_v);
             for (var7 = 0; var7 < vg.field_u.length; var7++) {
-              of.field_h[var7].f();
+              of.field_h[var7].bindAsRenderTarget();
               qj.field_H.drawParagraph(vg.field_u[var7], 3, 3, -6 + of.field_h[var7].field_w, -6 + of.field_h[var7].field_t, SecondaryNodeDequeIterator.field_e, -1, 1, 1, qj.field_H.field_H + qj.field_H.field_K);
               rg.a(0, of.field_h[var7], of.field_h[var7].field_w, of.field_h[var7].field_t, 1, -121, 3, 0);
             }
             vg.field_u = null;
-            kf.field_i = sg.field_f.c();
-            kf.field_i.f();
+            kf.field_i = sg.field_f.copy();
+            kf.field_i.bindAsRenderTarget();
             nj.a(0, 64, SoftwareRasterizer.field_d, 0, SoftwareRasterizer.field_k * 2 / 3, 1067);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(ab.field_c);
@@ -170,18 +170,18 @@ final class ed {
               IterableNodeHashTable.field_i = IterableNodeHashTable.field_i + var9_intLifetime3;
               pb.field_g.field_r = pb.field_g.field_r + var9_intLifetime3 * 2;
             }
-            pb.field_g.a();
+            pb.field_g.normalizeCanvas();
             var9 = new RgbSprite(pb.field_g.field_x, pb.field_g.field_r);
-            var9.f();
+            var9.bindAsRenderTarget();
             ql.field_k.drawParagraph(var14, MidiPcmStream.field_V, IterableNodeHashTable.field_i, wa.field_m, bh.field_l, 16777215, -1, 1, 1, ql.field_k.field_H + ql.field_k.field_K);
             rg.a(0, var9, var9.field_x, var9.field_r, 1, -14, 3, 0);
-            pb.field_g.f();
-            var9.d(0, 0);
+            pb.field_g.bindAsRenderTarget();
+            var9.draw(0, 0);
             uf.field_f = new RgbSprite(640, 480);
-            uf.field_f.f();
-            pb.field_g.c(aj.field_q + (pb.field_g.field_x >> 1), (pb.field_g.field_r >> 1) + t.field_d, kh.field_d, 4096);
+            uf.field_f.bindAsRenderTarget();
+            pb.field_g.drawRotated(aj.field_q + (pb.field_g.field_x >> 1), (pb.field_g.field_r >> 1) + t.field_d, kh.field_d, 4096);
             pb.field_g = null;
-            uf.field_f.d();
+            uf.field_f.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
@@ -194,11 +194,11 @@ final class ed {
             var16 = new RgbSprite(412, 43);
             var5_ref_String = db.a(NetworkArchiveRequest.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
-            var16.f();
+            var16.bindAsRenderTarget();
             qj.field_H.drawParagraph(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
             rg.a(0, var16, var16.field_w, var16.field_t, 1, -27, 3, 0);
-            GameAppletShell.field_b.f();
-            var16.d(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
+            GameAppletShell.field_b.bindAsRenderTarget();
+            var16.draw(199 - GameAppletShell.field_b.field_q, 83 - GameAppletShell.field_b.field_v);
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
@@ -212,11 +212,11 @@ final class ed {
             var5Lifetime1 = var4 + ArchiveRequest.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (ArchiveRequest.field_s.field_x + var6Lifetime2);
-            GameAppletShell.field_b.f();
+            GameAppletShell.field_b.bindAsRenderTarget();
             qj.field_H.drawString(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
             rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
             var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + ArchiveRequest.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
-            ArchiveRequest.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
+            ArchiveRequest.field_s.draw(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ab.field_c);
             ArchiveRequest.field_s = null;
@@ -225,23 +225,23 @@ final class ed {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, fi.field_j, pb.field_i);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, fi.field_j, pb.field_i);
           if (null != mf.field_b) {
-            mf.field_b.d(0, 0);
+            mf.field_b.draw(0, 0);
           }
           if (wh.field_b != null) {
-            wh.field_b.d(0, 0);
+            wh.field_b.draw(0, 0);
           }
-          GameAppletShell.field_b.d(0, 0);
+          GameAppletShell.field_b.draw(0, 0);
           if (null != uf.field_f) {
-            uf.field_f.d(0, 0);
+            uf.field_f.draw(0, 0);
           }
           if (null != vj.field_c &&
             df.field_b != null) {
-            vj.field_c.d(231, 390);
+            vj.field_c.draw(231, 390);
             var1 = sg.field_f;
             if (LoginPanel.field_G.field_k == 0) {
               var1 = kf.field_i;
             }
-            var1.d(0, 0);
+            var1.draw(0, 0);
             stackIn_46_0 = 40;
             stackIn_46_1 = 40;
             stackIn_46_2 = false;
@@ -253,14 +253,14 @@ final class ed {
             }
             var2Lifetime4 = stackIn_46_0 + (stackIn_46_1 * jd.a(stackIn_46_2, stackIn_46_3 << stackIn_47_4) >> 16);
             if (var2Lifetime4 > 0) {
-              vj.field_c.a(230, 389, var2Lifetime4);
-              vj.field_c.a(232, 389, var2Lifetime4);
-              vj.field_c.a(232, 391, var2Lifetime4);
-              vj.field_c.a(230, 391, var2Lifetime4);
-              var1.a(1, 1, var2Lifetime4);
-              var1.a(-1, 1, var2Lifetime4);
-              var1.a(1, -1, var2Lifetime4);
-              var1.a(-1, -1, var2Lifetime4);
+              vj.field_c.drawAdditive(230, 389, var2Lifetime4);
+              vj.field_c.drawAdditive(232, 389, var2Lifetime4);
+              vj.field_c.drawAdditive(232, 391, var2Lifetime4);
+              vj.field_c.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_52_0 = -40;
             stackIn_52_1 = GzipDecompressor.field_e;
@@ -270,8 +270,8 @@ final class ed {
           }
           if (null != vj.field_c &&
             null != df.field_b) {
-            vj.field_c.d(434, 390);
-            sd.field_c.d(0, 0);
+            vj.field_c.draw(434, 390);
+            sd.field_c.draw(0, 0);
             if (LoginPanel.field_G.field_k == 1) {
               nj.a(392, 64, vj.field_c.field_w - 4, 436, 7 * vj.field_c.field_t / 12, 1067);
             }
@@ -283,25 +283,25 @@ final class ed {
           }
           if (MouseWheelInput.field_f != null) {
             var1_int = 357 - MouseWheelInput.field_f.field_r / 2;
-            MouseWheelInput.field_f.d(-MouseWheelInput.field_f.field_x + 269, var1_int);
-            mi.field_o.d(586, var1_int);
+            MouseWheelInput.field_f.draw(-MouseWheelInput.field_f.field_x + 269, var1_int);
+            mi.field_o.draw(586, var1_int);
             if (kc.field_b > var1_int &&
               kc.field_b < MouseWheelInput.field_f.field_t + var1_int) {
               var2Lifetime5 = (40 * jd.a(false, bf.field_b << 4) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (269 - MouseWheelInput.field_f.field_w < ag.field_f &&
                   ag.field_f < 269) {
-                  MouseWheelInput.field_f.a(269 - (MouseWheelInput.field_f.field_x + 1), var1_int - 1, var2Lifetime5);
-                  MouseWheelInput.field_f.a(1 + (-MouseWheelInput.field_f.field_x + 269), -1 + var1_int, var2Lifetime5);
-                  MouseWheelInput.field_f.a(-MouseWheelInput.field_f.field_x + 268, 1 + var1_int, var2Lifetime5);
-                  MouseWheelInput.field_f.a(1 + (-MouseWheelInput.field_f.field_x + 269), var1_int + 1, var2Lifetime5);
+                  MouseWheelInput.field_f.drawAdditive(269 - (MouseWheelInput.field_f.field_x + 1), var1_int - 1, var2Lifetime5);
+                  MouseWheelInput.field_f.drawAdditive(1 + (-MouseWheelInput.field_f.field_x + 269), -1 + var1_int, var2Lifetime5);
+                  MouseWheelInput.field_f.drawAdditive(-MouseWheelInput.field_f.field_x + 268, 1 + var1_int, var2Lifetime5);
+                  MouseWheelInput.field_f.drawAdditive(1 + (-MouseWheelInput.field_f.field_x + 269), var1_int + 1, var2Lifetime5);
                 } else {
                   if (ag.field_f > 586 &&
                     ag.field_f < 586 + MouseWheelInput.field_f.field_w) {
-                    mi.field_o.a(585, var1_int - 1, var2Lifetime5);
-                    mi.field_o.a(587, var1_int - 1, var2Lifetime5);
-                    mi.field_o.a(585, 1 + var1_int, var2Lifetime5);
-                    mi.field_o.a(587, 1 + var1_int, var2Lifetime5);
+                    mi.field_o.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    mi.field_o.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                    mi.field_o.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    mi.field_o.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }
@@ -311,7 +311,7 @@ final class ed {
           if (param0 > -110) {
             return;
           }
-          of.field_h[ql.field_o].d(269, 340);
+          of.field_h[ql.field_o].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -360,11 +360,11 @@ final class ed {
           var4 = var2.field_t;
           we.a(-66);
           pl.field_e = new RgbSprite(var3, 3 * var4 / 4);
-          pl.field_e.f();
-          var2.f(0, 0);
+          pl.field_e.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           ge.field_f = new RgbSprite(var3, -pl.field_e.field_t + var4);
-          ge.field_f.f();
-          var2.f(0, -pl.field_e.field_t);
+          ge.field_f.bindAsRenderTarget();
+          var2.drawOpaque(0, -pl.field_e.field_t);
           if (param1 >= -27) {
             field_b = false;
           }

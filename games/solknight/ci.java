@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ci extends gf implements ka {
+class ci extends gf implements WidgetActivationListener {
     static String[] field_mb;
     static int field_jb;
     static int field_sb;
@@ -184,7 +184,7 @@ class ci extends gf implements ka {
         }
     }
 
-    public void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -353,7 +353,7 @@ class ci extends gf implements ka {
           stackIn_6_0 = (Archive) (param0);
           stackIn_6_1 = "commonui";
           stackIn_7_2 = !(param1);
-          ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
+          NameSuggestionsPanel.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
           uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
           var18 = new Sprite(param2.getFileByName(4, "button.gif", ""), (java.awt.Component) ((Object) EmailFormatValidator.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
@@ -386,18 +386,18 @@ class ci extends gf implements ka {
           }
           var9Lifetime1 = var18.field_t;
           fl.b((byte) 91);
-          var18.a();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.a();
-          var18.c(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
-          var18.c(var9Lifetime1 - var18.field_p, 0);
+          var11.bindAsRenderTarget();
+          var18.drawOpaque(var9Lifetime1 - var18.field_p, 0);
           var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_p, var9Lifetime1);
-          var12.a();
-          var18.c(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           MidiPcmStream.e(4096);
           vk.field_i = new Sprite[]{var16, var12, var11};
           return;

@@ -56,7 +56,7 @@ final class fa extends TileEffect {
         ah.a(640 + SoftwareRasterizer.field_i >> 1, (byte) 106, 0, SoftwareRasterizer.field_i - 640 >> 1, SoftwareRasterizer.field_c);
         if (0 < lfa.field_q) {
           if (nda.field_l != null) {
-            nda.field_l.c(MoveInfoPanel.field_e.field_kb, 0);
+            nda.field_l.drawOpaque(MoveInfoPanel.field_e.field_kb, 0);
           }
           stackIn_7_0 = MoveInfoPanel.field_e;
           stackIn_8_1 = (param0) && (!eda.field_j);
@@ -67,7 +67,7 @@ final class fa extends TileEffect {
         }
         if (ld.field_p > 0) {
           if (nda.field_l != null) {
-            nda.field_l.c(ela.field_i.field_kb, 0);
+            nda.field_l.drawOpaque(ela.field_i.field_kb, 0);
           }
           stackIn_36_0 = ela.field_i;
           stackIn_37_1 = (param0) && (!w.field_e);
@@ -78,7 +78,7 @@ final class fa extends TileEffect {
         } else {
           if (0 < dja.field_m) {
             if (nda.field_l != null) {
-              nda.field_l.c(ela.field_i.field_kb, 0);
+              nda.field_l.drawOpaque(ela.field_i.field_kb, 0);
             }
             stackIn_21_0 = ela.field_i;
             stackIn_22_1 = (param0) && (!w.field_e);
@@ -110,7 +110,7 @@ final class fa extends TileEffect {
           this.field_m = new Sprite(bd.field_i.field_q, bd.field_i.field_p);
           this.field_j = new Sprite(128, 64);
           bu.a(0, this.field_j);
-          param0.field_s.field_p.e(0, 0, 16711680);
+          param0.field_s.field_p.drawGrayRampTinted(0, 0, 16711680);
           db.b(107);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "fa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -126,7 +126,7 @@ final class fa extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var4 = (int)((-Math.cos((double)(this.field_h * 4) * 3.141592653589793 / 50.0) + 1.0) * 64.0);
         super.a(param0, param1, param2);
-        this.field_j.a(param2, param0, var4);
+        this.field_j.drawWithOpacity(param2, param0, var4);
     }
 
     final boolean b(int param0) {
@@ -146,7 +146,7 @@ final class fa extends TileEffect {
         if (this.field_i.field_x) {
           bd.field_i.flipHorizontal();
         }
-        this.field_m.b();
+        this.field_m.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         bd.field_i.drawSilhouette(0, 0, 16711680);
         hga.field_U.a((byte) 127);

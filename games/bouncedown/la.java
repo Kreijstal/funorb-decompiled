@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class la extends wd {
+final class la extends InteractiveWidget {
     private FieldValidator field_B;
     static ResourceArchive field_D;
     private int field_F;
@@ -70,14 +70,14 @@ final class la extends wd {
             var8 != mi.field_c) {
             if (a.field_e == var8) {
               var20 = field_E[2];
-              var20.a(var5 - (var20.field_s >> 1), -(var20.field_q >> 1) + var6, 256);
+              var20.drawAdditive(var5 - (var20.field_s >> 1), -(var20.field_q >> 1) + var6, 256);
               return;
             }
             if (mc.field_a != var8) {
               return;
             }
             var21 = field_E[1];
-            var21.a(-(var21.field_s >> 1) + var5, -(var21.field_q >> 1) + var6, 256);
+            var21.drawAdditive(-(var21.field_s >> 1) + var5, -(var21.field_q >> 1) + var6, 256);
             return;
           }
           var22 = field_E[0];
@@ -100,9 +100,9 @@ final class la extends wd {
               }
             }
           }
-          var22.b(112, 144, var22.field_t << 4, var22.field_o << 4, -this.field_F << 10, 4096);
+          var22.drawRotatedAboutBilinear(112, 144, var22.field_t << 4, var22.field_o << 4, -this.field_F << 10, 4096);
           ve.a(-121);
-          sj.field_c.a(var5 - var22.field_t, var6 - var22.field_o, 256);
+          sj.field_c.drawAdditive(var5 - var22.field_t, var6 - var22.field_o, 256);
           return;
         }
         this.a(54, -73, 123, 16);
@@ -119,22 +119,22 @@ final class la extends wd {
             sj.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             kh.a(sj.field_c, 1);
           }
-          var15.b(112, 144, var15.field_t << 4, var15.field_o << 4, -this.field_F << 10, 4096);
+          var15.drawRotatedAboutBilinear(112, 144, var15.field_t << 4, var15.field_o << 4, -this.field_F << 10, 4096);
           ve.a(-121);
-          sj.field_c.a(var5 - var15.field_t, var6 - var15.field_o, 256);
+          sj.field_c.drawAdditive(var5 - var15.field_t, var6 - var15.field_o, 256);
           return;
         }
         if (var8 != mi.field_c) {
           if (a.field_e == var8) {
             var17 = field_E[2];
-            var17.a(var5 - (var17.field_s >> 1), -(var17.field_q >> 1) + var6, 256);
+            var17.drawAdditive(var5 - (var17.field_s >> 1), -(var17.field_q >> 1) + var6, 256);
             return;
           }
           if (mc.field_a != var8) {
             return;
           }
           var18 = field_E[1];
-          var18.a(-(var18.field_s >> 1) + var5, -(var18.field_q >> 1) + var6, 256);
+          var18.drawAdditive(-(var18.field_s >> 1) + var5, -(var18.field_q >> 1) + var6, 256);
           return;
         }
         var16 = field_E[0];
@@ -150,9 +150,9 @@ final class la extends wd {
           sj.field_c = new RgbSprite(var9Lifetime2, var10Lifetime2);
           kh.a(sj.field_c, 1);
         }
-        var16.b(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_F << 10, 4096);
+        var16.drawRotatedAboutBilinear(112, 144, var16.field_t << 4, var16.field_o << 4, -this.field_F << 10, 4096);
         ve.a(-121);
-        sj.field_c.a(var5 - var16.field_t, var6 - var16.field_o, 256);
+        sj.field_c.drawAdditive(var5 - var16.field_t, var6 - var16.field_o, 256);
     }
 
     final static String a(int param0) {

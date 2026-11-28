@@ -68,7 +68,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void performAction0826(boolean booleanArgument1) {
+    final void invalidateCheckedName(boolean booleanArgument1) {
         if (!booleanArgument1) {
           this.booleanState0089 = true;
           this.stringState0290 = null;

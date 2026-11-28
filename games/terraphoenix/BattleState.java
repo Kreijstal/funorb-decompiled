@@ -3153,7 +3153,7 @@ final class BattleState {
           ja.field_i = 7;
           rk.field_c = 32;
           ProxyAuthenticationRequiredException.field_g = 20;
-          hh.field_m.a();
+          hh.field_m.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           k.field_f.a(0);
           var4 = -88 % ((-66 - param0) / 59);
@@ -4032,12 +4032,12 @@ final class BattleState {
                   var7Lifetime1 == eg.field_p && (var8_ref_dl.field_z ||
                   !var8_ref_dl.field_d)) {
                   if (var8_ref_dl.field_v == 4) {
-                    rh.field_b[9].b(-16 + var4Lifetime1, var6Lifetime1 + (-36 - 48 * var7Lifetime1));
-                    rh.field_b[9].b(-16 + var4Lifetime1, var6Lifetime1 - 36 + (-(var7Lifetime1 * 48) + 8));
+                    rh.field_b[9].draw(-16 + var4Lifetime1, var6Lifetime1 + (-36 - 48 * var7Lifetime1));
+                    rh.field_b[9].draw(-16 + var4Lifetime1, var6Lifetime1 - 36 + (-(var7Lifetime1 * 48) + 8));
                   }
                   if (5 == var8_ref_dl.field_v) {
-                    rh.field_b[10].b(-16 + var4Lifetime1, -(var7Lifetime1 * 48) - 36 + var6Lifetime1);
-                    rh.field_b[10].b(var4Lifetime1 - 16, 8 + (var6Lifetime1 - (36 + var7Lifetime1 * 48)));
+                    rh.field_b[10].draw(-16 + var4Lifetime1, -(var7Lifetime1 * 48) - 36 + var6Lifetime1);
+                    rh.field_b[10].draw(var4Lifetime1 - 16, 8 + (var6Lifetime1 - (36 + var7Lifetime1 * 48)));
                   }
                 }
               }
@@ -4143,7 +4143,7 @@ final class BattleState {
             }
             if (this.field_J) {
               var8 = 385;
-              ic.field_t.b(0, var8);
+              ic.field_t.draw(0, var8);
               var9 = 0;
               while (7 > var9) {
                 stackIn_753_0 = nb.field_d;
@@ -4161,13 +4161,13 @@ final class BattleState {
                 } else {
                   stackIn_214_1 = var9;
                 }
-                ((Sprite) (Object) stackIn_753_0[stackIn_214_1]).b(99 + (var9 * 28 - 2), -2 + (66 + var8));
+                ((Sprite) (Object) stackIn_753_0[stackIn_214_1]).draw(99 + (var9 * 28 - 2), -2 + (66 + var8));
                 var9++;
               }
               if (decompiledFrameCompleted5) {
                 if (this.field_q != null &&
                   this.field_J) {
-                  PcmPlayerPump.field_g[this.field_q.field_Z.field_d].b(10, 9 + var8);
+                  PcmPlayerPump.field_g[this.field_q.field_Z.field_d].draw(10, 9 + var8);
                   var9_refLifetime2 = this.field_q.field_nb;
                   if (null != var9_refLifetime2 && (((oh) (var9_refLifetime2)).field_g == 0 ||
                     ((oh) (var9_refLifetime2)).field_g == 3 ||
@@ -4250,12 +4250,12 @@ final class BattleState {
                             if (6 != ((oh) (var9_refLifetime2)).field_g &&
                               7 != ((oh) (var9_refLifetime2)).field_g &&
                               ((oh) (var9_refLifetime2)).field_c < ((oh) (var9_refLifetime2)).a(true)) {
-                              nb.field_d[7].b(324, 50 + var8);
+                              nb.field_d[7].draw(324, 50 + var8);
                               if (ef.field_j >= 324 &&
                                 ef.field_j <= 354 &&
                                 MouseWheelInput.field_b >= var8 + 50 &&
                                 80 + var8 >= MouseWheelInput.field_b) {
-                                nb.field_d[15].b(324, 50 + var8);
+                                nb.field_d[15].draw(324, 50 + var8);
                               }
                               if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                                 mm.field_f <= 3.14) {
@@ -4334,7 +4334,7 @@ final class BattleState {
                           if (((oh) (var9_refLifetime2)).field_g != 6 &&
                             ((oh) (var9_refLifetime2)).field_g != 7 &&
                             ((oh) (var9_refLifetime2)).field_c < ((oh) (var9_refLifetime2)).a(true)) {
-                            nb.field_d[7].b(478, var8 + 50);
+                            nb.field_d[7].draw(478, var8 + 50);
                             if (((oh) (var9_refLifetime2)).field_c <= 0 &&
                               3.14 >= mm.field_f) {
                               SoftwareRasterizer.fillRectangleAlpha(478, var8 + 50, 30, 30, 16711680, 128);
@@ -4342,7 +4342,7 @@ final class BattleState {
                                 -464 + (508 + var10_int) >= ef.field_j &&
                                 MouseWheelInput.field_b >= (var8 + 50) &&
                                 MouseWheelInput.field_b <= (var8 + 80)) {
-                                nb.field_d[15].b(478, var8 + 50);
+                                nb.field_d[15].draw(478, var8 + 50);
                               }
                             }
                           }
@@ -4357,13 +4357,13 @@ final class BattleState {
                       }
                       if (null != this.field_q.field_b) {
                         SoftwareRasterizer.setClip(547, 35 + var8, 595, 48 + var8 + 35);
-                        var10 = cc.field_i[this.field_q.field_b.field_g].d();
-                        var10.b();
+                        var10 = cc.field_i[this.field_q.field_b.field_g].copy();
+                        var10.rotateClockwise();
                         if (this.field_q.field_b.field_g == 5) {
-                          var10.b(547 - var10.field_p + 6, 26 + (var8 + var10.field_v / 2));
+                          var10.draw(547 - var10.field_p + 6, 26 + (var8 + var10.field_v / 2));
                         }
                         if (this.field_q.field_b.field_g == 11) {
-                          var10.b(547 - var10.field_p, -3 + (var8 - (-32 - var10.field_v / 2)));
+                          var10.draw(547 - var10.field_p, -3 + (var8 - (-32 - var10.field_v / 2)));
                         }
                         SoftwareRasterizer.resetClip();
                         if (this.field_m) {
@@ -4547,11 +4547,11 @@ final class BattleState {
                       var16 = 13369344;
                     }
                     if (~var10_int != ~var13Lifetime1Lifetime1) {
-                      th.field_i.b(var4Lifetime1Lifetime1 - th.field_i.field_r + var14Lifetime1, 365);
+                      th.field_i.draw(var4Lifetime1Lifetime1 - th.field_i.field_r + var14Lifetime1, 365);
                       AccountRequestState.field_f.drawString(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -12 + var14Lifetime1 - 8), var4Lifetime1Lifetime1, var8 - 5, 52224, -1);
                       AccountRequestState.field_f.drawRightAligned(Integer.toString(var15Lifetime1), -5 + (var14Lifetime1 + var4Lifetime1Lifetime1), -5 + var8, var16, -1);
                     } else {
-                      vl.field_c.b(var14Lifetime1 + var4Lifetime1Lifetime1 - vl.field_c.field_r, 365);
+                      vl.field_c.draw(var14Lifetime1 + var4Lifetime1Lifetime1 - vl.field_c.field_r, 365);
                       AccountRequestState.field_f.drawString(this.units[var11_intLifetime1Lifetime1].field_Z.a(-1426, -20 + var14Lifetime1), var4Lifetime1Lifetime1, var8 - 5, 65280, -1);
                       AccountRequestState.field_f.drawRightAligned(Integer.toString(var15Lifetime1), -5 + (var4Lifetime1Lifetime1 + var14Lifetime1), -5 + var8, var17Lifetime1, -1);
                     }
@@ -4586,7 +4586,7 @@ final class BattleState {
             if (null != var8_ref_dlLifetime1) {
               if (null != oi.field_J) {
                 SoftwareRasterizer.fillRectangle(0, 100, oi.field_J.field_q, oi.field_J.field_u, 16711823);
-                oi.field_J.b(0, 100);
+                oi.field_J.draw(0, 100);
               }
               var9_refLifetime1 = var8_ref_dlLifetime1.unit;
               var10_intLifetime2 = 80;
@@ -4904,7 +4904,7 @@ final class BattleState {
           if (this.field_J) {
             SoftwareRasterizer.fillRectangleAlpha(162, 7, 364, 33, 0, 128);
             SoftwareRasterizer.addHorizontalLine(162, 39, 364, 4473924);
-            SectorCacheStore.field_b.b(0, 0);
+            SectorCacheStore.field_b.draw(0, 0);
             if (null != this.client.field_Eb) {
               boolean decompiledSharedTail0 = (this.client.field_Eb.length != 1);
               if (!decompiledSharedTail0) {

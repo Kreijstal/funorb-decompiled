@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends wd {
+class EditableTextField extends InteractiveWidget {
     private boolean field_H;
     static BitmapFont field_E;
     private boolean field_C;

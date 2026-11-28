@@ -36,11 +36,11 @@ final class vh extends ButtonWidget {
             f.field_g != var8) {
             if (IsaacRandom.field_h == var8) {
               var14 = hk.field_i[2];
-              var14.c(-(var14.field_k >> 1) + var5, var6 - (var14.field_j >> 1), 256);
+              var14.drawAdditive(-(var14.field_k >> 1) + var5, var6 - (var14.field_j >> 1), 256);
             } else {
               if (var8 == TextFieldValidator.field_i) {
                 var13 = hk.field_i[1];
-                var13.c(var5 - (var13.field_k >> 1), -(var13.field_j >> 1) + var6, 256);
+                var13.drawAdditive(var5 - (var13.field_k >> 1), -(var13.field_j >> 1) + var6, 256);
                 break regionExit1;
               }
             }
@@ -58,9 +58,9 @@ final class vh extends ButtonWidget {
             wi.field_e = new Sprite(var9, var10);
             mc.a(-8497, wi.field_e);
           }
-          var12.b(112, 144, var12.field_m << 4, var12.field_n << 4, -this.field_D << 10, 4096);
+          var12.drawRotatedAboutBilinear(112, 144, var12.field_m << 4, var12.field_n << 4, -this.field_D << 10, 4096);
           tj.b(653);
-          wi.field_e.c(-var12.field_m + var5, -var12.field_n + var6, 256);
+          wi.field_e.drawAdditive(-var12.field_m + var5, -var12.field_n + var6, 256);
         }
     }
 

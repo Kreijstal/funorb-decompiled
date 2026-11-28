@@ -14,10 +14,10 @@ final class mk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != LoginPanel.field_B) {
-            LoginPanel.field_B.field_O.a(2178, args);
+            LoginPanel.field_B.field_O.setNameSuggestions(2178, args);
           }
           if (pd.field_e != null) {
-            pd.field_e.field_F.a(2178, args);
+            pd.field_e.field_F.setNameSuggestions(2178, args);
           }
           if (param1) {
             return;

@@ -42,7 +42,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3Lifetime1;
         try {
           if (null != th.field_g) {
-            eb.field_F = 0;
+            InteractiveWidget.field_F = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < lf.field_a.length) {
@@ -197,7 +197,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException var2 = null;
         try {
           if (null != th.field_g) {
-            eb.field_F = 0;
+            InteractiveWidget.field_F = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               lf.field_a.length > var2_int) {

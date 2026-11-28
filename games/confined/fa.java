@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends rg {
+final class fa extends InteractiveWidget {
     static int field_P;
     static String field_T;
     static BitmapFont field_Q;
@@ -128,7 +128,7 @@ final class fa extends rg {
         try {
           var2_int = -20 / ((-7 - param1) / 57);
           dl.a((java.awt.Component) ((Object) param0), (byte) -112);
-          ak.a(0, (java.awt.Component) ((Object) param0));
+          NameSuggestionsPanel.a(0, (java.awt.Component) ((Object) param0));
           if (null != jc.field_c) {
             jc.field_c.detach((java.awt.Component) ((Object) param0), (byte) -30);
           }
@@ -167,12 +167,12 @@ final class fa extends rg {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_O = !this.field_O ? true : false;
         if (param0 != 25124) {
           fa.f(-89);
         }
-        super.a(param0 ^ 0, param1, param2, param3);
+        super.activateFromInput(param0 ^ 0, param1, param2, param3);
     }
 
     static {

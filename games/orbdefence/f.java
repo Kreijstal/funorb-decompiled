@@ -955,11 +955,11 @@ final class f {
           var4 = var2.field_k;
           h.k(122);
           CrossfadingMidiPcmStream.field_j = new RgbSprite(var3, var4 * 3 / 4);
-          CrossfadingMidiPcmStream.field_j.d();
-          var2.b(0, 0);
+          CrossfadingMidiPcmStream.field_j.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           fd.field_a = new RgbSprite(var3, -CrossfadingMidiPcmStream.field_j.field_k + var4);
-          fd.field_a.d();
-          var2.b(0, -CrossfadingMidiPcmStream.field_j.field_k);
+          fd.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, -CrossfadingMidiPcmStream.field_j.field_k);
           fd.field_a.field_u = CrossfadingMidiPcmStream.field_j.field_k;
           ValidatedTextField.g((byte) -105);
           return;

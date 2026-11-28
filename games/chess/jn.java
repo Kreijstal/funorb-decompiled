@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jn extends fb {
+final class jn extends InteractiveWidget {
     private FieldValidator field_O;
     static char[] field_M;
     private int field_N;
@@ -145,22 +145,22 @@ final class jn extends fb {
                 }
               }
             }
-            var16.b(112, 144, var16.field_v << 4, var16.field_u << 4, -this.field_N << 10, 4096);
+            var16.drawRotatedAboutBilinear(112, 144, var16.field_v << 4, var16.field_u << 4, -this.field_N << 10, 4096);
             fd.a(28773);
-            ca.field_a.d(var5 - var16.field_v, var6 - var16.field_u, 256);
+            ca.field_a.drawAdditive(var5 - var16.field_v, var6 - var16.field_u, 256);
             return;
           }
           if (var8 != MouseWheelInput.field_d) {
             if (qk.field_b == var8) {
               var18 = AccountNameAvailabilityValidator.field_p[2];
-              var18.d(var5 - (var18.field_w >> 1), -(var18.field_t >> 1) + var6, 256);
+              var18.drawAdditive(var5 - (var18.field_w >> 1), -(var18.field_t >> 1) + var6, 256);
               return;
             }
             if (ProxyAuthenticationRequiredException.field_a != var8) {
               return;
             }
             var17 = AccountNameAvailabilityValidator.field_p[1];
-            var17.d(-(var17.field_w >> 1) + var5, var6 - (var17.field_t >> 1), 256);
+            var17.drawAdditive(-(var17.field_w >> 1) + var5, var6 - (var17.field_t >> 1), 256);
             return;
           }
           var15 = AccountNameAvailabilityValidator.field_p[0];
@@ -175,9 +175,9 @@ final class jn extends fb {
             ca.field_a = new RgbSprite(var9Lifetime3, var10Lifetime3);
             tl.a((byte) -67, ca.field_a);
           }
-          var15.b(112, 144, var15.field_v << 4, var15.field_u << 4, -this.field_N << 10, 4096);
+          var15.drawRotatedAboutBilinear(112, 144, var15.field_v << 4, var15.field_u << 4, -this.field_N << 10, 4096);
           fd.a(28773);
-          ca.field_a.d(var5 - var15.field_v, var6 - var15.field_u, 256);
+          ca.field_a.drawAdditive(var5 - var15.field_v, var6 - var15.field_u, 256);
           return;
         }
         this.a(-42, 127, 34, -25);
@@ -209,22 +209,22 @@ final class jn extends fb {
               }
             }
           }
-          var20.b(112, 144, var20.field_v << 4, var20.field_u << 4, -this.field_N << 10, 4096);
+          var20.drawRotatedAboutBilinear(112, 144, var20.field_v << 4, var20.field_u << 4, -this.field_N << 10, 4096);
           fd.a(28773);
-          ca.field_a.d(var5Lifetime1 - var20.field_v, var6Lifetime1 - var20.field_u, 256);
+          ca.field_a.drawAdditive(var5Lifetime1 - var20.field_v, var6Lifetime1 - var20.field_u, 256);
           return;
         }
         if (var8Lifetime1 != MouseWheelInput.field_d) {
           if (qk.field_b == var8Lifetime1) {
             var22 = AccountNameAvailabilityValidator.field_p[2];
-            var22.d(var5Lifetime1 - (var22.field_w >> 1), -(var22.field_t >> 1) + var6Lifetime1, 256);
+            var22.drawAdditive(var5Lifetime1 - (var22.field_w >> 1), -(var22.field_t >> 1) + var6Lifetime1, 256);
             return;
           }
           if (ProxyAuthenticationRequiredException.field_a != var8Lifetime1) {
             return;
           }
           var21 = AccountNameAvailabilityValidator.field_p[1];
-          var21.d(-(var21.field_w >> 1) + var5Lifetime1, var6Lifetime1 - (var21.field_t >> 1), 256);
+          var21.drawAdditive(-(var21.field_w >> 1) + var5Lifetime1, var6Lifetime1 - (var21.field_t >> 1), 256);
           return;
         }
         var19 = AccountNameAvailabilityValidator.field_p[0];
@@ -243,9 +243,9 @@ final class jn extends fb {
             tl.a((byte) -67, ca.field_a);
           }
         }
-        var19.b(112, 144, var19.field_v << 4, var19.field_u << 4, -this.field_N << 10, 4096);
+        var19.drawRotatedAboutBilinear(112, 144, var19.field_v << 4, var19.field_u << 4, -this.field_N << 10, 4096);
         fd.a(28773);
-        ca.field_a.d(var5Lifetime1 - var19.field_v, var6Lifetime1 - var19.field_u, 256);
+        ca.field_a.drawAdditive(var5Lifetime1 - var19.field_v, var6Lifetime1 - var19.field_u, 256);
     }
 
     final static void initializeNetworkState(boolean param0, PlatformTaskDispatcher param1, String param2, int param3, int param4, int param5, int param6, long param7, byte param8, int param9, boolean param10, int param11, int param12, int param13) {

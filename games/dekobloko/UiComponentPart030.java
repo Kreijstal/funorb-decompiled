@@ -206,7 +206,7 @@ abstract class UiComponentPart030 extends UiComponentPart003 {
           integerLocal20++;
           integerLocal22++;
         }
-        PlayerNameAvailabilityValidator.rgbSpriteState0025.performAction0278(-90 + (integerArgument3 + this.integerState0107), 10 + integerArgument2);
+        PlayerNameAvailabilityValidator.rgbSpriteState0025.draw(-90 + (integerArgument3 + this.integerState0107), 10 + integerArgument2);
         MixedSupport086.performAction1110(NetworkSupport002.rgbSpriteArrayState0003, -10 + this.integerState0107, integerArgument2 + 35, -1, 5 + integerArgument3);
         MixedSupport086.performAction1110(UiComponentPart011.rgbSpriteArrayState0013, this.integerState0107, integerArgument2 + (this.integerState0108 - 22), -1, integerArgument3);
         integerLocal15 = this.integerState0108 - 79;

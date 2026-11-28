@@ -39,7 +39,7 @@ final class d extends lq implements WidgetActionListener {
         }
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         if (this.field_G.getFieldValidator(16728128).getValidationStatus(-19704) != cm.field_u) {
           return;
         }

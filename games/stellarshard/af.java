@@ -31,14 +31,14 @@ final class af extends IntrusiveNode {
             var6_int = param4[0].field_w;
             var7 = param4[2].field_w;
             var8 = param4[1].field_w;
-            param4[0].a(param5, param3, param1);
-            param4[2].a(-var7 + param2 + param5, param3, param1);
+            param4[0].drawTintedGray(param5, param3, param1);
+            param4[2].drawTintedGray(-var7 + param2 + param5, param3, param1);
             SoftwareRasterizer.saveClip(og.field_b);
             SoftwareRasterizer.intersectClip(var6_int + param5, param3, param2 + param5 - var7, param4[1].field_x + param3);
             var9 = var6_int + param5;
             var10 = -var7 + (param5 + param2);
             for (param5 = var9; var10 > param5; param5 = param5 + var8) {
-              param4[1].a(param5, param3, param1);
+              param4[1].drawTintedGray(param5, param3, param1);
             }
             if (param0 > -38) {
               field_o = -74;

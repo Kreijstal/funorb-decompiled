@@ -43,16 +43,16 @@ final class em extends fb {
           if (param1 == 24 &&
             24 == param2) {
             if (this.field_n) {
-              ro.field_u[var8].a(param5, -(2 * param2) + param6);
+              ro.field_u[var8].draw(param5, -(2 * param2) + param6);
             } else {
-              ro.field_u[var8].c(param5, param6 - 2 * param2, 8421631);
+              ro.field_u[var8].drawGrayModulated(param5, param6 - 2 * param2, 8421631);
             }
             if (!this.field_l) {
-              fm.field_s[var8].c(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+              fm.field_s[var8].drawGrayModulated(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
               decompiledFrameRemainder0 = false;
             }
             else {
-              LaserTraceCursor.field_f[var8].a(param5, -param2 + param6);
+              LaserTraceCursor.field_f[var8].draw(param5, -param2 + param6);
               if (param3 <= -59) {
                 return;
               }
@@ -62,14 +62,14 @@ final class em extends fb {
           }
           if (decompiledFrameRemainder0) {
             if (this.field_n) {
-              ro.field_u[var8].b(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
+              ro.field_u[var8].drawScaled(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
             } else {
-              ro.field_u[var8].b(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
+              ro.field_u[var8].drawGrayModulatedScaled(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
             }
             if (this.field_l) {
-              LaserTraceCursor.field_f[var8].b(param5, param6 - param2, param1 * 2, 3 * param2);
+              LaserTraceCursor.field_f[var8].drawScaled(param5, param6 - param2, param1 * 2, 3 * param2);
             } else {
-              fm.field_s[var8].b(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+              fm.field_s[var8].drawGrayModulatedScaled(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
             }
           }
           if (param3 > -59) {
@@ -82,14 +82,14 @@ final class em extends fb {
         }
         if (param1 != 24) {
           if (this.field_n) {
-            ro.field_u[var8].b(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
+            ro.field_u[var8].drawScaled(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
           } else {
-            ro.field_u[var8].b(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
+            ro.field_u[var8].drawGrayModulatedScaled(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
           }
           if (this.field_l) {
-            LaserTraceCursor.field_f[var8].b(param5, param6 - param2, param1 * 2, 3 * param2);
+            LaserTraceCursor.field_f[var8].drawScaled(param5, param6 - param2, param1 * 2, 3 * param2);
           } else {
-            fm.field_s[var8].b(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+            fm.field_s[var8].drawGrayModulatedScaled(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           }
           if (param3 > -59) {
             field_m = (RgbSprite) null;
@@ -98,25 +98,25 @@ final class em extends fb {
         }
         if (24 == param2) {
           if (this.field_n) {
-            ro.field_u[var8].a(param5, -(2 * param2) + param6);
+            ro.field_u[var8].draw(param5, -(2 * param2) + param6);
           } else {
-            ro.field_u[var8].c(param5, param6 - 2 * param2, 8421631);
+            ro.field_u[var8].drawGrayModulated(param5, param6 - 2 * param2, 8421631);
           }
           if (!this.field_l) {
-            fm.field_s[var8].c(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+            fm.field_s[var8].drawGrayModulated(param5, param6 - param2, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           } else {
-            LaserTraceCursor.field_f[var8].a(param5, -param2 + param6);
+            LaserTraceCursor.field_f[var8].draw(param5, -param2 + param6);
           }
         } else {
           if (!this.field_n) {
-            ro.field_u[var8].b(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
+            ro.field_u[var8].drawGrayModulatedScaled(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
           } else {
-            ro.field_u[var8].b(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
+            ro.field_u[var8].drawScaled(param5, param6 - param2 * 2, 2 * param1, param2 * 4);
           }
           if (this.field_l) {
-            LaserTraceCursor.field_f[var8].b(param5, param6 - param2, param1 * 2, 3 * param2);
+            LaserTraceCursor.field_f[var8].drawScaled(param5, param6 - param2, param1 * 2, 3 * param2);
           } else {
-            fm.field_s[var8].b(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
+            fm.field_s[var8].drawGrayModulatedScaled(param5, param6 - param2, 2 * param1, param2 * 3, LevelCompleteEntrancePhase.field_f[this.field_a.field_u]);
           }
         }
         if (param3 <= -59) {

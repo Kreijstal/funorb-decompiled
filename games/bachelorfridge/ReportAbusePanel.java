@@ -44,7 +44,7 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
         this.c(this.field_F, 33);
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -63,7 +63,7 @@ final class ReportAbusePanel extends WidgetContainer implements WidgetActionList
               }
             }
           } else {
-            dd.d((byte) -88);
+            NameSuggestionsPanel.d((byte) -88);
           }
           if (param3 >= 50) {
             return;

@@ -144,7 +144,7 @@ final class ak {
             field_c = -74;
           }
           if (ResourceArchive.field_k == d.field_O) {
-            bb.field_A = null;
+            InteractiveWidget.field_A = null;
             ud.field_b.position = 0;
             if (param5 == null) {
               sd.field_i.position = 0;
@@ -221,7 +221,7 @@ final class ak {
                 be.field_a = var9Lifetime1;
               } else {
                 gi.a(cm.b(param1 ^ 15059), true);
-                bb.field_A = new Boolean(sd.a(AccountRequestState.field_a, 16448));
+                InteractiveWidget.field_A = new Boolean(sd.a(AccountRequestState.field_a, 16448));
                 AccountRequestState.field_a.position = 0;
               }
             }

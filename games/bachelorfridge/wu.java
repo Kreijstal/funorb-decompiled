@@ -30,7 +30,7 @@ final class wu extends InteractiveWidget {
           if (null == StatusEffectInfo.field_f) {
             StatusEffectInfo.field_f = new Sprite(var10, var11);
             bu.a(0, StatusEffectInfo.field_f);
-            var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
@@ -38,7 +38,7 @@ final class wu extends InteractiveWidget {
           if (var10 > StatusEffectInfo.field_f.field_q) {
             StatusEffectInfo.field_f = new Sprite(var10, var11);
             bu.a(0, StatusEffectInfo.field_f);
-            var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
@@ -46,14 +46,14 @@ final class wu extends InteractiveWidget {
           if (StatusEffectInfo.field_f.field_p < var11) {
             StatusEffectInfo.field_f = new Sprite(var10, var11);
             bu.a(0, StatusEffectInfo.field_f);
-            var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
             return;
           }
           bu.a(0, StatusEffectInfo.field_f);
           SoftwareRasterizer.clear();
-          var16.b(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
           StatusEffectInfo.field_f.drawAdditive(var5 - var16.field_n, var6 - var16.field_o, 256);
           return;
@@ -65,7 +65,7 @@ final class wu extends InteractiveWidget {
           if (null == StatusEffectInfo.field_f) {
             StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, StatusEffectInfo.field_f);
-            var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
@@ -73,7 +73,7 @@ final class wu extends InteractiveWidget {
           if (var10Lifetime1 > StatusEffectInfo.field_f.field_q) {
             StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, StatusEffectInfo.field_f);
-            var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
@@ -81,14 +81,14 @@ final class wu extends InteractiveWidget {
           if (StatusEffectInfo.field_f.field_p < var11Lifetime1) {
             StatusEffectInfo.field_f = new Sprite(var10Lifetime1, var11Lifetime1);
             bu.a(0, StatusEffectInfo.field_f);
-            var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
             db.b(89);
             StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
             return;
           }
           bu.a(0, StatusEffectInfo.field_f);
           SoftwareRasterizer.clear();
-          var17.b(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
+          var17.drawRotatedAbout(112, 144, var17.field_n << 4, var17.field_o << 4, -this.field_D << 10, 4096);
           db.b(89);
           StatusEffectInfo.field_f.drawAdditive(var5 - var17.field_n, var6 - var17.field_o, 256);
           return;

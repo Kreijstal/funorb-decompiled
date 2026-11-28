@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj extends pj implements ke {
+final class dj extends pj implements WidgetActivationListener {
     private int field_J;
-    private hf[] field_Q;
+    private InteractiveWidget[] field_Q;
     static int field_N;
     private int[] field_M;
     private String field_L;
@@ -33,10 +33,10 @@ final class dj extends pj implements ke {
           return;
         }
         if (param1 != -38) {
-          this.field_Q = (hf[]) null;
+          this.field_Q = (InteractiveWidget[]) null;
         }
-        hf[] var7 = new hf[param0];
-        hf[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = 0; var5 < this.field_J; var5++) {
           var7[var5] = this.field_Q[var5];
@@ -107,7 +107,7 @@ final class dj extends pj implements ke {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -163,12 +163,12 @@ final class dj extends pj implements ke {
         }
     }
 
-    final hf a(String param0, boolean param1, fd param2) {
-        hf var4 = null;
+    final InteractiveWidget a(String param0, boolean param1, fd param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hf stackIn_2_0 = null;
-        hf stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -176,10 +176,10 @@ final class dj extends pj implements ke {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hf(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           var4.field_l = (cg) ((Object) new ie());
           if (param1) {
-            stackIn_2_0 = (hf) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           var5 = -2 + this.field_k;

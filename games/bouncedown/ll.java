@@ -160,7 +160,7 @@ final class ll extends lk {
           this.field_C = true;
         }
         this.field_M = this.d((byte) -21);
-        this.field_I = this.field_M.a();
+        this.field_I = this.field_M.copyMirroredHorizontally();
         this.field_B = new RgbSprite(this.field_m >> 1, this.field_m);
     }
 
@@ -180,26 +180,26 @@ final class ll extends lk {
           var5_int = this.field_k + param1;
           IntrusiveNode.a(var5_int - this.field_M.field_s, this.field_m + param3, param3, this.field_M.field_s + param1, -19852);
           for (var6 = param1 - this.field_w; var6 < var5_int; var6 = var6 + param0.field_s) {
-            param0.a(var6, param3);
+            param0.draw(var6, param3);
           }
           ve.a(-125);
           if (SoftwareRasterizer.field_g <= param1 + this.field_M.field_s) {
             kh.a(this.field_B, 1);
-            param0.a(-this.field_w, 0);
-            param0.a(-this.field_w + 2 * this.field_K, 0);
-            this.field_I.e(0, 0);
+            param0.draw(-this.field_w, 0);
+            param0.draw(-this.field_w + 2 * this.field_K, 0);
+            this.field_I.drawMultiply(0, 0);
             ve.a(-119);
-            this.field_B.a(param1, param3);
+            this.field_B.draw(param1, param3);
           }
           if (SoftwareRasterizer.field_b >= var5_int - this.field_M.field_s) {
             kh.a(this.field_B, 1);
             for (var7 = this.field_k - this.field_M.field_s + this.field_w; var7 > 2 * this.field_K; var7 = var7 - this.field_K * 2) {
             }
-            param0.a(-var7, 0);
-            param0.a(2 * this.field_K - var7, 0);
-            this.field_M.e(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(2 * this.field_K - var7, 0);
+            this.field_M.drawMultiply(0, 0);
             ve.a(-120);
-            this.field_B.a(var5_int - this.field_M.field_s, param3);
+            this.field_B.draw(var5_int - this.field_M.field_s, param3);
           }
           var7Lifetime1 = 18 % ((-66 - param2) / 41);
           return;

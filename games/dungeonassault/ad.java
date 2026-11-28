@@ -36,14 +36,14 @@ final class ad {
             var8 = 96 / ((79 - param3) / 43);
             var7 = param5[2].field_E;
             var9 = param5[1].field_E;
-            param5[0].a(param2, param1, param4);
-            param5[2].a(-var7 + param2 + param0, param1, param4);
+            param5[0].drawTintedGray(param2, param1, param4);
+            param5[2].drawTintedGray(-var7 + param2 + param0, param1, param4);
             SoftwareRasterizer.saveClip(mk.field_i);
             SoftwareRasterizer.intersectClip(var6_int + param2, param1, param0 + param2 - var7, param5[1].field_G + param1);
             var10 = param2 + var6_int;
             var11 = param0 + (param2 - var7);
             for (param2 = var10; var11 > param2; param2 = param2 + var9) {
-              param5[1].a(param2, param1, param4);
+              param5[1].drawTintedGray(param2, param1, param4);
             }
             SoftwareRasterizer.restoreClip(mk.field_i);
             return;

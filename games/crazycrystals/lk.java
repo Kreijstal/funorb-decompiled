@@ -44,7 +44,7 @@ abstract class lk {
           je.field_d = new int[var3][];
           rn.field_o = new ModelMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            rn.field_o[var4] = nh.a(-31741, var8);
+            rn.field_o[var4] = NameSuggestionsPanel.a(-31741, var8);
           }
           var10.k(-2321);
           var9 = 0;

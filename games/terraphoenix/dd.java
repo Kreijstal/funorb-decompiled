@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd extends eb {
+final class dd extends InteractiveWidget {
     static int[] field_L;
     static int field_M;
     private int field_P;
@@ -193,7 +193,7 @@ final class dd extends eb {
                 }
               }
             }
-            var16.b(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_P << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_P << 10, 4096);
             MessageKeys.a(false);
             ld.field_c.drawAdditive(var5 - var16.field_q, -var16.field_u + var6, 256);
             return;
@@ -223,7 +223,7 @@ final class dd extends eb {
             ld.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
             il.a(1, ld.field_c);
           }
-          var15.b(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
           ld.field_c.drawAdditive(var5 - var15.field_q, -var15.field_u + var6, 256);
           return;
@@ -252,7 +252,7 @@ final class dd extends eb {
               }
             }
           }
-          var20.b(112, 144, var20.field_q << 4, var20.field_u << 4, -this.field_P << 10, 4096);
+          var20.drawRotatedAbout(112, 144, var20.field_q << 4, var20.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
           ld.field_c.drawAdditive(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
           return;
@@ -286,7 +286,7 @@ final class dd extends eb {
             il.a(1, ld.field_c);
           }
         }
-        var19.b(112, 144, var19.field_q << 4, var19.field_u << 4, -this.field_P << 10, 4096);
+        var19.drawRotatedAbout(112, 144, var19.field_q << 4, var19.field_u << 4, -this.field_P << 10, 4096);
         MessageKeys.a(false);
         ld.field_c.drawAdditive(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
     }

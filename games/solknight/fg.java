@@ -79,15 +79,15 @@ final class fg {
             var6_int = param4[0].field_q;
             var7 = param4[2].field_q;
             var8 = param4[1].field_q;
-            param4[0].b(param1, param0, param3);
-            param4[2].b(-var7 + (param1 + param2), param0, param3);
+            param4[0].drawTintedGray(param1, param0, param3);
+            param4[2].drawTintedGray(-var7 + (param1 + param2), param0, param3);
             SoftwareRasterizer.saveClip(ql.field_q);
             var9 = -50 / ((-22 - param5) / 56);
             SoftwareRasterizer.intersectClip(var6_int + param1, param0, -var7 + param1 + param2, param0 + param4[1].field_r);
             var10 = var6_int + param1;
             var11 = param2 + param1 - var7;
             for (param1 = var10; var11 > param1; param1 = param1 + var8) {
-              param4[1].b(param1, param0, param3);
+              param4[1].drawTintedGray(param1, param0, param3);
             }
             SoftwareRasterizer.restoreClip(ql.field_q);
             return;

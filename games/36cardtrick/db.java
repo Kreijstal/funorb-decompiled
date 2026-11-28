@@ -135,7 +135,7 @@ final class db implements ci {
           EmailFormatValidator.field_k = new byte[cf.field_c][];
           NetworkArchiveRequest.field_q = new int[cf.field_c];
           ml.field_b = new int[cf.field_c];
-          hl.field_y = new boolean[cf.field_c];
+          InteractiveWidget.field_y = new boolean[cf.field_c];
           vd.field_r = new byte[cf.field_c][];
           var18.position = -(8 * cf.field_c) + param1.length - 7;
           ConfirmedEmailAvailabilityValidator.field_l = var18.readUnsignedShort((byte) 72);
@@ -231,7 +231,7 @@ final class db implements ci {
                 }
               }
             }
-            hl.field_y[var4Lifetime5] = var10 != 0;
+            InteractiveWidget.field_y[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

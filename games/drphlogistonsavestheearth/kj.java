@@ -298,7 +298,7 @@ final class kj {
             if (param0.field_c == 2) {
               var7 = var7 + (param1.field_k - this.field_e.field_C);
             }
-            this.field_e.d(var6_int, var7);
+            this.field_e.draw(var6_int, var7);
           }
           if (!param2) {
             this.field_e = (RgbSprite) null;

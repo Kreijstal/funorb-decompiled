@@ -246,14 +246,14 @@ final class dk {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ga(var4, true);
-          var14.a((byte) -42, var13.c());
-          var13.f();
+          var14.a((byte) -42, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new ga(var4, true);
-          var14Lifetime1.a((byte) -127, var13.c());
-          var13.f();
+          var14Lifetime1.a((byte) -127, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new ga(var4, true);
-          var14Lifetime2.a((byte) -121, var13.c());
-          var13.f();
+          var14Lifetime2.a((byte) -121, var13.copy());
+          var13.rotateClockwise();
           var20 = new ga(var4, true);
           var20.a((byte) -123, var13);
         } catch (RuntimeException runtimeException) {

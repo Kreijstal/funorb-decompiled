@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends k implements mj {
+final class ge extends k implements WidgetActivationListener {
     static hj field_fb;
     static String field_db;
-    private fb field_gb;
+    private InteractiveWidget field_gb;
     static int field_bb;
     static String field_cb;
     static int[] field_eb;
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -181,11 +181,11 @@ final class ge extends k implements mj {
         }
     }
 
-    private final fb a(String param0, rg param1, int param2) {
-        fb var4 = null;
+    private final InteractiveWidget a(String param0, rg param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        fb stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -195,7 +195,7 @@ final class ge extends k implements mj {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fb(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_n = (jm) ((Object) new sf());
           var5 = this.field_C - 6;
           this.field_C = this.field_C + 38;

@@ -62,19 +62,19 @@ final class lh {
           }
           var9Lifetime1 = var18.field_j;
           vf.a((byte) 34);
-          var18.e();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.e();
-          var18.a(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           int var12 = 16 % ((param3 - 39) / 53);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.e();
-          var18.a(-var18.field_k + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var18.drawOpaque(-var18.field_k + var9Lifetime1, 0);
           var13 = new Sprite(-(var9Lifetime1 * 2) + var18.field_k, var9Lifetime1);
-          var13.e();
-          var18.a(-var9Lifetime1, 0);
+          var13.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           tj.b(653);
           qj.field_C = new Sprite[]{var16, var13, var11};
         } catch (RuntimeException runtimeException) {

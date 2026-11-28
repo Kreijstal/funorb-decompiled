@@ -291,9 +291,9 @@ final class kf implements uk {
           var7 = param2 + param3.field_k;
           nd.a(param3.field_p, var7, param3.field_t, var6_int, (byte) -103);
           var8 = DualLinkNode.field_p[1];
-          if (param3 instanceof ig &&
-            ((ig) (param3)).field_z) {
-            var8.d(1 + (var6_int + (-var8.field_w + param3.field_p >> 1)), (-var8.field_x + param3.field_t >> 1) + 1 + var7, 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_z) {
+            var8.drawAdditive(1 + (var6_int + (-var8.field_w + param3.field_p >> 1)), (-var8.field_x + param3.field_t >> 1) + 1 + var7, 256);
           }
           if (param4 != 4549) {
             return;

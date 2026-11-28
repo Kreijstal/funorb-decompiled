@@ -1824,10 +1824,10 @@ final class GameplayScreen {
               if (this.field_b == null) {
                 this.field_b = new Sprite(640, 480);
               }
-              this.field_b.d();
+              this.field_b.bindAsRenderTarget();
               this.field_G.drawMatchFrame(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
               ro.field_g.a(-125);
-              this.field_b.d(0, 0, 128);
+              this.field_b.drawAdditive(0, 0, 128);
             }
             boolean decompiledFrameRemainder2 = true;
             boolean decompiledFrameRemainder3 = true;

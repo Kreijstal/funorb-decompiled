@@ -155,7 +155,7 @@ abstract class oe extends ga {
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
-            ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+            ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
           if (this.field_F > ga.field_K.field_u) {
@@ -165,7 +165,7 @@ abstract class oe extends ga {
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
-            ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+            ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
           if (ga.field_K.field_w >= this.field_z) {
@@ -174,7 +174,7 @@ abstract class oe extends ga {
             this.b(0, (byte) -90, 0);
             super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
             ib.b(false);
-            ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+            ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
             return;
           }
           ga.field_K = new RgbSprite(this.field_F, this.field_z);
@@ -183,7 +183,7 @@ abstract class oe extends ga {
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
-          ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+          ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         if (ga.field_K == null) {
@@ -193,7 +193,7 @@ abstract class oe extends ga {
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
-          ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+          ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         if (this.field_F > ga.field_K.field_u) {
@@ -203,7 +203,7 @@ abstract class oe extends ga {
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
-          ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+          ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         if (ga.field_K.field_w >= this.field_z) {
@@ -212,7 +212,7 @@ abstract class oe extends ga {
           this.b(0, (byte) -90, 0);
           super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
           ib.b(false);
-          ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+          ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
           return;
         }
         ga.field_K = new RgbSprite(this.field_F, this.field_z);
@@ -221,7 +221,7 @@ abstract class oe extends ga {
         this.b(0, (byte) -90, 0);
         super.a(-this.field_m - param0, param1, (byte) 120, -param3 - this.field_q);
         ib.b(false);
-        ga.field_K.a(param3 + this.field_q, this.field_m + param0, this.field_V);
+        ga.field_K.drawWithOpacity(param3 + this.field_q, this.field_m + param0, this.field_V);
     }
 
     final fj f(int param0) {

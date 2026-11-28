@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ma implements TextFieldListener, mj {
+final class LoginPanel extends ma implements TextFieldListener, WidgetActivationListener {
     private String field_V;
     static RgbSprite field_Q;
     private EditableTextField field_N;
     private boolean field_Y;
-    private fb field_M;
+    private InteractiveWidget field_M;
     static pf field_R;
-    private fb field_L;
+    private InteractiveWidget field_L;
     private boolean field_T;
     static String field_X;
-    private fb field_O;
+    private InteractiveWidget field_O;
     static String field_S;
     static String field_P;
     private boolean field_K;
@@ -56,10 +56,10 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        fb stackIn_18_1 = null;
-        fb stackIn_18_2 = null;
-        fb stackIn_19_1 = null;
-        fb stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -89,7 +89,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
           this.field_N = (EditableTextField) ((Object) new ValidatedTextField(param0, (rg) (this), 100));
           this.field_U = (EditableTextField) ((Object) new ValidatedTextField("", (rg) (this), 20));
           if (!this.field_T) {
-            this.field_M = new fb(ArchiveProvider.field_c, (rg) null);
+            this.field_M = new InteractiveWidget(ArchiveProvider.field_c, (rg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_K) {
@@ -101,13 +101,13 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
               stackIn_19_2 = null;
               stackIn_19_3 = jd.field_g;
             }
-            this.field_O = new fb(stackIn_19_3, (rg) null);
+            this.field_O = new InteractiveWidget(stackIn_19_3, (rg) null);
             if (this.field_Y) {
-              this.field_L = new fb(fd.field_o, (rg) (this));
+              this.field_L = new InteractiveWidget(fd.field_o, (rg) (this));
             }
           } else {
-            this.field_M = new fb(hl.field_f, (rg) null);
-            this.field_O = new fb(HuffmanCodec.field_b, (rg) null);
+            this.field_M = new InteractiveWidget(hl.field_f, (rg) null);
+            this.field_O = new InteractiveWidget(HuffmanCodec.field_b, (rg) null);
             this.field_N.field_H = false;
           }
           this.field_N.field_n = (jm) ((Object) new wc(10000536));
@@ -260,7 +260,7 @@ final class LoginPanel extends ma implements TextFieldListener, mj {
         var2 = 39 % ((-30 - param0) / 52);
     }
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

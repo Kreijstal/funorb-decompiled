@@ -180,7 +180,7 @@ final class WingPod extends MovingTunnelEntity {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param1, DualLinkNode.field_p, ij.field_r, rg.field_I, sd.field_f, an.field_p, rj.field_f);
+          var2 = new CoverageBitmapFont(param1, DualLinkNode.field_p, ij.field_r, InteractiveWidget.field_I, sd.field_f, an.field_p, rj.field_f);
           StageDirector.clearIndexedSpriteDecodeBuffers(param0);
           if (param0) {
             var3 = (byte[]) null;

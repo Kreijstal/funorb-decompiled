@@ -419,7 +419,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               ub.field_b[-1 + var4] = 0;
               sn.field_a[0] = 5;
             } else if (am.field_g == 4) {
-              var3_int = v.a(ec.field_m, nh.field_C, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
+              var3_int = v.a(ec.field_m, NameSuggestionsPanel.field_C, -27815, LoginPanel.field_L, NetworkGameClient.field_y);
               var4 = var3_int + 2;
               ub.field_b = new int[var4];
               je.field_i = new String[var4];

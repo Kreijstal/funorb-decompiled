@@ -35,7 +35,7 @@ final class nb {
         }
         wh.field_d = rf.field_S;
         if (wh.field_d) {
-          ck.h(94);
+          InteractiveWidget.h(94);
           bo.g(1);
         }
     }

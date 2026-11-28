@@ -49,7 +49,7 @@ final class Bzip2State {
         try {
           h.a((java.awt.Component) ((Object) param0), -8662);
           var2_int = -50 / ((-56 - param1) / 59);
-          AudioService.a((java.awt.Component) ((Object) param0), true);
+          AudioService.attachMouseAndFocusListeners((java.awt.Component) ((Object) param0), true);
           if (wb.field_u == null) {
             return;
           }

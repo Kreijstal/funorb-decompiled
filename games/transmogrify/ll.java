@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ll extends bi implements df {
-    private lj field_P;
+final class ll extends bi implements WidgetActivationListener {
+    private InteractiveWidget field_P;
     static int field_U;
     static IntrusiveDeque field_T;
     static kk field_V;
@@ -11,8 +11,8 @@ final class ll extends bi implements df {
     static String field_W;
     static int field_R;
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
-        lj discarded$1 = null;
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
+        InteractiveWidget discarded$1 = null;
         RuntimeException var6 = null;
         ma var7 = null;
         RuntimeException stackIn_7_0 = null;
@@ -187,13 +187,13 @@ final class ll extends bi implements df {
         }
     }
 
-    private final lj a(String param0, ma param1, int param2) {
-        lj discarded$1 = null;
-        lj var4 = null;
+    private final InteractiveWidget a(String param0, ma param1, int param2) {
+        InteractiveWidget discarded$1 = null;
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         ma var6 = null;
-        lj stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -201,7 +201,7 @@ final class ll extends bi implements df {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new lj(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_q = (WidgetRenderer) ((Object) new qa());
           var5 = -6 + this.field_h;
           this.field_h = this.field_h + 38;

@@ -43,8 +43,8 @@ final class ic extends fd {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof eb) {
-            param4 = param4 & ((eb) (param1)).field_A;
+          if (param1 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param1)).field_A;
           }
           if (!param4) {
             stackIn_14_0 = this.field_u;

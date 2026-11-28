@@ -29,9 +29,9 @@ abstract class IndexedSpriteState {
         field_j = null;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawWithOpacity(int param0, int param1, int param2);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     static {
         field_z = "td.C(";

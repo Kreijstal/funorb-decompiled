@@ -312,7 +312,7 @@ final class ChessMatchSession {
           cl.field_g.field_w = SoftwareRasterizer.field_h;
           cl.field_g.field_t = SoftwareRasterizer.field_c;
           cl.field_g.field_x = SoftwareRasterizer.field_d;
-          ResourceArchive.field_c.e();
+          ResourceArchive.field_c.bindAsRenderTarget();
         }
         SoftwareRasterizer.fillRoundedRectangleAlpha(4, 4, 108, 327, 11, 0, 64);
         stackIn_8_0 = 8;
@@ -352,7 +352,7 @@ final class ChessMatchSession {
         for (var12 = this.field_t.field_g.length - 1; var12 >= 0; var12--) {
           if (rn.field_b == 0) {
             var27 = qc.field_d[0][this.field_t.field_g[var12]];
-            var27.b(var9, var10);
+            var27.draw(var9, var10);
             var9 = var9 + var27.field_w / 3;
             if (var9 > var5) {
               var9 = var4;
@@ -360,7 +360,7 @@ final class ChessMatchSession {
             }
           } else {
             var26 = ub.field_d[0][this.field_t.field_g[var12]];
-            var26.a(var9, var10);
+            var26.drawQuarterSizeAveraged(var9, var10);
             var9 = var9 + var26.field_w / 12;
             if (var5 < var9) {
               var10 = var10 + var6;
@@ -372,12 +372,12 @@ final class ChessMatchSession {
           boolean decompiledFrameRemainder0 = true;
           if (0 == rn.field_b) {
             var29 = qc.field_d[1][this.field_t.field_i[var12Lifetime1]];
-            var29.b(var7, var8);
+            var29.draw(var7, var8);
             var7 = var7 + var29.field_w / 3;
             decompiledFrameRemainder0 = !(var7 <= var5);
           } else {
             var28 = ub.field_d[1][this.field_t.field_i[var12Lifetime1]];
-            var28.a(var7, var8);
+            var28.drawQuarterSizeAveraged(var7, var8);
             var7 = var7 + var28.field_w / 12;
             decompiledFrameRemainder0 = !(var7 <= var5);
           }
@@ -490,7 +490,7 @@ final class ChessMatchSession {
         SoftwareRasterizer.fillRoundedRectangleAlpha(552, var17Lifetime1, 81, 42, 8, 65793, 128);
         jj.field_b.drawParagraph(gg.field_k, 552, var17Lifetime1, 81, 42, 16777215, -1, 1, 1, jj.field_b.field_C);
         if (var3 != 0) {
-          cl.field_g.e();
+          cl.field_g.bindAsRenderTarget();
           if (this.c(param0 + 131)) {
             stackIn_91_0 = -(255 * this.field_d / 75) + 255;
           } else {
@@ -501,7 +501,7 @@ final class ChessMatchSession {
             var3 < 16) {
             var15Lifetime1 = 255 - 255 * var3 / 16;
           }
-          ResourceArchive.field_c.b(0, 0, var15Lifetime1);
+          ResourceArchive.field_c.drawWithOpacity(0, 0, var15Lifetime1);
         }
     }
 
@@ -833,7 +833,7 @@ final class ChessMatchSession {
         var5 = SoftwareRasterizer.field_c;
         if (this.field_b && (!(qb.field_a >= 400) ||
           qb.field_c) && !hl.field_h) {
-          ResourceArchive.field_c.e();
+          ResourceArchive.field_c.bindAsRenderTarget();
         }
         if (hl.field_h) {
           ph.field_j.setAsRasterTarget(48);
@@ -936,7 +936,7 @@ final class ChessMatchSession {
             } else {
               this.a(-104, qb.field_a, false);
               SoftwareRasterizer.setRasterBuffer(var24, var4, var5);
-              ResourceArchive.field_c.b(0, 0, 64);
+              ResourceArchive.field_c.drawWithOpacity(0, 0, 64);
             }
           }
         }

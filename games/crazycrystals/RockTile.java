@@ -19,18 +19,18 @@ final class RockTile extends qf implements Cloneable {
           var8 = (param4 << 4) + (param3 << 3);
           var9 = param2 * 4096 / 24;
           var10 = (int)(1024.0 * Math.random() - 512.0);
-          MouseWheelInput.field_i.a(384, 576, var7, var8, var10, var9);
+          MouseWheelInput.field_i.drawRotatedAbout(384, 576, var7, var8, var10, var9);
           return;
         }
         if (24 != param2) {
-          MouseWheelInput.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
+          MouseWheelInput.field_i.drawScaled(param1, -param3 + param4, 2 * param2, 3 * param3);
           return;
         }
         if (param3 == 24) {
-          MouseWheelInput.field_i.a(param1, -param3 + param4);
+          MouseWheelInput.field_i.draw(param1, -param3 + param4);
           return;
         }
-        MouseWheelInput.field_i.b(param1, -param3 + param4, 2 * param2, 3 * param3);
+        MouseWheelInput.field_i.drawScaled(param1, -param3 + param4, 2 * param2, 3 * param3);
     }
 
     RockTile(PuzzleTile param0) {

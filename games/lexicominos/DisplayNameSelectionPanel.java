@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends nb implements ag, jk {
+final class DisplayNameSelectionPanel extends nb implements NameSuggestionListener, WidgetActivationListener {
     static int field_D;
-    bb field_F;
+    NameSuggestionsPanel field_F;
     private ValidatedTextField field_E;
-    private kf field_B;
-    private kf field_G;
+    private InteractiveWidget field_B;
+    private InteractiveWidget field_G;
     static String field_C;
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -52,7 +52,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 11271) {
-            this.field_F = (bb) null;
+            this.field_F = (NameSuggestionsPanel) null;
           }
           stackIn_3_0 = this.a(param1, 35, 93, param5, param0, param4, param2);
           return stackIn_3_0;
@@ -82,7 +82,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         String var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -92,7 +92,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         try {
           if (param2 != 215535458) {
             var7 = (String) null;
-            this.a((String) null, (byte) 106);
+            this.onNameSuggestionSelected((String) null, (byte) 106);
           }
           if (this.field_B == param4) {
             NetworkArchiveRequest.c(255);
@@ -116,11 +116,11 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         }
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         if (param0 != -12) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator((byte) 94))).e(param0 + 95);
+        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator((byte) 94))).invalidateCheckedName(param0 + 95);
     }
 
     public static void clearStaticReferences(int param0) {
@@ -305,8 +305,8 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         this.field_E = new ValidatedTextField("", (vd) null, 12);
         ik var1 = new ik(ValidatedTextField.field_T, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
         w var2 = new w(oh.field_c, var1, (vd) null);
-        this.field_G = new kf(PasswordValidator.field_l, (vd) null);
-        this.field_B = new kf(he.field_a, (vd) null);
+        this.field_G = new InteractiveWidget(PasswordValidator.field_l, (vd) null);
+        this.field_B = new InteractiveWidget(he.field_a, (vd) null);
         this.field_E.field_q = ValidatedTextField.field_Q;
         this.field_E.setFieldValidator(new AccountNameAvailabilityValidator(this.field_E), (byte) 23);
         this.field_G.field_D = false;
@@ -326,7 +326,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
         this.field_G.field_r = (vd) (this);
         this.b((byte) -97, this.field_G);
         this.b((byte) -67, this.field_B);
-        this.field_F = new bb((ag) (this));
+        this.field_F = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_F.a(150, this.field_j - this.field_E.field_t + (-this.field_E.field_j - 60), true, 20, this.field_E.field_j + this.field_E.field_t + 60);
         this.b((byte) 53, this.field_F);
         this.a(55 + (var3 + var4), 496, true, 0, 0);
@@ -382,7 +382,7 @@ final class DisplayNameSelectionPanel extends nb implements ag, jk {
           return;
         }
         if (param0 < 108) {
-          this.field_F = (bb) null;
+          this.field_F = (NameSuggestionsPanel) null;
         }
         rb.a((byte) 112, this.field_E.field_u);
     }

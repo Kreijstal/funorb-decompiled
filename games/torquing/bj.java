@@ -113,7 +113,7 @@ final class bj extends rb {
                 }
               }
             }
-            var34.c(112, 144, var34.field_w << 4, var34.field_u << 4, -this.field_H << 10, 4096);
+            var34.drawRotatedAbout(112, 144, var34.field_w << 4, var34.field_u << 4, -this.field_H << 10, 4096);
             r.a(126);
             this.field_G.drawAdditive(var9 - (var34.field_w >> 1), var10 - var34.field_u, 256);
             return;
@@ -162,7 +162,7 @@ final class bj extends rb {
               }
             }
           }
-          var29.c(112, 144, var29.field_w << 4, var29.field_u << 4, -this.field_H << 10, 4096);
+          var29.drawRotatedAbout(112, 144, var29.field_w << 4, var29.field_u << 4, -this.field_H << 10, 4096);
           r.a(126);
           this.field_G.drawAdditive(var9Lifetime2 - (var29.field_w >> 1), var10Lifetime2 - var29.field_u, 256);
           return;
@@ -212,7 +212,7 @@ final class bj extends rb {
             }
           }
         }
-        var22.c(112, 144, var22.field_w << 4, var22.field_u << 4, -this.field_H << 10, 4096);
+        var22.drawRotatedAbout(112, 144, var22.field_w << 4, var22.field_u << 4, -this.field_H << 10, 4096);
         r.a(126);
         this.field_G.drawAdditive(var9Lifetime1 - (var22.field_w >> 1), var10Lifetime1 - var22.field_u, 256);
     }

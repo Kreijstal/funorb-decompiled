@@ -778,7 +778,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           nc.a(param2, 2);
           dl.a(param1 ^ 11490, param2);
           MouseWheelInput.b(true);
-          cm.a(15);
+          NameSuggestionsPanel.a(15);
           DiskCacheWorker.field_i = -ea.field_b + 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

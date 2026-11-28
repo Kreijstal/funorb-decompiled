@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends uc implements jk {
+final class AccountCreationResultPanel extends uc implements WidgetActivationListener {
     private boolean field_qb;
     private boolean field_ub;
     static boolean field_tb;
@@ -209,7 +209,7 @@ final class AccountCreationResultPanel extends uc implements jk {
             } else {
               var4 = nh.field_b;
               if (null != this.field_rb) {
-                this.field_rb.a((byte) -12);
+                this.field_rb.onNameSuggestionsRefreshRequested((byte) -12);
               }
             }
           }
@@ -401,7 +401,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         if (this.field_qb) {
           jd.a(false, true, 37);
           return;
@@ -410,8 +410,8 @@ final class AccountCreationResultPanel extends uc implements jk {
           DelegatingCanvas.a((byte) 108);
           this.g(true);
           if (param2 != 215535458) {
-            kf var7 = (kf) null;
-            this.a(123, -100, -20, 115, (kf) null);
+            InteractiveWidget var7 = (InteractiveWidget) null;
+            this.onWidgetActivated(123, -100, -20, 115, (InteractiveWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "u.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

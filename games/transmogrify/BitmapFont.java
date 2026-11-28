@@ -483,9 +483,9 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                   var17 = stackIn_33_0;
                                   if (field_H != 256) {
-                                    var16_ref_k.a(param1 + var13, param2 + this.field_C - var17 + var14, field_H);
+                                    var16_ref_k.drawWithOpacity(param1 + var13, param2 + this.field_C - var17 + var14, field_H);
                                   } else {
-                                    var16_ref_k.a(param1 + var13, param2 + this.field_C - var17 + var14);
+                                    var16_ref_k.draw(param1 + var13, param2 + this.field_C - var17 + var14);
                                   }
                                   param1 = param1 + var16_ref_k.field_d;
                                   var7 = 0;
@@ -626,9 +626,9 @@ abstract class BitmapFont extends DualLinkNode {
                                   }
                                   var12 = stackIn_27_0;
                                   if (field_H != 256) {
-                                    var11_ref_k.a(param1, param2 + this.field_C - var12, field_H);
+                                    var11_ref_k.drawWithOpacity(param1, param2 + this.field_C - var12, field_H);
                                   } else {
-                                    var11_ref_k.a(param1, param2 + this.field_C - var12);
+                                    var11_ref_k.draw(param1, param2 + this.field_C - var12);
                                   }
                                   param1 = param1 + var11_ref_k.field_d;
                                   var5 = 0;

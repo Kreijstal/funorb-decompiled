@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends af implements qh {
+final class AccountCreationResultPanel extends af implements WidgetActivationListener {
     private boolean field_sb;
     static int field_rb;
     static PcmStreamMixer field_tb;
@@ -42,7 +42,7 @@ final class AccountCreationResultPanel extends af implements qh {
         }
     }
 
-    public final void a(int param0, int param1, int param2, hl param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         if (this.field_ub) {
           nf.a(false, (byte) -2, true);
           return;
@@ -86,7 +86,7 @@ final class AccountCreationResultPanel extends af implements qh {
             } else {
               var4 = ui.field_K;
               if (null != this.field_vb) {
-                this.field_vb.a(true);
+                this.field_vb.onNameSuggestionsRefreshRequested(true);
               }
             }
           }

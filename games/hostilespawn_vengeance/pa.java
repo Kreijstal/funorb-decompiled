@@ -186,7 +186,7 @@ final class pa extends ql {
                         }
                         var51 = (int)(24.0 * (var9 + var43 * var49));
                         var52 = (int)((var49 * var45 + var11) * 24.0);
-                        stackIn_59_0 = (!var56.field_u.d(var47, var48, var51, var52)) ? 0 : 1;
+                        stackIn_59_0 = (!var56.field_u.isOpaqueAt(var47, var48, var51, var52)) ? 0 : 1;
                         var42 = stackIn_59_0;
                         if (var42 != 0) {
                           var9 = var9 + var43 * var49;
@@ -394,7 +394,7 @@ final class pa extends ql {
           var4 = ja.field_e[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = bf.field_d[PcmOutputWorker.a((int) var4[var6], 255)];
+            var5[var6] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var4[var6], 255)];
           }
           var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var5);
         }

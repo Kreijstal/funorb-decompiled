@@ -28,7 +28,7 @@ class f extends kc {
               var5 = 32 * (var3 - var4 * 20);
               var4 = var4 * 32;
               SoftwareRasterizer.setClip(var5, var4, var5 + 32, var4 + 32);
-              ke.field_i.a(0, 0);
+              ke.field_i.drawOpaque(0, 0);
             }
           }
           SoftwareRasterizer.resetClip();

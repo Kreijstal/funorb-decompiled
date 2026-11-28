@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends WidgetContainer implements cm, ij {
+final class ue extends WidgetContainer implements cm, WidgetActivationListener {
     static s field_J;
     private pn field_L;
-    private d field_P;
+    private InteractiveWidget field_P;
     private AccountCreationResultPanel field_E;
     static int[] field_G;
     static String field_K;
@@ -21,7 +21,7 @@ final class ue extends WidgetContainer implements cm, ij {
         return "</col></u>";
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -74,7 +74,7 @@ final class ue extends WidgetContainer implements cm, ij {
         int var6 = 0;
         try {
           this.field_E = param0;
-          this.field_P = new d(vi.field_x, (uf) null);
+          this.field_P = new InteractiveWidget(vi.field_x, (uf) null);
           this.field_P.listener = (WidgetListener) ((Object) new vo());
           var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, BlastDebrisModel.field_n, -127);
           var3 = 20;
@@ -101,8 +101,8 @@ final class ue extends WidgetContainer implements cm, ij {
 
     private final String a(int param0) {
         if (param0 != 0) {
-          d var3 = (d) null;
-          this.a(-116, (d) null, (byte) -51, -31, 41);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated(-116, (InteractiveWidget) null, (byte) -51, -31, 41);
         }
         return "<u=2164A2><col=2164A2>";
     }

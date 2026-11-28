@@ -99,7 +99,7 @@ final class fc extends en {
           var14_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
           var22 = this.field_k.field_d;
           var16_ref_String = jk.a(new String[]{var22[0]}, lc.field_g, 30496);
-          var17_ref_String = ck.field_H.a(jk.a(new String[]{var14_ref_String}, var22[1], 30496), (byte) -48);
+          var17_ref_String = InteractiveWidget.field_H.a(jk.a(new String[]{var14_ref_String}, var22[1], 30496), (byte) -48);
           var24 = jn.a(var16_ref_String, new int[]{param1}, -118, la.field_b);
           var4 = var24;
           var23 = jn.a(var17_ref_String, new int[]{param1}, -75, la.field_b);
@@ -113,7 +113,7 @@ final class fc extends en {
           var15_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", param0 ^ 16746719);
           var25 = this.field_k.field_D[var14];
           var17_ref_StringLifetime1 = jk.a(new String[]{var25[0]}, EditableTextField.field_J, 30496);
-          var18_ref_String = ck.field_H.a(jk.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
+          var18_ref_String = InteractiveWidget.field_H.a(jk.a(new String[]{var15_ref_String}, var25[1], 30496), (byte) -48);
           var6[var14] = jn.a(var17_ref_StringLifetime1, new int[]{param1}, -80, la.field_b);
           var7[var14] = jn.a(var18_ref_String, new int[]{param1}, IntrusiveDeque.b(param0, -16777100), la.field_b);
           var9 = var9 + (2 + var6[var14].length + var7[var14].length) * la.field_b.field_H;
@@ -122,7 +122,7 @@ final class fc extends en {
           var9 = var9 + 2 * db.field_v.field_H;
         }
         var26 = new RgbSprite(param1, var9);
-        var26.e();
+        var26.bindAsRenderTarget();
         db.field_v.drawCentred(this.field_k.field_F.toUpperCase(), param1 >> 1, var10, param0, -1);
         var10 = var10 + la.field_b.field_H * 2;
         var27 = var21;
@@ -137,7 +137,7 @@ final class fc extends en {
           for (var16Lifetime1 = 0; var29.length > var16Lifetime1; var16Lifetime1++) {
             var30 = var29[var16Lifetime1];
             var18 = db.field_v.stringWidth(var30.field_b) + 24;
-            var30.field_c.c(param1 - var18 >> 1, -(-var30.field_c.field_v + 3 * la.field_b.field_H >> 1) + var10, var30.field_a);
+            var30.field_c.drawGrayModulated(param1 - var18 >> 1, -(-var30.field_c.field_v + 3 * la.field_b.field_H >> 1) + var10, var30.field_a);
             db.field_v.drawString(var30.field_b, (-var18 + param1 >> 1) + 24, var10, var30.field_a, -1);
             var10 = var10 + la.field_b.field_H;
           }
@@ -233,7 +233,7 @@ final class fc extends en {
           var6_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
           var13 = this.field_k.field_C;
           var14 = var13[0];
-          var15 = ck.field_H.a(jk.a(new String[]{var6_ref_String}, var13[1], 30496), (byte) -48);
+          var15 = InteractiveWidget.field_H.a(jk.a(new String[]{var6_ref_String}, var13[1], 30496), (byte) -48);
           var16 = jn.a("<col=178B8B>" + var14 + "</col> - " + var15, new int[]{200}, -94, db.field_v);
           var2 = var16;
           var4 = var4 + db.field_v.field_H * (1 + var16.length);
@@ -242,12 +242,12 @@ final class fc extends en {
           var7_ref_String = jk.a(new String[]{this.field_k.field_F.toUpperCase()}, "<col=FF8000><%0></col>", 30496);
           var17 = this.field_k.field_k[var6];
           var18 = var17[0];
-          var19 = ck.field_H.a(jk.a(new String[]{var7_ref_String}, var17[1], 30496), (byte) -48);
+          var19 = InteractiveWidget.field_H.a(jk.a(new String[]{var7_ref_String}, var17[1], 30496), (byte) -48);
           var3[var6] = jn.a("<col=FF8000>" + var18 + "</col> - " + var19, new int[]{200}, -95, db.field_v);
           var4 = var4 + db.field_v.field_H * (1 + var3[var6].length);
         }
         RgbSprite var20 = new RgbSprite(200, var4);
-        var20.e();
+        var20.bindAsRenderTarget();
         int var7 = -80 % ((param0 + 58) / 35);
         db.field_v.drawCentred(this.field_k.field_F, 100, var5, 16777215, -1);
         if (-1 != this.field_k.field_s) {

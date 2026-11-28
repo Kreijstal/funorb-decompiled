@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ma implements nn, mj {
+final class ba extends ma implements nn, WidgetActivationListener {
     static String field_M;
     private se field_S;
     static java.applet.Applet field_L;
     static DiskCacheWorker field_O;
-    private fb field_T;
+    private InteractiveWidget field_T;
     private AccountCreationResultPanel field_K;
     static byte[] field_Q;
     static String field_N;
@@ -184,10 +184,10 @@ final class ba extends ma implements nn, mj {
                   return true;
                 }
                 if (!qj.field_d) {
-                  var8 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                  var8 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 } else {
                   if (null == kb.field_P) {
-                    var24 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                    var24 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                     var25 = var24 + var19 + ": ";
                     var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var25);
                     if (var6Lifetime1 < sc.field_a.stringWidth(sg.field_c.toString())) {
@@ -209,7 +209,7 @@ final class ba extends ma implements nn, mj {
             }
             if (null != pd.field_Rb) {
               if (!qj.field_d) {
-                var29 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                var29 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var30 = var29 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var30);
                 if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
@@ -219,7 +219,7 @@ final class ba extends ma implements nn, mj {
                 return true;
               }
               if (null == kb.field_P) {
-                var27 = "[" + MatchingFieldValidator.a(fb.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
+                var27 = "[" + MatchingFieldValidator.a(InteractiveWidget.field_D, new String[]{pd.field_Rb.field_Gb}, (byte) -125) + "] ";
                 var28 = var27 + var19 + ": ";
                 var6Lifetime1 = var6Lifetime1 - sc.field_a.stringWidth(var28);
                 if (var6Lifetime1 >= sc.field_a.stringWidth(sg.field_c.toString())) {
@@ -257,7 +257,7 @@ final class ba extends ma implements nn, mj {
         int var6 = 0;
         try {
           this.field_K = param0;
-          this.field_T = new fb(sg.field_e, (rg) null);
+          this.field_T = new InteractiveWidget(sg.field_e, (rg) null);
           this.field_T.field_n = (jm) ((Object) new sf());
           var7 = MatchingFieldValidator.a(kl.field_g, new String[]{this.a(29917), this.g((byte) -11)}, (byte) -114);
           var3 = 20;
@@ -282,7 +282,7 @@ final class ba extends ma implements nn, mj {
         }
     }
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         if (param4 != -24221) {
           return;
         }

@@ -382,9 +382,9 @@ class ci extends ei {
             var24 = var24 + (-var17.field_u + this.field_pb);
           }
           if (this.field_X < 256) {
-            var17.b(var23_int, var24, this.field_X);
+            var17.drawWithOpacity(var23_int, var24, this.field_X);
           } else {
-            var17.b(var23_int, var24);
+            var17.draw(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;

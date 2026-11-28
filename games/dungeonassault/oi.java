@@ -80,8 +80,8 @@ final class oi extends da {
         int var5_intLifetime1Lifetime1;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_D instanceof ck) ||
-            ((ck) (this.field_D)).field_B) &&
+          if ((!(this.field_D instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_D)).field_B) &&
             this.field_y == 1) {
             var5_int = -param0 + (-this.field_K + hj.field_S);
             var6 = -param1 - this.field_O + eh.field_h;

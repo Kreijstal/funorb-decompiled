@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lr extends d {
+final class lr extends InteractiveWidget {
     static String field_L;
     static Sprite field_O;
     static String field_I;
@@ -119,32 +119,32 @@ final class lr extends d {
           if (UiPanel.field_E == null) {
             UiPanel.field_E = new Sprite(var9, var10);
             lq.a(UiPanel.field_E, (byte) -94);
-            var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
           if (var9 > UiPanel.field_E.field_y) {
             UiPanel.field_E = new Sprite(var9, var10);
             lq.a(UiPanel.field_E, (byte) -94);
-            var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
           if (UiPanel.field_E.field_t < var10) {
             UiPanel.field_E = new Sprite(var9, var10);
             lq.a(UiPanel.field_E, (byte) -94);
-            var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
           lq.a(UiPanel.field_E, (byte) -94);
           SoftwareRasterizer.clearRaster();
-          var15.a(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          UiPanel.field_E.d(var5 - var15.field_x, var6 - var15.field_B, 256);
+          UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
           return;
         }
         if (dj.field_c == var8) {
@@ -154,44 +154,44 @@ final class lr extends d {
           if (UiPanel.field_E == null) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
             lq.a(UiPanel.field_E, (byte) -94);
-            var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
           if (var9Lifetime1 > UiPanel.field_E.field_y) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
             lq.a(UiPanel.field_E, (byte) -94);
-            var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
           if (UiPanel.field_E.field_t < var10Lifetime1) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
             lq.a(UiPanel.field_E, (byte) -94);
-            var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
-            UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+            UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
           lq.a(UiPanel.field_E, (byte) -94);
           SoftwareRasterizer.clearRaster();
-          var16.a(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
-          UiPanel.field_E.d(var5 - var16.field_x, var6 - var16.field_B, 256);
+          UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
           return;
         }
         if (ir.field_a == var8) {
           var13 = jn.field_b[2];
-          var13.d(var5 - (var13.field_y >> 1), var6 - (var13.field_t >> 1), 256);
+          var13.drawAdditive(var5 - (var13.field_y >> 1), var6 - (var13.field_t >> 1), 256);
           return;
         }
         if (qm.field_G != var8) {
           return;
         }
         Sprite var12 = jn.field_b[1];
-        var12.d(var5 - (var12.field_y >> 1), -(var12.field_t >> 1) + var6, 256);
+        var12.drawAdditive(var5 - (var12.field_y >> 1), -(var12.field_t >> 1) + var6, 256);
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {

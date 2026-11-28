@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends lg {
+final class ub extends InteractiveWidget {
     static UrlRequest field_G;
     private int field_H;
     private FieldValidator field_F;
@@ -54,7 +54,7 @@ final class ub extends lg {
               }
             }
           }
-          var16.c(112, 144, var16.field_w << 4, var16.field_u << 4, -this.field_H << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_w << 4, var16.field_u << 4, -this.field_H << 10, 4096);
           r.a(123);
           ByteStorage.field_b.drawAdditive(-var16.field_w + var5, -var16.field_u + var6, 256);
           return;
@@ -92,7 +92,7 @@ final class ub extends lg {
             }
           }
         }
-        var15.c(112, 144, var15.field_w << 4, var15.field_u << 4, -this.field_H << 10, 4096);
+        var15.drawRotatedAbout(112, 144, var15.field_w << 4, var15.field_u << 4, -this.field_H << 10, 4096);
         r.a(123);
         ByteStorage.field_b.drawAdditive(-var15.field_w + var5, -var15.field_u + var6, 256);
     }

@@ -244,72 +244,72 @@ final class ep extends PuzzleTile implements Cloneable {
         int var7 = param3 ? 18 : this.field_i;
         if (24 != param2) {
           if (var7 <= 1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8 = 32 % ((param1 + 70) / 33);
             return;
           }
-          RockTile.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
+          RockTile.field_y[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
           var8Lifetime5 = ((24 - var7) * param2 + 23) / 24;
           var9 = (param0 * (24 - var7) + 23) / 24;
           if (param2 <= var8Lifetime5) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime5 = 32 % ((param1 + 70) / 33);
             return;
           }
           if (param0 > var9) {
             this.field_j.a(-128, param3, param2 - var8Lifetime5, param5 + var8Lifetime5, param4 + var9, param0 - var9);
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime5 = 32 % ((param1 + 70) / 33);
             return;
           }
-          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+          v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime6 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (param0 != 24) {
           if (var7 <= 1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
-          RockTile.field_y[var7 / 2].b(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
+          RockTile.field_y[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, param0 * 3, PuzzleTile.field_g[this.field_k]);
           var8Lifetime1Lifetime1 = ((24 - var7) * param2 + 23) / 24;
           var9Lifetime1 = (param0 * (24 - var7) + 23) / 24;
           if (param2 <= var8Lifetime1Lifetime1) {
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
           if (param0 > var9Lifetime1) {
             this.field_j.a(-128, param3, param2 - var8Lifetime1Lifetime1, param5 + var8Lifetime1Lifetime1, param4 + var9Lifetime1, param0 - var9Lifetime1);
-            v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+            v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
             var8Lifetime1Lifetime1 = 32 % ((param1 + 70) / 33);
             return;
           }
-          v.field_b[var7 / 2].b(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
+          v.field_b[var7 / 2].drawGrayModulatedScaled(param5, param4 - param0, 2 * param2, 3 * param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime1Lifetime2 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (var7 <= 1) {
-          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
+          v.field_b[var7 / 2].drawGrayModulated(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime2 = 32 % ((param1 + 70) / 33);
           return;
         }
-        RockTile.field_y[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
+        RockTile.field_y[var7 / 2].drawGrayModulated(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
         var8Lifetime3 = ((24 - var7) * param2 + 23) / 24;
         var9Lifetime2 = (param0 * (-var7 + 24) + 23) / 24;
         if (var8Lifetime3 >= param2) {
-          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
+          v.field_b[var7 / 2].drawGrayModulated(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime3 = 32 % ((param1 + 70) / 33);
           return;
         }
         if (param0 > var9Lifetime2) {
           this.field_j.a(-125, param3, param2 - var8Lifetime3, var8Lifetime3 + param5, param4 + var9Lifetime2, param0 - var9Lifetime2);
-          v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
+          v.field_b[var7 / 2].drawGrayModulated(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
           var8Lifetime3 = 32 % ((param1 + 70) / 33);
           return;
         }
-        v.field_b[var7 / 2].c(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
+        v.field_b[var7 / 2].drawGrayModulated(param5, param4 - param0, PuzzleTile.field_g[this.field_k]);
         var8Lifetime4 = 32 % ((param1 + 70) / 33);
     }
 

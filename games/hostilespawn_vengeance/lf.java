@@ -41,17 +41,17 @@ class lf {
                 var2 <= 736 &&
                 576 >= var3) {
                 kf.clearInts(eh.field_a.field_D, 0, eh.field_a.field_D.length);
-                eh.field_a.a();
+                eh.field_a.bindAsRenderTarget();
                 var9.a(true, 128, (int)var6.field_c, 48, 48);
                 for (var7 = 0; eh.field_a.field_D.length > var7; var7++) {
                   if (eh.field_a.field_D[var7] != 0) {
                     eh.field_a.field_D[var7] = 1;
                   }
                 }
-                eh.field_a.e(1);
+                eh.field_a.addOutline(1);
                 SoftwareRasterizer.blurRectangle(32, 32, 0, 0, eh.field_a.field_u, eh.field_a.field_r);
                 o.field_n.setAsRasterTarget((byte) -98);
-                eh.field_a.b(var2 - 12 - 48, -48 + (-12 + var3), 92);
+                eh.field_a.drawWithOpacity(var2 - 12 - 48, -48 + (-12 + var3), 92);
               }
             }
           }

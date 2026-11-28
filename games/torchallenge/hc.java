@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hc extends ng {
+final class hc extends InteractiveWidget {
     static Sprite[] field_T;
     static boolean field_Q;
     static volatile long field_R;
@@ -313,7 +313,7 @@ final class hc extends ng {
         boolean stackIn_7_0 = false;
         boolean decompiledFrameRemainder0 = true;
         var1 = -73 % ((param0 + 52) / 54);
-        if (li.field_K >= 20 &&
+        if (NameSuggestionsPanel.field_K >= 20 &&
           ih.f((byte) -108) && (!(0 < uk.field_H) ||
           LevelDecoder.a((byte) -119))) {
           stackIn_7_0 = false;
@@ -334,9 +334,9 @@ final class hc extends ng {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_D = !this.field_D ? true : false;
-        super.a(param0, param1 ^ 0, param2, param3);
+        super.activateFromInput(param0, param1 ^ 0, param2, param3);
         if (param1 != -13461) {
           field_Q = true;
         }

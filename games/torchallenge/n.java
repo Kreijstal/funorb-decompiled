@@ -86,7 +86,7 @@ abstract class n extends v {
           if (fieldTemp$0 != this.field_nb) {
             this.field_eb.field_H = -((this.field_lb << 8) / this.field_nb) + 256;
           } else {
-            this.field_mb = ng.field_C;
+            this.field_mb = InteractiveWidget.field_C;
             this.a(this.field_gb + (12 + this.field_ib.field_l), this.field_hb, this.field_ib.field_p + 12, false);
             this.field_eb.field_H = 0;
             this.field_lb = 0;
@@ -229,7 +229,7 @@ abstract class n extends v {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_ib = param1;
-          if (ng.field_C != this.field_mb) {
+          if (InteractiveWidget.field_C != this.field_mb) {
             if (v.field_Y != this.field_mb) {
               this.field_lb = 0;
               this.field_mb = v.field_Y;

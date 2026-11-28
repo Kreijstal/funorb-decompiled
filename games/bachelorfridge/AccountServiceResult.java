@@ -61,7 +61,7 @@ final class AccountServiceResult {
           } else {
             stackIn_9_0 = pu.field_j.field_h.field_y[pu.field_j.field_h.field_b];
           }
-          dd.field_G = stackIn_9_0;
+          NameSuggestionsPanel.field_G = stackIn_9_0;
           vj.field_m = param0;
           if (null != rga.field_a) {
             var4_ref_ad__ = rga.field_a;

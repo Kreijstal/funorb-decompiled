@@ -106,7 +106,7 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static ResourceArchive a(boolean param0, int param1, int param2, int param3, boolean param4) {
         int var5 = 118 % ((-62 - param2) / 37);
-        return PcmOutputWorker.a(param3, param4, param1, (byte) 92, false, param0);
+        return PcmOutputWorker.createResourceArchiveWithDiskCache(param3, param4, param1, (byte) 92, false, param0);
     }
 
     final static boolean d(int param0) {

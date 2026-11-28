@@ -48,7 +48,7 @@ final class hb extends IntrusiveNode {
           }
           if (param3 > 0 &&
             param1 > 0) {
-            var21 = param4.d();
+            var21 = param4.copy();
             if (param5 > -11) {
               return;
             }
@@ -57,7 +57,7 @@ final class hb extends IntrusiveNode {
             var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param4.a();
+            param4.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param4.field_l * param2 + param7;
             var14 = -param3 + param4.field_l;
@@ -92,7 +92,7 @@ final class hb extends IntrusiveNode {
               }
               var13 = var13 + var14;
             }
-            var21.a(-param4.field_v, -param4.field_t);
+            var21.draw(-param4.field_v, -param4.field_t);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;

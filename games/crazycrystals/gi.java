@@ -116,9 +116,9 @@ final class gi extends pn implements Cloneable {
         int var7;
         if (param1 == 24 &&
           param2 == 24) {
-          fl.field_i[this.field_o >> 1].c(param4, -param2 + param5, PuzzleTile.field_g[this.field_p]);
+          fl.field_i[this.field_o >> 1].drawGrayModulated(param4, -param2 + param5, PuzzleTile.field_g[this.field_p]);
         } else {
-          fl.field_i[this.field_o >> 1].b(param4, -param2 + param5, param1 * 2, param2 * 3, PuzzleTile.field_g[this.field_p]);
+          fl.field_i[this.field_o >> 1].drawGrayModulatedScaled(param4, -param2 + param5, param1 * 2, param2 * 3, PuzzleTile.field_g[this.field_p]);
         }
         var7 = 101 % ((74 - param0) / 41);
     }

@@ -51,18 +51,18 @@ final class jf {
         }
         var9Lifetime1 = var17.field_C;
         ti.a((byte) -15);
-        var17.g();
+        var17.bindAsRenderTarget();
         SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c);
         Sprite var15 = new Sprite(var9Lifetime1, var9Lifetime1);
         Sprite var18 = var15;
-        var18.g();
-        var17.g(0, 0);
+        var18.bindAsRenderTarget();
+        var17.drawOpaque(0, 0);
         Sprite var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-        var11.g();
-        var17.g(-var17.field_y + var9Lifetime1, 0);
+        var11.bindAsRenderTarget();
+        var17.drawOpaque(-var17.field_y + var9Lifetime1, 0);
         Sprite var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_y, var9Lifetime1);
-        var12.g();
-        var17.g(-var9Lifetime1, 0);
+        var12.bindAsRenderTarget();
+        var17.drawOpaque(-var9Lifetime1, 0);
         tk.b(true);
         if (param2 != 18) {
           return;

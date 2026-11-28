@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nm extends sj implements vg {
-    private ck field_kb;
+final class nm extends sj implements WidgetActivationListener {
+    private InteractiveWidget field_kb;
     static String field_lb;
     static String field_jb;
     static int[] field_ib;
     static String field_mb;
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -45,11 +45,11 @@ final class nm extends sj implements vg {
         this.field_T = false;
     }
 
-    private final ck a(int param0, pg param1, String param2) {
-        ck var4 = null;
+    private final InteractiveWidget a(int param0, pg param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ck stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -57,11 +57,11 @@ final class nm extends sj implements vg {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ck(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.field_o = (ca) ((Object) new na());
           var5 = this.field_s - 6;
           if (param0 != 26414) {
-            this.field_kb = (ck) null;
+            this.field_kb = (InteractiveWidget) null;
           }
           this.field_s = this.field_s + 38;
           var4.b(0, -16 + (this.field_x - 14), var5, 15, 30);

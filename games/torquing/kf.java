@@ -32,7 +32,7 @@ final class kf extends UiWidget {
         if (param0 != -917474783) {
           kf.a(84);
         }
-        this.field_H = this.field_E.b();
+        this.field_H = this.field_E.copyMirroredHorizontally();
         this.field_G = new Sprite(this.height >> 1, this.height);
     }
 
@@ -259,27 +259,27 @@ final class kf extends UiWidget {
             this.field_C = (Sprite[]) null;
           }
           while (var5_int > var6) {
-            param1.d(var6, param3);
+            param1.draw(var6, param3);
             var6 = var6 + param1.field_s;
           }
           r.a(124);
           if (param0 + this.field_E.field_s >= SoftwareRasterizer.field_k) {
             GzipDecompressor.a((byte) -119, this.field_G);
-            param1.d(-this.field_x, 0);
-            param1.d(-this.field_x + 2 * this.field_A, 0);
+            param1.draw(-this.field_x, 0);
+            param1.draw(-this.field_x + 2 * this.field_A, 0);
             this.field_H.drawMultiply(0, 0);
             r.a(124);
-            this.field_G.d(param0, param3);
+            this.field_G.draw(param0, param3);
           }
           if (var5_int - this.field_E.field_s <= SoftwareRasterizer.field_a) {
             GzipDecompressor.a((byte) 119, this.field_G);
             for (var7 = -this.field_E.field_s + this.width + this.field_x; var7 > 2 * this.field_A; var7 = var7 - 2 * this.field_A) {
             }
-            param1.d(-var7, 0);
-            param1.d(2 * this.field_A - var7, 0);
+            param1.draw(-var7, 0);
+            param1.draw(2 * this.field_A - var7, 0);
             this.field_E.drawMultiply(0, 0);
             r.a(125);
-            this.field_G.d(-this.field_E.field_s + var5_int, param3);
+            this.field_G.draw(-this.field_E.field_s + var5_int, param3);
             return;
           }
           return;

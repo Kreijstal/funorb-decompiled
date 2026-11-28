@@ -22,7 +22,7 @@ final class bs extends IntrusiveNode {
             bs.a(-13);
           }
           var2 = new Sprite(param0.field_n, param0.field_o);
-          var2.b();
+          var2.bindAsRenderTarget();
           param0.drawSilhouette(0, 0, 65793);
           hga.field_U.a((byte) 14);
           stackIn_3_0 = var2;

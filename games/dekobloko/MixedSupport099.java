@@ -59,7 +59,7 @@ final class MixedSupport099 {
 
     private final boolean computeBoolean1227(int integerArgument1, int integerArgument2, int integerArgument3) {
         if (integerArgument1 == ~integerArgument2) {
-          MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(this.sceneWidgetState0097.integerState0892, this.sceneWidgetState0097.integerState0886, this.sceneWidgetState0097.integerState0896, this.sceneWidgetState0097.integerState0915, integerArgument3, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019, this.stringState0418, this.longState0041);
+          MixedSupport097.sceneWidgetPart007State0001 = new SceneWidgetPart007(this.sceneWidgetState0097.integerState0892, this.sceneWidgetState0097.integerState0886, this.sceneWidgetState0097.integerState0896, this.sceneWidgetState0097.integerState0915, integerArgument3, MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019, this.stringState0418, this.longState0041);
           return true;
         }
         return false;
@@ -153,7 +153,7 @@ final class MixedSupport099 {
                       this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(92, MixedSupport078.stringState0334, new String[]{stringLocal2}), 0, -30);
                     } else {
                       this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(101, GameDomainSupport004.stringState0283, new String[]{stringLocal2}), 0, -124);
-                      this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(108, UiComponentPart007.stringState0113, new String[]{stringLocal2}), 1, integerArgument2 ^ -29114);
+                      this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(108, NameSuggestionsPanel.stringState0113, new String[]{stringLocal2}), 1, integerArgument2 ^ -29114);
                     }
                   }
                 }
@@ -205,7 +205,7 @@ final class MixedSupport099 {
               this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(92, MixedSupport078.stringState0334, new String[]{stringLocal2}), 0, -30);
             } else {
               this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(101, GameDomainSupport004.stringState0283, new String[]{stringLocal2}), 0, -124);
-              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(108, UiComponentPart007.stringState0113, new String[]{stringLocal2}), 1, integerArgument2 ^ -29114);
+              this.sceneWidgetPart002State0002.performAction0560(NodeHashTableIterator.substituteIndexedPlaceholders(108, NameSuggestionsPanel.stringState0113, new String[]{stringLocal2}), 1, integerArgument2 ^ -29114);
             }
           }
         }

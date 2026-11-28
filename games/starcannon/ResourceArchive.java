@@ -556,7 +556,7 @@ final class ResourceArchive {
             0 != param3[1] ||
             param3[2] != 0 ||
             param3[3] != 0)) {
-            var35 = dk.extractBytes((byte) -56, this.field_h[param0], true);
+            var35 = InteractiveWidget.extractBytes((byte) -56, this.field_h[param0], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -564,7 +564,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = dk.extractBytes((byte) 90, this.field_h[param0], false);
+            var9 = InteractiveWidget.extractBytes((byte) 90, this.field_h[param0], false);
           }
           try {
             var36 = hc.a((byte) 74, var9);
@@ -742,7 +742,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.field_g[param1][param2] != null) {
-            var7 = dk.extractBytes((byte) -87, this.field_g[param1][param2], false);
+            var7 = InteractiveWidget.extractBytes((byte) -87, this.field_g[param1][param2], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");

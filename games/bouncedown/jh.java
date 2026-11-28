@@ -30,8 +30,8 @@ final class jh extends jd {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof wd) {
-            param3 = param3 & ((wd) (param1)).field_y;
+          if (param1 instanceof InteractiveWidget) {
+            param3 = param3 & ((InteractiveWidget) (param1)).field_y;
           }
           if (param3) {
             if (var6_int != 0) {

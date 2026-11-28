@@ -304,7 +304,7 @@ final class LevelRenderer {
             this.field_c[var6].syncPlayerPosition(false, var22[var6]);
           }
           if (!hn.field_t) {
-            ue.field_N.c(0, 0);
+            ue.field_N.drawOpaque(0, 0);
           } else {
             qr.field_l.a(this.field_s.field_e, 28580);
           }
@@ -754,7 +754,7 @@ final class LevelRenderer {
           if (hn.field_t) {
             qr.field_l.a(this.field_s.field_e, 28580);
           } else {
-            ue.field_N.c(0, 0);
+            ue.field_N.drawOpaque(0, 0);
           }
           sc.a(param3, ProxyAuthenticationRequiredException.field_f);
           var13Lifetime1 = param4.getSimulationPhase(9979);
@@ -1126,7 +1126,7 @@ final class LevelRenderer {
                 var24 = (param0 == 0) ? 5 : 7;
                 var27_int = -(ea.field_d[var24].field_x / 2) + 320;
                 var25 = 1;
-                ea.field_d[var24].e(var27_int, 70);
+                ea.field_d[var24].draw(var27_int, 70);
               }
               if (!param4.didSecondPlayerDie(-15531)) {
                 return;
@@ -1137,22 +1137,22 @@ final class LevelRenderer {
                 var27_int = var27_int + (ea.field_d[7].field_B + 20);
               }
               var28 = -(ea.field_d[var24].field_x / 2) + 320;
-              ea.field_d[var24].e(var28, var27_int);
+              ea.field_d[var24].draw(var28, var27_int);
               return;
             }
             if (var27_int == 3) {
-              ea.field_d[0].e(320 - ea.field_d[0].field_x / 2, 70);
+              ea.field_d[0].draw(320 - ea.field_d[0].field_x / 2, 70);
               va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
               return;
             }
             if (4 == var27_int) {
-              ea.field_d[6].e(-(ea.field_d[6].field_x / 2) + 320, -20);
+              ea.field_d[6].draw(-(ea.field_d[6].field_x / 2) + 320, -20);
               va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
               return;
             }
             if (var27_int == 6) {
               if (param4.field_w != 2) {
-                ea.field_d[1].e(320 - ea.field_d[1].field_x / 2, 70);
+                ea.field_d[1].draw(320 - ea.field_d[1].field_x / 2, 70);
               }
               if (0 == param4.field_w) {
                 va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
@@ -1170,34 +1170,34 @@ final class LevelRenderer {
                     if (var28 < 50) {
                       if (0 != param8) {
                         var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, pe.field_L, -13);
-                        ea.field_d[2].e(320 - ea.field_d[2].field_x / 2, 70);
+                        ea.field_d[2].draw(320 - ea.field_d[2].field_x / 2, 70);
                       } else {
                         var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, ad.field_b, -118);
-                        ea.field_d[3].e(320 - ea.field_d[3].field_x / 2, 70);
+                        ea.field_d[3].draw(320 - ea.field_d[3].field_x / 2, 70);
                       }
                     } else {
                       var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, DualLinkNode.field_q, 90);
-                      ea.field_d[4].e(-(ea.field_d[4].field_x / 2) + 320, 70);
+                      ea.field_d[4].draw(-(ea.field_d[4].field_x / 2) + 320, 70);
                     }
                   } else {
                     if (param8 != 0) {
                       var29_ref_String = Vertigo2.a(new String[]{Integer.toString(-var28 + 100), MusicPatchPcmStream.field_x}, ad.field_b, 47);
-                      ea.field_d[3].e(-(ea.field_d[3].field_x / 2) + 320, 70);
+                      ea.field_d[3].draw(-(ea.field_d[3].field_x / 2) + 320, 70);
                     } else {
                       var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, pe.field_L, -126);
-                      ea.field_d[2].e(320 - ea.field_d[2].field_x / 2, 70);
+                      ea.field_d[2].draw(320 - ea.field_d[2].field_x / 2, 70);
                     }
                   }
                 } else {
                   var29_ref_String = Vertigo2.a(new String[]{Integer.toString(var28), MusicPatchPcmStream.field_A}, DualLinkNode.field_q, -128);
                   if (50 >= var28) {
                     if (var28 < 50) {
-                      ea.field_d[10].e(-(ea.field_d[10].field_x / 2) + 320, 70);
+                      ea.field_d[10].draw(-(ea.field_d[10].field_x / 2) + 320, 70);
                     } else {
-                      ea.field_d[4].e(320 - ea.field_d[4].field_x / 2, 70);
+                      ea.field_d[4].draw(320 - ea.field_d[4].field_x / 2, 70);
                     }
                   } else {
-                    ea.field_d[9].e(320 - ea.field_d[9].field_x / 2, 70);
+                    ea.field_d[9].draw(320 - ea.field_d[9].field_x / 2, 70);
                   }
                 }
                 va.field_s.a(var29_ref_String, 16777215, -1, 320, 200, 2);
@@ -1469,7 +1469,7 @@ final class LevelRenderer {
           }
           if (param0) {
             if (!hn.field_t) {
-              ue.field_N.c(0, 0);
+              ue.field_N.drawOpaque(0, 0);
             } else {
               qr.field_l.a(this.field_s.field_e, 28580);
             }

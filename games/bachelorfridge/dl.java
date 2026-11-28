@@ -204,7 +204,7 @@ final class dl extends jla {
         String var2 = null;
         int var3 = BachelorFridge.field_y;
         if (null != vj.field_m) {
-          vj.field_m.c(0, 0);
+          vj.field_m.drawOpaque(0, 0);
         }
         SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
         ByteStorage.field_e.draw(-5, 0);
@@ -216,8 +216,8 @@ final class dl extends jla {
         if (li.field_m) {
           var2 = BasicMoveDefinition.field_m;
         } else {
-          if (null != dd.field_G) {
-            var2 = lga.a(true, new String[]{dd.field_G}, jea.field_d);
+          if (null != NameSuggestionsPanel.field_G) {
+            var2 = lga.a(true, new String[]{NameSuggestionsPanel.field_G}, jea.field_d);
           } else {
             var2 = kw.field_n;
           }

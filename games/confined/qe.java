@@ -146,8 +146,8 @@ final class qe extends am {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_H instanceof rg) ||
-            ((rg) (this.field_H)).field_L) &&
+          if ((!(this.field_H instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_H)).field_L) &&
             1 == this.field_o) {
             var5_int = ld.field_l + (-this.field_N - param2);
             var6 = -param3 - this.field_R + jh.field_R;

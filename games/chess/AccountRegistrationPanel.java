@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ma implements nn, mj, wl {
+final class AccountRegistrationPanel extends ma implements nn, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_Z;
     private ki field_P;
     private ValidatedTextField field_T;
     static of field_R;
-    private fb field_M;
+    private InteractiveWidget field_M;
     static int[] field_S;
-    private fb field_V;
+    private InteractiveWidget field_V;
     private ValidatedTextField field_Q;
     private ValidatedTextField field_L;
-    t field_Y;
+    NameSuggestionsPanel field_Y;
     private se field_K;
     static PlatformTaskDispatcher field_N;
     private ValidatedTextField field_W;
@@ -19,7 +19,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
     static jg field_O;
     static String field_X;
 
-    public final void a(fb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -187,7 +187,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         return false;
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -267,8 +267,8 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         }
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_T.getFieldValidator(-108))).h(-121);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_T.getFieldValidator(-108))).invalidateCheckedName(-121);
         if (param0 != 120) {
           AccountRegistrationPanel.a((byte) 99, true);
         }
@@ -295,7 +295,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
           return false;
         }
         if (param0 >= -45) {
-          this.field_V = (fb) null;
+          this.field_V = (InteractiveWidget) null;
         }
         int var2 = -1;
         try {
@@ -456,8 +456,8 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         this.field_W = new ValidatedTextField("", (rg) null, 3);
         int var1 = 1;
         this.field_P = new ki("", (rg) null, var1 != 0);
-        this.field_V = new fb(ei.field_r, (rg) null);
-        this.field_M = new fb(vf.field_c, (rg) null);
+        this.field_V = new InteractiveWidget(ei.field_r, (rg) null);
+        this.field_M = new InteractiveWidget(vf.field_c, (rg) null);
         this.field_T.field_j = vc.field_a;
         this.field_Q.field_j = MusicPatchPcmStream.field_o;
         this.field_L.field_j = hl.field_q;
@@ -511,7 +511,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
         this.field_V.field_p = (rg) (this);
         this.b(this.field_V, 95);
         this.b(this.field_M, 95);
-        this.field_Y = new t((wl) (this));
+        this.field_Y = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_Y.a(20 + this.field_T.field_r, 34, 150, -60 + (-this.field_T.field_y + this.field_y) - this.field_T.field_u, 60 + this.field_T.field_y + this.field_T.field_u);
         this.b(this.field_Y, 95);
         this.a(0, 34, var6 + var3 + 55, 496, 0);
@@ -600,7 +600,7 @@ final class AccountRegistrationPanel extends ma implements nn, mj, wl {
 
     private final String j(int param0) {
         if (param0 != 25) {
-          this.field_Y = (t) null;
+          this.field_Y = (NameSuggestionsPanel) null;
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";

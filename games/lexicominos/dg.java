@@ -58,13 +58,13 @@ final class dg {
         SoftwareRasterizer.clearRaster();
         mc.field_k = 0;
         rg.b(0);
-        RgbSprite var2 = var1.c();
+        RgbSprite var2 = var1.copy();
         for (var3 = 0; var3 < 15; var3++) {
-          var2.c(-2, -2, 16777215);
+          var2.drawSilhouette(-2, -2, 16777215);
           SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
         }
-        t.field_a.b();
-        var1.f(0, 0);
+        t.field_a.bindAsRenderTarget();
+        var1.drawHalfSize(0, 0);
         if (param0 != 19681) {
           return;
         }

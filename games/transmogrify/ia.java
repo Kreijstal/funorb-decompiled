@@ -34,7 +34,7 @@ final class ia extends IntrusiveNode {
                 ia.a((java.applet.Applet) null, 40, (String) null);
               }
               var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = dh.a(param0, (byte) -118, var3);
+              var3 = NameSuggestionsPanel.a(param0, (byte) -118, var3);
               ea.a((byte) 68, param0, true, var3.toString());
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

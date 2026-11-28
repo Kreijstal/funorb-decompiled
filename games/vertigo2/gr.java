@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gr extends sp implements ij {
+final class gr extends sp implements WidgetActivationListener {
     static int field_Z;
-    private d field_X;
+    private InteractiveWidget field_X;
     static int field_Y;
     static int[][] field_W;
     static String field_ab;
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         try {
           if (this.field_X == param1) {
             this.m(19447);
@@ -132,11 +132,11 @@ final class gr extends sp implements ij {
         this.field_I = false;
     }
 
-    private final d a(int param0, uf param1, String param2) {
-        d var4 = null;
+    private final InteractiveWidget a(int param0, uf param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        d stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -144,7 +144,7 @@ final class gr extends sp implements ij {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new d(param2, param1);
+          var4 = new InteractiveWidget(param2, param1);
           var4.listener = (WidgetListener) ((Object) new vo());
           var5 = param0 + this.height;
           this.height = this.height + 38;

@@ -1594,7 +1594,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_namelength", param0 - 72);
                 if (null != var2) {
-                  cm.field_B = be.a(var2, (byte) 93);
+                  NameSuggestionsPanel.field_B = be.a(var2, (byte) 93);
                 }
                 var2 = te.a("create_alert_namechars", -17);
                 if (null != var2) {
@@ -2568,15 +2568,15 @@ final class ll {
                 }
                 var2 = te.a("members_expansion_benefits,0", -20);
                 if (null != var2) {
-                  cm.field_z[0] = be.a(var2, (byte) 63);
+                  NameSuggestionsPanel.field_z[0] = be.a(var2, (byte) 63);
                 }
                 var2 = te.a("members_expansion_benefits,1", -109);
                 if (var2 != null) {
-                  cm.field_z[1] = be.a(var2, (byte) -70);
+                  NameSuggestionsPanel.field_z[1] = be.a(var2, (byte) -70);
                 }
                 var2 = te.a("members_expansion_benefits,2", param0 ^ -43);
                 if (var2 != null) {
-                  cm.field_z[2] = be.a(var2, (byte) -116);
+                  NameSuggestionsPanel.field_z[2] = be.a(var2, (byte) -116);
                 }
                 var2 = te.a("members_expansion_price_top", param0 ^ -39);
                 if (var2 != null) {

@@ -34,8 +34,8 @@ final class aj extends jh {
         int var6 = 0;
         int var5_intLifetime1;
         try {
-          if ((!(this.field_C instanceof lg) ||
-            ((lg) (this.field_C)).field_x) &&
+          if ((!(this.field_C instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_C)).field_x) &&
             this.field_l == 1) {
             var5_int = n.field_t - this.field_K - param3;
             var6 = k.field_e + (-this.field_G - param2);

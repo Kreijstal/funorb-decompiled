@@ -268,14 +268,14 @@ final class sg {
           var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new w(var4, true);
-          var14.a(-127, var13.c());
-          var13.a();
+          var14.a(-127, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new w(var4, true);
-          var14Lifetime1.a(-118, var13.c());
-          var13.a();
+          var14Lifetime1.a(-118, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new w(var4, true);
-          var14Lifetime2.a(-34, var13.c());
-          var13.a();
+          var14Lifetime2.a(-34, var13.copy());
+          var13.rotateClockwise();
           var20 = new w(var4, true);
           var20.a(-85, var13);
         } catch (RuntimeException runtimeException) {

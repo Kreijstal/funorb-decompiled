@@ -963,7 +963,7 @@ final class hj {
                     this.field_d > 200) {
                     fieldTemp$0 = this.field_Y + 1;
                     this.field_Y = this.field_Y + 1;
-                    if (fieldTemp$0 == cm.field_F.length) {
+                    if (fieldTemp$0 == NameSuggestionsPanel.field_F.length) {
                       this.field_Y = 0;
                     }
                   }
@@ -1118,10 +1118,10 @@ final class hj {
                       }
                       this.field_Y = 0;
                       bl.a(50, kb.field_d);
-                      this.field_R.e();
+                      this.field_R.bindAsRenderTarget();
                       lb.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
                       sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
-                      this.field_f.e();
+                      this.field_f.bindAsRenderTarget();
                       lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
                       sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, sb.field_r.field_C, 1, -1);
                       ac.field_a.setAsRasterTarget((byte) 119);
@@ -1190,7 +1190,7 @@ final class hj {
               if ((this.field_d & 15) == 0) {
                 fieldTemp$5 = this.field_Y + 1;
                 this.field_Y = this.field_Y + 1;
-                if (fieldTemp$5 == cm.field_F.length) {
+                if (fieldTemp$5 == NameSuggestionsPanel.field_F.length) {
                   this.field_Y = 0;
                 }
               }
@@ -1413,7 +1413,7 @@ final class hj {
               var4 = incrementValue$0 + this.field_c;
               var4 = var4 % 4;
               for (var5 = 0; var5 < 640; var5 = var5 + m.field_i[0].field_m) {
-                m.field_i[var4].a(var5, var2_int);
+                m.field_i[var4].drawOpaque(var5, var2_int);
               }
               var2_int = var2_int + m.field_i[0].field_n;
             }
@@ -1421,8 +1421,8 @@ final class hj {
             if (aa.field_a != 3) {
               if (aa.field_a == 0) {
                 var2_int = -((-30 + this.field_ib) * 255 / 65) + 255;
-                fi.field_a[fi.field_a.length - 1].a(0, 0, var2_int, 15387868);
-                DebouncedFieldValidator.field_d.e(-(DebouncedFieldValidator.field_d.field_m >> 2) + 320, this.field_ib);
+                fi.field_a[fi.field_a.length - 1].drawBlendedTowardColor(0, 0, var2_int, 15387868);
+                DebouncedFieldValidator.field_d.drawHalfSize(-(DebouncedFieldValidator.field_d.field_m >> 2) + 320, this.field_ib);
                 SoftwareRasterizer.setClip(0, 0, 640, 70);
                 SoftwareRasterizer.addRadialGlow(5120, (DebouncedFieldValidator.field_d.field_m >> 2) + this.field_ib << 4, DebouncedFieldValidator.field_d.field_m << 3, 50, cf.field_a);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
@@ -1441,7 +1441,7 @@ final class hj {
                 }
                 SoftwareRasterizer.fillRectangle(77, var2_int + 145, 486, 145, 8374005);
                 SoftwareRasterizer.setClip(0, 0, 640, 480);
-                DebouncedFieldValidator.field_d.c(320 - (DebouncedFieldValidator.field_d.field_m >> 1), this.field_ib);
+                DebouncedFieldValidator.field_d.draw(320 - (DebouncedFieldValidator.field_d.field_m >> 1), this.field_ib);
               }
             }
           }
@@ -1452,7 +1452,7 @@ final class hj {
             stackIn_45_0 = (this.field_ib >= 170) ? 1 : 0;
             var2_intLifetime1 = stackIn_45_0;
             var3Lifetime1 = -qa.field_i.field_n + (this.field_ib - 220);
-            fe.field_f[this.field_c].b(0, 0, 100);
+            fe.field_f[this.field_c].drawWithOpacity(0, 0, 100);
             var4Lifetime1 = 255 * (-11 + this.field_ib) / 306;
             if (var4Lifetime1 > 100) {
               var4Lifetime1 = 100;
@@ -1498,13 +1498,13 @@ final class hj {
               ac.field_a.setAsRasterTarget((byte) 110);
             }
             if (var2_intLifetime1 != 0) {
-              qa.field_i.c(-qa.field_i.field_m + 320 - (qa.field_i.field_m >> 1), var3Lifetime1);
+              qa.field_i.draw(-qa.field_i.field_m + 320 - (qa.field_i.field_m >> 1), var3Lifetime1);
             }
           } else {
             if (aa.field_a == 0) {
               SoftwareRasterizer.setClip(0, 0, 640, 480);
-              fi.field_a[0].c(0, 0);
-              j.field_f[this.field_p].b(this.field_a, this.field_ob, this.field_i, this.field_bb);
+              fi.field_a[0].draw(0, 0);
+              j.field_f[this.field_p].drawScaled(this.field_a, this.field_ob, this.field_i, this.field_bb);
               var2_intLifetime1 = 80;
               var3Lifetime1 = 0;
               for (var4Lifetime1 = 95999; var4Lifetime1 >= 0; var4Lifetime1--) {
@@ -1515,18 +1515,18 @@ final class hj {
                   var2_intLifetime1 = 80;
                 }
               }
-              this.field_N.c();
+              this.field_N.flipHorizontal();
               SoftwareRasterizer.setRasterBuffer(this.field_N.field_s, this.field_N.field_k, this.field_N.field_j);
               kl.a(100, 5, this.field_d, 0, 0, this.field_N.field_k, this.field_N.field_j);
-              this.field_q.e();
-              this.field_N.a(this.field_N.field_m << 3, this.field_N.field_n << 3, 3200, 1600, 63535, 4096);
+              this.field_q.bindAsRenderTarget();
+              this.field_N.drawRotatedAboutNearest(this.field_N.field_m << 3, this.field_N.field_n << 3, 3200, 1600, 63535, 4096);
               ac.field_a.setAsRasterTarget((byte) 116);
               SoftwareRasterizer.setClip(80, 0, 560, 480);
-              fi.field_a[1].c(0, 0);
-              this.field_q.b(80, 317, 580, 200, 100);
+              fi.field_a[1].draw(0, 0);
+              this.field_q.drawScaledAdditive(80, 317, 580, 200, 100);
               SoftwareRasterizer.setClip(80, 316, 560, 371);
               var3Lifetime1 = 70;
-              fi.field_a[0].c(0, 0);
+              fi.field_a[0].draw(0, 0);
               var4Lifetime1 = 0;
               while (var3Lifetime1 < 290) {
                 SoftwareRasterizer.setClip(0, var3Lifetime1, 640, var3Lifetime1 + 2);
@@ -1535,25 +1535,25 @@ final class hj {
                 var4Lifetime1 += 2;
               }
               SoftwareRasterizer.setClip(80, 0, 560, 480);
-              j.field_f[this.field_p].b(this.field_a, this.field_ob, this.field_i, this.field_bb);
+              j.field_f[this.field_p].drawScaled(this.field_a, this.field_ob, this.field_i, this.field_bb);
               SoftwareRasterizer.resetClip();
             }
           }
           if (this.field_C &&
             aa.field_a == 1) {
-            pc.field_U[this.field_x].c(this.field_X, this.field_h);
+            pc.field_U[this.field_x].draw(this.field_X, this.field_h);
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < ib.field_c; var2_intLifetime2++) {
             var3Lifetime2 = pd.field_f[var2_intLifetime2] - (dj.field_a[0].field_m >> 1);
             var4Lifetime2 = 0;
             for (var5Lifetime2 = 0; var5Lifetime2 < mc.field_e[var2_intLifetime2].length; var5Lifetime2++) {
-              dj.field_a[mc.field_e[var2_intLifetime2][var5Lifetime2]].c(var3Lifetime2, var4Lifetime2);
+              dj.field_a[mc.field_e[var2_intLifetime2][var5Lifetime2]].draw(var3Lifetime2, var4Lifetime2);
               var4Lifetime2 = var4Lifetime2 + (dj.field_a[var5Lifetime2].field_n - 1);
             }
           }
           ll.a(24733);
           ci.a(-2865);
-          DequeCursor.field_a[1].c(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
+          DequeCursor.field_a[1].draw(20 + this.field_M, -wl.field_f[0].field_n + (this.field_k - 13));
           if (!wd.field_h.isEmpty(11253)) {
             var22_ref = (ki) (wd.field_h.beginBackward((byte) -117));
             if (var22_ref != null) {
@@ -1670,9 +1670,9 @@ final class hj {
           SoftwareRasterizer.fillRectangleAlpha(560, var6Lifetime1, 10, -var6Lifetime1 + 480, var3Lifetime4, 120);
           ByteStorage.b(0);
           var7 = qh.field_a[this.field_ab];
-          var7.b(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
-          lb.field_E[0].c(0, 0);
-          lb.field_E[1].c(640 - lb.field_E[1].field_m, 0);
+          var7.drawRotatedAboutBilinear(var7.field_m << 3, var7.field_n << 3, (int)this.field_B << 4, (int)this.field_Z << 4, this.field_g, 4096);
+          lb.field_E[0].draw(0, 0);
+          lb.field_E[1].draw(640 - lb.field_E[1].field_m, 0);
           var8Lifetime4 = 0;
           var9_ref_ki = (ki) (wd.field_h.beginBackward((byte) -117));
           while (var9_ref_ki != null) {
@@ -1686,17 +1686,17 @@ final class hj {
                   var10_ref_le = ak.field_t[this.field_lb[-1 + var8Lifetime4]];
                 }
                 if (this.field_cb[var8Lifetime4 - 1] >= 10) {
-                  var10_ref_le.c((int)((float)var9_ref_ki.field_G + var9_ref_ki.field_B), (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y));
+                  var10_ref_le.draw((int)((float)var9_ref_ki.field_G + var9_ref_ki.field_B), (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y));
                 } else {
                   var11Lifetime1 = var10_ref_le.field_m * this.field_cb[var8Lifetime4 - 1] / 10;
-                  var10_ref_le.d((int)((float)var9_ref_ki.field_G + var9_ref_ki.field_B) + (-var11Lifetime1 + var10_ref_le.field_m) / 2, (var10_ref_le.field_m - var11Lifetime1) / 2 + (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y), var11Lifetime1, var11Lifetime1);
+                  var10_ref_le.drawDownscaledAreaAveraged((int)((float)var9_ref_ki.field_G + var9_ref_ki.field_B) + (-var11Lifetime1 + var10_ref_le.field_m) / 2, (var10_ref_le.field_m - var11Lifetime1) / 2 + (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y), var11Lifetime1, var11Lifetime1);
                 }
               } else {
                 if (this.field_cb[var8Lifetime4 - 1] >= 10) {
                   var9_ref_ki.a((byte) -97);
                 } else {
                   var10Lifetime1 = var9_ref_ki.field_I.field_m * this.field_cb[-1 + var8Lifetime4] / 10;
-                  var9_ref_ki.field_I.d((-var10Lifetime1 + var9_ref_ki.field_I.field_m) / 2 + (int)(var9_ref_ki.field_B + (float)var9_ref_ki.field_G), (-var10Lifetime1 + var9_ref_ki.field_I.field_m) / 2 + (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y), var10Lifetime1, var10Lifetime1);
+                  var9_ref_ki.field_I.drawDownscaledAreaAveraged((-var10Lifetime1 + var9_ref_ki.field_I.field_m) / 2 + (int)(var9_ref_ki.field_B + (float)var9_ref_ki.field_G), (-var10Lifetime1 + var9_ref_ki.field_I.field_m) / 2 + (int)(var9_ref_ki.field_q + (float)var9_ref_ki.field_y), var10Lifetime1, var10Lifetime1);
                 }
               }
               var8Lifetime4++;
@@ -1714,9 +1714,9 @@ final class hj {
             var10Lifetime2 = 148 + 59 * var8Lifetime4 - 59;
             if (this.field_cb[-1 + var8Lifetime4] < 10) {
               var11Lifetime2 = var9_ref_le.field_m * this.field_cb[var8Lifetime4 - 1] / 10;
-              var9_ref_le.d(-(var9_ref_le.field_m / 2) + (-var11Lifetime2 + var9_ref_le.field_m) / 2 + 602, var10Lifetime2 - var9_ref_le.field_m / 2 + (var9_ref_le.field_m - var11Lifetime2) / 2, var11Lifetime2, var11Lifetime2);
+              var9_ref_le.drawDownscaledAreaAveraged(-(var9_ref_le.field_m / 2) + (-var11Lifetime2 + var9_ref_le.field_m) / 2 + 602, var10Lifetime2 - var9_ref_le.field_m / 2 + (var9_ref_le.field_m - var11Lifetime2) / 2, var11Lifetime2, var11Lifetime2);
             } else {
-              var9_ref_le.c(602 - var9_ref_le.field_m / 2, -(var9_ref_le.field_m / 2) + var10Lifetime2);
+              var9_ref_le.draw(602 - var9_ref_le.field_m / 2, -(var9_ref_le.field_m / 2) + var10Lifetime2);
             }
           }
           var9Lifetime3 = (23040 - 144 * (480 - this.field_O)) / 480;
@@ -1725,7 +1725,7 @@ final class hj {
           }
           boolean decompiledFrameRemainder0 = true;
           SoftwareRasterizer.fillRectangleAlpha(37, 460, 4, 20, 1203134, 120);
-          j.field_g.c(-(j.field_g.field_m >> 1) + this.field_M - 20, -j.field_g.field_n + this.field_k);
+          j.field_g.draw(-(j.field_g.field_m >> 1) + this.field_M - 20, -j.field_g.field_n + this.field_k);
           if (2 == this.field_u && (2 <= this.field_Y ||
             4 == this.field_jb)) {
             var24 = AwtRasterBuffer.field_a[2][this.field_Y];
@@ -1738,19 +1738,19 @@ final class hj {
             } else {
               var11Lifetime3 = -var11Lifetime3 + 65535;
             }
-            var10_ref_leLifetime1.b(var24.field_m << 3, 160, bl.field_f << 4, mh.field_D << 4, var11Lifetime3, 4096);
+            var10_ref_leLifetime1.drawRotatedAboutBilinear(var24.field_m << 3, 160, bl.field_f << 4, mh.field_D << 4, var11Lifetime3, 4096);
             decompiledFrameRemainder0 = false;
           }
           else {
             var25 = AwtRasterBuffer.field_a[this.field_u][this.field_Y];
             var10_ref_leLifetime1Lifetime1 = var25;
-            var10_ref_leLifetime1Lifetime1.c(-100 + this.field_M, -var25.field_n + this.field_k - 13);
+            var10_ref_leLifetime1Lifetime1.draw(-100 + this.field_M, -var25.field_n + this.field_k - 13);
           }
           boolean decompiledFrameRemainder1 = true;
-          wl.field_f[this.field_U].c(-70 + this.field_M, this.field_k + (-13 - wl.field_f[0].field_n));
+          wl.field_f[this.field_U].draw(-70 + this.field_M, this.field_k + (-13 - wl.field_f[0].field_n));
           var10Lifetime3 = -this.field_z;
-          ci.field_d.a(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
-          DequeCursor.field_a[0].c(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
+          ci.field_d.drawRotatedAboutNearest(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
+          DequeCursor.field_a[0].draw(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
           fa.f(1);
           BoundedRandomAccessFile.field_e.drawCentred(this.field_j.toString(), 40, 124, 16777215, -1);
           BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
@@ -1762,8 +1762,8 @@ final class hj {
               if (var12 > 40) {
                 var12 = 40;
               }
-              this.field_R.b(150, 260 + (-var12 + 40) / 2, 340, var12);
-              this.field_f.b(150, (-var12 + 40) / 2 + 340, 340, var12);
+              this.field_R.drawScaled(150, 260 + (-var12 + 40) / 2, 340, var12);
+              this.field_f.drawScaled(150, (-var12 + 40) / 2 + 340, 340, var12);
             } else {
               if (this.field_jb != 2) {
                 if (3 != this.field_jb) {
@@ -1773,7 +1773,7 @@ final class hj {
                         if (this.field_d < 32) {
                           f.a(this.field_d, (byte) 117);
                         }
-                        ph.field_d.a(0, 0);
+                        ph.field_d.drawOpaque(0, 0);
                         for (var12 = 0; var12 < SecondaryNodeDeque.field_c.length; var12++) {
                           SecondaryNodeDeque.field_c[var12].b(el.field_b[var12][0], el.field_b[var12][1]);
                         }
@@ -1797,16 +1797,16 @@ final class hj {
                         sb.field_r.drawCentred(var13, 320, 319, 6776679, -1);
                         sb.field_r.drawCentred(var13, 320, 320, 16724736, -1);
                         sb.field_r.drawCentredAlpha(var13, 330, 330, 6776679, -1, 50);
-                        AwtRasterBuffer.field_a[this.field_u][this.field_Y].c(-(AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_j / 2);
+                        AwtRasterBuffer.field_a[this.field_u][this.field_Y].draw(-(AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_j / 2);
                         var21 = 0;
                         var14 = var21;
                         while (var21 < 5) {
-                          nh.field_f[0][var21][this.field_Y].c(-16 + (320 - 60 * var21 + 120), -(Math.abs(var21 - 2) * 10) + 360);
+                          nh.field_f[0][var21][this.field_Y].draw(-16 + (320 - 60 * var21 + 120), -(Math.abs(var21 - 2) * 10) + 360);
                           var21++;
                         }
                         f.a(64 - this.field_d, (byte) 111);
                         if (600 < this.field_d) {
-                          Bzip2State.field_D[4].c(0, 0, this.field_d - 600, -700 + this.field_d);
+                          Bzip2State.field_D[4].drawWithVerticalOpacityGradient(0, 0, this.field_d - 600, -700 + this.field_d);
                         }
                         if (!(this.field_d <= 1000)) {
                           f.a(this.field_d - 1000, (byte) 118);
@@ -1818,9 +1818,9 @@ final class hj {
                       }
                     } else {
                       if (this.field_d < 400) {
-                        ph.field_d.a(0, 0);
+                        ph.field_d.drawOpaque(0, 0);
                         SecondaryNodeDeque.field_c[0].b(el.field_b[0][0], el.field_b[0][1]);
-                        cm.field_F[this.field_Y].c(hc.field_h[aa.field_a][0], this.a(-97, 0, aa.field_a));
+                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[aa.field_a][0], this.a(-97, 0, aa.field_a));
                       }
                       if (this.field_d > 350 &&
                         400 > this.field_d) {
@@ -1842,41 +1842,41 @@ final class hj {
                         }
                         ma.a(Bzip2State.field_D[aa.field_a], 0, 0, 640, var12, var13_int);
                       } else {
-                        Bzip2State.field_D[aa.field_a].a(0, 0);
+                        Bzip2State.field_D[aa.field_a].drawOpaque(0, 0);
                       }
                     }
                     if (450 < this.field_d &&
                       3 > aa.field_a) {
-                      ph.field_d.a(0, 0);
+                      ph.field_d.drawOpaque(0, 0);
                       for (var13_int = 0; var13_int <= aa.field_a + 1; var13_int++) {
                         SecondaryNodeDeque.field_c[var13_int].b(el.field_b[var13_int][0], el.field_b[var13_int][1]);
                       }
-                      var13_int = hc.field_h[1 + aa.field_a][0] + (cm.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
-                      var14 = (-ValidatedTextField.field_L[this.field_Y].field_n + cm.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
+                      var13_int = hc.field_h[1 + aa.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                      var14 = (-ValidatedTextField.field_L[this.field_Y].field_n + NameSuggestionsPanel.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
                       if (this.field_d >= 650) {
                         if (this.field_d < 700) {
                           if (aa.field_a != 2) {
-                            ValidatedTextField.field_L[this.field_Y].c(var13_int, var14);
+                            ValidatedTextField.field_L[this.field_Y].draw(var13_int, var14);
                           } else {
-                            ValidatedTextField.field_L[this.field_Y].f(var13_int, var14);
+                            ValidatedTextField.field_L[this.field_Y].drawFlippedHorizontal(var13_int, var14);
                           }
                         }
-                        cm.field_F[this.field_Y].c(hc.field_h[aa.field_a + 1][0], this.a(89, 650, aa.field_a + 1));
+                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[aa.field_a + 1][0], this.a(89, 650, aa.field_a + 1));
                       } else {
                         var15 = -400 + this.field_d - 50;
-                        var16 = hc.field_h[aa.field_a][0] + (cm.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
-                        var17 = (cm.field_F[this.field_Y].field_n - ValidatedTextField.field_L[this.field_Y].field_n) / 2 + hc.field_h[aa.field_a][1];
+                        var16 = hc.field_h[aa.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                        var17 = (NameSuggestionsPanel.field_F[this.field_Y].field_n - ValidatedTextField.field_L[this.field_Y].field_n) / 2 + hc.field_h[aa.field_a][1];
                         var18 = var16 + (-var16 + var13_int) * var15 / 200;
                         var19 = (var14 - var17) * var15 / 200 + var17;
                         if (aa.field_a == 2) {
-                          ValidatedTextField.field_L[this.field_Y].f(var18, var19);
+                          ValidatedTextField.field_L[this.field_Y].drawFlippedHorizontal(var18, var19);
                         } else {
-                          ValidatedTextField.field_L[this.field_Y].c(var18, var19);
+                          ValidatedTextField.field_L[this.field_Y].draw(var18, var19);
                         }
                       }
                     } else {
                       if (this.field_d > 450) {
-                        ke.field_i.a(0, 0);
+                        ke.field_i.drawOpaque(0, 0);
                       }
                     }
                     if (this.field_d > 400 &&
@@ -1897,8 +1897,8 @@ final class hj {
                   f.a(50 - this.field_d, (byte) 97);
                 }
               } else {
-                this.field_R.c(150, 260);
-                this.field_f.c(150, 340);
+                this.field_R.draw(150, 260);
+                this.field_f.draw(150, 340);
                 f.a(this.field_d, (byte) 110);
               }
             }
@@ -1912,7 +1912,7 @@ final class hj {
                 }
                 ma.a(ib.field_d, 0, 0, 480, var12, var13_int);
               } else {
-                ib.field_d.a(0, 0);
+                ib.field_d.drawOpaque(0, 0);
               }
             }
           }
@@ -1974,7 +1974,7 @@ final class hj {
           this.field_r = 1;
           vi.a(true);
           fl.b(-114);
-          this.field_m.e();
+          this.field_m.bindAsRenderTarget();
           for (var1_int = 0; var1_int < 134; var1_int++) {
             SoftwareRasterizer.addPixel(pf.a((byte) 109, 480), pf.a((byte) -100, 100), 16777215);
           }

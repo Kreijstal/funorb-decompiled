@@ -241,12 +241,12 @@ abstract class ByteStorage {
             field_a = (String) null;
           }
           if (ta.field_f != null) {
-            ta.field_f.field_D.a(param1, 17036);
+            ta.field_f.field_D.setNameSuggestions(param1, 17036);
           }
           if (null == DebouncedFieldValidator.field_g) {
             return;
           }
-          DebouncedFieldValidator.field_g.field_B.a(param1, 17036);
+          DebouncedFieldValidator.field_g.field_B.setNameSuggestions(param1, 17036);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -53,7 +53,7 @@ final class LetterTile extends IntrusiveNode {
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
-        AccountRegistrationPanel.field_K.b(param3 + this.x, param1 + this.y, LoginPanel.field_H[this.carryoverFlag]);
+        AccountRegistrationPanel.field_K.drawGrayModulated(param3 + this.x, param1 + this.y, LoginPanel.field_H[this.carryoverFlag]);
         if (!this.doublesWordScore) {
           var14 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
           var6 = this.field_n.field_c.charWidth(this.letter);
@@ -74,9 +74,9 @@ final class LetterTile extends IntrusiveNode {
         }
         param0 = param0 >> 3;
         if ((param0 & 31) == 31) {
-          AccountRegistrationPanel.field_K.b(this.x + param3, this.y + param1, 10539762);
+          AccountRegistrationPanel.field_K.drawGrayModulated(this.x + param3, this.y + param1, 10539762);
         } else {
-          MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
+          MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].draw(this.x + param3, param1 + this.y);
           var12 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
           var6Lifetime1 = this.field_n.field_c.charWidth(this.letter);
           var7Lifetime1 = hk.field_a.stringWidth(var12);
@@ -94,7 +94,7 @@ final class LetterTile extends IntrusiveNode {
           hk.field_a.drawString(var12, param3 + this.x + var8Lifetime1, param1 + 28 + this.y, 1, -1);
           return;
         }
-        MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
+        MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].draw(this.x + param3, param1 + this.y);
         String var13 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
         var6Lifetime2 = this.field_n.field_c.charWidth(this.letter);
         var7Lifetime2 = hk.field_a.stringWidth(var13);

@@ -37,7 +37,7 @@ final class NineSliceSprite {
     }
 
     final static void performAction0200(int integerArgument1) {
-        MixedSupport067.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, UiComponentPart007.sceneWidgetState0019);
+        MixedSupport067.sceneWidgetPart001State0001 = new SceneWidgetPart001(MusicTrack.sceneWidgetState0127, MixedSupport121.sceneWidgetState0119, UiComponentPart014.sceneWidgetState0053, MixedSupport125.sceneWidgetState0125, InputAdapter001.sceneWidgetPart003State0001, NameSuggestionsPanel.sceneWidgetState0019);
         if (integerArgument1 != 8) {
           NineSliceSprite.clearStaticReferences((byte) 88);
         }

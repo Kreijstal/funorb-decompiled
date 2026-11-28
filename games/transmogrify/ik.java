@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ik extends a implements df {
+class ik extends a implements WidgetActivationListener {
     private boolean field_db;
     static tf field_cb;
     private BitmapFont field_hb;
@@ -241,7 +241,7 @@ class ik extends a implements df {
         }
     }
 
-    public void a(lj param0, int param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

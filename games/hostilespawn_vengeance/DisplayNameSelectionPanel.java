@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends vd implements kn, qk {
-    private ph field_H;
+final class DisplayNameSelectionPanel extends vd implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_H;
     static IntrusiveDeque field_J;
-    private ph field_E;
+    private InteractiveWidget field_E;
     private TextInputField field_G;
     static int field_F;
-    mc field_I;
+    NameSuggestionsPanel field_I;
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -54,7 +54,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
         if (param0 == -6790) {
           return true;
         }
-        this.field_H = (ph) null;
+        this.field_H = (InteractiveWidget) null;
         return true;
     }
 
@@ -81,7 +81,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
           }
           if (param0 != 274) {
             var6 = (String) null;
-            this.a(true, (String) null);
+            this.onNameSuggestionSelected(true, (String) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
                 return 0;
               }
             } else {
-              if (mc.field_I == 4) {
+              if (NameSuggestionsPanel.field_I == 4) {
                 if (var2 < AccountNameAvailabilityValidator.field_s) {
                   return 0;
                 }
@@ -196,7 +196,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
         return 512 * (-pm.field_g[var2] + var1) / (-pm.field_g[var2] + pm.field_g[1 + var2]);
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         TextInputField var3 = this.field_G;
         String var4 = param1;
         if (!param0) {
@@ -308,8 +308,8 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
         this.field_G = new TextInputField("", (mh) null, 12);
         cn var1 = new cn(jn.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
         ag var2 = new ag(bl.field_d, var1, (mh) null);
-        this.field_E = new ph(GzipDecompressor.field_h, (mh) null);
-        this.field_H = new ph(SpriteGeometry.field_C, (mh) null);
+        this.field_E = new InteractiveWidget(GzipDecompressor.field_h, (mh) null);
+        this.field_H = new InteractiveWidget(SpriteGeometry.field_C, (mh) null);
         this.field_G.field_i = u.field_g;
         this.field_G.setInputHandler(new AccountNameAvailabilityValidator(this.field_G), (byte) -105);
         this.field_E.field_D = false;
@@ -329,7 +329,7 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
         this.field_E.field_p = (mh) (this);
         this.a(51448, this.field_E);
         this.a(51448, this.field_H);
-        this.field_I = new mc((kn) (this));
+        this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_I.a(-60 + (-this.field_G.field_s + (this.field_s - this.field_G.field_v)), 20, 0, 60 + this.field_G.field_s + this.field_G.field_v, 150);
         this.a(51448, this.field_I);
         this.a(496, 0, 0, 0, var4 + (var3 + 55));
@@ -345,11 +345,11 @@ final class DisplayNameSelectionPanel extends vd implements kn, qk {
         ha.a((byte) 126, this.field_G.field_n);
     }
 
-    public final void a(boolean param0) {
+    public final void onNameSuggestionsRefreshRequested(boolean param0) {
         if (param0) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_G.getInputHandler((byte) 124))).f(-2);
+        ((AccountNameAvailabilityValidator) (this.field_G.getInputHandler((byte) 124))).invalidateCheckedName(-2);
     }
 
     private final int a(int param0, ag param1, String param2, byte param3, int param4, String param5) {

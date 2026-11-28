@@ -62,14 +62,14 @@ final class GzipInflater {
               GzipInflater.b((byte) 56);
             }
             var8 = param1[1].field_l;
-            param1[0].a(param3, param4, param2);
-            param1[2].a(param0 + param3 - var7, param4, param2);
+            param1[0].drawTintedGray(param3, param4, param2);
+            param1[2].drawTintedGray(param0 + param3 - var7, param4, param2);
             SoftwareRasterizer.saveClip(sg.field_c);
             SoftwareRasterizer.intersectClip(var6_int + param3, param4, -var7 + param0 + param3, param1[1].field_k + param4);
             var9 = var6_int + param3;
             var10 = -var7 + param3 + param0;
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
-              param1[1].a(param3, param4, param2);
+              param1[1].drawTintedGray(param3, param4, param2);
             }
             SoftwareRasterizer.restoreClip(sg.field_c);
             return;
@@ -162,7 +162,7 @@ final class GzipInflater {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 77) {
-            stackIn_4_0 = bd.decodeCp1252String(255, 0, param0, param0.length);
+            stackIn_4_0 = NameSuggestionsPanel.decodeCp1252String(255, 0, param0, param0.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

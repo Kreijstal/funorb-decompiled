@@ -350,11 +350,11 @@ final class uf extends ql {
         for (var2 = 0; field_f.length > var2; var2++) {
           var0 = 1114111;
           var1 = (var0 & 16711935) * ((var2 + 1) * 255 / 128);
-          field_f[var2] = PcmOutputWorker.a(16711680, -var1 + var0 * ((255 * var2 + 255) / 128)) + PcmOutputWorker.a(var1, -16711936) >>> 8;
+          field_f[var2] = PcmOutputWorker.bitwiseAnd(16711680, -var1 + var0 * ((255 * var2 + 255) / 128)) + PcmOutputWorker.bitwiseAnd(var1, -16711936) >>> 8;
           field_d[var2] = var2 * 65793;
           var0Lifetime1 = 40960;
           var1Lifetime1 = (255 + var2 * 255) / 128 * (var0Lifetime1 & 16711935);
-          field_e[var2] = PcmOutputWorker.a(var1Lifetime1, -16711936) + PcmOutputWorker.a(var0Lifetime1 * (255 * (var2 + 1) / 128) - var1Lifetime1, 16711680) >>> 8;
+          field_e[var2] = PcmOutputWorker.bitwiseAnd(var1Lifetime1, -16711936) + PcmOutputWorker.bitwiseAnd(var0Lifetime1 * (255 * (var2 + 1) / 128) - var1Lifetime1, 16711680) >>> 8;
         }
         field_h = false;
     }

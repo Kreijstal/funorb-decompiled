@@ -11,7 +11,7 @@ final class hc extends WidgetContainer implements WidgetActionListener {
     static int field_D;
     private BitmapFont field_H;
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

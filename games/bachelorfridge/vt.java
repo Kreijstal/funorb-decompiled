@@ -528,7 +528,7 @@ final class vt extends tia {
         }
         b var4 = (b) (this.field_j.beginForward((byte) 90));
         while (var4 != null) {
-          this.field_i[var4.field_s].a(param2 + (var4.field_i >> 3), -32 + ((var4.field_q >> 3) + (var4.field_h >> 3)) + (param0 - 64), var4.field_o);
+          this.field_i[var4.field_s].drawWithOpacity(param2 + (var4.field_i >> 3), -32 + ((var4.field_q >> 3) + (var4.field_h >> 3)) + (param0 - 64), var4.field_o);
           var4 = (b) (this.field_j.nextForward(0));
         }
     }

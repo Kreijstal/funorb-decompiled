@@ -111,7 +111,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           param4 -= 2;
           param3 -= 2;
           SoftwareRasterizer.fillRectangleVerticalGradient(param2, param1, param4, param3, 394758, 1710618);
-          MouseInputListener.field_a.e(param2, param1, param4, param3, 64);
+          MouseInputListener.field_a.drawScaledAdditive(param2, param1, param4, param3, 64);
           return;
         }
     }

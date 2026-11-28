@@ -331,18 +331,18 @@ final class ha extends cn {
         gm var7 = null;
         gm var9 = null;
         RgbSprite[] var10 = null;
-        ph var11 = null;
+        InteractiveWidget var11 = null;
         gm var12 = null;
         gm var13 = null;
         gm var14 = null;
         gm var15 = null;
         try {
-          if (!(param3 instanceof ph)) {
+          if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (ag) (param3);
           }
-          var11 = (ph) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           TextInputField.pushAndIntersectClip(param1 + param3.field_v + param3.field_s, param3.field_m + param0, param3.field_x + param0 + param3.field_m, param1 + param3.field_v, true);
           if (var11 != null) {
             param4 = param4 & var11.field_D;

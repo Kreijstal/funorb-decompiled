@@ -43,9 +43,9 @@ abstract class ByteStorage {
         }
         ia.a(-74);
         if (150 <= vg.field_z) {
-          pl.field_e.c(var3 + 15, 10 + var4, var5);
+          pl.field_e.drawWithOpacity(var3 + 15, 10 + var4, var5);
         } else {
-          nj.field_b.e(var3, var4);
+          nj.field_b.drawHalfSize(var3, var4);
         }
         var6 = vg.field_z - 125;
         if (0 < var6 &&
@@ -53,13 +53,13 @@ abstract class ByteStorage {
           if (20 <= var6) {
             if (var6 >= 30) {
               var7 = 256 * (-var6 + 50) / 20;
-              AwtRasterBuffer.field_d.a(var3, var4, var7);
+              AwtRasterBuffer.field_d.drawAdditive(var3, var4, var7);
             } else {
-              AwtRasterBuffer.field_d.a(var3, var4, 256);
+              AwtRasterBuffer.field_d.drawAdditive(var3, var4, 256);
             }
           } else {
             var7 = var6 * 256 / 20;
-            AwtRasterBuffer.field_d.a(var3, var4, var7);
+            AwtRasterBuffer.field_d.drawAdditive(var3, var4, var7);
           }
         }
         if (param2 != -27794) {
@@ -72,7 +72,7 @@ abstract class ByteStorage {
           if (20 > var6Lifetime1) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          ge.field_f.c(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
+          ge.field_f.drawWithOpacity(15 + var3, 10 + var4, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

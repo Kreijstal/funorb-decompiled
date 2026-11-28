@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends ig {
+final class nd extends InteractiveWidget {
     static String field_F;
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
@@ -232,9 +232,9 @@ final class nd extends ig {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(param0, param1, param2, 107);
+        super.activateFromInput(param0, param1, param2, 107);
         if (param3 < 39) {
           CharSequence var6 = (CharSequence) null;
           nd.a((CharSequence) null, (byte) 46);

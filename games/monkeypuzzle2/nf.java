@@ -463,7 +463,7 @@ abstract class nf extends rh {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        af.field_e.c(this.field_l + param1 - 90, 10 + param2);
+        af.field_e.draw(this.field_l + param1 - 90, 10 + param2);
         qb.a(param2 + 35, pe.field_a, (byte) -108, 5 + param1, this.field_l - 10);
         qb.a(-22 + param2 + this.field_p, ra.field_Z, (byte) -109, param1, this.field_l);
         var6Lifetime2 = 127;

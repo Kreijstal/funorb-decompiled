@@ -316,25 +316,25 @@ final class wb extends lw {
     final void a(byte param0) {
         int var2 = (int)((-Math.cos((double)(ResourceArchive.field_b * 4) * 3.141592653589793 / 200.0) + 1.0) * 32.0);
         if (0 == (this.field_e & 2)) {
-          wa.field_n.a(520, 12, var2);
+          wa.field_n.drawWithOpacity(520, 12, var2);
         }
         if ((4 & this.field_e) == 0) {
-          lfa.field_s.a(419, 149, var2);
+          lfa.field_s.drawWithOpacity(419, 149, var2);
         }
         if ((this.field_e & 8) == 0) {
-          bn.field_i.a(419, 42, var2);
+          bn.field_i.drawWithOpacity(419, 42, var2);
         }
         if ((this.field_e & 16) == 0) {
-          rj.field_l.a(522, 318, var2);
+          rj.field_l.drawWithOpacity(522, 318, var2);
         }
         if (param0 <= 103) {
           wb.a(-31, 72, false, 62);
         }
         if ((this.field_e & 32) == 0) {
-          ada.field_m.a(10, 7, var2);
+          ada.field_m.drawWithOpacity(10, 7, var2);
         }
         if ((this.field_e & 64) == 0) {
-          ew.field_q.a(36, 330, var2);
+          ew.field_q.drawWithOpacity(36, 330, var2);
         }
     }
 

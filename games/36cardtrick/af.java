@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class af extends ta implements qh {
+class af extends ta implements WidgetActivationListener {
     private ng field_kb;
     static int field_ob;
     private boolean field_qb;
@@ -53,7 +53,7 @@ class af extends ta implements qh {
         }
     }
 
-    public void a(int param0, int param1, int param2, hl param3, int param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         try {
           if (this.field_qb) {
             gh.a(3, 31888);
@@ -244,7 +244,7 @@ class af extends ta implements qh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 54) {
-            stackIn_4_0 = bd.a(true, param1, (byte) 122, param0);
+            stackIn_4_0 = NameSuggestionsPanel.a(true, param1, (byte) 122, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -11;

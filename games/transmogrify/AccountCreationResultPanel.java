@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends ik implements df {
+final class AccountCreationResultPanel extends ik implements WidgetActivationListener {
     private AccountRegistrationPanel field_mb;
     private boolean field_nb;
     private boolean field_lb;
     static byte[] field_kb;
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_nb) {
           AccountRegistrationPanel.a(true, false, 170);
           return;
@@ -45,7 +45,7 @@ final class AccountCreationResultPanel extends ik implements df {
               var4 = param2.message;
               if (param2.statusCode == 248) {
                 if (!param1) {
-                  lj.d((byte) 117);
+                  InteractiveWidget.d((byte) 117);
                 }
                 this.field_nb = true;
                 var4 = wd.field_l;
@@ -53,7 +53,7 @@ final class AccountCreationResultPanel extends ik implements df {
             } else {
               var4 = gb.field_e;
               if (this.field_mb != null) {
-                this.field_mb.a((byte) -69);
+                this.field_mb.onNameSuggestionsRefreshRequested((byte) -69);
               }
             }
           }
@@ -154,24 +154,24 @@ final class AccountCreationResultPanel extends ik implements df {
     }
 
     final boolean m(int param0) {
-        lj var3 = null;
-        lj var3Lifetime1;
-        lj var3Lifetime2;
-        lj var3Lifetime3;
+        InteractiveWidget var3 = null;
+        InteractiveWidget var3Lifetime1;
+        InteractiveWidget var3Lifetime2;
+        InteractiveWidget var3Lifetime3;
         if (!this.field_A) {
           if (param0 == 0) {
             return super.m(0);
           }
-          var3 = (lj) null;
-          this.a((lj) null, -59, -50, 24, 58);
+          var3 = (InteractiveWidget) null;
+          this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
           return super.m(0);
         }
         if (this.field_lb) {
           if (param0 == 0) {
             return super.m(0);
           }
-          var3Lifetime1 = (lj) null;
-          this.a((lj) null, -59, -50, 24, 58);
+          var3Lifetime1 = (InteractiveWidget) null;
+          this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
           return super.m(0);
         }
         AccountServiceResult var2 = CrossfadingMidiPcmStream.pollAccountCreationResult((byte) 32);
@@ -180,15 +180,15 @@ final class AccountCreationResultPanel extends ik implements df {
           if (param0 == 0) {
             return super.m(0);
           }
-          var3Lifetime2 = (lj) null;
-          this.a((lj) null, -59, -50, 24, 58);
+          var3Lifetime2 = (InteractiveWidget) null;
+          this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
           return super.m(0);
         }
         if (param0 == 0) {
           return super.m(0);
         }
-        var3Lifetime3 = (lj) null;
-        this.a((lj) null, -59, -50, 24, 58);
+        var3Lifetime3 = (InteractiveWidget) null;
+        this.onWidgetActivated((InteractiveWidget) null, -59, -50, 24, 58);
         return super.m(0);
     }
 

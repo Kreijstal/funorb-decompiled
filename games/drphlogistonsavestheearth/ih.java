@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends pj implements ra, ke {
+final class ih extends pj implements ra, WidgetActivationListener {
     static String field_N;
     private AccountCreationResultPanel field_M;
     static int[] field_O;
@@ -10,7 +10,7 @@ final class ih extends pj implements ra, ke {
     private qa field_Q;
     static int field_K;
     static int field_R;
-    private hf field_L;
+    private InteractiveWidget field_L;
 
     final static he[] k(int param0) {
         int var2 = 0;
@@ -73,7 +73,7 @@ final class ih extends pj implements ra, ke {
         int var6 = 0;
         try {
           this.field_M = param0;
-          this.field_L = new hf(cd.field_a, (fd) null);
+          this.field_L = new InteractiveWidget(cd.field_a, (fd) null);
           this.field_L.field_l = (cg) ((Object) new ie());
           var7 = a.a(5044, wk.field_l, new String[]{this.i(88), this.j(-84)});
           var3 = 20;
@@ -98,7 +98,7 @@ final class ih extends pj implements ra, ke {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

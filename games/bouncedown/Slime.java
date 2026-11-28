@@ -86,7 +86,7 @@ final class Slime {
           var6 = new RgbSprite(100, 100);
           var8 = (int)((double)param2 + this.field_u) - 50;
           var9 = -50 + (int)(this.field_j - this.field_e / 2.0);
-          var6.d();
+          var6.bindAsRenderTarget();
           Platform.field_a[param0].b(50, 0, -741572379, (int)this.field_o, 50);
           wj.field_d[param0].b((int)(-(1.3 * this.field_c) + (50.0 + this.field_e / 20.0)), 0, -741572379, (int)this.field_o, (int)(50.0 + this.field_e / 4.0 - 0.5 * this.field_q));
           if (this.field_d > 0.0) {
@@ -94,68 +94,68 @@ final class Slime {
           }
           if (2 == param0) {
             var16 = new RgbSprite(100, 100);
-            var16.d();
+            var16.bindAsRenderTarget();
             ge.field_b.b((int)(50.0 - this.field_e / 6.0 + 0.8 * this.field_c), 0, -741572379, 96, (int)(this.field_q * 0.6 + (50.0 - 1.0 * this.field_e / 4.0)));
             ge.field_b.b((int)(50.0 + 0.8 * this.field_c), 0, -741572379, 128, (int)(50.0 - 1.0 * this.field_e / 4.0 + this.field_q * 0.6));
             ge.field_b.b((int)(this.field_c * 0.8 + (this.field_e / 5.0 + 50.0)), 0, -741572379, 85, (int)(50.0 - this.field_e * 1.0 / 4.0 + this.field_q * 0.6));
-            var6.d();
-            var16.c(-1, 0, 0);
-            var16.c(1, 0, 0);
-            var16.c(0, -1, 0);
-            var16.c(0, 1, 0);
-            var16.a(0, 0);
+            var6.bindAsRenderTarget();
+            var16.drawWithIntensity(-1, 0, 0);
+            var16.drawWithIntensity(1, 0, 0);
+            var16.drawWithIntensity(0, -1, 0);
+            var16.drawWithIntensity(0, 1, 0);
+            var16.draw(0, 0);
             var12 = new RgbSprite(100, 100);
             var17 = var12;
-            var12.d();
+            var12.bindAsRenderTarget();
             hd.field_a[param0].b((int)(50.0 - this.field_e / 6.0 + this.field_c * 1.2), 0, -741572379, 96, (int)(this.field_q + (50.0 - this.field_e * 1.0 / 4.0)));
             hd.field_a[param0].b((int)(1.2 * this.field_c + 50.0), 0, -741572379, 128, (int)(50.0 - 1.0 * this.field_e / 4.0 + this.field_q));
             hd.field_a[param0].b((int)(this.field_c * 1.2 + (50.0 + this.field_e / 5.0)), 0, -741572379, 85, (int)(this.field_q + (50.0 - 1.0 * this.field_e / 4.0)));
-            var6.d();
-            var17.c(-1, 0, 0);
-            var17.c(1, 0, 0);
-            var17.c(0, -1, 0);
-            var17.c(0, 1, 0);
-            var17.a(0, 0);
+            var6.bindAsRenderTarget();
+            var17.drawWithIntensity(-1, 0, 0);
+            var17.drawWithIntensity(1, 0, 0);
+            var17.drawWithIntensity(0, -1, 0);
+            var17.drawWithIntensity(0, 1, 0);
+            var17.draw(0, 0);
           } else {
             var14 = new RgbSprite(100, 100);
-            var14.d();
+            var14.bindAsRenderTarget();
             ge.field_b.b((int)(-(this.field_e / 10.0) + 50.0 + this.field_c * 0.8), 0, -741572379, 128, (int)(50.0 - this.field_e * 1.0 / 4.0 + this.field_q * 0.6));
             ge.field_b.b((int)(0.8 * this.field_c + (this.field_e / 10.0 + 50.0)), 0, -741572379, 128, (int)(this.field_q * 0.6 + (50.0 - this.field_e * 1.0 / 4.0)));
-            var6.d();
-            var14.c(-1, 0, 0);
-            var14.c(1, 0, 0);
-            var14.c(0, -1, 0);
-            var14.c(0, 1, 0);
-            var14.a(0, 0);
+            var6.bindAsRenderTarget();
+            var14.drawWithIntensity(-1, 0, 0);
+            var14.drawWithIntensity(1, 0, 0);
+            var14.drawWithIntensity(0, -1, 0);
+            var14.drawWithIntensity(0, 1, 0);
+            var14.draw(0, 0);
             var13 = new RgbSprite(100, 100);
             var15 = var13;
-            var15.d();
+            var15.bindAsRenderTarget();
             hd.field_a[param0].b((int)(50.0 - this.field_e / 10.0 + this.field_c * 1.2), 0, -741572379, 128, (int)(this.field_q + (-(1.0 * this.field_e / 4.0) + 50.0)));
             hd.field_a[param0].b((int)(this.field_e / 10.0 + 50.0 + this.field_c * 1.2), 0, -741572379, 128, (int)(-(this.field_e * 1.0 / 4.0) + 50.0 + this.field_q));
-            var6.d();
-            var15.c(-1, 0, 0);
-            var15.c(1, 0, 0);
-            var15.c(0, -1, 0);
-            var15.c(0, 1, 0);
-            var15.a(0, 0);
+            var6.bindAsRenderTarget();
+            var15.drawWithIntensity(-1, 0, 0);
+            var15.drawWithIntensity(1, 0, 0);
+            var15.drawWithIntensity(0, -1, 0);
+            var15.drawWithIntensity(0, 1, 0);
+            var15.draw(0, 0);
           }
           ca.field_d.setAsRasterTarget(64);
           var4 = var4 - var6.field_s / 2;
           var5 -= 32;
-          var6.e();
+          var6.trimTransparentBorders();
           if ((PcmResampler.field_g ||
             MusicPatchPcmStream.field_o != null &&
             MusicPatchPcmStream.field_o.field_d) && 0 < this.field_n) {
-            var6.a(var4, var5);
+            var6.draw(var4, var5);
           }
           SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
           if (this.field_i / 5 % 2 == 0 &&
             this.field_n > 0) {
-            var6.c(-1 + var8, var9, 0);
-            var6.c(1 + var8, var9, 0);
-            var6.c(var8, var9 - 1, 0);
-            var6.c(var8, var9 + 1, 0);
-            var6.a(var8, var9);
+            var6.drawWithIntensity(-1 + var8, var9, 0);
+            var6.drawWithIntensity(1 + var8, var9, 0);
+            var6.drawWithIntensity(var8, var9 - 1, 0);
+            var6.drawWithIntensity(var8, var9 + 1, 0);
+            var6.draw(var8, var9);
           }
         } else {
           if (this.field_p == 1) {
@@ -168,7 +168,7 @@ final class Slime {
               MusicPatchPcmStream.field_o.field_d) {
               var5 += 18;
               SoftwareRasterizer.resetClip();
-              w.field_c[8 * param0 + 7].a(var4 - 25, var5 - 75);
+              w.field_c[8 * param0 + 7].draw(var4 - 25, var5 - 75);
               SoftwareRasterizer.setClip(param2, 0, 512 + param2, 446);
             }
           }
@@ -282,7 +282,7 @@ final class Slime {
                     param0[var10].field_j > this.field_j &&
                     param0[var10].field_j < 1.0 + (this.field_q + this.field_j + param4)) {
                     this.field_t = var10;
-                    if (wd.field_x) {
+                    if (InteractiveWidget.field_x) {
                       param1.playSample(param3[7], 100, DiskArchiveRequest.field_w * 48 / 256);
                     }
                     this.field_j = param0[this.field_t].field_j;
@@ -294,7 +294,7 @@ final class Slime {
                     param0[var10].field_j > this.field_j &&
                     this.field_j + this.field_q + param4 + 1.0 > param0[var10].field_j) {
                     this.field_t = var10;
-                    if (wd.field_x) {
+                    if (InteractiveWidget.field_x) {
                       param1.playSample(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                     }
                     this.field_j = param0[this.field_t].field_j;
@@ -315,16 +315,16 @@ final class Slime {
                 this.field_j = this.field_j - 6.0;
                 this.field_q = -(403.20000000000005 / this.field_o) - ta.field_c;
                 this.field_t = -1;
-                if (wd.field_x &&
+                if (InteractiveWidget.field_x &&
                   91.0 > this.field_o) {
                   param1.playSample(param3[5], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
-                if (wd.field_x &&
+                if (InteractiveWidget.field_x &&
                   91.0 <= this.field_o &&
                   this.field_o <= 101.0) {
                   param1.playSample(param3[4], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
-                if (wd.field_x &&
+                if (InteractiveWidget.field_x &&
                   this.field_o > 101.0) {
                   param1.playSample(param3[6], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
@@ -349,7 +349,7 @@ final class Slime {
                 0 == param0[this.field_t].field_b &&
                 91.0 < this.field_o) {
                 param0[this.field_t].field_b = 1;
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   param1.playSample(param3[0], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (vk.field_b == 1 &&
@@ -385,7 +385,7 @@ final class Slime {
                 param0[this.field_t].field_d == 5 &&
                 param0[this.field_t].field_b == 0 &&
                 this.field_o > 64.0) {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   if (null == this.field_r) {
                     if (64.0 < this.field_o) {
                       this.field_r = RawPcmStream.createForPlaybackRate(param3[8], 100, 0);
@@ -396,7 +396,7 @@ final class Slime {
                       this.field_r.setSamplePosition(var10 * param3[8].field_k / 50);
                       this.field_s = 10;
                       this.field_r.rampScaledVolume(param3[8].field_k / 50, 10);
-                      if (wd.field_x) {
+                      if (InteractiveWidget.field_x) {
                         param1.addChildStream(this.field_r);
                       }
                     }
@@ -414,7 +414,7 @@ final class Slime {
                 param0[this.field_t].field_d == 5 &&
                 param0[this.field_t].field_b == 1 &&
                 this.field_o < 128.0) {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   if (this.field_g != null) {
                     if (this.field_m < 160) {
                       this.field_m = this.field_m + 10;
@@ -430,7 +430,7 @@ final class Slime {
                       this.field_g.setSamplePosition(var10 * param3[3].field_k / 50);
                       this.field_m = 10;
                       this.field_g.rampScaledVolume(param3[3].field_k / 50, 10);
-                      if (wd.field_x) {
+                      if (InteractiveWidget.field_x) {
                         param1.addChildStream(this.field_g);
                       }
                     }
@@ -443,7 +443,7 @@ final class Slime {
                 param0[this.field_t].field_d == 5 &&
                 2 == param0[this.field_t].field_b &&
                 this.field_d < 50.0) {
-                if (wd.field_x &&
+                if (InteractiveWidget.field_x &&
                   this.field_d <= 0.0) {
                   param1.playSample(param3[13], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
@@ -457,11 +457,11 @@ final class Slime {
                   this.field_l = -1;
                   this.field_q = -(576.0 / this.field_o);
                   if (this.field_i > 0) {
-                    if (wd.field_x) {
+                    if (InteractiveWidget.field_x) {
                       param1.playSample(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                     }
                   } else {
-                    if (wd.field_x) {
+                    if (InteractiveWidget.field_x) {
                       param1.playSample(param3[15], 100, DiskArchiveRequest.field_w * 96 / 256);
                     }
                     this.field_p = 3;
@@ -497,11 +497,11 @@ final class Slime {
               this.field_l = -1;
               this.field_j = this.field_e + (double)eg.field_n + 30.0;
               if (this.field_i > 0) {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   param1.playSample(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
               } else {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   param1.playSample(param3[15], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 this.field_p = 3;
@@ -513,13 +513,13 @@ final class Slime {
               this.field_l = -1;
               this.field_j = -10.0;
               if (this.field_i <= 0) {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   param1.playSample(param3[12], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
                 this.field_f = 50;
                 this.field_p = 1;
               } else {
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   param1.playSample(param3[14], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
                 this.field_p = 0;
@@ -604,7 +604,7 @@ final class Slime {
         }
         try {
           if (this.field_g != null) {
-            if (wd.field_x) {
+            if (InteractiveWidget.field_x) {
               this.field_g.fadeOutAndUnlink(param0[3].field_k * this.field_m / 1000);
             }
             this.field_g = null;
@@ -632,7 +632,7 @@ final class Slime {
             this.updateSlimePhysics((Platform[]) null, (PcmStreamMixer) null, -3, (PcmSample[]) null, -0.052863935081619066, (byte) 41);
           }
           if (this.field_r != null) {
-            if (wd.field_x) {
+            if (InteractiveWidget.field_x) {
               this.field_r.fadeOutAndUnlink(param0[8].field_k * this.field_s / 1000);
             }
             this.field_r = null;

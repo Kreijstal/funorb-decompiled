@@ -1637,7 +1637,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           Raider var12 = (Raider) null;
           this.a((Raider) null, (Raider) null, 123, (byte) -100);
         }
-        var7.e();
+        var7.bindAsRenderTarget();
         String[] var8 = var3;
         for (var9 = 0; var8.length > var9; var9++) {
           var10 = var8[var9];
@@ -2042,7 +2042,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                 stackIn_75_0 = 256;
               }
               var10 = stackIn_75_0;
-              GzipDecompressor.field_e.b(-2 + var6, var7Lifetime1 - 2, var10);
+              GzipDecompressor.field_e.drawAdditive(-2 + var6, var7Lifetime1 - 2, var10);
             }
           }
           if (this.field_v) {
@@ -2062,7 +2062,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
                 stackIn_85_0 = 256;
               }
               var10Lifetime1 = stackIn_85_0;
-              SpriteGeometry.field_z.b(var6Lifetime2 - 2, var7Lifetime1Lifetime1 - 2, var10Lifetime1);
+              SpriteGeometry.field_z.drawAdditive(var6Lifetime2 - 2, var7Lifetime1Lifetime1 - 2, var10Lifetime1);
             }
           }
         }
@@ -2265,7 +2265,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         if (ob.field_Lb == var3 &&
           this.field_G != -1) {
           var4_ref_gg = this.field_R.b(this.field_G, -15390);
-          fj.field_d[0].h(-(fj.field_d[0].field_E >> 1) + var4_ref_gg.field_f, -(fj.field_d[0].field_G >> 1) + var4_ref_gg.field_b);
+          fj.field_d[0].draw(-(fj.field_d[0].field_E >> 1) + var4_ref_gg.field_f, -(fj.field_d[0].field_G >> 1) + var4_ref_gg.field_b);
         }
         if (this.field_s != -1) {
           if ((ob.field_dc == var3 ||
@@ -2282,9 +2282,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               var4 = 0;
             }
             if (var4 != 0) {
-              fj.field_d[0].h(hj.field_S - 16, eh.field_h - 16);
+              fj.field_d[0].draw(hj.field_S - 16, eh.field_h - 16);
             } else {
-              fj.field_d[1].h(hj.field_S - 16, eh.field_h - 16);
+              fj.field_d[1].draw(hj.field_S - 16, eh.field_h - 16);
             }
             return true;
           }
@@ -2305,9 +2305,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               var4Lifetime2 = 0;
             }
             if (var4Lifetime2 == 0) {
-              fj.field_d[1].h(hj.field_S - 16, eh.field_h - 16);
+              fj.field_d[1].draw(hj.field_S - 16, eh.field_h - 16);
             } else {
-              fj.field_d[0].h(-16 + hj.field_S, -16 + eh.field_h);
+              fj.field_d[0].draw(-16 + hj.field_S, -16 + eh.field_h);
             }
             return true;
           }
@@ -2335,9 +2335,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             }
             var4Lifetime1Lifetime1 = stackIn_64_0 & stackIn_65_1;
             if (var4Lifetime1Lifetime1 == 0) {
-              bf.field_e[1].h(-16 + hj.field_S, -16 + eh.field_h);
+              bf.field_e[1].draw(-16 + hj.field_S, -16 + eh.field_h);
             } else {
-              bf.field_e[0].h(-16 + hj.field_S, eh.field_h - 16);
+              bf.field_e[0].draw(-16 + hj.field_S, eh.field_h - 16);
             }
             return true;
           }
@@ -2345,9 +2345,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             this.field_G == -1) {
             if ((((Raider) (var2)).field_o & 4) != 0 &&
               ((Raider) (var2)).field_g > 0) {
-              AccountNameAvailabilityValidator.field_r.h(hj.field_S - 16, eh.field_h - 16);
+              AccountNameAvailabilityValidator.field_r.draw(hj.field_S - 16, eh.field_h - 16);
             } else {
-              AccountNameAvailabilityValidator.field_r.e(-16 + hj.field_S, eh.field_h - 16, 4210752);
+              AccountNameAvailabilityValidator.field_r.drawSilhouette(-16 + hj.field_S, eh.field_h - 16, 4210752);
             }
             return true;
           }
@@ -2356,9 +2356,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
             hj.field_S != -1) {
             if (var2 != this.field_y &&
               (((Raider) (var2)).field_o & 6) == 0) {
-              bf.field_e[0].h(-16 + hj.field_S, -16 + eh.field_h);
+              bf.field_e[0].draw(-16 + hj.field_S, -16 + eh.field_h);
             } else {
-              bf.field_e[1].h(hj.field_S - 16, -16 + eh.field_h);
+              bf.field_e[1].draw(hj.field_S - 16, -16 + eh.field_h);
             }
             return true;
           }
@@ -2472,9 +2472,9 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (var6.field_h.field_g != 1) {
             if (3 != var6.field_h.field_g) {
               if (!var6.field_h.a((byte) -123, 15)) {
-                this.field_N.field_n = (en) ((Object) new qf(LoginPanel.field_L, AchievementIconEntry.field_l, gi.field_Q));
+                this.field_N.field_n = (en) ((Object) new qf(LoginPanel.field_L, AchievementIconEntry.field_l, NameSuggestionsPanel.field_Q));
               } else {
-                this.field_N.field_n = (en) ((Object) new qf(LoginPanel.field_L, a.field_k, gi.field_Q));
+                this.field_N.field_n = (en) ((Object) new qf(LoginPanel.field_L, a.field_k, NameSuggestionsPanel.field_Q));
               }
             } else {
               this.field_N.field_n = (en) ((Object) new qf(u.field_S, GameAppletShell.field_k, rb.field_I));
@@ -3034,16 +3034,16 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           if (null == InstructionsScreen.field_r) {
             SpriteGeometry.field_F = new en[4];
             InstructionsScreen.field_r = new en[4];
-            dupTemp$1 = new e(ck.field_H.a("attack", -53));
+            dupTemp$1 = new e(InteractiveWidget.field_H.a("attack", -53));
             SpriteGeometry.field_F[0] = (en) ((Object) dupTemp$1);
             InstructionsScreen.field_r[0] = (en) ((Object) dupTemp$1);
-            dupTemp$2 = new e(ck.field_H.a("defence", -126));
+            dupTemp$2 = new e(InteractiveWidget.field_H.a("defence", -126));
             SpriteGeometry.field_F[1] = (en) ((Object) dupTemp$2);
             InstructionsScreen.field_r[1] = (en) ((Object) dupTemp$2);
-            InstructionsScreen.field_r[2] = (en) ((Object) new e(ck.field_H.a("dodge", -96)));
-            InstructionsScreen.field_r[3] = (en) ((Object) new e(ck.field_H.a("sneak", -48)));
-            SpriteGeometry.field_F[2] = (en) ((Object) new e(ck.field_H.a("snare", -115)));
-            SpriteGeometry.field_F[3] = (en) ((Object) new e(ck.field_H.a("detect", -89)));
+            InstructionsScreen.field_r[2] = (en) ((Object) new e(InteractiveWidget.field_H.a("dodge", -96)));
+            InstructionsScreen.field_r[3] = (en) ((Object) new e(InteractiveWidget.field_H.a("sneak", -48)));
+            SpriteGeometry.field_F[2] = (en) ((Object) new e(InteractiveWidget.field_H.a("snare", -115)));
+            SpriteGeometry.field_F[3] = (en) ((Object) new e(InteractiveWidget.field_H.a("detect", -89)));
           }
           var3_int = 0;
           var13 = this.field_Y.field_A;

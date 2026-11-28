@@ -176,7 +176,7 @@ final class re {
         if (!ta.p(3)) {
           var4 = 0;
           while (var4 < 42) {
-            stackIn_35_0 = hb.a(var4, mc.field_E, false);
+            stackIn_35_0 = hb.a(var4, NameSuggestionsPanel.field_E, false);
             if (var9 != 0) {
               decompiledFrameCompleted1 = false;
               break;
@@ -184,7 +184,7 @@ final class re {
             if (!stackIn_35_0) {
               var5_ref_bd = this.field_b[var4].field_Y;
               if (var5_ref_bd != null) {
-                var5_ref_bd.a();
+                var5_ref_bd.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 stackIn_10_0 = var4;
                 stackIn_10_1 = ArchiveProvider.field_c;
@@ -201,16 +201,16 @@ final class re {
                     }
                   }
                 } else {
-                  fj.field_Kb[var4].b(3, 3);
+                  fj.field_Kb[var4].drawQuarterSizeAveraged(3, 3);
                 }
                 if (~this.field_J == ~var4 &&
                   var6 != 0) {
-                  var5_ref_bd.e(16776960);
+                  var5_ref_bd.addOutline(16776960);
                 }
                 if (~this.field_x == ~var4 ||
                   this.field_x < 0 &&
                   ~this.field_J == ~var4) {
-                  var5_ref_bd.a();
+                  var5_ref_bd.bindAsRenderTarget();
                   this.a(-1 + var5_ref_bd.field_A, 0, 0, -18, -1 + var5_ref_bd.field_z);
                 }
                 this.field_b[var4].field_Y = var5_ref_bd;
@@ -249,19 +249,19 @@ final class re {
             if (var5 == 0) {
               if (var3 == 0 &&
                 !qa.a(e.field_w, var4Lifetime1, param1)) {
-                de.field_i.e(74, 108);
+                de.field_i.draw(74, 108);
                 if (var9 != 0) {
                   SpriteGeometry.field_v.drawOpaque(74, 108);
-                  fj.field_Kb[var4Lifetime1].e(74, 108);
+                  fj.field_Kb[var4Lifetime1].draw(74, 108);
                 }
               } else {
                 SpriteGeometry.field_v.drawOpaque(74, 108);
                 if (var9 != 0) {
-                  fj.field_Kb[var4Lifetime1].e(74, 108);
+                  fj.field_Kb[var4Lifetime1].draw(74, 108);
                 }
               }
             } else {
-              fj.field_Kb[var4Lifetime1].e(74, 108);
+              fj.field_Kb[var4Lifetime1].draw(74, 108);
             }
             var6Lifetime1 = 0;
             if (var5 == 0) {
@@ -678,14 +678,14 @@ final class re {
         RgbSprite var4 = new RgbSprite(128, 128);
         int[] var5 = new int[4];
         SoftwareRasterizer.saveClip(var5);
-        var4.a();
+        var4.bindAsRenderTarget();
         if (param1 >= 0) {
-          qa.field_g[param1].e(16, 0);
+          qa.field_g[param1].draw(16, 0);
         }
         if (var3 >= 0) {
-          hh.field_a[var3].e(32, 48);
+          hh.field_a[var3].draw(32, 48);
         }
-        var4.e();
+        var4.trimTransparentBorders();
         o.field_n.setAsRasterTarget((byte) 121);
         SoftwareRasterizer.restoreClip(var5);
         return var4;
@@ -710,7 +710,7 @@ final class re {
         var3 = new le(0L, (le) null);
         var4 = new le(0L, (le) null);
         var5 = new le(0L, (le) null);
-        var9.field_pb = PcmResampler.field_f.h();
+        var9.field_pb = PcmResampler.field_f.copy();
         var13 = var9.field_pb.field_D;
         var7 = 0;
         while (var13.length > var7) {
@@ -725,13 +725,13 @@ final class re {
           var7++;
         }
         if (null != var9.field_Y) {
-          var3.field_Y = var9.field_Y.h();
-          var3.field_Y.f();
+          var3.field_Y = var9.field_Y.copy();
+          var3.field_Y.flipVertically();
         }
-        var3.field_pb = var9.field_pb.h();
-        var3.field_pb.f();
+        var3.field_pb = var9.field_pb.copy();
+        var3.field_pb.flipVertically();
         var5.field_nb = oa.field_m;
-        var9.field_pb = var9.field_pb.h();
+        var9.field_pb = var9.field_pb.copy();
         this.field_z = new pb(0L, var9, var3, var4, var5, false);
         return;
     }
@@ -758,9 +758,9 @@ final class re {
                 !(param1 <= rb.field_m) ||
                 !((var4 + 32) > j.field_c) ||
                 !(rb.field_m < 32 + param1)) {
-                fj.field_Kb[var5].b(var4, param1);
+                fj.field_Kb[var5].drawQuarterSizeAveraged(var4, param1);
               } else {
-                fj.field_Kb[var5].a(-6 + var4, param1 - 6, 44, 44);
+                fj.field_Kb[var5].drawScaled(-6 + var4, param1 - 6, 44, 44);
                 al.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var4 + 16, -8 + param1, 16776960, -1);
                 al.field_Z.drawCentred(bh.field_g[var5].toUpperCase(), 320, param1 + 50, 16777215, -1);
               }
@@ -1004,14 +1004,14 @@ final class re {
           var40 = e.field_y;
           var34 = var40;
           var15_ref_int__ = var34;
-          var15_ref_int__[0] = PcmOutputWorker.a(var40[0], -1073741825);
+          var15_ref_int__[0] = PcmOutputWorker.bitwiseAnd(var40[0], -1073741825);
         }
         boolean decompiledFrameCompleted1 = true;
         var15 = 48;
-        mc.field_E = nf.a(false);
-        kf.a(e.field_y, 0, mc.field_E, 0, mc.field_E.length);
+        NameSuggestionsPanel.field_E = nf.a(false);
+        kf.a(e.field_y, 0, NameSuggestionsPanel.field_E, 0, NameSuggestionsPanel.field_E.length);
         if (var14 == 0) {
-          var41 = mc.field_E;
+          var41 = NameSuggestionsPanel.field_E;
           var35 = var41;
           var31 = var35;
           var16_ref_int__ = var31;
@@ -1030,12 +1030,12 @@ final class re {
           }
         }
         if (decompiledFrameCompleted1) {
-          var16_ref_int__ = mc.field_E;
+          var16_ref_int__ = NameSuggestionsPanel.field_E;
           var17_ref_int__ = ArchiveProvider.field_c;
         }
         var18Lifetime1 = 0;
         while (8 > var18Lifetime1) {
-          var16_ref_int__[var18Lifetime1] = PcmOutputWorker.a(var16_ref_int__[var18Lifetime1], ~var17_ref_int__[var18Lifetime1]);
+          var16_ref_int__[var18Lifetime1] = PcmOutputWorker.bitwiseAnd(var16_ref_int__[var18Lifetime1], ~var17_ref_int__[var18Lifetime1]);
           var18Lifetime1++;
           if (var30 == 0) {
             continue;
@@ -1049,7 +1049,7 @@ final class re {
           var18Lifetime2 = 0;
           while (var18Lifetime2 < var48.length) {
             var19 = var48[var18Lifetime2];
-            stackOut_16_0 = qa.a(mc.field_E, var19, true);
+            stackOut_16_0 = qa.a(NameSuggestionsPanel.field_E, var19, true);
             stackIn_23_0 = stackOut_16_0 ? 1 : 0;
             stackIn_17_0 = stackOut_16_0;
             if (var30 != 0) {
@@ -1067,7 +1067,7 @@ final class re {
           stackIn_23_0 = 114 % ((param0 - 71) / 49);
         }
         var17 = stackIn_23_0;
-        var18Lifetime3 = 42 - ec.a(mc.field_E, (byte) 19);
+        var18Lifetime3 = 42 - ec.a(NameSuggestionsPanel.field_E, (byte) 19);
         var19Lifetime1 = (1 + var18Lifetime3) / 2;
         var10.field_sb = 92;
         var10.field_qb = var15 * var19Lifetime1 + 64;
@@ -1095,7 +1095,7 @@ final class re {
               var25 = 0;
               var26 = 0;
               while (var44.length > var26) {
-                stackOut_32_0 = qa.a(mc.field_E, var44[var26], true);
+                stackOut_32_0 = qa.a(NameSuggestionsPanel.field_E, var44[var26], true);
                 stackIn_37_0 = stackOut_32_0 ? 1 : 0;
                 stackIn_33_0 = stackOut_32_0;
                 if (stackIn_33_0) {
@@ -1113,7 +1113,7 @@ final class re {
               while (var49.length > var27) {
                 var28 = var49[var27];
                 this.field_b[var28] = null;
-                stackOut_39_0 = hb.a(var28, mc.field_E, false);
+                stackOut_39_0 = hb.a(var28, NameSuggestionsPanel.field_E, false);
                 stackIn_25_0 = stackOut_39_0 ? 1 : 0;
                 stackIn_40_0 = stackOut_39_0;
                 if (!stackIn_40_0 ||
@@ -1179,7 +1179,7 @@ final class re {
         var3 = 10;
         this.a(275, (byte) -55, 86, 57, 2 * var3 + 270);
         var4 = new StringBuilder(32);
-        StringBuilder discarded$0 = var4.append(mc.field_J);
+        StringBuilder discarded$0 = var4.append(NameSuggestionsPanel.field_J);
         if (rl.field_c < 9) {
           discarded$1 = var4.append('0');
         }
@@ -1552,7 +1552,7 @@ final class re {
                   (decompiledFrameRemainder5) &&
                   (decompiledFrameRemainder4) &&
                   (decompiledFrameRemainder3)) {
-                  mc.field_I = 1;
+                  NameSuggestionsPanel.field_I = 1;
                   ClientLookupTables.field_h = null;
                   hg.field_e = 1;
                   jf.field_c = 128;
@@ -2016,7 +2016,7 @@ final class re {
               var3_ref_ic__ = p.field_m;
               p.field_m[1] = null;
               u.field_f[7] = jh.field_bb;
-              mc.field_I = 1;
+              NameSuggestionsPanel.field_I = 1;
               hg.field_e = 1;
               if (jh.field_ab == 1) {
               }
@@ -2153,13 +2153,13 @@ final class re {
               SoftwareRasterizer.field_a >= param2) {
               var9 = 13;
               if (param0 != null) {
-                param5.e(-param5.field_w + 112 - param5.field_z / 2, -param5.field_y + param2 - (-64 + param5.field_A / 2));
+                param5.draw(-param5.field_w + 112 - param5.field_z / 2, -param5.field_y + param2 - (-64 + param5.field_A / 2));
                 al.field_Z.drawParagraph(param1, 161 + var8, param2, 143 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
-                param0.e(-param0.field_w - param0.field_z / 2 + 367, -param0.field_y + (param2 + (64 - param0.field_A / 2)));
+                param0.draw(-param0.field_w - param0.field_z / 2 + 367, -param0.field_y + (param2 + (64 - param0.field_A / 2)));
                 al.field_Z.drawParagraph(param3, var8 + 431, param2, 114 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
                 if (var10 != 0) {
                   if (param5 != null) {
-                    param5.e(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
+                    param5.draw(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
                     al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
                     al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                   } else {
@@ -2169,7 +2169,7 @@ final class re {
               } else {
                 boolean decompiledSharedTail0 = (param5 == null);
                 if (!decompiledSharedTail0) {
-                  param5.e(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
+                  param5.draw(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
                   al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
                   decompiledSharedTail0 = (var10 != 0);
                 }
@@ -3890,7 +3890,7 @@ final class re {
         var3 = 2;
         if (null == this.field_H) {
           this.field_H = new RgbSprite(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
-          this.field_H.a();
+          this.field_H.bindAsRenderTarget();
           IntrusiveNode.field_d.drawMissionMap(4, var3);
           o.field_n.setAsRasterTarget((byte) 113);
         }
@@ -3899,7 +3899,7 @@ final class re {
         this.a(176, (byte) -55, 228, 52, 304);
         this.a(176, (byte) -55, 228, 364, 220);
         SoftwareRasterizer.setClip(367, 73, 581, 217);
-        this.field_H.e(364 + -mm.field_m[0].field_j.field_e * var3 + 110, -mm.field_m[0].field_j.field_g * var3 + 150);
+        this.field_H.draw(364 + -mm.field_m[0].field_j.field_e * var3 + 110, -mm.field_m[0].field_j.field_g * var3 + 150);
         if ((ca.field_c & 128) <= 0) {
           SoftwareRasterizer.fillCircleAlpha(var3 / 2 + 152, 128 - (-(var3 / 2) - 1), 4, 65535, 128);
           SoftwareRasterizer.fillCircleAlpha(var3 / 2 + 152, 128 + (var3 / 2 + 1), 3, 65535, 128);
@@ -3938,7 +3938,7 @@ final class re {
           if (4 == rl.field_c) {
             var4 = KeyboardInput.field_k;
             if (r.field_a != 1) {
-              var4 = ph.field_B;
+              var4 = InteractiveWidget.field_B;
             }
           }
           if (rl.field_c == 5) {
@@ -4200,7 +4200,7 @@ final class re {
         if (EmailFormatValidator.a(286, 0, 100, 496, 72)) {
           var4 = 0;
           while (42 > var4) {
-            stackOut_14_0 = hb.a(var4, mc.field_E, false);
+            stackOut_14_0 = hb.a(var4, NameSuggestionsPanel.field_E, false);
             stackIn_24_0 = stackOut_14_0 ? 1 : 0;
             stackIn_15_0 = stackOut_14_0;
             if (var5 != 0) {
@@ -4433,7 +4433,7 @@ final class re {
             return;
           }
           if (var5_int > 10) {
-            param2.b(param1, param3, var6);
+            param2.drawWithOpacity(param1, param3, var6);
             if (var11 == 0) {
               return;
             }
@@ -4459,8 +4459,8 @@ final class re {
             if (Math.random() < 0.5) {
               var10 = -var10;
             }
-            param2.b(var10 + param1, param3, var6);
-            param2.c(var10 + param1, param3, (int)(8.0 * (Math.random() * (double)var7) * (double)var6 / 256.0));
+            param2.drawWithOpacity(var10 + param1, param3, var6);
+            param2.drawAdditive(var10 + param1, param3, (int)(8.0 * (Math.random() * (double)var7) * (double)var6 / 256.0));
             var9++;
           }
           SoftwareRasterizer.resetClip();
@@ -4604,30 +4604,30 @@ final class re {
         an.field_n = 0.20000000298023224f;
         var5 = CrossfadingMidiPcmStream.field_v.j();
         if (GameCanvas.field_a != var5) {
-          CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.a((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.moveFloatTowardTarget((byte) -67, GameCanvas.field_a, var5, 0.07000000029802322f));
         }
         var5Lifetime1 = CrossfadingMidiPcmStream.field_v.h();
         if (var5Lifetime1 != qm.field_O) {
-          CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.a((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
+          CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.moveFloatTowardTarget((byte) -68, qm.field_O, var5Lifetime1, 0.07000000029802322f));
         }
         var5Lifetime2 = CrossfadingMidiPcmStream.field_v.f();
         if (param3 != -99) {
           return;
         }
         if (var5Lifetime2 != ea.field_d) {
-          CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.a((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.moveFloatTowardTarget((byte) -54, ea.field_d, var5Lifetime2, 0.009999999776482582f));
         }
         var5Lifetime3 = CrossfadingMidiPcmStream.field_v.g();
         if (var5Lifetime3 != ag.field_w) {
-          CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.a((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
+          CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -40, ag.field_w, var5Lifetime3, 1.0f));
         }
         var5Lifetime4 = CrossfadingMidiPcmStream.field_v.k();
         if (an.field_n != var5Lifetime4) {
-          CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.a((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.moveFloatTowardTarget((byte) -108, an.field_n, var5Lifetime4, 0.009999999776482582f));
         }
         var5Lifetime5 = CrossfadingMidiPcmStream.field_v.e();
         if (vb.field_Jb != var5Lifetime5) {
-          CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.a((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
+          CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.moveFloatTowardTarget((byte) -114, vb.field_Jb, var5Lifetime5, 0.009999999776482582f));
         }
         fieldTemp$0 = ch.field_q + 1;
         ch.field_q = ch.field_q + 1;
@@ -4670,7 +4670,7 @@ final class re {
           this.field_p = this.field_p + 16;
           if (256 < this.field_p) {
             ClientLookupTables.field_h = null;
-            mc.field_I = 1;
+            NameSuggestionsPanel.field_I = 1;
             hg.field_e = 1;
             jf.field_c = 128;
             le.field_D = 0;
@@ -4838,7 +4838,7 @@ final class re {
         var4 = new le(0L, (le) null);
         var5 = new le(0L, (le) null);
         var6 = new RgbSprite(16, 16);
-        var6.a();
+        var6.bindAsRenderTarget();
         var7 = 2;
         var8 = 6;
         var9 = 12;
@@ -4846,8 +4846,8 @@ final class re {
           if (var9 <= 0) {
             var11.field_pb = var6;
             o.field_n.setAsRasterTarget((byte) -47);
-            var3.field_pb = var6.h();
-            var3.field_pb.f();
+            var3.field_pb = var6.copy();
+            var3.field_pb.flipVertically();
             var5.field_Bb = oa.field_m;
             var5.field_nb = oa.field_m;
             o.field_n.setAsRasterTarget((byte) -31);

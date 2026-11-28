@@ -116,7 +116,7 @@ final class AccountServiceResult {
               eg.field_a[-1 + var4] = 0;
               od.field_h[0] = 5;
             } else if (SecondaryNodeDeque.field_a == 4) {
-              var3_int = lb.a(qa.field_c, gi.field_f, kd.field_D, rh.field_h, -62);
+              var3_int = lb.a(qa.field_c, gi.field_f, NameSuggestionsPanel.field_D, rh.field_h, -62);
               var4 = 2 + var3_int;
               eg.field_a = new int[var4];
               DualLinkNode.field_h = new String[var4];

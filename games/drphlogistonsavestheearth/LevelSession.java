@@ -111,7 +111,7 @@ final class LevelSession {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameRemainder0 = true;
             if (3 == var11) {
-              nb.field_b.a(0, 0);
+              nb.field_b.drawOpaque(0, 0);
               var3 = 2 * hc.field_K[0].field_z;
               var2 = 0;
               do {
@@ -119,7 +119,7 @@ final class LevelSession {
                   be.b(sh.field_b, (int)((double)((-640 + var3) * -var9) / var7), 0);
                   break;
                 }
-                hc.field_K[var2].a((int)((double)((var3 - 640) * -var9) / var7), 0, 450);
+                hc.field_K[var2].drawAdditive((int)((double)((var3 - 640) * -var9) / var7), 0, 450);
                 var2++;
               } while (var16 == 0);
               if (var16 == 0) {
@@ -142,16 +142,16 @@ final class LevelSession {
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              nb.field_b.a(0, 0);
+              nb.field_b.drawOpaque(0, 0);
               var3 = hc.field_K[0].field_z * 2;
               var10 = (int)((double)((-640 + var3) * -var9) / var7);
               var2 = 0;
               do {
                 if (var2 >= 2) {
-                  sh.field_b.d(var10, 0);
+                  sh.field_b.draw(var10, 0);
                   break;
                 }
-                hc.field_K[var2].a(var10, 0, 450);
+                hc.field_K[var2].drawAdditive(var10, 0, 450);
                 var2++;
               } while (var16 == 0);
               if (sd.field_e != 2) {
@@ -160,7 +160,7 @@ final class LevelSession {
               var2 = 0;
               do {
                 if (var2 >= 75) {
-                  si.field_F.a(var10 + 300, 200, 256);
+                  si.field_F.drawAdditive(var10 + 300, 200, 256);
                   break;
                 }
                 var11 = wi.field_f[var2];
@@ -178,12 +178,12 @@ final class LevelSession {
             if ((decompiledFrameRemainder4) &&
               (decompiledFrameRemainder3) &&
               (decompiledFrameRemainder2)) {
-              nb.field_b.a(0, 0);
+              nb.field_b.drawOpaque(0, 0);
               var3 = 2 * hc.field_K[0].field_z;
               var2 = 0;
               while (true) {
                 if (2 > var2) {
-                  hc.field_K[var2].a((int)((double)((var3 - 640) * -var9) / var7), 0, 450);
+                  hc.field_K[var2].drawAdditive((int)((double)((var3 - 640) * -var9) / var7), 0, 450);
                   var2++;
                   if (var16 == 0) {
                     continue;
@@ -229,7 +229,7 @@ final class LevelSession {
             return;
           }
         } else {
-          AccountRegistrationPanel.field_O.a(0, 0);
+          AccountRegistrationPanel.field_O.drawOpaque(0, 0);
           var3 = MouseWheelInput.field_f.field_d;
           if (sd.field_e == 2) {
             this.b((byte) -51);
@@ -503,7 +503,7 @@ final class LevelSession {
             return;
           }
         }
-        bc.field_d.c();
+        bc.field_d.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
         ArchiveRequest.field_C.setAsRasterTarget(119);
         fc.field_a = 0;
@@ -867,13 +867,13 @@ final class LevelSession {
         var10 = "x" + this.field_A;
         var11 = cb.field_b;
         var12 = new RgbSprite(var11.stringWidth(var10), var11.field_x + var11.field_S);
-        var12.c();
+        var12.bindAsRenderTarget();
         if (param0 != -2639) {
           this.field_T = -118;
         }
         var11.drawString(var10, 0, var11.field_x, 16777215, -1);
         ArchiveRequest.field_C.setAsRasterTarget(116);
-        var12.b(-(var12.field_y / 2) + 503, var12.field_w / 2 + 443);
+        var12.drawHalfSize(-(var12.field_y / 2) + 503, var12.field_w / 2 + 443);
         if (this.field_Z > 0) {
           stackIn_40_0 = (this.field_Z % 20 < 10) ? 16711680 : 0;
           var13_int = stackIn_40_0;
@@ -1199,7 +1199,7 @@ final class LevelSession {
               } else {
                 rh.field_b = be.b();
               }
-              rh.field_b.c();
+              rh.field_b.bindAsRenderTarget();
               be.a(0, 0, 640, 480, 22070844, 255);
               ArchiveRequest.field_C.setAsRasterTarget(117);
               ek.a(-78, false, 1);
@@ -1472,10 +1472,10 @@ final class LevelSession {
     }
 
     private final void b(byte param0, int param1) {
-        FullscreenFocusCanvas.field_e.c(0, 0, 1907987);
+        FullscreenFocusCanvas.field_e.drawSilhouette(0, 0, 1907987);
         int var3 = -87 / ((-57 - param0) / 40);
         if (nd.field_M >= 0) {
-          FullscreenFocusCanvas.field_e.e(0, 0, nd.field_M);
+          FullscreenFocusCanvas.field_e.drawWithOpacity(0, 0, nd.field_M);
         }
     }
 
@@ -2467,7 +2467,7 @@ final class LevelSession {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          bc.field_d.c();
+          bc.field_d.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, bc.field_d.field_y, bc.field_d.field_w, 0);
           ArchiveRequest.field_C.setAsRasterTarget(124);
           stackIn_20_0 = this.levelNumber;
@@ -3519,7 +3519,7 @@ final class LevelSession {
             ib.field_a = hi.a(640, 4, this.field_l);
             var3++;
             ch.field_y = hi.a(75, param0 + 4, this.field_l);
-            var2 = var2 != 0 | FullscreenFocusCanvas.field_e.a(0, 0, ib.field_a, ch.field_y) ? 1 : 0;
+            var2 = var2 != 0 | FullscreenFocusCanvas.field_e.isOpaqueAtScreenPosition(0, 0, ib.field_a, ch.field_y) ? 1 : 0;
             do {
               if (var3 < 100 &&
                 var2 == 0) {
@@ -3816,7 +3816,7 @@ final class LevelSession {
         var3 = stackIn_5_0;
         var4 = 0;
         while (var4 < 20) {
-          bc.field_d.a(al.field_g[var4], var3 - bc.field_d.field_w, 256);
+          bc.field_d.drawAdditive(al.field_g[var4], var3 - bc.field_d.field_w, 256);
           var4++;
           if (var5 != 0) {
             return;

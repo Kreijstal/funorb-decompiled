@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends lc implements rc {
+final class uc extends lc implements WidgetActivationListener {
     private BitmapFont field_F;
-    private wd[] field_H;
+    private InteractiveWidget[] field_H;
     private int field_B;
     private int[] field_J;
     private sh field_I;
@@ -28,11 +28,11 @@ final class uc extends lc implements rc {
         }
     }
 
-    final wd a(String param0, sk param1, int param2) {
-        wd var4 = null;
+    final InteractiveWidget a(String param0, sk param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        wd stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -40,7 +40,7 @@ final class uc extends lc implements rc {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new wd(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_j = (fc) ((Object) new jh());
           var5 = -2 + this.field_m;
           this.b(this.field_m + 34, 80, this.field_k, 0, 0);
@@ -138,8 +138,8 @@ final class uc extends lc implements rc {
         if (param1 <= this.field_B) {
           return;
         }
-        wd[] var7 = new wd[param1];
-        wd[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; this.field_B > var5; var5++) {
           var7[var5] = this.field_H[var5];
@@ -151,7 +151,7 @@ final class uc extends lc implements rc {
         this.field_H = var3;
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -250,18 +250,18 @@ final class uc extends lc implements rc {
           }
           var9Lifetime1 = var17.field_q;
           wa.a(true);
-          var17.d();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.d();
-          var17.b(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.d();
-          var17.b(-var17.field_s + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_s + var9Lifetime1, 0);
           var12 = new RgbSprite(var17.field_s - 2 * var9Lifetime1, var9Lifetime1);
-          var12.d();
-          var17.b(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           ve.a(-125);
           ih.field_T = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

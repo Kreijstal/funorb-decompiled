@@ -37,15 +37,15 @@ final class ta extends pk {
         int var3;
         var3 = Chess.field_G;
         if (this.field_q == wk.field_b) {
-          this.field_o.b(this.field_i, this.field_k);
+          this.field_o.draw(this.field_i, this.field_k);
         } else {
           if (uc.field_a != this.field_q) {
-            this.field_m.b(this.field_i, this.field_k);
+            this.field_m.draw(this.field_i, this.field_k);
           } else {
             if (this.field_v == null) {
-              this.field_m.b(this.field_i, this.field_k);
+              this.field_m.draw(this.field_i, this.field_k);
             } else {
-              this.field_v.b(this.field_i, this.field_k);
+              this.field_v.draw(this.field_i, this.field_k);
             }
           }
         }
@@ -148,10 +148,10 @@ final class ta extends pk {
 
     final boolean a(byte param0) {
         if (param0 == -9) {
-          return this.field_m.c(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
+          return this.field_m.isOpaqueAtScreenPosition(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
         }
         this.field_v = (RgbSprite) null;
-        return this.field_m.c(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
+        return this.field_m.isOpaqueAtScreenPosition(this.field_i, this.field_k, BufferedSocket.field_k, rf.field_b);
     }
 
     final static void a(r param0, int param1) {

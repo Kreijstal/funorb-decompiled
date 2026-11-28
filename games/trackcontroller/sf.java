@@ -1219,7 +1219,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "login");
                 if (null != var2) {
-                  nd.field_H = ta.a(32200, var2);
+                  NameSuggestionsPanel.field_H = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "goback");
                 if (null != var2) {
@@ -2447,7 +2447,7 @@ final class sf extends td implements ButtonListener {
                 }
                 var2 = va.a(0, "no_highscores");
                 if (null != var2) {
-                  nd.field_I = ta.a(32200, var2);
+                  NameSuggestionsPanel.field_I = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "hs_name");
                 if (null != var2) {
@@ -3335,7 +3335,7 @@ final class sf extends td implements ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

@@ -236,7 +236,7 @@ final class dg extends UiWidget {
         if (param0 == -22504) {
           this.field_Q = new Sprite[]{this.a(this.field_D, true, this.field_I), this.a(this.field_F, true, this.field_P)};
           this.field_O = this.b(true);
-          this.field_R = this.field_O.c();
+          this.field_R = this.field_O.copyMirroredHorizontally();
           this.field_G = new Sprite(this.field_u >> 1, this.field_u);
           return;
         }

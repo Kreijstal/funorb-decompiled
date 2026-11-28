@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends WidgetContainer implements oi {
+final class vf extends WidgetContainer implements WidgetActivationListener {
     private String field_C;
     private int[] field_K;
     static ResourceArchive field_E;
@@ -11,7 +11,7 @@ final class vf extends WidgetContainer implements oi {
     static int field_F;
     private BitmapFont field_G;
     private int field_B;
-    private ig[] field_J;
+    private InteractiveWidget[] field_J;
 
     private final void a(int param0, int param1) {
         int var5 = 0;
@@ -22,8 +22,8 @@ final class vf extends WidgetContainer implements oi {
         if (param1 <= 31) {
           return;
         }
-        ig[] var7 = new ig[param0];
-        ig[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param0];
         for (var5 = 0; var5 < this.field_B; var5++) {
           var7[var5] = this.field_J[var5];
@@ -82,7 +82,7 @@ final class vf extends WidgetContainer implements oi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
         try {
-          cg.a(param5, eh.field_a, param1, param14, param2, param11, DirectByteStorage.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, PacketBuffer.field_q, 480, ul.field_G, param6, param7);
+          cg.a(param5, eh.field_a, param1, param14, param2, param11, DirectByteStorage.field_h, new qc(param4), param15, (byte) 45, param10, param9, param0, new qc(param8), kl.field_k, lg.field_b, PacketBuffer.field_q, 480, NameSuggestionsPanel.field_G, param6, param7);
           qc.a(param3, param13, 0);
           if (param12 != 260) {
             field_F = -126;
@@ -120,12 +120,12 @@ final class vf extends WidgetContainer implements oi {
         }
     }
 
-    final ig a(lf param0, String param1, byte param2) {
-        ig var4 = null;
+    final InteractiveWidget a(lf param0, String param1, byte param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        ig stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -133,7 +133,7 @@ final class vf extends WidgetContainer implements oi {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ig(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_u = (uk) ((Object) new b());
           var5 = -2 + this.field_t;
           var6 = -121 / ((15 - param2) / 46);
@@ -182,7 +182,7 @@ final class vf extends WidgetContainer implements oi {
         return param0 | param1;
     }
 
-    public final void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

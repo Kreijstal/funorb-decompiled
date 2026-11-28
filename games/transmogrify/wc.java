@@ -61,7 +61,7 @@ final class wc {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (jk.field_y == lj.field_z) {
+            if (jk.field_y == InteractiveWidget.field_z) {
               if (param4) {
                 var11 = (String) null;
                 ll.field_V = dk.a((String) null, ac.field_j, false, param2, 126);
@@ -72,30 +72,30 @@ final class wc {
               LoginPanel.field_D.writeByte(6389, 14);
               LoginPanel.field_D.writeByte(6389, ll.field_V.a(-184).field_a);
               rb.a(-1, -377);
-              lj.field_z = g.field_y;
+              InteractiveWidget.field_z = g.field_y;
             }
-            if (g.field_y == lj.field_z &&
+            if (g.field_y == InteractiveWidget.field_z &&
               ue.a(1, 0)) {
               var6_int = WordLanguage.field_l.readUnsignedByte((byte) 125);
               if (var6_int == 0) {
-                lj.field_z = lb.field_e;
+                InteractiveWidget.field_z = lb.field_e;
               } else {
                 DebouncedFieldValidator.field_e = var6_int;
                 tg.field_a = -1;
-                lj.field_z = aa.field_e;
+                InteractiveWidget.field_z = aa.field_e;
               }
               WordLanguage.field_l.position = 0;
             }
-            if (lj.field_z == lb.field_e &&
+            if (InteractiveWidget.field_z == lb.field_e &&
               ue.a(8, 0)) {
               fd.field_g = WordLanguage.field_l.readLong((byte) -115);
               WordLanguage.field_l.position = 0;
               tb.a(ll.field_V, param0, param3, param4, 122);
-              lj.field_z = DisplayNameSelectionPanel.field_I;
+              InteractiveWidget.field_z = DisplayNameSelectionPanel.field_I;
             }
             boolean decompiledFrameRemainder0 = true;
             var6_intLifetime1 = -17 / ((-59 - param1) / 55);
-            if (lj.field_z == DisplayNameSelectionPanel.field_I &&
+            if (InteractiveWidget.field_z == DisplayNameSelectionPanel.field_I &&
               ue.a(1, 0)) {
               var7 = WordLanguage.field_l.readUnsignedByte((byte) 110);
               DebouncedFieldValidator.field_e = var7;
@@ -104,7 +104,7 @@ final class wc {
               if (var7 != 0 &&
                 var7 != 1) {
                 if (var7 != 8) {
-                  lj.field_z = aa.field_e;
+                  InteractiveWidget.field_z = aa.field_e;
                   tg.field_a = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -116,11 +116,11 @@ final class wc {
                 }
               }
               if (decompiledFrameRemainder0) {
-                lj.field_z = NetworkArchiveRequest.field_w;
+                InteractiveWidget.field_z = NetworkArchiveRequest.field_w;
                 tg.field_a = -1;
               }
             }
-            if (lj.field_z == NetworkArchiveRequest.field_w &&
+            if (InteractiveWidget.field_z == NetworkArchiveRequest.field_w &&
               GameKeyHandler.a(0)) {
               ac.field_j = WordLanguage.field_l.readLong((byte) 117);
               ConfirmedEmailAvailabilityValidator.field_j = WordLanguage.field_l.readUnsignedByte((byte) 58);
@@ -153,7 +153,7 @@ final class wc {
               var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
               NanoFrameTimer.field_e = BitPacketBuffer.normalizePlayerName((byte) -128, var12);
               db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
-              lj.field_z = ll.field_Q;
+              InteractiveWidget.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
                 if (ll.field_V.a(-184) == ValidatedTextField.field_G) {
                   of.field_f.a(ha.b(101), 0);
@@ -192,7 +192,7 @@ final class wc {
               stackIn_73_0 = DebouncedFieldValidator.field_e;
               return stackIn_73_0;
             }
-            if (aa.field_e == lj.field_z &&
+            if (aa.field_e == InteractiveWidget.field_z &&
               GameKeyHandler.a(0)) {
               pc.a(1);
               if (DebouncedFieldValidator.field_e == 7 &&

@@ -203,7 +203,7 @@ final class uk extends ql {
           if (!param0) {
             uk.g(false);
           }
-          while (kf.d(true)) {
+          while (InteractiveWidget.d(true)) {
             var1.writeCipheredByte(8, 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

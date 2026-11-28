@@ -1007,7 +1007,7 @@ final class Asteroid {
                               case 10:
                                 var7 = 256 * this.field_e / 256;
                                 if (16 > var7) {
-                                  ua.field_F[var7].c(var4 - 4 * this.field_e, var5 - 4 * this.field_e, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
+                                  NameSuggestionsPanel.field_F[var7].drawScaledAdditive(var4 - 4 * this.field_e, var5 - 4 * this.field_e, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
                                 }
                                 var7 = 2 + this.field_e * 42 / 256;
                                 if (var7 >= 16) {
@@ -1018,21 +1018,21 @@ final class Asteroid {
                                 } else {
                                   var7 = var7 - 4;
                                 }
-                                ua.field_F[var7].c(var4 - (-this.field_e + 128), -128 - (-this.field_e - var5), 2 * -this.field_e + 256, 256 + 2 * -this.field_e, -(this.field_e * 3) + 256);
+                                NameSuggestionsPanel.field_F[var7].drawScaledAdditive(var4 - (-this.field_e + 128), -128 - (-this.field_e - var5), 2 * -this.field_e + 256, 256 + 2 * -this.field_e, -(this.field_e * 3) + 256);
                                 break;
                               case 12:
                                 var7 = 256 * this.field_e / 256;
                                 if (var7 >= 16) {
                                   break;
                                 }
-                                IterableNodeHashTable.field_g[var7].c(var4 - 8, -8 + var5, 16, 16, -(16 * this.field_e) + 256);
+                                IterableNodeHashTable.field_g[var7].drawScaledAdditive(var4 - 8, -8 + var5, 16, 16, -(16 * this.field_e) + 256);
                                 break;
                               case 13:
                                 var7 = 256 * this.field_e / 256;
                                 if (var7 >= 16) {
                                   break;
                                 }
-                                IterableNodeHashTable.field_g[var7].c(var4 - 16, -16 + var5, 32, 32, 256 - this.field_e * 16);
+                                IterableNodeHashTable.field_g[var7].drawScaledAdditive(var4 - 16, -16 + var5, 32, 32, 256 - this.field_e * 16);
                                 break;
                               case 14:
                                 SoftwareRasterizer.drawLine(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16711680);
@@ -1173,8 +1173,8 @@ final class Asteroid {
                                   if (var7 >= 16) {
                                     break;
                                   }
-                                  IterableNodeHashTable.field_g[var7].c(this.field_e + (-this.field_g + var4), this.field_e - this.field_g + var5, (-this.field_e + this.field_g) * 2, (this.field_g - this.field_e) * 2, 255 - this.field_e * 255 / this.field_g);
-                                  ua.field_F[0].c(var4 - this.field_e * 4, var5 - 4 * this.field_e, this.field_e * 8, this.field_e * 8, -(128 * this.field_e / this.field_g) + 128);
+                                  IterableNodeHashTable.field_g[var7].drawScaledAdditive(this.field_e + (-this.field_g + var4), this.field_e - this.field_g + var5, (-this.field_e + this.field_g) * 2, (this.field_g - this.field_e) * 2, 255 - this.field_e * 255 / this.field_g);
+                                  NameSuggestionsPanel.field_F[0].drawScaledAdditive(var4 - this.field_e * 4, var5 - 4 * this.field_e, this.field_e * 8, this.field_e * 8, -(128 * this.field_e / this.field_g) + 128);
                                 }
                                 break;
                               case 27:
@@ -1227,7 +1227,7 @@ final class Asteroid {
                               case 11:
                                 var7 = 256 * this.field_e / 256;
                                 if (var7 < 16) {
-                                  ua.field_F[var7].c(-(4 * this.field_e) + var4, var5 - this.field_e * 4, 8 * this.field_e, 8 * this.field_e, -(this.field_e * 16) + 256);
+                                  NameSuggestionsPanel.field_F[var7].drawScaledAdditive(-(4 * this.field_e) + var4, var5 - this.field_e * 4, 8 * this.field_e, 8 * this.field_e, -(this.field_e * 16) + 256);
                                 }
                                 var7 = 28 * this.field_e / 256 + 2;
                                 if (var7 < 16) {
@@ -1236,18 +1236,18 @@ final class Asteroid {
                                   } else {
                                     var7 = -4 + var7;
                                   }
-                                  ua.field_F[var7].c(this.field_e - 192 + var4, this.field_e - 192 + var5, 2 * (-this.field_e + 192), -this.field_e * 2 + 384, -(2 * this.field_e) + 256);
+                                  NameSuggestionsPanel.field_F[var7].drawScaledAdditive(this.field_e - 192 + var4, this.field_e - 192 + var5, 2 * (-this.field_e + 192), -this.field_e * 2 + 384, -(2 * this.field_e) + 256);
                                 }
                                 break;
                             }
                           } else {
                             var7 = this.field_e * 256 / 256;
                             if (var7 < 16) {
-                              IterableNodeHashTable.field_g[var7].c(-(this.field_e * 4) + var4, -(this.field_e * 4) + var5, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
+                              IterableNodeHashTable.field_g[var7].drawScaledAdditive(-(this.field_e * 4) + var4, -(this.field_e * 4) + var5, 8 * this.field_e, 8 * this.field_e, 256 - this.field_e * 16);
                             }
                             var7 = 64 * this.field_e / 256;
                             if (16 > var7) {
-                              IterableNodeHashTable.field_g[var7].c(-(2 * this.field_e) + var4, -(this.field_e * 2) + var5, this.field_e * 4, 4 * this.field_e, -(this.field_e * 4) + 256);
+                              IterableNodeHashTable.field_g[var7].drawScaledAdditive(-(2 * this.field_e) + var4, -(this.field_e * 2) + var5, this.field_e * 4, 4 * this.field_e, -(this.field_e * 4) + 256);
                             }
                           }
                         } else {

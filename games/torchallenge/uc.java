@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends ng {
+final class uc extends InteractiveWidget {
     int field_S;
     int field_P;
     int field_V;

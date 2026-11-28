@@ -290,14 +290,14 @@ final class hc {
           var13 = new Sprite(7, 4);
           var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new tc(var4, true);
-          var14.a(true, var13.a());
-          var13.c();
+          var14.a(true, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new tc(var4, true);
-          var14Lifetime1.a(true, var13.a());
-          var13.c();
+          var14Lifetime1.a(true, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new tc(var4, true);
-          var14Lifetime2.a(true, var13.a());
-          var13.c();
+          var14Lifetime2.a(true, var13.copy());
+          var13.rotateClockwise();
           var19 = new tc(var4, true);
           var19.a(true, var13);
         } catch (RuntimeException runtimeException) {

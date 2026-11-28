@@ -411,9 +411,9 @@ class UiPanel extends fh {
             var25 = var25 + (this.field_db - var17.field_B);
           }
           if (this.field_vb < 256) {
-            var17.c(var24_int, var25, this.field_vb);
+            var17.drawWithOpacity(var24_int, var25, this.field_vb);
           } else {
-            var17.e(var24_int, var25);
+            var17.draw(var24_int, var25);
           }
         }
         boolean decompiledFrameRemainder0 = true;

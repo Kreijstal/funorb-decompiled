@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class d extends bb {
+final class d extends InteractiveWidget {
     static boolean field_L;
     private id field_K;
     static ed field_O;

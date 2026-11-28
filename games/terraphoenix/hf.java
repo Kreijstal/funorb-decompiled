@@ -22,7 +22,7 @@ final class hf extends fd {
         RuntimeException var6 = null;
         bd var7 = null;
         bd var9 = null;
-        eb var10 = null;
+        InteractiveWidget var10 = null;
         bd var11 = null;
         bd var12 = null;
         bd var13 = null;
@@ -31,12 +31,12 @@ final class hf extends fd {
           if (param3 != -24381) {
             field_t = false;
           }
-          if (param1 instanceof eb) {
+          if (param1 instanceof InteractiveWidget) {
             stackIn_5_0 = (UiWidget) (param1);
           } else {
             stackIn_5_0 = null;
           }
-          var10 = (eb) (stackIn_5_0);
+          var10 = (InteractiveWidget) (stackIn_5_0);
           TextFieldValidator.a(param1.width + param1.x + param2, param0 + param1.y, 16105, param1.height + param1.y + param0, param1.x + param2);
           if (var10 != null) {
             param4 = param4 & var10.field_A;
@@ -121,7 +121,7 @@ final class hf extends fd {
     final static ok a(int param0, byte param1) {
         ok var2 = new ok();
         FrameTimer.field_g.addFirst(var2, -16611);
-        eb.a(param0, (byte) 126);
+        InteractiveWidget.a(param0, (byte) 126);
         int var3 = 116 % ((param1 + 59) / 35);
         return var2;
     }

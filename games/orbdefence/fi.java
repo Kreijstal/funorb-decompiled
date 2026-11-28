@@ -21,9 +21,9 @@ final class fi implements td {
           }
           tl.a(param2.field_r, var7, var6_int, param2.field_m, 127);
           var8 = wd.field_C[1];
-          if (param2 instanceof s &&
-            ((s) (param2)).field_D) {
-            var8.e((-var8.field_s + param2.field_m >> 1) + 1 + var6_int, (-var8.field_t + param2.field_r >> 1) + var7 + 1, 256);
+          if (param2 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param2)).field_D) {
+            var8.drawAdditive((-var8.field_s + param2.field_m >> 1) + 1 + var6_int, (-var8.field_t + param2.field_r >> 1) + var7 + 1, 256);
           }
           if (!param2.d(-81)) {
             return;

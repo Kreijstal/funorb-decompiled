@@ -33,7 +33,7 @@ final class ie extends kf {
         bc.a(var6, 26095);
         this.field_t.a(param0, 0, param2, 0);
         wf.a(-110);
-        var6.e(this.field_s + param1, this.field_j + param3, this.field_w);
+        var6.drawWithOpacity(this.field_s + param1, this.field_j + param3, this.field_w);
     }
 
     public static void h(int param0) {

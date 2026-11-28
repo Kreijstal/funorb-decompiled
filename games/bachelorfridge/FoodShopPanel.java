@@ -155,15 +155,15 @@ final class FoodShopPanel {
             kaa.field_l[1].draw(param0, 72);
           }
           this.field_d = this.field_d + 1;
-          cga.field_r.a(param0 + (640 - this.field_b), 0);
-          vl.field_c.a(-this.field_b + (656 + param0), 56);
+          cga.field_r.draw(param0 + (640 - this.field_b), 0);
+          vl.field_c.draw(-this.field_b + (656 + param0), 56);
           var3 = 0;
           do {
             if (var3 >= 8) {
-              an.field_r.a(param0 - this.field_b + 656, 398);
+              an.field_r.draw(param0 - this.field_b + 656, 398);
               break;
             }
-            jla.field_d.a(param0 - this.field_b + 656, jla.field_d.field_e * var3 + 118);
+            jla.field_d.draw(param0 - this.field_b + 656, jla.field_d.field_e * var3 + 118);
             var3++;
           } while (var11 == 0);
           stackIn_53_0 = qt.field_m;
@@ -174,7 +174,7 @@ final class FoodShopPanel {
           } else {
             stackIn_54_3 = 16777215;
           }
-          ((Sprite) (Object) stackIn_53_0).e(stackIn_53_1, stackIn_53_2, stackIn_54_3);
+          ((Sprite) (Object) stackIn_53_0).drawGrayRampTinted(stackIn_53_1, stackIn_53_2, stackIn_54_3);
           var3 = 0;
           var4 = 0;
           var5 = 0;
@@ -508,20 +508,20 @@ final class FoodShopPanel {
         if (this.field_i >= 256) {
           this.field_q.a(true, 7802);
           if (this.field_q.field_vb.field_T) {
-            ada.field_l.a(594, 160);
+            ada.field_l.draw(594, 160);
             if (var3 != 0) {
-              ClamsAnimation.field_y.a(594, 160);
+              ClamsAnimation.field_y.draw(594, 160);
             }
           } else {
-            ClamsAnimation.field_y.a(594, 160);
+            ClamsAnimation.field_y.draw(594, 160);
           }
           if (!this.field_q.field_vb.field_T) {
-            DefaultWidgetRenderer.field_b.a(594, 403);
+            DefaultWidgetRenderer.field_b.draw(594, 403);
             if (var3 != 0) {
-              oaa.field_a.a(594, 403);
+              oaa.field_a.draw(594, 403);
             }
           } else {
-            oaa.field_a.a(594, 403);
+            oaa.field_a.draw(594, 403);
           }
           stackIn_14_0 = qt.field_m;
           stackIn_14_1 = 590;
@@ -531,7 +531,7 @@ final class FoodShopPanel {
           } else {
             stackIn_15_3 = 16764160;
           }
-          ((Sprite) (Object) stackIn_14_0).e(stackIn_14_1, stackIn_14_2, stackIn_15_3);
+          ((Sprite) (Object) stackIn_14_0).drawGrayRampTinted(stackIn_14_1, stackIn_14_2, stackIn_15_3);
           if (cc.field_b.children != null) {
             SoftwareRasterizer.setClip(this.field_q.field_kb, this.field_q.field_rb, this.field_q.field_kb + this.field_q.field_sb, this.field_q.field_rb + this.field_q.field_p);
             var2 = (ona) (cc.field_b.children.beginForward((byte) 90));

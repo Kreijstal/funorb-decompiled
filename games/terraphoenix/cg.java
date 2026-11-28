@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends WidgetContainer implements n {
-    private eb field_J;
+final class cg extends WidgetContainer implements WidgetActivationListener {
+    private InteractiveWidget field_J;
     static ok field_K;
-    private eb field_G;
+    private InteractiveWidget field_G;
     static String field_H;
-    private eb field_F;
+    private InteractiveWidget field_F;
     static String field_I;
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -62,7 +62,7 @@ final class cg extends WidgetContainer implements n {
         field_I = null;
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -136,9 +136,9 @@ final class cg extends WidgetContainer implements n {
 
     public cg() {
         super(0, 0, 476, 225, (WidgetActionListener) null);
-        this.field_F = new eb(IndexedSpriteState.field_j, (sc) null);
-        this.field_G = new eb(sl.field_f, (sc) null);
-        this.field_J = new eb(aj.field_c, (sc) null);
+        this.field_F = new InteractiveWidget(IndexedSpriteState.field_j, (sc) null);
+        this.field_G = new InteractiveWidget(sl.field_f, (sc) null);
+        this.field_J = new InteractiveWidget(aj.field_c, (sc) null);
         ic var1 = new ic();
         this.field_F.listener = (WidgetActionListener) ((Object) var1);
         this.field_G.listener = (WidgetActionListener) ((Object) var1);

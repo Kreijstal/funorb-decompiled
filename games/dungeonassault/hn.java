@@ -42,13 +42,13 @@ final class hn extends kl {
           SoftwareRasterizer.clearRaster();
           MouseWheelInput.field_d = 0;
           SecondaryNodeDequeIterator.a(param0 ^ -439027613);
-          var2 = var1.d();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ie.field_l.e();
-          var1.a(0, 0);
+          ie.field_l.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ti.c(true);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "hn.C(" + param0 + ')');
@@ -143,12 +143,12 @@ final class hn extends kl {
             SoftwareRasterizer.drawHorizontalLine(var8Lifetime1 + var6Lifetime3, -var8Lifetime1 + (var4 + 9), 2, 16776960);
           }
         }
-        DungeonAssaultScreen.field_i[0].h(-50 + var2, var4 + 20);
+        DungeonAssaultScreen.field_i[0].draw(-50 + var2, var4 + 20);
         IntrusiveNode.field_c.drawString(Integer.toString(this.field_o), -30 + var2, var4 + 36, 16711680, -1);
-        DungeonAssaultScreen.field_i[1].h(var2, var4 + 20);
+        DungeonAssaultScreen.field_i[1].draw(var2, var4 + 20);
         IntrusiveNode.field_c.drawString(Integer.toString(this.field_n - this.field_o), 20 + var2, 36 + var4, 65280, -1);
-        ue.field_i[1].h(this.field_k + 20, 24 + this.field_j);
-        ue.field_i[0].h(-36 + (this.field_a + this.field_k), this.field_j + 24);
+        ue.field_i[1].draw(this.field_k + 20, 24 + this.field_j);
+        ue.field_i[0].draw(-36 + (this.field_a + this.field_k), this.field_j + 24);
     }
 
     static {

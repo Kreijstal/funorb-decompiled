@@ -57,7 +57,7 @@ final class e extends IntrusiveNode {
             if (var3 < we.field_m[var4 + 1].fullHeight) {
               var3 = we.field_m[1 + var4].fullHeight;
             }
-            vj.field_d[var4].d();
+            vj.field_d[var4].bindAsRenderTarget();
             if (0 == var4) {
               SoftwareRasterizer.saveClip(DebouncedFieldValidator.field_f);
               SoftwareRasterizer.intersectClip(0, 0, -(2 * param1) + SoftwareRasterizer.width, SoftwareRasterizer.height);
@@ -68,7 +68,7 @@ final class e extends IntrusiveNode {
             }
             SoftwareRasterizer.blurRectangle(param1, param1, 0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             SectorCacheStore.field_f.bindAsTarget(-32);
-            vj.field_d[var4].h();
+            vj.field_d[var4].trimTransparentBorders();
           }
           cg.field_g = new Sprite(var2_int, var3);
           return;

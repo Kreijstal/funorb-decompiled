@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends s {
+final class ue extends InteractiveWidget {
     private int field_K;
     int field_L;
     static ba field_G;

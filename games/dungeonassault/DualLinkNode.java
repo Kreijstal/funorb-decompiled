@@ -83,7 +83,7 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        rf.field_K = new fm(ck.field_H);
+        rf.field_K = new fm(InteractiveWidget.field_H);
         le.field_b = new gn[25][];
         le.field_b[0] = lc.a(-27711, new String[][]{bh.field_J, nf.field_C});
         le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, DiskArchiveRequest.field_J});

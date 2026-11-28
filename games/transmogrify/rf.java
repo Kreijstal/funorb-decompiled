@@ -150,14 +150,14 @@ final class rf extends a {
                         var38 = -1 + ka.field_i - var37;
                       }
                       if (var37 >= 0) {
-                        dh.a(var40, var39, param8 ^ 99, param7, var21, var36Lifetime2 + var37, var25, var41, var29, var38);
+                        NameSuggestionsPanel.a(var40, var39, param8 ^ 99, param7, var21, var36Lifetime2 + var37, var25, var41, var29, var38);
                       } else {
-                        dh.a(var40, var39, param8 + 99, param7, -(var39 * var37) + var21, var36Lifetime2, var25 - var37 * var40, var41, -(var41 * var37) + var29, var37 + var38);
+                        NameSuggestionsPanel.a(var40, var39, param8 + 99, param7, -(var39 * var37) + var21, var36Lifetime2, var25 - var37 * var40, var41, -(var41 * var37) + var29, var37 + var38);
                       }
                     } else {
                       if (var37 >= 0 &&
                         ka.field_i > var37) {
-                        dh.a(0, 0, 99, param7, var21, var36Lifetime2 + var37, var25, 0, var29, var38);
+                        NameSuggestionsPanel.a(0, 0, 99, param7, var21, var36Lifetime2 + var37, var25, 0, var29, var38);
                       }
                     }
                   }
@@ -306,14 +306,14 @@ final class rf extends a {
                     var37Lifetime1 = ka.field_i + (-var36Lifetime1 - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    dh.a(var39Lifetime1, var38Lifetime1, 99, param7, var21, var35Lifetime1 + var36Lifetime1, var25, var40Lifetime1, var29, var37Lifetime1);
+                    NameSuggestionsPanel.a(var39Lifetime1, var38Lifetime1, 99, param7, var21, var35Lifetime1 + var36Lifetime1, var25, var40Lifetime1, var29, var37Lifetime1);
                   } else {
-                    dh.a(var39Lifetime1, var38Lifetime1, 99, param7, var21 - var38Lifetime1 * var36Lifetime1, var35Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, var40Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, var36Lifetime1 + var37Lifetime1);
+                    NameSuggestionsPanel.a(var39Lifetime1, var38Lifetime1, 99, param7, var21 - var38Lifetime1 * var36Lifetime1, var35Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, var40Lifetime1, var29 - var40Lifetime1 * var36Lifetime1, var36Lifetime1 + var37Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     ka.field_i > var36Lifetime1) {
-                    dh.a(0, 0, param8 ^ 99, param7, var21, var35Lifetime1 + var36Lifetime1, var25, 0, var29, var37Lifetime1);
+                    NameSuggestionsPanel.a(0, 0, param8 ^ 99, param7, var21, var35Lifetime1 + var36Lifetime1, var25, 0, var29, var37Lifetime1);
                   }
                 }
               }

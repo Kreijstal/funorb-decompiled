@@ -12,7 +12,7 @@ final class oj extends IntrusiveNode {
         int var4 = param2;
         int var5 = param0;
         SoftwareRasterizer.setClip(var4, var5, 16 + var4, var5 + 16);
-        se.field_a[param3].f(0, param1);
+        se.field_a[param3].drawOpaque(0, param1);
         SoftwareRasterizer.restoreClip(si.field_R);
     }
 

@@ -53,7 +53,7 @@ final class jh extends UiWidget {
     private final void j(int param0) {
         this.field_z = new Sprite[]{this.b((byte) 86, this.field_x, this.field_F), this.b((byte) 86, this.field_E, this.field_H)};
         this.field_w = this.i(param0 ^ -40982079);
-        this.field_A = this.field_w.a();
+        this.field_A = this.field_w.copyMirroredHorizontally();
         if (param0 != 0) {
           this.field_F = 23;
         }
@@ -136,26 +136,26 @@ final class jh extends UiWidget {
           }
           LoginPanel.a(var5_int - this.field_w.field_k, true, this.field_p + param3, param2 + this.field_w.field_k, param3);
           for (var6 = param2 - this.field_u; var5_int > var6; var6 = var6 + param1.field_k) {
-            param1.c(var6, param3);
+            param1.draw(var6, param3);
           }
           tj.b(653);
           if (SoftwareRasterizer.field_a <= param2 + this.field_w.field_k) {
             mc.a(-8497, this.field_B);
-            param1.c(-this.field_u, 0);
-            param1.c(this.field_v * 2 - this.field_u, 0);
-            this.field_A.d(0, 0);
+            param1.draw(-this.field_u, 0);
+            param1.draw(this.field_v * 2 - this.field_u, 0);
+            this.field_A.drawMultiply(0, 0);
             tj.b(653);
-            this.field_B.c(param2, param3);
+            this.field_B.draw(param2, param3);
           }
           if (-this.field_w.field_k + var5_int <= SoftwareRasterizer.field_j) {
             mc.a(-8497, this.field_B);
             for (var7 = this.field_u + (this.field_l - this.field_w.field_k); var7 > 2 * this.field_v; var7 = var7 - this.field_v * 2) {
             }
-            param1.c(-var7, 0);
-            param1.c(2 * this.field_v - var7, 0);
-            this.field_w.d(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(2 * this.field_v - var7, 0);
+            this.field_w.drawMultiply(0, 0);
             tj.b(653);
-            this.field_B.c(-this.field_w.field_k + var5_int, param3);
+            this.field_B.draw(-this.field_w.field_k + var5_int, param3);
             return;
           }
           return;

@@ -21,7 +21,7 @@ final class tf {
             field_a = (String) null;
           }
           param2 = qe.a((byte) 36, '_', param2, "");
-          var3 = pc.a(param2, 0);
+          var3 = InteractiveWidget.a(param2, 0);
           stackIn_7_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -85,18 +85,18 @@ final class StampedeAnimation extends EventAnimation {
           }
           var9Lifetime1 = var17.field_p;
           uc.d(39);
-          var17.b();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
           var10 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var10.b();
-          var17.c(0, 0);
+          var10.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.b();
-          var17.c(var9Lifetime1 - var17.field_q, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.field_q, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
-          var12.b();
-          var17.c(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           db.b(103);
           DamageTileEffect.field_k = new Sprite[]{var10, var12, var15};
         } catch (RuntimeException runtimeException) {

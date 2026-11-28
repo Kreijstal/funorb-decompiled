@@ -36,7 +36,7 @@ final class MixedSupport006 {
 
     final static void performAction0067(int integerArgument1, int integerArgument2, boolean booleanArgument3, int integerArgument4) {
         int integerLocal1;
-        NetworkSupport002.rgbSpriteState0008.performAction0278(integerArgument1, integerArgument2);
+        NetworkSupport002.rgbSpriteState0008.draw(integerArgument1, integerArgument2);
         if (booleanArgument3) {
           integerLocal1 = MixedSupport107.integerState0682 % NetworkSupport002.rgbSpriteState0008.integerState0258 * 2;
           if (NetworkSupport002.rgbSpriteState0008.integerState0258 <= integerLocal1) {

@@ -494,11 +494,11 @@ final class dg {
         so.field_h.clear(22800);
         fk.field_s = 0;
         if (param0 <= -25) {
-          pc.field_y = 0;
+          InteractiveWidget.field_y = 0;
           return;
         }
         dg.encodeCp1252Character('ￚ', 73);
-        pc.field_y = 0;
+        InteractiveWidget.field_y = 0;
     }
 
     static {

@@ -121,7 +121,7 @@ abstract class GameClientBase extends GameApplet {
         }
         if (-1 != ah.field_b &&
           ah.field_b != 0) {
-          if (li.field_K < 10) {
+          if (NameSuggestionsPanel.field_K < 10) {
             if (3 == ah.field_b) {
               this.redirectToErrorPage((byte) -105, "js5crc");
             } else {
@@ -178,11 +178,11 @@ abstract class GameClientBase extends GameApplet {
           !nb.a(-26375)) {
           hk.field_d = false;
         }
-        if (li.field_K == 0 &&
+        if (NameSuggestionsPanel.field_K == 0 &&
           ul.a(-1)) {
-          li.field_K = 1;
+          NameSuggestionsPanel.field_K = 1;
         }
-        if (1 == li.field_K) {
+        if (1 == NameSuggestionsPanel.field_K) {
           if (kf.field_b != 0) {
             rj.field_f = pe.b(rj.field_c, -1);
           }
@@ -191,9 +191,9 @@ abstract class GameClientBase extends GameApplet {
           FrameTimer.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
           aj.field_f = IntrusiveDeque.field_a;
           FullscreenFocusCanvas.field_g = MatchingFieldValidator.field_p;
-          li.field_K = 2;
+          NameSuggestionsPanel.field_K = 2;
         }
-        if (li.field_K == 2) {
+        if (NameSuggestionsPanel.field_K == 2) {
           if (rj.field_f != null &&
             rj.field_f.ensureIndexLoaded(-7957)) {
             if (rj.field_f.hasGroupName((byte) -39, "")) {
@@ -207,10 +207,10 @@ abstract class GameClientBase extends GameApplet {
             }
           }
           if (rj.field_f == null) {
-            li.field_K = 3;
+            NameSuggestionsPanel.field_K = 3;
           }
         }
-        if (li.field_K == 3 &&
+        if (NameSuggestionsPanel.field_K == 3 &&
           pl.a(MatchingFieldValidator.field_p, FrameTimer.field_b, (byte) -100, IntrusiveDeque.field_a) &&
           de.a(30, FrameTimer.field_b)) {
           ch.a(76);
@@ -238,31 +238,31 @@ abstract class GameClientBase extends GameApplet {
           IntrusiveDeque.field_a = null;
           ca.a((java.applet.Applet) (this), -109);
           id.a(127);
-          li.field_K = 10;
+          NameSuggestionsPanel.field_K = 10;
         }
-        if (li.field_K == 10) {
+        if (NameSuggestionsPanel.field_K == 10) {
           if (kf.field_b != 0) {
             ClientException.field_e = pe.b(kk.field_j, -1);
           }
-          li.field_K = 11;
+          NameSuggestionsPanel.field_K = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (li.field_K == 11) {
+        if (NameSuggestionsPanel.field_K == 11) {
           if (ClientException.field_e != null && (!ClientException.field_e.ensureIndexLoaded(-7957) ||
             !ClientException.field_e.tryLoadAllGroups((byte) 79))) {
             mh.a(tk.a(ol.field_f, ClientException.field_e, sd.field_g, 256), (byte) -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
-            li.field_K = 12;
+            NameSuggestionsPanel.field_K = 12;
             tc.field_k = true;
           }
         }
-        if (12 == li.field_K &&
+        if (12 == NameSuggestionsPanel.field_K &&
           !tc.field_k) {
-          li.field_K = 13;
+          NameSuggestionsPanel.field_K = 13;
         }
-        if (li.field_K == 13) {
+        if (NameSuggestionsPanel.field_K == 13) {
           var3Lifetime2 = 1;
           if (wc.field_h != null) {
             stackIn_136_0 = (!wc.field_h.a(0)) ? 0 : 1;
@@ -270,7 +270,7 @@ abstract class GameClientBase extends GameApplet {
             mh.a(wc.field_h.field_c, (byte) -125, wc.field_h.field_d);
           }
           if (var3Lifetime2 != 0) {
-            li.field_K = 20;
+            NameSuggestionsPanel.field_K = 20;
           }
         }
         if (!param1 &&
@@ -726,7 +726,7 @@ abstract class GameClientBase extends GameApplet {
           }
           discarded$1 = this.a(stackIn_9_1, (byte) stackIn_9_2, stackIn_10_3);
         } else {
-          if (li.field_K >= 10) {
+          if (NameSuggestionsPanel.field_K >= 10) {
             if (!eh.a(50)) {
               t.c(3870);
             } else {
@@ -747,7 +747,7 @@ abstract class GameClientBase extends GameApplet {
         if (param0 != 17) {
           return;
         }
-        String var2 = PcmOutputWorker.a(6);
+        String var2 = PcmOutputWorker.readStringFromPacketBuffer(6);
         pa.a(var2, 8, gi.b(param0 ^ 12461));
     }
 

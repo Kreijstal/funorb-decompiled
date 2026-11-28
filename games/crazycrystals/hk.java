@@ -26,10 +26,10 @@ abstract class hk extends pb {
           if (param0 != 5) {
             hk.clearDeclaredStaticReferences(72);
           }
-          var5 = (pp) (nh.field_A.beginForward(param0 ^ 32076));
+          var5 = (pp) (NameSuggestionsPanel.field_A.beginForward(param0 ^ 32076));
           while (var5 != null) {
             pk.a(param1, var5, (byte) 113);
-            var5 = (pp) (nh.field_A.nextForward(false));
+            var5 = (pp) (NameSuggestionsPanel.field_A.nextForward(false));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

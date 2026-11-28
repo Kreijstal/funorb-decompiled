@@ -159,7 +159,7 @@ final class cb extends pn implements Cloneable {
           } else {
             stackIn_4_1 = this.field_s >> 2;
           }
-          ((RgbSprite) (Object) stackIn_3_0[stackIn_4_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
+          ((RgbSprite) (Object) stackIn_3_0[stackIn_4_1]).drawScaledAdditive(param4, param5, 2 * param1, 2 * param2, 128);
           var7 = -115 % ((param0 - 74) / 41);
           if (param3) {
             stackIn_10_0 = an.field_q;
@@ -179,7 +179,7 @@ final class cb extends pn implements Cloneable {
           } else {
             stackIn_27_1 = this.field_s >> 2;
           }
-          ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).a(param4, param5, 2 * param1, 2 * param2, 128);
+          ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).drawScaledAdditive(param4, param5, 2 * param1, 2 * param2, 128);
           var7Lifetime1 = -115 % ((param0 - 74) / 41);
           if (param3) {
             stackIn_31_0 = an.field_q;
@@ -198,7 +198,7 @@ final class cb extends pn implements Cloneable {
         } else {
           stackIn_17_1 = 0;
         }
-        ((RgbSprite) (Object) stackIn_16_0[stackIn_17_1]).d(param4, param5, 128);
+        ((RgbSprite) (Object) stackIn_16_0[stackIn_17_1]).drawAdditive(param4, param5, 128);
         var7Lifetime2 = -115 % ((param0 - 74) / 41);
         if (param3) {
           stackIn_21_0 = an.field_q;

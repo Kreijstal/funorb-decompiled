@@ -55,7 +55,7 @@ final class nb extends am {
         int[] var3 = var7;
         if (!this.field_l.field_b) {
         } else {
-          var4 = this.b(0, 0, this.field_t ? vp.field_I - param1 : param1);
+          var4 = this.b(0, 0, this.field_t ? NameSuggestionsPanel.field_I - param1 : param1);
           if (!this.field_s) {
             dk.a(var4, 0, var7, 0, ci.field_c);
           } else {
@@ -101,7 +101,7 @@ final class nb extends am {
         if (this.field_r.field_b) {
           stackIn_5_1 = 24066;
           if (this.field_t) {
-            stackIn_6_2 = -param1 + vp.field_I;
+            stackIn_6_2 = -param1 + NameSuggestionsPanel.field_I;
           } else {
             stackIn_6_2 = param1;
           }

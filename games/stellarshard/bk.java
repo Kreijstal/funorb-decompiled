@@ -18,7 +18,7 @@ final class bk {
         try {
           FullscreenFocusCanvas.field_a = param3;
           wb.field_c = param1;
-          we.a(param2, 12757, ul.field_H);
+          we.a(param2, 12757, NameSuggestionsPanel.field_H);
           if (param0 != 12) {
             String var5 = (String) null;
             bk.a(20, (String) null, true, (String) null);

@@ -59,9 +59,9 @@ abstract class AwtRasterBuffer {
           }
           lg.a(1);
           if (sn.field_c < 150) {
-            rk.field_a.b(var3, var4);
+            rk.field_a.drawHalfSize(var3, var4);
           } else {
-            kn.field_p.f(15 + var3, 10 + var4, var5);
+            kn.field_p.drawWithOpacity(15 + var3, 10 + var4, var5);
           }
           var6 = sn.field_c - 125;
           if (var6 > 0) {
@@ -72,20 +72,20 @@ abstract class AwtRasterBuffer {
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
-                ne.field_e.f(var3 + 15, var4 + 10, var5 * var7 >> 8);
+                ne.field_e.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7 >> 8);
               }
               return;
             }
             if (20 <= var6) {
               if (var6 < 30) {
-                eq.field_k.d(var3, var4, 256);
+                eq.field_k.drawAdditive(var3, var4, 256);
               } else {
                 var7Lifetime9 = 256 * (-var6 + 50) / 20;
-                eq.field_k.d(var3, var4, var7Lifetime9);
+                eq.field_k.drawAdditive(var3, var4, var7Lifetime9);
               }
             } else {
               var7Lifetime9 = 256 * var6 / 20;
-              eq.field_k.d(var3, var4, var7Lifetime9);
+              eq.field_k.drawAdditive(var3, var4, var7Lifetime9);
             }
           }
           var6Lifetime4 = sn.field_c - 140;
@@ -94,7 +94,7 @@ abstract class AwtRasterBuffer {
             if (var6Lifetime4 < 20) {
               var7Lifetime8 = 256 * var6Lifetime4 / 20;
             }
-            ne.field_e.f(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
+            ne.field_e.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime8 >> 8);
           }
           return;
         }
@@ -119,20 +119,20 @@ abstract class AwtRasterBuffer {
         }
         lg.a(1);
         if (sn.field_c >= 150) {
-          kn.field_p.f(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1);
+          kn.field_p.drawWithOpacity(15 + var3Lifetime1, 10 + var4Lifetime1, var5Lifetime1);
           var6Lifetime1 = sn.field_c - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {
             if (20 <= var6Lifetime1) {
               if (var6Lifetime1 < 30) {
-                eq.field_k.d(var3Lifetime1, var4Lifetime1, 256);
+                eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, 256);
               } else {
                 var7Lifetime1 = 256 * (-var6Lifetime1 + 50) / 20;
-                eq.field_k.d(var3Lifetime1, var4Lifetime1, var7Lifetime1);
+                eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime1);
               }
             } else {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
-              eq.field_k.d(var3Lifetime1, var4Lifetime1, var7Lifetime1);
+              eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime1);
             }
           }
           var6Lifetime1Lifetime1 = sn.field_c - 140;
@@ -141,11 +141,11 @@ abstract class AwtRasterBuffer {
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime1Lifetime1 >> 8);
+            ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime1Lifetime1 >> 8);
           }
           return;
         }
-        rk.field_a.b(var3Lifetime1, var4Lifetime1);
+        rk.field_a.drawHalfSize(var3Lifetime1, var4Lifetime1);
         var6Lifetime2 = sn.field_c - 125;
         if (var6Lifetime2 <= 0) {
           var6Lifetime2 = sn.field_c - 140;
@@ -154,7 +154,7 @@ abstract class AwtRasterBuffer {
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime2 >> 8);
+            ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime2 >> 8);
           }
           return;
         }
@@ -165,44 +165,44 @@ abstract class AwtRasterBuffer {
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = 256 * var6Lifetime2 / 20;
             }
-            ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime3 >> 8);
+            ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime3 >> 8);
           }
           return;
         }
         if (20 > var6Lifetime2) {
           var7Lifetime4 = 256 * var6Lifetime2 / 20;
-          eq.field_k.d(var3Lifetime1, var4Lifetime1, var7Lifetime4);
+          eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime4);
           var6Lifetime2 = sn.field_c - 140;
           if (0 < var6Lifetime2) {
             var7Lifetime4Lifetime1 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime4Lifetime1 = 256 * var6Lifetime2 / 20;
             }
-            ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime4Lifetime1 >> 8);
+            ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime4Lifetime1 >> 8);
           }
           return;
         }
         if (var6Lifetime2 < 30) {
-          eq.field_k.d(var3Lifetime1, var4Lifetime1, 256);
+          eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, 256);
           var6Lifetime2 = sn.field_c - 140;
           if (0 < var6Lifetime2) {
             var7Lifetime5 = 256;
             if (var6Lifetime2 < 20) {
               var7Lifetime5 = 256 * var6Lifetime2 / 20;
             }
-            ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime5 >> 8);
+            ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime5 >> 8);
           }
           return;
         }
         var7Lifetime6 = 256 * (-var6Lifetime2 + 50) / 20;
-        eq.field_k.d(var3Lifetime1, var4Lifetime1, var7Lifetime6);
+        eq.field_k.drawAdditive(var3Lifetime1, var4Lifetime1, var7Lifetime6);
         var6Lifetime3 = sn.field_c - 140;
         if (0 < var6Lifetime3) {
           var7Lifetime7 = 256;
           if (var6Lifetime3 < 20) {
             var7Lifetime7 = 256 * var6Lifetime3 / 20;
           }
-          ne.field_e.f(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime7 >> 8);
+          ne.field_e.drawWithOpacity(var3Lifetime1 + 15, var4Lifetime1 + 10, var5Lifetime1 * var7Lifetime7 >> 8);
         }
         return;
     }

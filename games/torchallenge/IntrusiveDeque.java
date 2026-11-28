@@ -140,14 +140,14 @@ final class IntrusiveDeque {
             var3 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ck.field_c);
             var11 = new Sprite(4 + le.field_e.storedWidth, le.field_e.storedHeight + 4);
-            var11.d();
+            var11.bindAsRenderTarget();
             le.field_e.drawTinted(2, 2, vh.field_h);
             ih.a(var11.storedWidth, 0, 4, var11.storedHeight, 2, var11, 0, 1);
             le.field_e = var11;
-            dh.field_ab = le.field_e.i();
+            dh.field_ab = le.field_e.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.storedWidth / 2;
-            var12.d();
+            var12.bindAsRenderTarget();
             tk.field_R.drawCentred(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
             ek.field_G.drawCentred(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
             tk.field_R.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, ConfirmedEmailAvailabilityValidator.field_t), var6, 110, 16777215, -1);
@@ -155,16 +155,16 @@ final class IntrusiveDeque {
             tk.field_R.drawCentred(ub.field_m, var6, 180, 16777215, -1);
             ek.field_G.drawCentred(wi.field_b, var6, 200, 16777215, -1);
             ih.a(var12.storedWidth, 0, 4, var12.storedHeight, 3, var12, 0, 1);
-            me.field_e.d();
+            me.field_e.bindAsRenderTarget();
             var12.drawTransparent(-me.field_e.offsetX + 18, -me.field_e.offsetY + 241);
             for (var7 = 0; hb.field_g.length > var7; var7++) {
-              SecondaryNodeDeque.field_i[var7].d();
+              SecondaryNodeDeque.field_i[var7].bindAsRenderTarget();
               ek.field_G.drawParagraph(hb.field_g[var7], 3, 3, SecondaryNodeDeque.field_i[var7].storedWidth - 6, SecondaryNodeDeque.field_i[var7].storedHeight - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
               ih.a(SecondaryNodeDeque.field_i[var7].storedWidth, 0, 4, SecondaryNodeDeque.field_i[var7].storedHeight, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
             }
             hb.field_g = null;
-            AccountRegistrationPanel.field_R = GzipDecoder.field_b.c();
-            AccountRegistrationPanel.field_R.d();
+            AccountRegistrationPanel.field_R = GzipDecoder.field_b.copy();
+            AccountRegistrationPanel.field_R.bindAsRenderTarget();
             ii.a(SoftwareRasterizer.width, 2 * SoftwareRasterizer.height / 3, 64, 4, 0, 0);
             SoftwareRasterizer.setTarget(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ck.field_c);
@@ -228,18 +228,18 @@ final class IntrusiveDeque {
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               vk.field_k = vk.field_k + var9_intLifetime3;
             }
-            vk.field_d.g();
+            vk.field_d.normalizeCanvas();
             var9 = new Sprite(vk.field_d.fullWidth, vk.field_d.fullHeight);
-            var9.d();
+            var9.bindAsRenderTarget();
             tk.field_R.drawParagraph(var14, si.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
             ih.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
-            vk.field_d.d();
+            vk.field_d.bindAsRenderTarget();
             var9.drawTransparent(0, 0);
             cf.field_c = new Sprite(640, 480);
-            cf.field_c.d();
-            vk.field_d.b(rl.field_f + (vk.field_d.fullWidth >> 1), (vk.field_d.fullHeight >> 1) + PasswordValidator.field_t, ImageProducerRasterBuffer.field_u, 4096);
+            cf.field_c.bindAsRenderTarget();
+            vk.field_d.drawRotated(rl.field_f + (vk.field_d.fullWidth >> 1), (vk.field_d.fullHeight >> 1) + PasswordValidator.field_t, ImageProducerRasterBuffer.field_u, 4096);
             vk.field_d = null;
-            cf.field_c.h();
+            cf.field_c.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ck.field_c);
           }
@@ -252,10 +252,10 @@ final class IntrusiveDeque {
             var16 = new Sprite(412, 43);
             var17 = ni.a(new String[]{ia.field_l}, 0, DualLinkNode.field_n);
             ia.field_l = null;
-            var16.d();
+            var16.bindAsRenderTarget();
             ek.field_G.drawParagraph(var17, 3, 3, var16.storedWidth - 6, var16.storedHeight - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
             ih.a(var16.storedWidth, 0, 4, var16.storedHeight, 3, var16, 0, 1);
-            ResourceArchive.field_f.d();
+            ResourceArchive.field_f.bindAsRenderTarget();
             var16.drawTransparent(199 - ResourceArchive.field_f.offsetX, 83 - ResourceArchive.field_f.offsetY);
             SoftwareRasterizer.setTarget(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ck.field_c);
@@ -270,7 +270,7 @@ final class IntrusiveDeque {
             var5Lifetime1 = var4 + (ProxySocketConnector.field_m.fullWidth + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + ProxySocketConnector.field_m.fullWidth);
-            ResourceArchive.field_f.d();
+            ResourceArchive.field_f.bindAsRenderTarget();
             ek.field_G.drawString(ImageProducerRasterBuffer.field_r, -ResourceArchive.field_f.offsetX + var7Lifetime2, ek.field_G.field_x + (155 - ResourceArchive.field_f.offsetY + ek.field_G.field_K), 16777215, -1);
             ih.a(var4, -ResourceArchive.field_f.offsetX + (var7Lifetime2 - 4), 4, 50, 3, ResourceArchive.field_f, -ResourceArchive.field_f.offsetY + 155, 1);
             var8Lifetime1 = -((ProxySocketConnector.field_m.fullHeight - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-ResourceArchive.field_f.offsetY + 155);

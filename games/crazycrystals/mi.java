@@ -397,17 +397,17 @@ final class mi extends ea implements Cloneable {
           var7 = stackIn_6_0;
           if (param2 == 24 &&
             24 == param3) {
-            var7.a(param1, -param3 + param4);
+            var7.draw(param1, -param3 + param4);
             return;
           }
-          var7.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+          var7.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
           return;
         }
         if (24 != param2) {
           if (this.field_z != null) {
-            vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].b(param1, param4 - param3, param2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
+            vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].drawGrayModulatedScaled(param1, param4 - param3, param2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
             if (null != this.field_C) {
-              vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].b(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
+              vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].drawGrayModulatedScaled(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
             }
             if (this.field_B) {
               stackIn_31_0 = pa.field_H;
@@ -417,10 +417,10 @@ final class mi extends ea implements Cloneable {
             var7Lifetime1 = stackIn_31_0;
             if (param2 == 24 &&
               24 == param3) {
-              var7Lifetime1.a(param1, -param3 + param4);
+              var7Lifetime1.draw(param1, -param3 + param4);
               return;
             }
-            var7Lifetime1.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+            var7Lifetime1.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
             return;
           }
           if (null == this.field_C) {
@@ -432,13 +432,13 @@ final class mi extends ea implements Cloneable {
             var7Lifetime1Lifetime1 = stackIn_40_0;
             if (param2 == 24 &&
               24 == param3) {
-              var7Lifetime1Lifetime1.a(param1, -param3 + param4);
+              var7Lifetime1Lifetime1.draw(param1, -param3 + param4);
               return;
             }
-            var7Lifetime1Lifetime1.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+            var7Lifetime1Lifetime1.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
             return;
           }
-          vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].b(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
+          vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].drawGrayModulatedScaled(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
           if (this.field_B) {
             stackIn_48_0 = pa.field_H;
           } else {
@@ -447,18 +447,18 @@ final class mi extends ea implements Cloneable {
           var7Lifetime1Lifetime2 = stackIn_48_0;
           if (param2 == 24 &&
             24 == param3) {
-            var7Lifetime1Lifetime2.a(param1, -param3 + param4);
+            var7Lifetime1Lifetime2.draw(param1, -param3 + param4);
             return;
           }
-          var7Lifetime1Lifetime2.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+          var7Lifetime1Lifetime2.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
           return;
         }
         if (param3 != 24) {
           if (this.field_z != null) {
-            vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].b(param1, param4 - param3, param2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
+            vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].drawGrayModulatedScaled(param1, param4 - param3, param2, param3 * 3, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
           }
           if (null != this.field_C) {
-            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].b(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
+            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].drawGrayModulatedScaled(param2 + param1, -param3 + param4, param2, 3 * param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
           }
           if (this.field_B) {
             stackIn_20_0 = pa.field_H;
@@ -468,16 +468,16 @@ final class mi extends ea implements Cloneable {
           var7Lifetime2 = stackIn_20_0;
           if (param2 == 24 &&
             24 == param3) {
-            var7Lifetime2.a(param1, -param3 + param4);
+            var7Lifetime2.draw(param1, -param3 + param4);
             return;
           }
-          var7Lifetime2.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+          var7Lifetime2.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
           return;
         }
         if (null != this.field_z) {
-          vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].c(param1, -param3 + param4, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
+          vj.field_a[18][this.field_z.field_B >> MenuOverlay.field_c[16]].drawGrayModulated(param1, -param3 + param4, LevelCompleteEntrancePhase.field_f[this.field_z.field_u]);
           if (null != this.field_C) {
-            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].c(param1 + param2, param4 - param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
+            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].drawGrayModulated(param1 + param2, param4 - param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
           }
           if (this.field_B) {
             stackIn_60_0 = pa.field_H;
@@ -494,7 +494,7 @@ final class mi extends ea implements Cloneable {
             }
             var7Lifetime3 = stackIn_69_0;
           } else {
-            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].c(param1 + param2, param4 - param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
+            vj.field_a[19][this.field_C.field_B >> MenuOverlay.field_c[17]].drawGrayModulated(param1 + param2, param4 - param3, LevelCompleteEntrancePhase.field_f[this.field_C.field_u]);
             if (this.field_B) {
               stackIn_77_0 = pa.field_H;
             } else {
@@ -505,10 +505,10 @@ final class mi extends ea implements Cloneable {
         }
         if (param2 == 24 &&
           24 == param3) {
-          var7Lifetime3.a(param1, -param3 + param4);
+          var7Lifetime3.draw(param1, -param3 + param4);
           return;
         }
-        var7Lifetime3.b(param1, -param3 + param4, 2 * param2, param3 * 3);
+        var7Lifetime3.drawScaled(param1, -param3 + param4, 2 * param2, param3 * 3);
     }
 
     final static void i(int param0) {

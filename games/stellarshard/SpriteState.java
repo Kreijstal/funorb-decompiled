@@ -66,7 +66,7 @@ abstract class SpriteState extends DualLinkNode {
           var7 = this.field_x << 3;
           param4 = (15 & var6) + (param4 << 4);
           param3 = (param3 << 4) + (15 & var7);
-          this.a(var6, var7, param4, param3, param0, param1);
+          this.drawRotatedAboutNearest(var6, var7, param4, param3, param0, param1);
           return;
         }
         field_u = (ResourceArchive) null;
@@ -74,10 +74,10 @@ abstract class SpriteState extends DualLinkNode {
         var7Lifetime1 = this.field_x << 3;
         param4 = (15 & var6Lifetime1) + (param4 << 4);
         param3 = (param3 << 4) + (15 & var7Lifetime1);
-        this.a(var6Lifetime1, var7Lifetime1, param4, param3, param0, param1);
+        this.drawRotatedAboutNearest(var6Lifetime1, var7Lifetime1, param4, param3, param0, param1);
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRotatedAboutNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     static {
     }

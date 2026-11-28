@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends rg {
+class EditableTextField extends InteractiveWidget {
     private long field_Y;
     private boolean field_Z;
     static boolean field_W;
@@ -493,7 +493,7 @@ class EditableTextField extends rg {
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         try {
-          nn.field_t[param2].d(param0, param4);
+          nn.field_t[param2].draw(param0, param4);
           pn.field_a.drawString(param1, 2 + param0, 14 + param4, 16777215, -1);
           if (param3 != -4245) {
             EditableTextField.k(69);

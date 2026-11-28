@@ -52,17 +52,17 @@ final class mr extends TileEffect {
         var5 = stackIn_10_0;
         var6 = IterableDualLinkDeque.field_d[var5];
         var7 = 64 + (param0 - var4) - var6.field_b;
-        var6.a(param2, var7);
+        var6.draw(param2, var7);
         if (param1) {
           while (var7 > 0) {
             var7 -= 64;
-            vi.field_f.a(param2, var7);
+            vi.field_f.draw(param2, var7);
           }
         } else {
           field_f = (Sprite) null;
           while (var7 > 0) {
             var7 -= 64;
-            vi.field_f.a(param2, var7);
+            vi.field_f.draw(param2, var7);
           }
         }
     }

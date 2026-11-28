@@ -104,7 +104,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void performAction0285(int integerArgument1, int integerArgument2) {
+    final void drawHalfSize(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -261,7 +261,7 @@ final class ArgbSprite extends RgbSprite {
         super(integerArgument1, integerArgument2);
     }
 
-    final void performAction0272(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void drawScaledAlpha(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -380,12 +380,12 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void performAction0291(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawWithIntensity(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
         if (integerArgument3 == 256) {
-          this.performAction0278(integerArgument1, integerArgument2);
+          this.draw(integerArgument1, integerArgument2);
           return;
         }
         integerArgument1 = integerArgument1 + this.integerState0259;
@@ -428,7 +428,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbIntensity(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
     }
 
-    final void performAction0257(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawTintedGray(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -472,7 +472,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbGrayTinted(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
     }
 
-    final void performAction0279(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawWithOpacity(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -547,7 +547,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void performAction0288(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
+    final void drawScaledWithIntensity(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;
@@ -555,7 +555,7 @@ final class ArgbSprite extends RgbSprite {
         int integerLocal5;
         int integerLocal6;
         if (integerArgument5 == 256) {
-          this.performAction0280(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
+          this.drawScaled(integerArgument1, integerArgument2, integerArgument3, integerArgument4);
           return;
         }
         if (integerArgument3 <= 0 ||
@@ -612,7 +612,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbScaledIntensity(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal9, integerLocal10, integerLocal4, integerLocal15, integerArgument3, integerArgument4, integerLocal13, integerLocal14, integerLocal7, integerArgument5);
     }
 
-    final void performAction0270(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawGrayModulated(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -656,7 +656,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgbGrayModulated(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, 0, 0, integerLocal7, integerLocal6, integerLocal8, integerLocal9, integerArgument3);
     }
 
-    final void performAction0295(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawAdditive(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -754,7 +754,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void performAction0290(int integerArgument1, int integerArgument2) {
+    final void drawOpaque(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -798,7 +798,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgb(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
     }
 
-    final void performAction0278(int integerArgument1, int integerArgument2) {
+    final void draw(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -842,7 +842,7 @@ final class ArgbSprite extends RgbSprite {
         ArgbSprite.blitArgb(SoftwareRaster.integerArrayState0063, this.integerArrayState0024, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
     }
 
-    final void performAction0280(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void drawScaled(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3;

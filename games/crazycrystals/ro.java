@@ -181,12 +181,12 @@ final class ro extends pn implements Cloneable {
             }
             var12 = -84 % ((param0 - 74) / 41);
             if (param1 != 24) {
-              var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+              var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
             } else {
               if (param2 == 24) {
-                var11.a(param4, -param2 + param5);
+                var11.draw(param4, -param2 + param5);
               } else {
-                var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+                var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
               }
             }
           } else {
@@ -227,12 +227,12 @@ final class ro extends pn implements Cloneable {
             }
             var12 = -84 % ((param0 - 74) / 41);
             if (param1 != 24) {
-              var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+              var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
             } else {
               if (param2 != 24) {
-                var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+                var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
               } else {
-                var11.a(param4, -param2 + param5);
+                var11.draw(param4, -param2 + param5);
               }
             }
           }
@@ -308,9 +308,9 @@ final class ro extends pn implements Cloneable {
             var12Lifetime1 = -84 % ((param0 - 74) / 41);
             if (param1 == 24 &&
               param2 == 24) {
-              var11.a(param4, -param2 + param5);
+              var11.draw(param4, -param2 + param5);
             } else {
-              var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+              var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
             }
           } else {
             if (var12Lifetime1 + var13Lifetime1 > 0) {
@@ -361,9 +361,9 @@ final class ro extends pn implements Cloneable {
             var12Lifetime1 = -84 % ((param0 - 74) / 41);
             if (param1 == 24 &&
               param2 == 24) {
-              var11.a(param4, -param2 + param5);
+              var11.draw(param4, -param2 + param5);
             } else {
-              var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+              var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
             }
           }
         } else {
@@ -410,9 +410,9 @@ final class ro extends pn implements Cloneable {
             var12Lifetime1 = -84 % ((param0 - 74) / 41);
             if (param1 == 24 &&
               param2 == 24) {
-              var11.a(param4, -param2 + param5);
+              var11.draw(param4, -param2 + param5);
             } else {
-              var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+              var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
             }
           } else {
             if (this.field_p.field_m == 0) {
@@ -469,9 +469,9 @@ final class ro extends pn implements Cloneable {
               var12Lifetime1 = -84 % ((param0 - 74) / 41);
               if (param1 == 24 &&
                 param2 == 24) {
-                var11.a(param4, -param2 + param5);
+                var11.draw(param4, -param2 + param5);
               } else {
-                var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+                var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
               }
             } else {
               if (var12Lifetime1 + var13Lifetime1 > 0) {
@@ -522,9 +522,9 @@ final class ro extends pn implements Cloneable {
               var12Lifetime1 = -84 % ((param0 - 74) / 41);
               if (param1 == 24 &&
                 param2 == 24) {
-                var11.a(param4, -param2 + param5);
+                var11.draw(param4, -param2 + param5);
               } else {
-                var11.b(param4, -param2 + param5, param1 * 2, 3 * param2);
+                var11.drawScaled(param4, -param2 + param5, param1 * 2, 3 * param2);
               }
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends hc {
+final class s extends InteractiveWidget {
     int field_R;
     static Sprite[] field_L;
     int field_M;

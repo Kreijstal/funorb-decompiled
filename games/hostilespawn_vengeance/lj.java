@@ -31,8 +31,8 @@ abstract class lj extends DualLinkNode {
           var1_int = 0;
           var2 = 0;
           while (jn.e((byte) 73)) {
-            mc.field_F.c(0);
-            if (mc.field_F.b(0)) {
+            NameSuggestionsPanel.field_F.c(0);
+            if (NameSuggestionsPanel.field_F.b(0)) {
               var1_int = 1;
             }
             if (13 != pj.field_e) {
@@ -40,14 +40,14 @@ abstract class lj extends DualLinkNode {
             }
             var2 = 1;
           }
-          mc.field_F.a((byte) -102, sd.a(2, j.field_c, rb.field_m), sd.a(2, ec.field_a, rc.field_b));
-          if (mc.field_F.b(0)) {
+          NameSuggestionsPanel.field_F.a((byte) -102, sd.a(2, j.field_c, rb.field_m), sd.a(2, ec.field_a, rc.field_b));
+          if (NameSuggestionsPanel.field_F.b(0)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            0 <= mc.field_F.field_f) {
-            var3 = FullscreenFocusCanvas.field_k[mc.field_F.field_f];
+            0 <= NameSuggestionsPanel.field_F.field_f) {
+            var3 = FullscreenFocusCanvas.field_k[NameSuggestionsPanel.field_F.field_f];
             if (var3 != 2 &&
               var3 != 5) {
               var4 = -61 % ((param0 - 31) / 58);
@@ -205,7 +205,7 @@ abstract class lj extends DualLinkNode {
                     }
                     var40 = (int)((var38 * var32_double + var4_double) * 24.0);
                     var41 = (int)((var6 + var38 * var34) * 24.0);
-                    stackIn_36_0 = (!var27.field_u.d(var36, var37, var40, var41)) ? 0 : 1;
+                    stackIn_36_0 = (!var27.field_u.isOpaqueAt(var36, var37, var40, var41)) ? 0 : 1;
                     var31 = stackIn_36_0;
                     if (var31 != 0) {
                       var4_double = var4_double + var32_double * var38;

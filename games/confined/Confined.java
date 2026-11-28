@@ -202,7 +202,7 @@ public final class Confined extends i {
           rc.a(param0 ^ -30147);
           sc.clearStaticReferences(-30048);
           fj.clearStaticReferences(296);
-          rg.clearStaticReferences((byte) 17);
+          InteractiveWidget.clearStaticReferences((byte) 17);
           am.clearStaticReferences(true);
           ug.clearDeclaredStaticReferences((byte) -117);
           oe.releaseDeclaredStaticReferences(-1);
@@ -233,7 +233,7 @@ public final class Confined extends i {
           EditableTextField.clearStaticReferences(false);
           sj.releaseDeclaredStaticReferences((byte) 70);
           ib.clearStaticReferences((byte) -20);
-          ak.releaseDeclaredStaticReferences(-125);
+          NameSuggestionsPanel.releaseDeclaredStaticReferences(-125);
           na.clearDeclaredStaticReferences((byte) -127);
           ba.clearDeclaredStaticReferences((byte) -94);
           rh.clearDeclaredStaticReferences(8692);
@@ -655,7 +655,7 @@ public final class Confined extends i {
             decompiledFrameRemainder1 = (var23 != 0);
           }
           if (decompiledFrameRemainder1) {
-            IntrusiveDeque.field_c.c(0, 376);
+            IntrusiveDeque.field_c.drawOpaque(0, 376);
             if (0 < qn.field_v.field_B.field_ub) {
               PrimaryNodeDeque.a(ic.field_d, 8, (byte) -30, 384, 14, qn.field_v.field_B.field_ub);
             }
@@ -693,10 +693,10 @@ public final class Confined extends i {
               ol.a(392, 30613, 1 + (qn.field_v.field_B.field_R - 1) / 50, 7, 384);
             }
             if (qn.field_v.field_B.field_mb) {
-              nn.field_t[0].c(272, 432);
+              nn.field_t[0].drawOpaque(272, 432);
             }
             if (qn.field_v.field_B.field_Eb) {
-              nn.field_t[1].c(312, 432);
+              nn.field_t[1].drawOpaque(312, 432);
             }
             if (qn.field_v.field_B.field_U > 0) {
               ol.a(352, param0 ^ 49045, (-1 + qn.field_v.field_B.field_U) / 50 + 1, 2, 432);
@@ -723,11 +723,11 @@ public final class Confined extends i {
                 }
                 ol.a(592, param0 - 20587, qn.field_v.field_B.field_yb, 9, 384);
                 var4 = -gd.field_t[1].field_t + 544;
-                gd.field_t[1].d(var4, 386);
+                gd.field_t[1].draw(var4, 386);
                 var4 = -2 + var4 - pn.field_a.stringWidth(ca.field_q);
                 pn.field_a.drawString(ca.field_q, var4, 398, 16777215, -1);
                 var4 = -3 + (var4 - gd.field_t[0].field_t);
-                gd.field_t[0].d(var4, 386);
+                gd.field_t[0].draw(var4, 386);
                 pn.field_a.drawRightAligned(ll.field_c, 521, 422, 16777215, -1);
                 var4 = qn.field_v.field_J.field_o;
                 decompiledFrameRemainder0 = !(qn.field_v.field_x.field_t <= 0);
@@ -1018,8 +1018,8 @@ public final class Confined extends i {
             kn.field_g = dh.a(false, "unachieved", "basic", pb.field_e);
             var2_ref = dh.a(false, "orbcoin", "basic", pb.field_e);
             PcmOutputWorker.field_h = new RgbSprite(20, 20);
-            PcmOutputWorker.field_h.d();
-            var2_ref.a(0, 0, 20, 20);
+            PcmOutputWorker.field_h.bindAsRenderTarget();
+            var2_ref.drawDownscaledAreaAveraged(0, 0, 20, 20);
             pi.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;
             pn.field_a = bj.a("", ih.field_d, EditableTextField.field_U, "fonts_bottomheavy16", (byte) 38);
@@ -1266,7 +1266,7 @@ public final class Confined extends i {
               StageDirector.clearIndexedSpriteDecodeBuffers(false);
               break;
             }
-            var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], rg.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
+            var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
             var2++;
           } while (var3 == 0);
           stackIn_12_0 = var1;

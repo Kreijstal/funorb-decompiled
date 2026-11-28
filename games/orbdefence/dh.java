@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class dh extends hl implements ai {
+class dh extends hl implements WidgetActivationListener {
     private BitmapFont field_db;
     private dg field_ab;
     static tl field_bb;
@@ -78,8 +78,8 @@ class dh extends hl implements ai {
 
     final void q(int param0) {
         if (param0 != 4210752) {
-          s var3 = (s) null;
-          this.a((byte) 120, -34, 27, (s) null, 96);
+          InteractiveWidget var3 = (InteractiveWidget) null;
+          this.onWidgetActivated((byte) 120, -34, 27, (InteractiveWidget) null, 96);
         }
         if (!this.field_A) {
           return;
@@ -234,7 +234,7 @@ class dh extends hl implements ai {
         }
     }
 
-    public void a(byte param0, int param1, int param2, s param3, int param4) {
+    public void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         try {
           if (!this.field_eb) {
             jj.a("tochangedisplayname.ws", (byte) -93, uj.b((byte) -120));

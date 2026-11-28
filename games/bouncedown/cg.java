@@ -120,7 +120,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 119, "ticketing_gotowebsite");
                 if (null != var2) {
-                  nd.field_G = c.a(0, var2);
+                  NameSuggestionsPanel.field_G = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 97, "ticketing_waitingformessages");
                 if (null != var2) {

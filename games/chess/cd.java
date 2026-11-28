@@ -225,15 +225,15 @@ final class cd extends pk {
           var4 = var2.field_t;
           r.k(3029);
           v.field_i = new RgbSprite(var3, 3 * var4 / 4);
-          v.field_i.e();
+          v.field_i.bindAsRenderTarget();
           if (param0 < 125) {
             String var5 = (String) null;
             cd.a((String) null, -127);
           }
-          var2.d(0, 0);
+          var2.drawOpaque(0, 0);
           re.field_u = new RgbSprite(var3, -v.field_i.field_t + var4);
-          re.field_u.e();
-          var2.d(0, -v.field_i.field_t);
+          re.field_u.bindAsRenderTarget();
+          var2.drawOpaque(0, -v.field_i.field_t);
           re.field_u.field_r = v.field_i.field_t;
           fd.a(28773);
         } catch (RuntimeException runtimeException) {

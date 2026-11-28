@@ -91,14 +91,14 @@ final class TextLinkRegion extends IntrusiveNode {
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ie.field_b);
             var11 = new Sprite(4 + PizzaArenaTheme.field_h.field_q, 4 + PizzaArenaTheme.field_h.field_p);
-            var11.b();
+            var11.bindAsRenderTarget();
             PizzaArenaTheme.field_h.drawGrayModulated(2, 2, bha.field_o);
             sb.a(0, 2, var11, var11.field_p, 0, var11.field_q, 1, 87);
             PizzaArenaTheme.field_h = var11;
             vs.field_b = PizzaArenaTheme.field_h.copyFlippedHorizontal();
             var12 = new Sprite(195, 221);
             var6 = var12.field_q / 2;
-            var12.b();
+            var12.bindAsRenderTarget();
             ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, LevitateAnimation.field_x), var6, 40, 16777215, -1);
             g.field_f.drawCentred(lga.a(true, new String[]{RageEvent.field_q}, ni.field_k), var6, 60, 16777215, -1);
             ShuffleEvent.field_q.drawCentred(lga.a(true, new String[]{SpecialOrder.field_l}, ra.field_p), var6, 110, 16777215, -1);
@@ -106,16 +106,16 @@ final class TextLinkRegion extends IntrusiveNode {
             ShuffleEvent.field_q.drawCentred(MatchingFieldValidator.field_g, var6, 180, 16777215, -1);
             g.field_f.drawCentred(ema.field_Lb, var6, 200, 16777215, -1);
             sb.a(0, 3, var12, var12.field_p, 0, var12.field_q, 1, 117);
-            uea.field_j.b();
+            uea.field_j.bindAsRenderTarget();
             var12.draw(18 - uea.field_j.field_t, -uea.field_j.field_u + 241);
             for (var7 = 0; var7 < MeshObject.field_b.length; var7++) {
-              ActorAnimation.field_m[var7].b();
+              ActorAnimation.field_m[var7].bindAsRenderTarget();
               g.field_f.drawParagraph(MeshObject.field_b[var7], 3, 3, ActorAnimation.field_m[var7].field_q - 6, -6 + ActorAnimation.field_m[var7].field_p, bha.field_o, -1, 1, 1, g.field_f.field_B + g.field_f.field_u);
               sb.a(0, 3, ActorAnimation.field_m[var7], ActorAnimation.field_m[var7].field_p, 0, ActorAnimation.field_m[var7].field_q, 1, 88);
             }
             MeshObject.field_b = null;
             BananarangAnimation.field_y = ai.field_a.copy();
-            BananarangAnimation.field_y.b();
+            BananarangAnimation.field_y.bindAsRenderTarget();
             AirstrikeSpecial.a(SoftwareRasterizer.field_i, SoftwareRasterizer.field_c * 2 / 3, 16711680, 64, 0, 0);
             SoftwareRasterizer.setTarget(var27, var2, var3);
             SoftwareRasterizer.restoreClip(ie.field_b);
@@ -181,14 +181,14 @@ final class TextLinkRegion extends IntrusiveNode {
             }
             BuffVendorAnimation.field_B.normalizeCanvas();
             var9 = new Sprite(BuffVendorAnimation.field_B.field_n, BuffVendorAnimation.field_B.field_o);
-            var9.b();
+            var9.bindAsRenderTarget();
             ShuffleEvent.field_q.drawParagraph(var14, StatusEffectInfo.field_c, vc.field_c, TeleportEvent.field_r, kt.field_j, 16777215, -1, 1, 1, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
             sb.a(0, 3, var9, var9.field_o, 0, var9.field_n, 1, 89);
-            BuffVendorAnimation.field_B.b();
+            BuffVendorAnimation.field_B.bindAsRenderTarget();
             var9.draw(0, 0);
             is.field_c = new Sprite(640, 480);
-            is.field_c.b();
-            BuffVendorAnimation.field_B.d(sha.field_m + (BuffVendorAnimation.field_B.field_n >> 1), cga.field_p + (BuffVendorAnimation.field_B.field_o >> 1), IterableDualLinkDeque.field_b, 4096);
+            is.field_c.bindAsRenderTarget();
+            BuffVendorAnimation.field_B.drawRotated(sha.field_m + (BuffVendorAnimation.field_B.field_n >> 1), cga.field_p + (BuffVendorAnimation.field_B.field_o >> 1), IterableDualLinkDeque.field_b, 4096);
             BuffVendorAnimation.field_B = null;
             is.field_c.trimTransparentBorders();
             SoftwareRasterizer.setTarget(var28, var2Lifetime1, var3Lifetime1);
@@ -203,10 +203,10 @@ final class TextLinkRegion extends IntrusiveNode {
             var16 = new Sprite(412, 43);
             var5_ref_String = lga.a(true, new String[]{rr.field_r}, kr.field_wb);
             rr.field_r = null;
-            var16.b();
+            var16.bindAsRenderTarget();
             g.field_f.drawParagraph(var5_ref_String, 3, 3, -6 + var16.field_q, var16.field_p - 6, 16777215, -1, 0, 1, g.field_f.field_u + g.field_f.field_B);
             sb.a(0, 3, var16, var16.field_p, 0, var16.field_q, 1, 120);
-            BagpipeAnimation.field_x.b();
+            BagpipeAnimation.field_x.bindAsRenderTarget();
             var16.draw(-BagpipeAnimation.field_x.field_t + 199, 83 - BagpipeAnimation.field_x.field_u);
             SoftwareRasterizer.setTarget(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ie.field_b);
@@ -221,7 +221,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var5Lifetime1 = 20 + kka.field_h.field_n + var4;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + kka.field_h.field_n + var6Lifetime2;
-            BagpipeAnimation.field_x.b();
+            BagpipeAnimation.field_x.bindAsRenderTarget();
             g.field_f.drawText(fja.field_c, -BagpipeAnimation.field_x.field_t + var7Lifetime2, g.field_f.field_B + (g.field_f.field_u - BagpipeAnimation.field_x.field_u) + 155, 16777215, -1);
             sb.a(-4 - BagpipeAnimation.field_x.field_t + var7Lifetime2, 3, BagpipeAnimation.field_x, 50, -BagpipeAnimation.field_x.field_u + 155, var4, 1, 117);
             var8Lifetime1 = -((-g.field_f.field_B + (-g.field_f.field_u - 3 + kka.field_h.field_o)) / 2) + 155 - BagpipeAnimation.field_x.field_u;

@@ -261,7 +261,7 @@ final class IsaacRandom {
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nd.a(param1, 60)) {
+          if (NameSuggestionsPanel.a(param1, 60)) {
             return false;
           }
           if (ab.a(param1, (byte) -12)) {

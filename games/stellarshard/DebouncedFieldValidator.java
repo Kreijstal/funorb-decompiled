@@ -51,13 +51,13 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         if (!(l.field_f.stringWidth(param0) <= -nj.field_f[param1] + (var7_int - 48))) {
           var7_int = 48 + (l.field_f.stringWidth(param0) + nj.field_f[param1]);
         }
-        jf.field_n[0].e(param4 - var7_int / 2, -(jf.field_n[0].field_x / 2) + (2 + param6) + (-(l.field_f.field_N / 2) + 2));
+        jf.field_n[0].draw(param4 - var7_int / 2, -(jf.field_n[0].field_x / 2) + (2 + param6) + (-(l.field_f.field_N / 2) + 2));
         SoftwareRasterizer.setClip(-(var7_int / 2) + (param4 + jf.field_n[0].field_w), 0, -jf.field_n[2].field_w + param4 + var7_int / 2, 480);
         for (var8_int = jf.field_n[0].field_w + param4 - var7_int / 2; -jf.field_n[2].field_w + var7_int / 2 + param4 > var8_int; var8_int = var8_int + jf.field_n[1].field_w) {
-          jf.field_n[1].e(var8_int, 2 + (2 + param6) + (-(l.field_f.field_N / 2) - jf.field_n[0].field_x / 2));
+          jf.field_n[1].draw(var8_int, 2 + (2 + param6) + (-(l.field_f.field_N / 2) - jf.field_n[0].field_x / 2));
         }
         SoftwareRasterizer.resetClip();
-        jf.field_n[2].e(-jf.field_n[2].field_w + (param4 + var7_int / 2), 2 + (param6 - (-2 + l.field_f.field_N / 2)) - jf.field_n[0].field_x / 2);
+        jf.field_n[2].draw(-jf.field_n[2].field_w + (param4 + var7_int / 2), 2 + (param6 - (-2 + l.field_f.field_N / 2)) - jf.field_n[0].field_x / 2);
         if (!(nj.field_f[param1] <= 0)) {
           SoftwareRasterizer.addRadialGlow(param4 - (var7_int / 2 - 12) << 4, param6 + 2 - (l.field_f.field_N / 2 - 2) << 4, 512, nj.field_f[param1] * 4, ei.field_I);
           SoftwareRasterizer.addRadialGlow(-14 + (var7_int / 2 + param4) << 4, -(l.field_f.field_N / 2) + 2 + param6 + 2 << 4, 512, nj.field_f[param1] * 4, ei.field_I);

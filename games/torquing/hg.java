@@ -391,7 +391,7 @@ final class hg {
           }
           var2Lifetime67 = da.a((byte) -70, "surfaces_colon");
           if (var2Lifetime67 != null) {
-            vp.field_G = SecondaryNodeDeque.a(var2Lifetime67, false);
+            NameSuggestionsPanel.field_G = SecondaryNodeDeque.a(var2Lifetime67, false);
           }
           var2Lifetime68 = da.a((byte) 123, "noanimalsharmed");
           if (null != var2Lifetime68) {
@@ -573,15 +573,15 @@ final class hg {
             var5_int = param4[0].field_w;
             var6 = param4[2].field_w;
             var7 = param4[1].field_w;
-            param4[0].d(param1, param3);
-            param4[2].d(param1 - (-param2 + var6), param3);
+            param4[0].draw(param1, param3);
+            param4[2].draw(param1 - (-param2 + var6), param3);
             SoftwareRasterizer.saveClip(SecondaryNodeDeque.field_c);
             SoftwareRasterizer.intersectClip(param1 + var5_int, param3, -var6 + param2 + param1, param3 + param4[1].field_u);
             var8 = var5_int + param1;
             var9 = -var6 + param1 + param2;
             param1 = var8;
             while (param1 < var9) {
-              param4[1].d(param1, param3);
+              param4[1].draw(param1, param3);
               param1 = param1 + var7;
               if (var10 != 0) {
                 return;

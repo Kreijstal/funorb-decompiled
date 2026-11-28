@@ -41,7 +41,7 @@ final class MixedSupport121 implements CallbackContract004 {
           rgbSpriteLocal8 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[1];
           if (uiComponentArgument5 instanceof InteractiveComponent &&
             ((InteractiveComponent) (uiComponentArgument5)).booleanState0034) {
-            rgbSpriteLocal8.performAction0295((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
+            rgbSpriteLocal8.drawAdditive((uiComponentArgument5.integerState0107 - rgbSpriteLocal8.integerState0254 >> 1) + integerLocal5 + 1, 1 + integerLocal7 + (uiComponentArgument5.integerState0108 - rgbSpriteLocal8.integerState0260 >> 1), 256);
           }
           if (uiComponentArgument5.computeBoolean0220(true)) {
             AgeValidator.drawDottedRectangle(-4 + uiComponentArgument5.integerState0107, 2 + integerLocal5, (byte) 124, 2 + integerLocal7, uiComponentArgument5.integerState0108 - 4);

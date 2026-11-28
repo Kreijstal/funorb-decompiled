@@ -20,7 +20,7 @@ class IntrusiveNode {
     }
 
     final static void d(byte param0) {
-        rg.field_K = false;
+        InteractiveWidget.field_K = false;
         if (param0 != -61) {
           return;
         }
@@ -85,18 +85,18 @@ class IntrusiveNode {
           }
           var10Lifetime1 = var5.field_w;
           mk.b(128);
-          var5.d();
+          var5.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_l);
           var16 = new RgbSprite(var10Lifetime1, var10Lifetime1);
           var18 = var16;
-          var18.d();
-          var5.c(0, 0);
+          var18.bindAsRenderTarget();
+          var5.drawOpaque(0, 0);
           var12 = new RgbSprite(var10Lifetime1, var10Lifetime1);
-          var12.d();
-          var5.c(var10Lifetime1 - var5.field_u, 0);
+          var12.bindAsRenderTarget();
+          var5.drawOpaque(var10Lifetime1 - var5.field_u, 0);
           var13 = new RgbSprite(var5.field_u - 2 * var10Lifetime1, var10Lifetime1);
-          var13.d();
-          var5.c(-var10Lifetime1, 0);
+          var13.bindAsRenderTarget();
+          var5.drawOpaque(-var10Lifetime1, 0);
           ib.b(false);
           em.field_d = new RgbSprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {

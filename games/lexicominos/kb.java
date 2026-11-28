@@ -1303,7 +1303,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create");
                 if (null != var2) {
-                  bb.field_K = ni.a((byte) -55, var2);
+                  NameSuggestionsPanel.field_K = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_pleasechooseapassword");
                 if (var2 != null) {

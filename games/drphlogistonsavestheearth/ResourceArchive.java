@@ -951,37 +951,37 @@ final class ResourceArchive {
             return 1;
           }
           try {
-            if (hf.field_C == 0) {
+            if (InteractiveWidget.field_C == 0) {
               IterableNodeHashTable.field_e = MouseWheelInput.field_e.requestDirectSocket(AgeValidator.field_r, LevelSession.field_ib, 35);
-              hf.field_C = hf.field_C + 1;
+              InteractiveWidget.field_C = InteractiveWidget.field_C + 1;
             }
-            if (hf.field_C == 1) {
+            if (InteractiveWidget.field_C == 1) {
               if (IterableNodeHashTable.field_e.status == 2) {
                 stackIn_12_0 = uj.a((byte) 85, -1);
                 return stackIn_12_0;
               }
               if (IterableNodeHashTable.field_e.status == 1) {
-                hf.field_C = hf.field_C + 1;
+                InteractiveWidget.field_C = InteractiveWidget.field_C + 1;
               }
             }
-            if (hf.field_C == 2) {
+            if (InteractiveWidget.field_C == 2) {
               ea.field_a = new BufferedSocket((java.net.Socket) (IterableNodeHashTable.field_e.result), MouseWheelInput.field_e);
               var3 = new PacketBuffer(13);
               FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);
               var3.writeInt(mi.field_j, (byte) 107);
               ea.field_a.queueWrite(13, -30537, var3.payload, 0);
-              hf.field_C = hf.field_C + 1;
+              InteractiveWidget.field_C = InteractiveWidget.field_C + 1;
               BoundedRandomAccessFile.field_a = la.correctedCurrentTimeMillis(false) + 30000L;
             }
-            if (3 == hf.field_C) {
+            if (3 == InteractiveWidget.field_C) {
               if (0 < ea.field_a.availableBytes((byte) 41)) {
                 var1_int = ea.field_a.readSingleByte(-125);
                 if (var1_int != 0) {
                   stackIn_27_0 = uj.a((byte) 85, var1_int);
                   return stackIn_27_0;
                 }
-                hf.field_C = hf.field_C + 1;
+                InteractiveWidget.field_C = InteractiveWidget.field_C + 1;
               } else {
                 if (BoundedRandomAccessFile.field_a < la.correctedCurrentTimeMillis(false)) {
                   stackIn_24_0 = uj.a((byte) 85, -2);
@@ -993,12 +993,12 @@ final class ResourceArchive {
               var2 = (CharSequence) null;
               ResourceArchive.getAccountNameValidationError(true, (CharSequence) null);
             }
-            if (hf.field_C != 4) {
+            if (InteractiveWidget.field_C != 4) {
               return -1;
             }
             p.field_a.a(ea.field_a, uf.field_i, (byte) -102);
             ea.field_a = null;
-            hf.field_C = 0;
+            InteractiveWidget.field_C = 0;
             IterableNodeHashTable.field_e = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;

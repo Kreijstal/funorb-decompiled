@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng {
-    private lg field_E;
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_E;
     static PcmSample[] field_F;
     static ResourceArchive field_C;
     private ValidatedTextField field_H;
-    private lg field_B;
+    private InteractiveWidget field_B;
     static int field_G;
-    vp field_I;
+    NameSuggestionsPanel field_I;
 
     private final int a(int param0, int param1, String param2, UiWidget param3, int param4, boolean param5, String param6) {
         RuntimeException var8 = null;
@@ -29,7 +29,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
           var9 = new bj(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-10116), param6, 126, param0 + var10.height, param1 + 25, param4);
           var9.listener = (ca) (this);
           if (!param5) {
-            this.field_I = (vp) null;
+            this.field_I = (NameSuggestionsPanel) null;
           }
           this.a(var9, -6938);
           stackIn_3_0 = var9.height + var10.height;
@@ -60,7 +60,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         UiWidget var7 = null;
         RuntimeException stackIn_9_0 = null;
@@ -95,10 +95,10 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator(-10116))).e(-97);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_H.getFieldValidator(-10116))).invalidateCheckedName(-97);
         if (param0 < 89) {
-          this.field_I = (vp) null;
+          this.field_I = (NameSuggestionsPanel) null;
         }
     }
 
@@ -191,7 +191,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSuggestionSelected(byte param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         if (param0 != 21) {
@@ -211,8 +211,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         this.field_H = new ValidatedTextField("", (ca) null, 12);
         pc var1 = new pc(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(AudioService.field_a, var1, (ca) null);
-        this.field_B = new lg(NodeHashTableIterator.field_d, (ca) null);
-        this.field_E = new lg(TranslucentSpriteLayer.field_j, (ca) null);
+        this.field_B = new InteractiveWidget(NodeHashTableIterator.field_d, (ca) null);
+        this.field_E = new InteractiveWidget(TranslucentSpriteLayer.field_j, (ca) null);
         this.field_H.field_n = ag.field_d;
         this.field_H.setFieldValidator(new AccountNameAvailabilityValidator(this.field_H), 83);
         this.field_B.field_x = false;
@@ -232,7 +232,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements ba, ng 
         this.field_B.listener = (ca) (this);
         this.a(this.field_B, -6938);
         this.a(this.field_E, -6938);
-        this.field_I = new vp((ba) (this));
+        this.field_I = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_I.a((byte) -94, this.field_H.x + (this.field_H.width + 60), 20, 150, -this.field_H.x + (this.width - this.field_H.width - 60));
         this.a(this.field_I, -6938);
         this.a((byte) 127, 0, 0, var3 + 55 + var4, 496);

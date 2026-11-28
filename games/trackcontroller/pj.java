@@ -52,7 +52,7 @@ final class pj extends db {
           }
         }
         if (!param0) {
-          li.field_l = nd.a(-101, var8, 80);
+          li.field_l = NameSuggestionsPanel.a(-101, var8, 80);
           NetworkArchiveRequest.field_A = null;
           return new q(param0);
         }

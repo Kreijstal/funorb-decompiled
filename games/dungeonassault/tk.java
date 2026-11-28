@@ -225,9 +225,9 @@ final class tk {
             var4 = this.field_d[var2] - this.field_z[var2];
             var5 = (double)var3 / (double)var4;
             if (12 <= bc.field_a) {
-              this.field_l[var2].b((int)to.a(this.field_A[var2], this.field_e[var2], var5, -94), (int)to.a(this.field_y[var2], this.field_m[var2], var5, -92), (int)to.a(this.field_j[var2], this.field_f[var2], var5, 122), (int)to.a(this.field_q[var2], this.field_x[var2], var5, -104), (int)to.a(this.field_c[var2], this.field_h[var2], var5, -82), (int)to.a(this.field_n[var2], this.field_s[var2], var5, -95));
+              this.field_l[var2].drawRotatedAboutBilinear((int)to.a(this.field_A[var2], this.field_e[var2], var5, -94), (int)to.a(this.field_y[var2], this.field_m[var2], var5, -92), (int)to.a(this.field_j[var2], this.field_f[var2], var5, 122), (int)to.a(this.field_q[var2], this.field_x[var2], var5, -104), (int)to.a(this.field_c[var2], this.field_h[var2], var5, -82), (int)to.a(this.field_n[var2], this.field_s[var2], var5, -95));
             } else {
-              this.field_l[var2].a((int)to.a(this.field_A[var2], this.field_e[var2], var5, 127), (int)to.a(this.field_y[var2], this.field_m[var2], var5, -109), (int)to.a(this.field_j[var2], this.field_f[var2], var5, 76), (int)to.a(this.field_q[var2], this.field_x[var2], var5, -110), (int)to.a(this.field_c[var2], this.field_h[var2], var5, -45), (int)to.a(this.field_n[var2], this.field_s[var2], var5, 77));
+              this.field_l[var2].drawRotatedAboutNearest((int)to.a(this.field_A[var2], this.field_e[var2], var5, 127), (int)to.a(this.field_y[var2], this.field_m[var2], var5, -109), (int)to.a(this.field_j[var2], this.field_f[var2], var5, 76), (int)to.a(this.field_q[var2], this.field_x[var2], var5, -110), (int)to.a(this.field_c[var2], this.field_h[var2], var5, -45), (int)to.a(this.field_n[var2], this.field_s[var2], var5, 77));
             }
             SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, this.field_r, 0);
             SoftwareRasterizer.fillRectangle(0, SoftwareRasterizer.field_c - this.field_r, SoftwareRasterizer.field_i, this.field_r, 0);

@@ -465,7 +465,7 @@ final class cl extends vm {
           var2 = var5;
           for (var3 = 0; var3 < param0.length; var3++) {
             var5[var3] = new Sprite(param0[var3].field_n >> 1, param0[var3].field_o >> 1);
-            var5[var3].b();
+            var5[var3].bindAsRenderTarget();
             param0[var3].drawHalfSize(0, 0);
           }
           hga.field_U.a((byte) 6);

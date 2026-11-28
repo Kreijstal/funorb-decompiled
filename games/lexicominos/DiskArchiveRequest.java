@@ -152,7 +152,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
           var6 = null;
           if (param1.indexOf('@') == -1) {
             var8 = (CharSequence) ((Object) param1);
-            var4_long = PcmOutputWorker.a((byte) -58, var8);
+            var4_long = PcmOutputWorker.encodeNameBase37((byte) -58, var8);
           } else {
             var6 = param1;
           }

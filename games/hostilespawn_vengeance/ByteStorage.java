@@ -92,7 +92,7 @@ abstract class ByteStorage {
                           var11 = -1 + me.field_ib.length;
                         }
                         if (bm.field_c != 1) {
-                          me.field_ib[var11].c(var2 - me.field_ib[var11].field_z / 2, -(me.field_ib[var11].field_A / 2) + var3, 128);
+                          me.field_ib[var11].drawAdditive(var2 - me.field_ib[var11].field_z / 2, -(me.field_ib[var11].field_A / 2) + var3, 128);
                           break regionExit1;
                         }
                         if (CrossfadingMidiPcmStream.field_t) {

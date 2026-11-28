@@ -96,12 +96,12 @@ final class MixedSupport047 {
             return;
           }
           if (MixedSupport022.uiComponentPart031State0001 != null) {
-            MixedSupport022.uiComponentPart031State0001.uiComponentPart007State0002.performAction0359(32, args);
+            MixedSupport022.uiComponentPart031State0001.uiComponentPart007State0002.setNameSuggestions(32, args);
           }
           if (null == MixedSupport118.uiComponentPart005State0001) {
             return;
           }
-          MixedSupport118.uiComponentPart005State0001.uiComponentPart007State0001.performAction0359(32, args);
+          MixedSupport118.uiComponentPart005State0001.uiComponentPart007State0001.setNameSuggestions(32, args);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal6) {
           caughtExceptionLocal5 = caughtParameterLocal6;

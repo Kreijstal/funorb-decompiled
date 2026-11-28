@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends WidgetContainer implements TextFieldListener, ng {
+final class LoginPanel extends WidgetContainer implements TextFieldListener, WidgetActivationListener {
     static String field_M;
-    private lg field_B;
+    private InteractiveWidget field_B;
     private boolean field_I;
-    private lg field_D;
+    private InteractiveWidget field_D;
     static Sprite field_J;
     private String field_N;
-    private lg field_K;
+    private InteractiveWidget field_K;
     private boolean field_F;
     private EditableTextField field_C;
     static BitmapFont field_E;
@@ -68,10 +68,10 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        lg stackIn_18_1 = null;
-        lg stackIn_18_2 = null;
-        lg stackIn_19_1 = null;
-        lg stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -101,7 +101,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
           this.field_C = (EditableTextField) ((Object) new ValidatedTextField(param0, (ca) (this), 100));
           this.field_L = (EditableTextField) ((Object) new ValidatedTextField("", (ca) (this), 20));
           if (!this.field_G) {
-            this.field_K = new lg(AchievementProgressUpdate.field_r, (ca) null);
+            this.field_K = new InteractiveWidget(AchievementProgressUpdate.field_r, (ca) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_F) {
@@ -113,13 +113,13 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
               stackIn_19_2 = null;
               stackIn_19_3 = FrameTimer.field_c;
             }
-            this.field_B = new lg(stackIn_19_3, (ca) null);
+            this.field_B = new InteractiveWidget(stackIn_19_3, (ca) null);
             if (this.field_I) {
-              this.field_D = new lg(qh.field_e, (ca) (this));
+              this.field_D = new InteractiveWidget(qh.field_e, (ca) (this));
             }
           } else {
-            this.field_K = new lg(qm.field_b, (ca) null);
-            this.field_B = new lg(pf.field_q, (ca) null);
+            this.field_K = new InteractiveWidget(qm.field_b, (ca) null);
+            this.field_B = new InteractiveWidget(pf.field_q, (ca) null);
             this.field_C.field_x = false;
           }
           this.field_C.renderer = (WidgetRenderer) ((Object) new ig(10000536));
@@ -247,7 +247,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
 
     final String i(int param0) {
         if (param0 >= -68) {
-          this.field_B = (lg) null;
+          this.field_B = (InteractiveWidget) null;
         }
         if (this.field_C.text == null) {
           return "";
@@ -464,7 +464,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ng 
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

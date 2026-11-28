@@ -95,7 +95,7 @@ final class we {
         if (var6 < this.field_f) {
           this.field_f = this.field_f - 1;
         }
-        MatchingFieldValidator.field_t.e(this.field_a - MatchingFieldValidator.field_t.field_z / 2, -(MatchingFieldValidator.field_t.field_A / 2) + this.field_f);
+        MatchingFieldValidator.field_t.draw(this.field_a - MatchingFieldValidator.field_t.field_z / 2, -(MatchingFieldValidator.field_t.field_A / 2) + this.field_f);
         var10 = this.field_a - (int)(8.0 * Math.sin(3.141592653589793 * var8 / 128.0));
         var11 = this.field_f - (int)(Math.cos(3.141592653589793 * var8 / 128.0) * 8.0);
         var12 = this.field_a - (int)(Math.sin((96.0 + var8) * 3.141592653589793 / 128.0) * 10.0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl extends hl {
+final class gl extends InteractiveWidget {
     private int field_E;
     private FieldValidator field_F;
     static String[] field_G;
@@ -145,7 +145,7 @@ final class gl extends hl {
             var6 = (String) null;
             gl.a((String) null, 104);
           }
-          stackIn_3_0 = hl.a(param1, 117, var4_int, var5);
+          stackIn_3_0 = InteractiveWidget.a(param1, 117, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,32 +197,32 @@ final class gl extends hl {
           if (null == hb.field_c) {
             hb.field_c = new RgbSprite(var9, var10);
             dl.a(97, hb.field_c);
-            var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var15.field_l, -var15.field_k + var6, 256);
             return;
           }
           if (var9 > hb.field_c.field_p) {
             hb.field_c = new RgbSprite(var9, var10);
             dl.a(97, hb.field_c);
-            var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var15.field_l, -var15.field_k + var6, 256);
             return;
           }
           if (var10 <= hb.field_c.field_o) {
             dl.a(param2 + 96, hb.field_c);
             SoftwareRasterizer.clearRaster();
-            var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
+            var15.drawRotatedAbout(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var15.field_l, -var15.field_k + var6, 256);
             return;
           }
           hb.field_c = new RgbSprite(var9, var10);
           dl.a(97, hb.field_c);
-          var15.a(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
+          var15.drawRotatedAbout(112, 144, var15.field_l << 4, var15.field_k << 4, -this.field_E << 10, 4096);
           gg.a(14756);
-          hb.field_c.b(var5 - var15.field_l, -var15.field_k + var6, 256);
+          hb.field_c.drawAdditive(var5 - var15.field_l, -var15.field_k + var6, 256);
           return;
         }
         if (a.field_n == var8) {
@@ -232,42 +232,42 @@ final class gl extends hl {
           if (null == hb.field_c) {
             hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             dl.a(97, hb.field_c);
-            var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var16.field_l, -var16.field_k + var6, 256);
             return;
           }
           if (var9Lifetime1 > hb.field_c.field_p) {
             hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
             dl.a(97, hb.field_c);
-            var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var16.field_l, -var16.field_k + var6, 256);
             return;
           }
           if (var10Lifetime1 <= hb.field_c.field_o) {
             dl.a(param2 + 96, hb.field_c);
             SoftwareRasterizer.clearRaster();
-            var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
             gg.a(14756);
-            hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);
+            hb.field_c.drawAdditive(var5 - var16.field_l, -var16.field_k + var6, 256);
             return;
           }
           hb.field_c = new RgbSprite(var9Lifetime1, var10Lifetime1);
           dl.a(97, hb.field_c);
-          var16.a(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_l << 4, var16.field_k << 4, -this.field_E << 10, 4096);
           gg.a(14756);
-          hb.field_c.b(var5 - var16.field_l, -var16.field_k + var6, 256);
+          hb.field_c.drawAdditive(var5 - var16.field_l, -var16.field_k + var6, 256);
           return;
         }
         if (pe.field_b == var8) {
           var13 = gh.field_n[2];
-          var13.b(var5 - (var13.field_p >> 1), -(var13.field_o >> 1) + var6, 256);
+          var13.drawAdditive(var5 - (var13.field_p >> 1), -(var13.field_o >> 1) + var6, 256);
           return;
         }
         if (ii.field_e == var8) {
           var12 = gh.field_n[1];
-          var12.b(-(var12.field_p >> 1) + var5, var6 - (var12.field_o >> 1), 256);
+          var12.drawAdditive(-(var12.field_p >> 1) + var5, var6 - (var12.field_o >> 1), 256);
           return;
         }
     }

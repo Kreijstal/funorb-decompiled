@@ -39,13 +39,13 @@ final class nc extends ue {
         int var7Lifetime2;
         this.field_f.b(8);
         var11 = qg.field_o;
-        stackIn_3_0 = (pc.field_y != 0);
+        stackIn_3_0 = (InteractiveWidget.field_y != 0);
         stackIn_6_1 = (null == this.field_i) ? false : true;
         var3 = gm.a(stackIn_3_0, stackIn_6_1, true, 12184);
-        stackIn_9_0 = (pc.field_y != 0);
+        stackIn_9_0 = (InteractiveWidget.field_y != 0);
         stackIn_12_1 = (null == this.field_i) ? false : true;
         var4 = fp.a(stackIn_9_0, stackIn_12_1, true, (byte) -69);
-        stackIn_15_0 = (pc.field_y != 0);
+        stackIn_15_0 = (InteractiveWidget.field_y != 0);
         stackIn_17_1 = 0;
         stackIn_17_2 = true;
         stackIn_18_3 = (this.field_i == null) ? false : true;
@@ -145,7 +145,7 @@ final class nc extends ue {
             if (null != this.field_i) {
               this.field_i.d(136);
             }
-            if (pc.field_y != 0) {
+            if (InteractiveWidget.field_y != 0) {
               MouseInputHandler.field_b = (ue) ((Object) new vn(this.field_i, this.field_f, true));
             } else {
               if (null != this.field_i) {

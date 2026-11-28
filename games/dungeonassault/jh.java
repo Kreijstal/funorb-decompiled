@@ -65,11 +65,11 @@ final class jh {
 
     final static void a(RgbSprite param0) {
         jh.c();
-        param0.e();
+        param0.bindAsRenderTarget();
     }
 
     private final static void a(RgbSprite param0, int[] param1) {
-        param0.e();
+        param0.bindAsRenderTarget();
         field_f = param1;
         field_l.field_B = param1;
         field_l.field_y = param0.field_y;

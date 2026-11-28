@@ -46,7 +46,7 @@ final class cl {
           if (decompiledFrameRemainder0) {
             if (!wk.field_c) {
               if (BufferedRandomAccessFile.field_g <= ArchiveRequest.field_v) {
-                stackIn_17_0 = (ArchiveRequest.field_v < BufferedRandomAccessFile.field_g + ul.field_D) ? 1 : 0;
+                stackIn_17_0 = (ArchiveRequest.field_v < BufferedRandomAccessFile.field_g + NameSuggestionsPanel.field_D) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }

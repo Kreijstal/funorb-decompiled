@@ -53,8 +53,8 @@ final class MixedSupport110 {
             integerLocal5 = rgbSpriteArrayArgument2[0].integerState0254;
             integerLocal7 = rgbSpriteArrayArgument2[2].integerState0254;
             integerLocal8 = rgbSpriteArrayArgument2[1].integerState0254;
-            rgbSpriteArrayArgument2[0].performAction0257(integerArgument3, integerArgument1, integerArgument5);
-            rgbSpriteArrayArgument2[2].performAction0257(-integerLocal7 + integerArgument3 + integerArgument4, integerArgument1, integerArgument5);
+            rgbSpriteArrayArgument2[0].drawTintedGray(integerArgument3, integerArgument1, integerArgument5);
+            rgbSpriteArrayArgument2[2].drawTintedGray(-integerLocal7 + integerArgument3 + integerArgument4, integerArgument1, integerArgument5);
             SoftwareRaster.saveClip(MixedSupport069.integerArrayState0123);
             SoftwareRaster.intersectClip(integerLocal5 + integerArgument3, integerArgument1, -integerLocal7 + (integerArgument4 + integerArgument3), rgbSpriteArrayArgument2[1].integerState0260 + integerArgument1);
             integerLocal9 = integerArgument3 + integerLocal5;
@@ -63,7 +63,7 @@ final class MixedSupport110 {
               rgbSpriteArrayState0024 = (RgbSprite[]) null;
             }
             for (integerArgument3 = integerLocal9; integerArgument3 < integerLocal10; integerArgument3 = integerArgument3 + integerLocal8) {
-              rgbSpriteArrayArgument2[1].performAction0257(integerArgument3, integerArgument1, integerArgument5);
+              rgbSpriteArrayArgument2[1].drawTintedGray(integerArgument3, integerArgument1, integerArgument5);
             }
             SoftwareRaster.restoreClip(MixedSupport069.integerArrayState0123);
             return;

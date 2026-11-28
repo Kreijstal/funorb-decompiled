@@ -781,7 +781,7 @@ final class LevelRun {
                 var5 = var4;
                 if (var5 != null &&
                   null != var5.field_p &&
-                  SpriteBase.a(var4.field_p[1][9], -17310) &&
+                  SpriteBase.matchesCurrentDisplayName(var4.field_p[1][9], -17310) &&
                   var4.field_n[1][9] > this.field_U) {
                   IsaacCipher.field_l = new wc(11, 65524, this.field_M, this.field_o, this.field_l, this.field_j, new int[]{this.field_U});
                 } else {
@@ -994,7 +994,7 @@ final class LevelRun {
             var11 = (sb) (this.field_e.nextBackward(-24059));
           }
           if (!ti.field_k) {
-            bd.field_w.e(-bd.field_w.field_s + 640, 0, 162);
+            bd.field_w.drawWithOpacity(-bd.field_w.field_s + 640, 0, 162);
             var3_ref_String = wh.a(this.field_k, (byte) -119);
             if (this.field_d != ig.field_q) {
               dd.field_c.drawRightAligned(var3_ref_String, 628, 23, 16711680, -1);
@@ -1024,20 +1024,20 @@ final class LevelRun {
               if ((dd.field_d >> var4Lifetime2 & 1) == 0 && ((1 & this.field_z >> var4Lifetime2) == 0 ||
                 this.field_k % 1000 >= 500)) {
                 SoftwareRasterizer.fillRectangleAlpha(var5_intLifetime2, 118, RandomAccessCacheFile.field_c[var4Lifetime2].field_w, RandomAccessCacheFile.field_c[var4Lifetime2].field_u, 16777215, 118);
-                RandomAccessCacheFile.field_c[var4Lifetime2 + 8].e(var5_intLifetime2, 118, 81);
+                RandomAccessCacheFile.field_c[var4Lifetime2 + 8].drawWithOpacity(var5_intLifetime2, 118, 81);
                 decompiledFrameRemainder0 = false;
               }
               else {
-                RandomAccessCacheFile.field_c[var4Lifetime2].e(var5_intLifetime2, 118, 162);
+                RandomAccessCacheFile.field_c[var4Lifetime2].drawWithOpacity(var5_intLifetime2, 118, 162);
               }
               var5_intLifetime2 = var5_intLifetime2 + RandomAccessCacheFile.field_c[var4Lifetime2].field_w;
               var4Lifetime2++;
             }
             for (var4Lifetime2Lifetime1 = 0; this.field_c > var4Lifetime2Lifetime1; var4Lifetime2Lifetime1++) {
-              VolumeScaledPcmStream.field_n.d(583 + var4Lifetime2Lifetime1 * 8, 143);
+              VolumeScaledPcmStream.field_n.draw(583 + var4Lifetime2Lifetime1 * 8, 143);
             }
             if (this.field_w) {
-              FramedPanelLayer.field_f.d(553, 143);
+              FramedPanelLayer.field_f.draw(553, 143);
             }
             dd.field_c.drawString(this.field_T, 538, 102, 16711680, -1);
           }

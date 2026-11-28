@@ -127,7 +127,7 @@ final class dn {
             }
             return;
           }
-          var11.c(param0, param3, 256);
+          var11.drawAdditive(param0, param3, 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

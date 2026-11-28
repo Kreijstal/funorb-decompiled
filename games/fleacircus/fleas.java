@@ -619,17 +619,17 @@ public final class fleas extends NetworkGameClient {
                   var5 = SoftwareRasterizer.field_d;
                   break;
                 }
-                ji.field_f[var5] = EmailFormatValidator.field_n[var5].c();
-                ji.field_f[var5].a();
-                ji.field_f[var5].f();
+                ji.field_f[var5] = EmailFormatValidator.field_n[var5].copy();
+                ji.field_f[var5].normalizeCanvas();
+                ji.field_f[var5].bindAsRenderTarget();
                 SoftwareRasterizer.blurRectangle(5, 1, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 var5--;
               } while (var17 == 0);
               var6Lifetime1 = SoftwareRasterizer.field_k;
               var7 = SoftwareRasterizer.field_a;
               var8 = new RgbSprite(640, 480);
-              var8.f();
-              qi.field_c.d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+              var8.bindAsRenderTarget();
+              qi.field_c.drawScaled(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               SoftwareRasterizer.blurRectangle(5, 5, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
               qi.field_c = var8;
               SoftwareRasterizer.setRasterBuffer(var7, var5, var6Lifetime1);
@@ -652,8 +652,8 @@ public final class fleas extends NetworkGameClient {
                   break;
                 }
                 var10[var11] = new RgbSprite(640, 350);
-                var10[var11].f();
-                var9[var11].d(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
+                var10[var11].bindAsRenderTarget();
+                var9[var11].drawScaled(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k);
                 var11++;
@@ -719,8 +719,8 @@ public final class fleas extends NetworkGameClient {
                   ud.b((byte) 47);
                   var11 = MatchingFieldValidator.field_p.field_N;
                   FullscreenFocusCanvas.field_a = new RgbSprite(var11, var11);
-                  FullscreenFocusCanvas.field_a.f();
-                  BufferedSocket.field_m.a(0, 0, var11, var11);
+                  FullscreenFocusCanvas.field_a.bindAsRenderTarget();
+                  BufferedSocket.field_m.drawDownscaledAreaAveraged(0, 0, var11, var11);
                   BufferedSocket.field_m = null;
                   gi.field_b.setAsRasterTarget((byte) 109);
                   break;
@@ -749,7 +749,7 @@ public final class fleas extends NetworkGameClient {
               dk.field_C.field_n = 145;
               wd.field_a.field_n = 205;
               de.field_b.field_n = 220;
-              ol.field_f = new rk(wd.field_a.field_l, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
+              ol.field_f = new rk(wd.field_a.field_l, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, InteractiveWidget.field_H, IntrusiveNode.field_b);
               ol.field_f.field_t = fl.field_f;
               var15_int = ob.field_c.length - 1;
               do {
@@ -1099,7 +1099,7 @@ public final class fleas extends NetworkGameClient {
           ib.a(-111);
           ne.clearStaticReferences((byte) -84);
           UiComponent.clearDeclaredStaticReferences(0);
-          bb.releaseDeclaredStaticReferences(-1);
+          InteractiveWidget.releaseDeclaredStaticReferences(-1);
           dk.clearStaticReferences((byte) 2);
           jj.clearStaticReferences(true);
           db.releaseDeclaredStaticReferences(0);
@@ -1123,7 +1123,7 @@ public final class fleas extends NetworkGameClient {
           ml.resetStaticState(1);
           oh.f((byte) -110);
           lk.clearStaticReferences(true);
-          ij.clearDeclaredStaticReferences((byte) -20);
+          NameSuggestionsPanel.clearDeclaredStaticReferences((byte) -20);
           ja.discardDeclaredStaticReferences(-91);
           je.i(93);
           v.resetDeclaredStaticReferences(-8011);

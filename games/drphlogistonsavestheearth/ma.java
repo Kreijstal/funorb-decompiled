@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ma extends jf implements ke {
+class ma extends jf implements WidgetActivationListener {
     static ql field_tb;
     private boolean field_xb;
     private BitmapFont field_zb;
@@ -14,7 +14,7 @@ class ma extends jf implements ke {
     static int field_sb;
     static long field_vb;
 
-    public void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

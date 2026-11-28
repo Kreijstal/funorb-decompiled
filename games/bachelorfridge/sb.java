@@ -59,7 +59,7 @@ final class sb extends pu {
             var11 = SoftwareRasterizer.field_c;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param2.b();
+            param2.bindAsRenderTarget();
             if (param7 <= 71) {
               return;
             }

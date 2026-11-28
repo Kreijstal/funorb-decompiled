@@ -114,32 +114,32 @@ final class uk extends nf {
             }
             if (!jc.field_b &&
               !rc.a(-39)) {
-              if (null == pc.field_u) {
-                pc.field_u = new pp[5];
+              if (null == InteractiveWidget.field_u) {
+                InteractiveWidget.field_u = new pp[5];
                 for (var1_int = 0; var1_int < 5; var1_int++) {
-                  pc.field_u[var1_int] = ea.a(var1_int, 1, (byte) 65, 5);
+                  InteractiveWidget.field_u[var1_int] = ea.a(var1_int, 1, (byte) 65, 5);
                 }
               }
               var1_intLifetime1 = 1;
               for (var2 = 0; var2 < 5; var2++) {
-                if (pc.field_u[var2] != null &&
-                  pc.field_u[var2].field_h) {
-                  if (pc.field_u[var2].field_g[0] > FrameTimer.field_b[var2]) {
-                    var3 = pc.field_u[var2].field_g[0] - FrameTimer.field_b[var2];
+                if (InteractiveWidget.field_u[var2] != null &&
+                  InteractiveWidget.field_u[var2].field_h) {
+                  if (InteractiveWidget.field_u[var2].field_g[0] > FrameTimer.field_b[var2]) {
+                    var3 = InteractiveWidget.field_u[var2].field_g[0] - FrameTimer.field_b[var2];
                     MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n - var3;
                     ei.field_F = ei.field_F - 2 * var3;
                     sm.field_f = sm.field_f - var3 * 2;
-                    FrameTimer.field_b[var2] = pc.field_u[var2].field_g[0];
+                    FrameTimer.field_b[var2] = InteractiveWidget.field_u[var2].field_g[0];
                   }
-                  pc.field_u[var2] = null;
+                  InteractiveWidget.field_u[var2] = null;
                 }
-                if (pc.field_u[var2] != null) {
+                if (InteractiveWidget.field_u[var2] != null) {
                   var1_intLifetime1 = 0;
                 }
               }
               if (var1_intLifetime1 != 0) {
                 jc.field_b = true;
-                pc.field_u = null;
+                InteractiveWidget.field_u = null;
               }
             }
             if (!gh.field_y) {
@@ -151,9 +151,9 @@ final class uk extends nf {
               }
               if (NetworkGameClient.field_p.field_k) {
                 fk.field_s = NetworkGameClient.field_p.field_f;
-                pc.field_y = pc.field_y & ~fk.field_s;
+                InteractiveWidget.field_y = InteractiveWidget.field_y & ~fk.field_s;
                 gh.field_y = true;
-                fk.field_s = fk.field_s + pc.field_y;
+                fk.field_s = fk.field_s + InteractiveWidget.field_y;
                 NetworkGameClient.field_p = null;
                 return;
               }

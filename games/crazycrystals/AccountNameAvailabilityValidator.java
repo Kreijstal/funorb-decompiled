@@ -17,7 +17,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         field_i = null;
     }
 
-    final void d(int param0) {
+    final void invalidateCheckedName(int param0) {
         if (param0 != -31626) {
           field_m = -99;
           this.checkedName = null;
@@ -107,7 +107,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -122) {
-            this.d(70);
+            this.invalidateCheckedName(70);
           }
           var4 = (CharSequence) ((Object) param0);
           if (!MouseInputHandler.a(-30, var4)) {

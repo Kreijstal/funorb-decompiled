@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends ph {
+class EditableTextField extends InteractiveWidget {
     private int field_P;
     private boolean field_G;
     static ej field_N;

@@ -80,7 +80,7 @@ final class PrimaryNodeDeque {
 
     final static void a(String param0, int param1, byte param2, int param3, int param4, int param5) {
         try {
-          nn.field_t[param4].d(param1, param3);
+          nn.field_t[param4].draw(param1, param3);
           pn.field_a.drawString(param0, 2 + param1, 14 + param3, 16777215, -1);
           if (param2 != -30) {
             PrimaryNodeDeque.clearStaticReferences(-116);

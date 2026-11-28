@@ -245,7 +245,7 @@ final class aj {
             field_g = (java.applet.Applet) null;
           }
           if (!GameClientBase.p(-82)) {
-            if (!li.field_N) {
+            if (!NameSuggestionsPanel.field_N) {
               if (null == qa.field_g) {
                 qa.field_g = be.a(4, 31315);
               }
@@ -253,7 +253,7 @@ final class aj {
                 eh.field_l = eh.field_l & ~qa.field_g.field_m;
                 jj.field_c = jj.field_c | qa.field_g.field_m;
                 qa.field_g = null;
-                li.field_N = true;
+                NameSuggestionsPanel.field_N = true;
               }
             }
             if (eb.field_l != null &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends WidgetContainer implements u, ql {
+final class ja extends WidgetContainer implements u, WidgetActivationListener {
     private jj field_z;
     private AccountCreationResultPanel field_C;
     static te field_B;
@@ -122,7 +122,7 @@ final class ja extends WidgetContainer implements u, ql {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         jj var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

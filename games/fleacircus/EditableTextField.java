@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends bb {
+class EditableTextField extends InteractiveWidget {
     private long field_L;
     private int field_N;
     static boolean field_U;
@@ -41,7 +41,7 @@ class EditableTextField extends bb {
     }
 
     final static void o(int param0) {
-        ij.field_H = null;
+        NameSuggestionsPanel.field_H = null;
         of.field_d = (byte[][]) null;
         if (param0 != -28210) {
           field_S = 0;

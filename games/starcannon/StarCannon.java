@@ -93,8 +93,8 @@ public final class StarCannon extends ag {
                             } else {
                                 /* Inlined CFG state: 9. */
                                 {
-                                    fh.field_q.d(0, vd.field_j, 640, 480, 128);
-                                    fh.field_q.d(0, -480 + vd.field_j, 640, 480, 128);
+                                    fh.field_q.drawScaledAlpha(0, vd.field_j, 640, 480, 128);
+                                    fh.field_q.drawScaledAlpha(0, -480 + vd.field_j, 640, 480, 128);
                                     statePc = 19;
                                     continue scanLoop1;
                                 }
@@ -397,7 +397,7 @@ public final class StarCannon extends ag {
                             af.field_y.drawRightAligned(vk.field_w, 596, 472 + param0, 16777215, -1);
                             ba.a(24, ma.field_a, (byte) 21, 604, 35, 455 + param0);
                             nb.a(455 + param0, (byte) 122, 35, ha.field_a, 604, 128, 24);
-                            MatchingFieldValidator.field_l.e(609, param0 + 460);
+                            MatchingFieldValidator.field_l.draw(609, param0 + 460);
                             af.field_y.drawString(Integer.toString(MouseWheelSource.field_c), 626, 472 + param0, 16777215, -1);
                             var4_ref_String = be.field_b;
                             var5 = 65535;
@@ -1823,9 +1823,9 @@ public final class StarCannon extends ag {
             dupTemp$0 = new Sprite(32, 32);
             el.field_H[var4_intLifetime2] = dupTemp$0;
             var17 = dupTemp$0;
-            var17.e();
-            gg.field_f[-var4_intLifetime2 + 24].b(0, 0);
-            var17.d();
+            var17.bindAsRenderTarget();
+            gg.field_f[-var4_intLifetime2 + 24].drawFlippedVertical(0, 0);
+            var17.trimTransparentBorders();
           }
           DisplayNameSelectionPanel.field_y.setAsRasterTarget(param1 + 1333);
           fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", jg.field_F);
@@ -1837,9 +1837,9 @@ public final class StarCannon extends ag {
           var5_intLifetime1 = var13;
           while (var13 < 12) {
             var4[var13] = fl.field_f[var13];
-            var4[12 + var13] = fl.field_f[var13].c();
-            var4[12 + var13].a();
-            var4[24 + var13] = fl.field_f[var13].c();
+            var4[12 + var13] = fl.field_f[var13].copy();
+            var4[12 + var13].rotateClockwise();
+            var4[24 + var13] = fl.field_f[var13].copy();
             var4[24 + var13].rotateCounterclockwise();
             var13++;
           }
@@ -1947,8 +1947,8 @@ public final class StarCannon extends ag {
         var21 = vk.a("basic", 104, "orbcoin", FrameTimer.field_f);
         var6 = a.field_b.field_p + a.field_b.field_q;
         el.field_J = new Sprite(var6, var6);
-        el.field_J.e();
-        var21.d(0, 0, var6, var6);
+        el.field_J.bindAsRenderTarget();
+        var21.drawDownscaledAreaAveraged(0, 0, var6, var6);
         j.field_c = SecondaryNodeDequeIterator.a("achievements_lrg", param1 + 1366, "", jg.field_F);
         var5_ref = null;
         var22 = j.field_c;
@@ -1974,7 +1974,7 @@ public final class StarCannon extends ag {
         MatchingFieldValidator.field_m = 1;
         cg.field_e = 0;
         SpriteState.field_p = 0;
-        kd.field_C = -1;
+        NameSuggestionsPanel.field_C = -1;
         FrameTimer.field_e = new bf(256, 256, 256, 0);
         FrameTimer.field_e.field_r = 256;
         FrameTimer.field_e.field_k = 0;
@@ -2114,7 +2114,7 @@ public final class StarCannon extends ag {
           }
           if (!MouseInput.a(86)) {
             if (0 >= jg.field_H) {
-              if (0 < kd.field_C) {
+              if (0 < NameSuggestionsPanel.field_C) {
                 var2_int = 2;
               }
             } else {
@@ -2731,7 +2731,7 @@ public final class StarCannon extends ag {
                   }
                   var10 = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
                 }
-                if (kd.field_C == 0 &&
+                if (NameSuggestionsPanel.field_C == 0 &&
                   jg.field_H == 0) {
                 }
                 hh.field_c = 0;
@@ -2741,7 +2741,7 @@ public final class StarCannon extends ag {
                 MatchingFieldValidator.field_m = 2;
                 var3Lifetime5Lifetime1 = 0;
                 if (MouseInput.a(108)) {
-                  if (!(kd.field_C <= 0) ||
+                  if (!(NameSuggestionsPanel.field_C <= 0) ||
                     !(0 >= jg.field_H)) {
                     var3Lifetime5Lifetime1 = 6;
                   }
@@ -2751,7 +2751,7 @@ public final class StarCannon extends ag {
                   fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
                   BitPacketBuffer.field_k = 0;
                   if (jg.field_H <= 0) {
-                    if (kd.field_C > 0) {
+                    if (NameSuggestionsPanel.field_C > 0) {
                       var3Lifetime5Lifetime1 = 2;
                     }
                   } else {
@@ -3242,7 +3242,7 @@ public final class StarCannon extends ag {
         gi.b(640);
         wc.clearStaticReferences(-1);
         bi.b(0);
-        PcmOutputWorker.a(false);
+        PcmOutputWorker.clearStaticReferences(false);
         gf.clearStaticReferences((byte) -126);
         sd.resetStaticState(false);
         sc.clearStaticReferences(0);
@@ -3320,7 +3320,7 @@ public final class StarCannon extends ag {
         ci.clearStaticReferences(-124);
         bd.clearStaticReferences((byte) -74);
         UiWidget.c((byte) -44);
-        dk.clearStaticReferences(-115);
+        InteractiveWidget.clearStaticReferences(-115);
         kf.resetStaticState(0);
         kc.releaseDeclaredStaticReferences(false);
         qd.clearDeclaredStaticReferences((byte) -37);
@@ -3346,7 +3346,7 @@ public final class StarCannon extends ag {
         EditableTextField.clearStaticReferences((byte) 73);
         qj.clearStaticReferences(-102);
         fa.clearStaticReferences(1851621384);
-        kd.clearStaticReferences(-16);
+        NameSuggestionsPanel.clearStaticReferences(-16);
         ab.clearDeclaredStaticReferences((byte) 119);
         jg.e(934716193);
         pa.f(-200);
@@ -3465,33 +3465,33 @@ public final class StarCannon extends ag {
           SoftwareRasterizer.clearRaster();
         } else {
           var3_int = (320 - FrameTimer.field_e.field_f) / 48;
-          eb.field_b[qd.field_E[2]].a(var3_int, 240 + hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[1]].a(var3_int, hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[0]].a(var3_int, -240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[2]].drawScaled(var3_int, 240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[1]].drawScaled(var3_int, hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[0]].drawScaled(var3_int, -240 + hc.field_c, 320, 240);
           var3_int += 320;
-          eb.field_b[qd.field_E[5]].a(var3_int, hc.field_c + 240, 320, 240);
-          eb.field_b[qd.field_E[4]].a(var3_int, hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[3]].a(var3_int, -240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[5]].drawScaled(var3_int, hc.field_c + 240, 320, 240);
+          eb.field_b[qd.field_E[4]].drawScaled(var3_int, hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[3]].drawScaled(var3_int, -240 + hc.field_c, 320, 240);
           var3_int += 320;
-          eb.field_b[qd.field_E[2]].a(var3_int, 240 + hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[1]].a(var3_int, hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[0]].a(var3_int, -240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[2]].drawScaled(var3_int, 240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[1]].drawScaled(var3_int, hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[0]].drawScaled(var3_int, -240 + hc.field_c, 320, 240);
           var3_int -= 960;
-          eb.field_b[qd.field_E[5]].a(var3_int, 240 + hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[4]].a(var3_int, hc.field_c, 320, 240);
-          eb.field_b[qd.field_E[3]].a(var3_int, -240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[5]].drawScaled(var3_int, 240 + hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[4]].drawScaled(var3_int, hc.field_c, 320, 240);
+          eb.field_b[qd.field_E[3]].drawScaled(var3_int, -240 + hc.field_c, 320, 240);
         }
         if (MouseWheelSource.field_c == -1) {
           if (50 <= cd.field_c) {
-            gb.field_r.d(-gb.field_r.field_x + 640 >> 1, 0);
+            gb.field_r.drawOpaque(-gb.field_r.field_x + 640 >> 1, 0);
           } else {
-            MouseWheelSource.field_e.d(-MouseWheelSource.field_e.field_x + 640 >> 1, 0);
+            MouseWheelSource.field_e.drawOpaque(-MouseWheelSource.field_e.field_x + 640 >> 1, 0);
             if (25 >= cd.field_c &&
               field_z != -2) {
-              gb.field_r.e(640 - gb.field_r.field_x >> 1, 0, -(cd.field_c * 10) + 250);
+              gb.field_r.drawWithOpacity(640 - gb.field_r.field_x >> 1, 0, -(cd.field_c * 10) + 250);
             }
             if (cd.field_c > 25) {
-              gb.field_r.e(-gb.field_r.field_x + 640 >> 1, 0, -250 + 10 * cd.field_c);
+              gb.field_r.drawWithOpacity(-gb.field_r.field_x + 640 >> 1, 0, -250 + 10 * cd.field_c);
             }
           }
         }
@@ -3561,7 +3561,7 @@ public final class StarCannon extends ag {
           } else {
             var4 = var5 / 2 - 32;
           }
-          j.field_c[var3.field_g].c(8, var4);
+          j.field_c[var3.field_g].drawQuarterSizeAveraged(8, var4);
           af.field_y.drawString(AgeValidator.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
         }
         if (nh.field_e != 0) {

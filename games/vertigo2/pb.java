@@ -186,7 +186,7 @@ final class pb {
               var32 = var30 & 65280;
               var33 = var28 * var31 >>> 8 & 989790463 | (var28 * var32 & 16711885) >>> 8;
               var33 = var33 + 65793 * var29;
-              oj.a(var27, var22, var24, var26, (byte) 107, var23, var25, (16711422 & var33) >> 1);
+              NameSuggestionsPanel.a(var27, var22, var24, var26, (byte) 107, var23, var25, (16711422 & var33) >> 1);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];

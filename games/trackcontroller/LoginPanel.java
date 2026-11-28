@@ -153,7 +153,7 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
           this.field_H = (EditableTextField) ((Object) new ValidatedTextField(param0, (tg) (this), 100));
           this.field_F = (EditableTextField) ((Object) new ValidatedTextField("", (tg) (this), 20));
           if (!this.field_L) {
-            this.field_G = new ButtonWidget(nd.field_H, (tg) null);
+            this.field_G = new ButtonWidget(NameSuggestionsPanel.field_H, (tg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_I) {
@@ -341,7 +341,7 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

@@ -89,7 +89,7 @@ final class te {
             if (2 == param0.field_h) {
               var7 = var7 + (param1.field_j - this.field_c.field_r);
             }
-            this.field_c.d(var6_int, var7);
+            this.field_c.draw(var6_int, var7);
           }
           var6 = param0.c(35, param1);
           if (param2 != 0) {

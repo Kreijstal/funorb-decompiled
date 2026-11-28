@@ -206,7 +206,7 @@ class PacketBuffer extends IntrusiveNode {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (ng.field_A == aj.field_c) {
+            if (InteractiveWidget.field_A == aj.field_c) {
               if (!param1) {
                 qi.field_c = nj.a(param3, true, param4, false);
               } else {

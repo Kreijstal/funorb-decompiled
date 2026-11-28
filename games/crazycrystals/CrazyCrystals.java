@@ -720,7 +720,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ip.clearStaticReferences((byte) -103);
           tb.clearStaticReferences(param0 ^ -2180);
           qm.g(1);
-          pc.clearDeclaredStaticReferences((byte) -58);
+          InteractiveWidget.clearDeclaredStaticReferences((byte) -58);
           om.clearDeclaredStaticReferences((byte) 122);
           en.releaseDeclaredStaticReferences(0);
           ab.c(false);
@@ -760,7 +760,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           EditableTextField.clearDeclaredStaticReferences(0);
           ud.h((byte) -124);
           co.clearDeclaredStaticReferences(2);
-          nh.releaseDeclaredStaticReferences(-7397);
+          NameSuggestionsPanel.releaseDeclaredStaticReferences(-7397);
           rf.clearStaticReferences((byte) -98);
           sb.clearStaticReferences((byte) 2);
           io.h(param0 - 211);
@@ -1528,25 +1528,25 @@ public final class CrazyCrystals extends NetworkGameClient {
             var4 = 0;
             while (d.field_c.length > var4) {
               KeyboardInputHandler.field_b[var4] = new RgbSprite(48, 48);
-              KeyboardInputHandler.field_b[var4].a();
-              d.field_c[var4].d(0, 0, 48, 48);
+              KeyboardInputHandler.field_b[var4].bindAsRenderTarget();
+              d.field_c[var4].drawDownscaledAreaAveraged(0, 0, 48, 48);
               cn.field_c[var4] = new RgbSprite(32, 32);
-              cn.field_c[var4].a();
-              d.field_c[var4].d(0, 0, 32, 32);
+              cn.field_c[var4].bindAsRenderTarget();
+              d.field_c[var4].drawDownscaledAreaAveraged(0, 0, 32, 32);
               var4++;
               if (var13 != 0) {
                 return;
               }
             }
             oj.field_B = new RgbSprite(32, 32);
-            oj.field_B.a();
-            ro.field_q.d(0, 0, 32, 32);
+            oj.field_B.bindAsRenderTarget();
+            ro.field_q.drawDownscaledAreaAveraged(0, 0, 32, 32);
             PauseMenu.field_k = new RgbSprite(32, 32);
-            PauseMenu.field_k.a();
-            ah.field_b.d(0, 0, 32, 32);
+            PauseMenu.field_k.bindAsRenderTarget();
+            ah.field_b.drawDownscaledAreaAveraged(0, 0, 32, 32);
             ne.field_i = new RgbSprite(20, 20);
-            ne.field_i.a();
-            var3_ref.d(0, 0, 20, 20);
+            ne.field_i.bindAsRenderTarget();
+            var3_ref.drawDownscaledAreaAveraged(0, 0, 20, 20);
             dk.field_o.setAsRasterTarget(6945);
             ResultScenePhase.field_d = null;
             dj.field_ab = null;

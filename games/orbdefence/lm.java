@@ -2904,31 +2904,31 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,1");
                 if (var2 != null) {
-                  s.field_E[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  InteractiveWidget.field_E[1] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "mustlogin3,2");
                 if (null != var2) {
-                  s.field_E[2] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[2] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,3");
                 if (null != var2) {
-                  s.field_E[3] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  InteractiveWidget.field_E[3] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,4");
                 if (var2 != null) {
-                  s.field_E[4] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[4] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,5");
                 if (var2 != null) {
-                  s.field_E[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
+                  InteractiveWidget.field_E[5] = ProxyAuthenticationRequiredException.a(var2, gi.a((int) param0, -12485));
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "mustlogin3,6");
                 if (null != var2) {
-                  s.field_E[6] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  InteractiveWidget.field_E[6] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mustlogin3,7");
                 if (null != var2) {
-                  s.field_E[7] = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  InteractiveWidget.field_E[7] = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
             }
             void runChunk3() throws java.lang.RuntimeException {

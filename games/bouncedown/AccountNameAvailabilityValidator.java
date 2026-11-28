@@ -250,7 +250,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void i(byte param0) {
+    final void invalidateCheckedName(byte param0) {
         if (param0 >= -106) {
           return;
         }

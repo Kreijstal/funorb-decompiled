@@ -301,7 +301,7 @@ abstract class nk extends GameAppletShell {
           }
           if (null == de.field_b) {
             de.field_b = fb.b(12898);
-            jh.field_c = kf.g(0);
+            jh.field_c = InteractiveWidget.g(0);
           }
           NodeHashTableIterator.a(ej.field_d, param1 ^ 0, de.field_b, jh.field_c);
           GzipDecompressor.field_a = null;
@@ -704,7 +704,7 @@ abstract class nk extends GameAppletShell {
                       if (var2 != 7) {
                         if (8 != var2) {
                           if (var2 == 16) {
-                            kf.h(-1);
+                            InteractiveWidget.h(-1);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {

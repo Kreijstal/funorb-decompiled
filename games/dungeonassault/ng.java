@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends ck {
+final class ng extends InteractiveWidget {
     static String field_K;
     static String field_L;
     private int field_O;
@@ -120,7 +120,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("error_js5crc", param0 ^ -27057);
                 if (var2 != null) {
-                  ck.field_D = dj.a(var2, false);
+                  InteractiveWidget.field_D = dj.a(var2, false);
                 }
                 var2 = rp.a("error_js5io", 116);
                 if (var2 != null) {
@@ -3349,9 +3349,9 @@ final class ng extends ck {
               ta.field_b = new RgbSprite(var9, var10);
               lm.a(ta.field_b, (byte) 108);
             }
-            var7.b(112, 144, var7.field_E << 4, var7.field_G << 4, -this.field_O << 10, 4096);
+            var7.drawRotatedAboutBilinear(112, 144, var7.field_E << 4, var7.field_G << 4, -this.field_O << 10, 4096);
             ti.c(true);
-            ta.field_b.b(-var7.field_E + var5_int, -var7.field_G + var6, 256);
+            ta.field_b.drawAdditive(-var7.field_E + var5_int, -var7.field_G + var6, 256);
             if (var11 == 0) {
               return;
             }
@@ -3361,13 +3361,13 @@ final class ng extends ck {
               return;
             }
             var7Lifetime1 = sl.field_c[1];
-            var7Lifetime1.b(-(var7Lifetime1.field_y >> 1) + var5_int, var6 - (var7Lifetime1.field_v >> 1), 256);
+            var7Lifetime1.drawAdditive(-(var7Lifetime1.field_y >> 1) + var5_int, var6 - (var7Lifetime1.field_v >> 1), 256);
             if (var11 == 0) {
               return;
             }
           }
           var7Lifetime2 = sl.field_c[2];
-          var7Lifetime2.b(var5_int - (var7Lifetime2.field_y >> 1), -(var7Lifetime2.field_v >> 1) + var6, 256);
+          var7Lifetime2.drawAdditive(var5_int - (var7Lifetime2.field_y >> 1), -(var7Lifetime2.field_v >> 1) + var6, 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

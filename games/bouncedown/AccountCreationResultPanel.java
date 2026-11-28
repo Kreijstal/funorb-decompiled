@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends sh implements rc {
+final class AccountCreationResultPanel extends sh implements WidgetActivationListener {
     private boolean field_ob;
     private boolean field_nb;
     static int field_lb;
@@ -9,7 +9,7 @@ final class AccountCreationResultPanel extends sh implements rc {
     static ResourceArchive field_pb;
     private AccountRegistrationPanel field_kb;
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         AccountServiceResult var7 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -101,7 +101,7 @@ final class AccountCreationResultPanel extends sh implements rc {
             } else {
               var4 = SpriteGeometry.field_n;
               if (this.field_kb != null) {
-                this.field_kb.a(-3814);
+                this.field_kb.onNameSuggestionsRefreshRequested(-3814);
               }
             }
           }

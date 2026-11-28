@@ -86,8 +86,8 @@ final class rb extends ue {
               IntrusiveDeque.a(0, ArchiveRequest.a("main", EditableTextField.field_L, param0 + 2, "benefits"), ei.field_G);
               sj.a(ArchiveRequest.a("crystal", EditableTextField.field_L, 10, "benefits"), -2, 17, 10, 107, 71, 40, 2500, (byte) 113);
               var3 = new RgbSprite(ee.field_m.field_n / 3 + 6, 6 + ee.field_m.field_o / 3);
-              var3.a();
-              ee.field_m.d(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
+              var3.bindAsRenderTarget();
+              ee.field_m.drawDownscaledAreaAveraged(3, 3, ee.field_m.field_n / 3, ee.field_m.field_o / 3);
               dk.field_o.setAsRasterTarget(6945);
               hb.a(3, var3.field_o, 0, var3.field_n, var3, -126, 1, 0);
               fo.a(param0 ^ -12, var3);

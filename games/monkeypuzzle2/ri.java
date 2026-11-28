@@ -102,7 +102,7 @@ final class ri {
           var5 = -1;
           var6 = 410;
           var7 = var20.field_D + var20.field_C + 52;
-          ke.field_f[0].e();
+          ke.field_f[0].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, var6 - 6, -6 + var7, 16249775);
           lb.a(0, var6, (byte) -9, NodeHashTableIterator.field_e, 0, var7);
           var8 = 0;
@@ -122,7 +122,7 @@ final class ri {
             boolean decompiledFrameRemainder0 = true;
             if (0 != (1 << var13 & var4) &&
               ee.field_F != var13) {
-              ie.field_b[var13].b(var11, var12);
+              ie.field_b[var13].drawQuarterSizeAveraged(var11, var12);
             } else {
               if (param2 &&
                 0 == (var4 & 1 << var13)) {
@@ -133,7 +133,7 @@ final class ri {
               }
               else {
                 if (var13 != ee.field_F) {
-                  ByteStorage.field_b.b(var11, var12);
+                  ByteStorage.field_b.drawQuarterSizeAveraged(var11, var12);
                 }
               }
             }
@@ -160,8 +160,8 @@ final class ri {
                 }
                 stackIn_43_0 = ((1 & var16_int) == 0) ? 1 : 0;
                 var17 = stackIn_43_0 + (1 + (var15_ref_le.field_k >> 3) - var16_int / 2);
-                var15_ref_le.d(var11 + var17, var17 + var12, var16_int, var16_int);
-                var15_ref_le.b(var17 + var11, var17 + var12, var16_int, var16_int, (int)(40.0f * var14_float) + 40);
+                var15_ref_le.drawDownscaledAreaAveraged(var11 + var17, var17 + var12, var16_int, var16_int);
+                var15_ref_le.drawScaledAdditive(var17 + var11, var17 + var12, var16_int, var16_int, (int)(40.0f * var14_float) + 40);
                 if (ee.field_F != var13) {
                   var5 = var13;
                 }
@@ -169,10 +169,10 @@ final class ri {
               var11 += 40;
             }
           }
-          ke.field_f[2].e();
+          ke.field_f[2].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 172, 184, 16249775);
           lb.a(0, 178, (byte) 112, NodeHashTableIterator.field_e, 0, 190);
-          ke.field_f[1].e();
+          ke.field_f[1].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(3, 3, 215, 184, 16249775);
           lb.a(0, 221, (byte) -119, NodeHashTableIterator.field_e, 0, 190);
           if (ee.field_F >= 0) {
@@ -202,13 +202,13 @@ final class ri {
             var12Lifetime1 = var12Lifetime1 - var13Lifetime1;
             var20.drawString(wk.field_c + ve.field_y[var5], 15, var12Lifetime1, 1, -1);
             for (var18Lifetime1 = 0; f.field_j[var5] > var18Lifetime1; var18Lifetime1++) {
-              aj.field_e.b(15 * var18Lifetime1 + 15, 143);
+              aj.field_e.drawQuarterSizeAveraged(15 * var18Lifetime1 + 15, 143);
             }
-            ke.field_f[2].e();
+            ke.field_f[2].bindAsRenderTarget();
             if (var15 == 0) {
-              ByteStorage.field_b.c(25, 25);
+              ByteStorage.field_b.draw(25, 25);
             } else {
-              ie.field_b[var5].c(25, 25);
+              ie.field_b[var5].draw(25, 25);
             }
           } else {
             if (ok.a(false)) {
@@ -224,19 +224,19 @@ final class ri {
             field_d = (String) null;
           }
           var14Lifetime1 = var7 - var13Lifetime2 >> 1;
-          ke.field_f[0].b(116, 90 + var14Lifetime1, var6, var13Lifetime2);
+          ke.field_f[0].drawScaled(116, 90 + var14Lifetime1, var6, var13Lifetime2);
           var13Lifetime3 = param1 * 190 / 20;
           if (var13Lifetime3 > 190) {
             var13Lifetime3 = 190;
           }
           var14Lifetime2 = 190 - var13Lifetime3 >> 1;
-          ke.field_f[1].b(116, 170 + var14Lifetime2, 221, var13Lifetime3);
+          ke.field_f[1].drawScaled(116, 170 + var14Lifetime2, 221, var13Lifetime3);
           var13Lifetime4 = 190 * param1 / 20;
           if (var13Lifetime4 > 190) {
             var13Lifetime4 = 190;
           }
           var14Lifetime3 = 190 - var13Lifetime4 >> 1;
-          ke.field_f[2].b(348, 170 + var14Lifetime3, 178, var13Lifetime4);
+          ke.field_f[2].drawScaled(348, 170 + var14Lifetime3, 178, var13Lifetime4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

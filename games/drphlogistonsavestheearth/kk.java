@@ -122,19 +122,19 @@ final class kk {
           }
           var9Lifetime1 = var18.field_w;
           MouseInput.a(true);
-          var18.c();
+          var18.bindAsRenderTarget();
           var11Lifetime1 = 101 % ((22 - param0) / 61);
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_k, SoftwareRasterizer.field_c);
           var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.c();
-          var18.a(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           var12 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var12.c();
-          var18.a(-var18.field_y + var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var18.drawOpaque(-var18.field_y + var9Lifetime1, 0);
           var13 = new RgbSprite(var18.field_y - var9Lifetime1 * 2, var9Lifetime1);
-          var13.c();
-          var18.a(-var9Lifetime1, 0);
+          var13.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           cl.d((byte) -73);
           rk.field_d = new RgbSprite[]{var16, var13, var12};
         } catch (RuntimeException runtimeException) {

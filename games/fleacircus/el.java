@@ -140,21 +140,21 @@ final class el extends wi {
           if (param0 == 72) {
             if (this.field_r &&
               this.field_w != null) {
-              this.field_w.d(var4 + (this.field_l - this.field_w.field_w / 2), -(this.field_w.field_t / 2) + this.field_a);
+              this.field_w.draw(var4 + (this.field_l - this.field_w.field_w / 2), -(this.field_w.field_t / 2) + this.field_a);
               return;
             }
-            this.field_y.c(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
+            this.field_y.drawQuarterSizeAveraged(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
             return;
           }
           this.field_t = 37;
         }
         if (!this.field_r) {
-          this.field_y.c(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
+          this.field_y.drawQuarterSizeAveraged(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
         } else {
           if (this.field_w == null) {
-            this.field_y.c(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
+            this.field_y.drawQuarterSizeAveraged(this.field_l + (var4 - this.field_y.field_w / 8), -(this.field_y.field_t / 8) + this.field_a);
           } else {
-            this.field_w.d(var4 + (this.field_l - this.field_w.field_w / 2), -(this.field_w.field_t / 2) + this.field_a);
+            this.field_w.draw(var4 + (this.field_l - this.field_w.field_w / 2), -(this.field_w.field_t / 2) + this.field_a);
           }
         }
     }

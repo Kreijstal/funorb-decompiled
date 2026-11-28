@@ -611,7 +611,7 @@ final class jb {
         if (var2 >= 0) {
           tf.a((byte) 59, var2, this.field_c, this.field_l);
         } else {
-          pn.field_a.drawCentred(rg.field_J, 320, this.field_c + 36, 4243584, -1);
+          pn.field_a.drawCentred(InteractiveWidget.field_J, 320, this.field_c + 36, 4243584, -1);
         }
         if (tj.a(true)) {
           pn.field_a.drawCentred(oc.field_b, 320, 190 + this.field_c, 4243584, -1);
@@ -743,9 +743,9 @@ final class jb {
               if (!param0) {
                 if (this.field_j == var10) {
                   if ((1 << var10 & this.field_l) != 0) {
-                    db.field_w[var10].c(var5 - 4, -4 + var6, 40, 40);
+                    db.field_w[var10].drawDownscaledAreaBlended(var5 - 4, -4 + var6, 40, 40);
                   } else {
-                    kn.field_g.c(var5 - 4, -4 + var6, 40, 40);
+                    kn.field_g.drawDownscaledAreaBlended(var5 - 4, -4 + var6, 40, 40);
                   }
                 } else {
                   if (ld.field_l >= var5 &&
@@ -754,17 +754,17 @@ final class jb {
                     jh.field_R < var6 + 32) {
                     var3 = var10;
                     if ((1 << var10 & this.field_l) == 0) {
-                      kn.field_g.c(var5 - 2, -2 + var6, 36, 36);
+                      kn.field_g.drawDownscaledAreaBlended(var5 - 2, -2 + var6, 36, 36);
                     } else {
-                      db.field_w[var10].c(var5 - 2, -2 + var6, 36, 36);
+                      db.field_w[var10].drawDownscaledAreaBlended(var5 - 2, -2 + var6, 36, 36);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
                     if (0 != (this.field_l & 1 << var10)) {
-                      db.field_w[var10].c(var5, var6, 32, 32);
+                      db.field_w[var10].drawDownscaledAreaBlended(var5, var6, 32, 32);
                     } else {
-                      kn.field_g.c(var5, var6, 32, 32);
+                      kn.field_g.drawDownscaledAreaBlended(var5, var6, 32, 32);
                     }
                   }
                 }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class db extends vk implements ga {
-    private dk field_y;
-    private dk field_A;
+final class db extends vk implements WidgetActivationListener {
+    private InteractiveWidget field_y;
+    private InteractiveWidget field_A;
     static long field_C;
-    private dk field_z;
+    private InteractiveWidget field_z;
     static String field_B;
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -49,9 +49,9 @@ final class db extends vk implements ga {
 
     public db() {
         super(0, 0, 476, 225, (de) null);
-        this.field_y = new dk(qj.field_V, (qg) null);
-        this.field_A = new dk(Bzip2State.field_v, (qg) null);
-        this.field_z = new dk(LoginPanel.field_E, (qg) null);
+        this.field_y = new InteractiveWidget(qj.field_V, (qg) null);
+        this.field_A = new InteractiveWidget(Bzip2State.field_v, (qg) null);
+        this.field_z = new InteractiveWidget(LoginPanel.field_E, (qg) null);
         gb var1 = new gb();
         this.field_y.field_o = (de) ((Object) var1);
         this.field_A.field_o = (de) ((Object) var1);

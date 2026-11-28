@@ -440,9 +440,9 @@ abstract class BitmapFont extends DualNode {
                                   }
                                   integerLocal14 = stackIntegerLocal2;
                                   if (integerState0527 != 256) {
-                                    spriteLocal12.performAction0933(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14, integerState0527);
+                                    spriteLocal12.drawWithOpacity(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14, integerState0527);
                                   } else {
-                                    spriteLocal12.performAction0932(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14);
+                                    spriteLocal12.draw(integerArgument2, integerArgument3 + this.integerState0516 - integerLocal14);
                                   }
                                   integerArgument2 = integerArgument2 + spriteLocal12.integerState0422;
                                   integerLocal5 = 0;

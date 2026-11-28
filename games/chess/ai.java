@@ -674,7 +674,7 @@ final class ai {
             if (param1.field_c == 2) {
               var7 = var7 + (-this.field_k.field_u + param3.field_C);
             }
-            this.field_k.b(var6_int, var7);
+            this.field_k.draw(var6_int, var7);
           }
           if (param2 > -51) {
             return;

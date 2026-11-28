@@ -49,14 +49,14 @@ final class gi {
           }
           bi.field_a.field_B[var3] = var5 << 1;
         }
-        jj.field_A.e();
+        jj.field_A.bindAsRenderTarget();
         sc.a(3, bi.field_a.field_B, 3, 30603);
         DisplayNameSelectionPanel.field_y.setAsRasterTarget(33);
         if (param0 != 4) {
           return;
         }
         try {
-          jj.field_A.b(0, 0, 640, 480, se.field_u);
+          jj.field_A.drawScaledAdditive(0, 0, 640, 480, se.field_u);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
         }

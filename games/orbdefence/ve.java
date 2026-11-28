@@ -88,13 +88,13 @@ final class ve extends ej {
           }
           if (param3 > 0 &&
             param1 > 0) {
-            var22 = param2.f();
+            var22 = param2.copy();
             var31 = SoftwareRasterizer.field_b;
             var10 = SoftwareRasterizer.field_f;
             var11 = SoftwareRasterizer.field_l;
             var30 = new int[4];
             SoftwareRasterizer.saveClip(var30);
-            param2.d();
+            param2.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var30[0], var30[1], var30[2], var30[3]);
             var13 = param5 + param7 * param2.field_o;
             var14 = -param3 + param2.field_o;
@@ -122,7 +122,7 @@ final class ve extends ej {
               }
               var13 = var13 + var14;
             }
-            var22.c(-param2.field_p, -param2.field_u);
+            var22.draw(-param2.field_p, -param2.field_u);
             SoftwareRasterizer.setRasterBuffer(var31, var10, var11);
             SoftwareRasterizer.restoreClip(var30);
             return;

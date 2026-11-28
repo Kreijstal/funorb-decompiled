@@ -56,7 +56,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawDownscaledAreaAveraged(int param0, int param1, int param2, int param3) {
         int var11 = 0;
         int var12 = 0;
         int var31 = 0;
@@ -873,7 +873,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void e(int param0, int param1, int param2, int param3, int param4) {
+    final void drawScaledAdditive(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1101,7 +1101,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b() {
+    final void bindAsRenderTarget() {
         SoftwareRasterizer.setTarget(this.field_v, this.field_q, this.field_p);
     }
 
@@ -1219,7 +1219,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void e(int param0, int param1, int param2) {
+    void drawGrayRampTinted(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1490,7 +1490,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    void a(int param0, int param1, int param2) {
+    void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -1536,7 +1536,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRotatedAbout(int param0, int param1, int param2, int param3, int param4, int param5) {
         double var7;
         int var9;
         int var10;
@@ -1951,7 +1951,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    void c(int param0, int param1) {
+    void drawOpaque(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -2497,7 +2497,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void g(int param0) {
+    final void padWithinCanvas(int param0) {
         int var9 = 0;
         int var10 = 0;
         int var2;
@@ -3136,11 +3136,11 @@ class Sprite extends SpriteState {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3) {
+    final void drawRotated(int param0, int param1, int param2, int param3) {
         int var5 = this.field_n << 3;
         int var6 = this.field_o << 3;
         param0 = (param0 << 4) + (var5 & 15);
         param1 = (param1 << 4) + (var6 & 15);
-        this.b(var5, var6, param0, param1, param2, param3);
+        this.drawRotatedAbout(var5, var6, param0, param1, param2, param3);
     }
 }

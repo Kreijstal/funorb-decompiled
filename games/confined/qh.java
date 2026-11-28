@@ -19,18 +19,18 @@ final class qh extends vf {
         RuntimeException var6 = null;
         pn var7 = null;
         pn var9 = null;
-        rg var10 = null;
+        InteractiveWidget var10 = null;
         pn var11 = null;
         pn var12 = null;
         pn var13 = null;
         pn var14 = null;
         try {
-          if (!(param3 instanceof rg)) {
+          if (!(param3 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (fj) (param3);
           }
-          var10 = (rg) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           TunnelMesh.pushAndIntersectRasterClip(param1 + param3.field_q, param3.field_F + (param1 + param3.field_q), param4 - (-param3.field_m - param3.field_z), param4 + param3.field_m, 14907);
           if (var10 != null) {
             param2 = param2 & var10.field_L;

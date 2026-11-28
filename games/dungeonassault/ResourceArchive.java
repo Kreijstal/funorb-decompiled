@@ -89,7 +89,7 @@ final class ResourceArchive {
         ac.a((byte) -125, param1);
         kd.a(31913, param1);
         ob.a((byte) -53, param1);
-        ck.e((byte) 65);
+        InteractiveWidget.e((byte) 65);
         hn.d((byte) -117);
         if (param0 >= -67) {
           return;

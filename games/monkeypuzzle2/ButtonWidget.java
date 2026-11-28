@@ -109,7 +109,7 @@ class ButtonWidget extends UiWidget {
             this.field_t != SecondaryNodeDeque.field_a) {
             if (this.a(ei.field_a, param1, param2, p.field_a, (byte) 45) &&
               0 == SecondaryNodeDeque.field_a) {
-              this.b(-93, ei.field_a - param2, -param1 + p.field_a, this.field_t);
+              this.activateFromInput(-93, ei.field_a - param2, -param1 + p.field_a, this.field_t);
             }
             this.a(param1, ei.field_a, param0, p.field_a, 0, param2);
           }
@@ -180,15 +180,15 @@ class ButtonWidget extends UiWidget {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void activateFromInput(int param0, int param1, int param2, int param3) {
         if (param0 > -23) {
           UiWidget var6 = (UiWidget) null;
           this.a((UiWidget) null, 14, 64, (byte) 66);
           if (null == this.field_o) {
             return;
           }
-          if (this.field_o instanceof ql) {
-            ((ql) (this.field_o)).a(param2, param3, param1, 7, this);
+          if (this.field_o instanceof WidgetActivationListener) {
+            ((WidgetActivationListener) (this.field_o)).onWidgetActivated(param2, param3, param1, 7, this);
             return;
           }
           return;
@@ -196,8 +196,8 @@ class ButtonWidget extends UiWidget {
         if (null == this.field_o) {
           return;
         }
-        if (this.field_o instanceof ql) {
-          ((ql) (this.field_o)).a(param2, param3, param1, 7, this);
+        if (this.field_o instanceof WidgetActivationListener) {
+          ((WidgetActivationListener) (this.field_o)).onWidgetActivated(param2, param3, param1, 7, this);
           return;
         }
     }
@@ -249,7 +249,7 @@ class ButtonWidget extends UiWidget {
         try {
           if (this.b((byte) 96) && (param2 == 84 ||
             param2 == 83)) {
-            this.b(-64, -1, -1, 1);
+            this.activateFromInput(-64, -1, -1, 1);
             return true;
           }
           var5_int = 58 % ((param3 - 37) / 50);

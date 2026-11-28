@@ -58,7 +58,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var6 = SoftwareRasterizer.field_j;
           var15 = SoftwareRasterizer.field_l;
           fm.field_g = new Sprite(10, 14);
-          fm.field_g.d();
+          fm.field_g.bindAsRenderTarget();
           for (var8 = param1; var8 < 7; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
@@ -429,12 +429,12 @@ final class MusicPatchPcmStream extends PcmStream {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var6 = new Sprite(param1, param0);
         int var7 = 47 % ((3 - param4) / 57);
-        var6.d();
+        var6.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, param1, param0, 12, 5921370);
         SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param1, -8 + param0, 8, 0);
         ro.field_g.a(-125);
         SoftwareRasterizer.fillRoundedRectangleAlpha(param3, param2, param1, param0, 12, 0, param5);
-        var6.e(param3, param2);
+        var6.draw(param3, param2);
     }
 
     final void mixInto(int[] param0, int param1, int param2) {

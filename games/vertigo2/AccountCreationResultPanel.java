@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends fj implements ij {
+final class AccountCreationResultPanel extends fj implements WidgetActivationListener {
     private boolean field_ub;
     static String field_rb;
     private boolean field_nb;
@@ -143,7 +143,7 @@ final class AccountCreationResultPanel extends fj implements ij {
             } else {
               var4 = IsaacCipher.field_g;
               if (this.field_tb != null) {
-                this.field_tb.a(-4384);
+                this.field_tb.onNameSuggestionsRefreshRequested(-4384);
               }
             }
           } else {
@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends fj implements ij {
         }
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         if (this.field_ub) {
           ak.a(true, false, 3);
           return;

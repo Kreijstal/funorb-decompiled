@@ -142,8 +142,8 @@ final class rh {
           var7Lifetime1 = var7Lifetime1 * this.field_a;
           var1[var5Lifetime1] = (var6Lifetime1 & -16711936 | var7Lifetime1 & 16711680) >>> 8;
         }
-        this.field_d.b(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
-        this.field_d.b(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
+        this.field_d.drawAdditive(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
+        this.field_d.drawAdditive(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
     }
 
     final void d() {
@@ -162,8 +162,8 @@ final class rh {
     }
 
     final void a() {
-        this.field_d.b(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
-        this.field_d.b(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
+        this.field_d.drawAdditive(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
+        this.field_d.drawAdditive(this.field_g - (this.field_c >> 1), this.field_b - this.field_f, 256);
     }
 
     rh(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

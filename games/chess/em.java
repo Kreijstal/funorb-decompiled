@@ -301,29 +301,29 @@ final class em {
             }
             if (null != param1[0]) {
               SoftwareRasterizer.intersectClip(param3, param0, var16, var18);
-              param1[0].b(param3, param0);
+              param1[0].draw(param3, param0);
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[2] != null) {
               SoftwareRasterizer.intersectClip(var17, param0, var10, var18);
-              param1[2].b(var13, param0);
+              param1[2].draw(var13, param0);
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[6] != null) {
               SoftwareRasterizer.intersectClip(param3, var19, var16, var11);
-              param1[6].b(param3, var15);
+              param1[6].draw(param3, var15);
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (param1[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param1[8].b(var13, var15);
+              param1[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
             if (null != param1[1] &&
               param1[1].field_v != 0) {
               SoftwareRasterizer.intersectClip(var16, param0, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param1[1].field_v) {
-                param1[1].b(var20, param0);
+                param1[1].draw(var20, param0);
               }
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
@@ -331,7 +331,7 @@ final class em {
               0 != param1[7].field_v) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param1[7].field_v) {
-                param1[7].b(var20Lifetime1, var15);
+                param1[7].draw(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
@@ -339,7 +339,7 @@ final class em {
               param1[3].field_u != 0) {
               SoftwareRasterizer.intersectClip(param3, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param1[3].field_u) {
-                param1[3].b(param3, var20Lifetime2);
+                param1[3].draw(param3, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
@@ -347,7 +347,7 @@ final class em {
               param1[5].field_u != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param1[5].field_u) {
-                param1[5].b(var13, var20Lifetime3);
+                param1[5].draw(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);
             }
@@ -359,7 +359,7 @@ final class em {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param1[4].field_u) {
                 for (var21 = var12; var21 < var13; var21 = var21 + param1[4].field_v) {
-                  param1[4].b(var21, var20Lifetime4);
+                  param1[4].draw(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(GameAppletShell.field_d);

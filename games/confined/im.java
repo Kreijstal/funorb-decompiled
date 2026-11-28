@@ -66,13 +66,13 @@ final class im {
           SoftwareRasterizer.clearRaster();
           tg.field_H = 0;
           of.a(false);
-          var3 = var1.c();
+          var3 = var1.copy();
           for (var4 = 0; var4 < 15; var4++) {
-            var3.d(-2, -2, 16777215);
+            var3.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          KeyboardInput.field_c.d();
-          var1.b(0, 0);
+          KeyboardInput.field_c.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ib.b(false);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "im.D(" + param0 + ')');

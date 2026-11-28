@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sh extends mh implements rc {
+class sh extends mh implements WidgetActivationListener {
     private BitmapFont field_bb;
     static int[] field_gb;
     static int field_hb;
@@ -116,7 +116,7 @@ class sh extends mh implements rc {
         }
     }
 
-    public void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

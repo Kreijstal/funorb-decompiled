@@ -36,7 +36,7 @@ final class haa extends TileEffect {
         int var4 = this.field_d * this.field_c % 3;
         IndexedSprite var5 = cba.field_c[var4];
         int var6 = via.a(6 * this.field_g * (13 + (15 & this.field_d * 3 + this.field_c * 4)), (byte) 118) >> 3;
-        var5.a(var5.field_a << 3, -40 + var5.field_b << 3, ((param2 << 1) + 128 << 3) + (-var6 >> 4), 64 + (param0 - (2 * this.field_g + 20) << 1) << 3, var6, 4096);
+        var5.drawRotatedAbout(var5.field_a << 3, -40 + var5.field_b << 3, ((param2 << 1) + 128 << 3) + (-var6 >> 4), 64 + (param0 - (2 * this.field_g + 20) << 1) << 3, var6, 4096);
     }
 
     haa(BattleScreen param0, int param1, int param2, boolean param3) {

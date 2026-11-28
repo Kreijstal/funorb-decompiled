@@ -494,9 +494,9 @@ class g extends wa {
             var24 = var24 + (-var17.field_u + this.field_lb);
           }
           if (this.field_jb >= 256) {
-            var17.b(var23_int, var24);
+            var17.draw(var23_int, var24);
           } else {
-            var17.a(var23_int, var24, this.field_jb);
+            var17.drawWithOpacity(var23_int, var24, this.field_jb);
           }
         }
         boolean decompiledFrameRemainder0 = true;

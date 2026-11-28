@@ -59,7 +59,7 @@ final class ph {
     }
 
     final static void c(int param0) {
-        PcmOutputWorker.a(true);
+        PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
         if (tb.field_c != null) {
           AccountCreationResultPanel.a(tb.field_c, (byte) -76);
           r.b((byte) 123);

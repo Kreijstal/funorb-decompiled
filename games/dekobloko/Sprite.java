@@ -13,9 +13,9 @@ abstract class Sprite {
     int integerState0428;
     static ResourceArchive resourceArchiveState0010;
 
-    abstract void performAction0932(int integerArgument1, int integerArgument2);
+    abstract void draw(int integerArgument1, int integerArgument2);
 
-    final static ReturnedShape computeReturnedShape0935(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final static ReturnedShape createTwoCellShapeFromDominoDescriptor(int integerArgument1, int integerArgument2, int integerArgument3) {
         ReturnedShape returnedShapeLocal1 = new ReturnedShape(integerArgument1);
         returnedShapeLocal1.packedCells = new byte[2];
         returnedShapeLocal1.width = 2;
@@ -26,7 +26,7 @@ abstract class Sprite {
         return returnedShapeLocal1;
     }
 
-    final static void performAction0934(int integerArgument1, boolean booleanArgument2) {
+    final static void selectLocalizedStartupMessages(int integerArgument1, boolean booleanArgument2) {
         if (!booleanArgument2) {
           return;
         }
@@ -35,13 +35,13 @@ abstract class Sprite {
         MixedSupport028.stringState0137 = GameSession.stringArrayState0033[integerArgument1];
     }
 
-    abstract void performAction0933(int integerArgument1, int integerArgument2, int integerArgument3);
+    abstract void drawWithOpacity(int integerArgument1, int integerArgument2, int integerArgument3);
 
-    public static void performAction0931(int integerArgument1) {
+    public static void clearStaticReferences(int integerArgument1) {
         resourceArchiveState0010 = null;
         stringArrayArrayState0005 = (String[][]) null;
         if (integerArgument1 != -27983) {
-          Sprite.performAction0934(40, false);
+          Sprite.selectLocalizedStartupMessages(40, false);
         }
     }
 

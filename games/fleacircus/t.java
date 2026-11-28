@@ -176,7 +176,7 @@ final class t {
           var5 == 1) {
           var4 += 180;
         }
-        je.field_O[var5].b(var3, var4, 16, 13089168);
+        je.field_O[var5].drawTinted(var3, var4, 16, 13089168);
     }
 
     final void e(int param0) {
@@ -227,7 +227,7 @@ final class t {
         int var2 = 150;
         MatchingFieldValidator.field_p.drawWaveText(bh.field_u[0], 320, var2 + 2 * MatchingFieldValidator.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
         MatchingFieldValidator.field_p.drawWaveText(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)MatchingFieldValidator.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
-        jj.field_P.d((640 - jj.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
+        jj.field_P.draw((640 - jj.field_P.field_w) / 2, var2 + MatchingFieldValidator.field_p.field_N * 4);
         MatchingFieldValidator.field_p.drawCentred(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         AccountRegistrationPanel.field_L.a(50, 100, 0, -4575, 380);
         fb.field_a.a(50, 100, 0, -4575, 380);
@@ -347,7 +347,7 @@ final class t {
         for (var9 = 0; var9 < wa.field_f.length; var9++) {
           regionExit1: {
             if ((var6 & 1 << var9) != 0) {
-              il.field_d[var9].c(var4, var5);
+              il.field_d[var9].drawQuarterSizeAveraged(var4, var5);
             } else {
               if (param0) {
                 break regionExit1;
@@ -358,7 +358,7 @@ final class t {
               } else {
                 stackIn_16_0 = cb.field_u;
               }
-              ((RgbSprite) (Object) stackIn_16_0).c(var4, var5);
+              ((RgbSprite) (Object) stackIn_16_0).drawQuarterSizeAveraged(var4, var5);
             }
             if (ag.field_f >= var4 &&
               32 + var4 >= ag.field_f &&
@@ -419,7 +419,7 @@ final class t {
           ((BitmapFont) (Object) stackIn_56_0).drawCentred(stackIn_57_1, stackIn_59_2, stackIn_59_3, stackIn_60_4, -1);
           var11 = 200;
           var11 += 60;
-          lk.field_Q.drawParagraph(ij.field_J[var8], 100, var11, 320, 100, 0, -1, 0, 0, lk.field_Q.field_N - 7);
+          lk.field_Q.drawParagraph(NameSuggestionsPanel.field_J[var8], 100, var11, 320, 100, 0, -1, 0, 0, lk.field_Q.field_N - 7);
           var12 = ii.field_a + 100 * rf.field_c[var8];
           var4Lifetime1 = 100;
           var15.drawString(var12, 100, ia.field_j[4] - (int)((double)var15.field_N * 1.5), 0, -1);
@@ -427,20 +427,20 @@ final class t {
           var15.drawString(me.field_e, 100, -(int)(0.5 * (double)var15.field_N) + ia.field_j[4], 0, -1);
           var4Lifetime1 = var4Lifetime1 + var15.stringWidth(me.field_e);
           for (var13 = 0; rf.field_c[var8] > var13; var13++) {
-            FullscreenFocusCanvas.field_a.d(var4Lifetime1, ia.field_j[4] - (-var15.field_K + var15.field_N) - (var15.field_H - (int)((double)var15.field_N * 0.5)));
+            FullscreenFocusCanvas.field_a.draw(var4Lifetime1, ia.field_j[4] - (-var15.field_K + var15.field_N) - (var15.field_H - (int)((double)var15.field_N * 0.5)));
             var4Lifetime1 = var4Lifetime1 + FullscreenFocusCanvas.field_a.field_w / 3;
           }
           if (var10 != 0) {
-            il.field_d[var8].d(420, 252);
+            il.field_d[var8].draw(420, 252);
           } else if (0 < wc.field_q) {
-            cb.field_u.d(420, 252);
+            cb.field_u.draw(420, 252);
           } else {
             if (!ResourceArchive.field_j[var8]) {
               stackIn_70_0 = cb.field_u;
             } else {
               stackIn_70_0 = mf.field_g;
             }
-            ((RgbSprite) (Object) stackIn_70_0).d(420, 252);
+            ((RgbSprite) (Object) stackIn_70_0).draw(420, 252);
           }
         } else {
           var15.drawParagraph(al.field_d, 165, 200, 310, 100, 0, -1, 1, 0, var15.field_N);
@@ -465,10 +465,10 @@ final class t {
         var5 = fleas.field_A ? 1 : 0;
         ResourceArchive.field_c.field_a = 100;
         if (this.field_i != 1) {
-          qi.field_c.f(0, 0);
+          qi.field_c.drawOpaque(0, 0);
           for (var2_int = 0; var2_int < ContextualRuntimeException.field_g.length; var2_int++) {
-            ContextualRuntimeException.field_g[var2_int].d(b.field_d[var2_int], 200 + var2_int * 5);
-            AccountCreationResultPanel.field_tb[var2_int].g(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
+            ContextualRuntimeException.field_g[var2_int].draw(b.field_d[var2_int], 200 + var2_int * 5);
+            AccountCreationResultPanel.field_tb[var2_int].drawFlippedHorizontal(ByteStorage.field_h[var2_int], 200 + 5 * var2_int);
           }
         } else {
           fc.c(param0 ^ 124);
@@ -519,17 +519,17 @@ final class t {
           var2Lifetime1 = de.field_a;
         }
         if (var3 != null) {
-          ((RgbSprite) (var3)).d((-((RgbSprite) (var3)).field_x + 640) / 2, 45);
+          ((RgbSprite) (var3)).draw((-((RgbSprite) (var3)).field_x + 640) / 2, 45);
         }
         if (this.field_i != 1 &&
           this.field_i != 7) {
-          si.field_C.d(0, 0);
+          si.field_C.draw(0, 0);
         }
         if (param0 != 2) {
           field_a = 76;
         }
         if (var2Lifetime1 != null) {
-          ((RgbSprite) (var2Lifetime1)).d((-((RgbSprite) (var2Lifetime1)).field_x + 640) / 2, 10);
+          ((RgbSprite) (var2Lifetime1)).draw((-((RgbSprite) (var2Lifetime1)).field_x + 640) / 2, 10);
         }
         if (this.field_i == 2) {
           this.d(-1);
@@ -645,14 +645,14 @@ final class t {
             SoftwareRasterizer.fillRectangle(var4 + 13, var5 + 14, var6, var7, 1);
             MatchingFieldValidator.field_p.drawCentred(fc.field_b, 25 + var4 + 13, 30 + var5 + 14, 0, -1);
             MatchingFieldValidator.field_p.drawCentred(fc.field_b, var6 + var4 - 12, -15 + (var5 - (-var7 - 14)), 0, -1);
-            cb.field_u.e(var8_int, var9_int);
+            cb.field_u.drawHalfSize(var8_int, var9_int);
           } else {
-            fl.field_b.c(var4 + 13, var5 + 14);
+            fl.field_b.drawQuarterSizeAveraged(var4 + 13, var5 + 14);
           }
           if (var3 != 0) {
-            mf.field_g.e(var8_int, var9_int);
+            mf.field_g.drawHalfSize(var8_int, var9_int);
           }
-          pf.field_a.d(var4, var5);
+          pf.field_a.draw(var4, var5);
           var5 = var5 + (20 + var7);
         }
         if (param0 != -25155) {
@@ -661,9 +661,9 @@ final class t {
         var6Lifetime1 = pf.field_a.field_w;
         var5 += 15;
         var8 = ia.field_m[fleas.field_E][ResourceArchive.field_c.field_x];
-        rd.field_e.d(-(rd.field_e.field_x / 2) + (var6Lifetime1 / 2 + var4), var5);
+        rd.field_e.draw(-(rd.field_e.field_x / 2) + (var6Lifetime1 / 2 + var4), var5);
         if (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a >= 397) {
-          rd.field_e.b(var6Lifetime1 / 2 + (var4 - rd.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
+          rd.field_e.drawFlippedVertical(var6Lifetime1 / 2 + (var4 - rd.field_e.field_x / 2), -20 + (ResourceArchive.field_c.field_d + ResourceArchive.field_c.field_a));
         }
         var9 = lk.field_Q;
         var5 = var5 + (20 + var9.field_N);
@@ -1383,10 +1383,10 @@ final class t {
         } else {
           boolean decompiledFrameRemainder0 = true;
           if (g.field_s == 1) {
-            aj.field_t[2].d(105, AgeValidator.field_s[g.field_s][1] - 2);
+            aj.field_t[2].draw(105, AgeValidator.field_s[g.field_s][1] - 2);
             oj.a(AgeValidator.field_s[g.field_s][1] + 2, 0, 109, var4);
-            aj.field_t[3].d(95, AgeValidator.field_s[g.field_s][2] + 1);
-            aj.field_t[4].d(116, 1 + AgeValidator.field_s[g.field_s][2]);
+            aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][2] + 1);
+            aj.field_t[4].draw(116, 1 + AgeValidator.field_s[g.field_s][2]);
             for (var5 = 4; var5 <= 6; var5++) {
               var6 = 88 + ib.field_a[g.field_s][var5];
               var7 = AgeValidator.field_s[g.field_s][var5] + 7;
@@ -1394,20 +1394,20 @@ final class t {
             }
           } else {
             if (2 == g.field_s) {
-              aj.field_t[1].d(95, AgeValidator.field_s[g.field_s][1] + 3);
-              aj.field_t[2].d(95, AgeValidator.field_s[g.field_s][2] + 3);
+              aj.field_t[1].draw(95, AgeValidator.field_s[g.field_s][1] + 3);
+              aj.field_t[2].draw(95, AgeValidator.field_s[g.field_s][2] + 3);
               oj.a(AgeValidator.field_s[g.field_s][2] + 7, 0, 99, var4);
-              aj.field_t[3].d(95, AgeValidator.field_s[g.field_s][3] + 3);
-              aj.field_t[11].d(95, AgeValidator.field_s[g.field_s][4] + 12);
-              aj.field_t[5].d(95, 3 + AgeValidator.field_s[g.field_s][4]);
-              aj.field_t[6].d(95, AgeValidator.field_s[g.field_s][5] + 6);
+              aj.field_t[3].draw(95, AgeValidator.field_s[g.field_s][3] + 3);
+              aj.field_t[11].draw(95, AgeValidator.field_s[g.field_s][4] + 12);
+              aj.field_t[5].draw(95, 3 + AgeValidator.field_s[g.field_s][4]);
+              aj.field_t[6].draw(95, AgeValidator.field_s[g.field_s][5] + 6);
               stackIn_41_0 = aj.field_t;
               if (var3Lifetime1 != 0) {
                 stackIn_42_1 = 8;
               } else {
                 stackIn_42_1 = 9;
               }
-              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).d(95, 6 + AgeValidator.field_s[g.field_s][6]);
+              ((RgbSprite) (Object) stackIn_41_0[stackIn_42_1]).draw(95, 6 + AgeValidator.field_s[g.field_s][6]);
             } else {
               if (g.field_s != 3) {
                 if (g.field_s != 4) {
@@ -1422,56 +1422,56 @@ final class t {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  aj.field_t[19].d(95, 3 + AgeValidator.field_s[g.field_s][1]);
-                  aj.field_t[20].d(111, 3 + AgeValidator.field_s[g.field_s][2]);
-                  aj.field_t[23].d(95, 3 + AgeValidator.field_s[g.field_s][2]);
-                  aj.field_t[21].d(95, AgeValidator.field_s[g.field_s][3] + 3);
+                  aj.field_t[19].draw(95, 3 + AgeValidator.field_s[g.field_s][1]);
+                  aj.field_t[20].draw(111, 3 + AgeValidator.field_s[g.field_s][2]);
+                  aj.field_t[23].draw(95, 3 + AgeValidator.field_s[g.field_s][2]);
+                  aj.field_t[21].draw(95, AgeValidator.field_s[g.field_s][3] + 3);
                   stackIn_31_0 = aj.field_t;
                   if (var3Lifetime1 == 0) {
                     stackIn_32_1 = 26;
                   } else {
                     stackIn_32_1 = 22;
                   }
-                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).d(95, 6 + AgeValidator.field_s[g.field_s][4]);
-                  aj.field_t[24].d(95, AgeValidator.field_s[g.field_s][5] + 3);
-                  aj.field_t[25].d(95, 3 + AgeValidator.field_s[g.field_s][6]);
+                  ((RgbSprite) (Object) stackIn_31_0[stackIn_32_1]).draw(95, 6 + AgeValidator.field_s[g.field_s][4]);
+                  aj.field_t[24].draw(95, AgeValidator.field_s[g.field_s][5] + 3);
+                  aj.field_t[25].draw(95, 3 + AgeValidator.field_s[g.field_s][6]);
                 }
               } else {
-                aj.field_t[10].d(95, AgeValidator.field_s[g.field_s][1] + 3);
+                aj.field_t[10].draw(95, AgeValidator.field_s[g.field_s][1] + 3);
                 stackIn_14_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_15_1 = 13;
                 } else {
                   stackIn_15_1 = 27;
                 }
-                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).d(95, -5 + AgeValidator.field_s[g.field_s][2]);
+                ((RgbSprite) (Object) stackIn_14_0[stackIn_15_1]).draw(95, -5 + AgeValidator.field_s[g.field_s][2]);
                 stackIn_17_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_18_1 = 14;
                 } else {
                   stackIn_18_1 = 28;
                 }
-                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).d(95, AgeValidator.field_s[g.field_s][3] + 3);
-                aj.field_t[30].d(95, AgeValidator.field_s[g.field_s][4] + 3);
+                ((RgbSprite) (Object) stackIn_17_0[stackIn_18_1]).draw(95, AgeValidator.field_s[g.field_s][3] + 3);
+                aj.field_t[30].draw(95, AgeValidator.field_s[g.field_s][4] + 3);
                 var5 = (int)((double)PacketBuffer.field_j / 2.0 % 16.0 * 2.0);
                 if (var5 > 16) {
                   var5 = -var5 + 32;
                 }
-                aj.field_t[15].d(95, AgeValidator.field_s[g.field_s][4] + (3 + var5));
+                aj.field_t[15].draw(95, AgeValidator.field_s[g.field_s][4] + (3 + var5));
                 stackIn_23_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_24_1 = 16;
                 } else {
                   stackIn_24_1 = 29;
                 }
-                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).d(95, 3 + AgeValidator.field_s[g.field_s][5]);
+                ((RgbSprite) (Object) stackIn_23_0[stackIn_24_1]).draw(95, 3 + AgeValidator.field_s[g.field_s][5]);
                 stackIn_26_0 = aj.field_t;
                 if (var3Lifetime1 != 0) {
                   stackIn_27_1 = 17;
                 } else {
                   stackIn_27_1 = 31;
                 }
-                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).d(95, 3 + AgeValidator.field_s[g.field_s][6]);
+                ((RgbSprite) (Object) stackIn_26_0[stackIn_27_1]).draw(95, 3 + AgeValidator.field_s[g.field_s][6]);
                 ql.a(var4, -121, AgeValidator.field_s[g.field_s][7] + 3, 95);
               }
             }

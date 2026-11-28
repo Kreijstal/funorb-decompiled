@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     static int field_H;
-    am field_N;
-    private eb field_K;
+    NameSuggestionsPanel field_N;
+    private InteractiveWidget field_K;
     static String field_L;
     static int field_I;
     static java.awt.Canvas field_G;
-    private eb field_O;
+    private InteractiveWidget field_O;
     private ValidatedTextField field_J;
     static long field_M;
     static String field_F;
@@ -22,7 +22,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         }
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -167,8 +167,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         this.field_J = new ValidatedTextField("", (sc) null, 12);
         fd var1 = new fd(ra.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(wj.field_f, var1, (sc) null);
-        this.field_K = new eb(BattleUnit.field_lb, (sc) null);
-        this.field_O = new eb(lf.field_d, (sc) null);
+        this.field_K = new InteractiveWidget(BattleUnit.field_lb, (sc) null);
+        this.field_O = new InteractiveWidget(lf.field_d, (sc) null);
         this.field_J.field_x = p.field_g;
         this.field_J.setFieldValidator(new AccountNameAvailabilityValidator(this.field_J), 5859);
         this.field_K.field_A = false;
@@ -188,7 +188,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         this.field_K.field_r = (sc) (this);
         this.b((byte) 95, this.field_K);
         this.b((byte) 95, this.field_O);
-        this.field_N = new am((rg) (this));
+        this.field_N = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_N.a(20, (byte) 68, -60 - this.field_J.width + (-this.field_J.x + this.width), 60 + (this.field_J.width + this.field_J.x), 150);
         this.b((byte) 95, this.field_N);
         this.a(0, (byte) 94, 496, 0, var3 - (-55 - var4));
@@ -256,7 +256,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         vf.a(this.field_J.text, param0 - 17);
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -307,8 +307,8 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements rg, n {
         }
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).g(-4328);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator(29730))).invalidateCheckedName(-4328);
         if (param0 != 50) {
           field_G = (java.awt.Canvas) null;
         }

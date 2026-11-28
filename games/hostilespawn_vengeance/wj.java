@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends ph {
+final class wj extends InteractiveWidget {
     static String field_K;
     private FieldValidator field_I;
     private int field_M;
@@ -58,14 +58,14 @@ final class wj extends ph {
           m.field_n != var8) {
           if (var8 == bi.field_d) {
             var12 = cf.field_u[2];
-            var12.c(var5 - (var12.field_z >> 1), -(var12.field_A >> 1) + var6, 256);
+            var12.drawAdditive(var5 - (var12.field_z >> 1), -(var12.field_A >> 1) + var6, 256);
             return;
           }
           if (var8 != nd.field_d) {
             return;
           }
           var13 = cf.field_u[1];
-          var13.c(-(var13.field_z >> 1) + var5, -(var13.field_A >> 1) + var6, 256);
+          var13.drawAdditive(-(var13.field_z >> 1) + var5, -(var13.field_A >> 1) + var6, 256);
           return;
         }
         var14 = cf.field_u[0];
@@ -80,9 +80,9 @@ final class wj extends ph {
           ng.field_s = new RgbSprite(var9, var10);
           sb.a(ng.field_s, -121);
         }
-        var14.b(112, 144, var14.field_u << 4, var14.field_r << 4, -this.field_M << 10, 4096);
+        var14.drawRotatedAboutBilinear(112, 144, var14.field_u << 4, var14.field_r << 4, -this.field_M << 10, 4096);
         eh.b(false);
-        ng.field_s.c(-var14.field_u + var5, var6 - var14.field_r, 256);
+        ng.field_s.drawAdditive(-var14.field_u + var5, var6 - var14.field_r, 256);
         return;
     }
 
@@ -281,27 +281,27 @@ final class wj extends ph {
           }
           var1_float = CrossfadingMidiPcmStream.field_v.j();
           if (var1_float != GameCanvas.field_a) {
-            CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.a((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.setStereoWidth(PcmOutputWorker.moveFloatTowardTarget((byte) -10, GameCanvas.field_a, var1_float, 0.07000000029802322f));
           }
           var1_floatLifetime1 = CrossfadingMidiPcmStream.field_v.h();
           if (var1_floatLifetime1 != qm.field_O) {
-            CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.a((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
+            CrossfadingMidiPcmStream.field_v.f(PcmOutputWorker.moveFloatTowardTarget((byte) -96, qm.field_O, var1_floatLifetime1, 0.07000000029802322f));
           }
           var1_floatLifetime2 = CrossfadingMidiPcmStream.field_v.f();
           if (var1_floatLifetime2 != ea.field_d) {
-            CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.a((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.b(PcmOutputWorker.moveFloatTowardTarget((byte) -73, ea.field_d, var1_floatLifetime2, 0.009999999776482582f));
           }
           var1_floatLifetime3 = CrossfadingMidiPcmStream.field_v.g();
           if (var1_floatLifetime3 != ag.field_w) {
-            CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.a((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
+            CrossfadingMidiPcmStream.field_v.e(PcmOutputWorker.moveFloatTowardTarget((byte) -46, ag.field_w, var1_floatLifetime3, 1.0f));
           }
           var1_floatLifetime4 = CrossfadingMidiPcmStream.field_v.k();
           if (an.field_n != var1_floatLifetime4) {
-            CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.a((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.setWetGain(PcmOutputWorker.moveFloatTowardTarget((byte) -112, an.field_n, var1_floatLifetime4, 0.009999999776482582f));
           }
           var1_floatLifetime5 = CrossfadingMidiPcmStream.field_v.e();
           if (var1_floatLifetime5 != vb.field_Jb) {
-            CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.a((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
+            CrossfadingMidiPcmStream.field_v.a(PcmOutputWorker.moveFloatTowardTarget((byte) -56, vb.field_Jb, var1_floatLifetime5, 0.009999999776482582f));
           }
           eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
           ik.field_b = false;
@@ -592,7 +592,7 @@ final class wj extends ph {
           stackIn_205_0Lifetime1 = ~jf.field_c;
           stackIn_205_1Lifetime1 = -1;
           if (stackIn_205_0Lifetime1 == stackIn_205_1Lifetime1 ||
-            !(mc.field_I < 4)) {
+            !(NameSuggestionsPanel.field_I < 4)) {
             if (MidiPcmStream.field_r > cf.field_s) {
               cf.field_s = cf.field_s + 1;
             }
@@ -615,21 +615,21 @@ final class wj extends ph {
               }
               if (pf.field_o == 1 &&
                 -1 != rl.field_c) {
-                mc.field_I = 1;
+                NameSuggestionsPanel.field_I = 1;
                 jf.field_c = 1;
               }
             }
           }
           if (jf.field_c != 0) {
             jf.field_c = jf.field_c + 1;
-            if (4 > mc.field_I) {
+            if (4 > NameSuggestionsPanel.field_I) {
               jf.field_c = jf.field_c + 6;
             }
             if (le.field_D == 1) {
               jf.field_c = jf.field_c + 6;
             }
             if (jf.field_c == 128) {
-              if (mc.field_I == 1) {
+              if (NameSuggestionsPanel.field_I == 1) {
                 if (hg.field_e < 0) {
                   hg.field_e = -1;
                 }
@@ -688,7 +688,7 @@ final class wj extends ph {
                   return;
                 }
               }
-              if (mc.field_I == 2) {
+              if (NameSuggestionsPanel.field_I == 2) {
                 cm.a(bm.field_c, 0, rl.field_c);
                 le.field_D = 0;
                 ta.a((byte) 127, rl.field_c + 1);
@@ -696,7 +696,7 @@ final class wj extends ph {
                 ClientLookupTables.field_h = new re(11);
                 return;
               }
-              if (mc.field_I == 3) {
+              if (NameSuggestionsPanel.field_I == 3) {
                 cm.a(bm.field_c, 0, 9);
                 u.field_f[26] = jf.field_e;
                 if (1 == bm.field_c &&
@@ -727,7 +727,7 @@ final class wj extends ph {
                 ClientLookupTables.field_h = new re(13);
                 return;
               }
-              if (mc.field_I >= 4) {
+              if (NameSuggestionsPanel.field_I >= 4) {
                 le.field_D = 0;
                 hg.field_e = 0;
                 if (jh.field_ab == 1) {

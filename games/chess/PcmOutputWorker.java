@@ -17,7 +17,7 @@ final class PcmOutputWorker implements Runnable {
         return ad.field_b;
     }
 
-    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
+    final static boolean areCommonUiAssetsReady(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

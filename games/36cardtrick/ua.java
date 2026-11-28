@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ua extends hl {
+final class ua extends InteractiveWidget {
     static long field_E;
     static IntrusiveDeque field_G;
     static java.awt.Image field_F;
@@ -21,9 +21,9 @@ final class ua extends hl {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void activateFromInput(int param0, boolean param1, int param2, int param3) {
         this.field_D = !this.field_D ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     private ua(String param0, ci param1, pl param2) {

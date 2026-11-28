@@ -286,12 +286,12 @@ class lk extends IntrusiveNode {
               if (0 == n.field_m &&
                 0 != d.field_B) {
                 this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
-                var8 = nd.field_A;
+                var8 = NameSuggestionsPanel.field_A;
                 if (var8 != null) {
                   if (var8.field_n instanceof df) {
                     ((df) (var8.field_n)).a(var8, (byte) 109, (se) null);
                   }
-                  nd.field_A = null;
+                  NameSuggestionsPanel.field_A = null;
                 }
               }
             }
@@ -320,12 +320,12 @@ class lk extends IntrusiveNode {
                 return param2;
               }
               this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
-              var9 = nd.field_A;
+              var9 = NameSuggestionsPanel.field_A;
               if (var9 != null) {
                 if (var9.field_n instanceof df) {
                   ((df) (var9.field_n)).a(var9, (byte) 109, (se) null);
                 }
-                nd.field_A = null;
+                NameSuggestionsPanel.field_A = null;
               }
               d.field_B = n.field_m;
               if (!param1) {
@@ -347,12 +347,12 @@ class lk extends IntrusiveNode {
                   if (0 == n.field_m &&
                     0 != d.field_B) {
                     this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
-                    var10 = nd.field_A;
+                    var10 = NameSuggestionsPanel.field_A;
                     if (var10 != null) {
                       if (var10.field_n instanceof df) {
                         ((df) (var10.field_n)).a(var10, (byte) 109, (se) null);
                       }
-                      nd.field_A = null;
+                      NameSuggestionsPanel.field_A = null;
                     }
                     d.field_B = n.field_m;
                     if (!param1) {
@@ -374,12 +374,12 @@ class lk extends IntrusiveNode {
           if (0 == n.field_m &&
             0 != d.field_B) {
             this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
-            var11 = nd.field_A;
+            var11 = NameSuggestionsPanel.field_A;
             if (var11 != null) {
               if (var11.field_n instanceof df) {
                 ((df) (var11.field_n)).a(var11, (byte) 109, (se) null);
               }
-              nd.field_A = null;
+              NameSuggestionsPanel.field_A = null;
             }
             d.field_B = n.field_m;
             if (!param1) {

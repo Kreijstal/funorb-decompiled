@@ -990,7 +990,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               MouseInputHandler.field_a = param3;
               mi.field_s = param3;
               aq.field_d = 0;
-              lg.field_B = ip.a(9);
+              InteractiveWidget.field_B = ip.a(9);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param6, true);
               ArchiveRequest.field_u = dupTemp$0;
               FullscreenFocusCanvas.field_f = dupTemp$0;

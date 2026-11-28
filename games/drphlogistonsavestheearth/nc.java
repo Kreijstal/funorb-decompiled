@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class nc extends hf {
+final class nc extends InteractiveWidget {
     static RgbSprite field_M;
     static boolean[][] field_J;
     static ac field_O;
@@ -21,9 +21,9 @@ final class nc extends hf {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_A = !this.field_A ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     private nc(String param0, fd param1) {

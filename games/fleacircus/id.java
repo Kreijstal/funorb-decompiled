@@ -49,7 +49,7 @@ final class id {
               hc.field_j = stackIn_13_0;
               rj.field_k = stackIn_13_0;
               vi.field_a = stackIn_13_0;
-              ob.a(cj.field_b, j.field_g, (byte) -127, bb.field_E, ud.field_b);
+              ob.a(cj.field_b, j.field_g, (byte) -127, InteractiveWidget.field_E, ud.field_b);
               dk.b((byte) 41, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

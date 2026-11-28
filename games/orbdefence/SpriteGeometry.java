@@ -41,7 +41,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRotatedAboutNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static boolean a(boolean param0, String param1) {
         int var3 = 0;
@@ -109,7 +109,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         int var7 = this.field_t << 3;
         param1 = (param1 << 4) + (var6 & 15);
         param2 = (param2 << 4) + (var7 & 15);
-        this.a(var6, var7, param1, param2, param3, param4);
+        this.drawRotatedAboutNearest(var6, var7, param1, param2, param3, param4);
     }
 
     final static boolean a(int param0, CharSequence param1) {
@@ -123,7 +123,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           if (param0 != 10) {
             SpriteGeometry.clearDeclaredStaticReferences(8);
           }
-          stackIn_3_0 = we.a(10, 87, param1, true);
+          stackIn_3_0 = NameSuggestionsPanel.a(10, 87, param1, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

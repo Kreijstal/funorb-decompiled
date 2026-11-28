@@ -152,7 +152,7 @@ final class ib implements ComponentLayout {
           if (var2 == 0) {
             if (null == kc.field_c) {
               kc.field_c = new qk(128);
-              ij.field_I = 0;
+              NameSuggestionsPanel.field_I = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte(false) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
@@ -175,8 +175,8 @@ final class ib implements ComponentLayout {
             if (var5_ref == null) {
               var5_ref = new gm();
               kc.field_c.a(var5_ref, -1, (long)var7_ref.hashCode());
-              fieldTemp$1 = ij.field_I;
-              ij.field_I = ij.field_I + 1;
+              fieldTemp$1 = NameSuggestionsPanel.field_I;
+              NameSuggestionsPanel.field_I = NameSuggestionsPanel.field_I + 1;
               var5_ref.field_mb = fieldTemp$1;
               cl.field_e.addLast(false, var5_ref);
             }

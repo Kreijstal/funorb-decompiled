@@ -142,9 +142,9 @@ final class tg implements ci {
             var9 = (PacketBuffer) null;
             tg.a(65, (PacketBuffer) null);
           }
-          if (param1 instanceof hl &&
-            ((hl) (param1)).field_D) {
-            var8.b(1 + (var6_int + (-var8.field_l + param1.field_h >> 1)), (-var8.field_k + param1.field_q >> 1) + 1 + var7, 256);
+          if (param1 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param1)).field_D) {
+            var8.drawAdditive(1 + (var6_int + (-var8.field_l + param1.field_h >> 1)), (-var8.field_k + param1.field_q >> 1) + 1 + var7, 256);
           }
           if (!param1.d(82)) {
             return;

@@ -109,13 +109,13 @@ final class wh {
         RuntimeException var2 = null;
         try {
           if (null != db.field_a) {
-            db.field_a.field_L.a(param1 ^ -84, args);
+            db.field_a.field_L.setNameSuggestions(param1 ^ -84, args);
           }
           if (param1 != 61) {
             field_a = (lb) null;
           }
           if (ti.field_e != null) {
-            ti.field_e.field_I.a(-102, args);
+            ti.field_e.field_I.setNameSuggestions(-102, args);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

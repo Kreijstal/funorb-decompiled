@@ -203,7 +203,7 @@ public final class Vertigo2 extends GameShell {
                     kj.field_C = true;
                     ProxyAuthenticationRequiredException.field_b = true;
                   } else {
-                    if (oj.field_P) {
+                    if (NameSuggestionsPanel.field_P) {
                       an.field_c = true;
                       sk.field_g = true;
                       lc.field_d = false;
@@ -217,7 +217,7 @@ public final class Vertigo2 extends GameShell {
                       fh.field_y[lc.field_b].a(-91, false, 0);
                       PacketBuffer.field_q = false;
                       LevelRenderer.field_b = false;
-                      oj.field_P = false;
+                      NameSuggestionsPanel.field_P = false;
                       vl.a(-115);
                       ki.a((byte) -72);
                       ua.a(-5141);
@@ -230,7 +230,7 @@ public final class Vertigo2 extends GameShell {
                 if (2 == var3Lifetime1) {
                   var4 = 1;
                 }
-                if (oj.field_P ||
+                if (NameSuggestionsPanel.field_P ||
                   ProxyAuthenticationRequiredException.field_b ||
                   kj.field_C) {
                   var4 = 1;
@@ -270,19 +270,19 @@ public final class Vertigo2 extends GameShell {
               so.a(un.b((byte) 114), 3, 150, 1024, re.c(-1087), rm.field_A, th.a(true), qp.roundUpPowerOfTwo(2000, 70), 113, qp.roundUpPowerOfTwo(8, 72));
               wn.a(-122, SecondaryNodeDequeIterator.a(true), pp.a(12));
               ProxyAuthenticationRequiredException.field_b = false;
-              oj.field_P = true;
+              NameSuggestionsPanel.field_P = true;
               LevelRenderer.field_n = -2;
               continue;
             }
             if (lc.field_f == 15) {
-              if (oj.field_P) {
+              if (NameSuggestionsPanel.field_P) {
                 g.b(7);
                 ki.a((byte) -128);
                 ua.a(-5141);
                 LevelRenderer.field_b = false;
                 PacketBuffer.field_q = false;
                 LevelRenderer.field_n = 0;
-                oj.field_P = false;
+                NameSuggestionsPanel.field_P = false;
                 lc.field_d = false;
                 sk.field_g = true;
                 an.field_c = true;
@@ -293,7 +293,7 @@ public final class Vertigo2 extends GameShell {
               continue;
             }
             if (lc.field_f == 10 &&
-              oj.field_P) {
+              NameSuggestionsPanel.field_P) {
               tq.a((byte) -66);
               continue;
             }
@@ -453,17 +453,17 @@ public final class Vertigo2 extends GameShell {
         Sprite var4 = new Sprite(nn.field_y.getFileByName("", "planet_1.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         Sprite var5 = new Sprite(nn.field_y.getFileByName("", "stars.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
         Sprite var6 = new Sprite(nn.field_y.getFileByName("", "asteroids.jpg", 0), (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
-        qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.c(), var6});
+        qr.field_l = new rp(true, new Sprite[]{var7, var3, var4, var5, var7.copy(), var6});
         ue.field_N = new Sprite(640, 480);
-        ue.field_N.d();
-        var8.c(0, 0);
+        ue.field_N.bindAsRenderTarget();
+        var8.drawOpaque(0, 0);
         if (param0 > -89) {
           return;
         }
         try {
-          var3.c(var8.field_y, 0);
-          var4.c(0, var8.field_t);
-          var5.c(var8.field_y, var8.field_t);
+          var3.drawOpaque(var8.field_y, 0);
+          var4.drawOpaque(0, var8.field_t);
+          var5.drawOpaque(var8.field_y, var8.field_t);
           ro.field_g.a(-128);
           nn.field_y = null;
           this.renderClientFrame(-17);
@@ -716,8 +716,8 @@ public final class Vertigo2 extends GameShell {
           ln.field_f = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_rend", "", (byte) 98));
           var3 = tk.field_c.field_z + tk.field_c.field_M;
           GzipDecompressor.field_c = new Sprite(var3, var3);
-          GzipDecompressor.field_c.d();
-          IsaacCipher.field_f.b(0, 0, var3, var3);
+          GzipDecompressor.field_c.bindAsRenderTarget();
+          IsaacCipher.field_f.drawDownscaledAreaAveraged(0, 0, var3, var3);
           IsaacCipher.field_f = null;
           ro.field_g.a(param0 + 77);
           for (var4_int = 0; var4_int < mb.field_q.length; var4_int++) {
@@ -732,7 +732,7 @@ public final class Vertigo2 extends GameShell {
           RandomAccessCacheFile.field_j = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_jetpack", "", (byte) 98));
           be.field_n = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_dynamite", "", (byte) 98));
           uo.field_e = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_bucket_6", "", (byte) 98));
-          oj.field_L = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "lobby_logo", "", (byte) 98));
+          NameSuggestionsPanel.field_L = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "lobby_logo", "", (byte) 98));
           BufferedRandomAccessFile.field_c = new ArgbSprite[5];
           LevelSimulation.field_y = new ArgbSprite[5];
           for (var4_intLifetime2 = 0; 5 > var4_intLifetime2; var4_intLifetime2++) {
@@ -762,7 +762,7 @@ public final class Vertigo2 extends GameShell {
           MouseWheelInput.field_c = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "timeattack_gold", "", (byte) 98));
           var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", MovingLevelTile.field_u, -79, ""), tn.a("versus_icon", MovingLevelTile.field_u, -108, "")}, gk.a(MovingLevelTile.field_u, "", "start_icon", true), gk.a(MovingLevelTile.field_u, "", "end_icon", true)};
           mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, BlastDebrisBatch.field_e, PlayerState.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
-          jl.field_g = (Sprite) ((Object) oj.field_L);
+          jl.field_g = (Sprite) ((Object) NameSuggestionsPanel.field_L);
           ll.a((byte) -111, 200);
           DirectByteStorage.field_g = true;
           gr.field_W = eg.field_s;
@@ -990,7 +990,7 @@ public final class Vertigo2 extends GameShell {
           ValidatedTextField.clearStaticReferences(-17131);
           sp.resetStaticState(-6);
           we.clearStaticReferences(false);
-          oj.clearStaticReferences((byte) -110);
+          NameSuggestionsPanel.clearStaticReferences((byte) -110);
           pn.a((byte) -53);
           lr.clearStaticReferences((byte) -45);
           qe.clearStaticReferences(111);
@@ -1286,7 +1286,7 @@ public final class Vertigo2 extends GameShell {
                 var5 = -(var6 / 2) + 123;
               }
             }
-            vj.field_b[var4.field_n].d(158, var5);
+            vj.field_b[var4.field_n].drawQuarterSizeAveraged(158, var5);
             va.field_s.a(16777215, (byte) 85, -1, 198, BlastDebrisModel.field_i[var4.field_n], var5 + va.field_s.field_j);
           }
           if (kg.h(param0 ^ -111)) {
@@ -1736,7 +1736,7 @@ public final class Vertigo2 extends GameShell {
             if (!param0) {
               if (LevelRenderer.field_n == lc.field_b) {
                 if (lc.field_b == -1) {
-                  if (!oj.field_P) {
+                  if (!NameSuggestionsPanel.field_P) {
                     ln.field_d.a(true, true);
                     var3_int = 1;
                     while (NodeHashTableIterator.a(false)) {
@@ -1762,7 +1762,7 @@ public final class Vertigo2 extends GameShell {
                 }
               }
             }
-            if (oj.field_P &&
+            if (NameSuggestionsPanel.field_P &&
               !ProxyAuthenticationRequiredException.field_b &&
               !kj.field_C) {
               if (LevelRenderer.field_b &&
@@ -1798,7 +1798,7 @@ public final class Vertigo2 extends GameShell {
                 ln.field_d.a((byte) 115);
               }
             }
-            if (!oj.field_P) {
+            if (!NameSuggestionsPanel.field_P) {
               wn.c(-2618);
             }
             if (eo.field_o) {

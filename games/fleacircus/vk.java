@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends bb {
+final class vk extends InteractiveWidget {
     static int field_L;
     static volatile int field_O;
     static String field_K;
@@ -44,9 +44,9 @@ final class vk extends bb {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_G = !this.field_G ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     static {

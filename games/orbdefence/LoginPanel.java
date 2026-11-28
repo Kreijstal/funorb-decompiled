@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ta implements TextFieldListener, ai {
+final class LoginPanel extends ta implements TextFieldListener, WidgetActivationListener {
     private String field_L;
     static int field_H;
     static int[] field_F;
     private EditableTextField field_N;
     static String[] field_B;
     private boolean field_M;
-    private s field_A;
+    private InteractiveWidget field_A;
     static String field_G;
     private boolean field_J;
     private EditableTextField field_C;
     private boolean field_D;
-    private s field_K;
-    private s field_I;
+    private InteractiveWidget field_K;
+    private InteractiveWidget field_I;
 
     final String a(byte param0) {
         if (this.field_N.field_l == null) {
@@ -81,7 +81,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
         this.field_N.clearText((byte) -128);
         this.field_C.clearText((byte) -128);
         if (param0 > -7) {
-          this.field_I = (s) null;
+          this.field_I = (InteractiveWidget) null;
         }
     }
 
@@ -152,7 +152,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
@@ -219,7 +219,7 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
     public final void onTextChanged(EditableTextField param0, int param1) {
         try {
           if (param1 <= 27) {
-            this.field_K = (s) null;
+            this.field_K = (InteractiveWidget) null;
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "pk.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -233,10 +233,10 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        s stackIn_17_1 = null;
-        s stackIn_17_2 = null;
-        s stackIn_18_1 = null;
-        s stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -266,11 +266,11 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
           this.field_N = (EditableTextField) ((Object) new ValidatedTextField(param0, (ag) (this), 100));
           this.field_C = (EditableTextField) ((Object) new ValidatedTextField("", (ag) (this), 20));
           if (this.field_M) {
-            this.field_I = new s(SpriteGeometry.field_l, (ag) null);
-            this.field_A = new s(ld.field_d, (ag) null);
+            this.field_I = new InteractiveWidget(SpriteGeometry.field_l, (ag) null);
+            this.field_A = new InteractiveWidget(ld.field_d, (ag) null);
             this.field_N.field_F = false;
           } else {
-            this.field_I = new s(q.field_a, (ag) null);
+            this.field_I = new InteractiveWidget(q.field_a, (ag) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_D) {
@@ -282,9 +282,9 @@ final class LoginPanel extends ta implements TextFieldListener, ai {
               stackIn_18_2 = null;
               stackIn_18_3 = vc.field_i;
             }
-            this.field_A = new s(stackIn_18_3, (ag) null);
+            this.field_A = new InteractiveWidget(stackIn_18_3, (ag) null);
             if (this.field_J) {
-              this.field_K = new s(ResourceArchive.field_h, (ag) (this));
+              this.field_K = new InteractiveWidget(ResourceArchive.field_h, (ag) (this));
             }
           }
           this.field_N.field_j = (td) ((Object) new fg(10000536));

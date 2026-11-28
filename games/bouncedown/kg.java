@@ -365,7 +365,7 @@ final class kg {
             if (2 == param1.field_p) {
               var8 = var8 + (param2.field_m - this.field_o.field_o);
             }
-            this.field_o.a(var7_int, var8);
+            this.field_o.draw(var7_int, var8);
           }
           var7 = param1.a(true, param2);
           if (var7 != null &&

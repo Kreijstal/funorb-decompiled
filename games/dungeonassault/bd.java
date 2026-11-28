@@ -34,7 +34,7 @@ final class bd extends en {
         int var12Lifetime1;
         var15 = DungeonAssault.field_K;
         jh.c();
-        var3 = ck.field_H.a(this.field_h.field_t, (byte) -48);
+        var3 = InteractiveWidget.field_H.a(this.field_h.field_t, (byte) -48);
         var4 = jn.a(var3, new int[]{param1}, -98, la.field_b);
         var5 = var4.length;
         var6 = (var5 + 2) * la.field_b.field_H + la.field_b.field_E;
@@ -67,7 +67,7 @@ final class bd extends en {
           var6 = var6 + 2 * db.field_v.field_H;
         }
         var10 = new RgbSprite(param1, var6);
-        var10.e();
+        var10.bindAsRenderTarget();
         db.field_v.drawCentred(this.field_h.field_z.toUpperCase(), param1 >> 1, var7, 16777215, -1);
         var7 = var7 + la.field_b.field_H * 2;
         if (!param0) {
@@ -103,8 +103,8 @@ final class bd extends en {
           while (var17 < var20.length) {
             var21 = var20[var17];
             var14 = db.field_v.stringWidth(var21.field_b) + 24;
-            var21.field_c.c(-var14 + param1 >> 1, -(-var21.field_c.field_v + la.field_b.field_H * 3 >> 1) + var7, var21.field_a);
-            db.field_v.drawString(ck.field_H.a(var21.field_b, (byte) -48), 24 + (-var14 + param1 >> 1), var7, var21.field_a, -1);
+            var21.field_c.drawGrayModulated(-var14 + param1 >> 1, -(-var21.field_c.field_v + la.field_b.field_H * 3 >> 1) + var7, var21.field_a);
+            db.field_v.drawString(InteractiveWidget.field_H.a(var21.field_b, (byte) -48), 24 + (-var14 + param1 >> 1), var7, var21.field_a, -1);
             var7 = var7 + la.field_b.field_H;
             var17++;
           }
@@ -148,7 +148,7 @@ final class bd extends en {
         var3 = null;
         if (var2 != null) {
           var4_ref_String = jk.a(new String[]{this.field_h.field_z.toUpperCase()}, "<col=178B8B><%0></col>", 30496);
-          var11 = ck.field_H.a(jk.a(new String[]{var4_ref_String}, var2, 30496), (byte) -48);
+          var11 = InteractiveWidget.field_H.a(jk.a(new String[]{var4_ref_String}, var2, 30496), (byte) -48);
           var2 = var11;
           var3 = jn.a(var11, new int[]{200}, -122, db.field_v);
         }
@@ -160,7 +160,7 @@ final class bd extends en {
         }
         var4 = stackIn_8_0 * stackIn_9_1 + db.field_v.field_E;
         var5 = new RgbSprite(200, var4);
-        var5.e();
+        var5.bindAsRenderTarget();
         var6 = db.field_v.field_H;
         db.field_v.drawCentred(this.field_h.field_z, 100, var6, 16777215, -1);
         var6 = var6 + db.field_v.field_H;

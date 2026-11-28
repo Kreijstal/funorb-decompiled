@@ -81,7 +81,7 @@ final class si extends ic {
                     var1_intLifetime1 = -var7 + (var13 - var6) - ba.field_b[var15].fullWidth * 2;
                     var3Lifetime1 = -(ba.field_b[var15].fullHeight * 2) + (-var8 + var14 - var9);
                     ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
-                    ji.field_p[var15].d();
+                    ji.field_p[var15].bindAsRenderTarget();
                     var3Lifetime1 = ba.field_b[var15].fullHeight;
                     var1_intLifetime1 = ba.field_b[var15].fullWidth;
                     var10 = -var6 - var1_intLifetime1;
@@ -94,7 +94,7 @@ final class si extends ic {
                   var13 = var12.fullWidth;
                   var3Lifetime1 = -var9 + (var14 - var8 - 2 * ba.field_b[var15].fullHeight);
                   ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
-                  ji.field_p[var15].d();
+                  ji.field_p[var15].bindAsRenderTarget();
                   var3Lifetime1 = ba.field_b[var15].fullHeight;
                   if (3 == var15) {
                     var10 = -var6;
@@ -110,7 +110,7 @@ final class si extends ic {
                 var3Lifetime1 = ba.field_b[var15].fullHeight;
                 var1_intLifetime1 = -(ba.field_b[var15].fullWidth * 2) + (-var7 - var6) + var13;
                 ji.field_p[var15] = new Sprite(var1_intLifetime1, var3Lifetime1);
-                ji.field_p[var15].d();
+                ji.field_p[var15].bindAsRenderTarget();
                 var1_intLifetime1 = ba.field_b[var15].fullWidth;
                 var10 = -var6 - var1_intLifetime1;
                 if (1 == var15) {
@@ -138,7 +138,7 @@ final class si extends ic {
               } else {
                 var10 = -var6;
               }
-              ji.field_p[var15].d();
+              ji.field_p[var15].bindAsRenderTarget();
               var12.drawTransparent(var10, var11);
             }
           }
@@ -267,7 +267,7 @@ final class si extends ic {
           var7 = 64;
           for (var9 = 0; 2 > var9; var9++) {
             for (var10 = 0; var10 <= 1; var10++) {
-              sf.field_d[var9][param2][var10].d();
+              sf.field_d[var9][param2][var10].bindAsRenderTarget();
               SoftwareRasterizer.saveClip(ae.field_y);
               var6_int = param3[param2][var10][1] - param3[param2][var10][0];
               if (var6_int > 0) {

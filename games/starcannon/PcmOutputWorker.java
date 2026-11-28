@@ -126,7 +126,7 @@ final class PcmOutputWorker implements Runnable {
         return ie.field_D;
     }
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           PcmOutputWorker.b((byte) 79);
         }

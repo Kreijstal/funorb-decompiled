@@ -18,7 +18,7 @@ final class hc {
         LevelProgressUpdate.field_h = sm.field_e;
         b.field_a = sb.field_F;
         fp.field_a = fl.field_g;
-        je.field_j = nh.field_F;
+        je.field_j = NameSuggestionsPanel.field_F;
         ll.a(-94, param0, false);
         ue.field_c = param1 ? true : false;
     }

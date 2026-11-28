@@ -38,7 +38,7 @@ final class od {
           }
           if (param0.field_f != 0 ||
             param0.field_j != 0) {
-            for (var2_int = 0; var2_int < am.field_J; var2_int++) {
+            for (var2_int = 0; var2_int < NameSuggestionsPanel.field_J; var2_int++) {
               var3 = ra.field_i[var2_int];
               if (var3.field_l == 2 &&
                 var3.field_f == param0.field_f &&

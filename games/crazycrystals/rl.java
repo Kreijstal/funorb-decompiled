@@ -98,7 +98,7 @@ abstract class rl extends oh {
 
     final static void a(byte param0, int param1, int param2) {
         int var3 = 0;
-        pc.field_y = 0;
+        InteractiveWidget.field_y = 0;
         lo.field_b = null;
         rc.field_a = ol.field_z[param1];
         CrystalTile.field_o = param1;

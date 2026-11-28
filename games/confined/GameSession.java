@@ -307,7 +307,7 @@ final class GameSession {
             var13 = -190 + var11;
             var12 = var12 - 240 * var13 * var13 / 1600;
           }
-          db.field_w[var10Lifetime1].c(var12 + 4, 340, 32, 32);
+          db.field_w[var10Lifetime1].drawDownscaledAreaBlended(var12 + 4, 340, 32, 32);
           pn.field_a.drawString(he.field_b[var10Lifetime1], 32 + (4 + (var12 + 4)), 362, 16777215, -1);
         }
     }
@@ -448,7 +448,7 @@ final class GameSession {
             PolygonScanlineRasterizer.addPolygonEdges(var41, var34Lifetime1 + var35 * var34Lifetime1, var34Lifetime1);
           }
           var36 = (-this.field_L + 100) * uc.field_db.length / 100;
-          uc.field_db[var36].b(var24 - var26, -var26 + var25, 2 * var26, 2 * var26, (1 + var35) * var27 / 8);
+          uc.field_db[var36].drawScaledAdditiveWithinScanlineMask(var24 - var26, -var26 + var25, 2 * var26, 2 * var26, (1 + var35) * var27 / 8);
         }
     }
 

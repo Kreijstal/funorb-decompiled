@@ -38,7 +38,7 @@ final class MixedSupport052 {
           rgbSpriteLocal10 = rgbSpriteLocal9;
           rgbSpriteLocal12 = rgbSpriteLocal9;
           if (rgbSpriteLocal9 != null) {
-            rgbSpriteLocal9.performAction0278(245, 199);
+            rgbSpriteLocal9.draw(245, 199);
           } else {
             if (null != MixedSupport013.bitmapFontState0007) {
               MixedSupport013.bitmapFontState0007.drawParagraph(SoftwareFramebuffer.stringState0616, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

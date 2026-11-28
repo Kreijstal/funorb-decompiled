@@ -9,7 +9,7 @@ final class PcmOutputWorker implements Runnable {
     PlatformTaskDispatcher field_c;
     volatile AudioOutput[] field_d;
 
-    final static String[] a(byte param0, char param1, String param2) {
+    final static String[] splitStringOnCharacter(byte param0, char param1, String param2) {
         int var7 = 0;
         int incrementValue$1 = 0;
         int var3_int = 0;

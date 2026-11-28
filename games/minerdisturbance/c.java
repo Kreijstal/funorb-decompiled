@@ -23,7 +23,7 @@ final class c {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         if (kj.a(false)) {
-          if (!hc.field_D &&
+          if (!InteractiveWidget.field_D &&
             null != r.field_d &&
             r.field_d.field_o) {
             i.field_c = r.field_d.field_p;
@@ -31,7 +31,7 @@ final class c {
             MidiPcmStream.field_x = new int[i.field_c.length];
             sj.field_d = i.a(-111, i.field_c, sj.field_d);
             MidiPcmStream.field_x = BufferedRandomAccessFile.a(8, MidiPcmStream.field_x, i.field_c);
-            hc.field_D = true;
+            InteractiveWidget.field_D = true;
             AccountServiceResult.b(4);
           }
           if (param0 > -94) {
@@ -132,7 +132,7 @@ final class c {
         if (null == r.field_d) {
           r.field_d = gk.b(4, 1);
         }
-        if (hc.field_D) {
+        if (InteractiveWidget.field_D) {
           if (param0 > -94) {
             field_c = (int[]) null;
             if (null != ce.field_a.beginForward(108)) {
@@ -236,7 +236,7 @@ final class c {
           MidiPcmStream.field_x = new int[i.field_c.length];
           sj.field_d = i.a(-111, i.field_c, sj.field_d);
           MidiPcmStream.field_x = BufferedRandomAccessFile.a(8, MidiPcmStream.field_x, i.field_c);
-          hc.field_D = true;
+          InteractiveWidget.field_D = true;
           AccountServiceResult.b(4);
         }
         if (param0 > -94) {

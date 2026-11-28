@@ -46,7 +46,7 @@ final class lj implements cl {
             var5 = var3 % 7;
             var6 = -224 - (-((var5 + var4) * 32) - this.field_q);
             var7 = -24 + (24 * (var4 - var5) + (168 + this.field_l));
-            this.field_b.b(var6, var7, var2_int);
+            this.field_b.drawAdditive(var6, var7, var2_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,10 +281,10 @@ final class lj implements cl {
             if (param2 % 30 >= 15) {
               PacketBuffer.a(this.field_l, this.field_q - 224, (byte) -72, this.field_f, 16711680, 256);
               if (DungeonAssault.field_K != 0) {
-                this.field_f.b(-224 + this.field_q, this.field_l, 256);
+                this.field_f.drawAdditive(-224 + this.field_q, this.field_l, 256);
               }
             } else {
-              this.field_f.b(-224 + this.field_q, this.field_l, 256);
+              this.field_f.drawAdditive(-224 + this.field_q, this.field_l, 256);
             }
           }
           if (param1 != -1723) {
@@ -364,23 +364,23 @@ final class lj implements cl {
             var8 = var7.field_E * param2 >> 8;
             var9 = param2 * var7.field_G >> 8;
             if (param4 == 256) {
-              var7.c(-(var8 >> 1) + param0, param5 - var9, var8, var9);
+              var7.drawScaled(-(var8 >> 1) + param0, param5 - var9, var8, var9);
             }
             if (param4 != 256 ||
               var10 != 0) {
-              var7.d(param0 - (var8 >> 1), -var9 + param5, var8, var9, param4);
+              var7.drawScaledAlpha(param0 - (var8 >> 1), -var9 + param5, var8, var9, param4);
             }
             if (var10 == 0) {
               return;
             }
           }
           if (param4 != 256) {
-            var7.d(-(var7.field_E >> 1) + param0, param5 - var7.field_G, param4);
+            var7.drawWithOpacity(-(var7.field_E >> 1) + param0, param5 - var7.field_G, param4);
             if (var10 == 0) {
               return;
             }
           }
-          var7.h(param0 - (var7.field_E >> 1), -var7.field_G + param5);
+          var7.draw(param0 - (var7.field_E >> 1), -var7.field_G + param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -401,7 +401,7 @@ final class lj implements cl {
             param1 != 24) {
             var6_int = 0;
           }
-          i.field_r[var6_int].e(param4, param0 + 1, param3);
+          i.field_r[var6_int].drawSilhouette(param4, param0 + 1, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -442,7 +442,7 @@ final class lj implements cl {
             this.field_f.field_w = -16;
             this.field_f.field_A = -16;
           }
-          this.field_c.e();
+          this.field_c.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var2_int = 0;
           while (true) {
@@ -465,11 +465,11 @@ final class lj implements cl {
                   }
                   if (0 != var5 &&
                     6 != var5) {
-                    ri.field_d[5].e(var3, var4, var7);
+                    ri.field_d[5].drawSilhouette(var3, var4, var7);
                   }
                   if (6 != var5 &&
                     var5 != 48) {
-                    ri.field_d[4].e(32 + var3, var4, var7);
+                    ri.field_d[4].drawSilhouette(32 + var3, var4, var7);
                   }
                   this.b(var4, var5, -75, var7, var3);
                   var5 += 8;
@@ -501,18 +501,18 @@ final class lj implements cl {
                       this.field_h.field_j.isBitSet(var5Lifetime1, (byte) 74)) {
                       var7Lifetime1 = 0;
                     }
-                    ri.field_d[5].e(var3Lifetime1, var4Lifetime1, var7Lifetime1);
-                    ri.field_d[4].e(var3Lifetime1 + 32, var4Lifetime1, var7Lifetime1);
+                    ri.field_d[5].drawSilhouette(var3Lifetime1, var4Lifetime1, var7Lifetime1);
+                    ri.field_d[4].drawSilhouette(var3Lifetime1 + 32, var4Lifetime1, var7Lifetime1);
                     this.b(var4Lifetime1, var5Lifetime1, 115, var7Lifetime1, var3Lifetime1);
                     if (var6Lifetime1 == 0 &&
                       var5Lifetime1 != 0 &&
                       var5Lifetime1 != 42) {
-                      ri.field_d[5].e(var3Lifetime1 + 32, 24 + var4Lifetime1, 0);
+                      ri.field_d[5].drawSilhouette(var3Lifetime1 + 32, 24 + var4Lifetime1, 0);
                     }
                     if (var6Lifetime1 == 12 - var2_int &&
                       42 != var5Lifetime1 &&
                       48 != var5Lifetime1) {
-                      ri.field_d[4].e(var3Lifetime1, var4Lifetime1 + 24, 0);
+                      ri.field_d[4].drawSilhouette(var3Lifetime1, var4Lifetime1 + 24, 0);
                     }
                     var5Lifetime1 += 8;
                     var6Lifetime1++;
@@ -527,11 +527,11 @@ final class lj implements cl {
               if (stackIn_69_0 != -20827) {
                 this.field_w = (int[][]) null;
               }
-              this.field_f.e();
+              this.field_f.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
-              this.field_c.e(16, 16, 16744448);
+              this.field_c.drawSilhouette(16, 16, 16744448);
               SoftwareRasterizer.blurRectangle(8, 8, 0, 0, this.field_f.field_y, this.field_f.field_v);
-              this.field_c.e(16, 16, 0);
+              this.field_c.drawSilhouette(16, 16, 0);
               jh.b();
               return;
             }
@@ -801,18 +801,18 @@ final class lj implements cl {
             this.field_b.field_w = -16;
             this.field_b.field_A = -16;
           }
-          this.field_d.e();
+          this.field_d.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           var4_int = 0;
           var5 = 0;
-          ri.field_d[5].e(var4_int, var5, 16777215);
-          ri.field_d[4].e(var4_int + 32, var5, 16777215);
+          ri.field_d[5].drawSilhouette(var4_int, var5, 16777215);
+          ri.field_d[4].drawSilhouette(var4_int + 32, var5, 16777215);
           this.b(var5, param2, -127, 16777215, var4_int);
-          this.field_b.e();
+          this.field_b.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          this.field_d.e(16, 16, param1);
+          this.field_d.drawSilhouette(16, 16, param1);
           SoftwareRasterizer.blurRectangle(16, 16, 0, 0, this.field_b.field_y, this.field_b.field_v);
-          this.field_d.e(16, 16, 0);
+          this.field_d.drawSilhouette(16, 16, 0);
           jh.b();
           this.field_t = 80;
           if (param0 != -9398) {
@@ -974,12 +974,12 @@ final class lj implements cl {
           boolean decompiledFrameRemainder0 = true;
           if (var6 == 0) {
             if (var5_int != 0) {
-              i.field_r[var5_int].h(param0, param1 + 1);
+              i.field_r[var5_int].draw(param0, param1 + 1);
               decompiledFrameRemainder0 = (var10 != 0);
             }
             if (decompiledFrameRemainder0) {
               var7_intLifetime1 = this.field_h.getTilePassageFlags(param2, 30813);
-              mc.field_w[var7_intLifetime1].h(param0, 1 + param1);
+              mc.field_w[var7_intLifetime1].draw(param0, 1 + param1);
             }
           }
           if ((decompiledFrameRemainder0) &&
@@ -1000,13 +1000,13 @@ final class lj implements cl {
                     if (null != var7_ref) {
                       var8 = var7_ref.field_E * 5 >> 3;
                       var9_int = var7_ref.field_G * 5 >> 3;
-                      var7_ref.c(param0 + (-var8 + 48 >> 1), 40 + (param1 - var9_int), var8, var9_int);
+                      var7_ref.drawScaled(param0 + (-var8 + 48 >> 1), 40 + (param1 - var9_int), var8, var9_int);
                       if (var10 != 0) {
-                        var7_ref.h(-(var7_ref.field_y >> 1) + (param0 + 32), -var7_ref.field_v + (24 + (21 + param1)));
+                        var7_ref.draw(-(var7_ref.field_y >> 1) + (param0 + 32), -var7_ref.field_v + (24 + (21 + param1)));
                       }
                     }
                   } else {
-                    var7_ref.h(-(var7_ref.field_y >> 1) + (param0 + 32), -var7_ref.field_v + (24 + (21 + param1)));
+                    var7_ref.draw(-(var7_ref.field_y >> 1) + (param0 + 32), -var7_ref.field_v + (24 + (21 + param1)));
                   }
                 }
               }
@@ -1020,7 +1020,7 @@ final class lj implements cl {
                   var8Lifetime1 = 0;
                   while (var8Lifetime1 < var7_array.length) {
                     var9_intLifetime1 = var7_array[var8Lifetime1];
-                    sn.field_c[var9_intLifetime1].h(param0, param1);
+                    sn.field_c[var9_intLifetime1].draw(param0, param1);
                     var8Lifetime1++;
                     if (var10 != 0) {
                       decompiledFrameCompleted1 = false;
@@ -1085,7 +1085,7 @@ final class lj implements cl {
               gh.field_i[var5_int].field_g != 2) {
               var7_refLifetime1 = fm.b(-29092, this.field_h.field_u.field_c);
               if (null != var7_refLifetime1) {
-                var7_refLifetime1.d((64 - var7_refLifetime1.field_y >> 1) + param0, -var7_refLifetime1.field_v + param1 + 45, 80);
+                var7_refLifetime1.drawWithOpacity((64 - var7_refLifetime1.field_y >> 1) + param0, -var7_refLifetime1.field_v + param1 + 45, 80);
               }
               this.a((byte) -107, param0, 80, param1);
             }
@@ -1213,7 +1213,7 @@ final class lj implements cl {
         int var12Lifetime1Lifetime1;
         var13 = DungeonAssault.field_K;
         try {
-          nb.field_d.h(13 + (-320 + (this.field_q + 79)), this.field_l + 13);
+          nb.field_d.draw(13 + (-320 + (this.field_q + 79)), this.field_l + 13);
           var2_int = 0;
           do {
             if (168 < var2_int) {

@@ -3,15 +3,15 @@
  */
 import java.io.*;
 
-final class DisplayNameSelectionPanel extends og implements fd, vd {
-    private pc field_C;
+final class DisplayNameSelectionPanel extends og implements NameSuggestionListener, WidgetActivationListener {
+    private InteractiveWidget field_C;
     static RgbSprite field_H;
     static int[] field_E;
-    private pc field_B;
+    private InteractiveWidget field_B;
     static int field_F;
     static String field_z;
     private ValidatedTextField field_G;
-    nh field_A;
+    NameSuggestionsPanel field_A;
     static int field_D;
 
     private final void submitDisplayName(int param0) {
@@ -29,8 +29,8 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         this.field_G = new ValidatedTextField("", (bi) null, 12);
         lb var1 = new lb(ba.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
         qm var2 = new qm(gg.field_a, var1, (bi) null);
-        this.field_B = new pc(hb.field_i, (bi) null);
-        this.field_C = new pc(GameAppletShell.field_k, (bi) null);
+        this.field_B = new InteractiveWidget(hb.field_i, (bi) null);
+        this.field_C = new InteractiveWidget(GameAppletShell.field_k, (bi) null);
         this.field_G.field_t = ac.field_k;
         this.field_G.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_G));
         this.field_B.field_x = false;
@@ -50,7 +50,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         this.field_B.field_l = (bi) (this);
         this.b(this.field_B, -126);
         this.b(this.field_C, 4);
-        this.field_A = new nh((fd) (this));
+        this.field_A = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_A.a(150, this.field_G.field_r + this.field_G.field_g + 60, 20, this.field_g - this.field_G.field_r + (-this.field_G.field_g - 60), (byte) -52);
         this.b(this.field_A, -123);
         this.a(var4 + (55 + var3), 0, 0, 496, (byte) -52);
@@ -213,7 +213,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, pc param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -382,7 +382,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         try {
           if (param5 <= 104) {
             var8 = (String) null;
-            this.a((String) null, 110);
+            this.onNameSuggestionSelected((String) null, 110);
           }
           stackIn_3_0 = this.a(param2, param4, param1, 90, param0, param3, 35);
           return stackIn_3_0;
@@ -422,7 +422,7 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -437,11 +437,11 @@ final class DisplayNameSelectionPanel extends og implements fd, vd {
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         if (param0 != 20) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(param0 ^ -35))).d(-31626);
+        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(param0 ^ -35))).invalidateCheckedName(-31626);
     }
 
     static {

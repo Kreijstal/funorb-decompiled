@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends nb implements ue, jk, ag {
+final class AccountRegistrationPanel extends nb implements ue, WidgetActivationListener, NameSuggestionListener {
     private te field_J;
     private ValidatedTextField field_E;
     private ValidatedTextField field_D;
-    bb field_C;
+    NameSuggestionsPanel field_C;
     private ValidatedTextField field_O;
-    private kf field_I;
-    private kf field_P;
+    private InteractiveWidget field_I;
+    private InteractiveWidget field_P;
     private bc field_F;
     private ValidatedTextField field_M;
     static String field_L;
@@ -18,14 +18,14 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
     static int[] field_N;
     private ValidatedTextField field_G;
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         if (param0 != -12) {
           return;
         }
-        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator((byte) 3))).e(116);
+        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator((byte) 3))).invalidateCheckedName(116);
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         String var4 = null;
         ValidatedTextField var3 = this.field_E;
         if (param1 <= 103) {
@@ -94,8 +94,8 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         this.field_M = new ValidatedTextField("", (vd) null, 3);
         int var1 = 1;
         this.field_J = new te("", (vd) null, var1 != 0);
-        this.field_I = new kf(bb.field_K, (vd) null);
-        this.field_P = new kf(ch.field_g, (vd) null);
+        this.field_I = new InteractiveWidget(NameSuggestionsPanel.field_K, (vd) null);
+        this.field_P = new InteractiveWidget(ch.field_g, (vd) null);
         this.field_E.field_q = ValidatedTextField.field_Q;
         this.field_G.field_q = field_L;
         this.field_K.field_q = mk.field_l;
@@ -149,7 +149,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         this.field_I.field_r = (vd) (this);
         this.b((byte) 118, this.field_I);
         this.b((byte) 100, this.field_P);
-        this.field_C = new bb((ag) (this));
+        this.field_C = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_C.a(150, -this.field_E.field_j + (-this.field_E.field_t + this.field_j) - 60, true, 20 + this.field_E.field_o, this.field_E.field_t - (-this.field_E.field_j - 60));
         this.b((byte) 68, this.field_C);
         this.a(var6 + (55 + var3), 496, true, 0, 0);
@@ -192,7 +192,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
@@ -238,7 +238,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
     private final int a(int param0, int param1, String param2, w param3, int param4) {
         jf var6 = null;
         RuntimeException var6_ref = null;
-        kf var7 = null;
+        InteractiveWidget var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -250,8 +250,8 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
           var6 = new jf(20, param4, 120 + param1, 25, param3, false, 120, 3, ql.field_Q, 16777215, param2);
           this.b((byte) 75, var6);
           if (param0 != 170) {
-            var7 = (kf) null;
-            this.a(102, -98, 84, -63, (kf) null);
+            var7 = (InteractiveWidget) null;
+            this.onWidgetActivated(102, -98, 84, -63, (InteractiveWidget) null);
           }
           stackIn_3_0 = var6.field_v;
           return stackIn_3_0;
@@ -291,7 +291,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = jd.a(PcmOutputWorker.a((byte) -58, param0), 37);
+          var2 = jd.a(PcmOutputWorker.encodeNameBase37((byte) -58, param0), 37);
           if (var2 == null) {
             var2 = "";
           }
@@ -610,7 +610,7 @@ final class AccountRegistrationPanel extends nb implements ue, jk, ag {
         int var2 = -1;
         try {
           if (!param0) {
-            this.field_I = (kf) null;
+            this.field_I = (InteractiveWidget) null;
           }
           var2 = Integer.parseInt(this.field_M.field_u);
         } catch (NumberFormatException numberFormatException) {

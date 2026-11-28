@@ -36,18 +36,18 @@ final class w extends hd {
         int var7 = 0;
         il var8 = null;
         il var10 = null;
-        dk var11 = null;
+        InteractiveWidget var11 = null;
         il var12 = null;
         il var13 = null;
         il var14 = null;
         il var15 = null;
         try {
-          if (!(param4 instanceof dk)) {
+          if (!(param4 instanceof InteractiveWidget)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiWidget) (param4);
           }
-          var11 = (dk) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           cl.a(true, param4.field_f + param4.field_j + param3, param0 + param4.field_s, param3 + param4.field_j, param4.field_i + (param4.field_s + param0));
           if (var11 != null) {
             param1 = param1 & var11.field_u;
@@ -203,7 +203,7 @@ final class w extends hd {
             if (var1 == 1) {
               sg.field_n = of.field_j;
             } else {
-              sg.field_n = fb.a(dk.field_x, 127, new String[]{Integer.toString(var1)});
+              sg.field_n = fb.a(InteractiveWidget.field_x, 127, new String[]{Integer.toString(var1)});
             }
             sg.field_n = LoginPanel.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedSocket.field_f)});
           }

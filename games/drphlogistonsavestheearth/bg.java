@@ -93,14 +93,14 @@ final class bg extends IntrusiveNode {
             var3 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(ha.field_d);
             var11 = new RgbSprite(sc.field_c.field_y + 4, 4 + sc.field_c.field_w);
-            var11.c();
-            sc.field_c.d(2, 2, rh.field_e);
+            var11.bindAsRenderTarget();
+            sc.field_c.drawGrayModulated(2, 2, rh.field_e);
             p.a(var11.field_y, 2, 0, var11.field_w, 1, 0, 0, var11);
             sc.field_c = var11;
-            ArchiveRequest.field_x = sc.field_c.e();
+            ArchiveRequest.field_x = sc.field_c.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
-            var12.c();
+            var12.bindAsRenderTarget();
             md.field_a.drawCentred(a.a(5044, ja.field_g, new String[]{DebouncedFieldValidator.field_f}), var6, 40, 16777215, -1);
             sc.field_f.drawCentred(a.a(5044, ek.field_p, new String[]{DebouncedFieldValidator.field_f}), var6, 60, 16777215, -1);
             md.field_a.drawCentred(a.a(param0 ^ -14537, gk.field_a, new String[]{fl.field_d}), var6, 110, 16777215, -1);
@@ -108,16 +108,16 @@ final class bg extends IntrusiveNode {
             md.field_a.drawCentred(lc.field_k, var6, 180, 16777215, -1);
             sc.field_f.drawCentred(nb.field_c, var6, 200, 16777215, -1);
             p.a(var12.field_y, 3, 0, var12.field_w, 1, 0, 0, var12);
-            t.field_d.c();
-            var12.d(18 - t.field_d.field_D, -t.field_d.field_v + 241);
+            t.field_d.bindAsRenderTarget();
+            var12.draw(18 - t.field_d.field_D, -t.field_d.field_v + 241);
             for (var7 = 0; var7 < bc.field_b.length; var7++) {
-              ByteStorage.field_c[var7].c();
+              ByteStorage.field_c[var7].bindAsRenderTarget();
               sc.field_f.drawParagraph(bc.field_b[var7], 3, 3, -6 + ByteStorage.field_c[var7].field_y, ByteStorage.field_c[var7].field_w - 6, rh.field_e, -1, 1, 1, sc.field_f.field_x + sc.field_f.field_S);
               p.a(ByteStorage.field_c[var7].field_y, 3, 0, ByteStorage.field_c[var7].field_w, 1, 0, 0, ByteStorage.field_c[var7]);
             }
             bc.field_b = null;
-            ul.field_c = eg.field_d.a();
-            ul.field_c.c();
+            ul.field_c = eg.field_d.copy();
+            ul.field_c.bindAsRenderTarget();
             fk.a(2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_k, 0, 64, (byte) 104, 0);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ha.field_d);
@@ -127,10 +127,10 @@ final class bg extends IntrusiveNode {
             AccountRegistrationPanel.field_N = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
             tb.field_c = 390 + (r.field_b.field_w - DualLinkNode.field_r.field_w) / 2;
           }
-          if (null == hf.field_D) {
+          if (null == InteractiveWidget.field_D) {
             return;
           }
-          if (hf.field_z != null &&
+          if (InteractiveWidget.field_z != null &&
             md.field_a != null) {
             var29 = SoftwareRasterizer.field_l;
             var2Lifetime1 = SoftwareRasterizer.field_k;
@@ -147,18 +147,18 @@ final class bg extends IntrusiveNode {
               var9_int = -var7Lifetime1;
               var5 = var5 + 2 * var9_int;
               var7Lifetime1 = var7Lifetime1 + var9_int;
-              hf.field_z.field_z = hf.field_z.field_z + var9_int * 2;
+              InteractiveWidget.field_z.field_z = InteractiveWidget.field_z.field_z + var9_int * 2;
               KeyboardInput.field_a = KeyboardInput.field_a + var9_int;
               hd.field_B = hd.field_B - var9_int;
-              hf.field_z.field_D = hf.field_z.field_D + var9_int;
+              InteractiveWidget.field_z.field_D = InteractiveWidget.field_z.field_D + var9_int;
             }
             var8 -= 3;
             var6Lifetime1 += 6;
-            if (var7Lifetime1 + var5 > hf.field_z.field_z) {
-              var9_intLifetime1 = var5 + (var7Lifetime1 - hf.field_z.field_z);
+            if (var7Lifetime1 + var5 > InteractiveWidget.field_z.field_z) {
+              var9_intLifetime1 = var5 + (var7Lifetime1 - InteractiveWidget.field_z.field_z);
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
-              hf.field_z.field_D = hf.field_z.field_D + var9_intLifetime1;
-              hf.field_z.field_z = hf.field_z.field_z + var9_intLifetime1 * 2;
+              InteractiveWidget.field_z.field_D = InteractiveWidget.field_z.field_D + var9_intLifetime1;
+              InteractiveWidget.field_z.field_z = InteractiveWidget.field_z.field_z + var9_intLifetime1 * 2;
               KeyboardInput.field_a = KeyboardInput.field_a + var9_intLifetime1;
               var5 = var5 + var9_intLifetime1 * 2;
               hd.field_B = hd.field_B - var9_intLifetime1;
@@ -169,30 +169,30 @@ final class bg extends IntrusiveNode {
               ac.field_a = ac.field_a - var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
-              hf.field_z.field_v = hf.field_z.field_v + var9_intLifetime2;
-              hf.field_z.field_C = hf.field_z.field_C + 2 * var9_intLifetime2;
+              InteractiveWidget.field_z.field_v = InteractiveWidget.field_z.field_v + var9_intLifetime2;
+              InteractiveWidget.field_z.field_C = InteractiveWidget.field_z.field_C + 2 * var9_intLifetime2;
             }
-            if (hf.field_z.field_C < var8 + var6Lifetime1) {
-              var9_intLifetime3 = var6Lifetime1 + (var8 - hf.field_z.field_C);
+            if (InteractiveWidget.field_z.field_C < var8 + var6Lifetime1) {
+              var9_intLifetime3 = var6Lifetime1 + (var8 - InteractiveWidget.field_z.field_C);
               ac.field_a = ac.field_a - var9_intLifetime3;
               var8 = var8 + var9_intLifetime3;
               ph.field_e = ph.field_e + var9_intLifetime3;
-              hf.field_z.field_C = hf.field_z.field_C + var9_intLifetime3 * 2;
+              InteractiveWidget.field_z.field_C = InteractiveWidget.field_z.field_C + var9_intLifetime3 * 2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
-              hf.field_z.field_v = hf.field_z.field_v + var9_intLifetime3;
+              InteractiveWidget.field_z.field_v = InteractiveWidget.field_z.field_v + var9_intLifetime3;
             }
-            hf.field_z.b();
-            var9 = new RgbSprite(hf.field_z.field_z, hf.field_z.field_C);
-            var9.c();
+            InteractiveWidget.field_z.normalizeCanvas();
+            var9 = new RgbSprite(InteractiveWidget.field_z.field_z, InteractiveWidget.field_z.field_C);
+            var9.bindAsRenderTarget();
             md.field_a.drawParagraph(var14, KeyboardInput.field_a, ph.field_e, ca.field_db, af.field_d, 16777215, -1, 1, 1, md.field_a.field_x + md.field_a.field_S);
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
-            hf.field_z.c();
-            var9.d(0, 0);
+            InteractiveWidget.field_z.bindAsRenderTarget();
+            var9.draw(0, 0);
             qa.field_L = new RgbSprite(640, 480);
-            qa.field_L.c();
-            hf.field_z.c(hd.field_B + (hf.field_z.field_z >> 1), (hf.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
-            hf.field_z = null;
-            qa.field_L.d();
+            qa.field_L.bindAsRenderTarget();
+            InteractiveWidget.field_z.drawRotated(hd.field_B + (InteractiveWidget.field_z.field_z >> 1), (InteractiveWidget.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
+            InteractiveWidget.field_z = null;
+            qa.field_L.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ha.field_d);
           }
@@ -208,11 +208,11 @@ final class bg extends IntrusiveNode {
             var16 = new RgbSprite(412, 43);
             var17 = a.a(5044, jl.field_i, new String[]{df.field_b});
             df.field_b = null;
-            var16.c();
+            var16.bindAsRenderTarget();
             sc.field_f.drawParagraph(var17, 3, 3, -6 + var16.field_y, var16.field_w - 6, 16777215, -1, 0, 1, sc.field_f.field_S + sc.field_f.field_x);
             p.a(var16.field_y, 3, 0, var16.field_w, 1, 0, 0, var16);
-            hf.field_D.c();
-            var16.d(-hf.field_D.field_D + 199, -hf.field_D.field_v + 83);
+            InteractiveWidget.field_D.bindAsRenderTarget();
+            var16.draw(-InteractiveWidget.field_D.field_D + 199, -InteractiveWidget.field_D.field_v + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ha.field_d);
           }
@@ -226,11 +226,11 @@ final class bg extends IntrusiveNode {
             var5Lifetime1 = 20 + var4 + sa.field_e.field_z;
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = var6Lifetime2 - (-sa.field_e.field_z - 20);
-            hf.field_D.c();
-            sc.field_f.drawString(ej.field_b, -hf.field_D.field_D + var7Lifetime2, sc.field_f.field_S + (sc.field_f.field_x - hf.field_D.field_v + 155), 16777215, -1);
-            p.a(var4, 3, 0, 50, 1, -hf.field_D.field_v + 155, var7Lifetime2 + (-hf.field_D.field_D - 4), hf.field_D);
-            var8Lifetime1 = -((-sc.field_f.field_S - sc.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - hf.field_D.field_v + 155;
-            sa.field_e.d(var6Lifetime2 - hf.field_D.field_D, var8Lifetime1);
+            InteractiveWidget.field_D.bindAsRenderTarget();
+            sc.field_f.drawString(ej.field_b, -InteractiveWidget.field_D.field_D + var7Lifetime2, sc.field_f.field_S + (sc.field_f.field_x - InteractiveWidget.field_D.field_v + 155), 16777215, -1);
+            p.a(var4, 3, 0, 50, 1, -InteractiveWidget.field_D.field_v + 155, var7Lifetime2 + (-InteractiveWidget.field_D.field_D - 4), InteractiveWidget.field_D);
+            var8Lifetime1 = -((-sc.field_f.field_S - sc.field_f.field_x + (sa.field_e.field_C - 3)) / 2) - InteractiveWidget.field_D.field_v + 155;
+            sa.field_e.draw(var6Lifetime2 - InteractiveWidget.field_D.field_D, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ha.field_d);
             sa.field_e = null;
@@ -239,23 +239,23 @@ final class bg extends IntrusiveNode {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, qf.field_d, em.field_d);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, qf.field_d, em.field_d);
           if (null != DelegatingCanvas.field_c) {
-            DelegatingCanvas.field_c.d(0, 0);
+            DelegatingCanvas.field_c.draw(0, 0);
           }
           if (t.field_d != null) {
-            t.field_d.d(0, 0);
+            t.field_d.draw(0, 0);
           }
-          hf.field_D.d(0, 0);
+          InteractiveWidget.field_D.draw(0, 0);
           if (null != qa.field_L) {
-            qa.field_L.d(0, 0);
+            qa.field_L.draw(0, 0);
           }
           if (r.field_b != null &&
             null != DualLinkNode.field_r) {
-            r.field_b.d(231, 390);
+            r.field_b.draw(231, 390);
             var1 = eg.field_d;
             if (ArchiveRequest.field_w.field_f == 0) {
               var1 = ul.field_c;
             }
-            var1.d(0, 0);
+            var1.draw(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 0;
             stackIn_51_2 = k.field_L;
@@ -266,22 +266,22 @@ final class bg extends IntrusiveNode {
             }
             var2Lifetime4 = stackIn_51_0 + (k.b(stackIn_51_1, stackIn_51_2 << stackIn_52_3) * 40 >> 16);
             if (var2Lifetime4 > 0) {
-              r.field_b.a(230, 389, var2Lifetime4);
-              r.field_b.a(232, 389, var2Lifetime4);
-              r.field_b.a(232, 391, var2Lifetime4);
-              r.field_b.a(230, 391, var2Lifetime4);
-              var1.a(1, 1, var2Lifetime4);
-              var1.a(-1, 1, var2Lifetime4);
-              var1.a(1, -1, var2Lifetime4);
-              var1.a(-1, -1, var2Lifetime4);
+              r.field_b.drawAdditive(230, 389, var2Lifetime4);
+              r.field_b.drawAdditive(232, 389, var2Lifetime4);
+              r.field_b.drawAdditive(232, 391, var2Lifetime4);
+              r.field_b.drawAdditive(230, 391, var2Lifetime4);
+              var1.drawAdditive(1, 1, var2Lifetime4);
+              var1.drawAdditive(-1, 1, var2Lifetime4);
+              var1.drawAdditive(1, -1, var2Lifetime4);
+              var1.drawAdditive(-1, -1, var2Lifetime4);
             }
             stackIn_58_0 = (ArchiveRequest.field_w.field_f == 0);
             qj.a(stackIn_58_0, tb.field_c, ka.field_o, true);
           }
           if (null != r.field_b &&
             DualLinkNode.field_r != null) {
-            r.field_b.d(434, 390);
-            nj.field_f.d(0, 0);
+            r.field_b.draw(434, 390);
+            nj.field_f.draw(0, 0);
             if (ArchiveRequest.field_w.field_f == 1) {
               fk.a(7 * r.field_b.field_w / 12, -4 + r.field_b.field_y, 392, 64, (byte) -73, 436);
             }
@@ -290,35 +290,35 @@ final class bg extends IntrusiveNode {
           }
           if (sc.field_c != null) {
             var1_int = -(sc.field_c.field_C / 2) + 357;
-            sc.field_c.d(-sc.field_c.field_z + 269, var1_int);
-            ArchiveRequest.field_x.d(586, var1_int);
+            sc.field_c.draw(-sc.field_c.field_z + 269, var1_int);
+            ArchiveRequest.field_x.draw(586, var1_int);
             if (ob.field_g > var1_int &&
               var1_int + sc.field_c.field_w > ob.field_g) {
               var2Lifetime5 = 40 + (k.b(0, k.field_L << 4) * 40 >> 16);
               if (var2Lifetime5 <= 0) {
                 wd.b(139);
-                ByteStorage.field_c[ig.field_k].d(269, 340);
+                ByteStorage.field_c[ig.field_k].draw(269, 340);
                 return;
               }
               if (ck.field_c > -sc.field_c.field_y + 269 &&
                 ck.field_c < 269) {
-                sc.field_c.a(-1 + (269 - sc.field_c.field_z), -1 + var1_int, var2Lifetime5);
-                sc.field_c.a(270 - sc.field_c.field_z, var1_int - 1, var2Lifetime5);
-                sc.field_c.a(-1 + (269 - sc.field_c.field_z), var1_int + 1, var2Lifetime5);
-                sc.field_c.a(-sc.field_c.field_z + 270, 1 + var1_int, var2Lifetime5);
+                sc.field_c.drawAdditive(-1 + (269 - sc.field_c.field_z), -1 + var1_int, var2Lifetime5);
+                sc.field_c.drawAdditive(270 - sc.field_c.field_z, var1_int - 1, var2Lifetime5);
+                sc.field_c.drawAdditive(-1 + (269 - sc.field_c.field_z), var1_int + 1, var2Lifetime5);
+                sc.field_c.drawAdditive(-sc.field_c.field_z + 270, 1 + var1_int, var2Lifetime5);
               } else {
                 if (ck.field_c > 586 &&
                   sc.field_c.field_y + 586 > ck.field_c) {
-                  ArchiveRequest.field_x.a(585, -1 + var1_int, var2Lifetime5);
-                  ArchiveRequest.field_x.a(587, var1_int - 1, var2Lifetime5);
-                  ArchiveRequest.field_x.a(585, 1 + var1_int, var2Lifetime5);
-                  ArchiveRequest.field_x.a(587, var1_int + 1, var2Lifetime5);
+                  ArchiveRequest.field_x.drawAdditive(585, -1 + var1_int, var2Lifetime5);
+                  ArchiveRequest.field_x.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                  ArchiveRequest.field_x.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                  ArchiveRequest.field_x.drawAdditive(587, var1_int + 1, var2Lifetime5);
                 }
               }
             }
           }
           wd.b(139);
-          ByteStorage.field_c[ig.field_k].d(269, 340);
+          ByteStorage.field_c[ig.field_k].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

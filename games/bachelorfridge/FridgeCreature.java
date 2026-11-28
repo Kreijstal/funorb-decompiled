@@ -398,7 +398,7 @@ final class FridgeCreature extends IntrusiveNode {
           return;
         }
         if (this.field_g.field_f != -1) {
-          this.field_j.e(15 + this.field_n + param1, -13 + this.field_k, 39, 48, 128);
+          this.field_j.drawScaledAdditive(15 + this.field_n + param1, -13 + this.field_k, 39, 48, 128);
         }
         this.field_v.a(this.field_s, false, this.field_p >> 1, this.field_h >> 1, 0, -15, 256, this.field_n + param1, this.field_k - 33);
         if (this.field_y != -1 &&
@@ -445,7 +445,7 @@ final class FridgeCreature extends IntrusiveNode {
           var7 = var8;
           var6 = var7;
           var5Lifetime1 = var6;
-          this.field_j.b();
+          this.field_j.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(320, 320, 304, 255, var8);
           hga.field_U.a((byte) -53);
         } catch (RuntimeException runtimeException) {

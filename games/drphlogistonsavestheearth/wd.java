@@ -56,7 +56,7 @@ abstract class wd {
           var6 = ClientException.field_e[ig.field_k];
           var1 = var6;
           if (var6 != null) {
-            var6.d(245, 199);
+            var6.draw(245, 199);
           } else {
             if (null != sc.field_f) {
               sc.field_f.drawParagraph(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

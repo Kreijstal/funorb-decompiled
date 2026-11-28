@@ -63,14 +63,14 @@ final class CurryArenaTheme extends ArenaTheme {
           var3 = new aj(0, 0);
           for (var4 = -1; var4 < param0.field_a - 1; var4++) {
             var6 = param0.a(0, (byte) 100, var4);
-            this.field_b[18 + var4 % 3].a(var6.field_c + 128, var6.field_a);
-            this.field_b[2 + var4 % 3].a(var6.field_c + 128, -64 + var6.field_a);
+            this.field_b[18 + var4 % 3].draw(var6.field_c + 128, var6.field_a);
+            this.field_b[2 + var4 % 3].draw(var6.field_c + 128, -64 + var6.field_a);
             var7 = param0.a(param0.field_z, (byte) -96, var4);
             if (var4 > 0) {
-              this.field_b[var4 % 2 + 42].a(var7.field_c, var7.field_a);
+              this.field_b[var4 % 2 + 42].draw(var7.field_c, var7.field_a);
             }
             if (0 <= var4) {
-              this.field_b[57].a(var7.field_c, 64 + var7.field_a);
+              this.field_b[57].draw(var7.field_c, 64 + var7.field_a);
             }
           }
           var4Lifetime1 = -1;
@@ -80,17 +80,17 @@ final class CurryArenaTheme extends ArenaTheme {
             stackIn_16_0 = ~(param0.field_z - 2);
             stackIn_16_1 = ~var4Lifetime1;
             if (stackIn_16_0 < stackIn_16_1) {
-              this.field_b[1 + var4Lifetime1 % 3 + 24].a(-128 + var8.field_c, var8.field_a);
+              this.field_b[1 + var4Lifetime1 % 3 + 24].draw(-128 + var8.field_c, var8.field_a);
             }
             if (var4Lifetime1 >= 0) {
-              this.field_b[9 + var4Lifetime1 % 3 + 1].a(var8.field_c - 128, var8.field_a - 64);
+              this.field_b[9 + var4Lifetime1 % 3 + 1].draw(var8.field_c - 128, var8.field_a - 64);
             }
             var9 = param0.a(var4Lifetime1, (byte) 119, param0.field_a);
             if (0 < var4Lifetime1) {
-              this.field_b[34 + var4Lifetime1 % 3].a(var9.field_c, var9.field_a);
+              this.field_b[34 + var4Lifetime1 % 3].draw(var9.field_c, var9.field_a);
             }
             if (var4Lifetime1 >= 0) {
-              this.field_b[49].a(var9.field_c, var9.field_a + 64);
+              this.field_b[49].draw(var9.field_c, var9.field_a + 64);
             }
             var4Lifetime1++;
           }
@@ -127,40 +127,40 @@ final class CurryArenaTheme extends ArenaTheme {
         }
         Sprite var6 = new Sprite(384, 192);
         Sprite var2 = var6;
-        var6.b();
-        this.field_b[0].a(128, 0);
-        this.field_b[8].a(64, 32);
-        this.field_b[1].a(192, 32);
-        this.field_b[16].a(128, 64);
+        var6.bindAsRenderTarget();
+        this.field_b[0].draw(128, 0);
+        this.field_b[8].draw(64, 32);
+        this.field_b[1].draw(192, 32);
+        this.field_b[16].draw(128, 64);
         this.field_a[0] = var6;
         Sprite var3 = new Sprite(384, 192);
-        var3.b();
-        this.field_b[13].a(128, 0);
-        this.field_b[14].a(64, 32);
-        this.field_b[28].a(192, 32);
-        this.field_b[40].a(128, 64);
-        this.field_b[41].a(192, 96);
-        this.field_b[56].a(128, 128);
+        var3.bindAsRenderTarget();
+        this.field_b[13].draw(128, 0);
+        this.field_b[14].draw(64, 32);
+        this.field_b[28].draw(192, 32);
+        this.field_b[40].draw(128, 64);
+        this.field_b[41].draw(192, 96);
+        this.field_b[56].draw(128, 128);
         this.field_a[1] = var3;
         Sprite var4 = new Sprite(384, 192);
-        var4.b();
-        this.field_b[6].a(128, 0);
-        this.field_b[21].a(64, 32);
-        this.field_b[7].a(192, 32);
-        this.field_b[32].a(128, 64);
-        this.field_b[33].a(64, 96);
-        this.field_b[48].a(128, 128);
+        var4.bindAsRenderTarget();
+        this.field_b[6].draw(128, 0);
+        this.field_b[21].draw(64, 32);
+        this.field_b[7].draw(192, 32);
+        this.field_b[32].draw(128, 64);
+        this.field_b[33].draw(64, 96);
+        this.field_b[48].draw(128, 128);
         this.field_a[3] = var4;
         Sprite var5 = new Sprite(384, 192);
-        var5.b();
-        this.field_b[38].a(128, 64);
-        this.field_b[44].a(64, 32);
-        this.field_b[37].a(192, 32);
-        this.field_b[57].a(0, 64);
-        this.field_b[49].a(256, 64);
-        this.field_b[58].a(64, 96);
-        this.field_b[50].a(192, 96);
-        this.field_b[51].a(128, 128);
+        var5.bindAsRenderTarget();
+        this.field_b[38].draw(128, 64);
+        this.field_b[44].draw(64, 32);
+        this.field_b[37].draw(192, 32);
+        this.field_b[57].draw(0, 64);
+        this.field_b[49].draw(256, 64);
+        this.field_b[58].draw(64, 96);
+        this.field_b[50].draw(192, 96);
+        this.field_b[51].draw(128, 128);
         this.field_a[2] = var5;
     }
 

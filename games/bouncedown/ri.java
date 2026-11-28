@@ -122,13 +122,13 @@ abstract class ri extends lc {
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
-            ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+            ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
             return;
           }
           this.field_D = true;
           super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
           ve.a(-121);
-          ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+          ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
           return;
         }
         if (ml.field_d.field_s < this.field_k) {
@@ -139,13 +139,13 @@ abstract class ri extends lc {
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
-            ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+            ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
             return;
           }
           this.field_D = true;
           super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
           ve.a(-121);
-          ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+          ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
           return;
         }
         if (ml.field_d.field_q < this.field_m) {
@@ -156,13 +156,13 @@ abstract class ri extends lc {
           if (param2 >= 33) {
             super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
             ve.a(-121);
-            ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+            ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
             return;
           }
           this.field_D = true;
           super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
           ve.a(-121);
-          ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+          ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
           return;
         }
         kh.a(ml.field_d, 1);
@@ -171,13 +171,13 @@ abstract class ri extends lc {
         if (param2 >= 33) {
           super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
           ve.a(-121);
-          ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+          ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
           return;
         }
         this.field_D = true;
         super.a(param0, -param1 - this.field_i, 34, -param3 - this.field_r);
         ve.a(-121);
-        ml.field_d.d(param3 + this.field_r, this.field_i + param1, this.field_A);
+        ml.field_d.drawWithOpacity(param3 + this.field_r, this.field_i + param1, this.field_A);
     }
 
     public static void a(int param0) {

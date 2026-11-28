@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends d {
+final class jf extends InteractiveWidget {
     static ArgbSprite field_M;
     int field_K;
     static int[] field_N;

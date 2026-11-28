@@ -89,7 +89,7 @@ final class sh extends IntrusiveNode {
               var5 = AccountRegistrationPanel.field_P;
             } else {
               if (ai.field_i.field_h != var4) {
-                var5 = eb.field_I;
+                var5 = InteractiveWidget.field_I;
               } else {
                 var5 = ValidatedTextField.field_cb;
               }

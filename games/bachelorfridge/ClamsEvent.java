@@ -199,9 +199,9 @@ final class ClamsEvent extends SpecialEvent {
           if (param0 <= 83) {
             return;
           }
-          ada.field_p.d(0, 0);
-          DirectByteStorage.field_j.c(137, 0);
-          ml.field_a.d(127, 0);
+          ada.field_p.drawOpaque(0, 0);
+          DirectByteStorage.field_j.drawOpaque(137, 0);
+          ml.field_a.drawOpaque(127, 0);
           vj.field_p.draw(154, 17);
           var1_int = 249;
           var2 = 10;

@@ -80,7 +80,7 @@ final class MixedSupport017 {
         RenderingSupport004.performAction0579(0, 20763, 640 + SoftwareRaster.integerState0285 >> 1, SoftwareRaster.integerState0285 - 640 >> 1, SoftwareRaster.integerState0284);
         if (UiComponentPart017.integerState0437 > 0) {
           if (null != LobbyRoomRow.rgbSpriteState0062) {
-            LobbyRoomRow.rgbSpriteState0062.performAction0290(UiComponentPart011.sceneWidgetState0035.integerState0890, 0);
+            LobbyRoomRow.rgbSpriteState0062.drawOpaque(UiComponentPart011.sceneWidgetState0035.integerState0890, 0);
             stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
             stackIntegerLocal2 = 1141039778;
             stackBooleanLocal3 = (booleanArgument1) && (!LobbyRoomRow.booleanState0202);
@@ -100,7 +100,7 @@ final class MixedSupport017 {
                 stackBooleanLocal12 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
                 ((SceneWidget) (Object) stackSceneWidgetLocal10).performAction1767(stackIntegerLocal11, stackBooleanLocal12);
               } else {
-                LobbyRoomRow.rgbSpriteState0062.performAction0290(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
+                LobbyRoomRow.rgbSpriteState0062.drawOpaque(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
                 stackSceneWidgetLocal13 = IsaacRandom.sceneWidgetState0023;
                 stackIntegerLocal14 = integerArgument2 ^ 1141039778;
                 stackBooleanLocal15 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
@@ -122,7 +122,7 @@ final class MixedSupport017 {
                   stackBooleanLocal30 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
                   ((SceneWidget) (Object) stackSceneWidgetLocal28).performAction1767(stackIntegerLocal29, stackBooleanLocal30);
                 } else {
-                  LobbyRoomRow.rgbSpriteState0062.performAction0290(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
+                  LobbyRoomRow.rgbSpriteState0062.drawOpaque(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
                   stackSceneWidgetLocal19 = IsaacRandom.sceneWidgetState0023;
                   stackIntegerLocal20 = integerArgument2 ^ 1141039778;
                   stackBooleanLocal21 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
@@ -157,7 +157,7 @@ final class MixedSupport017 {
             stackBooleanLocal54 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
             ((SceneWidget) (Object) stackSceneWidgetLocal52).performAction1767(stackIntegerLocal53, stackBooleanLocal54);
           } else {
-            LobbyRoomRow.rgbSpriteState0062.performAction0290(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
+            LobbyRoomRow.rgbSpriteState0062.drawOpaque(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
             stackSceneWidgetLocal55 = IsaacRandom.sceneWidgetState0023;
             stackIntegerLocal56 = integerArgument2 ^ 1141039778;
             stackBooleanLocal57 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
@@ -179,7 +179,7 @@ final class MixedSupport017 {
               stackBooleanLocal42 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);
               ((SceneWidget) (Object) stackSceneWidgetLocal40).performAction1767(stackIntegerLocal41, stackBooleanLocal42);
             } else {
-              LobbyRoomRow.rgbSpriteState0062.performAction0290(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
+              LobbyRoomRow.rgbSpriteState0062.drawOpaque(IsaacRandom.sceneWidgetState0023.integerState0890, 0);
               stackSceneWidgetLocal43 = IsaacRandom.sceneWidgetState0023;
               stackIntegerLocal44 = integerArgument2 ^ 1141039778;
               stackBooleanLocal45 = (booleanArgument1) && (!NanoFrameTimer.booleanState0028);

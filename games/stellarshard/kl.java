@@ -61,7 +61,7 @@ final class kl extends IntrusiveNode {
           for (var3 = 0; stellarshard.field_L.length > var3; var3++) {
             var4 = sj.field_J[var3];
             if (var4 < 0) {
-              var5 = ul.field_G;
+              var5 = NameSuggestionsPanel.field_G;
             } else {
               if (var4 == ua.field_i.field_f) {
                 var5 = field_k;

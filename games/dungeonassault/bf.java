@@ -133,14 +133,14 @@ final class bf {
           SoftwareRasterizer.setClip(41, 48, 599, 416);
           if (!param0) {
             for (var2_int = 41; var2_int < 599; var2_int = var2_int + df.field_c.field_E) {
-              df.field_c.c(var2_int, 48);
+              df.field_c.drawOpaque(var2_int, 48);
             }
           } else {
             var2_int = oi.b(0, 3);
             var3 = oi.b(0, 3);
-            dm.field_d[var2_int].c(41, 48);
-            IterableNodeHashTable.field_f[var3].c(-IterableNodeHashTable.field_f[0].field_y + 599, 48);
-            df.field_c.c(41 + dm.field_d[var2_int].field_y, 48);
+            dm.field_d[var2_int].drawOpaque(41, 48);
+            IterableNodeHashTable.field_f[var3].drawOpaque(-IterableNodeHashTable.field_f[0].field_y + 599, 48);
+            df.field_c.drawOpaque(41 + dm.field_d[var2_int].field_y, 48);
           }
           SoftwareRasterizer.restoreClip(kd.field_g);
           AwtRasterBuffer.a(0, 640, 0, (byte) 80);

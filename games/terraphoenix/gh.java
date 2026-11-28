@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends eb {
+final class gh extends InteractiveWidget {
     static String field_L;
     int field_K;
     int field_R;

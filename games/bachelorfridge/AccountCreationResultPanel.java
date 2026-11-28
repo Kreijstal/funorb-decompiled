@@ -62,7 +62,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
             } else {
               var4 = FullHealAnimation.field_A;
               if (this.field_ob != null) {
-                this.field_ob.a(param0 + 26653);
+                this.field_ob.onNameSuggestionsRefreshRequested(param0 + 26653);
               }
             }
           } else {
@@ -135,7 +135,7 @@ final class AccountCreationResultPanel extends mf implements WidgetActionListene
         }
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         if (this.field_mb) {
           FlySpecial.a(true, false, (byte) 60);
           return;

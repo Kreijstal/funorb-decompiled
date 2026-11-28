@@ -184,7 +184,7 @@ abstract class mk extends aj {
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
-          qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
+          qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
           return;
         }
         if (this.field_l > qk.field_c.field_n) {
@@ -194,7 +194,7 @@ abstract class mk extends aj {
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
-          qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
+          qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
           return;
         }
         if (qk.field_c.field_m >= this.field_h) {
@@ -203,7 +203,7 @@ abstract class mk extends aj {
           this.a(0, (byte) -81, 0);
           super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
           fi.c(true);
-          qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
+          qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
           return;
         }
         qk.field_c = new Sprite(this.field_l, this.field_h);
@@ -212,7 +212,7 @@ abstract class mk extends aj {
         this.a(0, (byte) -81, 0);
         super.a(-this.field_p - param0, -this.field_n - param1, param2, (byte) -93);
         fi.c(true);
-        qk.field_c.e(param0 + this.field_p, param1 + this.field_n, this.field_D);
+        qk.field_c.drawWithOpacity(param0 + this.field_p, param1 + this.field_n, this.field_D);
     }
 
     abstract void a(int param0, byte param1, int param2);

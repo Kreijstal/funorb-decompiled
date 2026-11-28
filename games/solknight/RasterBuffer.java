@@ -104,7 +104,7 @@ abstract class RasterBuffer {
           }
           s.field_ib = param1;
           if (ab.field_u &&
-            kk.field_d == pj.field_A) {
+            kk.field_d == InteractiveWidget.field_A) {
             kk.field_d = 0;
             ab.field_u = false;
           }

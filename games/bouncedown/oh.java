@@ -36,10 +36,10 @@ final class oh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != lg.field_b) {
-            lg.field_b.field_z.a((byte) -124, param1);
+            lg.field_b.field_z.setNameSuggestions((byte) -124, param1);
           }
           if (null != il.field_b) {
-            il.field_b.field_C.a((byte) -112, param1);
+            il.field_b.field_C.setNameSuggestions((byte) -112, param1);
           }
           if (param0 == -29) {
             return;

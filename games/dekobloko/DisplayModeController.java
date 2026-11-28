@@ -348,9 +348,9 @@ final class DisplayModeController {
             integerState0700 = -11;
           }
           for (integerLocal1 = 0; integerLocal1 < 3; integerLocal1++) {
-            MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument7][1].performAction0280(integerLocal1 * 18 - 27 + integerArgument5, 72 + integerArgument1, 18, 18);
+            MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument7][1].drawScaled(integerLocal1 * 18 - 27 + integerArgument5, 72 + integerArgument1, 18, 18);
           }
-          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument7][1].performAction0280(integerArgument5 - 27 + 36, integerLocal6 + integerLocal4 + integerArgument1, 18, -integerLocal6 + 18);
+          MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument7][1].drawScaled(integerArgument5 - 27 + 36, integerLocal6 + integerLocal4 + integerArgument1, 18, -integerLocal6 + 18);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal8) {
           caughtExceptionLocal3 = caughtParameterLocal8;

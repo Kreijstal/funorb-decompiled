@@ -41,7 +41,7 @@ final class sf extends hl {
         }
         if (var1 == null) {
         } else {
-          var3 = fb.field_K;
+          var3 = InteractiveWidget.field_K;
           if (var3 >= 115) {
             var2 = -var3 + 230;
           } else {
@@ -81,8 +81,8 @@ final class sf extends hl {
             stackIn_8_0 = 1;
           }
           var6_int = stackIn_8_0;
-          if (param4 instanceof fb) {
-            param3 = param3 & ((fb) (param4)).field_H;
+          if (param4 instanceof InteractiveWidget) {
+            param3 = param3 & ((InteractiveWidget) (param4)).field_H;
           }
           if (!param3) {
             stackIn_16_0 = this.field_w;

@@ -99,13 +99,13 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           if (integerArgument7 > 0 &&
             0 < integerArgument8) {
-            rgbSpriteLocal7 = rgbSpriteArgument5.computeRgbSprite0277();
+            rgbSpriteLocal7 = rgbSpriteArgument5.copy();
             integerArrayLocal9 = SoftwareRaster.integerArrayState0063;
             integerLocal10 = SoftwareRaster.integerState0285;
             integerLocal11 = SoftwareRaster.integerState0284;
             integerArrayLocal12 = new int[4];
             SoftwareRaster.saveClip(integerArrayLocal12);
-            rgbSpriteArgument5.performAction0256();
+            rgbSpriteArgument5.bindAsRenderTarget();
             SoftwareRaster.intersectClip(integerArrayLocal12[0], integerArrayLocal12[1], integerArrayLocal12[integerArgument4], integerArrayLocal12[3]);
             integerLocal13 = integerArgument6 * rgbSpriteArgument5.integerState0258 + integerArgument3;
             integerLocal14 = rgbSpriteArgument5.integerState0258 - integerArgument7;
@@ -138,7 +138,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
               integerLocal13 = stackIntegerLocal20 + stackIntegerLocal21;
               integerLocal16++;
             }
-            rgbSpriteLocal7.performAction0278(-rgbSpriteArgument5.integerState0259, -rgbSpriteArgument5.integerState0256);
+            rgbSpriteLocal7.draw(-rgbSpriteArgument5.integerState0259, -rgbSpriteArgument5.integerState0256);
             SoftwareRaster.setRasterBuffer(integerArrayLocal9, integerLocal10, integerLocal11);
             SoftwareRaster.restoreClip(integerArrayLocal12);
             return;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends pj implements ke {
-    private hf field_J;
+final class ff extends pj implements WidgetActivationListener {
+    private InteractiveWidget field_J;
     static String field_K;
-    private hf field_L;
-    private hf field_M;
+    private InteractiveWidget field_L;
+    private InteractiveWidget field_M;
     static ResourceArchive field_P;
     static IntrusiveDeque field_O;
     static double[] field_N;
@@ -14,9 +14,9 @@ final class ff extends pj implements ke {
 
     public ff() {
         super(0, 0, 476, 225, (cg) null);
-        this.field_L = new hf(ai.field_v, (fd) null);
-        this.field_M = new hf(ej.field_c, (fd) null);
-        this.field_J = new hf(ml.field_m, (fd) null);
+        this.field_L = new InteractiveWidget(ai.field_v, (fd) null);
+        this.field_M = new InteractiveWidget(ej.field_c, (fd) null);
+        this.field_J = new InteractiveWidget(ml.field_m, (fd) null);
         ie var1 = new ie();
         this.field_L.field_l = (cg) ((Object) var1);
         this.field_M.field_l = (cg) ((Object) var1);
@@ -48,7 +48,7 @@ final class ff extends pj implements ke {
         super.a(param0, param1, param2, param3);
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -126,7 +126,7 @@ final class ff extends pj implements ke {
 
     final boolean a(int param0, char param1, vg param2, int param3) {
         RuntimeException var5 = null;
-        hf var6 = null;
+        InteractiveWidget var6 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -135,8 +135,8 @@ final class ff extends pj implements ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 63) {
-            var6 = (hf) null;
-            this.a(-113, 58, true, (hf) null, 25);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated(-113, 58, true, (InteractiveWidget) null, 25);
           }
           if (super.a(param0, param1, param2, 97)) {
             return true;

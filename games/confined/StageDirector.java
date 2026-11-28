@@ -64,7 +64,7 @@ final class StageDirector {
         DualLinkNode.field_p = null;
         ij.field_r = null;
         an.field_p = null;
-        rg.field_I = null;
+        InteractiveWidget.field_I = null;
     }
 
     final void recordPowerUpSpawn(int param0, int param1) {

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends ga implements el {
+final class tg extends ga implements WidgetActivationListener {
     static int field_S;
-    private rg field_P;
+    private InteractiveWidget field_P;
     static int[] field_T;
     static double[] field_R;
     static int field_H;
-    private rg field_Q;
+    private InteractiveWidget field_Q;
     static int field_L;
-    private rg field_O;
+    private InteractiveWidget field_O;
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -89,9 +89,9 @@ final class tg extends ga implements el {
 
     public tg() {
         super(0, 0, 476, 225, (fe) null);
-        this.field_O = new rg(ej.field_c, (uk) null);
-        this.field_P = new rg(qn.field_m, (uk) null);
-        this.field_Q = new rg(ug.field_cb, (uk) null);
+        this.field_O = new InteractiveWidget(ej.field_c, (uk) null);
+        this.field_P = new InteractiveWidget(qn.field_m, (uk) null);
+        this.field_Q = new InteractiveWidget(ug.field_cb, (uk) null);
         je var1 = new je();
         this.field_O.field_n = (fe) ((Object) var1);
         this.field_P.field_n = (fe) ((Object) var1);

@@ -62,7 +62,7 @@ final class ga {
             stackIn_3_0 = (kh) null;
             return stackIn_3_0;
           }
-          var2 = lj.a(true, "jagex-last-login-method", param1);
+          var2 = InteractiveWidget.a(true, "jagex-last-login-method", param1);
           if (var2 == null) {
             stackIn_7_0 = qe.field_x;
             return stackIn_7_0;

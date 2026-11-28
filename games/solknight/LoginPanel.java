@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends WidgetContainer implements TextFieldListener, ka {
+final class LoginPanel extends WidgetContainer implements TextFieldListener, WidgetActivationListener {
     private boolean field_H;
     static fg field_I;
     private EditableTextField field_L;
     private EditableTextField field_O;
     private boolean field_E;
-    private pj field_N;
+    private InteractiveWidget field_N;
     private String field_K;
     static int[] field_P;
-    private pj field_M;
-    private pj field_D;
+    private InteractiveWidget field_M;
+    private InteractiveWidget field_D;
     static int field_G;
     private boolean field_J;
 
@@ -164,10 +164,10 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        pj stackIn_18_1 = null;
-        pj stackIn_18_2 = null;
-        pj stackIn_19_1 = null;
-        pj stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -197,7 +197,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
           this.field_O = (EditableTextField) ((Object) new ValidatedTextField(param0, (dg) (this), 100));
           this.field_L = (EditableTextField) ((Object) new ValidatedTextField("", (dg) (this), 20));
           if (!this.field_E) {
-            this.field_N = new pj(DisplayNameSelectionPanel.field_H, (dg) null);
+            this.field_N = new InteractiveWidget(DisplayNameSelectionPanel.field_H, (dg) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_H) {
@@ -209,13 +209,13 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
               stackIn_19_2 = null;
               stackIn_19_3 = u.field_e;
             }
-            this.field_D = new pj(stackIn_19_3, (dg) null);
+            this.field_D = new InteractiveWidget(stackIn_19_3, (dg) null);
             if (this.field_J) {
-              this.field_M = new pj(DelegatingCanvas.field_g, (dg) (this));
+              this.field_M = new InteractiveWidget(DelegatingCanvas.field_g, (dg) (this));
             }
           } else {
-            this.field_N = new pj(IntrusiveNode.field_c, (dg) null);
-            this.field_D = new pj(ph.field_e, (dg) null);
+            this.field_N = new InteractiveWidget(IntrusiveNode.field_c, (dg) null);
+            this.field_D = new InteractiveWidget(ph.field_e, (dg) null);
             this.field_O.field_B = false;
           }
           this.field_O.field_w = (j) ((Object) new uf(10000536));
@@ -243,7 +243,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
             }
           }
           this.field_j = 15;
-          var7 = ua.field_G;
+          var7 = NameSuggestionsPanel.field_G;
           if (this.field_K != null) {
             this.field_j = this.field_j + (var7.textHeight(this.field_K, -40 + this.field_t, var7.field_F) + 5);
           }
@@ -330,7 +330,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
         }
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -415,7 +415,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ka 
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_K) {
-          ua.field_G.drawParagraph(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, ua.field_G.field_F);
+          NameSuggestionsPanel.field_G.drawParagraph(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, NameSuggestionsPanel.field_G.field_F);
         }
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(10 + param2, param0 + 134, this.field_t - 20, 4210752);

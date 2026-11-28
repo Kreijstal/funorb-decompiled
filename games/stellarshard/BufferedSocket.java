@@ -33,7 +33,7 @@ final class BufferedSocket implements Runnable {
         int var8Lifetime1;
         PcmResampler.field_a = AccountServiceResult.a("commonui", (byte) -123, param2, "frame_top");
         DirectByteStorage.field_g = AccountServiceResult.a("commonui", (byte) 122, param2, "frame_bottom");
-        ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
+        NameSuggestionsPanel.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
         ImageProducerRasterBuffer.field_i = AccountServiceResult.a("commonui", (byte) 85, param2, "button");
         DualLinkNode.field_p = ResourceArchive.loadSpriteArrayByName("commonui", (byte) -98, "validation", param2);
         de.field_c = (BitmapFont) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
@@ -70,18 +70,18 @@ final class BufferedSocket implements Runnable {
         try {
           var9 = var17.field_y;
           kg.d(false);
-          var17.e();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b);
           var15 = new Sprite(var9, var9);
           var18 = var15;
-          var18.e();
-          var17.d(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9, var9);
-          var11.e();
-          var17.d(var9 - var17.field_v, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(var9 - var17.field_v, 0);
           var12 = new Sprite(var17.field_v - 2 * var9, var9);
-          var12.e();
-          var17.d(-var9, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9, 0);
           id.b((byte) -58);
           ImageProducerRasterBuffer.field_i = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
@@ -295,8 +295,8 @@ final class BufferedSocket implements Runnable {
                 EditableTextField.field_N.payload[var5_int] = var4_ref_fa.field_l[var5_int];
               }
               ld.field_E = t.field_e;
-              t.field_e = ig.field_y;
-              ig.field_y = ja.field_t;
+              t.field_e = InteractiveWidget.field_y;
+              InteractiveWidget.field_y = ja.field_t;
               ja.field_t = var4_ref_fa.field_o;
               return true;
             }
@@ -319,8 +319,8 @@ final class BufferedSocket implements Runnable {
             }
             if (hk.field_n == 0) {
               ld.field_E = t.field_e;
-              t.field_e = ig.field_y;
-              ig.field_y = ja.field_t;
+              t.field_e = InteractiveWidget.field_y;
+              InteractiveWidget.field_y = ja.field_t;
               ja.field_t = hk.field_k;
               hk.field_k = -1;
               return true;

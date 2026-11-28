@@ -213,7 +213,7 @@ final class e {
             if (param4.field_d == 2) {
               var7 = var7 + (-this.field_h.field_B + param0.height);
             }
-            this.field_h.e(var6_int, var7);
+            this.field_h.draw(var6_int, var7);
           }
           var6 = param4.a((byte) -90, param0);
           if (var6 != null &&

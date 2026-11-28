@@ -12,10 +12,10 @@ final class ci {
     final static void a(int param0, String[] param1) {
         try {
           if (ib.field_b != null) {
-            ib.field_b.field_M.a(param1, -121);
+            ib.field_b.field_M.setNameSuggestions(param1, -121);
           }
           if (je.field_g != null) {
-            je.field_g.field_I.a(param1, -123);
+            je.field_g.field_I.setNameSuggestions(param1, -123);
           }
           int var2_int = -62 % ((param0 + 12) / 62);
         } catch (RuntimeException runtimeException) {

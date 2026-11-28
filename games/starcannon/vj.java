@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends kc implements ga {
-    private dk field_Z;
+final class vj extends kc implements WidgetActivationListener {
+    private InteractiveWidget field_Z;
     static boolean field_X;
     static int field_ab;
     static String field_W;
     static volatile boolean field_Y;
     static boolean field_V;
 
-    public final void a(dk param0, int param1, boolean param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, boolean param2, int param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -160,7 +160,7 @@ final class vj extends kc implements ga {
             var3 = wc.field_h;
           } else {
             if (BoundedRandomAccessFile.field_d == param1) {
-              var3 = kd.field_D;
+              var3 = NameSuggestionsPanel.field_D;
               this.field_f = this.field_f + 10;
               if (wi.a(-10214)) {
                 var3 = ConfirmedEmailAvailabilityValidator.field_m;
@@ -202,11 +202,11 @@ final class vj extends kc implements ga {
         }
     }
 
-    private final dk a(String param0, qg param1, boolean param2) {
-        dk var4 = null;
+    private final InteractiveWidget a(String param0, qg param1, boolean param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        dk stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -214,7 +214,7 @@ final class vj extends kc implements ga {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new dk(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_o = (de) ((Object) new gb());
           var5 = -6 + this.field_f;
           this.field_f = this.field_f + 38;

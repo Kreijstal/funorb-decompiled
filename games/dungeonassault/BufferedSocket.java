@@ -266,22 +266,22 @@ final class BufferedSocket implements Runnable {
         }
         try {
           SoftwareRasterizer.intersectClip(var9_int, 0, var10, var11 + param3);
-          param8.b(-1 + param5, -1 + param4, param1);
-          param8.b(param5 - 1, param4 + 1, param1);
+          param8.drawAdditive(-1 + param5, -1 + param4, param1);
+          param8.drawAdditive(param5 - 1, param4 + 1, param1);
           SoftwareRasterizer.restoreClip(rp.field_e);
           SoftwareRasterizer.intersectClip(1 + var9_int, 0, var10 + 1, param3 + var11);
-          param8.b(1 + param5, param4 - 1, param1);
-          param8.b(1 + param5, 1 + param4, param1);
+          param8.drawAdditive(1 + param5, param4 - 1, param1);
+          param8.drawAdditive(1 + param5, 1 + param4, param1);
           SoftwareRasterizer.restoreClip(rp.field_e);
           var9_int = -param0 + (param5 + (param8.field_w + param8.field_y) - param2);
           var10 = param8.field_y + param8.field_w - (-param5 + param2) - param6;
           SoftwareRasterizer.intersectClip(var9_int, -param3 + var11, var10, 480);
-          param8.b(-1 + param5, param4 - 1, param1);
-          param8.b(param5 - 1, 1 + param4, param1);
+          param8.drawAdditive(-1 + param5, param4 - 1, param1);
+          param8.drawAdditive(param5 - 1, 1 + param4, param1);
           SoftwareRasterizer.restoreClip(rp.field_e);
           SoftwareRasterizer.intersectClip(var9_int + 1, var11 - param3, 1 + var10, 480);
-          param8.b(1 + param5, param4 - 1, param1);
-          param8.b(param5 + 1, 1 + param4, param1);
+          param8.drawAdditive(1 + param5, param4 - 1, param1);
+          param8.drawAdditive(param5 + 1, 1 + param4, param1);
           SoftwareRasterizer.restoreClip(rp.field_e);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "rk.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

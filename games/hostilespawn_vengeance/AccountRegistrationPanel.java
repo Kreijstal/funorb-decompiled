@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends vd implements nk, qk, kn {
+final class AccountRegistrationPanel extends vd implements nk, WidgetActivationListener, NameSuggestionListener {
     static String field_Q;
     private vf field_G;
     private TextInputField field_P;
     static int field_H;
     static boolean[] field_O;
     static volatile int field_I;
-    private ph field_S;
+    private InteractiveWidget field_S;
     private TextInputField field_M;
     private cj field_T;
     static CoverageBitmapFont field_L;
@@ -16,9 +16,9 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
     private TextInputField field_F;
     static BufferedRandomAccessFile field_K;
     private TextInputField field_E;
-    private ph field_R;
+    private InteractiveWidget field_R;
     private TextInputField field_U;
-    mc field_J;
+    NameSuggestionsPanel field_J;
 
     private final boolean submitRegistration(int param0) {
         boolean discarded$0 = false;
@@ -36,7 +36,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         return ng.a(this, var2, this.field_G.field_A, this.field_E.field_n, this.field_P.field_n, param0 ^ 3764, this.field_M.field_n);
     }
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         boolean discarded$1 = false;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -71,7 +71,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
 
     private final int a(String param0, int param1, int param2, ag param3, int param4, String param5) {
         RuntimeException var7 = null;
-        ph var8 = null;
+        InteractiveWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -83,8 +83,8 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 20) {
-            var8 = (ph) null;
-            this.a(-36, 119, 30, (ph) null, (byte) 55);
+            var8 = (InteractiveWidget) null;
+            this.onWidgetActivated(-36, 119, 30, (InteractiveWidget) null, (byte) 55);
           }
           stackIn_3_0 = this.a(param1, param2, 3, param0, param5, 35, param3);
           return stackIn_3_0;
@@ -132,11 +132,11 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         return "</col></u>";
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         TextInputField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        ph var5 = null;
+        InteractiveWidget var5 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -148,8 +148,8 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
           if (param0) {
             return;
           }
-          var5 = (ph) null;
-          this.a(-85, -107, 29, (ph) null, (byte) 13);
+          var5 = (InteractiveWidget) null;
+          this.onWidgetActivated(-85, -107, 29, (InteractiveWidget) null, (byte) 13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,8 +286,8 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         this.field_F = new TextInputField("", (mh) null, 3);
         int var1 = 1;
         this.field_G = new vf("", (mh) null, var1 != 0);
-        this.field_S = new ph(ri.field_i, (mh) null);
-        this.field_R = new ph(DualLinkNode.field_l, (mh) null);
+        this.field_S = new InteractiveWidget(ri.field_i, (mh) null);
+        this.field_R = new InteractiveWidget(DualLinkNode.field_l, (mh) null);
         this.field_P.field_i = u.field_g;
         this.field_M.field_i = ul.field_M;
         this.field_N.field_i = PasswordValidator.field_u;
@@ -341,7 +341,7 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         this.field_S.field_p = (mh) (this);
         this.a(51448, this.field_S);
         this.a(51448, this.field_R);
-        this.field_J = new mc((kn) (this));
+        this.field_J = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_J.a(-this.field_P.field_v + this.field_s + (-this.field_P.field_s - 60), 20 + this.field_P.field_m, 0, this.field_P.field_v + this.field_P.field_s + 60, 150);
         this.a(51448, this.field_J);
         this.a(496, 0, 0, 0, var3 + 55 + var6);
@@ -393,9 +393,9 @@ final class AccountRegistrationPanel extends vd implements nk, qk, kn {
         }
     }
 
-    public final void a(boolean param0) {
+    public final void onNameSuggestionsRefreshRequested(boolean param0) {
         int discarded$0 = 0;
-        ((AccountNameAvailabilityValidator) (this.field_P.getInputHandler((byte) 100))).f(-2);
+        ((AccountNameAvailabilityValidator) (this.field_P.getInputHandler((byte) 100))).invalidateCheckedName(-2);
         if (param0) {
           String var3 = (String) null;
           discarded$0 = this.a((String) null, -114, 4, (ag) null, -112, (String) null);

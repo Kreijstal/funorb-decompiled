@@ -74,7 +74,7 @@ final class tka extends TileEffect {
           var9 = pfa.field_g;
           var6 = -(this.field_g * this.field_f / 80) + param2;
           var7 = param0 - var4 - this.field_f * this.field_h / 80;
-          var9.a(var6, var7 - 64);
+          var9.draw(var6, var7 - 64);
           return;
         }
         this.a(-106, -128, -74);
@@ -82,7 +82,7 @@ final class tka extends TileEffect {
         IndexedSprite var8 = pfa.field_g;
         var6Lifetime1 = -(this.field_g * this.field_f / 80) + param2;
         var7Lifetime1 = param0 - var4Lifetime1 - this.field_f * this.field_h / 80;
-        var8.a(var6Lifetime1, var7Lifetime1 - 64);
+        var8.draw(var6Lifetime1, var7Lifetime1 - 64);
     }
 
     tka(BattleScreen param0, int param1, int param2) {

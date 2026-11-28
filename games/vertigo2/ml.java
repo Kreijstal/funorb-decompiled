@@ -69,14 +69,14 @@ class ml extends va {
         int var7 = SoftwareRasterizer.field_e;
         int var8 = SoftwareRasterizer.field_j;
         Sprite var9 = new Sprite(16, param4);
-        var9.d();
+        var9.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 16, param4, param1, param3);
         Object var10 = null;
         Object var11 = null;
         if (param2) {
-          var13 = var9.c();
+          var13 = var9.copy();
           var10 = var13;
-          var13.d();
+          var13.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(0, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(0, 2, 2, 0);
@@ -84,9 +84,9 @@ class ml extends va {
           SoftwareRasterizer.drawHorizontalLine(0, 4, 1, 0);
         }
         if (param5) {
-          var14 = var9.c();
+          var14 = var9.copy();
           var11 = var14;
-          var14.d();
+          var14.bindAsRenderTarget();
           SoftwareRasterizer.drawHorizontalLine(11, 0, 5, 0);
           SoftwareRasterizer.drawHorizontalLine(13, 1, 3, 0);
           SoftwareRasterizer.drawHorizontalLine(14, 2, 2, 0);

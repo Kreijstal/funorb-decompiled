@@ -38,7 +38,7 @@ final class rm extends mf {
         this.field_O = new RgbSprite[]{this.c(-72, this.field_K, this.field_F), this.c(-43, this.field_X, this.field_V)};
         int var2 = -46 / ((-5 - param0) / 54);
         this.field_P = this.f((byte) 8);
-        this.field_N = this.field_P.b();
+        this.field_N = this.field_P.copyMirroredHorizontally();
         this.field_I = new RgbSprite(this.field_C >> 1, this.field_C);
     }
 
@@ -66,26 +66,26 @@ final class rm extends mf {
           var5_int = param3 + this.field_y;
           cf.b(param0 + this.field_C, -this.field_P.field_w + var5_int, param0, 80, param3 + this.field_P.field_w);
           for (var6 = param3 - this.field_G; var5_int > var6; var6 = var6 + param1.field_w) {
-            param1.b(var6, param0);
+            param1.draw(var6, param0);
           }
           fd.a(param2 + 28773);
           if (SoftwareRasterizer.field_i <= param3 + this.field_P.field_w) {
             tl.a((byte) -67, this.field_I);
-            param1.b(-this.field_G, 0);
-            param1.b(this.field_T * 2 - this.field_G, 0);
-            this.field_N.e(0, 0);
+            param1.draw(-this.field_G, 0);
+            param1.draw(this.field_T * 2 - this.field_G, 0);
+            this.field_N.drawMultiply(0, 0);
             fd.a(28773);
-            this.field_I.b(param3, param0);
+            this.field_I.draw(param3, param0);
           }
           if (-this.field_P.field_w + var5_int <= SoftwareRasterizer.field_j) {
             tl.a((byte) -67, this.field_I);
             for (var7 = this.field_G - this.field_P.field_w + this.field_y; var7 > this.field_T * 2; var7 = var7 - this.field_T * 2) {
             }
-            param1.b(-var7, 0);
-            param1.b(2 * this.field_T - var7, 0);
-            this.field_P.e(0, 0);
+            param1.draw(-var7, 0);
+            param1.draw(2 * this.field_T - var7, 0);
+            this.field_P.drawMultiply(0, 0);
             fd.a(28773);
-            this.field_I.b(var5_int - this.field_P.field_w, param0);
+            this.field_I.draw(var5_int - this.field_P.field_w, param0);
           }
           if (param2 != 0) {
             field_D = (String) null;

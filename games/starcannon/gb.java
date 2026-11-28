@@ -44,8 +44,8 @@ final class gb extends hd {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param4 instanceof dk) {
-            param1 = param1 & ((dk) (param4)).field_u;
+          if (param4 instanceof InteractiveWidget) {
+            param1 = param1 & ((InteractiveWidget) (param4)).field_u;
           }
           if (!param1) {
             stackIn_14_0 = this.field_q;

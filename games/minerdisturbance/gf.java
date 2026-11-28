@@ -143,9 +143,9 @@ final class gf {
             if (q.field_b[this.field_n][this.field_p].field_A) {
               var3Lifetime1 += 8;
               if (this.field_i < 0) {
-                var6.e().a(var2_intLifetime1, 32 + var3Lifetime1 - var6.field_A, 9348351);
+                var6.copyMirroredHorizontally().drawGrayModulated(var2_intLifetime1, 32 + var3Lifetime1 - var6.field_A, 9348351);
               } else {
-                var6.a(var2_intLifetime1, 32 + var3Lifetime1 - var6.field_A, 9348351);
+                var6.drawGrayModulated(var2_intLifetime1, 32 + var3Lifetime1 - var6.field_A, 9348351);
               }
               var3Lifetime1 -= 8;
             }
@@ -161,7 +161,7 @@ final class gf {
                 if (je.field_O.a(var7Lifetime1, var13, (byte) 61)) {
                   SoftwareRasterizer.setClip(var9, var10Lifetime1, var9 + 8, var10Lifetime1 + 8);
                   if (this.field_i >= 0) {
-                    var6.f(var2_intLifetime1, var3Lifetime1);
+                    var6.draw(var2_intLifetime1, var3Lifetime1);
                   } else {
                     var6.drawHorizontalFlip(var2_intLifetime1, var3Lifetime1);
                   }
@@ -205,7 +205,7 @@ final class gf {
           var2_int = this.field_k / 10 + (this.field_n * 32 - li.field_c);
           var3 = -ClientException.field_d + (32 * this.field_p + this.field_f / 10);
           if (this.a((byte) 103)) {
-            mb.field_d[this.field_h].f(var2_int, var3);
+            mb.field_d[this.field_h].draw(var2_int, var3);
           }
           if (param0 != -12) {
             this.b(false);
@@ -221,19 +221,19 @@ final class gf {
                 if (20 == this.field_h) {
                   if (this.field_g == 0) {
                     if (this.field_b >= 250) {
-                      ArchiveIndex.field_j[4].f(var2_int, var3);
+                      ArchiveIndex.field_j[4].draw(var2_int, var3);
                       return;
                     }
-                    ArchiveIndex.field_j[5 * this.field_b / 250].f(var2_int, var3);
+                    ArchiveIndex.field_j[5 * this.field_b / 250].draw(var2_int, var3);
                     return;
                   }
                   if (5 > this.field_g) {
-                    hk.field_a[this.field_g].f(-16 + var2_int, var3);
+                    hk.field_a[this.field_g].draw(-16 + var2_int, var3);
                     return;
                   }
                 } else {
                   if (this.field_h == 8) {
-                    AgeValidator.field_k[this.field_g].f(-16 + var2_int, var3 - 48);
+                    AgeValidator.field_k[this.field_g].draw(-16 + var2_int, var3 - 48);
                     return;
                   }
                   if (9 == this.field_h) {
@@ -248,7 +248,7 @@ final class gf {
                       var4 = 61;
                     }
                     if (0 <= this.field_i) {
-                      a.field_a[var4].f(var2_int, var3);
+                      a.field_a[var4].draw(var2_int, var3);
                       return;
                     }
                     a.field_a[var4].drawHorizontalFlip(var2_int, var3);
@@ -267,7 +267,7 @@ final class gf {
                       var5_ref_ea.drawHorizontalFlip(var2_int, -var5_ref_ea.field_A + (32 + var3));
                       return;
                     }
-                    var5_ref_ea.f(var2_int, var3 + (32 - var5_ref_ea.field_A));
+                    var5_ref_ea.draw(var2_int, var3 + (32 - var5_ref_ea.field_A));
                     return;
                   }
                   if (this.field_h == 19) {
@@ -287,7 +287,7 @@ final class gf {
                       var6.drawHorizontalFlip(var2_int, -var6.field_A + 32 + var3);
                       return;
                     }
-                    var6.f(var2_int, 32 + (var3 - var6.field_A));
+                    var6.draw(var2_int, 32 + (var3 - var6.field_A));
                     return;
                   }
                   if (10 != this.field_h) {
@@ -310,7 +310,7 @@ final class gf {
                         return;
                       }
                       if (!q.field_b[this.field_n][this.field_p].field_V) {
-                        a.field_a[62].f(var2_int, var3);
+                        a.field_a[62].draw(var2_int, var3);
                         return;
                       }
                     }
@@ -319,24 +319,24 @@ final class gf {
                 return;
               }
               if (0 != this.field_g) {
-                te.field_d[4 + this.field_g].f(-16 + var2_int, var3);
+                te.field_d[4 + this.field_g].draw(-16 + var2_int, var3);
               } else {
                 if (this.field_b < 250) {
-                  ne.field_O[this.field_b * 5 / 250].f(var2_int, var3);
+                  ne.field_O[this.field_b * 5 / 250].draw(var2_int, var3);
                 } else {
-                  ne.field_O[4].f(var2_int, var3);
+                  ne.field_O[4].draw(var2_int, var3);
                 }
               }
             } else {
               if (this.field_g != 0) {
-                te.field_d[4 + this.field_g].f(-16 + var2_int, var3);
+                te.field_d[4 + this.field_g].draw(-16 + var2_int, var3);
               } else {
                 if (!je.c(this.field_n, this.field_p, 3, 3)) {
                   if (this.field_b >= 240) {
-                    te.field_d[1].f(-16 + var2_int, var3);
+                    te.field_d[1].draw(-16 + var2_int, var3);
                   } else {
-                    te.field_d[0].f(-16 + var2_int, var3);
-                    te.field_d[this.field_b / 10 % 3 + 2].f(-16 + var2_int - 3 * this.field_b / 250, this.field_b * 3 / 250 + var3);
+                    te.field_d[0].draw(-16 + var2_int, var3);
+                    te.field_d[this.field_b / 10 % 3 + 2].draw(-16 + var2_int - 3 * this.field_b / 250, this.field_b * 3 / 250 + var3);
                   }
                 } else {
                   te.field_d[0].drawTransparentWithIntensity(var2_int - 16, var3, 128);

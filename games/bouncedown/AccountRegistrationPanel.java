@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends lc implements ki, rc, rf {
+final class AccountRegistrationPanel extends lc implements ki, WidgetActivationListener, NameSuggestionListener {
     private vc field_L;
     private ValidatedTextField field_A;
-    private wd field_D;
+    private InteractiveWidget field_D;
     private ValidatedTextField field_C;
     private ValidatedTextField field_F;
     static int[] field_I;
     private ff field_G;
     private ValidatedTextField field_E;
-    private wd field_K;
+    private InteractiveWidget field_K;
     private ValidatedTextField field_J;
     private ValidatedTextField field_B;
     static int field_H;
-    nd field_z;
+    NameSuggestionsPanel field_z;
 
     private final int a(lk param0, String param1, int param2, int param3, int param4) {
         hb var6 = null;
@@ -138,7 +138,7 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
@@ -232,8 +232,8 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         this.field_J = new ValidatedTextField("", (sk) null, 3);
         int var1 = 1;
         this.field_G = new ff("", (sk) null, var1 != 0);
-        this.field_D = new wd(vg.field_l, (sk) null);
-        this.field_K = new wd(AccountServiceResult.field_e, (sk) null);
+        this.field_D = new InteractiveWidget(vg.field_l, (sk) null);
+        this.field_K = new InteractiveWidget(AccountServiceResult.field_e, (sk) null);
         this.field_F.field_q = ej.field_e;
         this.field_B.field_q = ta.field_d;
         this.field_C.field_q = BufferedSocket.field_c;
@@ -287,7 +287,7 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         this.field_D.field_n = (sk) (this);
         this.b(this.field_D, true);
         this.b(this.field_K, true);
-        this.field_z = new nd((rf) (this));
+        this.field_z = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_z.b(150, 80, -60 - this.field_F.field_r + this.field_k - this.field_F.field_k, 60 + (this.field_F.field_r + this.field_F.field_k), 20 + this.field_F.field_i);
         this.b(this.field_z, true);
         this.b(var6 + (var3 + 55), 80, 496, 0, 0);
@@ -352,7 +352,7 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -367,7 +367,7 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
           if (param1 == 43) {
             return;
           }
-          this.a(-97);
+          this.onNameSuggestionsRefreshRequested(-97);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -481,9 +481,9 @@ final class AccountRegistrationPanel extends lc implements ki, rc, rf {
         return "</col></u>";
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         int discarded$0 = 0;
-        ((AccountNameAvailabilityValidator) (this.field_F.getFieldValidator(true))).i((byte) -122);
+        ((AccountNameAvailabilityValidator) (this.field_F.getFieldValidator(true))).invalidateCheckedName((byte) -122);
         if (param0 != -3814) {
           String var3 = (String) null;
           discarded$0 = this.a((lk) null, -19, -5, false, (String) null);

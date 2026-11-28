@@ -107,27 +107,27 @@ final class ng extends lk {
             this.a(-91, 67, (lk) null, -108);
           }
           while (var5_int > var6) {
-            param0.d(var6, param1);
+            param0.draw(var6, param1);
             var6 = var6 + param0.field_p;
           }
           gg.a(14756);
           if (this.field_D.field_p + param3 >= SoftwareRasterizer.field_f) {
             dl.a(80, this.field_F);
-            param0.d(-this.field_B, 0);
-            param0.d(this.field_G * 2 - this.field_B, 0);
-            this.field_E.e(0, 0);
+            param0.draw(-this.field_B, 0);
+            param0.draw(this.field_G * 2 - this.field_B, 0);
+            this.field_E.drawMultiply(0, 0);
             gg.a(14756);
-            this.field_F.d(param3, param1);
+            this.field_F.draw(param3, param1);
           }
           if (SoftwareRasterizer.field_a >= -this.field_D.field_p + var5_int) {
             dl.a(-103, this.field_F);
             for (var7 = this.field_h - this.field_D.field_p + this.field_B; var7 > 2 * this.field_G; var7 = var7 - 2 * this.field_G) {
             }
-            param0.d(-var7, 0);
-            param0.d(-var7 + this.field_G * 2, 0);
-            this.field_D.e(0, 0);
+            param0.draw(-var7, 0);
+            param0.draw(-var7 + this.field_G * 2, 0);
+            this.field_D.drawMultiply(0, 0);
             gg.a(14756);
-            this.field_F.d(-this.field_D.field_p + var5_int, param1);
+            this.field_F.draw(-this.field_D.field_p + var5_int, param1);
             return;
           }
           return;
@@ -151,7 +151,7 @@ final class ng extends lk {
         if (param0) {
           ng.resetStaticState(-28);
         }
-        this.field_E = this.field_D.a();
+        this.field_E = this.field_D.copyMirroredHorizontally();
         this.field_F = new RgbSprite(this.field_q >> 1, this.field_q);
     }
 

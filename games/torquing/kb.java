@@ -43,8 +43,8 @@ final class kb implements WidgetRenderer {
           }
           EditableTextField.a(var7, var6_int, param4.height, param4.width, false);
           var8 = wj.field_h[1];
-          if (param4 instanceof lg &&
-            ((lg) (param4)).field_A) {
+          if (param4 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param4)).field_A) {
             var8.drawAdditive((-var8.field_w + param4.width >> 1) + 1 + var6_int, (-var8.field_u + param4.height >> 1) + var7 + 1, 256);
           }
           if (!param4.g(2)) {

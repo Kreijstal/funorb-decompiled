@@ -27,7 +27,7 @@ final class nc {
             if (param0 == 7) {
               var3 = (var2.field_n + 480) * var2.field_r / 1920;
             }
-            var2.field_j.e(var2.field_l >> 2, 0, var3);
+            var2.field_j.drawWithOpacity(var2.field_l >> 2, 0, var3);
             var2 = (ik) (qc.field_Y.nextBackward(-24059));
           }
           if (!param1) {

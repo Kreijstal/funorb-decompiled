@@ -20,9 +20,9 @@ final class tf implements de {
           var8 = param4.field_j + param3;
           sk.a(var6_int, param4.field_i, param4.field_f, true, var8);
           var9 = FrameTimer.field_g[1];
-          if (param4 instanceof dk &&
-            ((dk) (param4)).field_z) {
-            var9.f((-var9.field_x + param4.field_i >> 1) + (var6_int + 1), (param4.field_f - var9.field_q >> 1) + 1 + var8, 256);
+          if (param4 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param4)).field_z) {
+            var9.drawAdditive((-var9.field_x + param4.field_i >> 1) + (var6_int + 1), (param4.field_f - var9.field_q >> 1) + 1 + var8, 256);
           }
           if (!param4.d(true)) {
             return;

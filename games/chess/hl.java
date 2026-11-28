@@ -338,7 +338,7 @@ class hl implements jm, mg {
         cf.b(SoftwareRasterizer.field_c, SoftwareRasterizer.field_h + 640 >> 1, 0, param0 ^ -416228335, -640 + SoftwareRasterizer.field_h >> 1);
         if (an.field_e > 0) {
           if (null != ig.field_h) {
-            ig.field_h.d(ql.field_d.field_mb, 0);
+            ig.field_h.drawOpaque(ql.field_d.field_mb, 0);
           }
           stackIn_9_0 = ql.field_d;
           stackIn_9_1 = false;
@@ -351,7 +351,7 @@ class hl implements jm, mg {
         }
         if (AccountServiceResult.field_c > 0) {
           if (ig.field_h != null) {
-            ig.field_h.d(fm.field_T.field_mb, 0);
+            ig.field_h.drawOpaque(fm.field_T.field_mb, 0);
           }
           stackIn_36_0 = fm.field_T;
           stackIn_36_1 = false;
@@ -364,7 +364,7 @@ class hl implements jm, mg {
         } else {
           if (AccountRequestState.field_c > 0) {
             if (ig.field_h != null) {
-              ig.field_h.d(fm.field_T.field_mb, 0);
+              ig.field_h.drawOpaque(fm.field_T.field_mb, 0);
             }
             stackIn_23_0 = fm.field_T;
             stackIn_23_1 = false;

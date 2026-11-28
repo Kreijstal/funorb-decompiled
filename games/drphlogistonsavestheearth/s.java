@@ -40,15 +40,15 @@ final class s {
           SoftwareRasterizer.clearRaster();
           vb.field_n = 0;
           DisplayNameSelectionPanel.g((byte) -119);
-          var2 = var1.a();
+          var2 = var1.copy();
           var3 = 0;
           do {
             if (var3 >= 15) {
-              vh.field_f.c();
-              var1.b(0, 0);
+              vh.field_f.bindAsRenderTarget();
+              var1.drawHalfSize(0, 0);
               break;
             }
-            var2.c(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
             var3++;
           } while (var4 == 0);
@@ -214,7 +214,7 @@ final class s {
               if (var31 != 0) {
                 if (stackIn_63_0 < stackIn_63_1) {
                   stackIn_72_0 = var18;
-                  stackIn_72_1 = LoginMenuScreen.field_L.length;
+                  stackIn_72_1 = NameSuggestionsPanel.field_L.length;
                   break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
@@ -260,7 +260,7 @@ final class s {
                   var26Lifetime1Lifetime1 = param5.field_o[var23Lifetime2];
                   ii.field_a[var23Lifetime2] = (var25Lifetime1Lifetime1 * var15 + (var24Lifetime1Lifetime1 * var12 + var18 * var26Lifetime1Lifetime1) >> 16) + var9;
                   ka.field_m[var23Lifetime2] = (var13 * var24Lifetime1Lifetime1 + (var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19) >> 16) + var10;
-                  hf.field_G[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var24Lifetime1Lifetime1 * var14 + var17 * var25Lifetime1Lifetime1) >> 16);
+                  InteractiveWidget.field_G[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var24Lifetime1Lifetime1 * var14 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var24Lifetime1Lifetime1 = param5.field_u[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param5.field_y[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param5.field_x[var23Lifetime2];
@@ -301,7 +301,7 @@ final class s {
                     break;
                   }
                   stackIn_72_0 = var18;
-                  stackIn_72_1 = LoginMenuScreen.field_L.length;
+                  stackIn_72_1 = NameSuggestionsPanel.field_L.length;
                   if (var31 != 0) {
                     break scanLoop1;
                   }
@@ -311,7 +311,7 @@ final class s {
                   var19 = param5.field_k[var18];
                   var20 = param5.field_B[var18];
                   var21Lifetime2 = param5.field_E[var18];
-                  LoginMenuScreen.field_L[var18] = var15 * var21Lifetime2 + var12 * var20 + var19 * var9 >> 16;
+                  NameSuggestionsPanel.field_L[var18] = var15 * var21Lifetime2 + var12 * var20 + var19 * var9 >> 16;
                   k.field_I[var18] = var13 * var20 + (var19 * var10 + var21Lifetime2 * var16) >> 16;
                   dd.field_k[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;

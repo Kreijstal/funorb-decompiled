@@ -96,12 +96,12 @@ final class gi {
             field_f = (CrossfadingMidiPcmStream) null;
           }
           if (ck.field_j != null) {
-            ck.field_j.field_M.a(args, (byte) -34);
+            ck.field_j.field_M.setNameSuggestions(args, (byte) -34);
           }
           if (ti.field_bb == null) {
             return;
           }
-          ti.field_bb.field_I.a(args, (byte) -34);
+          ti.field_bb.field_I.setNameSuggestions(args, (byte) -34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

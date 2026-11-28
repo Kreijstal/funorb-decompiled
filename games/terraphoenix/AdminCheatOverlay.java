@@ -79,7 +79,7 @@ final class AdminCheatOverlay {
           FrameTimer.field_f.drawCentred(qd.field_h[0], 320, 468, 13881286, 0);
           param2 = 76;
           param2 += 64;
-          pf.field_a[0].b(0, 0);
+          pf.field_a[0].draw(0, 0);
           param2 += 160;
           param0 -= 265;
           AccountRequestState.field_f.drawString("<col=fcfe7f>1.</col> " + qd.field_h[1], param0, param2, 16777215, 0);
@@ -103,7 +103,7 @@ final class AdminCheatOverlay {
             param0 = 320;
             param0 += 42;
             param2 += 32;
-            pf.field_a[1].b(0, 0);
+            pf.field_a[1].draw(0, 0);
             param2 += 9;
             for (var5 = 1; var5 <= 14; var5++) {
               if (var5 >= 10) {
@@ -122,7 +122,7 @@ final class AdminCheatOverlay {
                 FrameTimer.field_f.drawCentred(dd.field_O[0], 320, 468, 13881286, -1);
                 param2 = 76;
                 param2 += 32;
-                pf.field_a[3].b(0, 0);
+                pf.field_a[3].draw(0, 0);
                 param2 = param2 + pf.field_a[3].field_t;
                 param0 = 32;
                 param0 = 0;
@@ -147,13 +147,13 @@ final class AdminCheatOverlay {
                     param0 = 320;
                     param0 = 64;
                     param2 += 64;
-                    rh.field_b[5].b(32, param2 - 16);
+                    rh.field_b[5].draw(32, param2 - 16);
                     sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[1], 0);
                     param2 += 64;
-                    rh.field_b[7].b(32, -16 + param2);
+                    rh.field_b[7].draw(32, -16 + param2);
                     sj.a(16777215, 20, param2, 608, 14, param0, oi.field_M[2], 0);
                     param2 += 64;
-                    rh.field_b[8].b(32, param2 - 16);
+                    rh.field_b[8].draw(32, param2 - 16);
                     sj.a(16777215, param1 + 20, param2, 608, 14, param0, oi.field_M[3], 0);
                   } else {
                     if (var5 != 6) {
@@ -232,9 +232,9 @@ final class AdminCheatOverlay {
                         param0 = 320;
                         param0 = 32;
                         param2 += 32;
-                        nb.field_d[0].b(param0, param2 - 16);
+                        nb.field_d[0].draw(param0, param2 - 16);
                         param2 = param2 + 13 * (sj.a(16777215, param1 ^ 20, param2, 608, 14, param0 + 48, o.field_a[1], 0) + 1);
-                        nb.field_d[1].b(param0, param2 - 16);
+                        nb.field_d[1].draw(param0, param2 - 16);
                         param2 = param2 + (1 + sj.a(16777215, 20, param2, 608, 14, param0 + 48, o.field_a[2], 0)) * 13;
                         param2 = param2 + 13 * (sj.a(16777215, 20, param2, 608, 14, param0 + 48, o.field_a[3], 0) + 1);
                         param2 = param2 + (sj.a(16777215, 20, param2, 608, 14, param0 + 48, o.field_a[4], 0) + 1) * 13;
@@ -245,7 +245,7 @@ final class AdminCheatOverlay {
                       param0 = 320;
                       FrameTimer.field_f.drawCentred(k.field_d[0], 320, 468, 13881286, -1);
                       param0 = 20;
-                      pf.field_a[7].b(0, param2);
+                      pf.field_a[7].draw(0, param2);
                       param2 += 125;
                       AccountRequestState.field_f.drawString("1.", param0, param2 - 9, 16580223, 0);
                       param2 = param2 + (14 + 14 * sj.a(16777215, 20, param2, 620, 14, param0 + 16, k.field_d[1], 0));
@@ -266,22 +266,22 @@ final class AdminCheatOverlay {
                   param0 = 96;
                   param2 += 48;
                   sj.a(16777215, 20, param2, 610, 14, param0, MessageKeys.field_a[1], 0);
-                  rh.field_b[11].b(32, param2 - 16);
+                  rh.field_b[11].draw(32, param2 - 16);
                   param2 += 48;
-                  rh.field_b[0].b(32, param2 - 16);
+                  rh.field_b[0].draw(32, param2 - 16);
                   sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[2], 0);
                   param2 += 48;
-                  rh.field_b[1].b(32, param2 - 16);
+                  rh.field_b[1].draw(32, param2 - 16);
                   sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[3], 0);
                   param2 += 48;
-                  rh.field_b[3].b(32, -16 + param2);
+                  rh.field_b[3].draw(32, -16 + param2);
                   sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[4], 0);
                   param2 += 48;
-                  rh.field_b[6].b(32, -16 + param2);
+                  rh.field_b[6].draw(32, -16 + param2);
                   sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[5], 0);
                   param2 += 48;
-                  rh.field_b[9].b(32, -16 + param2);
-                  rh.field_b[10].b(32, 4 + param2);
+                  rh.field_b[9].draw(32, -16 + param2);
+                  rh.field_b[10].draw(32, 4 + param2);
                   param2 += 16;
                   sj.a(16777215, 20, param2, 608, 14, param0, MessageKeys.field_a[6], 0);
                 }
@@ -290,7 +290,7 @@ final class AdminCheatOverlay {
               param0 = 320;
               param2 = 76;
               FrameTimer.field_f.drawCentred(mb.field_p[0], 320, 468, 13881286, -1);
-              pf.field_a[2].b(0, 0);
+              pf.field_a[2].draw(0, 0);
               param0 += 64;
               param2 += 32;
               param2 -= 32;

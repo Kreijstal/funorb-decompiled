@@ -67,7 +67,7 @@ final class bd {
             if (param4.field_a == 2) {
               var7 = var7 + (param1.height - this.field_c.field_u);
             }
-            this.field_c.b(var6_int, var7);
+            this.field_c.draw(var6_int, var7);
           }
           var6 = param4.b(param1, 32032);
           if (var6 != null &&

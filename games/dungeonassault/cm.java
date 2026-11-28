@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends ii implements pf, vg {
-    private ck field_N;
+final class cm extends ii implements pf, WidgetActivationListener {
+    private InteractiveWidget field_N;
     static int field_P;
     private bh field_L;
     private AccountCreationResultPanel field_O;
@@ -21,7 +21,7 @@ final class cm extends ii implements pf, vg {
         return "</col></u>";
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -199,7 +199,7 @@ final class cm extends ii implements pf, vg {
 
     final boolean a(lm param0, char param1, int param2, byte param3) {
         RuntimeException var5 = null;
-        ck var6 = null;
+        InteractiveWidget var6 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -219,8 +219,8 @@ final class cm extends ii implements pf, vg {
             return stackIn_9_0;
           }
           if (param3 < 55) {
-            var6 = (ck) null;
-            this.a((ck) null, (byte) 8, 78, 7, -119);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated((InteractiveWidget) null, (byte) 8, 78, 7, -119);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -246,7 +246,7 @@ final class cm extends ii implements pf, vg {
         int var6 = 0;
         try {
           this.field_O = param0;
-          this.field_N = new ck(gl.field_Jb, (pg) null);
+          this.field_N = new InteractiveWidget(gl.field_Jb, (pg) null);
           this.field_N.field_o = (ca) ((Object) new na());
           var7 = jk.a(new String[]{this.a(120), this.i(115)}, nj.field_a, 30496);
           var3 = 20;

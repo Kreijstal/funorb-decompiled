@@ -118,11 +118,11 @@ abstract class MixedSupport043 {
         RenderingSupport002.performAction0243(integerArgument1, 2, 12, 18 + integerArgument2, integerArgument3 + 55, -2, -1);
         RenderingSupport002.performAction0243(integerArgument1, 2, 8, 18 + integerArgument2, 36 + (integerArgument3 + 1), -2, -1);
         RenderingSupport002.performAction0243(integerArgument1, 2, 2, integerArgument2, 1 + integerArgument3 + 72, -1, -2);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].performAction0280(integerArgument2 - 18, 72 + integerArgument3, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].performAction0280(-36 + integerArgument2, integerArgument3 + 72, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].drawScaled(integerArgument2 - 18, 72 + integerArgument3, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].drawScaled(-36 + integerArgument2, integerArgument3 + 72, 18, 18);
         integerLocal5 = 16 / ((59 - integerArgument6) / 43);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].performAction0280(integerArgument2, integerArgument3 + 54, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].performAction0280(integerArgument2 - 18, integerArgument3 + integerLocal1 + integerLocal2, 18, 18 - integerLocal2);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].drawScaled(integerArgument2, integerArgument3 + 54, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[integerArgument1][2].drawScaled(integerArgument2 - 18, integerArgument3 + integerLocal1 + integerLocal2, 18, 18 - integerLocal2);
     }
 
     static {

@@ -212,27 +212,27 @@ final class ib extends fj {
           var5_int = this.field_F + param2;
           TunnelMesh.pushAndIntersectRasterClip(param2 + this.field_K.field_u, -this.field_K.field_u + var5_int, param3 + this.field_z, param3, 14907);
           for (var6 = -this.field_H + param2; var6 < var5_int; var6 = var6 + param1.field_u) {
-            param1.d(var6, param3);
+            param1.draw(var6, param3);
           }
           var7 = -39 % ((param0 - 61) / 63);
           ib.b(false);
           if (SoftwareRasterizer.field_c <= this.field_K.field_u + param2) {
             vm.a(this.field_L, -8409);
-            param1.d(-this.field_H, 0);
-            param1.d(-this.field_H + this.field_P * 2, 0);
-            this.field_U.a(0, 0);
+            param1.draw(-this.field_H, 0);
+            param1.draw(-this.field_H + this.field_P * 2, 0);
+            this.field_U.drawMultiply(0, 0);
             ib.b(false);
-            this.field_L.d(param2, param3);
+            this.field_L.draw(param2, param3);
           }
           if (SoftwareRasterizer.field_i >= var5_int - this.field_K.field_u) {
             vm.a(this.field_L, -8409);
             for (var7Lifetime1 = -this.field_K.field_u + this.field_F + this.field_H; 2 * this.field_P < var7Lifetime1; var7Lifetime1 = var7Lifetime1 - this.field_P * 2) {
             }
-            param1.d(-var7Lifetime1, 0);
-            param1.d(-var7Lifetime1 + 2 * this.field_P, 0);
-            this.field_K.a(0, 0);
+            param1.draw(-var7Lifetime1, 0);
+            param1.draw(-var7Lifetime1 + 2 * this.field_P, 0);
+            this.field_K.drawMultiply(0, 0);
             ib.b(false);
-            this.field_L.d(var5_int - this.field_K.field_u, param3);
+            this.field_L.draw(var5_int - this.field_K.field_u, param3);
             return;
           }
           return;
@@ -307,7 +307,7 @@ final class ib extends fj {
     private final void g(byte param0) {
         this.field_X = new RgbSprite[]{this.b(this.field_Z, (byte) -81, this.field_I), this.b(this.field_S, (byte) -120, this.field_Y)};
         this.field_K = this.f(124);
-        this.field_U = this.field_K.b();
+        this.field_U = this.field_K.copyMirroredHorizontally();
         this.field_L = new RgbSprite(this.field_z >> 1, this.field_z);
         if (param0 >= -105) {
           this.field_S = -14;

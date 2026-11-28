@@ -44,11 +44,11 @@ final class PcmOutputWorker implements Runnable {
         field_f = null;
     }
 
-    static int a(int param0, int param1) {
+    static int bitwiseAnd(int param0, int param1) {
         return param0 & param1;
     }
 
-    final static float a(byte param0, float param1, float param2, float param3) {
+    final static float moveFloatTowardTarget(byte param0, float param1, float param2, float param3) {
         if (param0 > 0) {
           field_c = (PcmSample[]) null;
         }

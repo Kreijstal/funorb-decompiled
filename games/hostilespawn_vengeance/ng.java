@@ -209,7 +209,7 @@ final class ng extends IntrusiveNode {
                     }
                     var46 = (int)(24.0 * (var38 * var44 + var7));
                     var47 = (int)(24.0 * (var9 + var44 * var40));
-                    stackIn_36_0 = (!var33_ref_oj.field_u.d(var42, var43, var46, var47)) ? 0 : 1;
+                    stackIn_36_0 = (!var33_ref_oj.field_u.isOpaqueAt(var42, var43, var46, var47)) ? 0 : 1;
                     var37 = stackIn_36_0;
                     if (var37 != 0) {
                       var9 = var9 + var44 * var40;

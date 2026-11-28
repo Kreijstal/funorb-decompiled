@@ -505,7 +505,7 @@ final class ue {
           }
           var2Lifetime97 = Bzip2State.a((byte) -2, "benefits");
           if (var2Lifetime97 != null) {
-            ua.field_E = Archive.decodeCp1252(true, var2Lifetime97);
+            NameSuggestionsPanel.field_E = Archive.decodeCp1252(true, var2Lifetime97);
           }
           ch.field_a = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

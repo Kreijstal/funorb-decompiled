@@ -55,7 +55,7 @@ final class jf {
           if (150 > jh.field_z) {
             field_a.drawHalfSize(var3, var4);
           } else {
-            cl.field_a.e(15 + var3, 10 + var4, var5);
+            cl.field_a.drawWithOpacity(15 + var3, 10 + var4, var5);
           }
           var6 = jh.field_z - 125;
           if (var6 <= 0) {
@@ -65,7 +65,7 @@ final class jf {
               if (20 > var6) {
                 var7 = 256 * var6 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7 >> 8);
             }
             return;
           }
@@ -87,7 +87,7 @@ final class jf {
               if (20 > var6) {
                 var7Lifetime8 = 256 * var6 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime8 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime8 >> 8);
             }
             return;
           }
@@ -97,7 +97,7 @@ final class jf {
             if (20 > var6Lifetime4) {
               var7Lifetime9 = 256 * var6Lifetime4 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime9 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime9 >> 8);
           }
           return;
         }
@@ -111,7 +111,7 @@ final class jf {
               if (20 > var6Lifetime1) {
                 var7Lifetime1 = 256 * var6Lifetime1 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
             }
             return;
           }
@@ -122,7 +122,7 @@ final class jf {
               if (20 > var6Lifetime1) {
                 var7Lifetime1Lifetime1 = 256 * var6Lifetime1 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime1 >> 8);
             }
             return;
           }
@@ -135,7 +135,7 @@ final class jf {
               if (20 > var6Lifetime1) {
                 var7Lifetime1Lifetime2 = 256 * var6Lifetime1 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime2 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime2 >> 8);
             }
             return;
           }
@@ -147,7 +147,7 @@ final class jf {
               if (20 > var6Lifetime1) {
                 var7Lifetime1Lifetime3 = 256 * var6Lifetime1 / 20;
               }
-              de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime3 >> 8);
+              de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime3 >> 8);
             }
             return;
           }
@@ -159,11 +159,11 @@ final class jf {
             if (20 > var6Lifetime1Lifetime1) {
               var7Lifetime1Lifetime5 = 256 * var6Lifetime1Lifetime1 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime5 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime1Lifetime5 >> 8);
           }
           return;
         }
-        cl.field_a.e(15 + var3, 10 + var4, var5);
+        cl.field_a.drawWithOpacity(15 + var3, 10 + var4, var5);
         var6Lifetime2 = jh.field_z - 125;
         if (var6Lifetime2 <= 0) {
           var6Lifetime2 = -140 + jh.field_z;
@@ -172,7 +172,7 @@ final class jf {
             if (20 > var6Lifetime2) {
               var7Lifetime2 = 256 * var6Lifetime2 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime2 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime2 >> 8);
           }
           return;
         }
@@ -183,7 +183,7 @@ final class jf {
             if (20 > var6Lifetime2) {
               var7Lifetime3 = 256 * var6Lifetime2 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime3 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime3 >> 8);
           }
           return;
         }
@@ -196,7 +196,7 @@ final class jf {
             if (20 > var6Lifetime2) {
               var7Lifetime4Lifetime1 = 256 * var6Lifetime2 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime4Lifetime1 >> 8);
           }
           return;
         }
@@ -208,7 +208,7 @@ final class jf {
             if (20 > var6Lifetime2) {
               var7Lifetime5 = 256 * var6Lifetime2 / 20;
             }
-            de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime5 >> 8);
+            de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime5 >> 8);
           }
           return;
         }
@@ -220,7 +220,7 @@ final class jf {
           if (20 > var6Lifetime3) {
             var7Lifetime7 = 256 * var6Lifetime3 / 20;
           }
-          de.field_a.e(15 + var3, var4 + 10, var5 * var7Lifetime7 >> 8);
+          de.field_a.drawWithOpacity(15 + var3, var4 + 10, var5 * var7Lifetime7 >> 8);
         }
     }
 

@@ -110,10 +110,10 @@ final class ke extends si {
         int var5 = 0;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
-          ua.field_L = ua.field_L + 65536;
-          while (PcmOutputWorker.a(ua.field_L, uc.field_b, 1513551664) >= 65536) {
+          NameSuggestionsPanel.field_L = NameSuggestionsPanel.field_L + 65536;
+          while (PcmOutputWorker.multiplyFixed16(NameSuggestionsPanel.field_L, uc.field_b, 1513551664) >= 65536) {
             ArchiveSource.field_a = ArchiveSource.field_a + 1;
-            ua.field_L = ua.field_L - uc.field_b;
+            NameSuggestionsPanel.field_L = NameSuggestionsPanel.field_L - uc.field_b;
           }
           var2_int = -1;
           if (!param1) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends wd {
+final class ff extends InteractiveWidget {
     static double field_C;
     static FrameTimer field_D;
 
@@ -78,9 +78,9 @@ final class ff extends wd {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(param0, param1, (byte) -109, param3);
+        super.activateFromInput(param0, param1, (byte) -109, param3);
         if (param2 < -77) {
           return;
         }

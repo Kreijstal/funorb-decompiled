@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends aj implements hl, df {
+final class ge extends aj implements hl, WidgetActivationListener {
     private le field_z;
     static sh field_A;
     static boolean field_x;
-    private lj field_y;
+    private InteractiveWidget field_y;
     private AccountCreationResultPanel field_w;
 
     final boolean a(int param0, UiWidget param1, byte param2, char param3) {
@@ -52,7 +52,7 @@ final class ge extends aj implements hl, df {
         }
     }
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         le var7 = null;
         RuntimeException stackIn_7_0 = null;
@@ -109,7 +109,7 @@ final class ge extends aj implements hl, df {
         int var6 = 0;
         try {
           this.field_w = param0;
-          this.field_y = new lj(qe.field_I, (ma) null);
+          this.field_y = new InteractiveWidget(qe.field_I, (ma) null);
           this.field_y.field_q = (WidgetRenderer) ((Object) new qa());
           var7 = ij.a(ua.field_b, new String[]{this.l(300), this.m(-71)}, (byte) -123);
           var3 = 20;

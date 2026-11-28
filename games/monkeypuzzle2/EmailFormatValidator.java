@@ -109,7 +109,7 @@ final class EmailFormatValidator extends TextFieldValidator {
               var6 = 32 * (var4 - var5 * 20);
               var5 = var5 * 32;
               SoftwareRasterizer.setClip(var6, var5, var6 + 32, 32 + var5);
-              param2.a(0, 0);
+              param2.drawOpaque(0, 0);
             }
           }
           SoftwareRasterizer.resetClip();

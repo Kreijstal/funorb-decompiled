@@ -279,18 +279,18 @@ final class BufferedSocket implements Runnable {
           }
           var9Lifetime1 = var17.field_t;
           r.k(3029);
-          var17.e();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.e();
-          var17.d(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.e();
-          var17.d(-var17.field_w + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_w + var9Lifetime1, 0);
           var12 = new RgbSprite(var17.field_w - var9Lifetime1 * 2, var9Lifetime1);
-          var12.e();
-          var17.d(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           fd.a(28773);
           bj.field_db = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

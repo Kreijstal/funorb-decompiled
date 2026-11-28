@@ -57,12 +57,12 @@ final class mf {
         Boolean var1Lifetime1;
         if (!param0) {
           field_b = (RgbSprite) null;
-          var1 = bb.field_A;
-          bb.field_A = null;
+          var1 = InteractiveWidget.field_A;
+          InteractiveWidget.field_A = null;
           return var1;
         }
-        var1Lifetime1 = bb.field_A;
-        bb.field_A = null;
+        var1Lifetime1 = InteractiveWidget.field_A;
+        InteractiveWidget.field_A = null;
         return var1Lifetime1;
     }
 

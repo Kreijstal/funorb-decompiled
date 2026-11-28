@@ -216,7 +216,7 @@ final class ina extends bi {
         var6 = EventEffect.field_g[var2];
         var7 = DiveBomberAnimation.field_y[var2];
         var8 = this.a(872364388, var6);
-        var8.a((210 - var8.field_n >> 1) + 390, -(var8.field_o >> 1) + 235, 160);
+        var8.drawWithOpacity((210 - var8.field_n >> 1) + 390, -(var8.field_o >> 1) + 235, 160);
         if (this.b(var2, true)) {
           fn.field_n.drawCentred(DualLinkNode.field_g, 495, 265, 10, -1);
         } else {
@@ -376,7 +376,7 @@ final class ina extends bi {
               }
             }
             this.field_l = (Sprite) ((Object) new ArgbSprite(var5 << 1, var6 << 1));
-            this.field_l.b();
+            this.field_l.bindAsRenderTarget();
             var8Lifetime1 = DiveBomberAnimation.a(768, m.field_a, -2147483648) - 384;
             MassPoisonEvent.a(false, var6 << 3, var5 << 4, 4096, 4096, var6 << 4, var5 << 3, var8Lifetime1, var7);
             ((BitmapFont) ((Object) var3)).drawCentred(param1, var5, (9 * var6 >> 3) - 2, -16711423, -1);

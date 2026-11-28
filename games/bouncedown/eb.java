@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends lc implements ki, rc {
-    private wd field_H;
+final class eb extends lc implements ki, WidgetActivationListener {
+    private InteractiveWidget field_H;
     static String field_D;
     static String field_z;
     private AccountCreationResultPanel field_A;
@@ -10,7 +10,7 @@ final class eb extends lc implements ki, rc {
     static String field_F;
     static String[] field_E;
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         String discarded$1 = null;
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
@@ -167,7 +167,7 @@ final class eb extends lc implements ki, rc {
         int var6 = 0;
         try {
           this.field_A = param0;
-          this.field_H = new wd(BufferedSocket.field_i, (sk) null);
+          this.field_H = new InteractiveWidget(BufferedSocket.field_i, (sk) null);
           this.field_H.field_j = (fc) ((Object) new jh());
           var7 = BufferedRandomAccessFile.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;

@@ -258,7 +258,7 @@ final class cj extends rb {
           SoftwareRasterizer.clearRaster();
           fb.field_a = 0;
           PacketBuffer.a((byte) -108);
-          var2 = var1.b();
+          var2 = var1.copy();
           if (param0 <= 81) {
             field_e = (AccountRequestState) null;
           }
@@ -266,7 +266,7 @@ final class cj extends rb {
             var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ha.field_E.a();
+          ha.field_E.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           GameShell.m(124);
         } catch (RuntimeException runtimeException) {

@@ -218,7 +218,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var5 = -var4 + this.position - 1;
         if (var5 != 0) {
-          return bd.decodeCp1252String(255, var4, this.payload, var5);
+          return NameSuggestionsPanel.decodeCp1252String(255, var4, this.payload, var5);
         }
         return "";
     }
@@ -705,11 +705,11 @@ class PacketBuffer extends IntrusiveNode {
           return "";
         }
         if (!param0) {
-          return bd.decodeCp1252String(255, var2, this.payload, var3);
+          return NameSuggestionsPanel.decodeCp1252String(255, var2, this.payload, var3);
         }
         var4 = (String) null;
         this.writeString((String) null, 84);
-        return bd.decodeCp1252String(255, var2, this.payload, var3);
+        return NameSuggestionsPanel.decodeCp1252String(255, var2, this.payload, var3);
     }
 
     final int readSignedSmart(byte param0) {

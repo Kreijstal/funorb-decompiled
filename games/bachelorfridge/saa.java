@@ -614,7 +614,7 @@ final class saa {
         int var5 = 0;
         var5 = BachelorFridge.field_y;
         try {
-          DirectByteStorage.field_j.c(param1, 0);
+          DirectByteStorage.field_j.drawOpaque(param1, 0);
           Math.sin(0.5 * ((double)ResourceArchive.field_b / 10.0));
           if (!this.field_p) {
             if (sn.field_m.field_T &&
@@ -624,7 +624,7 @@ final class saa {
               bh.field_r.draw(param1 + 418, 41);
             }
           }
-          iea.field_a.a(param1 + 524, 420, 64);
+          iea.field_a.drawWithOpacity(param1 + 524, 420, 64);
           BattleState.field_u.draw(param1 + 540, 424);
           dp.field_n[5].draw(524 + param1, 300);
           if (this.field_n <= 0) {

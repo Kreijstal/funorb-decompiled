@@ -180,7 +180,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = LoginMenuScreen.field_N;
+          var4 = NameSuggestionsPanel.field_N;
           while (var3_int < sg.field_f.length) {
             var5 = lg.field_a[var3_int];
             if (0 > var5) {

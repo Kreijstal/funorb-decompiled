@@ -270,7 +270,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = oh.field_c;
             return stackIn_6_0;
           }
-          if (li.a((byte) -82, var5)) {
+          if (NameSuggestionsPanel.a((byte) -82, var5)) {
             stackIn_10_0 = rd.field_j;
             return stackIn_10_0;
           }

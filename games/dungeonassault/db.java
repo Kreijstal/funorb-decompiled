@@ -216,13 +216,13 @@ final class db extends DungeonAssaultScreen {
         this.field_s[param1].b(var9, 32, var10);
         if (var4 == 22 &&
           ak.field_o[0] > gm.field_d.field_m) {
-          hj.field_T.h(-20 + var10, IntrusiveNode.field_c.field_H + var9 - 15);
+          hj.field_T.draw(-20 + var10, IntrusiveNode.field_c.field_H + var9 - 15);
         }
         if (param0) {
           if (param1 != nf.field_y) {
             this.a(param1, (byte) -121);
           }
-          ConfirmedEmailAvailabilityValidator.field_r.b(var10, var9, 64);
+          ConfirmedEmailAvailabilityValidator.field_r.drawAdditive(var10, var9, 64);
           var13 = (int)((1.0 + te.a(mo.field_a)) * 128.0);
           if (var13 < 0) {
             var13 = 0;
@@ -230,7 +230,7 @@ final class db extends DungeonAssaultScreen {
           if (var13 > 256) {
             var13 = 256;
           }
-          DiskArchiveRequest.field_F.b(var10, var9, var13);
+          DiskArchiveRequest.field_F.drawAdditive(var10, var9, var13);
         }
     }
 
@@ -376,11 +376,11 @@ final class db extends DungeonAssaultScreen {
           rp.a(4, var5 - var4, (byte) 108, var4, var7, kc.field_S, var6 - 2);
           db.a(var4, -2 + var6, var5 - var4, var7, 224, 64, 3, 128);
           if (DungeonAssault.field_K != 0) {
-            of.field_j.h(-of.field_j.field_y + (var4 + var5) >> 1, var6);
+            of.field_j.draw(-of.field_j.field_y + (var4 + var5) >> 1, var6);
             var6 += 4;
           }
         } else {
-          of.field_j.h(-of.field_j.field_y + (var4 + var5) >> 1, var6);
+          of.field_j.draw(-of.field_j.field_y + (var4 + var5) >> 1, var6);
           var6 += 4;
         }
     }
@@ -826,7 +826,7 @@ final class db extends DungeonAssaultScreen {
         var2 = var5;
         SoftwareRasterizer.saveClip(var7);
         SoftwareRasterizer.setClip(41, 48, 599, 416);
-        am.field_a.h(-(am.field_a.field_E / 2) + 320, 48);
+        am.field_a.draw(-(am.field_a.field_E / 2) + 320, 48);
         SoftwareRasterizer.restoreClip(var7);
         jh.b();
         this.field_s = new tf[this.field_w.field_i];
@@ -876,14 +876,14 @@ final class db extends DungeonAssaultScreen {
         var12 = new RgbSprite(var9, var10);
         var13 = new RgbSprite(var9, var10);
         jh.c();
-        var11.e();
+        var11.bindAsRenderTarget();
         field_v.drawString(var8, 0, la.field_b.field_H, var6, -1);
-        var12.e();
+        var12.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
-        var11.e(0, 0, 16744448);
-        var13.e();
+        var11.drawSilhouette(0, 0, 16744448);
+        var13.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
-        var11.e(0, 0, var7);
+        var11.drawSilhouette(0, 0, var7);
         var14 = -55 % ((-49 - param2) / 36);
         jh.b();
         var15 = rb.a(16, var12, 255, (byte) 81);
@@ -937,7 +937,7 @@ final class db extends DungeonAssaultScreen {
         SoftwareRasterizer.setClip(41, 48, 599, 416);
         var3 = 10;
         var4 = 88;
-        le.field_f.h(40 + var3, var4 - 28);
+        le.field_f.draw(40 + var3, var4 - 28);
         SecondaryNodeDeque.a(32, 360, 220, 120);
         SoftwareRasterizer.restoreClip(var11);
         SoftwareRasterizer.fillRectangleAlpha(80, 250, 256, 85, 1118481, 128);

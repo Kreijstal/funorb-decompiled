@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg extends dk {
+final class jg extends InteractiveWidget {
     private int field_G;
     static int field_A;
     static String field_I;
@@ -76,22 +76,22 @@ final class jg extends dk {
               }
             }
           }
-          var16.b(112, 144, var16.field_x << 4, var16.field_q << 4, -this.field_G << 10, 4096);
+          var16.drawRotatedAboutBilinear(112, 144, var16.field_x << 4, var16.field_q << 4, -this.field_G << 10, 4096);
           wf.a(-120);
-          EditableTextField.field_H.f(var5 - var16.field_x, -var16.field_q + var6, 256);
+          EditableTextField.field_H.drawAdditive(var5 - var16.field_x, -var16.field_q + var6, 256);
           return;
         }
         if (var8 != cd.field_a) {
           if (var8 == BufferedSocket.field_n) {
             var14 = FrameTimer.field_g[2];
-            var14.f(var5 - (var14.field_u >> 1), var6 - (var14.field_v >> 1), 256);
+            var14.drawAdditive(var5 - (var14.field_u >> 1), var6 - (var14.field_v >> 1), 256);
             return;
           }
           if (var8 != bf.field_x) {
             return;
           }
           var13 = FrameTimer.field_g[1];
-          var13.f(-(var13.field_u >> 1) + var5, -(var13.field_v >> 1) + var6, 256);
+          var13.drawAdditive(-(var13.field_u >> 1) + var5, -(var13.field_v >> 1) + var6, 256);
           return;
         }
         var15 = FrameTimer.field_g[0];
@@ -114,9 +114,9 @@ final class jg extends dk {
             }
           }
         }
-        var15.b(112, 144, var15.field_x << 4, var15.field_q << 4, -this.field_G << 10, 4096);
+        var15.drawRotatedAboutBilinear(112, 144, var15.field_x << 4, var15.field_q << 4, -this.field_G << 10, 4096);
         wf.a(-120);
-        EditableTextField.field_H.f(var5 - var15.field_x, -var15.field_q + var6, 256);
+        EditableTextField.field_H.drawAdditive(var5 - var15.field_x, -var15.field_q + var6, 256);
     }
 
     final boolean a(int param0, UiWidget param1) {

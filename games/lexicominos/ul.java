@@ -485,19 +485,19 @@ final class ul extends IntrusiveNode {
           }
           var9Lifetime1 = var18.field_u;
           ja.b((byte) -116);
-          var18.b();
+          var18.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
           var16 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
-          var19.b();
-          var18.b(0, 0);
+          var19.bindAsRenderTarget();
+          var18.drawOpaque(0, 0);
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
-          var11.b();
-          var18.b(-var18.field_p + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var18.drawOpaque(-var18.field_p + var9Lifetime1, 0);
           int var12 = -33 / ((param3 - 38) / 59);
           var13 = new RgbSprite(var18.field_p - var9Lifetime1 * 2, var9Lifetime1);
-          var13.b();
-          var18.b(-var9Lifetime1, 0);
+          var13.bindAsRenderTarget();
+          var18.drawOpaque(-var9Lifetime1, 0);
           pd.a(-22949);
           uc.field_hb = new RgbSprite[]{var16, var13, var11};
         } catch (RuntimeException runtimeException) {

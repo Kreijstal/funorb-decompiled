@@ -301,14 +301,14 @@ final class jk {
         int var4_int = 0;
         RgbSprite var4 = null;
         int var5 = Confined.field_J ? 1 : 0;
-        int var1 = sd.field_f[0] * rg.field_I[0];
+        int var1 = sd.field_f[0] * InteractiveWidget.field_I[0];
         byte[] var2 = rj.field_f[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = an.field_p[va.a(255, (int) var2[var4_int])];
         }
         if (param0 == 255) {
-          var4 = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], rg.field_I[0], sd.field_f[0], var3);
+          var4 = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], InteractiveWidget.field_I[0], sd.field_f[0], var3);
           StageDirector.clearIndexedSpriteDecodeBuffers(false);
           return var4;
         }

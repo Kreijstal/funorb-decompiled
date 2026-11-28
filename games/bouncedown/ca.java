@@ -68,7 +68,7 @@ final class ca {
                 he.field_n[var2Lifetime3].field_l = 1 + var3;
                 he.field_n[var2Lifetime3].field_q = -4.0;
                 he.field_n[var2Lifetime3].field_t = -1;
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   EmailFormatValidator.field_l.playSample(il.field_a[9], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (he.field_n[var3].field_i <= 0) {
@@ -81,7 +81,7 @@ final class ca {
                 he.field_n[var3].field_l = var2Lifetime3 + 1;
                 he.field_n[var2Lifetime3].field_q = -4.0;
                 he.field_n[var2Lifetime3].field_t = -1;
-                if (wd.field_x) {
+                if (InteractiveWidget.field_x) {
                   EmailFormatValidator.field_l.playSample(il.field_a[11], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (0 >= he.field_n[var2Lifetime3].field_i) {
@@ -113,10 +113,10 @@ final class ca {
                 }
                 if (he.field_n[var2Lifetime4].field_d > 0.0 ||
                   0.0 < he.field_n[var6].field_d) {
-                  if (wd.field_x) {
+                  if (InteractiveWidget.field_x) {
                     EmailFormatValidator.field_l.playSample(il.field_a[11], 100, DiskArchiveRequest.field_w * 96 / 256);
                   } else {
-                    if (wd.field_x) {
+                    if (InteractiveWidget.field_x) {
                       EmailFormatValidator.field_l.playSample(il.field_a[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                     }
                   }

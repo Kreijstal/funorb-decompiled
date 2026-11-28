@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends lj {
+final class ve extends InteractiveWidget {
     private FieldValidator field_A;
     static String field_D;
     static boolean[] field_B;
@@ -79,32 +79,32 @@ final class ve extends lj {
           if (null == EmailFormatValidator.field_l) {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
           if (var10 > EmailFormatValidator.field_l.field_n) {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
           if (EmailFormatValidator.field_l.field_m < var11) {
             EmailFormatValidator.field_l = new Sprite(var10, var11);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
+            var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
             return;
           }
           CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
-          var16.a(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
+          var16.drawRotatedAbout(112, 144, var16.field_r << 4, var16.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
-          EmailFormatValidator.field_l.c(-var16.field_r + var5, var6 - var16.field_s, 256);
+          EmailFormatValidator.field_l.drawAdditive(-var16.field_r + var5, var6 - var16.field_s, 256);
           return;
         }
         if (var8 == fi.field_u) {
@@ -114,42 +114,42 @@ final class ve extends lj {
           if (null == EmailFormatValidator.field_l) {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
           if (var10Lifetime1 > EmailFormatValidator.field_l.field_n) {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
           if (EmailFormatValidator.field_l.field_m < var11Lifetime1) {
             EmailFormatValidator.field_l = new Sprite(var10Lifetime1, var11Lifetime1);
             CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
-            var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
+            var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
             fi.c(true);
-            EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+            EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
             return;
           }
           CrossfadingMidiPcmStream.a(EmailFormatValidator.field_l, 256);
           SoftwareRasterizer.clearRaster();
-          var17.a(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
+          var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_s << 4, -this.field_C << 10, 4096);
           fi.c(true);
-          EmailFormatValidator.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
+          EmailFormatValidator.field_l.drawAdditive(-var17.field_r + var5, var6 - var17.field_s, 256);
           return;
         }
         if (var8 == SocketConnector.field_d) {
           var14 = ai.field_b[2];
-          var14.c(var5 - (var14.field_n >> 1), var6 - (var14.field_m >> 1), 256);
+          var14.drawAdditive(var5 - (var14.field_n >> 1), var6 - (var14.field_m >> 1), 256);
           return;
         }
         if (hi.field_b == var8) {
           var13 = ai.field_b[1];
-          var13.c(var5 - (var13.field_n >> 1), var6 - (var13.field_m >> 1), 256);
+          var13.drawAdditive(var5 - (var13.field_n >> 1), var6 - (var13.field_m >> 1), 256);
           return;
         }
     }

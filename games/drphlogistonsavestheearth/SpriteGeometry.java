@@ -14,7 +14,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     static int[] field_E;
     int field_z;
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRotatedAboutNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     public static void g(int param0) {
         if (param0 < -44) {
@@ -41,7 +41,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           param4 = (param4 << 4) + (15 & var6);
           var7 = this.field_C << 3;
           param1 = (param1 << 4) + (15 & var7);
-          this.a(var6, var7, param4, param1, param3, param2);
+          this.drawRotatedAboutNearest(var6, var7, param4, param1, param3, param2);
           return;
         }
         this.field_z = 65;
@@ -49,7 +49,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         param4 = (param4 << 4) + (15 & var6Lifetime1);
         var7Lifetime1 = this.field_C << 3;
         param1 = (param1 << 4) + (15 & var7Lifetime1);
-        this.a(var6Lifetime1, var7Lifetime1, param4, param1, param3, param2);
+        this.drawRotatedAboutNearest(var6Lifetime1, var7Lifetime1, param4, param1, param3, param2);
     }
 
     final static void h(int param0) {

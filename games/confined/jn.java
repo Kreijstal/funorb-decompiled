@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends ga implements el {
+final class jn extends ga implements WidgetActivationListener {
     private String field_Q;
-    private rg[] field_L;
+    private InteractiveWidget[] field_L;
     private int[] field_H;
     static String field_R;
     static String field_O;
@@ -12,12 +12,12 @@ final class jn extends ga implements el {
     static PcmSample field_U;
     private dh field_S;
 
-    final rg a(String param0, uk param1, boolean param2) {
-        rg var4 = null;
+    final InteractiveWidget a(String param0, uk param1, boolean param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        rg stackIn_2_0 = null;
-        rg stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -26,10 +26,10 @@ final class jn extends ga implements el {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            stackIn_2_0 = (rg) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
-          var4 = new rg(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.field_n = (fe) ((Object) new je());
           var5 = this.field_z - 2;
           this.a(-114, this.field_F, 0, this.field_z + 34, 0);
@@ -86,8 +86,8 @@ final class jn extends ga implements el {
         if (param1 <= this.field_P) {
           return;
         }
-        rg[] var7 = new rg[param1];
-        rg[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         int var5 = 0;
         if (param0) {
@@ -127,7 +127,7 @@ final class jn extends ga implements el {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

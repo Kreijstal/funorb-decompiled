@@ -257,19 +257,19 @@ final class MoveInfoPanel {
             if (var7 != 1) {
               switch (var7) {
                 case 2:
-                  this.field_k.e(this.field_d.field_kb + 58, this.field_d.field_rb + 12, 96, 64, 255);
+                  this.field_k.drawScaledAdditive(this.field_d.field_kb + 58, this.field_d.field_rb + 12, 96, 64, 255);
                   break;
                 case 4:
-                  this.field_k.e(this.field_d.field_kb + 34, this.field_d.field_rb + 6, 144, 84, 255);
+                  this.field_k.drawScaledAdditive(this.field_d.field_kb + 34, this.field_d.field_rb + 6, 144, 84, 255);
                   break;
                 case 3:
-                  this.field_k.e(48 + this.field_d.field_kb, this.field_d.field_rb + 6, 116, 72, 255);
+                  this.field_k.drawScaledAdditive(48 + this.field_d.field_kb, this.field_d.field_rb + 6, 116, 72, 255);
                   break;
                 default:
                   break;
               }
             } else {
-              this.field_k.e(74 + this.field_d.field_kb, this.field_d.field_rb + 2, 64, 64, 255);
+              this.field_k.drawScaledAdditive(74 + this.field_d.field_kb, this.field_d.field_rb + 2, 64, 64, 255);
             }
             if (var25.field_s.statusId != 0) {
               var8_int = 105;
@@ -328,7 +328,7 @@ final class MoveInfoPanel {
                     } else {
                       stackIn_49_4 = this.field_m.field_L % 128;
                     }
-                    ((Sprite) (Object) stackIn_48_0).e(stackIn_48_1, stackIn_48_2, stackIn_48_3[stackIn_49_4]);
+                    ((Sprite) (Object) stackIn_48_0).drawGrayRampTinted(stackIn_48_1, stackIn_48_2, stackIn_48_3[stackIn_49_4]);
                   } else {
                     stackIn_44_0 = bfa.field_b[var8.field_xb];
                     stackIn_44_1 = var8.field_kb + this.field_d.field_kb - 10;
@@ -339,13 +339,13 @@ final class MoveInfoPanel {
                     } else {
                       stackIn_45_4 = this.field_m.field_L % 128;
                     }
-                    ((Sprite) (Object) stackIn_44_0).e(stackIn_44_1, stackIn_44_2, stackIn_44_3[stackIn_45_4]);
+                    ((Sprite) (Object) stackIn_44_0).drawGrayRampTinted(stackIn_44_1, stackIn_44_2, stackIn_44_3[stackIn_45_4]);
                   }
                 } else {
                   if (var8.field_xb <= 2) {
-                    bfa.field_b[var8.field_xb].e(-10 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb - 9, 12889);
+                    bfa.field_b[var8.field_xb].drawGrayRampTinted(-10 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb + var8.field_rb - 9, 12889);
                   } else {
-                    vma.field_j[-3 + var8.field_xb].e(this.field_d.field_kb + (var8.field_kb - 19), -9 + (var8.field_rb + this.field_d.field_rb), 12889);
+                    vma.field_j[-3 + var8.field_xb].drawGrayRampTinted(this.field_d.field_kb + (var8.field_kb - 19), -9 + (var8.field_rb + this.field_d.field_rb), 12889);
                   }
                 }
                 if (var8.field_zb == -1) {
@@ -373,14 +373,14 @@ final class MoveInfoPanel {
                     var8.field_zb != this.field_m.field_Z.moveId)) {
                     if (!var8.field_yb &&
                       var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
-                      nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
+                      nia.field_l[var27.field_b].drawGrayRampTinted(-5 + var8.field_kb + this.field_d.field_kb, -5 + (var8.field_rb + this.field_d.field_rb), 11250603);
                     } else {
-                      nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(-5 + this.field_d.field_kb + var8.field_kb, -5 + this.field_d.field_rb + var8.field_rb, 14964736);
+                      nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].drawGrayRampTinted(-5 + this.field_d.field_kb + var8.field_kb, -5 + this.field_d.field_rb + var8.field_rb, 14964736);
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 16769792);
+                    nia.field_l[var27.field_b].drawGrayRampTinted(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 16769792);
                   }
                 } else {
                   if (var27 instanceof BasicMoveDefinition) {
@@ -393,12 +393,12 @@ final class MoveInfoPanel {
                           var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
                             var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
-                            nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
+                            nia.field_l[var27.field_b].drawGrayRampTinted(-5 + this.field_d.field_kb + var8.field_kb, this.field_d.field_rb - (-var8.field_rb + 5), 11250603);
                           } else {
-                            nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(this.field_d.field_kb + var8.field_kb - 5, this.field_d.field_rb + (var8.field_rb - 5), 15204352);
+                            nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].drawGrayRampTinted(this.field_d.field_kb + var8.field_kb - 5, this.field_d.field_rb + (var8.field_rb - 5), 15204352);
                           }
                         } else {
-                          nia.field_l[var27.field_b].e(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb - 5, 16725815);
+                          nia.field_l[var27.field_b].drawGrayRampTinted(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb - 5, 16725815);
                         }
                       } else {
                         if ((var10 == null ||
@@ -407,12 +407,12 @@ final class MoveInfoPanel {
                           var8.field_zb != this.field_m.field_Z.moveId)) {
                           if (!var8.field_yb &&
                             var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
-                            nia.field_l[var27.field_b].e(this.field_d.field_kb + (var8.field_kb - 5), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
+                            nia.field_l[var27.field_b].drawGrayRampTinted(this.field_d.field_kb + (var8.field_kb - 5), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
                           } else {
-                            nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(var8.field_kb + (this.field_d.field_kb - 5), this.field_d.field_rb - (-var8.field_rb + 5), 16754688);
+                            nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].drawGrayRampTinted(var8.field_kb + (this.field_d.field_kb - 5), this.field_d.field_rb - (-var8.field_rb + 5), 16754688);
                           }
                         } else {
-                          nia.field_l[var27.field_b].e(-5 + var8.field_kb + this.field_d.field_kb, -5 + this.field_d.field_rb + var8.field_rb, 16769792);
+                          nia.field_l[var27.field_b].drawGrayRampTinted(-5 + var8.field_kb + this.field_d.field_kb, -5 + this.field_d.field_rb + var8.field_rb, 16769792);
                         }
                       }
                       decompiledFrameRemainder0 = false;
@@ -424,14 +424,14 @@ final class MoveInfoPanel {
                         this.field_m.field_Z.moveId != var8.field_zb)) {
                         if (!var8.field_yb &&
                           var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
-                          nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
+                          nia.field_l[var27.field_b].drawGrayRampTinted(-5 + (var8.field_kb + this.field_d.field_kb), this.field_d.field_rb + (var8.field_rb - 5), 11250603);
                         } else {
-                          nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(this.field_d.field_kb - (-var8.field_kb + 5), -5 + (this.field_d.field_rb + var8.field_rb), 818659);
+                          nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].drawGrayRampTinted(this.field_d.field_kb - (-var8.field_kb + 5), -5 + (this.field_d.field_rb + var8.field_rb), 818659);
                         }
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        nia.field_l[var27.field_b].e(-5 + this.field_d.field_kb + var8.field_kb, -5 + var8.field_rb + this.field_d.field_rb, 4564479);
+                        nia.field_l[var27.field_b].drawGrayRampTinted(-5 + this.field_d.field_kb + var8.field_kb, -5 + var8.field_rb + this.field_d.field_rb, 4564479);
                       }
                     }
                   }
@@ -443,14 +443,14 @@ final class MoveInfoPanel {
                   var8.field_zb != this.field_m.field_Z.moveId)) {
                   if (!var8.field_yb &&
                     var25.field_s.isMoveAllowedByStatus((byte) -10, var8.field_zb)) {
-                    nia.field_l[var24.field_b].e(this.field_d.field_kb + var8.field_kb - 5, -5 + this.field_d.field_rb + var8.field_rb, 11250603);
+                    nia.field_l[var24.field_b].drawGrayRampTinted(this.field_d.field_kb + var8.field_kb - 5, -5 + this.field_d.field_rb + var8.field_rb, 11250603);
                   } else {
-                    nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].e(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb - 5, 51233);
+                    nia.field_l[WhirlpoolDigest.field_e[var8.field_zb].field_b].drawGrayRampTinted(-5 + (this.field_d.field_kb + var8.field_kb), this.field_d.field_rb + var8.field_rb - 5, 51233);
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  nia.field_l[var27.field_b].e(-5 + (var8.field_kb + this.field_d.field_kb), var8.field_rb + this.field_d.field_rb - 5, 4388192);
+                  nia.field_l[var27.field_b].drawGrayRampTinted(-5 + (var8.field_kb + this.field_d.field_kb), var8.field_rb + this.field_d.field_rb - 5, 4388192);
                 }
               }
               if (-1 != var8.field_zb &&
@@ -961,7 +961,7 @@ final class MoveInfoPanel {
           }
           this.field_b = a.a(12889, 64, 16763049, 46335);
           this.field_k = new Sprite(84, 84);
-          this.field_k.b();
+          this.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(672, 672, 672, 128, this.field_o);
           hga.field_U.a((byte) 114);
           return;

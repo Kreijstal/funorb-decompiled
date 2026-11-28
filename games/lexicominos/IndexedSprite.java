@@ -31,7 +31,7 @@ final class IndexedSprite extends q {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawWithOpacity(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -75,7 +75,7 @@ final class IndexedSprite extends q {
         IndexedSprite.blitIndexedAlpha(SoftwareRasterizer.field_b, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;

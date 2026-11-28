@@ -487,7 +487,7 @@ final class ActiveLevel extends LevelGrid {
         }
         if (0 != this.field_s) {
           j.field_b[1].drawTransparent(466, var6);
-          cl.a(nd.field_L, 457, 124, var6 + 71, 176, 4);
+          cl.a(NameSuggestionsPanel.field_L, 457, 124, var6 + 71, 176, 4);
           var7Lifetime1 = this.field_s;
           var8Lifetime1 = sc.countSetBits(var7Lifetime1, -1);
           var9 = (-var3 + var2) / 300;
@@ -516,7 +516,7 @@ final class ActiveLevel extends LevelGrid {
           if (var11 != -1) {
             var12Lifetime1 = (var2 - var3) % 300;
             var13 = var6 + (var12Lifetime1 * var12Lifetime1 >> 2);
-            cl.a(nd.field_L, 457, 124, 71 + var13, 176, 4);
+            cl.a(NameSuggestionsPanel.field_L, 457, 124, 71 + var13, 176, 4);
             bb.field_b[var11].drawQuarterSize(467, 26 + (81 + var13));
             DisplayNameSelectionPanel.font.drawParagraph(wa.field_k[var11], 499, 10 + (var13 + 71) + 26, 124, 1000, 4, -1, 0, 0, 25);
           }
@@ -1097,7 +1097,7 @@ final class ActiveLevel extends LevelGrid {
               return;
             }
           }
-          cl.a(nd.field_L, 58, 98, 376, 332, 4);
+          cl.a(NameSuggestionsPanel.field_L, 58, 98, 376, 332, 4);
           DisplayNameSelectionPanel.font.drawParagraph(ki.field_a, 73, -DisplayNameSelectionPanel.font.field_G + 386 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
           return;
         }
@@ -1151,7 +1151,7 @@ final class ActiveLevel extends LevelGrid {
           }
         }
         if (var3Lifetime1 != null) {
-          cl.a(nd.field_L, 110, 98, 376, 228, 4);
+          cl.a(NameSuggestionsPanel.field_L, 110, 98, 376, 228, 4);
           DisplayNameSelectionPanel.font.drawParagraph((String) (var3Lifetime1), 125, -DisplayNameSelectionPanel.font.field_G + (DisplayNameSelectionPanel.font.field_G + 386), 198, 1000, 5, -1, 0, 0, 26);
         }
         if (this.level.levelIndex == 1 &&
@@ -1159,7 +1159,7 @@ final class ActiveLevel extends LevelGrid {
           if (fi.field_i) {
             return;
           }
-          cl.a(nd.field_L, 58, 72, 64, 332, 4);
+          cl.a(NameSuggestionsPanel.field_L, 58, 72, 64, 332, 4);
           DisplayNameSelectionPanel.font.drawParagraph(uk.field_d, 73, -DisplayNameSelectionPanel.font.field_G + 74 + DisplayNameSelectionPanel.font.field_G, 302, 1000, 5, -1, 0, 0, 26);
         }
         return;
@@ -1274,7 +1274,7 @@ final class ActiveLevel extends LevelGrid {
     }
 
     final void a(boolean param0) {
-        cl.a(nd.field_L, 457, 124, 10, 176, 4);
+        cl.a(NameSuggestionsPanel.field_L, 457, 124, 10, 176, 4);
         DisplayNameSelectionPanel.font.drawString(AccountServiceResult.field_d, 471, 40, 5, -1);
         DisplayNameSelectionPanel.font.drawRightAligned(Integer.toString(this.field_T), 622, 40, 5, -1);
         DisplayNameSelectionPanel.font.drawString(ba.field_e, 471, 66, 5, -1);
@@ -1501,12 +1501,12 @@ final class ActiveLevel extends LevelGrid {
           var3Lifetime2 = 1;
         }
         if (!this.field_F) {
-          cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
+          cl.a(NameSuggestionsPanel.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
           DisplayNameSelectionPanel.font.drawCentred(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G, 5, -1);
           DisplayNameSelectionPanel.font.drawCentred(var2_ref, 78 + this.field_t, DisplayNameSelectionPanel.font.field_G + this.field_C + 24, var3Lifetime2, -1);
         } else {
-          cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
+          cl.a(NameSuggestionsPanel.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
           cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
           DisplayNameSelectionPanel.font.drawCentred(this.field_y, 78 + this.field_t, this.field_C + DisplayNameSelectionPanel.font.field_G - 26, 5, -1);
           DisplayNameSelectionPanel.font.drawCentred(this.field_L, this.field_t + 78, DisplayNameSelectionPanel.font.field_G + this.field_C, 5, -1);

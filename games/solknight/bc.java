@@ -90,8 +90,8 @@ final class bc extends si {
         int var5_intLifetime1Lifetime1;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if ((!(this.field_G instanceof pj) ||
-            ((pj) (this.field_G)).field_B) &&
+          if ((!(this.field_G instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_G)).field_B) &&
             this.field_u == 1) {
             var5_int = -this.field_N + (PacketBuffer.field_j - param0);
             var6 = -this.field_L + (BufferedSocket.field_m - param2);

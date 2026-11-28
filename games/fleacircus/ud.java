@@ -223,7 +223,7 @@ final class ud {
               }
             }
           }
-          gj.field_A = new rk(320, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, bb.field_H, IntrusiveNode.field_b);
+          gj.field_A = new rk(320, 420, MusicPatchPcmStream.field_m, UiComponent.field_l, InteractiveWidget.field_H, IntrusiveNode.field_b);
           gj.field_A.field_t = fl.field_f;
           gj.field_A.field_y = 1;
           gj.field_A.field_z = -1;

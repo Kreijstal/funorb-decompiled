@@ -103,7 +103,7 @@ final class Bzip2State {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (JavaScriptBridge.callWithoutArguments(param0, false, "getcookies"));
-              var5 = PcmOutputWorker.a((byte) -9, ';', var4);
+              var5 = PcmOutputWorker.splitStringOnCharacter((byte) -9, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

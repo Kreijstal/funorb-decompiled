@@ -32,7 +32,7 @@ final class d {
             if (EmailFormatValidator.field_n == null) {
               EmailFormatValidator.field_n = new Sprite(256, 1 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s));
             }
-            EmailFormatValidator.field_n.a();
+            EmailFormatValidator.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.drawCentred(LoginPanel.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             Bzip2State.field_e.a(true);
@@ -43,7 +43,7 @@ final class d {
             if (EmailFormatValidator.field_n == null) {
               EmailFormatValidator.field_n = new Sprite(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
             }
-            EmailFormatValidator.field_n.a();
+            EmailFormatValidator.field_n.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.drawCentred(LoginPanel.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             Bzip2State.field_e.a(true);

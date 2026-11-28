@@ -21,7 +21,7 @@ final class lg {
         int var4 = 16 * param3 - 4;
         int var5 = 16 * param1 - 4;
         SoftwareRasterizer.setClip(var4, var5, var4 + 16, var5 + 16);
-        se.field_a[param2].f(param0, -4, 128);
+        se.field_a[param2].drawWithIntensity(param0, -4, 128);
         SoftwareRasterizer.restoreClip(si.field_R);
     }
 

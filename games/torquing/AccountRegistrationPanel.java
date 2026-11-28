@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, ba {
+final class AccountRegistrationPanel extends WidgetContainer implements fp, WidgetActivationListener, NameSuggestionListener {
     static m field_D;
-    vp field_M;
+    NameSuggestionsPanel field_M;
     private rb field_C;
     private ValidatedTextField field_K;
     private ValidatedTextField field_E;
     private ValidatedTextField field_G;
     private ValidatedTextField field_B;
-    private lg field_J;
+    private InteractiveWidget field_J;
     private ok field_F;
     private ValidatedTextField field_L;
     private ValidatedTextField field_I;
     static Sprite field_H;
-    private lg field_N;
+    private InteractiveWidget field_N;
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSuggestionSelected(byte param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -41,7 +41,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            this.field_J = (lg) null;
+            this.field_J = (InteractiveWidget) null;
           }
           var3 = param1.getFieldValidator(-10116);
           if (var3 == null) {
@@ -72,14 +72,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         }
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         if (param0 > 89) {
-          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-10116))).e(-40);
+          ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-10116))).invalidateCheckedName(-40);
           return;
         }
         UiWidget var3 = (UiWidget) null;
         this.a(119, (UiWidget) null, '\f', -86);
-        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-10116))).e(-40);
+        ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-10116))).invalidateCheckedName(-40);
     }
 
     private final String j(int param0) {
@@ -211,8 +211,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         this.field_I = new ValidatedTextField("", (ca) null, 3);
         int var1 = 1;
         this.field_F = new ok("", (ca) null, var1 != 0);
-        this.field_J = new lg(bq.field_a, (ca) null);
-        this.field_N = new lg(cm.field_k, (ca) null);
+        this.field_J = new InteractiveWidget(bq.field_a, (ca) null);
+        this.field_N = new InteractiveWidget(cm.field_k, (ca) null);
         this.field_E.field_n = ag.field_d;
         this.field_K.field_n = BufferedRandomAccessFile.field_c;
         this.field_G.field_n = pf.field_j;
@@ -266,7 +266,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         this.field_J.listener = (ca) (this);
         this.a(this.field_J, -6938);
         this.a(this.field_N, -6938);
-        this.field_M = new vp((ba) (this));
+        this.field_M = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_M.a((byte) 123, 60 + (this.field_E.width + this.field_E.x), 20 + this.field_E.y, 150, -this.field_E.x + (this.width - this.field_E.width) - 60);
         this.a(this.field_M, -6938);
         this.a((byte) 125, 0, 0, var3 - (-55 - var6), 496);
@@ -585,7 +585,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, ng, 
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         boolean discarded$2 = false;
         int discarded$3 = 0;
         RuntimeException var6 = null;

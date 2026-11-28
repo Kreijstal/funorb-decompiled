@@ -479,10 +479,10 @@ final class IsaacRandom {
             field_f = false;
           }
           if (null != ki.field_b) {
-            ki.field_b.field_O.a((byte) -127, param1);
+            ki.field_b.field_O.setNameSuggestions((byte) -127, param1);
           }
           if (null != CipherPacketBuffer.field_u) {
-            CipherPacketBuffer.field_u.field_H.a((byte) -127, param1);
+            CipherPacketBuffer.field_u.field_H.setNameSuggestions((byte) -127, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -153,7 +153,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             stackIn_7_0 = -1;
             return stackIn_7_0;
           }
-          if (lj.field_z == jk.field_y) {
+          if (InteractiveWidget.field_z == jk.field_y) {
             ch.field_f = null;
             LoginPanel.field_D.position = 0;
             if (param3 != null) {
@@ -206,15 +206,15 @@ final class ProxyAuthenticationRequiredException extends IOException {
               LoginPanel.field_D.backpatchByteLength((byte) -42, -var9 + LoginPanel.field_D.position);
             }
             rb.a(-1, -377);
-            lj.field_z = vf.field_b;
+            InteractiveWidget.field_z = vf.field_b;
           }
-          if (vf.field_b == lj.field_z &&
+          if (vf.field_b == InteractiveWidget.field_z &&
             ue.a(1, 0)) {
             var9Lifetime1 = WordLanguage.field_l.readUnsignedByte((byte) 97);
             WordLanguage.field_l.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              lj.field_z = aa.field_b;
+              InteractiveWidget.field_z = aa.field_b;
               wh.field_F = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
@@ -226,7 +226,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 return stackIn_33_0;
               }
               if (99 != var9Lifetime1) {
-                lj.field_z = gg.field_f;
+                InteractiveWidget.field_z = gg.field_f;
                 tg.field_a = -1;
                 DebouncedFieldValidator.field_e = var9Lifetime1;
               } else {
@@ -236,7 +236,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               }
             }
           }
-          if (aa.field_b == lj.field_z) {
+          if (aa.field_b == InteractiveWidget.field_z) {
             var9Lifetime2 = 2;
             if (ue.a(var9Lifetime2, 0)) {
               var10Lifetime1 = WordLanguage.field_l.readUnsignedShort((byte) -102);
@@ -253,7 +253,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               }
             }
           }
-          if (gg.field_f == lj.field_z &&
+          if (gg.field_f == InteractiveWidget.field_z &&
             GameKeyHandler.a(0)) {
             if (DebouncedFieldValidator.field_e == 255) {
               var9_ref_String = WordLanguage.field_l.readNullableString(-1640531527);

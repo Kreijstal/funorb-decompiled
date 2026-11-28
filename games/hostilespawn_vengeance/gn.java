@@ -237,7 +237,7 @@ final class gn {
               if (var12 == 0) {
                 pf.a(var14.field_D, false);
                 qa.field_g[var10.field_h + 1].a(true, 128, (int)var10.field_c, param1, param4);
-                var14.a();
+                var14.bindAsRenderTarget();
                 qa.field_g[1 + var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
                 o.field_n.setAsRasterTarget((byte) 117);
                 for (var12 = 0; var14.field_D.length > var12; var12++) {
@@ -247,7 +247,7 @@ final class gn {
                 }
                 var12 = em.field_c % 80;
                 var12 = (int)(100.0 * (1.0 + Math.sin(3.141592653589793 * (double)var12 / 40.0)));
-                var14.b(param1 - 32, -32 + param4, var12 / 2);
+                var14.drawWithOpacity(param1 - 32, -32 + param4, var12 / 2);
                 if (((param5[var11])) &&
                   (!(param1 - 24 > j.field_c)) &&
                   (!(-24 + param4 > rb.field_m)) &&
@@ -268,7 +268,7 @@ final class gn {
                 if (var12 == 1) {
                   pf.a(var14.field_D, false);
                   hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
-                  var14.a();
+                  var14.bindAsRenderTarget();
                   hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
                   o.field_n.setAsRasterTarget((byte) 110);
                   for (var12 = 0; var14.field_D.length > var12; var12++) {
@@ -278,7 +278,7 @@ final class gn {
                   }
                   var12 = em.field_c % 80;
                   var12 = (int)(100.0 * (1.0 + Math.sin((double)var12 * 3.141592653589793 / 40.0)));
-                  var14.b(-32 + param1, -32 + param4, var12 / 2);
+                  var14.drawWithOpacity(-32 + param1, -32 + param4, var12 / 2);
                   if (((param5[var11])) &&
                     (!(j.field_c < param1 - 24)) &&
                     (!(rb.field_m < -24 + param4)) &&
@@ -294,7 +294,7 @@ final class gn {
                   if (var12 == 2) {
                     pf.a(var14.field_D, false);
                     wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
-                    var14.a();
+                    var14.bindAsRenderTarget();
                     wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
                     o.field_n.setAsRasterTarget((byte) -88);
                     for (var12 = 0; var14.field_D.length > var12; var12++) {
@@ -304,7 +304,7 @@ final class gn {
                     }
                     var12 = em.field_c % 80;
                     var12 = (int)(100.0 * (1.0 + Math.sin((double)var12 * 3.141592653589793 / 40.0)));
-                    var14.b(-32 + param1, param4 - 32, var12 / 2);
+                    var14.drawWithOpacity(-32 + param1, param4 - 32, var12 / 2);
                     if (param5[var11] &&
                       !(param1 - 24 > j.field_c) &&
                       !(-24 + param4 > rb.field_m) &&

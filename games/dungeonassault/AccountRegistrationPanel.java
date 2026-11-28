@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ii implements pf, vg, mg {
+final class AccountRegistrationPanel extends ii implements pf, WidgetActivationListener, NameSuggestionListener {
     static int[] field_P;
     private ValidatedTextField field_K;
-    gi field_W;
+    NameSuggestionsPanel field_W;
     private ValidatedTextField field_U;
-    private ck field_V;
+    private InteractiveWidget field_V;
     private ValidatedTextField field_S;
     static eh[] field_M;
     private rb field_T;
     private ValidatedTextField field_R;
     private ValidatedTextField field_L;
     private ValidatedTextField field_O;
-    private ck field_N;
+    private InteractiveWidget field_N;
     private bh field_Q;
 
     final static boolean i(byte param0) {
@@ -72,7 +72,7 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         }
     }
 
-    public final void a(ck param0, byte param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, byte param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -88,7 +88,7 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
             }
           }
           if (param1 != 98) {
-            this.field_W = (gi) null;
+            this.field_W = (NameSuggestionsPanel) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -361,7 +361,7 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(byte param0, String param1) {
+    public final void onNameSuggestionSelected(byte param0, String param1) {
         int discarded$0 = 0;
         ValidatedTextField var3 = null;
         String var4 = null;
@@ -422,9 +422,9 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         }
     }
 
-    public final void a(int param0) {
+    public final void onNameSuggestionsRefreshRequested(int param0) {
         String discarded$0 = null;
-        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator(-115))).e(true);
+        ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator(-115))).invalidateCheckedName(true);
         if (param0 <= 121) {
           discarded$0 = this.g((byte) 69);
         }
@@ -440,8 +440,8 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         this.field_S = new ValidatedTextField("", (pg) null, 3);
         int var1 = 1;
         this.field_T = new rb("", (pg) null, var1 != 0);
-        this.field_N = new ck(ef.field_a, (pg) null);
-        this.field_V = new ck(pp.field_I, (pg) null);
+        this.field_N = new InteractiveWidget(ef.field_a, (pg) null);
+        this.field_V = new InteractiveWidget(pp.field_I, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
         this.field_O.field_i = lk.field_Q;
         this.field_U.field_i = PcmOutputWorker.field_c;
@@ -495,7 +495,7 @@ final class AccountRegistrationPanel extends ii implements pf, vg, mg {
         this.field_N.field_n = (pg) (this);
         this.b((byte) -84, this.field_N);
         this.b((byte) -73, this.field_V);
-        this.field_W = new gi((mg) (this));
+        this.field_W = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_W.b(0, -this.field_R.field_q + (this.field_x + (-this.field_R.field_x - 60)), 20 + this.field_R.field_v, this.field_R.field_q + this.field_R.field_x + 60, 150);
         this.b((byte) -88, this.field_W);
         this.b(0, 496, 0, 0, 55 + var3 + var6);

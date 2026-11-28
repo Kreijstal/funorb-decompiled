@@ -70,7 +70,7 @@ final class sf {
           var8 = -1 + (param3 + param2);
           var9 = param1[0].fullWidth;
           var10 = param1[0].fullHeight;
-          param0.d();
+          param0.bindAsRenderTarget();
           param1[0].drawTransparent(param4, param2);
           param1[2].drawTransparent(-var9 + var7_int, param2);
           param1[6].drawTransparent(param4, var8 - var10);

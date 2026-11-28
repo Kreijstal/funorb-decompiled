@@ -187,7 +187,7 @@ final class v {
             if (param1.field_g == 2) {
               var7 = var7 + (param2.height - this.field_f.field_u);
             }
-            this.field_f.d(var6_int, var7);
+            this.field_f.draw(var6_int, var7);
           }
           var6 = param1.c((byte) 65, param2);
           if (var6 != null &&

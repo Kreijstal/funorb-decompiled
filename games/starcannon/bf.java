@@ -2240,24 +2240,24 @@ final class bf extends IntrusiveNode {
             if (0 != var9) {
               if (1 == var9) {
                 if (rj.field_h == 1) {
-                  gg.field_f[5 + this.field_v].d(-16 + var4, this.field_u - 16, 256);
+                  gg.field_f[5 + this.field_v].drawWithIntensity(-16 + var4, this.field_u - 16, 256);
                 } else {
-                  gg.field_f[this.field_v].d(-16 + var4, this.field_u - 16, var3);
+                  gg.field_f[this.field_v].drawWithIntensity(-16 + var4, this.field_u - 16, var3);
                 }
               } else {
                 if (var9 != 2) {
                   if (3 != var9) {
                     if (var9 == 4) {
-                      gg.field_f[this.field_v + 25].d(var4 - 16, -16 + this.field_u, var3);
+                      gg.field_f[this.field_v + 25].drawWithIntensity(var4 - 16, -16 + this.field_u, var3);
                     } else {
                       if (var9 == 5) {
-                        gg.field_f[this.field_v + 20].d(var4 - 16, this.field_u - 16, var3);
+                        gg.field_f[this.field_v + 20].drawWithIntensity(var4 - 16, this.field_u - 16, var3);
                       } else {
                         if (var9 != 6 &&
                           var9 != 14) {
                           if (var9 == 7) {
                             if (!(FrameTimer.field_e.field_k <= 0)) {
-                              vc.field_m[1].e(var4 - 16, this.field_u - 16);
+                              vc.field_m[1].draw(var4 - 16, this.field_u - 16);
                             }
                           } else {
                             if (var9 != 8 &&
@@ -2288,81 +2288,81 @@ final class bf extends IntrusiveNode {
                               }
                               switch (var9) {
                                 case 11:
-                                  sj.field_E[this.field_v].d(-64 + var4, this.field_u - 64, 256);
+                                  sj.field_E[this.field_v].drawWithIntensity(-64 + var4, this.field_u - 64, 256);
                                   break regionExit1;
                                 case 12:
-                                  AccountNameAvailabilityValidator.field_j[this.field_v].d(var4 - 16, -16 + (this.field_u - 32), var3);
+                                  AccountNameAvailabilityValidator.field_j[this.field_v].drawWithIntensity(var4 - 16, -16 + (this.field_u - 32), var3);
                                   break regionExit1;
                                 case 21:
-                                  FullscreenFocusCanvas.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);
+                                  FullscreenFocusCanvas.field_e[this.field_v].drawWithIntensity(-48 + var4, -32 + this.field_u, 256);
                                   break regionExit1;
                                 case 13:
                                   if (0 >= FrameTimer.field_e.field_k) {
                                     break regionExit1;
                                   }
-                                  vc.field_m[2].e(var4 - 16, -16 + this.field_u);
-                                  ie.field_A[this.field_o % 14].f(-8 + var4, this.field_u - 16, 3 * this.field_o);
+                                  vc.field_m[2].draw(var4 - 16, -16 + this.field_u);
+                                  ie.field_A[this.field_o % 14].drawAdditive(-8 + var4, this.field_u - 16, 3 * this.field_o);
                                   if (StarCannon.field_z != -1) {
                                     break regionExit1;
                                   }
                                   if (-1 != pa.field_L) {
                                     break regionExit1;
                                   }
-                                  ie.field_A[this.field_o % 14].f(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
-                                  ie.field_A[this.field_o % 14].f(-14 + (var4 + sh.b(param0 - 65437, 12)), -22 + (this.field_u + sh.b(34, 12)), this.field_o);
+                                  ie.field_A[this.field_o % 14].drawAdditive(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
+                                  ie.field_A[this.field_o % 14].drawAdditive(-14 + (var4 + sh.b(param0 - 65437, 12)), -22 + (this.field_u + sh.b(34, 12)), this.field_o);
                                   break regionExit1;
                                 case 15:
                                   if (this.field_v > 4) {
                                     this.field_v = 4;
                                   }
-                                  fg.field_c[this.field_v].d(var4 - 128, -128 + this.field_u, 256);
+                                  fg.field_c[this.field_v].drawWithIntensity(var4 - 128, -128 + this.field_u, 256);
                                   break regionExit1;
                                 case 16:
                                   if (this.field_v > 4) {
                                     this.field_v = 4;
                                   }
-                                  v.field_d[this.field_v].d(var4 - 128, -128 + this.field_u, 256);
+                                  v.field_d[this.field_v].drawWithIntensity(var4 - 128, -128 + this.field_u, 256);
                                   break regionExit1;
                                 case 17:
-                                  el.field_H[this.field_v].d(-16 + var4, this.field_u - 16, var3);
+                                  el.field_H[this.field_v].drawWithIntensity(-16 + var4, this.field_u - 16, var3);
                                   break regionExit1;
                                 case 18:
                                   var7 = (int)(16.0 * Math.sin(0.1 * (double)this.field_u));
                                   var8 = (int)(Math.cos(0.1 * (double)this.field_u) * 16.0);
-                                  gg.field_f[25 + this.field_v].d(-var7 + (-16 + var4), -16 + (this.field_u - var8), var3);
-                                  gg.field_f[25 + this.field_v].d(var7 + (var4 - 16), var8 - 16 + this.field_u, var3);
-                                  gg.field_f[25 + this.field_v].d(-16 + (var4 - var8), -16 + this.field_u + var7, var3);
-                                  gg.field_f[this.field_v + 25].d(var8 + (-16 + var4), this.field_u - 16 - var7, var3);
+                                  gg.field_f[25 + this.field_v].drawWithIntensity(-var7 + (-16 + var4), -16 + (this.field_u - var8), var3);
+                                  gg.field_f[25 + this.field_v].drawWithIntensity(var7 + (var4 - 16), var8 - 16 + this.field_u, var3);
+                                  gg.field_f[25 + this.field_v].drawWithIntensity(-16 + (var4 - var8), -16 + this.field_u + var7, var3);
+                                  gg.field_f[this.field_v + 25].drawWithIntensity(var8 + (-16 + var4), this.field_u - 16 - var7, var3);
                                   break regionExit1;
                                 case 19:
-                                  gg.field_f[this.field_v + 25].d(-16 + var4, -16 + this.field_u, var3);
+                                  gg.field_f[this.field_v + 25].drawWithIntensity(-16 + var4, -16 + this.field_u, var3);
                                   break regionExit1;
                                 default:
                                   break regionExit1;
                                 case 22:
-                                  fl.field_f[this.field_l].e(-64 + var4, -64 + this.field_u);
+                                  fl.field_f[this.field_l].draw(-64 + var4, -64 + this.field_u);
                                   break regionExit1;
                               }
                             }
                             if (!(0 >= FrameTimer.field_e.field_k)) {
-                              vc.field_m[3 + this.field_v].e(-16 + var4, this.field_u - 16);
+                              vc.field_m[3 + this.field_v].draw(-16 + var4, this.field_u - 16);
                             }
                           }
                           break regionExit1;
                         }
                         if (FrameTimer.field_e.field_k > 0) {
-                          vc.field_m[0].e(var4 - 16, -16 + this.field_u);
+                          vc.field_m[0].draw(var4 - 16, -16 + this.field_u);
                         }
                       }
                     }
                   } else {
-                    gf.field_a[this.field_v].d(var4 - 32, this.field_u - 16, var3);
+                    gf.field_a[this.field_v].drawWithIntensity(var4 - 32, this.field_u - 16, var3);
                   }
                 } else {
                   if (1 != rj.field_h) {
-                    gg.field_f[10 + this.field_v].d(-16 + var4, this.field_u - 16, var3);
+                    gg.field_f[10 + this.field_v].drawWithIntensity(-16 + var4, this.field_u - 16, var3);
                   } else {
-                    gg.field_f[this.field_v + 15].d(var4 - 16, this.field_u - 16, 256);
+                    gg.field_f[this.field_v + 15].drawWithIntensity(var4 - 16, this.field_u - 16, 256);
                   }
                 }
               }
@@ -2399,37 +2399,37 @@ final class bf extends IntrusiveNode {
                 case 5:
                   if (tj.field_G % 2 == 0 ||
                     ti.field_d) {
-                    dl.field_c[this.field_v].e(-16 + var4, this.field_u - 16);
+                    dl.field_c[this.field_v].draw(-16 + var4, this.field_u - 16);
                   }
-                  jg.field_C[var5].a(-4 + var4, 7 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(-4 + var4, 7 + this.field_u, 16711680);
                   break;
                 case 20:
                   if (tj.field_G % 2 == 0 ||
                     ti.field_d) {
-                    dl.field_c[this.field_v].e(var4 - 16, -16 + this.field_u);
+                    dl.field_c[this.field_v].draw(var4 - 16, -16 + this.field_u);
                   }
-                  jg.field_C[var5].a(var4 - var6, 3 + this.field_u, 16711680);
-                  jg.field_C[var5].a(var4 - (-4 + var6), this.field_u + 3, 16711680);
-                  jg.field_C[var5].a(var6 + (var4 - 8), 3 + this.field_u, 16711680);
-                  jg.field_C[var5].a(-12 + (var4 + var6), this.field_u + 3, 16711680);
+                  jg.field_C[var5].drawTintedGray(var4 - var6, 3 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(var4 - (-4 + var6), this.field_u + 3, 16711680);
+                  jg.field_C[var5].drawTintedGray(var6 + (var4 - 8), 3 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(-12 + (var4 + var6), this.field_u + 3, 16711680);
                   break;
                 case 15:
-                  jg.field_C[var5].a(-var6 + 2 + var4, this.field_u + 3, 16711680);
-                  jg.field_C[var5].a(var6 + (var4 - 10), this.field_u + 3, 16711680);
+                  jg.field_C[var5].drawTintedGray(-var6 + 2 + var4, this.field_u + 3, 16711680);
+                  jg.field_C[var5].drawTintedGray(var6 + (var4 - 10), this.field_u + 3, 16711680);
                   if (0 == tj.field_G % 2 ||
                     ti.field_d) {
-                    dl.field_c[this.field_v].e(-16 + var4, -16 + this.field_u);
+                    dl.field_c[this.field_v].draw(-16 + var4, -16 + this.field_u);
                   }
-                  jg.field_C[var5].a(var4 - 4, 7 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(var4 - 4, 7 + this.field_u, 16711680);
                   break;
                 case 10:
-                  jg.field_C[var5].a(-var6 + (2 + var4), 3 + this.field_u, 16711680);
-                  jg.field_C[var5].a(var6 + (-10 + var4), 3 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(-var6 + (2 + var4), 3 + this.field_u, 16711680);
+                  jg.field_C[var5].drawTintedGray(var6 + (-10 + var4), 3 + this.field_u, 16711680);
                   if (tj.field_G % 2 != 0 &&
                     !ti.field_d) {
                     break;
                   }
-                  dl.field_c[this.field_v].e(-16 + var4, this.field_u - 16);
+                  dl.field_c[this.field_v].draw(-16 + var4, this.field_u - 16);
                   break;
                 default:
                   break;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends lc implements rc {
-    private wd field_z;
-    private wd field_A;
+final class k extends lc implements WidgetActivationListener {
+    private InteractiveWidget field_z;
+    private InteractiveWidget field_A;
     static IntrusiveDeque field_B;
-    private wd field_F;
+    private InteractiveWidget field_F;
     static int field_C;
     static String field_E;
     static int field_D;
@@ -46,7 +46,7 @@ final class k extends lc implements rc {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, int param3, wd param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -87,9 +87,9 @@ final class k extends lc implements rc {
 
     public k() {
         super(0, 0, 476, 225, (fc) null);
-        this.field_z = new wd(ResourceArchive.field_m, (sk) null);
-        this.field_A = new wd(AccountServiceResult.field_e, (sk) null);
-        this.field_F = new wd(bi.field_i, (sk) null);
+        this.field_z = new InteractiveWidget(ResourceArchive.field_m, (sk) null);
+        this.field_A = new InteractiveWidget(AccountServiceResult.field_e, (sk) null);
+        this.field_F = new InteractiveWidget(bi.field_i, (sk) null);
         jh var1 = new jh();
         this.field_z.field_j = (fc) ((Object) var1);
         this.field_A.field_j = (fc) ((Object) var1);

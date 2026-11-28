@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends dh implements ai {
+final class AccountCreationResultPanel extends dh implements WidgetActivationListener {
     private boolean field_lb;
     private boolean field_kb;
     private AccountRegistrationPanel field_jb;
@@ -42,7 +42,7 @@ final class AccountCreationResultPanel extends dh implements ai {
         return super.d(false);
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         if (this.field_kb) {
           ArchiveRequest.a(-108, false, true);
           return;
@@ -83,7 +83,7 @@ final class AccountCreationResultPanel extends dh implements ai {
             if (param2.suggestions != null) {
               var4 = j.field_c;
               if (null != this.field_jb) {
-                this.field_jb.a((byte) -8);
+                this.field_jb.onNameSuggestionsRefreshRequested((byte) -8);
               }
             } else {
               var4 = param2.message;

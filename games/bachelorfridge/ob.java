@@ -73,7 +73,7 @@ final class ob extends TileEffect {
 
     final void a(int param0, boolean param1, int param2) {
         if (param1) {
-          co.field_b[4].a(param2, -64 + param0, (100 - this.field_f) * 192 / 100);
+          co.field_b[4].drawWithOpacity(param2, -64 + param0, (100 - this.field_f) * 192 / 100);
           return;
         }
     }

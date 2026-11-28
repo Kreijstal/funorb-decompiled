@@ -9,19 +9,19 @@ final class sa {
           return;
         }
         if (2 >= param0) {
-          kd.field_C = 0;
+          NameSuggestionsPanel.field_C = 0;
           return;
         }
         if (a.field_a) {
-          kd.field_C = 0;
+          NameSuggestionsPanel.field_C = 0;
           return;
         }
         if (!MouseInput.a(80)) {
-          kd.field_C = param0;
+          NameSuggestionsPanel.field_C = param0;
           m.field_f = NetworkArchiveRequest.a(1, na.field_d, jl.field_d, (BitPacketBuffer.field_k << 2) + nf.field_l, new int[]{param0}, param1 - 23899, fc.field_e, 65534, 3);
           return;
         }
-        kd.field_C = 0;
+        NameSuggestionsPanel.field_C = 0;
     }
 
     final static boolean a(byte param0, char param1) {

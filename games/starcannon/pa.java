@@ -304,14 +304,14 @@ final class pa extends ab {
               cd.field_a != var6) {
               if (var6 == BufferedSocket.field_n) {
                 var20 = FrameTimer.field_g[2];
-                var20.f(var9, var10 - (var20.field_v >> 1), 256);
+                var20.drawAdditive(var9, var10 - (var20.field_v >> 1), 256);
                 return;
               }
               if (bf.field_x != var6) {
                 return;
               }
               var19 = FrameTimer.field_g[1];
-              var19.f(var9, var10 - (var19.field_v >> 1), 256);
+              var19.drawAdditive(var9, var10 - (var19.field_v >> 1), 256);
               return;
             }
             var21 = FrameTimer.field_g[0];
@@ -326,9 +326,9 @@ final class pa extends ab {
               this.field_K = new Sprite(var11, var12);
               bc.a(this.field_K, 26095);
             }
-            var21.b(112, 144, var21.field_x << 4, var21.field_q << 4, -this.field_N << 10, 4096);
+            var21.drawRotatedAboutBilinear(112, 144, var21.field_x << 4, var21.field_q << 4, -this.field_N << 10, 4096);
             wf.a(-85);
-            this.field_K.f(var9 - (var21.field_x >> 1), var10 - var21.field_q, 256);
+            this.field_K.drawAdditive(var9 - (var21.field_x >> 1), var10 - var21.field_q, 256);
             return;
           }
           super.a(param0, param1, param2, param3);
@@ -340,14 +340,14 @@ final class pa extends ab {
             cd.field_a != var6) {
             if (var6 == BufferedSocket.field_n) {
               var24 = FrameTimer.field_g[2];
-              var24.f(var9Lifetime3, var10Lifetime3 - (var24.field_v >> 1), 256);
+              var24.drawAdditive(var9Lifetime3, var10Lifetime3 - (var24.field_v >> 1), 256);
               return;
             }
             if (bf.field_x != var6) {
               return;
             }
             var23 = FrameTimer.field_g[1];
-            var23.f(var9Lifetime3, var10Lifetime3 - (var23.field_v >> 1), 256);
+            var23.drawAdditive(var9Lifetime3, var10Lifetime3 - (var23.field_v >> 1), 256);
             return;
           }
           var25 = FrameTimer.field_g[0];
@@ -370,9 +370,9 @@ final class pa extends ab {
               }
             }
           }
-          var25.b(112, 144, var25.field_x << 4, var25.field_q << 4, -this.field_N << 10, 4096);
+          var25.drawRotatedAboutBilinear(112, 144, var25.field_x << 4, var25.field_q << 4, -this.field_N << 10, 4096);
           wf.a(-85);
-          this.field_K.f(var9Lifetime3 - (var25.field_x >> 1), var10Lifetime3 - var25.field_q, 256);
+          this.field_K.drawAdditive(var9Lifetime3 - (var25.field_x >> 1), var10Lifetime3 - var25.field_q, 256);
           return;
         }
         if (cd.field_a != var6) {
@@ -393,14 +393,14 @@ final class pa extends ab {
             cd.field_a != var6Lifetime1) {
             if (var6Lifetime1 == BufferedSocket.field_n) {
               var33 = FrameTimer.field_g[2];
-              var33.f(var9Lifetime1, var10Lifetime1 - (var33.field_v >> 1), 256);
+              var33.drawAdditive(var9Lifetime1, var10Lifetime1 - (var33.field_v >> 1), 256);
               return;
             }
             if (bf.field_x != var6Lifetime1) {
               return;
             }
             var32 = FrameTimer.field_g[1];
-            var32.f(var9Lifetime1, var10Lifetime1 - (var32.field_v >> 1), 256);
+            var32.drawAdditive(var9Lifetime1, var10Lifetime1 - (var32.field_v >> 1), 256);
             return;
           }
           var34 = FrameTimer.field_g[0];
@@ -423,9 +423,9 @@ final class pa extends ab {
               }
             }
           }
-          var34.b(112, 144, var34.field_x << 4, var34.field_q << 4, -this.field_N << 10, 4096);
+          var34.drawRotatedAboutBilinear(112, 144, var34.field_x << 4, var34.field_q << 4, -this.field_N << 10, 4096);
           wf.a(-85);
-          this.field_K.f(var9Lifetime1 - (var34.field_x >> 1), var10Lifetime1 - var34.field_q, 256);
+          this.field_K.drawAdditive(var9Lifetime1 - (var34.field_x >> 1), var10Lifetime1 - var34.field_q, 256);
           return;
         }
         this.field_k = var5;
@@ -448,22 +448,22 @@ final class pa extends ab {
             this.field_K = new Sprite(var11Lifetime2, var12Lifetime2);
             bc.a(this.field_K, 26095);
           }
-          var27.b(112, 144, var27.field_x << 4, var27.field_q << 4, -this.field_N << 10, 4096);
+          var27.drawRotatedAboutBilinear(112, 144, var27.field_x << 4, var27.field_q << 4, -this.field_N << 10, 4096);
           wf.a(-85);
-          this.field_K.f(var9Lifetime2 - (var27.field_x >> 1), var10Lifetime2 - var27.field_q, 256);
+          this.field_K.drawAdditive(var9Lifetime2 - (var27.field_x >> 1), var10Lifetime2 - var27.field_q, 256);
           return;
         }
         if (cd.field_a != var6Lifetime2) {
           if (var6Lifetime2 == BufferedSocket.field_n) {
             var29 = FrameTimer.field_g[2];
-            var29.f(var9Lifetime2, var10Lifetime2 - (var29.field_v >> 1), 256);
+            var29.drawAdditive(var9Lifetime2, var10Lifetime2 - (var29.field_v >> 1), 256);
             return;
           }
           if (bf.field_x != var6Lifetime2) {
             return;
           }
           var28 = FrameTimer.field_g[1];
-          var28.f(var9Lifetime2, var10Lifetime2 - (var28.field_v >> 1), 256);
+          var28.drawAdditive(var9Lifetime2, var10Lifetime2 - (var28.field_v >> 1), 256);
           return;
         }
         var30 = FrameTimer.field_g[0];
@@ -487,9 +487,9 @@ final class pa extends ab {
             }
           }
         }
-        var30.b(112, 144, var30.field_x << 4, var30.field_q << 4, -this.field_N << 10, 4096);
+        var30.drawRotatedAboutBilinear(112, 144, var30.field_x << 4, var30.field_q << 4, -this.field_N << 10, 4096);
         wf.a(-85);
-        this.field_K.f(var9Lifetime2 - (var30.field_x >> 1), var10Lifetime2 - var30.field_q, 256);
+        this.field_K.drawAdditive(var9Lifetime2 - (var30.field_x >> 1), var10Lifetime2 - var30.field_q, 256);
         return;
     }
 

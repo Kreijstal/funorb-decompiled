@@ -58,7 +58,7 @@ final class ii {
         SoftwareRasterizer.clearRaster();
         mn.field_x = 0;
         oj.o(param0 - 1236579268);
-        Sprite var2 = var1.c();
+        Sprite var2 = var1.copy();
         if (param0 != 140) {
           return;
         }
@@ -67,7 +67,7 @@ final class ii {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          lc.field_u.g();
+          lc.field_u.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           tk.b(true);
         } catch (RuntimeException runtimeException) {

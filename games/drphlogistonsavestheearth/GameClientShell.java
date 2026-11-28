@@ -151,7 +151,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
           AccountCreationResultPanel.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
-          ig.field_t = lk.a(false, true, LoginMenuScreen.field_O, 1, 8);
+          ig.field_t = lk.a(false, true, NameSuggestionsPanel.field_O, 1, 8);
           si.field_E = sb.field_i;
           hj.field_f = 2;
           ph.field_b = AccountCreationResultPanel.field_Jb;
@@ -161,7 +161,7 @@ abstract class GameClientShell extends GameAppletShell {
             DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
             if (DiskArchiveRequest.field_I.hasGroupName((byte) 12, "")) {
               if (DiskArchiveRequest.field_I.tryLoadGroupByName(255, "")) {
-                LoginMenuScreen.a(7, DiskArchiveRequest.field_I);
+                NameSuggestionsPanel.a(7, DiskArchiveRequest.field_I);
                 DiskArchiveRequest.field_I = null;
                 IterableNodeHashTable.a((byte) 86);
               }
@@ -253,7 +253,7 @@ abstract class GameClientShell extends GameAppletShell {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ob.field_c = this.field_n;
-        LoginMenuScreen.a((byte) 119, ob.field_c);
+        NameSuggestionsPanel.a((byte) 119, ob.field_c);
         DelegatingCanvas.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
@@ -264,7 +264,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (param3 != 7320) {
           this.field_m = -76;
         }
-        LoginMenuScreen.field_O = param5;
+        NameSuggestionsPanel.field_O = param5;
         hb.field_q = param4;
         field_q = param0;
         this.l(param3 ^ -7321);

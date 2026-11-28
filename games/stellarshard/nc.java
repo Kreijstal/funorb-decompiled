@@ -98,7 +98,7 @@ final class nc extends UiWidget {
         if (param0 != 15035) {
           return;
         }
-        this.field_E = this.field_P.f();
+        this.field_E = this.field_P.copyMirroredHorizontally();
         this.field_I = new Sprite(this.field_t >> 1, this.field_t);
     }
 
@@ -194,26 +194,26 @@ final class nc extends UiWidget {
           var5_int = param0 + this.field_p;
           IntrusiveNode.a(42, var5_int - this.field_P.field_v, param2, this.field_t + param2, this.field_P.field_v + param0);
           for (var6 = -this.field_z + param0; var6 < var5_int; var6 = var6 + param3.field_v) {
-            param3.e(var6, param2);
+            param3.draw(var6, param2);
           }
           id.b((byte) -58);
           if (this.field_P.field_v + param0 >= SoftwareRasterizer.field_e) {
             hj.a(this.field_I, param1 ^ 47);
-            param3.e(-this.field_z, 0);
-            param3.e(-this.field_z + 2 * this.field_M, 0);
-            this.field_E.c(0, 0);
+            param3.draw(-this.field_z, 0);
+            param3.draw(-this.field_z + 2 * this.field_M, 0);
+            this.field_E.drawMultiply(0, 0);
             id.b((byte) -58);
-            this.field_I.e(param0, param2);
+            this.field_I.draw(param0, param2);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_P.field_v) {
             hj.a(this.field_I, 1);
             for (var7 = this.field_z - this.field_P.field_v + this.field_p; 2 * this.field_M < var7; var7 = var7 - 2 * this.field_M) {
             }
-            param3.e(-var7, 0);
-            param3.e(2 * this.field_M - var7, 0);
-            this.field_P.c(0, 0);
+            param3.draw(-var7, 0);
+            param3.draw(2 * this.field_M - var7, 0);
+            this.field_P.drawMultiply(0, 0);
             id.b((byte) -58);
-            this.field_I.e(var5_int - this.field_P.field_v, param2);
+            this.field_I.draw(var5_int - this.field_P.field_v, param2);
             return;
           }
           return;

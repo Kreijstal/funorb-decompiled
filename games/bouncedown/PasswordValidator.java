@@ -96,7 +96,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = ve.field_b;
             return stackIn_5_0;
           }
-          if (nd.a(var5, param1 + 183)) {
+          if (NameSuggestionsPanel.a(var5, param1 + 183)) {
             stackIn_8_0 = AwtRasterBuffer.field_d;
             return stackIn_8_0;
           }

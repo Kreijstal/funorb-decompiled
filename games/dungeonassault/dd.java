@@ -124,12 +124,12 @@ final class dd extends rj {
         }
         var6Lifetime3 = stackIn_12_0;
         bp.a(4 + var5, im.field_m, var6Lifetime3 + (var4 + 10), (byte) 99);
-        tn.field_W.h(var4, var5);
+        tn.field_W.draw(var4, var5);
         if (param1 != 8187) {
           field_C = (int[]) null;
         }
-        Bzip2State.field_x.h(this.field_D + var4 + 10, var5);
-        ml.field_a.h(var4 + (10 + var6Lifetime3), 4 + var5);
+        Bzip2State.field_x.draw(this.field_D + var4 + 10, var5);
+        ml.field_a.draw(var4 + (10 + var6Lifetime3), 4 + var5);
     }
 
     final void a(int param0, int param1) {
@@ -162,11 +162,11 @@ final class dd extends rj {
           jh.a(var6);
           SoftwareRasterizer.fillRectangle(0, 0, var6.field_y, var6.field_v, 16777215);
           for (var4 = 0; param1 > var4; var4++) {
-            param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
+            param2.drawSilhouette(param1 - param2.field_w, param1 - param2.field_A, 0);
             SoftwareRasterizer.blurRectangle(1, 1, 0, 0, var6.field_y, var6.field_v);
           }
-          var6.h();
-          param2.e(param1 - param2.field_w, param1 - param2.field_A, 0);
+          var6.makeTransparentPixelsOpaque();
+          param2.drawSilhouette(param1 - param2.field_w, param1 - param2.field_A, 0);
           jh.b();
           if (param0 != -112) {
             stackIn_6_0 = (RgbSprite) null;

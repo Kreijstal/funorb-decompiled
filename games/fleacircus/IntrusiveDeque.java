@@ -106,15 +106,15 @@ final class IntrusiveDeque {
           var3 = var10.readUnsignedByte(false);
           var10.k(8);
           fc.field_a = fleas.a(var10, -6383);
-          ij.field_F = new si[var3];
+          NameSuggestionsPanel.field_F = new si[var3];
           gm.field_kb = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
-            ij.field_F[var4] = d.a(-124, var9);
+            NameSuggestionsPanel.field_F[var4] = d.a(-124, var9);
           }
           var10.m(8);
           var4Lifetime1 = 17 % ((param0 - 75) / 44);
           for (var5 = 0; var3 > var5; var5++) {
-            var6 = ij.field_F[var5];
+            var6 = NameSuggestionsPanel.field_F[var5];
             var6.a(6, 1, 6, 6, 0);
             var6.b(-23443);
             var7 = new int[]{var6.field_m + var6.field_B >> 1, var6.field_e + var6.field_k >> 1, var6.field_A + var6.field_b >> 1};

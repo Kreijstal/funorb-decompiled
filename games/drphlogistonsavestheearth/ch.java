@@ -163,18 +163,18 @@ final class ch extends l {
         kj var7 = null;
         kj var9 = null;
         RgbSprite[] var10 = null;
-        hf var11 = null;
+        InteractiveWidget var11 = null;
         kj var12 = null;
         kj var13 = null;
         kj var14 = null;
         kj var15 = null;
         try {
-          if (param2 instanceof hf) {
+          if (param2 instanceof InteractiveWidget) {
             stackIn_3_0 = (vg) (param2);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (hf) (stackIn_3_0);
+          var11 = (InteractiveWidget) (stackIn_3_0);
           ib.a(param3 + param2.field_m, param2.field_m + (param3 + param2.field_k), (byte) 16, param4 + param2.field_o + param2.field_w, param4 + param2.field_o);
           if (var11 != null) {
             param0 = param0 & var11.field_E;

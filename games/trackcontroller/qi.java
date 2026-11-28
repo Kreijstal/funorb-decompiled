@@ -293,7 +293,7 @@ final class qi {
               var32 = var30 & 65280;
               var33 = var31 * var28 >>> 8 & 553582847 | (16711832 & var32 * var28) >>> 8;
               var33 = var33 + 65793 * var29;
-              nd.a(1, var27, var22, var23, var25, (16711422 & var33) >> 1, var26, var24);
+              NameSuggestionsPanel.a(1, var27, var22, var23, var25, (16711422 & var33) >> 1, var26, var24);
             } else {
               var28 = var55[var18];
               var29 = var55[var19];

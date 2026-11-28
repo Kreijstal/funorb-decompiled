@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bh extends ck {
+class bh extends InteractiveWidget {
     private ci field_O;
     static int field_P;
     static boolean field_M;
@@ -111,8 +111,8 @@ class bh extends ck {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = -this.field_q + param3;
         int var6 = param0 - this.field_v;
         ci var7 = this.a(var5, var6, true);

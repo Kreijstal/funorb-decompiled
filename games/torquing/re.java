@@ -93,7 +93,7 @@ final class re {
               ByteStorage.field_a = IntrusiveNode.field_b;
             }
             MatchingFieldValidator.field_o = param0;
-            vp.field_I = param0 - 1;
+            NameSuggestionsPanel.field_I = param0 - 1;
           }
           if (param1 != 0) {
             var5 = (ResourceArchive) null;
@@ -191,18 +191,18 @@ final class re {
           }
           var9Lifetime1 = var17.field_t;
           bp.a((byte) -95);
-          var17.e();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.e();
-          var17.b(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.e();
-          var17.b(-var17.field_s + var9Lifetime1, 0);
+          var11.bindAsRenderTarget();
+          var17.drawOpaque(-var17.field_s + var9Lifetime1, 0);
           var12 = new Sprite(var17.field_s - var9Lifetime1 * 2, var9Lifetime1);
-          var12.e();
-          var17.b(-var9Lifetime1, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9Lifetime1, 0);
           r.a(125);
           TranslucentSpriteLayer.field_g = new Sprite[]{var15, var12, var11};
           return;

@@ -72,17 +72,17 @@ final class vj {
           }
           var9Lifetime1 = var17.storedHeight;
           BufferedSocket.b((byte) -128);
-          var17.d();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.d();
+          var18.bindAsRenderTarget();
           var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.d();
+          var11.bindAsRenderTarget();
           var17.drawOpaque(var9Lifetime1 - var17.storedWidth, 0);
           var12 = new Sprite(-(2 * var9Lifetime1) + var17.storedWidth, var9Lifetime1);
-          var12.d();
+          var12.bindAsRenderTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           ie.b((byte) -9);
           ae.field_v = new Sprite[]{var15, var12, var11};

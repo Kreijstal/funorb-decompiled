@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends vd implements nk, qk {
+final class te extends vd implements nk, WidgetActivationListener {
     static GameAppletShell field_E;
     static RgbSprite[] field_G;
     private AccountCreationResultPanel field_H;
@@ -9,7 +9,7 @@ final class te extends vd implements nk, qk {
     static DisplayNameSelectionPanel field_M;
     static ResourceArchive field_J;
     static int field_K;
-    private ph field_I;
+    private InteractiveWidget field_I;
     static int[] field_F;
 
     final static void a(java.awt.Component param0, int param1) {
@@ -27,10 +27,10 @@ final class te extends vd implements nk, qk {
     final static void a(boolean param0) {
         if (!param0) {
           te.j(-69);
-          ri.field_p.c(0, 0);
+          ri.field_p.drawOpaque(0, 0);
           return;
         }
-        ri.field_p.c(0, 0);
+        ri.field_p.drawOpaque(0, 0);
     }
 
     private final String k(int param0) {
@@ -41,7 +41,7 @@ final class te extends vd implements nk, qk {
         return "</col></u>";
     }
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_6_0 = null;
@@ -167,7 +167,7 @@ final class te extends vd implements nk, qk {
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_I = new ph(jf.field_e, (mh) null);
+          this.field_I = new InteractiveWidget(jf.field_e, (mh) null);
           this.field_I.field_h = (nn) ((Object) new ke());
           var7 = vg.a(new String[]{this.e((byte) -61), this.k(4897)}, 89, s.field_a);
           var3 = 20;

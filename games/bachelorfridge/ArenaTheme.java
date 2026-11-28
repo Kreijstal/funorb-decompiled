@@ -185,9 +185,9 @@ abstract class ArenaTheme {
         try {
           var9 = this.a(var7, param0, param2, (byte) -122, var8, param4.field_i.field_h.field_E);
           if (var9 != null) {
-            var9.a(param1.field_c, param1.field_a, 104);
+            var9.drawWithOpacity(param1.field_c, param1.field_a, 104);
           }
-          this.a(param2, (byte) 100, var8, param0, var7).a(param1.field_c, param1.field_a);
+          this.a(param2, (byte) 100, var8, param0, var7).draw(param1.field_c, param1.field_a);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pn.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -280,36 +280,36 @@ abstract class ArenaTheme {
           var9 = var23.terrain;
           if (var9 == 21 &&
             !param3.field_I[param0][param2].field_i) {
-            this.field_b[109].a(param4, param5);
+            this.field_b[109].draw(param4, param5);
           } else {
             if (var9 == 21 &&
               param3.field_I[param0][param2].field_i) {
-              this.field_b[108].a(param4, param5);
+              this.field_b[108].draw(param4, param5);
             } else {
               if (var9 != 22) {
                 if (var9 == 23 ||
                   var9 == 24 ||
                   25 == var9 ||
                   26 == var9) {
-                  this.a(param0, (byte) 83, 0, param2, 20).a(param4, param5);
+                  this.a(param0, (byte) 83, 0, param2, 20).draw(param4, param5);
                 }
               } else {
-                this.d(-79, param3.field_i.field_h.field_E).a(param4, param5, 104);
-                this.field_b[103].a(param4, param5);
+                this.d(-79, param3.field_i.field_h.field_E).drawWithOpacity(param4, param5, 104);
+                this.field_b[103].draw(param4, param5);
               }
             }
           }
           if (var9 == 34) {
-            ge.field_K.a(param4, param5);
+            ge.field_K.draw(param4, param5);
           } else {
             if (var9 == 35) {
-              HuffmanCodec.field_b.a(param4, param5);
+              HuffmanCodec.field_b.draw(param4, param5);
             } else {
               if (var9 == 28) {
                 if (var23.field_h >= BuffVendorAnimation.field_w[var9].field_e) {
-                  kka.field_f.a(param4, param5 - 64);
+                  kka.field_f.draw(param4, param5 - 64);
                 } else {
-                  ConfirmedEmailAvailabilityValidator.field_h.a(param4, param5 - 64);
+                  ConfirmedEmailAvailabilityValidator.field_h.draw(param4, param5 - 64);
                 }
               } else {
                 if (27 == var9) {
@@ -325,7 +325,7 @@ abstract class ArenaTheme {
                   if (var9 != 36) {
                     if (30 != var9) {
                       if (var9 == 29) {
-                        DebouncedFieldValidator.field_b[(param2 + param0) % 7].a(param4, param5);
+                        DebouncedFieldValidator.field_b[(param2 + param0) % 7].draw(param4, param5);
                       } else {
                         if (var9 == 39) {
                           ip.field_f[0].draw(32 + param4, -32 + param5);
@@ -347,15 +347,15 @@ abstract class ArenaTheme {
                             var20 = var20 - (3 * var18 >> 4);
                             var19 = var19 - (var18 >> 2);
                             nk.a(param3.field_y, -(var19 >> 1) + 64 + var13, -(var20 >> 1) + 36 + var14, var19, var20);
-                            MusicPatch.field_g[var10][var21].a(var13, -var18 + var14);
+                            MusicPatch.field_g[var10][var21].draw(var13, -var18 + var14);
                           }
                         }
                       }
                     } else {
-                      ld.field_l[(param2 + param0) % 7].a(param4, param5);
+                      ld.field_l[(param2 + param0) % 7].draw(param4, param5);
                     }
                   } else {
-                    pfa.field_g.a(param4, -64 + param5);
+                    pfa.field_g.draw(param4, -64 + param5);
                   }
                 }
               }
@@ -430,7 +430,7 @@ abstract class ArenaTheme {
           if (param5) {
             discarded$0 = this.a(116, -127, -22);
           }
-          this.c(26728, (param0 + param1 * (param2.field_a + 2)) % 24).a(param4, param3);
+          this.c(26728, (param0 + param1 * (param2.field_a + 2)) % 24).draw(param4, param3);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "pn.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -653,7 +653,7 @@ abstract class ArenaTheme {
                   }
                   var14 = this.a(stackIn_52_1, stackIn_53_2 + (param0 + param3) % 4 * 5, 15392);
                   if (var14 != null) {
-                    var14.a(param2, param5, 104);
+                    var14.drawWithOpacity(param2, param5, 104);
                   }
                   stackIn_58_1 = 5 * ((param0 + param3) % 4);
                   if (param4.field_j[param0][param3].field_o) {
@@ -661,7 +661,7 @@ abstract class ArenaTheme {
                   } else {
                     stackIn_59_2 = 0;
                   }
-                  this.a(stackIn_58_1 + stackIn_59_2, (byte) -78).a(param2, param5);
+                  this.a(stackIn_58_1 + stackIn_59_2, (byte) -78).draw(param2, param5);
                 } else {
                   stackIn_42_1 = param4.field_i.field_h.field_E;
                   stackIn_42_2 = param4.field_j[param0][param3].field_k;
@@ -672,14 +672,14 @@ abstract class ArenaTheme {
                   }
                   var13 = this.a(stackIn_42_1, stackIn_42_2 + stackIn_43_3, 15392);
                   if (var13 != null) {
-                    var13.a(param2, param5, 104);
+                    var13.drawWithOpacity(param2, param5, 104);
                   }
                   if (param4.field_j[param0][param3].field_o) {
                     stackIn_49_1 = 16;
                   } else {
                     stackIn_49_1 = 0;
                   }
-                  this.a(stackIn_49_1 + param4.field_j[param0][param3].field_k, (byte) -78).a(param2, param5);
+                  this.a(stackIn_49_1 + param4.field_j[param0][param3].field_k, (byte) -78).draw(param2, param5);
                 }
               } else {
                 stackIn_24_1 = param4.field_i.field_h.field_E;
@@ -690,7 +690,7 @@ abstract class ArenaTheme {
                 }
                 var11 = this.a(stackIn_24_1, stackIn_25_2 + 8, 15392);
                 if (var11 != null) {
-                  var11.a(param2, param5, 104);
+                  var11.drawWithOpacity(param2, param5, 104);
                 }
                 stackIn_29_1 = param4.field_i.field_h.field_E;
                 if (param4.field_j[param0][param3].field_o) {
@@ -700,7 +700,7 @@ abstract class ArenaTheme {
                 }
                 var12 = this.a(stackIn_29_1, stackIn_30_2 + 2, 15392);
                 if (var12 != null) {
-                  var12.a(param2, param5, 104);
+                  var12.drawWithOpacity(param2, param5, 104);
                 }
                 stackIn_34_1 = 8;
                 if (param4.field_j[param0][param3].field_o) {
@@ -708,13 +708,13 @@ abstract class ArenaTheme {
                 } else {
                   stackIn_35_2 = 0;
                 }
-                this.a(stackIn_34_1 + stackIn_35_2, (byte) -78).a(param2, param5);
+                this.a(stackIn_34_1 + stackIn_35_2, (byte) -78).draw(param2, param5);
                 if (!param4.field_j[param0][param3].field_o) {
                   stackIn_38_1 = 0;
                 } else {
                   stackIn_38_1 = 16;
                 }
-                this.a(stackIn_38_1 + 2, (byte) -78).a(param2, param5);
+                this.a(stackIn_38_1 + 2, (byte) -78).draw(param2, param5);
               }
             } else {
               stackIn_5_1 = param4.field_i.field_h.field_E;
@@ -725,7 +725,7 @@ abstract class ArenaTheme {
               }
               var9 = this.a(stackIn_5_1, stackIn_6_2 + 4, 15392);
               if (var9 != null) {
-                var9.a(param2, param5, 104);
+                var9.drawWithOpacity(param2, param5, 104);
               }
               stackIn_11_1 = param4.field_i.field_h.field_E;
               stackIn_11_2 = 1;
@@ -736,7 +736,7 @@ abstract class ArenaTheme {
               }
               var10 = this.a(stackIn_11_1, stackIn_11_2 + stackIn_12_3, 15392);
               if (var10 != null) {
-                var10.a(param2, param5, 104);
+                var10.drawWithOpacity(param2, param5, 104);
               }
               stackIn_16_1 = 4;
               if (param4.field_j[param0][param3].field_o) {
@@ -744,30 +744,30 @@ abstract class ArenaTheme {
               } else {
                 stackIn_17_2 = 0;
               }
-              this.a(stackIn_16_1 + stackIn_17_2, (byte) -78).a(param2, param5);
+              this.a(stackIn_16_1 + stackIn_17_2, (byte) -78).draw(param2, param5);
               stackIn_19_1 = 1;
               if (!param4.field_j[param0][param3].field_o) {
                 stackIn_20_2 = 0;
               } else {
                 stackIn_20_2 = 16;
               }
-              this.a(stackIn_19_1 + stackIn_20_2, (byte) -78).a(param2, param5);
+              this.a(stackIn_19_1 + stackIn_20_2, (byte) -78).draw(param2, param5);
             }
           }
           if (param4.field_j[param0][param3].terrain == 29) {
             if (param4.field_j[param0][param3].field_k == 5) {
-              DebouncedFieldValidator.field_b[4].a(param2, param5);
-              DebouncedFieldValidator.field_b[1].a(param2, param5);
+              DebouncedFieldValidator.field_b[4].draw(param2, param5);
+              DebouncedFieldValidator.field_b[1].draw(param2, param5);
             } else {
               if (10 != param4.field_j[param0][param3].field_k) {
                 if (15 != param4.field_j[param0][param3].field_k) {
-                  DebouncedFieldValidator.field_b[param4.field_j[param0][param3].field_k].a(param2, param5);
+                  DebouncedFieldValidator.field_b[param4.field_j[param0][param3].field_k].draw(param2, param5);
                 } else {
-                  DebouncedFieldValidator.field_b[5 * ((param3 + param0) % 4)].a(param2, param5);
+                  DebouncedFieldValidator.field_b[5 * ((param3 + param0) % 4)].draw(param2, param5);
                 }
               } else {
-                DebouncedFieldValidator.field_b[8].a(param2, param5);
-                DebouncedFieldValidator.field_b[2].a(param2, param5);
+                DebouncedFieldValidator.field_b[8].draw(param2, param5);
+                DebouncedFieldValidator.field_b[2].draw(param2, param5);
               }
             }
           }
@@ -776,17 +776,17 @@ abstract class ArenaTheme {
           }
           if (30 == param4.field_j[param0][param3].terrain) {
             if (param4.field_j[param0][param3].field_k == 5) {
-              ld.field_l[4].a(param2, param5);
-              ld.field_l[1].a(param2, param5);
+              ld.field_l[4].draw(param2, param5);
+              ld.field_l[1].draw(param2, param5);
             } else {
               if (10 == param4.field_j[param0][param3].field_k) {
-                ld.field_l[8].a(param2, param5);
-                ld.field_l[2].a(param2, param5);
+                ld.field_l[8].draw(param2, param5);
+                ld.field_l[2].draw(param2, param5);
               } else {
                 if (param4.field_j[param0][param3].field_k != 15) {
-                  ld.field_l[param4.field_j[param0][param3].field_k].a(param2, param5);
+                  ld.field_l[param4.field_j[param0][param3].field_k].draw(param2, param5);
                 } else {
-                  ld.field_l[(param3 + param0) % 4 * 5].a(param2, param5);
+                  ld.field_l[(param3 + param0) % 4 * 5].draw(param2, param5);
                 }
               }
             }

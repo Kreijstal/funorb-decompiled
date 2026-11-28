@@ -250,7 +250,7 @@ public final class Bounce extends GameClient {
           EditableTextField.clearStaticReferences((byte) 94);
           mh.resetStaticState(-16167);
           ll.clearStaticReferences((byte) -83);
-          nd.a(true);
+          NameSuggestionsPanel.a(true);
           vc.clearStaticReferences((byte) -6);
           la.clearStaticReferences((byte) -59);
           ff.a(-22756);
@@ -587,8 +587,8 @@ public final class Bounce extends GameClient {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!DisplayNameSelectionPanel.g((byte) -15)))) {
             if (lh.field_f == 49) {
-              stackIn_225_0 = !(wd.field_x);
-              wd.field_x = stackIn_225_0;
+              stackIn_225_0 = !(InteractiveWidget.field_x);
+              InteractiveWidget.field_x = stackIn_225_0;
             }
             if (lh.field_f == 70) {
               stackIn_233_0 = !(rd.field_a);
@@ -1529,19 +1529,19 @@ public final class Bounce extends GameClient {
             this.field_K = 119;
           }
           var3 = 64;
-          mb.field_q.b(0, 0);
+          mb.field_q.drawOpaque(0, 0);
           SoftwareRasterizer.setClip(var3, 0, var3 + 512, 446);
-          PacketBuffer.field_j.a(var3, eg.field_n);
-          PacketBuffer.field_j.a(128 + var3, eg.field_n);
-          PacketBuffer.field_j.a(var3 + 256, eg.field_n);
-          PacketBuffer.field_j.a(384 + var3, eg.field_n);
+          PacketBuffer.field_j.draw(var3, eg.field_n);
+          PacketBuffer.field_j.draw(128 + var3, eg.field_n);
+          PacketBuffer.field_j.draw(var3 + 256, eg.field_n);
+          PacketBuffer.field_j.draw(384 + var3, eg.field_n);
           var4 = i.field_a / 8 % 8;
           var5_int = 0;
           do {
             if (640 <= var5_int) {
               SoftwareRasterizer.resetClip();
-              BufferedSocket.field_o.a(-BufferedSocket.field_o.field_s + 640, 0);
-              BufferedSocket.field_o.d(0, 0);
+              BufferedSocket.field_o.draw(-BufferedSocket.field_o.field_s + 640, 0);
+              BufferedSocket.field_o.drawFlippedHorizontal(0, 0);
               SoftwareRasterizer.setClip(var3, 0, var3 + 512, 446);
               break;
             }
@@ -1827,7 +1827,7 @@ public final class Bounce extends GameClient {
             SoftwareRasterizer.drawRectangleOutline(4, var6_intLifetime1 - 4, 56 + od.field_f.stringWidth(lj.field_b[var5_ref.field_h]), 40, 0);
             SoftwareRasterizer.drawRectangleOutline(5, var6_intLifetime1 - 3, od.field_f.stringWidth(lj.field_b[var5_ref.field_h]) + 54, 38, 16741888);
             SoftwareRasterizer.drawRectangleOutline(6, var6_intLifetime1 - 2, 52 + od.field_f.stringWidth(lj.field_b[var5_ref.field_h]), 36, 0);
-            DualLinkNode.field_h[var5_ref.field_h].b(8, var6_intLifetime1, 32, 32);
+            DualLinkNode.field_h[var5_ref.field_h].drawScaled(8, var6_intLifetime1, 32, 32);
             od.field_f.drawString(lj.field_b[var5_ref.field_h], 47, var6_intLifetime1 + od.field_f.field_s, 0, 0);
             od.field_f.drawString(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + (-1 + var6_intLifetime1), 0, 0);
             od.field_f.drawString(lj.field_b[var5_ref.field_h], 48, od.field_f.field_s + var6_intLifetime1, 16746496, -1);
@@ -1895,7 +1895,7 @@ public final class Bounce extends GameClient {
           boolean decompiledSharedTail0 = !(vc.d((byte) 119));
           if (!decompiledSharedTail0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
-            SoftwareRasterizer.fillRectangle(-7 - hj.a(24777) / 2 + 320, 240 - (nd.a(-21065) / 2 + 8), 14 + hj.a(24777), 16 + nd.a(-21065), 0);
+            SoftwareRasterizer.fillRectangle(-7 - hj.a(24777) / 2 + 320, 240 - (NameSuggestionsPanel.a(-21065) / 2 + 8), 14 + hj.a(24777), 16 + NameSuggestionsPanel.a(-21065), 0);
             PacketBuffer.a(ig.field_d, 12, 12, (byte) -126);
             decompiledSharedTail0 = (var9 != 0);
           }

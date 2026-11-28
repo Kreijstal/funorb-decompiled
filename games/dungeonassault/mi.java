@@ -40,7 +40,7 @@ final class mi {
           var5_int = param2.stringWidth(param1);
           var6 = param2.field_E + param2.field_H;
           var7 = new RgbSprite(var5_int, var6);
-          var7.e();
+          var7.bindAsRenderTarget();
           param2.drawString(param1, 0, param2.field_H, 16760960, -1);
           var8 = te.a(var5_int, var6, ag.field_c, 32, 32, 0.125);
           for (var9_int = 0; var8.field_B.length > var9_int; var9_int++) {
@@ -55,18 +55,18 @@ final class mi {
           var10 = -var7.field_y + param4.field_y >> 1;
           var11 = -var7.field_v + param4.field_v >> 1;
           var12 = dd.a((byte) -112, 4, var8);
-          var13 = param4.d();
-          var13.e();
+          var13 = param4.copy();
+          var13.bindAsRenderTarget();
           bp.a(var11, var12, var10, (byte) 99);
-          var8.h(var10, var11);
-          var13.h();
-          var14 = var13.d();
-          var14.e();
+          var8.draw(var10, var11);
+          var13.makeTransparentPixelsOpaque();
+          var14 = var13.copy();
+          var14.bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleAlpha(0, 0, param4.field_y, param4.field_v, 0, 160);
-          var15 = param4.d();
-          var15.e();
-          rb.a(8, var7, 12690143, (byte) -34).b(var10, var11, 32);
-          var7.h(var10, var11);
+          var15 = param4.copy();
+          var15.bindAsRenderTarget();
+          rb.a(8, var7, 12690143, (byte) -34).drawAdditive(var10, var11, 32);
+          var7.draw(var10, var11);
           var9.field_w = var9.field_w + var10;
           var9.field_A = var9.field_A + var11;
           jh.b();

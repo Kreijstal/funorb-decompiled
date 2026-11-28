@@ -70,7 +70,7 @@ abstract class db extends gj {
         this.b(0, 0, 17344);
         super.b(-param0 - this.field_z, -param1 - this.field_y, param2, param3);
         ia.a(-62);
-        ok.field_y.c(this.field_y + param1, this.field_z + param0, this.field_K);
+        ok.field_y.drawWithOpacity(this.field_y + param1, this.field_z + param0, this.field_K);
     }
 
     boolean j(int param0) {

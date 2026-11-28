@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ta implements ff, ai, bf {
-    we field_M;
+final class AccountRegistrationPanel extends ta implements ff, WidgetActivationListener, NameSuggestionListener {
+    NameSuggestionsPanel field_M;
     static String field_H;
     static boolean field_N;
     private of field_P;
@@ -11,8 +11,8 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
     private ValidatedTextField field_G;
     private te field_L;
     private ValidatedTextField field_D;
-    private s field_K;
-    private s field_F;
+    private InteractiveWidget field_K;
+    private InteractiveWidget field_F;
     private ValidatedTextField field_E;
     static String field_A;
     private ValidatedTextField field_J;
@@ -87,8 +87,8 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         this.field_E = new ValidatedTextField("", (ag) null, 3);
         int var1 = 1;
         this.field_P = new of("", (ag) null, var1 != 0);
-        this.field_K = new s(vd.field_f, (ag) null);
-        this.field_F = new s(bi.field_b, (ag) null);
+        this.field_K = new InteractiveWidget(vd.field_f, (ag) null);
+        this.field_F = new InteractiveWidget(bi.field_b, (ag) null);
         this.field_B.field_i = bg.field_b;
         this.field_O.field_i = ce.field_b;
         this.field_G.field_i = AccountNameAvailabilityValidator.field_s;
@@ -142,7 +142,7 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         this.field_K.field_h = (ag) (this);
         this.a(this.field_K, (byte) 74);
         this.a(this.field_F, (byte) 74);
-        this.field_M = new we((bf) (this));
+        this.field_M = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_M.a(this.field_B.field_m + (this.field_B.field_s + 60), this.field_B.field_n + 20, 150, (byte) -90, this.field_m - (this.field_B.field_s + this.field_B.field_m + 60));
         this.a(this.field_M, (byte) 74);
         this.a(0, 0, var6 + var3 + 55, (byte) -90, 496);
@@ -193,7 +193,7 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         return 250 < ji.field_b ? true : false;
     }
 
-    public final void a(int param0, String param1) {
+    public final void onNameSuggestionSelected(int param0, String param1) {
         ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -265,7 +265,7 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         }
     }
 
-    public final void a(byte param0, int param1, int param2, s param3, int param4) {
+    public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -356,9 +356,9 @@ final class AccountRegistrationPanel extends ta implements ff, ai, bf {
         }
     }
 
-    public final void a(byte param0) {
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
         int discarded$0 = 0;
-        ((AccountNameAvailabilityValidator) (this.field_B.getFieldValidator((byte) 65))).b((byte) 77);
+        ((AccountNameAvailabilityValidator) (this.field_B.getFieldValidator((byte) 65))).invalidateCheckedName((byte) 77);
         if (param0 != -8) {
           String var3 = (String) null;
           discarded$0 = this.a(-125, (pj) null, 66, (byte) 102, (String) null);

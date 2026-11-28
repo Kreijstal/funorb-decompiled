@@ -261,7 +261,7 @@ final class ek extends UiComponent {
     private final void g(int param0) {
         this.field_B = new Sprite[]{this.a(false, this.field_H, this.field_D), this.a(false, this.field_I, this.field_J)};
         this.field_O = this.a(param0 ^ 482);
-        this.field_N = this.field_O.i();
+        this.field_N = this.field_O.copyMirroredHorizontally();
         if (param0 != 483) {
           Sprite var3 = (Sprite) null;
           this.a(-14, 14, (Sprite) null, 57);

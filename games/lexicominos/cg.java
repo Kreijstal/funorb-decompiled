@@ -10,7 +10,7 @@ final class cg extends IntrusiveNode {
 
     final static void a(BinaryBitmapFont param0, RgbSprite param1, int param2, int param3, byte param4, int param5, int param6, char param7) {
         try {
-          param1.d(param6, param3);
+          param1.draw(param6, param3);
           int var8_int = 118 % ((param4 - 3) / 50);
           param0.drawCentredCharacter(param7, param1.field_p / 2 + param6, param3 + (param5 + param1.field_u) / 2, param2);
         } catch (RuntimeException runtimeException) {

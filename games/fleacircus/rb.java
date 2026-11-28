@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends gj implements da {
-    private bb field_I;
-    private bb field_J;
+final class rb extends gj implements WidgetActivationListener {
+    private InteractiveWidget field_I;
+    private InteractiveWidget field_J;
     static int field_H;
     static RgbSprite field_G;
-    private bb field_F;
+    private InteractiveWidget field_F;
 
     final static void a(int param0, int param1, byte param2) {
         DiskCacheWorker.field_b = param0;
@@ -16,7 +16,7 @@ final class rb extends gj implements da {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -337,9 +337,9 @@ final class rb extends gj implements da {
 
     public rb() {
         super(0, 0, 476, 225, (ComponentLayout) null);
-        this.field_J = new bb(qk.field_h, (kd) null);
-        this.field_F = new bb(qj.field_J, (kd) null);
-        this.field_I = new bb(tc.field_g, (kd) null);
+        this.field_J = new InteractiveWidget(qk.field_h, (kd) null);
+        this.field_F = new InteractiveWidget(qj.field_J, (kd) null);
+        this.field_I = new InteractiveWidget(tc.field_g, (kd) null);
         ri var1 = new ri();
         this.field_J.field_p = (ComponentLayout) ((Object) var1);
         this.field_F.field_p = (ComponentLayout) ((Object) var1);

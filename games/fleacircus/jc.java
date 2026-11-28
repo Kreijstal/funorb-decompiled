@@ -47,9 +47,9 @@ final class jc implements ComponentLayout {
           var7 = param3.field_z + param4;
           pj.a((byte) 127, param3.field_u, var7, var6_int, param3.field_j);
           var8 = t.field_h[1];
-          if (param3 instanceof bb &&
-            ((bb) (param3)).field_G) {
-            var8.a(var6_int + (1 + (param3.field_u - var8.field_x >> 1)), (-var8.field_r + param3.field_j >> 1) + (var7 + 1), 256);
+          if (param3 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param3)).field_G) {
+            var8.drawAdditive(var6_int + (1 + (param3.field_u - var8.field_x >> 1)), (-var8.field_r + param3.field_j >> 1) + (var7 + 1), 256);
           }
           if (param3.e(1)) {
             ek.a(param3.field_j - 4, 2 + var6_int, 2 + var7, 1, -4 + param3.field_u);

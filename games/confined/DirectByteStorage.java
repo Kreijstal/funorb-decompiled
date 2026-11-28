@@ -65,7 +65,7 @@ final class DirectByteStorage extends ByteStorage {
         int var6 = SoftwareRasterizer.field_b;
         int var7 = 472 - var4;
         SoftwareRasterizer.field_b = var7;
-        dn.field_c[param0].c(param1, 384);
+        dn.field_c[param0].drawOpaque(param1, 384);
         SoftwareRasterizer.field_b = var6;
     }
 

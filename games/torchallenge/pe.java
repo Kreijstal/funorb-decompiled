@@ -104,7 +104,7 @@ final class pe extends v {
         if (param1 != -1) {
           return (ResourceArchive) null;
         }
-        return PcmOutputWorker.a(param0, true, 1, (byte) 95, false, false);
+        return PcmOutputWorker.createResourceArchiveWithDiskCache(param0, true, 1, (byte) 95, false, false);
     }
 
     final static boolean a(byte param0, int param1) {

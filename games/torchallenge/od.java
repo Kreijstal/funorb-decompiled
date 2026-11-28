@@ -594,27 +594,27 @@ final class od {
           if (var24 == 3) {
             var21 = 270;
           }
-          param7.d();
+          param7.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
           SectorCacheStore.field_f.bindAsTarget(-99);
           var22 = param0;
           var23 = param1;
           if (var21 == 90) {
-            param7.f();
+            param7.rotateClockwise();
             var22 = param0 - (param3 - param2);
           }
           if (var21 == 180) {
-            param7.e();
+            param7.flipVertically();
           }
           if (var21 == 270) {
             param7.rotateCounterclockwise();
           }
-          param6.d();
+          param6.bindAsRenderTarget();
           param7.drawScanlineMasked(var22, var23);
           SectorCacheStore.field_f.bindAsTarget(-86);
         }
-        param6.d();
+        param6.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(param0 + var10, param1 + var11, param4, param5 + 1, var9);
         SectorCacheStore.field_f.bindAsTarget(115);
     }

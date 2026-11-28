@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends lj {
+final class fk extends InteractiveWidget {
     static PlatformTask field_F;
     private int field_I;
     static int field_E;

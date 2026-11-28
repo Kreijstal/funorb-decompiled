@@ -70,8 +70,8 @@ final class qh implements ad {
           }
           ng.a(param2.field_q, param2.field_v, 127, var6_int, var7);
           var8 = AccountServiceResult.field_g[1];
-          if (param2 instanceof hc &&
-            ((hc) (param2)).field_H) {
+          if (param2 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param2)).field_H) {
             var8.drawAdditive((-var8.field_x + param2.field_v >> 1) + 1 + var6_int, var7 - (-1 - (-var8.field_A + param2.field_q >> 1)), 256);
           }
           if (param2.k(73)) {

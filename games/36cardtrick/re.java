@@ -625,7 +625,7 @@ final class re {
                             if (var8 == 12) {
                               if ((param2)) {
                                 if (null != DiskCacheWorker.field_a) {
-                                  PcmOutputWorker.a(true);
+                                  PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
                                 }
                                 PacketBuffer.a((byte) -124, PasswordValidator.g(-119));
                               }
@@ -826,7 +826,7 @@ final class re {
                       } else {
                         if (param2) {
                           if (DiskCacheWorker.field_a != null) {
-                            PcmOutputWorker.a(true);
+                            PcmOutputWorker.exitFullscreenAndRestoreFocus(true);
                           } else {
                             var8 = param0 ? 1 : 0;
                             mb.a(qa.field_b.field_s * 3 >> 1, 18, g.field_C, var8 != 0, 9414, 240, tc.field_a, 6, 320, 2, 18, qa.field_b);
@@ -1112,11 +1112,11 @@ final class re {
         if (h.field_E[this.field_i]) {
           if (cd.field_h != -1 &&
             cd.field_h != 1) {
-            f.field_a.b(0, 0);
+            f.field_a.drawOpaque(0, 0);
           } else {
             this.field_d.b(this.field_b, 2);
           }
-          td.field_c[-5 + this.field_i].b(198, 33);
+          td.field_c[-5 + this.field_i].drawOpaque(198, 33);
         } else {
           ae.a(d.field_u[this.field_i], 0, param2, 32, param0);
         }
@@ -1153,15 +1153,15 @@ final class re {
                   for (var11 = 0; var27.length > var11; var11++) {
                     var12 = var27[var11];
                     if ((db.field_m & 1 << var12) == 0) {
-                      vb.field_k.a(var9, var5);
+                      vb.field_k.drawQuarterSizeAveraged(var9, var5);
                     } else {
-                      ResourceArchive.field_a[var12].a(var9, var5);
+                      ResourceArchive.field_a[var12].drawQuarterSizeAveraged(var9, var5);
                     }
                     if (eg.field_b >= var9 &&
                       eg.field_b <= 32 + var9 &&
                       var5 <= ij.field_e &&
                       var5 + 32 >= ij.field_e) {
-                      db.field_o.c(-5 + var9, var5 - 5, 0);
+                      db.field_o.drawGrayModulated(-5 + var9, var5 - 5, 0);
                       var4Lifetime1 = var12;
                     }
                     if (this.field_a >= var9 &&
@@ -1176,7 +1176,7 @@ final class re {
                       this.field_a = -1;
                     }
                     if (var12 == this.field_g) {
-                      db.field_o.c(var9 - 5, var5 - 5, 16711680);
+                      db.field_o.drawGrayModulated(var9 - 5, var5 - 5, 16711680);
                     }
                     var9 += 40;
                   }
@@ -1192,9 +1192,9 @@ final class re {
                   stackIn_57_0 = ((1 << var4Lifetime1 & db.field_m) == 0) ? 0 : 1;
                   var8 = stackIn_57_0;
                   if (var8 == 0) {
-                    vb.field_k.d(248, var7Lifetime2 - qa.field_b.field_s);
+                    vb.field_k.draw(248, var7Lifetime2 - qa.field_b.field_s);
                   } else {
-                    ResourceArchive.field_a[var4Lifetime1].d(248, var7Lifetime2 - qa.field_b.field_s);
+                    ResourceArchive.field_a[var4Lifetime1].draw(248, var7Lifetime2 - qa.field_b.field_s);
                   }
                   var7Lifetime2 = var7Lifetime2 + var6;
                   stackIn_62_0 = qa.field_b;
@@ -1212,7 +1212,7 @@ final class re {
                   qa.field_b.drawString(nl.field_a, var9Lifetime2, var7Lifetime2, 0, -1);
                   var9Lifetime2 = var9Lifetime2 + qa.field_b.stringWidth(nl.field_a);
                   for (var10 = 0; eb.field_i[var4Lifetime1] > var10; var10++) {
-                    sk.field_c.d(var9Lifetime2, -qa.field_b.field_s + var7Lifetime2);
+                    sk.field_c.draw(var9Lifetime2, -qa.field_b.field_s + var7Lifetime2);
                     var9Lifetime2 = var9Lifetime2 + sk.field_c.field_l / 3;
                   }
                 } else {
@@ -1371,12 +1371,12 @@ final class re {
                     } else {
                       var8Lifetime1Lifetime2 = var8Lifetime1Lifetime2 + var6Lifetime1;
                     }
-                    ResourceArchive.field_a[var13Lifetime1].a(var8Lifetime1Lifetime2, var9Lifetime1Lifetime1);
+                    ResourceArchive.field_a[var13Lifetime1].drawQuarterSizeAveraged(var8Lifetime1Lifetime2, var9Lifetime1Lifetime1);
                     if (this.field_g == var13Lifetime1) {
-                      db.field_o.c(-5 + var8Lifetime1Lifetime2, -5 + var9Lifetime1Lifetime1, 16711680);
+                      db.field_o.drawGrayModulated(-5 + var8Lifetime1Lifetime2, -5 + var9Lifetime1Lifetime1, 16711680);
                     } else {
                       if (var13Lifetime1 == var10Lifetime1Lifetime1) {
-                        db.field_o.c(-5 + var8Lifetime1Lifetime2, -5 + var9Lifetime1Lifetime1, 0);
+                        db.field_o.drawGrayModulated(-5 + var8Lifetime1Lifetime2, -5 + var9Lifetime1Lifetime1, 0);
                       }
                     }
                   }
@@ -1391,7 +1391,7 @@ final class re {
                   var14Lifetime2 = 239;
                   var15 = 363;
                   qa.field_b.drawString(GzipInflater.field_b[var10Lifetime1Lifetime1], var15, var14Lifetime2, 0, -1);
-                  ResourceArchive.field_a[var10Lifetime1Lifetime1].d(223, -qa.field_b.field_s + var14Lifetime2);
+                  ResourceArchive.field_a[var10Lifetime1Lifetime1].draw(223, -qa.field_b.field_s + var14Lifetime2);
                   var14Lifetime2 = var14Lifetime2 + var13Lifetime2;
                   qa.field_b.drawString(pk.field_b, var15, var14Lifetime2, 16711680, -1);
                   var14Lifetime2 = var14Lifetime2 + (5 + var13Lifetime2);
@@ -1402,7 +1402,7 @@ final class re {
                   qa.field_b.drawString(nl.field_a, var8Lifetime1Lifetime3, var14Lifetime2, 0, -1);
                   var8Lifetime1Lifetime3 = var8Lifetime1Lifetime3 + qa.field_b.stringWidth(nl.field_a);
                   for (var16 = 0; var16 < eb.field_i[var10Lifetime1Lifetime1]; var16++) {
-                    sk.field_c.d(var8Lifetime1Lifetime3, -qa.field_b.field_s + var14Lifetime2);
+                    sk.field_c.draw(var8Lifetime1Lifetime3, -qa.field_b.field_s + var14Lifetime2);
                     var8Lifetime1Lifetime3 = var8Lifetime1Lifetime3 + sk.field_c.field_l / 3;
                   }
                 }

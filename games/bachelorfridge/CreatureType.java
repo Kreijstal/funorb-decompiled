@@ -195,17 +195,17 @@ final class CreatureType {
               }
             }
             if (var8 >= 1) {
-              us.field_c.a(param2 + 11, param1);
+              us.field_c.draw(param2 + 11, param1);
             }
             if (var8 >= 2) {
-              us.field_c.a(18 + param2, 3 + param1);
+              us.field_c.draw(18 + param2, 3 + param1);
             }
             if (var8 >= 3) {
-              us.field_c.a(21 + param2, 10 + param1);
+              us.field_c.draw(21 + param2, 10 + param1);
             }
             return;
           }
-          hh.field_b[var6].a(5 + param2, param1 + 5, 128);
+          hh.field_b[var6].drawWithOpacity(5 + param2, param1 + 5, 128);
           if (1 != var8 &&
             2 != var8 &&
             3 == var8) {
@@ -219,13 +219,13 @@ final class CreatureType {
             }
           }
           if (var8 >= 1) {
-            us.field_c.a(param2 + 11, param1);
+            us.field_c.draw(param2 + 11, param1);
           }
           if (var8 >= 2) {
-            us.field_c.a(18 + param2, 3 + param1);
+            us.field_c.draw(18 + param2, 3 + param1);
           }
           if (var8 >= 3) {
-            us.field_c.a(21 + param2, 10 + param1);
+            us.field_c.draw(21 + param2, 10 + param1);
           }
           return;
         }
@@ -235,7 +235,7 @@ final class CreatureType {
         var7Lifetime1 = var11.kind;
         var8Lifetime1 = var11.field_l;
         if (!param0) {
-          hh.field_b[var6Lifetime1].a(5 + param2, param1 + 5, 128);
+          hh.field_b[var6Lifetime1].drawWithOpacity(5 + param2, param1 + 5, 128);
           if (1 == var8Lifetime1) {
             if (1 != var7Lifetime1) {
               if (var7Lifetime1 != 2) {
@@ -246,13 +246,13 @@ final class CreatureType {
               }
             }
             if (var8Lifetime1 >= 1) {
-              us.field_c.a(param2 + 11, param1);
+              us.field_c.draw(param2 + 11, param1);
             }
             if (var8Lifetime1 >= 2) {
-              us.field_c.a(18 + param2, 3 + param1);
+              us.field_c.draw(18 + param2, 3 + param1);
             }
             if (var8Lifetime1 >= 3) {
-              us.field_c.a(21 + param2, 10 + param1);
+              us.field_c.draw(21 + param2, 10 + param1);
             }
             return;
           }
@@ -268,13 +268,13 @@ final class CreatureType {
             }
           }
           if (var8Lifetime1 >= 1) {
-            us.field_c.a(param2 + 11, param1);
+            us.field_c.draw(param2 + 11, param1);
           }
           if (var8Lifetime1 >= 2) {
-            us.field_c.a(18 + param2, 3 + param1);
+            us.field_c.draw(18 + param2, 3 + param1);
           }
           if (var8Lifetime1 >= 3) {
-            us.field_c.a(21 + param2, 10 + param1);
+            us.field_c.draw(21 + param2, 10 + param1);
           }
           return;
         }
@@ -291,13 +291,13 @@ final class CreatureType {
             }
           }
           if (var8Lifetime1 >= 1) {
-            us.field_c.a(param2 + 11, param1);
+            us.field_c.draw(param2 + 11, param1);
           }
           if (var8Lifetime1 >= 2) {
-            us.field_c.a(18 + param2, 3 + param1);
+            us.field_c.draw(18 + param2, 3 + param1);
           }
           if (var8Lifetime1 >= 3) {
-            us.field_c.a(21 + param2, 10 + param1);
+            us.field_c.draw(21 + param2, 10 + param1);
           }
           return;
         }
@@ -309,26 +309,26 @@ final class CreatureType {
             return;
           }
           if (var8Lifetime1 >= 1) {
-            us.field_c.a(param2 + 11, param1);
+            us.field_c.draw(param2 + 11, param1);
           }
         } else {
           if (var8Lifetime1 < 1) {
             if (var8Lifetime1 >= 2) {
-              us.field_c.a(18 + param2, 3 + param1);
+              us.field_c.draw(18 + param2, 3 + param1);
             }
             if (var8Lifetime1 < 3) {
               return;
             }
-            us.field_c.a(21 + param2, 10 + param1);
+            us.field_c.draw(21 + param2, 10 + param1);
             return;
           }
-          us.field_c.a(param2 + 11, param1);
+          us.field_c.draw(param2 + 11, param1);
         }
         if (var8Lifetime1 >= 2) {
-          us.field_c.a(18 + param2, 3 + param1);
+          us.field_c.draw(18 + param2, 3 + param1);
         }
         if (var8Lifetime1 >= 3) {
-          us.field_c.a(21 + param2, 10 + param1);
+          us.field_c.draw(21 + param2, 10 + param1);
         }
         return;
     }

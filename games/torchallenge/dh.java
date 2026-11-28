@@ -178,7 +178,7 @@ final class dh extends df {
             this.field_Z = new Sprite(var11, var12);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           }
-          var21.b(112, 144, var21.fullWidth << 4, var21.fullHeight << 4, -this.field_X << 10, 4096);
+          var21.drawRotatedAbout(112, 144, var21.fullWidth << 4, var21.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
           this.field_Z.drawAdditiveWithIntensity(-(var21.fullWidth >> 1) + var9, var10 - var21.fullHeight, 256);
           return;
@@ -231,7 +231,7 @@ final class dh extends df {
               }
             }
           }
-          var40.b(112, 144, var40.fullWidth << 4, var40.fullHeight << 4, -this.field_X << 10, 4096);
+          var40.drawRotatedAbout(112, 144, var40.fullWidth << 4, var40.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
           this.field_Z.drawAdditiveWithIntensity(-(var40.fullWidth >> 1) + var9Lifetime1, var10Lifetime1 - var40.fullHeight, 256);
           return;
@@ -260,7 +260,7 @@ final class dh extends df {
             this.field_Z = new Sprite(var11Lifetime2, var12Lifetime2);
             FullscreenFocusCanvas.a(-114, this.field_Z);
           }
-          var25.b(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_X << 10, 4096);
+          var25.drawRotatedAbout(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
           this.field_Z.drawAdditiveWithIntensity(-(var25.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var25.fullHeight, 256);
           return;
@@ -299,7 +299,7 @@ final class dh extends df {
             }
           }
         }
-        var32.b(112, 144, var32.fullWidth << 4, var32.fullHeight << 4, -this.field_X << 10, 4096);
+        var32.drawRotatedAbout(112, 144, var32.fullWidth << 4, var32.fullHeight << 4, -this.field_X << 10, 4096);
         ie.b((byte) -9);
         this.field_Z.drawAdditiveWithIntensity(-(var32.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var32.fullHeight, 256);
         return;

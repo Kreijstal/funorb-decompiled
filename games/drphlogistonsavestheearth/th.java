@@ -228,7 +228,7 @@ final class th {
           while (true) {
             if (dj.field_N < 0) {
               dh.field_N.position = 0;
-              if (!LoginMenuScreen.a(1, 5929)) {
+              if (!NameSuggestionsPanel.a(1, 5929)) {
                 return false;
               }
               dj.field_N = dh.field_N.readCipheredByte((byte) 121);

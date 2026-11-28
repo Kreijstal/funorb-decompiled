@@ -117,9 +117,9 @@ final class LevelLostEntrancePhase extends ResultScenePhase {
         }
         stackIn_9_0 = (var9.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        pc.field_w = var9.readString(110);
+        InteractiveWidget.field_w = var9.readString(110);
         if (var4 == 0) {
-          CipherPacketBuffer.field_s = pc.field_w;
+          CipherPacketBuffer.field_s = InteractiveWidget.field_w;
         } else {
           CipherPacketBuffer.field_s = var9.readString(121);
         }

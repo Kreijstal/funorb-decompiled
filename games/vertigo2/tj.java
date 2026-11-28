@@ -130,12 +130,12 @@ final class tj {
           if (param4 > -42) {
             field_b = -104;
           }
-          oj.field_O[param5] = param0;
-          oj.field_M[param5] = param3;
-          oj.field_I[param5] = param1;
-          oj.field_F[param5] = param6;
-          oj.field_H[param5] = param2;
-          oj.field_Q[param5] = false;
+          NameSuggestionsPanel.field_O[param5] = param0;
+          NameSuggestionsPanel.field_M[param5] = param3;
+          NameSuggestionsPanel.field_I[param5] = param1;
+          NameSuggestionsPanel.field_F[param5] = param6;
+          NameSuggestionsPanel.field_H[param5] = param2;
+          NameSuggestionsPanel.field_Q[param5] = false;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "tj.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

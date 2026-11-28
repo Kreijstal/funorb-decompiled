@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends WidgetContainer implements TextFieldListener, ij {
+final class LoginPanel extends WidgetContainer implements TextFieldListener, WidgetActivationListener {
     private EditableTextField field_O;
-    private d field_K;
+    private InteractiveWidget field_K;
     private boolean field_S;
     private boolean field_N;
     private EditableTextField field_H;
     private String field_P;
-    private d field_G;
+    private InteractiveWidget field_G;
     private boolean field_R;
     static IntrusiveDeque field_Q;
     static String field_I;
     static IntrusiveDeque field_M;
-    private d field_J;
+    private InteractiveWidget field_J;
     static int field_L;
     static double field_F;
 
@@ -160,10 +160,10 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        d stackIn_17_1 = null;
-        d stackIn_17_2 = null;
-        d stackIn_18_1 = null;
-        d stackIn_18_2 = null;
+        InteractiveWidget stackIn_17_1 = null;
+        InteractiveWidget stackIn_17_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -193,11 +193,11 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
           this.field_H = (EditableTextField) ((Object) new ValidatedTextField(param0, (uf) (this), 100));
           this.field_O = (EditableTextField) ((Object) new ValidatedTextField("", (uf) (this), 20));
           if (this.field_N) {
-            this.field_J = new d(bk.field_d, (uf) null);
-            this.field_G = new d(jd.field_b, (uf) null);
+            this.field_J = new InteractiveWidget(bk.field_d, (uf) null);
+            this.field_G = new InteractiveWidget(jd.field_b, (uf) null);
             this.field_H.field_F = false;
           } else {
-            this.field_J = new d(wp.field_d, (uf) null);
+            this.field_J = new InteractiveWidget(wp.field_d, (uf) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (!this.field_R) {
@@ -209,9 +209,9 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
               stackIn_18_2 = null;
               stackIn_18_3 = fd.field_o;
             }
-            this.field_G = new d(stackIn_18_3, (uf) null);
+            this.field_G = new InteractiveWidget(stackIn_18_3, (uf) null);
             if (this.field_S) {
-              this.field_K = new d(pk.field_r, (uf) (this));
+              this.field_K = new InteractiveWidget(pk.field_r, (uf) (this));
             }
           }
           this.field_H.listener = (WidgetListener) ((Object) new ml(10000536));
@@ -327,7 +327,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ij 
         return "";
     }
 
-    public final void a(int param0, d param1, byte param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, byte param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;

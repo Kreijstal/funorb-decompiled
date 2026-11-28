@@ -143,7 +143,7 @@ final class mh {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (li.a((byte) -82, param2)) {
+          if (NameSuggestionsPanel.a((byte) -82, param2)) {
             return false;
           }
           if (qf.a(-8503, param2)) {

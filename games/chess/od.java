@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends fb {
+final class od extends InteractiveWidget {
     int field_S;
     static long[] field_N;
     static long[][] field_O;

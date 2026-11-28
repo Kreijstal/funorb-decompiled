@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class si extends al implements n {
+class si extends al implements WidgetActivationListener {
     private BitmapFont field_rb;
     static QuickChatMenu field_ob;
     private boolean field_mb;
@@ -97,7 +97,7 @@ class si extends al implements n {
         }
     }
 
-    public void a(eb param0, int param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         RuntimeException stackIn_6_0 = null;

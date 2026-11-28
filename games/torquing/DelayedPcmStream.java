@@ -21,14 +21,14 @@ final class DelayedPcmStream extends PcmStream {
           var4 = var2.field_t;
           bp.a((byte) -56);
           cl.field_a = new Sprite(var3, var4 * 3 / 4);
-          cl.field_a.e();
-          var2.b(0, 0);
+          cl.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           de.field_a = new Sprite(var3, -cl.field_a.field_t + var4);
-          de.field_a.e();
+          de.field_a.bindAsRenderTarget();
           if (param0 != 66) {
             field_o = (BitmapFont) null;
           }
-          var2.b(0, -cl.field_a.field_t);
+          var2.drawOpaque(0, -cl.field_a.field_t);
           de.field_a.field_r = cl.field_a.field_t;
           r.a(126);
         } catch (RuntimeException runtimeException) {

@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends pj implements fh, ke {
+final class DisplayNameSelectionPanel extends pj implements NameSuggestionListener, WidgetActivationListener {
     static int field_J;
     static he[] field_L;
-    private hf field_N;
+    private InteractiveWidget field_N;
     private ValidatedTextField field_M;
     static int field_K;
-    private hf field_P;
-    LoginMenuScreen field_O;
+    private InteractiveWidget field_P;
+    NameSuggestionsPanel field_O;
 
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (cg) null);
         this.field_M = new ValidatedTextField("", (fd) null, 12);
         l var1 = new l(u.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
         vg var2 = new vg(ue.field_c, var1, (fd) null);
-        this.field_P = new hf(DebouncedFieldValidator.field_b, (fd) null);
-        this.field_N = new hf(vi.field_f, (fd) null);
+        this.field_P = new InteractiveWidget(DebouncedFieldValidator.field_b, (fd) null);
+        this.field_N = new InteractiveWidget(vi.field_f, (fd) null);
         this.field_M.field_v = bj.field_c;
         this.field_M.setFieldValidator(new AccountNameAvailabilityValidator(this.field_M), (byte) -57);
         this.field_P.field_E = false;
@@ -36,7 +36,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         this.field_P.field_u = (fd) (this);
         this.b(this.field_P, (byte) 92);
         this.b(this.field_N, (byte) 115);
-        this.field_O = new LoginMenuScreen((fh) (this));
+        this.field_O = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_O.a(20, 150, 60 + (this.field_M.field_w + this.field_M.field_o), 16535, -60 + (this.field_w - this.field_M.field_o - this.field_M.field_w));
         this.b(this.field_O, (byte) 77);
         this.a(0, var4 + var3 + 55, 0, 16535, 496);
@@ -211,7 +211,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         }
     }
 
-    public final void a(String param0, int param1) {
+    public final void onNameSuggestionSelected(String param0, int param1) {
         int discarded$1 = 0;
         ValidatedTextField var3 = null;
         String var4 = null;
@@ -260,7 +260,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
           }
           var4 = var3.getValidationStatus(-12317);
           if (param1 != 11) {
-            this.field_O = (LoginMenuScreen) null;
+            this.field_O = (NameSuggestionsPanel) null;
           }
           stackIn_8_0 = (ce.field_e == var4);
           return stackIn_8_0;
@@ -351,7 +351,7 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
         vg var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -385,8 +385,8 @@ final class DisplayNameSelectionPanel extends pj implements fh, ke {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_M.getFieldValidator((byte) -122))).e((byte) -27);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_M.getFieldValidator((byte) -122))).invalidateCheckedName((byte) -27);
         if (param0 > -23) {
           field_K = 126;
         }

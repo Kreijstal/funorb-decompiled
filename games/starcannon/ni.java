@@ -106,14 +106,14 @@ final class ni implements de {
           var2_int = 0;
           var3 = param1.length();
           while (var3 > var2_int) {
-            if (dk.a((byte) -122, param1.charAt(var2_int))) {
+            if (InteractiveWidget.a((byte) -122, param1.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (dk.a((byte) -126, param1.charAt(var3 - 1))) {
+            if (InteractiveWidget.a((byte) -126, param1.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -133,7 +133,7 @@ final class ni implements de {
           }
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (dk.a((char) var7, (byte) 90)) {
+            if (InteractiveWidget.a((char) var7, (byte) 90)) {
               var8 = pa.a((char) var7, -80);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

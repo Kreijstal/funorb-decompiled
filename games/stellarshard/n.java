@@ -82,12 +82,12 @@ final class n {
           }
           id.b((byte) -58);
           if (ni.field_d < 150) {
-            u.field_m.b(var3_int, var4);
+            u.field_m.drawHalfSize(var3_int, var4);
             if (var8 != 0) {
-              wh.field_a.e(var3_int + 15, var4 + 10, var5);
+              wh.field_a.drawWithOpacity(var3_int + 15, var4 + 10, var5);
             }
           } else {
-            wh.field_a.e(var3_int + 15, var4 + 10, var5);
+            wh.field_a.drawWithOpacity(var3_int + 15, var4 + 10, var5);
           }
           var6 = ni.field_d - 125;
           if (0 < var6 &&
@@ -95,22 +95,22 @@ final class n {
             if (var6 >= 20) {
               if (30 <= var6) {
                 var7 = (-var6 + 50) * 256 / 20;
-                pd.field_s.d(var3_int, var4, var7);
+                pd.field_s.drawAdditive(var3_int, var4, var7);
                 if (var8 != 0) {
-                  pd.field_s.d(var3_int, var4, 256);
+                  pd.field_s.drawAdditive(var3_int, var4, 256);
                   var7 = 256 * var6 / 20;
-                  pd.field_s.d(var3_int, var4, var7);
+                  pd.field_s.drawAdditive(var3_int, var4, var7);
                 }
               } else {
-                pd.field_s.d(var3_int, var4, 256);
+                pd.field_s.drawAdditive(var3_int, var4, 256);
                 if (var8 != 0) {
                   var7 = 256 * var6 / 20;
-                  pd.field_s.d(var3_int, var4, var7);
+                  pd.field_s.drawAdditive(var3_int, var4, var7);
                 }
               }
             } else {
               var7 = 256 * var6 / 20;
-              pd.field_s.d(var3_int, var4, var7);
+              pd.field_s.drawAdditive(var3_int, var4, var7);
             }
           }
           var6Lifetime1 = ni.field_d - 140;
@@ -119,7 +119,7 @@ final class n {
             if (var6Lifetime1 < 20) {
               var7Lifetime1 = 256 * var6Lifetime1 / 20;
             }
-            fb.field_h.e(15 + var3_int, var4 + 10, var7Lifetime1 * var5 >> 8);
+            fb.field_h.drawWithOpacity(15 + var3_int, var4 + 10, var7Lifetime1 * var5 >> 8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,7 +274,7 @@ final class n {
         int var12Lifetime1;
         var20 = stellarshard.field_B;
         try {
-          param0.b();
+          param0.normalizeCanvas();
           var3_int = NanoFrameTimer.a((byte) -61, param0.field_z[0]);
           var4 = var3_int >> 2 & 63;
           if (var4 > 0) {

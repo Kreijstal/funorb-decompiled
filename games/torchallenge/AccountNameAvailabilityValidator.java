@@ -79,10 +79,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         return param1 == (-param1 & param1) ? true : false;
     }
 
-    final void f(int param0) {
+    final void invalidateCheckedName(int param0) {
         this.checkedName = null;
         if (param0 != 0) {
-          this.f(-101);
+          this.invalidateCheckedName(-101);
         }
     }
 

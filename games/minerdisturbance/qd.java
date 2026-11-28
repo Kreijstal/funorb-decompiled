@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends kn implements sh {
+final class qd extends kn implements WidgetActivationListener {
     static int field_M;
     static ae field_Q;
-    private hc field_I;
+    private InteractiveWidget field_I;
     static boolean[] field_O;
     static boolean field_S;
     static volatile int field_J;
-    private hc field_N;
+    private InteractiveWidget field_N;
     static int field_P;
     static int field_R;
-    private hc field_L;
+    private InteractiveWidget field_L;
     static int field_K;
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -61,9 +61,9 @@ final class qd extends kn implements sh {
 
     public qd() {
         super(0, 0, 476, 225, (ad) null);
-        this.field_I = new hc(u.field_a, (rm) null);
-        this.field_L = new hc(hk.field_c, (rm) null);
-        this.field_N = new hc(hj.field_a, (rm) null);
+        this.field_I = new InteractiveWidget(u.field_a, (rm) null);
+        this.field_L = new InteractiveWidget(hk.field_c, (rm) null);
+        this.field_N = new InteractiveWidget(hj.field_a, (rm) null);
         wi var1 = new wi();
         this.field_I.field_A = (ad) ((Object) var1);
         this.field_L.field_A = (ad) ((Object) var1);

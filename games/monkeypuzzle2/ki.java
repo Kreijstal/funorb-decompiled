@@ -270,11 +270,11 @@ final class ki extends DualLinkNode {
     final void d(byte param0) {
         if (2 == this.field_w ||
           this.field_w == 3) {
-          sb.field_m.e();
-          this.field_I.e(-80 + (int)((float)this.field_G + this.field_B) - 1, (int)(this.field_q + (float)this.field_y), 16777213);
-          this.field_I.e((int)(this.field_B + (float)this.field_G) - 79, (int)((float)this.field_y + this.field_q), 16777212);
-          this.field_I.e((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q - 1.0f), 16777215);
-          this.field_I.e(-80 + (int)((float)this.field_G + this.field_B), (int)(1.0f + ((float)this.field_y + this.field_q)), 16777214);
+          sb.field_m.bindAsRenderTarget();
+          this.field_I.drawSilhouette(-80 + (int)((float)this.field_G + this.field_B) - 1, (int)(this.field_q + (float)this.field_y), 16777213);
+          this.field_I.drawSilhouette((int)(this.field_B + (float)this.field_G) - 79, (int)((float)this.field_y + this.field_q), 16777212);
+          this.field_I.drawSilhouette((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q - 1.0f), 16777215);
+          this.field_I.drawSilhouette(-80 + (int)((float)this.field_G + this.field_B), (int)(1.0f + ((float)this.field_y + this.field_q)), 16777214);
           ac.field_a.setAsRasterTarget((byte) 117);
         }
         int var2 = -89 % ((param0 - 59) / 54);
@@ -290,10 +290,10 @@ final class ki extends DualLinkNode {
             SoftwareRasterizer.drawCircleOutline((int)this.field_B, (int)this.field_q, 16, 1);
           }
           if (this.field_I != null) {
-            this.field_I.c((int)((float)this.field_G + this.field_B), (int)((float)this.field_y + this.field_q));
+            this.field_I.draw((int)((float)this.field_G + this.field_B), (int)((float)this.field_y + this.field_q));
           }
         } else {
-          this.field_I.b((int)((float)this.field_G + this.field_B), (int)(this.field_q + (float)this.field_y), 180);
+          this.field_I.drawWithOpacity((int)((float)this.field_G + this.field_B), (int)(this.field_q + (float)this.field_y), 180);
         }
         if (param0 > -10) {
           this.c((byte) 35);
@@ -324,11 +324,11 @@ final class ki extends DualLinkNode {
     }
 
     final void c(byte param0) {
-        sb.field_m.e();
+        sb.field_m.bindAsRenderTarget();
         if (param0 >= -83) {
           this.field_y = -51;
         }
-        this.field_I.e((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q), this.field_k + 1);
+        this.field_I.drawSilhouette((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q), this.field_k + 1);
         ac.field_a.setAsRasterTarget((byte) 124);
     }
 

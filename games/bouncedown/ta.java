@@ -20,13 +20,13 @@ final class ta {
           SoftwareRasterizer.clearRaster();
           oa.field_a = 0;
           BufferedRandomAccessFile.c(param0);
-          var2 = var1.b();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.e(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          Bounce.field_G.d();
-          var1.c(0, 0);
+          Bounce.field_G.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ve.a(-122);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "ta.B(" + param0 + ')');
@@ -79,7 +79,7 @@ final class ta {
             } else {
               ej.field_c = pg.field_d;
             }
-            ej.field_c = rk.a(true, new CharSequence[]{(CharSequence) ((Object) ej.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) nd.field_G)});
+            ej.field_c = rk.a(true, new CharSequence[]{(CharSequence) ((Object) ej.field_c), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) NameSuggestionsPanel.field_G)});
           }
           nk.field_a.a(true);
           kb.b(808);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends kf {
+class EditableTextField extends InteractiveWidget {
     private int field_L;
     private long field_M;
     private boolean field_N;

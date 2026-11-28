@@ -77,7 +77,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
             } else {
               var4 = IterableNodeHashTable.field_f;
               if (this.field_mb != null) {
-                this.field_mb.a((byte) 121);
+                this.field_mb.onNameSuggestionsRefreshRequested((byte) 121);
               }
             }
           }
@@ -126,7 +126,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
         }
     }
 
-    public final void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_lb) {
           nk.a(true, -126, false);
           return;

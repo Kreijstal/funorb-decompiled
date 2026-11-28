@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends WidgetContainer implements TextFieldListener, ql {
+final class LoginPanel extends WidgetContainer implements TextFieldListener, WidgetActivationListener {
     private boolean field_F;
     private String field_B;
     private EditableTextField field_H;
@@ -347,7 +347,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, ql 
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

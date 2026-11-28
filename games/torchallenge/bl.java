@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bl extends ng {
+final class bl extends InteractiveWidget {
     int field_Y;
     private m field_R;
     static rj field_S;

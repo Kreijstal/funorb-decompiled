@@ -241,14 +241,14 @@ final class CrystalTile extends pn implements Cloneable {
     final void drawTileForeground(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 61 % ((param0 - 74) / 41);
         if (param1 != 24) {
-          vp.field_i[this.field_n][this.field_m].b(param4, -param2 + param5, 2 * param1, param2 * 3);
+          vp.field_i[this.field_n][this.field_m].drawScaled(param4, -param2 + param5, 2 * param1, param2 * 3);
           return;
         }
         if (24 == param2) {
-          vp.field_i[this.field_n][this.field_m].a(param4, -param2 + param5);
+          vp.field_i[this.field_n][this.field_m].draw(param4, -param2 + param5);
           return;
         }
-        vp.field_i[this.field_n][this.field_m].b(param4, -param2 + param5, 2 * param1, param2 * 3);
+        vp.field_i[this.field_n][this.field_m].drawScaled(param4, -param2 + param5, 2 * param1, param2 * 3);
     }
 
     final void a(int param0, int param1, int param2, PuzzleTile[][] param3, int param4, int param5, int param6, int param7) {

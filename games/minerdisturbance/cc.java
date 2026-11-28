@@ -27,7 +27,7 @@ abstract class cc extends kn {
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
-          mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
           return;
         }
         if (this.field_v > mn.field_t.field_y) {
@@ -37,7 +37,7 @@ abstract class cc extends kn {
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
-          mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
           return;
         }
         if (mn.field_t.field_C >= this.field_q) {
@@ -46,7 +46,7 @@ abstract class cc extends kn {
           this.b(21533, 0, 0);
           super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
           tk.b(true);
-          mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
+          mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
           return;
         }
         mn.field_t = new Sprite(this.field_v, this.field_q);
@@ -55,7 +55,7 @@ abstract class cc extends kn {
         this.b(21533, 0, 0);
         super.a(param0, -param1 - this.field_u, -param2 - this.field_t, param3);
         tk.b(true);
-        mn.field_t.f(this.field_u + param1, this.field_t + param2, this.field_J);
+        mn.field_t.drawWithOpacity(this.field_u + param1, this.field_t + param2, this.field_J);
     }
 
     final static void a(int param0, int param1) {

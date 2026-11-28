@@ -544,7 +544,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               kj.field_i = param6;
               ImageProducerRasterBuffer.field_k = param6;
               ob.field_d = 0;
-              nd.field_E = param4;
+              NameSuggestionsPanel.field_E = param4;
               og.field_c = this;
               ResourceArchive.field_j = DiskCacheWorker.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);

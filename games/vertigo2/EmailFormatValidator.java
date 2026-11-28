@@ -47,8 +47,8 @@ final class EmailFormatValidator extends TextFieldValidator {
             for (var6 = 0; var6 < 4; var6++) {
               for (var7 = 0; 4 > var7; var7++) {
                 var8 = new Sprite(128, 128);
-                var8.d();
-                param2[var5].c(param0[var5] - param2[var5].field_y * var7 / 4, param0[var5] - var6 * param2[var5].field_t / 4);
+                var8.bindAsRenderTarget();
+                param2[var5].drawOpaque(param0[var5] - param2[var5].field_y * var7 / 4, param0[var5] - var6 * param2[var5].field_t / 4);
                 for (var9 = param0[var5] - 1; var9 >= 0; var9--) {
                   for (var10 = 0; var8.field_y > var10; var10++) {
                     var8.field_F[var8.field_y * var10 + var9] = var8.field_F[var8.field_y * var10 + param0[var5]];

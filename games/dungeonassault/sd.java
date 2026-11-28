@@ -22,7 +22,7 @@ final class sd extends da {
     final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, int param5) {
         try {
           int var6_int = -14 / ((param2 + 15) / 36);
-          param1.h(param0, param5);
+          param1.draw(param0, param5);
           db.field_v.drawString(Integer.toString(param4), 20 + param0, param5 + (la.field_b.field_H + param1.field_v >> 1), param3, -1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -63,7 +63,7 @@ final class sd extends da {
         lm.a(var6, (byte) -79);
         this.field_D.a(param0, 0, param2 ^ 0, param2);
         ti.c(true);
-        var6.d(param1 + this.field_q, this.field_v + param3, this.field_H);
+        var6.drawWithOpacity(param1 + this.field_q, this.field_v + param3, this.field_H);
     }
 
     static {

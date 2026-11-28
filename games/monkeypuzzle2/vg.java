@@ -137,14 +137,14 @@ final class vg extends jj {
               var6 != f.field_g) {
               if (IsaacRandom.field_h == var6) {
                 var30 = hk.field_i[2];
-                var30.c(var9, var10 - (var30.field_j >> 1), 256);
+                var30.drawAdditive(var9, var10 - (var30.field_j >> 1), 256);
                 return;
               }
               if (var6 != TextFieldValidator.field_i) {
                 return;
               }
               var29 = hk.field_i[1];
-              var29.c(var9, var10 - (var29.field_j >> 1), 256);
+              var29.drawAdditive(var9, var10 - (var29.field_j >> 1), 256);
               return;
             }
             var31 = hk.field_i[0];
@@ -167,9 +167,9 @@ final class vg extends jj {
                 }
               }
             }
-            var31.b(112, 144, var31.field_m << 4, var31.field_n << 4, -this.field_L << 10, 4096);
+            var31.drawRotatedAboutBilinear(112, 144, var31.field_m << 4, var31.field_n << 4, -this.field_L << 10, 4096);
             tj.b(param0 ^ 659);
-            this.field_I.c(-(var31.field_m >> 1) + var9, var10 - var31.field_n, 256);
+            this.field_I.drawAdditive(-(var31.field_m >> 1) + var9, var10 - var31.field_n, 256);
             return;
           }
           this.field_s = var5;
@@ -192,22 +192,22 @@ final class vg extends jj {
               this.field_I = new Sprite(var11Lifetime2, var12Lifetime2);
               mc.a(param0 ^ -8495, this.field_I);
             }
-            var23.b(112, 144, var23.field_m << 4, var23.field_n << 4, -this.field_L << 10, 4096);
+            var23.drawRotatedAboutBilinear(112, 144, var23.field_m << 4, var23.field_n << 4, -this.field_L << 10, 4096);
             tj.b(param0 ^ 659);
-            this.field_I.c(-(var23.field_m >> 1) + var9Lifetime2, var10Lifetime2 - var23.field_n, 256);
+            this.field_I.drawAdditive(-(var23.field_m >> 1) + var9Lifetime2, var10Lifetime2 - var23.field_n, 256);
             return;
           }
           if (var6 != f.field_g) {
             if (IsaacRandom.field_h == var6) {
               var25 = hk.field_i[2];
-              var25.c(var9Lifetime2, var10Lifetime2 - (var25.field_j >> 1), 256);
+              var25.drawAdditive(var9Lifetime2, var10Lifetime2 - (var25.field_j >> 1), 256);
               return;
             }
             if (var6 != TextFieldValidator.field_i) {
               return;
             }
             var24 = hk.field_i[1];
-            var24.c(var9Lifetime2, var10Lifetime2 - (var24.field_j >> 1), 256);
+            var24.drawAdditive(var9Lifetime2, var10Lifetime2 - (var24.field_j >> 1), 256);
             return;
           }
           var26 = hk.field_i[0];
@@ -231,9 +231,9 @@ final class vg extends jj {
               }
             }
           }
-          var26.b(112, 144, var26.field_m << 4, var26.field_n << 4, -this.field_L << 10, 4096);
+          var26.drawRotatedAboutBilinear(112, 144, var26.field_m << 4, var26.field_n << 4, -this.field_L << 10, 4096);
           tj.b(param0 ^ 659);
-          this.field_I.c(-(var26.field_m >> 1) + var9Lifetime2, var10Lifetime2 - var26.field_n, 256);
+          this.field_I.drawAdditive(-(var26.field_m >> 1) + var9Lifetime2, var10Lifetime2 - var26.field_n, 256);
           return;
         }
         var17 = w.field_a;
@@ -263,14 +263,14 @@ final class vg extends jj {
           if (var6Lifetime1 != f.field_g) {
             if (IsaacRandom.field_h == var6Lifetime1) {
               var20 = hk.field_i[2];
-              var20.c(var9Lifetime1, var10Lifetime1 - (var20.field_j >> 1), 256);
+              var20.drawAdditive(var9Lifetime1, var10Lifetime1 - (var20.field_j >> 1), 256);
               return;
             }
             if (var6Lifetime1 != TextFieldValidator.field_i) {
               return;
             }
             var19 = hk.field_i[1];
-            var19.c(var9Lifetime1, var10Lifetime1 - (var19.field_j >> 1), 256);
+            var19.drawAdditive(var9Lifetime1, var10Lifetime1 - (var19.field_j >> 1), 256);
             return;
           }
           var21 = hk.field_i[0];
@@ -286,9 +286,9 @@ final class vg extends jj {
             mc.a(param0 ^ -8495, this.field_I);
           }
         }
-        var21.b(112, 144, var21.field_m << 4, var21.field_n << 4, -this.field_L << 10, 4096);
+        var21.drawRotatedAboutBilinear(112, 144, var21.field_m << 4, var21.field_n << 4, -this.field_L << 10, 4096);
         tj.b(param0 ^ 659);
-        this.field_I.c(-(var21.field_m >> 1) + var9Lifetime1, var10Lifetime1 - var21.field_n, 256);
+        this.field_I.drawAdditive(-(var21.field_m >> 1) + var9Lifetime1, var10Lifetime1 - var21.field_n, 256);
     }
 
     final static boolean a(int param0, hb param1) {

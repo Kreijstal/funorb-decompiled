@@ -224,14 +224,14 @@ final class we implements j {
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
             var11 = new Sprite(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
-            var11.a();
-            kj.field_S.e(2, 2, ea.field_o);
+            var11.bindAsRenderTarget();
+            kj.field_S.drawGrayModulated(2, 2, ea.field_o);
             UiWidget.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
             kj.field_S = var11;
-            fh.field_f = kj.field_S.b();
+            fh.field_f = kj.field_S.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
-            var12.a();
+            var12.bindAsRenderTarget();
             GzipDecompressor.field_a.drawCentred(LoginPanel.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
             ArchiveRequest.field_n.drawCentred(LoginPanel.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
             GzipDecompressor.field_a.drawCentred(LoginPanel.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
@@ -239,16 +239,16 @@ final class we implements j {
             GzipDecompressor.field_a.drawCentred(le.field_b, var6, 180, 16777215, -1);
             ArchiveRequest.field_n.drawCentred(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
-            pf.field_b.a();
-            var12.d(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
+            pf.field_b.bindAsRenderTarget();
+            var12.draw(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
             for (var7 = 0; ba.field_s.length > var7; var7++) {
-              qd.field_e[var7].a();
+              qd.field_e[var7].bindAsRenderTarget();
               ArchiveRequest.field_n.drawParagraph(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
-            ke.field_K = TextFieldValidator.field_e.c();
-            ke.field_K.a();
+            ke.field_K = TextFieldValidator.field_e.copy();
+            ke.field_K.bindAsRenderTarget();
             IterableNodeHashTable.a(SoftwareRasterizer.field_d * 2 / 3, 0, 0, 64, SoftwareRasterizer.field_a, true);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(lj.field_D);
@@ -315,18 +315,18 @@ final class we implements j {
               ja.field_a.field_r = ja.field_a.field_r + 2 * var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
             }
-            ja.field_a.d();
+            ja.field_a.normalizeCanvas();
             var9 = new Sprite(ja.field_a.field_q, ja.field_a.field_r);
-            var9.a();
+            var9.bindAsRenderTarget();
             GzipDecompressor.field_a.drawParagraph(var14, ji.field_a, AgeValidator.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, GzipDecompressor.field_a.field_F + GzipDecompressor.field_a.field_s);
             UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
-            ja.field_a.a();
-            var9.d(0, 0);
+            ja.field_a.bindAsRenderTarget();
+            var9.draw(0, 0);
             rh.field_g = new Sprite(640, 480);
-            rh.field_g.a();
-            ja.field_a.b((ja.field_a.field_q >> 1) + gf.field_T, ke.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
+            rh.field_g.bindAsRenderTarget();
+            ja.field_a.drawRotated((ja.field_a.field_q >> 1) + gf.field_T, ke.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
             ja.field_a = null;
-            rh.field_g.f();
+            rh.field_g.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(lj.field_D);
           }
@@ -339,11 +339,11 @@ final class we implements j {
             var16 = new Sprite(412, 43);
             var17 = LoginPanel.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
-            var16.a();
+            var16.bindAsRenderTarget();
             ArchiveRequest.field_n.drawParagraph(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
             UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
-            va.field_g.a();
-            var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
+            va.field_g.bindAsRenderTarget();
+            var16.draw(199 - va.field_g.field_s, -va.field_g.field_n + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(lj.field_D);
           }
@@ -357,11 +357,11 @@ final class we implements j {
             var5Lifetime1 = EmailFormatValidator.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (EmailFormatValidator.field_j.field_q + var6Lifetime2);
-            va.field_g.a();
+            va.field_g.bindAsRenderTarget();
             ArchiveRequest.field_n.drawString(EmailFormatValidator.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
             UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
             var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + EmailFormatValidator.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
-            EmailFormatValidator.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
+            EmailFormatValidator.field_j.draw(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(lj.field_D);
             EmailFormatValidator.field_j = null;
@@ -370,23 +370,23 @@ final class we implements j {
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
           SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
           if (of.field_f != null) {
-            of.field_f.d(0, 0);
+            of.field_f.draw(0, 0);
           }
           if (pf.field_b != null) {
-            pf.field_b.d(0, 0);
+            pf.field_b.draw(0, 0);
           }
-          va.field_g.d(0, 0);
+          va.field_g.draw(0, 0);
           if (rh.field_g != null) {
-            rh.field_g.d(0, 0);
+            rh.field_g.draw(0, 0);
           }
           if (null != IsaacRandom.field_d &&
             null != GameApplet.field_j) {
-            IsaacRandom.field_d.d(231, 390);
+            IsaacRandom.field_d.draw(231, 390);
             var1 = TextFieldValidator.field_e;
             if (GameKeyHandler.field_b.field_f == 0) {
               var1 = ke.field_K;
             }
-            var1.d(0, 0);
+            var1.draw(0, 0);
             stackIn_50_0 = 40;
             stackIn_50_1 = ArchiveSource.field_a;
             if (0 != GameKeyHandler.field_b.field_f) {
@@ -412,8 +412,8 @@ final class we implements j {
           }
           if (null != IsaacRandom.field_d &&
             GameApplet.field_j != null) {
-            IsaacRandom.field_d.d(434, 390);
-            jh.field_b.d(0, 0);
+            IsaacRandom.field_d.draw(434, 390);
+            jh.field_b.draw(0, 0);
             if (GameKeyHandler.field_b.field_f == 1) {
               IterableNodeHashTable.a(7 * IsaacRandom.field_d.field_t / 12, 436, 392, 64, IsaacRandom.field_d.field_p - 4, true);
             }
@@ -424,8 +424,8 @@ final class we implements j {
           }
           if (kj.field_S != null) {
             var1_int = -(kj.field_S.field_r / 2) + 357;
-            kj.field_S.d(269 - kj.field_S.field_q, var1_int);
-            fh.field_f.d(586, var1_int);
+            kj.field_S.draw(269 - kj.field_S.field_q, var1_int);
+            fh.field_f.draw(586, var1_int);
             if (var1_int < BufferedSocket.field_m &&
               var1_int + kj.field_S.field_t > BufferedSocket.field_m) {
               stackIn_72_0 = 40;
@@ -434,7 +434,7 @@ final class we implements j {
               var2Lifetime5 = stackIn_72_0 + (kb.a(stackIn_72_1, stackIn_73_2) * 40 >> 16);
               if (var2Lifetime5 <= 0) {
                 ac.a((byte) -125);
-                qd.field_e[field_h].d(269, 340);
+                qd.field_e[field_h].draw(269, 340);
                 return;
               }
               if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
@@ -455,7 +455,7 @@ final class we implements j {
             }
           }
           ac.a((byte) -125);
-          qd.field_e[field_h].d(269, 340);
+          qd.field_e[field_h].draw(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

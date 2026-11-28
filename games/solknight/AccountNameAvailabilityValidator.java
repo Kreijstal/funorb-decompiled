@@ -7,7 +7,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static void a(int param0, boolean param1) {
         we.field_h = 0;
-        ua.field_L = 0;
+        NameSuggestionsPanel.field_L = 0;
         ArchiveSource.field_a = 0;
         ti.field_e = uc.field_e;
         GameKeyHandler.field_b = new sf(2);
@@ -71,7 +71,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void a(boolean param0) {
+    final void invalidateCheckedName(boolean param0) {
         this.checkedName = null;
         if (!param0) {
           String var3 = (String) null;

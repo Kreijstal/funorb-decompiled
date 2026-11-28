@@ -436,7 +436,7 @@ final class fa extends wl {
         if (var1 != null) {
           var2 = em.field_B;
           lb.a(10, BoundedRandomAccessFile.field_j, (byte) -128, NodeHashTableIterator.field_e, var2, ii.field_B);
-          ie.field_b[var3.field_h].b(25, var2 + 15);
+          ie.field_b[var3.field_h].drawQuarterSizeAveraged(25, var2 + 15);
           BoundedRandomAccessFile.field_e.drawParagraph(rb.field_hb[var3.field_h], 67, var2 + 15, BoundedRandomAccessFile.field_j - 72, ii.field_B - 30, 1, -1, 1, 1, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
         }
         if (param0 != 1) {

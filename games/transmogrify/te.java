@@ -88,8 +88,8 @@ final class te {
             var6_int = param0[0].field_r;
             var7 = param0[2].field_r;
             var8 = param0[1].field_r;
-            param0[0].a(param5, param2, param1);
-            param0[2].a(-var7 + param5 + param3, param2, param1);
+            param0[0].drawTintedGray(param5, param2, param1);
+            param0[2].drawTintedGray(-var7 + param5 + param3, param2, param1);
             SoftwareRasterizer.saveClip(q.field_i);
             if (param4 < 13) {
               te.clearStaticReferences((byte) 8);
@@ -98,7 +98,7 @@ final class te {
             var9 = param5 + var6_int;
             var10 = param3 + param5 - var7;
             for (param5 = var9; var10 > param5; param5 = param5 + var8) {
-              param0[1].a(param5, param2, param1);
+              param0[1].drawTintedGray(param5, param2, param1);
             }
             SoftwareRasterizer.restoreClip(q.field_i);
             return;

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic extends jj implements da {
+final class ic extends jj implements WidgetActivationListener {
     static java.awt.Font field_bb;
     static PcmSample field_ab;
     static char[] field_db;
-    private bb field_cb;
+    private InteractiveWidget field_cb;
 
-    private final bb a(int param0, String param1, kd param2) {
-        bb var4 = null;
+    private final InteractiveWidget a(int param0, String param1, kd param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        bb var6 = null;
-        bb stackIn_3_0 = null;
+        InteractiveWidget var6 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -20,13 +20,13 @@ final class ic extends jj implements da {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new bb(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           var4.field_p = (ComponentLayout) ((Object) new ri());
           var5 = -6 + this.field_j;
           this.field_j = this.field_j + 38;
           if (param0 != -28732) {
-            var6 = (bb) null;
-            this.a(-90, -88, -85, 85, (bb) null);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated(-90, -88, -85, 85, (InteractiveWidget) null);
           }
           var4.a(15, -16 + (this.field_u - 14), var5, 30, 80);
           this.a((UiComponent) (var4), (byte) -43);
@@ -76,7 +76,7 @@ final class ic extends jj implements da {
         nb.field_a.b(ProxyAuthenticationRequiredException.field_g, (byte) -35);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, bb param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

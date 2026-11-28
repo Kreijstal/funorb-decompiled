@@ -45,7 +45,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var8 = 64;
           var9 = param2[var7_int - 1] + param2[0] >> 1;
           for (var10 = 0; var10 < 3; var10++) {
-            we.field_e[var10][param3].d();
+            we.field_e[var10][param3].bindAsRenderTarget();
             SoftwareRasterizer.saveClip(ae.field_y);
             if (var7_int > 0) {
               SoftwareRasterizer.intersectClip(0, 0, var7_int, var8);
@@ -57,7 +57,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var12 = 0;
           var10Lifetime1 = var12;
           while (var12 <= 1) {
-            re.field_v[var12][param3].d();
+            re.field_v[var12][param3].bindAsRenderTarget();
             SoftwareRasterizer.saveClip(ae.field_y);
             if (var12 == 0 &&
               param0 == 0) {

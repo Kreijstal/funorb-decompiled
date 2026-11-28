@@ -58,7 +58,7 @@ final class sb {
             nj.field_a = param9;
             if (vl.field_a.field_w != null) {
               try {
-                kf.field_y = new BufferedRandomAccessFile(vl.field_a.field_w, 64, 0);
+                InteractiveWidget.field_y = new BufferedRandomAccessFile(vl.field_a.field_w, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

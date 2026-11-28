@@ -96,8 +96,8 @@ final class rj extends fc {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_A instanceof ph) ||
-            ((ph) (this.field_A)).field_D) &&
+          if ((!(this.field_A instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_A)).field_D) &&
             this.field_r == 1) {
             var5_int = -param3 + (-this.field_L + j.field_c);
             var6 = -this.field_I + (rb.field_m - param1);

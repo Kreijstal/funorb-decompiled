@@ -68,8 +68,8 @@ final class kb extends kn {
         int var6 = 0;
         String var7 = null;
         try {
-          if ((!(this.field_M instanceof fb) ||
-            ((fb) (this.field_M)).field_H) &&
+          if ((!(this.field_M instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_M)).field_H) &&
             this.field_q == 1) {
             var5_int = -this.field_W + (BufferedSocket.field_k - param0);
             var6 = -param3 + (rf.field_b - this.field_V);

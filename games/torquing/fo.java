@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo extends WidgetContainer implements ng {
+final class fo extends WidgetContainer implements WidgetActivationListener {
     private int field_J;
     static String field_E;
     private int[] field_H;
     private mn field_C;
     private BitmapFont field_G;
-    private lg[] field_I;
+    private InteractiveWidget[] field_I;
     private String field_B;
 
     fo(mn param0, BitmapFont param1, String param2) {
@@ -38,7 +38,7 @@ final class fo extends WidgetContainer implements ng {
           this.field_I[var4_int] = this.a(param1 - 5177, param0, (ca) (this));
           this.field_H[var4_int] = param2;
           if (param1 != 5177) {
-            this.field_I = (lg[]) null;
+            this.field_I = (InteractiveWidget[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,8 +68,8 @@ final class fo extends WidgetContainer implements ng {
         if (param0 <= this.field_J) {
           return;
         }
-        lg[] var8 = new lg[param0];
-        lg[] var3 = var8;
+        InteractiveWidget[] var8 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var8;
         int[] var4 = new int[param0];
         int var5 = 19 / ((-78 - param1) / 36);
         for (var6 = 0; this.field_J > var6; var6++) {
@@ -119,7 +119,7 @@ final class fo extends WidgetContainer implements ng {
         }
     }
 
-    public final void a(byte param0, lg param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(byte param0, InteractiveWidget param1, int param2, int param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -160,11 +160,11 @@ final class fo extends WidgetContainer implements ng {
         }
     }
 
-    final lg a(int param0, String param1, ca param2) {
-        lg var4 = null;
+    final InteractiveWidget a(int param0, String param1, ca param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        lg stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -172,7 +172,7 @@ final class fo extends WidgetContainer implements ng {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new lg(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           var4.renderer = (WidgetRenderer) ((Object) new rf());
           var5 = -2 + this.height;
           this.a((byte) 127, param0, 0, 34 + this.height, this.width);

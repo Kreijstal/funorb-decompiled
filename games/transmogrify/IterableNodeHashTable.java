@@ -71,7 +71,7 @@ final class IterableNodeHashTable implements Iterable {
         var9 = Transmogrify.field_A ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param1);
-          var3_int = lj.a(param2 ^ 126, param0, var10);
+          var3_int = InteractiveWidget.a(param2 ^ 126, param0, var10);
           var4 = new String[1 + var3_int];
           var5 = param2;
           var6 = 0;
@@ -122,7 +122,7 @@ final class IterableNodeHashTable implements Iterable {
           tl.field_a = AccountNameAvailabilityValidator.field_j;
           AccountNameAvailabilityValidator.field_j = false;
           tg.field_d = WordDictionary.field_b;
-          ol.field_b = dh.field_w;
+          ol.field_b = NameSuggestionsPanel.field_w;
           nk.field_c = ga.field_b;
           WordDictionary.field_b = 0;
         }

@@ -125,18 +125,18 @@ final class u extends gd {
             la.field_b.drawString(LoginPanel.field_T, 52, var14, 16711680, -1);
           }
           var14 += 4;
-          var12.e();
+          var12.bindAsRenderTarget();
           var15Lifetime1 = -45 + var7;
           SoftwareRasterizer.clearRaster();
-          var11.e(0, 0, 16744448);
+          var11.drawSilhouette(0, 0, 16744448);
           DisplayNameSelectionPanel.a(52, this.field_Q, 95, 16744448, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
-          var13.e();
+          var13.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
-          var11.e(0, 0, 12690143);
+          var11.drawSilhouette(0, 0, 12690143);
           DisplayNameSelectionPanel.a(52, this.field_Q, 118, 10449103, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
-          var11.e();
+          var11.bindAsRenderTarget();
           DisplayNameSelectionPanel.a(52, this.field_Q, 115, 12632256, var14);
           rp.a(8, 40, (byte) 108, 2, 40, kc.field_S, var15Lifetime1);
           jh.b();
@@ -236,7 +236,7 @@ final class u extends gd {
         int var9 = this.field_x + var5 - 2 - 40;
         int var10 = 5 + var4;
         if (var13 != null) {
-          var13.c(var10, var9);
+          var13.drawOpaque(var10, var9);
           return;
         }
         SoftwareRasterizer.fillRectangle(var10, var9, 32, 32, 0);

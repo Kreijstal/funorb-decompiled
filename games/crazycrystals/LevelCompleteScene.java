@@ -171,7 +171,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
             var8 = stackIn_7_0;
             var3 = var8;
             var4 = LevelCompleteEntrancePhase.field_f[ma.field_n[var2]];
-            var8.c(-37 + 15 * m.field_l[var2], -37 + (240 + jj.field_b) + 0 - 24, var4);
+            var8.drawGrayModulated(-37 + 15 * m.field_l[var2], -37 + (240 + jj.field_b) + 0 - 24, var4);
             if (q.field_a[ma.field_n[var2]].field_i != 0) {
               go.field_l.drawRightAligned(Integer.toString(q.field_a[ma.field_n[var2]].field_i), 15 * (m.field_l[var2] + 9) - 37, 460 + (0 + jj.field_b - 255), var4, -1);
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends ck {
+final class j extends InteractiveWidget {
     int field_I;
     int field_N;
     int field_P;

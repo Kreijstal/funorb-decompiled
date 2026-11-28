@@ -129,7 +129,7 @@ abstract class bb extends WidgetContainer {
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
@@ -138,7 +138,7 @@ abstract class bb extends WidgetContainer {
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         if (this.width > RandomAccessCacheFile.field_b.field_s) {
@@ -149,7 +149,7 @@ abstract class bb extends WidgetContainer {
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
@@ -158,7 +158,7 @@ abstract class bb extends WidgetContainer {
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         if (this.height > RandomAccessCacheFile.field_b.field_t) {
@@ -169,7 +169,7 @@ abstract class bb extends WidgetContainer {
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
             r.a(126);
-            RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+            RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
             return;
           }
           this.a((byte) -26);
@@ -178,7 +178,7 @@ abstract class bb extends WidgetContainer {
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         if (param1 <= -7) {
@@ -187,7 +187,7 @@ abstract class bb extends WidgetContainer {
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
           r.a(126);
-          RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+          RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
           return;
         }
         this.a((byte) -26);
@@ -196,7 +196,7 @@ abstract class bb extends WidgetContainer {
         this.b(0, 0, (byte) -127);
         super.a(param0, (byte) -64, -param2 - this.y, -this.x - param3);
         r.a(126);
-        RandomAccessCacheFile.field_b.e(param3 + this.x, this.y + param2, this.field_B);
+        RandomAccessCacheFile.field_b.drawWithOpacity(param3 + this.x, this.y + param2, this.field_B);
     }
 
     static {

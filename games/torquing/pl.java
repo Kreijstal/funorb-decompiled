@@ -108,7 +108,7 @@ final class pl extends am {
 
     final static void a(byte param0, boolean param1) {
         da.field_a = 0;
-        vp.field_E = 0;
+        NameSuggestionsPanel.field_E = 0;
         ke.field_c = 0;
         mf.field_t = op.field_j;
         sd.field_s = new db(2);

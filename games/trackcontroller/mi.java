@@ -129,7 +129,7 @@ final class mi extends el {
             this.field_P = new Sprite(var11, var12);
             mb.a((byte) -110, this.field_P);
           }
-          var14.a(112, 144, var14.field_s << 4, var14.field_v << 4, -this.field_Q << 10, 4096);
+          var14.drawRotatedAbout(112, 144, var14.field_s << 4, var14.field_v << 4, -this.field_Q << 10, 4096);
           GameShell.m(57);
           this.field_P.drawAdditiveWithIntensity(-(var14.field_s >> 1) + var9, var10 - var14.field_v, 256);
         }

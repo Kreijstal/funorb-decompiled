@@ -71,7 +71,7 @@ public final class Torquing extends NetworkGameClient {
               TranslucentSpriteLayer.field_i = je.createFullscreenCanvas(640, 480, ArchiveRequest.field_u, 0, 0, -62);
             } else {
               TranslucentSpriteLayer.field_i = AccountRegistrationPanel.field_D.b((byte) -73);
-              vp.b(2, -111);
+              NameSuggestionsPanel.b(2, -111);
             }
             if (TranslucentSpriteLayer.field_i != null) {
               Bzip2State.a(TranslucentSpriteLayer.field_i, (byte) 63);
@@ -257,7 +257,7 @@ public final class Torquing extends NetworkGameClient {
           rn.a((byte) 116);
           uj.clearStaticReferences((byte) -54);
           UiWidget.d(13509);
-          lg.clearStaticReferences(52);
+          InteractiveWidget.clearStaticReferences(52);
           jh.clearDeclaredStaticReferences((byte) 69);
           im.clearStaticReferences(-126);
           WidgetContainer.f((byte) 2);
@@ -286,7 +286,7 @@ public final class Torquing extends NetworkGameClient {
           ValidatedTextField.resetStaticState((byte) 121);
           aa.clearDeclaredStaticReferences(0);
           kf.a(false);
-          vp.clearStaticReferences(-1);
+          NameSuggestionsPanel.clearStaticReferences(-1);
           ub.clearStaticReferences((byte) -19);
           bj.clearStaticReferences((byte) -37);
           ok.clearDeclaredStaticReferences(param0 + 9);
@@ -645,8 +645,8 @@ public final class Torquing extends NetworkGameClient {
                       rg.field_v.tryLoadAllGroups(-19375)) {
                       if (TooltipPanel.field_l.ensureIndexLoaded(-12749) &&
                         TooltipPanel.field_l.tryLoadAllGroups(-19375)) {
-                        if (vp.field_D.ensureIndexLoaded(-12749) &&
-                          vp.field_D.tryLoadAllGroups(-19375)) {
+                        if (NameSuggestionsPanel.field_D.ensureIndexLoaded(-12749) &&
+                          NameSuggestionsPanel.field_D.tryLoadAllGroups(-19375)) {
                           if (n.field_q.ensureIndexLoaded(-12749) &&
                             n.field_q.tryLoadAllGroups(-19375)) {
                             if (bp.field_c.ensureIndexLoaded(-12749) &&
@@ -687,7 +687,7 @@ public final class Torquing extends NetworkGameClient {
                           IsaacPacketBuffer.a(20.0f, param1 + 110, AccountNameAvailabilityValidator.a(pg.field_a, n.field_q, mb.field_c, (byte) 33));
                           return false;
                         }
-                        IsaacPacketBuffer.a(20.0f, 5, AccountNameAvailabilityValidator.a(pg.field_a, vp.field_D, mb.field_c, (byte) 113));
+                        IsaacPacketBuffer.a(20.0f, 5, AccountNameAvailabilityValidator.a(pg.field_a, NameSuggestionsPanel.field_D, mb.field_c, (byte) 113));
                         return false;
                       }
                       IsaacPacketBuffer.a(19.0f, 28, c.a(param1 + 119, ol.field_e, "", l.field_c, TooltipPanel.field_l));
@@ -844,7 +844,7 @@ public final class Torquing extends NetworkGameClient {
           if (null != rg.field_v) {
             var3_int = dd.field_c.field_t + dd.field_c.field_x;
             Model.field_r = new Sprite(var3_int, var3_int);
-            Model.field_r.e();
+            Model.field_r.bindAsRenderTarget();
             dd.field_i.drawScaledAveraged(0, 0, var3_int, var3_int);
             dd.field_i = null;
             mk.field_b.a(param1 + 4);
@@ -864,7 +864,7 @@ public final class Torquing extends NetworkGameClient {
             for (var10 = 0; var10 < 8; var10++) {
               var36 = GameKeyHandler.field_a[var10];
               var37 = new Sprite(var36.field_c, var36.field_d);
-              var37.e();
+              var37.bindAsRenderTarget();
               var36.drawOpaque(-var36.field_a, -var36.field_g);
               if (var36.field_d < var36.field_c) {
                 var14_int = 48 * var36.field_d / var36.field_c;
@@ -880,10 +880,10 @@ public final class Torquing extends NetworkGameClient {
                 var16_ref_t = var38;
                 var16_ref_t.field_u = 48;
                 var16_ref_t.field_r = -var38.field_t + var38.field_u >> 1;
-                var38.e();
+                var38.bindAsRenderTarget();
                 var17 = var9_ref_int__[var15];
                 SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, var17);
-                var37.d(0, 0, var13_int, var14_int);
+                var37.drawDownscaledAreaAveraged(0, 0, var13_int, var14_int);
                 if (16777215 == var17) {
                   SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
                 }
@@ -893,7 +893,7 @@ public final class Torquing extends NetworkGameClient {
                     var67[var19_int] = 0;
                   }
                 }
-                var38.d();
+                var38.trimTransparentBorders();
               }
             }
             mk.field_b.a(param1 ^ 11);
@@ -905,7 +905,7 @@ public final class Torquing extends NetworkGameClient {
             var40 = SceneMeshBatch.field_a;
             for (var11_int = 0; var40.length > var11_int; var11_int++) {
               var41 = var40[var11_int];
-              var41.a();
+              var41.normalizeCanvas();
             }
             hj.field_c = var43;
             VertexMesh.field_l = var35[2].toRgbSprite();
@@ -961,12 +961,12 @@ public final class Torquing extends NetworkGameClient {
             qd.field_c[2] = vo.a(-194, -1, GameKeyHandler.field_a[6], -34);
             DelayedPcmStream.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
             AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
-            be.a(new op(vp.field_D, n.field_q, rg.field_v, 6, false));
+            be.a(new op(NameSuggestionsPanel.field_D, n.field_q, rg.field_v, 6, false));
             tj.field_n = SectorCacheStore.a("achievements_lrg", param1 + 101, "", rg.field_v);
             var46 = mn.a(rg.field_v, "", "glass", 89);
-            var46.a();
+            var46.normalizeCanvas();
             var68 = var46.field_y;
-            tj.field_n[11].a();
+            tj.field_n[11].normalizeCanvas();
             var62 = tj.field_n[11].field_y;
             var47 = var62;
             var30 = var47;
@@ -982,14 +982,14 @@ public final class Torquing extends NetworkGameClient {
                 var19[var20] = UiWidget.a(ie.a(65280 * var22 + var26 * var23, 16711865) >> 8, ie.a(16711935, var25 * var23 + var22 * 16711935 >> 8));
               }
             }
-            tj.field_n[11].d();
+            tj.field_n[11].trimTransparentBorders();
             var48 = tj.field_n;
             for (var18 = 0; var18 < var48.length; var18++) {
               var49 = var48[var18];
               mo.a(var49, 4);
             }
             rg.field_v = null;
-            vp.field_D = null;
+            NameSuggestionsPanel.field_D = null;
             cf.a(6639);
             return false;
           }
@@ -2005,7 +2005,7 @@ public final class Torquing extends NetworkGameClient {
             var3Lifetime2 = this.g(118);
             if (var3Lifetime2 == 2 && (SpriteBase.field_h != -1 ||
               fn.field_c != -1)) {
-              lg.h(-122);
+              InteractiveWidget.h(-122);
               return;
             }
           }
@@ -2083,7 +2083,7 @@ public final class Torquing extends NetworkGameClient {
               vo.field_f[fn.field_c].renderMenuScreen(93);
             }
             if (var2_int > 0) {
-              AccountRequestState.field_b.e();
+              AccountRequestState.field_b.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
             }
           }
@@ -2322,7 +2322,7 @@ public final class Torquing extends NetworkGameClient {
           }
           rl.field_a = vg.a(param0 ^ -3280, 1);
           rg.field_v = vg.a(-27646, 2);
-          vp.field_D = vg.a(-27646, 3);
+          NameSuggestionsPanel.field_D = vg.a(-27646, 3);
           DisplayNameSelectionPanel.field_C = vg.a(-27646, 4);
           vd.field_e = vg.a(-27646, 5);
           bp.field_c = vg.a(param0 - 54064, 6);

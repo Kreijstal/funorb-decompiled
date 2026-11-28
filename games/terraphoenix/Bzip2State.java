@@ -75,7 +75,7 @@ final class Bzip2State {
         if (param3 != -83) {
           field_a = (Sprite[]) null;
         }
-        eb.field_I = param0;
+        InteractiveWidget.field_I = param0;
         ValidatedTextField.field_cb = param1;
     }
 

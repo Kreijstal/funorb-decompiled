@@ -130,7 +130,7 @@ final class n {
             if (param0.field_m == 2) {
               var7 = var7 + (-this.field_j.field_x + param1.field_v);
             }
-            this.field_j.d(var6_int, var7);
+            this.field_j.draw(var6_int, var7);
           }
           var6 = param0.c(349, param1);
           if (var6 != null &&

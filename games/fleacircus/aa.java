@@ -44,13 +44,13 @@ class aa extends e {
           SoftwareRasterizer.clearRaster();
           vg.field_z = 0;
           mj.a(param0 ^ 515966558);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          AwtRasterBuffer.field_d.f();
-          var1.e(0, 0);
+          AwtRasterBuffer.field_d.bindAsRenderTarget();
+          var1.drawHalfSize(0, 0);
           ia.a(param0 - 41);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "aa.L(" + param0 + ')');

@@ -63,7 +63,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var3_int = 0;
           while (var3_int < var2.length) {
             var4 = var2[var3_int];
-            var4.c();
+            var4.normalizeCanvas();
             var3_int++;
             if (var7 == 0) {
               continue;
@@ -535,7 +535,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 var5 = var8_int + var6 * var9_int;
                 if (var12 == 0) {
                   if (null != pk.field_d[ln.field_a.field_y[var5]]) {
-                    pk.field_d[ln.field_a.field_y[var5]].a(var3_int, var4, param1, param1);
+                    pk.field_d[ln.field_a.field_y[var5]].drawScaled(var3_int, var4, param1, param1);
                   }
                   var10 = ln.field_a.field_o[var5];
                   if (0 <= var10) {
@@ -778,7 +778,7 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           gj.a(20, ac.field_e, 56.0f);
           this.renderFrame((byte) -80);
-          nd.field_e = new rd(ul.field_P, ph.field_F);
+          nd.field_e = new rd(ul.field_P, InteractiveWidget.field_F);
           var2 = new PcmResampler(22050, AudioOutput.field_g);
           em.field_a[10] = va.a(ul.field_P, "", "flamethrower_all").a().resample(var2);
           em.field_a[11] = va.a(ul.field_P, "", "footstep1").a().resample(var2);
@@ -907,100 +907,100 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           gj.a(20, ac.field_e, 63.0f);
           this.renderFrame((byte) -43);
-          em.field_a[0] = qf.a(ph.field_F, "", "bang1").c().resample(param1);
-          em.field_a[1] = qf.a(ph.field_F, "", "bang4").c().resample(param1);
-          em.field_a[6] = qf.a(ph.field_F, "", "spawnhurt").c().resample(param1);
-          em.field_a[7] = qf.a(ph.field_F, "", "spawnhurt2").c().resample(param1);
-          em.field_a[8] = qf.a(ph.field_F, "", "spawnkill").c().resample(param1);
-          em.field_a[24] = qf.a(ph.field_F, "", "bigspawnkill").c().resample(param1);
-          TextInputField.field_V[40] = qf.a(ph.field_F, "", "reload").c().resample(param1);
-          fg.field_b[0] = qf.a(ph.field_F, "", "acid_hit_01").c().resample(param1);
-          fg.field_b[1] = qf.a(ph.field_F, "", "human_pain_01").c().resample(param1);
-          fg.field_b[2] = qf.a(ph.field_F, "", "human_pain_02").c().resample(param1);
-          fg.field_b[3] = qf.a(ph.field_F, "", "human_pain_03").c().resample(param1);
-          fg.field_b[4] = qf.a(ph.field_F, "", "human_pain_04").c().resample(param1);
-          fg.field_b[5] = qf.a(ph.field_F, "", "human_pain_05").c().resample(param1);
-          fg.field_b[6] = qf.a(ph.field_F, "", "human_pain_06").c().resample(param1);
-          fg.field_b[7] = qf.a(ph.field_F, "", "human_pain_07").c().resample(param1);
-          fg.field_b[8] = qf.a(ph.field_F, "", "human_pain_08").c().resample(param1);
-          fg.field_b[9] = qf.a(ph.field_F, "", "human_pain_09").c().resample(param1);
-          fg.field_b[10] = qf.a(ph.field_F, "", "human_pain_10").c().resample(param1);
-          fg.field_b[11] = qf.a(ph.field_F, "", "human_pain_11").c().resample(param1);
-          fg.field_b[12] = qf.a(ph.field_F, "", "human_pain_12").c().resample(param1);
-          fg.field_b[13] = qf.a(ph.field_F, "", "human_pain_13").c().resample(param1);
-          fg.field_b[14] = qf.a(ph.field_F, "", "human_pain_14").c().resample(param1);
+          em.field_a[0] = qf.a(InteractiveWidget.field_F, "", "bang1").c().resample(param1);
+          em.field_a[1] = qf.a(InteractiveWidget.field_F, "", "bang4").c().resample(param1);
+          em.field_a[6] = qf.a(InteractiveWidget.field_F, "", "spawnhurt").c().resample(param1);
+          em.field_a[7] = qf.a(InteractiveWidget.field_F, "", "spawnhurt2").c().resample(param1);
+          em.field_a[8] = qf.a(InteractiveWidget.field_F, "", "spawnkill").c().resample(param1);
+          em.field_a[24] = qf.a(InteractiveWidget.field_F, "", "bigspawnkill").c().resample(param1);
+          TextInputField.field_V[40] = qf.a(InteractiveWidget.field_F, "", "reload").c().resample(param1);
+          fg.field_b[0] = qf.a(InteractiveWidget.field_F, "", "acid_hit_01").c().resample(param1);
+          fg.field_b[1] = qf.a(InteractiveWidget.field_F, "", "human_pain_01").c().resample(param1);
+          fg.field_b[2] = qf.a(InteractiveWidget.field_F, "", "human_pain_02").c().resample(param1);
+          fg.field_b[3] = qf.a(InteractiveWidget.field_F, "", "human_pain_03").c().resample(param1);
+          fg.field_b[4] = qf.a(InteractiveWidget.field_F, "", "human_pain_04").c().resample(param1);
+          fg.field_b[5] = qf.a(InteractiveWidget.field_F, "", "human_pain_05").c().resample(param1);
+          fg.field_b[6] = qf.a(InteractiveWidget.field_F, "", "human_pain_06").c().resample(param1);
+          fg.field_b[7] = qf.a(InteractiveWidget.field_F, "", "human_pain_07").c().resample(param1);
+          fg.field_b[8] = qf.a(InteractiveWidget.field_F, "", "human_pain_08").c().resample(param1);
+          fg.field_b[9] = qf.a(InteractiveWidget.field_F, "", "human_pain_09").c().resample(param1);
+          fg.field_b[10] = qf.a(InteractiveWidget.field_F, "", "human_pain_10").c().resample(param1);
+          fg.field_b[11] = qf.a(InteractiveWidget.field_F, "", "human_pain_11").c().resample(param1);
+          fg.field_b[12] = qf.a(InteractiveWidget.field_F, "", "human_pain_12").c().resample(param1);
+          fg.field_b[13] = qf.a(InteractiveWidget.field_F, "", "human_pain_13").c().resample(param1);
+          fg.field_b[14] = qf.a(InteractiveWidget.field_F, "", "human_pain_14").c().resample(param1);
           if (param0 != 22) {
             field_B = (java.applet.Applet) null;
           }
-          fg.field_b[15] = qf.a(ph.field_F, "", "human_pain_15").c().resample(param1);
-          fg.field_b[17] = qf.a(ph.field_F, "", "human_death_01").c().resample(param1);
-          fg.field_b[18] = qf.a(ph.field_F, "", "heal_killcount").c().resample(param1);
-          fg.field_b[19] = qf.a(ph.field_F, "", "heal_small").c().resample(param1);
-          fg.field_b[20] = qf.a(ph.field_F, "", "heal_large").c().resample(param1);
-          fg.field_b[21] = qf.a(ph.field_F, "", "pass_card").c().resample(param1);
-          fg.field_b[22] = qf.a(ph.field_F, "", "lift_powerup").c().resample(param1);
-          fg.field_b[24] = qf.a(ph.field_F, "", "door_locked").c().resample(param1);
-          jc.field_c[0] = qf.a(ph.field_F, "", "basic_attack_01").c().resample(param1);
-          jc.field_c[1] = qf.a(ph.field_F, "", "bullet_hit_01").c().resample(param1);
-          jc.field_c[2] = qf.a(ph.field_F, "", "bullet_hit_02").c().resample(param1);
-          jc.field_c[3] = qf.a(ph.field_F, "", "bullet_hit_03").c().resample(param1);
-          jc.field_c[4] = qf.a(ph.field_F, "", "bullet_hit_04").c().resample(param1);
-          jc.field_c[5] = qf.a(ph.field_F, "", "bullet_hit_05").c().resample(param1);
-          jc.field_c[6] = qf.a(ph.field_F, "", "bullet_hit_06").c().resample(param1);
-          jc.field_c[7] = qf.a(ph.field_F, "", "bullet_hit_07").c().resample(param1);
-          jc.field_c[8] = qf.a(ph.field_F, "", "bullet_hit_08").c().resample(param1);
-          jc.field_c[9] = qf.a(ph.field_F, "", "basic_die_01").c().resample(param1);
-          jc.field_c[10] = qf.a(ph.field_F, "", "basic_die_02").c().resample(param1);
-          jc.field_c[11] = qf.a(ph.field_F, "", "basic_die_03").c().resample(param1);
-          jc.field_c[12] = qf.a(ph.field_F, "", "basic_roar_01").c().resample(param1);
-          jc.field_c[13] = qf.a(ph.field_F, "", "basic_roar_02").c().resample(param1);
-          jc.field_c[14] = qf.a(ph.field_F, "", "basic_roar_03").c().resample(param1);
-          jc.field_c[15] = qf.a(ph.field_F, "", "basic_roar_04").c().resample(param1);
-          jc.field_c[16] = qf.a(ph.field_F, "", "basic_roar_05").c().resample(param1);
-          jc.field_c[17] = qf.a(ph.field_F, "", "basic_roar_06").c().resample(param1);
-          jc.field_c[18] = qf.a(ph.field_F, "", "runner_roar_01").c().resample(param1);
-          jc.field_c[19] = qf.a(ph.field_F, "", "runner_roar_02").c().resample(param1);
-          jc.field_c[20] = qf.a(ph.field_F, "", "runner_roar_03").c().resample(param1);
-          jc.field_c[21] = qf.a(ph.field_F, "", "runner_die_01").c().resample(param1);
-          jc.field_c[22] = qf.a(ph.field_F, "", "runner_die_02").c().resample(param1);
-          jc.field_c[23] = qf.a(ph.field_F, "", "runner_die_03").c().resample(param1);
-          jc.field_c[24] = qf.a(ph.field_F, "", "spitter_die_03").c().resample(param1);
+          fg.field_b[15] = qf.a(InteractiveWidget.field_F, "", "human_pain_15").c().resample(param1);
+          fg.field_b[17] = qf.a(InteractiveWidget.field_F, "", "human_death_01").c().resample(param1);
+          fg.field_b[18] = qf.a(InteractiveWidget.field_F, "", "heal_killcount").c().resample(param1);
+          fg.field_b[19] = qf.a(InteractiveWidget.field_F, "", "heal_small").c().resample(param1);
+          fg.field_b[20] = qf.a(InteractiveWidget.field_F, "", "heal_large").c().resample(param1);
+          fg.field_b[21] = qf.a(InteractiveWidget.field_F, "", "pass_card").c().resample(param1);
+          fg.field_b[22] = qf.a(InteractiveWidget.field_F, "", "lift_powerup").c().resample(param1);
+          fg.field_b[24] = qf.a(InteractiveWidget.field_F, "", "door_locked").c().resample(param1);
+          jc.field_c[0] = qf.a(InteractiveWidget.field_F, "", "basic_attack_01").c().resample(param1);
+          jc.field_c[1] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_01").c().resample(param1);
+          jc.field_c[2] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_02").c().resample(param1);
+          jc.field_c[3] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_03").c().resample(param1);
+          jc.field_c[4] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_04").c().resample(param1);
+          jc.field_c[5] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_05").c().resample(param1);
+          jc.field_c[6] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_06").c().resample(param1);
+          jc.field_c[7] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_07").c().resample(param1);
+          jc.field_c[8] = qf.a(InteractiveWidget.field_F, "", "bullet_hit_08").c().resample(param1);
+          jc.field_c[9] = qf.a(InteractiveWidget.field_F, "", "basic_die_01").c().resample(param1);
+          jc.field_c[10] = qf.a(InteractiveWidget.field_F, "", "basic_die_02").c().resample(param1);
+          jc.field_c[11] = qf.a(InteractiveWidget.field_F, "", "basic_die_03").c().resample(param1);
+          jc.field_c[12] = qf.a(InteractiveWidget.field_F, "", "basic_roar_01").c().resample(param1);
+          jc.field_c[13] = qf.a(InteractiveWidget.field_F, "", "basic_roar_02").c().resample(param1);
+          jc.field_c[14] = qf.a(InteractiveWidget.field_F, "", "basic_roar_03").c().resample(param1);
+          jc.field_c[15] = qf.a(InteractiveWidget.field_F, "", "basic_roar_04").c().resample(param1);
+          jc.field_c[16] = qf.a(InteractiveWidget.field_F, "", "basic_roar_05").c().resample(param1);
+          jc.field_c[17] = qf.a(InteractiveWidget.field_F, "", "basic_roar_06").c().resample(param1);
+          jc.field_c[18] = qf.a(InteractiveWidget.field_F, "", "runner_roar_01").c().resample(param1);
+          jc.field_c[19] = qf.a(InteractiveWidget.field_F, "", "runner_roar_02").c().resample(param1);
+          jc.field_c[20] = qf.a(InteractiveWidget.field_F, "", "runner_roar_03").c().resample(param1);
+          jc.field_c[21] = qf.a(InteractiveWidget.field_F, "", "runner_die_01").c().resample(param1);
+          jc.field_c[22] = qf.a(InteractiveWidget.field_F, "", "runner_die_02").c().resample(param1);
+          jc.field_c[23] = qf.a(InteractiveWidget.field_F, "", "runner_die_03").c().resample(param1);
+          jc.field_c[24] = qf.a(InteractiveWidget.field_F, "", "spitter_die_03").c().resample(param1);
           jc.field_c[26] = jc.field_c[24];
           jc.field_c[25] = jc.field_c[24];
-          jc.field_c[27] = qf.a(ph.field_F, "", "guard_hurt_loop_01").c().resample(param1);
-          jc.field_c[28] = qf.a(ph.field_F, "", "guard_roar_01").c().resample(param1);
-          jc.field_c[29] = qf.a(ph.field_F, "", "guard_roar_02").c().resample(param1);
-          jc.field_c[30] = qf.a(ph.field_F, "", "guard_roar_03").c().resample(param1);
-          jc.field_c[32] = qf.a(ph.field_F, "", "queen_roar_01").c().resample(param1);
-          jc.field_c[33] = qf.a(ph.field_F, "", "queen_roar_02").c().resample(param1);
-          jc.field_c[34] = qf.a(ph.field_F, "", "queen_roar_03").c().resample(param1);
-          jc.field_c[31] = qf.a(ph.field_F, "", "queen_big_roar_01").c().resample(param1);
-          jc.field_c[35] = qf.a(ph.field_F, "", "queen_bite_01").c().resample(param1);
-          jc.field_c[36] = qf.a(ph.field_F, "", "queen_bite_02").c().resample(param1);
-          jc.field_c[37] = qf.a(ph.field_F, "", "queen_bite_03").c().resample(param1);
-          jc.field_c[38] = qf.a(ph.field_F, "", "queen_bite_04").c().resample(param1);
-          jc.field_c[39] = qf.a(ph.field_F, "", "queen_bite_05").c().resample(param1);
-          jc.field_c[40] = qf.a(ph.field_F, "", "queen_die_proc_01").c().resample(param1);
-          jc.field_c[41] = qf.a(ph.field_F, "", "dormant_hatch_01").c().resample(param1);
-          jc.field_c[42] = qf.a(ph.field_F, "", "dormant_hatch_02").c().resample(param1);
-          jc.field_c[43] = qf.a(ph.field_F, "", "dormant_hatch_03").c().resample(param1);
-          jc.field_c[44] = qf.a(ph.field_F, "", "dormant_hatch_04").c().resample(param1);
-          jc.field_c[45] = qf.a(ph.field_F, "", "dormant_hatch_05").c().resample(param1);
-          jc.field_c[46] = qf.a(ph.field_F, "", "dormant_hatch_06").c().resample(param1);
-          jc.field_c[47] = qf.a(ph.field_F, "", "egg_burst_01").c().resample(param1);
-          jc.field_c[48] = qf.a(ph.field_F, "", "egg_burst_02").c().resample(param1);
-          jc.field_c[49] = qf.a(ph.field_F, "", "egg_burst_03").c().resample(param1);
-          jc.field_c[55] = qf.a(ph.field_F, "", "larva_die_01").c().resample(param1);
-          jc.field_c[56] = qf.a(ph.field_F, "", "larva_die_02").c().resample(param1);
-          jc.field_c[57] = qf.a(ph.field_F, "", "larva_die_03").c().resample(param1);
-          jc.field_c[58] = qf.a(ph.field_F, "", "larva_die_04").c().resample(param1);
-          jc.field_c[59] = qf.a(ph.field_F, "", "larva_die_05").c().resample(param1);
-          jc.field_c[60] = qf.a(ph.field_F, "", "larva_die_06").c().resample(param1);
-          jc.field_c[61] = qf.a(ph.field_F, "", "larva_die_07").c().resample(param1);
-          jc.field_c[62] = qf.a(ph.field_F, "", "spitter_spit_01").c().resample(param1);
-          jc.field_c[63] = qf.a(ph.field_F, "", "spitter_spit_02").c().resample(param1);
-          jc.field_c[64] = qf.a(ph.field_F, "", "spitter_spit_03").c().resample(param1);
-          NetworkArchiveRequest.field_A[11] = qf.a(ph.field_F, "", "barrel_hit_mg_only").c().resample(param1);
+          jc.field_c[27] = qf.a(InteractiveWidget.field_F, "", "guard_hurt_loop_01").c().resample(param1);
+          jc.field_c[28] = qf.a(InteractiveWidget.field_F, "", "guard_roar_01").c().resample(param1);
+          jc.field_c[29] = qf.a(InteractiveWidget.field_F, "", "guard_roar_02").c().resample(param1);
+          jc.field_c[30] = qf.a(InteractiveWidget.field_F, "", "guard_roar_03").c().resample(param1);
+          jc.field_c[32] = qf.a(InteractiveWidget.field_F, "", "queen_roar_01").c().resample(param1);
+          jc.field_c[33] = qf.a(InteractiveWidget.field_F, "", "queen_roar_02").c().resample(param1);
+          jc.field_c[34] = qf.a(InteractiveWidget.field_F, "", "queen_roar_03").c().resample(param1);
+          jc.field_c[31] = qf.a(InteractiveWidget.field_F, "", "queen_big_roar_01").c().resample(param1);
+          jc.field_c[35] = qf.a(InteractiveWidget.field_F, "", "queen_bite_01").c().resample(param1);
+          jc.field_c[36] = qf.a(InteractiveWidget.field_F, "", "queen_bite_02").c().resample(param1);
+          jc.field_c[37] = qf.a(InteractiveWidget.field_F, "", "queen_bite_03").c().resample(param1);
+          jc.field_c[38] = qf.a(InteractiveWidget.field_F, "", "queen_bite_04").c().resample(param1);
+          jc.field_c[39] = qf.a(InteractiveWidget.field_F, "", "queen_bite_05").c().resample(param1);
+          jc.field_c[40] = qf.a(InteractiveWidget.field_F, "", "queen_die_proc_01").c().resample(param1);
+          jc.field_c[41] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_01").c().resample(param1);
+          jc.field_c[42] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_02").c().resample(param1);
+          jc.field_c[43] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_03").c().resample(param1);
+          jc.field_c[44] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_04").c().resample(param1);
+          jc.field_c[45] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_05").c().resample(param1);
+          jc.field_c[46] = qf.a(InteractiveWidget.field_F, "", "dormant_hatch_06").c().resample(param1);
+          jc.field_c[47] = qf.a(InteractiveWidget.field_F, "", "egg_burst_01").c().resample(param1);
+          jc.field_c[48] = qf.a(InteractiveWidget.field_F, "", "egg_burst_02").c().resample(param1);
+          jc.field_c[49] = qf.a(InteractiveWidget.field_F, "", "egg_burst_03").c().resample(param1);
+          jc.field_c[55] = qf.a(InteractiveWidget.field_F, "", "larva_die_01").c().resample(param1);
+          jc.field_c[56] = qf.a(InteractiveWidget.field_F, "", "larva_die_02").c().resample(param1);
+          jc.field_c[57] = qf.a(InteractiveWidget.field_F, "", "larva_die_03").c().resample(param1);
+          jc.field_c[58] = qf.a(InteractiveWidget.field_F, "", "larva_die_04").c().resample(param1);
+          jc.field_c[59] = qf.a(InteractiveWidget.field_F, "", "larva_die_05").c().resample(param1);
+          jc.field_c[60] = qf.a(InteractiveWidget.field_F, "", "larva_die_06").c().resample(param1);
+          jc.field_c[61] = qf.a(InteractiveWidget.field_F, "", "larva_die_07").c().resample(param1);
+          jc.field_c[62] = qf.a(InteractiveWidget.field_F, "", "spitter_spit_01").c().resample(param1);
+          jc.field_c[63] = qf.a(InteractiveWidget.field_F, "", "spitter_spit_02").c().resample(param1);
+          jc.field_c[64] = qf.a(InteractiveWidget.field_F, "", "spitter_spit_03").c().resample(param1);
+          NetworkArchiveRequest.field_A[11] = qf.a(InteractiveWidget.field_F, "", "barrel_hit_mg_only").c().resample(param1);
           param1 = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1052,7 +1052,7 @@ public final class HostileSpawn extends NetworkGameClient {
           int var2_int = -11 % ((57 - param0) / 52);
           CipherPacketBuffer.field_u = ji.a(tk.field_a, "", "hostilespawnloop_vengeance");
           PcmOutputWorker.field_f = ji.a(tk.field_a, "", "hostilespawnthreat_vengeance");
-          ph.field_F = null;
+          InteractiveWidget.field_F = null;
           ul.field_P = null;
           tk.field_a = null;
           ha.field_w.field_F.a(0, vg.field_h, ej.field_h, nd.field_e, false);
@@ -1257,7 +1257,7 @@ public final class HostileSpawn extends NetworkGameClient {
           h.clearStaticReferences((byte) 76);
           ce.clearStaticReferences(param0 + 6909);
           ag.d(5956);
-          ph.clearStaticReferences(84);
+          InteractiveWidget.clearStaticReferences(84);
           fc.resetStaticState(1);
           wb.clearDeclaredStaticReferences(420);
           ul.clearStaticReferences(param0 ^ -1847325763);
@@ -1289,7 +1289,7 @@ public final class HostileSpawn extends NetworkGameClient {
           TextInputField.clearTextInputFieldGlobals(10);
           EditableTextField.resetStaticState(25);
           me.clearDeclaredStaticReferences((byte) -56);
-          mc.clearStaticReferences(-125);
+          NameSuggestionsPanel.clearStaticReferences(-125);
           cj.clearStaticReferences(true);
           wj.j(11460);
           al.clearDeclaredStaticReferences((byte) 78);
@@ -1864,8 +1864,8 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (ul.field_P.ensureIndexLoaded(-15879) &&
             ul.field_P.tryLoadAllGroups(param0 ^ 4)) {
-            if (ph.field_F.ensureIndexLoaded(param0 - 15883) &&
-              ph.field_F.tryLoadAllGroups(0)) {
+            if (InteractiveWidget.field_F.ensureIndexLoaded(param0 - 15883) &&
+              InteractiveWidget.field_F.tryLoadAllGroups(0)) {
               if (ej.field_h.ensureIndexLoaded(-15879) &&
                 ej.field_h.tryLoadAllGroups(0)) {
                 if (tk.field_a.ensureIndexLoaded(param0 ^ -15875) &&
@@ -1935,7 +1935,7 @@ public final class HostileSpawn extends NetworkGameClient {
               gj.a(20, DirectByteStorage.a(GzipDecompressor.field_i, ej.field_h, rd.field_g, (byte) 102), 15.0f);
               return false;
             }
-            gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, ph.field_F, hn.field_c, (byte) 84), 10.0f);
+            gj.a(param0 ^ 16, DirectByteStorage.a(sd.field_v, InteractiveWidget.field_F, hn.field_c, (byte) 84), 10.0f);
             return false;
           }
           gj.a(20, DirectByteStorage.a(sd.field_v, ul.field_P, hn.field_c, (byte) -112), 5.0f);
@@ -2001,7 +2001,7 @@ public final class HostileSpawn extends NetworkGameClient {
             } else {
               var3 = var4 / 2 - 32;
             }
-            fj.field_Kb[var2.field_h].b(8, var3);
+            fj.field_Kb[var2.field_h].drawQuarterSizeAveraged(8, var3);
             al.field_Z.drawString(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
           }
           return;

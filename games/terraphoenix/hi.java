@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends ei implements n {
-    private eb field_X;
+final class hi extends ei implements WidgetActivationListener {
+    private InteractiveWidget field_X;
     static int field_ab;
     static String field_Y;
     static String field_Z;
@@ -61,7 +61,7 @@ final class hi extends ei implements n {
         return var6.toString();
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         try {
           if (this.field_X == param0) {
             this.k(126);
@@ -72,11 +72,11 @@ final class hi extends ei implements n {
         }
     }
 
-    private final eb a(boolean param0, String param1, sc param2) {
-        eb var4 = null;
+    private final InteractiveWidget a(boolean param0, String param1, sc param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        eb stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -84,7 +84,7 @@ final class hi extends ei implements n {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new eb(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           if (param0) {
             field_W = (IndexedSprite[]) null;
           }

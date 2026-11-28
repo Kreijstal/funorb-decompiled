@@ -84,9 +84,9 @@ final class en extends d {
               var18[0][4 * var10] = AccountNameAvailabilityValidator.field_o[var11];
               var18[0][var10 * 4 + 1] = wh.field_y[var11];
               var18[0][4 * var10 + 2] = vo.field_d[var11];
-              var18[0][var10 * 4 + 3] = vp.field_F[var11];
-              if (SpriteBase.a(IterableNodeHashTable.field_d[var11], -17310) &&
-                wh.field_y[var11] + (vo.field_d[var11] + vp.field_F[var11]) == 0) {
+              var18[0][var10 * 4 + 3] = NameSuggestionsPanel.field_F[var11];
+              if (SpriteBase.matchesCurrentDisplayName(IterableNodeHashTable.field_d[var11], -17310) &&
+                wh.field_y[var11] + (vo.field_d[var11] + NameSuggestionsPanel.field_F[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -102,9 +102,9 @@ final class en extends d {
               var18[1][var13 * 4] = AccountNameAvailabilityValidator.field_o[var11Lifetime1];
               var18[1][4 * var13 + 1] = wh.field_y[var11Lifetime1];
               var18[1][2 + var13 * 4] = vo.field_d[var11Lifetime1];
-              var18[1][4 * var13 + 3] = vp.field_F[var11Lifetime1];
-              if (SpriteBase.a(IterableNodeHashTable.field_d[var11Lifetime1], -17310) &&
-                vp.field_F[var11Lifetime1] + wh.field_y[var11Lifetime1] + vo.field_d[var11Lifetime1] == 0) {
+              var18[1][4 * var13 + 3] = NameSuggestionsPanel.field_F[var11Lifetime1];
+              if (SpriteBase.matchesCurrentDisplayName(IterableNodeHashTable.field_d[var11Lifetime1], -17310) &&
+                NameSuggestionsPanel.field_F[var11Lifetime1] + wh.field_y[var11Lifetime1] + vo.field_d[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

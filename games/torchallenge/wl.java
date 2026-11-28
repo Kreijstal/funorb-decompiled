@@ -84,7 +84,7 @@ final class wl {
               }
             }
             stackIn_34_0 = 140;
-            stackIn_34_1 = ng.field_I;
+            stackIn_34_1 = InteractiveWidget.field_I;
             stackIn_34_2 = 320;
             stackIn_34_3 = 384;
             stackIn_34_4 = rj.field_d;
@@ -449,7 +449,7 @@ final class wl {
         BufferedSocket.field_p.b(true, false);
         stackIn_180_0 = -73;
         stackIn_182_1 = (DebouncedFieldValidator.field_b) || (ij.field_z);
-        hf.$cfr$intArgs$a$759f676cf37b(stackIn_180_0, stackIn_182_1, ng.field_I, pi.field_c, rj.field_d, true);
+        hf.$cfr$intArgs$a$759f676cf37b(stackIn_180_0, stackIn_182_1, InteractiveWidget.field_I, pi.field_c, rj.field_d, true);
         this.a((byte) -71);
         rc.c((byte) -82);
         if (gh.field_x &&
@@ -507,7 +507,7 @@ final class wl {
         ul var20_ref = (ul) (NetworkArchiveRequest.field_D.first((byte) 106));
         ul var2 = var20_ref;
         int var13 = tf.field_j[0].storedHeight >> 2;
-        Sprite[] var14 = ng.field_L;
+        Sprite[] var14 = InteractiveWidget.field_L;
         int var15 = var14[0].storedWidth;
         int var16 = var14[0].storedHeight;
         int var10Lifetime1;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends ck {
+class EditableTextField extends InteractiveWidget {
     private int field_R;
     private int field_M;
     static String field_J;
@@ -732,7 +732,7 @@ class EditableTextField extends ck {
           ConfirmedEmailAvailabilityValidator.field_o[8] = rc.a("", sb.field_a, "intro_08.jpg", (byte) 71);
           jh.c();
           for (var1_int = 0; var1_int < ConfirmedEmailAvailabilityValidator.field_o.length; var1_int++) {
-            ConfirmedEmailAvailabilityValidator.field_o[var1_int].e();
+            ConfirmedEmailAvailabilityValidator.field_o[var1_int].bindAsRenderTarget();
             SoftwareRasterizer.drawRectangleOutline(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 0);
             SoftwareRasterizer.drawRectangleOutlineAlpha(1, 1, -2 + SoftwareRasterizer.field_i, -2 + SoftwareRasterizer.field_c, 0, 128);
           }

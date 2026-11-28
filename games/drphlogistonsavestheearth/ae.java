@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class ae extends ca implements ke {
+final class ae extends ca implements WidgetActivationListener {
     static Calendar field_ib;
-    private hf field_fb;
+    private InteractiveWidget field_fb;
     static RgbSprite[] field_hb;
     static String field_jb;
     static int field_kb;
@@ -80,8 +80,8 @@ final class ae extends ca implements ke {
         field_jb = null;
     }
 
-    public final void a(int param0, int param1, boolean param2, hf param3, int param4) {
-        hf discarded$1 = null;
+    public final void onWidgetActivated(int param0, int param1, boolean param2, InteractiveWidget param3, int param4) {
+        InteractiveWidget discarded$1 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -186,12 +186,12 @@ final class ae extends ca implements ke {
         }
     }
 
-    private final hf a(fd param0, String param1, int param2) {
-        hf var4 = null;
+    private final InteractiveWidget a(fd param0, String param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        hf stackIn_2_0 = null;
-        hf stackIn_4_0 = null;
+        InteractiveWidget stackIn_2_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -199,13 +199,13 @@ final class ae extends ca implements ke {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new hf(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_l = (cg) ((Object) new ie());
           var5 = this.field_k - 6;
           this.field_k = this.field_k + 38;
           var4.a(var5, 30, 15, 16535, -14 + this.field_w - 16);
           if (param2 != 10) {
-            stackIn_2_0 = (hf) null;
+            stackIn_2_0 = (InteractiveWidget) null;
             return stackIn_2_0;
           }
           this.b(var4, (byte) 63);

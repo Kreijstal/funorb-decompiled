@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class EditableTextField extends ng {
+class EditableTextField extends InteractiveWidget {
     private int field_bb;
     private int field_R;
     private long field_T;

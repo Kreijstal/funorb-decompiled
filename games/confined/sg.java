@@ -169,7 +169,7 @@ final class sg extends DualLinkNode {
             if (!tj.a(true)) {
               r.a(TunnelMesh.field_J, -1, 3);
             }
-            rg.field_K = true;
+            InteractiveWidget.field_K = true;
           }
         }
     }

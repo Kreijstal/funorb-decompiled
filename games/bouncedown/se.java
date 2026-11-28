@@ -23,21 +23,21 @@ final class se extends ak {
         bj var7 = null;
         try {
           super.a(param0, param1, param2, param3, (int) (char)param4, param5);
-          var7 = nd.field_A;
+          var7 = NameSuggestionsPanel.field_A;
           if (var7 != null) {
             if (!this.c(param5, param4 ^ 34, param3, param1, param0)) {
               return;
             }
             if (this.field_n instanceof df) {
               ((df) (this.field_n)).a(var7, (byte) -56, this);
-              nd.field_A = null;
+              NameSuggestionsPanel.field_A = null;
               return;
             }
             if (!(var7.field_n instanceof df)) {
               return;
             }
             ((df) (var7.field_n)).a(var7, (byte) 90, this);
-            nd.field_A = null;
+            NameSuggestionsPanel.field_A = null;
           }
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "se.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

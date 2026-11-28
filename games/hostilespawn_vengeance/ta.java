@@ -100,10 +100,10 @@ final class ta extends me {
               VolumeRampingMidiPcmStream.field_U[0] = 0;
             }
             MusicPatchPcmStream.field_n = new RgbSprite(72, 72);
-            MusicPatchPcmStream.field_n.a();
+            MusicPatchPcmStream.field_n.bindAsRenderTarget();
             for (var2_int = 0; var2_int < 3; var2_int++) {
               for (var3 = 0; var3 < 3; var3++) {
-                pk.field_d[8 * var3 + (var2_int + 424)].c(24 * var2_int, var3 * 24);
+                pk.field_d[8 * var3 + (var2_int + 424)].drawOpaque(24 * var2_int, var3 * 24);
               }
             }
             vj.field_e[0].a(true, 128, 192, 36, 36);
@@ -125,10 +125,10 @@ final class ta extends me {
             }
             if (rl.field_c != 3) {
               MusicPatchPcmStream.field_n = new RgbSprite(72, 72);
-              MusicPatchPcmStream.field_n.a();
+              MusicPatchPcmStream.field_n.bindAsRenderTarget();
               for (var2_int = 0; 3 > var2_int; var2_int++) {
                 for (var3 = 0; 3 > var3; var3++) {
-                  pk.field_d[var3 * 8 + var2_int + 139].c(var2_int * 24, 24 * var3);
+                  pk.field_d[var3 * 8 + var2_int + 139].drawOpaque(var2_int * 24, 24 * var3);
                 }
               }
               vj.field_e[0].a(true, 128, 192, 36, 36);
@@ -179,7 +179,7 @@ final class ta extends me {
           mm.field_m[0] = new oj(ti.field_f, 0, rl.field_c);
           ki.field_c = null;
           ki.field_c = new RgbSprite(ln.field_a.field_a, ln.field_a.field_d);
-          ki.field_c.a();
+          ki.field_c.bindAsRenderTarget();
           var2_intLifetime3 = ln.field_a.field_a;
           var3Lifetime2 = ln.field_a.field_d;
           var4 = 0;

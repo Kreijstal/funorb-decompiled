@@ -32,7 +32,7 @@ final class ll extends IntrusiveNode {
     final static void d(int param0) {
         if (null == fl.field_b) {
           fl.field_b = new RgbSprite(640, 336);
-          fl.field_b.f();
+          fl.field_b.bindAsRenderTarget();
           oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
           gi.field_b.setAsRasterTarget((byte) 71);
           if (param0 != 336) {
@@ -41,7 +41,7 @@ final class ll extends IntrusiveNode {
           }
           return;
         }
-        fl.field_b.f();
+        fl.field_b.bindAsRenderTarget();
         oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
         gi.field_b.setAsRasterTarget((byte) 71);
         if (param0 == 336) {

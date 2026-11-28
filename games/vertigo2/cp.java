@@ -45,7 +45,7 @@ final class cp {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (d.a(param1, param0 - 62)) {
+          if (InteractiveWidget.a(param1, param0 - 62)) {
             return true;
           }
           if (param0 != 64) {

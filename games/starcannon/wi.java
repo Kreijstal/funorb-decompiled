@@ -26,18 +26,18 @@ final class wi {
     final static boolean a(int param0) {
         if (param0 != -10214) {
           field_c = (LoginPanel) null;
-          if (kd.field_B == null) {
+          if (NameSuggestionsPanel.field_B == null) {
             return false;
           }
-          if (kd.field_B.c(0)) {
+          if (NameSuggestionsPanel.field_B.c(0)) {
             return true;
           }
           return false;
         }
-        if (kd.field_B == null) {
+        if (NameSuggestionsPanel.field_B == null) {
           return false;
         }
-        if (kd.field_B.c(0)) {
+        if (NameSuggestionsPanel.field_B.c(0)) {
           return true;
         }
         return false;

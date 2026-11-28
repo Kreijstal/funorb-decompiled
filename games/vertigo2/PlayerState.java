@@ -205,7 +205,7 @@ final class PlayerState {
           }
           if (2 != param0 &&
             3 != param0) {
-            tn.field_i.e(10, 10);
+            tn.field_i.draw(10, 10);
             va.field_s.a(16777215, (byte) 75, -1, tn.field_i.field_x + 15, Vertigo2.a(new String[]{Integer.toString(this.field_ab)}, MenuSelectionCursor.field_k, 109), 10 + (va.field_s.field_k + 10));
           }
           var8 = td.field_c.field_C;
@@ -227,17 +227,17 @@ final class PlayerState {
             }
           }
           if (var10 != null) {
-            ((ArgbSprite) (var10)).e(-((ArgbSprite) (var10)).field_x + 625, -((ArgbSprite) (var10)).field_B + var8 - 12);
+            ((ArgbSprite) (var10)).draw(-((ArgbSprite) (var10)).field_x + 625, -((ArgbSprite) (var10)).field_B + var8 - 12);
           }
           if (this.field_g > 0) {
             var11_int = 25;
-            be.field_n.e(-5 + var11_int, 5 + (-be.field_n.field_B + (var8 - var9) - 20));
+            be.field_n.draw(-5 + var11_int, 5 + (-be.field_n.field_B + (var8 - var9) - 20));
             va.field_s.a(16777215, (byte) 77, -1, 48, Integer.toString(this.field_g), 5 + (var8 + (-20 - var9) - (be.field_n.field_B - va.field_s.field_k)));
             FullscreenFocusCanvas.a(false, var11_int, 25, var8 - 20 - (var9 + be.field_n.field_B));
           }
           if (this.field_U > 0) {
             var11_intLifetime1 = -60 - (var9 - var8) - RandomAccessCacheFile.field_j.field_B;
-            RandomAccessCacheFile.field_j.e(20, var11_intLifetime1 + 5);
+            RandomAccessCacheFile.field_j.draw(20, var11_intLifetime1 + 5);
             va.field_s.a(16777215, (byte) 124, -1, 48, Integer.toString(this.field_U), 5 + va.field_s.field_k + var11_intLifetime1);
             FullscreenFocusCanvas.a(false, 25, 25, var11_intLifetime1);
           }

@@ -74,7 +74,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           integerLocal15 = SoftwareRaster.integerState0285;
           integerLocal16 = SoftwareRaster.integerState0284;
           rgbSpriteLocal17 = new RgbSprite(integerLocal10, integerLocal12);
-          rgbSpriteLocal17.performAction0256();
+          rgbSpriteLocal17.bindAsRenderTarget();
           renderingSupport009Argument4.drawString(stringArgument3, 0, renderingSupport009Argument4.integerState0518, 16777215, -1);
           if (0 == integerArgument6) {
             integerArgument6 = 65793;
@@ -82,7 +82,7 @@ final class SceneWidgetPart007 extends SceneWidget {
           SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal15, integerLocal16);
           integerArrayLocal18 = rgbSpriteLocal17.integerArrayState0024;
           rgbSpriteLocal19 = new RgbSprite((2 + integerLocal10) * integerLocal13, integerLocal13 * (2 + integerLocal12));
-          rgbSpriteLocal19.performAction0256();
+          rgbSpriteLocal19.bindAsRenderTarget();
           for (integerLocal20 = 0; integerLocal12 > integerLocal20; integerLocal20++) {
             for (integerLocal21 = 0; integerLocal10 > integerLocal21; integerLocal21++) {
               if (integerArrayLocal18[integerLocal20 * integerLocal10 + integerLocal21] != 0) {

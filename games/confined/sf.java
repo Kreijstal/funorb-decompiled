@@ -39,8 +39,8 @@ final class sf extends IntrusiveNode {
           if (oj.field_B != 0) {
             kc.field_o = true;
           }
-          if (rg.field_K) {
-            rg.field_K = false;
+          if (InteractiveWidget.field_K) {
+            InteractiveWidget.field_K = false;
             bj.field_m = true;
           }
           ByteStorage.field_e = false;
@@ -58,8 +58,8 @@ final class sf extends IntrusiveNode {
               if (oj.field_B != 0) {
                 kc.field_o = true;
               }
-              if (rg.field_K) {
-                rg.field_K = false;
+              if (InteractiveWidget.field_K) {
+                InteractiveWidget.field_K = false;
                 bj.field_m = true;
               }
               ByteStorage.field_e = false;

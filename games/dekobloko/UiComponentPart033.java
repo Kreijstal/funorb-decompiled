@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class UiComponentPart033 extends UiComponentPart012 implements CallbackContract019 {
+final class UiComponentPart033 extends UiComponentPart012 implements WidgetActivationListener {
     static MidiSynthesizer midiSynthesizerState0001;
     static SceneWidget sceneWidgetState0150;
     static NetworkSupport012 networkSupport012State0001;
@@ -38,7 +38,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         GameAssets.mixedSupport004State0004 = MixedSupport127.mixedSupport004State0005;
     }
 
-    public final void performAction0313(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
+    public final void onWidgetActivated(byte byteArgument1, int integerArgument2, InteractiveComponent interactiveComponentArgument3, int integerArgument4, int integerArgument5) {
         if (this.booleanState0226) {
           NetworkSupport003.performAction0348(false, true, (byte) 66);
           return;
@@ -194,7 +194,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
             if (null != mixedSupport016Argument2.stringArrayState0003) {
               stringLocal5 = ResourceSupport003.stringState0381;
               if (this.uiComponentPart031State0002 != null) {
-                this.uiComponentPart031State0002.performAction0314(25);
+                this.uiComponentPart031State0002.onNameSuggestionsRefreshRequested(25);
               }
             } else {
               stringLocal5 = mixedSupport016Argument2.stringState0075;

@@ -40,30 +40,30 @@ final class MixedSupport051 {
     final static void performAction0605(int integerArgument1, boolean booleanArgument2) {
         MixedSupport042.performAction0537(130, 256, 16694016, MixedSupport011.stringState0054, integerArgument1 + 82, SceneWidget.renderingSupport009State0007);
         int integerLocal1 = 1 == AgeValidator.integerState0360 ? 140 : 145;
-        MixedSupport035.rgbSpriteArrayArrayState0006[0][1].performAction0280(82 + integerArgument1, integerLocal1, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[0][1].drawScaled(82 + integerArgument1, integerLocal1, 18, 18);
         integerLocal1 = integerLocal1 + ((AgeValidator.integerState0360 != 1 ? 16 : 8) + 16 * MixedSupport045.computeInteger0552(198, 0, integerLocal1, ReturnedShape.stringState0474, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1));
-        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].performAction0280(integerArgument1 + 108, integerLocal1, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].performAction0280(integerArgument1 + 108, integerLocal1 + 18, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].performAction0280(108 + integerArgument1, integerLocal1 + 36, 18, 18);
-        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].performAction0280(integerArgument1 + 126, 36 + integerLocal1, 18, 18);
-        ComponentDecorator.rgbSpriteState0034.performAction0278(156 + integerArgument1, 10 + integerLocal1);
+        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].drawScaled(integerArgument1 + 108, integerLocal1, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].drawScaled(integerArgument1 + 108, integerLocal1 + 18, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].drawScaled(108 + integerArgument1, integerLocal1 + 36, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[0][2].drawScaled(integerArgument1 + 126, 36 + integerLocal1, 18, 18);
+        ComponentDecorator.rgbSpriteState0034.draw(156 + integerArgument1, 10 + integerLocal1);
         RenderingSupport002.performAction0243(0, 2, 6, 230 + integerArgument1, 36 + integerLocal1, 3, -2);
         RenderingSupport002.performAction0243(0, 2, 12, integerArgument1 + 230, integerLocal1 + 18, 3, -1);
         RenderingSupport002.performAction0243(0, 2, 8, integerArgument1 + 230, integerLocal1, 3, -1);
         RenderingSupport002.performAction0243(0, 2, 1, integerArgument1 + 248, integerLocal1 + 36, 2, -2);
         integerLocal1 = integerLocal1 + (54 + (AgeValidator.integerState0360 == 1 ? 8 : 16));
-        MixedSupport035.rgbSpriteArrayArrayState0006[3][1].performAction0280(82 + integerArgument1, integerLocal1, 18, 18);
+        MixedSupport035.rgbSpriteArrayArrayState0006[3][1].drawScaled(82 + integerArgument1, integerLocal1, 18, 18);
         integerLocal1 = integerLocal1 + MixedSupport045.computeInteger0552(140, 0, integerLocal1, EditableTextField.stringState0480, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, 110 + integerArgument1) * 16;
         MixedSupport143.performAction1778(MixedSupport049.integerState0264, TextLineMetrics.integerState0534, integerLocal1 - (90 + (AgeValidator.integerState0360 != 1 ? 0 : 16)), integerArgument1 + 242, -1, 0, MixedSupport070.integerState0396);
         SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
         SoftwareRaster.drawVerticalLine(integerArgument1 + 310, 117, 242, 6316128);
         MixedSupport042.performAction0537(130, 256, 16694016, MixedSupport068.stringState0303, 322 + integerArgument1, SceneWidget.renderingSupport009State0007);
         MixedSupport045.computeInteger0552(120, 0, 145, MixedSupport024.stringState0116, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, integerArgument1 + 320);
-        NetworkSupport001.rgbSpriteState0005.performAction0278(455 + integerArgument1, 123);
+        NetworkSupport001.rgbSpriteState0005.draw(455 + integerArgument1, 123);
         if (!booleanArgument2) {
           MixedSupport042.performAction0537(240, 256, 16694016, MixedSupport043.stringState0185, 322 + integerArgument1, SceneWidget.renderingSupport009State0007);
           MixedSupport045.computeInteger0552(120, 0, 255, MixedSupport005.stringState0019, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -127, 0, 320 + integerArgument1);
-          MixedSupport077.rgbSpriteState0032.performAction0278(465 + integerArgument1, 235);
+          MixedSupport077.rgbSpriteState0032.draw(465 + integerArgument1, 235);
           return;
         }
     }

@@ -80,13 +80,13 @@ final class ra {
           SoftwareRasterizer.clearRaster();
           si.field_l = 0;
           f.a((byte) 16);
-          var2 = var1.a();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.d(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ac.field_m.e();
-          var1.d(param0, 0);
+          ac.field_m.bindAsRenderTarget();
+          var1.drawHalfSize(param0, 0);
           fi.c(true);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ra.B(" + param0 + ')');

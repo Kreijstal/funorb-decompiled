@@ -47,10 +47,10 @@ final class DirectByteStorage extends ByteStorage {
           rgbSpriteLocal1 = new RgbSprite(resourceArchiveArgument2.getFileByName(0, "", "button.gif"), (java.awt.Component) ((Object) GameDomainSupport004.canvasState0001));
           GameApplet.computeIndexedSprite0676("dropdown", resourceArchiveArgument1, "commonui", (byte) 73);
           indexedSpriteArrayLocal2 = UiComponentPart030.computeIndexedSpriteArray1554("screen_options", resourceArchiveArgument1, false, "commonui");
-          UiComponentPart007.indexedSpriteArrayState0002 = new IndexedSprite[4];
+          NameSuggestionsPanel.indexedSpriteArrayState0002 = new IndexedSprite[4];
           ThemeTips.indexedSpriteArrayState0004 = new IndexedSprite[4];
           MixedSupport002.indexedSpriteArrayState0001 = new IndexedSprite[4];
-          indexedSpriteArrayArrayLocal3 = new IndexedSprite[][]{UiComponentPart007.indexedSpriteArrayState0002, ThemeTips.indexedSpriteArrayState0004, MixedSupport002.indexedSpriteArrayState0001};
+          indexedSpriteArrayArrayLocal3 = new IndexedSprite[][]{NameSuggestionsPanel.indexedSpriteArrayState0002, ThemeTips.indexedSpriteArrayState0004, MixedSupport002.indexedSpriteArrayState0001};
           integerArrayArrayLocal4 = new int[4][];
           integerArrayArrayLocal5 = integerArrayArrayLocal4;
           integerArrayArrayLocal6 = integerArrayArrayLocal5;
@@ -71,18 +71,18 @@ final class DirectByteStorage extends ByteStorage {
           }
           integerLocal17 = rgbSpriteLocal1.integerState0255;
           IterableNodeCollection.performAction1656(-9074);
-          rgbSpriteLocal1.performAction0256();
+          rgbSpriteLocal1.bindAsRenderTarget();
           SoftwareRaster.grayscaleRectangle(0, 0, SoftwareRaster.integerState0285, SoftwareRaster.integerState0284);
           rgbSpriteLocal9 = new RgbSprite(integerLocal17, integerLocal17);
           rgbSpriteLocal10 = rgbSpriteLocal9;
-          rgbSpriteLocal10.performAction0256();
-          rgbSpriteLocal1.performAction0290(0, integerArgument4);
+          rgbSpriteLocal10.bindAsRenderTarget();
+          rgbSpriteLocal1.drawOpaque(0, integerArgument4);
           rgbSpriteLocal11 = new RgbSprite(integerLocal17, integerLocal17);
-          rgbSpriteLocal11.performAction0256();
-          rgbSpriteLocal1.performAction0290(integerLocal17 - rgbSpriteLocal1.integerState0258, 0);
+          rgbSpriteLocal11.bindAsRenderTarget();
+          rgbSpriteLocal1.drawOpaque(integerLocal17 - rgbSpriteLocal1.integerState0258, 0);
           rgbSpriteLocal12 = new RgbSprite(rgbSpriteLocal1.integerState0258 - 2 * integerLocal17, integerLocal17);
-          rgbSpriteLocal12.performAction0256();
-          rgbSpriteLocal1.performAction0290(-integerLocal17, 0);
+          rgbSpriteLocal12.bindAsRenderTarget();
+          rgbSpriteLocal1.drawOpaque(-integerLocal17, 0);
           ByteStorage.performAction1060((byte) -5);
           MixedSupport110.rgbSpriteArrayState0024 = new RgbSprite[]{rgbSpriteLocal9, rgbSpriteLocal12, rgbSpriteLocal11};
         } catch (RuntimeException runtimeException) {

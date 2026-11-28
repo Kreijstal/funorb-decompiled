@@ -31,10 +31,10 @@ final class vh {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (pj.field_D != null) {
+            if (InteractiveWidget.field_D != null) {
               try {
-                pj.field_D.seek(0L, (byte) 45);
-                pj.field_D.readFully((byte) 58, var6);
+                InteractiveWidget.field_D.seek(0L, (byte) 45);
+                InteractiveWidget.field_D.readFully((byte) 58, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

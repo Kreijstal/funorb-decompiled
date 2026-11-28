@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends pc {
+final class of extends InteractiveWidget {
     static mk field_F;
     static int field_H;
     static wh field_C;
@@ -20,12 +20,12 @@ final class of extends pc {
         hp.field_s = 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         if (param2 >= -75) {
           field_D = 123;
         }
         this.field_A = !this.field_A ? true : false;
-        super.a(param0, param1, -106, param3);
+        super.activateFromInput(param0, param1, -106, param3);
     }
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {

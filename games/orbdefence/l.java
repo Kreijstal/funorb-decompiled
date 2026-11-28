@@ -191,7 +191,7 @@ final class l {
         if (mb.field_b != null) {
           stackIn_7_0 = true;
         } else {
-          if (we.field_B) {
+          if (NameSuggestionsPanel.field_B) {
             return true;
           }
           stackIn_7_0 = false;

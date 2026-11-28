@@ -268,7 +268,7 @@ final class lf extends kn {
           tl.a((byte) -67, var7);
           this.field_M.a(0, param1, -110, 0);
           fd.a(28773);
-          var7.b(this.field_u + param3, param0 + this.field_r, this.field_R);
+          var7.drawWithOpacity(this.field_u + param3, param0 + this.field_r, this.field_R);
           if (param2 > -80) {
             em var6 = (em) null;
             lf.a(-25, (em) null, -102, -7, -85, 43, 21, 65);

@@ -85,7 +85,7 @@ class jj extends db implements ButtonListener {
         }
     }
 
-    public void a(ButtonWidget param0, int param1, int param2, int param3, int param4) {
+    public void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

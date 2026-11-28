@@ -17,7 +17,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
     final static int a(int param0) {
         gf.field_e.a(-23608);
         if (!BufferedSocket.field_k.b((byte) 66)) {
-          return ij.a(125);
+          return NameSuggestionsPanel.a(125);
         }
         if (param0 <= 37) {
           return 24;

@@ -153,11 +153,11 @@ final class pd extends rj {
         for (var6Lifetime2 = 1; -1 + this.field_F > var6Lifetime2; var6Lifetime2++) {
           DungeonAssaultScreen.a(var4 + 7, var5 + 10 + var6Lifetime2, 5, 0, -(var6Lifetime2 * 80 / this.field_F) + 144);
         }
-        bo.field_Kb.h(var4, var5);
+        bo.field_Kb.draw(var4, var5);
         if (param1 != 8187) {
           return;
         }
-        IntroSequenceScreen.field_y.h(var4, this.field_F + var5 + 10);
+        IntroSequenceScreen.field_y.draw(var4, this.field_F + var5 + 10);
         if (this.field_F < 2 * qh.field_q.field_v) {
           if (0 == this.field_C) {
             stackIn_19_0 = 0;
@@ -169,7 +169,7 @@ final class pd extends rj {
           bp.a(10 + var5 + var6Lifetime3, ji.field_G, var4 + 4, (byte) 99);
           bp.a(var5 - (-10 - var6Lifetime3) - 23, ji.field_G, 4 + var4, (byte) 99);
           SoftwareRasterizer.resetClip();
-          qh.field_q.c(var4 + 4, var6Lifetime3 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
+          qh.field_q.drawScaled(var4 + 4, var6Lifetime3 + var5 + 10, qh.field_q.field_y, qh.field_q.field_v / 2);
         } else {
           if (this.field_C == 0) {
             stackIn_15_0 = 0;
@@ -178,7 +178,7 @@ final class pd extends rj {
           }
           var6Lifetime3 = stackIn_15_0;
           bp.a(var6Lifetime3 + (10 + var5), ji.field_G, 4 + var4, (byte) 99);
-          qh.field_q.h(var4 + 4, var6Lifetime3 + 10 + var5);
+          qh.field_q.draw(var4 + 4, var6Lifetime3 + 10 + var5);
         }
     }
 

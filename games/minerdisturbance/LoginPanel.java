@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends kn implements TextFieldListener, sh {
+final class LoginPanel extends kn implements TextFieldListener, WidgetActivationListener {
     static int field_T;
-    private hc field_S;
-    private hc field_J;
+    private InteractiveWidget field_S;
+    private InteractiveWidget field_J;
     private boolean field_K;
     private boolean field_N;
     private boolean field_O;
@@ -13,7 +13,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
     private String field_R;
     private EditableTextField field_P;
     static String field_M;
-    private hc field_Q;
+    private InteractiveWidget field_Q;
 
     final static void a(java.awt.Canvas param0, int param1, int param2, int param3) {
         java.awt.Graphics var4 = null;
@@ -86,8 +86,8 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
     public final void onTextChanged(EditableTextField param0, int param1) {
         try {
           if (param1 != 60) {
-            hc var4 = (hc) null;
-            this.a(-73, (byte) -46, (hc) null, -35, 115);
+            InteractiveWidget var4 = (InteractiveWidget) null;
+            this.onWidgetActivated(-73, (byte) -46, (InteractiveWidget) null, -35, 115);
           }
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "cl.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -116,10 +116,10 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        hc stackIn_18_1 = null;
-        hc stackIn_18_2 = null;
-        hc stackIn_19_1 = null;
-        hc stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -149,7 +149,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
           this.field_P = (EditableTextField) ((Object) new ValidatedTextField(param0, (rm) (this), 100));
           this.field_L = (EditableTextField) ((Object) new ValidatedTextField("", (rm) (this), 20));
           if (!this.field_N) {
-            this.field_S = new hc(lj.field_o, (rm) null);
+            this.field_S = new InteractiveWidget(lj.field_o, (rm) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (this.field_O) {
@@ -161,13 +161,13 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
               stackIn_19_2 = null;
               stackIn_19_3 = hk.field_d;
             }
-            this.field_Q = new hc(stackIn_19_3, (rm) null);
+            this.field_Q = new InteractiveWidget(stackIn_19_3, (rm) null);
             if (this.field_K) {
-              this.field_J = new hc(u.field_a, (rm) (this));
+              this.field_J = new InteractiveWidget(u.field_a, (rm) (this));
             }
           } else {
-            this.field_S = new hc(af.field_s, (rm) null);
-            this.field_Q = new hc(o.field_b, (rm) null);
+            this.field_S = new InteractiveWidget(af.field_s, (rm) null);
+            this.field_Q = new InteractiveWidget(o.field_b, (rm) null);
             this.field_P.field_E = false;
           }
           this.field_P.field_A = (ad) ((Object) new gk(10000536));
@@ -410,7 +410,7 @@ final class LoginPanel extends kn implements TextFieldListener, sh {
         }
     }
 
-    public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public final void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

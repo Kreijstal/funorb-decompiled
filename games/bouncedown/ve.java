@@ -94,29 +94,29 @@ final class ve {
             SoftwareRasterizer.saveClip(AccountNameAvailabilityValidator.field_j);
             if (param2[0] != null) {
               SoftwareRasterizer.intersectClip(param5, param1, var16, var18);
-              param2[0].a(param5, param1);
+              param2[0].draw(param5, param1);
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[2]) {
               SoftwareRasterizer.intersectClip(var17, param1, var10, var18);
-              param2[2].a(var13, param1);
+              param2[2].draw(var13, param1);
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[6] != null) {
               SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
-              param2[6].a(param5, var15);
+              param2[6].draw(param5, var15);
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (null != param2[8]) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param2[8].a(var13, var15);
+              param2[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
             if (param2[1] != null &&
               0 != param2[1].field_t) {
               SoftwareRasterizer.intersectClip(var16, param1, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param2[1].field_t) {
-                param2[1].a(var20, param1);
+                param2[1].draw(var20, param1);
               }
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
@@ -124,7 +124,7 @@ final class ve {
               param2[7].field_t != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param2[7].field_t) {
-                param2[7].a(var20Lifetime1, var15);
+                param2[7].draw(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
@@ -132,7 +132,7 @@ final class ve {
               param2[3].field_o != 0) {
               SoftwareRasterizer.intersectClip(param5, var18, var16, var19);
               for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param2[3].field_o) {
-                param2[3].a(param5, var20Lifetime2);
+                param2[3].draw(param5, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
@@ -140,7 +140,7 @@ final class ve {
               param2[5].field_o != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param2[5].field_o) {
-                param2[5].a(var13, var20Lifetime3);
+                param2[5].draw(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);
             }
@@ -150,7 +150,7 @@ final class ve {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param2[4].field_o) {
                 for (var21 = var12; var13 > var21; var21 = var21 + param2[4].field_t) {
-                  param2[4].a(var21, var20Lifetime4);
+                  param2[4].draw(var21, var20Lifetime4);
                 }
               }
               SoftwareRasterizer.restoreClip(AccountNameAvailabilityValidator.field_j);

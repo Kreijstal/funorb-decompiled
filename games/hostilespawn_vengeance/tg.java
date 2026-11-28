@@ -27,14 +27,14 @@ final class tg {
             var5_int = param1[0].field_u;
             var6 = param1[2].field_u;
             var7 = param1[1].field_u;
-            param1[0].e(param4, param3);
-            param1[2].e(param2 + param4 - var6, param3);
+            param1[0].draw(param4, param3);
+            param1[2].draw(param2 + param4 - var6, param3);
             SoftwareRasterizer.saveClip(ia.field_i);
             SoftwareRasterizer.intersectClip(param4 + var5_int, param3, param4 - (-param2 + var6), param1[1].field_r + param3);
             var8 = param4 + var5_int;
             var9 = param4 + param2 - var6;
             for (param4 = var8; param4 < var9; param4 = param4 + var7) {
-              param1[1].e(param4, param3);
+              param1[1].draw(param4, param3);
             }
             SoftwareRasterizer.restoreClip(ia.field_i);
             return;

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends aj implements hl, df, tc {
+final class AccountRegistrationPanel extends aj implements hl, WidgetActivationListener, NameSuggestionListener {
     static Sprite field_K;
     private ValidatedTextField field_C;
-    private lj field_G;
+    private InteractiveWidget field_G;
     private ValidatedTextField field_x;
     private ValidatedTextField field_J;
     private le field_z;
     private bf field_w;
     private ValidatedTextField field_y;
     private ValidatedTextField field_F;
-    dh field_D;
+    NameSuggestionsPanel field_D;
     static boolean field_I;
-    private lj field_A;
+    private InteractiveWidget field_A;
     private ValidatedTextField field_E;
 
     public AccountRegistrationPanel() {
@@ -26,8 +26,8 @@ final class AccountRegistrationPanel extends aj implements hl, df, tc {
         this.field_C = new ValidatedTextField("", (ma) null, 3);
         int var1 = 1;
         this.field_w = new bf("", (ma) null, var1 != 0);
-        this.field_G = new lj(da.field_A, (ma) null);
-        this.field_A = new lj(el.field_a, (ma) null);
+        this.field_G = new InteractiveWidget(da.field_A, (ma) null);
+        this.field_A = new InteractiveWidget(el.field_a, (ma) null);
         this.field_J.field_j = mf.field_a;
         this.field_y.field_j = aa.field_c;
         this.field_E.field_j = sd.field_V;
@@ -81,13 +81,13 @@ final class AccountRegistrationPanel extends aj implements hl, df, tc {
         this.field_G.field_m = (ma) (this);
         this.a((UiWidget) (this.field_G), (byte) -119);
         this.a((UiWidget) (this.field_A), (byte) -125);
-        this.field_D = new dh((tc) (this));
+        this.field_D = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_D.a(124, this.field_J.field_n + 20, this.field_J.field_p + this.field_J.field_l + 60, -this.field_J.field_p + (this.field_l + (-this.field_J.field_l - 60)), 150);
         this.a((UiWidget) (this.field_D), (byte) -97);
         this.a(39, 0, 0, 496, 55 + (var3 + var6));
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {
@@ -99,8 +99,8 @@ final class AccountRegistrationPanel extends aj implements hl, df, tc {
         }
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator((byte) 125))).g(93);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_J.getFieldValidator((byte) 125))).invalidateCheckedName(93);
         if (param0 != -69) {
           this.field_C = (ValidatedTextField) null;
         }
@@ -333,7 +333,7 @@ final class AccountRegistrationPanel extends aj implements hl, df, tc {
         }
     }
 
-    public final void a(lj param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         RuntimeException stackIn_10_0 = null;
@@ -507,7 +507,7 @@ final class AccountRegistrationPanel extends aj implements hl, df, tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 35) {
-            this.field_A = (lj) null;
+            this.field_A = (InteractiveWidget) null;
           }
           stackIn_3_0 = this.a(80, param0, 35, param5, param1, param3, param4);
           return stackIn_3_0;

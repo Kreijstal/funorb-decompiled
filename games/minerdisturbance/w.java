@@ -219,7 +219,7 @@ final class w extends tn {
               }
             }
           }
-          var21.b(112, 144, var21.field_x << 4, var21.field_A << 4, -this.field_O << 10, 4096);
+          var21.drawRotatedAbout(112, 144, var21.field_x << 4, var21.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
           this.field_Q.drawAdditive(var9 - (var21.field_x >> 1), var10 - var21.field_A, 256);
           return;
@@ -269,7 +269,7 @@ final class w extends tn {
               }
             }
           }
-          var26.b(112, 144, var26.field_x << 4, var26.field_A << 4, -this.field_O << 10, 4096);
+          var26.drawRotatedAbout(112, 144, var26.field_x << 4, var26.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
           this.field_Q.drawAdditive(var9Lifetime1 - (var26.field_x >> 1), var10Lifetime1 - var26.field_A, 256);
           return;
@@ -319,7 +319,7 @@ final class w extends tn {
               }
             }
           }
-          var31.b(112, 144, var31.field_x << 4, var31.field_A << 4, -this.field_O << 10, 4096);
+          var31.drawRotatedAbout(112, 144, var31.field_x << 4, var31.field_A << 4, -this.field_O << 10, 4096);
           tk.b(true);
           this.field_Q.drawAdditive(var9Lifetime2 - (var31.field_x >> 1), var10Lifetime2 - var31.field_A, 256);
           return;
@@ -369,7 +369,7 @@ final class w extends tn {
             }
           }
         }
-        var36.b(112, 144, var36.field_x << 4, var36.field_A << 4, -this.field_O << 10, 4096);
+        var36.drawRotatedAbout(112, 144, var36.field_x << 4, var36.field_A << 4, -this.field_O << 10, 4096);
         tk.b(true);
         this.field_Q.drawAdditive(var9Lifetime3 - (var36.field_x >> 1), var10Lifetime3 - var36.field_A, 256);
     }

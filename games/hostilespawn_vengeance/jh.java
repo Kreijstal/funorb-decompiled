@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends wb implements qk {
-    private ph field_gb;
+final class jh extends wb implements WidgetActivationListener {
+    private InteractiveWidget field_gb;
     static int field_db;
     static RgbSprite field_cb;
     static int field_ab;
@@ -80,7 +80,7 @@ final class jh extends wb implements qk {
         field_bb = null;
     }
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         try {
           if (this.field_gb == param3) {
             this.f((byte) -86);
@@ -288,12 +288,12 @@ final class jh extends wb implements qk {
         }
     }
 
-    private final ph a(mh param0, String param1, byte param2) {
-        ph var4 = null;
+    private final InteractiveWidget a(mh param0, String param1, byte param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         PcmSample[] var6 = null;
-        ph stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -301,7 +301,7 @@ final class jh extends wb implements qk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ph(param1, param0);
+          var4 = new InteractiveWidget(param1, param0);
           var4.field_h = (nn) ((Object) new ke());
           var5 = this.field_x - 6;
           this.field_x = this.field_x + 38;
@@ -351,7 +351,7 @@ final class jh extends wb implements qk {
           } else {
             if (hf.field_g != param1) {
               if (param1 == g.field_M) {
-                var3 = ph.field_y;
+                var3 = InteractiveWidget.field_y;
                 this.field_x = this.field_x + 30;
               }
             } else {

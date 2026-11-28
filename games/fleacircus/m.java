@@ -75,10 +75,10 @@ final class m {
         RuntimeException var2 = null;
         try {
           if (ol.field_d != null) {
-            ol.field_d.field_N.a(param1, -69);
+            ol.field_d.field_N.setNameSuggestions(param1, -69);
           }
           if (null != AwtRasterBuffer.field_e) {
-            AwtRasterBuffer.field_e.field_H.a(param1, -102);
+            AwtRasterBuffer.field_e.field_H.setNameSuggestions(param1, -102);
           }
           if (param0 >= -20) {
             field_c = (int[]) null;

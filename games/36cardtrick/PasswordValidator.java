@@ -76,7 +76,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_6_0;
           }
           if (hi.a(var5, 0)) {
-            stackIn_10_0 = hl.field_C;
+            stackIn_10_0 = InteractiveWidget.field_C;
             return stackIn_10_0;
           }
           if (lc.a((byte) -33, var5)) {

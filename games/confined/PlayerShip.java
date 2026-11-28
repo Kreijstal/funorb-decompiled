@@ -1435,7 +1435,7 @@ final class PlayerShip extends MovingTunnelEntity {
           if (this.field_fb >= 16) {
             var3 = new double[12];
             this.field_jb.a((byte) 47, var3);
-            ak.a((double)this.field_fb * 0.015625, var3, this, 4825, this.field_qb, param0);
+            NameSuggestionsPanel.a((double)this.field_fb * 0.015625, var3, this, 4825, this.field_qb, param0);
           }
           if (this.field_lb >= 16) {
             var3Lifetime1 = new double[12];

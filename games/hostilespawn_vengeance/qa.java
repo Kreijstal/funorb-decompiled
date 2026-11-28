@@ -36,7 +36,7 @@ final class qa {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {
-              var10[var6] = bf.field_d[PcmOutputWorker.a((int) var21[var6], 255)];
+              var10[var6] = bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var6], 255)];
             }
             var1[var2] = new RgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var22);
           } else {
@@ -48,7 +48,7 @@ final class qa {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = ll.a(PcmOutputWorker.a(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.a((int) var21[var7], 255)]);
+              var6_ref_int__[var7] = ll.a(PcmOutputWorker.bitwiseAnd(-16777216, var15[var7] << 24), bf.field_d[PcmOutputWorker.bitwiseAnd((int) var21[var7], 255)]);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], TextInputField.field_X[var2], ConfirmedEmailAvailabilityValidator.field_r[var2], var17));
           }
@@ -312,7 +312,7 @@ final class qa {
                   0 == var23 &&
                   var24 == 0 && (var13[var7_int] ||
                   var14[var7_int])) {
-                  var27.a(var8, var9, 24, 24);
+                  var27.drawScaled(var8, var9, 24, 24);
                 }
               }
             }

@@ -59,9 +59,9 @@ abstract class q {
         return cg.field_i[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + ig.field_c[var5Lifetime1] + "-" + var6Lifetime1 + " " + var7Lifetime1 / 10 + var7Lifetime1 % 10 + ":" + var8Lifetime1 / 10 + var8Lifetime1 % 10 + ":" + var9Lifetime1 / 10 + var9Lifetime1 % 10 + " GMT";
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawWithOpacity(int param0, int param1, int param2);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     static {
         field_a = new Random();

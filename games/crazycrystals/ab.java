@@ -250,7 +250,7 @@ abstract class ab extends og {
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
-            hp.field_g.f(this.field_r + param2, param0 + this.field_j, this.field_B);
+            hp.field_g.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_B);
             return;
           }
           return;
@@ -263,7 +263,7 @@ abstract class ab extends og {
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
-            hp.field_g.f(this.field_r + param2, param0 + this.field_j, this.field_B);
+            hp.field_g.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_B);
             return;
           }
           return;
@@ -276,7 +276,7 @@ abstract class ab extends og {
           super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
           lg.a(1);
           if (param1 < -12) {
-            hp.field_g.f(this.field_r + param2, param0 + this.field_j, this.field_B);
+            hp.field_g.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_B);
             return;
           }
           return;
@@ -287,7 +287,7 @@ abstract class ab extends og {
         super.a(-this.field_j - param0, (byte) -89, -this.field_r - param2, param3);
         lg.a(1);
         if (param1 < -12) {
-          hp.field_g.f(this.field_r + param2, param0 + this.field_j, this.field_B);
+          hp.field_g.drawWithOpacity(this.field_r + param2, param0 + this.field_j, this.field_B);
           return;
         }
     }

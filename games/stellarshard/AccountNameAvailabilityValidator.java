@@ -212,7 +212,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         }
     }
 
-    final void a(boolean param0) {
+    final void invalidateCheckedName(boolean param0) {
         if (param0) {
           return;
         }

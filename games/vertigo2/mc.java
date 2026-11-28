@@ -236,14 +236,14 @@ final class mc {
           var13 = new Sprite(7, 4);
           var13.field_F = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new mq(var4, true);
-          var14.a((byte) 73, var13.c());
-          var13.b();
+          var14.a((byte) 73, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new mq(var4, true);
-          var14Lifetime1.a((byte) -90, var13.c());
-          var13.b();
+          var14Lifetime1.a((byte) -90, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new mq(var4, true);
-          var14Lifetime2.a((byte) -87, var13.c());
-          var13.b();
+          var14Lifetime2.a((byte) -87, var13.copy());
+          var13.rotateClockwise();
           var19 = new mq(var4, true);
           var19.a((byte) 44, var13);
         } catch (RuntimeException runtimeException) {

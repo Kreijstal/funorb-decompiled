@@ -65,8 +65,8 @@ final class DirectByteStorage extends ByteStorage {
             var6_int = param2[0].field_m;
             var7 = param2[2].field_m;
             var8 = param2[1].field_m;
-            param2[0].a(param4, param3, param1);
-            param2[2].a(-var7 + (param0 + param4), param3, param1);
+            param2[0].drawTintedGray(param4, param3, param1);
+            param2[2].drawTintedGray(-var7 + (param0 + param4), param3, param1);
             SoftwareRasterizer.saveClip(DiskArchiveRequest.field_u);
             SoftwareRasterizer.intersectClip(var6_int + param4, param3, param4 + param0 - var7, param2[1].field_n + param3);
             var9 = param4 + var6_int;
@@ -75,7 +75,7 @@ final class DirectByteStorage extends ByteStorage {
               field_d = -36;
             }
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param2[1].a(param4, param3, param1);
+              param2[1].drawTintedGray(param4, param3, param1);
             }
             SoftwareRasterizer.restoreClip(DiskArchiveRequest.field_u);
             return;

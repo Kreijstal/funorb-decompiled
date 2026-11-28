@@ -22,7 +22,7 @@ final class jh {
         if (param0 != 14221) {
           return;
         }
-        oh.field_a = bb.field_F[param1];
+        oh.field_a = NameSuggestionsPanel.field_F[param1];
         we.field_c = bc.field_E[param1];
     }
 

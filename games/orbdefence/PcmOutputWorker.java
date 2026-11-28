@@ -12,7 +12,7 @@ final class PcmOutputWorker implements Runnable {
     static String field_e;
     static String field_f;
 
-    final static String a(int param0, byte param1, int param2) {
+    final static String formatCurrentAndTotal(int param0, byte param1, int param2) {
         if (param1 != -2) {
           return (String) null;
         }

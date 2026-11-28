@@ -40,7 +40,7 @@ final class te extends si {
         AgeValidator.a(-119, var6);
         this.field_G.a(0, param1, 0, param3);
         MidiPcmStream.e(4096);
-        var6.c(param2 + this.field_m, this.field_j + param0, this.field_H);
+        var6.drawWithOpacity(param2 + this.field_m, this.field_j + param0, this.field_H);
     }
 
     final static int b(int param0, int param1, int param2) {

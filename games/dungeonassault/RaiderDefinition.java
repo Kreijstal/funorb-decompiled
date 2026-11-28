@@ -44,7 +44,7 @@ final class RaiderDefinition {
         jh.c();
         SoftwareRasterizer.setClip(param2, param4, var5_int + param2, param4 + param1);
         for (var6 = 0; var6 < param1; var6 = var6 + pi.field_b.field_v) {
-          pi.field_b.c(param2, var6 + param4);
+          pi.field_b.drawOpaque(param2, var6 + param4);
         }
         if (!param3) {
           return;

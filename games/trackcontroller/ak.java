@@ -85,17 +85,17 @@ final class ak {
           if (param3 <= 124) {
             field_a = (String) null;
           }
-          var17.a();
+          var17.bindAsRenderTarget();
           SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.a();
+          var18.bindAsRenderTarget();
           var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.a();
+          var11.bindAsRenderTarget();
           var17.drawOpaque(-var17.field_t + var9Lifetime1, 0);
           var12 = new Sprite(var17.field_t - var9Lifetime1 * 2, var9Lifetime1);
-          var12.a();
+          var12.bindAsRenderTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           GameShell.m(-108);
           BufferedCacheFile.field_l = new Sprite[]{var15, var12, var11};

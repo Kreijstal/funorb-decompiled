@@ -32,7 +32,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         var7 = ImageProducerRasterBuffer.a(param1, this.field_B, -96);
         if (!ke.a(105, var3) &&
           this.field_B != 3) {
-          of.field_j.h(640 - of.field_j.field_y >> 1, var6);
+          of.field_j.draw(640 - of.field_j.field_y >> 1, var6);
           var6 += 4;
         } else {
           SoftwareRasterizer.drawRectangleOutline(var4 - 4, var6 - 6, var5 + (-var4 + 8), var7 + 8, 0);
@@ -125,12 +125,12 @@ final class MenuScreen extends DungeonAssaultScreen {
         }
         if (8 != mn.field_b &&
           mn.field_b != 9) {
-          le.field_f.h(4 + var3, -28 + var2);
-          e.field_j.h(var3 + 198, -28 + var2);
-          CipherPacketBuffer.field_w.h(var3 + 214, (-3 + this.field_x.field_i) * tg.field_d[this.field_B] + (var2 - 5));
-          oj.field_a.h(var3 + 4, 293 + var2);
+          le.field_f.draw(4 + var3, -28 + var2);
+          e.field_j.draw(var3 + 198, -28 + var2);
+          CipherPacketBuffer.field_w.draw(var3 + 214, (-3 + this.field_x.field_i) * tg.field_d[this.field_B] + (var2 - 5));
+          oj.field_a.draw(var3 + 4, 293 + var2);
         } else {
-          am.field_a.h(-(am.field_a.field_E / 2) + 320, 48);
+          am.field_a.draw(-(am.field_a.field_E / 2) + 320, 48);
         }
         if (8 != this.field_B) {
           if (9 != this.field_B) {
@@ -409,14 +409,14 @@ final class MenuScreen extends DungeonAssaultScreen {
         try {
           jh.c();
           var4 = new RgbSprite(param0.field_E >> 1, param0.field_G >> 1);
-          var4.e();
-          param0.b(param0.field_E >> 3, param0.field_G >> 3, param0.field_E >> 2, param0.field_G >> 2, 16777215);
+          var4.bindAsRenderTarget();
+          param0.drawScaledSilhouette(param0.field_E >> 3, param0.field_G >> 3, param0.field_E >> 2, param0.field_G >> 2, 16777215);
           if (param1 != 320) {
             this.field_A = (RgbSprite[]) null;
           }
-          var4.d(16777215);
-          var4.e();
-          param0.b(param0.field_E >> 3, param0.field_G >> 3, param0.field_E >> 2, param0.field_G >> 2, 0);
+          var4.addOutline(16777215);
+          var4.bindAsRenderTarget();
+          param0.drawScaledSilhouette(param0.field_E >> 3, param0.field_G >> 3, param0.field_E >> 2, param0.field_G >> 2, 0);
           jh.b();
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -548,7 +548,7 @@ final class MenuScreen extends DungeonAssaultScreen {
               }
               var5_ref_cn = tf.field_j;
             }
-            var5_ref_cn.e(94 + var4.field_o - var3, var4.field_p);
+            var5_ref_cn.drawQuarterSizeAveraged(94 + var4.field_o - var3, var4.field_p);
             if (var4.field_r) {
               var6_ref_cn = IntroSequenceScreen.field_s[var4.field_i];
             } else {
@@ -624,7 +624,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           if (var5 != 0) {
             PacketBuffer.field_j[var3Lifetime1].a(89, var8);
           } else {
-            f.field_a.h(89, var8);
+            f.field_a.draw(89, var8);
           }
           var8 = var8 + la.field_b.field_H;
           var8 = var8 + la.field_b.field_H;
@@ -673,7 +673,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           la.field_b.drawString(mp.field_f, var14 + 239, var13, 16777215, -1);
           var15 = 239 + var14 + la.field_b.stringWidth(mp.field_f);
           for (var16 = 0; sg.field_d[var3Lifetime1] > var16; var16++) {
-            cf.field_f.h(var15, var12Lifetime1);
+            cf.field_f.draw(var15, var12Lifetime1);
             var15 = var15 + cf.field_f.field_y / 3;
           }
         } else {
@@ -749,13 +749,13 @@ final class MenuScreen extends DungeonAssaultScreen {
         }
         this.field_u[param0].b(var9, 32, var10);
         if (var11 == 0) {
-          hj.field_T.h(-20 + var10, IntrusiveNode.field_c.field_H + (var9 - 15));
+          hj.field_T.draw(-20 + var10, IntrusiveNode.field_c.field_H + (var9 - 15));
         }
         if (param2) {
           if (null == this.field_A[param0]) {
             this.a((byte) -125, param0);
           }
-          this.field_A[param0].b(var10, var9, 64);
+          this.field_A[param0].drawAdditive(var10, var9, 64);
           var13 = (int)(128.0 * (1.0 + te.a(mo.field_a)));
           if (0 > var13) {
             var13 = 0;
@@ -763,7 +763,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           if (var13 > 256) {
             var13 = 256;
           }
-          this.field_s[param0].b(var10, var9, var13);
+          this.field_s[param0].drawAdditive(var10, var9, var13);
         }
     }
 
@@ -831,7 +831,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           }
           jh.c();
           var3 = new RgbSprite(64, 64);
-          var3.e();
+          var3.bindAsRenderTarget();
           SoftwareRasterizer.drawCircleOutline(32, 31, 14, 16777215);
           IntroSequenceScreen.field_s[46] = var3;
           jh.b();
@@ -920,7 +920,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         SoftwareRasterizer.setClip(41, 48, 599, 416);
         if (mn.field_b != 8 &&
           mn.field_b != 9) {
-          tm.field_p.h(640 - tm.field_p.field_y >> 1, 0);
+          tm.field_p.draw(640 - tm.field_p.field_y >> 1, 0);
         }
         SoftwareRasterizer.restoreClip(kd.field_g);
         jh.b();

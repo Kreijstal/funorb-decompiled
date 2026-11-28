@@ -109,7 +109,7 @@ abstract class im extends bb {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        rp.field_h.d(param1 + this.width - 90, 10 + param0);
+        rp.field_h.draw(param1 + this.width - 90, 10 + param0);
         hg.a(false, param1 + 5, this.width - 10, 35 + param0, hh.field_b);
         hg.a(false, param1, this.width, -22 + (param0 + this.height), vf.field_i);
         var5Lifetime2 = 169;

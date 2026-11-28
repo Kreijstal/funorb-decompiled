@@ -218,7 +218,7 @@ final class me extends IntrusiveNode {
               if (var9 >= 16) {
                 var9 = 15;
               }
-              gd.field_b[var9].e((int)((double)var4 - var7), (int)(-var7 + (double)var5), (int)(2.0 * var7), (int)(var7 * 2.0), 64);
+              gd.field_b[var9].drawScaledAdditive((int)((double)var4 - var7), (int)(-var7 + (double)var5), (int)(2.0 * var7), (int)(var7 * 2.0), 64);
             }
           } else {
             var7 = (double)(2 * DualLinkDequeIterator.field_e);
@@ -226,7 +226,7 @@ final class me extends IntrusiveNode {
             if (var9 >= 16) {
               var9 = 15;
             }
-            gd.field_b[var9].e((int)(-var7 + (double)var4), (int)((double)var5 - var7), (int)(2.0 * var7), (int)(2.0 * var7), 64);
+            gd.field_b[var9].drawScaledAdditive((int)(-var7 + (double)var4), (int)((double)var5 - var7), (int)(2.0 * var7), (int)(2.0 * var7), 64);
           }
         }
     }

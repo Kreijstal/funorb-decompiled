@@ -221,8 +221,8 @@ final class b extends id {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof ig) {
-            param0 = param0 & ((ig) (param3)).field_E;
+          if (param3 instanceof InteractiveWidget) {
+            param0 = param0 & ((InteractiveWidget) (param3)).field_E;
           }
           if (param4 != 4549) {
             return;

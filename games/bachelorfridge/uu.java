@@ -51,7 +51,7 @@ final class uu extends UiComponent {
 
     private final Sprite b(boolean param0) {
         Sprite var4 = new Sprite(400, 102);
-        var4.b();
+        var4.bindAsRenderTarget();
         SoftwareRasterizer.fillRectangle(0, 0, 400, 102, 16777215);
         SoftwareRasterizer.drawHorizontalLine(0, 0, 380, 8698113);
         SoftwareRasterizer.drawHorizontalLine(0, 1, 380, 8698113);

@@ -31,7 +31,7 @@ final class IndexedSprite extends Sprite {
         }
     }
 
-    final void performAction0933(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final void drawWithOpacity(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -148,7 +148,7 @@ final class IndexedSprite extends Sprite {
         this.integerArrayState0183 = integerArrayArgument8;
     }
 
-    final void performAction0932(int integerArgument1, int integerArgument2) {
+    final void draw(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -192,7 +192,7 @@ final class IndexedSprite extends Sprite {
         IndexedSprite.blitIndexed(SoftwareRaster.integerArrayState0063, this.byteArrayState0021, this.integerArrayState0183, 0, integerLocal5, integerLocal4, integerLocal7, integerLocal6, integerLocal8, integerLocal9);
     }
 
-    final void performAction1243() {
+    final void normalizeCanvas() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int previousIntegerLocal3 = 0;
@@ -227,7 +227,7 @@ final class IndexedSprite extends Sprite {
         this.integerArrayState0183 = new int[integerArgument3];
     }
 
-    final IndexedSprite computeIndexedSprite1245() {
+    final IndexedSprite copy() {
         int integerLocal1 = 0;
         IndexedSprite indexedSpriteLocal2 = new IndexedSprite(this.integerState0425, this.integerState0426, this.integerArrayState0183.length);
         int integerLocal3;

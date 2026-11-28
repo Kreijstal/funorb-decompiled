@@ -21,12 +21,12 @@ final class rk {
             field_b = -46;
           }
           if (uo.field_i != null) {
-            uo.field_i.field_L.a(args, 0);
+            uo.field_i.field_L.setNameSuggestions(args, 0);
           }
           if (oh.field_d == null) {
             return;
           }
-          oh.field_d.field_A.a(args, 0);
+          oh.field_d.field_A.setNameSuggestions(args, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

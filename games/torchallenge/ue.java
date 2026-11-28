@@ -51,21 +51,21 @@ final class ue extends IntrusiveNode {
           var3 = 3;
           var2 = rd.field_i[0].fullHeight;
           ii.field_h[3] = new Sprite(var3, 480);
-          ii.field_h[3].d();
+          ii.field_h[3].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_int, var2, var3, var4, si.field_H[0], si.field_H[2]);
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_int + 1, var2, 1, var4, ih.field_N[0], ih.field_N[2]);
-          ii.field_h[3].h();
+          ii.field_h[3].trimTransparentBorders();
           ii.field_h[4] = new Sprite(var3, 480);
-          ii.field_h[4].d();
+          ii.field_h[4].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_int, var2, var3, var4, si.field_H[1], si.field_H[3]);
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_int + 1, var2, 1, var4, ih.field_N[1], ih.field_N[3]);
-          ii.field_h[4].h();
+          ii.field_h[4].trimTransparentBorders();
           var1_intLifetime1 = 0;
           var2Lifetime1 = rd.field_i[0].fullHeight;
           var3Lifetime1 = 3;
           var4Lifetime1 = -(rd.field_i[0].fullWidth * 2) + 640;
           ii.field_h[1] = new Sprite(var3Lifetime1, 640);
-          ii.field_h[1].d();
+          ii.field_h[1].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[0], si.field_H[1]);
           SoftwareRasterizer.fillRectangleVerticalGradient(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[0], ih.field_N[1]);
           var5 = new int[640 * var3Lifetime1];
@@ -82,9 +82,9 @@ final class ue extends IntrusiveNode {
           ii.field_h[1].pixels = var5;
           ii.field_h[1].fullWidth = 640;
           ii.field_h[1].storedHeight = var3Lifetime1;
-          ii.field_h[1].h();
+          ii.field_h[1].trimTransparentBorders();
           ii.field_h[6] = new Sprite(var3Lifetime1, 640);
-          ii.field_h[6].d();
+          ii.field_h[6].bindAsRenderTarget();
           SoftwareRasterizer.fillRectangleVerticalGradient(var1_intLifetime1, var2Lifetime1, var3Lifetime1, var4Lifetime1, si.field_H[2], si.field_H[3]);
           SoftwareRasterizer.fillRectangleVerticalGradient(1 + var1_intLifetime1, var2Lifetime1, 1, var4Lifetime1, ih.field_N[2], ih.field_N[3]);
           for (var7Lifetime1 = 0; var7Lifetime1 < 640; var7Lifetime1++) {
@@ -101,7 +101,7 @@ final class ue extends IntrusiveNode {
           ii.field_h[6].storedHeight = var3Lifetime1;
           ii.field_h[6].offsetX = 0;
           var5Lifetime1 = null;
-          ii.field_h[6].h();
+          ii.field_h[6].trimTransparentBorders();
           var6Lifetime1 = null;
           SectorCacheStore.field_f.bindAsTarget(112);
         } catch (RuntimeException runtimeException) {

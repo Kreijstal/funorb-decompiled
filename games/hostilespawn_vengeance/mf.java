@@ -15,8 +15,8 @@ final class mf {
           if (param0) {
             mf.a(68);
           }
-          if (~param1 != ~mc.field_I) {
-            mc.field_I = param1;
+          if (~param1 != ~NameSuggestionsPanel.field_I) {
+            NameSuggestionsPanel.field_I = param1;
             jf.field_c = 1;
             mb.field_s.a(500, 8000);
             le.field_D = 0;

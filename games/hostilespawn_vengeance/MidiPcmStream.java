@@ -306,7 +306,7 @@ class MidiPcmStream extends PcmStream {
           tm var5 = (tm) null;
           discarded$0 = this.computeNotePan((tm) null, true);
         }
-        this.field_o[param2] = PcmOutputWorker.a(param1, -128);
+        this.field_o[param2] = PcmOutputWorker.bitwiseAnd(param1, -128);
         this.setProgram(-14089, param1, param2);
     }
 
@@ -965,46 +965,46 @@ class MidiPcmStream extends PcmStream {
         var6Lifetime4 = param1 >> 8 & 127;
         var7Lifetime3 = 127 & param1 >> 16;
         if (0 == var6Lifetime4) {
-          this.field_o[var5Lifetime4] = PcmOutputWorker.a(this.field_o[var5Lifetime4], -2080769) + (var7Lifetime3 << 14);
+          this.field_o[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_o[var5Lifetime4], -2080769) + (var7Lifetime3 << 14);
         }
         if (var6Lifetime4 == 32) {
-          this.field_o[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.a(-16257, this.field_o[var5Lifetime4]);
+          this.field_o[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.bitwiseAnd(-16257, this.field_o[var5Lifetime4]);
         }
         if (1 == var6Lifetime4) {
-          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.a(-16257, this.field_y[var5Lifetime4]);
+          this.field_y[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.bitwiseAnd(-16257, this.field_y[var5Lifetime4]);
         }
         if (var6Lifetime4 == 33) {
-          this.field_y[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.a(this.field_y[var5Lifetime4], -128);
+          this.field_y[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.bitwiseAnd(this.field_y[var5Lifetime4], -128);
         }
         if (var6Lifetime4 == 5) {
-          this.field_L[var5Lifetime4] = PcmOutputWorker.a(this.field_L[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
+          this.field_L[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_L[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
         }
         if (37 == var6Lifetime4) {
-          this.field_L[var5Lifetime4] = PcmOutputWorker.a(-128, this.field_L[var5Lifetime4]) + var7Lifetime3;
+          this.field_L[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(-128, this.field_L[var5Lifetime4]) + var7Lifetime3;
         }
         if (var6Lifetime4 == 7) {
-          this.field_O[var5Lifetime4] = PcmOutputWorker.a(this.field_O[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
+          this.field_O[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_O[var5Lifetime4], -16257) + (var7Lifetime3 << 7);
         }
         if (var6Lifetime4 == 39) {
-          this.field_O[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.a(this.field_O[var5Lifetime4], -128);
+          this.field_O[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.bitwiseAnd(this.field_O[var5Lifetime4], -128);
         }
         if (10 == var6Lifetime4) {
-          this.field_v[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.a(this.field_v[var5Lifetime4], -16257);
+          this.field_v[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.bitwiseAnd(this.field_v[var5Lifetime4], -16257);
         }
         if (var6Lifetime4 == 42) {
-          this.field_v[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.a(-128, this.field_v[var5Lifetime4]);
+          this.field_v[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.bitwiseAnd(-128, this.field_v[var5Lifetime4]);
         }
         if (var6Lifetime4 == 11) {
-          this.field_T[var5Lifetime4] = PcmOutputWorker.a(-16257, this.field_T[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_T[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(-16257, this.field_T[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (var6Lifetime4 == 43) {
-          this.field_T[var5Lifetime4] = PcmOutputWorker.a(this.field_T[var5Lifetime4], -128) + var7Lifetime3;
+          this.field_T[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_T[var5Lifetime4], -128) + var7Lifetime3;
         }
         if (var6Lifetime4 == 64) {
           if (var7Lifetime3 >= 64) {
             this.field_C[var5Lifetime4] = ll.a(this.field_C[var5Lifetime4], 1);
           } else {
-            this.field_C[var5Lifetime4] = PcmOutputWorker.a(this.field_C[var5Lifetime4], -2);
+            this.field_C[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_C[var5Lifetime4], -2);
           }
         }
         if (65 == var6Lifetime4) {
@@ -1012,20 +1012,20 @@ class MidiPcmStream extends PcmStream {
             this.field_C[var5Lifetime4] = ll.a(this.field_C[var5Lifetime4], 2);
           } else {
             this.releaseUnmappedVoices(var5Lifetime4, false);
-            this.field_C[var5Lifetime4] = PcmOutputWorker.a(this.field_C[var5Lifetime4], -3);
+            this.field_C[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_C[var5Lifetime4], -3);
           }
         }
         if (var6Lifetime4 == 99) {
-          this.field_u[var5Lifetime4] = PcmOutputWorker.a(127, this.field_u[var5Lifetime4]) + (var7Lifetime3 << 7);
+          this.field_u[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(127, this.field_u[var5Lifetime4]) + (var7Lifetime3 << 7);
         }
         if (var6Lifetime4 == 98) {
-          this.field_u[var5Lifetime4] = PcmOutputWorker.a(this.field_u[var5Lifetime4], 16256) + var7Lifetime3;
+          this.field_u[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_u[var5Lifetime4], 16256) + var7Lifetime3;
         }
         if (101 == var6Lifetime4) {
-          this.field_u[var5Lifetime4] = PcmOutputWorker.a(127, this.field_u[var5Lifetime4]) + (16384 + (var7Lifetime3 << 7));
+          this.field_u[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(127, this.field_u[var5Lifetime4]) + (16384 + (var7Lifetime3 << 7));
         }
         if (var6Lifetime4 == 100) {
-          this.field_u[var5Lifetime4] = var7Lifetime3 + 16384 + PcmOutputWorker.a(this.field_u[var5Lifetime4], 16256);
+          this.field_u[var5Lifetime4] = var7Lifetime3 + 16384 + PcmOutputWorker.bitwiseAnd(this.field_u[var5Lifetime4], 16256);
         }
         if (var6Lifetime4 == 120) {
           this.removeChannelVoices(106, var5Lifetime4);
@@ -1039,25 +1039,25 @@ class MidiPcmStream extends PcmStream {
         if (var6Lifetime4 == 6) {
           var8 = this.field_u[var5Lifetime4];
           if (var8 == 16384) {
-            this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.a(-16257, this.field_t[var5Lifetime4]);
+            this.field_t[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.bitwiseAnd(-16257, this.field_t[var5Lifetime4]);
           }
         }
         if (var6Lifetime4 == 38) {
           var8Lifetime1 = this.field_u[var5Lifetime4];
           if (var8Lifetime1 == 16384) {
-            this.field_t[var5Lifetime4] = PcmOutputWorker.a(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
+            this.field_t[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_t[var5Lifetime4], -128) + var7Lifetime3;
           }
         }
         if (var6Lifetime4 == 16) {
-          this.field_H[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.a(this.field_H[var5Lifetime4], -16257);
+          this.field_H[var5Lifetime4] = (var7Lifetime3 << 7) + PcmOutputWorker.bitwiseAnd(this.field_H[var5Lifetime4], -16257);
         }
         if (var6Lifetime4 == 48) {
-          this.field_H[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.a(-128, this.field_H[var5Lifetime4]);
+          this.field_H[var5Lifetime4] = var7Lifetime3 + PcmOutputWorker.bitwiseAnd(-128, this.field_H[var5Lifetime4]);
         }
         if (var6Lifetime4 == 81) {
           if (var7Lifetime3 < 64) {
             this.resetChannelVoicePhases(var5Lifetime4, 4);
-            this.field_C[var5Lifetime4] = PcmOutputWorker.a(this.field_C[var5Lifetime4], -5);
+            this.field_C[var5Lifetime4] = PcmOutputWorker.bitwiseAnd(this.field_C[var5Lifetime4], -5);
           } else {
             this.field_C[var5Lifetime4] = ll.a(this.field_C[var5Lifetime4], 4);
           }
@@ -1094,7 +1094,7 @@ class MidiPcmStream extends PcmStream {
           return;
         }
         while (var5 < 16) {
-          this.field_o[var5] = PcmOutputWorker.a(-128, this.field_F[var5]);
+          this.field_o[var5] = PcmOutputWorker.bitwiseAnd(-128, this.field_F[var5]);
           var5++;
         }
     }

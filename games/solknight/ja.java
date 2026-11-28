@@ -38,8 +38,8 @@ final class ja {
               }
             }
           }
-          if (null != ua.field_I) {
-            stackIn_20_0 = ua.field_I.isMidiReady(144);
+          if (null != NameSuggestionsPanel.field_I) {
+            stackIn_20_0 = NameSuggestionsPanel.field_I.isMidiReady(144);
             if (!stackIn_20_0) {
               dj.field_j = null;
               return;

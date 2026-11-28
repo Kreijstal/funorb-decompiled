@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nh extends v implements sg {
+final class nh extends v implements WidgetActivationListener {
     static int field_jb;
-    private ng field_gb;
+    private InteractiveWidget field_gb;
     static int[] field_hb;
     static String field_fb;
     static String field_ib;
@@ -12,11 +12,11 @@ final class nh extends v implements sg {
     static int[] field_db;
     static int field_bb;
 
-    private final ng a(String param0, int param1, gg param2) {
-        ng var4 = null;
+    private final InteractiveWidget a(String param0, int param1, gg param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ng stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,7 +24,7 @@ final class nh extends v implements sg {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new ng(param0, param2);
+          var4 = new InteractiveWidget(param0, param2);
           var4.field_q = (j) ((Object) new cl());
           var5 = -6 + this.field_l;
           this.field_l = this.field_l + 38;
@@ -147,7 +147,7 @@ final class nh extends v implements sg {
         return true;
     }
 
-    public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, boolean param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -102,26 +102,26 @@ final class RichTextLayout extends TextLayout {
         int integerLocal9 = SoftwareRaster.integerState0285;
         int integerLocal10 = SoftwareRaster.integerState0284;
         RgbSprite rgbSpriteLocal11 = new RgbSprite(integerArgument3, integerArgument4 - integerArgument3 * 2);
-        rgbSpriteLocal11.performAction0256();
+        rgbSpriteLocal11.bindAsRenderTarget();
         SoftwareRaster.fillRectangleVerticalGradient(0, 0, integerArgument3, integerArgument4 - 2 * integerArgument3, integerArgument6, integerArgument5);
         RgbSprite rgbSpriteLocal12 = new RgbSprite(integerArgument3, integerArgument3);
-        rgbSpriteLocal12.performAction0256();
+        rgbSpriteLocal12.bindAsRenderTarget();
         SoftwareRaster.fillRectangle(0, 0, integerArgument3, integerArgument3, integerArgument6);
         RgbSprite rgbSpriteLocal13 = new RgbSprite(16, integerArgument3);
         if (integerArgument2 == -20982) {
-          rgbSpriteLocal13.performAction0256();
+          rgbSpriteLocal13.bindAsRenderTarget();
           SoftwareRaster.fillRectangle(0, 0, 16, integerArgument3, integerArgument6);
           rgbSpriteLocal1 = new RgbSprite(integerArgument3, integerArgument3);
-          rgbSpriteLocal1.performAction0256();
+          rgbSpriteLocal1.bindAsRenderTarget();
           SoftwareRaster.fillRectangle(0, 0, integerArgument3, integerArgument3, integerArgument5);
           rgbSpriteLocal2 = new RgbSprite(16, integerArgument3);
-          rgbSpriteLocal2.performAction0256();
+          rgbSpriteLocal2.bindAsRenderTarget();
           SoftwareRaster.fillRectangle(0, 0, 16, integerArgument3, integerArgument5);
           objectLocal3 = null;
           if (integerArgument1 > 0) {
             rgbSpriteLocal4 = new RgbSprite(16, 16);
             objectLocal3 = rgbSpriteLocal4;
-            rgbSpriteLocal4.performAction0256();
+            rgbSpriteLocal4.bindAsRenderTarget();
             SoftwareRaster.fillRectangle(0, 0, 16, 16, integerArgument1);
           }
           SoftwareRaster.setRasterBuffer(integerArrayLocal5, integerLocal9, integerLocal10);

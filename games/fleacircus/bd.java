@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bd extends oh implements da {
+class bd extends oh implements WidgetActivationListener {
     private lk field_lb;
     static int[] field_ob;
     private boolean field_mb;
@@ -306,7 +306,7 @@ class bd extends oh implements da {
         this.d(var2, 26034);
     }
 
-    public void a(int param0, int param1, int param2, int param3, bb param4) {
+    public void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

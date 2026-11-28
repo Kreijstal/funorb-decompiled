@@ -219,18 +219,18 @@ final class tc extends id {
         RuntimeException var6 = null;
         db var7 = null;
         db var9 = null;
-        ig var10 = null;
+        InteractiveWidget var10 = null;
         db var11 = null;
         db var12 = null;
         db var13 = null;
         db var14 = null;
         try {
-          if (param3 instanceof ig) {
+          if (param3 instanceof InteractiveWidget) {
             stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (ig) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           if (param4 != 4549) {
             tc.c(22);
           }

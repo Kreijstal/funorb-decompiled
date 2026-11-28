@@ -110,22 +110,22 @@ final class qe extends pn {
                 }
               }
             }
-            var20.a(112, 144, var20.field_x << 4, var20.field_B << 4, -this.field_Y << 10, 4096);
+            var20.drawRotatedAbout(112, 144, var20.field_x << 4, var20.field_B << 4, -this.field_Y << 10, 4096);
             ln.d(-28558);
-            this.field_bb.d(-(var20.field_x >> 1) + var9, -var20.field_B + var10, 256);
+            this.field_bb.drawAdditive(-(var20.field_x >> 1) + var9, -var20.field_B + var10, 256);
             return;
           }
           if (dj.field_c != var6) {
             if (ir.field_a == var6) {
               var22 = jn.field_b[2];
-              var22.d(var9, var10 - (var22.field_t >> 1), 256);
+              var22.drawAdditive(var9, var10 - (var22.field_t >> 1), 256);
               return;
             }
             if (qm.field_G != var6) {
               return;
             }
             var21 = jn.field_b[1];
-            var21.d(var9, var10 - (var21.field_t >> 1), 256);
+            var21.drawAdditive(var9, var10 - (var21.field_t >> 1), 256);
             return;
           }
           var19 = jn.field_b[0];
@@ -140,9 +140,9 @@ final class qe extends pn {
             this.field_bb = new Sprite(var11Lifetime4, var12Lifetime4);
             lq.a(this.field_bb, (byte) -94);
           }
-          var19.a(112, 144, var19.field_x << 4, var19.field_B << 4, -this.field_Y << 10, 4096);
+          var19.drawRotatedAbout(112, 144, var19.field_x << 4, var19.field_B << 4, -this.field_Y << 10, 4096);
           ln.d(-28558);
-          this.field_bb.d(-(var19.field_x >> 1) + var9, -var19.field_B + var10, 256);
+          this.field_bb.drawAdditive(-(var19.field_x >> 1) + var9, -var19.field_B + var10, 256);
           return;
         }
         if (var6 == dj.field_c) {
@@ -177,22 +177,22 @@ final class qe extends pn {
                 }
               }
             }
-            var26.a(112, 144, var26.field_x << 4, var26.field_B << 4, -this.field_Y << 10, 4096);
+            var26.drawRotatedAbout(112, 144, var26.field_x << 4, var26.field_B << 4, -this.field_Y << 10, 4096);
             ln.d(-28558);
-            this.field_bb.d(-(var26.field_x >> 1) + var9Lifetime1, -var26.field_B + var10Lifetime1, 256);
+            this.field_bb.drawAdditive(-(var26.field_x >> 1) + var9Lifetime1, -var26.field_B + var10Lifetime1, 256);
             return;
           }
           if (dj.field_c != var6) {
             if (ir.field_a == var6) {
               var28 = jn.field_b[2];
-              var28.d(var9Lifetime1, var10Lifetime1 - (var28.field_t >> 1), 256);
+              var28.drawAdditive(var9Lifetime1, var10Lifetime1 - (var28.field_t >> 1), 256);
               return;
             }
             if (qm.field_G != var6) {
               return;
             }
             var27 = jn.field_b[1];
-            var27.d(var9Lifetime1, var10Lifetime1 - (var27.field_t >> 1), 256);
+            var27.drawAdditive(var9Lifetime1, var10Lifetime1 - (var27.field_t >> 1), 256);
             return;
           }
           var25 = jn.field_b[0];
@@ -207,9 +207,9 @@ final class qe extends pn {
             this.field_bb = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             lq.a(this.field_bb, (byte) -94);
           }
-          var25.a(112, 144, var25.field_x << 4, var25.field_B << 4, -this.field_Y << 10, 4096);
+          var25.drawRotatedAbout(112, 144, var25.field_x << 4, var25.field_B << 4, -this.field_Y << 10, 4096);
           ln.d(-28558);
-          this.field_bb.d(-(var25.field_x >> 1) + var9Lifetime1, -var25.field_B + var10Lifetime1, 256);
+          this.field_bb.drawAdditive(-(var25.field_x >> 1) + var9Lifetime1, -var25.field_B + var10Lifetime1, 256);
           return;
         }
         var5 = this.field_J.getValidationMessage(-27183);
@@ -246,22 +246,22 @@ final class qe extends pn {
               }
             }
           }
-          var31.a(112, 144, var31.field_x << 4, var31.field_B << 4, -this.field_Y << 10, 4096);
+          var31.drawRotatedAbout(112, 144, var31.field_x << 4, var31.field_B << 4, -this.field_Y << 10, 4096);
           ln.d(-28558);
-          this.field_bb.d(-(var31.field_x >> 1) + var9Lifetime2, -var31.field_B + var10Lifetime2, 256);
+          this.field_bb.drawAdditive(-(var31.field_x >> 1) + var9Lifetime2, -var31.field_B + var10Lifetime2, 256);
           return;
         }
         if (dj.field_c != var6Lifetime1) {
           if (ir.field_a == var6Lifetime1) {
             var33 = jn.field_b[2];
-            var33.d(var9Lifetime2, var10Lifetime2 - (var33.field_t >> 1), 256);
+            var33.drawAdditive(var9Lifetime2, var10Lifetime2 - (var33.field_t >> 1), 256);
             return;
           }
           if (qm.field_G != var6Lifetime1) {
             return;
           }
           var32 = jn.field_b[1];
-          var32.d(var9Lifetime2, var10Lifetime2 - (var32.field_t >> 1), 256);
+          var32.drawAdditive(var9Lifetime2, var10Lifetime2 - (var32.field_t >> 1), 256);
           return;
         }
         var30 = jn.field_b[0];
@@ -276,9 +276,9 @@ final class qe extends pn {
           this.field_bb = new Sprite(var11Lifetime3, var12Lifetime3);
           lq.a(this.field_bb, (byte) -94);
         }
-        var30.a(112, 144, var30.field_x << 4, var30.field_B << 4, -this.field_Y << 10, 4096);
+        var30.drawRotatedAbout(112, 144, var30.field_x << 4, var30.field_B << 4, -this.field_Y << 10, 4096);
         ln.d(-28558);
-        this.field_bb.d(-(var30.field_x >> 1) + var9Lifetime2, -var30.field_B + var10Lifetime2, 256);
+        this.field_bb.drawAdditive(-(var30.field_x >> 1) + var9Lifetime2, -var30.field_B + var10Lifetime2, 256);
     }
 
     final void a(byte param0, int param1, int param2, UiWidget param3) {

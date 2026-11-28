@@ -77,11 +77,11 @@ final class re extends IntrusiveNode {
         }
         n.field_a.exitFullscreen(nb.field_e, (byte) -63);
         n.field_a = null;
-        if (kd.field_B == null) {
+        if (NameSuggestionsPanel.field_B == null) {
           kj.field_E.requestFocus();
           return;
         }
-        kd.field_B.a(false);
+        NameSuggestionsPanel.field_B.a(false);
         kj.field_E.requestFocus();
     }
 

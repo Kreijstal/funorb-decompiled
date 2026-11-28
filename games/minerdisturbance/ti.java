@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti extends hc {
+final class ti extends InteractiveWidget {
     static String field_P;
     static int[] field_O;
     static String field_J;
@@ -11,9 +11,9 @@ final class ti extends hc {
     static int field_M;
     static int[] field_N;
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_H = !this.field_H ? true : false;
-        super.a(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     final static void a(byte param0) {

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends nb implements jk {
+final class vc extends nb implements WidgetActivationListener {
     private BitmapFont field_E;
     private int field_J;
     static String field_G;
-    private kf[] field_H;
+    private InteractiveWidget[] field_H;
     static vi field_D;
     private uc field_F;
     private String field_L;
@@ -42,11 +42,11 @@ final class vc extends nb implements jk {
         }
     }
 
-    final kf a(int param0, String param1, vd param2) {
-        kf var4 = null;
+    final InteractiveWidget a(int param0, String param1, vd param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        kf stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -54,7 +54,7 @@ final class vc extends nb implements jk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kf(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           var4.field_i = (rd) ((Object) new v());
           if (param0 != -1) {
             field_G = (String) null;
@@ -98,7 +98,7 @@ final class vc extends nb implements jk {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -147,8 +147,8 @@ final class vc extends nb implements jk {
         if (this.field_J >= param1) {
           return;
         }
-        kf[] var7 = new kf[param1];
-        kf[] var3 = var7;
+        InteractiveWidget[] var7 = new InteractiveWidget[param1];
+        InteractiveWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_J; var5++) {
           var7[var5] = this.field_H[var5];

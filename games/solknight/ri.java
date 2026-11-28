@@ -162,7 +162,7 @@ final class ri implements j {
     }
 
     public ri() {
-        this.field_e = ua.field_G;
+        this.field_e = NameSuggestionsPanel.field_G;
         this.field_b = 1;
         this.field_c = 1;
     }

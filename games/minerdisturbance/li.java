@@ -1812,7 +1812,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9376, "waitingfor_levels");
                 if (null != var2) {
-                  ei.field_P = bh.a(var2, -120);
+                  NameSuggestionsPanel.field_P = bh.a(var2, -120);
                 }
                 var2 = PasswordValidator.a(param0 - 9370, "waitingfor_extradata");
                 if (null != var2) {

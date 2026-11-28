@@ -1019,7 +1019,7 @@ final class GameEntity {
             10 != this.kind &&
             this.kind != 5) {
             if (!this.a((byte) -51)) {
-              this.currentSprite(640).e(var2, var3);
+              this.currentSprite(640).draw(var2, var3);
             } else {
               var4 = 48 + var2 << 4;
               var5 = 48 + var3 << 4;
@@ -1291,7 +1291,7 @@ final class GameEntity {
             var8 = 6;
           }
           var9_ref_bj = vl.field_r[var8];
-          this.currentSprite(640).e();
+          this.currentSprite(640).bindAsRenderTarget();
           SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
           cc.a();
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
@@ -1299,9 +1299,9 @@ final class GameEntity {
           if (0 == nc.field_H) {
             if (DiskArchiveRequest.field_I > 0 &&
               (15 & DiskArchiveRequest.field_I) >= 7) {
-              this.currentSprite(640).b(var2, var3, 16777215);
+              this.currentSprite(640).drawSilhouette(var2, var3, 16777215);
             } else {
-              this.currentSprite(640).e(var2, var3);
+              this.currentSprite(640).draw(var2, var3);
             }
           } else {
             if (nc.field_H == 1) {
@@ -1324,26 +1324,26 @@ final class GameEntity {
               nd.a(128, var3 + 48, var10, 48 + var2, (byte) -54, 32);
               if (DiskArchiveRequest.field_I > 0 &&
                 7 <= (DiskArchiveRequest.field_I & 15)) {
-                this.currentSprite(640).b(var2, var3, 16777215);
+                this.currentSprite(640).drawSilhouette(var2, var3, 16777215);
               } else {
-                this.currentSprite(640).e(var2, var3);
+                this.currentSprite(640).draw(var2, var3);
               }
             } else {
               if (nc.field_H == 2) {
                 if (gh.field_b <= 50 &&
                   gh.field_b % 10 >= 5) {
-                  this.currentSprite(640).e(var2, var3);
+                  this.currentSprite(640).draw(var2, var3);
                 } else {
                   var35 = this.currentSprite(640);
-                  var35.e();
+                  var35.bindAsRenderTarget();
                   for (var11 = -(3 & gh.field_b); var11 < var35.field_x; var11 += 3) {
                     SoftwareRasterizer.drawHorizontalLine(0, var11, var35.field_w, 0);
                   }
                   pd.field_h.a((byte) -107);
                   if ((gh.field_b & 48) <= 0) {
-                    var35.e(var2, var3);
+                    var35.draw(var2, var3);
                   } else {
-                    var35.d(-(int)(Math.random() * 5.0) + var2, -(int)(5.0 * Math.random()) + var3, var35.field_w + (int)(Math.random() * 10.0), var35.field_x + (int)(10.0 * Math.random()));
+                    var35.drawScaled(-(int)(Math.random() * 5.0) + var2, -(int)(5.0 * Math.random()) + var3, var35.field_w + (int)(Math.random() * 10.0), var35.field_x + (int)(10.0 * Math.random()));
                   }
                 }
               }
@@ -1389,10 +1389,10 @@ final class GameEntity {
                 }
               }
             }
-            this.currentSprite(640).e(var2, var3, 128);
+            this.currentSprite(640).drawWithOpacity(var2, var3, 128);
           }
           if (4 == nc.field_H) {
-            this.currentSprite(640).e(var2, var3);
+            this.currentSprite(640).draw(var2, var3);
           }
         }
         if (NetworkArchiveRequest.field_D >= 2 &&

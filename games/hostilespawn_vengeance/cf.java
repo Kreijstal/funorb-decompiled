@@ -45,7 +45,7 @@ class cf extends DualLinkNode {
         if (uh.field_m == null) {
           var1 = -33 % ((param0 + 22) / 61);
           ul.field_P = qm.b(1, 1);
-          ph.field_F = qm.b(1, 2);
+          InteractiveWidget.field_F = qm.b(1, 2);
           ej.field_h = qm.b(1, 7);
           tk.field_a = qm.b(1, 3);
           vd.field_C = qm.b(1, 4);
@@ -66,7 +66,7 @@ class cf extends DualLinkNode {
         ql.f(8036);
         var1Lifetime1 = -33 % ((param0 + 22) / 61);
         ul.field_P = qm.b(1, 1);
-        ph.field_F = qm.b(1, 2);
+        InteractiveWidget.field_F = qm.b(1, 2);
         ej.field_h = qm.b(1, 7);
         tk.field_a = qm.b(1, 3);
         vd.field_C = qm.b(1, 4);

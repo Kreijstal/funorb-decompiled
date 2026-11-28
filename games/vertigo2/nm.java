@@ -51,7 +51,7 @@ abstract class nm extends WidgetContainer {
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
+          se.field_C.drawWithOpacity(this.x + param2, this.y + param3, this.field_G);
           return;
         }
         if (this.width > se.field_C.field_y) {
@@ -61,7 +61,7 @@ abstract class nm extends WidgetContainer {
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
+          se.field_C.drawWithOpacity(this.x + param2, this.y + param3, this.field_G);
           return;
         }
         if (this.height > se.field_C.field_t) {
@@ -71,7 +71,7 @@ abstract class nm extends WidgetContainer {
           this.a((byte) -128, 0, 0);
           super.a(param0, param1, -this.x - param2, -this.y - param3);
           ln.d(-28558);
-          se.field_C.c(this.x + param2, this.y + param3, this.field_G);
+          se.field_C.drawWithOpacity(this.x + param2, this.y + param3, this.field_G);
           return;
         }
         lq.a(se.field_C, (byte) -94);
@@ -79,7 +79,7 @@ abstract class nm extends WidgetContainer {
         this.a((byte) -128, 0, 0);
         super.a(param0, param1, -this.x - param2, -this.y - param3);
         ln.d(-28558);
-        se.field_C.c(this.x + param2, this.y + param3, this.field_G);
+        se.field_C.drawWithOpacity(this.x + param2, this.y + param3, this.field_G);
     }
 
     private final int i(int param0) {

@@ -84,7 +84,7 @@ final class qc {
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (am.a(param1, true)) {
+          if (NameSuggestionsPanel.a(param1, true)) {
             return false;
           }
           if (ef.a((byte) -77, param1)) {

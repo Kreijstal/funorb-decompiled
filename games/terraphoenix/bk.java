@@ -23,14 +23,14 @@ final class bk {
             var6_int = param4[param5].field_q;
             var7 = param4[2].field_q;
             var8 = param4[1].field_q;
-            param4[0].e(param2, param0, param1);
-            param4[2].e(-var7 + param2 + param3, param0, param1);
+            param4[0].drawTintedGray(param2, param0, param1);
+            param4[2].drawTintedGray(-var7 + param2 + param3, param0, param1);
             SoftwareRasterizer.saveClip(vl.field_e);
             SoftwareRasterizer.intersectClip(param2 + var6_int, param0, param3 + (param2 - var7), param0 + param4[1].field_u);
             var9 = var6_int + param2;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
-              param4[1].e(param2, param0, param1);
+              param4[1].drawTintedGray(param2, param0, param1);
             }
             SoftwareRasterizer.restoreClip(vl.field_e);
             return;

@@ -46,7 +46,7 @@ final class lna {
         int var14;
         int var15;
         var15 = BachelorFridge.field_y;
-        bd.field_i.b();
+        bd.field_i.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         var12 = this.field_u.a(-113);
         for (var13 = 0; 6 > var13; var13++) {
@@ -173,7 +173,7 @@ final class lna {
         if (param3 != 8) {
           this.b((byte) -93);
         }
-        this.field_a.b();
+        this.field_a.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         for (var12 = 0; var12 < 6; var12++) {
           if (11 == InsanoSauceAnimation.field_v[var12]) {
@@ -325,7 +325,7 @@ final class lna {
         int var6Lifetime1;
         int var7Lifetime1;
         var9 = BachelorFridge.field_y;
-        bd.field_i.b();
+        bd.field_i.bindAsRenderTarget();
         SoftwareRasterizer.clear();
         var10 = this.field_u.a(param0 ^ -125);
         var3 = 0;
@@ -629,7 +629,7 @@ final class lna {
           param6 + bd.field_i.field_p >= SoftwareRasterizer.field_j) {
           stackIn_9_1 = (param8);
           this.field_x = stackIn_9_1;
-          bd.field_i.b();
+          bd.field_i.bindAsRenderTarget();
           SoftwareRasterizer.clear();
           for (var10 = param3; var10 < 14; var10++) {
             var11 = 0;

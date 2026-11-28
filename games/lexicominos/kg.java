@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends nb implements ue, jk {
+final class kg extends nb implements ue, WidgetActivationListener {
     private AccountCreationResultPanel field_F;
     private bc field_B;
     static PcmStreamMixer field_G;
-    private kf field_E;
+    private InteractiveWidget field_E;
     static int field_C;
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         String discarded$1 = null;
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
@@ -48,7 +48,7 @@ final class kg extends nb implements ue, jk {
         int var6 = 0;
         try {
           this.field_F = param0;
-          this.field_E = new kf(n.field_h, (vd) null);
+          this.field_E = new InteractiveWidget(n.field_h, (vd) null);
           this.field_E.field_i = (rd) ((Object) new v());
           var7 = da.a(new String[]{this.e(true), this.h(-6724)}, AccountNameAvailabilityValidator.field_p, false);
           var3 = 20;

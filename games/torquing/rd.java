@@ -271,7 +271,7 @@ final class rd extends am {
               for (var23 = var9; var11 > var23; var23++) {
                 var24 = var20 * (-var9 + var23) + (1024 + var21);
                 var25 = jh.field_A & var23;
-                var26 = var16Lifetime2 & vp.field_I;
+                var26 = var16Lifetime2 & NameSuggestionsPanel.field_I;
                 if (var15 == 0) {
                   var31[var25][var26] = var24;
                 } else {

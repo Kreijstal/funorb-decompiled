@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rg extends jk implements sh {
+class rg extends jk implements WidgetActivationListener {
     static boolean[] field_ub;
     private BitmapFont field_vb;
     private boolean field_ob;
@@ -100,7 +100,7 @@ class rg extends jk implements sh {
         this.a((byte) -56, (fe) (var2));
     }
 
-    public void a(int param0, byte param1, hc param2, int param3, int param4) {
+    public void onWidgetActivated(int param0, byte param1, InteractiveWidget param2, int param3, int param4) {
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -210,7 +210,7 @@ class rg extends jk implements sh {
 
     final boolean a(char param0, fe param1, byte param2, int param3) {
         RuntimeException var5 = null;
-        hc var6 = null;
+        InteractiveWidget var6 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -218,8 +218,8 @@ class rg extends jk implements sh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -79) {
-            var6 = (hc) null;
-            this.a(3, (byte) 82, (hc) null, -71, 108);
+            var6 = (InteractiveWidget) null;
+            this.onWidgetActivated(3, (byte) 82, (InteractiveWidget) null, -71, 108);
           }
           if (param3 != 13) {
             stackIn_7_0 = super.a(param0, param1, (byte) -79, param3);

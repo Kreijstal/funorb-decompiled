@@ -24,7 +24,7 @@ final class ab {
             }
             var1_int = 32 - mo.field_a % 50 << 3;
             if (0 < var1_int) {
-              RaiderDefinition.field_f.b(SecondaryNodeDequeIterator.field_l.field_t, SecondaryNodeDequeIterator.field_l.field_i, var1_int);
+              RaiderDefinition.field_f.drawAdditive(SecondaryNodeDequeIterator.field_l.field_t, SecondaryNodeDequeIterator.field_l.field_i, var1_int);
             }
           }
           if (param0 != 0) {

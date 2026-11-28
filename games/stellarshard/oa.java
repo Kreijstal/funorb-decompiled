@@ -26,7 +26,7 @@ final class oa extends dg {
         hj.a(var5, 1);
         this.field_y.a(param0, param1, 0, 0);
         id.b((byte) -58);
-        var5.e(param3 + this.field_w, this.field_k + param2, this.field_A);
+        var5.drawWithOpacity(param3 + this.field_w, this.field_k + param2, this.field_A);
     }
 
     public oa() {

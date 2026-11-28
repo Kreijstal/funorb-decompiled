@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends dk {
+final class gh extends InteractiveWidget {
     static int[] field_C;
     static String field_A;
     static long field_B;
@@ -81,9 +81,9 @@ final class gh extends dk {
         return m.field_c;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_z = !this.field_z ? true : false;
-        super.a(param0, 93, param2, param3);
+        super.activateFromInput(param0, 93, param2, param3);
         if (param1 <= 59) {
           gh.resetStaticState(116);
           return;

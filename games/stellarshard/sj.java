@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends WidgetContainer implements md, oi {
+final class sj extends WidgetContainer implements md, WidgetActivationListener {
     static n[] field_B;
     private rg field_G;
-    private ig field_D;
+    private InteractiveWidget field_D;
     static double field_I;
     static int field_K;
     static java.awt.Font field_F;
@@ -71,7 +71,7 @@ final class sj extends WidgetContainer implements md, oi {
         int var6 = 0;
         try {
           this.field_H = param0;
-          this.field_D = new ig(tc.field_q, (lf) null);
+          this.field_D = new InteractiveWidget(tc.field_q, (lf) null);
           this.field_D.field_u = (uk) ((Object) new b());
           var7 = h.a(nj.field_s, 0, new String[]{this.d(false), this.a(0)});
           var3 = 20;
@@ -96,7 +96,7 @@ final class sj extends WidgetContainer implements md, oi {
         }
     }
 
-    public final void a(int param0, int param1, ig param2, boolean param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, InteractiveWidget param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

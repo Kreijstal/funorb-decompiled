@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends WidgetContainer implements uja, WidgetActionListener {
-    dd field_E;
+final class DisplayNameSelectionPanel extends WidgetContainer implements NameSuggestionListener, WidgetActionListener {
+    NameSuggestionsPanel field_E;
     private ValidatedTextField field_G;
     private InteractiveWidget field_F;
     private InteractiveWidget field_C;
@@ -54,14 +54,14 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
         this.field_F.listener = (WidgetListener) (this);
         this.c(this.field_F, 91);
         this.c(this.field_C, 27);
-        this.field_E = new dd((uja) (this));
+        this.field_E = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_E.a(60 + this.field_G.width + this.field_G.x, 150, (byte) 59, -this.field_G.width - this.field_G.x + this.width - 60, 20);
         this.c(this.field_E, 74);
         this.a(0, 55 + var3 + var4, (byte) 59, 496, 0);
     }
 
-    public final void a(int param0) {
-        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(16728128))).d(-116);
+    public final void onNameSuggestionsRefreshRequested(int param0) {
+        ((AccountNameAvailabilityValidator) (this.field_G.getFieldValidator(16728128))).invalidateCheckedName(-116);
         if (param0 != 14322) {
           this.field_F = (InteractiveWidget) null;
         }
@@ -112,7 +112,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onNameSuggestionSelected(String param0, byte param1) {
         ValidatedTextField var4 = null;
         String var5 = null;
         try {
@@ -263,7 +263,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
         }
     }
 
-    public final void a(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
+    public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, byte param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         String var7 = null;
@@ -273,7 +273,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements uja, Wi
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == this.field_C) {
-            dd.d((byte) -83);
+            NameSuggestionsPanel.d((byte) -83);
           } else {
             if (this.field_F == param1) {
               this.submitDisplayName((byte) 46);

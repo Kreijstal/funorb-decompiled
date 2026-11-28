@@ -297,11 +297,11 @@ final class MixedSupport032 {
           integerLocal4 = rgbSpriteLocal2.integerState0255;
           IterableNodeCollection.performAction1656(-9074);
           MatchingFieldValidator.rgbSpriteState0051 = new RgbSprite(integerLocal3, 3 * integerLocal4 / 4);
-          MatchingFieldValidator.rgbSpriteState0051.performAction0256();
-          rgbSpriteLocal2.performAction0290(0, 0);
+          MatchingFieldValidator.rgbSpriteState0051.bindAsRenderTarget();
+          rgbSpriteLocal2.drawOpaque(0, 0);
           MixedSupport105.rgbSpriteState0046 = new RgbSprite(integerLocal3, -MatchingFieldValidator.rgbSpriteState0051.integerState0255 + integerLocal4);
-          MixedSupport105.rgbSpriteState0046.performAction0256();
-          rgbSpriteLocal2.performAction0290(0, -MatchingFieldValidator.rgbSpriteState0051.integerState0255);
+          MixedSupport105.rgbSpriteState0046.bindAsRenderTarget();
+          rgbSpriteLocal2.drawOpaque(0, -MatchingFieldValidator.rgbSpriteState0051.integerState0255);
           if (byteArgument1 != -113) {
             MixedSupport032.computeIntegerArray0474(16, 35, (byte) 0);
           }

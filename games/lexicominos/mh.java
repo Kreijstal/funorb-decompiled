@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh extends nb implements jk {
-    private kf field_E;
-    private kf field_C;
+final class mh extends nb implements WidgetActivationListener {
+    private InteractiveWidget field_E;
+    private InteractiveWidget field_C;
     static String field_H;
     static m field_B;
     static String field_D;
-    private kf field_G;
+    private InteractiveWidget field_G;
 
     final static void b(int param0, int param1) {
         if (!(oc.field_e >= 0)) {
@@ -69,9 +69,9 @@ final class mh extends nb implements jk {
 
     public mh() {
         super(0, 0, 476, 225, (rd) null);
-        this.field_E = new kf(DebouncedFieldValidator.field_d, (vd) null);
-        this.field_G = new kf(ch.field_g, (vd) null);
-        this.field_C = new kf(a.field_f, (vd) null);
+        this.field_E = new InteractiveWidget(DebouncedFieldValidator.field_d, (vd) null);
+        this.field_G = new InteractiveWidget(ch.field_g, (vd) null);
+        this.field_C = new InteractiveWidget(a.field_f, (vd) null);
         v var1 = new v();
         this.field_E.field_i = (rd) ((Object) var1);
         this.field_G.field_i = (rd) ((Object) var1);
@@ -92,7 +92,7 @@ final class mh extends nb implements jk {
         this.b((byte) 94, this.field_C);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, kf param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, int param3, InteractiveWidget param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -115,7 +115,7 @@ final class mh extends nb implements jk {
           if (param2 == 215535458) {
             return;
           }
-          this.field_C = (kf) null;
+          this.field_C = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

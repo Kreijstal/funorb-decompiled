@@ -22,9 +22,9 @@ final class kd implements WidgetRenderer {
           var7 = param1 + param4.field_n;
           jl.a(var6_int, var7, 13612, param4.field_l, param4.field_h);
           var8 = ai.field_b[1];
-          if (param4 instanceof lj &&
-            ((lj) (param4)).field_y) {
-            var8.c((param4.field_l - var8.field_r >> 1) + 1 + var6_int, 1 + (var7 + (param4.field_h - var8.field_s >> 1)), 256);
+          if (param4 instanceof InteractiveWidget &&
+            ((InteractiveWidget) (param4)).field_y) {
+            var8.drawAdditive((param4.field_l - var8.field_r >> 1) + 1 + var6_int, 1 + (var7 + (param4.field_h - var8.field_s >> 1)), 256);
           }
           var9 = -113 / ((param3 - 51) / 47);
           if (param4.b((byte) -109)) {
@@ -106,7 +106,7 @@ final class kd implements WidgetRenderer {
         int var10Lifetime2;
         var14 = Transmogrify.field_A ? 1 : 0;
         try {
-          dh.field_B.f(0, param1);
+          NameSuggestionsPanel.field_B.drawOpaque(0, param1);
           if (qk.field_e == null ||
             !(qk.field_e.length >= MusicPatchPcmStream.field_p.length())) {
             qk.field_e = new int[MusicPatchPcmStream.field_p.length()];
@@ -155,9 +155,9 @@ final class kd implements WidgetRenderer {
               if (jl.field_j == 3) {
                 var5 = o.field_i + 413;
                 var6 = 30 - (o.field_i * 30 - 3420) * (o.field_i - 114) / 12996;
-                var4.c(var5, var6 + (-var16.field_l + 480 - (var16.field_m - param1)));
+                var4.draw(var5, var6 + (-var16.field_l + 480 - (var16.field_m - param1)));
               } else {
-                var4.c(413, param1 + (-var16.field_l + 480) - var16.field_m);
+                var4.draw(413, param1 + (-var16.field_l + 480) - var16.field_m);
               }
             }
           }
@@ -256,7 +256,7 @@ final class kd implements WidgetRenderer {
               dc.field_a < 50) {
               var9 = ((Sprite) (var8Lifetime1)).field_n * (100 - 2 * dc.field_a) / 50;
               var10 = ((Sprite) (var8Lifetime1)).field_m * (-(2 * dc.field_a) + 100) / 50;
-              ((Sprite) (var8Lifetime1)).b(-var9 + 640 >> 1, 480 - var10 >> 1, var9, var10);
+              ((Sprite) (var8Lifetime1)).drawScaled(-var9 + 640 >> 1, 480 - var10 >> 1, var9, var10);
             }
           }
           if (null != sg.field_d) {
@@ -271,7 +271,7 @@ final class kd implements WidgetRenderer {
               var13 = (n.submittedWordCount - 1) * 12 + vl.field_G[var9Lifetime1];
               if (var10Lifetime1 >= 0 &&
                 var10Lifetime1 < 5) {
-                DirectByteStorage.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].c(var12, var13 + param1);
+                DirectByteStorage.field_d[cc.field_f[var9Lifetime1] * 5 + var10Lifetime1].draw(var12, var13 + param1);
               }
             }
           }
@@ -324,7 +324,7 @@ final class kd implements WidgetRenderer {
               }
             }
             jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.stringWidth(IntrusiveDeque.field_a[var15.field_i]), 0, 16776867);
-            fc.field_h[var15.field_i].e(8, var9Lifetime2);
+            fc.field_h[var15.field_i].drawQuarterSizeAveraged(8, var9Lifetime2);
             IntrusiveNode.field_d.drawString(IntrusiveDeque.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }
           var9Lifetime3 = SoftwareRasterizer.field_h[(2147483647 & nc.field_t) % SoftwareRasterizer.field_h.length];

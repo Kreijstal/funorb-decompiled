@@ -121,7 +121,7 @@ final class ff {
               return;
             }
             try {
-              pj.field_D = new BufferedCacheFile(ConfirmedEmailAvailabilityValidator.field_n.field_b, 64, 0);
+              InteractiveWidget.field_D = new BufferedCacheFile(ConfirmedEmailAvailabilityValidator.field_n.field_b, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

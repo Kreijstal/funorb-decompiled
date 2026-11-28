@@ -95,7 +95,7 @@ final class pd extends IntrusiveNode {
           if (!param1) {
             field_i = (String) null;
           }
-          var2 = new CoverageBitmapFont(param0, vg.field_I, b.field_b, ij.field_H, ob.field_a, rd.field_d, of.field_d);
+          var2 = new CoverageBitmapFont(param0, vg.field_I, b.field_b, NameSuggestionsPanel.field_H, ob.field_a, rd.field_d, of.field_d);
           EditableTextField.o(-28210);
           stackIn_6_0 = var2;
           return stackIn_6_0;

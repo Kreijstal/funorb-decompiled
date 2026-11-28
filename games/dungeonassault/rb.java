@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rb extends ck {
+final class rb extends InteractiveWidget {
     static String[] field_J;
     static String field_M;
     static int field_N;
@@ -45,10 +45,10 @@ final class rb extends ck {
           var7 = new RgbSprite(param1.field_y + param0 * 2, param1.field_v + param0 * 2);
           jh.a(var7);
           for (var5 = 0; var5 < param0; var5++) {
-            param1.e(-param1.field_w + param0, param0 - param1.field_A, param2);
+            param1.drawSilhouette(-param1.field_w + param0, param0 - param1.field_A, param2);
             SoftwareRasterizer.blurRectangle(1, 1, 0, 0, var7.field_y, var7.field_v);
           }
-          param1.e(param0 - param1.field_w, -param1.field_A + param0, 0);
+          param1.drawSilhouette(param0 - param1.field_w, -param1.field_A + param0, 0);
           jh.b();
           var7.field_A = param1.field_A - param0;
           var7.field_w = param1.field_w - param0;
@@ -132,9 +132,9 @@ final class rb extends ck {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_E = !this.field_E ? true : false;
-        super.b(param0, param1, param2, param3);
+        super.activateFromInput(param0, param1, param2, param3);
     }
 
     static {

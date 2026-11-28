@@ -112,12 +112,12 @@ final class td {
           SoftwareRasterizer.clearRaster();
           jc.field_c = 0;
           AccountServiceResult.a(3);
-          var2 = var1.c();
+          var2 = var1.copy();
           for (var3 = 0; 15 > var3; var3++) {
             var2.drawMask(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          ul.field_k.d();
+          ul.field_k.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           if (param0 < 105) {
             field_q = (String) null;
@@ -324,7 +324,7 @@ final class td {
             var3 = kl.a(var3, "%40", 0, "@");
             var3 = kl.a(var3, "%26", 0, "&");
             var7 = kl.a(var3, "%23", 0, "#");
-            if (null == li.field_O) {
+            if (null == NameSuggestionsPanel.field_O) {
               return;
             }
             if (param2 >= -48) {
@@ -333,7 +333,7 @@ final class td {
             stackIn_16_0 = u.field_a;
             stackIn_16_1 = null;
             stackIn_16_2 = null;
-            stackIn_16_3 = li.field_O.getCodeBase();
+            stackIn_16_3 = NameSuggestionsPanel.field_O.getCodeBase();
             stackIn_16_4 = new StringBuilder().append("clienterror.ws?c=").append(ae.field_k).append("&u=");
             if (ch.field_d == null) {
               stackIn_17_1 = null;

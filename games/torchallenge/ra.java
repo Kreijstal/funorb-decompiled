@@ -67,7 +67,7 @@ final class ra {
     }
 
     final static int a(int param0) {
-        if (li.field_K < 2) {
+        if (NameSuggestionsPanel.field_K < 2) {
           return 0;
         }
         if (param0 != 1) {
@@ -299,7 +299,7 @@ final class ra {
                     var15 = 1 & vb.field_a[var19][var20];
                     ArchiveRequest.a(var15, -100, this.field_f, var20, this.field_s, this.field_t, var18);
                     if (param3 != null) {
-                      param3.d();
+                      param3.bindAsRenderTarget();
                     }
                   }
                 }
@@ -317,7 +317,7 @@ final class ra {
                   var15 = vb.field_a[var19][var20] & 1;
                   si.a(var18, this.field_e[vb.field_a[var19][var20]], var20, this.field_o, var15, 1);
                   if (param3 != null) {
-                    param3.d();
+                    param3.bindAsRenderTarget();
                   }
                 }
               } else {
@@ -857,7 +857,7 @@ final class ra {
             stackIn_13_0 = -1;
           }
           var6Lifetime1 = stackIn_13_0;
-          this.field_e[var13][0][0] = var6Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
+          this.field_e[var13][0][0] = var6Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8, InteractiveWidget.field_H[var9] << 16) >> 16) + InteractiveWidget.field_K[var9];
           var5 = (-512 + (-16 + (-var3 + var2))) % 2048;
           this.field_e[var13][0][1] = this.field_e[var13][0][0];
           stackIn_16_0 = (var5 > 0) ? 1 : -1;
@@ -872,7 +872,7 @@ final class ra {
           }
           var7Lifetime1 = stackIn_20_0;
           var5Lifetime1 = (496 + (var2 - var3)) % 2048;
-          this.field_e[var13][1][0] = var7Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime1, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
+          this.field_e[var13][1][0] = var7Lifetime1 * (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime1, InteractiveWidget.field_H[var9] << 16) >> 16) + InteractiveWidget.field_K[var9];
           stackIn_23_0 = (var5Lifetime1 > 0) ? 1 : -1;
           var7Lifetime2 = stackIn_23_0;
           var5Lifetime1 = var7Lifetime2 * var5Lifetime1;
@@ -884,7 +884,7 @@ final class ra {
           }
           var7Lifetime3 = stackIn_27_0;
           var8Lifetime2 = CrossfadingMidiPcmStream.field_m[var5Lifetime1];
-          this.field_e[var13][1][1] = (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime2, ng.field_H[var9] << 16) >> 16) * var7Lifetime3 + ng.field_K[var9];
+          this.field_e[var13][1][1] = (CrossfadingMidiPcmStream.a(1870096848, var8Lifetime2, InteractiveWidget.field_H[var9] << 16) >> 16) * var7Lifetime3 + InteractiveWidget.field_K[var9];
           if (var13 == 0) {
             var10 = (var2 - var3 - 16) % 2048;
             stackIn_32_0 = (var10 <= 0) ? -1 : 1;
@@ -944,7 +944,7 @@ final class ra {
           for (var4 = 0; var4 <= 1; var4++) {
             for (var5 = 0; 32 > var5; var5++) {
               cg.field_b[var3][var4][var5] = new Sprite(var5 + 1, ub.field_c[var3][var4].fullHeight);
-              cg.field_b[var3][var4][var5].d();
+              cg.field_b[var3][var4][var5].bindAsRenderTarget();
               od.c(ub.field_c[var3][var4], 0, 0, var5 + 1, 0);
             }
           }
@@ -955,14 +955,14 @@ final class ra {
         for (var3Lifetime1 = 0; 1 >= var3Lifetime1; var3Lifetime1++) {
           for (var4Lifetime1 = 0; 32 > var4Lifetime1; var4Lifetime1++) {
             fh.field_a[var3Lifetime1][var4Lifetime1] = new Sprite(var4Lifetime1 + 1, af.field_a[var3Lifetime1].fullHeight);
-            fh.field_a[var3Lifetime1][var4Lifetime1].d();
+            fh.field_a[var3Lifetime1][var4Lifetime1].bindAsRenderTarget();
             od.c(af.field_a[param1 * 2 + var3Lifetime1], 0, 0, 1 + var4Lifetime1, 0);
           }
         }
         for (var3Lifetime2 = 0; var3Lifetime2 < 2; var3Lifetime2++) {
           for (var4Lifetime2 = 0; 64 > var4Lifetime2; var4Lifetime2++) {
             nj.field_e[var3Lifetime2][var4Lifetime2] = new Sprite(var4Lifetime2 + 1, AccountServiceResult.field_a[var3Lifetime2].fullHeight);
-            nj.field_e[var3Lifetime2][var4Lifetime2].d();
+            nj.field_e[var3Lifetime2][var4Lifetime2].bindAsRenderTarget();
             od.c(AccountServiceResult.field_a[var3Lifetime2], 0, 0, 1 + var4Lifetime2, 0);
           }
         }

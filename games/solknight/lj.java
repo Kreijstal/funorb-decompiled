@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends WidgetContainer implements ka {
+final class lj extends WidgetContainer implements WidgetActivationListener {
     private int field_K;
     private int[] field_L;
     private BitmapFont field_J;
     static int[] field_D;
     private ci field_H;
     private String field_I;
-    private pj[] field_E;
+    private InteractiveWidget[] field_E;
     static long field_G;
 
     final static boolean a(PacketBuffer param0, int param1) {
@@ -41,11 +41,11 @@ final class lj extends WidgetContainer implements ka {
         }
     }
 
-    final pj a(int param0, String param1, dg param2) {
-        pj var4 = null;
+    final InteractiveWidget a(int param0, String param1, dg param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        pj stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -53,7 +53,7 @@ final class lj extends WidgetContainer implements ka {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new pj(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           var4.field_w = (j) ((Object) new gh());
           var5 = -2 + this.field_x;
           this.b(this.field_x + 34, this.field_t, param0, 0, 0);
@@ -1676,7 +1676,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_email_confirm_tooltip", 4);
                 if (var2 != null) {
-                  pj.field_G = Archive.decodeCp1252(true, var2);
+                  InteractiveWidget.field_G = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_age_tooltip", param0 - 26704);
                 if (null != var2) {
@@ -3006,31 +3006,31 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("mustlogin3,1", 4);
                 if (null != var2) {
-                  ua.field_M[1] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[1] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,2", 4);
                 if (null != var2) {
-                  ua.field_M[2] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[2] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,3", 4);
                 if (null != var2) {
-                  ua.field_M[3] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[3] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,4", 4);
                 if (var2 != null) {
-                  ua.field_M[4] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[4] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,5", 4);
                 if (null != var2) {
-                  ua.field_M[5] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[5] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,6", 4);
                 if (var2 != null) {
-                  ua.field_M[6] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[6] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mustlogin3,7", 4);
                 if (var2 != null) {
-                  ua.field_M[7] = Archive.decodeCp1252(true, var2);
+                  NameSuggestionsPanel.field_M[7] = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("discard", 4);
                 if (null != var2) {
@@ -3202,7 +3202,7 @@ final class lj extends WidgetContainer implements ka {
           if (param0) {
             field_D = (int[]) null;
           }
-          EditableTextField.field_J.a(-1, g.field_a, true, ua.field_N);
+          EditableTextField.field_J.a(-1, g.field_a, true, NameSuggestionsPanel.field_N);
           EditableTextField.field_J.c(param0);
           while (DelegatingCanvas.a((byte) -56)) {
             EditableTextField.field_J.a(MatchingFieldValidator.field_n, ta.field_d, (byte) -108);
@@ -3267,7 +3267,7 @@ final class lj extends WidgetContainer implements ka {
         }
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         RuntimeException runtimeException = null;
         int var6_int = 0;
         int var7 = 0;
@@ -3346,7 +3346,7 @@ final class lj extends WidgetContainer implements ka {
 
     private final void b(int param0, int param1) {
         RuntimeException runtimeException = null;
-        pj[] var3 = null;
+        InteractiveWidget[] var3 = null;
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -3356,7 +3356,7 @@ final class lj extends WidgetContainer implements ka {
           if (this.field_K >= param0) {
             return;
           }
-          var3 = new pj[param0];
+          var3 = new InteractiveWidget[param0];
           var4 = new int[param0];
           var5 = param1;
           while (this.field_K > var5) {

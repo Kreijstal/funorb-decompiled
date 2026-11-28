@@ -69,7 +69,7 @@ final class vi {
         int var12Lifetime2;
         int var12Lifetime3;
         if (param0 >= param4.length) {
-          param1.b(param2, param3);
+          param1.drawOpaque(param2, param3);
           return;
         }
         int var5 = param4[param0];

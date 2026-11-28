@@ -55,7 +55,7 @@ final class ga {
           }
           try {
             if (hm.field_N == 0) {
-              bj.field_c = mc.field_b.requestDirectSocket(lg.field_h, eb.field_B, (byte) 60);
+              bj.field_c = mc.field_b.requestDirectSocket(lg.field_h, InteractiveWidget.field_B, (byte) 60);
               hm.field_N = hm.field_N + 1;
             }
             if (1 == hm.field_N) {
@@ -246,7 +246,7 @@ final class ga {
     final static void d(int param0) {
         int var1 = LevelEditor.a(-1);
         int var2 = mc.a(55);
-        FullscreenFocusCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (eb.field_D << 1), 0, -eb.field_D + jh.field_m);
+        FullscreenFocusCanvas.field_a.a(var1 + (nb.field_e << 1), vi.field_o - nb.field_e, var2 + (InteractiveWidget.field_D << 1), 0, -InteractiveWidget.field_D + jh.field_m);
         if (param0 != -6513) {
           field_p = (String) null;
         }

@@ -108,13 +108,13 @@ final class dda extends TileEffect {
         int var4 = this.field_i * 36 / 150;
         if (param1 == 0) {
           SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
-          this.field_e.field_s.field_k.field_b[109].a(param2, param0);
+          this.field_e.field_s.field_k.field_b[109].draw(param2, param0);
           SoftwareRasterizer.restoreClip(dga.field_b);
           return;
         }
         field_f = true;
         SoftwareRasterizer.setClip(param2, var4 + param0, 128 + param2, -var4 + (param0 + 64));
-        this.field_e.field_s.field_k.field_b[109].a(param2, param0);
+        this.field_e.field_s.field_k.field_b[109].draw(param2, param0);
         SoftwareRasterizer.restoreClip(dga.field_b);
     }
 

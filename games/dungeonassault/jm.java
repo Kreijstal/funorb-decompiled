@@ -15,22 +15,22 @@ final class jm {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param1 % 7 != 0 &&
           gm.field_d.field_k.isBitSet(-(param1 / 7) + (-1 + param1), (byte) 105)) {
-          ol.field_a[0].b(param3, param0, 256);
+          ol.field_a[0].drawAdditive(param3, param0, 256);
         }
         if (param1 % 7 != 6 &&
           gm.field_d.field_k.isBitSet(param1 - param1 / 7, (byte) 109)) {
-          ol.field_a[2].b(param3, param0, 256);
+          ol.field_a[2].drawAdditive(param3, param0, 256);
         }
         if (param2 != 3) {
           jm.a(125, 94, 37, 21);
         }
         if (6 < param1 &&
           gm.field_d.field_k.isBitSet(param1 + 35, (byte) 117)) {
-          ol.field_a[1].b(param3, param0, 256);
+          ol.field_a[1].drawAdditive(param3, param0, 256);
         }
         if (42 > param1 &&
           gm.field_d.field_k.isBitSet(param1 + 42, (byte) 114)) {
-          ol.field_a[3].b(param3, param0, 256);
+          ol.field_a[3].drawAdditive(param3, param0, 256);
         }
     }
 
@@ -101,14 +101,14 @@ final class jm {
             var5_int = param2[0].field_E;
             var6 = param2[2].field_E;
             var7 = param2[1].field_E;
-            param2[param3].h(param0, param4);
-            param2[2].h(param0 + param1 - var6, param4);
+            param2[param3].draw(param0, param4);
+            param2[2].draw(param0 + param1 - var6, param4);
             SoftwareRasterizer.saveClip(mk.field_i);
             SoftwareRasterizer.intersectClip(param0 + var5_int, param4, param1 + (param0 - var6), param4 + param2[1].field_G);
             var8 = var5_int + param0;
             var9 = param1 + param0 - var6;
             for (param0 = var8; var9 > param0; param0 = param0 + var7) {
-              param2[1].h(param0, param4);
+              param2[1].draw(param0, param4);
             }
             SoftwareRasterizer.restoreClip(mk.field_i);
             return;

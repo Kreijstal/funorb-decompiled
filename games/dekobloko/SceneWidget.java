@@ -248,9 +248,9 @@ class SceneWidget extends SceneWidgetNode {
             integerLocal16 = integerLocal16 + (this.integerState0915 - rgbSpriteLocal7.integerState0260);
           }
           if (this.integerState0905 < 256) {
-            rgbSpriteLocal7.performAction0279(integerLocal13, integerLocal16, this.integerState0905);
+            rgbSpriteLocal7.drawWithOpacity(integerLocal13, integerLocal16, this.integerState0905);
           } else {
-            rgbSpriteLocal7.performAction0278(integerLocal13, integerLocal16);
+            rgbSpriteLocal7.draw(integerLocal13, integerLocal16);
           }
         }
         boolean frameRemainderLocal21 = true;

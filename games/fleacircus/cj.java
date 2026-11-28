@@ -10,12 +10,12 @@ final class cj {
         String var2Lifetime1;
         if (param0 == 0) {
           var2 = (String) null;
-          ij.a(-1, oa.field_o, (String) null);
+          NameSuggestionsPanel.a(-1, oa.field_o, (String) null);
           return;
         }
         cj.a(47);
         var2Lifetime1 = (String) null;
-        ij.a(-1, oa.field_o, (String) null);
+        NameSuggestionsPanel.a(-1, oa.field_o, (String) null);
     }
 
     public static void resetStaticState(boolean param0) {

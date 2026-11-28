@@ -36,8 +36,8 @@ final class ke extends cn {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof ph) {
-            param4 = param4 & ((ph) (param3)).field_D;
+          if (param3 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param3)).field_D;
           }
           if (param4) {
             if (var6_int == 0) {

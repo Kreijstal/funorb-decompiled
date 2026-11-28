@@ -169,14 +169,14 @@ final class NetworkSupport002 {
           rgbSpriteLocal17 = new RgbSprite(7, 4);
           rgbSpriteLocal17.integerArrayState0024 = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, integerArgument1, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           mixedSupport009Local18 = new MixedSupport009(mixedSupport009Local2, true);
-          mixedSupport009Local18.performAction0101(rgbSpriteLocal17.computeRgbSprite0277(), 2);
-          rgbSpriteLocal17.performAction0284();
+          mixedSupport009Local18.performAction0101(rgbSpriteLocal17.copy(), 2);
+          rgbSpriteLocal17.rotateClockwise();
           mixedSupport009Local21 = new MixedSupport009(mixedSupport009Local2, true);
-          mixedSupport009Local21.performAction0101(rgbSpriteLocal17.computeRgbSprite0277(), 2);
-          rgbSpriteLocal17.performAction0284();
+          mixedSupport009Local21.performAction0101(rgbSpriteLocal17.copy(), 2);
+          rgbSpriteLocal17.rotateClockwise();
           mixedSupport009Local22 = new MixedSupport009(mixedSupport009Local2, true);
-          mixedSupport009Local22.performAction0101(rgbSpriteLocal17.computeRgbSprite0277(), 2);
-          rgbSpriteLocal17.performAction0284();
+          mixedSupport009Local22.performAction0101(rgbSpriteLocal17.copy(), 2);
+          rgbSpriteLocal17.rotateClockwise();
           mixedSupport009Local19 = new MixedSupport009(mixedSupport009Local2, true);
           mixedSupport009Local19.performAction0101(rgbSpriteLocal17, 2);
         } catch (RuntimeException runtimeException) {

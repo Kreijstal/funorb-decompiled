@@ -190,14 +190,14 @@ final class em extends ButtonWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
         this.field_u = !this.field_u ? true : false;
         if (param0 < -23) {
-          super.b(-48, param1, param2, param3);
+          super.activateFromInput(-48, param1, param2, param3);
           return;
         }
         em.resetDeclaredStaticState(-109);
-        super.b(-48, param1, param2, param3);
+        super.activateFromInput(-48, param1, param2, param3);
     }
 
     em(String param0, of param1, boolean param2) {

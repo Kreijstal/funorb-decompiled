@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements re, ka, ge {
+final class AccountRegistrationPanel extends WidgetContainer implements re, WidgetActivationListener, NameSuggestionListener {
     private tg field_L;
     private kj field_J;
     static String field_E;
     private ValidatedTextField field_K;
     private ValidatedTextField field_S;
-    private pj field_R;
+    private InteractiveWidget field_R;
     static String[] field_H;
     private ValidatedTextField field_O;
     static String[] field_Q;
     static String[] field_N;
-    private pj field_D;
+    private InteractiveWidget field_D;
     private ValidatedTextField field_I;
     private ValidatedTextField field_P;
-    ua field_G;
+    NameSuggestionsPanel field_G;
     private ValidatedTextField field_M;
     static String field_F;
 
@@ -164,7 +164,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
           if (param2 == 50) {
             return;
           }
-          this.field_R = (pj) null;
+          this.field_R = (InteractiveWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,11 +190,11 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         this.field_S = new ValidatedTextField("", (dg) null, 3);
         int var1 = 1;
         this.field_L = new tg("", (dg) null, var1 != 0);
-        this.field_R = new pj(qg.field_b, (dg) null);
-        this.field_D = new pj(MidiPcmStream.field_F, (dg) null);
+        this.field_R = new InteractiveWidget(qg.field_b, (dg) null);
+        this.field_D = new InteractiveWidget(MidiPcmStream.field_F, (dg) null);
         this.field_P.field_z = ql.field_u;
         this.field_I.field_z = GameKeyHandler.field_d;
-        this.field_M.field_z = pj.field_G;
+        this.field_M.field_z = InteractiveWidget.field_G;
         this.field_O.field_z = kj.field_K;
         this.field_K.field_z = wi.field_k;
         this.field_S.field_z = ImageProducerRasterBuffer.field_i;
@@ -228,7 +228,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         ke var4 = new ke(46, var3, -90 + this.field_t, 25, this.field_L, true, this.field_t - 120, 5, jh.field_g, 11579568, h.field_e);
         this.a(var4, 5411);
         var3 = var3 + var4.field_x;
-        af var5 = new af(ua.field_G, 0, 0, 0, 0, 16777215, -1, 0, 0, ua.field_G.field_F, -1, 2147483647, true);
+        af var5 = new af(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 0, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
         this.field_J = new kj(var2, var5);
         this.field_J.field_z = "";
         this.field_J.a(0, mj.field_a, 1);
@@ -245,14 +245,14 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         this.field_R.field_n = (dg) (this);
         this.a(this.field_R, 5411);
         this.a(this.field_D, 5411);
-        this.field_G = new ua((ge) (this));
+        this.field_G = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_G.b(150, -this.field_P.field_t + this.field_t - this.field_P.field_m - 60, this.field_P.field_t + (this.field_P.field_m + 60), 0, this.field_P.field_j + 20);
         this.a(this.field_G, 5411);
         this.b(var3 - (-55 - var6), 496, 0, 0, 0);
     }
 
-    public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_P.getFieldValidator(param0 + 95))).a(true);
+    public final void onNameSuggestionsRefreshRequested(byte param0) {
+        ((AccountNameAvailabilityValidator) (this.field_P.getFieldValidator(param0 + 95))).invalidateCheckedName(true);
         if (param0 != 22) {
           field_H = (String[]) null;
         }
@@ -304,7 +304,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var11 = new ke(20, param1, 120 + param3, 25, param6, false, 120, 3, ua.field_G, 16777215, param5);
+          var11 = new ke(20, param1, 120 + param3, 25, param6, false, 120, 3, NameSuggestionsPanel.field_G, 16777215, param5);
           this.a(var11, 5411);
           var9 = new pk(((FieldValidatorProvider) ((Object) param6)).getFieldValidator(56), param4, 126, param1 + var11.field_x, param3 + 50, param2);
           var9.field_n = (dg) (this);
@@ -358,7 +358,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
             var7 = (UiWidget) null;
             discarded$1 = this.a((String) null, 47, (byte) 87, (UiWidget) null, -94);
           }
-          var6 = new ke(20, param1, 120 + param4, 25, param3, false, 120, 3, ua.field_G, 16777215, param0);
+          var6 = new ke(20, param1, 120 + param4, 25, param3, false, 120, 3, NameSuggestionsPanel.field_G, 16777215, param0);
           this.a(var6, 5411);
           stackIn_3_0 = var6.field_x;
           return stackIn_3_0;
@@ -436,7 +436,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new ke(20, param0, 120 + param2, 25, param1, false, 120, 3, ua.field_G, 16777215, param3);
+          var8 = new ke(20, param0, 120 + param2, 25, param1, false, 120, 3, NameSuggestionsPanel.field_G, 16777215, param3);
           this.a(var8, 5411);
           var7 = new kc(((FieldValidatorProvider) ((Object) param1)).getFieldValidator(86));
           this.a(var7, 5411);
@@ -511,7 +511,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, int param2, pj param3, boolean param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         kj var7 = null;
@@ -556,7 +556,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, ka, 
         }
     }
 
-    public final void a(boolean param0, String param1) {
+    public final void onNameSuggestionSelected(boolean param0, String param1) {
         ValidatedTextField var3 = null;
         String var4 = null;
         try {

@@ -80,13 +80,13 @@ abstract class hh {
           }
           if (param7 > 0 &&
             param3 > 0) {
-            var21 = param6.c();
+            var21 = param6.copy();
             var30 = SoftwareRasterizer.field_a;
             var10 = SoftwareRasterizer.field_j;
             var11 = SoftwareRasterizer.field_f;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param6.e();
+            param6.bindAsRenderTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
             var13 = param6.field_u * param1 + param0;
             var14 = param6.field_u - param7;
@@ -121,7 +121,7 @@ abstract class hh {
               }
               var13 = var13 + var14;
             }
-            var21.e(-param6.field_w, -param6.field_y);
+            var21.draw(-param6.field_w, -param6.field_y);
             SoftwareRasterizer.setRasterBuffer(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             if (param4) {

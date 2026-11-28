@@ -231,7 +231,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("misdat6", (byte) -126);
                 if (var2 != null) {
-                  ph.field_B = PcmResampler.a(127, var2);
+                  InteractiveWidget.field_B = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("misdat5", (byte) -124);
                 if (var2 != null) {
@@ -1292,7 +1292,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("oV7_reachlift", (byte) -123);
                 if (var2 != null) {
-                  mc.field_L = PcmResampler.a(122, var2);
+                  NameSuggestionsPanel.field_L = PcmResampler.a(122, var2);
                 }
                 var2 = AccountRegistrationPanel.b("V8_wayblocked", (byte) -120);
                 if (null != var2) {
@@ -1336,7 +1336,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("chargescolon", (byte) -125);
                 if (null != var2) {
-                  ph.field_z = PcmResampler.a(123, var2);
+                  InteractiveWidget.field_z = PcmResampler.a(123, var2);
                 }
                 var2 = AccountRegistrationPanel.b("chargesplantedcolon", (byte) -124);
                 if (null != var2) {
@@ -1488,7 +1488,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("missionspace", (byte) -119);
                 if (var2 != null) {
-                  mc.field_J = PcmResampler.a(124, var2);
+                  NameSuggestionsPanel.field_J = PcmResampler.a(124, var2);
                 }
                 var2 = AccountRegistrationPanel.b("findwayback", (byte) -120);
                 if (null != var2) {

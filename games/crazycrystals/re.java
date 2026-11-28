@@ -72,14 +72,14 @@ final class re extends ue {
         try {
           var3 = ee.field_m;
           var4 = 106 - ee.field_m.field_o;
-          var3.a(20, var4 + this.field_q);
+          var3.draw(20, var4 + this.field_q);
           var5 = 56 + this.field_q;
           if (0 != ul.field_g &&
             o.field_h.equals("top")) {
             var5 = -8 + this.field_q;
           }
-          vp.field_i[0][this.field_m].b(-46 + (kf.field_c + 20), var5, 42, 63);
-          vp.field_i[0][this.field_m].b(me.field_b + 20 + 4, var5, 42, 63);
+          vp.field_i[0][this.field_m].drawScaled(-46 + (kf.field_c + 20), var5, 42, 63);
+          vp.field_i[0][this.field_m].drawScaled(me.field_b + 20 + 4, var5, 42, 63);
           if (param1) {
             re.d((byte) 114);
           }
@@ -534,9 +534,9 @@ final class re extends ue {
         RuntimeException var2 = null;
         try {
           if (0 < this.field_f) {
-            ge.field_d.e(0, 0, -((this.field_f << 7) / 20) + 256);
+            ge.field_d.drawWithIntensity(0, 0, -((this.field_f << 7) / 20) + 256);
           } else {
-            ge.field_d.c(0, 0);
+            ge.field_d.drawOpaque(0, 0);
           }
           if (param0 < 11) {
             this.field_m = 118;

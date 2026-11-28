@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends si implements n {
+final class AccountCreationResultPanel extends si implements WidgetActivationListener {
     static int field_wb;
     private boolean field_xb;
     static String field_ub;
@@ -100,7 +100,7 @@ final class AccountCreationResultPanel extends si implements n {
             } else {
               var4 = MatchingFieldValidator.field_m;
               if (null != this.field_tb) {
-                this.field_tb.a(50);
+                this.field_tb.onNameSuggestionsRefreshRequested(50);
               }
             }
           }
@@ -149,7 +149,7 @@ final class AccountCreationResultPanel extends si implements n {
         }
     }
 
-    public final void a(eb param0, int param1, int param2, int param3, int param4) {
+    public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         if (this.field_xb) {
           qc.a(false, true, 123);
           return;

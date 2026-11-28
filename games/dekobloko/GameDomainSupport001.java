@@ -21,13 +21,13 @@ final class GameDomainSupport001 {
           SoftwareRaster.clearRaster();
           MixedSupport046.integerState0250 = 0;
           GameplayControls.performAction1748(0);
-          rgbSpriteLocal2 = rgbSpriteLocal1.computeRgbSprite0277();
+          rgbSpriteLocal2 = rgbSpriteLocal1.copy();
           for (integerLocal3 = 0; 15 > integerLocal3; integerLocal3++) {
-            rgbSpriteLocal2.performAction0286(-2, -2, 16777215);
+            rgbSpriteLocal2.drawSilhouette(-2, -2, 16777215);
             SoftwareRaster.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          UiComponentPart025.rgbSpriteState0045.performAction0256();
-          rgbSpriteLocal1.performAction0285(0, 0);
+          UiComponentPart025.rgbSpriteState0045.bindAsRenderTarget();
+          rgbSpriteLocal1.drawHalfSize(0, 0);
           ByteStorage.performAction1060((byte) -5);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "bb.E(" + booleanArgument1 + ')');
@@ -184,13 +184,13 @@ final class GameDomainSupport001 {
           MixedSupport125.sceneWidgetState0125.integerState0908 = ComponentContainer.integerState0377;
           MixedSupport125.sceneWidgetState0125.integerState0885 = 1;
           MixedSupport125.sceneWidgetState0125.integerState0910 = 13421772;
-          UiComponentPart007.sceneWidgetState0019 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
-          UiComponentPart007.sceneWidgetState0019.integerState0912 = 8421504;
-          UiComponentPart007.sceneWidgetState0019.integerState0906 = 16777215;
-          UiComponentPart007.sceneWidgetState0019.integerState0889 = 16777215;
-          UiComponentPart007.sceneWidgetState0019.integerState0910 = 16764006;
-          UiComponentPart007.sceneWidgetState0019.integerState0899 = 16777215;
-          sceneWidgetLocal35 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
+          NameSuggestionsPanel.sceneWidgetState0019 = new SceneWidget(0L, MixedSupport125.sceneWidgetState0125);
+          NameSuggestionsPanel.sceneWidgetState0019.integerState0912 = 8421504;
+          NameSuggestionsPanel.sceneWidgetState0019.integerState0906 = 16777215;
+          NameSuggestionsPanel.sceneWidgetState0019.integerState0889 = 16777215;
+          NameSuggestionsPanel.sceneWidgetState0019.integerState0910 = 16764006;
+          NameSuggestionsPanel.sceneWidgetState0019.integerState0899 = 16777215;
+          sceneWidgetLocal35 = new SceneWidget(0L, NameSuggestionsPanel.sceneWidgetState0019);
           sceneWidgetLocal35.integerState0908 = ComponentContainer.integerState0377;
           sceneWidgetLocal35.integerState0910 = 16777215;
           sceneWidgetLocal35.bitmapFontState0020 = (BitmapFont) ((Object) renderingSupport009Local27);
@@ -201,12 +201,12 @@ final class GameDomainSupport001 {
           InputAdapter003.sceneWidgetState0110.rgbSpriteArrayState0033 = RenderingSupport012.computeRgbSpriteArray1346(false, 16, false, 1513239, 1513239, -26198);
           InputAdapter003.sceneWidgetState0110.integerState0893 = 2;
           MixedSupport036.sceneWidgetState0027 = new SceneWidget(0L, MixedSupport036.sceneWidgetState0028);
-          MixedSupport036.sceneWidgetState0027.performAction1766(-118, UiComponentPart007.sceneWidgetState0019);
+          MixedSupport036.sceneWidgetState0027.performAction1766(-118, NameSuggestionsPanel.sceneWidgetState0019);
           RenderingSupport004.sceneWidgetState0040 = new SceneWidget(0L, InputAdapter003.sceneWidgetState0110);
-          RenderingSupport004.sceneWidgetState0040.performAction1766(-125, UiComponentPart007.sceneWidgetState0019);
+          RenderingSupport004.sceneWidgetState0040.performAction1766(-125, NameSuggestionsPanel.sceneWidgetState0019);
           rgbSpriteArrayLocal36 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "button_mouseover");
-          MixedSupport062.sceneWidgetPart002State0001 = new SceneWidgetPart002(MixedSupport005.sceneWidgetState0002, rgbSpriteArrayLocal32, MixedSupport125.sceneWidgetState0125, UiComponentPart007.sceneWidgetState0019, 3, 2, MixedSupport063.integerState0335, 3, ComponentContainer.integerState0377);
-          MixedSupport136.sceneWidgetState0128 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
+          MixedSupport062.sceneWidgetPart002State0001 = new SceneWidgetPart002(MixedSupport005.sceneWidgetState0002, rgbSpriteArrayLocal32, MixedSupport125.sceneWidgetState0125, NameSuggestionsPanel.sceneWidgetState0019, 3, 2, MixedSupport063.integerState0335, 3, ComponentContainer.integerState0377);
+          MixedSupport136.sceneWidgetState0128 = new SceneWidget(0L, NameSuggestionsPanel.sceneWidgetState0019);
           MixedSupport136.sceneWidgetState0128.rgbSpriteArrayState0035 = rgbSpriteArrayLocal36;
           MixedSupport136.sceneWidgetState0128.integerState0902 = 1;
           MixedSupport136.sceneWidgetState0128.integerState0901 = 1;
@@ -217,7 +217,7 @@ final class GameDomainSupport001 {
           MixedSupport136.sceneWidgetState0128.rgbSpriteArrayState0032 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "button_active");
           MixedSupport136.sceneWidgetState0128.rgbSpriteArrayState0034 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "button_disabled");
           MixedSupport136.sceneWidgetState0128.integerState0916 = 1;
-          GameDomainSupport002.sceneWidgetState0022 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
+          GameDomainSupport002.sceneWidgetState0022 = new SceneWidget(0L, NameSuggestionsPanel.sceneWidgetState0019);
           GameDomainSupport002.sceneWidgetState0022.integerState0916 = 1;
           GameDomainSupport002.sceneWidgetState0022.rgbSpriteArrayState0033 = RenderingSupport002.computeRgbSpriteArray0239((byte) 125, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "tab_inactive"));
           GameDomainSupport002.sceneWidgetState0022.rgbSpriteArrayState0035 = RenderingSupport002.computeRgbSpriteArray0239((byte) 126, MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "tab_mouseover"));
@@ -233,7 +233,7 @@ final class GameDomainSupport001 {
           MixedSupport021.sceneWidgetState0015.integerState0901 = 1;
           MixedSupport021.sceneWidgetState0015.integerState0902 = 1;
           MixedSupport072.sceneWidgetState0072 = new SceneWidget(0L, MixedSupport021.sceneWidgetState0015);
-          ComponentDecorator.sceneWidgetState0077 = new SceneWidget(0L, UiComponentPart007.sceneWidgetState0019);
+          ComponentDecorator.sceneWidgetState0077 = new SceneWidget(0L, NameSuggestionsPanel.sceneWidgetState0019);
           ComponentDecorator.sceneWidgetState0077.integerState0916 = 1;
           ComponentDecorator.sceneWidgetState0077.integerState0913 = 1;
           ComponentDecorator.sceneWidgetState0077.integerState0901 = 1;
@@ -285,7 +285,7 @@ final class GameDomainSupport001 {
           MixedSupport108.sceneWidgetState0104.rgbSpriteArrayState0032 = cachedRgbSpriteArrayLocal4;
           MixedSupport108.sceneWidgetState0104.rgbSpriteArrayState0036 = cachedRgbSpriteArrayLocal4;
           rgbSpriteArrayLocal37 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument2, "lobby", "checkbox");
-          InputAdapter001.sceneWidgetPart003State0001 = new SceneWidgetPart003(0L, rgbSpriteArrayLocal37[1], rgbSpriteArrayLocal37[0], 1, UiComponentPart007.sceneWidgetState0019, (String) null);
+          InputAdapter001.sceneWidgetPart003State0001 = new SceneWidgetPart003(0L, rgbSpriteArrayLocal37[1], rgbSpriteArrayLocal37[0], 1, NameSuggestionsPanel.sceneWidgetState0019, (String) null);
           TextLayout.sceneWidgetState0011 = new SceneWidget(0L, (SceneWidget) null);
           TextLayout.sceneWidgetState0011.rgbSpriteArrayState0033 = NodeDeque.computeRgbSpriteArray1736(UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "slideregion", "lobby", 8192), 32169);
           TextLayout.sceneWidgetState0011.rgbSpriteArrayState0035 = NodeDeque.computeRgbSpriteArray1736(UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument2, "slideregion_mouseover", "lobby", 8192), 32169);

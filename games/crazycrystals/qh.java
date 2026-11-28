@@ -52,7 +52,7 @@ final class qh extends hk {
             vj.field_a[var4_int] = array$0;
             if (SecondaryNodeDequeIterator.field_c[var4_int] == null) {
               for (var5 = 0; var5 < bp.field_c[var4_int]; var5++) {
-                vj.field_a[var4_int][var5] = vj.field_a[var4_int - 1][var5].c();
+                vj.field_a[var4_int][var5] = vj.field_a[var4_int - 1][var5].copyMirroredHorizontally();
               }
             } else {
               if (SecondaryNodeDequeIterator.field_c[var4_int] != "") {

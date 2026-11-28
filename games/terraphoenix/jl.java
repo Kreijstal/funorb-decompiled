@@ -221,29 +221,29 @@ final class jl extends jc {
             }
             if (param0[0] != null) {
               SoftwareRasterizer.intersectClip(param5, param2, var16, var18);
-              param0[0].b(param5, param2);
+              param0[0].draw(param5, param2);
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
             if (null != param0[2]) {
               SoftwareRasterizer.intersectClip(var17, param2, var10, var18);
-              param0[2].b(var13, param2);
+              param0[2].draw(var13, param2);
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
             if (param0[6] != null) {
               SoftwareRasterizer.intersectClip(param5, var19, var16, var11);
-              param0[6].b(param5, var15);
+              param0[6].draw(param5, var15);
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
             if (param0[8] != null) {
               SoftwareRasterizer.intersectClip(var17, var19, var10, var11);
-              param0[8].b(var13, var15);
+              param0[8].draw(var13, var15);
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
             if (null != param0[1] &&
               param0[1].field_q != 0) {
               SoftwareRasterizer.intersectClip(var16, param2, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_q) {
-                param0[1].b(var20, param2);
+                param0[1].draw(var20, param2);
               }
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
@@ -252,7 +252,7 @@ final class jl extends jc {
               param0[7].field_q != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
               for (var21 = var12; var21 < var13; var21 = var21 + param0[7].field_q) {
-                param0[7].b(var21, var15);
+                param0[7].draw(var21, var15);
               }
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
@@ -260,7 +260,7 @@ final class jl extends jc {
               param0[3].field_u != 0) {
               SoftwareRasterizer.intersectClip(param5, var18, var16, var19);
               for (var21Lifetime1 = var14; var21Lifetime1 < var15; var21Lifetime1 = var21Lifetime1 + param0[3].field_u) {
-                param0[3].b(param5, var21Lifetime1);
+                param0[3].draw(param5, var21Lifetime1);
               }
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
@@ -268,7 +268,7 @@ final class jl extends jc {
               param0[5].field_u != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
               for (var21Lifetime2 = var14; var15 > var21Lifetime2; var21Lifetime2 = var21Lifetime2 + param0[5].field_u) {
-                param0[5].b(var13, var21Lifetime2);
+                param0[5].draw(var13, var21Lifetime2);
               }
               SoftwareRasterizer.restoreClip(BattleState.field_t);
             }
@@ -278,7 +278,7 @@ final class jl extends jc {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
               for (var21Lifetime3 = var14; var21Lifetime3 < var15; var21Lifetime3 = var21Lifetime3 + param0[4].field_u) {
                 for (var22 = var12; var22 < var13; var22 = var22 + param0[4].field_q) {
-                  param0[4].b(var22, var21Lifetime3);
+                  param0[4].draw(var22, var21Lifetime3);
                 }
               }
               SoftwareRasterizer.restoreClip(BattleState.field_t);
@@ -333,7 +333,7 @@ final class jl extends jc {
         il.a(1, var6);
         this.field_F.a(0, -128, param2, 0);
         MessageKeys.a(false);
-        var6.a(param0 + this.x, param3 + this.y, this.field_J);
+        var6.drawWithOpacity(param0 + this.x, param3 + this.y, this.field_J);
     }
 
     static {

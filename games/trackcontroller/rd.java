@@ -373,14 +373,14 @@ final class rd {
           var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, param0, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new gi(var4, true);
-          var14.a(var13.b(), -112);
-          var13.d();
+          var14.a(var13.copy(), -112);
+          var13.rotateClockwise();
           var14Lifetime1 = new gi(var4, true);
-          var14Lifetime1.a(var13.b(), param0 ^ -13421731);
-          var13.d();
+          var14Lifetime1.a(var13.copy(), param0 ^ -13421731);
+          var13.rotateClockwise();
           var14Lifetime2 = new gi(var4, true);
-          var14Lifetime2.a(var13.b(), -116);
-          var13.d();
+          var14Lifetime2.a(var13.copy(), -116);
+          var13.rotateClockwise();
           var19 = new gi(var4, true);
           var19.a(var13, -119);
         } catch (RuntimeException runtimeException) {

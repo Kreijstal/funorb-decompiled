@@ -77,8 +77,8 @@ final class wp extends am {
             var6_int = param5[0].field_w;
             var7 = param5[2].field_w;
             var8 = param5[1].field_w;
-            param5[0].c(param4, param0, param1);
-            param5[2].c(param2 + param4 - var7, param0, param1);
+            param5[0].drawTintedGray(param4, param0, param1);
+            param5[2].drawTintedGray(param2 + param4 - var7, param0, param1);
             SoftwareRasterizer.saveClip(SecondaryNodeDeque.field_c);
             SoftwareRasterizer.intersectClip(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
             var9 = var6_int + param4;
@@ -88,7 +88,7 @@ final class wp extends am {
               field_v = (Sprite[]) null;
             }
             while (var10 > param4) {
-              param5[1].c(param4, param0, param1);
+              param5[1].drawTintedGray(param4, param0, param1);
               param4 = param4 + var8;
             }
             SoftwareRasterizer.restoreClip(SecondaryNodeDeque.field_c);

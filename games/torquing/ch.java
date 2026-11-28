@@ -44,7 +44,7 @@ final class ch extends am {
           if (2.356194490192345 <= (double)var6) {
             if (!(3.141592653589793 >= (double)var6)) {
               tp.field_o = tp.field_o & jh.field_A;
-              AccountRequestState.field_c = AccountRequestState.field_c & vp.field_I;
+              AccountRequestState.field_c = AccountRequestState.field_c & NameSuggestionsPanel.field_I;
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -55,7 +55,7 @@ final class ch extends am {
         }
         if (decompiledFrameRemainder0) {
           tp.field_o = tp.field_o & jh.field_A;
-          AccountRequestState.field_c = AccountRequestState.field_c & vp.field_I;
+          AccountRequestState.field_c = AccountRequestState.field_c & NameSuggestionsPanel.field_I;
         }
 
     }

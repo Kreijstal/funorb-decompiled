@@ -187,27 +187,27 @@ final class nk {
           }
         }
         var26 = new RgbSprite(64, 64);
-        var26.d();
+        var26.bindAsRenderTarget();
         if (this.field_f == 0) {
-          hf.field_g[0].a(32 + DualLinkDequeIterator.field_e / 2, 27 + DualLinkDequeIterator.field_e / 2, 0, 1300);
+          hf.field_g[0].drawRotated(32 + DualLinkDequeIterator.field_e / 2, 27 + DualLinkDequeIterator.field_e / 2, 0, 1300);
         }
         if (this.field_f == 1) {
-          hf.field_g[7].a(32 + DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e + 27, 0, 1950);
+          hf.field_g[7].drawRotated(32 + DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e + 27, 0, 1950);
         }
         if (this.field_f == 2) {
-          hf.field_g[14].a(32 + DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e + 27, 0, 1950);
+          hf.field_g[14].drawRotated(32 + DualLinkDequeIterator.field_e, DualLinkDequeIterator.field_e + 27, 0, 1950);
         }
         if (3 == this.field_f) {
-          hf.field_g[21].a(DualLinkDequeIterator.field_e / 2 + 32, 27 + DualLinkDequeIterator.field_e / 2, 0, 1300);
+          hf.field_g[21].drawRotated(DualLinkDequeIterator.field_e / 2 + 32, 27 + DualLinkDequeIterator.field_e / 2, 0, 1300);
         }
         if (4 == this.field_f) {
-          hf.field_g[28].a(32 + DualLinkDequeIterator.field_e * 3 / 2, 27 + 3 * DualLinkDequeIterator.field_e / 2, 0, 2600);
+          hf.field_g[28].drawRotated(32 + DualLinkDequeIterator.field_e * 3 / 2, 27 + 3 * DualLinkDequeIterator.field_e / 2, 0, 2600);
         }
         if (this.field_f == 5) {
-          hf.field_g[35].a(DualLinkDequeIterator.field_e + 32, DualLinkDequeIterator.field_e + 27, 0, 1950);
+          hf.field_g[35].drawRotated(DualLinkDequeIterator.field_e + 32, DualLinkDequeIterator.field_e + 27, 0, 1950);
         }
         if (6 == this.field_f) {
-          hf.field_g[42].a(DualLinkDequeIterator.field_e / 2 + 32, DualLinkDequeIterator.field_e / 2 + 27, 0, 1300);
+          hf.field_g[42].drawRotated(DualLinkDequeIterator.field_e / 2 + 32, DualLinkDequeIterator.field_e / 2 + 27, 0, 1300);
         }
         var10 = 0;
         do {
@@ -221,7 +221,7 @@ final class nk {
           var10++;
         } while (var20 == 0);
         if (16777011 != var6) {
-          var26.c(var3_int - 32, -32 + var4);
+          var26.draw(var3_int - 32, -32 + var4);
           if (this.field_f == 6 &&
             this.a(var7, 22727, var5)) {
             var10 = this.a(var5, var7, (byte) -64);
@@ -229,25 +229,25 @@ final class nk {
             if (0 < var11) {
               var12 = 320 + (DualLinkDequeIterator.field_e * (var11 + SectorCacheStore.field_a) + (-(DualLinkDequeIterator.field_e / 2) - this.field_t));
               var13 = -this.field_h + (DualLinkDequeIterator.field_e * uh.field_b + (240 - DualLinkDequeIterator.field_e / 2));
-              var26.c(-32 + var12, var13 - 32);
+              var26.draw(-32 + var12, var13 - 32);
             }
             var12 = (65280 & var10) >> 8;
             if (var12 > 0) {
               var13 = (-var12 + SectorCacheStore.field_a) * DualLinkDequeIterator.field_e + (320 - (DualLinkDequeIterator.field_e / 2 + this.field_t));
               var14_int = -this.field_h + (-(DualLinkDequeIterator.field_e / 2) + 240 + uh.field_b * DualLinkDequeIterator.field_e);
-              var26.c(-32 + var13, var14_int - 32);
+              var26.draw(-32 + var13, var14_int - 32);
             }
             var13 = var10 >> 16 & 255;
             if (var13 > 0) {
               var14_int = -this.field_t + (-(DualLinkDequeIterator.field_e / 2) + DualLinkDequeIterator.field_e * SectorCacheStore.field_a) + 320;
               var15 = -this.field_h + ((var13 + uh.field_b) * DualLinkDequeIterator.field_e + 240) - DualLinkDequeIterator.field_e / 2;
-              var26.c(-32 + var14_int, -32 + var15);
+              var26.draw(-32 + var14_int, -32 + var15);
             }
             var14_int = (var10 & -16777216) >> 24;
             if (var14_int > 0) {
               var15 = DualLinkDequeIterator.field_e * SectorCacheStore.field_a + 320 - DualLinkDequeIterator.field_e / 2 - this.field_t;
               var16 = -this.field_h + 240 + ((-var14_int + uh.field_b) * DualLinkDequeIterator.field_e - DualLinkDequeIterator.field_e / 2);
-              var26.c(-32 + var15, -32 + var16);
+              var26.draw(-32 + var15, -32 + var16);
             }
           }
         }
@@ -319,7 +319,7 @@ final class nk {
               if (stackIn_473_0 == stackIn_473_1) {
                 var4 = -this.field_t + var3.field_g * DualLinkDequeIterator.field_e + 320;
                 var5 = 240 + DualLinkDequeIterator.field_e * var3.field_h - this.field_h;
-                hf.field_g[1 + 7 * var3.field_C].a(var4, var5 - 5, 0, 1300);
+                hf.field_g[1 + 7 * var3.field_C].drawRotated(var4, var5 - 5, 0, 1300);
               }
               var3 = (kb) (wf.field_c.field_o.nextForward(853));
               if (var20 == 0) {
@@ -411,8 +411,8 @@ final class nk {
         }
         if (decompiledNaturalLoopExit2) {
           PasswordValidator.c((byte) 67);
-          i.field_a.b(0, 0);
-          hc.field_i.b(0, 358);
+          i.field_a.drawOpaque(0, 0);
+          hc.field_i.drawOpaque(0, 358);
           SoftwareRasterizer.setClip(0, 0, param0, 480);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 640, 480, 11184810, 4605510);
           SoftwareRasterizer.setClip(638, 0, 640, 480);
@@ -450,8 +450,8 @@ final class nk {
           var6 = 0;
         }
         var7 = 39;
-        ad.field_e.c(-var7 - var5 % ad.field_e.field_s, 358);
-        ad.field_e.c(-(var5 % ad.field_e.field_s) - (var7 - ad.field_e.field_s), 358);
+        ad.field_e.draw(-var7 - var5 % ad.field_e.field_s, 358);
+        ad.field_e.draw(-(var5 % ad.field_e.field_s) - (var7 - ad.field_e.field_s), 358);
         if (var6 != 0) {
           var8 = 276;
           var9 = 358;
@@ -469,7 +469,7 @@ final class nk {
           } else {
             SoftwareRasterizer.fillRectangleVerticalGradient(var8, var9, var10, var11, 8947848, 16711680);
           }
-          MouseInputListener.field_a.e(var8, var9, var10, var11, 64);
+          MouseInputListener.field_a.drawScaledAdditive(var8, var9, var10, var11, 64);
           var8--;
           var11 += 2;
           var10 += 2;
@@ -571,7 +571,7 @@ final class nk {
             var11 = 320 - var10 / 2 - (var9 * 2 - var9 * var7);
             var12 = 405;
             if (jk.field_j[var8] >= 0) {
-              ck.field_c[1].c(var11, var12);
+              ck.field_c[1].draw(var11, var12);
               if (~this.field_f == ~var8) {
                 SoftwareRasterizer.drawRectangleBorderAlpha(var11, var12, var10, var10, 3, 16777215, 128);
               }
@@ -589,13 +589,13 @@ final class nk {
                 }
               }
             } else {
-              ck.field_c[0].c(var11, var12);
+              ck.field_c[0].draw(var11, var12);
             }
             SoftwareRasterizer.setClip(var11 + 6, var12, var11 + 46, 46 + var12);
             if (jk.field_j[var8] >= 3) {
               var12 += 10;
               var11 += 10;
-              hf.field_g[0 + 7 * var8].d(var11, var12);
+              hf.field_g[0 + 7 * var8].drawHalfSize(var11, var12);
               if (var8 <= 3) {
                 var12 += 4;
               }
@@ -605,9 +605,9 @@ final class nk {
               if (var8 == 5) {
                 var29 = hf.field_g[7 * var8 + 6];
                 var13_ref_hj = var29;
-                var13_ref_hj.a(var29.field_s << 3, var29.field_t << 3, 16 + var11 << 4, 10 + var12 << 4, wf.field_c.field_i * 1000, 2048);
+                var13_ref_hj.drawRotatedAboutNearest(var29.field_s << 3, var29.field_t << 3, 16 + var11 << 4, 10 + var12 << 4, wf.field_c.field_i * 1000, 2048);
               } else {
-                hf.field_g[7 * var8 + 6].a(512, 128, var11 + 16 << 4, var12 + 6 << 4, (int)(Math.sin(0.1 * (double)wf.field_c.field_i + (double)var8) * 10000.0), 2048);
+                hf.field_g[7 * var8 + 6].drawRotatedAboutNearest(512, 128, var11 + 16 << 4, var12 + 6 << 4, (int)(Math.sin(0.1 * (double)wf.field_c.field_i + (double)var8) * 10000.0), 2048);
               }
               if (var8 == 5) {
                 var12 -= 2;
@@ -624,19 +624,19 @@ final class nk {
               if (var8 == 4) {
                 var12 -= 8;
               }
-              hf.field_g[7 * var8 + 1].d(var11, var12);
+              hf.field_g[7 * var8 + 1].drawHalfSize(var11, var12);
             } else if (0 > jk.field_j[var8]) {
-              DelegatingCanvas.field_d.a(10 + var11, var12 + 10);
+              DelegatingCanvas.field_d.drawQuarterSizeAveraged(10 + var11, var12 + 10);
             } else {
               var11 += 10;
               var12 += 10;
-              hf.field_g[var8 * 7 + 0].d(var11, var12);
+              hf.field_g[var8 * 7 + 0].drawHalfSize(var11, var12);
               if (var8 != 5) {
-                hf.field_g[var8 * 7 + 2].a(512, 256, 16 + var11 << 4, 6 + var12 << 4, (int)(Math.sin(0.1 * (double)wf.field_c.field_i + (double)var8) * 10000.0), 2048);
+                hf.field_g[var8 * 7 + 2].drawRotatedAboutNearest(512, 256, 16 + var11 << 4, 6 + var12 << 4, (int)(Math.sin(0.1 * (double)wf.field_c.field_i + (double)var8) * 10000.0), 2048);
               } else {
                 var30 = hf.field_g[2 + 7 * var8];
                 var13_ref_hj = var30;
-                var13_ref_hj.a(var30.field_s << 3, var30.field_t << 3, var11 + 16 << 4, var12 + 10 << 4, wf.field_c.field_i * 1000, 2048);
+                var13_ref_hj.drawRotatedAboutNearest(var30.field_s << 3, var30.field_t << 3, var11 + 16 << 4, var12 + 10 << 4, wf.field_c.field_i * 1000, 2048);
               }
               if (var8 == 2) {
                 var12 -= 4;
@@ -647,7 +647,7 @@ final class nk {
               if (4 == var8) {
                 var12 -= 8;
               }
-              hf.field_g[var8 * 7 + 1].d(var11, var12);
+              hf.field_g[var8 * 7 + 1].drawHalfSize(var11, var12);
             }
             SoftwareRasterizer.resetClip();
             var7++;
@@ -883,7 +883,7 @@ final class nk {
             var8 = 50;
             break;
         }
-        hf.field_g[7 * var5].c(469, 405);
+        hf.field_g[7 * var5].draw(469, 405);
         if (var5 != 6) {
           var14_int = 4000;
           if (var5 == 5) {
@@ -897,7 +897,7 @@ final class nk {
           var17 = 405 + var12;
           hf.field_g[var15].a(-85, var16, var17, var14_int, 4096);
         }
-        hf.field_g[7 * var5 + 1].c(469, 405 + var13);
+        hf.field_g[7 * var5 + 1].draw(469, 405 + var13);
         if (var5 != 6) {
           if (var7 == 0) {
             jd.field_c.drawString(sd.field_d, 530, 420, 16777215, 0);
@@ -951,7 +951,7 @@ final class nk {
           if (0 <= this.field_a &&
             this.field_a <= 11) {
             var15 = PacketBuffer.a(this.field_a, (byte) -114);
-            ab.field_g[var15 * 12 + Bzip2State.field_b / 10 % wh.field_a[var15]].c(TextFieldValidator.field_m + 43, 363);
+            ab.field_g[var15 * 12 + Bzip2State.field_b / 10 % wh.field_a[var15]].draw(TextFieldValidator.field_m + 43, 363);
           }
           var15_ref = null;
           if (var3_int > 0) {
@@ -1075,7 +1075,7 @@ final class nk {
         ob.field_I.drawCentred(var14, 363, 30, 16777215, -1);
         if (0 == this.field_b ||
           this.field_b > 3) {
-          DelegatingCanvas.field_d.a(598, 10);
+          DelegatingCanvas.field_d.drawQuarterSizeAveraged(598, 10);
           if (!df.field_f) {
             SoftwareRasterizer.fillCircleAlpha(614, 26, 16, 0, 128);
           }
@@ -1136,7 +1136,7 @@ final class nk {
               if (var16 < 0) {
                 var16 = 0;
               }
-              pj.field_u[0].c(0, 0, var15, var16);
+              pj.field_u[0].drawWithVerticalOpacityGradient(0, 0, var15, var16);
               decompiledFrameRemainder0 = (var20 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -1155,7 +1155,7 @@ final class nk {
               if (0 > var16) {
                 var16 = 0;
               }
-              pj.field_u[2].c(0, 0, var15, var16);
+              pj.field_u[2].drawWithVerticalOpacityGradient(0, 0, var15, var16);
               if (this.field_o <= 300) {
                 ob.field_I.drawParagraph(sl.field_Z, 149, -this.field_o + 500, 340, 200, 0, 0, 1, 1, 14);
                 ob.field_I.drawParagraph(sl.field_Z, 150, -this.field_o + 499, 340, 200, 0, 0, 1, 1, 14);
@@ -1189,7 +1189,7 @@ final class nk {
             if (var16 < 0) {
               var16 = 0;
             }
-            pj.field_u[1].c(0, 0, var15, var16);
+            pj.field_u[1].drawWithVerticalOpacityGradient(0, 0, var15, var16);
           }
           if (400 < this.field_o) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, (this.field_o * 250 - 100000) / 100);

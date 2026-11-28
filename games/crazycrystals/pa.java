@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends pc {
+final class pa extends InteractiveWidget {
     int field_K;
     int field_B;
     static int field_E;

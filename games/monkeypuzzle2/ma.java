@@ -346,7 +346,7 @@ final class ma {
             break;
           }
           SoftwareRasterizer.setClip(0, var7, 640, var7 + 2);
-          param0.b(param1, param2, var9);
+          param0.drawWithOpacity(param1, param2, var9);
           var7 += 2;
           var8 += 2;
         }

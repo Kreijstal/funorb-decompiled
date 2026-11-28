@@ -17,7 +17,7 @@ final class bu extends TileEffect {
           var5 = param0.field_s.field_p;
           this.field_f = new Sprite(var5.field_q, var5.field_p);
           bu.a(0, this.field_f);
-          var5.e(0, 0, 16777215);
+          var5.drawGrayRampTinted(0, 0, 16777215);
           db.b(62);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "bu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -62,7 +62,7 @@ final class bu extends TileEffect {
     final void a(int param0, int param1, int param2) {
         int var4 = (int)(128.0 * (-Math.cos(3.141592653589793 * (double)this.field_i / 32.0) + 1.0));
         super.a(param0, param1, param2);
-        this.field_f.a(param2, param0, var4);
+        this.field_f.drawWithOpacity(param2, param0, var4);
     }
 
     final void a(int param0, boolean param1, int param2) {

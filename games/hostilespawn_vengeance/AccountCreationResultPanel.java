@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends dg implements qk {
+final class AccountCreationResultPanel extends dg implements WidgetActivationListener {
     private boolean field_wb;
     private boolean field_vb;
     private AccountRegistrationPanel field_xb;
@@ -9,7 +9,7 @@ final class AccountCreationResultPanel extends dg implements qk {
     static boolean field_ub;
     static long field_yb;
 
-    public final void a(int param0, int param1, int param2, ph param3, byte param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, byte param4) {
         if (this.field_wb) {
           pc.a(false, true, false);
           return;
@@ -230,7 +230,7 @@ final class AccountCreationResultPanel extends dg implements qk {
               if (null != this.field_xb) {
                 stackIn_10_0 = this.field_xb;
                 stackIn_11_1 = !(param1);
-                ((AccountRegistrationPanel) (Object) stackIn_10_0).a(stackIn_11_1);
+                ((AccountRegistrationPanel) (Object) stackIn_10_0).onNameSuggestionsRefreshRequested(stackIn_11_1);
               }
             }
           }

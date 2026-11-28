@@ -124,12 +124,12 @@ final class kp extends PuzzleTile implements Cloneable {
         }
         if (0 <= var7) {
           if (param2 != 24) {
-            tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
+            tb.field_e[var7].drawScaled(param5, param4, param2 * 2, 2 * param0);
           } else {
             if (param0 != 24) {
-              tb.field_e[var7].b(param5, param4, param2 * 2, 2 * param0);
+              tb.field_e[var7].drawScaled(param5, param4, param2 * 2, 2 * param0);
             } else {
-              tb.field_e[var7].c(param5, param4);
+              tb.field_e[var7].drawOpaque(param5, param4);
             }
           }
         }

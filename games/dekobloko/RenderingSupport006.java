@@ -319,7 +319,7 @@ final class RenderingSupport006 extends HashNode {
           integerArrayLocal35 = SoftwareRaster.integerArrayState0063;
           integerLocal16 = SoftwareRaster.integerState0285;
           integerLocal17 = SoftwareRaster.integerState0284;
-          this.rgbSpriteState0022.performAction0256();
+          this.rgbSpriteState0022.bindAsRenderTarget();
           renderingSupport009State0003.drawParagraph(stringArgument1, 0, 0, 1 + integerLocal13, integerLocal15, integerArgument2, -1, 1, 1, 8);
           SoftwareRaster.setRasterBuffer(integerArrayLocal35, integerLocal16, integerLocal17);
           this.integerArrayState0110 = new int[integerLocal13 * integerLocal15];

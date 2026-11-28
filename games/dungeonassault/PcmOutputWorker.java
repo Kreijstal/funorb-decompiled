@@ -13,7 +13,7 @@ final class PcmOutputWorker implements Runnable {
     volatile boolean field_d;
     volatile boolean field_a;
 
-    public static void a(boolean param0) {
+    public static void clearStaticReferences(boolean param0) {
         if (param0) {
           PcmOutputWorker.b(89);
         }

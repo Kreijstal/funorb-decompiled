@@ -160,20 +160,20 @@ final class li extends bc {
               }
             }
           }
-          var18.a(112, 144, var18.field_r << 4, var18.field_x << 4, -this.field_M << 10, 4096);
+          var18.drawRotatedAbout(112, 144, var18.field_r << 4, var18.field_x << 4, -this.field_M << 10, 4096);
           pd.a(-22949);
-          this.field_Q.d(-(var18.field_r >> 1) + var9, var10 - var18.field_x, 256);
+          this.field_Q.drawAdditive(-(var18.field_r >> 1) + var9, var10 - var18.field_x, 256);
           return;
         }
         if (BufferedRandomAccessFile.field_q != var6Lifetime1) {
           if (ni.field_b == var6Lifetime1) {
             var15 = BufferedRandomAccessFile.field_b[2];
-            var15.d(var9, var10 - (var15.field_u >> 1), 256);
+            var15.drawAdditive(var9, var10 - (var15.field_u >> 1), 256);
             return;
           }
           if (rh.field_p == var6Lifetime1) {
             var16 = BufferedRandomAccessFile.field_b[1];
-            var16.d(var9, var10 - (var16.field_u >> 1), 256);
+            var16.drawAdditive(var9, var10 - (var16.field_u >> 1), 256);
           }
           return;
         }
@@ -197,9 +197,9 @@ final class li extends bc {
             }
           }
         }
-        var17.a(112, 144, var17.field_r << 4, var17.field_x << 4, -this.field_M << 10, 4096);
+        var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_x << 4, -this.field_M << 10, 4096);
         pd.a(-22949);
-        this.field_Q.d(-(var17.field_r >> 1) + var9, var10 - var17.field_x, 256);
+        this.field_Q.drawAdditive(-(var17.field_r >> 1) + var9, var10 - var17.field_x, 256);
         return;
     }
 

@@ -25,7 +25,7 @@ final class tf {
             return false;
           }
           if (ia.field_W != null) {
-            ck.h(-116);
+            InteractiveWidget.h(-116);
             tp.a(10, 75.0f, i.field_s);
             g.a(InstructionsScreen.getActiveCanvas(false), param1 - 1041774190);
             ra.b(9);
@@ -90,7 +90,7 @@ final class tf {
 
     final void b(int param0, int param1, int param2) {
         bp.a(param0, this.field_c, param2, (byte) 99);
-        this.field_b.h(param2, param0);
+        this.field_b.draw(param2, param0);
         if (param1 != 32) {
           java.applet.Applet var5 = (java.applet.Applet) null;
           tf.a((java.applet.Applet) null, -18);
@@ -126,7 +126,7 @@ final class tf {
           this.field_d = this.field_a.field_H + this.field_a.field_E;
           var7 = new RgbSprite(this.field_i, this.field_d);
           var8 = var7;
-          var8.e();
+          var8.bindAsRenderTarget();
           this.field_a.drawString(this.field_f, 0, this.field_a.field_H, 16777215, -1);
           this.field_b = te.a(this.field_i, this.field_d, this.field_h, 32, 32, 0.125);
           for (var5 = 0; var5 < this.field_b.field_B.length; var5++) {

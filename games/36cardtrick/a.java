@@ -270,7 +270,7 @@ final class a extends ch {
         }
         re.field_c[DirectByteArrayStore.field_f] = DirectByteArrayStore.field_f;
         ConfirmedEmailAvailabilityValidator.field_n[DirectByteArrayStore.field_f] = param1;
-        if (bd.field_F < param1) {
+        if (NameSuggestionsPanel.field_F < param1) {
           ah.field_d = param1;
         }
         if (param1 < fk.field_h) {

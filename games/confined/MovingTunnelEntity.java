@@ -598,11 +598,11 @@ abstract class MovingTunnelEntity extends TunnelEntity {
             MovingTunnelEntity.clearStaticReferences(-74);
           }
           ad.field_b = new RgbSprite(var3, var4 * 3 / 4);
-          ad.field_b.d();
-          var2.c(0, 0);
+          ad.field_b.bindAsRenderTarget();
+          var2.drawOpaque(0, 0);
           ic.field_a = new RgbSprite(var3, var4 - ad.field_b.field_w);
-          ic.field_a.d();
-          var2.c(0, -ad.field_b.field_w);
+          ic.field_a.bindAsRenderTarget();
+          var2.drawOpaque(0, -ad.field_b.field_w);
           ic.field_a.field_v = ad.field_b.field_w;
           ib.b(false);
         } catch (RuntimeException runtimeException) {

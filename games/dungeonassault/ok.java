@@ -223,9 +223,9 @@ class ok extends ko {
             var24 = var24 + (-var17.field_G + this.field_B);
           }
           if (256 > this.field_Ab) {
-            var17.d(var23_int, var24, this.field_Ab);
+            var17.drawWithOpacity(var23_int, var24, this.field_Ab);
           } else {
-            var17.h(var23_int, var24);
+            var17.draw(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -285,13 +285,13 @@ class ok extends ko {
         RuntimeException var2 = null;
         try {
           if (null != cd.field_f) {
-            cd.field_f.field_W.a((byte) -104, param1);
+            cd.field_f.field_W.setNameSuggestions((byte) -104, param1);
           }
           if (param0 != 2) {
             field_Y = (tf) null;
           }
           if (null != CombatState.field_c) {
-            CombatState.field_c.field_P.a((byte) -126, param1);
+            CombatState.field_c.field_P.setNameSuggestions((byte) -126, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

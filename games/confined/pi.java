@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends ga implements ge, el {
-    private rg field_Q;
+final class pi extends ga implements ge, WidgetActivationListener {
+    private InteractiveWidget field_Q;
     private na field_R;
     private AccountCreationResultPanel field_O;
     static al field_T;
@@ -220,7 +220,7 @@ final class pi extends ga implements ge, el {
         }
     }
 
-    public final void a(int param0, int param1, int param2, rg param3, int param4) {
+    public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, int param4) {
         String discarded$1 = null;
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
@@ -260,7 +260,7 @@ final class pi extends ga implements ge, el {
         int var6 = 0;
         try {
           this.field_O = param0;
-          this.field_Q = new rg(gi.field_fb, (uk) null);
+          this.field_Q = new InteractiveWidget(gi.field_fb, (uk) null);
           this.field_Q.field_n = (fe) ((Object) new je());
           var7 = b.a(new String[]{this.k(-99), this.l(99)}, ja.field_g, 1177);
           var3 = 20;

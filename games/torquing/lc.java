@@ -152,7 +152,7 @@ final class lc extends ro {
               DelayedPcmStream.field_o.drawParagraph(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
-            var6.d(245, 199);
+            var6.draw(245, 199);
           }
           if (param0 < 68) {
             lc.g(6);
@@ -320,7 +320,7 @@ final class lc extends ro {
               var35 = new Sprite(60, -var14 + (1 + var15_int));
               var16_ref_t = var35;
               hh.field_e[var10] = var35;
-              var35.e();
+              var35.bindAsRenderTarget();
               be.a();
               var17_ref_kh = MouseWheelInput.field_c[var10];
               var18 = new SceneMeshBatch(1);
@@ -352,8 +352,8 @@ final class lc extends ro {
                 Sprite.copyRegion(var35, var36, 0, var35.field_t - var22Lifetime1, 0, var21, 60, var22Lifetime1);
                 var37 = new Sprite(var36.field_s, var36.field_t / 2);
                 var16_ref_t = var37;
-                var37.e();
-                var36.c(var36.field_s << 3, var36.field_t << 3, var37.field_s << 3, var37.field_t << 3, 0, 2048);
+                var37.bindAsRenderTarget();
+                var36.drawRotatedAbout(var36.field_s << 3, var36.field_t << 3, var37.field_s << 3, var37.field_t << 3, 0, 2048);
                 hh.field_e[var10] = var37;
               }
               var38 = rh.a((byte) 111, var1Lifetime2, var16_ref_t, m.field_n[var10]);
@@ -362,7 +362,7 @@ final class lc extends ro {
             }
           }
           var1Lifetime2[-1 + var1Lifetime2.length].finishPanelLayout(param0 ^ -1339942758);
-          var39 = rh.a((byte) -110, var1Lifetime2, var4, vp.field_G);
+          var39 = rh.a((byte) -110, var1Lifetime2, var4, NameSuggestionsPanel.field_G);
           var1Lifetime3 = var39;
           ln.a(0, dd.field_c.field_x, var39, (byte) -58);
           var40 = new Model(new MeshGeometry(8, 2, 2));
@@ -396,7 +396,7 @@ final class lc extends ro {
           }
           for (var14Lifetime2 = 0; ClientException.field_d.length > var14Lifetime2; var14Lifetime2++) {
             var15 = new Sprite(80, var13 + 1 - var12);
-            var15.e();
+            var15.bindAsRenderTarget();
             be.a();
             var40.field_l.field_A[0] = var3[var14Lifetime2];
             var40.field_l.field_m[1] = (short)be.field_c.b((int) var3[var14Lifetime2]);

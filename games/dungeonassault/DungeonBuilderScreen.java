@@ -57,15 +57,15 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             if (var6 == 0) {
               if (var4 != null) {
                 var8 = new RgbSprite(27 * var7.field_E / 16, var7.field_G * 20 / 12);
-                var8.e();
-                var4.c(-(var7.field_w * 27) / 16, -(var7.field_A * 27) / 16, var8.field_E, var8.field_G);
+                var8.bindAsRenderTarget();
+                var4.drawScaled(-(var7.field_w * 27) / 16, -(var7.field_A * 27) / 16, var8.field_E, var8.field_G);
                 var9 = var8;
                 var10 = new RgbSprite(var9.field_E / 2, var9.field_G / 2);
-                var10.e();
-                var9.e(var10.field_E / 2, var10.field_G / 2, 0, 2048);
+                var10.bindAsRenderTarget();
+                var9.drawRotated(var10.field_E / 2, var10.field_G / 2, 0, 2048);
                 var10.field_A = var9.field_A * 27 >> 5;
                 var4 = var10;
-                var10.c();
+                var10.trimTransparentBorders();
                 var2[var3] = var4;
               }
               var3++;
@@ -125,11 +125,11 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           var6_int = 130;
           var7 = db.field_v.field_H + db.field_v.field_E;
           var8 = new RgbSprite(var6_int, var7);
-          var8.e();
+          var8.bindAsRenderTarget();
           db.field_v.drawString(param4, 0, db.field_v.field_H, 12632256, -1);
           db.field_v.drawRightAligned(param3, var6_int, db.field_v.field_H, 12632256, -1);
           var9 = new RgbSprite(var6_int, var7);
-          var9.e();
+          var9.bindAsRenderTarget();
           db.field_v.drawString(param4, 0, db.field_v.field_H, 12690143, -1);
           db.field_v.drawRightAligned(param3, var6_int, db.field_v.field_H, 12690143, -1);
           if (!param0.field_B) {
@@ -139,7 +139,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           }
           var10 = stackIn_5_0;
           var11 = new RgbSprite(var6_int, var7);
-          var11.e();
+          var11.bindAsRenderTarget();
           db.field_v.drawString(param4, 0, db.field_v.field_H, 16744448, -1);
           db.field_v.drawRightAligned(var10, var6_int, db.field_v.field_H, 16744448, -1);
           jh.b();
@@ -202,15 +202,15 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           var7_int = 130;
           var8 = db.field_v.field_E + db.field_v.field_H;
           var9 = new RgbSprite(var7_int, var8);
-          var9.e();
+          var9.bindAsRenderTarget();
           db.field_v.drawString(param1, 0, db.field_v.field_H, 12632256, -1);
           db.field_v.drawRightAligned(param0, var7_int, db.field_v.field_H, 12632256, param3);
           var10 = new RgbSprite(var7_int, var8);
-          var10.e();
+          var10.bindAsRenderTarget();
           db.field_v.drawString(param1, 0, db.field_v.field_H, 12690143, -1);
           db.field_v.drawRightAligned(param0, var7_int, db.field_v.field_H, 12690143, -1);
           var11 = new RgbSprite(var7_int, var8);
-          var11.e();
+          var11.bindAsRenderTarget();
           db.field_v.drawString(param1, 0, db.field_v.field_H, 16744448, -1);
           db.field_v.drawRightAligned(param5, var7_int, db.field_v.field_H, 16744448, -1);
           jh.b();
@@ -299,7 +299,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             if (var7_ref_cn != null) {
               var8 = var7_ref_cn.field_E * 5 >> 3;
               var9 = var7_ref_cn.field_G * 5 >> 3;
-              var7_ref_cn.c(param1 + (-var8 + 48 >> 1), 40 + param0 - var9, var8, var9);
+              var7_ref_cn.drawScaled(param1 + (-var8 + 48 >> 1), 40 + param0 - var9, var8, var9);
             }
             if (DungeonAssault.field_K != 0) {
               var7 = 0;
@@ -319,7 +319,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                 gm.field_d.field_k.isBitSet(param3 + 42, (byte) 80)) {
                 var7 = var7 | 8;
               }
-              SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
+              SecondaryNodeDequeIterator.field_m[var7].draw(param1, param0 + 12);
             }
           }
         } else {
@@ -340,7 +340,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             gm.field_d.field_k.isBitSet(param3 + 42, (byte) 80)) {
             var7 = var7 | 8;
           }
-          SecondaryNodeDequeIterator.field_m[var7].h(param1, param0 + 12);
+          SecondaryNodeDequeIterator.field_m[var7].draw(param1, param0 + 12);
         }
     }
 
@@ -425,8 +425,8 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         boolean decompiledSharedTail0 = !(!gl.field_Lb);
         if (!decompiledSharedTail0) {
           var5 = (int)((1.0 + Math.cos((double)((float)mo.field_a / 20.0f))) * 128.0);
-          PackedBitSet.field_c.b(205, 83, 256);
-          PackedBitSet.field_c.b(205, 83, var5);
+          PackedBitSet.field_c.drawAdditive(205, 83, 256);
+          PackedBitSet.field_c.drawAdditive(205, 83, var5);
           if (this.field_w.field_B) {
             PacketBuffer.a(95, 205, (byte) -95, im.field_e, 16744448, 192);
           }
@@ -434,8 +434,8 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         }
         if (decompiledSharedTail0) {
           var5 = (int)(128.0 * (1.0 + Math.cos((double)((float)mo.field_a / 20.0f))));
-          PackedBitSet.field_c.b(-(im.field_e.field_y >> 1) + 356, -(im.field_e.field_v >> 1) + 267, 256);
-          PackedBitSet.field_c.b(356 - (im.field_e.field_y >> 1), 267 - (im.field_e.field_v >> 1), var5);
+          PackedBitSet.field_c.drawAdditive(-(im.field_e.field_y >> 1) + 356, -(im.field_e.field_v >> 1) + 267, 256);
+          PackedBitSet.field_c.drawAdditive(356 - (im.field_e.field_y >> 1), 267 - (im.field_e.field_v >> 1), var5);
           if (this.field_w.field_B) {
             PacketBuffer.a(-(im.field_e.field_v >> 1) + 265, -(im.field_e.field_y >> 1) + 354, (byte) -86, im.field_e, 16744448, 96);
           }
@@ -510,7 +510,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                 var10 = stackIn_60_0 - stackIn_60_1;
                 var11Lifetime1 = -jn.field_a.field_v + var9;
                 bp.a(var11Lifetime1, dm.field_f, var10, (byte) 99);
-                jn.field_a.h(var10, var11Lifetime1);
+                jn.field_a.draw(var10, var11Lifetime1);
               }
             }
             this.field_N.d();
@@ -619,24 +619,24 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
             }
             var9 = var17.field_v;
             ie.a(95);
-            var17.e();
+            var17.bindAsRenderTarget();
             stackIn_18_0 = 0;
             break;
           }
           SoftwareRasterizer.grayscaleRectangle(stackIn_18_0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c);
           var15 = new RgbSprite(var9, var9);
           var18 = var15;
-          var18.e();
-          var17.c(0, 0);
+          var18.bindAsRenderTarget();
+          var17.drawOpaque(0, 0);
           var11 = new RgbSprite(var9, var9);
-          var11.e();
+          var11.bindAsRenderTarget();
           if (param1 < 2) {
             return;
           }
-          var17.c(-var17.field_y + var9, 0);
+          var17.drawOpaque(-var17.field_y + var9, 0);
           var12 = new RgbSprite(var17.field_y - var9 * 2, var9);
-          var12.e();
-          var17.c(-var9, 0);
+          var12.bindAsRenderTarget();
+          var17.drawOpaque(-var9, 0);
           ti.c(true);
           na.field_C = new RgbSprite[]{var15, var12, var11};
           return;
@@ -1289,7 +1289,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           this.field_N = (rh) null;
         }
         jh.a(bd.field_g);
-        nb.field_d.a(0, 0, var2, var3);
+        nb.field_d.drawDownscaledAreaAveraged(0, 0, var2, var3);
         jh.b();
     }
 
@@ -1570,7 +1570,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         int var11Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
         var13 = DungeonAssault.field_K;
-        bd.field_g.h(-(bd.field_g.field_y >> 1) + param2 + 2, param1 + 12);
+        bd.field_g.draw(-(bd.field_g.field_y >> 1) + param2 + 2, param1 + 12);
         var14 = gm.field_d;
         if (param0 != 8) {
           field_x = (int[]) null;
@@ -1670,31 +1670,31 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                   if (0 == var9Lifetime1) {
                     if (var8Lifetime1 != 0) {
                       if (42 != var8Lifetime1) {
-                        rl.field_d[4].h(var6Lifetime1, 20 + (4 + var7Lifetime1));
+                        rl.field_d[4].draw(var6Lifetime1, 20 + (4 + var7Lifetime1));
                         if (-var5 + 12 == var9Lifetime1 &&
                           42 != var8Lifetime1 &&
                           var8Lifetime1 != 48) {
-                          rl.field_d[5].h(27 + var6Lifetime1, 24 + var7Lifetime1);
+                          rl.field_d[5].draw(27 + var6Lifetime1, 24 + var7Lifetime1);
                         }
                       } else {
                         if (-var5 + 12 == var9Lifetime1 &&
                           42 != var8Lifetime1 &&
                           var8Lifetime1 != 48) {
-                          rl.field_d[5].h(27 + var6Lifetime1, 24 + var7Lifetime1);
+                          rl.field_d[5].draw(27 + var6Lifetime1, 24 + var7Lifetime1);
                         }
                       }
                     } else {
                       if (-var5 + 12 == var9Lifetime1 &&
                         42 != var8Lifetime1 &&
                         var8Lifetime1 != 48) {
-                        rl.field_d[5].h(27 + var6Lifetime1, 24 + var7Lifetime1);
+                        rl.field_d[5].draw(27 + var6Lifetime1, 24 + var7Lifetime1);
                       }
                     }
                   } else {
                     if (-var5 + 12 == var9Lifetime1 &&
                       42 != var8Lifetime1 &&
                       var8Lifetime1 != 48) {
-                      rl.field_d[5].h(27 + var6Lifetime1, 24 + var7Lifetime1);
+                      rl.field_d[5].draw(27 + var6Lifetime1, 24 + var7Lifetime1);
                     }
                   }
                   var8Lifetime1 += 8;

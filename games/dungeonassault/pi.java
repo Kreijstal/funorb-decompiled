@@ -56,7 +56,7 @@ final class pi {
             if (param4.field_d == 2) {
               var7 = var7 + (param1.field_s - this.field_d.field_G);
             }
-            this.field_d.h(var6_int, var7);
+            this.field_d.draw(var6_int, var7);
           }
           var6 = param4.b(param1, -444136767);
           if (var6 != null &&

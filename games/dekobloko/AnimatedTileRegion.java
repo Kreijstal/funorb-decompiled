@@ -127,7 +127,7 @@ final class AnimatedTileRegion extends HashNode {
               indexedSpriteLocal17 = this.indexedSpriteArrayState0005[integerLocal48 + integerLocal50];
               if (indexedSpriteLocal17 != null &&
                 NetworkSupport007.indexedSpriteState0002 != indexedSpriteLocal17) {
-                indexedSpriteLocal17 = indexedSpriteLocal17.computeIndexedSprite1245();
+                indexedSpriteLocal17 = indexedSpriteLocal17.copy();
               }
               animatedTileRegionLocal25.indexedSpriteArrayState0005[integerLocal50 + integerLocal48] = indexedSpriteLocal17;
             }
@@ -236,7 +236,7 @@ final class AnimatedTileRegion extends HashNode {
               indexedSpriteLocal45 = this.indexedSpriteArrayState0005[integerLocal53];
               if (indexedSpriteLocal45 != null &&
                 NetworkSupport007.indexedSpriteState0002 != indexedSpriteLocal45) {
-                indexedSpriteLocal45 = indexedSpriteLocal45.computeIndexedSprite1245();
+                indexedSpriteLocal45 = indexedSpriteLocal45.copy();
               }
               animatedTileRegionLocal25.indexedSpriteArrayState0005[integerLocal53] = indexedSpriteLocal45;
               integerLocal53 = integerLocal53 + this.integerState0817;

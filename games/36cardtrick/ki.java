@@ -44,8 +44,8 @@ final class ki extends ek {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof hl) {
-            param4 = param4 & ((hl) (param1)).field_B;
+          if (param1 instanceof InteractiveWidget) {
+            param4 = param4 & ((InteractiveWidget) (param1)).field_B;
           }
           if (!param4) {
             stackIn_13_0 = this.field_s;

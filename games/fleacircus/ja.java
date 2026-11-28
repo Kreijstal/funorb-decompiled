@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ja extends bb {
+class ja extends InteractiveWidget {
     static int field_P;
     private String[] field_K;
     private IntrusiveDeque field_N;
@@ -199,7 +199,7 @@ class ja extends bb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -26) {
-            this.a(78, 122, -59, -72);
+            this.activateFromInput(78, 122, -59, -72);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,8 +240,8 @@ class ja extends bb {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
         int var5 = param2 - this.field_y;
         int var6 = -this.field_z + param0;
         mi var7 = this.b(var5, var6, -1);

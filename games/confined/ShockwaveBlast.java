@@ -37,7 +37,7 @@ final class ShockwaveBlast extends ka {
               qm.field_y = !param0 ? -1 : -2;
               lk.field_d = si.field_g;
               var5.position = 0;
-              StageDirector.writeConnectionHandshakeHeader(ProxyAuthenticationRequiredException.field_b, vh.field_a, rg.field_M, (byte) 40, qa.field_c);
+              StageDirector.writeConnectionHandshakeHeader(ProxyAuthenticationRequiredException.field_b, vh.field_a, InteractiveWidget.field_M, (byte) 40, qa.field_c);
               tb.a(-1, 116);
             } catch (IOException iOException) {
               lk.field_d = i.field_q;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends bb {
+final class md extends InteractiveWidget {
     static String[] field_P;
     int field_K;
     int field_N;

@@ -711,7 +711,7 @@ final class FridgeScreen {
           for (var4 = 0; 256 > var4; var4++) {
             var6[var4] = var4 * 65793;
           }
-          qa.field_k.b();
+          qa.field_k.bindAsRenderTarget();
           SoftwareRasterizer.addRadialGlow(400, 400, 384, 77, var3);
           hga.field_U.a((byte) 122);
         } catch (RuntimeException runtimeException) {

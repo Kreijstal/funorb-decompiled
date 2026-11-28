@@ -158,10 +158,10 @@ abstract class sj extends rf {
           jh.c();
           var2 = new RgbSprite(param0.field_y, param0.field_v);
           var3 = new RgbSprite(param0.field_y, param0.field_v);
-          var2.e();
-          param0.e(0, 0, 16744448);
-          var3.e();
-          param0.e(0, 0, 8421504);
+          var2.bindAsRenderTarget();
+          param0.drawSilhouette(0, 0, 16744448);
+          var3.bindAsRenderTarget();
+          param0.drawSilhouette(0, 0, 8421504);
           jh.b();
           var4 = rb.a(8, var2, 255, (byte) -116);
           if (param1 <= 4) {
@@ -370,7 +370,7 @@ abstract class sj extends rf {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        bl.field_e.h(this.field_x + param1 - 90, param0 + 10);
+        bl.field_e.draw(this.field_x + param1 - 90, param0 + 10);
         jm.a(param1 + 5, this.field_x - 10, gn.field_i, 0, 35 + param0);
         jm.a(param1, this.field_x, di.field_l, 0, this.field_s + param0 - 22);
         var6Lifetime2 = 127;

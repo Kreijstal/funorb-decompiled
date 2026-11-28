@@ -44,8 +44,8 @@ final class mj {
         try {
           while (stackIn_5_0.length > var3) {
             mb.field_d[var3] = new Sprite(var2, var2);
-            mb.field_d[var3].a();
-            var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
+            mb.field_d[var3].bindAsRenderTarget();
+            var1.drawRotatedAbout(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
             var3++;
             stackIn_5_0 = mb.field_d;
           }

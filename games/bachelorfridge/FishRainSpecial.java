@@ -118,12 +118,12 @@ final class FishRainSpecial extends SpecialOrder {
         String var5 = null;
         var3 = BachelorFridge.field_y;
         try {
-          ZombiesEvent.field_q.d(0, 0);
+          ZombiesEvent.field_q.drawOpaque(0, 0);
           for (var2_int = 0; 8 > var2_int; var2_int++) {
-            jf.field_l.a(14 + var2_int * 77, 89);
+            jf.field_l.draw(14 + var2_int * 77, 89);
             if (DiskCacheRequest.field_s[var2_int].field_T ||
               BananarangAnimation.field_Q - 1 == var2_int) {
-              InvincibleSpecial.field_p.a(77 * var2_int + 14, 89);
+              InvincibleSpecial.field_p.draw(77 * var2_int + 14, 89);
             }
             FlySpecial.field_p[var2_int].draw(77 * var2_int + 36, 91);
           }
@@ -131,9 +131,9 @@ final class FishRainSpecial extends SpecialOrder {
           jha.field_g.drawText(SnowEvent.field_t, 22, 146, 16370176, -1);
           WidgetWrapper.field_z.drawText(SnowEvent.field_t, 22, 146, 65793, -1);
           if (mg.field_m.field_a >= dea.field_n) {
-            fba.field_a.a(48 + IntrusiveNode.field_a.field_kb, 4 + IntrusiveNode.field_a.field_rb);
+            fba.field_a.draw(48 + IntrusiveNode.field_a.field_kb, 4 + IntrusiveNode.field_a.field_rb);
             if (IntrusiveNode.field_a.field_T) {
-              bn.field_h.a(48 + IntrusiveNode.field_a.field_kb, IntrusiveNode.field_a.field_rb + 4);
+              bn.field_h.draw(48 + IntrusiveNode.field_a.field_kb, IntrusiveNode.field_a.field_rb + 4);
             }
           } else {
             WidgetWrapper.field_z.drawCentred(GasCloudSpecial.field_r, IntrusiveNode.field_a.field_kb + (IntrusiveNode.field_a.field_sb >> 1), 4 + IntrusiveNode.field_a.field_rb + (IntrusiveNode.field_a.field_p >> 1), 16204, -1);
@@ -172,10 +172,10 @@ final class FishRainSpecial extends SpecialOrder {
           var5 = lga.a(true, new String[]{ti.a((byte) -120, 2, (long)mg.field_m.field_a, kt.field_k, true)}, vla.field_u);
           jha.field_g.drawRightAligned(var5, 600, 400, 16699649, -1);
           WidgetWrapper.field_z.drawRightAligned(var5, 600, 400, 65793, -1);
-          ClamsAnimation.field_y.a(412, 161);
-          DefaultWidgetRenderer.field_b.a(412, 441);
-          ClamsAnimation.field_y.a(598, 166);
-          DefaultWidgetRenderer.field_b.a(598, 271);
+          ClamsAnimation.field_y.draw(412, 161);
+          DefaultWidgetRenderer.field_b.draw(412, 441);
+          ClamsAnimation.field_y.draw(598, 166);
+          DefaultWidgetRenderer.field_b.draw(598, 271);
           if (!um.a(true)) {
             DiveBomberAnimation.b(true);
           }

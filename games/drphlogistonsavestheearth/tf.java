@@ -79,7 +79,7 @@ final class tf extends ca {
         int var8Lifetime1;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          var1_int = LoginMenuScreen.field_N;
+          var1_int = NameSuggestionsPanel.field_N;
           var2 = 0;
           if (NodeHashTableIterator.field_g == 2) {
             var3_long = -aa.field_d + la.correctedCurrentTimeMillis(false);

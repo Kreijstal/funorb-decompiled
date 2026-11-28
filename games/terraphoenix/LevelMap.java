@@ -2895,7 +2895,7 @@ final class LevelMap {
             var6 -= 32;
           }
           if (null != u.field_a) {
-            u.field_a.a();
+            u.field_a.bindAsRenderTarget();
             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
             k.field_f.a(0);
           }
@@ -2992,23 +2992,23 @@ final class LevelMap {
                             }
                             var16 = null;
                             if (!param1) {
-                              u.field_a.a();
+                              u.field_a.bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16 = oi.field_J;
-                              ((Sprite) (var16)).a();
+                              ((Sprite) (var16)).bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
                             if (null != var16) {
-                              ((Sprite) (var16)).a();
+                              ((Sprite) (var16)).bindAsRenderTarget();
                               SoftwareRasterizer.setPixel(32, 124, 16777215);
                               SoftwareRasterizer.setPixel(64, 108, 16777215);
                               SoftwareRasterizer.setPixel(64, 139, 16777215);
                               SoftwareRasterizer.setPixel(95, 124, 16777215);
                               k.field_f.a(0);
-                              u.field_a.a();
-                              ((Sprite) (var16)).d(0, 0);
+                              u.field_a.bindAsRenderTarget();
+                              ((Sprite) (var16)).drawOpaque(0, 0);
                               if (this.state != null &&
                                 0 < this.state.field_L) {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
@@ -3027,7 +3027,7 @@ final class LevelMap {
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                              ((Sprite) (var16)).b(-64 + var5, -124 + var6);
+                              ((Sprite) (var16)).draw(-64 + var5, -124 + var6);
                             }
                           }
                           var13++;
@@ -3135,23 +3135,23 @@ final class LevelMap {
                             }
                             var16Lifetime2 = null;
                             if (!param1) {
-                              u.field_a.a();
+                              u.field_a.bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                               k.field_f.a(0);
                             } else {
                               var16Lifetime2 = oi.field_J;
-                              ((Sprite) (var16Lifetime2)).a();
+                              ((Sprite) (var16Lifetime2)).bindAsRenderTarget();
                               SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             }
                             if (null != var16Lifetime2) {
-                              ((Sprite) (var16Lifetime2)).a();
+                              ((Sprite) (var16Lifetime2)).bindAsRenderTarget();
                               SoftwareRasterizer.setPixel(32, 124, 16777215);
                               SoftwareRasterizer.setPixel(64, 108, 16777215);
                               SoftwareRasterizer.setPixel(64, 139, 16777215);
                               SoftwareRasterizer.setPixel(95, 124, 16777215);
                               k.field_f.a(0);
-                              u.field_a.a();
-                              ((Sprite) (var16Lifetime2)).d(0, 0);
+                              u.field_a.bindAsRenderTarget();
+                              ((Sprite) (var16Lifetime2)).drawOpaque(0, 0);
                               if (this.state != null &&
                                 0 < this.state.field_L) {
                                 NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
@@ -3170,7 +3170,7 @@ final class LevelMap {
                               k.field_f.a(0);
                               ug.field_b = -64 + var5;
                               hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                              ((Sprite) (var16Lifetime2)).b(-64 + var5, -124 + var6);
+                              ((Sprite) (var16Lifetime2)).draw(-64 + var5, -124 + var6);
                             }
                           }
                           var13Lifetime2++;
@@ -3235,23 +3235,23 @@ final class LevelMap {
                           }
                           var16Lifetime1 = null;
                           if (!param1) {
-                            u.field_a.a();
+                            u.field_a.bindAsRenderTarget();
                             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                             k.field_f.a(0);
                           } else {
                             var16Lifetime1 = oi.field_J;
-                            ((Sprite) (var16Lifetime1)).a();
+                            ((Sprite) (var16Lifetime1)).bindAsRenderTarget();
                             SoftwareRasterizer.fillRectangle(0, 0, 128, 160, 0);
                           }
                           if (null != var16Lifetime1) {
-                            ((Sprite) (var16Lifetime1)).a();
+                            ((Sprite) (var16Lifetime1)).bindAsRenderTarget();
                             SoftwareRasterizer.setPixel(32, 124, 16777215);
                             SoftwareRasterizer.setPixel(64, 108, 16777215);
                             SoftwareRasterizer.setPixel(64, 139, 16777215);
                             SoftwareRasterizer.setPixel(95, 124, 16777215);
                             k.field_f.a(0);
-                            u.field_a.a();
-                            ((Sprite) (var16Lifetime1)).d(0, 0);
+                            u.field_a.bindAsRenderTarget();
+                            ((Sprite) (var16Lifetime1)).drawOpaque(0, 0);
                             if (this.state != null &&
                               0 < this.state.field_L) {
                               NodeHashTableIterator.a((byte) -86, u.field_a, 16777215);
@@ -3270,7 +3270,7 @@ final class LevelMap {
                             k.field_f.a(0);
                             ug.field_b = -64 + var5;
                             hb.field_n = -(48 * eg.field_p) + (-124 + var6);
-                            ((Sprite) (var16Lifetime1)).b(-64 + var5, -124 + var6);
+                            ((Sprite) (var16Lifetime1)).draw(-64 + var5, -124 + var6);
                           }
                         }
                         var13Lifetime1++;
@@ -3289,7 +3289,7 @@ final class LevelMap {
               continue scanLoop1;
             }
             if (null != u.field_a) {
-              u.field_a.b(ug.field_b, hb.field_n);
+              u.field_a.draw(ug.field_b, hb.field_n);
             }
             stackIn_189_0 = param0 ? 1 : 0;
             break;
@@ -3394,7 +3394,7 @@ final class LevelMap {
             AccountRequestState.field_f.drawString(bm.field_c, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.fillRectangle(var6, var7 - 11, 12, 12, var12);
-            AccountRequestState.field_f.drawString(am.field_H, var6, var7, 16777215, -1);
+            AccountRequestState.field_f.drawString(NameSuggestionsPanel.field_H, var6, var7, 16777215, -1);
             var7 = var7 + var16_int;
             SoftwareRasterizer.fillRectangle(var6, -11 + var7, 12, 12, var13);
             AccountRequestState.field_f.drawString(cg.field_I, var6, var7, 16777215, -1);

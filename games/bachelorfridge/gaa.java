@@ -59,7 +59,7 @@ final class gaa extends lg {
             gaa.a((String) null, -16);
           }
           kga.field_a = new Sprite(10, 14);
-          kga.field_a.b();
+          kga.field_a.bindAsRenderTarget();
           for (var8 = 2; 7 > var8; var8++) {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }

@@ -151,13 +151,13 @@ abstract class eh extends ma {
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
             fd.a(28773);
-            ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+            ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
             return;
           }
           discarded$4 = this.h(125);
           super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
           fd.a(28773);
-          ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+          ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
           return;
         }
         if (this.field_y > ud.field_c.field_w) {
@@ -168,13 +168,13 @@ abstract class eh extends ma {
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
             fd.a(28773);
-            ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+            ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
             return;
           }
           discarded$5 = this.h(125);
           super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
           fd.a(28773);
-          ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+          ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
           return;
         }
         if (this.field_C <= ud.field_c.field_t) {
@@ -184,13 +184,13 @@ abstract class eh extends ma {
           if (param2 < -80) {
             super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
             fd.a(28773);
-            ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+            ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
             return;
           }
           discarded$7 = this.h(125);
           super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
           fd.a(28773);
-          ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+          ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
           return;
         }
         ud.field_c = new RgbSprite(this.field_y, this.field_C);
@@ -200,13 +200,13 @@ abstract class eh extends ma {
         if (param2 < -80) {
           super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
           fd.a(28773);
-          ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+          ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
           return;
         }
         discarded$6 = this.h(125);
         super.a(-param0 - this.field_r, param1, -105, -this.field_u - param3);
         fd.a(28773);
-        ud.field_c.b(param3 + this.field_u, this.field_r + param0, this.field_N);
+        ud.field_c.drawWithOpacity(param3 + this.field_u, this.field_r + param0, this.field_N);
         return;
     }
 

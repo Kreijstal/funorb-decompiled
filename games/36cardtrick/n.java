@@ -122,7 +122,7 @@ final class n extends qg {
         dl.a(-27, var6);
         this.field_y.a(0, 0, param2 + 0, param3);
         gg.a(14756);
-        var6.e(param0 + this.field_o, param1 + this.field_i, this.field_A);
+        var6.drawWithOpacity(param0 + this.field_o, param1 + this.field_i, this.field_A);
     }
 
     static {

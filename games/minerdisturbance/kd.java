@@ -106,7 +106,7 @@ final class kd {
           tk.b(true);
           this.field_g = new Sprite(121, 122);
           ArchiveProvider.a(this.field_g, 127);
-          var5.a(this.field_g.field_y / 2, this.field_g.field_C / 2, -2048, 4096);
+          var5.drawRotated(this.field_g.field_y / 2, this.field_g.field_C / 2, -2048, 4096);
           tk.b(true);
           return;
         }
@@ -294,11 +294,11 @@ final class kd {
         if (null == ba.field_K) {
           return;
         }
-        this.field_g.f(376, 339);
-        this.field_q.f(9, 9);
+        this.field_g.draw(376, 339);
+        this.field_q.draw(9, 9);
         ba.field_K.a(0, 0);
         if (null != ah.field_d) {
-          ah.field_d.f(9, 257);
+          ah.field_d.draw(9, 257);
           ah.field_d.drawHorizontalFlip(558, 257);
           if (257 < NodeHashTableIterator.field_e &&
             NodeHashTableIterator.field_e < 290) {
@@ -313,29 +313,29 @@ final class kd {
               } else {
                 if (nk.field_w > 558 &&
                   nk.field_w < 631) {
-                  ah.field_d.a();
+                  ah.field_d.flipHorizontal();
                   ah.field_d.drawAdditive(557, 256, var2Lifetime2);
                   ah.field_d.drawAdditive(559, 256, var2Lifetime2);
                   ah.field_d.drawAdditive(557, 258, var2Lifetime2);
                   ah.field_d.drawAdditive(559, 258, var2Lifetime2);
-                  ah.field_d.a();
+                  ah.field_d.flipHorizontal();
                 }
               }
             }
           }
         }
-        this.field_a.f(16, 302);
+        this.field_a.draw(16, 302);
         ql.field_m.drawParagraph(this.field_j[this.field_s], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-        pk.field_c.f(30, 330);
+        pk.field_c.draw(30, 330);
         ql.field_m.drawParagraph(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ql.field_m.drawParagraph(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ql.field_m.drawParagraph(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        ClientException.field_f.f(508 + (127 - ClientException.field_f.field_x) / 2, 315);
+        ClientException.field_f.draw(508 + (127 - ClientException.field_f.field_x) / 2, 315);
         if (0 == this.field_c.field_e) {
-          PcmResampler.field_g[0].f(508, 299);
+          PcmResampler.field_g[0].draw(508, 299);
         } else {
           if (this.field_c.field_e == 1) {
-            PcmResampler.field_g[1].f(508, 387);
+            PcmResampler.field_g[1].draw(508, 387);
           }
         }
         if (param0 != 117) {
