@@ -5,7 +5,7 @@ final class MusicTrack extends IntrusiveNode {
     byte[] field_e;
     IntrusiveNodeHashTable field_f;
 
-    final static MusicTrack a(ResourceArchive param0, String param1, String param2) {
+    final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName(param1, (byte) -71, param2);
         if (var3 == null) {
           return null;
@@ -13,7 +13,7 @@ final class MusicTrack extends IntrusiveNode {
         return new MusicTrack(new PacketBuffer(var3));
     }
 
-    final void b() {
+    final void buildPatchUsage() {
         if (this.field_f != null) {
           return;
         }
@@ -27,26 +27,26 @@ final class MusicTrack extends IntrusiveNode {
         int[] var23 = var1;
         var19[9] = 128;
         var23[9] = 128;
-        k var4 = new k(this.field_e);
-        int var5 = var4.f();
+        MidiFileReader var4 = new MidiFileReader(this.field_e);
+        int var5 = var4.trackCount();
         for (int var6 = 0; var6 < var5; var6++) {
-          var4.a(var6);
-          var4.c(var6);
-          var4.f(var6);
+          var4.seekTrack(var6);
+          var4.readDelta(var6);
+          var4.saveTrackPosition(var6);
         }
         while (true) {
-          int var6Lifetime1 = var4.e();
+          int var6Lifetime1 = var4.nextTrack();
           int var7 = var4.field_f[var6Lifetime1];
           while (true) {
             if (var4.field_f[var6Lifetime1] != var7) {
               break;
             }
-            var4.a(var6Lifetime1);
-            int var8 = var4.e(var6Lifetime1);
+            var4.seekTrack(var6Lifetime1);
+            int var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.a();
-              var4.f(var6Lifetime1);
-              if (var4.g()) {
+              var4.markTrackDone();
+              var4.saveTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -83,13 +83,13 @@ final class MusicTrack extends IntrusiveNode {
                 var14.field_e[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.c(var6Lifetime1);
-            var4.f(var6Lifetime1);
+            var4.readDelta(var6Lifetime1);
+            var4.saveTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final void a() {
+    final void releasePatchUsage() {
         this.field_f = null;
     }
 

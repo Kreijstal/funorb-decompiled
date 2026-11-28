@@ -72,13 +72,13 @@ final class SoundCache {
           }
           VorbisSample var9 = (VorbisSample) (this.vorbisSampleCache.findByKey((byte) 106, var6));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.vorbisSoundArchive, groupId, fileId);
+            var9 = VorbisSample.load(this.vorbisSoundArchive, groupId, fileId);
             if (var9 == null) {
               return null;
             }
             this.vorbisSampleCache.put(-105, var6, var9);
           }
-          PcmSample var8Lifetime1 = var9.a(remainingByteBudget);
+          PcmSample var8Lifetime1 = var9.decodeToPcm(remainingByteBudget);
           if (var8Lifetime1 == null) {
             return null;
           }
@@ -100,7 +100,7 @@ final class SoundCache {
         }
     }
 
-    final static String a(String param0, byte param1) {
+    final static String mapNativeLibraryFilename(String param0, byte param1) {
         String stackIn_17_2 = null;
         try {
           if (rr.field_b.startsWith("win")) {
@@ -153,11 +153,11 @@ final class SoundCache {
             remainingByteBudget[0] <= 0) {
             return null;
           }
-          SynthesizedSoundEffect var9 = SynthesizedSoundEffect.a(this.synthesizedSoundArchive, groupId, fileId);
+          SynthesizedSoundEffect var9 = SynthesizedSoundEffect.load(this.synthesizedSoundArchive, groupId, fileId);
           if (var9 == null) {
             return null;
           }
-          PcmSample var11 = var9.a();
+          PcmSample var11 = var9.toPcmSample();
           PcmSample var8Lifetime1 = var11;
           this.pcmSampleCache.put(105, var6, var8Lifetime1);
           if (remainingByteBudget != null) {

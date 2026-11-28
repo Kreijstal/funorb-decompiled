@@ -55,12 +55,12 @@ final class SoftCacheReference extends CacheReference {
             if (null != jf.field_a &&
               jf.field_a.field_b) {
               tt.b(-32546);
-              hr.field_e.a(new oq(hr.field_e, OpenGlIndexBuffer.field_r), 0);
+              hr.field_e.showDialog(new FullscreenStatusDialog(hr.field_e, OpenGlIndexBuffer.field_r), 0);
             }
             return;
           }
           hr.field_e.processPointerInput(OpenGlRectangleTexture.field_l, true, qo.field_d, true);
-          hr.field_e.f((byte) 33);
+          hr.field_e.advanceDialogs((byte) 33);
           if (param0 < 120) {
             return;
           }

@@ -14,7 +14,7 @@ final class qk {
 
     final static void a(String param0, boolean param1) {
         try {
-          rs.field_x = param0;
+          RegistrationAgreementPane.field_x = param0;
           oi.a(12, 20665);
           if (param1) {
             field_g = 25;

@@ -12,13 +12,13 @@ final class ub extends IntrusiveNode {
         String stackIn_16_2 = null;
         try {
           if (null != InstrumentPatch.field_m) {
-            InstrumentPatch.field_m.h((byte) -31);
+            InstrumentPatch.field_m.closeDialog((byte) -31);
           }
           vr.field_b = new LoginPanel(param0, param1, false, true, true);
           if (param2 >= -82) {
             basePlayerDefinition = (AircraftDefinition) null;
           }
-          ClientException.field_d.d(vr.field_b, -30244);
+          ClientException.field_d.replaceContent(vr.field_b, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1146,7 +1146,7 @@ final class ub extends IntrusiveNode {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  bc.field_v = UiWidget.a(0, var2);
+                  LabeledWidgetContainer.field_v = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "passwordverificationrequired");
                 if (null != var2) {
@@ -1158,7 +1158,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "retry");
                 if (var2 != null) {
-                  hg.field_z = UiWidget.a(0, var2);
+                  DraggableWidgetContainer.field_z = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "back");
                 if (var2 != null) {
@@ -1630,7 +1630,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_doublespace");
                 if (null != var2) {
-                  jn.field_u = UiWidget.a(0, var2);
+                  DialogMessagePane.field_u = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_passchars");
                 if (var2 != null) {
@@ -1674,7 +1674,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_invalidage");
                 if (null != var2) {
-                  dg.field_L = UiWidget.a(0, var2);
+                  ContentTransitionDialog.field_L = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_yearrange");
                 if (null != var2) {
@@ -2704,7 +2704,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_nonmember");
                 if (null != var2) {
-                  ad.field_V = UiWidget.a(0, var2);
+                  StandardContentDialog.field_V = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_button_close");
                 if (var2 != null) {
@@ -2968,31 +2968,31 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,1");
                 if (null != var2) {
-                  sh.field_v[1] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[1] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  sh.field_v[2] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[2] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,3");
                 if (null != var2) {
-                  sh.field_v[3] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[3] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  sh.field_v[4] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[4] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,5");
                 if (null != var2) {
-                  sh.field_v[5] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[5] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,6");
                 if (null != var2) {
-                  sh.field_v[6] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[6] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin_alternate,7");
                 if (var2 != null) {
-                  sh.field_v[7] = UiWidget.a(0, var2);
+                  DropTargetWidgetContainer.field_v[7] = UiWidget.a(0, var2);
                 }
                 var2 = lr.a(4688, "subscription_cost_monthly,0");
                 if (var2 != null) {

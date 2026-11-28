@@ -8,7 +8,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements HardwareIndexBuffe
     static hd field_o;
     private BufferElementType field_s;
     static String field_p;
-    static lh field_r;
+    static FullscreenNoticeType field_r;
     static int field_q;
     static int[] field_t;
 
@@ -158,7 +158,7 @@ final class OpenGlIndexBuffer extends OpenGlBuffer implements HardwareIndexBuffe
         field_u = new AircraftDefinition(4.0, 20, 3, 100, 25, 2.0, 20.0, 32, 2);
         field_p = "ACHIEVEMENTS";
         field_o = new hd(1);
-        field_r = new lh();
+        field_r = new FullscreenNoticeType();
         field_t = new int[8192];
     }
 }

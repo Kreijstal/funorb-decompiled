@@ -22,7 +22,7 @@ final class MidiPcmStream extends PcmStream {
     private int[] field_I;
     private int[] field_s;
     private int[] field_N;
-    private k field_M;
+    private MidiFileReader field_M;
     private int[] field_J;
     private int[] field_l;
     private long field_j;
@@ -444,21 +444,21 @@ final class MidiPcmStream extends PcmStream {
                 break;
               }
               if (stackIn_29_0 == stackIn_29_1) {
-                this.field_M.a(var2);
-                int var6 = this.field_M.e(var2);
+                this.field_M.seekTrack(var2);
+                int var6 = this.field_M.readMessage(var2);
                 stackIn_5_0 = -2;
                 stackIn_5_1 = ~var6;
                 if (stackIn_5_0 != stackIn_5_1) {
                   if ((128 & var6) != 0) {
                     this.handleMidiMessage(-128, var6);
                   }
-                  this.field_M.c(var2);
-                  this.field_M.f(var2);
+                  this.field_M.readDelta(var2);
+                  this.field_M.saveTrackPosition(var2);
                   continue;
                 } else {
-                  this.field_M.a();
-                  this.field_M.f(var2);
-                  if (this.field_M.g()) {
+                  this.field_M.markTrackDone();
+                  this.field_M.saveTrackPosition(var2);
+                  if (this.field_M.isDone()) {
                     if (this.field_x != null) {
                       this.a(this.field_k, -2029711608, this.field_x);
                       this.advanceMidiEvents((byte) 122);
@@ -466,10 +466,10 @@ final class MidiPcmStream extends PcmStream {
                     }
                     if (this.field_k &&
                       var3 != 0) {
-                      this.field_M.a(var4);
+                      this.field_M.reset(var4);
                     } else {
                       this.resetPlaybackChannels(true, 12705);
-                      this.field_M.d();
+                      this.field_M.release();
                       return;
                     }
                   }
@@ -478,9 +478,9 @@ final class MidiPcmStream extends PcmStream {
               break;
             }
             if (decompiledFrameCompleted0) {
-              var2 = this.field_M.e();
+              var2 = this.field_M.nextTrack();
               var3 = this.field_M.field_f[var2];
-              var4 = this.field_M.d(var3);
+              var4 = this.field_M.tickTime(var3);
               continue;
             }
           }
@@ -492,7 +492,7 @@ final class MidiPcmStream extends PcmStream {
               var3 > this.field_y) {
               this.field_q = this.field_y;
               this.field_H = -1;
-              this.field_u = this.field_M.d(this.field_q);
+              this.field_u = this.field_M.tickTime(this.field_q);
             }
             stackIn_29_0 = param0;
             stackIn_29_1 = 16;
@@ -565,27 +565,27 @@ final class MidiPcmStream extends PcmStream {
         boolean var7 = (AceOfSkies.obfuscationControl);
         try {
           this.clearMidiPlayback(2097152, param1);
-          this.field_M.a(param3.field_e);
+          this.field_M.parse(param3.field_e);
           this.field_j = 0L;
           boolean stackIn_4_1 = (param2);
           this.field_k = stackIn_4_1;
-          int var5_int = this.field_M.f();
+          int var5_int = this.field_M.trackCount();
           int var6 = 0;
           do {
             if (var6 >= var5_int) {
-              this.field_H = this.field_M.e();
+              this.field_H = this.field_M.nextTrack();
               break;
             }
-            this.field_M.a(var6);
-            this.field_M.c(var6);
-            this.field_M.f(var6);
+            this.field_M.seekTrack(var6);
+            this.field_M.readDelta(var6);
+            this.field_M.saveTrackPosition(var6);
             var6++;
           } while (!var7);
           if (param0 <= 110) {
             this.a(-102, (byte) -90);
           }
           this.field_q = this.field_M.field_f[this.field_H];
-          this.field_u = this.field_M.d(this.field_q);
+          this.field_u = this.field_M.tickTime(this.field_q);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -661,7 +661,7 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_29_2 = null;
         boolean var11 = (AceOfSkies.obfuscationControl);
         try {
-          param2.b();
+          param2.buildPatchUsage();
           boolean var6_int = true;
           Object var7 = null;
           if (~param1 < param0) {
@@ -697,7 +697,7 @@ final class MidiPcmStream extends PcmStream {
           }
           if (decompiledNaturalLoopExit0 &&
             var6_int) {
-            param2.a();
+            param2.releasePatchUsage();
           }
           boolean stackIn_19_0 = var6_int;
           return (stackIn_19_0);
@@ -841,7 +841,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final synchronized void clearMidiPlayback(int param0, boolean param1) {
-        this.field_M.d();
+        this.field_M.release();
         this.field_x = null;
         this.resetPlaybackChannels(param1, 12705);
         if (param0 != 2097152) {
@@ -1342,7 +1342,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_E = new MidiNote[16][128];
         this.field_I = new int[16];
         this.field_C = 1000000;
-        this.field_M = new k();
+        this.field_M = new MidiFileReader();
         this.field_L = new MusicPatchPcmStream(this);
         this.field_n = new IntrusiveNodeHashTable(128);
         this.a((byte) -122, 256, -1);

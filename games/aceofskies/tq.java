@@ -41,7 +41,7 @@ final class tq extends fa {
         GlyphMask.menuScreens[2] = new MenuScreen(2);
         if (qr.field_a <= 0) {
           TextLineMetrics.returnMenuId = 0;
-          if ((64 & hg.field_D) != 0) {
+          if ((64 & DraggableWidgetContainer.field_D) != 0) {
             si.c(true);
             return;
           }
@@ -58,7 +58,7 @@ final class tq extends fa {
           GlyphMask.menuScreens[7] = new MenuScreen(7);
         }
         TextLineMetrics.returnMenuId = 0;
-        if ((64 & hg.field_D) != 0) {
+        if ((64 & DraggableWidgetContainer.field_D) != 0) {
           si.c(true);
           return;
         }

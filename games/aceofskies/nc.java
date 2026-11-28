@@ -27,9 +27,9 @@ final class nc {
           for (int var6 = 0; var6 < var5.length; var6++) {
             if (param4 != null &&
               param4[var6]) {
-              var5[var6] = VorbisSample.a(param0, "", param3[var6]).a();
+              var5[var6] = VorbisSample.loadByName(param0, "", param3[var6]).decodeAllToPcm();
             } else {
-              var5[var6] = SynthesizedSoundEffect.a(param2, "", param3[var6]).a();
+              var5[var6] = SynthesizedSoundEffect.loadByName(param2, "", param3[var6]).toPcmSample();
             }
           }
           if (param1 >= -72) {

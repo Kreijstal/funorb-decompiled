@@ -5,7 +5,7 @@ import java.io.*;
 
 final class AgeValidator extends TextFieldValidator {
     static String field_g;
-    static lt field_f;
+    static ModalDialogHost field_f;
     static String field_e;
 
     final pt getValidationStatus(String param0, int param1) {
@@ -78,7 +78,7 @@ final class AgeValidator extends TextFieldValidator {
           if (this.getValidationStatus(param0, 8192) != bt.field_a) {
             return null;
           }
-          String stackIn_5_0 = dg.field_L;
+          String stackIn_5_0 = ContentTransitionDialog.field_L;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

@@ -210,7 +210,7 @@ final class u extends RenderEffect {
           }
           if (MidiNote.field_l == null) {
             if (ld.field_d) {
-              if (gm.g(-1) <= 30000L) {
+              if (ModalDialog.g(-1) <= 30000L) {
                 HardwareRenderSprite.field_m = jf.field_b;
               } else {
                 HardwareRenderSprite.field_m = rm.field_c;

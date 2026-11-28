@@ -99,7 +99,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             q.outgoingPacket.writeCipheredOpcode(100, 17);
           }
           if (var4 == 11) {
-            jn.a((byte) 124, EditableTextField.m(107));
+            DialogMessagePane.a((byte) 124, EditableTextField.m(107));
           }
           if (var4 == 12) {
             vi.a((byte) 103, kb.a(-1903710079), EditableTextField.m(107));
@@ -326,7 +326,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (this.field_e) {
           return -1;
         }
-        if (!dg.j(27711)) {
+        if (!ContentTransitionDialog.j(27711)) {
           return -1;
         }
         if (BitmapFontMetrics.field_f) {
@@ -441,7 +441,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var3Lifetime1 &&
             0 == RenderEffect.field_a &&
             SoundCache.field_d == 11 &&
-            !dg.j(27711)) {
+            !ContentTransitionDialog.j(27711)) {
             MusicPatchPcmStream.d(1);
           }
           if (RenderEffect.field_a != -1 &&
@@ -481,7 +481,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if ((RenderEffect.field_a != -1 &&
           0 != RenderEffect.field_a ||
-          dg.j(27711)) &&
+          ContentTransitionDialog.j(27711)) &&
           wg.field_b <= kh.correctedCurrentTimeMillis(-119)) {
           BitmapFontMetrics.field_f = false;
           if (RenderEffect.field_a != -1 &&
@@ -491,7 +491,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (0 == RenderEffect.field_a &&
-          !dg.j(27711)) {
+          !ContentTransitionDialog.j(27711)) {
           EmailValidationError.field_a = false;
         }
         if (param1 < 76) {
@@ -510,7 +510,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           cf.field_f = sd.a(false, 1, true, false, SoftCacheReference.field_q);
           CachedArchiveProvider.sharedFontMetricsArchive = uj.field_b;
           SectorCacheStore.field_c = 2;
-          hg.sharedSpriteArchive = oi.field_a;
+          DraggableWidgetContainer.sharedSpriteArchive = oi.field_a;
         }
         if (SectorCacheStore.field_c == 2) {
           if (ij.field_h != null &&
@@ -566,24 +566,24 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (SectorCacheStore.field_c == 11) {
           if (null != fn.field_a && (!fn.field_a.ensureIndexLoaded((byte) -88) ||
             !fn.field_a.tryLoadAllGroups(0))) {
-            PasswordValidator.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
+            PasswordValidator.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, ModalDialog.field_w, fn.field_a, 50));
             boolean decompiledFrameRemainder0 = false;
           }
           else {
             SectorCacheStore.field_c = 12;
-            jn.field_t = true;
+            DialogMessagePane.field_t = true;
           }
         }
         if (SectorCacheStore.field_c == 12 &&
-          !jn.field_t) {
+          !DialogMessagePane.field_t) {
           SectorCacheStore.field_c = 13;
         }
         if (SectorCacheStore.field_c == 13) {
           boolean var3Lifetime2 = true;
-          if (null != hg.field_y) {
-            boolean stackIn_134_0 = !(!hg.field_y.a(-18738));
+          if (null != DraggableWidgetContainer.field_y) {
+            boolean stackIn_134_0 = !(!DraggableWidgetContainer.field_y.a(-18738));
             var3Lifetime2 = stackIn_134_0;
-            PasswordValidator.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
+            PasswordValidator.setLoadingProgress(-59, DraggableWidgetContainer.field_y.field_d, DraggableWidgetContainer.field_y.field_j);
           }
           if (var3Lifetime2) {
             SectorCacheStore.field_c = 20;
@@ -676,7 +676,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 return;
               }
               if (var2 == 18) {
-                to.g(0);
+                SingleChildWidgetContainer.g(0);
                 return;
               }
               v.a("MGS1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);

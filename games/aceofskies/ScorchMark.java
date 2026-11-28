@@ -44,7 +44,7 @@ final class ScorchMark {
           if (param2 >= -7) {
             ScorchMark.clearStaticReferences((byte) -14);
           }
-          if (tn.a(param0, (byte) -127, param3, param1)) {
+          if (GuestPlayConfirmationForm.a(param0, (byte) -127, param3, param1)) {
             return SectorCacheStore.b(-95);
           }
           return null;

@@ -70,7 +70,7 @@ final class np extends hh {
             int stackIn_2_0 = 9216;
             return stackIn_2_0;
           }
-          if (rg.field_A == param0) {
+          if (ResizableModalDialog.field_A == param0) {
             int stackIn_5_0 = 34065;
             return stackIn_5_0;
           }

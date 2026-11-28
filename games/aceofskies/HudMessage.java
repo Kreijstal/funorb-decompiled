@@ -49,7 +49,7 @@ final class HudMessage extends IntrusiveNode {
           return;
         }
         int var4 = 80 * var2Lifetime1 / this.fadeOutTicks;
-        PacketBuffer.gameFont.drawCenteredText(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (NetworkArchiveRequest.field_w - var4), sh.field_u >> 1, this.text);
+        PacketBuffer.gameFont.drawCenteredText(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (NetworkArchiveRequest.field_w - var4), DropTargetWidgetContainer.field_u >> 1, this.text);
     }
 
     HudMessage(String text, int colour) {

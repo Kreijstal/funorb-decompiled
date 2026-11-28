@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ab extends UiWidget implements vm {
+class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
     IntrusiveDeque field_s;
     static String field_r;
 
@@ -56,7 +56,7 @@ class ab extends UiWidget implements vm {
           return null;
         }
         StringBuilder var6 = (StringBuilder) null;
-        this.a((byte) -28, 3, (Hashtable) null, (StringBuilder) null);
+        this.appendChildDebugTrees((byte) -28, 3, (Hashtable) null, (StringBuilder) null);
         return null;
     }
 
@@ -113,7 +113,7 @@ class ab extends UiWidget implements vm {
         }
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void addChild(UiWidget param0, int param1) {
         try {
           if (param1 != 1) {
             field_r = (String) null;
@@ -124,7 +124,7 @@ class ab extends UiWidget implements vm {
         }
     }
 
-    final boolean a(int param0, UiWidget param1) {
+    final boolean focusNextChild(int param0, UiWidget param1) {
         String stackIn_23_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -180,7 +180,7 @@ class ab extends UiWidget implements vm {
         return var2;
     }
 
-    private final void a(byte param0, int param1, Hashtable param2, StringBuilder param3) {
+    private final void appendChildDebugTrees(byte param0, int param1, Hashtable param2, StringBuilder param3) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         try {
@@ -218,7 +218,7 @@ class ab extends UiWidget implements vm {
         }
     }
 
-    ab(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+    DequeWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (WidgetEventListener) null);
         this.field_s = new IntrusiveDeque();
     }
@@ -229,7 +229,7 @@ class ab extends UiWidget implements vm {
         try {
           if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
             this.appendDebugProperties(param0, param1 ^ 32462, param3, param2);
-            this.a((byte) 115, param2, param3, param0);
+            this.appendChildDebugTrees((byte) 115, param2, param3, param0);
           }
           if (param1 != 32462) {
             this.drawWidget((byte) 77, -41, -88, 96);
@@ -273,7 +273,7 @@ class ab extends UiWidget implements vm {
         field_r = null;
         if (!param0) {
           int[] var2 = (int[]) null;
-          ab.a((OpenGlRenderer) null, -29, true, (int[]) null, 99, -122, -8, -126);
+          DequeWidgetContainer.a((OpenGlRenderer) null, -29, true, (int[]) null, 99, -122, -8, -126);
         }
     }
 
@@ -283,7 +283,7 @@ class ab extends UiWidget implements vm {
           UiWidget var7 = (UiWidget) null;
           this.updatePointer((byte) -120, (UiWidget) null, 59, 121);
         }
-        this.b(false);
+        this.refreshChildLayouts(false);
     }
 
     void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
@@ -343,9 +343,9 @@ class ab extends UiWidget implements vm {
             return false;
           }
           if (lp.heldKeys[81]) {
-            stackIn_15_0 = this.b(param3, -107);
+            stackIn_15_0 = this.focusPreviousChild(param3, -107);
           } else {
-            stackIn_15_0 = this.a(80, param3);
+            stackIn_15_0 = this.focusNextChild(80, param3);
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -398,10 +398,10 @@ class ab extends UiWidget implements vm {
         if (param0 != 28660) {
           field_r = (String) null;
         }
-        return this.a(0) != null ? true : false;
+        return this.getFocusedChild(0) != null ? true : false;
     }
 
-    UiWidget a(int param0) {
+    UiWidget getFocusedChild(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         UiWidget var3 = (UiWidget) (var2.c(-1372));
@@ -418,7 +418,7 @@ class ab extends UiWidget implements vm {
         return null;
     }
 
-    final boolean b(UiWidget param0, int param1) {
+    final boolean focusPreviousChild(UiWidget param0, int param1) {
         String stackIn_23_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -428,7 +428,7 @@ class ab extends UiWidget implements vm {
           an var9 = new an(this.field_s);
           if (param1 >= -20) {
             UiWidget var8 = (UiWidget) null;
-            this.a((UiWidget) null, -61);
+            this.addChild((UiWidget) null, -61);
           }
           UiWidget var4 = (UiWidget) (var9.b(true));
           while (var4 != null) {
@@ -493,7 +493,7 @@ class ab extends UiWidget implements vm {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void refreshChildLayouts(boolean param0) {
         an var2 = new an(this.field_s);
         UiWidget var3 = (UiWidget) (var2.c(-1372));
         if (param0) {

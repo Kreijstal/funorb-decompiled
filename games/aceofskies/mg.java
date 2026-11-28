@@ -37,7 +37,7 @@ final class mg {
         }
         try {
           int var4 = 40 + ArchiveNetworkClient.e(-107);
-          int var5 = sh.field_u - var3 >> 1;
+          int var5 = DropTargetWidgetContainer.field_u - var3 >> 1;
           int var6 = NetworkArchiveRequest.field_w - var4 >> 1;
           param0.fillRectAlpha(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
           var2.pushClip(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);

@@ -6,7 +6,7 @@ final class SynthesizedSoundEffect {
     private int field_a;
     private SynthesizedSoundInstrument[] field_b;
 
-    private final byte[] b() {
+    private final byte[] synthesize() {
         int var1 = 0;
         for (int var2 = 0; var2 < 10; var2++) {
           if (this.field_b[var2] != null &&
@@ -23,7 +23,7 @@ final class SynthesizedSoundEffect {
           if (this.field_b[var4] != null) {
             int var5 = this.field_b[var4].field_r * 22050 / 1000;
             int var6 = this.field_b[var4].field_a * 22050 / 1000;
-            int[] var13 = this.field_b[var4].a(var5, this.field_b[var4].field_r);
+            int[] var13 = this.field_b[var4].synthesize(var5, this.field_b[var4].field_r);
             for (int var8 = 0; var8 < var5; var8++) {
               int var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
@@ -36,7 +36,7 @@ final class SynthesizedSoundEffect {
         return var3;
     }
 
-    final static SynthesizedSoundEffect a(ResourceArchive param0, int param1, int param2) {
+    final static SynthesizedSoundEffect load(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.getFile(param1, -10470, param2);
         if (var3 == null) {
           return null;
@@ -44,7 +44,7 @@ final class SynthesizedSoundEffect {
         return new SynthesizedSoundEffect(new PacketBuffer(var3));
     }
 
-    final static SynthesizedSoundEffect a(ResourceArchive param0, String param1, String param2) {
+    final static SynthesizedSoundEffect loadByName(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName(param1, (byte) -71, param2);
         if (var3 == null) {
           return null;
@@ -52,8 +52,8 @@ final class SynthesizedSoundEffect {
         return new SynthesizedSoundEffect(new PacketBuffer(var3));
     }
 
-    final PcmSample a() {
-        byte[] var1 = this.b();
+    final PcmSample toPcmSample() {
+        byte[] var1 = this.synthesize();
         return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
@@ -64,7 +64,7 @@ final class SynthesizedSoundEffect {
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new SynthesizedSoundInstrument();
-            this.field_b[var2].a(param0);
+            this.field_b[var2].decode(param0);
           }
         }
         this.field_a = param0.readUnsignedShort((byte) 0);

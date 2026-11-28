@@ -77,7 +77,7 @@ final class HighscoreNameEntry {
             Object stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
-          MonochromeBitmapFont var2 = new MonochromeBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
+          MonochromeBitmapFont var2 = new MonochromeBitmapFont(param0, FullscreenNoticeType.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
           OpenGlUnderwaterEffect.f(1);
           if (param1 != 544) {
             field_a = false;
@@ -100,15 +100,15 @@ final class HighscoreNameEntry {
 
     final static Sprite[] a(int param0) {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
-        Sprite[] var1 = new Sprite[to.field_t];
-        for (int var2 = param0; var2 < to.field_t; var2++) {
+        Sprite[] var1 = new Sprite[SingleChildWidgetContainer.field_t];
+        for (int var2 = param0; var2 < SingleChildWidgetContainer.field_t; var2++) {
           int var3 = ee.field_e[var2] * ji.field_b[var2];
           byte[] var4 = fk.field_a[var2];
           int[] var5 = new int[var3];
           for (int var6 = 0; var3 > var6; var6++) {
             var5[var6] = ud.field_e[pg.a(255, (int) var4[var6])];
           }
-          var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
+          var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, FullscreenNoticeType.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);
         }
         OpenGlUnderwaterEffect.f(1);
         return var1;

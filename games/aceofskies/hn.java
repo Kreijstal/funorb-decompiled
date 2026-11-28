@@ -17,7 +17,7 @@ final class hn {
           ia.field_a = new int[var3][];
           NetworkArchiveRequest.field_y = new wu[var3];
           for (int var4 = 0; var3 > var4; var4++) {
-            NetworkArchiveRequest.field_y[var4] = sh.a(var8, (byte) -14);
+            NetworkArchiveRequest.field_y[var4] = DropTargetWidgetContainer.a(var8, (byte) -14);
           }
           var10.m((byte) 112);
           int var9 = 0;

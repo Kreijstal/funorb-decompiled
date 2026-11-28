@@ -45,7 +45,7 @@ final class BufferElementType {
             java.applet.Applet var3 = (java.applet.Applet) null;
             BufferElementType.a(true, (java.applet.Applet) null);
           }
-          jn.a((byte) 120, param1);
+          DialogMessagePane.a((byte) 120, param1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "la.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -64,12 +64,12 @@ final class BufferElementType {
         }
         if (param0 != 4) {
           field_h = (BufferElementType) null;
-          if (!gm.field_x.a(false)) {
+          if (!ModalDialog.field_x.a(false)) {
             return OpenGlBuffer.field_j;
           }
           return se.field_a;
         }
-        if (!gm.field_x.a(false)) {
+        if (!ModalDialog.field_x.a(false)) {
           return OpenGlBuffer.field_j;
         }
         return se.field_a;

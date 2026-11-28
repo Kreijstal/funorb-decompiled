@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bc extends to {
+final class LabeledWidgetContainer extends SingleChildWidgetContainer {
     private BitmapFont field_w;
     private int field_u;
     private String field_A;
@@ -26,7 +26,7 @@ final class bc extends to {
             int stackIn_6_0 = 100;
             return stackIn_6_0;
           }
-          String var11 = SoundCache.a(param0, (byte) -18);
+          String var11 = SoundCache.mapNativeLibraryFilename(param0, (byte) -18);
           if (var11 == null) {
             int stackIn_10_0 = -1;
             return stackIn_10_0;
@@ -135,7 +135,7 @@ final class bc extends to {
         return var3Lifetime1;
     }
 
-    bc(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+    LabeledWidgetContainer(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetEventListener) null);
         int stackIn_10_0 = 0;
         String stackIn_15_2 = null;

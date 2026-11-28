@@ -53,7 +53,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             Sprite stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (tn.a(param3, (byte) -127, param1, param2)) {
+          if (GuestPlayConfirmationForm.a(param3, (byte) -127, param1, param2)) {
             return fu.b(30346);
           }
           return null;

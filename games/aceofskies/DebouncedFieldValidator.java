@@ -68,7 +68,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         try {
           int var3_int = 101 % ((65 - param0) / 43);
           IntKeyLookup.field_a = false;
-          ss.field_t = false;
+          StripedProgressWidget.field_t = false;
           if (InstrumentPatch.field_m != null &&
             InstrumentPatch.field_m.field_z) {
             if (param1 != 8) {
@@ -88,12 +88,12 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             }
             if (var4) {
               if (IntKeyLookup.field_a) {
-                param2 = sn.a(bc.field_v, 107, new String[]{param2});
+                param2 = sn.a(LabeledWidgetContainer.field_v, 107, new String[]{param2});
               }
               if (ae.field_f) {
                 param2 = sl.field_n;
               }
-              InstrumentPatch.field_m.a((byte) -117, param1, param2);
+              InstrumentPatch.field_m.showResult((byte) -117, param1, param2);
             }
             if (256 != param1) {
               if (10 == param1) {

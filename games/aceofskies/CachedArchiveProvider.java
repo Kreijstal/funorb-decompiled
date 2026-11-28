@@ -155,7 +155,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final static void b(boolean param0) {
-        tn.a(1, param0, nh.field_b, rt.field_e);
+        GuestPlayConfirmationForm.a(1, param0, nh.field_b, rt.field_e);
         ae.field_f = true;
     }
 

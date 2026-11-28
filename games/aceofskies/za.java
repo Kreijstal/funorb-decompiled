@@ -44,7 +44,7 @@ abstract class za extends IntrusiveNode {
           int var7_int = -99 % ((24 - obfuscationGuard) / 63);
           ClientException.menuRight[screenId] = right;
           bk.menuTop[screenId] = top;
-          oo.menuRowSpacing[screenId] = rowSpacing;
+          ProgressMessageDialog.menuRowSpacing[screenId] = rowSpacing;
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "za.B(" + rowSpacing + ',' + (actions != null ? "{...}" : "null") + ',' + top + ',' + left + ',' + screenId + ',' + right + ',' + obfuscationGuard + ')');
         }

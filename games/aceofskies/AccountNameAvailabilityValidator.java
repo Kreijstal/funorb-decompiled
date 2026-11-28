@@ -22,7 +22,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             this.getValidationMessage((String) null, (byte) -114);
           }
           if (!param0.equals(this.checkedName)) {
-            AccountServiceResult var3 = hg.pollAccountNameCheck(param1 ^ 2147475455, param0);
+            AccountServiceResult var3 = DraggableWidgetContainer.pollAccountNameCheck(param1 ^ 2147475455, param0);
             if (var3 != null &&
               var3.message == null) {
               this.nameAvailable = var3.success;
@@ -89,7 +89,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
-            AccountServiceResult var4 = hg.pollAccountNameCheck(2147483647, param0);
+            AccountServiceResult var4 = DraggableWidgetContainer.pollAccountNameCheck(2147483647, param0);
             if (var4 == null) {
               return null;
             }

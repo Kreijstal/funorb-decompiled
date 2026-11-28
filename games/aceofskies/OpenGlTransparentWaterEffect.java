@@ -77,10 +77,10 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
         if (param1 != 111) {
           return;
         }
-        if ((var3 & hg.field_D) != 0) {
+        if ((var3 & DraggableWidgetContainer.field_D) != 0) {
           return;
         }
-        hg.field_D = hg.field_D | var3;
+        DraggableWidgetContainer.field_D = DraggableWidgetContainer.field_D | var3;
         r.field_n = r.field_n | var3;
         MenuScreen.field_g.addLast(92, new iq(param2));
         if (!tt.field_a) {

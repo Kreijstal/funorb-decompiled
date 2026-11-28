@@ -403,10 +403,10 @@ class UiWidget extends IntrusiveNode {
               return param3;
             }
             this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-            hg var7 = mm.field_a;
+            DraggableWidgetContainer var7 = mm.field_a;
             if (var7 != null) {
-              if (var7.field_o instanceof ma) {
-                ((ma) (var7.field_o)).a(var7, -16073, (sh) null);
+              if (var7.field_o instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var7.field_o)).widgetDropped(var7, -16073, (DropTargetWidgetContainer) null);
               }
               mm.field_a = null;
             }
@@ -429,10 +429,10 @@ class UiWidget extends IntrusiveNode {
               return param3;
             }
             this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-            hg var8 = mm.field_a;
+            DraggableWidgetContainer var8 = mm.field_a;
             if (var8 != null) {
-              if (var8.field_o instanceof ma) {
-                ((ma) (var8.field_o)).a(var8, -16073, (sh) null);
+              if (var8.field_o instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var8.field_o)).widgetDropped(var8, -16073, (DropTargetWidgetContainer) null);
               }
               mm.field_a = null;
             }
@@ -451,11 +451,11 @@ class UiWidget extends IntrusiveNode {
             return param3;
           }
           this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-          hg var9 = mm.field_a;
-          hg var6 = var9;
+          DraggableWidgetContainer var9 = mm.field_a;
+          DraggableWidgetContainer var6 = var9;
           if (var9 != null) {
-            if (var9.field_o instanceof ma) {
-              ((ma) (var9.field_o)).a(var9, -16073, (sh) null);
+            if (var9.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var9.field_o)).widgetDropped(var9, -16073, (DropTargetWidgetContainer) null);
             }
             mm.field_a = null;
           }
@@ -494,11 +494,11 @@ class UiWidget extends IntrusiveNode {
             return param3;
           }
           this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-          hg var10 = mm.field_a;
-          hg var6Lifetime1 = var10;
+          DraggableWidgetContainer var10 = mm.field_a;
+          DraggableWidgetContainer var6Lifetime1 = var10;
           if (var10 != null) {
-            if (var10.field_o instanceof ma) {
-              ((ma) (var10.field_o)).a(var10, -16073, (sh) null);
+            if (var10.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var10.field_o)).widgetDropped(var10, -16073, (DropTargetWidgetContainer) null);
             }
             mm.field_a = null;
           }
@@ -521,10 +521,10 @@ class UiWidget extends IntrusiveNode {
             return param3;
           }
           this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-          hg var12 = mm.field_a;
+          DraggableWidgetContainer var12 = mm.field_a;
           if (var12 != null) {
-            if (var12.field_o instanceof ma) {
-              ((ma) (var12.field_o)).a(var12, -16073, (sh) null);
+            if (var12.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var12.field_o)).widgetDropped(var12, -16073, (DropTargetWidgetContainer) null);
             }
             mm.field_a = null;
           }
@@ -543,10 +543,10 @@ class UiWidget extends IntrusiveNode {
           return param3;
         }
         this.pointerReleased(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-        hg var13 = mm.field_a;
+        DraggableWidgetContainer var13 = mm.field_a;
         if (var13 != null) {
-          if (var13.field_o instanceof ma) {
-            ((ma) (var13.field_o)).a(var13, -16073, (sh) null);
+          if (var13.field_o instanceof WidgetDropListener) {
+            ((WidgetDropListener) (var13.field_o)).widgetDropped(var13, -16073, (DropTargetWidgetContainer) null);
           }
           mm.field_a = null;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh {
+final class FullscreenNoticeType {
     static int[] field_a;
 
     public final String toString() {

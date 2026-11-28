@@ -426,7 +426,7 @@ final class SocketArchiveNetworkClient extends ArchiveNetworkClient {
           if (param0 != 1) {
             field_r = 92;
           }
-          if (!tn.a(param1, (byte) -127, param3, param2)) {
+          if (!GuestPlayConfirmationForm.a(param1, (byte) -127, param3, param2)) {
             return null;
           }
           Sprite[] stackIn_6_0 = HighscoreNameEntry.a(param0 ^ 1);

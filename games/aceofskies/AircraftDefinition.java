@@ -24,7 +24,7 @@ final class AircraftDefinition {
         if (sl.field_p == this) {
           return lj.aircraftEngineSamples[2];
         }
-        if (this == gm.field_y) {
+        if (this == ModalDialog.field_y) {
           return lj.aircraftEngineSamples[3];
         }
         if (qq.field_g == this) {
@@ -62,7 +62,7 @@ final class AircraftDefinition {
         }
         if (obfuscationGuard != -32275) {
           this.toString();
-          if (gm.field_y == this) {
+          if (ModalDialog.field_y == this) {
             return hr.aircraftSprites[3];
           }
           if (this == qq.field_g) {
@@ -79,7 +79,7 @@ final class AircraftDefinition {
           }
           throw new RuntimeException();
         }
-        if (gm.field_y == this) {
+        if (ModalDialog.field_y == this) {
           return hr.aircraftSprites[3];
         }
         if (this == qq.field_g) {

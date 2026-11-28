@@ -74,11 +74,11 @@ final class gu {
               int var11 = uf.field_d[var9];
               var6[0][var10] = SoftCacheReference.field_t[var11];
               var19[0][var10 * 4] = DualLinkDequeIterator.field_c[var11];
-              var19[0][1 + var10 * 4] = hg.field_C[var11];
+              var19[0][1 + var10 * 4] = DraggableWidgetContainer.field_C[var11];
               var19[0][var10 * 4 + 2] = qd.field_p[var11];
               var19[0][3 + 4 * var10] = dd.field_c[var11];
               if (fd.isCurrentPlayerName(SoftCacheReference.field_t[var11], (byte) -6) &&
-                qd.field_p[var11] + (hg.field_C[var11] + dd.field_c[var11]) == 0) {
+                qd.field_p[var11] + (DraggableWidgetContainer.field_C[var11] + dd.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -92,11 +92,11 @@ final class gu {
               int var11Lifetime1 = uf.field_d[var9Lifetime1 + var5];
               var6[1][var14] = SoftCacheReference.field_t[var11Lifetime1];
               var19[1][var14 * 4] = DualLinkDequeIterator.field_c[var11Lifetime1];
-              var19[1][var14 * 4 + 1] = hg.field_C[var11Lifetime1];
+              var19[1][var14 * 4 + 1] = DraggableWidgetContainer.field_C[var11Lifetime1];
               var19[1][2 + var14 * 4] = qd.field_p[var11Lifetime1];
               var19[1][3 + var14 * 4] = dd.field_c[var11Lifetime1];
               if (fd.isCurrentPlayerName(SoftCacheReference.field_t[var11Lifetime1], (byte) -6) &&
-                hg.field_C[var11Lifetime1] + qd.field_p[var11Lifetime1] + dd.field_c[var11Lifetime1] == 0) {
+                DraggableWidgetContainer.field_C[var11Lifetime1] + qd.field_p[var11Lifetime1] + dd.field_c[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

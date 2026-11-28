@@ -9,7 +9,7 @@ abstract class ArchiveNetworkClient {
     static TextureCombineSource field_i;
     SecondaryNodeDeque field_d;
     SecondaryNodeDeque field_n;
-    static lh field_o;
+    static FullscreenNoticeType field_o;
     long field_m;
     int field_p;
     PacketBuffer field_l;
@@ -94,35 +94,35 @@ abstract class ArchiveNetworkClient {
           throw new IllegalStateException();
         }
         if (InstrumentPatch.field_m != null) {
-          InstrumentPatch.field_m.h((byte) 9);
+          InstrumentPatch.field_m.closeDialog((byte) 9);
           String var2 = ka.a(param0 ^ 118);
           if (param0 != -21) {
             field_i = (TextureCombineSource) null;
             vr.field_b = new LoginPanel(var2, (String) null, true, false, false);
-            AgeValidator.field_f.a(ClientException.field_d, 0);
-            ClientException.field_d.d(vr.field_b, -30244);
-            ClientException.field_d.e((byte) 85);
+            AgeValidator.field_f.showDialog(ClientException.field_d, 0);
+            ClientException.field_d.replaceContent(vr.field_b, -30244);
+            ClientException.field_d.finishResize((byte) 85);
             return;
           }
           vr.field_b = new LoginPanel(var2, (String) null, true, false, false);
-          AgeValidator.field_f.a(ClientException.field_d, 0);
-          ClientException.field_d.d(vr.field_b, -30244);
-          ClientException.field_d.e((byte) 85);
+          AgeValidator.field_f.showDialog(ClientException.field_d, 0);
+          ClientException.field_d.replaceContent(vr.field_b, -30244);
+          ClientException.field_d.finishResize((byte) 85);
           return;
         }
         String var3 = ka.a(param0 ^ 118);
         if (param0 == -21) {
           vr.field_b = new LoginPanel(var3, (String) null, true, false, false);
-          AgeValidator.field_f.a(ClientException.field_d, 0);
-          ClientException.field_d.d(vr.field_b, -30244);
-          ClientException.field_d.e((byte) 85);
+          AgeValidator.field_f.showDialog(ClientException.field_d, 0);
+          ClientException.field_d.replaceContent(vr.field_b, -30244);
+          ClientException.field_d.finishResize((byte) 85);
           return;
         }
         field_i = (TextureCombineSource) null;
         vr.field_b = new LoginPanel(var3, (String) null, true, false, false);
-        AgeValidator.field_f.a(ClientException.field_d, 0);
-        ClientException.field_d.d(vr.field_b, -30244);
-        ClientException.field_d.e((byte) 85);
+        AgeValidator.field_f.showDialog(ClientException.field_d, 0);
+        ClientException.field_d.replaceContent(vr.field_b, -30244);
+        ClientException.field_d.finishResize((byte) 85);
     }
 
     abstract void b(byte param0);
@@ -157,7 +157,7 @@ abstract class ArchiveNetworkClient {
     static {
         field_q = "radar_sweep_oneshot";
         field_i = new TextureCombineSource();
-        field_o = new lh();
+        field_o = new FullscreenNoticeType();
         field_f = null;
     }
 }

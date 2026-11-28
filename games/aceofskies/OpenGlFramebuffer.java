@@ -117,7 +117,7 @@ final class OpenGlFramebuffer implements up {
               PacketBuffer.field_k[var18] = PacketBuffer.field_k[var18] + ia.field_a[var15][var18];
             }
             eg.a(var17, MouseWheelInput.field_e, 45, true, false, PacketBuffer.field_k, false);
-            hg.a(var14, var8Lifetime1, var13Lifetime1, var12Lifetime1, var9Lifetime1, 255, var7Lifetime1, var17);
+            DraggableWidgetContainer.a(var14, var8Lifetime1, var13Lifetime1, var12Lifetime1, var9Lifetime1, 255, var7Lifetime1, var17);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

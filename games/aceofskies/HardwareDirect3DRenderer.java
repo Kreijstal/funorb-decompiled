@@ -571,7 +571,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
           return;
         }
         int var3 = 0;
-        if (param0 == rg.field_A) {
+        if (param0 == ResizableModalDialog.field_A) {
           var3 = 65536;
         } else if (param0 == ij.field_g) {
           var3 = 131072;

@@ -11,9 +11,9 @@ final class we {
         try {
           MusicPatchPcmStream.field_m.serviceOutput();
           RendererBitmapFont.field_a.serviceOutput();
-          ad.field_U = ad.field_U - 1;
-          if (0 == ad.field_U) {
-            ad.field_U = 200;
+          StandardContentDialog.field_U = StandardContentDialog.field_U - 1;
+          if (0 == StandardContentDialog.field_U) {
+            StandardContentDialog.field_U = 200;
             SoundPlayback var1 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
             while (var1 != null) {
               if (!var1.field_i.isLinked((byte) 93)) {

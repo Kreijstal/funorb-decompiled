@@ -18,17 +18,17 @@ final class av {
         za.registerMenuLayout(32, new int[]{2, 5}, 400, 260, 5, 498, (byte) -64);
         za.registerMenuLayout(32, new int[]{15, 16}, 200, 110, 6, 530, (byte) -65);
         za.registerMenuLayout(32, new int[]{12, 13, 5}, 240, 170, 7, 470, (byte) 119);
-        oq.field_K = kn.bigFontMetrics.measureTextWidth((byte) 94, du.menuActionLabels[12]);
+        FullscreenStatusDialog.field_K = kn.bigFontMetrics.measureTextWidth((byte) 94, du.menuActionLabels[12]);
         int var1 = kn.bigFontMetrics.measureTextWidth((byte) 94, du.menuActionLabels[13]);
-        if (oq.field_K < var1) {
-          oq.field_K = var1;
+        if (FullscreenStatusDialog.field_K < var1) {
+          FullscreenStatusDialog.field_K = var1;
         }
         int var2 = 4 + ImageProducerRasterBuffer.titleFontMetrics.field_a + ImageProducerRasterBuffer.titleFontMetrics.maxDescent;
         bk.menuTop[6] = var2 + 200 + (ImageProducerRasterBuffer.titleFontMetrics.maxAscent + ImageProducerRasterBuffer.titleFontMetrics.maxDescent);
         if (!param0) {
           av.clearStaticReferences((byte) -119);
         }
-        oo.menuRowSpacing[6] = 30 + 2 * var2;
+        ProgressMessageDialog.menuRowSpacing[6] = 30 + 2 * var2;
         return true;
     }
 

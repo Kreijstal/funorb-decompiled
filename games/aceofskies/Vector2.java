@@ -201,7 +201,7 @@ final class Vector2 {
           Object var1 = OpenGlBuffer.field_d;
           synchronized (var1) {
             CacheReference.field_n = CacheReference.field_n + 1;
-            ch.field_a = lt.field_u;
+            ch.field_a = ModalDialogHost.field_u;
             if (param0 > fb.field_a) {
               for (var2 = 0; var2 < 112; var2++) {
                 lp.heldKeys[var2] = false;
@@ -218,7 +218,7 @@ final class Vector2 {
                 lp.heldKeys[var2] = true;
               }
             }
-            lt.field_u = SpriteState.field_w;
+            ModalDialogHost.field_u = SpriteState.field_w;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

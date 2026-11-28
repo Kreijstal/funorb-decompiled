@@ -72,7 +72,7 @@ final class CipherPacketBuffer extends PacketBuffer {
 
     final static String k(byte param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        String var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
+        String var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + AlphaWidgetContainer.field_w + ") " + qs.field_b;
         String var1 = var6;
         if (ArchiveRequest.field_s <= 0) {
           if (param0 == 65) {

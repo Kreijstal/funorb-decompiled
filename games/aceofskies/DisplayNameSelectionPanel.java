@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DisplayNameSelectionPanel extends ab implements NameSuggestionListener, WidgetActivationListener {
+final class DisplayNameSelectionPanel extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     private InteractiveWidget field_v;
     static IntrusiveDeque field_z;
     NameSuggestionsPanel field_t;
@@ -65,17 +65,17 @@ final class DisplayNameSelectionPanel extends ab implements NameSuggestionListen
         int var5 = 200;
         var2.setBounds(50, 20, var3, 270, (byte) 124);
         var3 += 50;
-        this.a(var2, 1);
+        this.addChild(var2, 1);
         var3 = var3 + (5 + this.a(this.field_w, 170, var3, (byte) 107, SecondaryKeyHashTable.field_g, sc.field_b));
         this.field_v.setBounds(40, -var5 + 496 >> 1, var3, var5, (byte) 126);
         this.field_y.setBounds(40, 3 + var4, var3 + 15, 60, (byte) 125);
         this.field_y.field_o = (WidgetEventListener) (this);
         this.field_v.field_o = (WidgetEventListener) (this);
-        this.a(this.field_v, 1);
-        this.a(this.field_y, 1);
+        this.addChild(this.field_v, 1);
+        this.addChild(this.field_y, 1);
         this.field_t = new NameSuggestionsPanel((NameSuggestionListener) (this));
         this.field_t.setBounds(150, this.field_w.field_q + this.field_w.field_p + 60, 20, -60 - this.field_w.field_q + (-this.field_w.field_p + this.field_q), (byte) 124);
-        this.a(this.field_t, 1);
+        this.addChild(this.field_t, 1);
         this.setBounds(var4 + 55 + var3, 0, 0, 496, (byte) 126);
     }
 
@@ -101,11 +101,11 @@ final class DisplayNameSelectionPanel extends ab implements NameSuggestionListen
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          bc var10 = new bc(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
-          this.a(var10, param1 - 125);
+          LabeledWidgetContainer var10 = new LabeledWidgetContainer(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
+          this.addChild(var10, param1 - 125);
           kb var9 = new kb(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
           var9.field_o = (WidgetEventListener) (this);
-          this.a(var9, 1);
+          this.addChild(var9, 1);
           int stackIn_1_0 = var9.field_n + var10.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class DisplayNameSelectionPanel extends ab implements NameSuggestionListen
         if (param1 != 0) {
           return;
         }
-        hg.a(param0, true, false);
+        DraggableWidgetContainer.a(param0, true, false);
     }
 
     final boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
@@ -172,14 +172,14 @@ final class DisplayNameSelectionPanel extends ab implements NameSuggestionListen
             return true;
           }
           if (param1 == 98) {
-            boolean stackIn_7_0 = this.b(param3, -72);
+            boolean stackIn_7_0 = this.focusPreviousChild(param3, -72);
             return stackIn_7_0;
           }
           int var5_int = 42 / ((param0 + 53) / 33);
           if (param1 != 99) {
             return false;
           }
-          boolean stackIn_10_0 = this.a(80, param3);
+          boolean stackIn_10_0 = this.focusNextChild(80, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

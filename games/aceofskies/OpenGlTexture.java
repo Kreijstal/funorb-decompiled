@@ -376,8 +376,8 @@ abstract class OpenGlTexture implements HardwareTexture {
           this.field_f = param5 ? true : false;
           this.field_b = param4;
           this.field_c = param3;
-          jaggl.OpenGL.glGenTextures(1, tn.field_w, 0);
-          this.field_d = tn.field_w[0];
+          jaggl.OpenGL.glGenTextures(1, GuestPlayConfirmationForm.field_w, 0);
+          this.field_d = GuestPlayConfirmationForm.field_w[0];
           this.d((byte) 127);
           this.a(0, 4);
         } catch (RuntimeException runtimeException) {

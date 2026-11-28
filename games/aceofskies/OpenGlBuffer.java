@@ -244,9 +244,9 @@ abstract class OpenGlBuffer implements HardwareBuffer {
         try {
           int var3_int = 117 % ((16 - param2) / 58);
           ae.field_f = param1 ? true : false;
-          ss.field_t = true;
-          InstrumentPatch.field_m = new oo(AgeValidator.field_f, b.field_c, param0, nf.field_a, ae.field_f);
-          AgeValidator.field_f.a(InstrumentPatch.field_m, 0);
+          StripedProgressWidget.field_t = true;
+          InstrumentPatch.field_m = new ProgressMessageDialog(AgeValidator.field_f, b.field_c, param0, nf.field_a, ae.field_f);
+          AgeValidator.field_f.showDialog(InstrumentPatch.field_m, 0);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

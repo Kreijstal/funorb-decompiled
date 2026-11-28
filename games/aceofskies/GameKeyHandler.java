@@ -65,7 +65,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     final static Sprite[] a(int param0, boolean param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
-        var3[4] = tn.a(param0, 64, true);
+        var3[4] = GuestPlayConfirmationForm.a(param0, 64, true);
         if (!param1) {
           return var2;
         }

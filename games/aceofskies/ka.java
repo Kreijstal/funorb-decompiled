@@ -52,7 +52,7 @@ abstract class ka {
           var2_long = kh.correctedCurrentTimeMillis(-125);
           if (tj.field_m != 0 &&
             0 > ec.field_g) {
-            m var4_ref_m = (m) (oo.field_T.first(268435455));
+            m var4_ref_m = (m) (ProgressMessageDialog.field_T.first(268435455));
             if (var4_ref_m != null &&
               var2_long > var4_ref_m.field_e) {
               var4_ref_m.unlink(-123);
@@ -62,8 +62,8 @@ abstract class ka {
                 IntKeyLookup.incomingPacket.payload[var5_int] = var4_ref_m.field_h[var5_int];
               }
               ScoreSubmission.field_l = kg.field_b;
-              kg.field_b = hi.field_w;
-              hi.field_w = qs.field_b;
+              kg.field_b = AlphaWidgetContainer.field_w;
+              AlphaWidgetContainer.field_w = qs.field_b;
               qs.field_b = var4_ref_m.field_i;
               return true;
             }
@@ -97,8 +97,8 @@ abstract class ka {
             }
             if (tj.field_m == 0) {
               ScoreSubmission.field_l = kg.field_b;
-              kg.field_b = hi.field_w;
-              hi.field_w = qs.field_b;
+              kg.field_b = AlphaWidgetContainer.field_w;
+              AlphaWidgetContainer.field_w = qs.field_b;
               qs.field_b = ec.field_g;
               ec.field_g = -1;
               return true;
@@ -114,7 +114,7 @@ abstract class ka {
             for (int var6 = 0; ArchiveRequest.field_s > var6; var6++) {
               var5.field_h[var6] = IntKeyLookup.incomingPacket.payload[var6];
             }
-            oo.field_T.addLast(88, var5);
+            ProgressMessageDialog.field_T.addLast(88, var5);
             ec.field_g = -1;
             stackIn_19_0 = ec.field_g;
           }

@@ -3,7 +3,7 @@
  */
 final class TextLineMetrics {
     int field_d;
-    static lh field_k;
+    static FullscreenNoticeType field_k;
     static String field_j;
     int[] field_h;
     int field_f;
@@ -164,7 +164,7 @@ final class TextLineMetrics {
 
     static {
         field_j = "Waiting for graphics";
-        field_k = new lh();
+        field_k = new FullscreenNoticeType();
         field_a = "Passwords must be between 5 and 20 characters long";
         returnMenuId = 0;
     }

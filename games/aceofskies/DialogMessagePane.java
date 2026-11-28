@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends ab implements WidgetActivationListener {
+final class DialogMessagePane extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_u;
     private InteractiveWidget[] field_y;
     static boolean field_t;
-    private oo field_x;
+    private ProgressMessageDialog field_x;
     private String field_z;
     private int field_v;
     private BitmapFont field_w;
     private int[] field_A;
 
-    jn(oo param0, BitmapFont param1, String param2) {
+    DialogMessagePane(ProgressMessageDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         this.field_v = 0;
         try {
@@ -28,12 +28,12 @@ final class jn extends ab implements WidgetActivationListener {
     public static void h(int param0) {
         if (param0 > -55) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          jn.a((byte) -63, (java.applet.Applet) null);
+          DialogMessagePane.a((byte) -63, (java.applet.Applet) null);
         }
         field_u = null;
     }
 
-    final InteractiveWidget a(WidgetEventListener param0, int param1, String param2) {
+    final InteractiveWidget addListenerButton(WidgetEventListener param0, int param1, String param2) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         try {
@@ -41,12 +41,12 @@ final class jn extends ab implements WidgetActivationListener {
           var4.field_e = (WidgetRenderer) ((Object) new qb());
           if (param1 != 17547) {
             String var6 = (String) null;
-            this.a((WidgetEventListener) null, 91, (String) null);
+            this.addListenerButton((WidgetEventListener) null, 91, (String) null);
           }
           int var5 = -2 + this.field_n;
           this.setBounds(34 + this.field_n, 0, 0, this.field_q, (byte) 123);
           var4.setBounds(30, 7, var5, -14 + this.field_q, (byte) 123);
-          this.a(var4, param1 - 17546);
+          this.addChild(var4, param1 - 17546);
           InteractiveWidget stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,7 +76,7 @@ final class jn extends ab implements WidgetActivationListener {
             if (this.field_y[var6_int] == param1) {
               int var7 = this.field_A[var6_int];
               if (var7 == -1) {
-                this.field_x.h((byte) -67);
+                this.field_x.closeDialog((byte) -67);
                 break;
               }
               oi.a(this.field_A[var6_int], 20665);
@@ -100,14 +100,14 @@ final class jn extends ab implements WidgetActivationListener {
           }
           if (fa.field_b.field_g) {
             r.field_n = r.field_n & ~fa.field_b.field_e;
-            hg.field_D = hg.field_D | fa.field_b.field_e;
+            DraggableWidgetContainer.field_D = DraggableWidgetContainer.field_D | fa.field_b.field_e;
             InstrumentPatch.field_p = true;
             fa.field_b = null;
           }
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void growActions(int param0, int param1) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_v >= param1) {
           return;
@@ -177,11 +177,11 @@ final class jn extends ab implements WidgetActivationListener {
         this.field_w.drawParagraph(this.field_z, this.field_p + param3 + 14, 10 + this.field_h + param2, this.field_q - 28, this.field_n, 16777215, -1, 0, 0, this.field_w.maxAscent);
     }
 
-    final void a(int param0, byte param1, String param2) {
+    final void addActionButton(int param0, byte param1, String param2) {
         try {
           int var4_int = this.field_v;
-          this.a(1, 1 + var4_int);
-          this.field_y[var4_int] = this.a((WidgetEventListener) (this), 17547, param2);
+          this.growActions(1, 1 + var4_int);
+          this.field_y[var4_int] = this.addListenerButton((WidgetEventListener) (this), 17547, param2);
           this.field_A[var4_int] = param0;
           int var5 = -116 % ((param1 - 17) / 58);
         } catch (RuntimeException runtimeException) {

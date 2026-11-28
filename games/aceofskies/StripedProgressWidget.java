@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ss extends UiWidget {
+final class StripedProgressWidget extends UiWidget {
     private int field_y;
     private Sprite field_A;
     private int field_B;
@@ -21,10 +21,10 @@ final class ss extends UiWidget {
           return;
         }
         super.setBounds(param0, param1, param2, param3, (byte) 124);
-        this.a(-104);
+        this.refreshTextures(-104);
     }
 
-    private final Sprite b(int param0, int param1, int param2) {
+    private final Sprite createStripeTexture(int param0, int param1, int param2) {
         Sprite var13 = new Sprite(this.field_y * 2, this.field_n);
         ProxySocketConnector.a(var13, -14492);
         int var5 = this.field_n >> 1;
@@ -44,21 +44,21 @@ final class ss extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(-this.field_y + var7, var6, this.field_y, var12Lifetime1);
         }
         if (param1 != 128) {
-          this.a(90, 49, (byte) 110);
+          this.setColours(90, 49, (byte) 110);
         }
         sl.c(2765);
         return var13;
     }
 
-    private final void a(int param0) {
-        this.field_w = new Sprite[]{this.b(this.field_v, 128, this.field_B), this.b(this.field_x, 128, this.field_s)};
+    private final void refreshTextures(int param0) {
+        this.field_w = new Sprite[]{this.createStripeTexture(this.field_v, 128, this.field_B), this.createStripeTexture(this.field_x, 128, this.field_s)};
         int var2 = 64 % ((param0 + 63) / 35);
-        this.field_D = this.b(true);
+        this.field_D = this.createCapMask(true);
         this.field_C = this.field_D.copyMirroredHorizontally();
         this.field_A = new Sprite(this.field_n >> 1, this.field_n);
     }
 
-    ss(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
@@ -68,27 +68,27 @@ final class ss extends UiWidget {
         }
         int var5 = param3 + this.field_p;
         int var6 = this.field_h + param2;
-        this.a(var5, 118, var6, this.field_w[0]);
+        this.drawStripeTexture(var5, 118, var6, this.field_w[0]);
         if (param0 < 64) {
           this.field_B = -13;
         }
         if (this.field_z < 65536) {
           fp.a((byte) 77, var6, var6 + this.field_n, this.field_q + var5, (this.field_q * this.field_z >> 16) + var5);
-          this.a(var5, -101, var6, this.field_w[1]);
+          this.drawStripeTexture(var5, -101, var6, this.field_w[1]);
           sl.c(2765);
         }
     }
 
-    final void a(int param0, int param1, byte param2) {
+    final void setColours(int param0, int param1, byte param2) {
         this.field_x = (16711422 & param1) >> 1;
         this.field_B = param0;
         int var4 = -88 % ((-6 - param2) / 58);
         this.field_v = param1;
         this.field_s = (param0 & 16711422) >> 1;
-        this.a(-116);
+        this.refreshTextures(-116);
     }
 
-    private final Sprite b(boolean param0) {
+    private final Sprite createCapMask(boolean param0) {
         if (!param0) {
           this.field_v = -80;
         }
@@ -137,7 +137,7 @@ final class ss extends UiWidget {
         }
     }
 
-    private final void a(int param0, int param1, int param2, Sprite param3) {
+    private final void drawStripeTexture(int param0, int param1, int param2, Sprite param3) {
         String stackIn_17_2 = null;
         int var8 = 0;
         int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -183,7 +183,7 @@ final class ss extends UiWidget {
         }
     }
 
-    private ss(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private StripedProgressWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         this.field_s = param8;
         this.field_y = param4;
         this.field_B = param6;

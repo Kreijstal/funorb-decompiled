@@ -10,10 +10,10 @@ final class IterableDualLinkDeque implements Iterable {
 
     final static boolean a(boolean param0, int param1, int param2) {
         if (param0) {
-          return to.b(-7493, param1, param2) & BufferElementType.a(param2, param1, (byte) 70);
+          return SingleChildWidgetContainer.b(-7493, param1, param2) & BufferElementType.a(param2, param1, (byte) 70);
         }
         IterableDualLinkDeque.a(true, -18, 122);
-        return to.b(-7493, param1, param2) & BufferElementType.a(param2, param1, (byte) 70);
+        return SingleChildWidgetContainer.b(-7493, param1, param2) & BufferElementType.a(param2, param1, (byte) 70);
     }
 
     final void a(DualLinkNode param0, byte param1) {

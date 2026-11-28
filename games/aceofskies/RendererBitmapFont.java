@@ -87,11 +87,11 @@ abstract class RendererBitmapFont {
               MouseWheelInput.rendererCurrentTextColor = FrameTimer.rendererDefaultTextColor;
             } else if (tag.startsWith("str=")) {
               CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
-              rs.rendererStrikethroughColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
+              RegistrationAgreementPane.rendererStrikethroughColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
             } else if (tag.equals("str")) {
-              rs.rendererStrikethroughColor = -16777216 & MouseWheelInput.rendererCurrentTextColor | 8388608;
+              RegistrationAgreementPane.rendererStrikethroughColor = -16777216 & MouseWheelInput.rendererCurrentTextColor | 8388608;
             } else if (tag.equals("/str")) {
-              rs.rendererStrikethroughColor = -1;
+              RegistrationAgreementPane.rendererStrikethroughColor = -1;
             } else if (tag.startsWith("u=")) {
               CharSequence var8 = (CharSequence) ((Object) tag.substring(2));
               PacketBuffer.rendererUnderlineColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
@@ -390,8 +390,8 @@ abstract class RendererBitmapFont {
                   this.drawGlyphWithMask((char) var14, penX, baselineY, MouseWheelInput.rendererCurrentTextColor, false, mask, maskX, maskY);
                 }
                 int var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
-                if (rs.rendererStrikethroughColor != -1) {
-                  this.renderer.drawHorizontalLineAlpha(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), rs.rendererStrikethroughColor, 28321, penX, var15);
+                if (RegistrationAgreementPane.rendererStrikethroughColor != -1) {
+                  this.renderer.drawHorizontalLineAlpha(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), RegistrationAgreementPane.rendererStrikethroughColor, 28321, penX, var15);
                 }
                 if (PacketBuffer.rendererUnderlineColor != -1) {
                   this.renderer.drawHorizontalLineAlpha(1 + (baselineY + this.metrics.lineAdvance), PacketBuffer.rendererUnderlineColor, 28321, penX, var15);
@@ -492,7 +492,7 @@ abstract class RendererBitmapFont {
     abstract void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass);
 
     private final void resetTextStyle(int shadowColor, int underlineColor, int textColor) {
-        rs.rendererStrikethroughColor = -1;
+        RegistrationAgreementPane.rendererStrikethroughColor = -1;
         FrameTimer.rendererDefaultTextColor = textColor;
         MouseWheelInput.rendererCurrentTextColor = textColor;
         OpenGlRenderSprite.rendererSpaceExpansionQ8 = 0;

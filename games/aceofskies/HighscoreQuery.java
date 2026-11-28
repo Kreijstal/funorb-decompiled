@@ -28,7 +28,7 @@ final class HighscoreQuery extends IntrusiveNode {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          if (!tn.a(param3, (byte) -127, param2, param4)) {
+          if (!GuestPlayConfirmationForm.a(param3, (byte) -127, param2, param4)) {
             Object stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }

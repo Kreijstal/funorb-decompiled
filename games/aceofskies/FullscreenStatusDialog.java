@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oq extends rg implements WidgetActivationListener {
+final class FullscreenStatusDialog extends ResizableModalDialog implements WidgetActivationListener {
     private InteractiveWidget field_J;
     static int field_K;
 
-    oq(lt param0, lh param1) {
+    FullscreenStatusDialog(ModalDialogHost param0, FullscreenNoticeType param1) {
         super(param0, 200, 150);
         Object var3 = null;
         String stackIn_13_2 = null;
@@ -31,8 +31,8 @@ final class oq extends rg implements WidgetActivationListener {
           var4.field_n = 80;
           var4.field_p = 0;
           var4.field_e = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(oi.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, 1);
-          this.field_J = this.a(ne.field_e, -83, (WidgetEventListener) (this));
+          this.addChild(var4, 1);
+          this.field_J = this.createCloseButton(ne.field_e, -83, (WidgetEventListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ final class oq extends rg implements WidgetActivationListener {
     public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         try {
           if (this.field_J == param1) {
-            this.g((byte) 22);
+            this.closeStatusNotice((byte) 22);
           }
           int var6_int = 109 / ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {
@@ -65,7 +65,7 @@ final class oq extends rg implements WidgetActivationListener {
         }
     }
 
-    private final void g(byte param0) {
+    private final void closeStatusNotice(byte param0) {
         if (!this.field_z) {
           return;
         }
@@ -75,7 +75,7 @@ final class oq extends rg implements WidgetActivationListener {
         this.field_z = false;
     }
 
-    private final InteractiveWidget a(String param0, int param1, WidgetEventListener param2) {
+    private final InteractiveWidget createCloseButton(String param0, int param1, WidgetEventListener param2) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
@@ -84,7 +84,7 @@ final class oq extends rg implements WidgetActivationListener {
           int var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
           var4.setBounds(30, 15, var5, -16 + (-14 + this.field_q), (byte) 125);
-          this.a(var4, 1);
+          this.addChild(var4, 1);
           int var6 = -20 / ((param1 - 1) / 59);
           this.refreshLayout(false);
           InteractiveWidget stackIn_1_0 = var4;

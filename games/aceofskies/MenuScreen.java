@@ -78,11 +78,11 @@ final class MenuScreen {
           if (3 > itemIndex) {
             return -6 + bk.menuTop[this.screenId];
           }
-          return -6 + (bk.menuTop[this.screenId] + oo.menuRowSpacing[this.screenId]);
+          return -6 + (bk.menuTop[this.screenId] + ProgressMessageDialog.menuRowSpacing[this.screenId]);
         }
         if (2 == this.screenId &&
           cn.b(true)) {
-          return -6 + (oo.menuRowSpacing[this.screenId] * itemIndex + bk.menuTop[this.screenId]);
+          return -6 + (ProgressMessageDialog.menuRowSpacing[this.screenId] * itemIndex + bk.menuTop[this.screenId]);
         }
         if (3 == this.screenId) {
           return bk.menuTop[this.screenId] - 32;
@@ -92,12 +92,12 @@ final class MenuScreen {
           if (!obfuscationGuard) {
             this.handleAction(true, -26, -69);
           }
-          return oo.menuRowSpacing[this.screenId] * itemIndex + bk.menuTop[this.screenId];
+          return ProgressMessageDialog.menuRowSpacing[this.screenId] * itemIndex + bk.menuTop[this.screenId];
         }
         if (OpenGlBuffer.menuActions[this.screenId].length > 1) {
-          return 382 + itemIndex * (12 + oo.menuRowSpacing[this.screenId]) - 4;
+          return 382 + itemIndex * (12 + ProgressMessageDialog.menuRowSpacing[this.screenId]) - 4;
         }
-        return -4 + (oo.menuRowSpacing[this.screenId] * itemIndex + 430);
+        return -4 + (ProgressMessageDialog.menuRowSpacing[this.screenId] * itemIndex + 430);
     }
 
     private final void drawItem(int verticalOffset, int itemIndex, int obfuscationGuard, boolean selected, GraphicsRenderer renderer) {
@@ -145,11 +145,11 @@ final class MenuScreen {
             se.bigGameFont.drawCenteredText(obfuscationGuard + 95, var11, -1, (var12 >> 1) + (var6_int + kn.bigFontMetrics.maxAscent + 11), (var10 >> 1) + var7, var9.toLowerCase());
           } else {
             this.a(var6_int, renderer, -86, var10, var7);
-            int var13 = oq.field_K + 137;
+            int var13 = FullscreenStatusDialog.field_K + 137;
             var7 -= 8;
             int var14 = var7 + (-var13 + var10 >> 1);
             se.bigGameFont.drawRightAlignedText(var9.toLowerCase(), var11, -1, (var10 >> 1) + (var7 - 15), 11 + ((var12 >> 1) + (kn.bigFontMetrics.maxAscent + var6_int)), (byte) 92);
-            var14 = var14 + (16 + oq.field_K);
+            var14 = var14 + (16 + FullscreenStatusDialog.field_K);
             if (var8 != 12) {
               stackIn_12_0 = RendererManager.field_c;
             } else {
@@ -239,9 +239,9 @@ final class MenuScreen {
                 var12Lifetime1 = IndexedSpriteState.field_g;
                 String[] var14 = var13_ref_uc.namesByView[AchievementSubmission.highscoreView];
                 int[] var35 = var13_ref_uc.valuesByView[AchievementSubmission.highscoreView];
-                int var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, AchievementSubmission.highscoreView, to.lastScoreSubmission);
+                int var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, AchievementSubmission.highscoreView, SingleChildWidgetContainer.lastScoreSubmission);
                 kn.bigFontMetrics.measureTextWidth((byte) 94, "10. ");
-                int var17 = verticalOffset + (hi.gameFontMetrics.maxAscent + 140);
+                int var17 = verticalOffset + (AlphaWidgetContainer.gameFontMetrics.maxAscent + 140);
                 int var18 = 310;
                 var17 -= 20;
                 int var19 = 128;
@@ -324,7 +324,7 @@ final class MenuScreen {
         }
         String var32 = stackIn_39_0;
         String var12Lifetime2 = var32;
-        PacketBuffer.gameFont.drawCenteredText(113, var5, -1, 220 + verticalOffset - (-140 - hi.gameFontMetrics.maxAscent), 320, var32);
+        PacketBuffer.gameFont.drawCenteredText(113, var5, -1, 220 + verticalOffset - (-140 - AlphaWidgetContainer.gameFontMetrics.maxAscent), 320, var32);
     }
 
     private final boolean isItemEnabled(int itemIndex, byte obfuscationGuard) {
@@ -447,7 +447,7 @@ final class MenuScreen {
               if (this.input.isActivated((byte) 120)) {
                 Bullet.requestMenu((byte) -117, 0, pointerSelection);
                 r.field_n = 0;
-                hg.field_D = 0;
+                DraggableWidgetContainer.field_D = 0;
                 sb.field_c.clear(268435455);
               }
               break;
@@ -487,8 +487,8 @@ final class MenuScreen {
                 lq.a(fd.field_b[3], -126);
               }
               if (this.input.isPointerHeld((byte) 98)) {
-                var5 = 137 + oq.field_K;
-                var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + oq.field_K + 8;
+                var5 = 137 + FullscreenStatusDialog.field_K;
+                var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + FullscreenStatusDialog.field_K + 8;
                 var7 = ic.field_b - var6 << 1;
                 if (var7 <= 0) {
                   rt.b(0, (byte) 70);
@@ -517,8 +517,8 @@ final class MenuScreen {
                 wk.c((byte) -118);
               }
               if (this.input.isPointerHeld((byte) 119)) {
-                var5 = 128 + oq.field_K + 9;
-                var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-oq.field_K - 8);
+                var5 = 128 + FullscreenStatusDialog.field_K + 9;
+                var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-FullscreenStatusDialog.field_K - 8);
                 var7 = ic.field_b - var6 << 1;
                 if (var7 <= 0) {
                   ve.a((byte) 43, 0);
@@ -809,7 +809,7 @@ final class MenuScreen {
     final static void decodeMenuResources(byte obfuscationGuard, ResourceArchive spriteArchive, ResourceArchive fontMetricsArchive) {
         try {
           ka.field_a = MouseWheelInput.a((byte) 3, spriteArchive, "", "frame");
-          rg.field_F = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_raised");
+          ResizableModalDialog.field_F = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_raised");
           DualLinkNode.field_h = MouseWheelInput.a((byte) 3, spriteArchive, "", "button_frame");
           RenderStateStack.menuBitmapFont = (BitmapFont) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
           if (obfuscationGuard != -56) {
@@ -853,7 +853,7 @@ final class MenuScreen {
           if (this.screenId == 0 ||
             1 == this.screenId ||
             this.screenId == 7) {
-            this.a(oo.menuRowSpacing[this.screenId] * OpenGlBuffer.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
+            this.a(ProgressMessageDialog.menuRowSpacing[this.screenId] * OpenGlBuffer.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
           }
           boolean stackIn_9_0 = !(ln.field_d < 2);
           boolean var6 = stackIn_9_0;
@@ -974,7 +974,7 @@ final class MenuScreen {
         int var7Lifetime1 = 75;
         int var15 = verticalOffset + 127;
         if (!alternateView) {
-          stackIn_7_0 = hg.field_D;
+          stackIn_7_0 = DraggableWidgetContainer.field_D;
         } else {
           stackIn_7_0 = r.field_n;
         }
@@ -1084,7 +1084,7 @@ final class MenuScreen {
             (var16 & 1 << var17) == 0) {
             var18_ref_StringLifetime1 = NodeHashTableIterator.field_c;
           }
-          PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
+          PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, AlphaWidgetContainer.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
           int var7Lifetime2Lifetime3 = 320;
           int var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, SoftwareFramebuffer.field_a[var17]);
@@ -1195,7 +1195,7 @@ final class MenuScreen {
             var12[var13] = var12[var13] - 64;
           }
         }
-        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(OpenGlShaderProgram.field_a[RichTextWidget.instructionPage], 120, new String[]{"          "}));
+        int var13Lifetime1 = AlphaWidgetContainer.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(OpenGlShaderProgram.field_a[RichTextWidget.instructionPage], 120, new String[]{"          "}));
         for (int var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
             RendererBitmapFont stackIn_19_0 = PacketBuffer.gameFont;
@@ -1225,7 +1225,7 @@ final class MenuScreen {
           OpenGlRenderbuffer.field_r = true;
           ol.field_c = param1;
           if (ol.field_c == 0) {
-            var3_int = ff.a(qk.field_g, ad.field_V, st.field_b, -3, nh.field_c);
+            var3_int = ff.a(qk.field_g, StandardContentDialog.field_V, st.field_b, -3, nh.field_c);
             var4 = 3 + var3_int;
             ne.field_g = new String[var4];
             rn.field_a = new int[var4];
@@ -1244,7 +1244,7 @@ final class MenuScreen {
             rn.field_a[-1 + var4] = 1;
             rm.field_g[1] = 5;
           } else if (ol.field_c == 1) {
-            var3_int = ff.a(qk.field_g, ad.field_V, st.field_b, -3, nh.field_c);
+            var3_int = ff.a(qk.field_g, StandardContentDialog.field_V, st.field_b, -3, nh.field_c);
             var4 = 2 + var3_int;
             ne.field_g = new String[var4];
             rn.field_a = new int[var4];

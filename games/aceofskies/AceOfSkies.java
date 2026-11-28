@@ -23,16 +23,16 @@ public final class AceOfSkies extends NetworkGameClient {
           int var3_int = -35 / ((obfuscationGuard - 1) / 48);
           qq.a((byte) -100);
           if (jk.synthesizedSoundArchive != null) {
-            if (hg.sharedSpriteArchive.ensureIndexLoaded((byte) 95) &&
-              hg.sharedSpriteArchive.tryLoadGroupByName("basic", -14012)) {
-              if (!hg.sharedSpriteArchive.tryLoadGroupByName("arialbold14", -14012)) {
-                PasswordValidator.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
+            if (DraggableWidgetContainer.sharedSpriteArchive.ensureIndexLoaded((byte) 95) &&
+              DraggableWidgetContainer.sharedSpriteArchive.tryLoadGroupByName("basic", -14012)) {
+              if (!DraggableWidgetContainer.sharedSpriteArchive.tryLoadGroupByName("arialbold14", -14012)) {
+                PasswordValidator.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", DraggableWidgetContainer.sharedSpriteArchive, 13525, ks.field_c));
                 return false;
               }
               if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -119) &&
                 CachedArchiveProvider.sharedFontMetricsArchive.tryLoadGroupByName("arialbold14", -14012)) {
-                if (!hg.sharedSpriteArchive.tryLoadGroupByName("arial13", -14012)) {
-                  PasswordValidator.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
+                if (!DraggableWidgetContainer.sharedSpriteArchive.tryLoadGroupByName("arial13", -14012)) {
+                  PasswordValidator.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", DraggableWidgetContainer.sharedSpriteArchive, 13525, ks.field_c));
                   return false;
                 }
                 if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -127) &&
@@ -97,7 +97,7 @@ public final class AceOfSkies extends NetworkGameClient {
               }
             }
             if (decompiledFrameRemainder0) {
-              PasswordValidator.setLoadingProgress(-110, 3.0f, qo.a(TextLineMetrics.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
+              PasswordValidator.setLoadingProgress(-110, 3.0f, qo.a(TextLineMetrics.field_j, "basic", DraggableWidgetContainer.sharedSpriteArchive, 13525, lm.field_b));
               return false;
             }
           }
@@ -112,21 +112,21 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           if (od.musicTrackArchive != null) {
             tg.musicTracks = new MusicTrack[3];
-            tg.musicTracks[0] = MusicTrack.a(od.musicTrackArchive, "", "aos_main_title");
-            tg.musicTracks[1] = MusicTrack.a(od.musicTrackArchive, "", "aos level_channels_v2");
-            tg.musicTracks[2] = MusicTrack.a(od.musicTrackArchive, "", "aos boss level");
+            tg.musicTracks[0] = MusicTrack.load(od.musicTrackArchive, "", "aos_main_title");
+            tg.musicTracks[1] = MusicTrack.load(od.musicTrackArchive, "", "aos level_channels_v2");
+            tg.musicTracks[2] = MusicTrack.load(od.musicTrackArchive, "", "aos boss level");
             od.musicTrackArchive = null;
             te.resetFrameTiming(102);
             return false;
           }
           if (null == ot.musicPatchArchive) {
-            if (hg.sharedSpriteArchive != null) {
-              NodeHashTableIterator.decodeGameImagesAndFonts(iq.gameFontMetricsArchive, (byte) 77, hg.sharedSpriteArchive, wi.gameSpriteArchive);
+            if (DraggableWidgetContainer.sharedSpriteArchive != null) {
+              NodeHashTableIterator.decodeGameImagesAndFonts(iq.gameFontMetricsArchive, (byte) 77, DraggableWidgetContainer.sharedSpriteArchive, wi.gameSpriteArchive);
               MenuScreen.decodeMenuResources((byte) -56, wi.gameSpriteArchive, iq.gameFontMetricsArchive);
               iq.gameFontMetricsArchive = null;
-              hg.sharedSpriteArchive = null;
+              DraggableWidgetContainer.sharedSpriteArchive = null;
               wi.gameSpriteArchive = null;
-              ec.a(10, 10, ka.field_a, 40, hn.field_a, RenderStateStack.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, NetworkArchiveRequest.field_w >> 1, 92, SpriteState.field_t, 10, 20);
+              ec.a(10, 10, ka.field_a, 40, hn.field_a, RenderStateStack.menuBitmapFont, so.field_b, ResizableModalDialog.field_F, DualLinkNode.field_h, DropTargetWidgetContainer.field_u >> 1, NetworkArchiveRequest.field_w >> 1, 92, SpriteState.field_t, 10, 20);
               te.resetFrameTiming(62);
               return false;
             }
@@ -279,7 +279,7 @@ public final class AceOfSkies extends NetworkGameClient {
           if (ln.field_d >= 2 &&
             lp.heldKeys[41]) {
             tt.field_a = true;
-            hg.field_D = 16777215;
+            DraggableWidgetContainer.field_D = 16777215;
           }
           if (obfuscationGuard != 9046) {
             this.initializeGameResources((byte) -122);
@@ -454,7 +454,7 @@ public final class AceOfSkies extends NetworkGameClient {
           MidiPcmStream.clearStaticReferences(-543142776);
           IntrusiveNodeHashTable.clearStaticReferences(82);
           MidiNote.clearStaticReferences((byte) 101);
-          k.clearStaticReferences();
+          MidiFileReader.clearStaticReferences();
           MusicPatchPcmStream.clearStaticReferences((byte) 113);
           AudioOutput.clearStaticReferences();
           rn.clearStaticReferences(false);
@@ -473,13 +473,13 @@ public final class AceOfSkies extends NetworkGameClient {
           ur.a(8192);
           ks.clearStaticReferences((byte) 109);
           se.a((byte) 123);
-          lt.clearStaticReferences(110);
+          ModalDialogHost.clearStaticReferences(110);
           AccountCreationResultPanel.clearStaticReferences(85);
-          ng.j(11617);
-          ad.resetStaticState(false);
-          oo.clearDeclaredStaticReferences((byte) 105);
+          ProgressDialog.j(11617);
+          StandardContentDialog.resetStaticState(false);
+          ProgressMessageDialog.clearDeclaredStaticReferences((byte) 105);
           AccountRegistrationPanel.h(11663);
-          tn.clearStaticReferences((byte) -110);
+          GuestPlayConfirmationForm.clearStaticReferences((byte) -110);
           LoginPanel.clearStaticReferences(96);
           DisplayNameSelectionPanel.clearStaticReferences(-33);
           cd.clearStaticReferences(0);
@@ -545,10 +545,10 @@ public final class AceOfSkies extends NetworkGameClient {
           lj.a(true);
           vi.clearStaticReferences(false);
           InteractiveWidget.g(111);
-          to.resetStaticState(0);
-          rg.clearStaticReferences(true);
-          gm.clearStaticReferences((byte) -76);
-          ab.c(true);
+          SingleChildWidgetContainer.resetStaticState(0);
+          ResizableModalDialog.clearStaticReferences(true);
+          ModalDialog.clearStaticReferences((byte) -76);
+          DequeWidgetContainer.c(true);
           an.clearStaticReferences(32041);
           bg.a(2334);
           wc.a(false);
@@ -568,16 +568,16 @@ public final class AceOfSkies extends NetworkGameClient {
           bt.clearStaticReferences(4);
           nq.clearStaticReferences(true);
           uh.clearStaticReferences(-102);
-          bc.clearStaticReferences(14912);
+          LabeledWidgetContainer.clearStaticReferences(14912);
           ValidatedTextField.clearStaticReferences(true);
           EditableTextField.d((byte) -106);
-          dg.k(12);
+          ContentTransitionDialog.k(12);
           NameSuggestionsPanel.clearStaticReferences(false);
           pi.clearStaticReferences(4096);
           kb.clearStaticReferences(obfuscationGuard + 1927864887);
           TextFieldValidator.clearStaticReferences(14695);
           fk.a((byte) 28);
-          rs.clearStaticReferences((byte) 105);
+          RegistrationAgreementPane.clearStaticReferences((byte) 105);
           cn.a(-96);
           pf.clearStaticReferences(true);
           SoundFilter.clearStaticReferences();
@@ -618,8 +618,8 @@ public final class AceOfSkies extends NetworkGameClient {
           RichTextLayout.clearStaticReferences(0);
           DirectByteStorage.clearDeclaredStaticReferences(85);
           ot.clearStaticReferences((byte) -44);
-          hg.resetDeclaredStaticState(65793);
-          sh.clearStaticReferences((byte) -66);
+          DraggableWidgetContainer.resetDeclaredStaticState(65793);
+          DropTargetWidgetContainer.clearStaticReferences((byte) -66);
           ej.clearStaticReferences(-29373);
           IterableNodeHashTable.clearStaticReferences(true);
           IterableDualLinkDeque.clearStaticReferences((byte) -127);
@@ -699,7 +699,7 @@ public final class AceOfSkies extends NetworkGameClient {
           sl.clearStaticReferences(111);
           ul.clearStaticReferences((byte) -128);
           jf.clearStaticReferences((byte) -50);
-          hi.clearStaticReferences(-86);
+          AlphaWidgetContainer.clearStaticReferences(-86);
           cl.clearStaticReferences((byte) -98);
           ht.clearStaticReferences(-91);
           qq.clearStaticReferences((byte) 116);
@@ -709,13 +709,13 @@ public final class AceOfSkies extends NetworkGameClient {
           AccountRequestState.releaseStatics(122);
           id.clearStaticReferences((byte) 106);
           m.clearStaticReferences(256);
-          jn.h(-89);
+          DialogMessagePane.h(-89);
           SteeringMode.clearStaticReferences(false);
           gu.clearStaticReferences(false);
           pm.clearStaticReferences(93);
           ko.c(0);
           ki.clearStaticReferences(64);
-          lh.clearStaticReferences(obfuscationGuard ^ 18173);
+          FullscreenNoticeType.clearStaticReferences(obfuscationGuard ^ 18173);
           wo.clearStaticReferences(-125);
           uk.resetStaticState(250);
           te.clearStaticReferences(false);
@@ -863,7 +863,7 @@ public final class AceOfSkies extends NetworkGameClient {
             SoftwareRasterizer.clearFramebuffer();
             boolean var3 = false;
             if (im.a(true)) {
-              pu.a((byte) 21, var2, lh.a((byte) -94));
+              pu.a((byte) 21, var2, FullscreenNoticeType.a((byte) -94));
               return;
             }
             if (!WeightedObjectCache.field_f) {
@@ -950,17 +950,17 @@ public final class AceOfSkies extends NetworkGameClient {
               int var8 = 45;
               boolean decompiledSharedTail0 = !(var5.field_f < 0);
               if (!decompiledSharedTail0) {
-                var9 = ab.field_r;
+                var9 = DequeWidgetContainer.field_r;
                 decompiledSharedTail0 = ((var10));
               }
               if (decompiledSharedTail0) {
                 var9 = SoftwareFramebuffer.field_a[var5.field_f];
-                GlyphMask.achievementSprites[var5.field_f].drawScaled(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                GlyphMask.achievementSprites[var5.field_f].drawScaled(53 + (-180 + DropTargetWidgetContainer.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
-              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.gameFont.drawParagraph(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + DropTargetWidgetContainer.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + DropTargetWidgetContainer.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, DropTargetWidgetContainer.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
             }
             if (var3) {
               if (0 == bg.field_b && (!jf.a(15000) ||
@@ -976,8 +976,8 @@ public final class AceOfSkies extends NetworkGameClient {
             if (mj.field_b &&
               ln.field_d >= 2) {
               String var6 = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
-              PacketBuffer.gameFont.drawRightAlignedText(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
-              PacketBuffer.gameFont.drawRightAlignedText(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
+              PacketBuffer.gameFont.drawRightAlignedText(var6, -1, -16777216, DropTargetWidgetContainer.field_u - 10, 45, (byte) 92);
+              PacketBuffer.gameFont.drawRightAlignedText(Integer.toString(wk.field_f), -1, -16777216, DropTargetWidgetContainer.field_u - 10, 60, (byte) 92);
             }
             if (obfuscationGuard != 150) {
               field_J = false;
@@ -1012,13 +1012,13 @@ public final class AceOfSkies extends NetworkGameClient {
           if (null != jf.field_a &&
             jf.field_a.field_b) {
             tt.b(-32546);
-            hi.j(8585);
+            AlphaWidgetContainer.j(8585);
           }
           boolean stackIn_15_1 = (jf.field_a != null);
           this.b(stackIn_15_1, (byte) 95);
-          if (jn.field_t) {
+          if (DialogMessagePane.field_t) {
             this.initializeGameResources((byte) 124);
-            jn.field_t = false;
+            DialogMessagePane.field_t = false;
           }
           if (im.a(true)) {
             this.i(4);
@@ -1091,7 +1091,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0 &&
               decompiledSharedTail0) {
-              jn.g(4);
+              DialogMessagePane.g(4);
               if (b.b((byte) -127)) {
                 hl.a(-1889);
                 tq.b(true);
@@ -1123,7 +1123,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             this.f((byte) -106);
           } while (!var3);
-          if (dg.j(obfuscationGuard ^ 31428)) {
+          if (ContentTransitionDialog.j(obfuscationGuard ^ 31428)) {
             var2_int = this.p(16637);
             if (var2_int == 2) {
               rc.c((byte) 127);

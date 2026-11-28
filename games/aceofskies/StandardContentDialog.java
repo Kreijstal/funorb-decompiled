@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends dg {
+final class StandardContentDialog extends ContentTransitionDialog {
     static boolean[] field_T;
     static String field_V;
     static int field_U;
 
-    final void d(UiWidget param0, int param1) {
+    final void replaceContent(UiWidget param0, int param1) {
         try {
-          super.d(param0, param1);
+          super.replaceContent(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ad.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    ad(lt param0, UiWidget param1) {
+    StandardContentDialog(ModalDialogHost param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

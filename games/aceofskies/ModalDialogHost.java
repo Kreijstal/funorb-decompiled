@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lt extends to {
+final class ModalDialogHost extends SingleChildWidgetContainer {
     static int field_u;
     private IntrusiveDeque field_w;
     static SpriteData woodenTileSpriteData;
@@ -11,49 +11,49 @@ final class lt extends to {
         woodenTileSpriteData = null;
     }
 
-    public lt() {
+    public ModalDialogHost() {
         super(0, 0, fj.field_c, nc.field_d, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_w = new IntrusiveDeque();
     }
 
-    final gm d(byte param0) {
+    final ModalDialog getTopOpenDialog(byte param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -112) {
-          return (gm) null;
+          return (ModalDialog) null;
         }
         an var2 = new an(this.field_w);
-        gm var3 = (gm) (var2.c(-1372));
+        ModalDialog var3 = (ModalDialog) (var2.c(-1372));
         while (var3 != null) {
           if (var3.field_z) {
             return var3;
           }
-          var3 = (gm) (var2.a(-122));
+          var3 = (ModalDialog) (var2.a(-122));
         }
         return null;
     }
 
-    final void j(int param0) {
+    final void snapAndPruneDialogs(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 0) {
-          this.i(92);
+          this.getFocusedChild(92);
         }
         an var2 = new an(this.field_w);
-        gm var3 = (gm) (var2.c(-1372));
+        ModalDialog var3 = (ModalDialog) (var2.c(-1372));
         while (var3 != null) {
-          if (var3.i(param0 - 72)) {
+          if (var3.snapDialogAnimation(param0 - 72)) {
             var3.unlink(-125);
           }
-          var3 = (gm) (var2.a(param0 + 59));
+          var3 = (ModalDialog) (var2.a(param0 + 59));
         }
     }
 
-    final void e(byte param0) {
+    final void closeAllDialogs(byte param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_w);
-        gm var3 = (gm) (var2.c(-1372));
+        ModalDialog var3 = (ModalDialog) (var2.c(-1372));
         while (var3 != null) {
           var3.field_z = false;
-          var3 = (gm) (var2.a(67));
+          var3 = (ModalDialog) (var2.a(67));
         }
         if (param0 < 19) {
           return;
@@ -61,15 +61,15 @@ final class lt extends to {
         this.field_s = null;
     }
 
-    final void a(UiWidget param0, int param1) {
+    final void showDialog(UiWidget param0, int param1) {
         try {
           if (param1 != 0) {
             this.field_w = (IntrusiveDeque) null;
           }
-          if (!(param0 instanceof gm)) {
+          if (!(param0 instanceof ModalDialog)) {
             throw new IllegalArgumentException();
           }
-          gm var3 = (gm) (param0);
+          ModalDialog var3 = (ModalDialog) (param0);
           this.field_w.addFirst(var3, 25611);
           var3.field_z = true;
           var3.takeFocus((UiWidget) (this), (byte) -42);
@@ -78,35 +78,35 @@ final class lt extends to {
         }
     }
 
-    final UiWidget i(int param0) {
+    final UiWidget getFocusedChild(int param0) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_w);
-        gm var3 = (gm) (var2.c(-1372));
+        ModalDialog var3 = (ModalDialog) (var2.c(-1372));
         while (var3 != null) {
           if (var3.field_z) {
-            return var3.a(0);
+            return var3.getFocusedChild(0);
           }
-          var3 = (gm) (var2.a(107));
+          var3 = (ModalDialog) (var2.a(107));
         }
         if (param0 == 0) {
           return null;
         }
-        lt.clearStaticReferences(30);
+        ModalDialogHost.clearStaticReferences(30);
         return null;
     }
 
-    final void f(byte param0) {
+    final void advanceDialogs(byte param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var3 = 96 % ((-31 - param0) / 58);
         an var2 = new an(this.field_w);
-        gm var4 = (gm) (var2.c(-1372));
+        ModalDialog var4 = (ModalDialog) (var2.c(-1372));
         while (var4 != null) {
-          if (var4.h(11)) {
+          if (var4.advanceDialogAnimation(11)) {
             var4.unlink(-127);
           }
-          var4 = (gm) (var2.a(-127));
+          var4 = (ModalDialog) (var2.a(-127));
         }
-        this.field_s = (UiWidget) ((Object) this.d((byte) -112));
+        this.field_s = (UiWidget) ((Object) this.getTopOpenDialog((byte) -112));
     }
 
     final void drawWidget(byte param0, int param1, int param2, int param3) {

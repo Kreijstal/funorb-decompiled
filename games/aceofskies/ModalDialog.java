@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gm extends ab {
-    private lt field_u;
+abstract class ModalDialog extends DequeWidgetContainer {
+    private ModalDialogHost field_u;
     private int field_t;
     boolean field_z;
     static AircraftDefinition field_y;
@@ -20,24 +20,24 @@ abstract class gm extends ab {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
+    final void setCenteredSize(int param0, byte param1, int param2) {
         this.setBounds(param2, fj.field_c - param0 >> 1, nc.field_d - param2 >> 1, param0, (byte) 124);
         if (param1 != 29) {
-          this.a(true, 82, -19);
+          this.drawDialogBackground(true, 82, -19);
         }
     }
 
-    abstract void a(boolean param0, int param1, int param2);
+    abstract void drawDialogBackground(boolean param0, int param1, int param2);
 
-    private final int d(byte param0) {
+    private final int getTargetAlpha(byte param0) {
         if (param0 != 76) {
           field_y = (AircraftDefinition) null;
         }
-        return this.field_z ? this == this.field_u.d((byte) -112) ? 256 : 0 : 0;
+        return this.field_z ? this == this.field_u.getTopOpenDialog((byte) -112) ? 256 : 0 : 0;
     }
 
-    boolean i(int param0) {
-        this.field_t = this.d((byte) 76);
+    boolean snapDialogAnimation(int param0) {
+        this.field_t = this.getTargetAlpha((byte) 76);
         int var2 = 105 / ((20 - param0) / 62);
         boolean stackIn_4_0 = (this.field_t == 0) && (!this.field_z);
         return stackIn_4_0;
@@ -51,7 +51,7 @@ abstract class gm extends ab {
           if (param1 != 0) {
             return;
           }
-          this.a(false, this.field_p + param3, param2 + this.field_h);
+          this.drawDialogBackground(false, this.field_p + param3, param2 + this.field_h);
           super.drawWidget((byte) 94, param1, param2, param3);
           return;
         }
@@ -62,16 +62,16 @@ abstract class gm extends ab {
         }
         ProxySocketConnector.a(na.field_b, -14492);
         SoftwareRasterizer.clearFramebuffer();
-        this.a(false, 0, 0);
+        this.drawDialogBackground(false, 0, 0);
         super.drawWidget((byte) 87, param1, -this.field_h - param2, -this.field_p - param3);
         sl.c(2765);
         na.field_b.drawWithOpacity(param3 + this.field_p, param2 + this.field_h, this.field_t);
         if (param0 <= 64) {
-          this.a(true, -76, 79);
+          this.drawDialogBackground(true, -76, 79);
         }
     }
 
-    gm(lt param0, int param1, int param2) {
+    ModalDialog(ModalDialogHost param0, int param1, int param2) {
         super(fj.field_c - param1 >> 1, nc.field_d - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_t = 0;
@@ -84,13 +84,13 @@ abstract class gm extends ab {
 
     final static long g(int param0) {
         if (param0 != -1) {
-          gm.clearStaticReferences((byte) -17);
+          ModalDialog.clearStaticReferences((byte) -17);
         }
         return -ff.field_b + kh.correctedCurrentTimeMillis(param0 - 91);
     }
 
-    boolean h(int param0) {
-        int var2 = this.d((byte) 76);
+    boolean advanceDialogAnimation(int param0) {
+        int var2 = this.getTargetAlpha((byte) 76);
         int var3 = -this.field_t + var2;
         if (var3 > 0) {
           this.field_t = this.field_t + (-1 + (var3 + 8)) / 8;
@@ -105,8 +105,8 @@ abstract class gm extends ab {
         return stackIn_12_0;
     }
 
-    final UiWidget a(int param0) {
-        UiWidget var2 = super.a(param0 + param0);
+    final UiWidget getFocusedChild(int param0) {
+        UiWidget var2 = super.getFocusedChild(param0 + param0);
         if (var2 != null) {
           return var2;
         }

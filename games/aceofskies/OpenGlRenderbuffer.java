@@ -60,12 +60,12 @@ final class OpenGlRenderbuffer extends DualLinkNode implements FramebufferAttach
     final static void c(byte param0) {
         if (param0 > 76) {
           qk.field_e = new AccountRegistrationPanel();
-          ClientException.field_d.d(qk.field_e, -30244);
+          ClientException.field_d.replaceContent(qk.field_e, -30244);
           return;
         }
         field_r = true;
         qk.field_e = new AccountRegistrationPanel();
-        ClientException.field_d.d(qk.field_e, -30244);
+        ClientException.field_d.replaceContent(qk.field_e, -30244);
     }
 
     OpenGlRenderbuffer(OpenGlRenderer param0, int param1, int param2, int param3) {

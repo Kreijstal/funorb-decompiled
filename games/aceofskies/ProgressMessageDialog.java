@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oo extends dg implements WidgetActivationListener {
+class ProgressMessageDialog extends ContentTransitionDialog implements WidgetActivationListener {
     static Sprite field_W;
-    private ss field_bb;
+    private StripedProgressWidget field_bb;
     private boolean field_cb;
     private BitmapFont field_U;
     private boolean field_V;
@@ -13,19 +13,19 @@ class oo extends dg implements WidgetActivationListener {
     static SpriteData[] backgroundSpriteData;
     private boolean field_Z;
 
-    final void l(int param0) {
+    final void showConnectionFailure(int param0) {
         if (param0 >= 82) {
-          this.field_bb.a(4210752, 2121792, (byte) 61);
-          jn var2 = new jn(this, this.field_U, NameSuggestionsPanel.field_x);
-          var2.a(15, (byte) -57, ArchiveRequest.field_o);
-          this.d(var2, -30244);
+          this.field_bb.setColours(4210752, 2121792, (byte) 61);
+          DialogMessagePane var2 = new DialogMessagePane(this, this.field_U, NameSuggestionsPanel.field_x);
+          var2.addActionButton(15, (byte) -57, ArchiveRequest.field_o);
+          this.replaceContent(var2, -30244);
           return;
         }
-        this.field_bb = (ss) null;
-        this.field_bb.a(4210752, 2121792, (byte) 61);
-        jn var2Lifetime1 = new jn(this, this.field_U, NameSuggestionsPanel.field_x);
-        var2Lifetime1.a(15, (byte) -57, ArchiveRequest.field_o);
-        this.d(var2Lifetime1, -30244);
+        this.field_bb = (StripedProgressWidget) null;
+        this.field_bb.setColours(4210752, 2121792, (byte) 61);
+        DialogMessagePane var2Lifetime1 = new DialogMessagePane(this, this.field_U, NameSuggestionsPanel.field_x);
+        var2Lifetime1.addActionButton(15, (byte) -57, ArchiveRequest.field_o);
+        this.replaceContent(var2Lifetime1, -30244);
     }
 
     public void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
@@ -37,7 +37,7 @@ class oo extends dg implements WidgetActivationListener {
             return;
           }
           oi.a(3, 20665);
-          this.h((byte) -64);
+          this.closeDialog((byte) -64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ class oo extends dg implements WidgetActivationListener {
         }
     }
 
-    final void h(byte param0) {
+    final void closeDialog(byte param0) {
         int var2 = -58 % ((72 - param0) / 35);
         if (!this.field_z) {
           return;
@@ -79,17 +79,17 @@ class oo extends dg implements WidgetActivationListener {
         backgroundSpriteData = null;
     }
 
-    oo(lt param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new jn((oo) null, param1, param2), 77, 10, 10);
+    ProgressMessageDialog(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new DialogMessagePane((ProgressMessageDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_U = param1;
           this.field_V = param4 ? true : false;
           this.field_Z = false;
           this.field_X = false;
           this.field_cb = param3 ? true : false;
-          this.field_bb = new ss(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_bb = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_bb.field_u = true;
-          this.a(this.field_bb, 1);
+          this.addChild(this.field_bb, 1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "oo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -99,7 +99,7 @@ class oo extends dg implements WidgetActivationListener {
         String stackIn_9_2 = null;
         try {
           if (13 == param1) {
-            this.h((byte) 125);
+            this.closeDialog((byte) 125);
             return true;
           }
           int var5_int = 48 % ((param0 + 53) / 33);
@@ -119,7 +119,7 @@ class oo extends dg implements WidgetActivationListener {
         }
     }
 
-    final void a(byte param0, int param1, String param2) {
+    final void showResult(byte param0, int param1, String param2) {
         String stackIn_14_3;
         String stackIn_28_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -130,36 +130,36 @@ class oo extends dg implements WidgetActivationListener {
           boolean stackIn_7_1 = (256 == param1);
           this.field_X = stackIn_7_1;
           this.field_Z = true;
-          this.field_bb.a(4210752, 8405024, (byte) -81);
+          this.field_bb.setColours(4210752, 8405024, (byte) -81);
           int var5 = 85 / ((1 - param0) / 52);
-          jn var7 = new jn(this, this.field_U, param2);
-          jn var4 = var7;
+          DialogMessagePane var7 = new DialogMessagePane(this, this.field_U, param2);
+          DialogMessagePane var4 = var7;
           if (param1 == 5) {
-            var7.a(11, (byte) 113, ln.field_a);
-            var7.a(17, (byte) -120, SoftCacheReference.field_s);
+            var7.addActionButton(11, (byte) 113, ln.field_a);
+            var7.addActionButton(17, (byte) -120, SoftCacheReference.field_s);
           } else if (param1 != 256) {
-            jn stackIn_13_0 = var7;
+            DialogMessagePane stackIn_13_0 = var7;
             int stackIn_13_1 = -1;
             int stackIn_13_2 = 124;
             if (this.field_cb) {
-              stackIn_14_3 = hg.field_z;
+              stackIn_14_3 = DraggableWidgetContainer.field_z;
             } else {
               stackIn_14_3 = Bullet.field_j;
             }
-            ((jn) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
+            ((DialogMessagePane) (Object) stackIn_13_0).addActionButton(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
           } else {
-            var7.a((WidgetEventListener) (this), 17547, hg.field_z);
+            var7.addListenerButton((WidgetEventListener) (this), 17547, DraggableWidgetContainer.field_z);
           }
           if (param1 == 3) {
-            var7.a(7, (byte) 75, lu.field_a);
+            var7.addActionButton(7, (byte) 75, lu.field_a);
           } else if (param1 == 4) {
-            var7.a(8, (byte) 101, OpenGlVolumeTexture.field_n);
+            var7.addActionButton(8, (byte) 101, OpenGlVolumeTexture.field_n);
           } else if (param1 == 6) {
-            var7.a(9, (byte) -124, ao.field_d);
+            var7.addActionButton(9, (byte) -124, ao.field_d);
           } else if (param1 == 9) {
-            var7.a((WidgetEventListener) (this), 17547, AgeValidator.field_g);
+            var7.addListenerButton((WidgetEventListener) (this), 17547, AgeValidator.field_g);
           }
-          this.d(var7, -30244);
+          this.replaceContent(var7, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

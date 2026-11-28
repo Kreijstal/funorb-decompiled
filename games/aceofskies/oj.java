@@ -95,7 +95,7 @@ final class oj extends RenderEffect {
           this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
         } else {
           this.field_b.a(1, (byte) 78);
-          this.field_b.a(rg.field_A, false);
+          this.field_b.a(ResizableModalDialog.field_A, false);
           ec var6 = this.field_b.d(12343);
           var6.a(1024, 1);
           this.field_b.a(qn.field_a, (byte) -127);

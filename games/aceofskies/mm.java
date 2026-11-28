@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mm {
-    static hg field_a;
+    static DraggableWidgetContainer field_a;
     private static String field_z;
 
     public static void clearStaticReferences(byte param0) {

@@ -148,13 +148,13 @@ final class rl {
         IntKeyLookup.field_a = true;
         if (param0 == 0) {
           nf.field_a = true;
-          AgeValidator.field_f.e((byte) 89);
+          AgeValidator.field_f.closeAllDialogs((byte) 89);
           OpenGlBuffer.a(wo.field_e, false, (byte) 104);
           return;
         }
         rl.a(-83, (byte) 35);
         nf.field_a = true;
-        AgeValidator.field_f.e((byte) 89);
+        AgeValidator.field_f.closeAllDialogs((byte) 89);
         OpenGlBuffer.a(wo.field_e, false, (byte) 104);
     }
 

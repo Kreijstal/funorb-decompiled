@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends rg {
+final class ProgressDialog extends ResizableModalDialog {
     private String field_K;
     private boolean field_O;
     static String[] field_J;
-    private ss field_L;
+    private StripedProgressWidget field_L;
     private boolean field_P;
     private String field_M;
 
-    final void k(int param0) {
+    final void freezeNormalProgressAnimation(int param0) {
         this.field_O = true;
         int var2 = 105 / ((param0 + 39) / 32);
         this.field_L.field_u = false;
     }
 
-    final void a(boolean param0, int param1, String param2, float param3) {
+    final void setProgress(boolean param0, int param1, String param2, float param3) {
         try {
           if ((param0 ? 1 : 0) == (!this.field_P ? 1 : 0)) {
             this.field_P = param0 ? true : false;
             if (this.field_P) {
-              this.field_L.a(4210752, 8405024, (byte) 54);
+              this.field_L.setColours(4210752, 8405024, (byte) 54);
               this.field_L.field_u = true;
             } else {
-              this.field_L.a(4210752, 2113632, (byte) 71);
+              this.field_L.setColours(4210752, 2113632, (byte) 71);
               if (this.field_O) {
                 this.field_L.field_u = false;
               }
@@ -39,19 +39,19 @@ final class ng extends rg {
         }
     }
 
-    ng(lt param0, String param1) {
+    ProgressDialog(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         try {
           this.field_M = param1;
           if (this.field_M != null) {
             int var3_int = b.field_c.measureWrappedHeight(this.field_M, 260, b.field_c.maxAscent);
-            this.a(300, (byte) 29, var3_int + 150);
+            this.setCenteredSize(300, (byte) 29, var3_int + 150);
           }
-          this.field_L = new ss(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_L = new StripedProgressWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_P = false;
           this.field_L.field_u = true;
           this.field_O = false;
-          this.a(this.field_L, 1);
+          this.addChild(this.field_L, 1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ng.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -116,12 +116,12 @@ final class ng extends rg {
         field_J = null;
         if (param0 != 11617) {
           TextLineMetrics var2 = (TextLineMetrics) null;
-          ng.a((BitmapFont) null, (String) null, (TextLineMetrics) null, 27, (byte) -23);
+          ProgressDialog.a((BitmapFont) null, (String) null, (TextLineMetrics) null, 27, (byte) -23);
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
-        super.a(param0, param1, param2);
+    final void drawDialogBackground(boolean param0, int param1, int param2) {
+        super.drawDialogBackground(param0, param1, param2);
         b.field_c.drawCenteredText(this.field_K, (this.field_q >> 1) + param1, 103 + param2, 16777215, -1);
         if (null != this.field_M) {
           SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + param2 - 7, 260, 8421504);

@@ -120,7 +120,7 @@ final class eg {
                   int var26Lifetime1Lifetime1 = param0.field_k[var24Lifetime1];
                   int var27Lifetime1Lifetime1 = param0.field_o[var24Lifetime1];
                   DisplayNameSelectionPanel.field_u[var24Lifetime1] = var9 + (var18 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var15 + var12 * var25Lifetime1Lifetime1) >> 16);
-                  rs.field_B[var24Lifetime1] = var10 + (var19 * var27Lifetime1Lifetime1 + var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1 >> 16);
+                  RegistrationAgreementPane.field_B[var24Lifetime1] = var10 + (var19 * var27Lifetime1Lifetime1 + var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1 >> 16);
                   pf.field_A[var24Lifetime1] = (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param0.field_Q[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param0.field_e[var24Lifetime1];

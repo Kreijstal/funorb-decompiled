@@ -18,7 +18,7 @@ final class RenderStateStack {
           if (hr.field_e == null) {
             return false;
           }
-          if (null != hr.field_e.d((byte) -112)) {
+          if (null != hr.field_e.getTopOpenDialog((byte) -112)) {
             return true;
           }
           return false;
@@ -26,7 +26,7 @@ final class RenderStateStack {
         if (hr.field_e == null) {
           return false;
         }
-        if (null != hr.field_e.d((byte) -112)) {
+        if (null != hr.field_e.getTopOpenDialog((byte) -112)) {
           return true;
         }
         return false;

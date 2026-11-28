@@ -167,12 +167,12 @@ final class qa {
             }
             if (20 > var6) {
               var7Lifetime10 = var6 * 256 / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime10);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime10);
             } else if (var6 < 30) {
-              oo.field_W.drawAdditive(var3, var4, 256);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime10 = (12800 - var6 * 256) / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime10);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime10);
             }
           }
           int var6Lifetime5 = -140 + it.field_c;
@@ -196,12 +196,12 @@ final class qa {
             var6Lifetime1 < 50) {
             if (20 > var6Lifetime1) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime1);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime1);
             } else if (var6Lifetime1 < 30) {
-              oo.field_W.drawAdditive(var3, var4, 256);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime1);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime1);
             }
           }
           int var6Lifetime1Lifetime1 = -140 + it.field_c;
@@ -231,12 +231,12 @@ final class qa {
             }
             if (20 > var6Lifetime2) {
               var7Lifetime2Lifetime2 = var6Lifetime2 * 256 / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
             } else if (var6Lifetime2 < 30) {
-              oo.field_W.drawAdditive(var3, var4, 256);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, 256);
             } else {
               var7Lifetime2Lifetime2 = (12800 - var6Lifetime2 * 256) / 20;
-              oo.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
+              ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime2Lifetime2);
             }
           }
           int var6Lifetime2Lifetime1 = -140 + it.field_c;
@@ -275,7 +275,7 @@ final class qa {
         }
         if (20 > var6Lifetime3) {
           int var7Lifetime5 = var6Lifetime3 * 256 / 20;
-          oo.field_W.drawAdditive(var3, var4, var7Lifetime5);
+          ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime5);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
             int var7Lifetime5Lifetime1 = 256;
@@ -287,7 +287,7 @@ final class qa {
           return;
         }
         if (var6Lifetime3 < 30) {
-          oo.field_W.drawAdditive(var3, var4, 256);
+          ProgressMessageDialog.field_W.drawAdditive(var3, var4, 256);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
             int var7Lifetime6 = 256;
@@ -299,7 +299,7 @@ final class qa {
           return;
         }
         int var7Lifetime7 = (12800 - var6Lifetime3 * 256) / 20;
-        oo.field_W.drawAdditive(var3, var4, var7Lifetime7);
+        ProgressMessageDialog.field_W.drawAdditive(var3, var4, var7Lifetime7);
         int var6Lifetime4 = -140 + it.field_c;
         if (var6Lifetime4 > 0) {
           int var7Lifetime8 = 256;

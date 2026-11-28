@@ -13,9 +13,9 @@ final class qs {
         try {
           ScreenParticle.field_o = ScreenParticle.field_o + 1;
           if (OpenGlRectangleTexture.field_k == -1 &&
-            rs.field_v == -1) {
+            RegistrationAgreementPane.field_v == -1) {
             OpenGlRectangleTexture.field_k = ic.field_b;
-            rs.field_v = cf.field_g;
+            RegistrationAgreementPane.field_v = cf.field_g;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 == null) {
@@ -41,7 +41,7 @@ final class qs {
               ScreenParticle.field_o = jp.field_b;
             }
             we.field_c = OpenGlRectangleTexture.field_k;
-            SpriteState.field_o = rs.field_v;
+            SpriteState.field_o = RegistrationAgreementPane.field_v;
             if (param1 != null) {
               ht.field_g = false;
             } else if (var2_int) {
@@ -52,7 +52,7 @@ final class qs {
             ScreenParticle.field_o < jp.field_b &&
             MatchingFieldValidator.pointerMoved) {
             we.field_c = OpenGlRectangleTexture.field_k;
-            SpriteState.field_o = rs.field_v;
+            SpriteState.field_o = RegistrationAgreementPane.field_v;
             ScreenParticle.field_o = 0;
           }
           StrongCacheReference.field_s = param1;
@@ -65,7 +65,7 @@ final class qs {
             ht.field_g = false;
           }
           OpenGlRectangleTexture.field_k = -1;
-          rs.field_v = -1;
+          RegistrationAgreementPane.field_v = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

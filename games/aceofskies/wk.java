@@ -51,9 +51,9 @@ final class wk extends hh {
             return false;
           }
           AccountCreationResultPanel var8 = new AccountCreationResultPanel(AgeValidator.field_f, param4);
-          AgeValidator.field_f.a(var8, 0);
+          AgeValidator.field_f.showDialog(var8, 0);
           if (AircraftDefinition.a(param5)) {
-            var8.n(126);
+            var8.showAccountCreationConnectionFailure(126);
             return true;
           }
           sd.field_h = param1;

@@ -73,18 +73,18 @@ final class RendererManager {
           long var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
           jaggl.OpenGL.glShaderSourceRawARB(var4_long, param2);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, dg.field_Q, 0);
-          if (dg.field_Q[0] == 0) {
-            if (dg.field_Q[0] == 0) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, ContentTransitionDialog.field_Q, 0);
+          if (ContentTransitionDialog.field_Q[0] == 0) {
+            if (ContentTransitionDialog.field_Q[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, dg.field_Q, 1);
-            if (dg.field_Q[1] > 1) {
-              byte[] var10 = new byte[dg.field_Q[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, dg.field_Q[1], dg.field_Q, 0, var10, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, ContentTransitionDialog.field_Q, 1);
+            if (ContentTransitionDialog.field_Q[1] > 1) {
+              byte[] var10 = new byte[ContentTransitionDialog.field_Q[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, ContentTransitionDialog.field_Q[1], ContentTransitionDialog.field_Q, 0, var10, 0);
               System.out.println(new String(var10));
             }
-            if (dg.field_Q[0] == 0) {
+            if (ContentTransitionDialog.field_Q[0] == 0) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               Object stackIn_15_0 = null;
               return (OpenGlShaderObject) (stackIn_15_0);
@@ -139,7 +139,7 @@ final class RendererManager {
                   if (!oi.field_d.ensureIndexLoaded((byte) -90)) {
                     return;
                   }
-                  var7_int = bc.a("hw3d", (byte) -95);
+                  var7_int = LabeledWidgetContainer.a("hw3d", (byte) -95);
                   if (-1 == var7_int) {
                     var6.field_b = false;
                     decompiledFrameRemainder0 = false;
@@ -148,7 +148,7 @@ final class RendererManager {
                     if (var7_int < 100) {
                       return;
                     }
-                    var8_int = bc.a("jaclib", (byte) 49);
+                    var8_int = LabeledWidgetContainer.a("jaclib", (byte) 49);
                     if (var8_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
@@ -157,7 +157,7 @@ final class RendererManager {
                       if (var8_int < 100) {
                         return;
                       }
-                      var9 = bc.a("jaggl", (byte) -75);
+                      var9 = LabeledWidgetContainer.a("jaggl", (byte) -75);
                       if (var9 == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -170,7 +170,7 @@ final class RendererManager {
                   if (!oi.field_d.ensureIndexLoaded((byte) -44)) {
                     return;
                   }
-                  var7_int = bc.a("jaclib", (byte) -120);
+                  var7_int = LabeledWidgetContainer.a("jaclib", (byte) -120);
                   if (var7_int == -1) {
                     var6.field_b = false;
                     decompiledFrameRemainder0 = false;
@@ -179,7 +179,7 @@ final class RendererManager {
                     if (var7_int < 100) {
                       return;
                     }
-                    var8_int = bc.a("jaggl", (byte) -80);
+                    var8_int = LabeledWidgetContainer.a("jaggl", (byte) -80);
                     if (var8_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
@@ -191,7 +191,7 @@ final class RendererManager {
                   if (!oi.field_d.ensureIndexLoaded((byte) 116)) {
                     return;
                   }
-                  var7_int = bc.a("jaclib", (byte) 12);
+                  var7_int = LabeledWidgetContainer.a("jaclib", (byte) 12);
                   if (var7_int == -1) {
                     var6.field_b = false;
                     decompiledFrameRemainder0 = false;
@@ -200,7 +200,7 @@ final class RendererManager {
                     if (var7_int < 100) {
                       return;
                     }
-                    var8_int = bc.a("jagdx", (byte) 47);
+                    var8_int = LabeledWidgetContainer.a("jagdx", (byte) 47);
                     if (var8_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
@@ -209,7 +209,7 @@ final class RendererManager {
                       if (var8_int < 100) {
                         return;
                       }
-                      var9 = bc.a("hw3d", (byte) 1);
+                      var9 = LabeledWidgetContainer.a("hw3d", (byte) 1);
                       if (var9 == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -225,7 +225,7 @@ final class RendererManager {
                   if (!oi.field_d.ensureIndexLoaded((byte) -39)) {
                     return;
                   }
-                  var7_int = bc.a("jaclib", (byte) 74);
+                  var7_int = LabeledWidgetContainer.a("jaclib", (byte) 74);
                   if (var7_int == -1) {
                     var6.field_b = false;
                     decompiledFrameRemainder0 = false;
@@ -234,7 +234,7 @@ final class RendererManager {
                     if (100 > var7_int) {
                       return;
                     }
-                    var8_int = bc.a("sw3d", (byte) 41);
+                    var8_int = LabeledWidgetContainer.a("sw3d", (byte) 41);
                     if (var8_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;

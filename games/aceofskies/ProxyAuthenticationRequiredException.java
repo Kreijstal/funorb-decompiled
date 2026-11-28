@@ -41,7 +41,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    String stackIn_28_0 = jn.field_u;
+                    String stackIn_28_0 = DialogMessagePane.field_u;
                     return stackIn_28_0;
                   }
                 }

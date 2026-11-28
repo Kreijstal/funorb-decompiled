@@ -27,14 +27,14 @@ final class ScoreSubmission extends IntrusiveNode {
           GraphicsRenderer var6 = FlightSession.rendererManager.a((byte) 100);
           if (hr.aircraftSprites == null) {
             hr.aircraftSprites = new RenderSprite[SteeringMode.aircraftSpriteData.length][];
-            is.backgroundSprites = new RenderSprite[oo.backgroundSpriteData.length];
+            is.backgroundSprites = new RenderSprite[ProgressMessageDialog.backgroundSpriteData.length];
             sd.cloudSprites = new RenderSprite[na.cloudSpriteData.length];
             SecondaryKeyHashTable.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
             SectorCacheStore.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
             SoftwareDepthBuffer.keySprites = new RenderSprite[qa.keySpriteData.length];
             SocketConnector.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
             GlyphMask.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
-            rs.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
+            RegistrationAgreementPane.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
             GameKeyHandler.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
             HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
             OpenGlBuffer.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
@@ -61,8 +61,8 @@ final class ScoreSubmission extends IntrusiveNode {
               hr.aircraftSprites[var2Lifetime1][var3] = var6.createSprite(SteeringMode.aircraftSpriteData[var2Lifetime1][var3], false);
             }
           }
-          for (int var2Lifetime2 = 0; var2Lifetime2 < oo.backgroundSpriteData.length; var2Lifetime2++) {
-            is.backgroundSprites[var2Lifetime2] = var6.createSprite(oo.backgroundSpriteData[var2Lifetime2], false);
+          for (int var2Lifetime2 = 0; var2Lifetime2 < ProgressMessageDialog.backgroundSpriteData.length; var2Lifetime2++) {
+            is.backgroundSprites[var2Lifetime2] = var6.createSprite(ProgressMessageDialog.backgroundSpriteData[var2Lifetime2], false);
           }
           for (int var2Lifetime3 = 0; na.cloudSpriteData.length > var2Lifetime3; var2Lifetime3++) {
             sd.cloudSprites[var2Lifetime3] = var6.createSprite(na.cloudSpriteData[var2Lifetime3], false);
@@ -99,7 +99,7 @@ final class ScoreSubmission extends IntrusiveNode {
           for (int var2Lifetime12 = 0; qk.brassSliderSpriteData.length > var2Lifetime12; var2Lifetime12++) {
             CipherPacketBuffer.brassSliderSprites[var2Lifetime12] = var6.createSprite(qk.brassSliderSpriteData[var2Lifetime12], false);
           }
-          qk.woodenTileSprite = var6.createSprite(lt.woodenTileSpriteData, false);
+          qk.woodenTileSprite = var6.createSprite(ModalDialogHost.woodenTileSpriteData, false);
           for (int var2Lifetime13 = 0; var2Lifetime13 < qa.keySpriteData.length; var2Lifetime13++) {
             SoftwareDepthBuffer.keySprites[var2Lifetime13] = var6.createSprite(qa.keySpriteData[var2Lifetime13], false);
           }
@@ -130,12 +130,12 @@ final class ScoreSubmission extends IntrusiveNode {
           OpenGlTextureMask.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
           se.bigGameFont = var6.createFont(kn.bigFontMetrics, q.bigFontSpriteData, true);
           kn.titleFont = var6.createFont(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);
-          PacketBuffer.gameFont = var6.createFont(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
+          PacketBuffer.gameFont = var6.createFont(AlphaWidgetContainer.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
           for (int var2Lifetime20 = 0; BufferElementType.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
             GlyphMask.achievementSprites[var2Lifetime20] = var6.createSprite(BufferElementType.achievementSpriteData[var2Lifetime20], false);
           }
           for (int var2Lifetime21 = 0; var2Lifetime21 < ByteStorage.medalSpriteData.length; var2Lifetime21++) {
-            RenderSprite[] stackIn_78_0 = rs.medalSprites;
+            RenderSprite[] stackIn_78_0 = RegistrationAgreementPane.medalSprites;
             stackIn_78_0[var2Lifetime21] = var6.createSprite(ByteStorage.medalSpriteData[var2Lifetime21], false);
           }
           lg.coinSprite = var6.createSprite(vl.coinSpriteData, false);

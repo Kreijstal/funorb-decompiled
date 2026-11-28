@@ -19,7 +19,7 @@ final class te extends IntrusiveNode {
             Object stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, FullscreenNoticeType.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
           if (param1 > -75) {
             CoverageBitmapFont stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;

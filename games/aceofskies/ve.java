@@ -9,18 +9,18 @@ final class ve {
         if (AccountCreationResultPanel.field_fb == ht.field_k) {
           return rt.field_e;
         }
-        if (!gm.field_x.a(false)) {
-          return gm.field_x.b(2);
+        if (!ModalDialog.field_x.a(false)) {
+          return ModalDialog.field_x.b(2);
         }
         if (!param0) {
           ve.a((byte) -55, 101);
           if (AccountCreationResultPanel.field_fb == nb.field_c) {
-            return gm.field_x.b(2);
+            return ModalDialog.field_x.b(2);
           }
           return se.field_a;
         }
         if (AccountCreationResultPanel.field_fb == nb.field_c) {
-          return gm.field_x.b(2);
+          return ModalDialog.field_x.b(2);
         }
         return se.field_a;
     }

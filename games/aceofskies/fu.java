@@ -7,7 +7,7 @@ abstract class fu {
     private boolean field_a;
     OpenGlRenderer field_b;
     private boolean field_c;
-    static ng field_d;
+    static ProgressDialog field_d;
 
     protected final void finalize() throws Throwable {
         if (!this.field_c) {
@@ -33,13 +33,13 @@ abstract class fu {
         int[] var3 = new int[var1];
         int var4_int = 0;
         if (param0 != 30346) {
-          field_d = (ng) null;
+          field_d = (ProgressDialog) null;
         }
         while (var4_int < var1) {
           var3[var4_int] = ud.field_e[pg.a((int) var2[var4_int], 255)];
           var4_int++;
         }
-        Sprite var4 = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
+        Sprite var4 = new Sprite(pu.field_a, JaggrabDownloader.field_i, FullscreenNoticeType.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
         OpenGlUnderwaterEffect.f(1);
         return var4;
     }
@@ -50,8 +50,8 @@ abstract class fu {
           this.field_a = param4 ? true : false;
           this.field_b = param0;
           this.field_e = param3;
-          jaggl.OpenGL.glGenBuffersARB(1, rs.field_w, 0);
-          this.field_f = rs.field_w[0];
+          jaggl.OpenGL.glGenBuffersARB(1, RegistrationAgreementPane.field_w, 0);
+          this.field_f = RegistrationAgreementPane.field_w[0];
           this.a((byte) 52);
           jaggl.OpenGL.glBufferDataARBub(param1, this.field_e, param2, 0, !this.field_a ? 35044 : 35040);
           this.field_b.field_ib = this.field_b.field_ib + this.field_e;

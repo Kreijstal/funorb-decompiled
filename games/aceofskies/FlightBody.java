@@ -200,7 +200,7 @@ class FlightBody {
           if (op.field_a > param5) {
             nh.field_a = param5;
           }
-          hg.field_C[DiskArchiveRequest.field_w] = param4;
+          DraggableWidgetContainer.field_C[DiskArchiveRequest.field_w] = param4;
           qd.field_p[DiskArchiveRequest.field_w] = param0;
           dd.field_c[DiskArchiveRequest.field_w] = param3;
           int var6 = param0 + param4 + param3;
@@ -225,7 +225,7 @@ class FlightBody {
         if (op.field_a > param5) {
           nh.field_a = param5;
         }
-        hg.field_C[DiskArchiveRequest.field_w] = param4;
+        DraggableWidgetContainer.field_C[DiskArchiveRequest.field_w] = param4;
         qd.field_p[DiskArchiveRequest.field_w] = param0;
         dd.field_c[DiskArchiveRequest.field_w] = param3;
         int var6Lifetime1 = param0 + param4 + param3;

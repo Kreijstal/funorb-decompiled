@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends to {
+final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     int field_u;
     static BitmapFontMetrics gameFontMetrics;
     static String field_x;
@@ -15,7 +15,7 @@ final class hi extends to {
         field_x = null;
     }
 
-    hi(UiWidget param0) {
+    AlphaWidgetContainer(UiWidget param0) {
         super(param0.field_p, param0.field_h, param0.field_q, param0.field_n, (WidgetRenderer) null, (WidgetEventListener) null);
         try {
           param0.setBounds(this.field_n, 0, 0, this.field_q, (byte) 126);
@@ -26,7 +26,7 @@ final class hi extends to {
         }
     }
 
-    public hi() {
+    public AlphaWidgetContainer() {
         super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetEventListener) null);
         this.field_u = 256;
     }
@@ -46,7 +46,7 @@ final class hi extends to {
           boolean stackIn_28_1 = ((55 & param2) != 0) ? false : true;
           return stackIn_27_0 & stackIn_28_1;
         }
-        hi.clearStaticReferences(13);
+        AlphaWidgetContainer.clearStaticReferences(13);
         if (!si.a(param2, 2, param1)) {
           return false;
         }
@@ -94,7 +94,7 @@ final class hi extends to {
           MenuScreen.a((byte) -119, 4, false);
           return;
         }
-        hi.clearStaticReferences(37);
+        AlphaWidgetContainer.clearStaticReferences(37);
         MenuScreen.a((byte) -119, 4, false);
     }
 

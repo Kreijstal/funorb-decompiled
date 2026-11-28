@@ -139,7 +139,7 @@ final class OpenGlAtlasBitmapFont extends RendererBitmapFont {
               }
             }
           }
-          this.field_h = ab.a(param0, -125, false, var33, 0, 0, var6Lifetime1, var6Lifetime1);
+          this.field_h = DequeWidgetContainer.a(param0, -125, false, var33, 0, 0, var6Lifetime1, var6Lifetime1);
           this.field_e = false;
         } else {
           byte[] var30 = new byte[var6Lifetime1 * var6Lifetime1];

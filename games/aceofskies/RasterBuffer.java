@@ -33,7 +33,7 @@ abstract class RasterBuffer {
     }
 
     final static void b(byte param0) {
-        ClientException.field_d.d(new tn(), -30244);
+        ClientException.field_d.replaceContent(new GuestPlayConfirmationForm(), -30244);
         if (param0 >= -21) {
           s var2 = (s) null;
           RasterBuffer.a(19, (s) null);

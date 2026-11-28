@@ -474,7 +474,7 @@ final class OpenGlRenderSprite extends RenderSprite {
         this.field_e = false;
         try {
           this.field_g = param0;
-          this.field_j = ab.a(param0, -126, false, param3, param4, param5, param1, param2);
+          this.field_j = DequeWidgetContainer.a(param0, -126, false, param3, param4, param5, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ClientException extends RuntimeException {
-    static ad field_d;
+    static StandardContentDialog field_d;
     Throwable field_c;
     static int[] field_b;
     String field_a;

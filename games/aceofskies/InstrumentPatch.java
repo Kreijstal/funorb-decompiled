@@ -10,7 +10,7 @@ final class InstrumentPatch extends IntrusiveNode {
     byte[] field_k;
     InstrumentEnvelope[] field_o;
     int field_i;
-    static oo field_m;
+    static ProgressMessageDialog field_m;
     byte[] field_e;
     static boolean field_p;
     static float[] field_h;
@@ -89,7 +89,7 @@ final class InstrumentPatch extends IntrusiveNode {
           param2.previous = param1.previous;
           param2.previous.next = param2;
           if (param0 != -20) {
-            field_m = (oo) null;
+            field_m = (ProgressMessageDialog) null;
           }
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
@@ -538,7 +538,7 @@ final class InstrumentPatch extends IntrusiveNode {
           param2.previous = param1.previous;
           param2.previous.next = param2;
           if (param0 != -20) {
-            field_m = (oo) null;
+            field_m = (ProgressMessageDialog) null;
           }
           param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {

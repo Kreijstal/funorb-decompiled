@@ -22,7 +22,7 @@ abstract class or {
     final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
-        Sprite dupTemp$0 = tn.a(param4, param1, true);
+        Sprite dupTemp$0 = GuestPlayConfirmationForm.a(param4, param1, true);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -30,24 +30,24 @@ abstract class or {
         var5[0] = dupTemp$0;
         if (param0 >= -28) {
           or.clearStaticReferences((byte) 107);
-          Sprite dupTemp$1 = tn.a(param2, param1, true);
+          Sprite dupTemp$1 = GuestPlayConfirmationForm.a(param2, param1, true);
           var6[8] = dupTemp$1;
           var5[7] = dupTemp$1;
           var5[5] = dupTemp$1;
           if (param3 != 0) {
-            var6[4] = tn.a(param3, 64, true);
+            var6[4] = GuestPlayConfirmationForm.a(param3, 64, true);
             return var5;
           }
           return var5;
         }
-        Sprite dupTemp$2 = tn.a(param2, param1, true);
+        Sprite dupTemp$2 = GuestPlayConfirmationForm.a(param2, param1, true);
         var6[8] = dupTemp$2;
         var5[7] = dupTemp$2;
         var5[5] = dupTemp$2;
         if (param3 == 0) {
           return var5;
         }
-        var6[4] = tn.a(param3, 64, true);
+        var6[4] = GuestPlayConfirmationForm.a(param3, 64, true);
         return var5;
     }
 

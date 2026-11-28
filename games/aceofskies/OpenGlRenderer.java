@@ -1782,7 +1782,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
           }
           try {
             if (EditableTextField.field_z == 0) {
-              wu.field_l = cs.field_d.requestDirectSocket(2, hi.field_x, RendererManager.field_f);
+              wu.field_l = cs.field_d.requestDirectSocket(2, AlphaWidgetContainer.field_x, RendererManager.field_f);
               EditableTextField.field_z = EditableTextField.field_z + 1;
             }
             if (EditableTextField.field_z == 1) {
@@ -1825,7 +1825,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               int stackIn_39_0 = -1;
               return stackIn_39_0;
             }
-            ul.field_r.a(param0 ^ 16696, rs.field_C, du.field_m);
+            ul.field_r.a(param0 ^ 16696, RegistrationAgreementPane.field_C, du.field_m);
             wu.field_l = null;
             EditableTextField.field_z = 0;
             du.field_m = null;

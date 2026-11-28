@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends ab implements WidgetActivationListener {
+final class GuestPlayConfirmationForm extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_t;
     private InteractiveWidget field_v;
     static int[] field_w;
@@ -52,13 +52,13 @@ final class tn extends ab implements WidgetActivationListener {
           }
           int var5_int = 103 % ((-53 - param0) / 33);
           if (98 == param1) {
-            boolean stackIn_6_0 = this.b(param3, -108);
+            boolean stackIn_6_0 = this.focusPreviousChild(param3, -108);
             return stackIn_6_0;
           }
           if (99 != param1) {
             return false;
           }
-          boolean stackIn_9_0 = this.a(80, param3);
+          boolean stackIn_9_0 = this.focusNextChild(80, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class tn extends ab implements WidgetActivationListener {
           byte[] var4 = var6;
           if (param1 != -127) {
             CipherPacketBuffer var5 = (CipherPacketBuffer) null;
-            tn.a(-9, (CipherPacketBuffer) null);
+            GuestPlayConfirmationForm.a(-9, (CipherPacketBuffer) null);
           }
           if (var6 == null) {
             return false;
@@ -115,7 +115,7 @@ final class tn extends ab implements WidgetActivationListener {
         return var3;
     }
 
-    public tn() {
+    public GuestPlayConfirmationForm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_u = new InteractiveWidget(SteeringMode.field_b, (WidgetEventListener) null);
         this.field_v = new InteractiveWidget(Aircraft.field_s, (WidgetEventListener) null);
@@ -135,9 +135,9 @@ final class tn extends ab implements WidgetActivationListener {
         this.field_x.field_o = (WidgetEventListener) (this);
         this.field_u.field_k = cl.field_db;
         this.field_x.field_k = td.field_c;
-        this.a(this.field_v, 1);
-        this.a(this.field_u, 1);
-        this.a(this.field_x, 1);
+        this.addChild(this.field_v, 1);
+        this.addChild(this.field_u, 1);
+        this.addChild(this.field_x, 1);
     }
 
     final static void a(int param0, boolean param1, String param2, String param3) {

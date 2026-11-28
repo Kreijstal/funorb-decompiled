@@ -38,7 +38,7 @@ abstract class hh {
           if (param0 != 255) {
             field_b = (qk) null;
           }
-          int var3 = sh.field_u;
+          int var3 = DropTargetWidgetContainer.field_u;
           int var4 = NetworkArchiveRequest.field_w;
           int var5 = 0;
           int var6 = 0;
@@ -91,7 +91,7 @@ abstract class hh {
         try {
           cs.field_d = param5;
           uk.field_g = param6;
-          hi.field_x = param1;
+          AlphaWidgetContainer.field_x = param1;
           ah.field_s = param0;
           ul.field_r = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
           ConfirmedEmailAvailabilityValidator.field_m = new DiskCacheWorker(param5);

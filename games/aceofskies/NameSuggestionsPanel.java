@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NameSuggestionsPanel extends ab implements WidgetActivationListener {
+final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetActivationListener {
     private InteractiveWidget[] field_t;
     private String[] field_v;
     static Vector2 field_u;
@@ -34,7 +34,7 @@ final class NameSuggestionsPanel extends ab implements WidgetActivationListener 
         Throwable decompiledCaughtException = null;
         Object var1 = OpenGlBuffer.field_d;
         synchronized (var1) {
-          if (ch.field_a == lt.field_u) {
+          if (ch.field_a == ModalDialogHost.field_u) {
             return false;
           }
           if (param0 >= -125) {
@@ -56,13 +56,13 @@ final class NameSuggestionsPanel extends ab implements WidgetActivationListener 
           }
           int var5_int = 114 / ((-53 - param0) / 33);
           if (param1 == 98) {
-            boolean stackIn_7_0 = this.b(param3, -24);
+            boolean stackIn_7_0 = this.focusPreviousChild(param3, -24);
             return stackIn_7_0;
           }
           if (99 != param1) {
             return false;
           }
-          boolean stackIn_11_0 = this.a(80, param3);
+          boolean stackIn_11_0 = this.focusNextChild(80, param3);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -115,12 +115,12 @@ final class NameSuggestionsPanel extends ab implements WidgetActivationListener 
               this.field_t[var5].field_e = (WidgetRenderer) ((Object) var4);
               this.field_t[var5].field_k = HardwareOpenGlRenderer.field_wc;
               this.field_t[var5].setBounds(15, 0, 20 + var5 * 16, 80, (byte) 124);
-              this.a(this.field_t[var5], 1);
+              this.addChild(this.field_t[var5], 1);
             }
             this.field_t[var3_int] = new InteractiveWidget(InteractiveWidget.field_r, (WidgetEventListener) (this));
             this.field_t[var3_int].field_e = (WidgetRenderer) ((Object) var4);
             this.field_t[var3_int].setBounds(15, 0, var3_int * 16 + 16 + 20, 100, (byte) 123);
-            this.a(this.field_t[var3_int], 1);
+            this.addChild(this.field_t[var3_int], 1);
             return;
           }
           this.field_v = null;

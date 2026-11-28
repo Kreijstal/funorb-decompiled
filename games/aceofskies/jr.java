@@ -39,35 +39,35 @@ final class jr extends DualLinkNode {
           PacketBuffer var17 = new PacketBuffer(param0);
           PacketBuffer var18 = var17;
           var18.position = param0.length - 2;
-          to.field_t = var18.readUnsignedShort((byte) 0);
-          ji.field_b = new int[to.field_t];
-          lh.field_a = new int[to.field_t];
-          q.field_k = new boolean[to.field_t];
-          lg.field_j = new int[to.field_t];
-          ql.field_p = new byte[to.field_t][];
-          fk.field_a = new byte[to.field_t][];
-          ee.field_e = new int[to.field_t];
-          var18.position = -(to.field_t * 8) + (-7 + param0.length);
+          SingleChildWidgetContainer.field_t = var18.readUnsignedShort((byte) 0);
+          ji.field_b = new int[SingleChildWidgetContainer.field_t];
+          FullscreenNoticeType.field_a = new int[SingleChildWidgetContainer.field_t];
+          q.field_k = new boolean[SingleChildWidgetContainer.field_t];
+          lg.field_j = new int[SingleChildWidgetContainer.field_t];
+          ql.field_p = new byte[SingleChildWidgetContainer.field_t][];
+          fk.field_a = new byte[SingleChildWidgetContainer.field_t][];
+          ee.field_e = new int[SingleChildWidgetContainer.field_t];
+          var18.position = -(SingleChildWidgetContainer.field_t * 8) + (-7 + param0.length);
           pu.field_a = var18.readUnsignedShort((byte) 0);
           JaggrabDownloader.field_i = var18.readUnsignedShort((byte) 0);
           int var3 = (var18.readUnsignedByte(param1 ^ 7055) & 255) + 1;
-          for (int var4 = 0; to.field_t > var4; var4++) {
-            lh.field_a[var4] = var17.readUnsignedShort((byte) 0);
+          for (int var4 = 0; SingleChildWidgetContainer.field_t > var4; var4++) {
+            FullscreenNoticeType.field_a[var4] = var17.readUnsignedShort((byte) 0);
           }
-          for (int var4Lifetime1 = 0; var4Lifetime1 < to.field_t; var4Lifetime1++) {
+          for (int var4Lifetime1 = 0; var4Lifetime1 < SingleChildWidgetContainer.field_t; var4Lifetime1++) {
             lg.field_j[var4Lifetime1] = var18.readUnsignedShort((byte) 0);
           }
           if (param1 != 7148) {
             byte[] var16 = (byte[]) null;
             jr.a((byte[]) null, -128);
           }
-          for (int var4Lifetime2 = 0; to.field_t > var4Lifetime2; var4Lifetime2++) {
+          for (int var4Lifetime2 = 0; SingleChildWidgetContainer.field_t > var4Lifetime2; var4Lifetime2++) {
             ji.field_b[var4Lifetime2] = var18.readUnsignedShort((byte) 0);
           }
-          for (int var4Lifetime3 = 0; var4Lifetime3 < to.field_t; var4Lifetime3++) {
+          for (int var4Lifetime3 = 0; var4Lifetime3 < SingleChildWidgetContainer.field_t; var4Lifetime3++) {
             ee.field_e[var4Lifetime3] = var18.readUnsignedShort((byte) 0);
           }
-          var18.position = param0.length - 7 - to.field_t * 8 - (-3 + 3 * var3);
+          var18.position = param0.length - 7 - SingleChildWidgetContainer.field_t * 8 - (-3 + 3 * var3);
           ud.field_e = new int[var3];
           for (int var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             ud.field_e[var4Lifetime4] = var18.readUnsignedMedium((byte) -107);
@@ -76,7 +76,7 @@ final class jr extends DualLinkNode {
             }
           }
           var18.position = 0;
-          for (int var4Lifetime5 = 0; var4Lifetime5 < to.field_t; var4Lifetime5++) {
+          for (int var4Lifetime5 = 0; var4Lifetime5 < SingleChildWidgetContainer.field_t; var4Lifetime5++) {
             int var5 = ji.field_b[var4Lifetime5];
             int var6 = ee.field_e[var4Lifetime5];
             int var7 = var5 * var6;

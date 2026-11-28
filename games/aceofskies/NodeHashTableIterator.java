@@ -96,9 +96,9 @@ final class NodeHashTableIterator implements Iterator {
     final static void decodeGameImagesAndFonts(ResourceArchive fontMetricsArchive, byte obfuscationGuard, ResourceArchive sharedSpriteArchive, ResourceArchive gameSpriteArchive) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          oo.backgroundSpriteData = new SpriteData[2];
-          for (int var4_int = 0; oo.backgroundSpriteData.length > var4_int; var4_int++) {
-            oo.backgroundSpriteData[var4_int] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "background" + var4_int);
+          ProgressMessageDialog.backgroundSpriteData = new SpriteData[2];
+          for (int var4_int = 0; ProgressMessageDialog.backgroundSpriteData.length > var4_int; var4_int++) {
+            ProgressMessageDialog.backgroundSpriteData[var4_int] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "background" + var4_int);
           }
           SteeringMode.aircraftSpriteData = new SpriteData[8][];
           for (int var4_intLifetime1 = 0; var4_intLifetime1 < 8; var4_intLifetime1++) {
@@ -129,12 +129,12 @@ final class NodeHashTableIterator implements Iterator {
           hq.levelRingSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "levelring");
           qa.keySpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "keys");
           CipherPacketBuffer.fontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "fontalpha");
-          hi.gameFontMetrics = tg.a(fontMetricsArchive, 8191, "", "font");
+          AlphaWidgetContainer.gameFontMetrics = tg.a(fontMetricsArchive, 8191, "", "font");
           q.bigFontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "bigfontalpha");
           kn.bigFontMetrics = tg.a(fontMetricsArchive, 8191, "", "bigfont");
           nc.titleFontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "titlefontalpha");
           ImageProducerRasterBuffer.titleFontMetrics = tg.a(fontMetricsArchive, 8191, "", "titlefont");
-          lt.woodenTileSpriteData = SpriteData.loadFirstFrame(gameSpriteArchive, "", "woodentile");
+          ModalDialogHost.woodenTileSpriteData = SpriteData.loadFirstFrame(gameSpriteArchive, "", "woodentile");
           gu.brassFrameSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassframe");
           vl.brassButtonSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassbutton");
           qk.brassSliderSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassslider");

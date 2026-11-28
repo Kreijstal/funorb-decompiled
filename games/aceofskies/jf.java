@@ -28,13 +28,13 @@ final class jf implements WidgetRenderer {
         try {
           boolean[] var6 = (boolean[]) null;
           lp.field_g = nc.a(param1, -114, param2, iq.field_g, (boolean[]) null);
-          fd.field_b = dt.a(param1, 19501, ad.field_T, param2, tt.field_d);
+          fd.field_b = dt.a(param1, 19501, StandardContentDialog.field_T, param2, tt.field_d);
           uh.upgradeSounds = nc.a(param1, -76, param2, DualLinkNode.field_k, ht.field_j);
           hp.field_i = nc.a(param1, -114, param2, DualLinkNode.field_g, rj.field_c);
-          OpenGlVolumeTexture.field_o = SynthesizedSoundEffect.a(param2, "", wg.field_c).a();
-          gg.field_a = SynthesizedSoundEffect.a(param2, "", rg.field_C).a();
-          kq.field_b = SynthesizedSoundEffect.a(param2, "", np.field_e).a();
-          SynthesizedSoundEffect.a(param2, "", ArchiveNetworkClient.field_q).a();
+          OpenGlVolumeTexture.field_o = SynthesizedSoundEffect.loadByName(param2, "", wg.field_c).toPcmSample();
+          gg.field_a = SynthesizedSoundEffect.loadByName(param2, "", ResizableModalDialog.field_C).toPcmSample();
+          kq.field_b = SynthesizedSoundEffect.loadByName(param2, "", np.field_e).toPcmSample();
+          SynthesizedSoundEffect.loadByName(param2, "", ArchiveNetworkClient.field_q).toPcmSample();
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "jf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -135,11 +135,11 @@ final class jf implements WidgetRenderer {
           if (ai.field_a[param3] > ai.field_a[param0]) {
             return false;
           }
-          int var4 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
+          int var4 = dd.field_c[param3] + qd.field_p[param3] + DraggableWidgetContainer.field_C[param3];
           if (param2 != 67) {
             jf.a(121, false, (byte) -23, -25);
           }
-          int var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+          int var5 = qd.field_p[param0] + DraggableWidgetContainer.field_C[param0] + dd.field_c[param0];
           if (var5 > var4) {
             return true;
           }
@@ -160,9 +160,9 @@ final class jf implements WidgetRenderer {
         if (DualLinkDequeIterator.field_c[param3] > DualLinkDequeIterator.field_c[param0]) {
           return false;
         }
-        int var4Lifetime1 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
+        int var4Lifetime1 = dd.field_c[param3] + qd.field_p[param3] + DraggableWidgetContainer.field_C[param3];
         if (param2 == 67) {
-          int var5Lifetime1 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+          int var5Lifetime1 = qd.field_p[param0] + DraggableWidgetContainer.field_C[param0] + dd.field_c[param0];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -172,7 +172,7 @@ final class jf implements WidgetRenderer {
           return !(param3 >= param0);
         }
         jf.a(121, false, (byte) -23, -25);
-        int var5Lifetime2 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+        int var5Lifetime2 = qd.field_p[param0] + DraggableWidgetContainer.field_C[param0] + dd.field_c[param0];
         if (var5Lifetime2 > var4Lifetime1) {
           return true;
         }

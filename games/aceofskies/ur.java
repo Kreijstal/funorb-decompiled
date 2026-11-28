@@ -28,7 +28,7 @@ final class ur {
     final static IndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         String stackIn_8_2 = null;
         try {
-          if (!tn.a(param3, (byte) -127, param2, param1)) {
+          if (!GuestPlayConfirmationForm.a(param3, (byte) -127, param2, param1)) {
             Object stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }

@@ -72,7 +72,7 @@ final class de implements WidgetRenderer {
             return stackIn_3_0;
           }
           AgeValidator.field_f.processPointerInput(pd.field_b, true, qe.field_k, true);
-          AgeValidator.field_f.f((byte) -117);
+          AgeValidator.field_f.advanceDialogs((byte) -117);
           while (NameSuggestionsPanel.a((byte) -127)) {
             AgeValidator.field_f.processKeyInput(param0 - 42, AccountServiceResult.field_e, bk.lastKeyCode);
           }
@@ -82,7 +82,7 @@ final class de implements WidgetRenderer {
             int stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
-          if (ss.field_t) {
+          if (StripedProgressWidget.field_t) {
             int stackIn_13_0 = 3;
             return stackIn_13_0;
           }
@@ -90,7 +90,7 @@ final class de implements WidgetRenderer {
             int stackIn_17_0 = 1;
             return stackIn_17_0;
           }
-          if (!gm.field_x.a(false)) {
+          if (!ModalDialog.field_x.a(false)) {
             int stackIn_20_0 = 1;
             return stackIn_20_0;
           }

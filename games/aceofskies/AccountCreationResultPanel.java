@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationResultPanel extends oo implements WidgetActivationListener {
+final class AccountCreationResultPanel extends ProgressMessageDialog implements WidgetActivationListener {
     static AccountRequestState field_fb;
     private AccountRegistrationPanel field_db;
     private boolean field_eb;
@@ -16,12 +16,12 @@ final class AccountCreationResultPanel extends oo implements WidgetActivationLis
         field_fb = null;
     }
 
-    final void n(int param0) {
+    final void showAccountCreationConnectionFailure(int param0) {
         int var2 = -27 / ((71 - param0) / 52);
         this.showAccountCreationResult(true, AccountRequestState.createAccountErrorResult(248, 32, rl.field_i), 11);
     }
 
-    AccountCreationResultPanel(lt param0, AccountRegistrationPanel param1) {
+    AccountCreationResultPanel(ModalDialogHost param0, AccountRegistrationPanel param1) {
         super(param0, b.field_c, pg.field_b, false, false);
         try {
           this.field_db = param1;
@@ -32,12 +32,12 @@ final class AccountCreationResultPanel extends oo implements WidgetActivationLis
 
     public final void onWidgetActivated(int param0, InteractiveWidget param1, int param2, int param3, byte param4) {
         if (this.field_eb) {
-          hg.a(false, true, true);
+          DraggableWidgetContainer.a(false, true, true);
           return;
         }
         try {
           CachedArchiveProvider.b(true);
-          this.h((byte) -15);
+          this.closeDialog((byte) -15);
           int var6_int = -106 % ((-27 - param4) / 61);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "jq.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -70,29 +70,29 @@ final class AccountCreationResultPanel extends oo implements WidgetActivationLis
               this.field_eb = true;
             }
           }
-          jn var5 = new jn((oo) (this), b.field_c, var4);
+          DialogMessagePane var5 = new DialogMessagePane((ProgressMessageDialog) (this), b.field_c, var4);
           if (param1.success) {
             if (param1.field_d) {
-              this.d(new rs(this), -30244);
+              this.replaceContent(new RegistrationAgreementPane(this), -30244);
               return;
             }
-            var5.a((WidgetEventListener) (this), param2 + 17536, mq.field_i);
+            var5.addListenerButton((WidgetEventListener) (this), param2 + 17536, mq.field_i);
           } else {
             if (this.field_eb) {
-              var5.a((WidgetEventListener) (this), param2 ^ 17536, mq.field_i);
+              var5.addListenerButton((WidgetEventListener) (this), param2 ^ 17536, mq.field_i);
             } else if (param1.statusCode == 5) {
-              var5.a(11, (byte) 105, ln.field_a);
-              var5.a(17, (byte) -126, SoftCacheReference.field_s);
+              var5.addActionButton(11, (byte) 105, ln.field_a);
+              var5.addActionButton(17, (byte) -126, SoftCacheReference.field_s);
             } else {
-              var5.a(-1, (byte) -51, Bullet.field_j);
+              var5.addActionButton(-1, (byte) -51, Bullet.field_j);
             }
             if (param1.statusCode == 3) {
-              var5.a(7, (byte) -103, lu.field_a);
+              var5.addActionButton(7, (byte) -103, lu.field_a);
             } else if (param1.statusCode == 6) {
-              var5.a(9, (byte) -41, ao.field_d);
+              var5.addActionButton(9, (byte) -41, ao.field_d);
             }
           }
-          this.d(var5, -30244);
+          this.replaceContent(var5, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,35 +108,35 @@ final class AccountCreationResultPanel extends oo implements WidgetActivationLis
         }
     }
 
-    final boolean h(int param0) {
+    final boolean advanceDialogAnimation(int param0) {
         if (param0 != 11) {
           InteractiveWidget var3 = (InteractiveWidget) null;
           this.onWidgetActivated(95, (InteractiveWidget) null, -21, 40, (byte) -17);
           if (!this.field_z) {
-            return super.h(11);
+            return super.advanceDialogAnimation(11);
           }
           if (this.field_gb) {
-            return super.h(11);
+            return super.advanceDialogAnimation(11);
           }
           AccountServiceResult var2 = CanvasImageBuffer.pollAccountCreationResult(86);
           if (var2 == null) {
-            return super.h(11);
+            return super.advanceDialogAnimation(11);
           }
           this.showAccountCreationResult(false, var2, 11);
-          return super.h(11);
+          return super.advanceDialogAnimation(11);
         }
         if (!this.field_z) {
-          return super.h(11);
+          return super.advanceDialogAnimation(11);
         }
         if (this.field_gb) {
-          return super.h(11);
+          return super.advanceDialogAnimation(11);
         }
         AccountServiceResult var2Lifetime1 = CanvasImageBuffer.pollAccountCreationResult(86);
         if (var2Lifetime1 == null) {
-          return super.h(11);
+          return super.advanceDialogAnimation(11);
         }
         this.showAccountCreationResult(false, var2Lifetime1, 11);
-        return super.h(11);
+        return super.advanceDialogAnimation(11);
     }
 
     static {

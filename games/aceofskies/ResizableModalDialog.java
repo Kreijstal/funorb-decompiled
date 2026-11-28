@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rg extends gm {
+abstract class ResizableModalDialog extends ModalDialog {
     private int field_B;
     private int field_H;
     private int field_I;
@@ -12,7 +12,7 @@ abstract class rg extends gm {
     private int field_D;
     static Sprite[] field_F;
 
-    void a(boolean param0, int param1, int param2) {
+    void drawDialogBackground(boolean param0, int param1, int param2) {
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         SoftwareRasterizer.fillRectangleVerticalGradient(param1 + 6, param2 + 35, -12 + this.field_q, this.field_n - 40, 2105376, 0);
         int var4 = 35;
@@ -101,9 +101,9 @@ abstract class rg extends gm {
         return;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void resizeDialog(int param0, int param1, int param2, int param3) {
         if (param3 <= 0) {
-          this.a(param2, (byte) 29, param1);
+          this.setCenteredSize(param2, (byte) 29, param1);
           return;
         }
         this.field_G = this.field_n;
@@ -115,22 +115,22 @@ abstract class rg extends gm {
         this.field_B = param2;
     }
 
-    void e(byte param0) {
+    void finishResize(byte param0) {
         if (this.field_I <= 0) {
           return;
         }
-        this.a(this.field_B, (byte) 29, this.field_H);
+        this.setCenteredSize(this.field_B, (byte) 29, this.field_H);
         this.field_I = 0;
-        this.f((byte) -89);
+        this.resizeCompleted((byte) -89);
         if (param0 < 26) {
-          this.e((byte) 41);
+          this.finishResize((byte) 41);
         }
     }
 
-    boolean i(int param0) {
+    boolean snapDialogAnimation(int param0) {
         int var2 = -13 % ((param0 - 20) / 62);
-        this.e((byte) 36);
-        return super.i(112);
+        this.finishResize((byte) 36);
+        return super.snapDialogAnimation(112);
     }
 
     final static void a(int param0, boolean param1, SoundPlayback param2, int param3) {
@@ -142,7 +142,7 @@ abstract class rg extends gm {
           param2.a(-128, param3);
           if (param1) {
             SoundPlayback var5 = (SoundPlayback) null;
-            rg.a(53, false, (SoundPlayback) null, -102);
+            ResizableModalDialog.a(53, false, (SoundPlayback) null, -102);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rg.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -158,15 +158,15 @@ abstract class rg extends gm {
         field_C = null;
     }
 
-    void f(byte param0) {
+    void resizeCompleted(byte param0) {
         if (param0 > -28) {
-          rg.clearStaticReferences(true);
+          ResizableModalDialog.clearStaticReferences(true);
         }
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         if (param0 != 11) {
-          this.a(1, 39, 77, -45);
+          this.resizeDialog(1, 39, 77, -45);
         }
         if (this.field_I <= 0) {
         } else {
@@ -176,19 +176,19 @@ abstract class rg extends gm {
           this.field_D = this.field_D + 1;
           if (fieldTemp$0 >= this.field_I) {
             this.field_I = 0;
-            this.f((byte) -85);
+            this.resizeCompleted((byte) -85);
           } else {
             int var4 = (2 * this.field_I - this.field_D) * this.field_D;
             int var5 = this.field_I * this.field_I;
             var2 = var4 * (-this.field_E + this.field_B) / var5 + this.field_E;
             var3 = (-this.field_G + this.field_H) * var4 / var5 + this.field_G;
           }
-          this.a(var2, (byte) 29, var3);
+          this.setCenteredSize(var2, (byte) 29, var3);
         }
-        return super.h(param0 + 0);
+        return super.advanceDialogAnimation(param0 + 0);
     }
 
-    rg(lt param0, int param1, int param2) {
+    ResizableModalDialog(ModalDialogHost param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_I = 0;
         this.field_D = 0;

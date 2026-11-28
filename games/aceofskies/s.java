@@ -86,7 +86,7 @@ final class s {
 
     final static void a(String param0, boolean param1, String param2) {
         try {
-          tn.a(1, param1, param0, param2);
+          GuestPlayConfirmationForm.a(1, param1, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "s.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -95,7 +95,7 @@ final class s {
     s(boolean param0) {
         this.field_c = NodeHashTableIterator.field_g;
         this.field_j = DisplayNameSelectionPanel.field_x;
-        this.field_g = tn.field_t;
+        this.field_g = GuestPlayConfirmationForm.field_t;
         this.field_a = CrossfadingMidiPcmStream.field_t;
         this.field_f = m.field_f;
         this.field_e = sj.field_b;

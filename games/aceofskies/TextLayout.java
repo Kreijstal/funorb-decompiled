@@ -125,7 +125,7 @@ abstract class TextLayout {
           } else {
             if (param1 >= 100 &&
               param1 <= 105) {
-              ld.field_c = oq.createAccountSuggestionsResult((byte) -63, args);
+              ld.field_c = FullscreenStatusDialog.createAccountSuggestionsResult((byte) -63, args);
               return;
             }
             ld.field_c = AccountRequestState.createAccountErrorResult(param1, 32, param2);

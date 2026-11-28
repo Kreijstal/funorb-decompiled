@@ -35,7 +35,7 @@ final class kb extends RichTextWidget {
         if (param0 != -1903710079) {
           return (String) null;
         }
-        return rs.field_x;
+        return RegistrationAgreementPane.field_x;
     }
 
     kb(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {

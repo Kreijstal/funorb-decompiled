@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hg extends to {
+final class DraggableWidgetContainer extends SingleChildWidgetContainer {
     static String field_z;
     static ca field_y;
     private int field_v;
@@ -54,7 +54,7 @@ final class hg extends to {
         String stackIn_14_2 = null;
         try {
           if (param0 != 2147483647) {
-            hg.resetDeclaredStaticState(-34);
+            DraggableWidgetContainer.resetDeclaredStaticState(-34);
           }
           if (nb.field_c == AccountCreationResultPanel.field_fb) {
             return null;
@@ -90,7 +90,7 @@ final class hg extends to {
         try {
           if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
             this.appendDebugProperties(param0, 0, param3, param2);
-            this.a(param0, param3, (byte) -24, param2);
+            this.appendChildDebugTree(param0, param3, (byte) -24, param2);
             StringBuilder discarded$64 = param0.append(" revert=").append(this.field_w);
             if (this.field_u != 2147483647 &&
               2147483647 != this.field_v) {
@@ -130,7 +130,7 @@ final class hg extends to {
         hr.a(param2, (String) null, param0, (byte) -61);
     }
 
-    private hg(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6, boolean param7, boolean param8) {
+    private DraggableWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_u = 2147483647;
         this.field_v = 2147483647;
@@ -158,8 +158,8 @@ final class hg extends to {
               var6 != this.field_h) {
               this.field_h = var6;
               this.field_p = var5_int;
-              if (this.field_o instanceof ih) {
-                ((ih) (this.field_o)).a(this, param2, param3, (byte) -105);
+              if (this.field_o instanceof WidgetDragListener) {
+                ((WidgetDragListener) (this.field_o)).widgetDragged(this, param2, param3, (byte) -105);
               }
             }
           } else if (this.field_w) {
@@ -380,8 +380,8 @@ final class hg extends to {
         }
     }
 
-    final void a(byte param0) {
-        super.a((byte) -112);
+    final void layoutChild(byte param0) {
+        super.layoutChild((byte) -112);
         int var2 = 117 % ((-13 - param0) / 50);
         this.field_s.setBounds(this.field_n, 0, 0, this.field_q, (byte) 127);
         this.field_v = this.field_h;

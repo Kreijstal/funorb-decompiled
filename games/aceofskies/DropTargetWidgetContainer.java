@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sh extends to {
+final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
     static String[] field_v;
     static int field_u;
 
@@ -10,7 +10,7 @@ final class sh extends to {
         field_v = null;
     }
 
-    private sh(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6) {
+    private DropTargetWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_s = param6;
@@ -23,19 +23,19 @@ final class sh extends to {
         String stackIn_11_2 = null;
         try {
           super.pointerReleased(param0, param1, param2, param3, param4, param5);
-          hg var8 = mm.field_a;
-          hg var7 = var8;
+          DraggableWidgetContainer var8 = mm.field_a;
+          DraggableWidgetContainer var7 = var8;
           if (var8 != null) {
             if (!this.containsPointer(param2, param1, param5 ^ -122, param0, param3)) {
               return;
             }
-            if (this.field_o instanceof ma) {
-              ((ma) (this.field_o)).a(var8, -16073, this);
+            if (this.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.field_o)).widgetDropped(var8, -16073, this);
               mm.field_a = null;
               return;
             }
-            if (var8.field_o instanceof ma) {
-              ((ma) (var8.field_o)).a(var8, -16073, this);
+            if (var8.field_o instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var8.field_o)).widgetDropped(var8, -16073, this);
               mm.field_a = null;
               return;
             }
@@ -67,8 +67,8 @@ final class sh extends to {
             wu stackIn_5_0 = (wu) null;
             return stackIn_5_0;
           }
-          boolean var3 = (tn.a(83, param0));
-          boolean var4 = (tn.a(-64, param0));
+          boolean var3 = (GuestPlayConfirmationForm.a(83, param0));
+          boolean var4 = (GuestPlayConfirmationForm.a(-64, param0));
           wu var5 = new wu();
           var5.field_r = (short)param0.b((byte) 87, 16);
           var5.field_z = OpenGlBuffer.a(param0, var5.field_z, 0, 16);
@@ -95,10 +95,10 @@ final class sh extends to {
             var5.field_C = OpenGlBuffer.a(param0, var5.field_C, param1 + 14, 16);
             var5.field_v = OpenGlBuffer.a(param0, var5.field_v, 0, 16);
           }
-          if (tn.a(122, param0)) {
+          if (GuestPlayConfirmationForm.a(122, param0)) {
             var5.field_u = OpenGlBuffer.a(param0, var5.field_u, param1 + 14, 16);
           }
-          if (tn.a(83, param0)) {
+          if (GuestPlayConfirmationForm.a(83, param0)) {
             var5.field_x = ao.a(param0, var5.field_x, true, 16);
             int var6 = 0;
             for (int var7 = 0; var7 < var5.field_x.length; var7++) {

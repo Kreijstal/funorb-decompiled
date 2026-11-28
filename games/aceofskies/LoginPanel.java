@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class LoginPanel extends ab implements TextFieldListener, WidgetActivationListener {
+final class LoginPanel extends DequeWidgetContainer implements TextFieldListener, WidgetActivationListener {
     static pt field_t;
     private EditableTextField field_x;
     private boolean field_B;
@@ -42,11 +42,11 @@ final class LoginPanel extends ab implements TextFieldListener, WidgetActivation
             return true;
           }
           if (param1 == 98) {
-            boolean stackIn_6_0 = this.b(param3, -101);
+            boolean stackIn_6_0 = this.focusPreviousChild(param3, -101);
             return stackIn_6_0;
           }
           if (param1 == 99) {
-            boolean stackIn_10_0 = this.a(80, param3);
+            boolean stackIn_10_0 = this.focusNextChild(80, param3);
             return stackIn_10_0;
           }
           int var5_int = -87 % ((param0 + 53) / 33);
@@ -361,7 +361,7 @@ final class LoginPanel extends ab implements TextFieldListener, WidgetActivation
               this.field_w = new InteractiveWidget(SteeringMode.field_b, (WidgetEventListener) (this));
             }
           } else {
-            this.field_D = new InteractiveWidget(hg.field_z, (WidgetEventListener) null);
+            this.field_D = new InteractiveWidget(DraggableWidgetContainer.field_z, (WidgetEventListener) null);
             this.field_z = new InteractiveWidget(SoftCacheReference.field_s, (WidgetEventListener) null);
             this.field_v.field_u = false;
           }
@@ -399,13 +399,13 @@ final class LoginPanel extends ab implements TextFieldListener, WidgetActivation
           } else if (lp.field_f == var9) {
             var8 = OpenGlShaderProgram.field_e;
           }
-          bc dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
-          bc var12 = dupTemp$0;
-          this.a(dupTemp$0, 1);
+          LabeledWidgetContainer dupTemp$0 = new LabeledWidgetContainer(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
+          LabeledWidgetContainer var12 = dupTemp$0;
+          this.addChild(dupTemp$0, 1);
           this.field_h = this.field_h + (((UiWidget) ((Object) var12)).field_n + 5);
-          bc dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, OpenGlShaderObject.field_b);
-          bc var13 = dupTemp$1;
-          this.a(dupTemp$1, 1);
+          LabeledWidgetContainer dupTemp$1 = new LabeledWidgetContainer(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, OpenGlShaderObject.field_b);
+          LabeledWidgetContainer var13 = dupTemp$1;
+          this.addChild(dupTemp$1, 1);
           this.field_D.field_o = (WidgetEventListener) (this);
           this.field_h = this.field_h + (5 + ((UiWidget) ((Object) var13)).field_n);
           if (null != this.field_w) {
@@ -436,12 +436,12 @@ final class LoginPanel extends ab implements TextFieldListener, WidgetActivation
             }
           }
           this.setBounds(this.field_h + 3, 0, 0, this.field_q, (byte) 126);
-          this.a(this.field_D, 1);
+          this.addChild(this.field_D, 1);
           if (this.field_w != null) {
-            this.a(this.field_w, 1);
+            this.addChild(this.field_w, 1);
           }
           if (null != this.field_z) {
-            this.a(this.field_z, 1);
+            this.addChild(this.field_z, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

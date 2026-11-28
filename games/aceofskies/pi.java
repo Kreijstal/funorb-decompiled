@@ -266,7 +266,7 @@ final class pi extends InteractiveWidget {
             }
             if (null == MidiNote.field_l) {
               if (ld.field_d) {
-                if (30000L < gm.g(-1)) {
+                if (30000L < ModalDialog.g(-1)) {
                   HardwareRenderSprite.field_m = rm.field_c;
                 } else {
                   HardwareRenderSprite.field_m = jf.field_b;

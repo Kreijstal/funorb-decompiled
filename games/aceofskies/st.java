@@ -16,7 +16,7 @@ final class st {
           int var3 = param1.b((byte) -77, 12);
           me[] var4 = new me[var3];
           for (int var5 = 0; var3 > var5; var5++) {
-            if (!tn.a(101, param1)) {
+            if (!GuestPlayConfirmationForm.a(101, param1)) {
               int var6 = param1.b((byte) 83, eo.a(112, var5 - 1));
               var4[var5] = var4[var6];
             } else {

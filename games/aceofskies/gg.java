@@ -89,7 +89,7 @@ abstract class gg {
           ai var2 = (ai) null;
           gg.a(121, 109, 0.5157560110092163f, (ai) null, 51, 109, -0.17956805229187012f, 1.0828834772109985f, -1.4294534921646118f, 111, 0.21281719207763672f);
         }
-        ss.field_t = false;
+        StripedProgressWidget.field_t = false;
         oi.a(-1, 20665);
         nb.field_c = DiskCacheWorker.field_h;
         ht.field_k = DiskCacheWorker.field_h;

@@ -154,11 +154,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
 
     final static void a(int param0, byte param1) {
         ji.field_a = pb.field_b[param0];
-        gm.field_w = du.field_o[param0];
+        ModalDialog.field_w = du.field_o[param0];
         if (param1 != -44) {
           return;
         }
-        dt.field_b = ng.field_J[param0];
+        dt.field_b = ProgressDialog.field_J[param0];
     }
 
     public final int getTextAreaWidth(UiWidget param0, int param1) {

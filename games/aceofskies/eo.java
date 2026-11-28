@@ -76,7 +76,7 @@ final class eo {
         String stackIn_8_2 = null;
         String stackIn_11_2 = null;
         try {
-          if (!tn.a(param0, (byte) -127, param1, param3)) {
+          if (!GuestPlayConfirmationForm.a(param0, (byte) -127, param1, param3)) {
             Object stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }

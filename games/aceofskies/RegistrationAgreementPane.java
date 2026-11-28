@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rs extends ab implements TextHotspotListener, WidgetActivationListener {
+final class RegistrationAgreementPane extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static int rendererStrikethroughColor;
     static int[] field_B;
     private AccountCreationResultPanel field_y;
@@ -27,7 +27,7 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
           if (param0 < -59) {
             return;
           }
-          rs.clearStaticReferences((byte) -100);
+          RegistrationAgreementPane.clearStaticReferences((byte) -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,14 +50,14 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
             return true;
           }
           if (98 == param1) {
-            boolean stackIn_7_0 = this.b(param3, -87);
+            boolean stackIn_7_0 = this.focusPreviousChild(param3, -87);
             return stackIn_7_0;
           }
           int var5_int = 11 / ((param0 + 53) / 33);
           if (param1 != 99) {
             return false;
           }
-          boolean stackIn_10_0 = this.a(80, param3);
+          boolean stackIn_10_0 = this.focusNextChild(80, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
         field_x = null;
         medalSprites = null;
         if (param0 != 105) {
-          rs.clearStaticReferences((byte) -82);
+          RegistrationAgreementPane.clearStaticReferences((byte) -82);
         }
     }
 
@@ -91,7 +91,7 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
             return;
           }
           CachedArchiveProvider.b(true);
-          this.field_y.h((byte) 119);
+          this.field_y.closeDialog((byte) 119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,13 +107,13 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
         }
     }
 
-    rs(AccountCreationResultPanel param0) {
+    RegistrationAgreementPane(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         try {
           this.field_y = param0;
           this.field_z = new InteractiveWidget(mq.field_i, (WidgetEventListener) null);
           this.field_z.field_e = (WidgetRenderer) ((Object) new qb());
-          String var7 = sn.a(cd.field_c, 122, new String[]{this.a((byte) 127), this.e((byte) 101)});
+          String var7 = sn.a(cd.field_c, 122, new String[]{this.getAgreementLinkOpeningTag((byte) 127), this.getAgreementLinkClosingTag((byte) 101)});
           int var3 = 20;
           DefaultTextWidgetRenderer var4 = new DefaultTextWidgetRenderer(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
           this.field_A = new RichTextWidget(var7, var4);
@@ -124,19 +124,19 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
           this.field_A.field_o = (WidgetEventListener) (this);
           this.field_A.a(26, var3, -40 + this.field_q, (byte) 110);
           var3 = var3 + (15 + this.field_A.field_n);
-          this.a(this.field_A, 1);
+          this.addChild(this.field_A, 1);
           int var5 = 4;
           int var6 = 200;
           this.field_z.setBounds(40, -var6 + 300 >> 1, var3, var6, (byte) 127);
           this.field_z.field_o = (WidgetEventListener) (this);
-          this.a(this.field_z, 1);
+          this.addChild(this.field_z, 1);
           this.setBounds(var3 + (55 + var5), 0, 0, 300, (byte) 125);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "rs.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final String e(byte param0) {
+    private final String getAgreementLinkClosingTag(byte param0) {
         if (param0 <= 87) {
           rendererStrikethroughColor = 19;
           return "</col></u>";
@@ -144,7 +144,7 @@ final class rs extends ab implements TextHotspotListener, WidgetActivationListen
         return "</col></u>";
     }
 
-    private final String a(byte param0) {
+    private final String getAgreementLinkOpeningTag(byte param0) {
         if (param0 <= 113) {
           return (String) null;
         }

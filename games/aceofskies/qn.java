@@ -21,7 +21,7 @@ final class qn {
         }
         if (ij.field_h != null) {
           if (!ij.field_h.ensureIndexLoaded((byte) 94)) {
-            return gm.field_w;
+            return ModalDialog.field_w;
           }
           return dt.field_b;
         }

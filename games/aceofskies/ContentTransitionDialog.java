@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dg extends rg {
-    private hi field_M;
+abstract class ContentTransitionDialog extends ResizableModalDialog {
+    private AlphaWidgetContainer field_M;
     private int field_K;
     static int[] field_Q;
     private int field_S;
@@ -13,70 +13,70 @@ abstract class dg extends rg {
     private int field_J;
     private UiWidget field_P;
 
-    final void f(byte param0) {
+    final void resizeCompleted(byte param0) {
         if (vu.field_g == this.field_R) {
           return;
         }
         this.field_R = GraphicsRenderer.field_b;
         this.field_K = 0;
         if (param0 < -28) {
-          this.c(this.field_P, -15291);
+          this.installContent(this.field_P, -15291);
           this.field_P = null;
           this.field_M.field_u = 0;
           return;
         }
-        this.h(-95);
-        this.c(this.field_P, -15291);
+        this.advanceDialogAnimation(-95);
+        this.installContent(this.field_P, -15291);
         this.field_P = null;
         this.field_M.field_u = 0;
     }
 
-    final boolean i(int param0) {
-        this.e((byte) 82);
+    final boolean snapDialogAnimation(int param0) {
+        this.finishResize((byte) 82);
         int var2 = -118 / ((20 - param0) / 62);
-        return super.i(126);
+        return super.snapDialogAnimation(126);
     }
 
-    final void e(byte param0) {
+    final void finishResize(byte param0) {
         if (param0 <= 26) {
-          this.h(127);
+          this.advanceDialogAnimation(127);
           if (null == this.field_R) {
-            super.e((byte) 101);
+            super.finishResize((byte) 101);
             return;
           }
           if (GraphicsRenderer.field_b != this.field_R) {
-            this.a(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
-            this.c(this.field_P, -15291);
+            this.setCenteredSize(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
+            this.installContent(this.field_P, -15291);
           } else {
             this.field_R = null;
             this.field_M.field_u = 256;
-            super.e((byte) 101);
+            super.finishResize((byte) 101);
             return;
           }
           this.field_R = null;
           this.field_M.field_u = 256;
-          super.e((byte) 101);
+          super.finishResize((byte) 101);
           return;
         }
         if (null == this.field_R) {
-          super.e((byte) 101);
+          super.finishResize((byte) 101);
           return;
         }
         if (GraphicsRenderer.field_b != this.field_R) {
-          this.a(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
-          this.c(this.field_P, -15291);
+          this.setCenteredSize(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
+          this.installContent(this.field_P, -15291);
         } else {
           this.field_R = null;
           this.field_M.field_u = 256;
-          super.e((byte) 101);
+          super.finishResize((byte) 101);
           return;
         }
         this.field_R = null;
         this.field_M.field_u = 256;
-        super.e((byte) 101);
+        super.finishResize((byte) 101);
     }
 
-    void d(UiWidget param0, int param1) {
+    void replaceContent(UiWidget param0, int param1) {
         String stackIn_11_2 = null;
         try {
           if (param1 != -30244) {
@@ -84,7 +84,7 @@ abstract class dg extends rg {
           }
           this.field_P = param0;
           if (this.field_R == we.field_a) {
-            this.a(param1 + 30131, this.field_P.field_n + 12 + this.field_N, this.field_P.field_q + 12, this.field_S);
+            this.resizeDialog(param1 + 30131, this.field_P.field_n + 12 + this.field_N, this.field_P.field_q + 12, this.field_S);
             this.field_K = 0;
             return;
           }
@@ -108,7 +108,7 @@ abstract class dg extends rg {
         }
     }
 
-    boolean h(int param0) {
+    boolean advanceDialogAnimation(int param0) {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_R != null) {
           if (this.field_R == vu.field_g) {
@@ -117,27 +117,27 @@ abstract class dg extends rg {
             if (fieldTemp$0 != this.field_O) {
               this.field_M.field_u = 256 - (this.field_K << 8) / this.field_O;
               if (param0 != 11) {
-                this.f((byte) 126);
-                return super.h(11);
+                this.resizeCompleted((byte) 126);
+                return super.advanceDialogAnimation(11);
               }
-              return super.h(11);
+              return super.advanceDialogAnimation(11);
             }
             this.field_R = we.field_a;
-            this.a(-34, this.field_N + (12 + this.field_P.field_n), this.field_P.field_q + 12, this.field_S);
+            this.resizeDialog(-34, this.field_N + (12 + this.field_P.field_n), this.field_P.field_q + 12, this.field_S);
             this.field_K = 0;
             this.field_M.field_u = 0;
             if (param0 != 11) {
-              this.f((byte) 126);
-              return super.h(11);
+              this.resizeCompleted((byte) 126);
+              return super.advanceDialogAnimation(11);
             }
-            return super.h(11);
+            return super.advanceDialogAnimation(11);
           }
           if (GraphicsRenderer.field_b != this.field_R) {
             if (param0 == 11) {
-              return super.h(11);
+              return super.advanceDialogAnimation(11);
             }
-            this.f((byte) 126);
-            return super.h(11);
+            this.resizeCompleted((byte) 126);
+            return super.advanceDialogAnimation(11);
           }
           int fieldTemp$1 = this.field_K + 1;
           this.field_K = this.field_K + 1;
@@ -145,23 +145,23 @@ abstract class dg extends rg {
             this.field_R = null;
             this.field_M.field_u = 256;
             if (param0 == 11) {
-              return super.h(11);
+              return super.advanceDialogAnimation(11);
             }
-            this.f((byte) 126);
-            return super.h(11);
+            this.resizeCompleted((byte) 126);
+            return super.advanceDialogAnimation(11);
           }
           this.field_M.field_u = (this.field_K << 8) / this.field_J;
           if (param0 == 11) {
-            return super.h(11);
+            return super.advanceDialogAnimation(11);
           }
-          this.f((byte) 126);
-          return super.h(11);
+          this.resizeCompleted((byte) 126);
+          return super.advanceDialogAnimation(11);
         }
         if (param0 == 11) {
-          return super.h(11);
+          return super.advanceDialogAnimation(11);
         }
-        this.f((byte) 126);
-        return super.h(11);
+        this.resizeCompleted((byte) 126);
+        return super.advanceDialogAnimation(11);
     }
 
     boolean handleKey(int param0, int param1, char param2, UiWidget param3) {
@@ -195,19 +195,19 @@ abstract class dg extends rg {
         }
     }
 
-    private final void c(UiWidget param0, int param1) {
+    private final void installContent(UiWidget param0, int param1) {
         String stackIn_11_2 = null;
         try {
           if (this.field_M != null) {
             this.field_M.unlink(-127);
           }
           if (param0 == null) {
-            this.field_M = new hi();
+            this.field_M = new AlphaWidgetContainer();
           } else {
             param0.setBounds(param0.field_n, 6, this.field_N + 6, param0.field_q, (byte) 124);
-            this.field_M = new hi(param0);
+            this.field_M = new AlphaWidgetContainer(param0);
           }
-          this.a(this.field_M, 1);
+          this.addChild(this.field_M, 1);
           this.field_P = null;
           if (param1 == -15291) {
             return;
@@ -231,21 +231,21 @@ abstract class dg extends rg {
     public static void k(int param0) {
         field_L = null;
         if (param0 != 12) {
-          dg.j(-73);
+          ContentTransitionDialog.j(-73);
           field_Q = null;
           return;
         }
         field_Q = null;
     }
 
-    dg(lt param0, UiWidget param1, int param2, int param3, int param4) {
+    ContentTransitionDialog(ModalDialogHost param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_q + 12, param2 + 12 + param1.field_n);
         try {
           this.field_S = param4;
           this.field_J = param3;
           this.field_O = param3;
           this.field_N = param2;
-          this.c(param1, -15291);
+          this.installContent(param1, -15291);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

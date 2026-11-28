@@ -23,7 +23,7 @@ final class aq {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          oo.field_W.makeRasterTarget();
+          ProgressMessageDialog.field_W.makeRasterTarget();
           var1.drawHalfSize(0, 0);
           sl.c(2765);
         } catch (RuntimeException runtimeException) {

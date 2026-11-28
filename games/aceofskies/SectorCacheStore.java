@@ -236,8 +236,8 @@ final class SectorCacheStore {
 
     final static Sprite[] b(int param0) {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        Sprite[] var1 = new Sprite[to.field_t];
-        for (int var2 = 0; to.field_t > var2; var2++) {
+        Sprite[] var1 = new Sprite[SingleChildWidgetContainer.field_t];
+        for (int var2 = 0; SingleChildWidgetContainer.field_t > var2; var2++) {
           int var3 = ji.field_b[var2] * ee.field_e[var2];
           byte[] var21 = fk.field_a[var2];
           if (!q.field_k[var2]) {
@@ -246,7 +246,7 @@ final class SectorCacheStore {
             for (int var6 = 0; var3 > var6; var6++) {
               var10[var6] = ud.field_e[pg.a((int) var21[var6], 255)];
             }
-            var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
+            var1[var2] = new Sprite(pu.field_a, JaggrabDownloader.field_i, FullscreenNoticeType.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
           } else {
             byte[] var15 = ql.field_p[var2];
             byte[] var11 = var15;
@@ -258,7 +258,7 @@ final class SectorCacheStore {
             for (int var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = TextFieldValidator.a(pg.a(-16777216, var15[var7] << 24), ud.field_e[pg.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(pu.field_a, JaggrabDownloader.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(pu.field_a, JaggrabDownloader.field_i, FullscreenNoticeType.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
           }
         }
         if (param0 > -79) {
@@ -274,7 +274,7 @@ final class SectorCacheStore {
           if (param0 > -89) {
             SectorCacheStore.a(63);
           }
-          if (tn.a(param2, (byte) -127, param1, param3)) {
+          if (GuestPlayConfirmationForm.a(param2, (byte) -127, param1, param3)) {
             return sq.a(15636);
           }
           return null;

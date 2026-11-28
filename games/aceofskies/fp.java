@@ -31,7 +31,7 @@ final class fp extends IntrusiveNode {
               int stackIn_11_0 = (!param1) ? -1 : -2;
               ScoreSubmission.field_l = stackIn_11_0;
               kg.field_b = stackIn_11_0;
-              hi.field_w = stackIn_11_0;
+              AlphaWidgetContainer.field_w = stackIn_11_0;
               ca.field_f = qa.field_b;
               tr.a(q.outgoingPacket, ut.field_a, id.field_d, ko.field_f, 0);
               AccountServiceResult.a(-34, -1);

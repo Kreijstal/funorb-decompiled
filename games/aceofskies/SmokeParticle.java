@@ -194,7 +194,7 @@ final class SmokeParticle extends FlightBody {
         if (param0 != 77) {
           return;
         }
-        gm.field_x.a(false, param1);
+        ModalDialog.field_x.a(false, param1);
     }
 
     static {

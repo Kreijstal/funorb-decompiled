@@ -233,12 +233,12 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     final static id a(int param0, String param1) {
         String stackIn_8_2 = null;
         try {
-          if (gm.field_x.a(false) &&
-            !param1.equals(gm.field_x.b(2))) {
-            gm.field_x = od.a(param1, 60);
+          if (ModalDialog.field_x.a(false) &&
+            !param1.equals(ModalDialog.field_x.b(2))) {
+            ModalDialog.field_x = od.a(param1, 60);
           }
           int var2_int = 98 / ((param0 + 53) / 49);
-          id stackIn_4_0 = gm.field_x;
+          id stackIn_4_0 = ModalDialog.field_x;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

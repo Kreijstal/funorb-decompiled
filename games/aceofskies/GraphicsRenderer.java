@@ -61,7 +61,7 @@ abstract class GraphicsRenderer {
         String stackIn_26_2 = null;
         try {
           if (param2 == 0) {
-            GraphicsRenderer stackIn_2_0 = to.a(16, param7, param3, param6, param0);
+            GraphicsRenderer stackIn_2_0 = SingleChildWidgetContainer.a(16, param7, param3, param6, param0);
             return stackIn_2_0;
           }
           if (2 == param2) {
@@ -69,7 +69,7 @@ abstract class GraphicsRenderer {
             return stackIn_6_0;
           }
           if (param2 == 1) {
-            GraphicsRenderer stackIn_9_0 = lh.a(param3, (byte) 66, param4, param7);
+            GraphicsRenderer stackIn_9_0 = FullscreenNoticeType.a(param3, (byte) 66, param4, param7);
             return stackIn_9_0;
           }
           if (param2 == param5) {

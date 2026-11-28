@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class hr extends or {
-    static lt field_e;
+    static ModalDialogHost field_e;
     static RenderSprite[][] aircraftSprites;
 
     private hr() throws Throwable {
@@ -22,14 +22,14 @@ abstract class hr extends or {
     final static void a(boolean param0, String param1, boolean param2, byte param3) {
         try {
           gg.b((byte) -98);
-          AgeValidator.field_f.e((byte) 74);
+          AgeValidator.field_f.closeAllDialogs((byte) 74);
           vr.field_b = new LoginPanel(se.field_a, (String) null, nf.field_a, param2, param0);
-          ClientException.field_d = new ad(AgeValidator.field_f, vr.field_b);
+          ClientException.field_d = new StandardContentDialog(AgeValidator.field_f, vr.field_b);
           if (param3 != -61) {
             String var5 = (String) null;
             hr.a(0.47493258118629456f, 21, false, (String) null);
           }
-          AgeValidator.field_f.a(ClientException.field_d, 0);
+          AgeValidator.field_f.showDialog(ClientException.field_d, 0);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "hr.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -83,10 +83,10 @@ abstract class hr extends or {
             hr.a((ResourceArchive) null, (d) null, -124, -29, (java.awt.Canvas) null, -9);
           }
           if (null == fu.field_d) {
-            fu.field_d = new ng(AgeValidator.field_f, uf.field_e);
-            AgeValidator.field_f.a(fu.field_d, 0);
+            fu.field_d = new ProgressDialog(AgeValidator.field_f, uf.field_e);
+            AgeValidator.field_f.showDialog(fu.field_d, 0);
           }
-          fu.field_d.a(param2, -111, param3, param0);
+          fu.field_d.setProgress(param2, -111, param3, param0);
           SoftwareRasterizer.clearFramebuffer();
           si.a(true, -32106);
         } catch (RuntimeException runtimeException) {

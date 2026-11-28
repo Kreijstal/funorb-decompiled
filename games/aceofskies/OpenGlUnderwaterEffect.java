@@ -190,7 +190,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
     final static void f(int param0) {
         ud.field_e = null;
         ji.field_b = null;
-        lh.field_a = null;
+        FullscreenNoticeType.field_a = null;
         fk.field_a = (byte[][]) null;
         ee.field_e = null;
         if (param0 == 1) {

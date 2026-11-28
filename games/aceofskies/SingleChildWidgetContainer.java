@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class to extends UiWidget implements vm {
+abstract class SingleChildWidgetContainer extends UiWidget implements WidgetContainerMarker {
     UiWidget field_s;
     static ScoreSubmission lastScoreSubmission;
     static int field_t;
@@ -15,15 +15,15 @@ abstract class to extends UiWidget implements vm {
         return (param1 & 16) != 0 ? true : false;
     }
 
-    to(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
+    SingleChildWidgetContainer(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetEventListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    UiWidget i(int param0) {
+    UiWidget getFocusedChild(int param0) {
         UiWidget var2 = this.field_s;
         if (param0 != 0) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
-          to.a(6, (d) null, (java.awt.Canvas) null, 19, -80);
+          SingleChildWidgetContainer.a(6, (d) null, (java.awt.Canvas) null, 19, -80);
         }
         if (var2 == null) {
           return null;
@@ -47,7 +47,7 @@ abstract class to extends UiWidget implements vm {
         }
     }
 
-    void a(byte param0) {
+    void layoutChild(byte param0) {
         int var2 = 111 / ((-13 - param0) / 50);
         if (this.field_s != null) {
           this.field_s.refreshLayout(false);
@@ -63,7 +63,7 @@ abstract class to extends UiWidget implements vm {
         }
     }
 
-    final void a(StringBuilder param0, Hashtable param1, byte param2, int param3) {
+    final void appendChildDebugTree(StringBuilder param0, Hashtable param1, byte param2, int param3) {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -107,14 +107,14 @@ abstract class to extends UiWidget implements vm {
         if (param0 != 28660) {
           return false;
         }
-        return null != this.i(0) ? true : false;
+        return null != this.getFocusedChild(0) ? true : false;
     }
 
     void pointerReleased(int param0, int param1, int param2, int param3, UiWidget param4, byte param5) {
         String stackIn_8_2 = null;
         try {
           if (param5 != 91) {
-            this.a((byte) -52);
+            this.layoutChild((byte) -52);
           }
           if (this.field_s != null) {
             this.field_s.pointerReleased(param0 + this.field_p, this.field_h + param1, param2, param3, param4, (byte) 91);
@@ -157,9 +157,9 @@ abstract class to extends UiWidget implements vm {
             return false;
           }
           if (!lp.heldKeys[81]) {
-            stackIn_11_0 = this.a(-98, param3);
+            stackIn_11_0 = this.focusNextChild(-98, param3);
           } else {
-            stackIn_11_0 = this.a((byte) -112, param3);
+            stackIn_11_0 = this.focusPreviousChild((byte) -112, param3);
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ abstract class to extends UiWidget implements vm {
         }
     }
 
-    private final boolean a(byte param0, UiWidget param1) {
+    private final boolean focusPreviousChild(byte param0, UiWidget param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 >= -67) {
@@ -267,7 +267,7 @@ abstract class to extends UiWidget implements vm {
         return this.field_s != null ? this.field_s.getMaximumRenderLayer(0) : 0;
     }
 
-    private final boolean a(int param0, UiWidget param1) {
+    private final boolean focusNextChild(int param0, UiWidget param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 >= -37) {
@@ -294,7 +294,7 @@ abstract class to extends UiWidget implements vm {
         String stackIn_10_2 = null;
         try {
           if (param0 != 16) {
-            to.b(-16, -37, 49);
+            SingleChildWidgetContainer.b(-16, -37, 49);
           }
           JavaSoftwareRenderer stackIn_3_0 = new JavaSoftwareRenderer(param2, param1, param4, param3);
           return (GraphicsRenderer) ((Object) stackIn_3_0);
@@ -327,7 +327,7 @@ abstract class to extends UiWidget implements vm {
 
     final void setBounds(int param0, int param1, int param2, int param3, byte param4) {
         super.setBounds(param0, param1, param2, param3, (byte) 126);
-        this.a((byte) -94);
+        this.layoutChild((byte) -94);
         if (param4 < 122) {
           field_t = 94;
         }
@@ -402,7 +402,7 @@ abstract class to extends UiWidget implements vm {
           }
           if (this.beginDebugTreeEntry(param0, param2, false, param3)) {
             this.appendDebugProperties(param0, 0, param3, param2);
-            this.a(param0, param3, (byte) -24, param2);
+            this.appendChildDebugTree(param0, param3, (byte) -24, param2);
           }
           StringBuilder stackIn_7_0 = (StringBuilder) (param0);
           return stackIn_7_0;

@@ -57,11 +57,11 @@ final class as {
 
     final static void a(int param0) {
         if (null != AgeValidator.field_f) {
-          AgeValidator.field_f.j(0);
+          AgeValidator.field_f.snapAndPruneDialogs(0);
         }
         int var1 = -41 % ((param0 + 56) / 53);
         if (null != fu.field_d) {
-          fu.field_d.k(-116);
+          fu.field_d.freezeNormalProgressAnimation(-116);
         }
         RenderStateSnapshot.resetTooltip(0);
     }

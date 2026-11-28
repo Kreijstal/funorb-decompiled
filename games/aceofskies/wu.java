@@ -563,7 +563,7 @@ final class wu {
           }
           byte[] var2Lifetime86 = im.a(85, "arcadeunlocked");
           if (null != var2Lifetime86) {
-            ab.field_r = UiWidget.a(0, var2Lifetime86);
+            DequeWidgetContainer.field_r = UiWidget.a(0, var2Lifetime86);
           }
           q.field_q = null;
           return;

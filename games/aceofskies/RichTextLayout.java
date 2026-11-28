@@ -42,7 +42,7 @@ final class RichTextLayout extends TextLayout {
           int var7 = param1.measureTextWidth(param3);
           var9.field_h[0] = param2 - (var7 >> 1);
           var9.field_h[param3.length()] = (var7 >> 1) + param2;
-          ng.a(param1, param3, var9, 0, (byte) 30);
+          ProgressDialog.a(param1, param3, var9, 0, (byte) 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,7 +88,7 @@ final class RichTextLayout extends TextLayout {
           TextLineMetrics var9 = var8;
           var9.field_h[0] = -param4.measureTextWidth(param1) + param2;
           var9.field_h[param1.length()] = param2;
-          ng.a(param4, param1, var9, 0, (byte) 30);
+          ProgressDialog.a(param4, param1, var9, 0, (byte) 30);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -119,7 +119,7 @@ final class RichTextLayout extends TextLayout {
             BitmapFont var7 = (BitmapFont) null;
             this.layoutSingleLineRightAligned(-111, (String) null, -109, -118, (BitmapFont) null);
           }
-          ng.a(param3, param0, var9, 0, (byte) 30);
+          ProgressDialog.a(param3, param0, var9, 0, (byte) 30);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vg.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -238,7 +238,7 @@ final class RichTextLayout extends TextLayout {
               } else {
                 stackIn_44_3 = this.a(param4, -1, var13, param1.measureTextWidth(var13));
               }
-              ng.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_44_3, (byte) 30);
+              ProgressDialog.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_44_3, (byte) 30);
             }
             var11 = var11 + param7;
             this.field_b[var12Lifetime1] = var14;

@@ -40,9 +40,9 @@ abstract class ud extends IntrusiveNode {
             !(param0 <= DualLinkDequeIterator.field_c.length)) {
             DualLinkDequeIterator.field_c = new int[2 * param0];
           }
-          if (null == hg.field_C ||
-            !(hg.field_C.length >= param0)) {
-            hg.field_C = new int[param0 * 2];
+          if (null == DraggableWidgetContainer.field_C ||
+            !(DraggableWidgetContainer.field_C.length >= param0)) {
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
           }
           if (null == qd.field_p ||
             !(qd.field_p.length >= param0)) {
@@ -76,8 +76,8 @@ abstract class ud extends IntrusiveNode {
         }
         if (null == DualLinkDequeIterator.field_c) {
           DualLinkDequeIterator.field_c = new int[2 * param0];
-          if (null == hg.field_C) {
-            hg.field_C = new int[param0 * 2];
+          if (null == DraggableWidgetContainer.field_C) {
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
             if (null == qd.field_p ||
               !(qd.field_p.length >= param0)) {
               qd.field_p = new int[param0 * 2];
@@ -101,8 +101,8 @@ abstract class ud extends IntrusiveNode {
               !(param0 <= sg.field_a.length)) {
               sg.field_a = new boolean[2 * param0];
             }
-          } else if (hg.field_C.length < param0) {
-            hg.field_C = new int[param0 * 2];
+          } else if (DraggableWidgetContainer.field_C.length < param0) {
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
             if (null == qd.field_p ||
               !(qd.field_p.length >= param0)) {
               qd.field_p = new int[param0 * 2];
@@ -154,9 +154,9 @@ abstract class ud extends IntrusiveNode {
           }
         } else if (param0 > DualLinkDequeIterator.field_c.length) {
           DualLinkDequeIterator.field_c = new int[2 * param0];
-          if (null == hg.field_C ||
-            !(hg.field_C.length >= param0)) {
-            hg.field_C = new int[param0 * 2];
+          if (null == DraggableWidgetContainer.field_C ||
+            !(DraggableWidgetContainer.field_C.length >= param0)) {
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
           }
           if (null == qd.field_p ||
             !(qd.field_p.length >= param0)) {
@@ -191,8 +191,8 @@ abstract class ud extends IntrusiveNode {
             sg.field_a = new boolean[2 * param0];
           }
         } else {
-          if (null == hg.field_C) {
-            hg.field_C = new int[param0 * 2];
+          if (null == DraggableWidgetContainer.field_C) {
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
             if (null == qd.field_p ||
               !(qd.field_p.length >= param0)) {
               qd.field_p = new int[param0 * 2];
@@ -212,7 +212,7 @@ abstract class ud extends IntrusiveNode {
               !(param1 + param0 <= uf.field_d.length)) {
               uf.field_d = new int[2 * (param1 + param0)];
             }
-          } else if (hg.field_C.length >= param0) {
+          } else if (DraggableWidgetContainer.field_C.length >= param0) {
             if (null == qd.field_p ||
               !(qd.field_p.length >= param0)) {
               qd.field_p = new int[param0 * 2];
@@ -233,7 +233,7 @@ abstract class ud extends IntrusiveNode {
               uf.field_d = new int[2 * (param1 + param0)];
             }
           } else {
-            hg.field_C = new int[param0 * 2];
+            DraggableWidgetContainer.field_C = new int[param0 * 2];
             if (null == qd.field_p ||
               !(qd.field_p.length >= param0)) {
               qd.field_p = new int[param0 * 2];

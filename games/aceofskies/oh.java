@@ -26,7 +26,7 @@ final class oh extends IntrusiveNode {
         if (param0 <= 73) {
           return false;
         }
-        return !gm.field_x.a(false) ? true : false;
+        return !ModalDialog.field_x.a(false) ? true : false;
     }
 
     private oh() throws Throwable {

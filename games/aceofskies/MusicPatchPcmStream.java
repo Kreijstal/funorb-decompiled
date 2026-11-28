@@ -118,9 +118,9 @@ final class MusicPatchPcmStream extends PcmStream {
         boolean var4 = stackIn_9_0;
         DirectByteStorage.field_g = var8.readNullTerminatedText(param1 - 17884);
         if (var4) {
-          tn.field_t = var8.readNullTerminatedText(-17883);
+          GuestPlayConfirmationForm.field_t = var8.readNullTerminatedText(-17883);
         } else {
-          tn.field_t = DirectByteStorage.field_g;
+          GuestPlayConfirmationForm.field_t = DirectByteStorage.field_g;
         }
         if (1 == m.field_f) {
           var8.readUnsignedShort((byte) 0);
@@ -138,7 +138,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           jr var9 = uk.field_f.a(var5, -43);
           DisplayNameSelectionPanel.field_x = var9.c((byte) 1);
-          if (!tn.field_t.equals(fj.playerDisplayName)) {
+          if (!GuestPlayConfirmationForm.field_t.equals(fj.playerDisplayName)) {
             stackIn_23_0 = var9.field_t;
           } else {
             stackIn_23_0 = null;
@@ -216,10 +216,10 @@ final class MusicPatchPcmStream extends PcmStream {
         int var1;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 1) {
-          ss.field_t = false;
+          StripedProgressWidget.field_t = false;
           uf.field_e = null;
           if (nf.field_a) {
-            InstrumentPatch.field_m.l(88);
+            InstrumentPatch.field_m.showConnectionFailure(88);
             return;
           }
           var1 = ArchiveNetworkClient.field_c;
@@ -231,15 +231,15 @@ final class MusicPatchPcmStream extends PcmStream {
             }
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
-          InstrumentPatch.field_m.h((byte) 127);
+          InstrumentPatch.field_m.closeDialog((byte) 127);
           SoftwareScanlineMask.showLoadingPanel(98);
           return;
         }
         field_n = (String) null;
-        ss.field_t = false;
+        StripedProgressWidget.field_t = false;
         uf.field_e = null;
         if (nf.field_a) {
-          InstrumentPatch.field_m.l(88);
+          InstrumentPatch.field_m.showConnectionFailure(88);
         } else {
           var1 = ArchiveNetworkClient.field_c;
           if (var1 > 0) {
@@ -250,7 +250,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
-          InstrumentPatch.field_m.h((byte) 127);
+          InstrumentPatch.field_m.closeDialog((byte) 127);
           SoftwareScanlineMask.showLoadingPanel(98);
         }
     }

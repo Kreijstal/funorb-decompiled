@@ -45,7 +45,7 @@ final class wo extends IntrusiveNode {
           try {
             if (false) throw (IOException) null;
             if (var2_int >= 0 &&
-              gm.g(-1) <= 30000L) {
+              ModalDialog.g(-1) <= 30000L) {
               return false;
             }
             te.b(true);

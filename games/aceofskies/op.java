@@ -54,13 +54,13 @@ final class op {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        VorbisSample.a(param1.getFileByName("headers.packvorbis", (byte) -71, ""));
+        VorbisSample.decodeSetup(param1.getFileByName("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {
           return;
         }
         try {
-          VorbisSample var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
-          var2.a();
+          VorbisSample var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.decodeAllToPcm();
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

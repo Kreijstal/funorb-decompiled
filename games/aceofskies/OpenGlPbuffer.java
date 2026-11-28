@@ -100,7 +100,7 @@ final class OpenGlPbuffer extends DualLinkNode {
             }
             String[] var7 = param3;
             ArchiveIndex.a(var7, (byte) -17);
-            GameAppletShell.field_l = oq.createAccountSuggestionsResult((byte) -93, param3);
+            GameAppletShell.field_l = FullscreenStatusDialog.createAccountSuggestionsResult((byte) -93, param3);
             return;
           }
           int stackIn_6_0 = 111;

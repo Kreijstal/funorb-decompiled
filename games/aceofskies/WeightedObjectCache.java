@@ -222,11 +222,11 @@ final class WeightedObjectCache {
         if (!param0) {
           WeightedObjectCache.a(false, 19, 116);
           OpenGlRectangleTexture.field_k = param1;
-          rs.field_v = param2;
+          RegistrationAgreementPane.field_v = param2;
           return;
         }
         OpenGlRectangleTexture.field_k = param1;
-        rs.field_v = param2;
+        RegistrationAgreementPane.field_v = param2;
     }
 
     WeightedObjectCache(int param0) {

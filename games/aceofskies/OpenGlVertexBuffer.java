@@ -84,8 +84,8 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements HardwareVertexBuf
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         try {
-          gm.field_x = od.a("", 66);
-          gm.field_x.a(param0, false);
+          ModalDialog.field_x = od.a("", 66);
+          ModalDialog.field_x.a(param0, false);
           kg.a(4, param2, param4, param1);
           SoftwareScanlineMask.initializeLoginUi(-8129);
           nb.field_c = DiskCacheWorker.field_h;

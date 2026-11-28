@@ -192,7 +192,7 @@ final class po extends ka {
           }
           if (param3 ||
             si.a(this.field_d, 2, this.field_g)) {
-            this.field_k = new am(hi.c(14834, this.field_g, this.field_d));
+            this.field_k = new am(AlphaWidgetContainer.c(14834, this.field_g, this.field_d));
           }
           if (param3 ||
             ScoreSubmission.a(0, this.field_d, this.field_g)) {
