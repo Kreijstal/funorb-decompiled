@@ -6,7 +6,7 @@ final class kb extends vq {
     static ej field_C;
     private String field_A;
     private int field_E;
-    private sp field_B;
+    private FieldValidator field_B;
     static SpriteData[] scoreDigitSpriteData;
 
     public static void clearStaticReferences(int param0) {
@@ -24,7 +24,7 @@ final class kb extends vq {
           this.field_E = this.field_E + 1;
           super.a((byte) 42, param1, param2, param3);
           if (param0 < 13) {
-            this.field_B = (sp) null;
+            this.field_B = (FieldValidator) null;
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "kb.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -38,7 +38,7 @@ final class kb extends vq {
         return rs.field_x;
     }
 
-    kb(sp param0, String param1, int param2, int param3, int param4, int param5) {
+    kb(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, NodeHashTableIterator.a((byte) -63));
         try {
           this.field_B = param0;
@@ -77,15 +77,15 @@ final class kb extends vq {
         Object var22 = null;
         Object var26 = null;
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
-        pt var6 = this.field_B.b(true);
+        pt var6 = this.field_B.getValidationStatus(true);
         if (HardwareOpenGlRenderer.field_Pc == var6) {
-          String var17 = uu.field_g;
+          String var17 = MatchingFieldValidator.field_g;
           if (!var17.equals(this.field_f)) {
             this.field_f = var17;
             this.a((byte) -67);
           }
           super.a((byte) 107, param1, param2, param3);
-          var6 = this.field_B.b(true);
+          var6 = this.field_B.getValidationStatus(true);
           et var30 = (et) ((Object) this.field_e);
           int var9 = param3 + this.field_p;
           int var10 = var30.a(param2, false, (ea) (this)) + (var30.a((byte) 86, (ea) (this)).a(0) >> 1);
@@ -93,7 +93,7 @@ final class kb extends vq {
             return;
           }
           if (HardwareOpenGlRenderer.field_Pc == var6 ||
-            var6 == ce.field_t) {
+            var6 == LoginPanel.field_t) {
             Sprite var19 = gu.field_c[0];
             int var11 = var19.fullWidth << 1;
             int var12 = var19.fullHeight << 1;
@@ -140,17 +140,17 @@ final class kb extends vq {
           }
           return;
         }
-        if (ce.field_t == var6) {
-          var5 = uu.field_g;
+        if (LoginPanel.field_t == var6) {
+          var5 = MatchingFieldValidator.field_g;
         } else {
-          var5 = this.field_B.a(true);
+          var5 = this.field_B.getValidationMessage(true);
           if (var5 == null) {
             var5 = this.field_A;
           }
         }
         if (var5.equals(this.field_f)) {
           super.a((byte) 107, param1, param2, param3);
-          var6 = this.field_B.b(true);
+          var6 = this.field_B.getValidationStatus(true);
           et var31 = (et) ((Object) this.field_e);
           int var9Lifetime1 = param3 + this.field_p;
           int var10Lifetime1 = var31.a(param2, false, (ea) (this)) + (var31.a((byte) 86, (ea) (this)).a(0) >> 1);
@@ -158,7 +158,7 @@ final class kb extends vq {
             return;
           }
           if (HardwareOpenGlRenderer.field_Pc == var6 ||
-            var6 == ce.field_t) {
+            var6 == LoginPanel.field_t) {
             Sprite var23 = gu.field_c[0];
             int var11Lifetime1 = var23.fullWidth << 1;
             int var12Lifetime1 = var23.fullHeight << 1;
@@ -208,7 +208,7 @@ final class kb extends vq {
         this.field_f = var5;
         this.a((byte) -67);
         super.a((byte) 107, param1, param2, param3);
-        var6 = this.field_B.b(true);
+        var6 = this.field_B.getValidationStatus(true);
         et var32 = (et) ((Object) this.field_e);
         int var9Lifetime2 = param3 + this.field_p;
         int var10Lifetime2 = var32.a(param2, false, (ea) (this)) + (var32.a((byte) 86, (ea) (this)).a(0) >> 1);
@@ -216,7 +216,7 @@ final class kb extends vq {
           return;
         }
         if (HardwareOpenGlRenderer.field_Pc == var6 ||
-          var6 == ce.field_t) {
+          var6 == LoginPanel.field_t) {
           Sprite var27 = gu.field_c[0];
           int var11Lifetime2 = var27.fullWidth << 1;
           int var12Lifetime2 = var27.fullHeight << 1;

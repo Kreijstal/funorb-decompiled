@@ -26,13 +26,13 @@ public final class AceOfSkies extends NetworkGameClient {
             if (hg.sharedSpriteArchive.ensureIndexLoaded((byte) 95) &&
               hg.sharedSpriteArchive.tryLoadGroupByName("basic", -14012)) {
               if (!hg.sharedSpriteArchive.tryLoadGroupByName("arialbold14", -14012)) {
-                fh.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
+                PasswordValidator.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
                 return false;
               }
               if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -119) &&
                 CachedArchiveProvider.sharedFontMetricsArchive.tryLoadGroupByName("arialbold14", -14012)) {
                 if (!hg.sharedSpriteArchive.tryLoadGroupByName("arial13", -14012)) {
-                  fh.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
+                  PasswordValidator.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
                   return false;
                 }
                 if (CachedArchiveProvider.sharedFontMetricsArchive.ensureIndexLoaded((byte) -127) &&
@@ -49,7 +49,7 @@ public final class AceOfSkies extends NetworkGameClient {
                             wi.gameSpriteArchive.tryLoadAllGroups(0)) {
                             if (iq.gameFontMetricsArchive.ensureIndexLoaded((byte) -111) &&
                               iq.gameFontMetricsArchive.tryLoadAllGroups(0)) {
-                              fh.setLoadingProgress(-112, 65.0f, SecondaryNodeDeque.field_c);
+                              PasswordValidator.setLoadingProgress(-112, 65.0f, SecondaryNodeDeque.field_c);
                               this.renderGame(150);
                               decompiledFrameRemainder0 = !(initializeAfterDownload);
                               if (decompiledFrameRemainder0) {
@@ -57,47 +57,47 @@ public final class AceOfSkies extends NetworkGameClient {
                               }
                             }
                             if (decompiledFrameRemainder0) {
-                              fh.setLoadingProgress(-117, 55.0f, qo.a(bk.field_g, "", iq.gameFontMetricsArchive, 13525, ks.field_c));
+                              PasswordValidator.setLoadingProgress(-117, 55.0f, qo.a(bk.field_g, "", iq.gameFontMetricsArchive, 13525, ks.field_c));
                               return false;
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            fh.setLoadingProgress(-91, 45.0f, qo.a(co.field_j, "", wi.gameSpriteArchive, 13525, lm.field_b));
+                            PasswordValidator.setLoadingProgress(-91, 45.0f, qo.a(co.field_j, "", wi.gameSpriteArchive, 13525, lm.field_b));
                             return false;
                           }
                         }
                         if (decompiledFrameRemainder0) {
-                          fh.setLoadingProgress(-65, 40.0f, qo.a(MouseInputHandler.field_a, "", od.musicTrackArchive, 13525, GzipInflater.field_c));
+                          PasswordValidator.setLoadingProgress(-65, 40.0f, qo.a(MouseInputHandler.field_a, "", od.musicTrackArchive, 13525, GzipInflater.field_c));
                           return false;
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fh.setLoadingProgress(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.musicPatchArchive, 81));
+                        PasswordValidator.setLoadingProgress(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.musicPatchArchive, 81));
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      fh.setLoadingProgress(-99, 20.0f, qo.a(pr.field_a, "", ub.vorbisSoundArchive, 13525, ResourceArchive.field_c));
+                      PasswordValidator.setLoadingProgress(-99, 20.0f, qo.a(pr.field_a, "", ub.vorbisSoundArchive, 13525, ResourceArchive.field_c));
                       return false;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    fh.setLoadingProgress(-86, 10.0f, qo.a(pr.field_a, "", jk.synthesizedSoundArchive, 13525, ResourceArchive.field_c));
+                    PasswordValidator.setLoadingProgress(-86, 10.0f, qo.a(pr.field_a, "", jk.synthesizedSoundArchive, 13525, ResourceArchive.field_c));
                     return false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  fh.setLoadingProgress(-46, 5.0f, qo.a(bk.field_g, "arial13", CachedArchiveProvider.sharedFontMetricsArchive, 13525, ks.field_c));
+                  PasswordValidator.setLoadingProgress(-46, 5.0f, qo.a(bk.field_g, "arial13", CachedArchiveProvider.sharedFontMetricsArchive, 13525, ks.field_c));
                   return false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                fh.setLoadingProgress(-86, 5.0f, qo.a(bk.field_g, "arialbold14", CachedArchiveProvider.sharedFontMetricsArchive, 13525, ks.field_c));
+                PasswordValidator.setLoadingProgress(-86, 5.0f, qo.a(bk.field_g, "arialbold14", CachedArchiveProvider.sharedFontMetricsArchive, 13525, ks.field_c));
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              fh.setLoadingProgress(-110, 3.0f, qo.a(co.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
+              PasswordValidator.setLoadingProgress(-110, 3.0f, qo.a(co.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
               return false;
             }
           }
@@ -209,15 +209,15 @@ public final class AceOfSkies extends NetworkGameClient {
           if (param4 != -12209) {
             return;
           }
-          bm.field_w[0] = vr.field_h.nextInt();
-          bm.field_w[1] = vr.field_h.nextInt();
+          EditableTextField.field_w[0] = vr.field_h.nextInt();
+          EditableTextField.field_w[1] = vr.field_h.nextInt();
           fa.field_c.position = 0;
-          bm.field_w[3] = (int)of.field_a;
-          bm.field_w[2] = (int)(of.field_a >> 32);
-          fa.field_c.writeInt((byte) 50, bm.field_w[0]);
-          fa.field_c.writeInt((byte) 41, bm.field_w[1]);
-          fa.field_c.writeInt((byte) 113, bm.field_w[2]);
-          fa.field_c.writeInt((byte) 45, bm.field_w[3]);
+          EditableTextField.field_w[3] = (int)of.field_a;
+          EditableTextField.field_w[2] = (int)(of.field_a >> 32);
+          fa.field_c.writeInt((byte) 50, EditableTextField.field_w[0]);
+          fa.field_c.writeInt((byte) 41, EditableTextField.field_w[1]);
+          fa.field_c.writeInt((byte) 113, EditableTextField.field_w[2]);
+          fa.field_c.writeInt((byte) 45, EditableTextField.field_w[3]);
           vi.a((byte) -1, fa.field_c);
           fa.field_c.writeShort(param0, 23385);
           param2.a(fa.field_c, true);
@@ -247,7 +247,7 @@ public final class AceOfSkies extends NetworkGameClient {
             var6 = var6 | 16;
           }
           q.outgoingPacket.writeByte(-1336879960, var6);
-          String var7 = ao.a(bm.m(114), false);
+          String var7 = ao.a(EditableTextField.m(114), false);
           if (null == var7) {
             var7 = "";
           }
@@ -478,10 +478,10 @@ public final class AceOfSkies extends NetworkGameClient {
           ng.j(11617);
           ad.resetStaticState(false);
           oo.clearDeclaredStaticReferences((byte) 105);
-          wd.h(11663);
+          AccountRegistrationPanel.h(11663);
           tn.clearStaticReferences((byte) -110);
-          ce.clearStaticReferences(96);
-          ep.clearStaticReferences(-33);
+          LoginPanel.clearStaticReferences(96);
+          DisplayNameSelectionPanel.clearStaticReferences(-33);
           cd.clearStaticReferences(0);
           sa.clearStaticReferences(-128);
           ld.clearStaticReferences((byte) 62);
@@ -569,13 +569,13 @@ public final class AceOfSkies extends NetworkGameClient {
           nq.clearStaticReferences(true);
           uh.clearStaticReferences(-102);
           bc.clearStaticReferences(14912);
-          kk.clearStaticReferences(true);
-          bm.d((byte) -106);
+          ValidatedTextField.clearStaticReferences(true);
+          EditableTextField.d((byte) -106);
           dg.k(12);
           ek.clearStaticReferences(false);
           pi.clearStaticReferences(4096);
           kb.clearStaticReferences(obfuscationGuard + 1927864887);
-          vo.clearStaticReferences(14695);
+          TextFieldValidator.clearStaticReferences(14695);
           fk.a((byte) 28);
           rs.clearStaticReferences((byte) 105);
           cn.a(-96);
@@ -723,13 +723,13 @@ public final class AceOfSkies extends NetworkGameClient {
           sc.clearStaticReferences(126);
           co.a(-13392);
           AccountNameAvailabilityValidator.clearStaticReferences((byte) -11);
-          fh.clearStaticReferences(true);
-          ii.clearStaticReferences((byte) -22);
-          vn.c((byte) 101);
-          uu.e(obfuscationGuard ^ 27864);
+          PasswordValidator.clearStaticReferences(true);
+          ConfirmedEmailAvailabilityValidator.clearStaticReferences((byte) -22);
+          AgeValidator.c((byte) 101);
+          MatchingFieldValidator.e(obfuscationGuard ^ 27864);
           jo.a((byte) -125);
           pt.resetStaticState(0);
-          li.b((byte) -90);
+          DebouncedFieldValidator.b((byte) -90);
           ah.clearStaticReferences((byte) -27);
           ms.clearStaticReferences((byte) -15);
           od.d((byte) -96);
@@ -871,7 +871,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             if (!b.b((byte) -94)) {
-              fh.setLoadingProgress(-42, 100.0f, Bzip2State.field_I);
+              PasswordValidator.setLoadingProgress(-42, 100.0f, Bzip2State.field_I);
               FullscreenFocusCanvas.a(var2, -12);
               return;
             }
@@ -1082,7 +1082,7 @@ public final class AceOfSkies extends NetworkGameClient {
                       tt.b(-32546);
                     }
                     if (var2_int == 2) {
-                      rr.a((byte) -77, bm.m(114));
+                      rr.a((byte) -77, EditableTextField.m(114));
                     }
                   }
                   decompiledSharedTail0 = ((var3));

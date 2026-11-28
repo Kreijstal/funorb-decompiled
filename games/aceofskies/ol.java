@@ -26,7 +26,7 @@ final class ol extends ai {
           float var19 = -var18 + 1.0f;
           var16 = var16 & var14;
           var17 = var17 & var14;
-          float var20 = ce.a(var18, -59);
+          float var20 = LoginPanel.a(var18, -59);
           int var21 = this.field_d[var16];
           int var22 = this.field_d[var17];
           int var23 = 0;
@@ -42,7 +42,7 @@ final class ol extends ai {
             float var28 = -var27 + 1.0f;
             var26 = var26 & var13;
             var25 = var25 & var13;
-            float var29 = ce.a(var27, -87);
+            float var29 = LoginPanel.a(var27, -87);
             int var30 = this.field_d[var21 + var25];
             int var31 = this.field_d[var21 + var26];
             int var32 = this.field_d[var22 + var25];
@@ -54,7 +54,7 @@ final class ol extends ai {
               float var38 = var35 - (float)var36;
               float var39 = -var38 + 1.0f;
               var37 = var37 & var12_int;
-              float var40 = ce.a(var38, -81);
+              float var40 = LoginPanel.a(var38, -81);
               var36 = var36 & var12_int;
               int incrementValue$1 = param8;
               param8++;

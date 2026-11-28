@@ -151,7 +151,7 @@ final class rc extends hh {
               }
               var4 = var4 + (pp.field_a + (as.field_c << 1) + lp.field_h);
             } else {
-              var4 = var4 + ce.field_u;
+              var4 = var4 + LoginPanel.field_u;
             }
             var3_int++;
           }

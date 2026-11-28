@@ -613,7 +613,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 var22 = var22 + (var19 & 255);
                 int incrementValue$4 = var15;
                 var15++;
-                var13[incrementValue$4] = vo.a(vo.a(pg.a(var21, 1020) << 6, vo.a(pg.a(var20, 1020) << 14, pg.a(-16777216, var23 << 22))), pg.a(1020, var22) >> 2);
+                var13[incrementValue$4] = TextFieldValidator.a(TextFieldValidator.a(pg.a(var21, 1020) << 6, TextFieldValidator.a(pg.a(var20, 1020) << 14, pg.a(-16777216, var23 << 22))), pg.a(1020, var22) >> 2);
               }
               var24 = var24 + param0;
               var25 = var25 + param0;

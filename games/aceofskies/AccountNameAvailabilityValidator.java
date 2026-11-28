@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountNameAvailabilityValidator extends vo {
+final class AccountNameAvailabilityValidator extends TextFieldValidator {
     static RenderSprite titleImage;
     static String field_e;
     private boolean nameAvailable;
     static volatile int field_g;
     private String checkedName;
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         pt stackIn_17_0 = null;
         String stackIn_21_2 = null;
         try {
@@ -19,7 +19,7 @@ final class AccountNameAvailabilityValidator extends vo {
           }
           if (param1 != 8192) {
             String var4 = (String) null;
-            this.a((String) null, (byte) -114);
+            this.getValidationMessage((String) null, (byte) -114);
           }
           if (!param0.equals(this.checkedName)) {
             AccountServiceResult var3 = hg.pollAccountNameCheck(param1 ^ 2147475455, param0);
@@ -28,7 +28,7 @@ final class AccountNameAvailabilityValidator extends vo {
               this.nameAvailable = var3.success;
               this.checkedName = param0;
             } else {
-              pt stackIn_12_0 = ce.field_t;
+              pt stackIn_12_0 = LoginPanel.field_t;
               return stackIn_12_0;
             }
           }
@@ -52,7 +52,7 @@ final class AccountNameAvailabilityValidator extends vo {
         }
     }
 
-    AccountNameAvailabilityValidator(bm param0) {
+    AccountNameAvailabilityValidator(EditableTextField param0) {
         super(param0);
         this.nameAvailable = false;
     }
@@ -75,7 +75,7 @@ final class AccountNameAvailabilityValidator extends vo {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_22_2 = null;
         try {
           if (param1 != 72) {

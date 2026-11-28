@@ -236,7 +236,7 @@ final class OpenGlTexture2D extends OpenGlTexture implements HardwareTexture2D {
           this.field_k = param4;
           this.field_j = param3;
           this.field_g.a((HardwareTexture) (this), -9135);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), kk.a(this.field_c, (byte) -96), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), ValidatedTextField.a(this.field_c, (byte) -96), (byte[]) null, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

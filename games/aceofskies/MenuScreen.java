@@ -231,7 +231,7 @@ final class MenuScreen {
           this.a(verticalOffset, (byte) -122, var11);
           if (!cn.b(true)) {
             if (null == ql.activeHighscoreQuery) {
-              ql.activeHighscoreQuery = vo.requestHighscores((byte) 127, 3, 10, 1, cs.highscoreMode);
+              ql.activeHighscoreQuery = TextFieldValidator.requestHighscores((byte) 127, 3, 10, 1, cs.highscoreMode);
             }
             HighscoreQuery var13_ref_uc = ql.activeHighscoreQuery;
             if (var13_ref_uc.completed) {
@@ -361,7 +361,7 @@ final class MenuScreen {
           String var2 = (String) null;
           MenuScreen.a((byte) 67, -122, (OpenGlRenderer) null, (String) null);
         }
-        return (java.awt.Container) ((Object) bm.m(118));
+        return (java.awt.Container) ((Object) EditableTextField.m(118));
     }
 
     final void open(boolean pointerSelection, int obfuscationGuard) {
@@ -416,10 +416,10 @@ final class MenuScreen {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var4 = OpenGlBuffer.menuActions[this.screenId][itemIndex];
         if (this.input.isActivated((byte) 125)) {
-          bm.a((byte) -70, gg.field_a);
+          EditableTextField.a((byte) -70, gg.field_a);
         } else if (var4 != this.previousActionId) {
           this.previousActionId = var4;
-          bm.a((byte) -70, kq.field_b);
+          EditableTextField.a((byte) -70, kq.field_b);
         }
         if (obfuscationGuard != 3) {
           return;
@@ -580,7 +580,7 @@ final class MenuScreen {
               if (jf.field_a != null) {
                 tt.b(-32546);
               }
-              rr.a((byte) -56, bm.m(obfuscationGuard + 106));
+              rr.a((byte) -56, EditableTextField.m(obfuscationGuard + 106));
               break;
             case 20:
               if (!this.input.isActivated((byte) 106)) {
@@ -1051,7 +1051,7 @@ final class MenuScreen {
           String var18_ref_String = Integer.toString(100 * qe.field_f[var17]);
           if (var13[var17] &&
             (1 << var17 & var16) == 0) {
-            var18_ref_String = fh.field_g;
+            var18_ref_String = PasswordValidator.field_g;
           }
           PacketBuffer.gameFont.drawCenteredText(124, var5, var6, var15Lifetime1, var7Lifetime2, var18_ref_String);
           int var15Lifetime1Lifetime1 = 280 + verticalOffset;
@@ -1379,7 +1379,7 @@ final class MenuScreen {
             rm.field_g[0] = 5;
             rn.field_a[3] = 1;
             ne.field_g[2] = DiskCacheWorker.field_a;
-            ne.field_g[4] = li.field_b;
+            ne.field_g[4] = DebouncedFieldValidator.field_b;
             ne.field_g[3] = vl.field_a;
             for (int var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               String[] stackIn_75_0 = ne.field_g;
@@ -1446,7 +1446,7 @@ final class MenuScreen {
           for (int var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
             int stackIn_115_0 = OpenGlIndexBuffer.field_q;
             if (0 > rn.field_a[var4Lifetime2]) {
-              stackIn_116_1 = ce.field_u;
+              stackIn_116_1 = LoginPanel.field_u;
             } else {
               stackIn_116_1 = lp.field_h;
             }
@@ -1469,7 +1469,7 @@ final class MenuScreen {
               var5Lifetime3 = var5Lifetime3 + (lp.field_h + (as.field_c << 1) + pp.field_a);
               nb.field_b[var4Lifetime3][3] = lp.field_h + (as.field_c << 1);
             } else {
-              var5Lifetime3 = var5Lifetime3 + ce.field_u;
+              var5Lifetime3 = var5Lifetime3 + LoginPanel.field_u;
             }
             var4Lifetime3++;
           }

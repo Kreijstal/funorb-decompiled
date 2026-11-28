@@ -953,7 +953,7 @@ final class MidiPcmStream extends PcmStream {
           switch (var5Lifetime1Lifetime3) {
             case 64:
               if (var6Lifetime1Lifetime2 >= 64) {
-                this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 1);
+                this.field_G[var4Lifetime1Lifetime3] = TextFieldValidator.a(this.field_G[var4Lifetime1Lifetime3], 1);
                 if (var8) {
                   this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -2);
                 }
@@ -966,10 +966,10 @@ final class MidiPcmStream extends PcmStream {
                 this.a((byte) -126, var4Lifetime1Lifetime3);
                 this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -3);
                 if (var8) {
-                  this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 2);
+                  this.field_G[var4Lifetime1Lifetime3] = TextFieldValidator.a(this.field_G[var4Lifetime1Lifetime3], 2);
                 }
               } else {
-                this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 2);
+                this.field_G[var4Lifetime1Lifetime3] = TextFieldValidator.a(this.field_G[var4Lifetime1Lifetime3], 2);
               }
               break;
             case 99:
@@ -1013,7 +1013,7 @@ final class MidiPcmStream extends PcmStream {
               break;
             case 81:
               if (64 <= var6Lifetime1Lifetime2) {
-                this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 4);
+                this.field_G[var4Lifetime1Lifetime3] = TextFieldValidator.a(this.field_G[var4Lifetime1Lifetime3], 4);
                 if (var8) {
                   this.a(var4Lifetime1Lifetime3, (byte) 4);
                   this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -5);

@@ -106,7 +106,7 @@ final class qa {
               var1_int = var1_int + (pp.field_a + as.field_c + lp.field_h);
             } else {
               nh.field_c.drawText(var6, var8Lifetime1, FrameTimer.field_b + var1_int, var5, -1);
-              var1_int = var1_int + ce.field_u;
+              var1_int = var1_int + LoginPanel.field_u;
             }
           }
           if (param0 > -25) {
@@ -137,7 +137,7 @@ final class qa {
         if (it.field_c > 200) {
           var5 = (250 - it.field_c << 8) / 50;
         }
-        ProxySocketConnector.a(wd.field_v, -14492);
+        ProxySocketConnector.a(AccountRegistrationPanel.field_v, -14492);
         re.a();
         SoftwareRasterizer.clearFramebuffer();
         OpenGlFramebuffer.e((byte) -124);
@@ -145,7 +145,7 @@ final class qa {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           sl.c(2765);
           if (it.field_c < 150) {
-            wd.field_v.d(var3, var4);
+            AccountRegistrationPanel.field_v.d(var3, var4);
           } else {
             HighscoreNameEntry.field_d.a(var3 + 15, var4 + 10, var5);
           }
@@ -214,7 +214,7 @@ final class qa {
           }
           return;
         }
-        wd.field_v.d(var3, var4);
+        AccountRegistrationPanel.field_v.d(var3, var4);
         if (param1 == -4) {
           int var6Lifetime2 = it.field_c - 125;
           if (0 < var6Lifetime2) {

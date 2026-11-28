@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qk {
-    static wd field_e;
+    static AccountRegistrationPanel field_e;
     static RenderSprite woodenTileSprite;
     static String field_f;
     static int field_g;
@@ -202,7 +202,7 @@ final class qk {
         var1.a(SoftwareRasterizer.stride, 251, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.framebuffer, SoftwareRasterizer.clipRight);
         RenderStateStack.field_i.addLast(104, var1);
         if (param0 != -92) {
-          field_e = (wd) null;
+          field_e = (AccountRegistrationPanel) null;
         }
     }
 

@@ -33,7 +33,7 @@ final class si {
         if (param1 != -32106) {
           return;
         }
-        vn.field_f.a(0, 0, 0);
+        AgeValidator.field_f.a(0, 0, 0);
     }
 
     public static void a(boolean param0) {

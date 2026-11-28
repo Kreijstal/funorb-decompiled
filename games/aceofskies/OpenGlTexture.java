@@ -273,7 +273,7 @@ abstract class OpenGlTexture implements HardwareTexture {
                 var18 = var18 + (255 & var17 >> 16);
                 int incrementValue$4 = var13;
                 var13++;
-                var11[incrementValue$4] = vo.a(pg.a(255, var20 >> 2), vo.a(vo.a(pg.a(1020, var18) << 14, pg.a(var21, 1020) << 22), pg.a(var19 << 6, 65280)));
+                var11[incrementValue$4] = TextFieldValidator.a(pg.a(255, var20 >> 2), TextFieldValidator.a(TextFieldValidator.a(pg.a(1020, var18) << 14, pg.a(var21, 1020) << 22), pg.a(var19 << 6, 65280)));
               }
               var23 = var23 + param2;
               var22 = var22 + param2;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uu extends vo {
+final class MatchingFieldValidator extends TextFieldValidator {
     static boolean pointerMoved;
-    private bm field_f;
+    private EditableTextField field_f;
     static String field_g;
     static String field_h;
 
@@ -16,7 +16,7 @@ final class uu extends vo {
         try {
           Aircraft.a(param20, param0, param15, param18, new mg(param14), param8, param7, param4, param2, param13, (byte) 106, new mg(param10), param12, param17, param9, param11, param19, new mg(param6), param1, param5, param16);
           if (param3 != -28265) {
-            uu.e(99);
+            MatchingFieldValidator.e(99);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,17 +57,17 @@ final class uu extends vo {
         }
     }
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         pt stackIn_12_0 = null;
         String stackIn_16_2 = null;
         try {
           if (param1 != 8192) {
             field_h = (String) null;
           }
-          if (this.field_f instanceof mc) {
-            sp var3 = ((mc) ((Object) this.field_f)).a(0);
+          if (this.field_f instanceof FieldValidatorProvider) {
+            FieldValidator var3 = ((FieldValidatorProvider) ((Object) this.field_f)).getFieldValidator(0);
             if (var3 != null &&
-              var3.b(true) != fd.field_a) {
+              var3.getValidationStatus(true) != fd.field_a) {
               pt stackIn_8_0 = bt.field_a;
               return stackIn_8_0;
             }
@@ -92,7 +92,7 @@ final class uu extends vo {
         }
     }
 
-    uu(bm param0, bm param1) {
+    MatchingFieldValidator(EditableTextField param0, EditableTextField param1) {
         super(param0);
         try {
           this.field_f = param1;
@@ -106,26 +106,26 @@ final class uu extends vo {
         field_g = null;
         if (param0 != 8405) {
           BitmapFont var2 = (BitmapFont) null;
-          uu.a(43, -66, -29, -19, -97, -21, (Sprite[]) null, -106, -7, 118, (Sprite[]) null, 107, 7, (BitmapFont) null, (Sprite[]) null, (BitmapFont) null, -45, -26, 109, -56, -123);
+          MatchingFieldValidator.a(43, -66, -29, -19, -97, -21, (Sprite[]) null, -106, -7, 118, (Sprite[]) null, 107, 7, (BitmapFont) null, (Sprite[]) null, (BitmapFont) null, -45, -26, 109, -56, -123);
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_18_2 = null;
         try {
           if (param1 != 72) {
             String var4 = (String) null;
-            this.a((String) null, (byte) -99);
+            this.getValidationMessage((String) null, (byte) -99);
           }
-          if (this.field_f instanceof mc) {
-            sp var3 = ((mc) ((Object) this.field_f)).a(param1 ^ 72);
+          if (this.field_f instanceof FieldValidatorProvider) {
+            FieldValidator var3 = ((FieldValidatorProvider) ((Object) this.field_f)).getFieldValidator(param1 ^ 72);
             if (var3 != null) {
-              if (var3.b(true) == fd.field_a &&
+              if (var3.getValidationStatus(true) == fd.field_a &&
                 !param0.equals(this.field_f.field_f)) {
                 String stackIn_8_0 = HardwareRenderSprite.field_c;
                 return stackIn_8_0;
               }
-              String stackIn_10_0 = var3.a(true);
+              String stackIn_10_0 = var3.getValidationMessage(true);
               return stackIn_10_0;
             }
           }

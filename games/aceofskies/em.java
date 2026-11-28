@@ -15,14 +15,14 @@ final class em {
     final boolean a(int param0) {
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_a) {
-          if (bm.field_C == null) {
+          if (EditableTextField.field_C == null) {
             byte[] var22 = gg.a(8, -117, 16.0f, new ol(419684), 128, 128, 4.0f, 4.0f, 0.5f, 16, 0.6000000238418579f);
             byte[] var19 = var22;
             byte[] var18 = var19;
             byte[] var2 = var18;
-            bm.field_C = sf.a(false, -137, var22);
+            EditableTextField.field_C = sf.a(false, -137, var22);
           }
-          byte[] var23 = PacketBuffer.extractByteArray(false, bm.field_C, -76);
+          byte[] var23 = PacketBuffer.extractByteArray(false, EditableTextField.field_C, -76);
           byte[] var20 = var23;
           byte[] var17 = var20;
           byte[] var2Lifetime1 = var17;

@@ -16,7 +16,7 @@ final class fb {
           vu.heldMouseButton = AccountNameAvailabilityValidator.field_g;
           ic.field_b = sj.field_a;
           cf.field_g = qd.field_m;
-          uu.pointerMoved = si.field_b;
+          MatchingFieldValidator.pointerMoved = si.field_b;
           si.field_b = false;
           OpenGlShaderObject.pressedMouseButton = me.field_b;
           ln.field_c = kg.field_a;

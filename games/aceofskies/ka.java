@@ -147,18 +147,18 @@ abstract class ka {
             ub.field_g = param11;
             HighscoreNameEntry.field_a = param5;
             ca.field_g = param2;
-            ii.field_j = param12;
+            ConfirmedEmailAvailabilityValidator.field_j = param12;
             sg.field_b = param10;
             ut.field_a = param8;
             BoundedRandomAccessFile.field_a = param1;
             ko.field_f = param13;
             te.field_h = param6;
             id.field_d = param9;
-            if (null == ii.field_j.field_g) {
+            if (null == ConfirmedEmailAvailabilityValidator.field_j.field_g) {
               return;
             }
             try {
-              BitmapFontMetrics.field_g = new BufferedRandomAccessFile(ii.field_j.field_g, 64, 0);
+              BitmapFontMetrics.field_g = new BufferedRandomAccessFile(ConfirmedEmailAvailabilityValidator.field_j.field_g, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

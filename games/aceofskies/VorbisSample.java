@@ -467,7 +467,7 @@ final class VorbisSample extends IntrusiveNode {
           int[] var9 = new int[var5];
           int var10 = ek.bitLength((byte) 121, var5 - 1);
           for (int var11 = 0; var11 < var5; var11++) {
-            var9[var11] = wd.reverseLowBits(12871, var10, var11);
+            var9[var11] = AccountRegistrationPanel.reverseLowBits(12871, var10, var11);
           }
           if (var1 == 0) {
             field_r = var6_ref_float__;

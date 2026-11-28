@@ -312,7 +312,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         int stackIn_3_2 = 0;
         String stackIn_9_2 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, ii.getOpenGlTextureCombineSource((byte) 79, param0));
+          jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, ConfirmedEmailAvailabilityValidator.getOpenGlTextureCombineSource((byte) 79, param0));
           int stackIn_2_0 = 8960;
           int stackIn_2_1 = param1 + 34200;
           stackIn_3_2 = (!param2) ? (770) : (771);
@@ -1337,7 +1337,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         int stackIn_8_2 = 0;
         String stackIn_15_2 = null;
         try {
-          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, ii.getOpenGlTextureCombineSource((byte) 73, param3));
+          jaggl.OpenGL.glTexEnvi(8960, 34176 + param1, ConfirmedEmailAvailabilityValidator.getOpenGlTextureCombineSource((byte) 73, param3));
           if (param0) {
             int stackIn_7_0 = 8960;
             int stackIn_7_1 = 34192 + param1;
@@ -1382,7 +1382,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           if (param1 == DualLinkNode.field_m) {
             var5_int = 1;
             var6 = 2 * param2;
-          } else if (param1 == bm.field_x) {
+          } else if (param1 == EditableTextField.field_x) {
             var5_int = 3;
             var6 = 1 + param2;
           } else if (OpenGlRenderSprite.field_h == param1) {

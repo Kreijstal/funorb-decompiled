@@ -13,8 +13,8 @@ final class wk extends hh {
         try {
           this.field_a.a(param2, 1);
           if (param1 != -1486691000) {
-            wd var5 = (wd) null;
-            wk.a((String) null, 16, (String) null, (String) null, (wd) null, -73, false);
+            AccountRegistrationPanel var5 = (AccountRegistrationPanel) null;
+            wk.a((String) null, 16, (String) null, (String) null, (AccountRegistrationPanel) null, -73, false);
           }
           this.field_a.a(param0, (byte) -39);
         } catch (RuntimeException runtimeException) {
@@ -41,7 +41,7 @@ final class wk extends hh {
         this.field_a.a(false, 0);
     }
 
-    final static boolean a(String param0, int param1, String param2, String param3, wd param4, int param5, boolean param6) {
+    final static boolean a(String param0, int param1, String param2, String param3, AccountRegistrationPanel param4, int param5, boolean param6) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
@@ -50,8 +50,8 @@ final class wk extends hh {
           if (ht.field_k != DiskCacheWorker.field_h) {
             return false;
           }
-          AccountCreationResultPanel var8 = new AccountCreationResultPanel(vn.field_f, param4);
-          vn.field_f.a(var8, 0);
+          AccountCreationResultPanel var8 = new AccountCreationResultPanel(AgeValidator.field_f, param4);
+          AgeValidator.field_f.a(var8, 0);
           if (AircraftDefinition.a(param5)) {
             var8.n(126);
             return true;

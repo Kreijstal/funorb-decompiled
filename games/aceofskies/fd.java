@@ -5,7 +5,7 @@ final class fd {
     static String field_e;
     static PcmSample[][] field_b;
     static pt field_a;
-    static ep field_f;
+    static DisplayNameSelectionPanel field_f;
     static String field_c;
     static int field_d;
 

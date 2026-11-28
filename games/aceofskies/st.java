@@ -74,10 +74,10 @@ final class st {
           var4++;
         }
         if (param1) {
-          return wd.field_G[var4];
+          return AccountRegistrationPanel.field_G[var4];
         }
         field_a = (float[]) null;
-        return wd.field_G[var4];
+        return AccountRegistrationPanel.field_G[var4];
     }
 
     final static void clearStaticReferences(byte param0) {

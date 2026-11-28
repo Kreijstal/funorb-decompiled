@@ -57,7 +57,7 @@ final class qq {
           du.menuActionLabels[18] = so.field_c;
           du.menuActionLabels[10] = tq.field_e[2];
           du.menuActionLabels[21] = ki.field_c;
-          du.menuActionLabels[22] = ii.field_l;
+          du.menuActionLabels[22] = ConfirmedEmailAvailabilityValidator.field_l;
           du.menuActionLabels[9] = tq.field_e[1];
           return;
         }
@@ -65,7 +65,7 @@ final class qq {
         du.menuActionLabels[18] = so.field_c;
         du.menuActionLabels[10] = tq.field_e[2];
         du.menuActionLabels[21] = ki.field_c;
-        du.menuActionLabels[22] = ii.field_l;
+        du.menuActionLabels[22] = ConfirmedEmailAvailabilityValidator.field_l;
         du.menuActionLabels[9] = tq.field_e[1];
     }
 

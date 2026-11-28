@@ -98,29 +98,29 @@ abstract class ArchiveNetworkClient {
           String var2 = ka.a(param0 ^ 118);
           if (param0 != -21) {
             field_i = (TextureCombineSource) null;
-            vr.field_b = new ce(var2, (String) null, true, false, false);
-            vn.field_f.a(ClientException.field_d, 0);
+            vr.field_b = new LoginPanel(var2, (String) null, true, false, false);
+            AgeValidator.field_f.a(ClientException.field_d, 0);
             ClientException.field_d.d(vr.field_b, -30244);
             ClientException.field_d.e((byte) 85);
             return;
           }
-          vr.field_b = new ce(var2, (String) null, true, false, false);
-          vn.field_f.a(ClientException.field_d, 0);
+          vr.field_b = new LoginPanel(var2, (String) null, true, false, false);
+          AgeValidator.field_f.a(ClientException.field_d, 0);
           ClientException.field_d.d(vr.field_b, -30244);
           ClientException.field_d.e((byte) 85);
           return;
         }
         String var3 = ka.a(param0 ^ 118);
         if (param0 == -21) {
-          vr.field_b = new ce(var3, (String) null, true, false, false);
-          vn.field_f.a(ClientException.field_d, 0);
+          vr.field_b = new LoginPanel(var3, (String) null, true, false, false);
+          AgeValidator.field_f.a(ClientException.field_d, 0);
           ClientException.field_d.d(vr.field_b, -30244);
           ClientException.field_d.e((byte) 85);
           return;
         }
         field_i = (TextureCombineSource) null;
-        vr.field_b = new ce(var3, (String) null, true, false, false);
-        vn.field_f.a(ClientException.field_d, 0);
+        vr.field_b = new LoginPanel(var3, (String) null, true, false, false);
+        AgeValidator.field_f.a(ClientException.field_d, 0);
         ClientException.field_d.d(vr.field_b, -30244);
         ClientException.field_d.e((byte) 85);
     }

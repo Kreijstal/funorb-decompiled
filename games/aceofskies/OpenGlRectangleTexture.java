@@ -22,7 +22,7 @@ final class OpenGlRectangleTexture extends OpenGlTexture implements HardwareText
           this.field_j = param3;
           this.field_i = param4;
           this.field_g.a((HardwareTexture) (this), -9135);
-          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), kk.a(this.field_c, (byte) -117), (byte[]) null, 0);
+          jaggl.OpenGL.glTexImage2Dub(this.field_e, 0, this.a(false), param3, param4, 0, WeightedObjectCache.a(this.field_h, -29824), ValidatedTextField.a(this.field_c, (byte) -117), (byte[]) null, 0);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

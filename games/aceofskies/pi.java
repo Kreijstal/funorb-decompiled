@@ -3,7 +3,7 @@
  */
 final class pi extends mi {
     static qr field_x;
-    private sp field_w;
+    private FieldValidator field_w;
     private int field_y;
 
     final boolean a(ea param0, byte param1) {
@@ -43,13 +43,13 @@ final class pi extends mi {
         }
         int var5 = (this.field_q >> 1) + (param3 + this.field_p);
         int var6 = (this.field_n >> 1) + param2 + this.field_h;
-        pt var8 = this.field_w.b(true);
+        pt var8 = this.field_w.getValidationStatus(true);
         if (param0 < 64) {
           ea var12 = (ea) null;
           this.a((ea) null, (byte) -125);
         }
         if (HardwareOpenGlRenderer.field_Pc != var8 &&
-          ce.field_t != var8) {
+          LoginPanel.field_t != var8) {
           if (var8 == bt.field_a) {
             Sprite var13 = gu.field_c[2];
             var13.d(var5 - (var13.width >> 1), -(var13.height >> 1) + var6, 256);
@@ -94,7 +94,7 @@ final class pi extends mi {
 
     final String c(byte param0) {
         if (this.field_g) {
-          return this.field_w.a(true);
+          return this.field_w.getValidationMessage(true);
         }
         if (param0 <= -41) {
           return null;
@@ -209,25 +209,25 @@ final class pi extends mi {
               ArchiveNetworkClient.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
               if (AccountRequestState.field_a.a(-78) == SteeringMode.field_a) {
-                ef.field_k.a(bm.m(param2 + 113), (byte) 125);
+                ef.field_k.a(EditableTextField.m(param2 + 113), (byte) 125);
               } else if (AccountRequestState.field_a.a(-87) == ds.field_e) {
-                lp.field_f.a(bm.m(111), (byte) 8);
+                lp.field_f.a(EditableTextField.m(111), (byte) 8);
               }
               ld.field_d = false;
               if (var11 != null) {
-                sf.a((byte) -122, bm.m(123), var11);
+                sf.a((byte) -122, EditableTextField.m(123), var11);
               }
               if (qr.field_a <= 0 &&
                 !g.field_k) {
                 try {
-                  JavaScriptBridge.callWithoutArguments("unzap", (byte) -108, bm.m(115));
+                  JavaScriptBridge.callWithoutArguments("unzap", (byte) -108, EditableTextField.m(115));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments("zap", -15201, new Object[]{BufferedSocket.a(as.field_b, 28304)}, bm.m(119));
+                  JavaScriptBridge.callWithArguments("zap", -15201, new Object[]{BufferedSocket.a(as.field_b, 28304)}, EditableTextField.m(119));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -236,11 +236,11 @@ final class pi extends mi {
               if (qr.field_a > 0) {
                 te.field_h = true;
               }
-              q.outgoingPacket.initializeOpcodeCipher(true, bm.field_w);
+              q.outgoingPacket.initializeOpcodeCipher(true, EditableTextField.field_w);
               for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
-                bm.field_w[var8Lifetime1] = bm.field_w[var8Lifetime1] + 50;
+                EditableTextField.field_w[var8Lifetime1] = EditableTextField.field_w[var8Lifetime1] + 50;
               }
-              IntKeyLookup.incomingPacket.initializeOpcodeCipher(true, bm.field_w);
+              IntKeyLookup.incomingPacket.initializeOpcodeCipher(true, EditableTextField.field_w);
               int stackIn_70_0 = qs.field_b;
               return stackIn_70_0;
             }
@@ -307,7 +307,7 @@ final class pi extends mi {
         }
     }
 
-    pi(sp param0) {
+    pi(FieldValidator param0) {
         try {
           this.field_w = param0;
         } catch (RuntimeException runtimeException) {

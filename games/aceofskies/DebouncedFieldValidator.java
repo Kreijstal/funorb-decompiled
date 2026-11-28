@@ -1,66 +1,66 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class li implements sp {
+abstract class DebouncedFieldValidator implements FieldValidator {
     private long field_a;
     static String field_b;
 
-    public final String a(boolean param0) {
+    public final String getValidationMessage(boolean param0) {
         if (!param0) {
           String var3 = (String) null;
-          li.a(-62, -108, (String) null);
-          if (this.a(26921)) {
+          DebouncedFieldValidator.a(-62, -108, (String) null);
+          if (this.hasMissingInput(26921)) {
             return null;
           }
           if (kh.correctedCurrentTimeMillis(-104) >= this.field_a + 350L) {
-            return this.b(8192);
+            return this.evaluateValidationMessage(8192);
           }
           return null;
         }
-        if (this.a(26921)) {
+        if (this.hasMissingInput(26921)) {
           return null;
         }
         if (kh.correctedCurrentTimeMillis(-104) >= this.field_a + 350L) {
-          return this.b(8192);
+          return this.evaluateValidationMessage(8192);
         }
         return null;
     }
 
-    abstract pt c(int param0);
+    abstract pt evaluateValidationStatus(int param0);
 
-    public final void a(byte param0) {
+    public final void recordInputChange(byte param0) {
         if (param0 <= 62) {
-          this.b(-122);
+          this.evaluateValidationMessage(-122);
           this.field_a = kh.correctedCurrentTimeMillis(-74);
           return;
         }
         this.field_a = kh.correctedCurrentTimeMillis(-74);
     }
 
-    abstract String b(int param0);
+    abstract String evaluateValidationMessage(int param0);
 
-    public final pt b(boolean param0) {
-        if (this.a(26921)) {
+    public final pt getValidationStatus(boolean param0) {
+        if (this.hasMissingInput(26921)) {
           return GameAppletShell.field_o;
         }
         if (!param0) {
-          this.a((byte) 120);
+          this.recordInputChange((byte) 120);
           if (!(kh.correctedCurrentTimeMillis(-113) >= (this.field_a + 350L))) {
             return HardwareOpenGlRenderer.field_Pc;
           }
-          return this.c(0);
+          return this.evaluateValidationStatus(0);
         }
         if (!(kh.correctedCurrentTimeMillis(-113) >= (this.field_a + 350L))) {
           return HardwareOpenGlRenderer.field_Pc;
         }
-        return this.c(0);
+        return this.evaluateValidationStatus(0);
     }
 
     public static void b(byte param0) {
         field_b = null;
         if (param0 != -90) {
           String var2 = (String) null;
-          li.a(0, -79, (String) null);
+          DebouncedFieldValidator.a(0, -79, (String) null);
         }
     }
 

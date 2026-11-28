@@ -96,7 +96,7 @@ final class WhirlpoolHasher {
         String stackIn_17_2 = null;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          this.field_j[this.field_g] = (byte)vo.a((int) this.field_j[this.field_g], 128 >>> pg.a(7, this.field_c));
+          this.field_j[this.field_g] = (byte)TextFieldValidator.a((int) this.field_j[this.field_g], 128 >>> pg.a(7, this.field_c));
           this.field_g = this.field_g + 1;
           if (this.field_g > 32) {
             while (64 > this.field_g) {
@@ -229,7 +229,7 @@ final class WhirlpoolHasher {
             int var8 = param1[var5_int] << var6 & 255 | (255 & param1[var5_int + 1]) >>> 8 - var6;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_j[this.field_g] = (byte)vo.a((int) this.field_j[this.field_g], var8 >>> var7);
+              this.field_j[this.field_g] = (byte)TextFieldValidator.a((int) this.field_j[this.field_g], var8 >>> var7);
               this.field_c = this.field_c + (8 - var7);
               this.field_g = this.field_g + 1;
               if (this.field_c == 512) {
@@ -249,7 +249,7 @@ final class WhirlpoolHasher {
             int stackIn_15_0 = 255;
             int stackIn_15_1 = param1[var5_int] << var6;
             var8Lifetime1 = stackIn_15_0 & stackIn_15_1;
-            this.field_j[this.field_g] = (byte)vo.a((int) this.field_j[this.field_g], var8Lifetime1 >>> var7);
+            this.field_j[this.field_g] = (byte)TextFieldValidator.a((int) this.field_j[this.field_g], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }

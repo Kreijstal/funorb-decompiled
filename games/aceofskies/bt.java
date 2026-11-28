@@ -33,7 +33,7 @@ final class bt {
     final static void a(int param0) {
         if (null != InstrumentPatch.field_m) {
           InstrumentPatch.field_m.h((byte) -23);
-          fd.field_f = new ep();
+          fd.field_f = new DisplayNameSelectionPanel();
           if (param0 != 10) {
             field_a = (pt) null;
             ClientException.field_d.d(fd.field_f, -30244);
@@ -42,7 +42,7 @@ final class bt {
           ClientException.field_d.d(fd.field_f, -30244);
           return;
         }
-        fd.field_f = new ep();
+        fd.field_f = new DisplayNameSelectionPanel();
         if (param0 == 10) {
           ClientException.field_d.d(fd.field_f, -30244);
           return;

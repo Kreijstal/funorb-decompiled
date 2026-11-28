@@ -19,8 +19,8 @@ final class PcmOutputWorker implements Runnable {
           PacketBuffer var9 = new PacketBuffer(param0);
           int var3 = var9.readUnsignedByte(-123);
           int var4 = var9.readInt((byte) 113);
-          if (var4 >= 0 && (0 == kk.field_K ||
-            !(var4 > kk.field_K))) {
+          if (var4 >= 0 && (0 == ValidatedTextField.field_K ||
+            !(var4 > ValidatedTextField.field_K))) {
             if (var3 == 0) {
               byte[] var13 = new byte[var4];
               byte[] var11 = var13;
@@ -30,8 +30,8 @@ final class PcmOutputWorker implements Runnable {
               return stackIn_24_0;
             }
             int var5_int = var9.readInt((byte) 110);
-            if (var5_int >= 0 && (kk.field_K == 0 ||
-              !(var5_int > kk.field_K))) {
+            if (var5_int >= 0 && (ValidatedTextField.field_K == 0 ||
+              !(var5_int > ValidatedTextField.field_K))) {
               byte[] var12 = new byte[var5_int];
               byte[] var10 = var12;
               byte[] var6 = var10;

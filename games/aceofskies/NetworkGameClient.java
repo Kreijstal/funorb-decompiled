@@ -41,7 +41,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            int var5_intLifetime1 = mj.a(BufferElementType.a(4), param0 ^ 11, this.field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
+            int var5_intLifetime1 = mj.a(BufferElementType.a(4), param0 ^ 11, this.field_E, ve.a(true), LoginPanel.g(-3), sa.b(-25752), of.a(false));
             if (-1 != var5_intLifetime1) {
               pp.a(sd.field_j, var5_intLifetime1, HardwareRenderSprite.field_m, param0 + 26318);
               sd.field_j = null;
@@ -60,7 +60,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               int var5_intLifetime2 = pi.a(this.field_E, BufferElementType.a(4), 0, this.field_r, sa.b(-25752), false);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
-                  li.a(param0 ^ 118, var5_intLifetime2, HardwareRenderSprite.field_m);
+                  DebouncedFieldValidator.a(param0 ^ 118, var5_intLifetime2, HardwareRenderSprite.field_m);
                   HardwareRenderSprite.field_m = null;
                 } else {
                   CipherPacketBuffer.field_o = as.field_b;
@@ -76,33 +76,33 @@ abstract class NetworkGameClient extends GameAppletShell {
               SoundCache.field_d = 10;
               ks.field_b = true;
             } else {
-              BufferElementType.a(true, bm.m(117));
+              BufferElementType.a(true, EditableTextField.m(117));
             }
           }
           if (var4 == 5) {
-            rr.a((byte) -96, bm.m(119));
+            rr.a((byte) -96, EditableTextField.m(119));
           }
           if (6 == var4 &&
             nq.field_a) {
             SoundCache.field_d = 10;
           }
           if (var4 == 7) {
-            po.a(bm.m(param0 + 117), (byte) -104);
+            po.a(EditableTextField.m(param0 + 117), (byte) -104);
           }
           if (var4 == param0) {
-            BufferElementType.a(true, bm.m(param0 ^ 114));
+            BufferElementType.a(true, EditableTextField.m(param0 ^ 114));
           }
           if (var4 == 9) {
-            SoftwareFramebuffer.openSupportWebsite(61, bm.m(param0 + 119));
+            SoftwareFramebuffer.openSupportWebsite(61, EditableTextField.m(param0 + 119));
           }
           if (var4 == 10) {
             q.outgoingPacket.writeCipheredOpcode(100, 17);
           }
           if (var4 == 11) {
-            jn.a((byte) 124, bm.m(107));
+            jn.a((byte) 124, EditableTextField.m(107));
           }
           if (var4 == 12) {
-            vi.a((byte) 103, kb.a(-1903710079), bm.m(107));
+            vi.a((byte) 103, kb.a(-1903710079), EditableTextField.m(107));
           }
           if (var4 == 13) {
             try {
@@ -159,7 +159,7 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void e(byte param0) {
         String var2 = pl.b(111);
-        rr.a(var2, (byte) -108, bm.m(108));
+        rr.a(var2, (byte) -108, EditableTextField.m(108));
         int var3 = 64 % ((56 - param0) / 61);
     }
 
@@ -272,25 +272,25 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (var2 == 0 ||
           1 == var2) {
-          if (fh.field_e[1]) {
+          if (PasswordValidator.field_e[1]) {
             OpenGlShaderProgram.resendQueuedRequests((byte) -117, 2);
           }
-          if (fh.field_e[2]) {
+          if (PasswordValidator.field_e[2]) {
             pl.resendPendingHighscores(3, 0);
           }
-          if (fh.field_e[3]) {
+          if (PasswordValidator.field_e[3]) {
             so.a(4, (byte) -39);
           }
-          if (fh.field_e[4]) {
+          if (PasswordValidator.field_e[4]) {
             eq.a((byte) 123, 5);
           }
-          if (fh.field_e[5]) {
+          if (PasswordValidator.field_e[5]) {
             tt.a(6, 2048);
           }
-          if (fh.field_e[6]) {
+          if (PasswordValidator.field_e[6]) {
             mj.a((byte) 84, 7);
           }
-          if (fh.field_e[8]) {
+          if (PasswordValidator.field_e[8]) {
             qs.a(-72);
           }
         }
@@ -299,12 +299,12 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final void m(int param0) {
         int var2 = 98 % ((-68 - param0) / 54);
-        fh.field_e[1] = true;
+        PasswordValidator.field_e[1] = true;
     }
 
     private final void g(int param0) {
         int var2 = 39 % ((-37 - param0) / 63);
-        fh.field_e[4] = true;
+        PasswordValidator.field_e[4] = true;
     }
 
     private final void k(int param0) {
@@ -316,7 +316,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + ArchiveRequest.field_s;
         byte[] var5 = new byte[var4];
         IntKeyLookup.incomingPacket.a(var5, var4, 0, false);
-        wc.a(ea.a(0, var5), bm.m(125), 14301, (var3));
+        wc.a(ea.a(0, var5), EditableTextField.m(125), 14301, (var3));
     }
 
     private final int j(int param0) {
@@ -342,7 +342,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.a(-103, "reconnect");
           }
           rc.c((byte) 124);
-          li.a(-2, var2, HardwareRenderSprite.field_m);
+          DebouncedFieldValidator.a(-2, var2, HardwareRenderSprite.field_m);
           BitmapFontMetrics.field_f = true;
           wg.field_b = kh.correctedCurrentTimeMillis(-76) + 15000L;
           return var2;
@@ -355,14 +355,14 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void a(int param0, boolean param1) {
-        fh.field_e[8] = param1;
-        fh.field_e[17] = true;
-        fh.field_e[0] = true;
-        fh.field_e[3] = true;
-        fh.field_e[18] = true;
+        PasswordValidator.field_e[8] = param1;
+        PasswordValidator.field_e[17] = true;
+        PasswordValidator.field_e[0] = true;
+        PasswordValidator.field_e[3] = true;
+        PasswordValidator.field_e[18] = true;
         if (param0 == -16342) {
-          fh.field_e[16] = true;
-          fh.field_e[7] = true;
+          PasswordValidator.field_e[16] = true;
+          PasswordValidator.field_e[7] = true;
           return;
         }
     }
@@ -427,7 +427,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.field_q = false;
             te.b(true);
             rc.c((byte) -110);
-            li.a(11, 2, oi.field_b);
+            DebouncedFieldValidator.a(11, 2, oi.field_b);
             np.b(34066);
             BitmapFontMetrics.field_f = true;
             wg.field_b = 15000L + kh.correctedCurrentTimeMillis(-105);
@@ -455,15 +455,15 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (SoundCache.field_d >= 10) {
               rc.c((byte) 122);
               if (RenderEffect.field_a == 3) {
-                li.a(122, 256, fh.field_f);
+                DebouncedFieldValidator.a(122, 256, PasswordValidator.field_f);
               } else if (RenderEffect.field_a == 4) {
-                li.a(6, 256, vi.field_n);
+                DebouncedFieldValidator.a(6, 256, vi.field_n);
               } else if (RenderEffect.field_a == 2) {
-                li.a(116, 256, Bullet.field_k);
+                DebouncedFieldValidator.a(116, 256, Bullet.field_k);
               } else if (RenderEffect.field_a == 5) {
-                li.a(-102, 5, ut.field_b);
+                DebouncedFieldValidator.a(-102, 5, ut.field_b);
               } else {
-                li.a(-71, 256, rt.field_g);
+                DebouncedFieldValidator.a(-71, 256, rt.field_g);
               }
               BitmapFontMetrics.field_f = true;
             }
@@ -566,7 +566,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (SectorCacheStore.field_c == 11) {
           if (null != fn.field_a && (!fn.field_a.ensureIndexLoaded((byte) -88) ||
             !fn.field_a.tryLoadAllGroups(0))) {
-            fh.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
+            PasswordValidator.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
             boolean decompiledFrameRemainder0 = false;
           }
           else {
@@ -583,7 +583,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (null != hg.field_y) {
             boolean stackIn_134_0 = !(!hg.field_y.a(-18738));
             var3Lifetime2 = stackIn_134_0;
-            fh.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
+            PasswordValidator.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
           }
           if (var3Lifetime2) {
             SectorCacheStore.field_c = 20;
@@ -595,7 +595,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           this.b(-14829);
           cd.a(ci.field_f, 37);
         }
-        if (fh.field_e[8]) {
+        if (PasswordValidator.field_e[8]) {
           GzipInflater.a(-114);
         }
     }
@@ -615,7 +615,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 56) {
           this.field_D = -65;
         }
-        fh.field_e[2] = true;
+        PasswordValidator.field_e[2] = true;
     }
 
     final void a(byte param0, boolean param1, boolean param2, boolean param3, boolean param4) {
@@ -642,14 +642,14 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var2 = qs.field_b;
         int var3 = -90 / ((param0 + 27) / 61);
         if (var2 < 64 &&
-          fh.field_e[var2]) {
+          PasswordValidator.field_e[var2]) {
           if (var2 == 0) {
             return;
           }
           if (var2 == 1) {
             ImageProducerCanvasImageBuffer.f(113);
           } else if (2 == var2) {
-            ce.decodeHighscoreResponse((byte) 116);
+            LoginPanel.decodeHighscoreResponse((byte) 116);
           } else if (var2 == 3) {
             InstrumentEnvelope.a(120);
           } else if (var2 == 4) {
@@ -707,7 +707,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -11) {
           int discarded$0 = this.j(-15);
         }
-        fh.field_e[5] = true;
+        PasswordValidator.field_e[5] = true;
     }
 
     protected NetworkGameClient() {

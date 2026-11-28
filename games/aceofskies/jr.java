@@ -166,7 +166,7 @@ final class jr extends DualLinkNode {
         }
         if (null != this.field_t) {
           for (int var2 = 0; var2 < this.field_t.length; var2++) {
-            this.field_t[var2] = vo.a(this.field_t[var2], 32768);
+            this.field_t[var2] = TextFieldValidator.a(this.field_t[var2], 32768);
           }
         }
     }

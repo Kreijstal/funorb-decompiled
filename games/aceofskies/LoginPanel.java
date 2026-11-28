@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends ab implements dr, dn {
+final class LoginPanel extends ab implements TextFieldListener, dn {
     static pt field_t;
-    private bm field_x;
+    private EditableTextField field_x;
     private boolean field_B;
     private mi field_D;
     static int field_u;
     private mi field_z;
     private boolean field_C;
-    private bm field_v;
+    private EditableTextField field_v;
     private mi field_w;
     private String field_y;
     private boolean field_E;
@@ -67,12 +67,12 @@ final class ce extends ab implements dr, dn {
 
     final void a(String param0, int param1) {
         try {
-          bm var3 = this.field_v;
+          EditableTextField var3 = this.field_v;
           String var4 = param0;
           var3.a(-20975, var4, false);
           if (param1 < 43) {
-            bm var5 = (bm) null;
-            this.b((bm) null, 39);
+            EditableTextField var5 = (EditableTextField) null;
+            this.onTextSubmitted((EditableTextField) null, 39);
           }
           this.field_x.f((byte) -2);
         } catch (RuntimeException runtimeException) {
@@ -84,7 +84,7 @@ final class ce extends ab implements dr, dn {
         this.field_v.f((byte) -2);
         this.field_x.f((byte) -2);
         if (param0 != 310) {
-          this.field_x = (bm) null;
+          this.field_x = (EditableTextField) null;
         }
     }
 
@@ -233,14 +233,14 @@ final class ce extends ab implements dr, dn {
         }
     }
 
-    public final void b(bm param0, int param1) {
+    public final void onTextSubmitted(EditableTextField param0, int param1) {
         String stackIn_11_2 = null;
         try {
           if (param0 == this.field_v) {
             this.field_x.a((ea) (this), (byte) -42);
           }
           if (this.field_x == param0) {
-            this.d((byte) -85);
+            this.submitLogin((byte) -85);
           }
           if (param1 != -40) {
             this.field_D = (mi) null;
@@ -267,14 +267,14 @@ final class ce extends ab implements dr, dn {
         return SpriteState.field_s;
     }
 
-    private final void d(byte param0) {
-        if (fh.e(31574) ||
+    private final void submitLogin(byte param0) {
+        if (PasswordValidator.e(31574) ||
           !(this.field_v.field_f.length() <= 0) &&
           !(0 >= this.field_x.field_f.length())) {
           s.a(this.field_x.field_f, false, this.field_v.field_f);
         }
         if (param0 > -59) {
-          this.d((byte) -4);
+          this.submitLogin((byte) -4);
         }
     }
 
@@ -283,7 +283,7 @@ final class ce extends ab implements dr, dn {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 == this.field_D) {
-            this.d((byte) -84);
+            this.submitLogin((byte) -84);
           } else if (param1 != this.field_w) {
             if (this.field_z != param1) {
               int var6_int = 122 % ((param4 + 27) / 61);
@@ -315,7 +315,7 @@ final class ce extends ab implements dr, dn {
         }
     }
 
-    public final void a(bm param0, int param1) {
+    public final void onTextChanged(EditableTextField param0, int param1) {
         try {
           if (param1 != -6525) {
             String var4 = (String) null;
@@ -326,7 +326,7 @@ final class ce extends ab implements dr, dn {
         }
     }
 
-    ce(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginPanel(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (ir) null);
         String stackIn_19_3 = null;
         String stackIn_60_2 = null;
@@ -343,8 +343,8 @@ final class ce extends ab implements dr, dn {
             this.field_E)) {
             throw new IllegalStateException();
           }
-          this.field_v = (bm) ((Object) new kk(param0, (no) (this), 100));
-          this.field_x = (bm) ((Object) new kk("", (no) (this), 20));
+          this.field_v = (EditableTextField) ((Object) new ValidatedTextField(param0, (no) (this), 100));
+          this.field_x = (EditableTextField) ((Object) new ValidatedTextField("", (no) (this), 20));
           if (!this.field_C) {
             this.field_D = new mi(ms.field_a, (no) null);
             mi stackIn_18_1 = null;
@@ -392,8 +392,8 @@ final class ce extends ab implements dr, dn {
           if (null != this.field_y) {
             this.field_h = this.field_h + (5 + var7.measureWrappedHeight(this.field_y, this.field_q - 40, var7.maxAscent));
           }
-          String var8 = kk.field_J;
-          gu var9 = IterableNodeHashTable.a(17123, bm.m(125));
+          String var8 = ValidatedTextField.field_J;
+          gu var9 = IterableNodeHashTable.a(17123, EditableTextField.m(125));
           if (ef.field_k == var9) {
             var8 = hu.field_b;
           } else if (lp.field_f == var9) {

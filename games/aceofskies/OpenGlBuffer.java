@@ -233,7 +233,7 @@ abstract class OpenGlBuffer implements HardwareBuffer {
     }
 
     final static void c(int param0) {
-        oj.a(param0 ^ 26099, bm.m(124));
+        oj.a(param0 ^ 26099, EditableTextField.m(124));
         if (param0 != 0) {
           short[] var2 = (short[]) null;
           OpenGlBuffer.a((CipherPacketBuffer) null, (short[]) null, 101, 22);
@@ -245,8 +245,8 @@ abstract class OpenGlBuffer implements HardwareBuffer {
           int var3_int = 117 % ((16 - param2) / 58);
           ae.field_f = param1 ? true : false;
           ss.field_t = true;
-          InstrumentPatch.field_m = new oo(vn.field_f, b.field_c, param0, nf.field_a, ae.field_f);
-          vn.field_f.a(InstrumentPatch.field_m, 0);
+          InstrumentPatch.field_m = new oo(AgeValidator.field_f, b.field_c, param0, nf.field_a, ae.field_f);
+          AgeValidator.field_f.a(InstrumentPatch.field_m, 0);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

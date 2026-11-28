@@ -75,7 +75,7 @@ final class OpenGlAssemblyProgram {
           throw new IllegalStateException();
         }
         nq.field_a = true;
-        ep.a(false, param0 ^ param0);
+        DisplayNameSelectionPanel.a(false, param0 ^ param0);
         SoundCache.field_d = 0;
     }
 

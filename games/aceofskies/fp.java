@@ -11,7 +11,7 @@ final class fp extends IntrusiveNode {
     final static boolean a(byte param0, boolean param1) {
         try {
           if (null == MenuInputState.field_b) {
-            MenuInputState.field_b = ii.field_j.requestDirectSocket(2, ca.field_g, sg.field_b);
+            MenuInputState.field_b = ConfirmedEmailAvailabilityValidator.field_j.requestDirectSocket(2, ca.field_g, sg.field_b);
           }
           if (MenuInputState.field_b.status == 0) {
             return false;
@@ -24,7 +24,7 @@ final class fp extends IntrusiveNode {
             ca.field_f = RasterBuffer.field_f;
           } else {
             try {
-              MidiNote.field_l = new BufferedSocket((java.net.Socket) (MenuInputState.field_b.result), ii.field_j);
+              MidiNote.field_l = new BufferedSocket((java.net.Socket) (MenuInputState.field_b.result), ConfirmedEmailAvailabilityValidator.field_j);
               CipherPacketBuffer var4 = IntKeyLookup.incomingPacket;
               q.outgoingPacket.position = 0;
               var4.position = 0;

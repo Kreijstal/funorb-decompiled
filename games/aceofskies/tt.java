@@ -27,10 +27,10 @@ final class tt {
             nn.a(var4, param0, (byte) 62);
             var4 = (ds) (cl.field_eb.next((byte) 103));
           }
-          IntrusiveNode var2 = ep.field_z.first(268435455);
+          IntrusiveNode var2 = DisplayNameSelectionPanel.field_z.first(268435455);
           while (var2 != null) {
             hn.a(0, param0);
-            var2 = ep.field_z.next((byte) 103);
+            var2 = DisplayNameSelectionPanel.field_z.next((byte) 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

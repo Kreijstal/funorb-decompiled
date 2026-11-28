@@ -926,7 +926,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param1 == DualLinkNode.field_m) {
           return 2;
         }
-        if (bm.field_x == param1) {
+        if (EditableTextField.field_x == param1) {
           return 3;
         }
         if (param1 == OpenGlShaderObject.field_g) {

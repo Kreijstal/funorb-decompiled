@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq extends vo {
-    pq(bm param0) {
+final class EmailFormatValidator extends TextFieldValidator {
+    EmailFormatValidator(EditableTextField param0) {
         super(param0);
     }
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         String stackIn_13_2 = null;
         try {
           boolean stackIn_3_0 = !(null != ai.validateEmailAddress(param0, (byte) 12));
@@ -17,7 +17,7 @@ final class pq extends vo {
           }
           if (param1 != 8192) {
             String var4 = (String) null;
-            this.a((String) null, (byte) 9);
+            this.getValidationMessage((String) null, (byte) 9);
           }
           pt stackIn_9_0 = fd.field_a;
           return stackIn_9_0;
@@ -35,10 +35,10 @@ final class pq extends vo {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_11_2 = null;
         try {
-          if (this.a(param0, param1 ^ 8264) == bt.field_a) {
+          if (this.getValidationStatus(param0, param1 ^ 8264) == bt.field_a) {
             String stackIn_2_0 = fd.field_e;
             return stackIn_2_0;
           }

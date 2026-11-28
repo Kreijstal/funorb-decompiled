@@ -232,7 +232,7 @@ final class MenuInputState {
             if (vu.heldMouseButton != 0) {
               if (0 == this.heldButton) {
                 if (!this.pointerSelection &&
-                  !uu.pointerMoved) {
+                  !MatchingFieldValidator.pointerMoved) {
                   return;
                 }
                 if (0 > hoveredItemIndex) {
@@ -255,7 +255,7 @@ final class MenuInputState {
             return;
           }
           if (!this.pointerSelection &&
-            !uu.pointerMoved) {
+            !MatchingFieldValidator.pointerMoved) {
             return;
           }
           if (0 > hoveredItemIndex) {
@@ -280,7 +280,7 @@ final class MenuInputState {
             return;
           }
           if (!this.pointerSelection &&
-            !uu.pointerMoved) {
+            !MatchingFieldValidator.pointerMoved) {
             return;
           }
           if (0 > hoveredItemIndex) {
@@ -306,7 +306,7 @@ final class MenuInputState {
             return;
           }
           if (!this.pointerSelection &&
-            !uu.pointerMoved) {
+            !MatchingFieldValidator.pointerMoved) {
             return;
           }
           if (0 > hoveredItemIndex) {
@@ -329,7 +329,7 @@ final class MenuInputState {
             return;
           }
           if (!this.pointerSelection &&
-            !uu.pointerMoved) {
+            !MatchingFieldValidator.pointerMoved) {
             return;
           }
           if (0 > hoveredItemIndex) {
@@ -350,7 +350,7 @@ final class MenuInputState {
         }
         if (0 == this.heldButton) {
           if (!this.pointerSelection &&
-            !uu.pointerMoved) {
+            !MatchingFieldValidator.pointerMoved) {
             return;
           }
           if (0 <= hoveredItemIndex) {

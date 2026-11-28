@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ep extends ab implements bh, dn {
+final class DisplayNameSelectionPanel extends ab implements bh, dn {
     private mi field_v;
     static IntrusiveDeque field_z;
     ek field_t;
-    private kk field_w;
+    private ValidatedTextField field_w;
     static int[] field_u;
     private mi field_y;
     static String field_x;
@@ -47,9 +47,9 @@ final class ep extends ab implements bh, dn {
         }
     }
 
-    public ep() {
+    public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (ir) null);
-        this.field_w = new kk("", (no) null, 12);
+        this.field_w = new ValidatedTextField("", (no) null, 12);
         qm var1 = new qm(oi.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
         ea var2 = new ea(ta.field_f, var1, (no) null);
         this.field_v = new mi(SmokeParticle.field_k, (no) null);
@@ -81,15 +81,15 @@ final class ep extends ab implements bh, dn {
 
     public final void a(byte param0) {
         if (param0 == -77) {
-          ((AccountNameAvailabilityValidator) (this.field_w.a(0))).e(-104);
+          ((AccountNameAvailabilityValidator) (this.field_w.getFieldValidator(0))).e(-104);
           return;
         }
-        boolean discarded$0 = this.h(-43);
-        ((AccountNameAvailabilityValidator) (this.field_w.a(0))).e(-104);
+        boolean discarded$0 = this.canSubmitDisplayName(-43);
+        ((AccountNameAvailabilityValidator) (this.field_w.getFieldValidator(0))).e(-104);
     }
 
-    private final void d(byte param0) {
-        if (!this.h(25)) {
+    private final void submitDisplayName(byte param0) {
+        if (!this.canSubmitDisplayName(25)) {
           return;
         }
         int var2 = 9 % ((param0 + 69) / 49);
@@ -103,7 +103,7 @@ final class ep extends ab implements bh, dn {
         try {
           bc var10 = new bc(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
           this.a(var10, param1 - 125);
-          kb var9 = new kb(((mc) ((Object) param3)).a(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
+          kb var9 = new kb(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
           var9.field_o = (no) (this);
           this.a(var9, 1);
           int stackIn_1_0 = var9.field_n + var10.field_n;
@@ -134,14 +134,14 @@ final class ep extends ab implements bh, dn {
         }
     }
 
-    private final boolean a(int param0, mc param1) {
+    private final boolean isFieldValid(int param0, FieldValidatorProvider param1) {
         String stackIn_11_2 = null;
         try {
-          sp var3 = param1.a(param0);
+          FieldValidator var3 = param1.getFieldValidator(param0);
           if (var3 == null) {
             return true;
           }
-          pt var4 = var3.b(true);
+          pt var4 = var3.getValidationStatus(true);
           boolean stackIn_7_0 = (var4 == fd.field_a);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -208,7 +208,7 @@ final class ep extends ab implements bh, dn {
             this.field_y = (mi) null;
           }
           super.a((byte) 103, param1, param2, param3);
-          this.field_v.field_u = this.h(25);
+          this.field_v.field_u = this.canSubmitDisplayName(25);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ep.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -217,13 +217,13 @@ final class ep extends ab implements bh, dn {
     public final void a(String param0, int param1) {
         String stackIn_6_2 = null;
         try {
-          kk var3 = this.field_w;
+          ValidatedTextField var3 = this.field_w;
           String var4 = param0;
-          ((bm) ((Object) var3)).a(-20975, var4, false);
+          ((EditableTextField) ((Object) var3)).a(-20975, var4, false);
           if (param1 == 10000536) {
             return;
           }
-          boolean discarded$1 = this.h(50);
+          boolean discarded$1 = this.canSubmitDisplayName(50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -239,15 +239,15 @@ final class ep extends ab implements bh, dn {
         }
     }
 
-    private final boolean h(int param0) {
+    private final boolean canSubmitDisplayName(int param0) {
         if (param0 != 25) {
           field_z = (IntrusiveDeque) null;
-          if (this.a(0, (mc) (this.field_w))) {
+          if (this.isFieldValid(0, (FieldValidatorProvider) (this.field_w))) {
             return true;
           }
           return false;
         }
-        if (this.a(0, (mc) (this.field_w))) {
+        if (this.isFieldValid(0, (FieldValidatorProvider) (this.field_w))) {
           return true;
         }
         return false;
@@ -258,7 +258,7 @@ final class ep extends ab implements bh, dn {
           if (param1 == this.field_y) {
             OpenGlBuffer.e(4754);
           } else if (this.field_v == param1) {
-            this.d((byte) -128);
+            this.submitDisplayName((byte) -128);
           }
           int var6_int = 96 % ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {

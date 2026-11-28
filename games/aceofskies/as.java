@@ -56,8 +56,8 @@ final class as {
     }
 
     final static void a(int param0) {
-        if (null != vn.field_f) {
-          vn.field_f.j(0);
+        if (null != AgeValidator.field_f) {
+          AgeValidator.field_f.j(0);
         }
         int var1 = -41 % ((param0 + 56) / 53);
         if (null != fu.field_d) {

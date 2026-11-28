@@ -51,7 +51,7 @@ final class StrongCacheReference extends CacheReference {
         if (ks.field_b) {
           int var1 = 71 % ((param0 + 64) / 57);
           nq.field_a = true;
-          ep.a(true, 0);
+          DisplayNameSelectionPanel.a(true, 0);
           SoundCache.field_d = 0;
           return;
         }

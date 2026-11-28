@@ -52,7 +52,7 @@ abstract class hh {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ce.field_u = param1;
+        LoginPanel.field_u = param1;
         if (param2 < -52) {
           ke.field_b = param3;
           FrameTimer.field_b = param4;
@@ -94,8 +94,8 @@ abstract class hh {
           hi.field_x = param1;
           ah.field_s = param0;
           ul.field_r = (ArchiveNetworkClient) ((Object) new SocketArchiveNetworkClient());
-          ii.field_m = new DiskCacheWorker(param5);
-          om.field_c = new wq(ul.field_r, ii.field_m);
+          ConfirmedEmailAvailabilityValidator.field_m = new DiskCacheWorker(param5);
+          om.field_c = new wq(ul.field_r, ConfirmedEmailAvailabilityValidator.field_m);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "hh.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

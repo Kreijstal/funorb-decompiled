@@ -119,7 +119,7 @@ final class eg {
                   int var25Lifetime1Lifetime1 = param0.field_p[var24Lifetime1];
                   int var26Lifetime1Lifetime1 = param0.field_k[var24Lifetime1];
                   int var27Lifetime1Lifetime1 = param0.field_o[var24Lifetime1];
-                  ep.field_u[var24Lifetime1] = var9 + (var18 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var15 + var12 * var25Lifetime1Lifetime1) >> 16);
+                  DisplayNameSelectionPanel.field_u[var24Lifetime1] = var9 + (var18 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var15 + var12 * var25Lifetime1Lifetime1) >> 16);
                   rs.field_B[var24Lifetime1] = var10 + (var19 * var27Lifetime1Lifetime1 + var13 * var25Lifetime1Lifetime1 + var16 * var26Lifetime1Lifetime1 >> 16);
                   pf.field_A[var24Lifetime1] = (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param0.field_Q[var24Lifetime1];
@@ -127,7 +127,7 @@ final class eg {
                   var27Lifetime1Lifetime1 = param0.field_j[var24Lifetime1];
                   ec.field_m[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + (var15 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var12) >> 16) + var9;
                   DiskCacheWorker.field_g[var24Lifetime1] = (var27Lifetime1Lifetime1 * var19 + (var26Lifetime1Lifetime1 * var16 + var25Lifetime1Lifetime1 * var13) >> 16) + var10;
-                  vo.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var20 * var27Lifetime1Lifetime1 >> 16) + var11;
+                  TextFieldValidator.field_d[var24Lifetime1] = (var25Lifetime1Lifetime1 * var14 + var17 * var26Lifetime1Lifetime1 + var20 * var27Lifetime1Lifetime1 >> 16) + var11;
                   var25Lifetime1Lifetime1 = param0.field_i[var24Lifetime1];
                   var26Lifetime1Lifetime1 = param0.field_M[var24Lifetime1];
                   var27Lifetime1Lifetime1 = param0.field_a[var24Lifetime1];

@@ -94,7 +94,7 @@ final class s {
 
     s(boolean param0) {
         this.field_c = NodeHashTableIterator.field_g;
-        this.field_j = ep.field_x;
+        this.field_j = DisplayNameSelectionPanel.field_x;
         this.field_g = tn.field_t;
         this.field_a = CrossfadingMidiPcmStream.field_t;
         this.field_f = m.field_f;

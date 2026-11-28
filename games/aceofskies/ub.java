@@ -14,7 +14,7 @@ final class ub extends IntrusiveNode {
           if (null != InstrumentPatch.field_m) {
             InstrumentPatch.field_m.h((byte) -31);
           }
-          vr.field_b = new ce(param0, param1, false, true, true);
+          vr.field_b = new LoginPanel(param0, param1, false, true, true);
           if (param2 >= -82) {
             basePlayerDefinition = (AircraftDefinition) null;
           }
@@ -85,7 +85,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "error_js5crc");
                 if (null != var2) {
-                  fh.field_f = ea.a(0, var2);
+                  PasswordValidator.field_f = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "error_js5io");
                 if (var2 != null) {
@@ -1080,7 +1080,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "changedisplayname");
                 if (var2 != null) {
-                  vn.field_g = ea.a(0, var2);
+                  AgeValidator.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "returntohomepage");
                 if (var2 != null) {
@@ -1266,7 +1266,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "checking");
                 if (null != var2) {
-                  uu.field_g = ea.a(0, var2);
+                  MatchingFieldValidator.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_namealreadytaken");
                 if (var2 != null) {
@@ -1502,7 +1502,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "login_username_email");
                 if (null != var2) {
-                  kk.field_J = ea.a(0, var2);
+                  ValidatedTextField.field_J = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "login_username");
                 if (var2 != null) {
@@ -1570,7 +1570,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_email_tooltip");
                 if (null != var2) {
-                  vn.field_e = ea.a(0, var2);
+                  AgeValidator.field_e = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_email_confirm_tooltip");
                 if (var2 != null) {
@@ -1578,7 +1578,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_age_tooltip");
                 if (null != var2) {
-                  uu.field_h = ea.a(0, var2);
+                  MatchingFieldValidator.field_h = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_optin_news_tooltip");
                 if (null != var2) {
@@ -1634,7 +1634,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_alert_passchars");
                 if (var2 != null) {
-                  ii.field_g = ea.a(0, var2);
+                  ConfirmedEmailAvailabilityValidator.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_alert_passrepeated");
                 if (var2 != null) {
@@ -2692,7 +2692,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "fs_accept_aftercancel");
                 if (var2 != null) {
-                  li.field_b = ea.a(0, var2);
+                  DebouncedFieldValidator.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fs_accept_countdown_sing");
                 if (null != var2) {
@@ -2876,31 +2876,31 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "mustlogin2,1");
                 if (var2 != null) {
-                  wd.field_G[1] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,2");
                 if (var2 != null) {
-                  wd.field_G[2] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[2] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,3");
                 if (null != var2) {
-                  wd.field_G[3] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[3] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,4");
                 if (var2 != null) {
-                  wd.field_G[4] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[4] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,5");
                 if (null != var2) {
-                  wd.field_G[5] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[5] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,6");
                 if (var2 != null) {
-                  wd.field_G[6] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[6] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin2,7");
                 if (var2 != null) {
-                  wd.field_G[7] = ea.a(0, var2);
+                  AccountRegistrationPanel.field_G[7] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,1");
                 if (null != var2) {

@@ -168,7 +168,7 @@ final class sa {
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(param1 ^ -63, 4).a((byte) -50, true).a(var5, false);
-          var4.a(-99, 5).a(ce.b(0, 65793, -29003, 0, 0), false).a((byte) -50, true).a(-1, param1 - 5);
+          var4.a(-99, 5).a(LoginPanel.b(0, 65793, -29003, 0, 0), false).a((byte) -50, true).a(-1, param1 - 5);
           this.field_c = (ir) ((Object) var4);
           vi var6 = new vi(var4, true);
           var6.field_e = 0;

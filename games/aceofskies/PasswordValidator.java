@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh extends vo {
+final class PasswordValidator extends TextFieldValidator {
     static String field_f;
-    private bm field_i;
-    private bm field_h;
+    private EditableTextField field_i;
+    private EditableTextField field_h;
     static String field_g;
     static boolean[] field_e;
 
@@ -92,7 +92,7 @@ final class fh extends vo {
         field_g = null;
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_39_2 = null;
         try {
           String var6 = this.field_i.field_f.toLowerCase();
@@ -111,7 +111,7 @@ final class fh extends vo {
             return stackIn_9_0;
           }
           if (ul.a(var5, (byte) -115)) {
-            String stackIn_12_0 = ii.field_g;
+            String stackIn_12_0 = ConfirmedEmailAvailabilityValidator.field_g;
             return stackIn_12_0;
           }
           if (Vector2.a(var5, 26035)) {
@@ -154,7 +154,7 @@ final class fh extends vo {
         }
     }
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         String stackIn_18_2 = null;
         try {
           if (param1 != 8192) {
@@ -191,7 +191,7 @@ final class fh extends vo {
         }
     }
 
-    fh(bm param0, bm param1, bm param2) {
+    PasswordValidator(EditableTextField param0, EditableTextField param1, EditableTextField param2) {
         super(param0);
         try {
           this.field_i = param1;

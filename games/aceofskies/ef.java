@@ -48,7 +48,7 @@ final class ef {
           if (param0 <= 93) {
             field_k = (gu) null;
           }
-          bm.field_I = param1;
+          EditableTextField.field_I = param1;
           if (rr.field_b.startsWith("win")) {
             SectorCacheStore.field_g = SectorCacheStore.field_g + "windows/";
           } else if (rr.field_b.startsWith("linux")) {
@@ -56,7 +56,7 @@ final class ef {
           } else if (rr.field_b.startsWith("mac")) {
             SectorCacheStore.field_g = SectorCacheStore.field_g + "macos/";
           }
-          if (bm.field_I.microsoftJvm) {
+          if (EditableTextField.field_I.microsoftJvm) {
             SectorCacheStore.field_g = SectorCacheStore.field_g + "msjava/";
           } else {
             if (!rr.field_a.startsWith("amd64") &&

@@ -199,7 +199,7 @@ final class FlightSession {
                   var9 = stackIn_104_0;
                   var9 = (-var3_int + 256) * var9 >> 8;
                   if (var9 > 0) {
-                    PacketBuffer.gameFont.drawText(16777215 | var9 << 24, -1, var5 + 55, ii.field_e[var7], obfuscationGuard ^ -1573, 24 + var6);
+                    PacketBuffer.gameFont.drawText(16777215 | var9 << 24, -1, var5 + 55, ConfirmedEmailAvailabilityValidator.field_e[var7], obfuscationGuard ^ -1573, 24 + var6);
                   }
                 }
                 var6 += 38;
@@ -236,18 +236,18 @@ final class FlightSession {
                   var4_int = var3_int * 80 >> 8;
                   var8 = NetworkArchiveRequest.field_w - 150;
                   var7 = -25 + (sh.field_u + var4_int);
-                  ii.gaugeSprites[1][2].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[1][2].draw(var7, var8);
                   var5_ref_bo.pushClip(var7 + 20, var7, 124 + var8, -this.displayedWeaponHeat + var8 + 104, 82);
-                  ii.gaugeSprites[1][1].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[1][1].draw(var7, var8);
                   var5_ref_bo.popRenderState(true);
-                  ii.gaugeSprites[1][0].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[1][0].draw(var7, var8);
                   var7 = var4_int + (sh.field_u - 50);
                   var8 = -150 + NetworkArchiveRequest.field_w;
-                  ii.gaugeSprites[0][2].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[0][2].draw(var7, var8);
                   var5_ref_bo.pushClip(var7 + 20, var7, var8 + 124, -this.displayedHealthPercent + var8 + 101, -92);
-                  ii.gaugeSprites[0][1].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[0][1].draw(var7, var8);
                   var5_ref_bo.popRenderState(true);
-                  ii.gaugeSprites[0][0].draw(var7, var8);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[0][0].draw(var7, var8);
                   break;
                 }
                 this.playerAircraft.definition.getSprites(-32275)[4].drawScaledPlain(var7, var8, 20, 20);
@@ -259,11 +259,11 @@ final class FlightSession {
                 if (!(var9 < BufferedRandomAccessFile.playerDefinition.maximumHitPoints)) {
                   var7 = var4_int + (-80 + sh.field_u);
                   var8 = -151 + NetworkArchiveRequest.field_w;
-                  ii.gaugeSprites[2][3].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[2][3].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
                   var5_ref_bo.pushClip(30 + var7, var7, 135 + var8, -this.displayedTemporaryWeaponTicks + (103 + var8), obfuscationGuard + 20115);
-                  ii.gaugeSprites[2][2].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[2][2].drawBlended(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
                   var5_ref_bo.popRenderState(true);
-                  ii.gaugeSprites[2][1].drawBlended(var7, var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
+                  ConfirmedEmailAvailabilityValidator.gaugeSprites[2][1].drawBlended(var7, var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
                   var9 = (int)((1.0 + Math.sin((double)this.simulationTick * 3.141592653589793 / 20.0)) * (double)this.temporaryWeaponOpacity / 2.0);
                   break;
                 }
@@ -279,7 +279,7 @@ final class FlightSession {
               int stackIn_135_4 = 103 + var8 - this.displayedTemporaryWeaponTicks;
               int stackIn_136_5 = (this.displayedTemporaryWeaponTicks >= 99) ? 50 : 0;
               ((RenderStateStack) (Object) stackIn_135_0).pushClip(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_135_4 - stackIn_136_5, 100);
-              ii.gaugeSprites[2][0].drawBlended(var7, var8, 0, 16843009 * var9, 2);
+              ConfirmedEmailAvailabilityValidator.gaugeSprites[2][0].drawBlended(var7, var8, 0, 16843009 * var9, 2);
               var5_ref_bo.popRenderState(true);
               if (this.displayedTemporaryWeaponType > 0) {
                 po.powerIconSprites[-1 + this.displayedTemporaryWeaponType].drawBlended(var7 + 7, 104 + var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
@@ -816,7 +816,7 @@ final class FlightSession {
           this.arcadeMode = arcadeMode;
           to.lastScoreSubmission = null;
           this.simulationTick = 0;
-          wd.hudMessages.clear(268435455);
+          AccountRegistrationPanel.hudMessages.clear(268435455);
           if (obfuscationGuard <= 59) {
             return;
           }
@@ -1452,7 +1452,7 @@ final class FlightSession {
               if (70 == bk.lastKeyCode) {
                 this.upgradeCredits = 400;
                 tt.field_a = true;
-                wd.hudMessages.clear(268435455);
+                AccountRegistrationPanel.hudMessages.clear(268435455);
                 int var2_int = -1;
                 while (var2_int < 8) {
                   MenuScreen.field_g.addLast(95, new iq(var2_int));
@@ -1632,7 +1632,7 @@ final class FlightSession {
                 this.displayedTemporaryWeaponType = var4.pickupCode + 1;
                 this.playerAircraft.temporaryWeaponTicks = 100;
                 this.playerAircraft.temporaryWeapon = 1 + var4.pickupCode;
-                bm.a((byte) -70, uh.upgradeSounds[1]);
+                EditableTextField.a((byte) -70, uh.upgradeSounds[1]);
                 this.queueTimedHudMessage(50, (byte) -127, -16711681, ke.field_c[var4.pickupCode]);
                 int incrementValue$3 = var3_int;
                 var3_int--;
@@ -1658,7 +1658,7 @@ final class FlightSession {
     private final void queueTimedHudMessage(int holdTicks, byte obfuscationGuard, int colour, String text) {
         String stackIn_7_2 = null;
         try {
-          wd.hudMessages.addLast(82, new HudMessage(text, colour, holdTicks));
+          AccountRegistrationPanel.hudMessages.addLast(82, new HudMessage(text, colour, holdTicks));
           if (obfuscationGuard > -34) {
             this.emitScorchMark(-63, -32, -115, -32);
           }
@@ -2166,11 +2166,11 @@ final class FlightSession {
                           if (40 > var4) {
                             int discarded$5 = this.spawnAircraft((byte) 56, sl.field_p, 1, 0);
                             if (obfuscationControl) {
-                              discarded$6 = this.spawnAircraft((byte) 85, kk.field_N, 1, 0);
+                              discarded$6 = this.spawnAircraft((byte) 85, ValidatedTextField.field_N, 1, 0);
                               discarded$7 = this.spawnAircraft((byte) 13, qq.field_g, 1, 0);
                             }
                           } else {
-                            discarded$6 = this.spawnAircraft((byte) 85, kk.field_N, 1, 0);
+                            discarded$6 = this.spawnAircraft((byte) 85, ValidatedTextField.field_N, 1, 0);
                             if (obfuscationControl) {
                               discarded$7 = this.spawnAircraft((byte) 13, qq.field_g, 1, 0);
                             }
@@ -2561,7 +2561,7 @@ final class FlightSession {
                   aircraft.weaponHeat = 200;
                   if (this.playerAircraft == aircraft &&
                     !this.attractMode) {
-                    bm.a((byte) -70, OpenGlVolumeTexture.field_o);
+                    EditableTextField.a((byte) -70, OpenGlVolumeTexture.field_o);
                     if (var5) {
                       this.fireBullets((byte) 60, aircraft);
                       aircraft.fireCooldown = aircraft.fireCooldown + 2;
@@ -2580,7 +2580,7 @@ final class FlightSession {
             0 < aircraft.temporaryWeapon) {
             if (aircraft.temporaryWeapon == 3) {
               aircraft.weaponHeat = 200;
-              bm.a((byte) -70, OpenGlVolumeTexture.field_o);
+              EditableTextField.a((byte) -70, OpenGlVolumeTexture.field_o);
             }
             aircraft.temporaryWeapon = 0;
             aircraft.temporaryWeaponTicks = 0;
@@ -2948,7 +2948,7 @@ final class FlightSession {
                   decompiledFrameRemainder0 = ((var18));
                 }
                 if (decompiledFrameRemainder0) {
-                  if (kk.field_N == var9_ref_md.definition) {
+                  if (ValidatedTextField.field_N == var9_ref_md.definition) {
                     var15 = 16711680 | var12 << 24;
                     if (var18) {
                       var15 = -16711936;
@@ -3222,7 +3222,7 @@ final class FlightSession {
             }
           }
           if (decompiledFrameCompleted0) {
-            bm.a((byte) -70, uh.upgradeSounds[upgradeCode]);
+            EditableTextField.a((byte) -70, uh.upgradeSounds[upgradeCode]);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3722,7 +3722,7 @@ final class FlightSession {
           int selectedType = typeIndex;
           if (selectedType == 0 &&
             !obfuscationControl) {
-            AircraftDefinition stackIn_32_0 = kk.field_N;
+            AircraftDefinition stackIn_32_0 = ValidatedTextField.field_N;
             return stackIn_32_0;
           }
           if (selectedType == 1) {
@@ -3747,7 +3747,7 @@ final class FlightSession {
             AircraftDefinition stackIn_42_0 = OpenGlIndexBuffer.field_u;
             return stackIn_42_0;
           }
-          AircraftDefinition stackIn_44_0 = kk.field_N;
+          AircraftDefinition stackIn_44_0 = ValidatedTextField.field_N;
           return stackIn_44_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException failure = decompiledCaughtParameter0;
@@ -3762,7 +3762,7 @@ final class FlightSession {
           this.drawWorld(-132670633);
           this.drawHud(renderer, -20240);
           if (!this.attractMode) {
-            HudMessage var4 = (HudMessage) (wd.hudMessages.first(obfuscationGuard ^ -251723521));
+            HudMessage var4 = (HudMessage) (AccountRegistrationPanel.hudMessages.first(obfuscationGuard ^ -251723521));
             while (var4 != null) {
               if (var5) {
                 return;
@@ -3770,7 +3770,7 @@ final class FlightSession {
               if (var4 != null) {
                 var4.draw(obfuscationGuard ^ 16711886);
               }
-              var4 = (HudMessage) (wd.hudMessages.next((byte) 103));
+              var4 = (HudMessage) (AccountRegistrationPanel.hudMessages.next((byte) 103));
             }
           }
           if (obfuscationGuard != -16711936) {
@@ -3842,7 +3842,7 @@ final class FlightSession {
     private final void queueHudMessage(int colour, byte obfuscationGuard, String text) {
         String stackIn_6_2 = null;
         try {
-          wd.hudMessages.addLast(120, new HudMessage(text, colour));
+          AccountRegistrationPanel.hudMessages.addLast(120, new HudMessage(text, colour));
           int var4_int = 105 % ((obfuscationGuard - 70) / 46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3861,7 +3861,7 @@ final class FlightSession {
 
     private final void startAttractMode(byte obfuscationGuard) {
         try {
-          wd.hudMessages.clear(268435455);
+          AccountRegistrationPanel.hudMessages.clear(268435455);
           BufferedRandomAccessFile.playerDefinition.fireInterval = ub.basePlayerDefinition.fireInterval;
           this.paused = false;
           BufferedRandomAccessFile.playerDefinition.maximumHitPoints = ub.basePlayerDefinition.maximumHitPoints;
@@ -3957,7 +3957,7 @@ final class FlightSession {
             remainingPickupBudget = this.spawnAircraft((byte) -125, sl.field_p, waveComposition[1], remainingPickupBudget);
           }
           if (waveComposition[0] > 0) {
-            remainingPickupBudget = this.spawnAircraft((byte) 127, kk.field_N, waveComposition[0], remainingPickupBudget);
+            remainingPickupBudget = this.spawnAircraft((byte) 127, ValidatedTextField.field_N, waveComposition[0], remainingPickupBudget);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4061,7 +4061,7 @@ final class FlightSession {
           if (this.simulationTick % 40 == 0) {
             this.sampledUpgradeCredits = this.upgradeCredits;
           }
-          HudMessage var2 = (HudMessage) (wd.hudMessages.first(268435455));
+          HudMessage var2 = (HudMessage) (AccountRegistrationPanel.hudMessages.first(268435455));
           scanLoop2: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var2 != null) {
@@ -4077,7 +4077,7 @@ final class FlightSession {
                 var2.unlink(-127);
               }
               if (decompiledFrameRemainder0) {
-                var2 = (HudMessage) (wd.hudMessages.next((byte) 103));
+                var2 = (HudMessage) (AccountRegistrationPanel.hudMessages.next((byte) 103));
                 continue;
               }
             }

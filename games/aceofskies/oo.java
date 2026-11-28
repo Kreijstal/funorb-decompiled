@@ -33,7 +33,7 @@ class oo extends dg implements dn {
         try {
           int var6_int = 80 % ((param4 + 27) / 61);
           if (!this.field_X) {
-            vi.a((byte) 103, "tochangedisplayname.ws", bm.m(125));
+            vi.a((byte) 103, "tochangedisplayname.ws", EditableTextField.m(125));
             return;
           }
           oi.a(3, 20665);
@@ -157,7 +157,7 @@ class oo extends dg implements dn {
           } else if (param1 == 6) {
             var7.a(9, (byte) -124, ao.field_d);
           } else if (param1 == 9) {
-            var7.a((no) (this), 17547, vn.field_g);
+            var7.a((no) (this), 17547, AgeValidator.field_g);
           }
           this.d(var7, -30244);
           return;

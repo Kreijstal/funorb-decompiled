@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ii extends vo {
+final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     private String field_f;
     static RenderSprite[][] gaugeSprites;
     static String[] field_e;
-    private uu field_h;
+    private MatchingFieldValidator field_h;
     static DiskCacheWorker field_m;
     private boolean field_i;
     static SystemTaskService field_j;
     static String field_l;
     static String field_g;
 
-    ii(bm param0, bm param1) {
+    ConfirmedEmailAvailabilityValidator(EditableTextField param0, EditableTextField param1) {
         super(param0);
         this.field_f = "";
         this.field_i = false;
         try {
-          this.field_h = new uu(param0, param1);
+          this.field_h = new MatchingFieldValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "ii.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -75,17 +75,17 @@ final class ii extends vo {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_13_2 = null;
         try {
-          if (this.field_h.a(param0, 8192) == bt.field_a) {
-            String stackIn_2_0 = this.field_h.a(param0, (byte) 72);
+          if (this.field_h.getValidationStatus(param0, 8192) == bt.field_a) {
+            String stackIn_2_0 = this.field_h.getValidationMessage(param0, (byte) 72);
             return stackIn_2_0;
           }
           if (param1 != 72) {
             this.field_i = true;
           }
-          if (this.a(param0, 8192) != bt.field_a) {
+          if (this.getValidationStatus(param0, 8192) != bt.field_a) {
             String stackIn_9_0 = BufferedRandomAccessFile.field_o;
             return stackIn_9_0;
           }
@@ -105,18 +105,18 @@ final class ii extends vo {
         }
     }
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         pt stackIn_13_0 = null;
         String stackIn_17_2 = null;
         try {
-          if (this.field_h.a(param0, param1 ^ 0) == bt.field_a) {
+          if (this.field_h.getValidationStatus(param0, param1 ^ 0) == bt.field_a) {
             pt stackIn_2_0 = bt.field_a;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_f)) {
             id var3 = MouseInputHandler.a(-111, param0);
             if (!var3.a(false)) {
-              pt stackIn_6_0 = ce.field_t;
+              pt stackIn_6_0 = LoginPanel.field_t;
               return stackIn_6_0;
             }
             this.field_f = param0;
@@ -124,7 +124,7 @@ final class ii extends vo {
           }
           if (param1 != 8192) {
             String var4 = (String) null;
-            this.a((String) null, (byte) 79);
+            this.getValidationMessage((String) null, (byte) 79);
           }
           if (this.field_i) {
             stackIn_13_0 = fd.field_a;

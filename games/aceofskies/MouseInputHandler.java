@@ -33,7 +33,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
             te.b(true);
           } else {
-            te var3_ref_te = (te) (ep.field_z.first(268435455));
+            te var3_ref_te = (te) (DisplayNameSelectionPanel.field_z.first(268435455));
             if (var3_ref_te == null) {
               te.b(true);
               return;

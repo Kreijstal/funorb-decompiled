@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends ab implements ue, dn, bh {
-    private kk field_E;
-    private kk field_u;
+final class AccountRegistrationPanel extends ab implements ue, dn, bh {
+    private ValidatedTextField field_E;
+    private ValidatedTextField field_u;
     private vq field_C;
     ek field_B;
-    private kk field_x;
-    private kk field_F;
+    private ValidatedTextField field_x;
+    private ValidatedTextField field_F;
     static IntrusiveDeque hudMessages;
-    private kk field_D;
+    private ValidatedTextField field_D;
     static String[] field_G;
     private sq field_z;
-    private kk field_y;
+    private ValidatedTextField field_y;
     private mi field_A;
     private mi field_w;
     static Sprite field_v;
@@ -22,7 +22,7 @@ final class wd extends ab implements ue, dn, bh {
           if (param1 == this.field_w) {
             RasterBuffer.b((byte) -26);
           } else if (this.field_A == param1) {
-            boolean discarded$0 = this.k(90);
+            boolean discarded$0 = this.submitRegistration(90);
           }
           int var6_int = 97 / ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {
@@ -66,16 +66,16 @@ final class wd extends ab implements ue, dn, bh {
             mi var5 = (mi) null;
             this.a(-60, (mi) null, -13, 100, (byte) -81);
           }
-          kk var3 = this.field_D;
+          ValidatedTextField var3 = this.field_D;
           String var4 = param0;
-          ((bm) ((Object) var3)).a(param1 ^ -10013047, var4, false);
+          ((EditableTextField) ((Object) var3)).a(param1 ^ -10013047, var4, false);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wd.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final boolean k(int param0) {
-        if (!this.g(-105)) {
+    private final boolean submitRegistration(int param0) {
+        if (!this.canSubmitRegistration(-105)) {
           return false;
         }
         int var2 = -1;
@@ -90,9 +90,9 @@ final class wd extends ab implements ue, dn, bh {
     final void a(byte param0, ea param1, int param2, int param3) {
         try {
           super.a((byte) 79, param1, param2, param3);
-          this.field_A.field_u = this.g(56);
+          this.field_A.field_u = this.canSubmitRegistration(56);
           if (param0 < 13) {
-            wd.h(-67);
+            AccountRegistrationPanel.h(-67);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "wd.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -109,7 +109,7 @@ final class wd extends ab implements ue, dn, bh {
           if (param3 != -100) {
             field_G = (String[]) null;
           }
-          kb var9 = new kb(((mc) ((Object) param2)).a(0), param0, 126, var10.field_n + param1, 50 + param4, param5);
+          kb var9 = new kb(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(0), param0, 126, var10.field_n + param1, 50 + param4, param5);
           var9.field_o = (no) (this);
           this.a(var9, 1);
           int stackIn_3_0 = var9.field_n + var10.field_n;
@@ -146,7 +146,7 @@ final class wd extends ab implements ue, dn, bh {
         String stackIn_13_2 = null;
         try {
           if (param4 != -2791) {
-            this.field_D = (kk) null;
+            this.field_D = (ValidatedTextField) null;
           }
           int stackIn_3_0 = this.a(param3, param1, param2, (byte) -100, param5, 35, param0);
           return stackIn_3_0;
@@ -217,7 +217,7 @@ final class wd extends ab implements ue, dn, bh {
     }
 
     public final void a(byte param0) {
-        ((AccountNameAvailabilityValidator) (this.field_D.a(0))).e(param0 ^ 48);
+        ((AccountNameAvailabilityValidator) (this.field_D.getFieldValidator(0))).e(param0 ^ 48);
         if (param0 != -77) {
           String var3 = (String) null;
           this.a((String) null, 30);
@@ -229,54 +229,54 @@ final class wd extends ab implements ue, dn, bh {
         return "</col></u>";
     }
 
-    private final boolean g(int param0) {
+    private final boolean canSubmitRegistration(int param0) {
         int var2 = -112 % ((-53 - param0) / 52);
-        if (!this.a((mc) (this.field_D), -120)) {
+        if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_D), -120)) {
           return false;
         }
-        if (!this.a((mc) (this.field_E), -121)) {
+        if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_E), -121)) {
           return false;
         }
-        if (!this.a((mc) (this.field_u), -120)) {
+        if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_u), -120)) {
           return false;
         }
-        if (!this.a((mc) (this.field_y), -121)) {
+        if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_y), -121)) {
           return false;
         }
-        if (!this.a((mc) (this.field_F), -102)) {
+        if (!this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_F), -102)) {
           return false;
         }
-        if (this.a((mc) (this.field_x), -117)) {
+        if (this.isFieldReadyForRegistration((FieldValidatorProvider) (this.field_x), -117)) {
           return true;
         }
         return false;
     }
 
-    public wd() {
+    public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (ir) null);
-        this.field_D = new kk("", (no) null, 12);
-        this.field_E = new kk("", (no) null, 100);
-        this.field_u = new kk("", (no) null, 100);
-        this.field_y = new kk("", (no) null, 20);
-        this.field_F = new kk("", (no) null, 20);
-        this.field_x = new kk("", (no) null, 3);
+        this.field_D = new ValidatedTextField("", (no) null, 12);
+        this.field_E = new ValidatedTextField("", (no) null, 100);
+        this.field_u = new ValidatedTextField("", (no) null, 100);
+        this.field_y = new ValidatedTextField("", (no) null, 20);
+        this.field_F = new ValidatedTextField("", (no) null, 20);
+        this.field_x = new ValidatedTextField("", (no) null, 3);
         boolean var1 = true;
         this.field_z = new sq("", (no) null, (var1));
         this.field_A = new mi(mg.field_a, (no) null);
         this.field_w = new mi(Aircraft.field_s, (no) null);
         this.field_D.field_k = ht.field_e;
-        this.field_E.field_k = vn.field_e;
+        this.field_E.field_k = AgeValidator.field_e;
         this.field_u.field_k = ol.field_f;
         this.field_y.field_k = ln.field_b;
         this.field_F.field_k = nc.field_b;
-        this.field_x.field_k = uu.field_h;
+        this.field_x.field_k = MatchingFieldValidator.field_h;
         this.field_z.field_k = ai.field_b;
         this.field_D.a(new AccountNameAvailabilityValidator(this.field_D), 1472);
-        this.field_E.a(new pq(this.field_E), 1472);
-        this.field_u.a(new ii(this.field_u, this.field_E), 1472);
-        this.field_y.a(new fh(this.field_y, this.field_D, this.field_E), 1472);
-        this.field_F.a(new uu(this.field_F, this.field_y), 1472);
-        this.field_x.a(new vn(this.field_x), 1472);
+        this.field_E.a(new EmailFormatValidator(this.field_E), 1472);
+        this.field_u.a(new ConfirmedEmailAvailabilityValidator(this.field_u, this.field_E), 1472);
+        this.field_y.a(new PasswordValidator(this.field_y, this.field_D, this.field_E), 1472);
+        this.field_F.a(new MatchingFieldValidator(this.field_F, this.field_y), 1472);
+        this.field_x.a(new AgeValidator(this.field_x), 1472);
         this.field_A.field_u = false;
         this.field_A.field_e = (ir) ((Object) new qb());
         this.field_w.field_e = (ir) ((Object) new wg());
@@ -344,17 +344,17 @@ final class wd extends ab implements ue, dn, bh {
         }
     }
 
-    private final boolean a(mc param0, int param1) {
+    private final boolean isFieldReadyForRegistration(FieldValidatorProvider param0, int param1) {
         String stackIn_20_2 = null;
         try {
           if (param1 >= -98) {
             this.field_B = (ek) null;
           }
-          sp var3 = param0.a(0);
+          FieldValidator var3 = param0.getFieldValidator(0);
           if (var3 == null) {
             return true;
           }
-          pt var4 = var3.b(true);
+          pt var4 = var3.getValidationStatus(true);
           if (bt.field_a == var4) {
             return false;
           }
@@ -420,7 +420,7 @@ final class wd extends ab implements ue, dn, bh {
           field_v = null;
           return;
         }
-        wd.reverseLowBits(53, -86, -124);
+        AccountRegistrationPanel.reverseLowBits(53, -86, -124);
         field_G = null;
         hudMessages = null;
         field_v = null;
@@ -432,7 +432,7 @@ final class wd extends ab implements ue, dn, bh {
         try {
           bc var8 = new bc(20, param3, 120 + param4, 25, param2, param0, 120, 3, qo.field_b, 16777215, param1);
           this.a(var8, 1);
-          pi var7 = new pi(((mc) ((Object) param2)).a(0));
+          pi var7 = new pi(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(0));
           this.a(var7, 1);
           var7.a(15, 3 + (var8.field_q + var8.field_p), (-15 + var8.field_n >> 1) + var8.field_h, 15, (byte) 123);
           int stackIn_1_0 = var8.field_n;

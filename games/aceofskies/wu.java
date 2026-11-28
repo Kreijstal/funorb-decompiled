@@ -268,7 +268,7 @@ final class wu {
           }
           byte[] var2Lifetime13 = im.a(63, "unknownstuff");
           if (null != var2Lifetime13) {
-            fh.field_g = ea.a(0, var2Lifetime13);
+            PasswordValidator.field_g = ea.a(0, var2Lifetime13);
           }
           byte[] var2Lifetime14 = im.a(73, "orbpoints");
           if (var2Lifetime14 != null) {
@@ -308,7 +308,7 @@ final class wu {
           }
           byte[] var2Lifetime23 = im.a(103, "settings");
           if (null != var2Lifetime23) {
-            ii.field_l = ea.a(0, var2Lifetime23);
+            ConfirmedEmailAvailabilityValidator.field_l = ea.a(0, var2Lifetime23);
           }
           byte[] var2Lifetime24 = im.a(89, "wave_announce,0");
           if (var2Lifetime24 != null) {
@@ -504,31 +504,31 @@ final class wu {
           }
           byte[] var2Lifetime72 = im.a(95, "purchasables,0");
           if (var2Lifetime72 != null) {
-            ii.field_e[0] = ea.a(0, var2Lifetime72);
+            ConfirmedEmailAvailabilityValidator.field_e[0] = ea.a(0, var2Lifetime72);
           }
           byte[] var2Lifetime73 = im.a(55, "purchasables,1");
           if (var2Lifetime73 != null) {
-            ii.field_e[1] = ea.a(0, var2Lifetime73);
+            ConfirmedEmailAvailabilityValidator.field_e[1] = ea.a(0, var2Lifetime73);
           }
           byte[] var2Lifetime74 = im.a(109, "purchasables,2");
           if (var2Lifetime74 != null) {
-            ii.field_e[2] = ea.a(0, var2Lifetime74);
+            ConfirmedEmailAvailabilityValidator.field_e[2] = ea.a(0, var2Lifetime74);
           }
           byte[] var2Lifetime75 = im.a(35, "purchasables,3");
           if (null != var2Lifetime75) {
-            ii.field_e[3] = ea.a(0, var2Lifetime75);
+            ConfirmedEmailAvailabilityValidator.field_e[3] = ea.a(0, var2Lifetime75);
           }
           byte[] var2Lifetime76 = im.a(125, "purchasables,4");
           if (null != var2Lifetime76) {
-            ii.field_e[4] = ea.a(0, var2Lifetime76);
+            ConfirmedEmailAvailabilityValidator.field_e[4] = ea.a(0, var2Lifetime76);
           }
           byte[] var2Lifetime77 = im.a(48, "purchasables,5");
           if (null != var2Lifetime77) {
-            ii.field_e[5] = ea.a(0, var2Lifetime77);
+            ConfirmedEmailAvailabilityValidator.field_e[5] = ea.a(0, var2Lifetime77);
           }
           byte[] var2Lifetime78 = im.a(107, "purchasables,6");
           if (var2Lifetime78 != null) {
-            ii.field_e[6] = ea.a(0, var2Lifetime78);
+            ConfirmedEmailAvailabilityValidator.field_e[6] = ea.a(0, var2Lifetime78);
           }
           byte[] var2Lifetime79 = im.a(118, "purchasemessages,0");
           if (null != var2Lifetime79) {

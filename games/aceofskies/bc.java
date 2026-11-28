@@ -18,7 +18,7 @@ final class bc extends to {
         File var12 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (!bm.field_I.privilegedTasksEnabled) {
+          if (!EditableTextField.field_I.privilegedTasksEnabled) {
             int stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -86,7 +86,7 @@ final class bc extends to {
             }
             try {
               if (!var7) {
-                bm.field_I.writeFileBytes(var12, var15, true);
+                EditableTextField.field_I.writeFileBytes(var12, var15, true);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -94,7 +94,7 @@ final class bc extends to {
               int stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            vn.a(0, var12, param0);
+            AgeValidator.a(0, var12, param0);
             int stackIn_40_0 = 100;
             return stackIn_40_0;
           }

@@ -259,9 +259,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           int var2_int = 116 % ((36 - param0) / 48);
           long var3 = kh.correctedCurrentTimeMillis(-86);
-          long var5 = PcmOutputWorker.field_b[ce.field_A];
-          PcmOutputWorker.field_b[ce.field_A] = var3;
-          ce.field_A = 31 & ce.field_A + 1;
+          long var5 = PcmOutputWorker.field_b[LoginPanel.field_A];
+          PcmOutputWorker.field_b[LoginPanel.field_A] = var3;
+          LoginPanel.field_A = 31 & LoginPanel.field_A + 1;
           if (var5 != 0L &&
             var3 > var5) {
             int var7_int = (int)(-var5 + var3);
@@ -406,7 +406,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param0 >= -102) {
                 field_l = (AccountServiceResult) null;
               }
-              JavaScriptBridge.callWithoutArguments("loggedout", (byte) -108, bm.m(107));
+              JavaScriptBridge.callWithoutArguments("loggedout", (byte) -108, EditableTextField.m(107));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
@@ -722,7 +722,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               SoftwareScanlineMask.field_e = param0;
               ci.field_g = param1;
               CrossfadingMidiPcmStream.field_x = 0;
-              fb.field_c = bm.m(124);
+              fb.field_c = EditableTextField.m(124);
               SystemTaskService dupTemp$0 = new SystemTaskService(param6, param3, param2, true);
               pt.field_b = dupTemp$0;
               mj.field_a = dupTemp$0;

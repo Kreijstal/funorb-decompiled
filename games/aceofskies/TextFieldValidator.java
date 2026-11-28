@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vo extends li implements dr {
+abstract class TextFieldValidator extends DebouncedFieldValidator implements TextFieldListener {
     static int[] field_d;
-    private bm field_c;
+    private EditableTextField field_c;
 
     final static HighscoreQuery requestHighscores(byte obfuscationGuard, int opcode, int entryLimit, int valuesPerEntry, int queryId) {
         HighscoreQuery existingQuery;
@@ -36,7 +36,7 @@ abstract class vo extends li implements dr {
         return newQuery;
     }
 
-    public final boolean a(int param0) {
+    public final boolean hasMissingInput(int param0) {
         if (param0 != 26921) {
           field_d = (int[]) null;
           if (null != this.field_c.field_f) {
@@ -53,51 +53,51 @@ abstract class vo extends li implements dr {
         return true;
     }
 
-    public final void b(bm param0, int param1) {
+    public final void onTextSubmitted(EditableTextField param0, int param1) {
         try {
           if (param1 != -40) {
-            bm var4 = (bm) null;
-            this.a((bm) null, -56);
+            EditableTextField var4 = (EditableTextField) null;
+            this.onTextChanged((EditableTextField) null, -56);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vo.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(bm param0, int param1) {
+    public final void onTextChanged(EditableTextField param0, int param1) {
         try {
-          this.a((byte) 97);
+          this.recordInputChange((byte) 97);
           if (param1 != -6525) {
-            bm var4 = (bm) null;
-            this.b((bm) null, -98);
+            EditableTextField var4 = (EditableTextField) null;
+            this.onTextSubmitted((EditableTextField) null, -98);
           }
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "vo.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final String b(int param0) {
+    final String evaluateValidationMessage(int param0) {
         if (param0 == 8192) {
-          return this.a(this.field_c.field_f, (byte) 72);
+          return this.getValidationMessage(this.field_c.field_f, (byte) 72);
         }
         String var3 = (String) null;
-        this.a((String) null, (byte) -68);
-        return this.a(this.field_c.field_f, (byte) 72);
+        this.getValidationMessage((String) null, (byte) -68);
+        return this.getValidationMessage(this.field_c.field_f, (byte) 72);
     }
 
-    abstract String a(String param0, byte param1);
+    abstract String getValidationMessage(String param0, byte param1);
 
-    final pt c(int param0) {
+    final pt evaluateValidationStatus(int param0) {
         if (param0 == 0) {
-          return this.a(this.field_c.field_f, param0 + 8192);
+          return this.getValidationStatus(this.field_c.field_f, param0 + 8192);
         }
-        this.a(83);
-        return this.a(this.field_c.field_f, param0 + 8192);
+        this.hasMissingInput(83);
+        return this.getValidationStatus(this.field_c.field_f, param0 + 8192);
     }
 
-    abstract pt a(String param0, int param1);
+    abstract pt getValidationStatus(String param0, int param1);
 
-    vo(bm param0) {
+    TextFieldValidator(EditableTextField param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
@@ -111,7 +111,7 @@ abstract class vo extends li implements dr {
 
     public static void clearStaticReferences(int param0) {
         if (param0 != 14695) {
-          vo.clearStaticReferences(89);
+          TextFieldValidator.clearStaticReferences(89);
           field_d = null;
           return;
         }

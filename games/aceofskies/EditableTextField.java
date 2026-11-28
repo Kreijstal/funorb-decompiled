@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bm extends mi {
+class EditableTextField extends mi {
     static Object field_C;
     private int field_H;
     private int field_A;
@@ -28,7 +28,7 @@ class bm extends mi {
             if (param2 >= 32 &&
               param2 <= 126) {
               if (this.field_B != this.field_D) {
-                this.a((byte) -127);
+                this.deleteSelection((byte) -127);
               }
               if (this.field_H == -1 ||
                 !(this.field_f.length() >= this.field_H)) {
@@ -42,21 +42,21 @@ class bm extends mi {
                   this.field_B = this.field_B + 1;
                   this.field_D = this.field_B;
                 }
-                this.g((byte) -75);
+                this.notifyTextChanged((byte) -75);
               }
               return true;
             }
             if (param1 != 85) {
               if (param1 == 101) {
                 if (this.field_D != this.field_B) {
-                  this.a((byte) -87);
+                  this.deleteSelection((byte) -87);
                   return true;
                 }
                 if (this.field_B >= this.field_f.length()) {
                   return false;
                 }
                 this.field_D = 1 + this.field_B;
-                this.a((byte) 43);
+                this.deleteSelection((byte) 43);
                 return true;
               }
               if (param1 == 13) {
@@ -84,22 +84,22 @@ class bm extends mi {
                   return true;
                 }
                 if (param1 == 84) {
-                  this.j(-1);
+                  this.submitText(-1);
                   return true;
                 }
                 if (lp.heldKeys[82] &&
                   param1 == 65) {
-                  this.b(true);
+                  this.cutSelection(true);
                   return true;
                 }
                 if (lp.heldKeys[82] &&
                   param1 == 66) {
-                  this.i(-116);
+                  this.copySelection(-116);
                   return true;
                 }
                 if (lp.heldKeys[82] &&
                   67 == param1) {
-                  this.l(-1);
+                  this.pasteClipboardText(-1);
                   return true;
                 }
               } else if (this.field_B < this.field_f.length()) {
@@ -114,12 +114,12 @@ class bm extends mi {
               }
             } else {
               if (this.field_D != this.field_B) {
-                this.a((byte) -118);
+                this.deleteSelection((byte) -118);
                 return true;
               }
               if (this.field_B > 0) {
                 this.field_D = this.field_B - 1;
-                this.a((byte) 14);
+                this.deleteSelection((byte) 14);
                 return true;
               }
             }
@@ -140,12 +140,12 @@ class bm extends mi {
         }
     }
 
-    private final void l(int param0) {
+    private final void pasteClipboardText(int param0) {
         try {
           try {
             String var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.a((byte) -81);
-            this.a(var2, (byte) 126);
+            this.deleteSelection((byte) -81);
+            this.insertTextAtCaret(var2, (byte) 126);
           } catch (Exception exception) {
           }
           if (param0 == -1) {
@@ -162,7 +162,7 @@ class bm extends mi {
     final static java.applet.Applet m(int param0) {
         if (param0 < 106) {
           PcmSample var2 = (PcmSample) null;
-          bm.a((byte) -67, (PcmSample) null);
+          EditableTextField.a((byte) -67, (PcmSample) null);
           if (hu.field_a != null) {
             return hu.field_a;
           }
@@ -210,7 +210,7 @@ class bm extends mi {
           if (param2) {
             return;
           }
-          this.g((byte) -75);
+          this.notifyTextChanged((byte) -75);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -306,9 +306,9 @@ class bm extends mi {
         return;
     }
 
-    void g(byte param0) {
-        if (this.field_o instanceof dr) {
-          ((dr) (this.field_o)).a(this, -6525);
+    void notifyTextChanged(byte param0) {
+        if (this.field_o instanceof TextFieldListener) {
+          ((TextFieldListener) (this.field_o)).onTextChanged(this, -6525);
         }
         if (param0 == -75) {
           return;
@@ -316,7 +316,7 @@ class bm extends mi {
         field_I = (SystemTaskService) null;
     }
 
-    bm(String param0, no param1, int param2) {
+    EditableTextField(String param0, no param1, int param2) {
         super(param0, param1);
         this.field_E = 0L;
         this.field_A = -1;
@@ -332,18 +332,18 @@ class bm extends mi {
         }
     }
 
-    private final void b(boolean param0) {
-        this.i(-120);
+    private final void cutSelection(boolean param0) {
+        this.copySelection(-120);
         if (param0) {
-          this.a((byte) -85);
+          this.deleteSelection((byte) -85);
           return;
         }
         ea var3 = (ea) null;
         this.a(9, 25, 35, 10, 41, (ea) null, -23);
-        this.a((byte) -85);
+        this.deleteSelection((byte) -85);
     }
 
-    private final void a(byte param0) {
+    private final void deleteSelection(byte param0) {
         int var2 = -51 / ((-40 - param0) / 32);
         if (this.field_B != this.field_D) {
           int var3 = this.field_B <= this.field_D ? this.field_B : this.field_D;
@@ -351,7 +351,7 @@ class bm extends mi {
           this.field_D = var3;
           this.field_B = var3;
           this.field_f = this.field_f.substring(0, var3) + this.field_f.substring(var4, this.field_f.length());
-          this.g((byte) -75);
+          this.notifyTextChanged((byte) -75);
         }
     }
 
@@ -441,23 +441,23 @@ class bm extends mi {
           return;
         }
         PcmSample var2 = (PcmSample) null;
-        bm.a((byte) -72, (PcmSample) null);
+        EditableTextField.a((byte) -72, (PcmSample) null);
         field_x = null;
         field_I = null;
         field_C = null;
         field_w = null;
     }
 
-    private final void j(int param0) {
+    private final void submitText(int param0) {
         if (param0 == -1) {
-          if (this.field_o instanceof dr) {
-            ((dr) (this.field_o)).b(this, -40);
+          if (this.field_o instanceof TextFieldListener) {
+            ((TextFieldListener) (this.field_o)).onTextSubmitted(this, -40);
           }
           return;
         }
         this.field_A = 14;
-        if (this.field_o instanceof dr) {
-          ((dr) (this.field_o)).b(this, -40);
+        if (this.field_o instanceof TextFieldListener) {
+          ((TextFieldListener) (this.field_o)).onTextSubmitted(this, -40);
         }
     }
 
@@ -483,28 +483,28 @@ class bm extends mi {
         this.field_f = "";
         this.field_B = 0;
         this.field_D = 0;
-        this.g((byte) -75);
+        this.notifyTextChanged((byte) -75);
         if (param0 != -2) {
           this.field_y = false;
         }
     }
 
-    private final void i(int param0) {
+    private final void copySelection(int param0) {
         try {
           if (param0 > -98) {
             this.field_D = -50;
-            String var2 = this.h((byte) 97);
+            String var2 = this.getSelectedText((byte) 97);
             if (var2.length() > 0) {
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.h((byte) 109))), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) 109))), (java.awt.datatransfer.ClipboardOwner) null);
               return;
             }
             return;
           }
-          String var2Lifetime1 = this.h((byte) 97);
+          String var2Lifetime1 = this.getSelectedText((byte) 97);
           if (var2Lifetime1.length() <= 0) {
             return;
           }
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.h((byte) 109))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) 109))), (java.awt.datatransfer.ClipboardOwner) null);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -512,7 +512,7 @@ class bm extends mi {
         }
     }
 
-    private final void a(String param0, byte param1) {
+    private final void insertTextAtCaret(String param0, byte param1) {
         if (this.field_H != -1) {
           int var3_int = this.field_H - this.field_f.length();
           if (var3_int >= 0) {
@@ -531,13 +531,13 @@ class bm extends mi {
         try {
           this.field_B = this.field_B + param0.length();
           this.field_D = this.field_B;
-          this.g((byte) -75);
+          this.notifyTextChanged((byte) -75);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "bm.VA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final String h(byte param0) {
+    private final String getSelectedText(byte param0) {
         int var2 = this.field_D < this.field_B ? this.field_D : this.field_B;
         if (param0 > 80) {
           int var3 = this.field_D < this.field_B ? this.field_B : this.field_D;

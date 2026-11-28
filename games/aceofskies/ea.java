@@ -197,7 +197,7 @@ class ea extends IntrusiveNode {
           }
           break;
         }
-        String var5 = fh.c((byte) -125);
+        String var5 = PasswordValidator.c((byte) -125);
         if (var5 != null) {
           ArchiveRequest.field_n.a(10066329, var5, SpriteState.field_o, we.field_c);
         }

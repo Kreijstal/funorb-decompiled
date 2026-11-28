@@ -112,7 +112,7 @@ final class u extends RenderEffect {
               q.outgoingPacket.writeByte(-1336879960, 18);
               q.outgoingPacket.position = q.outgoingPacket.position + 2;
               int var10 = q.outgoingPacket.position;
-              String var11_ref_String = ao.a(bm.m(108), false);
+              String var11_ref_String = ao.a(EditableTextField.m(108), false);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -158,7 +158,7 @@ final class u extends RenderEffect {
               sd.field_j = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                oj.a(26099, bm.m(112));
+                oj.a(26099, EditableTextField.m(112));
                 HardwareRenderSprite.field_m = wo.field_h;
                 te.b(true);
                 ld.field_d = false;
@@ -198,7 +198,7 @@ final class u extends RenderEffect {
             if (qs.field_b == 255) {
               String var9_ref_String = IntKeyLookup.incomingPacket.readNullableString((byte) -109);
               if (var9_ref_String != null) {
-                sf.a((byte) -125, bm.m(118), var9_ref_String);
+                sf.a((byte) -125, EditableTextField.m(118), var9_ref_String);
               }
             } else {
               HardwareRenderSprite.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);

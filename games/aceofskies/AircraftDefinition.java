@@ -18,7 +18,7 @@ final class AircraftDefinition {
         if (BufferedRandomAccessFile.playerDefinition == this) {
           return lj.aircraftEngineSamples[0];
         }
-        if (this == kk.field_N) {
+        if (this == ValidatedTextField.field_N) {
           return lj.aircraftEngineSamples[1];
         }
         if (sl.field_p == this) {
@@ -47,14 +47,14 @@ final class AircraftDefinition {
         if (param0 != 0) {
           return false;
         }
-        return lq.a(bm.m(116), 61);
+        return lq.a(EditableTextField.m(116), 61);
     }
 
     final RenderSprite[] getSprites(int obfuscationGuard) {
         if (BufferedRandomAccessFile.playerDefinition == this) {
           return hr.aircraftSprites[0];
         }
-        if (this == kk.field_N) {
+        if (this == ValidatedTextField.field_N) {
           return hr.aircraftSprites[1];
         }
         if (this == sl.field_p) {

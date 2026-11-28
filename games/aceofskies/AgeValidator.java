@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class vn extends vo {
+final class AgeValidator extends TextFieldValidator {
     static String field_g;
     static lt field_f;
     static String field_e;
 
-    final pt a(String param0, int param1) {
+    final pt getValidationStatus(String param0, int param1) {
         String stackIn_16_2 = null;
         try {
           CharSequence var5 = (CharSequence) ((Object) param0);
@@ -18,7 +18,7 @@ final class vn extends vo {
           }
           if (param1 != 8192) {
             String var4 = (String) null;
-            vn.a(63, (File) null, (String) null);
+            AgeValidator.a(63, (File) null, (String) null);
           }
           CharSequence var6 = (CharSequence) ((Object) param0);
           int var3_int = td.a(var6, (byte) 38);
@@ -43,7 +43,7 @@ final class vn extends vo {
         }
     }
 
-    vn(bm param0) {
+    AgeValidator(EditableTextField param0) {
         super(param0);
     }
 
@@ -53,7 +53,7 @@ final class vn extends vo {
         field_f = null;
         if (param0 != 101) {
           String var2 = (String) null;
-          vn.a(55, (File) null, (String) null);
+          AgeValidator.a(55, (File) null, (String) null);
         }
     }
 
@@ -68,14 +68,14 @@ final class vn extends vo {
         }
     }
 
-    final String a(String param0, byte param1) {
+    final String getValidationMessage(String param0, byte param1) {
         String stackIn_9_2 = null;
         try {
           if (param1 != 72) {
             String var4 = (String) null;
-            vn.a(53, (File) null, (String) null);
+            AgeValidator.a(53, (File) null, (String) null);
           }
-          if (this.a(param0, 8192) != bt.field_a) {
+          if (this.getValidationStatus(param0, 8192) != bt.field_a) {
             return null;
           }
           String stackIn_5_0 = dg.field_L;

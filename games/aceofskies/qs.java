@@ -50,7 +50,7 @@ final class qs {
           }
           if (!ht.field_g &&
             ScreenParticle.field_o < jp.field_b &&
-            uu.pointerMoved) {
+            MatchingFieldValidator.pointerMoved) {
             we.field_c = OpenGlRectangleTexture.field_k;
             SpriteState.field_o = rs.field_v;
             ScreenParticle.field_o = 0;

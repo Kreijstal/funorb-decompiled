@@ -116,7 +116,7 @@ final class tj extends ao {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         du.field_m = null;
         wu.field_l = null;
-        bm.field_z = 0;
+        EditableTextField.field_z = 0;
         int var2 = RendererManager.field_f;
         RendererManager.field_f = ah.field_s;
         ul.field_r.field_j = ul.field_r.field_j + 1;

@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends oo implements dn {
     static AccountRequestState field_fb;
-    private wd field_db;
+    private AccountRegistrationPanel field_db;
     private boolean field_eb;
     private boolean field_gb;
 
@@ -21,7 +21,7 @@ final class AccountCreationResultPanel extends oo implements dn {
         this.showAccountCreationResult(true, AccountRequestState.createAccountErrorResult(248, 32, rl.field_i), 11);
     }
 
-    AccountCreationResultPanel(lt param0, wd param1) {
+    AccountCreationResultPanel(lt param0, AccountRegistrationPanel param1) {
         super(param0, b.field_c, pg.field_b, false, false);
         try {
           this.field_db = param1;

@@ -130,14 +130,14 @@ final class MusicPatchPcmStream extends PcmStream {
           var8.readNullTerminatedText(-17883);
         }
         if (!param0) {
-          ep.field_x = ko.a(var8, 80, (byte) -114);
+          DisplayNameSelectionPanel.field_x = ko.a(var8, 80, (byte) -114);
           DirectByteStorage.field_e = null;
           return new s(param0);
         }
         int var5 = var8.readUnsignedShort((byte) 0);
         try {
           jr var9 = uk.field_f.a(var5, -43);
-          ep.field_x = var9.c((byte) 1);
+          DisplayNameSelectionPanel.field_x = var9.c((byte) 1);
           if (!tn.field_t.equals(fj.playerDisplayName)) {
             stackIn_23_0 = var9.field_t;
           } else {
@@ -149,7 +149,7 @@ final class MusicPatchPcmStream extends PcmStream {
           Exception var6 = (Exception) (Object) decompiledCaughtException;
           v.a("CC1", (byte) -52, (Throwable) ((Object) var6));
           DirectByteStorage.field_e = null;
-          ep.field_x = null;
+          DisplayNameSelectionPanel.field_x = null;
           return new s(param0);
         }
         return new s(param0);

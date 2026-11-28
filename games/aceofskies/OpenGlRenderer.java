@@ -158,7 +158,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
               for (var7 = 0; data.width > var7; var7++) {
                 int incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = vo.a(data.palette[pg.a(255, (int) data.indices[var4])], data.alpha[var4] << 24);
+                var3[incrementValue$0] = TextFieldValidator.a(data.palette[pg.a(255, (int) data.indices[var4])], data.alpha[var4] << 24);
                 var4++;
               }
             }
@@ -175,7 +175,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
                 if (var8 == 0) {
                   stackIn_9_2 = 0;
                 } else {
-                  stackIn_9_2 = vo.a(var8, -16777216);
+                  stackIn_9_2 = TextFieldValidator.a(var8, -16777216);
                 }
                 stackIn_8_0[stackIn_8_1] = stackIn_9_2;
               }
@@ -1781,53 +1781,53 @@ final class OpenGlRenderer extends GraphicsRenderer {
             return 4;
           }
           try {
-            if (bm.field_z == 0) {
+            if (EditableTextField.field_z == 0) {
               wu.field_l = cs.field_d.requestDirectSocket(2, hi.field_x, RendererManager.field_f);
-              bm.field_z = bm.field_z + 1;
+              EditableTextField.field_z = EditableTextField.field_z + 1;
             }
-            if (bm.field_z == 1) {
+            if (EditableTextField.field_z == 1) {
               if (wu.field_l.status == 2) {
                 int stackIn_15_0 = tj.a(-112, -1);
                 return stackIn_15_0;
               }
               if (wu.field_l.status == 1) {
-                bm.field_z = bm.field_z + 1;
+                EditableTextField.field_z = EditableTextField.field_z + 1;
               }
             }
             if (param0 != 19078) {
               int stackIn_20_0 = -63;
               return stackIn_20_0;
             }
-            if (2 == bm.field_z) {
+            if (2 == EditableTextField.field_z) {
               du.field_m = new BufferedSocket((java.net.Socket) (wu.field_l.result), cs.field_d);
               PacketBuffer var2 = new PacketBuffer(13);
               tr.a(var2, uk.field_g, SoundCache.field_e, IntKeyLookup.field_b, 0);
               var2.writeByte(-1336879960, 15);
               var2.writeInt((byte) 20, si.field_c);
               du.field_m.a(13, 0, 41, var2.payload);
-              bm.field_z = bm.field_z + 1;
+              EditableTextField.field_z = EditableTextField.field_z + 1;
               AircraftDefinition.field_j = 30000L + kh.correctedCurrentTimeMillis(-70);
             }
-            if (bm.field_z == 3) {
+            if (EditableTextField.field_z == 3) {
               if (!(du.field_m.b(-120) <= 0)) {
                 int var1_int = du.field_m.a((byte) -116);
                 if (var1_int != 0) {
                   int stackIn_29_0 = tj.a(92, var1_int);
                   return stackIn_29_0;
                 }
-                bm.field_z = bm.field_z + 1;
+                EditableTextField.field_z = EditableTextField.field_z + 1;
               } else if (kh.correctedCurrentTimeMillis(-116) > AircraftDefinition.field_j) {
                 int stackIn_34_0 = tj.a(-126, -2);
                 return stackIn_34_0;
               }
             }
-            if (4 != bm.field_z) {
+            if (4 != EditableTextField.field_z) {
               int stackIn_39_0 = -1;
               return stackIn_39_0;
             }
             ul.field_r.a(param0 ^ 16696, rs.field_C, du.field_m);
             wu.field_l = null;
-            bm.field_z = 0;
+            EditableTextField.field_z = 0;
             du.field_m = null;
             int stackIn_37_0 = 0;
             return stackIn_37_0;

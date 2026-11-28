@@ -39,7 +39,7 @@ final class ScoreSubmission extends IntrusiveNode {
             HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
             OpenGlBuffer.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
             in.scoreDigitSprites = new RenderSprite[kb.scoreDigitSpriteData.length];
-            ii.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
+            ConfirmedEmailAvailabilityValidator.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
             Pickup.powerchuteSprites = new RenderSprite[ol.powerchuteSpriteData.length];
             po.powerIconSprites = new RenderSprite[nu.powerIconSpriteData.length];
             co.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
@@ -47,9 +47,9 @@ final class ScoreSubmission extends IntrusiveNode {
             SoftCacheReference.brassButtonSprites = new RenderSprite[vl.brassButtonSpriteData.length];
             CipherPacketBuffer.brassSliderSprites = new RenderSprite[qk.brassSliderSpriteData.length];
             ko.brassFrameSprites = new RenderSprite[gu.brassFrameSpriteData.length];
-            for (int var2 = 0; ii.gaugeSprites.length > var2; var2++) {
+            for (int var2 = 0; ConfirmedEmailAvailabilityValidator.gaugeSprites.length > var2; var2++) {
               RenderSprite[] array$0 = new RenderSprite[ArchiveIndex.gaugeSpriteData[var2].length];
-              ii.gaugeSprites[var2] = array$0;
+              ConfirmedEmailAvailabilityValidator.gaugeSprites[var2] = array$0;
             }
           }
           for (int var2Lifetime1 = 0; var2Lifetime1 < SteeringMode.aircraftSpriteData.length; var2Lifetime1++) {
@@ -107,7 +107,7 @@ final class ScoreSubmission extends IntrusiveNode {
             int var5 = 0;
             int var3Lifetime1 = var5;
             while (var5 < ArchiveIndex.gaugeSpriteData[var2Lifetime14].length) {
-              ii.gaugeSprites[var2Lifetime14][var5] = var6.createSprite(ArchiveIndex.gaugeSpriteData[var2Lifetime14][var5], false);
+              ConfirmedEmailAvailabilityValidator.gaugeSprites[var2Lifetime14][var5] = var6.createSprite(ArchiveIndex.gaugeSpriteData[var2Lifetime14][var5], false);
               var5++;
             }
           }

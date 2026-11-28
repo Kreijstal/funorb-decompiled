@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends bm implements mc {
+final class ValidatedTextField extends EditableTextField implements FieldValidatorProvider {
     static int field_K;
     private int field_M;
     static AircraftDefinition field_N;
-    private sp field_L;
+    private FieldValidator field_L;
     static String field_J;
 
-    public final sp a(int param0) {
+    public final FieldValidator getFieldValidator(int param0) {
         if (param0 != 0) {
-          this.g((byte) -126);
+          this.notifyTextChanged((byte) -126);
           return this.field_L;
         }
         return this.field_L;
     }
 
-    final void a(sp param0, int param1) {
+    final void a(FieldValidator param0, int param1) {
         try {
           this.field_L = param0;
           if (param1 != 1472) {
@@ -27,10 +27,10 @@ final class kk extends bm implements mc {
         }
     }
 
-    final void g(byte param0) {
-        super.g(param0);
+    final void notifyTextChanged(byte param0) {
+        super.notifyTextChanged(param0);
         if (null != this.field_L) {
-          this.field_L.a((byte) 115);
+          this.field_L.recordInputChange((byte) 115);
         }
     }
 
@@ -38,7 +38,7 @@ final class kk extends bm implements mc {
         try {
           super.a((byte) 46, param1, param2, param3);
           if (param0 <= 13) {
-            this.a(113);
+            this.getFieldValidator(113);
           }
           this.field_M = -this.field_p + (ic.field_b - param3);
         } catch (RuntimeException runtimeException) {
@@ -83,7 +83,7 @@ final class kk extends bm implements mc {
           }
           if (param1 >= -91) {
             BufferElementType var3 = (BufferElementType) null;
-            kk.a((BufferElementType) null, (byte) -56);
+            ValidatedTextField.a((BufferElementType) null, (byte) -56);
           }
           throw new IllegalArgumentException("");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -100,7 +100,7 @@ final class kk extends bm implements mc {
         }
     }
 
-    kk(String param0, no param1, int param2) {
+    ValidatedTextField(String param0, no param1, int param2) {
         super(param0, param1, param2);
     }
 

@@ -73,7 +73,7 @@ final class te extends IntrusiveNode {
         try {
           int var2 = 112 % ((param1 - 8) / 34);
           try {
-            JavaScriptBridge.callWithArguments("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
+            JavaScriptBridge.callWithArguments("resizing", -15201, new Object[]{new Integer(param0)}, EditableTextField.m(110));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;
             Throwable var3 = decompiledCaughtException;

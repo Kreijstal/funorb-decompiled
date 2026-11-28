@@ -8,7 +8,7 @@ final class vr {
     private int field_f;
     static Random field_h;
     private qe field_e;
-    static ce field_b;
+    static LoginPanel field_b;
     private OpenGlRenderer field_g;
     private hh[] field_d;
     private int field_i;

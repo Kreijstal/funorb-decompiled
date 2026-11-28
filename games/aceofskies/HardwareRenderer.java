@@ -333,7 +333,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         this.field_ec.b(-var7 + (float)y, (byte) -125, 0.0f, -var7 + (float)x);
         this.q((byte) 127);
         this.b((byte) -120, false);
-        this.a(bm.field_x, (byte) 127, 4);
+        this.a(EditableTextField.field_x, (byte) 127, 4);
         this.b((byte) -114, true);
         this.a(CipherPacketBuffer.field_p, 0, 0);
         this.a((byte) 125, 0, CipherPacketBuffer.field_p);
@@ -1209,7 +1209,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
                 for (var8 = 0; data.width > var8; var8++) {
                   int incrementValue$2 = var6;
                   var6++;
-                  var4[incrementValue$2] = vo.a(data.alpha[var5] << 24, data.palette[pg.a((int) data.indices[var5], 255)]);
+                  var4[incrementValue$2] = TextFieldValidator.a(data.alpha[var5] << 24, data.palette[pg.a((int) data.indices[var5], 255)]);
                   var5++;
                 }
               }
@@ -1226,7 +1226,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
                   if (var9 == 0) {
                     stackIn_17_2 = 0;
                   } else {
-                    stackIn_17_2 = vo.a(-16777216, var9);
+                    stackIn_17_2 = TextFieldValidator.a(-16777216, var9);
                   }
                   stackIn_16_0[stackIn_16_1] = stackIn_17_2;
                 }
