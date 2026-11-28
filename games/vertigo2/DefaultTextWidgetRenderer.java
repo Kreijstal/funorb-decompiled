@@ -222,7 +222,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            stackIn_4_0 = this.a(param2, (byte) 110, 0, param0);
+            stackIn_4_0 = this.getUnalignedTextOriginY(param2, (byte) 110, 0, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = 57;
@@ -241,7 +241,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    private final int a(int param0, byte param1, UiWidget param2, int param3) {
+    private final int getUnalignedTextOriginX(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -278,7 +278,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           return;
         }
         try {
-          this.a(0, param1, param4, param3);
+          this.drawTextWithDefaultStyle(0, param1, param4, param3);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "va.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -294,7 +294,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == -14323) {
-            stackIn_4_0 = this.a(param1, (byte) -94, param0, 0);
+            stackIn_4_0 = this.getUnalignedTextOriginX(param1, (byte) -94, param0, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -38;
@@ -341,7 +341,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    private final int c(UiWidget param0, int param1) {
+    private final int getTextAreaHeight(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -368,7 +368,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    private final int a(int param0, byte param1, int param2, UiWidget param3) {
+    private final int getUnalignedTextOriginY(int param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -395,7 +395,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6, int param7) {
+    private final void drawText(int param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -412,7 +412,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           boolean decompiledFrameRemainder0 = true;
           jb.a(param0 + param5.y, param5.width + (param5.x + param3), param5.x + param3, -30486, param5.height + param5.y + param0);
           var9_int = this.getTextAreaWidth(-1, param5);
-          var10 = this.c(param5, 0);
+          var10 = this.getTextAreaHeight(param5, 0);
           if (!this.field_q) {
             var12 = this.field_d;
             if (var12 == 0) {
@@ -431,19 +431,19 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_l.drawCentred(this.a((byte) -90, param5), this.a(param3, (byte) -94, param5, param7) + (var9_int >> 1), this.a(param0, (byte) 110, param2, param5) + var11, param6, param1);
+                this.field_l.drawCentred(this.resolveDisplayText((byte) -90, param5), this.getUnalignedTextOriginX(param3, (byte) -94, param5, param7) + (var9_int >> 1), this.getUnalignedTextOriginY(param0, (byte) 110, param2, param5) + var11, param6, param1);
               } else {
                 if ((2 == var12Lifetime1)) {
-                  this.field_l.drawRightAligned(this.a((byte) -90, param5), this.a(param3, (byte) -94, param5, param7) + var9_int, this.a(param0, (byte) 110, param2, param5) + var11, param6, param1);
+                  this.field_l.drawRightAligned(this.resolveDisplayText((byte) -90, param5), this.getUnalignedTextOriginX(param3, (byte) -94, param5, param7) + var9_int, this.getUnalignedTextOriginY(param0, (byte) 110, param2, param5) + var11, param6, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_l.drawString(this.a((byte) -90, param5), this.a(param3, (byte) -94, param5, param7), this.a(param0, (byte) 110, param2, param5) + var11, param6, param1);
+              this.field_l.drawString(this.resolveDisplayText((byte) -90, param5), this.getUnalignedTextOriginX(param3, (byte) -94, param5, param7), this.getUnalignedTextOriginY(param0, (byte) 110, param2, param5) + var11, param6, param1);
             }
           } else {
-            this.field_l.drawParagraph(this.a((byte) -90, param5), this.a(param3, (byte) -94, param5, param7), this.a(param0, (byte) 110, param2, param5), var9_int, var10, param6, param1, this.field_m, this.field_d, this.field_n);
+            this.field_l.drawParagraph(this.resolveDisplayText((byte) -90, param5), this.getUnalignedTextOriginX(param3, (byte) -94, param5, param7), this.getUnalignedTextOriginY(param0, (byte) 110, param2, param5), var9_int, var10, param6, param1, this.field_m, this.field_d, this.field_n);
           }
           ln.d(-28558);
           if (param4 > 64) {
@@ -484,9 +484,9 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
             var7 = var14.getLineIndexForTextOffset(param1, 22413);
             var8 = var13.field_c[var7];
             var9 = var14.getXForTextOffset(param1, -61);
-            var10 = this.a(param2, (byte) -94, param3, var9);
+            var10 = this.getUnalignedTextOriginX(param2, (byte) -94, param3, var9);
             var11 = this.getTextOriginY(param3, 1, param4) + Math.max(0, var8.field_f);
-            var12 = this.getTextOriginY(param3, 1, param4) + Math.min(this.c(param3, 0), Math.min(var8.field_d, var14.field_c.length > 1 + var7 ? var13.field_c[1 + var7].field_f : var8.field_d));
+            var12 = this.getTextOriginY(param3, 1, param4) + Math.min(this.getTextAreaHeight(param3, 0), Math.min(var8.field_d, var14.field_c.length > 1 + var7 ? var13.field_c[1 + var7].field_f : var8.field_d));
             jb.a(param3.y + param4, param3.x + param2 + param3.width, param2 + param3.x, -30486, param4 + (param3.y + param3.height));
             eb.field_c.a(var10, var12, this.field_p, var10, var11, 105);
             ln.d(-28558);
@@ -526,15 +526,15 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    private final void a(int param0, int param1, int param2, UiWidget param3) {
+    private final void drawTextWithDefaultStyle(int param0, int param1, int param2, UiWidget param3) {
         try {
-          this.a(param2, this.field_g, 0, param1, 65, param3, this.field_e, param0);
+          this.drawText(param2, this.field_g, 0, param1, 65, param3, this.field_e, param0);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "va.R(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(boolean param0, UiWidget param1) {
+    private final void rebuildTextLayout(boolean param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -552,7 +552,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
             param1.field_r = (TextLayout) ((Object) new RichTextLayout());
           }
           var3_int = this.getTextAreaWidth(-1, param1);
-          var4 = this.c(param1, 0);
+          var4 = this.getTextAreaHeight(param1, 0);
           var6 = this.field_d;
           if (var6 == 0) {
             var5 = this.field_l.field_z;
@@ -576,12 +576,12 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
               if (!(param1.field_r instanceof RichTextLayout)) {
                 return;
               }
-              ((RichTextLayout) (param1.field_r)).layoutSingleLineCentered(var5, this.field_l, this.a((byte) -90, param1), -12558, var3_int >> 1);
+              ((RichTextLayout) (param1.field_r)).layoutSingleLineCentered(var5, this.field_l, this.resolveDisplayText((byte) -90, param1), -12558, var3_int >> 1);
               return;
             }
             if (2 == var6Lifetime1 &&
               param1.field_r instanceof RichTextLayout) {
-              ((RichTextLayout) (param1.field_r)).layoutSingleLineRightAligned(var3_int, (byte) 94, this.field_l, var5, this.a((byte) -90, param1));
+              ((RichTextLayout) (param1.field_r)).layoutSingleLineRightAligned(var3_int, (byte) 94, this.field_l, var5, this.resolveDisplayText((byte) -90, param1));
               return;
             }
             return;
@@ -589,7 +589,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
           if (!(param1.field_r instanceof RichTextLayout)) {
             return;
           }
-          ((RichTextLayout) (param1.field_r)).layoutSingleLineLeftAligned(-96, this.field_l, this.a((byte) -90, param1), var5, 0);
+          ((RichTextLayout) (param1.field_r)).layoutSingleLineLeftAligned(-96, this.field_l, this.resolveDisplayText((byte) -90, param1), var5, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -605,7 +605,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         }
     }
 
-    final void a(int param0, DefaultTextWidgetRenderer param1) {
+    final void copyStyleTo(int param0, DefaultTextWidgetRenderer param1) {
         try {
           param1.field_g = this.field_g;
           param1.field_d = this.field_d;
@@ -723,7 +723,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
                 stackIn_19_0 = var18.getXForTextOffset(var9, 126);
               }
               var15 = stackIn_19_0;
-              eb.field_c.a(var13.field_d, (byte) -101, param4 + param0.y + (this.field_k + param0.field_y) + var13.field_f, this.field_a, this.field_a >>> 24, this.a(param5, (byte) -94, param0, var14), var15 - var14);
+              eb.field_c.a(var13.field_d, (byte) -101, param4 + param0.y + (this.field_k + param0.field_y) + var13.field_f, this.field_a, this.field_a >>> 24, this.getUnalignedTextOriginX(param5, (byte) -94, param0, var14), var15 - var14);
             }
             ln.d(-28558);
           }
@@ -758,7 +758,7 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
         field_f = null;
     }
 
-    String a(byte param0, UiWidget param1) {
+    String resolveDisplayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -800,9 +800,9 @@ class DefaultTextWidgetRenderer implements WidgetListener, TextWidgetRenderer {
             this.field_p = -35;
           }
           if (!this.field_q) {
-            this.a(false, param0);
+            this.rebuildTextLayout(false, param0);
           } else {
-            ((RichTextLayout) (param0.field_r)).layoutWrappedText(this.field_d, this.a((byte) -90, param0), 1, this.field_l, this.field_m, this.c(param0, 0), this.getTextAreaWidth(-1, param0), this.field_n);
+            ((RichTextLayout) (param0.field_r)).layoutWrappedText(this.field_d, this.resolveDisplayText((byte) -90, param0), 1, this.field_l, this.field_m, this.getTextAreaHeight(param0, 0), this.getTextAreaWidth(-1, param0), this.field_n);
           }
           stackIn_9_0 = param0.field_r;
           return stackIn_9_0;

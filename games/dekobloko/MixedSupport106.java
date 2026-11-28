@@ -34,13 +34,13 @@ final class MixedSupport106 {
         AccountFieldStatusIndicator.performAction1206((byte) 104);
         if (LabeledWidgetContainer.integerState0137 < 0) {
           DirectByteStorage.sceneWidgetState0034.stringState0598 = null;
-          stackSceneWidgetLocal10 = UiComponentPart011.sceneWidgetState0035;
+          stackSceneWidgetLocal10 = ValidationStatusIcon.sceneWidgetState0035;
           stackBooleanLocal11 = false;
-          stackBooleanLocal12 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
+          stackBooleanLocal12 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (ValidationStatusIcon.sceneWidgetPart013State0002 == null);
           ((SceneWidget) (Object) stackSceneWidgetLocal10).performAction1772(stackBooleanLocal11, stackBooleanLocal12);
           stackSceneWidgetLocal13 = TextFieldValidator.sceneWidgetState0151;
           stackBooleanLocal14 = false;
-          stackBooleanLocal15 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
+          stackBooleanLocal15 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == ValidationStatusIcon.sceneWidgetPart013State0002);
           ((SceneWidget) (Object) stackSceneWidgetLocal13).performAction1772(stackBooleanLocal14, stackBooleanLocal15);
           stackSceneWidgetLocal16 = SceneWidgetPart011.sceneWidgetState0115;
           stackBooleanLocal17 = false;
@@ -71,13 +71,13 @@ final class MixedSupport106 {
           }
         } else {
           DirectByteStorage.sceneWidgetState0034.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(94, RenderingSupport007.stringState0306, new String[]{Integer.toString(LabeledWidgetContainer.integerState0137)});
-          stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
+          stackSceneWidgetLocal1 = ValidationStatusIcon.sceneWidgetState0035;
           stackBooleanLocal2 = false;
-          stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (UiComponentPart011.sceneWidgetPart013State0002 == null);
+          stackBooleanLocal3 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (null == MixedSupport016.sceneWidgetPart013State0001) && (ValidationStatusIcon.sceneWidgetPart013State0002 == null);
           ((SceneWidget) (Object) stackSceneWidgetLocal1).performAction1772(stackBooleanLocal2, stackBooleanLocal3);
           stackSceneWidgetLocal4 = TextFieldValidator.sceneWidgetState0151;
           stackBooleanLocal5 = false;
-          stackBooleanLocal6 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == UiComponentPart011.sceneWidgetPart013State0002);
+          stackBooleanLocal6 = (booleanArgument1) && (!booleanArgument3) && (!LobbyRoomRow.booleanState0202) && (MixedSupport016.sceneWidgetPart013State0001 == null) && (null == ValidationStatusIcon.sceneWidgetPart013State0002);
           ((SceneWidget) (Object) stackSceneWidgetLocal4).performAction1772(stackBooleanLocal5, stackBooleanLocal6);
           stackSceneWidgetLocal7 = SceneWidgetPart011.sceneWidgetState0115;
           stackBooleanLocal8 = false;

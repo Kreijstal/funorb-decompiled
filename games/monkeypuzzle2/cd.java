@@ -57,7 +57,7 @@ final class cd {
         RuntimeException var1 = null;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (!vh.c((byte) -93)) {
+          if (!ValidationStatusIcon.c((byte) -93)) {
             if (null != AwtRasterBuffer.field_f &&
               AwtRasterBuffer.field_f.focusLost) {
               wl.e((byte) 120);

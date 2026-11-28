@@ -16,7 +16,7 @@ final class nh {
           jh.field_R = rd.field_Nb;
           GameSession.field_D = th.field_cb;
           th.field_cb = param0;
-          rh.field_X = ModalDialogHost.field_K;
+          ValidationStatusWidget.field_X = ModalDialogHost.field_K;
           wm.field_hb = va.field_a;
           SoundCache.field_a = ByteStorage.field_f;
           ModalDialogHost.field_K = 0;

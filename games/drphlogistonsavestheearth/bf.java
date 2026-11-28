@@ -446,7 +446,7 @@ final class bf {
             2 == sd.field_e &&
             0 < AgeValidator.field_s[this.field_Q]) {
             if (0 == (1 & this.field_e)) {
-              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], GuestPlayConfirmationForm.field_Q[this.field_Q][this.field_E], TextHotspotBounds.field_t[this.field_Q], true);
+              this.field_f = ValidationStatusIcon.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], GuestPlayConfirmationForm.field_Q[this.field_Q][this.field_E], TextHotspotBounds.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
               this.field_f.drawAdditive((int)this.field_o, (int)this.field_N, 382);

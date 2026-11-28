@@ -33,7 +33,7 @@ abstract class MixedSupport115 extends DualNode {
           objectLocal4 = null;
           objectLocal5 = null;
           if (TextHotspotBounds.integerState0585 == 0 &&
-            UiComponentPart011.sceneWidgetPart013State0002 != null) {
+            ValidationStatusIcon.sceneWidgetPart013State0002 != null) {
             objectLocal5 = MixedSupport048.stringState0204;
           }
           if (2 == TextHotspotBounds.integerState0585 &&

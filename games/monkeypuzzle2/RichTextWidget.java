@@ -73,7 +73,7 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param3 != -1) {
           this.drawWidget(-61, 36, 65, -22);
         }
@@ -139,7 +139,7 @@ class RichTextWidget extends ButtonWidget {
         var2 = 0;
         if (!param0) {
           var17 = (String) null;
-          this.a(true, 111, (String) null);
+          this.setHotspotTooltip(true, 111, (String) null);
         }
         var3 = (TextWidgetRenderer) ((Object) this.field_h);
         var4 = var3.getTextLayout(-1, (UiWidget) (this));
@@ -592,7 +592,7 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    final void a(boolean param0, int param1, String param2) {
+    final void setHotspotTooltip(boolean param0, int param1, String param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;

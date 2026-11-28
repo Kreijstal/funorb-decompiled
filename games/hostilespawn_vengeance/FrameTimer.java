@@ -295,14 +295,14 @@ abstract class FrameTimer {
                     if (var5 == 0) {
                       ClientLookupTables.field_e.drawString(var8_ref_String, 572, 32 + var3, 16772608, 0);
                     } else {
-                      MouseWheelInput.a(7, 42 + var3, var6, 0, var8_ref_String, al.field_Z, 572);
+                      MouseWheelInput.a(7, 42 + var3, var6, 0, var8_ref_String, ValidationStatusWidget.field_Z, 572);
                     }
                   }
                 } else {
                   if (var5 == 0) {
                     ClientLookupTables.field_e.drawRightAligned(var8_ref_String, 68, var3 + 32, 16772608, 0);
                   } else {
-                    ec.a(7, var3 + 42, false, al.field_Z, 68, var6, var8_ref_String);
+                    ec.a(7, var3 + 42, false, ValidationStatusWidget.field_Z, 68, var6, var8_ref_String);
                   }
                   var2 += 24;
                 }
@@ -373,7 +373,7 @@ abstract class FrameTimer {
               if (var7Lifetime1 != 0) {
                 SoftwareRasterizer.fillRectangle(var5Lifetime1 + 24, var6Lifetime1 + 16, 9, 10, 16776960);
               }
-              stackIn_85_0 = al.field_Z;
+              stackIn_85_0 = ValidationStatusWidget.field_Z;
               stackIn_85_1 = Integer.toString(1 + var1_intLifetime2);
               stackIn_85_2 = var5Lifetime1 + 29;
               stackIn_85_3 = var6Lifetime1 + 26;

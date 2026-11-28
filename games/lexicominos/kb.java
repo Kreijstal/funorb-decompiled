@@ -17,7 +17,7 @@ abstract class kb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var1), "kb.C(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var1), "kb.C(" + param0 + ')');
         }
     }
 
@@ -1779,7 +1779,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "waitingfor_fonts");
                 if (null != var2) {
-                  li.field_P = ni.a((byte) -55, var2);
+                  ValidationStatusWidget.field_P = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "waitingfor_soundeffects");
                 if (var2 != null) {
@@ -2849,7 +2849,7 @@ abstract class kb {
                 }
                 var2 = StandardContentDialog.a(33, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  ld.field_G = ni.a((byte) -55, var2);
+                  ValidationStatusIcon.field_G = ni.a((byte) -55, var2);
                 }
                 var2 = StandardContentDialog.a(33, "mustlogin1");
                 if (null != var2) {
@@ -3056,7 +3056,7 @@ abstract class kb {
                   } else {
                     stackIn_2610_2 = "{...}";
                   }
-                  throw ld.wrapClientException((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
+                  throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
                 }
                 if (var4 != 0) {
                   stackIn_2618_0 = (!GameAppletShell.field_k);
@@ -3132,7 +3132,7 @@ abstract class kb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -3172,7 +3172,7 @@ abstract class kb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "kb.D(" + param0 + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "kb.D(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -265,7 +265,7 @@ final class RichTextLayout extends TextLayout {
               stackTextLineMetricsLocal8 = textLineMetricsLocal22;
               stackBitmapFontLocal9 = (BitmapFont) (bitmapFontArgument3);
               if (integerArgument6 == 3) {
-                stackIntegerLocal10 = this.computeInteger0230((byte) 64, bitmapFontArgument3.stringWidth(stringLocal21), stringLocal21, integerArgument4);
+                stackIntegerLocal10 = this.computeJustificationStep((byte) 64, bitmapFontArgument3.stringWidth(stringLocal21), stringLocal21, integerArgument4);
               } else {
                 stackIntegerLocal10 = 0;
               }

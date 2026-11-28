@@ -68,11 +68,11 @@ final class PetAttackAnimation extends EventAnimation {
           FridgeScreen.field_p = OhNoAnimation.field_w;
           if (255 != param1) {
             if (param1 < 100) {
-              ZombiesSpecial.field_p = wu.createAccountErrorResult(param1, (byte) 97, param2);
+              ZombiesSpecial.field_p = ValidationStatusIcon.createAccountErrorResult(param1, (byte) 97, param2);
               return;
             }
             if (param1 > 105) {
-              ZombiesSpecial.field_p = wu.createAccountErrorResult(param1, (byte) 97, param2);
+              ZombiesSpecial.field_p = ValidationStatusIcon.createAccountErrorResult(param1, (byte) 97, param2);
               return;
             }
             ZombiesSpecial.field_p = kw.createAccountSuggestionsResult(false, param3);

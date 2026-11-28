@@ -422,7 +422,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
               } else {
                 param2 = FullscreenFocusCanvas.field_b;
               }
-              j.field_e.a(bh.field_b, (byte) -34);
+              j.field_e.setAccountAndClearPassword(bh.field_b, (byte) -34);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -443,7 +443,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
                 return;
               }
               if (!fk.field_a) {
-                j.field_e.k(-112);
+                j.field_e.clearCredentials(-112);
                 return;
               }
             }

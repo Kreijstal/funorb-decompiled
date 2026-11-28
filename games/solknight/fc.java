@@ -55,7 +55,7 @@ final class fc extends IntrusiveNode {
             if (qc.field_i == AccountRequestState.field_e) {
               if (param2) {
                 var11 = (String) null;
-                MouseWheelInput.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
+                MouseWheelInput.field_a = pb.a(false, param4, ValidationStatusIcon.field_P, 0, (String) null);
               } else {
                 MouseWheelInput.field_a = FrameTimer.a(param0, (byte) 102, param4, false);
               }
@@ -112,7 +112,7 @@ final class fc extends IntrusiveNode {
             }
             if (NanoFrameTimer.field_h == AccountRequestState.field_e &&
               qd.b((byte) 127)) {
-              kc.field_P = AlphaWidgetContainer.field_N.readLong(10526);
+              ValidationStatusIcon.field_P = AlphaWidgetContainer.field_N.readLong(10526);
               MusicPatchPcmStream.field_s = AlphaWidgetContainer.field_N.readUnsignedByte(255);
               AlphaWidgetContainer.field_N.readUnsignedByte(param5 + 255);
               ob.field_l = AlphaWidgetContainer.field_N.readUnsignedShort(param5 - 103);
@@ -165,7 +165,7 @@ final class fc extends IntrusiveNode {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(param5 - 4476, ia.g(-63), "zap", new Object[]{ub.a(-62, kc.field_P)});
+                  JavaScriptBridge.callWithArguments(param5 - 4476, ia.g(-63), "zap", new Object[]{ub.a(-62, ValidationStatusIcon.field_P)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

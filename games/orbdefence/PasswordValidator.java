@@ -85,11 +85,11 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = vh.field_h;
             return stackIn_6_0;
           }
-          if (!kk.a(var3, var4, -1)) {
+          if (!ValidationStatusWidget.a(var3, var4, -1)) {
             stackIn_10_0 = vh.field_h;
             return stackIn_10_0;
           }
-          if (!this.b(param0, (byte) -36)) {
+          if (!this.containsEmailComponent(param0, (byte) -36)) {
             return nc.field_bb;
           }
           stackIn_14_0 = vh.field_h;
@@ -137,7 +137,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(String param0, byte param1) {
+    private final boolean containsEmailComponent(String param0, byte param1) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -227,7 +227,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_15_0 = DefaultTextWidgetRenderer.field_n;
             return stackIn_15_0;
           }
-          if (this.b(param1, (byte) -99)) {
+          if (this.containsEmailComponent(param1, (byte) -99)) {
             stackIn_19_0 = NodeHashTableIterator.field_f;
             return stackIn_19_0;
           }

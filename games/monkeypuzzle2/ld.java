@@ -21,14 +21,14 @@ final class ld {
         hk var1 = null;
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          vh.field_B.serviceOutput();
+          ValidationStatusIcon.field_B.serviceOutput();
           GameApplet.field_k.serviceOutput();
-          vg.field_J = vg.field_J - 1;
+          ValidationStatusWidget.field_J = ValidationStatusWidget.field_J - 1;
           if (param0) {
             ld.clearStaticReferences(126);
           }
-          if (vg.field_J == 0) {
-            vg.field_J = 200;
+          if (ValidationStatusWidget.field_J == 0) {
+            ValidationStatusWidget.field_J = 200;
             var1 = (hk) (bd.field_c.beginBackward((byte) -117));
             while (var1 != null) {
               if (!var1.field_h.isLinked(-3548)) {

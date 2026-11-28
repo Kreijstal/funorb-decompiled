@@ -69,7 +69,7 @@ final class bd {
             }
             this.field_c.draw(var6_int, var7);
           }
-          var6 = param4.b(param1, 32032);
+          var6 = param4.resolveDisplayText(param1, 32032);
           if (var6 != null &&
             param4.field_j != null &&
             this.field_n >= 0) {

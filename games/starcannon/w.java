@@ -130,7 +130,7 @@ final class w extends DefaultTextWidgetRenderer {
         Sprite var8 = null;
         var7 = StarCannon.field_A;
         try {
-          super.a(-71, param1);
+          super.copyStyleTo(-71, param1);
           if (param0 != 6) {
             var8 = (Sprite) null;
             this.a(77, (Sprite) null);

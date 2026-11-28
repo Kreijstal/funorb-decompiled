@@ -89,7 +89,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -226,7 +226,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
         try {
           this.field_L = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

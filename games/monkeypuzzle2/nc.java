@@ -21,7 +21,7 @@ final class nc {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        vh.a(v.field_b, (String) null, (byte) -53);
+        ValidationStatusIcon.a(v.field_b, (String) null, (byte) -53);
         if (param0 != 1) {
           field_c = (String) null;
         }

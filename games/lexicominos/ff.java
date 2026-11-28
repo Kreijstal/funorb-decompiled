@@ -212,7 +212,7 @@ final class ff {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

@@ -36,7 +36,7 @@ final class of {
         de.field_c[11] = cc.field_c;
         de.field_c[20] = ContextualRuntimeException.field_e;
         de.field_c[10] = uc.field_b;
-        de.field_c[18] = ob.field_M;
+        de.field_c[18] = ValidationStatusWidget.field_M;
         de.field_c[2] = dl.field_m;
         de.field_c[9] = SpriteState.field_q;
         de.field_c[7] = he.endGameLabel;

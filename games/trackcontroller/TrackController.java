@@ -41,10 +41,10 @@ public final class TrackController extends GameShell {
               }
               if (ib.field_a != -1) {
                 AsyncRequest.field_p[ib.field_a].c(-99);
-                decompiledFrameRemainder1 = (null != ua.field_L);
+                decompiledFrameRemainder1 = (null != ValidationStatusIcon.field_L);
                 if ((decompiledFrameRemainder1) &&
-                  (decompiledFrameRemainder1 = !(!ua.field_L.c(-127)))) {
-                  ua.field_L.tick(false, 103);
+                  (decompiledFrameRemainder1 = !(!ValidationStatusIcon.field_L.c(-127)))) {
+                  ValidationStatusIcon.field_L.tick(false, 103);
                   decompiledFrameRemainder0 = false;
                 }
               }
@@ -56,7 +56,7 @@ public final class TrackController extends GameShell {
                   sc.field_g = stackIn_50_0;
                 }
                 if (ib.field_a == -1) {
-                  ua.field_L.tick(true, 90);
+                  ValidationStatusIcon.field_L.tick(true, 90);
                 }
                 while (mh.e(127)) {
                 }
@@ -81,7 +81,7 @@ public final class TrackController extends GameShell {
                   }
                 } else {
                   sc.field_g = -1;
-                  ua.field_L.b(0);
+                  ValidationStatusIcon.field_L.b(0);
                 }
               }
               if (NodeHashTable.field_g == 63) {
@@ -101,8 +101,8 @@ public final class TrackController extends GameShell {
           if (1 != dd.field_o) {
             if (dd.field_o == 2) {
               if (!ProgressMessageDialog.s(106)) {
-                if (null != ua.field_L) {
-                  ua.field_L.g(param0 + 122);
+                if (null != ValidationStatusIcon.field_L) {
+                  ValidationStatusIcon.field_L.g(param0 + 122);
                 }
                 ib.field_a = IsaacRandom.field_e;
               } else {
@@ -120,7 +120,7 @@ public final class TrackController extends GameShell {
                   if (oe.field_e != 0) {
                     ib.field_a = 16;
                   } else {
-                    if (ua.field_L.score == 0) {
+                    if (ValidationStatusIcon.field_L.score == 0) {
                       sc.field_g = ib.field_a;
                       AsyncRequest.field_p[sc.field_g].a(10412, false);
                       dd.field_o = 3;
@@ -224,7 +224,7 @@ public final class TrackController extends GameShell {
           if (~sc.field_g == ~ib.field_a && (!(0 < NodeHashTable.field_g) ||
             dd.field_o != 0)) {
             if (ib.field_a == -1) {
-              ua.field_L.h(24661);
+              ValidationStatusIcon.field_L.h(24661);
             } else {
               AsyncRequest.field_p[ib.field_a].b(-1);
             }
@@ -236,14 +236,14 @@ public final class TrackController extends GameShell {
                 sc.field_g != -2) {
                 AsyncRequest.field_p[sc.field_g].b(param0 - 161);
               } else {
-                ua.field_L.h(24661);
+                ValidationStatusIcon.field_L.h(24661);
               }
               var3Lifetime1 = -NodeHashTable.field_g + 63;
             } else {
               if (ib.field_a != -1) {
                 AsyncRequest.field_p[ib.field_a].b(-1);
               } else {
-                ua.field_L.h(param0 ^ 24821);
+                ValidationStatusIcon.field_L.h(param0 ^ 24821);
               }
               var3Lifetime1 = NodeHashTable.field_g;
             }
@@ -462,7 +462,7 @@ public final class TrackController extends GameShell {
         StripedProgressWidget.clearStaticReferences((byte) 16);
         NameSuggestionsPanel.b(false);
         RichTextWidget.c(false);
-        ua.clearStaticReferences(param0 - 219);
+        ValidationStatusIcon.clearStaticReferences(param0 - 219);
         ed.j(param0 - 3726);
         TextFieldValidator.clearStaticReferences((byte) 73);
         ka.clearStaticReferences(true);

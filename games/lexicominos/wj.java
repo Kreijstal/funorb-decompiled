@@ -95,7 +95,7 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -630,7 +630,7 @@ final class wj extends IntrusiveNode {
           } else {
             stackIn_208_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_207_0), ((StringBuilder) (Object) stackIn_207_1).append(stackIn_208_2).append(')').toString());
         }
     }
 

@@ -333,9 +333,9 @@ final class ee {
           }
           var4_ref_StringLifetime1 = var1.readString(-1);
           var5 = var1.readString(-1);
-          var6 = dd.a((byte) 104, var4_ref_StringLifetime1);
+          var6 = ValidationStatusIcon.a((byte) 104, var4_ref_StringLifetime1);
           if (var6 == null) {
-            var6 = dd.a((byte) 104, var5);
+            var6 = ValidationStatusIcon.a((byte) 104, var5);
             if (null != var6) {
               WidgetContainer.field_z.a(false, var6, (long)StripedProgressWidget.a((byte) 92, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }

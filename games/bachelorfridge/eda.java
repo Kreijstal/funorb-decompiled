@@ -64,19 +64,19 @@ final class eda extends TileEffect {
           return;
         }
         if (param1 - param2 < DualLinkNode.field_l) {
-          wu.a(param4, param0, param2, param1, (byte) -23);
+          ValidationStatusIcon.a(param4, param0, param2, param1, (byte) -23);
           return;
         }
         if (param1 + param2 > SnowAnimation.field_x) {
-          wu.a(param4, param0, param2, param1, (byte) -23);
+          ValidationStatusIcon.a(param4, param0, param2, param1, (byte) -23);
           return;
         }
         if (an.field_q > -param2 + param0) {
-          wu.a(param4, param0, param2, param1, (byte) -23);
+          ValidationStatusIcon.a(param4, param0, param2, param1, (byte) -23);
           return;
         }
         if (param0 + param2 > ha.field_n) {
-          wu.a(param4, param0, param2, param1, (byte) -23);
+          ValidationStatusIcon.a(param4, param0, param2, param1, (byte) -23);
           return;
         }
         EventAnimation.a(true, param4, param1, param2, param0);

@@ -121,7 +121,7 @@ final class km extends sd {
         this(jd.field_s, param0);
     }
 
-    final String c(UiWidget param0, int param1) {
+    final String resolveDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RgbSprite[] var4 = null;
         String stackIn_3_0 = null;
@@ -134,7 +134,7 @@ final class km extends sd {
             var4 = (RgbSprite[]) null;
             km.a(-66, -3, -19, (RgbSprite[]) null, -48, -1);
           }
-          stackIn_3_0 = wj.a(param0.field_n.length(), 512, '*');
+          stackIn_3_0 = ValidationStatusIcon.a(param0.field_n.length(), 512, '*');
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

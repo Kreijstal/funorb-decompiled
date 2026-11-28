@@ -305,7 +305,7 @@ abstract class ob extends GameAppletShell {
         if (af.field_u == 11) {
           if (fh.field_c != null && (!fh.field_c.ensureIndexLoaded((byte) 84) ||
             !fh.field_c.tryLoadAllGroups(-1))) {
-            pa.a(true, qn.a(ge.field_d, ic.field_g, false, fh.field_c), 0.0f);
+            pa.a(true, ValidationStatusIcon.a(ge.field_d, ic.field_g, false, fh.field_c), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

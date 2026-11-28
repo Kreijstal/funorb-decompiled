@@ -60,7 +60,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void exitFullscreen(PlatformTaskDispatcher param0, int param1) {
         try {
-          ng.exitFullscreenFrame(param0, 99, this.fullscreenFrame);
+          ValidationStatusIcon.exitFullscreenFrame(param0, 99, this.fullscreenFrame);
           if (param1 != 0) {
             java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
             this.focusGained((java.awt.event.FocusEvent) null);

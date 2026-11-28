@@ -983,7 +983,7 @@ final class LevelRenderer {
                     if (var26Lifetime1Lifetime1 > 10 &&
                       var26Lifetime1Lifetime1 <= 128) {
                       var35 = new Model(dc.field_J[var25], false, true, true, true);
-                      var35.b(var26Lifetime1Lifetime1, 128, var26Lifetime1Lifetime1);
+                      var35.scaleVertices(var26Lifetime1Lifetime1, 128, var26Lifetime1Lifetime1);
                       var36 = this.field_a[var24].buildClippedShadowMesh(var35, AccountCreationResultPanel.field_ob[var25][0], AccountCreationResultPanel.field_ob[var25][1], (byte) -101);
                       if (var36 != null &&
                         var36.field_T < 4096 &&
@@ -1162,7 +1162,7 @@ final class LevelRenderer {
               if (var27_int < 0) {
                 var27_int = 0;
               }
-              DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(var27_int)}, lr.field_T, -114), 16777215, -1, 320, 420, 2);
+              DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(var27_int)}, ValidationStatusIcon.field_T, -114), 16777215, -1, 320, 420, 2);
               if (param4.field_w == 2) {
                 var28 = param4.field_E;
                 if (param0 >= 0) {

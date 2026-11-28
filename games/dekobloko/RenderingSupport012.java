@@ -298,7 +298,7 @@ final class RenderingSupport012 {
           return (String) null;
         }
         if (MixedSupport025.uiComponentPart013State0001 != null) {
-          stringLocal1 = MixedSupport025.uiComponentPart013State0001.computeString0633(80);
+          stringLocal1 = MixedSupport025.uiComponentPart013State0001.getAccountIdentifier(80);
         }
         if (stringLocal1.length() == 0) {
           stringLocal1 = ProxyAuthenticationRequiredException.computeString0337((byte) 122);

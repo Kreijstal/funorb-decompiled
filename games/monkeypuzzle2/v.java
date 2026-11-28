@@ -22,10 +22,10 @@ final class v {
     final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4) {
         try {
           AudioOutput.configureAudio(param0, param1, 10);
-          vh.field_B = AudioOutput.createOutput(param3, param4, 1, param2);
+          ValidationStatusIcon.field_B = AudioOutput.createOutput(param3, param4, 1, param2);
           GameApplet.field_k = AudioOutput.createOutput(param3, param4, 0, 22050);
           qb.field_c = new PcmStreamMixer();
-          vh.field_B.setRootStream(qb.field_c);
+          ValidationStatusIcon.field_B.setRootStream(qb.field_c);
           i.field_p = new PcmStreamMixer();
           GameApplet.field_k.setRootStream(i.field_p);
         } catch (RuntimeException runtimeException) {

@@ -5,7 +5,7 @@ final class tf extends IntrusiveNode {
     static int field_o;
     int field_n;
     static String field_k;
-    static bn[] field_l;
+    static MeshData[] field_l;
     long field_m;
     byte[] field_j;
 

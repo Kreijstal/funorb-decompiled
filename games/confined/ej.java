@@ -80,7 +80,7 @@ final class ej {
         if (param0 > -125) {
           String var3 = (String) null;
           ej.a((String) null, (ResourceArchive) null, (ResourceArchive) null, (String) null, 120);
-          if (rh.field_ab == this) {
+          if (ValidationStatusWidget.field_ab == this) {
             return true;
           }
           if (this != BoundedRandomAccessFile.field_a) {
@@ -88,7 +88,7 @@ final class ej {
           }
           return true;
         }
-        if (rh.field_ab == this) {
+        if (ValidationStatusWidget.field_ab == this) {
           return true;
         }
         if (this == BoundedRandomAccessFile.field_a) {

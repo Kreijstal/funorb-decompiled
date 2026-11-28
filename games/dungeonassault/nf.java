@@ -258,7 +258,7 @@ final class nf extends DualLinkNode {
               } else {
                 param2 = d.field_b;
               }
-              wo.field_e.a(-12349, DiskArchiveRequest.field_C);
+              wo.field_e.setAccountAndClearPassword(-12349, DiskArchiveRequest.field_C);
             }
             var3_int = 1;
             if (10 == param0) {
@@ -277,7 +277,7 @@ final class nf extends DualLinkNode {
             if (param0 != 256 &&
               param0 != 10 &&
               !MenuScreen.field_t) {
-              wo.field_e.i(22377);
+              wo.field_e.clearCredentials(22377);
             }
           }
           if (!param1) {

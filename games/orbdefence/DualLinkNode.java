@@ -42,9 +42,9 @@ class DualLinkNode extends IntrusiveNode {
 
     final static void a(int param0, int param1, boolean param2, int param3) {
         RichTextWidget.field_O = 0;
-        kk.field_S = param3;
+        ValidationStatusWidget.field_S = param3;
         ProxyAuthenticationRequiredException.field_e = param0;
-        if (!ConfirmedEmailAvailabilityValidator.a((byte) 112, kk.field_S)) {
+        if (!ConfirmedEmailAvailabilityValidator.a((byte) 112, ValidationStatusWidget.field_S)) {
           if (param1 != 2) {
             field_j = -61;
             return;
@@ -52,11 +52,11 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         int var4 = 0;
-        if (kk.field_S == 7) {
+        if (ValidationStatusWidget.field_S == 7) {
           var4 = -1;
         }
-        nc.field_cb[kk.field_S].a((byte) -108, var4, param2);
-        if (kk.field_S != 7) {
+        nc.field_cb[ValidationStatusWidget.field_S].a((byte) -108, var4, param2);
+        if (ValidationStatusWidget.field_S != 7) {
           if (param1 != 2) {
             field_j = -61;
             return;

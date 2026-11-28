@@ -21,7 +21,7 @@ final class aq extends wc {
         }
     }
 
-    final String d(UiWidget param0, int param1) {
+    final String resolveDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

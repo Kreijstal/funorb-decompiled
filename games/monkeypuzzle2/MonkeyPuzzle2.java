@@ -41,7 +41,7 @@ public final class MonkeyPuzzle2 extends bi {
         try {
           TextLayout.a(-11449);
           if (AwtRasterBuffer.field_f != null) {
-            vh.a(AwtRasterBuffer.field_f, (byte) -117);
+            ValidationStatusIcon.a(AwtRasterBuffer.field_f, (byte) -117);
             AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
           }
           if (param0) {
@@ -237,8 +237,8 @@ public final class MonkeyPuzzle2 extends bi {
           StripedProgressWidget.clearDeclaredStaticReferences(7434);
           NameSuggestionsPanel.clearStaticReferences((byte) 111);
           RichTextWidget.d((byte) 117);
-          vh.clearDeclaredStaticReferences(-9473);
-          vg.clearDeclaredStaticReferences(-3114);
+          ValidationStatusIcon.clearDeclaredStaticReferences(-9473);
+          ValidationStatusWidget.clearDeclaredStaticReferences(-3114);
           em.resetDeclaredStaticState(-27714);
           TextFieldValidator.e((byte) -95);
           fl.clearStaticReferences((byte) -45);
@@ -442,7 +442,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (TextFieldValidator.d(-26)) {
             this.i(250);
             if (TextFieldValidator.d(-76)) {
-              if (vg.c(false)) {
+              if (ValidationStatusWidget.c(false)) {
                 discarded$0 = this.b((byte) 36, false);
               }
               return;
@@ -464,7 +464,7 @@ public final class MonkeyPuzzle2 extends bi {
                   if ((var2_int == 1 ||
                     var2_int == 2)) {
                     if (AwtRasterBuffer.field_f != null) {
-                      vh.a(AwtRasterBuffer.field_f, (byte) 47);
+                      ValidationStatusIcon.a(AwtRasterBuffer.field_f, (byte) 47);
                       AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
                       AwtRasterBuffer.field_f = null;
                     }
@@ -608,7 +608,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (param0 != 15245) {
             field_E = (String) null;
           }
-          while (vh.a(ok.field_c, (byte) 125)) {
+          while (ValidationStatusIcon.a(ok.field_c, (byte) 125)) {
             this.k(-28710);
           }
           SocketConnector.a((byte) -71, 0);

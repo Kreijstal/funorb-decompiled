@@ -12,7 +12,7 @@ final class uj {
         String var1 = "";
         if (param0 < -98) {
           if (LevelView.field_y != null) {
-            var1 = LevelView.field_y.d(true);
+            var1 = LevelView.field_y.getAccountIdentifier(true);
           }
           if (var1.length() == 0) {
             var1 = li.d(-579139480);

@@ -58,7 +58,7 @@ final class pi {
             }
             this.field_d.draw(var6_int, var7);
           }
-          var6 = param4.b(param1, -444136767);
+          var6 = param4.resolveDisplayText(param1, -444136767);
           if (var6 != null &&
             null != param4.field_u &&
             this.field_f >= 0) {

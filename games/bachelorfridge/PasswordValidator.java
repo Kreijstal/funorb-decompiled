@@ -32,7 +32,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_6_0 = FoodShopPanel.field_f;
             return stackIn_6_0;
           }
-          if (this.a(true, param0)) {
+          if (this.containsEmailComponent(true, param0)) {
             stackIn_10_0 = FoodShopPanel.field_f;
             return stackIn_10_0;
           }
@@ -116,7 +116,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_13_0 = uv.field_k;
             return stackIn_13_0;
           }
-          if (this.a(true, param1)) {
+          if (this.containsEmailComponent(true, param1)) {
             stackIn_16_0 = um.field_b;
             return stackIn_16_0;
           }
@@ -151,7 +151,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean a(boolean param0, String param1) {
+    private final boolean containsEmailComponent(boolean param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

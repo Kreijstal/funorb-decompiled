@@ -37,8 +37,8 @@ final class rb {
           if (ContentTransitionDialog.field_bb[param0] > ContentTransitionDialog.field_bb[param3]) {
             return false;
           }
-          var4 = oa.field_a[param0] - (-oa.field_c[param0] - dd.field_L[param0]);
-          var5 = dd.field_L[param3] + (oa.field_a[param3] + oa.field_c[param3]);
+          var4 = oa.field_a[param0] - (-oa.field_c[param0] - ValidationStatusIcon.field_L[param0]);
+          var5 = ValidationStatusIcon.field_L[param3] + (oa.field_a[param3] + oa.field_c[param3]);
           if (var4 < var5) {
             return true;
           }
@@ -60,8 +60,8 @@ final class rb {
         if (a.field_c[param0] > a.field_c[param3]) {
           return false;
         }
-        var4Lifetime1 = oa.field_a[param0] - (-oa.field_c[param0] - dd.field_L[param0]);
-        var5Lifetime1 = dd.field_L[param3] + (oa.field_a[param3] + oa.field_c[param3]);
+        var4Lifetime1 = oa.field_a[param0] - (-oa.field_c[param0] - ValidationStatusIcon.field_L[param0]);
+        var5Lifetime1 = ValidationStatusIcon.field_L[param3] + (oa.field_a[param3] + oa.field_c[param3]);
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

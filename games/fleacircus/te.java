@@ -91,7 +91,7 @@ final class te {
             }
             this.field_c.draw(var6_int, var7);
           }
-          var6 = param0.c(35, param1);
+          var6 = param0.resolveDisplayText(35, param1);
           if (param2 != 0) {
             return;
           }

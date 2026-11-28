@@ -24,7 +24,7 @@ final class th {
         }
         oa.field_a[pb.field_b] = param3;
         oa.field_c[pb.field_b] = param5;
-        dd.field_L[pb.field_b] = param2;
+        ValidationStatusIcon.field_L[pb.field_b] = param2;
         int var6 = param5 + param3 + param2;
         int var7 = param1 == ~var6 ? 0 : 1000 * param3 / var6;
         ContentTransitionDialog.field_bb[pb.field_b] = var7;

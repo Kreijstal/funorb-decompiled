@@ -546,7 +546,7 @@ public final class OrbDefence extends NetworkGameClient {
         StripedProgressWidget.clearStaticReferences((byte) 120);
         NameSuggestionsPanel.releaseDeclaredStaticReferences(29858);
         RichTextWidget.releaseDeclaredStaticReferences(-3213);
-        kk.discardDeclaredStaticReferences(79);
+        ValidationStatusWidget.discardDeclaredStaticReferences(79);
         of.clearStaticReferences((byte) -83);
         TextFieldValidator.g(-104);
         qb.clearStaticReferences((byte) -83);
@@ -643,14 +643,14 @@ public final class OrbDefence extends NetworkGameClient {
           return;
         }
         SoftwareRasterizer.clearRaster();
-        if (~kk.field_S != ~kf.field_c) {
+        if (~ValidationStatusWidget.field_S != ~kf.field_c) {
           if (5 <= RichTextWidget.field_O) {
-            if (kk.field_S != -1) {
-              if (kk.field_S == 1 &&
+            if (ValidationStatusWidget.field_S != -1) {
+              if (ValidationStatusWidget.field_S == 1 &&
                 il.field_f != null) {
                 il.field_f.a(2, false);
               }
-              nc.field_cb[kk.field_S].b((byte) -119);
+              nc.field_cb[ValidationStatusWidget.field_S].b((byte) -119);
             } else {
               il.field_f.a(2, false);
             }
@@ -733,7 +733,7 @@ public final class OrbDefence extends NetworkGameClient {
         this.a(false, (byte) 88, 10, 3, 1, 0, 2, 60);
         int var3 = 112 / ((param0 + 4) / 39);
         MidiPcmStream var2 = new MidiPcmStream();
-        var2.a(128, 9, (byte) 125);
+        var2.setChannelProgram(128, 9, (byte) 125);
         gj.a(22050, var2, true, 1024, (java.awt.Component) ((Object) GameAppletShell.field_f), wc.field_c);
         he.field_C = 16777215;
         lf.field_e = 15632639;
@@ -917,7 +917,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (ContentTransitionDialog.field_N != null) {
           for (var3 = 0; 15 > var3; var3++) {
             if (null != ee.field_b[var3] &&
-              !ml.field_c.a(ContentTransitionDialog.field_N, cj.field_b, (byte) 31, ee.field_b[var3], 176400)) {
+              !ml.field_c.prepareTrackSamples(ContentTransitionDialog.field_N, cj.field_b, (byte) 31, ee.field_b[var3], 176400)) {
               SoundCache.resetFrameTiming(param1 ^ 0);
               return false;
             }
@@ -1120,7 +1120,7 @@ public final class OrbDefence extends NetworkGameClient {
               } else {
                 kf.field_c = TextLayout.field_a;
               }
-              kk.field_S = kf.field_c;
+              ValidationStatusWidget.field_S = kf.field_c;
               RichTextWidget.field_O = 9;
               lc.field_r = 3;
             }
@@ -1136,7 +1136,7 @@ public final class OrbDefence extends NetworkGameClient {
             }
           }
         } else {
-          if (~kf.field_c == ~kk.field_S) {
+          if (~kf.field_c == ~ValidationStatusWidget.field_S) {
             if (kf.field_c != -1) {
               nc.field_cb[kf.field_c].b(param0);
             } else {
@@ -1148,7 +1148,7 @@ public final class OrbDefence extends NetworkGameClient {
               if (kf.field_c == 2) {
                 SingleChildWidgetContainer.field_x = null;
               }
-              kf.field_c = kk.field_S;
+              kf.field_c = ValidationStatusWidget.field_S;
               RichTextWidget.field_O = 0;
             }
           }

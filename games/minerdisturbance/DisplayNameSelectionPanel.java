@@ -252,7 +252,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     private final int a(int param0, UiWidget param1, String param2, boolean param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        w var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -266,7 +266,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           var10 = new LabeledWidgetContainer(20, param0, 120 + param6, 25, param1, param3, 120, 3, bn.field_d, 16777215, param5);
           this.addChild(-1, var10);
-          var9 = new w(((FieldValidatorProvider) ((Object) param1)).getFieldValidator(35), param2, 126, var10.field_q + param0, param6 + 25, param4);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param1)).getFieldValidator(35), param2, 126, var10.field_q + param0, param6 + 25, param4);
           var9.field_y = (WidgetEventListener) (this);
           this.addChild(-1, var9);
           stackIn_1_0 = var9.field_q + var10.field_q;
@@ -504,7 +504,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           }
           return;
         }
-        stackIn_110_0 = (CipherPacketBuffer.field_w + qn.field_K <= hk.field_e) ? 0 : 1;
+        stackIn_110_0 = (CipherPacketBuffer.field_w + ValidationStatusIcon.field_K <= hk.field_e) ? 0 : 1;
         var2Lifetime2 = stackIn_110_0;
         if (-1 == param0) {
           hk.field_e = 0;

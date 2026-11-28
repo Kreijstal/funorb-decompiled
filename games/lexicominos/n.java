@@ -29,7 +29,7 @@ final class n {
           param0.field_b = this.field_b;
           param0.field_a = this.field_a;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "n.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "n.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class n {
             }
             this.field_j.draw(var6_int, var7);
           }
-          var6 = param0.c(349, param1);
+          var6 = param0.resolveDisplayText(349, param1);
           if (var6 != null &&
             null != param0.field_f) {
             if (this.field_d < 0) {
@@ -183,7 +183,7 @@ final class n {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class n {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "n.M(" + param0 + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "n.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -330,7 +330,7 @@ final class n {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 

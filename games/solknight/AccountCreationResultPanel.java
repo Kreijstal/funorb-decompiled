@@ -55,7 +55,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
               var4 = param2.message;
               if (param2.statusCode == 248) {
                 if (!param0) {
-                  pk.i(918092705);
+                  ValidationStatusWidget.i(918092705);
                 }
                 this.field_wb = true;
                 var4 = ce.field_a;

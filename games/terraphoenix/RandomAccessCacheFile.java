@@ -73,7 +73,7 @@ final class RandomAccessCacheFile {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_6_0 = (dd.a((byte) 104, param1) != null);
+            stackIn_6_0 = (ValidationStatusIcon.a((byte) 104, param1) != null);
             return stackIn_6_0;
           }
           return true;

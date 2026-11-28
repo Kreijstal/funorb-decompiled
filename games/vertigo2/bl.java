@@ -117,7 +117,7 @@ final class bl extends l {
             mn.field_q[var4 - 2] = dc.field_M;
             gd.field_s[var4 - 2] = 0;
             gi.field_n[0] = 4;
-            mn.field_q[var4 - 1] = lr.field_N;
+            mn.field_q[var4 - 1] = ValidationStatusIcon.field_N;
             gd.field_s[var4 - 1] = 1;
             gi.field_n[1] = 5;
           } else if (TextFieldValidator.field_j == 1) {
@@ -133,7 +133,7 @@ final class bl extends l {
               mn.field_q[var5] = MovingLevelTile.field_w[var5];
             }
             mn.field_q[var4 - 2] = "";
-            mn.field_q[-1 + var4] = lr.field_N;
+            mn.field_q[-1 + var4] = ValidationStatusIcon.field_N;
             gd.field_s[var4 - 1] = 0;
             gi.field_n[0] = 5;
           } else if (2 != TextFieldValidator.field_j) {
@@ -154,7 +154,7 @@ final class bl extends l {
                 mn.field_q[var5] = MovingLevelTile.field_w[var5];
               }
               mn.field_q[var4 - 2] = "";
-              mn.field_q[var4 - 1] = lr.field_N;
+              mn.field_q[var4 - 1] = ValidationStatusIcon.field_N;
               gd.field_s[-1 + var4] = 0;
               gi.field_n[0] = 5;
             } else if (TextFieldValidator.field_j == 4) {
@@ -170,7 +170,7 @@ final class bl extends l {
                 mn.field_q[var5] = MovingLevelTile.field_w[var5];
               }
               mn.field_q[-2 + var4] = "";
-              mn.field_q[var4 - 1] = lr.field_N;
+              mn.field_q[var4 - 1] = ValidationStatusIcon.field_N;
               gd.field_s[-1 + var4] = 0;
               gi.field_n[0] = 5;
             } else {
@@ -192,7 +192,7 @@ final class bl extends l {
               mn.field_q[var4 - 2] = eo.field_n;
               gd.field_s[-2 + var4] = 0;
               gi.field_n[0] = 3;
-              mn.field_q[-1 + var4] = lr.field_N;
+              mn.field_q[-1 + var4] = ValidationStatusIcon.field_N;
               gd.field_s[var4 - 1] = 1;
               gi.field_n[1] = 5;
             }
@@ -282,7 +282,7 @@ final class bl extends l {
               }
               stackIn_44_0[stackIn_44_1] = stackIn_47_2;
             }
-            qe.field_cb = gk.correctedCurrentTimeMillis(95);
+            ValidationStatusWidget.field_cb = gk.correctedCurrentTimeMillis(95);
           }
           ve.field_d.itemCount = gi.field_n.length;
           var3_intLifetime1 = 0;

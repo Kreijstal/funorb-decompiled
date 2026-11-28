@@ -120,12 +120,12 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             if (var4 == 45) {
               if (var3 == 0 ||
                 var3 == -1 + var2_int) {
-                stackIn_15_0 = je.field_M;
+                stackIn_15_0 = ValidationStatusIcon.field_M;
                 return stackIn_15_0;
               }
             } else {
               if (kb.field_j.indexOf(var4) == -1) {
-                stackIn_19_0 = je.field_M;
+                stackIn_19_0 = ValidationStatusIcon.field_M;
                 return stackIn_19_0;
               }
             }

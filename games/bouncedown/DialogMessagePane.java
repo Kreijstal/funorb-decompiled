@@ -216,7 +216,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
           DirectByteStorage.field_d = SectorCacheStore.a(param0, "commonui", (byte) 114, "frame_bottom");
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");
-          la.field_E = ModalDialog.a("commonui", param0, false, "validation");
+          ValidationStatusIcon.field_E = ModalDialog.a("commonui", param0, false, "validation");
           GzipDecompressor.field_d = (BitmapFont) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
           FrameTimer.field_a = (BitmapFont) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
           ne.field_v = (BitmapFont) ((Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui"));
@@ -224,7 +224,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             field_E = (lj) null;
           }
           var17 = new RgbSprite(param3.getFileByName("button.gif", "", 124), (java.awt.Component) ((Object) ch.field_h));
-          s.a(param0, "dropdown", 28576, "commonui");
+          ValidationStatusWidget.a(param0, "dropdown", 28576, "commonui");
           var5 = ff.a("screen_options", param0, (byte) 124, "commonui");
           FullscreenStatusDialog.field_R = new we[4];
           ClientException.field_d = new we[4];

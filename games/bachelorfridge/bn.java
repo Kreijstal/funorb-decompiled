@@ -49,8 +49,8 @@ final class bn extends TileEffect {
             }
           } else {
             var3_int = 0;
-            if (nf.field_K) {
-              nf.field_K = false;
+            if (ValidationStatusWidget.field_K) {
+              ValidationStatusWidget.field_K = false;
               var3_int = 1;
             }
             lha.a(DiveBomberAnimation.f(param0 - 10284), dea.field_o, wea.b(false), var3_int != 0, 3);

@@ -53,7 +53,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final void h(int param0) {
+    final void clearCredentials(int param0) {
         this.field_C.clearText((byte) 85);
         if (param0 != 16180) {
           return;
@@ -245,7 +245,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final String i(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (param0 >= -68) {
           this.field_B = (InteractiveWidget) null;
         }
@@ -255,7 +255,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         return this.field_C.text;
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountAndClearPassword(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
@@ -274,7 +274,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     public final void onTextChanged(int param0, EditableTextField param1) {
         try {
           if (param0 <= 3) {
-            this.i(127);
+            this.getAccountIdentifier(127);
           }
         } catch (RuntimeException runtimeException) {
           throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

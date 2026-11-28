@@ -31,7 +31,7 @@ final class MixedSupport050 extends MixedSupport024 {
         stringState0208 = null;
     }
 
-    final String computeString0020(UiComponent uiComponentArgument1, byte byteArgument2) {
+    final String resolveDisplayText(UiComponent uiComponentArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         String stackStringLocal3 = null;

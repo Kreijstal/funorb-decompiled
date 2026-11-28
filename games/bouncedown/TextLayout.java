@@ -373,7 +373,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, int param1, int param2, String param3) {
+    final int computeJustificationStep(int param0, int param1, int param2, String param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;

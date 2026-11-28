@@ -367,10 +367,10 @@ final class lc extends ro {
           ModalDialogHost.a(0, dd.field_c.field_x, var39, (byte) -58);
           var40 = new Model(new MeshGeometry(8, 2, 2));
           var40.field_q = new mp(2);
-          var40.field_l.a(-60, -60, 0);
-          var40.field_l.a(60, -60, 0);
-          var40.field_l.a(-60, 60, 0);
-          var40.field_l.a(60, 60, 0);
+          var40.field_l.findOrAddVertex(-60, -60, 0);
+          var40.field_l.findOrAddVertex(60, -60, 0);
+          var40.field_l.findOrAddVertex(-60, 60, 0);
+          var40.field_l.findOrAddVertex(60, 60, 0);
           oj.a(3, (short) 0, 0, false, true, 1, 0, (short) -1, 2, var40);
           oj.a(1, (short) 0, 3, false, true, 2, 3, (short) -1, 1, var40);
           var9 = TriangleRasterizer.field_l[1664];
@@ -399,7 +399,7 @@ final class lc extends ro {
             var15.bindAsRenderTarget();
             TriangleRasterizer.useRasterClip();
             var40.field_l.field_A[0] = var3[var14Lifetime2];
-            var40.field_l.field_m[1] = (short)TriangleRasterizer.field_c.b((int) var3[var14Lifetime2]);
+            var40.field_l.field_m[1] = (short)TriangleRasterizer.field_c.getAverageTextureColor((int) var3[var14Lifetime2]);
             var40.field_q.field_v = null;
             var40.field_k = null;
             var11.a(0, 80, 1365, 0, -1, 0);

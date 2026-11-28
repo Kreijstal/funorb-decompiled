@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class tk {
-    static bn field_i;
+    static MeshData field_i;
     static String field_c;
     static BitPacketBuffer field_h;
     static String field_f;
@@ -104,7 +104,7 @@ final class tk {
           try {
             if (false) throw (IOException) null;
             if (0 <= var2_int &&
-              ea.i((byte) -128) <= 30000L) {
+              ValidationStatusWidget.i((byte) -128) <= 30000L) {
               return false;
             }
             ImageProducerRasterBuffer.d(65280);

@@ -275,7 +275,7 @@ final class kl extends IntrusiveNode {
     final static String a(byte param0) {
         String var1 = "";
         if (null != af.field_r) {
-          var1 = af.field_r.f((byte) -76);
+          var1 = af.field_r.getAccountIdentifier((byte) -76);
         }
         if (param0 != 124) {
           kl.a((byte) 55);

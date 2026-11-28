@@ -27,7 +27,7 @@ final class ProgressDialog extends ResizableModalDialog {
           AccountCreationResultPanel.field_pb = new DiskCacheWorker(param3);
           nh.field_a = new pg(kb.field_b, AccountCreationResultPanel.field_pb);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "uk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "uk.M(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class ProgressDialog extends ResizableModalDialog {
           this.field_S = false;
           this.addChild((byte) 70, this.field_X);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "uk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class ProgressDialog extends ResizableModalDialog {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -132,7 +132,7 @@ final class ProgressDialog extends ResizableModalDialog {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ProgressDialog extends ResizableModalDialog {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -215,7 +215,7 @@ final class ProgressDialog extends ResizableModalDialog {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var1_ref), "uk.A(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var1_ref), "uk.A(" + param0 + ')');
         }
     }
 

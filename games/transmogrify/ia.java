@@ -499,16 +499,16 @@ final class ia extends IntrusiveNode {
             }
             return;
           }
-          if (ve.field_B[11] &&
+          if (ValidationStatusIcon.field_B[11] &&
             0 == SessionGameApplet.field_l) {
             SessionGameApplet.field_l = -1;
           }
-          if (ve.field_B[1] &&
+          if (ValidationStatusIcon.field_B[1] &&
             ConfirmedEmailAvailabilityValidator.field_j >= 2) {
             stackIn_205_0 = !(FullscreenStatusDialog.field_S);
             FullscreenStatusDialog.field_S = stackIn_205_0;
           }
-          if (ve.field_B[12]) {
+          if (ValidationStatusIcon.field_B[12]) {
             SessionGameApplet.field_l = 0;
           }
           scanLoop5: while (true) {
@@ -675,7 +675,7 @@ final class ia extends IntrusiveNode {
             }
             if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
               ch.field_d == 35 &&
-              ve.field_B[82]) {
+              ValidationStatusIcon.field_B[82]) {
               TextLayout.dumpRackState(31370);
               continue;
             }

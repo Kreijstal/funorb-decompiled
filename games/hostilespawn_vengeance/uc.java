@@ -56,12 +56,12 @@ final class uc {
         try {
           var1_int = 0 / ((62 - param0) / 57);
           cb.field_d = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var2 = wj.field_J.length;
+          var2 = ValidationStatusIcon.field_J.length;
           var22 = new int[var2];
           var21 = var22;
           var3 = var21;
           for (var4 = 0; var4 < var2; var4++) {
-            var5_ref_pf = wj.field_J[var4];
+            var5_ref_pf = ValidationStatusIcon.field_J[var4];
             var5_ref_pf.c(-103);
             AccountCreationResultPanel.c(var4, -5878);
             var6 = var5_ref_pf.field_J + var5_ref_pf.field_d >> 1;
@@ -99,15 +99,15 @@ final class uc {
           var13Lifetime1 = (int)((double)var13Lifetime1 * var11Lifetime1);
           var14Lifetime1 = (int)((double)var14Lifetime1 * var11Lifetime1);
           var15 = (int)((double)var15 * var11Lifetime1);
-          for (var16 = 0; wj.field_J.length > var16; var16++) {
+          for (var16 = 0; ValidationStatusIcon.field_J.length > var16; var16++) {
             var17 = 0;
-            for (var18_int = 1; wj.field_J.length > var18_int; var18_int++) {
+            for (var18_int = 1; ValidationStatusIcon.field_J.length > var18_int; var18_int++) {
               if (var22[var18_int] > var22[var17]) {
                 var17 = var18_int;
               }
             }
             var22[var17] = -2147483648;
-            var18 = wj.field_J[var17];
+            var18 = ValidationStatusIcon.field_J[var17];
             AccountCreationResultPanel.c(var17, -5878);
             for (var19 = 0; 3 > var19; var19++) {
               vg.field_a[var19] = vg.field_a[var19] + ClientLookupTables.field_f[var16][var19];

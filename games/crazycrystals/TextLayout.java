@@ -11,7 +11,7 @@ abstract class TextLayout {
     static String field_c;
     static int field_a;
 
-    final int a(byte param0, int param1, String param2, int param3) {
+    final int computeJustificationStep(byte param0, int param1, String param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -225,7 +225,7 @@ abstract class TextLayout {
         int stackIn_7_0 = 0;
         if (param0 != -90) {
           var3 = (String) null;
-          this.a((byte) 90, -21, (String) null, 101);
+          this.computeJustificationStep((byte) 90, -21, (String) null, 101);
         }
         if (null != this.field_h &&
           this.field_h.length > 0) {

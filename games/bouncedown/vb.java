@@ -88,8 +88,8 @@ final class vb implements WidgetRenderer {
             hh.field_p.position = 0;
             if (param1 == null) {
               lb.field_g.position = 0;
-              lb.field_g.writeInt(la.field_C.nextInt(), (byte) 124);
-              lb.field_g.writeInt(la.field_C.nextInt(), (byte) 67);
+              lb.field_g.writeInt(ValidationStatusIcon.field_C.nextInt(), (byte) 124);
+              lb.field_g.writeInt(ValidationStatusIcon.field_C.nextInt(), (byte) 67);
               stackIn_14_0 = lb.field_g;
               if (!param4.a((byte) 56)) {
                 stackIn_15_1 = "";
@@ -115,8 +115,8 @@ final class vb implements WidgetRenderer {
               if (param0) {
                 var9 = var9 | 1;
               }
-              lb.field_g.writeInt(la.field_C.nextInt(), (byte) -97);
-              lb.field_g.writeInt(la.field_C.nextInt(), (byte) -64);
+              lb.field_g.writeInt(ValidationStatusIcon.field_C.nextInt(), (byte) -97);
+              lb.field_g.writeInt(ValidationStatusIcon.field_C.nextInt(), (byte) -64);
               lb.field_g.writePrefixedString(var15, (byte) -67);
               lb.field_g.writePrefixedString(var8, (byte) -67);
               var17 = (CharSequence) ((Object) param1);

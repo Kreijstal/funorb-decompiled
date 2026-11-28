@@ -1694,7 +1694,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_password_tooltip", false);
                 if (var2 != null) {
-                  ki.field_Y = ll.a(0, var2);
+                  ValidationStatusWidget.field_Y = ll.a(0, var2);
                 }
                 var2 = bc.a("create_password_hint", false);
                 if (null != var2) {
@@ -1978,7 +1978,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("loading_fonts", false);
                 if (null != var2) {
-                  ki.field_S = ll.a(0, var2);
+                  ValidationStatusWidget.field_S = ll.a(0, var2);
                 }
                 var2 = bc.a("loading_soundeffects", false);
                 if (null != var2) {
@@ -2992,7 +2992,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("createtouse", false);
                 if (var2 != null) {
-                  dd.field_N = ll.a(0, var2);
+                  ValidationStatusIcon.field_N = ll.a(0, var2);
                 }
                 var2 = bc.a("achievementsoffline", false);
                 if (null != var2) {

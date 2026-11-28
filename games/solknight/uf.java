@@ -105,7 +105,7 @@ class uf extends DefaultTextWidgetRenderer {
           }
           var5 = RichTextWidget.field_P;
           synchronized (var5) {
-            NameSuggestionsPanel.field_I.b(param2, -1, -129);
+            NameSuggestionsPanel.field_I.setChannelGain(param2, -1, -129);
             if (param3 == dj.field_j) {
               return;
             }

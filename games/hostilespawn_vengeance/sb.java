@@ -24,7 +24,7 @@ final class sb {
               uc.field_b = DirectByteStorage.field_o;
             } else {
               while (uc.field_b != DirectByteStorage.field_o) {
-                var2 = al.field_W[DirectByteStorage.field_o];
+                var2 = ValidationStatusWidget.field_W[DirectByteStorage.field_o];
                 DirectByteStorage.field_o = 127 & DirectByteStorage.field_o + 1;
                 if (var2 < 0) {
                   qh.field_m[~var2] = false;

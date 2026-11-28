@@ -29,7 +29,7 @@ final class MixedSupport009 extends DefaultTextWidgetRenderer {
         int integerLocal13;
         integerLocal12 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          super.performAction0008(-12253, mixedSupport009Argument2);
+          super.copyStyleTo(-12253, mixedSupport009Argument2);
           if (booleanArgument3) {
             for (integerLocal8 = 0; integerLocal8 < 6; integerLocal8++) {
               mixedSupport118Local10 = this.mixedSupport118ArrayState0001[integerLocal8];

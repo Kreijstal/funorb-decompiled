@@ -168,15 +168,15 @@ final class t {
         int var3;
         int var4;
         int var5;
-        var3 = (-je.field_O[3].field_w + 640) / param0;
-        var4 = (480 - je.field_O[3].field_t) / 2;
+        var3 = (-ValidationStatusIcon.field_O[3].field_w + 640) / param0;
+        var4 = (480 - ValidationStatusIcon.field_O[3].field_t) / 2;
         var4 += 50;
-        var5 = param1 % je.field_O.length;
+        var5 = param1 % ValidationStatusIcon.field_O.length;
         if (var5 == 0 ||
           var5 == 1) {
           var4 += 180;
         }
-        je.field_O[var5].drawTinted(var3, var4, 16, 13089168);
+        ValidationStatusIcon.field_O[var5].drawTinted(var3, var4, 16, 13089168);
     }
 
     final void e(int param0) {
@@ -191,13 +191,13 @@ final class t {
           b.field_d[var2] = dupTemp$1;
           if (dupTemp$1 > 640) {
             b.field_d[var2] = -400;
-            ContextualRuntimeException.field_g[var2] = je.field_O[this.b(param0 + 399)];
+            ContextualRuntimeException.field_g[var2] = ValidationStatusIcon.field_O[this.b(param0 + 399)];
           }
           dupTemp$2 = ByteStorage.field_h[var2] - (2 + var2);
           ByteStorage.field_h[var2] = dupTemp$2;
           if (dupTemp$2 < -400) {
             ByteStorage.field_h[var2] = 1040;
-            AccountCreationResultPanel.field_tb[var2] = je.field_O[this.b(df.a(param0, 399))];
+            AccountCreationResultPanel.field_tb[var2] = ValidationStatusIcon.field_O[this.b(df.a(param0, 399))];
           }
         }
         if (param0 != -400) {
@@ -695,13 +695,13 @@ final class t {
         var2 = param0;
         while (true) {
           if (var2 > 0 &&
-            ContextualRuntimeException.field_g[0] != je.field_O[var2] &&
-            ContextualRuntimeException.field_g[1] != je.field_O[var2] &&
-            AccountCreationResultPanel.field_tb[0] != je.field_O[var2] &&
-            AccountCreationResultPanel.field_tb[1] != je.field_O[var2]) {
+            ContextualRuntimeException.field_g[0] != ValidationStatusIcon.field_O[var2] &&
+            ContextualRuntimeException.field_g[1] != ValidationStatusIcon.field_O[var2] &&
+            AccountCreationResultPanel.field_tb[0] != ValidationStatusIcon.field_O[var2] &&
+            AccountCreationResultPanel.field_tb[1] != ValidationStatusIcon.field_O[var2]) {
             return var2;
           }
-          var2 = ModalDialog.a((byte) -115, fleas.field_F, je.field_O.length);
+          var2 = ModalDialog.a((byte) -115, fleas.field_F, ValidationStatusIcon.field_O.length);
         }
     }
 
@@ -842,7 +842,7 @@ final class t {
                     if (!(!this.field_b.b(109))) {
                       oa.a(4, param0, 99);
                       ImageProducerRasterBuffer.field_m = this.field_i;
-                      AccountRequestState.field_e = ModalDialog.a((byte) -115, fleas.field_F, je.field_O.length);
+                      AccountRequestState.field_e = ModalDialog.a((byte) -115, fleas.field_F, ValidationStatusIcon.field_O.length);
                     }
                   } else {
                     if (var6 == 3) {
@@ -1366,7 +1366,7 @@ final class t {
         this.b(2, g.field_s);
         var10.drawRightAligned(NanoFrameTimer.a((byte) 85, 1 + g.field_s, kb.field_k.length), 530, 110, 1, 16777215);
         AgeValidator.field_s[6][3] = 310;
-        MatchingFieldValidator.field_p.drawString(v.field_R[g.field_s], 95, 145, 0, -1);
+        MatchingFieldValidator.field_p.drawString(ValidationStatusWidget.field_R[g.field_s], 95, 145, 0, -1);
         for (var3 = 0; var3 < kb.field_k[g.field_s].length; var3++) {
           var9.drawParagraph(kb.field_k[g.field_s][var3], 95 + ib.field_a[g.field_s][var3], AgeValidator.field_s[g.field_s][var3], -ib.field_a[g.field_s][var3] + 450, 50, 2105392, -1, 0, 0, var10.field_N);
         }

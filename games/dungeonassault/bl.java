@@ -126,8 +126,8 @@ final class bl {
           bo.field_Kb = oh.a(hj.field_Z, "", 11091, "scrollbar_top");
           IntroSequenceScreen.field_y = oh.a(hj.field_Z, "", 11091, "scrollbar_bottom");
           qh.field_q = oh.a(hj.field_Z, "", 11091, "scrollbar_slider");
-          tn.field_W = bo.field_Kb.copy();
-          tn.field_W.rotateCounterclockwise();
+          ValidationStatusWidget.field_W = bo.field_Kb.copy();
+          ValidationStatusWidget.field_W.rotateCounterclockwise();
           Bzip2State.field_x = IntroSequenceScreen.field_y.copy();
           Bzip2State.field_x.rotateCounterclockwise();
           ml.field_a = qh.field_q.copy();
@@ -135,7 +135,7 @@ final class bl {
           AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
           qf.field_f = dd.a((byte) -112, 4, IntroSequenceScreen.field_y);
           ModalDialogHost.field_G = dd.a((byte) -112, 4, qh.field_q);
-          field_o = dd.a((byte) -112, 4, tn.field_W);
+          field_o = dd.a((byte) -112, 4, ValidationStatusWidget.field_W);
           DungeonRaidScreen.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
           im.field_m = dd.a((byte) -112, 4, ml.field_a);
           var19 = oh.a(hj.field_Z, "", 11091, "cracked_bar");
@@ -282,7 +282,7 @@ final class bl {
           DropTargetWidgetContainer.field_F = oh.a(hj.field_Z, "pieces", 11091, "piece_dwarf");
           ie.field_i = oh.a(hj.field_Z, "pieces", 11091, "piece_enchantress");
           hl.field_h = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_cleaver");
-          tn.field_I = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_club");
+          ValidationStatusWidget.field_I = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_club");
           jl.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_goblin_scout");
           bn.field_h = oh.a(hj.field_Z, "pieces", 11091, "piece_hellbeast");
           fl.field_j = oh.a(hj.field_Z, "pieces", 11091, "piece_imp");

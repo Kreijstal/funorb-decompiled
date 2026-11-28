@@ -50,7 +50,7 @@ final class WidgetTheme {
           this.field_i = (WidgetRenderer) ((Object) var17);
           var17.field_k = 16777215;
           var4 = new wd();
-          var17.a(-44, var4);
+          var17.copyStyleTo(-44, var4);
           var4.field_f = 11711154;
           var4.field_p = 15658734;
           this.field_e = 15658734;
@@ -88,7 +88,7 @@ final class WidgetTheme {
           discarded$0 = new via(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new bka(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new wd();
-          var17.a(-24, var8);
+          var17.copyStyleTo(-24, var8);
           var8.a(0, (byte) 78).a(MovementAnimation.a(10066329, -99, 7829367, 15658734), (byte) -40).b(1118481, -25251).c(127, -1);
           var8.a(4, (byte) 78).a(true, -2147483648).a(var5, (byte) -40);
           this.field_s = (WidgetRenderer) ((Object) var8);

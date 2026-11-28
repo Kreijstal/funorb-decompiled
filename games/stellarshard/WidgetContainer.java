@@ -3197,7 +3197,7 @@ class WidgetContainer extends UiWidget implements WidgetContainerMarker {
                 }
                 var2 = ca.a(112, "fs_nonmember");
                 if (null != var2) {
-                  ii.field_G = GuestPlayConfirmationForm.a(0, var2);
+                  ValidationStatusIcon.field_G = GuestPlayConfirmationForm.a(0, var2);
                 }
                 var2 = ca.a(96, "fs_button_close");
                 if (var2 != null) {

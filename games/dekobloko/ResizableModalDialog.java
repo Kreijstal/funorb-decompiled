@@ -208,7 +208,7 @@ abstract class ResizableModalDialog extends ModalDialog {
         }
         PlayerNameAvailabilityValidator.rgbSpriteState0025.draw(-90 + (integerArgument3 + this.integerState0107), 10 + integerArgument2);
         MixedSupport086.performAction1110(NetworkSupport002.rgbSpriteArrayState0003, -10 + this.integerState0107, integerArgument2 + 35, -1, 5 + integerArgument3);
-        MixedSupport086.performAction1110(UiComponentPart011.rgbSpriteArrayState0013, this.integerState0107, integerArgument2 + (this.integerState0108 - 22), -1, integerArgument3);
+        MixedSupport086.performAction1110(ValidationStatusIcon.rgbSpriteArrayState0013, this.integerState0107, integerArgument2 + (this.integerState0108 - 22), -1, integerArgument3);
         integerLocal15 = this.integerState0108 - 79;
         integerLocal17 = 169;
         integerLocal19 = 127;

@@ -134,7 +134,7 @@ final class ni implements WidgetRenderer {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (InteractiveWidget.a((char) var7, (byte) 90)) {
-              var8 = pa.a((char) var7, -80);
+              var8 = ValidationStatusWidget.a((char) var7, -80);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

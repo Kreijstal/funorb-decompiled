@@ -51,7 +51,7 @@ final class TextHotspotBounds extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var2 = Vertigo2.field_L ? 1 : 0;
         try {
-          AccountServiceResult.field_e.processPointerInput(qj.field_c, true, (byte) -71, qe.field_Z);
+          AccountServiceResult.field_e.processPointerInput(qj.field_c, true, (byte) -71, ValidationStatusWidget.field_Z);
           if (param0 != 1) {
             stackIn_3_0 = 16;
             return stackIn_3_0;

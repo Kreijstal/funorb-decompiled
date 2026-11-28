@@ -38,7 +38,7 @@ abstract class ByteStorage {
           }
           var3 = (byte[]) (param0);
           if (param2) {
-            stackIn_11_0 = ld.copyBytes(120, var3);
+            stackIn_11_0 = ValidationStatusIcon.copyBytes(120, var3);
             return stackIn_11_0;
           }
           stackIn_9_0 = var3;
@@ -53,7 +53,7 @@ abstract class ByteStorage {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ abstract class ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var7), "nl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var7), "nl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -161,14 +161,14 @@ abstract class ByteStorage {
           }
           if (param0 == 255) {
             stackIn_11_0 = !(cg.field_l >= 13);
-            li.field_T = mc.createAccountSuccessResult(stackIn_11_0, param1 ^ -6168);
+            ValidationStatusWidget.field_T = mc.createAccountSuccessResult(stackIn_11_0, param1 ^ -6168);
           } else {
             if (param0 >= 100 &&
               param0 <= 105) {
-              li.field_T = oe.createAccountSuggestionsResult(124, param3);
+              ValidationStatusWidget.field_T = oe.createAccountSuggestionsResult(124, param3);
               return;
             }
-            li.field_T = wi.createAccountErrorResult(param0, (byte) -65, param2);
+            ValidationStatusWidget.field_T = wi.createAccountErrorResult(param0, (byte) -65, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,7 +187,7 @@ abstract class ByteStorage {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ abstract class ByteStorage {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param5).append(')').toString());
         }
     }
 

@@ -80,9 +80,9 @@ final class ri extends na {
     final am a(boolean param0) {
         if (!param0) {
           ri.clearStaticReferences(-27);
-          return dh.field_V;
+          return ValidationStatusWidget.field_V;
         }
-        return dh.field_V;
+        return ValidationStatusWidget.field_V;
     }
 
     final static void f(int param0) {

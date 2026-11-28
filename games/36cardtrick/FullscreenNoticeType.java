@@ -5,7 +5,7 @@ final class FullscreenNoticeType {
     static int[] field_b;
     static int field_a;
 
-    final static short a(bb param0, int param1, int param2, int param3, byte param4) {
+    final static short a(MeshData param0, int param1, int param2, int param3, byte param4) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         short stackIn_4_0 = 0;
@@ -15,7 +15,7 @@ final class FullscreenNoticeType {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 < -41) {
-            stackIn_4_0 = (short)param0.a((-64 + 128 * param1) / 2, (128 * param3 - 64) / 2, param2 * 4);
+            stackIn_4_0 = (short)param0.findOrAddVertex((-64 + 128 * param1) / 2, (128 * param3 - 64) / 2, param2 * 4);
             return stackIn_4_0;
           }
           stackIn_2_0 = -3;

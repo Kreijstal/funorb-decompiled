@@ -56,7 +56,7 @@ final class lc extends IntrusiveNode {
         int var9Lifetime1;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          var7_int = dh.a(param2 + 8, param4);
+          var7_int = ValidationStatusWidget.a(param2 + 8, param4);
           if (af.field_d == null) {
             af.field_d = new java.security.SecureRandom();
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi extends w implements oh {
+final class wi extends w implements TextureProvider {
     static DualLinkNodeHashTable field_i;
     static int[] field_o;
     private boolean field_k;
@@ -25,7 +25,7 @@ final class wi extends w implements oh {
         }
     }
 
-    public final int[] a(boolean param0, int param1, float param2) {
+    public final int[] getTexturePixels(boolean param0, int param1, float param2) {
         cg var4;
         cg stackIn_6_0;
         Object stackIn_6_1;
@@ -98,7 +98,7 @@ final class wi extends w implements oh {
         }
     }
 
-    public final int a(int param0, int param1) {
+    public final int getTextureAlphaMode(int param0, int param1) {
         if (param0 != 6) {
           return 96;
         }
@@ -126,7 +126,7 @@ final class wi extends w implements oh {
         return false;
     }
 
-    public final boolean b(byte param0, int param1) {
+    public final boolean isTextureSize64(byte param0, int param1) {
         if (param0 <= 103) {
           this.d(80, -10);
           if (this.field_k) {
@@ -146,12 +146,12 @@ final class wi extends w implements oh {
         return true;
     }
 
-    public final int a(byte param0, int param1) {
+    public final int getAverageTextureColor(byte param0, int param1) {
         int var3 = -11 % ((param0 - 45) / 57);
         return 65535 & this.c(param1, 0).field_g;
     }
 
-    public final boolean b(int param0, int param1) {
+    public final boolean hasTexture(int param0, int param1) {
         if (param0 == -23316) {
           return !this.c(param1, 0).field_f ? true : false;
         }

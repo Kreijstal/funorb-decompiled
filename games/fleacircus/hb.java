@@ -22,7 +22,7 @@ final class hb extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = fleas.field_A ? 1 : 0;
         try {
-          super.a(2, param1);
+          super.copyStyleTo(2, param1);
           if (param2 != 70) {
             return;
           }

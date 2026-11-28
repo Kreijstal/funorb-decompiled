@@ -265,7 +265,7 @@ final class re {
             }
             var6Lifetime1 = 0;
             if (var5 == 0) {
-              al.field_Z.drawString(GameCanvas.field_j.toUpperCase(), 260, 140, 16776960, -1);
+              ValidationStatusWidget.field_Z.drawString(GameCanvas.field_j.toUpperCase(), 260, 140, 16776960, -1);
               stackIn_56_0 = var4Lifetime1;
               stackIn_56_1 = e.field_g;
               stackIn_57_2 = !(param1);
@@ -274,17 +274,17 @@ final class re {
             }
             if (var5 != 0 ||
               var9 != 0) {
-              al.field_Z.drawString(g.field_N.toUpperCase(), 260, 140, 16776960, -1);
+              ValidationStatusWidget.field_Z.drawString(g.field_N.toUpperCase(), 260, 140, 16776960, -1);
             }
             var7 = bh.field_g[var4Lifetime1];
             if (var6Lifetime1 != 0) {
               var7 = SpriteGeometry.field_t;
             }
             boolean decompiledFrameCompleted0 = true;
-            al.field_Z.drawParagraph(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
+            ValidationStatusWidget.field_Z.drawParagraph(var7.toUpperCase(), 260, 150, 320, 64, 16776960, -1, 0, 0, 16);
             if (var6Lifetime1 == 0) {
-              al.field_Z.drawString(ml.field_b.toUpperCase() + j.field_d[var4Lifetime1] * 100, 260, 233, 16776960, -1);
-              al.field_Z.drawString(MatchingFieldValidator.field_v.toUpperCase(), 420, 233, 16776960, -1);
+              ValidationStatusWidget.field_Z.drawString(ml.field_b.toUpperCase() + j.field_d[var4Lifetime1] * 100, 260, 233, 16776960, -1);
+              ValidationStatusWidget.field_Z.drawString(MatchingFieldValidator.field_v.toUpperCase(), 420, 233, 16776960, -1);
               if (10 != j.field_d[var4Lifetime1]) {
                 var8 = 0;
                 while (j.field_d[var4Lifetime1] > var8) {
@@ -528,7 +528,7 @@ final class re {
             stackIn_11_0 = 8;
             stackIn_11_1 = param1;
             stackIn_11_2 = false;
-            stackIn_11_3 = al.field_Z;
+            stackIn_11_3 = ValidationStatusWidget.field_Z;
             stackIn_11_4 = -16 + TextLayout.field_b[0];
             stackIn_11_5 = 16776960;
             if (param5 >= 10) {
@@ -538,10 +538,10 @@ final class re {
             }
             ec.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_11_5, stackIn_12_6);
           }
-          al.field_Z.drawString(param3, TextLayout.field_b[0], param1, 16776960, -1);
-          al.field_Z.drawString(AchievementNotification.field_k[var7_int].toUpperCase(), TextLayout.field_b[1], param1, 16776960, -1);
-          al.field_Z.drawString(var12, TextLayout.field_b[2], param1, 16776960, -1);
-          ec.a(9, param1, false, al.field_Z, TextLayout.field_b[3], 16776960, Integer.toString(var9));
+          ValidationStatusWidget.field_Z.drawString(param3, TextLayout.field_b[0], param1, 16776960, -1);
+          ValidationStatusWidget.field_Z.drawString(AchievementNotification.field_k[var7_int].toUpperCase(), TextLayout.field_b[1], param1, 16776960, -1);
+          ValidationStatusWidget.field_Z.drawString(var12, TextLayout.field_b[2], param1, 16776960, -1);
+          ec.a(9, param1, false, ValidationStatusWidget.field_Z, TextLayout.field_b[3], 16776960, Integer.toString(var9));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -761,8 +761,8 @@ final class re {
                 fj.field_Kb[var5].drawQuarterSizeAveraged(var4, param1);
               } else {
                 fj.field_Kb[var5].drawScaled(-6 + var4, param1 - 6, 44, 44);
-                al.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var4 + 16, -8 + param1, 16776960, -1);
-                al.field_Z.drawCentred(bh.field_g[var5].toUpperCase(), 320, param1 + 50, 16777215, -1);
+                ValidationStatusWidget.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var4 + 16, -8 + param1, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawCentred(bh.field_g[var5].toUpperCase(), 320, param1 + 50, 16777215, -1);
               }
               var4 += 32;
             }
@@ -820,7 +820,7 @@ final class re {
         }
         if (ModalDialog.field_O) {
           this.a(70, (byte) -55, 74, 324, 235);
-          al.field_Z.drawParagraph(la.field_i.toUpperCase(), 334, 80, 215, 200, 16776960, -1, 0, 0, 16);
+          ValidationStatusWidget.field_Z.drawParagraph(la.field_i.toUpperCase(), 334, 80, 215, 200, 16776960, -1, 0, 0, 16);
         }
         this.field_E.a(124, false);
     }
@@ -1193,7 +1193,7 @@ final class re {
         wh.field_d.drawString(var4.toString(), 67, 110, 16776960, -1);
         if (var2_ref != null) {
           var5 = var2_ref.toUpperCase();
-          al.field_Z.drawParagraph(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
+          ValidationStatusWidget.field_Z.drawParagraph(var5, 67, 120, 270, 210, 16776960, -1, 0, 0, 14);
         }
         this.a(138, (byte) -55, 86, 353, 235);
         ByteStorage.field_d[bm.field_c][rl.field_c].drawTransparent(356, 89);
@@ -1240,7 +1240,7 @@ final class re {
         this.a((byte) -36, var3.toUpperCase());
         if (StandardContentDialog.p(3)) {
           wh.field_d.drawParagraph(VolumeRampingMidiPcmStream.field_X.toUpperCase(), 64, 200, 512, 100, 16776960, -1, 1, 0, wh.field_d.field_y + wh.field_d.field_F);
-          al.field_Z.drawParagraph(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
+          ValidationStatusWidget.field_Z.drawParagraph(u.field_a.toUpperCase(), 64, 345, 512, 1000, 16776960, -1, 1, 0, wh.field_d.field_F + wh.field_d.field_y);
           hm.a(576, ModalDialog.field_J, false, 30, 353, 32);
           return;
         }
@@ -1273,10 +1273,10 @@ final class re {
                 var10 = 90;
                 this.a(244, (byte) -55, 90, 56, 528);
                 var10 += 16;
-                al.field_Z.drawString(ii.field_f[0].toUpperCase(), TextLayout.field_b[0], var10, 16776960, -1);
-                al.field_Z.drawString(ii.field_f[1].toUpperCase(), TextLayout.field_b[1], var10, 16776960, -1);
-                al.field_Z.drawString(ii.field_f[2].toUpperCase(), TextLayout.field_b[2], var10, 16776960, -1);
-                al.field_Z.drawRightAligned(ii.field_f[3].toUpperCase(), TextLayout.field_b[3], var10, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawString(ii.field_f[0].toUpperCase(), TextLayout.field_b[0], var10, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawString(ii.field_f[1].toUpperCase(), TextLayout.field_b[1], var10, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawString(ii.field_f[2].toUpperCase(), TextLayout.field_b[2], var10, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawRightAligned(ii.field_f[3].toUpperCase(), TextLayout.field_b[3], var10, 16776960, -1);
                 var10 += 6;
                 var10 += 18;
                 var11 = 0;
@@ -1317,7 +1317,7 @@ final class re {
           if (var4Lifetime2 != null &&
             var4Lifetime2.length() > 0) {
             this.a(26, (byte) -55, 174, 56, 528);
-            al.field_Z.drawCentred(var4Lifetime2.toUpperCase(), 320, 193, 16776960, -1);
+            ValidationStatusWidget.field_Z.drawCentred(var4Lifetime2.toUpperCase(), 320, 193, 16776960, -1);
           }
           this.a(30, (byte) -55, 360, 56, 528);
           wh.field_d.drawCentred(pl.field_a.toUpperCase(), 320, 383, 16776960, -1);
@@ -2154,27 +2154,27 @@ final class re {
               var9 = 13;
               if (param0 != null) {
                 param5.draw(-param5.field_w + 112 - param5.field_z / 2, -param5.field_y + param2 - (-64 + param5.field_A / 2));
-                al.field_Z.drawParagraph(param1, 161 + var8, param2, 143 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
+                ValidationStatusWidget.field_Z.drawParagraph(param1, 161 + var8, param2, 143 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
                 param0.draw(-param0.field_w - param0.field_z / 2 + 367, -param0.field_y + (param2 + (64 - param0.field_A / 2)));
-                al.field_Z.drawParagraph(param3, var8 + 431, param2, 114 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
+                ValidationStatusWidget.field_Z.drawParagraph(param3, var8 + 431, param2, 114 - var8 * 2, 128, 16776960, -1, 1, 1, var9);
                 if (var10 != 0) {
                   if (param5 != null) {
                     param5.draw(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
-                    al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
-                    al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                    ValidationStatusWidget.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
+                    ValidationStatusWidget.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                   } else {
-                    al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                    ValidationStatusWidget.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                   }
                 }
               } else {
                 boolean decompiledSharedTail0 = (param5 == null);
                 if (!decompiledSharedTail0) {
                   param5.draw(112 - param5.field_z / 2 - param5.field_w, -param5.field_y + (param2 + 64 - param5.field_A / 2));
-                  al.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
+                  ValidationStatusWidget.field_Z.drawParagraph(param1, var8 + 161, param2, -(var8 * 2) + 384, 128, 16776960, -1, 0, 1, var9);
                   decompiledSharedTail0 = (var10 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  al.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
+                  ValidationStatusWidget.field_Z.drawParagraph(param1, var8 + 64, param2, -(2 * var8) + 481, 128, 16776960, -1, 1, 1, var9);
                 }
               }
             }
@@ -2483,16 +2483,16 @@ final class re {
                 if (1 == var9) {
                   var10 = var10 / 50;
                 }
-                al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
                 if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
                   var11 = NanoFrameTimer.field_n[var9].toUpperCase();
-                  var12 = al.field_Z.stringWidth(var11);
+                  var12 = ValidationStatusWidget.field_Z.stringWidth(var11);
                   var13 = 16 + var6;
                   if (var12 / 2 + var13 >= 640) {
                     var13 = 639 - var12;
                   }
                   var13 = var13 - var12 / 2;
-                  al.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
+                  ValidationStatusWidget.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
                 }
                 var6 += 58;
                 if (550 <= var6) {
@@ -2546,7 +2546,7 @@ final class re {
                 if (var10 < 0) {
                   var10 = 0;
                 }
-                al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, var7 + 38, 16776960, -1);
+                ValidationStatusWidget.field_Z.drawCentred(Integer.toString(var10), var6 + 16, var7 + 38, 16776960, -1);
               } else {
                 ClientLookupTables.field_e.drawCharacter(pc.field_b.charAt(0), var6 + 10, var7 + 27, 16776960);
               }
@@ -2559,14 +2559,14 @@ final class re {
                 var15 = stackIn_35_0;
                 var10_ref_String = var15;
                 var16 = var15.toUpperCase();
-                var11_int = al.field_Z.stringWidth(var16);
+                var11_int = ValidationStatusWidget.field_Z.stringWidth(var16);
                 var12 = var6 + 16;
                 if (var12 + var11_int / 2 < 640) {
                   var12 = var12 - var11_int / 2;
                 } else {
                   var12 = -var11_int + 639;
                 }
-                al.field_Z.drawString(var16.toUpperCase(), var12, 6 + var7, 16777215, -1);
+                ValidationStatusWidget.field_Z.drawString(var16.toUpperCase(), var12, 6 + var7, 16777215, -1);
               }
               var6 += 58;
               if (var6 >= 550) {
@@ -2605,17 +2605,17 @@ final class re {
                 var10 = var10 / 50;
               }
             }
-            al.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
+            ValidationStatusWidget.field_Z.drawCentred(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
             if (EmailFormatValidator.a(var7, 0, 40, 40, var6)) {
               var11 = NanoFrameTimer.field_n[var9].toUpperCase();
-              var12 = al.field_Z.stringWidth(var11);
+              var12 = ValidationStatusWidget.field_Z.stringWidth(var11);
               var13 = 16 + var6;
               if (var12 / 2 + var13 >= 640) {
                 var13 = 639 - var12;
               } else {
                 var13 = var13 - var12 / 2;
               }
-              al.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
+              ValidationStatusWidget.field_Z.drawString(var11.toUpperCase(), var13, var7 + 6, 16777215, -1);
             }
             var6 += 58;
             if (550 <= var6) {
@@ -2985,7 +2985,7 @@ final class re {
         var3 = this.a(il.field_c[4], field_I, var3, tk.field_f, (byte) 80, il.field_c[3]);
         var3 = this.a(il.field_c[6], u.field_c, var3, ClientLookupTables.field_b, (byte) 80, il.field_c[5]);
         var3 = this.a(FullscreenNoticeType.field_f, param0 + 8, var3);
-        var3 = this.a((RgbSprite) null, al.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
+        var3 = this.a((RgbSprite) null, ValidationStatusWidget.field_S, var3, (String) null, (byte) 80, il.field_c[7]);
         var3 = this.a(il.field_c[10], g.field_K, var3, ln.field_p, (byte) 80, il.field_c[8]);
         var3 = this.a((RgbSprite) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
         var3 = this.a((RgbSprite) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
@@ -2999,7 +2999,7 @@ final class re {
         var3 = this.a((RgbSprite) null, di.field_c, var3, (String) null, (byte) 80, this.e((byte) -44, 5));
         var3 = this.a((RgbSprite) null, m.field_r, var3, (String) null, (byte) 80, this.e((byte) -44, 6));
         var3 = this.a((RgbSprite) null, DropTargetWidgetContainer.field_C, var3, (String) null, (byte) 80, this.e((byte) -44, 7));
-        var3 = this.a(al.field_O, 87, var3);
+        var3 = this.a(ValidationStatusWidget.field_O, 87, var3);
         var3 = this.a((RgbSprite) null, DropTargetWidgetContainer.field_B, var3, (String) null, (byte) 80, wk.field_b[1]);
         var3 = this.a((RgbSprite) null, mf.field_a, var3, (String) null, (byte) 80, wk.field_b[3]);
         var3 = this.a((RgbSprite) null, ha.field_x, var3, (String) null, (byte) 80, wk.field_b[11]);
@@ -3570,7 +3570,7 @@ final class re {
                 }
                 if (var14 == 12) {
                   var17 = -17 + var5;
-                  var18 = wj.field_O << 1;
+                  var18 = ValidationStatusIcon.field_O << 1;
                   this.b(-18902, var18, var9 + MatchingFieldValidator.field_p, var17);
                 }
                 if (var14 == 13) {
@@ -3707,7 +3707,7 @@ final class re {
             stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
             stackIn_31_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
             var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(RichTextWidget.a(ResizableModalDialog.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
-            al.field_Z.drawParagraph(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
+            ValidationStatusWidget.field_Z.drawParagraph(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }
         }
         if (param0 > -29) {
@@ -3992,7 +3992,7 @@ final class re {
         var7 = var7 + 16 * wh.field_d.drawParagraph(var6, 60, var7, 288, 146, 16776960, -1, 0, 0, 16);
         var7 += 8;
         var12 = var4.toUpperCase();
-        al.field_Z.drawParagraph(var12, 60, var7, 288, 150, 16776960, -1, 0, 0, 12);
+        ValidationStatusWidget.field_Z.drawParagraph(var12, 60, var7, 288, 150, 16776960, -1, 0, 0, 12);
         var8 = ng.field_u / 50;
         var9 = 60;
         var7Lifetime1 = 212;
@@ -4498,7 +4498,7 @@ final class re {
         var2_ref.field_T = 16776960;
         var2_ref.field_R = 15;
         var2_ref.field_qb = 220;
-        var2_ref.field_ab = (BitmapFont) ((Object) al.field_Z);
+        var2_ref.field_ab = (BitmapFont) ((Object) ValidationStatusWidget.field_Z);
         var2_ref.field_L = 4;
         var2_ref.field_sb = Math.max(141, var2_ref.field_ab.textHeight(var2_ref.field_fb, var2_ref.field_qb - 2 * var2_ref.field_L, var2_ref.field_R));
         this.a(false);
@@ -4780,7 +4780,7 @@ final class re {
 
     final static void a(int param0, vh param1, int param2, int param3, int param4, vh param5) {
         try {
-          al.field_N = param1;
+          ValidationStatusWidget.field_N = param1;
           ProxyAuthenticationRequiredException.field_b = param2;
           jd.field_l = param4;
           if (param0 != 4) {

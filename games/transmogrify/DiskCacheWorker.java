@@ -225,7 +225,7 @@ final class DiskCacheWorker implements Runnable {
         if (!dl.field_l.b(-26753)) {
           return RichTextLayout.field_g;
         }
-        return ob.field_F;
+        return ValidationStatusWidget.field_F;
     }
 
     public final void run() {

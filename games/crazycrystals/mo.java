@@ -22,7 +22,7 @@ final class mo extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         gh.field_w = param3;
         kb.field_h = param1;
-        io.field_O = param0;
+        ValidationStatusWidget.field_O = param0;
         sc.field_g = param2;
         if (param4 != -16) {
           field_l = -54;

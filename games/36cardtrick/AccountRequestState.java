@@ -181,16 +181,16 @@ final class AccountRequestState {
             }
             tf.field_p = new String[var4];
             og.a(ij.field_a, 0, tf.field_p, 0, var4);
-            gl.field_G = new String[var3_int + (-var4 - 1)];
-            og.a(ij.field_a, var4 + 1, gl.field_G, 0, -var4 + (var3_int - 1));
+            ValidationStatusIcon.field_G = new String[var3_int + (-var4 - 1)];
+            og.a(ij.field_a, var4 + 1, ValidationStatusIcon.field_G, 0, -var4 + (var3_int - 1));
             if (ia.field_d.length >= tf.field_p.length) {
               stackIn_31_0 = ia.field_d.length;
             } else {
               stackIn_31_0 = tf.field_p.length;
             }
             var5 = stackIn_31_0;
-            if (SoundCache.field_c.length < gl.field_G.length) {
-              stackIn_34_0 = gl.field_G.length;
+            if (SoundCache.field_c.length < ValidationStatusIcon.field_G.length) {
+              stackIn_34_0 = ValidationStatusIcon.field_G.length;
             } else {
               stackIn_34_0 = SoundCache.field_c.length;
             }
@@ -227,12 +227,12 @@ final class AccountRequestState {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_46_0 = me.field_a;
               stackIn_46_1 = var8Lifetime3 + 7 + var5;
-              stackIn_46_2 = gl.field_G.length;
+              stackIn_46_2 = ValidationStatusIcon.field_G.length;
               stackIn_46_3 = var8Lifetime3;
               if (stackIn_46_2 <= stackIn_46_3) {
                 stackIn_49_2 = "";
               } else {
-                stackIn_49_2 = gl.field_G[var8Lifetime3];
+                stackIn_49_2 = ValidationStatusIcon.field_G[var8Lifetime3];
               }
               stackIn_46_0[stackIn_46_1] = stackIn_49_2;
             }

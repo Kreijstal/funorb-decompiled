@@ -21,7 +21,7 @@ public final class SolKnight extends ab {
           if (param0 != -1) {
             discarded$0 = this.b(-29, true);
           }
-          pk.c(false);
+          ValidationStatusWidget.c(false);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "SolKnight.M(" + param0 + ')');
         }
@@ -160,7 +160,7 @@ public final class SolKnight extends ab {
           }
           if (na.field_b &&
             !NameSuggestionsPanel.field_I.isMidiReady(144)) {
-            pk.a((byte) -96, 0, true);
+            ValidationStatusWidget.a((byte) -96, 0, true);
           }
           if (!il.b(507)) {
             while (true) {
@@ -358,8 +358,8 @@ public final class SolKnight extends ab {
           StripedProgressWidget.clearStaticReferences((byte) 113);
           NameSuggestionsPanel.clearStaticReferences((byte) -88);
           RichTextWidget.a(2);
-          kc.clearStaticReferences((byte) 110);
-          pk.releaseDeclaredStaticReferences(-124);
+          ValidationStatusIcon.clearStaticReferences((byte) 110);
+          ValidationStatusWidget.releaseDeclaredStaticReferences(-124);
           tg.releaseDeclaredStaticReferences(22722);
           TextFieldValidator.clearDeclaredStaticReferences(30514);
           nb.clearStaticReferences(19161);
@@ -590,7 +590,7 @@ public final class SolKnight extends ab {
           if (null != NetworkArchiveRequest.field_u) {
             for (var3_int = 0; 6 > var3_int; var3_int++) {
               if (null != StripedProgressWidget.field_M[var3_int] &&
-                !NameSuggestionsPanel.field_I.a(176400, StripedProgressWidget.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
+                !NameSuggestionsPanel.field_I.prepareTrackSamples(176400, StripedProgressWidget.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
                 stackIn_56_0 = fc.field_o;
                 return stackIn_56_0;
               }
@@ -721,7 +721,7 @@ public final class SolKnight extends ab {
     final void initializeClient(int param0) {
         this.a(0, false, 6, 9, true, 16, 10, 8);
         MidiPcmStream var2 = new MidiPcmStream();
-        var2.d(-4474, 128, 9);
+        var2.setChannelProgram(-4474, 128, 9);
         GameApplet.a(var2, (java.awt.Component) ((Object) EmailFormatValidator.field_q), true, (byte) -40, 22050, wh.field_c);
         hc.field_d = 16777088;
         if (param0 != -31680) {
@@ -929,10 +929,10 @@ public final class SolKnight extends ab {
             return;
           }
           SoftwareRasterizer.fillRectangleVerticalGradient(-320 - ArchiveSource.field_c, -SingleChildWidgetContainer.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
-          kc.field_O = kc.field_O + 1;
+          ValidationStatusIcon.field_O = ValidationStatusIcon.field_O + 1;
           var3 = 0;
-          if (FullscreenStatusDialog.field_W.length < kc.field_O) {
-            kc.field_O = 0;
+          if (FullscreenStatusDialog.field_W.length < ValidationStatusIcon.field_O) {
+            ValidationStatusIcon.field_O = 0;
           }
           var4_int = 0;
           if (param0 != -11633) {
@@ -945,7 +945,7 @@ public final class SolKnight extends ab {
             }
             var5 = 320 + (-ArchiveSource.field_c + FullscreenStatusDialog.field_W[var4_int]);
             var6 = -SingleChildWidgetContainer.field_E + FullscreenStatusDialog.field_W[1 + var4_int];
-            var7 = var4_int - kc.field_O;
+            var7 = var4_int - ValidationStatusIcon.field_O;
             if (-FullscreenStatusDialog.field_W.length / 2 > var7) {
               var7 = var7 + FullscreenStatusDialog.field_W.length;
             }

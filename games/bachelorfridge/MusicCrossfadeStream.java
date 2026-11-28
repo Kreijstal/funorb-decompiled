@@ -48,7 +48,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
               this.field_m = param0;
               if (param0 != null) {
-                this.field_o.a(param0, (byte) -115, false);
+                this.field_o.playTrack(param0, (byte) -115, false);
                 this.a(param3, param2, this.field_o, -49);
               }
             } else {
@@ -57,7 +57,7 @@ final class MusicCrossfadeStream extends PcmStream {
               }
               this.field_u = param0;
               if (param0 != null) {
-                this.field_s.a(param0, (byte) -113, false);
+                this.field_s.playTrack(param0, (byte) -113, false);
                 this.a(param3, param2, this.field_s, -72);
               }
             }
@@ -95,7 +95,7 @@ final class MusicCrossfadeStream extends PcmStream {
               stackIn_50_1 = (MusicTrack) (param0);
               stackIn_50_2 = -111;
               stackIn_51_3 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_50_0).a(stackIn_50_1, (byte) stackIn_50_2, stackIn_51_3);
+              ((MidiPcmStream) (Object) stackIn_50_0).playTrack(stackIn_50_1, (byte) stackIn_50_2, stackIn_51_3);
               this.a(param3, param2, this.field_o, -53);
             }
             this.field_w = -param4;
@@ -109,7 +109,7 @@ final class MusicCrossfadeStream extends PcmStream {
               stackIn_42_1 = (MusicTrack) (param0);
               stackIn_42_2 = -115;
               stackIn_43_3 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_42_1, (byte) stackIn_42_2, stackIn_43_3);
+              ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_42_1, (byte) stackIn_42_2, stackIn_43_3);
               this.a(param3, param2, this.field_s, -83);
             }
             this.field_w = param4;
@@ -422,7 +422,7 @@ final class MusicCrossfadeStream extends PcmStream {
           if (param3 > 0) {
             this.getSchedulingCost();
           }
-          param2.a(-1, param0, (byte) -107);
+          param2.setChannelGain(-1, param0, (byte) -107);
           param2.c(224, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "hq.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

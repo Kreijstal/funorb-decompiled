@@ -212,11 +212,11 @@ final class ud {
           var3 = -15 % ((-48 - param0) / 60);
           var4 = 0;
           while (var4 < ContextualRuntimeException.field_g.length) {
-            ContextualRuntimeException.field_g[var4] = je.field_O[ModalDialog.a((byte) -115, new Random(), je.field_O.length)];
+            ContextualRuntimeException.field_g[var4] = ValidationStatusIcon.field_O[ModalDialog.a((byte) -115, new Random(), ValidationStatusIcon.field_O.length)];
             {
               while ((null == AccountCreationResultPanel.field_tb[var4] ||
                 AccountCreationResultPanel.field_tb[var4] == ContextualRuntimeException.field_g[var4])) {
-                AccountCreationResultPanel.field_tb[var4] = je.field_O[ModalDialog.a((byte) -115, new Random(), je.field_O.length)];
+                AccountCreationResultPanel.field_tb[var4] = ValidationStatusIcon.field_O[ModalDialog.a((byte) -115, new Random(), ValidationStatusIcon.field_O.length)];
               }
               {
                 var4++;

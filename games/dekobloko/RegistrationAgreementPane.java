@@ -66,11 +66,11 @@ final class RegistrationAgreementPane extends ComponentContainer implements Text
           mixedSupport001Local3 = new DefaultTextWidgetRenderer(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
           this.uiComponentPart025State0001 = new RichTextWidget(stringLocal1, mixedSupport001Local3);
           this.uiComponentPart025State0001.stringState0080 = "";
-          this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 0, 1);
-          this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 1, 1);
+          this.uiComponentPart025State0001.setHotspotTooltip(MixedSupport107.stringState0464, 0, 1);
+          this.uiComponentPart025State0001.setHotspotTooltip(MixedSupport107.stringState0464, 1, 1);
           this.uiComponentPart025State0001.integerState0107 = -40 + this.integerState0107;
           this.uiComponentPart025State0001.callbackContract006State0001 = (WidgetEventListener) (this);
-          this.uiComponentPart025State0001.performAction1364(15, 26, integerLocal2, this.integerState0107 - 40);
+          this.uiComponentPart025State0001.setTextBounds(15, 26, integerLocal2, this.integerState0107 - 40);
           integerLocal2 = integerLocal2 + (this.uiComponentPart025State0001.integerState0108 + 15);
           this.addChild(this.uiComponentPart025State0001, (byte) -55);
           integerLocal4 = 4;

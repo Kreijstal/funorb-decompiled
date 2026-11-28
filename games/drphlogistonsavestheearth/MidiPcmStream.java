@@ -315,7 +315,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, int param1) {
+    private final synchronized void stopTrack(boolean param0, int param1) {
         this.field_R.release();
         if (param1 > -113) {
           return;
@@ -386,7 +386,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(cc param0, boolean param1, byte param2) {
+    final void applySampleOffset(cc param0, boolean param1, byte param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -448,7 +448,7 @@ final class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    final synchronized boolean e(int param0) {
+    final synchronized boolean hasMidiData(int param0) {
         if (param0 != 16) {
           this.field_y = (int[]) null;
         }
@@ -551,10 +551,10 @@ final class MidiPcmStream extends PcmStream {
         this.field_n[param1] = 32767;
         this.field_z[param1] = 256;
         this.field_E[param1] = 0;
-        this.b(8192, -1, param1);
+        this.setRetriggerRate(8192, -1, param1);
     }
 
-    private final synchronized void a(boolean param0, boolean param1, MusicTrack param2, int param3) {
+    private final synchronized void startTrack(boolean param0, boolean param1, MusicTrack param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -566,7 +566,7 @@ final class MidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          this.a(param0, -115);
+          this.stopTrack(param0, -115);
           this.field_R.parse(param2.field_h);
           stackIn_4_1 = (param1);
           this.field_w = stackIn_4_1;
@@ -646,7 +646,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_P;
         if (null != this.field_K &&
           this.field_L == var3) {
-          this.a(this.field_l, this.field_w, this.field_K, -1);
+          this.startTrack(this.field_l, this.field_w, this.field_K, -1);
           this.advanceMidiEvents(32675);
           return;
         }
@@ -674,7 +674,7 @@ final class MidiPcmStream extends PcmStream {
                       break scanLoop2;
                     }
                     if (null != this.field_K) {
-                      this.a(this.field_K, this.field_w, (byte) 120);
+                      this.playTrack(this.field_K, this.field_w, (byte) 120);
                       this.advanceMidiEvents(32675);
                       return;
                     }
@@ -915,10 +915,10 @@ final class MidiPcmStream extends PcmStream {
               }
               break;
             case 17:
-              this.b((-16257 & this.field_U[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7), -1, var4Lifetime1Lifetime3);
+              this.setRetriggerRate((-16257 & this.field_U[var4Lifetime1Lifetime3]) + (var6Lifetime1Lifetime2 << 7), -1, var4Lifetime1Lifetime3);
               break;
             case 49:
-              this.b((-128 & this.field_U[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2, param1 - 32697, var4Lifetime1Lifetime3);
+              this.setRetriggerRate((-128 & this.field_U[var4Lifetime1Lifetime3]) + var6Lifetime1Lifetime2, param1 - 32697, var4Lifetime1Lifetime3);
               return;
             default:
               break;
@@ -1079,14 +1079,14 @@ final class MidiPcmStream extends PcmStream {
         return rd.field_z;
     }
 
-    final synchronized void a(byte param0) {
-        this.a(true, -122);
+    final synchronized void stop(byte param0) {
+        this.stopTrack(true, -122);
         if (param0 >= -86) {
           this.field_G = (cc[][]) null;
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void setDefaultProgram(int param0, int param1, int param2) {
         this.field_F[param0] = param2;
         this.field_t[param0] = rk.a(-128, param2);
         this.setProgram(param2, 0, param0);
@@ -1098,7 +1098,7 @@ final class MidiPcmStream extends PcmStream {
     private final void setPitchWheel(int param0, int param1, int param2) {
         this.field_A[param0] = param1;
         if (param2 > -125) {
-          this.b(-86, -27, 1);
+          this.setRetriggerRate(-86, -27, 1);
         }
     }
 
@@ -1176,12 +1176,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0, int param1, int param2) {
-        this.a(param0, 26818, param1);
+    final synchronized void setChannelProgram(int param0, int param1, int param2) {
+        this.setDefaultProgram(param0, 26818, param1);
         int var4 = 19 / ((70 - param2) / 34);
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void setRetriggerRate(int param0, int param1, int param2) {
         this.field_U[param2] = param0;
         if (param1 != -1) {
           this.field_S = 32;
@@ -1191,7 +1191,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void onPolyPressure(int param0, int param1, int param2, int param3) {
         if (param1 != 511) {
-          this.a(89, -46, -107);
+          this.setDefaultProgram(89, -46, -107);
         }
     }
 
@@ -1239,12 +1239,12 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    final synchronized void a(MusicTrack param0, boolean param1, byte param2) {
+    final synchronized void playTrack(MusicTrack param0, boolean param1, byte param2) {
         if (param2 <= 77) {
           return;
         }
         try {
-          this.a(true, param1, param0, -1);
+          this.startTrack(true, param1, param0, -1);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ug.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -1360,13 +1360,13 @@ final class MidiPcmStream extends PcmStream {
             var7.field_D = PcmSampleStream.createForSampleStep(var6, this.computeNoteSampleStep(950080514, var7), 0, this.computeNotePan(var7, -16385));
             stackIn_19_1 = var7;
             stackIn_20_2 = !(var10.field_p[param2] >= 0);
-            this.a(stackIn_19_1, stackIn_20_2, (byte) 101);
+            this.applySampleOffset(stackIn_19_1, stackIn_20_2, (byte) 101);
           }
         } else {
           var7.field_D = PcmSampleStream.createForSampleStep(var6, this.computeNoteSampleStep(950080514, var7), 0, this.computeNotePan(var7, -16385));
           stackIn_19_1 = var7;
           stackIn_20_2 = !(var10.field_p[param2] >= 0);
-          this.a(stackIn_19_1, stackIn_20_2, (byte) 101);
+          this.applySampleOffset(stackIn_19_1, stackIn_20_2, (byte) 101);
         }
         if (var10.field_p[param2] < 0) {
           var7.field_D.setLoopCount(-1);
@@ -1409,7 +1409,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    private final synchronized void a(int param0, byte param1, int param2) {
+    private final synchronized void setChannelGain(int param0, byte param1, int param2) {
         int var4 = 0;
         int var5 = 0;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -1432,7 +1432,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, ResourceArchive param1, int param2, MusicTrack param3, SoundCache param4) {
+    final synchronized boolean prepareTrackSamples(int param0, ResourceArchive param1, int param2, MusicTrack param3, SoundCache param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -1565,7 +1565,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_R = new MidiFileReader();
         this.field_H = new MusicPatchPcmStream(this);
         this.field_O = new tg(128);
-        this.a(-1, (byte) 70, 256);
+        this.setChannelGain(-1, (byte) 70, 256);
         this.resetPlaybackChannels(false, true);
     }
 

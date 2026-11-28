@@ -250,7 +250,7 @@ abstract class GameClientBase extends GameApplet {
         if (NameSuggestionsPanel.field_K == 11) {
           if (ClientException.field_e != null && (!ClientException.field_e.ensureIndexLoaded(-7957) ||
             !ClientException.field_e.tryLoadAllGroups((byte) 79))) {
-            mh.a(tk.a(ol.field_f, ClientException.field_e, sd.field_g, 256), (byte) -125, 0.0f);
+            mh.a(ValidationStatusIcon.a(ol.field_f, ClientException.field_e, sd.field_g, 256), (byte) -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

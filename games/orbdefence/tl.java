@@ -173,9 +173,9 @@ final class tl {
         if (param1 != 12105912) {
           field_b = (int[]) null;
         }
-        if (kk.field_U == null ||
-          !(param0 <= kk.field_U.length)) {
-          kk.field_U = new int[param0 * 2];
+        if (ValidationStatusWidget.field_U == null ||
+          !(param0 <= ValidationStatusWidget.field_U.length)) {
+          ValidationStatusWidget.field_U = new int[param0 * 2];
         }
         if (null == field_d ||
           !(field_d.length >= param0)) {

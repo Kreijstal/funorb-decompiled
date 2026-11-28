@@ -320,7 +320,7 @@ final class rd {
           var17.field_i = 16777215;
           this.field_k = (WidgetRenderer) ((Object) var17);
           var4 = new gi();
-          var17.a(-19397, var4);
+          var17.copyStyleTo(-19397, var4);
           var4.field_j = 11711154;
           this.field_d = 3;
           this.field_a = 15658734;
@@ -355,7 +355,7 @@ final class rd {
           discarded$0 = new gh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new gi();
-          var17.a(param0 - 13441169, var8);
+          var17.copyStyleTo(param0 - 13441169, var8);
           var8.a((byte) 118, 0).a(112, CrossfadingMidiPcmStream.a(15658734, 10066329, 7829367, 1)).a(1118481, false).b(-1, 113);
           var8.a((byte) 118, 4).a(true, 19749).a(110, var5);
           this.field_e = (WidgetRenderer) ((Object) var8);

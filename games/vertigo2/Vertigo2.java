@@ -153,7 +153,7 @@ public final class Vertigo2 extends GameShell {
                 if (DiskCacheWorker.field_a != DiskCacheWorker.field_f) {
                   this.d(false, -111);
                 } else {
-                  var3 = lr.e((byte) -116);
+                  var3 = ValidationStatusIcon.e((byte) -116);
                   if (var3 != 2) {
                     if (var3 == 3) {
                       SocketConnector.a(9790, true);
@@ -558,9 +558,9 @@ public final class Vertigo2 extends GameShell {
           DiskArchiveRequest.field_D = MusicTrack.load(le.field_f, "", "vertigo2_game_over_jingle");
           MusicTrack.load(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
           MusicTrack.load(le.field_f, "", "vertigo2_time_running_out_jingle");
-          qc.field_v.a(0, jk.field_b, op.field_d, re.field_d, (byte) 75);
+          qc.field_v.prepareTrackSamples(0, jk.field_b, op.field_d, re.field_d, (byte) 75);
           for (var2_int = 0; var2_int < up.field_B.length; var2_int++) {
-            qc.field_v.a(0, jk.field_b, up.field_B[var2_int], re.field_d, (byte) 56);
+            qc.field_v.prepareTrackSamples(0, jk.field_b, up.field_B[var2_int], re.field_d, (byte) 56);
           }
           mj.field_b = null;
           DualLinkNode.field_s = null;
@@ -609,7 +609,7 @@ public final class Vertigo2 extends GameShell {
         try {
           this.a(4, 0, 19, 1, false, -16, 2, 64);
           var3 = new MidiPcmStream();
-          var3.a(9, true, 128);
+          var3.setChannelProgram(9, true, 128);
           nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F));
           DiskCacheWorker.field_c = 4473924;
           oi.field_b = 16777215;
@@ -712,7 +712,7 @@ public final class Vertigo2 extends GameShell {
           IntrusiveNode.field_m = tn.a("levelselect_arrow_pressed", MovingLevelTile.field_u, -121, "");
           pc.field_c = null;
           qp.field_h = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_mid", "", (byte) 98));
-          qe.field_W = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_end", "", (byte) 98));
+          ValidationStatusWidget.field_W = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_end", "", (byte) 98));
           ln.field_f = (ArgbSprite) (MusicPatchPcmStream.a(MovingLevelTile.field_u, "interface_box_rend", "", (byte) 98));
           var3 = tk.field_c.field_z + tk.field_c.field_M;
           GzipDecompressor.field_c = new Sprite(var3, var3);
@@ -992,8 +992,8 @@ public final class Vertigo2 extends GameShell {
           StripedProgressWidget.clearStaticReferences(false);
           NameSuggestionsPanel.clearStaticReferences((byte) -110);
           RichTextWidget.a((byte) -53);
-          lr.clearStaticReferences((byte) -45);
-          qe.clearStaticReferences(111);
+          ValidationStatusIcon.clearStaticReferences((byte) -45);
+          ValidationStatusWidget.clearStaticReferences(111);
           ck.clearStaticReferences(true);
           TextFieldValidator.clearDeclaredStaticReferences((byte) -124);
           ad.resetStaticState(true);
@@ -1831,10 +1831,10 @@ public final class Vertigo2 extends GameShell {
               var4Lifetime1 = 0;
             }
             var5Lifetime1 = 0;
-            if (qe.field_V == null) {
+            if (ValidationStatusWidget.field_V == null) {
               var6 = PacketBuffer.field_o;
             } else {
-              var6 = qe.field_V;
+              var6 = ValidationStatusWidget.field_V;
             }
             ln.field_d = new GameplayScreen(false, new String[]{var6}, 0, false, var5Lifetime1, var4Lifetime1, var4Lifetime1, -1);
             stackIn_105_0 = (!BufferedSocket.field_d) ? 0 : 1;
@@ -1895,10 +1895,10 @@ public final class Vertigo2 extends GameShell {
               var4Lifetime3 = 0;
             }
             var5Lifetime3 = 3;
-            if (null == qe.field_V) {
+            if (null == ValidationStatusWidget.field_V) {
               var6 = PacketBuffer.field_o;
             } else {
-              var6 = qe.field_V;
+              var6 = ValidationStatusWidget.field_V;
             }
             ln.field_d = new GameplayScreen(false, new String[]{var6}, 0, false, var5Lifetime3, var4Lifetime3, var4Lifetime3, 1);
             stackIn_145_0 = (!BufferedSocket.field_d) ? 0 : 1;

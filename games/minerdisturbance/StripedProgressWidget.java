@@ -117,7 +117,7 @@ final class StripedProgressWidget extends UiWidget {
 
     final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
-          w.field_S = param3;
+          ValidationStatusWidget.field_S = param3;
           IntrusiveDeque.field_b = param0;
           if (param2 < 86) {
             BitmapFont var5 = (BitmapFont) null;

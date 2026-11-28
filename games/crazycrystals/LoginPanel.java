@@ -20,14 +20,14 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
     public final void onTextChanged(EditableTextField param0, int param1) {
         try {
           if (param1 != -29513) {
-            this.i(-105);
+            this.getAccountIdentifier(-105);
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "vk.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(String param0, byte param1) {
+    final void setAccountAndClearPassword(String param0, byte param1) {
         EditableTextField var3 = null;
         String var4 = null;
         if (param1 <= 50) {
@@ -120,7 +120,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         fa.a(param1, param2, (String) null, true);
     }
 
-    final String i(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (param0 != -1) {
           LoginPanel.releaseDeclaredStaticReferences(-27);
         }
@@ -414,7 +414,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void e(byte param0) {
+    final void clearCredentials(byte param0) {
         this.field_J.clearText(-100);
         if (param0 <= 45) {
           EditableTextField var3 = (EditableTextField) null;

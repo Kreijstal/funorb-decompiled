@@ -6,7 +6,7 @@ abstract class TextLayout {
     static DraggableWidgetContainer field_a;
     static String field_b;
 
-    final int a(int param0, int param1, int param2, String param3) {
+    final int computeJustificationStep(int param0, int param1, int param2, String param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -25,7 +25,7 @@ abstract class TextLayout {
         try {
           if (param2 != 21107) {
             var11 = (String) null;
-            this.a(-66, 103, -92, (String) null);
+            this.computeJustificationStep(-66, 103, -92, (String) null);
           }
           var5_int = 0;
           var6 = 0;

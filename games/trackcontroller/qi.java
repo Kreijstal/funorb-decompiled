@@ -58,7 +58,7 @@ final class qi {
             }
             this.field_g.drawTransparent(var6_int, var7);
           }
-          var6 = param4.c((byte) 56, param2);
+          var6 = param4.resolveDisplayText((byte) 56, param2);
           if (param3 != -16711924) {
             this.a(74, true);
           }

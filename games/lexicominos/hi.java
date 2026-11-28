@@ -67,7 +67,7 @@ final class hi {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class hi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var1), "hi.B(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var1), "hi.B(" + param0 + ')');
         }
     }
 

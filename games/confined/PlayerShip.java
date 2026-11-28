@@ -480,7 +480,7 @@ final class PlayerShip extends MovingTunnelEntity {
             if (this.field_A.field_y ||
               null != this.field_A.field_K ||
               0 == (var5 | var4) &&
-              rh.field_X == 0) {
+              ValidationStatusWidget.field_X == 0) {
               if (this.field_A.field_x.field_a < 2) {
                 var8 = 0.0;
                 var6 = 0.0;
@@ -521,7 +521,7 @@ final class PlayerShip extends MovingTunnelEntity {
             }
           }
           if (!this.field_A.field_M) {
-            if (0 != rh.field_X) {
+            if (0 != ValidationStatusWidget.field_X) {
               if (this.field_vb) {
                 this.field_Fb = true;
                 if (var32 != 0) {

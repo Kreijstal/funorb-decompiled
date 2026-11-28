@@ -679,7 +679,7 @@ final class ai {
           if (param2 > -51) {
             return;
           }
-          var6 = param1.a(-29558, param3);
+          var6 = param1.resolveDisplayText(-29558, param3);
           if (var6 != null &&
             null != param1.field_e &&
             0 <= this.field_f) {

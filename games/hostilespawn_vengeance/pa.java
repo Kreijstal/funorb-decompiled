@@ -292,13 +292,13 @@ final class pa extends ql {
                   var35Lifetime1 != 0 &&
                   ((oj) (var20)).field_i != 27) {
                   if (var6 == 18) {
-                    dupTemp$1 = al.field_U[0] + 1;
-                    al.field_U[0] = dupTemp$1;
+                    dupTemp$1 = ValidationStatusWidget.field_U[0] + 1;
+                    ValidationStatusWidget.field_U[0] = dupTemp$1;
                     if (dupTemp$1 == 30) {
                       ti.a(250, (byte) -123, 5);
                     }
                   } else {
-                    al.field_U[5] = al.field_U[5] + 1;
+                    ValidationStatusWidget.field_U[5] = ValidationStatusWidget.field_U[5] + 1;
                   }
                 }
                 param0.field_i = 3;

@@ -205,7 +205,7 @@ final class gh {
           if (null != qc.field_v) {
             var4_ref = ri.field_r;
             synchronized (var4_ref) {
-              qc.field_v.a(param3, -1, (byte) -61);
+              qc.field_v.setChannelGain(param3, -1, (byte) -61);
               if (param0 == fo.field_e) {
                 return;
               }
@@ -213,7 +213,7 @@ final class gh {
               ri.field_r.flushAndMarkDrainCheck();
               fo.field_e = param0;
               if (null != fo.field_e) {
-                qc.field_v.a(-15, fo.field_e, param2);
+                qc.field_v.playTrack(-15, fo.field_e, param2);
               }
             }
           }

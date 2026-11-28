@@ -46,7 +46,7 @@ final class BufferedSocket implements Runnable {
           }
           if (null != this.field_k) {
             while (this.field_k.status == 0) {
-              ub.sleepMillis(1976, 1L);
+              ValidationStatusIcon.sleepMillis(1976, 1L);
             }
             if (this.field_k.status == 1) {
               try {
@@ -223,9 +223,9 @@ final class BufferedSocket implements Runnable {
         Sprite var5 = var4;
         VertexMesh.field_l.field_u = VertexMesh.field_l.field_t;
         VertexMesh.field_l.field_w = VertexMesh.field_l.field_s;
-        ub.field_E = -200;
+        ValidationStatusIcon.field_E = -200;
         var5.field_v = 0;
-        ra.field_c = (hb.field_s - ub.field_E) / 35;
+        ra.field_c = (hb.field_s - ValidationStatusIcon.field_E) / 35;
         kc.field_v = ResourceArchive.field_j.field_r + ResourceArchive.field_j.field_t / 2;
         if (param0 > -68) {
           return;
@@ -368,7 +368,7 @@ final class BufferedSocket implements Runnable {
           }
           var8 = param0.requestDisplayModes(100);
           while (var8.status == 0) {
-            ub.sleepMillis(1976, 10L);
+            ValidationStatusIcon.sleepMillis(1976, 10L);
           }
           if (2 == var8.status) {
             stackIn_12_0 = new sf[]{};

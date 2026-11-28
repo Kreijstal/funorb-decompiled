@@ -29,7 +29,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
     static RgbSprite rgbSpriteState0001;
     static int integerState0014;
 
-    private final int computeInteger0023(UiComponent uiComponentArgument1, byte byteArgument2) {
+    private final int getTextAreaHeight(UiComponent uiComponentArgument1, byte byteArgument2) {
         int discarded$1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         UiComponent uiComponentLocal3 = null;
@@ -41,7 +41,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         try {
           if (byteArgument2 >= -124) {
             uiComponentLocal3 = (UiComponent) null;
-            discarded$1 = this.computeInteger0022((UiComponent) null, 125, -17, 115);
+            discarded$1 = this.getUnalignedTextOriginX((UiComponent) null, 125, -17, 115);
           }
           stackIntegerLocal4 = uiComponentArgument1.integerState0108 - (this.integerState0003 + this.integerState0010);
           return stackIntegerLocal4;
@@ -99,9 +99,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             uiComponentArgument1.textLayoutState0001 = (TextLayout) ((Object) new RichTextLayout());
           }
           if (this.booleanState0001) {
-            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutWrappedText(this.computeString0020(uiComponentArgument1, (byte) 121), this.integerState0004, this.bitmapFontState0001, this.getTextAreaWidth(false, uiComponentArgument1), this.computeInteger0023(uiComponentArgument1, (byte) -128), this.integerState0009, 86, this.integerState0006);
+            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutWrappedText(this.resolveDisplayText(uiComponentArgument1, (byte) 121), this.integerState0004, this.bitmapFontState0001, this.getTextAreaWidth(false, uiComponentArgument1), this.getTextAreaHeight(uiComponentArgument1, (byte) -128), this.integerState0009, 86, this.integerState0006);
           } else {
-            this.performAction0024(uiComponentArgument1, 18580);
+            this.rebuildTextLayout(uiComponentArgument1, 18580);
           }
           if (byteArgument2 < 38) {
             uiComponentLocal2 = (UiComponent) null;
@@ -127,7 +127,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         this(bitmapFontArgument1, integerArgument2, integerArgument2, integerArgument3, integerArgument3, integerArgument4, integerArgument5, integerArgument6, integerArgument7, integerArgument8, -1, 2147483647, false);
     }
 
-    private final int computeInteger0022(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    private final int getUnalignedTextOriginX(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         int stackIntegerLocal3 = 0;
@@ -181,10 +181,10 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             integerLocal1 = textLayoutLocal8.getLineIndexForTextOffset(false, integerArgument2);
             textLineMetricsLocal2 = textLayoutLocal7.lines[integerLocal1];
             integerLocal3 = textLayoutLocal8.getXForTextOffset((byte) -94, integerArgument2);
-            integerLocal4 = this.computeInteger0022(uiComponentArgument1, integerLocal3, integerArgument3 + 110, integerArgument4);
+            integerLocal4 = this.getUnalignedTextOriginX(uiComponentArgument1, integerLocal3, integerArgument3 + 110, integerArgument4);
             integerLocal5 = this.getTextOriginY(integerArgument5, 0, uiComponentArgument1) + Math.max(0, textLineMetricsLocal2.topY);
             stackIntegerLocal9 = this.getTextOriginY(integerArgument5, 0, uiComponentArgument1);
-            stackIntegerLocal10 = this.computeInteger0023(uiComponentArgument1, (byte) -128);
+            stackIntegerLocal10 = this.getTextAreaHeight(uiComponentArgument1, (byte) -128);
             stackIntegerLocal11 = textLineMetricsLocal2.bottomY;
             if (textLayoutLocal8.lines.length > 1 + integerLocal1) {
               stackIntegerLocal12 = textLayoutLocal7.lines[integerLocal1 + 1].topY;
@@ -218,13 +218,13 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         int discarded$0 = 0;
         if (byteArgument4 >= -60) {
           UiComponent uiComponentLocal2 = (UiComponent) null;
-          discarded$0 = this.computeInteger0022((UiComponent) null, 118, -123, 71);
+          discarded$0 = this.getUnalignedTextOriginX((UiComponent) null, 118, -123, 71);
         }
         if (null == this.bitmapFontState0001) {
           return;
         }
         try {
-          this.performAction0009(integerArgument3, uiComponentArgument5, (byte) -102, integerArgument2);
+          this.drawTextWithDefaultStyle(integerArgument3, uiComponentArgument5, (byte) -102, integerArgument2);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "a.B(" + booleanArgument1 + ',' + integerArgument2 + ',' + integerArgument3 + ',' + byteArgument4 + ',' + (uiComponentArgument5 != null ? "{...}" : "null") + ')');
         }
@@ -389,9 +389,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         try {
           if (byteArgument1 <= 6) {
             uiComponentLocal3 = (UiComponent) null;
-            discarded$1 = this.computeInteger0023((UiComponent) null, (byte) -126);
+            discarded$1 = this.getTextAreaHeight((UiComponent) null, (byte) -126);
           }
-          stackIntegerLocal4 = this.computeInteger0022(uiComponentArgument2, 0, 97, integerArgument3);
+          stackIntegerLocal4 = this.getUnalignedTextOriginX(uiComponentArgument2, 0, 97, integerArgument3);
           return stackIntegerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;
@@ -462,7 +462,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
                 stackIntegerLocal3 = textLayoutLocal18.getXForTextOffset((byte) -94, integerLocal10);
               }
               integerLocal15 = stackIntegerLocal3;
-              RenderingSupport001.networkSupport002State0001.performAction0174((byte) -115, textLineMetricsLocal13.topY + uiComponentArgument6.integerState0105 + (integerArgument3 - (-uiComponentArgument6.integerState0104 - this.integerState0003)), this.integerState0007 >>> 24, -integerLocal14 + integerLocal15, textLineMetricsLocal13.bottomY, this.integerState0007, this.computeInteger0022(uiComponentArgument6, integerLocal14, 96, integerArgument4));
+              RenderingSupport001.networkSupport002State0001.performAction0174((byte) -115, textLineMetricsLocal13.topY + uiComponentArgument6.integerState0105 + (integerArgument3 - (-uiComponentArgument6.integerState0104 - this.integerState0003)), this.integerState0007 >>> 24, -integerLocal14 + integerLocal15, textLineMetricsLocal13.bottomY, this.integerState0007, this.getUnalignedTextOriginX(uiComponentArgument6, integerLocal14, 96, integerArgument4));
             }
             ByteStorage.performAction1060((byte) -5);
           }
@@ -484,7 +484,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    private final int computeInteger0013(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    private final int getUnalignedTextOriginY(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         int stackIntegerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -511,7 +511,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    private final void performAction0024(UiComponent uiComponentArgument1, int integerArgument2) {
+    private final void rebuildTextLayout(UiComponent uiComponentArgument1, int integerArgument2) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -530,10 +530,10 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             uiComponentArgument1.textLayoutState0001 = (TextLayout) ((Object) new RichTextLayout());
           }
           integerLocal5 = this.getTextAreaWidth(false, uiComponentArgument1);
-          integerLocal7 = this.computeInteger0023(uiComponentArgument1, (byte) -127);
+          integerLocal7 = this.getTextAreaHeight(uiComponentArgument1, (byte) -127);
           if (integerArgument2 != 18580) {
             mixedSupport001Local11 = (DefaultTextWidgetRenderer) null;
-            this.performAction0008(-13, (DefaultTextWidgetRenderer) null);
+            this.copyStyleTo(-13, (DefaultTextWidgetRenderer) null);
           }
           integerLocal9 = this.integerState0004;
           if (integerLocal9 != 0) {
@@ -555,7 +555,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               if (!(uiComponentArgument1.textLayoutState0001 instanceof RichTextLayout)) {
                 return;
               }
-              ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineCentered(integerLocal8, integerLocal5 >> 1, this.computeString0020(uiComponentArgument1, (byte) 116), (byte) 8, this.bitmapFontState0001);
+              ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineCentered(integerLocal8, integerLocal5 >> 1, this.resolveDisplayText(uiComponentArgument1, (byte) 116), (byte) 8, this.bitmapFontState0001);
               return;
             }
             if (2 != integerLocal12) {
@@ -564,11 +564,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             if (!(uiComponentArgument1.textLayoutState0001 instanceof RichTextLayout)) {
               return;
             }
-            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineRightAligned(integerArgument2 ^ 18580, this.bitmapFontState0001, integerLocal5, integerLocal8, this.computeString0020(uiComponentArgument1, (byte) 122));
+            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineRightAligned(integerArgument2 ^ 18580, this.bitmapFontState0001, integerLocal5, integerLocal8, this.resolveDisplayText(uiComponentArgument1, (byte) 122));
             return;
           }
           if (uiComponentArgument1.textLayoutState0001 instanceof RichTextLayout) {
-            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineLeftAligned(0, this.bitmapFontState0001, this.computeString0020(uiComponentArgument1, (byte) 127), integerLocal8, 25);
+            ((RichTextLayout) (uiComponentArgument1.textLayoutState0001)).layoutSingleLineLeftAligned(0, this.bitmapFontState0001, this.resolveDisplayText(uiComponentArgument1, (byte) 127), integerLocal8, 25);
             return;
           }
           return;
@@ -586,7 +586,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    String computeString0020(UiComponent uiComponentArgument1, byte byteArgument2) {
+    String resolveDisplayText(UiComponent uiComponentArgument1, byte byteArgument2) {
         int integerLocal1 = 0;
         RuntimeException runtimeExceptionLocal2 = null;
         String stackStringLocal3 = null;
@@ -612,7 +612,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    private final void performAction0004(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, UiComponent uiComponentArgument5, boolean booleanArgument6, int integerArgument7, int integerArgument8) {
+    private final void drawText(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, UiComponent uiComponentArgument5, boolean booleanArgument6, int integerArgument7, int integerArgument8) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -632,9 +632,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           }
           boolean frameRemainderLocal12 = true;
           integerLocal5 = this.getTextAreaWidth(false, uiComponentArgument5);
-          integerLocal7 = this.computeInteger0023(uiComponentArgument5, (byte) -125);
+          integerLocal7 = this.getTextAreaHeight(uiComponentArgument5, (byte) -125);
           if (this.booleanState0001) {
-            this.bitmapFontState0001.drawParagraph(this.computeString0020(uiComponentArgument5, (byte) -36), this.computeInteger0022(uiComponentArgument5, integerArgument1, 74, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerLocal5, integerLocal7, integerArgument2, integerArgument3, this.integerState0009, this.integerState0004, this.integerState0006);
+            this.bitmapFontState0001.drawParagraph(this.resolveDisplayText(uiComponentArgument5, (byte) -36), this.getUnalignedTextOriginX(uiComponentArgument5, integerArgument1, 74, integerArgument4), this.getUnalignedTextOriginY(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerLocal5, integerLocal7, integerArgument2, integerArgument3, this.integerState0009, this.integerState0004, this.integerState0006);
           } else {
             integerLocal9 = this.integerState0004;
             if (integerLocal9 == 0) {
@@ -653,16 +653,16 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             if (0 != integerLocal11 &&
               integerLocal11 != 3) {
               if (integerLocal11 == 1) {
-                this.bitmapFontState0001.drawCentred(this.computeString0020(uiComponentArgument5, (byte) -67), this.computeInteger0022(uiComponentArgument5, integerArgument1, 122, integerArgument4) + (integerLocal5 >> 1), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
+                this.bitmapFontState0001.drawCentred(this.resolveDisplayText(uiComponentArgument5, (byte) -67), this.getUnalignedTextOriginX(uiComponentArgument5, integerArgument1, 122, integerArgument4) + (integerLocal5 >> 1), integerLocal8 + this.getUnalignedTextOriginY(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
               } else {
                 if ((integerLocal11 == 2)) {
-                  this.bitmapFontState0001.drawRightAligned(this.computeString0020(uiComponentArgument5, (byte) 123), integerLocal5 + this.computeInteger0022(uiComponentArgument5, integerArgument1, 78, integerArgument4), this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8) + integerLocal8, integerArgument2, integerArgument3);
+                  this.bitmapFontState0001.drawRightAligned(this.resolveDisplayText(uiComponentArgument5, (byte) 123), integerLocal5 + this.getUnalignedTextOriginX(uiComponentArgument5, integerArgument1, 78, integerArgument4), this.getUnalignedTextOriginY(uiComponentArgument5, 20881, integerArgument7, integerArgument8) + integerLocal8, integerArgument2, integerArgument3);
                 }
               }
               frameRemainderLocal12 = false;
             }
             else {
-              this.bitmapFontState0001.drawString(this.computeString0020(uiComponentArgument5, (byte) -50), this.computeInteger0022(uiComponentArgument5, integerArgument1, 81, integerArgument4), integerLocal8 + this.computeInteger0013(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
+              this.bitmapFontState0001.drawString(this.resolveDisplayText(uiComponentArgument5, (byte) -50), this.getUnalignedTextOriginX(uiComponentArgument5, integerArgument1, 81, integerArgument4), integerLocal8 + this.getUnalignedTextOriginY(uiComponentArgument5, 20881, integerArgument7, integerArgument8), integerArgument2, integerArgument3);
             }
           }
           ByteStorage.performAction1060((byte) -5);
@@ -771,13 +771,13 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         return this.bitmapFontState0001.integerState0523 + this.bitmapFontState0001.integerState0518;
     }
 
-    private final void performAction0009(int integerArgument1, UiComponent uiComponentArgument2, byte byteArgument3, int integerArgument4) {
+    private final void drawTextWithDefaultStyle(int integerArgument1, UiComponent uiComponentArgument2, byte byteArgument3, int integerArgument4) {
         try {
           if (byteArgument3 >= -1) {
             UiComponent uiComponentLocal1 = (UiComponent) null;
-            this.performAction0024((UiComponent) null, 109);
+            this.rebuildTextLayout((UiComponent) null, 109);
           }
-          this.performAction0004(0, this.integerState0002, this.integerState0005, integerArgument4, uiComponentArgument2, true, 0, integerArgument1);
+          this.drawText(0, this.integerState0002, this.integerState0005, integerArgument4, uiComponentArgument2, true, 0, integerArgument1);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "a.M(" + integerArgument1 + ',' + (uiComponentArgument2 != null ? "{...}" : "null") + ',' + byteArgument3 + ',' + integerArgument4 + ')');
         }
@@ -852,7 +852,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         }
     }
 
-    final void performAction0008(int integerArgument1, DefaultTextWidgetRenderer mixedSupport001Argument2) {
+    final void copyStyleTo(int integerArgument1, DefaultTextWidgetRenderer mixedSupport001Argument2) {
         try {
           mixedSupport001Argument2.integerState0001 = this.integerState0001;
           mixedSupport001Argument2.integerState0005 = this.integerState0005;
@@ -887,9 +887,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         try {
           if (integerArgument2 != 0) {
             uiComponentLocal3 = (UiComponent) null;
-            discarded$1 = this.computeInteger0023((UiComponent) null, (byte) 33);
+            discarded$1 = this.getTextAreaHeight((UiComponent) null, (byte) 33);
           }
-          stackIntegerLocal4 = this.computeInteger0013(uiComponentArgument3, 20881, 0, integerArgument1);
+          stackIntegerLocal4 = this.getUnalignedTextOriginY(uiComponentArgument3, 20881, 0, integerArgument1);
           return stackIntegerLocal4;
         } catch (java.lang.RuntimeException caughtParameterLocal9) {
           caughtExceptionLocal8 = caughtParameterLocal9;

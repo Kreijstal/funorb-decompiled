@@ -339,8 +339,8 @@ final class sc implements Runnable {
                   if (var9.field_b &&
                     var12 != 0 &&
                     var9.field_i != 27) {
-                    dupTemp$0 = al.field_U[3] + 1;
-                    al.field_U[3] = dupTemp$0;
+                    dupTemp$0 = ValidationStatusWidget.field_U[3] + 1;
+                    ValidationStatusWidget.field_U[3] = dupTemp$0;
                     if (dupTemp$0 == 30) {
                       ti.a(247, (byte) 67, 8);
                     }

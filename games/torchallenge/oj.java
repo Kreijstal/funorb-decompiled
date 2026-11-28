@@ -2675,7 +2675,7 @@ final class oj {
                 }
                 var2 = dl.a("fs_accept_aftercancel", false);
                 if (var2 != null) {
-                  tk.field_T = re.a(18990, var2);
+                  ValidationStatusIcon.field_T = re.a(18990, var2);
                 }
                 var2 = dl.a("fs_accept_countdown_sing", false);
                 if (var2 != null) {

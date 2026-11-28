@@ -29,7 +29,7 @@ final class la extends ca {
                 param1 = ti.field_i;
               }
               param0 = 2;
-              ib.field_e.a(rf.field_e, 10000536);
+              ib.field_e.setAccountAndClearPassword(rf.field_e, 10000536);
             }
             if (10 == param0) {
               var3_int = 0;
@@ -47,7 +47,7 @@ final class la extends ca {
             if (param0 != 256 &&
               param0 != 10 &&
               !MatchingFieldValidator.field_o) {
-              ib.field_e.a(false);
+              ib.field_e.clearCredentials(false);
               return;
             }
           }
@@ -73,7 +73,7 @@ final class la extends ca {
           RuntimeException var2_ref2 = null;
           var7 = HostileSpawn.field_I ? 1 : 0;
           try {
-            if (al.field_T) {
+            if (ValidationStatusWidget.field_T) {
               return true;
             }
             try {

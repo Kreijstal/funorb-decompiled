@@ -130,20 +130,20 @@ final class wc extends id {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         int var8 = 0;
-        od var9 = null;
-        od var10 = null;
+        MeshData var9 = null;
+        MeshData var10 = null;
         var8 = Confined.field_J ? 1 : 0;
         try {
-          var9 = new od(gg.field_n[this.field_Zb], false, true, true, true);
+          var9 = new MeshData(gg.field_n[this.field_Zb], false, true, true, true);
           var10 = var9;
           if ((1 << this.field_Zb & 7) != 0) {
-            var10.a(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
-            var10.a(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
+            var10.applyAnimationFrame(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
+            var10.applyAnimationFrame(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
           } else {
             if (this.field_Xb != 0) {
-              var10.a(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
+              var10.applyAnimationFrame(li.field_m, tf.field_n[this.field_Zb][this.field_Xb]);
             } else {
-              var9.a(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
+              var9.applyAnimationFrame(li.field_m, MovingTunnelEntity.field_H[this.field_Zb][this.field_Qb]);
             }
           }
           if (param2 > -5) {

@@ -18,7 +18,7 @@ final class ec extends dm {
         if (param0 <= -42) {
           var1 = "";
           if (null != ResourceArchive.field_b) {
-            var1 = ResourceArchive.field_b.i((byte) 52);
+            var1 = ResourceArchive.field_b.getAccountIdentifier((byte) 52);
           }
           if (var1.length() == 0) {
             var1 = am.b((byte) -84);
@@ -31,7 +31,7 @@ final class ec extends dm {
         ec.clearStaticReferences((byte) 58);
         var1Lifetime1 = "";
         if (null != ResourceArchive.field_b) {
-          var1Lifetime1 = ResourceArchive.field_b.i((byte) 52);
+          var1Lifetime1 = ResourceArchive.field_b.getAccountIdentifier((byte) 52);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = am.b((byte) -84);

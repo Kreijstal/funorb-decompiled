@@ -60,7 +60,7 @@ class MidiPcmStream extends PcmStream {
           if (param1 < 6) {
             this.advanceMidiEvents(16);
           }
-          this.b(-112, 8192, param0);
+          this.setRetriggerRate(-112, 8192, param0);
         }
     }
 
@@ -83,7 +83,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(int param0, MusicTrack param1, ResourceArchive param2, SoundCache param3, boolean param4) {
+    final synchronized boolean prepareTrackSamples(int param0, MusicTrack param1, ResourceArchive param2, SoundCache param3, boolean param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -273,7 +273,7 @@ class MidiPcmStream extends PcmStream {
 
     }
 
-    synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
+    synchronized void startTrack(boolean param0, byte param1, boolean param2, MusicTrack param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = HostileSpawn.field_I ? 1 : 0;
@@ -299,7 +299,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(byte param0, int param1, int param2) {
+    private final void setDefaultProgram(byte param0, int param1, int param2) {
         int discarded$0 = 0;
         this.field_F[param2] = param1;
         if (param0 != 22) {
@@ -344,7 +344,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void setRetriggerRate(int param0, int param1, int param2) {
         if (param0 > -42) {
           this.field_u = (int[]) null;
         }
@@ -629,11 +629,11 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void c(int param0, int param1, int param2) {
+    final synchronized void setChannelProgram(int param0, int param1, int param2) {
         if (param0 != 2) {
           this.field_M = (int[]) null;
         }
-        this.b((byte) 22, param1, param2);
+        this.setDefaultProgram((byte) 22, param1, param2);
     }
 
     final synchronized void c(int param0, int param1) {
@@ -784,7 +784,7 @@ class MidiPcmStream extends PcmStream {
         if (this.field_H[param2] != 0) {
           var7.field_A = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(1, var7), 0, this.computeNotePan(var7, true));
           stackIn_20_1 = !(var11.field_r[param3] >= 0);
-          this.a(stackIn_20_1, var7, -128);
+          this.applySampleOffset(stackIn_20_1, var7, -128);
         } else {
           var7.field_A = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(param0 ^ 34, var7), this.computeNoteVolume(var7, (byte) -75), this.computeNotePan(var7, true));
         }
@@ -805,13 +805,13 @@ class MidiPcmStream extends PcmStream {
         return;
     }
 
-    final synchronized void a(boolean param0, byte param1, MusicTrack param2) {
+    final synchronized void playTrack(boolean param0, byte param1, MusicTrack param2) {
         try {
           if (param1 < 8) {
             tm var5 = (tm) null;
             this.isVoiceInactive((byte) -14, (tm) null);
           }
-          this.a(param0, (byte) 124, true, param2);
+          this.startTrack(param0, (byte) 124, true, param2);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "w.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -827,7 +827,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(boolean param0, tm param1, int param2) {
+    final void applySampleOffset(boolean param0, tm param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1063,12 +1063,12 @@ class MidiPcmStream extends PcmStream {
           }
         }
         if (17 == var6Lifetime4) {
-          this.b(-91, (var7Lifetime3 << 7) + (-16257 & this.field_w[var5Lifetime4]), var5Lifetime4);
+          this.setRetriggerRate(-91, (var7Lifetime3 << 7) + (-16257 & this.field_w[var5Lifetime4]), var5Lifetime4);
         }
         if (var6Lifetime4 != 49) {
           return;
         }
-        this.b(-75, (-128 & this.field_w[var5Lifetime4]) + var7Lifetime3, var5Lifetime4);
+        this.setRetriggerRate(-75, (-128 & this.field_w[var5Lifetime4]) + var7Lifetime3, var5Lifetime4);
     }
 
     final synchronized PcmStream firstChildStream() {
@@ -1178,7 +1178,7 @@ class MidiPcmStream extends PcmStream {
         var4 = this.field_x;
         if (this.field_z != null &&
           var3 == this.field_s) {
-          this.a(this.field_R, (byte) 127, this.field_J, this.field_z);
+          this.startTrack(this.field_R, (byte) 127, this.field_J, this.field_z);
           this.advanceMidiEvents(0);
           return;
         }
@@ -1216,7 +1216,7 @@ class MidiPcmStream extends PcmStream {
             this.field_G.saveTrackPosition(var2);
             if (this.field_G.isDone()) {
               if (this.field_z != null) {
-                this.a(this.field_R, (byte) 52, this.field_z);
+                this.playTrack(this.field_R, (byte) 52, this.field_z);
                 this.advanceMidiEvents(0);
                 return;
               }

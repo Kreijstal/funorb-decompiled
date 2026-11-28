@@ -114,10 +114,10 @@ final class ProxySocketConnector extends SocketConnector {
 
     final static float a(boolean param0, float param1) {
         if (param0) {
-          return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
+          return ValidationStatusIcon.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
         }
         field_d = (char[]) null;
-        return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
+        return ValidationStatusIcon.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
     }
 
     ProxySocketConnector() {

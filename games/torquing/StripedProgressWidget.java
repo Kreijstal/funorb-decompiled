@@ -229,7 +229,7 @@ final class StripedProgressWidget extends UiWidget {
           field_D = (String) null;
         }
         if (un.field_k != null) {
-          var1 = un.field_k.i(-116);
+          var1 = un.field_k.getAccountIdentifier(-116);
         }
         if (0 == var1.length()) {
           var1 = jg.a(true);

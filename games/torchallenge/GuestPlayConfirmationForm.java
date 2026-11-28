@@ -115,7 +115,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         BufferedCacheFile.field_e = true;
         o.field_l = 0;
         FullscreenFocusCanvas.field_a = true;
-        tk.field_P = false;
+        ValidationStatusIcon.field_P = false;
         NanoFrameTimer.field_l = false;
         AccountNameAvailabilityValidator.field_r = 0;
         qk.field_lb = 0;

@@ -1252,7 +1252,7 @@ final class LevelScreen extends ib {
         int var8 = 0;
         nf var8_ref_nf = null;
         int var9 = 0;
-        pa var10_ref_pa = null;
+        MeshData var10_ref_pa = null;
         int var10 = 0;
         int var11 = 0;
         int var12_int = 0;
@@ -1334,19 +1334,19 @@ final class LevelScreen extends ib {
                 break;
               }
               if (stackIn_156_0 == stackIn_156_1) {
-                var10_ref_pa = new pa(rh.field_b, false, false, false, false);
+                var10_ref_pa = new MeshData(rh.field_b, false, false, false, false);
                 this.field_q = this.field_q + 1;
                 if (this.field_q > 256) {
                   this.field_q = this.field_q - 256;
                 }
                 var11 = (int)(Math.cos((double)this.field_q * 3.141592653589793 / 128.0) * 65536.0);
                 var12_int = (int)(65536.0 * Math.sin(3.141592653589793 * (double)this.field_q / 128.0));
-                var10_ref_pa.a(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
-                var10_ref_pa.a(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
-                var10_ref_pa.a(new int[]{0, 0, 0, 65536, 0, 0, 0, var11, -var12_int, 0, var12_int, var11});
-                var10_ref_pa.a(new int[]{0, 0, 0, var11, 0, -var12_int, 0, 65536, 0, var12_int, 0, var11});
-                var10_ref_pa.a(new int[]{0, 0, 0, var11, -var12_int, 0, var12_int, var11, 0, 0, 0, 65536});
-                var13_ref_bj = var10_ref_pa.a(32, 346, 50, 50, -50);
+                var10_ref_pa.transformVertices(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
+                var10_ref_pa.transformVertices(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
+                var10_ref_pa.transformVertices(new int[]{0, 0, 0, 65536, 0, 0, 0, var11, -var12_int, 0, var12_int, var11});
+                var10_ref_pa.transformVertices(new int[]{0, 0, 0, var11, 0, -var12_int, 0, 65536, 0, var12_int, 0, var11});
+                var10_ref_pa.transformVertices(new int[]{0, 0, 0, var11, -var12_int, 0, var12_int, var11, 0, 0, 0, 65536});
+                var13_ref_bj = var10_ref_pa.createModel(32, 346, 50, 50, -50);
                 var13_ref_bj.drawPerspective(0, 0, 0, 0, 0, 0, 1000, -1L);
                 RichTextLayout.field_h.a((byte) -107);
               }

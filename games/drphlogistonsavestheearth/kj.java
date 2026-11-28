@@ -303,7 +303,7 @@ final class kj {
           if (!param2) {
             this.field_e = (RgbSprite) null;
           }
-          var6 = param0.b(-121, param1);
+          var6 = param0.resolveDisplayText(-121, param1);
           if (var6 != null &&
             param0.field_g != null) {
             if (this.field_h < 0) {

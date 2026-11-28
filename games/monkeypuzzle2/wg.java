@@ -30,8 +30,8 @@ final class wg extends IntrusiveNode {
             }
             ImageProducerRasterBuffer.field_k[var2] = -(m.field_e[var2] / 2) + 320;
             DiskArchiveRequest.field_v[var2] = 240 - AgeValidator.field_o[var2] / 2;
-            vh.field_E[var2] = new Sprite(m.field_e[var2], AgeValidator.field_o[var2]);
-            vh.field_E[var2].bindAsRenderTarget();
+            ValidationStatusIcon.field_E[var2] = new Sprite(m.field_e[var2], AgeValidator.field_o[var2]);
+            ValidationStatusIcon.field_E[var2].bindAsRenderTarget();
             GuestPlayConfirmationForm.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
             BoundedRandomAccessFile.field_e.drawParagraph(AgeValidator.field_n[var2], 57, 15, m.field_e[var2] - 72, AgeValidator.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
             RichTextLayout.field_r.drawString(GuestPlayConfirmationForm.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);

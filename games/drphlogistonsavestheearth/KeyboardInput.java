@@ -8,7 +8,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (ji.field_c != null) {
-            gm.field_O = -1;
+            ValidationStatusIcon.field_O = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fe.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -71,12 +71,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             var2_int = -1;
           }
-          if (gm.field_O >= 0 &&
+          if (ValidationStatusIcon.field_O >= 0 &&
             var2_int >= 0) {
-            ProxyAuthenticationRequiredException.field_f[gm.field_O] = var2_int;
-            gm.field_O = 127 & gm.field_O + 1;
-            if (b.field_l == gm.field_O) {
-              gm.field_O = -1;
+            ProxyAuthenticationRequiredException.field_f[ValidationStatusIcon.field_O] = var2_int;
+            ValidationStatusIcon.field_O = 127 & ValidationStatusIcon.field_O + 1;
+            if (b.field_l == ValidationStatusIcon.field_O) {
+              ValidationStatusIcon.field_O = -1;
             }
           }
           if (var2_int >= 0) {
@@ -135,12 +135,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             } else {
               var2_int = -1;
             }
-            if (gm.field_O >= 0 &&
+            if (ValidationStatusIcon.field_O >= 0 &&
               var2_int >= 0) {
-              ProxyAuthenticationRequiredException.field_f[gm.field_O] = ~var2_int;
-              gm.field_O = gm.field_O + 1 & 127;
-              if (b.field_l == gm.field_O) {
-                gm.field_O = -1;
+              ProxyAuthenticationRequiredException.field_f[ValidationStatusIcon.field_O] = ~var2_int;
+              ValidationStatusIcon.field_O = ValidationStatusIcon.field_O + 1 & 127;
+              if (b.field_l == ValidationStatusIcon.field_O) {
+                ValidationStatusIcon.field_O = -1;
               }
             }
           }

@@ -24,7 +24,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     private boolean field_w;
 
     private final void a(byte param0, int param1, int param2, MidiPcmStream param3) {
-        param3.a(param2, true, -1);
+        param3.setChannelGain(param2, true, -1);
         if (param0 < 16) {
           return;
         }
@@ -59,7 +59,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_F = param0;
               if (param0 != null) {
-                this.field_C.a(false, param2 + 524395, param0);
+                this.field_C.playTrack(false, param2 + 524395, param0);
                 this.a((byte) 87, param1, param5, this.field_C);
               }
             } else {
@@ -68,7 +68,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_r = param0;
               if (param0 != null) {
-                this.field_o.a(false, 64, param0);
+                this.field_o.playTrack(false, 64, param0);
                 this.a((byte) 64, param1, param5, this.field_o);
               }
             }
@@ -107,7 +107,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param0 != null) {
               stackIn_51_0 = this.field_C;
               stackIn_52_1 = !(param3);
-              ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_52_1, 101, param0);
+              ((MidiPcmStream) (Object) stackIn_51_0).playTrack(stackIn_52_1, 101, param0);
               this.a((byte) 79, param1, param5, this.field_C);
             }
             this.field_u = param4;
@@ -119,7 +119,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param0 != null) {
               stackIn_42_0 = this.field_o;
               stackIn_43_1 = !(param3);
-              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_43_1, param2 + 524353, param0);
+              ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_43_1, param2 + 524353, param0);
               this.a((byte) 104, param1, param5, this.field_o);
             }
             this.field_u = -param4;

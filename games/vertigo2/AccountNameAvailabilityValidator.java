@@ -33,7 +33,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             this.getValidationStatus(86, (String) null);
           }
           if (!param1.equals(this.checkedName)) {
-            var3 = qe.pollAccountNameCheck(param1, (byte) 54);
+            var3 = ValidationStatusWidget.pollAccountNameCheck(param1, (byte) 54);
             if (var3 != null &&
               var3.message == null) {
               this.nameAvailable = var3.success;
@@ -102,7 +102,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_4_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var4 = qe.pollAccountNameCheck(param1, (byte) 61);
+            var4 = ValidationStatusWidget.pollAccountNameCheck(param1, (byte) 61);
             if (var4 == null) {
               return null;
             }
@@ -181,14 +181,14 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     final static void g(int param0) {
         CharSequence var3 = null;
         if (param0 == 3) {
-          qe.field_V = SoundCache.field_f.readString(param0 ^ 131);
-          var3 = (CharSequence) ((Object) qe.field_V);
+          ValidationStatusWidget.field_V = SoundCache.field_f.readString(param0 ^ 131);
+          var3 = (CharSequence) ((Object) ValidationStatusWidget.field_V);
           Vertigo2.field_F = rc.a(var3, param0 + 317);
           return;
         }
         field_m = -23;
-        qe.field_V = SoundCache.field_f.readString(param0 ^ 131);
-        CharSequence var2 = (CharSequence) ((Object) qe.field_V);
+        ValidationStatusWidget.field_V = SoundCache.field_f.readString(param0 ^ 131);
+        CharSequence var2 = (CharSequence) ((Object) ValidationStatusWidget.field_V);
         Vertigo2.field_F = rc.a(var2, param0 + 317);
     }
 

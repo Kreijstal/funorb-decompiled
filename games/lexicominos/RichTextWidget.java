@@ -106,11 +106,11 @@ class RichTextWidget extends InteractiveWidget {
             this.field_I = this.findHotspotAt(var6, false, var5_int);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bc.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "bc.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         TextHotspotBounds discarded$0 = null;
         String[] var7 = null;
         String[] var8 = null;
@@ -134,7 +134,7 @@ class RichTextWidget extends InteractiveWidget {
           }
           this.field_G[param1] = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bc.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "bc.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -222,7 +222,7 @@ class RichTextWidget extends InteractiveWidget {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -250,11 +250,11 @@ class RichTextWidget extends InteractiveWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param2 == -2) {
           this.setBounds(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight(-13293, (UiWidget) (this)), param3, true, param1, param0);
           return;
@@ -289,7 +289,7 @@ class RichTextWidget extends InteractiveWidget {
         try {
           this.field_i = param1;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

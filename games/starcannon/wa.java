@@ -118,9 +118,9 @@ final class wa implements WidgetRenderer {
           jk.field_l = param3;
           mc.field_c = param2;
           TextLineMetrics.field_i = param0;
-          pa.field_I = new Sprite[param4.length];
+          ValidationStatusWidget.field_I = new Sprite[param4.length];
           for (var8 = 0; param4.length > var8; var8++) {
-            pa.field_I[var8] = new Sprite(317, 34);
+            ValidationStatusWidget.field_I[var8] = new Sprite(317, 34);
           }
           va.field_t = param4;
           return;

@@ -14,7 +14,7 @@ final class gi {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.a(param2);
+          param0.scaleToRadius(param2);
           if (param1 != 13) {
             field_d = 93;
           }

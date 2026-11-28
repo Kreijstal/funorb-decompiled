@@ -1081,7 +1081,7 @@ final class je {
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
-        if (qn.field_J != null &&
+        if (ValidationStatusIcon.field_J != null &&
           field_J) {
           var3 = field_D + param1 - ClientException.field_d;
           var4 = 0;
@@ -1104,8 +1104,8 @@ final class je {
             te.field_c[field_K[incrementValue$0 % field_K.length]].drawScaled(var9Lifetime1, var3 + var8, var6, var7);
           }
           var3 = var3 + (60 + (int)(Math.sin(field_l) * 2.0));
-          for (var9Lifetime2 = -var5 - qn.field_J.field_x; var9Lifetime2 < 640; var9Lifetime2 = var9Lifetime2 + qn.field_J.field_x) {
-            qn.field_J.draw(var9Lifetime2, var3);
+          for (var9Lifetime2 = -var5 - ValidationStatusIcon.field_J.field_x; var9Lifetime2 < 640; var9Lifetime2 = var9Lifetime2 + ValidationStatusIcon.field_J.field_x) {
+            ValidationStatusIcon.field_J.draw(var9Lifetime2, var3);
           }
           var3 += 30;
           var4Lifetime2 = 0;

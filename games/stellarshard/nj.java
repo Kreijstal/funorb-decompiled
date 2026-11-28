@@ -163,7 +163,7 @@ final class nj {
         this.field_r = k.field_d;
         this.field_m = IntrusiveDequeCursor.field_b;
         this.field_i = il.field_w;
-        this.field_p = ii.field_J;
+        this.field_p = ValidationStatusIcon.field_J;
         this.field_d = eh.field_d;
         this.field_n = oe.field_d;
     }

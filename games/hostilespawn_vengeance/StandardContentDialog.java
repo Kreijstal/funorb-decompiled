@@ -142,7 +142,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           DebouncedFieldValidator.field_a = false;
           if (hh.field_d == rl.field_c) {
             ImageProducerRasterBuffer.field_p = 0;
-            kf.clearInts(al.field_U, 0, 6);
+            kf.clearInts(ValidationStatusWidget.field_U, 0, 6);
             sg.field_i = 0;
           }
           ad.field_a = ng.field_u;

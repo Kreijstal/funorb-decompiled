@@ -142,45 +142,45 @@ public final class Chess extends NetworkGameClient {
     }
 
     private final void buildBoardOverlayGeometry(int param0) {
-        b.field_e = new bn(4, 2, 1);
-        b.field_e.a(-66, 0, -66);
-        b.field_e.a(66, 0, -66);
-        b.field_e.a(-66, 0, 66);
-        b.field_e.a(66, 0, 66);
-        b.field_e.a(0, 1, 2, (byte) 1, (byte) -1, (short) 127, (short) -1);
-        b.field_e.a(3, 2, 1, (byte) 1, (byte) -1, (short) 127, (short) -1);
-        StripedProgressWidget.field_H = (SoftwareModelMesh) (b.field_e.a(100, 131072, 0, -10, 0));
-        bd.field_b = (SoftwareModelMesh) (b.field_e.a(8, 131072, 0, -10, 0));
-        ea.field_cb = new bn(4, 2, 1);
-        ea.field_cb.a(-344, 0, -344);
-        ea.field_cb.a(344, 0, -344);
-        ea.field_cb.a(-344, 0, 344);
-        ea.field_cb.a(344, 0, 344);
-        ea.field_cb.a(param0, 1, 2, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
-        ea.field_cb.a(3, 2, 1, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
-        ea.field_cb.field_j[0] = NodeHashTableIterator.field_g[qm.field_g];
-        ea.field_cb.field_j[1] = NodeHashTableIterator.field_g[qm.field_g];
-        ei.field_q = (SoftwareModelMesh) (ea.field_cb.a(100, 131072, 0, -10, 0));
-        ArchiveIndex.field_i = new bn(4, 2, 1);
-        ArchiveIndex.field_i.a(-66, 0, -66);
-        ArchiveIndex.field_i.a(66, 0, -66);
-        ArchiveIndex.field_i.a(-66, 0, 66);
-        ArchiveIndex.field_i.a(66, 0, 66);
-        ArchiveIndex.field_i.a(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
-        ArchiveIndex.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        b.field_e = new MeshData(4, 2, 1);
+        b.field_e.findOrAddVertex(-66, 0, -66);
+        b.field_e.findOrAddVertex(66, 0, -66);
+        b.field_e.findOrAddVertex(-66, 0, 66);
+        b.field_e.findOrAddVertex(66, 0, 66);
+        b.field_e.addFace(0, 1, 2, (byte) 1, (byte) -1, (short) 127, (short) -1);
+        b.field_e.addFace(3, 2, 1, (byte) 1, (byte) -1, (short) 127, (short) -1);
+        StripedProgressWidget.field_H = (SoftwareModelMesh) (b.field_e.createModel(100, 131072, 0, -10, 0));
+        bd.field_b = (SoftwareModelMesh) (b.field_e.createModel(8, 131072, 0, -10, 0));
+        ValidationStatusWidget.field_cb = new MeshData(4, 2, 1);
+        ValidationStatusWidget.field_cb.findOrAddVertex(-344, 0, -344);
+        ValidationStatusWidget.field_cb.findOrAddVertex(344, 0, -344);
+        ValidationStatusWidget.field_cb.findOrAddVertex(-344, 0, 344);
+        ValidationStatusWidget.field_cb.findOrAddVertex(344, 0, 344);
+        ValidationStatusWidget.field_cb.addFace(param0, 1, 2, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
+        ValidationStatusWidget.field_cb.addFace(3, 2, 1, (byte) 1, (byte) -1, NodeHashTableIterator.field_g[qm.field_g], (short) -1);
+        ValidationStatusWidget.field_cb.field_j[0] = NodeHashTableIterator.field_g[qm.field_g];
+        ValidationStatusWidget.field_cb.field_j[1] = NodeHashTableIterator.field_g[qm.field_g];
+        ei.field_q = (SoftwareModelMesh) (ValidationStatusWidget.field_cb.createModel(100, 131072, 0, -10, 0));
+        ArchiveIndex.field_i = new MeshData(4, 2, 1);
+        ArchiveIndex.field_i.findOrAddVertex(-66, 0, -66);
+        ArchiveIndex.field_i.findOrAddVertex(66, 0, -66);
+        ArchiveIndex.field_i.findOrAddVertex(-66, 0, 66);
+        ArchiveIndex.field_i.findOrAddVertex(66, 0, 66);
+        ArchiveIndex.field_i.addFace(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        ArchiveIndex.field_i.addFace(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
         ArchiveIndex.field_i.field_j[0] = (short)960;
         ArchiveIndex.field_i.field_j[1] = (short)960;
-        mm.field_a = (SoftwareModelMesh) (ArchiveIndex.field_i.a(100, 131072, 0, -10, 0));
-        tk.field_i = new bn(4, 2, 1);
-        tk.field_i.a(-66, 0, -66);
-        tk.field_i.a(66, 0, -66);
-        tk.field_i.a(-66, 0, 66);
-        tk.field_i.a(66, 0, 66);
-        tk.field_i.a(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
-        tk.field_i.a(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        mm.field_a = (SoftwareModelMesh) (ArchiveIndex.field_i.createModel(100, 131072, 0, -10, 0));
+        tk.field_i = new MeshData(4, 2, 1);
+        tk.field_i.findOrAddVertex(-66, 0, -66);
+        tk.field_i.findOrAddVertex(66, 0, -66);
+        tk.field_i.findOrAddVertex(-66, 0, 66);
+        tk.field_i.findOrAddVertex(66, 0, 66);
+        tk.field_i.addFace(0, 1, 2, (byte) 1, (byte) -1, (short) 960, (short) -1);
+        tk.field_i.addFace(3, 2, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
         tk.field_i.field_j[1] = (short)960;
         tk.field_i.field_j[0] = (short)960;
-        mh.field_f = (SoftwareModelMesh) (tk.field_i.a(16, 131072, 0, -10, 0));
+        mh.field_f = (SoftwareModelMesh) (tk.field_i.createModel(16, 131072, 0, -10, 0));
     }
 
     final static int getRegistrationAge(int param0) {
@@ -228,13 +228,13 @@ public final class Chess extends NetworkGameClient {
         if (param0 <= 50) {
           this.loadReplayControls(61);
         }
-        ea.h((byte) -16);
+        ValidationStatusWidget.h((byte) -16);
         fl.field_n = ib.a(true);
         la.b(-49);
-        if (!SpriteGeometry.field_q.d((byte) -125)) {
+        if (!SpriteGeometry.field_q.hasMidiData((byte) -125)) {
           ug.a(123);
         }
-        if (!ka.field_a.d((byte) -126) &&
+        if (!ka.field_a.hasMidiData((byte) -126) &&
           bc.field_b != ib.field_a) {
           if (ib.field_a > bc.field_b) {
             fieldTemp$0 = bc.field_b + 2;
@@ -619,10 +619,10 @@ public final class Chess extends NetworkGameClient {
     private final void loadMenuArtwork(byte param0) {
         nj.a(-20, mm.field_e, 92.0f);
         this.renderFrame(true);
-        cm.field_s = jn.a("logo", 8221, "", mm.field_d);
-        IntrusiveNode.field_g = jn.a("achievements", 8221, "", mm.field_d);
-        ml.field_g = jn.a("instructions", 8221, "", mm.field_d);
-        DelegatingCanvas.field_g = jn.a("rankings", 8221, "", mm.field_d);
+        cm.field_s = ValidationStatusIcon.a("logo", 8221, "", mm.field_d);
+        IntrusiveNode.field_g = ValidationStatusIcon.a("achievements", 8221, "", mm.field_d);
+        ml.field_g = ValidationStatusIcon.a("instructions", 8221, "", mm.field_d);
+        DelegatingCanvas.field_g = ValidationStatusIcon.a("rankings", 8221, "", mm.field_d);
         cm.field_s.field_a = -(cm.field_s.field_k / 2) + 320;
         cm.field_s.field_m = cm.field_s.field_h / 4;
         IntrusiveNode.field_g.field_m = cm.field_s.field_m;
@@ -649,10 +649,10 @@ public final class Chess extends NetworkGameClient {
         dc.field_n[0] = cm.field_s;
         this.buildInstructionsPanelBackground((byte) 117);
         jd.field_c = qm.a(1, "", "help", mm.field_d);
-        ph.field_l = jn.a("clock", 8221, "", mm.field_d);
-        DirectByteStorage.field_g = jn.a("clock_button", 8221, "", mm.field_d);
+        ph.field_l = ValidationStatusIcon.a("clock", 8221, "", mm.field_d);
+        DirectByteStorage.field_g = ValidationStatusIcon.a("clock_button", 8221, "", mm.field_d);
         pg.field_v = qm.a(param0 ^ 17, "", "clock_numbers", mm.field_d);
-        da.field_y = jn.a("clock_display_separator", 8221, "", mm.field_d);
+        da.field_y = ValidationStatusIcon.a("clock_display_separator", 8221, "", mm.field_d);
     }
 
     final void renderFrame(boolean param0) {
@@ -755,10 +755,10 @@ public final class Chess extends NetworkGameClient {
         short[] var4_ref_short__Lifetime1;
         int var2Lifetime1;
         var8 = field_G;
-        m.field_a = bn.a(lg.field_b, "", "chess_board2");
-        sl.field_g = (SoftwareModelMesh) (m.field_a.a(96, 1365, 5, -10, 5));
-        j.field_v = bn.a(lg.field_b, "", "coin");
-        DebouncedFieldValidator.field_e = (SoftwareModelMesh) (j.field_v.a(96, 1365, 5, -10, 5));
+        m.field_a = MeshData.load(lg.field_b, "", "chess_board2");
+        sl.field_g = (SoftwareModelMesh) (m.field_a.createModel(96, 1365, 5, -10, 5));
+        j.field_v = MeshData.load(lg.field_b, "", "coin");
+        DebouncedFieldValidator.field_e = (SoftwareModelMesh) (j.field_v.createModel(96, 1365, 5, -10, 5));
         var2 = qm.field_g;
         if (var2 != 1 &&
           var2 != 0) {
@@ -766,8 +766,8 @@ public final class Chess extends NetworkGameClient {
         stackIn_7_0 = (1 != qm.field_g) ? 14 : 28;
         var2Lifetime1 = stackIn_7_0;
         am.field_c = new SoftwareModelMesh[var2Lifetime1];
-        da.field_w = new bn[var2Lifetime1];
-        tf.field_l = new bn[var2Lifetime1];
+        da.field_w = new MeshData[var2Lifetime1];
+        tf.field_l = new MeshData[var2Lifetime1];
         ChessBoardRenderer.field_u = new SoftwareModelMesh[var2Lifetime1];
         var3 = qm.field_g;
         if (var3 == 1) {
@@ -776,8 +776,8 @@ public final class Chess extends NetworkGameClient {
               this.loadPieceModelVariant(2, "halloween_backgrounds", AccountNameAvailabilityValidator.field_u[var3], true, var3, AccountNameAvailabilityValidator.field_w[var3]);
             }
             if (null != tf.field_l[var3]) {
-              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
-              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].createModel(96, 1365, 5, -10, 5));
+              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].createModel(96, 1365, 5, -10, 5));
             }
           }
         } else {
@@ -785,10 +785,10 @@ public final class Chess extends NetworkGameClient {
           }
           for (var3 = 1; var3 < var2Lifetime1; var3++) {
             if (var3 == 13) {
-              tf.field_l[var3] = new bn(new bn[]{tf.field_l[11]}, 1);
-              tf.field_l[var3].c();
-              da.field_w[var3] = new bn(new bn[]{da.field_w[11]}, 1);
-              da.field_w[var3].c();
+              tf.field_l[var3] = new MeshData(new MeshData[]{tf.field_l[11]}, 1);
+              tf.field_l[var3].rotateY180();
+              da.field_w[var3] = new MeshData(new MeshData[]{da.field_w[11]}, 1);
+              da.field_w[var3].rotateY180();
             }
             if (fc.field_e[var3] != null) {
               this.loadPieceModelVariant(2, "", fc.field_e[var3], true, var3, fc.field_d[var3]);
@@ -806,8 +806,8 @@ public final class Chess extends NetworkGameClient {
                   var4_ref_short__[var5] = (short)(16296 - ModalDialog.a(28207, sk.field_n, 16));
                 }
               }
-              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].a(96, 1365, 5, -10, 5));
-              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].a(96, 1365, 5, -10, 5));
+              ChessBoardRenderer.field_u[var3] = (SoftwareModelMesh) (tf.field_l[var3].createModel(96, 1365, 5, -10, 5));
+              am.field_c[var3] = (SoftwareModelMesh) (da.field_w[var3].createModel(96, 1365, 5, -10, 5));
             }
           }
         }
@@ -815,75 +815,75 @@ public final class Chess extends NetworkGameClient {
         kl.field_k[0] = null;
         var3 = qm.field_g;
         if (1 == var3) {
-          kl.field_k[1] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_pawn_halloween");
-          kl.field_k[4] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_rook_halloween");
-          kl.field_k[2] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_knight_halloween");
-          kl.field_k[3] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_bishop_halloween");
-          kl.field_k[5] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_queen_halloween");
-          kl.field_k[6] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_king_halloween");
+          kl.field_k[1] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_pawn_halloween");
+          kl.field_k[4] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_rook_halloween");
+          kl.field_k[2] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_knight_halloween");
+          kl.field_k[3] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_bishop_halloween");
+          kl.field_k[5] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_queen_halloween");
+          kl.field_k[6] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/white_king_halloween");
         } else {
           if (var3 != 0) {
           }
-          kl.field_k[1] = bn.a(lg.field_b, "", "white_pawn");
-          kl.field_k[4] = bn.a(lg.field_b, "", "white_rook");
-          kl.field_k[2] = bn.a(lg.field_b, "", "white_knight");
-          kl.field_k[3] = bn.a(lg.field_b, "", "white_bishop");
-          kl.field_k[5] = bn.a(lg.field_b, "", "white_queen");
-          kl.field_k[6] = bn.a(lg.field_b, "", "white_king_gold_crown");
+          kl.field_k[1] = MeshData.load(lg.field_b, "", "white_pawn");
+          kl.field_k[4] = MeshData.load(lg.field_b, "", "white_rook");
+          kl.field_k[2] = MeshData.load(lg.field_b, "", "white_knight");
+          kl.field_k[3] = MeshData.load(lg.field_b, "", "white_bishop");
+          kl.field_k[5] = MeshData.load(lg.field_b, "", "white_queen");
+          kl.field_k[6] = MeshData.load(lg.field_b, "", "white_king_gold_crown");
         }
         RichTextWidget.field_N[0] = null;
         for (var3 = 1; var3 <= 6; var3++) {
-          RichTextWidget.field_N[var3] = (SoftwareModelMesh) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
-          n.field_b[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
+          RichTextWidget.field_N[var3] = (SoftwareModelMesh) (kl.field_k[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
+          n.field_b[var3] = new MeshData(new MeshData[]{kl.field_k[var3]}, 1);
           dupTemp$0 = n.field_b[var3].field_j;
           var10 = dupTemp$0;
           var4_ref_short__Lifetime1 = dupTemp$0;
           for (var5 = n.field_b[var3].field_j.length - 1; 0 <= var5; var5--) {
             var10[var5] = (short)0;
           }
-          n.field_b[var3].a(this.field_H);
-          jj.field_c[var3] = (SoftwareModelMesh) (n.field_b[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
-          dl.field_c[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
+          n.field_b[var3].transformVertices(this.field_H);
+          jj.field_c[var3] = (SoftwareModelMesh) (n.field_b[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, -10, 5));
+          dl.field_c[var3] = new MeshData(new MeshData[]{kl.field_k[var3]}, 1);
           for (var5 = dl.field_c[var3].field_h - 1; var5 >= 0; var5--) {
             dl.field_c[var3].field_C[var5] = -dl.field_c[var3].field_C[var5];
           }
           var5_ref_int__ = dl.field_c[var3].field_O;
           dl.field_c[var3].field_O = dl.field_c[var3].field_P;
           dl.field_c[var3].field_P = var5_ref_int__;
-          q.field_b[var3] = (SoftwareModelMesh) (dl.field_c[var3].a(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
+          q.field_b[var3] = (SoftwareModelMesh) (dl.field_c[var3].createModel(NameSuggestionsPanel.field_P[qm.field_g], ProgressMessageDialog.field_sb[qm.field_g], 5, 10, 5));
         }
         var3 = qm.field_g;
         if (var3 != 1) {
           if (var3 == 0) {
           }
-          kl.field_k[1] = bn.a(lg.field_b, "", "black_pawn2_lighter");
-          kl.field_k[4] = bn.a(lg.field_b, "", "black_rook2_lighter");
-          kl.field_k[2] = bn.a(lg.field_b, "", "black_knight2_lighter");
-          kl.field_k[3] = bn.a(lg.field_b, "", "black_bishop2_lighter");
-          kl.field_k[5] = bn.a(lg.field_b, "", "black_queen_lighter");
-          kl.field_k[6] = bn.a(lg.field_b, "", "black_king_red_crown2_lighter");
+          kl.field_k[1] = MeshData.load(lg.field_b, "", "black_pawn2_lighter");
+          kl.field_k[4] = MeshData.load(lg.field_b, "", "black_rook2_lighter");
+          kl.field_k[2] = MeshData.load(lg.field_b, "", "black_knight2_lighter");
+          kl.field_k[3] = MeshData.load(lg.field_b, "", "black_bishop2_lighter");
+          kl.field_k[5] = MeshData.load(lg.field_b, "", "black_queen_lighter");
+          kl.field_k[6] = MeshData.load(lg.field_b, "", "black_king_red_crown2_lighter");
         } else {
-          kl.field_k[1] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_pawn_halloween");
-          kl.field_k[4] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_rook_halloween");
-          kl.field_k[2] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_knight_halloween");
-          kl.field_k[3] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_bishop_halloween");
-          kl.field_k[5] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_queen_halloween");
-          kl.field_k[6] = bn.a(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_king_halloween");
+          kl.field_k[1] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_pawn_halloween");
+          kl.field_k[4] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_rook_halloween");
+          kl.field_k[2] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_knight_halloween");
+          kl.field_k[3] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_bishop_halloween");
+          kl.field_k[5] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_queen_halloween");
+          kl.field_k[6] = MeshData.load(lg.field_b, "halloween_chess_foreground", "halloween_chess_pieces/black_king_halloween");
         }
         var3 = -19 % ((26 - param0) / 45);
         ad.field_f[0] = null;
         var3 = NameSuggestionsPanel.field_P[qm.field_g];
         var4 = ProgressMessageDialog.field_sb[qm.field_g];
         for (var5 = 1; var5 <= 6; var5++) {
-          ad.field_f[var5] = (SoftwareModelMesh) (kl.field_k[var5].a(var3, var4, 5, -10, 5));
-          n.field_b[var5] = new bn(new bn[]{kl.field_k[var5]}, 1);
+          ad.field_f[var5] = (SoftwareModelMesh) (kl.field_k[var5].createModel(var3, var4, 5, -10, 5));
+          n.field_b[var5] = new MeshData(new MeshData[]{kl.field_k[var5]}, 1);
           var6 = n.field_b[var5].field_j;
           for (var7_int = n.field_b[var5].field_j.length - 1; var7_int >= 0; var7_int--) {
             var6[var7_int] = (short)0;
           }
-          n.field_b[var5].a(this.field_H);
-          ig.field_f[var5] = (SoftwareModelMesh) (n.field_b[var5].a(var3, var4, 5, -10, 5));
-          dl.field_c[var5] = new bn(new bn[]{kl.field_k[var5]}, 1);
+          n.field_b[var5].transformVertices(this.field_H);
+          ig.field_f[var5] = (SoftwareModelMesh) (n.field_b[var5].createModel(var3, var4, 5, -10, 5));
+          dl.field_c[var5] = new MeshData(new MeshData[]{kl.field_k[var5]}, 1);
           var11 = -1 + dl.field_c[var5].field_h;
           var7_intLifetime1 = var11;
           while (var11 >= 0) {
@@ -893,7 +893,7 @@ public final class Chess extends NetworkGameClient {
           var7 = dl.field_c[var5].field_O;
           dl.field_c[var5].field_O = dl.field_c[var5].field_P;
           dl.field_c[var5].field_P = var7;
-          GzipInflater.field_c[var5] = (SoftwareModelMesh) (dl.field_c[var5].a(var3 * 4, var4 / 4, 5, 10, 5));
+          GzipInflater.field_c[var5] = (SoftwareModelMesh) (dl.field_c[var5].createModel(var3 * 4, var4 / 4, 5, 10, 5));
         }
         for (var5 = -1 + kl.field_k.length; 0 <= var5; var5--) {
           kl.field_k[var5] = null;
@@ -1017,9 +1017,9 @@ public final class Chess extends NetworkGameClient {
         jj.field_b = dm.a(param0 - 16231, hm.field_e, "", ByteStorage.field_b, "kartika13");
         jj.field_d = dm.a(0, hm.field_e, "", ByteStorage.field_b, "roman12");
         dm.a(0, mm.field_d, "font_prose_bold", bo.field_d, "");
-        ArchiveIndex.field_n = jn.a("unachieved", 8221, "basic", hm.field_e);
+        ArchiveIndex.field_n = ValidationStatusIcon.a("unachieved", 8221, "basic", hm.field_e);
         ArchiveIndex.field_n.a();
-        ao.field_e = jn.a("orbcoin", 8221, "basic", hm.field_e);
+        ao.field_e = ValidationStatusIcon.a("orbcoin", 8221, "basic", hm.field_e);
         ao.field_e.a();
         me.field_c = qm.a(1, "", "achievements_large", mm.field_d);
         for (var2 = me.field_c.length - 1; 0 <= var2; var2--) {
@@ -1241,9 +1241,9 @@ public final class Chess extends NetworkGameClient {
         short[] var13 = null;
         var10 = field_G;
         try {
-          tf.field_l[param4] = bn.a(lg.field_b, param1, param2);
-          tf.field_l[param4].a(param5, param5, param5, param0);
-          da.field_w[param4] = new bn(new bn[]{tf.field_l[param4]}, 1);
+          tf.field_l[param4] = MeshData.load(lg.field_b, param1, param2);
+          tf.field_l[param4].scaleVertices(param5, param5, param5, param0);
+          da.field_w[param4] = new MeshData(new MeshData[]{tf.field_l[param4]}, 1);
           if (!param3) {
             return;
           }
@@ -1257,7 +1257,7 @@ public final class Chess extends NetworkGameClient {
             var8[var9] = (byte)-36;
           }
           da.field_w[param4].field_D = var8;
-          da.field_w[param4].a(this.field_H);
+          da.field_w[param4].transformVertices(this.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1284,9 +1284,9 @@ public final class Chess extends NetworkGameClient {
         aa.field_f = ug.field_b;
         TriangleRasterizer.field_m = false;
         MidiPcmStream var4 = new MidiPcmStream();
-        var4.b(128, 16383, 9);
+        var4.setChannelProgram(128, 16383, 9);
         MidiPcmStream var3 = new MidiPcmStream();
-        var3.b(128, 16383, 9);
+        var3.setChannelProgram(128, 16383, 9);
         d.a(var3, 22050, var4, MatchingFieldValidator.field_l, (java.awt.Component) ((Object) DirectByteStorage.field_h), true, (byte) -71);
         kj.field_h = 255;
         ni.field_d = 1;
@@ -1520,15 +1520,15 @@ public final class Chess extends NetworkGameClient {
         ph.field_j.setAsRasterTarget(48);
         var3Lifetime1 = qm.field_g;
         if (var3Lifetime1 != 1) {
-          ob.field_B = jn.a("scenery_2d_grass", 8221, "", mm.field_d);
+          ob.field_B = ValidationStatusIcon.a("scenery_2d_grass", 8221, "", mm.field_d);
         } else {
-          ob.field_B = jn.a("scenery_2d_mud", 8221, "halloween_chess_background", mm.field_d);
+          ob.field_B = ValidationStatusIcon.a("scenery_2d_mud", 8221, "halloween_chess_background", mm.field_d);
         }
         if (param0 > -120) {
           return;
         }
         ContentTransitionDialog.field_bb = qm.a(1, "", "slider_ends", mm.field_d);
-        wh.field_c = jn.a("slider_body", 8221, "", mm.field_d);
+        wh.field_c = ValidationStatusIcon.a("slider_body", 8221, "", mm.field_d);
         var3Lifetime2 = qm.field_g;
         if (var3Lifetime2 != 1) {
           tg.field_r = ao.a(mm.field_d, "2d_icons", 2993, "");
@@ -1759,8 +1759,8 @@ public final class Chess extends NetworkGameClient {
         StripedProgressWidget.a(850101921);
         NameSuggestionsPanel.clearDeclaredStaticReferences(8);
         RichTextWidget.resetStaticState((byte) 67);
-        jn.clearStaticReferences((byte) -61);
-        ea.clearStaticReferences((byte) -44);
+        ValidationStatusIcon.clearStaticReferences((byte) -61);
+        ValidationStatusWidget.clearStaticReferences((byte) -44);
         ki.b(true);
         TextFieldValidator.c(true);
         ni.clearStaticReferences(0);
@@ -1863,12 +1863,12 @@ public final class Chess extends NetworkGameClient {
             for (var3 = 0; 7 > var3; var3++) {
               el.field_y[var3] = MusicTrack.load(li.field_g, "", "chess" + (1 + var3));
               if (null != el.field_y[var3]) {
-                SpriteGeometry.field_q.a(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], DisplayNameSelectionPanel.field_S);
+                SpriteGeometry.field_q.prepareTrackSamples(pg.field_o, param0 ^ -19794, 0, el.field_y[var3], DisplayNameSelectionPanel.field_S);
               }
             }
             gl.field_b = MusicTrack.load(li.field_g, "", "fanfare");
             if (null != gl.field_b) {
-              ka.field_a.a(pg.field_o, param0 - 19887, 0, gl.field_b, DisplayNameSelectionPanel.field_S);
+              ka.field_a.prepareTrackSamples(pg.field_o, param0 - 19887, 0, gl.field_b, DisplayNameSelectionPanel.field_S);
             }
             SpriteGeometry.field_q.c((byte) -61);
             ka.field_a.c((byte) -61);

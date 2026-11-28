@@ -17,7 +17,7 @@ final class gn {
           if (!param2) {
             gn.a(4);
           }
-          stackIn_3_0 = qn.computeCrc32(-1648911295, 0, param0, param1);
+          stackIn_3_0 = ValidationStatusIcon.computeCrc32(-1648911295, 0, param0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

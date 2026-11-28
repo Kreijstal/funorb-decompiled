@@ -564,8 +564,8 @@ public final class DungeonAssault extends NetworkGameClient {
         try {
           this.a(false, 32, 8, 2, 17, 0, 5000, 1);
           var3 = new CrossfadingMidiPcmStream();
-          var3.field_A.c((byte) 7, 128, 9);
-          var3.field_B.c((byte) -120, 128, 9);
+          var3.field_A.setChannelProgram((byte) 7, 128, 9);
+          var3.field_B.setChannelProgram((byte) -120, 128, 9);
           AccountRequestState.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) AwtRasterBuffer.field_h), -126, 2048, i.field_A);
           RegistrationAgreementPane.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
           AgeValidator.field_p = 16711680;
@@ -841,8 +841,8 @@ public final class DungeonAssault extends NetworkGameClient {
           StripedProgressWidget.clearStaticReferences(false);
           NameSuggestionsPanel.releaseDeclaredStaticReferences((byte) -32);
           RichTextWidget.clearDeclaredStaticReferences((byte) -106);
-          ng.f((byte) 124);
-          tn.h((byte) -89);
+          ValidationStatusIcon.f((byte) 124);
+          ValidationStatusWidget.h((byte) -89);
           rb.clearDeclaredStaticReferences(4935);
           TextFieldValidator.c((byte) 19);
           mf.clearStaticReferences(5);

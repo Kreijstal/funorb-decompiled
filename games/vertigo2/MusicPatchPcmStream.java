@@ -63,7 +63,7 @@ final class MusicPatchPcmStream extends PcmStream {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setRasterBuffer(var15, var5, var6);
-          lr.field_H = ProgressMessageDialog.a(DefaultTextWidgetRenderer.field_h, fo.field_c, var4, 10, mp.field_g);
+          ValidationStatusIcon.field_H = ProgressMessageDialog.a(DefaultTextWidgetRenderer.field_h, fo.field_c, var4, 10, mp.field_g);
           BirthDateChatEnableForm.field_L.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_6_1 = (pe) (param2);
                 stackIn_6_2 = 92;
                 stackIn_7_3 = !(param2.field_K.field_n[param2.field_B] >= 0);
-                ((MidiPcmStream) (Object) stackIn_6_0).a(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
+                ((MidiPcmStream) (Object) stackIn_6_0).applySampleOffset(stackIn_6_1, (byte) stackIn_6_2, stackIn_7_3);
               }
               if (param2.field_K.field_n[param2.field_B] < 0) {
                 param2.field_J.setLoopCount(-1);
@@ -267,7 +267,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_12_1 = (pe) (param4);
                 stackIn_12_2 = 87;
                 stackIn_13_3 = !(param4.field_K.field_n[param4.field_B] >= 0);
-                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
+                ((MidiPcmStream) (Object) stackIn_12_0).applySampleOffset(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
                 param4.field_J.rampVolume(var9, var11.getTargetVolume());
               } else {
                 param4.field_J = SamplePlaybackStream.createForSampleStep(param4.field_z, var11.getSampleStepMagnitude(), var11.getTargetVolume(), var11.getPan());
@@ -360,7 +360,7 @@ final class MusicPatchPcmStream extends PcmStream {
             al.field_y[var9 - 2] = var6;
             ClientException.field_f[-2 + var9] = 0;
             rc.field_c[0] = 1;
-            al.field_y[-1 + var9] = lr.field_N;
+            al.field_y[-1 + var9] = ValidationStatusIcon.field_N;
             ClientException.field_f[-1 + var9] = 1;
             rc.field_c[1] = 2;
           } else {
@@ -379,7 +379,7 @@ final class MusicPatchPcmStream extends PcmStream {
               al.field_y[var10] = or.field_n[var10];
             }
             al.field_y[-2 + var9] = "";
-            al.field_y[-1 + var9] = lr.field_N;
+            al.field_y[-1 + var9] = ValidationStatusIcon.field_N;
             ClientException.field_f[var9 - 1] = 0;
             rc.field_c[0] = 2;
           }

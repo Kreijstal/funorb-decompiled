@@ -552,14 +552,14 @@ class PacketBuffer extends IntrusiveNode {
         AccountNameAvailabilityValidator.field_o.b(IterableNodeHashTable.field_e.field_b, 118);
         AccountNameAvailabilityValidator.field_o.b(DisplayNameSelectionPanel.field_G, 118);
         PasswordValidator.field_m = new UiPanel(0L, PlayerAvatarRenderer.field_D);
-        lr.field_P = new UiPanel(0L, (UiPanel) null);
+        ValidationStatusIcon.field_P = new UiPanel(0L, (UiPanel) null);
         PasswordValidator.field_m.b(he.field_x, 118);
-        PasswordValidator.field_m.b(lr.field_P, 126);
+        PasswordValidator.field_m.b(ValidationStatusIcon.field_P, 126);
         if (param1) {
           PacketBuffer.clearStaticReferences(-28);
         }
-        lr.field_P.b(BufferedRandomAccessFile.field_j, 120);
-        lr.field_P.b(Vertigo2.field_M, 120);
+        ValidationStatusIcon.field_P.b(BufferedRandomAccessFile.field_j, 120);
+        ValidationStatusIcon.field_P.b(Vertigo2.field_M, 120);
         BlastDebrisBatch.layoutLobbyPanels(0, param0);
     }
 

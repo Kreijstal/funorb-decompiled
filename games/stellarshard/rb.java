@@ -334,7 +334,7 @@ abstract class rb extends GameApplet {
           TextHotspotBounds.field_m.b(0);
         }
         FrameTimer.a(36);
-        ii.g(256);
+        ValidationStatusIcon.g(256);
         if (!ee.b(-117) &&
           eg.field_d != 11) {
           SpriteState.d((byte) -56);

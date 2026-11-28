@@ -29,7 +29,7 @@ class RichTextWidget extends InteractiveComponent {
         return this.stringArrayState0034[this.networkSupport010State0002.integerState0587];
     }
 
-    final void performAction1364(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    final void setTextBounds(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = -125 % ((-61 - integerArgument1) / 43);
         this.setBounds(((TextWidgetRenderer) ((Object) this.callbackContract004State0006)).getPreferredHeight((UiComponent) (this), -125), integerArgument4, integerArgument2, integerArgument3, -16555);
     }
@@ -98,7 +98,7 @@ class RichTextWidget extends InteractiveComponent {
         }
     }
 
-    final void performAction1362(String stringArgument1, int integerArgument2, int integerArgument3) {
+    final void setHotspotTooltip(String stringArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         RuntimeException runtimeException = null;
         String[] stringArrayLocal3 = null;

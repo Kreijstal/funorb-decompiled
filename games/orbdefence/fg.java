@@ -174,7 +174,7 @@ class fg extends DefaultTextWidgetRenderer {
           lm.field_a = -1;
           kf.field_e = -1;
           if (bm.field_e &&
-            jf.field_H == sd.field_g) {
+            ValidationStatusIcon.field_H == sd.field_g) {
             sd.field_g = 0;
             bm.field_e = false;
           }

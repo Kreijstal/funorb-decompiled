@@ -468,7 +468,7 @@ final class re {
     final static void c(int param0) {
         gh.field_g = false;
         tf.field_p = null;
-        gl.field_G = null;
+        ValidationStatusIcon.field_G = null;
         if (param0 != 3) {
           return;
         }

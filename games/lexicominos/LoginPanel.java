@@ -35,7 +35,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             field_M = 116L;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ti.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ti.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,11 +72,11 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountAndClearPassword(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
@@ -88,7 +88,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           var3.setText(var4, param0 - 4, false);
           this.field_B.clearText(0);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ti.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
             this.submitLogin(0);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ti.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
                   if (this.field_D) {
                     ga.b(0);
                   } else {
-                    ld.i(param2 ^ -215531225);
+                    ValidationStatusIcon.i(param2 ^ -215531225);
                   }
                 } else {
                   vi.a((byte) 115);
@@ -246,11 +246,11 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    final String e(byte param0) {
+    final String getAccountIdentifier(byte param0) {
         int var2 = -19 % ((-3 - param0) / 60);
         if (this.field_G.field_u == null) {
           return "";
@@ -418,11 +418,11 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    final void d(byte param0) {
+    final void clearCredentials(byte param0) {
         this.field_G.clearText(0);
         this.field_B.clearText(0);
         if (param0 > -59) {

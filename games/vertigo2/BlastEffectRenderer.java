@@ -54,7 +54,7 @@ final class BlastEffectRenderer {
           if (param1 != -926966430) {
             this.startBlastEffect(-104, -100, -78, -48, (int[][]) null, (byte) 69);
           }
-          var6 = (fc) (this.field_f.a(false, false, false, MusicPatchPcmStream.field_r.b(110, 1560, 10, -10, -5)));
+          var6 = (fc) (this.field_f.a(false, false, false, MusicPatchPcmStream.field_r.createModelMesh(110, 1560, 10, -10, -5)));
           var6.a(param0, this.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

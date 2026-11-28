@@ -25,7 +25,7 @@ final class ve extends mg {
         this(ButtonWidget.field_z, param0);
     }
 
-    final String c(UiWidget param0, int param1) {
+    final String resolveDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

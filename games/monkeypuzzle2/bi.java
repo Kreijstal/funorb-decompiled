@@ -255,7 +255,7 @@ abstract class bi extends GameApplet {
         if (param0 != 250) {
           return;
         }
-        if (vg.c(false)) {
+        if (ValidationStatusWidget.c(false)) {
           discarded$1 = this.a(false, true, null != AwtRasterBuffer.field_f ? true : false);
         } else {
           if (mc.field_a < 10) {
@@ -561,7 +561,7 @@ abstract class bi extends GameApplet {
         }
         if (!param1 &&
           aj.field_c) {
-          vh.a(ie.field_e, (byte) -115);
+          ValidationStatusIcon.a(ie.field_e, (byte) -115);
           this.a(false);
           af.a(20, ie.field_e);
         }

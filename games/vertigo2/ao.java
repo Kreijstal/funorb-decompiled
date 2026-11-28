@@ -60,10 +60,10 @@ final class ao extends InteractiveWidget {
           qn.field_r = new Sprite(var3, param0 * var4 / 4);
           qn.field_r.bindAsRenderTarget();
           var2.drawOpaque(0, 0);
-          lr.field_O = new Sprite(var3, -qn.field_r.field_t + var4);
-          lr.field_O.bindAsRenderTarget();
+          ValidationStatusIcon.field_O = new Sprite(var3, -qn.field_r.field_t + var4);
+          ValidationStatusIcon.field_O.bindAsRenderTarget();
           var2.drawOpaque(0, -qn.field_r.field_t);
-          lr.field_O.field_z = qn.field_r.field_t;
+          ValidationStatusIcon.field_O.field_z = qn.field_r.field_t;
           ln.d(-28558);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ao.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

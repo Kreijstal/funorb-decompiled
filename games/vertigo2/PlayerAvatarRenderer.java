@@ -118,7 +118,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
           var3.field_c = rr.field_D;
           var3.field_o = lf.field_A[6];
           var2Lifetime1.field_D = qj.field_b;
-          var2Lifetime1.b();
+          var2Lifetime1.clearGeometryCaches();
           return var2Lifetime1;
         }
         return null;
@@ -447,7 +447,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     var11 = nf.field_q[2];
                     nf.field_q[0] = 0;
                     nf.field_q[2] = 0;
-                    var8.a(nf.field_q);
+                    var8.transformVertices(nf.field_q);
                     FullscreenNoticeType.field_e[0] = var8;
                     nf.field_q[0] = var9;
                     nf.field_q[1] = var10;
@@ -667,7 +667,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
               this.field_B.field_o[var2_int] = (byte) 0;
             }
           }
-          this.field_B.a(this.field_h, false, false, true, false);
+          this.field_B.copyFrom(this.field_h, false, false, true, false);
           var2 = this.field_B.field_d;
           var3 = this.field_B.field_q;
           if (this.field_y &&
@@ -695,7 +695,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
             eb.field_f[4] = 0;
             eb.field_f[3] = 65535;
           }
-          this.field_B.a(eb.field_f);
+          this.field_B.transformVertices(eb.field_f);
           this.field_t = new Model(this.field_B, true, true, param0, true);
           return;
         }

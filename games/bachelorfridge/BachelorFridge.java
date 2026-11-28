@@ -848,7 +848,7 @@ public final class BachelorFridge extends NetworkGameClient {
         StripedProgressWidget.resetStaticState(1);
         NameSuggestionsPanel.resetStaticState(0);
         LinkTextWidget.b(true);
-        nf.clearStaticReferences((byte) -127);
+        ValidationStatusWidget.clearStaticReferences((byte) -127);
         dia.releaseStatics(14213);
         bfa.releaseStatics(true);
         MeshObject.a((byte) 93);

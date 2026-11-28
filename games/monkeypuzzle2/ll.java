@@ -1146,7 +1146,7 @@ final class ll {
                 }
                 var2 = te.a("quittowebsite", param0 ^ -50);
                 if (null != var2) {
-                  vh.field_L = TextLineMetrics.a(var2, (byte) -39);
+                  ValidationStatusIcon.field_L = TextLineMetrics.a(var2, (byte) -39);
                 }
                 var2 = te.a("connectionrestored", -125);
                 if (var2 != null) {
@@ -1514,7 +1514,7 @@ final class ll {
                 }
                 var2 = te.a("login_no_displayname", -55);
                 if (var2 != null) {
-                  vh.field_K = TextLineMetrics.a(var2, (byte) 79);
+                  ValidationStatusIcon.field_K = TextLineMetrics.a(var2, (byte) 79);
                 }
                 var2 = te.a("create_username_tooltip", param0 ^ -44);
                 if (var2 != null) {
@@ -1906,7 +1906,7 @@ final class ll {
                 }
                 var2 = te.a("fullscreen", -125);
                 if (null != var2) {
-                  vh.field_F = TextLineMetrics.a(var2, (byte) 79);
+                  ValidationStatusIcon.field_F = TextLineMetrics.a(var2, (byte) 79);
                 }
                 var2 = te.a("screensize", -61);
                 if (null != var2) {

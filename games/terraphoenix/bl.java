@@ -324,7 +324,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 78, "retrieveevacutate");
                 if (null != var2) {
-                  ki.field_Z = ll.a(0, var2);
+                  ValidationStatusWidget.field_Z = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 73, "evacuate");
                 if (var2 != null) {
@@ -1162,71 +1162,71 @@ final class bl {
                 }
                 var2 = il.a((byte) 92, "instructions3,0");
                 if (var2 != null) {
-                  dd.field_O[0] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[0] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 110, "instructions3,1");
                 if (var2 != null) {
-                  dd.field_O[1] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[1] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 112, "instructions3,2");
                 if (null != var2) {
-                  dd.field_O[2] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[2] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 96, "instructions3,3");
                 if (null != var2) {
-                  dd.field_O[3] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[3] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "instructions3,4");
                 if (null != var2) {
-                  dd.field_O[4] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[4] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 103, "instructions3,5");
                 if (null != var2) {
-                  dd.field_O[5] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[5] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 113, "instructions3,6");
                 if (null != var2) {
-                  dd.field_O[6] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[6] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 74, "instructions3,7");
                 if (var2 != null) {
-                  dd.field_O[7] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[7] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 93, "instructions3,8");
                 if (var2 != null) {
-                  dd.field_O[8] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[8] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 89, "instructions3,9");
                 if (null != var2) {
-                  dd.field_O[9] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[9] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "instructions3,10");
                 if (var2 != null) {
-                  dd.field_O[10] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[10] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 77, "instructions3,11");
                 if (var2 != null) {
-                  dd.field_O[11] = ll.a(sl.a((int) param0, 96), var2);
+                  ValidationStatusIcon.field_O[11] = ll.a(sl.a((int) param0, 96), var2);
                 }
                 var2 = il.a((byte) 125, "instructions3,12");
                 if (null != var2) {
-                  dd.field_O[12] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[12] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "instructions3,13");
                 if (null != var2) {
-                  dd.field_O[13] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[13] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "instructions3,14");
                 if (null != var2) {
-                  dd.field_O[14] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[14] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 124, "instructions3,15");
                 if (null != var2) {
-                  dd.field_O[15] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[15] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "instructions3,16");
                 if (var2 != null) {
-                  dd.field_O[16] = ll.a(0, var2);
+                  ValidationStatusIcon.field_O[16] = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 119, "instructions4,0");
                 if (null != var2) {

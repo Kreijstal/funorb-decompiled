@@ -12,7 +12,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
     private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5, byte param6) {
         boolean discarded$1 = false;
         RuntimeException var8 = null;
-        pa var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -26,7 +26,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           var10 = new LabeledWidgetContainer(20, param4, 120 + param1, 25, param2, false, 120, 3, ModalDialogHost.field_C, 16777215, param0);
           this.addChild(var10, (byte) 118);
-          var9 = new pa(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(84), param3, 126, param4 + var10.field_q, 25 + param1, param5);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param2)).getFieldValidator(84), param3, 126, param4 + var10.field_q, 25 + param1, param5);
           var9.field_k = (WidgetEventListener) (this);
           if (param6 < 112) {
             discarded$1 = this.canSubmitDisplayName((byte) 89);

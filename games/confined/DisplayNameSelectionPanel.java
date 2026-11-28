@@ -4,7 +4,7 @@
 final class DisplayNameSelectionPanel extends DequeWidgetContainer implements NameSuggestionListener, WidgetActivationListener {
     NameSuggestionsPanel field_H;
     static String field_S;
-    static od[][] field_R;
+    static MeshData[][] field_R;
     static int[][] field_L;
     private InteractiveWidget field_Q;
     private ValidatedTextField field_O;
@@ -36,7 +36,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     public static void clearStaticReferences(boolean param0) {
         field_L = (int[][]) null;
-        field_R = (od[][]) null;
+        field_R = (MeshData[][]) null;
         field_S = null;
         if (param0) {
           DisplayNameSelectionPanel.clearStaticReferences(false);
@@ -45,7 +45,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     private final int a(UiWidget param0, int param1, int param2, int param3, String param4, String param5, int param6) {
         RuntimeException var8 = null;
-        rh var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -59,7 +59,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           var10 = new LabeledWidgetContainer(20, param2, 120 + param3, 25, param0, false, 120, param1, gm.field_cb, 16777215, param5);
           this.addChild(var10, 10);
-          var9 = new rh(((FieldValidatorProvider) ((Object) param0)).getFieldValidator((byte) -9), param4, 126, param2 + var10.field_z, param3 + 25, param6);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param0)).getFieldValidator((byte) -9), param4, 126, param2 + var10.field_z, param3 + 25, param6);
           var9.field_t = (WidgetEventListener) (this);
           this.addChild(var9, 10);
           stackIn_1_0 = var10.field_z + var9.field_z;
@@ -308,7 +308,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     static {
         field_L = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 5, 6, 7}, new int[]{8}, new int[]{9, 10, 11, 12}};
-        field_R = new od[3][4];
+        field_R = new MeshData[3][4];
         field_S = "<col=FFFFFF>Cloak:</col> an advanced technology that renders your ship invisible for 30 seconds, so you can fly down the tunnel eluding the aliens. But beware: each time you fire your weapons or your shield shimmers from an impact, they will know where you are!";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ri {
-    static od field_c;
+    static MeshData field_c;
     static PcmSample field_b;
     static String[] field_a;
 

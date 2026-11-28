@@ -88,7 +88,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, String param1, byte param2) {
+    final void setHotspotTooltip(int param0, String param1, byte param2) {
         String[] var5 = null;
         int var6 = 0;
         int var7 = Terraphoenix.field_V;
@@ -170,7 +170,7 @@ class RichTextWidget extends InteractiveWidget {
         this.field_R = new IntrusiveDeque();
         if (!param0) {
           var17 = (String) null;
-          this.a(-95, (String) null, (byte) -110);
+          this.setHotspotTooltip(-95, (String) null, (byte) -110);
         }
         var2 = 0;
         var3 = (TextWidgetRenderer) ((Object) this.listener);
@@ -272,7 +272,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         this.setBounds(param0, (byte) 88, param3, param2, ((TextWidgetRenderer) ((Object) this.listener)).getPreferredHeight((UiWidget) (this), (byte) 112));
         if (param1 >= -4) {
           field_L = (String) null;

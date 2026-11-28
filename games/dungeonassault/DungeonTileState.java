@@ -148,7 +148,7 @@ final class DungeonTileState {
 
     final static void preloadMusicTrackSamples(int param0, MusicTrack param1) {
         try {
-          FullscreenFocusCanvas.field_b.field_A.a(false, ha.field_k, tl.field_k, param0, param1);
+          FullscreenFocusCanvas.field_b.field_A.prepareTrackSamples(false, ha.field_k, tl.field_k, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ai.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

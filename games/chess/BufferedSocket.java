@@ -249,7 +249,7 @@ final class BufferedSocket implements Runnable {
         rb.field_b = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo14", param3, param1));
         tk.field_a = (BitmapFont) ((Object) rc.a("commonui", 19131, "arezzo14bold", param3, param1));
         RgbSprite var17 = new RgbSprite(param2.getFileByName("button.gif", 30045, ""), (java.awt.Component) ((Object) DirectByteStorage.field_h));
-        jn.a("dropdown", 8221, "commonui", param3);
+        ValidationStatusIcon.a("dropdown", 8221, "commonui", param3);
         rk[] var5 = qm.a(1, "commonui", "screen_options", param3);
         UiWidget.field_s = new rk[4];
         Bzip2State.field_e = new rk[4];

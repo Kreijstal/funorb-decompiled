@@ -69,7 +69,7 @@ abstract class GameClient extends AppletShell {
                                 Platform.handleClearLoginFlagPacket(param0 + 20);
                                 return;
                               }
-                              ValidatedTextField.a((Throwable) null, (byte) 100, "MGS1: " + la.a(-112));
+                              ValidatedTextField.a((Throwable) null, (byte) 100, "MGS1: " + ValidationStatusIcon.a(-112));
                               kc.a((byte) 18);
                               return;
                             }
@@ -101,7 +101,7 @@ abstract class GameClient extends AppletShell {
           }
           return;
         }
-        ValidatedTextField.a((Throwable) null, (byte) 100, "MGS2: " + la.a(param0 ^ 108));
+        ValidatedTextField.a((Throwable) null, (byte) 100, "MGS2: " + ValidationStatusIcon.a(param0 ^ 108));
         kc.a((byte) 18);
     }
 

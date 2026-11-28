@@ -37,7 +37,7 @@ final class uc extends InteractiveWidget {
               PasswordValidator.field_o.flushAndMarkDrainCheck();
               SpriteState.field_t = param0;
               if (SpriteState.field_t != null) {
-                SectorCacheStore.field_a.a(-8126, SpriteState.field_t, param2);
+                SectorCacheStore.field_a.playTrack(-8126, SpriteState.field_t, param2);
               }
             }
           }

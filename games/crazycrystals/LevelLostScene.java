@@ -28,7 +28,7 @@ final class LevelLostScene extends AnimatedResultScene {
           if (param0 != -13405) {
             field_m = false;
           }
-          lc.field_c = io.field_P;
+          lc.field_c = ValidationStatusWidget.field_P;
           if (param2 == 255) {
             stackIn_13_0 = !(ro.field_n >= 13);
             qc.field_i = oe.createAccountSuccessResult(stackIn_13_0, (byte) 119);

@@ -792,7 +792,7 @@ final class GameplayScreen {
             }
           }
           hj.field_g = false;
-          var5 = qe.field_W.field_t;
+          var5 = ValidationStatusWidget.field_W.field_t;
           if (PacketBuffer.field_n >= 0 &&
             (float)PacketBuffer.field_n < np.field_Nb * 2.0f &&
             gb.field_d >= (-4 - var5 + td.field_c.field_C) &&
@@ -828,10 +828,10 @@ final class GameplayScreen {
         int var4Lifetime1;
         try {
           var2_int = this.field_D.getLevelIndex(-6133);
-          if (qe.field_U.length > var2_int &&
+          if (ValidationStatusWidget.field_U.length > var2_int &&
             this.field_D.field_j == 0) {
             if (this.field_w) {
-              var3 = qe.field_U[var2_int];
+              var3 = ValidationStatusWidget.field_U[var2_int];
               var4 = 320;
               var5 = tk.field_c.textHeight(var3, var4, 0);
               var6 = 20;

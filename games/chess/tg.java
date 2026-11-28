@@ -66,7 +66,7 @@ final class tg {
           this.field_f = (WidgetRenderer) ((Object) var17);
           var17.field_g = 16777215;
           var4 = new nj();
-          var17.a(var4, param1 ^ -7828332);
+          var17.copyStyleTo(var4, param1 ^ -7828332);
           var4.field_p = 11711154;
           this.field_j = 15658734;
           this.field_s = -1;
@@ -101,7 +101,7 @@ final class tg {
           discarded$0 = new ka(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new nj();
-          var17.a(var8, -1053);
+          var17.copyStyleTo(var8, -1053);
           var8.a(110, 0).a((byte) 84, hk.a(15658734, param1 ^ 7829366, 10066329, 7829367)).a(1118481, false).a(-1, (byte) -82);
           var8.a(67, 4).a((byte) -112, true).a((byte) 101, var5);
           this.field_o = (WidgetRenderer) ((Object) var8);

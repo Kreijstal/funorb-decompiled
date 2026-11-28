@@ -80,7 +80,7 @@ final class dc {
                 param1 = un.field_a;
               }
               param0 = 2;
-              un.field_k.a(-78, eo.field_a);
+              un.field_k.setAccountAndClearPassword(-78, eo.field_a);
             }
             var3_int = 1;
             if (param0 == 10) {
@@ -99,7 +99,7 @@ final class dc {
             if (param0 != 256 &&
               param0 != 10 &&
               !ff.field_a) {
-              un.field_k.h(16180);
+              un.field_k.clearCredentials(16180);
             }
           }
           if (param2 == 2) {

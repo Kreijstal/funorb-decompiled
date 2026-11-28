@@ -45,7 +45,7 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
               uj.field_m.flushAndMarkDrainCheck();
               id.field_t = param0;
               if (null != id.field_t) {
-                uh.field_l.a(param3, (byte) 38, id.field_t);
+                uh.field_l.playTrack(param3, (byte) 38, id.field_t);
               }
             }
           }
@@ -164,7 +164,7 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         try {
           if (param2 != -1702) {
             MusicTrack var5 = (MusicTrack) null;
-            this.a(false, (byte) 48, false, (MusicTrack) null);
+            this.startTrack(false, (byte) 48, false, (MusicTrack) null);
           }
           var4_int = param1 * AudioOutput.field_g / 1000;
           this.a(var4_int, -17, param0);
@@ -255,14 +255,14 @@ final class VolumeRampingMidiPcmStream extends MidiPcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, byte param1, boolean param2, MusicTrack param3) {
+    final synchronized void startTrack(boolean param0, byte param1, boolean param2, MusicTrack param3) {
         try {
           if (param1 < 123) {
             MusicTrack var6 = (MusicTrack) null;
             VolumeRampingMidiPcmStream.a((MusicTrack) null, -112, (byte) 83, true);
           }
           this.h(381);
-          super.a(param0, (byte) 125, param2, param3);
+          super.startTrack(param0, (byte) 125, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "kh.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

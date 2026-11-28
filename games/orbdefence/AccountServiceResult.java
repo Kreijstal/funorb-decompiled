@@ -26,10 +26,10 @@ final class AccountServiceResult {
         RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
         try {
-          var4 = (vg) (kk.field_X.beginForward((byte) -45));
+          var4 = (vg) (ValidationStatusWidget.field_X.beginForward((byte) -45));
           while (var4 != null) {
             ProxyAuthenticationRequiredException.a(true, param0, var4);
-            var4 = (vg) (kk.field_X.nextForward(param1 ^ 7970));
+            var4 = (vg) (ValidationStatusWidget.field_X.nextForward(param1 ^ 7970));
           }
           var5 = (gj) (BufferedSocket.field_b.beginForward((byte) 123));
           while (var5 != null) {

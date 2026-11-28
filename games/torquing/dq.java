@@ -89,7 +89,7 @@ final class dq {
           this.field_n = (WidgetRenderer) ((Object) var18);
           var18.field_h = 16777215;
           var4 = new se();
-          var18.a(-97, var4);
+          var18.copyStyleTo(-97, var4);
           this.field_b = -1;
           var4.field_b = 11711154;
           this.field_l = 15658734;
@@ -124,7 +124,7 @@ final class dq {
           discarded$0 = new ld(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rn(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new se();
-          var18.a(109, var8);
+          var18.copyStyleTo(109, var8);
           var8.a(0, 4).a(-2, ak.a(7829367, 10066329, 15658734, (byte) -124)).a((byte) 126, 1118481).a(-1, -26249);
           var8.a(4, 4).a(-97, true).a(-2, var5);
           this.field_g = (WidgetRenderer) ((Object) var8);

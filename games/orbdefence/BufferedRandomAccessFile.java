@@ -117,10 +117,10 @@ final class BufferedRandomAccessFile {
           var18 = new RgbSprite(param0.getFileByName("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
           DiskArchiveRequest.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");
-          kk.field_P = new qg[4];
+          ValidationStatusWidget.field_P = new qg[4];
           dc.field_h = new qg[4];
           ck.field_n = new qg[4];
-          var6 = new qg[][]{dc.field_h, kk.field_P, ck.field_n};
+          var6 = new qg[][]{dc.field_h, ValidationStatusWidget.field_P, ck.field_n};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;

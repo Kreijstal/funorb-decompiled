@@ -137,7 +137,7 @@ final class em extends fb {
         }
         this.field_j = this.field_j + 1;
         if (this.field_j >= 3) {
-          io.field_M.a(128, this.field_a.field_o * this.field_a.field_m + 12 * this.field_a.field_A, this.field_a.field_s * this.field_a.field_m + this.field_a.field_t * 12, 0, (byte) -111);
+          ValidationStatusWidget.field_M.a(128, this.field_a.field_o * this.field_a.field_m + 12 * this.field_a.field_A, this.field_a.field_s * this.field_a.field_m + this.field_a.field_t * 12, 0, (byte) -111);
           return (fb) ((Object) new jk(this.field_a));
         }
         this.field_h = this.field_o[this.field_j];

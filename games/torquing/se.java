@@ -244,7 +244,7 @@ final class se extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = Torquing.field_u;
         try {
-          super.a(90, param0);
+          super.copyStyleTo(90, param0);
           if (param1 != 6) {
             this.a(57, -12);
           }

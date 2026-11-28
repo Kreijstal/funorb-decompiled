@@ -35,7 +35,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
     final static String o(int param0) {
         String var1 = "";
         if (ClientException.field_a != null) {
-          var1 = ClientException.field_a.j(-19569);
+          var1 = ClientException.field_a.getAccountIdentifier(-19569);
         }
         int var2 = -90 % ((param0 - 58) / 51);
         if (var1.length() == 0) {

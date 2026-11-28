@@ -80,8 +80,8 @@ final class MixedSupport017 {
         RenderingSupport004.performAction0579(0, 20763, 640 + SoftwareRaster.integerState0285 >> 1, SoftwareRaster.integerState0285 - 640 >> 1, SoftwareRaster.integerState0284);
         if (GuestPlayConfirmationForm.integerState0437 > 0) {
           if (null != LobbyRoomRow.rgbSpriteState0062) {
-            LobbyRoomRow.rgbSpriteState0062.drawOpaque(UiComponentPart011.sceneWidgetState0035.integerState0890, 0);
-            stackSceneWidgetLocal1 = UiComponentPart011.sceneWidgetState0035;
+            LobbyRoomRow.rgbSpriteState0062.drawOpaque(ValidationStatusIcon.sceneWidgetState0035.integerState0890, 0);
+            stackSceneWidgetLocal1 = ValidationStatusIcon.sceneWidgetState0035;
             stackIntegerLocal2 = 1141039778;
             stackBooleanLocal3 = (booleanArgument1) && (!LobbyRoomRow.booleanState0202);
             ((SceneWidget) (Object) stackSceneWidgetLocal1).performAction1767(stackIntegerLocal2, stackBooleanLocal3);
@@ -137,7 +137,7 @@ final class MixedSupport017 {
             ByteStorage.performAction1060((byte) -5);
             return;
           }
-          stackSceneWidgetLocal31 = UiComponentPart011.sceneWidgetState0035;
+          stackSceneWidgetLocal31 = ValidationStatusIcon.sceneWidgetState0035;
           stackIntegerLocal32 = 1141039778;
           stackBooleanLocal33 = (booleanArgument1) && (!LobbyRoomRow.booleanState0202);
           ((SceneWidget) (Object) stackSceneWidgetLocal31).performAction1767(stackIntegerLocal32, stackBooleanLocal33);

@@ -252,7 +252,7 @@ final class sj {
             for (var10_intLifetime2 = 0; var8.length > var10_intLifetime2; var10_intLifetime2++) {
               hb.field_m[var9_intLifetime2][var10_intLifetime2] = new Sprite(var8[var10_intLifetime2].field_m, var8[var10_intLifetime2].field_n);
               hb.field_m[var9_intLifetime2][var10_intLifetime2].bindAsRenderTarget();
-              var8[var10_intLifetime2].drawGrayModulated(0, 0, vg.field_K[var9_intLifetime2]);
+              var8[var10_intLifetime2].drawGrayModulated(0, 0, ValidationStatusWidget.field_K[var9_intLifetime2]);
             }
           }
           ac.field_a.setAsRasterTarget((byte) 113);

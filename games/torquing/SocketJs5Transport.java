@@ -1910,7 +1910,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "create_password_confirm");
                 if (null != var2) {
-                  bj.field_K = SecondaryNodeDeque.a(var2, false);
+                  ValidationStatusWidget.field_K = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_email");
                 if (var2 != null) {

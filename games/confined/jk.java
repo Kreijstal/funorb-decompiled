@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jk {
-    static od[] field_c;
+    static MeshData[] field_c;
     private ag field_d;
     private ResourceArchive field_a;
     private ResourceArchive field_b;
@@ -327,6 +327,6 @@ final class jk {
     }
 
     static {
-        field_c = new od[13];
+        field_c = new MeshData[13];
     }
 }

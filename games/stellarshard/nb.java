@@ -16,7 +16,7 @@ final class nb extends InteractiveWidget {
     final static void a(boolean param0, float param1, String param2, byte param3) {
         try {
           if (PcmOutputWorker.field_d == null) {
-            PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ii.field_F);
+            PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ValidationStatusIcon.field_F);
             IsaacRandom.field_d.showDialog((byte) -104, (UiWidget) (PcmOutputWorker.field_d));
           }
           if (param3 > -117) {

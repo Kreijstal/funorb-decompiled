@@ -104,7 +104,7 @@ final class dd {
                 param1 = ah.field_h;
               }
               param2 = 2;
-              ClientException.field_a.a(25, SoundCache.field_h);
+              ClientException.field_a.setAccountAndClearPassword(25, SoundCache.field_h);
             }
             var4 = 1;
             if (10 == param2) {
@@ -116,7 +116,7 @@ final class dd {
                 param1 = LoginPanel.a(jc.field_a, new String[]{param1}, -63);
               }
               if (DisplayNameSelectionPanel.field_G) {
-                param1 = kc.field_L;
+                param1 = ValidationStatusIcon.field_L;
               }
               ah.field_e.showResult(param1, param2, (byte) -77);
             }
@@ -125,7 +125,7 @@ final class dd {
               if (k.field_b) {
                 return;
               }
-              ClientException.field_a.i(68);
+              ClientException.field_a.clearCredentials(68);
             }
           }
         } catch (RuntimeException runtimeException) {

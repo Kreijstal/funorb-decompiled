@@ -778,7 +778,7 @@ final class GameScreen {
           }
           var27Lifetime1 = stackIn_51_0 / stackIn_51_1;
           var8Lifetime1 = ue.field_j[3];
-          var22Lifetime1 = dh.field_cb[0];
+          var22Lifetime1 = ValidationStatusWidget.field_cb[0];
           var6Lifetime1 = ue.field_j[1];
           var7Lifetime1 = ue.field_j[2];
           GzipDecoder.drawNineSlice(var22Lifetime1, var8Lifetime1, var7Lifetime1, (byte) 68, var6Lifetime1, var5_int);
@@ -1488,9 +1488,9 @@ final class GameScreen {
               return;
             }
             if (this.field_k.field_j != var9) {
-              var7 = dh.field_cb[0];
+              var7 = ValidationStatusWidget.field_cb[0];
             } else {
-              var7 = dh.field_cb[1];
+              var7 = ValidationStatusWidget.field_cb[1];
             }
             GzipDecoder.drawNineSlice(var7, var5, var4, (byte) 106, var3, var2_int);
             var6 = we.field_m[var9 + 1];
@@ -2134,7 +2134,7 @@ final class GameScreen {
           }
           var1 = "";
           if (null != MidiPcmStream.field_O) {
-            var1 = MidiPcmStream.field_O.g((byte) -39);
+            var1 = MidiPcmStream.field_O.getAccountIdentifier((byte) -39);
           }
           if (0 == var1.length()) {
             var1 = ResourceArchive.getCachedPlayerName((byte) -116);
@@ -4784,7 +4784,7 @@ final class GameScreen {
                   return;
                 }
               }
-              var12 = dh.field_cb[0];
+              var12 = ValidationStatusWidget.field_cb[0];
               var4 = ue.field_j[2];
               var3 = ue.field_j[1];
               var7 = 255 * (-(aa.field_f >> 1) + cd.field_b) / (aa.field_f >> 2);
@@ -4860,7 +4860,7 @@ final class GameScreen {
             var35 = var23 - (-((-(aa.field_f >> 2) + cd.field_b) * (var27 - var23) / (aa.field_f >> 2)) + 2 * var8);
             var34 = var8 + (cd.field_b - (aa.field_f >> 2)) * (var26 - var22) / (aa.field_f >> 2) + var22;
             var33 = var8 + (cd.field_b - (aa.field_f >> 2)) * (var25 - var21) / (aa.field_f >> 2) + var21;
-            var12 = dh.field_cb[0];
+            var12 = ValidationStatusWidget.field_cb[0];
             var36 = -(2 * var8) + (var24 + (var28 - var24) * (-(aa.field_f >> 2) + cd.field_b) / (aa.field_f >> 2));
             GzipDecoder.drawNineSlice(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
             SoftwareRasterizer.saveClip(pf.field_g);
@@ -4891,7 +4891,7 @@ final class GameScreen {
               var3 = LabeledWidgetContainer.field_I[var13][1];
               var5 = LabeledWidgetContainer.field_I[var13][3];
               var9 = var3 + var5;
-              var12 = dh.field_cb[0];
+              var12 = ValidationStatusWidget.field_cb[0];
               var11 = we.field_m[var13 + 1];
               var10 = (-var3 + var9) * cd.field_b / (aa.field_f >> 2);
               var3 = var3 + var10;
@@ -4984,7 +4984,7 @@ final class GameScreen {
               var6 = -1;
               var6 = cd.field_b * 255 / (aa.field_f >> 2);
               var9 = var3 + var5;
-              var12 = dh.field_cb[0];
+              var12 = ValidationStatusWidget.field_cb[0];
               var11 = we.field_m[var13 + 1];
               if (oj.field_d == null) {
                 oj.field_d = new Sprite(640, 480);
@@ -6028,7 +6028,7 @@ final class GameScreen {
               var25 != 0) {
               var24 = var24 / 256;
             }
-            dh.field_Y.drawTransparent(-1 + var23 + var24, -2 + (dh.field_Y.fullHeight >> 1) + var5_int);
+            ValidationStatusWidget.field_Y.drawTransparent(-1 + var23 + var24, -2 + (ValidationStatusWidget.field_Y.fullHeight >> 1) + var5_int);
             if (var25 == 0) {
               return;
             }
@@ -6153,7 +6153,7 @@ final class GameScreen {
           }
           if (decompiledFrameRemainder1) {
             if (rc.field_r == null) {
-              rc.field_r = dh.a(31, 10, (byte) -69, 1, 3);
+              rc.field_r = ValidationStatusWidget.a(31, 10, (byte) -69, 1, 3);
             }
             var5_ref_ae = rc.field_r;
             if (!var5_ref_ae.field_n) {

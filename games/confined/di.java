@@ -7,7 +7,7 @@ final class di {
     static PcmSample field_a;
     static String field_c;
     static String field_b;
-    static od field_d;
+    static MeshData field_d;
     static String field_f;
 
     public static void a(int param0) {

@@ -101,7 +101,7 @@ final class ha extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = HostileSpawn.field_I ? 1 : 0;
         try {
-          super.a(-110, param2);
+          super.copyStyleTo(-110, param2);
           if (param1 != 0) {
             return;
           }

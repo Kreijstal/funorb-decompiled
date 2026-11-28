@@ -2515,7 +2515,7 @@ class LinkTextWidget extends InteractiveWidget {
         decompiledBody.run();
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -2560,7 +2560,7 @@ class LinkTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void setTextBounds(int param0, int param1, int param2, byte param3) {
         try {
           this.setBounds(param2, ((WidgetMetrics) ((Object) this.renderer)).getPreferredHeight((UiWidget) (this), false), (byte) 59, param1, param0);
           if (param3 != -50) {

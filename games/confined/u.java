@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class u extends MovingTunnelEntity {
-    static od field_T;
+    static MeshData field_T;
     private int field_V;
     private double field_S;
     static String field_U;
@@ -206,7 +206,7 @@ final class u extends MovingTunnelEntity {
         field_T = null;
         field_U = null;
         if (param0 != -118) {
-          field_T = (od) null;
+          field_T = (MeshData) null;
         }
     }
 

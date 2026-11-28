@@ -186,7 +186,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void setRetriggerRate(int param0, byte param1, int param2) {
         this.field_s[param0] = param2;
         this.field_u[param0] = (int)(0.5 + Math.pow(2.0, 0.00054931640625 * (double)param2) * 2097152.0);
         if (param1 < 95) {
@@ -372,7 +372,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(int param0, boolean param1, cg param2) {
+    final void applySampleOffset(int param0, boolean param1, cg param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -414,8 +414,8 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
-        this.b(param0, param2, -95);
+    final synchronized void setChannelProgram(int param0, int param1, int param2) {
+        this.setDefaultProgram(param0, param2, -95);
         if (param1 != -6242) {
           field_K = -87;
         }
@@ -438,7 +438,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_t;
         if (this.field_L != null &&
           var3 == this.field_M) {
-          this.a(-23, this.field_L, this.field_C, this.field_A);
+          this.startTrack(-23, this.field_L, this.field_C, this.field_A);
           this.advanceMidiEvents(128);
           return;
         }
@@ -473,7 +473,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_eb.saveTrackPosition(var2);
             if (this.field_eb.isDone()) {
               if (this.field_L != null) {
-                this.a(this.field_C, this.field_L, (byte) 2);
+                this.playTrack(this.field_C, this.field_L, (byte) 2);
                 this.advanceMidiEvents(128);
                 return;
               }
@@ -508,7 +508,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(boolean param0, MusicTrack param1, SoundCache param2, int param3, ResourceArchive param4) {
+    final synchronized boolean prepareTrackSamples(boolean param0, MusicTrack param1, SoundCache param2, int param3, ResourceArchive param4) {
         tg stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
         int stackIn_24_0 = 0;
@@ -621,7 +621,7 @@ final class MidiPcmStream extends PcmStream {
         return 0;
     }
 
-    final synchronized void a(int param0, boolean param1, int param2) {
+    final synchronized void setChannelGain(int param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
         if (param2 >= 0) {
@@ -668,7 +668,7 @@ final class MidiPcmStream extends PcmStream {
         return BufferedSocket.field_h ^ 38054639;
     }
 
-    private final void b(int param0, int param1, int param2) {
+    private final void setDefaultProgram(int param0, int param1, int param2) {
         this.field_y[param1] = param0;
         int var4 = 124 % ((-4 - param2) / 55);
         this.field_B[param1] = c.a(param0, -128);
@@ -699,7 +699,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_w[param0] = 32767;
           this.field_db[param0] = 256;
           this.field_Y[param0] = 0;
-          this.a(param0, (byte) 123, 8192);
+          this.setRetriggerRate(param0, (byte) 123, 8192);
         }
     }
 
@@ -707,7 +707,7 @@ final class MidiPcmStream extends PcmStream {
         int var7_int = 0;
         int var8 = 0;
         if (!this.field_eb.hasMidiData()) {
-          this.a(param1, param0, (byte) 2);
+          this.playTrack(param1, param0, (byte) 2);
           return;
         }
         try {
@@ -867,7 +867,7 @@ final class MidiPcmStream extends PcmStream {
           var7.field_w = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(-101, var7), 0, this.computeNotePan((byte) 88, var7));
           stackIn_16_1 = 255;
           stackIn_17_2 = !(var12.field_t[param3] >= 0);
-          this.a(stackIn_16_1, stackIn_17_2, var7);
+          this.applySampleOffset(stackIn_16_1, stackIn_17_2, var7);
         } else {
           var7.field_w = RawPcmStream.createForSampleStep(var6, this.computeNoteSampleStep(79, var7), this.computeNoteVolume(var7, (byte) -78), this.computeNotePan((byte) 98, var7));
         }
@@ -993,7 +993,7 @@ final class MidiPcmStream extends PcmStream {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = w.a(param0, (byte) 78);
+              var3 = ValidationStatusWidget.a(param0, (byte) 78);
             }
             if (param2 != null) {
               if (param0 != null) {
@@ -1082,11 +1082,11 @@ final class MidiPcmStream extends PcmStream {
         }
         if (param1 < 1) {
           MusicTrack var5 = (MusicTrack) null;
-          this.a(false, (MusicTrack) null, (byte) 83);
+          this.playTrack(false, (MusicTrack) null, (byte) 83);
         }
     }
 
-    private final synchronized void a(int param0, MusicTrack param1, boolean param2, boolean param3) {
+    private final synchronized void startTrack(int param0, MusicTrack param1, boolean param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         int var8 = MinerDisturbance.field_ab;
@@ -1278,10 +1278,10 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var5Lifetime1 == 17) {
-            this.a(var4Lifetime1, (byte) 116, (var6Lifetime1 << 7) + (this.field_s[var4Lifetime1] & -16257));
+            this.setRetriggerRate(var4Lifetime1, (byte) 116, (var6Lifetime1 << 7) + (this.field_s[var4Lifetime1] & -16257));
           }
           if (var5Lifetime1 == 49) {
-            this.a(var4Lifetime1, (byte) 98, (this.field_s[var4Lifetime1] & -128) + var6Lifetime1);
+            this.setRetriggerRate(var4Lifetime1, (byte) 98, (this.field_s[var4Lifetime1] & -128) + var6Lifetime1);
             return;
           }
         }
@@ -1400,9 +1400,9 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, MusicTrack param1, byte param2) {
+    final synchronized void playTrack(boolean param0, MusicTrack param1, byte param2) {
         try {
-          this.a(17, param1, param0, true);
+          this.startTrack(17, param1, param0, true);
           if (param2 != 2) {
             this.field_H = (int[]) null;
           }
@@ -1457,7 +1457,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_eb = new MidiFileReader();
         this.field_z = new MusicPatchPcmStream(this);
         this.field_F = new tg(128);
-        this.a(256, true, -1);
+        this.setChannelGain(256, true, -1);
         this.b(true, -21400);
     }
 

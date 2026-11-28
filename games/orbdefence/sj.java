@@ -112,7 +112,7 @@ final class sj extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = OrbDefence.field_D ? 1 : 0;
         try {
-          super.a((byte) 81, param2);
+          super.copyStyleTo((byte) 81, param2);
           if (param1 != -19056) {
             return;
           }

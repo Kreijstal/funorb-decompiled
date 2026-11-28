@@ -394,7 +394,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   return;
                 }
               }
-              ci.field_U = true;
+              ValidationStatusWidget.field_U = true;
             }
             return;
           }
@@ -520,7 +520,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             boolean decompiledFrameRemainder0 = true;
             rc.field_g = vb.field_l;
             dk.field_c = dk.field_c + 1;
-            if (gm.field_O < 0) {
+            if (ValidationStatusIcon.field_O < 0) {
               var2 = 0;
               while (true) {
                 if (var2 < 112) {
@@ -530,7 +530,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     continue;
                   }
                 } else {
-                  gm.field_O = b.field_l;
+                  ValidationStatusIcon.field_O = b.field_l;
                 }
                 break;
               }
@@ -538,7 +538,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                if (~gm.field_O == ~b.field_l) {
+                if (~ValidationStatusIcon.field_O == ~b.field_l) {
                   break;
                 }
                 var2Lifetime1 = ProxyAuthenticationRequiredException.field_f[b.field_l];
@@ -713,7 +713,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           DequeWidgetContainer.field_C = true;
           NetworkArchiveRequest.field_J = true;
           eh.field_a = true;
-          ci.field_U = false;
+          ValidationStatusWidget.field_U = false;
           if (param0 <= 108) {
             return;
           }

@@ -205,8 +205,8 @@ final class pk extends kl {
           var6_int = 78 + (jm.field_i.field_v + oj.a(this.field_m, -1, new int[]{300}, la.field_b) * la.field_b.field_H);
           this.a(450, 0, var6_int);
           this.field_d = false;
-          this.field_n = tn.a(-jm.field_i.field_y + (-10 + (this.field_a >> 1)) + this.field_k, this.field_i + (this.field_j - 16) - (jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -67, param2);
-          this.field_s = tn.a(this.field_k - (-(this.field_a >> 1) - 10), -(jm.field_i.field_v >> 1) - 16 + (this.field_j + this.field_i), IntrusiveNode.field_c, jm.field_i, -93, param3);
+          this.field_n = ValidationStatusWidget.a(-jm.field_i.field_y + (-10 + (this.field_a >> 1)) + this.field_k, this.field_i + (this.field_j - 16) - (jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -67, param2);
+          this.field_s = ValidationStatusWidget.a(this.field_k - (-(this.field_a >> 1) - 10), -(jm.field_i.field_v >> 1) - 16 + (this.field_j + this.field_i), IntrusiveNode.field_c, jm.field_i, -93, param3);
           this.field_f.addFirst(this.field_n, false);
           this.field_f.addFirst(this.field_s, false);
           return;

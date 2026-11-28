@@ -139,10 +139,10 @@ final class sj {
           if (ii.b((byte) 30)) {
             var1 = bb.field_b;
           }
-          ha.field_w.field_F.a(param0, (byte) 123, var1);
-          ha.field_w.field_C.a(true, (byte) 123, ArchiveProvider.field_d);
+          ha.field_w.field_F.playTrack(param0, (byte) 123, var1);
+          ha.field_w.field_C.playTrack(true, (byte) 123, ArchiveProvider.field_d);
           ha.field_w.field_B = var2;
-          ha.field_w.field_n.a(true, (byte) 12, var2);
+          ha.field_w.field_n.playTrack(true, (byte) 12, var2);
           if (null == q.field_g) {
             stackIn_9_0 = FullscreenFocusCanvas.field_a;
           } else {

@@ -96,10 +96,10 @@ final class MenuScreen {
                           lk.field_b = ud.field_k;
                           wc.field_c = 0;
                           if (kb.field_b == 4) {
-                            pk.a((byte) -96, 2, true);
+                            ValidationStatusWidget.a((byte) -96, 2, true);
                           }
                           if (kb.field_b == 7) {
-                            pk.a((byte) -96, 3, true);
+                            ValidationStatusWidget.a((byte) -96, 3, true);
                           }
                           DirectByteStorage.field_d = 0;
                           ImageProducerRasterBuffer.field_m = 0;
@@ -227,7 +227,7 @@ final class MenuScreen {
                             stackIn_151_0 = (0 < ob.field_l) ? 0 : 9;
                             fb.field_c = stackIn_151_0;
                             mb.a(true, 14, 256);
-                            pk.a((byte) -96, 0, true);
+                            ValidationStatusWidget.a((byte) -96, 0, true);
                             break;
                           case 8:
                             if (!this.field_f.d((byte) -94)) {
@@ -375,7 +375,7 @@ final class MenuScreen {
               lk.field_f = 0;
               ud.field_k = 0;
               ModalDialog.field_G = null;
-              pk.a((byte) -96, 1, true);
+              ValidationStatusWidget.a((byte) -96, 1, true);
               PacketBuffer.a(param0, -1, param1 ^ -2601);
               stackIn_40_0 = (ob.field_l > 0) ? 0 : 9;
               fb.field_c = stackIn_40_0;

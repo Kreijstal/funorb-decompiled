@@ -48,7 +48,7 @@ final class fh {
           this.field_m = (WidgetRenderer) ((Object) var18);
           var18.field_e = 16777215;
           var4 = new lh();
-          var18.a(var4, false);
+          var18.copyStyleTo(var4, false);
           this.field_h = 5592405;
           this.field_n = 3;
           var4.field_l = 11711154;
@@ -83,7 +83,7 @@ final class fh {
           discarded$0 = new ib(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new og(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new lh();
-          var18.a(var8, false);
+          var18.copyStyleTo(var8, false);
           var8.a(false, 0).a((byte) -114, gj.a(7829367, 15658734, false, 10066329)).a(1118481, (byte) -127).a((byte) 101, -1);
           var8.a(false, 4).a(true, 115).a((byte) -115, var5);
           this.field_a = (WidgetRenderer) ((Object) var8);
@@ -113,7 +113,7 @@ final class fh {
           var20 = new lh(var4, true);
           var20.a(-102, var14);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "fh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "fh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -202,7 +202,7 @@ final class fh {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -254,7 +254,7 @@ final class fh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -284,7 +284,7 @@ final class fh {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -34,7 +34,7 @@ final class kaa extends pu {
     final static String c(int param0) {
         String var1 = "";
         if (FridgeScreen.field_e != null) {
-          var1 = FridgeScreen.field_e.a(1);
+          var1 = FridgeScreen.field_e.getAccountIdentifier(1);
         }
         if (var1.length() == 0) {
           var1 = uaa.d((byte) -82);

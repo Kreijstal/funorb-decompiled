@@ -266,7 +266,7 @@ final class hf extends DefaultTextWidgetRenderer {
         bd var6Lifetime2;
         var7 = Terraphoenix.field_V;
         try {
-          super.a(param1, -111);
+          super.copyStyleTo(param1, -111);
           if (param0) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_A[var4_int];

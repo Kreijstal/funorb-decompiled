@@ -9,7 +9,7 @@ final class n {
     static int field_e;
     static int field_f;
     static String field_c;
-    static bn[] field_b;
+    static MeshData[] field_b;
 
     final static vg a(byte param0) {
         String var1 = null;
@@ -69,7 +69,7 @@ final class n {
           ak.c((byte) -128);
           MidiPcmStream.field_A = DropTargetWidgetContainer.field_T;
           if (param3 != 0) {
-            field_b = (bn[]) null;
+            field_b = (MeshData[]) null;
           }
           DelegatingCanvas.field_a = DropTargetWidgetContainer.field_T;
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ final class n {
         field_f = 0;
         field_a = "<%0> has declined the invitation.";
         field_d = new String[16];
-        field_b = new bn[7];
+        field_b = new MeshData[7];
         field_e = field_f;
     }
 }

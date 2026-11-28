@@ -69,7 +69,7 @@ final class on extends DefaultTextWidgetRenderer {
         nb var6Lifetime2;
         var7 = MinerDisturbance.field_ab;
         try {
-          super.a(-3, param2);
+          super.copyStyleTo(-3, param2);
           if (param1 != 36) {
             return;
           }

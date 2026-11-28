@@ -46,7 +46,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
                 param0 = FrameTimer.field_c;
               }
               param1 = 2;
-              DraggableWidgetContainer.field_O.b((byte) 37, qf.field_c);
+              DraggableWidgetContainer.field_O.setAccountAndClearPassword((byte) 37, qf.field_c);
             }
             if (param1 == 10) {
               ByteStorage.a((byte) -31);
@@ -68,7 +68,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
               if (sg.field_a) {
                 return;
               }
-              DraggableWidgetContainer.field_O.i(134);
+              DraggableWidgetContainer.field_O.clearCredentials(134);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -125,7 +125,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           }
         }
         if (!param0) {
-          MusicPatchPcmStream.field_m = gm.a((byte) -96, var9, 80);
+          MusicPatchPcmStream.field_m = ValidationStatusIcon.a((byte) -96, var9, 80);
           SpriteGeometry.field_x = null;
           return new fg(param0);
         }

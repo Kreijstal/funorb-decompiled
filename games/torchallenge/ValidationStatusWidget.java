@@ -1,0 +1,379 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidationStatusWidget extends RichTextWidget {
+    private Sprite field_Z;
+    static Sprite[][] field_cb;
+    private String field_W;
+    static Sprite field_Y;
+    static am field_V;
+    private FieldValidator field_bb;
+    private int field_X;
+    static Sprite field_ab;
+
+    final static fb a(int param0, ResourceArchive param1, boolean param2) {
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        byte[] var4 = null;
+        Object stackIn_4_0 = null;
+        fb stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!param2) {
+            field_V = (am) null;
+          }
+          var4 = param1.getFlatFile(param0, -103);
+          var3 = var4;
+          if (var4 != null) {
+            stackIn_6_0 = new fb(var4);
+            return stackIn_6_0;
+          }
+          stackIn_4_0 = null;
+          return (fb) (stackIn_4_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_9_0 = var3_ref;
+          stackIn_9_1 = new StringBuilder().append("dh.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    ValidationStatusWidget(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, kk.c(false));
+        try {
+          this.field_W = param1;
+          this.field_bb = param0;
+          this.setBounds((byte) 118, param2, param5, param4, param3);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final static int a(int param0, int param1) {
+        int var2 = 0;
+        if (0 != (7 & param1)) {
+          var2 = 8 - (param1 & 7);
+        }
+        int var3 = var2 + param1;
+        if (param0 == 8) {
+          return var3;
+        }
+        return 26;
+    }
+
+    final void updatePointer(UiComponent param0, int param1, byte param2, int param3) {
+        this.field_X = this.field_X + 1;
+        if (param2 > -97) {
+          return;
+        }
+        try {
+          super.updatePointer(param0, param1, (byte) -103, param3);
+        } catch (RuntimeException runtimeException) {
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dh.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public static void g(int param0) {
+        field_Y = null;
+        field_cb = (Sprite[][]) null;
+        if (param0 == 112) {
+          field_ab = null;
+          field_V = null;
+          return;
+        }
+        ValidationStatusWidget.a(-110, -29);
+        field_ab = null;
+        field_V = null;
+    }
+
+    final void drawWidget(int param0, int param1, boolean param2, int param3) {
+        rj var6;
+        int var9;
+        int var10;
+        int var13;
+        String var17;
+        Object var18;
+        Sprite var19;
+        Sprite var20;
+        Object var24;
+        Object var37;
+        TextWidgetRenderer var41;
+        String var5;
+        int var11;
+        int var12;
+        Sprite var16;
+        Sprite var21;
+        String var23;
+        Sprite var25;
+        Sprite var27;
+        Sprite var30;
+        Sprite var32;
+        Sprite var38;
+        Sprite var39;
+        Sprite var40;
+        TextWidgetRenderer var42;
+        TextWidgetRenderer var43;
+        int var9Lifetime1;
+        int var9Lifetime2;
+        int var10Lifetime1;
+        int var10Lifetime2;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var11Lifetime3;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime3;
+        rj var6Lifetime1;
+        Sprite var16Lifetime1;
+        Sprite var16Lifetime2;
+        var18 = null;
+        var24 = null;
+        var37 = null;
+        var13 = TorChallenge.field_F ? 1 : 0;
+        var6 = this.field_bb.getValidationStatus(105);
+        if (bl.field_S == var6) {
+          var17 = hb.field_h;
+          if (!var17.equals(this.field_v)) {
+            this.field_v = var17;
+            this.rebuildHotspotBounds(false);
+          }
+          super.drawWidget(param0, param1, param2, param3);
+          var6 = this.field_bb.getValidationStatus(-74);
+          var41 = (TextWidgetRenderer) ((Object) this.field_q);
+          var9 = this.field_m + param1;
+          var10 = var41.getTextOriginY((UiComponent) (this), 3, param0) + (var41.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
+          if (var6 != bl.field_S &&
+            jh.field_c != var6) {
+            if (SpriteLoader.field_c == var6) {
+              var19 = ub.field_f[2];
+              var19.drawAdditiveWithIntensity(var9, -(var19.storedHeight >> 1) + var10, 256);
+              return;
+            }
+            if (var6 != tf.field_w) {
+              return;
+            }
+            var20 = ub.field_f[1];
+            var20.drawAdditiveWithIntensity(var9, var10 - (var20.storedHeight >> 1), 256);
+            return;
+          }
+          var21 = ub.field_f[0];
+          var16 = var21;
+          var11 = var21.fullWidth << 1;
+          var12 = var21.fullHeight << 1;
+          if (this.field_Z != null &&
+            this.field_Z.storedWidth >= var11 &&
+            this.field_Z.storedHeight >= var12) {
+            FullscreenFocusCanvas.a(122, this.field_Z);
+            SoftwareRasterizer.clearRaster();
+          } else {
+            this.field_Z = new Sprite(var11, var12);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
+          }
+          var21.drawRotatedAbout(112, 144, var21.fullWidth << 4, var21.fullHeight << 4, -this.field_X << 10, 4096);
+          ie.b((byte) -9);
+          this.field_Z.drawAdditiveWithIntensity(-(var21.fullWidth >> 1) + var9, var10 - var21.fullHeight, 256);
+          return;
+        }
+        if (var6 != jh.field_c) {
+          var5 = this.field_bb.getValidationMessage((byte) -10);
+          if (var5 == null) {
+            var5 = this.field_W;
+          }
+          if (!var5.equals(this.field_v)) {
+            this.field_v = var5;
+            this.rebuildHotspotBounds(false);
+          }
+          super.drawWidget(param0, param1, param2, param3);
+          var6 = this.field_bb.getValidationStatus(-74);
+          var43 = (TextWidgetRenderer) ((Object) this.field_q);
+          var9Lifetime1 = this.field_m + param1;
+          var10Lifetime1 = var43.getTextOriginY((UiComponent) (this), 3, param0) + (var43.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
+          if (var6 != bl.field_S &&
+            jh.field_c != var6) {
+            if (SpriteLoader.field_c == var6) {
+              var38 = ub.field_f[2];
+              var38.drawAdditiveWithIntensity(var9Lifetime1, -(var38.storedHeight >> 1) + var10Lifetime1, 256);
+              return;
+            }
+            if (var6 != tf.field_w) {
+              return;
+            }
+            var39 = ub.field_f[1];
+            var39.drawAdditiveWithIntensity(var9Lifetime1, var10Lifetime1 - (var39.storedHeight >> 1), 256);
+            return;
+          }
+          var40 = ub.field_f[0];
+          var11Lifetime1 = var40.fullWidth << 1;
+          var12Lifetime1 = var40.fullHeight << 1;
+          if (this.field_Z == null) {
+            this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
+          } else {
+            if (this.field_Z.storedWidth < var11Lifetime1) {
+              this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+              FullscreenFocusCanvas.a(-114, this.field_Z);
+            } else {
+              if (this.field_Z.storedHeight >= var12Lifetime1) {
+                FullscreenFocusCanvas.a(122, this.field_Z);
+                SoftwareRasterizer.clearRaster();
+              } else {
+                this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+                FullscreenFocusCanvas.a(-114, this.field_Z);
+              }
+            }
+          }
+          var40.drawRotatedAbout(112, 144, var40.fullWidth << 4, var40.fullHeight << 4, -this.field_X << 10, 4096);
+          ie.b((byte) -9);
+          this.field_Z.drawAdditiveWithIntensity(-(var40.fullWidth >> 1) + var9Lifetime1, var10Lifetime1 - var40.fullHeight, 256);
+          return;
+        }
+        var23 = hb.field_h;
+        if (!var23.equals(this.field_v)) {
+          this.field_v = var23;
+          this.rebuildHotspotBounds(false);
+        }
+        super.drawWidget(param0, param1, param2, param3);
+        var6Lifetime1 = this.field_bb.getValidationStatus(-74);
+        var42 = (TextWidgetRenderer) ((Object) this.field_q);
+        var9Lifetime2 = this.field_m + param1;
+        var10Lifetime2 = var42.getTextOriginY((UiComponent) (this), 3, param0) + (var42.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
+        if (var6Lifetime1 == bl.field_S) {
+          var25 = ub.field_f[0];
+          var16Lifetime1 = var25;
+          var11Lifetime2 = var25.fullWidth << 1;
+          var12Lifetime2 = var25.fullHeight << 1;
+          if (this.field_Z != null &&
+            this.field_Z.storedWidth >= var11Lifetime2 &&
+            this.field_Z.storedHeight >= var12Lifetime2) {
+            FullscreenFocusCanvas.a(122, this.field_Z);
+            SoftwareRasterizer.clearRaster();
+          } else {
+            this.field_Z = new Sprite(var11Lifetime2, var12Lifetime2);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
+          }
+          var25.drawRotatedAbout(112, 144, var25.fullWidth << 4, var25.fullHeight << 4, -this.field_X << 10, 4096);
+          ie.b((byte) -9);
+          this.field_Z.drawAdditiveWithIntensity(-(var25.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var25.fullHeight, 256);
+          return;
+        }
+        if (jh.field_c != var6Lifetime1) {
+          if (SpriteLoader.field_c == var6Lifetime1) {
+            var27 = ub.field_f[2];
+            var27.drawAdditiveWithIntensity(var9Lifetime2, -(var27.storedHeight >> 1) + var10Lifetime2, 256);
+            return;
+          }
+          if (var6Lifetime1 != tf.field_w) {
+            return;
+          }
+          var30 = ub.field_f[1];
+          var30.drawAdditiveWithIntensity(var9Lifetime2, var10Lifetime2 - (var30.storedHeight >> 1), 256);
+          return;
+        }
+        var32 = ub.field_f[0];
+        var16Lifetime2 = var32;
+        var11Lifetime3 = var32.fullWidth << 1;
+        var12Lifetime3 = var32.fullHeight << 1;
+        if (this.field_Z == null) {
+          this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+          FullscreenFocusCanvas.a(-114, this.field_Z);
+        } else {
+          if (this.field_Z.storedWidth < var11Lifetime3) {
+            this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
+          } else {
+            if (this.field_Z.storedHeight >= var12Lifetime3) {
+              FullscreenFocusCanvas.a(122, this.field_Z);
+              SoftwareRasterizer.clearRaster();
+            } else {
+              this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+              FullscreenFocusCanvas.a(-114, this.field_Z);
+            }
+          }
+        }
+        var32.drawRotatedAbout(112, 144, var32.fullWidth << 4, var32.fullHeight << 4, -this.field_X << 10, 4096);
+        ie.b((byte) -9);
+        this.field_Z.drawAdditiveWithIntensity(-(var32.fullWidth >> 1) + var9Lifetime2, var10Lifetime2 - var32.fullHeight, 256);
+        return;
+    }
+
+    final boolean takeFocus(UiComponent param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 0) {
+            return false;
+          }
+          this.field_W = (String) null;
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("dh.RA(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static ae a(int param0, int param1, byte param2, int param3, int param4) {
+        Object var5;
+        ae var5_ref;
+        int var6;
+        ae var5_refLifetime1;
+        var5 = null;
+        var6 = TorChallenge.field_F ? 1 : 0;
+        if (param2 == -69) {
+          var5_ref = (ae) (bk.field_t.first((byte) 121));
+          while (var5_ref != null) {
+            if (var5_ref.field_o == param0) {
+              return var5_ref;
+            }
+            var5_ref = (ae) (bk.field_t.next(param2 ^ 329));
+          }
+        } else {
+          ValidationStatusWidget.a(-109, -75, (byte) -32, 2, -86);
+          var5_ref = (ae) (bk.field_t.first((byte) 121));
+          while (var5_ref != null) {
+            if (var5_ref.field_o == param0) {
+              return var5_ref;
+            }
+            var5_ref = (ae) (bk.field_t.next(param2 ^ 329));
+          }
+        }
+        var5_refLifetime1 = new ae();
+        var5_refLifetime1.field_r = param1;
+        var5_refLifetime1.field_q = param3;
+        var5_refLifetime1.field_o = param0;
+        bk.field_t.addLast(var5_refLifetime1, -53);
+        LabeledWidgetContainer.a(param4, (byte) 26, var5_refLifetime1);
+        return var5_refLifetime1;
+    }
+
+    final String getTooltipText(boolean param0) {
+        if (!param0) {
+          return null;
+        }
+        this.getTooltipText(false);
+        return null;
+    }
+
+    static {
+        field_V = new am(0);
+    }
+}

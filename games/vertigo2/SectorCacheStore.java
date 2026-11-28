@@ -219,7 +219,7 @@ final class SectorCacheStore {
         if (param0 != 0) {
           field_c = (String) null;
         }
-        return lr.field_S;
+        return ValidationStatusIcon.field_S;
     }
 
     public final String toString() {

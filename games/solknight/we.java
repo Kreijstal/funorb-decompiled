@@ -204,21 +204,21 @@ final class we implements WidgetRenderer {
         int var9_intLifetime3;
         var10 = SolKnight.field_L ? 1 : 0;
         try {
-          if (kc.field_Q != null &&
-            kc.field_Q.ensureIndexLoaded((byte) -121) &&
-            kc.field_Q.tryLoadGroupByName(2, "benefits") &&
+          if (ValidationStatusIcon.field_Q != null &&
+            ValidationStatusIcon.field_Q.ensureIndexLoaded((byte) -121) &&
+            ValidationStatusIcon.field_Q.tryLoadGroupByName(2, "benefits") &&
             eb.field_b != null &&
             eb.field_b.ensureIndexLoaded((byte) -121) &&
             eb.field_b.tryLoadGroupByName(2, "benefits")) {
-            of.field_f = Asteroid.a("headline", "benefits", kc.field_Q, (byte) -120);
-            pf.field_b = Asteroid.a("blurbpane", "benefits", kc.field_Q, (byte) -126);
-            IsaacRandom.field_d = Asteroid.a("button", "benefits", kc.field_Q, (byte) -117);
-            TextFieldValidator.field_e = Asteroid.a("signup_text", "benefits", kc.field_Q, (byte) -119);
-            jh.field_b = Asteroid.a("menu_text", "benefits", kc.field_Q, (byte) -114);
-            GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
-            RichTextWidget.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
-            GzipDecompressor.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
-            ArchiveRequest.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
+            of.field_f = Asteroid.a("headline", "benefits", ValidationStatusIcon.field_Q, (byte) -120);
+            pf.field_b = Asteroid.a("blurbpane", "benefits", ValidationStatusIcon.field_Q, (byte) -126);
+            IsaacRandom.field_d = Asteroid.a("button", "benefits", ValidationStatusIcon.field_Q, (byte) -117);
+            TextFieldValidator.field_e = Asteroid.a("signup_text", "benefits", ValidationStatusIcon.field_Q, (byte) -119);
+            jh.field_b = Asteroid.a("menu_text", "benefits", ValidationStatusIcon.field_Q, (byte) -114);
+            GameApplet.field_j = Asteroid.a("button_frame", "benefits", ValidationStatusIcon.field_Q, (byte) -121);
+            RichTextWidget.field_S = Asteroid.a("arrow", "benefits", ValidationStatusIcon.field_Q, (byte) -111);
+            GzipDecompressor.field_a = (BitmapFont) ((Object) lc.a(ValidationStatusIcon.field_Q, 1, "large_font", "benefits", eb.field_b));
+            ArchiveRequest.field_n = (BitmapFont) ((Object) lc.a(ValidationStatusIcon.field_Q, 1, "small_font", "benefits", eb.field_b));
             var28 = SoftwareRasterizer.field_f;
             var2 = SoftwareRasterizer.field_a;
             var3 = SoftwareRasterizer.field_d;
@@ -253,7 +253,7 @@ final class we implements WidgetRenderer {
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(DialogMessagePane.field_D);
             sa.field_m = 231 + (-GameApplet.field_j.field_p + IsaacRandom.field_d.field_p) / 2;
-            kc.field_Q = null;
+            ValidationStatusIcon.field_Q = null;
             lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
             Archive.field_f = 390 + (-GameApplet.field_j.field_t + IsaacRandom.field_d.field_t) / 2;
             LabeledWidgetContainer.field_I = 434 + (IsaacRandom.field_d.field_p - GameApplet.field_j.field_p) / 2;

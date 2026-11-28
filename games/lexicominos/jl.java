@@ -23,7 +23,7 @@ final class jl {
           ArchiveRequest.field_q = param0;
           ni.a(-124, 12);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

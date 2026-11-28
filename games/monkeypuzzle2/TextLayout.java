@@ -6,7 +6,7 @@ abstract class TextLayout {
     static int field_a;
     static ib field_b;
 
-    final int a(int param0, String param1, int param2, byte param3) {
+    final int computeJustificationStep(int param0, String param1, int param2, byte param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -251,7 +251,7 @@ abstract class TextLayout {
         int stackIn_7_0 = 0;
         if (param0 != 62) {
           var3 = (String) null;
-          this.a(121, (String) null, 20, (byte) -1);
+          this.computeJustificationStep(121, (String) null, 20, (byte) -1);
         }
         if (this.field_c != null &&
           0 < this.field_c.length) {
@@ -263,8 +263,8 @@ abstract class TextLayout {
     }
 
     final static void a(int param0) {
-        if (vh.field_B != null) {
-          vh.field_B.dispose();
+        if (ValidationStatusIcon.field_B != null) {
+          ValidationStatusIcon.field_B.dispose();
         }
         if (null != GameApplet.field_k) {
           GameApplet.field_k.dispose();

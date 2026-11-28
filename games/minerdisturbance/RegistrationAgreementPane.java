@@ -24,11 +24,11 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           var4 = new DefaultTextWidgetRenderer(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
           this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_n = "";
-          this.field_L.a(-24, 0, wk.field_d);
-          this.field_L.a(-100, 1, wk.field_d);
+          this.field_L.setHotspotTooltip(-24, 0, wk.field_d);
+          this.field_L.setHotspotTooltip(-100, 1, wk.field_d);
           this.field_L.field_v = -40 + this.field_v;
           this.field_L.field_y = (WidgetEventListener) (this);
-          this.field_L.b(26, -40 + this.field_v, 32088, var3);
+          this.field_L.setTextBounds(26, -40 + this.field_v, 32088, var3);
           var3 = var3 + (15 + this.field_L.field_q);
           this.addChild(-1, this.field_L);
           var5 = 4;
@@ -193,18 +193,18 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           DualLinkNode.field_s = MusicTrack.load(param4, "", "md_win");
           aa.field_e = MusicTrack.load(param4, "", "md_lose");
           var6 = new SoundCache(param0, param1);
-          km.field_a.a(false, ph.field_a, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, ph.field_a, var6, 0, param2);
           if (!param3) {
             return;
           }
-          km.field_a.a(false, h.field_d, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, h.field_d, var6, 0, param2);
           stackIn_4_0 = km.field_a;
           stackIn_5_1 = !(param3);
-          ((MidiPcmStream) (Object) stackIn_4_0).a(stackIn_5_1, df.field_b, var6, 0, param2);
-          km.field_a.a(false, DefaultTextWidgetRenderer.field_p, var6, 0, param2);
-          km.field_a.a(false, hl.field_a, var6, 0, param2);
-          km.field_a.a(false, DualLinkNode.field_s, var6, 0, param2);
-          km.field_a.a(false, aa.field_e, var6, 0, param2);
+          ((MidiPcmStream) (Object) stackIn_4_0).prepareTrackSamples(stackIn_5_1, df.field_b, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, DefaultTextWidgetRenderer.field_p, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, hl.field_a, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, DualLinkNode.field_s, var6, 0, param2);
+          km.field_a.prepareTrackSamples(false, aa.field_e, var6, 0, param2);
           km.field_a.e(100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

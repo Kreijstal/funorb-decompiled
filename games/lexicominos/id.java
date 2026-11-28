@@ -22,7 +22,7 @@ class id extends DefaultTextWidgetRenderer {
           }
           super.paintWidget(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "id.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -326,7 +326,7 @@ class id extends DefaultTextWidgetRenderer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var3), "id.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var3), "id.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

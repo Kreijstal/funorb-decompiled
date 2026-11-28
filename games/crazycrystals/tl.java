@@ -861,7 +861,7 @@ abstract class tl {
           }
           var2Lifetime135 = LevelProgressUpdate.loadRootArchiveFile("tasterlevel_topmessage", 1);
           if (null != var2Lifetime135) {
-            io.field_J = fa.a((byte) -100, var2Lifetime135);
+            ValidationStatusWidget.field_J = fa.a((byte) -100, var2Lifetime135);
           }
           var2Lifetime136 = LevelProgressUpdate.loadRootArchiveFile("tasterlevel_botmessage", 1);
           if (null != var2Lifetime136) {
@@ -1393,71 +1393,71 @@ abstract class tl {
           }
           var2Lifetime268 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,0", 1);
           if (var2Lifetime268 != null) {
-            io.field_I[0] = fa.a((byte) -68, var2Lifetime268);
+            ValidationStatusWidget.field_I[0] = fa.a((byte) -68, var2Lifetime268);
           }
           var2Lifetime269 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,1", 1);
           if (null != var2Lifetime269) {
-            io.field_I[1] = fa.a((byte) -114, var2Lifetime269);
+            ValidationStatusWidget.field_I[1] = fa.a((byte) -114, var2Lifetime269);
           }
           var2Lifetime270 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,2", 1);
           if (null != var2Lifetime270) {
-            io.field_I[2] = fa.a((byte) -77, var2Lifetime270);
+            ValidationStatusWidget.field_I[2] = fa.a((byte) -77, var2Lifetime270);
           }
           var2Lifetime271 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,3", 1);
           if (null != var2Lifetime271) {
-            io.field_I[3] = fa.a((byte) -82, var2Lifetime271);
+            ValidationStatusWidget.field_I[3] = fa.a((byte) -82, var2Lifetime271);
           }
           var2Lifetime272 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,4", 1);
           if (var2Lifetime272 != null) {
-            io.field_I[4] = fa.a((byte) -92, var2Lifetime272);
+            ValidationStatusWidget.field_I[4] = fa.a((byte) -92, var2Lifetime272);
           }
           var2Lifetime273 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,5", 1);
           if (null != var2Lifetime273) {
-            io.field_I[5] = fa.a((byte) -106, var2Lifetime273);
+            ValidationStatusWidget.field_I[5] = fa.a((byte) -106, var2Lifetime273);
           }
           var2Lifetime274 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,6", 1);
           if (null != var2Lifetime274) {
-            io.field_I[6] = fa.a((byte) -120, var2Lifetime274);
+            ValidationStatusWidget.field_I[6] = fa.a((byte) -120, var2Lifetime274);
           }
           var2Lifetime275 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,7", 1);
           if (null != var2Lifetime275) {
-            io.field_I[7] = fa.a((byte) -68, var2Lifetime275);
+            ValidationStatusWidget.field_I[7] = fa.a((byte) -68, var2Lifetime275);
           }
           var2Lifetime276 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,8", 1);
           if (null != var2Lifetime276) {
-            io.field_I[8] = fa.a((byte) -68, var2Lifetime276);
+            ValidationStatusWidget.field_I[8] = fa.a((byte) -68, var2Lifetime276);
           }
           var2Lifetime277 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,9", 1);
           if (null != var2Lifetime277) {
-            io.field_I[9] = fa.a((byte) -122, var2Lifetime277);
+            ValidationStatusWidget.field_I[9] = fa.a((byte) -122, var2Lifetime277);
           }
           var2Lifetime278 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,10", 1);
           if (null != var2Lifetime278) {
-            io.field_I[10] = fa.a((byte) -65, var2Lifetime278);
+            ValidationStatusWidget.field_I[10] = fa.a((byte) -65, var2Lifetime278);
           }
           var2Lifetime279 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,11", 1);
           if (null != var2Lifetime279) {
-            io.field_I[11] = fa.a((byte) -71, var2Lifetime279);
+            ValidationStatusWidget.field_I[11] = fa.a((byte) -71, var2Lifetime279);
           }
           var2Lifetime280 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,12", 1);
           if (var2Lifetime280 != null) {
-            io.field_I[12] = fa.a((byte) -69, var2Lifetime280);
+            ValidationStatusWidget.field_I[12] = fa.a((byte) -69, var2Lifetime280);
           }
           var2Lifetime281 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,13", 1);
           if (null != var2Lifetime281) {
-            io.field_I[13] = fa.a((byte) -68, var2Lifetime281);
+            ValidationStatusWidget.field_I[13] = fa.a((byte) -68, var2Lifetime281);
           }
           var2Lifetime282 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,14", 1);
           if (null != var2Lifetime282) {
-            io.field_I[14] = fa.a((byte) -111, var2Lifetime282);
+            ValidationStatusWidget.field_I[14] = fa.a((byte) -111, var2Lifetime282);
           }
           var2Lifetime283 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,15", 1);
           if (null != var2Lifetime283) {
-            io.field_I[15] = fa.a((byte) -102, var2Lifetime283);
+            ValidationStatusWidget.field_I[15] = fa.a((byte) -102, var2Lifetime283);
           }
           var2Lifetime284 = LevelProgressUpdate.loadRootArchiveFile("mb_screenshot_captions,18", 1);
           if (null != var2Lifetime284) {
-            io.field_I[18] = fa.a((byte) -108, var2Lifetime284);
+            ValidationStatusWidget.field_I[18] = fa.a((byte) -108, var2Lifetime284);
           }
           ge.field_b = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

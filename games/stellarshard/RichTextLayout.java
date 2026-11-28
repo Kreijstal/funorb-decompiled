@@ -154,7 +154,7 @@ final class RichTextLayout extends TextLayout {
               if (param3 != 3) {
                 stackIn_41_1 = 0;
               } else {
-                stackIn_41_1 = this.a(var13, false, param2, param4.stringWidth(var13));
+                stackIn_41_1 = this.computeJustificationStep(var13, false, param2, param4.stringWidth(var13));
               }
               ImageProducerRasterBuffer.a(stackIn_40_0, stackIn_41_1, var13, var14, param4);
             }

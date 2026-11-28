@@ -156,8 +156,8 @@ final class LitModelMesh extends bk {
         this.field_k = 0;
         this.field_x = 0;
         this.field_E = false;
-        param0.a();
-        param0.c();
+        param0.calculateNormals();
+        param0.buildSkinGroups();
         this.field_k = param0.field_f;
         this.field_w = param0.field_F;
         this.field_j = param0.field_M;
@@ -181,7 +181,7 @@ final class LitModelMesh extends bk {
           for (var9 = 0; var9 < this.field_x; var9++) {
             var10 = param0.field_A[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.field_c.d(var10)) {
+              TriangleRasterizer.field_c.hasTexture(var10)) {
               this.field_z[var9] = (short)var10;
             } else {
               this.field_z[var9] = (short)-1;

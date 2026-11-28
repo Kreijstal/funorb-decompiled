@@ -60,7 +60,7 @@ final class BoundedRandomAccessFile {
                 param0 = me.field_c;
               }
               param1 = 2;
-              lg.field_b.a((byte) -102, aa.field_s);
+              lg.field_b.setAccountAndClearPassword((byte) -102, aa.field_s);
             }
             if (param1 == 10) {
               l.a(0);
@@ -80,7 +80,7 @@ final class BoundedRandomAccessFile {
                 return;
               }
               if (!MouseWheelInput.field_d) {
-                lg.field_b.a(-41);
+                lg.field_b.clearCredentials(-41);
                 return;
               }
             }

@@ -8,7 +8,7 @@ final class IsaacRandom {
     private int field_i;
     private int field_g;
     private int[] field_b;
-    static od field_d;
+    static MeshData field_d;
     static volatile boolean field_f;
     private int field_h;
 

@@ -23,7 +23,7 @@ final class dq extends InteractiveWidget {
             TextFieldValidator.a((byte) -63, param1, 0);
             return;
           }
-          RegistrationAgreementPane.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
+          RegistrationAgreementPane.field_E = ValidationStatusWidget.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
           if (null != RegistrationAgreementPane.field_E) {
             mm.a(RegistrationAgreementPane.field_E, true);
             TextFieldValidator.a((byte) -80, param1, 2);
@@ -40,7 +40,7 @@ final class dq extends InteractiveWidget {
           TextFieldValidator.a((byte) -63, param1, 0);
           return;
         }
-        RegistrationAgreementPane.field_E = io.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
+        RegistrationAgreementPane.field_E = ValidationStatusWidget.createFullscreenCanvas(640, 0, param0 ^ -1038173815, ResultScene.field_a, 480, 0);
         if (null != RegistrationAgreementPane.field_E) {
           mm.a(RegistrationAgreementPane.field_E, true);
           TextFieldValidator.a((byte) -80, param1, 2);

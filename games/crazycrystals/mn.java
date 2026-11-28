@@ -84,8 +84,8 @@ final class mn extends pd {
         CrystalTile.field_p = null;
         AccountCreationResultPanel.field_mb.a((byte) -54);
         AccountCreationResultPanel.field_mb = null;
-        io.field_M.a((byte) -98);
-        io.field_M = null;
+        ValidationStatusWidget.field_M.a((byte) -98);
+        ValidationStatusWidget.field_M = null;
         ec.field_k.a((byte) -43);
         ec.field_k = null;
     }

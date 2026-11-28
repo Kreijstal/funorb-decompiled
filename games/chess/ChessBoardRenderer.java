@@ -307,7 +307,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         int var8 = 0;
         int var9 = 0;
         int[] var10 = null;
-        bn var11 = null;
+        MeshData var11 = null;
         int var12_int = 0;
         int[] var12 = null;
         int var13 = 0;
@@ -343,19 +343,19 @@ final class ChessBoardRenderer extends ChessBoardState {
               var15 = var16;
               var10 = var15;
               RichTextWidget.a(var8, var16, 45, (byte) 49, var5_int, var7, var6);
-              var11 = new bn(var16.length >> 1, 5, 0);
+              var11 = new MeshData(var16.length >> 1, 5, 0);
               for (var12_int = 0; var16.length > var12_int; var12_int += 2) {
-                var11.a(var16[var12_int], 0, var10[1 + var12_int]);
+                var11.findOrAddVertex(var16[var12_int], 0, var10[1 + var12_int]);
               }
-              var11.a(0, 6, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
-              var11.a(2, 1, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
-              var11.a(1, 5, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
-              var11.a(5, 4, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
-              var11.a(6, 5, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
+              var11.addFace(0, 6, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
+              var11.addFace(2, 1, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
+              var11.addFace(1, 5, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
+              var11.addFace(5, 4, 3, (byte) 1, (byte) -1, (short) 960, (short) -1);
+              var11.addFace(6, 5, 1, (byte) 1, (byte) -1, (short) 960, (short) -1);
               for (var12_intLifetime1 = 0; var11.field_D.length > var12_intLifetime1; var12_intLifetime1++) {
                 var11.field_D[var12_intLifetime1] = (byte)var9;
               }
-              this.field_v = (SoftwareModelMesh) (var11.a(100, 131072, 10, 10, 10));
+              this.field_v = (SoftwareModelMesh) (var11.createModel(100, 131072, 10, 10, 10));
               var12 = new int[]{param3, param2 << 7, param3, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
               this.field_v.projectAndDrawWithTransforms(param0, var12);
             }
@@ -1169,9 +1169,9 @@ final class ChessBoardRenderer extends ChessBoardState {
         try {
           da.a(param1, 0, param2, 0, 0, -2, param0);
           da.a(param2, 0, param0, 0, 0, -2, param1);
-          jn.a(param0, 0, param3 + 16841);
-          jn.a(param1, 0, 16801);
-          jn.a(param2, 0, 16801);
+          ValidationStatusIcon.a(param0, 0, param3 + 16841);
+          ValidationStatusIcon.a(param1, 0, 16801);
+          ValidationStatusIcon.a(param2, 0, 16801);
           if (param3 != -40) {
             this.field_K = (ChessBoardRenderer) null;
           }

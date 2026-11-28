@@ -160,7 +160,7 @@ final class fe extends ResultScenePhase {
           AccountServiceResult.field_e = new am(RawPcmStream.createForPlaybackRate(rn.field_p, 100, 0));
           td.field_e = new am(RawPcmStream.createForPlaybackRate(ti.field_l, 100, 0));
           AwtRasterBuffer.field_a = new am(RawPcmStream.createForPlaybackRate(mg.field_d, 100, 0));
-          dn.field_d = new am(RawPcmStream.createForPlaybackRate(io.field_H, 100, 0));
+          dn.field_d = new am(RawPcmStream.createForPlaybackRate(ValidationStatusWidget.field_H, 100, 0));
           wp.field_b = new am(RawPcmStream.createForPlaybackRate(cf.field_f, 100, 0));
           SoundCache.field_h = new am(RawPcmStream.createForPlaybackRate(lm.field_a, 100, 0));
           pm.field_b = new am(RawPcmStream.createForPlaybackRate(jc.field_a, 100, 0));

@@ -13,11 +13,11 @@ final class AchievementNotification extends IntrusiveNode {
           return;
         }
         try {
-          SpriteGeometry.field_q.e(-3435);
+          SpriteGeometry.field_q.stop(-3435);
           mh.field_d.flushAndMarkDrainCheck();
           LoginPanel.field_R = param0;
           if (LoginPanel.field_R != null) {
-            SpriteGeometry.field_q.a(false, LoginPanel.field_R, 59);
+            SpriteGeometry.field_q.playTrack(false, LoginPanel.field_R, 59);
           }
           int var2_int = 0 % ((-35 - param1) / 36);
         } catch (RuntimeException runtimeException) {

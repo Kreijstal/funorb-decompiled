@@ -193,7 +193,7 @@ final class dk {
           this.field_q = (WidgetRenderer) ((Object) var18);
           var18.field_k = 16777215;
           var4 = new ga();
-          var18.a(param1 + 22255, var4);
+          var18.copyStyleTo(param1 + 22255, var4);
           this.field_n = -1;
           this.field_r = 3;
           this.field_k = 3;
@@ -228,7 +228,7 @@ final class dk {
           discarded$0 = new g(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ph(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ga();
-          var18.a(param1 + 22245, var8);
+          var18.copyStyleTo(param1 + 22245, var8);
           var8.a(0, -27140).a((byte) -57, ResizableModalDialog.a(10066329, 82, 15658734, 7829367)).b(-764, 1118481).b(-1, (byte) -113);
           var8.a(4, -27140).a(true, -1).a((byte) -74, var5);
           this.field_m = (WidgetRenderer) ((Object) var8);

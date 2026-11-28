@@ -204,14 +204,14 @@ final class kg {
                         var18 = -1 + (qk.field_a - var17);
                       }
                       if (var17 >= 0) {
-                        la.a(param6, 2, var18, var17 + var16Lifetime2, param5);
+                        ValidationStatusIcon.a(param6, 2, var18, var17 + var16Lifetime2, param5);
                       } else {
-                        la.a(param6, 2, var17 + var18, var16Lifetime2, param5);
+                        ValidationStatusIcon.a(param6, 2, var17 + var18, var16Lifetime2, param5);
                       }
                     } else {
                       if (var17 >= 0 &&
                         qk.field_a > var17) {
-                        la.a(param6, 2, var18, var16Lifetime2 + var17, param5);
+                        ValidationStatusIcon.a(param6, 2, var18, var16Lifetime2 + var17, param5);
                       }
                     }
                   }
@@ -257,16 +257,16 @@ final class kg {
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     qk.field_a > var16Lifetime1) {
-                    la.a(param6, 2, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param5);
+                    ValidationStatusIcon.a(param6, 2, var17Lifetime1, var16Lifetime1 + var15Lifetime1, param5);
                   }
                 } else {
                   if (qk.field_a <= var17Lifetime1 + var16Lifetime1) {
                     var17Lifetime1 = -1 + qk.field_a - var16Lifetime1;
                   }
                   if (var16Lifetime1 < 0) {
-                    la.a(param6, 2, var17Lifetime1 + var16Lifetime1, var15Lifetime1, param5);
+                    ValidationStatusIcon.a(param6, 2, var17Lifetime1 + var16Lifetime1, var15Lifetime1, param5);
                   } else {
-                    la.a(param6, 2, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param5);
+                    ValidationStatusIcon.a(param6, 2, var17Lifetime1, var15Lifetime1 + var16Lifetime1, param5);
                   }
                 }
               }
@@ -367,7 +367,7 @@ final class kg {
             }
             this.field_o.draw(var7_int, var8);
           }
-          var7 = param1.a(true, param2);
+          var7 = param1.resolveDisplayText(true, param2);
           if (var7 != null &&
             param1.field_b != null &&
             this.field_l >= 0) {

@@ -27,7 +27,7 @@ final class pd {
               } else {
                 param0 = pk.field_b;
               }
-              wi.field_c.b((byte) -79, StandardContentDialog.field_hb);
+              wi.field_c.setAccountAndClearPassword((byte) -79, StandardContentDialog.field_hb);
             }
             if (10 == param1) {
               FullscreenFocusCanvas.a(false);
@@ -47,7 +47,7 @@ final class pd {
                 return;
               }
               if (!ModalDialogHost.field_x) {
-                wi.field_c.a(false);
+                wi.field_c.clearCredentials(false);
                 return;
               }
             }

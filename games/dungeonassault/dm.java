@@ -24,7 +24,7 @@ final class dm {
     final static String a(int param0) {
         String var1 = "";
         if (null != wo.field_e) {
-          var1 = wo.field_e.a(-16);
+          var1 = wo.field_e.getAccountIdentifier(-16);
         }
         if (0 == var1.length()) {
           var1 = Bzip2State.a(-118);

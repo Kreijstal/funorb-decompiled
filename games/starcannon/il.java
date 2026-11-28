@@ -180,7 +180,7 @@ final class il {
             }
             this.field_d.draw(var6_int, var7);
           }
-          var6 = param3.a(param4, false);
+          var6 = param3.resolveDisplayText(param4, false);
           if (param1 < 13) {
             return;
           }

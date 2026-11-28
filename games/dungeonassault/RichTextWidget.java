@@ -48,7 +48,7 @@ class RichTextWidget extends InteractiveWidget {
         this.rebuildHotspotBounds((byte) -109);
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;
@@ -351,7 +351,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setTextBounds(int param0, byte param1, int param2, int param3) {
         this.setBounds(0, param2, param3, param0, ((TextWidgetRenderer) ((Object) this.field_o)).getPreferredHeight((UiWidget) (this), 8));
         if (param1 >= -11) {
           field_M = false;

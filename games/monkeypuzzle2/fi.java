@@ -10,7 +10,7 @@ final class fi {
     final static void b(int param0) {
         wl.e((byte) 102);
         if (ie.field_e != null) {
-          vh.a(ie.field_e, (byte) -118);
+          ValidationStatusIcon.a(ie.field_e, (byte) -118);
         }
         cb.b(true);
         MatchingFieldValidator.c(false);

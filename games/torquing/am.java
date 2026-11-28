@@ -84,7 +84,7 @@ abstract class am extends IntrusiveNode {
             am.clearStaticReferences((byte) 72);
             return;
           }
-          ub.field_E = ub.field_E + ra.field_c;
+          ValidationStatusIcon.field_E = ValidationStatusIcon.field_E + ra.field_c;
           tj.field_l = tj.field_l + ll.field_g;
           if (param0 >= 53) {
             return;

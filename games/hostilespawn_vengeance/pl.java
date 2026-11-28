@@ -78,8 +78,8 @@ final class pl {
           else {
             if (param1.field_n &&
               0 < nl.field_d) {
-              if (al.field_Q < 160) {
-                al.field_Q = al.field_Q + 50;
+              if (ValidationStatusWidget.field_Q < 160) {
+                ValidationStatusWidget.field_Q = ValidationStatusWidget.field_Q + 50;
                 FullscreenStatusDialog.a(3 * uh.field_i / 2, (byte) 69, 41, jc.field_c, 6);
               }
               param1.a(false, 0, 21963, 1, rl.field_c, param1.field_j);
@@ -95,8 +95,8 @@ final class pl {
           boolean decompiledFrameRemainder1 = true;
           if (param1.field_I <= 0 &&
             param1.field_w != 5) {
-            if (al.field_Q < 160) {
-              al.field_Q = al.field_Q + 50;
+            if (ValidationStatusWidget.field_Q < 160) {
+              ValidationStatusWidget.field_Q = ValidationStatusWidget.field_Q + 50;
               FullscreenStatusDialog.a(uh.field_i * 3 / 2, (byte) 41, 41, jc.field_c, 6);
             }
             param1.field_z = 0;

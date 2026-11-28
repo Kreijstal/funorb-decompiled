@@ -159,8 +159,8 @@ final class GameCanvas extends java.awt.Canvas {
                         param3.field_i = 3;
                         if (var8.field_b &&
                           27 != var8.field_i) {
-                          dupTemp$0 = al.field_U[2] + 1;
-                          al.field_U[2] = dupTemp$0;
+                          dupTemp$0 = ValidationStatusWidget.field_U[2] + 1;
+                          ValidationStatusWidget.field_U[2] = dupTemp$0;
                           if (30 == dupTemp$0) {
                             ti.a(248, (byte) -120, 7);
                           }

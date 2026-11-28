@@ -135,7 +135,7 @@ final class kd implements WidgetRenderer {
               var5_ref = FullscreenNoticeType.field_a + MouseInputHandler.field_c.field_h;
             }
             if (jl.field_j == 1) {
-              ob.a(1, 0, sg.field_p, dc.field_a);
+              ValidationStatusWidget.a(1, 0, sg.field_p, dc.field_a);
               var4_int = var4_int + (tj.field_s.field_m - hk.field_a.field_y);
               var5_ref = FullscreenStatusDialog.field_W;
             }
@@ -286,7 +286,7 @@ final class kd implements WidgetRenderer {
             hk.field_a.drawString(ub.timeBonusLabel, 464, 185 + param1, 16711680, -1);
             hk.field_a.drawRightAligned(Integer.toString(wk.field_d), 627, 185 + param1, 16711680, -1);
           }
-          hk.field_a.drawString(ve.field_D, 464, 197 + param1, 16711680, -1);
+          hk.field_a.drawString(ValidationStatusIcon.field_D, 464, 197 + param1, 16711680, -1);
           hk.field_a.drawRightAligned(Integer.toString(eh.totalScore), 627, 197 + param1, 16711680, -1);
           if (WordDictionary.field_e) {
             dk.a(136, ModalDialog.field_B, -28018, 180, param1 + 88, 280);

@@ -6,7 +6,7 @@ abstract class tk {
     static al field_f;
     static PcmSample[] field_c;
     static String[] field_e;
-    static od field_a;
+    static MeshData field_a;
     static String field_d;
     static int field_g;
 
@@ -40,7 +40,7 @@ abstract class tk {
         field_f = null;
         field_e = null;
         if (param0 != 15866) {
-          field_a = (od) null;
+          field_a = (MeshData) null;
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends DualLinkNode implements ec {
+final class ja extends DualLinkNode implements TextureProvider {
     private int[] field_s;
     private int field_q;
     private static cf field_r;
@@ -14,7 +14,7 @@ final class ja extends DualLinkNode implements ec {
         }
     }
 
-    final static ja a(ec param0, int param1) {
+    final static ja a(TextureProvider param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         ja var11 = null;
@@ -25,12 +25,12 @@ final class ja extends DualLinkNode implements ec {
         if (var4 != null) {
           return var4;
         }
-        int[] var13 = param0.a(param1, TriangleRasterizer.field_d);
+        int[] var13 = param0.getTexturePixels(param1, TriangleRasterizer.field_d);
         int[] var12 = var13;
         int[] var5 = var12;
-        int var6 = LitModelMesh.scaleHslLightness(param0.b(param1), 64);
+        int var6 = LitModelMesh.scaleHslLightness(param0.getAverageTextureColor(param1), 64);
         if (var5 != null) {
-          var7 = param0.a(param1) ? 64 : 128;
+          var7 = param0.isTextureSize64(param1) ? 64 : 128;
           var8 = var7 * var7;
           var11 = var7 == 64 ? (ja) (field_t.removeLast((byte) -119)) : (ja) (field_u.removeLast((byte) 122));
           var4 = var11;
@@ -75,19 +75,19 @@ final class ja extends DualLinkNode implements ec {
         return var3;
     }
 
-    public final int c(int param0) {
+    public final int getTextureAlphaMode(int param0) {
         return 0;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isTextureSize64(int param0) {
         return this.field_s.length == 4096;
     }
 
-    public final int[] a(int param0, float param1) {
+    public final int[] getTexturePixels(int param0, float param1) {
         return this.field_s;
     }
 
-    final static ja a(long[] param0, ec param1, int param2) {
+    final static ja a(long[] param0, TextureProvider param1, int param2) {
         int incrementValue$8 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
@@ -120,13 +120,13 @@ final class ja extends DualLinkNode implements ec {
         int var12Lifetime1;
         long var10Lifetime1Lifetime1;
         int var12Lifetime1Lifetime1;
-        var15 = param1.a(param2, TriangleRasterizer.field_d);
+        var15 = param1.getTexturePixels(param2, TriangleRasterizer.field_d);
         var14 = var15;
         var3 = var14;
         if (var3 == null) {
-          return ja.a(param0, param1.b(param2));
+          return ja.a(param0, param1.getAverageTextureColor(param2));
         }
-        stackIn_5_0 = (!param1.a(param2)) ? 128 : 64;
+        stackIn_5_0 = (!param1.isTextureSize64(param2)) ? 128 : 64;
         var4 = stackIn_5_0;
         var5 = var4 * var4;
         if (var4 != 64) {
@@ -136,9 +136,9 @@ final class ja extends DualLinkNode implements ec {
         }
         var6 = (ja) (stackIn_8_0);
         if (var6 != null) {
-          var6.field_q = param1.b(param2);
+          var6.field_q = param1.getAverageTextureColor(param2);
         } else {
-          var6 = new ja(param1.b(param2), new int[var5]);
+          var6 = new ja(param1.getAverageTextureColor(param2), new int[var5]);
         }
         var7 = var6.field_s;
         if (var4 == 64) {
@@ -225,11 +225,11 @@ final class ja extends DualLinkNode implements ec {
         field_u = null;
     }
 
-    public final boolean d(int param0) {
+    public final boolean hasTexture(int param0) {
         return true;
     }
 
-    public final int b(int param0) {
+    public final int getAverageTextureColor(int param0) {
         return this.field_q;
     }
 

@@ -114,7 +114,7 @@ final class rl {
               DropTargetWidgetContainer.field_F = false;
               var3_int = 1;
             }
-            NetworkArchiveRequest.a(cd.h(-1064120735), 2, PcmOutputWorker.field_a, FullscreenStatusDialog.l(50), var3_int != 0);
+            NetworkArchiveRequest.a(ValidationStatusWidget.h(-1064120735), 2, PcmOutputWorker.field_a, FullscreenStatusDialog.l(50), var3_int != 0);
           } else {
             if (gh.b((byte) 105)) {
               if (eg.field_d == 0) {

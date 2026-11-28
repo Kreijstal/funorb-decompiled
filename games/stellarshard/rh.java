@@ -4,7 +4,7 @@
 final class rh {
     static String field_c;
     static Sprite[] field_a;
-    static pa field_b;
+    static MeshData field_b;
 
     public static void a(int param0) {
         field_c = null;
@@ -177,7 +177,7 @@ final class rh {
         RuntimeException var2 = null;
         try {
           if (param1 != -72) {
-            field_b = (pa) null;
+            field_b = (MeshData) null;
           }
           ee.field_a = param0;
           return;

@@ -179,8 +179,8 @@ final class ia {
                 var10 != 0 &&
                 var9.field_b &&
                 var9.field_i != 27) {
-                dupTemp$0 = al.field_U[2] + 1;
-                al.field_U[2] = dupTemp$0;
+                dupTemp$0 = ValidationStatusWidget.field_U[2] + 1;
+                ValidationStatusWidget.field_U[2] = dupTemp$0;
                 if (dupTemp$0 == 30) {
                   ti.a(248, (byte) 43, 7);
                 }

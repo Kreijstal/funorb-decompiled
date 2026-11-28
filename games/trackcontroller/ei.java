@@ -162,7 +162,7 @@ final class ei extends IntrusiveNode {
         }
         PasswordValidator.g(95);
         ij.a(13809);
-        mi.k(10228);
+        ValidationStatusWidget.k(10228);
         if (wf.a(-28510)) {
           LevelView.field_C.writeCipheredByte(1, 7);
           MovingBlock.a(param0 + 18600, 0);

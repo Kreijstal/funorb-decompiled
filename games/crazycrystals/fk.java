@@ -163,7 +163,7 @@ final class fk extends DefaultTextWidgetRenderer {
           if (param1 != 6) {
             return;
           }
-          super.a((byte) 119, param0);
+          super.copyStyleTo((byte) 119, param0);
           if (param2) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {
               var5 = this.field_r[var4_int];

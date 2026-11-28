@@ -40,7 +40,7 @@ final class iia extends BoardChange {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        MeshData var2 = MeshData.a(param1, "", "fridge4");
+        MeshData var2 = MeshData.load(param1, "", "fridge4");
         if (param0 != -167571320) {
           return;
         }

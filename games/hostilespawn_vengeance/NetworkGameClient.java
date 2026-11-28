@@ -370,10 +370,10 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (eb.field_c.b(24)) {
                 var11 = eb.field_c.b((byte) 124);
                 if (var11 == null) {
-                  wj.b((String) null, param1 ^ 10602);
+                  ValidationStatusIcon.b((String) null, param1 ^ 10602);
                 } else {
                   var7 = PasswordValidator.decodeCp1252String(var11.field_n, 0, (byte) -120, var11.field_i);
-                  wj.b(var7, -10603);
+                  ValidationStatusIcon.b(var7, -10603);
                 }
                 eb.field_c = null;
               }
@@ -382,7 +382,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5 = (Exception) (Object) decompiledCaughtException;
               ic.a((byte) -117, "S1", (Throwable) ((Object) var5));
               var9 = (String) null;
-              wj.b((String) null, -10603);
+              ValidationStatusIcon.b((String) null, -10603);
               eb.field_c = null;
             }
           }
@@ -697,7 +697,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             MouseInput.a(-1);
           }
           if (hf.field_c == null) {
-            hf.field_c = wj.e((byte) -98);
+            hf.field_c = ValidationStatusIcon.e((byte) -98);
             GameCanvas.field_b = uj.e(1);
           }
           PcmResampler.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);

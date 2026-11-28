@@ -45,7 +45,7 @@ final class cg {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                la.field_D = param1;
+                ValidationStatusIcon.field_D = param1;
                 var2 = AgeValidator.a((byte) 117, "loginm3");
                 if (var2 != null) {
                   jh.field_t = c.a(param0 ^ -99, var2);
@@ -3031,7 +3031,7 @@ final class cg {
                 if (null != var2) {
                   c.a(0, var2);
                 }
-                la.field_D = null;
+                ValidationStatusIcon.field_D = null;
             }
             void run() {
                 var3 = Bounce.field_N;

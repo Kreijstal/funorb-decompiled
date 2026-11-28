@@ -1884,7 +1884,7 @@ final class LevelEntity {
           if (this.field_L != 0 &&
             this.field_L != 9) {
             SocketConnector.field_f = false;
-            tk.field_P = false;
+            ValidationStatusIcon.field_P = false;
           }
           if (param0 > -50) {
             this.r(96);
@@ -3000,7 +3000,7 @@ final class LevelEntity {
                             5 != this.field_g &&
                             this.field_g != 6) {
                             if (this.field_L != 9 && (this.field_L != 0 ||
-                              !tk.field_P)) {
+                              !ValidationStatusIcon.field_P)) {
                               if (this.field_L != 0 ||
                                 !this.field_j ||
                                 this.field_Q == 0) {
@@ -8684,7 +8684,7 @@ final class LevelEntity {
               return;
             }
             if (var8 >= var7_int) {
-              this.a((Sprite) null, param2, param4, new int[]{var10, var11, var12, tk.field_Q[var17]}, param0, -20861, param3, 2);
+              this.a((Sprite) null, param2, param4, new int[]{var10, var11, var12, ValidationStatusIcon.field_Q[var17]}, param0, -20861, param3, 2);
             }
             var17++;
           }
@@ -9342,7 +9342,7 @@ final class LevelEntity {
                       if (decompiledFrameRemainder1) {
                         ti.field_d = this.field_L;
                         if (9 == this.field_L) {
-                          tk.field_P = true;
+                          ValidationStatusIcon.field_P = true;
                           SocketConnector.field_f = true;
                         }
                         kl.field_a = false;
@@ -10070,18 +10070,18 @@ final class LevelEntity {
           if (DropTargetWidgetContainer.field_F == 17 &&
             ti.field_d == 9 &&
             this.field_j) {
-            tk.field_P = true;
+            ValidationStatusIcon.field_P = true;
           }
-          if (tk.field_P && (!this.field_j ||
+          if (ValidationStatusIcon.field_P && (!this.field_j ||
             0 == this.field_Q ||
             var3 == 0)) {
-            tk.field_P = false;
+            ValidationStatusIcon.field_P = false;
             ti.field_d = 0;
           }
           if (NanoFrameTimer.field_l) {
             NanoFrameTimer.field_l = false;
           }
-          if (tk.field_P) {
+          if (ValidationStatusIcon.field_P) {
             return;
           }
           if (!this.field_ib) {

@@ -105,7 +105,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static String c(int param0) {
         String var1 = "";
         if (null != wi.field_c) {
-          var1 = wi.field_c.j(190);
+          var1 = wi.field_c.getAccountIdentifier(190);
         }
         if (param0 < 93) {
           field_a = (String) null;

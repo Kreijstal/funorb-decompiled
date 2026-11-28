@@ -32,7 +32,7 @@ final class jl extends MeshGeometry {
         if (param3 >= -12) {
           return 109;
         }
-        return this.a(al.a(param0, (byte) -126), al.a(param2, (byte) 120), al.a(param1, (byte) 62));
+        return this.findOrAddVertex(al.a(param0, (byte) -126), al.a(param2, (byte) 120), al.a(param1, (byte) 62));
     }
 
     jl(int param0, boolean param1) {

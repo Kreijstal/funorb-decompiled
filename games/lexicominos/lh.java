@@ -83,7 +83,7 @@ final class lh extends DefaultTextWidgetRenderer {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class lh extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = Lexicominos.field_L ? 1 : 0;
         try {
-          super.a(param1, false);
+          super.copyStyleTo(param1, false);
           if (param0) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_v[var4_int];
@@ -147,7 +147,7 @@ final class lh extends DefaultTextWidgetRenderer {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class lh extends DefaultTextWidgetRenderer {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ final class lh extends DefaultTextWidgetRenderer {
         try {
           param0.a(param1, this, 6);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "lh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -233,7 +233,7 @@ final class lh extends DefaultTextWidgetRenderer {
           }
           int var3_int = 45 / ((param0 + 58) / 39);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "lh.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "lh.CA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class lh extends DefaultTextWidgetRenderer {
           }
           this.field_v[param2].field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "lh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "lh.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -285,7 +285,7 @@ final class lh extends DefaultTextWidgetRenderer {
           BitPacketBuffer.field_s = var2_intLifetime2 << 16 & 65536;
           BitPacketBuffer.field_s = BitPacketBuffer.field_s + param0.readUnsignedShort(-1698573656);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "lh.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "lh.BA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

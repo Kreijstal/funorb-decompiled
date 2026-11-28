@@ -73,7 +73,7 @@ class RichTextWidget extends InteractiveWidget {
           var1_int = 34 % ((38 - param0) / 32);
           if (og.field_d == null) {
             if (ah.field_d != null) {
-              ah.field_d.drawParagraph(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ah.field_d.drawParagraph(ValidationStatusWidget.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -82,7 +82,7 @@ class RichTextWidget extends InteractiveWidget {
           var8Lifetime1 = var7;
           if (var7 == null) {
             if (ah.field_d != null) {
-              ah.field_d.drawParagraph(pa.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ah.field_d.drawParagraph(ValidationStatusWidget.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var7.draw(245, 199);
@@ -229,7 +229,7 @@ class RichTextWidget extends InteractiveWidget {
         return null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         this.setBounds(param0, param3, (byte) 116, ((TextWidgetRenderer) ((Object) this.field_o)).getPreferredHeight(16293784, (UiWidget) (this)), param2);
         if (param1 <= 64) {
           this.field_D = (String[]) null;
@@ -311,7 +311,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         String[] var6 = null;
         String[] var4 = null;
         int var5 = 0;

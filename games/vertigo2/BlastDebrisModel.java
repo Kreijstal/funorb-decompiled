@@ -44,77 +44,77 @@ final class BlastDebrisModel extends LevelRenderable {
         int var10Lifetime15;
         int var10Lifetime16;
         if (param7 < ap.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param7 > ib.field_a) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime1 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param8 < ap.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime2 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (ib.field_a < param8) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime3 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (ap.field_e > param2) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime4 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (ib.field_a < param2) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime5 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param3 < ap.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime6 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param3 > ib.field_a) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime7 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param6 < ua.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime8 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (WidgetContainer.field_D < param6) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime9 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param5 < ua.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime10 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (WidgetContainer.field_D < param5) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime11 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param0 < ua.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime12 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param0 > WidgetContainer.field_D) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime13 = 14 / ((param1 - 11) / 40);
           return;
         }
         if (param4 < ua.field_e) {
-          lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+          ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
           var10Lifetime14 = 14 / ((param1 - 11) / 40);
           return;
         }
@@ -123,7 +123,7 @@ final class BlastDebrisModel extends LevelRenderable {
           var10Lifetime15 = 14 / ((param1 - 11) / 40);
           return;
         }
-        lr.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
+        ValidationStatusIcon.a(param2, param7, (byte) 67, param0, param8, param6, param5, param4, param9, param3);
         var10Lifetime16 = 14 / ((param1 - 11) / 40);
     }
 
@@ -288,7 +288,7 @@ final class BlastDebrisModel extends LevelRenderable {
             var6 = PlayerState.field_q[var7];
           }
           mj.a(this.field_l, this.field_k, 0, 0, this.field_m, (byte) -103, this.field_h);
-          var10 = (fc) (this.field_f.a(false, false, false, var6.b(110, 1560, 10, -10, -5)));
+          var10 = (fc) (this.field_f.a(false, false, false, var6.createModelMesh(110, 1560, 10, -10, -5)));
           if (param0 != -30) {
             return;
           }

@@ -26,7 +26,7 @@ abstract class nk extends GameAppletShell {
         jh.a(14221, DebouncedFieldValidator.field_e);
         sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, DebouncedFieldValidator.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
         ProgressDialog.a(this.field_D, this.field_s, DebouncedFieldValidator.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
-        li.g(false);
+        ValidationStatusWidget.g(false);
         NanoFrameTimer.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
         BitPacketBuffer.field_m = param6;
@@ -453,7 +453,7 @@ abstract class nk extends GameAppletShell {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ abstract class nk extends GameAppletShell {
             this.field_y = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "nk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "nk.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

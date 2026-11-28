@@ -259,16 +259,16 @@ final class InstructionsScreen extends DungeonAssaultScreen {
           var3 = null;
           var4 = null;
           if (this.field_B == 2) {
-            var4 = tn.a((byte) -65, this.getMenuActionLabel(-13, 26));
+            var4 = ValidationStatusWidget.a((byte) -65, this.getMenuActionLabel(-13, 26));
             var3 = sg.field_a;
           } else {
             if (1 != this.field_B) {
               if (this.field_B == 0) {
-                var4 = tn.a((byte) -76, this.getMenuActionLabel(-13, 24));
+                var4 = ValidationStatusWidget.a((byte) -76, this.getMenuActionLabel(-13, 24));
                 var3 = uj.field_b;
               }
             } else {
-              var4 = tn.a((byte) -99, this.getMenuActionLabel(-13, 25));
+              var4 = ValidationStatusWidget.a((byte) -99, this.getMenuActionLabel(-13, 25));
               var3 = an.field_D;
             }
           }

@@ -312,10 +312,10 @@ final class sc {
           return;
         }
         try {
-          s.field_a.a((byte) -114);
+          s.field_a.stop((byte) -114);
           StandardContentDialog.field_sb.flushAndMarkDrainCheck();
           hj.field_g = param2;
-          s.field_a.a(hj.field_g, param1, (byte) 120);
+          s.field_a.playTrack(hj.field_g, param1, (byte) 120);
           if (param0 != -1) {
             sc.a(-73, -118);
           }

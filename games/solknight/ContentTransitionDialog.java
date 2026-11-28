@@ -132,7 +132,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             field_T = -28;
           }
           this.field_S = param1;
-          if (kc.field_I == this.field_U) {
+          if (ValidationStatusIcon.field_I == this.field_U) {
             this.resizeDialog(this.field_S.field_x + 12 + this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
             this.field_bb = 0;
             return;
@@ -202,7 +202,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             this.field_V.field_H = -((this.field_bb << 8) / this.field_ab) + 256;
             return super.advanceDialogAnimation(param0 + 0);
           }
-          this.field_U = kc.field_I;
+          this.field_U = ValidationStatusIcon.field_I;
           this.resizeDialog(this.field_S.field_x + 12 + this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
           this.field_bb = 0;
           this.field_V.field_H = 0;
@@ -231,7 +231,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           this.field_V.field_H = -((this.field_bb << 8) / this.field_ab) + 256;
           return super.advanceDialogAnimation(param0 + 0);
         }
-        this.field_U = kc.field_I;
+        this.field_U = ValidationStatusIcon.field_I;
         this.resizeDialog(this.field_S.field_x + 12 + this.field_eb, 0, this.field_W, this.field_S.field_t + 12);
         this.field_bb = 0;
         this.field_V.field_H = 0;

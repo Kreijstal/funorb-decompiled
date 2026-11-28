@@ -39,7 +39,7 @@ final class SecondaryNodeDeque implements Iterable {
           var3 = param1.f(param0 - 4, param0);
           var4 = new ed[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (vg.a(100, param1)) {
+            if (ValidationStatusWidget.a(100, param1)) {
               var6 = new ed();
               param1.f(8, 24);
               param1.f(8, 24);

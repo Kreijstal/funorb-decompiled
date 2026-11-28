@@ -152,7 +152,7 @@ final class ha {
               }
             }
             if (ra.field_b == vg.field_a &&
-              gl.a(false)) {
+              ValidationStatusIcon.a(false)) {
               cd.field_a = EmailFormatValidator.field_j.readLong(true);
               NanoFrameTimer.field_f = EmailFormatValidator.field_j.readUnsignedByte(-109);
               EmailFormatValidator.field_j.readUnsignedByte(-103);
@@ -224,7 +224,7 @@ final class ha {
               return stackIn_73_0;
             }
             if (field_a == ra.field_b &&
-              gl.a(false)) {
+              ValidationStatusIcon.a(false)) {
               mc.a((byte) -125);
               if (7 == pd.field_l &&
                 !UiWidget.field_w) {

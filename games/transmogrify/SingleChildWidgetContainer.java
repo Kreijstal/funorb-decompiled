@@ -331,7 +331,7 @@ abstract class SingleChildWidgetContainer extends UiWidget implements WidgetCont
             var5_int = 55 % ((65 - param2) / 55);
             return false;
           }
-          if (!ve.field_B[81]) {
+          if (!ValidationStatusIcon.field_B[81]) {
             stackIn_10_0 = this.focusNextChild(param1, (byte) -128);
           } else {
             stackIn_10_0 = this.focusPreviousChild(param1, 32);

@@ -84,7 +84,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final int a(String param0, int param1, byte param2, int param3) {
+    final int computeJustificationStep(String param0, int param1, byte param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

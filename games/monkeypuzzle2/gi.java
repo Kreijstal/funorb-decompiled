@@ -71,8 +71,8 @@ final class gi {
             stackIn_5_0 = (sj) null;
             return stackIn_5_0;
           }
-          var3 = vg.a(89, param1) ? 1 : 0;
-          var4 = vg.a(91, param1) ? 1 : 0;
+          var3 = ValidationStatusWidget.a(89, param1) ? 1 : 0;
+          var4 = ValidationStatusWidget.a(91, param1) ? 1 : 0;
           var5 = new sj();
           var5.field_e = (short)param1.f(8, 16);
           var5.field_O = ResizableModalDialog.a(false, param1, 16, var5.field_O);
@@ -99,10 +99,10 @@ final class gi {
             var5.field_I = ResizableModalDialog.a(false, param1, 16, var5.field_I);
             var5.field_l = ResizableModalDialog.a(false, param1, 16, var5.field_l);
           }
-          if (vg.a(74, param1)) {
+          if (ValidationStatusWidget.a(74, param1)) {
             var5.field_c = ResizableModalDialog.a(false, param1, 16, var5.field_c);
           }
-          if (vg.a(75, param1)) {
+          if (ValidationStatusWidget.a(75, param1)) {
             var5.field_N = kk.a(16, param1, var5.field_N, (byte) 99);
             var6 = 0;
             for (var7 = 0; var5.field_N.length > var7; var7++) {

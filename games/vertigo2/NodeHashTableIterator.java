@@ -240,7 +240,7 @@ final class NodeHashTableIterator implements Iterator {
         }
         discarded$0 = SpriteState.field_D.append((char) var4);
         var5Lifetime1 = 485;
-        var17 = qe.field_V;
+        var17 = ValidationStatusWidget.field_V;
         var16 = jk.a(15709, var17);
         var19 = var16;
         if (ui.field_g != 2) {

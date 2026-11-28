@@ -43,7 +43,7 @@ final class IntrusiveDeque {
               return;
             }
             if (PlatformTaskDispatcher.field_m.startsWith("win") &&
-              gl.a(param2, 873140897)) {
+              ValidationStatusIcon.a(param2, 873140897)) {
               return;
             }
             try {

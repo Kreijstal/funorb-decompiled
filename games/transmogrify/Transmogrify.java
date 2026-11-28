@@ -795,7 +795,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (be.field_n != null) {
             for (var3_intLifetime1 = 0; 10 > var3_intLifetime1; var3_intLifetime1++) {
               if (bd.field_u[var3_intLifetime1] != null &&
-                !GuestPlayConfirmationForm.field_D.a(176400, false, rc.field_a, bd.field_u[var3_intLifetime1], be.field_n)) {
+                !GuestPlayConfirmationForm.field_D.prepareTrackSamples(176400, false, rc.field_a, bd.field_u[var3_intLifetime1], be.field_n)) {
                 return false;
               }
             }
@@ -1015,7 +1015,7 @@ public final class Transmogrify extends SessionGameApplet {
           var17.destinationX = 1000;
           var8 = var17;
           var8.x = 1000;
-          ob.a(1, 1, var17, 0);
+          ValidationStatusWidget.a(1, 1, var17, 0);
           TextLayout.field_c[1].field_h = var6.field_c.field_D + 8;
           var17.d(1);
           dupTemp$1 = NodeHashTableIterator.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
@@ -1026,7 +1026,7 @@ public final class Transmogrify extends SessionGameApplet {
           var9 = var7;
           var9.x = 1000;
           var7.doublesWordScore = true;
-          ob.a(1, 2, var18, 0);
+          ValidationStatusWidget.a(1, 2, var18, 0);
           oi.field_g = null;
           l.field_a = null;
           TextLayout.field_c[2].field_h = 8 + var6.field_c.field_D;
@@ -1047,7 +1047,7 @@ public final class Transmogrify extends SessionGameApplet {
           return;
         }
         try {
-          var2.b(128, 9, -23780);
+          var2.setChannelProgram(128, 9, -23780);
           uh.a((java.awt.Component) ((Object) AchievementNotice.field_k), 22050, -21, lk.field_b, var2, true);
           uc.a(128, (byte) -119);
           u.field_b = 4473924;
@@ -1302,8 +1302,8 @@ public final class Transmogrify extends SessionGameApplet {
           StripedProgressWidget.clearStaticReferences(-156630320);
           NameSuggestionsPanel.clearStaticReferences(-1);
           RichTextWidget.clearStaticReferences(param0 - 4);
-          ve.clearStaticReferences((byte) -108);
-          ob.clearDeclaredStaticReferences(-128);
+          ValidationStatusIcon.clearStaticReferences((byte) -108);
+          ValidationStatusWidget.clearDeclaredStaticReferences(-128);
           bf.clearStaticReferences((byte) 16);
           TextFieldValidator.clearStaticReferences((byte) 122);
           v.a(17320);

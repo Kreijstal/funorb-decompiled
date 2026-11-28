@@ -237,7 +237,7 @@ final class hc {
           this.field_r = (WidgetRenderer) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new tc();
-          var17.a(var4, (byte) -34);
+          var17.copyStyleTo(var4, (byte) -34);
           this.field_n = 15658734;
           this.field_c = 3;
           this.field_p = 5592405;
@@ -272,7 +272,7 @@ final class hc {
           discarded$0 = new hh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new df(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new tc();
-          var17.a(var8, (byte) -34);
+          var17.copyStyleTo(var8, (byte) -34);
           var8.a((byte) -104, 0).a((byte) 108, cj.a(10066329, 7829367, 15658734, -17768)).a(-1, 1118481).a(false, -1);
           var8.a((byte) 115, 4).a((byte) 124, true).a((byte) 110, var5);
           this.field_d = (WidgetRenderer) ((Object) var8);

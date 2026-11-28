@@ -137,7 +137,7 @@ final class ki extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = Transmogrify.field_A ? 1 : 0;
         try {
-          super.a((byte) -106, param1);
+          super.copyStyleTo((byte) -106, param1);
           if (param2) {
             return;
           }

@@ -218,7 +218,7 @@ final class dk {
           var17.field_f = 16777215;
           this.field_a = (WidgetRenderer) ((Object) var17);
           var4 = new ak();
-          var17.a(false, var4);
+          var17.copyStyleTo(false, var4);
           this.field_m = param0;
           this.field_s = 5592405;
           this.field_p = 3;
@@ -253,7 +253,7 @@ final class dk {
           discarded$0 = new db(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new mc(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ak();
-          var17.a(param1, var8);
+          var17.copyStyleTo(param1, var8);
           var8.a((byte) -102, 0).a(-20433, vl.a(7829367, 10066329, 15658734, true)).a(1118481, (byte) -3).a(true, -1);
           var8.a((byte) -102, 4).a((byte) -48, true).a(-20433, var5);
           this.field_o = (WidgetRenderer) ((Object) var8);

@@ -158,9 +158,9 @@ final class qb {
               var19[0][4 * var10] = a.field_c[var11];
               var19[0][var10 * 4 + 1] = oa.field_a[var11];
               var19[0][2 + var10 * 4] = oa.field_c[var11];
-              var19[0][3 + 4 * var10] = dd.field_L[var11];
+              var19[0][3 + 4 * var10] = ValidationStatusIcon.field_L[var11];
               if (me.a(122, GameApplet.field_k[var11]) &&
-                dd.field_L[var11] + oa.field_a[var11] + oa.field_c[var11] == 0) {
+                ValidationStatusIcon.field_L[var11] + oa.field_a[var11] + oa.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -176,9 +176,9 @@ final class qb {
               var19[1][4 * var14] = a.field_c[var11Lifetime1];
               var19[1][1 + var14 * 4] = oa.field_a[var11Lifetime1];
               var19[1][2 + var14 * 4] = oa.field_c[var11Lifetime1];
-              var19[1][3 + var14 * 4] = dd.field_L[var11Lifetime1];
+              var19[1][3 + var14 * 4] = ValidationStatusIcon.field_L[var11Lifetime1];
               if (me.a(-88, GameApplet.field_k[var11Lifetime1]) &&
-                0 == oa.field_c[var11Lifetime1] + (oa.field_a[var11Lifetime1] + dd.field_L[var11Lifetime1])) {
+                0 == oa.field_c[var11Lifetime1] + (oa.field_a[var11Lifetime1] + ValidationStatusIcon.field_L[var11Lifetime1])) {
                 var6[1][var14] = null;
                 var14--;
               }

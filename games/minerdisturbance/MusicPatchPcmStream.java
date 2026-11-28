@@ -63,7 +63,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_14_0 = this.field_u;
                 stackIn_14_1 = 255;
                 stackIn_15_2 = !(0 <= param3.field_I.field_t[param3.field_F]);
-                ((MidiPcmStream) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, param3);
+                ((MidiPcmStream) (Object) stackIn_14_0).applySampleOffset(stackIn_14_1, stackIn_15_2, param3);
                 param3.field_w.rampVolume(var9, var11.getTargetVolume());
               }
               if (param3.field_I.field_t[param3.field_F] < 0) {
@@ -153,7 +153,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 stackIn_6_0 = this.field_u;
                 stackIn_6_1 = 255;
                 stackIn_7_2 = !(param2.field_I.field_t[param2.field_F] >= 0);
-                ((MidiPcmStream) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_7_2, param2);
+                ((MidiPcmStream) (Object) stackIn_6_0).applySampleOffset(stackIn_6_1, stackIn_7_2, param2);
               }
               if (param2.field_I.field_t[param2.field_F] < 0) {
                 param2.field_w.setLoopCount(-1);

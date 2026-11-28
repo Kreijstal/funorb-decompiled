@@ -214,7 +214,7 @@ final class TextHotspotBounds extends IntrusiveNode {
               var2 = gf.field_c;
               synchronized (var2) {
                 gf.field_c.flushAndMarkDrainCheck();
-                fq.field_x.a(88, var1, true);
+                fq.field_x.playTrack(88, var1, true);
               }
               SingleChildWidgetContainer.field_x = null;
             }

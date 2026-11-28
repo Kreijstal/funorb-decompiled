@@ -232,7 +232,7 @@ final class rb extends ii {
     }
 
     final static void h(int param0) {
-        vh.a(AwtRasterBuffer.field_f, (byte) -125);
+        ValidationStatusIcon.a(AwtRasterBuffer.field_f, (byte) -125);
         if (param0 != 3591) {
           field_eb = -116;
         }

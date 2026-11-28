@@ -27,7 +27,7 @@ final class sc {
               } else {
                 param2 = DropTargetWidgetContainer.field_C;
               }
-              eb.field_b.a(3, AwtRasterBuffer.field_d);
+              eb.field_b.setAccountAndClearPassword(3, AwtRasterBuffer.field_d);
             }
             if (param0 == 10) {
               var4 = 0;
@@ -49,11 +49,11 @@ final class sc {
               if (DualLinkNode.field_k) {
                 return;
               }
-              eb.field_b.d((byte) -100);
+              eb.field_b.clearCredentials((byte) -100);
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "sc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "sc.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -72,11 +72,11 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           var4 = new DefaultTextWidgetRenderer(ModalDialogHost.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, ModalDialogHost.field_C.field_s, -1, 2147483647, true);
           this.field_D = new RichTextWidget(var7, var4);
           this.field_D.field_n = "";
-          this.field_D.a(ni.field_b, (byte) 126, 0);
-          this.field_D.a(ni.field_b, (byte) 98, 1);
+          this.field_D.setHotspotTooltip(ni.field_b, (byte) 126, 0);
+          this.field_D.setHotspotTooltip(ni.field_b, (byte) 98, 1);
           this.field_D.field_k = (WidgetEventListener) (this);
           this.field_D.field_h = -40 + this.field_h;
-          this.field_D.b(96, -40 + this.field_h, 26, var3);
+          this.field_D.setTextBounds(96, -40 + this.field_h, 26, var3);
           var3 = var3 + (15 + this.field_D.field_q);
           this.addChild(this.field_D, (byte) 118);
           var5 = 4;

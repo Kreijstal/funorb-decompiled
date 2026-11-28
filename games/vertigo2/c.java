@@ -300,7 +300,7 @@ class c extends v {
           var4 = var15.readUnsignedByte(-11);
           if (var4 != 0) {
             var5 = var3.field_n;
-            Vertigo2.field_I[0] = qe.field_V;
+            Vertigo2.field_I[0] = ValidationStatusWidget.field_V;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               Vertigo2.field_I[var6_int] = var13.readString(128);
             }

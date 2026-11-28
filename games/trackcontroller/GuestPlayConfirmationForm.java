@@ -2053,7 +2053,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Bu
                 }
                 var2 = TextLineMetrics.a(0, "fullscreen");
                 if (null != var2) {
-                  ua.field_K = ta.a(32200, var2);
+                  ValidationStatusIcon.field_K = ta.a(32200, var2);
                 }
                 var2 = TextLineMetrics.a(0, "screensize");
                 if (null != var2) {

@@ -128,7 +128,7 @@ final class na {
           var17.field_j = 16777215;
           this.field_h = (WidgetRenderer) ((Object) var17);
           var4 = new ha();
-          var17.a(-33, var4);
+          var17.copyStyleTo(-33, var4);
           this.field_o = -1;
           this.field_a = 5592405;
           this.field_r = 3;
@@ -163,7 +163,7 @@ final class na {
           discarded$0 = new ra(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ha();
-          var17.a(-80, var8);
+          var17.copyStyleTo(-80, var8);
           var8.a(0, true).a(false, TextLineMetrics.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
           var8.a(4, true).a((byte) -52, true).a(false, var5);
           this.field_j = (WidgetRenderer) ((Object) var8);

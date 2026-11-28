@@ -455,8 +455,8 @@ final class fk extends kl {
         try {
           this.field_t = param1;
           this.field_w = param0;
-          this.field_p = tn.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, MatchingFieldValidator.field_r.toUpperCase());
-          this.field_o = tn.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), IntrusiveNode.field_c, jm.field_i, -73, lk.field_P);
+          this.field_p = ValidationStatusWidget.a(140, -20 + (-jm.field_i.field_v + this.field_j) + this.field_i, IntrusiveNode.field_c, jm.field_i, -112, MatchingFieldValidator.field_r.toUpperCase());
+          this.field_o = ValidationStatusWidget.a(-jm.field_i.field_y + 500, -jm.field_i.field_v + this.field_j + (this.field_i - 20), IntrusiveNode.field_c, jm.field_i, -73, lk.field_P);
           this.field_f.addFirst(this.field_p, false);
           this.field_f.addFirst(this.field_o, false);
           this.a((PlayerDungeonProfile) null, 83);

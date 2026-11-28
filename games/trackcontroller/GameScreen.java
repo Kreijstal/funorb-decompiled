@@ -343,8 +343,8 @@ final class GameScreen {
                       var3_ref_String__[var7] == IntrusiveDequeCursor.field_a &&
                       null != ProgressDialog.field_bb &&
                       ~ProgressDialog.field_bb.field_j == ~SpriteState.field_w.field_q[TextFieldValidator.field_i][var7] &&
-                      ua.field_L != null &&
-                      var17[var7] == ua.field_L.score) {
+                      ValidationStatusIcon.field_L != null &&
+                      var17[var7] == ValidationStatusIcon.field_L.score) {
                       var4 = var7;
                     }
                     var9 = var3_ref_String__[var7];
@@ -352,8 +352,8 @@ final class GameScreen {
                 } else {
                   decompiledFrameRemainder0 = !(0 <= var4);
                   if ((decompiledFrameRemainder0) &&
-                    (decompiledFrameRemainder0 = (null != ua.field_L))) {
-                    var8 = ua.field_L.score;
+                    (decompiledFrameRemainder0 = (null != ValidationStatusIcon.field_L))) {
+                    var8 = ValidationStatusIcon.field_L.score;
                     var4 = var7;
                     var9 = IntrusiveDequeCursor.field_a;
                   }
@@ -772,7 +772,7 @@ final class GameScreen {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                         SpriteState.field_w = null;
                         ProgressDialog.field_bb = null;
-                        ua.field_L = new ActiveLevel();
+                        ValidationStatusIcon.field_L = new ActiveLevel();
                         sc.field_g = -1;
                         oe.field_e = 0;
                       }
@@ -1113,7 +1113,7 @@ final class GameScreen {
         }
         if (this.field_c == 12 ||
           13 == this.field_c) {
-          ua.field_L.a(false);
+          ValidationStatusIcon.field_L.a(false);
         }
         var2 = this.e((byte) 59);
         var3 = mf.field_h[this.field_c];
@@ -1231,19 +1231,19 @@ final class GameScreen {
                   DisplayNameSelectionPanel.font.drawCentred(qg.field_b, 320, DisplayNameSelectionPanel.font.field_G + 154, 5, -1);
                   stackIn_99_0 = DisplayNameSelectionPanel.font;
                   stackIn_100_1 = (0 != oe.field_e);
-                  stackIn_103_2 = (0 != ua.field_L.score);
-                  stackIn_106_3 = (0 != ua.field_L.score);
+                  stackIn_103_2 = (0 != ValidationStatusIcon.field_L.score);
+                  stackIn_106_3 = (0 != ValidationStatusIcon.field_L.score);
                   ((BitmapFont) (Object) stackIn_99_0).drawCentred(vj.a(stackIn_100_1, stackIn_103_2, stackIn_106_3, 118), 320, 180 + DisplayNameSelectionPanel.font.field_G, 5, -1);
                   stackIn_108_0 = DisplayNameSelectionPanel.font;
-                  stackIn_109_1 = (0 != ua.field_L.score);
+                  stackIn_109_1 = (0 != ValidationStatusIcon.field_L.score);
                   stackIn_112_2 = (oe.field_e != 0);
-                  stackIn_115_3 = (ua.field_L.score != 0);
+                  stackIn_115_3 = (ValidationStatusIcon.field_L.score != 0);
                   ((BitmapFont) (Object) stackIn_108_0).drawCentred(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, DisplayNameSelectionPanel.font.field_G + 258, 5, -1);
                   stackIn_117_0 = DisplayNameSelectionPanel.font;
-                  stackIn_118_1 = (ua.field_L.score != 0);
+                  stackIn_118_1 = (ValidationStatusIcon.field_L.score != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
-                  stackIn_124_4 = (ua.field_L.score != 0);
+                  stackIn_124_4 = (ValidationStatusIcon.field_L.score != 0);
                   ((BitmapFont) (Object) stackIn_117_0).drawCentred(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, DisplayNameSelectionPanel.font.field_G + 310, 5, -1);
                   break scanLoop1;
                 }
@@ -1331,7 +1331,7 @@ final class GameScreen {
               si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
               ProgressDialog.field_bb = null;
               SpriteState.field_w = null;
-              ua.field_L = new ActiveLevel();
+              ValidationStatusIcon.field_L = new ActiveLevel();
               oe.field_e = 0;
               sc.field_g = -1;
             }
@@ -1470,7 +1470,7 @@ final class GameScreen {
                                                           if (var6 == 5) {
                                                             if (!(!this.field_e.b(false))) {
                                                               si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                                                              ua.field_L.c(3, 117);
+                                                              ValidationStatusIcon.field_L.c(3, 117);
                                                             }
                                                             decompiledFrameRemainder0 = false;
                                                           }
@@ -1479,7 +1479,7 @@ final class GameScreen {
                                                               if (this.field_e.b(false)) {
                                                                 si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                                                                 if (ProgressMessageDialog.s(49)) {
-                                                                  if ((ua.field_L.score | oe.field_e) == 0) {
+                                                                  if ((ValidationStatusIcon.field_L.score | oe.field_e) == 0) {
                                                                     sc.field_g = 0;
                                                                   } else {
                                                                     sc.field_g = 15;
@@ -1490,7 +1490,7 @@ final class GameScreen {
                                                                   if (oe.field_e != 0) {
                                                                     sc.field_g = 16;
                                                                   } else {
-                                                                    if (ua.field_L.score == 0) {
+                                                                    if (ValidationStatusIcon.field_L.score == 0) {
                                                                       sc.field_g = 1;
                                                                     } else {
                                                                       sc.field_g = 11;

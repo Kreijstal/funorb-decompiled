@@ -39,7 +39,7 @@ final class ub {
           if (ej.field_q == this) {
             return true;
           }
-          if (this != wj.field_N) {
+          if (this != ValidationStatusIcon.field_N) {
             return this == MouseInput.field_d ? true : false;
           }
           return true;
@@ -47,7 +47,7 @@ final class ub {
         if (ej.field_q == this) {
           return true;
         }
-        if (this == wj.field_N) {
+        if (this == ValidationStatusIcon.field_N) {
           return true;
         }
         if (this != MouseInput.field_d) {

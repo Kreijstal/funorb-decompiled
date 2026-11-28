@@ -78,7 +78,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           try {
             LabeledWidgetContainer.field_N = new BitPacketBuffer(param7);
             nj.field_p = new BitPacketBuffer(param4);
-            ci.field_W = param13;
+            ValidationStatusWidget.field_W = param13;
             TextFieldValidator.field_o = param3;
             ArchiveRequest.field_v = param1;
             FullscreenNoticeType.field_c = param10;

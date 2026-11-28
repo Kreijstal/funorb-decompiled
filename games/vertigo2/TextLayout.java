@@ -177,32 +177,32 @@ abstract class TextLayout {
         mb.field_q[3] = po.field_d.toLowerCase();
         mb.field_q[13] = DiskCacheWorker.field_i.toLowerCase();
         mb.field_q[15] = ByteStorage.field_e.toLowerCase();
-        mb.field_q[14] = lr.field_I.toLowerCase();
+        mb.field_q[14] = ValidationStatusIcon.field_I.toLowerCase();
         mb.field_q[19] = ek.field_C.toLowerCase();
         mb.field_q[21] = nb.field_E.toLowerCase();
         td.field_l = new String[11];
         td.field_l[9] = FullscreenStatusDialog.field_ab;
-        td.field_l[6] = lr.field_I;
+        td.field_l[6] = ValidationStatusIcon.field_I;
         td.field_l[0] = SecondaryNodeDeque.field_c;
         td.field_l[8] = DialogMessagePane.field_G;
         td.field_l[4] = ri.field_z;
         td.field_l[10] = rp.field_d;
-        qe.field_U = new String[10];
+        ValidationStatusWidget.field_U = new String[10];
         td.field_l[2] = or.field_l;
         td.field_l[1] = wp.field_e;
         td.field_l[5] = MenuSelectionCursor.field_e;
         td.field_l[3] = ua.field_d;
         td.field_l[7] = pe.field_t;
-        qe.field_U[0] = gg.field_s;
-        qe.field_U[5] = kf.field_a;
-        qe.field_U[7] = b.field_b;
-        qe.field_U[8] = pb.field_d;
-        qe.field_U[2] = jb.field_L;
-        qe.field_U[4] = GameApplet.field_c;
-        qe.field_U[1] = an.field_e;
-        qe.field_U[6] = b.field_a;
-        qe.field_U[3] = le.field_e;
-        qe.field_U[9] = to.field_d;
+        ValidationStatusWidget.field_U[0] = gg.field_s;
+        ValidationStatusWidget.field_U[5] = kf.field_a;
+        ValidationStatusWidget.field_U[7] = b.field_b;
+        ValidationStatusWidget.field_U[8] = pb.field_d;
+        ValidationStatusWidget.field_U[2] = jb.field_L;
+        ValidationStatusWidget.field_U[4] = GameApplet.field_c;
+        ValidationStatusWidget.field_U[1] = an.field_e;
+        ValidationStatusWidget.field_U[6] = b.field_a;
+        ValidationStatusWidget.field_U[3] = le.field_e;
+        ValidationStatusWidget.field_U[9] = to.field_d;
     }
 
     final int getLineIndexForTextOffset(int param0, int param1) {
@@ -211,7 +211,7 @@ abstract class TextLayout {
         int var3 = 0;
         if (param1 != 22413) {
           String var6 = (String) null;
-          this.a((String) null, false, -10, -11);
+          this.computeJustificationStep((String) null, false, -10, -11);
         }
         while (var3 < this.field_c.length) {
           var4 = this.field_c[var3];
@@ -224,7 +224,7 @@ abstract class TextLayout {
         return this.field_c.length;
     }
 
-    final int a(String param0, boolean param1, int param2, int param3) {
+    final int computeJustificationStep(String param0, boolean param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

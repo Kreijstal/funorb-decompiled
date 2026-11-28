@@ -20,7 +20,7 @@ final class hh extends IntrusiveNode {
         if (param0 == 23) {
           var1 = "";
           if (null != i.field_a) {
-            var1 = i.field_a.d((byte) -99);
+            var1 = i.field_a.getAccountIdentifier((byte) -99);
           }
           if (var1.length() == 0) {
             var1 = sg.b(param0 + 91);
@@ -33,7 +33,7 @@ final class hh extends IntrusiveNode {
         field_g = (AccountRequestState) null;
         var1Lifetime1 = "";
         if (null != i.field_a) {
-          var1Lifetime1 = i.field_a.d((byte) -99);
+          var1Lifetime1 = i.field_a.getAccountIdentifier((byte) -99);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = sg.b(param0 + 91);

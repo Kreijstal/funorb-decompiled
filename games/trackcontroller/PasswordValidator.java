@@ -37,7 +37,7 @@ final class PasswordValidator extends TextFieldValidator {
             var5 = (String) null;
             this.getValidationStatus(-122, (String) null);
           }
-          if (!this.b(param1, 84)) {
+          if (!this.containsEmailComponent(param1, 84)) {
             stackIn_12_0 = TrackController.field_G;
             return stackIn_12_0;
           }
@@ -132,7 +132,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean containsEmailComponent(String param0, int param1) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -260,7 +260,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_14_0 = mj.field_a;
             return stackIn_14_0;
           }
-          if (this.b(param0, 35)) {
+          if (this.containsEmailComponent(param0, 35)) {
             stackIn_17_0 = MouseWheelInput.field_a;
             return stackIn_17_0;
           }

@@ -47,7 +47,7 @@ final class se extends TextureOperator {
 
     final static void a(String param0, int param1) {
         try {
-          lr.field_S = param0;
+          ValidationStatusIcon.field_S = param0;
           DialogMessagePane.b(param1 - 26, param1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "se.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

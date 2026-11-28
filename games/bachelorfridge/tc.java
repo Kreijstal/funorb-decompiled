@@ -309,7 +309,7 @@ final class tc {
           if (param3 >= -17) {
             this.field_a = 54;
           }
-          var6 = param1.c(param2, 1);
+          var6 = param1.resolveDisplayText(param2, 1);
           if (var6 != null &&
             null != param1.field_l) {
             if (this.field_h < 0) {

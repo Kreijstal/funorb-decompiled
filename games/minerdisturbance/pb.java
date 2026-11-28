@@ -64,7 +64,7 @@ final class pb {
     final static int b(boolean param0) {
         if (!fh.field_d &&
           CipherPacketBuffer.field_w <= hk.field_e &&
-          qn.field_K + CipherPacketBuffer.field_w > hk.field_e) {
+          ValidationStatusIcon.field_K + CipherPacketBuffer.field_w > hk.field_e) {
           return DropTargetWidgetContainer.field_K;
         }
         if (param0) {

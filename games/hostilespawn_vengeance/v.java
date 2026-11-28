@@ -279,7 +279,7 @@ final class v {
         this.field_e = false;
         this.field_c = 16776960;
         this.field_b = 15;
-        this.field_i = (BitmapFont) ((Object) al.field_Z);
+        this.field_i = (BitmapFont) ((Object) ValidationStatusWidget.field_Z);
         this.field_a = 0;
         try {
           this.field_m = param3;

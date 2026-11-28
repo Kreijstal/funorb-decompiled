@@ -247,9 +247,9 @@ final class bg extends DungeonAssaultScreen {
 
     private final void a(byte param0) {
         this.resetScreenWidgets();
-        le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, TextLayout.field_d);
-        wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, GuestPlayConfirmationForm.field_Y);
-        ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
+        le.field_g = ValidationStatusWidget.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, TextLayout.field_d);
+        wf.field_w = ValidationStatusWidget.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, GuestPlayConfirmationForm.field_Y);
+        ic.field_y = ValidationStatusWidget.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
         wf.field_w.field_w = false;
         ic.field_y.field_w = !ed.c(true) ? true : false;
         int var2 = ao.field_o - 10;

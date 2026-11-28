@@ -108,7 +108,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             var3 = var1.readString(37);
             ConfirmedEmailAvailabilityValidator.field_r = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            pk.a((byte) -48, var4);
+            ValidationStatusWidget.a((byte) -48, var4);
             return;
           }
           if (ok.field_a == null) {

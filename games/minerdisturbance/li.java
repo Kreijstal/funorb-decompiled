@@ -1804,7 +1804,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 ^ 9287, "waitingfor_music");
                 if (null != var2) {
-                  w.field_X = FullscreenStatusDialog.a(var2, -119);
+                  ValidationStatusWidget.field_X = FullscreenStatusDialog.a(var2, -119);
                 }
                 var2 = PasswordValidator.a(-117, "waitingfor_instruments");
                 if (null != var2) {

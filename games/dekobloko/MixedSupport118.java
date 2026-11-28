@@ -87,7 +87,7 @@ final class MixedSupport118 {
             }
             this.rgbSpriteState0057.draw(integerLocal18, integerLocal21);
           }
-          stringLocal19 = mixedSupport009Argument4.computeString0020(uiComponentArgument2, (byte) -116);
+          stringLocal19 = mixedSupport009Argument4.resolveDisplayText(uiComponentArgument2, (byte) -116);
           if (stringLocal19 != null &&
             mixedSupport009Argument4.bitmapFontState0001 != null &&
             this.integerState0761 >= 0) {

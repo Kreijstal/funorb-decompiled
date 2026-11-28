@@ -6,7 +6,7 @@ final class TriangleRasterizer {
     static int[] field_n;
     static float field_d;
     static int field_b;
-    static ec field_c;
+    static TextureProvider field_c;
     static int field_p;
     static int field_g;
     static int[] field_a;
@@ -20,7 +20,7 @@ final class TriangleRasterizer {
     static int[] field_l;
     private static boolean field_i;
 
-    final static void setTextureProvider(ec param0) {
+    final static void setTextureProvider(TextureProvider param0) {
         field_c = param0;
     }
 
@@ -782,13 +782,13 @@ final class TriangleRasterizer {
         int var41Lifetime3;
         int var41Lifetime4;
         int var41Lifetime1Lifetime1;
-        var43 = field_c.a(param18, field_d);
+        var43 = field_c.getTexturePixels(param18, field_d);
         var42 = var43;
         var19 = var42;
         if (var19 != null &&
           field_h <= 10) {
-          field_j = field_c.a(param18);
-          stackIn_6_0 = (field_c.c(param18) == 0);
+          field_j = field_c.isTextureSize64(param18);
+          stackIn_6_0 = (field_c.getTextureAlphaMode(param18) == 0);
           field_i = stackIn_6_0;
           var20 = param4 - param3;
           var21 = param1 - param0;
@@ -1369,7 +1369,7 @@ final class TriangleRasterizer {
           }
           return;
         }
-        var20Lifetime1 = field_c.b(param18);
+        var20Lifetime1 = field_c.getAverageTextureColor(param18);
         TriangleRasterizer.drawShadedTriangle(param0, param1, param2, param3, param4, param5, TriangleRasterizer.modulateHslLightness(var20Lifetime1, param6), TriangleRasterizer.modulateHslLightness(var20Lifetime1, param7), TriangleRasterizer.modulateHslLightness(var20Lifetime1, param8));
     }
 

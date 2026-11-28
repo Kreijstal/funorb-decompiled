@@ -93,11 +93,11 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
           var4 = new DefaultTextWidgetRenderer(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
           this.field_E = new RichTextWidget(var7, var4);
           this.field_E.field_z = "";
-          this.field_E.a(0, mj.field_a, 1);
-          this.field_E.a(1, mj.field_a, 1);
+          this.field_E.setHotspotTooltip(0, mj.field_a, 1);
+          this.field_E.setHotspotTooltip(1, mj.field_a, 1);
           this.field_E.field_n = (WidgetEventListener) (this);
           this.field_E.field_t = -40 + this.field_t;
-          this.field_E.b(26, var3, 1, this.field_t - 40);
+          this.field_E.setTextBounds(26, var3, 1, this.field_t - 40);
           var3 = var3 + (this.field_E.field_x + 15);
           this.addChild(this.field_E, 5411);
           var5 = 4;

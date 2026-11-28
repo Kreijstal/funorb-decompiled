@@ -251,7 +251,7 @@ final class ch extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          super.a(param0, 117);
+          super.copyStyleTo(param0, 117);
           if (param2 != 28905) {
             return;
           }

@@ -55,10 +55,10 @@ final class ca {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          se.field_G = gl.a("frame_top", param1, "commonui", -13244);
-          rc.field_k = gl.a("frame_bottom", param1, "commonui", param3 + 11944);
+          se.field_G = ValidationStatusIcon.a("frame_top", param1, "commonui", -13244);
+          rc.field_k = ValidationStatusIcon.a("frame_bottom", param1, "commonui", param3 + 11944);
           PacketBuffer.field_k = DelegatingCanvas.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
-          eg.field_c = gl.a("button", param1, "commonui", -13244);
+          eg.field_c = ValidationStatusIcon.a("button", param1, "commonui", -13244);
           gh.field_n = ProxyAuthenticationRequiredException.a("validation", "commonui", 0, param1);
           me.field_c = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo12", param1));
           ModalDialogHost.field_C = (BitmapFont) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14", param1));

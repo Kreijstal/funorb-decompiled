@@ -15,7 +15,7 @@ final class dl {
     int field_l;
     static int field_n;
     int field_i;
-    static bn[] field_c;
+    static MeshData[] field_c;
 
     final static rk[] a(int param0) {
         int var2 = 0;
@@ -46,6 +46,6 @@ final class dl {
         field_m = "Only show lobby chat from my friends";
         field_n = -1;
         field_j = new tk();
-        field_c = new bn[7];
+        field_c = new MeshData[7];
     }
 }

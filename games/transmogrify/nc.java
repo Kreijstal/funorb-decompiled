@@ -8,7 +8,7 @@ final class nc extends ni {
     static int[] field_p;
     static String[] field_r;
 
-    final String c(UiWidget param0, int param1) {
+    final String resolveDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

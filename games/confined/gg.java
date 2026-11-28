@@ -6,7 +6,7 @@ final class gg extends IntrusiveNode {
     int field_o;
     static String[] field_p;
     static RgbSprite[] field_q;
-    static od[] field_n;
+    static MeshData[] field_n;
 
     public static void clearStaticReferences(int param0) {
         field_p = null;
@@ -25,6 +25,6 @@ final class gg extends IntrusiveNode {
     static {
         field_m = null;
         field_p = new String[]{"bosses/sphere/sphere", "bosses/cube/cube", "bosses/bird/bird", "bosses/humanoid/humanoid"};
-        field_n = new od[4];
+        field_n = new MeshData[4];
     }
 }

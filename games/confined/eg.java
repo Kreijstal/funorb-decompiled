@@ -851,7 +851,7 @@ final class eg {
                 var14_double = Math.sin(var12_double);
                 var16_double = Math.cos(var12_double);
                 var18_ref_int__ = new int[]{0, var11_int, var10, -65536, 0, 0, 0, (int)(65536.0 * var16_double), -(int)(var14_double * 65536.0), 0, (int)(var14_double * 65536.0), (int)(-65536.0 * var16_double)};
-                var40 = (SoftwareModelMesh) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var18_ref_int__));
+                var40 = (SoftwareModelMesh) (IsaacRandom.field_d.createModelWithLightTransform(96, 1365, 0, 0, -256, var18_ref_int__));
                 var40.projectAndDrawWithTransforms(var9_ref_int__, var18_ref_int__);
                 decompiledSharedTail0 = (var35 != 0);
               }
@@ -922,7 +922,7 @@ final class eg {
                 var15 = Math.sin(var13);
                 var17 = Math.cos(var13);
                 var39 = new int[]{0, var12, var11_int, -65536, 0, 0, 0, (int)(65536.0 * var17), -(int)(65536.0 * var15), 0, (int)(65536.0 * var15), (int)(-65536.0 * var17)};
-                var41 = (SoftwareModelMesh) (IsaacRandom.field_d.a(96, 1365, 0, 0, -256, var39));
+                var41 = (SoftwareModelMesh) (IsaacRandom.field_d.createModelWithLightTransform(96, 1365, 0, 0, -256, var39));
                 var41.projectAndDrawWithTransforms(var9_ref_int__, var39);
               }
               decompiledFrameRemainder1 = (var35 != 0);

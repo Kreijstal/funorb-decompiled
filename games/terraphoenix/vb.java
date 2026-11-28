@@ -71,7 +71,7 @@ final class vb {
           return field_a;
         }
         if (!PasswordValidator.field_q.tryLoadGroupByName(-3, "commonui")) {
-          return ki.field_S + " - " + PasswordValidator.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
+          return ValidationStatusWidget.field_S + " - " + PasswordValidator.field_q.getGroupLoadPercentByName(param0 ^ 120, "commonui") + "%";
         }
         if (!ch.field_g.ensureIndexLoaded(param0 ^ -27)) {
           return IntrusiveDeque.field_d;

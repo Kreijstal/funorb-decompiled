@@ -247,8 +247,8 @@ final class GzipDecompressor {
           }
           var2_int = -1;
           if (og.field_d == null) {
-            if (null != pa.field_I) {
-              var2_int = pa.field_I.length;
+            if (null != ValidationStatusWidget.field_I) {
+              var2_int = ValidationStatusWidget.field_I.length;
             }
           } else {
             var2_int = og.field_d.length;

@@ -225,7 +225,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
             return;
           }
           if (var2 != 2) {
-            ValidatedTextField.a((Throwable) null, (byte) 100, "A1: " + la.a(-106));
+            ValidatedTextField.a((Throwable) null, (byte) 100, "A1: " + ValidationStatusIcon.a(-106));
             kc.a((byte) 18);
             return;
           }

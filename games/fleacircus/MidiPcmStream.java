@@ -172,7 +172,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(int param0, tk param1, boolean param2) {
+    final void applySampleOffset(int param0, tk param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -220,7 +220,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void setRetriggerRate(int param0, int param1, int param2) {
         if (param1 != -24344) {
           return;
         }
@@ -228,11 +228,11 @@ final class MidiPcmStream extends PcmStream {
         this.field_p[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, (double)param0 * 0.00054931640625));
     }
 
-    final synchronized void b(int param0, int param1, int param2) {
+    final synchronized void setChannelProgram(int param0, int param1, int param2) {
         if (param2 != 238) {
           field_H = (boolean[]) null;
         }
-        this.a(param0, (byte) -119, param1);
+        this.setDefaultProgram(param0, (byte) -119, param1);
     }
 
     final synchronized PcmStream firstChildStream() {
@@ -407,17 +407,17 @@ final class MidiPcmStream extends PcmStream {
             }
           }
           if (var5Lifetime1 == 17) {
-            this.d((this.field_y[var4Lifetime1] & -16257) + (var6Lifetime1 << 7), -24344, var4Lifetime1);
+            this.setRetriggerRate((this.field_y[var4Lifetime1] & -16257) + (var6Lifetime1 << 7), -24344, var4Lifetime1);
           }
           if (var5Lifetime1 == 49) {
-            this.d(var6Lifetime1 + (this.field_y[var4Lifetime1] & -128), -24344, var4Lifetime1);
+            this.setRetriggerRate(var6Lifetime1 + (this.field_y[var4Lifetime1] & -128), -24344, var4Lifetime1);
             return;
           }
         }
     }
 
     final static void b(boolean param0) {
-        v.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, NodeHashTableIterator.field_b, PcmOutputWorker.field_d, vj.field_a};
+        ValidationStatusWidget.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, NodeHashTableIterator.field_b, PcmOutputWorker.field_d, vj.field_a};
         kb.field_k = new String[][]{new String[]{ProxyAuthenticationRequiredException.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, ModalDialog.a(si.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(ia.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{DequeWidgetContainer.field_D, ModalDialog.a(fl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(oc.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(DiskCacheWorker.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(ArchiveRequest.field_u, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(kl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(w.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{DequeWidgetContainer.field_D, ModalDialog.a(hc.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(pl.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(oe.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(ProxyAuthenticationRequiredException.field_h, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(re.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(kf.field_j, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(lg.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{DequeWidgetContainer.field_D, ModalDialog.a(MouseWheelInput.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(hm.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(StandardContentDialog.field_lb, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), ModalDialog.a(gm.field_ib, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(RichTextLayout.field_l, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), ModalDialog.a(cj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{ResizableModalDialog.field_V, g.field_t, DropTargetWidgetContainer.field_E}, new String[]{AgeValidator.field_q, kb.field_n, IntrusiveDeque.field_g, EmailFormatValidator.field_o}};
         String var21 = ModalDialog.a(jk.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var1 = var21;
@@ -638,7 +638,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, boolean param1, int param2) {
+    final synchronized void setChannelGain(int param0, boolean param1, int param2) {
         int var4 = 0;
         int discarded$0 = 0;
         int var5;
@@ -731,12 +731,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(boolean param0, int param1, MusicTrack param2) {
+    final synchronized void playTrack(boolean param0, int param1, MusicTrack param2) {
         try {
           if (param1 < 53) {
             this.field_F = -83;
           }
-          this.a((byte) 102, true, param0, param2);
+          this.startTrack((byte) 102, true, param0, param2);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ei.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -811,7 +811,7 @@ final class MidiPcmStream extends PcmStream {
             stackIn_16_0 = this;
             stackIn_16_3 = true;
           }
-          this.a(stackIn_15_1, stackIn_15_2, stackIn_16_3);
+          this.applySampleOffset(stackIn_15_1, stackIn_15_2, stackIn_16_3);
         }
         if (0 > var10.field_l[param0]) {
           var7.field_k.setLoopCount(-1);
@@ -846,7 +846,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(SoundCache param0, ResourceArchive param1, int param2, int param3, MusicTrack param4) {
+    final synchronized boolean prepareTrackSamples(SoundCache param0, ResourceArchive param1, int param2, int param3, MusicTrack param4) {
         int stackIn_19_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -1035,7 +1035,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_E;
         if (this.field_Q != null &&
           var3 == this.field_F) {
-          this.a((byte) 83, this.field_s, this.field_B, this.field_Q);
+          this.startTrack((byte) 83, this.field_s, this.field_B, this.field_Q);
           this.advanceMidiEvents(1);
           return;
         }
@@ -1073,7 +1073,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_G.saveTrackPosition(var2);
             if (this.field_G.isDone()) {
               if (null != this.field_Q) {
-                this.a(this.field_B, 75, this.field_Q);
+                this.playTrack(this.field_B, 75, this.field_Q);
                 this.advanceMidiEvents(param0 + 0);
                 return;
               }
@@ -1143,10 +1143,10 @@ final class MidiPcmStream extends PcmStream {
           this.field_R[param0] = 256;
           if (param1 != 15198) {
             var5 = (tk) null;
-            this.a(-127, (tk) null, false);
+            this.applySampleOffset(-127, (tk) null, false);
           }
           this.field_n[param0] = 0;
-          this.d(8192, -24344, param0);
+          this.setRetriggerRate(8192, -24344, param0);
         }
     }
 
@@ -1244,7 +1244,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void setDefaultProgram(int param0, byte param1, int param2) {
         this.field_I[param0] = param2;
         this.field_L[param0] = sc.a(-128, param2);
         this.setProgram(-38, param2, param0);
@@ -1301,7 +1301,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(byte param0, boolean param1, boolean param2, MusicTrack param3) {
+    private final synchronized void startTrack(byte param0, boolean param1, boolean param2, MusicTrack param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = fleas.field_A ? 1 : 0;
@@ -1333,7 +1333,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final void onChannelPressure(int param0, int param1, int param2) {
         if (param0 != 16384) {
-          this.b(-127, 105, -38);
+          this.setChannelProgram(-127, 105, -38);
         }
     }
 
@@ -1361,7 +1361,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_G = new MidiFileReader();
         this.field_O = new MusicPatchPcmStream(this);
         this.field_S = new hc(128);
-        this.a(256, true, -1);
+        this.setChannelGain(256, true, -1);
         this.resetPlaybackChannels(-1, true);
     }
 

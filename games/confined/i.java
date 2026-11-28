@@ -559,7 +559,7 @@ abstract class i extends GameAppletShell {
         tl.a(this.field_C, this.field_y, 5000, hc.field_m, param0 + 9718, this.field_x, ki.field_d, this.field_n, param4, this.field_s, this.field_A, this.field_B, param1, 5000);
         ng.a(this.field_A, this.field_n, 24774, this.field_B, hc.field_m, this.field_C, ki.field_d, this.field_y, param1);
         ProjectileRay.h(-66);
-        jc.field_c = ba.createMouseWheelInput((byte) 110);
+        jc.field_c = ValidationStatusIcon.createMouseWheelInput((byte) 110);
         ac.a(fb.field_b, (byte) -118);
         TunnelMesh.field_z = param7;
         gd.field_n = param6;

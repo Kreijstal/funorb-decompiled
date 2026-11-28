@@ -427,10 +427,10 @@ abstract class ag extends GameApplet {
         }
         if (IntrusiveDeque.field_d == 3 &&
           kb.a(li.field_b, Bzip2State.field_k, (byte) 107, bf.field_y) &&
-          pa.a(li.field_b, -206)) {
+          ValidationStatusWidget.a(li.field_b, -206)) {
           eg.b((byte) -64);
-          jg.clearStaticReferences((byte) 109);
-          o.field_b = pa.field_J;
+          ValidationStatusIcon.clearStaticReferences((byte) 109);
+          o.field_b = ValidationStatusWidget.field_J;
           sh.field_t = false;
           StarCannon.a(li.field_b, ah.field_i, -20169, bf.field_y, Bzip2State.field_k);
           if (FullscreenStatusDialog.field_X ||
@@ -624,7 +624,7 @@ abstract class ag extends GameApplet {
             DirectByteStorage.a(18065, ll.b(104));
           }
           if (9 == var4) {
-            pa.b(ll.b(99), param0 ^ -31162);
+            ValidationStatusWidget.b(ll.b(99), param0 ^ -31162);
           }
           if (var4 == 10) {
             d.field_b.writeCipheredByte((byte) 73, 17);

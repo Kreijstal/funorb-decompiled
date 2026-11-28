@@ -959,12 +959,12 @@ public final class DekoBlokoClient extends FunOrbClient {
               } else {
                 MixedSupport047.performAction0574((byte) -126);
               }
-              SceneWidgetPart002.integerState0249 = UiComponentPart011.integerState0238;
+              SceneWidgetPart002.integerState0249 = ValidationStatusIcon.integerState0238;
               if (integerLocal17 == 0) {
                 return;
               }
             }
-            if (~SceneWidgetPart002.integerState0249 != ~UiComponentPart011.integerState0238) {
+            if (~SceneWidgetPart002.integerState0249 != ~ValidationStatusIcon.integerState0238) {
               ReturnedShape.integerState0694 = ReturnedShape.integerState0694 - 1;
               if (ReturnedShape.integerState0694 != 0) {
                 return;
@@ -1511,7 +1511,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           ContentTransitionDialog.discardDeclaredStaticReferences(104);
           NameSuggestionsPanel.clearStaticReferences(1);
           RichTextWidget.clearStaticReferences((byte) 117);
-          UiComponentPart011.clearStaticReferences(-99);
+          ValidationStatusIcon.clearStaticReferences(-99);
           AccountFieldStatusIndicator.resetStaticState((byte) 47);
           UiComponentPart009.clearStaticReferences(false);
           TextFieldValidator.performAction1827(18966);

@@ -200,7 +200,7 @@ final class hh {
             for (var8 = 0; var8 < var7; var8++) {
               FullscreenNoticeType.field_b[var8] = -1;
             }
-            hf.field_d[1] = al.field_X;
+            hf.field_d[1] = ValidationStatusWidget.field_X;
             FullscreenNoticeType.field_b[1] = 0;
             FullscreenFocusCanvas.field_k = new int[2];
             hf.field_d[0] = sg.field_e;

@@ -247,9 +247,9 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
                 tk.field_h.readUnsignedByte(-86);
                 tk.field_h.readInt((byte) -106);
                 ImageProducerRasterBuffer.field_n = tk.field_h.readUnsignedShort(674914976);
-                jn.field_P = new byte[ImageProducerRasterBuffer.field_n];
+                ValidationStatusIcon.field_P = new byte[ImageProducerRasterBuffer.field_n];
                 for (var9 = 0; ImageProducerRasterBuffer.field_n > var9; var9++) {
-                  jn.field_P[var9] = tk.field_h.readByte(0);
+                  ValidationStatusIcon.field_P[var9] = tk.field_h.readByte(0);
                 }
               }
               ci.field_J = tk.field_h.readString(0);
@@ -314,7 +314,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
             }
             if (ArchiveIndex.field_a == null) {
               if (DirectByteStorage.field_f) {
-                if (ea.i((byte) 17) > 30000L) {
+                if (ValidationStatusWidget.i((byte) 17) > 30000L) {
                   n.field_c = nc.field_Q;
                 } else {
                   n.field_c = li.field_b;

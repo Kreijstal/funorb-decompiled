@@ -41,7 +41,7 @@ final class ff extends InteractiveWidget {
             ff.a(13);
           }
           var5 = param1.getFileIdByName(var4_int, param0, -34);
-          stackIn_3_0 = la.a(var5, var4_int, param1, (byte) -72);
+          stackIn_3_0 = ValidationStatusIcon.a(var5, var4_int, param1, (byte) -72);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

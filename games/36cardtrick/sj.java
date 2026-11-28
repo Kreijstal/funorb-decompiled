@@ -166,8 +166,8 @@ final class sj {
                 stackIn_19_0 = tf.field_p.length;
               }
               var7 = stackIn_19_0;
-              if (gl.field_G.length > SoundCache.field_c.length) {
-                stackIn_22_0 = gl.field_G.length;
+              if (ValidationStatusIcon.field_G.length > SoundCache.field_c.length) {
+                stackIn_22_0 = ValidationStatusIcon.field_G.length;
               } else {
                 stackIn_22_0 = SoundCache.field_c.length;
               }

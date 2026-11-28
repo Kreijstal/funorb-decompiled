@@ -85,7 +85,7 @@ final class b {
           var5 = var17.readShort();
           var6 = new Vector();
           for (var7 = param0; var5 > var7; var7++) {
-            var18 = sb.a(1, var17);
+            var18 = ValidationStatusIcon.a(1, var17);
             var8 = var18;
             var9 = var17.readUnsignedByte();
             var10 = var17.readInt();

@@ -206,7 +206,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         int var5 = 0;
         String[] var4 = null;
         int var6 = 0;
@@ -362,7 +362,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
           RichTextWidget.resetStaticState((byte) 29);
         }

@@ -4,7 +4,7 @@
 final class DiskArchiveRequest extends ArchiveRequest {
     static PrimaryNodeDeque field_y;
     SectorCacheStore field_B;
-    static od field_A;
+    static MeshData field_A;
     int field_z;
     byte[] field_C;
 
@@ -180,7 +180,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
         if (param0 == 81) {
           return;
         }
-        field_A = (od) null;
+        field_A = (MeshData) null;
     }
 
     DiskArchiveRequest() {

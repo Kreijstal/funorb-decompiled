@@ -7,7 +7,7 @@ final class b {
     static int[] field_c;
     static String field_g;
     static RgbSprite field_a;
-    static bn field_e;
+    static MeshData field_e;
     static int field_d;
     static ta field_b;
 

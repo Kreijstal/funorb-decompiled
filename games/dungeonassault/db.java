@@ -587,7 +587,7 @@ final class db extends DungeonAssaultScreen {
         KeyboardInput.field_e.field_N = false;
         var5.field_w = false;
         this.field_p.addFirst(KeyboardInput.field_e, false);
-        ContentTransitionDialog.field_mb = tn.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
+        ContentTransitionDialog.field_mb = ValidationStatusWidget.a(-(GameAppletShell.field_a.field_y / 2) + (363 + (200 - ao.field_n.field_E >> 1)) + ao.field_n.field_E / 2, 337, field_v, GameAppletShell.field_a, -81, bg.field_x.toUpperCase());
         var6 = ContentTransitionDialog.field_mb;
         ContentTransitionDialog.field_mb.field_D = false;
         var6.field_w = false;
@@ -1052,7 +1052,7 @@ final class db extends DungeonAssaultScreen {
             la.field_b.drawParagraph(bl.field_b, -80 + var2, var3 + 120, 160, 100, 0, -1, 1, 0, la.field_b.field_H);
           }
         }
-        var4 = ng.field_L;
+        var4 = ValidationStatusIcon.field_L;
         var5Lifetime1 = 16777215;
         if (0 < gm.field_d.field_e) {
           if (1 >= gm.field_d.field_e) {

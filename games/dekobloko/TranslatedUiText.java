@@ -1460,7 +1460,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_suggestions", -15192);
                 if (null != byteArrayState0015) {
-                  UiComponentPart011.stringState0188 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  ValidationStatusIcon.stringState0188 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_more_suggestions", -15192);
                 if (byteArrayState0015 != null) {

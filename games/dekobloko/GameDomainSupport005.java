@@ -197,7 +197,7 @@ final class GameDomainSupport005 {
             }
             if (integerLocal19 < 0) {
               integerLocal47 = -integerLocal19;
-              UiComponentPart011.integerState0240 = UiComponentPart011.integerState0240 - integerLocal47;
+              ValidationStatusIcon.integerState0240 = ValidationStatusIcon.integerState0240 - integerLocal47;
               integerLocal19 = integerLocal19 + integerLocal47;
               integerLocal41 = integerLocal41 + integerLocal47 * 2;
               BufferedSocket.integerState0668 = BufferedSocket.integerState0668 + integerLocal47;
@@ -210,7 +210,7 @@ final class GameDomainSupport005 {
               integerLocal41 = integerLocal41 + integerLocal48 * 2;
               MouseInput.rgbSpriteState0073.integerState0260 = MouseInput.rgbSpriteState0073.integerState0260 + 2 * integerLocal48;
               integerLocal19 = integerLocal19 + integerLocal48;
-              UiComponentPart011.integerState0240 = UiComponentPart011.integerState0240 - integerLocal48;
+              ValidationStatusIcon.integerState0240 = ValidationStatusIcon.integerState0240 - integerLocal48;
               BufferedSocket.integerState0668 = BufferedSocket.integerState0668 + integerLocal48;
             }
             MouseInput.rgbSpriteState0073.normalizeCanvas();
@@ -222,7 +222,7 @@ final class GameDomainSupport005 {
             rgbSpriteLocal21.draw(0, 0);
             SceneWidget.rgbSpriteState0068 = new RgbSprite(640, 480);
             SceneWidget.rgbSpriteState0068.bindAsRenderTarget();
-            MouseInput.rgbSpriteState0073.drawRotated((MouseInput.rgbSpriteState0073.integerState0254 >> 1) + MixedSupport076.integerState0429, (MouseInput.rgbSpriteState0073.integerState0260 >> 1) + UiComponentPart011.integerState0240, ProxyAuthenticationRequiredException.integerState0125, 4096);
+            MouseInput.rgbSpriteState0073.drawRotated((MouseInput.rgbSpriteState0073.integerState0254 >> 1) + MixedSupport076.integerState0429, (MouseInput.rgbSpriteState0073.integerState0260 >> 1) + ValidationStatusIcon.integerState0240, ProxyAuthenticationRequiredException.integerState0125, 4096);
             MouseInput.rgbSpriteState0073 = null;
             SceneWidget.rgbSpriteState0068.trimTransparentBorders();
             SoftwareRaster.setRasterBuffer(integerArrayLocal29, integerLocal32, integerLocal37);

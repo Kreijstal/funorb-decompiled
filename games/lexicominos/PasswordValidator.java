@@ -13,7 +13,7 @@ final class PasswordValidator extends TextFieldValidator {
           this.field_n = param2;
           this.field_o = param1;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "va.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "va.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_16_0 = td.field_b;
             return stackIn_16_0;
           }
-          if (this.a(param1, true)) {
+          if (this.containsEmailComponent(param1, true)) {
             stackIn_19_0 = rb.field_e;
             return stackIn_19_0;
           }
@@ -108,11 +108,11 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
-    private final boolean a(String param0, boolean param1) {
+    private final boolean containsEmailComponent(String param0, boolean param1) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -159,7 +159,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = ni.field_b;
             return stackIn_7_0;
           }
-          if (!this.a(param1, true)) {
+          if (!this.containsEmailComponent(param1, true)) {
             return rh.field_p;
           }
           stackIn_11_0 = ni.field_b;
@@ -200,7 +200,7 @@ final class PasswordValidator extends TextFieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

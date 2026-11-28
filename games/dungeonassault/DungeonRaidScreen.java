@@ -2681,8 +2681,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_N = ke.a(var2, (byte) -123, gh.field_g[1], 464);
         this.field_t = ke.a(var2, (byte) -125, gh.field_g[2], 548);
         this.field_O = ke.a(var2, (byte) -114, gh.field_g[3], 590);
-        this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, TextLayout.field_d);
-        this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, FullscreenNoticeType.field_a);
+        this.field_J = ValidationStatusWidget.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, TextLayout.field_d);
+        this.field_K = ValidationStatusWidget.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, FullscreenNoticeType.field_a);
         var3 = 424;
         this.field_M = new nn(false);
         this.field_z = new hj[4];

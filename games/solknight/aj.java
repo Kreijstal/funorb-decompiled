@@ -217,7 +217,7 @@ final class aj {
           this.field_a = (WidgetRenderer) ((Object) var18);
           var18.field_o = 16777215;
           var4 = new ql();
-          var18.a(var4, 6935);
+          var18.copyStyleTo(var4, 6935);
           if (param0 <= 59) {
             String var16 = (String) null;
             this.a(-106, 26, -13, (String) null);
@@ -256,7 +256,7 @@ final class aj {
           discarded$0 = new we(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sj(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ql();
-          var18.a(var8, 6935);
+          var18.copyStyleTo(var8, 6935);
           var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
           var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           this.field_h = (WidgetRenderer) ((Object) var8);

@@ -46,7 +46,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_F = param1;
               if (param1 != null) {
-                this.field_A.a(false, param1, (byte) 2);
+                this.field_A.playTrack(false, param1, (byte) 2);
                 this.a(param5, param3, (byte) -117, this.field_A);
               }
             } else {
@@ -55,7 +55,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_E = param1;
               if (param1 != null) {
-                this.field_J.a(false, param1, (byte) 2);
+                this.field_J.playTrack(false, param1, (byte) 2);
                 this.a(param5, param3, (byte) -117, this.field_J);
               }
             }
@@ -91,7 +91,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param1 != null) {
               stackIn_48_0 = this.field_J;
               stackIn_49_1 = !(param2);
-              ((MidiPcmStream) (Object) stackIn_48_0).a(stackIn_49_1, param1, (byte) 2);
+              ((MidiPcmStream) (Object) stackIn_48_0).playTrack(stackIn_49_1, param1, (byte) 2);
               this.a(param5, param3, (byte) -117, this.field_J);
             }
             this.field_C = -param4;
@@ -103,7 +103,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param1 != null) {
               stackIn_39_0 = this.field_A;
               stackIn_40_1 = !(param2);
-              ((MidiPcmStream) (Object) stackIn_39_0).a(stackIn_40_1, param1, (byte) 2);
+              ((MidiPcmStream) (Object) stackIn_39_0).playTrack(stackIn_40_1, param1, (byte) 2);
               this.a(param5, param3, (byte) -117, this.field_A);
             }
             this.field_C = param4;
@@ -134,7 +134,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          param3.a(param0, true, -1);
+          param3.setChannelGain(param0, true, -1);
           if (param2 != -117) {
             var6 = (mj) null;
             CrossfadingMidiPcmStream.a(36, 70, (mj) null);

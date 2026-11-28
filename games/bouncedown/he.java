@@ -105,7 +105,7 @@ final class he extends IntrusiveNode {
               var18[0][var10 * 4 + 1] = FullscreenStatusDialog.field_S[var11];
               var18[0][var10 * 4 + 2] = ResourceArchive.field_i[var11];
               var18[0][4 * var10 + 3] = DelegatingCanvas.field_c[var11];
-              if (s.a(SecondaryNodeDeque.field_c[var11], param0 - 3) &&
+              if (ValidationStatusWidget.a(SecondaryNodeDeque.field_c[var11], param0 - 3) &&
                 ResourceArchive.field_i[var11] + FullscreenStatusDialog.field_S[var11] + DelegatingCanvas.field_c[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -123,7 +123,7 @@ final class he extends IntrusiveNode {
               var18[1][4 * var13 + 1] = FullscreenStatusDialog.field_S[var11Lifetime1];
               var18[1][4 * var13 + 2] = ResourceArchive.field_i[var11Lifetime1];
               var18[1][3 + 4 * var13] = DelegatingCanvas.field_c[var11Lifetime1];
-              if (s.a(SecondaryNodeDeque.field_c[var11Lifetime1], -97) &&
+              if (ValidationStatusWidget.a(SecondaryNodeDeque.field_c[var11Lifetime1], -97) &&
                 FullscreenStatusDialog.field_S[var11Lifetime1] - (-ResourceArchive.field_i[var11Lifetime1] - DelegatingCanvas.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

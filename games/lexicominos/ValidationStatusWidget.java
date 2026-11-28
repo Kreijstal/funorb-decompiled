@@ -1,0 +1,211 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ValidationStatusWidget extends RichTextWidget {
+    static aj field_R;
+    private FieldValidator field_N;
+    static AccountServiceResult field_T;
+    static int field_S;
+    private int field_M;
+    private String field_O;
+    private RgbSprite field_Q;
+    static String field_P;
+
+    final boolean takeFocus(byte param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        UiWidget var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 44) {
+            var4 = (UiWidget) null;
+            this.updatePointer((byte) -87, (UiWidget) null, 66, 22);
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("li.LA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final static void g(boolean param0) {
+        DialogMessagePane.field_K[61] = 27;
+        DialogMessagePane.field_K[93] = 43;
+        if (!param0) {
+          DialogMessagePane.field_K[46] = 72;
+          DialogMessagePane.field_K[45] = 26;
+          DialogMessagePane.field_K[92] = 74;
+          DialogMessagePane.field_K[44] = 71;
+          DialogMessagePane.field_K[47] = 73;
+          DialogMessagePane.field_K[59] = 57;
+          DialogMessagePane.field_K[222] = 58;
+          DialogMessagePane.field_K[520] = 59;
+          DialogMessagePane.field_K[192] = 28;
+          DialogMessagePane.field_K[91] = 42;
+          return;
+        }
+        field_S = -24;
+        DialogMessagePane.field_K[46] = 72;
+        DialogMessagePane.field_K[45] = 26;
+        DialogMessagePane.field_K[92] = 74;
+        DialogMessagePane.field_K[44] = 71;
+        DialogMessagePane.field_K[47] = 73;
+        DialogMessagePane.field_K[59] = 57;
+        DialogMessagePane.field_K[222] = 58;
+        DialogMessagePane.field_K[520] = 59;
+        DialogMessagePane.field_K[192] = 28;
+        DialogMessagePane.field_K[91] = 42;
+    }
+
+    final void updatePointer(byte param0, UiWidget param1, int param2, int param3) {
+        try {
+          this.field_M = this.field_M + 1;
+          super.updatePointer(param0, param1, param2, param3);
+        } catch (RuntimeException runtimeException) {
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "li.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    ValidationStatusWidget(FieldValidator param0, String param1, int param2, int param3, int param4, int param5) {
+        super(param1, t.b(-11));
+        try {
+          this.field_O = param1;
+          this.field_N = param0;
+          this.setBounds(param5, param4, true, param3, param2);
+        } catch (RuntimeException runtimeException) {
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final String getTooltipText(int param0) {
+        if (param0 > 121) {
+          return null;
+        }
+        return (String) null;
+    }
+
+    public static void a(byte param0) {
+        field_T = null;
+        field_R = null;
+        field_P = null;
+        if (param0 < 64) {
+          ValidationStatusWidget.g(false);
+        }
+    }
+
+    final void drawWidget(byte param0, int param1, int param2, int param3) {
+        String var5;
+        sc var6;
+        int var13;
+        TextWidgetRenderer var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        RgbSprite var15;
+        RgbSprite var16;
+        RgbSprite var17;
+        RgbSprite var18;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        sc var6Lifetime1;
+        var13 = Lexicominos.field_L ? 1 : 0;
+        var6 = this.field_N.getValidationStatus((byte) 125);
+        if (var6 != jj.field_e &&
+          BufferedRandomAccessFile.field_q != var6) {
+          var5 = this.field_N.getValidationMessage((byte) 100);
+          if (var5 == null) {
+            var5 = this.field_O;
+          }
+        } else {
+          var5 = gg.field_c;
+        }
+        if (!var5.equals(this.field_u)) {
+          this.field_u = var5;
+          this.rebuildHotspotBounds(true);
+        }
+        super.drawWidget(param0, param1, param2, param3);
+        var6Lifetime1 = this.field_N.getValidationStatus((byte) 119);
+        var8 = (TextWidgetRenderer) ((Object) this.field_i);
+        var9 = param2 + this.field_t;
+        var10 = var8.getTextOriginY((UiWidget) (this), param0 ^ -20231, param1) + (var8.getTextLayout((UiWidget) (this), (byte) 101).getLayoutHeight(0) >> 1);
+        if (var6Lifetime1 == jj.field_e) {
+          var18 = BufferedRandomAccessFile.field_b[0];
+          var11 = var18.field_r << 1;
+          var12 = var18.field_x << 1;
+          if (null == this.field_Q) {
+            this.field_Q = new RgbSprite(var11, var12);
+            de.a(this.field_Q, 6);
+          } else {
+            if (var11 > this.field_Q.field_p) {
+              this.field_Q = new RgbSprite(var11, var12);
+              de.a(this.field_Q, 6);
+            } else {
+              if (var12 > this.field_Q.field_u) {
+                this.field_Q = new RgbSprite(var11, var12);
+                de.a(this.field_Q, 6);
+              } else {
+                de.a(this.field_Q, 6);
+                SoftwareRasterizer.clearRaster();
+              }
+            }
+          }
+          var18.drawRotatedAbout(112, 144, var18.field_r << 4, var18.field_x << 4, -this.field_M << 10, 4096);
+          pd.a(-22949);
+          this.field_Q.drawAdditive(-(var18.field_r >> 1) + var9, var10 - var18.field_x, 256);
+          return;
+        }
+        if (BufferedRandomAccessFile.field_q != var6Lifetime1) {
+          if (ni.field_b == var6Lifetime1) {
+            var15 = BufferedRandomAccessFile.field_b[2];
+            var15.drawAdditive(var9, var10 - (var15.field_u >> 1), 256);
+            return;
+          }
+          if (rh.field_p == var6Lifetime1) {
+            var16 = BufferedRandomAccessFile.field_b[1];
+            var16.drawAdditive(var9, var10 - (var16.field_u >> 1), 256);
+          }
+          return;
+        }
+        var17 = BufferedRandomAccessFile.field_b[0];
+        var11Lifetime1 = var17.field_r << 1;
+        var12Lifetime1 = var17.field_x << 1;
+        if (null == this.field_Q) {
+          this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
+          de.a(this.field_Q, 6);
+        } else {
+          if (var11Lifetime1 > this.field_Q.field_p) {
+            this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
+            de.a(this.field_Q, 6);
+          } else {
+            if (var12Lifetime1 > this.field_Q.field_u) {
+              this.field_Q = new RgbSprite(var11Lifetime1, var12Lifetime1);
+              de.a(this.field_Q, 6);
+            } else {
+              de.a(this.field_Q, 6);
+              SoftwareRasterizer.clearRaster();
+            }
+          }
+        }
+        var17.drawRotatedAbout(112, 144, var17.field_r << 4, var17.field_x << 4, -this.field_M << 10, 4096);
+        pd.a(-22949);
+        this.field_Q.drawAdditive(-(var17.field_r >> 1) + var9, var10 - var17.field_x, 256);
+        return;
+    }
+
+    static {
+        field_S = 0;
+        field_R = new aj(9, 0, 4, 1);
+        field_P = "Waiting for fonts";
+    }
+}

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kl {
-    static bn[] field_k;
+    static MeshData[] field_k;
     private int field_d;
     static String field_f;
     static String field_a;
@@ -230,7 +230,7 @@ final class kl {
 
     static {
         field_a = "%D";
-        field_k = new bn[7];
+        field_k = new MeshData[7];
         field_g = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_f = "Return to lobby";
         field_h = new int[128];

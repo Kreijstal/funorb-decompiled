@@ -113,7 +113,7 @@ abstract class GameClientShell extends GameAppletShell {
                     if (mh.field_d != 5) {
                       AlphaWidgetContainer.a(db.field_f, 256, 68);
                     } else {
-                      AlphaWidgetContainer.a(gm.field_K, 5, 105);
+                      AlphaWidgetContainer.a(ValidationStatusIcon.field_K, 5, 105);
                     }
                   } else {
                     AlphaWidgetContainer.a(ce.field_d, 256, 75);
@@ -179,7 +179,7 @@ abstract class GameClientShell extends GameAppletShell {
           dm.c((byte) 94);
           ue.a(false);
           rh.field_d = ha.field_e;
-          gm.field_M = false;
+          ValidationStatusIcon.field_M = false;
           wh.a(-80, sb.field_i, ig.field_t, AccountCreationResultPanel.field_Jb, ModalDialog.field_N);
           if (fm.field_l ||
             null != hb.field_b) {
@@ -237,7 +237,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
         }
         if (!param0 &&
-          ci.field_U) {
+          ValidationStatusWidget.field_U) {
           hb.a(-5, DiskCacheWorker.field_g);
           this.f(118);
           ej.a(DiskCacheWorker.field_g, (byte) 95);
@@ -712,7 +712,7 @@ abstract class GameClientShell extends GameAppletShell {
             DrPhlogistonSavesTheEarth.a(nb.a(120), param2 ^ -127);
           }
           if (var4 == 6 &&
-            gm.field_M) {
+            ValidationStatusIcon.field_M) {
             af.field_b = 10;
           }
           if (var4 == 7) {

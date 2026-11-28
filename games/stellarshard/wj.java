@@ -128,7 +128,7 @@ final class wj extends fb {
               GameEntity.b(64, 8)) {
               ob.field_a = EditableTextField.field_N.readLong(0);
               EditableTextField.field_N.position = 0;
-              cd.a(54, param2, le.field_n, param1, param5);
+              ValidationStatusWidget.a(54, param2, le.field_n, param1, param5);
               GzipDecompressor.field_d = lb.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -158,7 +158,7 @@ final class wj extends fb {
               }
             }
             if (GzipDecompressor.field_d == AccountNameAvailabilityValidator.field_m &&
-              cd.e((byte) 125)) {
+              ValidationStatusWidget.e((byte) 125)) {
               we.field_a = EditableTextField.field_N.readLong(0);
               NetworkArchiveRequest.field_D = EditableTextField.field_N.readUnsignedByte(4);
               EditableTextField.field_N.readUnsignedByte(4);
@@ -230,7 +230,7 @@ final class wj extends fb {
               return stackIn_72_0;
             }
             if (ih.field_a == GzipDecompressor.field_d &&
-              cd.e((byte) 123)) {
+              ValidationStatusWidget.e((byte) 123)) {
               IntrusiveDeque.c(-2290);
               if (TextHotspotBounds.field_t == 7 &&
                 !ta.field_u) {
@@ -888,14 +888,14 @@ final class wj extends fb {
             null != ModalDialog.field_F) {
             MouseWheelInput.field_a.draw(231, 390);
             var2_ref_pb = dd.field_a;
-            if (cd.field_L.field_f == 0) {
+            if (ValidationStatusWidget.field_L.field_f == 0) {
               var2_ref_pb = q.field_b;
             }
             var2_ref_pb.draw(0, 0);
             stackIn_48_0 = 40;
             stackIn_48_1 = 40;
             stackIn_48_2 = gj.field_v;
-            if (cd.field_L.field_f == 0) {
+            if (ValidationStatusWidget.field_L.field_f == 0) {
               stackIn_49_3 = 4;
             } else {
               stackIn_49_3 = 3;
@@ -911,17 +911,17 @@ final class wj extends fb {
               var2_ref_pb.drawAdditive(1, -1, var3Lifetime4);
               var2_ref_pb.drawAdditive(-1, -1, var3Lifetime4);
             }
-            stackIn_54_0 = (cd.field_L.field_f == 0);
+            stackIn_54_0 = (ValidationStatusWidget.field_L.field_f == 0);
             tk.a(stackIn_54_0, wc.field_y, RasterBuffer.field_a, -127);
           }
           if (null != MouseWheelInput.field_a &&
             null != ModalDialog.field_F) {
             MouseWheelInput.field_a.draw(434, 390);
             IsaacRandom.field_e.draw(0, 0);
-            if (1 == cd.field_L.field_f) {
+            if (1 == ValidationStatusWidget.field_L.field_f) {
               ob.a(116, 436, 64, MouseWheelInput.field_a.field_v - 4, 7 * MouseWheelInput.field_a.field_y / 12, 392);
             }
-            stackIn_63_0 = (1 == cd.field_L.field_f);
+            stackIn_63_0 = (1 == ValidationStatusWidget.field_L.field_f);
             tk.a(stackIn_63_0, cm.field_a, af.field_l, -108);
           }
           if (null != MatchingFieldValidator.field_l) {

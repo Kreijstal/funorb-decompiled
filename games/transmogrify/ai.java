@@ -52,11 +52,11 @@ final class ai {
               var2.writeInt(-109, dk.field_h);
               Bzip2State.field_y.a((byte) 9, var2.payload, 13, 0);
               DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
-              ob.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
+              ValidationStatusWidget.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
             }
             if (DiskArchiveRequest.field_A == 3) {
               if (Bzip2State.field_y.a((byte) -125) <= 0) {
-                if (ob.field_G < lk.correctedCurrentTimeMillis(0)) {
+                if (ValidationStatusWidget.field_G < lk.correctedCurrentTimeMillis(0)) {
                   stackIn_32_0 = og.a(2, -2);
                   return stackIn_32_0;
                 }

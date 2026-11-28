@@ -30,7 +30,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           var9 = Vertigo2.field_L ? 1 : 0;
           try {
             try {
-              if (qe.field_T != null) {
+              if (ValidationStatusWidget.field_T != null) {
                 DialogMessagePane.field_H = DialogMessagePane.field_H + 1;
                 if (DialogMessagePane.field_H < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -42,7 +42,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               oq.field_I = param3;
               op.field_c = param5;
               lc.field_a = param5;
-              qe.field_T = this;
+              ValidationStatusWidget.field_T = this;
               to.field_e = 0;
               bk.field_f = 0;
               gh.field_a = param4;
@@ -159,7 +159,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (qe.field_T == this &&
+          if (ValidationStatusWidget.field_T == this &&
             !NodeHashTableIterator.field_g) {
             lf.field_B = gk.correctedCurrentTimeMillis(52);
             ArrayWidgetContainer.sleepMillis(true, 5000L);
@@ -232,7 +232,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     }
 
     public final void start() {
-        if (this != qe.field_T ||
+        if (this != ValidationStatusWidget.field_T ||
           NodeHashTableIterator.field_g) {
           return;
         }
@@ -373,11 +373,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               if (null != DefaultTextWidgetRenderer.field_o) {
                 var2 = DefaultTextWidgetRenderer.field_o;
                 if (var4 != 0) {
-                  var2 = qe.field_T;
+                  var2 = ValidationStatusWidget.field_T;
                   var2 = lo.field_j;
                 }
               } else {
-                var2 = qe.field_T;
+                var2 = ValidationStatusWidget.field_T;
                 if (var4 != 0) {
                   var2 = lo.field_j;
                 }
@@ -439,7 +439,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (qe.field_T == this &&
+          if (ValidationStatusWidget.field_T == this &&
             !NodeHashTableIterator.field_g) {
             lf.field_B = 4000L + gk.correctedCurrentTimeMillis(113);
             return;
@@ -818,7 +818,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (qe.field_T == this &&
+          if (ValidationStatusWidget.field_T == this &&
             !NodeHashTableIterator.field_g) {
             uh.field_sc = true;
             if (kj.field_E &&
@@ -1001,7 +1001,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = qe.field_T;
+                var1 = ValidationStatusWidget.field_T;
                 if (null != DefaultTextWidgetRenderer.field_o) {
                   var1 = DefaultTextWidgetRenderer.field_o;
                 }

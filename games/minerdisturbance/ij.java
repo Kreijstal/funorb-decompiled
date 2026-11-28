@@ -304,10 +304,10 @@ final class ij extends ArchiveProvider {
           try {
             var6 = new byte[24];
             var2 = var6;
-            if (null != w.field_W) {
+            if (null != ValidationStatusWidget.field_W) {
               try {
-                w.field_W.seek((byte) 120, 0L);
-                w.field_W.readFully(var6, 119);
+                ValidationStatusWidget.field_W.seek((byte) 120, 0L);
+                ValidationStatusWidget.field_W.readFully(var6, 119);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

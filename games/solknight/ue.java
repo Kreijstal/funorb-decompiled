@@ -445,7 +445,7 @@ final class ue {
           }
           var2Lifetime82 = Bzip2State.a((byte) -2, "combopowsub");
           if (null != var2Lifetime82) {
-            pk.field_T = Archive.decodeCp1252(true, var2Lifetime82);
+            ValidationStatusWidget.field_T = Archive.decodeCp1252(true, var2Lifetime82);
           }
           var2Lifetime83 = Bzip2State.a((byte) -2, "megapowsub");
           if (var2Lifetime83 != null) {
@@ -453,7 +453,7 @@ final class ue {
           }
           var2Lifetime84 = Bzip2State.a((byte) -2, "combopower");
           if (null != var2Lifetime84) {
-            kc.field_M = Archive.decodeCp1252(true, var2Lifetime84);
+            ValidationStatusIcon.field_M = Archive.decodeCp1252(true, var2Lifetime84);
           }
           var2Lifetime85 = Bzip2State.a((byte) -2, "megapower");
           if (var2Lifetime85 != null) {

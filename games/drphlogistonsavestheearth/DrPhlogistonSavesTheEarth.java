@@ -221,7 +221,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           FullscreenNoticeType.a((byte) 9);
           if (this.field_C &&
-            !s.field_a.e(16)) {
+            !s.field_a.hasMidiData(16)) {
             sc.a(-1, true, PasswordValidator.field_q);
           }
           if (df.field_l != null &&
@@ -664,8 +664,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           StripedProgressWidget.clearStaticReferences(false);
           NameSuggestionsPanel.a((byte) 108);
           RichTextWidget.clearStaticReferences((byte) 122);
-          gm.releaseDeclaredStaticReferences(-112);
-          ci.resetStaticState(-76);
+          ValidationStatusIcon.releaseDeclaredStaticReferences(-112);
+          ValidationStatusWidget.resetStaticState(-76);
           nc.clearStaticReferences((byte) 126);
           TextFieldValidator.clearStaticReferences(1);
           md.clearStaticReferences(75);
@@ -1699,7 +1699,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           }
           this.a(8, 4, false, 7320, 0, 11, 10, 9);
           var2 = new MidiPcmStream();
-          var2.d(9, 128, param0 ^ 85);
+          var2.setChannelProgram(9, 128, param0 ^ 85);
           var2.a(SecondaryNodeDequeIterator.field_b, (byte) -13);
           DebouncedFieldValidator.a(sb.field_d, 22050, true, var2, (byte) -92, (java.awt.Component) ((Object) DiskCacheWorker.field_g));
           a.field_i = 16711680;
@@ -2101,18 +2101,18 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             we.a(ai.field_x, -83, 55.0f);
             this.renderClientFrame(0);
             PasswordValidator.field_q = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Title");
-            s.field_a.a(0, ui.field_a, 0, PasswordValidator.field_q, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, PasswordValidator.field_q, SoundCache.field_c);
             ki.field_c = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Earth");
-            s.field_a.a(0, ui.field_a, 0, ki.field_c, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, ki.field_c, SoundCache.field_c);
             hi.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Space");
-            s.field_a.a(0, ui.field_a, 0, hi.field_l, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, hi.field_l, SoundCache.field_c);
             le.field_e = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Alien");
-            s.field_a.a(0, ui.field_a, 0, le.field_e, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, le.field_e, SoundCache.field_c);
             BitPacketBuffer.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_Boss_Break");
             dm.field_x = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameOver_jingle");
-            s.field_a.a(0, ui.field_a, 0, dm.field_x, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, dm.field_x, SoundCache.field_c);
             ml.field_l = MusicTrack.load(df.field_a, "", "Dr_Phlogiston_GameComplete_jingle");
-            s.field_a.a(0, ui.field_a, 0, ml.field_l, SoundCache.field_c);
+            s.field_a.prepareTrackSamples(0, ui.field_a, 0, ml.field_l, SoundCache.field_c);
             s.field_a.b((byte) 47);
             SoundCache.field_c = null;
             df.field_a = null;
@@ -2327,7 +2327,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qf.field_e = this.a(eh.a("", (byte) -36, kf.field_d, "scenery_tile_earth_4_rubble"), (byte) -48);
           dm.field_z = this.a(eh.a("", (byte) -76, kf.field_d, "scenery_tile_earth_5_rubble"), (byte) -23);
           AccountCreationResultPanel.field_Cb = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_6_rubble"), (byte) 90);
-          gm.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
+          ValidationStatusIcon.field_L = this.a(eh.a("", (byte) -77, kf.field_d, "scenery_tile_earth_7_rubble"), (byte) -97);
           rb.field_c = this.a(eh.a("", (byte) -57, kf.field_d, "scenery_tile_earth_8_rubble"), (byte) -40);
           sc.field_a = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_9_rubble"), (byte) 103);
           rd.field_A = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_10_rubble"), (byte) -77);

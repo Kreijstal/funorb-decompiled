@@ -112,7 +112,7 @@ class RichTextWidget extends ButtonWidget {
           return null;
         }
         if (param0 != 0) {
-          this.a(-54, (byte) 36, -103, -82);
+          this.setTextBounds(-54, (byte) 36, -103, -82);
         }
         if (this.field_N.field_q >= this.field_M.length) {
           return null;
@@ -185,7 +185,7 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setTextBounds(int param0, byte param1, int param2, int param3) {
         if (param1 != -44) {
           return;
         }
@@ -234,7 +234,7 @@ class RichTextWidget extends ButtonWidget {
         }
     }
 
-    final void a(byte param0, String param1, int param2) {
+    final void setHotspotTooltip(byte param0, String param1, int param2) {
         String[] var5 = null;
         int var6 = 0;
         int var7 = TrackController.field_F ? 1 : 0;

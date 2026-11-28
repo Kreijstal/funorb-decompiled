@@ -6,7 +6,7 @@ final class j extends DualLinkNode {
     boolean field_w;
     char[] field_s;
     String field_x;
-    static bn field_v;
+    static MeshData field_v;
     char[] field_r;
     int[] field_t;
     static boolean field_u;

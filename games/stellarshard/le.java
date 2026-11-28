@@ -275,7 +275,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime34 = ImageProducerRasterBuffer.a(false, "collectme");
           if (var2Lifetime34 != null) {
-            cd.field_P = GuestPlayConfirmationForm.a(param1 - 26949, var2Lifetime34);
+            ValidationStatusWidget.field_P = GuestPlayConfirmationForm.a(param1 - 26949, var2Lifetime34);
           }
           var2Lifetime35 = ImageProducerRasterBuffer.a(false, "musoff");
           if (null != var2Lifetime35) {

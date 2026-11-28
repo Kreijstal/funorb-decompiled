@@ -644,7 +644,7 @@ class PacketBuffer extends IntrusiveNode {
           var6Lifetime1 = fb.field_a << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = TextLineMetrics.a(var6Lifetime1, (byte) -47) >> 8;
-          var9Lifetime1 = mi.a(2048, var6Lifetime1) >> 8;
+          var9Lifetime1 = ValidationStatusWidget.a(2048, var6Lifetime1) >> 8;
           if (kf.mouseX != -1 &&
             -1 != fg.mouseY) {
             var9Lifetime1 = -128;

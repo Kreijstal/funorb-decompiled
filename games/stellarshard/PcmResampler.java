@@ -155,7 +155,7 @@ final class PcmResampler {
           return;
         }
         if (PcmOutputWorker.field_d == null) {
-          PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ii.field_F);
+          PcmOutputWorker.field_d = new ProgressDialog(IsaacRandom.field_d, ValidationStatusIcon.field_F);
         }
         IsaacRandom.field_d.showDialog((byte) 72, (UiWidget) (PcmOutputWorker.field_d));
     }

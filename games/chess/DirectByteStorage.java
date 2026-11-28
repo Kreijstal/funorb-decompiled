@@ -39,7 +39,7 @@ final class DirectByteStorage extends ByteStorage {
         RuntimeException decompiledCaughtException = null;
         try {
           wk.field_g = wk.a(param0, 1, "display_name_changed", "basic");
-          ea.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, AchievementNotification.field_m);
+          ValidationStatusWidget.field_bb = new ok(0L, SecondaryNodeDeque.field_b, tn.field_l, AchievementNotification.field_m);
           fg.field_d = new ok(0L, SecondaryNodeDeque.field_b, d.field_Lb, vc.field_b);
           hb.field_a = new ci(0L, (ci) null);
           oj.field_c = new ci(0L, EditableTextField.field_P);
@@ -50,11 +50,11 @@ final class DirectByteStorage extends ByteStorage {
           hb.field_a.a((byte) 123, oj.field_c);
           hb.field_a.a((byte) 124, le.field_e);
           hb.field_a.a((byte) 123, kf.field_t);
-          hb.field_a.a((byte) 125, ea.field_bb);
+          hb.field_a.a((byte) 125, ValidationStatusWidget.field_bb);
           hb.field_a.a((byte) 127, SecondaryNodeHashTable.field_h);
-          ea.field_bb.field_Kb.field_Jb.a(EditableTextField.field_P, param1 + 2147483647);
-          var2 = ea.field_bb.field_Kb.field_Jb;
-          ea.field_bb.field_Kb.field_Jb.field_cb = 1;
+          ValidationStatusWidget.field_bb.field_Kb.field_Jb.a(EditableTextField.field_P, param1 + 2147483647);
+          var2 = ValidationStatusWidget.field_bb.field_Kb.field_Jb;
+          ValidationStatusWidget.field_bb.field_Kb.field_Jb.field_cb = 1;
           var2.field_fb = 1;
           fg.field_d.field_Kb.field_Jb.a(EditableTextField.field_P, -2147483648);
           var3 = fg.field_d.field_Kb.field_Jb;

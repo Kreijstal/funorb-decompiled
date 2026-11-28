@@ -81,7 +81,7 @@ final class TextHotspotBounds extends IntrusiveNode {
           }
           var4 = ModalDialog.field_J;
           synchronized (var4) {
-            DebouncedFieldValidator.field_h.a(param1, true, -1);
+            DebouncedFieldValidator.field_h.setChannelGain(param1, true, -1);
             if (param3 == AccountRequestState.field_b) {
               return;
             }
@@ -89,7 +89,7 @@ final class TextHotspotBounds extends IntrusiveNode {
             ModalDialog.field_J.flushAndMarkDrainCheck();
             AccountRequestState.field_b = param3;
             if (AccountRequestState.field_b != null) {
-              DebouncedFieldValidator.field_h.a(param2, 68, AccountRequestState.field_b);
+              DebouncedFieldValidator.field_h.playTrack(param2, 68, AccountRequestState.field_b);
             }
           }
           return;

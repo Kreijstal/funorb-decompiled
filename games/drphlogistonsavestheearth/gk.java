@@ -122,7 +122,7 @@ final class gk {
     final static String a(int param0) {
         String var1 = "";
         if (DraggableWidgetContainer.field_O != null) {
-          var1 = DraggableWidgetContainer.field_O.b(false);
+          var1 = DraggableWidgetContainer.field_O.getAccountIdentifier(false);
         }
         if (param0 == var1.length()) {
           var1 = MusicPatchPcmStream.h(0);

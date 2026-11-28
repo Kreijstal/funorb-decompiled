@@ -35,7 +35,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -135,13 +135,13 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           super.updatePointer(param0, param1, param2, param3);
           this.field_G.field_D = this.canSubmitDisplayName((byte) -89);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "r.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "r.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     private final int a(String param0, int param1, int param2, int param3, String param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
-        li var9 = null;
+        ValidationStatusWidget var9 = null;
         int var10 = 0;
         LabeledWidgetContainer var11 = null;
         int stackIn_1_0 = 0;
@@ -156,7 +156,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           var11 = new LabeledWidgetContainer(20, param3, param5 + 120, 25, param6, false, 120, 3, ResizableModalDialog.field_Q, 16777215, param0);
           this.addChild((byte) 73, var11);
-          var9 = new li(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 6), param4, 126, param3 + var11.field_v, 25 + param5, param1);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 6), param4, 126, param3 + var11.field_v, 25 + param5, param1);
           var10 = -12 / ((21 - param2) / 47);
           var9.field_r = (WidgetEventListener) (this);
           this.addChild((byte) -93, var9);
@@ -184,7 +184,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             DisplayNameSelectionPanel.a((df) null, -73);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "r.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "r.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -296,7 +296,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 

@@ -27,7 +27,7 @@ final class wl {
         try {
           var1_int = 0;
           for (var2 = 0; var2 < 6; var2++) {
-            var1_int = var1_int + al.field_U[var2];
+            var1_int = var1_int + ValidationStatusWidget.field_U[var2];
           }
           if (param0 != 25685) {
             wl.c(-10);

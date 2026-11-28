@@ -66,7 +66,7 @@ final class jb {
         if (var2 != 0) {
           return;
         }
-        if (0 != rh.field_X) {
+        if (0 != ValidationStatusWidget.field_X) {
           discarded$3 = this.a(true, (byte) 116);
         }
         return;
@@ -576,7 +576,7 @@ final class jb {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 &&
-          0 != rh.field_X &&
+          0 != ValidationStatusWidget.field_X &&
           this.field_p.field_i != -1) {
           if ((this.field_p.field_i != 0 &&
             this.field_p.field_i != 1) &&

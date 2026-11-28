@@ -25,7 +25,7 @@ final class ac {
         ji.field_e = null;
         ByteStorage.field_e = false;
         hh.field_d = null;
-        rh.field_X = 0;
+        ValidationStatusWidget.field_X = 0;
     }
 
     final static void a(java.awt.Canvas param0, byte param1) {

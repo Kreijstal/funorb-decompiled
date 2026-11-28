@@ -68,8 +68,8 @@ abstract class TunnelEntity extends DualLinkNode {
 
     abstract void onCameraContact(int param0, TunnelCamera param1);
 
-    final void a(int param0, boolean param1, double param2, byte param3, od param4, da param5, TunnelCamera param6, DynamicLight param7, PrimaryNodeDeque param8, int param9) {
-        od stackIn_6_0 = null;
+    final void a(int param0, boolean param1, double param2, byte param3, MeshData param4, da param5, TunnelCamera param6, DynamicLight param7, PrimaryNodeDeque param8, int param9) {
+        MeshData stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -108,13 +108,13 @@ abstract class TunnelEntity extends DualLinkNode {
           } else {
             var13_double = -((this.field_D - param6.field_O) / param2) + 1.0;
             var13_double = qn.field_v.attenuateBrightnessToDepth(var13_double, 0, this.field_D);
-            stackIn_6_0 = (od) (param4);
+            stackIn_6_0 = (MeshData) (param4);
             if (!(var13_double > 0.0)) {
               stackIn_7_1 = 0;
             } else {
               stackIn_7_1 = (int)(16.0 * var13_double);
             }
-            var12 = (SoftwareModelMesh) (((od) (Object) stackIn_6_0).a(stackIn_7_1, 65536, 0, 0, -256));
+            var12 = (SoftwareModelMesh) (((MeshData) (Object) stackIn_6_0).createModel(stackIn_7_1, 65536, 0, 0, -256));
           }
           var27 = new int[12];
           var25 = var27;
@@ -551,7 +551,7 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    final void a(od param0, da param1, DynamicLight param2, byte param3, double param4, PrimaryNodeDeque param5, TunnelCamera param6, int param7) {
+    final void a(MeshData param0, da param1, DynamicLight param2, byte param3, double param4, PrimaryNodeDeque param5, TunnelCamera param6, int param7) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -644,7 +644,7 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    final void a(int param0, od param1, int param2, da param3, int param4, DynamicLight param5, double param6, TunnelCamera param7, PrimaryNodeDeque param8) {
+    final void a(int param0, MeshData param1, int param2, da param3, int param4, DynamicLight param5, double param6, TunnelCamera param7, PrimaryNodeDeque param8) {
         try {
           this.a(param4, false, param6, (byte) 44, param1, param3, param7, param5, param8, param0);
           if (param2 != 27902) {
@@ -668,7 +668,7 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    private final SoftwareModelMesh a(double param0, od param1, double[] param2, int param3, TunnelCamera param4, double param5, DynamicLight param6, PrimaryNodeDeque param7) {
+    private final SoftwareModelMesh a(double param0, MeshData param1, double[] param2, int param3, TunnelCamera param4, double param5, DynamicLight param6, PrimaryNodeDeque param7) {
         double localTemp$0 = 0.0;
         SoftwareModelMesh stackIn_20_0 = null;
         SoftwareModelMesh stackIn_25_0 = null;
@@ -718,7 +718,7 @@ abstract class TunnelEntity extends DualLinkNode {
           var11_double = -((this.field_D - param4.field_O) / param5) + 1.0;
           var11_double = qn.field_v.attenuateBrightnessToDepth(var11_double, param3 ^ param3, this.field_D);
           if (!(0.0 < var11_double)) {
-            stackIn_27_0 = (SoftwareModelMesh) (param1.a(0, 65536, 0, 0, -256));
+            stackIn_27_0 = (SoftwareModelMesh) (param1.createModel(0, 65536, 0, 0, -256));
             return stackIn_27_0;
           }
           var13 = 4.0;
@@ -781,7 +781,7 @@ abstract class TunnelEntity extends DualLinkNode {
             var24 = (var27 - var26_int) / 2;
           }
           if (var24 <= 0) {
-            stackIn_20_0 = (SoftwareModelMesh) (param1.a(var25, 65536, 0, 0, -256));
+            stackIn_20_0 = (SoftwareModelMesh) (param1.createModel(var25, 65536, 0, 0, -256));
             return stackIn_20_0;
           }
           if (var24 > 1024) {
@@ -793,7 +793,7 @@ abstract class TunnelEntity extends DualLinkNode {
           var17Lifetime1 = var30;
           var15Lifetime1 = var28;
           var26 = 256.0 / var22;
-          stackIn_25_0 = (SoftwareModelMesh) (param1.a(var25, 131072 / (3 * var24), (int)(var26 * var15Lifetime1), (int)(var26 * var17Lifetime1), (int)(var19 * var26)));
+          stackIn_25_0 = (SoftwareModelMesh) (param1.createModel(var25, 131072 / (3 * var24), (int)(var26 * var15Lifetime1), (int)(var26 * var17Lifetime1), (int)(var19 * var26)));
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -848,7 +848,7 @@ abstract class TunnelEntity extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2384) {
-            discarded$1 = this.a((PrimaryNodeDeque) null, (DynamicLight) null, (TunnelCamera) null, (od) null, (double[]) null, -98, -0.5432285346715034);
+            discarded$1 = this.a((PrimaryNodeDeque) null, (DynamicLight) null, (TunnelCamera) null, (MeshData) null, (double[]) null, -98, -0.5432285346715034);
           }
           var9 = new ShockwaveBlast(this, param2, param4, param3, param1);
           ri.a((IntrusiveNode) (this), 0, var9);
@@ -877,7 +877,7 @@ abstract class TunnelEntity extends DualLinkNode {
         }
     }
 
-    private final SoftwareModelMesh a(PrimaryNodeDeque param0, DynamicLight param1, TunnelCamera param2, od param3, double[] param4, int param5, double param6) {
+    private final SoftwareModelMesh a(PrimaryNodeDeque param0, DynamicLight param1, TunnelCamera param2, MeshData param3, double[] param4, int param5, double param6) {
         RuntimeException var9 = null;
         SoftwareModelMesh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1211,7 +1211,7 @@ abstract class TunnelEntity extends DualLinkNode {
           this.onMovingEntityContact(true, (MovingTunnelEntity) (param1));
           if (param0 != 640) {
             PrimaryNodeDeque var4 = (PrimaryNodeDeque) null;
-            this.a(107, (od) null, 5, (da) null, -102, (DynamicLight) null, -0.8503192618374721, (TunnelCamera) null, (PrimaryNodeDeque) null);
+            this.a(107, (MeshData) null, 5, (da) null, -102, (DynamicLight) null, -0.8503192618374721, (TunnelCamera) null, (PrimaryNodeDeque) null);
           }
         } catch (RuntimeException runtimeException) {
           throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "pm.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

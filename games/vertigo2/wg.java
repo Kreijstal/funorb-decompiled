@@ -16,7 +16,7 @@ final class wg {
 
     final void a(Model param0, int param1) {
         try {
-          param0.a(jm.field_B, this.field_e);
+          param0.applyAnimationFrame(jm.field_B, this.field_e);
           if (param1 != -875079928) {
             Model var4 = (Model) null;
             this.a((Model) null, 64);

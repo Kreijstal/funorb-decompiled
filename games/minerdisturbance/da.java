@@ -44,7 +44,7 @@ final class da {
                 param1 = PcmOutputWorker.field_a;
               }
               param2 = 2;
-              MidiPcmStream.field_D.a(pl.field_a, 69);
+              MidiPcmStream.field_D.setAccountAndClearPassword(pl.field_a, 69);
             }
             var3_int = 1;
             if (10 == param2) {
@@ -63,7 +63,7 @@ final class da {
             if (256 != param2 &&
               param2 != 10 &&
               !MusicPatchPcmStream.field_B) {
-              MidiPcmStream.field_D.n(-6);
+              MidiPcmStream.field_D.clearCredentials(-6);
             }
           }
           if (!param0) {

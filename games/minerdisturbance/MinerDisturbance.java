@@ -4206,7 +4206,7 @@ public final class MinerDisturbance extends ob {
                 SingleChildWidgetContainer.field_G = jn.a("title_choose", -29553, "", fl.field_f);
                 GzipDecompressor.field_a = jn.a("bubble", -29553, "", fl.field_f);
                 jn.a("highscorearrow", -29553, "", fl.field_f);
-                qn.field_J = bb.a("worm_gums", fl.field_f, -123, "");
+                ValidationStatusIcon.field_J = bb.a("worm_gums", fl.field_f, -123, "");
                 ij.field_t = bb.a("worm_skin", fl.field_f, -102, "");
                 te.field_c = md.a("worm_teeth", fl.field_f, 10, "");
                 nb.field_a = new Sprite[te.field_c.length];
@@ -4844,8 +4844,8 @@ public final class MinerDisturbance extends ob {
           StripedProgressWidget.clearStaticReferences((byte) 91);
           NameSuggestionsPanel.o(-2638);
           RichTextWidget.resetStaticState(param0 - 3);
-          qn.clearStaticReferences((byte) 84);
-          w.clearDeclaredStaticReferences(256);
+          ValidationStatusIcon.clearStaticReferences((byte) 84);
+          ValidationStatusWidget.clearDeclaredStaticReferences(256);
           ti.clearStaticReferences((byte) -53);
           TextFieldValidator.d(false);
           ol.clearStaticReferences(1);
@@ -5744,7 +5744,7 @@ public final class MinerDisturbance extends ob {
           lj.field_r = 0;
           kj.a(1, -22156);
           var2 = new MidiPcmStream();
-          var2.a(128, -6242, 9);
+          var2.setChannelProgram(128, -6242, 9);
           pe.a(qa.field_a, 22050, 512, (byte) -124, true, (java.awt.Component) ((Object) ef.field_c), var2, 22050);
           this.a(false, (byte) -61, true, true, false);
           return;
@@ -6247,7 +6247,7 @@ public final class MinerDisturbance extends ob {
                             }
                             return;
                           }
-                          pa.a(true, qn.a(NameSuggestionsPanel.field_P, td.field_a, false, id.field_c), 40.0f);
+                          pa.a(true, ValidationStatusIcon.a(NameSuggestionsPanel.field_P, td.field_a, false, id.field_c), 40.0f);
                           return;
                         }
                         pa.a(true, u.a(ub.field_c, ob.field_q, ul.field_d, -7157, "basic"), 35.0f);
@@ -6262,21 +6262,21 @@ public final class MinerDisturbance extends ob {
                   pa.a(true, u.a(ub.field_c, fl.field_f, ul.field_d, -7157, ""), 20.0f);
                   return;
                 }
-                pa.a(true, u.a(gm.field_c, ig.field_c, w.field_X, -7157, ""), 16.0f);
+                pa.a(true, u.a(gm.field_c, ig.field_c, ValidationStatusWidget.field_X, -7157, ""), 16.0f);
                 return;
               }
               if (ge.field_e.ensureIndexLoaded((byte) 112)) {
                 var3_ref = gm.field_c;
                 if (var5 != 0) {
-                  var3_ref = w.field_X;
+                  var3_ref = ValidationStatusWidget.field_X;
                 }
               } else {
-                var3_ref = w.field_X;
+                var3_ref = ValidationStatusWidget.field_X;
               }
               pa.a(true, var3_ref, 8.0f);
               return;
             }
-            pa.a(true, u.a(gm.field_c, pk.field_g, w.field_X, -7157, ""), 4.0f);
+            pa.a(true, u.a(gm.field_c, pk.field_g, ValidationStatusWidget.field_X, -7157, ""), 4.0f);
             return;
           }
           pa.a(true, u.a(ud.field_f, NameSuggestionsPanel.field_Q, ModalDialogHost.field_M, -7157, ""), 0.0f);

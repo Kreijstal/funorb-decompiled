@@ -198,7 +198,7 @@ final class pn {
             }
             this.field_d.draw(var6_int, var7);
           }
-          var6 = param4.b(param2, -2);
+          var6 = param4.resolveDisplayText(param2, -2);
           if (param3 < 43) {
             return;
           }

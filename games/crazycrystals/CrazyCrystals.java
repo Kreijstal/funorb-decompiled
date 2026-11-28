@@ -762,8 +762,8 @@ public final class CrazyCrystals extends NetworkGameClient {
           StripedProgressWidget.clearDeclaredStaticReferences(2);
           NameSuggestionsPanel.releaseDeclaredStaticReferences(-7397);
           RichTextWidget.clearStaticReferences((byte) -98);
-          sb.clearStaticReferences((byte) 2);
-          io.h(param0 - 211);
+          ValidationStatusIcon.clearStaticReferences((byte) 2);
+          ValidationStatusWidget.h(param0 - 211);
           of.clearDeclaredStaticReferences(3);
           TextFieldValidator.clearStaticReferences((byte) -96);
           fj.clearStaticReferences(param0 ^ 45);
@@ -1053,7 +1053,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           mg.field_c = LevelProgressUpdate.openAssetArchive(true, (byte) -70, true, true, 3);
           mg.field_g = LevelProgressUpdate.openAssetArchive(true, (byte) -124, true, true, 5);
           ba.field_k = LevelProgressUpdate.openAssetArchive(true, (byte) -46, true, true, 0);
-          io.a(4096, lo.field_a, dj.field_ab);
+          ValidationStatusWidget.a(4096, lo.field_a, dj.field_ab);
           qd.a(-91, 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1155,7 +1155,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                             }
                             IsaacRandom.field_e = new int[][]{new int[]{MouseWheelInput.field_g, vp.field_b, kp.field_j, tg.field_b}, new int[]{rk.field_d, pa.field_E, MatchingFieldValidator.field_i, ji.field_t}, new int[]{96, 97, 98, 99}};
                             fq.field_x = new MidiPcmStream();
-                            fq.field_x.a(128, 9, (byte) -103);
+                            fq.field_x.setChannelProgram(128, 9, (byte) -103);
                             gf.field_c.setRootStream(fq.field_x);
                             aa.field_b = new SoundCache(vm.field_k, ma.field_p);
                             decompiledFrameRemainder0 = false;
@@ -1569,7 +1569,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ti.field_l = VorbisSample.loadByName(ma.field_p, "initialset", "rock-push").decodeAllToPcm();
             pe.field_h = VorbisSample.loadByName(ma.field_p, "initialset", "rock-falling").decodeAllToPcm();
             mg.field_d = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "rock_land").toPcmSample();
-            io.field_H = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "bomb-push").toPcmSample();
+            ValidationStatusWidget.field_H = SynthesizedSoundEffect.loadByName(vm.field_k, "initialset", "bomb-push").toPcmSample();
             vp.a(103);
             return;
           }
@@ -1604,7 +1604,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ProxyAuthenticationRequiredException.field_b = VorbisSample.loadByName(ma.field_p, "initialset", "player-prod-spider").decodeAllToPcm();
             EditableTextField.field_H = VorbisSample.loadByName(ma.field_p, "initialset", "player-taunt-spider").decodeAllToPcm();
             e.a(0, vm.field_k, ma.field_p);
-            sb.a(ma.field_p, 18180);
+            ValidationStatusIcon.a(ma.field_p, 18180);
             of.a(vm.field_k, 23, ma.field_p);
             ma.field_p = null;
             vm.field_k = null;

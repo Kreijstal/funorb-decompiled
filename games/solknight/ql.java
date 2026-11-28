@@ -154,7 +154,7 @@ final class ql extends DefaultTextWidgetRenderer {
         Sprite[] var8 = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
-          super.a(param0, 6935);
+          super.copyStyleTo(param0, 6935);
           if (param1) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_t[var4_int];

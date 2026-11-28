@@ -60,12 +60,12 @@ final class m extends IntrusiveNode {
         Asteroid var6Lifetime1;
         if (param3 == -6) {
           var6 = new Asteroid(param0, param2, param1, param5, param4);
-          pk.a((byte) 32, var6);
+          ValidationStatusWidget.a((byte) 32, var6);
           return var6;
         }
         field_h = (IntrusiveDeque) null;
         var6Lifetime1 = new Asteroid(param0, param2, param1, param5, param4);
-        pk.a((byte) 32, var6Lifetime1);
+        ValidationStatusWidget.a((byte) 32, var6Lifetime1);
         return var6Lifetime1;
     }
 

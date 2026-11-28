@@ -230,7 +230,7 @@ final class q {
         if (param0) {
           return (RgbSprite[]) null;
         }
-        return kk.a(3, 1, param1, 1, (byte) 123, param3, 1, param2, param4);
+        return ValidationStatusWidget.a(3, 1, param1, 1, (byte) 123, param3, 1, param2, param4);
     }
 
     static {

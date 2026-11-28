@@ -64,8 +64,8 @@ final class vf {
         int var6 = 0;
         String var7 = null;
         try {
-          tc.field_r[0] = la.field_C.nextInt();
-          tc.field_r[1] = la.field_C.nextInt();
+          tc.field_r[0] = ValidationStatusIcon.field_C.nextInt();
+          tc.field_r[1] = ValidationStatusIcon.field_C.nextInt();
           tc.field_r[3] = (int)qa.field_i;
           tc.field_r[2] = (int)(qa.field_i >> 32);
           lb.field_g.position = 0;

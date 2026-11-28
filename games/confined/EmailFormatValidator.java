@@ -18,7 +18,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         var7.field_l = param3;
         int var5 = 20 + (var7.field_c + var7.field_b);
         if (tj.a(true)) {
-          var8 = new bd(16, ba.field_Q, pn.field_a);
+          var8 = new bd(16, ValidationStatusIcon.field_Q, pn.field_a);
           var8.field_j = 320 - var8.field_f / 2;
           var8.field_b = var5;
           var7.a((byte) -61, var8);

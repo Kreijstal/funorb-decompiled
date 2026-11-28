@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nr extends tb implements ef {
+final class nr extends tb implements TextureProvider {
     static String field_q;
     private Archive field_j;
     private Archive field_m;
@@ -19,15 +19,15 @@ final class nr extends tb implements ef {
         }
     }
 
-    public final boolean d(int param0, int param1) {
+    public final boolean hasTexture(int param0, int param1) {
         if (param0 <= -114) {
           return !this.e(param1, -1).field_a ? true : false;
         }
-        this.a(0.3591744601726532f, 110, 81);
+        this.getTexturePixels(0.3591744601726532f, 110, 81);
         return !this.e(param1, -1).field_a ? true : false;
     }
 
-    public final int b(int param0, int param1) {
+    public final int getTextureAlphaMode(int param0, int param1) {
         if (param0 == 212) {
           return this.e(param1, -1).field_h;
         }
@@ -54,7 +54,7 @@ final class nr extends tb implements ef {
         }
         byte[] var4 = this.field_j.getFile(param0, 0, (byte) -126);
         if (param1 < 40) {
-          this.a(1.1444469690322876f, -2, -78);
+          this.getTexturePixels(1.1444469690322876f, -2, -78);
           if (var4 != null) {
             var3 = new ta(new PacketBuffer(var4));
             this.field_n.a(-1, var3, (long)param0);
@@ -70,7 +70,7 @@ final class nr extends tb implements ef {
         return null;
     }
 
-    public final int[] a(float param0, int param1, int param2) {
+    public final int[] getTexturePixels(float param0, int param1, int param2) {
         ta stackIn_5_0;
         Object stackIn_5_1;
         Archive stackIn_5_2;
@@ -147,7 +147,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    public final boolean c(int param0, int param1) {
+    public final boolean isTextureSize64(int param0, int param1) {
         if (this.field_k) {
           return true;
         }
@@ -206,7 +206,7 @@ final class nr extends tb implements ef {
         }
     }
 
-    public final int a(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         if (param1 != 65535) {
           return 91;
         }

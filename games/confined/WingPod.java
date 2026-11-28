@@ -8,7 +8,7 @@ final class WingPod extends MovingTunnelEntity {
     ek field_ab;
     static int field_W;
     private int field_bb;
-    static od field_Y;
+    static MeshData field_Y;
     double[] field_T;
     ProjectileRay field_Q;
     private int field_U;

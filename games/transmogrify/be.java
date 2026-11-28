@@ -419,7 +419,7 @@ final class be extends ih {
           if (ga.a(param0, 3336)) {
             return false;
           }
-          if (ve.a(1, param0)) {
+          if (ValidationStatusIcon.a(1, param0)) {
             return false;
           }
           if (vj.a(-23424, param0)) {

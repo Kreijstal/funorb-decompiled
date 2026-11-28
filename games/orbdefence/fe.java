@@ -38,7 +38,7 @@ final class fe {
         String var1 = "";
         int var2 = 31 % ((-45 - param0) / 46);
         if (AccountCreationResultPanel.field_ib != null) {
-          var1 = AccountCreationResultPanel.field_ib.a((byte) 85);
+          var1 = AccountCreationResultPanel.field_ib.getAccountIdentifier((byte) 85);
         }
         if (var1.length() == 0) {
           var1 = AlphaWidgetContainer.l(-112);

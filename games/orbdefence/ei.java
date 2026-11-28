@@ -88,9 +88,9 @@ final class ei {
               var2_int = LabeledWidgetContainer.field_A * (var8.field_s + 60) / og.field_b;
               var3 = -30 + var2_int;
               if (bh.field_b) {
-                jf.a((byte) -20, var3 * -256 / 30, var8, 256 * (var8.field_s - var3) / 30, 199, 245);
+                ValidationStatusIcon.a((byte) -20, var3 * -256 / 30, var8, 256 * (var8.field_s - var3) / 30, 199, 245);
               } else {
-                jf.a((byte) -20, 256 * (-var3 + var8.field_s) / 30, var8, -256 * var3 / 30, 199, 245);
+                ValidationStatusIcon.a((byte) -20, 256 * (-var3 + var8.field_s) / 30, var8, -256 * var3 / 30, 199, 245);
               }
             }
           }

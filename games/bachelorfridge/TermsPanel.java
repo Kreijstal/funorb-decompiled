@@ -122,11 +122,11 @@ final class TermsPanel extends WidgetContainer implements TextHotspotListener, W
           var4 = new DefaultWidgetRenderer(jca.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, jca.field_a.field_u, -1, 2147483647, true);
           this.field_D = new LinkTextWidget(var7, var4);
           this.field_D.tooltip = "";
-          this.field_D.a(1, 0, rt.field_b);
-          this.field_D.a(1, 1, rt.field_b);
+          this.field_D.setHotspotTooltip(1, 0, rt.field_b);
+          this.field_D.setHotspotTooltip(1, 1, rt.field_b);
           this.field_D.width = this.width - 40;
           this.field_D.listener = (WidgetListener) (this);
-          this.field_D.a(var3, this.width - 40, 26, (byte) -50);
+          this.field_D.setTextBounds(var3, this.width - 40, 26, (byte) -50);
           var3 = var3 + (15 + this.field_D.height);
           this.addChild(this.field_D, -126);
           var5 = 4;

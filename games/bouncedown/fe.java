@@ -213,7 +213,7 @@ final class fe {
           this.field_c = (WidgetRenderer) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new qi();
-          var17.a(var4, (byte) -122);
+          var17.copyStyleTo(var4, (byte) -122);
           this.field_d = param1;
           this.field_h = 3;
           this.field_m = 5592405;
@@ -248,7 +248,7 @@ final class fe {
           discarded$0 = new sj(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new vg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qi();
-          var17.a(var8, (byte) -122);
+          var17.copyStyleTo(var8, (byte) -122);
           var8.b(-1, 0).a(TextLayout.a(15658734, 10066329, 67, 7829367), -1).a(1118481, param0 ^ -34).a(-1, (byte) -49);
           var8.b(param0 ^ -33, 4).a(true, (byte) -61).a(var5, -1);
           this.field_e = (WidgetRenderer) ((Object) var8);

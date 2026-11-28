@@ -27,7 +27,7 @@ final class tc {
           if (nh.a(false, param1)) {
             return true;
           }
-          var9 = kk.field_V;
+          var9 = ValidationStatusWidget.field_V;
           var8 = var9;
           var7 = var8;
           var2 = var7;

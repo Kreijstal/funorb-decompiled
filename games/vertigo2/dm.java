@@ -116,7 +116,7 @@ final class dm extends UiPanel {
               ArchiveRequest.field_w[0].field_m = false;
               var7 = var4.field_o;
               ArchiveRequest.field_w[0].field_i = null;
-              ArchiveRequest.field_w[0].field_l = qe.field_V;
+              ArchiveRequest.field_w[0].field_l = ValidationStatusWidget.field_V;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 ArchiveRequest.field_w[var8_int].field_l = var27.readString(param0 + 128);
                 ArchiveRequest.field_w[var8_int].field_m = false;
@@ -162,7 +162,7 @@ final class dm extends UiPanel {
                   }
                   if (var21 != null &&
                     PasswordValidator.a(var21, true)) {
-                    var8[1][var13] = qe.field_V;
+                    var8[1][var13] = ValidationStatusWidget.field_V;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;

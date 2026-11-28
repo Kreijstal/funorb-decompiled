@@ -167,7 +167,7 @@ final class fh {
         this.field_t = (WidgetActionListener) ((Object) var17);
         var17.field_e = 16777215;
         hf var4 = new hf();
-        var17.a(var4, -46);
+        var17.copyStyleTo(var4, -46);
         var4.field_r = 11711154;
         this.field_v = 3;
         this.field_u = 5592405;
@@ -206,7 +206,7 @@ final class fh {
           discarded$0 = new f(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new sk(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new hf();
-          var17.a(var8, -32);
+          var17.copyStyleTo(var8, -32);
           var8.a(0, 3).a(hl.a((byte) -81, 15658734, 10066329, 7829367), (byte) 45).b(1118481, true).a(-19426, -1);
           var8.a(4, 3).a(-86, true).a(var5, (byte) 45);
           this.field_i = (WidgetActionListener) ((Object) var8);

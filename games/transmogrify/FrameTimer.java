@@ -35,7 +35,7 @@ abstract class FrameTimer {
         try {
           he.b((byte) -87);
           ResourceArchive.field_f.closeAllDialogs(31410);
-          ok.field_a = new LoginPanel(ob.field_F, (String) null, lb.field_d, param3, param1);
+          ok.field_a = new LoginPanel(ValidationStatusWidget.field_F, (String) null, lb.field_d, param3, param1);
           l.field_d = new StandardContentDialog(ResourceArchive.field_f, ok.field_a);
           ResourceArchive.field_f.showDialog((UiWidget) (l.field_d), (byte) -71);
           int var4_int = 70 % ((param0 - 41) / 32);

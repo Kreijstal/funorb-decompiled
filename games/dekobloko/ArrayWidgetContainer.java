@@ -547,14 +547,14 @@ abstract class ArrayWidgetContainer extends UiComponent implements WidgetContain
               integerLocal20 != 0) {
               stringLocal15 = stringLocal14;
             }
-            sceneWidgetPart014Local16 = UiComponentPart011.computeSceneWidgetPart0140551(-3805, stringLocal14);
+            sceneWidgetPart014Local16 = ValidationStatusIcon.computeSceneWidgetPart0140551(-3805, stringLocal14);
             stringLocal18 = cipherPacketBufferLocal8.readNullTerminatedString((byte) -38);
             stringLocal19 = ComponentContainer.computeString0894((CharSequence) ((Object) stringLocal14), (byte) 2);
             if (null == stringLocal19) {
               stringLocal19 = stringLocal14;
             }
             if (null == sceneWidgetPart014Local16) {
-              sceneWidgetPart014Local16 = UiComponentPart011.computeSceneWidgetPart0140551(-3805, stringLocal18);
+              sceneWidgetPart014Local16 = ValidationStatusIcon.computeSceneWidgetPart0140551(-3805, stringLocal18);
               if (null != sceneWidgetPart014Local16) {
                 MixedSupport054.secondaryNodeHashTableState0001.put(sceneWidgetPart014Local16, -1, (long)stringLocal19.hashCode());
               }

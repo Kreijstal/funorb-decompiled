@@ -44,7 +44,7 @@ final class InputAdapter003 {
             stackStringLocal8 = DualNode.stringState0043;
             return stackStringLocal8;
           }
-          sceneWidgetPart014Local4 = UiComponentPart011.computeSceneWidgetPart0140551(-3805, stringArgument2);
+          sceneWidgetPart014Local4 = ValidationStatusIcon.computeSceneWidgetPart0140551(-3805, stringArgument2);
           if (sceneWidgetPart014Local4 == null) {
             stackStringLocal9 = NodeHashTableIterator.substituteIndexedPlaceholders(97, EmailFormatValidator.stringState0258, new String[]{stringArgument2});
             return stackStringLocal9;

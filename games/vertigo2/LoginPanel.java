@@ -96,7 +96,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final void a(byte param0, String param1) {
+    final void setAccountAndClearPassword(byte param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
@@ -117,7 +117,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         if (null != DefaultTextWidgetRenderer.field_o) {
           return DefaultTextWidgetRenderer.field_o;
         }
-        return (java.applet.Applet) ((Object) qe.field_T);
+        return (java.applet.Applet) ((Object) ValidationStatusWidget.field_T);
     }
 
     final void drawWidget(boolean param0, int param1, int param2, int param3) {
@@ -317,7 +317,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final String j(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (null != this.field_H.text) {
           if (param0 != 5607) {
             this.drawWidget(true, 116, -61, 8);
@@ -372,7 +372,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final void i(int param0) {
+    final void clearCredentials(int param0) {
         this.field_H.clearText(param0 ^ param0);
         this.field_O.clearText(0);
     }

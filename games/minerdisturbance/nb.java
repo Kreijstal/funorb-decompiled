@@ -97,7 +97,7 @@ final class nb {
             this.field_e.draw(var6_int, var7_int);
           }
           var6_intLifetime1 = -22 / ((param4 + 35) / 61);
-          var7 = param2.a(param1, (byte) -115);
+          var7 = param2.resolveDisplayText(param1, (byte) -115);
           if (var7 != null &&
             param2.field_k != null &&
             this.field_h >= 0) {

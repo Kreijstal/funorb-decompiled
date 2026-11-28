@@ -38,7 +38,7 @@ final class lk {
         if (param0 <= -30) {
           var1 = "";
           if (mb.field_s != null) {
-            var1 = mb.field_s.d(false);
+            var1 = mb.field_s.getAccountIdentifier(false);
           }
           if (var1.length() == 0) {
             var1 = EditableTextField.g((byte) 123);
@@ -51,7 +51,7 @@ final class lk {
         lk.b(-99);
         var1Lifetime1 = "";
         if (mb.field_s != null) {
-          var1Lifetime1 = mb.field_s.d(false);
+          var1Lifetime1 = mb.field_s.getAccountIdentifier(false);
         }
         if (var1Lifetime1.length() == 0) {
           var1Lifetime1 = EditableTextField.g((byte) 123);

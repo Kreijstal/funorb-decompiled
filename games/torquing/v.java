@@ -189,7 +189,7 @@ final class v {
             }
             this.field_f.draw(var6_int, var7);
           }
-          var6 = param1.c((byte) 65, param2);
+          var6 = param1.resolveDisplayText((byte) 65, param2);
           if (var6 != null &&
             null != param1.field_m) {
             if (0 > this.field_k) {

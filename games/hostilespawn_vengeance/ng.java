@@ -48,7 +48,7 @@ final class ng extends IntrusiveNode {
           fj.field_Sb = param6;
           DialogMessagePane.field_G = param3;
           DropTargetWidgetContainer.field_I = ti.field_b;
-          wj.field_H = null;
+          ValidationStatusIcon.field_H = null;
           uh.field_o = param2;
           ia.field_h = param1;
           return true;
@@ -273,8 +273,8 @@ final class ng extends IntrusiveNode {
                 if (var33 != 0 &&
                   ((oj) (var17)).field_b &&
                   ((oj) (var17)).field_i != 27) {
-                  dupTemp$0 = al.field_U[1] + 1;
-                  al.field_U[1] = dupTemp$0;
+                  dupTemp$0 = ValidationStatusWidget.field_U[1] + 1;
+                  ValidationStatusWidget.field_U[1] = dupTemp$0;
                   if (dupTemp$0 == 30) {
                     ti.a(249, (byte) 10, 6);
                   }

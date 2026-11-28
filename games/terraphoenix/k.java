@@ -39,7 +39,7 @@ final class k {
                 param1 = TextLineMetrics.field_b;
               }
               param0 = 2;
-              mb.field_s.a(ol.field_Hb, -1);
+              mb.field_s.setAccountAndClearPassword(ol.field_Hb, -1);
             }
             var3_int = 1;
             if (param0 == 10) {
@@ -60,7 +60,7 @@ final class k {
                 return;
               }
               if (!qi.field_b) {
-                mb.field_s.g((byte) -107);
+                mb.field_s.clearCredentials((byte) -107);
                 return;
               }
             }

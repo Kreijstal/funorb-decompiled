@@ -9,7 +9,7 @@ final class GameSession {
     static boolean field_D;
     static String field_e;
     TunnelMesh field_x;
-    static od field_f;
+    static MeshData field_f;
     PrimaryNodeDeque field_g;
     PlayerShip field_B;
     static int[] field_C;

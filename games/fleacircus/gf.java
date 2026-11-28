@@ -59,8 +59,8 @@ final class gf {
             if (0 < field_c) {
               fieldTemp$5 = field_c - 1;
               field_c = field_c - 1;
-              var2_ref_byte__ = v.field_U[fieldTemp$5];
-              v.field_U[field_c] = null;
+              var2_ref_byte__ = ValidationStatusWidget.field_U[fieldTemp$5];
+              ValidationStatusWidget.field_U[field_c] = null;
               return var2_ref_byte__;
             }
             if (param1 == 30000 &&
@@ -119,8 +119,8 @@ final class gf {
             if (0 < field_c) {
               fieldTemp$9 = field_c - 1;
               field_c = field_c - 1;
-              var2_ref_byte__ = v.field_U[fieldTemp$9];
-              v.field_U[field_c] = null;
+              var2_ref_byte__ = ValidationStatusWidget.field_U[fieldTemp$9];
+              ValidationStatusWidget.field_U[field_c] = null;
               return var2_ref_byte__;
             }
             if (param1 != 30000) {

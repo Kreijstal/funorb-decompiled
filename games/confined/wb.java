@@ -2044,7 +2044,7 @@ final class wb {
                 }
                 var2 = ha.a("login_createaccount", (byte) 58);
                 if (null != var2) {
-                  ba.field_Q = va.a(0, var2);
+                  ValidationStatusIcon.field_Q = va.a(0, var2);
                 }
                 var2 = ha.a("tohighscores", (byte) 115);
                 if (null != var2) {

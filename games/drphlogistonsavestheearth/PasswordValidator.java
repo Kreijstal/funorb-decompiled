@@ -116,7 +116,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_15_0 = rg.field_b;
             return stackIn_15_0;
           }
-          if (this.b(-113, param1)) {
+          if (this.containsEmailComponent(-113, param1)) {
             stackIn_18_0 = rd.field_E;
             return stackIn_18_0;
           }
@@ -238,7 +238,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = u.field_b;
             return stackIn_7_0;
           }
-          if (!this.b(116, param1)) {
+          if (!this.containsEmailComponent(116, param1)) {
             return ce.field_e;
           }
           stackIn_11_0 = u.field_b;
@@ -257,7 +257,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(int param0, String param1) {
+    private final boolean containsEmailComponent(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

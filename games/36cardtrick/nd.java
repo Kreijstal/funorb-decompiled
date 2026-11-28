@@ -125,7 +125,7 @@ final class nd extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = Main.field_T;
         try {
-          super.a(param2, (byte) -80);
+          super.copyStyleTo(param2, (byte) -80);
           if (param1) {
             return;
           }

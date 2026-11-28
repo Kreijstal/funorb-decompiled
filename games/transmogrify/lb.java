@@ -89,7 +89,7 @@ final class lb {
     final static String a(boolean param0) {
         String var1 = "";
         if (null != ok.field_a) {
-          var1 = ok.field_a.e((byte) 28);
+          var1 = ok.field_a.getAccountIdentifier((byte) 28);
         }
         if (var1.length() == 0) {
           var1 = BufferedSocket.a(-113);

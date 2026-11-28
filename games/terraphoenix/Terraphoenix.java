@@ -133,7 +133,7 @@ public final class Terraphoenix extends GameShell {
               ga.field_k.removeLast((byte) 57);
             }
           }
-          if (!uk.field_b.c(-112)) {
+          if (!uk.field_b.hasMidiData(-112)) {
             stackIn_26_0 = false;
             if (ja.field_i == 0) {
               stackIn_27_1 = 7;
@@ -1650,7 +1650,7 @@ public final class Terraphoenix extends GameShell {
                             ea.a((byte) 47);
                             return;
                           }
-                          DualLinkNode.a(vf.a("", ki.field_S, aj.field_b, vb.field_a, param1 + 4757), (byte) -84, 45.0f);
+                          DualLinkNode.a(vf.a("", ValidationStatusWidget.field_S, aj.field_b, vb.field_a, param1 + 4757), (byte) -84, 45.0f);
                           return;
                         }
                         DualLinkNode.a(vf.a("basic", bl.field_d, ByteStorage.field_d, be.field_w, 4650), (byte) -88, 35.0f);
@@ -1758,7 +1758,7 @@ public final class Terraphoenix extends GameShell {
               GameApplet.field_g = new PcmSample[92];
               break;
             }
-            uk.field_b.a(IntrusiveDeque.field_c, var3, ca.field_a[var5], 128, 0);
+            uk.field_b.prepareTrackSamples(IntrusiveDeque.field_c, var3, ca.field_a[var5], 128, 0);
             var5++;
           } while (var6 == 0);
           var5 = 0;
@@ -2168,7 +2168,7 @@ public final class Terraphoenix extends GameShell {
           WidgetContainer.field_E = new PcmStreamMixer();
           ModalDialogHost.field_I.setRootStream(WidgetContainer.field_E);
           uk.field_b = new MidiPcmStream();
-          uk.field_b.a(9, 128, -51);
+          uk.field_b.setChannelProgram(9, 128, -51);
           WidgetContainer.field_E.addChildStream(uk.field_b);
           this.a(true, false, 13, true, true);
           return;
@@ -4437,8 +4437,8 @@ public final class Terraphoenix extends GameShell {
           StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences((byte) 114);
           RichTextWidget.h(-32015);
-          dd.clearDeclaredStaticReferences((byte) 121);
-          ki.clearDeclaredStaticReferences((byte) -112);
+          ValidationStatusIcon.clearDeclaredStaticReferences((byte) 121);
+          ValidationStatusWidget.clearDeclaredStaticReferences((byte) -112);
           df.clearDeclaredStaticReferences((byte) -106);
           TextFieldValidator.clearStaticReferences((byte) 125);
           fm.clearStaticReferences(-19266);
@@ -5333,7 +5333,7 @@ public final class Terraphoenix extends GameShell {
             fg.field_f.drawOpaque(0, 0);
             if (bk.c(-25704)) {
               var6 = FrameTimer.field_f;
-              var7_ref_String = dd.field_N;
+              var7_ref_String = ValidationStatusIcon.field_N;
               var8_int = 90 + var6.field_s + 126;
               var6.drawCentred(var7_ref_String, 320, var8_int, 16777215, 0);
               if (bk.c(param0 - 16802664)) {
@@ -6728,7 +6728,7 @@ public final class Terraphoenix extends GameShell {
           }
           this.v(0);
           this.i((byte) 109);
-          ki.field_ab.drawOpaque(0, 0);
+          ValidationStatusWidget.field_ab.drawOpaque(0, 0);
           SoftwareRasterizer.setClip(0, 425, 640, 480);
           od.field_e.drawOpaque(0, 0);
           SoftwareRasterizer.resetClip();
@@ -6955,9 +6955,9 @@ public final class Terraphoenix extends GameShell {
 
     private final void v(int param0) {
         try {
-          ki.field_T.drawOpaque(-(rk.field_c >> 1) + 305, 77);
+          ValidationStatusWidget.field_T.drawOpaque(-(rk.field_c >> 1) + 305, 77);
           SoftwareRasterizer.fillRectangleAlpha(-(rk.field_c >> 1) + 320, 77, rk.field_c, 362, param0, 192);
-          ki.field_T.drawOpaque(320 + (rk.field_c >> 1), 77);
+          ValidationStatusWidget.field_T.drawOpaque(320 + (rk.field_c >> 1), 77);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "Terraphoenix.BB(" + param0 + ')');
         }
@@ -8171,7 +8171,7 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2)) {
-            ki.i(param0 ^ -28507);
+            ValidationStatusWidget.i(param0 ^ -28507);
             decompiledFrameRemainder12 = (var10 != 0);
           }
           if ((decompiledFrameRemainder12) &&
@@ -8726,7 +8726,7 @@ public final class Terraphoenix extends GameShell {
           jh.field_q[incrementValue$43] = qb.a("act4start3", (byte) -36, "", ab.field_a);
           bj.field_e = il.a("instructionbbar", "menu_graphics", ab.field_a, -1);
           FrameTimer.field_e = il.a("interfacebbar", "menu_graphics", ab.field_a, param0 ^ 2019);
-          ki.field_T = il.a("interfacevbar", "menu_graphics", ab.field_a, -1);
+          ValidationStatusWidget.field_T = il.a("interfacevbar", "menu_graphics", ab.field_a, -1);
           SectorCacheStore.field_b = il.a("ingametop", "", ab.field_a, -1);
           fh.field_c = il.a("unachieved", "basic", ByteStorage.field_d, param0 + 2019);
           ByteStorage.field_b = il.a("locked", "basic", ByteStorage.field_d, param0 + 2019);
@@ -8752,7 +8752,7 @@ public final class Terraphoenix extends GameShell {
           lm.field_g = qb.a("title_instructions", (byte) -36, "menu_graphics", ab.field_a);
           qb.field_c = qb.a("title_achievements", (byte) -36, "menu_graphics", ab.field_a);
           pc.field_e = qb.a("title_missionbrief", (byte) -36, "menu_graphics", ab.field_a);
-          ki.field_ab = qb.a("title_missionselect", (byte) -36, "menu_graphics", ab.field_a);
+          ValidationStatusWidget.field_ab = qb.a("title_missionselect", (byte) -36, "menu_graphics", ab.field_a);
           AgeValidator.field_p = qb.a("title_debriefing", (byte) -36, "menu_graphics", ab.field_a);
           PcmResampler.field_g = il.a("introbase", "menu_graphics", ab.field_a, -1);
           u.field_e = ig.a(ab.field_a, param0 ^ -2020, "zmasks", "");

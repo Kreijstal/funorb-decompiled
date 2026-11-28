@@ -42,7 +42,7 @@ class cf extends DualLinkNode {
             cf.a((fc) null, (byte) -22);
           }
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "cf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "cf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

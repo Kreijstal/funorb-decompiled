@@ -48,7 +48,7 @@ final class he extends IntrusiveNode {
               } else {
                 var4 = args;
                 ByteStorage.a(false, var4);
-                de.field_a = ve.createAccountSuggestionsResult(args, (byte) -128);
+                de.field_a = ValidationStatusIcon.createAccountSuggestionsResult(args, (byte) -128);
               }
             }
           }

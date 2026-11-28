@@ -10,7 +10,7 @@ final class da extends ArchiveProvider {
     private byte[] field_u;
     private ArchiveIndex field_n;
     private int field_v;
-    static bn[] field_w;
+    static MeshData[] field_w;
     private SectorCacheStore field_z;
     static int field_F;
     private SectorCacheStore field_h;
@@ -424,7 +424,7 @@ final class da extends ArchiveProvider {
           }
           if (null == ArchiveIndex.field_a) {
             if (DirectByteStorage.field_f) {
-              if (ea.i((byte) -121) > 30000L) {
+              if (ValidationStatusWidget.i((byte) -121) > 30000L) {
                 n.field_c = nc.field_Q;
                 if (var13 != 0) {
                   n.field_c = li.field_b;
@@ -1154,7 +1154,7 @@ final class da extends ArchiveProvider {
           if (param0 >= -105) {
             da.e(65);
           }
-          stackIn_4_0 = ea.field_bb.field_Fb;
+          stackIn_4_0 = ValidationStatusWidget.field_bb.field_Fb;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

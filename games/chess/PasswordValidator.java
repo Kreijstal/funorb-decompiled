@@ -47,7 +47,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_16_0 = de.field_b;
             return stackIn_16_0;
           }
-          if (this.b((byte) -108, param0)) {
+          if (this.containsEmailComponent((byte) -108, param0)) {
             stackIn_20_0 = MouseWheelInput.field_e;
             return stackIn_20_0;
           }
@@ -96,7 +96,7 @@ final class PasswordValidator extends TextFieldValidator {
         return ic.field_e;
     }
 
-    private final boolean b(byte param0, String param1) {
+    private final boolean containsEmailComponent(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -170,7 +170,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = qk.field_b;
             return stackIn_7_0;
           }
-          if (!this.b((byte) -94, param1)) {
+          if (!this.containsEmailComponent((byte) -94, param1)) {
             stackIn_12_0 = ProxyAuthenticationRequiredException.field_a;
             return stackIn_12_0;
           }

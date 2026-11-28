@@ -250,7 +250,7 @@ final class RichTextLayout extends TextLayout {
               var15.field_d[var14.length()] = param3.stringWidth(var14);
               stackIn_39_0 = (BitmapFont) (param3);
               if (3 == param0) {
-                stackIn_40_1 = this.a(var14, true, param6, param3.stringWidth(var14));
+                stackIn_40_1 = this.computeJustificationStep(var14, true, param6, param3.stringWidth(var14));
               } else {
                 stackIn_40_1 = 0;
               }

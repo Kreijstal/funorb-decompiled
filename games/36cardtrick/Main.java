@@ -1724,7 +1724,7 @@ public final class Main extends c {
           DraggableWidgetContainer.field_D.drawDownscaledAreaAveraged(0, 0, var5Lifetime1, var5Lifetime1);
           DraggableWidgetContainer.field_D = null;
           gf.field_e.setAsRasterTarget(200);
-          this.field_I = gl.a("tiles", mh.field_c, "", -13244);
+          this.field_I = ValidationStatusIcon.a("tiles", mh.field_c, "", -13244);
           var6_ref = lh.a("canyonmask2", mh.field_c, "", 120);
           var7 = var6_ref.field_c;
           var6_ref.field_c = 0;
@@ -1760,7 +1760,7 @@ public final class Main extends c {
           td.field_c[2] = DelegatingCanvas.a(-127, "lc", "", mh.field_c);
           td.field_c[1] = DelegatingCanvas.a(-127, "go", "", mh.field_c);
           db.field_o = DelegatingCanvas.a(-126, "gunsight", "", mh.field_c);
-          ResourceArchive.field_a = gl.a("achievements", mh.field_c, "", -13244);
+          ResourceArchive.field_a = ValidationStatusIcon.a("achievements", mh.field_c, "", -13244);
           var8 = ResourceArchive.field_a;
           var9_int = 0;
           do {
@@ -2214,8 +2214,8 @@ public final class Main extends c {
           StripedProgressWidget.resetStaticState(2);
           NameSuggestionsPanel.resetStaticState(-10790);
           RichTextWidget.clearDeclaredStaticReferences(param0 ^ -74);
-          gl.clearDeclaredStaticReferences(1);
-          pa.clearStaticReferences((byte) -78);
+          ValidationStatusIcon.clearDeclaredStaticReferences(1);
+          ValidationStatusWidget.clearStaticReferences((byte) -78);
           ua.clearDeclaredStaticReferences(72);
           TextFieldValidator.clearStaticReferences(1);
           s.clearStaticReferences(30235);
@@ -2612,7 +2612,7 @@ public final class Main extends c {
         var3 = field_T;
         try {
           var1 = NetworkArchiveRequest.field_r;
-          while (gl.b(true)) {
+          while (ValidationStatusIcon.b(true)) {
             var1.writeCipheredByte(8, 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
@@ -2695,7 +2695,7 @@ public final class Main extends c {
               }
             }
             if (decompiledFrameRemainder0) {
-              stackIn_36_0 = gl.a(false);
+              stackIn_36_0 = ValidationStatusIcon.a(false);
             }
             if (!stackIn_36_0) {
               return false;

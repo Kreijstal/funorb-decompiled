@@ -423,7 +423,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (TextLayout.a(21549)) {
           var3 = qd.d(-31137) * 1200;
           if (this.field_n ||
-            !(ea.h((byte) -16) <= var3) &&
+            !(ValidationStatusWidget.h((byte) -16) <= var3) &&
             !(var3 >= ib.a(true))) {
             this.field_n = false;
             ImageProducerRasterBuffer.d(65280);
@@ -635,7 +635,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         this.setBackground(java.awt.Color.black);
         RichTextWidget.field_V = this.field_v;
         sc.a(RichTextWidget.field_V, false);
-        jn.initializeNetworkState(this.field_u, MatchingFieldValidator.field_l, this.field_w, RichTextWidget.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
+        ValidationStatusIcon.initializeNetworkState(this.field_u, MatchingFieldValidator.field_l, this.field_w, RichTextWidget.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
         DebouncedFieldValidator.a(350, this.field_w, RichTextWidget.field_V, param4, this.field_r, MatchingFieldValidator.field_l, this.field_q, this.field_x, this.field_m);
         DateInputWidget.g((byte) 69);
         GuestPlayConfirmationForm.field_L = sa.createMouseWheelInput(param6 + 28);

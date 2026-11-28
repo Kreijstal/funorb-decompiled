@@ -201,7 +201,7 @@ final class MixedSupport014 {
           if (0 == mixedSupport056Argument1.integerState0290 &&
             !Js5ArchiveManager.computeBoolean1100(-18163) &&
             MixedSupport016.sceneWidgetPart013State0001 == null &&
-            null == UiComponentPart011.sceneWidgetPart013State0002) {
+            null == ValidationStatusIcon.sceneWidgetPart013State0002) {
             if (!PacketBuffer.booleanState0228) {
               mixedSupport099Local17 = SceneWidget.mixedSupport099State0001;
               stringLocal18 = GameDomainSupport006.stringState0629;

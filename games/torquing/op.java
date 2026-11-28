@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class op extends wk implements ec {
+final class op extends wk implements TextureProvider {
     private ResourceArchive field_m;
     private ResourceArchive field_p;
     private boolean field_o;
@@ -12,7 +12,7 @@ final class op extends wk implements ec {
     static int field_j;
     static int field_i;
 
-    public final int[] a(int param0, float param1) {
+    public final int[] getTexturePixels(int param0, float param1) {
         vm var3;
         vm stackIn_4_0;
         Object stackIn_4_1;
@@ -187,11 +187,11 @@ final class op extends wk implements ec {
         }
     }
 
-    public final boolean d(int param0) {
+    public final boolean hasTexture(int param0) {
         return !this.a(param0, (byte) 98).field_g;
     }
 
-    public final int c(int param0) {
+    public final int getTextureAlphaMode(int param0) {
         return this.a(param0, (byte) 98).field_j;
     }
 
@@ -228,11 +228,11 @@ final class op extends wk implements ec {
         }
     }
 
-    public final int b(int param0) {
+    public final int getAverageTextureColor(int param0) {
         return this.a(param0, (byte) 98).field_d & 65535;
     }
 
-    public final boolean a(int param0) {
+    public final boolean isTextureSize64(int param0) {
         if (this.field_o) {
           return true;
         }

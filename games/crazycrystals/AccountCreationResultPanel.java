@@ -74,7 +74,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
           var7.setLoopCount(-1);
           aa.field_a = new am(var7);
           NameSuggestionsPanel.field_F = je.field_j;
-          sb.field_F = b.field_a;
+          ValidationStatusIcon.field_F = b.field_a;
           fl.field_g = fp.field_a;
           int var2 = 110 % ((param0 - 27) / 50);
           sm.field_e = LevelProgressUpdate.field_h;
@@ -152,7 +152,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
                 this.replaceContent((UiWidget) (var5), (byte) -50);
                 return;
               }
-              var5.addActionButton(sb.field_C, (byte) -124, 9);
+              var5.addActionButton(ValidationStatusIcon.field_C, (byte) -124, 9);
             } else {
               var5.addActionButton(ik.field_f, (byte) -124, 7);
             }

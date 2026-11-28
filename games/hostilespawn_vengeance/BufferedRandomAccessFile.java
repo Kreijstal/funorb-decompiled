@@ -30,7 +30,7 @@ final class BufferedRandomAccessFile {
         int var1 = -119 % ((25 - param0) / 59);
         String var2 = "";
         if (null != ib.field_e) {
-          var2 = ib.field_e.k(80);
+          var2 = ib.field_e.getAccountIdentifier(80);
         }
         if (var2.length() == 0) {
           var2 = SpriteBase.getPlayerDisplayName(-30519);

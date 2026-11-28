@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class stellarshard extends rb implements cf {
+public final class stellarshard extends rb implements TextureProvider {
     private int field_M;
     private int field_O;
     private Quaternion field_H;
@@ -34,7 +34,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    public final int a(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -51,7 +51,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    public final int[] a(boolean param0, int param1, float param2) {
+    public final int[] getTexturePixels(boolean param0, int param1, float param2) {
         RuntimeException var4 = null;
         int[] stackIn_2_0 = null;
         int[] stackIn_4_0 = null;
@@ -70,7 +70,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    public final boolean b(int param0, int param1) {
+    public final boolean isTextureSize64(int param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -155,7 +155,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    public final boolean a(int param0, byte param1) {
+    public final boolean hasTexture(int param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -668,7 +668,7 @@ public final class stellarshard extends rb implements cf {
             ll.a(16);
             tc.field_r = 0;
             qi.level = 0;
-            TriangleRasterizer.setTextureProvider((cf) (this));
+            TriangleRasterizer.setTextureProvider((TextureProvider) (this));
             this.a(true, -113, false, false, true);
             return;
           }
@@ -3011,8 +3011,8 @@ public final class stellarshard extends rb implements cf {
           StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences(160);
           RichTextWidget.clearStaticReferences(true);
-          ii.clearStaticReferences((byte) 25);
-          cd.clearStaticReferences((byte) 122);
+          ValidationStatusIcon.clearStaticReferences((byte) 25);
+          ValidationStatusWidget.clearStaticReferences((byte) 122);
           nd.clearStaticReferences(-94);
           TextFieldValidator.clearStaticReferences(67);
           aj.clearStaticReferences((byte) 101);
@@ -3115,7 +3115,7 @@ public final class stellarshard extends rb implements cf {
         int[] var5_ref_int__ = null;
         int var6_int = 0;
         Object var6 = null;
-        pa var7 = null;
+        MeshData var7 = null;
         Sprite var7_ref = null;
         int var8_int = 0;
         int[] var8 = null;
@@ -3269,7 +3269,7 @@ public final class stellarshard extends rb implements cf {
             kl.field_k = 16777215;
             NameSuggestionsPanel.field_G = 10742263;
             if (param1 >= -60) {
-              this.a(70, -17);
+              this.getAverageTextureColor(70, -17);
             }
             DialogMessagePane.field_L = MouseWheelInput.field_c;
             lg.field_b = 5883647;
@@ -3335,99 +3335,99 @@ public final class stellarshard extends rb implements cf {
             var3 = null;
             var4_int = 0;
             if (0 == cg.field_c) {
-              var3 = pa.a(jf.field_m, "", "asteroid_craters_2");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_craters_2");
               var4_int = 0;
             }
             var5 = 1500;
             if (1 == cg.field_c) {
               var4_int = 1;
-              var3 = pa.a(jf.field_m, "", "asteroid_craters_3");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_craters_3");
             }
             if (2 == cg.field_c) {
               var4_int = 0;
-              var3 = pa.a(jf.field_m, "", "asteroid_iron_2");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_iron_2");
             }
             if (3 == cg.field_c) {
-              var3 = pa.a(jf.field_m, "", "asteroid_iron_3");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_iron_3");
               var4_int = 1;
             }
             if (cg.field_c == 4) {
               var4_int = 0;
-              var3 = pa.a(jf.field_m, "", "asteroid_ice_2");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_ice_2");
             }
             if (5 == cg.field_c) {
-              var3 = pa.a(jf.field_m, "", "asteroid_ice_3");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_ice_3");
               var4_int = 1;
             }
             if (cg.field_c == 6) {
               var4_int = 1;
               var5 = 2000;
-              var3 = pa.a(jf.field_m, "", "shooter_hub");
+              var3 = MeshData.load(jf.field_m, "", "shooter_hub");
             }
             if (cg.field_c == 7) {
               var5 = 2000;
-              var3 = pa.a(jf.field_m, "", "homer_hub");
+              var3 = MeshData.load(jf.field_m, "", "homer_hub");
               var4_int = 1;
             }
             if (cg.field_c == 8) {
               var5 = 2500;
               var4_int = 2;
-              var3 = pa.a(jf.field_m, "", "asteroid_craters_1");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_craters_1");
             }
             if (cg.field_c == 9) {
               var4_int = 2;
-              var3 = pa.a(jf.field_m, "", "asteroid_iron_1");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_iron_1");
               var5 = 2500;
             }
             if (cg.field_c == 10) {
               var5 = 2500;
-              var3 = pa.a(jf.field_m, "", "asteroid_ice_1");
+              var3 = MeshData.load(jf.field_m, "", "asteroid_ice_1");
               var4_int = 2;
             }
             if (cg.field_c == 11) {
-              var3 = pa.a(jf.field_m, "", "player");
+              var3 = MeshData.load(jf.field_m, "", "player");
               var4_int = 3;
-              rh.field_b = (pa) (var3);
+              rh.field_b = (MeshData) (var3);
             }
             if (12 == cg.field_c) {
-              var3 = pa.a(jf.field_m, "", "shooter");
+              var3 = MeshData.load(jf.field_m, "", "shooter");
               var4_int = 4;
               var5 = 2000;
             }
             if (13 == cg.field_c) {
               var5 = 2000;
-              var3 = pa.a(jf.field_m, "", "homer");
+              var3 = MeshData.load(jf.field_m, "", "homer");
               var4_int = 2;
             }
             if (cg.field_c == 14) {
               var5 = 2500;
-              var3 = pa.a(jf.field_m, "", "gravity_well");
+              var3 = MeshData.load(jf.field_m, "", "gravity_well");
               var4_int = 4;
             }
             if (cg.field_c == 15) {
               var5 = 2500;
-              var3 = pa.a(jf.field_m, "", "spinner");
+              var3 = MeshData.load(jf.field_m, "", "spinner");
               var4_int = 4;
             }
             var6_int = 0;
             boolean decompiledNaturalLoopExit2 = false;
             while (!(decompiledNaturalLoopExit2 = (var6_int >= 128))) {
-              var7 = new pa((pa) (var3), false, false, false, false);
+              var7 = new MeshData((MeshData) (var3), false, false, false, false);
               var8_int = (int)(65536.0 * Math.cos(3.141592653589793 * (double)var6_int / 64.0));
               var9 = (int)(65536.0 * Math.sin((double)var6_int * 3.141592653589793 / 64.0));
               stackIn_177_0 = -4;
               stackIn_177_1 = ~var4_int;
               if (var11 == 0) {
                 if (stackIn_177_0 >= stackIn_177_1) {
-                  var7.a(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
-                  var7.a(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
+                  var7.transformVertices(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
+                  var7.transformVertices(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
                 }
-                var7.a(new int[]{0, 0, 0, var8_int, -var9, 0, var9, var8_int, 0, 0, 0, 65536});
+                var7.transformVertices(new int[]{0, 0, 0, var8_int, -var9, 0, var9, var8_int, 0, 0, 0, 65536});
                 if (var4_int < 3) {
-                  var7.a(new int[]{0, 0, 0, var8_int, 0, -var9, 0, 65536, 0, var9, 0, var8_int});
-                  var7.a(new int[]{0, 0, 0, 65536, 0, 0, 0, var8_int, -var9, 0, var9, var8_int});
+                  var7.transformVertices(new int[]{0, 0, 0, var8_int, 0, -var9, 0, 65536, 0, var9, 0, var8_int});
+                  var7.transformVertices(new int[]{0, 0, 0, 65536, 0, 0, 0, var8_int, -var9, 0, var9, var8_int});
                 }
-                var10_ref_bj = var7.a(128, 341, 50, 50, -50);
+                var10_ref_bj = var7.createModel(128, 341, 50, 50, -50);
                 if (1 == var4_int) {
                   MouseWheelInput.field_d[cg.field_c][var6_int] = new Sprite(96, 96);
                   MouseWheelInput.field_d[cg.field_c][var6_int].bindAsRenderTarget();
@@ -4780,7 +4780,7 @@ public final class stellarshard extends rb implements cf {
         }
     }
 
-    public final int a(byte param0, int param1) {
+    public final int getTextureAlphaMode(byte param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;

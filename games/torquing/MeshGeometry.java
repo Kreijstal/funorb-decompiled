@@ -54,7 +54,7 @@ class MeshGeometry extends pa {
         return fieldTemp$0;
     }
 
-    final static MeshGeometry a(ResourceArchive param0, String param1, String param2) {
+    final static MeshGeometry load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName(-106, param2, param1);
         if (var3 == null) {
           return null;
@@ -62,14 +62,14 @@ class MeshGeometry extends pa {
         return new MeshGeometry(var3);
     }
 
-    final void b() {
+    final void releaseSkinData() {
         this.field_i = null;
         this.field_p = null;
         this.field_w = (int[][]) null;
         this.field_R = (int[][]) null;
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -388,7 +388,7 @@ class MeshGeometry extends pa {
         }
     }
 
-    final int a(int param0) {
+    final int scaleToRadius(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -406,25 +406,25 @@ class MeshGeometry extends pa {
           }
         }
         var2 = (int)(Math.sqrt((double)var2) + 0.99);
-        this.a(param0, param0, param0, var2);
+        this.scaleVertices(param0, param0, param0, var2);
         return var2;
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void scaleVertices(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         for (var5 = 0; var5 < this.field_f; var5++) {
           this.field_M[var5] = this.field_M[var5] * param0 / param3;
           this.field_B[var5] = this.field_B[var5] * param1 / param3;
           this.field_E[var5] = this.field_E[var5] * param2 / param3;
         }
-        this.d();
+        this.clearGeometryCaches();
     }
 
-    final bk a(int param0, int param1, int param2, int param3, int param4) {
+    final bk createModel(int param0, int param1, int param2, int param3, int param4) {
         return (bk) ((Object) new LitModelMesh(this, param0, param1, param2, param3, param4));
     }
 
-    final void a() {
+    final void calculateNormals() {
         bl dupTemp$0 = null;
         int var1;
         int var2;
@@ -528,7 +528,7 @@ class MeshGeometry extends pa {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -947,13 +947,13 @@ class MeshGeometry extends pa {
         }
     }
 
-    private final void d() {
+    private final void clearGeometryCaches() {
         this.field_l = null;
         this.field_h = null;
         this.field_J = null;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int findOrAddVertex(int param0, int param1, int param2) {
         int var4 = 0;
         for (var4 = 0; var4 < this.field_f; var4++) {
           if (this.field_M[var4] == param0 &&
@@ -971,7 +971,7 @@ class MeshGeometry extends pa {
         return this.field_f - 1;
     }
 
-    private final int a(MeshGeometry param0, int param1, short param2) {
+    private final int findOrAddVertex(MeshGeometry param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -999,7 +999,7 @@ class MeshGeometry extends pa {
         return fieldTemp$0;
     }
 
-    final void c() {
+    final void buildSkinGroups() {
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -1075,9 +1075,9 @@ class MeshGeometry extends pa {
         this.field_f = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 
@@ -1303,9 +1303,9 @@ class MeshGeometry extends pa {
               }
               this.field_m[this.vertexCount] = var15.field_m[var12];
               this.field_P[this.vertexCount] = (short)var10;
-              this.vertexX[this.vertexCount] = this.a(var15, var15.vertexX[var12], (short) var10);
-              this.vertexY[this.vertexCount] = this.a(var15, var15.vertexY[var12], (short) var10);
-              this.vertexZ[this.vertexCount] = this.a(var15, var15.vertexZ[var12], (short) var10);
+              this.vertexX[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexX[var12], (short) var10);
+              this.vertexY[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexY[var12], (short) var10);
+              this.vertexZ[this.vertexCount] = this.findOrAddVertex(var15, var15.vertexZ[var12], (short) var10);
               this.vertexCount = this.vertexCount + 1;
             }
           }
@@ -1340,9 +1340,9 @@ class MeshGeometry extends pa {
               this.field_s[this.field_k] = dupTemp$0;
               var14 = dupTemp$0;
               if (var14 == 0) {
-                this.field_u[this.field_k] = (short)this.a(var16, (int) var16.field_u[var17], (short) var12Lifetime1);
-                this.field_n[this.field_k] = (short)this.a(var16, (int) var16.field_n[var17], (short) var12Lifetime1);
-                this.field_x[this.field_k] = (short)this.a(var16, (int) var16.field_x[var17], (short) var12Lifetime1);
+                this.field_u[this.field_k] = (short)this.findOrAddVertex(var16, (int) var16.field_u[var17], (short) var12Lifetime1);
+                this.field_n[this.field_k] = (short)this.findOrAddVertex(var16, (int) var16.field_n[var17], (short) var12Lifetime1);
+                this.field_x[this.field_k] = (short)this.findOrAddVertex(var16, (int) var16.field_x[var17], (short) var12Lifetime1);
               }
               if (var14 >= 1 &&
                 var14 <= 3) {

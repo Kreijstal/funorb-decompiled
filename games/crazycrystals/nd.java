@@ -90,7 +90,7 @@ final class nd {
           var17.field_c = 16777215;
           this.field_n = (WidgetRenderer) ((Object) var17);
           var4 = new fk();
-          var17.a((byte) 119, var4);
+          var17.copyStyleTo((byte) 119, var4);
           this.field_m = param0;
           this.field_b = 15658734;
           this.field_l = 3;
@@ -125,7 +125,7 @@ final class nd {
           discarded$0 = new gk(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ip(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fk();
-          var17.a((byte) 119, var8);
+          var17.copyStyleTo((byte) 119, var8);
           var8.a((byte) 8, 0).a(105, NanoFrameTimer.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
           var8.a((byte) -3, 4).a(false, true).a(69, var5);
           this.field_q = (WidgetRenderer) ((Object) var8);

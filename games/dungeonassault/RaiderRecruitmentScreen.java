@@ -512,9 +512,9 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         op.field_d = new nn(true);
         SpriteAnimationPlayer.field_f = new nn(false);
         IntroSequenceScreen.field_t = new ed(8, 90, 180, 382);
-        sn.field_b = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
-        MouseWheelInput.field_a = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, MatchingFieldValidator.field_r.toUpperCase());
-        NetworkGameClient.field_y = tn.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
+        sn.field_b = ValidationStatusWidget.a(16, 12, IntrusiveNode.field_c, jm.field_i, -107, lk.field_P);
+        MouseWheelInput.field_a = ValidationStatusWidget.a(472, 12, IntrusiveNode.field_c, jm.field_i, -76, MatchingFieldValidator.field_r.toUpperCase());
+        NetworkGameClient.field_y = ValidationStatusWidget.a((164 - jm.field_i.field_y >> 1) + 340, 376, IntrusiveNode.field_c, jm.field_i, -100, sa.field_e);
         hl.field_b = ResizableModalDialog.a(22, param0 ^ 38, 65, uj.field_c, SpriteAnimationPlayer.field_f);
         hi.field_a = ResizableModalDialog.a(55, 109, 65, gd.field_E, SpriteAnimationPlayer.field_f);
         kl.field_h = ResizableModalDialog.a(86, 104, 65, jj.field_b, SpriteAnimationPlayer.field_f);
@@ -536,7 +536,7 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
         this.a(0, 0);
         this.field_q = new sa(262, 412, 280, 56);
         this.field_q.a(true, lg.field_h, (byte) 91, a.field_m, 16777215);
-        hl.field_b.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{tn.field_U}, ib.field_c, 30496)));
+        hl.field_b.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{ValidationStatusWidget.field_U}, ib.field_c, 30496)));
         hi.field_a.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, ib.field_c, 30496)));
         kl.field_h.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, ib.field_c, param0 ^ 30561)));
         cd.field_d.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{pm.field_n}, ib.field_c, 30496)));

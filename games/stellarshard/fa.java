@@ -56,7 +56,7 @@ final class fa extends IntrusiveNode {
             return;
           }
           while (var4 != null) {
-            ii.a(var4, param0, (byte) 107);
+            ValidationStatusIcon.a(var4, param0, (byte) 107);
             var4 = (u) (ByteStorage.field_c.nextForward((byte) 95));
           }
           return;

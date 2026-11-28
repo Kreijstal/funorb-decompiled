@@ -670,7 +670,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
 
     private final void a(byte param0, MidiPcmStream param1, int param2, int param3) {
         try {
-          param1.b(param3, -1, -129);
+          param1.setChannelGain(param3, -1, -129);
           param1.b(param2, (byte) -110);
           if (param0 > -61) {
             this.nextChildStream();

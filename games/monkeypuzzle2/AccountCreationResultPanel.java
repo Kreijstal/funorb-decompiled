@@ -64,7 +64,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
             if (!this.field_nb) {
               if (5 == param0.statusCode) {
                 var5.addActionButton((byte) -9, 11, NodeHashTableIterator.field_g);
-                var5.addActionButton((byte) 119, 17, vh.field_L);
+                var5.addActionButton((byte) 119, 17, ValidationStatusIcon.field_L);
               } else {
                 var5.addActionButton((byte) -81, -1, ResizableModalDialog.field_E);
               }

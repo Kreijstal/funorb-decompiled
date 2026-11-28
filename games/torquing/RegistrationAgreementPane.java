@@ -31,11 +31,11 @@ final class RegistrationAgreementPane extends WidgetContainer implements TextHot
           var4 = new DefaultTextWidgetRenderer(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
           this.field_D = new RichTextWidget(var7, var4);
           this.field_D.field_n = "";
-          this.field_D.a(0, (byte) -115, Js5Transport.field_e);
-          this.field_D.a(1, (byte) -93, Js5Transport.field_e);
+          this.field_D.setHotspotTooltip(0, (byte) -115, Js5Transport.field_e);
+          this.field_D.setHotspotTooltip(1, (byte) -93, Js5Transport.field_e);
           this.field_D.width = -40 + this.width;
           this.field_D.listener = (WidgetEventListener) (this);
-          this.field_D.a((byte) 46, 26, this.width - 40, var3);
+          this.field_D.setTextBounds((byte) 46, 26, this.width - 40, var3);
           var3 = var3 + (15 + this.field_D.height);
           this.addChild(this.field_D, -6938);
           var5 = 4;

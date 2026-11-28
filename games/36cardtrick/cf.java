@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf implements b {
+final class cf implements TextureProvider {
     static int field_c;
     static byte field_d;
     static String field_a;
     private int[][] field_e;
     static byte[][] field_b;
 
-    public final int[] a(int param0, byte param1, float param2) {
+    public final int[] getTexturePixels(int param0, byte param1, float param2) {
         int var4 = 68 / ((10 - param1) / 37);
         if (param0 < 0) {
           return null;
@@ -47,7 +47,7 @@ final class cf implements b {
         return stackIn_8_0;
     }
 
-    public final boolean d(int param0, int param1) {
+    public final boolean isTextureSize64(int param0, int param1) {
         int var3 = -121 / ((61 - param0) / 34);
         return false;
     }
@@ -91,21 +91,21 @@ final class cf implements b {
         }
     }
 
-    public final boolean a(int param0, int param1) {
+    public final boolean hasTexture(int param0, int param1) {
         if (param1 != 3) {
           return false;
         }
         return true;
     }
 
-    public final int b(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         if (param0 > -58) {
           return 91;
         }
         return 63;
     }
 
-    public final int c(int param0, int param1) {
+    public final int getTextureAlphaMode(int param0, int param1) {
         if (param1 > -92) {
           cf.a((byte) 1, '￩');
           return 0;

@@ -168,7 +168,7 @@ final class MixedSupport138 {
         integerLocal29 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           BirthDateValidator.performAction1350(RenderingSupport001.integerState0064, 109);
-          if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
+          if (ValidationStatusIcon.sceneWidgetPart013State0002 != null) {
             MixedSupport039.sceneWidgetState0030.integerState0915 = 0;
             sceneWidgetLocal31 = MixedSupport039.sceneWidgetState0030;
             sceneWidgetLocal33 = sceneWidgetLocal31;
@@ -271,7 +271,7 @@ final class MixedSupport138 {
                   MixedSupport108.booleanArrayState0009[integerLocal30] = false;
                   integerLocal30++;
                 }
-                MixedSupport127.performAction1629(-1, true, -1, 0, -1, MixedSupport063.integerState0336, UiComponentPart011.sceneWidgetPart013State0002, false);
+                MixedSupport127.performAction1629(-1, true, -1, 0, -1, MixedSupport063.integerState0336, ValidationStatusIcon.sceneWidgetPart013State0002, false);
                 if (!(2 > PasswordValidator.integerState0776) &&
                   MixedSupport011.booleanArrayState0002[12]) {
                   LobbyRoomRow.booleanState0207 = true;
@@ -321,7 +321,7 @@ final class MixedSupport138 {
           if (integerArgument4 != 48) {
             MixedSupport138.performAction1721(49, 2, 67);
           }
-          if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
+          if (ValidationStatusIcon.sceneWidgetPart013State0002 != null) {
             if (ComponentDecorator.sceneWidgetState0078.integerState0891 != 0) {
               MixedSupport131.performAction1671(integerArgument1, integerArgument4 ^ 52);
             }
@@ -332,7 +332,7 @@ final class MixedSupport138 {
                 MixedSupport122.performAction1603(integerArgument1, true);
               }
             }
-            MixedSupport081.performAction1030(UiComponentPart011.sceneWidgetPart013State0002, true, integerArgument1, (byte) -127);
+            MixedSupport081.performAction1030(ValidationStatusIcon.sceneWidgetPart013State0002, true, integerArgument1, (byte) -127);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal37) {

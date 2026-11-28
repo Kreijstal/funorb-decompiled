@@ -330,7 +330,7 @@ final class ro extends kl {
         }
         this.field_n = null;
         this.field_s.b((byte) 30);
-        this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -jm.field_i.field_v + this.field_i + this.field_j, IntrusiveNode.field_c, jm.field_i, -124, tf.field_g);
+        this.field_s = ValidationStatusWidget.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), -jm.field_i.field_v + this.field_i + this.field_j, IntrusiveNode.field_c, jm.field_i, -124, tf.field_g);
         this.field_f.addFirst(this.field_s, false);
         this.field_y.a((byte) -19);
         System.gc();
@@ -484,12 +484,12 @@ final class ro extends kl {
           this.field_y = AccountRegistrationPanel.field_M[0];
           this.field_o = new SpriteAnimationPlayer(this.field_y);
           if (this.field_p.field_Y.field_l <= 0) {
-            this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
+            this.field_s = ValidationStatusWidget.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + this.field_j + this.field_i, IntrusiveNode.field_c, jm.field_i, -75, pe.field_n);
             this.field_f.addFirst(this.field_s, false);
             this.field_f.addFirst(this.field_n, false);
             this.field_t = 0;
           } else {
-            this.field_s = tn.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_j + this.field_i - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -47, hj.field_X);
+            this.field_s = ValidationStatusWidget.a(this.field_k + (-jm.field_i.field_y + this.field_a >> 1), this.field_j + this.field_i - jm.field_i.field_v, IntrusiveNode.field_c, jm.field_i, -47, hj.field_X);
             this.field_f.addFirst(this.field_s, false);
             this.field_t = 5;
           }
@@ -517,7 +517,7 @@ final class ro extends kl {
 
     private final void d(byte param0) {
         this.field_s.b((byte) 30);
-        this.field_s = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + (this.field_i + this.field_j), IntrusiveNode.field_c, jm.field_i, -64, tf.field_g);
+        this.field_s = ValidationStatusWidget.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -jm.field_i.field_v + (this.field_i + this.field_j), IntrusiveNode.field_c, jm.field_i, -64, tf.field_g);
         if (param0 > -86) {
           this.b((byte) -86);
           this.field_f.addFirst(this.field_s, false);

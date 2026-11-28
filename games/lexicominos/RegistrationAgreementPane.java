@@ -35,7 +35,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -55,11 +55,11 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           var4 = new DefaultTextWidgetRenderer(ResizableModalDialog.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ResizableModalDialog.field_Q.field_E, -1, 2147483647, true);
           this.field_B = new RichTextWidget(var7, var4);
           this.field_B.field_q = "";
-          this.field_B.a(wc.field_b, 0, -27371);
-          this.field_B.a(wc.field_b, 1, -27371);
+          this.field_B.setHotspotTooltip(wc.field_b, 0, -27371);
+          this.field_B.setHotspotTooltip(wc.field_b, 1, -27371);
           this.field_B.field_j = -40 + this.field_j;
           this.field_B.field_r = (WidgetEventListener) (this);
-          this.field_B.b(26, var3, -2, this.field_j - 40);
+          this.field_B.setTextBounds(26, var3, -2, this.field_j - 40);
           var3 = var3 + (this.field_B.field_v + 15);
           this.addChild((byte) 87, this.field_B);
           var5 = 4;
@@ -69,7 +69,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           this.addChild((byte) -127, this.field_E);
           this.setBounds(var5 + (55 + var3), 300, true, 0, 0);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

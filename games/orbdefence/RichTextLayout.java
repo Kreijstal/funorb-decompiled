@@ -221,7 +221,7 @@ final class RichTextLayout extends TextLayout {
               if (param2 != 3) {
                 stackIn_41_1 = 0;
               } else {
-                stackIn_41_1 = this.a(var13, param4, param3.stringWidth(var13), (byte) 74);
+                stackIn_41_1 = this.computeJustificationStep(var13, param4, param3.stringWidth(var13), (byte) 74);
               }
               ByteStorage.a(stackIn_40_0, stackIn_41_1, var13, param3, 404465128);
             }

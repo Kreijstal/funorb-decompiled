@@ -31,7 +31,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
 
     private final void a(MidiPcmStream param0, int param1, int param2, int param3) {
         try {
-          param0.a(param1, param3, (byte) -82);
+          param0.setChannelGain(param1, param3, (byte) -82);
           param0.b(param2, 0);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "tc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -225,7 +225,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_o = param3;
               if (param3 != null) {
-                this.field_A.a(param3, param0 ^ 1917, false);
+                this.field_A.playTrack(param3, param0 ^ 1917, false);
                 this.a(this.field_A, param4, param1, param0 ^ -22200);
               }
             } else {
@@ -234,7 +234,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_x = param3;
               if (param3 != null) {
-                this.field_B.a(param3, param0 ^ 1917, false);
+                this.field_B.playTrack(param3, param0 ^ 1917, false);
                 this.a(this.field_B, param4, param1, param0 ^ -22200);
               }
             }
@@ -272,7 +272,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_49_1 = (MusicTrack) (param3);
               stackIn_49_2 = 20938;
               stackIn_50_3 = !(param5);
-              ((MidiPcmStream) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_49_2, stackIn_50_3);
+              ((MidiPcmStream) (Object) stackIn_49_0).playTrack(stackIn_49_1, stackIn_49_2, stackIn_50_3);
               this.a(this.field_B, param4, param1, -1);
             }
             this.field_p = -param2;
@@ -286,7 +286,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_40_1 = (MusicTrack) (param3);
               stackIn_40_2 = param0 - 1261;
               stackIn_41_3 = !(param5);
-              ((MidiPcmStream) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_41_3);
+              ((MidiPcmStream) (Object) stackIn_40_0).playTrack(stackIn_40_1, stackIn_40_2, stackIn_41_3);
               this.a(this.field_A, param4, param1, -1);
             }
             this.field_p = param2;

@@ -674,7 +674,7 @@ final class vg {
           qf.field_d = -1;
         }
         if (3 == this.field_i) {
-          ob.a(1, 2, sg.field_p, this.field_f);
+          ValidationStatusWidget.a(1, 2, sg.field_p, this.field_f);
         }
         if ((this.field_i == 2 ||
           this.field_i == 6) &&

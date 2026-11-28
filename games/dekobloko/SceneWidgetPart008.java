@@ -183,7 +183,7 @@ final class SceneWidgetPart008 extends SceneWidget {
           integerLocal2 = 0;
         }
         if (TextHotspotBounds.integerState0585 == 0 &&
-          null != UiComponentPart011.sceneWidgetPart013State0002) {
+          null != ValidationStatusIcon.sceneWidgetPart013State0002) {
           integerLocal2 = 0;
         }
         if (2 == TextHotspotBounds.integerState0585 &&

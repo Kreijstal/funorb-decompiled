@@ -290,7 +290,7 @@ final class hc {
               }
             }
           }
-          pk.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
+          ValidationStatusWidget.field_ab = PcmOutputWorker.field_d - (var3_intLifetime1 >> 1);
           GameApplet.field_h = PcmOutputWorker.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_d = (g.field_l + EditableTextField.field_N << 1) * DraggableWidgetContainer.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {

@@ -41,7 +41,7 @@ final class eb {
           var1_int = be.field_t;
           var2 = 0;
           if (TextFieldValidator.field_j == 2) {
-            var3_long = gk.correctedCurrentTimeMillis(95) - qe.field_cb;
+            var3_long = gk.correctedCurrentTimeMillis(95) - ValidationStatusWidget.field_cb;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;

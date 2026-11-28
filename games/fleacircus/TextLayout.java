@@ -7,7 +7,7 @@ abstract class TextLayout {
     static int[] field_b;
     static fh field_d;
 
-    final int a(int param0, String param1, int param2, int param3) {
+    final int computeJustificationStep(int param0, String param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

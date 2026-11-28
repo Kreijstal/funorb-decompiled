@@ -66,7 +66,7 @@ final class sa {
             }
             this.field_e.draw(var6_int, var7);
           }
-          var6 = param0.a((byte) -95, param3);
+          var6 = param0.resolveDisplayText((byte) -95, param3);
           if (var6 != null &&
             param0.field_g != null &&
             this.field_i >= 0) {

@@ -34,7 +34,7 @@ final class al extends IntrusiveNode {
           if (0 != param1.field_j ||
             param1.field_a != 0) {
             for (var2_int = 0; field_p > var2_int; var2_int++) {
-              var3 = kc.field_K[var2_int];
+              var3 = ValidationStatusIcon.field_K[var2_int];
               if (var3.field_i == 2 &&
                 var3.field_j == param1.field_j &&
                 param1.field_a == var3.field_a) {

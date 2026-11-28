@@ -61,7 +61,7 @@ public final class TorChallenge extends GameClientBase {
         int var12 = 0;
         var12 = field_F ? 1 : 0;
         try {
-          tk.a(param0 + 101);
+          ValidationStatusIcon.a(param0 + 101);
           SecondaryNodeDequeIterator.field_e = FullscreenFocusCanvas.a(SingleChildWidgetContainer.field_C, PasswordValidator.field_q, "", "small_font", false);
           ph.field_o = new Sprite[7];
           ph.field_o[0] = qk.a("", "overlay_title", SingleChildWidgetContainer.field_C, TorChallenge.a(param0, 1));
@@ -73,10 +73,10 @@ public final class TorChallenge extends GameClientBase {
           ph.field_o[6] = qk.a("", "overlay_levels", SingleChildWidgetContainer.field_C, 0);
           ri.field_j = qk.a("", "overlay_title_tile", SingleChildWidgetContainer.field_C, param0 ^ 1);
           DebouncedFieldValidator.field_i = ResizableModalDialog.a("frame", 26, "", SingleChildWidgetContainer.field_C);
-          dh.field_cb = new Sprite[2][];
+          ValidationStatusWidget.field_cb = new Sprite[2][];
           GzipDecoder.field_a = ResizableModalDialog.a("main_menu_frame", param0 + 123, "", SingleChildWidgetContainer.field_C);
-          dh.field_cb[0] = GzipDecoder.field_a;
-          dh.field_cb[1] = SpriteLoader.a(-127, "char_select_frame_selected", "", SingleChildWidgetContainer.field_C);
+          ValidationStatusWidget.field_cb[0] = GzipDecoder.field_a;
+          ValidationStatusWidget.field_cb[1] = SpriteLoader.a(-127, "char_select_frame_selected", "", SingleChildWidgetContainer.field_C);
           ba.field_b = ResizableModalDialog.a("button_frame", 53, "", SingleChildWidgetContainer.field_C);
           aa.field_k = SpriteLoader.a(-127, "nav_frame", "", SingleChildWidgetContainer.field_C);
           ph.field_m = SpriteLoader.a(param0 - 129, "text_frame", "", SingleChildWidgetContainer.field_C);
@@ -112,7 +112,7 @@ public final class TorChallenge extends GameClientBase {
               ie.field_f[1][1] = ni.field_h[1];
               ie.field_f[2][0] = ba.field_d[0];
               ie.field_f[2][1] = ba.field_d[1];
-              dh.field_Y = qk.a("", "menu_slider", SingleChildWidgetContainer.field_C, 0);
+              ValidationStatusWidget.field_Y = qk.a("", "menu_slider", SingleChildWidgetContainer.field_C, 0);
               ProgressMessageDialog.field_xb = DiskCacheWorker.a(SingleChildWidgetContainer.field_C, "", (byte) -127, "intro4_bg");
               hl.a(ProgressMessageDialog.field_xb, false, MatchingFieldValidator.field_m[3][0]);
               break;
@@ -735,7 +735,7 @@ public final class TorChallenge extends GameClientBase {
         try {
           this.a(false, 11, 2, 3, false, 0, 1, 39);
           var2 = new MidiPcmStream();
-          var2.b(128, -122, 9);
+          var2.setChannelProgram(128, -122, 9);
           MidiPcmStream.a(22050, 16239, ArchiveRequest.field_u, true, (java.awt.Component) ((Object) LabeledWidgetContainer.field_P), var2);
           TextLayout.field_f = 1;
           qa.field_f = 0;
@@ -1435,7 +1435,7 @@ public final class TorChallenge extends GameClientBase {
               stackIn_99_0 = null;
               if (var4 == 0) {
                 if (stackIn_99_0 != DiskArchiveRequest.field_x[var3_int] &&
-                  !SectorCacheStore.field_a.a(false, ub.field_d, DiskArchiveRequest.field_x[var3_int], cl.field_y, 176400)) {
+                  !SectorCacheStore.field_a.prepareTrackSamples(false, ub.field_d, DiskArchiveRequest.field_x[var3_int], cl.field_y, 176400)) {
                   return false;
                 }
                 var3_int++;
@@ -2023,8 +2023,8 @@ public final class TorChallenge extends GameClientBase {
           StripedProgressWidget.clearDeclaredStaticReferences((byte) 123);
           NameSuggestionsPanel.c(true);
           RichTextWidget.clearDeclaredStaticReferences(-1);
-          tk.clearDeclaredStaticReferences((byte) 87);
-          dh.g(112);
+          ValidationStatusIcon.clearDeclaredStaticReferences((byte) 87);
+          ValidationStatusWidget.g(112);
           hc.clearDeclaredStaticReferences(-110);
           wf.clearStaticReferences((byte) -116);
           RegistrationAgreementPane.clearDeclaredStaticReferences((byte) -36);

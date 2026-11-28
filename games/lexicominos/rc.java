@@ -54,7 +54,7 @@ final class rc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var3), "rc.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var3), "rc.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

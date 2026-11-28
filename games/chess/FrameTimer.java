@@ -2562,7 +2562,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("quickchat_help_title", -115);
                 if (var2 != null) {
-                  ea.field_P = ad.a(-29410, var2);
+                  ValidationStatusWidget.field_P = ad.a(-29410, var2);
                 }
                 var2 = cd.a("quickchat_shortcut_help,0", -114);
                 if (var2 != null) {

@@ -77,9 +77,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var9 = 0;
         int var10 = 0;
         int var3 = TextLineMetrics.a(param2, (byte) -47);
-        int var4 = mi.a(2048, param2);
+        int var4 = ValidationStatusWidget.a(2048, param2);
         int var5 = TextLineMetrics.a(param0, (byte) -47);
-        int var6 = mi.a(2048, param0);
+        int var6 = ValidationStatusWidget.a(2048, param0);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         if (param1 == 0) {

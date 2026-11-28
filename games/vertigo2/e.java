@@ -215,7 +215,7 @@ final class e {
             }
             this.field_h.draw(var6_int, var7);
           }
-          var6 = param4.a((byte) -90, param0);
+          var6 = param4.resolveDisplayText((byte) -90, param0);
           if (var6 != null &&
             null != param4.field_l) {
             if (this.field_k < 0) {

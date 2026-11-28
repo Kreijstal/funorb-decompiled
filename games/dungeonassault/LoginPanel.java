@@ -17,7 +17,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
     private InteractiveWidget field_V;
     private EditableTextField field_R;
 
-    final void i(int param0) {
+    final void clearCredentials(int param0) {
         this.field_O.clearText(72);
         this.field_R.clearText(50);
         if (param0 != 22377) {
@@ -25,7 +25,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountAndClearPassword(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         if (param0 != -12349) {
@@ -87,7 +87,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final String a(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (param0 != -16) {
           return (String) null;
         }
@@ -107,7 +107,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 55) {
-            this.a(-70);
+            this.getAccountIdentifier(-70);
           }
           if (super.handleKey(param0, param1, param2, (byte) 61)) {
             return true;

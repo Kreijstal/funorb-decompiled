@@ -74,7 +74,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                 param0 = mc.field_c;
               }
               param2 = 2;
-              vk.field_c.b(190, gi.field_b);
+              vk.field_c.setAccountAndClearPassword(190, gi.field_b);
             }
             if (param2 == 10) {
               qf.a(0);
@@ -94,7 +94,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               if (fe.field_g) {
                 return;
               }
-              vk.field_c.e((byte) -100);
+              vk.field_c.clearCredentials((byte) -100);
             }
           }
         } catch (RuntimeException runtimeException) {
@@ -216,7 +216,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               decompiledFrameRemainder0 = false;
             }
             else {
-              ValidatedTextField.a((Throwable) null, (byte) 100, "LR1: " + la.a(-114));
+              ValidatedTextField.a((Throwable) null, (byte) 100, "LR1: " + ValidationStatusIcon.a(-114));
               kc.a((byte) 18);
             }
           }

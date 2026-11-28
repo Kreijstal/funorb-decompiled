@@ -40,13 +40,13 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
         }
         if (param0 != 93) {
           DialogMessagePane.e((byte) -51);
-          if (lc.field_c == io.field_P) {
+          if (lc.field_c == ValidationStatusWidget.field_P) {
             lc.field_c = tl.field_e;
             return qc.field_i;
           }
           return null;
         }
-        if (lc.field_c == io.field_P) {
+        if (lc.field_c == ValidationStatusWidget.field_P) {
           lc.field_c = tl.field_e;
           return qc.field_i;
         }

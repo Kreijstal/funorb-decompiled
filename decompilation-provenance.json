@@ -117,17 +117,17 @@
       "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
       "sources": {
         "files": 343,
-        "sha256": "9c2384497671f057e3a79424898a1ec0a42287552b80e4972fcee138f49568d6"
+        "sha256": "67698f735e97cfb2412d206196260d18d3f7d598027d3e11130cdce1e3f2ace8"
       },
       "dictionary": {
         "path": "decompilation/dekobloko-naming.json",
-        "sha256": "e060eb7070f41e2437123ea4a75e0633c30a6aaf8fccbba46191b1b300b423ae"
+        "sha256": "ec459927aac434f5ede25d9049cdc0679756b5658a42d6f07e57f133d6ede82c"
       },
       "readingGuide": {
         "path": "games/dekobloko/README.md",
-        "sha256": "ce22ba434851e20ba5108a3f65d4295358dc56ac964ef94ccd200bd1cb549e57"
+        "sha256": "d85157ed0a50dd6b26fc22785222db67772810835e3ab26a1644d71966960334"
       },
-      "rulesSha256": "d7d50ca37b8c28ef8a78907583f919e4aace18a4a80e8a3f09d48af711cd692e",
+      "rulesSha256": "b5eeed5f6c850b9446311b9a16dd84a64fd85df6d8ef8bee313c3c35ea41f99d",
       "compiler": {
         "repository": "Kreijstal/java-tools",
         "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5",
       "sources": {
         "files": 295,
-        "sha256": "47196fb81fe3e7d84514c8f04b39f13c989a7b0f8c10baf1fca2c204008bba54"
+        "sha256": "0aeb7e26d38ae1ba2ece109246f66c8022d10e560ada0794b49573ae3e1fcd22"
       },
       "dictionary": {
         "path": "decompilation/36cardtrick-naming.json",
-        "sha256": "be639a68312db9cde74ba4c8fd168a2b117ef0b82fc037965b93cc57461e482f"
+        "sha256": "ffe5a04667e44c0269bcc962145b94f3f36535eaa4957675bf16778fff43eac7"
       },
       "readingGuide": {
         "path": "games/36cardtrick/README.md",
-        "sha256": "875ad396aa78cf2ec43b21430aa27a1e501f0f95ddf0cc35fbddf78faa9d19f6"
+        "sha256": "582cb6b5ad945ecc791bad9f9a0ee005c10766278b1e30b238e5e19acb0cbf31"
       },
-      "rulesSha256": "8a202087015e0225be0b3717f69016895c70770e6fd01578c7ed3dc63afd00c5",
+      "rulesSha256": "2b49688a1dadc948a168c3ee878ac85d055687eefdf5b6c74e36d0a53a1d9fd6",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10588,17 +10588,17 @@
       "inputTreeSha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d",
       "sources": {
         "files": 865,
-        "sha256": "de76afe9a38a6893bc0c6f75403e95d23f1a4fe3b722a76b60d778e410c42604"
+        "sha256": "4392a3ea22919c61964bdab1cd892c821ddfe50cf6e957a0d024e4ba461ec9e3"
       },
       "dictionary": {
         "path": "decompilation/bachelorfridge-naming.json",
-        "sha256": "e2e1a30dc405cf7988bea8188bc8549ba18a765504fa8c22d078438a8820c4e1"
+        "sha256": "f0cde98d7792041be06e07f14a01be5b2750c3c1dbbe16fb4b21d897111f4661"
       },
       "readingGuide": {
         "path": "games/bachelorfridge/README.md",
-        "sha256": "98b47e982729e247fa772720efced27da8edb9dcc7b339b1f297ee2c5f036202"
+        "sha256": "051ca41246fcefaa1f8545db106bbcda2041e7e3557639fad0278d1e3a326c65"
       },
-      "rulesSha256": "d8c0392aad16f30efc7b70d068914e568f9e1cdf03ab30080f2b0d6ee0bec62d",
+      "rulesSha256": "ea9384ab0096e73cf75cb58f3f9a74037cc0c24ed678dc48f89bf60fab872d87",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10612,17 +10612,17 @@
       "inputTreeSha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff",
       "sources": {
         "files": 289,
-        "sha256": "c12f40595d0a04734070914e07d71308b26874f93d884981585634b10b17a4d2"
+        "sha256": "d0cdfdfe5ca4252671bc035e2b530a34b0a4b5feb74125285d54955ac61fca97"
       },
       "dictionary": {
         "path": "decompilation/bouncedown-naming.json",
-        "sha256": "d5cdfdc2a298c1ef7242ca68abf6be0c1b48bcf0ca1510df32096a5d7c24e0b9"
+        "sha256": "ce496fd2562be5ac97dce9b5124d8ea160e8e750fbce0dc0fb27abe1adbd9bc7"
       },
       "readingGuide": {
         "path": "games/bouncedown/README.md",
-        "sha256": "a08eb7aaa1155d2b73c1bbe16b33eedd19c23054e2d9306b54bfc19070bb636d"
+        "sha256": "c73a91585104aa7a145c7ceb3c5edd048c525e2a2d3291b32fd48e4666ec2a02"
       },
-      "rulesSha256": "a80129c67077ff14904f3fc235f9089160ca5c731ec020aaba2b6471d597e2ac",
+      "rulesSha256": "08d4d0f2e21ece2326a9fb21997cf55827b6cae2815bafedf79e7fb43fc502ee",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10636,17 +10636,17 @@
       "inputTreeSha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1",
       "sources": {
         "files": 346,
-        "sha256": "599f03fe9acac870e38aa73de7c8d7a3ef743b4e628aa97aea2bd23bade58ae1"
+        "sha256": "8478398da493a07858b41ffcf8750f62bc172b02d3a2a9775519b9a33360aa75"
       },
       "dictionary": {
         "path": "decompilation/chess-naming.json",
-        "sha256": "5dccbbeea34a9781f54e760aa2d43a0c18dcd6f260300c8c5da6d5d1606f226f"
+        "sha256": "3663c291037b52eb794b04f52d083f830fe4a99aab216ea76cc700747724cd1e"
       },
       "readingGuide": {
         "path": "games/chess/README.md",
-        "sha256": "bf170580b6ebf3dff0588d5b0e53e96f2418fb8a31fd5a05b7f739f9a07bd20f"
+        "sha256": "676acc79ba545c2fc034d685fc3aeedfa81f4e345b86d68a61db2b39fc66cf89"
       },
-      "rulesSha256": "3636f8e9a855c2b9a71dac3e69e9c04b9cbec718ae7c69b2802859c93e553d1f",
+      "rulesSha256": "d0096fc31b6b5151c18db8e067a2344cfe276a950fc2ec239fd4cf2c579c2cf5",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10660,17 +10660,17 @@
       "inputTreeSha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c",
       "sources": {
         "files": 341,
-        "sha256": "55938276d8703c0233411558ebacb7c38d83ed0afcf540606b7ea1f266896a9c"
+        "sha256": "592bb12f26ca62704e1d7a5ef309d346f5313767bc3442cba881783b7ce0cc2b"
       },
       "dictionary": {
         "path": "decompilation/confined-naming.json",
-        "sha256": "7031f659fe091b0d57aec8e5c3fc500e9d0bf886933a70020b22aab19ee23a71"
+        "sha256": "a60b39370a3f0fd73e7f66b648a8b9ed70b5dd36668908472066aa012bc8ba17"
       },
       "readingGuide": {
         "path": "games/confined/README.md",
-        "sha256": "ac05a5acb0f7b65b218f8efb2498cfe5cc36580160c4c405cd0500b289993fda"
+        "sha256": "0d9d27d24e7155593b5c158841fa20d91c1ffe023f0ddaef14f5fd2b46ebd5b2"
       },
-      "rulesSha256": "7da0260a83cfec9280aeba32bbde6f35c0d135c97343a80b7c8a067334318752",
+      "rulesSha256": "f0983bf105fa06177a8d8db5ba4ddfa3269a9528b291b6c621f09ed7b904811e",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10684,17 +10684,17 @@
       "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
       "sources": {
         "files": 394,
-        "sha256": "3b8459d7d9de1ae1a8c21b70223d965e506e2826b3f2d27e7a71d165a80a7e1e"
+        "sha256": "ef58693276fa234f160914c3ace431b1e6c4c9f02f4c057b2cb3062db2bf05e1"
       },
       "dictionary": {
         "path": "decompilation/crazycrystals-naming.json",
-        "sha256": "f764f38f1301f3778576a0bf71fca3215f19f6787ec49c0f335b68638ae6879f"
+        "sha256": "29f94e93b63b8939538fc8300a3729f48536046778e99621c9e54b00a3bb9351"
       },
       "readingGuide": {
         "path": "games/crazycrystals/README.md",
-        "sha256": "78d39e677dea84e711ce9e2ad9e7d4ad512283da7e00b40ba3e88512b5c82fb6"
+        "sha256": "9b68f889e858b24adee6127751e6e6102fced839cf5f5d6f4fcb011ed0d8e2c6"
       },
-      "rulesSha256": "25277c4198c3729069922a83d93e7f2ebaeaf9c9a8b662ac257f88c52b2c37d8",
+      "rulesSha256": "9a68f88cc731f8963ccc4c163238f333effb83c873e4bef28858e117afa77bad",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10708,17 +10708,17 @@
       "inputTreeSha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b",
       "sources": {
         "files": 306,
-        "sha256": "f2131d8f22c359efd38f4a5d0d3bd2ec3faacfba54a01a9f0feaeca03c20d8c2"
+        "sha256": "419d414e0e5d9f49f59eecebfa1a728821168fb015d808ecda191ea10eee8de4"
       },
       "dictionary": {
         "path": "decompilation/drphlogistonsavestheearth-naming.json",
-        "sha256": "cc5bf02b6b90fc998cd95f32ad2ccb505d0b64798896123a2436d4c8daa34ddd"
+        "sha256": "e4681cf9b6ac4a023bd81fefa865d87b3529797697debc2bf17b88683e1e4957"
       },
       "readingGuide": {
         "path": "games/drphlogistonsavestheearth/README.md",
-        "sha256": "c98ea7b5214461b3f77b9733f55124d3d3dcca358508d8b12c67ab9593675450"
+        "sha256": "c64a66ddd4131cbe5d6d2fbf87bc4efeaae4ced4130bfeb3497af17c4ba5554d"
       },
-      "rulesSha256": "146de09ed941cf0599960ddc529f3cd638bd482088c02c6359de59d888182508",
+      "rulesSha256": "0df210f4d069a1a46f7c22a9413519b3c4b0037c92d4523237038586548f3721",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10732,17 +10732,17 @@
       "inputTreeSha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17",
       "sources": {
         "files": 387,
-        "sha256": "7fbfdc1497df76be327570b2af3ec031afc33af5f9d5d452abcbc7cb1df689eb"
+        "sha256": "62f4c871fd1e262190085da3630fa1ff9c17fb5d1ee2fb27e513e829afe2b0ad"
       },
       "dictionary": {
         "path": "decompilation/dungeonassault-naming.json",
-        "sha256": "38392beb0a551cf8042848d1ea0bd337bef9ced1e9135e7ab8455f1e3e5174b3"
+        "sha256": "969632c8ab64730273b93f89585a3324a05a399e414224e7657fe8f0210dbb0f"
       },
       "readingGuide": {
         "path": "games/dungeonassault/README.md",
-        "sha256": "451feda952c0e1d74c344d105bc7f784621e2aa5b2e7002ec1e3e5c2d90215c6"
+        "sha256": "e3bb785cf00b3946c0e193c806f6ba6d67bb95d69c895bf35d0b001792968080"
       },
-      "rulesSha256": "6c6399bc41d955196ce6663a2533650eda30cd44906c12b8d6c7f428f6b3fbdd",
+      "rulesSha256": "6e64a54f5a16c5a6a47f46647205f3094c37ba243d1d9b2eea82c4522d36c335",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10756,17 +10756,17 @@
       "inputTreeSha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8",
       "sources": {
         "files": 306,
-        "sha256": "da25dae47fb9ccf1efecb7cd318b7b96631743c851b8d1786656f5f9baca2f01"
+        "sha256": "9c38df075768d236ee29b65a7a6b05b7d6fd9dbe615c8c0a55d1f927c49bd603"
       },
       "dictionary": {
         "path": "decompilation/fleacircus-naming.json",
-        "sha256": "06c3c4317d959d2b3ee9049c957b8c01199b436355fcab2d9eb6ca8761adcafd"
+        "sha256": "05aabc6acb9c45141da2c704f47bb7456757a9d9951a6fd5187db0785078a81f"
       },
       "readingGuide": {
         "path": "games/fleacircus/README.md",
-        "sha256": "bbc1200be5f1cce4f6a48a01706040ebc11276d4df6c533b83b8ea8110d0500f"
+        "sha256": "83b564a84cef24a526fc9580c7b386a491dfbc7ab93fc869812df6b264251c3c"
       },
-      "rulesSha256": "ff0a21c2ba2e5d949d8ff0f15f077c55fdd8767d4b9ba322d8d7cd9a6522f1d4",
+      "rulesSha256": "01931cab07d5d3561929fbcc0bc45d5076c1a85a0db396721f4952f377dac8dc",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10828,17 +10828,17 @@
       "inputTreeSha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0",
       "sources": {
         "files": 297,
-        "sha256": "de2eea0993e587438305e297fdcb17ff656e511e36c34332bb532d67463c8496"
+        "sha256": "594fe718cc72feff97f8c2b2cdf7c8dffd156d11ecff81aa4728ab9738af31ef"
       },
       "dictionary": {
         "path": "decompilation/lexicominos-naming.json",
-        "sha256": "405e45eef81f854a0917ebc52697ca1f7b7cc29e9cc3ac571c9b6467d9906a19"
+        "sha256": "f30c17e71b72899fbff7ddf5793080e2b0e268f84cd897151edef3857b289cff"
       },
       "readingGuide": {
         "path": "games/lexicominos/README.md",
-        "sha256": "7d9058eaf9c862bd4d4f6210f283e127137e85ce2c6cfd3368a7c8776e4df4e0"
+        "sha256": "25596e5f3ff7b64fac523ac0991c48d9f3a08aaaeea341fab3b7452586ed9c9a"
       },
-      "rulesSha256": "bf0d297420c624368811bf3ea7f1cfca1757e65ba33c56478c5101a808c2122a",
+      "rulesSha256": "4a4cb748b2cb7b424d34a53fc0ce0561d2cd0661a759e2805fb2fb55eb238857",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10852,17 +10852,17 @@
       "inputTreeSha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf",
       "sources": {
         "files": 341,
-        "sha256": "60ec51b49b953b9e5e5f5f9419c8bf63490501f2c418a405cfae1d9db4c9290d"
+        "sha256": "bccfb44be165d45ba212e8f6b622c3bdfc293a8513c7645d2c25ac7d35220abf"
       },
       "dictionary": {
         "path": "decompilation/minerdisturbance-naming.json",
-        "sha256": "4ae76e7cf67a4fa44305ea76833fe0e0824325bd0a6632048f3d56046968a708"
+        "sha256": "aa0f7f0dccc55dc5cbf1a56fd6ef6ed88806646096bdf58584c38108e0fc0ded"
       },
       "readingGuide": {
         "path": "games/minerdisturbance/README.md",
-        "sha256": "ce5758d139f83010d3ebbb3b263ee37e9eb0265246046caaa9520669d39ca00e"
+        "sha256": "45a2993abc5ceb7fdd026fe2d16f6e74260a0b7ae1ef0bc4588b880604994491"
       },
-      "rulesSha256": "1794083655e24de12f5dffe99570426ee33fe58909976d00cb47ae8f19f3d920",
+      "rulesSha256": "49f08a5a1f8055aa8f28e3d42d6d50e5952f35f273d2d98a1495be3a0a0e9ede",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10876,17 +10876,17 @@
       "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
       "sources": {
         "files": 303,
-        "sha256": "4a4fba5ce56d36961a6dcb2148a4da51d9790f27a83b3394dd0a288b6f3a77e3"
+        "sha256": "5c1d41aa9355e972242a41cc1d73efb0b567295d33213ec397715fb2a912d454"
       },
       "dictionary": {
         "path": "decompilation/monkeypuzzle2-naming.json",
-        "sha256": "165418ed4c66771a3a7ca8d9c20bddcd2c5a617641ab668ceb634663d993cfef"
+        "sha256": "d002524bf0bb40299f07588561835cb7c3bbb59123dcfd06e830c66691e46d00"
       },
       "readingGuide": {
         "path": "games/monkeypuzzle2/README.md",
-        "sha256": "a35b7c2cfd26dcd5557ac1321c4d376f8e8c44c85dcbc5911e6c04bbd1b3a231"
+        "sha256": "5f7dff16ed4eb004fdfec9cf4ad2a4bb4d677a612a1356cfc3fce107ca617afd"
       },
-      "rulesSha256": "95d10239d5a8c352462fe6e9886372092224c886ee887afc2585b02ea05bc13c",
+      "rulesSha256": "7c5783bb165f0c64fb2d275af2430ede49857daa5d3fd569d640af9e716ee2c8",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10900,17 +10900,17 @@
       "inputTreeSha256": "e3bfc367b5ea5a23b2e1c054741add7fe4ad7d766d2894095f8b176fff61de16",
       "sources": {
         "files": 311,
-        "sha256": "e3ccb216e7db1d6f9277b394f3ff2d8b9ccaef1661b602fa1756a4cc87b9caeb"
+        "sha256": "90cd880f257b66d876ed6ad9704a5a27828b0c7830cf472c4bce9fd4a7e6fc0c"
       },
       "dictionary": {
         "path": "decompilation/orbdefence-naming.json",
-        "sha256": "55dd7a2d81421ab85b0315cbc73f10cf6a1b826a5d8fe7a0a04ec8d3a5616737"
+        "sha256": "e492edaf94c798ae4c2a7862da55a8932d2301619447578beb6429a3dea8bc74"
       },
       "readingGuide": {
         "path": "games/orbdefence/README.md",
-        "sha256": "6c89bc4595cb4c2acc4b87f347ab83a638c524443fa80d721a8f2f1cd1b8e35d"
+        "sha256": "9f22670c2b162d0ce660f63879c9287978ec22e5a00e0ad5a6c00449eb8f20bb"
       },
-      "rulesSha256": "265d8b7edd07c5646ca09f8d81c45300ce1e74052ffc9c2370f23d93c71d8e27",
+      "rulesSha256": "6f779b213a15dfc1a0f8997d9b38bbb6de6dbeade2f586716fae5ff22f39e0da",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10924,17 +10924,17 @@
       "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
       "sources": {
         "files": 335,
-        "sha256": "bef7e70017ff9db3d6ec75e1bcac0f7d649333fdf2a18ad10337146294ee2802"
+        "sha256": "b63425ad804201069d63c373e1f96a7a34cae2261e9669101876c7afdd38ec33"
       },
       "dictionary": {
         "path": "decompilation/hostilespawn_vengeance-naming.json",
-        "sha256": "1b8c4f4dbd6b6b2dfb1e8e2f3614ebd29ee0a71766ad9d110ef2539f9e38dd24"
+        "sha256": "7dc67fc07d56a539809e28d062fc901d7489195c54f847610b8601aff7575dbf"
       },
       "readingGuide": {
         "path": "games/hostilespawn_vengeance/README.md",
-        "sha256": "42eca0d64e29c044d95e15ebc22dd19795beb02341ed9149278e09f805a4af06"
+        "sha256": "ae4d3ccbf31e505331a706cf42e64490b12ec3f07851c24ca25bc186745aeb49"
       },
-      "rulesSha256": "fe2814c981b6c2a20a124ae848764a1e64973797d175413b2269c8dabb4c85e0",
+      "rulesSha256": "37ca37b1a7af41f7067fdf289949218b5de25df680046e8fb0673937ecb9b4b5",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -10948,17 +10948,17 @@
       "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
       "sources": {
         "files": 287,
-        "sha256": "01d78e0363db9b9c0624188c26ac0b69cf5651ca257302938ca5aa3028c24d83"
+        "sha256": "ab15fa214f5490c27cd0bb43cf9784fd1d530b6b21a40ed979b823018ec7f3d7"
       },
       "dictionary": {
         "path": "decompilation/starcannon-naming.json",
-        "sha256": "ded505cd004e69b9d8047fcc9516ba6f31e2f9af4991171cb16e685026f5ad67"
+        "sha256": "52fb54243fafb95588fc9094e43b317563c18a7c1ba3a5fc8be664fde6eb62d4"
       },
       "readingGuide": {
         "path": "games/starcannon/README.md",
-        "sha256": "d372115b0f63ba1f8df9d44145fdcf16c7c72c1d1a6134ec24ae239ab5dacbcc"
+        "sha256": "3c16388989bbccc84364c6f6a015f59e2bcd8f7c5f4012e4ef4cc9363bb61625"
       },
-      "rulesSha256": "36190cbe1948b3b103965d7abd83cb8358400b861e0a6fcc187543244766f194",
+      "rulesSha256": "2ef745c0c202bec0cfa593b566f832b10e0e49a339cab59f8d3472485b3f10b1",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11020,17 +11020,17 @@
       "inputTreeSha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e",
       "sources": {
         "files": 294,
-        "sha256": "4e99b2630859b023f5cf599daa2e6c1049b408017b4dfb1167f6d0435ec6619f"
+        "sha256": "4e9379817197ce8289d116faa9b4405d2be26e4f7bad55b172ba66d39df764bc"
       },
       "dictionary": {
         "path": "decompilation/solknight-naming.json",
-        "sha256": "a0bf5069ede3aeb6e5d79b7eafaf07a37f4fb9acb8e706b2e0901a9c5960e024"
+        "sha256": "708fa919fd63212f53e29fcbac86a102b0f2b71876da74505f0e28190ad581a3"
       },
       "readingGuide": {
         "path": "games/solknight/README.md",
-        "sha256": "6e1e5d88a26e7bd601367074e194fda0c23645d625c98e7166e831cca12baa6e"
+        "sha256": "64ecb1205f1ada5c37ff60f5ca1111aa48e6bbdfc2a04c67fd5d6fdf403de39e"
       },
-      "rulesSha256": "519ff761315d48c729b318ecbc43225f283bda283f64149cc1356c8d462620a3",
+      "rulesSha256": "8f4735cde0cddd511511953a3ae5c1a434b07fe294f4d86bffa009492d0dd7f8",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11068,17 +11068,17 @@
       "inputTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
       "sources": {
         "files": 301,
-        "sha256": "2e3f98c6b7d2450e34ed91c492c745129a4a6eec8a7893ea5f82150dab913877"
+        "sha256": "073a5b2d9a0df2885702e957d8b29fb1b0ba2cda395419351854af3ac0e4973c"
       },
       "dictionary": {
         "path": "decompilation/stellarshard-naming.json",
-        "sha256": "0cb96ecae6dcc07f095213774d5927b0afbcb35f9a95b3c131fb7a71d597aebc"
+        "sha256": "db1c8eaf5c5cfa2a3cc3d5845e762d37e744cfb56b2542e970b0e3128acc3495"
       },
       "readingGuide": {
         "path": "games/stellarshard/README.md",
-        "sha256": "bd1259c1b53c046ec824195a9794277f5d38174a0714b6f23865bc617105aee4"
+        "sha256": "9c9e3033adf5348fafb26e9ec9f2ecf0020871047d361b236c7950dbe29bf6cd"
       },
-      "rulesSha256": "d9e400eb834b2c98fc43bab11eedf5e94bbbf456265e02e11b3acaf10d8f0ccf",
+      "rulesSha256": "b16730ab5eee299edd9d62d6b5cc4c9fd113352b20db22ca6471acd1dce64e51",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11140,17 +11140,17 @@
       "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
       "sources": {
         "files": 311,
-        "sha256": "18ed46064a3fc8c16b996c82fb089f8afcf157c96ecc2850716492129385a263"
+        "sha256": "afbe580b5d265f77f2f34933516311f31c963ef2440e1d34898f58a84810b1c8"
       },
       "dictionary": {
         "path": "decompilation/terraphoenix-naming.json",
-        "sha256": "5ec21d8612894161150f9b8570874d5dddb4f185da57ff9096c60c2f83842256"
+        "sha256": "ebbc1485f03173c11bba9c97b525ba61a567f6399dd9854cac14a9524c75c96c"
       },
       "readingGuide": {
         "path": "games/terraphoenix/README.md",
-        "sha256": "5c464a60d5ef90f6c359757e41005f9d751763219c8816199ada5f139120c500"
+        "sha256": "3400c21da7eb948b7638281c77080ad395049e0850e563c13d9cfb4e8431bc98"
       },
-      "rulesSha256": "b8699a79d3e05f5daf994ea536c02cceda1b07303e94c28117f0ae2099f08f01",
+      "rulesSha256": "b58fc39a14d639fc94d1544c11512ddbf5e98970b32d3b300c687a8c4fd381aa",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11188,17 +11188,17 @@
       "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
       "sources": {
         "files": 300,
-        "sha256": "29ef6d4d78c57b8c9b053afae7b8a08075963f97c26f96236d0b49bdd7d6ac03"
+        "sha256": "3c24103842c20cbb14b6a9ce267ff20fe33fd6019019b8a9a4ec34e4950187da"
       },
       "dictionary": {
         "path": "decompilation/torchallenge-naming.json",
-        "sha256": "d5ebfdf2bf819699455bf43f93738fbfa2416e7822e41f3f4b30b118d8a8def3"
+        "sha256": "f2eaf37de3c66cc960dca16b986c3a76977b38fb53276d3507bfd8cd36c701fd"
       },
       "readingGuide": {
         "path": "games/torchallenge/README.md",
-        "sha256": "a1cf6cc5cd2e61fd242e400ce5e39a72693e8ae691ce488deed8010876af4b88"
+        "sha256": "a477afef90938baca314ebff0e65bdaee69a6a93e6fa51d4b7f9fa9fb44da078"
       },
-      "rulesSha256": "a051964dcb19bd225c57c6cce66b419b57bd439c1d53bf3c9c870fc50d283ed1",
+      "rulesSha256": "16e7c84eb8c3224c6d386deb730c8e39628fbd98756a575006581212e9895272",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11212,17 +11212,17 @@
       "inputTreeSha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d",
       "sources": {
         "files": 299,
-        "sha256": "62444edf7d88f1925beb682965ae38307b66932f5f050ffe772bd555ab6c32d5"
+        "sha256": "170e2e57d08d7ca105e87080ce12c7a017026af4a7ac3ca358af077a083cdb17"
       },
       "dictionary": {
         "path": "decompilation/transmogrify-naming.json",
-        "sha256": "269a4ddbc41294433a306b68b75a09e4eaff70532653846a2ea0ba164e4044e7"
+        "sha256": "67641baf7ea90131526eee6120090b4ff34d5521edc7242a7c24fbf1d5acdbcb"
       },
       "readingGuide": {
         "path": "games/transmogrify/README.md",
-        "sha256": "ad8d72bbb8ae0da9d6a5411668a89122a180886b256b388bcd298e69815e63b7"
+        "sha256": "6f4278f7b7b6003665c470491781fc6cdd401c05f2033267d7744ac437d7cc1d"
       },
-      "rulesSha256": "607d7c997803a244563bc3ff4f59b2e061b2026503464f5f9e0289405400f34b",
+      "rulesSha256": "8bbbbe628909f6a7fd5259453e67792ac5d463635da769afb6957cec1f60defa",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11236,17 +11236,17 @@
       "inputTreeSha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67",
       "sources": {
         "files": 396,
-        "sha256": "9533e4dbee4338ddb6178db1248022e41b92bc81873e16b9b8330e4118df6774"
+        "sha256": "b02e397d135c1a6e0a4ef5b0f31c3c43c88bbfe2ab580263aa27b091f65d83b5"
       },
       "dictionary": {
         "path": "decompilation/torquing-naming.json",
-        "sha256": "0ec089a4964a07f9b2a7781781a223b86238343efd9745076c6dae4f7e337d9c"
+        "sha256": "127eb14749dfed6f6e705e68bb7742ed7e8482b43ff054a3877fd94e06a7a8ec"
       },
       "readingGuide": {
         "path": "games/torquing/README.md",
-        "sha256": "4cec6b0b82e4ca020784ab802e22f133af385a5120eef1da5e09eeb593b3ab55"
+        "sha256": "360810831b947a25fb99d6415ba0aa714e0a2dee688846bfe64f04da473cd2eb"
       },
-      "rulesSha256": "c8695fbaef2ead39e0676a17e431a71d6c65a4cfe98af9dc1af4d8129cff83ec",
+      "rulesSha256": "1f3374f5ded1b06812f1eb985b000860c69a1fb1c1ffa6666008bae672950b1e",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11260,17 +11260,17 @@
       "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
       "sources": {
         "files": 437,
-        "sha256": "8e0bb71416ba0dbaf6847f65879ecab7da3ea51ea3e102f2cd2825d06ddecceb"
+        "sha256": "e0d82c287bcd80a3885e3cf9f560893d8fd25208d6b4515580883604151f64e6"
       },
       "dictionary": {
         "path": "decompilation/vertigo2-naming.json",
-        "sha256": "2fc83d08f7d7d6d843a349af05833ccd684ce3106f8dd7302d50a3d4d16fa91e"
+        "sha256": "e633873bf87378c39e9e84910d5aa3273616786cebf1f64d7ba0728a111d6a86"
       },
       "readingGuide": {
         "path": "games/vertigo2/README.md",
-        "sha256": "71c5bcb4e0c91e0a2df9383e976837f00e0cd9978ff3abdaeb966e049a55b414"
+        "sha256": "2ebb03c0ce97e91369930b8506122b81200518d8235750c13b5dacbd256d7844"
       },
-      "rulesSha256": "2f535ae4ba309da362da402ac7a2f4b16c8a971e358b7ed6175a30fa7e0042c6",
+      "rulesSha256": "e0b6e9d128a32e74ebe176fe3816955ee1d20d2c0b8154b3f12b1587078f106c",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11284,17 +11284,17 @@
       "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
       "sources": {
         "files": 298,
-        "sha256": "435dccab13ea2b628b542bd026f619ebcbe41ae5db257cf68c48e0e4d2f449e8"
+        "sha256": "b9c9c2ecacaa7fb489cd9b8ffb9bd7416c81e63abc0f5333b666a228cac08555"
       },
       "dictionary": {
         "path": "decompilation/trackcontroller-naming.json",
-        "sha256": "232596080d43a834124ebe0622b09985c77dbc8cbb63a3fa7ae6a4c47e1d47bd"
+        "sha256": "7182c72db3fd17f789ba41229afe77a2a4899b3eb2265129dda9cd84a20beed9"
       },
       "readingGuide": {
         "path": "games/trackcontroller/README.md",
-        "sha256": "90061a89aaf39348faa9ec01eda0ebb01e34cbb0d94d586b182a6f1f6d761465"
+        "sha256": "dc1a38dd52692f1cbecee81d132be9cb9a8692310250f66f53a20fa8ee955544"
       },
-      "rulesSha256": "17ac1db7e92d5c828ea9223102c8929bfd8c36bb18e39b8e88e33d442353528a",
+      "rulesSha256": "17233a401a9f65b9994d5c8f2bfd37ec74382c7f8a1c8c33eb36e13cff8cf4bd",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -11524,7 +11524,7 @@
         },
         "publishedSources": {
           "files": 295,
-          "sha256": "47196fb81fe3e7d84514c8f04b39f13c989a7b0f8c10baf1fca2c204008bba54"
+          "sha256": "0aeb7e26d38ae1ba2ece109246f66c8022d10e560ada0794b49573ae3e1fcd22"
         }
       },
       "aceofskies": {
@@ -11743,7 +11743,7 @@
         },
         "publishedSources": {
           "files": 865,
-          "sha256": "de76afe9a38a6893bc0c6f75403e95d23f1a4fe3b722a76b60d778e410c42604"
+          "sha256": "4392a3ea22919c61964bdab1cd892c821ddfe50cf6e957a0d024e4ba461ec9e3"
         }
       },
       "bouncedown": {
@@ -11793,7 +11793,7 @@
         },
         "publishedSources": {
           "files": 289,
-          "sha256": "c12f40595d0a04734070914e07d71308b26874f93d884981585634b10b17a4d2"
+          "sha256": "d0cdfdfe5ca4252671bc035e2b530a34b0a4b5feb74125285d54955ac61fca97"
         }
       },
       "brickabrac": {
@@ -11893,7 +11893,7 @@
         },
         "publishedSources": {
           "files": 346,
-          "sha256": "599f03fe9acac870e38aa73de7c8d7a3ef743b4e628aa97aea2bd23bade58ae1"
+          "sha256": "8478398da493a07858b41ffcf8750f62bc172b02d3a2a9775519b9a33360aa75"
         }
       },
       "confined": {
@@ -11943,7 +11943,7 @@
         },
         "publishedSources": {
           "files": 341,
-          "sha256": "55938276d8703c0233411558ebacb7c38d83ed0afcf540606b7ea1f266896a9c"
+          "sha256": "592bb12f26ca62704e1d7a5ef309d346f5313767bc3442cba881783b7ce0cc2b"
         }
       },
       "crazycrystals": {
@@ -11993,7 +11993,7 @@
         },
         "publishedSources": {
           "files": 394,
-          "sha256": "3b8459d7d9de1ae1a8c21b70223d965e506e2826b3f2d27e7a71d165a80a7e1e"
+          "sha256": "ef58693276fa234f160914c3ace431b1e6c4c9f02f4c057b2cb3062db2bf05e1"
         },
         "sourceRepairs": {
           "classes": {
@@ -12086,7 +12086,7 @@
         },
         "publishedSources": {
           "files": 343,
-          "sha256": "9c2384497671f057e3a79424898a1ec0a42287552b80e4972fcee138f49568d6"
+          "sha256": "67698f735e97cfb2412d206196260d18d3f7d598027d3e11130cdce1e3f2ace8"
         }
       },
       "drphlogistonsavestheearth": {
@@ -12136,7 +12136,7 @@
         },
         "publishedSources": {
           "files": 306,
-          "sha256": "f2131d8f22c359efd38f4a5d0d3bd2ec3faacfba54a01a9f0feaeca03c20d8c2"
+          "sha256": "419d414e0e5d9f49f59eecebfa1a728821168fb015d808ecda191ea10eee8de4"
         }
       },
       "dungeonassault": {
@@ -12186,7 +12186,7 @@
         },
         "publishedSources": {
           "files": 387,
-          "sha256": "7fbfdc1497df76be327570b2af3ec031afc33af5f9d5d452abcbc7cb1df689eb"
+          "sha256": "62f4c871fd1e262190085da3630fa1ff9c17fb5d1ee2fb27e513e829afe2b0ad"
         }
       },
       "escapevector": {
@@ -12378,7 +12378,7 @@
         },
         "publishedSources": {
           "files": 306,
-          "sha256": "da25dae47fb9ccf1efecb7cd318b7b96631743c851b8d1786656f5f9baca2f01"
+          "sha256": "9c38df075768d236ee29b65a7a6b05b7d6fd9dbe615c8c0a55d1f927c49bd603"
         }
       },
       "geoblox": {
@@ -12528,7 +12528,7 @@
         },
         "publishedSources": {
           "files": 335,
-          "sha256": "bef7e70017ff9db3d6ec75e1bcac0f7d649333fdf2a18ad10337146294ee2802"
+          "sha256": "b63425ad804201069d63c373e1f96a7a34cae2261e9669101876c7afdd38ec33"
         }
       },
       "kickabout": {
@@ -12628,7 +12628,7 @@
         },
         "publishedSources": {
           "files": 297,
-          "sha256": "de2eea0993e587438305e297fdcb17ff656e511e36c34332bb532d67463c8496"
+          "sha256": "594fe718cc72feff97f8c2b2cdf7c8dffd156d11ecff81aa4728ab9738af31ef"
         }
       },
       "minerdisturbance": {
@@ -12678,7 +12678,7 @@
         },
         "publishedSources": {
           "files": 341,
-          "sha256": "60ec51b49b953b9e5e5f5f9419c8bf63490501f2c418a405cfae1d9db4c9290d"
+          "sha256": "bccfb44be165d45ba212e8f6b622c3bdfc293a8513c7645d2c25ac7d35220abf"
         }
       },
       "monkeypuzzle2": {
@@ -12728,7 +12728,7 @@
         },
         "publishedSources": {
           "files": 303,
-          "sha256": "4a4fba5ce56d36961a6dcb2148a4da51d9790f27a83b3394dd0a288b6f3a77e3"
+          "sha256": "5c1d41aa9355e972242a41cc1d73efb0b567295d33213ec397715fb2a912d454"
         }
       },
       "orbdefence": {
@@ -12778,7 +12778,7 @@
         },
         "publishedSources": {
           "files": 311,
-          "sha256": "e3ccb216e7db1d6f9277b394f3ff2d8b9ccaef1661b602fa1756a4cc87b9caeb"
+          "sha256": "90cd880f257b66d876ed6ad9704a5a27828b0c7830cf472c4bce9fd4a7e6fc0c"
         }
       },
       "pixelate": {
@@ -12978,7 +12978,7 @@
         },
         "publishedSources": {
           "files": 294,
-          "sha256": "4e99b2630859b023f5cf599daa2e6c1049b408017b4dfb1167f6d0435ec6619f"
+          "sha256": "4e9379817197ce8289d116faa9b4405d2be26e4f7bad55b172ba66d39df764bc"
         }
       },
       "starcannon": {
@@ -13028,7 +13028,7 @@
         },
         "publishedSources": {
           "files": 287,
-          "sha256": "01d78e0363db9b9c0624188c26ac0b69cf5651ca257302938ca5aa3028c24d83"
+          "sha256": "ab15fa214f5490c27cd0bb43cf9784fd1d530b6b21a40ed979b823018ec7f3d7"
         }
       },
       "steelsentinels": {
@@ -13147,7 +13147,7 @@
         },
         "publishedSources": {
           "files": 301,
-          "sha256": "2e3f98c6b7d2450e34ed91c492c745129a4a6eec8a7893ea5f82150dab913877"
+          "sha256": "073a5b2d9a0df2885702e957d8b29fb1b0ba2cda395419351854af3ac0e4973c"
         }
       },
       "sumoblitz": {
@@ -13247,7 +13247,7 @@
         },
         "publishedSources": {
           "files": 311,
-          "sha256": "18ed46064a3fc8c16b996c82fb089f8afcf157c96ecc2850716492129385a263"
+          "sha256": "afbe580b5d265f77f2f34933516311f31c963ef2440e1d34898f58a84810b1c8"
         }
       },
       "tetralink": {
@@ -13397,7 +13397,7 @@
         },
         "publishedSources": {
           "files": 300,
-          "sha256": "29ef6d4d78c57b8c9b053afae7b8a08075963f97c26f96236d0b49bdd7d6ac03"
+          "sha256": "3c24103842c20cbb14b6a9ce267ff20fe33fd6019019b8a9a4ec34e4950187da"
         }
       },
       "torquing": {
@@ -13447,7 +13447,7 @@
         },
         "publishedSources": {
           "files": 396,
-          "sha256": "9533e4dbee4338ddb6178db1248022e41b92bc81873e16b9b8330e4118df6774"
+          "sha256": "b02e397d135c1a6e0a4ef5b0f31c3c43c88bbfe2ab580263aa27b091f65d83b5"
         }
       },
       "trackcontroller": {
@@ -13497,7 +13497,7 @@
         },
         "publishedSources": {
           "files": 298,
-          "sha256": "435dccab13ea2b628b542bd026f619ebcbe41ae5db257cf68c48e0e4d2f449e8"
+          "sha256": "b9c9c2ecacaa7fb489cd9b8ffb9bd7416c81e63abc0f5333b666a228cac08555"
         }
       },
       "transmogrify": {
@@ -13547,7 +13547,7 @@
         },
         "publishedSources": {
           "files": 299,
-          "sha256": "62444edf7d88f1925beb682965ae38307b66932f5f050ffe772bd555ab6c32d5"
+          "sha256": "170e2e57d08d7ca105e87080ce12c7a017026af4a7ac3ca358af077a083cdb17"
         }
       },
       "vertigo2": {
@@ -13597,7 +13597,7 @@
         },
         "publishedSources": {
           "files": 437,
-          "sha256": "8e0bb71416ba0dbaf6847f65879ecab7da3ea51ea3e102f2cd2825d06ddecceb"
+          "sha256": "e0d82c287bcd80a3885e3cf9f560893d8fd25208d6b4515580883604151f64e6"
         }
       },
       "virogrid": {

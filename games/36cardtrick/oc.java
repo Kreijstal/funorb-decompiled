@@ -117,7 +117,7 @@ final class oc {
             }
             this.field_b.draw(var6_int, var7);
           }
-          var6 = param4.b(96, param1);
+          var6 = param4.resolveDisplayText(96, param1);
           if (var6 != null &&
             param4.field_c != null) {
             if (this.field_e < 0) {

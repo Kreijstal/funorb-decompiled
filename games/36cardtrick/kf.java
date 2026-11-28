@@ -123,7 +123,7 @@ final class kf extends IntrusiveNode {
             return stackIn_2_0;
           }
           if (tc.a(param2, param3, 25479, param0)) {
-            stackIn_7_0 = pa.a(param4.getFile(param2, (byte) -115, param3), -1);
+            stackIn_7_0 = ValidationStatusWidget.a(param4.getFile(param2, (byte) -115, param3), -1);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

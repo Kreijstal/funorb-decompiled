@@ -53,7 +53,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_14_0 = bq.field_C;
             return stackIn_14_0;
           }
-          if (this.a(param1, (byte) -67)) {
+          if (this.containsEmailComponent(param1, (byte) -67)) {
             stackIn_19_0 = mn.field_u;
             return stackIn_19_0;
           }
@@ -112,7 +112,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = ir.field_a;
             return stackIn_7_0;
           }
-          if (this.a(param1, (byte) -67)) {
+          if (this.containsEmailComponent(param1, (byte) -67)) {
             stackIn_12_0 = ir.field_a;
             return stackIn_12_0;
           }
@@ -695,7 +695,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("searching_for_opponent_singular", false);
                 if (null != var2) {
-                  lr.field_J = in.a(0, var2);
+                  ValidationStatusIcon.field_J = in.a(0, var2);
                 }
                 var2 = tk.a("searching_for_opponents_plural", false);
                 if (null != var2) {
@@ -1107,7 +1107,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("gameopt_novalidcombos", false);
                 if (var2 != null) {
-                  qe.field_X = in.a(param0 + 0, var2);
+                  ValidationStatusWidget.field_X = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("gameopt_pleasetrychanging", false);
                 if (var2 != null) {
@@ -1329,7 +1329,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("invalidpass", false);
                 if (null != var2) {
-                  lr.field_M = in.a(0, var2);
+                  ValidationStatusIcon.field_M = in.a(0, var2);
                 }
                 var2 = tk.a("retry", false);
                 if (null != var2) {
@@ -1441,7 +1441,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("checking", false);
                 if (null != var2) {
-                  lr.field_L = in.a(0, var2);
+                  ValidationStatusIcon.field_L = in.a(0, var2);
                 }
                 var2 = tk.a("create_namealreadytaken", false);
                 if (var2 != null) {
@@ -2886,7 +2886,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("fs_button_close", false);
                 if (var2 != null) {
-                  lr.field_N = in.a(0, var2);
+                  ValidationStatusIcon.field_N = in.a(0, var2);
                 }
                 var2 = tk.a("fs_button_members", false);
                 if (var2 != null) {
@@ -3307,7 +3307,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean a(String param0, byte param1) {
+    private final boolean containsEmailComponent(String param0, byte param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

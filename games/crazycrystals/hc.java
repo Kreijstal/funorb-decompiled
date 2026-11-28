@@ -16,7 +16,7 @@ final class hc {
         ob.field_l = AccountNameAvailabilityValidator.field_k;
         mb.field_g = LoginPanel.field_I;
         LevelProgressUpdate.field_h = sm.field_e;
-        b.field_a = sb.field_F;
+        b.field_a = ValidationStatusIcon.field_F;
         fp.field_a = fl.field_g;
         je.field_j = NameSuggestionsPanel.field_F;
         ll.a(-94, param0, false);

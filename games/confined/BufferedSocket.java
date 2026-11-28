@@ -205,7 +205,7 @@ final class BufferedSocket implements Runnable {
     final static String d(int param0) {
         String var1 = "";
         if (null != om.field_p) {
-          var1 = om.field_p.j(-102);
+          var1 = om.field_p.getAccountIdentifier(-102);
         }
         if (param0 > 21) {
           if (var1.length() == 0) {

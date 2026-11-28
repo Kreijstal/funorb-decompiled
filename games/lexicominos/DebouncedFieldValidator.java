@@ -55,7 +55,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             stackIn_11_0 = (byte[]) (param1);
             return stackIn_11_0;
           }
-          stackIn_9_0 = ld.copyBytes(param0 - 30, param1);
+          stackIn_9_0 = ValidationStatusIcon.copyBytes(param0 - 30, param1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

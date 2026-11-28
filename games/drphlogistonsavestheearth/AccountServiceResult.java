@@ -77,7 +77,7 @@ final class AccountServiceResult {
         if (!gf.field_G) {
           throw new IllegalStateException();
         }
-        gm.field_M = true;
+        ValidationStatusIcon.field_M = true;
         AccountRequestState.a(-127, false);
         if (param0 >= 55) {
           af.field_b = 0;

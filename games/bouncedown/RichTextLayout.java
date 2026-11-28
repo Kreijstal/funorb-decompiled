@@ -128,7 +128,7 @@ final class RichTextLayout extends TextLayout {
               if (param6 != 3) {
                 stackIn_43_2 = 0;
               } else {
-                stackIn_43_2 = this.a(param1.stringWidth(var13), param0, -127, var13);
+                stackIn_43_2 = this.computeJustificationStep(param1.stringWidth(var13), param0, -127, var13);
               }
               PacketBuffer.a(stackIn_42_0, stackIn_42_1, stackIn_43_2, false, var14);
             }

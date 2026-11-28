@@ -133,7 +133,7 @@ final class lh {
           var18.field_g = 16777215;
           this.field_m = (WidgetRenderer) ((Object) var18);
           var4 = new an();
-          var18.a((byte) 126, var4);
+          var18.copyStyleTo((byte) 126, var4);
           var4.field_t = 11711154;
           this.field_i = -1;
           this.field_a = 15658734;
@@ -169,7 +169,7 @@ final class lh {
           discarded$0 = new jn(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new im(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var9 = new an();
-          var18.a((byte) 126, var9);
+          var18.copyStyleTo((byte) 126, var9);
           var9.a(0, (byte) -99).a(bb.a(15658734, false, 10066329, 7829367), true).a(-7695, 1118481).d(-1, 216);
           var9.a(4, (byte) -91).a((byte) -111, true).a(var5, true);
           this.field_c = (WidgetRenderer) ((Object) var9);

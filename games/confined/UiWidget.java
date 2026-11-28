@@ -189,7 +189,7 @@ class UiWidget extends IntrusiveNode {
             tj.a(2652240, 188, (byte) 54, 556, 526, 188);
             tj.a(2652240, 188, (byte) 49, 556, 556, 260);
             tj.a(2652240, 260, (byte) 81, 548, 556, 260);
-            pn.field_a.drawRightAligned(ba.field_T, 540, 12 + var6, 4243584, -1);
+            pn.field_a.drawRightAligned(ValidationStatusIcon.field_T, 540, 12 + var6, 4243584, -1);
             var6 += 20;
             pn.field_a.drawRightAligned(ue.field_s, 540, 12 + var6, 4243584, -1);
             var6 += 20;
@@ -569,8 +569,8 @@ class UiWidget extends IntrusiveNode {
             var5 != 0) {
             this.handleWheel(ld.field_l, param3, (byte) 36, this, param2, ExpandingPulseProjectile.field_cb, jh.field_R);
           }
-          if (rh.field_X != 0) {
-            if (!this.pointerPressed(param3, wm.field_hb, (byte) 91, param2, this, SoundCache.field_a, rh.field_X)) {
+          if (ValidationStatusWidget.field_X != 0) {
+            if (!this.pointerPressed(param3, wm.field_hb, (byte) 91, param2, this, SoundCache.field_a, ValidationStatusWidget.field_X)) {
               if (var5 != 0) {
                 this.blur(84);
                 if (var7 != 0) {
@@ -593,13 +593,13 @@ class UiWidget extends IntrusiveNode {
             }
             if (var7 != 0 &&
               var5 != 0 &&
-              rh.field_X != 0) {
+              ValidationStatusWidget.field_X != 0) {
               this.blur(84);
             }
           }
         } else {
           if (var5 != 0 &&
-            rh.field_X != 0) {
+            ValidationStatusWidget.field_X != 0) {
             this.blur(84);
           }
         }

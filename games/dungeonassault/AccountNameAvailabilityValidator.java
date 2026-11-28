@@ -235,7 +235,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_14_0;
           }
           if (param0 >= 44) {
-            stackIn_19_0 = ng.field_N;
+            stackIn_19_0 = ValidationStatusIcon.field_N;
             return stackIn_19_0;
           }
           stackIn_17_0 = (String) null;

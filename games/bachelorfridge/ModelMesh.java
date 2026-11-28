@@ -1079,7 +1079,7 @@ final class ModelMesh extends ModelMeshBase {
         this.field_K = false;
         this.field_o = 0;
         this.field_O = 0;
-        param0.b();
+        param0.calculateNormals();
         param0.buildSkinGroups();
         this.field_W = param0.field_d;
         this.field_O = param0.field_F;
@@ -1102,7 +1102,7 @@ final class ModelMesh extends ModelMeshBase {
           for (var9 = 0; var9 < this.field_o; var9++) {
             var10 = param0.field_x[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.field_g.b(-23316, var10)) {
+              TriangleRasterizer.field_g.hasTexture(-23316, var10)) {
               this.field_P[var9] = (short)var10;
             } else {
               this.field_P[var9] = (short)-1;

@@ -25,7 +25,7 @@ final class id {
           oj.field_c.a(0, hb.field_a.field_M, -2147483648, SoundCache.field_g, 0);
           le.field_e.a(0, -82 - sc.field_e + (hb.field_a.field_M - 2), -2147483648, 18, SoundCache.field_g + 2);
           kf.field_t.a(-80 + (-2 + (-sc.field_e + hb.field_a.field_M)), 82 + sc.field_e, -2147483648, 18, SoundCache.field_g + 2);
-          ea.field_bb.a(hb.field_a.field_M, 20, 20 + (2 + SoundCache.field_g), -20 + (hb.field_a.field_pb - SoundCache.field_g - 2), 28267, sc.field_e, 2, 0);
+          ValidationStatusWidget.field_bb.a(hb.field_a.field_M, 20, 20 + (2 + SoundCache.field_g), -20 + (hb.field_a.field_pb - SoundCache.field_g - 2), 28267, sc.field_e, 2, 0);
           fg.field_d.a(20, 2, sc.field_e, 0);
           return;
         }
@@ -33,7 +33,7 @@ final class id {
         oj.field_c.a(0, hb.field_a.field_M, -2147483648, SoundCache.field_g, 0);
         le.field_e.a(0, -82 - sc.field_e + (hb.field_a.field_M - 2), -2147483648, 18, SoundCache.field_g + 2);
         kf.field_t.a(-80 + (-2 + (-sc.field_e + hb.field_a.field_M)), 82 + sc.field_e, -2147483648, 18, SoundCache.field_g + 2);
-        ea.field_bb.a(hb.field_a.field_M, 20, 20 + (2 + SoundCache.field_g), -20 + (hb.field_a.field_pb - SoundCache.field_g - 2), 28267, sc.field_e, 2, 0);
+        ValidationStatusWidget.field_bb.a(hb.field_a.field_M, 20, 20 + (2 + SoundCache.field_g), -20 + (hb.field_a.field_pb - SoundCache.field_g - 2), 28267, sc.field_e, 2, 0);
         fg.field_d.a(20, 2, sc.field_e, 0);
     }
 

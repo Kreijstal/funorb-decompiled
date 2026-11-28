@@ -116,7 +116,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
         if (param0 != -7) {
           return;
         }
-        this.showAccountCreationResult(-12331, true, wu.createAccountErrorResult(248, (byte) 80, lda.field_b));
+        this.showAccountCreationResult(-12331, true, ValidationStatusIcon.createAccountErrorResult(248, (byte) 80, lda.field_b));
     }
 
     public static void releaseStatics(int param0) {

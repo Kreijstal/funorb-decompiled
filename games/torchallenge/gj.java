@@ -291,7 +291,7 @@ final class gj {
             MatchingFieldValidator.field_s[2] = fb.field_i;
             MatchingFieldValidator.field_s[3] = ti.field_c;
             ProgressDialog.field_db[0] = 5;
-            MatchingFieldValidator.field_s[4] = tk.field_T;
+            MatchingFieldValidator.field_s[4] = ValidationStatusIcon.field_T;
             ProgressDialog.field_db[1] = 2;
             MatchingFieldValidator.field_s[5] = "";
             dl.field_s[3] = 1;
@@ -437,7 +437,7 @@ final class gj {
             }
             this.field_e.drawTransparent(var6_int, var7);
           }
-          var6 = param3.a(param1, -6782);
+          var6 = param3.resolveDisplayText(param1, -6782);
           if (param4 != 44) {
             this.b(-104, 43);
           }

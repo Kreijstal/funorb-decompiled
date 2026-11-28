@@ -19,18 +19,18 @@ final class ul {
         try {
           dj.a();
           ml.field_d = 11;
-          w.field_R = new int[260];
+          ValidationStatusWidget.field_R = new int[260];
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
-            w.field_R[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+            ValidationStatusWidget.field_R[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           if (param0 != 8) {
             ul.resetStaticState((byte) 48);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < w.field_R.length) {
-            w.field_R[var5] = 255;
+          while (var5 < ValidationStatusWidget.field_R.length) {
+            ValidationStatusWidget.field_R[var5] = 255;
             var5++;
           }
           return;

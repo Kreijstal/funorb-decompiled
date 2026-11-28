@@ -205,11 +205,11 @@ final class BoundedRandomAccessFile {
                 }
               }
               if (decompiledFrameRemainder0) {
-                rc.field_a = wj.field_N;
+                rc.field_a = ValidationStatusIcon.field_N;
                 jd.field_q = -1;
               }
             }
-            if (rc.field_a == wj.field_N &&
+            if (rc.field_a == ValidationStatusIcon.field_N &&
               eb.a(13372)) {
               ib.field_d = sc.field_g.c(10818);
               MatchingFieldValidator.field_q = sc.field_g.readUnsignedByte(32270);

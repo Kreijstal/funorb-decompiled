@@ -386,7 +386,7 @@ final class RichTextLayout extends TextLayout {
               if (param2 != 3) {
                 stackIn_44_4 = 0;
               } else {
-                stackIn_44_4 = this.a(param3.stringWidth(var13), var13, 0, param5);
+                stackIn_44_4 = this.computeJustificationStep(param3.stringWidth(var13), var13, 0, param5);
               }
               GameAppletShell.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4);
             }

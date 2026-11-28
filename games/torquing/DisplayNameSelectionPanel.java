@@ -12,7 +12,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
 
     private final int a(int param0, int param1, String param2, UiWidget param3, int param4, boolean param5, String param6) {
         RuntimeException var8 = null;
-        bj var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -26,7 +26,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         try {
           var10 = new LabeledWidgetContainer(20, param0, param1 + 120, 25, param3, false, 120, 3, TranslucentSpriteLayer.field_e, 16777215, param2);
           this.addChild(var10, -6938);
-          var9 = new bj(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-10116), param6, 126, param0 + var10.height, param1 + 25, param4);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-10116), param6, 126, param0 + var10.height, param1 + 25, param4);
           var9.listener = (WidgetEventListener) (this);
           if (!param5) {
             this.field_I = (NameSuggestionsPanel) null;

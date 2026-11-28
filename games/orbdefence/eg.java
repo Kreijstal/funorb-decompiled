@@ -130,7 +130,7 @@ final class eg extends fg {
         }
     }
 
-    final String a(byte param0, UiWidget param1) {
+    final String resolveDisplayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         BitPacketBuffer var4 = null;
         String stackIn_3_0 = null;

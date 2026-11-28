@@ -289,7 +289,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         }
     }
 
-    final String computeString0633(int integerArgument1) {
+    final String getAccountIdentifier(int integerArgument1) {
         if (integerArgument1 != 80) {
           LoginPanel.performAction0630(false, false, -20);
         }
@@ -502,7 +502,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         }
     }
 
-    final void performAction0628(String stringArgument1, int integerArgument2) {
+    final void setAccountAndClearPassword(String stringArgument1, int integerArgument2) {
         EditableTextField uiComponentPart028Local1 = null;
         String stringLocal2 = null;
         try {
@@ -565,7 +565,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
         }
     }
 
-    final void performAction0624(int integerArgument1) {
+    final void clearCredentials(int integerArgument1) {
         if (integerArgument1 <= 28) {
           this.interactiveComponentState0003 = (InteractiveComponent) null;
         }
@@ -615,7 +615,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             this.performAction0632((byte) -37);
           }
           if (byteArgument1 != 67) {
-            this.computeString0633(-21);
+            this.getAccountIdentifier(-21);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {

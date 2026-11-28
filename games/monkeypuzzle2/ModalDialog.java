@@ -131,17 +131,17 @@ abstract class ModalDialog extends WidgetContainer {
             super.drawWidget(30, param1, param2, param3);
             return;
           }
-          if (vg.field_M == null ||
-            !(this.field_l <= vg.field_M.field_k) ||
-            !(vg.field_M.field_j >= this.field_p)) {
-            vg.field_M = new Sprite(this.field_l, this.field_p);
+          if (ValidationStatusWidget.field_M == null ||
+            !(this.field_l <= ValidationStatusWidget.field_M.field_k) ||
+            !(ValidationStatusWidget.field_M.field_j >= this.field_p)) {
+            ValidationStatusWidget.field_M = new Sprite(this.field_l, this.field_p);
           }
-          mc.a(param0 ^ -8495, vg.field_M);
+          mc.a(param0 ^ -8495, ValidationStatusWidget.field_M);
           SoftwareRasterizer.clearRaster();
           this.drawDialogBackground(false, 0, 0);
           super.drawWidget(param0, param1, -param2 - this.field_e, -this.field_r - param3);
           tj.b(653);
-          vg.field_M.drawWithOpacity(this.field_r + param3, param2 + this.field_e, this.field_D);
+          ValidationStatusWidget.field_M.drawWithOpacity(this.field_r + param3, param2 + this.field_e, this.field_D);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

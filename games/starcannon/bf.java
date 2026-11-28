@@ -341,7 +341,7 @@ final class bf extends IntrusiveNode {
                   } else {
                     stackIn_28_0 = -104;
                     if (0 >= BitPacketBuffer.field_k &&
-                      0 == jg.field_H) {
+                      0 == ValidationStatusIcon.field_H) {
                       stackIn_30_1 = 0;
                     } else {
                       stackIn_30_1 = 6;
@@ -2305,7 +2305,7 @@ final class bf extends IntrusiveNode {
                                   if (StarCannon.field_z != -1) {
                                     break regionExit1;
                                   }
-                                  if (-1 != pa.field_L) {
+                                  if (-1 != ValidationStatusWidget.field_L) {
                                     break regionExit1;
                                   }
                                   AlphaWidgetContainer.field_A[this.field_o % 14].drawAdditive(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
@@ -2401,30 +2401,30 @@ final class bf extends IntrusiveNode {
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(-16 + var4, this.field_u - 16);
                   }
-                  jg.field_C[var5].drawTintedGray(-4 + var4, 7 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(-4 + var4, 7 + this.field_u, 16711680);
                   break;
                 case 20:
                   if (DraggableWidgetContainer.field_G % 2 == 0 ||
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(var4 - 16, -16 + this.field_u);
                   }
-                  jg.field_C[var5].drawTintedGray(var4 - var6, 3 + this.field_u, 16711680);
-                  jg.field_C[var5].drawTintedGray(var4 - (-4 + var6), this.field_u + 3, 16711680);
-                  jg.field_C[var5].drawTintedGray(var6 + (var4 - 8), 3 + this.field_u, 16711680);
-                  jg.field_C[var5].drawTintedGray(-12 + (var4 + var6), this.field_u + 3, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var4 - var6, 3 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var4 - (-4 + var6), this.field_u + 3, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var6 + (var4 - 8), 3 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(-12 + (var4 + var6), this.field_u + 3, 16711680);
                   break;
                 case 15:
-                  jg.field_C[var5].drawTintedGray(-var6 + 2 + var4, this.field_u + 3, 16711680);
-                  jg.field_C[var5].drawTintedGray(var6 + (var4 - 10), this.field_u + 3, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(-var6 + 2 + var4, this.field_u + 3, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var6 + (var4 - 10), this.field_u + 3, 16711680);
                   if (0 == DraggableWidgetContainer.field_G % 2 ||
                     ti.field_d) {
                     dl.field_c[this.field_v].draw(-16 + var4, -16 + this.field_u);
                   }
-                  jg.field_C[var5].drawTintedGray(var4 - 4, 7 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var4 - 4, 7 + this.field_u, 16711680);
                   break;
                 case 10:
-                  jg.field_C[var5].drawTintedGray(-var6 + (2 + var4), 3 + this.field_u, 16711680);
-                  jg.field_C[var5].drawTintedGray(var6 + (-10 + var4), 3 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(-var6 + (2 + var4), 3 + this.field_u, 16711680);
+                  ValidationStatusIcon.field_C[var5].drawTintedGray(var6 + (-10 + var4), 3 + this.field_u, 16711680);
                   if (DraggableWidgetContainer.field_G % 2 != 0 &&
                     !ti.field_d) {
                     break;

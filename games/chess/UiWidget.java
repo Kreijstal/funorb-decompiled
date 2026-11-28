@@ -223,7 +223,7 @@ class UiWidget extends IntrusiveNode {
 
     final static void a(MusicTrack param0, int param1) {
         try {
-          ka.field_a.a(false, param0, param1 + 113);
+          ka.field_a.playTrack(false, param0, param1 + 113);
           if (param1 != 0) {
             field_m = (hg) null;
           }

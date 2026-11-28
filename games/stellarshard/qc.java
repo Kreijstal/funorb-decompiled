@@ -111,13 +111,13 @@ final class qc {
           if (!param1) {
             return 0;
           }
-          cd.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), af.a(1, FullscreenNoticeType.field_b, oc.field_e), -1);
-          if (cd.field_L.c(-18)) {
-            if (0 == cd.field_L.field_f) {
+          ValidationStatusWidget.field_L.a(af.a(1, ni.field_e, KeyHandler.field_a), af.a(1, FullscreenNoticeType.field_b, oc.field_e), -1);
+          if (ValidationStatusWidget.field_L.c(-18)) {
+            if (0 == ValidationStatusWidget.field_L.field_f) {
               stackIn_65_0 = 3;
               return stackIn_65_0;
             }
-            if (cd.field_L.field_f == 1) {
+            if (ValidationStatusWidget.field_L.field_f == 1) {
               stackIn_69_0 = 2;
               return stackIn_69_0;
             }
@@ -128,13 +128,13 @@ final class qc {
               stackIn_86_0 = 0;
               return stackIn_86_0;
             }
-            cd.field_L.a(0, 84);
-            if (cd.field_L.c(-10)) {
-              if (cd.field_L.field_f == 0) {
+            ValidationStatusWidget.field_L.a(0, 84);
+            if (ValidationStatusWidget.field_L.c(-10)) {
+              if (ValidationStatusWidget.field_L.field_f == 0) {
                 stackIn_77_0 = 3;
                 return stackIn_77_0;
               }
-              if (cd.field_L.field_f == 1) {
+              if (ValidationStatusWidget.field_L.field_f == 1) {
                 stackIn_81_0 = 1;
                 return stackIn_81_0;
               }
@@ -202,7 +202,7 @@ final class qc {
           PcmResampler.field_g = true;
           rb.field_s = param0;
           if (rb.field_s == 0) {
-            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ValidationStatusIcon.field_G);
             var4 = 3 + var3_int;
             RegistrationAgreementPane.field_J = new int[var4];
             stellarshard.field_L = new String[var4];
@@ -221,7 +221,7 @@ final class qc {
             RegistrationAgreementPane.field_J[var4 - 1] = 1;
             pk.field_j[1] = 5;
           } else if (rb.field_s == 1) {
-            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ii.field_G);
+            var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, ValidationStatusIcon.field_G);
             var4 = 2 + var3_int;
             stellarshard.field_L = new String[var4];
             RegistrationAgreementPane.field_J = new int[var4];

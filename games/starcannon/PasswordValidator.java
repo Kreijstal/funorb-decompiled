@@ -43,7 +43,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = BufferedSocket.field_n;
             return stackIn_8_0;
           }
-          if (!this.a(5, param0)) {
+          if (!this.containsEmailComponent(5, param0)) {
             return bf.field_x;
           }
           stackIn_12_0 = BufferedSocket.field_n;
@@ -102,7 +102,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_13_0 = LoginPanel.field_K;
             return stackIn_13_0;
           }
-          if (this.a(5, param0)) {
+          if (this.containsEmailComponent(5, param0)) {
             stackIn_16_0 = vh.field_s;
             return stackIn_16_0;
           }
@@ -138,7 +138,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean a(int param0, String param1) {
+    private final boolean containsEmailComponent(int param0, String param1) {
         boolean discarded$1 = false;
         RuntimeException var3 = null;
         String var4 = null;
@@ -155,7 +155,7 @@ final class PasswordValidator extends TextFieldValidator {
         try {
           if (param0 != 5) {
             var8 = (String) null;
-            discarded$1 = this.a(87, (String) null);
+            discarded$1 = this.containsEmailComponent(87, (String) null);
           }
           var9 = this.field_n.field_k.toLowerCase();
           var4 = param1.toLowerCase();

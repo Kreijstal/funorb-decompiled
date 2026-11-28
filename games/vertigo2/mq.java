@@ -184,7 +184,7 @@ final class mq extends DefaultTextWidgetRenderer {
           if (param0 <= 39) {
             field_t = (String) null;
           }
-          super.a(16777215, param2);
+          super.copyStyleTo(16777215, param2);
           if (param1) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {
               var5 = this.field_w[var4_int];

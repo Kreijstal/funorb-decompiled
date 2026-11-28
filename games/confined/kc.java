@@ -140,7 +140,7 @@ final class kc {
           this.field_m = (WidgetRenderer) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new qh();
-          var17.a(param0, var4);
+          var17.copyStyleTo(param0, var4);
           this.field_v = 3;
           this.field_a = 15658734;
           this.field_e = 3;
@@ -175,7 +175,7 @@ final class kc {
           discarded$0 = new li(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new rc(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qh();
-          var17.a(false, var8);
+          var17.copyStyleTo(false, var8);
           var8.b(0, -69).a(-1, en.a(!param0 ? true : false, 15658734, 10066329, 7829367)).a(1918, 1118481).c(-1, 97);
           var8.b(4, -106).a(true, 0).a(-1, var5);
           this.field_u = (WidgetRenderer) ((Object) var8);

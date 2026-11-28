@@ -319,7 +319,7 @@ final class el {
           if (param0 != 255) {
             if (param0 >= 100 &&
               param0 <= 105) {
-              q.field_h = ve.createAccountSuggestionsResult(param3, (byte) -113);
+              q.field_h = ValidationStatusIcon.createAccountSuggestionsResult(param3, (byte) -113);
               return;
             }
             q.field_h = ModalDialog.createAccountErrorResult(242763393, param2, param0);

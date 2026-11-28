@@ -355,7 +355,7 @@ final class jk extends hm {
           }
           if (param0.charAt(0) == 34) {
             if (34 != param0.charAt(-1 + var2_int)) {
-              stackIn_12_0 = je.field_M;
+              stackIn_12_0 = ValidationStatusIcon.field_M;
               return stackIn_12_0;
             }
             var3 = 0;
@@ -367,7 +367,7 @@ final class jk extends hm {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_26_0 = je.field_M;
+                  stackIn_26_0 = ValidationStatusIcon.field_M;
                   return stackIn_26_0;
                 }
                 var3 = 0;
@@ -391,13 +391,13 @@ final class jk extends hm {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_42_0 = je.field_M;
+                stackIn_42_0 = ValidationStatusIcon.field_M;
                 return stackIn_42_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (tb.field_a.indexOf(var5Lifetime1) == -1) {
-                stackIn_47_0 = je.field_M;
+                stackIn_47_0 = ValidationStatusIcon.field_M;
                 return stackIn_47_0;
               }
               var3Lifetime1 = 0;

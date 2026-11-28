@@ -367,7 +367,7 @@ final class fo {
           DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, Bzip2State.field_k, -11), 210);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, AlphaWidgetContainer.field_L, -127), 460, 240, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
-          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
+          tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, ValidationStatusIcon.field_K, 39), 460, 280, 16711680, -1);
           tk.field_c.drawString(HuffmanCodec.field_c, 180, 240, 16777215, -1);
           if (SocketConnector.field_c[GameKeyHandler.field_d] <= te.field_B[GameKeyHandler.field_d]) {
             MouseWheelInput.field_c.drawOpaque(208, 256);
@@ -901,7 +901,7 @@ final class fo {
         DefaultTextWidgetRenderer.field_s.a(580, -34, 16777215, DefaultTextWidgetRenderer.field_s.field_j + 280, -1, mo.field_f);
         if (RegistrationAgreementPane.field_J.field_s) {
           if (RegistrationAgreementPane.field_J.field_x != null) {
-            var3Lifetime2 = qe.field_V;
+            var3Lifetime2 = ValidationStatusWidget.field_V;
             var4Lifetime1 = var3Lifetime2;
             var4Lifetime1 = var3Lifetime2;
             var5_ref_String__ = RegistrationAgreementPane.field_J.field_x[var2];
@@ -1190,7 +1190,7 @@ final class fo {
                 ((var3 == 0))) {
                 var8 += 4;
                 var10Lifetime1 = uh.field_Xb.field_o[0];
-                tk.field_c.drawString(qe.field_V, 60, var8, 15637810, -1);
+                tk.field_c.drawString(ValidationStatusWidget.field_V, 60, var8, 15637810, -1);
                 tk.field_c.drawRightAligned(Integer.toString(var10Lifetime1), 360, var8, 15637810, -1);
               }
               break regionExit1;
@@ -1303,8 +1303,8 @@ final class fo {
                       }
                       var8 = stackIn_81_0;
                       TextLineMetrics.field_b.loadLevel((byte) 63, var8, kn.field_h[0][var8]);
-                      if (!qe.field_V.equals("")) {
-                        var9_ref_String = qe.field_V;
+                      if (!ValidationStatusWidget.field_V.equals("")) {
+                        var9_ref_String = ValidationStatusWidget.field_V;
                       } else {
                         var9_ref_String = PacketBuffer.field_o;
                       }
@@ -1333,10 +1333,10 @@ final class fo {
                       jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
                       lb.field_d = new LevelSimulation(0, jm.field_E, false, false);
                       lb.field_d.loadLevel((byte) -51, var6, kn.field_h[0][var6]);
-                      if (null == qe.field_V) {
+                      if (null == ValidationStatusWidget.field_V) {
                         var8_ref_String = PacketBuffer.field_o;
                       } else {
-                        var8_ref_String = qe.field_V;
+                        var8_ref_String = ValidationStatusWidget.field_V;
                       }
                       tf.field_l = new LevelRenderer(0, 1, new String[]{var8_ref_String});
                       var9 = param2 ? 1 : 0;
@@ -1709,7 +1709,7 @@ final class fo {
               jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
               lb.field_d = new LevelSimulation(0, jm.field_E, false, false);
               lb.field_d.loadLevel((byte) 91, var6, kn.field_h[0][var6]);
-              tf.field_l = new LevelRenderer(0, 1, new String[]{qe.field_V});
+              tf.field_l = new LevelRenderer(0, 1, new String[]{ValidationStatusWidget.field_V});
               var8 = param2 ? 1 : 0;
               gj.a((byte) 74, var8 != 0, LevelRenderer.field_n, 13);
             }
@@ -1955,7 +1955,7 @@ final class fo {
               }
               if ((var7 == 0)) {
                 var3Lifetime1Lifetime1 = 16777215;
-                this.a(wh.field_D.field_u, var2, wh.field_D.field_p, (byte) 30, wh.field_D.field_y, -1, qe.field_V, var3Lifetime1Lifetime1, wh.field_D.field_s);
+                this.a(wh.field_D.field_u, var2, wh.field_D.field_p, (byte) 30, wh.field_D.field_y, -1, ValidationStatusWidget.field_V, var3Lifetime1Lifetime1, wh.field_D.field_s);
               }
               break regionExit1;
             }

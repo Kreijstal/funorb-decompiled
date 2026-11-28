@@ -116,7 +116,7 @@ final class NetworkSupport002 {
           mixedSupport001Local1.integerState0002 = 16777215;
           this.callbackContract004State0005 = (WidgetRenderer) ((Object) mixedSupport001Local1);
           mixedSupport009Local2 = new MixedSupport009();
-          mixedSupport001Local1.performAction0008(-12253, mixedSupport009Local2);
+          mixedSupport001Local1.copyStyleTo(-12253, mixedSupport009Local2);
           mixedSupport009Local2.integerState0007 = 11711154;
           mixedSupport009Local2.integerState0012 = 15658734;
           this.integerState0082 = 3;
@@ -151,7 +151,7 @@ final class NetworkSupport002 {
           discarded$0 = new InputAdapter001(bitmapFontArgument2, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new MixedSupport105(bitmapFontArgument2, 16777215, -1, 125269879, 4473924, 3, 268435455);
           mixedSupport009Local11 = new MixedSupport009();
-          mixedSupport001Local1.performAction0008(-12253, mixedSupport009Local11);
+          mixedSupport001Local1.copyStyleTo(-12253, mixedSupport009Local11);
           mixedSupport009Local11.computeMixedSupport1180099(0, 78).computeMixedSupport1181543(integerArgument1 ^ -13421740, MixedSupport042.computeRgbSpriteArray0535(10066329, 15658734, 7829367, integerArgument1 - 13389632)).computeMixedSupport1181539(1118481, (byte) 106).computeMixedSupport1181550(-83, -1);
           mixedSupport009Local11.computeMixedSupport1180099(4, integerArgument1 ^ 13421812).computeMixedSupport1181542(-16598, true).computeMixedSupport1181543(-27, rgbSpriteArrayLocal3);
           this.callbackContract004State0002 = (WidgetRenderer) ((Object) mixedSupport009Local11);

@@ -71,7 +71,7 @@ final class dg {
         try {
           pd.a(-22949);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ')');
         }
     }
 

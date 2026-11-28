@@ -307,7 +307,7 @@ final class tc extends DefaultTextWidgetRenderer {
         var8 = stellarshard.field_B;
         try {
           var4_int = -94 % ((6 - param1) / 63);
-          super.a(param2, (byte) -34);
+          super.copyStyleTo(param2, (byte) -34);
           if (param0) {
             for (var5 = 0; var5 < 6; var5++) {
               var6 = this.field_x[var5];

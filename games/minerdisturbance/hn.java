@@ -10,7 +10,7 @@ abstract class hn {
     final static String c(int param0) {
         String var1 = "";
         if (MidiPcmStream.field_D != null) {
-          var1 = MidiPcmStream.field_D.a((byte) 117);
+          var1 = MidiPcmStream.field_D.getAccountIdentifier((byte) 117);
         }
         if (param0 > 74) {
           if (var1.length() == 0) {

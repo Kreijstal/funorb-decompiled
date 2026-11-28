@@ -744,7 +744,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             GuestPlayConfirmationForm.field_U.ensureIndexLoaded(param1 - 14280)) {
             if (GuestPlayConfirmationForm.field_U.hasGroupName("", param1 ^ -74)) {
               if (GuestPlayConfirmationForm.field_U.tryLoadGroupByName(false, "")) {
-                ng.a(param1 ^ 27014, GuestPlayConfirmationForm.field_U);
+                ValidationStatusIcon.a(param1 ^ 27014, GuestPlayConfirmationForm.field_U);
                 GuestPlayConfirmationForm.field_U = null;
                 nf.d(0);
               }

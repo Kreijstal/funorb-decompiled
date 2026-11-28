@@ -232,7 +232,7 @@ final class hc {
           if (param2 != -2) {
             this.field_g = 99;
           }
-          var6 = param0.c(param1, param2 ^ 775);
+          var6 = param0.resolveDisplayText(param1, param2 ^ 775);
           if (var6 != null &&
             null != param0.field_p) {
             if (this.field_f < 0) {

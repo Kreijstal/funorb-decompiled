@@ -181,7 +181,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           ti.field_M = param2;
           cg.field_C = true;
           if (0 == ti.field_M) {
-            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, IntrusiveDeque.field_a);
             var4 = 3 + var3_int;
             IsaacRandom.field_m = new int[var4];
             ne.field_K = new String[var4];
@@ -200,7 +200,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
             IsaacRandom.field_m[-1 + var4] = 1;
             ResizableModalDialog.field_P[1] = 5;
           } else if (ti.field_M == 1) {
-            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, IntrusiveDeque.field_a);
             var4 = var3_int + 2;
             ne.field_K = new String[var4];
             IsaacRandom.field_m = new int[var4];
@@ -218,9 +218,9 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
           } else if (ti.field_M != 2) {
             if (ti.field_M == 3) {
               if (qa.field_a.privilegedTasksEnabled) {
-                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
+                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, ub.field_b);
               } else {
-                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
+                var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, pn.field_d);
               }
               var4 = 2 + var3_int;
               IsaacRandom.field_m = new int[var4];
@@ -237,7 +237,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               IsaacRandom.field_m[-1 + var4] = 0;
               ResizableModalDialog.field_P[0] = 5;
             } else if (ti.field_M == 4) {
-              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, SoundCache.field_f);
+              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, SoundCache.field_f);
               var4 = var3_int + 2;
               IsaacRandom.field_m = new int[var4];
               ne.field_K = new String[var4];
@@ -256,7 +256,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               if (ti.field_M != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, Bzip2State.field_F);
+              var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, Bzip2State.field_F);
               var4 = 3 + var3_int;
               ne.field_K = new String[var4];
               IsaacRandom.field_m = new int[var4];
@@ -276,7 +276,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               ResizableModalDialog.field_P[1] = 5;
             }
           } else {
-            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -74, fb.field_h, new String[]{"<br><%0><br>"}));
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, oa.a((byte) -74, fb.field_h, new String[]{"<br><%0><br>"}));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(fd.field_J[var5])) {
@@ -293,7 +293,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
             om.field_f = new String[-1 + (-var4 + var3_int)];
             ai.a(fd.field_J, 1 + var4, om.field_f, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -127, ff.field_e, new String[]{"<br><%0><br>"}));
+            var3_int = SingleChildWidgetContainer.a((byte) 106, gh.field_b, fd.field_J, ValidationStatusWidget.field_S, oa.a((byte) -127, ff.field_e, new String[]{"<br><%0><br>"}));
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(fd.field_J[var5])) {
                 continue;

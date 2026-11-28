@@ -17,18 +17,18 @@ final class qh implements WidgetActionListener {
             if (!(var1.indexOf('@') < 0)) {
               var1 = "";
             }
-            return new gd(pb.a((byte) -47), dd.f((byte) 105));
+            return new gd(pb.a((byte) -47), ValidationStatusIcon.f((byte) 105));
           }
-          return new gd(pb.a((byte) -47), dd.f((byte) 105));
+          return new gd(pb.a((byte) -47), ValidationStatusIcon.f((byte) 105));
         }
         if (var1 == null) {
-          return new gd(pb.a((byte) -47), dd.f((byte) 105));
+          return new gd(pb.a((byte) -47), ValidationStatusIcon.f((byte) 105));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new gd(pb.a((byte) -47), dd.f((byte) 105));
+          return new gd(pb.a((byte) -47), ValidationStatusIcon.f((byte) 105));
         }
-        return new gd(pb.a((byte) -47), dd.f((byte) 105));
+        return new gd(pb.a((byte) -47), ValidationStatusIcon.f((byte) 105));
     }
 
     public final void paintWidget(int param0, UiWidget param1, int param2, int param3, boolean param4) {

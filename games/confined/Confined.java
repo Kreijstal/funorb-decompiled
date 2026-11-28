@@ -66,7 +66,7 @@ public final class Confined extends i {
           IntrusiveNode.a(14);
           DynamicLight.clearStaticReferences(false);
           ka.resetStaticState(0);
-          od.clearStaticReferences();
+          MeshData.clearStaticReferences();
           TunnelCamera.clearTunnelCameraGlobals(78);
           SoftwareModelMesh.clearStaticReferences();
           da.b(-12961);
@@ -235,8 +235,8 @@ public final class Confined extends i {
           StripedProgressWidget.clearStaticReferences((byte) -20);
           NameSuggestionsPanel.releaseDeclaredStaticReferences(-125);
           RichTextWidget.clearDeclaredStaticReferences((byte) -127);
-          ba.clearDeclaredStaticReferences((byte) -94);
-          rh.clearDeclaredStaticReferences(8692);
+          ValidationStatusIcon.clearDeclaredStaticReferences((byte) -94);
+          ValidationStatusWidget.clearDeclaredStaticReferences(8692);
           fa.f(91);
           TextFieldValidator.d(96);
           ol.clearStaticReferences(0);
@@ -806,7 +806,7 @@ public final class Confined extends i {
     private final void f(byte param0) {
         int var2_int = 0;
         SoundCache var2 = null;
-        od var3_ref_od = null;
+        MeshData var3_ref_od = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -845,21 +845,21 @@ public final class Confined extends i {
             Bzip2State.a((byte) -102);
             jc.a(ij.field_o, param0 ^ -10312, 50.0f);
             this.renderClientFrame(param0 ^ -51295);
-            IsaacRandom.field_d = od.a(ka.field_N, "", "player/ship");
-            var2_double = 0.3 / (double)IsaacRandom.field_d.b(153);
+            IsaacRandom.field_d = MeshData.load(ka.field_N, "", "player/ship");
+            var2_double = 0.3 / (double)IsaacRandom.field_d.scaleToRadius(153);
             jb.a((byte) -100, var2_double, AlphaWidgetContainer.field_J);
             jb.a((byte) -92, var2_double, ac.field_c);
             jb.a((byte) -86, var2_double, FrameTimer.field_b);
-            di.field_d = od.a(ka.field_N, "", "player/wingpod");
-            var2_doubleLifetime2 = 0.1 / (double)di.field_d.b(51);
+            di.field_d = MeshData.load(ka.field_N, "", "player/wingpod");
+            var2_doubleLifetime2 = 0.1 / (double)di.field_d.scaleToRadius(51);
             jb.a((byte) -99, var2_doubleLifetime2, og.field_g);
-            DisplayNameSelectionPanel.field_R[0][0] = od.a(ka.field_N, "", "rocks/0");
-            DisplayNameSelectionPanel.field_R[0][1] = od.a(ka.field_N, "", "rocks/1");
-            DisplayNameSelectionPanel.field_R[0][2] = od.a(ka.field_N, "", "rocks/2");
-            DisplayNameSelectionPanel.field_R[0][3] = od.a(ka.field_N, "", "rocks/3");
+            DisplayNameSelectionPanel.field_R[0][0] = MeshData.load(ka.field_N, "", "rocks/0");
+            DisplayNameSelectionPanel.field_R[0][1] = MeshData.load(ka.field_N, "", "rocks/1");
+            DisplayNameSelectionPanel.field_R[0][2] = MeshData.load(ka.field_N, "", "rocks/2");
+            DisplayNameSelectionPanel.field_R[0][3] = MeshData.load(ka.field_N, "", "rocks/3");
             var4 = 0;
             while (var4 < 4) {
-              DisplayNameSelectionPanel.field_R[0][var4].b(51);
+              DisplayNameSelectionPanel.field_R[0][var4].scaleToRadius(51);
               var4++;
               if (var7 != 0) {
                 return;
@@ -872,54 +872,54 @@ public final class Confined extends i {
           if (null == e.field_a) {
             jc.a(ij.field_o, 10265, 53.0f);
             this.renderClientFrame(51200);
-            e.field_a = od.a(ka.field_N, "", "missiles/concussion");
-            e.field_a.b(204);
-            WingPod.field_Y = od.a(ka.field_N, "", "missiles/homing");
-            WingPod.field_Y.b(204);
-            GameSession.field_f = od.a(ka.field_N, "", "missiles/cluster");
-            GameSession.field_f.b(204);
-            tk.field_a = od.a(ka.field_N, "", "missiles/cluster-shell");
-            tk.field_a.b(102);
-            u.field_T = od.a(ka.field_N, "", "missiles/nuclear");
-            u.field_T.b(256);
-            ri.field_c = od.a(ka.field_N, "", "mines/basic");
-            ri.field_c.b(25);
-            DiskArchiveRequest.field_A = od.a(ka.field_N, "", "mines/cluster");
-            DiskArchiveRequest.field_A.b(25);
-            jk.field_c[0] = od.a(ka.field_N, "", "aliens/flying-saucer");
-            jk.field_c[1] = od.a(ka.field_N, "", "aliens/flying-saucer-2");
-            jk.field_c[2] = od.a(ka.field_N, "", "aliens/flying-saucer-3");
-            jk.field_c[3] = od.a(ka.field_N, "", "aliens/flying-saucer-4");
-            jk.field_c[4] = od.a(ka.field_N, "", "aliens/flying-saucer-armed");
-            jk.field_c[5] = od.a(ka.field_N, "", "aliens/flying-saucer-armed-2");
-            jk.field_c[6] = od.a(ka.field_N, "", "aliens/flying-saucer-armed-3");
-            jk.field_c[7] = od.a(ka.field_N, "", "aliens/flying-saucer-armed-4");
-            jk.field_c[8] = od.a(ka.field_N, "", "aliens/electrocuter");
-            jk.field_c[9] = od.a(ka.field_N, "", "aliens/swarmer");
-            jk.field_c[10] = od.a(ka.field_N, "", "aliens/swarmer-2");
-            jk.field_c[11] = od.a(ka.field_N, "", "aliens/swarmer-3");
-            jk.field_c[12] = od.a(ka.field_N, "", "aliens/swarmer-4");
-            var2_doubleLifetime1 = 0.5 / (double)jk.field_c[0].b(256);
+            e.field_a = MeshData.load(ka.field_N, "", "missiles/concussion");
+            e.field_a.scaleToRadius(204);
+            WingPod.field_Y = MeshData.load(ka.field_N, "", "missiles/homing");
+            WingPod.field_Y.scaleToRadius(204);
+            GameSession.field_f = MeshData.load(ka.field_N, "", "missiles/cluster");
+            GameSession.field_f.scaleToRadius(204);
+            tk.field_a = MeshData.load(ka.field_N, "", "missiles/cluster-shell");
+            tk.field_a.scaleToRadius(102);
+            u.field_T = MeshData.load(ka.field_N, "", "missiles/nuclear");
+            u.field_T.scaleToRadius(256);
+            ri.field_c = MeshData.load(ka.field_N, "", "mines/basic");
+            ri.field_c.scaleToRadius(25);
+            DiskArchiveRequest.field_A = MeshData.load(ka.field_N, "", "mines/cluster");
+            DiskArchiveRequest.field_A.scaleToRadius(25);
+            jk.field_c[0] = MeshData.load(ka.field_N, "", "aliens/flying-saucer");
+            jk.field_c[1] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-2");
+            jk.field_c[2] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-3");
+            jk.field_c[3] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-4");
+            jk.field_c[4] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-armed");
+            jk.field_c[5] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-armed-2");
+            jk.field_c[6] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-armed-3");
+            jk.field_c[7] = MeshData.load(ka.field_N, "", "aliens/flying-saucer-armed-4");
+            jk.field_c[8] = MeshData.load(ka.field_N, "", "aliens/electrocuter");
+            jk.field_c[9] = MeshData.load(ka.field_N, "", "aliens/swarmer");
+            jk.field_c[10] = MeshData.load(ka.field_N, "", "aliens/swarmer-2");
+            jk.field_c[11] = MeshData.load(ka.field_N, "", "aliens/swarmer-3");
+            jk.field_c[12] = MeshData.load(ka.field_N, "", "aliens/swarmer-4");
+            var2_doubleLifetime1 = 0.5 / (double)jk.field_c[0].scaleToRadius(256);
             jb.a((byte) -97, var2_doubleLifetime1, mc.field_b);
-            jk.field_c[1].b(256);
-            jk.field_c[2].b(256);
-            jk.field_c[3].b(256);
-            var2_doubleLifetime1Lifetime1 = 0.5 / (double)jk.field_c[4].b(256);
+            jk.field_c[1].scaleToRadius(256);
+            jk.field_c[2].scaleToRadius(256);
+            jk.field_c[3].scaleToRadius(256);
+            var2_doubleLifetime1Lifetime1 = 0.5 / (double)jk.field_c[4].scaleToRadius(256);
             jb.a((byte) -90, var2_doubleLifetime1Lifetime1, tl.field_a[4]);
-            var2_doubleLifetime1Lifetime2 = 0.5 / (double)jk.field_c[5].b(256);
+            var2_doubleLifetime1Lifetime2 = 0.5 / (double)jk.field_c[5].scaleToRadius(256);
             jb.a((byte) -120, var2_doubleLifetime1Lifetime2, tl.field_a[5]);
-            var2_doubleLifetime1Lifetime3 = 0.5 / (double)jk.field_c[6].b(256);
+            var2_doubleLifetime1Lifetime3 = 0.5 / (double)jk.field_c[6].scaleToRadius(256);
             jb.a((byte) -82, var2_doubleLifetime1Lifetime3, tl.field_a[6]);
-            var2_doubleLifetime1Lifetime4 = 0.5 / (double)jk.field_c[7].b(256);
+            var2_doubleLifetime1Lifetime4 = 0.5 / (double)jk.field_c[7].scaleToRadius(256);
             jb.a((byte) -82, var2_doubleLifetime1Lifetime4, tl.field_a[7]);
-            jk.field_c[8].b(204);
-            var2_doubleLifetime1Lifetime5 = 0.3 / (double)jk.field_c[9].b(153);
+            jk.field_c[8].scaleToRadius(204);
+            var2_doubleLifetime1Lifetime5 = 0.3 / (double)jk.field_c[9].scaleToRadius(153);
             jb.a((byte) -92, var2_doubleLifetime1Lifetime5, tl.field_a[9]);
-            var2_doubleLifetime1Lifetime6 = 0.3 / (double)jk.field_c[10].b(153);
+            var2_doubleLifetime1Lifetime6 = 0.3 / (double)jk.field_c[10].scaleToRadius(153);
             jb.a((byte) -113, var2_doubleLifetime1Lifetime6, tl.field_a[10]);
-            var2_doubleLifetime1Lifetime7 = 0.3 / (double)jk.field_c[11].b(153);
+            var2_doubleLifetime1Lifetime7 = 0.3 / (double)jk.field_c[11].scaleToRadius(153);
             jb.a((byte) -120, var2_doubleLifetime1Lifetime7, tl.field_a[11]);
-            var2_doubleLifetime1Lifetime8 = 0.3 / (double)jk.field_c[12].b(153);
+            var2_doubleLifetime1Lifetime8 = 0.3 / (double)jk.field_c[12].scaleToRadius(153);
             jb.a((byte) -125, var2_doubleLifetime1Lifetime8, tl.field_a[12]);
             var4Lifetime1 = 0;
             boolean decompiledNaturalLoopExit0 = false;
@@ -929,7 +929,7 @@ public final class Confined extends i {
               stackIn_18_0 = stackOut_17_0;
               if (var7 == 0) {
                 if (stackIn_18_0) {
-                  jk.field_c[var4Lifetime1].a();
+                  jk.field_c[var4Lifetime1].rotateY180();
                   var5_ref_double__ = tl.field_a[var4Lifetime1];
                   if (var5_ref_double__ != null) {
                     var6 = 0;
@@ -950,7 +950,7 @@ public final class Confined extends i {
             }
             var4Lifetime1Lifetime1 = stackIn_31_0;
             while (var4Lifetime1Lifetime1 < 4) {
-              gg.field_n[var4Lifetime1Lifetime1] = od.a(ka.field_N, "", gg.field_p[var4Lifetime1Lifetime1]);
+              gg.field_n[var4Lifetime1Lifetime1] = MeshData.load(ka.field_N, "", gg.field_p[var4Lifetime1Lifetime1]);
               var4Lifetime1Lifetime1++;
               if (var7 != 0) {
                 return;
@@ -977,7 +977,7 @@ public final class Confined extends i {
             scanLoop1: while (true) {
               if (var2_int < 4) {
                 var3_ref_od = gg.field_n[var2_int];
-                var4Lifetime2 = var3_ref_od.b(192);
+                var4Lifetime2 = var3_ref_od.scaleToRadius(192);
                 stackIn_64_0 = 0;
                 if (var7 != 0) {
                   break scanLoop1;
@@ -1516,7 +1516,7 @@ public final class Confined extends i {
                       if ((decompiledFrameCompleted1) &&
                         (decompiledFrameRemainder1 = !(StandardContentDialog.field_tb < 0)) &&
                         (decompiledFrameRemainder1 = !(3000 <= StandardContentDialog.field_tb)) &&
-                        (decompiledFrameRemainder1 = (rh.field_X != 0))) {
+                        (decompiledFrameRemainder1 = (ValidationStatusWidget.field_X != 0))) {
                         StandardContentDialog.field_tb = 3000;
                         decompiledFrameRemainder1 = (var3 != 0);
                       }

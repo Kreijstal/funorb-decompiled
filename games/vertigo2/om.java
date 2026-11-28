@@ -26,7 +26,7 @@ final class om extends ml {
         return param0 | param1;
     }
 
-    final String a(byte param0, UiWidget param1) {
+    final String resolveDisplayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

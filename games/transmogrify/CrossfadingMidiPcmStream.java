@@ -220,7 +220,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_y = param4;
               if (param4 != null) {
-                this.field_s.a(123, false, param4);
+                this.field_s.playTrack(123, false, param4);
                 this.a(param3, (byte) -99, this.field_s, param2);
               }
             } else {
@@ -229,7 +229,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_w = param4;
               if (param4 != null) {
-                this.field_k.a(-68, false, param4);
+                this.field_k.playTrack(-68, false, param4);
                 this.a(param3, (byte) -62, this.field_k, param2);
               }
             }
@@ -266,7 +266,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_49_0 = this.field_s;
               stackIn_49_1 = 125;
               stackIn_50_2 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_49_0).a(stackIn_49_1, stackIn_50_2, param4);
+              ((MidiPcmStream) (Object) stackIn_49_0).playTrack(stackIn_49_1, stackIn_50_2, param4);
               this.a(param3, (byte) -61, this.field_s, param2);
             }
             this.field_z = param0;
@@ -279,7 +279,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               stackIn_40_0 = this.field_k;
               stackIn_40_1 = 124;
               stackIn_41_2 = !(param1);
-              ((MidiPcmStream) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_41_2, param4);
+              ((MidiPcmStream) (Object) stackIn_40_0).playTrack(stackIn_40_1, stackIn_41_2, param4);
               this.a(param3, (byte) -96, this.field_k, param2);
             }
             this.field_z = -param0;
@@ -403,7 +403,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
           if (param1 > -58) {
             this.firstChildStream();
           }
-          param2.c(-1, param3, 0);
+          param2.setChannelGain(-1, param3, 0);
           param2.a(true, param0);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "oj.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

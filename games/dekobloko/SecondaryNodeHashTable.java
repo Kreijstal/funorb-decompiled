@@ -144,7 +144,7 @@ final class SecondaryNodeHashTable {
           MixedSupport063.integerState0336 = byteArrayArgument7.length;
           MixedSupport070.byteArrayState0011 = new byte[(MixedSupport054.integerState0277 + 7) / 8];
           MixedSupport040.booleanState0047 = false;
-          UiComponentPart011.sceneWidgetPart013State0002 = null;
+          ValidationStatusIcon.sceneWidgetPart013State0002 = null;
           MixedSupport016.sceneWidgetPart013State0001 = null;
           integerLocal12 = integerArgument3;
           for (integerLocal1 = 0; integerLocal1 < MixedSupport107.byteArrayState0026.length; integerLocal1++) {

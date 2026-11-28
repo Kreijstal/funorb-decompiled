@@ -59,8 +59,8 @@ final class qg {
             SolKnight.field_K[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < al.field_p; var2_intLifetime1++) {
-            if (kc.field_K[var2_intLifetime1].field_i == param0.field_i) {
-              dupTemp$3 = kc.field_K[var2_intLifetime1].a(1910696752);
+            if (ValidationStatusIcon.field_K[var2_intLifetime1].field_i == param0.field_i) {
+              dupTemp$3 = ValidationStatusIcon.field_K[var2_intLifetime1].a(1910696752);
               SolKnight.field_K[dupTemp$3] = SolKnight.field_K[dupTemp$3] + 1;
             }
           }
@@ -69,8 +69,8 @@ final class qg {
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < al.field_p; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (kc.field_K[var3].field_i == param0.field_i) {
-              var4 = kc.field_K[var3].a(1910696752);
+            if (ValidationStatusIcon.field_K[var3].field_i == param0.field_i) {
+              var4 = ValidationStatusIcon.field_K[var3].a(1910696752);
               if (ModalDialogHost.field_K < SolKnight.field_K[var4]) {
                 SolKnight.field_K[var4] = SolKnight.field_K[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -79,14 +79,14 @@ final class qg {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              kc.field_K[incrementValue$2] = kc.field_K[var3];
+              ValidationStatusIcon.field_K[incrementValue$2] = ValidationStatusIcon.field_K[var3];
             }
           }
           var4Lifetime1 = -52 / ((param1 + 2) / 59);
           al.field_p = var2_intLifetime2;
           fieldTemp$1 = al.field_p;
           al.field_p = al.field_p + 1;
-          kc.field_K[fieldTemp$1] = param0;
+          ValidationStatusIcon.field_K[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

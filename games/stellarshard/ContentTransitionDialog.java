@@ -110,7 +110,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
                 param2 = dd.field_f;
               }
               param0 = 2;
-              af.field_r.b(FullscreenFocusCanvas.field_a, 15);
+              af.field_r.setAccountAndClearPassword(FullscreenFocusCanvas.field_a, 15);
             }
             if (param0 == 10) {
               var3_int = 0;
@@ -130,7 +130,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
               if (SoundCache.field_a) {
                 return;
               }
-              af.field_r.e((byte) 41);
+              af.field_r.clearCredentials((byte) 41);
             }
           }
         } catch (RuntimeException runtimeException) {

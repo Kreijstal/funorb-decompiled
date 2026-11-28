@@ -14,7 +14,7 @@ class RichTextWidget extends InteractiveWidget {
         int var6 = 112 / ((param0 + 29) / 53);
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -236,7 +236,7 @@ class RichTextWidget extends InteractiveWidget {
           return dl.field_l.a((byte) -85);
         }
         int var1 = 25 % ((-59 - param0) / 35);
-        return ob.field_F;
+        return ValidationStatusWidget.field_F;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -247,7 +247,7 @@ class RichTextWidget extends InteractiveWidget {
         field_C = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         this.setBounds(26, param3, param0, param1, ((TextWidgetRenderer) ((Object) this.field_q)).getPreferredHeight((UiWidget) (this), 228));
         if (param2 != -1) {
           field_C = (IntrusiveDeque) null;

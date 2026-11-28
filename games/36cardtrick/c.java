@@ -143,7 +143,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_ineligible", (byte) -127);
                 if (var2 != null) {
-                  pa.field_N = GzipInflater.a(var2, (byte) 121);
+                  ValidationStatusWidget.field_N = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = SectorCacheStore.a("usernameprompt", (byte) -127);
                 if (null != var2) {
@@ -3174,7 +3174,7 @@ abstract class c extends GameApplet {
               if (var2_int != 1) {
                 if (var2_int != 2) {
                   if (var2_int == 3) {
-                    pa.i(0);
+                    ValidationStatusWidget.i(0);
                     if (var4 == 0) {
                       return;
                     }
@@ -4010,7 +4010,7 @@ abstract class c extends GameApplet {
               wh.a(PasswordValidator.g(-125), 63);
             }
             if (12 == var4_int) {
-              pa.a(PasswordValidator.g(param2 - 130), wd.b(-108), -31);
+              ValidationStatusWidget.a(PasswordValidator.g(param2 - 130), wd.b(-108), -31);
             }
             if (13 == var4_int) {
               try {

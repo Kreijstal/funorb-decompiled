@@ -31,21 +31,21 @@ final class ni {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     final static String a(boolean param0) {
         String var1 = "";
         if (eb.field_b != null) {
-          var1 = eb.field_b.e((byte) -74);
+          var1 = eb.field_b.getAccountIdentifier((byte) -74);
         }
         if (!param0) {
           if (var1.length() == 0) {
             var1 = a.a(-1);
           }
           if (var1.length() == 0) {
-            var1 = ld.field_G;
+            var1 = ValidationStatusIcon.field_G;
           }
           return var1;
         }
@@ -55,7 +55,7 @@ final class ni {
           var1 = a.a(-1);
         }
         if (var1.length() == 0) {
-          var1 = ld.field_G;
+          var1 = ValidationStatusIcon.field_G;
         }
         return var1;
     }
@@ -96,7 +96,7 @@ final class ni {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

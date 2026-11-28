@@ -158,7 +158,7 @@ final class pm {
             this.field_h.draw(var6_int, var7);
           }
           var7Lifetime1 = -86 / ((param4 + 74) / 49);
-          var6 = param0.d(param2, -1);
+          var6 = param0.resolveDisplayText(param2, -1);
           if (var6 != null &&
             null != param0.field_p) {
             if (this.field_a < 0) {

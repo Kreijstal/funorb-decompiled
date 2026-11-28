@@ -153,7 +153,7 @@ final class wd extends DefaultWidgetRenderer {
         var8 = BachelorFridge.field_y;
         try {
           var4_int = 99 / ((param1 - 76) / 34);
-          super.a(-85, param0);
+          super.copyStyleTo(-85, param0);
           if (param2) {
             for (var5 = 0; var5 < 6; var5++) {
               var6 = this.field_u[var5];

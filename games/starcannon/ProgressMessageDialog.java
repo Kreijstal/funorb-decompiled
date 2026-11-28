@@ -20,7 +20,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
         eb.field_c = eb.field_c | var3;
         if (param1) {
           ProgressMessageDialog.a(-49, false, 94);
-          jg.field_H = jg.field_H | var3;
+          ValidationStatusIcon.field_H = ValidationStatusIcon.field_H | var3;
           pk.field_a.addLast(90, new wf(param2));
           if (a.field_a) {
             return;
@@ -32,7 +32,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           SecondaryNodeDeque.field_e.addLast(86, new hb(param2, param0, SoundCache.field_d, oe.field_a, il.field_i, rj.field_h));
           return;
         }
-        jg.field_H = jg.field_H | var3;
+        ValidationStatusIcon.field_H = ValidationStatusIcon.field_H | var3;
         pk.field_a.addLast(90, new wf(param2));
         if (a.field_a) {
           return;

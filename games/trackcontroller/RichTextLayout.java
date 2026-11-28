@@ -200,7 +200,7 @@ final class RichTextLayout extends TextLayout {
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param0.stringWidth(var13), var13, 5, param5);
+                stackIn_43_1 = this.computeJustificationStep(param0.stringWidth(var13), var13, 5, param5);
               }
               NodeHashTable.$cfr$intArgs$a$1fdf1ca47e3f(stackIn_42_0, stackIn_43_1, param0, var13, var14);
             }

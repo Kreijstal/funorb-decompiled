@@ -12,7 +12,7 @@ class RichTextWidget extends InteractiveWidget {
     private IntrusiveDeque field_I;
     static fk field_M;
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void setTextBounds(int param0, byte param1, int param2, int param3) {
         if (param1 != 53) {
           return;
         }
@@ -34,7 +34,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -271,7 +271,7 @@ class RichTextWidget extends InteractiveWidget {
     final void activateFromInput(int param0, int param1, int param2, int param3) {
         super.activateFromInput(param0 ^ 0, param1, param2, param3);
         if (param0 != 84) {
-          this.a(93, (byte) 51, 88, -37);
+          this.setTextBounds(93, (byte) 51, 88, -37);
         }
         int var5 = -this.field_s + param3;
         int var6 = -this.field_n + param1;

@@ -66,7 +66,7 @@ final class gh {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = jn.field_M[var7 - 128];
+                var8 = ValidationStatusIcon.field_M[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }

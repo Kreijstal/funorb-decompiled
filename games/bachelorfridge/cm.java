@@ -14,7 +14,7 @@ final class cm extends oka {
         this(jca.field_a, param0);
     }
 
-    final String c(UiWidget param0, int param1) {
+    final String resolveDisplayText(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

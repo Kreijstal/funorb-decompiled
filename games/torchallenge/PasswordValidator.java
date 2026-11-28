@@ -38,7 +38,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_9_0 = (rj) null;
             return stackIn_9_0;
           }
-          if (!this.a(param0 - 25, param1)) {
+          if (!this.containsEmailComponent(param0 - 25, param1)) {
             return tf.field_w;
           }
           stackIn_13_0 = SpriteLoader.field_c;
@@ -133,7 +133,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean a(int param0, String param1) {
+    private final boolean containsEmailComponent(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -282,7 +282,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_17_0 = ah.field_c;
             return stackIn_17_0;
           }
-          if (this.a(-1, param0)) {
+          if (this.containsEmailComponent(-1, param0)) {
             stackIn_21_0 = GameScreen.field_a;
             return stackIn_21_0;
           }

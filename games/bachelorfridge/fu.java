@@ -115,10 +115,10 @@ final class fu extends AnimationNode {
           qs.field_l[9] = dupTemp$6;
           wo.field_k[9] = cl.a(BoardChange.field_f, param1);
           dupTemp$7 = FridgeCreature.a(param0, 4, "right_hand");
-          nf.field_P = dupTemp$7;
+          ValidationStatusWidget.field_P = dupTemp$7;
           qs.field_l[4] = dupTemp$7;
           TeleportSpecial.a(0, qs.field_l[4]);
-          wo.field_k[4] = cl.a(nf.field_P, false);
+          wo.field_k[4] = cl.a(ValidationStatusWidget.field_P, false);
           dupTemp$8 = FridgeCreature.a(param0, 4, "left_foot");
           bha.field_m = dupTemp$8;
           qs.field_l[7] = dupTemp$8;

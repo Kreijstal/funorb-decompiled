@@ -49,7 +49,7 @@ final class SecondaryNodeDeque implements Iterable {
               }
               var4 = var4 + (gh.field_w + ((SoundCache.field_c << 1) + MouseInputHandler.field_a));
             } else {
-              var4 = var4 + io.field_O;
+              var4 = var4 + ValidationStatusWidget.field_O;
             }
             var3_int++;
           }

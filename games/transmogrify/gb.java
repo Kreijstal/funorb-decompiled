@@ -177,7 +177,7 @@ final class gb {
               } else {
                 param2 = wj.field_k;
               }
-              ok.field_a.a(ob.field_F, 30);
+              ok.field_a.setAccountAndClearPassword(ValidationStatusWidget.field_F, 30);
             }
             if (10 == param0) {
               var4 = 0;
@@ -195,7 +195,7 @@ final class gb {
             if (param0 != 256 &&
               param0 != 10 &&
               !lb.field_d) {
-              ok.field_a.l(-31891);
+              ok.field_a.clearCredentials(-31891);
               return;
             }
           }

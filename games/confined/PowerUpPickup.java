@@ -334,7 +334,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             } else {
               if (var4 == 2) {
                 if (param1.field_Sb) {
-                  this.a(rh.field_db, -86);
+                  this.a(ValidationStatusWidget.field_db, -86);
                 } else {
                   param1.field_Sb = true;
                   kc.a(mg.field_c, (TunnelEntity) (this), 119, param1.field_sb);

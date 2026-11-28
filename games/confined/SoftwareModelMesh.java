@@ -1241,7 +1241,7 @@ final class SoftwareModelMesh extends wj {
         this.field_m = 0;
     }
 
-    SoftwareModelMesh(od param0, int param1, int param2, int param3, int param4, int param5) {
+    SoftwareModelMesh(MeshData param0, int param1, int param2, int param3, int param4, int param5) {
         int dupTemp$1 = 0;
         int incrementValue$0 = 0;
         int var7;
@@ -1271,8 +1271,8 @@ final class SoftwareModelMesh extends wj {
         this.field_r = 0;
         this.field_s = false;
         this.field_m = 0;
-        param0.d();
-        param0.b();
+        param0.calculateNormals();
+        param0.buildSkinGroups();
         this.field_S = param0.field_j;
         this.field_m = param0.field_R;
         this.field_W = param0.field_v;
@@ -1294,7 +1294,7 @@ final class SoftwareModelMesh extends wj {
           for (var9 = 0; var9 < this.field_E; var9++) {
             var10 = param0.field_p[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.field_b.a(var10, 1)) {
+              TriangleRasterizer.field_b.hasTexture(var10, 1)) {
               this.field_F[var9] = (short)var10;
             } else {
               this.field_F[var9] = (short)-1;

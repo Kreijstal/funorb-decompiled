@@ -38,7 +38,7 @@ final class MeshData extends MeshObject {
     short[] field_E;
     private short[] field_j;
 
-    private final void a(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -455,7 +455,7 @@ final class MeshData extends MeshObject {
         }
     }
 
-    final void b() {
+    final void calculateNormals() {
         jea dupTemp$0 = null;
         int var1;
         int var2;
@@ -563,7 +563,7 @@ final class MeshData extends MeshObject {
         return (ModelMeshBase) ((Object) new ModelMesh(this, param0, param1, param2, param3, param4));
     }
 
-    final static MeshData a(ResourceArchive param0, String param1, String param2) {
+    final static MeshData load(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName((byte) 123, param2, param1);
         if (var3 == null) {
           return null;
@@ -571,7 +571,7 @@ final class MeshData extends MeshObject {
         return new MeshData(var3);
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -963,9 +963,9 @@ final class MeshData extends MeshObject {
         this.field_i = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.a(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.b(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 }

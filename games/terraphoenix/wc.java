@@ -208,7 +208,7 @@ abstract class wc extends DualLinkNode {
                 }
                 var9Lifetime1 = p.field_a[var4_intLifetime1].field_b;
                 if (var9Lifetime1 == 4) {
-                  var9Lifetime1 = dd.field_M;
+                  var9Lifetime1 = ValidationStatusIcon.field_M;
                 }
                 regionExit2: {
                   if (DefaultTextWidgetRenderer.field_o) {

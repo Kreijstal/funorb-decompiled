@@ -112,7 +112,7 @@ abstract class TextLayout {
         return fg.field_b[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ej.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
-    final int a(int param0, String param1, int param2, int param3) {
+    final int computeJustificationStep(int param0, String param1, int param2, int param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;

@@ -101,7 +101,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           }
           var4 = mj.field_o;
           synchronized (var4) {
-            km.field_a.a(param2, true, -1);
+            km.field_a.setChannelGain(param2, true, -1);
             if (param0 == de.field_b) {
               return;
             }
@@ -109,7 +109,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             mj.field_o.flushAndMarkDrainCheck();
             de.field_b = param0;
             if (de.field_b != null) {
-              km.field_a.a(param1, de.field_b, (byte) 2);
+              km.field_a.playTrack(param1, de.field_b, (byte) 2);
             }
           }
           return;

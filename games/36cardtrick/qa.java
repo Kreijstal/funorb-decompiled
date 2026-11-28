@@ -25,7 +25,7 @@ final class qa {
             field_b = (BinaryBitmapFont) null;
           }
           var8 = new jk(param2);
-          stackIn_3_0 = pa.a(param4, var7, var8, param6, param3, 18, param0);
+          stackIn_3_0 = ValidationStatusWidget.a(param4, var7, var8, param6, param3, 18, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

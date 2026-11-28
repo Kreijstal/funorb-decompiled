@@ -284,7 +284,7 @@ final class b {
           return true;
         }
         if (param1 == 18) {
-          lr.a(-57, this.field_k, this.field_o);
+          ValidationStatusIcon.a(-57, this.field_k, this.field_o);
           return true;
         }
         if (param1 == 11) {

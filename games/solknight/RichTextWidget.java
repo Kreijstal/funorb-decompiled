@@ -134,7 +134,7 @@ class RichTextWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1463) {
-            this.b(122, 127, -75, 58);
+            this.setTextBounds(122, 127, -75, 58);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -281,7 +281,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         String[] var8 = null;
         String[] var9 = null;
         int var5 = 0;
@@ -463,7 +463,7 @@ class RichTextWidget extends InteractiveWidget {
         return null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
           return;
         }

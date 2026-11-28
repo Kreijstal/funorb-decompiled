@@ -354,7 +354,7 @@ final class eg {
         this.field_t = 4;
         this.field_c = jd.field_x;
         this.field_d = new String[32];
-        this.field_a = (BitmapFont) ((Object) al.field_Z);
+        this.field_a = (BitmapFont) ((Object) ValidationStatusWidget.field_Z);
         this.field_x = 13684944;
         this.field_b = -1;
         this.field_z = -1;

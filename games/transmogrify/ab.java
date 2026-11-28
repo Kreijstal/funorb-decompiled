@@ -125,7 +125,7 @@ final class ab {
             }
             this.field_d.draw(var6_int, var7);
           }
-          var6 = param1.c(param3, 82);
+          var6 = param1.resolveDisplayText(param3, 82);
           var7Lifetime1 = -84 / ((-29 - param0) / 48);
           if (var6 != null &&
             null != param1.field_i &&

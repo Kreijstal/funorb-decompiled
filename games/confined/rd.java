@@ -133,7 +133,7 @@ final class rd extends id {
               var15 = 320 + (int)Math.floor(var9 + 0.5);
               var16 = 188 + (int)Math.floor(0.5 + var11);
               TriangleRasterizer.setProjectionCenter(var15, var16);
-              var19 = (SoftwareModelMesh) (jk.field_c[this.field_Sb].a(96, 455, 0, 0, 256));
+              var19 = (SoftwareModelMesh) (jk.field_c[this.field_Sb].createModel(96, 455, 0, 0, 256));
               jc.field_f[2] = (int)(8192.0 * this.field_C);
               var19.projectAndDrawWithTransforms(tj.field_A, jc.field_f);
               TriangleRasterizer.centerProjection();

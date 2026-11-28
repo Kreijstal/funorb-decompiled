@@ -156,7 +156,7 @@ abstract class wl {
         if (AwtRasterBuffer.field_f == null) {
           return;
         }
-        vh.a(AwtRasterBuffer.field_f, (byte) 9);
+        ValidationStatusIcon.a(AwtRasterBuffer.field_f, (byte) 9);
         AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
         AwtRasterBuffer.field_f = null;
         if (ci.field_a != null) {

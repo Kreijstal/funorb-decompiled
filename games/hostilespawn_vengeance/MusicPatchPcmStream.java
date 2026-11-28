@@ -74,7 +74,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param1.field_A = RawPcmStream.createForSampleStep(param1.field_r, param1.field_A.getSampleStepMagnitude(), 0, param1.field_A.getPan());
                 stackIn_15_0 = this.field_s;
                 stackIn_16_1 = !(param1.field_p.field_r[param1.field_z] >= 0);
-                ((MidiPcmStream) (Object) stackIn_15_0).a(stackIn_16_1, param1, -107);
+                ((MidiPcmStream) (Object) stackIn_15_0).applySampleOffset(stackIn_16_1, param1, -107);
                 decompiledSharedTail0 = (HostileSpawn.field_I);
               }
               if (decompiledSharedTail0) {
@@ -1610,7 +1610,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_email_confirm", 24);
                 if (null != var2) {
-                  wj.field_K = PcmResampler.a(127, var2);
+                  ValidationStatusIcon.field_K = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("create_age", 24);
                 if (null != var2) {
@@ -2844,7 +2844,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("fs_button_accept", 24);
                 if (null != var2) {
-                  al.field_X = PcmResampler.a(125, var2);
+                  ValidationStatusWidget.field_X = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("fs_accept_afteraccept", 24);
                 if (null != var2) {
@@ -3291,7 +3291,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 param2.field_A = RawPcmStream.createForSampleStep(param2.field_r, var11.getSampleStepMagnitude(), 0, var11.getPan());
                 stackIn_24_0 = this.field_s;
                 stackIn_25_1 = !(param2.field_p.field_r[param2.field_z] >= 0);
-                ((MidiPcmStream) (Object) stackIn_24_0).a(stackIn_25_1, param2, -115);
+                ((MidiPcmStream) (Object) stackIn_24_0).applySampleOffset(stackIn_25_1, param2, -115);
                 param2.field_A.rampVolume(var9, var11.getTargetVolume());
                 decompiledSharedTail0 = (var12 != 0);
               }

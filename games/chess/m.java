@@ -4,7 +4,7 @@
 final class m {
     static fn[] field_e;
     static int field_d;
-    static bn field_a;
+    static MeshData field_a;
     static int field_b;
     static String field_c;
 
@@ -87,7 +87,7 @@ final class m {
     public static void clearStaticReferences(boolean param0) {
         field_a = null;
         if (param0) {
-          field_a = (bn) null;
+          field_a = (MeshData) null;
         }
         field_c = null;
         field_e = null;
@@ -102,7 +102,7 @@ final class m {
         var3 = Chess.field_G;
         try {
           if (param1 != 0) {
-            field_a = (bn) null;
+            field_a = (MeshData) null;
           }
           var4 = (dc) (GameAppletShell.field_j.beginBackward(param1 - 18110));
           while (var4 != null) {

@@ -178,7 +178,7 @@ final class nb extends TextureOperator {
           try {
             var9 = wm.field_k.a(1, var5);
             tj.field_a = var9.h(33);
-            if (fd.field_p.equals(qe.field_V)) {
+            if (fd.field_p.equals(ValidationStatusWidget.field_V)) {
               stackIn_24_0 = null;
             } else {
               stackIn_24_0 = var9.field_w;
@@ -199,7 +199,7 @@ final class nb extends TextureOperator {
         if (param0 != -14829) {
           nb.createMouseWheelInput(-116);
         }
-        hh.a(-20, lr.field_H);
+        hh.a(-20, ValidationStatusIcon.field_H);
     }
 
     final static MouseWheelInput createMouseWheelInput(int param0) {

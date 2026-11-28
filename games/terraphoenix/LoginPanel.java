@@ -16,7 +16,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     private boolean field_M;
     private String field_I;
 
-    final void g(byte param0) {
+    final void clearCredentials(byte param0) {
         this.field_N.clearText(-1);
         this.field_R.clearText(-1);
         if (param0 >= -78) {
@@ -258,7 +258,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         RuntimeException var3 = null;
         try {
           if (param1) {
-            this.g((byte) 36);
+            this.clearCredentials((byte) 36);
           }
           if (this.field_N == param0) {
             this.field_R.takeFocus((byte) 17, (UiWidget) (this));
@@ -291,7 +291,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final String d(boolean param0) {
+    final String getAccountIdentifier(boolean param0) {
         if (this.field_N.text == null) {
           return "";
         }
@@ -335,7 +335,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final void a(String param0, int param1) {
+    final void setAccountAndClearPassword(String param0, int param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {

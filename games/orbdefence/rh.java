@@ -11,11 +11,11 @@ final class rh {
     final static void a(byte param0, int param1, boolean param2) {
         int var3 = 99 / ((param0 - 75) / 33);
         RichTextWidget.field_O = 0;
-        kk.field_S = param1;
-        if (kk.field_S < 0) {
+        ValidationStatusWidget.field_S = param1;
+        if (ValidationStatusWidget.field_S < 0) {
           return;
         }
-        nc.field_cb[kk.field_S].a(param2, (byte) 53);
+        nc.field_cb[ValidationStatusWidget.field_S].a(param2, (byte) 53);
     }
 
     public static void clearStaticReferences(byte param0) {

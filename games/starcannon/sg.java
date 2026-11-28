@@ -211,7 +211,7 @@ final class sg {
           var18.field_c = 16777215;
           this.field_j = (WidgetRenderer) ((Object) var18);
           var4 = new w();
-          var18.a(-68, var4);
+          var18.copyStyleTo(-68, var4);
           this.field_a = 15658734;
           this.field_g = 3;
           this.field_m = 3;
@@ -250,7 +250,7 @@ final class sg {
           discarded$0 = new eg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ci(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new w();
-          var18.a(-121, var8);
+          var18.copyStyleTo(-121, var8);
           var8.a(0, (byte) -76).a(el.b(7829367, 22396, 10066329, 15658734), (byte) -74).c(1118481, 2).a((byte) -104, -1);
           var8.a(4, (byte) -76).a(-120, true).a(var5, (byte) -74);
           this.field_c = (WidgetRenderer) ((Object) var8);

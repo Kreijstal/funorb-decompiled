@@ -41,7 +41,7 @@ final class ji {
     }
 
     final static void a(byte param0, RgbSprite[] param1) {
-        bb var19 = null;
+        MeshData var19 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -63,7 +63,7 @@ final class ji {
           TriangleRasterizer.useRasterClip();
           TriangleRasterizer.setTextureProvider(DiskArchiveRequest.field_p);
           TriangleRasterizer.rebuildPaletteWithGamma(1.0f);
-          var19 = new bb(16, 8, 4);
+          var19 = new MeshData(16, 8, 4);
           var3 = FullscreenNoticeType.a(var19, 0, 0, 0, (byte) -72);
           var4 = FullscreenNoticeType.a(var19, 0, 1, 0, (byte) -93);
           var5 = FullscreenNoticeType.a(var19, 0, 0, 1, (byte) -87);
@@ -80,22 +80,22 @@ final class ji {
           var16 = FullscreenNoticeType.a(var19, 2, 0, -1, (byte) -118);
           var17 = FullscreenNoticeType.a(var19, -1, 1, -1, (byte) -94);
           var18 = FullscreenNoticeType.a(var19, 1, 1, 2, (byte) -82);
-          var19.a(var6, var5, var4, (byte) 1, (byte) -1, (short) 63, (short) -1);
-          var19.a(var4, var5, var3, (byte) 1, (byte) -1, (short) 63, (short) -1);
-          var19.a(var9, var10, var7, (byte) 1, (byte) -1, (short) 63, (short) -1);
-          var19.a(var7, var10, var8, (byte) 1, (byte) -1, (short) 63, (short) -1);
-          cf.field_d = var19.a((short) var3, (short) var11, (short) var12);
-          db.field_p = var19.a((short) var8, (short) var15, (short) var18);
-          AccountRequestState.field_a = var19.a((short) var13, (short) var16, (short) var5);
-          StripedProgressWidget.field_H = var19.a((short) var14, (short) var17, (short) var10);
-          ModalDialog.field_F = var19.a(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
+          var19.addFace(var6, var5, var4, (byte) 1, (byte) -1, (short) 63, (short) -1);
+          var19.addFace(var4, var5, var3, (byte) 1, (byte) -1, (short) 63, (short) -1);
+          var19.addFace(var9, var10, var7, (byte) 1, (byte) -1, (short) 63, (short) -1);
+          var19.addFace(var7, var10, var8, (byte) 1, (byte) -1, (short) 63, (short) -1);
+          cf.field_d = var19.addTextureTriangle((short) var3, (short) var11, (short) var12);
+          db.field_p = var19.addTextureTriangle((short) var8, (short) var15, (short) var18);
+          AccountRequestState.field_a = var19.addTextureTriangle((short) var13, (short) var16, (short) var5);
+          StripedProgressWidget.field_H = var19.addTextureTriangle((short) var14, (short) var17, (short) var10);
+          ModalDialog.field_F = var19.addFace(var3, var5, var7, (byte) 1, cf.field_d, (short) 0, (short) 0);
           if (param0 >= -87) {
             ji.a(-42);
           }
-          od.field_a = var19.a(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
-          eb.field_d = var19.a(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
-          oj.field_c = var19.a(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
-          ResizableModalDialog.field_O = (SoftwareModelMesh) (var19.a(127, 65535, -1, 0, 0));
+          od.field_a = var19.addFace(var7, var5, var9, (byte) 1, cf.field_d, (short) 0, (short) 0);
+          eb.field_d = var19.addFace(var4, var10, var6, (byte) 1, db.field_p, (short) 1, (short) 1);
+          oj.field_c = var19.addFace(var8, var10, var4, (byte) 1, db.field_p, (short) 1, (short) 1);
+          ResizableModalDialog.field_O = (SoftwareModelMesh) (var19.createModel(127, 65535, -1, 0, 0));
           ResizableModalDialog.field_O.field_h = qa.a(-100, var19.field_d);
           ResizableModalDialog.field_O.field_u = qa.a(-36, var19.field_B);
           ResizableModalDialog.field_O.field_U = qa.a(-107, var19.field_z);

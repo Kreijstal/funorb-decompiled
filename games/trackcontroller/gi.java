@@ -33,7 +33,7 @@ final class gi extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = TrackController.field_F ? 1 : 0;
         try {
-          super.a(-19397, param1);
+          super.copyStyleTo(-19397, param1);
           if (param2 != 11) {
             this.field_s = (qi[]) null;
           }

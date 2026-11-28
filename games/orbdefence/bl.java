@@ -49,7 +49,7 @@ final class bl {
           var18.field_s = 16777215;
           this.field_f = (WidgetRenderer) ((Object) var18);
           var4 = new sj();
-          var18.a((byte) 81, var4);
+          var18.copyStyleTo((byte) 81, var4);
           this.field_h = 3;
           this.field_i = -1;
           this.field_a = 3;
@@ -88,7 +88,7 @@ final class bl {
           discarded$0 = new ab(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ck(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new sj();
-          var18.a((byte) 81, var8);
+          var18.copyStyleTo((byte) 81, var8);
           var8.a(0, true).a(vf.a(10066329, 7829367, 15658734, (byte) -94), 0).a((byte) 116, 1118481).c(-1, param1 + 2701);
           var8.a(4, true).a(true, (byte) -57).a(var5, 0);
           this.field_q = (WidgetRenderer) ((Object) var8);

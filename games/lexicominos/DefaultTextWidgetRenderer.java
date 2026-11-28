@@ -44,7 +44,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           return IsaacRandom.field_e + " - " + we.field_h.getGroupLoadPercentByName("commonui", (byte) 118) + "%";
         }
         if (!GzipDecompressor.field_a.ensureIndexLoaded(-75)) {
-          return li.field_P;
+          return ValidationStatusWidget.field_P;
         }
         if (!GzipDecompressor.field_a.tryLoadGroupByName("commonui", 10762)) {
           return v.field_t + " - " + GzipDecompressor.field_a.getGroupLoadPercentByName("commonui", (byte) 118) + "%";
@@ -68,7 +68,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 20340) {
-            stackIn_4_0 = this.a(param0, param1 ^ -20344, 0, param2);
+            stackIn_4_0 = this.getUnalignedTextOriginY(param0, param1 ^ -20344, 0, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = 57;
@@ -83,7 +83,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
                 }
               }
               var15 = stackIn_19_0;
-              DequeWidgetContainer.field_z.a(this.field_l >>> 24, -var14 + var15, var13.field_d + (param2.field_l + param0) + param2.field_o + this.field_d, var13.field_c, this.a(40, param2, param1, var14), 5092, this.field_l);
+              DequeWidgetContainer.field_z.a(this.field_l >>> 24, -var14 + var15, var13.field_d + (param2.field_l + param0) + param2.field_o + this.field_d, var13.field_c, this.getUnalignedTextOriginX(40, param2, param1, var14), 5092, this.field_l);
             }
             pd.a(param3 ^ -22972);
           }
@@ -161,7 +161,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           this.getTextLayout(param1, (byte) 99);
           if (param0 != -13293) {
             var4 = (UiWidget) null;
-            this.c(-125, (UiWidget) null);
+            this.resolveDisplayText(-125, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_w.getLayoutHeight(0) + this.field_d + this.field_o;
           return stackIn_3_0;
@@ -191,7 +191,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -219,7 +219,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -253,10 +253,10 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           var7 = var14.getLineIndexForTextOffset(28276, param0);
           var8 = var13.field_c[var7];
           var9 = var14.getXForTextOffset((byte) -125, param0);
-          var10 = this.a(40, param3, param1, var9);
+          var10 = this.getUnalignedTextOriginX(40, param3, param1, var9);
           var11 = this.getTextOriginY(param3, 20340, param2) + Math.max(0, var8.field_d);
           stackIn_6_0 = this.getTextOriginY(param3, 20340, param2);
-          stackIn_6_1 = this.a((byte) -52, param3);
+          stackIn_6_1 = this.getTextAreaHeight((byte) -52, param3);
           stackIn_6_2 = var8.field_c;
           if (var14.field_c.length <= var7 + 1) {
             stackIn_7_3 = var8.field_c;
@@ -278,18 +278,18 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final void b(UiWidget param0, int param1, int param2, int param3) {
+    private final void drawTextWithDefaultStyle(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (param2 != -30065) {
             this.getFontLineHeight(28);
           }
-          this.a(param0, 0, this.field_e, 0, param1, this.field_q, param3, -124);
+          this.drawText(param0, 0, this.field_e, 0, param1, this.field_q, param3, -124);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ik.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ik.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -410,13 +410,13 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             UiWidget var7 = (UiWidget) null;
             this.getTextOriginY((UiWidget) null, -24, -67);
           }
-          this.b(param3, param0, param4 - 26781, param1);
+          this.drawTextWithDefaultStyle(param3, param0, param4 - 26781, param1);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    private final void a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void drawText(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -436,9 +436,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          var10 = this.a((byte) -83, param0);
+          var10 = this.getTextAreaHeight((byte) -83, param0);
           if (this.field_i) {
-            this.field_f.drawParagraph(this.c(349, param0), this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4), var9_int, var10, param2, param5, this.field_p, this.field_m, this.field_n);
+            this.field_f.drawParagraph(this.resolveDisplayText(349, param0), this.getUnalignedTextOriginX(40, param0, param6, param1), this.getUnalignedTextOriginY(param0, -4, param3, param4), var9_int, var10, param2, param5, this.field_p, this.field_m, this.field_n);
           } else {
             var12 = this.field_m;
             if (var12 == 0) {
@@ -457,16 +457,16 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_f.drawCentred(this.c(349, param0), (var9_int >> 1) + this.a(40, param0, param6, param1), this.a(param0, -4, param3, param4) + var11, param2, param5);
+                this.field_f.drawCentred(this.resolveDisplayText(349, param0), (var9_int >> 1) + this.getUnalignedTextOriginX(40, param0, param6, param1), this.getUnalignedTextOriginY(param0, -4, param3, param4) + var11, param2, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_f.drawRightAligned(this.c(349, param0), var9_int + this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
+                  this.field_f.drawRightAligned(this.resolveDisplayText(349, param0), var9_int + this.getUnalignedTextOriginX(40, param0, param6, param1), var11 + this.getUnalignedTextOriginY(param0, -4, param3, param4), param2, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_f.drawString(this.c(349, param0), this.a(40, param0, param6, param1), var11 + this.a(param0, -4, param3, param4), param2, param5);
+              this.field_f.drawString(this.resolveDisplayText(349, param0), this.getUnalignedTextOriginX(40, param0, param6, param1), var11 + this.getUnalignedTextOriginY(param0, -4, param3, param4), param2, param5);
             }
           }
           pd.a(-22949);
@@ -481,7 +481,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -511,11 +511,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    private final int a(UiWidget param0, int param1, int param2, int param3) {
+    private final int getUnalignedTextOriginY(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -538,7 +538,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -556,9 +556,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             param0.field_w = (TextLayout) ((Object) new RichTextLayout());
           }
           if (!this.field_i) {
-            this.b(param0, -54);
+            this.rebuildTextLayout(param0, -54);
           } else {
-            ((RichTextLayout) (param0.field_w)).layoutWrappedText(this.field_f, this.field_p, this.field_n, this.field_m, this.getTextAreaWidth(param0, 227), this.a((byte) -49, param0), -125, this.c(349, param0));
+            ((RichTextLayout) (param0.field_w)).layoutWrappedText(this.field_f, this.field_p, this.field_n, this.field_m, this.getTextAreaWidth(param0, 227), this.getTextAreaHeight((byte) -49, param0), -125, this.resolveDisplayText(349, param0));
           }
           stackIn_6_0 = param0.field_w;
           return stackIn_6_0;
@@ -572,11 +572,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final void a(DefaultTextWidgetRenderer param0, boolean param1) {
+    final void copyStyleTo(DefaultTextWidgetRenderer param0, boolean param1) {
         try {
           param0.field_q = this.field_q;
           param0.field_a = this.field_a;
@@ -596,7 +596,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           param0.field_n = this.field_n;
           param0.field_o = this.field_o;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ik.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ik.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -614,7 +614,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         field_s = null;
     }
 
-    private final int a(int param0, UiWidget param1, int param2, int param3) {
+    private final int getUnalignedTextOriginX(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -637,7 +637,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -666,7 +666,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -689,9 +689,9 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
         try {
           if (param1 < 93) {
             var5 = (UiWidget) null;
-            this.a((UiWidget) null, 21, -11, 2, -8, -25, -110, 81);
+            this.drawText((UiWidget) null, 21, -11, 2, -8, -25, -110, 81);
           }
-          stackIn_3_0 = this.a(40, param0, param2, 0);
+          stackIn_3_0 = this.getUnalignedTextOriginX(40, param0, param2, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -703,11 +703,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final void b(UiWidget param0, int param1) {
+    private final void rebuildTextLayout(UiWidget param0, int param1) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -727,7 +727,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           }
           var3_int = this.getTextAreaWidth(param0, 227);
           var6 = -35 % ((13 - param1) / 61);
-          var4 = this.a((byte) -114, param0);
+          var4 = this.getTextAreaHeight((byte) -114, param0);
           var7 = this.field_m;
           if (var7 == 0) {
             var5 = this.field_f.field_E;
@@ -748,7 +748,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
               if (!(param0.field_w instanceof RichTextLayout)) {
                 return;
               }
-              ((RichTextLayout) (param0.field_w)).layoutSingleLineCentered(var5, this.field_f, this.c(349, param0), var3_int >> 1, (byte) -11);
+              ((RichTextLayout) (param0.field_w)).layoutSingleLineCentered(var5, this.field_f, this.resolveDisplayText(349, param0), var3_int >> 1, (byte) -11);
               return;
             }
             if (var7Lifetime1 != 2) {
@@ -757,11 +757,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
             if (!(param0.field_w instanceof RichTextLayout)) {
               return;
             }
-            ((RichTextLayout) (param0.field_w)).layoutSingleLineRightAligned(this.field_f, this.c(349, param0), (byte) -125, var3_int, var5);
+            ((RichTextLayout) (param0.field_w)).layoutSingleLineRightAligned(this.field_f, this.resolveDisplayText(349, param0), (byte) -125, var3_int, var5);
             return;
           }
           if (param0.field_w instanceof RichTextLayout) {
-            ((RichTextLayout) (param0.field_w)).layoutSingleLineLeftAligned(118, 0, this.c(349, param0), this.field_f, var5);
+            ((RichTextLayout) (param0.field_w)).layoutSingleLineLeftAligned(118, 0, this.resolveDisplayText(349, param0), this.field_f, var5);
             return;
           }
           return;
@@ -775,7 +775,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -802,11 +802,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           this.field_o = param4;
           this.field_r = param2;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }
     }
 
-    String c(int param0, UiWidget param1) {
+    String resolveDisplayText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         String stackIn_3_0 = null;
@@ -831,11 +831,11 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
-    private final int a(byte param0, UiWidget param1) {
+    private final int getTextAreaHeight(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -860,7 +860,7 @@ class DefaultTextWidgetRenderer implements WidgetRenderer, TextWidgetRenderer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

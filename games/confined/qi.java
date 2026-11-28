@@ -87,15 +87,15 @@ final class qi {
         if (!param0) {
           return;
         }
-        if (0 != rh.field_X) {
+        if (0 != ValidationStatusWidget.field_X) {
           this.field_i = param1;
-          this.field_c = rh.field_X;
-          this.field_f = rh.field_X;
-          this.field_a = rh.field_X;
+          this.field_c = ValidationStatusWidget.field_X;
+          this.field_f = ValidationStatusWidget.field_X;
+          this.field_a = ValidationStatusWidget.field_X;
           this.field_g = em.field_a;
           this.field_e = true;
           if (this.field_a == 0) {
-            if (0 == rh.field_X &&
+            if (0 == ValidationStatusWidget.field_X &&
               Confined.field_I == 0) {
               this.field_a = 0;
             }
@@ -125,7 +125,7 @@ final class qi {
             }
             this.field_g = this.field_g - 1;
           }
-          if (0 != rh.field_X) {
+          if (0 != ValidationStatusWidget.field_X) {
             if (0 != this.field_a) {
               return;
             }
@@ -191,7 +191,7 @@ final class qi {
         }
         if (this.field_a != 0) {
           if (Confined.field_I == 0) {
-            if (0 == rh.field_X &&
+            if (0 == ValidationStatusWidget.field_X &&
               Confined.field_I == 0) {
               this.field_a = 0;
             }
@@ -222,7 +222,7 @@ final class qi {
           }
           this.field_g = this.field_g - 1;
         }
-        if (0 == rh.field_X &&
+        if (0 == ValidationStatusWidget.field_X &&
           Confined.field_I == 0) {
           this.field_a = 0;
         }

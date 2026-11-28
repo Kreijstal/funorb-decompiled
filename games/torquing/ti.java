@@ -18,7 +18,7 @@ final class ti {
     static int field_g;
     int[] field_a;
 
-    final ec a(int param0, int param1, ec param2) {
+    final TextureProvider a(int param0, int param1, TextureProvider param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         ja stackIn_6_1 = null;
@@ -40,7 +40,7 @@ final class ti {
           }
           var4_int = 26 % ((param0 - 75) / 41);
           stackIn_8_0 = this.field_d;
-          return (ec) ((Object) stackIn_8_0);
+          return (TextureProvider) ((Object) stackIn_8_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -96,7 +96,7 @@ final class ti {
         }
     }
 
-    final ec a(int param0, int param1) {
+    final TextureProvider a(int param0, int param1) {
         if (null == this.field_d) {
           this.field_d = ja.a(this.field_n, param0);
           this.field_i = false;
@@ -107,10 +107,10 @@ final class ti {
           }
         }
         if (param1 < -41) {
-          return (ec) ((Object) this.field_d);
+          return (TextureProvider) ((Object) this.field_d);
         }
         this.a(126, -79);
-        return (ec) ((Object) this.field_d);
+        return (TextureProvider) ((Object) this.field_d);
     }
 
     final ti c(byte param0) {

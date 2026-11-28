@@ -8,7 +8,7 @@ final class dm extends mj {
     static vi field_A;
     static he[] field_y;
 
-    final String b(int param0, UiWidget param1) {
+    final String resolveDisplayText(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -60,7 +60,7 @@ final class pj implements WidgetRenderer {
           var6_int = param4 + param1.field_r;
           var7 = param0 + param1.field_i;
           NodeHashTableIterator.a(var7, 1232050056, param1.field_k, var6_int, param1.field_m);
-          var8 = la.field_E[1];
+          var8 = ValidationStatusIcon.field_E[1];
           if (param1 instanceof InteractiveWidget &&
             ((InteractiveWidget) (param1)).field_z) {
             var8.drawAdditive((-var8.field_t + param1.field_k >> 1) + (1 + var6_int), var7 + 1 + (param1.field_m - var8.field_o >> 1), 256);

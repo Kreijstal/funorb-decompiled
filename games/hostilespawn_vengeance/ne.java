@@ -97,8 +97,8 @@ final class ne extends IntrusiveNode {
             } else {
               fj.field_Kb[var5].drawScaled(var6 - 6, var7 - 6, var8, var8);
             }
-            al.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var3_int, param1 - 8, 16776960, -1);
-            al.field_Z.drawParagraph(bh.field_g[var5].toUpperCase(), var3_int - 130, param1 + 24, 260, 100, 16777215, -1, 1, 0, 12);
+            ValidationStatusWidget.field_Z.drawCentred(il.field_b[var5].toUpperCase(), var3_int, param1 - 8, 16776960, -1);
+            ValidationStatusWidget.field_Z.drawParagraph(bh.field_g[var5].toUpperCase(), var3_int - 130, param1 + 24, 260, 100, 16777215, -1, 1, 0, 12);
             return;
           }
           return;

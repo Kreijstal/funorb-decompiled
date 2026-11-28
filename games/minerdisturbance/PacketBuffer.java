@@ -536,7 +536,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int appendCrc32(int param0, int param1) {
         int var3 = 47 % ((-1 - param0) / 62);
-        int var4 = qn.computeCrc32(-1648911295, param1, this.position, this.payload);
+        int var4 = ValidationStatusIcon.computeCrc32(-1648911295, param1, this.position, this.payload);
         this.writeInt((byte) 99, var4);
         return var4;
     }
@@ -715,7 +715,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int param0) {
         this.position = this.position - 4;
-        int var2 = qn.computeCrc32(param0 - 1648911295, param0, this.position, this.payload);
+        int var2 = ValidationStatusIcon.computeCrc32(param0 - 1648911295, param0, this.position, this.payload);
         int var3 = this.readInt((byte) 108);
         if (var3 != var2) {
           return false;

@@ -29,7 +29,7 @@ final class am extends IntrusiveNode {
           if (null != GuestPlayConfirmationForm.field_D) {
             var4 = Bzip2State.field_h;
             synchronized (var4) {
-              GuestPlayConfirmationForm.field_D.c(-1, param1, 0);
+              GuestPlayConfirmationForm.field_D.setChannelGain(-1, param1, 0);
               if (d.field_e == param2) {
                 return;
               }
@@ -37,7 +37,7 @@ final class am extends IntrusiveNode {
               Bzip2State.field_h.flushAndMarkDrainCheck();
               d.field_e = param2;
               if (d.field_e != null) {
-                GuestPlayConfirmationForm.field_D.a(-63, param0, d.field_e);
+                GuestPlayConfirmationForm.field_D.playTrack(-63, param0, d.field_e);
               }
             }
           }

@@ -99,9 +99,9 @@ final class eb {
             ConfirmedEmailAvailabilityValidator.field_q.bindAsRenderTarget();
             var12.draw(18 - ConfirmedEmailAvailabilityValidator.field_q.field_w, -ConfirmedEmailAvailabilityValidator.field_q.field_y + 241);
             for (var7 = 0; var7 < va.field_t.length; var7++) {
-              pa.field_I[var7].bindAsRenderTarget();
-              ah.field_d.drawParagraph(va.field_t[var7], 3, 3, pa.field_I[var7].field_u - 6, pa.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
-              hh.a(0, 0, 3, pa.field_I[var7].field_v, false, 1, pa.field_I[var7], pa.field_I[var7].field_u);
+              ValidationStatusWidget.field_I[var7].bindAsRenderTarget();
+              ah.field_d.drawParagraph(va.field_t[var7], 3, 3, ValidationStatusWidget.field_I[var7].field_u - 6, ValidationStatusWidget.field_I[var7].field_v - 6, mc.field_c, -1, 1, 1, ah.field_d.field_p + ah.field_d.field_q);
+              hh.a(0, 0, 3, ValidationStatusWidget.field_I[var7].field_v, false, 1, ValidationStatusWidget.field_I[var7], ValidationStatusWidget.field_I[var7].field_u);
             }
             va.field_t = null;
             jh.field_a = re.field_f.copy();
@@ -301,10 +301,10 @@ final class eb {
               }
             }
             RichTextWidget.e(-67);
-            pa.field_I[ag.field_o].draw(269, 340);
+            ValidationStatusWidget.field_I[ag.field_o].draw(269, 340);
           } else {
             RichTextWidget.e(-67);
-            pa.field_I[ag.field_o].draw(269, 340);
+            ValidationStatusWidget.field_I[ag.field_o].draw(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

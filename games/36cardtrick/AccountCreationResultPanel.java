@@ -9,7 +9,7 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
     private boolean field_ub;
 
     final void showAccountCreationConnectionFailure(byte param0) {
-        this.showAccountCreationResult(nc.createAccountErrorResult(248, 0, pa.field_N), true, (byte) 117);
+        this.showAccountCreationResult(nc.createAccountErrorResult(248, 0, ValidationStatusWidget.field_N), true, (byte) 117);
         if (param0 != -42) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           AccountCreationResultPanel.a((java.awt.Canvas) null, (byte) 92);
@@ -76,11 +76,11 @@ final class AccountCreationResultPanel extends ProgressMessageDialog implements 
               if (param0.statusCode == 248) {
                 if (param1) {
                   this.field_ub = true;
-                  var4 = pa.field_N;
+                  var4 = ValidationStatusWidget.field_N;
                 } else {
                   IntrusiveNode.a((byte) 18);
                   this.field_ub = true;
-                  var4 = pa.field_N;
+                  var4 = ValidationStatusWidget.field_N;
                 }
               }
             } else {

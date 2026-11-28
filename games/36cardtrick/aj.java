@@ -181,7 +181,7 @@ final class aj {
           this.field_h = (WidgetRenderer) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new nd();
-          var17.a(var4, (byte) 113);
+          var17.copyStyleTo(var4, (byte) 113);
           this.field_e = 3;
           this.field_l = 3;
           this.field_k = 15658734;
@@ -216,7 +216,7 @@ final class aj {
           discarded$0 = new ug(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new tb(param1, 16777215, param0, 125269879, 4473924, 3, 268435455);
           var8 = new nd();
-          var17.a(var8, (byte) -101);
+          var17.copyStyleTo(var8, (byte) -101);
           var8.a((byte) -1, 0).a(fb.a(18457, 15658734, 7829367, 10066329), true).c(1118481, (byte) 68).a(-1, (byte) -118);
           var8.a((byte) -1, 4).a(true, (byte) -93).a(var5, true);
           this.field_r = (WidgetRenderer) ((Object) var8);

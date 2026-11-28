@@ -261,8 +261,8 @@ abstract class lj extends DualLinkNode {
                     if (var43Lifetime2.field_b &&
                       var32 != 0 &&
                       27 != var43Lifetime2.field_i) {
-                      dupTemp$0 = al.field_U[2] + 1;
-                      al.field_U[2] = dupTemp$0;
+                      dupTemp$0 = ValidationStatusWidget.field_U[2] + 1;
+                      ValidationStatusWidget.field_U[2] = dupTemp$0;
                       if (dupTemp$0 == 30) {
                         ti.a(248, (byte) -18, 7);
                       }

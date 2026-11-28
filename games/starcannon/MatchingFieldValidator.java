@@ -336,7 +336,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime33 = BoundedRandomAccessFile.a("lev7a", (byte) -124);
           if (var2Lifetime33 != null) {
-            jg.field_I = DualLinkNode.a(127, var2Lifetime33);
+            ValidationStatusIcon.field_I = DualLinkNode.a(127, var2Lifetime33);
           }
           var2Lifetime34 = BoundedRandomAccessFile.a("lev6c", (byte) -124);
           if (var2Lifetime34 != null) {

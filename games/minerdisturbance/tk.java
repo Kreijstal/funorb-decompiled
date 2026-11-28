@@ -36,7 +36,7 @@ final class tk implements uj {
           String var6Lifetime3;
           String var6Lifetime4;
           try {
-            w.field_T = param0;
+            ValidationStatusWidget.field_T = param0;
             try {
               var3 = param1.getParameter("cookieprefix");
               var6 = var3;

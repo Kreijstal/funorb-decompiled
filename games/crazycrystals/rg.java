@@ -91,7 +91,7 @@ final class rg {
               } else {
                 param0 = al.field_d;
               }
-              mk.field_b.a(DialogMessagePane.field_G, (byte) 61);
+              mk.field_b.setAccountAndClearPassword(DialogMessagePane.field_G, (byte) 61);
             }
             var3_int = 1;
             if (param1 == 10) {
@@ -112,7 +112,7 @@ final class rg {
               if (ne.field_d) {
                 return;
               }
-              mk.field_b.e((byte) 86);
+              mk.field_b.clearCredentials((byte) 86);
             }
           }
         } catch (RuntimeException runtimeException) {

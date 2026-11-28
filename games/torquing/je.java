@@ -97,7 +97,7 @@ final class je implements WidgetRenderer {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = MeshGeometry.a(param0, param1, param2);
+          var4 = MeshGeometry.load(param0, param1, param2);
           if (param3 > -116) {
             field_a = -35;
           }

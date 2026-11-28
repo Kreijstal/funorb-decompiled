@@ -288,7 +288,7 @@ final class RichTextLayout extends TextLayout {
               stackIn_73_1 = var14;
               stackIn_73_2 = var13;
               if (3 == param2) {
-                stackIn_74_3 = this.a(param7.stringWidth(var13), param1, param3 ^ 28437, var13);
+                stackIn_74_3 = this.computeJustificationStep(param7.stringWidth(var13), param1, param3 ^ 28437, var13);
               } else {
                 stackIn_74_3 = 0;
               }
@@ -1021,7 +1021,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime99 = wm.a("arrowKeys1", (byte) 86);
           if (var2Lifetime99 != null) {
-            ba.field_T = va.a(0, var2Lifetime99);
+            ValidationStatusIcon.field_T = va.a(0, var2Lifetime99);
           }
           var2Lifetime100 = wm.a("arrowKeys2", (byte) 127);
           if (var2Lifetime100 != null) {
@@ -1261,7 +1261,7 @@ final class RichTextLayout extends TextLayout {
           }
           var2Lifetime159 = wm.a("youAlreadyHaveLasers", (byte) 75);
           if (null != var2Lifetime159) {
-            rh.field_db = va.a(0, var2Lifetime159);
+            ValidationStatusWidget.field_db = va.a(0, var2Lifetime159);
           }
           var2Lifetime160 = wm.a("chargeCannon", (byte) 104);
           if (var2Lifetime160 != null) {

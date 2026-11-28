@@ -39,12 +39,12 @@ final class ff extends nh {
         var8 = stellarshard.field_B;
         var9 = EditableTextField.field_N;
         var3 = var9.readUnsignedByte(4);
-        ii.field_J = var3 & 127;
+        ValidationStatusIcon.field_J = var3 & 127;
         stackIn_3_0 = ((var3 & 128) != 0);
         eh.field_d = stackIn_3_0;
         ha.field_t = var9.readUnsignedByte(4);
         k.field_d = var9.readLong(0);
-        if (ii.field_J != 2) {
+        if (ValidationStatusIcon.field_J != 2) {
           il.field_w = 0;
           Bzip2State.field_y = 0;
         } else {
@@ -60,11 +60,11 @@ final class ff extends nh {
         } else {
           oe.field_d = var9.readString((byte) 110);
         }
-        if (ii.field_J == 1) {
+        if (ValidationStatusIcon.field_J == 1) {
           var9.readUnsignedShort((byte) 105);
           var9.readString((byte) 106);
         } else {
-          if (ii.field_J == 4) {
+          if (ValidationStatusIcon.field_J == 4) {
             var9.readUnsignedShort((byte) 105);
             var9.readString((byte) 106);
           }

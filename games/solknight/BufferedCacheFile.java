@@ -316,7 +316,7 @@ final class BufferedCacheFile {
                 }
                 SoundCache.a(false);
                 PacketBuffer.a(true, 6, -128);
-                pk.a((byte) -96, 5, false);
+                ValidationStatusWidget.a((byte) -96, 5, false);
               }
               RichTextLayout.field_p = 0;
             }
@@ -440,7 +440,7 @@ final class BufferedCacheFile {
                   ModalDialog.field_G[var2Lifetime1] = null;
                 }
                 ClientException.field_b = 240;
-                pk.a((byte) -96, 4, false);
+                ValidationStatusWidget.a((byte) -96, 4, false);
               }
             }
           }
@@ -634,7 +634,7 @@ final class BufferedCacheFile {
                 kh.field_c = null;
               }
               PacketBuffer.a(true, 6, -127);
-              pk.a((byte) -96, 5, false);
+              ValidationStatusWidget.a((byte) -96, 5, false);
             }
             lk.field_f = 0;
           }

@@ -472,7 +472,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == DropTargetWidgetContainer.field_C &&
             !NameSuggestionsPanel.field_H) {
-            nf.field_K = true;
+            ValidationStatusWidget.field_K = true;
             if (bha.field_n &&
               -gd.field_l + f.correctedCurrentTimeMillis((byte) 73) > 1000L) {
               var2 = param0.getClipBounds();
@@ -614,7 +614,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           BoardChangeAnimation.field_l = true;
           SetMoveSlotCooldownEffect.field_i = true;
-          nf.field_K = true;
+          ValidationStatusWidget.field_K = true;
           daa.field_vb = false;
           gd.field_l = f.correctedCurrentTimeMillis((byte) 73);
           return;
@@ -751,7 +751,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           BoardChangeAnimation.field_l = true;
-          nf.field_K = true;
+          ValidationStatusWidget.field_K = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -797,7 +797,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           fieldTemp$1 = jc.field_v;
           jc.field_v = jc.field_v + 1;
           if (fieldTemp$1 > 50) {
-            nf.field_K = true;
+            ValidationStatusWidget.field_K = true;
             jc.field_v = jc.field_v - 50;
             TBomberAnimation.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
             TBomberAnimation.field_y.setVisible(true);

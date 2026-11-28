@@ -49,7 +49,7 @@ final class ta {
     final static void a(boolean param0, int param1, Sprite[] param2, int param3, int param4, BitmapFont param5, int param6, int param7, int param8, Sprite[] param9, int param10, int param11, BitmapFont param12, int param13, boolean param14) {
         try {
           Sprite[] var16 = (Sprite[]) null;
-          pk.a(param1, 0, param4, param12, param7, FrameTimer.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (Sprite[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
+          ValidationStatusWidget.a(param1, 0, param4, param12, param7, FrameTimer.field_c, 480, pb.field_b, param13, param9, param3, (byte) -111, (Sprite[]) null, hc.field_d, param8, param11, param6, param5, 0, param10, param2);
           if (param0) {
             ta.b((byte) 72);
           }

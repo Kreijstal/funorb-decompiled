@@ -15,7 +15,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
     private boolean field_C;
     static AccountServiceResult field_L;
 
-    final void b(int param0, String param1) {
+    final void setAccountAndClearPassword(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
@@ -147,7 +147,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final String a(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (null == this.field_I.field_h) {
           return "";
         }
@@ -330,7 +330,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void e(byte param0) {
+    final void clearCredentials(byte param0) {
         if (param0 != -100) {
           return;
         }

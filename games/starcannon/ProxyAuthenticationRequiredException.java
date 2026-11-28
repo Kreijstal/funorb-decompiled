@@ -45,7 +45,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             bf.field_s = param12;
             kl.field_a = param0;
             ah.field_i = param7;
-            jg.field_A = param1;
+            ValidationStatusIcon.field_A = param1;
             pe.field_c = param13;
             if (null == og.field_a.field_c) {
               return;

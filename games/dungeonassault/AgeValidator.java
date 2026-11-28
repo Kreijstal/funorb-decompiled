@@ -313,7 +313,7 @@ final class AgeValidator extends TextFieldValidator {
             hp.field_b[1].field_F = var3_ref_String;
             hp.field_b[1].field_G = var4;
           }
-          var3_ref_StringLifetime1 = ng.field_J;
+          var3_ref_StringLifetime1 = ValidationStatusIcon.field_J;
           var4Lifetime1 = a.field_p;
           if (null != hp.field_b[2]) {
             hp.field_b[2].field_G = var4Lifetime1;
@@ -675,7 +675,7 @@ final class AgeValidator extends TextFieldValidator {
             gh.field_i[19].field_t = var4Lifetime53;
           }
           var3_ref_StringLifetime54 = MusicPatchPcmStream.field_p;
-          var4Lifetime54 = tn.field_Y;
+          var4Lifetime54 = ValidationStatusWidget.field_Y;
           var5Lifetime20 = PlayerDungeonProfile.field_x;
           if (null != gh.field_i[20]) {
             gh.field_i[20].field_t = var4Lifetime54;

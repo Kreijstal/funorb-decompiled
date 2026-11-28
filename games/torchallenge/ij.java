@@ -9,7 +9,7 @@ final class ij extends fk {
     static int field_B;
     static BufferedCacheFile[] field_y;
 
-    final String a(UiComponent param0, int param1) {
+    final String resolveDisplayText(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

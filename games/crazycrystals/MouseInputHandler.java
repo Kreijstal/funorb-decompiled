@@ -31,7 +31,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != tm.field_b) {
             aq.field_s = 0;
             FloatingScoreLabel.field_g = param0.getX();
-            sb.field_I = param0.getY();
+            ValidationStatusIcon.field_I = param0.getY();
             lo.correctedCurrentTimeMillis((byte) -57);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               AlphaWidgetContainer.field_y = 2;
@@ -582,7 +582,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             if (ub.field_b[var4Lifetime2] >= 0) {
               stackIn_116_1 = gh.field_w;
             } else {
-              stackIn_116_1 = io.field_O;
+              stackIn_116_1 = ValidationStatusWidget.field_O;
             }
             gp.field_a = stackIn_115_0 + stackIn_116_1;
           }
@@ -606,7 +606,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               var5Lifetime3 = var5Lifetime3 + (field_a + (SoundCache.field_c << 1) + gh.field_w);
               cd.field_z[var4Lifetime3][3] = gh.field_w + (SoundCache.field_c << 1);
             } else {
-              var5Lifetime3 = var5Lifetime3 + io.field_O;
+              var5Lifetime3 = var5Lifetime3 + ValidationStatusWidget.field_O;
             }
             var4Lifetime3++;
           }

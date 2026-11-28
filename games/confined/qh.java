@@ -137,7 +137,7 @@ final class qh extends DefaultTextWidgetRenderer {
           dupTemp$2.field_b = var3;
           var8.field_h[2].field_b = var3;
         } else {
-          var11 = new bd(16, ba.field_Q, pn.field_a);
+          var11 = new bd(16, ValidationStatusIcon.field_Q, pn.field_a);
           var11.field_b = var3;
           var11.field_j = -(var11.field_f / 2) + 320;
           var10.a((byte) -53, var11);
@@ -288,7 +288,7 @@ final class qh extends DefaultTextWidgetRenderer {
         pn var6Lifetime2;
         var7 = Confined.field_J ? 1 : 0;
         try {
-          super.a(false, param1);
+          super.copyStyleTo(false, param1);
           if (param0 != -29066) {
             qh.clearStaticReferences(-13);
           }

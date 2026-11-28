@@ -280,7 +280,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     private final int a(UiWidget param0, String param1, int param2, int param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
-        ci var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -295,7 +295,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
         try {
           var10 = new LabeledWidgetContainer(20, param2, 120 + param3, 25, param0, false, 120, 3, DualLinkNode.field_i, 16777215, param6);
           this.addChild(var10, (byte) 35);
-          var9 = new ci(((FieldValidatorProvider) ((Object) param0)).getFieldValidator((byte) 120), param1, 126, param2 + var10.field_k, 25 + param3, param4);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param0)).getFieldValidator((byte) 120), param1, 126, param2 + var10.field_k, 25 + param3, param4);
           var9.field_u = (WidgetEventListener) (this);
           if (param5 != -23940) {
             stackIn_2_0 = -32;

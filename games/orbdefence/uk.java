@@ -214,10 +214,10 @@ final class uk {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(98203176);
             var4_long = var27.readLong((byte) -89);
-            var6_ref_vg = (vg) (kk.field_X.beginForward((byte) 124));
+            var6_ref_vg = (vg) (ValidationStatusWidget.field_X.beginForward((byte) 124));
             while (var6_ref_vg != null) {
               if (~var3Lifetime1 != ~var6_ref_vg.field_t) {
-                var6_ref_vg = (vg) (kk.field_X.nextForward(853));
+                var6_ref_vg = (vg) (ValidationStatusWidget.field_X.nextForward(853));
                 continue;
               }
               break;

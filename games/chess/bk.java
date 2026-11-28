@@ -48,7 +48,7 @@ final class bk extends IntrusiveNode {
           var8 = new AccountCreationResultPanel(jh.field_e, param3);
           var7 = var8;
           jh.field_e.showDialog(var8, (byte) -93);
-          if (jn.a(32359)) {
+          if (ValidationStatusIcon.a(32359)) {
             var8.showAccountCreationConnectionFailure(-10896);
           } else {
             lg.field_a = null;

@@ -851,7 +851,7 @@ final class Level {
           var4 = var29;
           var29.field_r = null;
           var4.field_G = null;
-          var29.b();
+          var29.releaseSkinData();
           var5 = this.getTerrainModel(param0 ^ 20531, true);
           var6 = var5.field_k;
           var7 = var6.field_k;
@@ -967,8 +967,8 @@ final class Level {
                       var21Lifetime1 = this.field_w;
                       var22 = this.field_w;
                       cd.a(var29, -19729, 2);
-                      var23 = var29.a(var17, var21Lifetime1, var19);
-                      var24 = var29.a(var18, var22, var20);
+                      var23 = var29.findOrAddVertex(var17, var21Lifetime1, var19);
+                      var24 = var29.findOrAddVertex(var18, var22, var20);
                       while (var15 < var21Lifetime1 ||
                         var16 < var22) {
                         stackIn_79_0 = var21Lifetime1;
@@ -979,7 +979,7 @@ final class Level {
                             var21Lifetime1 = var15;
                           }
                           cd.a(var29, -19729, 1);
-                          var25 = var29.a(var17, var21Lifetime1, var19);
+                          var25 = var29.findOrAddVertex(var17, var21Lifetime1, var19);
                         } else {
                           var25 = var23;
                         }
@@ -989,7 +989,7 @@ final class Level {
                             var22 = var16;
                           }
                           cd.a(var29, -19729, 1);
-                          var26 = var29.a(var18, var22, var20);
+                          var26 = var29.findOrAddVertex(var18, var22, var20);
                         } else {
                           var26 = var24;
                         }
@@ -1026,7 +1026,7 @@ final class Level {
           }
           Model.trimToUsedCounts(var3, (byte) -126);
           this.field_t = new Model(var29);
-          this.field_t.field_k = (LitModelMesh) (var29.a(80, 1365, -1, -12, 12));
+          this.field_t.field_k = (LitModelMesh) (var29.createModel(80, 1365, -1, -12, 12));
           this.field_t.field_q = var3.field_q;
         }
         return this.field_t;
@@ -1123,7 +1123,7 @@ final class Level {
         if (this.field_y == null) {
           var16 = new MeshGeometry((this.field_x[0].length + 1) * (this.field_x.length + 1), this.field_v * 2 * this.field_r, 0);
           var4 = new Model(var16);
-          var16.b();
+          var16.releaseSkinData();
           var16.field_G = null;
           var16.field_r = null;
           var5 = new mp(2 * (this.field_r * this.field_v));
@@ -1137,14 +1137,14 @@ final class Level {
               } else {
                 if (var7 == -1) {
                   cd.a(var16, param0 ^ 19827, 2);
-                  var7 = var16.a(var9 * 100, this.field_x[var9][var6], var6 * 100);
-                  var8 = var16.a(100 * var9, this.field_x[var9][var6 + 1], var6 * 100 + 100);
+                  var7 = var16.findOrAddVertex(var9 * 100, this.field_x[var9][var6], var6 * 100);
+                  var8 = var16.findOrAddVertex(100 * var9, this.field_x[var9][var6 + 1], var6 * 100 + 100);
                 }
                 cd.a(var16, param0 - 19629, 2);
-                var10 = var16.a(100 * var9 + 100, this.field_x[var9 + 1][var6], var6 * 100);
-                var11 = var16.a((1 + var9) * 100, this.field_x[var9 + 1][1 + var6], 100 + var6 * 100);
+                var10 = var16.findOrAddVertex(100 * var9 + 100, this.field_x[var9 + 1][var6], var6 * 100);
+                var11 = var16.findOrAddVertex((1 + var9) * 100, this.field_x[var9 + 1][1 + var6], 100 + var6 * 100);
                 var12 = 3;
-                var13 = (short)TriangleRasterizer.field_c.b((int) this.field_o[var9][var6]);
+                var13 = (short)TriangleRasterizer.field_c.getAverageTextureColor((int) this.field_o[var9][var6]);
                 var14 = (short)mo.field_C[this.field_o[var9][var6]];
                 if (param1 &&
                   this.field_x[var9][1 + var6] - this.field_x[var9 + 1][1 + var6] == this.field_x[var9][var6] - this.field_x[1 + var9][var6] &&
@@ -1166,7 +1166,7 @@ final class Level {
           }
           Model.trimToUsedCounts(var4, (byte) -102);
           this.field_y = var4;
-          this.field_y.field_k = (LitModelMesh) (var16.a(80, 1365, -1, -12, 12));
+          this.field_y.field_k = (LitModelMesh) (var16.createModel(80, 1365, -1, -12, 12));
           this.field_y.field_k.field_i = new int[var16.field_k];
           this.field_y.field_k.field_g = new int[var16.field_k];
           this.field_y.field_k.field_m = var16.field_k;

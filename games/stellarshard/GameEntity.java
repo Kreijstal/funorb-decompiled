@@ -1170,7 +1170,7 @@ final class GameEntity {
             null == IsaacRandom.field_j) {
             SoftwareRasterizer.drawRectangleOutline(24 + var2 - ArchiveRequest.field_s / 2, -(ArchiveRequest.field_s / 2) + var3 + 24, ArchiveRequest.field_s + 48, 48 + ArchiveRequest.field_s, 65535);
             stackIn_176_0 = qj.field_a;
-            stackIn_176_1 = cd.field_P;
+            stackIn_176_1 = ValidationStatusWidget.field_P;
             stackIn_176_2 = 48 + var2;
             stackIn_176_3 = 24 + var3;
             stackIn_177_4 = (ArchiveRequest.field_s >= 5) ? 65535 : 16777215;
@@ -1251,19 +1251,19 @@ final class GameEntity {
           }
         } else {
           if (aj.field_c == null) {
-            aj.field_c = new pa[7];
+            aj.field_c = new MeshData[7];
             vl.field_r = new bj[7];
             for (var4 = 0; var4 < 7; var4++) {
-              aj.field_c[var4] = new pa(rh.field_b, false, false, false, false);
-              aj.field_c[var4].a(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
-              aj.field_c[var4].a(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
+              aj.field_c[var4] = new MeshData(rh.field_b, false, false, false, false);
+              aj.field_c[var4].transformVertices(new int[]{0, 0, 0, -65536, 0, 0, 0, -65536, 0, 0, 0, 65536});
+              aj.field_c[var4].transformVertices(new int[]{0, 0, 0, 65536, 0, 0, 0, 0, -65536, 0, 65536, 0});
               var5 = (int)(65536.0 * Math.cos(3.141592653589793 * (double)(16 * (-3 + var4)) / 256.0));
               var6 = (int)(Math.sin(3.141592653589793 * (double)((-3 + var4) * 16) / 256.0) * 65536.0);
-              aj.field_c[var4].a(new int[]{0, 0, 0, var5, 0, -var6, 0, 65536, 0, var6, 0, var5});
+              aj.field_c[var4].transformVertices(new int[]{0, 0, 0, var5, 0, -var6, 0, 65536, 0, var6, 0, var5});
               var7 = 50;
               var8 = 50;
               var9 = -50;
-              vl.field_r[var4] = aj.field_c[var4].a(32, 346, var7, var8, var9);
+              vl.field_r[var4] = aj.field_c[var4].createModel(32, 346, var7, var8, var9);
               aj.field_c[var4] = null;
             }
           }

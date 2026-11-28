@@ -80,17 +80,17 @@ public final class Lexicominos extends nk {
             if (BitPacketBuffer.field_p.ensureIndexLoaded(-61) &&
               BitPacketBuffer.field_p.tryLoadGroupByName("basic", 10762)) {
               if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman20", param0 + 10848)) {
-                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 68, "roman20", v.field_t, li.field_P), 0.0f);
+                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 68, "roman20", v.field_t, ValidationStatusWidget.field_P), 0.0f);
                 return false;
               }
               if (!BitPacketBuffer.field_p.tryLoadGroupByName("roman12", 10762)) {
-                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 94, "roman12", v.field_t, li.field_P), 0.0f);
+                ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 94, "roman12", v.field_t, ValidationStatusWidget.field_P), 0.0f);
                 return false;
               }
               if (gg.field_d.ensureIndexLoaded(106) &&
                 gg.field_d.tryLoadGroupByName("roman20", 10762)) {
                 if (!gg.field_d.tryLoadGroupByName("roman12", param0 ^ -10848)) {
-                  ModalDialog.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, li.field_P), 0.0f);
+                  ModalDialog.a(16, rh.a(gg.field_d, (byte) 124, "roman12", v.field_t, ValidationStatusWidget.field_P), 0.0f);
                   return false;
                 }
                 if (gl.field_a.ensureIndexLoaded(81) &&
@@ -138,7 +138,7 @@ public final class Lexicominos extends nk {
                             ModalDialog.a(16, rh.a(DraggableWidgetContainer.field_L, (byte) 119, "", AlphaWidgetContainer.field_F, MouseWheelInput.field_e), (float)(10 + DraggableWidgetContainer.field_L.getGroupLoadPercentByName("", (byte) 112) * 76 / 100));
                             return false;
                           }
-                          ModalDialog.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
+                          ModalDialog.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, ValidationStatusWidget.field_P), 10.0f);
                           return false;
                         }
                         ModalDialog.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", IsaacRandom.field_e, qf.field_s), 9.0f);
@@ -156,7 +156,7 @@ public final class Lexicominos extends nk {
                 ModalDialog.a(param0 + 102, rh.a(gl.field_a, (byte) 122, "", MusicPatchPcmStream.field_p, e.field_h), 1.0f);
                 return false;
               }
-              ModalDialog.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, li.field_P), 0.0f);
+              ModalDialog.a(16, rh.a(gg.field_d, (byte) 37, "roman20", v.field_t, ValidationStatusWidget.field_P), 0.0f);
               return false;
             }
             ModalDialog.a(16, rh.a(BitPacketBuffer.field_p, (byte) 55, "basic", IsaacRandom.field_e, qf.field_s), 0.0f);
@@ -578,7 +578,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var3_ref2), "Lexicominos.BB(" + param0 + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var3_ref2), "Lexicominos.BB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -595,7 +595,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var3), "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var3), "Lexicominos.AB(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -655,7 +655,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -905,7 +905,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_122_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_121_1).append(stackIn_122_2).append(')').toString());
         }
     }
 
@@ -1079,8 +1079,8 @@ public final class Lexicominos extends nk {
           StripedProgressWidget.e(344066273);
           NameSuggestionsPanel.clearStaticReferences((byte) -26);
           RichTextWidget.clearStaticReferences(false);
-          ld.clearDeclaredStaticReferences(6977);
-          li.a((byte) 81);
+          ValidationStatusIcon.clearDeclaredStaticReferences(6977);
+          ValidationStatusWidget.a((byte) 81);
           te.clearStaticReferences((byte) -122);
           TextFieldValidator.clearStaticReferences(0);
           pl.clearStaticReferences(0);
@@ -1147,7 +1147,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.I(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.I(" + param0 + ')');
         }
         if (GameAppletShell.field_k) {
           field_L = (var3 == 0);
@@ -1172,7 +1172,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.PA(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.PA(" + param0 + ')');
         }
     }
 
@@ -1194,7 +1194,7 @@ public final class Lexicominos extends nk {
           MatchingFieldValidator.field_n = 10640990;
           SecondaryNodeDequeIterator.field_c = 3941155;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.F(" + param0 + ')');
         }
     }
 
@@ -1211,7 +1211,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.TA(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.TA(" + param0 + ')');
         }
     }
 
@@ -1257,7 +1257,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.NA(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.NA(" + param0 + ')');
         }
     }
 
@@ -1286,7 +1286,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.RA(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.RA(" + param0 + ')');
         }
     }
 
@@ -1308,7 +1308,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.K(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.K(" + param0 + ')');
         }
     }
 
@@ -1316,7 +1316,7 @@ public final class Lexicominos extends nk {
         try {
           this.a(14, "lexicominos", (byte) -107);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.init()");
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "Lexicominos.init()");
         }
     }
 
@@ -1468,7 +1468,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2_ref), "Lexicominos.D(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2_ref), "Lexicominos.D(" + param0 + ')');
         }
     }
 
@@ -1502,7 +1502,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -1875,7 +1875,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "Lexicominos.M(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "Lexicominos.M(" + param0 + ')');
         }
     }
 
@@ -2011,7 +2011,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 
@@ -2136,7 +2136,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -2154,7 +2154,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var1), "Lexicominos.LA(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var1), "Lexicominos.LA(" + param0 + ')');
         }
     }
 
@@ -2275,7 +2275,7 @@ public final class Lexicominos extends nk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var5), "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var5), "Lexicominos.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -2305,7 +2305,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -2434,7 +2434,7 @@ public final class Lexicominos extends nk {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 

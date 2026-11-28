@@ -121,14 +121,14 @@ final class SoundCache {
           var6_int = param3.field_p[param1] + param3.field_p[param5] >> 1;
           var7 = param3.field_D[param1] + param3.field_D[param5] >> 1;
           var8 = param3.field_i[param1] + param3.field_i[param5] >> 1;
-          param2 = (short)param3.a(var6_int + (param3.field_p[param2] - var6_int) * 64 / (-param0 + 64), var7 + 64 * (param3.field_D[param2] - var7) / (64 - param0), var8 + 64 * (-var8 + param3.field_i[param2]) / (64 - param0));
-          param1 = (short)param3.a(var6_int + (-var6_int + param3.field_p[param1]) * 64 / (-param0 + 64), var7 + 64 * (param3.field_D[param1] - var7) / (-param0 + 64), var8 + (-var8 + param3.field_i[param1]) * 64 / (-param0 + 64));
+          param2 = (short)param3.findOrAddVertex(var6_int + (param3.field_p[param2] - var6_int) * 64 / (-param0 + 64), var7 + 64 * (param3.field_D[param2] - var7) / (64 - param0), var8 + 64 * (-var8 + param3.field_i[param2]) / (64 - param0));
+          param1 = (short)param3.findOrAddVertex(var6_int + (-var6_int + param3.field_p[param1]) * 64 / (-param0 + 64), var7 + 64 * (param3.field_D[param1] - var7) / (-param0 + 64), var8 + (-var8 + param3.field_i[param1]) * 64 / (-param0 + 64));
           if (param4) {
             stackIn_2_0 = -5;
             return stackIn_2_0;
           }
-          param5 = (short)param3.a(var6_int + 64 * (param3.field_p[param5] - var6_int) / (-param0 + 64), var7 + (-var7 + param3.field_D[param5]) * 64 / (-param0 + 64), var8 + 64 * (-var8 + param3.field_i[param5]) / (64 - param0));
-          stackIn_4_0 = param3.a(param2, param1, param5);
+          param5 = (short)param3.findOrAddVertex(var6_int + 64 * (param3.field_p[param5] - var6_int) / (-param0 + 64), var7 + (-var7 + param3.field_D[param5]) * 64 / (-param0 + 64), var8 + 64 * (-var8 + param3.field_i[param5]) / (64 - param0));
+          stackIn_4_0 = param3.addTextureTriangle(param2, param1, param5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

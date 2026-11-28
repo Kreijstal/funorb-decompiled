@@ -148,13 +148,13 @@ final class jc {
           field_a = (RgbSprite) null;
           if (DropTargetWidgetContainer.field_I == BoundedRandomAccessFile.field_b) {
             DropTargetWidgetContainer.field_I = e.field_q;
-            return wj.field_H;
+            return ValidationStatusIcon.field_H;
           }
           return null;
         }
         if (DropTargetWidgetContainer.field_I == BoundedRandomAccessFile.field_b) {
           DropTargetWidgetContainer.field_I = e.field_q;
-          return wj.field_H;
+          return ValidationStatusIcon.field_H;
         }
         return null;
     }

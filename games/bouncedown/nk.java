@@ -171,7 +171,7 @@ final class nk {
                     var5 = jl.field_d;
                     synchronized (var5) {
                       if (!rd.field_a) {
-                        ld.field_l.f(-22719);
+                        ld.field_l.stop(-22719);
                       } else {
                         stackIn_103_0 = ld.field_l;
                         if (PcmResampler.field_g) {
@@ -179,7 +179,7 @@ final class nk {
                         } else {
                           stackIn_104_1 = AccountCreationResultPanel.field_mb;
                         }
-                        ((MidiPcmStream) (Object) stackIn_103_0).a(stackIn_104_1, true, 123);
+                        ((MidiPcmStream) (Object) stackIn_103_0).playTrack(stackIn_104_1, true, 123);
                       }
                       jl.field_d.flushAndMarkDrainCheck();
                     }
@@ -327,7 +327,7 @@ final class nk {
             if (rd.field_a) {
               var5 = jl.field_d;
               synchronized (var5) {
-                ld.field_l.a(wj.field_c, true, 89);
+                ld.field_l.playTrack(wj.field_c, true, 89);
                 jl.field_d.flushAndMarkDrainCheck();
               }
             }

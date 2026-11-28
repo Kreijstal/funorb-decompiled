@@ -854,7 +854,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("tut5", (byte) -120);
                 if (null != var2) {
-                  wj.field_G = PcmResampler.a(126, var2);
+                  ValidationStatusIcon.field_G = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("tut4", (byte) -127);
                 if (null != var2) {
@@ -1404,7 +1404,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("poweruptitle", (byte) -119);
                 if (var2 != null) {
-                  al.field_O = PcmResampler.a(123, var2);
+                  ValidationStatusWidget.field_O = PcmResampler.a(123, var2);
                 }
                 var2 = AccountRegistrationPanel.b("beatingheart", (byte) -127);
                 if (var2 != null) {
@@ -1428,7 +1428,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("ammoisgoodforyou", (byte) -122);
                 if (null != var2) {
-                  al.field_S = PcmResampler.a(127, var2);
+                  ValidationStatusWidget.field_S = PcmResampler.a(127, var2);
                 }
                 var2 = AccountRegistrationPanel.b("gameplaytitle", (byte) -121);
                 if (null != var2) {

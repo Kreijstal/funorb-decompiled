@@ -107,9 +107,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5_int = ik.a(lm.c(32018), fb.b((byte) -128), ~param1);
             if (var5_int != -1) {
-              FullscreenNoticeType.a(-35, kk.field_Y, SoundCache.field_e, var5_int);
+              FullscreenNoticeType.a(-35, ValidationStatusWidget.field_Y, SoundCache.field_e, var5_int);
               SoundCache.field_e = null;
-              kk.field_Y = null;
+              ValidationStatusWidget.field_Y = null;
             }
             var11 = k.b((byte) 126);
             if (var11 != null) {
@@ -117,10 +117,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = kg.a(am.b(-28), uh.b(param1 ^ -5), this.field_o, na.a((byte) -105), KeyboardListener.a(-42), 200, jf.j(989270945));
+            var5_intLifetime1 = kg.a(am.b(-28), uh.b(param1 ^ -5), this.field_o, na.a((byte) -105), KeyboardListener.a(-42), 200, ValidationStatusIcon.j(989270945));
             if (-1 != var5_intLifetime1) {
-              fa.a(-111, var5_intLifetime1, SoundCache.field_e, kk.field_Y);
-              kk.field_Y = null;
+              fa.a(-111, var5_intLifetime1, SoundCache.field_e, ValidationStatusWidget.field_Y);
+              ValidationStatusWidget.field_Y = null;
               SoundCache.field_e = null;
             }
           }
@@ -139,8 +139,8 @@ abstract class NetworkGameClient extends GameAppletShell {
               var5_intLifetime2 = vc.a(this.field_z, this.field_o, param1 ^ 77, am.b(param1 ^ 60), false, uh.b(4));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  BitPacketBuffer.showLobbyDialog(kk.field_Y, (byte) -115, var5_intLifetime2);
-                  kk.field_Y = null;
+                  BitPacketBuffer.showLobbyDialog(ValidationStatusWidget.field_Y, (byte) -115, var5_intLifetime2);
+                  ValidationStatusWidget.field_Y = null;
                 } else {
                   DisplayNameSelectionPanel.field_F = p.field_c;
                   id.a(false);
@@ -782,7 +782,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               this.a(111, "reconnect");
             }
             md.b((byte) -111);
-            BitPacketBuffer.showLobbyDialog(kk.field_Y, (byte) -81, var2);
+            BitPacketBuffer.showLobbyDialog(ValidationStatusWidget.field_Y, (byte) -81, var2);
             fa.field_a = true;
             if (param0 != -10125) {
               this.n(-13);

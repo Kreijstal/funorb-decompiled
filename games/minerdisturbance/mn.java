@@ -12,7 +12,7 @@ final class mn extends gk {
         super(param0, param1);
     }
 
-    final String a(UiWidget param0, byte param1) {
+    final String resolveDisplayText(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;

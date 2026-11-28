@@ -19,7 +19,7 @@ class bd extends DualLinkNode {
             if (var2 <= var3) {
               if (var2 > uo.field_o) {
                 fl.field_g = fp.field_a;
-                sb.field_F = b.field_a;
+                ValidationStatusIcon.field_F = b.field_a;
                 sm.field_e = LevelProgressUpdate.field_h;
                 NameSuggestionsPanel.field_F = je.field_j;
                 ll.a(-105, true, param1);
@@ -39,7 +39,7 @@ class bd extends DualLinkNode {
         }
         if (var2 > uo.field_o) {
           fl.field_g = fp.field_a;
-          sb.field_F = b.field_a;
+          ValidationStatusIcon.field_F = b.field_a;
           sm.field_e = LevelProgressUpdate.field_h;
           NameSuggestionsPanel.field_F = je.field_j;
           ll.a(-105, true, param1);
@@ -68,12 +68,12 @@ class bd extends DualLinkNode {
     final static void a(ResourceArchive param0, byte[] param1, wj[] param2, int param3) {
         try {
           EditableTextField.field_L = param0;
-          io.field_I[16] = mh.field_j;
+          ValidationStatusWidget.field_I[16] = mh.field_j;
           if (param3 != 8) {
             bd.a((byte) -64, false);
           }
-          io.field_I[17] = ti.field_j;
-          cc.a(8438015, fe.field_g, (byte) -121, 2121856, io.field_I, 192);
+          ValidationStatusWidget.field_I[17] = ti.field_j;
+          cc.a(8438015, fe.field_g, (byte) -121, 2121856, ValidationStatusWidget.field_I, 192);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "bd.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

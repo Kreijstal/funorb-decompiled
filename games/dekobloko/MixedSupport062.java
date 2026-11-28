@@ -75,7 +75,7 @@ final class MixedSupport062 {
           if (byteArgument2 != -118) {
             rgbSpriteArrayArrayState0008 = (RgbSprite[][]) null;
           }
-          stackBooleanLocal2 = (UiComponentPart011.computeSceneWidgetPart0140551(-3805, stringArgument1) != null);
+          stackBooleanLocal2 = (ValidationStatusIcon.computeSceneWidgetPart0140551(-3805, stringArgument1) != null);
           return stackBooleanLocal2;
         } catch (java.lang.RuntimeException caughtParameterLocal7) {
           caughtExceptionLocal6 = caughtParameterLocal7;

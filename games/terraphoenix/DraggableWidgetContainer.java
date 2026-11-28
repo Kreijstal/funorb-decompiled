@@ -19,15 +19,15 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         if (!param0) {
           stackIn_11_0 = uk.field_b;
           if (param1 == 6) {
-            ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+            ((MidiPcmStream) (Object) stackIn_11_0).playTrack(false, (byte) 127, ca.field_a[param1]);
           } else {
             if (param1 == 4) {
-              ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+              ((MidiPcmStream) (Object) stackIn_11_0).playTrack(false, (byte) 127, ca.field_a[param1]);
             } else {
               if (param1 == 5) {
-                ((MidiPcmStream) (Object) stackIn_11_0).a(false, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_11_0).playTrack(false, (byte) 127, ca.field_a[param1]);
               } else {
-                ((MidiPcmStream) (Object) stackIn_11_0).a(true, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_11_0).playTrack(true, (byte) 127, ca.field_a[param1]);
               }
             }
           }
@@ -35,15 +35,15 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
           field_I = -26;
           stackIn_3_0 = uk.field_b;
           if (param1 == 6) {
-            ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+            ((MidiPcmStream) (Object) stackIn_3_0).playTrack(false, (byte) 127, ca.field_a[param1]);
           } else {
             if (param1 == 4) {
-              ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+              ((MidiPcmStream) (Object) stackIn_3_0).playTrack(false, (byte) 127, ca.field_a[param1]);
             } else {
               if (param1 == 5) {
-                ((MidiPcmStream) (Object) stackIn_3_0).a(false, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_3_0).playTrack(false, (byte) 127, ca.field_a[param1]);
               } else {
-                ((MidiPcmStream) (Object) stackIn_3_0).a(true, (byte) 127, ca.field_a[param1]);
+                ((MidiPcmStream) (Object) stackIn_3_0).playTrack(true, (byte) 127, ca.field_a[param1]);
               }
             }
           }

@@ -208,10 +208,10 @@ final class bc extends IntrusiveNode {
           vg.field_e[incrementValue$7] = new v(AlphaWidgetContainer.field_E, 1352, 1142, 180, 10);
           incrementValue$8 = var1;
           var1++;
-          vg.field_e[incrementValue$8] = new v(wj.field_G, 1530, 570, 180, 11, true);
+          vg.field_e[incrementValue$8] = new v(ValidationStatusIcon.field_G, 1530, 570, 180, 11, true);
           incrementValue$9 = var1;
           var1++;
-          vg.field_e[incrementValue$9] = new v(wj.field_G, 1850, 1104, 200, 12, true);
+          vg.field_e[incrementValue$9] = new v(ValidationStatusIcon.field_G, 1850, 1104, 200, 12, true);
           incrementValue$10 = var1;
           var1++;
           vg.field_e[incrementValue$10] = new v(rf.field_q, 2210, 850, 160, 13, true);

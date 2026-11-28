@@ -196,7 +196,7 @@ final class rl extends r {
         }
     }
 
-    final String b(int param0, UiWidget param1) {
+    final String resolveDisplayText(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_1_0 = null;

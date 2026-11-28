@@ -51,7 +51,7 @@ class IntrusiveNode {
         try {
           wc.field_nc = nm.a(param3, "frame_top", 1, "commonui");
           fi.field_d = nm.a(param3, "frame_bottom", 1, "commonui");
-          rh.field_Z = ProgressMessageDialog.a(false, "jagex_logo_grey", "commonui", param3);
+          ValidationStatusWidget.field_Z = ProgressMessageDialog.a(false, "jagex_logo_grey", "commonui", param3);
           em.field_d = nm.a(param3, "button", 1, "commonui");
           gg.field_q = ua.a("commonui", -563, param3, "validation");
           fa.field_Q = (BitmapFont) ((Object) ej.a("arezzo12", param3, param2, "commonui", 0));

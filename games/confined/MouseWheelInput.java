@@ -202,7 +202,7 @@ abstract class MouseWheelInput {
                   var26Lifetime1Lifetime1 = param6.field_n[var23Lifetime2];
                   TextLayout.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16);
                   wa.field_d[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13 >> 16) + var10;
-                  ba.field_P[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1 >> 16) + var11;
+                  ValidationStatusIcon.field_P[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1 >> 16) + var11;
                   var23Lifetime2++;
                   if (var31 != 0) {
                     decompiledFrameCompleted0 = false;

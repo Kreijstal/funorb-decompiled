@@ -269,8 +269,8 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
                   param0.field_i = 3;
                   if (var5.field_b &&
                     var5.field_i != 27) {
-                    dupTemp$0 = al.field_U[4] + 1;
-                    al.field_U[4] = dupTemp$0;
+                    dupTemp$0 = ValidationStatusWidget.field_U[4] + 1;
+                    ValidationStatusWidget.field_U[4] = dupTemp$0;
                     if (dupTemp$0 == 30) {
                       ti.a(246, (byte) -12, 9);
                     }

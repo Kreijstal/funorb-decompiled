@@ -30,7 +30,7 @@ class RichTextWidget extends InteractiveWidget {
         return this.field_R[this.field_P.field_s];
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param0 != 0) {
           field_T = (int[]) null;
         }
@@ -271,7 +271,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void setHotspotTooltip(String param0, int param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;

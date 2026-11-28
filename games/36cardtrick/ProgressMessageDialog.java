@@ -59,7 +59,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             gh.a(3, 31888);
             this.closeDialog(13);
           } else {
-            pa.a(PasswordValidator.g(-125), "tochangedisplayname.ws", -61);
+            ValidationStatusWidget.a(PasswordValidator.g(-125), "tochangedisplayname.ws", -61);
           }
           int var6_int = -72 % ((-62 - param1) / 32);
         } catch (RuntimeException runtimeException) {

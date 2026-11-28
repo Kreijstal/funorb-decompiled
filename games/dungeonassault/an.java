@@ -75,7 +75,7 @@ final class an extends DefaultTextWidgetRenderer {
             an.clearDeclaredStaticReferences(26);
           }
           if (param3 == null) {
-            stackIn_5_0 = ng.field_K;
+            stackIn_5_0 = ValidationStatusIcon.field_K;
           } else {
             stackIn_5_0 = (String) (param3);
           }
@@ -121,7 +121,7 @@ final class an extends DefaultTextWidgetRenderer {
         try {
           of.field_d = param4;
           ri.field_b = param0;
-          ng.field_I = param6;
+          ValidationStatusIcon.field_I = param6;
           lk.field_T = param3;
           kn.field_f = param8;
           if (param2 >= -55) {
@@ -289,7 +289,7 @@ final class an extends DefaultTextWidgetRenderer {
           if (param0 != 0) {
             an.clearDeclaredStaticReferences(98);
           }
-          super.a((byte) 127, param1);
+          super.copyStyleTo((byte) 127, param1);
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_B[var4_int];

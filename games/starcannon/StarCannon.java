@@ -22,7 +22,7 @@ public final class StarCannon extends ag {
           return;
         }
         RichTextLayout.field_l = b.a(false, 3);
-        jg.field_F = b.a(false, 4);
+        ValidationStatusIcon.field_F = b.a(false, 4);
         BoundedRandomAccessFile.field_c = b.a(false, 5);
         ej.a(FrameTimer.field_f, ProgressDialog.field_eb, param0 + 23396);
     }
@@ -747,7 +747,7 @@ public final class StarCannon extends ag {
                                             } else {
                                                 /* Inlined CFG state: 111. */
                                                 {
-                                                    var10_ref_String = jg.field_I + var9;
+                                                    var10_ref_String = ValidationStatusIcon.field_I + var9;
                                                     statePc = 115;
                                                     continue scanLoop1;
                                                 }
@@ -1565,12 +1565,12 @@ public final class StarCannon extends ag {
           if (null != oh.field_a) {
             if (oh.field_a.field_n) {
               eb.field_c = eb.field_c | oh.field_a.field_k;
-              jg.field_H = jg.field_H & ~oh.field_a.field_k;
+              ValidationStatusIcon.field_H = ValidationStatusIcon.field_H & ~oh.field_a.field_k;
               oh.field_a = null;
               RegistrationAgreementPane.i(122);
               ConfirmedEmailAvailabilityValidator.e((byte) -117);
               if (field_z == 5 &&
-                jg.field_H == 0) {
+                ValidationStatusIcon.field_H == 0) {
                 field_z = 2;
                 od.a(param0 ^ -312, 2, false);
               }
@@ -1691,8 +1691,8 @@ public final class StarCannon extends ag {
               AccountNameAvailabilityValidator.field_p.tryLoadAllGroups(29741)) {
               if (RichTextLayout.field_l.ensureIndexLoaded((byte) 109) &&
                 RichTextLayout.field_l.tryLoadAllGroups(29741)) {
-                if (jg.field_F.ensureIndexLoaded((byte) 119) &&
-                  jg.field_F.tryLoadAllGroups(29741)) {
+                if (ValidationStatusIcon.field_F.ensureIndexLoaded((byte) 119) &&
+                  ValidationStatusIcon.field_F.tryLoadAllGroups(29741)) {
                   if (BoundedRandomAccessFile.field_c.ensureIndexLoaded((byte) 127) &&
                     BoundedRandomAccessFile.field_c.tryLoadAllGroups(29741)) {
                     if (FrameTimer.field_f.ensureIndexLoaded((byte) 103) &&
@@ -1767,7 +1767,7 @@ public final class StarCannon extends ag {
                   ma.a(SecondaryNodeDeque.a(s.field_g, BoundedRandomAccessFile.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
                   return;
                 }
-                ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, FullscreenNoticeType.field_a, ""), param1 - 12479, 40.0f);
+                ma.a(SecondaryNodeDeque.a(n.field_f, ValidationStatusIcon.field_F, (byte) -38, FullscreenNoticeType.field_a, ""), param1 - 12479, 40.0f);
                 return;
               }
               ma.a(SecondaryNodeDeque.a(ResizableModalDialog.field_U, RichTextLayout.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
@@ -1795,29 +1795,29 @@ public final class StarCannon extends ag {
         if (fl.field_f == null) {
           ma.a(sj.field_C, -13923, 80.0f);
           this.renderClientFrame((byte) 22);
-          gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", jg.field_F);
-          AccountNameAvailabilityValidator.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
-          FullscreenFocusCanvas.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
-          gf.field_a = SecondaryNodeDequeIterator.a("cannoneer", 116, "", jg.field_F);
-          dl.field_c = SecondaryNodeDequeIterator.a("playership", param1 + 1407, "", jg.field_F);
-          vc.field_m = SecondaryNodeDequeIterator.a("addons", 126, "", jg.field_F);
-          SecondaryNodeDequeIterator.a("glows", 118, "", jg.field_F);
-          sj.field_E = SecondaryNodeDequeIterator.a("boss", -36, "", jg.field_F);
-          fg.field_c = SecondaryNodeDequeIterator.a("boss2", param1 ^ 1474, "", jg.field_F);
-          v.field_d = SecondaryNodeDequeIterator.a("boss3", 95, "", jg.field_F);
-          DropTargetWidgetContainer.field_w = fg.a(jg.field_F, "powerorbs", "", false);
-          var15 = SecondaryNodeDequeIterator.a("shots", -75, "", jg.field_F);
+          gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", ValidationStatusIcon.field_F);
+          AccountNameAvailabilityValidator.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", ValidationStatusIcon.field_F);
+          FullscreenFocusCanvas.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", ValidationStatusIcon.field_F);
+          gf.field_a = SecondaryNodeDequeIterator.a("cannoneer", 116, "", ValidationStatusIcon.field_F);
+          dl.field_c = SecondaryNodeDequeIterator.a("playership", param1 + 1407, "", ValidationStatusIcon.field_F);
+          vc.field_m = SecondaryNodeDequeIterator.a("addons", 126, "", ValidationStatusIcon.field_F);
+          SecondaryNodeDequeIterator.a("glows", 118, "", ValidationStatusIcon.field_F);
+          sj.field_E = SecondaryNodeDequeIterator.a("boss", -36, "", ValidationStatusIcon.field_F);
+          fg.field_c = SecondaryNodeDequeIterator.a("boss2", param1 ^ 1474, "", ValidationStatusIcon.field_F);
+          v.field_d = SecondaryNodeDequeIterator.a("boss3", 95, "", ValidationStatusIcon.field_F);
+          DropTargetWidgetContainer.field_w = fg.a(ValidationStatusIcon.field_F, "powerorbs", "", false);
+          var15 = SecondaryNodeDequeIterator.a("shots", -75, "", ValidationStatusIcon.field_F);
           for (var4_int = 0; 5 > var4_int; var4_int++) {
-            jg.field_C[var4_int] = var15[var4_int];
+            ValidationStatusIcon.field_C[var4_int] = var15[var4_int];
           }
-          var16 = SecondaryNodeDequeIterator.a("shots2", -120, "", jg.field_F);
+          var16 = SecondaryNodeDequeIterator.a("shots2", -120, "", ValidationStatusIcon.field_F);
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 5; var4_intLifetime1++) {
-            jg.field_C[var4_intLifetime1 + 5] = var16[var4_intLifetime1];
+            ValidationStatusIcon.field_C[var4_intLifetime1 + 5] = var16[var4_intLifetime1];
           }
           var3 = null;
-          AlphaWidgetContainer.field_B = SecondaryNodeDequeIterator.a("explosion", 120, "", jg.field_F);
-          LabeledWidgetContainer.field_z = SecondaryNodeDequeIterator.a("explosionb", -63, "", jg.field_F);
-          oh.field_d = SecondaryNodeDequeIterator.a("explosionc", -105, "", jg.field_F);
+          AlphaWidgetContainer.field_B = SecondaryNodeDequeIterator.a("explosion", 120, "", ValidationStatusIcon.field_F);
+          LabeledWidgetContainer.field_z = SecondaryNodeDequeIterator.a("explosionb", -63, "", ValidationStatusIcon.field_F);
+          oh.field_d = SecondaryNodeDequeIterator.a("explosionc", -105, "", ValidationStatusIcon.field_F);
           el.field_H = new Sprite[5];
           for (var4_intLifetime2 = 0; var4_intLifetime2 < 5; var4_intLifetime2++) {
             dupTemp$0 = new Sprite(32, 32);
@@ -1828,7 +1828,7 @@ public final class StarCannon extends ag {
             var17.trimTransparentBorders();
           }
           DisplayNameSelectionPanel.field_y.setAsRasterTarget(param1 + 1333);
-          fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", jg.field_F);
+          fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", ValidationStatusIcon.field_F);
           var4 = new Sprite[40];
           for (var5_int = 0; var5_int < 4; var5_int++) {
             var4[36 + var5_int] = fl.field_f[var5_int + 12];
@@ -1844,10 +1844,10 @@ public final class StarCannon extends ag {
             var13++;
           }
           fl.field_f = var4;
-          ma.field_e = SecondaryNodeDequeIterator.a("fr_thin_sqr_in", -49, "", jg.field_F);
-          gb.field_v = SecondaryNodeDequeIterator.a("fr_thin_sqr_ex", 119, "", jg.field_F);
-          ha.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_in", 119, "", jg.field_F);
-          ma.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_ex", 119, "", jg.field_F);
+          ma.field_e = SecondaryNodeDequeIterator.a("fr_thin_sqr_in", -49, "", ValidationStatusIcon.field_F);
+          gb.field_v = SecondaryNodeDequeIterator.a("fr_thin_sqr_ex", 119, "", ValidationStatusIcon.field_F);
+          ha.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_in", 119, "", ValidationStatusIcon.field_F);
+          ma.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_ex", 119, "", ValidationStatusIcon.field_F);
           var5 = ma.field_a[6];
           var6_ref_hl = ma.field_a[7];
           ma.field_a[8].field_q = 4;
@@ -1858,12 +1858,12 @@ public final class StarCannon extends ag {
           var8_ref_hl = ha.field_a[7];
           var8_ref_hl.field_q = 4;
           var7_ref_hl.field_q = 4;
-          MatchingFieldValidator.field_l = DequeWidgetContainer.a("", param1 ^ -1534, "life_icon", jg.field_F);
-          pk.field_e = DequeWidgetContainer.a("", 41, "main_border", jg.field_F);
-          NanoFrameTimer.field_i = DequeWidgetContainer.a("", 45, "main_inner", jg.field_F);
-          rd.field_p = SecondaryNodeDequeIterator.a("menu_border", param1 ^ -1532, "", jg.field_F);
-          jk.field_f = SecondaryNodeDequeIterator.a("menu_innerborder", 98, "", jg.field_F);
-          var18 = SecondaryNodeDequeIterator.a("headers", 117, "", jg.field_F);
+          MatchingFieldValidator.field_l = DequeWidgetContainer.a("", param1 ^ -1534, "life_icon", ValidationStatusIcon.field_F);
+          pk.field_e = DequeWidgetContainer.a("", 41, "main_border", ValidationStatusIcon.field_F);
+          NanoFrameTimer.field_i = DequeWidgetContainer.a("", 45, "main_inner", ValidationStatusIcon.field_F);
+          rd.field_p = SecondaryNodeDequeIterator.a("menu_border", param1 ^ -1532, "", ValidationStatusIcon.field_F);
+          jk.field_f = SecondaryNodeDequeIterator.a("menu_innerborder", 98, "", ValidationStatusIcon.field_F);
+          var18 = SecondaryNodeDequeIterator.a("headers", 117, "", ValidationStatusIcon.field_F);
           fh.field_r[0] = var18[0];
           fh.field_r[3] = var18[3];
           fh.field_r[4] = var18[4];
@@ -1890,51 +1890,51 @@ public final class StarCannon extends ag {
         if (null == DialogMessagePane.field_y[3]) {
           ma.a(sj.field_C, -13923, 90.0f);
           this.renderClientFrame((byte) 22);
-          DequeWidgetContainer.a("", 93, "mainmenubar", jg.field_F);
-          AlphaWidgetContainer.field_A = SecondaryNodeDequeIterator.a("zenon", 102, "", jg.field_F);
-          DequeWidgetContainer.a("", 120, "moon", jg.field_F);
-          DequeWidgetContainer.a("", param1 ^ -1487, "stars", jg.field_F);
-          fh.field_q = DequeWidgetContainer.a("", param1 + 1531, "nebula", jg.field_F);
-          MouseWheelSource.field_e = DequeWidgetContainer.a("", 125, "titlepic", jg.field_F);
-          gb.field_r = DequeWidgetContainer.a("", 91, "title2", jg.field_F);
-          ea.field_b[0] = DequeWidgetContainer.a("", 54, "sp0", jg.field_F);
-          ea.field_b[1] = DequeWidgetContainer.a("", 116, "sp1", jg.field_F);
-          ea.field_b[2] = DequeWidgetContainer.a("", 52, "sp2", jg.field_F);
-          ea.field_b[3] = DequeWidgetContainer.a("", param1 + 1531, "sp3", jg.field_F);
-          ea.field_b[4] = DequeWidgetContainer.a("", 43, "sp4", jg.field_F);
-          ea.field_b[5] = DequeWidgetContainer.a("", 44, "sp5", jg.field_F);
-          ea.field_b[6] = DequeWidgetContainer.a("", 93, "sp6", jg.field_F);
-          ea.field_b[7] = DequeWidgetContainer.a("", param1 + 1497, "sp7", jg.field_F);
-          ea.field_b[8] = DequeWidgetContainer.a("", 36, "sp8", jg.field_F);
-          eb.field_b[0] = DequeWidgetContainer.a("", 47, "s0", jg.field_F);
-          eb.field_b[1] = DequeWidgetContainer.a("", 107, "s1", jg.field_F);
-          eb.field_b[2] = DequeWidgetContainer.a("", 86, "s2", jg.field_F);
-          eb.field_b[3] = DequeWidgetContainer.a("", 23, "s3", jg.field_F);
-          eb.field_b[4] = DequeWidgetContainer.a("", 20, "s4", jg.field_F);
-          eb.field_b[5] = DequeWidgetContainer.a("", 82, "s5", jg.field_F);
-          eb.field_b[6] = DequeWidgetContainer.a("", dg.a(param1, -1506), "s6", jg.field_F);
-          eb.field_b[7] = DequeWidgetContainer.a("", dg.a(param1, -1419), "s7", jg.field_F);
-          eb.field_b[8] = DequeWidgetContainer.a("", dg.a(param1, -1423), "s8", jg.field_F);
-          eb.field_b[9] = DequeWidgetContainer.a("", 124, "s9", jg.field_F);
-          eb.field_b[10] = DequeWidgetContainer.a("", param1 + 1532, "s10", jg.field_F);
-          eb.field_b[11] = DequeWidgetContainer.a("", 21, "s11", jg.field_F);
-          eb.field_b[12] = DequeWidgetContainer.a("", dg.a(param1, -1478), "s12", jg.field_F);
-          eb.field_b[13] = DequeWidgetContainer.a("", param1 + 1523, "s13", jg.field_F);
-          DialogMessagePane.field_y[0] = DequeWidgetContainer.a("", 76, "ap0", jg.field_F);
-          DialogMessagePane.field_y[1] = DequeWidgetContainer.a("", 69, "ap1", jg.field_F);
-          DialogMessagePane.field_y[2] = DequeWidgetContainer.a("", dg.a(param1, -1497), "ap2", jg.field_F);
-          DialogMessagePane.field_y[3] = DequeWidgetContainer.a("", 100, "ap3", jg.field_F);
+          DequeWidgetContainer.a("", 93, "mainmenubar", ValidationStatusIcon.field_F);
+          AlphaWidgetContainer.field_A = SecondaryNodeDequeIterator.a("zenon", 102, "", ValidationStatusIcon.field_F);
+          DequeWidgetContainer.a("", 120, "moon", ValidationStatusIcon.field_F);
+          DequeWidgetContainer.a("", param1 ^ -1487, "stars", ValidationStatusIcon.field_F);
+          fh.field_q = DequeWidgetContainer.a("", param1 + 1531, "nebula", ValidationStatusIcon.field_F);
+          MouseWheelSource.field_e = DequeWidgetContainer.a("", 125, "titlepic", ValidationStatusIcon.field_F);
+          gb.field_r = DequeWidgetContainer.a("", 91, "title2", ValidationStatusIcon.field_F);
+          ea.field_b[0] = DequeWidgetContainer.a("", 54, "sp0", ValidationStatusIcon.field_F);
+          ea.field_b[1] = DequeWidgetContainer.a("", 116, "sp1", ValidationStatusIcon.field_F);
+          ea.field_b[2] = DequeWidgetContainer.a("", 52, "sp2", ValidationStatusIcon.field_F);
+          ea.field_b[3] = DequeWidgetContainer.a("", param1 + 1531, "sp3", ValidationStatusIcon.field_F);
+          ea.field_b[4] = DequeWidgetContainer.a("", 43, "sp4", ValidationStatusIcon.field_F);
+          ea.field_b[5] = DequeWidgetContainer.a("", 44, "sp5", ValidationStatusIcon.field_F);
+          ea.field_b[6] = DequeWidgetContainer.a("", 93, "sp6", ValidationStatusIcon.field_F);
+          ea.field_b[7] = DequeWidgetContainer.a("", param1 + 1497, "sp7", ValidationStatusIcon.field_F);
+          ea.field_b[8] = DequeWidgetContainer.a("", 36, "sp8", ValidationStatusIcon.field_F);
+          eb.field_b[0] = DequeWidgetContainer.a("", 47, "s0", ValidationStatusIcon.field_F);
+          eb.field_b[1] = DequeWidgetContainer.a("", 107, "s1", ValidationStatusIcon.field_F);
+          eb.field_b[2] = DequeWidgetContainer.a("", 86, "s2", ValidationStatusIcon.field_F);
+          eb.field_b[3] = DequeWidgetContainer.a("", 23, "s3", ValidationStatusIcon.field_F);
+          eb.field_b[4] = DequeWidgetContainer.a("", 20, "s4", ValidationStatusIcon.field_F);
+          eb.field_b[5] = DequeWidgetContainer.a("", 82, "s5", ValidationStatusIcon.field_F);
+          eb.field_b[6] = DequeWidgetContainer.a("", dg.a(param1, -1506), "s6", ValidationStatusIcon.field_F);
+          eb.field_b[7] = DequeWidgetContainer.a("", dg.a(param1, -1419), "s7", ValidationStatusIcon.field_F);
+          eb.field_b[8] = DequeWidgetContainer.a("", dg.a(param1, -1423), "s8", ValidationStatusIcon.field_F);
+          eb.field_b[9] = DequeWidgetContainer.a("", 124, "s9", ValidationStatusIcon.field_F);
+          eb.field_b[10] = DequeWidgetContainer.a("", param1 + 1532, "s10", ValidationStatusIcon.field_F);
+          eb.field_b[11] = DequeWidgetContainer.a("", 21, "s11", ValidationStatusIcon.field_F);
+          eb.field_b[12] = DequeWidgetContainer.a("", dg.a(param1, -1478), "s12", ValidationStatusIcon.field_F);
+          eb.field_b[13] = DequeWidgetContainer.a("", param1 + 1523, "s13", ValidationStatusIcon.field_F);
+          DialogMessagePane.field_y[0] = DequeWidgetContainer.a("", 76, "ap0", ValidationStatusIcon.field_F);
+          DialogMessagePane.field_y[1] = DequeWidgetContainer.a("", 69, "ap1", ValidationStatusIcon.field_F);
+          DialogMessagePane.field_y[2] = DequeWidgetContainer.a("", dg.a(param1, -1497), "ap2", ValidationStatusIcon.field_F);
+          DialogMessagePane.field_y[3] = DequeWidgetContainer.a("", 100, "ap3", ValidationStatusIcon.field_F);
           ModalDialogHost.j(32);
           return;
         }
         ma.a(sj.field_C, -13923, 95.0f);
         this.renderClientFrame((byte) 22);
-        DropTargetWidgetContainer.field_y = od.a("", jg.field_F, "b12", param1 + 1443, BoundedRandomAccessFile.field_c);
-        a.field_b = od.a("", jg.field_F, "font", -1, BoundedRandomAccessFile.field_c);
-        var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
-        ByteStorage.a(DequeWidgetContainer.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
-        ta.a(DequeWidgetContainer.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
-        DelayedPcmStream.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, DequeWidgetContainer.a("", 60, "mbpb", jg.field_F));
+        DropTargetWidgetContainer.field_y = od.a("", ValidationStatusIcon.field_F, "b12", param1 + 1443, BoundedRandomAccessFile.field_c);
+        a.field_b = od.a("", ValidationStatusIcon.field_F, "font", -1, BoundedRandomAccessFile.field_c);
+        var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", ValidationStatusIcon.field_F);
+        ByteStorage.a(DequeWidgetContainer.a("", 59, "mbfg", ValidationStatusIcon.field_F), -60, wc.field_g);
+        ta.a(DequeWidgetContainer.a("", param1 ^ -1510, "mb_logo", ValidationStatusIcon.field_F), param1 + 1319);
+        DelayedPcmStream.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, DequeWidgetContainer.a("", 60, "mbpb", ValidationStatusIcon.field_F));
         te.a(126, var20);
         ProgressDialog.field_eb = null;
         var4_array = new id[1];
@@ -1949,7 +1949,7 @@ public final class StarCannon extends ag {
         el.field_J = new Sprite(var6, var6);
         el.field_J.bindAsRenderTarget();
         var21.drawDownscaledAreaAveraged(0, 0, var6, var6);
-        j.field_c = SecondaryNodeDequeIterator.a("achievements_lrg", param1 + 1366, "", jg.field_F);
+        j.field_c = SecondaryNodeDequeIterator.a("achievements_lrg", param1 + 1366, "", ValidationStatusIcon.field_F);
         var5_ref = null;
         var22 = j.field_c;
         for (var8 = 0; var8 < var22.length; var8++) {
@@ -1960,7 +1960,7 @@ public final class StarCannon extends ag {
         jl.field_j = 5;
         FrameTimer.field_f = null;
         BitPacketBuffer.field_k = 0;
-        jg.field_F = null;
+        ValidationStatusIcon.field_F = null;
         DiskArchiveRequest.field_y = 10;
         DraggableWidgetContainer.field_G = 0;
         AccountRequestState.field_d = 1;
@@ -2110,10 +2110,10 @@ public final class StarCannon extends ag {
         if (MouseWheelSource.field_c == -1) {
           var2_int = 0;
           if (0 == BitPacketBuffer.field_k &&
-            0 != jg.field_H) {
+            0 != ValidationStatusIcon.field_H) {
           }
           if (!MouseInput.a(86)) {
-            if (0 >= jg.field_H) {
+            if (0 >= ValidationStatusIcon.field_H) {
               if (0 < NameSuggestionsPanel.field_C) {
                 var2_int = 2;
               }
@@ -2122,7 +2122,7 @@ public final class StarCannon extends ag {
             }
           } else {
             if (!(BitPacketBuffer.field_k <= 0) ||
-              !(jg.field_H <= 0)) {
+              !(ValidationStatusIcon.field_H <= 0)) {
               var2_int = 6;
             }
           }
@@ -2732,7 +2732,7 @@ public final class StarCannon extends ag {
                   var10 = (bf) (AccountRegistrationPanel.field_y.nextForward(-16913));
                 }
                 if (NameSuggestionsPanel.field_C == 0 &&
-                  jg.field_H == 0) {
+                  ValidationStatusIcon.field_H == 0) {
                 }
                 hh.field_c = 0;
                 bf.field_w = 0;
@@ -2742,7 +2742,7 @@ public final class StarCannon extends ag {
                 var3Lifetime5Lifetime1 = 0;
                 if (MouseInput.a(108)) {
                   if (!(NameSuggestionsPanel.field_C <= 0) ||
-                    !(0 >= jg.field_H)) {
+                    !(0 >= ValidationStatusIcon.field_H)) {
                     var3Lifetime5Lifetime1 = 6;
                   }
                 } else {
@@ -2750,7 +2750,7 @@ public final class StarCannon extends ag {
                   sa.a(nf.field_l + na.field_a * 3, 23820);
                   fc.field_e = fc.field_e - (BitPacketBuffer.field_k << 1);
                   BitPacketBuffer.field_k = 0;
-                  if (jg.field_H <= 0) {
+                  if (ValidationStatusIcon.field_H <= 0) {
                     if (NameSuggestionsPanel.field_C > 0) {
                       var3Lifetime5Lifetime1 = 2;
                     }
@@ -3348,8 +3348,8 @@ public final class StarCannon extends ag {
         StripedProgressWidget.clearStaticReferences(1851621384);
         NameSuggestionsPanel.clearStaticReferences(-16);
         RichTextWidget.clearDeclaredStaticReferences((byte) 119);
-        jg.e(934716193);
-        pa.f(-200);
+        ValidationStatusIcon.e(934716193);
+        ValidationStatusWidget.f(-200);
         gh.resetStaticState(13329);
         TextFieldValidator.d((byte) 100);
         vg.clearStaticReferences(-117);
@@ -3495,20 +3495,20 @@ public final class StarCannon extends ag {
             }
           }
         }
-        if (pa.field_L != field_z) {
+        if (ValidationStatusWidget.field_L != field_z) {
           if (cd.field_c <= 25) {
             var3_intLifetime1 = -cd.field_c + 25 << 2;
             if (-1 == field_z) {
               this.b(var3_intLifetime1, 7306);
             }
-            if (pa.field_L == -1) {
+            if (ValidationStatusWidget.field_L == -1) {
               this.b(-var3_intLifetime1 + 100, 7306);
             }
-            if (3 == pa.field_L &&
+            if (3 == ValidationStatusWidget.field_L &&
               1 == field_z) {
               this.b(0, 7306);
             }
-            if (pa.field_L == 1 &&
+            if (ValidationStatusWidget.field_L == 1 &&
               field_z == 3) {
               this.b(0, param0 + 7284);
             }
@@ -3517,23 +3517,23 @@ public final class StarCannon extends ag {
             }
           }
           if (cd.field_c > 25 &&
-            pa.field_L >= 0) {
+            ValidationStatusWidget.field_L >= 0) {
             var3_intLifetime1Lifetime1 = -25 + cd.field_c << 2;
-            if (pa.field_L == -1) {
+            if (ValidationStatusWidget.field_L == -1) {
               this.b(var3_intLifetime1Lifetime1, 7306);
             }
             if (field_z == -1) {
               this.b(-var3_intLifetime1Lifetime1 + 100, 7306);
             }
-            if (pa.field_L == 3 &&
+            if (ValidationStatusWidget.field_L == 3 &&
               field_z == 1) {
               this.b(0, 7306);
             }
-            if (1 == pa.field_L &&
+            if (1 == ValidationStatusWidget.field_L &&
               3 == field_z) {
               this.b(0, 7306);
             }
-            fg.field_a[pa.field_L].a(320, var3_intLifetime1Lifetime1);
+            fg.field_a[ValidationStatusWidget.field_L].a(320, var3_intLifetime1Lifetime1);
           }
         } else {
           if (field_z == -1) {
@@ -3723,11 +3723,11 @@ public final class StarCannon extends ag {
                 NanoFrameTimer.a(240, 12, 22, jk.field_f, 18, 320, jk.field_f, 12, a.field_b, -11, 12, false);
               }
               TextLineMetrics.field_e = 3;
-              pa.field_L = field_z;
+              ValidationStatusWidget.field_L = field_z;
             }
           }
         } else {
-          if (pa.field_L == field_z) {
+          if (ValidationStatusWidget.field_L == field_z) {
             if (field_z != -1) {
               fg.field_a[field_z].b(0);
             } else {
@@ -3736,11 +3736,11 @@ public final class StarCannon extends ag {
           } else {
             cd.field_c = cd.field_c + 1;
             if (25 <= cd.field_c &&
-              -1 == pa.field_L) {
+              -1 == ValidationStatusWidget.field_L) {
               cd.field_c = 50;
             }
             if (cd.field_c >= 50) {
-              field_z = pa.field_L;
+              field_z = ValidationStatusWidget.field_L;
             }
           }
         }

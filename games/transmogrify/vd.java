@@ -518,7 +518,7 @@ final class vd {
         this.field_q = (WidgetRenderer) ((Object) var17);
         var17.field_f = 16777215;
         ki var4 = new ki();
-        var17.a((byte) -106, var4);
+        var17.copyStyleTo((byte) -106, var4);
         this.field_g = 15658734;
         var4.field_n = 15658734;
         this.field_l = 3;
@@ -557,7 +557,7 @@ final class vd {
           discarded$0 = new pa(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ij(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ki();
-          var17.a((byte) -106, var8);
+          var17.copyStyleTo((byte) -106, var8);
           var8.a((byte) -21, 0).a(BufferedRandomAccessFile.a(15658734, 116, 10066329, 7829367), (byte) 32).a(-62, 1118481).b(-1, (byte) -102);
           var8.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
           this.field_f = (WidgetRenderer) ((Object) var8);

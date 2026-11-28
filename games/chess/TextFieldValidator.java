@@ -330,7 +330,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         }
         if (var2 >= 128 &&
           var2 < 160) {
-          var3 = jn.field_M[-128 + var2];
+          var3 = ValidationStatusIcon.field_M[-128 + var2];
           if (0 == var3) {
             var3 = 63;
           }

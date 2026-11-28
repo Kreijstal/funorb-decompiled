@@ -179,7 +179,7 @@ final class RichTextLayout extends TextLayout {
               if (param2 != 3) {
                 stackIn_43_1 = 0;
               } else {
-                stackIn_43_1 = this.a(param1, var14, param0.stringWidth(var14), 0);
+                stackIn_43_1 = this.computeJustificationStep(param1, var14, param0.stringWidth(var14), 0);
               }
               DebouncedFieldValidator.a(stackIn_42_0, stackIn_43_1, var14, param0, var15);
             }

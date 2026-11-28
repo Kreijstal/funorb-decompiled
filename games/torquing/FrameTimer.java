@@ -80,7 +80,7 @@ abstract class FrameTimer {
           return 126;
         }
         if (var4 > 0L) {
-          ub.sleepMillis(1976, var4);
+          ValidationStatusIcon.sleepMillis(1976, var4);
         }
         return this.advanceTicks(param1, true);
     }

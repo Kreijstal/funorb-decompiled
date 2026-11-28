@@ -225,7 +225,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_G = new ValidatedTextField("", (WidgetEventListener) null, 12);
         DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(pf.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
-        UiWidget var2 = new UiWidget(vh.field_K, var1, (WidgetEventListener) null);
+        UiWidget var2 = new UiWidget(ValidationStatusIcon.field_K, var1, (WidgetEventListener) null);
         this.field_D = new ButtonWidget(wi.field_a, (WidgetEventListener) null);
         this.field_z = new ButtonWidget(af.field_b, (WidgetEventListener) null);
         this.field_G.field_m = DropTargetWidgetContainer.field_E;
@@ -778,7 +778,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
 
     private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        vg var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -792,7 +792,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         try {
           var10 = new LabeledWidgetContainer(20, param6, param4 + param3, 25, param0, false, 120, 3, ButtonWidget.field_z, 16777215, param5);
           this.addChild((byte) -111, var10);
-          var9 = new vg(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(param4 ^ 88), param1, 126, var10.field_p + param6, 25 + param3, param2);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(param4 ^ 88), param1, 126, var10.field_p + param6, 25 + param3, param2);
           var9.field_o = (WidgetEventListener) (this);
           this.addChild((byte) -95, var9);
           stackIn_1_0 = var9.field_p + var10.field_p;

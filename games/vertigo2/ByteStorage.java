@@ -222,8 +222,8 @@ abstract class ByteStorage {
                   SectorCacheStore.field_d[var8] = SoundCache.field_f.readSignedByte(96);
                 }
               }
-              qe.field_V = SoundCache.field_f.readString(128);
-              var12 = (CharSequence) ((Object) qe.field_V);
+              ValidationStatusWidget.field_V = SoundCache.field_f.readString(128);
+              var12 = (CharSequence) ((Object) ValidationStatusWidget.field_V);
               Vertigo2.field_F = rc.a(var12, 320);
               rc.field_b = SoundCache.field_f.readUnsignedByte(-11);
               ProxyAuthenticationRequiredException.field_d = bm.field_I;

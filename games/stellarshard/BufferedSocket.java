@@ -314,7 +314,7 @@ final class BufferedSocket implements Runnable {
               EditableTextField.field_N.position = 0;
               ue.field_b = param1[hk.field_k];
             }
-            if (!cd.e((byte) 118)) {
+            if (!ValidationStatusWidget.e((byte) 118)) {
               return false;
             }
             if (hk.field_n == 0) {

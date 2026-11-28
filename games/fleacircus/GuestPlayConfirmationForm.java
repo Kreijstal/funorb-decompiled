@@ -102,9 +102,9 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
               ud.field_b.writeByte(-11, 14);
               ud.field_b.writeByte(-11, cf.field_c.a(true).field_c);
               SingleChildWidgetContainer.b((byte) 41, -1);
-              ResourceArchive.field_k = je.field_P;
+              ResourceArchive.field_k = ValidationStatusIcon.field_P;
             }
-            if (ResourceArchive.field_k == je.field_P &&
+            if (ResourceArchive.field_k == ValidationStatusIcon.field_P &&
               gi.a(1, true)) {
               var6_int = AccountRequestState.field_a.readUnsignedByte(false);
               if (var6_int == 0) {

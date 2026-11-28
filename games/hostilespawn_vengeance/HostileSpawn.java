@@ -105,7 +105,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var2_arrayLifetime4 = sg.a(true, "", DequeWidgetContainer.field_C, "wall_office");
           kf.a(var2_arrayLifetime4, 0, ak.field_b, 1792, 256);
           var4_array = null;
-          al.field_Z = th.a(DequeWidgetContainer.field_C, -124, "digitalserial_10", RegistrationAgreementPane.field_J, "");
+          ValidationStatusWidget.field_Z = th.a(DequeWidgetContainer.field_C, -124, "digitalserial_10", RegistrationAgreementPane.field_J, "");
           wh.field_d = th.a(DequeWidgetContainer.field_C, param0 + 201, "digitalserial_16", RegistrationAgreementPane.field_J, "");
           AccountRegistrationPanel.field_L = th.a(DequeWidgetContainer.field_C, 49, "digitalserial_20", RegistrationAgreementPane.field_J, "");
           id.field_A = th.a(DequeWidgetContainer.field_C, -127, "digitalserial_12", RegistrationAgreementPane.field_J, "");
@@ -129,7 +129,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var6 = 0;
           do {
             if (var5.length <= var6) {
-              al.field_Z.setInlineSprites(var5, (int[]) null);
+              ValidationStatusWidget.field_Z.setInlineSprites(var5, (int[]) null);
               id.field_A.setInlineSprites(var5, (int[]) null);
               il.field_c = jd.a((byte) 33, "", DequeWidgetContainer.field_C, "infoscreen");
               DialogMessagePane.field_H = MouseInput.a("", 27, "numkeys", DequeWidgetContainer.field_C);
@@ -456,7 +456,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[172] = DelayedPacket.field_p;
           ia.field_l[124] = ng.field_i;
           ia.field_l[95] = hm.field_l;
-          ia.field_l[37] = wj.field_L;
+          ia.field_l[37] = ValidationStatusIcon.field_L;
           ia.field_l[50] = DebouncedFieldValidator.field_j;
           ia.field_l[71] = EditableTextField.field_S;
           ia.field_l[46] = ng.field_v;
@@ -891,7 +891,7 @@ public final class HostileSpawn extends NetworkGameClient {
 
     private final void configureInterfaceThemeAndCursor(int param0) {
         try {
-          LoginPanel.a(4, 16776960, 4, AccountRegistrationPanel.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + al.field_Z.field_F, ModalDialog.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
+          LoginPanel.a(4, 16776960, 4, AccountRegistrationPanel.field_L, 24, 320, 65280, 16777215, 24, id.field_A.field_y + ValidationStatusWidget.field_Z.field_F, ModalDialog.field_J, (RgbSprite[]) null, (RgbSprite[]) null, 4, 24, 7662, 240, 40, 40, param0, id.field_A);
           this.initializeCustomCursorSupport((byte) -91);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "HostileSpawn.EA(" + param0 + ')');
@@ -1055,16 +1055,16 @@ public final class HostileSpawn extends NetworkGameClient {
           InteractiveWidget.field_F = null;
           ModalDialog.field_P = null;
           tk.field_a = null;
-          ha.field_w.field_F.a(0, vg.field_h, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, rb.field_s, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, ProgressMessageDialog.field_tb, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, ProgressDialog.field_ab, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, cl.field_o, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, bb.field_b, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, ArchiveProvider.field_d, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, bb.field_e, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, CipherPacketBuffer.field_u, ej.field_h, nd.field_e, false);
-          ha.field_w.field_F.a(0, PcmOutputWorker.field_f, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, vg.field_h, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, rb.field_s, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ProgressMessageDialog.field_tb, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ProgressDialog.field_ab, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, cl.field_o, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, bb.field_b, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, ArchiveProvider.field_d, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, bb.field_e, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, CipherPacketBuffer.field_u, ej.field_h, nd.field_e, false);
+          ha.field_w.field_F.prepareTrackSamples(0, PcmOutputWorker.field_f, ej.field_h, nd.field_e, false);
           nd.field_e = null;
           ej.field_h = null;
         } catch (RuntimeException runtimeException) {
@@ -1291,8 +1291,8 @@ public final class HostileSpawn extends NetworkGameClient {
           ContentTransitionDialog.clearDeclaredStaticReferences((byte) -56);
           NameSuggestionsPanel.clearStaticReferences(-125);
           RichTextWidget.clearStaticReferences(true);
-          wj.j(11460);
-          al.clearDeclaredStaticReferences((byte) 78);
+          ValidationStatusIcon.j(11460);
+          ValidationStatusWidget.clearDeclaredStaticReferences((byte) 78);
           vf.clearDeclaredStaticReferences((byte) -72);
           TextFieldValidator.e(param0 - 4);
           ClientLookupTables.clearStaticReferences(true);
@@ -2002,7 +2002,7 @@ public final class HostileSpawn extends NetworkGameClient {
               var3 = var4 / 2 - 32;
             }
             fj.field_Kb[var2.field_h].drawQuarterSizeAveraged(8, var3);
-            al.field_Z.drawString(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
+            ValidationStatusWidget.field_Z.drawString(il.field_b[var2.field_h], 48, id.field_A.field_y + var3, 65280, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2276,7 +2276,7 @@ public final class HostileSpawn extends NetworkGameClient {
             this.field_G.b(32);
             return;
           }
-          wj.a((byte) -59);
+          ValidationStatusIcon.a((byte) -59);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2297,7 +2297,7 @@ public final class HostileSpawn extends NetworkGameClient {
           this.a(9, false, 11, 23, 0, false, 13, 10);
           eh.field_c = new PcmStreamMixer();
           var2 = new MidiPcmStream();
-          var2.c(param0 + 4325, 128, 9);
+          var2.setChannelProgram(param0 + 4325, 128, 9);
           var3 = new VolumeRampingMidiPcmStream();
           var4 = new VolumeRampingMidiPcmStream(var3);
           var5 = new VolumeRampingMidiPcmStream(var3);
@@ -2315,7 +2315,7 @@ public final class HostileSpawn extends NetworkGameClient {
           CrossfadingMidiPcmStream.field_v.a(0.6000000238418579f);
           CrossfadingMidiPcmStream.field_v.setStereoWidth(0.30000001192092896f);
           eb.field_e.setRootStream(CrossfadingMidiPcmStream.field_v);
-          wj.field_O = wj.field_O / 4;
+          ValidationStatusIcon.field_O = ValidationStatusIcon.field_O / 4;
           uj.field_p = new GridPoint();
           this.a(true, (byte) 44, true, true, true);
           return;
@@ -2412,7 +2412,7 @@ public final class HostileSpawn extends NetworkGameClient {
           jd.field_h = fg.a("", "Scenery_3", DequeWidgetContainer.field_C, false);
           om.field_c = fg.a("", "Scenery_4", DequeWidgetContainer.field_C, false);
           ih.field_v = fg.a("", "Scenery_5", DequeWidgetContainer.field_C, false);
-          wj.field_L = fg.a("", "Scenery_6", DequeWidgetContainer.field_C, false);
+          ValidationStatusIcon.field_L = fg.a("", "Scenery_6", DequeWidgetContainer.field_C, false);
           GridPoint.field_d = fg.a("", "Scenery_7", DequeWidgetContainer.field_C, false);
           hg.field_a = fg.a("", "Scenery_8", DequeWidgetContainer.field_C, false);
           f.field_b = MouseInput.a("", -76, "Scenery_9", DequeWidgetContainer.field_C);

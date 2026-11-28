@@ -14,7 +14,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         try {
           this.field_o = new MatchingFieldValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "jg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         }
         if (c.field_o == bk.field_c) {
           bk.field_c = c.field_m;
-          return li.field_T;
+          return ValidationStatusWidget.field_T;
         }
         return null;
     }
@@ -125,7 +125,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

@@ -84,10 +84,10 @@ final class DynamicLight extends IntrusiveNode {
               uh.field_b = e.field_c.readLong((byte) -68);
               e.field_c.position = 0;
               wb.a(param3, PacketBuffer.field_o, param0, 25444, param1);
-              lk.field_d = rh.field_ab;
+              lk.field_d = ValidationStatusWidget.field_ab;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (lk.field_d == rh.field_ab &&
+            if (lk.field_d == ValidationStatusWidget.field_ab &&
               ProgressDialog.a(1, (byte) 8)) {
               var6_intLifetime1 = e.field_c.readUnsignedByte(32);
               ag.field_e = null;

@@ -107,7 +107,7 @@ final class ah {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class ah {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var3), "ah.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var3), "ah.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class ah {
         if (param0 != -55) {
           return (aj[]) null;
         }
-        return new aj[]{gj.field_w, q.field_d, NanoFrameTimer.field_n, vb.field_l, NanoFrameTimer.field_d, uj.field_c, TextLineMetrics.field_b, li.field_R, ByteStorage.field_b, he.field_c, UiWidget.field_n, vf.field_m, fb.field_l, GameAppletShell.field_d};
+        return new aj[]{gj.field_w, q.field_d, NanoFrameTimer.field_n, vb.field_l, NanoFrameTimer.field_d, uj.field_c, TextLineMetrics.field_b, ValidationStatusWidget.field_R, ByteStorage.field_b, he.field_c, UiWidget.field_n, vf.field_m, fb.field_l, GameAppletShell.field_d};
     }
 
     static {

@@ -376,14 +376,14 @@ final class d {
                         if (this.field_i == 1) {
                           SoftwareRasterizer.drawLine(var4, this.field_q, -(this.field_j / 32) + var4, this.field_q - this.field_e / 32, this.field_o);
                         }
-                        jg.field_C[4 + (-5 + 5 * this.field_i)].drawTintedGray(var4 - 3, this.field_q - 3, this.field_o);
+                        ValidationStatusIcon.field_C[4 + (-5 + 5 * this.field_i)].drawTintedGray(var4 - 3, this.field_q - 3, this.field_o);
                         break regionExit1;
                       case 3:
                         var4 = 0;
                         if (3 == this.field_h) {
                           var4 = param0 / 20 + this.field_d;
                         }
-                        jg.field_C[4].drawTintedGray(-3 + var4, -3 + this.field_q, this.field_o);
+                        ValidationStatusIcon.field_C[4].drawTintedGray(-3 + var4, -3 + this.field_q, this.field_o);
                         break regionExit1;
                       case 0:
                         var4 = (param0 >> 4) + this.field_d;
@@ -454,15 +454,15 @@ final class d {
                         AlphaWidgetContainer.field_B[14].drawAdditive(var4 - 8, 20 + this.field_q, 64);
                       } else {
                         if (4 != this.field_i) {
-                          jg.field_C[9].drawTintedGray(6 + var4, this.field_q - 3, this.field_o);
-                          jg.field_C[9].drawTintedGray(12 + var4, -3 + this.field_q, this.field_o);
+                          ValidationStatusIcon.field_C[9].drawTintedGray(6 + var4, this.field_q - 3, this.field_o);
+                          ValidationStatusIcon.field_C[9].drawTintedGray(12 + var4, -3 + this.field_q, this.field_o);
                         } else {
-                          jg.field_C[9].drawTintedGray(-2 + var4, -3 + this.field_q, this.field_o);
-                          jg.field_C[9].drawTintedGray(4 + var4, -3 + this.field_q, this.field_o);
+                          ValidationStatusIcon.field_C[9].drawTintedGray(-2 + var4, -3 + this.field_q, this.field_o);
+                          ValidationStatusIcon.field_C[9].drawTintedGray(4 + var4, -3 + this.field_q, this.field_o);
                         }
                       }
                     } else {
-                      jg.field_C[5 * (-1 + this.field_i) + 4].drawTintedGray(-3 + var4, this.field_q - 3, this.field_o);
+                      ValidationStatusIcon.field_C[5 * (-1 + this.field_i) + 4].drawTintedGray(-3 + var4, this.field_q - 3, this.field_o);
                     }
                   } else {
                     AlphaWidgetContainer.field_A[this.field_f].drawAdditive(var4 - 8, -8 + this.field_q, 128);

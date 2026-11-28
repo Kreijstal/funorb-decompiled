@@ -23,7 +23,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
 
     private final int a(String param0, String param1, int param2, byte param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
-        v var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -42,7 +42,7 @@ final class DisplayNameSelectionPanel extends DequeWidgetContainer implements Na
             stackIn_2_0 = 12;
             return stackIn_2_0;
           }
-          var9 = new v(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 55), param0, 126, param2 + var10.field_j, 25 + param4, param5);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param6)).getFieldValidator((byte) 55), param0, 126, param2 + var10.field_j, 25 + param4, param5);
           var9.field_s = (WidgetEventListener) (this);
           this.addChild((UiComponent) (var9), (byte) -124);
           stackIn_4_0 = var9.field_j + var10.field_j;

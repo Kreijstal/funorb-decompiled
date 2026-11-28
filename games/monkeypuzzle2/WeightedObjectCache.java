@@ -37,7 +37,7 @@ final class WeightedObjectCache {
 
     final static void a(int param0) {
         String var2 = (String) null;
-        vh.a("", (String) null, (byte) 115);
+        ValidationStatusIcon.a("", (String) null, (byte) 115);
         int var1 = 58 / ((-18 - param0) / 61);
     }
 

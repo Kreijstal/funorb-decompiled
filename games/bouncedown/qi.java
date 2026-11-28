@@ -23,7 +23,7 @@ final class qi extends DefaultTextWidgetRenderer {
         RgbSprite[] var8 = null;
         var7 = Bounce.field_N;
         try {
-          super.a(param2, (byte) -122);
+          super.copyStyleTo(param2, (byte) -122);
           if (param1 != -19463) {
             var8 = (RgbSprite[]) null;
             this.a(10, 115, (RgbSprite[]) null);

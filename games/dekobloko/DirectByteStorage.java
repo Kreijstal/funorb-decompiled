@@ -37,7 +37,7 @@ final class DirectByteStorage extends ByteStorage {
         int integerLocal17;
         try {
           NetworkSupport002.rgbSpriteArrayState0003 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "frame_top");
-          UiComponentPart011.rgbSpriteArrayState0013 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "frame_bottom");
+          ValidationStatusIcon.rgbSpriteArrayState0013 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "frame_bottom");
           PlayerNameAvailabilityValidator.rgbSpriteState0025 = DropTargetWidgetContainer.computeRgbSprite0704(resourceArchiveArgument1, "jagex_logo_grey", "commonui", 8192);
           MixedSupport110.rgbSpriteArrayState0024 = MixedSupport011.computeRgbSpriteArray0154(112, resourceArchiveArgument1, "commonui", "button");
           ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028 = MixedSupport003.computeRgbSpriteArray0039(0, "commonui", "validation", resourceArchiveArgument1);

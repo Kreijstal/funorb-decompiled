@@ -131,7 +131,7 @@ final class RichTextLayout extends TextLayout {
               stackIn_41_0 = (BitmapFont) (param2);
               stackIn_41_1 = var13;
               if (param7 == 3) {
-                stackIn_42_2 = this.a(101, var13, param2.stringWidth(var13), param4);
+                stackIn_42_2 = this.computeJustificationStep(101, var13, param2.stringWidth(var13), param4);
               } else {
                 stackIn_42_2 = 0;
               }

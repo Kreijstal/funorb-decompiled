@@ -29,7 +29,7 @@ final class PasswordValidator extends TextFieldValidator {
         field_k = null;
     }
 
-    private final boolean a(String param0, boolean param1) {
+    private final boolean containsEmailComponent(String param0, boolean param1) {
         boolean discarded$1 = false;
         String var3 = null;
         RuntimeException var3_ref = null;
@@ -46,7 +46,7 @@ final class PasswordValidator extends TextFieldValidator {
           var3 = this.field_r.field_o.toLowerCase();
           if (param1) {
             var8 = (String) null;
-            discarded$1 = this.a((String) null, true);
+            discarded$1 = this.containsEmailComponent((String) null, true);
           }
           var4 = param0.toLowerCase();
           if (var3.length() > 0 &&
@@ -184,7 +184,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_11_0 = fk.field_q;
             return stackIn_11_0;
           }
-          if (this.a(param0, false)) {
+          if (this.containsEmailComponent(param0, false)) {
             stackIn_14_0 = ConfirmedEmailAvailabilityValidator.field_k;
             return stackIn_14_0;
           }
@@ -247,7 +247,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = rk.field_c;
             return stackIn_8_0;
           }
-          if (!this.a(param0, false)) {
+          if (!this.containsEmailComponent(param0, false)) {
             stackIn_13_0 = GzipDecompressor.field_b;
             return stackIn_13_0;
           }

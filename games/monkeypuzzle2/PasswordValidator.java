@@ -124,7 +124,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_14_0 = DisplayNameSelectionPanel.field_E;
             return stackIn_14_0;
           }
-          if (this.a((byte) 119, param1)) {
+          if (this.containsEmailComponent((byte) 119, param1)) {
             stackIn_18_0 = ResourceArchive.field_d;
             return stackIn_18_0;
           }
@@ -159,7 +159,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean a(byte param0, String param1) {
+    private final boolean containsEmailComponent(byte param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -356,7 +356,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_7_0 = IsaacRandom.field_h;
             return stackIn_7_0;
           }
-          if (!this.a((byte) 76, param0)) {
+          if (!this.containsEmailComponent((byte) 76, param0)) {
             return TextFieldValidator.field_i;
           }
           stackIn_11_0 = IsaacRandom.field_h;

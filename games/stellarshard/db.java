@@ -147,7 +147,7 @@ final class db {
         int var2;
         int var3;
         var3 = stellarshard.field_B;
-        ii.field_F = null;
+        ValidationStatusIcon.field_F = null;
         ProgressMessageDialog.field_db = false;
         var1 = -66 % ((74 - param0) / 34);
         if (SoundCache.field_a) {
@@ -156,11 +156,11 @@ final class db {
           var2 = ag.field_c;
           if (0 < var2) {
             if (var2 == 1) {
-              ii.field_F = DisplayNameSelectionPanel.field_C;
+              ValidationStatusIcon.field_F = DisplayNameSelectionPanel.field_C;
             } else {
-              ii.field_F = h.a(MouseHandler.field_e, 0, new String[]{Integer.toString(var2)});
+              ValidationStatusIcon.field_F = h.a(MouseHandler.field_e, 0, new String[]{Integer.toString(var2)});
             }
-            ii.field_F = ModalDialogHost.a(new CharSequence[]{(CharSequence) ((Object) ii.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
+            ValidationStatusIcon.field_F = ModalDialogHost.a(new CharSequence[]{(CharSequence) ((Object) ValidationStatusIcon.field_F), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) SocketConnector.field_a)}, (byte) 127);
           }
           ModalDialogHost.field_G.closeDialog(3);
           PcmResampler.b(-21923);
@@ -299,7 +299,7 @@ final class db {
           if (param3 != 2) {
             this.field_d = (Sprite[]) null;
           }
-          var6 = param1.b(param2, 0);
+          var6 = param1.resolveDisplayText(param2, 0);
           if (var6 != null &&
             null != param1.field_a) {
             if (0 > this.field_e) {

@@ -56,7 +56,7 @@ final class vi {
           this.field_b = (WidgetRenderer) ((Object) var17);
           var17.field_q = 16777215;
           var4 = new on();
-          var17.a(102, var4);
+          var17.copyStyleTo(102, var4);
           this.field_g = 15658734;
           this.field_k = 5592405;
           this.field_f = 15658734;
@@ -91,7 +91,7 @@ final class vi {
           discarded$0 = new qg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new fl(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new on();
-          var17.a(28, var8);
+          var17.copyStyleTo(28, var8);
           var8.a((byte) -120, 0).a(gn.a(10066329, 7829367, 15658734, false), 7392).a(101, 1118481).b(-1, true);
           var8.a((byte) -112, 4).a(-13903, true).a(var5, 7392);
           this.field_a = (WidgetRenderer) ((Object) var8);

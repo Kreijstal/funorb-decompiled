@@ -50,7 +50,7 @@ final class uc {
         }
         DualLinkNode.field_h = 256 / param4;
         bh.field_j = param6 * 128 / param4;
-        vh.field_I = (var13 - param1) * var8;
+        ValidationStatusIcon.field_I = (var13 - param1) * var8;
         nc.field_e = (var13 - param1) * var9;
         cg.field_h = (var12 - param0) * var8;
         Bzip2State.field_u = (var12 - param0) * var9;
@@ -82,7 +82,7 @@ final class uc {
           gi.field_c = Bzip2State.field_u;
           var15 = param13;
           while (var15 < 0) {
-            param1 = gi.field_c - vh.field_I >> 16;
+            param1 = gi.field_c - ValidationStatusIcon.field_I >> 16;
             if (param1 >= -param2 &&
               param1 <= param2) {
               param0 = ti.field_a + nc.field_e >> 16;
@@ -121,7 +121,7 @@ final class uc {
           }
           param8 = param8 + param14;
           param12++;
-          vh.field_I = vh.field_I + param10;
+          ValidationStatusIcon.field_I = ValidationStatusIcon.field_I + param10;
           nc.field_e = nc.field_e + param11;
         }
     }

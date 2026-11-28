@@ -32,17 +32,17 @@ final class gm {
           DropTargetWidgetContainer.field_I = BoundedRandomAccessFile.field_b;
           if (255 != param3) {
             if (param3 < 100) {
-              wj.field_H = an.createAccountErrorResult(param3, -10, param1);
+              ValidationStatusIcon.field_H = an.createAccountErrorResult(param3, -10, param1);
             } else {
               if (param3 <= 105) {
-                wj.field_H = vf.createAccountSuggestionsResult(param2, true);
+                ValidationStatusIcon.field_H = vf.createAccountSuggestionsResult(param2, true);
               } else {
-                wj.field_H = an.createAccountErrorResult(param3, -10, param1);
+                ValidationStatusIcon.field_H = an.createAccountErrorResult(param3, -10, param1);
               }
             }
           } else {
             stackIn_5_0 = !(ia.field_h >= 13);
-            wj.field_H = DialogMessagePane.createAccountSuccessResult(stackIn_5_0, false);
+            ValidationStatusIcon.field_H = DialogMessagePane.createAccountSuccessResult(stackIn_5_0, false);
           }
           if (param0 == 26991) {
             return;
@@ -207,7 +207,7 @@ final class gm {
           if (param1 < 118) {
             return;
           }
-          var6 = param0.c(param3, 3);
+          var6 = param0.resolveDisplayText(param3, 3);
           if (var6 != null &&
             null != param0.field_g) {
             if (this.field_i < 0) {

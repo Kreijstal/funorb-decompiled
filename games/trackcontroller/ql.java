@@ -4,7 +4,7 @@
 final class ql extends dd {
     static String field_q;
 
-    final String c(byte param0, UiWidget param1) {
+    final String resolveDisplayText(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
         String stackIn_3_0 = null;
@@ -15,7 +15,7 @@ final class ql extends dd {
         try {
           if (param0 <= 49) {
             var4 = (UiWidget) null;
-            this.c((byte) -78, (UiWidget) null);
+            this.resolveDisplayText((byte) -78, (UiWidget) null);
           }
           stackIn_3_0 = uh.a(param1.field_s.length(), '*', (byte) 20);
           return stackIn_3_0;

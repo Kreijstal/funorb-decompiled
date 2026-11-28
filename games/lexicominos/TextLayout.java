@@ -16,7 +16,7 @@ abstract class TextLayout {
         }
     }
 
-    final int a(int param0, boolean param1, int param2, String param3) {
+    final int computeJustificationStep(int param0, boolean param1, int param2, String param3) {
         int var8 = 0;
         int var5_int = 0;
         int var6 = 0;
@@ -66,7 +66,7 @@ abstract class TextLayout {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ abstract class TextLayout {
             } else {
               stackIn_103_2 = "{...}";
             }
-            throw ld.wrapClientException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param5).append(')').toString());
+            throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_99_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

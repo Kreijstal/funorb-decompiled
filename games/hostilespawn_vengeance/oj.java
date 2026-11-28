@@ -1398,8 +1398,8 @@ class oj extends p {
           if (param0.field_I <= 0) {
             param0.e((byte) -49);
             param0.c((byte) -94);
-            if (160 > al.field_Q) {
-              al.field_Q = al.field_Q + 50;
+            if (160 > ValidationStatusWidget.field_Q) {
+              ValidationStatusWidget.field_Q = ValidationStatusWidget.field_Q + 50;
               FullscreenStatusDialog.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
             }
             for (var9_int = 0; 3 > var9_int; var9_int++) {

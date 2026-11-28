@@ -252,7 +252,7 @@ public final class Bounce extends GameClient {
           StripedProgressWidget.clearStaticReferences((byte) -83);
           NameSuggestionsPanel.a(true);
           RichTextWidget.clearStaticReferences((byte) -6);
-          la.clearStaticReferences((byte) -59);
+          ValidationStatusIcon.clearStaticReferences((byte) -59);
           ff.a(-22756);
           TextFieldValidator.clearDeclaredStaticReferences(24562);
           nb.clearStaticReferences(120);
@@ -597,7 +597,7 @@ public final class Bounce extends GameClient {
               synchronized (var2_ref) {
                 boolean decompiledSharedTail0 = !(!rd.field_a);
                 if (!decompiledSharedTail0) {
-                  ld.field_l.f(-22719);
+                  ld.field_l.stop(-22719);
                   decompiledSharedTail0 = (var10 != 0);
                 }
                 if (decompiledSharedTail0) {
@@ -607,7 +607,7 @@ public final class Bounce extends GameClient {
                   } else {
                     stackIn_242_1 = wj.field_c;
                   }
-                  ((MidiPcmStream) (Object) stackIn_241_0).a(stackIn_242_1, true, 54);
+                  ((MidiPcmStream) (Object) stackIn_241_0).playTrack(stackIn_242_1, true, 54);
                 }
                 jl.field_d.flushAndMarkDrainCheck();
               }
@@ -712,7 +712,7 @@ public final class Bounce extends GameClient {
             if (rd.field_a) {
               var2_ref = jl.field_d;
               synchronized (var2_ref) {
-                ld.field_l.a(AccountCreationResultPanel.field_mb, true, 124);
+                ld.field_l.playTrack(AccountCreationResultPanel.field_mb, true, 124);
                 jl.field_d.flushAndMarkDrainCheck();
               }
             }
@@ -996,7 +996,7 @@ public final class Bounce extends GameClient {
             this.loadGameAssets(true, 3134);
           }
           do {
-            if (!s.a(true, ce.field_n)) {
+            if (!ValidationStatusWidget.a(true, ce.field_n)) {
               jj.a(0, true);
               break;
             }
@@ -1264,10 +1264,10 @@ public final class Bounce extends GameClient {
             return;
           }
           if (MidiPcmStream.field_D != null) {
-            if (!ld.field_l.a((byte) -122, cf.field_d, MidiPcmStream.field_D, AccountCreationResultPanel.field_mb, 176400)) {
+            if (!ld.field_l.prepareTrackSamples((byte) -122, cf.field_d, MidiPcmStream.field_D, AccountCreationResultPanel.field_mb, 176400)) {
               return;
             }
-            if (!ld.field_l.a((byte) -124, cf.field_d, MidiPcmStream.field_D, wj.field_c, 176400)) {
+            if (!ld.field_l.prepareTrackSamples((byte) -124, cf.field_d, MidiPcmStream.field_D, wj.field_c, 176400)) {
               return;
             }
             ld.field_l.e(param1 ^ 3118);
@@ -1315,7 +1315,7 @@ public final class Bounce extends GameClient {
             var3_ref2 = jl.field_d;
             synchronized (var3_ref2) {
               ld.field_l.setMasterVolume(DefaultTextWidgetRenderer.field_a / 2, 100);
-              ld.field_l.a(AccountCreationResultPanel.field_mb, true, 85);
+              ld.field_l.playTrack(AccountCreationResultPanel.field_mb, true, 85);
               jl.field_d.flushAndMarkDrainCheck();
             }
             if (!jh.b(767564065)) {
@@ -1417,7 +1417,7 @@ public final class Bounce extends GameClient {
           return;
         }
         try {
-          ld.field_l.b((byte) 114, 128, 9);
+          ld.field_l.setChannelProgram((byte) 114, 128, 9);
           jl.field_d.setRootStream(ld.field_l);
           ff.field_C = 0.0;
           eg.field_n = 0;
@@ -1731,7 +1731,7 @@ public final class Bounce extends GameClient {
                 if (rd.field_a) {
                   var5 = jl.field_d;
                   synchronized (var5) {
-                    ld.field_l.a(AccountCreationResultPanel.field_mb, true, param0 ^ 98);
+                    ld.field_l.playTrack(AccountCreationResultPanel.field_mb, true, param0 ^ 98);
                     jl.field_d.flushAndMarkDrainCheck();
                   }
                 }

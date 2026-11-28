@@ -46,7 +46,7 @@ final class Model extends sb {
     g[] field_j;
     short[] field_t;
 
-    private final void a(int param0, int[] param1, int param2, int param3, int param4) {
+    private final void applyGroupTransform(int param0, int[] param1, int param2, int param3, int param4) {
         int var6;
         int var7;
         int var8;
@@ -261,27 +261,27 @@ final class Model extends sb {
         }
     }
 
-    final fc b(int param0, int param1, int param2, int param3, int param4) {
+    final fc createModelMesh(int param0, int param1, int param2, int param3, int param4) {
         return new fc(this, param0, param1, param2, param3, param4);
     }
 
-    final void b() {
+    final void clearGeometryCaches() {
         this.field_B = null;
         this.field_Q = null;
         this.field_j = null;
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void scaleVertices(int param0, int param1, int param2) {
         int var4 = 0;
         for (var4 = 0; var4 < this.field_G; var4++) {
           this.field_p[var4] = this.field_p[var4] * param0 / 128;
           this.field_D[var4] = this.field_D[var4] * param1 / 128;
           this.field_i[var4] = this.field_i[var4] * param2 / 128;
         }
-        this.b();
+        this.clearGeometryCaches();
     }
 
-    final void a(Model param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    final void copyFrom(Model param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         int var6;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -354,7 +354,7 @@ final class Model extends sb {
         this.field_K = param0.field_K;
     }
 
-    final void a(ei param0, int param1) {
+    final void applyAnimationFrame(ei param0, int param1) {
         int var5 = 0;
         int var6 = 0;
         this.buildVertexGroups();
@@ -372,14 +372,14 @@ final class Model extends sb {
         for (var5 = 0; var5 < var3.field_l; var5++) {
           var6 = var3.field_f[var5];
           if (var3.field_e[var5] != -1) {
-            this.a(0, var4.field_p[var3.field_e[var5]], 0, 0, 0);
+            this.applyGroupTransform(0, var4.field_p[var3.field_e[var5]], 0, 0, 0);
           }
-          this.a(var4.field_r[var6], var4.field_p[var6], (int) var3.field_d[var5], (int) var3.field_n[var5], (int) var3.field_k[var5]);
+          this.applyGroupTransform(var4.field_r[var6], var4.field_p[var6], (int) var3.field_d[var5], (int) var3.field_n[var5], (int) var3.field_k[var5]);
         }
-        this.b();
+        this.clearGeometryCaches();
     }
 
-    final static Model a(Archive param0, String param1, String param2) {
+    final static Model load(Archive param0, String param1, String param2) {
         byte[] var3 = param0.getFileByName(param1, param2, 0);
         if (var3 == null) {
           return null;
@@ -387,7 +387,7 @@ final class Model extends sb {
         return new Model(var3);
     }
 
-    private final int a(Model param0, int param1, short param2) {
+    private final int findOrAddVertex(Model param0, int param1, short param2) {
         int var7 = 0;
         int var4;
         int var5;
@@ -415,7 +415,7 @@ final class Model extends sb {
         return fieldTemp$0;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int findOrAddVertex(int param0, int param1, int param2) {
         int var4 = 0;
         for (var4 = 0; var4 < this.field_G; var4++) {
           if (this.field_p[var4] == param0 &&
@@ -433,11 +433,11 @@ final class Model extends sb {
         return this.field_G - 1;
     }
 
-    final bn a(int param0, int param1, int param2, int param3, int param4) {
+    final bn createModel(int param0, int param1, int param2, int param3, int param4) {
         return (bn) ((Object) new fc(this, param0, param1, param2, param3, param4));
     }
 
-    final byte a(short param0, short param1, short param2) {
+    final byte addTextureTriangle(short param0, short param1, short param2) {
         if (this.field_L >= 255) {
           throw new IllegalStateException();
         }
@@ -450,7 +450,7 @@ final class Model extends sb {
         return (byte)fieldTemp$0;
     }
 
-    final void c() {
+    final void calculateNormals() {
         g dupTemp$0 = null;
         int var1;
         int var2;
@@ -554,7 +554,7 @@ final class Model extends sb {
         }
     }
 
-    private final void b(byte[] param0) {
+    private final void decodeExtendedFormat(byte[] param0) {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -973,7 +973,7 @@ final class Model extends sb {
         }
     }
 
-    final int a(int param0, int param1, int param2, byte param3, byte param4, short param5, short param6) {
+    final int addFace(int param0, int param1, int param2, byte param3, byte param4, short param5, short param6) {
         this.field_e[this.field_z] = param0;
         this.field_H[this.field_z] = param1;
         this.field_r[this.field_z] = param2;
@@ -986,7 +986,7 @@ final class Model extends sb {
         return fieldTemp$0;
     }
 
-    final void a(int[] param0) {
+    final void transformVertices(int[] param0) {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -999,7 +999,7 @@ final class Model extends sb {
           this.field_D[var2] = param0[1] + (var3 * param0[4] + var4 * param0[7] + var5 * param0[10] >> 16);
           this.field_i[var2] = param0[2] + (var3 * param0[5] + var4 * param0[8] + var5 * param0[11] >> 16);
         }
-        this.b();
+        this.clearGeometryCaches();
     }
 
     public static void clearStaticReferences() {
@@ -1076,7 +1076,7 @@ final class Model extends sb {
         }
     }
 
-    private final void a(byte[] param0) {
+    private final void decodeLegacyFormat(byte[] param0) {
         int var2;
         int var3;
         PacketBuffer var4;
@@ -1402,9 +1402,9 @@ final class Model extends sb {
         this.field_z = 0;
         if (param0[param0.length - 1] == -1 &&
           param0[param0.length - 2] == -1) {
-          this.b(param0);
+          this.decodeExtendedFormat(param0);
         } else {
-          this.a(param0);
+          this.decodeLegacyFormat(param0);
         }
     }
 
@@ -1681,9 +1681,9 @@ final class Model extends sb {
               }
               this.field_c[this.field_z] = var15.field_c[var12];
               this.field_K[this.field_z] = (short)var10;
-              this.field_e[this.field_z] = this.a(var15, var15.field_e[var12], (short) var10);
-              this.field_H[this.field_z] = this.a(var15, var15.field_H[var12], (short) var10);
-              this.field_r[this.field_z] = this.a(var15, var15.field_r[var12], (short) var10);
+              this.field_e[this.field_z] = this.findOrAddVertex(var15, var15.field_e[var12], (short) var10);
+              this.field_H[this.field_z] = this.findOrAddVertex(var15, var15.field_H[var12], (short) var10);
+              this.field_r[this.field_z] = this.findOrAddVertex(var15, var15.field_r[var12], (short) var10);
               this.field_z = this.field_z + 1;
             }
           }
@@ -1718,9 +1718,9 @@ final class Model extends sb {
               this.field_E[this.field_L] = dupTemp$0;
               var14 = dupTemp$0;
               if (var14 == 0) {
-                this.field_M[this.field_L] = (short)this.a(var16, (int) var16.field_M[var17], (short) var12Lifetime1);
-                this.field_P[this.field_L] = (short)this.a(var16, (int) var16.field_P[var17], (short) var12Lifetime1);
-                this.field_F[this.field_L] = (short)this.a(var16, (int) var16.field_F[var17], (short) var12Lifetime1);
+                this.field_M[this.field_L] = (short)this.findOrAddVertex(var16, (int) var16.field_M[var17], (short) var12Lifetime1);
+                this.field_P[this.field_L] = (short)this.findOrAddVertex(var16, (int) var16.field_P[var17], (short) var12Lifetime1);
+                this.field_F[this.field_L] = (short)this.findOrAddVertex(var16, (int) var16.field_F[var17], (short) var12Lifetime1);
               }
               if (var14 >= 1 &&
                 var14 <= 3) {

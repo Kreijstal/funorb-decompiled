@@ -18,7 +18,7 @@ final class MixedSupport023 {
         if (integerArgument3 != 6774) {
           stringState0104 = (String) null;
         }
-        int integerLocal1 = UiComponentPart011.sceneWidgetPart013State0002 != null ? 1 : 0;
+        int integerLocal1 = ValidationStatusIcon.sceneWidgetPart013State0002 != null ? 1 : 0;
         if (MixedSupport146.integerState0931 == 9 &&
           MixedSupport096.computeBoolean1213(IterableNodeCollection.integerState0802, integerArgument3 - 6772, MixedSupport086.longState0032, LoginPanel.stringState0226, SoftwareFramebuffer.integerArrayState0259)) {
           if (2 != IterableNodeCollection.integerState0802 &&

@@ -30,7 +30,7 @@ final class e {
         tl.field_a = new am(RawPcmStream.createForPlaybackRate(mo.field_i, 100, 0));
         CrystalTile.field_p = new am(RawPcmStream.createForPlaybackRate(pl.field_h, 100, 0));
         AccountCreationResultPanel.field_mb = new am(RawPcmStream.createForPlaybackRate(sj.field_d, 100, 0));
-        io.field_M = new am(RawPcmStream.createForPlaybackRate(PasswordValidator.field_m, 100, 0));
+        ValidationStatusWidget.field_M = new am(RawPcmStream.createForPlaybackRate(PasswordValidator.field_m, 100, 0));
         ec.field_k = new am(RawPcmStream.createForPlaybackRate(RockTile.field_x, 100, 0));
     }
 
@@ -89,7 +89,7 @@ final class e {
           gk.field_d = FullscreenNoticeType.a(param0 - 5, "frame_top", "commonui", param2);
           lm.field_g = FullscreenNoticeType.a(-1, "frame_bottom", "commonui", param2);
           PauseMenu.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
-          sb.field_B = FullscreenNoticeType.a(-1, "button", "commonui", param2);
+          ValidationStatusIcon.field_B = FullscreenNoticeType.a(-1, "button", "commonui", param2);
           ao.field_b = LevelProgressUpdate.loadNamedSpriteSet("validation", "commonui", param2, false);
           ba.field_i = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));
           ai.field_h = (BitmapFont) ((Object) lj.a(param2, "commonui", param3, "arezzo14", 17153));
@@ -134,7 +134,7 @@ final class e {
           var12.bindAsRenderTarget();
           var17.drawOpaque(-var9Lifetime1, 0);
           lg.a(1);
-          sb.field_B = new RgbSprite[]{var15, var12, var11};
+          ValidationStatusIcon.field_B = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "e.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

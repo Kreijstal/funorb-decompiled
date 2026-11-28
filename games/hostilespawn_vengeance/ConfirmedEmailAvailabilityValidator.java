@@ -38,16 +38,16 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           var3 = var10.readUnsignedByte(32270);
           var10.c(false);
           TextLayout.field_f = gj.a(param1, var10);
-          wj.field_J = new pf[var3];
+          ValidationStatusIcon.field_J = new pf[var3];
           ClientLookupTables.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            wj.field_J[var4] = tf.a(4, var8);
+            ValidationStatusIcon.field_J[var4] = tf.a(4, var8);
           }
           var10.q(-28);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
-            var5 = wj.field_J[var9];
+            var5 = ValidationStatusIcon.field_J[var9];
             var5.a(6, 6, (byte) 40, 1, 6);
             var5.c(-128);
             var6 = new int[]{var5.field_J + var5.field_d >> 1, var5.field_C + var5.field_a >> 1, var5.field_t + var5.field_D >> 1};

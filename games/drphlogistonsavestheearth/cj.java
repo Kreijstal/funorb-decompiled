@@ -17,13 +17,13 @@ final class cj {
           throw new IllegalStateException();
         }
         if (param0 == 8227) {
-          gm.field_M = true;
+          ValidationStatusIcon.field_M = true;
           AccountRequestState.a(param0 ^ 8258, true);
           af.field_b = 0;
           return;
         }
         field_c = (boolean[]) null;
-        gm.field_M = true;
+        ValidationStatusIcon.field_M = true;
         AccountRequestState.a(param0 ^ 8258, true);
         af.field_b = 0;
     }

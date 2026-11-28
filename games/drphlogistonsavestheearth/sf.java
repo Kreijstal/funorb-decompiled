@@ -33,7 +33,7 @@ final class sf {
         var17.field_o = 16777215;
         this.field_i = (WidgetRenderer) ((Object) var17);
         ch var4 = new ch();
-        var17.a(var4, -66);
+        var17.copyStyleTo(var4, -66);
         var4.field_b = 11711154;
         this.field_s = 3;
         this.field_o = 15658734;
@@ -68,7 +68,7 @@ final class sf {
         lg discarded$0 = new lg(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         fm discarded$1 = new fm(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
         ch var8 = new ch();
-        var17.a(var8, -54);
+        var17.copyStyleTo(var8, -54);
         var8.a((byte) 69, 0).a(eg.a((byte) 96, 7829367, 10066329, 15658734), -100).b(256, 1118481).c(-1, 85);
         var8.a((byte) 106, 4).a((byte) 117, true).a(var5, -63);
         this.field_f = (WidgetRenderer) ((Object) var8);

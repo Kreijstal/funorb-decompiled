@@ -37,7 +37,7 @@ class fd extends DualLinkNode {
         String var1 = "";
         if (param0 == 61) {
           if (null != vk.field_c) {
-            var1 = vk.field_c.a(0);
+            var1 = vk.field_c.getAccountIdentifier(0);
           }
           if (var1.length() == 0) {
             var1 = DraggableWidgetContainer.j(44);
@@ -49,7 +49,7 @@ class fd extends DualLinkNode {
         }
         field_o = (String) null;
         if (null != vk.field_c) {
-          var1 = vk.field_c.a(0);
+          var1 = vk.field_c.getAccountIdentifier(0);
         }
         if (var1.length() == 0) {
           var1 = DraggableWidgetContainer.j(44);

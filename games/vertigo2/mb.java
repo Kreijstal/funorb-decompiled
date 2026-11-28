@@ -63,7 +63,7 @@ final class mb extends IntrusiveNode {
     final static String a(int param0) {
         String var1 = "";
         if (eb.field_d != null) {
-          var1 = eb.field_d.j(param0 ^ 5607);
+          var1 = eb.field_d.getAccountIdentifier(param0 ^ 5607);
         }
         if (var1.length() == 0) {
           var1 = DirectByteStorage.c(-15381);

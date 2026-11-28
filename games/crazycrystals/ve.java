@@ -109,7 +109,7 @@ final class ve extends DefaultTextWidgetRenderer {
 
     private ve(int param0, int param1, int param2) {
         this.field_s = param0;
-        this.field_u = sb.field_B;
+        this.field_u = ValidationStatusIcon.field_B;
         this.field_r = param1;
         this.field_p = mo.field_m;
         this.field_q = param2;

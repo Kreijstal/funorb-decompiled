@@ -224,7 +224,7 @@ final class LabeledWidgetContainer extends SingleChildWidgetContainer {
           if (af.field_b == 11) {
             LoginPanel.a((byte) -43);
           }
-          gm.a((byte) 32, oe.field_d, rh.field_d, EditableTextField.field_S);
+          ValidationStatusIcon.a((byte) 32, oe.field_d, rh.field_d, EditableTextField.field_S);
           DrPhlogistonSavesTheEarth.a(0, -118, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dh.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

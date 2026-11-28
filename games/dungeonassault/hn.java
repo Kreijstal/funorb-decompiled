@@ -18,8 +18,8 @@ final class hn extends kl {
           this.field_p = param0;
           this.field_n = param1;
           this.field_q = param2;
-          this.field_m = tn.a((-jm.field_i.field_y + this.field_a >> 1) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) - 24, IntrusiveNode.field_c, jm.field_i, -39, "Accept");
-          this.field_r = tn.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -16 + (this.field_i + (this.field_j - jm.field_i.field_v)), IntrusiveNode.field_c, jm.field_i, -70, "Cancel");
+          this.field_m = ValidationStatusWidget.a((-jm.field_i.field_y + this.field_a >> 1) + this.field_k, -(2 * jm.field_i.field_v) + (this.field_i + this.field_j) - 24, IntrusiveNode.field_c, jm.field_i, -39, "Accept");
+          this.field_r = ValidationStatusWidget.a((this.field_a - jm.field_i.field_y >> 1) + this.field_k, -16 + (this.field_i + (this.field_j - jm.field_i.field_v)), IntrusiveNode.field_c, jm.field_i, -70, "Cancel");
           this.field_f.addFirst(this.field_m, false);
           this.field_f.addFirst(this.field_r, false);
         } catch (RuntimeException runtimeException) {

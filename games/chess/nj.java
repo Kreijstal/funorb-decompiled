@@ -362,7 +362,7 @@ final class nj extends DefaultTextWidgetRenderer {
         ai var6Lifetime2;
         var7 = Chess.field_G;
         try {
-          super.a(param2, -1053);
+          super.copyStyleTo(param2, -1053);
           if (param1 < 19) {
             return;
           }

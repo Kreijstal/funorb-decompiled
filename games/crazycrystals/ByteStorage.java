@@ -1529,7 +1529,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("tocustomersupport", 5236);
                 if (var2 != null) {
-                  sb.field_C = fa.a((byte) -127, var2);
+                  ValidationStatusIcon.field_C = fa.a((byte) -127, var2);
                 }
                 var2 = ah.a("changedisplayname", 5236);
                 if (null != var2) {

@@ -38,7 +38,7 @@ final class SceneMeshBatch {
 
     final static void initializeEmptyMesh() {
         field_b = new Model();
-        field_b.field_k = (LitModelMesh) (new MeshGeometry(0, 0, 0).a(0, 0, 1, 0, 0));
+        field_b.field_k = (LitModelMesh) (new MeshGeometry(0, 0, 0).createModel(0, 0, 1, 0, 0));
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -100,7 +100,7 @@ final class SceneMeshBatch {
         int var12;
         int var13;
         int var14_int;
-        ec var14;
+        TextureProvider var14;
         int var15;
         int var16_int;
         ti var16;
@@ -162,7 +162,7 @@ final class SceneMeshBatch {
         var15Lifetime1 = 0;
         if ((!(field_f > 0) ||
           var7 == -1) && var5 != -1) {
-          var16_intLifetime1 = var14.b(var7);
+          var16_intLifetime1 = var14.getAverageTextureColor(var7);
           var11 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var11);
           var12 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var12);
           var13 = TriangleRasterizer.modulateHslLightness(var16_intLifetime1, var13);

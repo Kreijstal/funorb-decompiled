@@ -1298,8 +1298,8 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.field_R = new nn(true);
         this.field_M = new nn(false);
         ContentTransitionDialog.field_nb = new ed(8, 90, 180, 382);
-        this.field_Q = tn.a(16, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18245, lk.field_P);
-        this.field_O = tn.a(472, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18248, MatchingFieldValidator.field_r.toUpperCase());
+        this.field_Q = ValidationStatusWidget.a(16, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18245, lk.field_P);
+        this.field_O = ValidationStatusWidget.a(472, 12, IntrusiveNode.field_c, jm.field_i, param0 ^ -18248, MatchingFieldValidator.field_r.toUpperCase());
         this.field_A = ResizableModalDialog.a(24, 87, 66, uj.field_c, this.field_M);
         this.field_L = ResizableModalDialog.a(55, 96, 66, gd.field_E, this.field_M);
         this.field_C = ResizableModalDialog.a(86, 110, 66, jj.field_b, this.field_M);
@@ -1313,7 +1313,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         this.field_p.addFirst(this.field_C, false);
         this.field_p.addFirst(this.field_P, false);
         this.field_p.addFirst(this.field_y, false);
-        this.field_A.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{tn.field_U}, tp.field_w, 30496)));
+        this.field_A.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{ValidationStatusWidget.field_U}, tp.field_w, 30496)));
         this.field_L.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{qk.field_d}, tp.field_w, param0 + 12257)));
         this.field_C.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{dj.field_c}, tp.field_w, param0 + 12257)));
         this.field_P.field_n = (en) ((Object) new e(StandardContentDialog.a(new String[]{BufferedSocket.field_a}, tp.field_w, 30496)));

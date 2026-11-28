@@ -31,7 +31,7 @@ final class ph {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -43,7 +43,7 @@ final class ph {
           NameSuggestionsPanel.field_I = 0;
           int var2_int = 102 / ((param1 - 71) / 52);
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ph.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ph.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class ph {
           id.field_v = param2;
           AccountRequestState.field_a = param3;
         } catch (RuntimeException runtimeException) {
-          throw ld.wrapClientException((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) runtimeException), "ph.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,11 +94,11 @@ final class ph {
           return var2_ref_byte__Lifetime1;
         }
         if (param1 == 30000 &&
-          0 < li.field_S) {
-          fieldTemp$5 = li.field_S - 1;
-          li.field_S = li.field_S - 1;
+          0 < ValidationStatusWidget.field_S) {
+          fieldTemp$5 = ValidationStatusWidget.field_S - 1;
+          ValidationStatusWidget.field_S = ValidationStatusWidget.field_S - 1;
           var2_ref_byte__Lifetime2 = gj.field_s[fieldTemp$5];
-          gj.field_s[li.field_S] = null;
+          gj.field_s[ValidationStatusWidget.field_S] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (null != vg.field_a) {

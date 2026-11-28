@@ -82,12 +82,12 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         ((AccountNameAvailabilityValidator) (this.field_E.getFieldValidator(-10116))).invalidateCheckedName(-40);
     }
 
-    private final String j(int param0) {
+    private final String getLinkOpenMarkup(int param0) {
         if (param0 <= -64) {
           return "<u=2164A2><col=2164A2>";
         }
         String var3 = (String) null;
-        int discarded$0 = this.a((String) null, 86, -114, (UiWidget) null, (String) null, true);
+        int discarded$0 = this.addLabeledFieldWithDefaultValidationMessage((String) null, 86, -114, (UiWidget) null, (String) null, true);
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return;
           }
           var7 = (String) null;
-          discarded$0 = this.a((String) null, -82, -103, (UiWidget) null, (String) null, false);
+          discarded$0 = this.addLabeledFieldWithDefaultValidationMessage((String) null, -82, -103, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final int a(String param0, int param1, int param2, UiWidget param3, String param4, boolean param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, int param1, int param2, UiWidget param3, String param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -148,7 +148,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
           if (!param5) {
             this.field_K = (ValidatedTextField) null;
           }
-          stackIn_3_0 = this.a(param3, param1, (byte) -63, param4, param2, param0, 35);
+          stackIn_3_0 = this.addLabeledFieldWithValidationMessage(param3, param1, (byte) -63, param4, param2, param0, 35);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -238,24 +238,24 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         io dupTemp$1 = new io(10000536);
         this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_B.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = ff.a(new String[]{this.j(-94), this.k(-128)}, 0, km.field_a);
+        String var2 = ff.a(new String[]{this.getLinkOpenMarkup(-94), this.getLinkCloseMarkup(-128)}, 0, km.field_a);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 106, a.field_b, 170, (UiWidget) (this.field_K), var3);
-        var3 = var3 + (this.a(this.field_G, var3, (byte) -63, qn.field_E, 170, "", 20) + 5);
-        var3 = var3 + this.a((byte) 115, hm.field_v, 170, (UiWidget) (this.field_B), var3);
-        var3 = var3 + (this.a(ug.field_a, var3, 170, this.field_L, bj.field_K, true) + 5);
-        var3 = var3 + (5 + this.a(de.field_b, var3, 170, this.field_E, ConfirmedEmailAvailabilityValidator.field_l, true));
-        var3 = var3 + this.a(170, DualLinkNode.field_m, var3, this.field_I, 3);
+        var3 = var3 + this.addLabeledField((byte) 106, a.field_b, 170, (UiWidget) (this.field_K), var3);
+        var3 = var3 + (this.addLabeledFieldWithValidationMessage(this.field_G, var3, (byte) -63, qn.field_E, 170, "", 20) + 5);
+        var3 = var3 + this.addLabeledField((byte) 115, hm.field_v, 170, (UiWidget) (this.field_B), var3);
+        var3 = var3 + (this.addLabeledFieldWithDefaultValidationMessage(ug.field_a, var3, 170, this.field_L, ValidationStatusWidget.field_K, true) + 5);
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(de.field_b, var3, 170, this.field_E, ConfirmedEmailAvailabilityValidator.field_l, true));
+        var3 = var3 + this.addLabeledFieldWithValidationIcon(170, DualLinkNode.field_m, var3, this.field_I, 3);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.width, 25, this.field_F, true, -120 + this.width, 5, ProgressDialog.field_R, 11579568, ce.field_a);
         this.addChild(var4, -6938);
         var3 = var3 + var4.height;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
         this.field_C = new RichTextWidget(var2, var5);
         this.field_C.field_n = "";
-        this.field_C.a(0, (byte) -100, Js5Transport.field_e);
-        this.field_C.a(1, (byte) -91, Js5Transport.field_e);
+        this.field_C.setHotspotTooltip(0, (byte) -100, Js5Transport.field_e);
+        this.field_C.setHotspotTooltip(1, (byte) -91, Js5Transport.field_e);
         this.field_C.listener = (WidgetEventListener) (this);
-        this.field_C.a((byte) 46, 46, -90 + this.width, var3);
+        this.field_C.setTextBounds((byte) 46, 46, -90 + this.width, var3);
         var3 = var3 + (this.field_C.height + 15);
         this.addChild(this.field_C, -6938);
         int var6 = 4;
@@ -284,9 +284,9 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         return vf.a(this, this.field_B.text, var2, this.field_F.field_A, param0 ^ -7014, this.field_K.text, this.field_E.text);
     }
 
-    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
+    private final int addLabeledFieldWithValidationIcon(int param0, String param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
-        ub var7 = null;
+        ValidationStatusIcon var7 = null;
         int var8 = 0;
         LabeledWidgetContainer var9 = null;
         int stackIn_1_0 = 0;
@@ -299,7 +299,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         try {
           var9 = new LabeledWidgetContainer(20, param2, param0 + 120, 25, param3, false, 120, 3, TranslucentSpriteLayer.field_e, 16777215, param1);
           this.addChild(var9, -6938);
-          var7 = new ub(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-10116));
+          var7 = new ValidationStatusIcon(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-10116));
           var8 = -12 % ((param4 - 62) / 48);
           this.addChild(var7, -6938);
           var7.setBounds((byte) 123, 3 + var9.x + var9.width, (var9.height - 15 >> 1) + var9.y, 15, 15);
@@ -486,16 +486,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final String k(int param0) {
+    private final String getLinkCloseMarkup(int param0) {
         if (param0 > -124) {
           return (String) null;
         }
         return "</col></u>";
     }
 
-    private final int a(UiWidget param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(UiWidget param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        bj var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -514,7 +514,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             stackIn_2_0 = -56;
             return stackIn_2_0;
           }
-          var9 = new bj(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(-10116), param5, 126, var10.height + param1, param4 + 50, param6);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param0)).getFieldValidator(-10116), param5, 126, var10.height + param1, param4 + 50, param6);
           var9.listener = (WidgetEventListener) (this);
           this.addChild(var9, -6938);
           stackIn_4_0 = var9.height + var10.height;
@@ -545,7 +545,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
         }
     }
 
-    private final int a(byte param0, String param1, int param2, UiWidget param3, int param4) {
+    private final int addLabeledField(byte param0, String param1, int param2, UiWidget param3, int param4) {
         LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -606,7 +606,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements TextHots
             return;
           }
           var7 = (String) null;
-          discarded$3 = this.a((String) null, 31, 19, (UiWidget) null, (String) null, false);
+          discarded$3 = this.addLabeledFieldWithDefaultValidationMessage((String) null, 31, 19, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

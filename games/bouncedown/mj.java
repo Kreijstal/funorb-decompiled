@@ -436,7 +436,7 @@ final class mj {
                     if (var13 == 0) {
                       if (stackIn_73_0 == 0 &&
                         var6 != null &&
-                        s.a(var2[var8], param0 - 23409) &&
+                        ValidationStatusWidget.a(var2[var8], param0 - 23409) &&
                         ~var3[var8] == ~var6.field_o &&
                         var4[var8] == ValidatedTextField.field_O) {
                         var5 = 1;

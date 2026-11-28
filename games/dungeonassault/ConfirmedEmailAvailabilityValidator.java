@@ -169,7 +169,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             stackIn_36_0 = var7;
             return stackIn_36_0;
           }
-          ng.exitFullscreenFrame(param0, 48, var7);
+          ValidationStatusIcon.exitFullscreenFrame(param0, 48, var7);
           stackIn_34_0 = null;
           return (java.awt.Frame) (stackIn_34_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

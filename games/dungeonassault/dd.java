@@ -124,7 +124,7 @@ final class dd extends rj {
         }
         var6Lifetime3 = stackIn_12_0;
         bp.a(4 + var5, im.field_m, var6Lifetime3 + (var4 + 10), (byte) 99);
-        tn.field_W.draw(var4, var5);
+        ValidationStatusWidget.field_W.draw(var4, var5);
         if (param1 != 8187) {
           field_C = (int[]) null;
         }

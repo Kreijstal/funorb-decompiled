@@ -304,14 +304,14 @@ final class an {
                       }
                     }
                   }
-                  NumericDateInputWidget.field_S = "<col=A00000>" + qe.field_X + "<br>" + ah.field_j + (String) (var9);
+                  NumericDateInputWidget.field_S = "<col=A00000>" + ValidationStatusWidget.field_X + "<br>" + ah.field_j + (String) (var9);
                 }
               }
             } else {
               oi.field_a.field_S = pp.field_y;
               DisplayNameSelectionPanel.field_G.field_lb = false;
               if (var8 == 0) {
-                stackIn_25_0 = lr.field_J;
+                stackIn_25_0 = ValidationStatusIcon.field_J;
               } else {
                 stackIn_25_0 = mo.field_g;
               }

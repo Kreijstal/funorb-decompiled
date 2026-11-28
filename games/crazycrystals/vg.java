@@ -57,7 +57,7 @@ final class vg {
         int var2 = -3 / ((param0 - 52) / 52);
         String var1 = "";
         if (null != mk.field_b) {
-          var1 = mk.field_b.i(-1);
+          var1 = mk.field_b.getAccountIdentifier(-1);
         }
         if (0 == var1.length()) {
           var1 = IsaacRandom.b((byte) 89);

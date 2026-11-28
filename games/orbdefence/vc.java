@@ -655,7 +655,7 @@ final class vc {
               if (ab.field_l == 7) {
                 ab.field_l = 3;
               }
-              kk.field_Y = NetworkArchiveRequest.field_t.readString(2);
+              ValidationStatusWidget.field_Y = NetworkArchiveRequest.field_t.readString(2);
               FullscreenFocusCanvas.field_a = false;
               stackIn_142_0 = ab.field_l;
               return stackIn_142_0;
@@ -663,12 +663,12 @@ final class vc {
             if (null == p.field_d) {
               if (FullscreenFocusCanvas.field_a) {
                 if (30000L < TextLineMetrics.b(-1)) {
-                  kk.field_Y = ee.field_c;
+                  ValidationStatusWidget.field_Y = ee.field_c;
                   if (var9 != 0) {
-                    kk.field_Y = BufferedRandomAccessFile.field_j;
+                    ValidationStatusWidget.field_Y = BufferedRandomAccessFile.field_j;
                   }
                 } else {
-                  kk.field_Y = BufferedRandomAccessFile.field_j;
+                  ValidationStatusWidget.field_Y = BufferedRandomAccessFile.field_j;
                 }
                 FullscreenFocusCanvas.field_a = false;
                 stackIn_156_0 = 3;

@@ -2046,7 +2046,7 @@ final class fc extends bn {
         this.field_w = 0;
         this.field_K = false;
         this.field_M = (byte) 0;
-        param0.c();
+        param0.calculateNormals();
         param0.buildVertexGroups();
         this.field_T = param0.field_G;
         this.field_W = param0.field_O;
@@ -2075,7 +2075,7 @@ final class fc extends bn {
           for (var9 = 0; var9 < this.field_w; var9++) {
             var10 = param0.field_N[var9];
             if (var10 != -1 &&
-              TriangleRasterizer.field_o.d(-127, var10)) {
+              TriangleRasterizer.field_o.hasTexture(-127, var10)) {
               this.field_F[var9] = (short)var10;
             } else {
               this.field_F[var9] = (short)-1;

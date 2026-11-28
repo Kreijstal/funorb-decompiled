@@ -1511,7 +1511,7 @@ final class CombatState {
             CombatState.formatPlayerNameWithTitle((byte) -8, -92, (String) null);
           }
           if (param2 == null) {
-            stackIn_5_0 = ng.field_K;
+            stackIn_5_0 = ValidationStatusIcon.field_K;
           } else {
             stackIn_5_0 = (String) (param2);
           }

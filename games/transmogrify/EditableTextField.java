@@ -111,14 +111,14 @@ class EditableTextField extends InteractiveWidget {
     private final void moveCaret(int param0, boolean param1) {
         if (!param1) {
           this.field_H = param0;
-          if (!ve.field_B[81]) {
+          if (!ValidationStatusIcon.field_B[81]) {
             this.field_F = this.field_H;
           }
           return;
         }
         this.notifyTextChanged((byte) -89);
         this.field_H = param0;
-        if (!ve.field_B[81]) {
+        if (!ValidationStatusIcon.field_B[81]) {
           this.field_F = this.field_H;
         }
     }
@@ -490,7 +490,7 @@ class EditableTextField extends InteractiveWidget {
               if (param0 != 96) {
                 if (param0 == 97) {
                   if (this.field_H < this.field_k.length()) {
-                    if (ve.field_B[82]) {
+                    if (ValidationStatusIcon.field_B[82]) {
                       stackIn_47_1 = this.findNextWordBoundary(-7638);
                     } else {
                       stackIn_47_1 = 1 + this.field_H;
@@ -511,17 +511,17 @@ class EditableTextField extends InteractiveWidget {
                     this.submitText(24349);
                     return true;
                   }
-                  if (ve.field_B[82] &&
+                  if (ValidationStatusIcon.field_B[82] &&
                     65 == param0) {
                     this.cutSelection(62);
                     return true;
                   }
-                  if (ve.field_B[82] &&
+                  if (ValidationStatusIcon.field_B[82] &&
                     param0 == 66) {
                     this.copySelection(false);
                     return true;
                   }
-                  if (ve.field_B[82] &&
+                  if (ValidationStatusIcon.field_B[82] &&
                     param0 == 67) {
                     this.pasteClipboardText((byte) 115);
                     return true;
@@ -529,7 +529,7 @@ class EditableTextField extends InteractiveWidget {
                 }
               } else {
                 if (this.field_H > 0) {
-                  if (ve.field_B[82]) {
+                  if (ValidationStatusIcon.field_B[82]) {
                     stackIn_16_1 = this.findPreviousWordBoundary(-85);
                   } else {
                     stackIn_16_1 = this.field_H - 1;

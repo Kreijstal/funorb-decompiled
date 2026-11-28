@@ -141,7 +141,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             if (var5 >= 0) {
               var1_int = var1_int + cl.field_l;
               if (NameSuggestionsPanel.field_F.field_f == var5) {
-                stackIn_43_0 = al.field_N;
+                stackIn_43_0 = ValidationStatusWidget.field_N;
               } else {
                 stackIn_43_0 = tk.field_c;
               }

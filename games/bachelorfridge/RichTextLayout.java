@@ -175,7 +175,7 @@ final class RichTextLayout extends TextLayout {
               if (param5 != 3) {
                 stackIn_41_2 = 0;
               } else {
-                stackIn_41_2 = this.a(-1, var13, param0.stringWidth(var13), param7);
+                stackIn_41_2 = this.computeJustificationStep(-1, var13, param0.stringWidth(var13), param7);
               }
               jia.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, (byte) -96, var13);
             }

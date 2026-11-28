@@ -117,13 +117,13 @@ class od extends hh {
         int stackIn_59_0 = 0;
         if (param0 <= -97) {
           cd.field_c = 0;
-          pa.field_L = param1;
+          ValidationStatusWidget.field_L = param1;
           if (StarCannon.field_z != -1) {
             if (StarCannon.field_z == 7) {
               DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
-              fg.field_a[pa.field_L].b(param2, 0);
+              fg.field_a[ValidationStatusWidget.field_L].b(param2, 0);
             }
             if (param1 != 1) {
               return;
@@ -136,7 +136,7 @@ class od extends hh {
               DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
-              fg.field_a[pa.field_L].b(param2, 0);
+              fg.field_a[ValidationStatusWidget.field_L].b(param2, 0);
             }
             if (param1 != 1) {
               return;
@@ -147,13 +147,13 @@ class od extends hh {
         } else {
           field_i = -12;
           cd.field_c = 0;
-          pa.field_L = param1;
+          ValidationStatusWidget.field_L = param1;
           if (StarCannon.field_z != -1) {
             if (StarCannon.field_z == 7) {
               DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
-              fg.field_a[pa.field_L].b(param2, 0);
+              fg.field_a[ValidationStatusWidget.field_L].b(param2, 0);
             }
             if (param1 != 1) {
               return;
@@ -166,7 +166,7 @@ class od extends hh {
               DirectByteStorage.a(0, param2);
             }
             if (param1 >= 0) {
-              fg.field_a[pa.field_L].b(param2, 0);
+              fg.field_a[ValidationStatusWidget.field_L].b(param2, 0);
             }
             if (param1 != 1) {
               return;

@@ -25,7 +25,7 @@ final class o {
         if (param0 == -46) {
           IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
           IntrusiveDeque.field_c[14] = nh.field_d;
-          IntrusiveDeque.field_c[13] = ua.field_K;
+          IntrusiveDeque.field_c[13] = ValidationStatusIcon.field_K;
           IntrusiveDeque.field_c[4] = DraggableWidgetContainer.field_R;
           IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
           IntrusiveDeque.field_c[3] = c.field_b;
@@ -44,7 +44,7 @@ final class o {
         o.a((byte) -99);
         IntrusiveDeque.field_c[21] = AccountNameAvailabilityValidator.field_n;
         IntrusiveDeque.field_c[14] = nh.field_d;
-        IntrusiveDeque.field_c[13] = ua.field_K;
+        IntrusiveDeque.field_c[13] = ValidationStatusIcon.field_K;
         IntrusiveDeque.field_c[4] = DraggableWidgetContainer.field_R;
         IntrusiveDeque.field_c[19] = IntrusiveNode.field_a;
         IntrusiveDeque.field_c[3] = c.field_b;

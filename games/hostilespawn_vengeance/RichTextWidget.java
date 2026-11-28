@@ -18,7 +18,7 @@ class RichTextWidget extends InteractiveWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
-          al.field_T = true;
+          ValidationStatusWidget.field_T = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
@@ -183,7 +183,7 @@ class RichTextWidget extends InteractiveWidget {
         field_K = null;
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;
@@ -227,7 +227,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3) {
+    final void setTextBounds(boolean param0, int param1, int param2, int param3) {
         this.setBounds(param1, param3, 0, param2, ((TextWidgetRenderer) ((Object) this.field_h)).getPreferredHeight((UiWidget) (this), (byte) -83));
         if (!param0) {
           RichTextWidget.a(89, false);

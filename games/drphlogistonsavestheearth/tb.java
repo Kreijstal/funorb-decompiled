@@ -11,7 +11,7 @@ final class tb {
         try {
           param1.removeKeyListener(ji.field_c);
           param1.removeFocusListener(ji.field_c);
-          gm.field_O = param0;
+          ValidationStatusIcon.field_O = param0;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

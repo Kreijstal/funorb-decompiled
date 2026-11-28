@@ -73,7 +73,7 @@ class RichTextWidget extends InteractiveWidget {
         return null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         if (param3 != 8888) {
           field_Q = (String) null;
         }
@@ -94,7 +94,7 @@ class RichTextWidget extends InteractiveWidget {
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         if (param0 > -109) {
           String var7 = (String) null;
-          this.a(-97, (byte) 41, (String) null);
+          this.setHotspotTooltip(-97, (byte) 41, (String) null);
         }
         super.setBounds(-123, param1, param2, param3, param4);
         this.rebuildHotspotBounds(false);
@@ -110,7 +110,7 @@ class RichTextWidget extends InteractiveWidget {
         try {
           if (param1 != 418) {
             var4 = (String) null;
-            this.a(-48, (byte) -18, (String) null);
+            this.setHotspotTooltip(-48, (byte) -18, (String) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,7 +135,7 @@ class RichTextWidget extends InteractiveWidget {
           return;
         }
         if (param2 <= 36) {
-          this.b(77, -122, 71, 117);
+          this.setTextBounds(77, -122, 71, 117);
         }
         TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_n);
         TextHotspotBounds var6 = this.field_P;
@@ -355,7 +355,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, byte param1, String param2) {
+    final void setHotspotTooltip(int param0, byte param1, String param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;

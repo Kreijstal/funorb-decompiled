@@ -48,9 +48,9 @@ final class dj {
           var11 = var16;
           var25 = g.field_c;
           var26 = g.field_a;
-          param7 = param3.a(var20[0], var25[0], var26[0]);
-          param0 = param3.a(var20[param9], var25[1], var26[1]);
-          param1 = param3.a(var20[2], var25[2], var26[2]);
+          param7 = param3.findOrAddVertex(var20[0], var25[0], var26[0]);
+          param0 = param3.findOrAddVertex(var20[param9], var25[1], var26[1]);
+          param1 = param3.findOrAddVertex(var20[2], var25[2], var26[2]);
           for (var14 = 0; var14 < param3.field_k; var14++) {
             if (param7 == param3.field_u[var14] &&
               param0 == param3.field_n[var14] &&

@@ -167,7 +167,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               d.field_d.writePrefixedString(var14, 123);
               d.field_d.writePrefixedString(var8, 125);
               var15 = (CharSequence) ((Object) param3);
-              d.field_d.writePrefixedString(ob.a((byte) 107, var15), param2 ^ -120);
+              d.field_d.writePrefixedString(ValidationStatusWidget.a((byte) 107, var15), param2 ^ -120);
               d.field_d.writeShort(param4, -159688920);
               d.field_d.writeByte(6389, param0);
               d.field_d.writeByte(6389, var9);

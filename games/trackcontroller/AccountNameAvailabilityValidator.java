@@ -132,7 +132,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
                 param2 = ba.field_d;
               }
               param1 = 2;
-              LevelView.field_y.a((byte) 114, qg.field_c);
+              LevelView.field_y.setAccountAndClearPassword((byte) 114, qg.field_c);
             }
             if (param1 == 10) {
               pl.a(0);
@@ -150,7 +150,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             if (param1 != 256 &&
               10 != param1 &&
               !vg.field_o) {
-              LevelView.field_y.a((byte) 121);
+              LevelView.field_y.clearCredentials((byte) 121);
             }
           }
           if (param0 >= -60) {

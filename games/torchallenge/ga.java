@@ -60,7 +60,7 @@ final class ga extends DefaultTextWidgetRenderer {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var4_int = 120 / ((-63 - param2) / 38);
-          super.a(-122, param0);
+          super.copyStyleTo(-122, param0);
           if (param1) {
             for (var5 = 0; var5 < 6; var5++) {
               var6 = this.field_v[var5];

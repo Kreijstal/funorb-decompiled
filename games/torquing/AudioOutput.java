@@ -407,7 +407,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_u.field_f = true;
             while (field_u.field_e) {
-              ub.sleepMillis(1976, 50L);
+              ValidationStatusIcon.sleepMillis(1976, 50L);
             }
             field_u = null;
           }

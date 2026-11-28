@@ -290,7 +290,7 @@ final class da extends ue {
           var4 = this.field_h;
           DraggableWidgetContainer.a(false, var3, 320, 320, var4 * (double)var11.length, 31, var4, 130, (byte) -32, (double)var11[0].length * var4);
           if (this.field_e > this.field_i) {
-            var6 = AgeValidator.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, io.field_J, 3);
+            var6 = AgeValidator.a(new String[]{((an) (this.field_d[this.field_e])).field_p}, ValidationStatusWidget.field_J, 3);
             var7 = cj.field_E;
             var8 = 20 * go.field_l.lineCount(var6, 304);
             var9 = go.field_l.lineCount(var7, 304) * 20;

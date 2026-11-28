@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp implements ef {
+final class rp implements TextureProvider {
     private Sprite[] field_h;
     private fc field_g;
     static ve field_f;
@@ -11,7 +11,7 @@ final class rp implements ef {
     static Model field_c;
     static String field_d;
 
-    public final boolean c(int param0, int param1) {
+    public final boolean isTextureSize64(int param0, int param1) {
         if (param0 != 1) {
           String var4 = (String) null;
           rp.a((java.applet.Applet) null, -50, (String) null);
@@ -20,7 +20,7 @@ final class rp implements ef {
         return false;
     }
 
-    public final int a(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         if (param1 != 65535) {
           return 3;
         }
@@ -84,7 +84,7 @@ final class rp implements ef {
         }
     }
 
-    public final int[] a(float param0, int param1, int param2) {
+    public final int[] getTexturePixels(float param0, int param1, int param2) {
         if (param2 != 233) {
           rp.a(1);
           return this.field_h[param1].field_F;
@@ -92,7 +92,7 @@ final class rp implements ef {
         return this.field_h[param1].field_F;
     }
 
-    public final boolean d(int param0, int param1) {
+    public final boolean hasTexture(int param0, int param1) {
         if (param0 > -114) {
           field_a = -11;
           return true;
@@ -102,13 +102,13 @@ final class rp implements ef {
 
     rp(boolean param0, Sprite[] param1) {
         int[] var5 = null;
-        ef var4 = null;
+        TextureProvider var4 = null;
         try {
           var5 = new int[6];
           int[] var3 = var5;
           this.field_h = EmailFormatValidator.a(var5, true, param1);
           var4 = TriangleRasterizer.field_o;
-          TriangleRasterizer.setTextureProvider((ef) (this));
+          TriangleRasterizer.setTextureProvider((TextureProvider) (this));
           this.field_g = (fc) (th.a(param0, var5, -27911));
           TriangleRasterizer.setTextureProvider(var4);
         } catch (RuntimeException runtimeException) {
@@ -121,7 +121,7 @@ final class rp implements ef {
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
-        ef var6 = null;
+        TextureProvider var6 = null;
         Throwable var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -138,7 +138,7 @@ final class rp implements ef {
           var5 = param0[2];
           param0[2] = 0;
           var6 = TriangleRasterizer.field_o;
-          TriangleRasterizer.setTextureProvider((ef) (this));
+          TriangleRasterizer.setTextureProvider((TextureProvider) (this));
           try {
             this.field_g.a(param0, mb.field_w);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class rp implements ef {
         field_f = null;
     }
 
-    public final int b(int param0, int param1) {
+    public final int getTextureAlphaMode(int param0, int param1) {
         if (param0 != 212) {
           rp.a(92);
           return 0;

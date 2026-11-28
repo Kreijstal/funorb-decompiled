@@ -21,7 +21,7 @@ final class ArchiveIndex {
     int field_c;
     int[] field_p;
     qh field_e;
-    static bn field_i;
+    static MeshData field_i;
 
     final static void a(byte param0) {
         int var2;

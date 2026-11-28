@@ -244,7 +244,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static void d(int param0) {
-        la.a(640, true);
+        ValidationStatusIcon.a(640, true);
         if (param0 != 30432) {
           AccountNameAvailabilityValidator.h((byte) -25);
         }

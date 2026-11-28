@@ -20,7 +20,7 @@ final class fm {
           return null;
         }
         if (param1 == 1) {
-          return tn.field_I;
+          return ValidationStatusWidget.field_I;
         }
         if (param0 != -29092) {
           return (RgbSprite) null;
@@ -113,7 +113,7 @@ final class fm {
           return fp.field_b;
         }
         if (21 != param1) {
-          return tn.field_I;
+          return ValidationStatusWidget.field_I;
         }
         return up.field_b;
     }

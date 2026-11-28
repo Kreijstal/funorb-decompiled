@@ -78,12 +78,12 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         GameplayControls.integerState0859 = SoftwareRaster.integerState0284;
         AccountCreationResultPanel.integerState0934 = SoftwareRaster.integerState0285;
         AccountFieldStatusIndicator.performAction1206((byte) 115);
-        MixedSupport023.mixedSupport006State0001.performAction0066(UiComponentPart011.sceneWidgetState0035.integerState0915 - 42, UiComponentPart011.sceneWidgetState0035.integerState0896, 0, 107, 0);
+        MixedSupport023.mixedSupport006State0001.performAction0066(ValidationStatusIcon.sceneWidgetState0035.integerState0915 - 42, ValidationStatusIcon.sceneWidgetState0035.integerState0896, 0, 107, 0);
         DirectByteStorage.sceneWidgetState0034.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, 0, 0, ComponentContainer.integerState0377, 0);
         int integerLocal1 = ComponentContainer.integerState0377 + 2;
         RenderingSupport004.sceneWidgetState0039.performAction1764(NetworkSupport001.sceneWidgetState0003.integerState0896, integerArgument1 ^ 5, !MixedSupport097.booleanState0133 ? 0 : integerLocal1, -(!MixedSupport097.booleanState0133 ? 0 : integerLocal1) + NetworkSupport001.sceneWidgetState0003.integerState0915, 0);
         RenderingSupport001.performAction0139((byte) -103);
-        IterableNodeCollection.sceneWidgetState0126.performAction1764(UiComponentPart011.sceneWidgetState0035.integerState0896, 0, -40 + UiComponentPart011.sceneWidgetState0035.integerState0915, 40, 0);
+        IterableNodeCollection.sceneWidgetState0126.performAction1764(ValidationStatusIcon.sceneWidgetState0035.integerState0896, 0, -40 + ValidationStatusIcon.sceneWidgetState0035.integerState0915, 40, 0);
         MixedSupport095.sceneWidgetState0095.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896, 0, 0, 30, 0);
         MixedSupport077.sceneWidgetState0074.performAction1764(TextFieldValidator.sceneWidgetState0151.integerState0896, integerArgument1 ^ 5, 30, -70 + (TextFieldValidator.sceneWidgetState0151.integerState0915 - 2), 0);
         MixedSupport033.sceneWidgetState0025.performAction1764(68, integerArgument1 ^ 5, 5, 30, 5);

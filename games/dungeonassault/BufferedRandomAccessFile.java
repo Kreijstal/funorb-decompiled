@@ -176,7 +176,7 @@ final class BufferedRandomAccessFile {
     }
 
     final static void a(int param0, boolean param1, String param2, boolean param3) {
-        tn.a(-1);
+        ValidationStatusWidget.a(-1);
         lg.field_w.closeAllDialogs(1);
         wo.field_e = new LoginPanel(DiskArchiveRequest.field_C, (String) null, MenuScreen.field_t, param3, param1);
         if (param0 != 8192) {

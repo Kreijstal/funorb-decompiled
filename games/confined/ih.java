@@ -58,7 +58,7 @@ final class ih {
         if (param4 < 40) {
           field_c = (String) null;
         }
-        var9.a((byte) -117, new bd(16, ba.field_Q, pn.field_a));
+        var9.a((byte) -117, new bd(16, ValidationStatusIcon.field_Q, pn.field_a));
         var9.a((byte) -87, new bd(17, nh.field_a, pn.field_a));
         var8.field_h[0].field_b = 150;
         var8.field_h[0].field_j = 320 - var8.field_h[0].field_f / 2;

@@ -183,7 +183,7 @@ final class mc {
           if (param1 != -2) {
             this.field_b = -17;
           }
-          var17.a(16777215, var4);
+          var17.copyStyleTo(16777215, var4);
           this.field_d = 5592405;
           this.field_o = -1;
           this.field_j = 15658734;
@@ -218,7 +218,7 @@ final class mc {
           discarded$0 = new td(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jo(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new mq();
-          var17.a(16777215, var8);
+          var17.copyStyleTo(16777215, var8);
           var8.a(0, param1 + 6218).a(param1 - 119, wp.a(7829367, (byte) 118, 10066329, 15658734)).a((byte) -57, 1118481).b(-1, -101);
           var8.a(4, 6216).a(true, param1 - 91).a(-117, var5);
           this.field_c = (WidgetListener) ((Object) var8);

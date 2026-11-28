@@ -55,7 +55,7 @@ final class FullscreenStatusDialog extends ResizableModalDialog implements Widge
           var4.x = 0;
           var4.listener = (WidgetListener) ((Object) new DefaultTextWidgetRenderer(bl.field_N, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild((byte) 119, var4);
-          this.field_X = this.createCloseButton(-6, (WidgetEventListener) (this), lr.field_N);
+          this.field_X = this.createCloseButton(-6, (WidgetEventListener) (this), ValidationStatusIcon.field_N);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

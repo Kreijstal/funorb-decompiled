@@ -108,7 +108,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_A = 0;
         if (param1 != -20446) {
           var10 = (MusicTrack) null;
-          this.a(true, false, (MusicTrack) null, 33);
+          this.startTrack(true, false, (MusicTrack) null, 33);
         }
         var7.field_p = -1;
         if (this.field_y[param2] == 0) {
@@ -124,7 +124,7 @@ final class MidiPcmStream extends PcmStream {
             stackIn_20_0 = this;
             stackIn_20_3 = true;
           }
-          this.a(stackIn_19_1, stackIn_19_2, stackIn_20_3);
+          this.applySampleOffset(stackIn_19_1, stackIn_19_2, stackIn_20_3);
         }
         if (var11.field_n[param3] < 0) {
           var7.field_z.setLoopCount(-1);
@@ -311,7 +311,7 @@ final class MidiPcmStream extends PcmStream {
         var4 = this.field_K;
         if (this.field_E != null &&
           this.field_G == var3) {
-          this.a(this.field_j, this.field_p, this.field_E, param0 ^ -20546);
+          this.startTrack(this.field_j, this.field_p, this.field_E, param0 ^ -20546);
           this.advanceMidiEvents(-3305);
           return;
         }
@@ -346,7 +346,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_z.saveTrackPosition(var2);
             if (this.field_z.isDone()) {
               if (this.field_E != null) {
-                this.a(this.field_E, (byte) -110, this.field_j);
+                this.playTrack(this.field_E, (byte) -110, this.field_j);
                 this.advanceMidiEvents(-3305);
                 return;
               }
@@ -401,7 +401,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void d(int param0, byte param1, int param2) {
+    private final void setRetriggerRate(int param0, byte param1, int param2) {
         if (param1 <= 60) {
           this.field_J = (int[]) null;
         }
@@ -472,7 +472,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void b(int param0, byte param1, int param2) {
+    private final void setDefaultProgram(int param0, byte param1, int param2) {
         if (param1 != -50) {
           return;
         }
@@ -612,12 +612,12 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(MusicTrack param0, byte param1, boolean param2) {
+    final synchronized void playTrack(MusicTrack param0, byte param1, boolean param2) {
         if (param1 > -108) {
           return;
         }
         try {
-          this.a(param2, true, param0, 23721);
+          this.startTrack(param2, true, param0, 23721);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jp.GA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -671,7 +671,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, int param1, byte param2) {
+    final synchronized void setChannelGain(int param0, int param1, byte param2) {
         int var4 = 0;
         int var5;
         MidiNote var6;
@@ -728,7 +728,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(int param0, MidiNote param1, boolean param2) {
+    final void applySampleOffset(int param0, MidiNote param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -951,10 +951,10 @@ final class MidiPcmStream extends PcmStream {
           }
         }
         if (var5Lifetime4 == 17) {
-          this.d((var6Lifetime3 << 7) + (-16257 & this.field_C[var4Lifetime4]), (byte) 113, var4Lifetime4);
+          this.setRetriggerRate((var6Lifetime3 << 7) + (-16257 & this.field_C[var4Lifetime4]), (byte) 113, var4Lifetime4);
         }
         if (var5Lifetime4 == 49) {
-          this.d(var6Lifetime3 + (-128 & this.field_C[var4Lifetime4]), (byte) 99, var4Lifetime4);
+          this.setRetriggerRate(var6Lifetime3 + (-128 & this.field_C[var4Lifetime4]), (byte) 99, var4Lifetime4);
           return;
         }
         return;
@@ -995,7 +995,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final synchronized void a(boolean param0, boolean param1, MusicTrack param2, int param3) {
+    private final synchronized void startTrack(boolean param0, boolean param1, MusicTrack param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = BachelorFridge.field_y;
@@ -1044,7 +1044,7 @@ final class MidiPcmStream extends PcmStream {
           this.field_w[param0] = 32767;
           this.field_A[param0] = 256;
           this.field_y[param0] = 0;
-          this.d(8192, (byte) 93, param0);
+          this.setRetriggerRate(8192, (byte) 93, param0);
         }
     }
 
@@ -1186,7 +1186,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean a(ResourceArchive param0, MusicTrack param1, SoundCache param2, byte param3, int param4) {
+    final synchronized boolean prepareTrackSamples(ResourceArchive param0, MusicTrack param1, SoundCache param2, byte param3, int param4) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -1267,11 +1267,11 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void a(int param0, byte param1, int param2) {
+    final synchronized void setChannelProgram(int param0, byte param1, int param2) {
         if (param1 != 39) {
           return;
         }
-        this.b(param2, (byte) -50, param0);
+        this.setDefaultProgram(param2, (byte) -50, param0);
     }
 
     final synchronized boolean isMidiReady(int param0) {
@@ -1322,7 +1322,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_z = new MidiFileReader();
         this.field_k = new MusicPatchPcmStream(this);
         this.field_m = new IntrusiveNodeHashTable(128);
-        this.a(-1, 256, (byte) -107);
+        this.setChannelGain(-1, 256, (byte) -107);
         this.resetPlaybackChannels(true, 106);
     }
 

@@ -19,15 +19,15 @@ final class DirectByteStorage extends ByteStorage {
     final static String c(int param0) {
         if (param0 != -15381) {
           field_g = false;
-          if (qe.field_V == null) {
+          if (ValidationStatusWidget.field_V == null) {
             return "";
           }
-          return qe.field_V;
+          return ValidationStatusWidget.field_V;
         }
-        if (qe.field_V == null) {
+        if (ValidationStatusWidget.field_V == null) {
           return "";
         }
-        return qe.field_V;
+        return ValidationStatusWidget.field_V;
     }
 
     final static void d(int param0) {

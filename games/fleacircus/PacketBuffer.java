@@ -164,7 +164,7 @@ class PacketBuffer extends IntrusiveNode {
     final static String d(boolean param0) {
         String var1 = "";
         if (null != lg.field_b) {
-          var1 = lg.field_b.j(-1);
+          var1 = lg.field_b.getAccountIdentifier(-1);
         }
         if (!param0) {
           field_j = -77;

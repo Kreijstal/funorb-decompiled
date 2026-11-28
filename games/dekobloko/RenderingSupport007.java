@@ -1478,10 +1478,10 @@ final class RenderingSupport007 {
           }
           if (2 != integerLocal9 &&
             3 != integerLocal9) {
-            UiComponentPart011.sceneWidgetPart013State0002 = null;
+            ValidationStatusIcon.sceneWidgetPart013State0002 = null;
           } else {
-            if (UiComponentPart011.sceneWidgetPart013State0002 == null) {
-              UiComponentPart011.sceneWidgetPart013State0002 = new LobbyRoomRow(MixedSupport063.integerState0336);
+            if (ValidationStatusIcon.sceneWidgetPart013State0002 == null) {
+              ValidationStatusIcon.sceneWidgetPart013State0002 = new LobbyRoomRow(MixedSupport063.integerState0336);
             }
           }
           if (integerLocal9 != 3) {

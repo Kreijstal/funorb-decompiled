@@ -307,7 +307,7 @@ final class LevelSession {
           0 >= this.field_w) && (this.field_G.field_h.length <= (this.field_J + 640) &&
           !this.field_eb)) &&
           (decompiledFrameRemainder0 = (!(this.field_ab) ||
-          !(150 > gm.field_J)))) {
+          !(150 > ValidationStatusIcon.field_J)))) {
           this.field_c = 5.0;
           decompiledFrameRemainder0 = !(!DrPhlogistonSavesTheEarth.field_D);
         }
@@ -923,7 +923,7 @@ final class LevelSession {
         if ((this.field_J & 1) == 0) {
           return;
         }
-        bc.field_d = gm.a(bc.field_d, 65280, (-8096 + this.field_J) / 20, FullscreenFocusCanvas.field_f, 16711680, true);
+        bc.field_d = ValidationStatusIcon.a(bc.field_d, 65280, (-8096 + this.field_J) / 20, FullscreenFocusCanvas.field_f, 16711680, true);
     }
 
     private final void p(int param0) {
@@ -1075,7 +1075,7 @@ final class LevelSession {
         boolean decompiledFrameCompleted0 = true;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if ((200 > this.field_fb ||
-          !(gm.field_J <= 0)) && this.field_w > 0) {
+          !(ValidationStatusIcon.field_J <= 0)) && this.field_w > 0) {
           var2 = 0;
           while (160 > var2) {
             var3 = this.field_d[var2];
@@ -1185,10 +1185,10 @@ final class LevelSession {
         while (true) {
           if (th.a(-114)) {
             stackIn_66_0 = 150;
-            stackIn_66_1 = gm.field_J;
+            stackIn_66_1 = ValidationStatusIcon.field_J;
             if (var4 == 0) {
               if (stackIn_66_0 < stackIn_66_1) {
-                gm.field_J = 500;
+                ValidationStatusIcon.field_J = 500;
               }
               if (di.field_c != 13) {
                 continue;
@@ -1220,7 +1220,7 @@ final class LevelSession {
             this.i(215);
             this.a(0);
             this.q(114);
-            if (gm.field_J == 0) {
+            if (ValidationStatusIcon.field_J == 0) {
               this.c(-6718);
               this.b(true);
               if (!this.field_eb) {
@@ -1724,7 +1724,7 @@ final class LevelSession {
           ck.field_f[84]) &&
           (this.field_S == 0 &&
           this.field_J >= this.field_b &&
-          0 >= gm.field_J)) {
+          0 >= ValidationStatusIcon.field_J)) {
           if (ib.field_t == 3) {
             ol.field_d = true;
           }
@@ -2510,7 +2510,7 @@ final class LevelSession {
         boolean decompiledFrameRemainder0 = true;
         this.field_Z = 0;
         this.field_fb = 0;
-        if (gm.field_J >= 500) {
+        if (ValidationStatusIcon.field_J >= 500) {
           this.s(94);
           var2 = 0;
           while (true) {
@@ -2532,7 +2532,7 @@ final class LevelSession {
           decompiledFrameRemainder0 = (var3 != 0);
         }
         if (decompiledFrameRemainder0) {
-          if (gm.field_J == 0) {
+          if (ValidationStatusIcon.field_J == 0) {
             gf.field_D = Math.max(1 + sd.field_a.levelNumber, gf.field_D);
             var4 = new nl(0, -1 + gf.field_D, 0, 0, 0, 0);
             if (oh.a(param0 - 1)) {
@@ -2544,9 +2544,9 @@ final class LevelSession {
               rc.a(5, var4, -11659);
             }
           }
-          if (!(gm.field_J > 128) ||
+          if (!(ValidationStatusIcon.field_J > 128) ||
             this.field_R == 0) {
-            gm.field_J = gm.field_J + 1;
+            ValidationStatusIcon.field_J = ValidationStatusIcon.field_J + 1;
           }
           this.o(param0 + 122);
         }
@@ -2562,7 +2562,7 @@ final class LevelSession {
         int var2Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if ((gm.field_J <= 0) &&
+        if ((ValidationStatusIcon.field_J <= 0) &&
           (decompiledFrameRemainder0 = (this.field_eb))) {
           var2 = (-this.field_s + this.field_J) * 255 / 300;
           if (255 < var2) {
@@ -2573,7 +2573,7 @@ final class LevelSession {
           decompiledFrameRemainder0 = (var6 != 0);
         }
         if (decompiledFrameRemainder0) {
-          if (150 < gm.field_J) {
+          if (150 < ValidationStatusIcon.field_J) {
             if (this.field_D > (double)ri.field_e) {
               this.field_j = this.field_j - 0.5;
               if (var6 != 0) {
@@ -2583,13 +2583,13 @@ final class LevelSession {
               this.field_j = 0.0;
             }
           }
-          if (gm.field_J >= 50) {
+          if (ValidationStatusIcon.field_J >= 50) {
             be.a(0, 0, 640, 430, 22070844, 255);
-            var2Lifetime1 = gm.field_J * 2;
+            var2Lifetime1 = ValidationStatusIcon.field_J * 2;
             if (255 < var2Lifetime1) {
               var2Lifetime1 = 255;
             }
-            var3 = (-150 + gm.field_J) * 2;
+            var3 = (-150 + ValidationStatusIcon.field_J) * 2;
             if (var3 > 255) {
               var3 = 255;
             }
@@ -2618,10 +2618,10 @@ final class LevelSession {
             }
             cb.field_b.drawCentredAlpha(bj.field_b, 320, 320, 16711680, -1, var3);
             if (var6 != 0) {
-              be.a(0, 0, 640, 430, 22070844, gm.field_J * 5);
+              be.a(0, 0, 640, 430, 22070844, ValidationStatusIcon.field_J * 5);
             }
           } else {
-            be.a(0, 0, 640, 430, 22070844, gm.field_J * 5);
+            be.a(0, 0, 640, 430, 22070844, ValidationStatusIcon.field_J * 5);
           }
         }
         if (param0 != 7) {
@@ -4117,7 +4117,7 @@ final class LevelSession {
         }
         if (this.levelNumber != 0) {
           if ((3 == this.levelNumber) &&
-            (!(gm.field_J > 0)) &&
+            (!(ValidationStatusIcon.field_J > 0)) &&
             (!(ol.field_i.length <= StandardContentDialog.field_tb))) {
             cb.field_b.drawParagraph(ol.field_i[StandardContentDialog.field_tb], 0, 334, 544, 96, 16777215, 0, 2, 1, cb.field_b.field_x);
             al.field_a[1].a(-al.field_a[1].field_h + var2 + 640, 430 - al.field_a[1].field_c);
@@ -4290,7 +4290,7 @@ final class LevelSession {
         do {
           if (var2 >= 75) {
             this.field_x = -1901789184;
-            gm.field_J = 0;
+            ValidationStatusIcon.field_J = 0;
             this.field_g = 15132;
             BufferedSocket.field_a = -150;
             this.field_f = 0;

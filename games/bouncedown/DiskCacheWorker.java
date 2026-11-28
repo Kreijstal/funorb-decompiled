@@ -190,7 +190,7 @@ final class DiskCacheWorker implements Runnable {
                     }
                   }
                   if (var21 != null &&
-                    s.a(var21, 126)) {
+                    ValidationStatusWidget.a(var21, 126)) {
                     var8[1][var13] = ja.field_b;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -242,7 +242,7 @@ final class DiskCacheWorker implements Runnable {
             var6.unlink(2);
             return;
           }
-          ValidatedTextField.a((Throwable) null, (byte) 100, "HS1: " + la.a(-105));
+          ValidatedTextField.a((Throwable) null, (byte) 100, "HS1: " + ValidationStatusIcon.a(-105));
           kc.a((byte) 18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -88,7 +88,7 @@ final class AccountServiceResult {
                 param2 = jh.field_d;
               }
               param0 = 2;
-              i.field_a.a(StripedProgressWidget.field_y, -95);
+              i.field_a.setAccountAndClearPassword(StripedProgressWidget.field_y, -95);
             }
             var3_int = 1;
             if (param0 == 10) {
@@ -107,7 +107,7 @@ final class AccountServiceResult {
             if (param0 != 256 &&
               param0 != 10 &&
               !DirectByteArrayStore.field_e) {
-              i.field_a.l(-31940);
+              i.field_a.clearCredentials(-31940);
             }
           }
           if (param1 == -9) {

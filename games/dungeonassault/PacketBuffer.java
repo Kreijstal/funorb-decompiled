@@ -1575,7 +1575,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("saurus_spawn", false);
                 if (null != var2) {
-                  ng.field_J = dj.a(var2, false);
+                  ValidationStatusIcon.field_J = dj.a(var2, false);
                 }
                 var2 = gm.a("goblin_cleaver", false);
                 if (null != var2) {
@@ -2069,7 +2069,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_skeleton_sentinels", false);
                 if (null != var2) {
-                  tn.field_Y = dj.a(var2, false);
+                  ValidationStatusWidget.field_Y = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_corrosive_slime", false);
                 if (null != var2) {
@@ -3359,7 +3359,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_charging_hint_none", false);
                 if (var2 != null) {
-                  ng.field_L = dj.a(var2, false);
+                  ValidationStatusIcon.field_L = dj.a(var2, false);
                 }
                 var2 = gm.a("text_charging_hint_x", false);
                 if (var2 != null) {
@@ -3601,7 +3601,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_cost", false);
                 if (var2 != null) {
-                  tn.field_U = dj.a(var2, false);
+                  ValidationStatusWidget.field_U = dj.a(var2, false);
                 }
                 var2 = gm.a("text_attack", false);
                 if (null != var2) {
@@ -3925,7 +3925,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("title_dtdtdt", param1);
                 if (var2 != null) {
-                  ng.field_K = dj.a(var2, false);
+                  ValidationStatusIcon.field_K = dj.a(var2, false);
                 }
                 var2 = gm.a("renowntable_column_text,0", false);
                 if (null != var2) {

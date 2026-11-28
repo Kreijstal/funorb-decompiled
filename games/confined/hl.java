@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl implements de {
+final class hl implements TextureProvider {
     static String[] field_h;
     static String field_b;
     private ma[] field_e;
@@ -11,7 +11,7 @@ final class hl implements de {
     private int field_c;
     private int field_d;
 
-    public final int[] a(float param0, int param1, int param2) {
+    public final int[] getTexturePixels(float param0, int param1, int param2) {
         ma var8 = null;
         int var4 = -107 / ((param1 + 35) / 50);
         ma var5 = this.field_e[param2];
@@ -61,7 +61,7 @@ final class hl implements de {
         }
     }
 
-    public final boolean a(int param0, int param1) {
+    public final boolean hasTexture(int param0, int param1) {
         if (param1 != 1) {
           this.field_d = -103;
           return true;
@@ -93,15 +93,15 @@ final class hl implements de {
         return GuestPlayConfirmationForm.field_H > 250 ? true : false;
     }
 
-    public final boolean a(boolean param0, int param1) {
+    public final boolean isTextureSize64(boolean param0, int param1) {
         if (param0) {
-          this.a(51, -31);
+          this.hasTexture(51, -31);
           return this.field_g == 64 ? true : false;
         }
         return this.field_g == 64 ? true : false;
     }
 
-    public final int b(int param0, int param1) {
+    public final int getAverageTextureColor(int param0, int param1) {
         if (param0 != 0) {
           this.field_a = (ResourceArchive) null;
           if (this.field_e[param1] != null) {
@@ -115,7 +115,7 @@ final class hl implements de {
         return 0;
     }
 
-    public final int a(int param0, byte param1) {
+    public final int getTextureAlphaMode(int param0, byte param1) {
         if (param1 != -85) {
           return 80;
         }

@@ -423,7 +423,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         super.drawWidget(param0, param1, param2, param3);
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountAndClearPassword(int param0, String param1) {
         EditableTextField var3 = null;
         String var4 = null;
         try {
@@ -457,7 +457,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final String j(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (param0 != -19569) {
           return (String) null;
         }
@@ -486,11 +486,11 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         return stackIn_4_0;
     }
 
-    final void i(int param0) {
+    final void clearCredentials(int param0) {
         this.field_O.clearText(-115);
         this.field_L.clearText(-87);
         if (param0 < 5) {
-          this.j(-11);
+          this.getAccountIdentifier(-11);
         }
     }
 

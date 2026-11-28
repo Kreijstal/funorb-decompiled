@@ -1195,7 +1195,7 @@ final class kk {
               }
               if (this.field_c.f(0)) {
                 AccountServiceResult.a((byte) 103, ke.field_h[0]);
-                vg.a(124);
+                ValidationStatusWidget.a(124);
               }
               if (!this.field_c.d(25149)) {
                 break;

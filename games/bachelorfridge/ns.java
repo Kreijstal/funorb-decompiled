@@ -59,7 +59,7 @@ final class ns extends BoardChange {
               } else {
                 param0 = ClamsSpecial.field_q;
               }
-              FridgeScreen.field_e.a(-113, IncomingSpecial.field_p);
+              FridgeScreen.field_e.setAccountAndClearPassword(-113, IncomingSpecial.field_p);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -78,7 +78,7 @@ final class ns extends BoardChange {
             if (param2 != 256 &&
               param2 != 10 &&
               !gfa.field_i) {
-              FridgeScreen.field_e.b(false);
+              FridgeScreen.field_e.clearCredentials(false);
             }
           }
           if (param1 == -11) {

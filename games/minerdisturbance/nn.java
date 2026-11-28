@@ -51,9 +51,9 @@ final class nn {
           if (param0 < 83) {
             field_n = true;
           }
-          if (null != w.field_T &&
-            !w.field_T.equals(param1.getParameter("session"))) {
-            var4 = w.field_T;
+          if (null != ValidationStatusWidget.field_T &&
+            !ValidationStatusWidget.field_T.equals(param1.getParameter("session"))) {
+            var4 = ValidationStatusWidget.field_T;
           }
           stackIn_9_0 = mj.a((String) (var4), -1, false, (String) (var3), param2);
           return stackIn_9_0;

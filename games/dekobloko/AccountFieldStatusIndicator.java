@@ -416,7 +416,7 @@ final class AccountFieldStatusIndicator extends RichTextWidget {
         int integerLocal2 = UiComponentPart009.integerState0149 * UiComponentPart009.integerState0149;
         int integerLocal3 = integerLocal2 - GuestPlayConfirmationForm.integerState0437 * GuestPlayConfirmationForm.integerState0437;
         int integerLocal4 = 50 / ((byteArgument1 - 51) / 46);
-        UiComponentPart011.sceneWidgetState0035.performAction1764(199, 0, 90, -90 + (-120 + SoftwareRaster.integerState0284) - 4, -(integerLocal3 * 199 / integerLocal2) + integerLocal1);
+        ValidationStatusIcon.sceneWidgetState0035.performAction1764(199, 0, 90, -90 + (-120 + SoftwareRaster.integerState0284) - 4, -(integerLocal3 * 199 / integerLocal2) + integerLocal1);
         TextFieldValidator.sceneWidgetState0151.performAction1764(438, 0, 0, -4 + (SoftwareRaster.integerState0284 - 120), 202 + (integerLocal1 + 438 * integerLocal3 / integerLocal2));
     }
 

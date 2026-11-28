@@ -104,7 +104,7 @@ final class DropTargetWidgetContainer extends ComponentDecorator {
         try {
           BufferedSocket.integerState0668 = integerArgument9;
           MixedSupport101.integerState0591 = integerArgument6;
-          UiComponentPart011.integerState0240 = integerArgument3;
+          ValidationStatusIcon.integerState0240 = integerArgument3;
           ProxyAuthenticationRequiredException.integerState0125 = integerArgument4;
           MixedSupport076.integerState0429 = integerArgument5;
           UiComponent.integerState0106 = integerArgument2;

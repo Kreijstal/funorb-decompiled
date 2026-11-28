@@ -34,7 +34,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (0 <= uc.field_b &&
               var2_int >= 0) {
-              al.field_W[uc.field_b] = ~var2_int;
+              ValidationStatusWidget.field_W[uc.field_b] = ~var2_int;
               uc.field_b = uc.field_b + 1 & 127;
               if (DirectByteStorage.field_o == uc.field_b) {
                 uc.field_b = -1;
@@ -91,7 +91,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (uc.field_b >= 0 &&
               0 <= var2_int) {
-              al.field_W[uc.field_b] = var2_int;
+              ValidationStatusWidget.field_W[uc.field_b] = var2_int;
               uc.field_b = 127 & 1 + uc.field_b;
               if (uc.field_b == DirectByteStorage.field_o) {
                 uc.field_b = -1;

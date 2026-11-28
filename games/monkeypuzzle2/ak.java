@@ -98,7 +98,7 @@ final class ak extends DefaultTextWidgetRenderer {
         int var7 = 0;
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          super.a(false, param1);
+          super.copyStyleTo(false, param1);
           if (param2) {
             for (var4_int = 0; 6 > var4_int; var4_int++) {
               var5 = this.field_s[var4_int];

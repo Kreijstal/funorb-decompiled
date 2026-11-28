@@ -229,7 +229,7 @@ final class jd {
           var17.field_f = 16777215;
           this.field_i = (ComponentLayout) ((Object) var17);
           var4 = new hb();
-          var17.a(2, var4);
+          var17.copyStyleTo(2, var4);
           this.field_r = 3;
           this.field_k = -1;
           this.field_c = 3;
@@ -264,7 +264,7 @@ final class jd {
           discarded$0 = new ee(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ib(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new hb();
-          var17.a(2, var8);
+          var17.copyStyleTo(2, var8);
           var8.a(0, -17562).a(param1, IntrusiveNode.a(10066329, 15658734, (byte) -107, 7829367)).a(1118481, (byte) -75).a(-1, 127);
           var8.a(4, -17562).a(true, (byte) -115).a(true, var5);
           this.field_l = (ComponentLayout) ((Object) var8);

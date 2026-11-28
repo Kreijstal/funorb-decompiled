@@ -145,7 +145,7 @@ final class StandardContentDialog extends ContentTransitionDialog {
           if (SoftwareRaster.integerState0284 == MixedSupport076.framebufferState0001.integerState0191 &&
             MixedSupport076.framebufferState0001.integerState0190 == SoftwareRaster.integerState0285) {
             if (MixedSupport016.sceneWidgetPart013State0001 == null) {
-              if (UiComponentPart011.sceneWidgetPart013State0002 != null) {
+              if (ValidationStatusIcon.sceneWidgetPart013State0002 != null) {
                 BirthDateInput.performAction1700(true, -2);
                 if (booleanArgument6) {
                   MixedSupport139.integerState0857 = RichTextLayout.integerState0162;

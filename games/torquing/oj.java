@@ -136,7 +136,7 @@ final class oj implements WidgetRenderer {
             if (var22 == 0) {
               if (var23 != 0) {
                 cd.a(var30, -19729, 1);
-                var24 = var30.a((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
+                var24 = var30.findOrAddVertex((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, true, param6, var24, param7, param5, param9);
                 oj.a(param0, param1, -param2 + 3, param3, true, param8, var24, param7, param6, param9);
               } else {
@@ -174,10 +174,10 @@ final class oj implements WidgetRenderer {
               }
             } else {
               cd.a(var30, -19729, 1);
-              var24 = var30.a((var12 + var13) / 2, (var16 + var15) / 2, (var18 + var19) / 2);
+              var24 = var30.findOrAddVertex((var12 + var13) / 2, (var16 + var15) / 2, (var18 + var19) / 2);
               if (var23 != 0) {
                 cd.a(var30, -19729, 1);
-                var25 = var30.a((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
+                var25 = var30.findOrAddVertex((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, true, var25, var24, param7, param8, param9);
                 DefaultTextWidgetRenderer.a(param6, 5265, var24, var25, param5, param9, param7, param1, param0);
               } else {
@@ -187,26 +187,26 @@ final class oj implements WidgetRenderer {
             }
           } else {
             cd.a(var30, -19729, 1);
-            var24 = var30.a((var12 + var11) / 2, (var15 + var14) / 2, (var17 + var18) / 2);
+            var24 = var30.findOrAddVertex((var12 + var11) / 2, (var15 + var14) / 2, (var17 + var18) / 2);
             if (var22 == 0) {
               if (var23 == 0) {
                 oj.a(param0, param1, param2, param3, true, param5, var24, param7, param8, param9);
                 oj.a(param0, param1, -param2 + 3, param3, true, var24, param6, param7, param8, param9);
               } else {
                 cd.a(var30, -19729, 1);
-                var25 = var30.a((var11 + var13) / 2, (var14 + var16) / 2, (var17 + var19) / 2);
+                var25 = var30.findOrAddVertex((var11 + var13) / 2, (var14 + var16) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, true, param5, var24, param7, var25, param9);
                 DefaultTextWidgetRenderer.a(var25, 5265, var24, param6, param8, param9, param7, param1, param0);
               }
             } else {
               cd.a(var30, -19729, 1);
-              var25 = var30.a((var13 + var12) / 2, (var15 + var16) / 2, (var19 + var18) / 2);
+              var25 = var30.findOrAddVertex((var13 + var12) / 2, (var15 + var16) / 2, (var19 + var18) / 2);
               if (var23 == 0) {
                 oj.a(param0, param1, param2, param3, true, var24, param6, param7, var25, param9);
                 DefaultTextWidgetRenderer.a(var24, 5265, var25, param8, param5, param9, param7, param1, param0);
               } else {
                 cd.a(var30, -19729, 1);
-                var26_int = var30.a((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
+                var26_int = var30.findOrAddVertex((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, param4, param5, var24, param7, var26_int, param9);
                 oj.a(param0, param1, param2, param3, true, var24, param6, param7, var25, param9);
                 oj.a(param0, param1, param2, param3, true, var25, param8, param7, var26_int, param9);

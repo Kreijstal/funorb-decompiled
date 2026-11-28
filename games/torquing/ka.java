@@ -499,10 +499,10 @@ final class ka extends IntrusiveNode {
           while (true) {
             var3 = param2.requestFullscreenExit(false, param1);
             while (0 == var3.status) {
-              ub.sleepMillis(1976, 10L);
+              ValidationStatusIcon.sleepMillis(1976, 10L);
             }
             if (var3.status != 1) {
-              ub.sleepMillis(1976, 100L);
+              ValidationStatusIcon.sleepMillis(1976, 100L);
               continue;
             }
             break;

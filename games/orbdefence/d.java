@@ -54,7 +54,7 @@ final class d extends IntrusiveNode {
             }
             if (mc.field_j == 1) {
               if (cf.field_a.status == 2) {
-                stackIn_17_0 = kk.a(-30179, -1);
+                stackIn_17_0 = ValidationStatusWidget.a(-30179, -1);
                 return stackIn_17_0;
               }
               if (1 == cf.field_a.status) {
@@ -75,13 +75,13 @@ final class d extends IntrusiveNode {
               if (DraggableWidgetContainer.field_A.availableBytes((byte) 101) > 0) {
                 var1_int = DraggableWidgetContainer.field_A.readSingleByte(true);
                 if (var1_int != 0) {
-                  stackIn_30_0 = kk.a(-30179, var1_int);
+                  stackIn_30_0 = ValidationStatusWidget.a(-30179, var1_int);
                   return stackIn_30_0;
                 }
                 mc.field_j = mc.field_j + 1;
               } else {
                 if (ji.correctedCurrentTimeMillis(103) > n.field_b) {
-                  stackIn_26_0 = kk.a(-30179, -2);
+                  stackIn_26_0 = ValidationStatusWidget.a(-30179, -2);
                   return stackIn_26_0;
                 }
               }
@@ -99,7 +99,7 @@ final class d extends IntrusiveNode {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return kk.a(-30179, -3);
+            return ValidationStatusWidget.a(-30179, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -330,7 +330,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void setTextBounds(int param0, int param1, int param2, int param3) {
         this.setBounds(((TextWidgetRenderer) ((Object) this.field_i)).getPreferredHeight((UiWidget) (this), -1), param2, param0, param3, (byte) -52);
         if (param1 != 47) {
           this.field_B = (IntrusiveDeque) null;
@@ -362,7 +362,7 @@ class RichTextWidget extends InteractiveWidget {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void setHotspotTooltip(int param0, String param1, int param2) {
         int var5 = 0;
         RuntimeException runtimeException = null;
         String[] var4 = null;

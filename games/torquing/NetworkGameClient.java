@@ -758,11 +758,11 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (var4 == 13) {
             try {
-              if (null == ub.field_G) {
-                ub.field_G = new UrlRequest(ArchiveRequest.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (null == ValidationStatusIcon.field_G) {
+                ValidationStatusIcon.field_G = new UrlRequest(ArchiveRequest.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (ub.field_G.a(3)) {
-                var12 = ub.field_G.a(true);
+              if (ValidationStatusIcon.field_G.a(3)) {
+                var12 = ValidationStatusIcon.field_G.a(true);
                 if (var12 == null) {
                   var9 = (String) null;
                   WidgetContainer.a((String) null, (byte) -126);
@@ -770,7 +770,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var7 = GameApplet.decodeCp1252String(var12.position, true, 0, var12.payload);
                   WidgetContainer.a(var7, (byte) -84);
                 }
-                ub.field_G = null;
+                ValidationStatusIcon.field_G = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -778,7 +778,7 @@ abstract class NetworkGameClient extends GameApplet {
               nn.a("S1", (Throwable) ((Object) var5), -9958);
               var10 = (String) null;
               WidgetContainer.a((String) null, (byte) -87);
-              ub.field_G = null;
+              ValidationStatusIcon.field_G = null;
             }
           }
           if (var4 == 15) {

@@ -75,7 +75,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("login_gameupdated", 0);
                 if (var2 != null) {
-                  gm.field_K = mj.a((byte) -100, var2);
+                  ValidationStatusIcon.field_K = mj.a((byte) -100, var2);
                 }
                 var2 = wg.a("create_unable", 0);
                 if (var2 != null) {
@@ -1549,7 +1549,7 @@ final class NameSuggestionsPanel extends DequeWidgetContainer implements WidgetA
                 }
                 var2 = wg.a("create_age_tooltip", param0 ^ 7);
                 if (var2 != null) {
-                  ci.field_K = mj.a((byte) -111, var2);
+                  ValidationStatusWidget.field_K = mj.a((byte) -111, var2);
                 }
                 var2 = wg.a("create_optin_news_tooltip", param0 ^ 7);
                 if (null != var2) {

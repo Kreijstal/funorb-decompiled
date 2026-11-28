@@ -90,7 +90,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
                   var6.addListenerButton(nk.field_k, (WidgetEventListener) (this), 52);
                 }
               } else {
-                var6.addActionButton(sb.field_C, (byte) -124, 9);
+                var6.addActionButton(ValidationStatusIcon.field_C, (byte) -124, 9);
               }
             }
           } else {

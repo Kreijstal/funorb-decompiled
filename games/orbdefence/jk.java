@@ -290,7 +290,7 @@ final class jk {
             } else {
               if (var9Lifetime1 == 248) {
                 wl.a(uj.b((byte) -120), (byte) 54);
-                kk.field_Y = RegistrationAgreementPane.field_C;
+                ValidationStatusWidget.field_Y = RegistrationAgreementPane.field_C;
                 th.a(param6 + 23856);
                 FullscreenFocusCanvas.field_a = false;
                 stackIn_36_0 = var9Lifetime1;
@@ -332,7 +332,7 @@ final class jk {
                 kb.a(uj.b((byte) -120), false, var9_ref_String);
               }
             } else {
-              kk.field_Y = NetworkArchiveRequest.field_t.readString(2);
+              ValidationStatusWidget.field_Y = NetworkArchiveRequest.field_t.readString(2);
             }
             th.a(126);
             FullscreenFocusCanvas.field_a = false;
@@ -342,9 +342,9 @@ final class jk {
           if (null == p.field_d) {
             if (FullscreenFocusCanvas.field_a) {
               if (30000L < TextLineMetrics.b(-1)) {
-                kk.field_Y = ee.field_c;
+                ValidationStatusWidget.field_Y = ee.field_c;
               } else {
-                kk.field_Y = BufferedRandomAccessFile.field_j;
+                ValidationStatusWidget.field_Y = BufferedRandomAccessFile.field_j;
               }
               FullscreenFocusCanvas.field_a = false;
               stackIn_62_0 = 249;

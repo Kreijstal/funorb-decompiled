@@ -92,7 +92,7 @@ final class oa extends IntrusiveNode {
             }
             var3++;
           }
-          stackIn_11_0 = je.field_M;
+          stackIn_11_0 = ValidationStatusIcon.field_M;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

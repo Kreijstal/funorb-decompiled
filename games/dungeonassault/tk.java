@@ -41,7 +41,7 @@ final class tk {
     }
 
     final static void a(byte param0) {
-        tn.a(-1);
+        ValidationStatusWidget.a(-1);
         if (param0 > -64) {
           field_v = (String) null;
         }

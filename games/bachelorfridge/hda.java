@@ -207,7 +207,7 @@ final class hda extends k {
           if (null != uf.field_c) {
             var4_ref = BoardChangeBatch.field_l;
             synchronized (var4_ref) {
-              uf.field_c.a(-1, param3, (byte) -107);
+              uf.field_c.setChannelGain(-1, param3, (byte) -107);
               if (param1 == uw.field_o) {
                 return;
               }
@@ -215,7 +215,7 @@ final class hda extends k {
               BoardChangeBatch.field_l.flushAndMarkDrainCheck();
               uw.field_o = param1;
               if (uw.field_o != null) {
-                uf.field_c.a(uw.field_o, (byte) -115, param2);
+                uf.field_c.playTrack(uw.field_o, (byte) -115, param2);
               }
             }
           }

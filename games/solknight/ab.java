@@ -394,7 +394,7 @@ abstract class ab extends GameApplet {
                   dd.a((byte) 83, DiskArchiveRequest.field_v, var5_intLifetime2);
                   DiskArchiveRequest.field_v = null;
                 } else {
-                  d.field_c = kc.field_P;
+                  d.field_c = ValidationStatusIcon.field_P;
                   ee.f(0);
                   MusicPatchPcmStream.field_l = false;
                   fj.field_i = 10;
@@ -649,7 +649,7 @@ abstract class ab extends GameApplet {
             je.a(false);
             sf.b(false);
             dd.a((byte) 27, MatchingFieldValidator.field_k, 2);
-            pk.d(true);
+            ValidationStatusWidget.d(true);
             ee.field_i = true;
             RichTextWidget.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }

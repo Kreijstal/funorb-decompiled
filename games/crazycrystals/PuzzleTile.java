@@ -134,7 +134,7 @@ abstract class PuzzleTile {
         String[] var6 = null;
         var5 = CrazyCrystals.field_B;
         try {
-          sg.field_b = io.field_P;
+          sg.field_b = ValidationStatusWidget.field_P;
           if (param3 == 255) {
             stackIn_9_0 = !(ro.field_n >= 13);
             nn.field_a = oe.createAccountSuccessResult(stackIn_9_0, (byte) 119);

@@ -96,7 +96,7 @@ final class oq extends qc {
           if (param1 <= 23) {
             field_E = (PcmStreamMixer) null;
           }
-          stackIn_3_0 = lr.a(param0.length, 0, param0, 1039685793);
+          stackIn_3_0 = ValidationStatusIcon.a(param0.length, 0, param0, 1039685793);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,9 +138,9 @@ final class oq extends qc {
               if (!tk.field_e) {
                 param1 = rr.field_y;
               } else {
-                param1 = lr.field_M;
+                param1 = ValidationStatusIcon.field_M;
               }
-              eb.field_d.a((byte) -79, ff.field_u);
+              eb.field_d.setAccountAndClearPassword((byte) -79, ff.field_u);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -159,7 +159,7 @@ final class oq extends qc {
             if (param2 != 256 &&
               param2 != 10 &&
               !tk.field_e) {
-              eb.field_d.i(15);
+              eb.field_d.clearCredentials(15);
               return;
             }
           }

@@ -56,7 +56,7 @@ final class w extends ci {
           var17.field_fb = 1;
           this.field_Eb = new ci(0L, param2);
           var8 = new ci(0L, param3);
-          var9 = new ci(0L, param3, ea.field_P);
+          var9 = new ci(0L, param3, ValidationStatusWidget.field_P);
           var9.field_fb = 1;
           var10 = 50;
           var11 = 0;

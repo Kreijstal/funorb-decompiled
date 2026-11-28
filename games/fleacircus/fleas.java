@@ -701,16 +701,16 @@ public final class fleas extends NetworkGameClient {
               } while (var17 == 0);
               do {
                 if (!(var11 < nl.field_c[0].length)) {
-                  je.field_O = new RgbSprite[6];
-                  je.field_O[0] = kl.a(252, hm.field_g, "", "menu_character_1");
-                  je.field_O[1] = kl.a(252, hm.field_g, "", "menu_character_2");
-                  je.field_O[2] = kl.a(252, hm.field_g, "", "menu_character_3");
-                  je.field_O[3] = kl.a(252, hm.field_g, "", "menu_character_4");
-                  je.field_O[4] = kl.a(252, hm.field_g, "", "menu_character_5");
-                  je.field_O[5] = kl.a(252, hm.field_g, "", "menu_character_6");
-                  dupTemp$5 = je.field_O[0];
+                  ValidationStatusIcon.field_O = new RgbSprite[6];
+                  ValidationStatusIcon.field_O[0] = kl.a(252, hm.field_g, "", "menu_character_1");
+                  ValidationStatusIcon.field_O[1] = kl.a(252, hm.field_g, "", "menu_character_2");
+                  ValidationStatusIcon.field_O[2] = kl.a(252, hm.field_g, "", "menu_character_3");
+                  ValidationStatusIcon.field_O[3] = kl.a(252, hm.field_g, "", "menu_character_4");
+                  ValidationStatusIcon.field_O[4] = kl.a(252, hm.field_g, "", "menu_character_5");
+                  ValidationStatusIcon.field_O[5] = kl.a(252, hm.field_g, "", "menu_character_6");
+                  dupTemp$5 = ValidationStatusIcon.field_O[0];
                   dupTemp$5.field_v = dupTemp$5.field_v - 200;
-                  dupTemp$6 = je.field_O[1];
+                  dupTemp$6 = ValidationStatusIcon.field_O[1];
                   dupTemp$6.field_v = dupTemp$6.field_v - 200;
                   pd.field_k = FullscreenNoticeType.a(hm.field_g, "frame", "", (byte) 61);
                   DequeWidgetContainer.field_E = FullscreenNoticeType.a(hm.field_g, "frame_bright", "", (byte) 61);
@@ -1125,8 +1125,8 @@ public final class fleas extends NetworkGameClient {
           StripedProgressWidget.clearStaticReferences(true);
           NameSuggestionsPanel.clearDeclaredStaticReferences((byte) -20);
           RichTextWidget.discardDeclaredStaticReferences(-91);
-          je.i(93);
-          v.resetDeclaredStaticReferences(-8011);
+          ValidationStatusIcon.i(93);
+          ValidationStatusWidget.resetDeclaredStaticReferences(-8011);
           vk.resetStaticState(false);
           TextFieldValidator.d(0);
           sc.clearStaticReferences((byte) -73);
@@ -1340,7 +1340,7 @@ public final class fleas extends NetworkGameClient {
             ResizableModalDialog.a(65.0f, cb.field_q, true);
             this.renderClientFrame(true);
             BufferedSocket.field_j = MusicTrack.load(jc.field_e, "", "Flea Circus Titlescreen");
-            DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
+            DebouncedFieldValidator.field_h.prepareTrackSamples(field_K, ob.field_d, 11498, 0, BufferedSocket.field_j);
             hf.field_e[0] = MusicTrack.load(jc.field_e, "", "Flea Circus 1");
             hf.field_e[1] = MusicTrack.load(jc.field_e, "", "Flea Circus 2");
             hf.field_e[2] = MusicTrack.load(jc.field_e, "", "Flea Circus 3");
@@ -1353,7 +1353,7 @@ public final class fleas extends NetworkGameClient {
                 fleas.h((byte) -114);
                 break;
               }
-              DebouncedFieldValidator.field_h.a(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
+              DebouncedFieldValidator.field_h.prepareTrackSamples(field_K, ob.field_d, 11498, 0, hf.field_e[var3_int]);
               var3_int++;
             } while (var10 == 0);
             return false;
@@ -1926,7 +1926,7 @@ public final class fleas extends NetworkGameClient {
     final void initializeClient(byte param0) {
         this.a(9, 11, 22, false, 0, 8, 8, 10);
         MidiPcmStream var2 = new MidiPcmStream();
-        var2.b(9, 128, 238);
+        var2.setChannelProgram(9, 128, 238);
         ByteStorage.a(220, var2, 22050, 11, 22050, fg.field_q, (java.awt.Component) ((Object) ol.field_e), true);
         fb.field_c = 0;
         rg.field_n = 1;

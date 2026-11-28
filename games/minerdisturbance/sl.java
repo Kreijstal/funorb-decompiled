@@ -107,7 +107,7 @@ final class sl extends IntrusiveNode {
             }
             var14Lifetime2 = stackIn_18_0;
             var15 = param5 * var63[var13] + param2 * var62[var13] + var61[var13] * param7 >> 8;
-            stackIn_20_0 = w.field_R;
+            stackIn_20_0 = ValidationStatusWidget.field_R;
             if (var15 >= 0) {
               stackIn_21_1 = var15;
             } else {

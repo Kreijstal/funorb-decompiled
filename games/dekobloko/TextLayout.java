@@ -257,7 +257,7 @@ abstract class TextLayout {
         return this.lines.length;
     }
 
-    final int computeInteger0230(byte byteArgument1, int integerArgument2, String stringArgument3, int integerArgument4) {
+    final int computeJustificationStep(byte byteArgument1, int integerArgument2, String stringArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         RuntimeException runtimeExceptionLocal3 = null;

@@ -161,7 +161,7 @@ final class jl {
                 }
                 stackIn_68_0 = DropTargetWidgetContainer.field_y;
                 stackIn_68_1 = false;
-                stackIn_69_2 = (jg.field_H != 0);
+                stackIn_69_2 = (ValidationStatusIcon.field_H != 0);
                 stackIn_71_3 = false;
                 stackIn_72_4 = (BitPacketBuffer.field_k != 0);
                 var8Lifetime1 = ((BinaryBitmapFont) (Object) stackIn_68_0).stringWidth(StarCannon.a(stackIn_68_1, stackIn_69_2, stackIn_71_3, stackIn_72_4)) + 10;
@@ -176,7 +176,7 @@ final class jl {
                 stackIn_79_2 = false;
                 stackIn_79_3 = true;
                 stackIn_80_4 = (BitPacketBuffer.field_k != 0);
-                stackIn_83_5 = (0 != jg.field_H);
+                stackIn_83_5 = (0 != ValidationStatusIcon.field_H);
                 var8Lifetime1 = stackIn_79_0 + ((BinaryBitmapFont) (Object) stackIn_79_1).stringWidth(dl.b(stackIn_79_2, stackIn_79_3, stackIn_80_4, stackIn_83_5));
                 if (var4Lifetime1 > -(var8Lifetime1 >> 1) + 320) {
                   var4Lifetime1 = 320 - (var8Lifetime1 >> 1);
@@ -187,7 +187,7 @@ final class jl {
                 stackIn_89_0 = DropTargetWidgetContainer.field_y;
                 stackIn_89_1 = false;
                 stackIn_90_2 = (BitPacketBuffer.field_k != 0);
-                stackIn_93_3 = (jg.field_H != 0);
+                stackIn_93_3 = (ValidationStatusIcon.field_H != 0);
                 var8Lifetime1 = ((BinaryBitmapFont) (Object) stackIn_89_0).stringWidth(dl.a(stackIn_89_1, stackIn_90_2, stackIn_93_3, false)) + 10;
                 if ((320 - (var8Lifetime1 >> 1)) < var4Lifetime1) {
                   var4Lifetime1 = 320 - (var8Lifetime1 >> 1);
@@ -261,7 +261,7 @@ final class jl {
                 DropTargetWidgetContainer.field_y.drawCentred(jh.field_e, 320, var11Lifetime1, 65535, -1);
                 stackIn_107_0 = DropTargetWidgetContainer.field_y;
                 stackIn_107_1 = false;
-                stackIn_108_2 = (jg.field_H != 0);
+                stackIn_108_2 = (ValidationStatusIcon.field_H != 0);
                 stackIn_110_3 = false;
                 stackIn_111_4 = (0 != BitPacketBuffer.field_k);
                 ((BinaryBitmapFont) (Object) stackIn_107_0).drawCentred(StarCannon.a(stackIn_107_1, stackIn_108_2, stackIn_110_3, stackIn_111_4), 320, var12Lifetime1 + var11Lifetime1, 65535, -1);
@@ -269,12 +269,12 @@ final class jl {
                 stackIn_113_1 = false;
                 stackIn_113_2 = true;
                 stackIn_114_3 = (BitPacketBuffer.field_k != 0);
-                stackIn_117_4 = (0 != jg.field_H);
+                stackIn_117_4 = (0 != ValidationStatusIcon.field_H);
                 ((BinaryBitmapFont) (Object) stackIn_113_0).drawCentred(dl.b(stackIn_113_1, stackIn_113_2, stackIn_114_3, stackIn_117_4), 320, 24 + (var12Lifetime1 * 3 + var11Lifetime1), 65535, -1);
                 stackIn_119_0 = DropTargetWidgetContainer.field_y;
                 stackIn_119_1 = false;
                 stackIn_120_2 = (BitPacketBuffer.field_k != 0);
-                stackIn_123_3 = (jg.field_H != 0);
+                stackIn_123_3 = (ValidationStatusIcon.field_H != 0);
                 ((BinaryBitmapFont) (Object) stackIn_119_0).drawCentred(dl.a(stackIn_119_1, stackIn_120_2, stackIn_123_3, false), 320, var12Lifetime1 * 4 + var11Lifetime1 + 48, 65535, -1);
               }
               decompiledFrameRemainder0 = false;
@@ -350,7 +350,7 @@ final class jl {
           }
         }
         if (100 != param1 && (!(StarCannon.field_z >= 0) ||
-          !(0 <= pa.field_L))) {
+          !(0 <= ValidationStatusWidget.field_L))) {
           pk.field_e.drawScaled(param1 - 100 >> 2, param1 - 100 >> 2, (-param1 + 100 >> 1) + 640, (100 - param1 >> 1) + 480);
           return;
         }
@@ -909,7 +909,7 @@ final class jl {
                   if (this.field_e.h(-84)) {
                     od.a(-98, 7, param1);
                     DirectByteStorage.a(0, true);
-                    jg.field_H = 0;
+                    ValidationStatusIcon.field_H = 0;
                     eb.field_c = 0;
                     SecondaryNodeDeque.field_e.clear(23505);
                     pk.field_a.clear(23505);
@@ -951,7 +951,7 @@ final class jl {
               jk.field_j = 0;
               gi.field_g = true;
               m.field_f = null;
-              jg.field_H = 0;
+              ValidationStatusIcon.field_H = 0;
               if (nf.field_l == 2) {
                 jk.field_j = 1;
               }
@@ -1052,7 +1052,7 @@ final class jl {
         var3 = 164;
         var4 = 134;
         if (param0) {
-          stackIn_3_0 = jg.field_H;
+          stackIn_3_0 = ValidationStatusIcon.field_H;
         } else {
           stackIn_3_0 = eb.field_c;
         }

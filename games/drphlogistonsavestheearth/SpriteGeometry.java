@@ -57,7 +57,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         int var2;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         cj.field_e = null;
-        gm.field_J = 0;
+        ValidationStatusIcon.field_J = 0;
         ul.field_d = 0;
         ck.field_j = new td[3];
         if (param0 == -8372) {

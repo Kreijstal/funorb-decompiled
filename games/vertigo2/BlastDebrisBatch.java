@@ -209,10 +209,10 @@ final class BlastDebrisBatch {
           }
           PasswordValidator.field_m.a(param0 ^ 81, 360, -20 + (-124 + SoftwareRasterizer.field_j), 10, SoftwareRasterizer.field_e - 360 >> 1);
           he.field_x.a(77, PasswordValidator.field_m.field_Fb, 24, 0, 0);
-          lr.field_P.a(116, PasswordValidator.field_m.field_Fb, -24 + PasswordValidator.field_m.field_db, 24, 0);
-          lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);
-          BufferedRandomAccessFile.field_j.a(99, lr.field_P.field_Fb - 10, -2 + (lr.field_P.field_db - 34), 5, 5);
-          Vertigo2.field_M.a(74, 80, 24, -5 + (lr.field_P.field_db - 24), (-80 + lr.field_P.field_Fb) / 2);
+          ValidationStatusIcon.field_P.a(116, PasswordValidator.field_m.field_Fb, -24 + PasswordValidator.field_m.field_db, 24, 0);
+          ValidationStatusIcon.field_P.field_Bb = vl.a(ValidationStatusIcon.field_P.field_db, 3, 0, 1, 11579568, 8421504);
+          BufferedRandomAccessFile.field_j.a(99, ValidationStatusIcon.field_P.field_Fb - 10, -2 + (ValidationStatusIcon.field_P.field_db - 34), 5, 5);
+          Vertigo2.field_M.a(74, 80, 24, -5 + (ValidationStatusIcon.field_P.field_db - 24), (-80 + ValidationStatusIcon.field_P.field_Fb) / 2);
           po.b((byte) -52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

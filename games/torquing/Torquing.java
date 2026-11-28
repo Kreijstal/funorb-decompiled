@@ -287,8 +287,8 @@ public final class Torquing extends NetworkGameClient {
           ContentTransitionDialog.clearDeclaredStaticReferences(0);
           StripedProgressWidget.a(false);
           NameSuggestionsPanel.clearStaticReferences(-1);
-          ub.clearStaticReferences((byte) -19);
-          bj.clearStaticReferences((byte) -37);
+          ValidationStatusIcon.clearStaticReferences((byte) -19);
+          ValidationStatusWidget.clearStaticReferences((byte) -37);
           ok.clearDeclaredStaticReferences(param0 + 9);
           TextFieldValidator.clearStaticReferences(param0 - 4);
           bf.clearStaticReferences(3);
@@ -757,7 +757,7 @@ public final class Torquing extends NetworkGameClient {
               return false;
             }
             if (FramedPanelLayer.a(-22426, 0)) {
-              var31 = MeshGeometry.a(rl.field_a, "", "sphere_halloween");
+              var31 = MeshGeometry.load(rl.field_a, "", "sphere_halloween");
               gi.a(var31, (byte) 13, 31);
               MouseWheelInput.field_c[17] = new Model(var31);
               MouseWheelInput.field_c[18] = new Model(var31);
@@ -789,14 +789,14 @@ public final class Torquing extends NetworkGameClient {
               return false;
             }
             if (vb.field_c[3] == null) {
-              vb.field_c[3] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_block").a(80, 1365, -1, -12, 12));
-              vb.field_c[25] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_can").a(80, 1365, -1, -12, 12));
-              vb.field_c[26] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_grave").a(80, 1365, -1, -12, 12));
-              vb.field_c[27] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_roundtree").a(80, 1365, -1, -12, 12));
-              vb.field_c[28] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_squaretree").a(80, 1365, -1, -12, 12));
-              vb.field_c[29] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_statue").a(80, 1365, -1, -12, 12));
-              vb.field_c[30] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_cone").a(80, 1365, -1, -12, 12));
-              vb.field_c[31] = (LitModelMesh) (MeshGeometry.a(rl.field_a, "", "obstacles/bb_lights_tall_nopost").a(80, 1365, -1, -12, 12));
+              vb.field_c[3] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_block").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[25] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_can").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[26] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_grave").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[27] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_roundtree").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[28] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_squaretree").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[29] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_statue").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[30] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_cone").createModel(80, 1365, -1, -12, 12));
+              vb.field_c[31] = (LitModelMesh) (MeshGeometry.load(rl.field_a, "", "obstacles/bb_lights_tall_nopost").createModel(80, 1365, -1, -12, 12));
               ka.field_n[31][0] = 0;
               ka.field_n[31][4] = 0;
               ka.field_n[31][1] = 16;
@@ -954,7 +954,7 @@ public final class Torquing extends NetworkGameClient {
             nn.field_a[10] = new MenuLayer[]{(MenuLayer) ((Object) StandardContentDialog.field_cb), (MenuLayer) ((Object) new TranslucentSpriteLayer(var42[0], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(var35[0], param1 + 41), (MenuLayer) ((Object) new TranslucentSpriteLayer(MenuScreen.field_d[1], 0, 0, 76)), LevelRun.createIndexedSpriteLayer(GameKeyHandler.field_a[1], 108)};
             nn.field_a[11] = new MenuLayer[]{(MenuLayer) ((Object) new FramedPanelLayer(11, 11, 618, 122)), (MenuLayer) ((Object) new FramedPanelLayer(11, 139, 209, 330)), (MenuLayer) ((Object) new FramedPanelLayer(226, 139, 403, 242))};
             dj.field_a = SectorCacheStore.a("menu_items_recol", -1, "", rg.field_v);
-            bj.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
+            ValidationStatusWidget.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
             qd.field_c = new IndexedSprite[3];
             qd.field_c[1] = DelegatingCanvas.a("death_time", 31094, rg.field_v, "");
             qd.field_c[0] = vo.a(-173, FullscreenStatusDialog.c((int) param1, 101), GameKeyHandler.field_a[2], 43);

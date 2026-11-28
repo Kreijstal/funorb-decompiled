@@ -133,7 +133,7 @@ final class IntrusiveDeque {
             SocketConnector.field_h = qk.a("benefits", "menu_text", IterableNodeHashTable.field_c, 0);
             ub.field_e = qk.a("benefits", "button_frame", IterableNodeHashTable.field_c, 0);
             le.field_e = qk.a("benefits", "arrow", IterableNodeHashTable.field_c, 0);
-            tk.field_R = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
+            ValidationStatusIcon.field_R = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
             StripedProgressWidget.field_G = (BitmapFont) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
             var28 = SoftwareRasterizer.pixels;
             var2 = SoftwareRasterizer.width;
@@ -144,15 +144,15 @@ final class IntrusiveDeque {
             le.field_e.drawTinted(2, 2, vh.field_h);
             GuestPlayConfirmationForm.a(var11.storedWidth, 0, 4, var11.storedHeight, 2, var11, 0, 1);
             le.field_e = var11;
-            dh.field_ab = le.field_e.copyMirroredHorizontally();
+            ValidationStatusWidget.field_ab = le.field_e.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.storedWidth / 2;
             var12.bindAsRenderTarget();
-            tk.field_R.drawCentred(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
+            ValidationStatusIcon.field_R.drawCentred(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
             StripedProgressWidget.field_G.drawCentred(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
-            tk.field_R.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, ConfirmedEmailAvailabilityValidator.field_t), var6, 110, 16777215, -1);
+            ValidationStatusIcon.field_R.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, ConfirmedEmailAvailabilityValidator.field_t), var6, 110, 16777215, -1);
             StripedProgressWidget.field_G.drawCentred(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
-            tk.field_R.drawCentred(ub.field_m, var6, 180, 16777215, -1);
+            ValidationStatusIcon.field_R.drawCentred(ub.field_m, var6, 180, 16777215, -1);
             StripedProgressWidget.field_G.drawCentred(wi.field_b, var6, 200, 16777215, -1);
             GuestPlayConfirmationForm.a(var12.storedWidth, 0, 4, var12.storedHeight, 3, var12, 0, 1);
             me.field_e.bindAsRenderTarget();
@@ -178,14 +178,14 @@ final class IntrusiveDeque {
             return;
           }
           if (vk.field_d != null &&
-            tk.field_R != null) {
+            ValidationStatusIcon.field_R != null) {
             var29 = SoftwareRasterizer.pixels;
             var2Lifetime1 = SoftwareRasterizer.width;
             var3Lifetime1 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ck.field_c);
             var14 = ni.a(new String[]{nk.field_g[di.field_A]}, 0, ClientException.field_f);
-            var5 = tk.field_R.maxLineWidth(var14, IterableNodeHashTable.field_f);
-            var6Lifetime1 = tk.field_R.textHeight(var14, IterableNodeHashTable.field_f, tk.field_R.field_K + tk.field_R.field_x);
+            var5 = ValidationStatusIcon.field_R.maxLineWidth(var14, IterableNodeHashTable.field_f);
+            var6Lifetime1 = ValidationStatusIcon.field_R.textHeight(var14, IterableNodeHashTable.field_f, ValidationStatusIcon.field_R.field_K + ValidationStatusIcon.field_R.field_x);
             var7Lifetime1 = (IterableNodeHashTable.field_f - var5) / 2 + ModalDialogHost.field_J;
             var5 += 6;
             var7Lifetime1 -= 3;
@@ -231,7 +231,7 @@ final class IntrusiveDeque {
             vk.field_d.normalizeCanvas();
             var9 = new Sprite(vk.field_d.fullWidth, vk.field_d.fullHeight);
             var9.bindAsRenderTarget();
-            tk.field_R.drawParagraph(var14, ModalDialogHost.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
+            ValidationStatusIcon.field_R.drawParagraph(var14, ModalDialogHost.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, ValidationStatusIcon.field_R.field_x + ValidationStatusIcon.field_R.field_K);
             GuestPlayConfirmationForm.a(var9.fullWidth, 0, 4, var9.fullHeight, 3, var9, 0, 1);
             vk.field_d.bindAsRenderTarget();
             var9.drawTransparent(0, 0);
@@ -335,7 +335,7 @@ final class IntrusiveDeque {
           if (le.field_e != null) {
             var1_int = 357 - le.field_e.fullHeight / 2;
             le.field_e.drawTransparent(-le.field_e.fullWidth + 269, var1_int);
-            dh.field_ab.drawTransparent(586, var1_int);
+            ValidationStatusWidget.field_ab.drawTransparent(586, var1_int);
             if (var1_int < ph.field_d &&
               ph.field_d < le.field_e.storedHeight + var1_int) {
               var2Lifetime5 = (ga.$cfr$intArgs$a$f0c91481eb80(5, ub.field_h << 4) * 40 >> 16) + 40;
@@ -349,10 +349,10 @@ final class IntrusiveDeque {
                 } else {
                   if (586 < ConfirmedEmailAvailabilityValidator.field_u &&
                     ConfirmedEmailAvailabilityValidator.field_u < le.field_e.storedWidth + 586) {
-                    dh.field_ab.drawAdditiveWithIntensity(585, var1_int - 1, var2Lifetime5);
-                    dh.field_ab.drawAdditiveWithIntensity(587, var1_int - 1, var2Lifetime5);
-                    dh.field_ab.drawAdditiveWithIntensity(585, 1 + var1_int, var2Lifetime5);
-                    dh.field_ab.drawAdditiveWithIntensity(587, 1 + var1_int, var2Lifetime5);
+                    ValidationStatusWidget.field_ab.drawAdditiveWithIntensity(585, var1_int - 1, var2Lifetime5);
+                    ValidationStatusWidget.field_ab.drawAdditiveWithIntensity(587, var1_int - 1, var2Lifetime5);
+                    ValidationStatusWidget.field_ab.drawAdditiveWithIntensity(585, 1 + var1_int, var2Lifetime5);
+                    ValidationStatusWidget.field_ab.drawAdditiveWithIntensity(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }

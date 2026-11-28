@@ -4,7 +4,7 @@
 final class e {
     int field_e;
     static CipherPacketBuffer field_c;
-    static od field_a;
+    static MeshData field_a;
     static String field_d;
     int field_b;
 

@@ -79,28 +79,28 @@ final class lha {
                           if (var2 != 9) {
                             if (var2 != 10) {
                               if (var2 == 11) {
-                                stackIn_76_0 = (!uf.field_c.a(db.field_a, HazmatSpecial.field_p, ai.field_d, (byte) -98, 22050)) ? 0 : 1;
+                                stackIn_76_0 = (!uf.field_c.prepareTrackSamples(db.field_a, HazmatSpecial.field_p, ai.field_d, (byte) -98, 22050)) ? 0 : 1;
                                 var1Lifetime1 = stackIn_76_0;
                               } else {
                                 if (var2 != 12) {
                                   if (var2 == 13) {
-                                    stackIn_84_0 = (!uf.field_c.a(db.field_a, eda.field_i, ai.field_d, (byte) -13, 22050)) ? 0 : 1;
+                                    stackIn_84_0 = (!uf.field_c.prepareTrackSamples(db.field_a, eda.field_i, ai.field_d, (byte) -13, 22050)) ? 0 : 1;
                                     var1Lifetime1 = stackIn_84_0;
                                   } else {
                                     if (14 == var2) {
-                                      stackIn_88_0 = (!uf.field_c.a(db.field_a, IncomingAnimation.field_z, ai.field_d, (byte) 103, 22050)) ? 0 : 1;
+                                      stackIn_88_0 = (!uf.field_c.prepareTrackSamples(db.field_a, IncomingAnimation.field_z, ai.field_d, (byte) 103, 22050)) ? 0 : 1;
                                       var1Lifetime1 = stackIn_88_0;
                                     } else {
                                       if (15 == var2) {
-                                        stackIn_92_0 = (!uf.field_c.a(db.field_a, wba.field_e[0], ai.field_d, (byte) 107, 22050)) ? 0 : 1;
+                                        stackIn_92_0 = (!uf.field_c.prepareTrackSamples(db.field_a, wba.field_e[0], ai.field_d, (byte) 107, 22050)) ? 0 : 1;
                                         var1Lifetime1 = stackIn_92_0;
                                       } else {
                                         if (var2 == 16) {
-                                          stackIn_96_0 = (!uf.field_c.a(db.field_a, wba.field_e[1], ai.field_d, (byte) -91, 22050)) ? 0 : 1;
+                                          stackIn_96_0 = (!uf.field_c.prepareTrackSamples(db.field_a, wba.field_e[1], ai.field_d, (byte) -91, 22050)) ? 0 : 1;
                                           var1Lifetime1 = stackIn_96_0;
                                         } else {
                                           if (17 == var2) {
-                                            stackIn_100_0 = (!uf.field_c.a(db.field_a, wba.field_e[2], ai.field_d, (byte) 116, 22050)) ? 0 : 1;
+                                            stackIn_100_0 = (!uf.field_c.prepareTrackSamples(db.field_a, wba.field_e[2], ai.field_d, (byte) 116, 22050)) ? 0 : 1;
                                             var1Lifetime1 = stackIn_100_0;
                                           } else {
                                             if (18 != var2) {
@@ -109,14 +109,14 @@ final class lha {
                                                   uf.field_c.b(-5359);
                                                   return true;
                                                 }
-                                                stackIn_112_0 = (!uf.field_c.a(db.field_a, mu.field_d, ai.field_d, (byte) -102, 22050)) ? 0 : 1;
+                                                stackIn_112_0 = (!uf.field_c.prepareTrackSamples(db.field_a, mu.field_d, ai.field_d, (byte) -102, 22050)) ? 0 : 1;
                                                 var1Lifetime1 = stackIn_112_0;
                                               } else {
-                                                stackIn_108_0 = (!uf.field_c.a(db.field_a, ByteStorage.field_h, ai.field_d, (byte) -89, 22050)) ? 0 : 1;
+                                                stackIn_108_0 = (!uf.field_c.prepareTrackSamples(db.field_a, ByteStorage.field_h, ai.field_d, (byte) -89, 22050)) ? 0 : 1;
                                                 var1Lifetime1 = stackIn_108_0;
                                               }
                                             } else {
-                                              stackIn_104_0 = (!uf.field_c.a(db.field_a, iq.field_m, ai.field_d, (byte) 118, 22050)) ? 0 : 1;
+                                              stackIn_104_0 = (!uf.field_c.prepareTrackSamples(db.field_a, iq.field_m, ai.field_d, (byte) 118, 22050)) ? 0 : 1;
                                               var1Lifetime1 = stackIn_104_0;
                                             }
                                           }
@@ -125,7 +125,7 @@ final class lha {
                                     }
                                   }
                                 } else {
-                                  stackIn_80_0 = (!uf.field_c.a(db.field_a, PizzaPartyAnimation.field_z, ai.field_d, (byte) -26, 22050)) ? 0 : 1;
+                                  stackIn_80_0 = (!uf.field_c.prepareTrackSamples(db.field_a, PizzaPartyAnimation.field_z, ai.field_d, (byte) -26, 22050)) ? 0 : 1;
                                   var1Lifetime1 = stackIn_80_0;
                                 }
                               }

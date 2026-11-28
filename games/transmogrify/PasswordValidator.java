@@ -36,7 +36,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_9_0 = SocketConnector.field_d;
             return stackIn_9_0;
           }
-          if (!this.b(param1, param0 ^ -8680)) {
+          if (!this.containsEmailComponent(param1, param0 ^ -8680)) {
             return hi.field_b;
           }
           stackIn_13_0 = SocketConnector.field_d;
@@ -55,7 +55,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(String param0, int param1) {
+    private final boolean containsEmailComponent(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -144,18 +144,18 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var5 = var4;
           if (vj.a(-23424, var5)) {
-            stackIn_6_0 = ob.field_I;
+            stackIn_6_0 = ValidationStatusWidget.field_I;
             return stackIn_6_0;
           }
           if (ga.a(var5, 3336)) {
             stackIn_10_0 = StripedProgressWidget.field_H;
             return stackIn_10_0;
           }
-          if (ve.a(1, var5)) {
+          if (ValidationStatusIcon.a(1, var5)) {
             stackIn_14_0 = DualLinkNode.field_i;
             return stackIn_14_0;
           }
-          if (this.b(param1, param0 ^ 8632)) {
+          if (this.containsEmailComponent(param1, param0 ^ 8632)) {
             stackIn_18_0 = gb.field_d;
             return stackIn_18_0;
           }
@@ -172,7 +172,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_26_0;
           }
           if (!TextFieldValidator.a(var6, (byte) 119, var5)) {
-            stackIn_31_0 = ob.field_I;
+            stackIn_31_0 = ValidationStatusWidget.field_I;
             return stackIn_31_0;
           }
           stackIn_29_0 = ae.field_b;

@@ -173,7 +173,7 @@ final class bf {
         if (param0 > -34) {
           return -84;
         }
-        return -pk.field_ab + GameApplet.field_h;
+        return -ValidationStatusWidget.field_ab + GameApplet.field_h;
     }
 
     final bf d(int param0, int param1) {
@@ -229,7 +229,7 @@ final class bf {
             }
             this.field_k.draw(var6_int, var7);
           }
-          var6 = param3.b(param4, 0);
+          var6 = param3.resolveDisplayText(param4, 0);
           if (var6 != null &&
             param3.field_l != null &&
             this.field_d >= 0) {

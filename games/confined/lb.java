@@ -105,11 +105,11 @@ final class lb extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, double param4, od param5) {
+    final static void a(int param0, int param1, int param2, int param3, double param4, MeshData param5) {
         TriangleRasterizer.setProjectionCenter(param3 + 24, param0 + 24);
         int var7_int = (int)(Math.cos((double)(qn.field_r & 511) * 0.03681553890925539) * 65536.0);
         int var8 = (int)(65536.0 * Math.sin(0.03681553890925539 * (double)(511 & qn.field_r)));
-        SoftwareModelMesh var9 = (SoftwareModelMesh) (param5.a(96, 455, -var8 / 256, -192, var7_int / 256));
+        SoftwareModelMesh var9 = (SoftwareModelMesh) (param5.createModel(96, 455, -var8 / 256, -192, var7_int / 256));
         ArchiveRequest.field_u[11] = -var7_int;
         ArchiveRequest.field_u[9] = -var8;
         if (param1 < 32) {

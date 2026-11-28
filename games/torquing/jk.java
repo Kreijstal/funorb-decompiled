@@ -39,8 +39,8 @@ final class jk {
               ResourceArchive.field_j.drawScaled(-(var1_int / 2) + je.field_a, -(var2 / 2) + kc.field_v, var1_int, var2);
             }
           } else {
-            AlphaWidgetContainer.field_F.drawTranslucentSprite(false, ub.field_E, ra.field_e);
-            VertexMesh.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + VertexMesh.field_l.field_t / 2, VertexMesh.field_l.field_s / 2 + ub.field_E);
+            AlphaWidgetContainer.field_F.drawTranslucentSprite(false, ValidationStatusIcon.field_E, ra.field_e);
+            VertexMesh.field_l.b(4096, 1326547364, tj.field_l, ra.field_e + VertexMesh.field_l.field_t / 2, VertexMesh.field_l.field_s / 2 + ValidationStatusIcon.field_E);
           }
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
           if (param0 >= -32) {

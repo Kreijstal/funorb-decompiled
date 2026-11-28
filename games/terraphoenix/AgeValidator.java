@@ -78,9 +78,9 @@ final class AgeValidator extends TextFieldValidator {
           }
           if (null == oa.field_c) {
             oa.field_c = new int[2 * param0];
-            if (null == dd.field_L ||
-              !(param0 <= dd.field_L.length)) {
-              dd.field_L = new int[2 * param0];
+            if (null == ValidationStatusIcon.field_L ||
+              !(param0 <= ValidationStatusIcon.field_L.length)) {
+              ValidationStatusIcon.field_L = new int[2 * param0];
             }
             if (ContentTransitionDialog.field_bb == null) {
               ContentTransitionDialog.field_bb = new int[param0 * 2];
@@ -120,9 +120,9 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             if (oa.field_c.length < param0) {
               oa.field_c = new int[2 * param0];
-              if (null == dd.field_L ||
-                !(param0 <= dd.field_L.length)) {
-                dd.field_L = new int[2 * param0];
+              if (null == ValidationStatusIcon.field_L ||
+                !(param0 <= ValidationStatusIcon.field_L.length)) {
+                ValidationStatusIcon.field_L = new int[2 * param0];
               }
               if (ContentTransitionDialog.field_bb == null ||
                 !(ContentTransitionDialog.field_bb.length >= param0)) {
@@ -133,9 +133,9 @@ final class AgeValidator extends TextFieldValidator {
                 pf.field_b = new int[2 * (param1 + param0)];
               }
             } else {
-              if (null == dd.field_L ||
-                !(param0 <= dd.field_L.length)) {
-                dd.field_L = new int[2 * param0];
+              if (null == ValidationStatusIcon.field_L ||
+                !(param0 <= ValidationStatusIcon.field_L.length)) {
+                ValidationStatusIcon.field_L = new int[2 * param0];
               }
               if (ContentTransitionDialog.field_bb == null) {
                 ContentTransitionDialog.field_bb = new int[param0 * 2];
@@ -180,9 +180,9 @@ final class AgeValidator extends TextFieldValidator {
         }
         if (null != oa.field_c &&
           oa.field_c.length >= param0) {
-          if (null == dd.field_L ||
-            !(param0 <= dd.field_L.length)) {
-            dd.field_L = new int[2 * param0];
+          if (null == ValidationStatusIcon.field_L ||
+            !(param0 <= ValidationStatusIcon.field_L.length)) {
+            ValidationStatusIcon.field_L = new int[2 * param0];
           }
           if (ContentTransitionDialog.field_bb == null ||
             !(ContentTransitionDialog.field_bb.length >= param0)) {
@@ -204,8 +204,8 @@ final class AgeValidator extends TextFieldValidator {
           return;
         }
         oa.field_c = new int[2 * param0];
-        if (null == dd.field_L) {
-          dd.field_L = new int[2 * param0];
+        if (null == ValidationStatusIcon.field_L) {
+          ValidationStatusIcon.field_L = new int[2 * param0];
           if (ContentTransitionDialog.field_bb == null ||
             !(ContentTransitionDialog.field_bb.length >= param0)) {
             ContentTransitionDialog.field_bb = new int[param0 * 2];
@@ -219,8 +219,8 @@ final class AgeValidator extends TextFieldValidator {
             MapTile.field_y = new boolean[param0 * 2];
           }
         } else {
-          if (param0 > dd.field_L.length) {
-            dd.field_L = new int[2 * param0];
+          if (param0 > ValidationStatusIcon.field_L.length) {
+            ValidationStatusIcon.field_L = new int[2 * param0];
           }
           if (ContentTransitionDialog.field_bb == null ||
             !(ContentTransitionDialog.field_bb.length >= param0)) {

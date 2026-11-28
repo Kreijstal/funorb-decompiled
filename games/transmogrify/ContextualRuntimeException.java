@@ -1658,7 +1658,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_passlength", (byte) 126);
                 if (var2 != null) {
-                  ob.field_I = eg.a(114, var2);
+                  ValidationStatusWidget.field_I = eg.a(114, var2);
                 }
                 var2 = kb.a("create_alert_passcontainsname", (byte) 113);
                 if (null != var2) {
@@ -2084,7 +2084,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("previous", (byte) 115);
                 if (var2 != null) {
-                  ob.field_M = eg.a(89, var2);
+                  ValidationStatusWidget.field_M = eg.a(89, var2);
                 }
                 var2 = kb.a("prev", (byte) 111);
                 if (var2 != null) {

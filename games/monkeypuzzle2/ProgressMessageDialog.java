@@ -80,10 +80,10 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
 
     final static float a(byte param0, float param1) {
         if (param0 == 51) {
-          return vh.field_H[(int)((double)(32768.0f * param1) / 3.141592653589793) & 65535];
+          return ValidationStatusIcon.field_H[(int)((double)(32768.0f * param1) / 3.141592653589793) & 65535];
         }
         ProgressMessageDialog.a((byte) 30, 0.09005918353796005f);
-        return vh.field_H[(int)((double)(32768.0f * param1) / 3.141592653589793) & 65535];
+        return ValidationStatusIcon.field_H[(int)((double)(32768.0f * param1) / 3.141592653589793) & 65535];
     }
 
     final static String a(byte param0, long param1) {
@@ -180,7 +180,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
           var4 = var6;
           if (param2 == 5) {
             var6.addActionButton((byte) -116, 11, NodeHashTableIterator.field_g);
-            var6.addActionButton((byte) 102, 17, vh.field_L);
+            var6.addActionButton((byte) 102, 17, ValidationStatusIcon.field_L);
           } else {
             if (param2 == 256) {
               var6.addListenerButton(0, (WidgetEventListener) (this), qd.field_c);

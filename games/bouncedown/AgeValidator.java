@@ -81,7 +81,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 84) {
-            stackIn_4_0 = la.field_D.getFileByName("", param1, -11);
+            stackIn_4_0 = ValidationStatusIcon.field_D.getFileByName("", param1, -11);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

@@ -63,7 +63,7 @@ final class rt {
           return;
         }
         try {
-          oea.field_p.a(128, (byte) 39, 9);
+          oea.field_p.setChannelProgram(128, (byte) 39, 9);
           lfa.a(22050, param2, true, (byte) 107, oea.field_p, (java.awt.Component) ((Object) param0));
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "rt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

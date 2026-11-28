@@ -119,7 +119,7 @@ final class AdminCheatOverlay {
             if (2 != var5) {
               if (var5 == 3) {
                 param0 = 320;
-                FrameTimer.field_f.drawCentred(dd.field_O[0], 320, 468, 13881286, -1);
+                FrameTimer.field_f.drawCentred(ValidationStatusIcon.field_O[0], 320, 468, 13881286, -1);
                 param2 = 76;
                 param2 += 32;
                 pf.field_a[3].draw(0, 0);
@@ -133,7 +133,7 @@ final class AdminCheatOverlay {
                   } else {
                     AccountRequestState.field_f.drawString("0" + var5 + ". ", param0 + 32, param2 - 9, 16580223, 0);
                   }
-                  param2 = param2 + 11 * (1 + sj.a(16777215, 20, param2, 320 + param0 - 16, 12, param0 + 48, dd.field_O[var5], 0));
+                  param2 = param2 + 11 * (1 + sj.a(16777215, 20, param2, 320 + param0 - 16, 12, param0 + 48, ValidationStatusIcon.field_O[var5], 0));
                   if (param2 > 429) {
                     param0 += 310;
                     param2 = var4;

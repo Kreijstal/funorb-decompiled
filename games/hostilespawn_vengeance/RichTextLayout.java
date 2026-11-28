@@ -119,7 +119,7 @@ final class RichTextLayout extends TextLayout {
               if (param6 != 3) {
                 stackIn_38_0 = 0;
               } else {
-                stackIn_38_0 = this.a(param4.stringWidth(var13), param2, 41, var13);
+                stackIn_38_0 = this.computeJustificationStep(param4.stringWidth(var13), param2, 41, var13);
               }
               AgeValidator.a(stackIn_38_0, (byte) 98, param4, var13, var14);
             }

@@ -365,13 +365,13 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final void g(byte param0) {
+    final void clearCredentials(byte param0) {
         int var2 = -102 % ((param0 - 40) / 38);
         this.field_N.clearText(-12881);
         this.field_U.clearText(-12881);
     }
 
-    final void a(String param0, int param1) {
+    final void setAccountAndClearPassword(String param0, int param1) {
         EditableTextField var3 = null;
         String var4 = null;
         if (param1 != 20) {
@@ -387,7 +387,7 @@ final class LoginPanel extends DequeWidgetContainer implements TextFieldListener
         }
     }
 
-    final String i(byte param0) {
+    final String getAccountIdentifier(byte param0) {
         if (this.field_N.field_v == null) {
           return "";
         }

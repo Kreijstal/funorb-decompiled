@@ -156,7 +156,7 @@ final class IntrusiveDeque {
               } else {
                 param1 = DisplayNameSelectionPanel.field_R;
               }
-              ResourceArchive.field_b.a(pi.field_a, 20);
+              ResourceArchive.field_b.setAccountAndClearPassword(pi.field_a, 20);
             }
             if (param0 == 10) {
               var4 = 0;
@@ -176,7 +176,7 @@ final class IntrusiveDeque {
                 return;
               }
               if (!SecondaryNodeHashTable.field_g) {
-                ResourceArchive.field_b.g((byte) -14);
+                ResourceArchive.field_b.clearCredentials((byte) -14);
                 return;
               }
             }

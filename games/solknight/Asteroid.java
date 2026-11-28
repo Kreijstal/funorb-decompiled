@@ -127,7 +127,7 @@ final class Asteroid {
                     this.a(9, -19, 16);
                     break regionExit1;
                   }
-                  pk.a((byte) 32, new Asteroid(12, this));
+                  ValidationStatusWidget.a((byte) 32, new Asteroid(12, this));
                 }
                 this.a(9, -19, 16);
               } else {
@@ -139,9 +139,9 @@ final class Asteroid {
                   this.field_g = 5;
                   this.field_e = this.field_e + 1;
                   if (0 == this.field_e % 10) {
-                    pk.a((byte) 32, new Asteroid(8, this));
+                    ValidationStatusWidget.a((byte) 32, new Asteroid(8, this));
                     if (this.field_e % 2 == 0) {
-                      pk.a((byte) 32, new Asteroid(12, this));
+                      ValidationStatusWidget.a((byte) 32, new Asteroid(12, this));
                     }
                   }
                   this.field_g = 32;
@@ -157,40 +157,40 @@ final class Asteroid {
                     var10 = new Asteroid(0, this);
                     var10.field_c = this.field_c / 3 + this.field_d / 4;
                     var10.field_d = -(this.field_c / 4) + this.field_d / 3;
-                    pk.a((byte) 32, var10);
+                    ValidationStatusWidget.a((byte) 32, var10);
                     var11 = new Asteroid(0, this);
                     var11.field_c = this.field_d / 5 + this.field_c / 2;
                     var11.field_d = -(this.field_c / 5) + this.field_d / 2;
-                    pk.a((byte) 32, var11);
+                    ValidationStatusWidget.a((byte) 32, var11);
                     var12 = new Asteroid(0, this);
                     var12.field_c = this.field_c / 3 - this.field_d / 4;
                     var12.field_d = this.field_d / 3 + this.field_c / 4;
-                    pk.a((byte) 32, var12);
+                    ValidationStatusWidget.a((byte) 32, var12);
                     var13 = new Asteroid(0, this);
                     var13.field_c = -(this.field_d / 5) + this.field_c / 2;
                     var13.field_d = this.field_c / 5 + this.field_d / 2;
-                    pk.a((byte) 32, var13);
+                    ValidationStatusWidget.a((byte) 32, var13);
                     if (SectorCacheStore.field_h == 2) {
                       var14 = new Asteroid(0, this);
                       var14.field_d = this.field_d / 3;
                       var14.field_c = this.field_c / 3;
-                      pk.a((byte) 32, var14);
+                      ValidationStatusWidget.a((byte) 32, var14);
                       var15 = new Asteroid(0, this);
                       var15.field_c = this.field_c / 5 + this.field_d / 2;
                       var15.field_d = -(this.field_c / 2) + this.field_d / 5;
-                      pk.a((byte) 32, var15);
+                      ValidationStatusWidget.a((byte) 32, var15);
                       var16 = new Asteroid(0, this);
                       var16.field_c = this.field_d / 4 + this.field_c / 4;
                       var16.field_d = this.field_d / 4 - this.field_c / 4;
-                      pk.a((byte) 32, var16);
+                      ValidationStatusWidget.a((byte) 32, var16);
                       var17 = new Asteroid(0, this);
                       var17.field_c = -(this.field_d / 2) + this.field_c / 5;
                       var17.field_d = this.field_c / 2 + this.field_d / 5;
-                      pk.a((byte) 32, var17);
+                      ValidationStatusWidget.a((byte) 32, var17);
                       var18 = new Asteroid(0, this);
                       var18.field_c = this.field_c / 4 - this.field_d / 4;
                       var18.field_d = this.field_d / 4 + this.field_c / 4;
-                      pk.a((byte) 32, var18);
+                      ValidationStatusWidget.a((byte) 32, var18);
                     }
                     this.field_c = 2 * this.field_c / 3;
                     this.field_d = 2 * this.field_d / 3;
@@ -200,7 +200,7 @@ final class Asteroid {
                     this.field_e = this.field_e + 1;
                     this.field_g = 6;
                     if (0 == this.field_e % 4) {
-                      pk.a((byte) 32, new Asteroid(8, this));
+                      ValidationStatusWidget.a((byte) 32, new Asteroid(8, this));
                     }
                     if (this.field_e % 2 == 0) {
                       var4 = 15 & this.field_e >> 1;
@@ -211,7 +211,7 @@ final class Asteroid {
                       var4 -= 4;
                       var19.field_a = var19.field_a - this.field_d * var4 / 4;
                       var19.field_b = var19.field_b + var4 * this.field_c / 4;
-                      pk.a((byte) 32, var19);
+                      ValidationStatusWidget.a((byte) 32, var19);
                     }
                     if (SectorCacheStore.field_h < 2) {
                       this.a(10, -19, 16);
@@ -252,7 +252,7 @@ final class Asteroid {
                         }
                         ((Asteroid) (var3)).field_d = this.field_d;
                         ((Asteroid) (var3)).field_c = this.field_c;
-                        pk.a((byte) 32, (Asteroid) (var3));
+                        ValidationStatusWidget.a((byte) 32, (Asteroid) (var3));
                         if (SectorCacheStore.field_h == 0) {
                           this.a(13, -19, 1);
                         }
@@ -266,7 +266,7 @@ final class Asteroid {
                           this.field_e < 10 + 10 * SectorCacheStore.field_h) {
                           this.field_e = this.field_e + 1;
                           var20 = new Asteroid(13, this);
-                          pk.a((byte) 32, var20);
+                          ValidationStatusWidget.a((byte) 32, var20);
                           this.field_j = 5;
                         }
                       } else {
@@ -449,7 +449,7 @@ final class Asteroid {
                                               RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                               for (var4 = 0; var4 < 8; var4++) {
                                                 var22 = new Asteroid(31, this);
-                                                pk.a((byte) 32, var22);
+                                                ValidationStatusWidget.a((byte) 32, var22);
                                               }
                                               mb.a(true, 29, 256);
                                               this.field_j = this.field_j - 5;
@@ -505,7 +505,7 @@ final class Asteroid {
                                                 RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                 for (var4 = 0; var4 < 12; var4++) {
                                                   var23 = new Asteroid(31, this);
-                                                  pk.a((byte) 32, var23);
+                                                  ValidationStatusWidget.a((byte) 32, var23);
                                                 }
                                                 mb.a(true, 28, 256);
                                                 this.field_d = 0;
@@ -561,7 +561,7 @@ final class Asteroid {
                                                   RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                   for (var4 = 0; 16 > var4; var4++) {
                                                     var24 = new Asteroid(31, this);
-                                                    pk.a((byte) 32, var24);
+                                                    ValidationStatusWidget.a((byte) 32, var24);
                                                   }
                                                   mb.a(true, 27, 256);
                                                   this.field_e = 0;
@@ -617,7 +617,7 @@ final class Asteroid {
                                                     RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                     for (var4 = 0; 32 > var4; var4++) {
                                                       var25 = new Asteroid(31, this);
-                                                      pk.a((byte) 32, var25);
+                                                      ValidationStatusWidget.a((byte) 32, var25);
                                                     }
                                                     mb.a(true, 26, 256);
                                                     pl.field_a = pl.field_a + 5 * RichTextLayout.field_p;
@@ -695,7 +695,7 @@ final class Asteroid {
                                                     RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                     for (var4 = 0; var4 < 32; var4++) {
                                                       var26 = new Asteroid(31, this);
-                                                      pk.a((byte) 32, var26);
+                                                      ValidationStatusWidget.a((byte) 32, var26);
                                                     }
                                                     mb.a(true, 26, 256);
                                                     NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + 6 * (lc.field_h >>> 17);
@@ -744,7 +744,7 @@ final class Asteroid {
                             var21.field_d = this.field_d;
                             var21.field_g = this.field_g;
                             var21.field_c = this.field_c;
-                            pk.a((byte) 32, var21);
+                            ValidationStatusWidget.a((byte) 32, var21);
                             this.a(10, -19, 0);
                             if (this.field_j == 10) {
                               var4 = this.field_g;
@@ -774,10 +774,10 @@ final class Asteroid {
                   SectorCacheStore.field_h == 2 &&
                   this.field_e % 5 == 0) {
                   if (this.field_e < 100) {
-                    pk.a((byte) 32, new Asteroid(8, this));
+                    ValidationStatusWidget.a((byte) 32, new Asteroid(8, this));
                   }
                   if (this.field_e < 100) {
-                    pk.a((byte) 32, new Asteroid(12, this));
+                    ValidationStatusWidget.a((byte) 32, new Asteroid(12, this));
                   }
                 }
                 if (this.field_e < 100) {
@@ -903,7 +903,7 @@ final class Asteroid {
                     if (9 == this.field_j) {
                       for (var9 = 0; var9 < 2; var9++) {
                         var13 = new Asteroid(31, this);
-                        pk.a((byte) 32, var13);
+                        ValidationStatusWidget.a((byte) 32, var13);
                         var13.field_c = bk.a(32, jb.field_g, (byte) 59) - 16;
                         var13.field_d = -16 + bk.a(32, jb.field_g, (byte) 84);
                       }
@@ -911,7 +911,7 @@ final class Asteroid {
                     if (this.field_j == 12) {
                       for (var9Lifetime1 = 0; var9Lifetime1 < 1; var9Lifetime1++) {
                         var14 = new Asteroid(31, this);
-                        pk.a((byte) 32, var14);
+                        ValidationStatusWidget.a((byte) 32, var14);
                         var14.field_c = -16 + bk.a(32, jb.field_g, (byte) 65);
                         var14.field_d = bk.a(32, jb.field_g, (byte) 123) - 16;
                       }
@@ -919,7 +919,7 @@ final class Asteroid {
                     if (this.field_j == 17) {
                       for (var9Lifetime2 = 0; var9Lifetime2 < 2; var9Lifetime2++) {
                         var15 = new Asteroid(31, this);
-                        pk.a((byte) 32, var15);
+                        ValidationStatusWidget.a((byte) 32, var15);
                         var15.field_c = bk.a(32, jb.field_g, (byte) 74) - 16;
                         var15.field_d = bk.a(32, jb.field_g, (byte) 79) - 16;
                       }
@@ -927,7 +927,7 @@ final class Asteroid {
                     if (this.field_j == 18) {
                       for (var9Lifetime3 = 0; 4 > var9Lifetime3; var9Lifetime3++) {
                         var16 = new Asteroid(31, this);
-                        pk.a((byte) 32, var16);
+                        ValidationStatusWidget.a((byte) 32, var16);
                         var16.field_c = bk.a(32, jb.field_g, (byte) 111) - 16;
                         var16.field_d = -16 + bk.a(32, jb.field_g, (byte) -127);
                       }

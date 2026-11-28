@@ -44,7 +44,7 @@ final class he {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ final class he {
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw ld.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2_ref), "he.B(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2_ref), "he.B(" + param0 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var1), "he.D(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var1), "he.D(" + param0 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var2), "he.<init>(" + param0 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var2), "he.<init>(" + param0 + ')');
         }
     }
 
@@ -328,7 +328,7 @@ final class he {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw ld.wrapClientException((Throwable) ((Object) var4_ref), "he.A(" + param0 + ',' + param1 + ')');
+          throw ValidationStatusIcon.wrapClientException((Throwable) ((Object) var4_ref), "he.A(" + param0 + ',' + param1 + ')');
         }
     }
 

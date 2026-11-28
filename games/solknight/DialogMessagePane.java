@@ -1155,7 +1155,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
                 var2 = vd.a("pleasetryagain", 4);
                 if (null != var2) {
-                  kc.field_L = Archive.decodeCp1252(true, var2);
+                  ValidationStatusIcon.field_L = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("pleasereenterpass", 4);
                 if (var2 != null) {
@@ -1537,7 +1537,7 @@ final class DialogMessagePane extends WidgetContainer implements WidgetActivatio
                 }
                 var2 = vd.a("create_password_confirm", 4);
                 if (null != var2) {
-                  pk.field_X = Archive.decodeCp1252(true, var2);
+                  ValidationStatusWidget.field_X = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_email", 4);
                 if (var2 != null) {

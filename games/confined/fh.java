@@ -254,7 +254,7 @@ final class fh {
                 param2 = ml.field_b;
               }
               param0 = 2;
-              om.field_p.a(0, kj.field_c);
+              om.field_p.setAccountAndClearPassword(0, kj.field_c);
             }
             if (param0 == 10) {
               StripedProgressWidget.c(false);
@@ -276,7 +276,7 @@ final class fh {
               if (IntrusiveNode.field_f) {
                 return;
               }
-              om.field_p.g((byte) -104);
+              om.field_p.clearCredentials((byte) -104);
             }
           }
         } catch (RuntimeException runtimeException) {

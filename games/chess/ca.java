@@ -129,10 +129,10 @@ final class ca {
         String var18Lifetime1;
         var19 = Chess.field_G;
         try {
-          stackIn_4_0 = ea.field_bb.field_Kb;
-          stackIn_5_1 = (ud.field_d == ea.field_bb.field_Kb);
+          stackIn_4_0 = ValidationStatusWidget.field_bb.field_Kb;
+          stackIn_5_1 = (ud.field_d == ValidationStatusWidget.field_bb.field_Kb);
           var3_int = ((nb) (Object) stackIn_4_0).a(stackIn_5_1, param0, 2, param1 * (SoundCache.field_g + 2) * 3, 2 + SoundCache.field_g, 0) ? 1 : 0;
-          var4 = ea.field_bb.field_Fb.field_I;
+          var4 = ValidationStatusWidget.field_bb.field_Fb.field_I;
           var5 = null;
           if (param2 > -94) {
             field_c = (String) null;
@@ -142,20 +142,20 @@ final class ca {
             hb.field_a.field_tb = false;
             oj.field_c.field_db = m.field_c;
             if (ld.field_g == 1) {
-              ea.field_bb.field_Kb.field_Jb.field_db = ProgressDialog.field_db;
+              ValidationStatusWidget.field_bb.field_Kb.field_Jb.field_db = ProgressDialog.field_db;
               if (var19 != 0) {
-                ea.field_bb.field_Kb.field_Jb.field_db = field_c;
+                ValidationStatusWidget.field_bb.field_Kb.field_Jb.field_db = field_c;
               }
             } else {
-              ea.field_bb.field_Kb.field_Jb.field_db = field_c;
+              ValidationStatusWidget.field_bb.field_Kb.field_Jb.field_db = field_c;
             }
-            ModalDialogHost.a(ea.field_bb.field_Fb, -123);
+            ModalDialogHost.a(ValidationStatusWidget.field_bb.field_Fb, -123);
             decompiledFrameRemainder1 = (var19 != 0);
           }
           if (decompiledFrameRemainder1) {
             hb.field_a.field_tb = true;
             oj.field_c.field_db = MatchingFieldValidator.a(gf.field_g, new String[]{ByteStorage.field_a}, (byte) -59);
-            ea.field_bb.field_Kb.field_Jb.field_db = null;
+            ValidationStatusWidget.field_bb.field_Kb.field_Jb.field_db = null;
             var6 = null;
             var7 = (ve) (var4.beginBackward(-18110));
             while (true) {
@@ -174,7 +174,7 @@ final class ca {
                     var7.h(0);
                     var8 = 1;
                   }
-                  var7.field_M = ea.field_bb.field_Fb.field_M;
+                  var7.field_M = ValidationStatusWidget.field_bb.field_Fb.field_M;
                   var9 = 0;
                   if (null != var7.field_Lb) {
                     if (ByteStorage.field_a != var7.field_Lb) {
@@ -233,13 +233,13 @@ final class ca {
                     var7.field_N = var9 - var7.field_pb;
                   }
                   if (var8 != 0) {
-                    ea.field_bb.field_Fb.a(true, (ci) (var6), 2, var7);
+                    ValidationStatusWidget.field_bb.field_Fb.a(true, (ci) (var6), 2, var7);
                   }
                   if (var7.field_Eb == null ||
                     !var7.field_Eb.field_F) {
                     if (var7.field_L != 0) {
                       var16 = var7.field_Fb;
-                      DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 68, ea.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
+                      DirectByteStorage.$cfr$intArgs$a$c398e174f2fe(0L, (String) null, 68, ValidationStatusWidget.field_bb.field_Kb, -1, var7, (int[]) null, -1, var16);
                       if (var7.field_Lb != null &&
                         !am.a(false, pi.field_d.field_i) &&
                         !qf.field_b) {
@@ -265,18 +265,18 @@ final class ca {
                   continue;
                 }
               } else {
-                decompiledFrameRemainder0 = (0 != ea.field_bb.field_Hb.field_L);
+                decompiledFrameRemainder0 = (0 != ValidationStatusWidget.field_bb.field_Hb.field_L);
                 if (decompiledFrameRemainder0) {
-                  me.field_a = new kd(ea.field_bb.field_Hb.field_U, ea.field_bb.field_Hb.field_wb, ea.field_bb.field_Hb.field_M, ea.field_bb.field_Hb.field_pb, MatchingFieldValidator.field_r, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
+                  me.field_a = new kd(ValidationStatusWidget.field_bb.field_Hb.field_U, ValidationStatusWidget.field_bb.field_Hb.field_wb, ValidationStatusWidget.field_bb.field_Hb.field_M, ValidationStatusWidget.field_bb.field_Hb.field_pb, MatchingFieldValidator.field_r, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
                 }
               }
               if (decompiledFrameRemainder0) {
                 pk.field_b = 0;
               }
-              if (ea.field_bb.field_Mb.field_L == 0) {
+              if (ValidationStatusWidget.field_bb.field_Mb.field_L == 0) {
                 break;
               }
-              me.field_a = new kd(ea.field_bb.field_Mb.field_U, ea.field_bb.field_Mb.field_wb, ea.field_bb.field_Mb.field_M, ea.field_bb.field_Mb.field_pb, FullscreenFocusCanvas.field_i, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
+              me.field_a = new kd(ValidationStatusWidget.field_bb.field_Mb.field_U, ValidationStatusWidget.field_bb.field_Mb.field_wb, ValidationStatusWidget.field_bb.field_Mb.field_M, ValidationStatusWidget.field_bb.field_Mb.field_pb, FullscreenFocusCanvas.field_i, od.field_V, EditableTextField.field_P, EditableTextField.field_P);
               pk.field_b = 1;
               break;
             }

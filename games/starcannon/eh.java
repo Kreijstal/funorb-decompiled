@@ -774,7 +774,7 @@ abstract class eh {
                 }
                 var2 = rd.a("loading", 75);
                 if (null != var2) {
-                  pa.field_J = DualLinkNode.a(param0 + 53, var2);
+                  ValidationStatusWidget.field_J = DualLinkNode.a(param0 + 53, var2);
                 }
                 var2 = rd.a("offline", -65);
                 if (var2 != null) {

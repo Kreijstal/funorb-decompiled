@@ -4,14 +4,14 @@
 final class aj {
     static int field_a;
     static int field_b;
-    static pa[] field_c;
+    static MeshData[] field_c;
 
     public static void clearStaticReferences(byte param0) {
         field_c = null;
         if (param0 >= 49) {
           return;
         }
-        field_c = (pa[]) null;
+        field_c = (MeshData[]) null;
     }
 
     final static void a(int param0, int param1) {

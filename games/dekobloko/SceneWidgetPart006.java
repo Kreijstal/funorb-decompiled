@@ -149,7 +149,7 @@ final class SceneWidgetPart006 extends SceneWidget {
           }
           MixedSupport040.booleanState0047 = false;
           MixedSupport016.sceneWidgetPart013State0001 = null;
-          UiComponentPart011.sceneWidgetPart013State0002 = null;
+          ValidationStatusIcon.sceneWidgetPart013State0002 = null;
           if (null != MixedSupport057.nodeDequeState0010) {
             MixedSupport057.nodeDequeState0010.clear(120);
             MixedSupport057.nodeDequeState0010 = null;

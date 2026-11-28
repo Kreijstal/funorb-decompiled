@@ -209,7 +209,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               il.field_a = null;
             } else {
               if (il.field_a.tryLoadGroupByName("", -123)) {
-                je.a(il.field_a, -30);
+                ValidationStatusIcon.a(il.field_a, -30);
                 il.field_a = null;
                 fleas.h((byte) 76);
               }

@@ -443,7 +443,7 @@ class DequeWidgetContainer extends UiWidget implements WidgetContainerMarker {
           if (80 != var7) {
             return false;
           }
-          if (ve.field_B[81]) {
+          if (ValidationStatusIcon.field_B[81]) {
             stackIn_13_0 = this.focusPreviousChild(2, param1);
           } else {
             stackIn_13_0 = this.focusNextChild(param1, 56);

@@ -693,7 +693,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == vk.field_B &&
             !AlphaWidgetContainer.field_E) {
             DebouncedFieldValidator.field_d = km.correctedCurrentTimeMillis(-1);
-            ub.sleepMillis(1976, 5000L);
+            ValidationStatusIcon.sleepMillis(1976, 5000L);
             FullscreenFocusCanvas.field_f = null;
             this.shutdownApplet(false, -11);
             return;
@@ -715,9 +715,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = km.correctedCurrentTimeMillis(param0 ^ 18221);
-          var4 = ui.field_l[ub.field_C];
-          ui.field_l[ub.field_C] = var2_long;
-          ub.field_C = 1 + ub.field_C & 31;
+          var4 = ui.field_l[ValidationStatusIcon.field_C];
+          ui.field_l[ValidationStatusIcon.field_C] = var2_long;
+          ValidationStatusIcon.field_C = 1 + ValidationStatusIcon.field_C & 31;
           if (var4 != 0L &&
             var4 < var2_long) {
           }
@@ -998,7 +998,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var9 = ArchiveRequest.field_u.requestThreadStart((byte) -91, 1, (Runnable) (this));
               while (true) {
                 if (var9.status == 0) {
-                  ub.sleepMillis(1976, 10L);
+                  ValidationStatusIcon.sleepMillis(1976, 10L);
                   if (var10 == 0) {
                     continue;
                   }

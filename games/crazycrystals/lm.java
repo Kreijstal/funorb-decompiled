@@ -27,7 +27,7 @@ final class lm {
           ArchiveRequest.field_m = false;
           WallTile.field_v = AlphaWidgetContainer.field_y;
           to.field_a = FloatingScoreLabel.field_g;
-          ProfileDataRequest.field_h = sb.field_I;
+          ProfileDataRequest.field_h = ValidationStatusIcon.field_I;
           AlphaWidgetContainer.field_y = 0;
           var2 = 33 % ((-53 - param0) / 49);
         }

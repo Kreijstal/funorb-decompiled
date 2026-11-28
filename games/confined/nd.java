@@ -56,11 +56,11 @@ abstract class nd extends DualLinkNode {
     final static void e(byte param0) {
         int var1_int = 0;
         int var2 = 0;
-        od[] dupTemp$0 = null;
-        od dupTemp$1 = null;
+        MeshData[] dupTemp$0 = null;
+        MeshData dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        od var3 = null;
+        MeshData var3 = null;
         int var4 = 0;
         var4 = Confined.field_J ? 1 : 0;
         try {
@@ -70,10 +70,10 @@ abstract class nd extends DualLinkNode {
           for (var1_int = 1; var1_int < 3; var1_int++) {
             for (var2 = 0; 4 > var2; var2++) {
               dupTemp$0 = DisplayNameSelectionPanel.field_R[var1_int];
-              dupTemp$1 = new od(DisplayNameSelectionPanel.field_R[-1 + var1_int][var2], false, true, true, true);
+              dupTemp$1 = new MeshData(DisplayNameSelectionPanel.field_R[-1 + var1_int][var2], false, true, true, true);
               dupTemp$0[var2] = dupTemp$1;
               var3 = dupTemp$1;
-              var3.a(80, 80, 80);
+              var3.scaleVertices(80, 80, 80);
             }
           }
           return;

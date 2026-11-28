@@ -26,7 +26,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
     final static String b(int param0) {
         String var1 = "";
         if (null != j.field_e) {
-          var1 = j.field_e.a(32);
+          var1 = j.field_e.getAccountIdentifier(32);
         }
         if (0 == var1.length()) {
           var1 = ByteStorage.c(10367);

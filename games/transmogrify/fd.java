@@ -28,7 +28,7 @@ final class fd {
     final static void a(int param0, boolean param1, String param2, String param3) {
         try {
           kk.field_c = param2;
-          ob.field_F = param3;
+          ValidationStatusWidget.field_F = param3;
           jj.a(param1, gb.field_c, 1702);
           if (param0 < 58) {
             fd.clearStaticReferences(-9);
@@ -55,7 +55,7 @@ final class fd {
             vd.field_a = vd.field_a + 1;
             if (0 > TileRack.field_b) {
               for (var2 = 0; 112 > var2; var2++) {
-                ve.field_B[var2] = false;
+                ValidationStatusIcon.field_B[var2] = false;
               }
               TileRack.field_b = sc.field_a;
             } else {
@@ -63,10 +63,10 @@ final class fd {
                 var2 = SpriteState.field_p[sc.field_a];
                 sc.field_a = 127 & sc.field_a + 1;
                 if (var2 < 0) {
-                  ve.field_B[~var2] = false;
+                  ValidationStatusIcon.field_B[~var2] = false;
                   continue;
                 }
-                ve.field_B[var2] = true;
+                ValidationStatusIcon.field_B[var2] = true;
               }
             }
             bf.field_B = dk.field_i;

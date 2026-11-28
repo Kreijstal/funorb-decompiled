@@ -45,7 +45,7 @@ final class te {
               } else {
                 param2 = k.field_f;
               }
-              MidiPcmStream.field_O.a(TextLayout.field_b, 10);
+              MidiPcmStream.field_O.setAccountAndClearPassword(TextLayout.field_b, 10);
             }
             if (param1 == 10) {
               qk.d((byte) -80);
@@ -63,7 +63,7 @@ final class te {
             if (param1 != 256 &&
               param1 != 10 &&
               !eb.field_m) {
-              MidiPcmStream.field_O.h(~param0);
+              MidiPcmStream.field_O.clearCredentials(~param0);
               return;
             }
           }

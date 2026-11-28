@@ -1204,7 +1204,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -85, "GAMECOMPLETE");
                 if (var2 != null) {
-                  lr.field_I = in.a(0, var2);
+                  ValidationStatusIcon.field_I = in.a(0, var2);
                 }
                 var2 = en.a((byte) -57, "PERCENTBLUE");
                 if (null != var2) {
@@ -1216,7 +1216,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -67, "NEXTLEVELIN");
                 if (null != var2) {
-                  lr.field_T = in.a(0, var2);
+                  ValidationStatusIcon.field_T = in.a(0, var2);
                 }
                 var2 = en.a((byte) -29, "DEATHMATCH");
                 if (null != var2) {
@@ -1408,7 +1408,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -66, "TIMEATTACK_PLUS");
                 if (null != var2) {
-                  lr.field_K = in.a(0, var2);
+                  ValidationStatusIcon.field_K = in.a(0, var2);
                 }
                 var2 = en.a((byte) -88, "TIMEATTACK_CURRENTMEDAL");
                 if (var2 != null) {

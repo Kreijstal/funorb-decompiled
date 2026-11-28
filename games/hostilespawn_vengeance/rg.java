@@ -80,9 +80,9 @@ final class rg {
           var4 = var14.readUnsignedByte(32270);
           if (0 != var4) {
             var5 = var3.field_j;
-            al.field_M[0] = qg.field_r;
+            ValidationStatusWidget.field_M[0] = qg.field_r;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              al.field_M[var6_int] = var14.o(32);
+              ValidationStatusWidget.field_M[var6_int] = var14.o(32);
             }
             qh.a(var4, var5, param0 + 95);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -101,12 +101,12 @@ final class rg {
             var10 = 0;
             while (var9 < var8) {
               var11 = PasswordValidator.field_s[var9];
-              var6[0][var10] = al.field_M[var11];
+              var6[0][var10] = ValidationStatusWidget.field_M[var11];
               var18[0][4 * var10] = qa.field_d[var11];
               var18[0][4 * var10 + 1] = StandardContentDialog.field_mb[var11];
               var18[0][4 * var10 + 2] = og.field_b[var11];
               var18[0][3 + 4 * var10] = PasswordValidator.field_t[var11];
-              if (pc.a(14088, al.field_M[var11]) &&
+              if (pc.a(14088, ValidationStatusWidget.field_M[var11]) &&
                 0 == PasswordValidator.field_t[var11] + (og.field_b[var11] + StandardContentDialog.field_mb[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -119,12 +119,12 @@ final class rg {
             var10Lifetime1 = var13;
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = PasswordValidator.field_s[var5 + var9Lifetime1];
-              var6[1][var13] = al.field_M[var11Lifetime1];
+              var6[1][var13] = ValidationStatusWidget.field_M[var11Lifetime1];
               var18[1][var13 * 4] = qa.field_d[var11Lifetime1];
               var18[1][var13 * 4 + 1] = StandardContentDialog.field_mb[var11Lifetime1];
               var18[1][2 + var13 * 4] = og.field_b[var11Lifetime1];
               var18[1][var13 * 4 + 3] = PasswordValidator.field_t[var11Lifetime1];
-              if (pc.a(14088, al.field_M[var11Lifetime1]) &&
+              if (pc.a(14088, ValidationStatusWidget.field_M[var11Lifetime1]) &&
                 StandardContentDialog.field_mb[var11Lifetime1] + og.field_b[var11Lifetime1] + PasswordValidator.field_t[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;

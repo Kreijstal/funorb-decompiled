@@ -23,14 +23,14 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         return om.a(DebouncedFieldValidator.c(true), 2);
     }
 
-    private final String j(byte param0) {
+    private final String getLinkCloseMarkup(byte param0) {
         if (param0 != -115) {
           return (String) null;
         }
         return "</col></u>";
     }
 
-    private final int a(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
+    private final int addLabeledFieldWithDefaultValidationMessage(String param0, UiWidget param1, int param2, String param3, int param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -44,7 +44,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         RuntimeException decompiledCaughtException = null;
         try {
           var7_int = -26 / ((param2 + 76) / 46);
-          stackIn_1_0 = this.a(101, param5, param0, param3, param4, param1, 35);
+          stackIn_1_0 = this.addLabeledFieldWithValidationMessage(101, param5, param0, param3, param4, param1, 35);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -113,7 +113,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    private final int a(int param0, String param1, UiWidget param2, int param3, int param4) {
+    private final int addLabeledField(int param0, String param1, UiWidget param2, int param3, int param4) {
         LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -220,9 +220,9 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    private final int a(String param0, int param1, int param2, UiWidget param3, int param4) {
+    private final int addLabeledFieldWithValidationIcon(String param0, int param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
-        ng var7 = null;
+        ValidationStatusIcon var7 = null;
         LabeledWidgetContainer var8 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -234,7 +234,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         try {
           var8 = new LabeledWidgetContainer(20, param2, param1 + 120, 25, param3, false, 120, 3, lp.field_C, 16777215, param0);
           this.addChild((byte) -117, var8);
-          var7 = new ng(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-87));
+          var7 = new ValidationStatusIcon(((FieldValidatorProvider) ((Object) param3)).getFieldValidator(-87));
           this.addChild((byte) -126, var7);
           var7.setBounds(0, 15, var8.field_v + (var8.field_s - 15 >> 1), param4 + var8.field_q + var8.field_x, 15);
           stackIn_1_0 = var8.field_s;
@@ -259,9 +259,9 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    private final int a(int param0, int param1, String param2, String param3, int param4, UiWidget param5, int param6) {
+    private final int addLabeledFieldWithValidationMessage(int param0, int param1, String param2, String param3, int param4, UiWidget param5, int param6) {
         RuntimeException var8 = null;
-        tn var9 = null;
+        ValidationStatusWidget var9 = null;
         int var10 = 0;
         LabeledWidgetContainer var11 = null;
         int stackIn_1_0 = 0;
@@ -277,7 +277,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
           var11 = new LabeledWidgetContainer(20, param1, param4 + 120, 25, param5, false, 120, 3, lp.field_C, 16777215, param2);
           this.addChild((byte) -119, var11);
           var10 = -18 % ((param0 + 13) / 54);
-          var9 = new tn(((FieldValidatorProvider) ((Object) param5)).getFieldValidator(-83), param3, 126, param1 + var11.field_s, 50 + param4, param6);
+          var9 = new ValidationStatusWidget(((FieldValidatorProvider) ((Object) param5)).getFieldValidator(-83), param3, 126, param1 + var11.field_s, 50 + param4, param6);
           var9.field_n = (WidgetEventListener) (this);
           this.addChild((byte) -60, var9);
           stackIn_1_0 = var9.field_s + var11.field_s;
@@ -353,7 +353,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         }
     }
 
-    private final String g(byte param0) {
+    private final String getLinkOpenMarkup(byte param0) {
         if (param0 > -17) {
           PacketBuffer var3 = (PacketBuffer) null;
           AccountRegistrationPanel.a(76, (PacketBuffer) null, -91, 62, -13);
@@ -368,7 +368,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         try {
           if (param0 > -26) {
             UiWidget var5 = (UiWidget) null;
-            discarded$0 = this.a((String) null, 104, -13, (UiWidget) null, -83);
+            discarded$0 = this.addLabeledFieldWithValidationIcon((String) null, 104, -13, (UiWidget) null, -83);
           }
           var3 = this.field_R;
           var4 = param1;
@@ -426,7 +426,7 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         String discarded$0 = null;
         ((AccountNameAvailabilityValidator) (this.field_R.getFieldValidator(-115))).invalidateCheckedName(true);
         if (param0 <= 121) {
-          discarded$0 = this.g((byte) 69);
+          discarded$0 = this.getLinkOpenMarkup((byte) 69);
         }
     }
 
@@ -467,24 +467,24 @@ final class AccountRegistrationPanel extends DequeWidgetContainer implements Tex
         ic dupTemp$1 = new ic(10000536);
         this.field_L.field_o = (WidgetRenderer) ((Object) dupTemp$1);
         this.field_K.field_o = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = StandardContentDialog.a(new String[]{this.g((byte) -47), this.j((byte) -115)}, ae.field_h, 30496);
+        String var2 = StandardContentDialog.a(new String[]{this.getLinkOpenMarkup((byte) -47), this.getLinkCloseMarkup((byte) -115)}, ae.field_h, 30496);
         int var3 = 20;
-        var3 = var3 + this.a(3, mp.field_b, this.field_O, var3, 170);
-        var3 = var3 + (this.a(-96, var3, hp.field_a, "", 170, this.field_U, 20) + 5);
-        var3 = var3 + this.a(3, fk.field_r, this.field_K, var3, 170);
-        var3 = var3 + (5 + this.a(qj.field_a, this.field_L, -126, td.field_b, 170, var3));
-        var3 = var3 + (5 + this.a(wf.field_B, this.field_R, -123, an.field_z, 170, var3));
-        var3 = var3 + this.a(fl.field_o, 170, var3, this.field_S, 3);
+        var3 = var3 + this.addLabeledField(3, mp.field_b, this.field_O, var3, 170);
+        var3 = var3 + (this.addLabeledFieldWithValidationMessage(-96, var3, hp.field_a, "", 170, this.field_U, 20) + 5);
+        var3 = var3 + this.addLabeledField(3, fk.field_r, this.field_K, var3, 170);
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(qj.field_a, this.field_L, -126, td.field_b, 170, var3));
+        var3 = var3 + (5 + this.addLabeledFieldWithDefaultValidationMessage(wf.field_B, this.field_R, -123, an.field_z, 170, var3));
+        var3 = var3 + this.addLabeledFieldWithValidationIcon(fl.field_o, 170, var3, this.field_S, 3);
         LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, -90 + this.field_x, 25, this.field_T, true, this.field_x - 120, 5, ta.field_e, 11579568, lf.field_q);
         this.addChild((byte) -117, var4);
         var3 = var3 + var4.field_s;
         DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(lp.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, lp.field_C.field_H, -1, 2147483647, true);
         this.field_Q = new RichTextWidget(var2, var5);
         this.field_Q.field_i = "";
-        this.field_Q.a(8, 0, kn.field_d);
-        this.field_Q.a(8, 1, kn.field_d);
+        this.field_Q.setHotspotTooltip(8, 0, kn.field_d);
+        this.field_Q.setHotspotTooltip(8, 1, kn.field_d);
         this.field_Q.field_n = (WidgetEventListener) (this);
-        this.field_Q.a(46, (byte) -70, -90 + this.field_x, var3);
+        this.field_Q.setTextBounds(46, (byte) -70, -90 + this.field_x, var3);
         var3 = var3 + (15 + this.field_Q.field_s);
         this.addChild((byte) -46, this.field_Q);
         int var6 = 4;

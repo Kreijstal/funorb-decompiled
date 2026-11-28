@@ -779,7 +779,7 @@ final class MenuScreen {
         while (var10 < var9_ref_kh__.length) {
           var11_ref_kh = var9_ref_kh__[var10];
           if (var11_ref_kh != null) {
-            var8.a(var11_ref_kh, ub.field_D);
+            var8.a(var11_ref_kh, ValidationStatusIcon.field_D);
           }
           var10++;
           if (var16 == 0) {
@@ -2582,7 +2582,7 @@ final class MenuScreen {
           }
           if (decompiledFrameCompleted0) {
             if (this.field_h == 5) {
-              bj.field_L[DebouncedFieldValidator.field_b].drawOpaque(115, 111);
+              ValidationStatusWidget.field_L[DebouncedFieldValidator.field_b].drawOpaque(115, 111);
               SoftwareRasterizer.setClip(0, 150, 640, 480);
               qd.field_c[DebouncedFieldValidator.field_b].drawOpaque(0, 0);
               SoftwareRasterizer.resetClip();

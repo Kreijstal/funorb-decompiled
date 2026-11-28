@@ -136,7 +136,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 return;
               }
               CrossfadingMidiPcmStream.a(0, param1 ^ 0);
-              eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, wj.field_O);
+              eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, ValidationStatusIcon.field_O);
               return;
             }
             if (var6 == 3) {
@@ -154,7 +154,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 return;
               }
               CrossfadingMidiPcmStream.a(0, param1 ^ 0);
-              eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, wj.field_O);
+              eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, ValidationStatusIcon.field_O);
               r.field_a = 0;
               return;
             }
@@ -226,7 +226,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               return;
             }
             CrossfadingMidiPcmStream.a(0, 1);
-            eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, wj.field_O);
+            eh.field_c.playSample(NetworkArchiveRequest.field_A[3], 100, ValidationStatusIcon.field_O);
             return;
           }
           var5.field_e = 0;
@@ -291,7 +291,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_p = param4;
               if (param4 != null) {
-                this.field_F.a(false, (byte) 20, param4);
+                this.field_F.playTrack(false, (byte) 20, param4);
                 this.a(param3, this.field_F, (byte) 38, param5);
               }
             } else {
@@ -300,7 +300,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               }
               this.field_u = param4;
               if (param4 != null) {
-                this.field_C.a(false, (byte) 28, param4);
+                this.field_C.playTrack(false, (byte) 28, param4);
                 this.a(param3, this.field_C, (byte) 38, param5);
               }
             }
@@ -336,7 +336,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param4 != null) {
               stackIn_52_0 = this.field_C;
               stackIn_53_1 = !(param2);
-              ((MidiPcmStream) (Object) stackIn_52_0).a(stackIn_53_1, (byte) 40, param4);
+              ((MidiPcmStream) (Object) stackIn_52_0).playTrack(stackIn_53_1, (byte) 40, param4);
               this.a(param3, this.field_C, (byte) 38, param5);
             }
             this.field_w = -param0;
@@ -348,7 +348,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             if (param4 != null) {
               stackIn_42_0 = this.field_F;
               stackIn_43_1 = !(param2);
-              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_43_1, (byte) 116, param4);
+              ((MidiPcmStream) (Object) stackIn_42_0).playTrack(stackIn_43_1, (byte) 116, param4);
               this.a(param3, this.field_F, (byte) 38, param5);
             }
             this.field_w = param0;

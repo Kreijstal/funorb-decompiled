@@ -93,7 +93,7 @@ final class j extends InteractiveWidget {
             var4Lifetime1 = pa.field_b;
           }
           if (param0 >= 87) {
-            stackIn_11_0 = ng.a(-1, 0, (String) (var4Lifetime1), (String) (var3), param1);
+            stackIn_11_0 = ValidationStatusIcon.a(-1, 0, (String) (var4Lifetime1), (String) (var3), param1);
             return stackIn_11_0;
           }
           stackIn_9_0 = (java.net.URL) null;

@@ -74,7 +74,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_12_0;
           }
           var6 = -127 % ((param0 - 49) / 56);
-          if (this.b(0, param1)) {
+          if (this.containsEmailComponent(0, param1)) {
             stackIn_16_0 = sj.field_e;
             return stackIn_16_0;
           }
@@ -120,7 +120,7 @@ final class PasswordValidator extends TextFieldValidator {
         int var8 = fg.field_h.get(12);
         if (param1 <= -123) {
           var9 = fg.field_h.get(13);
-          return w.field_P[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uf.field_w[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return ValidationStatusWidget.field_P[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uf.field_w[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
@@ -161,9 +161,9 @@ final class PasswordValidator extends TextFieldValidator {
           }
           if (param1 != 5) {
             var5 = (String) null;
-            discarded$1 = this.b(3, (String) null);
+            discarded$1 = this.containsEmailComponent(3, (String) null);
           }
-          if (!this.b(0, param0)) {
+          if (!this.containsEmailComponent(0, param0)) {
             return sc.field_a;
           }
           stackIn_11_0 = fg.field_d;
@@ -182,7 +182,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    private final boolean b(int param0, String param1) {
+    private final boolean containsEmailComponent(int param0, String param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;

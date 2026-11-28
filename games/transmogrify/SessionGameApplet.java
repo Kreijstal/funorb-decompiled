@@ -319,7 +319,7 @@ abstract class SessionGameApplet extends GameApplet {
             rb.a(7, (byte) -124);
           }
           if (c.field_e[8]) {
-            ob.l(-74);
+            ValidationStatusWidget.l(-74);
           }
         }
         return var2;

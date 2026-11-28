@@ -8022,7 +8022,7 @@ final class BattleState {
                 case 325: {
                     try {
                         this.a(param0 ^ -29519, 3);
-                        this.a(9, ki.field_Z, -7);
+                        this.a(9, ValidationStatusWidget.field_Z, -7);
                         statePc = 327;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_325) {
@@ -9184,7 +9184,7 @@ final class BattleState {
                         }
                         {
                             this.a(29518, 7);
-                            dd.field_M = 8;
+                            ValidationStatusIcon.field_M = 8;
                             this.a(4, va.field_j, param0 - 13);
                             statePc = 509;
                             continue scanLoop1;
@@ -12326,7 +12326,7 @@ final class BattleState {
                           var4 = 1;
                           var14 = 6;
                         }
-                        dd.field_M = 7;
+                        ValidationStatusIcon.field_M = 7;
                         if (var24 == 0) {
                           break regionExit1;
                         }
@@ -12368,13 +12368,13 @@ final class BattleState {
                       var9 = 2;
                       var8 = 10;
                     }
-                    dd.field_M = 7;
+                    ValidationStatusIcon.field_M = 7;
                     this.field_J = true;
                     if (var24 == 0) {
                       break regionExit1;
                     }
                   }
-                  dd.field_M = 4;
+                  ValidationStatusIcon.field_M = 4;
                   this.field_i = 2;
                   var12 = 6;
                   var14 = 6;
@@ -12386,7 +12386,7 @@ final class BattleState {
                   }
                 }
                 this.field_J = true;
-                dd.field_M = 4;
+                ValidationStatusIcon.field_M = 4;
                 this.field_i = 3;
                 var8 = 8;
                 var5 = 2;
@@ -12398,7 +12398,7 @@ final class BattleState {
               var8 = 12;
               var5 = 4;
               this.field_J = true;
-              dd.field_M = 4;
+              ValidationStatusIcon.field_M = 4;
               this.field_i = 3;
               var14 = 12;
               if (var24 == 0) {

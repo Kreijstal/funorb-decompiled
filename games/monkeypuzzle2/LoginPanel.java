@@ -16,7 +16,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     private ButtonWidget field_I;
     private boolean field_z;
 
-    final void a(String param0, byte param1) {
+    final void setAccountAndClearPassword(String param0, byte param1) {
         EditableTextField var3 = this.field_L;
         String var4 = param0;
         if (param1 != -34) {
@@ -102,7 +102,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         field_A = null;
     }
 
-    final String a(int param0) {
+    final String getAccountIdentifier(int param0) {
         if (null == this.field_L.field_s) {
           return "";
         }
@@ -149,7 +149,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         }
     }
 
-    final void k(int param0) {
+    final void clearCredentials(int param0) {
         int var2 = -33 / ((param0 + 52) / 50);
         this.field_L.clearText((byte) -20);
         this.field_H.clearText((byte) -51);
@@ -176,7 +176,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
     public final void onTextChanged(int param0, EditableTextField param1) {
         try {
           if (param0 != 16926) {
-            this.a(-58);
+            this.getAccountIdentifier(-58);
           }
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -224,7 +224,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
           this.field_H = (EditableTextField) ((Object) new ValidatedTextField("", (WidgetEventListener) (this), 20));
           if (this.field_z) {
             this.field_I = new ButtonWidget(qd.field_c, (WidgetEventListener) null);
-            this.field_C = new ButtonWidget(vh.field_L, (WidgetEventListener) null);
+            this.field_C = new ButtonWidget(ValidationStatusIcon.field_L, (WidgetEventListener) null);
             this.field_L.field_w = false;
           } else {
             this.field_I = new ButtonWidget(fe.field_c, (WidgetEventListener) null);
